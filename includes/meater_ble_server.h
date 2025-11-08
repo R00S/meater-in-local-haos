@@ -52,6 +52,9 @@ class MeaterBLEServer {
   bool adv_data_set = false;
   bool scan_rsp_data_set = false;
   
+  std::string device_name = "MEATER";  // Default name, will be updated from real device
+  bool device_name_set = false;
+  
   MeaterBLEServer() {
     instance = this;
     temp_data.resize(8, 0);
@@ -110,6 +113,28 @@ class MeaterBLEServer {
     firmware_data = data;
   }
   
+  void set_device_name(const std::string& name) {
+    if (device_name != name) {
+      device_name = name;
+      device_name_set = true;
+      ESP_LOGI("meater_ble_server", "Device name set to: %s", device_name.c_str());
+      
+      // Update the device name in the BLE stack
+      esp_ble_gap_set_device_name(device_name.c_str());
+      
+      // Stop advertising to update with new name
+      if (connected) {
+        ESP_LOGI("meater_ble_server", "Device connected, will update name on next advertising cycle");
+      } else {
+        // Restart advertising with new name
+        ESP_LOGI("meater_ble_server", "Restarting advertising with new device name");
+        esp_ble_gap_stop_advertising();
+        // Will restart in disconnect event or we can restart immediately
+        start_advertising();
+      }
+    }
+  }
+  
   static void gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, 
                                   esp_ble_gatts_cb_param_t* param) {
     if (!instance) return;
@@ -120,8 +145,8 @@ class MeaterBLEServer {
                  param->reg.status, param->reg.app_id);
         instance->gatts_if = gatts_if;
         
-        // Set device name
-        esp_ble_gap_set_device_name("MEATER");
+        // Set device name (will be updated when we read it from the real device)
+        esp_ble_gap_set_device_name(instance->device_name.c_str());
         
         // Create MEATER service
         esp_gatt_srvc_id_t service_id;

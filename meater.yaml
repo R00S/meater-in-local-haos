@@ -48,8 +48,32 @@ text_sensor:
   - platform: template
     name: "MEATER firmware"
     id: meater_firmware
+  - platform: template
+    name: "MEATER device name"
+    id: meater_device_name_display
  
 sensor:
+  - platform: ble_client
+    type: characteristic
+    ble_client_id: meater
+    id: meater_device_name_reader
+    internal: true
+    service_uuid: '1800'  # Generic Access Profile service
+    characteristic_uuid: '2A00'  # Device Name characteristic
+    lambda: |-
+      // Read device name and forward to BLE server
+      std::string device_name(x.begin(), x.end());
+      ESP_LOGI("meater", "Read device name from real MEATER: %s", device_name.c_str());
+      
+      // Update text sensor
+      id(meater_device_name_display).publish_state(device_name);
+      
+      // Forward to BLE server
+      if (id(meater_ble_server_ptr) != nullptr) {
+        ((MeaterBLEServer*)id(meater_ble_server_ptr))->set_device_name(device_name);
+      }
+      
+      return (float)x.size();
   - platform: ble_client
     type: characteristic
     ble_client_id: meater
