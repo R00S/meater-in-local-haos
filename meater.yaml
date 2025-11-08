@@ -1,6 +1,17 @@
 esphome:
   name: meater
   friendly_name: meater
+  includes:
+    - includes/meater_ble_server.h
+  on_boot:
+    priority: -100
+    then:
+      - lambda: |-
+          // Initialize the BLE server to act as a MEATER device for phone apps
+          static MeaterBLEServer* ble_server = new MeaterBLEServer();
+          ble_server->setup();
+          // Store globally so we can access it from lambdas
+          id(meater_ble_server_ptr) = ble_server;
 
 esp32:
   board: esp32-c3-devkitm-1
@@ -9,6 +20,7 @@ esp32:
     
 esp32_ble:
   max_connections: 4
+
 # Enable logging
 logger:
 
@@ -40,6 +52,14 @@ ble_client:
   - mac_address: B8:1F:5E:44:EC:8D
     id: meater
 
+# Global variable to store the BLE server instance
+globals:
+  - id: meater_ble_server_ptr
+    type: MeaterBLEServer*
+    restore_value: no
+    initial_value: 'nullptr'
+
+
  
 text_sensor:
   - platform: template
@@ -58,6 +78,12 @@ sensor:
     accuracy_decimals: 2
     notify: true
     lambda: |-
+      // Forward raw data to BLE server for phone app
+      if (id(meater_ble_server_ptr) != nullptr) {
+        id(meater_ble_server_ptr)->update_temp_data(x);
+      }
+      
+      // Calculate temperature for Home Assistant (existing functionality)
       uint16_t tip_temp = (x[0] + (x[1] << 8) + 8.0) / 16.0;
       return (float)tip_temp;
   - platform: ble_client
@@ -71,6 +97,7 @@ sensor:
     accuracy_decimals: 2
     notify: true
     lambda: |-
+      // Calculate ambient temperature for Home Assistant (existing functionality)
       uint16_t tip = x[0] + (x[1] << 8);
       uint16_t ra = x[2] + (x[3] << 8);
       uint16_t oa = x[4] + (x[5] << 8);
@@ -87,6 +114,12 @@ sensor:
     unit_of_measurement: '%'
     notify: true
     lambda: |-
+      // Forward raw data to BLE server for phone app
+      if (id(meater_ble_server_ptr) != nullptr) {
+        id(meater_ble_server_ptr)->update_battery_data(x);
+      }
+      
+      // Calculate battery percentage for Home Assistant (existing functionality)
       uint16_t battery = (x[0] + x[1]) * 10;
       return (float)battery;
   - platform: ble_client
@@ -96,8 +129,15 @@ sensor:
     service_uuid: '180A'
     characteristic_uuid: '00002a26-0000-1000-8000-00805f9b34fb'
     lambda: |-
+      // Update firmware text sensor (existing functionality)
       std::string data_string(x.begin(), x.end());
       id(meater_firmware).publish_state(data_string.c_str());
+      
+      // Forward firmware data to BLE server for phone app
+      if (id(meater_ble_server_ptr) != nullptr) {
+        id(meater_ble_server_ptr)->update_firmware_data(x);
+      }
+      
       return (float)x.size();
   - platform: ble_client
     type: rssi
