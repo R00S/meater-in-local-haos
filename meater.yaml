@@ -50,14 +50,6 @@ ble_client:
   - mac_address: !secret meater_mac_address
     id: meater
 
-# Global variable to store the BLE server instance
-globals:
-  - id: meater_ble_server_ptr
-    type: MeaterBLEServer*
-    restore_value: no
-    initial_value: 'nullptr'
-
-
  
 text_sensor:
   - platform: template
@@ -141,3 +133,10 @@ sensor:
     type: rssi
     ble_client_id: meater
     name: "MEATER RSSI"
+
+# Global variable to store the BLE server instance
+globals:
+  - id: meater_ble_server_ptr
+    type: MeaterBLEServer*
+    restore_value: no
+    initial_value: 'nullptr'
