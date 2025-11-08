@@ -247,15 +247,33 @@ This error occurs when using the ESPHome GUI and the include file hasn't been ad
 
 If you prefer not to manage external files, you can use the ESPHome command line interface instead (see Option A).
 
-### Compilation Errors with ESP-IDF Framework
+### Compilation Error: "cannot execute 'cc1'" with HAOS 2025.11.1
 
-ESPHome 2025.10.4 (bundled with Home Assistant OS 2025.11.1) has persistent issues with the ESP-IDF framework for ESP32-C3:
-- **cc1 error**: All ESP-IDF versions use broken toolchain (14.2.0+20241119) with corrupted binaries
-- **Framework version errors**: Custom ESP-IDF versions require platform_version, causing configuration loops
-- **404 errors**: Older platform versions no longer exist in repositories
+**IMPORTANT**: Home Assistant OS 2025.11.1 (with ESPHome 2025.10.4) has a broken toolchain (14.2.0+20241119) that affects **both ESP-IDF and Arduino frameworks** for ESP32-C3 wireless compilation. This is an environment/platform issue, not a configuration issue.
 
-**Solution**: This configuration uses the **Arduino framework** instead of ESP-IDF, which avoids all these issues:
+**Error:**
+```
+toolchain-riscv32-esp @ 14.2.0+20241119
+riscv32-esp-elf-gcc: fatal error: cannot execute 'cc1': posix_spawnp: No such file or directory
+CMake Error: The C compiler is not able to compile a simple test program.
+```
 
+**Workarounds** (choose one):
+
+1. **Use wired USB flashing** (Option A in setup instructions):
+   - Install ESPHome command line on your computer
+   - Compile locally and flash via USB cable
+   - This bypasses the broken HAOS toolchain entirely
+
+2. **Wait for ESPHome/HAOS update**:
+   - This toolchain issue will likely be fixed in a future ESPHome or HAOS update
+   - Monitor ESPHome release notes for toolchain fixes
+
+3. **Use an older ESPHome version** (if available):
+   - Check if you can downgrade ESPHome add-on to a version before the broken toolchain was introduced
+   - This may require manual installation
+
+**Current Configuration** (for when toolchain is fixed):
 ```yaml
 esp32:
   board: esp32-c3-devkitm-1
@@ -263,13 +281,7 @@ esp32:
     type: arduino
 ```
 
-The Arduino framework:
-- ✅ Has a working, stable toolchain (no cc1 errors)
-- ✅ Fully supported by ESPHome for ESP32-C3
-- ✅ No version pinning or custom configuration needed
-- ✅ Compatible with all BLE client and server functionality used in this project
-
-If you have an older version of `meater.yaml` that used `type: esp-idf`, update it to `type: arduino` as shown above.
+The Arduino framework is recommended and will work once the toolchain is fixed. It requires no version pinning and is fully compatible with ESP32-C3 BLE functionality.
 
 ### Phone app can't find the ESP32
 - Make sure the ESP32 is powered on and connected to WiFi
