@@ -11,7 +11,7 @@ esphome:
           static MeaterBLEServer* ble_server = new MeaterBLEServer();
           ble_server->setup();
           // Store globally so we can access it from lambdas
-          id(meater_ble_server_ptr) = ble_server;
+          id(meater_ble_server_ptr) = (void*)ble_server;
 
 esp32:
   board: esp32-c3-devkitm-1
@@ -70,7 +70,7 @@ sensor:
     lambda: |-
       // Forward raw data to BLE server for phone app
       if (id(meater_ble_server_ptr) != nullptr) {
-        id(meater_ble_server_ptr)->update_temp_data(x);
+        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_temp_data(x);
       }
       
       // Calculate temperature for Home Assistant (existing functionality)
@@ -106,7 +106,7 @@ sensor:
     lambda: |-
       // Forward raw data to BLE server for phone app
       if (id(meater_ble_server_ptr) != nullptr) {
-        id(meater_ble_server_ptr)->update_battery_data(x);
+        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_battery_data(x);
       }
       
       // Calculate battery percentage for Home Assistant (existing functionality)
@@ -125,7 +125,7 @@ sensor:
       
       // Forward firmware data to BLE server for phone app
       if (id(meater_ble_server_ptr) != nullptr) {
-        id(meater_ble_server_ptr)->update_firmware_data(x);
+        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_firmware_data(x);
       }
       
       return (float)x.size();
@@ -137,6 +137,6 @@ sensor:
 # Global variable to store the BLE server instance
 globals:
   - id: meater_ble_server_ptr
-    type: MeaterBLEServer*
+    type: void*
     restore_value: no
     initial_value: 'nullptr'
