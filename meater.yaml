@@ -17,11 +17,6 @@ esp32:
   board: esp32-c3-devkitm-1
   framework:
     type: esp-idf
-    # Pinned to avoid toolchain compilation issues with newer versions
-    # Using ESP-IDF 5.1.0 with known-good platform version (direct URL required)
-    # See: https://github.com/R00S/meater-in-local-haos/issues
-    version: 5.1.0
-    platform_version: https://github.com/pioarduino/platform-espressif32/releases/download/51.03.05/platform-espressif32.zip
 
 esp32_ble:
   max_connections: 4
