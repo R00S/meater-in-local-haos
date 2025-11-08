@@ -3,15 +3,8 @@ esphome:
   friendly_name: meater
   includes:
     - includes/meater_ble_server.h
-  on_boot:
-    priority: -100
-    then:
-      - lambda: |-
-          // Initialize the BLE server to act as a MEATER device for phone apps
-          static MeaterBLEServer* ble_server = new MeaterBLEServer();
-          ble_server->setup();
-          // Store globally so we can access it from lambdas
-          id(meater_ble_server_ptr) = (void*)ble_server;
+  # Note: BLE server initialization is now delayed until after BLE client connects
+  # This prevents conflicts between BLE scanning and advertising
 
 esp32:
   board: esp32-c3-devkitm-1
@@ -68,6 +61,16 @@ sensor:
     accuracy_decimals: 2
     notify: true
     lambda: |-
+      // Initialize BLE server on first data reception (ensures BLE client is connected first)
+      static bool ble_server_initialized = false;
+      if (!ble_server_initialized && id(meater_ble_server_ptr) == nullptr) {
+        ESP_LOGI("meater", "BLE client connected, now initializing BLE server...");
+        static MeaterBLEServer* ble_server = new MeaterBLEServer();
+        ble_server->setup();
+        id(meater_ble_server_ptr) = (void*)ble_server;
+        ble_server_initialized = true;
+      }
+      
       // Forward raw data to BLE server for phone app
       if (id(meater_ble_server_ptr) != nullptr) {
         ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_temp_data(x);
