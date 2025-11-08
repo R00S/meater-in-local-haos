@@ -33,6 +33,25 @@ Home Assistant      Phone App
 - ESP32 board (tested with ESP32-C3-DevKitM-1)
 - MEATER+ temperature probe
 
+### Memory Requirements
+
+**Will it fit on my ESP32?** Yes! ✅
+
+The ESP32-C3-DevKitM-1 has **4MB flash memory**, which is more than sufficient for this configuration:
+
+- **Code size**: The BLE server implementation adds approximately ~12KB of source code
+- **Compiled size**: ESPHome with ESP-IDF and BLE client+server typically uses 1.5-2MB of flash
+- **Available space**: You'll have plenty of room (2+ MB remaining) for OTA updates and additional features
+
+**Compatible boards**:
+- ✅ ESP32-C3-DevKitM-1 (4MB flash) - Recommended
+- ✅ ESP32-DevKitC (4MB+ flash)
+- ✅ ESP32-WROOM-32 (4MB+ flash)
+- ⚠️ ESP32-C3-01M (2MB flash) - May be tight, not recommended
+- ❌ ESP8266 - Not compatible (no BLE support)
+
+The additional BLE server functionality adds minimal overhead since the ESP32 already has BLE hardware and the ESP-IDF framework includes the necessary BLE stack.
+
 ### Finding Your MEATER MAC Address
 
 Before setup, you need to find your MEATER+ device's Bluetooth MAC address. You can do this several ways:
