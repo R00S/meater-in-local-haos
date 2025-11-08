@@ -257,21 +257,21 @@ compilation terminated.
 CMake Error: The C compiler is not able to compile a simple test program.
 ```
 
-**Root cause**: ESPHome 2025.10.4's default toolchain (14.2.0+20241119) has incomplete or corrupted binaries that cause compilation failures. This toolchain is used across multiple ESP-IDF versions.
+**Root cause**: ESPHome 2025.10.4's default toolchain (14.2.0+20241119 from November 2024) has incomplete or corrupted binaries that cause compilation failures. This broken toolchain is used across multiple recent ESP-IDF versions.
 
-**Solution**: This configuration pins to ESP-IDF 5.3.4, an older stable version that may use a different toolchain. The configuration includes:
+**Solution**: This configuration pins to ESP-IDF 5.3.3, the oldest stable version available in the pioarduino repository (from June 2024). Since the broken toolchain is from November 2024, this older version should use an earlier, working toolchain. The configuration includes:
 
 ```yaml
 esp32:
   board: esp32-c3-devkitm-1
   framework:
     type: esp-idf
-    version: 5.3.4
+    version: 5.3.3
 ```
 
 If you copied an older version of `meater.yaml` before this fix, update it to include the version pin as shown above.
 
-**Note**: You may see warnings about "selected framework version is not the recommended one" - these are expected and can be safely ignored. The pinned version (5.3.4) is an attempt to avoid the broken toolchain in ESPHome 2025.10.4. If this still fails with the cc1 error, the issue may require an ESPHome update or alternative workaround.
+**Note**: You may see warnings about "selected framework version is not the recommended one" - these are expected and can be safely ignored. The pinned version (5.3.3 from June 2024) should avoid the broken toolchain (14.2.0+20241119 from November 2024) that affects newer versions.
 
 ### Phone app can't find the ESP32
 - Make sure the ESP32 is powered on and connected to WiFi
