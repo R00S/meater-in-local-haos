@@ -249,7 +249,7 @@ If you prefer not to manage external files, you can use the ESPHome command line
 
 ### Compilation Error: "cannot execute 'cc1': posix_spawnp: No such file or directory"
 
-This error occurs during wireless installation when using ESPHome 2025.10.4 or newer versions, particularly with ESP32-C3 boards.
+This error occurs during wireless installation when using newer ESPHome versions (such as those bundled with Home Assistant OS 2025.11.1 or later), particularly with ESP32-C3 boards.
 
 **Error message looks like:**
 ```
@@ -258,23 +258,24 @@ compilation terminated.
 CMake Error: The C compiler is not able to compile a simple test program.
 ```
 
-**Root cause**: The default ESP-IDF toolchain version in newer ESPHome releases can have incomplete or corrupted binaries.
+**Root cause**: The default ESP-IDF toolchain version in some ESPHome releases can have incomplete or corrupted binaries, causing compilation failures during wireless installation.
 
-**Solution**: This configuration pins to a stable ESP-IDF version (5.2.1) and platform version (6.5.0) that avoids this issue. If you copied an older version of `meater.yaml` before this fix:
+**Solution**: This configuration pins to a stable ESP-IDF version (5.2.1) which uses a known-good toolchain. ESPHome automatically selects the correct platform version for this framework. If you copied an older version of `meater.yaml` before this fix:
 
-1. Update your `meater.yaml` to include the pinned versions in the `esp32` section:
+1. Update your `meater.yaml` to pin the ESP-IDF version in the `esp32` section:
    ```yaml
    esp32:
      board: esp32-c3-devkitm-1
      framework:
        type: esp-idf
        version: 5.2.1
-       platform_version: 6.5.0
    ```
 
-2. Try compiling again - the stable toolchain should work without errors
+2. **Important**: Remove any `platform_version` line if present - ESPHome will auto-select the correct platform
 
-**Note**: You may see warnings about "selected framework version is not the recommended one" - these are expected and can be safely ignored. The pinned version is more stable for wireless installations.
+3. Try compiling again - the stable toolchain should work without errors
+
+**Note**: You may see warnings about "selected framework version is not the recommended one" - these are expected and can be safely ignored. The pinned version (5.2.1) is more stable for wireless installations.
 
 ### Phone app can't find the ESP32
 - Make sure the ESP32 is powered on and connected to WiFi

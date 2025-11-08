@@ -18,10 +18,9 @@ esp32:
   framework:
     type: esp-idf
     # Pinned to avoid toolchain compilation issues with newer versions
-    # Using ESP-IDF 5.2.1 with standard platformio platform
+    # Using ESP-IDF 5.2.1 - ESPHome will auto-select compatible platform version
     # See: https://github.com/R00S/meater-in-local-haos/issues
     version: 5.2.1
-    platform_version: 6.5.0
 
 esp32_ble:
   max_connections: 4
