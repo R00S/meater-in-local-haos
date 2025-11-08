@@ -258,9 +258,9 @@ compilation terminated.
 CMake Error: The C compiler is not able to compile a simple test program.
 ```
 
-**Root cause**: The default ESP-IDF toolchain version (14.2.0+20241119) in newer ESPHome releases has incomplete or corrupted binaries.
+**Root cause**: The default ESP-IDF toolchain version in newer ESPHome releases can have incomplete or corrupted binaries.
 
-**Solution**: This configuration now pins to a stable ESP-IDF version (5.1.0) and platform version (51.03.05) that avoids this issue. If you copied an older version of `meater.yaml` before this fix:
+**Solution**: This configuration pins to a stable ESP-IDF version (5.2.1) and platform version (6.5.0) that avoids this issue. If you copied an older version of `meater.yaml` before this fix:
 
 1. Update your `meater.yaml` to include the pinned versions in the `esp32` section:
    ```yaml
@@ -268,8 +268,8 @@ CMake Error: The C compiler is not able to compile a simple test program.
      board: esp32-c3-devkitm-1
      framework:
        type: esp-idf
-       version: 5.1.0
-       platform_version: https://github.com/pioarduino/platform-espressif32/releases/download/51.03.05/platform-espressif32.zip
+       version: 5.2.1
+       platform_version: 6.5.0
    ```
 
 2. Try compiling again - the stable toolchain should work without errors
