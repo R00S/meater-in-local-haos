@@ -16,7 +16,7 @@ esphome:
 esp32:
   board: esp32-c3-devkitm-1
   framework:
-    type: arduino
+    type: esp-idf
 
 esp32_ble:
   max_connections: 4
