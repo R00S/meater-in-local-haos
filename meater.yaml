@@ -11,17 +11,12 @@ esphome:
           static MeaterBLEServer* ble_server = new MeaterBLEServer();
           ble_server->setup();
           // Store globally so we can access it from lambdas
-          id(meater_ble_server_ptr) = ble_server;
+          id(meater_ble_server_ptr) = (void*)ble_server;
 
 esp32:
   board: esp32-c3-devkitm-1
   framework:
     type: esp-idf
-    # Pinned to avoid toolchain compilation issues with newer versions
-    # Using ESP-IDF 5.2.1 with standard platformio platform
-    # See: https://github.com/R00S/meater-in-local-haos/issues
-    version: 5.2.1
-    platform_version: 6.5.0
 
 esp32_ble:
   max_connections: 4
@@ -55,14 +50,6 @@ ble_client:
   - mac_address: !secret meater_mac_address
     id: meater
 
-# Global variable to store the BLE server instance
-globals:
-  - id: meater_ble_server_ptr
-    type: MeaterBLEServer*
-    restore_value: no
-    initial_value: 'nullptr'
-
-
  
 text_sensor:
   - platform: template
@@ -83,7 +70,7 @@ sensor:
     lambda: |-
       // Forward raw data to BLE server for phone app
       if (id(meater_ble_server_ptr) != nullptr) {
-        id(meater_ble_server_ptr)->update_temp_data(x);
+        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_temp_data(x);
       }
       
       // Calculate temperature for Home Assistant (existing functionality)
@@ -119,7 +106,7 @@ sensor:
     lambda: |-
       // Forward raw data to BLE server for phone app
       if (id(meater_ble_server_ptr) != nullptr) {
-        id(meater_ble_server_ptr)->update_battery_data(x);
+        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_battery_data(x);
       }
       
       // Calculate battery percentage for Home Assistant (existing functionality)
@@ -138,7 +125,7 @@ sensor:
       
       // Forward firmware data to BLE server for phone app
       if (id(meater_ble_server_ptr) != nullptr) {
-        id(meater_ble_server_ptr)->update_firmware_data(x);
+        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_firmware_data(x);
       }
       
       return (float)x.size();
@@ -146,3 +133,10 @@ sensor:
     type: rssi
     ble_client_id: meater
     name: "MEATER RSSI"
+
+# Global variable to store the BLE server instance
+globals:
+  - id: meater_ble_server_ptr
+    type: void*
+    restore_value: no
+    initial_value: 'nullptr'
