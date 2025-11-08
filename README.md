@@ -27,6 +27,19 @@ Home Assistant      Phone App
 (existing sensors)   (connects to ESP32 as if it were the MEATER)
 ```
 
+## Security & Secrets
+
+This configuration uses ESPHome's secrets management to keep your sensitive information secure:
+
+- **secrets.yaml**: Contains all your personal credentials (WiFi password, API keys, MAC address, etc.)
+- **secrets.yaml.example**: A template file showing what values you need to configure
+- The actual `secrets.yaml` file is gitignored and never committed to version control
+
+This approach ensures that:
+- Your credentials stay private when sharing or version controlling your config
+- You can easily update credentials without modifying the main configuration file
+- Multiple ESPHome devices can share the same secrets file
+
 ## Configuration
 
 ### Hardware Required
@@ -68,37 +81,26 @@ Before setup, you need to find your MEATER+ device's Bluetooth MAC address. You 
 
 ### Setup
 
-1. Update the `mac_address` in `meater.yaml` to match your MEATER+ device:
-   ```yaml
-   ble_client:
-     - mac_address: B8:1F:5E:44:EC:8D  # Replace with your MEATER's MAC address
-       id: meater
-   ```
-
-2. Update WiFi credentials:
-   ```yaml
-   wifi:
-     ssid: "your-wifi-ssid"
-     password: "your-wifi-password"
-   ```
-
-3. Update API encryption key and OTA password (or remove them for initial testing):
-   ```yaml
-   api:
-     encryption:
-       key: "your-new-key-here"  # Generate a new key with: esphome config meater.yaml
+1. **Create your secrets file**:
    
-   ota:
-     - platform: esphome
-       password: "your-ota-password"
+   Copy the example secrets file and fill in your actual values:
+   ```bash
+   cp secrets.yaml.example secrets.yaml
    ```
+   
+   Edit `secrets.yaml` with your specific values:
+   - WiFi SSID and password
+   - API encryption key (generate with: `esphome config meater.yaml`)
+   - OTA password
+   - MEATER device MAC address (see "Finding Your MEATER MAC Address" above)
+   - Fallback AP password
 
-4. Flash the ESP32 with ESPHome using this configuration:
+2. Flash the ESP32 with ESPHome using this configuration:
    ```bash
    esphome run meater.yaml
    ```
 
-5. Once the ESP32 is running:
+3. Once the ESP32 is running:
    - The ESP32 will connect to your real MEATER+ device
    - It will start advertising as "MEATER" via BLE
    - In your phone's MEATER app, scan for devices
@@ -145,6 +147,8 @@ Before setup, you need to find your MEATER+ device's Bluetooth MAC address. You 
 ### Files
 
 - `meater.yaml` - Main ESPHome configuration file
+- `secrets.yaml.example` - Template for your secrets file (copy to `secrets.yaml`)
+- `secrets.yaml` - Your personal secrets file (gitignored, not in repo)
 - `includes/meater_ble_server.h` - Custom C++ code for BLE server implementation
 
 ## Credits

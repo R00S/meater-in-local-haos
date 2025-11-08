@@ -27,29 +27,27 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "FE5ml2+r8DRp2cE+tAtJXKk666hDAhckqbz0RnOflHQ="
+    key: !secret api_encryption_key
 
 ota:
   - platform: esphome
-    password: "f8c86c25ca2982900b4c9a3bac14c7f3"
+    password: !secret ota_password
 
 wifi:
-#  ssid: !secret wifi_ssid
-#  password: !secret wifi_password
-  ssid: "roos-2.4"
-  password: "Kanintomten1"
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Bt-Proxy Fallback Hotspot"
-    password: "5saRzAdXmgRN"
+    ssid: !secret fallback_ap_ssid
+    password: !secret fallback_ap_password
 
 captive_portal:
 
 bluetooth_proxy:
 
 ble_client:
-  - mac_address: B8:1F:5E:44:EC:8D
+  - mac_address: !secret meater_mac_address
     id: meater
 
 # Global variable to store the BLE server instance
