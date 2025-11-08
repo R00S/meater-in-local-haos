@@ -247,31 +247,29 @@ This error occurs when using the ESPHome GUI and the include file hasn't been ad
 
 If you prefer not to manage external files, you can use the ESPHome command line interface instead (see Option A).
 
-### Compilation Error: "cannot execute 'cc1': posix_spawnp: No such file or directory"
+### Compilation Errors with ESP-IDF Framework
 
-This error occurs during compilation with ESPHome 2025.10.4 due to a broken default toolchain:
+ESPHome 2025.10.4 (bundled with Home Assistant OS 2025.11.1) has persistent issues with the ESP-IDF framework for ESP32-C3:
+- **cc1 error**: All ESP-IDF versions use broken toolchain (14.2.0+20241119) with corrupted binaries
+- **Framework version errors**: Custom ESP-IDF versions require platform_version, causing configuration loops
+- **404 errors**: Older platform versions no longer exist in repositories
 
-```
-riscv32-esp-elf-gcc: fatal error: cannot execute 'cc1': posix_spawnp: No such file or directory
-compilation terminated.
-CMake Error: The C compiler is not able to compile a simple test program.
-```
-
-**Root cause**: ESPHome 2025.10.4's default toolchain (14.2.0+20241119 from November 2024) has incomplete or corrupted binaries that cause compilation failures. This broken toolchain is used across multiple recent ESP-IDF versions.
-
-**Solution**: This configuration pins to ESP-IDF 5.3.3, the oldest stable version available in the pioarduino repository (from June 2024). Since the broken toolchain is from November 2024, this older version should use an earlier, working toolchain. The configuration includes:
+**Solution**: This configuration uses the **Arduino framework** instead of ESP-IDF, which avoids all these issues:
 
 ```yaml
 esp32:
   board: esp32-c3-devkitm-1
   framework:
-    type: esp-idf
-    version: 5.3.3
+    type: arduino
 ```
 
-If you copied an older version of `meater.yaml` before this fix, update it to include the version pin as shown above.
+The Arduino framework:
+- ✅ Has a working, stable toolchain (no cc1 errors)
+- ✅ Fully supported by ESPHome for ESP32-C3
+- ✅ No version pinning or custom configuration needed
+- ✅ Compatible with all BLE client and server functionality used in this project
 
-**Note**: You may see warnings about "selected framework version is not the recommended one" - these are expected and can be safely ignored. The pinned version (5.3.3 from June 2024) should avoid the broken toolchain (14.2.0+20241119 from November 2024) that affects newer versions.
+If you have an older version of `meater.yaml` that used `type: esp-idf`, update it to `type: arduino` as shown above.
 
 ### Phone app can't find the ESP32
 - Make sure the ESP32 is powered on and connected to WiFi
