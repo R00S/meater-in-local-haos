@@ -51,6 +51,7 @@ class MeaterBLEServer {
   
   bool adv_data_set = false;
   bool scan_rsp_data_set = false;
+  bool restart_advertising_pending = false;
   
   std::string device_name = "MEATER";  // Default name, will be updated from real device
   bool device_name_set = false;
@@ -126,11 +127,11 @@ class MeaterBLEServer {
       if (connected) {
         ESP_LOGI("meater_ble_server", "Device connected, will update name on next advertising cycle");
       } else {
-        // Restart advertising with new name
-        ESP_LOGI("meater_ble_server", "Restarting advertising with new device name");
+        // Stop advertising and mark for restart
+        ESP_LOGI("meater_ble_server", "Stopping advertising to update device name");
+        restart_advertising_pending = true;
         esp_ble_gap_stop_advertising();
-        // Will restart in disconnect event or we can restart immediately
-        start_advertising();
+        // Will restart in ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT handler
       }
     }
   }
@@ -323,6 +324,14 @@ class MeaterBLEServer {
           ESP_LOGE("meater_ble_server", "Advertising start failed");
         }
         break;
+      case ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT:
+        ESP_LOGI("meater_ble_server", "Advertising stopped");
+        if (instance->restart_advertising_pending) {
+          ESP_LOGI("meater_ble_server", "Restarting advertising with updated device name");
+          instance->restart_advertising_pending = false;
+          instance->start_advertising();
+        }
+        break;
       default:
         break;
     }
@@ -354,7 +363,7 @@ class MeaterBLEServer {
     // Configure advertising data
     esp_ble_adv_data_t adv_data = {};
     adv_data.set_scan_rsp = false;
-    adv_data.include_name = false;  // Don't include name in adv packet to save space
+    adv_data.include_name = true;  // Include name in advertising packet for better discovery
     adv_data.include_txpower = false;
     adv_data.min_interval = 0x20;
     adv_data.max_interval = 0x40;
@@ -369,7 +378,7 @@ class MeaterBLEServer {
     
     esp_ble_gap_config_adv_data(&adv_data);
     
-    // Configure scan response data with device name
+    // Configure scan response data with device name as backup
     esp_ble_adv_data_t scan_rsp_data = {};
     scan_rsp_data.set_scan_rsp = true;
     scan_rsp_data.include_name = true;
