@@ -17,6 +17,9 @@ esp32:
   board: esp32-c3-devkitm-1
   framework:
     type: esp-idf
+    # Pinned to avoid broken default toolchain (14.2.0+20241119)
+    # Using ESP-IDF 5.5.1 which should have a working toolchain
+    version: 5.5.1
 
 esp32_ble:
   max_connections: 4
