@@ -283,10 +283,51 @@ esp32:
 
 The Arduino framework is recommended and will work once the toolchain is fixed. It requires no version pinning and is fully compatible with ESP32-C3 BLE functionality.
 
+### ESP32 not connecting to MEATER device (Cannot poll, not connected)
+
+If you see repeated warnings like `[MEATER battery level] Cannot poll, not connected` in the logs:
+
+**Symptoms:**
+- ESP32 connects to WiFi successfully
+- BLE scanner shows "Scanner State: RUNNING"
+- Logs show "Connecting: 0, discovered: 0, disconnecting: 0"
+- Continuous "Cannot poll, not connected" warnings for all sensors
+
+**Common Causes:**
+
+1. **MEATER device is off or out of range**
+   - Make sure your MEATER probe is powered on
+   - Move the ESP32 closer to the MEATER device (within 10-30 feet)
+   - Check MEATER battery level (low battery reduces range)
+
+2. **Wrong MAC address in configuration**
+   - Verify the MAC address in `secrets.yaml` matches your actual MEATER device
+   - Use a BLE scanner app to confirm the correct MAC address
+   - MAC address format should be: `XX:XX:XX:XX:XX:XX` (with colons)
+
+3. **MEATER already connected to another device**
+   - MEATER can only connect to one BLE device at a time
+   - Disconnect MEATER from phone app before ESP32 connection
+   - Power cycle the MEATER probe to clear any stuck connections
+
+4. **BLE interference or conflicts**
+   - Reduce number of active BLE devices nearby
+   - Move away from WiFi routers (2.4GHz can interfere with BLE)
+   - Try restarting the ESP32
+
+**Troubleshooting Steps:**
+1. Check logs for: `"BLE client connected, now initializing BLE server..."` - this confirms connection
+2. If you never see this message, the BLE client hasn't connected to the real MEATER
+3. Power cycle both the MEATER probe and ESP32
+4. Verify MAC address with a BLE scanner app
+5. Move devices closer together
+
 ### Phone app can't find the ESP32
 - Make sure the ESP32 is powered on and connected to WiFi
 - Check the logs to ensure the BLE server started successfully
 - Look for "Started advertising as MEATER device" in the logs
+- **Important**: The BLE server only starts AFTER the ESP32 connects to the real MEATER device
+- If you don't see "BLE client connected, now initializing BLE server..." in logs, see "ESP32 not connecting to MEATER device" section above
 - Try restarting the MEATER app on your phone
 - Make sure Bluetooth is enabled on your phone
 
@@ -294,7 +335,8 @@ The Arduino framework is recommended and will work once the toolchain is fixed. 
 - Verify the MAC address in the configuration matches your MEATER device
 - Check that the MEATER is powered on and within range
 - Review the ESP32 logs for connection errors
-- Look for "BLE connection established" messages in the logs
+- Look for "BLE client connected, now initializing BLE server..." message - this confirms successful connection
+- If sensors were working before, see "ESP32 not connecting to MEATER device" section above
 
 ### Both phone and Home Assistant not working
 - The MEATER might be too far away or have a low battery
