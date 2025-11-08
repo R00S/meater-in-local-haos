@@ -49,6 +49,9 @@ class MeaterBLEServer {
   std::vector<uint8_t> battery_data;
   std::vector<uint8_t> firmware_data;
   
+  bool adv_data_set = false;
+  bool scan_rsp_data_set = false;
+  
   MeaterBLEServer() {
     instance = this;
     temp_data.resize(8, 0);
@@ -275,9 +278,18 @@ class MeaterBLEServer {
   }
   
   static void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t* param) {
+    if (!instance) return;
+    
     switch (event) {
       case ESP_GAP_BLE_ADV_DATA_SET_COMPLETE_EVT:
         ESP_LOGI("meater_ble_server", "Advertising data set complete");
+        instance->adv_data_set = true;
+        instance->check_and_start_advertising();
+        break;
+      case ESP_GAP_BLE_SCAN_RSP_DATA_SET_COMPLETE_EVT:
+        ESP_LOGI("meater_ble_server", "Scan response data set complete");
+        instance->scan_rsp_data_set = true;
+        instance->check_and_start_advertising();
         break;
       case ESP_GAP_BLE_ADV_START_COMPLETE_EVT:
         if (param->adv_start_cmpl.status == ESP_BT_STATUS_SUCCESS) {
@@ -291,11 +303,33 @@ class MeaterBLEServer {
     }
   }
   
+  void check_and_start_advertising() {
+    if (adv_data_set && scan_rsp_data_set) {
+      // Both advertising data and scan response data are configured, now start advertising
+      esp_ble_adv_params_t adv_params = {};
+      adv_params.adv_int_min = 0x20;
+      adv_params.adv_int_max = 0x40;
+      adv_params.adv_type = ADV_TYPE_IND;
+      adv_params.own_addr_type = BLE_ADDR_TYPE_PUBLIC;
+      adv_params.channel_map = ADV_CHNL_ALL;
+      adv_params.adv_filter_policy = ADV_FILTER_ALLOW_SCAN_ANY_CON_ANY;
+      
+      esp_ble_gap_start_advertising(&adv_params);
+      ESP_LOGI("meater_ble_server", "Starting advertising with scan response enabled");
+      
+      // Reset flags for next time
+      adv_data_set = false;
+      scan_rsp_data_set = false;
+    }
+  }
+  
   void start_advertising() {
+    ESP_LOGI("meater_ble_server", "Configuring advertising data...");
+    
     // Configure advertising data
     esp_ble_adv_data_t adv_data = {};
     adv_data.set_scan_rsp = false;
-    adv_data.include_name = true;
+    adv_data.include_name = false;  // Don't include name in adv packet to save space
     adv_data.include_txpower = false;
     adv_data.min_interval = 0x20;
     adv_data.max_interval = 0x40;
@@ -310,18 +344,24 @@ class MeaterBLEServer {
     
     esp_ble_gap_config_adv_data(&adv_data);
     
-    // Configure advertising parameters
-    esp_ble_adv_params_t adv_params = {};
-    adv_params.adv_int_min = 0x20;
-    adv_params.adv_int_max = 0x40;
-    adv_params.adv_type = ADV_TYPE_IND;
-    adv_params.own_addr_type = BLE_ADDR_TYPE_PUBLIC;
-    adv_params.channel_map = ADV_CHNL_ALL;
-    adv_params.adv_filter_policy = ADV_FILTER_ALLOW_SCAN_ANY_CON_ANY;
+    // Configure scan response data with device name
+    esp_ble_adv_data_t scan_rsp_data = {};
+    scan_rsp_data.set_scan_rsp = true;
+    scan_rsp_data.include_name = true;
+    scan_rsp_data.include_txpower = false;
+    scan_rsp_data.appearance = 0x00;
+    scan_rsp_data.manufacturer_len = 0;
+    scan_rsp_data.p_manufacturer_data = nullptr;
+    scan_rsp_data.service_data_len = 0;
+    scan_rsp_data.p_service_data = nullptr;
+    scan_rsp_data.service_uuid_len = 0;
+    scan_rsp_data.p_service_uuid = nullptr;
+    scan_rsp_data.flag = 0;
     
-    esp_ble_gap_start_advertising(&adv_params);
+    esp_ble_gap_config_adv_data(&scan_rsp_data);
     
-    ESP_LOGI("meater_ble_server", "Started advertising as MEATER device");
+    // Actual advertising will start in check_and_start_advertising() 
+    // after both data sets are confirmed as configured
   }
 };
 
