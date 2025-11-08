@@ -260,22 +260,21 @@ CMake Error: The C compiler is not able to compile a simple test program.
 
 **Root cause**: The default ESP-IDF toolchain version in some ESPHome releases can have incomplete or corrupted binaries, causing compilation failures during wireless installation.
 
-**Solution**: This configuration pins to a stable ESP-IDF version (5.2.1) which uses a known-good toolchain. ESPHome automatically selects the correct platform version for this framework. If you copied an older version of `meater.yaml` before this fix:
+**Solution**: This configuration pins to a stable ESP-IDF version (5.1.0) with a known-good platform version. A direct URL is required when using custom framework versions in ESPHome. If you copied an older version of `meater.yaml` before this fix:
 
-1. Update your `meater.yaml` to pin the ESP-IDF version in the `esp32` section:
+1. Update your `meater.yaml` to use the pinned versions in the `esp32` section:
    ```yaml
    esp32:
      board: esp32-c3-devkitm-1
      framework:
        type: esp-idf
-       version: 5.2.1
+       version: 5.1.0
+       platform_version: https://github.com/pioarduino/platform-espressif32/releases/download/51.03.05/platform-espressif32.zip
    ```
 
-2. **Important**: Remove any `platform_version` line if present - ESPHome will auto-select the correct platform
+2. Try compiling again - the stable toolchain should work without errors
 
-3. Try compiling again - the stable toolchain should work without errors
-
-**Note**: You may see warnings about "selected framework version is not the recommended one" - these are expected and can be safely ignored. The pinned version (5.2.1) is more stable for wireless installations.
+**Note**: You may see warnings about "selected framework version is not the recommended one" - these are expected and can be safely ignored. The pinned version (5.1.0) is more stable for wireless installations.
 
 ### Phone app can't find the ESP32
 - Make sure the ESP32 is powered on and connected to WiFi
