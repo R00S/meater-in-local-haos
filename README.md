@@ -115,32 +115,53 @@ There are two ways to set this up, depending on whether you're using the ESPHome
 
 #### Option B: Using Home Assistant ESPHome GUI
 
-If you're using the ESPHome integration in Home Assistant, you'll need to manually add the include file since the GUI doesn't provide a way to manage external files directly.
+If you're using the ESPHome integration in Home Assistant, you'll need to manually add the include file since the GUI doesn't provide a way to manage external files directly. This requires using the File Editor add-on.
+
+**Quick Overview**: You'll need to add 3 files:
+1. The configuration (`meater.yaml`) in ESPHome dashboard
+2. Your secrets (`secrets.yaml`) with WiFi/passwords via File Editor
+3. The C++ include file (`includes/meater_ble_server.h`) via File Editor
+
+**Detailed Steps**:
 
 1. **Add the configuration file**:
    - In Home Assistant, go to **ESPHome** dashboard
    - Click **+ NEW DEVICE** or **+ NEW** button
    - Choose **Skip** on the wizard
    - Give it a name like "meater"
-   - Copy the contents of `meater.yaml` from this repository
-   - Before saving, you need to create your secrets
+   - Open [`meater.yaml`](meater.yaml) from this GitHub repository
+   - Click "Raw" button and copy all the contents
+   - Paste into the ESPHome editor
+   - Don't save yet - we need to set up secrets and includes first
 
 2. **Create your secrets**:
    - In Home Assistant, go to **Settings** → **Add-ons** → **File editor**
    - Navigate to `/config/esphome/`
-   - Create a file called `secrets.yaml` (if it doesn't exist)
-   - Copy the contents from `secrets.yaml.example` and fill in your actual values
+   - Create or edit the file called `secrets.yaml`
+   - Open [`secrets.yaml.example`](secrets.yaml.example) from this GitHub repository
+   - Copy the template and fill in your actual values:
+     - WiFi SSID and password
+     - API encryption key (you can generate one by clicking on the key icon in ESPHome dashboard)
+     - OTA password (create a secure password)
+     - MEATER device MAC address (see "Finding Your MEATER MAC Address" section above)
+     - Fallback AP password (for emergency access)
+   - Save the secrets.yaml file
 
 3. **Add the include file** (IMPORTANT):
    The configuration requires a custom C++ file that must be added manually:
    
-   **Using File Editor Add-on**:
+   **Using File Editor Add-on** (Easiest for GUI users):
    - In Home Assistant, go to **Settings** → **Add-ons** → **File editor**
-   - Navigate to `/config/esphome/`
-   - Create a new folder called `includes`
-   - Inside the `includes` folder, create a file called `meater_ble_server.h`
-   - Copy the entire contents of `includes/meater_ble_server.h` from this repository into that file
-   - Save the file
+   - Click the folder icon in the top left and navigate to `/config/esphome/`
+   - Click the folder icon with a plus sign to create a new folder called `includes`
+   - Click on the `includes` folder to enter it
+   - Click the file icon with a plus sign to create a new file called `meater_ble_server.h`
+   - Open the file [`includes/meater_ble_server.h`](includes/meater_ble_server.h) from this GitHub repository in your browser
+   - Click the "Raw" button to view the raw content
+   - Select all (Ctrl+A or Cmd+A) and copy the entire file contents
+   - Paste into the new file in your File Editor
+   - Click the save icon (floppy disk) to save the file
+   - Verify the full path is `/config/esphome/includes/meater_ble_server.h`
    
    **OR using SSH/Terminal**:
    ```bash
