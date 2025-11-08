@@ -163,12 +163,14 @@ If you're using the ESPHome integration in Home Assistant, you'll need to manual
    - Click the save icon (floppy disk) to save the file
    - Verify the full path is `/config/esphome/includes/meater_ble_server.h`
    
-   **OR using SSH/Terminal**:
+   **OR using SSH/Terminal** (Advanced users):
    ```bash
-   # SSH into your Home Assistant instance
+   # SSH into your Home Assistant instance, then run:
    mkdir -p /config/esphome/includes
-   # Copy or create the file meater_ble_server.h in /config/esphome/includes/
-   # (Use nano, vi, or upload the file)
+   cd /config/esphome/includes
+   wget https://raw.githubusercontent.com/R00S/meater-in-local-haos/main/includes/meater_ble_server.h
+   # Or if wget is not available:
+   curl -o meater_ble_server.h https://raw.githubusercontent.com/R00S/meater-in-local-haos/main/includes/meater_ble_server.h
    ```
 
 4. **Install to your ESP32**:
