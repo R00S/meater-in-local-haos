@@ -12,21 +12,28 @@ The MEATER+ device only allows one BLE connection at a time. Normally, you have 
 
 ## Solution
 
-This configuration makes the ESP32 do double duty:
+This configuration makes the ESP32 do triple duty:
 
-1. **BLE Client**: Connects to the real MEATER+ device and reads temperature/battery data
-2. **BLE Server**: Pretends to be a MEATER+ device that the phone app can connect to
+1. **BLE Client**: Connects to the real MEATER device and reads temperature/battery/device info
+2. **BLE Server**: Emulates the same MEATER variant (MEATER, MEATER+, MEATER 2, etc.) for the phone app
 3. **Data Forwarder**: Forwards all data from the real MEATER to both Home Assistant and any connected phone
+
+### Device Variant Detection
+
+The ESP32 automatically detects which MEATER variant you have:
+- Reads the device name from the real MEATER (e.g., "MEATER+", "MEATER 2")
+- Advertises itself with the same name so the phone app recognizes the correct model
+- Works with all MEATER variants: MEATER, MEATER+, MEATER 2, MEATER 2+, etc.
 
 ## How It Works
 
 ```
-Real MEATER+ 
-    ↓ (BLE connection)
-ESP32 with this config
+Real MEATER+ (or any variant)
+    ↓ (BLE connection - reads device name, temp, battery)
+ESP32 with this config (advertises as detected variant)
     ↓                    ↓
 Home Assistant      Phone App
-(existing sensors)   (connects to ESP32 as if it were the MEATER)
+(existing sensors)   (connects to ESP32 as if it were the real MEATER+)
 ```
 
 ## Security & Secrets
@@ -206,10 +213,13 @@ If you're using the ESPHome integration in Home Assistant, you'll need to manual
 
 ### New Functionality
 - ✅ BLE server that advertises as a MEATER device
+- ✅ **Automatic MEATER variant detection** (MEATER, MEATER+, MEATER 2, MEATER 2+, etc.)
+- ✅ **Dynamic device name** - advertises with the same name as the real device
 - ✅ Forwards temperature data to connected phone apps
 - ✅ Forwards battery data to connected phone apps
 - ✅ Forwards firmware version to connected phone apps
 - ✅ Supports phone app connections while maintaining Home Assistant integration
+- ✅ MEATER device name sensor showing detected variant
 
 ## Technical Details
 
@@ -221,6 +231,17 @@ If you're using the ESPHome integration in Home Assistant, you'll need to manual
 
 **Device Information Service** (`180A`):
 - Firmware Revision Characteristic (`00002a26-0000-1000-8000-00805f9b34fb`) - Read
+
+**Generic Access Profile Service** (`1800`) - Read from real MEATER:
+- Device Name Characteristic (`2A00`) - Used to detect MEATER variant (MEATER, MEATER+, etc.)
+
+### How Device Variant Detection Works
+
+1. ESP32 connects to the real MEATER device via BLE client
+2. Reads the Device Name characteristic from GAP service (`1800`)
+3. Detects the actual variant name (e.g., "MEATER+", "MEATER 2")
+4. Updates BLE server to advertise with the same device name
+5. Phone app sees the correct MEATER variant and connects successfully
 
 ### Files
 
