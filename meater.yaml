@@ -78,7 +78,7 @@ sensor:
     lambda: |-
       // Forward raw data to BLE server for phone app
       if (id(meater_ble_server_ptr) != nullptr) {
-        id(meater_ble_server_ptr)->update_temp_data(x);
+        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_temp_data(x);
       }
       
       // Calculate temperature for Home Assistant (existing functionality)
@@ -114,7 +114,7 @@ sensor:
     lambda: |-
       // Forward raw data to BLE server for phone app
       if (id(meater_ble_server_ptr) != nullptr) {
-        id(meater_ble_server_ptr)->update_battery_data(x);
+        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_battery_data(x);
       }
       
       // Calculate battery percentage for Home Assistant (existing functionality)
@@ -133,7 +133,7 @@ sensor:
       
       // Forward firmware data to BLE server for phone app
       if (id(meater_ble_server_ptr) != nullptr) {
-        id(meater_ble_server_ptr)->update_firmware_data(x);
+        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_firmware_data(x);
       }
       
       return (float)x.size();
