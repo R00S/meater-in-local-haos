@@ -247,6 +247,34 @@ This error occurs when using the ESPHome GUI and the include file hasn't been ad
 
 If you prefer not to manage external files, you can use the ESPHome command line interface instead (see Option A).
 
+### Compilation Error: "cannot execute 'cc1': posix_spawnp: No such file or directory"
+
+If you encounter this error during compilation:
+
+```
+riscv32-esp-elf-gcc: fatal error: cannot execute 'cc1': posix_spawnp: No such file or directory
+compilation terminated.
+CMake Error: The C compiler is not able to compile a simple test program.
+```
+
+**Root cause**: Some ESPHome versions had a broken default toolchain (14.2.0+20241119) with incomplete binaries.
+
+**Solution**: This configuration uses ESPHome's recommended defaults, which should have a working toolchain. However, if you still encounter this error with your ESPHome version:
+
+1. Check if there's an ESPHome update available (the toolchain issue may be fixed in newer versions)
+2. As a temporary workaround, you can pin to a known working configuration by adding to the `esp32` section in `meater.yaml`:
+   ```yaml
+   esp32:
+     board: esp32-c3-devkitm-1
+     framework:
+       type: esp-idf
+       # Temporary workaround for broken toolchain - remove once ESPHome is updated
+       version: recommended
+   ```
+3. If the issue persists, please report it as an issue in this repository with your ESPHome version number
+
+**Note**: The default configuration (no version pinning) is preferred as it's more maintainable and future-proof. Only add version pinning if you actually encounter the cc1 error.
+
 ### Phone app can't find the ESP32
 - Make sure the ESP32 is powered on and connected to WiFi
 - Check the logs to ensure the BLE server started successfully
