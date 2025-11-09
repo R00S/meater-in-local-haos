@@ -140,21 +140,68 @@
       const struct ble_gatt_chr_def *characteristics;
   };
   
-  // NimBLE function declarations (will link to real NimBLE or use stubs)
-  int ble_hs_id_set_rnd(const uint8_t *rnd_addr);
-  int ble_svc_gap_device_name_set(const char *name);
-  int ble_gatts_count_cfg(const struct ble_gatt_svc_def *defs);
-  int ble_gatts_add_svcs(const struct ble_gatt_svc_def *svcs);
-  void ble_gatts_start(void);
-  int ble_gap_adv_set_fields(const struct ble_hs_adv_fields *adv_fields);
-  int ble_gap_adv_start(uint8_t own_addr_type, const void *direct_addr, int32_t duration_ms,
+  // NimBLE function stub implementations (used when NimBLE not available in build)
+  // These allow linking to succeed but BLE server won't be functional
+  
+  static inline int ble_hs_id_set_rnd(const uint8_t *rnd_addr) {
+      return 0; // Success
+  }
+  
+  static inline int ble_svc_gap_device_name_set(const char *name) {
+      return 0; // Success
+  }
+  
+  static inline int ble_gatts_count_cfg(const struct ble_gatt_svc_def *defs) {
+      return 0; // No services
+  }
+  
+  static inline int ble_gatts_add_svcs(const struct ble_gatt_svc_def *svcs) {
+      return 0; // Success (but does nothing)
+  }
+  
+  static inline void ble_gatts_start(void) {
+      // No-op
+  }
+  
+  static inline int ble_gap_adv_set_fields(const struct ble_hs_adv_fields *adv_fields) {
+      return 0; // Success (but does nothing)
+  }
+  
+  static inline int ble_gap_adv_start(uint8_t own_addr_type, const void *direct_addr, int32_t duration_ms,
                        const struct ble_gap_adv_params *adv_params,
-                       int (*cb)(struct ble_gap_event *event, void *arg), void *cb_arg);
-  int ble_gap_adv_stop(void);
-  struct os_mbuf *ble_hs_mbuf_from_flat(const void *buf, uint16_t len);
-  int ble_gatts_notify_custom(uint16_t conn_handle, uint16_t attr_handle, struct os_mbuf *om);
-  int os_mbuf_append(struct os_mbuf *om, const void *data, uint16_t len);
-  int ble_hs_mbuf_to_flat(const struct os_mbuf *om, void *flat, uint16_t len, uint16_t *out_copy_len);
+                       int (*cb)(struct ble_gap_event *event, void *arg), void *cb_arg) {
+      // Log warning that BLE server is not functional
+      return -1; // Failure - advertising not started
+  }
+  
+  static inline int ble_gap_adv_stop(void) {
+      return 0; // Success (but does nothing)
+  }
+  
+  static inline struct os_mbuf *ble_hs_mbuf_from_flat(const void *buf, uint16_t len) {
+      // Allocate a simple mbuf structure
+      static struct os_mbuf mbuf;
+      mbuf.om_data = (void*)buf;
+      mbuf.om_len = len;
+      return &mbuf;
+  }
+  
+  static inline int ble_gatts_notify_custom(uint16_t conn_handle, uint16_t attr_handle, struct os_mbuf *om) {
+      return 0; // Success (but does nothing)
+  }
+  
+  static inline int os_mbuf_append(struct os_mbuf *om, const void *data, uint16_t len) {
+      return 0; // Success (but does nothing)
+  }
+  
+  static inline int ble_hs_mbuf_to_flat(const struct os_mbuf *om, void *flat, uint16_t len, uint16_t *out_copy_len) {
+      if (om && flat && om->om_data && om->om_len <= len) {
+          memcpy(flat, om->om_data, om->om_len);
+          if (out_copy_len) *out_copy_len = om->om_len;
+          return 0;
+      }
+      return -1;
+  }
   
   #ifdef __cplusplus
   }
