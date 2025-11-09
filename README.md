@@ -1,39 +1,41 @@
 # MEATER BLE Proxy for Home Assistant
 
-This ESPHome configuration allows an ESP32 to act as a proxy between a MEATER+ temperature probe and both Home Assistant and the MEATER phone app simultaneously.
+This ESPHome configuration allows an ESP32 to act as a proxy between a MEATER Block and both Home Assistant and the MEATER phone app simultaneously.
 
 > **📝 Note for Home Assistant GUI Users**: This configuration requires adding a custom C++ include file. See the detailed [setup instructions below](#setup) for how to add this file through the File Editor add-on. If you prefer a simpler setup process, you can use the ESPHome command line interface instead.
 
 ## Problem
 
-The MEATER+ device only allows one BLE connection at a time. Normally, you have to choose between:
-- Connecting the MEATER to Home Assistant via ESP32 (loses phone app functionality)
-- Connecting the MEATER to phone app (loses Home Assistant integration)
+The MEATER Block only allows one BLE connection at a time. Normally, you have to choose between:
+- Connecting the MEATER Block to Home Assistant via ESP32 (loses phone app functionality)
+- Connecting the MEATER Block to phone app (loses Home Assistant integration)
 
 ## Solution
 
 This configuration makes the ESP32 do triple duty:
 
-1. **BLE Client**: Connects to the real MEATER device and reads temperature/battery/device info
+1. **BLE Client**: Connects to the MEATER Block (which connects to the probe) and reads temperature/battery/device info
 2. **BLE Server**: Emulates the same MEATER variant (MEATER, MEATER+, MEATER 2, etc.) for the phone app
-3. **Data Forwarder**: Forwards all data from the real MEATER to both Home Assistant and any connected phone
+3. **Data Forwarder**: Forwards all data from the MEATER Block to both Home Assistant and any connected phone
 
 ### Device Variant Detection
 
 The ESP32 automatically detects which MEATER variant you have:
-- Reads the device name from the real MEATER (e.g., "MEATER+", "MEATER 2")
+- Reads the device name from the MEATER Block (e.g., "MEATER+", "MEATER 2")
 - Advertises itself with the same name so the phone app recognizes the correct model
 - Works with all MEATER variants: MEATER, MEATER+, MEATER 2, MEATER 2+, etc.
 
 ## How It Works
 
 ```
-Real MEATER+ (or any variant)
+MEATER Probe
+    ↓ (proprietary connection)
+MEATER Block (advertises as "MEATER+", etc.)
     ↓ (BLE connection - reads device name, temp, battery)
 ESP32 with this config (advertises as detected variant)
     ↓                    ↓
 Home Assistant      Phone App
-(existing sensors)   (connects to ESP32 as if it were the real MEATER+)
+(existing sensors)   (connects to ESP32 as if it were the MEATER Block)
 ```
 
 ## Security & Secrets
@@ -53,7 +55,7 @@ This approach ensures that:
 
 ### Hardware Required
 - **ESP32-C6 board** (recommended: ESP32-C6-DevKitC-1) - Required for stable operation
-- MEATER+ temperature probe
+- MEATER Block (WiFi bridge device that connects to MEATER probes)
 
 ### Memory Requirements
 
