@@ -21,8 +21,9 @@ This configuration makes the ESP32 do triple duty:
 ### Device Variant Detection
 
 The ESP32 automatically detects which MEATER variant you have:
-- Reads the device name from the MEATER Block (e.g., "MEATER+", "MEATER 2")
-- Advertises itself with the same name so the phone app recognizes the correct model
+- Initially advertises as "MEATER" (generic name) on boot
+- Reads the device name from the MEATER Block once connected (e.g., "MEATER+", "MEATER 2")
+- Updates advertising to use the same name so the phone app recognizes the correct model
 - Works with all MEATER variants: MEATER, MEATER+, MEATER 2, MEATER 2+, etc.
 
 ## How It Works
@@ -37,6 +38,16 @@ ESP32 with this config (advertises as detected variant)
 Home Assistant      Phone App
 (existing sensors)   (connects to ESP32 as if it were the MEATER Block)
 ```
+
+### Initialization Flow
+
+1. **On Boot**: BLE server starts immediately and begins advertising as "MEATER" (default name)
+2. **BLE Client Connection**: ESP32 connects to the real MEATER Block
+3. **Device Detection**: Reads the device name from MEATER Block (e.g., "MEATER+", "MEATER 2")
+4. **Name Update**: Updates BLE server advertising name to match the detected variant
+5. **Data Forwarding**: Continuously forwards temperature, battery, and firmware data to both Home Assistant and connected phone apps
+
+This approach ensures the BLE server is always running and advertising, even before connecting to the real MEATER device.
 
 ## Security & Secrets
 
@@ -54,29 +65,30 @@ This approach ensures that:
 ## Configuration
 
 ### Hardware Required
-- **ESP32-C6 board** (recommended: ESP32-C6-DevKitC-1) - Required for stable operation
+- **ESP32-C3 board** (recommended: ESP32-C3-DevKitM-1) - Required for BLE compatibility
 - MEATER Block (WiFi bridge device that connects to MEATER probes)
 
 ### Memory Requirements
 
-**Why ESP32-C6?** 
+**Why ESP32-C3?** 
 
-This project requires running both BLE client and BLE server simultaneously along with WiFi and Home Assistant connectivity. The ESP32-C6 is the recommended choice because:
+This project requires running both BLE client and BLE server simultaneously along with WiFi and Home Assistant connectivity. The ESP32-C3 is the recommended choice because:
 
-- **More RAM**: 512KB vs 400KB on ESP32-C3
-- **Better BLE stack**: Improved BLE 5.3 with better coexistence between client/server modes
-- **Stable operation**: Handles concurrent BLE operations without crashes
-- **Flash memory**: 4MB+ is sufficient for all features with room for OTA updates
+- **Bluedroid stack support**: The BLE server implementation uses Bluedroid APIs which are compatible with ESP32-C3
+- **Sufficient RAM**: 400KB is adequate for concurrent BLE client/server and WiFi operations
+- **Proven stability**: Works reliably with dual BLE modes (client + server)
+- **Flash memory**: 4MB is sufficient for all features with room for OTA updates
+- **Cost effective**: More affordable than dual-core ESP32 variants
 
 **Compatible boards**:
-- ✅ **ESP32-C6-DevKitC-1** (4MB flash) - **Recommended** - Best stability and performance
-- ✅ ESP32-DevKitC (4MB+ flash, dual-core) - Also good choice
-- ✅ ESP32-WROOM-32 (4MB+ flash, dual-core) - Also good choice
-- ⚠️ ESP32-C3-DevKitM-1 (4MB flash) - May experience crashes due to limited RAM
+- ✅ **ESP32-C3-DevKitM-1** (4MB flash) - **Recommended** - Best compatibility with current BLE implementation
+- ✅ ESP32-DevKitC (4MB+ flash, dual-core) - Also good choice with Bluedroid support
+- ✅ ESP32-WROOM-32 (4MB+ flash, dual-core) - Also good choice with Bluedroid support
+- ❌ ESP32-C6-DevKitC-1 - Not compatible (only supports NimBLE, code uses Bluedroid APIs)
 - ❌ ESP8266 - Not compatible (no BLE support)
 - ❌ Raspberry Pi Pico W - Not compatible (ESPHome requires ESP32/ESP8266)
 
-The ESP32-C6 provides the best balance of cost, power efficiency, and stable operation for this dual-BLE-mode application.
+The ESP32-C3 provides the best balance of cost, compatibility, and stable operation for this dual-BLE-mode application.
 
 ### Finding Your MEATER MAC Address
 
@@ -241,11 +253,13 @@ If you're using the ESPHome integration in Home Assistant, you'll need to manual
 
 ### How Device Variant Detection Works
 
-1. ESP32 connects to the real MEATER device via BLE client
-2. Reads the Device Name characteristic from GAP service (`1800`)
-3. Detects the actual variant name (e.g., "MEATER+", "MEATER 2")
-4. Updates BLE server to advertise with the same device name
-5. Phone app sees the correct MEATER variant and connects successfully
+1. ESP32 boots and initializes BLE server with default "MEATER" name
+2. BLE server begins advertising immediately
+3. ESP32 connects to the real MEATER device via BLE client
+4. Reads the Device Name characteristic from GAP service (`1800`)
+5. Detects the actual variant name (e.g., "MEATER+", "MEATER 2")
+6. Updates BLE server to advertise with the same device name
+7. Phone app sees the correct MEATER variant and connects successfully
 
 ### Files
 
