@@ -72,17 +72,7 @@ sensor:
     accuracy_decimals: 2
     notify: true
     lambda: |-
-      // Initialize BLE server on first data reception (ensures BLE client is connected first)
-      static bool ble_server_initialized = false;
-      if (!ble_server_initialized && id(meater_ble_server_ptr) == nullptr) {
-        ESP_LOGI("meater", "BLE client connected, now initializing BLE server...");
-        static MeaterBLEServer* ble_server = new MeaterBLEServer();
-        ble_server->setup();
-        id(meater_ble_server_ptr) = (void*)ble_server;
-        ble_server_initialized = true;
-      }
-      
-      // Forward raw data to BLE server for phone app
+      // Forward raw data to BLE server for phone app (server initialized after device name read)
       if (id(meater_ble_server_ptr) != nullptr) {
         ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_temp_data(x);
       }
@@ -155,16 +145,22 @@ sensor:
     service_uuid: '1800'  # Generic Access Profile service
     characteristic_uuid: '2A00'  # Device Name characteristic
     lambda: |-
-      // Read device name and forward to BLE server
+      // Read device name from real MEATER
       std::string device_name(x.begin(), x.end());
       ESP_LOGI("meater", "Read device name from real MEATER: %s", device_name.c_str());
       
       // Update text sensor
       id(meater_device_name_display).publish_state(device_name);
       
-      // Forward to BLE server
-      if (id(meater_ble_server_ptr) != nullptr) {
-        ((MeaterBLEServer*)id(meater_ble_server_ptr))->set_device_name(device_name);
+      // Initialize BLE server with device name (only once after name is read)
+      static bool ble_server_initialized = false;
+      if (!ble_server_initialized && id(meater_ble_server_ptr) == nullptr) {
+        ESP_LOGI("meater", "Initializing BLE server with device name: %s", device_name.c_str());
+        static MeaterBLEServer* ble_server = new MeaterBLEServer();
+        ble_server->set_device_name(device_name);  // Set name BEFORE setup
+        ble_server->setup();  // Start advertising with correct name
+        id(meater_ble_server_ptr) = (void*)ble_server;
+        ble_server_initialized = true;
       }
       
       return (float)x.size();

@@ -129,18 +129,21 @@ class MeaterBLEServer {
       device_name_set = true;
       ESP_LOGI("meater_ble_server", "Device name set to: %s", device_name.c_str());
       
-      // Update the device name in the BLE stack
-      esp_ble_gap_set_device_name(device_name.c_str());
-      
-      // Stop advertising to update with new name
-      if (connected) {
-        ESP_LOGI("meater_ble_server", "Device connected, will update name on next advertising cycle");
-      } else {
-        // Stop advertising and mark for restart
-        ESP_LOGI("meater_ble_server", "Stopping advertising to update device name");
-        restart_advertising_pending = true;
-        esp_ble_gap_stop_advertising();
-        // Will restart in ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT handler
+      // Only update BLE stack if already initialized (setup() was called)
+      if (gatts_if != ESP_GATT_IF_NONE) {
+        // Update the device name in the BLE stack
+        esp_ble_gap_set_device_name(device_name.c_str());
+        
+        // Stop advertising to update with new name
+        if (connected) {
+          ESP_LOGI("meater_ble_server", "Device connected, will update name on next advertising cycle");
+        } else {
+          // Stop advertising and mark for restart
+          ESP_LOGI("meater_ble_server", "Stopping advertising to update device name");
+          restart_advertising_pending = true;
+          esp_ble_gap_stop_advertising();
+          // Will restart in ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT handler
+        }
       }
     }
   }
