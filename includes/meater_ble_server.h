@@ -35,6 +35,7 @@ static const uint8_t MEATER_CONFIG_CHAR_UUID[16] = {
 // Firmware service (standard BLE service)
 static const uint16_t DEVICE_INFO_SERVICE_UUID = 0x180A;
 static const uint16_t FIRMWARE_CHAR_UUID = 0x2A26;
+static const uint16_t MANUFACTURER_NAME_CHAR_UUID = 0x2A29;
 
 class MeaterBLEServer {
  public:
@@ -53,11 +54,13 @@ class MeaterBLEServer {
   
   uint16_t fw_service_handle = 0;
   uint16_t fw_char_handle = 0;
+  uint16_t manufacturer_name_char_handle = 0;
   
   std::vector<uint8_t> temp_data;
   std::vector<uint8_t> battery_data;
   std::vector<uint8_t> config_data;
   std::vector<uint8_t> firmware_data;
+  std::vector<uint8_t> manufacturer_name_data;
   
   bool adv_data_set = false;
   bool scan_rsp_data_set = false;
@@ -81,6 +84,7 @@ class MeaterBLEServer {
     battery_data.resize(2, 0);
     config_data.resize(1, 0);  // Single byte for config characteristic
     firmware_data = {'V', '1', '.', '0', '.', '0'};
+    manufacturer_name_data = {'A', 'p', 'p', 't', 'i', 'o', 'n', ' ', 'L', 'a', 'b', 's'};
   }
   
   void setup() {
@@ -270,13 +274,28 @@ class MeaterBLEServer {
             service_id.id.uuid.len = ESP_UUID_LEN_16;
             service_id.id.uuid.uuid.uuid16 = DEVICE_INFO_SERVICE_UUID;
             
-            esp_ble_gatts_create_service(instance->gatts_if, &service_id, 4);
+            esp_ble_gatts_create_service(instance->gatts_if, &service_id, 6);
           }
         } else if (param->add_char.service_handle == instance->fw_service_handle) {
-          instance->fw_char_handle = param->add_char.attr_handle;
-          
-          // Start advertising
-          instance->start_advertising();
+          if (instance->fw_char_handle == 0) {
+            instance->fw_char_handle = param->add_char.attr_handle;
+            
+            // Add manufacturer name characteristic
+            esp_bt_uuid_t char_uuid;
+            char_uuid.len = ESP_UUID_LEN_16;
+            char_uuid.uuid.uuid16 = MANUFACTURER_NAME_CHAR_UUID;
+            
+            esp_gatt_char_prop_t property = ESP_GATT_CHAR_PROP_BIT_READ;
+            esp_gatt_perm_t perm = ESP_GATT_PERM_READ;
+            
+            esp_ble_gatts_add_char(instance->fw_service_handle, &char_uuid, perm,
+                                  property, nullptr, nullptr);
+          } else if (instance->manufacturer_name_char_handle == 0) {
+            instance->manufacturer_name_char_handle = param->add_char.attr_handle;
+            
+            // Start advertising after all characteristics are added
+            instance->start_advertising();
+          }
         }
         break;
       }
@@ -366,6 +385,9 @@ class MeaterBLEServer {
         } else if (param->read.handle == instance->fw_char_handle) {
           rsp.attr_value.len = instance->firmware_data.size();
           memcpy(rsp.attr_value.value, instance->firmware_data.data(), rsp.attr_value.len);
+        } else if (param->read.handle == instance->manufacturer_name_char_handle) {
+          rsp.attr_value.len = instance->manufacturer_name_data.size();
+          memcpy(rsp.attr_value.value, instance->manufacturer_name_data.data(), rsp.attr_value.len);
         }
         
         esp_ble_gatts_send_response(gatts_if, param->read.conn_id, param->read.trans_id,
