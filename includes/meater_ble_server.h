@@ -32,8 +32,9 @@ static const uint8_t MEATER_CONFIG_CHAR_UUID[16] = {
     0xad, 0x45, 0x57, 0x27, 0xf1, 0x3b, 0x5d, 0x57
 };
 
-// Firmware service (standard BLE service)
+// Device Information service (standard BLE service)
 static const uint16_t DEVICE_INFO_SERVICE_UUID = 0x180A;
+static const uint16_t MANUFACTURER_NAME_CHAR_UUID = 0x2A29;
 static const uint16_t FIRMWARE_CHAR_UUID = 0x2A26;
 
 class MeaterBLEServer {
@@ -52,11 +53,13 @@ class MeaterBLEServer {
   uint16_t config_char_handle = 0;
   
   uint16_t fw_service_handle = 0;
+  uint16_t mfr_char_handle = 0;
   uint16_t fw_char_handle = 0;
   
   std::vector<uint8_t> temp_data;
   std::vector<uint8_t> battery_data;
   std::vector<uint8_t> config_data;
+  std::vector<uint8_t> manufacturer_name_data;
   std::vector<uint8_t> firmware_data;
   
   bool adv_data_set = false;
@@ -80,6 +83,11 @@ class MeaterBLEServer {
     temp_data.resize(8, 0);
     battery_data.resize(2, 0);
     config_data.resize(1, 0x41);  // Initialize with default value 0x41 until read from real device
+    
+    // Set manufacturer name to "Apption Labs" as expected by Android app
+    std::string mfr_name = "Apption Labs";
+    manufacturer_name_data.assign(mfr_name.begin(), mfr_name.end());
+    
     firmware_data = {'V', '1', '.', '0', '.', '0'};
   }
   
@@ -209,14 +217,14 @@ class MeaterBLEServer {
           esp_ble_gatts_add_char(instance->service_handle, &char_uuid, perm,
                                 property, nullptr, nullptr);
         } else {
-          // This is the firmware service
+          // This is the Device Information service
           instance->fw_service_handle = param->create.service_handle;
           esp_ble_gatts_start_service(instance->fw_service_handle);
           
-          // Add firmware characteristic
+          // Add Manufacturer Name characteristic first (required by Android app)
           esp_bt_uuid_t char_uuid;
           char_uuid.len = ESP_UUID_LEN_16;
-          char_uuid.uuid.uuid16 = FIRMWARE_CHAR_UUID;
+          char_uuid.uuid.uuid16 = MANUFACTURER_NAME_CHAR_UUID;
           
           esp_gatt_char_prop_t property = ESP_GATT_CHAR_PROP_BIT_READ;
           esp_gatt_perm_t perm = ESP_GATT_PERM_READ;
@@ -295,10 +303,27 @@ class MeaterBLEServer {
             esp_ble_gatts_create_service(instance->gatts_if, &service_id, 4);
           }
         } else if (param->add_char.service_handle == instance->fw_service_handle) {
-          instance->fw_char_handle = param->add_char.attr_handle;
-          
-          // Start advertising
-          instance->start_advertising();
+          if (instance->mfr_char_handle == 0) {
+            // First characteristic added - this is manufacturer name
+            instance->mfr_char_handle = param->add_char.attr_handle;
+            
+            // Now add firmware characteristic
+            esp_bt_uuid_t char_uuid;
+            char_uuid.len = ESP_UUID_LEN_16;
+            char_uuid.uuid.uuid16 = FIRMWARE_CHAR_UUID;
+            
+            esp_gatt_char_prop_t property = ESP_GATT_CHAR_PROP_BIT_READ;
+            esp_gatt_perm_t perm = ESP_GATT_PERM_READ;
+            
+            esp_ble_gatts_add_char(instance->fw_service_handle, &char_uuid, perm,
+                                  property, nullptr, nullptr);
+          } else {
+            // Second characteristic added - this is firmware version
+            instance->fw_char_handle = param->add_char.attr_handle;
+            
+            // Start advertising
+            instance->start_advertising();
+          }
         }
         break;
       }
@@ -354,6 +379,10 @@ class MeaterBLEServer {
         } else if (param->read.handle == instance->config_char_handle) {
           rsp.attr_value.len = instance->config_data.size();
           memcpy(rsp.attr_value.value, instance->config_data.data(), rsp.attr_value.len);
+        } else if (param->read.handle == instance->mfr_char_handle) {
+          rsp.attr_value.len = instance->manufacturer_name_data.size();
+          memcpy(rsp.attr_value.value, instance->manufacturer_name_data.data(), rsp.attr_value.len);
+          ESP_LOGI("meater_ble_server", "Read manufacturer name: Apption Labs");
         } else if (param->read.handle == instance->fw_char_handle) {
           rsp.attr_value.len = instance->firmware_data.size();
           memcpy(rsp.attr_value.value, instance->firmware_data.data(), rsp.attr_value.len);
