@@ -46,14 +46,12 @@ wifi:
 
 captive_portal:
 
-# Configure BLE tracker for bluetooth_proxy with settings that don't interfere with BLE client
+# Configure BLE tracker for BLE client scanning
 esp32_ble_tracker:
   scan_parameters:
     interval: 1100ms
     window: 1100ms
     active: true
-
-bluetooth_proxy:
 
 ble_client:
   - mac_address: !secret meater_mac_address
