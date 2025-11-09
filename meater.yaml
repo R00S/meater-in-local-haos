@@ -3,13 +3,14 @@ esphome:
   friendly_name: meater
   includes:
     - includes/meater_ble_server.h
-  # BLE server is initialized on boot to ensure it starts reliably
+  # BLE server will initialize on boot if NimBLE headers are available
+  # Otherwise it will log a warning and operate in BLE client-only mode
   on_boot:
     priority: -10
     then:
       - lambda: |-
           if (id(meater_ble_server_ptr) == nullptr) {
-            ESP_LOGI("meater", "Initializing BLE server on boot");
+            ESP_LOGI("meater", "Initializing BLE server");
             static MeaterBLEServer* s = new MeaterBLEServer();
             s->setup();
             id(meater_ble_server_ptr) = (void*) s;

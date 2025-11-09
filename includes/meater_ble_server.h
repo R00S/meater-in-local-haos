@@ -4,14 +4,22 @@
 
 #ifdef USE_ESP32
 
-#include <nimble/nimble_port.h>
-#include <nimble/nimble_port_freertos.h>
-#include <host/ble_hs.h>
-#include <host/ble_uuid.h>
-#include <host/ble_gap.h>
-#include <host/util/util.h>
-#include <services/gap/ble_svc_gap.h>
-#include <services/gatt/ble_svc_gatt.h>
+// Try to include NimBLE headers - these may not be directly accessible in all ESPHome builds
+// If they're not available, the BLE server functionality will be disabled at compile time
+#if __has_include(<host/ble_hs.h>)
+  #define HAS_NIMBLE_HEADERS 1
+  #include <host/ble_hs.h>
+  #include <host/ble_uuid.h>
+  #include <host/ble_gap.h>
+  #include <services/gap/ble_svc_gap.h>
+  #include <services/gatt/ble_svc_gatt.h>
+#else
+  #define HAS_NIMBLE_HEADERS 0
+  // Stub out the BLE server - compilation will succeed but server won't be functional
+  #warning "NimBLE headers not found - BLE server emulation will be disabled"
+#endif
+
+#if HAS_NIMBLE_HEADERS
 
 // Forward declaration
 class MeaterBLEServer;
@@ -413,5 +421,28 @@ class MeaterBLEServer {
 
 // Initialize static member
 MeaterBLEServer* MeaterBLEServer::instance = nullptr;
+
+#else // !HAS_NIMBLE_HEADERS
+
+// Stub implementation when NimBLE headers are not available
+class MeaterBLEServer {
+ public:
+  static MeaterBLEServer* instance;
+  
+  MeaterBLEServer() { instance = this; }
+  
+  void setup() {
+    ESP_LOGW("meater_ble_server", "BLE server disabled - NimBLE headers not available in this build");
+  }
+  
+  void update_temp_data(const std::vector<uint8_t>& data) {}
+  void update_battery_data(const std::vector<uint8_t>& data) {}
+  void update_firmware_data(const std::vector<uint8_t>& data) {}
+  void set_device_name(const std::string& name) {}
+};
+
+MeaterBLEServer* MeaterBLEServer::instance = nullptr;
+
+#endif // HAS_NIMBLE_HEADERS
 
 #endif // USE_ESP32
