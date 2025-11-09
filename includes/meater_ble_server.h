@@ -46,7 +46,9 @@ class MeaterBLEServer {
   
   uint16_t service_handle = 0;
   uint16_t temp_char_handle = 0;
+  uint16_t temp_descr_handle = 0;
   uint16_t battery_char_handle = 0;
+  uint16_t battery_descr_handle = 0;
   uint16_t config_char_handle = 0;
   
   uint16_t fw_service_handle = 0;
@@ -77,7 +79,7 @@ class MeaterBLEServer {
     instance = this;
     temp_data.resize(8, 0);
     battery_data.resize(2, 0);
-    config_data.resize(1, 0);  // Single byte for config characteristic
+    config_data.resize(1, 0x41);  // Initialize with default value 0x41 until read from real device
     firmware_data = {'V', '1', '.', '0', '.', '0'};
   }
   
@@ -126,6 +128,12 @@ class MeaterBLEServer {
                                   data.size(), (uint8_t*)data.data(), false);
       ESP_LOGD("meater_ble_server", "Sent battery notification");
     }
+  }
+  
+  void update_config_data(const std::vector<uint8_t>& data) {
+    config_data = data;
+    ESP_LOGI("meater_ble_server", "Config data updated, size: %d", data.size());
+    // Config characteristic is READ/WRITE, not notified
   }
   
   void update_firmware_data(const std::vector<uint8_t>& data) {
@@ -177,7 +185,7 @@ class MeaterBLEServer {
         service_id.id.uuid.len = ESP_UUID_LEN_128;
         memcpy(service_id.id.uuid.uuid.uuid128, MEATER_SERVICE_UUID, 16);
         
-        esp_ble_gatts_create_service(gatts_if, &service_id, 12);  // Need more handles for 3 characteristics
+        esp_ble_gatts_create_service(gatts_if, &service_id, 16);  // 3 chars + 2 descriptors + overhead
         break;
       }
       
@@ -227,6 +235,17 @@ class MeaterBLEServer {
           if (instance->temp_char_handle == 0) {
             instance->temp_char_handle = param->add_char.attr_handle;
             
+            // Add CCCD for temperature notifications
+            esp_bt_uuid_t descr_uuid;
+            descr_uuid.len = ESP_UUID_LEN_16;
+            descr_uuid.uuid.uuid16 = ESP_GATT_UUID_CHAR_CLIENT_CONFIG;
+            
+            esp_ble_gatts_add_char_descr(instance->service_handle, &descr_uuid,
+                                        ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
+                                        nullptr, nullptr);
+          } else if (instance->temp_descr_handle == 0) {
+            instance->temp_descr_handle = param->add_char_descr.attr_handle;
+            
             // Add battery characteristic
             esp_bt_uuid_t char_uuid;
             char_uuid.len = ESP_UUID_LEN_128;
@@ -240,6 +259,17 @@ class MeaterBLEServer {
                                   property, nullptr, nullptr);
           } else if (instance->battery_char_handle == 0) {
             instance->battery_char_handle = param->add_char.attr_handle;
+            
+            // Add CCCD for battery notifications
+            esp_bt_uuid_t descr_uuid;
+            descr_uuid.len = ESP_UUID_LEN_16;
+            descr_uuid.uuid.uuid16 = ESP_GATT_UUID_CHAR_CLIENT_CONFIG;
+            
+            esp_ble_gatts_add_char_descr(instance->service_handle, &descr_uuid,
+                                        ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
+                                        nullptr, nullptr);
+          } else if (instance->battery_descr_handle == 0) {
+            instance->battery_descr_handle = param->add_char_descr.attr_handle;
             
             // Add config characteristic (READ/WRITE)
             esp_bt_uuid_t char_uuid;
@@ -276,6 +306,13 @@ class MeaterBLEServer {
       case ESP_GATTS_START_EVT: {
         ESP_LOGI("meater_ble_server", "SERVICE_START_EVT, status %d, service_handle %d",
                  param->start.status, param->start.service_handle);
+        break;
+      }
+      
+      case ESP_GATTS_ADD_CHAR_DESCR_EVT: {
+        ESP_LOGI("meater_ble_server", "ADD_CHAR_DESCR_EVT, status %d, attr_handle %d",
+                 param->add_char_descr.status, param->add_char_descr.attr_handle);
+        // Descriptor added, handled in ADD_CHAR_EVT
         break;
       }
       
