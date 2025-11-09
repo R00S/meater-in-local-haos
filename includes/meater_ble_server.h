@@ -66,8 +66,9 @@ class MeaterBLEServer {
   bool scan_rsp_data_set = false;
   bool restart_advertising_pending = false;
   
-  std::string device_name = "MEATER";  // Default name, will be updated from real device
+  std::string device_name = "MEATER";  // Use exactly "MEATER" for app compatibility
   bool device_name_set = false;
+  bool force_simple_name = true;  // Always use "MEATER" not "MEATER+" for app pairing
   
   // Manufacturer data matching real MEATER advertising format
   // Based on real MEATER+ packet: Company ID 0x037B (little endian: 7B 03) + 22 bytes of data
@@ -139,10 +140,15 @@ class MeaterBLEServer {
   }
   
   void set_device_name(const std::string& name) {
-    if (device_name != name) {
-      device_name = name;
+    // Always use simple "MEATER" name for Android app compatibility
+    // The app filters for exact "MEATER" during BLE scan
+    std::string new_name = force_simple_name ? "MEATER" : name;
+    
+    if (device_name != new_name) {
+      device_name = new_name;
       device_name_set = true;
-      ESP_LOGI("meater_ble_server", "Device name set to: %s", device_name.c_str());
+      ESP_LOGI("meater_ble_server", "Device name set to: %s (original: %s)", 
+               device_name.c_str(), name.c_str());
       
       // Only update BLE stack if already initialized (setup() was called)
       if (gatts_if != ESP_GATT_IF_NONE) {
@@ -475,6 +481,7 @@ class MeaterBLEServer {
   
   void start_advertising() {
     ESP_LOGI("meater_ble_server", "Configuring advertising data...");
+    ESP_LOGI("meater_ble_server", "Advertising as: %s", device_name.c_str());
     
     // Configure advertising data
     esp_ble_adv_data_t adv_data = {};
