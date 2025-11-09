@@ -1,32 +1,41 @@
 # MEATER BLE Proxy for Home Assistant
 
-This ESPHome configuration allows an ESP32 to act as a proxy between a MEATER+ temperature probe and both Home Assistant and the MEATER phone app simultaneously.
+This ESPHome configuration allows an ESP32 to act as a proxy between a MEATER Block and both Home Assistant and the MEATER phone app simultaneously.
 
 > **📝 Note for Home Assistant GUI Users**: This configuration requires adding a custom C++ include file. See the detailed [setup instructions below](#setup) for how to add this file through the File Editor add-on. If you prefer a simpler setup process, you can use the ESPHome command line interface instead.
 
 ## Problem
 
-The MEATER+ device only allows one BLE connection at a time. Normally, you have to choose between:
-- Connecting the MEATER to Home Assistant via ESP32 (loses phone app functionality)
-- Connecting the MEATER to phone app (loses Home Assistant integration)
+The MEATER Block only allows one BLE connection at a time. Normally, you have to choose between:
+- Connecting the MEATER Block to Home Assistant via ESP32 (loses phone app functionality)
+- Connecting the MEATER Block to phone app (loses Home Assistant integration)
 
 ## Solution
 
-This configuration makes the ESP32 do double duty:
+This configuration makes the ESP32 do triple duty:
 
-1. **BLE Client**: Connects to the real MEATER+ device and reads temperature/battery data
-2. **BLE Server**: Pretends to be a MEATER+ device that the phone app can connect to
-3. **Data Forwarder**: Forwards all data from the real MEATER to both Home Assistant and any connected phone
+1. **BLE Client**: Connects to the MEATER Block (which connects to the probe) and reads temperature/battery/device info
+2. **BLE Server**: Emulates the same MEATER variant (MEATER, MEATER+, MEATER 2, etc.) for the phone app
+3. **Data Forwarder**: Forwards all data from the MEATER Block to both Home Assistant and any connected phone
+
+### Device Variant Detection
+
+The ESP32 automatically detects which MEATER variant you have:
+- Reads the device name from the MEATER Block (e.g., "MEATER+", "MEATER 2")
+- Advertises itself with the same name so the phone app recognizes the correct model
+- Works with all MEATER variants: MEATER, MEATER+, MEATER 2, MEATER 2+, etc.
 
 ## How It Works
 
 ```
-Real MEATER+ 
-    ↓ (BLE connection)
-ESP32 with this config
+MEATER Probe
+    ↓ (proprietary connection)
+MEATER Block (advertises as "MEATER+", etc.)
+    ↓ (BLE connection - reads device name, temp, battery)
+ESP32 with this config (advertises as detected variant)
     ↓                    ↓
 Home Assistant      Phone App
-(existing sensors)   (connects to ESP32 as if it were the MEATER)
+(existing sensors)   (connects to ESP32 as if it were the MEATER Block)
 ```
 
 ## Security & Secrets
@@ -45,27 +54,29 @@ This approach ensures that:
 ## Configuration
 
 ### Hardware Required
-- ESP32 board (tested with ESP32-C3-DevKitM-1)
-- MEATER+ temperature probe
+- **ESP32-C6 board** (recommended: ESP32-C6-DevKitC-1) - Required for stable operation
+- MEATER Block (WiFi bridge device that connects to MEATER probes)
 
 ### Memory Requirements
 
-**Will it fit on my ESP32?** Yes! ✅
+**Why ESP32-C6?** 
 
-The ESP32-C3-DevKitM-1 has **4MB flash memory**, which is more than sufficient for this configuration:
+This project requires running both BLE client and BLE server simultaneously along with WiFi and Home Assistant connectivity. The ESP32-C6 is the recommended choice because:
 
-- **Code size**: The BLE server implementation adds approximately ~12KB of source code
-- **Compiled size**: ESPHome with ESP-IDF and BLE client+server typically uses 1.5-2MB of flash
-- **Available space**: You'll have plenty of room (2+ MB remaining) for OTA updates and additional features
+- **More RAM**: 512KB vs 400KB on ESP32-C3
+- **Better BLE stack**: Improved BLE 5.3 with better coexistence between client/server modes
+- **Stable operation**: Handles concurrent BLE operations without crashes
+- **Flash memory**: 4MB+ is sufficient for all features with room for OTA updates
 
 **Compatible boards**:
-- ✅ ESP32-C3-DevKitM-1 (4MB flash) - Recommended
-- ✅ ESP32-DevKitC (4MB+ flash)
-- ✅ ESP32-WROOM-32 (4MB+ flash)
-- ⚠️ ESP32-C3-01M (2MB flash) - May be tight, not recommended
+- ✅ **ESP32-C6-DevKitC-1** (4MB flash) - **Recommended** - Best stability and performance
+- ✅ ESP32-DevKitC (4MB+ flash, dual-core) - Also good choice
+- ✅ ESP32-WROOM-32 (4MB+ flash, dual-core) - Also good choice
+- ⚠️ ESP32-C3-DevKitM-1 (4MB flash) - May experience crashes due to limited RAM
 - ❌ ESP8266 - Not compatible (no BLE support)
+- ❌ Raspberry Pi Pico W - Not compatible (ESPHome requires ESP32/ESP8266)
 
-The additional BLE server functionality adds minimal overhead since the ESP32 already has BLE hardware and the ESP-IDF framework includes the necessary BLE stack.
+The ESP32-C6 provides the best balance of cost, power efficiency, and stable operation for this dual-BLE-mode application.
 
 ### Finding Your MEATER MAC Address
 
@@ -206,10 +217,13 @@ If you're using the ESPHome integration in Home Assistant, you'll need to manual
 
 ### New Functionality
 - ✅ BLE server that advertises as a MEATER device
+- ✅ **Automatic MEATER variant detection** (MEATER, MEATER+, MEATER 2, MEATER 2+, etc.)
+- ✅ **Dynamic device name** - advertises with the same name as the real device
 - ✅ Forwards temperature data to connected phone apps
 - ✅ Forwards battery data to connected phone apps
 - ✅ Forwards firmware version to connected phone apps
 - ✅ Supports phone app connections while maintaining Home Assistant integration
+- ✅ MEATER device name sensor showing detected variant
 
 ## Technical Details
 
@@ -221,6 +235,17 @@ If you're using the ESPHome integration in Home Assistant, you'll need to manual
 
 **Device Information Service** (`180A`):
 - Firmware Revision Characteristic (`00002a26-0000-1000-8000-00805f9b34fb`) - Read
+
+**Generic Access Profile Service** (`1800`) - Read from real MEATER:
+- Device Name Characteristic (`2A00`) - Used to detect MEATER variant (MEATER, MEATER+, etc.)
+
+### How Device Variant Detection Works
+
+1. ESP32 connects to the real MEATER device via BLE client
+2. Reads the Device Name characteristic from GAP service (`1800`)
+3. Detects the actual variant name (e.g., "MEATER+", "MEATER 2")
+4. Updates BLE server to advertise with the same device name
+5. Phone app sees the correct MEATER variant and connects successfully
 
 ### Files
 
@@ -337,6 +362,30 @@ If you see repeated warnings like `[MEATER battery level] Cannot poll, not conne
 - Review the ESP32 logs for connection errors
 - Look for "BLE client connected, now initializing BLE server..." message - this confirms successful connection
 - If sensors were working before, see "ESP32 not connecting to MEATER device" section above
+
+### Phone app can't find the ESP32
+
+The MEATER Android app filters BLE scan results by device name based on what the user selects:
+
+**Critical**: Before scanning in the app, you must select the SAME device type that your MEATER Block is advertising as.
+
+**How to pair correctly**:
+
+1. Check what name your MEATER Block uses (look at Home Assistant sensor "MEATER device name" or ESP32 logs)
+2. Open the MEATER Android app
+3. When prompted to select device type:
+   - If your Block is "MEATER+" → Select **"MEATER+"** in the app
+   - If your Block is "MEATER" → Select **"MEATER"** in the app
+   - The names must match exactly
+4. The app will ONLY show devices matching your selection
+5. If the ESP32 doesn't appear, you likely selected the wrong device type
+
+**Why this matters**: The app cannot auto-detect MEATER vs MEATER+ from BLE data, so it pre-filters scan results based on user selection. If you select "MEATER" but your Block advertises as "MEATER+", the ESP32 won't appear in the device list even though it's advertising correctly.
+
+**To verify the ESP32 is advertising**:
+- Use a BLE scanner app (nRF Connect, BLE Scanner) to confirm the ESP32 appears as the correct device name
+- Check ESP32 logs for "Advertising started successfully" message
+- Look for "Device name set to: MEATER+" (or whichever variant you have)
 
 ### Both phone and Home Assistant not working
 - The MEATER might be too far away or have a low battery

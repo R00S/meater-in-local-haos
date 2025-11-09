@@ -26,9 +26,18 @@ static const uint8_t MEATER_BATTERY_CHAR_UUID[16] = {
     0x84, 0x48, 0xd8, 0x68, 0x77, 0x48, 0xdb, 0x2a
 };
 
-// Firmware service (standard BLE service)
+// Third characteristic in MEATER service (READ/WRITE)
+static const uint8_t MEATER_CONFIG_CHAR_UUID[16] = {
+    0xd3, 0x20, 0x61, 0x2f, 0x5c, 0x87, 0x9d, 0x94,
+    0xad, 0x45, 0x57, 0x27, 0xf1, 0x3b, 0x5d, 0x57
+};
+
+// Device Information service (standard BLE service 0x180A)
 static const uint16_t DEVICE_INFO_SERVICE_UUID = 0x180A;
-static const uint16_t FIRMWARE_CHAR_UUID = 0x2A26;
+static const uint16_t FIRMWARE_CHAR_UUID = 0x2A26;         // Firmware Revision String
+static const uint16_t MANUFACTURER_NAME_CHAR_UUID = 0x2A29; // Manufacturer Name String
+static const uint16_t MODEL_NUMBER_CHAR_UUID = 0x2A24;     // Model Number String
+static const uint16_t SOFTWARE_REV_CHAR_UUID = 0x2A28;     // Software Revision String
 
 class MeaterBLEServer {
  public:
@@ -40,24 +49,56 @@ class MeaterBLEServer {
   
   uint16_t service_handle = 0;
   uint16_t temp_char_handle = 0;
+  uint16_t temp_cccd_handle = 0;
   uint16_t battery_char_handle = 0;
+  uint16_t battery_cccd_handle = 0;
+  uint16_t config_char_handle = 0;
   
   uint16_t fw_service_handle = 0;
   uint16_t fw_char_handle = 0;
+  uint16_t manufacturer_name_char_handle = 0;
+  uint16_t model_number_char_handle = 0;
+  uint16_t software_rev_char_handle = 0;
   
   std::vector<uint8_t> temp_data;
   std::vector<uint8_t> battery_data;
+  std::vector<uint8_t> config_data;
   std::vector<uint8_t> firmware_data;
+  std::vector<uint8_t> manufacturer_name_data;
+  std::vector<uint8_t> model_number_data;
+  std::vector<uint8_t> software_rev_data;
+  
+  bool adv_data_set = false;
+  bool scan_rsp_data_set = false;
+  bool restart_advertising_pending = false;
+  
+  std::string device_name = "MEATER";  // Use exactly "MEATER" for app compatibility
+  bool device_name_set = false;
+  bool force_simple_name = true;  // Always use "MEATER" not "MEATER+" for app pairing
+  
+  // Manufacturer data matching real MEATER advertising format
+  // Based on real MEATER+ packet: Company ID 0x037B (little endian: 7B 03) + 22 bytes of data
+  uint8_t manufacturer_data[24] = {
+    0x7B, 0x03,  // Company ID (0x037B - Apption Labs, maker of MEATER)
+    0x80, 0x38, 0x6C, 0xA8, 0x5E, 0xD2, 0x48, 0x6D,  // Device-specific data
+    0x44, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+  };
   
   MeaterBLEServer() {
     instance = this;
     temp_data.resize(8, 0);
     battery_data.resize(2, 0);
-    firmware_data = {'V', '1', '.', '0', '.', '0'};
+    config_data.resize(1, 0);  // Single byte for config characteristic
+    firmware_data = {'v', '1', '.', '0', '.', '5', '_', '0'};  // Match real probe format
+    manufacturer_name_data = {'A', 'p', 'p', 't', 'i', 'o', 'n', ' ', 'L', 'a', 'b', 's'};
+    model_number_data = {'M', 'E', 'A', 'T', 'E', 'R'};
+    software_rev_data = {'1', '.', '0', '.', '5', '_', '0'};  // Match firmware format
   }
   
   void setup() {
     ESP_LOGI("meater_ble_server", "Setting up MEATER BLE Server...");
+    ESP_LOGI("meater_ble_server", "Advertising as: %s", device_name.c_str());
     
     esp_err_t ret;
     
@@ -107,6 +148,36 @@ class MeaterBLEServer {
     firmware_data = data;
   }
   
+  void set_device_name(const std::string& name) {
+    // Always use simple "MEATER" name for Android app compatibility
+    // The app filters for exact "MEATER" during BLE scan
+    std::string new_name = force_simple_name ? "MEATER" : name;
+    
+    if (device_name != new_name) {
+      device_name = new_name;
+      device_name_set = true;
+      ESP_LOGI("meater_ble_server", "Device name set to: %s (original: %s)", 
+               device_name.c_str(), name.c_str());
+      
+      // Only update BLE stack if already initialized (setup() was called)
+      if (gatts_if != ESP_GATT_IF_NONE) {
+        // Update the device name in the BLE stack
+        esp_ble_gap_set_device_name(device_name.c_str());
+        
+        // Stop advertising to update with new name
+        if (connected) {
+          ESP_LOGI("meater_ble_server", "Device connected, will update name on next advertising cycle");
+        } else {
+          // Stop advertising and mark for restart
+          ESP_LOGI("meater_ble_server", "Stopping advertising to update device name");
+          restart_advertising_pending = true;
+          esp_ble_gap_stop_advertising();
+          // Will restart in ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT handler
+        }
+      }
+    }
+  }
+  
   static void gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, 
                                   esp_ble_gatts_cb_param_t* param) {
     if (!instance) return;
@@ -117,8 +188,8 @@ class MeaterBLEServer {
                  param->reg.status, param->reg.app_id);
         instance->gatts_if = gatts_if;
         
-        // Set device name
-        esp_ble_gap_set_device_name("MEATER");
+        // Set device name (will be updated when we read it from the real device)
+        esp_ble_gap_set_device_name(instance->device_name.c_str());
         
         // Create MEATER service
         esp_gatt_srvc_id_t service_id;
@@ -127,7 +198,7 @@ class MeaterBLEServer {
         service_id.id.uuid.len = ESP_UUID_LEN_128;
         memcpy(service_id.id.uuid.uuid.uuid128, MEATER_SERVICE_UUID, 16);
         
-        esp_ble_gatts_create_service(gatts_if, &service_id, 8);
+        esp_ble_gatts_create_service(gatts_if, &service_id, 10);
         break;
       }
       
@@ -177,7 +248,108 @@ class MeaterBLEServer {
           if (instance->temp_char_handle == 0) {
             instance->temp_char_handle = param->add_char.attr_handle;
             
-            // Add battery characteristic
+            // Add CCCD descriptor for temperature notifications
+            esp_bt_uuid_t descr_uuid;
+            descr_uuid.len = ESP_UUID_LEN_16;
+            descr_uuid.uuid.uuid16 = 0x2902;  // CCCD UUID
+            
+            uint8_t cccd_value[2] = {0x00, 0x00};
+            esp_attr_value_t attr_val = {};
+            attr_val.attr_max_len = 2;
+            attr_val.attr_len = 2;
+            attr_val.attr_value = cccd_value;
+            
+            esp_ble_gatts_add_char_descr(instance->service_handle, &descr_uuid,
+                                        ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
+                                        &attr_val, nullptr);
+          } else if (instance->battery_char_handle == 0) {
+            instance->battery_char_handle = param->add_char.attr_handle;
+            
+            // Add CCCD descriptor for battery notifications
+            esp_bt_uuid_t descr_uuid;
+            descr_uuid.len = ESP_UUID_LEN_16;
+            descr_uuid.uuid.uuid16 = 0x2902;  // CCCD UUID
+            
+            uint8_t cccd_value[2] = {0x00, 0x00};
+            esp_attr_value_t attr_val = {};
+            attr_val.attr_max_len = 2;
+            attr_val.attr_len = 2;
+            attr_val.attr_value = cccd_value;
+            
+            esp_ble_gatts_add_char_descr(instance->service_handle, &descr_uuid,
+                                        ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
+                                        &attr_val, nullptr);
+          } else if (instance->config_char_handle == 0) {
+            instance->config_char_handle = param->add_char.attr_handle;
+            
+            // Create firmware service
+            esp_gatt_srvc_id_t service_id;
+            service_id.is_primary = true;
+            service_id.id.inst_id = 0;
+            service_id.id.uuid.len = ESP_UUID_LEN_16;
+            service_id.id.uuid.uuid.uuid16 = DEVICE_INFO_SERVICE_UUID;
+            
+            esp_ble_gatts_create_service(instance->gatts_if, &service_id, 10);  // Increased to 10 for 4 characteristics
+          }
+        } else if (param->add_char.service_handle == instance->fw_service_handle) {
+          if (instance->fw_char_handle == 0) {
+            instance->fw_char_handle = param->add_char.attr_handle;
+            
+            // Add manufacturer name characteristic
+            esp_bt_uuid_t char_uuid;
+            char_uuid.len = ESP_UUID_LEN_16;
+            char_uuid.uuid.uuid16 = MANUFACTURER_NAME_CHAR_UUID;
+            
+            esp_gatt_char_prop_t property = ESP_GATT_CHAR_PROP_BIT_READ;
+            esp_gatt_perm_t perm = ESP_GATT_PERM_READ;
+            
+            esp_ble_gatts_add_char(instance->fw_service_handle, &char_uuid, perm,
+                                  property, nullptr, nullptr);
+          } else if (instance->manufacturer_name_char_handle == 0) {
+            instance->manufacturer_name_char_handle = param->add_char.attr_handle;
+            
+            // Add Model Number characteristic
+            esp_bt_uuid_t char_uuid;
+            char_uuid.len = ESP_UUID_LEN_16;
+            char_uuid.uuid.uuid16 = MODEL_NUMBER_CHAR_UUID;
+            
+            esp_gatt_char_prop_t property = ESP_GATT_CHAR_PROP_BIT_READ;
+            esp_gatt_perm_t perm = ESP_GATT_PERM_READ;
+            
+            esp_ble_gatts_add_char(instance->fw_service_handle, &char_uuid, perm,
+                                  property, nullptr, nullptr);
+          } else if (instance->model_number_char_handle == 0) {
+            instance->model_number_char_handle = param->add_char.attr_handle;
+            
+            // Add Software Revision characteristic
+            esp_bt_uuid_t char_uuid;
+            char_uuid.len = ESP_UUID_LEN_16;
+            char_uuid.uuid.uuid16 = SOFTWARE_REV_CHAR_UUID;
+            
+            esp_gatt_char_prop_t property = ESP_GATT_CHAR_PROP_BIT_READ;
+            esp_gatt_perm_t perm = ESP_GATT_PERM_READ;
+            
+            esp_ble_gatts_add_char(instance->fw_service_handle, &char_uuid, perm,
+                                  property, nullptr, nullptr);
+          } else if (instance->software_rev_char_handle == 0) {
+            instance->software_rev_char_handle = param->add_char.attr_handle;
+            
+            // Start advertising after all characteristics are added
+            instance->start_advertising();
+          }
+        }
+        break;
+      }
+      
+      case ESP_GATTS_ADD_CHAR_DESCR_EVT: {
+        ESP_LOGI("meater_ble_server", "ADD_DESCR_EVT, status %d, attr_handle %d, service_handle %d",
+                 param->add_char_descr.status, param->add_char_descr.attr_handle, param->add_char_descr.service_handle);
+        
+        if (param->add_char_descr.service_handle == instance->service_handle) {
+          if (instance->temp_cccd_handle == 0) {
+            instance->temp_cccd_handle = param->add_char_descr.attr_handle;
+            
+            // Now add battery characteristic
             esp_bt_uuid_t char_uuid;
             char_uuid.len = ESP_UUID_LEN_128;
             memcpy(char_uuid.uuid.uuid128, MEATER_BATTERY_CHAR_UUID, 16);
@@ -188,23 +360,21 @@ class MeaterBLEServer {
             
             esp_ble_gatts_add_char(instance->service_handle, &char_uuid, perm,
                                   property, nullptr, nullptr);
-          } else if (instance->battery_char_handle == 0) {
-            instance->battery_char_handle = param->add_char.attr_handle;
+          } else if (instance->battery_cccd_handle == 0) {
+            instance->battery_cccd_handle = param->add_char_descr.attr_handle;
             
-            // Create firmware service
-            esp_gatt_srvc_id_t service_id;
-            service_id.is_primary = true;
-            service_id.id.inst_id = 0;
-            service_id.id.uuid.len = ESP_UUID_LEN_16;
-            service_id.id.uuid.uuid.uuid16 = DEVICE_INFO_SERVICE_UUID;
+            // Now add config characteristic (READ/WRITE)
+            esp_bt_uuid_t char_uuid;
+            char_uuid.len = ESP_UUID_LEN_128;
+            memcpy(char_uuid.uuid.uuid128, MEATER_CONFIG_CHAR_UUID, 16);
             
-            esp_ble_gatts_create_service(instance->gatts_if, &service_id, 4);
+            esp_gatt_char_prop_t property = ESP_GATT_CHAR_PROP_BIT_READ | 
+                                            ESP_GATT_CHAR_PROP_BIT_WRITE;
+            esp_gatt_perm_t perm = ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE;
+            
+            esp_ble_gatts_add_char(instance->service_handle, &char_uuid, perm,
+                                  property, nullptr, nullptr);
           }
-        } else if (param->add_char.service_handle == instance->fw_service_handle) {
-          instance->fw_char_handle = param->add_char.attr_handle;
-          
-          // Start advertising
-          instance->start_advertising();
         }
         break;
       }
@@ -250,9 +420,21 @@ class MeaterBLEServer {
         } else if (param->read.handle == instance->battery_char_handle) {
           rsp.attr_value.len = instance->battery_data.size();
           memcpy(rsp.attr_value.value, instance->battery_data.data(), rsp.attr_value.len);
+        } else if (param->read.handle == instance->config_char_handle) {
+          rsp.attr_value.len = instance->config_data.size();
+          memcpy(rsp.attr_value.value, instance->config_data.data(), rsp.attr_value.len);
         } else if (param->read.handle == instance->fw_char_handle) {
           rsp.attr_value.len = instance->firmware_data.size();
           memcpy(rsp.attr_value.value, instance->firmware_data.data(), rsp.attr_value.len);
+        } else if (param->read.handle == instance->manufacturer_name_char_handle) {
+          rsp.attr_value.len = instance->manufacturer_name_data.size();
+          memcpy(rsp.attr_value.value, instance->manufacturer_name_data.data(), rsp.attr_value.len);
+        } else if (param->read.handle == instance->model_number_char_handle) {
+          rsp.attr_value.len = instance->model_number_data.size();
+          memcpy(rsp.attr_value.value, instance->model_number_data.data(), rsp.attr_value.len);
+        } else if (param->read.handle == instance->software_rev_char_handle) {
+          rsp.attr_value.len = instance->software_rev_data.size();
+          memcpy(rsp.attr_value.value, instance->software_rev_data.data(), rsp.attr_value.len);
         }
         
         esp_ble_gatts_send_response(gatts_if, param->read.conn_id, param->read.trans_id,
@@ -261,7 +443,33 @@ class MeaterBLEServer {
       }
       
       case ESP_GATTS_WRITE_EVT: {
-        ESP_LOGI("meater_ble_server", "GATT_WRITE_EVT, handle %d", param->write.handle);
+        ESP_LOGI("meater_ble_server", "GATT_WRITE_EVT, handle %d, len %d", 
+                 param->write.handle, param->write.len);
+        
+        // Handle writes to CCCDs (Client Characteristic Configuration Descriptors)
+        if (param->write.handle == instance->temp_cccd_handle) {
+          uint16_t descr_value = param->write.value[1]<<8 | param->write.value[0];
+          if (descr_value == 0x0001) {
+            ESP_LOGI("meater_ble_server", "Temperature notifications ENABLED by client");
+          } else if (descr_value == 0x0000) {
+            ESP_LOGI("meater_ble_server", "Temperature notifications DISABLED by client");
+          }
+        } else if (param->write.handle == instance->battery_cccd_handle) {
+          uint16_t descr_value = param->write.value[1]<<8 | param->write.value[0];
+          if (descr_value == 0x0001) {
+            ESP_LOGI("meater_ble_server", "Battery notifications ENABLED by client");
+          } else if (descr_value == 0x0000) {
+            ESP_LOGI("meater_ble_server", "Battery notifications DISABLED by client");
+          }
+        }
+        // Handle writes to config characteristic
+        else if (param->write.handle == instance->config_char_handle) {
+          if (param->write.len <= instance->config_data.size()) {
+            memcpy(instance->config_data.data(), param->write.value, param->write.len);
+            ESP_LOGI("meater_ble_server", "Config characteristic updated");
+          }
+        }
+        
         if (param->write.need_rsp) {
           esp_ble_gatts_send_response(gatts_if, param->write.conn_id, param->write.trans_id,
                                       ESP_GATT_OK, nullptr);
@@ -275,9 +483,18 @@ class MeaterBLEServer {
   }
   
   static void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t* param) {
+    if (!instance) return;
+    
     switch (event) {
       case ESP_GAP_BLE_ADV_DATA_SET_COMPLETE_EVT:
         ESP_LOGI("meater_ble_server", "Advertising data set complete");
+        instance->adv_data_set = true;
+        instance->check_and_start_advertising();
+        break;
+      case ESP_GAP_BLE_SCAN_RSP_DATA_SET_COMPLETE_EVT:
+        ESP_LOGI("meater_ble_server", "Scan response data set complete");
+        instance->scan_rsp_data_set = true;
+        instance->check_and_start_advertising();
         break;
       case ESP_GAP_BLE_ADV_START_COMPLETE_EVT:
         if (param->adv_start_cmpl.status == ESP_BT_STATUS_SUCCESS) {
@@ -286,22 +503,53 @@ class MeaterBLEServer {
           ESP_LOGE("meater_ble_server", "Advertising start failed");
         }
         break;
+      case ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT:
+        ESP_LOGI("meater_ble_server", "Advertising stopped");
+        if (instance->restart_advertising_pending) {
+          ESP_LOGI("meater_ble_server", "Restarting advertising with updated device name");
+          instance->restart_advertising_pending = false;
+          instance->start_advertising();
+        }
+        break;
       default:
         break;
     }
   }
   
+  void check_and_start_advertising() {
+    if (adv_data_set && scan_rsp_data_set) {
+      // Both advertising data and scan response data are configured, now start advertising
+      esp_ble_adv_params_t adv_params = {};
+      adv_params.adv_int_min = 0x20;
+      adv_params.adv_int_max = 0x40;
+      adv_params.adv_type = ADV_TYPE_IND;
+      adv_params.own_addr_type = BLE_ADDR_TYPE_PUBLIC;
+      adv_params.channel_map = ADV_CHNL_ALL;
+      adv_params.adv_filter_policy = ADV_FILTER_ALLOW_SCAN_ANY_CON_ANY;
+      
+      esp_ble_gap_start_advertising(&adv_params);
+      ESP_LOGI("meater_ble_server", "Starting advertising with scan response enabled");
+      
+      // Reset flags for next time
+      adv_data_set = false;
+      scan_rsp_data_set = false;
+    }
+  }
+  
   void start_advertising() {
+    ESP_LOGI("meater_ble_server", "Configuring advertising data...");
+    ESP_LOGI("meater_ble_server", "Advertising as: %s", device_name.c_str());
+    
     // Configure advertising data
     esp_ble_adv_data_t adv_data = {};
     adv_data.set_scan_rsp = false;
-    adv_data.include_name = true;
-    adv_data.include_txpower = false;
+    adv_data.include_name = true;  // Include name in advertising packet for better discovery
+    adv_data.include_txpower = true;  // Include TX power like real MEATER
     adv_data.min_interval = 0x20;
     adv_data.max_interval = 0x40;
     adv_data.appearance = 0x00;
-    adv_data.manufacturer_len = 0;
-    adv_data.p_manufacturer_data = nullptr;
+    adv_data.manufacturer_len = 24;  // Include manufacturer data for app recognition
+    adv_data.p_manufacturer_data = manufacturer_data;
     adv_data.service_data_len = 0;
     adv_data.p_service_data = nullptr;
     adv_data.service_uuid_len = 16;
@@ -310,18 +558,24 @@ class MeaterBLEServer {
     
     esp_ble_gap_config_adv_data(&adv_data);
     
-    // Configure advertising parameters
-    esp_ble_adv_params_t adv_params = {};
-    adv_params.adv_int_min = 0x20;
-    adv_params.adv_int_max = 0x40;
-    adv_params.adv_type = ADV_TYPE_IND;
-    adv_params.own_addr_type = BLE_ADDR_TYPE_PUBLIC;
-    adv_params.channel_map = ADV_CHNL_ALL;
-    adv_params.adv_filter_policy = ADV_FILTER_ALLOW_SCAN_ANY_CON_ANY;
+    // Configure scan response data with device name as backup
+    esp_ble_adv_data_t scan_rsp_data = {};
+    scan_rsp_data.set_scan_rsp = true;
+    scan_rsp_data.include_name = true;
+    scan_rsp_data.include_txpower = false;
+    scan_rsp_data.appearance = 0x00;
+    scan_rsp_data.manufacturer_len = 0;
+    scan_rsp_data.p_manufacturer_data = nullptr;
+    scan_rsp_data.service_data_len = 0;
+    scan_rsp_data.p_service_data = nullptr;
+    scan_rsp_data.service_uuid_len = 0;
+    scan_rsp_data.p_service_uuid = nullptr;
+    scan_rsp_data.flag = 0;
     
-    esp_ble_gap_start_advertising(&adv_params);
+    esp_ble_gap_config_adv_data(&scan_rsp_data);
     
-    ESP_LOGI("meater_ble_server", "Started advertising as MEATER device");
+    // Actual advertising will start in check_and_start_advertising() 
+    // after both data sets are confirmed as configured
   }
 };
 

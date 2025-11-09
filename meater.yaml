@@ -7,7 +7,7 @@ esphome:
   # This prevents conflicts between BLE scanning and advertising
 
 esp32:
-  board: esp32-c3-devkitm-1
+  board: esp32-c6-devkitc-1
   framework:
     type: esp-idf
 
@@ -37,17 +37,28 @@ wifi:
 
 captive_portal:
 
+# Configure BLE tracker for bluetooth_proxy with settings that don't interfere with BLE client
+esp32_ble_tracker:
+  scan_parameters:
+    interval: 1100ms
+    window: 1100ms
+    active: true
+
 bluetooth_proxy:
 
 ble_client:
   - mac_address: !secret meater_mac_address
     id: meater
+    auto_connect: true
 
  
 text_sensor:
   - platform: template
     name: "MEATER firmware"
     id: meater_firmware
+  - platform: template
+    name: "MEATER device name"
+    id: meater_device_name_display
  
 sensor:
   - platform: ble_client
@@ -61,17 +72,7 @@ sensor:
     accuracy_decimals: 2
     notify: true
     lambda: |-
-      // Initialize BLE server on first data reception (ensures BLE client is connected first)
-      static bool ble_server_initialized = false;
-      if (!ble_server_initialized && id(meater_ble_server_ptr) == nullptr) {
-        ESP_LOGI("meater", "BLE client connected, now initializing BLE server...");
-        static MeaterBLEServer* ble_server = new MeaterBLEServer();
-        ble_server->setup();
-        id(meater_ble_server_ptr) = (void*)ble_server;
-        ble_server_initialized = true;
-      }
-      
-      // Forward raw data to BLE server for phone app
+      // Forward raw data to BLE server for phone app (server initialized after device name read)
       if (id(meater_ble_server_ptr) != nullptr) {
         ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_temp_data(x);
       }
@@ -136,6 +137,33 @@ sensor:
     type: rssi
     ble_client_id: meater
     name: "MEATER RSSI"
+  - platform: ble_client
+    type: characteristic
+    ble_client_id: meater
+    id: meater_device_name_reader
+    internal: true
+    service_uuid: '1800'  # Generic Access Profile service
+    characteristic_uuid: '2A00'  # Device Name characteristic
+    lambda: |-
+      // Read device name from real MEATER
+      std::string device_name(x.begin(), x.end());
+      ESP_LOGI("meater", "Read device name from real MEATER: %s", device_name.c_str());
+      
+      // Update text sensor
+      id(meater_device_name_display).publish_state(device_name);
+      
+      // Initialize BLE server with device name (only once after name is read)
+      static bool ble_server_initialized = false;
+      if (!ble_server_initialized && id(meater_ble_server_ptr) == nullptr) {
+        ESP_LOGI("meater", "Initializing BLE server with device name: %s", device_name.c_str());
+        static MeaterBLEServer* ble_server = new MeaterBLEServer();
+        ble_server->set_device_name(device_name);  // Set name BEFORE setup
+        ble_server->setup();  // Start advertising with correct name
+        id(meater_ble_server_ptr) = (void*)ble_server;
+        ble_server_initialized = true;
+      }
+      
+      return (float)x.size();
 
 # Global variable to store the BLE server instance
 globals:
