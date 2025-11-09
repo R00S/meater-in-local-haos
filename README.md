@@ -52,27 +52,29 @@ This approach ensures that:
 ## Configuration
 
 ### Hardware Required
-- ESP32 board (tested with ESP32-C3-DevKitM-1)
+- **ESP32-C6 board** (recommended: ESP32-C6-DevKitC-1) - Required for stable operation
 - MEATER+ temperature probe
 
 ### Memory Requirements
 
-**Will it fit on my ESP32?** Yes! ✅
+**Why ESP32-C6?** 
 
-The ESP32-C3-DevKitM-1 has **4MB flash memory**, which is more than sufficient for this configuration:
+This project requires running both BLE client and BLE server simultaneously along with WiFi and Home Assistant connectivity. The ESP32-C6 is the recommended choice because:
 
-- **Code size**: The BLE server implementation adds approximately ~12KB of source code
-- **Compiled size**: ESPHome with ESP-IDF and BLE client+server typically uses 1.5-2MB of flash
-- **Available space**: You'll have plenty of room (2+ MB remaining) for OTA updates and additional features
+- **More RAM**: 512KB vs 400KB on ESP32-C3
+- **Better BLE stack**: Improved BLE 5.3 with better coexistence between client/server modes
+- **Stable operation**: Handles concurrent BLE operations without crashes
+- **Flash memory**: 4MB+ is sufficient for all features with room for OTA updates
 
 **Compatible boards**:
-- ✅ ESP32-C3-DevKitM-1 (4MB flash) - Recommended
-- ✅ ESP32-DevKitC (4MB+ flash)
-- ✅ ESP32-WROOM-32 (4MB+ flash)
-- ⚠️ ESP32-C3-01M (2MB flash) - May be tight, not recommended
+- ✅ **ESP32-C6-DevKitC-1** (4MB flash) - **Recommended** - Best stability and performance
+- ✅ ESP32-DevKitC (4MB+ flash, dual-core) - Also good choice
+- ✅ ESP32-WROOM-32 (4MB+ flash, dual-core) - Also good choice
+- ⚠️ ESP32-C3-DevKitM-1 (4MB flash) - May experience crashes due to limited RAM
 - ❌ ESP8266 - Not compatible (no BLE support)
+- ❌ Raspberry Pi Pico W - Not compatible (ESPHome requires ESP32/ESP8266)
 
-The additional BLE server functionality adds minimal overhead since the ESP32 already has BLE hardware and the ESP-IDF framework includes the necessary BLE stack.
+The ESP32-C6 provides the best balance of cost, power efficiency, and stable operation for this dual-BLE-mode application.
 
 ### Finding Your MEATER MAC Address
 
