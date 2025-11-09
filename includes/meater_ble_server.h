@@ -32,9 +32,8 @@ static const uint8_t MEATER_CONFIG_CHAR_UUID[16] = {
     0xad, 0x45, 0x57, 0x27, 0xf1, 0x3b, 0x5d, 0x57
 };
 
-// Device Information service (standard BLE service)
+// Firmware service (standard BLE service)
 static const uint16_t DEVICE_INFO_SERVICE_UUID = 0x180A;
-static const uint16_t MANUFACTURER_NAME_CHAR_UUID = 0x2A29;
 static const uint16_t FIRMWARE_CHAR_UUID = 0x2A26;
 
 class MeaterBLEServer {
@@ -47,19 +46,15 @@ class MeaterBLEServer {
   
   uint16_t service_handle = 0;
   uint16_t temp_char_handle = 0;
-  uint16_t temp_descr_handle = 0;
   uint16_t battery_char_handle = 0;
-  uint16_t battery_descr_handle = 0;
   uint16_t config_char_handle = 0;
   
   uint16_t fw_service_handle = 0;
-  uint16_t mfr_char_handle = 0;
   uint16_t fw_char_handle = 0;
   
   std::vector<uint8_t> temp_data;
   std::vector<uint8_t> battery_data;
   std::vector<uint8_t> config_data;
-  std::vector<uint8_t> manufacturer_name_data;
   std::vector<uint8_t> firmware_data;
   
   bool adv_data_set = false;
@@ -82,12 +77,7 @@ class MeaterBLEServer {
     instance = this;
     temp_data.resize(8, 0);
     battery_data.resize(2, 0);
-    config_data.resize(1, 0x41);  // Initialize with default value 0x41 until read from real device
-    
-    // Set manufacturer name to "Apption Labs" as expected by Android app
-    std::string mfr_name = "Apption Labs";
-    manufacturer_name_data.assign(mfr_name.begin(), mfr_name.end());
-    
+    config_data.resize(1, 0);  // Single byte for config characteristic
     firmware_data = {'V', '1', '.', '0', '.', '0'};
   }
   
@@ -136,12 +126,6 @@ class MeaterBLEServer {
                                   data.size(), (uint8_t*)data.data(), false);
       ESP_LOGD("meater_ble_server", "Sent battery notification");
     }
-  }
-  
-  void update_config_data(const std::vector<uint8_t>& data) {
-    config_data = data;
-    ESP_LOGI("meater_ble_server", "Config data updated, size: %d", data.size());
-    // Config characteristic is READ/WRITE, not notified
   }
   
   void update_firmware_data(const std::vector<uint8_t>& data) {
@@ -193,7 +177,7 @@ class MeaterBLEServer {
         service_id.id.uuid.len = ESP_UUID_LEN_128;
         memcpy(service_id.id.uuid.uuid.uuid128, MEATER_SERVICE_UUID, 16);
         
-        esp_ble_gatts_create_service(gatts_if, &service_id, 16);  // 3 chars + 2 descriptors + overhead
+        esp_ble_gatts_create_service(gatts_if, &service_id, 8);
         break;
       }
       
@@ -217,14 +201,14 @@ class MeaterBLEServer {
           esp_ble_gatts_add_char(instance->service_handle, &char_uuid, perm,
                                 property, nullptr, nullptr);
         } else {
-          // This is the Device Information service
+          // This is the firmware service
           instance->fw_service_handle = param->create.service_handle;
           esp_ble_gatts_start_service(instance->fw_service_handle);
           
-          // Add Manufacturer Name characteristic first (required by Android app)
+          // Add firmware characteristic
           esp_bt_uuid_t char_uuid;
           char_uuid.len = ESP_UUID_LEN_16;
-          char_uuid.uuid.uuid16 = MANUFACTURER_NAME_CHAR_UUID;
+          char_uuid.uuid.uuid16 = FIRMWARE_CHAR_UUID;
           
           esp_gatt_char_prop_t property = ESP_GATT_CHAR_PROP_BIT_READ;
           esp_gatt_perm_t perm = ESP_GATT_PERM_READ;
@@ -243,17 +227,6 @@ class MeaterBLEServer {
           if (instance->temp_char_handle == 0) {
             instance->temp_char_handle = param->add_char.attr_handle;
             
-            // Add CCCD for temperature notifications
-            esp_bt_uuid_t descr_uuid;
-            descr_uuid.len = ESP_UUID_LEN_16;
-            descr_uuid.uuid.uuid16 = ESP_GATT_UUID_CHAR_CLIENT_CONFIG;
-            
-            esp_ble_gatts_add_char_descr(instance->service_handle, &descr_uuid,
-                                        ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
-                                        nullptr, nullptr);
-          } else if (instance->temp_descr_handle == 0) {
-            instance->temp_descr_handle = param->add_char_descr.attr_handle;
-            
             // Add battery characteristic
             esp_bt_uuid_t char_uuid;
             char_uuid.len = ESP_UUID_LEN_128;
@@ -267,17 +240,6 @@ class MeaterBLEServer {
                                   property, nullptr, nullptr);
           } else if (instance->battery_char_handle == 0) {
             instance->battery_char_handle = param->add_char.attr_handle;
-            
-            // Add CCCD for battery notifications
-            esp_bt_uuid_t descr_uuid;
-            descr_uuid.len = ESP_UUID_LEN_16;
-            descr_uuid.uuid.uuid16 = ESP_GATT_UUID_CHAR_CLIENT_CONFIG;
-            
-            esp_ble_gatts_add_char_descr(instance->service_handle, &descr_uuid,
-                                        ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
-                                        nullptr, nullptr);
-          } else if (instance->battery_descr_handle == 0) {
-            instance->battery_descr_handle = param->add_char_descr.attr_handle;
             
             // Add config characteristic (READ/WRITE)
             esp_bt_uuid_t char_uuid;
@@ -303,27 +265,10 @@ class MeaterBLEServer {
             esp_ble_gatts_create_service(instance->gatts_if, &service_id, 4);
           }
         } else if (param->add_char.service_handle == instance->fw_service_handle) {
-          if (instance->mfr_char_handle == 0) {
-            // First characteristic added - this is manufacturer name
-            instance->mfr_char_handle = param->add_char.attr_handle;
-            
-            // Now add firmware characteristic
-            esp_bt_uuid_t char_uuid;
-            char_uuid.len = ESP_UUID_LEN_16;
-            char_uuid.uuid.uuid16 = FIRMWARE_CHAR_UUID;
-            
-            esp_gatt_char_prop_t property = ESP_GATT_CHAR_PROP_BIT_READ;
-            esp_gatt_perm_t perm = ESP_GATT_PERM_READ;
-            
-            esp_ble_gatts_add_char(instance->fw_service_handle, &char_uuid, perm,
-                                  property, nullptr, nullptr);
-          } else {
-            // Second characteristic added - this is firmware version
-            instance->fw_char_handle = param->add_char.attr_handle;
-            
-            // Start advertising
-            instance->start_advertising();
-          }
+          instance->fw_char_handle = param->add_char.attr_handle;
+          
+          // Start advertising
+          instance->start_advertising();
         }
         break;
       }
@@ -331,13 +276,6 @@ class MeaterBLEServer {
       case ESP_GATTS_START_EVT: {
         ESP_LOGI("meater_ble_server", "SERVICE_START_EVT, status %d, service_handle %d",
                  param->start.status, param->start.service_handle);
-        break;
-      }
-      
-      case ESP_GATTS_ADD_CHAR_DESCR_EVT: {
-        ESP_LOGI("meater_ble_server", "ADD_CHAR_DESCR_EVT, status %d, attr_handle %d",
-                 param->add_char_descr.status, param->add_char_descr.attr_handle);
-        // Descriptor added, handled in ADD_CHAR_EVT
         break;
       }
       
@@ -379,10 +317,6 @@ class MeaterBLEServer {
         } else if (param->read.handle == instance->config_char_handle) {
           rsp.attr_value.len = instance->config_data.size();
           memcpy(rsp.attr_value.value, instance->config_data.data(), rsp.attr_value.len);
-        } else if (param->read.handle == instance->mfr_char_handle) {
-          rsp.attr_value.len = instance->manufacturer_name_data.size();
-          memcpy(rsp.attr_value.value, instance->manufacturer_name_data.data(), rsp.attr_value.len);
-          ESP_LOGI("meater_ble_server", "Read manufacturer name: Apption Labs");
         } else if (param->read.handle == instance->fw_char_handle) {
           rsp.attr_value.len = instance->firmware_data.size();
           memcpy(rsp.attr_value.value, instance->firmware_data.data(), rsp.attr_value.len);

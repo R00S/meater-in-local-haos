@@ -119,46 +119,16 @@ sensor:
   - platform: ble_client
     type: characteristic
     ble_client_id: meater
-    name: "MEATER config"
-    service_uuid: 'a75cc7fc-c956-488f-ac2a-2dbc08b63a04'
-    characteristic_uuid: '575d3bf1-2757-45ad-94d9-875c2f6120d3'
-    update_interval: 60s
-    lambda: |-
-      // Log the config data we received - CRITICAL for debugging Android app pairing
-      ESP_LOGI("meater", "Read config from MEATER Block: %d bytes", x.size());
-      if (x.size() > 0) {
-        std::string hex_dump = "";
-        for (int i = 0; i < x.size(); i++) {
-          char hex[4];
-          sprintf(hex, "%02X ", x[i]);
-          hex_dump += hex;
-        }
-        ESP_LOGI("meater", "Config data (hex): %s", hex_dump.c_str());
-      }
-      
-      // Forward config data to BLE server for phone app - critical for app pairing
-      if (id(meater_ble_server_ptr) != nullptr) {
-        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_config_data(x);
-      }
-      return 0; // Just return 0, we don't need this value in Home Assistant
-  - platform: ble_client
-    type: characteristic
-    ble_client_id: meater
     id: firmware
     service_uuid: '180A'
     characteristic_uuid: '00002a26-0000-1000-8000-00805f9b34fb'
     lambda: |-
-      // Convert to string and log what we received
-      std::string data_string(x.begin(), x.end());
-      ESP_LOGI("meater", "Read firmware from MEATER Block: '%s' (length: %d bytes)", data_string.c_str(), x.size());
-      
       // Update firmware text sensor (existing functionality)
+      std::string data_string(x.begin(), x.end());
       id(meater_firmware).publish_state(data_string.c_str());
       
       // Forward firmware data to BLE server for phone app
-      // CRITICAL: Android app expects format like "v1.0.5_1" for Block probe #1
       if (id(meater_ble_server_ptr) != nullptr) {
-        ESP_LOGI("meater", "Forwarding firmware '%s' to BLE server for Android app", data_string.c_str());
         ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_firmware_data(x);
       }
       
