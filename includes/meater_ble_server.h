@@ -46,7 +46,9 @@ class MeaterBLEServer {
   
   uint16_t service_handle = 0;
   uint16_t temp_char_handle = 0;
+  uint16_t temp_cccd_handle = 0;
   uint16_t battery_char_handle = 0;
+  uint16_t battery_cccd_handle = 0;
   uint16_t config_char_handle = 0;
   
   uint16_t fw_service_handle = 0;
@@ -177,7 +179,7 @@ class MeaterBLEServer {
         service_id.id.uuid.len = ESP_UUID_LEN_128;
         memcpy(service_id.id.uuid.uuid.uuid128, MEATER_SERVICE_UUID, 16);
         
-        esp_ble_gatts_create_service(gatts_if, &service_id, 8);
+        esp_ble_gatts_create_service(gatts_if, &service_id, 10);
         break;
       }
       
@@ -227,31 +229,37 @@ class MeaterBLEServer {
           if (instance->temp_char_handle == 0) {
             instance->temp_char_handle = param->add_char.attr_handle;
             
-            // Add battery characteristic
-            esp_bt_uuid_t char_uuid;
-            char_uuid.len = ESP_UUID_LEN_128;
-            memcpy(char_uuid.uuid.uuid128, MEATER_BATTERY_CHAR_UUID, 16);
+            // Add CCCD descriptor for temperature notifications
+            esp_bt_uuid_t descr_uuid;
+            descr_uuid.len = ESP_UUID_LEN_16;
+            descr_uuid.uuid.uuid16 = 0x2902;  // CCCD UUID
             
-            esp_gatt_char_prop_t property = ESP_GATT_CHAR_PROP_BIT_READ | 
-                                            ESP_GATT_CHAR_PROP_BIT_NOTIFY;
-            esp_gatt_perm_t perm = ESP_GATT_PERM_READ;
+            uint8_t cccd_value[2] = {0x00, 0x00};
+            esp_attr_value_t attr_val = {};
+            attr_val.attr_max_len = 2;
+            attr_val.attr_len = 2;
+            attr_val.attr_value = cccd_value;
             
-            esp_ble_gatts_add_char(instance->service_handle, &char_uuid, perm,
-                                  property, nullptr, nullptr);
+            esp_ble_gatts_add_char_descr(instance->service_handle, &descr_uuid,
+                                        ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
+                                        &attr_val, nullptr);
           } else if (instance->battery_char_handle == 0) {
             instance->battery_char_handle = param->add_char.attr_handle;
             
-            // Add config characteristic (READ/WRITE)
-            esp_bt_uuid_t char_uuid;
-            char_uuid.len = ESP_UUID_LEN_128;
-            memcpy(char_uuid.uuid.uuid128, MEATER_CONFIG_CHAR_UUID, 16);
+            // Add CCCD descriptor for battery notifications
+            esp_bt_uuid_t descr_uuid;
+            descr_uuid.len = ESP_UUID_LEN_16;
+            descr_uuid.uuid.uuid16 = 0x2902;  // CCCD UUID
             
-            esp_gatt_char_prop_t property = ESP_GATT_CHAR_PROP_BIT_READ | 
-                                            ESP_GATT_CHAR_PROP_BIT_WRITE;
-            esp_gatt_perm_t perm = ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE;
+            uint8_t cccd_value[2] = {0x00, 0x00};
+            esp_attr_value_t attr_val = {};
+            attr_val.attr_max_len = 2;
+            attr_val.attr_len = 2;
+            attr_val.attr_value = cccd_value;
             
-            esp_ble_gatts_add_char(instance->service_handle, &char_uuid, perm,
-                                  property, nullptr, nullptr);
+            esp_ble_gatts_add_char_descr(instance->service_handle, &descr_uuid,
+                                        ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE,
+                                        &attr_val, nullptr);
           } else if (instance->config_char_handle == 0) {
             instance->config_char_handle = param->add_char.attr_handle;
             
@@ -269,6 +277,44 @@ class MeaterBLEServer {
           
           // Start advertising
           instance->start_advertising();
+        }
+        break;
+      }
+      
+      case ESP_GATTS_ADD_CHAR_DESCR_EVT: {
+        ESP_LOGI("meater_ble_server", "ADD_DESCR_EVT, status %d, attr_handle %d, service_handle %d",
+                 param->add_char_descr.status, param->add_char_descr.attr_handle, param->add_char_descr.service_handle);
+        
+        if (param->add_char_descr.service_handle == instance->service_handle) {
+          if (instance->temp_cccd_handle == 0) {
+            instance->temp_cccd_handle = param->add_char_descr.attr_handle;
+            
+            // Now add battery characteristic
+            esp_bt_uuid_t char_uuid;
+            char_uuid.len = ESP_UUID_LEN_128;
+            memcpy(char_uuid.uuid.uuid128, MEATER_BATTERY_CHAR_UUID, 16);
+            
+            esp_gatt_char_prop_t property = ESP_GATT_CHAR_PROP_BIT_READ | 
+                                            ESP_GATT_CHAR_PROP_BIT_NOTIFY;
+            esp_gatt_perm_t perm = ESP_GATT_PERM_READ;
+            
+            esp_ble_gatts_add_char(instance->service_handle, &char_uuid, perm,
+                                  property, nullptr, nullptr);
+          } else if (instance->battery_cccd_handle == 0) {
+            instance->battery_cccd_handle = param->add_char_descr.attr_handle;
+            
+            // Now add config characteristic (READ/WRITE)
+            esp_bt_uuid_t char_uuid;
+            char_uuid.len = ESP_UUID_LEN_128;
+            memcpy(char_uuid.uuid.uuid128, MEATER_CONFIG_CHAR_UUID, 16);
+            
+            esp_gatt_char_prop_t property = ESP_GATT_CHAR_PROP_BIT_READ | 
+                                            ESP_GATT_CHAR_PROP_BIT_WRITE;
+            esp_gatt_perm_t perm = ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE;
+            
+            esp_ble_gatts_add_char(instance->service_handle, &char_uuid, perm,
+                                  property, nullptr, nullptr);
+          }
         }
         break;
       }
