@@ -342,9 +342,7 @@ class MeaterBLEServer {
       }
       
       case ESP_GATTS_CONNECT_EVT: {
-        ESP_LOGI("meater_ble_server", "ESP_GATTS_CONNECT_EVT, conn_id %d, remote device connected!", 
-                 param->connect.conn_id);
-        ESP_LOGI("meater_ble_server", "Android app (or another BLE client) has connected to the BLE server");
+        ESP_LOGI("meater_ble_server", "ESP_GATTS_CONNECT_EVT, conn_id %d", param->connect.conn_id);
         instance->conn_id = param->connect.conn_id;
         instance->connected = true;
         
@@ -367,8 +365,7 @@ class MeaterBLEServer {
       }
       
       case ESP_GATTS_READ_EVT: {
-        ESP_LOGI("meater_ble_server", "GATT_READ_EVT, conn_id %d, handle %d", 
-                 param->read.conn_id, param->read.handle);
+        ESP_LOGI("meater_ble_server", "GATT_READ_EVT, handle %d", param->read.handle);
         esp_gatt_rsp_t rsp;
         memset(&rsp, 0, sizeof(esp_gatt_rsp_t));
         rsp.attr_value.handle = param->read.handle;
@@ -376,29 +373,19 @@ class MeaterBLEServer {
         if (param->read.handle == instance->temp_char_handle) {
           rsp.attr_value.len = instance->temp_data.size();
           memcpy(rsp.attr_value.value, instance->temp_data.data(), rsp.attr_value.len);
-          ESP_LOGI("meater_ble_server", "Reading temperature characteristic (%d bytes)", rsp.attr_value.len);
         } else if (param->read.handle == instance->battery_char_handle) {
           rsp.attr_value.len = instance->battery_data.size();
           memcpy(rsp.attr_value.value, instance->battery_data.data(), rsp.attr_value.len);
-          ESP_LOGI("meater_ble_server", "Reading battery characteristic (%d bytes)", rsp.attr_value.len);
         } else if (param->read.handle == instance->config_char_handle) {
           rsp.attr_value.len = instance->config_data.size();
           memcpy(rsp.attr_value.value, instance->config_data.data(), rsp.attr_value.len);
-          ESP_LOGI("meater_ble_server", "Reading config characteristic (%d bytes)", rsp.attr_value.len);
-          // Hex dump config data
-          if (rsp.attr_value.len > 0) {
-            ESP_LOGI("meater_ble_server", "Config data (hex): %02x", rsp.attr_value.value[0]);
-          } else {
-            ESP_LOGI("meater_ble_server", "Config data is EMPTY");
-          }
         } else if (param->read.handle == instance->mfr_char_handle) {
           rsp.attr_value.len = instance->manufacturer_name_data.size();
           memcpy(rsp.attr_value.value, instance->manufacturer_name_data.data(), rsp.attr_value.len);
-          ESP_LOGI("meater_ble_server", "Reading manufacturer name: Apption Labs");
+          ESP_LOGI("meater_ble_server", "Read manufacturer name: Apption Labs");
         } else if (param->read.handle == instance->fw_char_handle) {
           rsp.attr_value.len = instance->firmware_data.size();
           memcpy(rsp.attr_value.value, instance->firmware_data.data(), rsp.attr_value.len);
-          ESP_LOGI("meater_ble_server", "Reading firmware characteristic (%d bytes)", rsp.attr_value.len);
         }
         
         esp_ble_gatts_send_response(gatts_if, param->read.conn_id, param->read.trans_id,
