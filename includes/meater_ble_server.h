@@ -98,6 +98,7 @@ class MeaterBLEServer {
   
   void setup() {
     ESP_LOGI("meater_ble_server", "Setting up MEATER BLE Server...");
+    ESP_LOGI("meater_ble_server", "Advertising as: %s", device_name.c_str());
     
     esp_err_t ret;
     
@@ -445,8 +446,24 @@ class MeaterBLEServer {
         ESP_LOGI("meater_ble_server", "GATT_WRITE_EVT, handle %d, len %d", 
                  param->write.handle, param->write.len);
         
+        // Handle writes to CCCDs (Client Characteristic Configuration Descriptors)
+        if (param->write.handle == instance->temp_cccd_handle) {
+          uint16_t descr_value = param->write.value[1]<<8 | param->write.value[0];
+          if (descr_value == 0x0001) {
+            ESP_LOGI("meater_ble_server", "Temperature notifications ENABLED by client");
+          } else if (descr_value == 0x0000) {
+            ESP_LOGI("meater_ble_server", "Temperature notifications DISABLED by client");
+          }
+        } else if (param->write.handle == instance->battery_cccd_handle) {
+          uint16_t descr_value = param->write.value[1]<<8 | param->write.value[0];
+          if (descr_value == 0x0001) {
+            ESP_LOGI("meater_ble_server", "Battery notifications ENABLED by client");
+          } else if (descr_value == 0x0000) {
+            ESP_LOGI("meater_ble_server", "Battery notifications DISABLED by client");
+          }
+        }
         // Handle writes to config characteristic
-        if (param->write.handle == instance->config_char_handle) {
+        else if (param->write.handle == instance->config_char_handle) {
           if (param->write.len <= instance->config_data.size()) {
             memcpy(instance->config_data.data(), param->write.value, param->write.len);
             ESP_LOGI("meater_ble_server", "Config characteristic updated");
