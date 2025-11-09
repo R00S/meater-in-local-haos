@@ -33,12 +33,6 @@ static const ble_uuid128_t MEATER_BATTERY_CHAR_UUID = BLE_UUID128_INIT(
     0x84, 0x48, 0xd8, 0x68, 0x77, 0x48, 0xdb, 0x2a
 );
 
-// Config Characteristic UUID: 575d3bf1-2757-45ad-9d87-5c2f6120d3
-static const ble_uuid128_t MEATER_CONFIG_CHAR_UUID = BLE_UUID128_INIT(
-    0xd3, 0x20, 0x61, 0x2f, 0x5c, 0x87, 0x9d, 0x94,
-    0xad, 0x45, 0x57, 0x27, 0xf1, 0x3b, 0x5d, 0x57
-);
-
 // Device Information Service (standard 16-bit UUID)
 static const ble_uuid16_t DEVICE_INFO_SERVICE_UUID = BLE_UUID16_INIT(0x180A);
 static const ble_uuid16_t FIRMWARE_CHAR_UUID = BLE_UUID16_INIT(0x2A26);
@@ -56,7 +50,6 @@ class MeaterBLEServer {
   // Characteristic value handles
   uint16_t temp_val_handle;
   uint16_t battery_val_handle;
-  uint16_t config_val_handle;
   uint16_t fw_val_handle;
   uint16_t manufacturer_val_handle;
   uint16_t model_val_handle;
@@ -68,7 +61,6 @@ class MeaterBLEServer {
   
   std::vector<uint8_t> temp_data;
   std::vector<uint8_t> battery_data;
-  std::vector<uint8_t> config_data;
   std::vector<uint8_t> firmware_data;
   std::vector<uint8_t> manufacturer_name_data;
   std::vector<uint8_t> model_number_data;
@@ -86,7 +78,6 @@ class MeaterBLEServer {
     connected(false),
     temp_val_handle(0),
     battery_val_handle(0),
-    config_val_handle(0),
     fw_val_handle(0),
     manufacturer_val_handle(0),
     model_val_handle(0),
@@ -100,7 +91,6 @@ class MeaterBLEServer {
     instance = this;
     temp_data.resize(8, 0);
     battery_data.resize(2, 0);
-    config_data.resize(1, 0);
     firmware_data = {'v', '1', '.', '0', '.', '5', '_', '0'};
     manufacturer_name_data = {'A', 'p', 'p', 't', 'i', 'o', 'n', ' ', 'L', 'a', 'b', 's'};
     model_number_data = {'M', 'E', 'A', 'T', 'E', 'R'};
@@ -212,19 +202,7 @@ class MeaterBLEServer {
       case BLE_GATT_ACCESS_OP_READ_CHR:
         ESP_LOGD("meater_ble_server", "GATT_READ, handle %d", attr_handle);
         
-        if (attr_handle == instance->temp_val_handle) {
-          int rc = os_mbuf_append(ctxt->om, instance->temp_data.data(), 
-                                  instance->temp_data.size());
-          return rc == 0 ? 0 : BLE_ATT_ERR_INSUFFICIENT_RES;
-        } else if (attr_handle == instance->battery_val_handle) {
-          int rc = os_mbuf_append(ctxt->om, instance->battery_data.data(),
-                                  instance->battery_data.size());
-          return rc == 0 ? 0 : BLE_ATT_ERR_INSUFFICIENT_RES;
-        } else if (attr_handle == instance->config_val_handle) {
-          int rc = os_mbuf_append(ctxt->om, instance->config_data.data(),
-                                  instance->config_data.size());
-          return rc == 0 ? 0 : BLE_ATT_ERR_INSUFFICIENT_RES;
-        } else if (attr_handle == instance->fw_val_handle) {
+        if (attr_handle == instance->fw_val_handle) {
           int rc = os_mbuf_append(ctxt->om, instance->firmware_data.data(),
                                   instance->firmware_data.size());
           return rc == 0 ? 0 : BLE_ATT_ERR_INSUFFICIENT_RES;
@@ -240,20 +218,6 @@ class MeaterBLEServer {
           int rc = os_mbuf_append(ctxt->om, instance->software_rev_data.data(),
                                   instance->software_rev_data.size());
           return rc == 0 ? 0 : BLE_ATT_ERR_INSUFFICIENT_RES;
-        }
-        return BLE_ATT_ERR_UNLIKELY;
-        
-      case BLE_GATT_ACCESS_OP_WRITE_CHR:
-        ESP_LOGI("meater_ble_server", "GATT_WRITE, handle %d", attr_handle);
-        
-        if (attr_handle == instance->config_val_handle) {
-          uint16_t len = OS_MBUF_PKTLEN(ctxt->om);
-          if (len <= instance->config_data.size()) {
-            int rc = ble_hs_mbuf_to_flat(ctxt->om, instance->config_data.data(),
-                                        len, NULL);
-            ESP_LOGI("meater_ble_server", "Config characteristic updated");
-            return rc == 0 ? 0 : BLE_ATT_ERR_UNLIKELY;
-          }
         }
         return BLE_ATT_ERR_UNLIKELY;
         
@@ -379,22 +343,15 @@ class MeaterBLEServer {
         // Temperature Characteristic
         .uuid = (ble_uuid_t*)&MEATER_TEMP_CHAR_UUID,
         .access_cb = MeaterBLEServer::gatt_char_access,
-        .flags = BLE_GATT_CHR_F_READ | BLE_GATT_CHR_F_NOTIFY,
+        .flags = BLE_GATT_CHR_F_NOTIFY,
         .val_handle = &instance->temp_val_handle,
       },
       {
         // Battery Characteristic
         .uuid = (ble_uuid_t*)&MEATER_BATTERY_CHAR_UUID,
         .access_cb = MeaterBLEServer::gatt_char_access,
-        .flags = BLE_GATT_CHR_F_READ | BLE_GATT_CHR_F_NOTIFY,
+        .flags = BLE_GATT_CHR_F_NOTIFY,
         .val_handle = &instance->battery_val_handle,
-      },
-      {
-        // Config Characteristic
-        .uuid = (ble_uuid_t*)&MEATER_CONFIG_CHAR_UUID,
-        .access_cb = MeaterBLEServer::gatt_char_access,
-        .flags = BLE_GATT_CHR_F_READ | BLE_GATT_CHR_F_WRITE,
-        .val_handle = &instance->config_val_handle,
       },
       { 0 } // End of characteristics
     };
