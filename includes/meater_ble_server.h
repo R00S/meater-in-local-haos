@@ -177,7 +177,7 @@ class MeaterBLEServer {
         service_id.id.uuid.len = ESP_UUID_LEN_128;
         memcpy(service_id.id.uuid.uuid.uuid128, MEATER_SERVICE_UUID, 16);
         
-        esp_ble_gatts_create_service(gatts_if, &service_id, 8);
+        esp_ble_gatts_create_service(gatts_if, &service_id, 12);  // Need more handles for 3 characteristics
         break;
       }
       
