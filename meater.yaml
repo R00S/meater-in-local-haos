@@ -7,7 +7,7 @@ esphome:
   # This prevents conflicts between BLE scanning and advertising
 
 esp32:
-  board: esp32-c3-devkitm-1
+  board: esp32-c6-devkitc-1
   framework:
     type: esp-idf
 
