@@ -46,13 +46,6 @@ wifi:
 
 captive_portal:
 
-# Configure BLE tracker for bluetooth_proxy with settings that don't interfere with BLE client
-esp32_ble_tracker:
-  scan_parameters:
-    interval: 1100ms
-    window: 1100ms
-    active: true
-
 bluetooth_proxy:
 
 ble_client:
