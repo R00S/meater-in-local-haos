@@ -1,5 +1,4 @@
 
-
 Invite team members
 You said:
 is there a esp32 in the charger block for a meater+?
@@ -671,3 +670,173 @@ Single-connection rule: only one active BLE central per probe; your proxy should
 Fallbacks: you can ship without NetworkSettings if you’re not exposing Wi-Fi setup UI; still reply with a minimal NetworkSettingsMessage to avoid UI errors.
 
 If you want, I can turn this into a starter server skeleton (e.g., Python: UDP socket + Square/Wire-compatible protobufs) with stubbed handlers for each message above and a plug-in “BLE backend” interface (real bluez or a simulator) so you can iterate quickly.
+
+You said:
+what if we let the spoofer pretend to be a probe, not the charging block, dont we bypass the udp problem then?
+ChatGPT said:
+
+Thought for 12s
+Short answer: yes—if your gadget pretends to be a probe (BLE peripheral) you can ignore the LAN/UDP “MEATER Link” layer entirely. The app will connect to a nearby MEATER-named BLE device and stream temps directly. That’s exactly how a single MEATER (no Block/Plus) works.
+
+Here’s what that entails and the gotchas:
+
+What you bypass vs. what you must emulate
+Bypassed: all UDP 7878 discovery, protobuf envelopes, “master status,” network settings, etc.
+
+Must emulate: a BLE GATT probe that looks/behaves like the real thing.
+
+Minimal “fake probe” checklist (BLE peripheral)
+Advertising
+
+Device name: MEATER
+
+Include Complete List of 128-bit Service UUIDs with the custom service:
+
+Service UUID: a75cc7fc-c956-488f-ac2a-2dbc08b63a04
+
+Make it connectable, scannable. Keep a stable address (static random) between boots.
+
+GATT layout
+
+Generic Access (0x1800) → Device Name (0x2A00) = MEATER
+
+Device Information (0x180A) with readable strings:
+
+Manufacturer (0x2A29) = Apption Labs
+
+Model Number (0x2A24) = MEATER
+
+Firmware Rev (0x2A26) = e.g., v1.0.5_1
+
+Software Rev (0x2A28) = e.g., 1.0.5_1
+
+MEATER custom service a75cc7fc-c956-488f-ac2a-2dbc08b63a04
+
+Temps characteristic (Notify): 7edda774-045e-4bbf-909b-45d1991a2876
+
+Properties: Notify
+
+Descriptors: CCCD (0x2902); start streaming when CCCD set to 0x0001
+
+Battery characteristic (Read): 2adb4877-68d8-4884-bd3c-d83853bf27b8
+
+Return a plausible % (e.g., 80)
+
+Notification payload (8 bytes)
+
+Send frames ~1–2 Hz once CCCD is enabled.
+
+Common community decode (Celsius, fixed-point /16):
+
+tip_raw = x0 | (x1<<8)
+ra      = x2 | (x3<<8)
+oa      = x4 | (x5<<8)
+tip_c   = (tip_raw + 8) / 16.0
+ambient_c = (tip_raw + max(0, (((ra - min(48, oa)) * 16 * 589) / 1487)) + 8) / 16.0
+You don’t need to expose °F—the app converts.
+
+Connection behavior
+
+One-central only. Reject a second central while connected (the real probe enforces this).
+
+Start streaming only after CCCD write; stop when CCCD cleared or link drops.
+
+Nice-to-have realism
+
+Firmware strings ending in _0 (single probe) or _1…_4 (Block slots) look authentic.
+
+Battery: step it down slowly over time.
+
+Optionally add a read-only “history” characteristic (if you’ve decoded it) to satisfy any background reads the app might attempt—but most apps are happy with just live temps.
+
+Happy-path message flow (what the app will do)
+Scan → sees MEATER with your custom service UUID
+
+Connect
+
+Discover services/characteristics
+
+Write 0x0001 to temps CCCD
+
+Receive 8-byte temp notifications at ~1–2 Hz
+
+Occasionally Read battery (and Device Info once)
+
+Pitfalls & tips
+Charger/Plus conflict: if the real charger is powered and paired to the same probe, the app may prefer that path or the probe may already be “busy.” Power the charger off during tests.
+
+Phone as peripheral: use an ESP32 or similar for peripheral mode. Phones can act as BLE peripherals but are inconsistent across platforms/OS versions.
+
+Manufacturer data: most setups work without spoofing manufacturer data, but adding a small blob (even empty) can improve “looks like hardware” signals.
+
+Cadence & stability: erratic notify timing or changing addresses can make the app drop or ignore the device.
+
+When “fake probe” is the right choice
+You want a simple, offline path with no LAN plumbing.
+
+You’re okay presenting exactly one probe to the app.
+
+You don’t need the app’s multi-probe “Block” UI; you just want temps in the stock app.
+
+If you want, I can draft a tiny ESP32 NimBLE GATT-server skeleton with those UUIDs, CCCD handling, and a realistic 1 Hz notifier so you can flash and try immediately.
+
+You said:
+the spoofer doesnt have to pretend to be that exact probe, does it, it can have another id than the probe connected to the charging block
+ChatGPT said:
+
+Thought for 9s
+Yep—you can give your spoofer its own identity and the app will treat it as a separate probe.
+
+How the app “keys” a probe
+In practice the app tracks a probe by its BLE address (MAC) plus what it sees via GATT (name, Device Information strings).
+
+There’s no public evidence it requires a specific serial or cloud registration for a basic, single-probe session.
+
+What to do
+Use a static random BLE address and keep it stable across boots (so the app “remembers” it).
+
+On ESP32/NimBLE: set a static random address at startup; don’t let it rotate.
+
+Advertise as MEATER and include the custom service UUID. The name helps the app discover/filter; it doesn’t have to match your real probe’s identity.
+
+Populate Device Information with plausible strings (Manufacturer: Apption Labs, Model: MEATER, Firmware/Software: e.g., v1.0.5_0). These don’t have to match any real probe.
+
+Expose the standard GATT layout and notify 8-byte temp frames at ~1–2 Hz once CCCD is enabled.
+
+Avoiding conflicts with your real gear
+If the real probe/charger is on, the app may see two “MEATER” devices. That’s fine—it will just pick one.
+
+To avoid confusion during testing, either:
+
+Power the Plus charger off (or remove its battery), or
+
+Keep the charger/probe away/out of range while testing the spoofer.
+
+You only need to clone the real probe’s MAC if you’re trying to “hijack” sessions meant for that exact probe. Otherwise, a unique stable MAC is cleaner and safer.
+
+Quick checklist for a distinct fake probe
+ Static random MAC (stable)
+
+ Advertise: name MEATER, include 128-bit service UUID list with a75cc7fc-c956-488f-ac2a-2dbc08b63a04
+
+ GATT:
+
+0x1800 → 0x2A00 = MEATER
+
+0x180A → 0x2A29=Apption Labs, 0x2A24=MEATER, 0x2A26/0x2A28=v1.0.5_0
+
+Custom service → temps char 7edda774-045e-4bbf-909b-45d1991a2876 (Notify + CCCD), battery 2adb4877-68d8-4884-bd3c-d83853bf27b8 (Read)
+
+ Start notifications only after CCCD == 0x0001
+
+ One-central only (reject second connection)
+
+If you want, I can drop a NimBLE-Arduino skeleton that sets a static random MAC and implements those services/characteristics with a realistic 1 Hz notifier.
+
+
+
+
+
+No file chosenNo file chosen
+ChatGPT can make mistakes. OpenAI doesn't use Patrik roos's Workspace workspace data to train its models.
+
