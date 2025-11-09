@@ -1,19 +1,96 @@
+substitutions:
+  meater_mac: !secret meater_mac_address
+
 esphome:
   name: meater
   friendly_name: meater
   includes:
     - includes/meater_ble_server.h
-  # BLE server will initialize on boot if NimBLE headers are available
-  # Otherwise it will log a warning and operate in BLE client-only mode
+    - includes/meater_nimble_client.h
   on_boot:
     priority: -10
     then:
       - lambda: |-
+          ESP_LOGI("meater", "Initializing NimBLE BLE server and client");
+          
+          // Initialize BLE server for phone app
           if (id(meater_ble_server_ptr) == nullptr) {
-            ESP_LOGI("meater", "Initializing BLE server");
-            static MeaterBLEServer* s = new MeaterBLEServer();
-            s->setup();
-            id(meater_ble_server_ptr) = (void*) s;
+            static MeaterBLEServer* server = new MeaterBLEServer();
+            server->setup();
+            id(meater_ble_server_ptr) = (void*)server;
+          }
+          
+          // Initialize BLE client for connecting to real MEATER+
+          if (id(meater_client_ptr) == nullptr) {
+            std::string mac = "${meater_mac}";
+            static MeaterNimBLEClient* client = new MeaterNimBLEClient(mac);
+            
+            // Set up temperature callback
+            client->set_on_temp_update([](const std::vector<uint8_t>& data) {
+              // Forward to BLE server
+              if (id(meater_ble_server_ptr) != nullptr) {
+                ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_temp_data(data);
+              }
+              
+              // Calculate and publish tip temperature
+              if (data.size() >= 2) {
+                uint16_t tip_temp = (data[0] + (data[1] << 8) + 8.0) / 16.0;
+                id(meater_tip_temp).publish_state((float)tip_temp);
+              }
+              
+              // Calculate and publish ambient temperature
+              if (data.size() >= 6) {
+                uint16_t tip = data[0] + (data[1] << 8);
+                uint16_t ra = data[2] + (data[3] << 8);
+                uint16_t oa = data[4] + (data[5] << 8);
+                uint16_t min_val = 48;
+                uint16_t ambient = (tip + std::max(0, (((ra - std::min(min_val, oa)) * 16 * 589) / 1487)) + 8.0) / 16;
+                id(meater_ambient_temp).publish_state((float)ambient);
+              }
+            });
+            
+            // Set up battery callback
+            client->set_on_battery_update([](const std::vector<uint8_t>& data) {
+              // Forward to BLE server
+              if (id(meater_ble_server_ptr) != nullptr) {
+                ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_battery_data(data);
+              }
+              
+              // Calculate and publish battery level
+              if (data.size() >= 2) {
+                uint16_t battery = (data[0] + data[1]) * 10;
+                id(meater_battery).publish_state((float)battery);
+              }
+            });
+            
+            // Set up firmware callback
+            client->set_on_firmware_update([](const std::vector<uint8_t>& data) {
+              // Forward to BLE server
+              if (id(meater_ble_server_ptr) != nullptr) {
+                ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_firmware_data(data);
+              }
+              
+              // Publish firmware string
+              std::string firmware_str(data.begin(), data.end());
+              id(meater_firmware).publish_state(firmware_str);
+            });
+            
+            // Set up device name callback
+            client->set_on_device_name_update([](const std::vector<uint8_t>& data) {
+              // Update device name display
+              std::string device_name(data.begin(), data.end());
+              id(meater_device_name_display).publish_state(device_name);
+              
+              // Update BLE server device name
+              if (id(meater_ble_server_ptr) != nullptr) {
+                ((MeaterBLEServer*)id(meater_ble_server_ptr))->set_device_name(device_name);
+              }
+            });
+            
+            id(meater_client_ptr) = (void*)client;
+            
+            // Start scanning for MEATER device
+            client->start_scan();
           }
 
 esp32:
@@ -21,17 +98,13 @@ esp32:
   framework:
     type: esp-idf
     sdkconfig_options:
-      # ESP32-C6 only supports NimBLE, but ESPHome ble_client needs Bluedroid compatibility
-      # Try to enable both - NimBLE for server, Bluedroid compat for ESPHome components
+      # Pure NimBLE configuration for ESP32-C6
       CONFIG_BT_ENABLED: y
-      CONFIG_BT_BLUEDROID_ENABLED: y  # Re-enable for ESPHome ble_client compatibility
+      CONFIG_BT_BLUEDROID_ENABLED: n  # Explicitly disable Bluedroid
       CONFIG_BT_NIMBLE_ENABLED: y
       CONFIG_BT_NIMBLE_ROLE_CENTRAL: y
       CONFIG_BT_NIMBLE_ROLE_PERIPHERAL: y
       CONFIG_BT_NIMBLE_MAX_CONNECTIONS: "4"
-
-# esp32_ble removed - causes Bluedroid conflicts on ESP32-C6
-# NimBLE handles connections automatically with sdkconfig_options
 
 # Enable logging
 logger:
@@ -56,15 +129,7 @@ wifi:
 
 captive_portal:
 
-# bluetooth_proxy removed - conflicts with NimBLE on ESP32-C6
-# Using custom NimBLE BLE server instead
-
-ble_client:
-  - mac_address: !secret meater_mac_address
-    id: meater
-    auto_connect: true
-
- 
+# Text sensors for firmware and device name
 text_sensor:
   - platform: template
     name: "MEATER firmware"
@@ -72,109 +137,37 @@ text_sensor:
   - platform: template
     name: "MEATER device name"
     id: meater_device_name_display
- 
+
+# Template sensors that will be updated by NimBLE client callbacks
 sensor:
-  - platform: ble_client
-    type: characteristic
-    ble_client_id: meater
+  - platform: template
     name: "MEATER tip temperature"
-    service_uuid: 'a75cc7fc-c956-488f-ac2a-2dbc08b63a04'
-    characteristic_uuid: '7edda774-045e-4bbf-909b-45d1991a2876'
+    id: meater_tip_temp
     icon: 'mdi:thermometer'
     unit_of_measurement: '°C'
     accuracy_decimals: 2
-    notify: true
-    lambda: |-
-      // Forward raw data to BLE server for phone app (server initialized on boot)
-      if (id(meater_ble_server_ptr) != nullptr) {
-        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_temp_data(x);
-      }
-      
-      // Calculate temperature for Home Assistant (existing functionality)
-      uint16_t tip_temp = (x[0] + (x[1] << 8) + 8.0) / 16.0;
-      return (float)tip_temp;
-  - platform: ble_client
-    type: characteristic
-    ble_client_id: meater
+  
+  - platform: template
     name: "MEATER ambient temperature"
-    service_uuid: 'a75cc7fc-c956-488f-ac2a-2dbc08b63a04'
-    characteristic_uuid: '7edda774-045e-4bbf-909b-45d1991a2876'
+    id: meater_ambient_temp
     icon: 'mdi:thermometer'
     unit_of_measurement: '°C'
     accuracy_decimals: 2
-    notify: true
-    lambda: |-
-      // Calculate ambient temperature for Home Assistant (existing functionality)
-      uint16_t tip = x[0] + (x[1] << 8);
-      uint16_t ra = x[2] + (x[3] << 8);
-      uint16_t oa = x[4] + (x[5] << 8);
-      uint16_t min_val = 48;
-      uint16_t ambient = (tip + std::max(0, (((ra - std::min(min_val, oa)) * 16 * 589) / 1487)) + 8.0) / 16;
-      return (float)ambient;
-  - platform: ble_client
-    type: characteristic
-    ble_client_id: meater
+  
+  - platform: template
     name: "MEATER battery level"
-    service_uuid: 'a75cc7fc-c956-488f-ac2a-2dbc08b63a04'
-    characteristic_uuid: '2adb4877-68d8-4884-bd3c-d83853bf27b8'
+    id: meater_battery
     icon: 'mdi:battery'
     unit_of_measurement: '%'
-    notify: true
-    lambda: |-
-      // Forward raw data to BLE server for phone app
-      if (id(meater_ble_server_ptr) != nullptr) {
-        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_battery_data(x);
-      }
-      
-      // Calculate battery percentage for Home Assistant (existing functionality)
-      uint16_t battery = (x[0] + x[1]) * 10;
-      return (float)battery;
-  - platform: ble_client
-    type: characteristic
-    ble_client_id: meater
-    id: firmware
-    service_uuid: '180A'
-    characteristic_uuid: '00002a26-0000-1000-8000-00805f9b34fb'
-    lambda: |-
-      // Update firmware text sensor (existing functionality)
-      std::string data_string(x.begin(), x.end());
-      id(meater_firmware).publish_state(data_string.c_str());
-      
-      // Forward firmware data to BLE server for phone app
-      if (id(meater_ble_server_ptr) != nullptr) {
-        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_firmware_data(x);
-      }
-      
-      return (float)x.size();
-  - platform: ble_client
-    type: rssi
-    ble_client_id: meater
-    name: "MEATER RSSI"
-  - platform: ble_client
-    type: characteristic
-    ble_client_id: meater
-    id: meater_device_name_reader
-    internal: true
-    service_uuid: '1800'  # Generic Access Profile service
-    characteristic_uuid: '2A00'  # Device Name characteristic
-    lambda: |-
-      // Read device name from real MEATER
-      std::string device_name(x.begin(), x.end());
-      ESP_LOGI("meater", "Read device name from real MEATER: %s", device_name.c_str());
-      
-      // Update text sensor
-      id(meater_device_name_display).publish_state(device_name);
-      
-      // Update BLE server device name if server is already initialized
-      if (id(meater_ble_server_ptr) != nullptr) {
-        ((MeaterBLEServer*)id(meater_ble_server_ptr))->set_device_name(device_name);
-      }
-      
-      return (float)x.size();
+    accuracy_decimals: 0
 
-# Global variable to store the BLE server instance
+# Global variables to store BLE instances
 globals:
   - id: meater_ble_server_ptr
+    type: void*
+    restore_value: no
+    initial_value: 'nullptr'
+  - id: meater_client_ptr
     type: void*
     restore_value: no
     initial_value: 'nullptr'
