@@ -1,3 +1,6 @@
+Skip to content
+Chat history
+
 
 Invite team members
 You said:
@@ -832,6 +835,131 @@ Custom service → temps char 7edda774-045e-4bbf-909b-45d1991a2876 (Notify + CCC
  One-central only (reject second connection)
 
 If you want, I can drop a NimBLE-Arduino skeleton that sets a static random MAC and implements those services/characteristics with a realistic 1 Hz notifier.
+
+You said:
+meater.yaml
+File
+meater_ble_server.h
+File
+Any idea why this doesnt work?
+ChatGPT said:
+
+Thought for 3m 6s
+Yep — a few things jump out that would keep this from ever “looking like a MEATER” to the phone app.
+
+The big blockers (and how to fix them)
+Your BLE server probably never starts.
+You only create/start MeaterBLEServer inside the Device Name reader’s lambda (GAP 0x1800 / 0x2A00). That sensor doesn’t notify, and you didn’t give it any polling cadence — so its lambda likely never fires ⇒ the server never runs/advertises. Add a boot hook or make that reader poll. 
+meater
+
+ 
+meater
+
+
+Quick fix (simplest): start the server on boot, independent of reading the real probe name.
+
+esphome:
+  on_boot:
+    priority: -10
+    then:
+      - lambda: |-
+          if (id(meater_ble_server_ptr) == nullptr) {
+            static MeaterBLEServer* s = new MeaterBLEServer();
+            s->setup();
+            id(meater_ble_server_ptr) = (void*) s;
+          }
+(If you still want to mirror the real probe name, keep your existing reader — but don’t gate server start on it.)
+
+Stack mismatch: using Bluedroid API on an ESP32-C6 (NimBLE-only).
+Your header pulls in the classic esp_ble_ (Bluedroid) GATT server* headers, but the YAML targets esp32-c6 with ESP-IDF/NimBLE. C6 doesn’t support Bluedroid; mixing Bluedroid calls with ESPHome’s NimBLE client/tracker will fail at compile/link or silently at runtime. 
+meater_ble_server
+
+ 
+meater
+
+
+Two clean paths:
+
+Port the server to NimBLE (use NimBLE GATT APIs) so client+server share the same stack on C6.
+
+Or switch hardware to an ESP32/ESP32-S3 build that uses the same stack everywhere (and then keep your Bluedroid code).
+
+Advertising with the wrong address type.
+You force own_addr_type = BLE_ADDR_TYPE_PUBLIC. Many modules (esp. C6) come up with random static by default; trying PUBLIC can make start_advertising() silently fail. Use RANDOM_static (and set it). 
+meater_ble_server
+
+
+Patch:
+
+adv_params.own_addr_type = BLE_ADDR_TYPE_RANDOM;   // was PUBLIC
+// …before starting adv, set a static random address once:
+esp_ble_gap_set_rand_addr((uint8_t*)"\xD0\xD9\x4F\x12\x34\x56"); // any fixed random
+You add CCCDs but never honor subscriptions.
+You create CCCD descriptors for temps/battery, but your WRITE handler only handles the config characteristic — you never look for writes to the CCCD to know when the app subscribed. Many centrals will ignore notifications before CCCD=0x0001. 
+meater_ble_server
+
+ 
+meater_ble_server
+
+
+Patch idea: track temp_notify_enabled / batt_notify_enabled when the CCCD handle is written; only call esp_ble_gatts_send_indicate() if enabled.
+
+You’re doing client scan + server advertising at 100% scan duty.
+esp32_ble_tracker runs active scans with interval=window=1100 ms (i.e., constant scanning). That can starve the radio and make your server’s advertising/connectability flaky. Either disable the tracker while you’re spoofing, or reduce the scan window heavily. 
+meater
+
+
+Minor compatibility nits (safe, but worth aligning):
+
+You mark temps READ|NOTIFY; real devices usually rely on NOTIFY. Safe, but you can drop READ if you want to be purist. 
+meater_ble_server
+
+
+You added a custom config characteristic (RW). The app probably ignores unknown chars, but if you suspect it’s being picky, remove it for an A/B test. 
+meater_ble_server
+
+ 
+meater_ble_server
+
+
+Advertising uses the 128-bit service list and manufacturer data — good. Just ensure your 128-bit UUID byte order matches the AD spec (yours is little-endian, which is what the ESP IDF helpers expect when you pass raw bytes). 
+meater_ble_server
+
+ 
+meater_ble_server
+
+
+Minimal change set I’d try first (quick wins)
+Start the server at boot (snippet above) so you actually advertise. 
+meater
+
+
+Switch to RANDOM address type (and set a fixed random address) before starting advertising. 
+meater_ble_server
+
+
+Handle CCCD writes and only notify after subscription. 
+meater_ble_server
+
+ 
+meater_ble_server
+
+
+Back off the scanner or disable it while you’re advertising to the phone. 
+meater
+
+
+If you want, I can:
+
+Port your GATT server to NimBLE (so it runs cleanly on C6 alongside your BLE client), or
+
+Give you a trimmed ESP32-S3 build where your existing esp_ble_* server runs as-is and we just wire in the CCCD/adv fixes.
+
+
+Sources
+Is this conversation helpful so far?
+
+
 
 
 
