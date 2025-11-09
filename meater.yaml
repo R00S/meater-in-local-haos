@@ -55,7 +55,8 @@ wifi:
 
 captive_portal:
 
-bluetooth_proxy:
+# bluetooth_proxy removed - conflicts with NimBLE on ESP32-C6
+# Using custom NimBLE BLE server instead
 
 ble_client:
   - mac_address: !secret meater_mac_address
