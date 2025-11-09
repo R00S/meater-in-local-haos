@@ -3,11 +3,20 @@ esphome:
   friendly_name: meater
   includes:
     - includes/meater_ble_server.h
-  # Note: BLE server initialization is now delayed until after BLE client connects
-  # This prevents conflicts between BLE scanning and advertising
+  # BLE server is initialized on boot to ensure it starts reliably
+  on_boot:
+    priority: -10
+    then:
+      - lambda: |-
+          if (id(meater_ble_server_ptr) == nullptr) {
+            ESP_LOGI("meater", "Initializing BLE server on boot");
+            static MeaterBLEServer* s = new MeaterBLEServer();
+            s->setup();
+            id(meater_ble_server_ptr) = (void*) s;
+          }
 
 esp32:
-  board: esp32-c6-devkitc-1
+  board: esp32-c3-devkitm-1
   framework:
     type: esp-idf
 
@@ -72,7 +81,7 @@ sensor:
     accuracy_decimals: 2
     notify: true
     lambda: |-
-      // Forward raw data to BLE server for phone app (server initialized after device name read)
+      // Forward raw data to BLE server for phone app (server initialized on boot)
       if (id(meater_ble_server_ptr) != nullptr) {
         ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_temp_data(x);
       }
@@ -152,15 +161,9 @@ sensor:
       // Update text sensor
       id(meater_device_name_display).publish_state(device_name);
       
-      // Initialize BLE server with device name (only once after name is read)
-      static bool ble_server_initialized = false;
-      if (!ble_server_initialized && id(meater_ble_server_ptr) == nullptr) {
-        ESP_LOGI("meater", "Initializing BLE server with device name: %s", device_name.c_str());
-        static MeaterBLEServer* ble_server = new MeaterBLEServer();
-        ble_server->set_device_name(device_name);  // Set name BEFORE setup
-        ble_server->setup();  // Start advertising with correct name
-        id(meater_ble_server_ptr) = (void*)ble_server;
-        ble_server_initialized = true;
+      // Update BLE server device name if server is already initialized
+      if (id(meater_ble_server_ptr) != nullptr) {
+        ((MeaterBLEServer*)id(meater_ble_server_ptr))->set_device_name(device_name);
       }
       
       return (float)x.size();
