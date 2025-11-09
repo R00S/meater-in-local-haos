@@ -56,6 +56,15 @@ class MeaterBLEServer {
   std::string device_name = "MEATER";  // Default name, will be updated from real device
   bool device_name_set = false;
   
+  // Manufacturer data matching real MEATER advertising format
+  // Based on real MEATER+ packet: Company ID 0x037B (little endian: 7B 03) + 22 bytes of data
+  uint8_t manufacturer_data[24] = {
+    0x7B, 0x03,  // Company ID (0x037B - Apption Labs, maker of MEATER)
+    0x80, 0x38, 0x6C, 0xA8, 0x5E, 0xD2, 0x48, 0x6D,  // Device-specific data
+    0x44, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+  };
+  
   MeaterBLEServer() {
     instance = this;
     temp_data.resize(8, 0);
@@ -364,12 +373,12 @@ class MeaterBLEServer {
     esp_ble_adv_data_t adv_data = {};
     adv_data.set_scan_rsp = false;
     adv_data.include_name = true;  // Include name in advertising packet for better discovery
-    adv_data.include_txpower = false;
+    adv_data.include_txpower = true;  // Include TX power like real MEATER
     adv_data.min_interval = 0x20;
     adv_data.max_interval = 0x40;
     adv_data.appearance = 0x00;
-    adv_data.manufacturer_len = 0;
-    adv_data.p_manufacturer_data = nullptr;
+    adv_data.manufacturer_len = 24;  // Include manufacturer data for app recognition
+    adv_data.p_manufacturer_data = manufacturer_data;
     adv_data.service_data_len = 0;
     adv_data.p_service_data = nullptr;
     adv_data.service_uuid_len = 16;
