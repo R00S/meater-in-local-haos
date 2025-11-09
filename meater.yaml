@@ -42,6 +42,7 @@ bluetooth_proxy:
 ble_client:
   - mac_address: !secret meater_mac_address
     id: meater
+    auto_connect: true
 
  
 text_sensor:
