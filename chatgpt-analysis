@@ -1,0 +1,673 @@
+
+
+Invite team members
+You said:
+is there a esp32 in the charger block for a meater+?
+ChatGPT said:
+
+Thought for 1m 16s
+Short answer: no.
+
+The MEATER+ charger is just a Bluetooth-LE repeater/dock, not a Wi-Fi device, and it doesn’t use an ESP32. FCC filings for the MEATER+ show a tiny BLE board inside the charger and test gear based on TI’s CC2640R2 BLE platform (SmartRF Studio with a CC2640R2 LaunchPad), which strongly indicates the charger uses a TI BLE SoC—not an ESP32. 
+FCC ID
++2
+FCC ID
++2
+
+MEATER’s own docs also describe the Plus charger as a Bluetooth repeater that relays the probe to your phone/tablet (again, no Wi-Fi/ESP32 involved). 
+support.meater.com
+
+You said:
+are there projects trying to hack the meater+? Give me links
+ChatGPT said:
+
+Thought for 13s
+Yep—there are a few community efforts and threads poking at (or outright reverse-engineering) MEATER/MEATER+:
+
+meaterble (GitHub) – active reverse-engineering of the MEATER BLE protocol; scripts to read probe data directly over BLE. 
+GitHub
++1
+
+meaterble: “Meater+ support” issue – discussion specific to supporting the Plus charger/relay behavior. 
+GitHub
+
+ESPHome BLE integration gist – YAML for reading a MEATER probe with an ESP32/ESPHome device (hands-on “hack it yourself” approach). 
+Gist
+
+Home Assistant community thread (Support for MEATER) – long thread with code snippets and updates for local BLE reading and ESPHome approaches. 
+Home Assistant Community
++1
+
+“Meater through the API” (HA forum) – DIY integration via MEATER’s cloud API (not local BLE, but useful reference). 
+Home Assistant Community
+
+MEATER Cloud public REST API (official repo) – docs for the cloud API if you want to build against MEATER’s backend. 
+GitHub
+
+TVWBB forum thread – early community coordination on reversing the MEATER BLE probes. 
+The Virtual Weber Bulletin Board
+
+If you want, I can sketch a minimal ESP32/ESPHome config or a Python/Bleak script tailored to your MEATER+ setup.
+
+You said:
+no, summarize everything known about the protocol the meater+ uses and how to connect to it, bypassing the meater cloud
+ChatGPT said:
+
+Thought for 40s
+Here’s the best public picture of the MEATER/MEATER+ probe protocol and how to connect to it locally (no MEATER Cloud).
+
+What’s known about the BLE protocol
+Transport: Bluetooth Low Energy (GATT). Each probe only accepts one connection at a time—you must power down/close the app and (for Plus) take the charger out of the equation to connect directly. 
+GitHub
+
+Advertising: Shows up as MEATER with standard Device Information strings (Manufacturer: “Apption Labs”, Firmware version available via Device Information service). 
+GitHub
+
+Primary custom service (temperatures/battery):
+a75cc7fc-c956-488f-ac2a-2dbc08b63a04 (128-bit UUID). 
+Home Assistant Community
++1
+
+Key characteristic (temps stream):
+7edda774-045e-4bbf-909b-45d1991a2876 — subscribe for notifications to get tip & ambient data. Payload is 8 bytes with accumulators/counters (fixed-point values). 
+Home Assistant Community
++1
+
+Battery characteristic:
+2adb4877-68d8-4884-bd3c-d83853bf27b8 — exposes battery (community decodes as a simple %). 
+Home Assistant Community
+
+Device Information (standard service):
+Service 0x180A, Firmware 0x2A26 (string, e.g., 1.0.5_1). 
+Home Assistant Community
++1
+
+Data format (from community reversing)
+8-byte temp packet (read/notify on the temp characteristic):
+Bytes 1–2 = “tip” (accum/count encoding), 3–4 = “ra” (ambient raw), 5–6 = “oa” (ambient offset), 7–8 = unknown/aux. Values are fixed-point 1/16 °C. 
+GitHub
+
+Decoding used in working examples:
+
+Tip (°C): (x0 + (x1 << 8) + 8) / 16.0
+
+Ambient (°C): uses tip + a correction from ra and oa (see formula below).
+
+Battery (%): (x0 + x1) * 10 (on the battery characteristic).
+These formulas are used successfully in ESPHome configs and HA forum posts. 
+Gist
++1
+
+Ambient formula (from ESPHome/HA examples):
+
+tip = x[0] + (x[1] << 8)
+ra  = x[2] + (x[3] << 8)
+oa  = x[4] + (x[5] << 8)
+ambient = (tip + max(0, (((ra - min(48, oa)) * 16 * 589) / 1487)) + 8.0) / 16
+Gist
+
+History/ring-buffer
+Probes also expose a history buffer via another handle with 512 bytes (256 values) that looks like a ring buffer of recent readings; updates appear to be client-driven (on read). This isn’t strictly needed to stream live temps. 
+GitHub
+
+How the MEATER+ charger factors in (and how to bypass it)
+The Plus charger pairs with the probe and acts as a BLE range extender to your phone/tablet (not Wi-Fi; not ESP32). If the charger has the probe, your phone connects to the charger, not the probe. 
+Meater Support
+
+To connect locally without MEATER Cloud, you have two practical options:
+
+Connect directly to the probe (best): undock the probe and make sure the official app/charger isn’t holding the connection; then subscribe to the temp characteristic over BLE. 
+GitHub
+
+Connect to the charger’s BLE: community info on the charger’s own GATT is sparse; most DIY integrations skip the charger and read the probe directly (or use ESP32 as a proxy). 
+GitHub
+
+Step-by-step: local connection (no cloud)
+Prep (important):
+
+Close the MEATER app on nearby devices. If using the Plus, temporarily pull the AAA battery or ensure the charger isn’t connected so the probe becomes discoverable (single-connection rule). LED behavior in support docs helps diagnose who’s connected. 
+GitHub
++2
+Meater Support
++2
+
+Option A — ESP32/ESPHome (works today):
+
+Use ESPHome’s ble_client to connect to your probe’s MAC and subscribe to:
+
+Service a75cc7fc-c956-488f-ac2a-2dbc08b63a04
+
+Characteristic 7edda774-045e-4bbf-909b-45d1991a2876 (notify) for temps
+
+Characteristic 2adb4877-68d8-4884-bd3c-d83853bf27b8 for battery
+
+Optionally read firmware from 0x180A / 0x2A26
+Example YAML (with the exact decode math) is available and confirmed by multiple users. 
+Gist
++1
+
+Option B — Laptop/Phone BLE client (nRF Connect / Python Bleak / bluepy):
+
+Connect to the device named MEATER → discover services → subscribe to 7edda774-… and parse with the formulas above; read battery/firmware via the UUIDs noted. The meaterble repo includes simple Python examples (bluepy) showing continuous reads once connected. 
+GitHub
+
+Extra quirks/tips
+Ambient under ~40 °C: the official app masks low ambient; DIY reads may show ambient≈tip at room temp—this is expected behavior from the community reverse-engineering notes. 
+Home Assistant Community
+
+Firmware/variant hints: firmware strings like v1.0.5_1 can indicate Block/Plus numbering (_1.._4 for Block, _0 for singletons). 
+GitHub
+
+Sources / working references
+Reverse-engineering notes & handle/format breakdown: meaterble repo README. 
+GitHub
+
+ESPHome config with exact UUIDs and decode formulas (widely reused): gist + HA thread. 
+Gist
++1
+
+Community confirmations of the same service/characteristic UUIDs: Hubitat & M5Stack forums. 
+Hubitat
++1
+
+One-connection rule, IDs/strings visible on the probe: meaterble README. 
+GitHub
+
+Charger behavior/diagnostics (to free the probe for direct BLE): MEATER support docs. 
+Meater Support
++1
+
+If you want, I can drop in a minimal Bleak script or a ready-to-flash ESPHome YAML tailored to your probe’s MAC next.
+
+You said:
+whatabout if you want to connect an own device to the app?
+ChatGPT said:
+
+Thought for 30s
+Short version: you’ve got two plausible paths, but there’s no drop-in project today that makes the official MEATER app think your own hardware is a probe/block.
+
+Two ways to “talk to the app”
+Spoof a MEATER probe over BLE (Peripheral mode).
+The app looks for a BLE device named MEATER exposing the custom service a75cc7fc-c956-488f-ac2a-2dbc08b63a04 with the “temps” characteristic 7edda774-045e-4bbf-909b-45d1991a2876 (notify) and a battery characteristic 2adb4877-68d8-4884-bd3c-d83853bf27b8, plus standard Device Information fields (Manufacturer “Apption Labs”, Firmware version string). If you emulate that GATT layout and push notifications that match the known 8-byte format/cadence, the app should connect—there’s no public evidence of encryption or pairing requirements beyond normal BLE, and community tooling reads those same UUIDs without keys. The big caveat: nobody has published a working “fake probe” that the stock app accepts end-to-end. 
+GitHub
+
+Speak “MEATER Link” on the LAN (pretend to be a Block/app).
+The app and Block also use a local UDP broadcast channel on port 7878 to share live readings. Folks have captured those packets and confirmed regular broadcasts, but the full payload format hasn’t been cleanly published—so building a LAN shim that your app instantly recognizes still needs protocol finishing work. 
+Home Assistant Community
+
+What we actually know (useful for either approach)
+One-connection rule: a probe only accepts a single BLE connection; the official app/charger must be off/unpaired while you test. 
+GitHub
+
+GATT layout & payloads: service/characteristic UUIDs above; tip/ambient/battery come in an 8-byte notify packet with fixed-point math used widely in community readers (ESPHome, Python). These readers prove there’s no secret key needed for basic data. 
+Gist
+
+LAN hints: UDP 7878 broadcasts from Block and the app (when link features are on) contain raw temps; several posts confirm but don’t finalize decoding. 
+Home Assistant Community
+
+Reality check
+No turnkey “own device → official app” repo exists today. There’s active reverse-engineering (e.g., meaterble) and working readers, but not a maintained probe/block emulator accepted by the stock app. One public ESPHome thread even asks about presenting as a probe/Block and relaying to the app—no published solution yet. 
+GitHub
++1
+
+If you want to try anyway (ESP32 outline)
+BLE spoof path: use ESP32 in Peripheral mode; advertise as MEATER; implement the custom service/characteristics; send notify frames at a realistic rate (~1–2 Hz) with valid temp math; populate Device Information strings (manufacturer “Apption Labs”, firmware like 1.0.5_0). Then try pairing from the app with all real probes/chargers turned off. Expect to iterate on exact strings/notification cadence. 
+GitHub
+
+LAN path: build a BLE-to-UDP bridge that reads a real probe and then emits UDP 7878 frames that mirror captures from a Block/app session. This avoids GATT emulation and focuses on packet structure—but you’ll need to complete the field mapping first. 
+Home Assistant Community
+
+If you want, I can draft a minimal ESP32 NimBLE “fake probe” skeleton (GATT server with those UUIDs) or a packet-capture checklist to progress the UDP 7878 format.
+
+You said:
+any other data that can be useful for Spoof a MEATER probe over BLE (Peripheral mode).
+ChatGPT said:
+
+Thought for 39s
+Absolutely—here’s the extra, practical stuff that helps when you try to spoof a MEATER probe over BLE (peripheral mode) so the official app is more likely to accept it.
+
+What the app seems to expect (concrete targets)
+Advertising / identity
+
+Device name: MEATER (shows up in Generic Access → Device Name). 
+GitHub
+
+Single-connection behavior (the real probes enforce this): ensure your emulator allows only one central at a time during testing. 
+GitHub
+
+Mandatory GATT services & fields
+
+Generic Access (0x1800) → Device Name (0x2A00) = MEATER. 
+GitHub
+
+Device Information (0x180A) with at least these characteristics:
+
+Manufacturer Name (0x2A29) = Apption Labs
+
+Model Number (0x2A24) = MEATER
+
+Firmware Revision (0x2A26) = e.g. v1.0.5_1
+
+Software Revision (0x2A28) = e.g. 1.0.5_1
+These exact strings appear on real probes and are easy for the app to sanity-check. 
+GitHub
+
+Custom thermometer service (primary)
+
+Service UUID: a75cc7fc-c956-488f-ac2a-2dbc08b63a04.
+
+Temps characteristic (Notify): 7edda774-045e-4bbf-909b-45d1991a2876.
+
+Expose CCCD (0x2902) and support notifications (the real probe’s CCCD enable is the immediate next handle and gets written 0x0001). 
+GitHub
+
+Battery characteristic: 2adb4877-68d8-4884-bd3c-d83853bf27b8 (readable; simple percentage). 
+GitHub
+
+Payload shape & example values (to mimic “real” data)
+8-byte temp packet (notified on the temps characteristic):
+
+Community tools read an 8-byte frame that decodes to tip (internal)°C and ambient °C using fixed-point math; this is what ESPHome and Python readers use successfully. A commonly used decode is:
+
+tip_raw = x0 + (x1<<8)
+ra      = x2 + (x3<<8)
+oa      = x4 + (x5<<8)
+tip_c   = (tip_raw + 8) / 16.0
+ambient_c = (tip_raw + max(0, (((ra - min(48, oa)) * 16 * 589) / 1487)) + 8) / 16.0
+(You can send °F by converting in-app; the probe reports Celsius values.) 
+Gist
++1
+
+Battery
+
+Exposed via the custom battery characteristic above; readers display an integer % (90, 80, …) when reading that handle. 
+GitHub
+
+Identity / variant hint
+
+Firmware strings often end with _0 for single probes or _1…_4 for Block-numbered probes; mirroring this looks more authentic (e.g., v1.0.5_1, 1.0.5_1). 
+GitHub
+
+Timing & link behavior (what to emulate)
+Notification cadence: send temps at ~1–2 Hz (that’s what community readers observe in steady streams). The meaterble readout shows continuous lines at second-ish intervals. 
+GitHub
+
+CCCD flow: expect the app to write 0x0001 to the temps characteristic’s CCCD; start pushing frames immediately after. 
+GitHub
+
+MTU/packet size: default 20-byte ATT payload is fine (frames are 8 bytes). No security/pairing has been required for community readers. 
+GitHub
+
+Minimal “GATT recipe” for your emulator
+Advertise as MEATER, connectable, with GATT complete list including 0x1800 and 0x180A (plus the custom service UUID).
+
+Services/characteristics:
+
+0x1800 → 0x2A00 = MEATER.
+
+0x180A → 0x2A29=Apption Labs, 0x2A24=MEATER, 0x2A26=v1.0.5_1, 0x2A28=1.0.5_1.
+
+a75cc7fc-…-3a04 →
+• 7edda774-…-2876 (Notify; with CCCD) → send 8-byte frames every ~1s.
+• 2adb4877-…-27b8 (Read) → return e.g. 80 (for 80%). 
+GitHub
+
+Nice-to-have realism
+MAC/vendor feel: captures show OUIs like D0:D9:4F on examples; you can use a static random address but keeping it stable between boots helps the app “remember” the device. (The README shows those example MACs during scans.) 
+GitHub
+
+Probe busy rule: if you also run a local reader during tests, your emulator should reject a second connection—mirrors the real probe’s one-central rule and avoids weird app timeouts. 
+GitHub
+
+If you want a LAN bridge later
+If peripheral spoofing proves tricky, there’s a community-noted UDP 7878 “MeaterLink” channel used by the app/Block on the LAN; people have captured and partially decoded these broadcasts (some say protobufs). A BLE→UDP shim is another way to feed the app ecosystem once you finish that packet format. 
+Home Assistant Community
++2
+GitHub
++2
+
+If you’d like, I can draft a NimBLE-Arduino skeleton that sets up these services/UUIDs, populates the Device Information strings, handles the CCCD write, and emits plausibly-decoded frames at 1 Hz—ready to drop onto an ESP32.
+
+You said:
+meater_app.zip
+Zip Archive
+Here is a zip archive, go through it and find out more about what would be needed by something spoofing, replicating a Meater+ charging block
+ChatGPT said:
+
+Thought for 3m 38s
+Great stash—there’s a LOT in here. I dug through your zip and pulled out exactly what a spoofed “MEATER+-like bridge” would need to present to the official app. Key point first:
+
+The MEATER+ charger itself is only a BLE repeater (no Wi-Fi). What the app speaks on the LAN is MEATER Link. So to “replicate a MEATER+ block” in a way the app will use on your network, you actually want to implement a MEATER Link endpoint (same family of code the app uses for phone-to-phone and Block communication).
+
+Below is a practical build sheet, based entirely on classes in your archive.
+
+1) Transport & discovery (LAN)
+UDP on port 7878 for MEATER Link presence, status, and command traffic (app polls/subscribes and expects frequent beacons).
+• Constants and timing: see data/ProtocolParameters.java (timeouts/periods incl. subscription renewal and scan broadcasts) and data/Config.java (broadcast/metrics intervals).
+• Example intervals you’ll want to mirror:
+
+Wi-Fi broadcast interval ~5,000 ms (MC_BROADCAST_INTERVAL_WIFI).
+
+Subscription renewal broadcasts every 3,000–6,000 ms (WIFI_SUBSCRIPTION_* constants).
+Files: meater_app/data/ProtocolParameters.java, meater_app/data/Config.java.
+
+Address wrapper (handy but optional): udp/MEATERLinkAddress.java shows how they carry host:port.
+
+2) Versioning/identity (MEATER Link “header”)
+You’ll need to put a versioned header in (almost) every message:
+
+Header enums:
+
+Major = MEATER_LINK_MAJOR_LATEST = 17
+
+Minor = MEATER_LINK_MINOR_LATEST = 4
+
+There’s also a special MEATER_LINK_ID = 21578 constant.
+Files: v3protobuf/MeaterLinkMajorVersion.java, v3protobuf/MeaterLinkMinorVersion.java.
+
+Header/message envelope:
+
+v3protobuf/MeaterLinkHeader.java
+
+The top-level envelope is v3protobuf/MeaterLinkMessage.java (it multiplexes all concrete message types).
+
+Device type you should advertise as: a “master” device:
+
+MASTER_TYPE_BLOCK (0) is the classic Block; there are also MASTER_TYPE_BLOCK_V2_2P/_4P.
+
+For an app-style bridge you can also present as MASTER_TYPE_ANDROID/IOS, but Block-like is the safest if you want the app to treat you like a base station.
+Files: v3protobuf/MasterType.java, v3protobuf/MasterSubType.java, v3protobuf/MasterStatus*.java.
+
+3) Status beacons (so the app “sees” you)
+Send periodic MasterStatusMessage beacons with:
+
+deviceID (fixed 64-bit ID you choose), version (string you pick), batteryLevelPercent, type/subType, and optional cloud fields.
+Files: v3protobuf/MasterStatusRequestMessage.java, v3protobuf/MasterStatus.java, v3protobuf/MasterStatusMessage.java.
+
+4) Wi-Fi / network setup (optional but expected API surface)
+The app can ask your bridge for Wi-Fi state and SSID scans:
+
+Messages: NetworkSettingsRequestMessage ⇄ NetworkSettingsMessage, with NetworkSettings carrying connectedToCloud, InternetStatus, IPv4 mask/gw/dns, and SSID list entries (MEATERSSID, MEATERSSIDEncryptionType).
+Files: v3protobuf/NetworkSettings*.java, v3protobuf/MEATERSSID*.java, v3protobuf/InternetStatus.java.
+
+5) The BLE proxy (the heart of the emulator)
+Your “block” must proxy GATT to a real MEATER probe (or simulate one completely). The app will drive this via MEATER Link messages that mirror the BLE lifecycle:
+
+Discovery & scan
+
+Send ProbeAdvertisingMessage frames listing:
+
+name (e.g., “MEATER”),
+
+supportedServices (UUIDs as 16-byte values),
+
+manufacturerData, and RSSI (in the ProbeSimulatorHeader).
+Files: v3protobuf/ProbeAdvertisingMessage.java, v3protobuf/ProbeSimulatorHeader.java.
+
+Connect / disconnect
+
+Handle ProbeConnectionRequestMessage → reply with ProbeConnectedMessage (and later ProbeDisconnectedMessage).
+Files: v3protobuf/ProbeConnectionRequestMessage.java, ProbeConnectedMessage.java, ProbeDisconnectedMessage.java.
+
+Service & characteristic discovery
+
+App sends DiscoverProbeServicesRequestMessage (optionally with desired service UUIDs); you respond with DiscoverProbeServicesResponseMessage.
+
+Then DiscoverServiceCharacteristicsRequestMessage → DiscoverServiceCharacteristicsResponseMessage.
+Files: v3protobuf/DiscoverProbeServices*.java, DiscoverServiceCharacteristics*.java.
+
+Reads, writes, and notifications
+
+ReadValueForCharacteristicRequestMessage → respond with ReadValueForCharacteristicResponseMessage.
+
+WriteValueForCharacteristicRequestMessage → confirm with ProbeCharacteristicValueWriteStatusMessage.
+
+RequestNofifyForCharacteristicMessage (typo is in the class name) → you must start pushing ProbeCharacteristicValueUpdatedMessage whenever the BLE peripheral notifies.
+Files:
+v3protobuf/ReadValueForCharacteristic*.java,
+WriteValueForCharacteristicRequestMessage.java,
+ProbeCharacteristicValueWriteStatusMessage.java,
+RequestNofifyForCharacteristicMessage.java,
+ProbeCharacteristicValueUpdatedMessage.java.
+
+UUIDs are carried as raw 16-byte values (Okio ByteString, class ql.h in these sources). You should keep the standard MEATER probe UUIDs handy when simulating: primary service a75cc7fc-c956-488f-ac2a-2dbc08b63a04, temps characteristic 7edda774-045e-4bbf-909b-45d1991a2876 (notify), battery 2adb4877-68d8-4884-bd3c-d83853bf27b8, plus Device Information service 0x180A (Firmware/Software Revision).
+(These UUIDs aren’t defined verbatim in the v3 protobufs; they’re passed around as bytes inside the discovery/notify messages.)
+
+Temperature history (optional)
+
+The app can request historical samples via TemperatureHistoryRequestMessage → reply TemperatureHistoryResponseMessage.
+Files: v3protobuf/TemperatureHistory*.java.
+
+6) Link/client state & subscriptions
+You’ll see MEATERLinkState and MEATERLinkClientSubscriptionState/Event classes—your emulator should update link state (e.g., MEATER_LINK_STATE_SOCKET_OPEN) and honor client subscriptions (the app subscribes; you stream).
+Files: v3protobuf/MEATERLinkState*.java, MEATERLinkClientSubscription*.java.
+
+7) Minimal runtime flow (what your daemon should actually do)
+Start UDP 7878; begin broadcasting a MeaterLinkMessage wrapping a MasterStatusMessage every ~5s.
+
+On NetworkSettingsRequestMessage, reply with your NetworkSettingsMessage (SSID scan optional).
+
+Begin emitting ProbeAdvertisingMessage for any real probes you see over BLE (or your simulated one).
+
+When the app sends ProbeConnectionRequestMessage, open BLE to the target probe, then reply with ProbeConnectedMessage.
+
+Answer discover services/characteristics requests.
+
+When the app sends RequestNofifyForCharacteristicMessage for the temps characteristic, start proxying BLE notifies as ProbeCharacteristicValueUpdatedMessage at ~1–2 Hz.
+
+Mirror disconnects, errors, and write results with the corresponding response messages.
+
+8) Helpful constants & enums (to copy verbatim)
+MEATER Link versions: major 17, minor 4.
+Files: v3protobuf/MeaterLinkMajorVersion.java, MeaterLinkMinorVersion.java.
+
+Master types: MASTER_TYPE_BLOCK, MASTER_TYPE_BLOCK_V2_2P, MASTER_TYPE_BLOCK_V2_4P, MASTER_TYPE_ANDROID, MASTER_TYPE_IOS.
+File: v3protobuf/MasterType.java.
+
+Link states: MEATER_LINK_STATE_* for socket lifecycle.
+File: v3protobuf/MEATERLinkState.java.
+
+Timing knobs: broadcast/renewal periods, scanning cadence.
+Files: data/Config.java, data/ProtocolParameters.java.
+
+What this gives you in practice
+Implementing the v3 MEATER Link UDP + protobuf bridge exactly like above lets the stock app:
+
+Discover your “block” on the LAN,
+
+Ask it to scan/connect to a probe,
+
+Perform GATT discovery and subscribe to the temperature characteristic,
+
+Receive live temps/history without MEATER Cloud.
+
+If you want, I can stub a tiny message-flow doc (field names + example frames) or a skeleton server outline (Python + protobuf via Square Wire’s .proto equivalents) that maps 1:1 to the classes above.
+
+You said:
+a message flow doc, please
+ChatGPT said:
+
+Thought for 2m 3s
+Got it—here’s a tight, implementation-oriented message-flow doc for a LAN “block/bridge” that the official MEATER app will recognize. It’s based on the classes and enums inside the archive you shared.
+
+0) Wire format & identities
+Transport: UDP on local network (broadcast + unicast).
+
+Envelope: MeaterLinkMessage with a MeaterLinkHeader.
+
+Header versions: Major 17, Minor 4 (also a special ID 21578 value appears alongside the major enum).
+
+Device identity: present as a Master (aka “block/bridge”):
+
+MasterType: MASTER_TYPE_BLOCK (classic) or one of the V2 variants; phone types also exist but block-like is safest.
+
+MasterSubType: choose an appropriate subtype (phone/tablet for app-like, or none for block-like).
+
+Cadence knobs (observed constants):
+
+Status/tick cadence ≈ 2500 ms
+
+Wi-Fi subscription renewal period ≈ 3000 ms
+
+Wi-Fi renewal broadcast ≈ 6000 ms
+
+BLE scan period ≈ 2 s (+ small pauses)
+
+History read timeout ≈ 180 s
+
+1) Discovery / presence
+Goal: make the app “see” your bridge on the LAN.
+
+Bridge starts a UDP socket and begins periodic status beacons:
+
+Send MasterStatusMessage wrapped in MeaterLinkMessage{ header(v17.4), payload=MasterStatusMessage } every ~2.5–5 s.
+
+Include:
+
+deviceId (stable 64-bit),
+
+masterType / masterSubType,
+
+versionString (freeform, e.g., "1.0.0"),
+
+batteryLevelPercent (if applicable),
+
+cloudState / internetStatus if you want to look “complete”.
+
+App replies (or polls) with MasterStatusRequestMessage as needed; keep advertising status at your cadence.
+
+If you want to support network setup pages in the app, implement NetworkSettings RPCs (next section). If not, you can return minimal/no SSIDs and still proceed with probe proxying.
+
+2) Network settings (optional but expected)
+Used by the app’s network screens.
+
+App → Bridge: NetworkSettingsRequestMessage
+
+Bridge → App: NetworkSettingsMessage{ NetworkSettings{ ssids[], encryptionType, connectedToCloud, InternetStatus, ipv4 info } }
+
+You can stub this with a static NetworkSettings response and skip active SSID scans if you don’t need that UI to work.
+
+3) Exposing BLE scan results to the app
+Goal: let the app “see” nearby probes via your bridge.
+
+Bridge emits probe advertising frames periodically:
+
+ProbeAdvertisingMessage{ header: ProbeSimulatorHeader{ rssi, ... }, name: "MEATER", supportedServices: [UUID bytes], manufacturerData }
+
+Repeat at a steady interval while scanning (≈ every few seconds).
+
+The supportedServices list should include the MEATER custom service UUID (16-byte, LE order) when a real/simulated probe is present.
+
+4) Connect lifecycle (proxying BLE)
+Goal: the app tells the bridge to connect to a chosen probe; the bridge becomes a BLE proxy.**
+
+Connect
+
+App → Bridge: ProbeConnectionRequestMessage{ probeId (MAC/addr), transport=BLE }
+
+Bridge opens a BLE connection to the real probe (or your internal simulator).
+
+Bridge → App: ProbeConnectedMessage{ probeId, connectionType=BLE }
+
+Discover services
+
+App → Bridge: DiscoverProbeServicesRequestMessage{ probeId }
+
+Bridge → App: DiscoverProbeServicesResponseMessage{ services: [uuid bytes] }
+
+Discover characteristics (per service)
+
+App → Bridge: DiscoverServiceCharacteristicsRequestMessage{ probeId, serviceUuid }
+
+Bridge → App: DiscoverServiceCharacteristicsResponseMessage{ serviceUuid, characteristics: [uuid bytes, props] }
+
+Enable notifications (temps)
+
+App → Bridge: RequestNofifyForCharacteristicMessage{ probeId, characteristicUuid }
+
+Bridge subscribes to the probe’s GATT notify (or arms your simulator stream).
+
+Streaming updates
+
+Probe notifies → Bridge forwards as:
+
+ProbeCharacteristicValueUpdatedMessage{ probeId, characteristicUuid, value(bytes) } at ~1–2 Hz.
+
+For MEATER temps this is the 8-byte payload used by community readers (internal/ambient fixed-point math); battery is via a separate readable characteristic.
+
+Reads/writes (on demand)
+
+App → Bridge: ReadValueForCharacteristicRequestMessage{ ... }
+
+Bridge → App: ReadValueForCharacteristicResponseMessage{ value }
+
+App → Bridge: WriteValueForCharacteristicRequestMessage{ value }
+
+Bridge → App: ProbeCharacteristicValueWriteStatusMessage{ ok / error }
+
+Disconnect
+
+App → Bridge: (explicit or implicit) disconnect
+
+Bridge → App: ProbeDisconnectedMessage{ reason }
+
+Bridge tears down the BLE link.
+
+5) History (optional)
+If the app requests historical samples:
+
+App → Bridge: TemperatureHistoryRequestMessage{ probeId, range... }
+
+Bridge → App: TemperatureHistoryResponseMessage{ samples[...] }
+
+(You can synthesize this or pass through the probe’s history handle if you implement it.)
+
+6) Client subscriptions & link state
+The app may signal subscription state and you should reflect your internal socket state:
+
+Maintain and expose MEATERLinkState (e.g., socket open/closed).
+
+Respect MEATERLinkClientSubscriptionState/Event: begin/stop streaming probe notifications based on subscription presence (your status/advertising beacons should continue regardless).
+
+7) Minimal “happy-path” sequence (all messages in MeaterLink envelopes)
+Bridge  →  All (UDP bcast/unicast): MasterStatusMessage (every ~2.5–5s)
+App     →  Bridge                 : MasterStatusRequestMessage (optional)
+Bridge  →  App                    : MasterStatusMessage (immediate reply)
+
+Bridge  →  App                    : ProbeAdvertisingMessage (periodic while scanning)
+
+App     →  Bridge                 : ProbeConnectionRequestMessage(probeId)
+Bridge  →  App                    : ProbeConnectedMessage(probeId)
+
+App     →  Bridge                 : DiscoverProbeServicesRequestMessage
+Bridge  →  App                    : DiscoverProbeServicesResponseMessage(services)
+
+App     →  Bridge                 : DiscoverServiceCharacteristicsRequestMessage(serviceUuid)
+Bridge  →  App                    : DiscoverServiceCharacteristicsResponseMessage(chars)
+
+App     →  Bridge                 : RequestNofifyForCharacteristicMessage(tempsChar)
+Bridge  →  App (≈1–2 Hz)          : ProbeCharacteristicValueUpdatedMessage(tempsChar, 8 bytes)
+
+# Optional reads/writes during session
+App     →  Bridge                 : ReadValueForCharacteristicRequestMessage(batteryChar)
+Bridge  →  App                    : ReadValueForCharacteristicResponseMessage(value)
+
+# Optional: history
+App     →  Bridge                 : TemperatureHistoryRequestMessage(...)
+Bridge  →  App                    : TemperatureHistoryResponseMessage(...)
+
+# Disconnect
+App     →  Bridge                 : (close / switch)
+Bridge  →  App                    : ProbeDisconnectedMessage(reason)
+8) Practical notes for implementation
+Header: always include MeaterLinkHeader{ major=17, minor=4 } in your envelope; many handlers branch on these enums.
+
+UUIDs as bytes: service/characteristic UUIDs are carried as 16-byte values in messages (LE layout); your BLE proxy must map these straight through.
+
+Timing: keep the presence/renewal cadences (status ~2.5 s, renewal 3–6 s) so the app’s watchdogs stay green.
+
+Single-connection rule: only one active BLE central per probe; your proxy should own the probe link during the session.
+
+Fallbacks: you can ship without NetworkSettings if you’re not exposing Wi-Fi setup UI; still reply with a minimal NetworkSettingsMessage to avoid UI errors.
+
+If you want, I can turn this into a starter server skeleton (e.g., Python: UDP socket + Square/Wire-compatible protobufs) with stubbed handlers for each message above and a plug-in “BLE backend” interface (real bluez or a simulator) so you can iterate quickly.
