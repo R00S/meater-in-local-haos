@@ -26,12 +26,6 @@ static const uint8_t MEATER_BATTERY_CHAR_UUID[16] = {
     0x84, 0x48, 0xd8, 0x68, 0x77, 0x48, 0xdb, 0x2a
 };
 
-// Third characteristic in MEATER service (READ/WRITE)
-static const uint8_t MEATER_CONFIG_CHAR_UUID[16] = {
-    0xd3, 0x20, 0x61, 0x2f, 0x5c, 0x87, 0x9d, 0x94,
-    0xad, 0x45, 0x57, 0x27, 0xf1, 0x3b, 0x5d, 0x57
-};
-
 // Firmware service (standard BLE service)
 static const uint16_t DEVICE_INFO_SERVICE_UUID = 0x180A;
 static const uint16_t FIRMWARE_CHAR_UUID = 0x2A26;
@@ -47,14 +41,12 @@ class MeaterBLEServer {
   uint16_t service_handle = 0;
   uint16_t temp_char_handle = 0;
   uint16_t battery_char_handle = 0;
-  uint16_t config_char_handle = 0;
   
   uint16_t fw_service_handle = 0;
   uint16_t fw_char_handle = 0;
   
   std::vector<uint8_t> temp_data;
   std::vector<uint8_t> battery_data;
-  std::vector<uint8_t> config_data;
   std::vector<uint8_t> firmware_data;
   
   bool adv_data_set = false;
@@ -77,7 +69,6 @@ class MeaterBLEServer {
     instance = this;
     temp_data.resize(8, 0);
     battery_data.resize(2, 0);
-    config_data.resize(1, 0);  // Single byte for config characteristic
     firmware_data = {'V', '1', '.', '0', '.', '0'};
   }
   
@@ -241,20 +232,6 @@ class MeaterBLEServer {
           } else if (instance->battery_char_handle == 0) {
             instance->battery_char_handle = param->add_char.attr_handle;
             
-            // Add config characteristic (READ/WRITE)
-            esp_bt_uuid_t char_uuid;
-            char_uuid.len = ESP_UUID_LEN_128;
-            memcpy(char_uuid.uuid.uuid128, MEATER_CONFIG_CHAR_UUID, 16);
-            
-            esp_gatt_char_prop_t property = ESP_GATT_CHAR_PROP_BIT_READ | 
-                                            ESP_GATT_CHAR_PROP_BIT_WRITE;
-            esp_gatt_perm_t perm = ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE;
-            
-            esp_ble_gatts_add_char(instance->service_handle, &char_uuid, perm,
-                                  property, nullptr, nullptr);
-          } else if (instance->config_char_handle == 0) {
-            instance->config_char_handle = param->add_char.attr_handle;
-            
             // Create firmware service
             esp_gatt_srvc_id_t service_id;
             service_id.is_primary = true;
@@ -314,9 +291,6 @@ class MeaterBLEServer {
         } else if (param->read.handle == instance->battery_char_handle) {
           rsp.attr_value.len = instance->battery_data.size();
           memcpy(rsp.attr_value.value, instance->battery_data.data(), rsp.attr_value.len);
-        } else if (param->read.handle == instance->config_char_handle) {
-          rsp.attr_value.len = instance->config_data.size();
-          memcpy(rsp.attr_value.value, instance->config_data.data(), rsp.attr_value.len);
         } else if (param->read.handle == instance->fw_char_handle) {
           rsp.attr_value.len = instance->firmware_data.size();
           memcpy(rsp.attr_value.value, instance->firmware_data.data(), rsp.attr_value.len);
@@ -328,17 +302,7 @@ class MeaterBLEServer {
       }
       
       case ESP_GATTS_WRITE_EVT: {
-        ESP_LOGI("meater_ble_server", "GATT_WRITE_EVT, handle %d, len %d", 
-                 param->write.handle, param->write.len);
-        
-        // Handle writes to config characteristic
-        if (param->write.handle == instance->config_char_handle) {
-          if (param->write.len <= instance->config_data.size()) {
-            memcpy(instance->config_data.data(), param->write.value, param->write.len);
-            ESP_LOGI("meater_ble_server", "Config characteristic updated");
-          }
-        }
-        
+        ESP_LOGI("meater_ble_server", "GATT_WRITE_EVT, handle %d", param->write.handle);
         if (param->write.need_rsp) {
           esp_ble_gatts_send_response(gatts_if, param->write.conn_id, param->write.trans_id,
                                       ESP_GATT_OK, nullptr);
