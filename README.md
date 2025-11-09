@@ -363,6 +363,30 @@ If you see repeated warnings like `[MEATER battery level] Cannot poll, not conne
 - Look for "BLE client connected, now initializing BLE server..." message - this confirms successful connection
 - If sensors were working before, see "ESP32 not connecting to MEATER device" section above
 
+### Phone app can't find the ESP32
+
+The MEATER Android app filters BLE scan results by device name based on what the user selects:
+
+**Critical**: Before scanning in the app, you must select the SAME device type that your MEATER Block is advertising as.
+
+**How to pair correctly**:
+
+1. Check what name your MEATER Block uses (look at Home Assistant sensor "MEATER device name" or ESP32 logs)
+2. Open the MEATER Android app
+3. When prompted to select device type:
+   - If your Block is "MEATER+" → Select **"MEATER+"** in the app
+   - If your Block is "MEATER" → Select **"MEATER"** in the app
+   - The names must match exactly
+4. The app will ONLY show devices matching your selection
+5. If the ESP32 doesn't appear, you likely selected the wrong device type
+
+**Why this matters**: The app cannot auto-detect MEATER vs MEATER+ from BLE data, so it pre-filters scan results based on user selection. If you select "MEATER" but your Block advertises as "MEATER+", the ESP32 won't appear in the device list even though it's advertising correctly.
+
+**To verify the ESP32 is advertising**:
+- Use a BLE scanner app (nRF Connect, BLE Scanner) to confirm the ESP32 appears as the correct device name
+- Check ESP32 logs for "Advertising started successfully" message
+- Look for "Device name set to: MEATER+" (or whichever variant you have)
+
 ### Both phone and Home Assistant not working
 - The MEATER might be too far away or have a low battery
 - Check the ESP32 logs for BLE connection issues
