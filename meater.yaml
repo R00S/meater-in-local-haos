@@ -136,12 +136,17 @@ sensor:
     service_uuid: '180A'
     characteristic_uuid: '00002a26-0000-1000-8000-00805f9b34fb'
     lambda: |-
-      // Update firmware text sensor (existing functionality)
+      // Convert to string and log what we received
       std::string data_string(x.begin(), x.end());
+      ESP_LOGI("meater", "Read firmware from MEATER Block: '%s' (length: %d bytes)", data_string.c_str(), x.size());
+      
+      // Update firmware text sensor (existing functionality)
       id(meater_firmware).publish_state(data_string.c_str());
       
       // Forward firmware data to BLE server for phone app
+      // CRITICAL: Android app expects format like "v1.0.5_1" for Block probe #1
       if (id(meater_ble_server_ptr) != nullptr) {
+        ESP_LOGI("meater", "Forwarding firmware '%s' to BLE server for Android app", data_string.c_str());
         ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_firmware_data(x);
       }
       
