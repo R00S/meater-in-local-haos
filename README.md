@@ -21,8 +21,9 @@ This configuration makes the ESP32 do triple duty:
 ### Device Variant Detection
 
 The ESP32 automatically detects which MEATER variant you have:
-- Reads the device name from the MEATER Block (e.g., "MEATER+", "MEATER 2")
-- Advertises itself with the same name so the phone app recognizes the correct model
+- Initially advertises as "MEATER" (generic name) on boot
+- Reads the device name from the MEATER Block once connected (e.g., "MEATER+", "MEATER 2")
+- Updates advertising to use the same name so the phone app recognizes the correct model
 - Works with all MEATER variants: MEATER, MEATER+, MEATER 2, MEATER 2+, etc.
 
 ## How It Works
@@ -37,6 +38,16 @@ ESP32 with this config (advertises as detected variant)
 Home Assistant      Phone App
 (existing sensors)   (connects to ESP32 as if it were the MEATER Block)
 ```
+
+### Initialization Flow
+
+1. **On Boot**: BLE server starts immediately and begins advertising as "MEATER" (default name)
+2. **BLE Client Connection**: ESP32 connects to the real MEATER Block
+3. **Device Detection**: Reads the device name from MEATER Block (e.g., "MEATER+", "MEATER 2")
+4. **Name Update**: Updates BLE server advertising name to match the detected variant
+5. **Data Forwarding**: Continuously forwards temperature, battery, and firmware data to both Home Assistant and connected phone apps
+
+This approach ensures the BLE server is always running and advertising, even before connecting to the real MEATER device.
 
 ## Security & Secrets
 
@@ -54,7 +65,7 @@ This approach ensures that:
 ## Configuration
 
 ### Hardware Required
-- **ESP32-C6 board** (recommended: ESP32-C6-DevKitC-1) - Required for stable operation
+- **ESP32-C6 board** (recommended: ESP32-C6-DevKitC-1) - Required for NimBLE compatibility
 - MEATER Block (WiFi bridge device that connects to MEATER probes)
 
 ### Memory Requirements
@@ -63,20 +74,22 @@ This approach ensures that:
 
 This project requires running both BLE client and BLE server simultaneously along with WiFi and Home Assistant connectivity. The ESP32-C6 is the recommended choice because:
 
-- **More RAM**: 512KB vs 400KB on ESP32-C3
+- **NimBLE stack support**: The BLE server implementation uses NimBLE APIs which are compatible with ESP32-C6
+- **More RAM**: 512KB provides excellent headroom for concurrent BLE client/server and WiFi operations
 - **Better BLE stack**: Improved BLE 5.3 with better coexistence between client/server modes
 - **Stable operation**: Handles concurrent BLE operations without crashes
-- **Flash memory**: 4MB+ is sufficient for all features with room for OTA updates
+- **Flash memory**: 4MB is sufficient for all features with room for OTA updates
+- **Modern chipset**: Latest ESP32 generation with better power efficiency
 
 **Compatible boards**:
-- ✅ **ESP32-C6-DevKitC-1** (4MB flash) - **Recommended** - Best stability and performance
-- ✅ ESP32-DevKitC (4MB+ flash, dual-core) - Also good choice
-- ✅ ESP32-WROOM-32 (4MB+ flash, dual-core) - Also good choice
-- ⚠️ ESP32-C3-DevKitM-1 (4MB flash) - May experience crashes due to limited RAM
+- ✅ **ESP32-C6-DevKitC-1** (4MB flash) - **Recommended** - Best compatibility with NimBLE implementation
+- ✅ ESP32-C3-DevKitM-1 (4MB flash) - Also good choice with NimBLE support
+- ✅ ESP32-DevKitC (4MB+ flash, dual-core) - Works with NimBLE (requires ESP-IDF 4.4+)
+- ✅ ESP32-WROOM-32 (4MB+ flash, dual-core) - Works with NimBLE (requires ESP-IDF 4.4+)
 - ❌ ESP8266 - Not compatible (no BLE support)
 - ❌ Raspberry Pi Pico W - Not compatible (ESPHome requires ESP32/ESP8266)
 
-The ESP32-C6 provides the best balance of cost, power efficiency, and stable operation for this dual-BLE-mode application.
+The ESP32-C6 provides the best balance of cost, compatibility, and stable operation for this dual-BLE-mode application.
 
 ### Finding Your MEATER MAC Address
 
@@ -241,18 +254,37 @@ If you're using the ESPHome integration in Home Assistant, you'll need to manual
 
 ### How Device Variant Detection Works
 
-1. ESP32 connects to the real MEATER device via BLE client
-2. Reads the Device Name characteristic from GAP service (`1800`)
-3. Detects the actual variant name (e.g., "MEATER+", "MEATER 2")
-4. Updates BLE server to advertise with the same device name
-5. Phone app sees the correct MEATER variant and connects successfully
+1. ESP32 boots and initializes BLE server with default "MEATER" name
+2. BLE server begins advertising immediately
+3. ESP32 connects to the real MEATER device via BLE client
+4. Reads the Device Name characteristic from GAP service (`1800`)
+5. Detects the actual variant name (e.g., "MEATER+", "MEATER 2")
+6. Updates BLE server to advertise with the same device name
+7. Phone app sees the correct MEATER variant and connects successfully
+
+### BLE Stack Implementation
+
+This project uses **NimBLE** (Apache Mynewt NimBLE BLE stack) for both client and server operations:
+
+**Why NimBLE?**
+- **ESP32-C6 Requirement**: C6 only supports NimBLE, not the older Bluedroid stack
+- **Unified Stack**: Single BLE stack for both client (connecting to MEATER) and server (emulating MEATER)
+- **Better Performance**: Lower memory footprint and better concurrency handling
+- **Modern**: Active development and better BLE 5.x support
+
+**Key Implementation Details**:
+- Uses random static address (`BLE_OWN_ADDR_RANDOM`) for advertising compatibility
+- Properly tracks CCCD (Client Characteristic Configuration Descriptor) subscriptions
+- Only sends notifications when client has explicitly subscribed via CCCD
+- Event-driven architecture using NimBLE GAP and GATT callbacks
+- Service definitions declared statically for efficient memory usage
 
 ### Files
 
 - `meater.yaml` - Main ESPHome configuration file
 - `secrets.yaml.example` - Template for your secrets file (copy to `secrets.yaml`)
 - `secrets.yaml` - Your personal secrets file (gitignored, not in repo)
-- `includes/meater_ble_server.h` - Custom C++ code for BLE server implementation
+- `includes/meater_ble_server.h` - Custom C++ code for NimBLE BLE server implementation
 
 ## Credits
 
@@ -274,7 +306,7 @@ If you prefer not to manage external files, you can use the ESPHome command line
 
 ### Compilation Error: "cannot execute 'cc1'" with HAOS 2025.11.1
 
-**IMPORTANT**: Home Assistant OS 2025.11.1 (with ESPHome 2025.10.4) has a broken toolchain (14.2.0+20241119) that affects **both ESP-IDF and Arduino frameworks** for ESP32-C3 wireless compilation. This is an environment/platform issue, not a configuration issue.
+**IMPORTANT**: Home Assistant OS 2025.11.1 (with ESPHome 2025.10.4) has a broken toolchain (14.2.0+20241119) that affects **both ESP-IDF and Arduino frameworks** for ESP32-C6 wireless compilation. This is an environment/platform issue, not a configuration issue.
 
 **Error:**
 ```
@@ -301,12 +333,12 @@ CMake Error: The C compiler is not able to compile a simple test program.
 **Current Configuration** (for when toolchain is fixed):
 ```yaml
 esp32:
-  board: esp32-c3-devkitm-1
+  board: esp32-c6-devkitc-1
   framework:
-    type: arduino
+    type: esp-idf
 ```
 
-The Arduino framework is recommended and will work once the toolchain is fixed. It requires no version pinning and is fully compatible with ESP32-C3 BLE functionality.
+The ESP-IDF framework with NimBLE is recommended and will work once the toolchain is fixed. It requires no version pinning and is fully compatible with ESP32-C6 BLE functionality.
 
 ### ESP32 not connecting to MEATER device (Cannot poll, not connected)
 
@@ -395,5 +427,6 @@ The MEATER Android app filters BLE scan results by device name based on what the
 
 ### Compilation errors about BLE functions
 - Make sure you're using `esp-idf` framework (not Arduino) as specified in the configuration
-- The ESP32 board must support BLE (ESP32, ESP32-C3, ESP32-S3 work; ESP8266 does not)
+- The ESP32 board must support BLE (ESP32, ESP32-C3, ESP32-C6, ESP32-S3 work; ESP8266 does not)
+- ESP32-C6 requires NimBLE stack (included in the current implementation)
 - Check that `esp32_ble` is configured with `max_connections: 4` or more

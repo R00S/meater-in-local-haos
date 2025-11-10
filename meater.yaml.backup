@@ -3,31 +3,35 @@ esphome:
   friendly_name: meater
   includes:
     - includes/meater_ble_server.h
+  # BLE server will initialize on boot if NimBLE headers are available
+  # Otherwise it will log a warning and operate in BLE client-only mode
   on_boot:
-    - priority: -10
-      then:
-        - lambda: |-
-            // Initialize BLE server for phone app connectivity
-            if (id(meater_ble_server_ptr) == nullptr) {
-              id(meater_ble_server_ptr) = new MeaterBLEServer();
-              ((MeaterBLEServer*)id(meater_ble_server_ptr))->setup();
-              ((MeaterBLEServer*)id(meater_ble_server_ptr))->start_advertising();
-              ESP_LOGI("main", "BLE server initialized and advertising");
-            }
+    priority: -10
+    then:
+      - lambda: |-
+          if (id(meater_ble_server_ptr) == nullptr) {
+            ESP_LOGI("meater", "Initializing BLE server");
+            static MeaterBLEServer* s = new MeaterBLEServer();
+            s->setup();
+            id(meater_ble_server_ptr) = (void*) s;
+          }
 
 esp32:
   board: esp32-c6-devkitc-1
   framework:
     type: esp-idf
     sdkconfig_options:
+      # ESP32-C6 only supports NimBLE, but ESPHome ble_client needs Bluedroid compatibility
+      # Try to enable both - NimBLE for server, Bluedroid compat for ESPHome components
       CONFIG_BT_ENABLED: y
+      CONFIG_BT_BLUEDROID_ENABLED: y  # Re-enable for ESPHome ble_client compatibility
       CONFIG_BT_NIMBLE_ENABLED: y
       CONFIG_BT_NIMBLE_ROLE_CENTRAL: y
       CONFIG_BT_NIMBLE_ROLE_PERIPHERAL: y
       CONFIG_BT_NIMBLE_MAX_CONNECTIONS: "4"
 
-esp32_ble:
-  max_connections: 4
+# esp32_ble removed - causes Bluedroid conflicts on ESP32-C6
+# NimBLE handles connections automatically with sdkconfig_options
 
 # Enable logging
 logger:
@@ -52,14 +56,8 @@ wifi:
 
 captive_portal:
 
-# Configure BLE tracker for bluetooth_proxy with settings that don't interfere with BLE client
-esp32_ble_tracker:
-  scan_parameters:
-    interval: 1100ms
-    window: 1100ms
-    active: true
-
-bluetooth_proxy:
+# bluetooth_proxy removed - conflicts with NimBLE on ESP32-C6
+# Using custom NimBLE BLE server instead
 
 ble_client:
   - mac_address: !secret meater_mac_address
@@ -87,7 +85,7 @@ sensor:
     accuracy_decimals: 2
     notify: true
     lambda: |-
-      // Forward raw data to BLE server for phone app (server initialized after device name read)
+      // Forward raw data to BLE server for phone app (server initialized on boot)
       if (id(meater_ble_server_ptr) != nullptr) {
         ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_temp_data(x);
       }
@@ -167,15 +165,9 @@ sensor:
       // Update text sensor
       id(meater_device_name_display).publish_state(device_name);
       
-      // Initialize BLE server with device name (only once after name is read)
-      static bool ble_server_initialized = false;
-      if (!ble_server_initialized && id(meater_ble_server_ptr) == nullptr) {
-        ESP_LOGI("meater", "Initializing BLE server with device name: %s", device_name.c_str());
-        static MeaterBLEServer* ble_server = new MeaterBLEServer();
-        ble_server->set_device_name(device_name);  // Set name BEFORE setup
-        ble_server->setup();  // Start advertising with correct name
-        id(meater_ble_server_ptr) = (void*)ble_server;
-        ble_server_initialized = true;
+      // Update BLE server device name if server is already initialized
+      if (id(meater_ble_server_ptr) != nullptr) {
+        ((MeaterBLEServer*)id(meater_ble_server_ptr))->set_device_name(device_name);
       }
       
       return (float)x.size();
