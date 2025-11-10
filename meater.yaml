@@ -7,14 +7,8 @@ esphome:
 esp32:
   board: esp32-c6-devkitc-1
   framework:
-    type: esp-idf
-    sdkconfig_options:
-      # Enable BLE for client only
-      CONFIG_BT_ENABLED: y
-      CONFIG_BT_NIMBLE_ENABLED: y
-      CONFIG_BT_NIMBLE_ROLE_CENTRAL: y
-      CONFIG_BT_NIMBLE_ROLE_PERIPHERAL: n
-      CONFIG_BT_NIMBLE_MAX_CONNECTIONS: "1"
+    type: arduino
+    version: recommended
 
 esp32_ble:
   max_connections: 1
