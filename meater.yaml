@@ -2,33 +2,22 @@ esphome:
   name: meater
   friendly_name: meater
   includes:
-    - includes/meater_ble_server.h
-  on_boot:
-    - priority: -10
-      then:
-        - lambda: |-
-            // Start the BLE server immediately and force it to advertise as a simple MEATER probe.
-            if (id(meater_ble_server_ptr) == nullptr) {
-              id(meater_ble_server_ptr) = new MeaterBLEServer();
-              ((MeaterBLEServer*)id(meater_ble_server_ptr))->set_device_name("MEATER");
-              ((MeaterBLEServer*)id(meater_ble_server_ptr))->setup();
-            }
+    - includes/meater_udp_broadcast.h
 
 esp32:
   board: esp32-c6-devkitc-1
   framework:
     type: esp-idf
     sdkconfig_options:
-      # Disable Bluedroid entirely; C6 runs NimBLE only.
+      # Enable BLE for client only (no peripheral/server role needed)
       CONFIG_BT_BLUEDROID_ENABLED: n
       CONFIG_BT_ENABLED: y
       CONFIG_BT_NIMBLE_ENABLED: y
       CONFIG_BT_NIMBLE_ROLE_CENTRAL: y
-      CONFIG_BT_NIMBLE_ROLE_PERIPHERAL: y
-      CONFIG_BT_NIMBLE_MAX_CONNECTIONS: "4"
+      CONFIG_BT_NIMBLE_ROLE_PERIPHERAL: n
+      CONFIG_BT_NIMBLE_MAX_CONNECTIONS: "1"
 
 esp32_ble:
-  max_connections: 4
 
 # Enable logging
 logger:
@@ -88,9 +77,9 @@ sensor:
     accuracy_decimals: 2
     notify: true
     lambda: |-
-      // Forward raw data to BLE server for phone app (server initialized after device name read)
-      if (id(meater_ble_server_ptr) != nullptr) {
-        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_temp_data(x);
+      // Broadcast raw data via UDP for MEATER app discovery
+      if (id(udp_broadcaster_ptr) != nullptr) {
+        ((MeaterUDPBroadcaster*)id(udp_broadcaster_ptr))->update_temp_data(x);
       }
       
       // Calculate temperature for Home Assistant (existing functionality)
@@ -124,9 +113,9 @@ sensor:
     unit_of_measurement: '%'
     notify: true
     lambda: |-
-      // Forward raw data to BLE server for phone app
-      if (id(meater_ble_server_ptr) != nullptr) {
-        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_battery_data(x);
+      // Broadcast raw data via UDP for MEATER app
+      if (id(udp_broadcaster_ptr) != nullptr) {
+        ((MeaterUDPBroadcaster*)id(udp_broadcaster_ptr))->update_battery_data(x);
       }
       
       // Calculate battery percentage for Home Assistant (existing functionality)
@@ -142,11 +131,6 @@ sensor:
       // Update firmware text sensor (existing functionality)
       std::string data_string(x.begin(), x.end());
       id(meater_firmware).publish_state(data_string.c_str());
-      
-      // Forward firmware data to BLE server for phone app
-      if (id(meater_ble_server_ptr) != nullptr) {
-        ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_firmware_data(x);
-      }
       
       return (float)x.size();
   - platform: ble_client
@@ -168,22 +152,22 @@ sensor:
       // Update text sensor
       id(meater_device_name_display).publish_state(device_name);
       
-      // Initialize BLE server with device name (only once after name is read)
-      static bool ble_server_initialized = false;
-      if (!ble_server_initialized && id(meater_ble_server_ptr) == nullptr) {
-        ESP_LOGI("meater", "Initializing BLE server with device name: %s", device_name.c_str());
-        static MeaterBLEServer* ble_server = new MeaterBLEServer();
-        ble_server->set_device_name(device_name);  // Set name BEFORE setup
-        ble_server->setup();  // Start advertising with correct name
-        id(meater_ble_server_ptr) = (void*)ble_server;
-        ble_server_initialized = true;
+      // Initialize UDP broadcaster with device name (only once after name is read)
+      static bool udp_initialized = false;
+      if (!udp_initialized && id(udp_broadcaster_ptr) == nullptr) {
+        ESP_LOGI("meater", "Initializing UDP broadcaster with device name: %s", device_name.c_str());
+        static MeaterUDPBroadcaster* udp_broadcaster = new MeaterUDPBroadcaster();
+        udp_broadcaster->set_device_name(device_name);
+        udp_broadcaster->setup();
+        id(udp_broadcaster_ptr) = (void*)udp_broadcaster;
+        udp_initialized = true;
       }
       
       return (float)x.size();
 
-# Global variable to store the BLE server instance
+# Global variable to store the UDP broadcaster instance
 globals:
-  - id: meater_ble_server_ptr
+  - id: udp_broadcaster_ptr
     type: void*
     restore_value: no
     initial_value: 'nullptr'
