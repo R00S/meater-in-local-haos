@@ -8,6 +8,7 @@
 #include "lwip/netdb.h"
 #include "esp_wifi.h"
 #include "esp_netif.h"
+#include <errno.h>
 
 // MEATER Link UDP broadcast port (from decompiled app: ProtocolParameters.MEATER_LINK_UDP_PORT)
 #define MEATER_LINK_UDP_PORT 7878
@@ -124,12 +125,21 @@ class MeaterUDPBroadcaster {
                      (struct sockaddr*)&dest_addr, sizeof(dest_addr));
     
     if (sent < 0) {
-      ESP_LOGE("meater_udp", "Failed to send UDP broadcast");
+      ESP_LOGE("meater_udp", "Failed to send UDP broadcast, errno=%d", errno);
     } else {
-      ESP_LOGD("meater_udp", "Broadcast %d bytes to %s:%d", 
+      ESP_LOGI("meater_udp", "Broadcast %d bytes to %s:%d - Device: %s", 
                packet.size(), 
                ::inet_ntoa(dest_addr.sin_addr),
-               MEATER_LINK_UDP_PORT);
+               MEATER_LINK_UDP_PORT,
+               device_name_.c_str());
+      
+      // Log packet contents in hex for debugging
+      char hex_str[256];
+      int offset = 0;
+      for (size_t i = 0; i < packet.size() && i < 50; i++) {
+        offset += snprintf(hex_str + offset, sizeof(hex_str) - offset, "%02X ", packet[i]);
+      }
+      ESP_LOGD("meater_udp", "Packet hex: %s", hex_str);
     }
   }
   

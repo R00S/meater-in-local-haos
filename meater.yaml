@@ -11,6 +11,11 @@ esp32:
 
 # Enable logging
 logger:
+  level: DEBUG
+  logs:
+    esp32_ble_client: INFO
+    ble_sensor: INFO
+    sensor: INFO
 
 # Enable Home Assistant API
 api:
