@@ -4,8 +4,10 @@
 
 #ifdef USE_ESP32
 
-#include <WiFi.h>
-#include <WiFiUdp.h>
+#include "lwip/sockets.h"
+#include "lwip/netdb.h"
+#include "esp_wifi.h"
+#include "esp_netif.h"
 
 // MEATER Link UDP broadcast port (from decompiled app: ProtocolParameters.MEATER_LINK_UDP_PORT)
 #define MEATER_LINK_UDP_PORT 7878
@@ -15,7 +17,7 @@
 class MeaterUDPBroadcaster {
  public:
   MeaterUDPBroadcaster() : 
-    udp_(),
+    udp_socket_(-1),
     device_name_("MEATER"),
     last_broadcast_time_(0),
     broadcast_interval_ms_(1000) {  // Broadcast every 1 second (Config.UDP_BROADCAST_INTERVAL)
@@ -24,16 +26,33 @@ class MeaterUDPBroadcaster {
     battery_data_.resize(2, 0);
   }
   
+  ~MeaterUDPBroadcaster() {
+    if (udp_socket_ >= 0) {
+      close(udp_socket_);
+    }
+  }
+  
   void setup() {
     ESP_LOGI("meater_udp", "Setting up UDP broadcaster on port %d", MEATER_LINK_UDP_PORT);
     ESP_LOGI("meater_udp", "Device name: %s", device_name_.c_str());
     
-    // Start UDP
-    if (udp_.begin(MEATER_LINK_UDP_PORT)) {
-      ESP_LOGI("meater_udp", "UDP broadcaster started successfully");
-    } else {
-      ESP_LOGE("meater_udp", "Failed to start UDP broadcaster");
+    // Create UDP socket
+    udp_socket_ = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
+    if (udp_socket_ < 0) {
+      ESP_LOGE("meater_udp", "Failed to create UDP socket");
+      return;
     }
+    
+    // Enable broadcast
+    int broadcast_enable = 1;
+    if (setsockopt(udp_socket_, SOL_SOCKET, SO_BROADCAST, &broadcast_enable, sizeof(broadcast_enable)) < 0) {
+      ESP_LOGE("meater_udp", "Failed to enable broadcast");
+      close(udp_socket_);
+      udp_socket_ = -1;
+      return;
+    }
+    
+    ESP_LOGI("meater_udp", "UDP broadcaster started successfully");
   }
   
   void update_temp_data(const std::vector<uint8_t>& data) {
@@ -59,14 +78,24 @@ class MeaterUDPBroadcaster {
     }
     last_broadcast_time_ = current_time;
     
-    // Only broadcast if connected to WiFi
-    if (WiFi.status() != WL_CONNECTED) {
+    // Check if socket is valid
+    if (udp_socket_ < 0) {
       return;
     }
     
-    // Get broadcast address
-    IPAddress broadcast_ip = WiFi.localIP();
-    broadcast_ip[3] = 255;  // Simple broadcast to local subnet
+    // Get IP address to check if WiFi is connected
+    esp_netif_t *netif = esp_netif_get_handle_from_ifkey("WIFI_STA_DEF");
+    if (netif == nullptr) {
+      return;
+    }
+    
+    esp_netif_ip_info_t ip_info;
+    if (esp_netif_get_ip_info(netif, &ip_info) != ESP_OK || ip_info.ip.addr == 0) {
+      return;  // Not connected to WiFi
+    }
+    
+    // Calculate broadcast address
+    uint32_t broadcast_addr = ip_info.ip.addr | ~ip_info.netmask.addr;
     
     // Create a simple broadcast packet with raw temperature and battery data
     // Format: Device name (null-terminated) + temp data (8 bytes) + battery data (2 bytes)
@@ -84,17 +113,28 @@ class MeaterUDPBroadcaster {
     // Add raw battery data (2 bytes)
     packet.insert(packet.end(), battery_data_.begin(), battery_data_.end());
     
-    // Broadcast the packet
-    udp_.beginPacket(broadcast_ip, MEATER_LINK_UDP_PORT);
-    udp_.write(packet.data(), packet.size());
-    udp_.endPacket();
+    // Setup broadcast address
+    struct sockaddr_in dest_addr;
+    dest_addr.sin_family = AF_INET;
+    dest_addr.sin_port = htons(MEATER_LINK_UDP_PORT);
+    dest_addr.sin_addr.s_addr = broadcast_addr;
     
-    ESP_LOGD("meater_udp", "Broadcast %d bytes to %s:%d", 
-             packet.size(), broadcast_ip.toString().c_str(), MEATER_LINK_UDP_PORT);
+    // Broadcast the packet
+    int sent = sendto(udp_socket_, packet.data(), packet.size(), 0, 
+                     (struct sockaddr*)&dest_addr, sizeof(dest_addr));
+    
+    if (sent < 0) {
+      ESP_LOGE("meater_udp", "Failed to send UDP broadcast");
+    } else {
+      ESP_LOGD("meater_udp", "Broadcast %d bytes to %s:%d", 
+               packet.size(), 
+               inet_ntoa(dest_addr.sin_addr),
+               MEATER_LINK_UDP_PORT);
+    }
   }
   
  private:
-  WiFiUDP udp_;
+  int udp_socket_;
   std::string device_name_;
   std::vector<uint8_t> temp_data_;
   std::vector<uint8_t> battery_data_;
