@@ -15,6 +15,28 @@
 
 // Simple UDP broadcaster for MEATER Block emulation
 // Based on hints from the problem statement: "UDP 7878 broadcasts from Block contain raw temps"
+//
+// NOTES ON MEATER LINK PROTOCOL (from decompiled app analysis):
+// - Full protocol uses Protocol Buffers (protobuf)
+// - Main message: MeaterLinkMessage (v3protobuf/MeaterLinkMessage.java)
+//   - Contains MeaterLinkHeader (required)
+//   - Contains MasterMessage for Block broadcasts
+// - MasterMessage structure:
+//   - masterType: MASTER_TYPE_BLOCK 
+//   - cloudConnectionState: CLOUD_CONNECTION_STATE_*
+//   - devices: List<MLDevice> (can contain 1-4 probes for MEATER Block)
+// - MLDevice structure:
+//   - identifier: unique device ID (FIXED64)
+//   - probeNumber: 1-4 for MEATER Block
+//   - connectionState: CONNECTION_STATE_*
+//   - connectionType: BLE or WIFI
+//   - chargeState, firmwareRevision, signal levels, etc.
+// - DevicesType: "MEATER Block" (from data/DevicesType.java)
+//
+// Current implementation uses simplified packet format for initial testing:
+//   Device name (null-terminated) + probe_id (1 byte) + temp (8 bytes) + battery (2 bytes)
+//
+// For full MEATER app compatibility, this should be enhanced to use protobuf encoding.
 class MeaterUDPBroadcaster {
  public:
   MeaterUDPBroadcaster() : 
@@ -66,8 +88,11 @@ class MeaterUDPBroadcaster {
   }
   
   void set_device_name(const std::string& name) {
-    device_name_ = name;
-    ESP_LOGI("meater_udp", "Device name set to: %s", device_name_.c_str());
+    // MEATER Block emulation - always use "MEATER Block" regardless of probe name
+    // The decompiled app shows DevicesType.MEATER_BLOCK("MEATER Block", ...)
+    device_name_ = "MEATER Block";
+    ESP_LOGI("meater_udp", "Device name set to: %s (simulating MEATER Block with probe: %s)", 
+             device_name_.c_str(), name.c_str());
   }
   
   void broadcast_data() {
@@ -98,8 +123,10 @@ class MeaterUDPBroadcaster {
     // Calculate broadcast address
     uint32_t broadcast_addr = ip_info.ip.addr | ~ip_info.netmask.addr;
     
-    // Create a simple broadcast packet with raw temperature and battery data
-    // Format: Device name (null-terminated) + temp data (8 bytes) + battery data (2 bytes)
+    // Create a simple broadcast packet with probe ID and raw temperature/battery data
+    // Format: Device name (null-terminated) + probe_id (1 byte) + temp data (8 bytes) + battery data (2 bytes)
+    // Note: Full MEATER Link protocol uses protobuf (MeaterLinkMessage with MasterMessage)
+    //       This is a simplified format for initial testing
     std::vector<uint8_t> packet;
     
     // Add device name
@@ -107,6 +134,9 @@ class MeaterUDPBroadcaster {
       packet.push_back(c);
     }
     packet.push_back(0);  // Null terminator
+    
+    // Add probe ID (1-4 for MEATER Block, we're simulating probe #1)
+    packet.push_back(1);  // Probe number 1
     
     // Add raw temperature data (8 bytes)
     packet.insert(packet.end(), temp_data_.begin(), temp_data_.end());
@@ -127,7 +157,7 @@ class MeaterUDPBroadcaster {
     if (sent < 0) {
       ESP_LOGE("meater_udp", "Failed to send UDP broadcast, errno=%d", errno);
     } else {
-      ESP_LOGI("meater_udp", "Broadcast %d bytes to %s:%d - Device: %s", 
+      ESP_LOGI("meater_udp", "Broadcast %d bytes to %s:%d - Device: %s, Probe: #1", 
                packet.size(), 
                ::inet_ntoa(dest_addr.sin_addr),
                MEATER_LINK_UDP_PORT,
