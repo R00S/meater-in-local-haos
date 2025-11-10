@@ -28,7 +28,7 @@ class MeaterUDPBroadcaster {
   
   ~MeaterUDPBroadcaster() {
     if (udp_socket_ >= 0) {
-      close(udp_socket_);
+      ::close(udp_socket_);
     }
   }
   
@@ -37,7 +37,7 @@ class MeaterUDPBroadcaster {
     ESP_LOGI("meater_udp", "Device name: %s", device_name_.c_str());
     
     // Create UDP socket
-    udp_socket_ = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
+    udp_socket_ = ::socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
     if (udp_socket_ < 0) {
       ESP_LOGE("meater_udp", "Failed to create UDP socket");
       return;
@@ -45,9 +45,9 @@ class MeaterUDPBroadcaster {
     
     // Enable broadcast
     int broadcast_enable = 1;
-    if (setsockopt(udp_socket_, SOL_SOCKET, SO_BROADCAST, &broadcast_enable, sizeof(broadcast_enable)) < 0) {
+    if (::setsockopt(udp_socket_, SOL_SOCKET, SO_BROADCAST, &broadcast_enable, sizeof(broadcast_enable)) < 0) {
       ESP_LOGE("meater_udp", "Failed to enable broadcast");
-      close(udp_socket_);
+      ::close(udp_socket_);
       udp_socket_ = -1;
       return;
     }
@@ -116,11 +116,11 @@ class MeaterUDPBroadcaster {
     // Setup broadcast address
     struct sockaddr_in dest_addr;
     dest_addr.sin_family = AF_INET;
-    dest_addr.sin_port = htons(MEATER_LINK_UDP_PORT);
+    dest_addr.sin_port = ::htons(MEATER_LINK_UDP_PORT);
     dest_addr.sin_addr.s_addr = broadcast_addr;
     
     // Broadcast the packet
-    int sent = sendto(udp_socket_, packet.data(), packet.size(), 0, 
+    int sent = ::sendto(udp_socket_, packet.data(), packet.size(), 0, 
                      (struct sockaddr*)&dest_addr, sizeof(dest_addr));
     
     if (sent < 0) {
@@ -128,7 +128,7 @@ class MeaterUDPBroadcaster {
     } else {
       ESP_LOGD("meater_udp", "Broadcast %d bytes to %s:%d", 
                packet.size(), 
-               inet_ntoa(dest_addr.sin_addr),
+               ::inet_ntoa(dest_addr.sin_addr),
                MEATER_LINK_UDP_PORT);
     }
   }
