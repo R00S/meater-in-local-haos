@@ -9,15 +9,15 @@ esp32:
   framework:
     type: esp-idf
     sdkconfig_options:
-      # Enable BLE - bluetooth_proxy requires peripheral role
+      # Enable BLE for client only
       CONFIG_BT_ENABLED: y
       CONFIG_BT_NIMBLE_ENABLED: y
       CONFIG_BT_NIMBLE_ROLE_CENTRAL: y
-      CONFIG_BT_NIMBLE_ROLE_PERIPHERAL: y
-      CONFIG_BT_NIMBLE_MAX_CONNECTIONS: "4"
+      CONFIG_BT_NIMBLE_ROLE_PERIPHERAL: n
+      CONFIG_BT_NIMBLE_MAX_CONNECTIONS: "1"
 
 esp32_ble:
-  max_connections: 4
+  max_connections: 1
 
 # Enable logging
 logger:
@@ -41,15 +41,6 @@ wifi:
     password: !secret fallback_ap_password
 
 captive_portal:
-
-# Configure BLE tracker for bluetooth_proxy with settings that don't interfere with BLE client
-esp32_ble_tracker:
-  scan_parameters:
-    interval: 1100ms
-    window: 1100ms
-    active: true
-
-bluetooth_proxy:
 
 ble_client:
   - mac_address: !secret meater_mac_address
