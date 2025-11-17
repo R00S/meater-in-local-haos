@@ -8,7 +8,6 @@
 #include "lwip/netdb.h"
 #include "esp_wifi.h"
 #include "esp_netif.h"
-#include "esp_efuse.h"
 #include <errno.h>
 #include <fcntl.h>
 
@@ -207,7 +206,7 @@ class MeaterUDPBroadcaster {
   // Generate 16-byte device ID from ESP32 MAC address
   void generate_device_id() {
     uint8_t mac[6];
-    esp_err_t ret = esp_efuse_mac_get_default(mac);
+    esp_err_t ret = esp_wifi_get_mac(WIFI_IF_STA, mac);
     
     if (ret != ESP_OK) {
       ESP_LOGW("meater_udp", "Failed to get MAC address, using default device ID");
