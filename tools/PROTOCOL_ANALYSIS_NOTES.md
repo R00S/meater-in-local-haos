@@ -3,9 +3,24 @@
 ## Purpose
 This document contains line-by-line analysis of the decompiled MEATER app code to understand the EXACT protocol format used for device discovery. This serves as reference to prevent implementation errors.
 
+## ✅ IMPLEMENTATION FIXED (2024-11-17)
+
+The ESP32 implementation in `includes/meater_udp_broadcast.h` has been corrected to match the actual protocol from the decompiled Java code. Key fixes:
+
+1. **MeaterLinkHeader**: Uses meaterLinkIdentifier=21578 (NOT timestamp), versionMajor=2, versionMinor=1
+2. **Device ID**: Changed from 16 bytes to 8 bytes (FIXED64)
+3. **Message Structure**: Uses Field 3 (MasterMessage) instead of Field 2
+4. **Removed**: username, device_model, app_version strings (not part of discovery protocol)
+5. **Added**: Proper MLDevice → MLBlock nested structure with ChargeState
+
+See git commit: `Fix MEATER Link protocol structure to match decompiled app`
+
 ## Critical Finding: Field 2 vs Field 3
 
 ### Network Capture Evidence (Ground Truth)
+**NOTE: This section contains INCORRECT analysis. The app does NOT use Field 2 as shown below.**
+**The correct structure uses Field 3 (MasterMessage). See "Corrected Implementation" section.**
+
 From original tcpdump in problem statement:
 ```
 MEATER app broadcasts (192.168.1.217):
@@ -181,27 +196,77 @@ MeaterLinkMessage {
 ```
 
 ### ❌ MISTAKE 3: Wrong Device ID Format
-```cpp
-// WRONG - Using uint64_t (8 bytes):
-uint64_t device_id = 0x12345678;
+**NOTE: This section is OBSOLETE. See "Corrected Implementation" section below.**
 
-// CORRECT - Using 16-byte array:
-uint8_t device_id[16] = {
-  0x4c, 0x0b, 0x82, 0x35, 0x23, 0xa3, 0x98, 0xea,
-  0x38, 0x6c, 0xa8, 0x5e, 0xd2, 0x48, 0x6d, 0x44
-};
+The original analysis was incorrect about device ID size. According to the actual Java code:
+- MeaterLinkHeader.deviceID is FIXED64 (8 bytes), not 16 bytes
+- MLDevice.identifier is also FIXED64 (8 bytes)
+
+## ✅ Corrected Implementation (2024-11-17)
+
+### Correct Protocol Structure
+
+```protobuf
+MeaterLinkMessage {
+  header: MeaterLinkHeader {               // Field 1 (REQUIRED)
+    meaterLinkIdentifier: 21578            // UINT32, NOT timestamp!
+    versionMajor: 2                        // UINT32
+    versionMinor: 1                        // UINT32
+    messageNumber: <sequence>              // UINT32
+    deviceID: <MAC-derived 8 bytes>        // FIXED64
+  }
+  masterMessage: MasterMessage {           // Field 3 (NOT Field 2!)
+    masterType: MASTER_TYPE_BLOCK          // enum = 0
+    cloudConnectionState: CLOUD_CONNECTION_STATE_DISABLED  // enum = 0
+    devices: [                             // repeated MLDevice
+      MLDevice {
+        block: MLBlock {                   // Field 3 (optional)
+          ambientTemperature: <temp*16>    // SINT32 (ZigZag encoded)
+          macAddress: <8 bytes>            // FIXED64
+        }
+        identifier: <8 bytes>              // Field 5 (FIXED64, REQUIRED)
+        probeNumber: 0                     // Field 6 (UINT32, REQUIRED)
+        chargeState: ChargeState {         // Field 7 (REQUIRED)
+          chargingStatus: NOT_CHARGING     // enum = 2
+          batteryLevelPercent: <0-100>     // UINT32
+          batteryMinutesRemaining: 0       // UINT32
+        }
+        firmwareRevision: "v1.0.0"         // Field 8 (string, optional)
+        connectionState: CONNECTION_STATE_CONNECTED  // Field 9 (enum = 1)
+        connectionType: BLE                // Field 10 (enum = 0)
+        bleSignalLevel: <-50>              // Field 11 (SINT32, ZigZag)
+      }
+    ]
+  }
+}
 ```
 
-## Implementation Checklist
+### Implementation Checklist
 
-Before making any code changes, verify:
+Updated checklist for correct implementation:
 
-- [ ] Field 2 is used for MLDevice (not Field 3)
-- [ ] MLDevice is flat structure (not nested in MasterMessage)
-- [ ] device_id is 16 bytes (not 8 bytes)
-- [ ] connection_state = 2 (CONNECTED)
-- [ ] Packet size approximately 79 bytes (not 104 bytes)
-- [ ] Fields 3-6 are simple strings (username, device_model, app_version, unknown)
+- [x] meaterLinkIdentifier = 21578 (NOT timestamp!)
+- [x] versionMajor = 2, versionMinor = 1 (NOT version=7)
+- [x] deviceID is FIXED64 (8 bytes, NOT 16 bytes)
+- [x] Uses Field 3 (MasterMessage, NOT Field 2)
+- [x] MasterMessage contains MLDevice array
+- [x] MLDevice includes MLBlock with temperatures
+- [x] ChargeState has 3 required fields
+- [x] connectionState = 1 (CONNECTED, NOT 2)
+- [x] No username/device_model/app_version strings
+
+### ESP32 Implementation
+
+See `includes/meater_udp_broadcast.h` for the corrected C++ implementation.
+
+Key changes:
+1. Fixed header constants (21578, 2, 1)
+2. Changed device_id from `uint8_t[16]` to `uint64_t` (8 bytes)
+3. Switched from Field 2 to Field 3 (MasterMessage)
+4. Added proper MLBlock nested structure
+5. Added ChargeState message with 3 required fields
+6. Added SINT32 ZigZag encoding for signed temperatures
+7. Removed incorrect string fields
 
 ## References
 
