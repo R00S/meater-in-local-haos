@@ -33,7 +33,7 @@ Where:
 - `XX XX XX XX XX XX XX XX` = 8 bytes temperature data
 - `YY YY` = 2 bytes battery data
 
-## New Format (Protobuf 79-byte packet)
+## New Format (Protobuf MeaterLinkMessage with MasterMessage)
 
 ### MEATER App Broadcast Example (from tcpdump)
 
@@ -49,7 +49,41 @@ Source: 192.168.1.217:7878 → 192.168.1.255:7878
 32 02 31 34
 ```
 
-### Protobuf Field Breakdown
+### Correct Protocol Structure
+
+**MeaterLinkMessage Structure:**
+```
+Field 1: MeaterLinkHeader (nested message)
+Field 2: SubscriptionMessage (app → block) - not in broadcasts
+Field 3: MasterMessage (block → app) - THIS IS WHAT BLOCKS SEND
+Field 4: SetupMessage (app → block) - cook configuration
+Field 5-15: Other message types
+```
+
+**MasterMessage Structure (Field 3):**
+```
+Field 1: masterType (varint) - MASTER_TYPE_BLOCK = 0
+Field 2: cloudConnectionState (varint) - CLOUD_CONNECTION_STATE_DISABLED = 0
+Field 3: devices (repeated MLDevice) - array of connected devices
+```
+
+**MLDevice Structure:**
+```
+Field 1: probe (MLProbe nested message)
+  Field 1: parentIdentifier (fixed64) - device ID
+  Field 3: setup (CookSetup nested message)
+  Field 4: status (CookStatus nested message)
+Field 5: identifier (fixed64) - device ID
+Field 6: probeNumber (uint32) - 0-3 for block probes
+Field 7: chargeState (ChargeState nested message)
+Field 8: firmwareRevision (string) - "v1.0.6_0"
+Field 9: connectionState (varint) - CONNECTION_STATE_CONNECTED = 1
+Field 10: connectionType (varint) - BLE = 0
+Field 11: bleSignalLevel (sint32) - RSSI value
+Field 12: wifiSignalLevel (sint32) - optional
+```
+
+### Protobuf Field Breakdown (Corrected)
 
 #### Field 1 (0a 13): MeaterLinkHeader - 19 bytes
 ```
@@ -62,42 +96,46 @@ Source: 192.168.1.217:7878 → 192.168.1.255:7878
   29 47 d8 71 93 39 ac 16 6e  = Field 5 (fixed64): unknown2 = 0x47d87193396eac16
 ```
 
-#### Field 2 (12 38): MLDevice - 56 bytes
+#### Field 2 (12 38): This is actually Field 3 MasterMessage - 56 bytes
+**NOTE:** The captured packet appears to be a simplified discovery broadcast,
+not the full MasterMessage structure. A proper Block would send:
 ```
-12          = Field 2, wire type 2 (length-delimited)
-38          = Length: 56 bytes
-  0a 10     = Field 1, wire type 2, length 16
-    4c 0b 82 35 23 a3 98 ea 38 6c a8 5e d2 48 6d 44  = device_id (16 bytes)
-  10 02     = Field 2 (varint): connection_state = 2 (connected)
-  [Additional fields: temperature, battery, signal strength, etc.]
-```
-
-#### Field 3 (1a 0c): Username - 12 bytes
-```
-1a          = Field 3, wire type 2 (length-delimited)
-0c          = Length: 12 bytes
-  72 6f 6f 73 40 72 6f 6f 73 2e 74 63  = "roos@roos.tc"
+Field 3: MasterMessage (length-delimited) {
+  Field 1: masterType = 0 (MASTER_TYPE_BLOCK)
+  Field 2: cloudConnectionState = 0 (DISABLED)
+  Field 3: devices (repeated) {
+    MLDevice nested message with all probe data
+  }
+}
 ```
 
-#### Field 4 (22 09): Device Model - 9 bytes
-```
-22          = Field 4, wire type 2 (length-delimited)
-09          = Length: 9 bytes
-  54 43 4c 20 54 37 30 32 44  = "TCL T702D"
-```
+### What Our Implementation Sends
 
-#### Field 5 (2a 05): App Version - 5 bytes
+We now send proper MeaterLinkMessage with nested MasterMessage:
 ```
-2a          = Field 5, wire type 2 (length-delimited)
-05          = Length: 5 bytes
-  34 2e 36 2e 33  = "4.6.3"
-```
-
-#### Field 6 (32 02): Unknown Field - 2 bytes
-```
-32          = Field 6, wire type 2 (length-delimited)
-02          = Length: 2 bytes
-  31 34  = "14"
+MeaterLinkMessage {
+  Field 1: MeaterLinkHeader {...}
+  Field 3: MasterMessage {
+    masterType: MASTER_TYPE_BLOCK (0)
+    cloudConnectionState: CLOUD_CONNECTION_STATE_DISABLED (0)
+    devices: [
+      MLDevice {
+        probe: MLProbe {
+          parentIdentifier: device_id
+          setup: CookSetup {...}
+          status: CookStatus {temps, battery, ...}
+        }
+        identifier: device_id
+        probeNumber: 0
+        chargeState: ChargeState {...}
+        connectionState: CONNECTED (1)
+        connectionType: BLE (0)
+        bleSignalLevel: -50
+        firmwareRevision: "v1.0.6_0"
+      }
+    ]
+  }
+}
 ```
 
 ## Protobuf Wire Types
