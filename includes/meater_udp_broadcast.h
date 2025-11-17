@@ -189,6 +189,11 @@ class MeaterUDPBroadcaster {
       return;
     }
     
+    // Don't broadcast until we have temp data from probe
+    if (temp_data_.empty() || temp_data_.size() < 8) {
+      return;  // Silently skip - will broadcast once temp data arrives
+    }
+    
     // Get IP address to check if WiFi is connected
     esp_netif_t *netif = esp_netif_get_handle_from_ifkey("WIFI_STA_DEF");
     if (netif == nullptr) {
