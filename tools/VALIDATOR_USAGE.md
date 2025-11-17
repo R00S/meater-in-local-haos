@@ -4,6 +4,8 @@
 
 `tools/validate_protocol.py` is a generic Java ProtoAdapter code interpreter that validates protobuf packets against the decompiled MEATER app code.
 
+**🚀 New to testing implementations?** See **[TESTING_NEW_IMPLEMENTATIONS.md](TESTING_NEW_IMPLEMENTATIONS.md)** for a complete step-by-step guide.
+
 **Key Features:**
 - Makes NO assumptions about the protocol
 - Interprets Java code dynamically
