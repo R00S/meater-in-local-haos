@@ -413,53 +413,50 @@ class MeaterUDPBroadcaster {
     bool has_probe_data = !temp_data_.empty() && temp_data_.size() >= 8;
     
     if (has_probe_data) {
-      // WITH probe data: Fields start at 1
+      // WITH probe data: Include probe data as field 1
       std::vector<uint8_t> probe_data;
-      // Include the raw 8 bytes from BLE temp characteristic
       probe_data.insert(probe_data.end(), temp_data_.begin(), temp_data_.begin() + 8);
-      // Add battery data (2 bytes) or pad with zeros
       if (!battery_data_.empty() && battery_data_.size() >= 2) {
         probe_data.insert(probe_data.end(), battery_data_.begin(), battery_data_.begin() + 2);
       } else {
         probe_data.push_back(0x00);
         probe_data.push_back(0x00);
       }
-      // Pad to 16 bytes total
       while (probe_data.size() < 16) {
         probe_data.push_back(0x00);
       }
       encode_length_delimited(subscription_msg, 1, probe_data.data(), probe_data.size());
       
-      // Field 2: status = 2
-      encode_varint_field(subscription_msg, 2, 2);
+      // Field 2: status = 2 (connected)
+      encode_varint_field(subscription_msg, 2, 2);  // NOT 0!
       
-      // Field 3: username string
-      encode_string(subscription_msg, 3, "meater@esp32.local");
+      // Field 3: username string (empty for MEATER Block)
+      encode_string(subscription_msg, 3, "");
       
       // Field 4: device_model string
-      encode_string(subscription_msg, 4, "ESP32-C3");
+      encode_string(subscription_msg, 4, "MEATER Block");
       
       // Field 5: app_version string
-      encode_string(subscription_msg, 5, "4.6.3");
+      encode_string(subscription_msg, 5, "1.0.0");
       
       // Field 6: unknown field string
-      encode_string(subscription_msg, 6, "14");
+      encode_string(subscription_msg, 6, "1");
     } else {
-      // WITHOUT probe data: Fields start at 1 (no probe data field shifts everything down)
-      // Field 1: status = 2
-      encode_varint_field(subscription_msg, 1, 2);
+      // WITHOUT probe data: NO device_id field, start directly with status
+      // Field 2: status = 2 (connected, but no active probe)
+      encode_varint_field(subscription_msg, 2, 2);
       
-      // Field 2: username string (was field 3 when probe data present)
-      encode_string(subscription_msg, 2, "meater@esp32.local");
+      // Field 3: username string (empty for Block)
+      encode_string(subscription_msg, 3, "");
       
-      // Field 3: device_model string (was field 4)
-      encode_string(subscription_msg, 3, "ESP32-C3");
+      // Field 4: device_model string  
+      encode_string(subscription_msg, 4, "MEATER Block");
       
-      // Field 4: app_version string (was field 5)
-      encode_string(subscription_msg, 4, "4.6.3");
+      // Field 5: app_version string
+      encode_string(subscription_msg, 5, "1.0.0");
       
-      // Field 5: unknown field string (was field 6)
-      encode_string(subscription_msg, 5, "14");
+      // Field 6: unknown field string
+      encode_string(subscription_msg, 6, "1");
     }
     
     // Encode the entire SubscriptionMessage as Field 2 of the main packet
