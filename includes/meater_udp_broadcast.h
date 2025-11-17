@@ -16,10 +16,12 @@ class MeaterUDPBroadcast {
  public:
   static MeaterUDPBroadcast* instance;
   
+  // UDP socket and state
   WiFiUDP udp;
   uint32_t sequence_number;
   uint16_t udp_port;
   IPAddress broadcast_address;
+  bool udp_initialized;
   
   // Temperature and battery data
   std::vector<uint8_t> temp_data;
@@ -45,6 +47,7 @@ class MeaterUDPBroadcast {
   MeaterUDPBroadcast() :
     sequence_number(0),
     udp_port(7878),
+    udp_initialized(false),
     tip_temp_celsius(0.0f),
     ambient_temp_celsius(0.0f),
     battery_percent(0),
@@ -71,7 +74,17 @@ class MeaterUDPBroadcast {
   }
   
   void setup() {
-    ESP_LOGI("meater_udp", "Setting up MEATER UDP broadcast on port %d", udp_port);
+    ESP_LOGI("meater_udp", "MEATER UDP broadcast initialized");
+    instance = this;
+  }
+  
+  void initialize_udp() {
+    // This is called from loop() once WiFi is connected
+    if (udp_initialized || WiFi.status() != WL_CONNECTED) {
+      return;
+    }
+    
+    ESP_LOGI("meater_udp", "Starting UDP on port %d", udp_port);
     
     // Get broadcast address from current WiFi connection
     IPAddress ip = WiFi.localIP();
@@ -83,17 +96,26 @@ class MeaterUDPBroadcast {
       ip[3] | (~subnet[3])
     );
     
+    ESP_LOGI("meater_udp", "Local IP: %s", ip.toString().c_str());
     ESP_LOGI("meater_udp", "Broadcast address: %s", broadcast_address.toString().c_str());
     
     // Start UDP listener
     if (udp.begin(udp_port)) {
       ESP_LOGI("meater_udp", "UDP listener started on port %d", udp_port);
+      udp_initialized = true;
     } else {
       ESP_LOGE("meater_udp", "Failed to start UDP listener");
     }
   }
   
   void loop() {
+    // Initialize UDP once WiFi is connected
+    initialize_udp();
+    
+    if (!udp_initialized) {
+      return;  // Wait for WiFi to connect
+    }
+    
     // Check for incoming UDP packets
     int packet_size = udp.parsePacket();
     if (packet_size) {

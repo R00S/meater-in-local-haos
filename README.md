@@ -232,11 +232,15 @@ If you're using the ESPHome integration in Home Assistant, you'll need to manual
 - ✅ BLE server that advertises as a MEATER device
 - ✅ **Automatic MEATER variant detection** (MEATER, MEATER+, MEATER 2, MEATER 2+, etc.)
 - ✅ **Dynamic device name** - advertises with the same name as the real device
-- ✅ Forwards temperature data to connected phone apps
-- ✅ Forwards battery data to connected phone apps
-- ✅ Forwards firmware version to connected phone apps
+- ✅ Forwards temperature data to connected phone apps via BLE
+- ✅ Forwards battery data to connected phone apps via BLE
+- ✅ Forwards firmware version to connected phone apps via BLE
 - ✅ Supports phone app connections while maintaining Home Assistant integration
 - ✅ MEATER device name sensor showing detected variant
+- ✅ **UDP broadcast support** - broadcasts MEATER Link protocol packets
+- ✅ **Bidirectional UDP communication** - listens for MEATER app broadcasts on port 7878
+- ✅ **Protobuf-encoded packets** - matches MEATER app format for multi-device features
+
 
 ## Technical Details
 
@@ -279,12 +283,57 @@ This project uses **NimBLE** (Apache Mynewt NimBLE BLE stack) for both client an
 - Event-driven architecture using NimBLE GAP and GATT callbacks
 - Service definitions declared statically for efficient memory usage
 
+### UDP Broadcast (MEATER Link Protocol)
+
+The ESP32 implements the **MEATER Link protocol** for multi-device communication:
+
+**Protocol Details**:
+- **Port**: UDP 7878 (bidirectional)
+- **Format**: Protobuf-encoded messages (79 bytes typical)
+- **Broadcast Interval**: 5 seconds
+- **Broadcast Address**: Automatically detected from WiFi subnet
+
+**Message Structure** (based on network capture analysis):
+- **Field 1**: MeaterLinkHeader - timestamp, sequence number, protocol version
+- **Field 2**: MLDevice - device ID, connection state, temperature, battery
+- **Field 3**: Username/account identifier
+- **Field 4**: Device model
+- **Field 5**: App version
+- **Field 6**: Additional metadata
+
+**Features**:
+- Listens for incoming MEATER app broadcasts
+- Logs all received UDP packets for debugging
+- Sends periodic status broadcasts
+- Automatic WiFi connection handling
+- Device ID generated from ESP32 MAC address
+
+**Configuration** (optional, in `secrets.yaml`):
+```yaml
+udp_username: "your-email@domain.com"
+udp_device_model: "ESP32-C6"
+udp_app_version: "4.6.3"
+```
+
+If not specified, defaults are used:
+- Username: `meater@esp32.local`
+- Device Model: `ESP32-C6`
+- App Version: `4.6.3`
+
+**Use Cases**:
+- MEATER Link multi-device features
+- Network-based probe discovery
+- App-to-app communication
+- Future integration with MEATER cloud services
+
 ### Files
 
 - `meater.yaml` - Main ESPHome configuration file
 - `secrets.yaml.example` - Template for your secrets file (copy to `secrets.yaml`)
 - `secrets.yaml` - Your personal secrets file (gitignored, not in repo)
 - `includes/meater_ble_server.h` - Custom C++ code for NimBLE BLE server implementation
+- `includes/meater_udp_broadcast.h` - Custom C++ code for UDP broadcast and MEATER Link protocol
+- `meater_link.proto` - Protocol buffer definitions for MEATER Link messages (documentation)
 
 ## Credits
 
