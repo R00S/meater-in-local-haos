@@ -17,35 +17,37 @@
 // MEATER Block UDP broadcaster and listener with protobuf wire format encoding
 // Based on actual network packet captures and decompiled app analysis
 //
-// Protocol Details (CORRECTED based on packet captures):
+// Protocol Details (CORRECTED based on Java protobuf code analysis):
 // - Uses Protocol Buffers (protobuf) wire format encoding
 // - Broadcasts on UDP port 7878
 // - Listens for incoming packets on same port (bidirectional)
 //
-// Correct Message Structure (from actual MEATER app broadcasts):
+// Correct Message Structure (from meater_app/v3protobuf/*.java):
 //   Field 1: MeaterLinkHeader (REQUIRED)
-//     - meaterLinkIdentifier: 21578 (UINT32, from MeaterLinkHeader.java DEFAULT)
-//     - versionMajor: 17 (UINT32, from network captures)
-//     - versionMinor: 7 (UINT32, from network captures)
+//     - meaterLinkIdentifier: 21578 (UINT32, from MeaterLinkHeader.java)
+//     - versionMajor: 17 (UINT32)
+//     - versionMinor: 7 (UINT32)
 //     - messageNumber: sequence counter (UINT32)
 //     - deviceID: FIXED64 (8 bytes, from ESP32 MAC)
 //
-//   Field 2: SubscriptionMessage (ALL sub-fields nested inside!)
-//     - Field 1: ProbeData (length-delimited, 16 bytes) - OPTIONAL when probe active
-//       → 8 bytes: temperature data (from BLE characteristic 7EDDA774-045E-4BBF-909B-45D1991A2876)
-//       → 2 bytes: battery data (from BLE characteristic 2ADB4877-68D8-4884-BD3C-D83853BF27B8)
-//       → 6 bytes: additional probe state/padding
-//     - Field 2: connection_state (UINT32, value 2 = connected)
-//     - Field 3: username (string, e.g. "meater@esp32.local")
-//     - Field 4: device_model (string, e.g. "ESP32-C3")
-//     - Field 5: app_version (string, e.g. "4.6.3")
-//     - Field 6: unknown (string, e.g. "14")
+//   Field 3: MasterMessage (MEATER Block → App, THIS IS THE KEY!)
+//     - Field 1: masterType = 0 (MASTER_TYPE_BLOCK)
+//     - Field 2: cloudConnectionState = 0 (CLOUD_CONNECTION_STATE_DISABLED)
+//     - Field 3: devices (repeated MLDevice)
+//       → MLDevice:
+//         - Field 2: plus (MLPlus) - for MEATER+ probe
+//           → Field 1: childProbe (MLChildDevice with identifier and probeNumber)
+//           → Field 2: probeChargingState (ChargeState with battery info)
+//           → Field 3: ambientTemperature (SINT32)
+//         - Field 5: identifier (FIXED64) - device ID
+//         - Field 6: probeNumber (UINT32) - 0-3
+//         - Field 7: chargeState (ChargeState)
+//         - Field 9: connectionState = 1 (CONNECTION_STATE_CONNECTED)
+//         - Field 10: connectionType = 0 (BLE)
 //
-// CRITICAL: All strings and probe data are SUB-FIELDS of Field 2 (SubscriptionMessage),
-//           NOT separate top-level fields! This is why Field 2 is 38-56 bytes.
-//
-// Note: Actual captures show Field 2 is used (NOT Field 3/MasterMessage)
-//       despite Java protobuf classes suggesting MasterMessage structure.
+// NOTE: Field 2 (SubscriptionMessage) is app → block subscriptions
+//       Field 3 (MasterMessage) is block → app device broadcasts
+//       This implementation sends Field 3 to emulate a MEATER Block!
 //
 // Protobuf wire types:
 // - 0: Varint (int32, int64, uint32, uint64, bool, enum)
@@ -389,8 +391,7 @@ class MeaterUDPBroadcaster {
   }
   
   // Build complete protobuf packet following MEATER Link protocol
-  // Based on actual network captures: ALL fields nested inside Field 2!
-  // CRITICAL: Field numbering shifts when probe data is absent!
+  // Sends Field 3 (MasterMessage) to emulate a MEATER Block device
   void build_protobuf_packet(std::vector<uint8_t>& packet) {
     packet.clear();
     
@@ -406,70 +407,72 @@ class MeaterUDPBroadcaster {
     encode_fixed64(header, 5, device_id_);              // field 5: deviceID (FIXED64 from MAC)
     encode_length_delimited(packet, 1, header);
     
-    // ========== Field 2: SubscriptionMessage (ALL sub-fields nested inside!) ==========
-    // Key insight: Field numbering depends on whether probe data is present!
-    std::vector<uint8_t> subscription_msg;
+    // ========== Field 3: MasterMessage (block → app) ==========
+    std::vector<uint8_t> master_msg;
     
+    // Field 1: masterType = 0 (MASTER_TYPE_BLOCK)
+    encode_varint_field(master_msg, 1, 0);
+    
+    // Field 2: cloudConnectionState = 0 (CLOUD_CONNECTION_STATE_DISABLED)
+    encode_varint_field(master_msg, 2, 0);
+    
+    // Field 3: devices (repeated MLDevice) - only if we have probe data
     bool has_probe_data = !temp_data_.empty() && temp_data_.size() >= 8;
     
     if (has_probe_data) {
-      // WITH probe data: Fields start at 1
-      std::vector<uint8_t> probe_data;
-      // Include the raw 8 bytes from BLE temp characteristic
-      probe_data.insert(probe_data.end(), temp_data_.begin(), temp_data_.begin() + 8);
-      // Add battery data (2 bytes) or pad with zeros
-      if (!battery_data_.empty() && battery_data_.size() >= 2) {
-        probe_data.insert(probe_data.end(), battery_data_.begin(), battery_data_.begin() + 2);
-      } else {
-        probe_data.push_back(0x00);
-        probe_data.push_back(0x00);
-      }
-      // Pad to 16 bytes total
-      while (probe_data.size() < 16) {
-        probe_data.push_back(0x00);
-      }
-      encode_length_delimited(subscription_msg, 1, probe_data.data(), probe_data.size());
+      // Build MLDevice message
+      std::vector<uint8_t> mldevice;
       
-      // Field 2: status = 2
-      encode_varint_field(subscription_msg, 2, 2);
+      // Field 2: plus (MLPlus) - for MEATER+ probe
+      std::vector<uint8_t> mlplus;
       
-      // Field 3: username string
-      encode_string(subscription_msg, 3, "meater@esp32.local");
+      // Field 1: childProbe (MLChildDevice)
+      std::vector<uint8_t> child_probe;
+      encode_fixed64(child_probe, 1, device_id_);  // identifier
+      encode_varint_field(child_probe, 2, 0);      // probeNumber = 0
+      encode_length_delimited(mlplus, 1, child_probe);
       
-      // Field 4: device_model string
-      encode_string(subscription_msg, 4, "ESP32-C3");
+      // Field 2: probeChargingState (ChargeState)
+      std::vector<uint8_t> charge_state;
+      encode_varint_field(charge_state, 1, 2);     // chargingStatus = NOT_CHARGING (2)
+      encode_varint_field(charge_state, 2, battery_percent_);  // batteryLevelPercent
+      encode_varint_field(charge_state, 3, 0);     // batteryMinutesRemaining = 0
+      encode_length_delimited(mlplus, 2, charge_state);
       
-      // Field 5: app_version string
-      encode_string(subscription_msg, 5, "4.6.3");
+      // Field 3: ambientTemperature (SINT32) - ambient temp in raw format
+      encode_sint32_field(mlplus, 3, ambient_temp_raw_);
       
-      // Field 6: unknown field string
-      encode_string(subscription_msg, 6, "14");
-    } else {
-      // WITHOUT probe data: Fields start at 1 (no probe data field shifts everything down)
-      // Field 1: status = 2
-      encode_varint_field(subscription_msg, 1, 2);
+      encode_length_delimited(mldevice, 2, mlplus);
       
-      // Field 2: username string (was field 3 when probe data present)
-      encode_string(subscription_msg, 2, "meater@esp32.local");
+      // Field 5: identifier (FIXED64) - same as device_id
+      encode_fixed64(mldevice, 5, device_id_);
       
-      // Field 3: device_model string (was field 4)
-      encode_string(subscription_msg, 3, "ESP32-C3");
+      // Field 6: probeNumber (UINT32) = 0
+      encode_varint_field(mldevice, 6, 0);
       
-      // Field 4: app_version string (was field 5)
-      encode_string(subscription_msg, 4, "4.6.3");
+      // Field 7: chargeState (ChargeState) - same as above for consistency
+      encode_length_delimited(mldevice, 7, charge_state);
       
-      // Field 5: unknown field string (was field 6)
-      encode_string(subscription_msg, 5, "14");
+      // Field 9: connectionState = 1 (CONNECTION_STATE_CONNECTED)
+      encode_varint_field(mldevice, 9, 1);
+      
+      // Field 10: connectionType = 0 (BLE)
+      encode_varint_field(mldevice, 10, 0);
+      
+      // Add the MLDevice to MasterMessage's devices field (repeated)
+      encode_length_delimited(master_msg, 3, mldevice);
     }
     
-    // Encode the entire SubscriptionMessage as Field 2 of the main packet
-    encode_length_delimited(packet, 2, subscription_msg.data(), subscription_msg.size());
+    // Encode the entire MasterMessage as Field 3 of the main packet
+    encode_length_delimited(packet, 3, master_msg.data(), master_msg.size());
     
     ESP_LOGD("meater_udp", "Built packet: %d bytes, seq=%u, deviceID=0x%016llx", 
              packet.size(), sequence_number_, (unsigned long long)device_id_);
     if (has_probe_data) {
-      ESP_LOGD("meater_udp", "Probe data included: %d bytes temp, %d bytes battery", 
-               (int)temp_data_.size(), (int)battery_data_.size());
+      ESP_LOGD("meater_udp", "Probe data included: tip=%d (%.1f°C), ambient=%d (%.1f°C), battery=%d%%", 
+               tip_temp_raw_, tip_temp_raw_ / 16.0,
+               ambient_temp_raw_, ambient_temp_raw_ / 16.0,
+               battery_percent_);
     } else {
       ESP_LOGD("meater_udp", "No probe data (waiting for initial temp reading)");
     }
