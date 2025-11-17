@@ -30,14 +30,20 @@
 //     - messageNumber: sequence counter (UINT32)
 //     - deviceID: FIXED64 (8 bytes, from ESP32 MAC)
 //
-//   Field 2: MLDevice (device information)
-//     - Field 1: device_id (FIXED64, 8 bytes)
+//   Field 2: SubscriptionMessage (device + probe information)
+//     - Field 1: ProbeData (length-delimited, 16 bytes)
+//       → 8 bytes: temperature data (from BLE characteristic 7EDDA774-045E-4BBF-909B-45D1991A2876)
+//       → 2 bytes: battery data (from BLE characteristic 2ADB4877-68D8-4884-BD3C-D83853BF27B8)
+//       → 6 bytes: additional probe state/padding
 //     - Field 2: connection_state (UINT32, value 2 = connected)
 //
 //   Field 3: username (string, e.g. "meater@esp32.local")
 //   Field 4: device_model (string, e.g. "ESP32-C3")
 //   Field 5: app_version (string, e.g. "4.6.3")
 //   Field 6: unknown (string, e.g. "14")
+//
+// CRITICAL: Field 2 must contain nested probe data (Field 1) with actual temperature
+//           and battery readings from the MEATER probe, not just a device ID!
 //
 // Note: Actual captures show Field 2 is used (NOT Field 3/MasterMessage)
 //       despite Java protobuf classes suggesting MasterMessage structure.
@@ -382,7 +388,7 @@ class MeaterUDPBroadcaster {
   }
   
   // Build complete protobuf packet following MEATER Link protocol
-  // Based on actual network captures: uses Field 2 (NOT Field 3!)
+  // Based on actual network captures: uses Field 2 with nested probe data!
   void build_protobuf_packet(std::vector<uint8_t>& packet) {
     packet.clear();
     
@@ -398,13 +404,45 @@ class MeaterUDPBroadcaster {
     encode_fixed64(header, 5, device_id_);              // Field 5: deviceID = FIXED64 (8 bytes from MAC)
     encode_length_delimited(packet, 1, header);
     
-    // ========== Field 2: MLDevice (as seen in actual network captures) ==========
-    std::vector<uint8_t> device;
-    // MLDevice Field 1: device_id as 8-byte FIXED64
-    encode_fixed64(device, 1, device_id_);
-    // MLDevice Field 2: connection_state = 2 (connected)
-    encode_varint_field(device, 2, 2);
-    encode_length_delimited(packet, 2, device);
+    // ========== Field 2: SubscriptionMessage with nested probe data ==========
+    std::vector<uint8_t> subscription;
+    
+    // Field 2 → Field 1: ProbeData (16 bytes: 8 temp + 2 battery + 6 padding/state)
+    std::vector<uint8_t> probe_data;
+    
+    // Add temperature data (8 bytes from BLE characteristic)
+    if (temp_data_.size() >= 8) {
+      probe_data.insert(probe_data.end(), temp_data_.begin(), temp_data_.begin() + 8);
+    } else {
+      // Fallback: zeros if no data
+      probe_data.insert(probe_data.end(), 8, 0x00);
+    }
+    
+    // Add battery data (2 bytes from BLE characteristic)
+    if (battery_data_.size() >= 2) {
+      probe_data.insert(probe_data.end(), battery_data_.begin(), battery_data_.begin() + 2);
+    } else {
+      // Fallback: zeros if no data
+      probe_data.insert(probe_data.end(), 2, 0x00);
+    }
+    
+    // Add 6 bytes of probe state/padding
+    // Format based on network captures: additional state information
+    probe_data.push_back(0x00);  // State byte 1
+    probe_data.push_back(0x00);  // State byte 2
+    probe_data.push_back(0x00);  // State byte 3
+    probe_data.push_back(0x00);  // State byte 4
+    probe_data.push_back(0x00);  // State byte 5
+    probe_data.push_back(0x00);  // State byte 6
+    
+    // Encode as Field 1 within subscription message (length-delimited)
+    encode_length_delimited(subscription, 1, probe_data);
+    
+    // Field 2 → Field 2: connection_state = 2 (connected)
+    encode_varint_field(subscription, 2, 2);
+    
+    // Add subscription message to packet as Field 2
+    encode_length_delimited(packet, 2, subscription);
     
     // ========== Fields 3-6: User/device metadata strings (as seen in captures) ==========
     // Field 3: username string
@@ -421,6 +459,8 @@ class MeaterUDPBroadcaster {
     
     ESP_LOGD("meater_udp", "Built packet: %d bytes, seq=%u, deviceID=0x%016llx", 
              packet.size(), sequence_number_, (unsigned long long)device_id_);
+    ESP_LOGD("meater_udp", "Probe data included: %d bytes temp, %d bytes battery", 
+             (int)temp_data_.size(), (int)battery_data_.size());
   }
 };
 
