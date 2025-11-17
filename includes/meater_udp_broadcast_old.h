@@ -47,7 +47,8 @@ class MeaterUDPBroadcaster {
     temp_data_.resize(8, 0);
     battery_data_.resize(2, 0);
     
-    // Initialize device_id with default pattern (will be properly generated in setup())
+    // Initialize device_id_ with default pattern
+    // Will be properly generated in setup() after WiFi is initialized
     memset(device_id_, 0xAA, 16);
   }
   
@@ -60,6 +61,9 @@ class MeaterUDPBroadcaster {
   void setup() {
     ESP_LOGI("meater_udp", "Setting up UDP broadcaster/listener on port %d", MEATER_LINK_UDP_PORT);
     ESP_LOGI("meater_udp", "Device name: %s", device_name_.c_str());
+    
+    // Generate device ID from MAC address (after WiFi is initialized)
+    generate_device_id();
     
     // Create UDP socket
     udp_socket_ = ::socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
@@ -182,11 +186,11 @@ class MeaterUDPBroadcaster {
     if (sent < 0) {
       ESP_LOGE("meater_udp", "Failed to send UDP broadcast, errno=%d", errno);
     } else {
-      ESP_LOGI("meater_udp", "Broadcast %d bytes to %s:%d - Sequence: %lu", 
+      ESP_LOGI("meater_udp", "Broadcast %d bytes to %s:%d - Sequence: %llu", 
                packet.size(), 
                ::inet_ntoa(dest_addr.sin_addr),
                MEATER_LINK_UDP_PORT,
-               sequence_number_ - 1);  // Already incremented in build_protobuf_packet
+               (unsigned long long)sequence_number_);
       
       // Log packet contents in hex for debugging
       log_hex_dump("TX", packet.data(), packet.size());

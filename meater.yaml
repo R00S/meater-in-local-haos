@@ -47,6 +47,15 @@ globals:
     type: void*
     restore_value: no
     initial_value: 'nullptr'
+
+# Poll UDP socket for incoming packets and send broadcasts
+interval:
+  - interval: 100ms
+    then:
+      - lambda: |-
+          if (id(udp_broadcaster_ptr) != nullptr) {
+            ((MeaterUDPBroadcaster*)id(udp_broadcaster_ptr))->poll_and_broadcast();
+          }
  
 text_sensor:
   - platform: template
