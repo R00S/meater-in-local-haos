@@ -30,20 +30,19 @@
 //     - messageNumber: sequence counter (UINT32)
 //     - deviceID: FIXED64 (8 bytes, from ESP32 MAC)
 //
-//   Field 2: SubscriptionMessage (device + probe information)
-//     - Field 1: ProbeData (length-delimited, 16 bytes)
+//   Field 2: SubscriptionMessage (ALL sub-fields nested inside!)
+//     - Field 1: ProbeData (length-delimited, 16 bytes) - OPTIONAL when probe active
 //       → 8 bytes: temperature data (from BLE characteristic 7EDDA774-045E-4BBF-909B-45D1991A2876)
 //       → 2 bytes: battery data (from BLE characteristic 2ADB4877-68D8-4884-BD3C-D83853BF27B8)
 //       → 6 bytes: additional probe state/padding
 //     - Field 2: connection_state (UINT32, value 2 = connected)
+//     - Field 3: username (string, e.g. "meater@esp32.local")
+//     - Field 4: device_model (string, e.g. "ESP32-C3")
+//     - Field 5: app_version (string, e.g. "4.6.3")
+//     - Field 6: unknown (string, e.g. "14")
 //
-//   Field 3: username (string, e.g. "meater@esp32.local")
-//   Field 4: device_model (string, e.g. "ESP32-C3")
-//   Field 5: app_version (string, e.g. "4.6.3")
-//   Field 6: unknown (string, e.g. "14")
-//
-// CRITICAL: Field 2 must contain nested probe data (Field 1) with actual temperature
-//           and battery readings from the MEATER probe, not just a device ID!
+// CRITICAL: All strings and probe data are SUB-FIELDS of Field 2 (SubscriptionMessage),
+//           NOT separate top-level fields! This is why Field 2 is 38-56 bytes.
 //
 // Note: Actual captures show Field 2 is used (NOT Field 3/MasterMessage)
 //       despite Java protobuf classes suggesting MasterMessage structure.
@@ -388,7 +387,7 @@ class MeaterUDPBroadcaster {
   }
   
   // Build complete protobuf packet following MEATER Link protocol
-  // Based on actual network captures: uses Field 2 with nested probe data!
+  // Based on actual network captures: ALL fields nested inside Field 2!
   void build_protobuf_packet(std::vector<uint8_t>& packet) {
     packet.clear();
     
@@ -397,70 +396,59 @@ class MeaterUDPBroadcaster {
     
     // ========== Field 1: MeaterLinkHeader (REQUIRED) ==========
     std::vector<uint8_t> header;
-    encode_varint_field(header, 1, 21578);              // Field 1: meaterLinkIdentifier = 21578 (from MeaterLinkHeader.java)
-    encode_varint_field(header, 2, 17);                 // Field 2: versionMajor = 17 (from network captures)
-    encode_varint_field(header, 3, 7);                  // Field 3: versionMinor = 7 (from network captures)
-    encode_varint_field(header, 4, sequence_number_);   // Field 4: messageNumber = sequence
-    encode_fixed64(header, 5, device_id_);              // Field 5: deviceID = FIXED64 (8 bytes from MAC)
+    encode_varint_field(header, 1, 21578);              // field 1: meaterLinkIdentifier = 21578
+    encode_varint_field(header, 2, 17);                 // field 2: versionMajor = 17
+    encode_varint_field(header, 3, 7);                  // field 3: versionMinor = 7
+    encode_varint_field(header, 4, sequence_number_);   // field 4: messageNumber (sequence)
+    encode_fixed64(header, 5, device_id_);              // field 5: deviceID (FIXED64 from MAC)
     encode_length_delimited(packet, 1, header);
     
-    // ========== Field 2: SubscriptionMessage with nested probe data ==========
-    std::vector<uint8_t> subscription;
+    // ========== Field 2: SubscriptionMessage (ALL sub-fields nested inside!) ==========
+    std::vector<uint8_t> subscription_msg;
     
-    // Field 2 → Field 1: ProbeData (16 bytes: 8 temp + 2 battery + 6 padding/state)
-    std::vector<uint8_t> probe_data;
-    
-    // Add temperature data (8 bytes from BLE characteristic)
-    if (temp_data_.size() >= 8) {
+    // Field 2.1: ProbeData (optional nested message) - only if we have temp data
+    if (!temp_data_.empty() && temp_data_.size() >= 8) {
+      std::vector<uint8_t> probe_data;
+      // Include the raw 8 bytes from BLE temp characteristic
       probe_data.insert(probe_data.end(), temp_data_.begin(), temp_data_.begin() + 8);
-    } else {
-      // Fallback: zeros if no data
-      probe_data.insert(probe_data.end(), 8, 0x00);
+      // Add battery data (2 bytes) or pad with zeros
+      if (!battery_data_.empty() && battery_data_.size() >= 2) {
+        probe_data.insert(probe_data.end(), battery_data_.begin(), battery_data_.begin() + 2);
+      } else {
+        probe_data.push_back(0x00);
+        probe_data.push_back(0x00);
+      }
+      // Pad to 16 bytes total
+      while (probe_data.size() < 16) {
+        probe_data.push_back(0x00);
+      }
+      encode_length_delimited(subscription_msg, 1, probe_data);
     }
     
-    // Add battery data (2 bytes from BLE characteristic)
-    if (battery_data_.size() >= 2) {
-      probe_data.insert(probe_data.end(), battery_data_.begin(), battery_data_.begin() + 2);
-    } else {
-      // Fallback: zeros if no data
-      probe_data.insert(probe_data.end(), 2, 0x00);
-    }
+    // Field 2.2: status = 2 (connected)
+    encode_varint_field(subscription_msg, 2, 2);
     
-    // Add 6 bytes of probe state/padding
-    // Format based on network captures: additional state information
-    probe_data.push_back(0x00);  // State byte 1
-    probe_data.push_back(0x00);  // State byte 2
-    probe_data.push_back(0x00);  // State byte 3
-    probe_data.push_back(0x00);  // State byte 4
-    probe_data.push_back(0x00);  // State byte 5
-    probe_data.push_back(0x00);  // State byte 6
+    // Field 2.3: username string
+    encode_string(subscription_msg, 3, "meater@esp32.local");
     
-    // Encode as Field 1 within subscription message (length-delimited)
-    encode_length_delimited(subscription, 1, probe_data);
+    // Field 2.4: device_model string
+    encode_string(subscription_msg, 4, "ESP32-C3");
     
-    // Field 2 → Field 2: connection_state = 2 (connected)
-    encode_varint_field(subscription, 2, 2);
+    // Field 2.5: app_version string
+    encode_string(subscription_msg, 5, "4.6.3");
     
-    // Add subscription message to packet as Field 2
-    encode_length_delimited(packet, 2, subscription);
+    // Field 2.6: unknown field string
+    encode_string(subscription_msg, 6, "14");
     
-    // ========== Fields 3-6: User/device metadata strings (as seen in captures) ==========
-    // Field 3: username string
-    encode_string(packet, 3, "meater@esp32.local");
-    
-    // Field 4: device_model string
-    encode_string(packet, 4, "ESP32-C3");
-    
-    // Field 5: app_version string
-    encode_string(packet, 5, "4.6.3");
-    
-    // Field 6: unknown field string
-    encode_string(packet, 6, "14");
+    // Now encode the entire SubscriptionMessage as Field 2 of the main packet
+    encode_length_delimited(packet, 2, subscription_msg);
     
     ESP_LOGD("meater_udp", "Built packet: %d bytes, seq=%u, deviceID=0x%016llx", 
              packet.size(), sequence_number_, (unsigned long long)device_id_);
-    ESP_LOGD("meater_udp", "Probe data included: %d bytes temp, %d bytes battery", 
-             (int)temp_data_.size(), (int)battery_data_.size());
+    if (!temp_data_.empty()) {
+      ESP_LOGD("meater_udp", "Probe data included: %d bytes temp, %d bytes battery", 
+               (int)temp_data_.size(), (int)battery_data_.size());
+    }
   }
 };
 
