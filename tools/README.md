@@ -2,6 +2,13 @@
 
 This directory contains tools for validating the MEATER Link UDP protocol implementation.
 
+## Documentation
+
+- **[TESTING_NEW_IMPLEMENTATIONS.md](TESTING_NEW_IMPLEMENTATIONS.md)** - **START HERE** for step-by-step guide to test new implementations
+- **[VALIDATOR_USAGE.md](VALIDATOR_USAGE.md)** - Detailed validator usage and troubleshooting
+- **[PROTOCOL_ANALYSIS_NOTES.md](PROTOCOL_ANALYSIS_NOTES.md)** - Technical protocol analysis
+- **[DISCOVERY_ANALYSIS.md](DISCOVERY_ANALYSIS.md)** - Device discovery process analysis
+
 ## validate_protocol.py
 
 Python script that decodes and validates MEATER Link protobuf packets using the same wire format decoder logic as the official MEATER app (based on decompiled v3protobuf structures).

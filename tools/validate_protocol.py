@@ -1,425 +1,416 @@
 #!/usr/bin/env python3
 """
-MEATER Link Protocol Validator
+Generic Protobuf Decoder Validator
 
-Simulates the MEATER app's protobuf decoder to validate ESP32 broadcasts.
-Based on decompiled app code from meater_app/v3protobuf/*.java
+This tool interprets decompiled Java ProtoAdapter code and simulates its execution
+against test packets. It makes NO assumptions about the protocol structure.
+
+Usage:
+    python validate_protocol.py <packet_hex> [class_name]
+    
+Example:
+    python validate_protocol.py 0a1308... MeaterLinkMessage
+    
+The tool will:
+1. Parse the Java ProtoAdapter decode method for the specified class
+2. Execute it step-by-step against the packet
+3. Show exactly where decoding succeeds or fails
+4. Follow all nested decode() calls recursively
+
+This works for ANY protobuf message, not just MEATER protocol.
 """
 
-import struct
+import re
 import sys
-from typing import Tuple, List, Dict, Any
+import struct
+from pathlib import Path
+from typing import Dict, Any, List, Tuple, Optional
 
-class ProtobufDecoder:
-    """Wire format protobuf decoder matching the MEATER app implementation"""
+class ProtoReader:
+    """Simulates Wire Protocol's ProtoReader"""
     
     def __init__(self, data: bytes):
         self.data = data
         self.pos = 0
-    
-    def read_byte(self) -> int:
-        if self.pos >= len(self.data):
-            raise ValueError("Unexpected end of data")
-        b = self.data[self.pos]
-        self.pos += 1
-        return b
-    
+        
+    def has_data(self) -> bool:
+        return self.pos < len(self.data)
+        
+    def read_tag(self) -> Optional[int]:
+        """Read next field tag, return None if no more data"""
+        if not self.has_data():
+            return None
+        try:
+            return self.read_varint()
+        except:
+            return None
+            
     def read_varint(self) -> int:
-        """Decode varint (wire type 0)"""
         result = 0
         shift = 0
         while True:
-            b = self.read_byte()
+            if self.pos >= len(self.data):
+                raise ValueError("End of data reading varint")
+            b = self.data[self.pos]
+            self.pos += 1
             result |= (b & 0x7F) << shift
             if (b & 0x80) == 0:
                 break
             shift += 7
         return result
-    
-    def read_sint32(self) -> int:
-        """Decode ZigZag encoded sint32"""
-        n = self.read_varint()
-        return (n >> 1) ^ (-(n & 1))
-    
+        
     def read_fixed64(self) -> int:
-        """Decode fixed64 (wire type 1)"""
         if self.pos + 8 > len(self.data):
             raise ValueError("Not enough data for fixed64")
         value = struct.unpack('<Q', self.data[self.pos:self.pos+8])[0]
         self.pos += 8
         return value
-    
+        
+    def read_fixed32(self) -> int:
+        if self.pos + 4 > len(self.data):
+            raise ValueError("Not enough data for fixed32")
+        value = struct.unpack('<I', self.data[self.pos:self.pos+4])[0]
+        self.pos += 4
+        return value
+        
     def read_length_delimited(self) -> bytes:
-        """Decode length-delimited field (wire type 2)"""
         length = self.read_varint()
         if self.pos + length > len(self.data):
-            raise ValueError(f"Not enough data for length-delimited field (need {length} bytes)")
+            raise ValueError(f"Not enough data for length-delimited (need {length})")
         data = self.data[self.pos:self.pos+length]
         self.pos += length
         return data
+        
+    def read_sint32(self) -> int:
+        """ZigZag decode"""
+        n = self.read_varint()
+        return (n >> 1) ^ (-(n & 1))
+
+class JavaCodeInterpreter:
+    """
+    Interprets Java ProtoAdapter decode methods and simulates their execution.
     
-    def read_field_header(self) -> Tuple[int, int]:
-        """Read field number and wire type"""
-        tag = self.read_varint()
-        field_number = tag >> 3
-        wire_type = tag & 0x07
-        return field_number, wire_type
+    This is a generic interpreter that works for ANY protobuf message by parsing
+    the decompiled Java code structure.
+    """
     
-    def skip_field(self, wire_type: int):
-        """Skip unknown field"""
+    def __init__(self, meater_app_path: str):
+        self.meater_app_path = Path(meater_app_path)
+        self.v3protobuf_path = self.meater_app_path / "v3protobuf"
+        self.step_num = 0
+        
+    def find_java_file(self, class_name: str) -> Optional[Path]:
+        """Find the Java file for a given class name"""
+        java_file = self.v3protobuf_path / f"{class_name}.java"
+        if java_file.exists():
+            return java_file
+        return None
+        
+    def parse_decode_method(self, java_content: str, class_name: str) -> Dict[str, Any]:
+        """
+        Parse the ProtoAdapter decode method from Java code.
+        
+        Extracts:
+        - Field numbers and their types
+        - Which adapter to call for nested messages
+        - Required vs optional fields
+        - Build validation logic
+        """
+        result = {
+            'class_name': class_name,
+            'fields': {},
+            'required_fields': [],
+            'decode_logic': []
+        }
+        
+        # Find the ProtoAdapter decode method - use lookahead to find method boundaries better
+        decode_pattern = r'public\s+\w+\s+\w*decode\(ProtoReader\s+protoReader\)\s*\{(.*?)(?=\n\s+public|\n\s+private|\Z)'
+        decode_match = re.search(decode_pattern, java_content, re.DOTALL)
+        
+        if not decode_match:
+            return result
+            
+        decode_body = decode_match.group(1)
+        
+        # Try to find switch/case statements first
+        case_pattern = r'case\s+(\d+):\s*(.*?)break;'
+        cases = re.findall(case_pattern, decode_body, re.DOTALL)
+        
+        if cases:
+            # Found switch/case pattern
+            for field_num, case_body in cases:
+                field_info = self.parse_field_decode(field_num, case_body, class_name)
+                result['fields'][int(field_num)] = field_info
+                result['decode_logic'].append(field_info)
+        else:
+            # Try if/else pattern: if (nextTag == N) { ... } else if (nextTag == M) { ... }
+            # Handle both single-line and multi-line if statements
+            if_pattern = r'if\s*\(\s*nextTag\s*==\s*(\d+)\s*\)\s*\{([^}]*)\}'
+            if_matches = re.findall(if_pattern, decode_body, re.DOTALL)
+            
+            for field_num, if_body in if_matches:
+                # Skip the check for nextTag == -1 (end condition)
+                if field_num == "-1":
+                    continue
+                field_info = self.parse_field_decode(field_num, if_body, class_name)
+                result['fields'][int(field_num)] = field_info
+                result['decode_logic'].append(field_info)
+                
+            # Also check for final else clause which often handles the last field
+            # Pattern: } else if (nextTag != N) { ... } else { builder.fieldName(...) }
+            final_else_pattern = r'\}\s*else\s*if\s*\(\s*nextTag\s*!=\s*(\d+)\s*\)\s*\{[^}]*\}\s*else\s*\{([^}]*)\}'
+            final_else_match = re.search(final_else_pattern, decode_body, re.DOTALL)
+            if final_else_match:
+                # The != N means the else handles field N
+                field_num = final_else_match.group(1)
+                else_body = final_else_match.group(2)
+                field_info = self.parse_field_decode(field_num, else_body, class_name)
+                result['fields'][int(field_num)] = field_info
+                result['decode_logic'].append(field_info)
+            
+        # Find required fields from Builder.build() method
+        build_pattern = r'if\s*\((.*?)\s*!=\s*null.*?\)\s*\{.*?return.*?\}.*?throw\s+Internal\.missingRequiredFields\((.*?)\);'
+        build_match = re.search(build_pattern, java_content, re.DOTALL)
+        
+        if build_match:
+            required_check = build_match.group(1)
+            # Extract field names from the condition
+            field_names = re.findall(r'this\.(\w+)', required_check)
+            result['required_fields'] = field_names
+            
+        return result
+        
+    def parse_field_decode(self, field_num: str, case_body: str, parent_class: str) -> Dict[str, Any]:
+        """Parse individual field decode logic"""
+        field_info = {
+            'field_number': int(field_num),
+            'field_name': None,
+            'field_type': None,
+            'adapter': None,
+            'is_repeated': False
+        }
+        
+        # Extract field name from builder.fieldName(...)
+        field_name_pattern = r'builder\.(\w+)\('
+        field_name_match = re.search(field_name_pattern, case_body)
+        if field_name_match:
+            field_info['field_name'] = field_name_match.group(1)
+            
+        # Check if it's a nested message decode
+        if '.ADAPTER.decode(' in case_body:
+            adapter_pattern = r'(\w+)\.ADAPTER\.decode'
+            adapter_match = re.search(adapter_pattern, case_body)
+            if adapter_match:
+                field_info['adapter'] = adapter_match.group(1)
+                field_info['field_type'] = 'message'
+                
+        # Check for primitive types
+        elif 'ProtoAdapter.UINT32.decode' in case_body:
+            field_info['field_type'] = 'uint32'
+        elif 'ProtoAdapter.FIXED64.decode' in case_body:
+            field_info['field_type'] = 'fixed64'
+        elif 'ProtoAdapter.SINT32.decode' in case_body:
+            field_info['field_type'] = 'sint32'
+        elif 'ProtoAdapter.STRING.decode' in case_body:
+            field_info['field_type'] = 'string'
+            
+        # Check if repeated
+        if '.add(' in case_body:
+            field_info['is_repeated'] = True
+            
+        return field_info
+        
+    def decode_message(self, packet_data: bytes, class_name: str, indent: int = 0) -> Dict[str, Any]:
+        """
+        Decode a message by interpreting its Java ProtoAdapter code.
+        
+        This recursively follows nested decode calls.
+        """
+        prefix = "  " * indent
+        self.step_num += 1
+        step = self.step_num
+        
+        print(f"\n{prefix}[Step {step}] Decoding {class_name}...")
+        
+        # Find and parse the Java file
+        java_file = self.find_java_file(class_name)
+        if not java_file:
+            print(f"{prefix}  ❌ ERROR: Cannot find {class_name}.java")
+            raise FileNotFoundError(f"{class_name}.java not found")
+            
+        with open(java_file, 'r') as f:
+            java_content = f.read()
+            
+        # Parse the decode method
+        decode_info = self.parse_decode_method(java_content, class_name)
+        
+        if not decode_info['fields']:
+            print(f"{prefix}  ⚠️  WARNING: No decode logic found in {class_name}")
+            
+        # Simulate the decode process
+        reader = ProtoReader(packet_data)
+        decoded_message = {}
+        
+        print(f"{prefix}  Java: Builder builder = new Builder();")
+        print(f"{prefix}  Java: while (true) {{ int nextTag = protoReader.nextTag(); ... }}")
+        
+        while reader.has_data():
+            tag = reader.read_tag()
+            if tag is None:
+                break
+                
+            field_number = tag >> 3
+            wire_type = tag & 0x07
+            
+            print(f"{prefix}    → Field {field_number} (wire type {wire_type})")
+            
+            if field_number in decode_info['fields']:
+                field_info = decode_info['fields'][field_number]
+                print(f"{prefix}      Java: case {field_number}: builder.{field_info['field_name']}(...)")
+                
+                try:
+                    value = self.decode_field(reader, field_info, wire_type, indent + 2)
+                    decoded_message[field_info['field_name']] = value
+                    print(f"{prefix}      ✅ Success")
+                except Exception as e:
+                    print(f"{prefix}      ❌ ERROR: {e}")
+                    raise
+            else:
+                print(f"{prefix}      ⚠️  Unknown field - skipping")
+                self.skip_field(reader, wire_type)
+                
+        # Validate required fields (from Builder.build() method)
+        print(f"{prefix}  Java: return builder.build();")
+        self.validate_required_fields(decoded_message, decode_info, prefix)
+        
+        return decoded_message
+        
+    def decode_field(self, reader: ProtoReader, field_info: Dict[str, Any], 
+                     wire_type: int, indent: int) -> Any:
+        """Decode a single field based on its type"""
+        prefix = "  " * indent
+        
+        if field_info['field_type'] == 'message':
+            # Nested message - recursively decode
+            data = reader.read_length_delimited()
+            print(f"{prefix}Java: {field_info['adapter']}.ADAPTER.decode(protoReader)")
+            return self.decode_message(data, field_info['adapter'], indent + 1)
+            
+        elif field_info['field_type'] == 'uint32':
+            value = reader.read_varint()
+            print(f"{prefix}Value: {value}")
+            return value
+            
+        elif field_info['field_type'] == 'fixed64':
+            value = reader.read_fixed64()
+            print(f"{prefix}Value: 0x{value:016x}")
+            return value
+            
+        elif field_info['field_type'] == 'sint32':
+            value = reader.read_sint32()
+            print(f"{prefix}Value: {value}")
+            return value
+            
+        elif field_info['field_type'] == 'string':
+            data = reader.read_length_delimited()
+            value = data.decode('utf-8', errors='replace')
+            print(f"{prefix}Value: \"{value}\"")
+            return value
+            
+        else:
+            # Unknown type - read as length-delimited
+            data = reader.read_length_delimited()
+            print(f"{prefix}Value: <{len(data)} bytes>")
+            return data
+            
+    def skip_field(self, reader: ProtoReader, wire_type: int):
+        """Skip unknown field based on wire type"""
         if wire_type == 0:  # varint
-            self.read_varint()
+            reader.read_varint()
         elif wire_type == 1:  # fixed64
-            self.pos += 8
+            reader.read_fixed64()
         elif wire_type == 2:  # length-delimited
-            length = self.read_varint()
-            self.pos += length
+            reader.read_length_delimited()
         elif wire_type == 5:  # fixed32
-            self.pos += 4
+            reader.read_fixed32()
+            
+    def validate_required_fields(self, decoded_message: Dict[str, Any], 
+                                 decode_info: Dict[str, Any], prefix: str):
+        """Validate that all required fields are present (from Builder.build())"""
+        missing = []
+        for field_name in decode_info['required_fields']:
+            if field_name not in decoded_message:
+                missing.append(field_name)
+                
+        if missing:
+            error = f"Internal.missingRequiredFields: {', '.join(missing)}"
+            print(f"{prefix}  ❌ VALIDATION FAILED: {error}")
+            raise ValueError(error)
         else:
-            raise ValueError(f"Unknown wire type: {wire_type}")
-
-
-def decode_meater_link_header(data: bytes) -> Dict[str, Any]:
-    """Decode MeaterLinkHeader (field 1)"""
-    decoder = ProtobufDecoder(data)
-    header = {}
-    
-    while decoder.pos < len(data):
-        field_num, wire_type = decoder.read_field_header()
-        
-        if field_num == 1:  # timestamp_ms
-            header['timestamp_ms'] = decoder.read_varint()
-        elif field_num == 2:  # sequence
-            header['sequence'] = decoder.read_varint()
-        elif field_num == 3:  # version
-            header['version'] = decoder.read_varint()
-        elif field_num == 4:  # unknown1
-            header['unknown1'] = decoder.read_varint()
-        elif field_num == 5:  # unknown2 (fixed64)
-            header['unknown2'] = hex(decoder.read_fixed64())
-        else:
-            print(f"  [WARN] Unknown header field {field_num}")
-            decoder.skip_field(wire_type)
-    
-    return header
-
-
-def decode_cook_status(data: bytes) -> Dict[str, Any]:
-    """Decode CookStatus"""
-    decoder = ProtobufDecoder(data)
-    status = {}
-    
-    while decoder.pos < len(data):
-        field_num, wire_type = decoder.read_field_header()
-        
-        if field_num == 1:  # internalTemperature (sint32)
-            status['internalTemperature'] = decoder.read_sint32()
-        elif field_num == 2:  # ambientTemperature (sint32)
-            status['ambientTemperature'] = decoder.read_sint32()
-        elif field_num == 3:  # peakTemperature (sint32)
-            status['peakTemperature'] = decoder.read_sint32()
-        elif field_num == 4:  # remainingCookTime (sint32)
-            status['remainingCookTime'] = decoder.read_sint32()
-        elif field_num == 5:  # elapsedTime (uint32)
-            status['elapsedTime'] = decoder.read_varint()
-        elif field_num == 6:  # totalRemainingTime (sint32)
-            status['totalRemainingTime'] = decoder.read_sint32()
-        else:
-            decoder.skip_field(wire_type)
-    
-    return status
-
-
-def decode_cook_setup(data: bytes) -> Dict[str, Any]:
-    """Decode CookSetup"""
-    decoder = ProtobufDecoder(data)
-    setup = {}
-    
-    while decoder.pos < len(data):
-        field_num, wire_type = decoder.read_field_header()
-        
-        if field_num == 1:  # sequenceNumber
-            setup['sequenceNumber'] = decoder.read_varint()
-        elif field_num == 2:  # state
-            setup['state'] = decoder.read_varint()
-        elif field_num == 3:  # targetInternalTemperature
-            setup['targetInternalTemperature'] = decoder.read_sint32()
-        elif field_num == 99:  # lastItem
-            setup['lastItem'] = decoder.read_varint()
-        else:
-            decoder.skip_field(wire_type)
-    
-    return setup
-
-
-def decode_ml_probe(data: bytes) -> Dict[str, Any]:
-    """Decode MLProbe"""
-    decoder = ProtobufDecoder(data)
-    probe = {}
-    
-    while decoder.pos < len(data):
-        field_num, wire_type = decoder.read_field_header()
-        
-        if field_num == 1:  # parentIdentifier (fixed64)
-            probe['parentIdentifier'] = hex(decoder.read_fixed64())
-        elif field_num == 3:  # setup (CookSetup)
-            setup_data = decoder.read_length_delimited()
-            probe['setup'] = decode_cook_setup(setup_data)
-        elif field_num == 4:  # status (CookStatus)
-            status_data = decoder.read_length_delimited()
-            probe['status'] = decode_cook_status(status_data)
-        else:
-            decoder.skip_field(wire_type)
-    
-    return probe
-
-
-def decode_charge_state(data: bytes) -> Dict[str, Any]:
-    """Decode ChargeState"""
-    decoder = ProtobufDecoder(data)
-    charge = {}
-    
-    while decoder.pos < len(data):
-        field_num, wire_type = decoder.read_field_header()
-        
-        if field_num == 1:  # chargingStatus
-            charge['chargingStatus'] = decoder.read_varint()
-        elif field_num == 2:  # batteryLevelPercent
-            charge['batteryLevelPercent'] = decoder.read_varint()
-        elif field_num == 3:  # batteryMinutesRemaining
-            charge['batteryMinutesRemaining'] = decoder.read_varint()
-        else:
-            decoder.skip_field(wire_type)
-    
-    return charge
-
-
-def decode_ml_device(data: bytes) -> Dict[str, Any]:
-    """Decode MLDevice"""
-    decoder = ProtobufDecoder(data)
-    device = {}
-    
-    while decoder.pos < len(data):
-        field_num, wire_type = decoder.read_field_header()
-        
-        if field_num == 1:  # probe (MLProbe)
-            probe_data = decoder.read_length_delimited()
-            device['probe'] = decode_ml_probe(probe_data)
-        elif field_num == 5:  # identifier (fixed64)
-            device['identifier'] = hex(decoder.read_fixed64())
-        elif field_num == 6:  # probeNumber
-            device['probeNumber'] = decoder.read_varint()
-        elif field_num == 7:  # chargeState
-            charge_data = decoder.read_length_delimited()
-            device['chargeState'] = decode_charge_state(charge_data)
-        elif field_num == 8:  # firmwareRevision
-            device['firmwareRevision'] = decoder.read_length_delimited().decode('utf-8')
-        elif field_num == 9:  # connectionState
-            device['connectionState'] = decoder.read_varint()
-        elif field_num == 10:  # connectionType
-            device['connectionType'] = decoder.read_varint()
-        elif field_num == 11:  # bleSignalLevel
-            device['bleSignalLevel'] = decoder.read_sint32()
-        elif field_num == 12:  # wifiSignalLevel
-            device['wifiSignalLevel'] = decoder.read_sint32()
-        else:
-            print(f"  [WARN] Unknown MLDevice field {field_num}")
-            decoder.skip_field(wire_type)
-    
-    return device
-
-
-def decode_master_message(data: bytes) -> Dict[str, Any]:
-    """Decode MasterMessage (field 3)"""
-    decoder = ProtobufDecoder(data)
-    master = {}
-    
-    while decoder.pos < len(data):
-        field_num, wire_type = decoder.read_field_header()
-        
-        if field_num == 1:  # masterType
-            master_type = decoder.read_varint()
-            master['masterType'] = master_type
-            master['masterTypeName'] = {
-                0: 'MASTER_TYPE_BLOCK',
-                1: 'MASTER_TYPE_IOS',
-                2: 'MASTER_TYPE_ANDROID',
-                3: 'MASTER_TYPE_PROBE_SIM',
-                4: 'MASTER_TYPE_BLOCK_V2_2P',
-                5: 'MASTER_TYPE_BLOCK_V2_4P'
-            }.get(master_type, f'UNKNOWN({master_type})')
-        elif field_num == 2:  # cloudConnectionState
-            cloud_state = decoder.read_varint()
-            master['cloudConnectionState'] = cloud_state
-            master['cloudConnectionStateName'] = {
-                0: 'CLOUD_CONNECTION_STATE_DISABLED',
-                1: 'CLOUD_CONNECTION_STATE_OFFLINE',
-                2: 'CLOUD_CONNECTION_STATE_CONNECTING',
-                3: 'CLOUD_CONNECTION_STATE_CONNECTED'
-            }.get(cloud_state, f'UNKNOWN({cloud_state})')
-        elif field_num == 3:  # devices (repeated MLDevice)
-            device_data = decoder.read_length_delimited()
-            if 'devices' not in master:
-                master['devices'] = []
-            master['devices'].append(decode_ml_device(device_data))
-        else:
-            print(f"  [WARN] Unknown MasterMessage field {field_num}")
-            decoder.skip_field(wire_type)
-    
-    return master
-
-
-def decode_meater_link_message(data: bytes) -> Dict[str, Any]:
-    """Decode top-level MeaterLinkMessage"""
-    decoder = ProtobufDecoder(data)
-    message = {}
-    
-    print(f"\n=== Decoding {len(data)} byte packet ===")
-    print(f"Hex: {data.hex()}\n")
-    
-    while decoder.pos < len(data):
-        field_num, wire_type = decoder.read_field_header()
-        
-        if field_num == 1:  # header (MeaterLinkHeader - REQUIRED)
-            header_data = decoder.read_length_delimited()
-            message['header'] = decode_meater_link_header(header_data)
-        elif field_num == 2:  # subscriptionMessage
-            sub_data = decoder.read_length_delimited()
-            message['subscriptionMessage'] = f"<{len(sub_data)} bytes>"
-        elif field_num == 3:  # masterMessage
-            master_data = decoder.read_length_delimited()
-            message['masterMessage'] = decode_master_message(master_data)
-        elif field_num == 4:  # setupMessage
-            setup_data = decoder.read_length_delimited()
-            message['setupMessage'] = f"<{len(setup_data)} bytes>"
-        else:
-            print(f"[WARN] Unknown MeaterLinkMessage field {field_num}")
-            decoder.skip_field(wire_type)
-    
-    return message
-
-
-def validate_packet(message: Dict[str, Any]) -> Tuple[List[str], List[str]]:
-    """Validate decoded packet against MEATER app expectations"""
-    errors = []
-    warnings = []
-    
-    # Check required fields
-    if 'header' not in message:
-        errors.append("MISSING REQUIRED: MeaterLinkHeader (field 1)")
-    else:
-        header = message['header']
-        if 'timestamp_ms' not in header:
-            errors.append("MISSING REQUIRED: header.timestamp_ms")
-        if 'sequence' not in header:
-            errors.append("MISSING REQUIRED: header.sequence")
-        if 'version' not in header:
-            errors.append("MISSING REQUIRED: header.version")
-        elif header['version'] != 7:
-            warnings.append(f"Unexpected version: {header['version']} (expected 7)")
-    
-    if 'masterMessage' not in message:
-        errors.append("MISSING REQUIRED: MasterMessage (field 3) - App won't recognize device!")
-    else:
-        master = message['masterMessage']
-        
-        if 'masterType' not in master:
-            errors.append("MISSING REQUIRED: masterMessage.masterType")
-        elif master['masterType'] != 0:
-            warnings.append(f"masterType is {master['masterTypeName']}, not MASTER_TYPE_BLOCK (0)")
-        
-        if 'cloudConnectionState' not in master:
-            errors.append("MISSING REQUIRED: masterMessage.cloudConnectionState")
-        
-        if 'devices' not in master or len(master['devices']) == 0:
-            warnings.append("No devices in MasterMessage - Block appears empty")
-        else:
-            for i, device in enumerate(master['devices']):
-                if 'identifier' not in device:
-                    errors.append(f"MISSING REQUIRED: devices[{i}].identifier")
-                if 'probeNumber' not in device:
-                    errors.append(f"MISSING REQUIRED: devices[{i}].probeNumber")
-                if 'connectionState' not in device:
-                    errors.append(f"MISSING REQUIRED: devices[{i}].connectionState")
-                if 'connectionType' not in device:
-                    errors.append(f"MISSING REQUIRED: devices[{i}].connectionType")
-                if 'probe' not in device:
-                    warnings.append(f"devices[{i}] missing probe data (MLProbe)")
-                else:
-                    probe = device['probe']
-                    if 'status' not in probe:
-                        warnings.append(f"devices[{i}].probe missing CookStatus")
-                    if 'setup' not in probe:
-                        warnings.append(f"devices[{i}].probe missing CookSetup")
-    
-    return errors, warnings
-
-
-def print_message(message: Dict[str, Any], indent: int = 0):
-    """Pretty print decoded message"""
-    prefix = "  " * indent
-    
-    for key, value in message.items():
-        if isinstance(value, dict):
-            print(f"{prefix}{key}:")
-            print_message(value, indent + 1)
-        elif isinstance(value, list):
-            print(f"{prefix}{key}: [")
-            for i, item in enumerate(value):
-                if isinstance(item, dict):
-                    print(f"{prefix}  [{i}]:")
-                    print_message(item, indent + 2)
-                else:
-                    print(f"{prefix}  {item}")
-            print(f"{prefix}]")
-        else:
-            print(f"{prefix}{key}: {value}")
+            print(f"{prefix}  ✅ All required fields present")
 
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python validate_protocol.py <hex_packet>")
+        print("Usage: python validate_protocol.py <packet_hex> [class_name]")
+        print("\nGeneric protobuf decoder validator that interprets Java ProtoAdapter code.")
+        print("\nArguments:")
+        print("  packet_hex  - Hex string of the packet to validate")
+        print("  class_name  - Java class to decode as (default: MeaterLinkMessage)")
         print("\nExample:")
-        print("  python validate_protocol.py 0a13...")
+        print("  python validate_protocol.py 0a1308... MeaterLinkMessage")
+        print("\nThis tool:")
+        print("  - Reads the decompiled Java code for the specified class")
+        print("  - Simulates the ProtoAdapter.decode() method execution")
+        print("  - Shows step-by-step what happens during decoding")
+        print("  - Works for ANY protocol version - just interprets the Java code")
         sys.exit(1)
-    
-    hex_packet = sys.argv[1].replace(" ", "").replace(":", "").replace("-", "")
+        
+    packet_hex = sys.argv[1].replace(" ", "").replace(":", "").replace("-", "")
+    class_name = sys.argv[2] if len(sys.argv) > 2 else "MeaterLinkMessage"
     
     try:
-        packet_data = bytes.fromhex(hex_packet)
+        packet_data = bytes.fromhex(packet_hex)
     except ValueError as e:
-        print(f"ERROR: Invalid hex string: {e}")
+        print(f"❌ ERROR: Invalid hex string: {e}")
         sys.exit(1)
+        
+    print("="*80)
+    print("Generic Protobuf Decoder Validator")
+    print("="*80)
+    print(f"Packet: {packet_hex}")
+    print(f"Length: {len(packet_data)} bytes")
+    print(f"Decoding as: {class_name}")
+    print(f"\nInterpreting Java code from meater_app/v3protobuf/{class_name}.java")
+    print("="*80)
     
+    # Find meater_app directory
+    script_dir = Path(__file__).parent
+    repo_root = script_dir.parent
+    meater_app_path = repo_root / "meater_app"
+    
+    if not meater_app_path.exists():
+        print(f"❌ ERROR: Cannot find meater_app directory at {meater_app_path}")
+        sys.exit(1)
+        
     try:
-        message = decode_meater_link_message(packet_data)
+        interpreter = JavaCodeInterpreter(str(meater_app_path))
+        result = interpreter.decode_message(packet_data, class_name)
         
-        print("\n=== Decoded Message ===")
-        print_message(message)
+        print("\n" + "="*80)
+        print("✅ SUCCESS: Packet decoded successfully!")
+        print("="*80)
+        print(f"\nDecoded message structure:")
+        import json
+        print(json.dumps(result, indent=2, default=str))
         
-        print("\n=== Validation ===")
-        errors, warnings = validate_packet(message)
-        
-        if errors:
-            print("\n❌ ERRORS (packet will be rejected by app):")
-            for error in errors:
-                print(f"  - {error}")
-        else:
-            print("\n✅ No critical errors found")
-        
-        if warnings:
-            print("\n⚠️  WARNINGS:")
-            for warning in warnings:
-                print(f"  - {warning}")
-        
-        if not errors and not warnings:
-            print("\n🎉 Perfect! Packet should be recognized by MEATER app")
-        
-        sys.exit(0 if not errors else 1)
+        sys.exit(0)
         
     except Exception as e:
-        print(f"\n❌ DECODING ERROR: {e}")
+        print("\n" + "="*80)
+        print(f"❌ FAILURE: Decoding failed")
+        print("="*80)
+        print(f"Error: {e}")
         import traceback
         traceback.print_exc()
         sys.exit(1)
