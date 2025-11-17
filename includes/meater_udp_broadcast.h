@@ -388,9 +388,30 @@ class MeaterUDPBroadcaster {
     encode_sint32_zigzag(out, value);
   }
   
+  // Encode packed repeated FIXED64 field (wire type 2 with multiple 8-byte values)
+  void encode_packed_fixed64(std::vector<uint8_t>& out, uint32_t field_number, 
+                             const std::vector<uint64_t>& values) {
+    if (values.empty()) {
+      return;  // Don't encode empty repeated fields
+    }
+    
+    // Field header
+    encode_field_header(out, field_number, 2);  // Wire type 2 = length-delimited
+    
+    // Length = number of values * 8 bytes per FIXED64
+    encode_varint(out, values.size() * 8);
+    
+    // Encode each FIXED64 value (little-endian, no field header for packed)
+    for (uint64_t value : values) {
+      for (int i = 0; i < 8; i++) {
+        out.push_back((uint8_t)(value & 0xFF));
+        value >>= 8;
+      }
+    }
+  }
+  
   // Build complete protobuf packet following MEATER Link protocol
-  // Based on actual network captures: ALL fields nested inside Field 2!
-  // CRITICAL: Field numbering shifts when probe data is absent!
+  // Based on actual Java protobuf definitions from meater_app/v3protobuf/
   void build_protobuf_packet(std::vector<uint8_t>& packet) {
     packet.clear();
     
@@ -398,81 +419,58 @@ class MeaterUDPBroadcaster {
     sequence_number_++;
     
     // ========== Field 1: MeaterLinkHeader (REQUIRED) ==========
+    // From MeaterLinkHeader.java:
+    //   Field 1: meaterLinkIdentifier (UINT32, DEFAULT = 21578)
+    //   Field 2: versionMajor (UINT32, DEFAULT = 2, but LATEST from enum = 17)
+    //   Field 3: versionMinor (UINT32, DEFAULT = 1, but using validator requirement = 7)
+    //   Field 4: messageNumber (UINT32, sequence counter)
+    //   Field 5: deviceID (FIXED64, 8-byte device identifier)
     std::vector<uint8_t> header;
-    encode_varint_field(header, 1, 21578);              // field 1: meaterLinkIdentifier = 21578
-    encode_varint_field(header, 2, 17);                 // field 2: versionMajor = 17
-    encode_varint_field(header, 3, 7);                  // field 3: versionMinor = 7
-    encode_varint_field(header, 4, sequence_number_);   // field 4: messageNumber (sequence)
-    encode_fixed64(header, 5, device_id_);              // field 5: deviceID (FIXED64 from MAC)
+    encode_varint_field(header, 1, 21578);              // meaterLinkIdentifier
+    encode_varint_field(header, 2, 17);                 // versionMajor (MEATER_LINK_MAJOR_LATEST)
+    encode_varint_field(header, 3, 7);                  // versionMinor (validator requirement)
+    encode_varint_field(header, 4, sequence_number_);   // messageNumber
+    encode_fixed64(header, 5, device_id_);              // deviceID (FIXED64)
     encode_length_delimited(packet, 1, header);
     
-    // ========== Field 2: SubscriptionMessage (ALL sub-fields nested inside!) ==========
-    // Key insight: Field numbering depends on whether probe data is present!
+    // ========== Field 2: SubscriptionMessage ==========
+    // From SubscriptionMessage.java:
+    //   Field 1: desiredDevices - List<Long> (PACKED FIXED64)
+    //   Field 2: clientType - MasterType enum (varint)
+    //   Field 3: emailAddress - String
+    //   Field 4: deviceInfo - String
+    //   Field 5: appVersion - String
+    //   Field 6: osVersion - String
     std::vector<uint8_t> subscription_msg;
     
-    bool has_probe_data = !temp_data_.empty() && temp_data_.size() >= 8;
+    // Field 1: desiredDevices (PACKED FIXED64 list)
+    // Include the device ID to indicate this device is managing a probe
+    std::vector<uint64_t> desired_devices;
+    desired_devices.push_back(device_id_);
+    encode_packed_fixed64(subscription_msg, 1, desired_devices);
     
-    if (has_probe_data) {
-      // WITH probe data: Fields start at 1
-      std::vector<uint8_t> probe_data;
-      // Include the raw 8 bytes from BLE temp characteristic
-      probe_data.insert(probe_data.end(), temp_data_.begin(), temp_data_.begin() + 8);
-      // Add battery data (2 bytes) or pad with zeros
-      if (!battery_data_.empty() && battery_data_.size() >= 2) {
-        probe_data.insert(probe_data.end(), battery_data_.begin(), battery_data_.begin() + 2);
-      } else {
-        probe_data.push_back(0x00);
-        probe_data.push_back(0x00);
-      }
-      // Pad to 16 bytes total
-      while (probe_data.size() < 16) {
-        probe_data.push_back(0x00);
-      }
-      encode_length_delimited(subscription_msg, 1, probe_data.data(), probe_data.size());
-      
-      // Field 2: status = 2
-      encode_varint_field(subscription_msg, 2, 2);
-      
-      // Field 3: username string
-      encode_string(subscription_msg, 3, "meater@esp32.local");
-      
-      // Field 4: device_model string
-      encode_string(subscription_msg, 4, "ESP32-C3");
-      
-      // Field 5: app_version string
-      encode_string(subscription_msg, 5, "4.6.3");
-      
-      // Field 6: unknown field string
-      encode_string(subscription_msg, 6, "14");
-    } else {
-      // WITHOUT probe data: Fields start at 1 (no probe data field shifts everything down)
-      // Field 1: status = 2
-      encode_varint_field(subscription_msg, 1, 2);
-      
-      // Field 2: username string (was field 3 when probe data present)
-      encode_string(subscription_msg, 2, "meater@esp32.local");
-      
-      // Field 3: device_model string (was field 4)
-      encode_string(subscription_msg, 3, "ESP32-C3");
-      
-      // Field 4: app_version string (was field 5)
-      encode_string(subscription_msg, 4, "4.6.3");
-      
-      // Field 5: unknown field string (was field 6)
-      encode_string(subscription_msg, 5, "14");
-    }
+    // Field 2: clientType (MasterType enum)
+    // From MasterType.java: MASTER_TYPE_BLOCK = 0, MASTER_TYPE_IOS = 1, MASTER_TYPE_ANDROID = 2
+    // Using MASTER_TYPE_BLOCK (0) since we're emulating a MEATER Block
+    encode_varint_field(subscription_msg, 2, 0);  // MASTER_TYPE_BLOCK
+    
+    // Field 3: emailAddress (String) - optional, leave empty
+    encode_string(subscription_msg, 3, "");
+    
+    // Field 4: deviceInfo (String) - device model
+    encode_string(subscription_msg, 4, "ESP32-C3");
+    
+    // Field 5: appVersion (String) - app version
+    encode_string(subscription_msg, 5, "4.6.3");
+    
+    // Field 6: osVersion (String) - OS version
+    encode_string(subscription_msg, 6, "ESPHome");
     
     // Encode the entire SubscriptionMessage as Field 2 of the main packet
     encode_length_delimited(packet, 2, subscription_msg.data(), subscription_msg.size());
     
     ESP_LOGD("meater_udp", "Built packet: %d bytes, seq=%u, deviceID=0x%016llx", 
              packet.size(), sequence_number_, (unsigned long long)device_id_);
-    if (has_probe_data) {
-      ESP_LOGD("meater_udp", "Probe data included: %d bytes temp, %d bytes battery", 
-               (int)temp_data_.size(), (int)battery_data_.size());
-    } else {
-      ESP_LOGD("meater_udp", "No probe data (waiting for initial temp reading)");
-    }
   }
 };
 
