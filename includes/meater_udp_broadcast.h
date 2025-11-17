@@ -320,7 +320,7 @@ class MeaterUDPBroadcaster {
       
       // Calculate temperatures in Celsius * 16 (as per protocol)
       int32_t tip_temp = tip_raw + 8;  // Raw value already includes offset
-      int32_t ambient_temp = tip_raw + std::max(0, (((ra_raw - std::min(48, oa_raw)) * 16 * 589)) / 1487) + 8;
+      int32_t ambient_temp = tip_raw + std::max(0, (((ra_raw - std::min((uint16_t)48, oa_raw)) * 16 * 589)) / 1487) + 8;
       
       encode_sint32_field(out, 1, tip_temp);        // internalTemperature
       encode_sint32_field(out, 2, ambient_temp);    // ambientTemperature
