@@ -15,26 +15,40 @@
 #define MEATER_LINK_UDP_PORT 7878
 
 // MEATER Block UDP broadcaster and listener with protobuf wire format encoding
-// Based on MEATER Link protocol reverse engineering and network captures
+// Based on MEATER Link protocol from decompiled app analysis
 //
-// Protocol Details:
+// Protocol Details (CORRECTED from decompiled Java code):
 // - Uses Protocol Buffers (protobuf) wire format encoding
-// - Broadcasts 79-byte packets on UDP port 7878
+// - Broadcasts on UDP port 7878
 // - Listens for incoming packets on same port (bidirectional)
-// - Main message structure:
-//   Field 1: MeaterLinkHeader (timestamp_ms, sequence, version, etc.)
-//   Field 2: MLDevice (device_id[16], connection_state, temps, battery)
-//   Field 3: username string
-//   Field 4: device_model string
-//   Field 5: app_version string
-//   Field 6: unknown field string
+//
+// Correct Message Structure (MeaterLinkMessage):
+//   Field 1: MeaterLinkHeader (REQUIRED)
+//     - meaterLinkIdentifier: 21578 (UINT32, NOT a timestamp!)
+//     - versionMajor: 2 (UINT32)
+//     - versionMinor: 1 (UINT32)
+//     - messageNumber: sequence counter (UINT32)
+//     - deviceID: FIXED64 (8 bytes, from ESP32 MAC)
+//
+//   Field 3: MasterMessage (REQUIRED for Block broadcasts)
+//     - masterType: 0 = MASTER_TYPE_BLOCK (enum)
+//     - cloudConnectionState: 0 = CLOUD_CONNECTION_STATE_DISABLED (enum)
+//     - devices: repeated MLDevice
+//       - identifier: FIXED64 (8 bytes)
+//       - probeNumber: UINT32 (0)
+//       - chargeState: ChargeState (chargingStatus, batteryLevelPercent, batteryMinutesRemaining)
+//       - connectionState: 1 = CONNECTION_STATE_CONNECTED (enum)
+//       - connectionType: 0 = BLE (enum)
+//       - block: MLBlock (optional)
+//         - ambientTemperature: SINT32 (celsius * 16, ZigZag encoded)
+//         - macAddress: FIXED64 (8 bytes)
 //
 // Protobuf wire types:
 // - 0: Varint (int32, int64, uint32, uint64, bool, enum)
 // - 1: 64-bit (fixed64, double)
 // - 2: Length-delimited (string, bytes, embedded messages)
 //
-// Credits: Protocol research from https://github.com/nathanfaber/meaterble
+// Credits: Protocol research from decompiled MEATER app v3protobuf classes
 class MeaterUDPBroadcaster {
  public:
   MeaterUDPBroadcaster() : 
@@ -42,13 +56,14 @@ class MeaterUDPBroadcaster {
     device_name_("MEATER"),
     last_broadcast_time_(0),
     broadcast_interval_ms_(5000),  // Broadcast every 5 seconds (matching app behavior)
-    sequence_number_(0) {
+    sequence_number_(0),
+    device_id_(0),  // Initialize to 0, will be set from MAC in setup()
+    ambient_temp_raw_(0),
+    tip_temp_raw_(0),
+    battery_percent_(0) {
     
     temp_data_.resize(8, 0);
     battery_data_.resize(2, 0);
-    
-    // Initialize device_id with default pattern (will be properly generated in setup())
-    memset(device_id_, 0xAA, 16);
   }
   
   ~MeaterUDPBroadcaster() {
@@ -60,6 +75,9 @@ class MeaterUDPBroadcaster {
   void setup() {
     ESP_LOGI("meater_udp", "Setting up UDP broadcaster/listener on port %d", MEATER_LINK_UDP_PORT);
     ESP_LOGI("meater_udp", "Device name: %s", device_name_.c_str());
+    
+    // Generate device ID from MAC address
+    generate_device_id();
     
     // Create UDP socket
     udp_socket_ = ::socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
@@ -107,20 +125,36 @@ class MeaterUDPBroadcaster {
     }
     
     ESP_LOGI("meater_udp", "UDP broadcaster/listener started successfully");
-    ESP_LOGI("meater_udp", "Device ID: %02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
-             device_id_[0], device_id_[1], device_id_[2], device_id_[3],
-             device_id_[4], device_id_[5], device_id_[6], device_id_[7],
-             device_id_[8], device_id_[9], device_id_[10], device_id_[11],
-             device_id_[12], device_id_[13], device_id_[14], device_id_[15]);
+    ESP_LOGI("meater_udp", "Device ID (FIXED64): 0x%016llx", (unsigned long long)device_id_);
   }
   
   void update_temp_data(const std::vector<uint8_t>& data) {
     temp_data_ = data;
+    
+    // Extract temperature values from the 8-byte MEATER protocol data
+    if (data.size() >= 8) {
+      // Bytes 0-1: Tip temperature (little-endian, value * 16 to get celsius)
+      tip_temp_raw_ = (int16_t)((data[1] << 8) | data[0]);
+      
+      // Bytes 2-3: Ambient temperature (little-endian, value * 16 to get celsius)
+      ambient_temp_raw_ = (int16_t)((data[3] << 8) | data[2]);
+      
+      ESP_LOGD("meater_udp", "Temps updated - Tip: %d (%.1f°C), Ambient: %d (%.1f°C)", 
+               tip_temp_raw_, tip_temp_raw_ / 16.0, 
+               ambient_temp_raw_, ambient_temp_raw_ / 16.0);
+    }
+    
     broadcast_data();
   }
   
   void update_battery_data(const std::vector<uint8_t>& data) {
     battery_data_ = data;
+    
+    // Extract battery percentage from 2-byte data
+    if (data.size() >= 2) {
+      battery_percent_ = data[0];  // First byte is battery percentage
+      ESP_LOGD("meater_udp", "Battery updated: %d%%", battery_percent_);
+    }
   }
   
   void set_device_name(const std::string& name) {
@@ -200,29 +234,40 @@ class MeaterUDPBroadcaster {
   std::vector<uint8_t> battery_data_;
   unsigned long last_broadcast_time_;
   unsigned long broadcast_interval_ms_;
-  uint64_t sequence_number_;
-  uint8_t device_id_[16];  // 16-byte device identifier
+  uint32_t sequence_number_;
+  uint64_t device_id_;  // 8-byte device identifier (FIXED64)
+  int16_t ambient_temp_raw_;  // Ambient temperature raw value (celsius * 16)
+  int16_t tip_temp_raw_;      // Tip temperature raw value (celsius * 16)
+  uint8_t battery_percent_;   // Battery percentage (0-100)
   
-  // Generate 16-byte device ID from ESP32 MAC address
+  // Generate 8-byte device ID from ESP32 MAC address (FIXED64)
   void generate_device_id() {
     uint8_t mac[6];
     esp_err_t ret = esp_wifi_get_mac(WIFI_IF_STA, mac);
     
     if (ret != ESP_OK) {
       ESP_LOGW("meater_udp", "Failed to get MAC address, using default device ID");
-      // Use a default pattern if MAC read fails
-      memset(device_id_, 0xAA, 16);
+      device_id_ = 0xAAAAAAAAAAAAAAAAULL;
       return;
     }
     
-    // Create 16-byte device ID from 6-byte MAC
-    // Pattern: MAC[6] + MAC[6] + (MAC[0]^MAC[1]) + (MAC[2]^MAC[3]) + (MAC[4]^MAC[5]) + 0x00
-    memcpy(device_id_, mac, 6);
-    memcpy(device_id_ + 6, mac, 6);
-    device_id_[12] = mac[0] ^ mac[1];
-    device_id_[13] = mac[2] ^ mac[3];
-    device_id_[14] = mac[4] ^ mac[5];
-    device_id_[15] = 0x00;
+    // Create 8-byte device ID from 6-byte MAC
+    // Format: MAC[6 bytes] + CRC16 or hash of MAC[2 bytes]
+    // Simple approach: MAC + XOR checksum
+    device_id_ = 0;
+    device_id_ |= ((uint64_t)mac[0] << 56);
+    device_id_ |= ((uint64_t)mac[1] << 48);
+    device_id_ |= ((uint64_t)mac[2] << 40);
+    device_id_ |= ((uint64_t)mac[3] << 32);
+    device_id_ |= ((uint64_t)mac[4] << 24);
+    device_id_ |= ((uint64_t)mac[5] << 16);
+    // Last 2 bytes: XOR of all MAC bytes
+    uint8_t xor_byte = mac[0] ^ mac[1] ^ mac[2] ^ mac[3] ^ mac[4] ^ mac[5];
+    device_id_ |= ((uint64_t)xor_byte << 8);
+    device_id_ |= (uint64_t)xor_byte;
+    
+    ESP_LOGI("meater_udp", "Generated device ID from MAC: %02x:%02x:%02x:%02x:%02x:%02x -> 0x%016llx",
+             mac[0], mac[1], mac[2], mac[3], mac[4], mac[5], (unsigned long long)device_id_);
   }
   
   // Check for incoming UDP packets (non-blocking)
@@ -284,6 +329,13 @@ class MeaterUDPBroadcaster {
     out.push_back((uint8_t)value);
   }
   
+  // Encode SINT32 using ZigZag encoding
+  void encode_sint32_zigzag(std::vector<uint8_t>& out, int32_t value) {
+    // ZigZag encoding: (n << 1) ^ (n >> 31)
+    uint32_t zigzag = (uint32_t)((value << 1) ^ (value >> 31));
+    encode_varint(out, zigzag);
+  }
+  
   // Encode field header (field number + wire type)
   void encode_field_header(std::vector<uint8_t>& out, uint32_t field_number, uint32_t wire_type) {
     encode_varint(out, (field_number << 3) | wire_type);
@@ -297,7 +349,13 @@ class MeaterUDPBroadcaster {
     out.insert(out.end(), data, data + len);
   }
   
-  // Encode length-delimited string field
+  // Encode length-delimited field from vector
+  void encode_length_delimited(std::vector<uint8_t>& out, uint32_t field_number,
+                               const std::vector<uint8_t>& data) {
+    encode_length_delimited(out, field_number, data.data(), data.size());
+  }
+  
+  // Encode string field
   void encode_string(std::vector<uint8_t>& out, uint32_t field_number, const char* str) {
     encode_length_delimited(out, field_number, (const uint8_t*)str, strlen(str));
   }
@@ -318,42 +376,94 @@ class MeaterUDPBroadcaster {
     encode_varint(out, value);
   }
   
-  // Build complete protobuf packet (79 bytes)
+  // Encode SINT32 field with ZigZag encoding
+  void encode_sint32_field(std::vector<uint8_t>& out, uint32_t field_number, int32_t value) {
+    encode_field_header(out, field_number, 0);  // Wire type 0 = varint
+    encode_sint32_zigzag(out, value);
+  }
+  
+  // Build complete protobuf packet following MEATER Link protocol
   void build_protobuf_packet(std::vector<uint8_t>& packet) {
     packet.clear();
-    
-    // Get current timestamp in milliseconds
-    uint64_t timestamp_ms = millis();
     
     // Increment sequence number
     sequence_number_++;
     
-    // Field 1: MeaterLinkHeader (length-delimited)
+    // ========== Field 1: MeaterLinkHeader (REQUIRED) ==========
     std::vector<uint8_t> header;
-    encode_varint_field(header, 1, timestamp_ms);           // field 1: timestamp_ms
-    encode_varint_field(header, 2, sequence_number_);       // field 2: sequence
-    encode_varint_field(header, 3, 7);                      // field 3: version = 7
-    encode_varint_field(header, 4, 3);                      // field 4: unknown1 = 3
-    encode_fixed64(header, 5, 0x47d87193396eac16ULL);       // field 5: unknown2 (from capture)
-    encode_length_delimited(packet, 1, header.data(), header.size());
+    encode_varint_field(header, 1, 21578);              // Field 1: meaterLinkIdentifier = 21578 (NOT timestamp!)
+    encode_varint_field(header, 2, 2);                  // Field 2: versionMajor = 2
+    encode_varint_field(header, 3, 1);                  // Field 3: versionMinor = 1
+    encode_varint_field(header, 4, sequence_number_);   // Field 4: messageNumber = sequence
+    encode_fixed64(header, 5, device_id_);              // Field 5: deviceID = FIXED64 (8 bytes from MAC)
+    encode_length_delimited(packet, 1, header);
     
-    // Field 2: MLDevice (length-delimited)
-    std::vector<uint8_t> device;
-    encode_length_delimited(device, 1, device_id_, 16);  // field 1: device_id (16 bytes)
-    encode_varint_field(device, 2, 2);                   // field 2: connection_state = 2 (connected)
-    encode_length_delimited(packet, 2, device.data(), device.size());
+    // ========== Field 3: MasterMessage (REQUIRED for Block broadcasts) ==========
+    std::vector<uint8_t> master_message;
     
-    // Field 3: username string
-    encode_string(packet, 3, "meater@esp32.local");
+    // MasterMessage Field 1: masterType = MASTER_TYPE_BLOCK (0)
+    encode_varint_field(master_message, 1, 0);
     
-    // Field 4: device_model string
-    encode_string(packet, 4, "ESP32-C3");
+    // MasterMessage Field 2: cloudConnectionState = CLOUD_CONNECTION_STATE_DISABLED (0)
+    encode_varint_field(master_message, 2, 0);
     
-    // Field 5: app_version string
-    encode_string(packet, 5, "4.6.3");
+    // MasterMessage Field 3: devices array (repeated MLDevice)
+    std::vector<uint8_t> ml_device;
     
-    // Field 6: unknown field string
-    encode_string(packet, 6, "14");
+    // === Build MLDevice ===
+    
+    // MLDevice Field 3: block (MLBlock) - optional but needed for MEATER Block
+    std::vector<uint8_t> ml_block;
+    
+    // MLBlock Field 2: ambientTemperature (SINT32, ZigZag encoded)
+    if (ambient_temp_raw_ != 0) {
+      encode_sint32_field(ml_block, 2, ambient_temp_raw_);
+    }
+    
+    // MLBlock Field 4: macAddress (FIXED64)
+    encode_fixed64(ml_block, 4, device_id_);
+    
+    // Add MLBlock to MLDevice
+    if (!ml_block.empty()) {
+      encode_length_delimited(ml_device, 3, ml_block);
+    }
+    
+    // MLDevice Field 5: identifier (FIXED64, REQUIRED)
+    encode_fixed64(ml_device, 5, device_id_);
+    
+    // MLDevice Field 6: probeNumber (UINT32, REQUIRED)
+    encode_varint_field(ml_device, 6, 0);  // Probe 0
+    
+    // MLDevice Field 7: chargeState (ChargeState message, REQUIRED)
+    std::vector<uint8_t> charge_state;
+    // ChargeState Field 1: chargingStatus = NOT_CHARGING (2)
+    encode_varint_field(charge_state, 1, 2);
+    // ChargeState Field 2: batteryLevelPercent (UINT32, REQUIRED)
+    encode_varint_field(charge_state, 2, battery_percent_);
+    // ChargeState Field 3: batteryMinutesRemaining (UINT32, REQUIRED)
+    encode_varint_field(charge_state, 3, 0);  // Unknown/not applicable
+    encode_length_delimited(ml_device, 7, charge_state);
+    
+    // MLDevice Field 8: firmwareRevision (string, optional)
+    encode_string(ml_device, 8, "v1.0.0");
+    
+    // MLDevice Field 9: connectionState (enum, REQUIRED) = CONNECTION_STATE_CONNECTED (1)
+    encode_varint_field(ml_device, 9, 1);
+    
+    // MLDevice Field 10: connectionType (enum, REQUIRED) = BLE (0)
+    encode_varint_field(ml_device, 10, 0);
+    
+    // MLDevice Field 11: bleSignalLevel (SINT32, optional)
+    encode_sint32_field(ml_device, 11, -50);  // -50 dBm as example
+    
+    // Add MLDevice to MasterMessage devices array
+    encode_length_delimited(master_message, 3, ml_device);
+    
+    // Add MasterMessage to packet
+    encode_length_delimited(packet, 3, master_message);
+    
+    ESP_LOGD("meater_udp", "Built packet: %d bytes, seq=%u, deviceID=0x%016llx", 
+             packet.size(), sequence_number_, (unsigned long long)device_id_);
   }
 };
 
