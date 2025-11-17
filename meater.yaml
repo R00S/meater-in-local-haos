@@ -3,6 +3,7 @@ esphome:
   friendly_name: meater
   includes:
     - includes/meater_ble_server.h
+    - includes/meater_udp_broadcast.h
   on_boot:
     - priority: -10
       then:
@@ -12,6 +13,12 @@ esphome:
               id(meater_ble_server_ptr) = new MeaterBLEServer();
               ((MeaterBLEServer*)id(meater_ble_server_ptr))->set_device_name("MEATER");
               ((MeaterBLEServer*)id(meater_ble_server_ptr))->setup();
+            }
+            
+            // Start the UDP broadcaster for MEATER Link protocol
+            if (id(meater_udp_broadcast_ptr) == nullptr) {
+              id(meater_udp_broadcast_ptr) = new MeaterUDPBroadcast();
+              ((MeaterUDPBroadcast*)id(meater_udp_broadcast_ptr))->setup();
             }
 
 esp32:
@@ -93,6 +100,11 @@ sensor:
         ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_temp_data(x);
       }
       
+      // Forward raw data to UDP broadcaster
+      if (id(meater_udp_broadcast_ptr) != nullptr) {
+        ((MeaterUDPBroadcast*)id(meater_udp_broadcast_ptr))->update_temp_data(x);
+      }
+      
       // Calculate temperature for Home Assistant (existing functionality)
       uint16_t tip_temp = (x[0] + (x[1] << 8) + 8.0) / 16.0;
       return (float)tip_temp;
@@ -127,6 +139,11 @@ sensor:
       // Forward raw data to BLE server for phone app
       if (id(meater_ble_server_ptr) != nullptr) {
         ((MeaterBLEServer*)id(meater_ble_server_ptr))->update_battery_data(x);
+      }
+      
+      // Forward raw data to UDP broadcaster
+      if (id(meater_udp_broadcast_ptr) != nullptr) {
+        ((MeaterUDPBroadcast*)id(meater_udp_broadcast_ptr))->update_battery_data(x);
       }
       
       // Calculate battery percentage for Home Assistant (existing functionality)
@@ -181,9 +198,22 @@ sensor:
       
       return (float)x.size();
 
-# Global variable to store the BLE server instance
+# Global variables to store the BLE server and UDP broadcaster instances
 globals:
   - id: meater_ble_server_ptr
     type: void*
     restore_value: no
     initial_value: 'nullptr'
+  - id: meater_udp_broadcast_ptr
+    type: void*
+    restore_value: no
+    initial_value: 'nullptr'
+
+# Interval to call UDP broadcaster loop for handling packets
+interval:
+  - interval: 100ms
+    then:
+      - lambda: |-
+          if (id(meater_udp_broadcast_ptr) != nullptr) {
+            ((MeaterUDPBroadcast*)id(meater_udp_broadcast_ptr))->loop();
+          }

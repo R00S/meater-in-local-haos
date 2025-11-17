@@ -1,0 +1,29 @@
+syntax = "proto2";
+
+// MEATER Link Protocol Definition
+// Based on network capture analysis of MEATER app UDP broadcasts on port 7878
+
+message MeaterLinkHeader {
+  optional uint32 timestamp_ms = 1;      // Milliseconds since epoch
+  optional uint32 sequence = 2;          // Sequence number
+  optional uint32 version = 3;           // Protocol version
+  optional uint32 unknown1 = 4;          // Unknown field (value: 3)
+  optional double unknown2 = 5;          // Unknown double field
+}
+
+message MLDevice {
+  optional bytes device_id = 1;          // 16-byte unique device identifier
+  optional uint32 connection_state = 2;  // Connection state (2 = connected)
+  optional string username = 3;          // User account identifier
+  optional string device_model = 4;      // Device model (e.g., "TCL T702D")
+  optional string app_version = 5;       // App version (e.g., "4.6.3")
+  optional string unknown_field = 6;     // Unknown string field
+  optional float tip_temp = 7;           // Tip temperature in Celsius
+  optional float ambient_temp = 8;       // Ambient temperature in Celsius
+  optional uint32 battery_level = 9;     // Battery level percentage
+}
+
+message MeaterLinkMessage {
+  optional MeaterLinkHeader header = 1;  // Message header with metadata
+  optional MLDevice device = 2;          // Device/probe data
+}
