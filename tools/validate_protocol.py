@@ -123,8 +123,8 @@ class JavaCodeInterpreter:
             'decode_logic': []
         }
         
-        # Find the ProtoAdapter decode method
-        decode_pattern = r'public\s+\w+\s+\w*decode\(ProtoReader\s+protoReader\)\s*\{(.*?)\n\s+\}'
+        # Find the ProtoAdapter decode method - use lookahead to find method boundaries better
+        decode_pattern = r'public\s+\w+\s+\w*decode\(ProtoReader\s+protoReader\)\s*\{(.*?)(?=\n\s+public|\n\s+private|\Z)'
         decode_match = re.search(decode_pattern, java_content, re.DOTALL)
         
         if not decode_match:
@@ -132,14 +132,41 @@ class JavaCodeInterpreter:
             
         decode_body = decode_match.group(1)
         
-        # Find switch/case statements for field numbers
+        # Try to find switch/case statements first
         case_pattern = r'case\s+(\d+):\s*(.*?)break;'
         cases = re.findall(case_pattern, decode_body, re.DOTALL)
         
-        for field_num, case_body in cases:
-            field_info = self.parse_field_decode(field_num, case_body, class_name)
-            result['fields'][int(field_num)] = field_info
-            result['decode_logic'].append(field_info)
+        if cases:
+            # Found switch/case pattern
+            for field_num, case_body in cases:
+                field_info = self.parse_field_decode(field_num, case_body, class_name)
+                result['fields'][int(field_num)] = field_info
+                result['decode_logic'].append(field_info)
+        else:
+            # Try if/else pattern: if (nextTag == N) { ... } else if (nextTag == M) { ... }
+            # Handle both single-line and multi-line if statements
+            if_pattern = r'if\s*\(\s*nextTag\s*==\s*(\d+)\s*\)\s*\{([^}]*)\}'
+            if_matches = re.findall(if_pattern, decode_body, re.DOTALL)
+            
+            for field_num, if_body in if_matches:
+                # Skip the check for nextTag == -1 (end condition)
+                if field_num == "-1":
+                    continue
+                field_info = self.parse_field_decode(field_num, if_body, class_name)
+                result['fields'][int(field_num)] = field_info
+                result['decode_logic'].append(field_info)
+                
+            # Also check for final else clause which often handles the last field
+            # Pattern: } else if (nextTag != N) { ... } else { builder.fieldName(...) }
+            final_else_pattern = r'\}\s*else\s*if\s*\(\s*nextTag\s*!=\s*(\d+)\s*\)\s*\{[^}]*\}\s*else\s*\{([^}]*)\}'
+            final_else_match = re.search(final_else_pattern, decode_body, re.DOTALL)
+            if final_else_match:
+                # The != N means the else handles field N
+                field_num = final_else_match.group(1)
+                else_body = final_else_match.group(2)
+                field_info = self.parse_field_decode(field_num, else_body, class_name)
+                result['fields'][int(field_num)] = field_info
+                result['decode_logic'].append(field_info)
             
         # Find required fields from Builder.build() method
         build_pattern = r'if\s*\((.*?)\s*!=\s*null.*?\)\s*\{.*?return.*?\}.*?throw\s+Internal\.missingRequiredFields\((.*?)\);'
