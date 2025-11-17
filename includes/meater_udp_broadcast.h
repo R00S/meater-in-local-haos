@@ -44,8 +44,9 @@
 // CRITICAL: All strings and probe data are SUB-FIELDS of Field 2 (SubscriptionMessage),
 //           NOT separate top-level fields! This is why Field 2 is 38-56 bytes.
 //
-// Note: Actual captures show Field 2 is used (NOT Field 3/MasterMessage)
+// Note [OBSOLETE]: Actual captures show Field 2 is used (NOT Field 3/MasterMessage)
 //       despite Java protobuf classes suggesting MasterMessage structure.
+//       This note is obsolete - the implementation uses custom Field 2 structure.
 //
 // Protobuf wire types:
 // - 0: Varint (int32, int64, uint32, uint64, bool, enum)
