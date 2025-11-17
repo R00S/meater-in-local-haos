@@ -25,8 +25,8 @@
 // Correct Message Structure (from actual MEATER app broadcasts):
 //   Field 1: MeaterLinkHeader (REQUIRED)
 //     - meaterLinkIdentifier: 21578 (UINT32, from MeaterLinkHeader.java DEFAULT)
-//     - versionMajor: 2 (UINT32)
-//     - versionMinor: 1 (UINT32)
+//     - versionMajor: 17 (UINT32, from network captures)
+//     - versionMinor: 7 (UINT32, from network captures)
 //     - messageNumber: sequence counter (UINT32)
 //     - deviceID: FIXED64 (8 bytes, from ESP32 MAC)
 //
@@ -398,8 +398,8 @@ class MeaterUDPBroadcaster {
     // ========== Field 1: MeaterLinkHeader (REQUIRED) ==========
     std::vector<uint8_t> header;
     encode_varint_field(header, 1, 21578);              // Field 1: meaterLinkIdentifier = 21578 (from MeaterLinkHeader.java)
-    encode_varint_field(header, 2, 2);                  // Field 2: versionMajor = 2
-    encode_varint_field(header, 3, 1);                  // Field 3: versionMinor = 1
+    encode_varint_field(header, 2, 17);                 // Field 2: versionMajor = 17 (from network captures)
+    encode_varint_field(header, 3, 7);                  // Field 3: versionMinor = 7 (from network captures)
     encode_varint_field(header, 4, sequence_number_);   // Field 4: messageNumber = sequence
     encode_fixed64(header, 5, device_id_);              // Field 5: deviceID = FIXED64 (8 bytes from MAC)
     encode_length_delimited(packet, 1, header);
