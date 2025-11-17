@@ -1,0 +1,133 @@
+# UDP Capture Analysis - MEATER Link Protocol
+
+This document contains tcpdump analysis showing the difference between the old simple packet format and the new protobuf format.
+
+## Network Setup
+- ESP32 IP: 192.168.1.178
+- MEATER App IP: 192.168.1.217
+- UDP Port: 7878 (MEATER_LINK_UDP_PORT)
+- Protocol: UDP broadcast to x.x.x.255
+
+## Old Format (Simple 24-byte packet)
+
+### Packet Structure
+```
+Offset | Length | Description
+-------|--------|-------------
+0      | 13     | Device name: "MEATER Block\0"
+13     | 1      | Probe ID: 0x01
+14     | 8      | Raw temperature data (from BLE characteristic)
+22     | 2      | Raw battery data (from BLE characteristic)
+```
+
+### Example Hex Dump (24 bytes)
+```
+4d 45 41 54 45 52 20 42 6c 6f 63 6b 00 01
+XX XX XX XX XX XX XX XX
+YY YY
+```
+
+Where:
+- `4d 45 41 54 45 52 20 42 6c 6f 63 6b 00` = "MEATER Block\0"
+- `01` = Probe #1
+- `XX XX XX XX XX XX XX XX` = 8 bytes temperature data
+- `YY YY` = 2 bytes battery data
+
+## New Format (Protobuf 79-byte packet)
+
+### MEATER App Broadcast Example (from tcpdump)
+
+Source: 192.168.1.217:7878 → 192.168.1.255:7878
+
+**Hex dump (79 bytes):**
+```
+0a 13 08 ca a8 01 10 11 18 07 20 03 29 47 d8 71 93 39 ac 16 6e
+12 38 0a 10 4c 0b 82 35 23 a3 98 ea 38 6c a8 5e d2 48 6d 44 10 02
+1a 0c 72 6f 6f 73 40 72 6f 6f 73 2e 74 63
+22 09 54 43 4c 20 54 37 30 32 44
+2a 05 34 2e 36 2e 33
+32 02 31 34
+```
+
+### Protobuf Field Breakdown
+
+#### Field 1 (0a 13): MeaterLinkHeader - 19 bytes
+```
+0a          = Field 1, wire type 2 (length-delimited)
+13          = Length: 19 bytes
+  08 ca a8 01   = Field 1 (varint): timestamp_ms = 21,194
+  10 11         = Field 2 (varint): sequence = 17
+  18 07         = Field 3 (varint): version = 7
+  20 03         = Field 4 (varint): unknown1 = 3
+  29 47 d8 71 93 39 ac 16 6e  = Field 5 (fixed64): unknown2 = 0x47d87193396eac16
+```
+
+#### Field 2 (12 38): MLDevice - 56 bytes
+```
+12          = Field 2, wire type 2 (length-delimited)
+38          = Length: 56 bytes
+  0a 10     = Field 1, wire type 2, length 16
+    4c 0b 82 35 23 a3 98 ea 38 6c a8 5e d2 48 6d 44  = device_id (16 bytes)
+  10 02     = Field 2 (varint): connection_state = 2 (connected)
+  [Additional fields: temperature, battery, signal strength, etc.]
+```
+
+#### Field 3 (1a 0c): Username - 12 bytes
+```
+1a          = Field 3, wire type 2 (length-delimited)
+0c          = Length: 12 bytes
+  72 6f 6f 73 40 72 6f 6f 73 2e 74 63  = "roos@roos.tc"
+```
+
+#### Field 4 (22 09): Device Model - 9 bytes
+```
+22          = Field 4, wire type 2 (length-delimited)
+09          = Length: 9 bytes
+  54 43 4c 20 54 37 30 32 44  = "TCL T702D"
+```
+
+#### Field 5 (2a 05): App Version - 5 bytes
+```
+2a          = Field 5, wire type 2 (length-delimited)
+05          = Length: 5 bytes
+  34 2e 36 2e 33  = "4.6.3"
+```
+
+#### Field 6 (32 02): Unknown Field - 2 bytes
+```
+32          = Field 6, wire type 2 (length-delimited)
+02          = Length: 2 bytes
+  31 34  = "14"
+```
+
+## Protobuf Wire Types
+
+| Type | Name            | Used For                           |
+|------|-----------------|------------------------------------|
+| 0    | Varint          | int32, int64, uint32, uint64, bool |
+| 1    | 64-bit          | fixed64, double                    |
+| 2    | Length-delimited| string, bytes, embedded messages   |
+| 3    | Start group     | (deprecated)                       |
+| 4    | End group       | (deprecated)                       |
+| 5    | 32-bit          | fixed32, float                     |
+
+## ESP32 Implementation
+
+Our implementation generates similar 79-byte packets with:
+- Custom device_id derived from ESP32 MAC address
+- Username: "meater@esp32.local"
+- Device model: "ESP32-C3"
+- App version: "4.6.3"
+- Sequence number auto-incremented
+- Timestamp in milliseconds from boot
+
+## Broadcast Timing
+
+- **Old format**: Every 1 second
+- **New format**: Every 5 seconds (matches MEATER app behavior)
+- **Polling**: Every 100ms for incoming packets
+
+## References
+
+- Protocol research: https://github.com/nathanfaber/meaterble
+- Protobuf encoding: https://developers.google.com/protocol-buffers/docs/encoding
