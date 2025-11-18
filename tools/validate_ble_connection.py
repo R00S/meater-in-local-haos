@@ -53,6 +53,10 @@ try:
     BLEAK_AVAILABLE = True
 except ImportError:
     BLEAK_AVAILABLE = False
+    # Create dummy types for simulation mode
+    BleakClient = Any
+    BLEDevice = Any
+    BleakGATTCharacteristic = Any
     print("WARNING: bleak library not installed. Install with: pip install bleak")
     print("         Running in simulation-only mode.")
 
