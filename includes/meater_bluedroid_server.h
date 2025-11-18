@@ -98,6 +98,9 @@ private:
     bool temp_notify_enabled_;
     bool battery_notify_enabled_;
     
+    // Service creation counter
+    int service_creation_count_;
+    
     // Static instance pointer for callbacks
     static MeaterBluedroidServer* instance_;
     
@@ -266,31 +269,32 @@ private:
     void handle_service_created(esp_ble_gatts_cb_param_t *param) {
         uint16_t service_handle = param->create.service_handle;
         
-        // Check which service was created
-        if (param->create.uuid.len == ESP_UUID_LEN_128) {
-            // MEATER service
+        // Track which service was created based on creation order
+        // Order: MEATER (0), Device Info (1), GAP (2)
+        if (service_creation_count_ == 0) {
+            // MEATER service (first created, 128-bit UUID)
             meater_service_handle_ = service_handle;
             esp_ble_gatts_start_service(service_handle);
             
             // Add temperature characteristic
             add_temperature_char();
-        } else if (param->create.uuid.len == ESP_UUID_LEN_16) {
-            if (param->create.uuid.uuid.uuid16 == DEVICE_INFO_SERVICE_UUID) {
-                // Device Information service
-                device_info_service_handle_ = service_handle;
-                esp_ble_gatts_start_service(service_handle);
-                
-                // Add firmware characteristic
-                add_firmware_char();
-            } else if (param->create.uuid.uuid.uuid16 == GAP_SERVICE_UUID) {
-                // GAP service
-                gap_service_handle_ = service_handle;
-                esp_ble_gatts_start_service(service_handle);
-                
-                // Add device name characteristic
-                add_device_name_char();
-            }
+        } else if (service_creation_count_ == 1) {
+            // Device Information service (second created, 16-bit UUID)
+            device_info_service_handle_ = service_handle;
+            esp_ble_gatts_start_service(service_handle);
+            
+            // Add firmware characteristic
+            add_firmware_char();
+        } else if (service_creation_count_ == 2) {
+            // GAP service (third created, 16-bit UUID)
+            gap_service_handle_ = service_handle;
+            esp_ble_gatts_start_service(service_handle);
+            
+            // Add device name characteristic
+            add_device_name_char();
         }
+        
+        service_creation_count_++;
     }
     
     void add_temperature_char() {
@@ -387,7 +391,8 @@ public:
         model_char_handle_(0),
         device_name_char_handle_(0),
         temp_notify_enabled_(false),
-        battery_notify_enabled_(false) {
+        battery_notify_enabled_(false),
+        service_creation_count_(0) {
         
         // Initialize data
         memset(temp_data_, 0, sizeof(temp_data_));
