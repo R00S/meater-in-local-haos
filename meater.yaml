@@ -7,9 +7,11 @@ esphome:
   on_boot:
     # Priority -100 ensures this runs late in boot, after BLE stack is fully ready
     # Lower priority = runs later (WiFi connects at -100, so we run after that)
-    priority: -10
+    priority: -100
     then:
-      - delay: 1s  # Short delay to ensure Bluedroid is stable
+      - delay: 2s  # Delay to ensure Bluedroid is stable
+      - lambda: |-
+          ESP_LOGI("meater", "Boot sequence: on_boot triggered, about to init BLE server");
       - script.execute: init_ble_server
 
 esp32:

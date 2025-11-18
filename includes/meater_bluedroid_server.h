@@ -431,6 +431,14 @@ public:
         // NOTE: BT controller and Bluedroid initialization is handled by esp32_ble_tracker component
         // We only need to register our GATT server callbacks
         
+        // Verify Bluedroid is enabled and initialized
+        if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
+            ESP_LOGE("meater_ble_server", "Bluedroid is not enabled! Status: %d", esp_bluedroid_get_status());
+            ESP_LOGE("meater_ble_server", "esp32_ble_tracker should have initialized Bluedroid");
+            return false;
+        }
+        ESP_LOGI("meater_ble_server", "✓ Bluedroid is enabled and ready");
+        
         // Register GAP callback
         esp_err_t ret = esp_ble_gap_register_callback(gap_event_handler);
         if (ret) {
