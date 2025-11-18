@@ -81,16 +81,16 @@ script:
       - lambda: |-
           static bool udp_initialized = false;
           if (!udp_initialized && id(udp_broadcaster_ptr) == nullptr) {
-            ESP_LOGI("meater", "Initializing UDP broadcaster with device name: MEATER+");
+            ESP_LOGI("meater", "Initializing UDP broadcaster with device name: MEATER");
             static MeaterUDPBroadcaster* udp_broadcaster = new MeaterUDPBroadcaster();
-            udp_broadcaster->set_device_name("MEATER+");
+            udp_broadcaster->set_device_name("MEATER");
             udp_broadcaster->setup();
             id(udp_broadcaster_ptr) = (void*)udp_broadcaster;
             udp_initialized = true;
             
             // Set initial mock firmware and device name
-            id(meater_firmware).publish_state("v1.0.5_128");
-            id(meater_device_name_display).publish_state("MEATER+");
+            id(meater_firmware).publish_state("v1.0.4_0");
+            id(meater_device_name_display).publish_state("MEATER");
           }
   
   - id: init_ble_server
@@ -98,12 +98,12 @@ script:
       - lambda: |-
           static bool ble_initialized = false;
           if (!ble_initialized && id(ble_server_ptr) == nullptr) {
-            ESP_LOGI("meater", "Initializing MEATER+ BLE server (Bluedroid)");
+            ESP_LOGI("meater", "Initializing MEATER BLE server (Bluedroid)");
             static MeaterBluedroidServer* ble_server = new MeaterBluedroidServer();
             if (ble_server->setup()) {
               id(ble_server_ptr) = (void*)ble_server;
               ble_initialized = true;
-              ESP_LOGI("meater", "MEATER+ BLE server started successfully");
+              ESP_LOGI("meater", "MEATER BLE server started successfully");
             } else {
               ESP_LOGE("meater", "Failed to initialize BLE server");
             }

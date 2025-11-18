@@ -12,9 +12,10 @@
 #include <nvs_flash.h>
 #include <string.h>
 
-// MEATER+ Device Emulation using Bluedroid
-// Probe Number: 128
-// Device Name: "MEATER+"
+// MEATER Probe Emulation using Bluedroid
+// This emulates a standalone MEATER probe (not MEATER+ or Block)
+// Probe Number: 0 (standalone/singleton probe)
+// Device Name: "MEATER"
 
 // UUIDs (stored in reverse byte order for ESP32)
 // MEATER Service: a75cc7fc-c956-488f-ac2a-2dbc08b63a04
@@ -59,9 +60,9 @@ static const uint16_t GAP_SERVICE_UUID = 0x1800;
 // Device Name UUID: 0x2A00
 static const uint16_t DEVICE_NAME_CHAR_UUID = 0x2A00;
 
-// MEATER+ firmware version (probe number 0 for singleton/standalone probes)
-static const char* MEATER_PLUS_FIRMWARE = "v1.0.5_0";
-static const char* MEATER_PLUS_NAME = "MEATER+";
+// MEATER firmware version (probe number 0 for singleton/standalone probes)
+static const char* MEATER_FIRMWARE = "v1.0.4_0";
+static const char* MEATER_NAME = "MEATER";
 static const char* MANUFACTURER_NAME = "Apption Labs";
 static const char* MODEL_NUMBER = "MEATER";
 
@@ -135,7 +136,7 @@ private:
                 break;
             case ESP_GAP_BLE_ADV_START_COMPLETE_EVT:
                 if (param->adv_start_cmpl.status == ESP_BT_STATUS_SUCCESS) {
-                    ESP_LOGI("meater_ble_server", "✓ Advertising started successfully - Device should be visible as 'MEATER+'");
+                    ESP_LOGI("meater_ble_server", "✓ Advertising started successfully - Device should be visible as 'MEATER'");
                 } else {
                     ESP_LOGE("meater_ble_server", "✗ Advertising start failed with status: %d", param->adv_start_cmpl.status);
                 }
@@ -159,7 +160,7 @@ private:
                 gatts_if_ = gatts_if;
                 
                 // Set device name
-                esp_ble_gap_set_device_name(MEATER_PLUS_NAME);
+                esp_ble_gap_set_device_name(MEATER_NAME);
                 
                 // Configure advertising data
                 configure_advertising();
@@ -219,7 +220,7 @@ private:
         
         static uint8_t manufacturer_data[24] = {
             0x7B, 0x03,  // Company ID: 0x037B (Apption Labs)
-            0x80, 0x00,  // Device type indicator (0x80 for MEATER+)
+            0x00, 0x00,  // Device type indicator (0x00 for regular MEATER)
             // Rest filled with zeros
             0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
             0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -338,8 +339,8 @@ private:
         
         esp_attr_value_t attr_val;
         attr_val.attr_max_len = 32;
-        attr_val.attr_len = strlen(MEATER_PLUS_FIRMWARE);
-        attr_val.attr_value = (uint8_t*)MEATER_PLUS_FIRMWARE;
+        attr_val.attr_len = strlen(MEATER_FIRMWARE);
+        attr_val.attr_value = (uint8_t*)MEATER_FIRMWARE;
         
         esp_ble_gatts_add_char(device_info_service_handle_, &char_uuid, permissions, properties, &attr_val, nullptr);
     }
@@ -354,8 +355,8 @@ private:
         
         esp_attr_value_t attr_val;
         attr_val.attr_max_len = 32;
-        attr_val.attr_len = strlen(MEATER_PLUS_NAME);
-        attr_val.attr_value = (uint8_t*)MEATER_PLUS_NAME;
+        attr_val.attr_len = strlen(MEATER_NAME);
+        attr_val.attr_value = (uint8_t*)MEATER_NAME;
         
         esp_ble_gatts_add_char(gap_service_handle_, &char_uuid, permissions, properties, &attr_val, nullptr);
     }
@@ -426,7 +427,7 @@ public:
     }
     
     bool setup() {
-        ESP_LOGI("meater_ble_server", "Setting up MEATER+ BLE server (Bluedroid)");
+        ESP_LOGI("meater_ble_server", "Setting up MEATER BLE server (Bluedroid)");
         
         // NOTE: BT controller and Bluedroid initialization is handled by esp32_ble_tracker component
         // We only need to register our GATT server callbacks
@@ -469,7 +470,7 @@ public:
         // Set MTU
         esp_ble_gatt_set_local_mtu(517);
         
-        ESP_LOGI("meater_ble_server", "MEATER+ BLE server setup complete");
+        ESP_LOGI("meater_ble_server", "MEATER BLE server setup complete");
         return true;
     }
     
