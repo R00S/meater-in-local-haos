@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="updates_notification_body">
+        <item quantity="one">Masz %d aktualizację do zainstalowania</item>
+        <item quantity="few">Masz %d aktualizacji do zainstalowania</item>
+        <item quantity="many">Masz %d aktualizacji do zainstalowania</item>
+        <item quantity="other">Masz %d aktualizacji do zainstalowania</item>
+    </plurals>
+</resources>

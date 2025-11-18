@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbal_swipe_recycler_coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <cm.aptoide.aptoideviews.swipe.AptoideSwipeRefresh
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:progressBackgroundColor="?attr/swipeBackgroundColor"
+        app:progressPrimaryColor="?attr/swipeProgressColor1"
+        app:progressSecondaryColor="?attr/swipeProgressColor2">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:paddingLeft="@dimen/recycler_margin"
+            android:paddingRight="@dimen/recycler_margin"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/recycler_margin"
+            android:paddingEnd="@dimen/recycler_margin"/>
+    </cm.aptoide.aptoideviews.swipe.AptoideSwipeRefresh>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_gravity="end|bottom"
+        android:id="@+id/fabAdd"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="?attr/penDrawable"/>
+    <include layout="@layout/app_bar_layout"/>
+    <cm.aptoide.aptoideviews.errors.ErrorView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/error_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"/>
+    <include layout="@layout/partial_view_progress_bar"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

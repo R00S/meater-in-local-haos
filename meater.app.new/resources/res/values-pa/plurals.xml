@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="updates_notification_body">
+        <item quantity="one">ਤੁਹਾਡੇ ਕੋਲ %d ਅਪਡੇਟ ਇੰਸਟਾਲ ਹੋਣ ਲਈ ਤਿਆਰ ਹੈ</item>
+        <item quantity="other">ਤੁਹਾਡੇ ਕੋਲ %d ਅਪਡੇਟ ਇੰਸਟਾਲ ਹੋਣ ਲਈ ਤਿਆਰ ਹਨ</item>
+    </plurals>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="updates_notification_body">
+        <item quantity="one">Hai %d aggiornamento pronto all&apos;installazione</item>
+        <item quantity="other">Hai %d aggiornamenti pronti all&apos;installazione</item>
+    </plurals>
+</resources>
