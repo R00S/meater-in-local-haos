@@ -125,17 +125,26 @@ private:
     void handle_gap_event(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) {
         switch (event) {
             case ESP_GAP_BLE_ADV_DATA_SET_COMPLETE_EVT:
-                ESP_LOGI("meater_ble_server", "Advertising data set complete");
-                esp_ble_gap_start_advertising(&adv_params_);
+                ESP_LOGI("meater_ble_server", "Advertising data set complete, starting advertising...");
+                {
+                    esp_err_t ret = esp_ble_gap_start_advertising(&adv_params_);
+                    if (ret != ESP_OK) {
+                        ESP_LOGE("meater_ble_server", "Start advertising failed: 0x%x", ret);
+                    }
+                }
                 break;
             case ESP_GAP_BLE_ADV_START_COMPLETE_EVT:
                 if (param->adv_start_cmpl.status == ESP_BT_STATUS_SUCCESS) {
-                    ESP_LOGI("meater_ble_server", "Advertising started successfully");
+                    ESP_LOGI("meater_ble_server", "✓ Advertising started successfully - Device should be visible as 'MEATER+'");
                 } else {
-                    ESP_LOGE("meater_ble_server", "Advertising start failed: %d", param->adv_start_cmpl.status);
+                    ESP_LOGE("meater_ble_server", "✗ Advertising start failed with status: %d", param->adv_start_cmpl.status);
                 }
                 break;
+            case ESP_GAP_BLE_SCAN_RSP_DATA_SET_COMPLETE_EVT:
+                ESP_LOGI("meater_ble_server", "Scan response data set complete");
+                break;
             default:
+                ESP_LOGD("meater_ble_server", "Unhandled GAP event: %d", event);
                 break;
         }
     }
@@ -199,6 +208,8 @@ private:
     }
     
     void configure_advertising() {
+        ESP_LOGI("meater_ble_server", "Configuring BLE advertising...");
+        
         // Advertising data
         static uint8_t service_uuid[16];
         memcpy(service_uuid, MEATER_SERVICE_UUID, 16);
@@ -226,7 +237,11 @@ private:
         adv_data_.p_service_uuid = service_uuid;
         adv_data_.flag = (ESP_BLE_ADV_FLAG_GEN_DISC | ESP_BLE_ADV_FLAG_BREDR_NOT_SPT);
         
-        esp_ble_gap_config_adv_data(&adv_data_);
+        ESP_LOGI("meater_ble_server", "Setting advertising data...");
+        esp_err_t ret = esp_ble_gap_config_adv_data(&adv_data_);
+        if (ret != ESP_OK) {
+            ESP_LOGE("meater_ble_server", "Config advertising data failed: 0x%x", ret);
+        }
         
         // Advertising parameters
         adv_params_.adv_int_min = 0x20;
@@ -235,6 +250,8 @@ private:
         adv_params_.own_addr_type = BLE_ADDR_TYPE_PUBLIC;
         adv_params_.channel_map = ADV_CHNL_ALL;
         adv_params_.adv_filter_policy = ADV_FILTER_ALLOW_SCAN_ANY_CON_ANY;
+        
+        ESP_LOGI("meater_ble_server", "Advertising configuration complete");
     }
     
     void create_services() {
@@ -408,11 +425,16 @@ public:
         // NOTE: BT controller and Bluedroid initialization is handled by esp32_ble_tracker component
         // We only need to register our GATT server callbacks
         
+        // Wait a bit for esp32_ble_tracker to finish initialization
+        vTaskDelay(pdMS_TO_TICKS(2000));
+        
         // Register GAP callback
         esp_err_t ret = esp_ble_gap_register_callback(gap_event_handler);
         if (ret) {
             ESP_LOGE("meater_ble_server", "GAP callback register failed: %d", ret);
             return false;
+        } else {
+            ESP_LOGI("meater_ble_server", "GAP callback registered successfully");
         }
         
         // Register GATTS callback
@@ -420,6 +442,8 @@ public:
         if (ret) {
             ESP_LOGE("meater_ble_server", "GATTS callback register failed: %d", ret);
             return false;
+        } else {
+            ESP_LOGI("meater_ble_server", "GATTS callback registered successfully");
         }
         
         // Register application
@@ -427,6 +451,8 @@ public:
         if (ret) {
             ESP_LOGE("meater_ble_server", "GATTS app register failed: %d", ret);
             return false;
+        } else {
+            ESP_LOGI("meater_ble_server", "GATTS app register initiated");
         }
         
         // Set MTU
