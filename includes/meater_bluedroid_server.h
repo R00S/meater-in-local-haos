@@ -9,6 +9,7 @@
 #include <esp_gap_ble_api.h>
 #include <esp_gatts_api.h>
 #include <esp_gatt_common_api.h>
+#include <nvs_flash.h>
 #include <string.h>
 
 // MEATER+ Device Emulation using Bluedroid
