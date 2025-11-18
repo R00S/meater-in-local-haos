@@ -9,6 +9,7 @@
 #include <esp_gap_ble_api.h>
 #include <esp_gatts_api.h>
 #include <esp_gatt_common_api.h>
+#include <esp_timer.h>
 #include <nvs_flash.h>
 #include <string.h>
 
@@ -423,7 +424,7 @@ private:
                 // This triggers the app to set datePaired field in database
                 if (!is_paired_) {
                     is_paired_ = true;
-                    pairing_timestamp_ = esp_timer_get_time() / 1000;  // milliseconds
+                    pairing_timestamp_ = millis();  // Use ESPHome's millis() instead
                     ESP_LOGI("meater_ble_server", "✓ Device paired! Timestamp: %llu", pairing_timestamp_);
                     ESP_LOGI("meater_ble_server", "App should now set datePaired field in database");
                 } else {
