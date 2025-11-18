@@ -1,0 +1,34 @@
+[
+  {
+    "type": "SCAN_INIT",
+    "source": "NearbyDevicesFragment.java:59",
+    "code": "private final x5.a serviceScanner = new x5.a();",
+    "description": "Initialize BLE scanner"
+  },
+  {
+    "type": "STATE_NO_DEVICE",
+    "source": "NearbyDevicesFragment.java:78",
+    "code": "public static final a f9857r = new a(\"NO_DEVICE_FOUND\", 1);",
+    "description": "State when no devices found"
+  },
+  {
+    "type": "STATE_DEVICES_FOUND",
+    "source": "NearbyDevicesFragment.java:81",
+    "code": "public static final a f9858s = new a(\"DEVICES_FOUND\", 2);",
+    "description": "State when devices are found"
+  },
+  {
+    "type": "CHECK_IS_PAIRED",
+    "source": "MEATERDevice.java:isPaired()",
+    "code": "public boolean isPaired() {\n        if (this.datePaired != null) {\n            return true;\n        }\n        return false;\n    }",
+    "description": "Check if device is paired",
+    "critical": true
+  },
+  {
+    "type": "DATE_PAIRED_FIELD",
+    "source": "MEATERDevice.java:datePaired",
+    "code": "protected Long datePaired;",
+    "description": "Pairing timestamp field",
+    "critical": true
+  }
+]
