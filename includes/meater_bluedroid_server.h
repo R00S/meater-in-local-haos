@@ -405,52 +405,17 @@ public:
     bool setup() {
         ESP_LOGI("meater_ble_server", "Setting up MEATER+ BLE server (Bluedroid)");
         
-        // Initialize NVS
-        esp_err_t ret = nvs_flash_init();
-        if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
-            ESP_ERROR_CHECK(nvs_flash_erase());
-            ret = nvs_flash_init();
-        }
-        ESP_ERROR_CHECK(ret);
+        // NOTE: BT controller and Bluedroid initialization is handled by esp32_ble_tracker component
+        // We only need to register our GATT server callbacks
         
-        // Release BT Classic memory (we only need BLE)
-        ESP_ERROR_CHECK(esp_bt_controller_mem_release(ESP_BT_MODE_CLASSIC_BT));
-        
-        // Initialize BT controller
-        esp_bt_controller_config_t bt_cfg = BT_CONTROLLER_INIT_CONFIG_DEFAULT();
-        ret = esp_bt_controller_init(&bt_cfg);
-        if (ret) {
-            ESP_LOGE("meater_ble_server", "BT controller init failed: %d", ret);
-            return false;
-        }
-        
-        // Enable BT controller in BLE mode
-        ret = esp_bt_controller_enable(ESP_BT_MODE_BLE);
-        if (ret) {
-            ESP_LOGE("meater_ble_server", "BT controller enable failed: %d", ret);
-            return false;
-        }
-        
-        // Initialize Bluedroid
-        ret = esp_bluedroid_init();
-        if (ret) {
-            ESP_LOGE("meater_ble_server", "Bluedroid init failed: %d", ret);
-            return false;
-        }
-        
-        ret = esp_bluedroid_enable();
-        if (ret) {
-            ESP_LOGE("meater_ble_server", "Bluedroid enable failed: %d", ret);
-            return false;
-        }
-        
-        // Register callbacks
-        ret = esp_ble_gap_register_callback(gap_event_handler);
+        // Register GAP callback
+        esp_err_t ret = esp_ble_gap_register_callback(gap_event_handler);
         if (ret) {
             ESP_LOGE("meater_ble_server", "GAP callback register failed: %d", ret);
             return false;
         }
         
+        // Register GATTS callback
         ret = esp_ble_gatts_register_callback(gatts_event_handler);
         if (ret) {
             ESP_LOGE("meater_ble_server", "GATTS callback register failed: %d", ret);
