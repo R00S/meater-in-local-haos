@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="updates_notification_body">
+        <item quantity="one">Imate %d ažuriranje spremno za instalaciju</item>
+        <item quantity="few">Imate %d ažuriranja spremna za instalaciju</item>
+        <item quantity="other">Imate %d ažuriranja spremnih za instalaciju</item>
+    </plurals>
+</resources>

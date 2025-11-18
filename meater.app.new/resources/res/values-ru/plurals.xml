@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="updates_notification_body">
+        <item quantity="one">%d обновление готово к установке</item>
+        <item quantity="few">%d обновления готово к установке</item>
+        <item quantity="many">%d обновлений готово к установке</item>
+        <item quantity="other">%d обновлений готово к установке</item>
+    </plurals>
+</resources>

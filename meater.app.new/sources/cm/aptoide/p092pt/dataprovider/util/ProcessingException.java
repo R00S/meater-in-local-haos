@@ -1,0 +1,5 @@
+package cm.aptoide.p092pt.dataprovider.util;
+
+/* loaded from: classes.dex */
+public class ProcessingException extends Exception {
+}

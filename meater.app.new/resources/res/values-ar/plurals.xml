@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="updates_notification_body">
+        <item quantity="zero">لديك %d تحديثًا بانتظار التثبيت or ليست لديك أي تحديثات جاهزة للتثبيت</item>
+        <item quantity="one">لديك تحديث %d جاهز للتثبيت</item>
+        <item quantity="two">لديك تحديثان جاهزان للتثبيت</item>
+        <item quantity="few">لديك %d تحديثات جاهزة للتثبيت</item>
+        <item quantity="many">لديك %d تحديثًا جاهز للتثبيت</item>
+        <item quantity="other">لديك %d تحديثًا جاهز للتثبيت</item>
+    </plurals>
+</resources>

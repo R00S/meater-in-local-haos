@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:clickable="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    style="@style/focusableRowBackground">
+    <TextView
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_toLeftOf="@+id/more"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        style="@style/Aptoide.TextView.Regular.L.BlackAlpha"/>
+    <android.widget.Button
+        android:textSize="12sp"
+        android:textColor="@color/orange_700"
+        android:gravity="center"
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:text="@string/button_header_more"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textAllCaps="true"
+        style="@style/Widget.Aptoide.Button.Borderless.Colored"/>
+</RelativeLayout>

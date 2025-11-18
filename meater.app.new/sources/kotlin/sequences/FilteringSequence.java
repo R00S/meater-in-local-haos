@@ -1,0 +1,102 @@
+package kotlin.sequences;
+
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+import kotlin.Metadata;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.C9801m;
+import kotlin.jvm.internal.markers.KMappedMarker;
+import okhttp3.HttpUrl;
+
+/* compiled from: Sequences.kt */
+@Metadata(m32266d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010(\n\u0000\b\u0000\u0018\u0000*\u0004\b\u0000\u0010\u00012\b\u0012\u0004\u0012\u0002H\u00010\u0002B1\u0012\f\u0010\u0003\u001a\b\u0012\u0004\u0012\u00028\u00000\u0002\u0012\b\b\u0002\u0010\u0004\u001a\u00020\u0005\u0012\u0012\u0010\u0006\u001a\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00020\u00050\u0007¢\u0006\u0002\u0010\bJ\u000f\u0010\t\u001a\b\u0012\u0004\u0012\u00028\u00000\nH\u0096\u0002R\u001a\u0010\u0006\u001a\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00020\u00050\u0007X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0082\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0003\u001a\b\u0012\u0004\u0012\u00028\u00000\u0002X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u000b"}, m32267d2 = {"Lkotlin/sequences/FilteringSequence;", "T", "Lkotlin/sequences/Sequence;", "sequence", "sendWhen", HttpUrl.FRAGMENT_ENCODE_SET, "predicate", "Lkotlin/Function1;", "(Lkotlin/sequences/Sequence;ZLkotlin/jvm/functions/Function1;)V", "iterator", HttpUrl.FRAGMENT_ENCODE_SET, "kotlin-stdlib"}, m32268k = 1, m32269mv = {1, 7, 1}, m32271xi = 48)
+/* renamed from: kotlin.g0.e, reason: from Kotlin metadata */
+/* loaded from: classes3.dex */
+public final class FilteringSequence<T> implements Sequence<T> {
+
+    /* renamed from: a */
+    private final Sequence<T> f40614a;
+
+    /* renamed from: b */
+    private final boolean f40615b;
+
+    /* renamed from: c */
+    private final Function1<T, Boolean> f40616c;
+
+    /* compiled from: Sequences.kt */
+    @Metadata(m32266d1 = {"\u0000#\n\u0000\n\u0002\u0010(\n\u0002\b\n\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002*\u0001\u0000\b\n\u0018\u00002\b\u0012\u0004\u0012\u00028\u00000\u0001J\b\u0010\u0011\u001a\u00020\u0012H\u0002J\t\u0010\u0013\u001a\u00020\u0014H\u0096\u0002J\u000e\u0010\u0015\u001a\u00028\u0000H\u0096\u0002¢\u0006\u0002\u0010\u0007R\u0017\u0010\u0002\u001a\b\u0012\u0004\u0012\u00028\u00000\u0001¢\u0006\b\n\u0000\u001a\u0004\b\u0003\u0010\u0004R\u001e\u0010\u0005\u001a\u0004\u0018\u00018\u0000X\u0086\u000e¢\u0006\u0010\n\u0002\u0010\n\u001a\u0004\b\u0006\u0010\u0007\"\u0004\b\b\u0010\tR\u001a\u0010\u000b\u001a\u00020\fX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\r\u0010\u000e\"\u0004\b\u000f\u0010\u0010¨\u0006\u0016"}, m32267d2 = {"kotlin/sequences/FilteringSequence$iterator$1", HttpUrl.FRAGMENT_ENCODE_SET, "iterator", "getIterator", "()Ljava/util/Iterator;", "nextItem", "getNextItem", "()Ljava/lang/Object;", "setNextItem", "(Ljava/lang/Object;)V", "Ljava/lang/Object;", "nextState", HttpUrl.FRAGMENT_ENCODE_SET, "getNextState", "()I", "setNextState", "(I)V", "calcNext", HttpUrl.FRAGMENT_ENCODE_SET, "hasNext", HttpUrl.FRAGMENT_ENCODE_SET, "next", "kotlin-stdlib"}, m32268k = 1, m32269mv = {1, 7, 1}, m32271xi = 48)
+    /* renamed from: kotlin.g0.e$a */
+    public static final class a implements Iterator<T>, KMappedMarker {
+
+        /* renamed from: f */
+        private final Iterator<T> f40617f;
+
+        /* renamed from: g */
+        private int f40618g = -1;
+
+        /* renamed from: h */
+        private T f40619h;
+
+        /* renamed from: i */
+        final /* synthetic */ FilteringSequence<T> f40620i;
+
+        a(FilteringSequence<T> filteringSequence) {
+            this.f40620i = filteringSequence;
+            this.f40617f = ((FilteringSequence) filteringSequence).f40614a.iterator();
+        }
+
+        /* renamed from: b */
+        private final void m37339b() {
+            while (this.f40617f.hasNext()) {
+                T next = this.f40617f.next();
+                if (((Boolean) ((FilteringSequence) this.f40620i).f40616c.invoke(next)).booleanValue() == ((FilteringSequence) this.f40620i).f40615b) {
+                    this.f40619h = next;
+                    this.f40618g = 1;
+                    return;
+                }
+            }
+            this.f40618g = 0;
+        }
+
+        @Override // java.util.Iterator
+        public boolean hasNext() {
+            if (this.f40618g == -1) {
+                m37339b();
+            }
+            return this.f40618g == 1;
+        }
+
+        @Override // java.util.Iterator
+        public T next() {
+            if (this.f40618g == -1) {
+                m37339b();
+            }
+            if (this.f40618g == 0) {
+                throw new NoSuchElementException();
+            }
+            T t = this.f40619h;
+            this.f40619h = null;
+            this.f40618g = -1;
+            return t;
+        }
+
+        @Override // java.util.Iterator
+        public void remove() {
+            throw new UnsupportedOperationException("Operation is not supported for read-only collection");
+        }
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public FilteringSequence(Sequence<? extends T> sequence, boolean z, Function1<? super T, Boolean> function1) {
+        C9801m.m32346f(sequence, "sequence");
+        C9801m.m32346f(function1, "predicate");
+        this.f40614a = sequence;
+        this.f40615b = z;
+        this.f40616c = function1;
+    }
+
+    @Override // kotlin.sequences.Sequence
+    public Iterator<T> iterator() {
+        return new a(this);
+    }
+}

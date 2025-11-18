@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="share_options_array">
+        <item>@string/share_options_share_external</item>
+        <item>@string/share_options_share_in_timeline</item>
+    </array>
+    <array name="store_share_options_array">
+        <item>@string/share_options_store_using</item>
+    </array>
+</resources>

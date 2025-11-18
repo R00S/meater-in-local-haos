@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="updates_notification_body">
+        <item quantity="one">Er is %d update klaar om te installeren</item>
+        <item quantity="other">Er zijn %d updates klaar om te installeren</item>
+    </plurals>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="updates_notification_body">
+        <item quantity="one">Ai %d actualizare gata de instalat</item>
+        <item quantity="few">Ai %d actualizări gata de instalat</item>
+        <item quantity="other">Ai %d actualizări gata de instalat</item>
+    </plurals>
+</resources>

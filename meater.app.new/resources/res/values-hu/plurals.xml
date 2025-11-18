@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="updates_notification_body">
+        <item quantity="one">%d frissítés vár telepítésre</item>
+        <item quantity="other">%d frissítés vár telepítésre</item>
+    </plurals>
+</resources>
