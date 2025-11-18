@@ -4,10 +4,6 @@ esphome:
   includes:
     - includes/meater_udp_broadcast.h
     - includes/meater_bluedroid_server.h
-  platformio_options:
-    build_flags:
-      - -lbt
-      - -lbtdm_app
 
 esp32:
   board: esp32-c3-devkitm-1
@@ -23,6 +19,9 @@ esp32:
       CONFIG_BTDM_CTRL_MODE_BR_EDR_ONLY: n
       CONFIG_BTDM_CTRL_MODE_BTDM: n
       CONFIG_BT_RESERVE_DRAM: "0x10000"
+    platform_version: 6.5.0
+    advanced:
+      ignore_efuse_mac_crc: false
 
 # Enable logging
 logger:
@@ -47,6 +46,11 @@ wifi:
     password: !secret fallback_ap_password
 
 captive_portal:
+
+# Enable BLE - this ensures bt libraries are linked
+esp32_ble_tracker:
+  scan_parameters:
+    active: false
 
 # BLE CLIENT REMOVED - see meater_ble_client_backup.yaml for restoration
 # ble_client:
