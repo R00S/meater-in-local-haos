@@ -8,7 +8,7 @@ This document contains tcpdump analysis showing the difference between the old s
 - UDP Port: 7878 (MEATER_LINK_UDP_PORT)
 - Protocol: UDP broadcast to x.x.x.255
 
-## Old Format (Simple 24-byte packet)
+## [OBSOLETE] Old Format (Simple 24-byte packet)
 
 ### Packet Structure
 ```
@@ -33,7 +33,7 @@ Where:
 - `XX XX XX XX XX XX XX XX` = 8 bytes temperature data
 - `YY YY` = 2 bytes battery data
 
-## New Format (Protobuf MeaterLinkMessage with MasterMessage)
+## [OBSOLETE] New Format (Protobuf MeaterLinkMessage with MasterMessage)
 
 ### MEATER App Broadcast Example (from tcpdump)
 
@@ -109,7 +109,10 @@ Field 3: MasterMessage (length-delimited) {
 }
 ```
 
-### What Our Implementation Sends
+### [OBSOLETE] What Our Implementation Sends
+
+**NOTE:** This section describes an obsolete implementation that used Field 3 (MasterMessage).
+The current implementation uses Field 2 (SubscriptionMessage) with custom structure.
 
 We now send proper MeaterLinkMessage with nested MasterMessage:
 ```
@@ -149,7 +152,9 @@ MeaterLinkMessage {
 | 4    | End group       | (deprecated)                       |
 | 5    | 32-bit          | fixed32, float                     |
 
-## ESP32 Implementation
+## [OBSOLETE] ESP32 Implementation
+
+**NOTE:** This section describes an obsolete implementation.
 
 Our implementation generates similar 79-byte packets with:
 - Custom device_id derived from ESP32 MAC address
@@ -159,7 +164,9 @@ Our implementation generates similar 79-byte packets with:
 - Sequence number auto-incremented
 - Timestamp in milliseconds from boot
 
-## Broadcast Timing
+## [OBSOLETE] Broadcast Timing
+
+**NOTE:** This section describes obsolete implementation timing.
 
 - **Old format**: Every 1 second
 - **New format**: Every 5 seconds (matches MEATER app behavior)
