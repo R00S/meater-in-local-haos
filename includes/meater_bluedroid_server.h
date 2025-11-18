@@ -59,8 +59,8 @@ static const uint16_t GAP_SERVICE_UUID = 0x1800;
 // Device Name UUID: 0x2A00
 static const uint16_t DEVICE_NAME_CHAR_UUID = 0x2A00;
 
-// MEATER+ firmware version (probe number 128)
-static const char* MEATER_PLUS_FIRMWARE = "v1.0.5_128";
+// MEATER+ firmware version (probe number 0 for singleton/standalone probes)
+static const char* MEATER_PLUS_FIRMWARE = "v1.0.5_0";
 static const char* MEATER_PLUS_NAME = "MEATER+";
 static const char* MANUFACTURER_NAME = "Apption Labs";
 static const char* MODEL_NUMBER = "MEATER";
