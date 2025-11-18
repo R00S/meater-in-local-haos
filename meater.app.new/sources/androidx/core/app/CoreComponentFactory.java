@@ -11,40 +11,32 @@ import android.content.Intent;
 /* loaded from: classes.dex */
 public class CoreComponentFactory extends AppComponentFactory {
 
-    /* renamed from: androidx.core.app.CoreComponentFactory$a */
-    public interface InterfaceC0234a {
-        /* renamed from: a */
-        Object m1509a();
+    public interface a {
+        Object a();
     }
 
-    /* renamed from: a */
-    static <T> T m1508a(T t) {
-        T t2;
-        return (!(t instanceof InterfaceC0234a) || (t2 = (T) ((InterfaceC0234a) t).m1509a()) == null) ? t : t2;
+    static <T> T a(T t10) {
+        T t11;
+        return (!(t10 instanceof a) || (t11 = (T) ((a) t10).a()) == null) ? t10 : t11;
     }
 
-    @Override // android.app.AppComponentFactory
-    public Activity instantiateActivity(ClassLoader classLoader, String str, Intent intent) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
-        return (Activity) m1508a(super.instantiateActivity(classLoader, str, intent));
+    public Activity instantiateActivity(ClassLoader classLoader, String str, Intent intent) {
+        return (Activity) a(super.instantiateActivity(classLoader, str, intent));
     }
 
-    @Override // android.app.AppComponentFactory
-    public Application instantiateApplication(ClassLoader classLoader, String str) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
-        return (Application) m1508a(super.instantiateApplication(classLoader, str));
+    public Application instantiateApplication(ClassLoader classLoader, String str) {
+        return (Application) a(super.instantiateApplication(classLoader, str));
     }
 
-    @Override // android.app.AppComponentFactory
-    public ContentProvider instantiateProvider(ClassLoader classLoader, String str) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
-        return (ContentProvider) m1508a(super.instantiateProvider(classLoader, str));
+    public ContentProvider instantiateProvider(ClassLoader classLoader, String str) {
+        return (ContentProvider) a(super.instantiateProvider(classLoader, str));
     }
 
-    @Override // android.app.AppComponentFactory
-    public BroadcastReceiver instantiateReceiver(ClassLoader classLoader, String str, Intent intent) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
-        return (BroadcastReceiver) m1508a(super.instantiateReceiver(classLoader, str, intent));
+    public BroadcastReceiver instantiateReceiver(ClassLoader classLoader, String str, Intent intent) {
+        return (BroadcastReceiver) a(super.instantiateReceiver(classLoader, str, intent));
     }
 
-    @Override // android.app.AppComponentFactory
-    public Service instantiateService(ClassLoader classLoader, String str, Intent intent) throws IllegalAccessException, InstantiationException, ClassNotFoundException {
-        return (Service) m1508a(super.instantiateService(classLoader, str, intent));
+    public Service instantiateService(ClassLoader classLoader, String str, Intent intent) {
+        return (Service) a(super.instantiateService(classLoader, str, intent));
     }
 }

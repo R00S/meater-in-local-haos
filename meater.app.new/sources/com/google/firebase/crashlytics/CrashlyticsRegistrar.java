@@ -1,41 +1,56 @@
 package com.google.firebase.crashlytics;
 
-import com.google.firebase.C8405j;
-import com.google.firebase.analytics.p179a.InterfaceC8095a;
-import com.google.firebase.components.C8124n;
-import com.google.firebase.components.C8132v;
+import D9.h;
+import J8.b;
+import J8.c;
+import J9.b;
+import K8.A;
+import K8.d;
+import K8.q;
+import N8.g;
+import R8.f;
+import android.content.res.Resources;
 import com.google.firebase.components.ComponentRegistrar;
-import com.google.firebase.components.InterfaceC8126p;
-import com.google.firebase.components.InterfaceC8128r;
-import com.google.firebase.crashlytics.internal.InterfaceC8175d;
-import com.google.firebase.installations.InterfaceC8385i;
-import com.google.firebase.p209u.C8555h;
-import com.google.firebase.p210v.p211a.InterfaceC8557a;
-import com.google.firebase.sessions.api.FirebaseSessionsDependencies;
-import com.google.firebase.sessions.api.SessionSubscriber;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import k9.InterfaceC3810e;
 
 /* loaded from: classes2.dex */
 public class CrashlyticsRegistrar implements ComponentRegistrar {
+
+    /* renamed from: a, reason: collision with root package name */
+    private final A<ExecutorService> f38150a = A.a(J8.a.class, ExecutorService.class);
+
+    /* renamed from: b, reason: collision with root package name */
+    private final A<ExecutorService> f38151b = A.a(b.class, ExecutorService.class);
+
+    /* renamed from: c, reason: collision with root package name */
+    private final A<ExecutorService> f38152c = A.a(c.class, ExecutorService.class);
+
     static {
-        FirebaseSessionsDependencies.m26789a(SessionSubscriber.a.CRASHLYTICS);
+        J9.a.a(b.a.CRASHLYTICS);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: a */
-    public C8171g m25133a(InterfaceC8126p interfaceC8126p) {
-        return C8171g.m25151a((C8405j) interfaceC8126p.mo24973a(C8405j.class), (InterfaceC8385i) interfaceC8126p.mo24973a(InterfaceC8385i.class), interfaceC8126p.mo24981i(InterfaceC8175d.class), interfaceC8126p.mo24981i(InterfaceC8095a.class), interfaceC8126p.mo24981i(InterfaceC8557a.class));
+    public a b(d dVar) throws Resources.NotFoundException {
+        f.f(false);
+        long jCurrentTimeMillis = System.currentTimeMillis();
+        a aVarC = a.c((com.google.firebase.f) dVar.a(com.google.firebase.f.class), (InterfaceC3810e) dVar.a(InterfaceC3810e.class), dVar.i(N8.a.class), dVar.i(I8.a.class), dVar.i(G9.a.class), (ExecutorService) dVar.g(this.f38150a), (ExecutorService) dVar.g(this.f38151b), (ExecutorService) dVar.g(this.f38152c));
+        long jCurrentTimeMillis2 = System.currentTimeMillis() - jCurrentTimeMillis;
+        if (jCurrentTimeMillis2 > 16) {
+            g.f().b("Initializing Crashlytics blocked main for " + jCurrentTimeMillis2 + " ms");
+        }
+        return aVarC;
     }
 
     @Override // com.google.firebase.components.ComponentRegistrar
-    public List<C8124n<?>> getComponents() {
-        return Arrays.asList(C8124n.m24986c(C8171g.class).m25011h("fire-cls").m25006b(C8132v.m25060k(C8405j.class)).m25006b(C8132v.m25060k(InterfaceC8385i.class)).m25006b(C8132v.m25055a(InterfaceC8175d.class)).m25006b(C8132v.m25055a(InterfaceC8095a.class)).m25006b(C8132v.m25055a(InterfaceC8557a.class)).m25010f(new InterfaceC8128r() { // from class: com.google.firebase.crashlytics.d
-            @Override // com.google.firebase.components.InterfaceC8128r
-            /* renamed from: a */
-            public final Object mo24937a(InterfaceC8126p interfaceC8126p) {
-                return this.f30834a.m25133a(interfaceC8126p);
+    public List<K8.c<?>> getComponents() {
+        return Arrays.asList(K8.c.e(a.class).h("fire-cls").b(q.l(com.google.firebase.f.class)).b(q.l(InterfaceC3810e.class)).b(q.k(this.f38150a)).b(q.k(this.f38151b)).b(q.k(this.f38152c)).b(q.a(N8.a.class)).b(q.a(I8.a.class)).b(q.a(G9.a.class)).f(new K8.g() { // from class: M8.f
+            @Override // K8.g
+            public final Object a(K8.d dVar) {
+                return this.f12131a.b(dVar);
             }
-        }).m25009e().m25008d(), C8555h.m26903a("fire-cls", "18.6.1"));
+        }).e().d(), h.b("fire-cls", "19.4.0"));
     }
 }

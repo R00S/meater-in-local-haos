@@ -1,0 +1,80 @@
+Manifest-Version: 1.0
+
+Name: AndroidManifest.xml
+SHA1-Digest: nSCJT5aD2+enIgBYEPrgPnepduw=
+
+Name: res/drawable-de/ic_cloud_benefits_alexa.xml
+SHA1-Digest: Q5D3XEnz5LlbFc6qDXQZHyJ3xX4=
+
+Name: res/drawable-de/ic_cloud_benefits_intro.xml
+SHA1-Digest: iBDvk8dimLfoANtyirQFxJB3yo0=
+
+Name: res/drawable-de/ic_cloud_benefits_range.xml
+SHA1-Digest: UhHWHVRV26tfbN1uj3bgE8SSaOQ=
+
+Name: res/drawable-de/ic_cloud_benefits_share.xml
+SHA1-Digest: 0tmu1yBWA1CNz9mONU7KRocgbP4=
+
+Name: res/drawable-de/ic_cloud_benefits_support.xml
+SHA1-Digest: +KDnqVbpjMrmQHqwpHfDAZx1vYU=
+
+Name: res/drawable-de/ic_cloud_benefits_whats_new.xml
+SHA1-Digest: miJLLj50zAI7c+TEpRy//TatfpE=
+
+Name: res/raw-de-night-v8/qsg_bluetooth_permission_disabled.json
+SHA1-Digest: G63vxvw6FwuQcjJwQJ1McINpeNc=
+
+Name: res/raw-de-night-v8/qsg_critical_alert_c.json
+SHA1-Digest: jd+jr3yBzqgKifhM5TIwx1df81M=
+
+Name: res/raw-de-night-v8/qsg_critical_alert_c_g2.json
+SHA1-Digest: aJIH6b9r5iM7lKGOwRMBtc67WtM=
+
+Name: res/raw-de-night-v8/qsg_critical_permission_disabled.json
+SHA1-Digest: Y3mTfEf7r0XRpoy4Z033Vyn3Mh4=
+
+Name: res/raw-de-night-v8/qsg_location_permission_disabled.json
+SHA1-Digest: EQQ+HFK4HSmWMXX5RZLn/+qMZek=
+
+Name: res/raw-de-night-v8/qsg_notification_permission_c.json
+SHA1-Digest: rsBGQO+4689jkaOcv7OEdI30OBo=
+
+Name: res/raw-de-night-v8/qsg_notification_permission_disabled.json
+SHA1-Digest: JpFitoJWEqeB11HvSjO0L7xtgbc=
+
+Name: res/raw-de/qsg_bluetooth_permission_disabled.json
+SHA1-Digest: 5lmH35lKKLKmewcJFNONOdeIoNw=
+
+Name: res/raw-de/qsg_critical_alert_c.json
+SHA1-Digest: WHvFAKjC3p1r66d2N63c4VGLKBU=
+
+Name: res/raw-de/qsg_critical_alert_c_g2.json
+SHA1-Digest: mmJeZcKomkHKHSIB48GQJkGDijU=
+
+Name: res/raw-de/qsg_critical_permission_disabled.json
+SHA1-Digest: WDLy8I0+tyyT6m+pHgnuUxGXTFk=
+
+Name: res/raw-de/qsg_location_permission_disabled.json
+SHA1-Digest: AC9U4wFaQ2WV3ExnQpZOObMMaLY=
+
+Name: res/raw-de/qsg_notification_permission_c.json
+SHA1-Digest: MRsJCdCaHsg9s5BSd9Ab82S8NPM=
+
+Name: res/raw-de/qsg_notification_permission_disabled.json
+SHA1-Digest: afYdcRhb2HdX4AwlmR47oBJ5MxY=
+
+Name: res/raw-de/vt_cook_setup_c.mp4
+SHA1-Digest: vC4wOMaVlONla+KRUmTbsQ1fvWc=
+
+Name: res/raw-de/vt_remove_from_heat_c.mp4
+SHA1-Digest: jq0pyxg2y/nQRGgxxjF055SXCOE=
+
+Name: res/raw-de/vt_searing_serving_c.mp4
+SHA1-Digest: nyCKwbWTo3YeNKjfO1FYQmSxJIQ=
+
+Name: resources.arsc
+SHA1-Digest: l7s6xoUjQlclJZtDOQ6AZMaOsEE=
+
+Name: stamp-cert-sha256
+SHA1-Digest: 5vTkm69vqAbusD/fho7oWwc7j+I=
+

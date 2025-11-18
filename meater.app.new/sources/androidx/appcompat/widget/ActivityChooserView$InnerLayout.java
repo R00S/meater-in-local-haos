@@ -8,13 +8,13 @@ import android.widget.LinearLayout;
 /* loaded from: classes.dex */
 public class ActivityChooserView$InnerLayout extends LinearLayout {
 
-    /* renamed from: f */
-    private static final int[] f798f = {R.attr.background};
+    /* renamed from: B, reason: collision with root package name */
+    private static final int[] f21196B = {R.attr.background};
 
     public ActivityChooserView$InnerLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        C0185q0 c0185q0M1090u = C0185q0.m1090u(context, attributeSet, f798f);
-        setBackgroundDrawable(c0185q0M1090u.m1098g(0));
-        c0185q0M1090u.m1111w();
+        a0 a0VarU = a0.u(context, attributeSet, f21196B);
+        setBackgroundDrawable(a0VarU.g(0));
+        a0VarU.x();
     }
 }

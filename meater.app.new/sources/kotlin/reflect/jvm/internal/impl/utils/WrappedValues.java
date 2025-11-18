@@ -1,13 +1,15 @@
 package kotlin.reflect.jvm.internal.impl.utils;
 
+import Rb.d;
+
 /* loaded from: classes3.dex */
 public class WrappedValues {
 
-    /* renamed from: a */
-    private static final Object f41408a = new C10765a();
+    /* renamed from: a, reason: collision with root package name */
+    private static final Object f44170a = new a();
 
-    /* renamed from: b */
-    public static volatile boolean f41409b = false;
+    /* renamed from: b, reason: collision with root package name */
+    public static volatile boolean f44171b = false;
 
     public static class WrappedProcessCanceledException extends RuntimeException {
         public WrappedProcessCanceledException(Throwable th) {
@@ -15,9 +17,8 @@ public class WrappedValues {
         }
     }
 
-    /* renamed from: kotlin.reflect.jvm.internal.impl.utils.WrappedValues$a */
-    static class C10765a {
-        C10765a() {
+    static class a {
+        a() {
         }
 
         public String toString() {
@@ -25,138 +26,129 @@ public class WrappedValues {
         }
     }
 
-    /* renamed from: kotlin.reflect.jvm.internal.impl.utils.WrappedValues$b */
-    private static final class C10766b {
+    private static final class b {
 
-        /* renamed from: a */
-        private final Throwable f41410a;
+        /* renamed from: a, reason: collision with root package name */
+        private final Throwable f44172a;
 
-        /* synthetic */ C10766b(Throwable th, C10765a c10765a) {
+        /* synthetic */ b(Throwable th, a aVar) {
             this(th);
         }
 
-        /* renamed from: a */
-        private static /* synthetic */ void m38506a(int i2) {
-            String str = i2 != 1 ? "Argument for @NotNull parameter '%s' of %s.%s must not be null" : "@NotNull method %s.%s must not return null";
-            Object[] objArr = new Object[i2 != 1 ? 3 : 2];
-            if (i2 != 1) {
+        private static /* synthetic */ void a(int i10) {
+            String str = i10 != 1 ? "Argument for @NotNull parameter '%s' of %s.%s must not be null" : "@NotNull method %s.%s must not return null";
+            Object[] objArr = new Object[i10 != 1 ? 3 : 2];
+            if (i10 != 1) {
                 objArr[0] = "throwable";
             } else {
                 objArr[0] = "kotlin/reflect/jvm/internal/impl/utils/WrappedValues$ThrowableWrapper";
             }
-            if (i2 != 1) {
+            if (i10 != 1) {
                 objArr[1] = "kotlin/reflect/jvm/internal/impl/utils/WrappedValues$ThrowableWrapper";
             } else {
                 objArr[1] = "getThrowable";
             }
-            if (i2 != 1) {
+            if (i10 != 1) {
                 objArr[2] = "<init>";
             }
             String str2 = String.format(str, objArr);
-            if (i2 == 1) {
+            if (i10 == 1) {
                 throw new IllegalStateException(str2);
             }
         }
 
-        /* renamed from: b */
-        public Throwable m38507b() {
-            Throwable th = this.f41410a;
+        public Throwable b() {
+            Throwable th = this.f44172a;
             if (th == null) {
-                m38506a(1);
+                a(1);
             }
             return th;
         }
 
         public String toString() {
-            return this.f41410a.toString();
+            return this.f44172a.toString();
         }
 
-        private C10766b(Throwable th) {
+        private b(Throwable th) {
             if (th == null) {
-                m38506a(0);
+                a(0);
             }
-            this.f41410a = th;
+            this.f44172a = th;
         }
     }
 
-    /* renamed from: a */
-    private static /* synthetic */ void m38500a(int i2) {
-        String str = (i2 == 1 || i2 == 2) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
-        Object[] objArr = new Object[(i2 == 1 || i2 == 2) ? 2 : 3];
-        if (i2 == 1 || i2 == 2) {
+    private static /* synthetic */ void a(int i10) {
+        String str = (i10 == 1 || i10 == 2) ? "@NotNull method %s.%s must not return null" : "Argument for @NotNull parameter '%s' of %s.%s must not be null";
+        Object[] objArr = new Object[(i10 == 1 || i10 == 2) ? 2 : 3];
+        if (i10 == 1 || i10 == 2) {
             objArr[0] = "kotlin/reflect/jvm/internal/impl/utils/WrappedValues";
-        } else if (i2 != 3) {
+        } else if (i10 != 3) {
             objArr[0] = "value";
         } else {
             objArr[0] = "throwable";
         }
-        if (i2 == 1 || i2 == 2) {
+        if (i10 == 1 || i10 == 2) {
             objArr[1] = "escapeNull";
         } else {
             objArr[1] = "kotlin/reflect/jvm/internal/impl/utils/WrappedValues";
         }
-        if (i2 != 1 && i2 != 2) {
-            if (i2 == 3) {
+        if (i10 != 1 && i10 != 2) {
+            if (i10 == 3) {
                 objArr[2] = "escapeThrowable";
-            } else if (i2 != 4) {
+            } else if (i10 != 4) {
                 objArr[2] = "unescapeNull";
             } else {
                 objArr[2] = "unescapeExceptionOrNull";
             }
         }
         String str2 = String.format(str, objArr);
-        if (i2 != 1 && i2 != 2) {
+        if (i10 != 1 && i10 != 2) {
             throw new IllegalArgumentException(str2);
         }
         throw new IllegalStateException(str2);
     }
 
-    /* renamed from: b */
-    public static <V> Object m38501b(V v) {
-        if (v == null && (v = (V) f41408a) == null) {
-            m38500a(1);
+    public static <V> Object b(V v10) {
+        if (v10 == null && (v10 = (V) f44170a) == null) {
+            a(1);
         }
-        return v;
+        return v10;
     }
 
-    /* renamed from: c */
-    public static Object m38502c(Throwable th) {
+    public static Object c(Throwable th) {
         if (th == null) {
-            m38500a(3);
+            a(3);
         }
-        return new C10766b(th, null);
+        return new b(th, null);
     }
 
-    /* renamed from: d */
-    public static <V> V m38503d(Object obj) {
+    public static <V> V d(Object obj) {
         if (obj == null) {
-            m38500a(4);
+            a(4);
         }
-        return (V) m38504e(m38505f(obj));
+        return (V) e(f(obj));
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: e */
-    public static <V> V m38504e(Object obj) {
+    public static <V> V e(Object obj) {
         if (obj == 0) {
-            m38500a(0);
+            a(0);
         }
-        if (obj == f41408a) {
+        if (obj == f44170a) {
             return null;
         }
         return obj;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: f */
-    public static <V> V m38505f(Object obj) {
-        if (!(obj instanceof C10766b)) {
+    public static <V> V f(Object obj) {
+        if (!(obj instanceof b)) {
             return obj;
         }
-        Throwable thM38507b = ((C10766b) obj).m38507b();
-        if (f41409b && C10769c.m38523a(thM38507b)) {
-            throw new WrappedProcessCanceledException(thM38507b);
+        Throwable thB = ((b) obj).b();
+        if (f44171b && d.a(thB)) {
+            throw new WrappedProcessCanceledException(thB);
         }
-        throw C10769c.m38524b(thM38507b);
+        throw d.b(thB);
     }
 }

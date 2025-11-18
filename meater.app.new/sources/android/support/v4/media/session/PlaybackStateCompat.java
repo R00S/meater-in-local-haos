@@ -1,58 +1,58 @@
 package android.support.v4.media.session;
 
-import android.os.Build;
+import android.annotation.SuppressLint;
+import android.media.session.PlaybackState;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.v4.media.session.C0024g;
 import android.text.TextUtils;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+@SuppressLint({"BanParcelableUsage"})
 /* loaded from: classes.dex */
 public final class PlaybackStateCompat implements Parcelable {
-    public static final Parcelable.Creator<PlaybackStateCompat> CREATOR = new C0017a();
+    public static final Parcelable.Creator<PlaybackStateCompat> CREATOR = new a();
 
-    /* renamed from: f */
-    final int f48f;
+    /* renamed from: B, reason: collision with root package name */
+    final int f20509B;
 
-    /* renamed from: g */
-    final long f49g;
+    /* renamed from: C, reason: collision with root package name */
+    final long f20510C;
 
-    /* renamed from: h */
-    final long f50h;
+    /* renamed from: D, reason: collision with root package name */
+    final long f20511D;
 
-    /* renamed from: i */
-    final float f51i;
+    /* renamed from: E, reason: collision with root package name */
+    final float f20512E;
 
-    /* renamed from: j */
-    final long f52j;
+    /* renamed from: F, reason: collision with root package name */
+    final long f20513F;
 
-    /* renamed from: k */
-    final int f53k;
+    /* renamed from: G, reason: collision with root package name */
+    final int f20514G;
 
-    /* renamed from: l */
-    final CharSequence f54l;
+    /* renamed from: H, reason: collision with root package name */
+    final CharSequence f20515H;
 
-    /* renamed from: m */
-    final long f55m;
+    /* renamed from: I, reason: collision with root package name */
+    final long f20516I;
 
-    /* renamed from: n */
-    List<CustomAction> f56n;
+    /* renamed from: J, reason: collision with root package name */
+    List<CustomAction> f20517J;
 
-    /* renamed from: o */
-    final long f57o;
+    /* renamed from: K, reason: collision with root package name */
+    final long f20518K;
 
-    /* renamed from: p */
-    final Bundle f58p;
+    /* renamed from: L, reason: collision with root package name */
+    final Bundle f20519L;
 
-    /* renamed from: q */
-    private Object f59q;
+    /* renamed from: M, reason: collision with root package name */
+    private PlaybackState f20520M;
 
-    /* renamed from: android.support.v4.media.session.PlaybackStateCompat$a */
-    static class C0017a implements Parcelable.Creator<PlaybackStateCompat> {
-        C0017a() {
+    class a implements Parcelable.Creator<PlaybackStateCompat> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator
@@ -63,44 +63,151 @@ public final class PlaybackStateCompat implements Parcelable {
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: b, reason: merged with bridge method [inline-methods] */
-        public PlaybackStateCompat[] newArray(int i2) {
-            return new PlaybackStateCompat[i2];
+        public PlaybackStateCompat[] newArray(int i10) {
+            return new PlaybackStateCompat[i10];
         }
     }
 
-    PlaybackStateCompat(int i2, long j2, long j3, float f2, long j4, int i3, CharSequence charSequence, long j5, List<CustomAction> list, long j6, Bundle bundle) {
-        this.f48f = i2;
-        this.f49g = j2;
-        this.f50h = j3;
-        this.f51i = f2;
-        this.f52j = j4;
-        this.f53k = i3;
-        this.f54l = charSequence;
-        this.f55m = j5;
-        this.f56n = new ArrayList(list);
-        this.f57o = j6;
-        this.f58p = bundle;
+    private static class b {
+        static void a(PlaybackState.Builder builder, PlaybackState.CustomAction customAction) {
+            builder.addCustomAction(customAction);
+        }
+
+        static PlaybackState.CustomAction b(PlaybackState.CustomAction.Builder builder) {
+            return builder.build();
+        }
+
+        static PlaybackState c(PlaybackState.Builder builder) {
+            return builder.build();
+        }
+
+        static PlaybackState.Builder d() {
+            return new PlaybackState.Builder();
+        }
+
+        static PlaybackState.CustomAction.Builder e(String str, CharSequence charSequence, int i10) {
+            return new PlaybackState.CustomAction.Builder(str, charSequence, i10);
+        }
+
+        static String f(PlaybackState.CustomAction customAction) {
+            return customAction.getAction();
+        }
+
+        static long g(PlaybackState playbackState) {
+            return playbackState.getActions();
+        }
+
+        static long h(PlaybackState playbackState) {
+            return playbackState.getActiveQueueItemId();
+        }
+
+        static long i(PlaybackState playbackState) {
+            return playbackState.getBufferedPosition();
+        }
+
+        static List<PlaybackState.CustomAction> j(PlaybackState playbackState) {
+            return playbackState.getCustomActions();
+        }
+
+        static CharSequence k(PlaybackState playbackState) {
+            return playbackState.getErrorMessage();
+        }
+
+        static Bundle l(PlaybackState.CustomAction customAction) {
+            return customAction.getExtras();
+        }
+
+        static int m(PlaybackState.CustomAction customAction) {
+            return customAction.getIcon();
+        }
+
+        static long n(PlaybackState playbackState) {
+            return playbackState.getLastPositionUpdateTime();
+        }
+
+        static CharSequence o(PlaybackState.CustomAction customAction) {
+            return customAction.getName();
+        }
+
+        static float p(PlaybackState playbackState) {
+            return playbackState.getPlaybackSpeed();
+        }
+
+        static long q(PlaybackState playbackState) {
+            return playbackState.getPosition();
+        }
+
+        static int r(PlaybackState playbackState) {
+            return playbackState.getState();
+        }
+
+        static void s(PlaybackState.Builder builder, long j10) {
+            builder.setActions(j10);
+        }
+
+        static void t(PlaybackState.Builder builder, long j10) {
+            builder.setActiveQueueItemId(j10);
+        }
+
+        static void u(PlaybackState.Builder builder, long j10) {
+            builder.setBufferedPosition(j10);
+        }
+
+        static void v(PlaybackState.Builder builder, CharSequence charSequence) {
+            builder.setErrorMessage(charSequence);
+        }
+
+        static void w(PlaybackState.CustomAction.Builder builder, Bundle bundle) {
+            builder.setExtras(bundle);
+        }
+
+        static void x(PlaybackState.Builder builder, int i10, long j10, float f10, long j11) {
+            builder.setState(i10, j10, f10, j11);
+        }
     }
 
-    /* renamed from: a */
-    public static PlaybackStateCompat m68a(Object obj) {
-        ArrayList arrayList;
-        if (obj == null || Build.VERSION.SDK_INT < 21) {
+    private static class c {
+        static Bundle a(PlaybackState playbackState) {
+            return playbackState.getExtras();
+        }
+
+        static void b(PlaybackState.Builder builder, Bundle bundle) {
+            builder.setExtras(bundle);
+        }
+    }
+
+    PlaybackStateCompat(int i10, long j10, long j11, float f10, long j12, int i11, CharSequence charSequence, long j13, List<CustomAction> list, long j14, Bundle bundle) {
+        this.f20509B = i10;
+        this.f20510C = j10;
+        this.f20511D = j11;
+        this.f20512E = f10;
+        this.f20513F = j12;
+        this.f20514G = i11;
+        this.f20515H = charSequence;
+        this.f20516I = j13;
+        this.f20517J = new ArrayList(list);
+        this.f20518K = j14;
+        this.f20519L = bundle;
+    }
+
+    public static PlaybackStateCompat a(Object obj) {
+        ArrayList arrayList = null;
+        if (obj == null) {
             return null;
         }
-        List<Object> listM109d = C0024g.m109d(obj);
-        if (listM109d != null) {
-            ArrayList arrayList2 = new ArrayList(listM109d.size());
-            Iterator<Object> it = listM109d.iterator();
+        PlaybackState playbackState = (PlaybackState) obj;
+        List<PlaybackState.CustomAction> listJ = b.j(playbackState);
+        if (listJ != null) {
+            arrayList = new ArrayList(listJ.size());
+            Iterator<PlaybackState.CustomAction> it = listJ.iterator();
             while (it.hasNext()) {
-                arrayList2.add(CustomAction.m69a(it.next()));
+                arrayList.add(CustomAction.a(it.next()));
             }
-            arrayList = arrayList2;
-        } else {
-            arrayList = null;
         }
-        PlaybackStateCompat playbackStateCompat = new PlaybackStateCompat(C0024g.m114i(obj), C0024g.m113h(obj), C0024g.m108c(obj), C0024g.m112g(obj), C0024g.m106a(obj), 0, C0024g.m110e(obj), C0024g.m111f(obj), arrayList, C0024g.m107b(obj), Build.VERSION.SDK_INT >= 22 ? C0025h.m119a(obj) : null);
-        playbackStateCompat.f59q = obj;
+        Bundle bundleA = c.a(playbackState);
+        MediaSessionCompat.a(bundleA);
+        PlaybackStateCompat playbackStateCompat = new PlaybackStateCompat(b.r(playbackState), b.q(playbackState), b.i(playbackState), b.p(playbackState), b.g(playbackState), 0, b.k(playbackState), b.n(playbackState), arrayList, b.h(playbackState), bundleA);
+        playbackStateCompat.f20520M = playbackState;
         return playbackStateCompat;
     }
 
@@ -110,45 +217,44 @@ public final class PlaybackStateCompat implements Parcelable {
     }
 
     public String toString() {
-        return "PlaybackState {state=" + this.f48f + ", position=" + this.f49g + ", buffered position=" + this.f50h + ", speed=" + this.f51i + ", updated=" + this.f55m + ", actions=" + this.f52j + ", error code=" + this.f53k + ", error message=" + this.f54l + ", custom actions=" + this.f56n + ", active item id=" + this.f57o + "}";
+        return "PlaybackState {state=" + this.f20509B + ", position=" + this.f20510C + ", buffered position=" + this.f20511D + ", speed=" + this.f20512E + ", updated=" + this.f20516I + ", actions=" + this.f20513F + ", error code=" + this.f20514G + ", error message=" + this.f20515H + ", custom actions=" + this.f20517J + ", active item id=" + this.f20518K + "}";
     }
 
     @Override // android.os.Parcelable
-    public void writeToParcel(Parcel parcel, int i2) {
-        parcel.writeInt(this.f48f);
-        parcel.writeLong(this.f49g);
-        parcel.writeFloat(this.f51i);
-        parcel.writeLong(this.f55m);
-        parcel.writeLong(this.f50h);
-        parcel.writeLong(this.f52j);
-        TextUtils.writeToParcel(this.f54l, parcel, i2);
-        parcel.writeTypedList(this.f56n);
-        parcel.writeLong(this.f57o);
-        parcel.writeBundle(this.f58p);
-        parcel.writeInt(this.f53k);
+    public void writeToParcel(Parcel parcel, int i10) {
+        parcel.writeInt(this.f20509B);
+        parcel.writeLong(this.f20510C);
+        parcel.writeFloat(this.f20512E);
+        parcel.writeLong(this.f20516I);
+        parcel.writeLong(this.f20511D);
+        parcel.writeLong(this.f20513F);
+        TextUtils.writeToParcel(this.f20515H, parcel, i10);
+        parcel.writeTypedList(this.f20517J);
+        parcel.writeLong(this.f20518K);
+        parcel.writeBundle(this.f20519L);
+        parcel.writeInt(this.f20514G);
     }
 
     public static final class CustomAction implements Parcelable {
-        public static final Parcelable.Creator<CustomAction> CREATOR = new C0016a();
+        public static final Parcelable.Creator<CustomAction> CREATOR = new a();
 
-        /* renamed from: f */
-        private final String f60f;
+        /* renamed from: B, reason: collision with root package name */
+        private final String f20521B;
 
-        /* renamed from: g */
-        private final CharSequence f61g;
+        /* renamed from: C, reason: collision with root package name */
+        private final CharSequence f20522C;
 
-        /* renamed from: h */
-        private final int f62h;
+        /* renamed from: D, reason: collision with root package name */
+        private final int f20523D;
 
-        /* renamed from: i */
-        private final Bundle f63i;
+        /* renamed from: E, reason: collision with root package name */
+        private final Bundle f20524E;
 
-        /* renamed from: j */
-        private Object f64j;
+        /* renamed from: F, reason: collision with root package name */
+        private PlaybackState.CustomAction f20525F;
 
-        /* renamed from: android.support.v4.media.session.PlaybackStateCompat$CustomAction$a */
-        static class C0016a implements Parcelable.Creator<CustomAction> {
-            C0016a() {
+        class a implements Parcelable.Creator<CustomAction> {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
@@ -159,26 +265,28 @@ public final class PlaybackStateCompat implements Parcelable {
 
             @Override // android.os.Parcelable.Creator
             /* renamed from: b, reason: merged with bridge method [inline-methods] */
-            public CustomAction[] newArray(int i2) {
-                return new CustomAction[i2];
+            public CustomAction[] newArray(int i10) {
+                return new CustomAction[i10];
             }
         }
 
-        CustomAction(String str, CharSequence charSequence, int i2, Bundle bundle) {
-            this.f60f = str;
-            this.f61g = charSequence;
-            this.f62h = i2;
-            this.f63i = bundle;
+        CustomAction(String str, CharSequence charSequence, int i10, Bundle bundle) {
+            this.f20521B = str;
+            this.f20522C = charSequence;
+            this.f20523D = i10;
+            this.f20524E = bundle;
         }
 
-        /* renamed from: a */
-        public static CustomAction m69a(Object obj) {
-            if (obj == null || Build.VERSION.SDK_INT < 21) {
+        public static CustomAction a(Object obj) {
+            if (obj == null) {
                 return null;
             }
-            CustomAction customAction = new CustomAction(C0024g.a.m115a(obj), C0024g.a.m118d(obj), C0024g.a.m117c(obj), C0024g.a.m116b(obj));
-            customAction.f64j = obj;
-            return customAction;
+            PlaybackState.CustomAction customAction = (PlaybackState.CustomAction) obj;
+            Bundle bundleL = b.l(customAction);
+            MediaSessionCompat.a(bundleL);
+            CustomAction customAction2 = new CustomAction(b.f(customAction), b.o(customAction), b.m(customAction), bundleL);
+            customAction2.f20525F = customAction;
+            return customAction2;
         }
 
         @Override // android.os.Parcelable
@@ -187,36 +295,36 @@ public final class PlaybackStateCompat implements Parcelable {
         }
 
         public String toString() {
-            return "Action:mName='" + ((Object) this.f61g) + ", mIcon=" + this.f62h + ", mExtras=" + this.f63i;
+            return "Action:mName='" + ((Object) this.f20522C) + ", mIcon=" + this.f20523D + ", mExtras=" + this.f20524E;
         }
 
         @Override // android.os.Parcelable
-        public void writeToParcel(Parcel parcel, int i2) {
-            parcel.writeString(this.f60f);
-            TextUtils.writeToParcel(this.f61g, parcel, i2);
-            parcel.writeInt(this.f62h);
-            parcel.writeBundle(this.f63i);
+        public void writeToParcel(Parcel parcel, int i10) {
+            parcel.writeString(this.f20521B);
+            TextUtils.writeToParcel(this.f20522C, parcel, i10);
+            parcel.writeInt(this.f20523D);
+            parcel.writeBundle(this.f20524E);
         }
 
         CustomAction(Parcel parcel) {
-            this.f60f = parcel.readString();
-            this.f61g = (CharSequence) TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(parcel);
-            this.f62h = parcel.readInt();
-            this.f63i = parcel.readBundle(MediaSessionCompat.class.getClassLoader());
+            this.f20521B = parcel.readString();
+            this.f20522C = (CharSequence) TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(parcel);
+            this.f20523D = parcel.readInt();
+            this.f20524E = parcel.readBundle(MediaSessionCompat.class.getClassLoader());
         }
     }
 
     PlaybackStateCompat(Parcel parcel) {
-        this.f48f = parcel.readInt();
-        this.f49g = parcel.readLong();
-        this.f51i = parcel.readFloat();
-        this.f55m = parcel.readLong();
-        this.f50h = parcel.readLong();
-        this.f52j = parcel.readLong();
-        this.f54l = (CharSequence) TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(parcel);
-        this.f56n = parcel.createTypedArrayList(CustomAction.CREATOR);
-        this.f57o = parcel.readLong();
-        this.f58p = parcel.readBundle(MediaSessionCompat.class.getClassLoader());
-        this.f53k = parcel.readInt();
+        this.f20509B = parcel.readInt();
+        this.f20510C = parcel.readLong();
+        this.f20512E = parcel.readFloat();
+        this.f20516I = parcel.readLong();
+        this.f20511D = parcel.readLong();
+        this.f20513F = parcel.readLong();
+        this.f20515H = (CharSequence) TextUtils.CHAR_SEQUENCE_CREATOR.createFromParcel(parcel);
+        this.f20517J = parcel.createTypedArrayList(CustomAction.CREATOR);
+        this.f20518K = parcel.readLong();
+        this.f20519L = parcel.readBundle(MediaSessionCompat.class.getClassLoader());
+        this.f20514G = parcel.readInt();
     }
 }

@@ -1,31 +1,17 @@
 package com.google.android.gms.common.internal;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
-import com.google.android.gms.common.internal.safeparcel.SafeParcelWriter;
-import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
+import c7.C2333b;
+import g7.C3445p;
 
-/* compiled from: com.google.android.gms:play-services-basement@@18.1.0 */
-@SafeParcelable.Class
-@Deprecated
+/* compiled from: com.google.android.gms:play-services-basement@@18.5.0 */
 /* loaded from: classes2.dex */
-public final class zzaj extends AbstractSafeParcelable {
-    public static final Parcelable.Creator<zzaj> CREATOR = new zzak();
+public final class zzaj extends Exception {
 
-    /* renamed from: f */
-    @SafeParcelable.VersionField
-    final int f17846f;
+    /* renamed from: B, reason: collision with root package name */
+    public final C2333b f33518B;
 
-    @SafeParcelable.Constructor
-    zzaj(@SafeParcelable.Param(id = 1) int i2) {
-        this.f17846f = i2;
-    }
-
-    @Override // android.os.Parcelable
-    public final void writeToParcel(Parcel parcel, int i2) {
-        int iM14466a = SafeParcelWriter.m14466a(parcel);
-        SafeParcelWriter.m14477l(parcel, 1, this.f17846f);
-        SafeParcelWriter.m14467b(parcel, iM14466a);
+    public zzaj(C2333b c2333b) {
+        C3445p.b(c2333b.v0(), "ResolvableConnectionException can only be created with a connection result containing a resolution.");
+        this.f33518B = c2333b;
     }
 }

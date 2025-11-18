@@ -4,13 +4,12 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
-import androidx.appcompat.widget.InterfaceC0153a0;
 
 /* loaded from: classes.dex */
-public class FitWindowsFrameLayout extends FrameLayout implements InterfaceC0153a0 {
+public class FitWindowsFrameLayout extends FrameLayout {
 
-    /* renamed from: f */
-    private InterfaceC0153a0.a f847f;
+    /* renamed from: B, reason: collision with root package name */
+    private K f21239B;
 
     public FitWindowsFrameLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
@@ -18,15 +17,13 @@ public class FitWindowsFrameLayout extends FrameLayout implements InterfaceC0153
 
     @Override // android.view.View
     protected boolean fitSystemWindows(Rect rect) {
-        InterfaceC0153a0.a aVar = this.f847f;
-        if (aVar != null) {
-            aVar.mo364a(rect);
+        K k10 = this.f21239B;
+        if (k10 != null) {
+            k10.a(rect);
         }
         return super.fitSystemWindows(rect);
     }
 
-    @Override // androidx.appcompat.widget.InterfaceC0153a0
-    public void setOnFitSystemWindowsListener(InterfaceC0153a0.a aVar) {
-        this.f847f = aVar;
+    public void setOnFitSystemWindowsListener(K k10) {
     }
 }

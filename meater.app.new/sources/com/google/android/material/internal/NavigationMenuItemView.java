@@ -3,7 +3,6 @@ package com.google.android.material.internal;
 import android.R;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
@@ -15,69 +14,61 @@ import android.view.ViewGroup;
 import android.view.ViewStub;
 import android.widget.CheckedTextView;
 import android.widget.FrameLayout;
-import androidx.appcompat.view.menu.C0089i;
-import androidx.appcompat.view.menu.InterfaceC0094n;
-import androidx.appcompat.widget.C0157c0;
-import androidx.appcompat.widget.C0189s0;
-import androidx.core.content.p003d.C0263f;
-import androidx.core.graphics.drawable.C0265a;
-import androidx.core.view.C0280a;
-import androidx.core.view.C0311u;
-import androidx.core.view.p004d0.C0289c;
-import androidx.core.widget.C0330k;
-import androidx.recyclerview.widget.RecyclerView;
-import p024c.p025a.C0823a;
-import p241e.p254e.p256b.p271c.C8910d;
-import p241e.p254e.p256b.p271c.C8911e;
-import p241e.p254e.p256b.p271c.C8912f;
-import p241e.p254e.p256b.p271c.C8914h;
+import android.widget.LinearLayout;
+import androidx.appcompat.view.menu.k;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.appcompat.widget.f0;
+import k1.C3784a;
+import s1.C4421a;
+import s1.X;
 
 /* loaded from: classes2.dex */
-public class NavigationMenuItemView extends C8026d implements InterfaceC0094n.a {
+public class NavigationMenuItemView extends h implements k.a {
 
-    /* renamed from: A */
-    private static final int[] f30313A = {R.attr.state_checked};
+    /* renamed from: k0, reason: collision with root package name */
+    private static final int[] f36659k0 = {R.attr.state_checked};
 
-    /* renamed from: B */
-    private int f30314B;
+    /* renamed from: W, reason: collision with root package name */
+    private int f36660W;
 
-    /* renamed from: C */
-    private boolean f30315C;
+    /* renamed from: a0, reason: collision with root package name */
+    private boolean f36661a0;
 
-    /* renamed from: D */
-    boolean f30316D;
+    /* renamed from: b0, reason: collision with root package name */
+    boolean f36662b0;
 
-    /* renamed from: E */
-    private final CheckedTextView f30317E;
+    /* renamed from: c0, reason: collision with root package name */
+    boolean f36663c0;
 
-    /* renamed from: F */
-    private FrameLayout f30318F;
+    /* renamed from: d0, reason: collision with root package name */
+    private final CheckedTextView f36664d0;
 
-    /* renamed from: G */
-    private C0089i f30319G;
+    /* renamed from: e0, reason: collision with root package name */
+    private FrameLayout f36665e0;
 
-    /* renamed from: H */
-    private ColorStateList f30320H;
+    /* renamed from: f0, reason: collision with root package name */
+    private androidx.appcompat.view.menu.g f36666f0;
 
-    /* renamed from: I */
-    private boolean f30321I;
+    /* renamed from: g0, reason: collision with root package name */
+    private ColorStateList f36667g0;
 
-    /* renamed from: J */
-    private Drawable f30322J;
+    /* renamed from: h0, reason: collision with root package name */
+    private boolean f36668h0;
 
-    /* renamed from: K */
-    private final C0280a f30323K;
+    /* renamed from: i0, reason: collision with root package name */
+    private Drawable f36669i0;
 
-    /* renamed from: com.google.android.material.internal.NavigationMenuItemView$a */
-    class C8021a extends C0280a {
-        C8021a() {
+    /* renamed from: j0, reason: collision with root package name */
+    private final C4421a f36670j0;
+
+    class a extends C4421a {
+        a() {
         }
 
-        @Override // androidx.core.view.C0280a
-        /* renamed from: g */
-        public void mo1858g(View view, C0289c c0289c) {
-            super.mo1858g(view, c0289c);
-            c0289c.m1968W(NavigationMenuItemView.this.f30316D);
+        @Override // s1.C4421a
+        public void g(View view, t1.t tVar) {
+            super.g(view, tVar);
+            tVar.f0(NavigationMenuItemView.this.f36662b0);
         }
     }
 
@@ -85,188 +76,189 @@ public class NavigationMenuItemView extends C8026d implements InterfaceC0094n.a 
         this(context, attributeSet, 0);
     }
 
-    /* renamed from: B */
-    private void m24585B() {
-        if (m24587D()) {
-            this.f30317E.setVisibility(8);
-            FrameLayout frameLayout = this.f30318F;
+    private void B() {
+        if (D()) {
+            this.f36664d0.setVisibility(8);
+            FrameLayout frameLayout = this.f36665e0;
             if (frameLayout != null) {
-                C0157c0.a aVar = (C0157c0.a) frameLayout.getLayoutParams();
-                ((ViewGroup.MarginLayoutParams) aVar).width = -1;
-                this.f30318F.setLayoutParams(aVar);
+                LinearLayoutCompat.a aVar = (LinearLayoutCompat.a) frameLayout.getLayoutParams();
+                ((LinearLayout.LayoutParams) aVar).width = -1;
+                this.f36665e0.setLayoutParams(aVar);
                 return;
             }
             return;
         }
-        this.f30317E.setVisibility(0);
-        FrameLayout frameLayout2 = this.f30318F;
+        this.f36664d0.setVisibility(0);
+        FrameLayout frameLayout2 = this.f36665e0;
         if (frameLayout2 != null) {
-            C0157c0.a aVar2 = (C0157c0.a) frameLayout2.getLayoutParams();
-            ((ViewGroup.MarginLayoutParams) aVar2).width = -2;
-            this.f30318F.setLayoutParams(aVar2);
+            LinearLayoutCompat.a aVar2 = (LinearLayoutCompat.a) frameLayout2.getLayoutParams();
+            ((LinearLayout.LayoutParams) aVar2).width = -2;
+            this.f36665e0.setLayoutParams(aVar2);
         }
     }
 
-    /* renamed from: C */
-    private StateListDrawable m24586C() {
+    private StateListDrawable C() {
         TypedValue typedValue = new TypedValue();
-        if (!getContext().getTheme().resolveAttribute(C0823a.f5048v, typedValue, true)) {
+        if (!getContext().getTheme().resolveAttribute(i.a.f42416w, typedValue, true)) {
             return null;
         }
         StateListDrawable stateListDrawable = new StateListDrawable();
-        stateListDrawable.addState(f30313A, new ColorDrawable(typedValue.data));
+        stateListDrawable.addState(f36659k0, new ColorDrawable(typedValue.data));
         stateListDrawable.addState(ViewGroup.EMPTY_STATE_SET, new ColorDrawable(0));
         return stateListDrawable;
     }
 
-    /* renamed from: D */
-    private boolean m24587D() {
-        return this.f30319G.getTitle() == null && this.f30319G.getIcon() == null && this.f30319G.getActionView() != null;
+    private boolean D() {
+        return this.f36666f0.getTitle() == null && this.f36666f0.getIcon() == null && this.f36666f0.getActionView() != null;
     }
 
     private void setActionView(View view) {
         if (view != null) {
-            if (this.f30318F == null) {
-                this.f30318F = (FrameLayout) ((ViewStub) findViewById(C8912f.f33915e)).inflate();
+            if (this.f36665e0 == null) {
+                this.f36665e0 = (FrameLayout) ((ViewStub) findViewById(C7.g.f2480g)).inflate();
             }
-            this.f30318F.removeAllViews();
-            this.f30318F.addView(view);
+            if (view.getParent() != null) {
+                ((ViewGroup) view.getParent()).removeView(view);
+            }
+            this.f36665e0.removeAllViews();
+            this.f36665e0.addView(view);
         }
     }
 
-    @Override // androidx.appcompat.view.menu.InterfaceC0094n.a
-    /* renamed from: d */
-    public boolean mo471d() {
+    @Override // androidx.appcompat.view.menu.k.a
+    public boolean d() {
         return false;
     }
 
-    @Override // androidx.appcompat.view.menu.InterfaceC0094n.a
-    /* renamed from: e */
-    public void mo472e(C0089i c0089i, int i2) throws Resources.NotFoundException {
-        this.f30319G = c0089i;
-        if (c0089i.getItemId() > 0) {
-            setId(c0089i.getItemId());
+    @Override // androidx.appcompat.view.menu.k.a
+    public void e(androidx.appcompat.view.menu.g gVar, int i10) {
+        this.f36666f0 = gVar;
+        if (gVar.getItemId() > 0) {
+            setId(gVar.getItemId());
         }
-        setVisibility(c0089i.isVisible() ? 0 : 8);
+        setVisibility(gVar.isVisible() ? 0 : 8);
         if (getBackground() == null) {
-            C0311u.m2139m0(this, m24586C());
+            X.r0(this, C());
         }
-        setCheckable(c0089i.isCheckable());
-        setChecked(c0089i.isChecked());
-        setEnabled(c0089i.isEnabled());
-        setTitle(c0089i.getTitle());
-        setIcon(c0089i.getIcon());
-        setActionView(c0089i.getActionView());
-        setContentDescription(c0089i.getContentDescription());
-        C0189s0.m1179a(this, c0089i.getTooltipText());
-        m24585B();
+        setCheckable(gVar.isCheckable());
+        setChecked(gVar.isChecked());
+        setEnabled(gVar.isEnabled());
+        setTitle(gVar.getTitle());
+        setIcon(gVar.getIcon());
+        setActionView(gVar.getActionView());
+        setContentDescription(gVar.getContentDescription());
+        f0.a(this, gVar.getTooltipText());
+        B();
     }
 
-    @Override // androidx.appcompat.view.menu.InterfaceC0094n.a
-    public C0089i getItemData() {
-        return this.f30319G;
+    @Override // androidx.appcompat.view.menu.k.a
+    public androidx.appcompat.view.menu.g getItemData() {
+        return this.f36666f0;
     }
 
     @Override // android.view.ViewGroup, android.view.View
-    protected int[] onCreateDrawableState(int i2) {
-        int[] iArrOnCreateDrawableState = super.onCreateDrawableState(i2 + 1);
-        C0089i c0089i = this.f30319G;
-        if (c0089i != null && c0089i.isCheckable() && this.f30319G.isChecked()) {
-            ViewGroup.mergeDrawableStates(iArrOnCreateDrawableState, f30313A);
+    protected int[] onCreateDrawableState(int i10) {
+        int[] iArrOnCreateDrawableState = super.onCreateDrawableState(i10 + 1);
+        androidx.appcompat.view.menu.g gVar = this.f36666f0;
+        if (gVar != null && gVar.isCheckable() && this.f36666f0.isChecked()) {
+            View.mergeDrawableStates(iArrOnCreateDrawableState, f36659k0);
         }
         return iArrOnCreateDrawableState;
     }
 
-    public void setCheckable(boolean z) {
+    public void setCheckable(boolean z10) {
         refreshDrawableState();
-        if (this.f30316D != z) {
-            this.f30316D = z;
-            this.f30323K.mo1862l(this.f30317E, RecyclerView.AbstractC0599l.FLAG_MOVED);
+        if (this.f36662b0 != z10) {
+            this.f36662b0 = z10;
+            this.f36670j0.l(this.f36664d0, 2048);
         }
     }
 
-    public void setChecked(boolean z) {
+    public void setChecked(boolean z10) {
         refreshDrawableState();
-        this.f30317E.setChecked(z);
+        this.f36664d0.setChecked(z10);
+        CheckedTextView checkedTextView = this.f36664d0;
+        checkedTextView.setTypeface(checkedTextView.getTypeface(), (z10 && this.f36663c0) ? 1 : 0);
     }
 
-    public void setHorizontalPadding(int i2) {
-        setPadding(i2, 0, i2, 0);
+    public void setHorizontalPadding(int i10) {
+        setPadding(i10, getPaddingTop(), i10, getPaddingBottom());
     }
 
-    public void setIcon(Drawable drawable) throws Resources.NotFoundException {
+    public void setIcon(Drawable drawable) {
         if (drawable != null) {
-            if (this.f30321I) {
+            if (this.f36668h0) {
                 Drawable.ConstantState constantState = drawable.getConstantState();
                 if (constantState != null) {
                     drawable = constantState.newDrawable();
                 }
-                drawable = C0265a.m1821r(drawable).mutate();
-                C0265a.m1818o(drawable, this.f30320H);
+                drawable = C3784a.r(drawable).mutate();
+                C3784a.o(drawable, this.f36667g0);
             }
-            int i2 = this.f30314B;
-            drawable.setBounds(0, 0, i2, i2);
-        } else if (this.f30315C) {
-            if (this.f30322J == null) {
-                Drawable drawableM1751d = C0263f.m1751d(getResources(), C8911e.f33899h, getContext().getTheme());
-                this.f30322J = drawableM1751d;
-                if (drawableM1751d != null) {
-                    int i3 = this.f30314B;
-                    drawableM1751d.setBounds(0, 0, i3, i3);
+            int i10 = this.f36660W;
+            drawable.setBounds(0, 0, i10, i10);
+        } else if (this.f36661a0) {
+            if (this.f36669i0 == null) {
+                Drawable drawableE = i1.h.e(getResources(), C7.f.f2443m, getContext().getTheme());
+                this.f36669i0 = drawableE;
+                if (drawableE != null) {
+                    int i11 = this.f36660W;
+                    drawableE.setBounds(0, 0, i11, i11);
                 }
             }
-            drawable = this.f30322J;
+            drawable = this.f36669i0;
         }
-        C0330k.m2328i(this.f30317E, drawable, null, null, null);
+        androidx.core.widget.j.k(this.f36664d0, drawable, null, null, null);
     }
 
-    public void setIconPadding(int i2) {
-        this.f30317E.setCompoundDrawablePadding(i2);
+    public void setIconPadding(int i10) {
+        this.f36664d0.setCompoundDrawablePadding(i10);
     }
 
-    public void setIconSize(int i2) {
-        this.f30314B = i2;
+    public void setIconSize(int i10) {
+        this.f36660W = i10;
     }
 
-    void setIconTintList(ColorStateList colorStateList) throws Resources.NotFoundException {
-        this.f30320H = colorStateList;
-        this.f30321I = colorStateList != null;
-        C0089i c0089i = this.f30319G;
-        if (c0089i != null) {
-            setIcon(c0089i.getIcon());
+    void setIconTintList(ColorStateList colorStateList) {
+        this.f36667g0 = colorStateList;
+        this.f36668h0 = colorStateList != null;
+        androidx.appcompat.view.menu.g gVar = this.f36666f0;
+        if (gVar != null) {
+            setIcon(gVar.getIcon());
         }
     }
 
-    public void setMaxLines(int i2) {
-        this.f30317E.setMaxLines(i2);
+    public void setMaxLines(int i10) {
+        this.f36664d0.setMaxLines(i10);
     }
 
-    public void setNeedsEmptyIcon(boolean z) {
-        this.f30315C = z;
+    public void setNeedsEmptyIcon(boolean z10) {
+        this.f36661a0 = z10;
     }
 
-    public void setTextAppearance(int i2) {
-        C0330k.m2333n(this.f30317E, i2);
+    public void setTextAppearance(int i10) {
+        androidx.core.widget.j.q(this.f36664d0, i10);
     }
 
     public void setTextColor(ColorStateList colorStateList) {
-        this.f30317E.setTextColor(colorStateList);
+        this.f36664d0.setTextColor(colorStateList);
     }
 
     public void setTitle(CharSequence charSequence) {
-        this.f30317E.setText(charSequence);
+        this.f36664d0.setText(charSequence);
     }
 
-    public NavigationMenuItemView(Context context, AttributeSet attributeSet, int i2) {
-        super(context, attributeSet, i2);
-        C8021a c8021a = new C8021a();
-        this.f30323K = c8021a;
+    public NavigationMenuItemView(Context context, AttributeSet attributeSet, int i10) {
+        super(context, attributeSet, i10);
+        this.f36663c0 = true;
+        a aVar = new a();
+        this.f36670j0 = aVar;
         setOrientation(0);
-        LayoutInflater.from(context).inflate(C8914h.f33943e, (ViewGroup) this, true);
-        setIconSize(context.getResources().getDimensionPixelSize(C8910d.f33878m));
-        CheckedTextView checkedTextView = (CheckedTextView) findViewById(C8912f.f33916f);
-        this.f30317E = checkedTextView;
+        LayoutInflater.from(context).inflate(C7.i.f2509g, (ViewGroup) this, true);
+        setIconSize(context.getResources().getDimensionPixelSize(C7.e.f2399k));
+        CheckedTextView checkedTextView = (CheckedTextView) findViewById(C7.g.f2481h);
+        this.f36664d0 = checkedTextView;
         checkedTextView.setDuplicateParentStateEnabled(true);
-        C0311u.m2131i0(checkedTextView, c8021a);
+        X.n0(checkedTextView, aVar);
     }
 }

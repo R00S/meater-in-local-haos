@@ -5,364 +5,363 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.view.C0311u;
-import androidx.core.view.p004d0.C0289c;
-import androidx.core.view.p004d0.InterfaceC0292f;
-import cm.aptoide.p092pt.file.CacheHelper;
-import p024c.p062k.p063a.C0966c;
+import s1.X;
+import t1.t;
+import t1.w;
+import z1.d;
 
 /* loaded from: classes2.dex */
-public class SwipeDismissBehavior<V extends View> extends CoordinatorLayout.AbstractC0226c<V> {
+public class SwipeDismissBehavior<V extends View> extends CoordinatorLayout.c<V> {
 
-    /* renamed from: a */
-    C0966c f29712a;
+    /* renamed from: B, reason: collision with root package name */
+    z1.d f35923B;
 
-    /* renamed from: b */
-    InterfaceC7943c f29713b;
+    /* renamed from: C, reason: collision with root package name */
+    c f35924C;
 
-    /* renamed from: c */
-    private boolean f29714c;
+    /* renamed from: D, reason: collision with root package name */
+    private boolean f35925D;
 
-    /* renamed from: e */
-    private boolean f29716e;
+    /* renamed from: E, reason: collision with root package name */
+    private boolean f35926E;
 
-    /* renamed from: d */
-    private float f29715d = 0.0f;
+    /* renamed from: G, reason: collision with root package name */
+    private boolean f35928G;
 
-    /* renamed from: f */
-    int f29717f = 2;
+    /* renamed from: F, reason: collision with root package name */
+    private float f35927F = 0.0f;
 
-    /* renamed from: g */
-    float f29718g = 0.5f;
+    /* renamed from: H, reason: collision with root package name */
+    int f35929H = 2;
 
-    /* renamed from: h */
-    float f29719h = 0.0f;
+    /* renamed from: I, reason: collision with root package name */
+    float f35930I = 0.5f;
 
-    /* renamed from: i */
-    float f29720i = 0.5f;
+    /* renamed from: J, reason: collision with root package name */
+    float f35931J = 0.0f;
 
-    /* renamed from: j */
-    private final C0966c.c f29721j = new C7941a();
+    /* renamed from: K, reason: collision with root package name */
+    float f35932K = 0.5f;
 
-    /* renamed from: com.google.android.material.behavior.SwipeDismissBehavior$a */
-    class C7941a extends C0966c.c {
+    /* renamed from: L, reason: collision with root package name */
+    private final d.c f35933L = new a();
 
-        /* renamed from: a */
-        private int f29722a;
+    class a extends d.c {
 
-        /* renamed from: b */
-        private int f29723b = -1;
+        /* renamed from: a, reason: collision with root package name */
+        private int f35934a;
 
-        C7941a() {
+        /* renamed from: b, reason: collision with root package name */
+        private int f35935b = -1;
+
+        a() {
         }
 
-        /* renamed from: n */
-        private boolean m23873n(View view, float f2) {
-            if (f2 == 0.0f) {
-                return Math.abs(view.getLeft() - this.f29722a) >= Math.round(((float) view.getWidth()) * SwipeDismissBehavior.this.f29718g);
+        private boolean n(View view, float f10) {
+            if (f10 == 0.0f) {
+                return Math.abs(view.getLeft() - this.f35934a) >= Math.round(((float) view.getWidth()) * SwipeDismissBehavior.this.f35930I);
             }
-            boolean z = C0311u.m2162y(view) == 1;
-            int i2 = SwipeDismissBehavior.this.f29717f;
-            if (i2 == 2) {
+            boolean z10 = X.z(view) == 1;
+            int i10 = SwipeDismissBehavior.this.f35929H;
+            if (i10 == 2) {
                 return true;
             }
-            if (i2 == 0) {
-                if (z) {
-                    if (f2 >= 0.0f) {
+            if (i10 == 0) {
+                if (z10) {
+                    if (f10 >= 0.0f) {
                         return false;
                     }
-                } else if (f2 <= 0.0f) {
+                } else if (f10 <= 0.0f) {
                     return false;
                 }
                 return true;
             }
-            if (i2 != 1) {
+            if (i10 != 1) {
                 return false;
             }
-            if (z) {
-                if (f2 <= 0.0f) {
+            if (z10) {
+                if (f10 <= 0.0f) {
                     return false;
                 }
-            } else if (f2 >= 0.0f) {
+            } else if (f10 >= 0.0f) {
                 return false;
             }
             return true;
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: a */
-        public int mo6164a(View view, int i2, int i3) {
+        @Override // z1.d.c
+        public int a(View view, int i10, int i11) {
             int width;
             int width2;
             int width3;
-            boolean z = C0311u.m2162y(view) == 1;
-            int i4 = SwipeDismissBehavior.this.f29717f;
-            if (i4 == 0) {
-                if (z) {
-                    width = this.f29722a - view.getWidth();
-                    width2 = this.f29722a;
+            boolean z10 = X.z(view) == 1;
+            int i12 = SwipeDismissBehavior.this.f35929H;
+            if (i12 == 0) {
+                if (z10) {
+                    width = this.f35934a - view.getWidth();
+                    width2 = this.f35934a;
                 } else {
-                    width = this.f29722a;
+                    width = this.f35934a;
                     width3 = view.getWidth();
                     width2 = width3 + width;
                 }
-            } else if (i4 != 1) {
-                width = this.f29722a - view.getWidth();
-                width2 = view.getWidth() + this.f29722a;
-            } else if (z) {
-                width = this.f29722a;
+            } else if (i12 != 1) {
+                width = this.f35934a - view.getWidth();
+                width2 = view.getWidth() + this.f35934a;
+            } else if (z10) {
+                width = this.f35934a;
                 width3 = view.getWidth();
                 width2 = width3 + width;
             } else {
-                width = this.f29722a - view.getWidth();
-                width2 = this.f29722a;
+                width = this.f35934a - view.getWidth();
+                width2 = this.f35934a;
             }
-            return SwipeDismissBehavior.m23864G(width, i2, width2);
+            return SwipeDismissBehavior.L(width, i10, width2);
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: b */
-        public int mo6165b(View view, int i2, int i3) {
+        @Override // z1.d.c
+        public int b(View view, int i10, int i11) {
             return view.getTop();
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: d */
-        public int mo6167d(View view) {
+        @Override // z1.d.c
+        public int d(View view) {
             return view.getWidth();
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: i */
-        public void mo6172i(View view, int i2) {
-            this.f29723b = i2;
-            this.f29722a = view.getLeft();
+        @Override // z1.d.c
+        public void i(View view, int i10) {
+            this.f35935b = i10;
+            this.f35934a = view.getLeft();
             ViewParent parent = view.getParent();
             if (parent != null) {
+                SwipeDismissBehavior.this.f35926E = true;
                 parent.requestDisallowInterceptTouchEvent(true);
+                SwipeDismissBehavior.this.f35926E = false;
             }
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: j */
-        public void mo6173j(int i2) {
-            InterfaceC7943c interfaceC7943c = SwipeDismissBehavior.this.f29713b;
-            if (interfaceC7943c != null) {
-                interfaceC7943c.mo23875b(i2);
+        @Override // z1.d.c
+        public void j(int i10) {
+            c cVar = SwipeDismissBehavior.this.f35924C;
+            if (cVar != null) {
+                cVar.b(i10);
             }
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: k */
-        public void mo6174k(View view, int i2, int i3, int i4, int i5) {
-            float width = this.f29722a + (view.getWidth() * SwipeDismissBehavior.this.f29719h);
-            float width2 = this.f29722a + (view.getWidth() * SwipeDismissBehavior.this.f29720i);
-            float f2 = i2;
-            if (f2 <= width) {
+        @Override // z1.d.c
+        public void k(View view, int i10, int i11, int i12, int i13) {
+            float width = view.getWidth() * SwipeDismissBehavior.this.f35931J;
+            float width2 = view.getWidth() * SwipeDismissBehavior.this.f35932K;
+            float fAbs = Math.abs(i10 - this.f35934a);
+            if (fAbs <= width) {
                 view.setAlpha(1.0f);
-            } else if (f2 >= width2) {
+            } else if (fAbs >= width2) {
                 view.setAlpha(0.0f);
             } else {
-                view.setAlpha(SwipeDismissBehavior.m23863F(0.0f, 1.0f - SwipeDismissBehavior.m23866I(width, width2, f2), 1.0f));
+                view.setAlpha(SwipeDismissBehavior.K(0.0f, 1.0f - SwipeDismissBehavior.N(width, width2, fAbs), 1.0f));
             }
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: l */
-        public void mo6175l(View view, float f2, float f3) {
-            int i2;
-            boolean z;
-            InterfaceC7943c interfaceC7943c;
-            this.f29723b = -1;
-            int width = view.getWidth();
-            if (m23873n(view, f2)) {
-                int left = view.getLeft();
-                int i3 = this.f29722a;
-                i2 = left < i3 ? i3 - width : i3 + width;
-                z = true;
-            } else {
-                i2 = this.f29722a;
-                z = false;
-            }
-            if (SwipeDismissBehavior.this.f29712a.m6151F(i2, view.getTop())) {
-                C0311u.m2115a0(view, new RunnableC7944d(view, z));
-            } else {
-                if (!z || (interfaceC7943c = SwipeDismissBehavior.this.f29713b) == null) {
-                    return;
-                }
-                interfaceC7943c.mo23874a(view);
-            }
+        /* JADX WARN: Removed duplicated region for block: B:10:0x001d  */
+        @Override // z1.d.c
+        /*
+            Code decompiled incorrectly, please refer to instructions dump.
+            To view partially-correct code enable 'Show inconsistent code' option in preferences
+        */
+        public void l(android.view.View r3, float r4, float r5) {
+            /*
+                r2 = this;
+                r5 = -1
+                r2.f35935b = r5
+                int r5 = r3.getWidth()
+                boolean r0 = r2.n(r3, r4)
+                if (r0 == 0) goto L23
+                r0 = 0
+                int r4 = (r4 > r0 ? 1 : (r4 == r0 ? 0 : -1))
+                if (r4 < 0) goto L1d
+                int r4 = r3.getLeft()
+                int r0 = r2.f35934a
+                if (r4 >= r0) goto L1b
+                goto L1d
+            L1b:
+                int r0 = r0 + r5
+                goto L21
+            L1d:
+                int r4 = r2.f35934a
+                int r0 = r4 - r5
+            L21:
+                r4 = 1
+                goto L26
+            L23:
+                int r0 = r2.f35934a
+                r4 = 0
+            L26:
+                com.google.android.material.behavior.SwipeDismissBehavior r5 = com.google.android.material.behavior.SwipeDismissBehavior.this
+                z1.d r5 = r5.f35923B
+                int r1 = r3.getTop()
+                boolean r5 = r5.G(r0, r1)
+                if (r5 == 0) goto L3f
+                com.google.android.material.behavior.SwipeDismissBehavior$d r5 = new com.google.android.material.behavior.SwipeDismissBehavior$d
+                com.google.android.material.behavior.SwipeDismissBehavior r0 = com.google.android.material.behavior.SwipeDismissBehavior.this
+                r5.<init>(r3, r4)
+                s1.X.f0(r3, r5)
+                goto L4a
+            L3f:
+                if (r4 == 0) goto L4a
+                com.google.android.material.behavior.SwipeDismissBehavior r4 = com.google.android.material.behavior.SwipeDismissBehavior.this
+                com.google.android.material.behavior.SwipeDismissBehavior$c r4 = r4.f35924C
+                if (r4 == 0) goto L4a
+                r4.a(r3)
+            L4a:
+                return
+            */
+            throw new UnsupportedOperationException("Method not decompiled: com.google.android.material.behavior.SwipeDismissBehavior.a.l(android.view.View, float, float):void");
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: m */
-        public boolean mo6176m(View view, int i2) {
-            int i3 = this.f29723b;
-            return (i3 == -1 || i3 == i2) && SwipeDismissBehavior.this.mo23868E(view);
+        @Override // z1.d.c
+        public boolean m(View view, int i10) {
+            int i11 = this.f35935b;
+            return (i11 == -1 || i11 == i10) && SwipeDismissBehavior.this.J(view);
         }
     }
 
-    /* renamed from: com.google.android.material.behavior.SwipeDismissBehavior$b */
-    class C7942b implements InterfaceC0292f {
-        C7942b() {
+    class b implements w {
+        b() {
         }
 
-        @Override // androidx.core.view.p004d0.InterfaceC0292f
-        /* renamed from: a */
-        public boolean mo2032a(View view, InterfaceC0292f.a aVar) {
-            boolean z = false;
-            if (!SwipeDismissBehavior.this.mo23868E(view)) {
+        @Override // t1.w
+        public boolean a(View view, w.a aVar) {
+            if (!SwipeDismissBehavior.this.J(view)) {
                 return false;
             }
-            boolean z2 = C0311u.m2162y(view) == 1;
-            int i2 = SwipeDismissBehavior.this.f29717f;
-            if ((i2 == 0 && z2) || (i2 == 1 && !z2)) {
-                z = true;
-            }
-            int width = view.getWidth();
-            if (z) {
-                width = -width;
-            }
-            C0311u.m2107T(view, width);
+            boolean z10 = X.z(view) == 1;
+            int i10 = SwipeDismissBehavior.this.f35929H;
+            X.X(view, (!(i10 == 0 && z10) && (i10 != 1 || z10)) ? view.getWidth() : -view.getWidth());
             view.setAlpha(0.0f);
-            InterfaceC7943c interfaceC7943c = SwipeDismissBehavior.this.f29713b;
-            if (interfaceC7943c != null) {
-                interfaceC7943c.mo23874a(view);
+            c cVar = SwipeDismissBehavior.this.f35924C;
+            if (cVar != null) {
+                cVar.a(view);
             }
             return true;
         }
     }
 
-    /* renamed from: com.google.android.material.behavior.SwipeDismissBehavior$c */
-    public interface InterfaceC7943c {
-        /* renamed from: a */
-        void mo23874a(View view);
+    public interface c {
+        void a(View view);
 
-        /* renamed from: b */
-        void mo23875b(int i2);
+        void b(int i10);
     }
 
-    /* renamed from: com.google.android.material.behavior.SwipeDismissBehavior$d */
-    private class RunnableC7944d implements Runnable {
+    private class d implements Runnable {
 
-        /* renamed from: f */
-        private final View f29726f;
+        /* renamed from: B, reason: collision with root package name */
+        private final View f35938B;
 
-        /* renamed from: g */
-        private final boolean f29727g;
+        /* renamed from: C, reason: collision with root package name */
+        private final boolean f35939C;
 
-        RunnableC7944d(View view, boolean z) {
-            this.f29726f = view;
-            this.f29727g = z;
+        d(View view, boolean z10) {
+            this.f35938B = view;
+            this.f35939C = z10;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            InterfaceC7943c interfaceC7943c;
-            C0966c c0966c = SwipeDismissBehavior.this.f29712a;
-            if (c0966c != null && c0966c.m6157k(true)) {
-                C0311u.m2115a0(this.f29726f, this);
+            c cVar;
+            z1.d dVar = SwipeDismissBehavior.this.f35923B;
+            if (dVar != null && dVar.l(true)) {
+                X.f0(this.f35938B, this);
             } else {
-                if (!this.f29727g || (interfaceC7943c = SwipeDismissBehavior.this.f29713b) == null) {
+                if (!this.f35939C || (cVar = SwipeDismissBehavior.this.f35924C) == null) {
                     return;
                 }
-                interfaceC7943c.mo23874a(this.f29726f);
+                cVar.a(this.f35938B);
             }
         }
     }
 
-    /* renamed from: F */
-    static float m23863F(float f2, float f3, float f4) {
-        return Math.min(Math.max(f2, f3), f4);
+    static float K(float f10, float f11, float f12) {
+        return Math.min(Math.max(f10, f11), f12);
     }
 
-    /* renamed from: G */
-    static int m23864G(int i2, int i3, int i4) {
-        return Math.min(Math.max(i2, i3), i4);
+    static int L(int i10, int i11, int i12) {
+        return Math.min(Math.max(i10, i11), i12);
     }
 
-    /* renamed from: H */
-    private void m23865H(ViewGroup viewGroup) {
-        if (this.f29712a == null) {
-            this.f29712a = this.f29716e ? C0966c.m6141l(viewGroup, this.f29715d, this.f29721j) : C0966c.m6142m(viewGroup, this.f29721j);
+    private void M(ViewGroup viewGroup) {
+        if (this.f35923B == null) {
+            this.f35923B = this.f35928G ? z1.d.m(viewGroup, this.f35927F, this.f35933L) : z1.d.n(viewGroup, this.f35933L);
         }
     }
 
-    /* renamed from: I */
-    static float m23866I(float f2, float f3, float f4) {
-        return (f4 - f2) / (f3 - f2);
+    static float N(float f10, float f11, float f12) {
+        return (f12 - f10) / (f11 - f10);
     }
 
-    /* renamed from: N */
-    private void m23867N(View view) {
-        C0311u.m2119c0(view, CacheHelper.VALUE_TO_CONVERT_MB_TO_BYTES);
-        if (mo23868E(view)) {
-            C0311u.m2123e0(view, C0289c.a.f2368u, null, new C7942b());
+    private void S(View view) {
+        X.h0(view, 1048576);
+        if (J(view)) {
+            X.j0(view, t.a.f49798y, null, new b());
         }
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: D */
-    public boolean mo1446D(CoordinatorLayout coordinatorLayout, V v, MotionEvent motionEvent) {
-        C0966c c0966c = this.f29712a;
-        if (c0966c == null) {
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public boolean H(CoordinatorLayout coordinatorLayout, V v10, MotionEvent motionEvent) {
+        if (this.f35923B == null) {
             return false;
         }
-        c0966c.m6163z(motionEvent);
+        if (this.f35926E && motionEvent.getActionMasked() == 3) {
+            return true;
+        }
+        this.f35923B.A(motionEvent);
         return true;
     }
 
-    /* renamed from: E */
-    public boolean mo23868E(View view) {
+    public boolean J(View view) {
         return true;
     }
 
-    /* renamed from: J */
-    public void m23869J(float f2) {
-        this.f29720i = m23863F(0.0f, f2, 1.0f);
+    public void O(float f10) {
+        this.f35932K = K(0.0f, f10, 1.0f);
     }
 
-    /* renamed from: K */
-    public void m23870K(InterfaceC7943c interfaceC7943c) {
-        this.f29713b = interfaceC7943c;
+    public void P(c cVar) {
+        this.f35924C = cVar;
     }
 
-    /* renamed from: L */
-    public void m23871L(float f2) {
-        this.f29719h = m23863F(0.0f, f2, 1.0f);
+    public void Q(float f10) {
+        this.f35931J = K(0.0f, f10, 1.0f);
     }
 
-    /* renamed from: M */
-    public void m23872M(int i2) {
-        this.f29717f = i2;
+    public void R(int i10) {
+        this.f35929H = i10;
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: k */
-    public boolean mo1457k(CoordinatorLayout coordinatorLayout, V v, MotionEvent motionEvent) {
-        boolean zM1419B = this.f29714c;
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public boolean o(CoordinatorLayout coordinatorLayout, V v10, MotionEvent motionEvent) {
+        boolean zB = this.f35925D;
         int actionMasked = motionEvent.getActionMasked();
         if (actionMasked == 0) {
-            zM1419B = coordinatorLayout.m1419B(v, (int) motionEvent.getX(), (int) motionEvent.getY());
-            this.f29714c = zM1419B;
+            zB = coordinatorLayout.B(v10, (int) motionEvent.getX(), (int) motionEvent.getY());
+            this.f35925D = zB;
         } else if (actionMasked == 1 || actionMasked == 3) {
-            this.f29714c = false;
+            this.f35925D = false;
         }
-        if (!zM1419B) {
+        if (!zB) {
             return false;
         }
-        m23865H(coordinatorLayout);
-        return this.f29712a.m6152G(motionEvent);
+        M(coordinatorLayout);
+        return !this.f35926E && this.f35923B.H(motionEvent);
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: l */
-    public boolean mo1458l(CoordinatorLayout coordinatorLayout, V v, int i2) {
-        boolean zMo1458l = super.mo1458l(coordinatorLayout, v, i2);
-        if (C0311u.m2158w(v) == 0) {
-            C0311u.m2153t0(v, 1);
-            m23867N(v);
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public boolean p(CoordinatorLayout coordinatorLayout, V v10, int i10) {
+        boolean zP = super.p(coordinatorLayout, v10, i10);
+        if (X.x(v10) == 0) {
+            X.x0(v10, 1);
+            S(v10);
         }
-        return zMo1458l;
+        return zP;
     }
 }

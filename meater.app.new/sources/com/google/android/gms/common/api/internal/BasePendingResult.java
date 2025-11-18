@@ -2,373 +2,257 @@ package com.google.android.gms.common.api.internal;
 
 import android.os.Looper;
 import android.os.Message;
-import android.os.RemoteException;
 import android.util.Log;
 import android.util.Pair;
-import com.google.android.gms.common.annotation.KeepForSdk;
 import com.google.android.gms.common.annotation.KeepName;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.PendingResult;
-import com.google.android.gms.common.api.Releasable;
-import com.google.android.gms.common.api.Result;
-import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-import com.google.android.gms.common.internal.ICancelToken;
-import com.google.android.gms.common.internal.Preconditions;
-import com.google.android.gms.common.util.VisibleForTesting;
-import com.google.android.gms.internal.base.zap;
+import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
+import d7.AbstractC3049c;
+import d7.InterfaceC3050d;
+import d7.InterfaceC3051e;
+import d7.InterfaceC3052f;
+import e7.h0;
+import g7.C3445p;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
+import p7.j;
 
-@KeepForSdk
+/* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 @KeepName
 /* loaded from: classes2.dex */
-public abstract class BasePendingResult<R extends Result> extends PendingResult<R> {
+public abstract class BasePendingResult<R extends InterfaceC3051e> extends AbstractC3049c<R> {
 
-    /* renamed from: a */
-    static final ThreadLocal<Boolean> f17311a = new C6389q0();
+    /* renamed from: n, reason: collision with root package name */
+    static final ThreadLocal f33487n = new c();
 
-    /* renamed from: b */
-    private final Object f17312b;
+    /* renamed from: a, reason: collision with root package name */
+    private final Object f33488a;
 
-    /* renamed from: c */
-    private final CallbackHandler<R> f17313c;
+    /* renamed from: b, reason: collision with root package name */
+    protected final a f33489b;
 
-    /* renamed from: d */
-    private final WeakReference<GoogleApiClient> f17314d;
+    /* renamed from: c, reason: collision with root package name */
+    protected final WeakReference f33490c;
 
-    /* renamed from: e */
-    private final CountDownLatch f17315e;
+    /* renamed from: d, reason: collision with root package name */
+    private final CountDownLatch f33491d;
 
-    /* renamed from: f */
-    private final ArrayList<PendingResult.StatusListener> f17316f;
+    /* renamed from: e, reason: collision with root package name */
+    private final ArrayList f33492e;
 
-    /* renamed from: g */
-    private ResultCallback<? super R> f17317g;
+    /* renamed from: f, reason: collision with root package name */
+    private InterfaceC3052f f33493f;
 
-    /* renamed from: h */
-    private final AtomicReference<InterfaceC6379l0> f17318h;
+    /* renamed from: g, reason: collision with root package name */
+    private final AtomicReference f33494g;
 
-    /* renamed from: i */
-    private R f17319i;
+    /* renamed from: h, reason: collision with root package name */
+    private InterfaceC3051e f33495h;
 
-    /* renamed from: j */
-    private Status f17320j;
+    /* renamed from: i, reason: collision with root package name */
+    private Status f33496i;
 
-    /* renamed from: k */
-    private volatile boolean f17321k;
+    /* renamed from: j, reason: collision with root package name */
+    private volatile boolean f33497j;
 
-    /* renamed from: l */
-    private boolean f17322l;
+    /* renamed from: k, reason: collision with root package name */
+    private boolean f33498k;
 
-    /* renamed from: m */
-    private boolean f17323m;
+    /* renamed from: l, reason: collision with root package name */
+    private boolean f33499l;
+
+    /* renamed from: m, reason: collision with root package name */
+    private boolean f33500m;
 
     @KeepName
-    private C6353a mResultGuardian;
+    private d resultGuardian;
 
-    /* renamed from: n */
-    private ICancelToken f17324n;
-
-    /* renamed from: o */
-    private volatile zacm<R> f17325o;
-
-    /* renamed from: p */
-    private boolean f17326p;
-
-    @VisibleForTesting
-    public static class CallbackHandler<R extends Result> extends zap {
-        public CallbackHandler() {
-            this(Looper.getMainLooper());
+    /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
+    public static class a<R extends InterfaceC3051e> extends j {
+        public a(Looper looper) {
+            super(looper);
         }
 
-        /* renamed from: a */
-        public final void m13945a(ResultCallback<? super R> resultCallback, R r) {
-            sendMessage(obtainMessage(1, new Pair(resultCallback, r)));
+        public final void a(InterfaceC3052f interfaceC3052f, InterfaceC3051e interfaceC3051e) {
+            ThreadLocal threadLocal = BasePendingResult.f33487n;
+            sendMessage(obtainMessage(1, new Pair((InterfaceC3052f) C3445p.k(interfaceC3052f), interfaceC3051e)));
         }
 
         /* JADX WARN: Multi-variable type inference failed */
         @Override // android.os.Handler
-        public void handleMessage(Message message) {
-            int i2 = message.what;
-            if (i2 != 1) {
-                if (i2 == 2) {
-                    ((BasePendingResult) message.obj).m13942p(Status.f17294j);
+        public final void handleMessage(Message message) {
+            int i10 = message.what;
+            if (i10 != 1) {
+                if (i10 == 2) {
+                    ((BasePendingResult) message.obj).e(Status.f33459J);
                     return;
                 }
-                StringBuilder sb = new StringBuilder(45);
-                sb.append("Don't know how to handle message: ");
-                sb.append(i2);
-                Log.wtf("BasePendingResult", sb.toString(), new Exception());
+                Log.wtf("BasePendingResult", "Don't know how to handle message: " + i10, new Exception());
                 return;
             }
             Pair pair = (Pair) message.obj;
-            ResultCallback resultCallback = (ResultCallback) pair.first;
-            Result result = (Result) pair.second;
+            InterfaceC3052f interfaceC3052f = (InterfaceC3052f) pair.first;
+            InterfaceC3051e interfaceC3051e = (InterfaceC3051e) pair.second;
             try {
-                resultCallback.mo13908a(result);
-            } catch (RuntimeException e2) {
-                BasePendingResult.m13938o(result);
-                throw e2;
+                interfaceC3052f.a(interfaceC3051e);
+            } catch (RuntimeException e10) {
+                BasePendingResult.l(interfaceC3051e);
+                throw e10;
             }
-        }
-
-        public CallbackHandler(Looper looper) {
-            super(looper);
-        }
-    }
-
-    /* renamed from: com.google.android.gms.common.api.internal.BasePendingResult$a */
-    private final class C6353a {
-        private C6353a() {
-        }
-
-        protected final void finalize() throws Throwable {
-            BasePendingResult.m13938o(BasePendingResult.this.f17319i);
-            super.finalize();
-        }
-
-        /* synthetic */ C6353a(BasePendingResult basePendingResult, C6389q0 c6389q0) {
-            this();
         }
     }
 
     @Deprecated
     BasePendingResult() {
-        this.f17312b = new Object();
-        this.f17315e = new CountDownLatch(1);
-        this.f17316f = new ArrayList<>();
-        this.f17318h = new AtomicReference<>();
-        this.f17326p = false;
-        this.f17313c = new CallbackHandler<>(Looper.getMainLooper());
-        this.f17314d = new WeakReference<>(null);
+        this.f33488a = new Object();
+        this.f33491d = new CountDownLatch(1);
+        this.f33492e = new ArrayList();
+        this.f33494g = new AtomicReference();
+        this.f33500m = false;
+        this.f33489b = new a(Looper.getMainLooper());
+        this.f33490c = new WeakReference(null);
     }
 
-    /* renamed from: i */
-    private final R m13935i() {
-        R r;
-        synchronized (this.f17312b) {
-            Preconditions.m14376o(!this.f17321k, "Result has already been consumed.");
-            Preconditions.m14376o(m13939j(), "Result is not ready.");
-            r = this.f17319i;
-            this.f17319i = null;
-            this.f17317g = null;
-            this.f17321k = true;
+    private final InterfaceC3051e h() {
+        InterfaceC3051e interfaceC3051e;
+        synchronized (this.f33488a) {
+            C3445p.o(!this.f33497j, "Result has already been consumed.");
+            C3445p.o(f(), "Result is not ready.");
+            interfaceC3051e = this.f33495h;
+            this.f33495h = null;
+            this.f33493f = null;
+            this.f33497j = true;
         }
-        InterfaceC6379l0 andSet = this.f17318h.getAndSet(null);
-        if (andSet != null) {
-            andSet.mo14063a(this);
+        if (((b) this.f33494g.getAndSet(null)) == null) {
+            return (InterfaceC3051e) C3445p.k(interfaceC3051e);
         }
-        return r;
+        throw null;
     }
 
-    /* renamed from: m */
-    private final void m13937m(R r) {
-        this.f17319i = r;
-        C6389q0 c6389q0 = null;
-        this.f17324n = null;
-        this.f17315e.countDown();
-        this.f17320j = this.f17319i.getStatus();
-        if (this.f17322l) {
-            this.f17317g = null;
-        } else if (this.f17317g != null) {
-            this.f17313c.removeMessages(2);
-            this.f17313c.m13945a(this.f17317g, m13935i());
-        } else if (this.f17319i instanceof Releasable) {
-            this.mResultGuardian = new C6353a(this, c6389q0);
+    private final void i(InterfaceC3051e interfaceC3051e) {
+        this.f33495h = interfaceC3051e;
+        this.f33496i = interfaceC3051e.a0();
+        this.f33491d.countDown();
+        h0 h0Var = null;
+        if (this.f33498k) {
+            this.f33493f = null;
+        } else {
+            InterfaceC3052f interfaceC3052f = this.f33493f;
+            if (interfaceC3052f != null) {
+                this.f33489b.removeMessages(2);
+                this.f33489b.a(interfaceC3052f, h());
+            } else if (this.f33495h instanceof InterfaceC3050d) {
+                this.resultGuardian = new d(this, h0Var);
+            }
         }
-        ArrayList<PendingResult.StatusListener> arrayList = this.f17316f;
+        ArrayList arrayList = this.f33492e;
         int size = arrayList.size();
-        int i2 = 0;
-        while (i2 < size) {
-            PendingResult.StatusListener statusListener = arrayList.get(i2);
-            i2++;
-            statusListener.mo13901a(this.f17320j);
+        for (int i10 = 0; i10 < size; i10++) {
+            ((AbstractC3049c.a) arrayList.get(i10)).a(this.f33496i);
         }
-        this.f17316f.clear();
+        this.f33492e.clear();
     }
 
-    /* renamed from: o */
-    public static void m13938o(Result result) {
-        if (result instanceof Releasable) {
+    public static void l(InterfaceC3051e interfaceC3051e) {
+        if (interfaceC3051e instanceof InterfaceC3050d) {
             try {
-                ((Releasable) result).mo13849c();
-            } catch (RuntimeException e2) {
-                String strValueOf = String.valueOf(result);
-                StringBuilder sb = new StringBuilder(strValueOf.length() + 18);
-                sb.append("Unable to release ");
-                sb.append(strValueOf);
-                Log.w("BasePendingResult", sb.toString(), e2);
+                ((InterfaceC3050d) interfaceC3051e).c();
+            } catch (RuntimeException e10) {
+                Log.w("BasePendingResult", "Unable to release ".concat(String.valueOf(interfaceC3051e)), e10);
             }
         }
     }
 
-    @Override // com.google.android.gms.common.api.PendingResult
-    /* renamed from: b */
-    public final void mo13896b(PendingResult.StatusListener statusListener) {
-        Preconditions.m14363b(statusListener != null, "Callback cannot be null.");
-        synchronized (this.f17312b) {
-            if (m13939j()) {
-                statusListener.mo13901a(this.f17320j);
-            } else {
-                this.f17316f.add(statusListener);
+    @Override // d7.AbstractC3049c
+    public final void b(AbstractC3049c.a aVar) {
+        C3445p.b(aVar != null, "Callback cannot be null.");
+        synchronized (this.f33488a) {
+            try {
+                if (f()) {
+                    aVar.a(this.f33496i);
+                } else {
+                    this.f33492e.add(aVar);
+                }
+            } catch (Throwable th) {
+                throw th;
             }
         }
     }
 
-    @Override // com.google.android.gms.common.api.PendingResult
-    /* renamed from: c */
-    public final R mo13897c(long j2, TimeUnit timeUnit) {
-        if (j2 > 0) {
-            Preconditions.m14371j("await must not be called on the UI thread when time is greater than zero.");
+    @Override // d7.AbstractC3049c
+    @ResultIgnorabilityUnspecified
+    public final R c(long j10, TimeUnit timeUnit) {
+        if (j10 > 0) {
+            C3445p.j("await must not be called on the UI thread when time is greater than zero.");
         }
-        Preconditions.m14376o(!this.f17321k, "Result has already been consumed.");
-        Preconditions.m14376o(this.f17325o == null, "Cannot await if then() has been called.");
+        C3445p.o(!this.f33497j, "Result has already been consumed.");
+        C3445p.o(true, "Cannot await if then() has been called.");
         try {
-            if (!this.f17315e.await(j2, timeUnit)) {
-                m13942p(Status.f17294j);
+            if (!this.f33491d.await(j10, timeUnit)) {
+                e(Status.f33459J);
             }
         } catch (InterruptedException unused) {
-            m13942p(Status.f17292h);
+            e(Status.f33457H);
         }
-        Preconditions.m14376o(m13939j(), "Result is not ready.");
-        return (R) m13935i();
+        C3445p.o(f(), "Result is not ready.");
+        return (R) h();
     }
 
-    @Override // com.google.android.gms.common.api.PendingResult
-    @KeepForSdk
-    /* renamed from: d */
-    public void mo13846d() {
-        synchronized (this.f17312b) {
-            if (!this.f17322l && !this.f17321k) {
-                ICancelToken iCancelToken = this.f17324n;
-                if (iCancelToken != null) {
-                    try {
-                        iCancelToken.cancel();
-                    } catch (RemoteException unused) {
-                    }
+    protected abstract R d(Status status);
+
+    @Deprecated
+    public final void e(Status status) {
+        synchronized (this.f33488a) {
+            try {
+                if (!f()) {
+                    g(d(status));
+                    this.f33499l = true;
                 }
-                m13938o(this.f17319i);
-                this.f17322l = true;
-                m13937m(mo13718h(Status.f17295k));
+            } catch (Throwable th) {
+                throw th;
             }
         }
     }
 
-    @Override // com.google.android.gms.common.api.PendingResult
-    /* renamed from: e */
-    public boolean mo13898e() {
-        boolean z;
-        synchronized (this.f17312b) {
-            z = this.f17322l;
-        }
-        return z;
+    public final boolean f() {
+        return this.f33491d.getCount() == 0;
     }
 
-    @Override // com.google.android.gms.common.api.PendingResult
-    @KeepForSdk
-    /* renamed from: f */
-    public final void mo13899f(ResultCallback<? super R> resultCallback) {
-        synchronized (this.f17312b) {
-            if (resultCallback == null) {
-                this.f17317g = null;
-                return;
-            }
-            boolean z = true;
-            Preconditions.m14376o(!this.f17321k, "Result has already been consumed.");
-            if (this.f17325o != null) {
-                z = false;
-            }
-            Preconditions.m14376o(z, "Cannot set callbacks if then() has been called.");
-            if (mo13898e()) {
-                return;
-            }
-            if (m13939j()) {
-                this.f17313c.m13945a(resultCallback, m13935i());
-            } else {
-                this.f17317g = resultCallback;
+    public final void g(R r10) {
+        synchronized (this.f33488a) {
+            try {
+                if (this.f33499l || this.f33498k) {
+                    l(r10);
+                    return;
+                }
+                f();
+                C3445p.o(!f(), "Results have already been set");
+                C3445p.o(!this.f33497j, "Result has already been consumed");
+                i(r10);
+            } catch (Throwable th) {
+                throw th;
             }
         }
     }
 
-    @Override // com.google.android.gms.common.api.PendingResult
-    /* renamed from: g */
-    public final Integer mo13900g() {
-        return null;
-    }
-
-    @KeepForSdk
-    /* renamed from: h */
-    protected abstract R mo13718h(Status status);
-
-    @KeepForSdk
-    /* renamed from: j */
-    public final boolean m13939j() {
-        return this.f17315e.getCount() == 0;
-    }
-
-    @KeepForSdk
-    /* renamed from: k */
-    public final void m13940k(R r) {
-        synchronized (this.f17312b) {
-            if (this.f17323m || this.f17322l) {
-                m13938o(r);
-                return;
-            }
-            m13939j();
-            boolean z = true;
-            Preconditions.m14376o(!m13939j(), "Results have already been set");
-            if (this.f17321k) {
-                z = false;
-            }
-            Preconditions.m14376o(z, "Result has already been consumed");
-            m13937m(r);
+    public final void k() {
+        boolean z10 = true;
+        if (!this.f33500m && !((Boolean) f33487n.get()).booleanValue()) {
+            z10 = false;
         }
+        this.f33500m = z10;
     }
 
-    /* renamed from: n */
-    public final void m13941n(InterfaceC6379l0 interfaceC6379l0) {
-        this.f17318h.set(interfaceC6379l0);
-    }
-
-    /* renamed from: p */
-    public final void m13942p(Status status) {
-        synchronized (this.f17312b) {
-            if (!m13939j()) {
-                m13940k(mo13718h(status));
-                this.f17323m = true;
-            }
-        }
-    }
-
-    /* renamed from: q */
-    public final boolean m13943q() {
-        boolean zMo13898e;
-        synchronized (this.f17312b) {
-            if (this.f17314d.get() == null || !this.f17326p) {
-                mo13846d();
-            }
-            zMo13898e = mo13898e();
-        }
-        return zMo13898e;
-    }
-
-    /* renamed from: r */
-    public final void m13944r() {
-        this.f17326p = this.f17326p || f17311a.get().booleanValue();
-    }
-
-    @KeepForSdk
-    protected BasePendingResult(GoogleApiClient googleApiClient) {
-        this.f17312b = new Object();
-        this.f17315e = new CountDownLatch(1);
-        this.f17316f = new ArrayList<>();
-        this.f17318h = new AtomicReference<>();
-        this.f17326p = false;
-        this.f17313c = new CallbackHandler<>(googleApiClient != null ? googleApiClient.mo13878o() : Looper.getMainLooper());
-        this.f17314d = new WeakReference<>(googleApiClient);
+    protected BasePendingResult(com.google.android.gms.common.api.c cVar) {
+        this.f33488a = new Object();
+        this.f33491d = new CountDownLatch(1);
+        this.f33492e = new ArrayList();
+        this.f33494g = new AtomicReference();
+        this.f33500m = false;
+        this.f33489b = new a(cVar != null ? cVar.b() : Looper.getMainLooper());
+        this.f33490c = new WeakReference(cVar);
     }
 }

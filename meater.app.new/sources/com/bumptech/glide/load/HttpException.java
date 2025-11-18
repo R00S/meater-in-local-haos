@@ -2,26 +2,22 @@ package com.bumptech.glide.load;
 
 import java.io.IOException;
 
-/* loaded from: classes.dex */
+/* loaded from: classes2.dex */
 public final class HttpException extends IOException {
 
-    /* renamed from: f */
-    private final int f13215f;
+    /* renamed from: B, reason: collision with root package name */
+    private final int f33017B;
 
-    public HttpException(int i2) {
-        this("Http request failed with status code: " + i2, i2);
+    public HttpException(int i10) {
+        this("Http request failed", i10);
     }
 
-    public HttpException(String str) {
-        this(str, -1);
+    public HttpException(String str, int i10) {
+        this(str, i10, null);
     }
 
-    public HttpException(String str, int i2) {
-        this(str, i2, null);
-    }
-
-    public HttpException(String str, int i2, Throwable th) {
-        super(str, th);
-        this.f13215f = i2;
+    public HttpException(String str, int i10, Throwable th) {
+        super(str + ", status code: " + i10, th);
+        this.f33017B = i10;
     }
 }

@@ -5,120 +5,118 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
-import androidx.core.view.C0311u;
-import p024c.p025a.C0828f;
-import p024c.p025a.C0832j;
 
 /* loaded from: classes.dex */
 public class ButtonBarLayout extends LinearLayout {
 
-    /* renamed from: f */
-    private boolean f836f;
+    /* renamed from: B, reason: collision with root package name */
+    private boolean f21228B;
 
-    /* renamed from: g */
-    private int f837g;
+    /* renamed from: C, reason: collision with root package name */
+    private boolean f21229C;
 
-    /* renamed from: h */
-    private int f838h;
+    /* renamed from: D, reason: collision with root package name */
+    private int f21230D;
 
     public ButtonBarLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.f837g = -1;
-        this.f838h = 0;
-        int[] iArr = C0832j.f5270O0;
+        this.f21230D = -1;
+        int[] iArr = i.j.f42628N0;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr);
-        C0311u.m2127g0(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, 0, 0);
-        this.f836f = typedArrayObtainStyledAttributes.getBoolean(C0832j.f5275P0, true);
+        s1.X.l0(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, 0, 0);
+        this.f21228B = typedArrayObtainStyledAttributes.getBoolean(i.j.f42633O0, true);
         typedArrayObtainStyledAttributes.recycle();
+        if (getOrientation() == 1) {
+            setStacked(this.f21228B);
+        }
     }
 
-    /* renamed from: a */
-    private int m769a(int i2) {
+    private int a(int i10) {
         int childCount = getChildCount();
-        while (i2 < childCount) {
-            if (getChildAt(i2).getVisibility() == 0) {
-                return i2;
+        while (i10 < childCount) {
+            if (getChildAt(i10).getVisibility() == 0) {
+                return i10;
             }
-            i2++;
+            i10++;
         }
         return -1;
     }
 
-    /* renamed from: b */
-    private boolean m770b() {
-        return getOrientation() == 1;
+    private boolean b() {
+        return this.f21229C;
     }
 
-    private void setStacked(boolean z) {
-        setOrientation(z ? 1 : 0);
-        setGravity(z ? 5 : 80);
-        View viewFindViewById = findViewById(C0828f.f5126G);
-        if (viewFindViewById != null) {
-            viewFindViewById.setVisibility(z ? 8 : 4);
+    private void setStacked(boolean z10) {
+        if (this.f21229C != z10) {
+            if (!z10 || this.f21228B) {
+                this.f21229C = z10;
+                setOrientation(z10 ? 1 : 0);
+                setGravity(z10 ? 8388613 : 80);
+                View viewFindViewById = findViewById(i.f.f42490F);
+                if (viewFindViewById != null) {
+                    viewFindViewById.setVisibility(z10 ? 8 : 4);
+                }
+                for (int childCount = getChildCount() - 2; childCount >= 0; childCount--) {
+                    bringChildToFront(getChildAt(childCount));
+                }
+            }
         }
-        for (int childCount = getChildCount() - 2; childCount >= 0; childCount--) {
-            bringChildToFront(getChildAt(childCount));
-        }
-    }
-
-    @Override // android.view.View
-    public int getMinimumHeight() {
-        return Math.max(this.f838h, super.getMinimumHeight());
     }
 
     @Override // android.widget.LinearLayout, android.view.View
-    protected void onMeasure(int i2, int i3) {
+    protected void onMeasure(int i10, int i11) {
         int iMakeMeasureSpec;
-        boolean z;
-        int size = View.MeasureSpec.getSize(i2);
+        boolean z10;
+        int size = View.MeasureSpec.getSize(i10);
         int paddingBottom = 0;
-        if (this.f836f) {
-            if (size > this.f837g && m770b()) {
+        if (this.f21228B) {
+            if (size > this.f21230D && b()) {
                 setStacked(false);
             }
-            this.f837g = size;
+            this.f21230D = size;
         }
-        if (m770b() || View.MeasureSpec.getMode(i2) != 1073741824) {
-            iMakeMeasureSpec = i2;
-            z = false;
+        if (b() || View.MeasureSpec.getMode(i10) != 1073741824) {
+            iMakeMeasureSpec = i10;
+            z10 = false;
         } else {
             iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(size, Integer.MIN_VALUE);
-            z = true;
+            z10 = true;
         }
-        super.onMeasure(iMakeMeasureSpec, i3);
-        if (this.f836f && !m770b()) {
-            if ((getMeasuredWidthAndState() & (-16777216)) == 16777216) {
-                setStacked(true);
-                z = true;
-            }
+        super.onMeasure(iMakeMeasureSpec, i11);
+        if (this.f21228B && !b() && (getMeasuredWidthAndState() & (-16777216)) == 16777216) {
+            setStacked(true);
+            z10 = true;
         }
-        if (z) {
-            super.onMeasure(i2, i3);
+        if (z10) {
+            super.onMeasure(i10, i11);
         }
-        int iM769a = m769a(0);
-        if (iM769a >= 0) {
-            View childAt = getChildAt(iM769a);
+        int iA = a(0);
+        if (iA >= 0) {
+            View childAt = getChildAt(iA);
             LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) childAt.getLayoutParams();
-            int paddingTop = getPaddingTop() + childAt.getMeasuredHeight() + layoutParams.topMargin + layoutParams.bottomMargin + 0;
-            if (m770b()) {
-                int iM769a2 = m769a(iM769a + 1);
-                if (iM769a2 >= 0) {
-                    paddingTop += getChildAt(iM769a2).getPaddingTop() + ((int) (getResources().getDisplayMetrics().density * 16.0f));
+            int paddingTop = getPaddingTop() + childAt.getMeasuredHeight() + layoutParams.topMargin + layoutParams.bottomMargin;
+            if (b()) {
+                int iA2 = a(iA + 1);
+                if (iA2 >= 0) {
+                    paddingTop += getChildAt(iA2).getPaddingTop() + ((int) (getResources().getDisplayMetrics().density * 16.0f));
                 }
                 paddingBottom = paddingTop;
             } else {
                 paddingBottom = paddingTop + getPaddingBottom();
             }
         }
-        if (C0311u.m2164z(this) != paddingBottom) {
+        if (s1.X.A(this) != paddingBottom) {
             setMinimumHeight(paddingBottom);
+            if (i11 == 0) {
+                super.onMeasure(i10, i11);
+            }
         }
     }
 
-    public void setAllowStacking(boolean z) {
-        if (this.f836f != z) {
-            this.f836f = z;
-            if (!z && getOrientation() == 1) {
+    public void setAllowStacking(boolean z10) {
+        if (this.f21228B != z10) {
+            this.f21228B = z10;
+            if (!z10 && b()) {
                 setStacked(false);
             }
             requestLayout();

@@ -7,41 +7,38 @@ import android.content.pm.ProviderInfo;
 import android.database.Cursor;
 import android.net.Uri;
 import android.util.Log;
-import com.google.android.gms.common.internal.Preconditions;
-import com.google.firebase.AbstractC8473n;
-import com.google.firebase.C8405j;
+import com.google.firebase.f;
+import com.google.firebase.n;
+import g7.C3445p;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /* loaded from: classes2.dex */
 public class FirebaseInitProvider extends ContentProvider {
 
-    /* renamed from: f */
-    private static AbstractC8473n f32093f = AbstractC8473n.m26674e();
+    /* renamed from: B, reason: collision with root package name */
+    private static n f38597B = n.e();
 
-    /* renamed from: g */
-    private static AtomicBoolean f32094g = new AtomicBoolean(false);
+    /* renamed from: C, reason: collision with root package name */
+    private static AtomicBoolean f38598C = new AtomicBoolean(false);
 
-    /* renamed from: a */
-    private static void m26675a(ProviderInfo providerInfo) {
-        Preconditions.m14373l(providerInfo, "FirebaseInitProvider ProviderInfo cannot be null.");
+    private static void a(ProviderInfo providerInfo) {
+        C3445p.l(providerInfo, "FirebaseInitProvider ProviderInfo cannot be null.");
         if ("com.google.firebase.firebaseinitprovider".equals(providerInfo.authority)) {
             throw new IllegalStateException("Incorrect provider authority in manifest. Most likely due to a missing applicationId variable in application's build.gradle.");
         }
     }
 
-    /* renamed from: b */
-    public static AbstractC8473n m26676b() {
-        return f32093f;
+    public static n b() {
+        return f38597B;
     }
 
-    /* renamed from: c */
-    public static boolean m26677c() {
-        return f32094g.get();
+    public static boolean c() {
+        return f38598C.get();
     }
 
     @Override // android.content.ContentProvider
     public void attachInfo(Context context, ProviderInfo providerInfo) {
-        m26675a(providerInfo);
+        a(providerInfo);
         super.attachInfo(context, providerInfo);
     }
 
@@ -63,15 +60,17 @@ public class FirebaseInitProvider extends ContentProvider {
     @Override // android.content.ContentProvider
     public boolean onCreate() {
         try {
-            f32094g.set(true);
-            if (C8405j.m26394o(getContext()) == null) {
+            f38598C.set(true);
+            if (f.q(getContext()) == null) {
                 Log.i("FirebaseInitProvider", "FirebaseApp initialization unsuccessful");
             } else {
                 Log.i("FirebaseInitProvider", "FirebaseApp initialization successful");
             }
+            f38598C.set(false);
             return false;
-        } finally {
-            f32094g.set(false);
+        } catch (Throwable th) {
+            f38598C.set(false);
+            throw th;
         }
     }
 

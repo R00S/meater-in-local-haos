@@ -8,52 +8,52 @@ import androidx.versionedparcelable.VersionedParcel;
 public class IconCompatParcelizer {
     public static IconCompat read(VersionedParcel versionedParcel) {
         IconCompat iconCompat = new IconCompat();
-        iconCompat.f2225b = versionedParcel.m4734p(iconCompat.f2225b, 1);
-        iconCompat.f2227d = versionedParcel.m4728j(iconCompat.f2227d, 2);
-        iconCompat.f2228e = versionedParcel.m4736r(iconCompat.f2228e, 3);
-        iconCompat.f2229f = versionedParcel.m4734p(iconCompat.f2229f, 4);
-        iconCompat.f2230g = versionedParcel.m4734p(iconCompat.f2230g, 5);
-        iconCompat.f2231h = (ColorStateList) versionedParcel.m4736r(iconCompat.f2231h, 6);
-        iconCompat.f2233j = versionedParcel.m4738t(iconCompat.f2233j, 7);
-        iconCompat.f2234k = versionedParcel.m4738t(iconCompat.f2234k, 8);
-        iconCompat.m1800n();
+        iconCompat.f24729a = versionedParcel.p(iconCompat.f24729a, 1);
+        iconCompat.f24731c = versionedParcel.j(iconCompat.f24731c, 2);
+        iconCompat.f24732d = versionedParcel.r(iconCompat.f24732d, 3);
+        iconCompat.f24733e = versionedParcel.p(iconCompat.f24733e, 4);
+        iconCompat.f24734f = versionedParcel.p(iconCompat.f24734f, 5);
+        iconCompat.f24735g = (ColorStateList) versionedParcel.r(iconCompat.f24735g, 6);
+        iconCompat.f24737i = versionedParcel.t(iconCompat.f24737i, 7);
+        iconCompat.f24738j = versionedParcel.t(iconCompat.f24738j, 8);
+        iconCompat.k();
         return iconCompat;
     }
 
     public static void write(IconCompat iconCompat, VersionedParcel versionedParcel) {
-        versionedParcel.m4742x(true, true);
-        iconCompat.m1801o(versionedParcel.m4724f());
-        int i2 = iconCompat.f2225b;
-        if (-1 != i2) {
-            versionedParcel.m4714F(i2, 1);
+        versionedParcel.x(true, true);
+        iconCompat.l(versionedParcel.f());
+        int i10 = iconCompat.f24729a;
+        if (-1 != i10) {
+            versionedParcel.F(i10, 1);
         }
-        byte[] bArr = iconCompat.f2227d;
+        byte[] bArr = iconCompat.f24731c;
         if (bArr != null) {
-            versionedParcel.m4710B(bArr, 2);
+            versionedParcel.B(bArr, 2);
         }
-        Parcelable parcelable = iconCompat.f2228e;
+        Parcelable parcelable = iconCompat.f24732d;
         if (parcelable != null) {
-            versionedParcel.m4716H(parcelable, 3);
+            versionedParcel.H(parcelable, 3);
         }
-        int i3 = iconCompat.f2229f;
-        if (i3 != 0) {
-            versionedParcel.m4714F(i3, 4);
+        int i11 = iconCompat.f24733e;
+        if (i11 != 0) {
+            versionedParcel.F(i11, 4);
         }
-        int i4 = iconCompat.f2230g;
-        if (i4 != 0) {
-            versionedParcel.m4714F(i4, 5);
+        int i12 = iconCompat.f24734f;
+        if (i12 != 0) {
+            versionedParcel.F(i12, 5);
         }
-        ColorStateList colorStateList = iconCompat.f2231h;
+        ColorStateList colorStateList = iconCompat.f24735g;
         if (colorStateList != null) {
-            versionedParcel.m4716H(colorStateList, 6);
+            versionedParcel.H(colorStateList, 6);
         }
-        String str = iconCompat.f2233j;
+        String str = iconCompat.f24737i;
         if (str != null) {
-            versionedParcel.m4718J(str, 7);
+            versionedParcel.J(str, 7);
         }
-        String str2 = iconCompat.f2234k;
+        String str2 = iconCompat.f24738j;
         if (str2 != null) {
-            versionedParcel.m4718J(str2, 8);
+            versionedParcel.J(str2, 8);
         }
     }
 }

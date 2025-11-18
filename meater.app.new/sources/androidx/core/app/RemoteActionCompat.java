@@ -2,26 +2,26 @@ package androidx.core.app;
 
 import android.app.PendingIntent;
 import androidx.core.graphics.drawable.IconCompat;
-import androidx.versionedparcelable.InterfaceC0678b;
+import z3.b;
 
 /* loaded from: classes.dex */
-public final class RemoteActionCompat implements InterfaceC0678b {
+public final class RemoteActionCompat implements b {
 
-    /* renamed from: a */
-    public IconCompat f2036a;
+    /* renamed from: a, reason: collision with root package name */
+    public IconCompat f24713a;
 
-    /* renamed from: b */
-    public CharSequence f2037b;
+    /* renamed from: b, reason: collision with root package name */
+    public CharSequence f24714b;
 
-    /* renamed from: c */
-    public CharSequence f2038c;
+    /* renamed from: c, reason: collision with root package name */
+    public CharSequence f24715c;
 
-    /* renamed from: d */
-    public PendingIntent f2039d;
+    /* renamed from: d, reason: collision with root package name */
+    public PendingIntent f24716d;
 
-    /* renamed from: e */
-    public boolean f2040e;
+    /* renamed from: e, reason: collision with root package name */
+    public boolean f24717e;
 
-    /* renamed from: f */
-    public boolean f2041f;
+    /* renamed from: f, reason: collision with root package name */
+    public boolean f24718f;
 }

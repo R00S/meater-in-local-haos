@@ -1,21 +1,22 @@
 package android.support.v4.media;
 
+import android.annotation.SuppressLint;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+@SuppressLint({"BanParcelableUsage"})
 /* loaded from: classes.dex */
 public final class RatingCompat implements Parcelable {
-    public static final Parcelable.Creator<RatingCompat> CREATOR = new C0006a();
+    public static final Parcelable.Creator<RatingCompat> CREATOR = new a();
 
-    /* renamed from: f */
-    private final int f29f;
+    /* renamed from: B, reason: collision with root package name */
+    private final int f20489B;
 
-    /* renamed from: g */
-    private final float f30g;
+    /* renamed from: C, reason: collision with root package name */
+    private final float f20490C;
 
-    /* renamed from: android.support.v4.media.RatingCompat$a */
-    static class C0006a implements Parcelable.Creator<RatingCompat> {
-        C0006a() {
+    class a implements Parcelable.Creator<RatingCompat> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator
@@ -26,34 +27,34 @@ public final class RatingCompat implements Parcelable {
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: b, reason: merged with bridge method [inline-methods] */
-        public RatingCompat[] newArray(int i2) {
-            return new RatingCompat[i2];
+        public RatingCompat[] newArray(int i10) {
+            return new RatingCompat[i10];
         }
     }
 
-    RatingCompat(int i2, float f2) {
-        this.f29f = i2;
-        this.f30g = f2;
+    RatingCompat(int i10, float f10) {
+        this.f20489B = i10;
+        this.f20490C = f10;
     }
 
     @Override // android.os.Parcelable
     public int describeContents() {
-        return this.f29f;
+        return this.f20489B;
     }
 
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Rating:style=");
-        sb.append(this.f29f);
-        sb.append(" rating=");
-        float f2 = this.f30g;
-        sb.append(f2 < 0.0f ? "unrated" : String.valueOf(f2));
-        return sb.toString();
+        StringBuilder sb2 = new StringBuilder();
+        sb2.append("Rating:style=");
+        sb2.append(this.f20489B);
+        sb2.append(" rating=");
+        float f10 = this.f20490C;
+        sb2.append(f10 < 0.0f ? "unrated" : String.valueOf(f10));
+        return sb2.toString();
     }
 
     @Override // android.os.Parcelable
-    public void writeToParcel(Parcel parcel, int i2) {
-        parcel.writeInt(this.f29f);
-        parcel.writeFloat(this.f30g);
+    public void writeToParcel(Parcel parcel, int i10) {
+        parcel.writeInt(this.f20489B);
+        parcel.writeFloat(this.f20490C);
     }
 }

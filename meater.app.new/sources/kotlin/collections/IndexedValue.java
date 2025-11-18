@@ -1,24 +1,23 @@
 package kotlin.collections;
 
 import kotlin.Metadata;
-import kotlin.jvm.internal.C9801m;
-import okhttp3.HttpUrl;
+import kotlin.jvm.internal.C3862t;
 
 /* compiled from: IndexedValue.kt */
-@Metadata(m32266d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\b\n\u0002\b\f\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\b\u0086\b\u0018\u0000*\u0006\b\u0000\u0010\u0001 \u00012\u00020\u0002B\u0015\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u0006\u0010\u0005\u001a\u00028\u0000¢\u0006\u0002\u0010\u0006J\t\u0010\f\u001a\u00020\u0004HÆ\u0003J\u000e\u0010\r\u001a\u00028\u0000HÆ\u0003¢\u0006\u0002\u0010\nJ(\u0010\u000e\u001a\b\u0012\u0004\u0012\u00028\u00000\u00002\b\b\u0002\u0010\u0003\u001a\u00020\u00042\b\b\u0002\u0010\u0005\u001a\u00028\u0000HÆ\u0001¢\u0006\u0002\u0010\u000fJ\u0013\u0010\u0010\u001a\u00020\u00112\b\u0010\u0012\u001a\u0004\u0018\u00010\u0002HÖ\u0003J\t\u0010\u0013\u001a\u00020\u0004HÖ\u0001J\t\u0010\u0014\u001a\u00020\u0015HÖ\u0001R\u0011\u0010\u0003\u001a\u00020\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0013\u0010\u0005\u001a\u00028\u0000¢\u0006\n\n\u0002\u0010\u000b\u001a\u0004\b\t\u0010\n¨\u0006\u0016"}, m32267d2 = {"Lkotlin/collections/IndexedValue;", "T", HttpUrl.FRAGMENT_ENCODE_SET, "index", HttpUrl.FRAGMENT_ENCODE_SET, "value", "(ILjava/lang/Object;)V", "getIndex", "()I", "getValue", "()Ljava/lang/Object;", "Ljava/lang/Object;", "component1", "component2", "copy", "(ILjava/lang/Object;)Lkotlin/collections/IndexedValue;", "equals", HttpUrl.FRAGMENT_ENCODE_SET, "other", "hashCode", "toString", HttpUrl.FRAGMENT_ENCODE_SET, "kotlin-stdlib"}, m32268k = 1, m32269mv = {1, 7, 1}, m32271xi = 48)
-/* renamed from: kotlin.w.h0, reason: from Kotlin metadata and from toString */
+@Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\u0010\b\n\u0002\b\b\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0007\b\u0086\b\u0018\u0000*\u0006\b\u0000\u0010\u0001 \u00012\u00020\u0002B\u0017\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00028\u0000¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\b\u001a\u00020\u0003HÆ\u0003¢\u0006\u0004\b\b\u0010\tJ\u0010\u0010\n\u001a\u00028\u0000HÆ\u0003¢\u0006\u0004\b\n\u0010\u000bJ\u0010\u0010\r\u001a\u00020\fHÖ\u0001¢\u0006\u0004\b\r\u0010\u000eJ\u0010\u0010\u000f\u001a\u00020\u0003HÖ\u0001¢\u0006\u0004\b\u000f\u0010\tJ\u001a\u0010\u0012\u001a\u00020\u00112\b\u0010\u0010\u001a\u0004\u0018\u00010\u0002HÖ\u0003¢\u0006\u0004\b\u0012\u0010\u0013R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b\b\u0010\u0014\u001a\u0004\b\u0015\u0010\tR\u0017\u0010\u0005\u001a\u00028\u00008\u0006¢\u0006\f\n\u0004\b\n\u0010\u0016\u001a\u0004\b\u0017\u0010\u000b¨\u0006\u0018"}, d2 = {"Lkotlin/collections/G;", "T", "", "", "index", "value", "<init>", "(ILjava/lang/Object;)V", "a", "()I", "b", "()Ljava/lang/Object;", "", "toString", "()Ljava/lang/String;", "hashCode", "other", "", "equals", "(Ljava/lang/Object;)Z", "I", "c", "Ljava/lang/Object;", "d", "kotlin-stdlib"}, k = 1, mv = {1, 9, 0}, xi = 48)
+/* renamed from: kotlin.collections.G, reason: from toString */
 /* loaded from: classes2.dex */
 public final /* data */ class IndexedValue<T> {
 
-    /* renamed from: a, reason: from toString */
+    /* renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
     private final int index;
 
-    /* renamed from: b, reason: from toString */
+    /* renamed from: b, reason: collision with root package name and from kotlin metadata and from toString */
     private final T value;
 
-    public IndexedValue(int i2, T t) {
-        this.index = i2;
-        this.value = t;
+    public IndexedValue(int i10, T t10) {
+        this.index = i10;
+        this.value = t10;
     }
 
     /* renamed from: a, reason: from getter */
@@ -26,18 +25,15 @@ public final /* data */ class IndexedValue<T> {
         return this.index;
     }
 
-    /* renamed from: b */
-    public final T m38648b() {
+    public final T b() {
         return this.value;
     }
 
-    /* renamed from: c */
-    public final int m38649c() {
+    public final int c() {
         return this.index;
     }
 
-    /* renamed from: d */
-    public final T m38650d() {
+    public final T d() {
         return this.value;
     }
 
@@ -49,13 +45,13 @@ public final /* data */ class IndexedValue<T> {
             return false;
         }
         IndexedValue indexedValue = (IndexedValue) other;
-        return this.index == indexedValue.index && C9801m.m32341a(this.value, indexedValue.value);
+        return this.index == indexedValue.index && C3862t.b(this.value, indexedValue.value);
     }
 
     public int hashCode() {
-        int i2 = this.index * 31;
-        T t = this.value;
-        return i2 + (t == null ? 0 : t.hashCode());
+        int iHashCode = Integer.hashCode(this.index) * 31;
+        T t10 = this.value;
+        return iHashCode + (t10 == null ? 0 : t10.hashCode());
     }
 
     public String toString() {

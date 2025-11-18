@@ -1,30 +1,31 @@
 package android.support.v4.media.session;
 
+import android.annotation.SuppressLint;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+@SuppressLint({"BanParcelableUsage"})
 /* loaded from: classes.dex */
 public class ParcelableVolumeInfo implements Parcelable {
-    public static final Parcelable.Creator<ParcelableVolumeInfo> CREATOR = new C0015a();
+    public static final Parcelable.Creator<ParcelableVolumeInfo> CREATOR = new a();
 
-    /* renamed from: f */
-    public int f43f;
+    /* renamed from: B, reason: collision with root package name */
+    public int f20504B;
 
-    /* renamed from: g */
-    public int f44g;
+    /* renamed from: C, reason: collision with root package name */
+    public int f20505C;
 
-    /* renamed from: h */
-    public int f45h;
+    /* renamed from: D, reason: collision with root package name */
+    public int f20506D;
 
-    /* renamed from: i */
-    public int f46i;
+    /* renamed from: E, reason: collision with root package name */
+    public int f20507E;
 
-    /* renamed from: j */
-    public int f47j;
+    /* renamed from: F, reason: collision with root package name */
+    public int f20508F;
 
-    /* renamed from: android.support.v4.media.session.ParcelableVolumeInfo$a */
-    static class C0015a implements Parcelable.Creator<ParcelableVolumeInfo> {
-        C0015a() {
+    class a implements Parcelable.Creator<ParcelableVolumeInfo> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator
@@ -35,17 +36,17 @@ public class ParcelableVolumeInfo implements Parcelable {
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: b, reason: merged with bridge method [inline-methods] */
-        public ParcelableVolumeInfo[] newArray(int i2) {
-            return new ParcelableVolumeInfo[i2];
+        public ParcelableVolumeInfo[] newArray(int i10) {
+            return new ParcelableVolumeInfo[i10];
         }
     }
 
     public ParcelableVolumeInfo(Parcel parcel) {
-        this.f43f = parcel.readInt();
-        this.f45h = parcel.readInt();
-        this.f46i = parcel.readInt();
-        this.f47j = parcel.readInt();
-        this.f44g = parcel.readInt();
+        this.f20504B = parcel.readInt();
+        this.f20506D = parcel.readInt();
+        this.f20507E = parcel.readInt();
+        this.f20508F = parcel.readInt();
+        this.f20505C = parcel.readInt();
     }
 
     @Override // android.os.Parcelable
@@ -54,11 +55,11 @@ public class ParcelableVolumeInfo implements Parcelable {
     }
 
     @Override // android.os.Parcelable
-    public void writeToParcel(Parcel parcel, int i2) {
-        parcel.writeInt(this.f43f);
-        parcel.writeInt(this.f45h);
-        parcel.writeInt(this.f46i);
-        parcel.writeInt(this.f47j);
-        parcel.writeInt(this.f44g);
+    public void writeToParcel(Parcel parcel, int i10) {
+        parcel.writeInt(this.f20504B);
+        parcel.writeInt(this.f20506D);
+        parcel.writeInt(this.f20507E);
+        parcel.writeInt(this.f20508F);
+        parcel.writeInt(this.f20505C);
     }
 }

@@ -1,0 +1,180 @@
+body {
+	font-family: "San Francisco", "Helvetica Neue", "Arial", "Sans-serif";
+	margin: 0;
+	padding: 0;
+	font-size: 4vw;
+}
+
+@media only screen and (min-width: 700px) {
+    body {
+        font-size: 120%;
+        width: 700px; margin: 0 auto 0 auto;
+    }
+}
+
+h1 {
+	font-weight: 300;
+	margin: 0.5em 0 0.5em 0;
+	padding: 0;
+	border-bottom: 2px solid #000;
+}
+h2 {
+	font-weight: 300;
+	margin: 0.5em 0 0.25em 0;
+	padding: 0;
+	font-size: 1.275em;
+}
+h3 {
+	font-weight: bold;
+	margin: 0.5em 0 0.25em 0;
+	padding: 0;
+	font-size: 1.1em;
+}
+h4 {
+	font-weight: bold;
+	margin: 1.25em 0 0.15em 0;
+	padding: 0;
+	font-size: 0.95em;
+}
+
+h5 {
+    font-weight: 300;
+    margin: 0.5em 0 0.5em 0;
+    padding: 0 1em 1em 1em;
+    font-size: 1.3em;
+    text-align: center;
+}
+p {
+	font-size: 0.95em;
+	margin: 0.5em 0 1.0em 0;
+	padding: 0;
+	line-height: 1.5em;
+}
+
+li {
+	font-size: 0.95em;
+	line-height: 1.5em;
+	margin: 0.5em 0 0.5em 0;
+}
+
+section {
+	border-bottom: 2px dotted #CCC;
+	padding: 0.5em 1.1em 0.8em 1.1em;
+}
+section.acknowledgements h2 {
+	margin: 0.5em 0 0.1em 0;
+}
+section.acknowledgements h3 {
+	font-size: 1.05em;
+}
+section.acknowledgements p {
+	font-size: 0.85em;
+	margin: 0 0 0.1em 0;
+	padding: 0;
+}
+a {
+	color: rgba(210,20,40,255);
+	font-weight: bold;
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+a:active {
+    color: rgba(0,175,255,255);
+}
+
+ul.arrow a:active img {
+    content: url('on-arrow.png');
+}
+
+img.icon {
+	height: 1.3em;
+	display: inline;
+	vertical-align: middle;
+}
+
+.videoplayer {
+	width: 100%;
+	height: 100%;
+	background-color: #222;
+	position: absolute;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.videoplayer iframe {
+	width: 100vw; 
+    height: 56.25vw;
+}
+
+img.screenshot, video {
+	width: 80%;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+img.screenshot.border {
+    border: 1px solid #CCC;
+}
+
+ul.arrow {
+	margin: 0;
+	padding: 0;
+	display:block;
+}
+ul.arrow li {
+	margin: 0 0 0.8em 0;
+	padding: 0;
+	list-style: none;
+}
+ul.arrow img {
+	height: 1.2em;
+	position: absolute;
+	vertical-align: middle;
+	margin: 0 0.35em 0 0;
+}
+
+ul#temperature_arrows, ul#alerts_list {
+    list-style: none;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+ul#temperature_arrows li, ul#alerts_list li {
+    background-repeat: no-repeat;
+    background-size: 3em 3em;
+    padding: 0.25em 0 0 4em;
+    min-height:3em;
+    font-size: 0.95em;
+}
+
+ul#alerts_list li {
+    padding: 0 0 0 2.2em;
+    min-height:2em;
+    background-position: 0 0.25em;
+    background-size: 1.5em 1.5em;
+    background-image: url('alert-icon.png');
+}
+
+#target_arrow {
+    background-image: url('target-arrow.png');
+}
+
+#internal_arrow {
+    background-image: url('internal-arrow.png');
+}
+
+#ambient_arrow {
+    background-image: url('ambient-arrow.png');
+}
+
+ul.arrow span {
+	margin-left: 1.7em;
+	display: inline-block;
+}
+p span.nowrap {
+	white-space: nowrap;
+}

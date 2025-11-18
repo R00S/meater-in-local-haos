@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/ic_cooks"
+        android:id="@+id/navigation_cooks"
+        android:title="@string/cooks"/>
+    <item
+        android:icon="@drawable/ic_master_class"
+        android:id="@+id/navigation_recipe"
+        android:title="@string/master_class"/>
+    <item
+        android:icon="@drawable/ic_news"
+        android:id="@+id/navigation_news"
+        android:title="@string/spotlight"/>
+    <item
+        android:icon="@drawable/ic_help"
+        android:id="@+id/navigation_help"
+        android:title="@string/help_label"/>
+</menu>

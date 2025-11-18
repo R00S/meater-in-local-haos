@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.rambler.libs.swipe_layout.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:left_swipe_enabled="false"
+    app:right_swipe_enabled="true">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/headerCookLayout"
+        android:paddingTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/headerTitleImage"
+            android:padding="0dp"
+            android:visibility="gone"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/heart"
+            android:scaleType="fitXY"
+            android:layout_marginStart="8dp"
+            app:tint="@color/grey_6"/>
+        <TextView
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:id="@+id/totalCookLabel"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+</ru.rambler.libs.swipe_layout.SwipeLayout>

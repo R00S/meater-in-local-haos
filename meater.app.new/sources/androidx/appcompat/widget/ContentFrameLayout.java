@@ -5,39 +5,36 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.FrameLayout;
-import androidx.core.view.C0311u;
 
 /* loaded from: classes.dex */
 public class ContentFrameLayout extends FrameLayout {
 
-    /* renamed from: f */
-    private TypedValue f839f;
+    /* renamed from: B, reason: collision with root package name */
+    private TypedValue f21231B;
 
-    /* renamed from: g */
-    private TypedValue f840g;
+    /* renamed from: C, reason: collision with root package name */
+    private TypedValue f21232C;
 
-    /* renamed from: h */
-    private TypedValue f841h;
+    /* renamed from: D, reason: collision with root package name */
+    private TypedValue f21233D;
 
-    /* renamed from: i */
-    private TypedValue f842i;
+    /* renamed from: E, reason: collision with root package name */
+    private TypedValue f21234E;
 
-    /* renamed from: j */
-    private TypedValue f843j;
+    /* renamed from: F, reason: collision with root package name */
+    private TypedValue f21235F;
 
-    /* renamed from: k */
-    private TypedValue f844k;
+    /* renamed from: G, reason: collision with root package name */
+    private TypedValue f21236G;
 
-    /* renamed from: l */
-    private final Rect f845l;
+    /* renamed from: H, reason: collision with root package name */
+    private final Rect f21237H;
 
-    /* renamed from: m */
-    private InterfaceC0125a f846m;
+    /* renamed from: I, reason: collision with root package name */
+    private a f21238I;
 
-    /* renamed from: androidx.appcompat.widget.ContentFrameLayout$a */
-    public interface InterfaceC0125a {
-        /* renamed from: a */
-        void mo365a();
+    public interface a {
+        void a();
 
         void onDetachedFromWindow();
     }
@@ -46,76 +43,70 @@ public class ContentFrameLayout extends FrameLayout {
         this(context, null);
     }
 
-    /* renamed from: a */
-    public void m771a(Rect rect) {
-        fitSystemWindows(rect);
-    }
-
-    /* renamed from: b */
-    public void m772b(int i2, int i3, int i4, int i5) {
-        this.f845l.set(i2, i3, i4, i5);
-        if (C0311u.m2102O(this)) {
+    public void a(int i10, int i11, int i12, int i13) {
+        this.f21237H.set(i10, i11, i12, i13);
+        if (isLaidOut()) {
             requestLayout();
         }
     }
 
     public TypedValue getFixedHeightMajor() {
-        if (this.f843j == null) {
-            this.f843j = new TypedValue();
+        if (this.f21235F == null) {
+            this.f21235F = new TypedValue();
         }
-        return this.f843j;
+        return this.f21235F;
     }
 
     public TypedValue getFixedHeightMinor() {
-        if (this.f844k == null) {
-            this.f844k = new TypedValue();
+        if (this.f21236G == null) {
+            this.f21236G = new TypedValue();
         }
-        return this.f844k;
+        return this.f21236G;
     }
 
     public TypedValue getFixedWidthMajor() {
-        if (this.f841h == null) {
-            this.f841h = new TypedValue();
+        if (this.f21233D == null) {
+            this.f21233D = new TypedValue();
         }
-        return this.f841h;
+        return this.f21233D;
     }
 
     public TypedValue getFixedWidthMinor() {
-        if (this.f842i == null) {
-            this.f842i = new TypedValue();
+        if (this.f21234E == null) {
+            this.f21234E = new TypedValue();
         }
-        return this.f842i;
+        return this.f21234E;
     }
 
     public TypedValue getMinWidthMajor() {
-        if (this.f839f == null) {
-            this.f839f = new TypedValue();
+        if (this.f21231B == null) {
+            this.f21231B = new TypedValue();
         }
-        return this.f839f;
+        return this.f21231B;
     }
 
     public TypedValue getMinWidthMinor() {
-        if (this.f840g == null) {
-            this.f840g = new TypedValue();
+        if (this.f21232C == null) {
+            this.f21232C = new TypedValue();
         }
-        return this.f840g;
+        return this.f21232C;
     }
 
     @Override // android.view.ViewGroup, android.view.View
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        InterfaceC0125a interfaceC0125a = this.f846m;
-        if (interfaceC0125a != null) {
-            interfaceC0125a.mo365a();
+        a aVar = this.f21238I;
+        if (aVar != null) {
+            aVar.a();
         }
     }
 
     @Override // android.view.ViewGroup, android.view.View
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        InterfaceC0125a interfaceC0125a = this.f846m;
-        if (interfaceC0125a != null) {
-            interfaceC0125a.onDetachedFromWindow();
+        a aVar = this.f21238I;
+        if (aVar != null) {
+            aVar.onDetachedFromWindow();
         }
     }
 
@@ -138,16 +129,16 @@ public class ContentFrameLayout extends FrameLayout {
         throw new UnsupportedOperationException("Method not decompiled: androidx.appcompat.widget.ContentFrameLayout.onMeasure(int, int):void");
     }
 
-    public void setAttachListener(InterfaceC0125a interfaceC0125a) {
-        this.f846m = interfaceC0125a;
+    public void setAttachListener(a aVar) {
+        this.f21238I = aVar;
     }
 
     public ContentFrameLayout(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 0);
     }
 
-    public ContentFrameLayout(Context context, AttributeSet attributeSet, int i2) {
-        super(context, attributeSet, i2);
-        this.f845l = new Rect();
+    public ContentFrameLayout(Context context, AttributeSet attributeSet, int i10) {
+        super(context, attributeSet, i10);
+        this.f21237H = new Rect();
     }
 }

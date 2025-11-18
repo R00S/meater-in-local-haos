@@ -4,13 +4,12 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
-import androidx.appcompat.widget.InterfaceC0153a0;
 
 /* loaded from: classes.dex */
-public class FitWindowsLinearLayout extends LinearLayout implements InterfaceC0153a0 {
+public class FitWindowsLinearLayout extends LinearLayout {
 
-    /* renamed from: f */
-    private InterfaceC0153a0.a f848f;
+    /* renamed from: B, reason: collision with root package name */
+    private K f21240B;
 
     public FitWindowsLinearLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
@@ -18,15 +17,13 @@ public class FitWindowsLinearLayout extends LinearLayout implements InterfaceC01
 
     @Override // android.view.View
     protected boolean fitSystemWindows(Rect rect) {
-        InterfaceC0153a0.a aVar = this.f848f;
-        if (aVar != null) {
-            aVar.mo364a(rect);
+        K k10 = this.f21240B;
+        if (k10 != null) {
+            k10.a(rect);
         }
         return super.fitSystemWindows(rect);
     }
 
-    @Override // androidx.appcompat.widget.InterfaceC0153a0
-    public void setOnFitSystemWindowsListener(InterfaceC0153a0.a aVar) {
-        this.f848f = aVar;
+    public void setOnFitSystemWindowsListener(K k10) {
     }
 }

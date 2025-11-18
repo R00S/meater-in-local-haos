@@ -1,21 +1,20 @@
 package com.google.firebase.ktx;
 
+import D9.h;
+import K8.c;
 import androidx.annotation.Keep;
-import com.google.firebase.components.C8124n;
 import com.google.firebase.components.ComponentRegistrar;
-import com.google.firebase.p209u.C8555h;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.collections.C10815t;
-import okhttp3.HttpUrl;
+import kotlin.collections.r;
 
 /* compiled from: Logging.kt */
 @Keep
-@Metadata(m32266d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\b\u0007\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\u0003\u001a\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00050\u0004H\u0016¨\u0006\u0006"}, m32267d2 = {"Lcom/google/firebase/ktx/FirebaseCommonLegacyRegistrar;", "Lcom/google/firebase/components/ComponentRegistrar;", "()V", "getComponents", HttpUrl.FRAGMENT_ENCODE_SET, "Lcom/google/firebase/components/Component;", "com.google.firebase-firebase-common-ktx"}, m32268k = 1, m32269mv = {1, 7, 1}, m32271xi = 48)
+@Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0019\u0010\u0006\u001a\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00050\u0004H\u0016¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"Lcom/google/firebase/ktx/FirebaseCommonLegacyRegistrar;", "Lcom/google/firebase/components/ComponentRegistrar;", "<init>", "()V", "", "LK8/c;", "getComponents", "()Ljava/util/List;", "com.google.firebase-firebase-common-ktx"}, k = 1, mv = {1, 8, 0}, xi = 48)
 /* loaded from: classes2.dex */
 public final class FirebaseCommonLegacyRegistrar implements ComponentRegistrar {
     @Override // com.google.firebase.components.ComponentRegistrar
-    public List<C8124n<?>> getComponents() {
-        return C10815t.m38883e(C8555h.m26903a("fire-core-ktx", "20.4.2"));
+    public List<c<?>> getComponents() {
+        return r.e(h.b("fire-core-ktx", "21.0.0"));
     }
 }

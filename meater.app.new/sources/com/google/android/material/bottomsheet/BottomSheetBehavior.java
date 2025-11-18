@@ -1,6 +1,11 @@
 package com.google.android.material.bottomsheet;
 
+import C7.l;
+import C7.m;
+import X7.k;
 import android.R;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -10,8 +15,10 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.util.SparseIntArray;
 import android.util.TypedValue;
 import android.view.MotionEvent;
+import android.view.RoundedCorner;
 import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewConfiguration;
@@ -19,578 +26,686 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.WindowInsets;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.view.C0311u;
-import androidx.core.view.p004d0.C0289c;
-import androidx.core.view.p004d0.InterfaceC0292f;
-import androidx.customview.view.AbsSavedState;
-import cm.aptoide.p092pt.file.CacheHelper;
+import com.apptionlabs.meater_app.data.Temperature;
+import com.google.android.material.internal.u;
+import d.C2998b;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import p024c.p052i.p056g.C0937a;
-import p024c.p062k.p063a.C0966c;
-import p241e.p254e.p256b.p271c.C8908b;
-import p241e.p254e.p256b.p271c.C8910d;
-import p241e.p254e.p256b.p271c.C8917k;
-import p241e.p254e.p256b.p271c.C8918l;
-import p241e.p254e.p256b.p271c.p272a0.C8900g;
-import p241e.p254e.p256b.p271c.p272a0.C8904k;
-import p241e.p254e.p256b.p271c.p285x.C8947c;
+import m1.C3946a;
+import s1.X;
+import t1.t;
+import t1.w;
+import y1.AbstractC5121a;
+import z1.d;
 
 /* loaded from: classes2.dex */
-public class BottomSheetBehavior<V extends View> extends CoordinatorLayout.AbstractC0226c<V> {
+public class BottomSheetBehavior<V extends View> extends CoordinatorLayout.c<V> implements R7.b {
 
-    /* renamed from: a */
-    private static final int f29831a = C8917k.f33984i;
+    /* renamed from: J0, reason: collision with root package name */
+    private static final int f36002J0 = l.f2573j;
 
-    /* renamed from: A */
-    private boolean f29832A;
+    /* renamed from: A0, reason: collision with root package name */
+    private final ArrayList<g> f36003A0;
 
-    /* renamed from: B */
-    private int f29833B;
+    /* renamed from: B, reason: collision with root package name */
+    private int f36004B;
 
-    /* renamed from: C */
-    private boolean f29834C;
+    /* renamed from: B0, reason: collision with root package name */
+    private VelocityTracker f36005B0;
 
-    /* renamed from: D */
-    int f29835D;
+    /* renamed from: C, reason: collision with root package name */
+    private boolean f36006C;
 
-    /* renamed from: E */
-    int f29836E;
+    /* renamed from: C0, reason: collision with root package name */
+    R7.f f36007C0;
 
-    /* renamed from: F */
-    WeakReference<V> f29837F;
+    /* renamed from: D, reason: collision with root package name */
+    private boolean f36008D;
 
-    /* renamed from: G */
-    WeakReference<View> f29838G;
+    /* renamed from: D0, reason: collision with root package name */
+    int f36009D0;
 
-    /* renamed from: H */
-    private final ArrayList<AbstractC7968e> f29839H;
+    /* renamed from: E, reason: collision with root package name */
+    private float f36010E;
 
-    /* renamed from: I */
-    private VelocityTracker f29840I;
+    /* renamed from: E0, reason: collision with root package name */
+    private int f36011E0;
 
-    /* renamed from: J */
-    int f29841J;
+    /* renamed from: F, reason: collision with root package name */
+    private int f36012F;
 
-    /* renamed from: K */
-    private int f29842K;
+    /* renamed from: F0, reason: collision with root package name */
+    boolean f36013F0;
 
-    /* renamed from: L */
-    boolean f29843L;
+    /* renamed from: G, reason: collision with root package name */
+    private int f36014G;
 
-    /* renamed from: M */
-    private Map<View, Integer> f29844M;
+    /* renamed from: G0, reason: collision with root package name */
+    private Map<View, Integer> f36015G0;
 
-    /* renamed from: N */
-    private final C0966c.c f29845N;
+    /* renamed from: H, reason: collision with root package name */
+    private boolean f36016H;
 
-    /* renamed from: b */
-    private int f29846b;
+    /* renamed from: H0, reason: collision with root package name */
+    final SparseIntArray f36017H0;
 
-    /* renamed from: c */
-    private boolean f29847c;
+    /* renamed from: I, reason: collision with root package name */
+    private int f36018I;
 
-    /* renamed from: d */
-    private boolean f29848d;
+    /* renamed from: I0, reason: collision with root package name */
+    private final d.c f36019I0;
 
-    /* renamed from: e */
-    private float f29849e;
+    /* renamed from: J, reason: collision with root package name */
+    private int f36020J;
 
-    /* renamed from: f */
-    private int f29850f;
+    /* renamed from: K, reason: collision with root package name */
+    private X7.g f36021K;
 
-    /* renamed from: g */
-    private boolean f29851g;
+    /* renamed from: L, reason: collision with root package name */
+    private ColorStateList f36022L;
 
-    /* renamed from: h */
-    private int f29852h;
+    /* renamed from: M, reason: collision with root package name */
+    private int f36023M;
 
-    /* renamed from: i */
-    private boolean f29853i;
+    /* renamed from: N, reason: collision with root package name */
+    private int f36024N;
 
-    /* renamed from: j */
-    private C8900g f29854j;
+    /* renamed from: O, reason: collision with root package name */
+    private int f36025O;
 
-    /* renamed from: k */
-    private boolean f29855k;
+    /* renamed from: P, reason: collision with root package name */
+    private boolean f36026P;
 
-    /* renamed from: l */
-    private C8904k f29856l;
+    /* renamed from: Q, reason: collision with root package name */
+    private boolean f36027Q;
 
-    /* renamed from: m */
-    private boolean f29857m;
+    /* renamed from: R, reason: collision with root package name */
+    private boolean f36028R;
 
-    /* renamed from: n */
-    private BottomSheetBehavior<V>.RunnableC7969f f29858n;
+    /* renamed from: S, reason: collision with root package name */
+    private boolean f36029S;
 
-    /* renamed from: o */
-    private ValueAnimator f29859o;
+    /* renamed from: T, reason: collision with root package name */
+    private boolean f36030T;
 
-    /* renamed from: p */
-    int f29860p;
+    /* renamed from: U, reason: collision with root package name */
+    private boolean f36031U;
 
-    /* renamed from: q */
-    int f29861q;
+    /* renamed from: V, reason: collision with root package name */
+    private boolean f36032V;
 
-    /* renamed from: r */
-    int f29862r;
+    /* renamed from: W, reason: collision with root package name */
+    private boolean f36033W;
 
-    /* renamed from: s */
-    float f29863s;
+    /* renamed from: X, reason: collision with root package name */
+    private int f36034X;
 
-    /* renamed from: t */
-    int f29864t;
+    /* renamed from: Y, reason: collision with root package name */
+    private int f36035Y;
 
-    /* renamed from: u */
-    float f29865u;
+    /* renamed from: Z, reason: collision with root package name */
+    private boolean f36036Z;
 
-    /* renamed from: v */
-    boolean f29866v;
+    /* renamed from: a0, reason: collision with root package name */
+    private k f36037a0;
 
-    /* renamed from: w */
-    private boolean f29867w;
+    /* renamed from: b0, reason: collision with root package name */
+    private boolean f36038b0;
 
-    /* renamed from: x */
-    private boolean f29868x;
+    /* renamed from: c0, reason: collision with root package name */
+    private final BottomSheetBehavior<V>.i f36039c0;
 
-    /* renamed from: y */
-    int f29869y;
+    /* renamed from: d0, reason: collision with root package name */
+    private ValueAnimator f36040d0;
 
-    /* renamed from: z */
-    C0966c f29870z;
+    /* renamed from: e0, reason: collision with root package name */
+    int f36041e0;
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$a */
-    class RunnableC7964a implements Runnable {
+    /* renamed from: f0, reason: collision with root package name */
+    int f36042f0;
 
-        /* renamed from: f */
-        final /* synthetic */ View f29876f;
+    /* renamed from: g0, reason: collision with root package name */
+    int f36043g0;
 
-        /* renamed from: g */
-        final /* synthetic */ int f29877g;
+    /* renamed from: h0, reason: collision with root package name */
+    float f36044h0;
 
-        RunnableC7964a(View view, int i2) {
-            this.f29876f = view;
-            this.f29877g = i2;
+    /* renamed from: i0, reason: collision with root package name */
+    int f36045i0;
+
+    /* renamed from: j0, reason: collision with root package name */
+    float f36046j0;
+
+    /* renamed from: k0, reason: collision with root package name */
+    boolean f36047k0;
+
+    /* renamed from: l0, reason: collision with root package name */
+    private boolean f36048l0;
+
+    /* renamed from: m0, reason: collision with root package name */
+    private boolean f36049m0;
+
+    /* renamed from: n0, reason: collision with root package name */
+    int f36050n0;
+
+    /* renamed from: o0, reason: collision with root package name */
+    int f36051o0;
+
+    /* renamed from: p0, reason: collision with root package name */
+    z1.d f36052p0;
+
+    /* renamed from: q0, reason: collision with root package name */
+    private boolean f36053q0;
+
+    /* renamed from: r0, reason: collision with root package name */
+    private int f36054r0;
+
+    /* renamed from: s0, reason: collision with root package name */
+    private boolean f36055s0;
+
+    /* renamed from: t0, reason: collision with root package name */
+    private float f36056t0;
+
+    /* renamed from: u0, reason: collision with root package name */
+    private int f36057u0;
+
+    /* renamed from: v0, reason: collision with root package name */
+    int f36058v0;
+
+    /* renamed from: w0, reason: collision with root package name */
+    int f36059w0;
+
+    /* renamed from: x0, reason: collision with root package name */
+    WeakReference<V> f36060x0;
+
+    /* renamed from: y0, reason: collision with root package name */
+    WeakReference<View> f36061y0;
+
+    /* renamed from: z0, reason: collision with root package name */
+    WeakReference<View> f36062z0;
+
+    class a implements Runnable {
+
+        /* renamed from: B, reason: collision with root package name */
+        final /* synthetic */ View f36063B;
+
+        /* renamed from: C, reason: collision with root package name */
+        final /* synthetic */ int f36064C;
+
+        a(View view, int i10) {
+            this.f36063B = view;
+            this.f36064C = i10;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            BottomSheetBehavior.this.m24008o0(this.f29876f, this.f29877g);
+            BottomSheetBehavior.this.e1(this.f36063B, this.f36064C, false);
         }
     }
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$b */
-    class C7965b implements ValueAnimator.AnimatorUpdateListener {
-        C7965b() {
+    class b extends AnimatorListenerAdapter {
+        b() {
+        }
+
+        @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+        public void onAnimationEnd(Animator animator) {
+            BottomSheetBehavior.this.X0(5);
+            WeakReference<V> weakReference = BottomSheetBehavior.this.f36060x0;
+            if (weakReference == null || weakReference.get() == null) {
+                return;
+            }
+            BottomSheetBehavior.this.f36060x0.get().requestLayout();
+        }
+    }
+
+    class c implements ValueAnimator.AnimatorUpdateListener {
+        c() {
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
         public void onAnimationUpdate(ValueAnimator valueAnimator) {
             float fFloatValue = ((Float) valueAnimator.getAnimatedValue()).floatValue();
-            if (BottomSheetBehavior.this.f29854j != null) {
-                BottomSheetBehavior.this.f29854j.m28285Y(fFloatValue);
+            if (BottomSheetBehavior.this.f36021K != null) {
+                BottomSheetBehavior.this.f36021K.c0(fFloatValue);
             }
         }
     }
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$c */
-    class C7966c extends C0966c.c {
-        C7966c() {
+    class d implements u.c {
+
+        /* renamed from: a, reason: collision with root package name */
+        final /* synthetic */ boolean f36068a;
+
+        d(boolean z10) {
+            this.f36068a = z10;
         }
 
-        /* renamed from: n */
-        private boolean m24014n(View view) {
+        /* JADX WARN: Removed duplicated region for block: B:22:0x0080  */
+        /* JADX WARN: Removed duplicated region for block: B:33:0x00a3  */
+        @Override // com.google.android.material.internal.u.c
+        /*
+            Code decompiled incorrectly, please refer to instructions dump.
+            To view partially-correct code enable 'Show inconsistent code' option in preferences
+        */
+        public s1.C4469y0 a(android.view.View r11, s1.C4469y0 r12, com.google.android.material.internal.u.d r13) {
+            /*
+                r10 = this;
+                int r0 = s1.C4469y0.l.h()
+                j1.d r0 = r12.f(r0)
+                int r1 = s1.C4469y0.l.e()
+                j1.d r1 = r12.f(r1)
+                com.google.android.material.bottomsheet.BottomSheetBehavior r2 = com.google.android.material.bottomsheet.BottomSheetBehavior.this
+                int r3 = r0.f43451b
+                com.google.android.material.bottomsheet.BottomSheetBehavior.T(r2, r3)
+                boolean r2 = com.google.android.material.internal.u.g(r11)
+                int r3 = r11.getPaddingBottom()
+                int r4 = r11.getPaddingLeft()
+                int r5 = r11.getPaddingRight()
+                com.google.android.material.bottomsheet.BottomSheetBehavior r6 = com.google.android.material.bottomsheet.BottomSheetBehavior.this
+                boolean r6 = com.google.android.material.bottomsheet.BottomSheetBehavior.U(r6)
+                if (r6 == 0) goto L41
+                com.google.android.material.bottomsheet.BottomSheetBehavior r3 = com.google.android.material.bottomsheet.BottomSheetBehavior.this
+                int r6 = r12.i()
+                com.google.android.material.bottomsheet.BottomSheetBehavior.W(r3, r6)
+                int r3 = r13.f36804d
+                com.google.android.material.bottomsheet.BottomSheetBehavior r6 = com.google.android.material.bottomsheet.BottomSheetBehavior.this
+                int r6 = com.google.android.material.bottomsheet.BottomSheetBehavior.V(r6)
+                int r3 = r3 + r6
+            L41:
+                com.google.android.material.bottomsheet.BottomSheetBehavior r6 = com.google.android.material.bottomsheet.BottomSheetBehavior.this
+                boolean r6 = com.google.android.material.bottomsheet.BottomSheetBehavior.X(r6)
+                if (r6 == 0) goto L53
+                if (r2 == 0) goto L4e
+                int r4 = r13.f36803c
+                goto L50
+            L4e:
+                int r4 = r13.f36801a
+            L50:
+                int r6 = r0.f43450a
+                int r4 = r4 + r6
+            L53:
+                com.google.android.material.bottomsheet.BottomSheetBehavior r6 = com.google.android.material.bottomsheet.BottomSheetBehavior.this
+                boolean r6 = com.google.android.material.bottomsheet.BottomSheetBehavior.Y(r6)
+                if (r6 == 0) goto L66
+                if (r2 == 0) goto L60
+                int r13 = r13.f36801a
+                goto L62
+            L60:
+                int r13 = r13.f36803c
+            L62:
+                int r2 = r0.f43452c
+                int r5 = r13 + r2
+            L66:
+                android.view.ViewGroup$LayoutParams r13 = r11.getLayoutParams()
+                android.view.ViewGroup$MarginLayoutParams r13 = (android.view.ViewGroup.MarginLayoutParams) r13
+                com.google.android.material.bottomsheet.BottomSheetBehavior r2 = com.google.android.material.bottomsheet.BottomSheetBehavior.this
+                boolean r2 = com.google.android.material.bottomsheet.BottomSheetBehavior.Z(r2)
+                r6 = 0
+                r7 = 1
+                if (r2 == 0) goto L80
+                int r2 = r13.leftMargin
+                int r8 = r0.f43450a
+                if (r2 == r8) goto L80
+                r13.leftMargin = r8
+                r2 = r7
+                goto L81
+            L80:
+                r2 = r6
+            L81:
+                com.google.android.material.bottomsheet.BottomSheetBehavior r8 = com.google.android.material.bottomsheet.BottomSheetBehavior.this
+                boolean r8 = com.google.android.material.bottomsheet.BottomSheetBehavior.a0(r8)
+                if (r8 == 0) goto L92
+                int r8 = r13.rightMargin
+                int r9 = r0.f43452c
+                if (r8 == r9) goto L92
+                r13.rightMargin = r9
+                r2 = r7
+            L92:
+                com.google.android.material.bottomsheet.BottomSheetBehavior r8 = com.google.android.material.bottomsheet.BottomSheetBehavior.this
+                boolean r8 = com.google.android.material.bottomsheet.BottomSheetBehavior.J(r8)
+                if (r8 == 0) goto La3
+                int r8 = r13.topMargin
+                int r0 = r0.f43451b
+                if (r8 == r0) goto La3
+                r13.topMargin = r0
+                goto La4
+            La3:
+                r7 = r2
+            La4:
+                if (r7 == 0) goto La9
+                r11.setLayoutParams(r13)
+            La9:
+                int r13 = r11.getPaddingTop()
+                r11.setPadding(r4, r13, r5, r3)
+                boolean r11 = r10.f36068a
+                if (r11 == 0) goto Lbb
+                com.google.android.material.bottomsheet.BottomSheetBehavior r11 = com.google.android.material.bottomsheet.BottomSheetBehavior.this
+                int r13 = r1.f43453d
+                com.google.android.material.bottomsheet.BottomSheetBehavior.K(r11, r13)
+            Lbb:
+                com.google.android.material.bottomsheet.BottomSheetBehavior r11 = com.google.android.material.bottomsheet.BottomSheetBehavior.this
+                boolean r11 = com.google.android.material.bottomsheet.BottomSheetBehavior.U(r11)
+                if (r11 != 0) goto Lc7
+                boolean r11 = r10.f36068a
+                if (r11 == 0) goto Lcc
+            Lc7:
+                com.google.android.material.bottomsheet.BottomSheetBehavior r11 = com.google.android.material.bottomsheet.BottomSheetBehavior.this
+                com.google.android.material.bottomsheet.BottomSheetBehavior.L(r11, r6)
+            Lcc:
+                return r12
+            */
+            throw new UnsupportedOperationException("Method not decompiled: com.google.android.material.bottomsheet.BottomSheetBehavior.d.a(android.view.View, s1.y0, com.google.android.material.internal.u$d):s1.y0");
+        }
+    }
+
+    class e extends d.c {
+
+        /* renamed from: a, reason: collision with root package name */
+        private long f36070a;
+
+        e() {
+        }
+
+        private boolean n(View view) {
             int top = view.getTop();
             BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.this;
-            return top > (bottomSheetBehavior.f29836E + bottomSheetBehavior.m23992U()) / 2;
+            return top > (bottomSheetBehavior.f36059w0 + bottomSheetBehavior.s0()) / 2;
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: a */
-        public int mo6164a(View view, int i2, int i3) {
+        @Override // z1.d.c
+        public int a(View view, int i10, int i11) {
             return view.getLeft();
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: b */
-        public int mo6165b(View view, int i2, int i3) {
-            int iM23992U = BottomSheetBehavior.this.m23992U();
-            BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.this;
-            return C0937a.m5966b(i2, iM23992U, bottomSheetBehavior.f29866v ? bottomSheetBehavior.f29836E : bottomSheetBehavior.f29864t);
+        @Override // z1.d.c
+        public int b(View view, int i10, int i11) {
+            return C3946a.b(i10, BottomSheetBehavior.this.s0(), e(view));
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: e */
-        public int mo6168e(View view) {
-            BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.this;
-            return bottomSheetBehavior.f29866v ? bottomSheetBehavior.f29836E : bottomSheetBehavior.f29864t;
+        @Override // z1.d.c
+        public int e(View view) {
+            return BottomSheetBehavior.this.j0() ? BottomSheetBehavior.this.f36059w0 : BottomSheetBehavior.this.f36045i0;
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: j */
-        public void mo6173j(int i2) {
-            if (i2 == 1 && BottomSheetBehavior.this.f29868x) {
-                BottomSheetBehavior.this.m24007m0(1);
+        @Override // z1.d.c
+        public void j(int i10) {
+            if (i10 == 1 && BottomSheetBehavior.this.f36049m0) {
+                BottomSheetBehavior.this.X0(1);
             }
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: k */
-        public void mo6174k(View view, int i2, int i3, int i4, int i5) {
-            BottomSheetBehavior.this.m23990R(i3);
+        @Override // z1.d.c
+        public void k(View view, int i10, int i11, int i12, int i13) {
+            BottomSheetBehavior.this.o0(i11);
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: l */
-        public void mo6175l(View view, float f2, float f3) {
-            int i2;
-            int i3 = 4;
-            if (f3 < 0.0f) {
-                if (BottomSheetBehavior.this.f29847c) {
-                    i2 = BottomSheetBehavior.this.f29861q;
-                } else {
-                    int top = view.getTop();
-                    BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.this;
-                    int i4 = bottomSheetBehavior.f29862r;
-                    if (top > i4) {
-                        i2 = i4;
-                        i3 = 6;
-                    } else {
-                        i2 = bottomSheetBehavior.f29860p;
-                    }
-                }
-                i3 = 3;
-            } else {
-                BottomSheetBehavior bottomSheetBehavior2 = BottomSheetBehavior.this;
-                if (bottomSheetBehavior2.f29866v && bottomSheetBehavior2.m24009q0(view, f3)) {
-                    if ((Math.abs(f2) >= Math.abs(f3) || f3 <= 500.0f) && !m24014n(view)) {
-                        if (BottomSheetBehavior.this.f29847c) {
-                            i2 = BottomSheetBehavior.this.f29861q;
-                        } else if (Math.abs(view.getTop() - BottomSheetBehavior.this.f29860p) < Math.abs(view.getTop() - BottomSheetBehavior.this.f29862r)) {
-                            i2 = BottomSheetBehavior.this.f29860p;
-                        } else {
-                            i2 = BottomSheetBehavior.this.f29862r;
-                            i3 = 6;
-                        }
-                        i3 = 3;
-                    } else {
-                        i2 = BottomSheetBehavior.this.f29836E;
-                        i3 = 5;
-                    }
-                } else if (f3 == 0.0f || Math.abs(f2) > Math.abs(f3)) {
-                    int top2 = view.getTop();
-                    if (!BottomSheetBehavior.this.f29847c) {
-                        BottomSheetBehavior bottomSheetBehavior3 = BottomSheetBehavior.this;
-                        int i5 = bottomSheetBehavior3.f29862r;
-                        if (top2 < i5) {
-                            if (top2 < Math.abs(top2 - bottomSheetBehavior3.f29864t)) {
-                                i2 = BottomSheetBehavior.this.f29860p;
-                                i3 = 3;
-                            } else {
-                                i2 = BottomSheetBehavior.this.f29862r;
-                            }
-                        } else if (Math.abs(top2 - i5) < Math.abs(top2 - BottomSheetBehavior.this.f29864t)) {
-                            i2 = BottomSheetBehavior.this.f29862r;
-                        } else {
-                            i2 = BottomSheetBehavior.this.f29864t;
-                        }
-                        i3 = 6;
-                    } else if (Math.abs(top2 - BottomSheetBehavior.this.f29861q) < Math.abs(top2 - BottomSheetBehavior.this.f29864t)) {
-                        i2 = BottomSheetBehavior.this.f29861q;
-                        i3 = 3;
-                    } else {
-                        i2 = BottomSheetBehavior.this.f29864t;
-                    }
-                } else if (BottomSheetBehavior.this.f29847c) {
-                    i2 = BottomSheetBehavior.this.f29864t;
-                } else {
-                    int top3 = view.getTop();
-                    if (Math.abs(top3 - BottomSheetBehavior.this.f29862r) < Math.abs(top3 - BottomSheetBehavior.this.f29864t)) {
-                        i2 = BottomSheetBehavior.this.f29862r;
-                        i3 = 6;
-                    } else {
-                        i2 = BottomSheetBehavior.this.f29864t;
-                    }
-                }
-            }
-            BottomSheetBehavior.this.m24010r0(view, i3, i2, true);
+        /* JADX WARN: Removed duplicated region for block: B:39:0x00ad  */
+        /* JADX WARN: Removed duplicated region for block: B:6:0x0010  */
+        @Override // z1.d.c
+        /*
+            Code decompiled incorrectly, please refer to instructions dump.
+            To view partially-correct code enable 'Show inconsistent code' option in preferences
+        */
+        public void l(android.view.View r8, float r9, float r10) {
+            /*
+                Method dump skipped, instructions count: 308
+                To view this dump change 'Code comments level' option to 'DEBUG'
+            */
+            throw new UnsupportedOperationException("Method not decompiled: com.google.android.material.bottomsheet.BottomSheetBehavior.e.l(android.view.View, float, float):void");
         }
 
-        @Override // p024c.p062k.p063a.C0966c.c
-        /* renamed from: m */
-        public boolean mo6176m(View view, int i2) {
+        @Override // z1.d.c
+        public boolean m(View view, int i10) {
             BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.this;
-            int i3 = bottomSheetBehavior.f29869y;
-            if (i3 == 1 || bottomSheetBehavior.f29843L) {
+            int i11 = bottomSheetBehavior.f36050n0;
+            if (i11 == 1 || bottomSheetBehavior.f36013F0) {
                 return false;
             }
-            if (i3 == 3 && bottomSheetBehavior.f29841J == i2) {
-                WeakReference<View> weakReference = bottomSheetBehavior.f29838G;
+            if (i11 == 3 && bottomSheetBehavior.f36009D0 == i10) {
+                WeakReference<View> weakReference = bottomSheetBehavior.f36062z0;
                 View view2 = weakReference != null ? weakReference.get() : null;
                 if (view2 != null && view2.canScrollVertically(-1)) {
                     return false;
                 }
             }
-            WeakReference<V> weakReference2 = BottomSheetBehavior.this.f29837F;
+            this.f36070a = System.currentTimeMillis();
+            WeakReference<V> weakReference2 = BottomSheetBehavior.this.f36060x0;
             return weakReference2 != null && weakReference2.get() == view;
         }
     }
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$d */
-    class C7967d implements InterfaceC0292f {
+    class f implements w {
 
-        /* renamed from: a */
-        final /* synthetic */ int f29881a;
+        /* renamed from: a, reason: collision with root package name */
+        final /* synthetic */ int f36072a;
 
-        C7967d(int i2) {
-            this.f29881a = i2;
+        f(int i10) {
+            this.f36072a = i10;
         }
 
-        @Override // androidx.core.view.p004d0.InterfaceC0292f
-        /* renamed from: a */
-        public boolean mo2032a(View view, InterfaceC0292f.a aVar) {
-            BottomSheetBehavior.this.m24006l0(this.f29881a);
+        @Override // t1.w
+        public boolean a(View view, w.a aVar) {
+            BottomSheetBehavior.this.W0(this.f36072a);
             return true;
         }
     }
 
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$e */
-    public static abstract class AbstractC7968e {
-        public abstract void onSlide(View view, float f2);
-
-        public abstract void onStateChanged(View view, int i2);
-    }
-
-    /* renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$f */
-    private class RunnableC7969f implements Runnable {
-
-        /* renamed from: f */
-        private final View f29883f;
-
-        /* renamed from: g */
-        private boolean f29884g;
-
-        /* renamed from: h */
-        int f29885h;
-
-        RunnableC7969f(View view, int i2) {
-            this.f29883f = view;
-            this.f29885h = i2;
-        }
-
-        @Override // java.lang.Runnable
-        public void run() {
-            C0966c c0966c = BottomSheetBehavior.this.f29870z;
-            if (c0966c == null || !c0966c.m6157k(true)) {
-                BottomSheetBehavior.this.m24007m0(this.f29885h);
-            } else {
-                C0311u.m2115a0(this.f29883f, this);
-            }
-            this.f29884g = false;
-        }
-    }
-
     public BottomSheetBehavior() {
-        this.f29846b = 0;
-        this.f29847c = true;
-        this.f29848d = false;
-        this.f29858n = null;
-        this.f29863s = 0.5f;
-        this.f29865u = -1.0f;
-        this.f29868x = true;
-        this.f29869y = 4;
-        this.f29839H = new ArrayList<>();
-        this.f29845N = new C7966c();
+        this.f36004B = 0;
+        this.f36006C = true;
+        this.f36008D = false;
+        this.f36023M = -1;
+        this.f36024N = -1;
+        this.f36039c0 = new i(this, null);
+        this.f36044h0 = 0.5f;
+        this.f36046j0 = -1.0f;
+        this.f36049m0 = true;
+        this.f36050n0 = 4;
+        this.f36051o0 = 4;
+        this.f36056t0 = 0.1f;
+        this.f36003A0 = new ArrayList<>();
+        this.f36011E0 = -1;
+        this.f36017H0 = new SparseIntArray();
+        this.f36019I0 = new e();
     }
 
-    /* renamed from: J */
-    private void m23973J(V v, C0289c.a aVar, int i2) {
-        C0311u.m2123e0(v, aVar, null, new C7967d(i2));
+    private boolean C0(V v10) {
+        ViewParent parent = v10.getParent();
+        return parent != null && parent.isLayoutRequested() && X.Q(v10);
     }
 
-    /* renamed from: L */
-    private void m23974L() {
-        int iM23976N = m23976N();
-        if (this.f29847c) {
-            this.f29864t = Math.max(this.f29836E - iM23976N, this.f29861q);
-        } else {
-            this.f29864t = this.f29836E - iM23976N;
-        }
+    private void F0(View view, t.a aVar, int i10) {
+        X.j0(view, aVar, null, l0(i10));
     }
 
-    /* renamed from: M */
-    private void m23975M() {
-        this.f29862r = (int) (this.f29836E * (1.0f - this.f29863s));
-    }
-
-    /* renamed from: N */
-    private int m23976N() {
-        return this.f29851g ? Math.max(this.f29852h, this.f29836E - ((this.f29835D * 9) / 16)) : this.f29850f;
-    }
-
-    /* renamed from: O */
-    private void m23977O(Context context, AttributeSet attributeSet, boolean z) {
-        m23978P(context, attributeSet, z, null);
-    }
-
-    /* renamed from: P */
-    private void m23978P(Context context, AttributeSet attributeSet, boolean z, ColorStateList colorStateList) {
-        if (this.f29853i) {
-            this.f29856l = C8904k.m28317e(context, attributeSet, C8908b.f33816f, f29831a).m28355m();
-            C8900g c8900g = new C8900g(this.f29856l);
-            this.f29854j = c8900g;
-            c8900g.m28278N(context);
-            if (z && colorStateList != null) {
-                this.f29854j.m28284X(colorStateList);
-                return;
-            }
-            TypedValue typedValue = new TypedValue();
-            context.getTheme().resolveAttribute(R.attr.colorBackground, typedValue, true);
-            this.f29854j.setTint(typedValue.data);
-        }
-    }
-
-    /* renamed from: Q */
-    private void m23979Q() {
-        ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(0.0f, 1.0f);
-        this.f29859o = valueAnimatorOfFloat;
-        valueAnimatorOfFloat.setDuration(500L);
-        this.f29859o.addUpdateListener(new C7965b());
-    }
-
-    /* renamed from: T */
-    public static <V extends View> BottomSheetBehavior<V> m23980T(V v) {
-        ViewGroup.LayoutParams layoutParams = v.getLayoutParams();
-        if (!(layoutParams instanceof CoordinatorLayout.C0229f)) {
-            throw new IllegalArgumentException("The view is not a child of CoordinatorLayout");
-        }
-        CoordinatorLayout.AbstractC0226c abstractC0226cM1481f = ((CoordinatorLayout.C0229f) layoutParams).m1481f();
-        if (abstractC0226cM1481f instanceof BottomSheetBehavior) {
-            return (BottomSheetBehavior) abstractC0226cM1481f;
-        }
-        throw new IllegalArgumentException("The view is not associated with BottomSheetBehavior");
-    }
-
-    /* renamed from: W */
-    private float m23981W() {
-        VelocityTracker velocityTracker = this.f29840I;
-        if (velocityTracker == null) {
-            return 0.0f;
-        }
-        velocityTracker.computeCurrentVelocity(1000, this.f29849e);
-        return this.f29840I.getYVelocity(this.f29841J);
-    }
-
-    /* renamed from: Y */
-    private void m23982Y() {
-        this.f29841J = -1;
-        VelocityTracker velocityTracker = this.f29840I;
+    private void G0() {
+        this.f36009D0 = -1;
+        this.f36011E0 = -1;
+        VelocityTracker velocityTracker = this.f36005B0;
         if (velocityTracker != null) {
             velocityTracker.recycle();
-            this.f29840I = null;
+            this.f36005B0 = null;
         }
     }
 
-    /* renamed from: Z */
-    private void m23983Z(SavedState savedState) {
-        int i2 = this.f29846b;
-        if (i2 == 0) {
+    private void H0(h hVar) {
+        int i10 = this.f36004B;
+        if (i10 == 0) {
             return;
         }
-        if (i2 == -1 || (i2 & 1) == 1) {
-            this.f29850f = savedState.f29872i;
+        if (i10 == -1 || (i10 & 1) == 1) {
+            this.f36014G = hVar.f36075E;
         }
-        if (i2 == -1 || (i2 & 2) == 2) {
-            this.f29847c = savedState.f29873j;
+        if (i10 == -1 || (i10 & 2) == 2) {
+            this.f36006C = hVar.f36076F;
         }
-        if (i2 == -1 || (i2 & 4) == 4) {
-            this.f29866v = savedState.f29874k;
+        if (i10 == -1 || (i10 & 4) == 4) {
+            this.f36047k0 = hVar.f36077G;
         }
-        if (i2 == -1 || (i2 & 8) == 8) {
-            this.f29867w = savedState.f29875l;
+        if (i10 == -1 || (i10 & 8) == 8) {
+            this.f36048l0 = hVar.f36078H;
         }
     }
 
-    /* renamed from: n0 */
-    private void m23984n0(CoordinatorLayout coordinatorLayout) {
+    private void I0(V v10, Runnable runnable) {
+        if (C0(v10)) {
+            v10.post(runnable);
+        } else {
+            runnable.run();
+        }
+    }
+
+    private void Y0(View view) {
+        boolean z10 = (Build.VERSION.SDK_INT < 29 || z0() || this.f36016H) ? false : true;
+        if (this.f36027Q || this.f36028R || this.f36029S || this.f36031U || this.f36032V || this.f36033W || z10) {
+            u.b(view, new d(z10));
+        }
+    }
+
+    private boolean a1() {
+        return this.f36052p0 != null && (this.f36049m0 || this.f36050n0 == 1);
+    }
+
+    private int b0(View view, int i10, int i11) {
+        return X.c(view, view.getResources().getString(i10), l0(i11));
+    }
+
+    private void d0() {
+        int iH0 = h0();
+        if (this.f36006C) {
+            this.f36045i0 = Math.max(this.f36059w0 - iH0, this.f36042f0);
+        } else {
+            this.f36045i0 = this.f36059w0 - iH0;
+        }
+    }
+
+    private float e0(float f10, RoundedCorner roundedCorner) {
+        if (roundedCorner != null) {
+            float radius = roundedCorner.getRadius();
+            if (radius > 0.0f && f10 > 0.0f) {
+                return radius / f10;
+            }
+        }
+        return 0.0f;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void e1(View view, int i10, boolean z10) {
+        int iV0 = v0(i10);
+        z1.d dVar = this.f36052p0;
+        if (dVar == null || (!z10 ? dVar.I(view, view.getLeft(), iV0) : dVar.G(view.getLeft(), iV0))) {
+            X0(i10);
+            return;
+        }
+        X0(2);
+        h1(i10, true);
+        this.f36039c0.c(i10);
+    }
+
+    private void f0() {
+        this.f36043g0 = (int) (this.f36059w0 * (1.0f - this.f36044h0));
+    }
+
+    private void f1() {
+        WeakReference<V> weakReference = this.f36060x0;
+        if (weakReference != null) {
+            g1(weakReference.get(), 0);
+        }
+        WeakReference<View> weakReference2 = this.f36061y0;
+        if (weakReference2 != null) {
+            g1(weakReference2.get(), 1);
+        }
+    }
+
+    private float g0() {
+        WeakReference<V> weakReference;
         WindowInsets rootWindowInsets;
-        if (Build.VERSION.SDK_INT < 29 || m23994X() || (rootWindowInsets = coordinatorLayout.getRootWindowInsets()) == null) {
-            return;
+        if (this.f36021K == null || (weakReference = this.f36060x0) == null || weakReference.get() == null || Build.VERSION.SDK_INT < 31) {
+            return 0.0f;
         }
-        this.f29850f += rootWindowInsets.getSystemGestureInsets().bottom;
+        V v10 = this.f36060x0.get();
+        if (!x0() || (rootWindowInsets = v10.getRootWindowInsets()) == null) {
+            return 0.0f;
+        }
+        return Math.max(e0(this.f36021K.J(), rootWindowInsets.getRoundedCorner(0)), e0(this.f36021K.K(), rootWindowInsets.getRoundedCorner(1)));
     }
 
-    /* renamed from: p0 */
-    private void m23985p0(int i2) {
-        V v = this.f29837F.get();
-        if (v == null) {
+    private void g1(View view, int i10) {
+        if (view == null) {
             return;
         }
-        ViewParent parent = v.getParent();
-        if (parent != null && parent.isLayoutRequested() && C0311u.m2101N(v)) {
-            v.post(new RunnableC7964a(v, i2));
+        k0(view, i10);
+        if (!this.f36006C && this.f36050n0 != 6) {
+            this.f36017H0.put(i10, b0(view, C7.k.f2532a, 6));
+        }
+        if (this.f36047k0 && B0() && this.f36050n0 != 5) {
+            F0(view, t.a.f49798y, 5);
+        }
+        int i11 = this.f36050n0;
+        if (i11 == 3) {
+            F0(view, t.a.f49797x, this.f36006C ? 4 : 6);
+            return;
+        }
+        if (i11 == 4) {
+            F0(view, t.a.f49796w, this.f36006C ? 3 : 6);
         } else {
-            m24008o0(v, i2);
-        }
-    }
-
-    /* renamed from: s0 */
-    private void m23986s0() {
-        V v;
-        WeakReference<V> weakReference = this.f29837F;
-        if (weakReference == null || (v = weakReference.get()) == null) {
-            return;
-        }
-        C0311u.m2119c0(v, 524288);
-        C0311u.m2119c0(v, 262144);
-        C0311u.m2119c0(v, CacheHelper.VALUE_TO_CONVERT_MB_TO_BYTES);
-        if (this.f29866v && this.f29869y != 5) {
-            m23973J(v, C0289c.a.f2368u, 5);
-        }
-        int i2 = this.f29869y;
-        if (i2 == 3) {
-            m23973J(v, C0289c.a.f2367t, this.f29847c ? 4 : 6);
-            return;
-        }
-        if (i2 == 4) {
-            m23973J(v, C0289c.a.f2366s, this.f29847c ? 3 : 6);
-        } else {
-            if (i2 != 6) {
+            if (i11 != 6) {
                 return;
             }
-            m23973J(v, C0289c.a.f2367t, 4);
-            m23973J(v, C0289c.a.f2366s, 3);
+            F0(view, t.a.f49797x, 4);
+            F0(view, t.a.f49796w, 3);
         }
     }
 
-    /* renamed from: t0 */
-    private void m23987t0(int i2) {
+    private int h0() {
+        int i10;
+        return this.f36016H ? Math.min(Math.max(this.f36018I, this.f36059w0 - ((this.f36058v0 * 9) / 16)), this.f36057u0) + this.f36034X : (this.f36026P || this.f36027Q || (i10 = this.f36025O) <= 0) ? this.f36014G + this.f36034X : Math.max(this.f36014G, i10 + this.f36020J);
+    }
+
+    private void h1(int i10, boolean z10) {
+        boolean zY0;
         ValueAnimator valueAnimator;
-        if (i2 == 2) {
+        if (i10 == 2 || this.f36038b0 == (zY0 = y0()) || this.f36021K == null) {
             return;
         }
-        boolean z = i2 == 3;
-        if (this.f29857m != z) {
-            this.f29857m = z;
-            if (this.f29854j == null || (valueAnimator = this.f29859o) == null) {
-                return;
+        this.f36038b0 = zY0;
+        if (!z10 || (valueAnimator = this.f36040d0) == null) {
+            ValueAnimator valueAnimator2 = this.f36040d0;
+            if (valueAnimator2 != null && valueAnimator2.isRunning()) {
+                this.f36040d0.cancel();
             }
-            if (valueAnimator.isRunning()) {
-                this.f29859o.reverse();
-                return;
-            }
-            float f2 = z ? 0.0f : 1.0f;
-            this.f29859o.setFloatValues(1.0f - f2, f2);
-            this.f29859o.start();
+            this.f36021K.c0(this.f36038b0 ? g0() : 1.0f);
+            return;
+        }
+        if (valueAnimator.isRunning()) {
+            this.f36040d0.reverse();
+        } else {
+            this.f36040d0.setFloatValues(this.f36021K.y(), zY0 ? g0() : 1.0f);
+            this.f36040d0.start();
         }
     }
 
-    /* renamed from: u0 */
-    private void m23988u0(boolean z) {
+    private float i0(int i10) {
+        float f10;
+        float fS0;
+        int i11 = this.f36045i0;
+        if (i10 > i11 || i11 == s0()) {
+            int i12 = this.f36045i0;
+            f10 = i12 - i10;
+            fS0 = this.f36059w0 - i12;
+        } else {
+            int i13 = this.f36045i0;
+            f10 = i13 - i10;
+            fS0 = i13 - s0();
+        }
+        return f10 / fS0;
+    }
+
+    private void i1(boolean z10) {
         Map<View, Integer> map;
-        WeakReference<V> weakReference = this.f29837F;
+        WeakReference<V> weakReference = this.f36060x0;
         if (weakReference == null) {
             return;
         }
@@ -598,747 +713,1010 @@ public class BottomSheetBehavior<V extends View> extends CoordinatorLayout.Abstr
         if (parent instanceof CoordinatorLayout) {
             CoordinatorLayout coordinatorLayout = (CoordinatorLayout) parent;
             int childCount = coordinatorLayout.getChildCount();
-            if (Build.VERSION.SDK_INT >= 16 && z) {
-                if (this.f29844M != null) {
+            if (z10) {
+                if (this.f36015G0 != null) {
                     return;
                 } else {
-                    this.f29844M = new HashMap(childCount);
+                    this.f36015G0 = new HashMap(childCount);
                 }
             }
-            for (int i2 = 0; i2 < childCount; i2++) {
-                View childAt = coordinatorLayout.getChildAt(i2);
-                if (childAt != this.f29837F.get()) {
-                    if (z) {
-                        if (Build.VERSION.SDK_INT >= 16) {
-                            this.f29844M.put(childAt, Integer.valueOf(childAt.getImportantForAccessibility()));
+            for (int i10 = 0; i10 < childCount; i10++) {
+                View childAt = coordinatorLayout.getChildAt(i10);
+                if (childAt != this.f36060x0.get()) {
+                    if (z10) {
+                        this.f36015G0.put(childAt, Integer.valueOf(childAt.getImportantForAccessibility()));
+                        if (this.f36008D) {
+                            X.x0(childAt, 4);
                         }
-                        if (this.f29848d) {
-                            C0311u.m2153t0(childAt, 4);
-                        }
-                    } else if (this.f29848d && (map = this.f29844M) != null && map.containsKey(childAt)) {
-                        C0311u.m2153t0(childAt, this.f29844M.get(childAt).intValue());
+                    } else if (this.f36008D && (map = this.f36015G0) != null && map.containsKey(childAt)) {
+                        X.x0(childAt, this.f36015G0.get(childAt).intValue());
                     }
                 }
             }
-            if (z) {
+            if (!z10) {
+                this.f36015G0 = null;
+            } else if (this.f36008D) {
+                this.f36060x0.get().sendAccessibilityEvent(8);
+            }
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public boolean j0() {
+        return A0() && B0();
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void j1(boolean z10) {
+        V v10;
+        if (this.f36060x0 != null) {
+            d0();
+            if (this.f36050n0 != 4 || (v10 = this.f36060x0.get()) == null) {
                 return;
             }
-            this.f29844M = null;
+            if (z10) {
+                W0(4);
+            } else {
+                v10.requestLayout();
+            }
         }
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: A */
-    public boolean mo1443A(CoordinatorLayout coordinatorLayout, V v, View view, View view2, int i2, int i3) {
-        this.f29833B = 0;
-        this.f29834C = false;
-        return (i2 & 2) != 0;
-    }
-
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: C */
-    public void mo1445C(CoordinatorLayout coordinatorLayout, V v, View view, int i2) {
-        int i3;
-        int i4 = 3;
-        if (v.getTop() == m23992U()) {
-            m24007m0(3);
+    private void k0(View view, int i10) {
+        if (view == null) {
             return;
         }
-        WeakReference<View> weakReference = this.f29838G;
-        if (weakReference != null && view == weakReference.get() && this.f29834C) {
-            if (this.f29833B > 0) {
-                if (this.f29847c) {
-                    i3 = this.f29861q;
-                } else {
-                    int top = v.getTop();
-                    int i5 = this.f29862r;
-                    if (top > i5) {
-                        i3 = i5;
-                        i4 = 6;
-                    } else {
-                        i3 = this.f29860p;
-                    }
-                }
-            } else if (this.f29866v && m24009q0(v, m23981W())) {
-                i3 = this.f29836E;
-                i4 = 5;
-            } else if (this.f29833B == 0) {
-                int top2 = v.getTop();
-                if (!this.f29847c) {
-                    int i6 = this.f29862r;
-                    if (top2 < i6) {
-                        if (top2 < Math.abs(top2 - this.f29864t)) {
-                            i3 = this.f29860p;
-                        } else {
-                            i3 = this.f29862r;
-                        }
-                    } else if (Math.abs(top2 - i6) < Math.abs(top2 - this.f29864t)) {
-                        i3 = this.f29862r;
-                    } else {
-                        i3 = this.f29864t;
-                        i4 = 4;
-                    }
-                    i4 = 6;
-                } else if (Math.abs(top2 - this.f29861q) < Math.abs(top2 - this.f29864t)) {
-                    i3 = this.f29861q;
-                } else {
-                    i3 = this.f29864t;
-                    i4 = 4;
-                }
-            } else {
-                if (this.f29847c) {
-                    i3 = this.f29864t;
-                } else {
-                    int top3 = v.getTop();
-                    if (Math.abs(top3 - this.f29862r) < Math.abs(top3 - this.f29864t)) {
-                        i3 = this.f29862r;
-                        i4 = 6;
-                    } else {
-                        i3 = this.f29864t;
-                    }
-                }
-                i4 = 4;
-            }
-            m24010r0(v, i4, i3, false);
-            this.f29834C = false;
+        X.h0(view, 524288);
+        X.h0(view, 262144);
+        X.h0(view, 1048576);
+        int i11 = this.f36017H0.get(i10, -1);
+        if (i11 != -1) {
+            X.h0(view, i11);
+            this.f36017H0.delete(i10);
         }
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: D */
-    public boolean mo1446D(CoordinatorLayout coordinatorLayout, V v, MotionEvent motionEvent) {
-        if (!v.isShown()) {
+    private w l0(int i10) {
+        return new f(i10);
+    }
+
+    private void m0(Context context) {
+        if (this.f36037a0 == null) {
+            return;
+        }
+        X7.g gVar = new X7.g(this.f36037a0);
+        this.f36021K = gVar;
+        gVar.Q(context);
+        ColorStateList colorStateList = this.f36022L;
+        if (colorStateList != null) {
+            this.f36021K.b0(colorStateList);
+            return;
+        }
+        TypedValue typedValue = new TypedValue();
+        context.getTheme().resolveAttribute(R.attr.colorBackground, typedValue, true);
+        this.f36021K.setTint(typedValue.data);
+    }
+
+    private void n0() {
+        ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(g0(), 1.0f);
+        this.f36040d0 = valueAnimatorOfFloat;
+        valueAnimatorOfFloat.setDuration(500L);
+        this.f36040d0.addUpdateListener(new c());
+    }
+
+    public static <V extends View> BottomSheetBehavior<V> q0(V v10) {
+        ViewGroup.LayoutParams layoutParams = v10.getLayoutParams();
+        if (!(layoutParams instanceof CoordinatorLayout.f)) {
+            throw new IllegalArgumentException("The view is not a child of CoordinatorLayout");
+        }
+        CoordinatorLayout.c cVarF = ((CoordinatorLayout.f) layoutParams).f();
+        if (cVarF instanceof BottomSheetBehavior) {
+            return (BottomSheetBehavior) cVarF;
+        }
+        throw new IllegalArgumentException("The view is not associated with BottomSheetBehavior");
+    }
+
+    private int r0(int i10, int i11, int i12, int i13) {
+        int childMeasureSpec = ViewGroup.getChildMeasureSpec(i10, i11, i13);
+        if (i12 == -1) {
+            return childMeasureSpec;
+        }
+        int mode = View.MeasureSpec.getMode(childMeasureSpec);
+        int size = View.MeasureSpec.getSize(childMeasureSpec);
+        if (mode == 1073741824) {
+            return View.MeasureSpec.makeMeasureSpec(Math.min(size, i12), 1073741824);
+        }
+        if (size != 0) {
+            i12 = Math.min(size, i12);
+        }
+        return View.MeasureSpec.makeMeasureSpec(i12, Integer.MIN_VALUE);
+    }
+
+    private int v0(int i10) {
+        if (i10 == 3) {
+            return s0();
+        }
+        if (i10 == 4) {
+            return this.f36045i0;
+        }
+        if (i10 == 5) {
+            return this.f36059w0;
+        }
+        if (i10 == 6) {
+            return this.f36043g0;
+        }
+        throw new IllegalArgumentException("Invalid state to get top offset: " + i10);
+    }
+
+    private float w0() {
+        VelocityTracker velocityTracker = this.f36005B0;
+        if (velocityTracker == null) {
+            return 0.0f;
+        }
+        velocityTracker.computeCurrentVelocity(1000, this.f36010E);
+        return this.f36005B0.getYVelocity(this.f36009D0);
+    }
+
+    private boolean x0() {
+        WeakReference<V> weakReference = this.f36060x0;
+        if (weakReference == null || weakReference.get() == null) {
+            return false;
+        }
+        int[] iArr = new int[2];
+        this.f36060x0.get().getLocationOnScreen(iArr);
+        return iArr[1] == 0;
+    }
+
+    private boolean y0() {
+        return this.f36050n0 == 3 && (this.f36036Z || x0());
+    }
+
+    public boolean A0() {
+        return this.f36047k0;
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public void B(CoordinatorLayout coordinatorLayout, V v10, Parcelable parcelable) {
+        h hVar = (h) parcelable;
+        super.B(coordinatorLayout, v10, hVar.a());
+        H0(hVar);
+        int i10 = hVar.f36074D;
+        if (i10 == 1 || i10 == 2) {
+            this.f36050n0 = 4;
+            this.f36051o0 = 4;
+        } else {
+            this.f36050n0 = i10;
+            this.f36051o0 = i10;
+        }
+    }
+
+    public boolean B0() {
+        return true;
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public Parcelable C(CoordinatorLayout coordinatorLayout, V v10) {
+        return new h(super.C(coordinatorLayout, v10), (BottomSheetBehavior<?>) this);
+    }
+
+    public boolean D0() {
+        return true;
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public boolean E(CoordinatorLayout coordinatorLayout, V v10, View view, View view2, int i10, int i11) {
+        this.f36054r0 = 0;
+        this.f36055s0 = false;
+        return (i10 & 2) != 0;
+    }
+
+    public void E0(g gVar) {
+        this.f36003A0.remove(gVar);
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:48:0x0092  */
+    /* JADX WARN: Removed duplicated region for block: B:51:0x00a9  */
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    public void G(androidx.coordinatorlayout.widget.CoordinatorLayout r3, V r4, android.view.View r5, int r6) {
+        /*
+            r2 = this;
+            int r3 = r4.getTop()
+            int r6 = r2.s0()
+            r0 = 3
+            if (r3 != r6) goto Lf
+            r2.X0(r0)
+            return
+        Lf:
+            boolean r3 = r2.D0()
+            if (r3 == 0) goto L24
+            java.lang.ref.WeakReference<android.view.View> r3 = r2.f36062z0
+            if (r3 == 0) goto L23
+            java.lang.Object r3 = r3.get()
+            if (r5 != r3) goto L23
+            boolean r3 = r2.f36055s0
+            if (r3 != 0) goto L24
+        L23:
+            return
+        L24:
+            int r3 = r2.f36054r0
+            r5 = 6
+            if (r3 <= 0) goto L39
+            boolean r3 = r2.f36006C
+            if (r3 == 0) goto L2f
+            goto Laa
+        L2f:
+            int r3 = r4.getTop()
+            int r6 = r2.f36043g0
+            if (r3 <= r6) goto Laa
+            goto La9
+        L39:
+            boolean r3 = r2.f36047k0
+            if (r3 == 0) goto L49
+            float r3 = r2.w0()
+            boolean r3 = r2.b1(r4, r3)
+            if (r3 == 0) goto L49
+            r0 = 5
+            goto Laa
+        L49:
+            int r3 = r2.f36054r0
+            r6 = 4
+            if (r3 != 0) goto L8e
+            int r3 = r4.getTop()
+            boolean r1 = r2.f36006C
+            if (r1 == 0) goto L68
+            int r5 = r2.f36042f0
+            int r5 = r3 - r5
+            int r5 = java.lang.Math.abs(r5)
+            int r1 = r2.f36045i0
+            int r3 = r3 - r1
+            int r3 = java.lang.Math.abs(r3)
+            if (r5 >= r3) goto L92
+            goto Laa
+        L68:
+            int r1 = r2.f36043g0
+            if (r3 >= r1) goto L7e
+            int r1 = r2.f36045i0
+            int r1 = r3 - r1
+            int r1 = java.lang.Math.abs(r1)
+            if (r3 >= r1) goto L77
+            goto Laa
+        L77:
+            boolean r3 = r2.c1()
+            if (r3 == 0) goto La9
+            goto L92
+        L7e:
+            int r0 = r3 - r1
+            int r0 = java.lang.Math.abs(r0)
+            int r1 = r2.f36045i0
+            int r3 = r3 - r1
+            int r3 = java.lang.Math.abs(r3)
+            if (r0 >= r3) goto L92
+            goto La9
+        L8e:
+            boolean r3 = r2.f36006C
+            if (r3 == 0) goto L94
+        L92:
+            r0 = r6
+            goto Laa
+        L94:
+            int r3 = r4.getTop()
+            int r0 = r2.f36043g0
+            int r0 = r3 - r0
+            int r0 = java.lang.Math.abs(r0)
+            int r1 = r2.f36045i0
+            int r3 = r3 - r1
+            int r3 = java.lang.Math.abs(r3)
+            if (r0 >= r3) goto L92
+        La9:
+            r0 = r5
+        Laa:
+            r3 = 0
+            r2.e1(r4, r0, r3)
+            r2.f36055s0 = r3
+            return
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.google.android.material.bottomsheet.BottomSheetBehavior.G(androidx.coordinatorlayout.widget.CoordinatorLayout, android.view.View, android.view.View, int):void");
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public boolean H(CoordinatorLayout coordinatorLayout, V v10, MotionEvent motionEvent) {
+        if (!v10.isShown()) {
             return false;
         }
         int actionMasked = motionEvent.getActionMasked();
-        if (this.f29869y == 1 && actionMasked == 0) {
+        if (this.f36050n0 == 1 && actionMasked == 0) {
             return true;
         }
-        C0966c c0966c = this.f29870z;
-        if (c0966c != null) {
-            c0966c.m6163z(motionEvent);
+        if (a1()) {
+            this.f36052p0.A(motionEvent);
         }
         if (actionMasked == 0) {
-            m23982Y();
+            G0();
         }
-        if (this.f29840I == null) {
-            this.f29840I = VelocityTracker.obtain();
+        if (this.f36005B0 == null) {
+            this.f36005B0 = VelocityTracker.obtain();
         }
-        this.f29840I.addMovement(motionEvent);
-        if (actionMasked == 2 && !this.f29832A && Math.abs(this.f29842K - motionEvent.getY()) > this.f29870z.m6159u()) {
-            this.f29870z.m6156b(v, motionEvent.getPointerId(motionEvent.getActionIndex()));
+        this.f36005B0.addMovement(motionEvent);
+        if (a1() && actionMasked == 2 && !this.f36053q0 && Math.abs(this.f36011E0 - motionEvent.getY()) > this.f36052p0.v()) {
+            this.f36052p0.c(v10, motionEvent.getPointerId(motionEvent.getActionIndex()));
         }
-        return !this.f29832A;
+        return !this.f36053q0;
     }
 
-    /* renamed from: K */
-    public void m23989K(AbstractC7968e abstractC7968e) {
-        if (this.f29839H.contains(abstractC7968e)) {
-            return;
-        }
-        this.f29839H.add(abstractC7968e);
+    public void J0(boolean z10) {
+        this.f36049m0 = z10;
     }
 
-    /* renamed from: R */
-    void m23990R(int i2) {
-        float f2;
-        float fM23992U;
-        V v = this.f29837F.get();
-        if (v == null || this.f29839H.isEmpty()) {
+    public void K0(int i10) {
+        if (i10 < 0) {
+            throw new IllegalArgumentException("offset must be greater than or equal to 0");
+        }
+        this.f36041e0 = i10;
+        h1(this.f36050n0, true);
+    }
+
+    public void L0(boolean z10) {
+        if (this.f36006C == z10) {
             return;
         }
-        int i3 = this.f29864t;
-        if (i2 > i3 || i3 == m23992U()) {
-            int i4 = this.f29864t;
-            f2 = i4 - i2;
-            fM23992U = this.f29836E - i4;
+        this.f36006C = z10;
+        if (this.f36060x0 != null) {
+            d0();
+        }
+        X0((this.f36006C && this.f36050n0 == 6) ? 3 : this.f36050n0);
+        h1(this.f36050n0, true);
+        f1();
+    }
+
+    public void M0(boolean z10) {
+        this.f36026P = z10;
+    }
+
+    public void N0(float f10) {
+        if (f10 <= 0.0f || f10 >= 1.0f) {
+            throw new IllegalArgumentException("ratio must be a float value between 0 and 1");
+        }
+        this.f36044h0 = f10;
+        if (this.f36060x0 != null) {
+            f0();
+        }
+    }
+
+    public void O0(boolean z10) {
+        if (this.f36047k0 != z10) {
+            this.f36047k0 = z10;
+            if (!z10 && this.f36050n0 == 5) {
+                W0(4);
+            }
+            f1();
+        }
+    }
+
+    public void P0(int i10) {
+        this.f36024N = i10;
+    }
+
+    public void Q0(int i10) {
+        this.f36023M = i10;
+    }
+
+    public void R0(int i10) {
+        S0(i10, false);
+    }
+
+    public final void S0(int i10, boolean z10) {
+        if (i10 == -1) {
+            if (this.f36016H) {
+                return;
+            } else {
+                this.f36016H = true;
+            }
         } else {
-            int i5 = this.f29864t;
-            f2 = i5 - i2;
-            fM23992U = i5 - m23992U();
+            if (!this.f36016H && this.f36014G == i10) {
+                return;
+            }
+            this.f36016H = false;
+            this.f36014G = Math.max(0, i10);
         }
-        float f3 = f2 / fM23992U;
-        for (int i6 = 0; i6 < this.f29839H.size(); i6++) {
-            this.f29839H.get(i6).onSlide(v, f3);
+        j1(z10);
+    }
+
+    public void T0(int i10) {
+        this.f36004B = i10;
+    }
+
+    public void U0(int i10) {
+        this.f36012F = i10;
+    }
+
+    public void V0(boolean z10) {
+        this.f36048l0 = z10;
+    }
+
+    public void W0(int i10) {
+        if (i10 == 1 || i10 == 2) {
+            StringBuilder sb2 = new StringBuilder();
+            sb2.append("STATE_");
+            sb2.append(i10 == 1 ? "DRAGGING" : "SETTLING");
+            sb2.append(" should not be set externally.");
+            throw new IllegalArgumentException(sb2.toString());
+        }
+        if (!this.f36047k0 && i10 == 5) {
+            Log.w("BottomSheetBehavior", "Cannot set state: " + i10);
+            return;
+        }
+        int i11 = (i10 == 6 && this.f36006C && v0(i10) <= this.f36042f0) ? 3 : i10;
+        WeakReference<V> weakReference = this.f36060x0;
+        if (weakReference == null || weakReference.get() == null) {
+            X0(i10);
+        } else {
+            V v10 = this.f36060x0.get();
+            I0(v10, new a(v10, i11));
         }
     }
 
-    /* renamed from: S */
-    View m23991S(View view) {
-        if (C0311u.m2103P(view)) {
-            return view;
+    void X0(int i10) {
+        V v10;
+        if (this.f36050n0 == i10) {
+            return;
         }
-        if (!(view instanceof ViewGroup)) {
+        this.f36050n0 = i10;
+        if (i10 == 4 || i10 == 3 || i10 == 6 || (this.f36047k0 && i10 == 5)) {
+            this.f36051o0 = i10;
+        }
+        WeakReference<V> weakReference = this.f36060x0;
+        if (weakReference == null || (v10 = weakReference.get()) == null) {
+            return;
+        }
+        if (i10 == 3) {
+            i1(true);
+        } else if (i10 == 6 || i10 == 5 || i10 == 4) {
+            i1(false);
+        }
+        h1(i10, true);
+        for (int i11 = 0; i11 < this.f36003A0.size(); i11++) {
+            this.f36003A0.get(i11).c(v10, i10);
+        }
+        f1();
+    }
+
+    public boolean Z0(long j10, float f10) {
+        return false;
+    }
+
+    @Override // R7.b
+    public void a(C2998b c2998b) {
+        R7.f fVar = this.f36007C0;
+        if (fVar == null) {
+            return;
+        }
+        fVar.l(c2998b);
+    }
+
+    @Override // R7.b
+    public void b() {
+        R7.f fVar = this.f36007C0;
+        if (fVar == null) {
+            return;
+        }
+        C2998b c2998bC = fVar.c();
+        if (c2998bC == null || Build.VERSION.SDK_INT < 34) {
+            W0(this.f36047k0 ? 5 : 4);
+        } else if (this.f36047k0) {
+            this.f36007C0.h(c2998bC, new b());
+        } else {
+            this.f36007C0.i(c2998bC, null);
+            W0(4);
+        }
+    }
+
+    boolean b1(View view, float f10) {
+        if (this.f36048l0) {
+            return true;
+        }
+        if (B0() && view.getTop() >= this.f36045i0) {
+            return Math.abs((((float) view.getTop()) + (f10 * this.f36056t0)) - ((float) this.f36045i0)) / ((float) h0()) > 0.5f;
+        }
+        return false;
+    }
+
+    @Override // R7.b
+    public void c(C2998b c2998b) {
+        R7.f fVar = this.f36007C0;
+        if (fVar == null) {
+            return;
+        }
+        fVar.j(c2998b);
+    }
+
+    public void c0(g gVar) {
+        if (this.f36003A0.contains(gVar)) {
+            return;
+        }
+        this.f36003A0.add(gVar);
+    }
+
+    public boolean c1() {
+        return false;
+    }
+
+    @Override // R7.b
+    public void d() {
+        R7.f fVar = this.f36007C0;
+        if (fVar == null) {
+            return;
+        }
+        fVar.f();
+    }
+
+    public boolean d1() {
+        return true;
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public void k(CoordinatorLayout.f fVar) {
+        super.k(fVar);
+        this.f36060x0 = null;
+        this.f36052p0 = null;
+        this.f36007C0 = null;
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public void n() {
+        super.n();
+        this.f36060x0 = null;
+        this.f36052p0 = null;
+        this.f36007C0 = null;
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public boolean o(CoordinatorLayout coordinatorLayout, V v10, MotionEvent motionEvent) {
+        int i10;
+        z1.d dVar;
+        if (!v10.isShown() || !this.f36049m0) {
+            this.f36053q0 = true;
+            return false;
+        }
+        int actionMasked = motionEvent.getActionMasked();
+        if (actionMasked == 0) {
+            G0();
+        }
+        if (this.f36005B0 == null) {
+            this.f36005B0 = VelocityTracker.obtain();
+        }
+        this.f36005B0.addMovement(motionEvent);
+        if (actionMasked == 0) {
+            int x10 = (int) motionEvent.getX();
+            this.f36011E0 = (int) motionEvent.getY();
+            if (this.f36050n0 != 2) {
+                WeakReference<View> weakReference = this.f36062z0;
+                View view = weakReference != null ? weakReference.get() : null;
+                if (view != null && coordinatorLayout.B(view, x10, this.f36011E0)) {
+                    this.f36009D0 = motionEvent.getPointerId(motionEvent.getActionIndex());
+                    this.f36013F0 = true;
+                }
+            }
+            this.f36053q0 = this.f36009D0 == -1 && !coordinatorLayout.B(v10, x10, this.f36011E0);
+        } else if (actionMasked == 1 || actionMasked == 3) {
+            this.f36013F0 = false;
+            this.f36009D0 = -1;
+            if (this.f36053q0) {
+                this.f36053q0 = false;
+                return false;
+            }
+        }
+        if (!this.f36053q0 && (dVar = this.f36052p0) != null && dVar.H(motionEvent)) {
+            return true;
+        }
+        WeakReference<View> weakReference2 = this.f36062z0;
+        View view2 = weakReference2 != null ? weakReference2.get() : null;
+        return (actionMasked != 2 || view2 == null || this.f36053q0 || this.f36050n0 == 1 || coordinatorLayout.B(view2, (int) motionEvent.getX(), (int) motionEvent.getY()) || this.f36052p0 == null || (i10 = this.f36011E0) == -1 || Math.abs(((float) i10) - motionEvent.getY()) <= ((float) this.f36052p0.v())) ? false : true;
+    }
+
+    void o0(int i10) {
+        V v10 = this.f36060x0.get();
+        if (v10 == null || this.f36003A0.isEmpty()) {
+            return;
+        }
+        float fI0 = i0(i10);
+        for (int i11 = 0; i11 < this.f36003A0.size(); i11++) {
+            this.f36003A0.get(i11).b(v10, fI0);
+        }
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public boolean p(CoordinatorLayout coordinatorLayout, V v10, int i10) {
+        if (X.w(coordinatorLayout) && !X.w(v10)) {
+            v10.setFitsSystemWindows(true);
+        }
+        if (this.f36060x0 == null) {
+            this.f36018I = coordinatorLayout.getResources().getDimensionPixelSize(C7.e.f2393h);
+            Y0(v10);
+            X.J0(v10, new com.google.android.material.bottomsheet.c(v10));
+            this.f36060x0 = new WeakReference<>(v10);
+            this.f36007C0 = new R7.f(v10);
+            X7.g gVar = this.f36021K;
+            if (gVar != null) {
+                X.r0(v10, gVar);
+                X7.g gVar2 = this.f36021K;
+                float fU = this.f36046j0;
+                if (fU == -1.0f) {
+                    fU = X.u(v10);
+                }
+                gVar2.a0(fU);
+            } else {
+                ColorStateList colorStateList = this.f36022L;
+                if (colorStateList != null) {
+                    X.s0(v10, colorStateList);
+                }
+            }
+            f1();
+            if (X.x(v10) == 0) {
+                X.x0(v10, 1);
+            }
+        }
+        if (this.f36052p0 == null) {
+            this.f36052p0 = z1.d.n(coordinatorLayout, this.f36019I0);
+        }
+        int top = v10.getTop();
+        coordinatorLayout.I(v10, i10);
+        this.f36058v0 = coordinatorLayout.getWidth();
+        this.f36059w0 = coordinatorLayout.getHeight();
+        int height = v10.getHeight();
+        this.f36057u0 = height;
+        int iMin = this.f36059w0;
+        int i11 = iMin - height;
+        int i12 = this.f36035Y;
+        if (i11 < i12) {
+            if (this.f36030T) {
+                int i13 = this.f36024N;
+                if (i13 != -1) {
+                    iMin = Math.min(iMin, i13);
+                }
+                this.f36057u0 = iMin;
+            } else {
+                int iMin2 = iMin - i12;
+                int i14 = this.f36024N;
+                if (i14 != -1) {
+                    iMin2 = Math.min(iMin2, i14);
+                }
+                this.f36057u0 = iMin2;
+            }
+        }
+        this.f36042f0 = Math.max(0, this.f36059w0 - this.f36057u0);
+        f0();
+        d0();
+        int i15 = this.f36050n0;
+        if (i15 == 3) {
+            X.Y(v10, s0());
+        } else if (i15 == 6) {
+            X.Y(v10, this.f36043g0);
+        } else if (this.f36047k0 && i15 == 5) {
+            X.Y(v10, this.f36059w0);
+        } else if (i15 == 4) {
+            X.Y(v10, this.f36045i0);
+        } else if (i15 == 1 || i15 == 2) {
+            X.Y(v10, top - v10.getTop());
+        }
+        h1(this.f36050n0, false);
+        this.f36062z0 = new WeakReference<>(p0(v10));
+        for (int i16 = 0; i16 < this.f36003A0.size(); i16++) {
+            this.f36003A0.get(i16).a(v10);
+        }
+        return true;
+    }
+
+    View p0(View view) {
+        if (view.getVisibility() != 0) {
             return null;
         }
-        ViewGroup viewGroup = (ViewGroup) view;
-        int childCount = viewGroup.getChildCount();
-        for (int i2 = 0; i2 < childCount; i2++) {
-            View viewM23991S = m23991S(viewGroup.getChildAt(i2));
-            if (viewM23991S != null) {
-                return viewM23991S;
+        if (X.S(view)) {
+            return view;
+        }
+        if (view instanceof ViewGroup) {
+            ViewGroup viewGroup = (ViewGroup) view;
+            int childCount = viewGroup.getChildCount();
+            for (int i10 = 0; i10 < childCount; i10++) {
+                View viewP0 = p0(viewGroup.getChildAt(i10));
+                if (viewP0 != null) {
+                    return viewP0;
+                }
             }
         }
         return null;
     }
 
-    /* renamed from: U */
-    public int m23992U() {
-        return this.f29847c ? this.f29861q : this.f29860p;
-    }
-
-    /* renamed from: V */
-    public int m23993V() {
-        return this.f29869y;
-    }
-
-    /* renamed from: X */
-    public boolean m23994X() {
-        return this.f29855k;
-    }
-
-    @Deprecated
-    /* renamed from: a0 */
-    public void m23995a0(AbstractC7968e abstractC7968e) {
-        Log.w("BottomSheetBehavior", "BottomSheetBehavior now supports multiple callbacks. `setBottomSheetCallback()` removes all existing callbacks, including ones set internally by library authors, which may result in unintended behavior. This may change in the future. Please use `addBottomSheetCallback()` and `removeBottomSheetCallback()` instead to set your own callbacks.");
-        this.f29839H.clear();
-        if (abstractC7968e != null) {
-            this.f29839H.add(abstractC7968e);
-        }
-    }
-
-    /* renamed from: b0 */
-    public void m23996b0(boolean z) {
-        this.f29868x = z;
-    }
-
-    /* renamed from: c0 */
-    public void m23997c0(int i2) {
-        if (i2 < 0) {
-            throw new IllegalArgumentException("offset must be greater than or equal to 0");
-        }
-        this.f29860p = i2;
-    }
-
-    /* renamed from: d0 */
-    public void m23998d0(boolean z) {
-        if (this.f29847c == z) {
-            return;
-        }
-        this.f29847c = z;
-        if (this.f29837F != null) {
-            m23974L();
-        }
-        m24007m0((this.f29847c && this.f29869y == 6) ? 3 : this.f29869y);
-        m23986s0();
-    }
-
-    /* renamed from: e0 */
-    public void m23999e0(boolean z) {
-        this.f29855k = z;
-    }
-
-    /* renamed from: f0 */
-    public void m24000f0(float f2) {
-        if (f2 <= 0.0f || f2 >= 1.0f) {
-            throw new IllegalArgumentException("ratio must be a float value between 0 and 1");
-        }
-        this.f29863s = f2;
-        if (this.f29837F != null) {
-            m23975M();
-        }
-    }
-
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: g */
-    public void mo1453g(CoordinatorLayout.C0229f c0229f) {
-        super.mo1453g(c0229f);
-        this.f29837F = null;
-        this.f29870z = null;
-    }
-
-    /* renamed from: g0 */
-    public void m24001g0(boolean z) {
-        if (this.f29866v != z) {
-            this.f29866v = z;
-            if (!z && this.f29869y == 5) {
-                m24006l0(4);
-            }
-            m23986s0();
-        }
-    }
-
-    /* renamed from: h0 */
-    public void m24002h0(int i2) {
-        m24003i0(i2, false);
-    }
-
-    /* JADX WARN: Removed duplicated region for block: B:12:0x0015  */
-    /* renamed from: i0 */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct code enable 'Show inconsistent code' option in preferences
-    */
-    public final void m24003i0(int r4, boolean r5) {
-        /*
-            r3 = this;
-            r0 = 1
-            r1 = 0
-            r2 = -1
-            if (r4 != r2) goto Lc
-            boolean r4 = r3.f29851g
-            if (r4 != 0) goto L15
-            r3.f29851g = r0
-            goto L1f
-        Lc:
-            boolean r2 = r3.f29851g
-            if (r2 != 0) goto L17
-            int r2 = r3.f29850f
-            if (r2 == r4) goto L15
-            goto L17
-        L15:
-            r0 = 0
-            goto L1f
-        L17:
-            r3.f29851g = r1
-            int r4 = java.lang.Math.max(r1, r4)
-            r3.f29850f = r4
-        L1f:
-            if (r0 == 0) goto L42
-            java.lang.ref.WeakReference<V extends android.view.View> r4 = r3.f29837F
-            if (r4 == 0) goto L42
-            r3.m23974L()
-            int r4 = r3.f29869y
-            r0 = 4
-            if (r4 != r0) goto L42
-            java.lang.ref.WeakReference<V extends android.view.View> r4 = r3.f29837F
-            java.lang.Object r4 = r4.get()
-            android.view.View r4 = (android.view.View) r4
-            if (r4 == 0) goto L42
-            if (r5 == 0) goto L3f
-            int r4 = r3.f29869y
-            r3.m23985p0(r4)
-            goto L42
-        L3f:
-            r4.requestLayout()
-        L42:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.google.android.material.bottomsheet.BottomSheetBehavior.m24003i0(int, boolean):void");
-    }
-
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: j */
-    public void mo1456j() {
-        super.mo1456j();
-        this.f29837F = null;
-        this.f29870z = null;
-    }
-
-    /* renamed from: j0 */
-    public void m24004j0(int i2) {
-        this.f29846b = i2;
-    }
-
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: k */
-    public boolean mo1457k(CoordinatorLayout coordinatorLayout, V v, MotionEvent motionEvent) {
-        C0966c c0966c;
-        if (!v.isShown() || !this.f29868x) {
-            this.f29832A = true;
-            return false;
-        }
-        int actionMasked = motionEvent.getActionMasked();
-        if (actionMasked == 0) {
-            m23982Y();
-        }
-        if (this.f29840I == null) {
-            this.f29840I = VelocityTracker.obtain();
-        }
-        this.f29840I.addMovement(motionEvent);
-        if (actionMasked == 0) {
-            int x = (int) motionEvent.getX();
-            this.f29842K = (int) motionEvent.getY();
-            if (this.f29869y != 2) {
-                WeakReference<View> weakReference = this.f29838G;
-                View view = weakReference != null ? weakReference.get() : null;
-                if (view != null && coordinatorLayout.m1419B(view, x, this.f29842K)) {
-                    this.f29841J = motionEvent.getPointerId(motionEvent.getActionIndex());
-                    this.f29843L = true;
-                }
-            }
-            this.f29832A = this.f29841J == -1 && !coordinatorLayout.m1419B(v, x, this.f29842K);
-        } else if (actionMasked == 1 || actionMasked == 3) {
-            this.f29843L = false;
-            this.f29841J = -1;
-            if (this.f29832A) {
-                this.f29832A = false;
-                return false;
-            }
-        }
-        if (!this.f29832A && (c0966c = this.f29870z) != null && c0966c.m6152G(motionEvent)) {
-            return true;
-        }
-        WeakReference<View> weakReference2 = this.f29838G;
-        View view2 = weakReference2 != null ? weakReference2.get() : null;
-        return (actionMasked != 2 || view2 == null || this.f29832A || this.f29869y == 1 || coordinatorLayout.m1419B(view2, (int) motionEvent.getX(), (int) motionEvent.getY()) || this.f29870z == null || Math.abs(((float) this.f29842K) - motionEvent.getY()) <= ((float) this.f29870z.m6159u())) ? false : true;
-    }
-
-    /* renamed from: k0 */
-    public void m24005k0(boolean z) {
-        this.f29867w = z;
-    }
-
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: l */
-    public boolean mo1458l(CoordinatorLayout coordinatorLayout, V v, int i2) {
-        C8900g c8900g;
-        if (C0311u.m2156v(coordinatorLayout) && !C0311u.m2156v(v)) {
-            v.setFitsSystemWindows(true);
-        }
-        if (this.f29837F == null) {
-            this.f29852h = coordinatorLayout.getResources().getDimensionPixelSize(C8910d.f33875j);
-            m23984n0(coordinatorLayout);
-            this.f29837F = new WeakReference<>(v);
-            if (this.f29853i && (c8900g = this.f29854j) != null) {
-                C0311u.m2139m0(v, c8900g);
-            }
-            C8900g c8900g2 = this.f29854j;
-            if (c8900g2 != null) {
-                float fM2152t = this.f29865u;
-                if (fM2152t == -1.0f) {
-                    fM2152t = C0311u.m2152t(v);
-                }
-                c8900g2.m28283W(fM2152t);
-                boolean z = this.f29869y == 3;
-                this.f29857m = z;
-                this.f29854j.m28285Y(z ? 0.0f : 1.0f);
-            }
-            m23986s0();
-            if (C0311u.m2158w(v) == 0) {
-                C0311u.m2153t0(v, 1);
-            }
-        }
-        if (this.f29870z == null) {
-            this.f29870z = C0966c.m6142m(coordinatorLayout, this.f29845N);
-        }
-        int top = v.getTop();
-        coordinatorLayout.m1422I(v, i2);
-        this.f29835D = coordinatorLayout.getWidth();
-        int height = coordinatorLayout.getHeight();
-        this.f29836E = height;
-        this.f29861q = Math.max(0, height - v.getHeight());
-        m23975M();
-        m23974L();
-        int i3 = this.f29869y;
-        if (i3 == 3) {
-            C0311u.m2108U(v, m23992U());
-        } else if (i3 == 6) {
-            C0311u.m2108U(v, this.f29862r);
-        } else if (this.f29866v && i3 == 5) {
-            C0311u.m2108U(v, this.f29836E);
-        } else if (i3 == 4) {
-            C0311u.m2108U(v, this.f29864t);
-        } else if (i3 == 1 || i3 == 2) {
-            C0311u.m2108U(v, top - v.getTop());
-        }
-        this.f29838G = new WeakReference<>(m23991S(v));
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public boolean q(CoordinatorLayout coordinatorLayout, V v10, int i10, int i11, int i12, int i13) {
+        ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) v10.getLayoutParams();
+        v10.measure(r0(i10, coordinatorLayout.getPaddingLeft() + coordinatorLayout.getPaddingRight() + marginLayoutParams.leftMargin + marginLayoutParams.rightMargin + i11, this.f36023M, marginLayoutParams.width), r0(i12, coordinatorLayout.getPaddingTop() + coordinatorLayout.getPaddingBottom() + marginLayoutParams.topMargin + marginLayoutParams.bottomMargin + i13, this.f36024N, marginLayoutParams.height));
         return true;
     }
 
-    /* renamed from: l0 */
-    public void m24006l0(int i2) {
-        if (i2 == this.f29869y) {
-            return;
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public boolean s(CoordinatorLayout coordinatorLayout, V v10, View view, float f10, float f11) {
+        WeakReference<View> weakReference;
+        if (D0() && (weakReference = this.f36062z0) != null && view == weakReference.get()) {
+            return this.f36050n0 != 3 || super.s(coordinatorLayout, v10, view, f10, f11);
         }
-        if (this.f29837F != null) {
-            m23985p0(i2);
-            return;
-        }
-        if (i2 == 4 || i2 == 3 || i2 == 6 || (this.f29866v && i2 == 5)) {
-            this.f29869y = i2;
-        }
+        return false;
     }
 
-    /* renamed from: m0 */
-    void m24007m0(int i2) {
-        V v;
-        if (this.f29869y == i2) {
-            return;
+    public int s0() {
+        if (this.f36006C) {
+            return this.f36042f0;
         }
-        this.f29869y = i2;
-        WeakReference<V> weakReference = this.f29837F;
-        if (weakReference == null || (v = weakReference.get()) == null) {
-            return;
-        }
-        if (i2 == 3) {
-            m23988u0(true);
-        } else if (i2 == 6 || i2 == 5 || i2 == 4) {
-            m23988u0(false);
-        }
-        m23987t0(i2);
-        for (int i3 = 0; i3 < this.f29839H.size(); i3++) {
-            this.f29839H.get(i3).onStateChanged(v, i2);
-        }
-        m23986s0();
+        return Math.max(this.f36041e0, this.f36030T ? 0 : this.f36035Y);
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: o */
-    public boolean mo1461o(CoordinatorLayout coordinatorLayout, V v, View view, float f2, float f3) {
-        WeakReference<View> weakReference = this.f29838G;
-        if (weakReference == null || view != weakReference.get()) {
-            return false;
-        }
-        return this.f29869y != 3 || super.mo1461o(coordinatorLayout, v, view, f2, f3);
+    X7.g t0() {
+        return this.f36021K;
     }
 
-    /* renamed from: o0 */
-    void m24008o0(View view, int i2) {
-        int iM23992U;
-        int i3;
-        if (i2 == 4) {
-            iM23992U = this.f29864t;
-        } else if (i2 == 6) {
-            int i4 = this.f29862r;
-            if (!this.f29847c || i4 > (i3 = this.f29861q)) {
-                iM23992U = i4;
-            } else {
-                iM23992U = i3;
-                i2 = 3;
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public void u(CoordinatorLayout coordinatorLayout, V v10, View view, int i10, int i11, int[] iArr, int i12) {
+        if (i12 == 1) {
+            return;
+        }
+        WeakReference<View> weakReference = this.f36062z0;
+        View view2 = weakReference != null ? weakReference.get() : null;
+        if (!D0() || view == view2) {
+            int top = v10.getTop();
+            int i13 = top - i11;
+            if (i11 > 0) {
+                if (i13 < s0()) {
+                    int iS0 = top - s0();
+                    iArr[1] = iS0;
+                    X.Y(v10, -iS0);
+                    X0(3);
+                } else {
+                    if (!this.f36049m0) {
+                        return;
+                    }
+                    iArr[1] = i11;
+                    X.Y(v10, -i11);
+                    X0(1);
+                }
+            } else if (i11 < 0 && !view.canScrollVertically(-1)) {
+                if (i13 > this.f36045i0 && !j0()) {
+                    int i14 = top - this.f36045i0;
+                    iArr[1] = i14;
+                    X.Y(v10, -i14);
+                    X0(4);
+                } else {
+                    if (!this.f36049m0) {
+                        return;
+                    }
+                    iArr[1] = i11;
+                    X.Y(v10, -i11);
+                    X0(1);
+                }
             }
-        } else if (i2 == 3) {
-            iM23992U = m23992U();
-        } else {
-            if (!this.f29866v || i2 != 5) {
-                throw new IllegalArgumentException("Illegal state argument: " + i2);
-            }
-            iM23992U = this.f29836E;
+            o0(v10.getTop());
+            this.f36054r0 = i11;
+            this.f36055s0 = true;
         }
-        m24010r0(view, i2, iM23992U, false);
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: q */
-    public void mo1463q(CoordinatorLayout coordinatorLayout, V v, View view, int i2, int i3, int[] iArr, int i4) {
-        if (i4 == 1) {
-            return;
-        }
-        WeakReference<View> weakReference = this.f29838G;
-        if (view != (weakReference != null ? weakReference.get() : null)) {
-            return;
-        }
-        int top = v.getTop();
-        int i5 = top - i3;
-        if (i3 > 0) {
-            if (i5 < m23992U()) {
-                iArr[1] = top - m23992U();
-                C0311u.m2108U(v, -iArr[1]);
-                m24007m0(3);
-            } else {
-                if (!this.f29868x) {
+    public int u0() {
+        return this.f36050n0;
+    }
+
+    public boolean z0() {
+        return this.f36026P;
+    }
+
+    private class i {
+
+        /* renamed from: a, reason: collision with root package name */
+        private int f36079a;
+
+        /* renamed from: b, reason: collision with root package name */
+        private boolean f36080b;
+
+        /* renamed from: c, reason: collision with root package name */
+        private final Runnable f36081c;
+
+        class a implements Runnable {
+            a() {
+            }
+
+            @Override // java.lang.Runnable
+            public void run() {
+                i.this.f36080b = false;
+                z1.d dVar = BottomSheetBehavior.this.f36052p0;
+                if (dVar != null && dVar.l(true)) {
+                    i iVar = i.this;
+                    iVar.c(iVar.f36079a);
                     return;
                 }
-                iArr[1] = i3;
-                C0311u.m2108U(v, -i3);
-                m24007m0(1);
-            }
-        } else if (i3 < 0 && !view.canScrollVertically(-1)) {
-            int i6 = this.f29864t;
-            if (i5 > i6 && !this.f29866v) {
-                iArr[1] = top - i6;
-                C0311u.m2108U(v, -iArr[1]);
-                m24007m0(4);
-            } else {
-                if (!this.f29868x) {
-                    return;
+                i iVar2 = i.this;
+                BottomSheetBehavior bottomSheetBehavior = BottomSheetBehavior.this;
+                if (bottomSheetBehavior.f36050n0 == 2) {
+                    bottomSheetBehavior.X0(iVar2.f36079a);
                 }
-                iArr[1] = i3;
-                C0311u.m2108U(v, -i3);
-                m24007m0(1);
             }
         }
-        m23990R(v.getTop());
-        this.f29833B = i3;
-        this.f29834C = true;
-    }
 
-    /* renamed from: q0 */
-    boolean m24009q0(View view, float f2) {
-        if (this.f29867w) {
-            return true;
+        private i() {
+            this.f36081c = new a();
         }
-        if (view.getTop() < this.f29864t) {
-            return false;
-        }
-        return Math.abs((((float) view.getTop()) + (f2 * 0.1f)) - ((float) this.f29864t)) / ((float) m23976N()) > 0.5f;
-    }
 
-    /* renamed from: r0 */
-    void m24010r0(View view, int i2, int i3, boolean z) {
-        if (!(z ? this.f29870z.m6151F(view.getLeft(), i3) : this.f29870z.m6153H(view, view.getLeft(), i3))) {
-            m24007m0(i2);
-            return;
+        void c(int i10) {
+            WeakReference<V> weakReference = BottomSheetBehavior.this.f36060x0;
+            if (weakReference == null || weakReference.get() == null) {
+                return;
+            }
+            this.f36079a = i10;
+            if (this.f36080b) {
+                return;
+            }
+            X.f0(BottomSheetBehavior.this.f36060x0.get(), this.f36081c);
+            this.f36080b = true;
         }
-        m24007m0(2);
-        m23987t0(i2);
-        if (this.f29858n == null) {
-            this.f29858n = new RunnableC7969f(view, i2);
-        }
-        if (((RunnableC7969f) this.f29858n).f29884g) {
-            this.f29858n.f29885h = i2;
-            return;
-        }
-        BottomSheetBehavior<V>.RunnableC7969f runnableC7969f = this.f29858n;
-        runnableC7969f.f29885h = i2;
-        C0311u.m2115a0(view, runnableC7969f);
-        ((RunnableC7969f) this.f29858n).f29884g = true;
-    }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: t */
-    public void mo1466t(CoordinatorLayout coordinatorLayout, V v, View view, int i2, int i3, int i4, int i5, int i6, int[] iArr) {
-    }
-
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: x */
-    public void mo1470x(CoordinatorLayout coordinatorLayout, V v, Parcelable parcelable) {
-        SavedState savedState = (SavedState) parcelable;
-        super.mo1470x(coordinatorLayout, v, savedState.m2342a());
-        m23983Z(savedState);
-        int i2 = savedState.f29871h;
-        if (i2 == 1 || i2 == 2) {
-            this.f29869y = 4;
-        } else {
-            this.f29869y = i2;
+        /* synthetic */ i(BottomSheetBehavior bottomSheetBehavior, a aVar) {
+            this();
         }
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: y */
-    public Parcelable mo1471y(CoordinatorLayout coordinatorLayout, V v) {
-        return new SavedState(super.mo1471y(coordinatorLayout, v), (BottomSheetBehavior<?>) this);
-    }
+    protected static class h extends AbstractC5121a {
+        public static final Parcelable.Creator<h> CREATOR = new a();
 
-    protected static class SavedState extends AbsSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new C7963a();
+        /* renamed from: D, reason: collision with root package name */
+        final int f36074D;
 
-        /* renamed from: h */
-        final int f29871h;
+        /* renamed from: E, reason: collision with root package name */
+        int f36075E;
 
-        /* renamed from: i */
-        int f29872i;
+        /* renamed from: F, reason: collision with root package name */
+        boolean f36076F;
 
-        /* renamed from: j */
-        boolean f29873j;
+        /* renamed from: G, reason: collision with root package name */
+        boolean f36077G;
 
-        /* renamed from: k */
-        boolean f29874k;
+        /* renamed from: H, reason: collision with root package name */
+        boolean f36078H;
 
-        /* renamed from: l */
-        boolean f29875l;
-
-        /* renamed from: com.google.android.material.bottomsheet.BottomSheetBehavior$SavedState$a */
-        static class C7963a implements Parcelable.ClassLoaderCreator<SavedState> {
-            C7963a() {
+        class a implements Parcelable.ClassLoaderCreator<h> {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
             /* renamed from: a, reason: merged with bridge method [inline-methods] */
-            public SavedState createFromParcel(Parcel parcel) {
-                return new SavedState(parcel, (ClassLoader) null);
+            public h createFromParcel(Parcel parcel) {
+                return new h(parcel, (ClassLoader) null);
             }
 
             @Override // android.os.Parcelable.ClassLoaderCreator
             /* renamed from: b, reason: merged with bridge method [inline-methods] */
-            public SavedState createFromParcel(Parcel parcel, ClassLoader classLoader) {
-                return new SavedState(parcel, classLoader);
+            public h createFromParcel(Parcel parcel, ClassLoader classLoader) {
+                return new h(parcel, classLoader);
             }
 
             @Override // android.os.Parcelable.Creator
             /* renamed from: c, reason: merged with bridge method [inline-methods] */
-            public SavedState[] newArray(int i2) {
-                return new SavedState[i2];
+            public h[] newArray(int i10) {
+                return new h[i10];
             }
         }
 
-        public SavedState(Parcel parcel, ClassLoader classLoader) {
+        public h(Parcel parcel, ClassLoader classLoader) {
             super(parcel, classLoader);
-            this.f29871h = parcel.readInt();
-            this.f29872i = parcel.readInt();
-            this.f29873j = parcel.readInt() == 1;
-            this.f29874k = parcel.readInt() == 1;
-            this.f29875l = parcel.readInt() == 1;
+            this.f36074D = parcel.readInt();
+            this.f36075E = parcel.readInt();
+            this.f36076F = parcel.readInt() == 1;
+            this.f36077G = parcel.readInt() == 1;
+            this.f36078H = parcel.readInt() == 1;
         }
 
-        @Override // androidx.customview.view.AbsSavedState, android.os.Parcelable
-        public void writeToParcel(Parcel parcel, int i2) {
-            super.writeToParcel(parcel, i2);
-            parcel.writeInt(this.f29871h);
-            parcel.writeInt(this.f29872i);
-            parcel.writeInt(this.f29873j ? 1 : 0);
-            parcel.writeInt(this.f29874k ? 1 : 0);
-            parcel.writeInt(this.f29875l ? 1 : 0);
+        @Override // y1.AbstractC5121a, android.os.Parcelable
+        public void writeToParcel(Parcel parcel, int i10) {
+            super.writeToParcel(parcel, i10);
+            parcel.writeInt(this.f36074D);
+            parcel.writeInt(this.f36075E);
+            parcel.writeInt(this.f36076F ? 1 : 0);
+            parcel.writeInt(this.f36077G ? 1 : 0);
+            parcel.writeInt(this.f36078H ? 1 : 0);
         }
 
-        public SavedState(Parcelable parcelable, BottomSheetBehavior<?> bottomSheetBehavior) {
+        public h(Parcelable parcelable, BottomSheetBehavior<?> bottomSheetBehavior) {
             super(parcelable);
-            this.f29871h = bottomSheetBehavior.f29869y;
-            this.f29872i = ((BottomSheetBehavior) bottomSheetBehavior).f29850f;
-            this.f29873j = ((BottomSheetBehavior) bottomSheetBehavior).f29847c;
-            this.f29874k = bottomSheetBehavior.f29866v;
-            this.f29875l = ((BottomSheetBehavior) bottomSheetBehavior).f29867w;
+            this.f36074D = bottomSheetBehavior.f36050n0;
+            this.f36075E = ((BottomSheetBehavior) bottomSheetBehavior).f36014G;
+            this.f36076F = ((BottomSheetBehavior) bottomSheetBehavior).f36006C;
+            this.f36077G = bottomSheetBehavior.f36047k0;
+            this.f36078H = ((BottomSheetBehavior) bottomSheetBehavior).f36048l0;
         }
     }
 
     public BottomSheetBehavior(Context context, AttributeSet attributeSet) {
-        int i2;
+        int i10;
         super(context, attributeSet);
-        this.f29846b = 0;
-        this.f29847c = true;
-        this.f29848d = false;
-        this.f29858n = null;
-        this.f29863s = 0.5f;
-        this.f29865u = -1.0f;
-        this.f29868x = true;
-        this.f29869y = 4;
-        this.f29839H = new ArrayList<>();
-        this.f29845N = new C7966c();
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C8918l.f34119R);
-        this.f29853i = typedArrayObtainStyledAttributes.hasValue(C8918l.f34207d0);
-        int i3 = C8918l.f34133T;
-        boolean zHasValue = typedArrayObtainStyledAttributes.hasValue(i3);
-        if (zHasValue) {
-            m23978P(context, attributeSet, zHasValue, C8947c.m28499a(context, typedArrayObtainStyledAttributes, i3));
+        this.f36004B = 0;
+        this.f36006C = true;
+        this.f36008D = false;
+        this.f36023M = -1;
+        this.f36024N = -1;
+        this.f36039c0 = new i(this, null);
+        this.f36044h0 = 0.5f;
+        this.f36046j0 = -1.0f;
+        this.f36049m0 = true;
+        this.f36050n0 = 4;
+        this.f36051o0 = 4;
+        this.f36056t0 = 0.1f;
+        this.f36003A0 = new ArrayList<>();
+        this.f36011E0 = -1;
+        this.f36017H0 = new SparseIntArray();
+        this.f36019I0 = new e();
+        this.f36020J = context.getResources().getDimensionPixelSize(C7.e.f2412q0);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, m.f3092w0);
+        int i11 = m.f2591A0;
+        if (typedArrayObtainStyledAttributes.hasValue(i11)) {
+            this.f36022L = U7.c.a(context, typedArrayObtainStyledAttributes, i11);
+        }
+        if (typedArrayObtainStyledAttributes.hasValue(m.f2771S0)) {
+            this.f36037a0 = k.e(context, attributeSet, C7.c.f2313f, f36002J0).m();
+        }
+        m0(context);
+        n0();
+        this.f36046j0 = typedArrayObtainStyledAttributes.getDimension(m.f3122z0, -1.0f);
+        int i12 = m.f3102x0;
+        if (typedArrayObtainStyledAttributes.hasValue(i12)) {
+            Q0(typedArrayObtainStyledAttributes.getDimensionPixelSize(i12, -1));
+        }
+        int i13 = m.f3112y0;
+        if (typedArrayObtainStyledAttributes.hasValue(i13)) {
+            P0(typedArrayObtainStyledAttributes.getDimensionPixelSize(i13, -1));
+        }
+        int i14 = m.f2651G0;
+        TypedValue typedValuePeekValue = typedArrayObtainStyledAttributes.peekValue(i14);
+        if (typedValuePeekValue != null && (i10 = typedValuePeekValue.data) == -1) {
+            R0(i10);
         } else {
-            m23977O(context, attributeSet, zHasValue);
+            R0(typedArrayObtainStyledAttributes.getDimensionPixelSize(i14, -1));
         }
-        m23979Q();
-        if (Build.VERSION.SDK_INT >= 21) {
-            this.f29865u = typedArrayObtainStyledAttributes.getDimension(C8918l.f34126S, -1.0f);
-        }
-        int i4 = C8918l.f34175Z;
-        TypedValue typedValuePeekValue = typedArrayObtainStyledAttributes.peekValue(i4);
-        if (typedValuePeekValue != null && (i2 = typedValuePeekValue.data) == -1) {
-            m24002h0(i2);
-        } else {
-            m24002h0(typedArrayObtainStyledAttributes.getDimensionPixelSize(i4, -1));
-        }
-        m24001g0(typedArrayObtainStyledAttributes.getBoolean(C8918l.f34168Y, false));
-        m23999e0(typedArrayObtainStyledAttributes.getBoolean(C8918l.f34199c0, false));
-        m23998d0(typedArrayObtainStyledAttributes.getBoolean(C8918l.f34154W, true));
-        m24005k0(typedArrayObtainStyledAttributes.getBoolean(C8918l.f34191b0, false));
-        m23996b0(typedArrayObtainStyledAttributes.getBoolean(C8918l.f34140U, true));
-        m24004j0(typedArrayObtainStyledAttributes.getInt(C8918l.f34183a0, 0));
-        m24000f0(typedArrayObtainStyledAttributes.getFloat(C8918l.f34161X, 0.5f));
-        int i5 = C8918l.f34147V;
-        TypedValue typedValuePeekValue2 = typedArrayObtainStyledAttributes.peekValue(i5);
+        O0(typedArrayObtainStyledAttributes.getBoolean(m.f2641F0, false));
+        M0(typedArrayObtainStyledAttributes.getBoolean(m.f2691K0, false));
+        L0(typedArrayObtainStyledAttributes.getBoolean(m.f2621D0, true));
+        V0(typedArrayObtainStyledAttributes.getBoolean(m.f2681J0, false));
+        J0(typedArrayObtainStyledAttributes.getBoolean(m.f2601B0, true));
+        T0(typedArrayObtainStyledAttributes.getInt(m.f2661H0, 0));
+        N0(typedArrayObtainStyledAttributes.getFloat(m.f2631E0, 0.5f));
+        int i15 = m.f2611C0;
+        TypedValue typedValuePeekValue2 = typedArrayObtainStyledAttributes.peekValue(i15);
         if (typedValuePeekValue2 != null && typedValuePeekValue2.type == 16) {
-            m23997c0(typedValuePeekValue2.data);
+            K0(typedValuePeekValue2.data);
         } else {
-            m23997c0(typedArrayObtainStyledAttributes.getDimensionPixelOffset(i5, 0));
+            K0(typedArrayObtainStyledAttributes.getDimensionPixelOffset(i15, 0));
         }
+        U0(typedArrayObtainStyledAttributes.getInt(m.f2671I0, Temperature.MAX_AMBIENT_SECOND_GEN_PROBE));
+        this.f36027Q = typedArrayObtainStyledAttributes.getBoolean(m.f2731O0, false);
+        this.f36028R = typedArrayObtainStyledAttributes.getBoolean(m.f2741P0, false);
+        this.f36029S = typedArrayObtainStyledAttributes.getBoolean(m.f2751Q0, false);
+        this.f36030T = typedArrayObtainStyledAttributes.getBoolean(m.f2761R0, true);
+        this.f36031U = typedArrayObtainStyledAttributes.getBoolean(m.f2701L0, false);
+        this.f36032V = typedArrayObtainStyledAttributes.getBoolean(m.f2711M0, false);
+        this.f36033W = typedArrayObtainStyledAttributes.getBoolean(m.f2721N0, false);
+        this.f36036Z = typedArrayObtainStyledAttributes.getBoolean(m.f2781T0, true);
         typedArrayObtainStyledAttributes.recycle();
-        this.f29849e = ViewConfiguration.get(context).getScaledMaximumFlingVelocity();
+        this.f36010E = ViewConfiguration.get(context).getScaledMaximumFlingVelocity();
+    }
+
+    public static abstract class g {
+        public abstract void b(View view, float f10);
+
+        public abstract void c(View view, int i10);
+
+        void a(View view) {
+        }
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public void x(CoordinatorLayout coordinatorLayout, V v10, View view, int i10, int i11, int i12, int i13, int i14, int[] iArr) {
     }
 }

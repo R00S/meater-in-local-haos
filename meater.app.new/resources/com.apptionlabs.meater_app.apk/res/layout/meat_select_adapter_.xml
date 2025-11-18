@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/meat_list_layout"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.apptionlabs.meater_app.views.RoundCircleImage
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/rounded"
+        android:layout_width="@dimen/meat_select_icon_size"
+        android:layout_height="@dimen/meat_select_icon_size"/>
+    <TextView
+        android:textSize="15dp"
+        android:textColor="@color/black_color"
+        android:layout_gravity="center"
+        android:id="@+id/name"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="92dp"
+        android:text="@string/beef"
+        android:singleLine="true"
+        android:fontFamily="@font/roboto_regular"/>
+</LinearLayout>

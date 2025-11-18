@@ -2,411 +2,524 @@ package com.google.android.gms.measurement.internal;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.RemoteException;
-import com.google.android.gms.common.internal.Preconditions;
 import com.google.android.gms.common.util.DynamiteApi;
-import com.google.android.gms.common.util.VisibleForTesting;
-import com.google.android.gms.dynamic.IObjectWrapper;
-import com.google.android.gms.dynamic.ObjectWrapper;
-import com.google.android.gms.internal.measurement.zzl;
-import com.google.android.gms.internal.measurement.zzn;
-import com.google.android.gms.internal.measurement.zzs;
-import com.google.android.gms.internal.measurement.zzt;
+import com.google.android.gms.internal.measurement.C2456d1;
+import com.google.android.gms.internal.measurement.C2481g1;
+import com.google.android.gms.internal.measurement.InterfaceC2429a1;
+import com.google.android.gms.internal.measurement.InterfaceC2438b1;
+import com.google.android.gms.measurement.internal.AppMeasurementDynamiteService;
+import g7.C3445p;
 import java.util.Map;
-import p024c.p041e.C0867a;
+import m7.InterfaceC3977a;
+import s.C4391a;
 
-/* compiled from: com.google.android.gms:play-services-measurement-sdk@@17.2.0 */
+/* compiled from: com.google.android.gms:play-services-measurement-sdk@@22.2.0 */
 @DynamiteApi
 /* loaded from: classes2.dex */
-public class AppMeasurementDynamiteService extends zzl {
+public class AppMeasurementDynamiteService extends com.google.android.gms.internal.measurement.S0 {
 
-    /* renamed from: f */
-    @VisibleForTesting
-    zzfx f28531f = null;
+    /* renamed from: B, reason: collision with root package name */
+    P2 f34744B = null;
 
-    /* renamed from: g */
-    private Map<Integer, zzha> f28532g = new C0867a();
+    /* renamed from: C, reason: collision with root package name */
+    private final Map<Integer, v7.K> f34745C = new C4391a();
 
-    /* compiled from: com.google.android.gms:play-services-measurement-sdk@@17.2.0 */
-    /* renamed from: com.google.android.gms.measurement.internal.AppMeasurementDynamiteService$a */
-    class C7648a implements zzgx {
+    /* compiled from: com.google.android.gms:play-services-measurement-sdk@@22.2.0 */
+    class a implements v7.I {
 
-        /* renamed from: a */
-        private zzs f28533a;
+        /* renamed from: a, reason: collision with root package name */
+        private InterfaceC2429a1 f34746a;
 
-        C7648a(zzs zzsVar) {
-            this.f28533a = zzsVar;
+        a(InterfaceC2429a1 interfaceC2429a1) {
+            this.f34746a = interfaceC2429a1;
         }
 
-        @Override // com.google.android.gms.measurement.internal.zzgx
-        /* renamed from: a */
-        public final void mo22695a(String str, String str2, Bundle bundle, long j2) {
+        @Override // v7.I
+        public final void a(String str, String str2, Bundle bundle, long j10) {
             try {
-                this.f28533a.mo22562q4(str, str2, bundle, j2);
-            } catch (RemoteException e2) {
-                AppMeasurementDynamiteService.this.f28531f.mo22836h().m23140K().m23148b("Event interceptor threw exception", e2);
+                this.f34746a.E0(str, str2, bundle, j10);
+            } catch (RemoteException e10) {
+                P2 p22 = AppMeasurementDynamiteService.this.f34744B;
+                if (p22 != null) {
+                    p22.k().M().b("Event interceptor threw exception", e10);
+                }
             }
         }
     }
 
-    /* compiled from: com.google.android.gms:play-services-measurement-sdk@@17.2.0 */
-    /* renamed from: com.google.android.gms.measurement.internal.AppMeasurementDynamiteService$b */
-    class C7649b implements zzha {
+    /* compiled from: com.google.android.gms:play-services-measurement-sdk@@22.2.0 */
+    class b implements v7.K {
 
-        /* renamed from: a */
-        private zzs f28535a;
+        /* renamed from: a, reason: collision with root package name */
+        private InterfaceC2429a1 f34748a;
 
-        C7649b(zzs zzsVar) {
-            this.f28535a = zzsVar;
+        b(InterfaceC2429a1 interfaceC2429a1) {
+            this.f34748a = interfaceC2429a1;
         }
 
-        @Override // com.google.android.gms.measurement.internal.zzha
-        /* renamed from: a */
-        public final void mo22696a(String str, String str2, Bundle bundle, long j2) {
+        @Override // v7.K
+        public final void a(String str, String str2, Bundle bundle, long j10) {
             try {
-                this.f28535a.mo22562q4(str, str2, bundle, j2);
-            } catch (RemoteException e2) {
-                AppMeasurementDynamiteService.this.f28531f.mo22836h().m23140K().m23148b("Event listener threw exception", e2);
+                this.f34748a.E0(str, str2, bundle, j10);
+            } catch (RemoteException e10) {
+                P2 p22 = AppMeasurementDynamiteService.this.f34744B;
+                if (p22 != null) {
+                    p22.k().M().b("Event listener threw exception", e10);
+                }
             }
         }
     }
 
-    /* renamed from: P */
-    private final void m22693P(zzn zznVar, String str) {
-        this.f28531f.m23217I().m23533P(zznVar, str);
+    public static /* synthetic */ void $r8$lambda$W3cgi1t5N0SU6fYxM9Fsh5qQfPc(AppMeasurementDynamiteService appMeasurementDynamiteService, com.google.android.gms.internal.measurement.V0 v02) {
+        try {
+            v02.M0();
+        } catch (RemoteException e10) {
+            ((P2) C3445p.k(appMeasurementDynamiteService.f34744B)).k().M().b("Failed to call IDynamiteUploadBatchesCallback", e10);
+        }
     }
 
-    /* renamed from: a */
-    private final void m22694a() {
-        if (this.f28531f == null) {
+    private final void g() {
+        if (this.f34744B == null) {
             throw new IllegalStateException("Attempting to perform action before initialize.");
         }
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void beginAdUnitExposure(String str, long j2) throws RemoteException {
-        m22694a();
-        this.f28531f.m23229U().m23078z(str, j2);
+    private final void k(com.google.android.gms.internal.measurement.U0 u02, String str) {
+        g();
+        this.f34744B.P().T(u02, str);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void clearConditionalUserProperty(String str, String str2, Bundle bundle) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.m23216H().m23305y0(str, str2, bundle);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void beginAdUnitExposure(String str, long j10) {
+        g();
+        this.f34744B.A().B(str, j10);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void endAdUnitExposure(String str, long j2) throws RemoteException {
-        m22694a();
-        this.f28531f.m23229U().m23076D(str, j2);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void clearConditionalUserProperty(String str, String str2, Bundle bundle) {
+        g();
+        this.f34744B.J().l0(str, str2, bundle);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void generateEventId(zzn zznVar) throws RemoteException {
-        m22694a();
-        this.f28531f.m23217I().m23531N(zznVar, this.f28531f.m23217I().m23552w0());
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void clearMeasurementEnabled(long j10) {
+        g();
+        this.f34744B.J().e0(null);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void getAppInstanceId(zzn zznVar) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.mo22835g().m23201z(new RunnableC7791p5(this, zznVar));
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void endAdUnitExposure(String str, long j10) {
+        g();
+        this.f34744B.A().F(str, j10);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void getCachedAppInstanceId(zzn zznVar) throws RemoteException {
-        m22694a();
-        m22693P(zznVar, this.f28531f.m23216H().m23295g0());
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void generateEventId(com.google.android.gms.internal.measurement.U0 u02) {
+        g();
+        long jQ0 = this.f34744B.P().Q0();
+        g();
+        this.f34744B.P().R(u02, jQ0);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void getConditionalUserProperties(String str, String str2, zzn zznVar) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.mo22835g().m23201z(new RunnableC7747k6(this, zznVar, str, str2));
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void getAppInstanceId(com.google.android.gms.internal.measurement.U0 u02) {
+        g();
+        this.f34744B.o().E(new M2(this, u02));
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void getCurrentScreenClass(zzn zznVar) throws RemoteException {
-        m22694a();
-        m22693P(zznVar, this.f28531f.m23216H().m23298j0());
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void getCachedAppInstanceId(com.google.android.gms.internal.measurement.U0 u02) {
+        g();
+        k(u02, this.f34744B.J().A0());
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void getCurrentScreenName(zzn zznVar) throws RemoteException {
-        m22694a();
-        m22693P(zznVar, this.f28531f.m23216H().m23297i0());
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void getConditionalUserProperties(String str, String str2, com.google.android.gms.internal.measurement.U0 u02) {
+        g();
+        this.f34744B.o().E(new RunnableC2803n4(this, u02, str, str2));
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void getGmpAppId(zzn zznVar) throws RemoteException {
-        m22694a();
-        m22693P(zznVar, this.f28531f.m23216H().m23299k0());
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void getCurrentScreenClass(com.google.android.gms.internal.measurement.U0 u02) {
+        g();
+        k(u02, this.f34744B.J().B0());
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void getMaxUserProperties(String str, zzn zznVar) throws RemoteException {
-        m22694a();
-        this.f28531f.m23216H();
-        Preconditions.m14368g(str);
-        this.f28531f.m23217I().m23530M(zznVar, 25);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void getCurrentScreenName(com.google.android.gms.internal.measurement.U0 u02) {
+        g();
+        k(u02, this.f34744B.J().C0());
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void getTestFlag(zzn zznVar, int i2) throws RemoteException {
-        m22694a();
-        if (i2 == 0) {
-            this.f28531f.m23217I().m23533P(zznVar, this.f28531f.m23216H().m23291c0());
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void getGmpAppId(com.google.android.gms.internal.measurement.U0 u02) {
+        g();
+        k(u02, this.f34744B.J().D0());
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void getMaxUserProperties(String str, com.google.android.gms.internal.measurement.U0 u02) {
+        g();
+        this.f34744B.J();
+        C2843t3.G(str);
+        g();
+        this.f34744B.P().Q(u02, 25);
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void getSessionId(com.google.android.gms.internal.measurement.U0 u02) {
+        g();
+        this.f34744B.J().P(u02);
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void getTestFlag(com.google.android.gms.internal.measurement.U0 u02, int i10) {
+        g();
+        if (i10 == 0) {
+            this.f34744B.P().T(u02, this.f34744B.J().E0());
             return;
         }
-        if (i2 == 1) {
-            this.f28531f.m23217I().m23531N(zznVar, this.f28531f.m23216H().m23292d0().longValue());
+        if (i10 == 1) {
+            this.f34744B.P().R(u02, this.f34744B.J().z0().longValue());
             return;
         }
-        if (i2 != 2) {
-            if (i2 == 3) {
-                this.f28531f.m23217I().m23530M(zznVar, this.f28531f.m23216H().m23293e0().intValue());
+        if (i10 != 2) {
+            if (i10 == 3) {
+                this.f34744B.P().Q(u02, this.f34744B.J().y0().intValue());
                 return;
             } else {
-                if (i2 != 4) {
+                if (i10 != 4) {
                     return;
                 }
-                this.f28531f.m23217I().m23535R(zznVar, this.f28531f.m23216H().m23290b0().booleanValue());
+                this.f34744B.P().V(u02, this.f34744B.J().w0().booleanValue());
                 return;
             }
         }
-        zzkk zzkkVarM23217I = this.f28531f.m23217I();
-        double dDoubleValue = this.f28531f.m23216H().m23294f0().doubleValue();
+        Q5 q5P = this.f34744B.P();
+        double dDoubleValue = this.f34744B.J().x0().doubleValue();
         Bundle bundle = new Bundle();
         bundle.putDouble("r", dDoubleValue);
         try {
-            zznVar.mo22444J(bundle);
-        } catch (RemoteException e2) {
-            zzkkVarM23217I.f28874a.mo22836h().m23140K().m23148b("Error returning double value to wrapper", e2);
+            u02.h(bundle);
+        } catch (RemoteException e10) {
+            q5P.f35457a.k().M().b("Error returning double value to wrapper", e10);
         }
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void getUserProperties(String str, String str2, boolean z, zzn zznVar) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.mo22835g().m23201z(new RunnableC7712g7(this, zznVar, str, str2, z));
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void getUserProperties(String str, String str2, boolean z10, com.google.android.gms.internal.measurement.U0 u02) {
+        g();
+        this.f34744B.o().E(new RunnableC2871x3(this, u02, str, str2, z10));
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void initForTests(Map map) throws RemoteException {
-        m22694a();
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void initForTests(Map map) {
+        g();
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void initialize(IObjectWrapper iObjectWrapper, com.google.android.gms.internal.measurement.zzv zzvVar, long j2) throws RemoteException {
-        Context context = (Context) ObjectWrapper.m14709k0(iObjectWrapper);
-        zzfx zzfxVar = this.f28531f;
-        if (zzfxVar == null) {
-            this.f28531f = zzfx.m23203a(context, zzvVar);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void initialize(InterfaceC3977a interfaceC3977a, C2456d1 c2456d1, long j10) {
+        P2 p22 = this.f34744B;
+        if (p22 == null) {
+            this.f34744B = P2.c((Context) C3445p.k((Context) m7.b.k(interfaceC3977a)), c2456d1, Long.valueOf(j10));
         } else {
-            zzfxVar.mo22836h().m23140K().m23147a("Attempting to initialize multiple times");
+            p22.k().M().a("Attempting to initialize multiple times");
         }
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void isDataCollectionEnabled(zzn zznVar) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.mo22835g().m23201z(new RunnableC7793p7(this, zznVar));
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void isDataCollectionEnabled(com.google.android.gms.internal.measurement.U0 u02) {
+        g();
+        this.f34744B.o().E(new RunnableC2748f5(this, u02));
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void logEvent(String str, String str2, Bundle bundle, boolean z, boolean z2, long j2) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.m23216H().m23283U(str, str2, bundle, z, z2, j2);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void logEvent(String str, String str2, Bundle bundle, boolean z10, boolean z11, long j10) {
+        g();
+        this.f34744B.J().n0(str, str2, bundle, z10, z11, j10);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void logEventAndBundle(String str, String str2, Bundle bundle, zzn zznVar, long j2) throws IllegalStateException, RemoteException {
-        m22694a();
-        Preconditions.m14368g(str2);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void logEventAndBundle(String str, String str2, Bundle bundle, com.google.android.gms.internal.measurement.U0 u02, long j10) {
+        g();
+        C3445p.e(str2);
         (bundle != null ? new Bundle(bundle) : new Bundle()).putString("_o", "app");
-        this.f28531f.mo22835g().m23201z(new RunnableC7826t4(this, zznVar, new zzan(str2, new zzam(bundle), "app", j2), str));
+        this.f34744B.o().E(new R3(this, u02, new J(str2, new F(bundle), "app", j10), str));
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void logHealthData(int i2, String str, IObjectWrapper iObjectWrapper, IObjectWrapper iObjectWrapper2, IObjectWrapper iObjectWrapper3) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.mo22836h().m23135B(i2, true, false, str, iObjectWrapper == null ? null : ObjectWrapper.m14709k0(iObjectWrapper), iObjectWrapper2 == null ? null : ObjectWrapper.m14709k0(iObjectWrapper2), iObjectWrapper3 != null ? ObjectWrapper.m14709k0(iObjectWrapper3) : null);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void logHealthData(int i10, String str, InterfaceC3977a interfaceC3977a, InterfaceC3977a interfaceC3977a2, InterfaceC3977a interfaceC3977a3) {
+        g();
+        this.f34744B.k().A(i10, true, false, str, interfaceC3977a == null ? null : m7.b.k(interfaceC3977a), interfaceC3977a2 == null ? null : m7.b.k(interfaceC3977a2), interfaceC3977a3 != null ? m7.b.k(interfaceC3977a3) : null);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void onActivityCreated(IObjectWrapper iObjectWrapper, Bundle bundle, long j2) throws RemoteException {
-        m22694a();
-        C7755l5 c7755l5 = this.f28531f.m23216H().f29321c;
-        if (c7755l5 != null) {
-            this.f28531f.m23216H().m23289a0();
-            c7755l5.onActivityCreated((Activity) ObjectWrapper.m14709k0(iObjectWrapper), bundle);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void onActivityCreated(InterfaceC3977a interfaceC3977a, Bundle bundle, long j10) {
+        g();
+        onActivityCreatedByScionActivityInfo(C2481g1.f0((Activity) C3445p.k((Activity) m7.b.k(interfaceC3977a))), bundle, j10);
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void onActivityCreatedByScionActivityInfo(C2481g1 c2481g1, Bundle bundle, long j10) {
+        g();
+        v7.V vV0 = this.f34744B.J().v0();
+        if (vV0 != null) {
+            this.f34744B.J().J0();
+            vV0.d(c2481g1, bundle);
         }
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void onActivityDestroyed(IObjectWrapper iObjectWrapper, long j2) throws RemoteException {
-        m22694a();
-        C7755l5 c7755l5 = this.f28531f.m23216H().f29321c;
-        if (c7755l5 != null) {
-            this.f28531f.m23216H().m23289a0();
-            c7755l5.onActivityDestroyed((Activity) ObjectWrapper.m14709k0(iObjectWrapper));
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void onActivityDestroyed(InterfaceC3977a interfaceC3977a, long j10) {
+        g();
+        onActivityDestroyedByScionActivityInfo(C2481g1.f0((Activity) C3445p.k((Activity) m7.b.k(interfaceC3977a))), j10);
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void onActivityDestroyedByScionActivityInfo(C2481g1 c2481g1, long j10) {
+        g();
+        v7.V vV0 = this.f34744B.J().v0();
+        if (vV0 != null) {
+            this.f34744B.J().J0();
+            vV0.a(c2481g1);
         }
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void onActivityPaused(IObjectWrapper iObjectWrapper, long j2) throws RemoteException {
-        m22694a();
-        C7755l5 c7755l5 = this.f28531f.m23216H().f29321c;
-        if (c7755l5 != null) {
-            this.f28531f.m23216H().m23289a0();
-            c7755l5.onActivityPaused((Activity) ObjectWrapper.m14709k0(iObjectWrapper));
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void onActivityPaused(InterfaceC3977a interfaceC3977a, long j10) {
+        g();
+        onActivityPausedByScionActivityInfo(C2481g1.f0((Activity) C3445p.k((Activity) m7.b.k(interfaceC3977a))), j10);
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void onActivityPausedByScionActivityInfo(C2481g1 c2481g1, long j10) {
+        g();
+        v7.V vV0 = this.f34744B.J().v0();
+        if (vV0 != null) {
+            this.f34744B.J().J0();
+            vV0.c(c2481g1);
         }
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void onActivityResumed(IObjectWrapper iObjectWrapper, long j2) throws RemoteException {
-        m22694a();
-        C7755l5 c7755l5 = this.f28531f.m23216H().f29321c;
-        if (c7755l5 != null) {
-            this.f28531f.m23216H().m23289a0();
-            c7755l5.onActivityResumed((Activity) ObjectWrapper.m14709k0(iObjectWrapper));
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void onActivityResumed(InterfaceC3977a interfaceC3977a, long j10) {
+        g();
+        onActivityResumedByScionActivityInfo(C2481g1.f0((Activity) C3445p.k((Activity) m7.b.k(interfaceC3977a))), j10);
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void onActivityResumedByScionActivityInfo(C2481g1 c2481g1, long j10) {
+        g();
+        v7.V vV0 = this.f34744B.J().v0();
+        if (vV0 != null) {
+            this.f34744B.J().J0();
+            vV0.b(c2481g1);
         }
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void onActivitySaveInstanceState(IObjectWrapper iObjectWrapper, zzn zznVar, long j2) throws RemoteException {
-        m22694a();
-        C7755l5 c7755l5 = this.f28531f.m23216H().f29321c;
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void onActivitySaveInstanceState(InterfaceC3977a interfaceC3977a, com.google.android.gms.internal.measurement.U0 u02, long j10) {
+        g();
+        onActivitySaveInstanceStateByScionActivityInfo(C2481g1.f0((Activity) C3445p.k((Activity) m7.b.k(interfaceC3977a))), u02, j10);
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void onActivitySaveInstanceStateByScionActivityInfo(C2481g1 c2481g1, com.google.android.gms.internal.measurement.U0 u02, long j10) {
+        g();
+        v7.V vV0 = this.f34744B.J().v0();
         Bundle bundle = new Bundle();
-        if (c7755l5 != null) {
-            this.f28531f.m23216H().m23289a0();
-            c7755l5.onActivitySaveInstanceState((Activity) ObjectWrapper.m14709k0(iObjectWrapper), bundle);
+        if (vV0 != null) {
+            this.f34744B.J().J0();
+            vV0.e(c2481g1, bundle);
         }
         try {
-            zznVar.mo22444J(bundle);
-        } catch (RemoteException e2) {
-            this.f28531f.mo22836h().m23140K().m23148b("Error returning bundle value to wrapper", e2);
+            u02.h(bundle);
+        } catch (RemoteException e10) {
+            this.f34744B.k().M().b("Error returning bundle value to wrapper", e10);
         }
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void onActivityStarted(IObjectWrapper iObjectWrapper, long j2) throws RemoteException {
-        m22694a();
-        C7755l5 c7755l5 = this.f28531f.m23216H().f29321c;
-        if (c7755l5 != null) {
-            this.f28531f.m23216H().m23289a0();
-            c7755l5.onActivityStarted((Activity) ObjectWrapper.m14709k0(iObjectWrapper));
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void onActivityStarted(InterfaceC3977a interfaceC3977a, long j10) {
+        g();
+        onActivityStartedByScionActivityInfo(C2481g1.f0((Activity) C3445p.k((Activity) m7.b.k(interfaceC3977a))), j10);
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void onActivityStartedByScionActivityInfo(C2481g1 c2481g1, long j10) {
+        g();
+        if (this.f34744B.J().v0() != null) {
+            this.f34744B.J().J0();
         }
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void onActivityStopped(IObjectWrapper iObjectWrapper, long j2) throws RemoteException {
-        m22694a();
-        C7755l5 c7755l5 = this.f28531f.m23216H().f29321c;
-        if (c7755l5 != null) {
-            this.f28531f.m23216H().m23289a0();
-            c7755l5.onActivityStopped((Activity) ObjectWrapper.m14709k0(iObjectWrapper));
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void onActivityStopped(InterfaceC3977a interfaceC3977a, long j10) {
+        g();
+        onActivityStoppedByScionActivityInfo(C2481g1.f0((Activity) C3445p.k((Activity) m7.b.k(interfaceC3977a))), j10);
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void onActivityStoppedByScionActivityInfo(C2481g1 c2481g1, long j10) {
+        g();
+        if (this.f34744B.J().v0() != null) {
+            this.f34744B.J().J0();
         }
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void performAction(Bundle bundle, zzn zznVar, long j2) throws RemoteException {
-        m22694a();
-        zznVar.mo22444J(null);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void performAction(Bundle bundle, com.google.android.gms.internal.measurement.U0 u02, long j10) {
+        g();
+        u02.h(null);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void registerOnMeasurementEventListener(zzs zzsVar) throws RemoteException {
-        m22694a();
-        zzha c7649b = this.f28532g.get(Integer.valueOf(zzsVar.mo22561a()));
-        if (c7649b == null) {
-            c7649b = new C7649b(zzsVar);
-            this.f28532g.put(Integer.valueOf(zzsVar.mo22561a()), c7649b);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void registerOnMeasurementEventListener(InterfaceC2429a1 interfaceC2429a1) {
+        v7.K bVar;
+        g();
+        synchronized (this.f34745C) {
+            try {
+                bVar = this.f34745C.get(Integer.valueOf(interfaceC2429a1.a()));
+                if (bVar == null) {
+                    bVar = new b(interfaceC2429a1);
+                    this.f34745C.put(Integer.valueOf(interfaceC2429a1.a()), bVar);
+                }
+            } catch (Throwable th) {
+                throw th;
+            }
         }
-        this.f28531f.m23216H().m23277K(c7649b);
+        this.f34744B.J().s0(bVar);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void resetAnalyticsData(long j2) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.m23216H().m23306z0(j2);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void resetAnalyticsData(long j10) {
+        g();
+        this.f34744B.J().K(j10);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void setConditionalUserProperty(Bundle bundle, long j2) throws IllegalStateException, RemoteException {
-        m22694a();
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void retrieveAndUploadBatches(final com.google.android.gms.internal.measurement.V0 v02) {
+        g();
+        if (this.f34744B.B().K(null, K.f34932M0)) {
+            this.f34744B.J().g0(new Runnable() { // from class: v7.C
+                @Override // java.lang.Runnable
+                public final void run() {
+                    AppMeasurementDynamiteService.$r8$lambda$W3cgi1t5N0SU6fYxM9Fsh5qQfPc(this.f51496B, v02);
+                }
+            });
+        }
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setConditionalUserProperty(Bundle bundle, long j10) {
+        g();
         if (bundle == null) {
-            this.f28531f.mo22836h().m23137H().m23147a("Conditional user property must not be null");
+            this.f34744B.k().H().a("Conditional user property must not be null");
         } else {
-            this.f28531f.m23216H().m23275I(bundle, j2);
+            this.f34744B.J().O(bundle, j10);
         }
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void setCurrentScreen(IObjectWrapper iObjectWrapper, String str, String str2, long j2) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.m23225Q().m23336F((Activity) ObjectWrapper.m14709k0(iObjectWrapper), str, str2);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setConsent(Bundle bundle, long j10) {
+        g();
+        this.f34744B.J().U0(bundle, j10);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void setDataCollectionEnabled(boolean z) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.m23216H().m23304w0(z);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setConsentThirdParty(Bundle bundle, long j10) {
+        g();
+        this.f34744B.J().e1(bundle, j10);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void setEventInterceptor(zzs zzsVar) throws IllegalStateException, RemoteException {
-        m22694a();
-        zzhc zzhcVarM23216H = this.f28531f.m23216H();
-        C7648a c7648a = new C7648a(zzsVar);
-        zzhcVarM23216H.mo22790b();
-        zzhcVarM23216H.m22857x();
-        zzhcVarM23216H.mo22835g().m23201z(new RunnableC7656a5(zzhcVarM23216H, c7648a));
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setCurrentScreen(InterfaceC3977a interfaceC3977a, String str, String str2, long j10) {
+        g();
+        setCurrentScreenByScionActivityInfo(C2481g1.f0((Activity) C3445p.k((Activity) m7.b.k(interfaceC3977a))), str, str2, j10);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void setInstanceIdProvider(zzt zztVar) throws RemoteException {
-        m22694a();
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setCurrentScreenByScionActivityInfo(C2481g1 c2481g1, String str, String str2, long j10) {
+        g();
+        this.f34744B.M().I(c2481g1, str, str2);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void setMeasurementEnabled(boolean z, long j2) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.m23216H().m23288Z(z);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setDataCollectionEnabled(boolean z10) {
+        g();
+        this.f34744B.J().i1(z10);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void setMinimumSessionDuration(long j2) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.m23216H().m23273F(j2);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setDefaultEventParameters(Bundle bundle) {
+        g();
+        this.f34744B.J().T0(bundle);
     }
 
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void setSessionTimeoutDuration(long j2) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.m23216H().m23300o0(j2);
-    }
-
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void setUserId(String str, long j2) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.m23216H().m23286X(null, "_id", str, true, j2);
-    }
-
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void setUserProperty(String str, String str2, IObjectWrapper iObjectWrapper, boolean z, long j2) throws IllegalStateException, RemoteException {
-        m22694a();
-        this.f28531f.m23216H().m23286X(str, str2, ObjectWrapper.m14709k0(iObjectWrapper), z, j2);
-    }
-
-    @Override // com.google.android.gms.internal.measurement.zzm
-    public void unregisterOnMeasurementEventListener(zzs zzsVar) throws RemoteException {
-        m22694a();
-        zzha zzhaVarRemove = this.f28532g.remove(Integer.valueOf(zzsVar.mo22561a()));
-        if (zzhaVarRemove == null) {
-            zzhaVarRemove = new C7649b(zzsVar);
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setEventInterceptor(InterfaceC2429a1 interfaceC2429a1) {
+        g();
+        a aVar = new a(interfaceC2429a1);
+        if (this.f34744B.o().L()) {
+            this.f34744B.J().r0(aVar);
+        } else {
+            this.f34744B.o().E(new I4(this, aVar));
         }
-        this.f28531f.m23216H().m23302r0(zzhaVarRemove);
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setInstanceIdProvider(InterfaceC2438b1 interfaceC2438b1) {
+        g();
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setMeasurementEnabled(boolean z10, long j10) {
+        g();
+        this.f34744B.J().e0(Boolean.valueOf(z10));
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setMinimumSessionDuration(long j10) {
+        g();
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setSessionTimeoutDuration(long j10) {
+        g();
+        this.f34744B.J().j1(j10);
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setSgtmDebugInfo(Intent intent) {
+        g();
+        this.f34744B.J().L(intent);
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setUserId(String str, long j10) {
+        g();
+        this.f34744B.J().h0(str, j10);
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void setUserProperty(String str, String str2, InterfaceC3977a interfaceC3977a, boolean z10, long j10) throws SecurityException {
+        g();
+        this.f34744B.J().q0(str, str2, m7.b.k(interfaceC3977a), z10, j10);
+    }
+
+    @Override // com.google.android.gms.internal.measurement.P0
+    public void unregisterOnMeasurementEventListener(InterfaceC2429a1 interfaceC2429a1) {
+        v7.K kRemove;
+        g();
+        synchronized (this.f34745C) {
+            kRemove = this.f34745C.remove(Integer.valueOf(interfaceC2429a1.a()));
+        }
+        if (kRemove == null) {
+            kRemove = new b(interfaceC2429a1);
+        }
+        this.f34744B.J().b1(kRemove);
     }
 }

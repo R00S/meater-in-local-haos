@@ -5,16 +5,15 @@ import java.util.List;
 /* loaded from: classes3.dex */
 public class UninitializedMessageException extends RuntimeException {
 
-    /* renamed from: f */
-    private final List<String> f41254f;
+    /* renamed from: B, reason: collision with root package name */
+    private final List<String> f44017B;
 
-    public UninitializedMessageException(InterfaceC10756o interfaceC10756o) {
+    public UninitializedMessageException(o oVar) {
         super("Message was missing required fields.  (Lite runtime could not determine which fields were missing).");
-        this.f41254f = null;
+        this.f44017B = null;
     }
 
-    /* renamed from: a */
-    public InvalidProtocolBufferException m38254a() {
+    public InvalidProtocolBufferException a() {
         return new InvalidProtocolBufferException(getMessage());
     }
 }

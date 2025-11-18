@@ -2,150 +2,173 @@ package androidx.recyclerview.widget;
 
 import android.content.Context;
 import android.graphics.Rect;
+import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.SparseIntArray;
 import android.view.View;
 import android.view.ViewGroup;
-import androidx.core.view.p004d0.C0289c;
+import android.widget.GridView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
+import java.util.TreeMap;
+import t1.t;
 
 /* loaded from: classes.dex */
 public class GridLayoutManager extends LinearLayoutManager {
-    private static final boolean DEBUG = false;
-    public static final int DEFAULT_SPAN_COUNT = -1;
-    private static final String TAG = "GridLayoutManager";
-    int[] mCachedBorders;
-    final Rect mDecorInsets;
-    boolean mPendingSpanCountChange;
-    final SparseIntArray mPreLayoutSpanIndexCache;
-    final SparseIntArray mPreLayoutSpanSizeCache;
-    View[] mSet;
-    int mSpanCount;
-    AbstractC0579c mSpanSizeLookup;
-    private boolean mUsingSpansToEstimateScrollBarDimensions;
 
-    /* renamed from: androidx.recyclerview.widget.GridLayoutManager$a */
-    public static final class C0577a extends AbstractC0579c {
-        @Override // androidx.recyclerview.widget.GridLayoutManager.AbstractC0579c
-        public int getSpanIndex(int i2, int i3) {
-            return i2 % i3;
+    /* renamed from: U, reason: collision with root package name */
+    private static final Set<Integer> f28494U = Collections.unmodifiableSet(new HashSet(Arrays.asList(17, 66, 33, 130)));
+
+    /* renamed from: I, reason: collision with root package name */
+    boolean f28495I;
+
+    /* renamed from: J, reason: collision with root package name */
+    int f28496J;
+
+    /* renamed from: K, reason: collision with root package name */
+    int[] f28497K;
+
+    /* renamed from: L, reason: collision with root package name */
+    View[] f28498L;
+
+    /* renamed from: M, reason: collision with root package name */
+    final SparseIntArray f28499M;
+
+    /* renamed from: N, reason: collision with root package name */
+    final SparseIntArray f28500N;
+
+    /* renamed from: O, reason: collision with root package name */
+    d f28501O;
+
+    /* renamed from: P, reason: collision with root package name */
+    final Rect f28502P;
+
+    /* renamed from: Q, reason: collision with root package name */
+    private boolean f28503Q;
+
+    /* renamed from: R, reason: collision with root package name */
+    private int f28504R;
+
+    /* renamed from: S, reason: collision with root package name */
+    int f28505S;
+
+    /* renamed from: T, reason: collision with root package name */
+    int f28506T;
+
+    private static class a {
+        static boolean a(View view) {
+            return view.isAccessibilityFocused();
+        }
+    }
+
+    public static final class b extends d {
+        @Override // androidx.recyclerview.widget.GridLayoutManager.d
+        public int e(int i10, int i11) {
+            return i10 % i11;
         }
 
-        @Override // androidx.recyclerview.widget.GridLayoutManager.AbstractC0579c
-        public int getSpanSize(int i2) {
+        @Override // androidx.recyclerview.widget.GridLayoutManager.d
+        public int f(int i10) {
             return 1;
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.GridLayoutManager$c */
-    public static abstract class AbstractC0579c {
-        final SparseIntArray mSpanIndexCache = new SparseIntArray();
-        final SparseIntArray mSpanGroupIndexCache = new SparseIntArray();
-        private boolean mCacheSpanIndices = false;
-        private boolean mCacheSpanGroupIndices = false;
+    public static abstract class d {
 
-        static int findFirstKeyLessThan(SparseIntArray sparseIntArray, int i2) {
+        /* renamed from: a, reason: collision with root package name */
+        final SparseIntArray f28509a = new SparseIntArray();
+
+        /* renamed from: b, reason: collision with root package name */
+        final SparseIntArray f28510b = new SparseIntArray();
+
+        /* renamed from: c, reason: collision with root package name */
+        private boolean f28511c = false;
+
+        /* renamed from: d, reason: collision with root package name */
+        private boolean f28512d = false;
+
+        static int a(SparseIntArray sparseIntArray, int i10) {
             int size = sparseIntArray.size() - 1;
-            int i3 = 0;
-            while (i3 <= size) {
-                int i4 = (i3 + size) >>> 1;
-                if (sparseIntArray.keyAt(i4) < i2) {
-                    i3 = i4 + 1;
+            int i11 = 0;
+            while (i11 <= size) {
+                int i12 = (i11 + size) >>> 1;
+                if (sparseIntArray.keyAt(i12) < i10) {
+                    i11 = i12 + 1;
                 } else {
-                    size = i4 - 1;
+                    size = i12 - 1;
                 }
             }
-            int i5 = i3 - 1;
-            if (i5 < 0 || i5 >= sparseIntArray.size()) {
+            int i13 = i11 - 1;
+            if (i13 < 0 || i13 >= sparseIntArray.size()) {
                 return -1;
             }
-            return sparseIntArray.keyAt(i5);
+            return sparseIntArray.keyAt(i13);
         }
 
-        int getCachedSpanGroupIndex(int i2, int i3) {
-            if (!this.mCacheSpanGroupIndices) {
-                return getSpanGroupIndex(i2, i3);
+        int b(int i10, int i11) {
+            if (!this.f28512d) {
+                return d(i10, i11);
             }
-            int i4 = this.mSpanGroupIndexCache.get(i2, -1);
-            if (i4 != -1) {
-                return i4;
+            int i12 = this.f28510b.get(i10, -1);
+            if (i12 != -1) {
+                return i12;
             }
-            int spanGroupIndex = getSpanGroupIndex(i2, i3);
-            this.mSpanGroupIndexCache.put(i2, spanGroupIndex);
-            return spanGroupIndex;
+            int iD = d(i10, i11);
+            this.f28510b.put(i10, iD);
+            return iD;
         }
 
-        int getCachedSpanIndex(int i2, int i3) {
-            if (!this.mCacheSpanIndices) {
-                return getSpanIndex(i2, i3);
+        int c(int i10, int i11) {
+            if (!this.f28511c) {
+                return e(i10, i11);
             }
-            int i4 = this.mSpanIndexCache.get(i2, -1);
-            if (i4 != -1) {
-                return i4;
+            int i12 = this.f28509a.get(i10, -1);
+            if (i12 != -1) {
+                return i12;
             }
-            int spanIndex = getSpanIndex(i2, i3);
-            this.mSpanIndexCache.put(i2, spanIndex);
-            return spanIndex;
+            int iE = e(i10, i11);
+            this.f28509a.put(i10, iE);
+            return iE;
         }
 
-        /* JADX WARN: Removed duplicated region for block: B:13:0x002d  */
-        /* JADX WARN: Removed duplicated region for block: B:21:0x0043  */
-        /* JADX WARN: Removed duplicated region for block: B:27:? A[RETURN, SYNTHETIC] */
-        /*
-            Code decompiled incorrectly, please refer to instructions dump.
-            To view partially-correct code enable 'Show inconsistent code' option in preferences
-        */
-        public int getSpanGroupIndex(int r7, int r8) {
-            /*
-                r6 = this;
-                boolean r0 = r6.mCacheSpanGroupIndices
-                r1 = 0
-                if (r0 == 0) goto L24
-                android.util.SparseIntArray r0 = r6.mSpanGroupIndexCache
-                int r0 = findFirstKeyLessThan(r0, r7)
-                r2 = -1
-                if (r0 == r2) goto L24
-                android.util.SparseIntArray r2 = r6.mSpanGroupIndexCache
-                int r2 = r2.get(r0)
-                int r3 = r0 + 1
-                int r4 = r6.getCachedSpanIndex(r0, r8)
-                int r0 = r6.getSpanSize(r0)
-                int r4 = r4 + r0
-                if (r4 != r8) goto L27
-                int r2 = r2 + 1
-                goto L26
-            L24:
-                r2 = 0
-                r3 = 0
-            L26:
-                r4 = 0
-            L27:
-                int r0 = r6.getSpanSize(r7)
-            L2b:
-                if (r3 >= r7) goto L40
-                int r5 = r6.getSpanSize(r3)
-                int r4 = r4 + r5
-                if (r4 != r8) goto L38
-                int r2 = r2 + 1
-                r4 = 0
-                goto L3d
-            L38:
-                if (r4 <= r8) goto L3d
-                int r2 = r2 + 1
-                r4 = r5
-            L3d:
-                int r3 = r3 + 1
-                goto L2b
-            L40:
-                int r4 = r4 + r0
-                if (r4 <= r8) goto L45
-                int r2 = r2 + 1
-            L45:
-                return r2
-            */
-            throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.GridLayoutManager.AbstractC0579c.getSpanGroupIndex(int, int):int");
+        public int d(int i10, int i11) {
+            int i12;
+            int i13;
+            int iC;
+            int iA;
+            if (!this.f28512d || (iA = a(this.f28510b, i10)) == -1) {
+                i12 = 0;
+                i13 = 0;
+                iC = 0;
+            } else {
+                i12 = this.f28510b.get(iA);
+                i13 = iA + 1;
+                iC = c(iA, i11) + f(iA);
+                if (iC == i11) {
+                    i12++;
+                    iC = 0;
+                }
+            }
+            int iF = f(i10);
+            while (i13 < i10) {
+                int iF2 = f(i13);
+                iC += iF2;
+                if (iC == i11) {
+                    i12++;
+                    iC = 0;
+                } else if (iC > i11) {
+                    i12++;
+                    iC = iF2;
+                }
+                i13++;
+            }
+            return iC + iF > i11 ? i12 + 1 : i12;
         }
 
         /* JADX WARN: Removed duplicated region for block: B:12:0x0024  */
@@ -157,33 +180,33 @@ public class GridLayoutManager extends LinearLayoutManager {
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct code enable 'Show inconsistent code' option in preferences
         */
-        public int getSpanIndex(int r6, int r7) {
+        public int e(int r6, int r7) {
             /*
                 r5 = this;
-                int r0 = r5.getSpanSize(r6)
+                int r0 = r5.f(r6)
                 r1 = 0
                 if (r0 != r7) goto L8
                 return r1
             L8:
-                boolean r2 = r5.mCacheSpanIndices
+                boolean r2 = r5.f28511c
                 if (r2 == 0) goto L20
-                android.util.SparseIntArray r2 = r5.mSpanIndexCache
-                int r2 = findFirstKeyLessThan(r2, r6)
+                android.util.SparseIntArray r2 = r5.f28509a
+                int r2 = a(r2, r6)
                 if (r2 < 0) goto L20
-                android.util.SparseIntArray r3 = r5.mSpanIndexCache
+                android.util.SparseIntArray r3 = r5.f28509a
                 int r3 = r3.get(r2)
-                int r4 = r5.getSpanSize(r2)
+                int r4 = r5.f(r2)
                 int r3 = r3 + r4
                 goto L30
             L20:
-                r2 = 0
-                r3 = 0
+                r2 = r1
+                r3 = r2
             L22:
                 if (r2 >= r6) goto L33
-                int r4 = r5.getSpanSize(r2)
+                int r4 = r5.f(r2)
                 int r3 = r3 + r4
                 if (r3 != r7) goto L2d
-                r3 = 0
+                r3 = r1
                 goto L30
             L2d:
                 if (r3 <= r7) goto L30
@@ -198,108 +221,114 @@ public class GridLayoutManager extends LinearLayoutManager {
             L37:
                 return r1
             */
-            throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.GridLayoutManager.AbstractC0579c.getSpanIndex(int, int):int");
+            throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.GridLayoutManager.d.e(int, int):int");
         }
 
-        public abstract int getSpanSize(int i2);
+        public abstract int f(int i10);
 
-        public void invalidateSpanGroupIndexCache() {
-            this.mSpanGroupIndexCache.clear();
+        public void g() {
+            this.f28510b.clear();
         }
 
-        public void invalidateSpanIndexCache() {
-            this.mSpanIndexCache.clear();
-        }
-
-        public boolean isSpanGroupIndexCacheEnabled() {
-            return this.mCacheSpanGroupIndices;
-        }
-
-        public boolean isSpanIndexCacheEnabled() {
-            return this.mCacheSpanIndices;
-        }
-
-        public void setSpanGroupIndexCacheEnabled(boolean z) {
-            if (!z) {
-                this.mSpanGroupIndexCache.clear();
-            }
-            this.mCacheSpanGroupIndices = z;
-        }
-
-        public void setSpanIndexCacheEnabled(boolean z) {
-            if (!z) {
-                this.mSpanGroupIndexCache.clear();
-            }
-            this.mCacheSpanIndices = z;
+        public void h() {
+            this.f28509a.clear();
         }
     }
 
-    public GridLayoutManager(Context context, AttributeSet attributeSet, int i2, int i3) {
-        super(context, attributeSet, i2, i3);
-        this.mPendingSpanCountChange = false;
-        this.mSpanCount = -1;
-        this.mPreLayoutSpanSizeCache = new SparseIntArray();
-        this.mPreLayoutSpanIndexCache = new SparseIntArray();
-        this.mSpanSizeLookup = new C0577a();
-        this.mDecorInsets = new Rect();
-        setSpanCount(RecyclerView.AbstractC0602o.getProperties(context, attributeSet, i2, i3).f3961b);
+    public GridLayoutManager(Context context, AttributeSet attributeSet, int i10, int i11) {
+        super(context, attributeSet, i10, i11);
+        this.f28495I = false;
+        this.f28496J = -1;
+        this.f28499M = new SparseIntArray();
+        this.f28500N = new SparseIntArray();
+        this.f28501O = new b();
+        this.f28502P = new Rect();
+        this.f28504R = -1;
+        this.f28505S = -1;
+        this.f28506T = -1;
+        u3(RecyclerView.q.m0(context, attributeSet, i10, i11).f28729b);
     }
 
-    private void assignSpans(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, int i2, boolean z) {
-        int i3;
-        int i4;
-        int i5 = 0;
-        int i6 = -1;
-        if (z) {
-            i6 = i2;
-            i3 = 0;
-            i4 = 1;
+    private void Q2(RecyclerView.x xVar, RecyclerView.C c10, int i10, boolean z10) {
+        int i11;
+        int i12;
+        int i13;
+        int i14 = 0;
+        if (z10) {
+            i13 = 1;
+            i12 = i10;
+            i11 = 0;
         } else {
-            i3 = i2 - 1;
-            i4 = -1;
+            i11 = i10 - 1;
+            i12 = -1;
+            i13 = -1;
         }
-        while (i3 != i6) {
-            View view = this.mSet[i3];
-            C0578b c0578b = (C0578b) view.getLayoutParams();
-            int spanSize = getSpanSize(c0609v, c0613z, getPosition(view));
-            c0578b.f3914f = spanSize;
-            c0578b.f3913e = i5;
-            i5 += spanSize;
-            i3 += i4;
-        }
-    }
-
-    private void cachePreLayoutSpanMapping() {
-        int childCount = getChildCount();
-        for (int i2 = 0; i2 < childCount; i2++) {
-            C0578b c0578b = (C0578b) getChildAt(i2).getLayoutParams();
-            int iM4238a = c0578b.m4238a();
-            this.mPreLayoutSpanSizeCache.put(iM4238a, c0578b.m4167f());
-            this.mPreLayoutSpanIndexCache.put(iM4238a, c0578b.m4166e());
+        while (i11 != i12) {
+            View view = this.f28498L[i11];
+            c cVar = (c) view.getLayoutParams();
+            int iP3 = p3(xVar, c10, l0(view));
+            cVar.f28508f = iP3;
+            cVar.f28507e = i14;
+            i14 += iP3;
+            i11 += i13;
         }
     }
 
-    private void calculateItemBorders(int i2) {
-        this.mCachedBorders = calculateItemBorders(this.mCachedBorders, this.mSpanCount, i2);
+    private void R2() {
+        int iO = O();
+        for (int i10 = 0; i10 < iO; i10++) {
+            c cVar = (c) N(i10).getLayoutParams();
+            int iA = cVar.a();
+            this.f28499M.put(iA, cVar.f());
+            this.f28500N.put(iA, cVar.e());
+        }
     }
 
-    private void clearPreLayoutSpanMappingCache() {
-        this.mPreLayoutSpanSizeCache.clear();
-        this.mPreLayoutSpanIndexCache.clear();
+    private void S2(int i10) {
+        this.f28497K = T2(this.f28497K, this.f28496J, i10);
     }
 
-    private int computeScrollOffsetWithSpanInfo(RecyclerView.C0613z c0613z) {
-        if (getChildCount() != 0 && c0613z.m4306b() != 0) {
-            ensureLayoutState();
-            boolean zIsSmoothScrollbarEnabled = isSmoothScrollbarEnabled();
-            View viewFindFirstVisibleChildClosestToStart = findFirstVisibleChildClosestToStart(!zIsSmoothScrollbarEnabled, true);
-            View viewFindFirstVisibleChildClosestToEnd = findFirstVisibleChildClosestToEnd(!zIsSmoothScrollbarEnabled, true);
-            if (viewFindFirstVisibleChildClosestToStart != null && viewFindFirstVisibleChildClosestToEnd != null) {
-                int cachedSpanGroupIndex = this.mSpanSizeLookup.getCachedSpanGroupIndex(getPosition(viewFindFirstVisibleChildClosestToStart), this.mSpanCount);
-                int cachedSpanGroupIndex2 = this.mSpanSizeLookup.getCachedSpanGroupIndex(getPosition(viewFindFirstVisibleChildClosestToEnd), this.mSpanCount);
-                int iMax = this.mShouldReverseLayout ? Math.max(0, ((this.mSpanSizeLookup.getCachedSpanGroupIndex(c0613z.m4306b() - 1, this.mSpanCount) + 1) - Math.max(cachedSpanGroupIndex, cachedSpanGroupIndex2)) - 1) : Math.max(0, Math.min(cachedSpanGroupIndex, cachedSpanGroupIndex2));
-                if (zIsSmoothScrollbarEnabled) {
-                    return Math.round((iMax * (Math.abs(this.mOrientationHelper.mo4533d(viewFindFirstVisibleChildClosestToEnd) - this.mOrientationHelper.mo4536g(viewFindFirstVisibleChildClosestToStart)) / ((this.mSpanSizeLookup.getCachedSpanGroupIndex(getPosition(viewFindFirstVisibleChildClosestToEnd), this.mSpanCount) - this.mSpanSizeLookup.getCachedSpanGroupIndex(getPosition(viewFindFirstVisibleChildClosestToStart), this.mSpanCount)) + 1))) + (this.mOrientationHelper.mo4542m() - this.mOrientationHelper.mo4536g(viewFindFirstVisibleChildClosestToStart)));
+    static int[] T2(int[] iArr, int i10, int i11) {
+        int i12;
+        if (iArr == null || iArr.length != i10 + 1 || iArr[iArr.length - 1] != i11) {
+            iArr = new int[i10 + 1];
+        }
+        int i13 = 0;
+        iArr[0] = 0;
+        int i14 = i11 / i10;
+        int i15 = i11 % i10;
+        int i16 = 0;
+        for (int i17 = 1; i17 <= i10; i17++) {
+            i13 += i15;
+            if (i13 <= 0 || i10 - i13 >= i15) {
+                i12 = i14;
+            } else {
+                i12 = i14 + 1;
+                i13 -= i10;
+            }
+            i16 += i12;
+            iArr[i17] = i16;
+        }
+        return iArr;
+    }
+
+    private void U2() {
+        this.f28499M.clear();
+        this.f28500N.clear();
+    }
+
+    private int V2(RecyclerView.C c10) {
+        if (O() != 0 && c10.b() != 0) {
+            Y1();
+            boolean zT2 = t2();
+            View viewD2 = d2(!zT2, true);
+            View viewC2 = c2(!zT2, true);
+            if (viewD2 != null && viewC2 != null) {
+                int iB = this.f28501O.b(l0(viewD2), this.f28496J);
+                int iB2 = this.f28501O.b(l0(viewC2), this.f28496J);
+                int iMax = this.f28526x ? Math.max(0, ((this.f28501O.b(c10.b() - 1, this.f28496J) + 1) - Math.max(iB, iB2)) - 1) : Math.max(0, Math.min(iB, iB2));
+                if (zT2) {
+                    return Math.round((iMax * (Math.abs(this.f28523u.d(viewC2) - this.f28523u.g(viewD2)) / ((this.f28501O.b(l0(viewC2), this.f28496J) - this.f28501O.b(l0(viewD2), this.f28496J)) + 1))) + (this.f28523u.m() - this.f28523u.g(viewD2)));
                 }
                 return iMax;
             }
@@ -307,536 +336,960 @@ public class GridLayoutManager extends LinearLayoutManager {
         return 0;
     }
 
-    private int computeScrollRangeWithSpanInfo(RecyclerView.C0613z c0613z) {
-        if (getChildCount() != 0 && c0613z.m4306b() != 0) {
-            ensureLayoutState();
-            View viewFindFirstVisibleChildClosestToStart = findFirstVisibleChildClosestToStart(!isSmoothScrollbarEnabled(), true);
-            View viewFindFirstVisibleChildClosestToEnd = findFirstVisibleChildClosestToEnd(!isSmoothScrollbarEnabled(), true);
-            if (viewFindFirstVisibleChildClosestToStart != null && viewFindFirstVisibleChildClosestToEnd != null) {
-                if (!isSmoothScrollbarEnabled()) {
-                    return this.mSpanSizeLookup.getCachedSpanGroupIndex(c0613z.m4306b() - 1, this.mSpanCount) + 1;
+    private int W2(RecyclerView.C c10) {
+        if (O() != 0 && c10.b() != 0) {
+            Y1();
+            View viewD2 = d2(!t2(), true);
+            View viewC2 = c2(!t2(), true);
+            if (viewD2 != null && viewC2 != null) {
+                if (!t2()) {
+                    return this.f28501O.b(c10.b() - 1, this.f28496J) + 1;
                 }
-                int iMo4533d = this.mOrientationHelper.mo4533d(viewFindFirstVisibleChildClosestToEnd) - this.mOrientationHelper.mo4536g(viewFindFirstVisibleChildClosestToStart);
-                int cachedSpanGroupIndex = this.mSpanSizeLookup.getCachedSpanGroupIndex(getPosition(viewFindFirstVisibleChildClosestToStart), this.mSpanCount);
-                return (int) ((iMo4533d / ((this.mSpanSizeLookup.getCachedSpanGroupIndex(getPosition(viewFindFirstVisibleChildClosestToEnd), this.mSpanCount) - cachedSpanGroupIndex) + 1)) * (this.mSpanSizeLookup.getCachedSpanGroupIndex(c0613z.m4306b() - 1, this.mSpanCount) + 1));
+                int iD = this.f28523u.d(viewC2) - this.f28523u.g(viewD2);
+                int iB = this.f28501O.b(l0(viewD2), this.f28496J);
+                return (int) ((iD / ((this.f28501O.b(l0(viewC2), this.f28496J) - iB) + 1)) * (this.f28501O.b(c10.b() - 1, this.f28496J) + 1));
             }
         }
         return 0;
     }
 
-    private void ensureAnchorIsInCorrectSpan(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, LinearLayoutManager.C0581a c0581a, int i2) {
-        boolean z = i2 == 1;
-        int spanIndex = getSpanIndex(c0609v, c0613z, c0581a.f3919b);
-        if (z) {
-            while (spanIndex > 0) {
-                int i3 = c0581a.f3919b;
-                if (i3 <= 0) {
+    private void X2(RecyclerView.x xVar, RecyclerView.C c10, LinearLayoutManager.a aVar, int i10) {
+        boolean z10 = i10 == 1;
+        int iO3 = o3(xVar, c10, aVar.f28530b);
+        if (z10) {
+            while (iO3 > 0) {
+                int i11 = aVar.f28530b;
+                if (i11 <= 0) {
                     return;
                 }
-                int i4 = i3 - 1;
-                c0581a.f3919b = i4;
-                spanIndex = getSpanIndex(c0609v, c0613z, i4);
+                int i12 = i11 - 1;
+                aVar.f28530b = i12;
+                iO3 = o3(xVar, c10, i12);
             }
             return;
         }
-        int iM4306b = c0613z.m4306b() - 1;
-        int i5 = c0581a.f3919b;
-        while (i5 < iM4306b) {
-            int i6 = i5 + 1;
-            int spanIndex2 = getSpanIndex(c0609v, c0613z, i6);
-            if (spanIndex2 <= spanIndex) {
+        int iB = c10.b() - 1;
+        int i13 = aVar.f28530b;
+        while (i13 < iB) {
+            int i14 = i13 + 1;
+            int iO32 = o3(xVar, c10, i14);
+            if (iO32 <= iO3) {
                 break;
             }
-            i5 = i6;
-            spanIndex = spanIndex2;
+            i13 = i14;
+            iO3 = iO32;
         }
-        c0581a.f3919b = i5;
+        aVar.f28530b = i13;
     }
 
-    private void ensureViewSet() {
-        View[] viewArr = this.mSet;
-        if (viewArr == null || viewArr.length != this.mSpanCount) {
-            this.mSet = new View[this.mSpanCount];
+    private void Y2() {
+        View[] viewArr = this.f28498L;
+        if (viewArr == null || viewArr.length != this.f28496J) {
+            this.f28498L = new View[this.f28496J];
         }
     }
 
-    private int getSpanGroupIndex(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, int i2) {
-        if (!c0613z.m4309e()) {
-            return this.mSpanSizeLookup.getCachedSpanGroupIndex(i2, this.mSpanCount);
+    private View Z2() {
+        for (int i10 = 0; i10 < O(); i10++) {
+            View viewN = N(i10);
+            Objects.requireNonNull(viewN);
+            if (a.a(viewN)) {
+                return N(i10);
+            }
         }
-        int iM4279f = c0609v.m4279f(i2);
-        if (iM4279f != -1) {
-            return this.mSpanSizeLookup.getCachedSpanGroupIndex(iM4279f, this.mSpanCount);
+        return null;
+    }
+
+    private int c3(int i10, int i11, int i12) {
+        for (int i13 = i12 - 1; i13 >= 0; i13--) {
+            int iI3 = i3(i13);
+            int iG3 = g3(i13);
+            if (iI3 < 0 || iG3 < 0) {
+                return -1;
+            }
+            if (this.f28521s == 1) {
+                if (iI3 < i10 && h3(i13).contains(Integer.valueOf(i11))) {
+                    this.f28505S = iI3;
+                    return i13;
+                }
+            } else if (iI3 < i10 && iG3 == i11) {
+                this.f28505S = ((Integer) Collections.max(j3(i13))).intValue();
+                return i13;
+            }
         }
-        Log.w(TAG, "Cannot find span size for pre layout position. " + i2);
+        return -1;
+    }
+
+    private int d3(int i10, int i11, int i12) {
+        for (int i13 = i12 + 1; i13 < a(); i13++) {
+            int iI3 = i3(i13);
+            int iG3 = g3(i13);
+            if (iI3 < 0 || iG3 < 0) {
+                return -1;
+            }
+            if (this.f28521s == 1) {
+                if (iI3 > i10 && (iG3 == i11 || h3(i13).contains(Integer.valueOf(i11)))) {
+                    this.f28505S = iI3;
+                    return i13;
+                }
+            } else if (iI3 > i10 && iG3 == i11) {
+                this.f28505S = i3(i13);
+                return i13;
+            }
+        }
+        return -1;
+    }
+
+    private int e3(int i10, int i11, int i12) {
+        for (int i13 = i12 - 1; i13 >= 0; i13--) {
+            int iI3 = i3(i13);
+            int iG3 = g3(i13);
+            if (iI3 < 0 || iG3 < 0) {
+                return -1;
+            }
+            if (this.f28521s == 1) {
+                if ((iI3 == i10 && iG3 < i11) || iI3 < i10) {
+                    this.f28505S = iI3;
+                    this.f28506T = iG3;
+                    return i13;
+                }
+            } else if (j3(i13).contains(Integer.valueOf(i10)) && iG3 < i11) {
+                this.f28506T = iG3;
+                return i13;
+            }
+        }
+        return -1;
+    }
+
+    private int f3(int i10, int i11, int i12) {
+        for (int i13 = i12 + 1; i13 < a(); i13++) {
+            int iI3 = i3(i13);
+            int iG3 = g3(i13);
+            if (iI3 < 0 || iG3 < 0) {
+                break;
+            }
+            if (this.f28521s == 1) {
+                if ((iI3 == i10 && iG3 > i11) || iI3 > i10) {
+                    this.f28505S = iI3;
+                    this.f28506T = iG3;
+                    return i13;
+                }
+            } else if (iG3 > i11 && j3(i13).contains(Integer.valueOf(i10))) {
+                this.f28506T = iG3;
+                return i13;
+            }
+        }
+        return -1;
+    }
+
+    private int g3(int i10) {
+        if (this.f28521s == 0) {
+            RecyclerView recyclerView = this.f28709b;
+            return n3(recyclerView.f28569D, recyclerView.f28584K0, i10);
+        }
+        RecyclerView recyclerView2 = this.f28709b;
+        return o3(recyclerView2.f28569D, recyclerView2.f28584K0, i10);
+    }
+
+    private Set<Integer> h3(int i10) {
+        return k3(g3(i10), i10);
+    }
+
+    private int i3(int i10) {
+        if (this.f28521s == 1) {
+            RecyclerView recyclerView = this.f28709b;
+            return n3(recyclerView.f28569D, recyclerView.f28584K0, i10);
+        }
+        RecyclerView recyclerView2 = this.f28709b;
+        return o3(recyclerView2.f28569D, recyclerView2.f28584K0, i10);
+    }
+
+    private Set<Integer> j3(int i10) {
+        return k3(i3(i10), i10);
+    }
+
+    private Set<Integer> k3(int i10, int i11) {
+        HashSet hashSet = new HashSet();
+        RecyclerView recyclerView = this.f28709b;
+        int iP3 = p3(recyclerView.f28569D, recyclerView.f28584K0, i11);
+        for (int i12 = i10; i12 < i10 + iP3; i12++) {
+            hashSet.add(Integer.valueOf(i12));
+        }
+        return hashSet;
+    }
+
+    private int n3(RecyclerView.x xVar, RecyclerView.C c10, int i10) {
+        if (!c10.e()) {
+            return this.f28501O.b(i10, this.f28496J);
+        }
+        int iF = xVar.f(i10);
+        if (iF != -1) {
+            return this.f28501O.b(iF, this.f28496J);
+        }
+        Log.w("GridLayoutManager", "Cannot find span size for pre layout position. " + i10);
         return 0;
     }
 
-    private int getSpanIndex(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, int i2) {
-        if (!c0613z.m4309e()) {
-            return this.mSpanSizeLookup.getCachedSpanIndex(i2, this.mSpanCount);
+    private int o3(RecyclerView.x xVar, RecyclerView.C c10, int i10) {
+        if (!c10.e()) {
+            return this.f28501O.c(i10, this.f28496J);
         }
-        int i3 = this.mPreLayoutSpanIndexCache.get(i2, -1);
-        if (i3 != -1) {
-            return i3;
+        int i11 = this.f28500N.get(i10, -1);
+        if (i11 != -1) {
+            return i11;
         }
-        int iM4279f = c0609v.m4279f(i2);
-        if (iM4279f != -1) {
-            return this.mSpanSizeLookup.getCachedSpanIndex(iM4279f, this.mSpanCount);
+        int iF = xVar.f(i10);
+        if (iF != -1) {
+            return this.f28501O.c(iF, this.f28496J);
         }
-        Log.w(TAG, "Cannot find span size for pre layout position. It is not cached, not in the adapter. Pos:" + i2);
+        Log.w("GridLayoutManager", "Cannot find span size for pre layout position. It is not cached, not in the adapter. Pos:" + i10);
         return 0;
     }
 
-    private int getSpanSize(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, int i2) {
-        if (!c0613z.m4309e()) {
-            return this.mSpanSizeLookup.getSpanSize(i2);
+    private int p3(RecyclerView.x xVar, RecyclerView.C c10, int i10) {
+        if (!c10.e()) {
+            return this.f28501O.f(i10);
         }
-        int i3 = this.mPreLayoutSpanSizeCache.get(i2, -1);
-        if (i3 != -1) {
-            return i3;
+        int i11 = this.f28499M.get(i10, -1);
+        if (i11 != -1) {
+            return i11;
         }
-        int iM4279f = c0609v.m4279f(i2);
-        if (iM4279f != -1) {
-            return this.mSpanSizeLookup.getSpanSize(iM4279f);
+        int iF = xVar.f(i10);
+        if (iF != -1) {
+            return this.f28501O.f(iF);
         }
-        Log.w(TAG, "Cannot find span size for pre layout position. It is not cached, not in the adapter. Pos:" + i2);
+        Log.w("GridLayoutManager", "Cannot find span size for pre layout position. It is not cached, not in the adapter. Pos:" + i10);
         return 1;
     }
 
-    private void guessMeasurement(float f2, int i2) {
-        calculateItemBorders(Math.max(Math.round(f2 * this.mSpanCount), i2));
+    private void q3(float f10, int i10) {
+        S2(Math.max(Math.round(f10 * this.f28496J), i10));
     }
 
-    private void measureChild(View view, int i2, boolean z) {
-        int childMeasureSpec;
-        int childMeasureSpec2;
-        C0578b c0578b = (C0578b) view.getLayoutParams();
-        Rect rect = c0578b.f3965b;
-        int i3 = rect.top + rect.bottom + ((ViewGroup.MarginLayoutParams) c0578b).topMargin + ((ViewGroup.MarginLayoutParams) c0578b).bottomMargin;
-        int i4 = rect.left + rect.right + ((ViewGroup.MarginLayoutParams) c0578b).leftMargin + ((ViewGroup.MarginLayoutParams) c0578b).rightMargin;
-        int spaceForSpanRange = getSpaceForSpanRange(c0578b.f3913e, c0578b.f3914f);
-        if (this.mOrientation == 1) {
-            childMeasureSpec2 = RecyclerView.AbstractC0602o.getChildMeasureSpec(spaceForSpanRange, i2, i4, ((ViewGroup.MarginLayoutParams) c0578b).width, false);
-            childMeasureSpec = RecyclerView.AbstractC0602o.getChildMeasureSpec(this.mOrientationHelper.mo4543n(), getHeightMode(), i3, ((ViewGroup.MarginLayoutParams) c0578b).height, true);
+    private boolean r3(int i10) {
+        return (j3(i10).contains(Integer.valueOf(this.f28505S)) && h3(i10).contains(Integer.valueOf(this.f28506T))) ? false : true;
+    }
+
+    private void s3(View view, int i10, boolean z10) {
+        int iP;
+        int iP2;
+        c cVar = (c) view.getLayoutParams();
+        Rect rect = cVar.f28733b;
+        int i11 = rect.top + rect.bottom + ((ViewGroup.MarginLayoutParams) cVar).topMargin + ((ViewGroup.MarginLayoutParams) cVar).bottomMargin;
+        int i12 = rect.left + rect.right + ((ViewGroup.MarginLayoutParams) cVar).leftMargin + ((ViewGroup.MarginLayoutParams) cVar).rightMargin;
+        int iL3 = l3(cVar.f28507e, cVar.f28508f);
+        if (this.f28521s == 1) {
+            iP2 = RecyclerView.q.P(iL3, i10, i12, ((ViewGroup.MarginLayoutParams) cVar).width, false);
+            iP = RecyclerView.q.P(this.f28523u.n(), c0(), i11, ((ViewGroup.MarginLayoutParams) cVar).height, true);
         } else {
-            int childMeasureSpec3 = RecyclerView.AbstractC0602o.getChildMeasureSpec(spaceForSpanRange, i2, i3, ((ViewGroup.MarginLayoutParams) c0578b).height, false);
-            int childMeasureSpec4 = RecyclerView.AbstractC0602o.getChildMeasureSpec(this.mOrientationHelper.mo4543n(), getWidthMode(), i4, ((ViewGroup.MarginLayoutParams) c0578b).width, true);
-            childMeasureSpec = childMeasureSpec3;
-            childMeasureSpec2 = childMeasureSpec4;
+            int iP3 = RecyclerView.q.P(iL3, i10, i11, ((ViewGroup.MarginLayoutParams) cVar).height, false);
+            int iP4 = RecyclerView.q.P(this.f28523u.n(), t0(), i12, ((ViewGroup.MarginLayoutParams) cVar).width, true);
+            iP = iP3;
+            iP2 = iP4;
         }
-        measureChildWithDecorationsAndMargin(view, childMeasureSpec2, childMeasureSpec, z);
+        t3(view, iP2, iP, z10);
     }
 
-    private void measureChildWithDecorationsAndMargin(View view, int i2, int i3, boolean z) {
-        RecyclerView.C0603p c0603p = (RecyclerView.C0603p) view.getLayoutParams();
-        if (z ? shouldReMeasureChild(view, i2, i3, c0603p) : shouldMeasureChild(view, i2, i3, c0603p)) {
-            view.measure(i2, i3);
+    private void t3(View view, int i10, int i11, boolean z10) {
+        RecyclerView.r rVar = (RecyclerView.r) view.getLayoutParams();
+        if (z10 ? M1(view, i10, i11, rVar) : K1(view, i10, i11, rVar)) {
+            view.measure(i10, i11);
         }
     }
 
-    private void updateMeasurements() {
-        int height;
-        int paddingTop;
-        if (getOrientation() == 1) {
-            height = getWidth() - getPaddingRight();
-            paddingTop = getPaddingLeft();
+    private void w3() {
+        int iB0;
+        int iK0;
+        if (r2() == 1) {
+            iB0 = s0() - j0();
+            iK0 = i0();
         } else {
-            height = getHeight() - getPaddingBottom();
-            paddingTop = getPaddingTop();
+            iB0 = b0() - h0();
+            iK0 = k0();
         }
-        calculateItemBorders(height - paddingTop);
+        S2(iB0 - iK0);
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public boolean checkLayoutParams(RecyclerView.C0603p c0603p) {
-        return c0603p instanceof C0578b;
+    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.q
+    public int A(RecyclerView.C c10) {
+        return this.f28503Q ? W2(c10) : super.A(c10);
+    }
+
+    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.q
+    public int B1(int i10, RecyclerView.x xVar, RecyclerView.C c10) {
+        w3();
+        Y2();
+        return super.B1(i10, xVar, c10);
+    }
+
+    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.q
+    public int D1(int i10, RecyclerView.x xVar, RecyclerView.C c10) {
+        w3();
+        Y2();
+        return super.D1(i10, xVar, c10);
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public void H1(Rect rect, int i10, int i11) {
+        int iS;
+        int iS2;
+        if (this.f28497K == null) {
+            super.H1(rect, i10, i11);
+        }
+        int iI0 = i0() + j0();
+        int iK0 = k0() + h0();
+        if (this.f28521s == 1) {
+            iS2 = RecyclerView.q.s(i11, rect.height() + iK0, f0());
+            int[] iArr = this.f28497K;
+            iS = RecyclerView.q.s(i10, iArr[iArr.length - 1] + iI0, g0());
+        } else {
+            iS = RecyclerView.q.s(i10, rect.width() + iI0, g0());
+            int[] iArr2 = this.f28497K;
+            iS2 = RecyclerView.q.s(i11, iArr2[iArr2.length - 1] + iK0, f0());
+        }
+        G1(iS, iS2);
     }
 
     @Override // androidx.recyclerview.widget.LinearLayoutManager
-    void collectPrefetchPositionsForLayoutState(RecyclerView.C0613z c0613z, LinearLayoutManager.C0583c c0583c, RecyclerView.AbstractC0602o.c cVar) {
-        int spanSize = this.mSpanCount;
-        for (int i2 = 0; i2 < this.mSpanCount && c0583c.m4181c(c0613z) && spanSize > 0; i2++) {
-            int i3 = c0583c.f3930d;
-            cVar.mo4237a(i3, Math.max(0, c0583c.f3933g));
-            spanSize -= this.mSpanSizeLookup.getSpanSize(i3);
-            c0583c.f3930d += c0583c.f3931e;
+    public void H2(boolean z10) {
+        if (z10) {
+            throw new UnsupportedOperationException("GridLayoutManager does not support stack from end. Consider using reverse layout");
         }
+        super.H2(false);
     }
 
-    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int computeHorizontalScrollOffset(RecyclerView.C0613z c0613z) {
-        return this.mUsingSpansToEstimateScrollBarDimensions ? computeScrollOffsetWithSpanInfo(c0613z) : super.computeHorizontalScrollOffset(c0613z);
+    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.q
+    public RecyclerView.r I() {
+        return this.f28521s == 0 ? new c(-2, -1) : new c(-1, -2);
     }
 
-    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int computeHorizontalScrollRange(RecyclerView.C0613z c0613z) {
-        return this.mUsingSpansToEstimateScrollBarDimensions ? computeScrollRangeWithSpanInfo(c0613z) : super.computeHorizontalScrollRange(c0613z);
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public RecyclerView.r J(Context context, AttributeSet attributeSet) {
+        return new c(context, attributeSet);
     }
 
-    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int computeVerticalScrollOffset(RecyclerView.C0613z c0613z) {
-        return this.mUsingSpansToEstimateScrollBarDimensions ? computeScrollOffsetWithSpanInfo(c0613z) : super.computeVerticalScrollOffset(c0613z);
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public RecyclerView.r K(ViewGroup.LayoutParams layoutParams) {
+        return layoutParams instanceof ViewGroup.MarginLayoutParams ? new c((ViewGroup.MarginLayoutParams) layoutParams) : new c(layoutParams);
     }
 
-    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int computeVerticalScrollRange(RecyclerView.C0613z c0613z) {
-        return this.mUsingSpansToEstimateScrollBarDimensions ? computeScrollRangeWithSpanInfo(c0613z) : super.computeVerticalScrollRange(c0613z);
+    /* JADX WARN: Code restructure failed: missing block: B:56:0x00d1, code lost:
+    
+        if (r13 == (r2 > r15)) goto L47;
+     */
+    /* JADX WARN: Removed duplicated region for block: B:72:0x00f9  */
+    /* JADX WARN: Removed duplicated region for block: B:73:0x010f  */
+    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.q
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    public android.view.View O0(android.view.View r24, int r25, androidx.recyclerview.widget.RecyclerView.x r26, androidx.recyclerview.widget.RecyclerView.C r27) {
+        /*
+            Method dump skipped, instructions count: 317
+            To view this dump change 'Code comments level' option to 'DEBUG'
+        */
+        throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.GridLayoutManager.O0(android.view.View, int, androidx.recyclerview.widget.RecyclerView$x, androidx.recyclerview.widget.RecyclerView$C):android.view.View");
+    }
+
+    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.q
+    public boolean Q1() {
+        return this.f28516D == null && !this.f28495I;
+    }
+
+    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.q
+    public void R0(RecyclerView.x xVar, RecyclerView.C c10, t1.t tVar) {
+        super.R0(xVar, c10, tVar);
+        tVar.h0(GridView.class.getName());
+        RecyclerView.h hVar = this.f28709b.f28589N;
+        if (hVar == null || hVar.h() <= 1) {
+            return;
+        }
+        tVar.b(t.a.f49777V);
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public int S(RecyclerView.x xVar, RecyclerView.C c10) {
+        if (this.f28521s == 1) {
+            return Math.min(this.f28496J, a());
+        }
+        if (c10.b() < 1) {
+            return 0;
+        }
+        return n3(xVar, c10, c10.b() - 1) + 1;
     }
 
     @Override // androidx.recyclerview.widget.LinearLayoutManager
-    View findReferenceChild(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, int i2, int i3, int i4) {
-        ensureLayoutState();
-        int iMo4542m = this.mOrientationHelper.mo4542m();
-        int iMo4538i = this.mOrientationHelper.mo4538i();
-        int i5 = i3 > i2 ? 1 : -1;
+    void S1(RecyclerView.C c10, LinearLayoutManager.c cVar, RecyclerView.q.c cVar2) {
+        int iF = this.f28496J;
+        for (int i10 = 0; i10 < this.f28496J && cVar.c(c10) && iF > 0; i10++) {
+            int i11 = cVar.f28541d;
+            cVar2.a(i11, Math.max(0, cVar.f28544g));
+            iF -= this.f28501O.f(i11);
+            cVar.f28541d += cVar.f28542e;
+        }
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public void U0(RecyclerView.x xVar, RecyclerView.C c10, View view, t1.t tVar) {
+        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+        if (!(layoutParams instanceof c)) {
+            super.T0(view, tVar);
+            return;
+        }
+        c cVar = (c) layoutParams;
+        int iN3 = n3(xVar, c10, cVar.a());
+        if (this.f28521s == 0) {
+            tVar.k0(t.f.a(cVar.e(), cVar.f(), iN3, 1, false, false));
+        } else {
+            tVar.k0(t.f.a(iN3, 1, cVar.e(), cVar.f(), false, false));
+        }
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public void W0(RecyclerView recyclerView, int i10, int i11) {
+        this.f28501O.h();
+        this.f28501O.g();
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public void X0(RecyclerView recyclerView) {
+        this.f28501O.h();
+        this.f28501O.g();
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public void Y0(RecyclerView recyclerView, int i10, int i11, int i12) {
+        this.f28501O.h();
+        this.f28501O.g();
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public void Z0(RecyclerView recyclerView, int i10, int i11) {
+        this.f28501O.h();
+        this.f28501O.g();
+    }
+
+    int a3(int i10) {
+        if (i10 < 0 || this.f28521s == 1) {
+            return -1;
+        }
+        TreeMap treeMap = new TreeMap();
+        for (int i11 = 0; i11 < a(); i11++) {
+            for (Integer num : j3(i11)) {
+                if (num.intValue() < 0) {
+                    return -1;
+                }
+                if (!treeMap.containsKey(num)) {
+                    treeMap.put(num, Integer.valueOf(i11));
+                }
+            }
+        }
+        for (Integer num2 : treeMap.keySet()) {
+            int iIntValue = num2.intValue();
+            if (iIntValue > i10) {
+                int iIntValue2 = ((Integer) treeMap.get(num2)).intValue();
+                this.f28505S = iIntValue;
+                this.f28506T = 0;
+                return iIntValue2;
+            }
+        }
+        return -1;
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public void b1(RecyclerView recyclerView, int i10, int i11, Object obj) {
+        this.f28501O.h();
+        this.f28501O.g();
+    }
+
+    int b3(int i10) {
+        if (i10 < 0 || this.f28521s == 1) {
+            return -1;
+        }
+        TreeMap treeMap = new TreeMap(Collections.reverseOrder());
+        for (int i11 = 0; i11 < a(); i11++) {
+            for (Integer num : j3(i11)) {
+                if (num.intValue() < 0) {
+                    return -1;
+                }
+                treeMap.put(num, Integer.valueOf(i11));
+            }
+        }
+        for (Integer num2 : treeMap.keySet()) {
+            int iIntValue = num2.intValue();
+            if (iIntValue < i10) {
+                int iIntValue2 = ((Integer) treeMap.get(num2)).intValue();
+                this.f28505S = iIntValue;
+                this.f28506T = g3(iIntValue2);
+                return iIntValue2;
+            }
+        }
+        return -1;
+    }
+
+    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.q
+    public void c1(RecyclerView.x xVar, RecyclerView.C c10) {
+        if (c10.e()) {
+            R2();
+        }
+        super.c1(xVar, c10);
+        U2();
+    }
+
+    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.q
+    public void d1(RecyclerView.C c10) {
+        View viewH;
+        super.d1(c10);
+        this.f28495I = false;
+        int i10 = this.f28504R;
+        if (i10 == -1 || (viewH = H(i10)) == null) {
+            return;
+        }
+        viewH.sendAccessibilityEvent(67108864);
+        this.f28504R = -1;
+    }
+
+    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.q
+    boolean l1(int i10, Bundle bundle) {
+        RecyclerView.G gN0;
+        int iE3;
+        if (i10 != t.a.f49777V.b() || i10 == -1) {
+            if (i10 != 16908343 || bundle == null) {
+                return super.l1(i10, bundle);
+            }
+            int i11 = bundle.getInt("android.view.accessibility.action.ARGUMENT_ROW_INT", -1);
+            int i12 = bundle.getInt("android.view.accessibility.action.ARGUMENT_COLUMN_INT", -1);
+            if (i11 != -1 && i12 != -1) {
+                int iH = this.f28709b.f28589N.h();
+                int i13 = 0;
+                while (true) {
+                    if (i13 >= iH) {
+                        i13 = -1;
+                        break;
+                    }
+                    RecyclerView recyclerView = this.f28709b;
+                    int iO3 = o3(recyclerView.f28569D, recyclerView.f28584K0, i13);
+                    RecyclerView recyclerView2 = this.f28709b;
+                    int iN3 = n3(recyclerView2.f28569D, recyclerView2.f28584K0, i13);
+                    if (this.f28521s != 1) {
+                        if (iO3 == i11 && iN3 == i12) {
+                            break;
+                        }
+                        i13++;
+                    } else {
+                        if (iO3 == i12 && iN3 == i11) {
+                            break;
+                        }
+                        i13++;
+                    }
+                }
+                if (i13 > -1) {
+                    E2(i13, 0);
+                    return true;
+                }
+            }
+            return false;
+        }
+        View viewZ2 = Z2();
+        if (viewZ2 == null || bundle == null) {
+            return false;
+        }
+        int i14 = bundle.getInt("android.view.accessibility.action.ARGUMENT_DIRECTION_INT", -1);
+        if (!f28494U.contains(Integer.valueOf(i14)) || (gN0 = this.f28709b.n0(viewZ2)) == null) {
+            return false;
+        }
+        int absoluteAdapterPosition = gN0.getAbsoluteAdapterPosition();
+        int iI3 = i3(absoluteAdapterPosition);
+        int iG3 = g3(absoluteAdapterPosition);
+        if (iI3 >= 0 && iG3 >= 0) {
+            if (r3(absoluteAdapterPosition)) {
+                this.f28505S = iI3;
+                this.f28506T = iG3;
+            }
+            int i15 = this.f28505S;
+            if (i15 == -1) {
+                i15 = iI3;
+            }
+            int i16 = this.f28506T;
+            if (i16 != -1) {
+                iG3 = i16;
+            }
+            if (i14 == 17) {
+                iE3 = e3(i15, iG3, absoluteAdapterPosition);
+            } else if (i14 == 33) {
+                iE3 = c3(i15, iG3, absoluteAdapterPosition);
+            } else if (i14 == 66) {
+                iE3 = f3(i15, iG3, absoluteAdapterPosition);
+            } else {
+                if (i14 != 130) {
+                    return false;
+                }
+                iE3 = d3(i15, iG3, absoluteAdapterPosition);
+            }
+            if (iE3 == -1 && this.f28521s == 0) {
+                if (i14 == 17) {
+                    iE3 = b3(iI3);
+                } else if (i14 == 66) {
+                    iE3 = a3(iI3);
+                }
+            }
+            if (iE3 != -1) {
+                C1(iE3);
+                this.f28504R = iE3;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override // androidx.recyclerview.widget.LinearLayoutManager
+    View l2(RecyclerView.x xVar, RecyclerView.C c10, boolean z10, boolean z11) {
+        int i10;
+        int iO;
+        int iO2 = O();
+        int i11 = 1;
+        if (z11) {
+            iO = O() - 1;
+            i10 = -1;
+            i11 = -1;
+        } else {
+            i10 = iO2;
+            iO = 0;
+        }
+        int iB = c10.b();
+        Y1();
+        int iM = this.f28523u.m();
+        int i12 = this.f28523u.i();
         View view = null;
         View view2 = null;
-        while (i2 != i3) {
-            View childAt = getChildAt(i2);
-            int position = getPosition(childAt);
-            if (position >= 0 && position < i4 && getSpanIndex(c0609v, c0613z, position) == 0) {
-                if (((RecyclerView.C0603p) childAt.getLayoutParams()).m4240c()) {
+        while (iO != i10) {
+            View viewN = N(iO);
+            int iL0 = l0(viewN);
+            if (iL0 >= 0 && iL0 < iB && o3(xVar, c10, iL0) == 0) {
+                if (((RecyclerView.r) viewN.getLayoutParams()).c()) {
                     if (view2 == null) {
-                        view2 = childAt;
+                        view2 = viewN;
                     }
                 } else {
-                    if (this.mOrientationHelper.mo4536g(childAt) < iMo4538i && this.mOrientationHelper.mo4533d(childAt) >= iMo4542m) {
-                        return childAt;
+                    if (this.f28523u.g(viewN) < i12 && this.f28523u.d(viewN) >= iM) {
+                        return viewN;
                     }
                     if (view == null) {
-                        view = childAt;
+                        view = viewN;
                     }
                 }
             }
-            i2 += i5;
+            iO += i11;
         }
         return view != null ? view : view2;
     }
 
-    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public RecyclerView.C0603p generateDefaultLayoutParams() {
-        return this.mOrientation == 0 ? new C0578b(-2, -1) : new C0578b(-1, -2);
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public RecyclerView.C0603p generateLayoutParams(Context context, AttributeSet attributeSet) {
-        return new C0578b(context, attributeSet);
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int getColumnCountForAccessibility(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z) {
-        if (this.mOrientation == 1) {
-            return this.mSpanCount;
+    int l3(int i10, int i11) {
+        if (this.f28521s != 1 || !s2()) {
+            int[] iArr = this.f28497K;
+            return iArr[i11 + i10] - iArr[i10];
         }
-        if (c0613z.m4306b() < 1) {
+        int[] iArr2 = this.f28497K;
+        int i12 = this.f28496J;
+        return iArr2[i12 - i10] - iArr2[(i12 - i10) - i11];
+    }
+
+    public int m3() {
+        return this.f28496J;
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public int o0(RecyclerView.x xVar, RecyclerView.C c10) {
+        if (this.f28521s == 0) {
+            return Math.min(this.f28496J, a());
+        }
+        if (c10.b() < 1) {
             return 0;
         }
-        return getSpanGroupIndex(c0609v, c0613z, c0613z.m4306b() - 1) + 1;
+        return n3(xVar, c10, c10.b() - 1) + 1;
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int getRowCountForAccessibility(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z) {
-        if (this.mOrientation == 0) {
-            return this.mSpanCount;
-        }
-        if (c0613z.m4306b() < 1) {
-            return 0;
-        }
-        return getSpanGroupIndex(c0609v, c0613z, c0613z.m4306b() - 1) + 1;
-    }
-
-    int getSpaceForSpanRange(int i2, int i3) {
-        if (this.mOrientation != 1 || !isLayoutRTL()) {
-            int[] iArr = this.mCachedBorders;
-            return iArr[i3 + i2] - iArr[i2];
-        }
-        int[] iArr2 = this.mCachedBorders;
-        int i4 = this.mSpanCount;
-        return iArr2[i4 - i2] - iArr2[(i4 - i2) - i3];
-    }
-
-    public int getSpanCount() {
-        return this.mSpanCount;
-    }
-
-    public AbstractC0579c getSpanSizeLookup() {
-        return this.mSpanSizeLookup;
-    }
-
-    public boolean isUsingSpansToEstimateScrollbarDimensions() {
-        return this.mUsingSpansToEstimateScrollBarDimensions;
-    }
-
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Removed duplicated region for block: B:98:0x0219  */
-    /* JADX WARN: Type inference failed for: r5v0 */
-    /* JADX WARN: Type inference failed for: r5v1, types: [boolean, int] */
-    /* JADX WARN: Type inference failed for: r5v19 */
-    @Override // androidx.recyclerview.widget.LinearLayoutManager
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct code enable 'Show inconsistent code' option in preferences
-    */
-    void layoutChunk(androidx.recyclerview.widget.RecyclerView.C0609v r18, androidx.recyclerview.widget.RecyclerView.C0613z r19, androidx.recyclerview.widget.LinearLayoutManager.C0583c r20, androidx.recyclerview.widget.LinearLayoutManager.C0582b r21) {
-        /*
-            Method dump skipped, instructions count: 564
-            To view this dump change 'Code comments level' option to 'DEBUG'
-        */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.GridLayoutManager.layoutChunk(androidx.recyclerview.widget.RecyclerView$v, androidx.recyclerview.widget.RecyclerView$z, androidx.recyclerview.widget.LinearLayoutManager$c, androidx.recyclerview.widget.LinearLayoutManager$b):void");
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public boolean r(RecyclerView.r rVar) {
+        return rVar instanceof c;
     }
 
     @Override // androidx.recyclerview.widget.LinearLayoutManager
-    void onAnchorReady(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, LinearLayoutManager.C0581a c0581a, int i2) {
-        super.onAnchorReady(c0609v, c0613z, c0581a, i2);
-        updateMeasurements();
-        if (c0613z.m4306b() > 0 && !c0613z.m4309e()) {
-            ensureAnchorIsInCorrectSpan(c0609v, c0613z, c0581a, i2);
+    void u2(RecyclerView.x xVar, RecyclerView.C c10, LinearLayoutManager.c cVar, LinearLayoutManager.b bVar) {
+        int i10;
+        int i11;
+        int i12;
+        int i13;
+        int i14;
+        int i15;
+        int i16;
+        int iF;
+        int iF2;
+        int iF3;
+        int i17;
+        int iP;
+        int iP2;
+        View viewD;
+        int iL = this.f28523u.l();
+        boolean z10 = iL != 1073741824;
+        int i18 = O() > 0 ? this.f28497K[this.f28496J] : 0;
+        if (z10) {
+            w3();
         }
-        ensureViewSet();
-    }
-
-    /* JADX WARN: Code restructure failed: missing block: B:59:0x00d6, code lost:
-    
-        if (r13 == (r2 > r15)) goto L49;
-     */
-    /* JADX WARN: Removed duplicated region for block: B:79:0x0107  */
-    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct code enable 'Show inconsistent code' option in preferences
-    */
-    public android.view.View onFocusSearchFailed(android.view.View r24, int r25, androidx.recyclerview.widget.RecyclerView.C0609v r26, androidx.recyclerview.widget.RecyclerView.C0613z r27) {
-        /*
-            Method dump skipped, instructions count: 337
-            To view this dump change 'Code comments level' option to 'DEBUG'
-        */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.GridLayoutManager.onFocusSearchFailed(android.view.View, int, androidx.recyclerview.widget.RecyclerView$v, androidx.recyclerview.widget.RecyclerView$z):android.view.View");
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void onInitializeAccessibilityNodeInfoForItem(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, View view, C0289c c0289c) {
-        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-        if (!(layoutParams instanceof C0578b)) {
-            super.onInitializeAccessibilityNodeInfoForItem(view, c0289c);
-            return;
+        boolean z11 = cVar.f28542e == 1;
+        int iO3 = this.f28496J;
+        if (!z11) {
+            iO3 = o3(xVar, c10, cVar.f28541d) + p3(xVar, c10, cVar.f28541d);
         }
-        C0578b c0578b = (C0578b) layoutParams;
-        int spanGroupIndex = getSpanGroupIndex(c0609v, c0613z, c0578b.m4238a());
-        if (this.mOrientation == 0) {
-            c0289c.m1975b0(C0289c.c.m2017f(c0578b.m4166e(), c0578b.m4167f(), spanGroupIndex, 1, false, false));
-        } else {
-            c0289c.m1975b0(C0289c.c.m2017f(spanGroupIndex, 1, c0578b.m4166e(), c0578b.m4167f(), false, false));
-        }
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void onItemsAdded(RecyclerView recyclerView, int i2, int i3) {
-        this.mSpanSizeLookup.invalidateSpanIndexCache();
-        this.mSpanSizeLookup.invalidateSpanGroupIndexCache();
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void onItemsChanged(RecyclerView recyclerView) {
-        this.mSpanSizeLookup.invalidateSpanIndexCache();
-        this.mSpanSizeLookup.invalidateSpanGroupIndexCache();
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void onItemsMoved(RecyclerView recyclerView, int i2, int i3, int i4) {
-        this.mSpanSizeLookup.invalidateSpanIndexCache();
-        this.mSpanSizeLookup.invalidateSpanGroupIndexCache();
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void onItemsRemoved(RecyclerView recyclerView, int i2, int i3) {
-        this.mSpanSizeLookup.invalidateSpanIndexCache();
-        this.mSpanSizeLookup.invalidateSpanGroupIndexCache();
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void onItemsUpdated(RecyclerView recyclerView, int i2, int i3, Object obj) {
-        this.mSpanSizeLookup.invalidateSpanIndexCache();
-        this.mSpanSizeLookup.invalidateSpanGroupIndexCache();
-    }
-
-    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void onLayoutChildren(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z) {
-        if (c0613z.m4309e()) {
-            cachePreLayoutSpanMapping();
-        }
-        super.onLayoutChildren(c0609v, c0613z);
-        clearPreLayoutSpanMappingCache();
-    }
-
-    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void onLayoutCompleted(RecyclerView.C0613z c0613z) {
-        super.onLayoutCompleted(c0613z);
-        this.mPendingSpanCountChange = false;
-    }
-
-    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int scrollHorizontallyBy(int i2, RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z) {
-        updateMeasurements();
-        ensureViewSet();
-        return super.scrollHorizontallyBy(i2, c0609v, c0613z);
-    }
-
-    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int scrollVerticallyBy(int i2, RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z) {
-        updateMeasurements();
-        ensureViewSet();
-        return super.scrollVerticallyBy(i2, c0609v, c0613z);
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void setMeasuredDimension(Rect rect, int i2, int i3) {
-        int iChooseSize;
-        int iChooseSize2;
-        if (this.mCachedBorders == null) {
-            super.setMeasuredDimension(rect, i2, i3);
-        }
-        int paddingLeft = getPaddingLeft() + getPaddingRight();
-        int paddingTop = getPaddingTop() + getPaddingBottom();
-        if (this.mOrientation == 1) {
-            iChooseSize2 = RecyclerView.AbstractC0602o.chooseSize(i3, rect.height() + paddingTop, getMinimumHeight());
-            int[] iArr = this.mCachedBorders;
-            iChooseSize = RecyclerView.AbstractC0602o.chooseSize(i2, iArr[iArr.length - 1] + paddingLeft, getMinimumWidth());
-        } else {
-            iChooseSize = RecyclerView.AbstractC0602o.chooseSize(i2, rect.width() + paddingLeft, getMinimumWidth());
-            int[] iArr2 = this.mCachedBorders;
-            iChooseSize2 = RecyclerView.AbstractC0602o.chooseSize(i3, iArr2[iArr2.length - 1] + paddingTop, getMinimumHeight());
-        }
-        setMeasuredDimension(iChooseSize, iChooseSize2);
-    }
-
-    public void setSpanCount(int i2) {
-        if (i2 == this.mSpanCount) {
-            return;
-        }
-        this.mPendingSpanCountChange = true;
-        if (i2 >= 1) {
-            this.mSpanCount = i2;
-            this.mSpanSizeLookup.invalidateSpanIndexCache();
-            requestLayout();
-        } else {
-            throw new IllegalArgumentException("Span count should be at least 1. Provided " + i2);
-        }
-    }
-
-    public void setSpanSizeLookup(AbstractC0579c abstractC0579c) {
-        this.mSpanSizeLookup = abstractC0579c;
-    }
-
-    @Override // androidx.recyclerview.widget.LinearLayoutManager
-    public void setStackFromEnd(boolean z) {
-        if (z) {
-            throw new UnsupportedOperationException("GridLayoutManager does not support stack from end. Consider using reverse layout");
-        }
-        super.setStackFromEnd(false);
-    }
-
-    public void setUsingSpansToEstimateScrollbarDimensions(boolean z) {
-        this.mUsingSpansToEstimateScrollBarDimensions = z;
-    }
-
-    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public boolean supportsPredictiveItemAnimations() {
-        return this.mPendingSavedState == null && !this.mPendingSpanCountChange;
-    }
-
-    static int[] calculateItemBorders(int[] iArr, int i2, int i3) {
-        int i4;
-        if (iArr == null || iArr.length != i2 + 1 || iArr[iArr.length - 1] != i3) {
-            iArr = new int[i2 + 1];
-        }
-        int i5 = 0;
-        iArr[0] = 0;
-        int i6 = i3 / i2;
-        int i7 = i3 % i2;
-        int i8 = 0;
-        for (int i9 = 1; i9 <= i2; i9++) {
-            i5 += i7;
-            if (i5 <= 0 || i2 - i5 >= i7) {
-                i4 = i6;
-            } else {
-                i4 = i6 + 1;
-                i5 -= i2;
+        int i19 = 0;
+        while (i19 < this.f28496J && cVar.c(c10) && iO3 > 0) {
+            int i20 = cVar.f28541d;
+            int iP3 = p3(xVar, c10, i20);
+            if (iP3 > this.f28496J) {
+                throw new IllegalArgumentException("Item at position " + i20 + " requires " + iP3 + " spans but GridLayoutManager has only " + this.f28496J + " spans.");
             }
-            i8 += i4;
-            iArr[i9] = i8;
+            iO3 -= iP3;
+            if (iO3 < 0 || (viewD = cVar.d(xVar)) == null) {
+                break;
+            }
+            this.f28498L[i19] = viewD;
+            i19++;
         }
-        return iArr;
+        if (i19 == 0) {
+            bVar.f28535b = true;
+            return;
+        }
+        Q2(xVar, c10, i19, z11);
+        float f10 = 0.0f;
+        int i21 = 0;
+        for (int i22 = 0; i22 < i19; i22++) {
+            View view = this.f28498L[i22];
+            if (cVar.f28549l == null) {
+                if (z11) {
+                    h(view);
+                } else {
+                    i(view, 0);
+                }
+            } else if (z11) {
+                f(view);
+            } else {
+                g(view, 0);
+            }
+            o(view, this.f28502P);
+            s3(view, iL, false);
+            int iE = this.f28523u.e(view);
+            if (iE > i21) {
+                i21 = iE;
+            }
+            float f11 = (this.f28523u.f(view) * 1.0f) / ((c) view.getLayoutParams()).f28508f;
+            if (f11 > f10) {
+                f10 = f11;
+            }
+        }
+        if (z10) {
+            q3(f10, i18);
+            i21 = 0;
+            for (int i23 = 0; i23 < i19; i23++) {
+                View view2 = this.f28498L[i23];
+                s3(view2, 1073741824, true);
+                int iE2 = this.f28523u.e(view2);
+                if (iE2 > i21) {
+                    i21 = iE2;
+                }
+            }
+        }
+        for (int i24 = 0; i24 < i19; i24++) {
+            View view3 = this.f28498L[i24];
+            if (this.f28523u.e(view3) != i21) {
+                c cVar2 = (c) view3.getLayoutParams();
+                Rect rect = cVar2.f28733b;
+                int i25 = rect.top + rect.bottom + ((ViewGroup.MarginLayoutParams) cVar2).topMargin + ((ViewGroup.MarginLayoutParams) cVar2).bottomMargin;
+                int i26 = rect.left + rect.right + ((ViewGroup.MarginLayoutParams) cVar2).leftMargin + ((ViewGroup.MarginLayoutParams) cVar2).rightMargin;
+                int iL3 = l3(cVar2.f28507e, cVar2.f28508f);
+                if (this.f28521s == 1) {
+                    iP2 = RecyclerView.q.P(iL3, 1073741824, i26, ((ViewGroup.MarginLayoutParams) cVar2).width, false);
+                    iP = View.MeasureSpec.makeMeasureSpec(i21 - i25, 1073741824);
+                } else {
+                    int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(i21 - i26, 1073741824);
+                    iP = RecyclerView.q.P(iL3, 1073741824, i25, ((ViewGroup.MarginLayoutParams) cVar2).height, false);
+                    iP2 = iMakeMeasureSpec;
+                }
+                t3(view3, iP2, iP, true);
+            }
+        }
+        bVar.f28534a = i21;
+        if (this.f28521s == 1) {
+            if (cVar.f28543f == -1) {
+                i15 = cVar.f28539b;
+                i17 = i15 - i21;
+            } else {
+                i17 = cVar.f28539b;
+                i15 = i17 + i21;
+            }
+            i13 = i17;
+            i14 = 0;
+            i12 = 0;
+        } else {
+            if (cVar.f28543f == -1) {
+                i11 = cVar.f28539b;
+                i10 = i11 - i21;
+            } else {
+                i10 = cVar.f28539b;
+                i11 = i10 + i21;
+            }
+            i12 = i10;
+            i13 = 0;
+            i14 = i11;
+            i15 = 0;
+        }
+        int i27 = 0;
+        while (i27 < i19) {
+            View view4 = this.f28498L[i27];
+            c cVar3 = (c) view4.getLayoutParams();
+            if (this.f28521s == 1) {
+                if (s2()) {
+                    int iI0 = i0() + this.f28497K[this.f28496J - cVar3.f28507e];
+                    iF3 = i15;
+                    iF = iI0;
+                    iF2 = iI0 - this.f28523u.f(view4);
+                } else {
+                    int iI02 = i0() + this.f28497K[cVar3.f28507e];
+                    iF3 = i15;
+                    iF2 = iI02;
+                    iF = this.f28523u.f(view4) + iI02;
+                }
+                i16 = i13;
+            } else {
+                int iK0 = k0() + this.f28497K[cVar3.f28507e];
+                i16 = iK0;
+                iF = i14;
+                iF2 = i12;
+                iF3 = this.f28523u.f(view4) + iK0;
+            }
+            E0(view4, iF2, i16, iF, iF3);
+            if (cVar3.c() || cVar3.b()) {
+                bVar.f28536c = true;
+            }
+            bVar.f28537d |= view4.hasFocusable();
+            i27++;
+            i15 = iF3;
+            i14 = iF;
+            i12 = iF2;
+            i13 = i16;
+        }
+        Arrays.fill(this.f28498L, (Object) null);
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public RecyclerView.C0603p generateLayoutParams(ViewGroup.LayoutParams layoutParams) {
-        return layoutParams instanceof ViewGroup.MarginLayoutParams ? new C0578b((ViewGroup.MarginLayoutParams) layoutParams) : new C0578b(layoutParams);
+    public void u3(int i10) {
+        if (i10 == this.f28496J) {
+            return;
+        }
+        this.f28495I = true;
+        if (i10 >= 1) {
+            this.f28496J = i10;
+            this.f28501O.h();
+            y1();
+        } else {
+            throw new IllegalArgumentException("Span count should be at least 1. Provided " + i10);
+        }
     }
 
-    /* renamed from: androidx.recyclerview.widget.GridLayoutManager$b */
-    public static class C0578b extends RecyclerView.C0603p {
+    public void v3(d dVar) {
+        this.f28501O = dVar;
+    }
 
-        /* renamed from: e */
-        int f3913e;
+    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.q
+    public int w(RecyclerView.C c10) {
+        return this.f28503Q ? V2(c10) : super.w(c10);
+    }
 
-        /* renamed from: f */
-        int f3914f;
+    @Override // androidx.recyclerview.widget.LinearLayoutManager
+    void w2(RecyclerView.x xVar, RecyclerView.C c10, LinearLayoutManager.a aVar, int i10) {
+        super.w2(xVar, c10, aVar, i10);
+        w3();
+        if (c10.b() > 0 && !c10.e()) {
+            X2(xVar, c10, aVar, i10);
+        }
+        Y2();
+    }
 
-        public C0578b(Context context, AttributeSet attributeSet) {
+    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.q
+    public int x(RecyclerView.C c10) {
+        return this.f28503Q ? W2(c10) : super.x(c10);
+    }
+
+    @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.q
+    public int z(RecyclerView.C c10) {
+        return this.f28503Q ? V2(c10) : super.z(c10);
+    }
+
+    public static class c extends RecyclerView.r {
+
+        /* renamed from: e, reason: collision with root package name */
+        int f28507e;
+
+        /* renamed from: f, reason: collision with root package name */
+        int f28508f;
+
+        public c(Context context, AttributeSet attributeSet) {
             super(context, attributeSet);
-            this.f3913e = -1;
-            this.f3914f = 0;
+            this.f28507e = -1;
+            this.f28508f = 0;
         }
 
-        /* renamed from: e */
-        public int m4166e() {
-            return this.f3913e;
+        public int e() {
+            return this.f28507e;
         }
 
-        /* renamed from: f */
-        public int m4167f() {
-            return this.f3914f;
+        public int f() {
+            return this.f28508f;
         }
 
-        public C0578b(int i2, int i3) {
-            super(i2, i3);
-            this.f3913e = -1;
-            this.f3914f = 0;
+        public c(int i10, int i11) {
+            super(i10, i11);
+            this.f28507e = -1;
+            this.f28508f = 0;
         }
 
-        public C0578b(ViewGroup.MarginLayoutParams marginLayoutParams) {
+        public c(ViewGroup.MarginLayoutParams marginLayoutParams) {
             super(marginLayoutParams);
-            this.f3913e = -1;
-            this.f3914f = 0;
+            this.f28507e = -1;
+            this.f28508f = 0;
         }
 
-        public C0578b(ViewGroup.LayoutParams layoutParams) {
+        public c(ViewGroup.LayoutParams layoutParams) {
             super(layoutParams);
-            this.f3913e = -1;
-            this.f3914f = 0;
+            this.f28507e = -1;
+            this.f28508f = 0;
         }
     }
 
-    public GridLayoutManager(Context context, int i2) {
+    public GridLayoutManager(Context context, int i10) {
         super(context);
-        this.mPendingSpanCountChange = false;
-        this.mSpanCount = -1;
-        this.mPreLayoutSpanSizeCache = new SparseIntArray();
-        this.mPreLayoutSpanIndexCache = new SparseIntArray();
-        this.mSpanSizeLookup = new C0577a();
-        this.mDecorInsets = new Rect();
-        setSpanCount(i2);
+        this.f28495I = false;
+        this.f28496J = -1;
+        this.f28499M = new SparseIntArray();
+        this.f28500N = new SparseIntArray();
+        this.f28501O = new b();
+        this.f28502P = new Rect();
+        this.f28504R = -1;
+        this.f28505S = -1;
+        this.f28506T = -1;
+        u3(i10);
     }
 
-    public GridLayoutManager(Context context, int i2, int i3, boolean z) {
-        super(context, i3, z);
-        this.mPendingSpanCountChange = false;
-        this.mSpanCount = -1;
-        this.mPreLayoutSpanSizeCache = new SparseIntArray();
-        this.mPreLayoutSpanIndexCache = new SparseIntArray();
-        this.mSpanSizeLookup = new C0577a();
-        this.mDecorInsets = new Rect();
-        setSpanCount(i2);
+    public GridLayoutManager(Context context, int i10, int i11, boolean z10) {
+        super(context, i11, z10);
+        this.f28495I = false;
+        this.f28496J = -1;
+        this.f28499M = new SparseIntArray();
+        this.f28500N = new SparseIntArray();
+        this.f28501O = new b();
+        this.f28502P = new Rect();
+        this.f28504R = -1;
+        this.f28505S = -1;
+        this.f28506T = -1;
+        u3(i10);
     }
 }

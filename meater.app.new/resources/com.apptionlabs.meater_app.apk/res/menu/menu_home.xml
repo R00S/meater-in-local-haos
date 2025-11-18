@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_vertical_more"
+        android:id="@+id/main_menu_item"
+        android:title=""
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:icon="@drawable/ic_img_nav_my_phone_home"
+                android:id="@+id/connection_item"
+                android:title="@string/my_devices"
+                android:iconTint="@color/black_color"/>
+            <item
+                android:icon="@drawable/ic_img_nav_add"
+                android:id="@+id/add_devices_item"
+                android:title="@string/menu_dropdown_main_add_devices"
+                android:iconTint="@color/black_color"/>
+            <item
+                android:icon="@drawable/ic_img_nav_clock"
+                android:id="@+id/cook_history_item"
+                android:title="@string/previous_cook_fragment_title"
+                android:iconTint="@color/black_color"/>
+            <item
+                android:icon="@drawable/ic_img_nav_settings"
+                android:id="@+id/settings_item"
+                android:title="@string/menu_dropdown_main_settings"
+                android:iconTint="@color/black_color"/>
+            <item
+                android:icon="@drawable/ic_close"
+                android:id="@+id/recipe_reset_item"
+                android:visible="false"
+                android:title="Reset Recipe"
+                android:iconTint="@color/meater_red"/>
+            <item
+                android:icon="@drawable/ic_dev_icon"
+                android:id="@+id/debug_logs_item"
+                android:visible="false"
+                android:title="Debug Logs"
+                android:iconTint="@color/meater_red"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/done_item"
+        android:visible="false"
+        android:title="@string/menu_text_done"
+        app:showAsAction="always"/>
+</menu>

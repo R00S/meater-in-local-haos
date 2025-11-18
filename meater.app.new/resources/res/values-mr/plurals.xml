@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <plurals name="updates_notification_body">
-        <item quantity="one">%d अपडेट आपल्या इंस्टलेशनसाठी तयार आहेत</item>
-        <item quantity="other">%d अपडेट आपल्या इंस्टलेशनसाठी तयार आहेत</item>
-    </plurals>
-</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_focused="true"
+        android:color="@color/meater_grey"/>
+    <item
+        android:color="@color/meater_grey"
+        android:state_hovered="true"/>
+    <item android:color="@color/meater_grey"/>
+</selector>

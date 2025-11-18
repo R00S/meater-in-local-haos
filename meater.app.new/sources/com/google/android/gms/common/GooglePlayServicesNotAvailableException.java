@@ -1,13 +1,13 @@
 package com.google.android.gms.common;
 
-/* compiled from: com.google.android.gms:play-services-basement@@18.1.0 */
+/* compiled from: com.google.android.gms:play-services-basement@@18.5.0 */
 /* loaded from: classes2.dex */
 public final class GooglePlayServicesNotAvailableException extends Exception {
 
-    /* renamed from: f */
-    public final int f17220f;
+    /* renamed from: B, reason: collision with root package name */
+    public final int f33449B;
 
-    public GooglePlayServicesNotAvailableException(int i2) {
-        this.f17220f = i2;
+    public GooglePlayServicesNotAvailableException(int i10) {
+        this.f33449B = i10;
     }
 }

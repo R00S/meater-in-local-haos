@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/defaultStateView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:id="@+id/defaultViewMeaterNumber"
+        android:background="@drawable/ic_number_box"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:includeFontPadding="false"
+        android:layout_centerInParent="true"
+        android:textAllCaps="true"
+        android:fontFamily="@font/roboto_condensed_regular"
+        android:backgroundTintMode="src_in"
+        app:autoSizeMaxTextSize="60dp"
+        app:autoSizeMinTextSize="4dp"
+        app:autoSizeStepGranularity="1dp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.35"/>
+    <com.apptionlabs.meater_app.views.ProbeNumberTextView
+        android:id="@+id/probeNumberText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.35"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

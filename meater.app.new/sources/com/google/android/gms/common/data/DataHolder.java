@@ -6,258 +6,212 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
-import com.google.android.gms.common.annotation.KeepForSdk;
 import com.google.android.gms.common.annotation.KeepName;
-import com.google.android.gms.common.internal.Preconditions;
-import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
-import com.google.android.gms.common.internal.safeparcel.SafeParcelWriter;
-import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
+import g7.C3445p;
+import h7.AbstractC3492a;
+import h7.C3493b;
 import java.io.Closeable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-@KeepForSdk
+/* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
 @KeepName
-@SafeParcelable.Class
 /* loaded from: classes2.dex */
-public final class DataHolder extends AbstractSafeParcelable implements Closeable {
+public final class DataHolder extends AbstractC3492a implements Closeable {
+    public static final Parcelable.Creator<DataHolder> CREATOR = new b();
 
-    @KeepForSdk
-    public static final Parcelable.Creator<DataHolder> CREATOR = new zac();
+    /* renamed from: L, reason: collision with root package name */
+    private static final a f33504L = new com.google.android.gms.common.data.a(new String[0], null);
 
-    /* renamed from: f */
-    private static final Builder f17655f = new C6411a(new String[0], null);
+    /* renamed from: B, reason: collision with root package name */
+    final int f33505B;
 
-    /* renamed from: g */
-    @SafeParcelable.VersionField
-    private final int f17656g;
+    /* renamed from: C, reason: collision with root package name */
+    private final String[] f33506C;
 
-    /* renamed from: h */
-    @SafeParcelable.Field
-    private final String[] f17657h;
+    /* renamed from: D, reason: collision with root package name */
+    Bundle f33507D;
 
-    /* renamed from: i */
-    private Bundle f17658i;
+    /* renamed from: E, reason: collision with root package name */
+    private final CursorWindow[] f33508E;
 
-    /* renamed from: j */
-    @SafeParcelable.Field
-    private final CursorWindow[] f17659j;
+    /* renamed from: F, reason: collision with root package name */
+    private final int f33509F;
 
-    /* renamed from: k */
-    @SafeParcelable.Field
-    private final int f17660k;
+    /* renamed from: G, reason: collision with root package name */
+    private final Bundle f33510G;
 
-    /* renamed from: l */
-    @SafeParcelable.Field
-    private final Bundle f17661l;
+    /* renamed from: H, reason: collision with root package name */
+    int[] f33511H;
 
-    /* renamed from: m */
-    private int[] f17662m;
+    /* renamed from: I, reason: collision with root package name */
+    int f33512I;
 
-    /* renamed from: n */
-    private int f17663n;
+    /* renamed from: J, reason: collision with root package name */
+    boolean f33513J = false;
 
-    /* renamed from: o */
-    private boolean f17664o = false;
+    /* renamed from: K, reason: collision with root package name */
+    private boolean f33514K = true;
 
-    /* renamed from: p */
-    private boolean f17665p = true;
+    /* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
+    public static class a {
 
-    public static class zaa extends RuntimeException {
+        /* renamed from: a, reason: collision with root package name */
+        private final String[] f33515a;
+
+        /* renamed from: b, reason: collision with root package name */
+        private final ArrayList f33516b = new ArrayList();
+
+        /* renamed from: c, reason: collision with root package name */
+        private final HashMap f33517c = new HashMap();
     }
 
-    @SafeParcelable.Constructor
-    DataHolder(@SafeParcelable.Param(id = 1000) int i2, @SafeParcelable.Param(id = 1) String[] strArr, @SafeParcelable.Param(id = 2) CursorWindow[] cursorWindowArr, @SafeParcelable.Param(id = 3) int i3, @SafeParcelable.Param(id = 4) Bundle bundle) {
-        this.f17656g = i2;
-        this.f17657h = strArr;
-        this.f17659j = cursorWindowArr;
-        this.f17660k = i3;
-        this.f17661l = bundle;
+    DataHolder(int i10, String[] strArr, CursorWindow[] cursorWindowArr, int i11, Bundle bundle) {
+        this.f33505B = i10;
+        this.f33506C = strArr;
+        this.f33508E = cursorWindowArr;
+        this.f33509F = i11;
+        this.f33510G = bundle;
     }
 
-    /* renamed from: i0 */
-    private final void m14262i0(String str, int i2) {
-        Bundle bundle = this.f17658i;
+    private final void B1(String str, int i10) {
+        Bundle bundle = this.f33507D;
         if (bundle == null || !bundle.containsKey(str)) {
-            String strValueOf = String.valueOf(str);
-            throw new IllegalArgumentException(strValueOf.length() != 0 ? "No such column: ".concat(strValueOf) : new String("No such column: "));
+            throw new IllegalArgumentException("No such column: ".concat(String.valueOf(str)));
         }
         if (isClosed()) {
             throw new IllegalArgumentException("Buffer is closed.");
         }
-        if (i2 < 0 || i2 >= this.f17663n) {
-            throw new CursorIndexOutOfBoundsException(i2, this.f17663n);
+        if (i10 < 0 || i10 >= this.f33512I) {
+            throw new CursorIndexOutOfBoundsException(i10, this.f33512I);
         }
     }
 
-    @KeepForSdk
-    /* renamed from: W */
-    public final int m14263W() {
-        return this.f17660k;
+    public String G0(String str, int i10, int i11) {
+        B1(str, i10);
+        return this.f33508E[i11].getString(i10, this.f33507D.getInt(str));
     }
 
-    @KeepForSdk
-    /* renamed from: Y */
-    public final String m14264Y(String str, int i2, int i3) {
-        m14262i0(str, i2);
-        return this.f17659j[i3].getString(i2, this.f17658i.getInt(str));
+    public int O0(int i10) {
+        int length;
+        int i11 = 0;
+        C3445p.n(i10 >= 0 && i10 < this.f33512I);
+        while (true) {
+            int[] iArr = this.f33511H;
+            length = iArr.length;
+            if (i11 >= length) {
+                break;
+            }
+            if (i10 < iArr[i11]) {
+                i11--;
+                break;
+            }
+            i11++;
+        }
+        return i11 == length ? i11 - 1 : i11;
+    }
+
+    public final void U0() {
+        this.f33507D = new Bundle();
+        int i10 = 0;
+        int i11 = 0;
+        while (true) {
+            String[] strArr = this.f33506C;
+            if (i11 >= strArr.length) {
+                break;
+            }
+            this.f33507D.putInt(strArr[i11], i11);
+            i11++;
+        }
+        this.f33511H = new int[this.f33508E.length];
+        int numRows = 0;
+        while (true) {
+            CursorWindow[] cursorWindowArr = this.f33508E;
+            if (i10 >= cursorWindowArr.length) {
+                this.f33512I = numRows;
+                return;
+            }
+            this.f33511H[i10] = numRows;
+            numRows += this.f33508E[i10].getNumRows() - (numRows - cursorWindowArr[i10].getStartPosition());
+            i10++;
+        }
     }
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
-    @KeepForSdk
-    public final void close() {
+    public void close() {
         synchronized (this) {
-            if (!this.f17664o) {
-                this.f17664o = true;
-                int i2 = 0;
-                while (true) {
-                    CursorWindow[] cursorWindowArr = this.f17659j;
-                    if (i2 >= cursorWindowArr.length) {
-                        break;
+            try {
+                if (!this.f33513J) {
+                    this.f33513J = true;
+                    int i10 = 0;
+                    while (true) {
+                        CursorWindow[] cursorWindowArr = this.f33508E;
+                        if (i10 >= cursorWindowArr.length) {
+                            break;
+                        }
+                        cursorWindowArr[i10].close();
+                        i10++;
                     }
-                    cursorWindowArr[i2].close();
-                    i2++;
                 }
+            } catch (Throwable th) {
+                throw th;
             }
         }
     }
 
-    @KeepForSdk
-    /* renamed from: e0 */
-    public final int m14265e0(int i2) {
-        int[] iArr;
-        int i3 = 0;
-        Preconditions.m14375n(i2 >= 0 && i2 < this.f17663n);
-        while (true) {
-            iArr = this.f17662m;
-            if (i3 >= iArr.length) {
-                break;
-            }
-            if (i2 < iArr[i3]) {
-                i3--;
-                break;
-            }
-            i3++;
-        }
-        return i3 == iArr.length ? i3 - 1 : i3;
+    public byte[] f0(String str, int i10, int i11) {
+        B1(str, i10);
+        return this.f33508E[i11].getBlob(i10, this.f33507D.getInt(str));
     }
 
     protected final void finalize() throws Throwable {
         try {
-            if (this.f17665p && this.f17659j.length > 0 && !isClosed()) {
+            if (this.f33514K && this.f33508E.length > 0 && !isClosed()) {
                 close();
-                String string = toString();
-                StringBuilder sb = new StringBuilder(String.valueOf(string).length() + 178);
-                sb.append("Internal data leak within a DataBuffer object detected!  Be sure to explicitly call release() on all DataBuffer extending objects when you are done with them. (internal object: ");
-                sb.append(string);
-                sb.append(")");
-                Log.e("DataBuffer", sb.toString());
+                Log.e("DataBuffer", "Internal data leak within a DataBuffer object detected!  Be sure to explicitly call release() on all DataBuffer extending objects when you are done with them. (internal object: " + toString() + ")");
             }
         } finally {
             super.finalize();
         }
     }
 
-    @KeepForSdk
-    public final int getCount() {
-        return this.f17663n;
+    public int getCount() {
+        return this.f33512I;
     }
 
-    @KeepForSdk
-    public final boolean isClosed() {
-        boolean z;
+    public int h0(String str, int i10, int i11) {
+        B1(str, i10);
+        return this.f33508E[i11].getInt(i10, this.f33507D.getInt(str));
+    }
+
+    public boolean isClosed() {
+        boolean z10;
         synchronized (this) {
-            z = this.f17664o;
+            z10 = this.f33513J;
         }
-        return z;
+        return z10;
     }
 
-    /* renamed from: p0 */
-    public final void m14266p0() {
-        this.f17658i = new Bundle();
-        int i2 = 0;
-        int i3 = 0;
-        while (true) {
-            String[] strArr = this.f17657h;
-            if (i3 >= strArr.length) {
-                break;
-            }
-            this.f17658i.putInt(strArr[i3], i3);
-            i3++;
-        }
-        this.f17662m = new int[this.f17659j.length];
-        int numRows = 0;
-        while (true) {
-            CursorWindow[] cursorWindowArr = this.f17659j;
-            if (i2 >= cursorWindowArr.length) {
-                this.f17663n = numRows;
-                return;
-            }
-            this.f17662m[i2] = numRows;
-            numRows += this.f17659j[i2].getNumRows() - (numRows - cursorWindowArr[i2].getStartPosition());
-            i2++;
-        }
+    public Bundle r0() {
+        return this.f33510G;
+    }
+
+    public int v0() {
+        return this.f33509F;
     }
 
     @Override // android.os.Parcelable
-    public final void writeToParcel(Parcel parcel, int i2) {
-        int iM14466a = SafeParcelWriter.m14466a(parcel);
-        SafeParcelWriter.m14487v(parcel, 1, this.f17657h, false);
-        SafeParcelWriter.m14489x(parcel, 2, this.f17659j, i2, false);
-        SafeParcelWriter.m14477l(parcel, 3, m14263W());
-        SafeParcelWriter.m14470e(parcel, 4, m14268z(), false);
-        SafeParcelWriter.m14477l(parcel, 1000, this.f17656g);
-        SafeParcelWriter.m14467b(parcel, iM14466a);
-        if ((i2 & 1) != 0) {
+    public final void writeToParcel(Parcel parcel, int i10) {
+        String[] strArr = this.f33506C;
+        int iA = C3493b.a(parcel);
+        C3493b.r(parcel, 1, strArr, false);
+        C3493b.t(parcel, 2, this.f33508E, i10, false);
+        C3493b.k(parcel, 3, v0());
+        C3493b.e(parcel, 4, r0(), false);
+        C3493b.k(parcel, 1000, this.f33505B);
+        C3493b.b(parcel, iA);
+        if ((i10 & 1) != 0) {
             close();
-        }
-    }
-
-    @KeepForSdk
-    /* renamed from: y */
-    public final byte[] m14267y(String str, int i2, int i3) {
-        m14262i0(str, i2);
-        return this.f17659j[i3].getBlob(i2, this.f17658i.getInt(str));
-    }
-
-    @KeepForSdk
-    /* renamed from: z */
-    public final Bundle m14268z() {
-        return this.f17661l;
-    }
-
-    @KeepForSdk
-    public static class Builder {
-
-        /* renamed from: a */
-        private final String[] f17666a;
-
-        /* renamed from: b */
-        private final ArrayList<HashMap<String, Object>> f17667b;
-
-        /* renamed from: c */
-        private final String f17668c;
-
-        /* renamed from: d */
-        private final HashMap<Object, Integer> f17669d;
-
-        /* renamed from: e */
-        private boolean f17670e;
-
-        /* renamed from: f */
-        private String f17671f;
-
-        private Builder(String[] strArr, String str) {
-            this.f17666a = (String[]) Preconditions.m14372k(strArr);
-            this.f17667b = new ArrayList<>();
-            this.f17668c = str;
-            this.f17669d = new HashMap<>();
-            this.f17670e = false;
-            this.f17671f = null;
-        }
-
-        /* synthetic */ Builder(String[] strArr, String str, C6411a c6411a) {
-            this(strArr, null);
         }
     }
 }

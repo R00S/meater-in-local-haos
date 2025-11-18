@@ -4,104 +4,83 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import androidx.annotation.Keep;
-import com.google.android.gms.common.internal.Preconditions;
-import com.google.android.gms.internal.measurement.zzx;
-import com.google.android.gms.measurement.internal.zzfx;
-import com.google.android.gms.measurement.internal.zzhx;
-import com.google.android.gms.measurement.internal.zzw;
-import com.google.firebase.iid.FirebaseInstanceId;
+import com.apptionlabs.meater_app.data.Config;
+import com.google.android.gms.internal.measurement.C2497i1;
+import com.google.firebase.installations.c;
+import g7.C3445p;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+import v7.W;
+import z7.C5211m;
 
-/* compiled from: com.google.android.gms:play-services-measurement-api@@17.2.0 */
-/* loaded from: classes.dex */
+/* compiled from: com.google.android.gms:play-services-measurement-api@@22.2.0 */
+/* loaded from: classes2.dex */
 public final class FirebaseAnalytics {
 
-    /* renamed from: a */
-    private static volatile FirebaseAnalytics f30639a;
+    /* renamed from: b, reason: collision with root package name */
+    private static volatile FirebaseAnalytics f38076b;
 
-    /* renamed from: b */
-    private final zzfx f30640b;
+    /* renamed from: a, reason: collision with root package name */
+    private final C2497i1 f38077a;
 
-    /* renamed from: c */
-    private final zzx f30641c;
-
-    /* renamed from: d */
-    private final boolean f30642d;
-
-    /* renamed from: e */
-    private final Object f30643e;
-
-    private FirebaseAnalytics(zzfx zzfxVar) {
-        Preconditions.m14372k(zzfxVar);
-        this.f30640b = zzfxVar;
-        this.f30641c = null;
-        this.f30642d = false;
-        this.f30643e = new Object();
+    private FirebaseAnalytics(C2497i1 c2497i1) {
+        C3445p.k(c2497i1);
+        this.f38077a = c2497i1;
     }
 
     @Keep
     public static FirebaseAnalytics getInstance(Context context) {
-        if (f30639a == null) {
+        if (f38076b == null) {
             synchronized (FirebaseAnalytics.class) {
-                if (f30639a == null) {
-                    if (zzx.m22563E(context)) {
-                        f30639a = new FirebaseAnalytics(zzx.m22577d(context));
-                    } else {
-                        f30639a = new FirebaseAnalytics(zzfx.m23203a(context, null));
+                try {
+                    if (f38076b == null) {
+                        f38076b = new FirebaseAnalytics(C2497i1.e(context));
                     }
+                } finally {
                 }
             }
         }
-        return f30639a;
+        return f38076b;
     }
 
     @Keep
-    public static zzhx getScionFrontendApiImplementation(Context context, Bundle bundle) {
-        zzx zzxVarM22578e;
-        if (zzx.m22563E(context) && (zzxVarM22578e = zzx.m22578e(context, null, null, null, bundle)) != null) {
-            return new C8099b(zzxVarM22578e);
+    public static W getScionFrontendApiImplementation(Context context, Bundle bundle) {
+        C2497i1 c2497i1F = C2497i1.f(context, null, null, null, bundle);
+        if (c2497i1F == null) {
+            return null;
         }
-        return null;
+        return new a(c2497i1F);
     }
 
-    /* renamed from: a */
-    public final void m24948a(String str, Bundle bundle) throws IllegalStateException {
-        if (this.f30642d) {
-            this.f30641c.m22610q(str, bundle);
-        } else {
-            this.f30640b.m23216H().m23282T("app", str, bundle, true);
-        }
+    public final void a(String str, Bundle bundle) {
+        this.f38077a.s(str, bundle);
     }
 
-    /* renamed from: b */
-    public final void m24949b(String str, String str2) {
-        if (this.f30642d) {
-            this.f30641c.m22611r(str, str2);
-        } else {
-            this.f30640b.m23216H().m23285W("app", str, str2, false);
-        }
+    public final void b(boolean z10) {
+        this.f38077a.p(Boolean.valueOf(z10));
+    }
+
+    public final void c(String str, String str2) {
+        this.f38077a.C(str, str2);
     }
 
     @Keep
     public final String getFirebaseInstanceId() {
-        return FirebaseInstanceId.m26166j().m26184h();
-    }
-
-    @Keep
-    public final void setCurrentScreen(Activity activity, String str, String str2) throws IllegalStateException {
-        if (this.f30642d) {
-            this.f30641c.m22607j(activity, str, str2);
-        } else if (zzw.m23556a()) {
-            this.f30640b.m23225Q().m23336F(activity, str, str2);
-        } else {
-            this.f30640b.mo22836h().m23140K().m23147a("setCurrentScreen must be called from the main thread");
+        try {
+            return (String) C5211m.b(c.q().c(), Config.MC_STATS_INTERVAL, TimeUnit.MILLISECONDS);
+        } catch (InterruptedException e10) {
+            throw new IllegalStateException(e10);
+        } catch (ExecutionException e11) {
+            throw new IllegalStateException(e11.getCause());
+        } catch (TimeoutException unused) {
+            throw new IllegalThreadStateException("Firebase Installations getId Task has timed out.");
         }
     }
 
-    private FirebaseAnalytics(zzx zzxVar) {
-        Preconditions.m14372k(zzxVar);
-        this.f30640b = null;
-        this.f30641c = zzxVar;
-        this.f30642d = true;
-        this.f30643e = new Object();
+    @Keep
+    @Deprecated
+    public final void setCurrentScreen(Activity activity, String str, String str2) {
+        this.f38077a.j(activity, str, str2);
     }
 }
