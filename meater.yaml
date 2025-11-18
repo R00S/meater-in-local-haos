@@ -3,19 +3,35 @@ esphome:
   friendly_name: meater
   includes:
     - includes/meater_udp_broadcast.h
+    - includes/meater_bluedroid_server.h
+  on_boot:
+    # Priority -100 ensures this runs late in boot, after BLE stack is fully ready
+    # Lower priority = runs later (WiFi connects at -100, so we run after that)
+    priority: -100
+    then:
+      - delay: 2s  # Delay to ensure Bluedroid is stable
+      - lambda: |-
+          ESP_LOGI("meater", "Boot sequence: on_boot triggered, about to init BLE server");
+      - script.execute: init_ble_server
 
 esp32:
   board: esp32-c3-devkitm-1
   framework:
     type: esp-idf
+    sdkconfig_options:
+      CONFIG_BT_ENABLED: y
+      CONFIG_BT_BLE_ENABLED: y
+      CONFIG_BT_BLUEDROID_ENABLED: y
+      CONFIG_BT_CLASSIC_ENABLED: n
+      CONFIG_BT_NIMBLE_ENABLED: n
+      CONFIG_BTDM_CTRL_MODE_BLE_ONLY: y
+      CONFIG_BTDM_CTRL_MODE_BR_EDR_ONLY: n
+      CONFIG_BTDM_CTRL_MODE_BTDM: n
+      CONFIG_BT_RESERVE_DRAM: "0x10000"
 
 # Enable logging
 logger:
   level: DEBUG
-  logs:
-    esp32_ble_client: INFO
-    ble_sensor: INFO
-    sensor: INFO
 
 # Enable Home Assistant API
 api:
@@ -37,18 +53,64 @@ wifi:
 
 captive_portal:
 
-ble_client:
-  - mac_address: !secret meater_mac_address
-    id: meater
+# Enable BLE - this ensures bt libraries are linked
+esp32_ble_tracker:
+  scan_parameters:
+    active: false
 
-# Global variable to store the UDP broadcaster instance
+# BLE CLIENT REMOVED - see meater_ble_client_backup.yaml for restoration
+# ble_client:
+#   - mac_address: !secret meater_mac_address
+#     id: meater
+
+# Global variables to store the UDP broadcaster and BLE server instances
 globals:
   - id: udp_broadcaster_ptr
     type: void*
     restore_value: no
     initial_value: 'nullptr'
+  - id: ble_server_ptr
+    type: void*
+    restore_value: no
+    initial_value: 'nullptr'
+
+# Initialize UDP broadcaster and BLE server on boot
+script:
+  - id: init_udp_broadcaster
+    then:
+      - lambda: |-
+          static bool udp_initialized = false;
+          if (!udp_initialized && id(udp_broadcaster_ptr) == nullptr) {
+            ESP_LOGI("meater", "Initializing UDP broadcaster with device name: MEATER");
+            static MeaterUDPBroadcaster* udp_broadcaster = new MeaterUDPBroadcaster();
+            udp_broadcaster->set_device_name("MEATER");
+            udp_broadcaster->setup();
+            id(udp_broadcaster_ptr) = (void*)udp_broadcaster;
+            udp_initialized = true;
+            
+            // Set initial mock firmware and device name
+            id(meater_firmware).publish_state("v1.0.4_0");
+            id(meater_device_name_display).publish_state("MEATER");
+          }
+  
+  - id: init_ble_server
+    then:
+      - lambda: |-
+          static bool ble_initialized = false;
+          if (!ble_initialized && id(ble_server_ptr) == nullptr) {
+            ESP_LOGI("meater", "Initializing MEATER BLE server (Bluedroid)");
+            static MeaterBluedroidServer* ble_server = new MeaterBluedroidServer();
+            if (ble_server->setup()) {
+              id(ble_server_ptr) = (void*)ble_server;
+              ble_initialized = true;
+              ESP_LOGI("meater", "MEATER BLE server started successfully");
+            } else {
+              ESP_LOGE("meater", "Failed to initialize BLE server");
+            }
+          }
 
 # Poll UDP socket for incoming packets and send broadcasts
+# Also generate mock temperature data
 interval:
   - interval: 100ms
     then:
@@ -56,6 +118,60 @@ interval:
           if (id(udp_broadcaster_ptr) != nullptr) {
             ((MeaterUDPBroadcaster*)id(udp_broadcaster_ptr))->poll_and_broadcast();
           }
+  - interval: 2s
+    then:
+      - script.execute: init_udp_broadcaster
+      - lambda: |-
+          // Generate mock temperature and battery data
+          static uint32_t counter = 0;
+          counter++;
+          
+          // Mock temperature data (8 bytes) - simulating slowly rising temperature
+          // Format: tip_raw (2 bytes), ra (2 bytes), oa (2 bytes), max_temp (2 bytes)
+          std::vector<uint8_t> temp_data(8);
+          uint16_t base_temp = 300 + (counter % 200);  // Simulate 18-30°C range
+          temp_data[0] = base_temp & 0xFF;
+          temp_data[1] = (base_temp >> 8) & 0xFF;
+          temp_data[2] = 100;  // ra
+          temp_data[3] = 0;
+          temp_data[4] = 80;   // oa
+          temp_data[5] = 0;
+          temp_data[6] = 0;    // max_temp
+          temp_data[7] = 0;
+          
+          // Mock battery data (2 bytes) - simulating 90% battery
+          std::vector<uint8_t> battery_data(2);
+          battery_data[0] = 4;  // Battery data byte 1
+          battery_data[1] = 5;  // Battery data byte 2 (4+5)*10 = 90%
+          
+          // Update UDP broadcaster with mock data
+          if (id(udp_broadcaster_ptr) != nullptr) {
+            ((MeaterUDPBroadcaster*)id(udp_broadcaster_ptr))->update_temp_data(temp_data);
+            ((MeaterUDPBroadcaster*)id(udp_broadcaster_ptr))->update_battery_data(battery_data);
+          }
+          
+          // Update BLE server with mock data
+          if (id(ble_server_ptr) != nullptr) {
+            ((MeaterBluedroidServer*)id(ble_server_ptr))->update_temperature(temp_data);
+            ((MeaterBluedroidServer*)id(ble_server_ptr))->update_battery(battery_data);
+          }
+          
+          // Update Home Assistant sensors with mock data
+          uint16_t tip_temp = (temp_data[0] + (temp_data[1] << 8) + 8.0) / 16.0;
+          id(meater_tip_temp).publish_state(tip_temp);
+          
+          uint16_t tip = temp_data[0] + (temp_data[1] << 8);
+          uint16_t ra = temp_data[2] + (temp_data[3] << 8);
+          uint16_t oa = temp_data[4] + (temp_data[5] << 8);
+          uint16_t min_val = 48;
+          uint16_t ambient = (tip + std::max(0, (((ra - std::min(min_val, oa)) * 16 * 589) / 1487)) + 8.0) / 16;
+          id(meater_ambient_temp).publish_state(ambient);
+          
+          uint16_t battery = (battery_data[0] + battery_data[1]) * 10;
+          id(meater_battery).publish_state(battery);
+          
+          // Mock RSSI
+          id(meater_rssi).publish_state(-50.0);
  
 text_sensor:
   - platform: template
@@ -65,99 +181,32 @@ text_sensor:
     name: "MEATER device name"
     id: meater_device_name_display
  
+# BLE CLIENT SENSORS REMOVED - see meater_ble_client_backup.yaml for restoration
+# Using template sensors with mock data instead
 sensor:
-  - platform: ble_client
-    type: characteristic
-    ble_client_id: meater
+  - platform: template
     name: "MEATER tip temperature"
-    service_uuid: 'a75cc7fc-c956-488f-ac2a-2dbc08b63a04'
-    characteristic_uuid: '7edda774-045e-4bbf-909b-45d1991a2876'
+    id: meater_tip_temp
     icon: 'mdi:thermometer'
     unit_of_measurement: '°C'
     accuracy_decimals: 2
-    notify: true
-    lambda: |-
-      // Broadcast raw data via UDP for MEATER app discovery
-      if (id(udp_broadcaster_ptr) != nullptr) {
-        ((MeaterUDPBroadcaster*)id(udp_broadcaster_ptr))->update_temp_data(x);
-      }
-      
-      // Calculate temperature for Home Assistant
-      uint16_t tip_temp = (x[0] + (x[1] << 8) + 8.0) / 16.0;
-      return (float)tip_temp;
-  - platform: ble_client
-    type: characteristic
-    ble_client_id: meater
+    
+  - platform: template
     name: "MEATER ambient temperature"
-    service_uuid: 'a75cc7fc-c956-488f-ac2a-2dbc08b63a04'
-    characteristic_uuid: '7edda774-045e-4bbf-909b-45d1991a2876'
+    id: meater_ambient_temp
     icon: 'mdi:thermometer'
     unit_of_measurement: '°C'
     accuracy_decimals: 2
-    notify: true
-    lambda: |-
-      uint16_t tip = x[0] + (x[1] << 8);
-      uint16_t ra = x[2] + (x[3] << 8);
-      uint16_t oa = x[4] + (x[5] << 8);
-      uint16_t min_val = 48;
-      uint16_t ambient = (tip + std::max(0, (((ra - std::min(min_val, oa)) * 16 * 589) / 1487)) + 8.0) / 16;
-      return (float)ambient;
-  - platform: ble_client
-    type: characteristic
-    ble_client_id: meater
+    
+  - platform: template
     name: "MEATER battery level"
-    service_uuid: 'a75cc7fc-c956-488f-ac2a-2dbc08b63a04'
-    characteristic_uuid: '2adb4877-68d8-4884-bd3c-d83853bf27b8'
+    id: meater_battery
     icon: 'mdi:battery'
     unit_of_measurement: '%'
-    notify: true
-    lambda: |-
-      // Broadcast raw data via UDP for MEATER app
-      if (id(udp_broadcaster_ptr) != nullptr) {
-        ((MeaterUDPBroadcaster*)id(udp_broadcaster_ptr))->update_battery_data(x);
-      }
-      
-      // Calculate battery percentage for Home Assistant
-      uint16_t battery = (x[0] + x[1]) * 10;
-      return (float)battery;
-  - platform: ble_client
-    type: characteristic
-    ble_client_id: meater
-    id: firmware
-    service_uuid: '180A'
-    characteristic_uuid: '00002a26-0000-1000-8000-00805f9b34fb'
-    lambda: |-
-      std::string data_string(x.begin(), x.end());
-      id(meater_firmware).publish_state(data_string.c_str());
-      return (float)x.size();
-  - platform: ble_client
-    type: rssi
-    ble_client_id: meater
+    accuracy_decimals: 0
+    
+  - platform: template
     name: "MEATER RSSI"
-  - platform: ble_client
-    type: characteristic
-    ble_client_id: meater
-    id: meater_device_name_reader
-    internal: true
-    service_uuid: '1800'  # Generic Access Profile service
-    characteristic_uuid: '2A00'  # Device Name characteristic
-    lambda: |-
-      // Read device name from real MEATER
-      std::string device_name(x.begin(), x.end());
-      ESP_LOGI("meater", "Read device name from real MEATER: %s", device_name.c_str());
-      
-      // Update text sensor
-      id(meater_device_name_display).publish_state(device_name);
-      
-      // Initialize UDP broadcaster with device name (only once after name is read)
-      static bool udp_initialized = false;
-      if (!udp_initialized && id(udp_broadcaster_ptr) == nullptr) {
-        ESP_LOGI("meater", "Initializing UDP broadcaster with device name: %s", device_name.c_str());
-        static MeaterUDPBroadcaster* udp_broadcaster = new MeaterUDPBroadcaster();
-        udp_broadcaster->set_device_name(device_name);
-        udp_broadcaster->setup();
-        id(udp_broadcaster_ptr) = (void*)udp_broadcaster;
-        udp_initialized = true;
-      }
-      
-      return (float)x.size();
+    id: meater_rssi
+    unit_of_measurement: 'dBm'
+    accuracy_decimals: 0

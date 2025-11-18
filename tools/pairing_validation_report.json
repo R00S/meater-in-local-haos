@@ -1,0 +1,15 @@
+{
+  "total": 1,
+  "simulated": 1,
+  "success": 1,
+  "failed": 0,
+  "results": [
+    {
+      "step": "pairing_date",
+      "status": "simulated",
+      "success": true
+    }
+  ],
+  "pairing_date_required": true,
+  "pairing_status_required": false
+}
