@@ -143,6 +143,9 @@ private:
             case ESP_GAP_BLE_SCAN_RSP_DATA_SET_COMPLETE_EVT:
                 ESP_LOGI("meater_ble_server", "Scan response data set complete");
                 break;
+            case ESP_GAP_BLE_SCAN_RESULT_EVT:
+                // Ignore scan results from esp32_ble_tracker - too noisy
+                break;
             default:
                 ESP_LOGD("meater_ble_server", "Unhandled GAP event: %d", event);
                 break;
@@ -411,12 +414,15 @@ public:
         battery_notify_enabled_(false),
         service_creation_count_(0) {
         
+        ESP_LOGI("meater_ble_server", "Constructor called - creating MeaterBluedroidServer instance");
+        
         // Initialize data
         memset(temp_data_, 0, sizeof(temp_data_));
         memset(battery_data_, 0, sizeof(battery_data_));
         memset(config_data_, 0, sizeof(config_data_));
         
         instance_ = this;
+        ESP_LOGI("meater_ble_server", "Constructor complete - instance pointer set");
     }
     
     bool setup() {
