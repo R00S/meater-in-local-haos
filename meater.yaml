@@ -3,6 +3,7 @@ esphome:
   friendly_name: meater
   includes:
     - includes/meater_udp_broadcast.h
+    - includes/meater_bluedroid_server.h
 
 esp32:
   board: esp32-c3-devkitm-1
@@ -38,14 +39,18 @@ captive_portal:
 #   - mac_address: !secret meater_mac_address
 #     id: meater
 
-# Global variable to store the UDP broadcaster instance
+# Global variables to store the UDP broadcaster and BLE server instances
 globals:
   - id: udp_broadcaster_ptr
     type: void*
     restore_value: no
     initial_value: 'nullptr'
+  - id: ble_server_ptr
+    type: void*
+    restore_value: no
+    initial_value: 'nullptr'
 
-# Initialize UDP broadcaster on boot
+# Initialize UDP broadcaster and BLE server on boot
 script:
   - id: init_udp_broadcaster
     then:
@@ -60,8 +65,24 @@ script:
             udp_initialized = true;
             
             // Set initial mock firmware and device name
-            id(meater_firmware).publish_state("v1.0.5_0");
+            id(meater_firmware).publish_state("v1.0.5_128");
             id(meater_device_name_display).publish_state("MEATER+");
+          }
+  
+  - id: init_ble_server
+    then:
+      - lambda: |-
+          static bool ble_initialized = false;
+          if (!ble_initialized && id(ble_server_ptr) == nullptr) {
+            ESP_LOGI("meater", "Initializing MEATER+ BLE server (Bluedroid)");
+            static MeaterBluedroidServer* ble_server = new MeaterBluedroidServer();
+            if (ble_server->setup()) {
+              id(ble_server_ptr) = (void*)ble_server;
+              ble_initialized = true;
+              ESP_LOGI("meater", "MEATER+ BLE server started successfully");
+            } else {
+              ESP_LOGE("meater", "Failed to initialize BLE server");
+            }
           }
 
 # Poll UDP socket for incoming packets and send broadcasts
@@ -76,6 +97,7 @@ interval:
   - interval: 2s
     then:
       - script.execute: init_udp_broadcaster
+      - script.execute: init_ble_server
       - lambda: |-
           // Generate mock temperature and battery data
           static uint32_t counter = 0;
@@ -103,6 +125,12 @@ interval:
           if (id(udp_broadcaster_ptr) != nullptr) {
             ((MeaterUDPBroadcaster*)id(udp_broadcaster_ptr))->update_temp_data(temp_data);
             ((MeaterUDPBroadcaster*)id(udp_broadcaster_ptr))->update_battery_data(battery_data);
+          }
+          
+          // Update BLE server with mock data
+          if (id(ble_server_ptr) != nullptr) {
+            ((MeaterBluedroidServer*)id(ble_server_ptr))->update_temperature(temp_data);
+            ((MeaterBluedroidServer*)id(ble_server_ptr))->update_battery(battery_data);
           }
           
           // Update Home Assistant sensors with mock data

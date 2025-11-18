@@ -1,0 +1,500 @@
+#pragma once
+
+#include "esphome.h"
+
+#ifdef USE_ESP32
+
+#include <esp_bt.h>
+#include <esp_bt_main.h>
+#include <esp_gap_ble_api.h>
+#include <esp_gatts_api.h>
+#include <esp_gatt_common_api.h>
+#include <string.h>
+
+// MEATER+ Device Emulation using Bluedroid
+// Probe Number: 128
+// Device Name: "MEATER+"
+
+// UUIDs (stored in reverse byte order for ESP32)
+// MEATER Service: a75cc7fc-c956-488f-ac2a-2dbc08b63a04
+static const uint8_t MEATER_SERVICE_UUID[16] = {
+    0x04, 0x3a, 0xb6, 0x08, 0x2d, 0xac, 0x8f, 0x4a,
+    0x56, 0xc9, 0xfc, 0xc7, 0x5c, 0xa7, 0x00, 0x00
+};
+
+// Temperature Characteristic: 7edda774-045e-4bbf-909b-45d1991a2876
+static const uint8_t TEMP_CHAR_UUID[16] = {
+    0x76, 0x28, 0x1a, 0x99, 0x1d, 0x45, 0x9b, 0x90,
+    0x4b, 0xbb, 0x5e, 0x04, 0x74, 0xa7, 0xdd, 0x7e
+};
+
+// Battery Characteristic: 2adb4877-68d8-4884-bd3c-d83853bf27b8
+static const uint8_t BATTERY_CHAR_UUID[16] = {
+    0xb8, 0x27, 0x3b, 0x85, 0x3c, 0xd8, 0x84, 0x48,
+    0xbd, 0x3c, 0x77, 0x48, 0xdb, 0x2a, 0x00, 0x00
+};
+
+// Config Characteristic: 575d3bf1-0be4-4e8f-a41e-be090726ed0b
+static const uint8_t CONFIG_CHAR_UUID[16] = {
+    0x0b, 0xed, 0x26, 0x07, 0x09, 0xbe, 0x1e, 0xa4,
+    0x8f, 0x4e, 0xe4, 0x0b, 0xf1, 0x3b, 0x5d, 0x57
+};
+
+// Device Information Service UUID: 0x180A
+static const uint16_t DEVICE_INFO_SERVICE_UUID = 0x180A;
+
+// Firmware Revision UUID: 0x2A26
+static const uint16_t FIRMWARE_CHAR_UUID = 0x2A26;
+
+// Manufacturer Name UUID: 0x2A29
+static const uint16_t MANUFACTURER_CHAR_UUID = 0x2A29;
+
+// Model Number UUID: 0x2A24
+static const uint16_t MODEL_CHAR_UUID = 0x2A24;
+
+// Generic Access Service UUID: 0x1800
+static const uint16_t GAP_SERVICE_UUID = 0x1800;
+
+// Device Name UUID: 0x2A00
+static const uint16_t DEVICE_NAME_CHAR_UUID = 0x2A00;
+
+// MEATER+ firmware version (probe number 128)
+static const char* MEATER_PLUS_FIRMWARE = "v1.0.5_128";
+static const char* MEATER_PLUS_NAME = "MEATER+";
+static const char* MANUFACTURER_NAME = "Apption Labs";
+static const char* MODEL_NUMBER = "MEATER";
+
+class MeaterBluedroidServer {
+private:
+    esp_gatt_if_t gatts_if_;
+    uint16_t conn_id_;
+    bool connected_;
+    
+    // Service handles
+    uint16_t meater_service_handle_;
+    uint16_t device_info_service_handle_;
+    uint16_t gap_service_handle_;
+    
+    // Characteristic handles for MEATER service
+    uint16_t temp_char_handle_;
+    uint16_t battery_char_handle_;
+    uint16_t config_char_handle_;
+    
+    // Characteristic handles for Device Information service
+    uint16_t firmware_char_handle_;
+    uint16_t manufacturer_char_handle_;
+    uint16_t model_char_handle_;
+    
+    // Characteristic handles for GAP service
+    uint16_t device_name_char_handle_;
+    
+    // Current data
+    uint8_t temp_data_[8];
+    uint8_t battery_data_[2];
+    uint8_t config_data_[4];
+    
+    // Notification enabled flags
+    bool temp_notify_enabled_;
+    bool battery_notify_enabled_;
+    
+    // Static instance pointer for callbacks
+    static MeaterBluedroidServer* instance_;
+    
+    // Advertising data
+    static esp_ble_adv_data_t adv_data_;
+    static esp_ble_adv_params_t adv_params_;
+    
+    // GAP event handler
+    static void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) {
+        if (instance_) {
+            instance_->handle_gap_event(event, param);
+        }
+    }
+    
+    // GATTS event handler
+    static void gatts_event_handler(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param) {
+        if (instance_) {
+            instance_->handle_gatts_event(event, gatts_if, param);
+        }
+    }
+    
+    void handle_gap_event(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) {
+        switch (event) {
+            case ESP_GAP_BLE_ADV_DATA_SET_COMPLETE_EVT:
+                ESP_LOGI("meater_ble_server", "Advertising data set complete");
+                esp_ble_gap_start_advertising(&adv_params_);
+                break;
+            case ESP_GAP_BLE_ADV_START_COMPLETE_EVT:
+                if (param->adv_start_cmpl.status == ESP_BT_STATUS_SUCCESS) {
+                    ESP_LOGI("meater_ble_server", "Advertising started successfully");
+                } else {
+                    ESP_LOGE("meater_ble_server", "Advertising start failed: %d", param->adv_start_cmpl.status);
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    
+    void handle_gatts_event(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param) {
+        switch (event) {
+            case ESP_GATTS_REG_EVT:
+                ESP_LOGI("meater_ble_server", "GATTS app registered, app_id: %d", param->reg.app_id);
+                gatts_if_ = gatts_if;
+                
+                // Set device name
+                esp_ble_gap_set_device_name(MEATER_PLUS_NAME);
+                
+                // Configure advertising data
+                configure_advertising();
+                
+                // Create services
+                create_services();
+                break;
+                
+            case ESP_GATTS_CREATE_EVT:
+                ESP_LOGI("meater_ble_server", "Service created, handle: %d", param->create.service_handle);
+                handle_service_created(param);
+                break;
+                
+            case ESP_GATTS_ADD_CHAR_EVT:
+                ESP_LOGI("meater_ble_server", "Characteristic added, handle: %d", param->add_char.attr_handle);
+                handle_char_added(param);
+                break;
+                
+            case ESP_GATTS_CONNECT_EVT:
+                ESP_LOGI("meater_ble_server", "Client connected, conn_id: %d", param->connect.conn_id);
+                conn_id_ = param->connect.conn_id;
+                connected_ = true;
+                break;
+                
+            case ESP_GATTS_DISCONNECT_EVT:
+                ESP_LOGI("meater_ble_server", "Client disconnected");
+                connected_ = false;
+                temp_notify_enabled_ = false;
+                battery_notify_enabled_ = false;
+                // Restart advertising
+                esp_ble_gap_start_advertising(&adv_params_);
+                break;
+                
+            case ESP_GATTS_READ_EVT:
+                handle_read(param);
+                break;
+                
+            case ESP_GATTS_WRITE_EVT:
+                handle_write(param);
+                break;
+                
+            case ESP_GATTS_START_EVT:
+                ESP_LOGI("meater_ble_server", "Service started");
+                break;
+                
+            default:
+                break;
+        }
+    }
+    
+    void configure_advertising() {
+        // Advertising data
+        static uint8_t service_uuid[16];
+        memcpy(service_uuid, MEATER_SERVICE_UUID, 16);
+        
+        static uint8_t manufacturer_data[24] = {
+            0x7B, 0x03,  // Company ID: 0x037B (Apption Labs)
+            0x80, 0x00,  // Device type indicator (0x80 for MEATER+)
+            // Rest filled with zeros
+            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+            0x00, 0x00, 0x00, 0x00
+        };
+        
+        adv_data_.set_scan_rsp = false;
+        adv_data_.include_name = true;
+        adv_data_.include_txpower = true;
+        adv_data_.min_interval = 0x0006;
+        adv_data_.max_interval = 0x0010;
+        adv_data_.appearance = 0x00;
+        adv_data_.manufacturer_len = sizeof(manufacturer_data);
+        adv_data_.p_manufacturer_data = manufacturer_data;
+        adv_data_.service_data_len = 0;
+        adv_data_.p_service_data = nullptr;
+        adv_data_.service_uuid_len = 16;
+        adv_data_.p_service_uuid = service_uuid;
+        adv_data_.flag = (ESP_BLE_ADV_FLAG_GEN_DISC | ESP_BLE_ADV_FLAG_BREDR_NOT_SPT);
+        
+        esp_ble_gap_config_adv_data(&adv_data_);
+        
+        // Advertising parameters
+        adv_params_.adv_int_min = 0x20;
+        adv_params_.adv_int_max = 0x40;
+        adv_params_.adv_type = ADV_TYPE_IND;
+        adv_params_.own_addr_type = BLE_ADDR_TYPE_PUBLIC;
+        adv_params_.channel_map = ADV_CHNL_ALL;
+        adv_params_.adv_filter_policy = ADV_FILTER_ALLOW_SCAN_ANY_CON_ANY;
+    }
+    
+    void create_services() {
+        // Create MEATER service
+        esp_gatt_srvc_id_t meater_srvc_id;
+        meater_srvc_id.is_primary = true;
+        meater_srvc_id.id.inst_id = 0;
+        meater_srvc_id.id.uuid.len = ESP_UUID_LEN_128;
+        memcpy(meater_srvc_id.id.uuid.uuid.uuid128, MEATER_SERVICE_UUID, 16);
+        
+        esp_ble_gatts_create_service(gatts_if_, &meater_srvc_id, 12); // 12 handles
+        
+        // Create Device Information service
+        esp_gatt_srvc_id_t device_info_srvc_id;
+        device_info_srvc_id.is_primary = true;
+        device_info_srvc_id.id.inst_id = 0;
+        device_info_srvc_id.id.uuid.len = ESP_UUID_LEN_16;
+        device_info_srvc_id.id.uuid.uuid.uuid16 = DEVICE_INFO_SERVICE_UUID;
+        
+        esp_ble_gatts_create_service(gatts_if_, &device_info_srvc_id, 10); // 10 handles
+        
+        // Create GAP service
+        esp_gatt_srvc_id_t gap_srvc_id;
+        gap_srvc_id.is_primary = true;
+        gap_srvc_id.id.inst_id = 0;
+        gap_srvc_id.id.uuid.len = ESP_UUID_LEN_16;
+        gap_srvc_id.id.uuid.uuid.uuid16 = GAP_SERVICE_UUID;
+        
+        esp_ble_gatts_create_service(gatts_if_, &gap_srvc_id, 4); // 4 handles
+    }
+    
+    void handle_service_created(esp_ble_gatts_cb_param_t *param) {
+        uint16_t service_handle = param->create.service_handle;
+        
+        // Check which service was created
+        if (param->create.uuid.len == ESP_UUID_LEN_128) {
+            // MEATER service
+            meater_service_handle_ = service_handle;
+            esp_ble_gatts_start_service(service_handle);
+            
+            // Add temperature characteristic
+            add_temperature_char();
+        } else if (param->create.uuid.len == ESP_UUID_LEN_16) {
+            if (param->create.uuid.uuid.uuid16 == DEVICE_INFO_SERVICE_UUID) {
+                // Device Information service
+                device_info_service_handle_ = service_handle;
+                esp_ble_gatts_start_service(service_handle);
+                
+                // Add firmware characteristic
+                add_firmware_char();
+            } else if (param->create.uuid.uuid.uuid16 == GAP_SERVICE_UUID) {
+                // GAP service
+                gap_service_handle_ = service_handle;
+                esp_ble_gatts_start_service(service_handle);
+                
+                // Add device name characteristic
+                add_device_name_char();
+            }
+        }
+    }
+    
+    void add_temperature_char() {
+        esp_bt_uuid_t char_uuid;
+        char_uuid.len = ESP_UUID_LEN_128;
+        memcpy(char_uuid.uuid.uuid128, TEMP_CHAR_UUID, 16);
+        
+        esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_NOTIFY;
+        esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
+        
+        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, nullptr);
+    }
+    
+    void add_firmware_char() {
+        esp_bt_uuid_t char_uuid;
+        char_uuid.len = ESP_UUID_LEN_16;
+        char_uuid.uuid.uuid16 = FIRMWARE_CHAR_UUID;
+        
+        esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ;
+        esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
+        
+        esp_attr_value_t attr_val;
+        attr_val.attr_max_len = 32;
+        attr_val.attr_len = strlen(MEATER_PLUS_FIRMWARE);
+        attr_val.attr_value = (uint8_t*)MEATER_PLUS_FIRMWARE;
+        
+        esp_ble_gatts_add_char(device_info_service_handle_, &char_uuid, permissions, properties, &attr_val, nullptr);
+    }
+    
+    void add_device_name_char() {
+        esp_bt_uuid_t char_uuid;
+        char_uuid.len = ESP_UUID_LEN_16;
+        char_uuid.uuid.uuid16 = DEVICE_NAME_CHAR_UUID;
+        
+        esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ;
+        esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
+        
+        esp_attr_value_t attr_val;
+        attr_val.attr_max_len = 32;
+        attr_val.attr_len = strlen(MEATER_PLUS_NAME);
+        attr_val.attr_value = (uint8_t*)MEATER_PLUS_NAME;
+        
+        esp_ble_gatts_add_char(gap_service_handle_, &char_uuid, permissions, properties, &attr_val, nullptr);
+    }
+    
+    void handle_char_added(esp_ble_gatts_cb_param_t *param) {
+        // Store characteristic handles
+        // Note: Need to add battery and config characteristics as well
+        // This is simplified - full implementation would track which char was added
+    }
+    
+    void handle_read(esp_ble_gatts_cb_param_t *param) {
+        ESP_LOGI("meater_ble_server", "Read request for handle: %d", param->read.handle);
+        
+        esp_gatt_rsp_t rsp;
+        memset(&rsp, 0, sizeof(esp_gatt_rsp_t));
+        rsp.attr_value.handle = param->read.handle;
+        
+        // Determine which characteristic is being read
+        // For now, return empty response
+        rsp.attr_value.len = 0;
+        
+        esp_ble_gatts_send_response(gatts_if_, param->read.conn_id, param->read.trans_id, ESP_GATT_OK, &rsp);
+    }
+    
+    void handle_write(esp_ble_gatts_cb_param_t *param) {
+        ESP_LOGI("meater_ble_server", "Write request for handle: %d, len: %d", param->write.handle, param->write.len);
+        
+        // Handle config characteristic writes
+        if (param->write.len <= 4) {
+            memcpy(config_data_, param->write.value, param->write.len);
+            ESP_LOGI("meater_ble_server", "Config data written");
+        }
+        
+        // Send response if needed
+        if (param->write.need_rsp) {
+            esp_ble_gatts_send_response(gatts_if_, param->write.conn_id, param->write.trans_id, ESP_GATT_OK, nullptr);
+        }
+    }
+    
+public:
+    MeaterBluedroidServer() :
+        gatts_if_(ESP_GATT_IF_NONE),
+        conn_id_(0),
+        connected_(false),
+        meater_service_handle_(0),
+        device_info_service_handle_(0),
+        gap_service_handle_(0),
+        temp_char_handle_(0),
+        battery_char_handle_(0),
+        config_char_handle_(0),
+        firmware_char_handle_(0),
+        manufacturer_char_handle_(0),
+        model_char_handle_(0),
+        device_name_char_handle_(0),
+        temp_notify_enabled_(false),
+        battery_notify_enabled_(false) {
+        
+        // Initialize data
+        memset(temp_data_, 0, sizeof(temp_data_));
+        memset(battery_data_, 0, sizeof(battery_data_));
+        memset(config_data_, 0, sizeof(config_data_));
+        
+        instance_ = this;
+    }
+    
+    bool setup() {
+        ESP_LOGI("meater_ble_server", "Setting up MEATER+ BLE server (Bluedroid)");
+        
+        // Initialize NVS
+        esp_err_t ret = nvs_flash_init();
+        if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+            ESP_ERROR_CHECK(nvs_flash_erase());
+            ret = nvs_flash_init();
+        }
+        ESP_ERROR_CHECK(ret);
+        
+        // Release BT Classic memory (we only need BLE)
+        ESP_ERROR_CHECK(esp_bt_controller_mem_release(ESP_BT_MODE_CLASSIC_BT));
+        
+        // Initialize BT controller
+        esp_bt_controller_config_t bt_cfg = BT_CONTROLLER_INIT_CONFIG_DEFAULT();
+        ret = esp_bt_controller_init(&bt_cfg);
+        if (ret) {
+            ESP_LOGE("meater_ble_server", "BT controller init failed: %d", ret);
+            return false;
+        }
+        
+        // Enable BT controller in BLE mode
+        ret = esp_bt_controller_enable(ESP_BT_MODE_BLE);
+        if (ret) {
+            ESP_LOGE("meater_ble_server", "BT controller enable failed: %d", ret);
+            return false;
+        }
+        
+        // Initialize Bluedroid
+        ret = esp_bluedroid_init();
+        if (ret) {
+            ESP_LOGE("meater_ble_server", "Bluedroid init failed: %d", ret);
+            return false;
+        }
+        
+        ret = esp_bluedroid_enable();
+        if (ret) {
+            ESP_LOGE("meater_ble_server", "Bluedroid enable failed: %d", ret);
+            return false;
+        }
+        
+        // Register callbacks
+        ret = esp_ble_gap_register_callback(gap_event_handler);
+        if (ret) {
+            ESP_LOGE("meater_ble_server", "GAP callback register failed: %d", ret);
+            return false;
+        }
+        
+        ret = esp_ble_gatts_register_callback(gatts_event_handler);
+        if (ret) {
+            ESP_LOGE("meater_ble_server", "GATTS callback register failed: %d", ret);
+            return false;
+        }
+        
+        // Register application
+        ret = esp_ble_gatts_app_register(0);
+        if (ret) {
+            ESP_LOGE("meater_ble_server", "GATTS app register failed: %d", ret);
+            return false;
+        }
+        
+        // Set MTU
+        esp_ble_gatt_set_local_mtu(517);
+        
+        ESP_LOGI("meater_ble_server", "MEATER+ BLE server setup complete");
+        return true;
+    }
+    
+    void update_temperature(const std::vector<uint8_t>& data) {
+        if (data.size() == 8) {
+            memcpy(temp_data_, data.data(), 8);
+            
+            // Send notification if enabled and connected
+            if (connected_ && temp_notify_enabled_ && temp_char_handle_ != 0) {
+                esp_ble_gatts_send_indicate(gatts_if_, conn_id_, temp_char_handle_, 8, temp_data_, false);
+            }
+        }
+    }
+    
+    void update_battery(const std::vector<uint8_t>& data) {
+        if (data.size() == 2) {
+            memcpy(battery_data_, data.data(), 2);
+            
+            // Send notification if enabled and connected
+            if (connected_ && battery_notify_enabled_ && battery_char_handle_ != 0) {
+                esp_ble_gatts_send_indicate(gatts_if_, conn_id_, battery_char_handle_, 2, battery_data_, false);
+            }
+        }
+    }
+    
+    bool is_connected() const {
+        return connected_;
+    }
+};
+
+// Static member initialization
+MeaterBluedroidServer* MeaterBluedroidServer::instance_ = nullptr;
+esp_ble_adv_data_t MeaterBluedroidServer::adv_data_ = {};
+esp_ble_adv_params_t MeaterBluedroidServer::adv_params_ = {};
+
+#endif // USE_ESP32
