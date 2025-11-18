@@ -95,6 +95,10 @@ private:
     uint8_t battery_data_[2];
     uint8_t config_data_[4];
     
+    // Pairing state (from BLE_PAIRING_FLOW_FROM_CODE.md analysis)
+    bool is_paired_;
+    uint64_t pairing_timestamp_;  // Unix timestamp in milliseconds when paired
+    
     // Notification enabled flags
     bool temp_notify_enabled_;
     bool battery_notify_enabled_;
@@ -297,8 +301,10 @@ private:
             meater_service_handle_ = service_handle;
             esp_ble_gatts_start_service(service_handle);
             
-            // Add temperature characteristic
+            // Add temperature, battery, and config characteristics
             add_temperature_char();
+            add_battery_char();
+            add_config_char();
         } else if (service_creation_count_ == 1) {
             // Device Information service (second created, 16-bit UUID)
             device_info_service_handle_ = service_handle;
@@ -325,6 +331,29 @@ private:
         
         esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_NOTIFY;
         esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
+        
+        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, nullptr);
+    }
+    
+    void add_battery_char() {
+        esp_bt_uuid_t char_uuid;
+        char_uuid.len = ESP_UUID_LEN_128;
+        memcpy(char_uuid.uuid.uuid128, BATTERY_CHAR_UUID, 16);
+        
+        esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_NOTIFY;
+        esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
+        
+        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, nullptr);
+    }
+    
+    void add_config_char() {
+        esp_bt_uuid_t char_uuid;
+        char_uuid.len = ESP_UUID_LEN_128;
+        memcpy(char_uuid.uuid.uuid128, CONFIG_CHAR_UUID, 16);
+        
+        // Config characteristic: READ + WRITE (for pairing)
+        esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_WRITE;
+        esp_gatt_perm_t permissions = ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE;
         
         esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, nullptr);
     }
@@ -384,10 +413,23 @@ private:
     void handle_write(esp_ble_gatts_cb_param_t *param) {
         ESP_LOGI("meater_ble_server", "Write request for handle: %d, len: %d", param->write.handle, param->write.len);
         
-        // Handle config characteristic writes
-        if (param->write.len <= 4) {
-            memcpy(config_data_, param->write.value, param->write.len);
-            ESP_LOGI("meater_ble_server", "Config data written");
+        // Check if this is a config characteristic write (pairing)
+        if (param->write.handle == config_char_handle_) {
+            if (param->write.len <= 4) {
+                memcpy(config_data_, param->write.value, param->write.len);
+                
+                // PAIRING MECHANISM (from BLE_PAIRING_FLOW_FROM_CODE.md)
+                // When app writes config data, it's establishing pairing
+                // This triggers the app to set datePaired field in database
+                if (!is_paired_) {
+                    is_paired_ = true;
+                    pairing_timestamp_ = esp_timer_get_time() / 1000;  // milliseconds
+                    ESP_LOGI("meater_ble_server", "✓ Device paired! Timestamp: %llu", pairing_timestamp_);
+                    ESP_LOGI("meater_ble_server", "App should now set datePaired field in database");
+                } else {
+                    ESP_LOGI("meater_ble_server", "Config updated (already paired)");
+                }
+            }
         }
         
         // Send response if needed
@@ -413,7 +455,9 @@ public:
         device_name_char_handle_(0),
         temp_notify_enabled_(false),
         battery_notify_enabled_(false),
-        service_creation_count_(0) {
+        service_creation_count_(0),
+        is_paired_(false),
+        pairing_timestamp_(0) {
         
         ESP_LOGI("meater_ble_server", "Constructor called - creating MeaterBluedroidServer instance");
         
