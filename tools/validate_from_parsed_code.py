@@ -2,12 +2,18 @@
 """
 BLE Validator that extracts operations from decompiled Java code.
 NO ASSUMPTIONS - everything extracted directly from source.
+
+Usage:
+    python validate_from_parsed_code.py [app_directory]
+    
+    app_directory: Path to decompiled MEATER app (default: meater_app)
 """
 
 import os
 import re
 import json
 import sys
+import argparse
 from pathlib import Path
 from typing import List, Dict, Optional
 
@@ -311,23 +317,136 @@ class ImplementationValidator:
                     print(f"  [{i}] {op['type']}: {result['message']}")
 
 
-def main():
-    """Main entry point."""
-    # Find meater_app directory
-    meater_app_dir = None
+def verify_meater_app(app_dir: Path) -> bool:
+    """Verify that the directory contains a valid MEATER app decompilation."""
+    print(f"Verifying MEATER app structure in: {app_dir}")
+    print()
+    
+    # Check for MainActivity with correct package
+    main_activity_files = list(app_dir.rglob("MainActivity.java"))
+    if not main_activity_files:
+        print("❌ ERROR: MainActivity.java not found")
+        return False
+    
+    # Check if it's the MEATER app by looking for the package name
+    for main_activity in main_activity_files:
+        with open(main_activity, 'r', encoding='utf-8', errors='ignore') as f:
+            first_line = f.readline()
+            if 'com.apptionlabs.meater' in first_line or 'apptionlabs' in first_line:
+                print(f"✓ Found MEATER app: {first_line.strip()}")
+                return True
+            elif 'aptoide' in first_line.lower():
+                print(f"❌ ERROR: This appears to be the Aptoide app, not MEATER")
+                print(f"   Package: {first_line.strip()}")
+                print()
+                print("   The MEATER app should have package name starting with:")
+                print("   'com.apptionlabs.meater'")
+                return False
+            else:
+                print(f"⚠ WARNING: Unknown app package: {first_line.strip()}")
+                # Continue checking
+    
+    print("⚠ WARNING: Could not verify this is a MEATER app")
+    print("   Proceeding anyway, but results may be incorrect")
+    return True
+
+
+def find_default_app_dir() -> Optional[Path]:
+    """Find default meater_app directory."""
+    candidates = ['meater_app', './meater_app', '../meater_app']
+    
+    for candidate in candidates:
+        path = Path(candidate)
+        if path.exists() and path.is_dir():
+            return path.resolve()
+    
+    # Search in current directory and parent
     for root, dirs, files in os.walk('.'):
         if 'meater_app' in dirs:
-            meater_app_dir = os.path.join(root, 'meater_app')
-            break
+            return Path(root) / 'meater_app'
     
-    if not meater_app_dir or not os.path.exists(meater_app_dir):
-        print("ERROR: meater_app directory not found")
-        print("Please ensure decompiled Java code is available")
+    return None
+
+
+def main():
+    """Main entry point."""
+    parser = argparse.ArgumentParser(
+        description='Validate BLE implementation against decompiled MEATER app code',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  # Use default meater_app directory
+  python validate_from_parsed_code.py
+  
+  # Use a different decompiled app directory
+  python validate_from_parsed_code.py meater.app.new
+  
+  # Use specific path
+  python validate_from_parsed_code.py /path/to/decompiled/app
+"""
+    )
+    parser.add_argument(
+        'app_dir',
+        nargs='?',
+        help='Path to decompiled MEATER app directory (default: meater_app)'
+    )
+    
+    args = parser.parse_args()
+    
+    # Determine app directory
+    if args.app_dir:
+        meater_app_dir = Path(args.app_dir)
+        if not meater_app_dir.exists():
+            print(f"ERROR: Directory not found: {meater_app_dir}")
+            sys.exit(1)
+    else:
+        meater_app_dir = find_default_app_dir()
+        if not meater_app_dir:
+            print("ERROR: Could not find meater_app directory")
+            print()
+            print("Please specify the path to the decompiled MEATER app:")
+            print("  python validate_from_parsed_code.py /path/to/app")
+            sys.exit(1)
+    
+    print("=" * 70)
+    print("MEATER BLE VALIDATOR")
+    print("=" * 70)
+    print()
+    
+    # Verify it's a MEATER app
+    if not verify_meater_app(meater_app_dir):
+        print()
+        print("=" * 70)
+        print("VALIDATION ABORTED")
+        print("=" * 70)
+        print()
+        print("The specified directory does not appear to contain a valid")
+        print("decompiled MEATER app.")
+        print()
+        print("To use this validator:")
+        print("1. Download the MEATER Android APK")
+        print("2. Decompile it using jadx or similar tool")
+        print("3. Point the validator to the decompiled sources directory")
+        print()
+        print("Current directory checked: " + str(meater_app_dir))
         sys.exit(1)
     
+    print()
+    
     # Parse Java code
-    parser = JavaCodeParser(meater_app_dir)
-    operations = parser.parse_all()
+    code_parser = JavaCodeParser(meater_app_dir)
+    operations = code_parser.parse_all()
+    
+    if not operations:
+        print()
+        print("⚠ WARNING: No operations extracted from the app code")
+        print("   This could mean:")
+        print("   - The app structure has changed significantly")
+        print("   - The code is obfuscated")
+        print("   - The expected classes don't exist")
+        print()
+        print("   Consider updating the parser to handle the new app structure")
+        sys.exit(1)
     
     # Save extracted operations
     output_file = 'tools/extracted_operations.json'

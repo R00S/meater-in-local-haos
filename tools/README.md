@@ -1,11 +1,13 @@
 # MEATER Link Protocol Validation Tools
 
-This directory contains tools for validating the MEATER Link UDP protocol implementation.
+This directory contains tools for validating the MEATER Link UDP protocol implementation and BLE connection flow.
 
 ## Documentation
 
 - **[TESTING_NEW_IMPLEMENTATIONS.md](TESTING_NEW_IMPLEMENTATIONS.md)** - **START HERE** for step-by-step guide to test new implementations
-- **[VALIDATOR_USAGE.md](VALIDATOR_USAGE.md)** - Detailed validator usage and troubleshooting
+- **[VALIDATOR_USAGE.md](VALIDATOR_USAGE.md)** - Detailed UDP protocol validator usage and troubleshooting
+- **[BLE_VALIDATOR_USAGE.md](BLE_VALIDATOR_USAGE.md)** - BLE connection validator usage guide
+- **[MEATER_APP_NEW_ISSUE.md](MEATER_APP_NEW_ISSUE.md)** - ⚠️ Important: Issue with meater.app.new directory
 - **[PROTOCOL_ANALYSIS_NOTES.md](PROTOCOL_ANALYSIS_NOTES.md)** - Technical protocol analysis
 - **[DISCOVERY_ANALYSIS.md](DISCOVERY_ANALYSIS.md)** - Device discovery process analysis
 
@@ -96,6 +98,67 @@ masterMessage:
 
 🎉 Perfect! Packet should be recognized by MEATER app
 ```
+
+## validate_from_parsed_code.py
+
+Python script that validates BLE implementation by extracting connection flows from decompiled MEATER app code.
+
+### Usage
+
+```bash
+# Use default meater_app directory
+python tools/validate_from_parsed_code.py
+
+# Use a different decompiled app directory
+python tools/validate_from_parsed_code.py /path/to/decompiled/app
+
+# Get help
+python tools/validate_from_parsed_code.py --help
+```
+
+### What It Does
+
+1. Verifies the directory contains a valid MEATER app (not wrong APK)
+2. Extracts BLE operations from Java code (pairing, scanning, connections)
+3. Validates our ESP32 implementation matches app expectations
+4. Reports missing or incorrect BLE behaviors
+
+### Example Output
+
+```
+======================================================================
+MEATER BLE VALIDATOR
+======================================================================
+
+Verifying MEATER app structure in: meater_app
+
+✓ Found MEATER app: package com.apptionlabs.meater_app;
+
+======================================================================
+PARSING DECOMPILED JAVA CODE
+======================================================================
+
+Parsing: MEATERDevice.java
+
+======================================================================
+VALIDATING IMPLEMENTATION AGAINST EXTRACTED CODE
+======================================================================
+
+[ 1] ✓ PASS [CRITICAL] CHECK_IS_PAIRED
+     Source: MEATERDevice.java:isPaired()
+     Implementation has persistent pairing state via NVS
+
+✓ SUCCESS: All extracted operations validated
+```
+
+### Important Notes
+
+⚠️ **The `meater.app.new` directory contains the wrong APK** (Aptoide app store, not MEATER)
+
+See [MEATER_APP_NEW_ISSUE.md](MEATER_APP_NEW_ISSUE.md) for details on:
+- How to get the correct MEATER app
+- How to decompile it
+- How to check for protocol changes
 
 ## Testing Your Implementation
 
