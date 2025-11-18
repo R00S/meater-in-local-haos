@@ -4,6 +4,13 @@ esphome:
   includes:
     - includes/meater_udp_broadcast.h
     - includes/meater_bluedroid_server.h
+  on_boot:
+    # Priority -100 ensures this runs late in boot, after BLE stack is fully ready
+    # Lower priority = runs later (WiFi connects at -100, so we run after that)
+    priority: -10
+    then:
+      - delay: 1s  # Short delay to ensure Bluedroid is stable
+      - script.execute: init_ble_server
 
 esp32:
   board: esp32-c3-devkitm-1
@@ -48,10 +55,6 @@ captive_portal:
 esp32_ble_tracker:
   scan_parameters:
     active: false
-  on_ble_advertise:
-    - then:
-        # Initialize BLE server once on first BLE event (means Bluedroid is ready)
-        - script.execute: init_ble_server
 
 # BLE CLIENT REMOVED - see meater_ble_client_backup.yaml for restoration
 # ble_client:
