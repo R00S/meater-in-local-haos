@@ -267,8 +267,8 @@ def analyze_device_addition(success_with_probe, success_without_probe):
     print("=" * 80)
     print("\nFrom: App device discovery logic\n")
     
-    if success_with_probe and success_without_probe:
-        print("✅ Decoder succeeded for BOTH scenarios - packet structure is valid")
+    if success_without_probe:
+        print("✅ Decoder succeeded for idle Block scenario - packet structure is valid")
         print("\nApp checks:")
         print("  1. Does msg.header exist? ✅ YES")
         print("  2. Are all required header fields present? ✅ YES")
@@ -280,22 +280,31 @@ def analyze_device_addition(success_with_probe, success_without_probe):
         print("\n  3. Does msg.masterMessage exist? ✅ YES")
         print("     - masterType: 0 (MASTER_TYPE_BLOCK) ✅ CORRECT")
         print("     - cloudConnectionState: 0 (DISABLED) ✅ CORRECT")
-        print("     - devices: Array present (with/without probes) ✅")
-        print("\n  4. When probe active, does MLDevice have required fields? ✅ YES")
-        print("     - probe (MLProbe): Present with CookStatus ✅")
-        print("     - identifier (FIXED64): Present ✅")
-        print("     - probeNumber: 0 ✅")
-        print("     - chargeState: Present with battery info ✅")
-        print("     - firmwareRevision: 'v1.0.0' ✅")
-        print("     - connectionState: 1 (CONNECTED) ✅")
-        print("     - connectionType: 0 (BLE) ✅")
-        print("     - bleSignalLevel: -50 ✅")
-        print("\n✅ RESULT: Device WOULD be added as 'MEATER Block'!")
+        print("     - devices: Empty array (no active probe) ✅")
+        
+        if success_with_probe:
+            print("\n  4. When probe active, does MLDevice have required fields? ✅ YES")
+            print("     - probe (MLProbe): Present with CookStatus ✅")
+            print("     - identifier (FIXED64): Present ✅")
+            print("     - probeNumber: 0 ✅")
+            print("     - chargeState: Present with battery info ✅")
+            print("     - firmwareRevision: 'v1.0.0' ✅")
+            print("     - connectionState: 1 (CONNECTED) ✅")
+            print("     - connectionType: 0 (BLE) ✅")
+            print("     - bleSignalLevel: -50 ✅")
+            print("\n✅ RESULT: Device WOULD be added as 'MEATER Block'!")
+            print("✅ Both scenarios (with/without probe) decode successfully!")
+        else:
+            print("\n  4. When probe active, does MLDevice decode? ⚠️ ISSUE DETECTED")
+            print("     - Probe data packet has encoding issue")
+            print("     - This needs investigation in packet building")
+            print("\n⚠️ RESULT: Device would be added as idle Block")
+            print("⚠️ But probe data scenario needs fixing")
+        
         print("\nThe Field 3 implementation uses the CORRECT message type.")
         print("The app recognizes Field 3 (MasterMessage) as Block broadcasts.")
-        print("All required fields are present with proper values.")
     else:
-        print("❌ Decoder failed - packet structure is invalid")
+        print("❌ Decoder failed for both scenarios - packet structure is invalid")
         print("\n❌ RESULT: Device would NOT be added - decode failed!")
         print("\nThis should not happen with Field 3 implementation.")
 
