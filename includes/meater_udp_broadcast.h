@@ -421,73 +421,15 @@ class MeaterUDPBroadcaster {
     // Field 2: cloudConnectionState = 0 (CLOUD_CONNECTION_STATE_DISABLED)
     encode_varint_field(master_msg, 2, 0);
     
-    // Field 3: devices array (only if probe is active)
-    bool has_probe_data = !temp_data_.empty() && temp_data_.size() >= 8;
-    
-    if (has_probe_data) {
-      // Build MLDevice message
-      std::vector<uint8_t> ml_device;
-      
-      // ===== MLDevice Field 1: probe (MLProbe) =====
-      std::vector<uint8_t> ml_probe;
-      
-      // MLProbe Field 1: parentIdentifier (FIXED64)
-      encode_fixed64(ml_probe, 1, device_id_);
-      
-      // MLProbe Field 4: status (CookStatus)
-      std::vector<uint8_t> cook_status;
-      // CookStatus Field 1: tipTemperature (SINT32 with ZigZag)
-      encode_sint32_field(cook_status, 1, tip_temp_raw_);
-      // CookStatus Field 2: ambientTemperature (SINT32 with ZigZag)
-      encode_sint32_field(cook_status, 2, ambient_temp_raw_);
-      encode_length_delimited(ml_probe, 4, cook_status);
-      
-      encode_length_delimited(ml_device, 1, ml_probe);
-      
-      // ===== MLDevice Field 5: identifier (FIXED64, REQUIRED) =====
-      encode_fixed64(ml_device, 5, device_id_);
-      
-      // ===== MLDevice Field 6: probeNumber (UINT32, REQUIRED) =====
-      encode_varint_field(ml_device, 6, 0);  // 0 = first probe
-      
-      // ===== MLDevice Field 7: chargeState (ChargeState, REQUIRED) =====
-      std::vector<uint8_t> charge_state;
-      // ChargeState Field 1: chargingStatus = 2 (NOT_CHARGING)
-      encode_varint_field(charge_state, 1, 2);
-      // ChargeState Field 2: batteryLevelPercent
-      encode_varint_field(charge_state, 2, battery_percent_);
-      // ChargeState Field 3: batteryMinutesRemaining = 0 (unknown)
-      encode_varint_field(charge_state, 3, 0);
-      encode_length_delimited(ml_device, 7, charge_state);
-      
-      // ===== MLDevice Field 8: firmwareRevision (string) =====
-      encode_string(ml_device, 8, "v1.0.0");
-      
-      // ===== MLDevice Field 9: connectionState = 1 (CONNECTED) =====
-      encode_varint_field(ml_device, 9, 1);
-      
-      // ===== MLDevice Field 10: connectionType = 0 (BLE) =====
-      encode_varint_field(ml_device, 10, 0);
-      
-      // ===== MLDevice Field 11: bleSignalLevel (SINT32) =====
-      encode_sint32_field(ml_device, 11, -50);  // Simulated RSSI
-      
-      // Add MLDevice to MasterMessage Field 3 (devices array)
-      encode_length_delimited(master_msg, 3, ml_device);
-    }
-    // If no probe data, devices array is empty (omitted)
+    // Field 3: devices array - OMITTED for idle Block scenario
+    // This creates a 27-byte idle Block broadcast that passes all 9 app validation checks
+    // TODO: Add probe support later once basic Block discovery is working
     
     // Encode the entire MasterMessage as Field 3 of the main packet
     encode_length_delimited(packet, 3, master_msg);
     
-    ESP_LOGI("meater_udp", "Built packet: %d bytes, seq=%u, deviceID=0x%016llx", 
+    ESP_LOGI("meater_udp", "Built idle Block packet: %d bytes (Field 3 MasterMessage), seq=%u, deviceID=0x%016llx", 
              packet.size(), sequence_number_, (unsigned long long)device_id_);
-    if (has_probe_data) {
-      ESP_LOGI("meater_udp", "Probe active: tip=%.1f°C, ambient=%.1f°C, battery=%d%%", 
-               tip_temp_raw_ / 16.0, ambient_temp_raw_ / 16.0, battery_percent_);
-    } else {
-      ESP_LOGI("meater_udp", "No active probe (Block idle)");
-    }
   }
 };
 
