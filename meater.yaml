@@ -48,6 +48,10 @@ captive_portal:
 esp32_ble_tracker:
   scan_parameters:
     active: false
+  on_ble_advertise:
+    - then:
+        # Initialize BLE server once on first BLE event (means Bluedroid is ready)
+        - script.execute: init_ble_server
 
 # BLE CLIENT REMOVED - see meater_ble_client_backup.yaml for restoration
 # ble_client:
@@ -112,7 +116,6 @@ interval:
   - interval: 2s
     then:
       - script.execute: init_udp_broadcaster
-      - script.execute: init_ble_server
       - lambda: |-
           // Generate mock temperature and battery data
           static uint32_t counter = 0;

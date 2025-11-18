@@ -431,9 +431,6 @@ public:
         // NOTE: BT controller and Bluedroid initialization is handled by esp32_ble_tracker component
         // We only need to register our GATT server callbacks
         
-        // Wait a bit for esp32_ble_tracker to finish initialization
-        vTaskDelay(pdMS_TO_TICKS(2000));
-        
         // Register GAP callback
         esp_err_t ret = esp_ble_gap_register_callback(gap_event_handler);
         if (ret) {
