@@ -4,6 +4,10 @@ esphome:
   includes:
     - includes/meater_udp_broadcast.h
     - includes/meater_bluedroid_server.h
+  platformio_options:
+    build_flags:
+      - -lbt
+      - -lbtdm_app
 
 esp32:
   board: esp32-c3-devkitm-1
