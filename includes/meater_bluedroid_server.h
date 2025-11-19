@@ -525,7 +525,7 @@ public:
         }
         
         // Register GAP callback
-        esp_err_t ret = esp_ble_gap_register_callback(gap_event_handler);
+        ret = esp_ble_gap_register_callback(gap_event_handler);
         if (ret) {
             ESP_LOGE("meater_ble_server", "GAP callback register failed: %d", ret);
             return false;
