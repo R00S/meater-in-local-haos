@@ -62,6 +62,9 @@ static const uint16_t GAP_SERVICE_UUID = 0x1800;
 // Device Name UUID: 0x2A00
 static const uint16_t DEVICE_NAME_CHAR_UUID = 0x2A00;
 
+// Client Characteristic Configuration Descriptor (CCCD) UUID: 0x2902
+static const uint16_t CCCD_UUID = 0x2902;
+
 // MEATER firmware version (probe number 0 for singleton/standalone probes)
 static const char* MEATER_FIRMWARE = "v1.0.4_0";
 static const char* MEATER_NAME = "MEATER";
@@ -385,6 +388,31 @@ private:
         control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
         
         esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, &control);
+        
+        // Explicitly add CCCD descriptor for notifications
+        add_cccd_descriptor();
+    }
+    
+    void add_cccd_descriptor() {
+        esp_bt_uuid_t descr_uuid;
+        descr_uuid.len = ESP_UUID_LEN_16;
+        descr_uuid.uuid.uuid16 = CCCD_UUID;
+        
+        // CCCD permissions: read + write
+        esp_gatt_perm_t permissions = ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE;
+        
+        // CCCD value (2 bytes: notifications disabled by default)
+        uint8_t cccd_value[2] = {0x00, 0x00};
+        esp_attr_value_t attr_val;
+        attr_val.attr_max_len = 2;
+        attr_val.attr_len = 2;
+        attr_val.attr_value = cccd_value;
+        
+        // Manual response for CCCD writes
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;
+        
+        esp_ble_gatts_add_char_descr(meater_service_handle_, &descr_uuid, permissions, &attr_val, &control);
     }
     
     void add_battery_char() {
@@ -400,6 +428,9 @@ private:
         control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
         
         esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, &control);
+        
+        // Explicitly add CCCD descriptor for notifications
+        add_cccd_descriptor();
     }
     
     void add_config_char() {
