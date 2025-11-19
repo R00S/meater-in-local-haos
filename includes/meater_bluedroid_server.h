@@ -228,8 +228,8 @@ private:
         // Device B8:1F:5E:4A:5E:EF MEATER
         // ManufacturerData.Key: 0x037b (891)
         // ManufacturerData.Value: 00 4c 0b 82 35 23 a3 98 ea
-        // Total: 9 bytes (must match real probe exactly for app to recognize it)
-        static uint8_t manufacturer_data[9] = {
+        // Total: 9 bytes data + company ID embedded = 10 bytes total array
+        static uint8_t manufacturer_data[10] = {
             0x7B, 0x03,  // Company ID: 0x037B (little-endian as required by BLE spec)
             0x00,        // Byte 2: Device type (0x00 for regular MEATER, 0x01 for MEATER+)
             0x4C, 0x0B, 0x82, 0x35, 0x23, 0xA3, 0x98  // Bytes 3-9: Device-specific data from real probe
