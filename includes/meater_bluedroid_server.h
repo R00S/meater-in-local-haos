@@ -331,6 +331,7 @@ private:
         meater_srvc_id.id.uuid.len = ESP_UUID_LEN_128;
         memcpy(meater_srvc_id.id.uuid.uuid.uuid128, MEATER_SERVICE_UUID, 16);
         
+        ESP_LOGI("meater_ble_server", "Creating MEATER service: a75cc7fc-c956-488f-ac2a-2dbc08b63a04");
         esp_ble_gatts_create_service(gatts_if_, &meater_srvc_id, 12); // 12 handles
         
         // Create Device Information service
@@ -363,8 +364,11 @@ private:
             esp_ble_gatts_start_service(service_handle);
             
             // Add temperature, battery, and config characteristics
+            ESP_LOGI("meater_ble_server", "Adding temp char: 7edda774-045e-4bbf-909b-45d1991a2876");
             add_temperature_char();
+            ESP_LOGI("meater_ble_server", "Adding battery char: 2adb4877-68d8-4884-bd3c-d83853bf27b8");
             add_battery_char();
+            ESP_LOGI("meater_ble_server", "Adding config char: caf28e64-3b17-4cb4-bb0a-2eaa33c47af7");
             add_config_char();
         } else if (service_creation_count_ == 1) {
             // Device Information service (second created, 16-bit UUID)
@@ -372,6 +376,7 @@ private:
             esp_ble_gatts_start_service(service_handle);
             
             // Add firmware characteristic
+            ESP_LOGI("meater_ble_server", "Adding firmware char: 00002a26-0000-1000-8000-00805f9b34fb");
             add_firmware_char();
         } else if (service_creation_count_ == 2) {
             // GAP service (third created, 16-bit UUID)
@@ -379,6 +384,7 @@ private:
             esp_ble_gatts_start_service(service_handle);
             
             // Add device name characteristic
+            ESP_LOGI("meater_ble_server", "Adding device name char: 00002a00-0000-1000-8000-00805f9b34fb");
             add_device_name_char();
         }
         
