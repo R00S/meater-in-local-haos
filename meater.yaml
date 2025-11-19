@@ -2,7 +2,6 @@ esphome:
   name: meater
   friendly_name: meater
   includes:
-    - includes/meater_udp_broadcast.h
     - includes/meater_bluedroid_server.h
   on_boot:
     # Priority 600 ensures this runs early, before other components
@@ -10,7 +9,7 @@ esphome:
     priority: 600
     then:
       - lambda: |-
-          ESP_LOGI("meater", "=== BOOT: Initializing MEATER BLE server (standalone probe) ===");
+          ESP_LOGI("meater", "=== BOOT: Initializing MEATER BLE probe (BLE only, no UDP) ===");
       - script.execute: init_ble_server
       - delay: 1s
       - lambda: |-
@@ -66,64 +65,39 @@ captive_portal:
 #   - mac_address: !secret meater_mac_address
 #     id: meater
 
-# Global variables to store the UDP broadcaster and BLE server instances
+# Global variable to store the BLE server instance
 globals:
-  - id: udp_broadcaster_ptr
-    type: void*
-    restore_value: no
-    initial_value: 'nullptr'
   - id: ble_server_ptr
     type: void*
     restore_value: no
     initial_value: 'nullptr'
 
-# Initialize UDP broadcaster and BLE server on boot
+# Initialize BLE server on boot
 script:
-  - id: init_udp_broadcaster
-    then:
-      - lambda: |-
-          static bool udp_initialized = false;
-          if (!udp_initialized && id(udp_broadcaster_ptr) == nullptr) {
-            ESP_LOGI("meater", "Initializing UDP broadcaster with device name: MEATER");
-            static MeaterUDPBroadcaster* udp_broadcaster = new MeaterUDPBroadcaster();
-            udp_broadcaster->set_device_name("MEATER");
-            udp_broadcaster->setup();
-            id(udp_broadcaster_ptr) = (void*)udp_broadcaster;
-            udp_initialized = true;
-            
-            // Set initial mock firmware and device name
-            id(meater_firmware).publish_state("v1.0.4_0");
-            id(meater_device_name_display).publish_state("MEATER");
-          }
-  
   - id: init_ble_server
     then:
       - lambda: |-
           static bool ble_initialized = false;
           if (!ble_initialized && id(ble_server_ptr) == nullptr) {
-            ESP_LOGI("meater", "Initializing MEATER BLE server (Bluedroid)");
+            ESP_LOGI("meater", "Initializing MEATER BLE probe (standalone)");
             static MeaterBluedroidServer* ble_server = new MeaterBluedroidServer();
             if (ble_server->setup()) {
               id(ble_server_ptr) = (void*)ble_server;
               ble_initialized = true;
-              ESP_LOGI("meater", "MEATER BLE server started successfully");
+              ESP_LOGI("meater", "✓ MEATER BLE probe started - advertising as 'MEATER'");
+              
+              // Set initial firmware and device name for display
+              id(meater_firmware).publish_state("v1.0.4_0");
+              id(meater_device_name_display).publish_state("MEATER");
             } else {
-              ESP_LOGE("meater", "Failed to initialize BLE server");
+              ESP_LOGE("meater", "✗ Failed to initialize BLE server");
             }
           }
 
-# Poll UDP socket for incoming packets and send broadcasts
-# Also generate mock temperature data
+# Generate mock temperature data and update BLE server
 interval:
-  - interval: 100ms
-    then:
-      - lambda: |-
-          if (id(udp_broadcaster_ptr) != nullptr) {
-            ((MeaterUDPBroadcaster*)id(udp_broadcaster_ptr))->poll_and_broadcast();
-          }
   - interval: 2s
     then:
-      - script.execute: init_udp_broadcaster
       - lambda: |-
           // Generate mock temperature and battery data
           static uint32_t counter = 0;
@@ -146,12 +120,6 @@ interval:
           std::vector<uint8_t> battery_data(2);
           battery_data[0] = 4;  // Battery data byte 1
           battery_data[1] = 5;  // Battery data byte 2 (4+5)*10 = 90%
-          
-          // Update UDP broadcaster with mock data
-          if (id(udp_broadcaster_ptr) != nullptr) {
-            ((MeaterUDPBroadcaster*)id(udp_broadcaster_ptr))->update_temp_data(temp_data);
-            ((MeaterUDPBroadcaster*)id(udp_broadcaster_ptr))->update_battery_data(battery_data);
-          }
           
           // Update BLE server with mock data
           if (id(ble_server_ptr) != nullptr) {
@@ -184,8 +152,8 @@ text_sensor:
     name: "MEATER device name"
     id: meater_device_name_display
  
-# BLE CLIENT SENSORS REMOVED - see meater_ble_client_backup.yaml for restoration
-# Using template sensors with mock data instead
+# Template sensors for Home Assistant integration
+# Real MEATER probe only does BLE - these sensors show what the probe is advertising
 sensor:
   - platform: template
     name: "MEATER tip temperature"
