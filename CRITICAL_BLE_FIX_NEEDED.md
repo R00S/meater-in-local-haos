@@ -20,6 +20,12 @@ static const uint8_t CONFIG_CHAR_UUID[16] = {
 
 **Current UUID**: `575d3bf1-0be4-4e8f-a41e-be090726ed0b`
 
+> **Note:** This UUID `575d3bf1-0be4-4e8f-a41e-be090726ed0b` does NOT appear anywhere in the decompiled app code. It may have come from:
+> - Incorrect reverse engineering
+> - A different MEATER device variant
+> - Old firmware version
+> - Similar to but different from `MEATERTemperatureLogModeBLECharacteristicUUID = "575d3bf1-2757-45ad-94d9-875c2f6120d3"` (note: `-2757-` vs `-0be4-`)
+
 ### What the MEATER App Actually Expects
 
 From `meater_app/data/Config.java` and verified in `meater.app.new/sources/z4/O.java`:

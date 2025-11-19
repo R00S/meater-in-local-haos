@@ -27,16 +27,53 @@
 - The accumulator reaches 255 and rolls over to the count
 
 **Temperature conversion**:
-- Celsius: `(raw_value + 8.0) / 16.0`
+
+> 🔴 **CONFLICTS WITH APP CODE**: The reverse-engineered formula divides by 16 instead of 32.
+> 
+> **Reverse-engineered formula (WRONG - divides by 16):**
+> - Celsius: `(raw_value + 8.0) / 16.0`
+> 
+> **Actual formula from Temperature.java (CORRECT - divides by 32):**
+> ```java
+> public static int toCelsius(int i10) {
+>     if (i10 > 0) {
+>         return (i10 + 8) / 32;   // Divide by 32, NOT 16
+>     }
+>     if (i10 < 0) {
+>         return (i10 - 8) / 32;   // Different offset for negative
+>     }
+>     return 0;
+> }
+> ```
+> 
+> **Note:** The raw value appears to be in 1/32°C resolution. The reverse-engineered docs may have been based on observations from a Fahrenheit-using region where the 16.0 divisor happened to work for their calculations, but the actual ground truth from the app code is divide by 32 for Celsius.
+> 
+> Source: `meater_app/data/Temperature.java`
+
 - Fahrenheit: `((celsius * 9) / 5) + 32.0`
 
 **Ambient temperature calculation**:
-```python
-tip = byte1*256 + byte0
-ra  = byte3*256 + byte2
-oa  = byte5*256 + byte4
-ambient = tip + max(0, ((((ra - min(48, oa)) * 16) * 589)) / 1487)
-```
+
+> 🔴 **CONFLICTS WITH APP CODE**: The reverse-engineered formula has incorrect constants.
+> 
+> **Reverse-engineered formula (WRONG - uses 16 * 589 = 9424):**
+> ```python
+> tip = byte1*256 + byte0
+> ra  = byte3*256 + byte2
+> oa  = byte5*256 + byte4
+> ambient = tip + max(0, ((((ra - min(48, oa)) * 16) * 589)) / 1487)
+> ```
+> 
+> **Actual formula from Temperature.java (CORRECT - uses 9424 directly):**
+> ```java
+> return i10 + ((int) Math.max(0.0f, ((i11 - Math.min(48, i12)) * 9424) / 1487.0f));
+> // Where: i10=tip, i11=ra, i12=oa
+> // Note: 9424 is used directly, not calculated as (16 * 589)
+> ```
+> 
+> **Note:** While `16 * 589 = 9424` mathematically, the app code uses the constant 9424 directly. The reverse-engineering may have tried to factor it. Both work mathematically, but the ground truth from the app is to use 9424 directly.
+> 
+> Source: `meater_app/data/Temperature.java` method `AmbientFromTemperatureReading()`
 
 #### Battery Characteristic (2adb4877-68d8-4884-bd3c-d83853bf27b8)
 - **Handle**: 35 (0x23)
@@ -45,6 +82,21 @@ ambient = tip + max(0, ((((ra - min(48, oa)) * 16) * 589)) / 1487)
 - **Format**: `(byte1*256 + byte0) * 10` = battery percentage
 
 #### Config Characteristic (575d3bf1-2757-45ad-94d9-875c2f6120d3)
+
+> 🔴 **CONFLICTS WITH APP CODE**: This UUID is misidentified in the reverse-engineered documentation.
+> 
+> **What this UUID actually is (from Config.java):**
+> - `MEATERTemperatureLogModeBLECharacteristicUUID = "575d3bf1-2757-45ad-94d9-875c2f6120d3"`
+> - This is for **Temperature Log Mode**, NOT for Config/pairing
+> 
+> **What the pairing/config characteristic actually is:**
+> - `MEATERCookSetupBLECharacteristicUUID = "caf28e64-3b17-4cb4-bb0a-2eaa33c47af7"`
+> - This is what the app writes to during pairing
+> 
+> Source: `tools/extracted_operations.json` extracted from `Config.java`
+> 
+> The reverse-engineering source confused Temperature Log Mode with the Config/pairing characteristic.
+
 - **Handle**: 26 (0x1A)
 - **Properties**: READ, WRITE
 - **Purpose**: Used by Android app during pairing/configuration
