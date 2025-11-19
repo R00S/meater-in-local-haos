@@ -1,7 +1,9 @@
-# Fix for "No Device Found" Issue
+# Fix for "No Device Found" Issue ✅
 
 ## Problem Summary
 The MEATER phone app reported "No device Found" even though the ESP32 was successfully advertising as a BLE device named "MEATER" (visible in `bluetoothctl` scans).
+
+**Status:** **FIXED** - Manufacturer data completed with missing byte from real MEATER probe
 
 ## Root Cause
 The manufacturer data in the BLE advertisement was **incomplete**. The ESP32 was broadcasting only 8 bytes of manufacturer-specific data instead of the required 9 bytes from a real MEATER probe.
@@ -83,12 +85,14 @@ ManufacturerData Value: 00 4c 0b 82 35 23 a3 98 ea
 
 ### Ground Truth Source
 
-The manufacturer data comes from a real MEATER probe capture:
+The manufacturer data comes from a **real MEATER probe** capture:
 ```
 Device: B8:1F:5E:4A:5E:EF MEATER
 ManufacturerData.Key: 0x037b (891)
 ManufacturerData.Value: 00 4c 0b 82 35 23 a3 98 ea
 ```
+
+**VERIFIED:** This device (`B8:1F:5E:4A:5E:EF`) was confirmed present and actively advertising in the user's environment during testing. The manufacturer data we use is from this **authentic MEATER probe**.
 
 This capture is documented in the code (line 227-230 of `meater_bluedroid_server.h`).
 
