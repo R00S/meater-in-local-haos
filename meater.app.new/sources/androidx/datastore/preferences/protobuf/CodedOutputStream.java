@@ -1,26 +1,25 @@
 package androidx.datastore.preferences.protobuf;
 
-import androidx.datastore.preferences.protobuf.C0406q1;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.datastore.preferences.protobuf.q0;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /* loaded from: classes.dex */
-public abstract class CodedOutputStream extends AbstractC0374g {
+public abstract class CodedOutputStream extends AbstractC2061g {
 
-    /* renamed from: a */
-    private static final Logger f2658a = Logger.getLogger(CodedOutputStream.class.getName());
+    /* renamed from: c, reason: collision with root package name */
+    private static final Logger f24832c = Logger.getLogger(CodedOutputStream.class.getName());
 
-    /* renamed from: b */
-    private static final boolean f2659b = C0403p1.m3083C();
+    /* renamed from: d, reason: collision with root package name */
+    private static final boolean f24833d = p0.C();
 
-    /* renamed from: c */
-    C0389l f2660c;
+    /* renamed from: a, reason: collision with root package name */
+    C2065k f24834a;
 
-    /* renamed from: d */
-    private boolean f2661d;
+    /* renamed from: b, reason: collision with root package name */
+    private boolean f24835b;
 
     public static class OutOfSpaceException extends IOException {
         OutOfSpaceException() {
@@ -36,1375 +35,1211 @@ public abstract class CodedOutputStream extends AbstractC0374g {
         }
     }
 
-    /* renamed from: androidx.datastore.preferences.protobuf.CodedOutputStream$b */
-    private static abstract class AbstractC0353b extends CodedOutputStream {
+    private static abstract class b extends CodedOutputStream {
 
-        /* renamed from: e */
-        final byte[] f2662e;
+        /* renamed from: e, reason: collision with root package name */
+        final byte[] f24836e;
 
-        /* renamed from: f */
-        final int f2663f;
+        /* renamed from: f, reason: collision with root package name */
+        final int f24837f;
 
-        /* renamed from: g */
-        int f2664g;
+        /* renamed from: g, reason: collision with root package name */
+        int f24838g;
 
-        /* renamed from: h */
-        int f2665h;
+        /* renamed from: h, reason: collision with root package name */
+        int f24839h;
 
-        AbstractC0353b(int i2) {
+        b(int i10) {
             super();
-            if (i2 < 0) {
+            if (i10 < 0) {
                 throw new IllegalArgumentException("bufferSize must be >= 0");
             }
-            byte[] bArr = new byte[Math.max(i2, 20)];
-            this.f2662e = bArr;
-            this.f2663f = bArr.length;
+            byte[] bArr = new byte[Math.max(i10, 20)];
+            this.f24836e = bArr;
+            this.f24837f = bArr.length;
         }
 
-        /* renamed from: b1 */
-        final void m2515b1(byte b2) {
-            byte[] bArr = this.f2662e;
-            int i2 = this.f2664g;
-            this.f2664g = i2 + 1;
-            bArr[i2] = b2;
-            this.f2665h++;
+        final void b1(byte b10) {
+            byte[] bArr = this.f24836e;
+            int i10 = this.f24838g;
+            this.f24838g = i10 + 1;
+            bArr[i10] = b10;
+            this.f24839h++;
         }
 
-        /* renamed from: c1 */
-        final void m2516c1(int i2) {
-            byte[] bArr = this.f2662e;
-            int i3 = this.f2664g;
-            int i4 = i3 + 1;
-            this.f2664g = i4;
-            bArr[i3] = (byte) (i2 & 255);
-            int i5 = i4 + 1;
-            this.f2664g = i5;
-            bArr[i4] = (byte) ((i2 >> 8) & 255);
-            int i6 = i5 + 1;
-            this.f2664g = i6;
-            bArr[i5] = (byte) ((i2 >> 16) & 255);
-            this.f2664g = i6 + 1;
-            bArr[i6] = (byte) ((i2 >> 24) & 255);
-            this.f2665h += 4;
+        final void c1(int i10) {
+            byte[] bArr = this.f24836e;
+            int i11 = this.f24838g;
+            int i12 = i11 + 1;
+            this.f24838g = i12;
+            bArr[i11] = (byte) (i10 & 255);
+            int i13 = i11 + 2;
+            this.f24838g = i13;
+            bArr[i12] = (byte) ((i10 >> 8) & 255);
+            int i14 = i11 + 3;
+            this.f24838g = i14;
+            bArr[i13] = (byte) ((i10 >> 16) & 255);
+            this.f24838g = i11 + 4;
+            bArr[i14] = (byte) ((i10 >> 24) & 255);
+            this.f24839h += 4;
         }
 
-        /* renamed from: d1 */
-        final void m2517d1(long j2) {
-            byte[] bArr = this.f2662e;
-            int i2 = this.f2664g;
-            int i3 = i2 + 1;
-            this.f2664g = i3;
-            bArr[i2] = (byte) (j2 & 255);
-            int i4 = i3 + 1;
-            this.f2664g = i4;
-            bArr[i3] = (byte) ((j2 >> 8) & 255);
-            int i5 = i4 + 1;
-            this.f2664g = i5;
-            bArr[i4] = (byte) ((j2 >> 16) & 255);
-            int i6 = i5 + 1;
-            this.f2664g = i6;
-            bArr[i5] = (byte) (255 & (j2 >> 24));
-            int i7 = i6 + 1;
-            this.f2664g = i7;
-            bArr[i6] = (byte) (((int) (j2 >> 32)) & 255);
-            int i8 = i7 + 1;
-            this.f2664g = i8;
-            bArr[i7] = (byte) (((int) (j2 >> 40)) & 255);
-            int i9 = i8 + 1;
-            this.f2664g = i9;
-            bArr[i8] = (byte) (((int) (j2 >> 48)) & 255);
-            this.f2664g = i9 + 1;
-            bArr[i9] = (byte) (((int) (j2 >> 56)) & 255);
-            this.f2665h += 8;
+        final void d1(long j10) {
+            byte[] bArr = this.f24836e;
+            int i10 = this.f24838g;
+            int i11 = i10 + 1;
+            this.f24838g = i11;
+            bArr[i10] = (byte) (j10 & 255);
+            int i12 = i10 + 2;
+            this.f24838g = i12;
+            bArr[i11] = (byte) ((j10 >> 8) & 255);
+            int i13 = i10 + 3;
+            this.f24838g = i13;
+            bArr[i12] = (byte) ((j10 >> 16) & 255);
+            int i14 = i10 + 4;
+            this.f24838g = i14;
+            bArr[i13] = (byte) (255 & (j10 >> 24));
+            int i15 = i10 + 5;
+            this.f24838g = i15;
+            bArr[i14] = (byte) (((int) (j10 >> 32)) & 255);
+            int i16 = i10 + 6;
+            this.f24838g = i16;
+            bArr[i15] = (byte) (((int) (j10 >> 40)) & 255);
+            int i17 = i10 + 7;
+            this.f24838g = i17;
+            bArr[i16] = (byte) (((int) (j10 >> 48)) & 255);
+            this.f24838g = i10 + 8;
+            bArr[i17] = (byte) (((int) (j10 >> 56)) & 255);
+            this.f24839h += 8;
         }
 
-        /* renamed from: e1 */
-        final void m2518e1(int i2) {
-            if (i2 >= 0) {
-                m2520g1(i2);
+        final void e1(int i10) {
+            if (i10 >= 0) {
+                g1(i10);
             } else {
-                m2521h1(i2);
+                h1(i10);
             }
         }
 
-        /* renamed from: f1 */
-        final void m2519f1(int i2, int i3) {
-            m2520g1(C0409r1.m3204c(i2, i3));
+        final void f1(int i10, int i11) {
+            g1(r0.c(i10, i11));
         }
 
-        /* renamed from: g1 */
-        final void m2520g1(int i2) {
-            if (!CodedOutputStream.f2659b) {
-                while ((i2 & (-128)) != 0) {
-                    byte[] bArr = this.f2662e;
-                    int i3 = this.f2664g;
-                    this.f2664g = i3 + 1;
-                    bArr[i3] = (byte) ((i2 & 127) | 128);
-                    this.f2665h++;
-                    i2 >>>= 7;
+        final void g1(int i10) {
+            if (!CodedOutputStream.f24833d) {
+                while ((i10 & (-128)) != 0) {
+                    byte[] bArr = this.f24836e;
+                    int i11 = this.f24838g;
+                    this.f24838g = i11 + 1;
+                    bArr[i11] = (byte) ((i10 & 127) | 128);
+                    this.f24839h++;
+                    i10 >>>= 7;
                 }
-                byte[] bArr2 = this.f2662e;
-                int i4 = this.f2664g;
-                this.f2664g = i4 + 1;
-                bArr2[i4] = (byte) i2;
-                this.f2665h++;
+                byte[] bArr2 = this.f24836e;
+                int i12 = this.f24838g;
+                this.f24838g = i12 + 1;
+                bArr2[i12] = (byte) i10;
+                this.f24839h++;
                 return;
             }
-            long j2 = this.f2664g;
-            while ((i2 & (-128)) != 0) {
-                byte[] bArr3 = this.f2662e;
-                int i5 = this.f2664g;
-                this.f2664g = i5 + 1;
-                C0403p1.m3088H(bArr3, i5, (byte) ((i2 & 127) | 128));
-                i2 >>>= 7;
+            long j10 = this.f24838g;
+            while ((i10 & (-128)) != 0) {
+                byte[] bArr3 = this.f24836e;
+                int i13 = this.f24838g;
+                this.f24838g = i13 + 1;
+                p0.H(bArr3, i13, (byte) ((i10 & 127) | 128));
+                i10 >>>= 7;
             }
-            byte[] bArr4 = this.f2662e;
-            int i6 = this.f2664g;
-            this.f2664g = i6 + 1;
-            C0403p1.m3088H(bArr4, i6, (byte) i2);
-            this.f2665h += (int) (this.f2664g - j2);
+            byte[] bArr4 = this.f24836e;
+            int i14 = this.f24838g;
+            this.f24838g = i14 + 1;
+            p0.H(bArr4, i14, (byte) i10);
+            this.f24839h += (int) (this.f24838g - j10);
         }
 
-        /* renamed from: h1 */
-        final void m2521h1(long j2) {
-            if (!CodedOutputStream.f2659b) {
-                while ((j2 & (-128)) != 0) {
-                    byte[] bArr = this.f2662e;
-                    int i2 = this.f2664g;
-                    this.f2664g = i2 + 1;
-                    bArr[i2] = (byte) ((((int) j2) & 127) | 128);
-                    this.f2665h++;
-                    j2 >>>= 7;
+        final void h1(long j10) {
+            if (!CodedOutputStream.f24833d) {
+                while ((j10 & (-128)) != 0) {
+                    byte[] bArr = this.f24836e;
+                    int i10 = this.f24838g;
+                    this.f24838g = i10 + 1;
+                    bArr[i10] = (byte) ((((int) j10) & 127) | 128);
+                    this.f24839h++;
+                    j10 >>>= 7;
                 }
-                byte[] bArr2 = this.f2662e;
-                int i3 = this.f2664g;
-                this.f2664g = i3 + 1;
-                bArr2[i3] = (byte) j2;
-                this.f2665h++;
+                byte[] bArr2 = this.f24836e;
+                int i11 = this.f24838g;
+                this.f24838g = i11 + 1;
+                bArr2[i11] = (byte) j10;
+                this.f24839h++;
                 return;
             }
-            long j3 = this.f2664g;
-            while ((j2 & (-128)) != 0) {
-                byte[] bArr3 = this.f2662e;
-                int i4 = this.f2664g;
-                this.f2664g = i4 + 1;
-                C0403p1.m3088H(bArr3, i4, (byte) ((((int) j2) & 127) | 128));
-                j2 >>>= 7;
+            long j11 = this.f24838g;
+            while ((j10 & (-128)) != 0) {
+                byte[] bArr3 = this.f24836e;
+                int i12 = this.f24838g;
+                this.f24838g = i12 + 1;
+                p0.H(bArr3, i12, (byte) ((((int) j10) & 127) | 128));
+                j10 >>>= 7;
             }
-            byte[] bArr4 = this.f2662e;
-            int i5 = this.f2664g;
-            this.f2664g = i5 + 1;
-            C0403p1.m3088H(bArr4, i5, (byte) j2);
-            this.f2665h += (int) (this.f2664g - j3);
+            byte[] bArr4 = this.f24836e;
+            int i13 = this.f24838g;
+            this.f24838g = i13 + 1;
+            p0.H(bArr4, i13, (byte) j10);
+            this.f24839h += (int) (this.f24838g - j11);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: i0 */
-        public final int mo2497i0() {
+        public final int i0() {
             throw new UnsupportedOperationException("spaceLeft() can only be called on CodedOutputStreams that are writing to a flat array or ByteBuffer.");
         }
     }
 
-    /* renamed from: androidx.datastore.preferences.protobuf.CodedOutputStream$c */
-    private static class C0354c extends CodedOutputStream {
+    private static final class d extends b {
 
-        /* renamed from: e */
-        private final byte[] f2666e;
+        /* renamed from: i, reason: collision with root package name */
+        private final OutputStream f24844i;
 
-        /* renamed from: f */
-        private final int f2667f;
-
-        /* renamed from: g */
-        private final int f2668g;
-
-        /* renamed from: h */
-        private int f2669h;
-
-        C0354c(byte[] bArr, int i2, int i3) {
-            super();
-            if (bArr == null) {
-                throw new NullPointerException("buffer");
-            }
-            int i4 = i2 + i3;
-            if ((i2 | i3 | (bArr.length - i4)) < 0) {
-                throw new IllegalArgumentException(String.format("Array range is invalid. Buffer.length=%d, offset=%d, length=%d", Integer.valueOf(bArr.length), Integer.valueOf(i2), Integer.valueOf(i3)));
-            }
-            this.f2666e = bArr;
-            this.f2667f = i2;
-            this.f2669h = i2;
-            this.f2668g = i4;
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: E0 */
-        public final void mo2470E0(int i2, int i3) throws IOException {
-            mo2488W0(i2, 0);
-            mo2471F0(i3);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: F0 */
-        public final void mo2471F0(int i2) throws IOException {
-            if (i2 >= 0) {
-                mo2490Y0(i2);
-            } else {
-                mo2492a1(i2);
-            }
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: I0 */
-        final void mo2474I0(int i2, InterfaceC0405q0 interfaceC0405q0, InterfaceC0373f1 interfaceC0373f1) throws IOException {
-            mo2488W0(i2, 2);
-            mo2490Y0(((AbstractC0356a) interfaceC0405q0).m2546k(interfaceC0373f1));
-            interfaceC0373f1.mo2699h(interfaceC0405q0, this.f2660c);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: J0 */
-        public final void mo2475J0(InterfaceC0405q0 interfaceC0405q0) throws IOException {
-            mo2490Y0(interfaceC0405q0.mo3153e());
-            interfaceC0405q0.mo3156i(this);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: K0 */
-        public final void mo2476K0(int i2, InterfaceC0405q0 interfaceC0405q0) throws IOException {
-            mo2488W0(1, 3);
-            mo2489X0(2, i2);
-            m2524c1(3, interfaceC0405q0);
-            mo2488W0(1, 4);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: L0 */
-        public final void mo2477L0(int i2, AbstractC0377h abstractC0377h) throws IOException {
-            mo2488W0(1, 3);
-            mo2489X0(2, i2);
-            mo2503o0(3, abstractC0377h);
-            mo2488W0(1, 4);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: U0 */
-        public final void mo2486U0(int i2, String str) throws IOException {
-            mo2488W0(i2, 2);
-            mo2487V0(str);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: V0 */
-        public final void mo2487V0(String str) throws IOException {
-            int i2 = this.f2669h;
-            try {
-                int iM2434X = CodedOutputStream.m2434X(str.length() * 3);
-                int iM2434X2 = CodedOutputStream.m2434X(str.length());
-                if (iM2434X2 == iM2434X) {
-                    int i3 = i2 + iM2434X2;
-                    this.f2669h = i3;
-                    int iM3164f = C0406q1.m3164f(str, this.f2666e, i3, mo2497i0());
-                    this.f2669h = i2;
-                    mo2490Y0((iM3164f - i2) - iM2434X2);
-                    this.f2669h = iM3164f;
-                } else {
-                    mo2490Y0(C0406q1.m3165g(str));
-                    this.f2669h = C0406q1.m3164f(str, this.f2666e, this.f2669h, mo2497i0());
-                }
-            } catch (C0406q1.d e2) {
-                this.f2669h = i2;
-                m2495d0(str, e2);
-            } catch (IndexOutOfBoundsException e3) {
-                throw new OutOfSpaceException(e3);
-            }
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: W0 */
-        public final void mo2488W0(int i2, int i3) throws IOException {
-            mo2490Y0(C0409r1.m3204c(i2, i3));
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: X0 */
-        public final void mo2489X0(int i2, int i3) throws IOException {
-            mo2488W0(i2, 0);
-            mo2490Y0(i3);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: Y0 */
-        public final void mo2490Y0(int i2) throws IOException {
-            if (!CodedOutputStream.f2659b || C0365d.m2594c() || mo2497i0() < 5) {
-                while ((i2 & (-128)) != 0) {
-                    try {
-                        byte[] bArr = this.f2666e;
-                        int i3 = this.f2669h;
-                        this.f2669h = i3 + 1;
-                        bArr[i3] = (byte) ((i2 & 127) | 128);
-                        i2 >>>= 7;
-                    } catch (IndexOutOfBoundsException e2) {
-                        throw new OutOfSpaceException(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f2669h), Integer.valueOf(this.f2668g), 1), e2);
-                    }
-                }
-                byte[] bArr2 = this.f2666e;
-                int i4 = this.f2669h;
-                this.f2669h = i4 + 1;
-                bArr2[i4] = (byte) i2;
-                return;
-            }
-            if ((i2 & (-128)) == 0) {
-                byte[] bArr3 = this.f2666e;
-                int i5 = this.f2669h;
-                this.f2669h = i5 + 1;
-                C0403p1.m3088H(bArr3, i5, (byte) i2);
-                return;
-            }
-            byte[] bArr4 = this.f2666e;
-            int i6 = this.f2669h;
-            this.f2669h = i6 + 1;
-            C0403p1.m3088H(bArr4, i6, (byte) (i2 | 128));
-            int i7 = i2 >>> 7;
-            if ((i7 & (-128)) == 0) {
-                byte[] bArr5 = this.f2666e;
-                int i8 = this.f2669h;
-                this.f2669h = i8 + 1;
-                C0403p1.m3088H(bArr5, i8, (byte) i7);
-                return;
-            }
-            byte[] bArr6 = this.f2666e;
-            int i9 = this.f2669h;
-            this.f2669h = i9 + 1;
-            C0403p1.m3088H(bArr6, i9, (byte) (i7 | 128));
-            int i10 = i7 >>> 7;
-            if ((i10 & (-128)) == 0) {
-                byte[] bArr7 = this.f2666e;
-                int i11 = this.f2669h;
-                this.f2669h = i11 + 1;
-                C0403p1.m3088H(bArr7, i11, (byte) i10);
-                return;
-            }
-            byte[] bArr8 = this.f2666e;
-            int i12 = this.f2669h;
-            this.f2669h = i12 + 1;
-            C0403p1.m3088H(bArr8, i12, (byte) (i10 | 128));
-            int i13 = i10 >>> 7;
-            if ((i13 & (-128)) == 0) {
-                byte[] bArr9 = this.f2666e;
-                int i14 = this.f2669h;
-                this.f2669h = i14 + 1;
-                C0403p1.m3088H(bArr9, i14, (byte) i13);
-                return;
-            }
-            byte[] bArr10 = this.f2666e;
-            int i15 = this.f2669h;
-            this.f2669h = i15 + 1;
-            C0403p1.m3088H(bArr10, i15, (byte) (i13 | 128));
-            byte[] bArr11 = this.f2666e;
-            int i16 = this.f2669h;
-            this.f2669h = i16 + 1;
-            C0403p1.m3088H(bArr11, i16, (byte) (i13 >>> 7));
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: Z0 */
-        public final void mo2491Z0(int i2, long j2) throws IOException {
-            mo2488W0(i2, 0);
-            mo2492a1(j2);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.AbstractC0374g
-        /* renamed from: a */
-        public final void mo2522a(byte[] bArr, int i2, int i3) throws IOException {
-            m2523b1(bArr, i2, i3);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: a1 */
-        public final void mo2492a1(long j2) throws IOException {
-            if (CodedOutputStream.f2659b && mo2497i0() >= 10) {
-                while ((j2 & (-128)) != 0) {
-                    byte[] bArr = this.f2666e;
-                    int i2 = this.f2669h;
-                    this.f2669h = i2 + 1;
-                    C0403p1.m3088H(bArr, i2, (byte) ((((int) j2) & 127) | 128));
-                    j2 >>>= 7;
-                }
-                byte[] bArr2 = this.f2666e;
-                int i3 = this.f2669h;
-                this.f2669h = i3 + 1;
-                C0403p1.m3088H(bArr2, i3, (byte) j2);
-                return;
-            }
-            while ((j2 & (-128)) != 0) {
-                try {
-                    byte[] bArr3 = this.f2666e;
-                    int i4 = this.f2669h;
-                    this.f2669h = i4 + 1;
-                    bArr3[i4] = (byte) ((((int) j2) & 127) | 128);
-                    j2 >>>= 7;
-                } catch (IndexOutOfBoundsException e2) {
-                    throw new OutOfSpaceException(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f2669h), Integer.valueOf(this.f2668g), 1), e2);
-                }
-            }
-            byte[] bArr4 = this.f2666e;
-            int i5 = this.f2669h;
-            this.f2669h = i5 + 1;
-            bArr4[i5] = (byte) j2;
-        }
-
-        /* renamed from: b1 */
-        public final void m2523b1(byte[] bArr, int i2, int i3) throws IOException {
-            try {
-                System.arraycopy(bArr, i2, this.f2666e, this.f2669h, i3);
-                this.f2669h += i3;
-            } catch (IndexOutOfBoundsException e2) {
-                throw new OutOfSpaceException(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f2669h), Integer.valueOf(this.f2668g), Integer.valueOf(i3)), e2);
-            }
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: c0 */
-        public void mo2494c0() {
-        }
-
-        /* renamed from: c1 */
-        public final void m2524c1(int i2, InterfaceC0405q0 interfaceC0405q0) throws IOException {
-            mo2488W0(i2, 2);
-            mo2475J0(interfaceC0405q0);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: i0 */
-        public final int mo2497i0() {
-            return this.f2668g - this.f2669h;
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: j0 */
-        public final void mo2498j0(byte b2) throws IOException {
-            try {
-                byte[] bArr = this.f2666e;
-                int i2 = this.f2669h;
-                this.f2669h = i2 + 1;
-                bArr[i2] = b2;
-            } catch (IndexOutOfBoundsException e2) {
-                throw new OutOfSpaceException(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f2669h), Integer.valueOf(this.f2668g), 1), e2);
-            }
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: k0 */
-        public final void mo2499k0(int i2, boolean z) throws IOException {
-            mo2488W0(i2, 0);
-            mo2498j0(z ? (byte) 1 : (byte) 0);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: n0 */
-        public final void mo2502n0(byte[] bArr, int i2, int i3) throws IOException {
-            mo2490Y0(i3);
-            m2523b1(bArr, i2, i3);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: o0 */
-        public final void mo2503o0(int i2, AbstractC0377h abstractC0377h) throws IOException {
-            mo2488W0(i2, 2);
-            mo2504p0(abstractC0377h);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: p0 */
-        public final void mo2504p0(AbstractC0377h abstractC0377h) throws IOException {
-            mo2490Y0(abstractC0377h.size());
-            abstractC0377h.mo2723L(this);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: u0 */
-        public final void mo2509u0(int i2, int i3) throws IOException {
-            mo2488W0(i2, 5);
-            mo2510v0(i3);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: v0 */
-        public final void mo2510v0(int i2) throws IOException {
-            try {
-                byte[] bArr = this.f2666e;
-                int i3 = this.f2669h;
-                int i4 = i3 + 1;
-                this.f2669h = i4;
-                bArr[i3] = (byte) (i2 & 255);
-                int i5 = i4 + 1;
-                this.f2669h = i5;
-                bArr[i4] = (byte) ((i2 >> 8) & 255);
-                int i6 = i5 + 1;
-                this.f2669h = i6;
-                bArr[i5] = (byte) ((i2 >> 16) & 255);
-                this.f2669h = i6 + 1;
-                bArr[i6] = (byte) ((i2 >> 24) & 255);
-            } catch (IndexOutOfBoundsException e2) {
-                throw new OutOfSpaceException(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f2669h), Integer.valueOf(this.f2668g), 1), e2);
-            }
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: w0 */
-        public final void mo2511w0(int i2, long j2) throws IOException {
-            mo2488W0(i2, 1);
-            mo2512x0(j2);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: x0 */
-        public final void mo2512x0(long j2) throws IOException {
-            try {
-                byte[] bArr = this.f2666e;
-                int i2 = this.f2669h;
-                int i3 = i2 + 1;
-                this.f2669h = i3;
-                bArr[i2] = (byte) (((int) j2) & 255);
-                int i4 = i3 + 1;
-                this.f2669h = i4;
-                bArr[i3] = (byte) (((int) (j2 >> 8)) & 255);
-                int i5 = i4 + 1;
-                this.f2669h = i5;
-                bArr[i4] = (byte) (((int) (j2 >> 16)) & 255);
-                int i6 = i5 + 1;
-                this.f2669h = i6;
-                bArr[i5] = (byte) (((int) (j2 >> 24)) & 255);
-                int i7 = i6 + 1;
-                this.f2669h = i7;
-                bArr[i6] = (byte) (((int) (j2 >> 32)) & 255);
-                int i8 = i7 + 1;
-                this.f2669h = i8;
-                bArr[i7] = (byte) (((int) (j2 >> 40)) & 255);
-                int i9 = i8 + 1;
-                this.f2669h = i9;
-                bArr[i8] = (byte) (((int) (j2 >> 48)) & 255);
-                this.f2669h = i9 + 1;
-                bArr[i9] = (byte) (((int) (j2 >> 56)) & 255);
-            } catch (IndexOutOfBoundsException e2) {
-                throw new OutOfSpaceException(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f2669h), Integer.valueOf(this.f2668g), 1), e2);
-            }
-        }
-    }
-
-    /* renamed from: androidx.datastore.preferences.protobuf.CodedOutputStream$d */
-    private static final class C0355d extends AbstractC0353b {
-
-        /* renamed from: i */
-        private final OutputStream f2670i;
-
-        C0355d(OutputStream outputStream, int i2) {
-            super(i2);
+        d(OutputStream outputStream, int i10) {
+            super(i10);
             if (outputStream == null) {
                 throw new NullPointerException("out");
             }
-            this.f2670i = outputStream;
+            this.f24844i = outputStream;
         }
 
-        /* renamed from: i1 */
-        private void m2525i1() throws IOException {
-            this.f2670i.write(this.f2662e, 0, this.f2664g);
-            this.f2664g = 0;
+        private void i1() throws IOException {
+            this.f24844i.write(this.f24836e, 0, this.f24838g);
+            this.f24838g = 0;
         }
 
-        /* renamed from: j1 */
-        private void m2526j1(int i2) throws IOException {
-            if (this.f2663f - this.f2664g < i2) {
-                m2525i1();
+        private void j1(int i10) throws IOException {
+            if (this.f24837f - this.f24838g < i10) {
+                i1();
             }
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: E0 */
-        public void mo2470E0(int i2, int i3) throws IOException {
-            m2526j1(20);
-            m2519f1(i2, 0);
-            m2518e1(i3);
+        public void E0(int i10, int i11) throws IOException {
+            j1(20);
+            f1(i10, 0);
+            e1(i11);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: F0 */
-        public void mo2471F0(int i2) throws IOException {
-            if (i2 >= 0) {
-                mo2490Y0(i2);
+        public void F0(int i10) throws IOException {
+            if (i10 >= 0) {
+                Y0(i10);
             } else {
-                mo2492a1(i2);
+                a1(i10);
             }
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: I0 */
-        void mo2474I0(int i2, InterfaceC0405q0 interfaceC0405q0, InterfaceC0373f1 interfaceC0373f1) throws IOException {
-            mo2488W0(i2, 2);
-            m2529m1(interfaceC0405q0, interfaceC0373f1);
+        void I0(int i10, P p10, f0 f0Var) throws IOException {
+            W0(i10, 2);
+            m1(p10, f0Var);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: J0 */
-        public void mo2475J0(InterfaceC0405q0 interfaceC0405q0) throws IOException {
-            mo2490Y0(interfaceC0405q0.mo3153e());
-            interfaceC0405q0.mo3156i(this);
+        public void J0(P p10) throws IOException {
+            Y0(p10.f());
+            p10.k(this);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: K0 */
-        public void mo2476K0(int i2, InterfaceC0405q0 interfaceC0405q0) throws IOException {
-            mo2488W0(1, 3);
-            mo2489X0(2, i2);
-            m2528l1(3, interfaceC0405q0);
-            mo2488W0(1, 4);
+        public void K0(int i10, P p10) throws IOException {
+            W0(1, 3);
+            X0(2, i10);
+            l1(3, p10);
+            W0(1, 4);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: L0 */
-        public void mo2477L0(int i2, AbstractC0377h abstractC0377h) throws IOException {
-            mo2488W0(1, 3);
-            mo2489X0(2, i2);
-            mo2503o0(3, abstractC0377h);
-            mo2488W0(1, 4);
+        public void L0(int i10, AbstractC2062h abstractC2062h) throws IOException {
+            W0(1, 3);
+            X0(2, i10);
+            o0(3, abstractC2062h);
+            W0(1, 4);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: U0 */
-        public void mo2486U0(int i2, String str) throws IOException {
-            mo2488W0(i2, 2);
-            mo2487V0(str);
+        public void U0(int i10, String str) throws IOException {
+            W0(i10, 2);
+            V0(str);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: V0 */
-        public void mo2487V0(String str) throws IOException {
-            int iM3165g;
+        public void V0(String str) throws IOException {
+            int iG;
             try {
                 int length = str.length() * 3;
-                int iM2434X = CodedOutputStream.m2434X(length);
-                int i2 = iM2434X + length;
-                int i3 = this.f2663f;
-                if (i2 > i3) {
+                int iX = CodedOutputStream.X(length);
+                int i10 = iX + length;
+                int i11 = this.f24837f;
+                if (i10 > i11) {
                     byte[] bArr = new byte[length];
-                    int iM3164f = C0406q1.m3164f(str, bArr, 0, length);
-                    mo2490Y0(iM3164f);
-                    mo2522a(bArr, 0, iM3164f);
+                    int iF = q0.f(str, bArr, 0, length);
+                    Y0(iF);
+                    a(bArr, 0, iF);
                     return;
                 }
-                if (i2 > i3 - this.f2664g) {
-                    m2525i1();
+                if (i10 > i11 - this.f24838g) {
+                    i1();
                 }
-                int iM2434X2 = CodedOutputStream.m2434X(str.length());
-                int i4 = this.f2664g;
+                int iX2 = CodedOutputStream.X(str.length());
+                int i12 = this.f24838g;
                 try {
-                    if (iM2434X2 == iM2434X) {
-                        int i5 = i4 + iM2434X2;
-                        this.f2664g = i5;
-                        int iM3164f2 = C0406q1.m3164f(str, this.f2662e, i5, this.f2663f - i5);
-                        this.f2664g = i4;
-                        iM3165g = (iM3164f2 - i4) - iM2434X2;
-                        m2520g1(iM3165g);
-                        this.f2664g = iM3164f2;
+                    if (iX2 == iX) {
+                        int i13 = i12 + iX2;
+                        this.f24838g = i13;
+                        int iF2 = q0.f(str, this.f24836e, i13, this.f24837f - i13);
+                        this.f24838g = i12;
+                        iG = (iF2 - i12) - iX2;
+                        g1(iG);
+                        this.f24838g = iF2;
                     } else {
-                        iM3165g = C0406q1.m3165g(str);
-                        m2520g1(iM3165g);
-                        this.f2664g = C0406q1.m3164f(str, this.f2662e, this.f2664g, iM3165g);
+                        iG = q0.g(str);
+                        g1(iG);
+                        this.f24838g = q0.f(str, this.f24836e, this.f24838g, iG);
                     }
-                    this.f2665h += iM3165g;
-                } catch (C0406q1.d e2) {
-                    this.f2665h -= this.f2664g - i4;
-                    this.f2664g = i4;
-                    throw e2;
-                } catch (ArrayIndexOutOfBoundsException e3) {
-                    throw new OutOfSpaceException(e3);
+                    this.f24839h += iG;
+                } catch (q0.d e10) {
+                    this.f24839h -= this.f24838g - i12;
+                    this.f24838g = i12;
+                    throw e10;
+                } catch (ArrayIndexOutOfBoundsException e11) {
+                    throw new OutOfSpaceException(e11);
                 }
-            } catch (C0406q1.d e4) {
-                m2495d0(str, e4);
+            } catch (q0.d e12) {
+                d0(str, e12);
             }
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: W0 */
-        public void mo2488W0(int i2, int i3) throws IOException {
-            mo2490Y0(C0409r1.m3204c(i2, i3));
+        public void W0(int i10, int i11) throws IOException {
+            Y0(r0.c(i10, i11));
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: X0 */
-        public void mo2489X0(int i2, int i3) throws IOException {
-            m2526j1(20);
-            m2519f1(i2, 0);
-            m2520g1(i3);
+        public void X0(int i10, int i11) throws IOException {
+            j1(20);
+            f1(i10, 0);
+            g1(i11);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: Y0 */
-        public void mo2490Y0(int i2) throws IOException {
-            m2526j1(5);
-            m2520g1(i2);
+        public void Y0(int i10) throws IOException {
+            j1(5);
+            g1(i10);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: Z0 */
-        public void mo2491Z0(int i2, long j2) throws IOException {
-            m2526j1(20);
-            m2519f1(i2, 0);
-            m2521h1(j2);
+        public void Z0(int i10, long j10) throws IOException {
+            j1(20);
+            f1(i10, 0);
+            h1(j10);
         }
 
-        @Override // androidx.datastore.preferences.protobuf.AbstractC0374g
-        /* renamed from: a */
-        public void mo2522a(byte[] bArr, int i2, int i3) throws IOException {
-            m2527k1(bArr, i2, i3);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: a1 */
-        public void mo2492a1(long j2) throws IOException {
-            m2526j1(10);
-            m2521h1(j2);
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream, androidx.datastore.preferences.protobuf.AbstractC2061g
+        public void a(byte[] bArr, int i10, int i11) throws IOException {
+            k1(bArr, i10, i11);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: c0 */
-        public void mo2494c0() throws IOException {
-            if (this.f2664g > 0) {
-                m2525i1();
+        public void a1(long j10) throws IOException {
+            j1(10);
+            h1(j10);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public void c0() throws IOException {
+            if (this.f24838g > 0) {
+                i1();
             }
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: j0 */
-        public void mo2498j0(byte b2) throws IOException {
-            if (this.f2664g == this.f2663f) {
-                m2525i1();
+        public void j0(byte b10) throws IOException {
+            if (this.f24838g == this.f24837f) {
+                i1();
             }
-            m2515b1(b2);
+            b1(b10);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: k0 */
-        public void mo2499k0(int i2, boolean z) throws IOException {
-            m2526j1(11);
-            m2519f1(i2, 0);
-            m2515b1(z ? (byte) 1 : (byte) 0);
+        public void k0(int i10, boolean z10) throws IOException {
+            j1(11);
+            f1(i10, 0);
+            b1(z10 ? (byte) 1 : (byte) 0);
         }
 
-        /* renamed from: k1 */
-        public void m2527k1(byte[] bArr, int i2, int i3) throws IOException {
-            int i4 = this.f2663f;
-            int i5 = this.f2664g;
-            if (i4 - i5 >= i3) {
-                System.arraycopy(bArr, i2, this.f2662e, i5, i3);
-                this.f2664g += i3;
-                this.f2665h += i3;
+        public void k1(byte[] bArr, int i10, int i11) throws IOException {
+            int i12 = this.f24837f;
+            int i13 = this.f24838g;
+            if (i12 - i13 >= i11) {
+                System.arraycopy(bArr, i10, this.f24836e, i13, i11);
+                this.f24838g += i11;
+                this.f24839h += i11;
                 return;
             }
-            int i6 = i4 - i5;
-            System.arraycopy(bArr, i2, this.f2662e, i5, i6);
-            int i7 = i2 + i6;
-            int i8 = i3 - i6;
-            this.f2664g = this.f2663f;
-            this.f2665h += i6;
-            m2525i1();
-            if (i8 <= this.f2663f) {
-                System.arraycopy(bArr, i7, this.f2662e, 0, i8);
-                this.f2664g = i8;
+            int i14 = i12 - i13;
+            System.arraycopy(bArr, i10, this.f24836e, i13, i14);
+            int i15 = i10 + i14;
+            int i16 = i11 - i14;
+            this.f24838g = this.f24837f;
+            this.f24839h += i14;
+            i1();
+            if (i16 <= this.f24837f) {
+                System.arraycopy(bArr, i15, this.f24836e, 0, i16);
+                this.f24838g = i16;
             } else {
-                this.f2670i.write(bArr, i7, i8);
+                this.f24844i.write(bArr, i15, i16);
             }
-            this.f2665h += i8;
+            this.f24839h += i16;
         }
 
-        /* renamed from: l1 */
-        public void m2528l1(int i2, InterfaceC0405q0 interfaceC0405q0) throws IOException {
-            mo2488W0(i2, 2);
-            mo2475J0(interfaceC0405q0);
+        public void l1(int i10, P p10) throws IOException {
+            W0(i10, 2);
+            J0(p10);
         }
 
-        /* renamed from: m1 */
-        void m2529m1(InterfaceC0405q0 interfaceC0405q0, InterfaceC0373f1 interfaceC0373f1) throws IOException {
-            mo2490Y0(((AbstractC0356a) interfaceC0405q0).m2546k(interfaceC0373f1));
-            interfaceC0373f1.mo2699h(interfaceC0405q0, this.f2660c);
-        }
-
-        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: n0 */
-        public void mo2502n0(byte[] bArr, int i2, int i3) throws IOException {
-            mo2490Y0(i3);
-            m2527k1(bArr, i2, i3);
+        void m1(P p10, f0 f0Var) throws IOException {
+            Y0(((AbstractC2055a) p10).m(f0Var));
+            f0Var.i(p10, this.f24834a);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: o0 */
-        public void mo2503o0(int i2, AbstractC0377h abstractC0377h) throws IOException {
-            mo2488W0(i2, 2);
-            mo2504p0(abstractC0377h);
+        public void n0(byte[] bArr, int i10, int i11) throws IOException {
+            Y0(i11);
+            k1(bArr, i10, i11);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: p0 */
-        public void mo2504p0(AbstractC0377h abstractC0377h) throws IOException {
-            mo2490Y0(abstractC0377h.size());
-            abstractC0377h.mo2723L(this);
+        public void o0(int i10, AbstractC2062h abstractC2062h) throws IOException {
+            W0(i10, 2);
+            p0(abstractC2062h);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: u0 */
-        public void mo2509u0(int i2, int i3) throws IOException {
-            m2526j1(14);
-            m2519f1(i2, 5);
-            m2516c1(i3);
+        public void p0(AbstractC2062h abstractC2062h) throws IOException {
+            Y0(abstractC2062h.size());
+            abstractC2062h.O(this);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: v0 */
-        public void mo2510v0(int i2) throws IOException {
-            m2526j1(4);
-            m2516c1(i2);
+        public void u0(int i10, int i11) throws IOException {
+            j1(14);
+            f1(i10, 5);
+            c1(i11);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: w0 */
-        public void mo2511w0(int i2, long j2) throws IOException {
-            m2526j1(18);
-            m2519f1(i2, 1);
-            m2517d1(j2);
+        public void v0(int i10) throws IOException {
+            j1(4);
+            c1(i10);
         }
 
         @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
-        /* renamed from: x0 */
-        public void mo2512x0(long j2) throws IOException {
-            m2526j1(8);
-            m2517d1(j2);
+        public void w0(int i10, long j10) throws IOException {
+            j1(18);
+            f1(i10, 1);
+            d1(j10);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public void x0(long j10) throws IOException {
+            j1(8);
+            d1(j10);
         }
     }
 
-    /* renamed from: A */
-    public static int m2411A(int i2, C0366d0 c0366d0) {
-        return m2432V(i2) + m2412B(c0366d0);
+    public static int A(int i10, C c10) {
+        return V(i10) + B(c10);
     }
 
-    /* renamed from: B */
-    public static int m2412B(C0366d0 c0366d0) {
-        return m2413C(c0366d0.m2596b());
+    public static int B(C c10) {
+        return C(c10.b());
     }
 
-    /* renamed from: C */
-    static int m2413C(int i2) {
-        return m2434X(i2) + i2;
+    static int C(int i10) {
+        return X(i10) + i10;
     }
 
-    /* renamed from: D */
-    public static int m2414D(int i2, InterfaceC0405q0 interfaceC0405q0) {
-        return (m2432V(1) * 2) + m2433W(2, i2) + m2415E(3, interfaceC0405q0);
+    public static int D(int i10, P p10) {
+        return (V(1) * 2) + W(2, i10) + E(3, p10);
     }
 
-    /* renamed from: E */
-    public static int m2415E(int i2, InterfaceC0405q0 interfaceC0405q0) {
-        return m2432V(i2) + m2417G(interfaceC0405q0);
+    public static int E(int i10, P p10) {
+        return V(i10) + G(p10);
     }
 
-    /* renamed from: F */
-    static int m2416F(int i2, InterfaceC0405q0 interfaceC0405q0, InterfaceC0373f1 interfaceC0373f1) {
-        return m2432V(i2) + m2418H(interfaceC0405q0, interfaceC0373f1);
+    static int F(int i10, P p10, f0 f0Var) {
+        return V(i10) + H(p10, f0Var);
     }
 
-    /* renamed from: G */
-    public static int m2417G(InterfaceC0405q0 interfaceC0405q0) {
-        return m2413C(interfaceC0405q0.mo3153e());
+    public static int G(P p10) {
+        return C(p10.f());
     }
 
-    /* renamed from: H */
-    static int m2418H(InterfaceC0405q0 interfaceC0405q0, InterfaceC0373f1 interfaceC0373f1) {
-        return m2413C(((AbstractC0356a) interfaceC0405q0).m2546k(interfaceC0373f1));
+    static int H(P p10, f0 f0Var) {
+        return C(((AbstractC2055a) p10).m(f0Var));
     }
 
-    /* renamed from: I */
-    static int m2419I(int i2) {
-        return i2 > 4096 ? RecyclerView.AbstractC0599l.FLAG_APPEARED_IN_PRE_LAYOUT : i2;
+    static int I(int i10) {
+        if (i10 > 4096) {
+            return 4096;
+        }
+        return i10;
     }
 
-    /* renamed from: J */
-    public static int m2420J(int i2, AbstractC0377h abstractC0377h) {
-        return (m2432V(1) * 2) + m2433W(2, i2) + m2444g(3, abstractC0377h);
+    public static int J(int i10, AbstractC2062h abstractC2062h) {
+        return (V(1) * 2) + W(2, i10) + g(3, abstractC2062h);
     }
 
     @Deprecated
-    /* renamed from: K */
-    public static int m2421K(int i2) {
-        return m2434X(i2);
+    public static int K(int i10) {
+        return X(i10);
     }
 
-    /* renamed from: L */
-    public static int m2422L(int i2, int i3) {
-        return m2432V(i2) + m2423M(i3);
+    public static int L(int i10, int i11) {
+        return V(i10) + M(i11);
     }
 
-    /* renamed from: M */
-    public static int m2423M(int i2) {
+    public static int M(int i10) {
         return 4;
     }
 
-    /* renamed from: N */
-    public static int m2424N(int i2, long j2) {
-        return m2432V(i2) + m2425O(j2);
+    public static int N(int i10, long j10) {
+        return V(i10) + O(j10);
     }
 
-    /* renamed from: O */
-    public static int m2425O(long j2) {
+    public static int O(long j10) {
         return 8;
     }
 
-    /* renamed from: P */
-    public static int m2426P(int i2, int i3) {
-        return m2432V(i2) + m2427Q(i3);
+    public static int P(int i10, int i11) {
+        return V(i10) + Q(i11);
     }
 
-    /* renamed from: Q */
-    public static int m2427Q(int i2) {
-        return m2434X(m2437a0(i2));
+    public static int Q(int i10) {
+        return X(a0(i10));
     }
 
-    /* renamed from: R */
-    public static int m2428R(int i2, long j2) {
-        return m2432V(i2) + m2429S(j2);
+    public static int R(int i10, long j10) {
+        return V(i10) + S(j10);
     }
 
-    /* renamed from: S */
-    public static int m2429S(long j2) {
-        return m2436Z(m2439b0(j2));
+    public static int S(long j10) {
+        return Z(b0(j10));
     }
 
-    /* renamed from: T */
-    public static int m2430T(int i2, String str) {
-        return m2432V(i2) + m2431U(str);
+    public static int T(int i10, String str) {
+        return V(i10) + U(str);
     }
 
-    /* renamed from: U */
-    public static int m2431U(String str) {
+    public static int U(String str) {
         int length;
         try {
-            length = C0406q1.m3165g(str);
-        } catch (C0406q1.d unused) {
-            length = str.getBytes(C0357a0.f2673a).length;
+            length = q0.g(str);
+        } catch (q0.d unused) {
+            length = str.getBytes(C2079z.f25184a).length;
         }
-        return m2413C(length);
+        return C(length);
     }
 
-    /* renamed from: V */
-    public static int m2432V(int i2) {
-        return m2434X(C0409r1.m3204c(i2, 0));
+    public static int V(int i10) {
+        return X(r0.c(i10, 0));
     }
 
-    /* renamed from: W */
-    public static int m2433W(int i2, int i3) {
-        return m2432V(i2) + m2434X(i3);
+    public static int W(int i10, int i11) {
+        return V(i10) + X(i11);
     }
 
-    /* renamed from: X */
-    public static int m2434X(int i2) {
-        if ((i2 & (-128)) == 0) {
+    public static int X(int i10) {
+        if ((i10 & (-128)) == 0) {
             return 1;
         }
-        if ((i2 & (-16384)) == 0) {
+        if ((i10 & (-16384)) == 0) {
             return 2;
         }
-        if (((-2097152) & i2) == 0) {
+        if (((-2097152) & i10) == 0) {
             return 3;
         }
-        return (i2 & (-268435456)) == 0 ? 4 : 5;
+        return (i10 & (-268435456)) == 0 ? 4 : 5;
     }
 
-    /* renamed from: Y */
-    public static int m2435Y(int i2, long j2) {
-        return m2432V(i2) + m2436Z(j2);
+    public static int Y(int i10, long j10) {
+        return V(i10) + Z(j10);
     }
 
-    /* renamed from: Z */
-    public static int m2436Z(long j2) {
-        int i2;
-        if (((-128) & j2) == 0) {
+    public static int Z(long j10) {
+        int i10;
+        if (((-128) & j10) == 0) {
             return 1;
         }
-        if (j2 < 0) {
+        if (j10 < 0) {
             return 10;
         }
-        if (((-34359738368L) & j2) != 0) {
-            i2 = 6;
-            j2 >>>= 28;
+        if (((-34359738368L) & j10) != 0) {
+            j10 >>>= 28;
+            i10 = 6;
         } else {
-            i2 = 2;
+            i10 = 2;
         }
-        if (((-2097152) & j2) != 0) {
-            i2 += 2;
-            j2 >>>= 14;
+        if (((-2097152) & j10) != 0) {
+            i10 += 2;
+            j10 >>>= 14;
         }
-        return (j2 & (-16384)) != 0 ? i2 + 1 : i2;
+        return (j10 & (-16384)) != 0 ? i10 + 1 : i10;
     }
 
-    /* renamed from: a0 */
-    public static int m2437a0(int i2) {
-        return (i2 >> 31) ^ (i2 << 1);
+    public static int a0(int i10) {
+        return (i10 >> 31) ^ (i10 << 1);
     }
 
-    /* renamed from: b0 */
-    public static long m2439b0(long j2) {
-        return (j2 >> 63) ^ (j2 << 1);
+    public static long b0(long j10) {
+        return (j10 >> 63) ^ (j10 << 1);
     }
 
-    /* renamed from: d */
-    public static int m2440d(int i2, boolean z) {
-        return m2432V(i2) + m2441e(z);
+    public static int d(int i10, boolean z10) {
+        return V(i10) + e(z10);
     }
 
-    /* renamed from: e */
-    public static int m2441e(boolean z) {
+    public static int e(boolean z10) {
         return 1;
     }
 
-    /* renamed from: f */
-    public static int m2442f(byte[] bArr) {
-        return m2413C(bArr.length);
+    public static int f(byte[] bArr) {
+        return C(bArr.length);
     }
 
-    /* renamed from: f0 */
-    public static CodedOutputStream m2443f0(OutputStream outputStream, int i2) {
-        return new C0355d(outputStream, i2);
+    public static CodedOutputStream f0(OutputStream outputStream, int i10) {
+        return new d(outputStream, i10);
     }
 
-    /* renamed from: g */
-    public static int m2444g(int i2, AbstractC0377h abstractC0377h) {
-        return m2432V(i2) + m2446h(abstractC0377h);
+    public static int g(int i10, AbstractC2062h abstractC2062h) {
+        return V(i10) + h(abstractC2062h);
     }
 
-    /* renamed from: g0 */
-    public static CodedOutputStream m2445g0(byte[] bArr) {
-        return m2447h0(bArr, 0, bArr.length);
+    public static CodedOutputStream g0(byte[] bArr) {
+        return h0(bArr, 0, bArr.length);
     }
 
-    /* renamed from: h */
-    public static int m2446h(AbstractC0377h abstractC0377h) {
-        return m2413C(abstractC0377h.size());
+    public static int h(AbstractC2062h abstractC2062h) {
+        return C(abstractC2062h.size());
     }
 
-    /* renamed from: h0 */
-    public static CodedOutputStream m2447h0(byte[] bArr, int i2, int i3) {
-        return new C0354c(bArr, i2, i3);
+    public static CodedOutputStream h0(byte[] bArr, int i10, int i11) {
+        return new c(bArr, i10, i11);
     }
 
-    /* renamed from: i */
-    public static int m2448i(int i2, double d2) {
-        return m2432V(i2) + m2449j(d2);
+    public static int i(int i10, double d10) {
+        return V(i10) + j(d10);
     }
 
-    /* renamed from: j */
-    public static int m2449j(double d2) {
+    public static int j(double d10) {
         return 8;
     }
 
-    /* renamed from: k */
-    public static int m2450k(int i2, int i3) {
-        return m2432V(i2) + m2451l(i3);
+    public static int k(int i10, int i11) {
+        return V(i10) + l(i11);
     }
 
-    /* renamed from: l */
-    public static int m2451l(int i2) {
-        return m2462w(i2);
+    public static int l(int i10) {
+        return w(i10);
     }
 
-    /* renamed from: m */
-    public static int m2452m(int i2, int i3) {
-        return m2432V(i2) + m2453n(i3);
+    public static int m(int i10, int i11) {
+        return V(i10) + n(i11);
     }
 
-    /* renamed from: n */
-    public static int m2453n(int i2) {
+    public static int n(int i10) {
         return 4;
     }
 
-    /* renamed from: o */
-    public static int m2454o(int i2, long j2) {
-        return m2432V(i2) + m2455p(j2);
+    public static int o(int i10, long j10) {
+        return V(i10) + p(j10);
     }
 
-    /* renamed from: p */
-    public static int m2455p(long j2) {
+    public static int p(long j10) {
         return 8;
     }
 
-    /* renamed from: q */
-    public static int m2456q(int i2, float f2) {
-        return m2432V(i2) + m2457r(f2);
+    public static int q(int i10, float f10) {
+        return V(i10) + r(f10);
     }
 
-    /* renamed from: r */
-    public static int m2457r(float f2) {
+    public static int r(float f10) {
         return 4;
     }
 
     @Deprecated
-    /* renamed from: s */
-    static int m2458s(int i2, InterfaceC0405q0 interfaceC0405q0, InterfaceC0373f1 interfaceC0373f1) {
-        return (m2432V(i2) * 2) + m2460u(interfaceC0405q0, interfaceC0373f1);
+    static int s(int i10, P p10, f0 f0Var) {
+        return (V(i10) * 2) + u(p10, f0Var);
     }
 
     @Deprecated
-    /* renamed from: t */
-    public static int m2459t(InterfaceC0405q0 interfaceC0405q0) {
-        return interfaceC0405q0.mo3153e();
+    public static int t(P p10) {
+        return p10.f();
     }
 
     @Deprecated
-    /* renamed from: u */
-    static int m2460u(InterfaceC0405q0 interfaceC0405q0, InterfaceC0373f1 interfaceC0373f1) {
-        return ((AbstractC0356a) interfaceC0405q0).m2546k(interfaceC0373f1);
+    static int u(P p10, f0 f0Var) {
+        return ((AbstractC2055a) p10).m(f0Var);
     }
 
-    /* renamed from: v */
-    public static int m2461v(int i2, int i3) {
-        return m2432V(i2) + m2462w(i3);
+    public static int v(int i10, int i11) {
+        return V(i10) + w(i11);
     }
 
-    /* renamed from: w */
-    public static int m2462w(int i2) {
-        if (i2 >= 0) {
-            return m2434X(i2);
+    public static int w(int i10) {
+        if (i10 >= 0) {
+            return X(i10);
         }
         return 10;
     }
 
-    /* renamed from: x */
-    public static int m2463x(int i2, long j2) {
-        return m2432V(i2) + m2464y(j2);
+    public static int x(int i10, long j10) {
+        return V(i10) + y(j10);
     }
 
-    /* renamed from: y */
-    public static int m2464y(long j2) {
-        return m2436Z(j2);
+    public static int y(long j10) {
+        return Z(j10);
     }
 
-    /* renamed from: z */
-    public static int m2465z(int i2, C0366d0 c0366d0) {
-        return (m2432V(1) * 2) + m2433W(2, i2) + m2411A(3, c0366d0);
+    public static int z(int i10, C c10) {
+        return (V(1) * 2) + W(2, i10) + A(3, c10);
     }
 
     @Deprecated
-    /* renamed from: A0 */
-    public final void m2466A0(int i2, InterfaceC0405q0 interfaceC0405q0) throws IOException {
-        mo2488W0(i2, 3);
-        m2468C0(interfaceC0405q0);
-        mo2488W0(i2, 4);
+    public final void A0(int i10, P p10) {
+        W0(i10, 3);
+        C0(p10);
+        W0(i10, 4);
     }
 
     @Deprecated
-    /* renamed from: B0 */
-    final void m2467B0(int i2, InterfaceC0405q0 interfaceC0405q0, InterfaceC0373f1 interfaceC0373f1) throws IOException {
-        mo2488W0(i2, 3);
-        m2469D0(interfaceC0405q0, interfaceC0373f1);
-        mo2488W0(i2, 4);
+    final void B0(int i10, P p10, f0 f0Var) {
+        W0(i10, 3);
+        D0(p10, f0Var);
+        W0(i10, 4);
     }
 
     @Deprecated
-    /* renamed from: C0 */
-    public final void m2468C0(InterfaceC0405q0 interfaceC0405q0) throws IOException {
-        interfaceC0405q0.mo3156i(this);
+    public final void C0(P p10) {
+        p10.k(this);
     }
 
     @Deprecated
-    /* renamed from: D0 */
-    final void m2469D0(InterfaceC0405q0 interfaceC0405q0, InterfaceC0373f1 interfaceC0373f1) throws IOException {
-        interfaceC0373f1.mo2699h(interfaceC0405q0, this.f2660c);
+    final void D0(P p10, f0 f0Var) {
+        f0Var.i(p10, this.f24834a);
     }
 
-    /* renamed from: E0 */
-    public abstract void mo2470E0(int i2, int i3) throws IOException;
+    public abstract void E0(int i10, int i11);
 
-    /* renamed from: F0 */
-    public abstract void mo2471F0(int i2) throws IOException;
+    public abstract void F0(int i10);
 
-    /* renamed from: G0 */
-    public final void m2472G0(int i2, long j2) throws IOException {
-        mo2491Z0(i2, j2);
+    public final void G0(int i10, long j10) {
+        Z0(i10, j10);
     }
 
-    /* renamed from: H0 */
-    public final void m2473H0(long j2) throws IOException {
-        mo2492a1(j2);
+    public final void H0(long j10) {
+        a1(j10);
     }
 
-    /* renamed from: I0 */
-    abstract void mo2474I0(int i2, InterfaceC0405q0 interfaceC0405q0, InterfaceC0373f1 interfaceC0373f1) throws IOException;
+    abstract void I0(int i10, P p10, f0 f0Var);
 
-    /* renamed from: J0 */
-    public abstract void mo2475J0(InterfaceC0405q0 interfaceC0405q0) throws IOException;
+    public abstract void J0(P p10);
 
-    /* renamed from: K0 */
-    public abstract void mo2476K0(int i2, InterfaceC0405q0 interfaceC0405q0) throws IOException;
+    public abstract void K0(int i10, P p10);
 
-    /* renamed from: L0 */
-    public abstract void mo2477L0(int i2, AbstractC0377h abstractC0377h) throws IOException;
+    public abstract void L0(int i10, AbstractC2062h abstractC2062h);
 
-    /* renamed from: M0 */
-    public final void m2478M0(int i2, int i3) throws IOException {
-        mo2509u0(i2, i3);
+    public final void M0(int i10, int i11) {
+        u0(i10, i11);
     }
 
-    /* renamed from: N0 */
-    public final void m2479N0(int i2) throws IOException {
-        mo2510v0(i2);
+    public final void N0(int i10) {
+        v0(i10);
     }
 
-    /* renamed from: O0 */
-    public final void m2480O0(int i2, long j2) throws IOException {
-        mo2511w0(i2, j2);
+    public final void O0(int i10, long j10) {
+        w0(i10, j10);
     }
 
-    /* renamed from: P0 */
-    public final void m2481P0(long j2) throws IOException {
-        mo2512x0(j2);
+    public final void P0(long j10) {
+        x0(j10);
     }
 
-    /* renamed from: Q0 */
-    public final void m2482Q0(int i2, int i3) throws IOException {
-        mo2489X0(i2, m2437a0(i3));
+    public final void Q0(int i10, int i11) {
+        X0(i10, a0(i11));
     }
 
-    /* renamed from: R0 */
-    public final void m2483R0(int i2) throws IOException {
-        mo2490Y0(m2437a0(i2));
+    public final void R0(int i10) {
+        Y0(a0(i10));
     }
 
-    /* renamed from: S0 */
-    public final void m2484S0(int i2, long j2) throws IOException {
-        mo2491Z0(i2, m2439b0(j2));
+    public final void S0(int i10, long j10) {
+        Z0(i10, b0(j10));
     }
 
-    /* renamed from: T0 */
-    public final void m2485T0(long j2) throws IOException {
-        mo2492a1(m2439b0(j2));
+    public final void T0(long j10) {
+        a1(b0(j10));
     }
 
-    /* renamed from: U0 */
-    public abstract void mo2486U0(int i2, String str) throws IOException;
+    public abstract void U0(int i10, String str);
 
-    /* renamed from: V0 */
-    public abstract void mo2487V0(String str) throws IOException;
+    public abstract void V0(String str);
 
-    /* renamed from: W0 */
-    public abstract void mo2488W0(int i2, int i3) throws IOException;
+    public abstract void W0(int i10, int i11);
 
-    /* renamed from: X0 */
-    public abstract void mo2489X0(int i2, int i3) throws IOException;
+    public abstract void X0(int i10, int i11);
 
-    /* renamed from: Y0 */
-    public abstract void mo2490Y0(int i2) throws IOException;
+    public abstract void Y0(int i10);
 
-    /* renamed from: Z0 */
-    public abstract void mo2491Z0(int i2, long j2) throws IOException;
+    public abstract void Z0(int i10, long j10);
 
-    /* renamed from: a1 */
-    public abstract void mo2492a1(long j2) throws IOException;
+    @Override // androidx.datastore.preferences.protobuf.AbstractC2061g
+    public abstract void a(byte[] bArr, int i10, int i11);
 
-    /* renamed from: c */
-    public final void m2493c() {
-        if (mo2497i0() != 0) {
+    public abstract void a1(long j10);
+
+    public final void c() {
+        if (i0() != 0) {
             throw new IllegalStateException("Did not write as much data as expected.");
         }
     }
 
-    /* renamed from: c0 */
-    public abstract void mo2494c0() throws IOException;
+    public abstract void c0();
 
-    /* renamed from: d0 */
-    final void m2495d0(String str, C0406q1.d dVar) throws IOException {
-        f2658a.log(Level.WARNING, "Converting ill-formed UTF-16. Your Protocol Buffer will not round trip correctly!", (Throwable) dVar);
-        byte[] bytes = str.getBytes(C0357a0.f2673a);
+    final void d0(String str, q0.d dVar) throws OutOfSpaceException {
+        f24832c.log(Level.WARNING, "Converting ill-formed UTF-16. Your Protocol Buffer will not round trip correctly!", (Throwable) dVar);
+        byte[] bytes = str.getBytes(C2079z.f25184a);
         try {
-            mo2490Y0(bytes.length);
-            mo2522a(bytes, 0, bytes.length);
-        } catch (OutOfSpaceException e2) {
-            throw e2;
-        } catch (IndexOutOfBoundsException e3) {
-            throw new OutOfSpaceException(e3);
+            Y0(bytes.length);
+            a(bytes, 0, bytes.length);
+        } catch (OutOfSpaceException e10) {
+            throw e10;
+        } catch (IndexOutOfBoundsException e11) {
+            throw new OutOfSpaceException(e11);
         }
     }
 
-    /* renamed from: e0 */
-    boolean m2496e0() {
-        return this.f2661d;
+    boolean e0() {
+        return this.f24835b;
     }
 
-    /* renamed from: i0 */
-    public abstract int mo2497i0();
+    public abstract int i0();
 
-    /* renamed from: j0 */
-    public abstract void mo2498j0(byte b2) throws IOException;
+    public abstract void j0(byte b10);
 
-    /* renamed from: k0 */
-    public abstract void mo2499k0(int i2, boolean z) throws IOException;
+    public abstract void k0(int i10, boolean z10);
 
-    /* renamed from: l0 */
-    public final void m2500l0(boolean z) throws IOException {
-        mo2498j0(z ? (byte) 1 : (byte) 0);
+    public final void l0(boolean z10) {
+        j0(z10 ? (byte) 1 : (byte) 0);
     }
 
-    /* renamed from: m0 */
-    public final void m2501m0(byte[] bArr) throws IOException {
-        mo2502n0(bArr, 0, bArr.length);
+    public final void m0(byte[] bArr) {
+        n0(bArr, 0, bArr.length);
     }
 
-    /* renamed from: n0 */
-    abstract void mo2502n0(byte[] bArr, int i2, int i3) throws IOException;
+    abstract void n0(byte[] bArr, int i10, int i11);
 
-    /* renamed from: o0 */
-    public abstract void mo2503o0(int i2, AbstractC0377h abstractC0377h) throws IOException;
+    public abstract void o0(int i10, AbstractC2062h abstractC2062h);
 
-    /* renamed from: p0 */
-    public abstract void mo2504p0(AbstractC0377h abstractC0377h) throws IOException;
+    public abstract void p0(AbstractC2062h abstractC2062h);
 
-    /* renamed from: q0 */
-    public final void m2505q0(int i2, double d2) throws IOException {
-        mo2511w0(i2, Double.doubleToRawLongBits(d2));
+    public final void q0(int i10, double d10) {
+        w0(i10, Double.doubleToRawLongBits(d10));
     }
 
-    /* renamed from: r0 */
-    public final void m2506r0(double d2) throws IOException {
-        mo2512x0(Double.doubleToRawLongBits(d2));
+    public final void r0(double d10) {
+        x0(Double.doubleToRawLongBits(d10));
     }
 
-    /* renamed from: s0 */
-    public final void m2507s0(int i2, int i3) throws IOException {
-        mo2470E0(i2, i3);
+    public final void s0(int i10, int i11) {
+        E0(i10, i11);
     }
 
-    /* renamed from: t0 */
-    public final void m2508t0(int i2) throws IOException {
-        mo2471F0(i2);
+    public final void t0(int i10) {
+        F0(i10);
     }
 
-    /* renamed from: u0 */
-    public abstract void mo2509u0(int i2, int i3) throws IOException;
+    public abstract void u0(int i10, int i11);
 
-    /* renamed from: v0 */
-    public abstract void mo2510v0(int i2) throws IOException;
+    public abstract void v0(int i10);
 
-    /* renamed from: w0 */
-    public abstract void mo2511w0(int i2, long j2) throws IOException;
+    public abstract void w0(int i10, long j10);
 
-    /* renamed from: x0 */
-    public abstract void mo2512x0(long j2) throws IOException;
+    public abstract void x0(long j10);
 
-    /* renamed from: y0 */
-    public final void m2513y0(int i2, float f2) throws IOException {
-        mo2509u0(i2, Float.floatToRawIntBits(f2));
+    public final void y0(int i10, float f10) {
+        u0(i10, Float.floatToRawIntBits(f10));
     }
 
-    /* renamed from: z0 */
-    public final void m2514z0(float f2) throws IOException {
-        mo2510v0(Float.floatToRawIntBits(f2));
+    public final void z0(float f10) {
+        v0(Float.floatToRawIntBits(f10));
     }
 
     private CodedOutputStream() {
+    }
+
+    private static class c extends CodedOutputStream {
+
+        /* renamed from: e, reason: collision with root package name */
+        private final byte[] f24840e;
+
+        /* renamed from: f, reason: collision with root package name */
+        private final int f24841f;
+
+        /* renamed from: g, reason: collision with root package name */
+        private final int f24842g;
+
+        /* renamed from: h, reason: collision with root package name */
+        private int f24843h;
+
+        c(byte[] bArr, int i10, int i11) {
+            super();
+            if (bArr == null) {
+                throw new NullPointerException("buffer");
+            }
+            int i12 = i10 + i11;
+            if ((i10 | i11 | (bArr.length - i12)) < 0) {
+                throw new IllegalArgumentException(String.format("Array range is invalid. Buffer.length=%d, offset=%d, length=%d", Integer.valueOf(bArr.length), Integer.valueOf(i10), Integer.valueOf(i11)));
+            }
+            this.f24840e = bArr;
+            this.f24841f = i10;
+            this.f24843h = i10;
+            this.f24842g = i12;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void E0(int i10, int i11) throws OutOfSpaceException {
+            W0(i10, 0);
+            F0(i11);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void F0(int i10) throws OutOfSpaceException {
+            if (i10 >= 0) {
+                Y0(i10);
+            } else {
+                a1(i10);
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        final void I0(int i10, P p10, f0 f0Var) throws OutOfSpaceException {
+            W0(i10, 2);
+            Y0(((AbstractC2055a) p10).m(f0Var));
+            f0Var.i(p10, this.f24834a);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void J0(P p10) throws OutOfSpaceException {
+            Y0(p10.f());
+            p10.k(this);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void K0(int i10, P p10) throws OutOfSpaceException {
+            W0(1, 3);
+            X0(2, i10);
+            c1(3, p10);
+            W0(1, 4);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void L0(int i10, AbstractC2062h abstractC2062h) throws OutOfSpaceException {
+            W0(1, 3);
+            X0(2, i10);
+            o0(3, abstractC2062h);
+            W0(1, 4);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void U0(int i10, String str) throws OutOfSpaceException {
+            W0(i10, 2);
+            V0(str);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void V0(String str) throws OutOfSpaceException {
+            int i10 = this.f24843h;
+            try {
+                int iX = CodedOutputStream.X(str.length() * 3);
+                int iX2 = CodedOutputStream.X(str.length());
+                if (iX2 == iX) {
+                    int i11 = i10 + iX2;
+                    this.f24843h = i11;
+                    int iF = q0.f(str, this.f24840e, i11, i0());
+                    this.f24843h = i10;
+                    Y0((iF - i10) - iX2);
+                    this.f24843h = iF;
+                } else {
+                    Y0(q0.g(str));
+                    this.f24843h = q0.f(str, this.f24840e, this.f24843h, i0());
+                }
+            } catch (q0.d e10) {
+                this.f24843h = i10;
+                d0(str, e10);
+            } catch (IndexOutOfBoundsException e11) {
+                throw new OutOfSpaceException(e11);
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void W0(int i10, int i11) throws OutOfSpaceException {
+            Y0(r0.c(i10, i11));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void X0(int i10, int i11) throws OutOfSpaceException {
+            W0(i10, 0);
+            Y0(i11);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void Y0(int i10) throws OutOfSpaceException {
+            if (!CodedOutputStream.f24833d || C2058d.c() || i0() < 5) {
+                while ((i10 & (-128)) != 0) {
+                    try {
+                        byte[] bArr = this.f24840e;
+                        int i11 = this.f24843h;
+                        this.f24843h = i11 + 1;
+                        bArr[i11] = (byte) ((i10 & 127) | 128);
+                        i10 >>>= 7;
+                    } catch (IndexOutOfBoundsException e10) {
+                        throw new OutOfSpaceException(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f24843h), Integer.valueOf(this.f24842g), 1), e10);
+                    }
+                }
+                byte[] bArr2 = this.f24840e;
+                int i12 = this.f24843h;
+                this.f24843h = i12 + 1;
+                bArr2[i12] = (byte) i10;
+                return;
+            }
+            if ((i10 & (-128)) == 0) {
+                byte[] bArr3 = this.f24840e;
+                int i13 = this.f24843h;
+                this.f24843h = i13 + 1;
+                p0.H(bArr3, i13, (byte) i10);
+                return;
+            }
+            byte[] bArr4 = this.f24840e;
+            int i14 = this.f24843h;
+            this.f24843h = i14 + 1;
+            p0.H(bArr4, i14, (byte) (i10 | 128));
+            int i15 = i10 >>> 7;
+            if ((i15 & (-128)) == 0) {
+                byte[] bArr5 = this.f24840e;
+                int i16 = this.f24843h;
+                this.f24843h = i16 + 1;
+                p0.H(bArr5, i16, (byte) i15);
+                return;
+            }
+            byte[] bArr6 = this.f24840e;
+            int i17 = this.f24843h;
+            this.f24843h = i17 + 1;
+            p0.H(bArr6, i17, (byte) (i15 | 128));
+            int i18 = i10 >>> 14;
+            if ((i18 & (-128)) == 0) {
+                byte[] bArr7 = this.f24840e;
+                int i19 = this.f24843h;
+                this.f24843h = i19 + 1;
+                p0.H(bArr7, i19, (byte) i18);
+                return;
+            }
+            byte[] bArr8 = this.f24840e;
+            int i20 = this.f24843h;
+            this.f24843h = i20 + 1;
+            p0.H(bArr8, i20, (byte) (i18 | 128));
+            int i21 = i10 >>> 21;
+            if ((i21 & (-128)) == 0) {
+                byte[] bArr9 = this.f24840e;
+                int i22 = this.f24843h;
+                this.f24843h = i22 + 1;
+                p0.H(bArr9, i22, (byte) i21);
+                return;
+            }
+            byte[] bArr10 = this.f24840e;
+            int i23 = this.f24843h;
+            this.f24843h = i23 + 1;
+            p0.H(bArr10, i23, (byte) (i21 | 128));
+            byte[] bArr11 = this.f24840e;
+            int i24 = this.f24843h;
+            this.f24843h = i24 + 1;
+            p0.H(bArr11, i24, (byte) (i10 >>> 28));
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void Z0(int i10, long j10) throws OutOfSpaceException {
+            W0(i10, 0);
+            a1(j10);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream, androidx.datastore.preferences.protobuf.AbstractC2061g
+        public final void a(byte[] bArr, int i10, int i11) throws OutOfSpaceException {
+            b1(bArr, i10, i11);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void a1(long j10) throws OutOfSpaceException {
+            if (CodedOutputStream.f24833d && i0() >= 10) {
+                while ((j10 & (-128)) != 0) {
+                    byte[] bArr = this.f24840e;
+                    int i10 = this.f24843h;
+                    this.f24843h = i10 + 1;
+                    p0.H(bArr, i10, (byte) ((((int) j10) & 127) | 128));
+                    j10 >>>= 7;
+                }
+                byte[] bArr2 = this.f24840e;
+                int i11 = this.f24843h;
+                this.f24843h = i11 + 1;
+                p0.H(bArr2, i11, (byte) j10);
+                return;
+            }
+            while ((j10 & (-128)) != 0) {
+                try {
+                    byte[] bArr3 = this.f24840e;
+                    int i12 = this.f24843h;
+                    this.f24843h = i12 + 1;
+                    bArr3[i12] = (byte) ((((int) j10) & 127) | 128);
+                    j10 >>>= 7;
+                } catch (IndexOutOfBoundsException e10) {
+                    throw new OutOfSpaceException(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f24843h), Integer.valueOf(this.f24842g), 1), e10);
+                }
+            }
+            byte[] bArr4 = this.f24840e;
+            int i13 = this.f24843h;
+            this.f24843h = i13 + 1;
+            bArr4[i13] = (byte) j10;
+        }
+
+        public final void b1(byte[] bArr, int i10, int i11) throws OutOfSpaceException {
+            try {
+                System.arraycopy(bArr, i10, this.f24840e, this.f24843h, i11);
+                this.f24843h += i11;
+            } catch (IndexOutOfBoundsException e10) {
+                throw new OutOfSpaceException(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f24843h), Integer.valueOf(this.f24842g), Integer.valueOf(i11)), e10);
+            }
+        }
+
+        public final void c1(int i10, P p10) throws OutOfSpaceException {
+            W0(i10, 2);
+            J0(p10);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final int i0() {
+            return this.f24842g - this.f24843h;
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void j0(byte b10) throws OutOfSpaceException {
+            try {
+                byte[] bArr = this.f24840e;
+                int i10 = this.f24843h;
+                this.f24843h = i10 + 1;
+                bArr[i10] = b10;
+            } catch (IndexOutOfBoundsException e10) {
+                throw new OutOfSpaceException(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f24843h), Integer.valueOf(this.f24842g), 1), e10);
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void k0(int i10, boolean z10) throws OutOfSpaceException {
+            W0(i10, 0);
+            j0(z10 ? (byte) 1 : (byte) 0);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void n0(byte[] bArr, int i10, int i11) throws OutOfSpaceException {
+            Y0(i11);
+            b1(bArr, i10, i11);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void o0(int i10, AbstractC2062h abstractC2062h) throws OutOfSpaceException {
+            W0(i10, 2);
+            p0(abstractC2062h);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void p0(AbstractC2062h abstractC2062h) throws OutOfSpaceException {
+            Y0(abstractC2062h.size());
+            abstractC2062h.O(this);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void u0(int i10, int i11) throws OutOfSpaceException {
+            W0(i10, 5);
+            v0(i11);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void v0(int i10) throws OutOfSpaceException {
+            try {
+                byte[] bArr = this.f24840e;
+                int i11 = this.f24843h;
+                int i12 = i11 + 1;
+                this.f24843h = i12;
+                bArr[i11] = (byte) (i10 & 255);
+                int i13 = i11 + 2;
+                this.f24843h = i13;
+                bArr[i12] = (byte) ((i10 >> 8) & 255);
+                int i14 = i11 + 3;
+                this.f24843h = i14;
+                bArr[i13] = (byte) ((i10 >> 16) & 255);
+                this.f24843h = i11 + 4;
+                bArr[i14] = (byte) ((i10 >> 24) & 255);
+            } catch (IndexOutOfBoundsException e10) {
+                throw new OutOfSpaceException(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f24843h), Integer.valueOf(this.f24842g), 1), e10);
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void w0(int i10, long j10) throws OutOfSpaceException {
+            W0(i10, 1);
+            x0(j10);
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public final void x0(long j10) throws OutOfSpaceException {
+            try {
+                byte[] bArr = this.f24840e;
+                int i10 = this.f24843h;
+                int i11 = i10 + 1;
+                this.f24843h = i11;
+                bArr[i10] = (byte) (((int) j10) & 255);
+                int i12 = i10 + 2;
+                this.f24843h = i12;
+                bArr[i11] = (byte) (((int) (j10 >> 8)) & 255);
+                int i13 = i10 + 3;
+                this.f24843h = i13;
+                bArr[i12] = (byte) (((int) (j10 >> 16)) & 255);
+                int i14 = i10 + 4;
+                this.f24843h = i14;
+                bArr[i13] = (byte) (((int) (j10 >> 24)) & 255);
+                int i15 = i10 + 5;
+                this.f24843h = i15;
+                bArr[i14] = (byte) (((int) (j10 >> 32)) & 255);
+                int i16 = i10 + 6;
+                this.f24843h = i16;
+                bArr[i15] = (byte) (((int) (j10 >> 40)) & 255);
+                int i17 = i10 + 7;
+                this.f24843h = i17;
+                bArr[i16] = (byte) (((int) (j10 >> 48)) & 255);
+                this.f24843h = i10 + 8;
+                bArr[i17] = (byte) (((int) (j10 >> 56)) & 255);
+            } catch (IndexOutOfBoundsException e10) {
+                throw new OutOfSpaceException(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f24843h), Integer.valueOf(this.f24842g), 1), e10);
+            }
+        }
+
+        @Override // androidx.datastore.preferences.protobuf.CodedOutputStream
+        public void c0() {
+        }
     }
 }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/normal_selector"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/topDivider"
+        android:background="@color/grey_e"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"/>
+    <TextView
+        android:textSize="15dp"
+        android:gravity="center_vertical"
+        android:id="@+id/text"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/image"
+        android:layout_below="@+id/topDivider"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        style="@style/MEATER.Body1.Normal"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/image"
+        android:padding="10dp"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:src="@drawable/ic_icon_thermometer"
+        android:scaleType="centerInside"
+        android:layout_centerVertical="true"
+        app:tint="@color/primary_white_toggle_color"/>
+    <View
+        android:id="@+id/bottomDivider"
+        android:background="@color/grey_e"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_below="@+id/text"/>
+</RelativeLayout>

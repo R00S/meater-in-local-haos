@@ -1,8 +1,9 @@
 package com.google.firebase.components;
 
+import K8.c;
 import java.util.List;
 
 /* loaded from: classes2.dex */
 public interface ComponentRegistrar {
-    List<C8124n<?>> getComponents();
+    List<c<?>> getComponents();
 }

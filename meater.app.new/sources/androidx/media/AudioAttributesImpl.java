@@ -1,7 +1,7 @@
 package androidx.media;
 
-import androidx.versionedparcelable.InterfaceC0678b;
+import z3.b;
 
 /* loaded from: classes.dex */
-interface AudioAttributesImpl extends InterfaceC0678b {
+public interface AudioAttributesImpl extends b {
 }

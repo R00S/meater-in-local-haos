@@ -4,72 +4,67 @@ import android.app.Service;
 import android.app.job.JobParameters;
 import android.content.Intent;
 import android.os.IBinder;
-import com.google.android.gms.measurement.internal.zzji;
-import com.google.android.gms.measurement.internal.zzjm;
-import p024c.p071o.p072a.AbstractC0991a;
+import com.google.android.gms.measurement.internal.Z4;
+import v7.i0;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@17.2.0 */
+/* compiled from: com.google.android.gms:play-services-measurement@@22.2.0 */
 /* loaded from: classes2.dex */
-public final class AppMeasurementService extends Service implements zzjm {
+public final class AppMeasurementService extends Service implements i0 {
 
-    /* renamed from: f */
-    private zzji<AppMeasurementService> f28529f;
+    /* renamed from: B, reason: collision with root package name */
+    private Z4<AppMeasurementService> f34729B;
 
-    /* renamed from: c */
-    private final zzji<AppMeasurementService> m22673c() {
-        if (this.f28529f == null) {
-            this.f28529f = new zzji<>(this);
+    private final Z4<AppMeasurementService> c() {
+        if (this.f34729B == null) {
+            this.f34729B = new Z4<>(this);
         }
-        return this.f28529f;
+        return this.f34729B;
     }
 
-    @Override // com.google.android.gms.measurement.internal.zzjm
-    /* renamed from: a */
-    public final void mo22670a(Intent intent) {
-        AbstractC0991a.m6270c(intent);
+    @Override // v7.i0
+    public final void a(Intent intent) {
+        N1.a.b(intent);
     }
 
-    @Override // com.google.android.gms.measurement.internal.zzjm
-    /* renamed from: b */
-    public final void mo22671b(JobParameters jobParameters, boolean z) {
+    @Override // v7.i0
+    public final void b(JobParameters jobParameters, boolean z10) {
         throw new UnsupportedOperationException();
     }
 
-    @Override // com.google.android.gms.measurement.internal.zzjm
-    /* renamed from: d */
-    public final boolean mo22672d(int i2) {
-        return stopSelfResult(i2);
+    @Override // v7.i0
+    public final boolean g(int i10) {
+        return stopSelfResult(i10);
     }
 
     @Override // android.app.Service
     public final IBinder onBind(Intent intent) {
-        return m22673c().m23384b(intent);
+        return c().b(intent);
     }
 
     @Override // android.app.Service
     public final void onCreate() {
         super.onCreate();
-        m22673c().m23385c();
+        c().c();
     }
 
     @Override // android.app.Service
     public final void onDestroy() {
-        m22673c().m23389h();
+        c().i();
         super.onDestroy();
     }
 
     @Override // android.app.Service
     public final void onRebind(Intent intent) {
-        m22673c().m23391k(intent);
+        c().j(intent);
     }
 
     @Override // android.app.Service
-    public final int onStartCommand(Intent intent, int i2, int i3) {
-        return m22673c().m23383a(intent, i2, i3);
+    public final int onStartCommand(Intent intent, int i10, int i11) {
+        return c().a(intent, i10, i11);
     }
 
     @Override // android.app.Service
     public final boolean onUnbind(Intent intent) {
-        return m22673c().m23390i(intent);
+        return c().l(intent);
     }
 }

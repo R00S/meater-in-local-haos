@@ -10,192 +10,181 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import androidx.appcompat.view.menu.C0087g;
-import androidx.appcompat.view.menu.InterfaceC0094n;
-import androidx.appcompat.widget.AbstractViewOnTouchListenerC0155b0;
+import android.widget.Button;
+import androidx.appcompat.view.menu.e;
+import androidx.appcompat.view.menu.k;
 import androidx.appcompat.widget.ActionMenuView;
-import androidx.appcompat.widget.C0189s0;
-import androidx.appcompat.widget.C0190t;
-import p024c.p025a.C0832j;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.L;
+import androidx.appcompat.widget.f0;
 
 /* loaded from: classes.dex */
-public class ActionMenuItemView extends C0190t implements InterfaceC0094n.a, View.OnClickListener, ActionMenuView.InterfaceC0113a {
+public class ActionMenuItemView extends AppCompatTextView implements k.a, View.OnClickListener, ActionMenuView.a {
 
-    /* renamed from: j */
-    C0089i f456j;
+    /* renamed from: I, reason: collision with root package name */
+    g f20916I;
 
-    /* renamed from: k */
-    private CharSequence f457k;
+    /* renamed from: J, reason: collision with root package name */
+    private CharSequence f20917J;
 
-    /* renamed from: l */
-    private Drawable f458l;
+    /* renamed from: K, reason: collision with root package name */
+    private Drawable f20918K;
 
-    /* renamed from: m */
-    C0087g.b f459m;
+    /* renamed from: L, reason: collision with root package name */
+    e.b f20919L;
 
-    /* renamed from: n */
-    private AbstractViewOnTouchListenerC0155b0 f460n;
+    /* renamed from: M, reason: collision with root package name */
+    private L f20920M;
 
-    /* renamed from: o */
-    AbstractC0080b f461o;
+    /* renamed from: N, reason: collision with root package name */
+    b f20921N;
 
-    /* renamed from: p */
-    private boolean f462p;
+    /* renamed from: O, reason: collision with root package name */
+    private boolean f20922O;
 
-    /* renamed from: q */
-    private boolean f463q;
+    /* renamed from: P, reason: collision with root package name */
+    private boolean f20923P;
 
-    /* renamed from: r */
-    private int f464r;
+    /* renamed from: Q, reason: collision with root package name */
+    private int f20924Q;
 
-    /* renamed from: s */
-    private int f465s;
+    /* renamed from: R, reason: collision with root package name */
+    private int f20925R;
 
-    /* renamed from: t */
-    private int f466t;
+    /* renamed from: S, reason: collision with root package name */
+    private int f20926S;
 
-    /* renamed from: androidx.appcompat.view.menu.ActionMenuItemView$a */
-    private class C0079a extends AbstractViewOnTouchListenerC0155b0 {
-        public C0079a() {
+    private class a extends L {
+        public a() {
             super(ActionMenuItemView.this);
         }
 
-        @Override // androidx.appcompat.widget.AbstractViewOnTouchListenerC0155b0
-        /* renamed from: b */
-        public InterfaceC0096p mo474b() {
-            AbstractC0080b abstractC0080b = ActionMenuItemView.this.f461o;
-            if (abstractC0080b != null) {
-                return abstractC0080b.mo476a();
+        @Override // androidx.appcompat.widget.L
+        public n.e b() {
+            b bVar = ActionMenuItemView.this.f20921N;
+            if (bVar != null) {
+                return bVar.a();
             }
             return null;
         }
 
-        @Override // androidx.appcompat.widget.AbstractViewOnTouchListenerC0155b0
-        /* renamed from: c */
-        protected boolean mo475c() {
-            InterfaceC0096p interfaceC0096pMo474b;
+        @Override // androidx.appcompat.widget.L
+        protected boolean c() {
+            n.e eVarB;
             ActionMenuItemView actionMenuItemView = ActionMenuItemView.this;
-            C0087g.b bVar = actionMenuItemView.f459m;
-            return bVar != null && bVar.mo477a(actionMenuItemView.f456j) && (interfaceC0096pMo474b = mo474b()) != null && interfaceC0096pMo474b.mo519a();
+            e.b bVar = actionMenuItemView.f20919L;
+            return bVar != null && bVar.a(actionMenuItemView.f20916I) && (eVarB = b()) != null && eVarB.a();
         }
     }
 
-    /* renamed from: androidx.appcompat.view.menu.ActionMenuItemView$b */
-    public static abstract class AbstractC0080b {
-        /* renamed from: a */
-        public abstract InterfaceC0096p mo476a();
+    public static abstract class b {
+        public abstract n.e a();
     }
 
     public ActionMenuItemView(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 0);
     }
 
-    /* renamed from: g */
-    private boolean m467g() {
+    private boolean t() {
         Configuration configuration = getContext().getResources().getConfiguration();
-        int i2 = configuration.screenWidthDp;
-        return i2 >= 480 || (i2 >= 640 && configuration.screenHeightDp >= 480) || configuration.orientation == 2;
+        int i10 = configuration.screenWidthDp;
+        return i10 >= 480 || (i10 >= 640 && configuration.screenHeightDp >= 480) || configuration.orientation == 2;
     }
 
-    /* renamed from: h */
-    private void m468h() {
-        boolean z = true;
-        boolean z2 = !TextUtils.isEmpty(this.f457k);
-        if (this.f458l != null && (!this.f456j.m611B() || (!this.f462p && !this.f463q))) {
-            z = false;
+    private void u() {
+        boolean z10 = true;
+        boolean z11 = !TextUtils.isEmpty(this.f20917J);
+        if (this.f20918K != null && (!this.f20916I.B() || (!this.f20922O && !this.f20923P))) {
+            z10 = false;
         }
-        boolean z3 = z2 & z;
-        setText(z3 ? this.f457k : null);
-        CharSequence contentDescription = this.f456j.getContentDescription();
+        boolean z12 = z11 & z10;
+        setText(z12 ? this.f20917J : null);
+        CharSequence contentDescription = this.f20916I.getContentDescription();
         if (TextUtils.isEmpty(contentDescription)) {
-            setContentDescription(z3 ? null : this.f456j.getTitle());
+            setContentDescription(z12 ? null : this.f20916I.getTitle());
         } else {
             setContentDescription(contentDescription);
         }
-        CharSequence tooltipText = this.f456j.getTooltipText();
+        CharSequence tooltipText = this.f20916I.getTooltipText();
         if (TextUtils.isEmpty(tooltipText)) {
-            C0189s0.m1179a(this, z3 ? null : this.f456j.getTitle());
+            f0.a(this, z12 ? null : this.f20916I.getTitle());
         } else {
-            C0189s0.m1179a(this, tooltipText);
+            f0.a(this, tooltipText);
         }
     }
 
-    @Override // androidx.appcompat.widget.ActionMenuView.InterfaceC0113a
-    /* renamed from: a */
-    public boolean mo469a() {
-        return m473f();
+    @Override // androidx.appcompat.widget.ActionMenuView.a
+    public boolean a() {
+        return s();
     }
 
-    @Override // androidx.appcompat.widget.ActionMenuView.InterfaceC0113a
-    /* renamed from: b */
-    public boolean mo470b() {
-        return m473f() && this.f456j.getIcon() == null;
+    @Override // androidx.appcompat.widget.ActionMenuView.a
+    public boolean b() {
+        return s() && this.f20916I.getIcon() == null;
     }
 
-    @Override // androidx.appcompat.view.menu.InterfaceC0094n.a
-    /* renamed from: d */
-    public boolean mo471d() {
+    @Override // androidx.appcompat.view.menu.k.a
+    public boolean d() {
         return true;
     }
 
-    @Override // androidx.appcompat.view.menu.InterfaceC0094n.a
-    /* renamed from: e */
-    public void mo472e(C0089i c0089i, int i2) {
-        this.f456j = c0089i;
-        setIcon(c0089i.getIcon());
-        setTitle(c0089i.m616i(this));
-        setId(c0089i.getItemId());
-        setVisibility(c0089i.isVisible() ? 0 : 8);
-        setEnabled(c0089i.isEnabled());
-        if (c0089i.hasSubMenu() && this.f460n == null) {
-            this.f460n = new C0079a();
+    @Override // androidx.appcompat.view.menu.k.a
+    public void e(g gVar, int i10) {
+        this.f20916I = gVar;
+        setIcon(gVar.getIcon());
+        setTitle(gVar.i(this));
+        setId(gVar.getItemId());
+        setVisibility(gVar.isVisible() ? 0 : 8);
+        setEnabled(gVar.isEnabled());
+        if (gVar.hasSubMenu() && this.f20920M == null) {
+            this.f20920M = new a();
         }
     }
 
-    /* renamed from: f */
-    public boolean m473f() {
-        return !TextUtils.isEmpty(getText());
+    @Override // android.widget.TextView, android.view.View
+    public CharSequence getAccessibilityClassName() {
+        return Button.class.getName();
     }
 
-    @Override // androidx.appcompat.view.menu.InterfaceC0094n.a
-    public C0089i getItemData() {
-        return this.f456j;
+    @Override // androidx.appcompat.view.menu.k.a
+    public g getItemData() {
+        return this.f20916I;
     }
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
-        C0087g.b bVar = this.f459m;
+        e.b bVar = this.f20919L;
         if (bVar != null) {
-            bVar.mo477a(this.f456j);
+            bVar.a(this.f20916I);
         }
     }
 
     @Override // android.widget.TextView, android.view.View
     public void onConfigurationChanged(Configuration configuration) {
         super.onConfigurationChanged(configuration);
-        this.f462p = m467g();
-        m468h();
+        this.f20922O = t();
+        u();
     }
 
-    @Override // androidx.appcompat.widget.C0190t, android.widget.TextView, android.view.View
-    protected void onMeasure(int i2, int i3) {
-        int i4;
-        boolean zM473f = m473f();
-        if (zM473f && (i4 = this.f465s) >= 0) {
-            super.setPadding(i4, getPaddingTop(), getPaddingRight(), getPaddingBottom());
+    @Override // androidx.appcompat.widget.AppCompatTextView, android.widget.TextView, android.view.View
+    protected void onMeasure(int i10, int i11) {
+        int i12;
+        boolean zS = s();
+        if (zS && (i12 = this.f20925R) >= 0) {
+            super.setPadding(i12, getPaddingTop(), getPaddingRight(), getPaddingBottom());
         }
-        super.onMeasure(i2, i3);
-        int mode = View.MeasureSpec.getMode(i2);
-        int size = View.MeasureSpec.getSize(i2);
+        super.onMeasure(i10, i11);
+        int mode = View.MeasureSpec.getMode(i10);
+        int size = View.MeasureSpec.getSize(i10);
         int measuredWidth = getMeasuredWidth();
-        int iMin = mode == Integer.MIN_VALUE ? Math.min(size, this.f464r) : this.f464r;
-        if (mode != 1073741824 && this.f464r > 0 && measuredWidth < iMin) {
-            super.onMeasure(View.MeasureSpec.makeMeasureSpec(iMin, 1073741824), i3);
+        int iMin = mode == Integer.MIN_VALUE ? Math.min(size, this.f20924Q) : this.f20924Q;
+        if (mode != 1073741824 && this.f20924Q > 0 && measuredWidth < iMin) {
+            super.onMeasure(View.MeasureSpec.makeMeasureSpec(iMin, 1073741824), i11);
         }
-        if (zM473f || this.f458l == null) {
+        if (zS || this.f20918K == null) {
             return;
         }
-        super.setPadding((getMeasuredWidth() - this.f458l.getBounds().width()) / 2, getPaddingTop(), getPaddingRight(), getPaddingBottom());
+        super.setPadding((getMeasuredWidth() - this.f20918K.getBounds().width()) / 2, getPaddingTop(), getPaddingRight(), getPaddingBottom());
     }
 
     @Override // android.widget.TextView, android.view.View
@@ -205,79 +194,83 @@ public class ActionMenuItemView extends C0190t implements InterfaceC0094n.a, Vie
 
     @Override // android.widget.TextView, android.view.View
     public boolean onTouchEvent(MotionEvent motionEvent) {
-        AbstractViewOnTouchListenerC0155b0 abstractViewOnTouchListenerC0155b0;
-        if (this.f456j.hasSubMenu() && (abstractViewOnTouchListenerC0155b0 = this.f460n) != null && abstractViewOnTouchListenerC0155b0.onTouch(this, motionEvent)) {
+        L l10;
+        if (this.f20916I.hasSubMenu() && (l10 = this.f20920M) != null && l10.onTouch(this, motionEvent)) {
             return true;
         }
         return super.onTouchEvent(motionEvent);
     }
 
-    public void setCheckable(boolean z) {
+    public boolean s() {
+        return !TextUtils.isEmpty(getText());
     }
 
-    public void setChecked(boolean z) {
-    }
-
-    public void setExpandedFormat(boolean z) {
-        if (this.f463q != z) {
-            this.f463q = z;
-            C0089i c0089i = this.f456j;
-            if (c0089i != null) {
-                c0089i.m612c();
+    public void setExpandedFormat(boolean z10) {
+        if (this.f20923P != z10) {
+            this.f20923P = z10;
+            g gVar = this.f20916I;
+            if (gVar != null) {
+                gVar.c();
             }
         }
     }
 
     public void setIcon(Drawable drawable) {
-        this.f458l = drawable;
+        this.f20918K = drawable;
         if (drawable != null) {
             int intrinsicWidth = drawable.getIntrinsicWidth();
             int intrinsicHeight = drawable.getIntrinsicHeight();
-            int i2 = this.f466t;
-            if (intrinsicWidth > i2) {
-                intrinsicHeight = (int) (intrinsicHeight * (i2 / intrinsicWidth));
-                intrinsicWidth = i2;
+            int i10 = this.f20926S;
+            if (intrinsicWidth > i10) {
+                intrinsicHeight = (int) (intrinsicHeight * (i10 / intrinsicWidth));
+                intrinsicWidth = i10;
             }
-            if (intrinsicHeight > i2) {
-                intrinsicWidth = (int) (intrinsicWidth * (i2 / intrinsicHeight));
+            if (intrinsicHeight > i10) {
+                intrinsicWidth = (int) (intrinsicWidth * (i10 / intrinsicHeight));
             } else {
-                i2 = intrinsicHeight;
+                i10 = intrinsicHeight;
             }
-            drawable.setBounds(0, 0, intrinsicWidth, i2);
+            drawable.setBounds(0, 0, intrinsicWidth, i10);
         }
         setCompoundDrawables(drawable, null, null, null);
-        m468h();
+        u();
     }
 
-    public void setItemInvoker(C0087g.b bVar) {
-        this.f459m = bVar;
+    public void setItemInvoker(e.b bVar) {
+        this.f20919L = bVar;
     }
 
     @Override // android.widget.TextView, android.view.View
-    public void setPadding(int i2, int i3, int i4, int i5) {
-        this.f465s = i2;
-        super.setPadding(i2, i3, i4, i5);
+    public void setPadding(int i10, int i11, int i12, int i13) {
+        this.f20925R = i10;
+        super.setPadding(i10, i11, i12, i13);
     }
 
-    public void setPopupCallback(AbstractC0080b abstractC0080b) {
-        this.f461o = abstractC0080b;
+    public void setPopupCallback(b bVar) {
+        this.f20921N = bVar;
     }
 
     public void setTitle(CharSequence charSequence) {
-        this.f457k = charSequence;
-        m468h();
+        this.f20917J = charSequence;
+        u();
     }
 
-    public ActionMenuItemView(Context context, AttributeSet attributeSet, int i2) {
-        super(context, attributeSet, i2);
+    public ActionMenuItemView(Context context, AttributeSet attributeSet, int i10) {
+        super(context, attributeSet, i10);
         Resources resources = context.getResources();
-        this.f462p = m467g();
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C0832j.f5433v, i2, 0);
-        this.f464r = typedArrayObtainStyledAttributes.getDimensionPixelSize(C0832j.f5438w, 0);
+        this.f20922O = t();
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, i.j.f42789v, i10, 0);
+        this.f20924Q = typedArrayObtainStyledAttributes.getDimensionPixelSize(i.j.f42794w, 0);
         typedArrayObtainStyledAttributes.recycle();
-        this.f466t = (int) ((resources.getDisplayMetrics().density * 32.0f) + 0.5f);
+        this.f20926S = (int) ((resources.getDisplayMetrics().density * 32.0f) + 0.5f);
         setOnClickListener(this);
-        this.f465s = -1;
+        this.f20925R = -1;
         setSaveEnabled(false);
+    }
+
+    public void setCheckable(boolean z10) {
+    }
+
+    public void setChecked(boolean z10) {
     }
 }

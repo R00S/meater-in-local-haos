@@ -4,63 +4,55 @@ import android.annotation.TargetApi;
 import android.app.job.JobParameters;
 import android.app.job.JobService;
 import android.content.Intent;
-import com.google.android.gms.measurement.internal.zzji;
-import com.google.android.gms.measurement.internal.zzjm;
+import com.google.android.gms.measurement.internal.Z4;
+import v7.i0;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@17.2.0 */
+/* compiled from: com.google.android.gms:play-services-measurement@@22.2.0 */
 @TargetApi(24)
 /* loaded from: classes2.dex */
-public final class AppMeasurementJobService extends JobService implements zzjm {
+public final class AppMeasurementJobService extends JobService implements i0 {
 
-    /* renamed from: f */
-    private zzji<AppMeasurementJobService> f28527f;
+    /* renamed from: B, reason: collision with root package name */
+    private Z4<AppMeasurementJobService> f34727B;
 
-    /* renamed from: c */
-    private final zzji<AppMeasurementJobService> m22669c() {
-        if (this.f28527f == null) {
-            this.f28527f = new zzji<>(this);
+    private final Z4<AppMeasurementJobService> c() {
+        if (this.f34727B == null) {
+            this.f34727B = new Z4<>(this);
         }
-        return this.f28527f;
+        return this.f34727B;
     }
 
-    @Override // com.google.android.gms.measurement.internal.zzjm
-    /* renamed from: a */
-    public final void mo22670a(Intent intent) {
-    }
-
-    @Override // com.google.android.gms.measurement.internal.zzjm
+    @Override // v7.i0
     @TargetApi(24)
-    /* renamed from: b */
-    public final void mo22671b(JobParameters jobParameters, boolean z) {
+    public final void b(JobParameters jobParameters, boolean z10) {
         jobFinished(jobParameters, false);
     }
 
-    @Override // com.google.android.gms.measurement.internal.zzjm
-    /* renamed from: d */
-    public final boolean mo22672d(int i2) {
+    @Override // v7.i0
+    public final boolean g(int i10) {
         throw new UnsupportedOperationException();
     }
 
     @Override // android.app.Service
     public final void onCreate() {
         super.onCreate();
-        m22669c().m23385c();
+        c().c();
     }
 
     @Override // android.app.Service
     public final void onDestroy() {
-        m22669c().m23389h();
+        c().i();
         super.onDestroy();
     }
 
     @Override // android.app.Service
     public final void onRebind(Intent intent) {
-        m22669c().m23391k(intent);
+        c().j(intent);
     }
 
     @Override // android.app.job.JobService
     public final boolean onStartJob(JobParameters jobParameters) {
-        return m22669c().m23388g(jobParameters);
+        return c().h(jobParameters);
     }
 
     @Override // android.app.job.JobService
@@ -70,6 +62,10 @@ public final class AppMeasurementJobService extends JobService implements zzjm {
 
     @Override // android.app.Service
     public final boolean onUnbind(Intent intent) {
-        return m22669c().m23390i(intent);
+        return c().l(intent);
+    }
+
+    @Override // v7.i0
+    public final void a(Intent intent) {
     }
 }

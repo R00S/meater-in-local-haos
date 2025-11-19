@@ -1,8 +1,6 @@
 package com.bumptech.glide.load.engine;
 
 import android.util.Log;
-import com.bumptech.glide.load.EnumC5365a;
-import com.bumptech.glide.load.InterfaceC5423f;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
@@ -10,76 +8,73 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import okhttp3.HttpUrl;
+import m6.EnumC3966a;
+import m6.InterfaceC3970e;
 
-/* loaded from: classes.dex */
+/* loaded from: classes2.dex */
 public final class GlideException extends Exception {
 
-    /* renamed from: f */
-    private static final StackTraceElement[] f13231f = new StackTraceElement[0];
+    /* renamed from: H, reason: collision with root package name */
+    private static final StackTraceElement[] f33060H = new StackTraceElement[0];
 
-    /* renamed from: g */
-    private final List<Throwable> f13232g;
+    /* renamed from: B, reason: collision with root package name */
+    private final List<Throwable> f33061B;
 
-    /* renamed from: h */
-    private InterfaceC5423f f13233h;
+    /* renamed from: C, reason: collision with root package name */
+    private InterfaceC3970e f33062C;
 
-    /* renamed from: i */
-    private EnumC5365a f13234i;
+    /* renamed from: D, reason: collision with root package name */
+    private EnumC3966a f33063D;
 
-    /* renamed from: j */
-    private Class<?> f13235j;
+    /* renamed from: E, reason: collision with root package name */
+    private Class<?> f33064E;
 
-    /* renamed from: k */
-    private String f13236k;
+    /* renamed from: F, reason: collision with root package name */
+    private String f33065F;
 
-    /* renamed from: l */
-    private Exception f13237l;
+    /* renamed from: G, reason: collision with root package name */
+    private Exception f33066G;
 
     public GlideException(String str) {
         this(str, (List<Throwable>) Collections.emptyList());
     }
 
-    /* renamed from: a */
-    private void m10159a(Throwable th, List<Throwable> list) {
+    private void a(Throwable th, List<Throwable> list) {
         if (!(th instanceof GlideException)) {
             list.add(th);
             return;
         }
-        Iterator<Throwable> it = ((GlideException) th).m10164e().iterator();
+        Iterator<Throwable> it = ((GlideException) th).e().iterator();
         while (it.hasNext()) {
-            m10159a(it.next(), list);
+            a(it.next(), list);
         }
     }
 
-    /* renamed from: b */
-    private static void m10160b(List<Throwable> list, Appendable appendable) {
+    private static void b(List<Throwable> list, Appendable appendable) {
         try {
-            m10161c(list, appendable);
-        } catch (IOException e2) {
-            throw new RuntimeException(e2);
+            c(list, appendable);
+        } catch (IOException e10) {
+            throw new RuntimeException(e10);
         }
     }
 
-    /* renamed from: c */
-    private static void m10161c(List<Throwable> list, Appendable appendable) throws IOException {
+    private static void c(List<Throwable> list, Appendable appendable) throws IOException {
         int size = list.size();
-        int i2 = 0;
-        while (i2 < size) {
-            int i3 = i2 + 1;
-            appendable.append("Cause (").append(String.valueOf(i3)).append(" of ").append(String.valueOf(size)).append("): ");
-            Throwable th = list.get(i2);
+        int i10 = 0;
+        while (i10 < size) {
+            int i11 = i10 + 1;
+            appendable.append("Cause (").append(String.valueOf(i11)).append(" of ").append(String.valueOf(size)).append("): ");
+            Throwable th = list.get(i10);
             if (th instanceof GlideException) {
-                ((GlideException) th).m10163h(appendable);
+                ((GlideException) th).h(appendable);
             } else {
-                m10162d(th, appendable);
+                d(th, appendable);
             }
-            i2 = i3;
+            i10 = i11;
         }
     }
 
-    /* renamed from: d */
-    private static void m10162d(Throwable th, Appendable appendable) throws IOException {
+    private static void d(Throwable th, Appendable appendable) throws IOException {
         try {
             appendable.append(th.getClass().toString()).append(": ").append(th.getMessage()).append('\n');
         } catch (IOException unused) {
@@ -87,96 +82,79 @@ public final class GlideException extends Exception {
         }
     }
 
-    /* renamed from: h */
-    private void m10163h(Appendable appendable) throws IOException {
-        m10162d(this, appendable);
-        m10160b(m10164e(), new C5370a(appendable));
+    private void h(Appendable appendable) throws IOException {
+        d(this, appendable);
+        b(e(), new a(appendable));
     }
 
-    /* renamed from: e */
-    public List<Throwable> m10164e() {
-        return this.f13232g;
+    public List<Throwable> e() {
+        return this.f33061B;
     }
 
-    /* renamed from: f */
-    public List<Throwable> m10165f() {
+    public List<Throwable> f() {
         ArrayList arrayList = new ArrayList();
-        m10159a(this, arrayList);
+        a(this, arrayList);
         return arrayList;
     }
 
-    @Override // java.lang.Throwable
-    public Throwable fillInStackTrace() {
-        return this;
-    }
-
-    /* renamed from: g */
-    public void m10166g(String str) {
-        List<Throwable> listM10165f = m10165f();
-        int size = listM10165f.size();
-        int i2 = 0;
-        while (i2 < size) {
-            StringBuilder sb = new StringBuilder();
-            sb.append("Root cause (");
-            int i3 = i2 + 1;
-            sb.append(i3);
-            sb.append(" of ");
-            sb.append(size);
-            sb.append(")");
-            Log.i(str, sb.toString(), listM10165f.get(i2));
-            i2 = i3;
+    public void g(String str) {
+        List<Throwable> listF = f();
+        int size = listF.size();
+        int i10 = 0;
+        while (i10 < size) {
+            StringBuilder sb2 = new StringBuilder();
+            sb2.append("Root cause (");
+            int i11 = i10 + 1;
+            sb2.append(i11);
+            sb2.append(" of ");
+            sb2.append(size);
+            sb2.append(")");
+            Log.i(str, sb2.toString(), listF.get(i10));
+            i10 = i11;
         }
     }
 
     @Override // java.lang.Throwable
     public String getMessage() {
-        StringBuilder sb = new StringBuilder(71);
-        sb.append(this.f13236k);
-        Class<?> cls = this.f13235j;
-        String str = HttpUrl.FRAGMENT_ENCODE_SET;
-        sb.append(cls != null ? ", " + this.f13235j : HttpUrl.FRAGMENT_ENCODE_SET);
-        sb.append(this.f13234i != null ? ", " + this.f13234i : HttpUrl.FRAGMENT_ENCODE_SET);
-        if (this.f13233h != null) {
-            str = ", " + this.f13233h;
+        StringBuilder sb2 = new StringBuilder(71);
+        sb2.append(this.f33065F);
+        sb2.append(this.f33064E != null ? ", " + this.f33064E : "");
+        sb2.append(this.f33063D != null ? ", " + this.f33063D : "");
+        sb2.append(this.f33062C != null ? ", " + this.f33062C : "");
+        List<Throwable> listF = f();
+        if (listF.isEmpty()) {
+            return sb2.toString();
         }
-        sb.append(str);
-        List<Throwable> listM10165f = m10165f();
-        if (listM10165f.isEmpty()) {
-            return sb.toString();
-        }
-        if (listM10165f.size() == 1) {
-            sb.append("\nThere was 1 cause:");
+        if (listF.size() == 1) {
+            sb2.append("\nThere was 1 root cause:");
         } else {
-            sb.append("\nThere were ");
-            sb.append(listM10165f.size());
-            sb.append(" causes:");
+            sb2.append("\nThere were ");
+            sb2.append(listF.size());
+            sb2.append(" root causes:");
         }
-        for (Throwable th : listM10165f) {
-            sb.append('\n');
-            sb.append(th.getClass().getName());
-            sb.append('(');
-            sb.append(th.getMessage());
-            sb.append(')');
+        for (Throwable th : listF) {
+            sb2.append('\n');
+            sb2.append(th.getClass().getName());
+            sb2.append('(');
+            sb2.append(th.getMessage());
+            sb2.append(')');
         }
-        sb.append("\n call GlideException#logRootCauses(String) for more detail");
-        return sb.toString();
+        sb2.append("\n call GlideException#logRootCauses(String) for more detail");
+        return sb2.toString();
     }
 
-    /* renamed from: i */
-    void m10167i(InterfaceC5423f interfaceC5423f, EnumC5365a enumC5365a) {
-        m10168j(interfaceC5423f, enumC5365a, null);
+    void i(InterfaceC3970e interfaceC3970e, EnumC3966a enumC3966a) {
+        j(interfaceC3970e, enumC3966a, null);
     }
 
-    /* renamed from: j */
-    void m10168j(InterfaceC5423f interfaceC5423f, EnumC5365a enumC5365a, Class<?> cls) {
-        this.f13233h = interfaceC5423f;
-        this.f13234i = enumC5365a;
-        this.f13235j = cls;
+    void j(InterfaceC3970e interfaceC3970e, EnumC3966a enumC3966a, Class<?> cls) {
+        this.f33062C = interfaceC3970e;
+        this.f33063D = enumC3966a;
+        this.f33064E = cls;
     }
 
-    /* renamed from: k */
-    public void m10169k(Exception exc) {
-        this.f13237l = exc;
+    public void k(Exception exc) {
+        this.f33066G = exc;
     }
 
     @Override // java.lang.Throwable
@@ -190,69 +168,72 @@ public final class GlideException extends Exception {
 
     @Override // java.lang.Throwable
     public void printStackTrace(PrintStream printStream) throws IOException {
-        m10163h(printStream);
+        h(printStream);
     }
 
     public GlideException(String str, List<Throwable> list) {
-        this.f13236k = str;
-        setStackTrace(f13231f);
-        this.f13232g = list;
+        this.f33065F = str;
+        setStackTrace(f33060H);
+        this.f33061B = list;
     }
 
     @Override // java.lang.Throwable
     public void printStackTrace(PrintWriter printWriter) throws IOException {
-        m10163h(printWriter);
+        h(printWriter);
     }
 
-    /* renamed from: com.bumptech.glide.load.engine.GlideException$a */
-    private static final class C5370a implements Appendable {
+    private static final class a implements Appendable {
 
-        /* renamed from: f */
-        private final Appendable f13238f;
+        /* renamed from: B, reason: collision with root package name */
+        private final Appendable f33067B;
 
-        /* renamed from: g */
-        private boolean f13239g = true;
+        /* renamed from: C, reason: collision with root package name */
+        private boolean f33068C = true;
 
-        C5370a(Appendable appendable) {
-            this.f13238f = appendable;
+        a(Appendable appendable) {
+            this.f33067B = appendable;
         }
 
-        /* renamed from: a */
-        private CharSequence m10170a(CharSequence charSequence) {
-            return charSequence == null ? HttpUrl.FRAGMENT_ENCODE_SET : charSequence;
+        private CharSequence a(CharSequence charSequence) {
+            return charSequence == null ? "" : charSequence;
         }
 
         @Override // java.lang.Appendable
-        public Appendable append(char c2) throws IOException {
-            if (this.f13239g) {
-                this.f13239g = false;
-                this.f13238f.append("  ");
+        public Appendable append(char c10) throws IOException {
+            if (this.f33068C) {
+                this.f33068C = false;
+                this.f33067B.append("  ");
             }
-            this.f13239g = c2 == '\n';
-            this.f13238f.append(c2);
+            this.f33068C = c10 == '\n';
+            this.f33067B.append(c10);
             return this;
         }
 
         @Override // java.lang.Appendable
-        public Appendable append(CharSequence charSequence) throws IOException {
-            CharSequence charSequenceM10170a = m10170a(charSequence);
-            return append(charSequenceM10170a, 0, charSequenceM10170a.length());
+        public Appendable append(CharSequence charSequence) {
+            CharSequence charSequenceA = a(charSequence);
+            return append(charSequenceA, 0, charSequenceA.length());
         }
 
         @Override // java.lang.Appendable
-        public Appendable append(CharSequence charSequence, int i2, int i3) throws IOException {
-            CharSequence charSequenceM10170a = m10170a(charSequence);
-            boolean z = false;
-            if (this.f13239g) {
-                this.f13239g = false;
-                this.f13238f.append("  ");
+        public Appendable append(CharSequence charSequence, int i10, int i11) throws IOException {
+            CharSequence charSequenceA = a(charSequence);
+            boolean z10 = false;
+            if (this.f33068C) {
+                this.f33068C = false;
+                this.f33067B.append("  ");
             }
-            if (charSequenceM10170a.length() > 0 && charSequenceM10170a.charAt(i3 - 1) == '\n') {
-                z = true;
+            if (charSequenceA.length() > 0 && charSequenceA.charAt(i11 - 1) == '\n') {
+                z10 = true;
             }
-            this.f13239g = z;
-            this.f13238f.append(charSequenceM10170a, i2, i3);
+            this.f33068C = z10;
+            this.f33067B.append(charSequenceA, i10, i11);
             return this;
         }
+    }
+
+    @Override // java.lang.Throwable
+    public Throwable fillInStackTrace() {
+        return this;
     }
 }

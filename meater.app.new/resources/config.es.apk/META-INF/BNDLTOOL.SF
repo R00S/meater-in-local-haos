@@ -1,0 +1,32 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android)
+SHA1-Digest-Manifest: iQn+gzRBQ8uZefMbVXylbSs8q44=
+X-Android-APK-Signed: 2, 3
+
+Name: AndroidManifest.xml
+SHA1-Digest: RGUOkuAHtsXVYQg+eBFyMBGTonA=
+
+Name: res/drawable-es/ic_cloud_benefits_alexa.xml
+SHA1-Digest: BaJHjxP9tvOaHlU6ZnI03yf7VPY=
+
+Name: res/drawable-es/ic_cloud_benefits_intro.xml
+SHA1-Digest: ndFhgJREoHB8KH3QBZOD+vVUpNE=
+
+Name: res/drawable-es/ic_cloud_benefits_range.xml
+SHA1-Digest: wByxskspyeWYt9MyznZhS/VqvCE=
+
+Name: res/drawable-es/ic_cloud_benefits_share.xml
+SHA1-Digest: g/kwI4Y8iRLjTqNyt1ao9DQFT70=
+
+Name: res/drawable-es/ic_cloud_benefits_support.xml
+SHA1-Digest: N1YH4jyhmYooZA8/jT+QxBSMti8=
+
+Name: res/drawable-es/ic_cloud_benefits_whats_new.xml
+SHA1-Digest: XfluSKNgw3LxstbeM3fLSofVDeM=
+
+Name: resources.arsc
+SHA1-Digest: 1chHtr50Kh7oOZkz8ZbB0z21DE4=
+
+Name: stamp-cert-sha256
+SHA1-Digest: Bs40BvDZ1xrbgQrPTD2x5w/NfHQ=
+

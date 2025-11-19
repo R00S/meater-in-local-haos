@@ -19,11 +19,11 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.SystemClock;
+import android.os.Trace;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.SparseArray;
-import android.view.Display;
-import android.view.FocusFinder;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
@@ -35,437 +35,877 @@ import android.view.accessibility.AccessibilityManager;
 import android.view.animation.Interpolator;
 import android.widget.EdgeEffect;
 import android.widget.OverScroller;
-import androidx.core.os.C0275d;
-import androidx.core.view.C0280a;
-import androidx.core.view.C0299i;
-import androidx.core.view.C0301k;
-import androidx.core.view.C0311u;
-import androidx.core.view.C0312v;
-import androidx.core.view.InterfaceC0300j;
-import androidx.core.view.ScrollingView;
-import androidx.core.view.p004d0.C0288b;
-import androidx.core.view.p004d0.C0289c;
-import androidx.customview.view.AbsSavedState;
-import androidx.recyclerview.widget.C0620a;
-import androidx.recyclerview.widget.C0623d;
-import androidx.recyclerview.widget.C0634o;
-import androidx.recyclerview.widget.C0638s;
-import androidx.recyclerview.widget.C0639t;
-import androidx.recyclerview.widget.RunnableC0627h;
+import androidx.recyclerview.widget.a;
+import androidx.recyclerview.widget.d;
+import androidx.recyclerview.widget.k;
+import androidx.recyclerview.widget.s;
+import androidx.recyclerview.widget.x;
+import androidx.recyclerview.widget.y;
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.IdentityHashMap;
+import java.util.Iterator;
 import java.util.List;
-import okhttp3.HttpUrl;
-import p024c.p052i.p059j.C0959i;
-import p024c.p081t.C1004a;
-import p024c.p081t.C1005b;
-import p024c.p081t.C1006c;
+import java.util.Set;
+import q3.C4282a;
+import q3.C4283b;
+import q3.C4284c;
+import s1.C4421a;
+import s1.C4422a0;
+import s1.C4449o;
+import s1.InterfaceC4451p;
+import s1.X;
+import t1.t;
+import x1.C5048a;
+import y1.AbstractC5121a;
 
 /* loaded from: classes.dex */
-public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC0300j {
-    static final boolean ALLOW_SIZE_IN_UNSPECIFIED_SPEC;
-    static final boolean ALLOW_THREAD_GAP_WORK;
-    static final boolean DEBUG = false;
-    static final int DEFAULT_ORIENTATION = 1;
-    static final boolean DISPATCH_TEMP_DETACH = false;
-    private static final boolean FORCE_ABS_FOCUS_SEARCH_DIRECTION;
-    static final boolean FORCE_INVALIDATE_DISPLAY_LIST;
-    static final long FOREVER_NS = Long.MAX_VALUE;
-    public static final int HORIZONTAL = 0;
-    private static final boolean IGNORE_DETACHED_FOCUSED_CHILD;
-    private static final int INVALID_POINTER = -1;
-    public static final int INVALID_TYPE = -1;
-    private static final Class<?>[] LAYOUT_MANAGER_CONSTRUCTOR_SIGNATURE;
-    static final int MAX_SCROLL_DURATION = 2000;
-    private static final int[] NESTED_SCROLLING_ATTRS = {R.attr.nestedScrollingEnabled};
-    public static final long NO_ID = -1;
-    public static final int NO_POSITION = -1;
-    static final boolean POST_UPDATES_ON_ANIMATION;
-    public static final int SCROLL_STATE_DRAGGING = 1;
-    public static final int SCROLL_STATE_IDLE = 0;
-    public static final int SCROLL_STATE_SETTLING = 2;
-    static final String TAG = "RecyclerView";
-    public static final int TOUCH_SLOP_DEFAULT = 0;
-    public static final int TOUCH_SLOP_PAGING = 1;
-    static final String TRACE_BIND_VIEW_TAG = "RV OnBindView";
-    static final String TRACE_CREATE_VIEW_TAG = "RV CreateView";
-    private static final String TRACE_HANDLE_ADAPTER_UPDATES_TAG = "RV PartialInvalidate";
-    static final String TRACE_NESTED_PREFETCH_TAG = "RV Nested Prefetch";
-    private static final String TRACE_ON_DATA_SET_CHANGE_LAYOUT_TAG = "RV FullInvalidate";
-    private static final String TRACE_ON_LAYOUT_TAG = "RV OnLayout";
-    static final String TRACE_PREFETCH_TAG = "RV Prefetch";
-    static final String TRACE_SCROLL_TAG = "RV Scroll";
-    public static final int UNDEFINED_DURATION = Integer.MIN_VALUE;
-    static final boolean VERBOSE_TRACING = false;
-    public static final int VERTICAL = 1;
-    static final Interpolator sQuinticInterpolator;
-    C0634o mAccessibilityDelegate;
-    private final AccessibilityManager mAccessibilityManager;
-    AbstractC0594g mAdapter;
-    C0620a mAdapterHelper;
-    boolean mAdapterUpdateDuringMeasure;
-    private EdgeEffect mBottomGlow;
-    private InterfaceC0597j mChildDrawingOrderCallback;
-    C0623d mChildHelper;
-    boolean mClipToPadding;
-    boolean mDataSetHasChangedAfterLayout;
-    boolean mDispatchItemsChangedEvent;
-    private int mDispatchScrollCounter;
-    private int mEatenAccessibilityChangeFlags;
-    private C0598k mEdgeEffectFactory;
-    boolean mEnableFastScroller;
-    boolean mFirstLayoutComplete;
-    RunnableC0627h mGapWorker;
-    boolean mHasFixedSize;
-    private boolean mIgnoreMotionEventTillDown;
-    private int mInitialTouchX;
-    private int mInitialTouchY;
-    private int mInterceptRequestLayoutDepth;
-    private InterfaceC0606s mInterceptingOnItemTouchListener;
-    boolean mIsAttached;
-    AbstractC0599l mItemAnimator;
-    private AbstractC0599l.b mItemAnimatorListener;
-    private Runnable mItemAnimatorRunner;
-    final ArrayList<AbstractC0601n> mItemDecorations;
-    boolean mItemsAddedOrRemoved;
-    boolean mItemsChanged;
-    private int mLastTouchX;
-    private int mLastTouchY;
-    AbstractC0602o mLayout;
-    private int mLayoutOrScrollCounter;
-    boolean mLayoutSuppressed;
-    boolean mLayoutWasDefered;
-    private EdgeEffect mLeftGlow;
-    private final int mMaxFlingVelocity;
-    private final int mMinFlingVelocity;
-    private final int[] mMinMaxLayoutPositions;
-    private final int[] mNestedOffsets;
-    private final C0611x mObserver;
-    private List<InterfaceC0604q> mOnChildAttachStateListeners;
-    private AbstractC0605r mOnFlingListener;
-    private final ArrayList<InterfaceC0606s> mOnItemTouchListeners;
-    final List<AbstractC0590c0> mPendingAccessibilityImportanceChange;
-    private SavedState mPendingSavedState;
-    boolean mPostedAnimatorRunner;
-    RunnableC0627h.b mPrefetchRegistry;
-    private boolean mPreserveFocusAfterLayout;
-    final C0609v mRecycler;
-    InterfaceC0610w mRecyclerListener;
-    final int[] mReusableIntPair;
-    private EdgeEffect mRightGlow;
-    private float mScaledHorizontalScrollFactor;
-    private float mScaledVerticalScrollFactor;
-    private AbstractC0607t mScrollListener;
-    private List<AbstractC0607t> mScrollListeners;
-    private final int[] mScrollOffset;
-    private int mScrollPointerId;
-    private int mScrollState;
-    private C0301k mScrollingChildHelper;
-    final C0613z mState;
-    final Rect mTempRect;
-    private final Rect mTempRect2;
-    final RectF mTempRectF;
-    private EdgeEffect mTopGlow;
-    private int mTouchSlop;
-    final Runnable mUpdateChildViewsRunnable;
-    private VelocityTracker mVelocityTracker;
-    final RunnableC0588b0 mViewFlinger;
-    private final C0639t.b mViewInfoProcessCallback;
-    final C0639t mViewInfoStore;
+public class RecyclerView extends ViewGroup implements s1.C {
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$a */
-    class RunnableC0585a implements Runnable {
-        RunnableC0585a() {
-        }
+    /* renamed from: g1, reason: collision with root package name */
+    static boolean f28554g1 = false;
 
-        @Override // java.lang.Runnable
-        public void run() {
-            RecyclerView recyclerView = RecyclerView.this;
-            if (!recyclerView.mFirstLayoutComplete || recyclerView.isLayoutRequested()) {
-                return;
+    /* renamed from: h1, reason: collision with root package name */
+    static boolean f28555h1 = false;
+
+    /* renamed from: i1, reason: collision with root package name */
+    private static final int[] f28556i1 = {R.attr.nestedScrollingEnabled};
+
+    /* renamed from: j1, reason: collision with root package name */
+    private static final float f28557j1 = (float) (Math.log(0.78d) / Math.log(0.9d));
+
+    /* renamed from: k1, reason: collision with root package name */
+    static final boolean f28558k1 = false;
+
+    /* renamed from: l1, reason: collision with root package name */
+    static final boolean f28559l1 = true;
+
+    /* renamed from: m1, reason: collision with root package name */
+    static final boolean f28560m1 = true;
+
+    /* renamed from: n1, reason: collision with root package name */
+    private static final Class<?>[] f28561n1;
+
+    /* renamed from: o1, reason: collision with root package name */
+    static final Interpolator f28562o1;
+
+    /* renamed from: p1, reason: collision with root package name */
+    static final D f28563p1;
+
+    /* renamed from: A0, reason: collision with root package name */
+    private int f28564A0;
+
+    /* renamed from: B, reason: collision with root package name */
+    private final float f28565B;
+
+    /* renamed from: B0, reason: collision with root package name */
+    private t f28566B0;
+
+    /* renamed from: C, reason: collision with root package name */
+    private final z f28567C;
+
+    /* renamed from: C0, reason: collision with root package name */
+    private final int f28568C0;
+
+    /* renamed from: D, reason: collision with root package name */
+    final x f28569D;
+
+    /* renamed from: D0, reason: collision with root package name */
+    private final int f28570D0;
+
+    /* renamed from: E, reason: collision with root package name */
+    A f28571E;
+
+    /* renamed from: E0, reason: collision with root package name */
+    float f28572E0;
+
+    /* renamed from: F, reason: collision with root package name */
+    a f28573F;
+
+    /* renamed from: F0, reason: collision with root package name */
+    float f28574F0;
+
+    /* renamed from: G, reason: collision with root package name */
+    d f28575G;
+
+    /* renamed from: G0, reason: collision with root package name */
+    private boolean f28576G0;
+
+    /* renamed from: H, reason: collision with root package name */
+    final androidx.recyclerview.widget.y f28577H;
+
+    /* renamed from: H0, reason: collision with root package name */
+    final F f28578H0;
+
+    /* renamed from: I, reason: collision with root package name */
+    boolean f28579I;
+
+    /* renamed from: I0, reason: collision with root package name */
+    androidx.recyclerview.widget.k f28580I0;
+
+    /* renamed from: J, reason: collision with root package name */
+    final Runnable f28581J;
+
+    /* renamed from: J0, reason: collision with root package name */
+    k.b f28582J0;
+
+    /* renamed from: K, reason: collision with root package name */
+    final Rect f28583K;
+
+    /* renamed from: K0, reason: collision with root package name */
+    final C f28584K0;
+
+    /* renamed from: L, reason: collision with root package name */
+    private final Rect f28585L;
+
+    /* renamed from: L0, reason: collision with root package name */
+    private v f28586L0;
+
+    /* renamed from: M, reason: collision with root package name */
+    final RectF f28587M;
+
+    /* renamed from: M0, reason: collision with root package name */
+    private List<v> f28588M0;
+
+    /* renamed from: N, reason: collision with root package name */
+    h f28589N;
+
+    /* renamed from: N0, reason: collision with root package name */
+    boolean f28590N0;
+
+    /* renamed from: O, reason: collision with root package name */
+    q f28591O;
+
+    /* renamed from: O0, reason: collision with root package name */
+    boolean f28592O0;
+
+    /* renamed from: P, reason: collision with root package name */
+    y f28593P;
+
+    /* renamed from: P0, reason: collision with root package name */
+    private n.b f28594P0;
+
+    /* renamed from: Q, reason: collision with root package name */
+    final List<y> f28595Q;
+
+    /* renamed from: Q0, reason: collision with root package name */
+    boolean f28596Q0;
+
+    /* renamed from: R, reason: collision with root package name */
+    final ArrayList<p> f28597R;
+
+    /* renamed from: R0, reason: collision with root package name */
+    androidx.recyclerview.widget.s f28598R0;
+
+    /* renamed from: S, reason: collision with root package name */
+    private final ArrayList<u> f28599S;
+
+    /* renamed from: S0, reason: collision with root package name */
+    private final int[] f28600S0;
+
+    /* renamed from: T, reason: collision with root package name */
+    private u f28601T;
+
+    /* renamed from: T0, reason: collision with root package name */
+    private s1.D f28602T0;
+
+    /* renamed from: U, reason: collision with root package name */
+    boolean f28603U;
+
+    /* renamed from: U0, reason: collision with root package name */
+    private final int[] f28604U0;
+
+    /* renamed from: V, reason: collision with root package name */
+    boolean f28605V;
+
+    /* renamed from: V0, reason: collision with root package name */
+    private final int[] f28606V0;
+
+    /* renamed from: W, reason: collision with root package name */
+    boolean f28607W;
+
+    /* renamed from: W0, reason: collision with root package name */
+    final int[] f28608W0;
+
+    /* renamed from: X0, reason: collision with root package name */
+    final List<G> f28609X0;
+
+    /* renamed from: Y0, reason: collision with root package name */
+    private Runnable f28610Y0;
+
+    /* renamed from: Z0, reason: collision with root package name */
+    private boolean f28611Z0;
+
+    /* renamed from: a0, reason: collision with root package name */
+    boolean f28612a0;
+
+    /* renamed from: a1, reason: collision with root package name */
+    private int f28613a1;
+
+    /* renamed from: b0, reason: collision with root package name */
+    private int f28614b0;
+
+    /* renamed from: b1, reason: collision with root package name */
+    private int f28615b1;
+
+    /* renamed from: c0, reason: collision with root package name */
+    boolean f28616c0;
+
+    /* renamed from: c1, reason: collision with root package name */
+    boolean f28617c1;
+
+    /* renamed from: d0, reason: collision with root package name */
+    boolean f28618d0;
+
+    /* renamed from: d1, reason: collision with root package name */
+    private final y.b f28619d1;
+
+    /* renamed from: e0, reason: collision with root package name */
+    private boolean f28620e0;
+
+    /* renamed from: e1, reason: collision with root package name */
+    private final InterfaceC4451p f28621e1;
+
+    /* renamed from: f0, reason: collision with root package name */
+    private int f28622f0;
+
+    /* renamed from: f1, reason: collision with root package name */
+    C4449o f28623f1;
+
+    /* renamed from: g0, reason: collision with root package name */
+    boolean f28624g0;
+
+    /* renamed from: h0, reason: collision with root package name */
+    private final AccessibilityManager f28625h0;
+
+    /* renamed from: i0, reason: collision with root package name */
+    private List<s> f28626i0;
+
+    /* renamed from: j0, reason: collision with root package name */
+    boolean f28627j0;
+
+    /* renamed from: k0, reason: collision with root package name */
+    boolean f28628k0;
+
+    /* renamed from: l0, reason: collision with root package name */
+    private int f28629l0;
+
+    /* renamed from: m0, reason: collision with root package name */
+    private int f28630m0;
+
+    /* renamed from: n0, reason: collision with root package name */
+    private m f28631n0;
+
+    /* renamed from: o0, reason: collision with root package name */
+    private EdgeEffect f28632o0;
+
+    /* renamed from: p0, reason: collision with root package name */
+    private EdgeEffect f28633p0;
+
+    /* renamed from: q0, reason: collision with root package name */
+    private EdgeEffect f28634q0;
+
+    /* renamed from: r0, reason: collision with root package name */
+    private EdgeEffect f28635r0;
+
+    /* renamed from: s0, reason: collision with root package name */
+    n f28636s0;
+
+    /* renamed from: t0, reason: collision with root package name */
+    private int f28637t0;
+
+    /* renamed from: u0, reason: collision with root package name */
+    private int f28638u0;
+
+    /* renamed from: v0, reason: collision with root package name */
+    private VelocityTracker f28639v0;
+
+    /* renamed from: w0, reason: collision with root package name */
+    private int f28640w0;
+
+    /* renamed from: x0, reason: collision with root package name */
+    private int f28641x0;
+
+    /* renamed from: y0, reason: collision with root package name */
+    private int f28642y0;
+
+    /* renamed from: z0, reason: collision with root package name */
+    private int f28643z0;
+
+    public static abstract class B {
+
+        /* renamed from: b, reason: collision with root package name */
+        private RecyclerView f28646b;
+
+        /* renamed from: c, reason: collision with root package name */
+        private q f28647c;
+
+        /* renamed from: d, reason: collision with root package name */
+        private boolean f28648d;
+
+        /* renamed from: e, reason: collision with root package name */
+        private boolean f28649e;
+
+        /* renamed from: f, reason: collision with root package name */
+        private View f28650f;
+
+        /* renamed from: h, reason: collision with root package name */
+        private boolean f28652h;
+
+        /* renamed from: a, reason: collision with root package name */
+        private int f28645a = -1;
+
+        /* renamed from: g, reason: collision with root package name */
+        private final a f28651g = new a(0, 0);
+
+        public static class a {
+
+            /* renamed from: a, reason: collision with root package name */
+            private int f28653a;
+
+            /* renamed from: b, reason: collision with root package name */
+            private int f28654b;
+
+            /* renamed from: c, reason: collision with root package name */
+            private int f28655c;
+
+            /* renamed from: d, reason: collision with root package name */
+            private int f28656d;
+
+            /* renamed from: e, reason: collision with root package name */
+            private Interpolator f28657e;
+
+            /* renamed from: f, reason: collision with root package name */
+            private boolean f28658f;
+
+            /* renamed from: g, reason: collision with root package name */
+            private int f28659g;
+
+            public a(int i10, int i11) {
+                this(i10, i11, Integer.MIN_VALUE, null);
             }
-            RecyclerView recyclerView2 = RecyclerView.this;
-            if (!recyclerView2.mIsAttached) {
-                recyclerView2.requestLayout();
-            } else if (recyclerView2.mLayoutSuppressed) {
-                recyclerView2.mLayoutWasDefered = true;
-            } else {
-                recyclerView2.consumePendingUpdateOperations();
-            }
-        }
-    }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$a0 */
-    public static abstract class AbstractC0586a0 {
-    }
-
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$b */
-    class RunnableC0587b implements Runnable {
-        RunnableC0587b() {
-        }
-
-        @Override // java.lang.Runnable
-        public void run() {
-            AbstractC0599l abstractC0599l = RecyclerView.this.mItemAnimator;
-            if (abstractC0599l != null) {
-                abstractC0599l.runPendingAnimations();
-            }
-            RecyclerView.this.mPostedAnimatorRunner = false;
-        }
-    }
-
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$b0 */
-    class RunnableC0588b0 implements Runnable {
-
-        /* renamed from: f */
-        private int f3943f;
-
-        /* renamed from: g */
-        private int f3944g;
-
-        /* renamed from: h */
-        OverScroller f3945h;
-
-        /* renamed from: i */
-        Interpolator f3946i;
-
-        /* renamed from: j */
-        private boolean f3947j;
-
-        /* renamed from: k */
-        private boolean f3948k;
-
-        RunnableC0588b0() {
-            Interpolator interpolator = RecyclerView.sQuinticInterpolator;
-            this.f3946i = interpolator;
-            this.f3947j = false;
-            this.f3948k = false;
-            this.f3945h = new OverScroller(RecyclerView.this.getContext(), interpolator);
-        }
-
-        /* renamed from: a */
-        private int m4188a(int i2, int i3, int i4, int i5) {
-            int iRound;
-            int iAbs = Math.abs(i2);
-            int iAbs2 = Math.abs(i3);
-            boolean z = iAbs > iAbs2;
-            int iSqrt = (int) Math.sqrt((i4 * i4) + (i5 * i5));
-            int iSqrt2 = (int) Math.sqrt((i2 * i2) + (i3 * i3));
-            RecyclerView recyclerView = RecyclerView.this;
-            int width = z ? recyclerView.getWidth() : recyclerView.getHeight();
-            int i6 = width / 2;
-            float f2 = width;
-            float f3 = i6;
-            float fM4189b = f3 + (m4189b(Math.min(1.0f, (iSqrt2 * 1.0f) / f2)) * f3);
-            if (iSqrt > 0) {
-                iRound = Math.round(Math.abs(fM4189b / iSqrt) * 1000.0f) * 4;
-            } else {
-                if (!z) {
-                    iAbs = iAbs2;
+            private void e() {
+                if (this.f28657e != null && this.f28655c < 1) {
+                    throw new IllegalStateException("If you provide an interpolator, you must set a positive duration");
                 }
-                iRound = (int) (((iAbs / f2) + 1.0f) * 300.0f);
+                if (this.f28655c < 1) {
+                    throw new IllegalStateException("Scroll duration must be a positive number");
+                }
             }
-            return Math.min(iRound, RecyclerView.MAX_SCROLL_DURATION);
+
+            boolean a() {
+                return this.f28656d >= 0;
+            }
+
+            public void b(int i10) {
+                this.f28656d = i10;
+            }
+
+            void c(RecyclerView recyclerView) {
+                int i10 = this.f28656d;
+                if (i10 >= 0) {
+                    this.f28656d = -1;
+                    recyclerView.G0(i10);
+                    this.f28658f = false;
+                } else {
+                    if (!this.f28658f) {
+                        this.f28659g = 0;
+                        return;
+                    }
+                    e();
+                    recyclerView.f28578H0.e(this.f28653a, this.f28654b, this.f28655c, this.f28657e);
+                    int i11 = this.f28659g + 1;
+                    this.f28659g = i11;
+                    if (i11 > 10) {
+                        Log.e("RecyclerView", "Smooth Scroll action is being updated too frequently. Make sure you are not changing it unless necessary");
+                    }
+                    this.f28658f = false;
+                }
+            }
+
+            public void d(int i10, int i11, int i12, Interpolator interpolator) {
+                this.f28653a = i10;
+                this.f28654b = i11;
+                this.f28655c = i12;
+                this.f28657e = interpolator;
+                this.f28658f = true;
+            }
+
+            public a(int i10, int i11, int i12, Interpolator interpolator) {
+                this.f28656d = -1;
+                this.f28658f = false;
+                this.f28659g = 0;
+                this.f28653a = i10;
+                this.f28654b = i11;
+                this.f28655c = i12;
+                this.f28657e = interpolator;
+            }
         }
 
-        /* renamed from: b */
-        private float m4189b(float f2) {
-            return (float) Math.sin((f2 - 0.5f) * 0.47123894f);
+        public interface b {
+            PointF d(int i10);
         }
 
-        /* renamed from: d */
-        private void m4190d() {
+        public PointF a(int i10) {
+            Object objE = e();
+            if (objE instanceof b) {
+                return ((b) objE).d(i10);
+            }
+            Log.w("RecyclerView", "You should override computeScrollVectorForPosition when the LayoutManager does not implement " + b.class.getCanonicalName());
+            return null;
+        }
+
+        public View b(int i10) {
+            return this.f28646b.f28591O.H(i10);
+        }
+
+        public int c() {
+            return this.f28646b.f28591O.O();
+        }
+
+        public int d(View view) {
+            return this.f28646b.m0(view);
+        }
+
+        public q e() {
+            return this.f28647c;
+        }
+
+        public int f() {
+            return this.f28645a;
+        }
+
+        public boolean g() {
+            return this.f28648d;
+        }
+
+        public boolean h() {
+            return this.f28649e;
+        }
+
+        protected void i(PointF pointF) {
+            float f10 = pointF.x;
+            float f11 = pointF.y;
+            float fSqrt = (float) Math.sqrt((f10 * f10) + (f11 * f11));
+            pointF.x /= fSqrt;
+            pointF.y /= fSqrt;
+        }
+
+        void j(int i10, int i11) {
+            PointF pointFA;
+            RecyclerView recyclerView = this.f28646b;
+            if (this.f28645a == -1 || recyclerView == null) {
+                r();
+            }
+            if (this.f28648d && this.f28650f == null && this.f28647c != null && (pointFA = a(this.f28645a)) != null) {
+                float f10 = pointFA.x;
+                if (f10 != 0.0f || pointFA.y != 0.0f) {
+                    recyclerView.t1((int) Math.signum(f10), (int) Math.signum(pointFA.y), null);
+                }
+            }
+            this.f28648d = false;
+            View view = this.f28650f;
+            if (view != null) {
+                if (d(view) == this.f28645a) {
+                    o(this.f28650f, recyclerView.f28584K0, this.f28651g);
+                    this.f28651g.c(recyclerView);
+                    r();
+                } else {
+                    Log.e("RecyclerView", "Passed over target position while smooth scrolling.");
+                    this.f28650f = null;
+                }
+            }
+            if (this.f28649e) {
+                l(i10, i11, recyclerView.f28584K0, this.f28651g);
+                boolean zA = this.f28651g.a();
+                this.f28651g.c(recyclerView);
+                if (zA && this.f28649e) {
+                    this.f28648d = true;
+                    recyclerView.f28578H0.d();
+                }
+            }
+        }
+
+        protected void k(View view) {
+            if (d(view) == f()) {
+                this.f28650f = view;
+                if (RecyclerView.f28555h1) {
+                    Log.d("RecyclerView", "smooth scroll target view has been attached");
+                }
+            }
+        }
+
+        protected abstract void l(int i10, int i11, C c10, a aVar);
+
+        protected abstract void m();
+
+        protected abstract void n();
+
+        protected abstract void o(View view, C c10, a aVar);
+
+        public void p(int i10) {
+            this.f28645a = i10;
+        }
+
+        void q(RecyclerView recyclerView, q qVar) {
+            recyclerView.f28578H0.f();
+            if (this.f28652h) {
+                Log.w("RecyclerView", "An instance of " + getClass().getSimpleName() + " was started more than once. Each instance of" + getClass().getSimpleName() + " is intended to only be used once. You should create a new instance for each use.");
+            }
+            this.f28646b = recyclerView;
+            this.f28647c = qVar;
+            int i10 = this.f28645a;
+            if (i10 == -1) {
+                throw new IllegalArgumentException("Invalid target position");
+            }
+            recyclerView.f28584K0.f28660a = i10;
+            this.f28649e = true;
+            this.f28648d = true;
+            this.f28650f = b(f());
+            m();
+            this.f28646b.f28578H0.d();
+            this.f28652h = true;
+        }
+
+        protected final void r() {
+            if (this.f28649e) {
+                this.f28649e = false;
+                n();
+                this.f28646b.f28584K0.f28660a = -1;
+                this.f28650f = null;
+                this.f28645a = -1;
+                this.f28648d = false;
+                this.f28647c.k1(this);
+                this.f28647c = null;
+                this.f28646b = null;
+            }
+        }
+    }
+
+    public static class C {
+
+        /* renamed from: b, reason: collision with root package name */
+        private SparseArray<Object> f28661b;
+
+        /* renamed from: m, reason: collision with root package name */
+        int f28672m;
+
+        /* renamed from: n, reason: collision with root package name */
+        long f28673n;
+
+        /* renamed from: o, reason: collision with root package name */
+        int f28674o;
+
+        /* renamed from: p, reason: collision with root package name */
+        int f28675p;
+
+        /* renamed from: q, reason: collision with root package name */
+        int f28676q;
+
+        /* renamed from: a, reason: collision with root package name */
+        int f28660a = -1;
+
+        /* renamed from: c, reason: collision with root package name */
+        int f28662c = 0;
+
+        /* renamed from: d, reason: collision with root package name */
+        int f28663d = 0;
+
+        /* renamed from: e, reason: collision with root package name */
+        int f28664e = 1;
+
+        /* renamed from: f, reason: collision with root package name */
+        int f28665f = 0;
+
+        /* renamed from: g, reason: collision with root package name */
+        boolean f28666g = false;
+
+        /* renamed from: h, reason: collision with root package name */
+        boolean f28667h = false;
+
+        /* renamed from: i, reason: collision with root package name */
+        boolean f28668i = false;
+
+        /* renamed from: j, reason: collision with root package name */
+        boolean f28669j = false;
+
+        /* renamed from: k, reason: collision with root package name */
+        boolean f28670k = false;
+
+        /* renamed from: l, reason: collision with root package name */
+        boolean f28671l = false;
+
+        void a(int i10) {
+            if ((this.f28664e & i10) != 0) {
+                return;
+            }
+            throw new IllegalStateException("Layout state should be one of " + Integer.toBinaryString(i10) + " but it is " + Integer.toBinaryString(this.f28664e));
+        }
+
+        public int b() {
+            return this.f28667h ? this.f28662c - this.f28663d : this.f28665f;
+        }
+
+        public int c() {
+            return this.f28660a;
+        }
+
+        public boolean d() {
+            return this.f28660a != -1;
+        }
+
+        public boolean e() {
+            return this.f28667h;
+        }
+
+        void f(h hVar) {
+            this.f28664e = 1;
+            this.f28665f = hVar.h();
+            this.f28667h = false;
+            this.f28668i = false;
+            this.f28669j = false;
+        }
+
+        public boolean g() {
+            return this.f28671l;
+        }
+
+        public String toString() {
+            return "State{mTargetPosition=" + this.f28660a + ", mData=" + this.f28661b + ", mItemCount=" + this.f28665f + ", mIsMeasuring=" + this.f28669j + ", mPreviousLayoutItemCount=" + this.f28662c + ", mDeletedInvisibleItemCountSincePreviousLayout=" + this.f28663d + ", mStructureChanged=" + this.f28666g + ", mInPreLayout=" + this.f28667h + ", mRunSimpleAnimations=" + this.f28670k + ", mRunPredictiveAnimations=" + this.f28671l + '}';
+        }
+    }
+
+    static class D extends m {
+        D() {
+        }
+
+        @Override // androidx.recyclerview.widget.RecyclerView.m
+        protected EdgeEffect a(RecyclerView recyclerView, int i10) {
+            return new EdgeEffect(recyclerView.getContext());
+        }
+    }
+
+    public static abstract class E {
+    }
+
+    class F implements Runnable {
+
+        /* renamed from: B, reason: collision with root package name */
+        private int f28677B;
+
+        /* renamed from: C, reason: collision with root package name */
+        private int f28678C;
+
+        /* renamed from: D, reason: collision with root package name */
+        OverScroller f28679D;
+
+        /* renamed from: E, reason: collision with root package name */
+        Interpolator f28680E;
+
+        /* renamed from: F, reason: collision with root package name */
+        private boolean f28681F;
+
+        /* renamed from: G, reason: collision with root package name */
+        private boolean f28682G;
+
+        F() {
+            Interpolator interpolator = RecyclerView.f28562o1;
+            this.f28680E = interpolator;
+            this.f28681F = false;
+            this.f28682G = false;
+            this.f28679D = new OverScroller(RecyclerView.this.getContext(), interpolator);
+        }
+
+        private int a(int i10, int i11) {
+            int iAbs = Math.abs(i10);
+            int iAbs2 = Math.abs(i11);
+            boolean z10 = iAbs > iAbs2;
+            RecyclerView recyclerView = RecyclerView.this;
+            int width = z10 ? recyclerView.getWidth() : recyclerView.getHeight();
+            if (!z10) {
+                iAbs = iAbs2;
+            }
+            return Math.min((int) (((iAbs / width) + 1.0f) * 300.0f), 2000);
+        }
+
+        private void c() {
             RecyclerView.this.removeCallbacks(this);
-            C0311u.m2115a0(RecyclerView.this, this);
+            X.f0(RecyclerView.this, this);
         }
 
-        /* renamed from: c */
-        public void m4191c(int i2, int i3) {
+        public void b(int i10, int i11) {
             RecyclerView.this.setScrollState(2);
-            this.f3944g = 0;
-            this.f3943f = 0;
-            Interpolator interpolator = this.f3946i;
-            Interpolator interpolator2 = RecyclerView.sQuinticInterpolator;
+            this.f28678C = 0;
+            this.f28677B = 0;
+            Interpolator interpolator = this.f28680E;
+            Interpolator interpolator2 = RecyclerView.f28562o1;
             if (interpolator != interpolator2) {
-                this.f3946i = interpolator2;
-                this.f3945h = new OverScroller(RecyclerView.this.getContext(), interpolator2);
+                this.f28680E = interpolator2;
+                this.f28679D = new OverScroller(RecyclerView.this.getContext(), interpolator2);
             }
-            this.f3945h.fling(0, 0, i2, i3, Integer.MIN_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE, Integer.MAX_VALUE);
-            m4192e();
+            this.f28679D.fling(0, 0, i10, i11, Integer.MIN_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE, Integer.MAX_VALUE);
+            d();
         }
 
-        /* renamed from: e */
-        void m4192e() {
-            if (this.f3947j) {
-                this.f3948k = true;
+        void d() {
+            if (this.f28681F) {
+                this.f28682G = true;
             } else {
-                m4190d();
+                c();
             }
         }
 
-        /* renamed from: f */
-        public void m4193f(int i2, int i3, int i4, Interpolator interpolator) {
-            if (i4 == Integer.MIN_VALUE) {
-                i4 = m4188a(i2, i3, 0, 0);
+        public void e(int i10, int i11, int i12, Interpolator interpolator) {
+            if (i12 == Integer.MIN_VALUE) {
+                i12 = a(i10, i11);
             }
-            int i5 = i4;
+            int i13 = i12;
             if (interpolator == null) {
-                interpolator = RecyclerView.sQuinticInterpolator;
+                interpolator = RecyclerView.f28562o1;
             }
-            if (this.f3946i != interpolator) {
-                this.f3946i = interpolator;
-                this.f3945h = new OverScroller(RecyclerView.this.getContext(), interpolator);
+            if (this.f28680E != interpolator) {
+                this.f28680E = interpolator;
+                this.f28679D = new OverScroller(RecyclerView.this.getContext(), interpolator);
             }
-            this.f3944g = 0;
-            this.f3943f = 0;
+            this.f28678C = 0;
+            this.f28677B = 0;
             RecyclerView.this.setScrollState(2);
-            this.f3945h.startScroll(0, 0, i2, i3, i5);
-            if (Build.VERSION.SDK_INT < 23) {
-                this.f3945h.computeScrollOffset();
-            }
-            m4192e();
+            this.f28679D.startScroll(0, 0, i10, i11, i13);
+            d();
         }
 
-        /* renamed from: g */
-        public void m4194g() {
+        public void f() {
             RecyclerView.this.removeCallbacks(this);
-            this.f3945h.abortAnimation();
+            this.f28679D.abortAnimation();
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            int i2;
-            int i3;
+            int i10;
+            int i11;
             RecyclerView recyclerView = RecyclerView.this;
-            if (recyclerView.mLayout == null) {
-                m4194g();
+            if (recyclerView.f28591O == null) {
+                f();
                 return;
             }
-            this.f3948k = false;
-            this.f3947j = true;
-            recyclerView.consumePendingUpdateOperations();
-            OverScroller overScroller = this.f3945h;
+            this.f28682G = false;
+            this.f28681F = true;
+            recyclerView.A();
+            OverScroller overScroller = this.f28679D;
             if (overScroller.computeScrollOffset()) {
                 int currX = overScroller.getCurrX();
                 int currY = overScroller.getCurrY();
-                int i4 = currX - this.f3943f;
-                int i5 = currY - this.f3944g;
-                this.f3943f = currX;
-                this.f3944g = currY;
+                int i12 = currX - this.f28677B;
+                int i13 = currY - this.f28678C;
+                this.f28677B = currX;
+                this.f28678C = currY;
+                int iX = RecyclerView.this.x(i12);
+                int iZ = RecyclerView.this.z(i13);
                 RecyclerView recyclerView2 = RecyclerView.this;
-                int[] iArr = recyclerView2.mReusableIntPair;
+                int[] iArr = recyclerView2.f28608W0;
                 iArr[0] = 0;
                 iArr[1] = 0;
-                if (recyclerView2.dispatchNestedPreScroll(i4, i5, iArr, null, 1)) {
-                    int[] iArr2 = RecyclerView.this.mReusableIntPair;
-                    i4 -= iArr2[0];
-                    i5 -= iArr2[1];
+                if (recyclerView2.L(iX, iZ, iArr, null, 1)) {
+                    int[] iArr2 = RecyclerView.this.f28608W0;
+                    iX -= iArr2[0];
+                    iZ -= iArr2[1];
                 }
                 if (RecyclerView.this.getOverScrollMode() != 2) {
-                    RecyclerView.this.considerReleasingGlowsOnScroll(i4, i5);
+                    RecyclerView.this.w(iX, iZ);
                 }
                 RecyclerView recyclerView3 = RecyclerView.this;
-                if (recyclerView3.mAdapter != null) {
-                    int[] iArr3 = recyclerView3.mReusableIntPair;
+                if (recyclerView3.f28589N != null) {
+                    int[] iArr3 = recyclerView3.f28608W0;
                     iArr3[0] = 0;
                     iArr3[1] = 0;
-                    recyclerView3.scrollStep(i4, i5, iArr3);
+                    recyclerView3.t1(iX, iZ, iArr3);
                     RecyclerView recyclerView4 = RecyclerView.this;
-                    int[] iArr4 = recyclerView4.mReusableIntPair;
-                    i3 = iArr4[0];
-                    i2 = iArr4[1];
-                    i4 -= i3;
-                    i5 -= i2;
-                    AbstractC0612y abstractC0612y = recyclerView4.mLayout.mSmoothScroller;
-                    if (abstractC0612y != null && !abstractC0612y.isPendingInitialRun() && abstractC0612y.isRunning()) {
-                        int iM4306b = RecyclerView.this.mState.m4306b();
-                        if (iM4306b == 0) {
-                            abstractC0612y.stop();
-                        } else if (abstractC0612y.getTargetPosition() >= iM4306b) {
-                            abstractC0612y.setTargetPosition(iM4306b - 1);
-                            abstractC0612y.onAnimation(i3, i2);
+                    int[] iArr4 = recyclerView4.f28608W0;
+                    i11 = iArr4[0];
+                    i10 = iArr4[1];
+                    iX -= i11;
+                    iZ -= i10;
+                    B b10 = recyclerView4.f28591O.f28714g;
+                    if (b10 != null && !b10.g() && b10.h()) {
+                        int iB = RecyclerView.this.f28584K0.b();
+                        if (iB == 0) {
+                            b10.r();
+                        } else if (b10.f() >= iB) {
+                            b10.p(iB - 1);
+                            b10.j(i11, i10);
                         } else {
-                            abstractC0612y.onAnimation(i3, i2);
+                            b10.j(i11, i10);
                         }
                     }
                 } else {
-                    i2 = 0;
-                    i3 = 0;
+                    i10 = 0;
+                    i11 = 0;
                 }
-                if (!RecyclerView.this.mItemDecorations.isEmpty()) {
+                if (!RecyclerView.this.f28597R.isEmpty()) {
                     RecyclerView.this.invalidate();
                 }
                 RecyclerView recyclerView5 = RecyclerView.this;
-                int[] iArr5 = recyclerView5.mReusableIntPair;
+                int[] iArr5 = recyclerView5.f28608W0;
                 iArr5[0] = 0;
                 iArr5[1] = 0;
-                recyclerView5.dispatchNestedScroll(i3, i2, i4, i5, null, 1, iArr5);
+                recyclerView5.M(i11, i10, iX, iZ, null, 1, iArr5);
                 RecyclerView recyclerView6 = RecyclerView.this;
-                int[] iArr6 = recyclerView6.mReusableIntPair;
-                int i6 = i4 - iArr6[0];
-                int i7 = i5 - iArr6[1];
-                if (i3 != 0 || i2 != 0) {
-                    recyclerView6.dispatchOnScrolled(i3, i2);
+                int[] iArr6 = recyclerView6.f28608W0;
+                int i14 = iX - iArr6[0];
+                int i15 = iZ - iArr6[1];
+                if (i11 != 0 || i10 != 0) {
+                    recyclerView6.O(i11, i10);
                 }
                 if (!RecyclerView.this.awakenScrollBars()) {
                     RecyclerView.this.invalidate();
                 }
-                boolean z = overScroller.isFinished() || (((overScroller.getCurrX() == overScroller.getFinalX()) || i6 != 0) && ((overScroller.getCurrY() == overScroller.getFinalY()) || i7 != 0));
-                AbstractC0612y abstractC0612y2 = RecyclerView.this.mLayout.mSmoothScroller;
-                if ((abstractC0612y2 != null && abstractC0612y2.isPendingInitialRun()) || !z) {
-                    m4192e();
-                    RecyclerView recyclerView7 = RecyclerView.this;
-                    RunnableC0627h runnableC0627h = recyclerView7.mGapWorker;
-                    if (runnableC0627h != null) {
-                        runnableC0627h.m4513f(recyclerView7, i3, i2);
-                    }
-                } else {
+                boolean z10 = overScroller.isFinished() || (((overScroller.getCurrX() == overScroller.getFinalX()) || i14 != 0) && ((overScroller.getCurrY() == overScroller.getFinalY()) || i15 != 0));
+                B b11 = RecyclerView.this.f28591O.f28714g;
+                if ((b11 == null || !b11.g()) && z10) {
                     if (RecyclerView.this.getOverScrollMode() != 2) {
                         int currVelocity = (int) overScroller.getCurrVelocity();
-                        int i8 = i6 < 0 ? -currVelocity : i6 > 0 ? currVelocity : 0;
-                        if (i7 < 0) {
+                        int i16 = i14 < 0 ? -currVelocity : i14 > 0 ? currVelocity : 0;
+                        if (i15 < 0) {
                             currVelocity = -currVelocity;
-                        } else if (i7 <= 0) {
+                        } else if (i15 <= 0) {
                             currVelocity = 0;
                         }
-                        RecyclerView.this.absorbGlows(i8, currVelocity);
+                        RecyclerView.this.a(i16, currVelocity);
                     }
-                    if (RecyclerView.ALLOW_THREAD_GAP_WORK) {
-                        RecyclerView.this.mPrefetchRegistry.m4517b();
+                    if (RecyclerView.f28560m1) {
+                        RecyclerView.this.f28582J0.b();
+                    }
+                } else {
+                    d();
+                    RecyclerView recyclerView7 = RecyclerView.this;
+                    androidx.recyclerview.widget.k kVar = recyclerView7.f28580I0;
+                    if (kVar != null) {
+                        kVar.f(recyclerView7, i11, i10);
                     }
                 }
+                if (Build.VERSION.SDK_INT >= 35) {
+                    k.a(RecyclerView.this, Math.abs(overScroller.getCurrVelocity()));
+                }
             }
-            AbstractC0612y abstractC0612y3 = RecyclerView.this.mLayout.mSmoothScroller;
-            if (abstractC0612y3 != null && abstractC0612y3.isPendingInitialRun()) {
-                abstractC0612y3.onAnimation(0, 0);
+            B b12 = RecyclerView.this.f28591O.f28714g;
+            if (b12 != null && b12.g()) {
+                b12.j(0, 0);
             }
-            this.f3947j = false;
-            if (this.f3948k) {
-                m4190d();
+            this.f28681F = false;
+            if (this.f28682G) {
+                c();
             } else {
                 RecyclerView.this.setScrollState(0);
-                RecyclerView.this.stopNestedScroll(1);
+                RecyclerView.this.J1(1);
             }
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$c */
-    static class InterpolatorC0589c implements Interpolator {
-        InterpolatorC0589c() {
-        }
-
-        @Override // android.animation.TimeInterpolator
-        public float getInterpolation(float f2) {
-            float f3 = f2 - 1.0f;
-            return (f3 * f3 * f3 * f3 * f3) + 1.0f;
-        }
-    }
-
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$c0 */
-    public static abstract class AbstractC0590c0 {
+    public static abstract class G {
         static final int FLAG_ADAPTER_FULLUPDATE = 1024;
         static final int FLAG_ADAPTER_POSITION_UNKNOWN = 512;
         static final int FLAG_APPEARED_IN_PRE_LAYOUT = 4096;
@@ -482,25 +922,26 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
         private static final List<Object> FULLUPDATE_PAYLOADS = Collections.emptyList();
         static final int PENDING_ACCESSIBILITY_STATE_NOT_SET = -1;
         public final View itemView;
+        h<? extends G> mBindingAdapter;
         int mFlags;
         WeakReference<RecyclerView> mNestedRecyclerView;
         RecyclerView mOwnerRecyclerView;
-        int mPosition = -1;
-        int mOldPosition = -1;
+        int mPosition = PENDING_ACCESSIBILITY_STATE_NOT_SET;
+        int mOldPosition = PENDING_ACCESSIBILITY_STATE_NOT_SET;
         long mItemId = -1;
-        int mItemViewType = -1;
-        int mPreLayoutPosition = -1;
-        AbstractC0590c0 mShadowedHolder = null;
-        AbstractC0590c0 mShadowingHolder = null;
+        int mItemViewType = PENDING_ACCESSIBILITY_STATE_NOT_SET;
+        int mPreLayoutPosition = PENDING_ACCESSIBILITY_STATE_NOT_SET;
+        G mShadowedHolder = null;
+        G mShadowingHolder = null;
         List<Object> mPayloads = null;
         List<Object> mUnmodifiedPayloads = null;
         private int mIsRecyclableCount = 0;
-        C0609v mScrapContainer = null;
+        x mScrapContainer = null;
         boolean mInChangeScrap = false;
         private int mWasImportantForAccessibilityBeforeHidden = 0;
-        int mPendingAccessibilityState = -1;
+        int mPendingAccessibilityState = PENDING_ACCESSIBILITY_STATE_NOT_SET;
 
-        public AbstractC0590c0(View view) {
+        public G(View view) {
             if (view == null) {
                 throw new IllegalArgumentException("itemView may not be null");
             }
@@ -524,13 +965,13 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
             }
         }
 
-        void addFlags(int i2) {
-            this.mFlags = i2 | this.mFlags;
+        void addFlags(int i10) {
+            this.mFlags = i10 | this.mFlags;
         }
 
         void clearOldPosition() {
-            this.mOldPosition = -1;
-            this.mPreLayoutPosition = -1;
+            this.mOldPosition = PENDING_ACCESSIBILITY_STATE_NOT_SET;
+            this.mPreLayoutPosition = PENDING_ACCESSIBILITY_STATE_NOT_SET;
         }
 
         void clearPayload() {
@@ -550,21 +991,34 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
         }
 
         boolean doesTransientStatePreventRecycling() {
-            return (this.mFlags & 16) == 0 && C0311u.m2099L(this.itemView);
+            return (this.mFlags & FLAG_NOT_RECYCLABLE) == 0 && X.O(this.itemView);
         }
 
-        void flagRemovedAndOffsetPosition(int i2, int i3, boolean z) {
+        void flagRemovedAndOffsetPosition(int i10, int i11, boolean z10) {
             addFlags(8);
-            offsetPosition(i3, z);
-            this.mPosition = i2;
+            offsetPosition(i11, z10);
+            this.mPosition = i10;
         }
 
-        public final int getAdapterPosition() {
+        public final int getAbsoluteAdapterPosition() {
             RecyclerView recyclerView = this.mOwnerRecyclerView;
-            if (recyclerView == null) {
-                return -1;
-            }
-            return recyclerView.getAdapterPositionFor(this);
+            return recyclerView == null ? PENDING_ACCESSIBILITY_STATE_NOT_SET : recyclerView.j0(this);
+        }
+
+        @Deprecated
+        public final int getAdapterPosition() {
+            return getBindingAdapterPosition();
+        }
+
+        public final h<? extends G> getBindingAdapter() {
+            return this.mBindingAdapter;
+        }
+
+        public final int getBindingAdapterPosition() {
+            RecyclerView recyclerView;
+            h adapter;
+            int iJ0;
+            return (this.mBindingAdapter == null || (recyclerView = this.mOwnerRecyclerView) == null || (adapter = recyclerView.getAdapter()) == null || (iJ0 = this.mOwnerRecyclerView.j0(this)) == PENDING_ACCESSIBILITY_STATE_NOT_SET) ? PENDING_ACCESSIBILITY_STATE_NOT_SET : adapter.g(this.mBindingAdapter, this, iJ0);
         }
 
         public final long getItemId() {
@@ -576,8 +1030,8 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
         }
 
         public final int getLayoutPosition() {
-            int i2 = this.mPreLayoutPosition;
-            return i2 == -1 ? this.mPosition : i2;
+            int i10 = this.mPreLayoutPosition;
+            return i10 == PENDING_ACCESSIBILITY_STATE_NOT_SET ? this.mPosition : i10;
         }
 
         public final int getOldPosition() {
@@ -586,8 +1040,8 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
 
         @Deprecated
         public final int getPosition() {
-            int i2 = this.mPreLayoutPosition;
-            return i2 == -1 ? this.mPosition : i2;
+            int i10 = this.mPreLayoutPosition;
+            return i10 == PENDING_ACCESSIBILITY_STATE_NOT_SET ? this.mPosition : i10;
         }
 
         List<Object> getUnmodifiedPayloads() {
@@ -598,12 +1052,12 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
             return (list == null || list.size() == 0) ? FULLUPDATE_PAYLOADS : this.mUnmodifiedPayloads;
         }
 
-        boolean hasAnyOfTheFlags(int i2) {
-            return (i2 & this.mFlags) != 0;
+        boolean hasAnyOfTheFlags(int i10) {
+            return (i10 & this.mFlags) != 0;
         }
 
         boolean isAdapterPositionUnknown() {
-            return (this.mFlags & 512) != 0 || isInvalid();
+            return (this.mFlags & FLAG_ADAPTER_POSITION_UNKNOWN) != 0 || isInvalid();
         }
 
         boolean isAttachedToTransitionOverlay() {
@@ -619,7 +1073,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
         }
 
         public final boolean isRecyclable() {
-            return (this.mFlags & 16) == 0 && !C0311u.m2099L(this.itemView);
+            return (this.mFlags & FLAG_NOT_RECYCLABLE) == 0 && !X.O(this.itemView);
         }
 
         boolean isRemoved() {
@@ -642,89 +1096,96 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
             return (this.mFlags & 2) != 0;
         }
 
-        void offsetPosition(int i2, boolean z) {
-            if (this.mOldPosition == -1) {
+        void offsetPosition(int i10, boolean z10) {
+            if (this.mOldPosition == PENDING_ACCESSIBILITY_STATE_NOT_SET) {
                 this.mOldPosition = this.mPosition;
             }
-            if (this.mPreLayoutPosition == -1) {
+            if (this.mPreLayoutPosition == PENDING_ACCESSIBILITY_STATE_NOT_SET) {
                 this.mPreLayoutPosition = this.mPosition;
             }
-            if (z) {
-                this.mPreLayoutPosition += i2;
+            if (z10) {
+                this.mPreLayoutPosition += i10;
             }
-            this.mPosition += i2;
+            this.mPosition += i10;
             if (this.itemView.getLayoutParams() != null) {
-                ((C0603p) this.itemView.getLayoutParams()).f3966c = true;
+                ((r) this.itemView.getLayoutParams()).f28734c = true;
             }
         }
 
         void onEnteredHiddenState(RecyclerView recyclerView) {
-            int i2 = this.mPendingAccessibilityState;
-            if (i2 != -1) {
-                this.mWasImportantForAccessibilityBeforeHidden = i2;
+            int i10 = this.mPendingAccessibilityState;
+            if (i10 != PENDING_ACCESSIBILITY_STATE_NOT_SET) {
+                this.mWasImportantForAccessibilityBeforeHidden = i10;
             } else {
-                this.mWasImportantForAccessibilityBeforeHidden = C0311u.m2158w(this.itemView);
+                this.mWasImportantForAccessibilityBeforeHidden = this.itemView.getImportantForAccessibility();
             }
-            recyclerView.setChildImportantForAccessibilityInternal(this, 4);
+            recyclerView.w1(this, 4);
         }
 
         void onLeftHiddenState(RecyclerView recyclerView) {
-            recyclerView.setChildImportantForAccessibilityInternal(this, this.mWasImportantForAccessibilityBeforeHidden);
+            recyclerView.w1(this, this.mWasImportantForAccessibilityBeforeHidden);
             this.mWasImportantForAccessibilityBeforeHidden = 0;
         }
 
         void resetInternal() {
+            if (RecyclerView.f28554g1 && isTmpDetached()) {
+                throw new IllegalStateException("Attempting to reset temp-detached ViewHolder: " + this + ". ViewHolders should be fully detached before resetting.");
+            }
             this.mFlags = 0;
-            this.mPosition = -1;
-            this.mOldPosition = -1;
+            this.mPosition = PENDING_ACCESSIBILITY_STATE_NOT_SET;
+            this.mOldPosition = PENDING_ACCESSIBILITY_STATE_NOT_SET;
             this.mItemId = -1L;
-            this.mPreLayoutPosition = -1;
+            this.mPreLayoutPosition = PENDING_ACCESSIBILITY_STATE_NOT_SET;
             this.mIsRecyclableCount = 0;
             this.mShadowedHolder = null;
             this.mShadowingHolder = null;
             clearPayload();
             this.mWasImportantForAccessibilityBeforeHidden = 0;
-            this.mPendingAccessibilityState = -1;
-            RecyclerView.clearNestedRecyclerViewIfNotNested(this);
+            this.mPendingAccessibilityState = PENDING_ACCESSIBILITY_STATE_NOT_SET;
+            RecyclerView.u(this);
         }
 
         void saveOldPosition() {
-            if (this.mOldPosition == -1) {
+            if (this.mOldPosition == PENDING_ACCESSIBILITY_STATE_NOT_SET) {
                 this.mOldPosition = this.mPosition;
             }
         }
 
-        void setFlags(int i2, int i3) {
-            this.mFlags = (i2 & i3) | (this.mFlags & (i3 ^ (-1)));
+        void setFlags(int i10, int i11) {
+            this.mFlags = (i10 & i11) | (this.mFlags & (~i11));
         }
 
-        public final void setIsRecyclable(boolean z) {
-            int i2 = this.mIsRecyclableCount;
-            int i3 = z ? i2 - 1 : i2 + 1;
-            this.mIsRecyclableCount = i3;
-            if (i3 < 0) {
+        public final void setIsRecyclable(boolean z10) {
+            int i10 = this.mIsRecyclableCount;
+            int i11 = z10 ? i10 - 1 : i10 + 1;
+            this.mIsRecyclableCount = i11;
+            if (i11 < 0) {
                 this.mIsRecyclableCount = 0;
+                if (RecyclerView.f28554g1) {
+                    throw new RuntimeException("isRecyclable decremented below 0: unmatched pair of setIsRecyable() calls for " + this);
+                }
                 Log.e("View", "isRecyclable decremented below 0: unmatched pair of setIsRecyable() calls for " + this);
-                return;
-            }
-            if (!z && i3 == 1) {
-                this.mFlags |= 16;
-            } else if (z && i3 == 0) {
+            } else if (!z10 && i11 == 1) {
+                this.mFlags |= FLAG_NOT_RECYCLABLE;
+            } else if (z10 && i11 == 0) {
                 this.mFlags &= -17;
             }
+            if (RecyclerView.f28555h1) {
+                Log.d("RecyclerView", "setIsRecyclable val:" + z10 + ":" + this);
+            }
         }
 
-        void setScrapContainer(C0609v c0609v, boolean z) {
-            this.mScrapContainer = c0609v;
-            this.mInChangeScrap = z;
+        void setScrapContainer(x xVar, boolean z10) {
+            this.mScrapContainer = xVar;
+            this.mInChangeScrap = z10;
         }
 
         boolean shouldBeKeptAsChild() {
-            return (this.mFlags & 16) != 0;
+            return (this.mFlags & FLAG_NOT_RECYCLABLE) != 0;
         }
 
         boolean shouldIgnore() {
-            return (this.mFlags & 128) != 0;
+            return (this.mFlags & FLAG_IGNORE) != 0;
         }
 
         void stopIgnoring() {
@@ -732,2130 +1193,568 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
         }
 
         public String toString() {
-            StringBuilder sb = new StringBuilder((getClass().isAnonymousClass() ? "ViewHolder" : getClass().getSimpleName()) + "{" + Integer.toHexString(hashCode()) + " position=" + this.mPosition + " id=" + this.mItemId + ", oldPos=" + this.mOldPosition + ", pLpos:" + this.mPreLayoutPosition);
+            StringBuilder sb2 = new StringBuilder((getClass().isAnonymousClass() ? "ViewHolder" : getClass().getSimpleName()) + "{" + Integer.toHexString(hashCode()) + " position=" + this.mPosition + " id=" + this.mItemId + ", oldPos=" + this.mOldPosition + ", pLpos:" + this.mPreLayoutPosition);
             if (isScrap()) {
-                sb.append(" scrap ");
-                sb.append(this.mInChangeScrap ? "[changeScrap]" : "[attachedScrap]");
+                sb2.append(" scrap ");
+                sb2.append(this.mInChangeScrap ? "[changeScrap]" : "[attachedScrap]");
             }
             if (isInvalid()) {
-                sb.append(" invalid");
+                sb2.append(" invalid");
             }
             if (!isBound()) {
-                sb.append(" unbound");
+                sb2.append(" unbound");
             }
             if (needsUpdate()) {
-                sb.append(" update");
+                sb2.append(" update");
             }
             if (isRemoved()) {
-                sb.append(" removed");
+                sb2.append(" removed");
             }
             if (shouldIgnore()) {
-                sb.append(" ignored");
+                sb2.append(" ignored");
             }
             if (isTmpDetached()) {
-                sb.append(" tmpDetached");
+                sb2.append(" tmpDetached");
             }
             if (!isRecyclable()) {
-                sb.append(" not recyclable(" + this.mIsRecyclableCount + ")");
+                sb2.append(" not recyclable(" + this.mIsRecyclableCount + ")");
             }
             if (isAdapterPositionUnknown()) {
-                sb.append(" undefined adapter position");
+                sb2.append(" undefined adapter position");
             }
             if (this.itemView.getParent() == null) {
-                sb.append(" no parent");
+                sb2.append(" no parent");
             }
-            sb.append("}");
-            return sb.toString();
+            sb2.append("}");
+            return sb2.toString();
         }
 
         void unScrap() {
-            this.mScrapContainer.m4271J(this);
+            this.mScrapContainer.O(this);
         }
 
         boolean wasReturnedFromScrap() {
-            return (this.mFlags & 32) != 0;
+            return (this.mFlags & FLAG_RETURNED_FROM_SCRAP) != 0;
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$d */
-    class C0591d implements C0639t.b {
-        C0591d() {
+    /* renamed from: androidx.recyclerview.widget.RecyclerView$a, reason: case insensitive filesystem */
+    class RunnableC2164a implements Runnable {
+        RunnableC2164a() {
         }
 
-        @Override // androidx.recyclerview.widget.C0639t.b
-        /* renamed from: a */
-        public void mo4195a(AbstractC0590c0 abstractC0590c0) {
+        @Override // java.lang.Runnable
+        public void run() {
             RecyclerView recyclerView = RecyclerView.this;
-            recyclerView.mLayout.removeAndRecycleView(abstractC0590c0.itemView, recyclerView.mRecycler);
+            if (!recyclerView.f28612a0 || recyclerView.isLayoutRequested()) {
+                return;
+            }
+            RecyclerView recyclerView2 = RecyclerView.this;
+            if (!recyclerView2.f28603U) {
+                recyclerView2.requestLayout();
+            } else if (recyclerView2.f28618d0) {
+                recyclerView2.f28616c0 = true;
+            } else {
+                recyclerView2.A();
+            }
+        }
+    }
+
+    /* renamed from: androidx.recyclerview.widget.RecyclerView$b, reason: case insensitive filesystem */
+    class RunnableC2165b implements Runnable {
+        RunnableC2165b() {
         }
 
-        @Override // androidx.recyclerview.widget.C0639t.b
-        /* renamed from: b */
-        public void mo4196b(AbstractC0590c0 abstractC0590c0, AbstractC0599l.c cVar, AbstractC0599l.c cVar2) {
-            RecyclerView.this.animateAppearance(abstractC0590c0, cVar, cVar2);
+        @Override // java.lang.Runnable
+        public void run() {
+            n nVar = RecyclerView.this.f28636s0;
+            if (nVar != null) {
+                nVar.u();
+            }
+            RecyclerView.this.f28596Q0 = false;
+        }
+    }
+
+    /* renamed from: androidx.recyclerview.widget.RecyclerView$c, reason: case insensitive filesystem */
+    class InterpolatorC2166c implements Interpolator {
+        InterpolatorC2166c() {
         }
 
-        @Override // androidx.recyclerview.widget.C0639t.b
-        /* renamed from: c */
-        public void mo4197c(AbstractC0590c0 abstractC0590c0, AbstractC0599l.c cVar, AbstractC0599l.c cVar2) {
-            RecyclerView.this.mRecycler.m4271J(abstractC0590c0);
-            RecyclerView.this.animateDisappearance(abstractC0590c0, cVar, cVar2);
+        @Override // android.animation.TimeInterpolator
+        public float getInterpolation(float f10) {
+            float f11 = f10 - 1.0f;
+            return (f11 * f11 * f11 * f11 * f11) + 1.0f;
+        }
+    }
+
+    /* renamed from: androidx.recyclerview.widget.RecyclerView$d, reason: case insensitive filesystem */
+    class C2167d implements y.b {
+        C2167d() {
         }
 
-        @Override // androidx.recyclerview.widget.C0639t.b
-        /* renamed from: d */
-        public void mo4198d(AbstractC0590c0 abstractC0590c0, AbstractC0599l.c cVar, AbstractC0599l.c cVar2) {
-            abstractC0590c0.setIsRecyclable(false);
+        @Override // androidx.recyclerview.widget.y.b
+        public void a(G g10) {
             RecyclerView recyclerView = RecyclerView.this;
-            if (recyclerView.mDataSetHasChangedAfterLayout) {
-                if (recyclerView.mItemAnimator.animateChange(abstractC0590c0, abstractC0590c0, cVar, cVar2)) {
-                    RecyclerView.this.postAnimationRunner();
+            recyclerView.f28591O.r1(g10.itemView, recyclerView.f28569D);
+        }
+
+        @Override // androidx.recyclerview.widget.y.b
+        public void b(G g10, n.c cVar, n.c cVar2) {
+            RecyclerView.this.o(g10, cVar, cVar2);
+        }
+
+        @Override // androidx.recyclerview.widget.y.b
+        public void c(G g10, n.c cVar, n.c cVar2) {
+            RecyclerView.this.f28569D.O(g10);
+            RecyclerView.this.q(g10, cVar, cVar2);
+        }
+
+        @Override // androidx.recyclerview.widget.y.b
+        public void d(G g10, n.c cVar, n.c cVar2) {
+            g10.setIsRecyclable(false);
+            RecyclerView recyclerView = RecyclerView.this;
+            if (recyclerView.f28627j0) {
+                if (recyclerView.f28636s0.b(g10, g10, cVar, cVar2)) {
+                    RecyclerView.this.X0();
                 }
-            } else if (recyclerView.mItemAnimator.animatePersistence(abstractC0590c0, cVar, cVar2)) {
-                RecyclerView.this.postAnimationRunner();
+            } else if (recyclerView.f28636s0.d(g10, cVar, cVar2)) {
+                RecyclerView.this.X0();
             }
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$e */
-    class C0592e implements C0623d.b {
-        C0592e() {
+    /* renamed from: androidx.recyclerview.widget.RecyclerView$e, reason: case insensitive filesystem */
+    class C2168e implements InterfaceC4451p {
+        C2168e() {
         }
 
-        @Override // androidx.recyclerview.widget.C0623d.b
-        /* renamed from: a */
-        public View mo4199a(int i2) {
-            return RecyclerView.this.getChildAt(i2);
+        @Override // s1.InterfaceC4451p
+        public boolean a(float f10) {
+            int i10;
+            int i11;
+            if (RecyclerView.this.f28591O.q()) {
+                i11 = (int) f10;
+                i10 = 0;
+            } else if (RecyclerView.this.f28591O.p()) {
+                i10 = (int) f10;
+                i11 = 0;
+            } else {
+                i10 = 0;
+                i11 = 0;
+            }
+            if (i10 == 0 && i11 == 0) {
+                return false;
+            }
+            RecyclerView.this.K1();
+            return RecyclerView.this.i0(i10, i11);
         }
 
-        @Override // androidx.recyclerview.widget.C0623d.b
-        /* renamed from: b */
-        public void mo4200b(View view) {
-            AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(view);
-            if (childViewHolderInt != null) {
-                childViewHolderInt.onEnteredHiddenState(RecyclerView.this);
+        @Override // s1.InterfaceC4451p
+        public float b() {
+            float f10;
+            if (RecyclerView.this.f28591O.q()) {
+                f10 = RecyclerView.this.f28574F0;
+            } else {
+                if (!RecyclerView.this.f28591O.p()) {
+                    return 0.0f;
+                }
+                f10 = RecyclerView.this.f28572E0;
+            }
+            return -f10;
+        }
+
+        @Override // s1.InterfaceC4451p
+        public void c() {
+            RecyclerView.this.K1();
+        }
+    }
+
+    /* renamed from: androidx.recyclerview.widget.RecyclerView$f, reason: case insensitive filesystem */
+    class C2169f implements d.b {
+        C2169f() {
+        }
+
+        @Override // androidx.recyclerview.widget.d.b
+        public View a(int i10) {
+            return RecyclerView.this.getChildAt(i10);
+        }
+
+        @Override // androidx.recyclerview.widget.d.b
+        public void b(View view) {
+            G gO0 = RecyclerView.o0(view);
+            if (gO0 != null) {
+                gO0.onEnteredHiddenState(RecyclerView.this);
             }
         }
 
-        @Override // androidx.recyclerview.widget.C0623d.b
-        /* renamed from: c */
-        public int mo4201c() {
+        @Override // androidx.recyclerview.widget.d.b
+        public int c() {
             return RecyclerView.this.getChildCount();
         }
 
-        @Override // androidx.recyclerview.widget.C0623d.b
-        /* renamed from: d */
-        public void mo4202d() {
-            int iMo4201c = mo4201c();
-            for (int i2 = 0; i2 < iMo4201c; i2++) {
-                View viewMo4199a = mo4199a(i2);
-                RecyclerView.this.dispatchChildDetached(viewMo4199a);
-                viewMo4199a.clearAnimation();
+        @Override // androidx.recyclerview.widget.d.b
+        public void d() {
+            int iC = c();
+            for (int i10 = 0; i10 < iC; i10++) {
+                View viewA = a(i10);
+                RecyclerView.this.F(viewA);
+                viewA.clearAnimation();
             }
             RecyclerView.this.removeAllViews();
         }
 
-        @Override // androidx.recyclerview.widget.C0623d.b
-        /* renamed from: e */
-        public int mo4203e(View view) {
+        @Override // androidx.recyclerview.widget.d.b
+        public int e(View view) {
             return RecyclerView.this.indexOfChild(view);
         }
 
-        @Override // androidx.recyclerview.widget.C0623d.b
-        /* renamed from: f */
-        public AbstractC0590c0 mo4204f(View view) {
-            return RecyclerView.getChildViewHolderInt(view);
+        @Override // androidx.recyclerview.widget.d.b
+        public G f(View view) {
+            return RecyclerView.o0(view);
         }
 
-        @Override // androidx.recyclerview.widget.C0623d.b
-        /* renamed from: g */
-        public void mo4205g(int i2) {
-            AbstractC0590c0 childViewHolderInt;
-            View viewMo4199a = mo4199a(i2);
-            if (viewMo4199a != null && (childViewHolderInt = RecyclerView.getChildViewHolderInt(viewMo4199a)) != null) {
-                if (childViewHolderInt.isTmpDetached() && !childViewHolderInt.shouldIgnore()) {
-                    throw new IllegalArgumentException("called detach on an already detached child " + childViewHolderInt + RecyclerView.this.exceptionLabel());
+        @Override // androidx.recyclerview.widget.d.b
+        public void g(int i10) {
+            View viewA = a(i10);
+            if (viewA != null) {
+                G gO0 = RecyclerView.o0(viewA);
+                if (gO0 != null) {
+                    if (gO0.isTmpDetached() && !gO0.shouldIgnore()) {
+                        throw new IllegalArgumentException("called detach on an already detached child " + gO0 + RecyclerView.this.V());
+                    }
+                    if (RecyclerView.f28555h1) {
+                        Log.d("RecyclerView", "tmpDetach " + gO0);
+                    }
+                    gO0.addFlags(256);
                 }
-                childViewHolderInt.addFlags(256);
+            } else if (RecyclerView.f28554g1) {
+                throw new IllegalArgumentException("No view at offset " + i10 + RecyclerView.this.V());
             }
-            RecyclerView.this.detachViewFromParent(i2);
+            RecyclerView.this.detachViewFromParent(i10);
         }
 
-        @Override // androidx.recyclerview.widget.C0623d.b
-        /* renamed from: h */
-        public void mo4206h(View view) {
-            AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(view);
-            if (childViewHolderInt != null) {
-                childViewHolderInt.onLeftHiddenState(RecyclerView.this);
+        @Override // androidx.recyclerview.widget.d.b
+        public void h(View view) {
+            G gO0 = RecyclerView.o0(view);
+            if (gO0 != null) {
+                gO0.onLeftHiddenState(RecyclerView.this);
             }
         }
 
-        @Override // androidx.recyclerview.widget.C0623d.b
-        /* renamed from: i */
-        public void mo4207i(View view, int i2) {
-            RecyclerView.this.addView(view, i2);
-            RecyclerView.this.dispatchChildAttached(view);
+        @Override // androidx.recyclerview.widget.d.b
+        public void i(View view, int i10) {
+            RecyclerView.this.addView(view, i10);
+            RecyclerView.this.E(view);
         }
 
-        @Override // androidx.recyclerview.widget.C0623d.b
-        /* renamed from: j */
-        public void mo4208j(int i2) {
-            View childAt = RecyclerView.this.getChildAt(i2);
+        @Override // androidx.recyclerview.widget.d.b
+        public void j(int i10) {
+            View childAt = RecyclerView.this.getChildAt(i10);
             if (childAt != null) {
-                RecyclerView.this.dispatchChildDetached(childAt);
+                RecyclerView.this.F(childAt);
                 childAt.clearAnimation();
             }
-            RecyclerView.this.removeViewAt(i2);
+            RecyclerView.this.removeViewAt(i10);
         }
 
-        @Override // androidx.recyclerview.widget.C0623d.b
-        /* renamed from: k */
-        public void mo4209k(View view, int i2, ViewGroup.LayoutParams layoutParams) {
-            AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(view);
-            if (childViewHolderInt != null) {
-                if (!childViewHolderInt.isTmpDetached() && !childViewHolderInt.shouldIgnore()) {
-                    throw new IllegalArgumentException("Called attach on a child which is not detached: " + childViewHolderInt + RecyclerView.this.exceptionLabel());
+        @Override // androidx.recyclerview.widget.d.b
+        public void k(View view, int i10, ViewGroup.LayoutParams layoutParams) {
+            G gO0 = RecyclerView.o0(view);
+            if (gO0 != null) {
+                if (!gO0.isTmpDetached() && !gO0.shouldIgnore()) {
+                    throw new IllegalArgumentException("Called attach on a child which is not detached: " + gO0 + RecyclerView.this.V());
                 }
-                childViewHolderInt.clearTmpDetachFlag();
+                if (RecyclerView.f28555h1) {
+                    Log.d("RecyclerView", "reAttach " + gO0);
+                }
+                gO0.clearTmpDetachFlag();
+            } else if (RecyclerView.f28554g1) {
+                throw new IllegalArgumentException("No ViewHolder found for child: " + view + ", index: " + i10 + RecyclerView.this.V());
             }
-            RecyclerView.this.attachViewToParent(view, i2, layoutParams);
+            RecyclerView.this.attachViewToParent(view, i10, layoutParams);
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$f */
-    class C0593f implements C0620a.a {
-        C0593f() {
+    /* renamed from: androidx.recyclerview.widget.RecyclerView$g, reason: case insensitive filesystem */
+    class C2170g implements a.InterfaceC0389a {
+        C2170g() {
         }
 
-        @Override // androidx.recyclerview.widget.C0620a.a
-        /* renamed from: a */
-        public void mo4210a(int i2, int i3) {
-            RecyclerView.this.offsetPositionRecordsForMove(i2, i3);
-            RecyclerView.this.mItemsAddedOrRemoved = true;
+        @Override // androidx.recyclerview.widget.a.InterfaceC0389a
+        public void a(int i10, int i11) {
+            RecyclerView.this.N0(i10, i11);
+            RecyclerView.this.f28590N0 = true;
         }
 
-        @Override // androidx.recyclerview.widget.C0620a.a
-        /* renamed from: b */
-        public void mo4211b(C0620a.b bVar) {
-            m4218i(bVar);
+        @Override // androidx.recyclerview.widget.a.InterfaceC0389a
+        public void b(a.b bVar) {
+            i(bVar);
         }
 
-        @Override // androidx.recyclerview.widget.C0620a.a
-        /* renamed from: c */
-        public void mo4212c(int i2, int i3, Object obj) {
-            RecyclerView.this.viewRangeUpdate(i2, i3, obj);
-            RecyclerView.this.mItemsChanged = true;
+        @Override // androidx.recyclerview.widget.a.InterfaceC0389a
+        public void c(int i10, int i11, Object obj) {
+            RecyclerView.this.M1(i10, i11, obj);
+            RecyclerView.this.f28592O0 = true;
         }
 
-        @Override // androidx.recyclerview.widget.C0620a.a
-        /* renamed from: d */
-        public void mo4213d(C0620a.b bVar) {
-            m4218i(bVar);
+        @Override // androidx.recyclerview.widget.a.InterfaceC0389a
+        public void d(a.b bVar) {
+            i(bVar);
         }
 
-        @Override // androidx.recyclerview.widget.C0620a.a
-        /* renamed from: e */
-        public AbstractC0590c0 mo4214e(int i2) {
-            AbstractC0590c0 abstractC0590c0FindViewHolderForPosition = RecyclerView.this.findViewHolderForPosition(i2, true);
-            if (abstractC0590c0FindViewHolderForPosition == null || RecyclerView.this.mChildHelper.m4455n(abstractC0590c0FindViewHolderForPosition.itemView)) {
+        @Override // androidx.recyclerview.widget.a.InterfaceC0389a
+        public G e(int i10) {
+            G gF0 = RecyclerView.this.f0(i10, true);
+            if (gF0 == null) {
                 return null;
             }
-            return abstractC0590c0FindViewHolderForPosition;
+            if (!RecyclerView.this.f28575G.n(gF0.itemView)) {
+                return gF0;
+            }
+            if (RecyclerView.f28555h1) {
+                Log.d("RecyclerView", "assuming view holder cannot be find because it is hidden");
+            }
+            return null;
         }
 
-        @Override // androidx.recyclerview.widget.C0620a.a
-        /* renamed from: f */
-        public void mo4215f(int i2, int i3) {
-            RecyclerView.this.offsetPositionRecordsForRemove(i2, i3, false);
-            RecyclerView.this.mItemsAddedOrRemoved = true;
+        @Override // androidx.recyclerview.widget.a.InterfaceC0389a
+        public void f(int i10, int i11) {
+            RecyclerView.this.O0(i10, i11, false);
+            RecyclerView.this.f28590N0 = true;
         }
 
-        @Override // androidx.recyclerview.widget.C0620a.a
-        /* renamed from: g */
-        public void mo4216g(int i2, int i3) {
-            RecyclerView.this.offsetPositionRecordsForInsert(i2, i3);
-            RecyclerView.this.mItemsAddedOrRemoved = true;
+        @Override // androidx.recyclerview.widget.a.InterfaceC0389a
+        public void g(int i10, int i11) {
+            RecyclerView.this.M0(i10, i11);
+            RecyclerView.this.f28590N0 = true;
         }
 
-        @Override // androidx.recyclerview.widget.C0620a.a
-        /* renamed from: h */
-        public void mo4217h(int i2, int i3) {
-            RecyclerView.this.offsetPositionRecordsForRemove(i2, i3, true);
+        @Override // androidx.recyclerview.widget.a.InterfaceC0389a
+        public void h(int i10, int i11) {
+            RecyclerView.this.O0(i10, i11, true);
             RecyclerView recyclerView = RecyclerView.this;
-            recyclerView.mItemsAddedOrRemoved = true;
-            recyclerView.mState.f3994d += i3;
+            recyclerView.f28590N0 = true;
+            recyclerView.f28584K0.f28663d += i11;
         }
 
-        /* renamed from: i */
-        void m4218i(C0620a.b bVar) {
-            int i2 = bVar.f4072a;
-            if (i2 == 1) {
+        void i(a.b bVar) {
+            int i10 = bVar.f28816a;
+            if (i10 == 1) {
                 RecyclerView recyclerView = RecyclerView.this;
-                recyclerView.mLayout.onItemsAdded(recyclerView, bVar.f4073b, bVar.f4075d);
+                recyclerView.f28591O.W0(recyclerView, bVar.f28817b, bVar.f28819d);
                 return;
             }
-            if (i2 == 2) {
+            if (i10 == 2) {
                 RecyclerView recyclerView2 = RecyclerView.this;
-                recyclerView2.mLayout.onItemsRemoved(recyclerView2, bVar.f4073b, bVar.f4075d);
-            } else if (i2 == 4) {
+                recyclerView2.f28591O.Z0(recyclerView2, bVar.f28817b, bVar.f28819d);
+            } else if (i10 == 4) {
                 RecyclerView recyclerView3 = RecyclerView.this;
-                recyclerView3.mLayout.onItemsUpdated(recyclerView3, bVar.f4073b, bVar.f4075d, bVar.f4074c);
+                recyclerView3.f28591O.b1(recyclerView3, bVar.f28817b, bVar.f28819d, bVar.f28818c);
             } else {
-                if (i2 != 8) {
+                if (i10 != 8) {
                     return;
                 }
                 RecyclerView recyclerView4 = RecyclerView.this;
-                recyclerView4.mLayout.onItemsMoved(recyclerView4, bVar.f4073b, bVar.f4075d, 1);
+                recyclerView4.f28591O.Y0(recyclerView4, bVar.f28817b, bVar.f28819d, 1);
             }
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$g */
-    public static abstract class AbstractC0594g<VH extends AbstractC0590c0> {
-        private final C0595h mObservable = new C0595h();
-        private boolean mHasStableIds = false;
-
-        public final void bindViewHolder(VH vh, int i2) {
-            vh.mPosition = i2;
-            if (hasStableIds()) {
-                vh.mItemId = getItemId(i2);
-            }
-            vh.setFlags(1, 519);
-            C0275d.m1840a(RecyclerView.TRACE_BIND_VIEW_TAG);
-            onBindViewHolder(vh, i2, vh.getUnmodifiedPayloads());
-            vh.clearPayload();
-            ViewGroup.LayoutParams layoutParams = vh.itemView.getLayoutParams();
-            if (layoutParams instanceof C0603p) {
-                ((C0603p) layoutParams).f3966c = true;
-            }
-            C0275d.m1841b();
+    static class i extends Observable<j> {
+        i() {
         }
 
-        public final VH createViewHolder(ViewGroup viewGroup, int i2) {
-            try {
-                C0275d.m1840a(RecyclerView.TRACE_CREATE_VIEW_TAG);
-                VH vh = (VH) onCreateViewHolder(viewGroup, i2);
-                if (vh.itemView.getParent() != null) {
-                    throw new IllegalStateException("ViewHolder views must not be attached when created. Ensure that you are not passing 'true' to the attachToRoot parameter of LayoutInflater.inflate(..., boolean attachToRoot)");
-                }
-                vh.mItemViewType = i2;
-                return vh;
-            } finally {
-                C0275d.m1841b();
-            }
-        }
-
-        public abstract int getItemCount();
-
-        public long getItemId(int i2) {
-            return -1L;
-        }
-
-        public int getItemViewType(int i2) {
-            return 0;
-        }
-
-        public final boolean hasObservers() {
-            return this.mObservable.m4219a();
-        }
-
-        public final boolean hasStableIds() {
-            return this.mHasStableIds;
-        }
-
-        public final void notifyDataSetChanged() {
-            this.mObservable.m4220b();
-        }
-
-        public final void notifyItemChanged(int i2) {
-            this.mObservable.m4222d(i2, 1);
-        }
-
-        public final void notifyItemInserted(int i2) {
-            this.mObservable.m4224f(i2, 1);
-        }
-
-        public final void notifyItemMoved(int i2, int i3) {
-            this.mObservable.m4221c(i2, i3);
-        }
-
-        public final void notifyItemRangeChanged(int i2, int i3) {
-            this.mObservable.m4222d(i2, i3);
-        }
-
-        public final void notifyItemRangeInserted(int i2, int i3) {
-            this.mObservable.m4224f(i2, i3);
-        }
-
-        public final void notifyItemRangeRemoved(int i2, int i3) {
-            this.mObservable.m4225g(i2, i3);
-        }
-
-        public final void notifyItemRemoved(int i2) {
-            this.mObservable.m4225g(i2, 1);
-        }
-
-        public void onAttachedToRecyclerView(RecyclerView recyclerView) {
-        }
-
-        public abstract void onBindViewHolder(VH vh, int i2);
-
-        public void onBindViewHolder(VH vh, int i2, List<Object> list) {
-            onBindViewHolder(vh, i2);
-        }
-
-        public abstract VH onCreateViewHolder(ViewGroup viewGroup, int i2);
-
-        public void onDetachedFromRecyclerView(RecyclerView recyclerView) {
-        }
-
-        public boolean onFailedToRecycleView(VH vh) {
-            return false;
-        }
-
-        public void onViewAttachedToWindow(VH vh) {
-        }
-
-        public void onViewDetachedFromWindow(VH vh) {
-        }
-
-        public void onViewRecycled(VH vh) {
-        }
-
-        public void registerAdapterDataObserver(AbstractC0596i abstractC0596i) {
-            this.mObservable.registerObserver(abstractC0596i);
-        }
-
-        public void setHasStableIds(boolean z) {
-            if (hasObservers()) {
-                throw new IllegalStateException("Cannot change whether this adapter has stable IDs while the adapter has registered observers.");
-            }
-            this.mHasStableIds = z;
-        }
-
-        public void unregisterAdapterDataObserver(AbstractC0596i abstractC0596i) {
-            this.mObservable.unregisterObserver(abstractC0596i);
-        }
-
-        public final void notifyItemChanged(int i2, Object obj) {
-            this.mObservable.m4223e(i2, 1, obj);
-        }
-
-        public final void notifyItemRangeChanged(int i2, int i3, Object obj) {
-            this.mObservable.m4223e(i2, i3, obj);
-        }
-    }
-
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$h */
-    static class C0595h extends Observable<AbstractC0596i> {
-        C0595h() {
-        }
-
-        /* renamed from: a */
-        public boolean m4219a() {
+        public boolean a() {
             return !((Observable) this).mObservers.isEmpty();
         }
 
-        /* renamed from: b */
-        public void m4220b() {
+        public void b() {
             for (int size = ((Observable) this).mObservers.size() - 1; size >= 0; size--) {
-                ((AbstractC0596i) ((Observable) this).mObservers.get(size)).onChanged();
+                ((j) ((Observable) this).mObservers.get(size)).a();
             }
         }
 
-        /* renamed from: c */
-        public void m4221c(int i2, int i3) {
+        public void c(int i10, int i11) {
             for (int size = ((Observable) this).mObservers.size() - 1; size >= 0; size--) {
-                ((AbstractC0596i) ((Observable) this).mObservers.get(size)).onItemRangeMoved(i2, i3, 1);
+                ((j) ((Observable) this).mObservers.get(size)).e(i10, i11, 1);
             }
         }
 
-        /* renamed from: d */
-        public void m4222d(int i2, int i3) {
-            m4223e(i2, i3, null);
+        public void d(int i10, int i11) {
+            e(i10, i11, null);
         }
 
-        /* renamed from: e */
-        public void m4223e(int i2, int i3, Object obj) {
+        public void e(int i10, int i11, Object obj) {
             for (int size = ((Observable) this).mObservers.size() - 1; size >= 0; size--) {
-                ((AbstractC0596i) ((Observable) this).mObservers.get(size)).onItemRangeChanged(i2, i3, obj);
+                ((j) ((Observable) this).mObservers.get(size)).c(i10, i11, obj);
             }
         }
 
-        /* renamed from: f */
-        public void m4224f(int i2, int i3) {
+        public void f(int i10, int i11) {
             for (int size = ((Observable) this).mObservers.size() - 1; size >= 0; size--) {
-                ((AbstractC0596i) ((Observable) this).mObservers.get(size)).onItemRangeInserted(i2, i3);
+                ((j) ((Observable) this).mObservers.get(size)).d(i10, i11);
             }
         }
 
-        /* renamed from: g */
-        public void m4225g(int i2, int i3) {
+        public void g(int i10, int i11) {
             for (int size = ((Observable) this).mObservers.size() - 1; size >= 0; size--) {
-                ((AbstractC0596i) ((Observable) this).mObservers.get(size)).onItemRangeRemoved(i2, i3);
+                ((j) ((Observable) this).mObservers.get(size)).f(i10, i11);
+            }
+        }
+
+        public void h() {
+            for (int size = ((Observable) this).mObservers.size() - 1; size >= 0; size--) {
+                ((j) ((Observable) this).mObservers.get(size)).g();
             }
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$i */
-    public static abstract class AbstractC0596i {
-        public void onChanged() {
-        }
-
-        public void onItemRangeChanged(int i2, int i3) {
-        }
-
-        public void onItemRangeChanged(int i2, int i3, Object obj) {
-            onItemRangeChanged(i2, i3);
-        }
-
-        public void onItemRangeInserted(int i2, int i3) {
-        }
-
-        public void onItemRangeMoved(int i2, int i3, int i4) {
-        }
-
-        public void onItemRangeRemoved(int i2, int i3) {
+    private static final class k {
+        public static void a(View view, float f10) {
+            try {
+                view.setFrameContentVelocity(f10);
+            } catch (LinkageError unused) {
+            }
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$j */
-    public interface InterfaceC0597j {
-        /* renamed from: a */
-        int m4226a(int i2, int i3);
+    public interface l {
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$k */
-    public static class C0598k {
-        /* renamed from: a */
-        protected EdgeEffect m4227a(RecyclerView recyclerView, int i2) {
-            return new EdgeEffect(recyclerView.getContext());
+    public static class m {
+        protected EdgeEffect a(RecyclerView recyclerView, int i10) {
+            throw null;
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$l */
-    public static abstract class AbstractC0599l {
-        public static final int FLAG_APPEARED_IN_PRE_LAYOUT = 4096;
-        public static final int FLAG_CHANGED = 2;
-        public static final int FLAG_INVALIDATED = 4;
-        public static final int FLAG_MOVED = 2048;
-        public static final int FLAG_REMOVED = 8;
-        private b mListener = null;
-        private ArrayList<a> mFinishedListeners = new ArrayList<>();
-        private long mAddDuration = 120;
-        private long mRemoveDuration = 120;
-        private long mMoveDuration = 250;
-        private long mChangeDuration = 250;
-
-        /* renamed from: androidx.recyclerview.widget.RecyclerView$l$a */
-        public interface a {
-            /* renamed from: a */
-            void m4228a();
+    private class o implements n.b {
+        o() {
         }
 
-        /* renamed from: androidx.recyclerview.widget.RecyclerView$l$b */
-        interface b {
-            /* renamed from: a */
-            void mo4229a(AbstractC0590c0 abstractC0590c0);
-        }
-
-        /* renamed from: androidx.recyclerview.widget.RecyclerView$l$c */
-        public static class c {
-
-            /* renamed from: a */
-            public int f3953a;
-
-            /* renamed from: b */
-            public int f3954b;
-
-            /* renamed from: c */
-            public int f3955c;
-
-            /* renamed from: d */
-            public int f3956d;
-
-            /* renamed from: a */
-            public c m4230a(AbstractC0590c0 abstractC0590c0) {
-                return m4231b(abstractC0590c0, 0);
+        @Override // androidx.recyclerview.widget.RecyclerView.n.b
+        public void a(G g10) {
+            g10.setIsRecyclable(true);
+            if (g10.mShadowedHolder != null && g10.mShadowingHolder == null) {
+                g10.mShadowedHolder = null;
             }
-
-            /* renamed from: b */
-            public c m4231b(AbstractC0590c0 abstractC0590c0, int i2) {
-                View view = abstractC0590c0.itemView;
-                this.f3953a = view.getLeft();
-                this.f3954b = view.getTop();
-                this.f3955c = view.getRight();
-                this.f3956d = view.getBottom();
-                return this;
-            }
-        }
-
-        static int buildAdapterChangeFlagsForAnimations(AbstractC0590c0 abstractC0590c0) {
-            int i2 = abstractC0590c0.mFlags & 14;
-            if (abstractC0590c0.isInvalid()) {
-                return 4;
-            }
-            if ((i2 & 4) != 0) {
-                return i2;
-            }
-            int oldPosition = abstractC0590c0.getOldPosition();
-            int adapterPosition = abstractC0590c0.getAdapterPosition();
-            return (oldPosition == -1 || adapterPosition == -1 || oldPosition == adapterPosition) ? i2 : i2 | FLAG_MOVED;
-        }
-
-        public abstract boolean animateAppearance(AbstractC0590c0 abstractC0590c0, c cVar, c cVar2);
-
-        public abstract boolean animateChange(AbstractC0590c0 abstractC0590c0, AbstractC0590c0 abstractC0590c02, c cVar, c cVar2);
-
-        public abstract boolean animateDisappearance(AbstractC0590c0 abstractC0590c0, c cVar, c cVar2);
-
-        public abstract boolean animatePersistence(AbstractC0590c0 abstractC0590c0, c cVar, c cVar2);
-
-        public abstract boolean canReuseUpdatedViewHolder(AbstractC0590c0 abstractC0590c0);
-
-        public boolean canReuseUpdatedViewHolder(AbstractC0590c0 abstractC0590c0, List<Object> list) {
-            return canReuseUpdatedViewHolder(abstractC0590c0);
-        }
-
-        public final void dispatchAnimationFinished(AbstractC0590c0 abstractC0590c0) {
-            onAnimationFinished(abstractC0590c0);
-            b bVar = this.mListener;
-            if (bVar != null) {
-                bVar.mo4229a(abstractC0590c0);
-            }
-        }
-
-        public final void dispatchAnimationStarted(AbstractC0590c0 abstractC0590c0) {
-            onAnimationStarted(abstractC0590c0);
-        }
-
-        public final void dispatchAnimationsFinished() {
-            int size = this.mFinishedListeners.size();
-            for (int i2 = 0; i2 < size; i2++) {
-                this.mFinishedListeners.get(i2).m4228a();
-            }
-            this.mFinishedListeners.clear();
-        }
-
-        public abstract void endAnimation(AbstractC0590c0 abstractC0590c0);
-
-        public abstract void endAnimations();
-
-        public long getAddDuration() {
-            return this.mAddDuration;
-        }
-
-        public long getChangeDuration() {
-            return this.mChangeDuration;
-        }
-
-        public long getMoveDuration() {
-            return this.mMoveDuration;
-        }
-
-        public long getRemoveDuration() {
-            return this.mRemoveDuration;
-        }
-
-        public abstract boolean isRunning();
-
-        public final boolean isRunning(a aVar) {
-            boolean zIsRunning = isRunning();
-            if (aVar != null) {
-                if (zIsRunning) {
-                    this.mFinishedListeners.add(aVar);
-                } else {
-                    aVar.m4228a();
-                }
-            }
-            return zIsRunning;
-        }
-
-        public c obtainHolderInfo() {
-            return new c();
-        }
-
-        public void onAnimationFinished(AbstractC0590c0 abstractC0590c0) {
-        }
-
-        public void onAnimationStarted(AbstractC0590c0 abstractC0590c0) {
-        }
-
-        public c recordPostLayoutInformation(C0613z c0613z, AbstractC0590c0 abstractC0590c0) {
-            return obtainHolderInfo().m4230a(abstractC0590c0);
-        }
-
-        public c recordPreLayoutInformation(C0613z c0613z, AbstractC0590c0 abstractC0590c0, int i2, List<Object> list) {
-            return obtainHolderInfo().m4230a(abstractC0590c0);
-        }
-
-        public abstract void runPendingAnimations();
-
-        public void setAddDuration(long j2) {
-            this.mAddDuration = j2;
-        }
-
-        public void setChangeDuration(long j2) {
-            this.mChangeDuration = j2;
-        }
-
-        void setListener(b bVar) {
-            this.mListener = bVar;
-        }
-
-        public void setMoveDuration(long j2) {
-            this.mMoveDuration = j2;
-        }
-
-        public void setRemoveDuration(long j2) {
-            this.mRemoveDuration = j2;
-        }
-    }
-
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$m */
-    private class C0600m implements AbstractC0599l.b {
-        C0600m() {
-        }
-
-        @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0599l.b
-        /* renamed from: a */
-        public void mo4229a(AbstractC0590c0 abstractC0590c0) {
-            abstractC0590c0.setIsRecyclable(true);
-            if (abstractC0590c0.mShadowedHolder != null && abstractC0590c0.mShadowingHolder == null) {
-                abstractC0590c0.mShadowedHolder = null;
-            }
-            abstractC0590c0.mShadowingHolder = null;
-            if (abstractC0590c0.shouldBeKeptAsChild() || RecyclerView.this.removeAnimatingView(abstractC0590c0.itemView) || !abstractC0590c0.isTmpDetached()) {
+            g10.mShadowingHolder = null;
+            if (g10.shouldBeKeptAsChild() || RecyclerView.this.i1(g10.itemView) || !g10.isTmpDetached()) {
                 return;
             }
-            RecyclerView.this.removeDetachedView(abstractC0590c0.itemView, false);
+            RecyclerView.this.removeDetachedView(g10.itemView, false);
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$n */
-    public static abstract class AbstractC0601n {
-        @Deprecated
-        public void getItemOffsets(Rect rect, int i2, RecyclerView recyclerView) {
-            rect.set(0, 0, 0, 0);
-        }
+    public interface s {
+        void a(View view);
 
-        @Deprecated
-        public void onDraw(Canvas canvas, RecyclerView recyclerView) {
-        }
-
-        public void onDraw(Canvas canvas, RecyclerView recyclerView, C0613z c0613z) {
-            onDraw(canvas, recyclerView);
-        }
-
-        @Deprecated
-        public void onDrawOver(Canvas canvas, RecyclerView recyclerView) {
-        }
-
-        public void onDrawOver(Canvas canvas, RecyclerView recyclerView, C0613z c0613z) {
-            onDrawOver(canvas, recyclerView);
-        }
-
-        public void getItemOffsets(Rect rect, View view, RecyclerView recyclerView, C0613z c0613z) {
-            getItemOffsets(rect, ((C0603p) view.getLayoutParams()).m4238a(), recyclerView);
-        }
+        void b(View view);
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$o */
-    public static abstract class AbstractC0602o {
-        boolean mAutoMeasure;
-        C0623d mChildHelper;
-        private int mHeight;
-        private int mHeightMode;
-        C0638s mHorizontalBoundCheck;
-        private final C0638s.b mHorizontalBoundCheckCallback;
-        boolean mIsAttachedToWindow;
-        private boolean mItemPrefetchEnabled;
-        private boolean mMeasurementCacheEnabled;
-        int mPrefetchMaxCountObserved;
-        boolean mPrefetchMaxObservedInInitialPrefetch;
-        RecyclerView mRecyclerView;
-        boolean mRequestedSimpleAnimations;
-        AbstractC0612y mSmoothScroller;
-        C0638s mVerticalBoundCheck;
-        private final C0638s.b mVerticalBoundCheckCallback;
-        private int mWidth;
-        private int mWidthMode;
-
-        /* renamed from: androidx.recyclerview.widget.RecyclerView$o$a */
-        class a implements C0638s.b {
-            a() {
-            }
-
-            @Override // androidx.recyclerview.widget.C0638s.b
-            /* renamed from: a */
-            public View mo4232a(int i2) {
-                return AbstractC0602o.this.getChildAt(i2);
-            }
-
-            @Override // androidx.recyclerview.widget.C0638s.b
-            /* renamed from: b */
-            public int mo4233b(View view) {
-                return AbstractC0602o.this.getDecoratedLeft(view) - ((ViewGroup.MarginLayoutParams) ((C0603p) view.getLayoutParams())).leftMargin;
-            }
-
-            @Override // androidx.recyclerview.widget.C0638s.b
-            /* renamed from: c */
-            public int mo4234c() {
-                return AbstractC0602o.this.getPaddingLeft();
-            }
-
-            @Override // androidx.recyclerview.widget.C0638s.b
-            /* renamed from: d */
-            public int mo4235d() {
-                return AbstractC0602o.this.getWidth() - AbstractC0602o.this.getPaddingRight();
-            }
-
-            @Override // androidx.recyclerview.widget.C0638s.b
-            /* renamed from: e */
-            public int mo4236e(View view) {
-                return AbstractC0602o.this.getDecoratedRight(view) + ((ViewGroup.MarginLayoutParams) ((C0603p) view.getLayoutParams())).rightMargin;
-            }
-        }
-
-        /* renamed from: androidx.recyclerview.widget.RecyclerView$o$b */
-        class b implements C0638s.b {
-            b() {
-            }
-
-            @Override // androidx.recyclerview.widget.C0638s.b
-            /* renamed from: a */
-            public View mo4232a(int i2) {
-                return AbstractC0602o.this.getChildAt(i2);
-            }
-
-            @Override // androidx.recyclerview.widget.C0638s.b
-            /* renamed from: b */
-            public int mo4233b(View view) {
-                return AbstractC0602o.this.getDecoratedTop(view) - ((ViewGroup.MarginLayoutParams) ((C0603p) view.getLayoutParams())).topMargin;
-            }
-
-            @Override // androidx.recyclerview.widget.C0638s.b
-            /* renamed from: c */
-            public int mo4234c() {
-                return AbstractC0602o.this.getPaddingTop();
-            }
-
-            @Override // androidx.recyclerview.widget.C0638s.b
-            /* renamed from: d */
-            public int mo4235d() {
-                return AbstractC0602o.this.getHeight() - AbstractC0602o.this.getPaddingBottom();
-            }
-
-            @Override // androidx.recyclerview.widget.C0638s.b
-            /* renamed from: e */
-            public int mo4236e(View view) {
-                return AbstractC0602o.this.getDecoratedBottom(view) + ((ViewGroup.MarginLayoutParams) ((C0603p) view.getLayoutParams())).bottomMargin;
-            }
-        }
-
-        /* renamed from: androidx.recyclerview.widget.RecyclerView$o$c */
-        public interface c {
-            /* renamed from: a */
-            void mo4237a(int i2, int i3);
-        }
-
-        /* renamed from: androidx.recyclerview.widget.RecyclerView$o$d */
-        public static class d {
-
-            /* renamed from: a */
-            public int f3960a;
-
-            /* renamed from: b */
-            public int f3961b;
-
-            /* renamed from: c */
-            public boolean f3962c;
-
-            /* renamed from: d */
-            public boolean f3963d;
-        }
-
-        public AbstractC0602o() {
-            a aVar = new a();
-            this.mHorizontalBoundCheckCallback = aVar;
-            b bVar = new b();
-            this.mVerticalBoundCheckCallback = bVar;
-            this.mHorizontalBoundCheck = new C0638s(aVar);
-            this.mVerticalBoundCheck = new C0638s(bVar);
-            this.mRequestedSimpleAnimations = false;
-            this.mIsAttachedToWindow = false;
-            this.mAutoMeasure = false;
-            this.mMeasurementCacheEnabled = true;
-            this.mItemPrefetchEnabled = true;
-        }
-
-        private void addViewInt(View view, int i2, boolean z) {
-            AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(view);
-            if (z || childViewHolderInt.isRemoved()) {
-                this.mRecyclerView.mViewInfoStore.m4564b(childViewHolderInt);
-            } else {
-                this.mRecyclerView.mViewInfoStore.m4577p(childViewHolderInt);
-            }
-            C0603p c0603p = (C0603p) view.getLayoutParams();
-            if (childViewHolderInt.wasReturnedFromScrap() || childViewHolderInt.isScrap()) {
-                if (childViewHolderInt.isScrap()) {
-                    childViewHolderInt.unScrap();
-                } else {
-                    childViewHolderInt.clearReturnedFromScrapFlag();
-                }
-                this.mChildHelper.m4446c(view, i2, view.getLayoutParams(), false);
-            } else if (view.getParent() == this.mRecyclerView) {
-                int iM4454m = this.mChildHelper.m4454m(view);
-                if (i2 == -1) {
-                    i2 = this.mChildHelper.m4450g();
-                }
-                if (iM4454m == -1) {
-                    throw new IllegalStateException("Added View has RecyclerView as parent but view is not a real child. Unfiltered index:" + this.mRecyclerView.indexOfChild(view) + this.mRecyclerView.exceptionLabel());
-                }
-                if (iM4454m != i2) {
-                    this.mRecyclerView.mLayout.moveView(iM4454m, i2);
-                }
-            } else {
-                this.mChildHelper.m4444a(view, i2, false);
-                c0603p.f3966c = true;
-                AbstractC0612y abstractC0612y = this.mSmoothScroller;
-                if (abstractC0612y != null && abstractC0612y.isRunning()) {
-                    this.mSmoothScroller.onChildAttachedToWindow(view);
-                }
-            }
-            if (c0603p.f3967d) {
-                childViewHolderInt.itemView.invalidate();
-                c0603p.f3967d = false;
-            }
-        }
-
-        public static int chooseSize(int i2, int i3, int i4) {
-            int mode = View.MeasureSpec.getMode(i2);
-            int size = View.MeasureSpec.getSize(i2);
-            return mode != Integer.MIN_VALUE ? mode != 1073741824 ? Math.max(i3, i4) : size : Math.min(size, Math.max(i3, i4));
-        }
-
-        private void detachViewInternal(int i2, View view) {
-            this.mChildHelper.m4447d(i2);
-        }
-
-        /* JADX WARN: Removed duplicated region for block: B:8:0x0011  */
-        @java.lang.Deprecated
-        /*
-            Code decompiled incorrectly, please refer to instructions dump.
-            To view partially-correct code enable 'Show inconsistent code' option in preferences
-        */
-        public static int getChildMeasureSpec(int r1, int r2, int r3, boolean r4) {
-            /*
-                int r1 = r1 - r2
-                r2 = 0
-                int r1 = java.lang.Math.max(r2, r1)
-                r0 = 1073741824(0x40000000, float:2.0)
-                if (r4 == 0) goto Lf
-                if (r3 < 0) goto Ld
-                goto L11
-            Ld:
-                r3 = 0
-                goto L21
-            Lf:
-                if (r3 < 0) goto L14
-            L11:
-                r2 = 1073741824(0x40000000, float:2.0)
-                goto L21
-            L14:
-                r4 = -1
-                if (r3 != r4) goto L1b
-                r2 = 1073741824(0x40000000, float:2.0)
-            L19:
-                r3 = r1
-                goto L21
-            L1b:
-                r4 = -2
-                if (r3 != r4) goto Ld
-                r2 = -2147483648(0xffffffff80000000, float:-0.0)
-                goto L19
-            L21:
-                int r1 = android.view.View.MeasureSpec.makeMeasureSpec(r3, r2)
-                return r1
-            */
-            throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.RecyclerView.AbstractC0602o.getChildMeasureSpec(int, int, int, boolean):int");
-        }
-
-        private int[] getChildRectangleOnScreenScrollAmount(View view, Rect rect) {
-            int[] iArr = new int[2];
-            int paddingLeft = getPaddingLeft();
-            int paddingTop = getPaddingTop();
-            int width = getWidth() - getPaddingRight();
-            int height = getHeight() - getPaddingBottom();
-            int left = (view.getLeft() + rect.left) - view.getScrollX();
-            int top = (view.getTop() + rect.top) - view.getScrollY();
-            int iWidth = rect.width() + left;
-            int iHeight = rect.height() + top;
-            int i2 = left - paddingLeft;
-            int iMin = Math.min(0, i2);
-            int i3 = top - paddingTop;
-            int iMin2 = Math.min(0, i3);
-            int i4 = iWidth - width;
-            int iMax = Math.max(0, i4);
-            int iMax2 = Math.max(0, iHeight - height);
-            if (getLayoutDirection() != 1) {
-                if (iMin == 0) {
-                    iMin = Math.min(i2, iMax);
-                }
-                iMax = iMin;
-            } else if (iMax == 0) {
-                iMax = Math.max(iMin, i4);
-            }
-            if (iMin2 == 0) {
-                iMin2 = Math.min(i3, iMax2);
-            }
-            iArr[0] = iMax;
-            iArr[1] = iMin2;
-            return iArr;
-        }
-
-        public static d getProperties(Context context, AttributeSet attributeSet, int i2, int i3) {
-            d dVar = new d();
-            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C1006c.f6674f, i2, i3);
-            dVar.f3960a = typedArrayObtainStyledAttributes.getInt(C1006c.f6675g, 1);
-            dVar.f3961b = typedArrayObtainStyledAttributes.getInt(C1006c.f6685q, 1);
-            dVar.f3962c = typedArrayObtainStyledAttributes.getBoolean(C1006c.f6684p, false);
-            dVar.f3963d = typedArrayObtainStyledAttributes.getBoolean(C1006c.f6686r, false);
-            typedArrayObtainStyledAttributes.recycle();
-            return dVar;
-        }
-
-        private boolean isFocusedChildVisibleAfterScrolling(RecyclerView recyclerView, int i2, int i3) {
-            View focusedChild = recyclerView.getFocusedChild();
-            if (focusedChild == null) {
-                return false;
-            }
-            int paddingLeft = getPaddingLeft();
-            int paddingTop = getPaddingTop();
-            int width = getWidth() - getPaddingRight();
-            int height = getHeight() - getPaddingBottom();
-            Rect rect = this.mRecyclerView.mTempRect;
-            getDecoratedBoundsWithMargins(focusedChild, rect);
-            return rect.left - i2 < width && rect.right - i2 > paddingLeft && rect.top - i3 < height && rect.bottom - i3 > paddingTop;
-        }
-
-        private static boolean isMeasurementUpToDate(int i2, int i3, int i4) {
-            int mode = View.MeasureSpec.getMode(i3);
-            int size = View.MeasureSpec.getSize(i3);
-            if (i4 > 0 && i2 != i4) {
-                return false;
-            }
-            if (mode == Integer.MIN_VALUE) {
-                return size >= i2;
-            }
-            if (mode != 0) {
-                return mode == 1073741824 && size == i2;
-            }
-            return true;
-        }
-
-        private void scrapOrRecycleView(C0609v c0609v, int i2, View view) {
-            AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(view);
-            if (childViewHolderInt.shouldIgnore()) {
-                return;
-            }
-            if (childViewHolderInt.isInvalid() && !childViewHolderInt.isRemoved() && !this.mRecyclerView.mAdapter.hasStableIds()) {
-                removeViewAt(i2);
-                c0609v.m4265C(childViewHolderInt);
-            } else {
-                detachViewAt(i2);
-                c0609v.m4266D(view);
-                this.mRecyclerView.mViewInfoStore.m4573k(childViewHolderInt);
-            }
-        }
-
-        public void addDisappearingView(View view) {
-            addDisappearingView(view, -1);
-        }
-
-        public void addView(View view) {
-            addView(view, -1);
-        }
-
-        public void assertInLayoutOrScroll(String str) {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView != null) {
-                recyclerView.assertInLayoutOrScroll(str);
-            }
-        }
-
-        public void assertNotInLayoutOrScroll(String str) {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView != null) {
-                recyclerView.assertNotInLayoutOrScroll(str);
-            }
-        }
-
-        public void attachView(View view, int i2, C0603p c0603p) {
-            AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(view);
-            if (childViewHolderInt.isRemoved()) {
-                this.mRecyclerView.mViewInfoStore.m4564b(childViewHolderInt);
-            } else {
-                this.mRecyclerView.mViewInfoStore.m4577p(childViewHolderInt);
-            }
-            this.mChildHelper.m4446c(view, i2, c0603p, childViewHolderInt.isRemoved());
-        }
-
-        public void calculateItemDecorationsForChild(View view, Rect rect) {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView == null) {
-                rect.set(0, 0, 0, 0);
-            } else {
-                rect.set(recyclerView.getItemDecorInsetsForChild(view));
-            }
-        }
-
-        public boolean canScrollHorizontally() {
-            return false;
-        }
-
-        public boolean canScrollVertically() {
-            return false;
-        }
-
-        public boolean checkLayoutParams(C0603p c0603p) {
-            return c0603p != null;
-        }
-
-        public void collectAdjacentPrefetchPositions(int i2, int i3, C0613z c0613z, c cVar) {
-        }
-
-        public void collectInitialPrefetchPositions(int i2, c cVar) {
-        }
-
-        public int computeHorizontalScrollExtent(C0613z c0613z) {
-            return 0;
-        }
-
-        public int computeHorizontalScrollOffset(C0613z c0613z) {
-            return 0;
-        }
-
-        public int computeHorizontalScrollRange(C0613z c0613z) {
-            return 0;
-        }
-
-        public int computeVerticalScrollExtent(C0613z c0613z) {
-            return 0;
-        }
-
-        public int computeVerticalScrollOffset(C0613z c0613z) {
-            return 0;
-        }
-
-        public int computeVerticalScrollRange(C0613z c0613z) {
-            return 0;
-        }
-
-        public void detachAndScrapAttachedViews(C0609v c0609v) {
-            for (int childCount = getChildCount() - 1; childCount >= 0; childCount--) {
-                scrapOrRecycleView(c0609v, childCount, getChildAt(childCount));
-            }
-        }
-
-        public void detachAndScrapView(View view, C0609v c0609v) {
-            scrapOrRecycleView(c0609v, this.mChildHelper.m4454m(view), view);
-        }
-
-        public void detachAndScrapViewAt(int i2, C0609v c0609v) {
-            scrapOrRecycleView(c0609v, i2, getChildAt(i2));
-        }
-
-        public void detachView(View view) {
-            int iM4454m = this.mChildHelper.m4454m(view);
-            if (iM4454m >= 0) {
-                detachViewInternal(iM4454m, view);
-            }
-        }
-
-        public void detachViewAt(int i2) {
-            detachViewInternal(i2, getChildAt(i2));
-        }
-
-        void dispatchAttachedToWindow(RecyclerView recyclerView) {
-            this.mIsAttachedToWindow = true;
-            onAttachedToWindow(recyclerView);
-        }
-
-        void dispatchDetachedFromWindow(RecyclerView recyclerView, C0609v c0609v) {
-            this.mIsAttachedToWindow = false;
-            onDetachedFromWindow(recyclerView, c0609v);
-        }
-
-        public void endAnimation(View view) {
-            AbstractC0599l abstractC0599l = this.mRecyclerView.mItemAnimator;
-            if (abstractC0599l != null) {
-                abstractC0599l.endAnimation(RecyclerView.getChildViewHolderInt(view));
-            }
-        }
-
-        public View findContainingItemView(View view) {
-            View viewFindContainingItemView;
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView == null || (viewFindContainingItemView = recyclerView.findContainingItemView(view)) == null || this.mChildHelper.m4455n(viewFindContainingItemView)) {
-                return null;
-            }
-            return viewFindContainingItemView;
-        }
-
-        public View findViewByPosition(int i2) {
-            int childCount = getChildCount();
-            for (int i3 = 0; i3 < childCount; i3++) {
-                View childAt = getChildAt(i3);
-                AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(childAt);
-                if (childViewHolderInt != null && childViewHolderInt.getLayoutPosition() == i2 && !childViewHolderInt.shouldIgnore() && (this.mRecyclerView.mState.m4309e() || !childViewHolderInt.isRemoved())) {
-                    return childAt;
-                }
-            }
-            return null;
-        }
-
-        public abstract C0603p generateDefaultLayoutParams();
-
-        public C0603p generateLayoutParams(ViewGroup.LayoutParams layoutParams) {
-            return layoutParams instanceof C0603p ? new C0603p((C0603p) layoutParams) : layoutParams instanceof ViewGroup.MarginLayoutParams ? new C0603p((ViewGroup.MarginLayoutParams) layoutParams) : new C0603p(layoutParams);
-        }
-
-        public int getBaseline() {
-            return -1;
-        }
-
-        public int getBottomDecorationHeight(View view) {
-            return ((C0603p) view.getLayoutParams()).f3965b.bottom;
-        }
-
-        public View getChildAt(int i2) {
-            C0623d c0623d = this.mChildHelper;
-            if (c0623d != null) {
-                return c0623d.m4449f(i2);
-            }
-            return null;
-        }
-
-        public int getChildCount() {
-            C0623d c0623d = this.mChildHelper;
-            if (c0623d != null) {
-                return c0623d.m4450g();
-            }
-            return 0;
-        }
-
-        public boolean getClipToPadding() {
-            RecyclerView recyclerView = this.mRecyclerView;
-            return recyclerView != null && recyclerView.mClipToPadding;
-        }
-
-        public int getColumnCountForAccessibility(C0609v c0609v, C0613z c0613z) {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView == null || recyclerView.mAdapter == null || !canScrollHorizontally()) {
-                return 1;
-            }
-            return this.mRecyclerView.mAdapter.getItemCount();
-        }
-
-        public int getDecoratedBottom(View view) {
-            return view.getBottom() + getBottomDecorationHeight(view);
-        }
-
-        public void getDecoratedBoundsWithMargins(View view, Rect rect) {
-            RecyclerView.getDecoratedBoundsWithMarginsInt(view, rect);
-        }
-
-        public int getDecoratedLeft(View view) {
-            return view.getLeft() - getLeftDecorationWidth(view);
-        }
-
-        public int getDecoratedMeasuredHeight(View view) {
-            Rect rect = ((C0603p) view.getLayoutParams()).f3965b;
-            return view.getMeasuredHeight() + rect.top + rect.bottom;
-        }
-
-        public int getDecoratedMeasuredWidth(View view) {
-            Rect rect = ((C0603p) view.getLayoutParams()).f3965b;
-            return view.getMeasuredWidth() + rect.left + rect.right;
-        }
-
-        public int getDecoratedRight(View view) {
-            return view.getRight() + getRightDecorationWidth(view);
-        }
-
-        public int getDecoratedTop(View view) {
-            return view.getTop() - getTopDecorationHeight(view);
-        }
-
-        public View getFocusedChild() {
-            View focusedChild;
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView == null || (focusedChild = recyclerView.getFocusedChild()) == null || this.mChildHelper.m4455n(focusedChild)) {
-                return null;
-            }
-            return focusedChild;
-        }
-
-        public int getHeight() {
-            return this.mHeight;
-        }
-
-        public int getHeightMode() {
-            return this.mHeightMode;
-        }
-
-        public int getItemCount() {
-            RecyclerView recyclerView = this.mRecyclerView;
-            AbstractC0594g adapter = recyclerView != null ? recyclerView.getAdapter() : null;
-            if (adapter != null) {
-                return adapter.getItemCount();
-            }
-            return 0;
-        }
-
-        public int getItemViewType(View view) {
-            return RecyclerView.getChildViewHolderInt(view).getItemViewType();
-        }
-
-        public int getLayoutDirection() {
-            return C0311u.m2162y(this.mRecyclerView);
-        }
-
-        public int getLeftDecorationWidth(View view) {
-            return ((C0603p) view.getLayoutParams()).f3965b.left;
-        }
-
-        public int getMinimumHeight() {
-            return C0311u.m2164z(this.mRecyclerView);
-        }
-
-        public int getMinimumWidth() {
-            return C0311u.m2084A(this.mRecyclerView);
-        }
-
-        public int getPaddingBottom() {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView != null) {
-                return recyclerView.getPaddingBottom();
-            }
-            return 0;
-        }
-
-        public int getPaddingEnd() {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView != null) {
-                return C0311u.m2088C(recyclerView);
-            }
-            return 0;
-        }
-
-        public int getPaddingLeft() {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView != null) {
-                return recyclerView.getPaddingLeft();
-            }
-            return 0;
-        }
-
-        public int getPaddingRight() {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView != null) {
-                return recyclerView.getPaddingRight();
-            }
-            return 0;
-        }
-
-        public int getPaddingStart() {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView != null) {
-                return C0311u.m2090D(recyclerView);
-            }
-            return 0;
-        }
-
-        public int getPaddingTop() {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView != null) {
-                return recyclerView.getPaddingTop();
-            }
-            return 0;
-        }
-
-        public int getPosition(View view) {
-            return ((C0603p) view.getLayoutParams()).m4238a();
-        }
-
-        public int getRightDecorationWidth(View view) {
-            return ((C0603p) view.getLayoutParams()).f3965b.right;
-        }
-
-        public int getRowCountForAccessibility(C0609v c0609v, C0613z c0613z) {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView == null || recyclerView.mAdapter == null || !canScrollVertically()) {
-                return 1;
-            }
-            return this.mRecyclerView.mAdapter.getItemCount();
-        }
-
-        public int getSelectionModeForAccessibility(C0609v c0609v, C0613z c0613z) {
-            return 0;
-        }
-
-        public int getTopDecorationHeight(View view) {
-            return ((C0603p) view.getLayoutParams()).f3965b.top;
-        }
-
-        public void getTransformedBoundingBox(View view, boolean z, Rect rect) {
-            Matrix matrix;
-            if (z) {
-                Rect rect2 = ((C0603p) view.getLayoutParams()).f3965b;
-                rect.set(-rect2.left, -rect2.top, view.getWidth() + rect2.right, view.getHeight() + rect2.bottom);
-            } else {
-                rect.set(0, 0, view.getWidth(), view.getHeight());
-            }
-            if (this.mRecyclerView != null && (matrix = view.getMatrix()) != null && !matrix.isIdentity()) {
-                RectF rectF = this.mRecyclerView.mTempRectF;
-                rectF.set(rect);
-                matrix.mapRect(rectF);
-                rect.set((int) Math.floor(rectF.left), (int) Math.floor(rectF.top), (int) Math.ceil(rectF.right), (int) Math.ceil(rectF.bottom));
-            }
-            rect.offset(view.getLeft(), view.getTop());
-        }
-
-        public int getWidth() {
-            return this.mWidth;
-        }
-
-        public int getWidthMode() {
-            return this.mWidthMode;
-        }
-
-        boolean hasFlexibleChildInBothOrientations() {
-            int childCount = getChildCount();
-            for (int i2 = 0; i2 < childCount; i2++) {
-                ViewGroup.LayoutParams layoutParams = getChildAt(i2).getLayoutParams();
-                if (layoutParams.width < 0 && layoutParams.height < 0) {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public boolean hasFocus() {
-            RecyclerView recyclerView = this.mRecyclerView;
-            return recyclerView != null && recyclerView.hasFocus();
-        }
-
-        public void ignoreView(View view) {
-            ViewParent parent = view.getParent();
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (parent != recyclerView || recyclerView.indexOfChild(view) == -1) {
-                throw new IllegalArgumentException("View should be fully attached to be ignored" + this.mRecyclerView.exceptionLabel());
-            }
-            AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(view);
-            childViewHolderInt.addFlags(128);
-            this.mRecyclerView.mViewInfoStore.m4578q(childViewHolderInt);
-        }
-
-        public boolean isAttachedToWindow() {
-            return this.mIsAttachedToWindow;
-        }
-
-        public boolean isAutoMeasureEnabled() {
-            return this.mAutoMeasure;
-        }
-
-        public boolean isFocused() {
-            RecyclerView recyclerView = this.mRecyclerView;
-            return recyclerView != null && recyclerView.isFocused();
-        }
-
-        public final boolean isItemPrefetchEnabled() {
-            return this.mItemPrefetchEnabled;
-        }
-
-        public boolean isLayoutHierarchical(C0609v c0609v, C0613z c0613z) {
-            return false;
-        }
-
-        public boolean isMeasurementCacheEnabled() {
-            return this.mMeasurementCacheEnabled;
-        }
-
-        public boolean isSmoothScrolling() {
-            AbstractC0612y abstractC0612y = this.mSmoothScroller;
-            return abstractC0612y != null && abstractC0612y.isRunning();
-        }
-
-        public boolean isViewPartiallyVisible(View view, boolean z, boolean z2) {
-            boolean z3 = this.mHorizontalBoundCheck.m4556b(view, 24579) && this.mVerticalBoundCheck.m4556b(view, 24579);
-            return z ? z3 : !z3;
-        }
-
-        public void layoutDecorated(View view, int i2, int i3, int i4, int i5) {
-            Rect rect = ((C0603p) view.getLayoutParams()).f3965b;
-            view.layout(i2 + rect.left, i3 + rect.top, i4 - rect.right, i5 - rect.bottom);
-        }
-
-        public void layoutDecoratedWithMargins(View view, int i2, int i3, int i4, int i5) {
-            C0603p c0603p = (C0603p) view.getLayoutParams();
-            Rect rect = c0603p.f3965b;
-            view.layout(i2 + rect.left + ((ViewGroup.MarginLayoutParams) c0603p).leftMargin, i3 + rect.top + ((ViewGroup.MarginLayoutParams) c0603p).topMargin, (i4 - rect.right) - ((ViewGroup.MarginLayoutParams) c0603p).rightMargin, (i5 - rect.bottom) - ((ViewGroup.MarginLayoutParams) c0603p).bottomMargin);
-        }
-
-        public void measureChild(View view, int i2, int i3) {
-            C0603p c0603p = (C0603p) view.getLayoutParams();
-            Rect itemDecorInsetsForChild = this.mRecyclerView.getItemDecorInsetsForChild(view);
-            int i4 = i2 + itemDecorInsetsForChild.left + itemDecorInsetsForChild.right;
-            int i5 = i3 + itemDecorInsetsForChild.top + itemDecorInsetsForChild.bottom;
-            int childMeasureSpec = getChildMeasureSpec(getWidth(), getWidthMode(), getPaddingLeft() + getPaddingRight() + i4, ((ViewGroup.MarginLayoutParams) c0603p).width, canScrollHorizontally());
-            int childMeasureSpec2 = getChildMeasureSpec(getHeight(), getHeightMode(), getPaddingTop() + getPaddingBottom() + i5, ((ViewGroup.MarginLayoutParams) c0603p).height, canScrollVertically());
-            if (shouldMeasureChild(view, childMeasureSpec, childMeasureSpec2, c0603p)) {
-                view.measure(childMeasureSpec, childMeasureSpec2);
-            }
-        }
-
-        public void measureChildWithMargins(View view, int i2, int i3) {
-            C0603p c0603p = (C0603p) view.getLayoutParams();
-            Rect itemDecorInsetsForChild = this.mRecyclerView.getItemDecorInsetsForChild(view);
-            int i4 = i2 + itemDecorInsetsForChild.left + itemDecorInsetsForChild.right;
-            int i5 = i3 + itemDecorInsetsForChild.top + itemDecorInsetsForChild.bottom;
-            int childMeasureSpec = getChildMeasureSpec(getWidth(), getWidthMode(), getPaddingLeft() + getPaddingRight() + ((ViewGroup.MarginLayoutParams) c0603p).leftMargin + ((ViewGroup.MarginLayoutParams) c0603p).rightMargin + i4, ((ViewGroup.MarginLayoutParams) c0603p).width, canScrollHorizontally());
-            int childMeasureSpec2 = getChildMeasureSpec(getHeight(), getHeightMode(), getPaddingTop() + getPaddingBottom() + ((ViewGroup.MarginLayoutParams) c0603p).topMargin + ((ViewGroup.MarginLayoutParams) c0603p).bottomMargin + i5, ((ViewGroup.MarginLayoutParams) c0603p).height, canScrollVertically());
-            if (shouldMeasureChild(view, childMeasureSpec, childMeasureSpec2, c0603p)) {
-                view.measure(childMeasureSpec, childMeasureSpec2);
-            }
-        }
-
-        public void moveView(int i2, int i3) {
-            View childAt = getChildAt(i2);
-            if (childAt != null) {
-                detachViewAt(i2);
-                attachView(childAt, i3);
-            } else {
-                throw new IllegalArgumentException("Cannot move a child from non-existing index:" + i2 + this.mRecyclerView.toString());
-            }
-        }
-
-        public void offsetChildrenHorizontal(int i2) {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView != null) {
-                recyclerView.offsetChildrenHorizontal(i2);
-            }
-        }
-
-        public void offsetChildrenVertical(int i2) {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView != null) {
-                recyclerView.offsetChildrenVertical(i2);
-            }
-        }
-
-        public void onAdapterChanged(AbstractC0594g abstractC0594g, AbstractC0594g abstractC0594g2) {
-        }
-
-        public boolean onAddFocusables(RecyclerView recyclerView, ArrayList<View> arrayList, int i2, int i3) {
-            return false;
-        }
-
-        public void onAttachedToWindow(RecyclerView recyclerView) {
-        }
-
-        @Deprecated
-        public void onDetachedFromWindow(RecyclerView recyclerView) {
-        }
-
-        public void onDetachedFromWindow(RecyclerView recyclerView, C0609v c0609v) {
-            onDetachedFromWindow(recyclerView);
-        }
-
-        public View onFocusSearchFailed(View view, int i2, C0609v c0609v, C0613z c0613z) {
-            return null;
-        }
-
-        public void onInitializeAccessibilityEvent(AccessibilityEvent accessibilityEvent) {
-            RecyclerView recyclerView = this.mRecyclerView;
-            onInitializeAccessibilityEvent(recyclerView.mRecycler, recyclerView.mState, accessibilityEvent);
-        }
-
-        void onInitializeAccessibilityNodeInfo(C0289c c0289c) {
-            RecyclerView recyclerView = this.mRecyclerView;
-            onInitializeAccessibilityNodeInfo(recyclerView.mRecycler, recyclerView.mState, c0289c);
-        }
-
-        void onInitializeAccessibilityNodeInfoForItem(View view, C0289c c0289c) {
-            AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(view);
-            if (childViewHolderInt == null || childViewHolderInt.isRemoved() || this.mChildHelper.m4455n(childViewHolderInt.itemView)) {
-                return;
-            }
-            RecyclerView recyclerView = this.mRecyclerView;
-            onInitializeAccessibilityNodeInfoForItem(recyclerView.mRecycler, recyclerView.mState, view, c0289c);
-        }
-
-        public View onInterceptFocusSearch(View view, int i2) {
-            return null;
-        }
-
-        public void onItemsAdded(RecyclerView recyclerView, int i2, int i3) {
-        }
-
-        public void onItemsChanged(RecyclerView recyclerView) {
-        }
-
-        public void onItemsMoved(RecyclerView recyclerView, int i2, int i3, int i4) {
-        }
-
-        public void onItemsRemoved(RecyclerView recyclerView, int i2, int i3) {
-        }
-
-        public void onItemsUpdated(RecyclerView recyclerView, int i2, int i3) {
-        }
-
-        public void onItemsUpdated(RecyclerView recyclerView, int i2, int i3, Object obj) {
-            onItemsUpdated(recyclerView, i2, i3);
-        }
-
-        public void onLayoutChildren(C0609v c0609v, C0613z c0613z) {
-            Log.e(RecyclerView.TAG, "You must override onLayoutChildren(Recycler recycler, State state) ");
-        }
-
-        public void onLayoutCompleted(C0613z c0613z) {
-        }
-
-        public void onMeasure(C0609v c0609v, C0613z c0613z, int i2, int i3) {
-            this.mRecyclerView.defaultOnMeasure(i2, i3);
-        }
-
-        @Deprecated
-        public boolean onRequestChildFocus(RecyclerView recyclerView, View view, View view2) {
-            return isSmoothScrolling() || recyclerView.isComputingLayout();
-        }
-
-        public void onRestoreInstanceState(Parcelable parcelable) {
-        }
-
-        public Parcelable onSaveInstanceState() {
-            return null;
-        }
-
-        public void onScrollStateChanged(int i2) {
-        }
-
-        void onSmoothScrollerStopped(AbstractC0612y abstractC0612y) {
-            if (this.mSmoothScroller == abstractC0612y) {
-                this.mSmoothScroller = null;
-            }
-        }
-
-        boolean performAccessibilityAction(int i2, Bundle bundle) {
-            RecyclerView recyclerView = this.mRecyclerView;
-            return performAccessibilityAction(recyclerView.mRecycler, recyclerView.mState, i2, bundle);
-        }
-
-        boolean performAccessibilityActionForItem(View view, int i2, Bundle bundle) {
-            RecyclerView recyclerView = this.mRecyclerView;
-            return performAccessibilityActionForItem(recyclerView.mRecycler, recyclerView.mState, view, i2, bundle);
-        }
-
-        public boolean performAccessibilityActionForItem(C0609v c0609v, C0613z c0613z, View view, int i2, Bundle bundle) {
-            return false;
-        }
-
-        public void postOnAnimation(Runnable runnable) {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView != null) {
-                C0311u.m2115a0(recyclerView, runnable);
-            }
-        }
-
-        public void removeAllViews() {
-            for (int childCount = getChildCount() - 1; childCount >= 0; childCount--) {
-                this.mChildHelper.m4458q(childCount);
-            }
-        }
-
-        public void removeAndRecycleAllViews(C0609v c0609v) {
-            for (int childCount = getChildCount() - 1; childCount >= 0; childCount--) {
-                if (!RecyclerView.getChildViewHolderInt(getChildAt(childCount)).shouldIgnore()) {
-                    removeAndRecycleViewAt(childCount, c0609v);
-                }
-            }
-        }
-
-        void removeAndRecycleScrapInt(C0609v c0609v) {
-            int iM4283j = c0609v.m4283j();
-            for (int i2 = iM4283j - 1; i2 >= 0; i2--) {
-                View viewM4287n = c0609v.m4287n(i2);
-                AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(viewM4287n);
-                if (!childViewHolderInt.shouldIgnore()) {
-                    childViewHolderInt.setIsRecyclable(false);
-                    if (childViewHolderInt.isTmpDetached()) {
-                        this.mRecyclerView.removeDetachedView(viewM4287n, false);
-                    }
-                    AbstractC0599l abstractC0599l = this.mRecyclerView.mItemAnimator;
-                    if (abstractC0599l != null) {
-                        abstractC0599l.endAnimation(childViewHolderInt);
-                    }
-                    childViewHolderInt.setIsRecyclable(true);
-                    c0609v.m4296y(viewM4287n);
-                }
-            }
-            c0609v.m4278e();
-            if (iM4283j > 0) {
-                this.mRecyclerView.invalidate();
-            }
-        }
-
-        public void removeAndRecycleView(View view, C0609v c0609v) {
-            removeView(view);
-            c0609v.m4264B(view);
-        }
-
-        public void removeAndRecycleViewAt(int i2, C0609v c0609v) {
-            View childAt = getChildAt(i2);
-            removeViewAt(i2);
-            c0609v.m4264B(childAt);
-        }
-
-        public boolean removeCallbacks(Runnable runnable) {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView != null) {
-                return recyclerView.removeCallbacks(runnable);
-            }
-            return false;
-        }
-
-        public void removeDetachedView(View view) {
-            this.mRecyclerView.removeDetachedView(view, false);
-        }
-
-        public void removeView(View view) {
-            this.mChildHelper.m4457p(view);
-        }
-
-        public void removeViewAt(int i2) {
-            if (getChildAt(i2) != null) {
-                this.mChildHelper.m4458q(i2);
-            }
-        }
-
-        public boolean requestChildRectangleOnScreen(RecyclerView recyclerView, View view, Rect rect, boolean z) {
-            return requestChildRectangleOnScreen(recyclerView, view, rect, z, false);
-        }
-
-        public void requestLayout() {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView != null) {
-                recyclerView.requestLayout();
-            }
-        }
-
-        public void requestSimpleAnimationsInNextLayout() {
-            this.mRequestedSimpleAnimations = true;
-        }
-
-        public int scrollHorizontallyBy(int i2, C0609v c0609v, C0613z c0613z) {
-            return 0;
-        }
-
-        public void scrollToPosition(int i2) {
-        }
-
-        public int scrollVerticallyBy(int i2, C0609v c0609v, C0613z c0613z) {
-            return 0;
-        }
-
-        @Deprecated
-        public void setAutoMeasureEnabled(boolean z) {
-            this.mAutoMeasure = z;
-        }
-
-        void setExactMeasureSpecsFrom(RecyclerView recyclerView) {
-            setMeasureSpecs(View.MeasureSpec.makeMeasureSpec(recyclerView.getWidth(), 1073741824), View.MeasureSpec.makeMeasureSpec(recyclerView.getHeight(), 1073741824));
-        }
-
-        public final void setItemPrefetchEnabled(boolean z) {
-            if (z != this.mItemPrefetchEnabled) {
-                this.mItemPrefetchEnabled = z;
-                this.mPrefetchMaxCountObserved = 0;
-                RecyclerView recyclerView = this.mRecyclerView;
-                if (recyclerView != null) {
-                    recyclerView.mRecycler.m4272K();
-                }
-            }
-        }
-
-        void setMeasureSpecs(int i2, int i3) {
-            this.mWidth = View.MeasureSpec.getSize(i2);
-            int mode = View.MeasureSpec.getMode(i2);
-            this.mWidthMode = mode;
-            if (mode == 0 && !RecyclerView.ALLOW_SIZE_IN_UNSPECIFIED_SPEC) {
-                this.mWidth = 0;
-            }
-            this.mHeight = View.MeasureSpec.getSize(i3);
-            int mode2 = View.MeasureSpec.getMode(i3);
-            this.mHeightMode = mode2;
-            if (mode2 != 0 || RecyclerView.ALLOW_SIZE_IN_UNSPECIFIED_SPEC) {
-                return;
-            }
-            this.mHeight = 0;
-        }
-
-        public void setMeasuredDimension(Rect rect, int i2, int i3) {
-            setMeasuredDimension(chooseSize(i2, rect.width() + getPaddingLeft() + getPaddingRight(), getMinimumWidth()), chooseSize(i3, rect.height() + getPaddingTop() + getPaddingBottom(), getMinimumHeight()));
-        }
-
-        void setMeasuredDimensionFromChildren(int i2, int i3) {
-            int childCount = getChildCount();
-            if (childCount == 0) {
-                this.mRecyclerView.defaultOnMeasure(i2, i3);
-                return;
-            }
-            int i4 = Integer.MIN_VALUE;
-            int i5 = Integer.MIN_VALUE;
-            int i6 = Integer.MAX_VALUE;
-            int i7 = Integer.MAX_VALUE;
-            for (int i8 = 0; i8 < childCount; i8++) {
-                View childAt = getChildAt(i8);
-                Rect rect = this.mRecyclerView.mTempRect;
-                getDecoratedBoundsWithMargins(childAt, rect);
-                int i9 = rect.left;
-                if (i9 < i6) {
-                    i6 = i9;
-                }
-                int i10 = rect.right;
-                if (i10 > i4) {
-                    i4 = i10;
-                }
-                int i11 = rect.top;
-                if (i11 < i7) {
-                    i7 = i11;
-                }
-                int i12 = rect.bottom;
-                if (i12 > i5) {
-                    i5 = i12;
-                }
-            }
-            this.mRecyclerView.mTempRect.set(i6, i7, i4, i5);
-            setMeasuredDimension(this.mRecyclerView.mTempRect, i2, i3);
-        }
-
-        public void setMeasurementCacheEnabled(boolean z) {
-            this.mMeasurementCacheEnabled = z;
-        }
-
-        void setRecyclerView(RecyclerView recyclerView) {
-            if (recyclerView == null) {
-                this.mRecyclerView = null;
-                this.mChildHelper = null;
-                this.mWidth = 0;
-                this.mHeight = 0;
-            } else {
-                this.mRecyclerView = recyclerView;
-                this.mChildHelper = recyclerView.mChildHelper;
-                this.mWidth = recyclerView.getWidth();
-                this.mHeight = recyclerView.getHeight();
-            }
-            this.mWidthMode = 1073741824;
-            this.mHeightMode = 1073741824;
-        }
-
-        boolean shouldMeasureChild(View view, int i2, int i3, C0603p c0603p) {
-            return (!view.isLayoutRequested() && this.mMeasurementCacheEnabled && isMeasurementUpToDate(view.getWidth(), i2, ((ViewGroup.MarginLayoutParams) c0603p).width) && isMeasurementUpToDate(view.getHeight(), i3, ((ViewGroup.MarginLayoutParams) c0603p).height)) ? false : true;
-        }
-
-        boolean shouldMeasureTwice() {
-            return false;
-        }
-
-        boolean shouldReMeasureChild(View view, int i2, int i3, C0603p c0603p) {
-            return (this.mMeasurementCacheEnabled && isMeasurementUpToDate(view.getMeasuredWidth(), i2, ((ViewGroup.MarginLayoutParams) c0603p).width) && isMeasurementUpToDate(view.getMeasuredHeight(), i3, ((ViewGroup.MarginLayoutParams) c0603p).height)) ? false : true;
-        }
-
-        public void smoothScrollToPosition(RecyclerView recyclerView, C0613z c0613z, int i2) {
-            Log.e(RecyclerView.TAG, "You must override smoothScrollToPosition to support smooth scrolling");
-        }
-
-        public void startSmoothScroll(AbstractC0612y abstractC0612y) {
-            AbstractC0612y abstractC0612y2 = this.mSmoothScroller;
-            if (abstractC0612y2 != null && abstractC0612y != abstractC0612y2 && abstractC0612y2.isRunning()) {
-                this.mSmoothScroller.stop();
-            }
-            this.mSmoothScroller = abstractC0612y;
-            abstractC0612y.start(this.mRecyclerView, this);
-        }
-
-        public void stopIgnoringView(View view) {
-            AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(view);
-            childViewHolderInt.stopIgnoring();
-            childViewHolderInt.resetInternal();
-            childViewHolderInt.addFlags(4);
-        }
-
-        void stopSmoothScroller() {
-            AbstractC0612y abstractC0612y = this.mSmoothScroller;
-            if (abstractC0612y != null) {
-                abstractC0612y.stop();
-            }
-        }
-
-        public boolean supportsPredictiveItemAnimations() {
-            return false;
-        }
-
-        public void addDisappearingView(View view, int i2) {
-            addViewInt(view, i2, true);
-        }
-
-        public void addView(View view, int i2) {
-            addViewInt(view, i2, false);
-        }
-
-        public void onInitializeAccessibilityEvent(C0609v c0609v, C0613z c0613z, AccessibilityEvent accessibilityEvent) {
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView == null || accessibilityEvent == null) {
-                return;
-            }
-            boolean z = true;
-            if (!recyclerView.canScrollVertically(1) && !this.mRecyclerView.canScrollVertically(-1) && !this.mRecyclerView.canScrollHorizontally(-1) && !this.mRecyclerView.canScrollHorizontally(1)) {
-                z = false;
-            }
-            accessibilityEvent.setScrollable(z);
-            AbstractC0594g abstractC0594g = this.mRecyclerView.mAdapter;
-            if (abstractC0594g != null) {
-                accessibilityEvent.setItemCount(abstractC0594g.getItemCount());
-            }
-        }
-
-        public void onInitializeAccessibilityNodeInfo(C0609v c0609v, C0613z c0613z, C0289c c0289c) {
-            if (this.mRecyclerView.canScrollVertically(-1) || this.mRecyclerView.canScrollHorizontally(-1)) {
-                c0289c.m1972a(8192);
-                c0289c.m2001r0(true);
-            }
-            if (this.mRecyclerView.canScrollVertically(1) || this.mRecyclerView.canScrollHorizontally(1)) {
-                c0289c.m1972a(AbstractC0599l.FLAG_APPEARED_IN_PRE_LAYOUT);
-                c0289c.m2001r0(true);
-            }
-            c0289c.m1973a0(C0289c.b.m2016a(getRowCountForAccessibility(c0609v, c0613z), getColumnCountForAccessibility(c0609v, c0613z), isLayoutHierarchical(c0609v, c0613z), getSelectionModeForAccessibility(c0609v, c0613z)));
-        }
-
-        public boolean onRequestChildFocus(RecyclerView recyclerView, C0613z c0613z, View view, View view2) {
-            return onRequestChildFocus(recyclerView, view, view2);
-        }
-
-        public boolean performAccessibilityAction(C0609v c0609v, C0613z c0613z, int i2, Bundle bundle) {
-            int height;
-            int width;
-            int i3;
-            int i4;
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (recyclerView == null) {
-                return false;
-            }
-            if (i2 == 4096) {
-                height = recyclerView.canScrollVertically(1) ? (getHeight() - getPaddingTop()) - getPaddingBottom() : 0;
-                if (this.mRecyclerView.canScrollHorizontally(1)) {
-                    width = (getWidth() - getPaddingLeft()) - getPaddingRight();
-                    i3 = height;
-                    i4 = width;
-                }
-                i3 = height;
-                i4 = 0;
-            } else if (i2 != 8192) {
-                i4 = 0;
-                i3 = 0;
-            } else {
-                height = recyclerView.canScrollVertically(-1) ? -((getHeight() - getPaddingTop()) - getPaddingBottom()) : 0;
-                if (this.mRecyclerView.canScrollHorizontally(-1)) {
-                    width = -((getWidth() - getPaddingLeft()) - getPaddingRight());
-                    i3 = height;
-                    i4 = width;
-                }
-                i3 = height;
-                i4 = 0;
-            }
-            if (i3 == 0 && i4 == 0) {
-                return false;
-            }
-            this.mRecyclerView.smoothScrollBy(i4, i3, null, Integer.MIN_VALUE, true);
-            return true;
-        }
-
-        public boolean requestChildRectangleOnScreen(RecyclerView recyclerView, View view, Rect rect, boolean z, boolean z2) {
-            int[] childRectangleOnScreenScrollAmount = getChildRectangleOnScreenScrollAmount(view, rect);
-            int i2 = childRectangleOnScreenScrollAmount[0];
-            int i3 = childRectangleOnScreenScrollAmount[1];
-            if ((z2 && !isFocusedChildVisibleAfterScrolling(recyclerView, i2, i3)) || (i2 == 0 && i3 == 0)) {
-                return false;
-            }
-            if (z) {
-                recyclerView.scrollBy(i2, i3);
-            } else {
-                recyclerView.smoothScrollBy(i2, i3);
-            }
-            return true;
-        }
-
-        public static int getChildMeasureSpec(int i2, int i3, int i4, int i5, boolean z) {
-            int iMax = Math.max(0, i2 - i4);
-            if (z) {
-                if (i5 < 0) {
-                    if (i5 != -1 || (i3 != Integer.MIN_VALUE && (i3 == 0 || i3 != 1073741824))) {
-                        i3 = 0;
-                        i5 = 0;
-                    } else {
-                        i5 = iMax;
-                    }
-                }
-                i3 = 1073741824;
-            } else {
-                if (i5 < 0) {
-                    if (i5 != -1) {
-                        if (i5 == -2) {
-                            i3 = (i3 == Integer.MIN_VALUE || i3 == 1073741824) ? Integer.MIN_VALUE : 0;
-                        }
-                        i3 = 0;
-                        i5 = 0;
-                    }
-                    i5 = iMax;
-                }
-                i3 = 1073741824;
-            }
-            return View.MeasureSpec.makeMeasureSpec(i5, i3);
-        }
-
-        public void onInitializeAccessibilityNodeInfoForItem(C0609v c0609v, C0613z c0613z, View view, C0289c c0289c) {
-            c0289c.m1975b0(C0289c.c.m2017f(canScrollVertically() ? getPosition(view) : 0, 1, canScrollHorizontally() ? getPosition(view) : 0, 1, false, false));
-        }
-
-        public void attachView(View view, int i2) {
-            attachView(view, i2, (C0603p) view.getLayoutParams());
-        }
-
-        public C0603p generateLayoutParams(Context context, AttributeSet attributeSet) {
-            return new C0603p(context, attributeSet);
-        }
-
-        public void setMeasuredDimension(int i2, int i3) {
-            this.mRecyclerView.setMeasuredDimension(i2, i3);
-        }
-
-        public void attachView(View view) {
-            attachView(view, -1);
-        }
+    public static abstract class t {
+        public abstract boolean a(int i10, int i11);
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$q */
-    public interface InterfaceC0604q {
-        /* renamed from: a */
-        void m4242a(View view);
+    public interface u {
+        void a(RecyclerView recyclerView, MotionEvent motionEvent);
 
-        /* renamed from: b */
-        void m4243b(View view);
+        boolean b(RecyclerView recyclerView, MotionEvent motionEvent);
+
+        void c(boolean z10);
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$r */
-    public static abstract class AbstractC0605r {
-        public abstract boolean onFling(int i2, int i3);
-    }
+    public static class w {
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$s */
-    public interface InterfaceC0606s {
-        /* renamed from: a */
-        void mo4244a(RecyclerView recyclerView, MotionEvent motionEvent);
+        /* renamed from: a, reason: collision with root package name */
+        SparseArray<a> f28736a = new SparseArray<>();
 
-        /* renamed from: b */
-        boolean mo4245b(RecyclerView recyclerView, MotionEvent motionEvent);
+        /* renamed from: b, reason: collision with root package name */
+        int f28737b = 0;
 
-        /* renamed from: c */
-        void mo4246c(boolean z);
-    }
+        /* renamed from: c, reason: collision with root package name */
+        Set<h<?>> f28738c = Collections.newSetFromMap(new IdentityHashMap());
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$t */
-    public static abstract class AbstractC0607t {
-        public void onScrollStateChanged(RecyclerView recyclerView, int i2) {
-        }
-
-        public void onScrolled(RecyclerView recyclerView, int i2, int i3) {
-        }
-    }
-
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$u */
-    public static class C0608u {
-
-        /* renamed from: a */
-        SparseArray<a> f3968a = new SparseArray<>();
-
-        /* renamed from: b */
-        private int f3969b = 0;
-
-        /* renamed from: androidx.recyclerview.widget.RecyclerView$u$a */
         static class a {
 
-            /* renamed from: a */
-            final ArrayList<AbstractC0590c0> f3970a = new ArrayList<>();
+            /* renamed from: a, reason: collision with root package name */
+            final ArrayList<G> f28739a = new ArrayList<>();
 
-            /* renamed from: b */
-            int f3971b = 5;
+            /* renamed from: b, reason: collision with root package name */
+            int f28740b = 5;
 
-            /* renamed from: c */
-            long f3972c = 0;
+            /* renamed from: c, reason: collision with root package name */
+            long f28741c = 0;
 
-            /* renamed from: d */
-            long f3973d = 0;
+            /* renamed from: d, reason: collision with root package name */
+            long f28742d = 0;
 
             a() {
             }
         }
 
-        /* renamed from: g */
-        private a m4247g(int i2) {
-            a aVar = this.f3968a.get(i2);
+        private a i(int i10) {
+            a aVar = this.f28736a.get(i10);
             if (aVar != null) {
                 return aVar;
             }
             a aVar2 = new a();
-            this.f3968a.put(i2, aVar2);
+            this.f28736a.put(i10, aVar2);
             return aVar2;
         }
 
-        /* renamed from: a */
-        void m4248a() {
-            this.f3969b++;
+        void a() {
+            this.f28737b++;
         }
 
-        /* renamed from: b */
-        public void mo4249b() {
-            for (int i2 = 0; i2 < this.f3968a.size(); i2++) {
-                this.f3968a.valueAt(i2).f3970a.clear();
+        void b(h<?> hVar) {
+            this.f28738c.add(hVar);
+        }
+
+        public void c() {
+            for (int i10 = 0; i10 < this.f28736a.size(); i10++) {
+                a aVarValueAt = this.f28736a.valueAt(i10);
+                Iterator<G> it = aVarValueAt.f28739a.iterator();
+                while (it.hasNext()) {
+                    C5048a.b(it.next().itemView);
+                }
+                aVarValueAt.f28739a.clear();
             }
         }
 
-        /* renamed from: c */
-        void m4250c() {
-            this.f3969b--;
+        void d() {
+            this.f28737b--;
         }
 
-        /* renamed from: d */
-        void m4251d(int i2, long j2) {
-            a aVarM4247g = m4247g(i2);
-            aVarM4247g.f3973d = m4256j(aVarM4247g.f3973d, j2);
+        void e(h<?> hVar, boolean z10) {
+            this.f28738c.remove(hVar);
+            if (this.f28738c.size() != 0 || z10) {
+                return;
+            }
+            for (int i10 = 0; i10 < this.f28736a.size(); i10++) {
+                SparseArray<a> sparseArray = this.f28736a;
+                ArrayList<G> arrayList = sparseArray.get(sparseArray.keyAt(i10)).f28739a;
+                for (int i11 = 0; i11 < arrayList.size(); i11++) {
+                    C5048a.b(arrayList.get(i11).itemView);
+                }
+            }
         }
 
-        /* renamed from: e */
-        void m4252e(int i2, long j2) {
-            a aVarM4247g = m4247g(i2);
-            aVarM4247g.f3972c = m4256j(aVarM4247g.f3972c, j2);
+        void f(int i10, long j10) {
+            a aVarI = i(i10);
+            aVarI.f28742d = l(aVarI.f28742d, j10);
         }
 
-        /* renamed from: f */
-        public AbstractC0590c0 mo4253f(int i2) {
-            a aVar = this.f3968a.get(i2);
-            if (aVar == null || aVar.f3970a.isEmpty()) {
+        void g(int i10, long j10) {
+            a aVarI = i(i10);
+            aVarI.f28741c = l(aVarI.f28741c, j10);
+        }
+
+        public G h(int i10) {
+            a aVar = this.f28736a.get(i10);
+            if (aVar == null || aVar.f28739a.isEmpty()) {
                 return null;
             }
-            ArrayList<AbstractC0590c0> arrayList = aVar.f3970a;
+            ArrayList<G> arrayList = aVar.f28739a;
             for (int size = arrayList.size() - 1; size >= 0; size--) {
                 if (!arrayList.get(size).isAttachedToTransitionOverlay()) {
                     return arrayList.remove(size);
@@ -2864,1413 +1763,569 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
             return null;
         }
 
-        /* renamed from: h */
-        void m4254h(AbstractC0594g abstractC0594g, AbstractC0594g abstractC0594g2, boolean z) {
-            if (abstractC0594g != null) {
-                m4250c();
+        void j(h<?> hVar, h<?> hVar2, boolean z10) {
+            if (hVar != null) {
+                d();
             }
-            if (!z && this.f3969b == 0) {
-                mo4249b();
+            if (!z10 && this.f28737b == 0) {
+                c();
             }
-            if (abstractC0594g2 != null) {
-                m4248a();
+            if (hVar2 != null) {
+                a();
             }
         }
 
-        /* renamed from: i */
-        public void mo4255i(AbstractC0590c0 abstractC0590c0) {
-            int itemViewType = abstractC0590c0.getItemViewType();
-            ArrayList<AbstractC0590c0> arrayList = m4247g(itemViewType).f3970a;
-            if (this.f3968a.get(itemViewType).f3971b <= arrayList.size()) {
-                return;
+        public void k(G g10) {
+            int itemViewType = g10.getItemViewType();
+            ArrayList<G> arrayList = i(itemViewType).f28739a;
+            if (this.f28736a.get(itemViewType).f28740b <= arrayList.size()) {
+                C5048a.b(g10.itemView);
+            } else {
+                if (RecyclerView.f28554g1 && arrayList.contains(g10)) {
+                    throw new IllegalArgumentException("this scrap item already exists");
+                }
+                g10.resetInternal();
+                arrayList.add(g10);
             }
-            abstractC0590c0.resetInternal();
-            arrayList.add(abstractC0590c0);
         }
 
-        /* renamed from: j */
-        long m4256j(long j2, long j3) {
-            return j2 == 0 ? j3 : ((j2 / 4) * 3) + (j3 / 4);
+        long l(long j10, long j11) {
+            return j10 == 0 ? j11 : ((j10 / 4) * 3) + (j11 / 4);
         }
 
-        /* renamed from: k */
-        boolean m4257k(int i2, long j2, long j3) {
-            long j4 = m4247g(i2).f3973d;
-            return j4 == 0 || j2 + j4 < j3;
+        boolean m(int i10, long j10, long j11) {
+            long j12 = i(i10).f28742d;
+            return j12 == 0 || j10 + j12 < j11;
         }
 
-        /* renamed from: l */
-        boolean m4258l(int i2, long j2, long j3) {
-            long j4 = m4247g(i2).f3972c;
-            return j4 == 0 || j2 + j4 < j3;
+        boolean n(int i10, long j10, long j11) {
+            long j12 = i(i10).f28741c;
+            return j12 == 0 || j10 + j12 < j11;
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$v */
-    public final class C0609v {
+    public interface y {
+        void a(G g10);
+    }
 
-        /* renamed from: a */
-        final ArrayList<AbstractC0590c0> f3974a;
-
-        /* renamed from: b */
-        ArrayList<AbstractC0590c0> f3975b;
-
-        /* renamed from: c */
-        final ArrayList<AbstractC0590c0> f3976c;
-
-        /* renamed from: d */
-        private final List<AbstractC0590c0> f3977d;
-
-        /* renamed from: e */
-        private int f3978e;
-
-        /* renamed from: f */
-        int f3979f;
-
-        /* renamed from: g */
-        C0608u f3980g;
-
-        /* renamed from: h */
-        private AbstractC0586a0 f3981h;
-
-        public C0609v() {
-            ArrayList<AbstractC0590c0> arrayList = new ArrayList<>();
-            this.f3974a = arrayList;
-            this.f3975b = null;
-            this.f3976c = new ArrayList<>();
-            this.f3977d = Collections.unmodifiableList(arrayList);
-            this.f3978e = 2;
-            this.f3979f = 2;
+    private class z extends j {
+        z() {
         }
 
-        /* renamed from: H */
-        private boolean m4259H(AbstractC0590c0 abstractC0590c0, int i2, int i3, long j2) {
-            abstractC0590c0.mOwnerRecyclerView = RecyclerView.this;
-            int itemViewType = abstractC0590c0.getItemViewType();
-            long nanoTime = RecyclerView.this.getNanoTime();
-            if (j2 != RecyclerView.FOREVER_NS && !this.f3980g.m4257k(itemViewType, nanoTime, j2)) {
-                return false;
-            }
-            RecyclerView.this.mAdapter.bindViewHolder(abstractC0590c0, i2);
-            this.f3980g.m4251d(abstractC0590c0.getItemViewType(), RecyclerView.this.getNanoTime() - nanoTime);
-            m4260b(abstractC0590c0);
-            if (!RecyclerView.this.mState.m4309e()) {
-                return true;
-            }
-            abstractC0590c0.mPreLayoutPosition = i3;
-            return true;
-        }
-
-        /* renamed from: b */
-        private void m4260b(AbstractC0590c0 abstractC0590c0) {
-            if (RecyclerView.this.isAccessibilityEnabled()) {
-                View view = abstractC0590c0.itemView;
-                if (C0311u.m2158w(view) == 0) {
-                    C0311u.m2153t0(view, 1);
-                }
-                C0634o c0634o = RecyclerView.this.mAccessibilityDelegate;
-                if (c0634o == null) {
-                    return;
-                }
-                C0280a c0280aMo4160n = c0634o.mo4160n();
-                if (c0280aMo4160n instanceof C0634o.a) {
-                    ((C0634o.a) c0280aMo4160n).m4551o(view);
-                }
-                C0311u.m2131i0(view, c0280aMo4160n);
-            }
-        }
-
-        /* renamed from: q */
-        private void m4261q(ViewGroup viewGroup, boolean z) {
-            for (int childCount = viewGroup.getChildCount() - 1; childCount >= 0; childCount--) {
-                View childAt = viewGroup.getChildAt(childCount);
-                if (childAt instanceof ViewGroup) {
-                    m4261q((ViewGroup) childAt, true);
-                }
-            }
-            if (z) {
-                if (viewGroup.getVisibility() == 4) {
-                    viewGroup.setVisibility(0);
-                    viewGroup.setVisibility(4);
-                } else {
-                    int visibility = viewGroup.getVisibility();
-                    viewGroup.setVisibility(4);
-                    viewGroup.setVisibility(visibility);
-                }
-            }
-        }
-
-        /* renamed from: r */
-        private void m4262r(AbstractC0590c0 abstractC0590c0) {
-            View view = abstractC0590c0.itemView;
-            if (view instanceof ViewGroup) {
-                m4261q((ViewGroup) view, false);
-            }
-        }
-
-        /* renamed from: A */
-        void m4263A(int i2) {
-            m4275a(this.f3976c.get(i2), true);
-            this.f3976c.remove(i2);
-        }
-
-        /* renamed from: B */
-        public void m4264B(View view) {
-            AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(view);
-            if (childViewHolderInt.isTmpDetached()) {
-                RecyclerView.this.removeDetachedView(view, false);
-            }
-            if (childViewHolderInt.isScrap()) {
-                childViewHolderInt.unScrap();
-            } else if (childViewHolderInt.wasReturnedFromScrap()) {
-                childViewHolderInt.clearReturnedFromScrapFlag();
-            }
-            m4265C(childViewHolderInt);
-            if (RecyclerView.this.mItemAnimator == null || childViewHolderInt.isRecyclable()) {
-                return;
-            }
-            RecyclerView.this.mItemAnimator.endAnimation(childViewHolderInt);
-        }
-
-        /* renamed from: C */
-        void m4265C(AbstractC0590c0 abstractC0590c0) {
-            boolean z;
-            boolean z2 = true;
-            if (abstractC0590c0.isScrap() || abstractC0590c0.itemView.getParent() != null) {
-                StringBuilder sb = new StringBuilder();
-                sb.append("Scrapped or attached views may not be recycled. isScrap:");
-                sb.append(abstractC0590c0.isScrap());
-                sb.append(" isAttached:");
-                sb.append(abstractC0590c0.itemView.getParent() != null);
-                sb.append(RecyclerView.this.exceptionLabel());
-                throw new IllegalArgumentException(sb.toString());
-            }
-            if (abstractC0590c0.isTmpDetached()) {
-                throw new IllegalArgumentException("Tmp detached view should be removed from RecyclerView before it can be recycled: " + abstractC0590c0 + RecyclerView.this.exceptionLabel());
-            }
-            if (abstractC0590c0.shouldIgnore()) {
-                throw new IllegalArgumentException("Trying to recycle an ignored view holder. You should first call stopIgnoringView(view) before calling recycle." + RecyclerView.this.exceptionLabel());
-            }
-            boolean zDoesTransientStatePreventRecycling = abstractC0590c0.doesTransientStatePreventRecycling();
-            AbstractC0594g abstractC0594g = RecyclerView.this.mAdapter;
-            if ((abstractC0594g != null && zDoesTransientStatePreventRecycling && abstractC0594g.onFailedToRecycleView(abstractC0590c0)) || abstractC0590c0.isRecyclable()) {
-                if (this.f3979f <= 0 || abstractC0590c0.hasAnyOfTheFlags(526)) {
-                    z = false;
-                } else {
-                    int size = this.f3976c.size();
-                    if (size >= this.f3979f && size > 0) {
-                        m4263A(0);
-                        size--;
-                    }
-                    if (RecyclerView.ALLOW_THREAD_GAP_WORK && size > 0 && !RecyclerView.this.mPrefetchRegistry.m4519d(abstractC0590c0.mPosition)) {
-                        int i2 = size - 1;
-                        while (i2 >= 0) {
-                            if (!RecyclerView.this.mPrefetchRegistry.m4519d(this.f3976c.get(i2).mPosition)) {
-                                break;
-                            } else {
-                                i2--;
-                            }
-                        }
-                        size = i2 + 1;
-                    }
-                    this.f3976c.add(size, abstractC0590c0);
-                    z = true;
-                }
-                if (z) {
-                    z = z;
-                    z2 = false;
-                } else {
-                    m4275a(abstractC0590c0, true);
-                    z = z;
-                }
-            } else {
-                z2 = false;
-            }
-            RecyclerView.this.mViewInfoStore.m4578q(abstractC0590c0);
-            if (z || z2 || !zDoesTransientStatePreventRecycling) {
-                return;
-            }
-            abstractC0590c0.mOwnerRecyclerView = null;
-        }
-
-        /* renamed from: D */
-        void m4266D(View view) {
-            AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(view);
-            if (!childViewHolderInt.hasAnyOfTheFlags(12) && childViewHolderInt.isUpdated() && !RecyclerView.this.canReuseUpdatedViewHolder(childViewHolderInt)) {
-                if (this.f3975b == null) {
-                    this.f3975b = new ArrayList<>();
-                }
-                childViewHolderInt.setScrapContainer(this, true);
-                this.f3975b.add(childViewHolderInt);
-                return;
-            }
-            if (!childViewHolderInt.isInvalid() || childViewHolderInt.isRemoved() || RecyclerView.this.mAdapter.hasStableIds()) {
-                childViewHolderInt.setScrapContainer(this, false);
-                this.f3974a.add(childViewHolderInt);
-            } else {
-                throw new IllegalArgumentException("Called scrap view with an invalid view. Invalid views cannot be reused from scrap, they should rebound from recycler pool." + RecyclerView.this.exceptionLabel());
-            }
-        }
-
-        /* renamed from: E */
-        void m4267E(C0608u c0608u) {
-            C0608u c0608u2 = this.f3980g;
-            if (c0608u2 != null) {
-                c0608u2.m4250c();
-            }
-            this.f3980g = c0608u;
-            if (c0608u == null || RecyclerView.this.getAdapter() == null) {
-                return;
-            }
-            this.f3980g.m4248a();
-        }
-
-        /* renamed from: F */
-        void m4268F(AbstractC0586a0 abstractC0586a0) {
-        }
-
-        /* renamed from: G */
-        public void m4269G(int i2) {
-            this.f3978e = i2;
-            m4272K();
-        }
-
-        /* JADX WARN: Removed duplicated region for block: B:18:0x0037  */
-        /* JADX WARN: Removed duplicated region for block: B:27:0x005c  */
-        /* JADX WARN: Removed duplicated region for block: B:29:0x005f  */
-        /* JADX WARN: Removed duplicated region for block: B:64:0x0134 A[PHI: r1 r4
-          0x0134: PHI (r1v12 androidx.recyclerview.widget.RecyclerView$c0) = (r1v11 androidx.recyclerview.widget.RecyclerView$c0), (r1v30 androidx.recyclerview.widget.RecyclerView$c0) binds: [B:28:0x005d, B:50:0x00b5] A[DONT_GENERATE, DONT_INLINE]
-          0x0134: PHI (r4v3 boolean) = (r4v2 boolean), (r4v7 boolean) binds: [B:28:0x005d, B:50:0x00b5] A[DONT_GENERATE, DONT_INLINE]] */
-        /* JADX WARN: Removed duplicated region for block: B:73:0x0155  */
-        /* JADX WARN: Removed duplicated region for block: B:79:0x0181  */
-        /* JADX WARN: Removed duplicated region for block: B:90:0x01b1  */
-        /* JADX WARN: Removed duplicated region for block: B:91:0x01bf  */
-        /* JADX WARN: Removed duplicated region for block: B:97:0x01db A[ADDED_TO_REGION] */
-        /* JADX WARN: Removed duplicated region for block: B:99:0x01de  */
-        /* renamed from: I */
-        /*
-            Code decompiled incorrectly, please refer to instructions dump.
-            To view partially-correct code enable 'Show inconsistent code' option in preferences
-        */
-        androidx.recyclerview.widget.RecyclerView.AbstractC0590c0 m4270I(int r17, boolean r18, long r19) {
-            /*
-                Method dump skipped, instructions count: 538
-                To view this dump change 'Code comments level' option to 'DEBUG'
-            */
-            throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.RecyclerView.C0609v.m4270I(int, boolean, long):androidx.recyclerview.widget.RecyclerView$c0");
-        }
-
-        /* renamed from: J */
-        void m4271J(AbstractC0590c0 abstractC0590c0) {
-            if (abstractC0590c0.mInChangeScrap) {
-                this.f3975b.remove(abstractC0590c0);
-            } else {
-                this.f3974a.remove(abstractC0590c0);
-            }
-            abstractC0590c0.mScrapContainer = null;
-            abstractC0590c0.mInChangeScrap = false;
-            abstractC0590c0.clearReturnedFromScrapFlag();
-        }
-
-        /* renamed from: K */
-        void m4272K() {
-            AbstractC0602o abstractC0602o = RecyclerView.this.mLayout;
-            this.f3979f = this.f3978e + (abstractC0602o != null ? abstractC0602o.mPrefetchMaxCountObserved : 0);
-            for (int size = this.f3976c.size() - 1; size >= 0 && this.f3976c.size() > this.f3979f; size--) {
-                m4263A(size);
-            }
-        }
-
-        /* renamed from: L */
-        boolean m4273L(AbstractC0590c0 abstractC0590c0) {
-            if (abstractC0590c0.isRemoved()) {
-                return RecyclerView.this.mState.m4309e();
-            }
-            int i2 = abstractC0590c0.mPosition;
-            if (i2 >= 0 && i2 < RecyclerView.this.mAdapter.getItemCount()) {
-                if (RecyclerView.this.mState.m4309e() || RecyclerView.this.mAdapter.getItemViewType(abstractC0590c0.mPosition) == abstractC0590c0.getItemViewType()) {
-                    return !RecyclerView.this.mAdapter.hasStableIds() || abstractC0590c0.getItemId() == RecyclerView.this.mAdapter.getItemId(abstractC0590c0.mPosition);
-                }
-                return false;
-            }
-            throw new IndexOutOfBoundsException("Inconsistency detected. Invalid view holder adapter position" + abstractC0590c0 + RecyclerView.this.exceptionLabel());
-        }
-
-        /* renamed from: M */
-        void m4274M(int i2, int i3) {
-            int i4;
-            int i5 = i3 + i2;
-            for (int size = this.f3976c.size() - 1; size >= 0; size--) {
-                AbstractC0590c0 abstractC0590c0 = this.f3976c.get(size);
-                if (abstractC0590c0 != null && (i4 = abstractC0590c0.mPosition) >= i2 && i4 < i5) {
-                    abstractC0590c0.addFlags(2);
-                    m4263A(size);
-                }
-            }
-        }
-
-        /* renamed from: a */
-        void m4275a(AbstractC0590c0 abstractC0590c0, boolean z) {
-            RecyclerView.clearNestedRecyclerViewIfNotNested(abstractC0590c0);
-            View view = abstractC0590c0.itemView;
-            C0634o c0634o = RecyclerView.this.mAccessibilityDelegate;
-            if (c0634o != null) {
-                C0280a c0280aMo4160n = c0634o.mo4160n();
-                C0311u.m2131i0(view, c0280aMo4160n instanceof C0634o.a ? ((C0634o.a) c0280aMo4160n).m4550n(view) : null);
-            }
-            if (z) {
-                m4280g(abstractC0590c0);
-            }
-            abstractC0590c0.mOwnerRecyclerView = null;
-            m4282i().mo4255i(abstractC0590c0);
-        }
-
-        /* renamed from: c */
-        public void m4276c() {
-            this.f3974a.clear();
-            m4297z();
-        }
-
-        /* renamed from: d */
-        void m4277d() {
-            int size = this.f3976c.size();
-            for (int i2 = 0; i2 < size; i2++) {
-                this.f3976c.get(i2).clearOldPosition();
-            }
-            int size2 = this.f3974a.size();
-            for (int i3 = 0; i3 < size2; i3++) {
-                this.f3974a.get(i3).clearOldPosition();
-            }
-            ArrayList<AbstractC0590c0> arrayList = this.f3975b;
-            if (arrayList != null) {
-                int size3 = arrayList.size();
-                for (int i4 = 0; i4 < size3; i4++) {
-                    this.f3975b.get(i4).clearOldPosition();
-                }
-            }
-        }
-
-        /* renamed from: e */
-        void m4278e() {
-            this.f3974a.clear();
-            ArrayList<AbstractC0590c0> arrayList = this.f3975b;
-            if (arrayList != null) {
-                arrayList.clear();
-            }
-        }
-
-        /* renamed from: f */
-        public int m4279f(int i2) {
-            if (i2 >= 0 && i2 < RecyclerView.this.mState.m4306b()) {
-                return !RecyclerView.this.mState.m4309e() ? i2 : RecyclerView.this.mAdapterHelper.m4423m(i2);
-            }
-            throw new IndexOutOfBoundsException("invalid position " + i2 + ". State item count is " + RecyclerView.this.mState.m4306b() + RecyclerView.this.exceptionLabel());
-        }
-
-        /* renamed from: g */
-        void m4280g(AbstractC0590c0 abstractC0590c0) {
-            InterfaceC0610w interfaceC0610w = RecyclerView.this.mRecyclerListener;
-            if (interfaceC0610w != null) {
-                interfaceC0610w.m4298a(abstractC0590c0);
-            }
-            AbstractC0594g abstractC0594g = RecyclerView.this.mAdapter;
-            if (abstractC0594g != null) {
-                abstractC0594g.onViewRecycled(abstractC0590c0);
-            }
+        @Override // androidx.recyclerview.widget.RecyclerView.j
+        public void a() {
+            RecyclerView.this.r(null);
             RecyclerView recyclerView = RecyclerView.this;
-            if (recyclerView.mState != null) {
-                recyclerView.mViewInfoStore.m4578q(abstractC0590c0);
-            }
-        }
-
-        /* renamed from: h */
-        AbstractC0590c0 m4281h(int i2) {
-            int size;
-            int iM4423m;
-            ArrayList<AbstractC0590c0> arrayList = this.f3975b;
-            if (arrayList != null && (size = arrayList.size()) != 0) {
-                for (int i3 = 0; i3 < size; i3++) {
-                    AbstractC0590c0 abstractC0590c0 = this.f3975b.get(i3);
-                    if (!abstractC0590c0.wasReturnedFromScrap() && abstractC0590c0.getLayoutPosition() == i2) {
-                        abstractC0590c0.addFlags(32);
-                        return abstractC0590c0;
-                    }
-                }
-                if (RecyclerView.this.mAdapter.hasStableIds() && (iM4423m = RecyclerView.this.mAdapterHelper.m4423m(i2)) > 0 && iM4423m < RecyclerView.this.mAdapter.getItemCount()) {
-                    long itemId = RecyclerView.this.mAdapter.getItemId(iM4423m);
-                    for (int i4 = 0; i4 < size; i4++) {
-                        AbstractC0590c0 abstractC0590c02 = this.f3975b.get(i4);
-                        if (!abstractC0590c02.wasReturnedFromScrap() && abstractC0590c02.getItemId() == itemId) {
-                            abstractC0590c02.addFlags(32);
-                            return abstractC0590c02;
-                        }
-                    }
-                }
-            }
-            return null;
-        }
-
-        /* renamed from: i */
-        C0608u m4282i() {
-            if (this.f3980g == null) {
-                this.f3980g = new C0608u();
-            }
-            return this.f3980g;
-        }
-
-        /* renamed from: j */
-        int m4283j() {
-            return this.f3974a.size();
-        }
-
-        /* renamed from: k */
-        public List<AbstractC0590c0> m4284k() {
-            return this.f3977d;
-        }
-
-        /* renamed from: l */
-        AbstractC0590c0 m4285l(long j2, int i2, boolean z) {
-            for (int size = this.f3974a.size() - 1; size >= 0; size--) {
-                AbstractC0590c0 abstractC0590c0 = this.f3974a.get(size);
-                if (abstractC0590c0.getItemId() == j2 && !abstractC0590c0.wasReturnedFromScrap()) {
-                    if (i2 == abstractC0590c0.getItemViewType()) {
-                        abstractC0590c0.addFlags(32);
-                        if (abstractC0590c0.isRemoved() && !RecyclerView.this.mState.m4309e()) {
-                            abstractC0590c0.setFlags(2, 14);
-                        }
-                        return abstractC0590c0;
-                    }
-                    if (!z) {
-                        this.f3974a.remove(size);
-                        RecyclerView.this.removeDetachedView(abstractC0590c0.itemView, false);
-                        m4296y(abstractC0590c0.itemView);
-                    }
-                }
-            }
-            int size2 = this.f3976c.size();
-            while (true) {
-                size2--;
-                if (size2 < 0) {
-                    return null;
-                }
-                AbstractC0590c0 abstractC0590c02 = this.f3976c.get(size2);
-                if (abstractC0590c02.getItemId() == j2 && !abstractC0590c02.isAttachedToTransitionOverlay()) {
-                    if (i2 == abstractC0590c02.getItemViewType()) {
-                        if (!z) {
-                            this.f3976c.remove(size2);
-                        }
-                        return abstractC0590c02;
-                    }
-                    if (!z) {
-                        m4263A(size2);
-                        return null;
-                    }
-                }
-            }
-        }
-
-        /* renamed from: m */
-        AbstractC0590c0 m4286m(int i2, boolean z) {
-            View viewM4448e;
-            int size = this.f3974a.size();
-            for (int i3 = 0; i3 < size; i3++) {
-                AbstractC0590c0 abstractC0590c0 = this.f3974a.get(i3);
-                if (!abstractC0590c0.wasReturnedFromScrap() && abstractC0590c0.getLayoutPosition() == i2 && !abstractC0590c0.isInvalid() && (RecyclerView.this.mState.f3998h || !abstractC0590c0.isRemoved())) {
-                    abstractC0590c0.addFlags(32);
-                    return abstractC0590c0;
-                }
-            }
-            if (z || (viewM4448e = RecyclerView.this.mChildHelper.m4448e(i2)) == null) {
-                int size2 = this.f3976c.size();
-                for (int i4 = 0; i4 < size2; i4++) {
-                    AbstractC0590c0 abstractC0590c02 = this.f3976c.get(i4);
-                    if (!abstractC0590c02.isInvalid() && abstractC0590c02.getLayoutPosition() == i2 && !abstractC0590c02.isAttachedToTransitionOverlay()) {
-                        if (!z) {
-                            this.f3976c.remove(i4);
-                        }
-                        return abstractC0590c02;
-                    }
-                }
-                return null;
-            }
-            AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(viewM4448e);
-            RecyclerView.this.mChildHelper.m4460s(viewM4448e);
-            int iM4454m = RecyclerView.this.mChildHelper.m4454m(viewM4448e);
-            if (iM4454m != -1) {
-                RecyclerView.this.mChildHelper.m4447d(iM4454m);
-                m4266D(viewM4448e);
-                childViewHolderInt.addFlags(8224);
-                return childViewHolderInt;
-            }
-            throw new IllegalStateException("layout index should not be -1 after unhiding a view:" + childViewHolderInt + RecyclerView.this.exceptionLabel());
-        }
-
-        /* renamed from: n */
-        View m4287n(int i2) {
-            return this.f3974a.get(i2).itemView;
-        }
-
-        /* renamed from: o */
-        public View m4288o(int i2) {
-            return m4289p(i2, false);
-        }
-
-        /* renamed from: p */
-        View m4289p(int i2, boolean z) {
-            return m4270I(i2, z, RecyclerView.FOREVER_NS).itemView;
-        }
-
-        /* renamed from: s */
-        void m4290s() {
-            int size = this.f3976c.size();
-            for (int i2 = 0; i2 < size; i2++) {
-                C0603p c0603p = (C0603p) this.f3976c.get(i2).itemView.getLayoutParams();
-                if (c0603p != null) {
-                    c0603p.f3966c = true;
-                }
-            }
-        }
-
-        /* renamed from: t */
-        void m4291t() {
-            int size = this.f3976c.size();
-            for (int i2 = 0; i2 < size; i2++) {
-                AbstractC0590c0 abstractC0590c0 = this.f3976c.get(i2);
-                if (abstractC0590c0 != null) {
-                    abstractC0590c0.addFlags(6);
-                    abstractC0590c0.addChangePayload(null);
-                }
-            }
-            AbstractC0594g abstractC0594g = RecyclerView.this.mAdapter;
-            if (abstractC0594g == null || !abstractC0594g.hasStableIds()) {
-                m4297z();
-            }
-        }
-
-        /* renamed from: u */
-        void m4292u(int i2, int i3) {
-            int size = this.f3976c.size();
-            for (int i4 = 0; i4 < size; i4++) {
-                AbstractC0590c0 abstractC0590c0 = this.f3976c.get(i4);
-                if (abstractC0590c0 != null && abstractC0590c0.mPosition >= i2) {
-                    abstractC0590c0.offsetPosition(i3, true);
-                }
-            }
-        }
-
-        /* renamed from: v */
-        void m4293v(int i2, int i3) {
-            int i4;
-            int i5;
-            int i6;
-            int i7;
-            if (i2 < i3) {
-                i4 = -1;
-                i6 = i2;
-                i5 = i3;
-            } else {
-                i4 = 1;
-                i5 = i2;
-                i6 = i3;
-            }
-            int size = this.f3976c.size();
-            for (int i8 = 0; i8 < size; i8++) {
-                AbstractC0590c0 abstractC0590c0 = this.f3976c.get(i8);
-                if (abstractC0590c0 != null && (i7 = abstractC0590c0.mPosition) >= i6 && i7 <= i5) {
-                    if (i7 == i2) {
-                        abstractC0590c0.offsetPosition(i3 - i2, false);
-                    } else {
-                        abstractC0590c0.offsetPosition(i4, false);
-                    }
-                }
-            }
-        }
-
-        /* renamed from: w */
-        void m4294w(int i2, int i3, boolean z) {
-            int i4 = i2 + i3;
-            for (int size = this.f3976c.size() - 1; size >= 0; size--) {
-                AbstractC0590c0 abstractC0590c0 = this.f3976c.get(size);
-                if (abstractC0590c0 != null) {
-                    int i5 = abstractC0590c0.mPosition;
-                    if (i5 >= i4) {
-                        abstractC0590c0.offsetPosition(-i3, z);
-                    } else if (i5 >= i2) {
-                        abstractC0590c0.addFlags(8);
-                        m4263A(size);
-                    }
-                }
-            }
-        }
-
-        /* renamed from: x */
-        void m4295x(AbstractC0594g abstractC0594g, AbstractC0594g abstractC0594g2, boolean z) {
-            m4276c();
-            m4282i().m4254h(abstractC0594g, abstractC0594g2, z);
-        }
-
-        /* renamed from: y */
-        void m4296y(View view) {
-            AbstractC0590c0 childViewHolderInt = RecyclerView.getChildViewHolderInt(view);
-            childViewHolderInt.mScrapContainer = null;
-            childViewHolderInt.mInChangeScrap = false;
-            childViewHolderInt.clearReturnedFromScrapFlag();
-            m4265C(childViewHolderInt);
-        }
-
-        /* renamed from: z */
-        void m4297z() {
-            for (int size = this.f3976c.size() - 1; size >= 0; size--) {
-                m4263A(size);
-            }
-            this.f3976c.clear();
-            if (RecyclerView.ALLOW_THREAD_GAP_WORK) {
-                RecyclerView.this.mPrefetchRegistry.m4517b();
-            }
-        }
-    }
-
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$w */
-    public interface InterfaceC0610w {
-        /* renamed from: a */
-        void m4298a(AbstractC0590c0 abstractC0590c0);
-    }
-
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$x */
-    private class C0611x extends AbstractC0596i {
-        C0611x() {
-        }
-
-        /* renamed from: a */
-        void m4299a() {
-            if (RecyclerView.POST_UPDATES_ON_ANIMATION) {
-                RecyclerView recyclerView = RecyclerView.this;
-                if (recyclerView.mHasFixedSize && recyclerView.mIsAttached) {
-                    C0311u.m2115a0(recyclerView, recyclerView.mUpdateChildViewsRunnable);
-                    return;
-                }
-            }
-            RecyclerView recyclerView2 = RecyclerView.this;
-            recyclerView2.mAdapterUpdateDuringMeasure = true;
-            recyclerView2.requestLayout();
-        }
-
-        @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0596i
-        public void onChanged() {
-            RecyclerView.this.assertNotInLayoutOrScroll(null);
-            RecyclerView recyclerView = RecyclerView.this;
-            recyclerView.mState.f3997g = true;
-            recyclerView.processDataSetCompletelyChanged(true);
-            if (RecyclerView.this.mAdapterHelper.m4426p()) {
+            recyclerView.f28584K0.f28666g = true;
+            recyclerView.a1(true);
+            if (RecyclerView.this.f28573F.p()) {
                 return;
             }
             RecyclerView.this.requestLayout();
         }
 
-        @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0596i
-        public void onItemRangeChanged(int i2, int i3, Object obj) {
-            RecyclerView.this.assertNotInLayoutOrScroll(null);
-            if (RecyclerView.this.mAdapterHelper.m4428r(i2, i3, obj)) {
-                m4299a();
+        @Override // androidx.recyclerview.widget.RecyclerView.j
+        public void c(int i10, int i11, Object obj) {
+            RecyclerView.this.r(null);
+            if (RecyclerView.this.f28573F.r(i10, i11, obj)) {
+                h();
             }
         }
 
-        @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0596i
-        public void onItemRangeInserted(int i2, int i3) {
-            RecyclerView.this.assertNotInLayoutOrScroll(null);
-            if (RecyclerView.this.mAdapterHelper.m4429s(i2, i3)) {
-                m4299a();
+        @Override // androidx.recyclerview.widget.RecyclerView.j
+        public void d(int i10, int i11) {
+            RecyclerView.this.r(null);
+            if (RecyclerView.this.f28573F.s(i10, i11)) {
+                h();
             }
         }
 
-        @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0596i
-        public void onItemRangeMoved(int i2, int i3, int i4) {
-            RecyclerView.this.assertNotInLayoutOrScroll(null);
-            if (RecyclerView.this.mAdapterHelper.m4430t(i2, i3, i4)) {
-                m4299a();
+        @Override // androidx.recyclerview.widget.RecyclerView.j
+        public void e(int i10, int i11, int i12) {
+            RecyclerView.this.r(null);
+            if (RecyclerView.this.f28573F.t(i10, i11, i12)) {
+                h();
             }
         }
 
-        @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0596i
-        public void onItemRangeRemoved(int i2, int i3) {
-            RecyclerView.this.assertNotInLayoutOrScroll(null);
-            if (RecyclerView.this.mAdapterHelper.m4431u(i2, i3)) {
-                m4299a();
-            }
-        }
-    }
-
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$y */
-    public static abstract class AbstractC0612y {
-        private AbstractC0602o mLayoutManager;
-        private boolean mPendingInitialRun;
-        private RecyclerView mRecyclerView;
-        private boolean mRunning;
-        private boolean mStarted;
-        private View mTargetView;
-        private int mTargetPosition = -1;
-        private final a mRecyclingAction = new a(0, 0);
-
-        /* renamed from: androidx.recyclerview.widget.RecyclerView$y$a */
-        public static class a {
-
-            /* renamed from: a */
-            private int f3984a;
-
-            /* renamed from: b */
-            private int f3985b;
-
-            /* renamed from: c */
-            private int f3986c;
-
-            /* renamed from: d */
-            private int f3987d;
-
-            /* renamed from: e */
-            private Interpolator f3988e;
-
-            /* renamed from: f */
-            private boolean f3989f;
-
-            /* renamed from: g */
-            private int f3990g;
-
-            public a(int i2, int i3) {
-                this(i2, i3, Integer.MIN_VALUE, null);
-            }
-
-            /* renamed from: e */
-            private void m4300e() {
-                if (this.f3988e != null && this.f3986c < 1) {
-                    throw new IllegalStateException("If you provide an interpolator, you must set a positive duration");
-                }
-                if (this.f3986c < 1) {
-                    throw new IllegalStateException("Scroll duration must be a positive number");
-                }
-            }
-
-            /* renamed from: a */
-            boolean m4301a() {
-                return this.f3987d >= 0;
-            }
-
-            /* renamed from: b */
-            public void m4302b(int i2) {
-                this.f3987d = i2;
-            }
-
-            /* renamed from: c */
-            void m4303c(RecyclerView recyclerView) {
-                int i2 = this.f3987d;
-                if (i2 >= 0) {
-                    this.f3987d = -1;
-                    recyclerView.jumpToPositionForSmoothScroller(i2);
-                    this.f3989f = false;
-                } else {
-                    if (!this.f3989f) {
-                        this.f3990g = 0;
-                        return;
-                    }
-                    m4300e();
-                    recyclerView.mViewFlinger.m4193f(this.f3984a, this.f3985b, this.f3986c, this.f3988e);
-                    int i3 = this.f3990g + 1;
-                    this.f3990g = i3;
-                    if (i3 > 10) {
-                        Log.e(RecyclerView.TAG, "Smooth Scroll action is being updated too frequently. Make sure you are not changing it unless necessary");
-                    }
-                    this.f3989f = false;
-                }
-            }
-
-            /* renamed from: d */
-            public void m4304d(int i2, int i3, int i4, Interpolator interpolator) {
-                this.f3984a = i2;
-                this.f3985b = i3;
-                this.f3986c = i4;
-                this.f3988e = interpolator;
-                this.f3989f = true;
-            }
-
-            public a(int i2, int i3, int i4, Interpolator interpolator) {
-                this.f3987d = -1;
-                this.f3989f = false;
-                this.f3990g = 0;
-                this.f3984a = i2;
-                this.f3985b = i3;
-                this.f3986c = i4;
-                this.f3988e = interpolator;
+        @Override // androidx.recyclerview.widget.RecyclerView.j
+        public void f(int i10, int i11) {
+            RecyclerView.this.r(null);
+            if (RecyclerView.this.f28573F.u(i10, i11)) {
+                h();
             }
         }
 
-        /* renamed from: androidx.recyclerview.widget.RecyclerView$y$b */
-        public interface b {
-            PointF computeScrollVectorForPosition(int i2);
-        }
-
-        public PointF computeScrollVectorForPosition(int i2) {
-            Object layoutManager = getLayoutManager();
-            if (layoutManager instanceof b) {
-                return ((b) layoutManager).computeScrollVectorForPosition(i2);
-            }
-            Log.w(RecyclerView.TAG, "You should override computeScrollVectorForPosition when the LayoutManager does not implement " + b.class.getCanonicalName());
-            return null;
-        }
-
-        public View findViewByPosition(int i2) {
-            return this.mRecyclerView.mLayout.findViewByPosition(i2);
-        }
-
-        public int getChildCount() {
-            return this.mRecyclerView.mLayout.getChildCount();
-        }
-
-        public int getChildPosition(View view) {
-            return this.mRecyclerView.getChildLayoutPosition(view);
-        }
-
-        public AbstractC0602o getLayoutManager() {
-            return this.mLayoutManager;
-        }
-
-        public int getTargetPosition() {
-            return this.mTargetPosition;
-        }
-
-        @Deprecated
-        public void instantScrollToPosition(int i2) {
-            this.mRecyclerView.scrollToPosition(i2);
-        }
-
-        public boolean isPendingInitialRun() {
-            return this.mPendingInitialRun;
-        }
-
-        public boolean isRunning() {
-            return this.mRunning;
-        }
-
-        protected void normalize(PointF pointF) {
-            float f2 = pointF.x;
-            float f3 = pointF.y;
-            float fSqrt = (float) Math.sqrt((f2 * f2) + (f3 * f3));
-            pointF.x /= fSqrt;
-            pointF.y /= fSqrt;
-        }
-
-        void onAnimation(int i2, int i3) {
-            PointF pointFComputeScrollVectorForPosition;
-            RecyclerView recyclerView = this.mRecyclerView;
-            if (this.mTargetPosition == -1 || recyclerView == null) {
-                stop();
-            }
-            if (this.mPendingInitialRun && this.mTargetView == null && this.mLayoutManager != null && (pointFComputeScrollVectorForPosition = computeScrollVectorForPosition(this.mTargetPosition)) != null) {
-                float f2 = pointFComputeScrollVectorForPosition.x;
-                if (f2 != 0.0f || pointFComputeScrollVectorForPosition.y != 0.0f) {
-                    recyclerView.scrollStep((int) Math.signum(f2), (int) Math.signum(pointFComputeScrollVectorForPosition.y), null);
-                }
-            }
-            this.mPendingInitialRun = false;
-            View view = this.mTargetView;
-            if (view != null) {
-                if (getChildPosition(view) == this.mTargetPosition) {
-                    onTargetFound(this.mTargetView, recyclerView.mState, this.mRecyclingAction);
-                    this.mRecyclingAction.m4303c(recyclerView);
-                    stop();
-                } else {
-                    Log.e(RecyclerView.TAG, "Passed over target position while smooth scrolling.");
-                    this.mTargetView = null;
-                }
-            }
-            if (this.mRunning) {
-                onSeekTargetStep(i2, i3, recyclerView.mState, this.mRecyclingAction);
-                boolean zM4301a = this.mRecyclingAction.m4301a();
-                this.mRecyclingAction.m4303c(recyclerView);
-                if (zM4301a && this.mRunning) {
-                    this.mPendingInitialRun = true;
-                    recyclerView.mViewFlinger.m4192e();
-                }
-            }
-        }
-
-        protected void onChildAttachedToWindow(View view) {
-            if (getChildPosition(view) == getTargetPosition()) {
-                this.mTargetView = view;
-            }
-        }
-
-        protected abstract void onSeekTargetStep(int i2, int i3, C0613z c0613z, a aVar);
-
-        protected abstract void onStart();
-
-        protected abstract void onStop();
-
-        protected abstract void onTargetFound(View view, C0613z c0613z, a aVar);
-
-        public void setTargetPosition(int i2) {
-            this.mTargetPosition = i2;
-        }
-
-        void start(RecyclerView recyclerView, AbstractC0602o abstractC0602o) {
-            recyclerView.mViewFlinger.m4194g();
-            if (this.mStarted) {
-                Log.w(RecyclerView.TAG, "An instance of " + getClass().getSimpleName() + " was started more than once. Each instance of" + getClass().getSimpleName() + " is intended to only be used once. You should create a new instance for each use.");
-            }
-            this.mRecyclerView = recyclerView;
-            this.mLayoutManager = abstractC0602o;
-            int i2 = this.mTargetPosition;
-            if (i2 == -1) {
-                throw new IllegalArgumentException("Invalid target position");
-            }
-            recyclerView.mState.f3991a = i2;
-            this.mRunning = true;
-            this.mPendingInitialRun = true;
-            this.mTargetView = findViewByPosition(getTargetPosition());
-            onStart();
-            this.mRecyclerView.mViewFlinger.m4192e();
-            this.mStarted = true;
-        }
-
-        protected final void stop() {
-            if (this.mRunning) {
-                this.mRunning = false;
-                onStop();
-                this.mRecyclerView.mState.f3991a = -1;
-                this.mTargetView = null;
-                this.mTargetPosition = -1;
-                this.mPendingInitialRun = false;
-                this.mLayoutManager.onSmoothScrollerStopped(this);
-                this.mLayoutManager = null;
-                this.mRecyclerView = null;
-            }
-        }
-    }
-
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$z */
-    public static class C0613z {
-
-        /* renamed from: b */
-        private SparseArray<Object> f3992b;
-
-        /* renamed from: m */
-        int f4003m;
-
-        /* renamed from: n */
-        long f4004n;
-
-        /* renamed from: o */
-        int f4005o;
-
-        /* renamed from: p */
-        int f4006p;
-
-        /* renamed from: q */
-        int f4007q;
-
-        /* renamed from: a */
-        int f3991a = -1;
-
-        /* renamed from: c */
-        int f3993c = 0;
-
-        /* renamed from: d */
-        int f3994d = 0;
-
-        /* renamed from: e */
-        int f3995e = 1;
-
-        /* renamed from: f */
-        int f3996f = 0;
-
-        /* renamed from: g */
-        boolean f3997g = false;
-
-        /* renamed from: h */
-        boolean f3998h = false;
-
-        /* renamed from: i */
-        boolean f3999i = false;
-
-        /* renamed from: j */
-        boolean f4000j = false;
-
-        /* renamed from: k */
-        boolean f4001k = false;
-
-        /* renamed from: l */
-        boolean f4002l = false;
-
-        /* renamed from: a */
-        void m4305a(int i2) {
-            if ((this.f3995e & i2) != 0) {
+        @Override // androidx.recyclerview.widget.RecyclerView.j
+        public void g() {
+            h hVar;
+            RecyclerView recyclerView = RecyclerView.this;
+            if (recyclerView.f28571E == null || (hVar = recyclerView.f28589N) == null || !hVar.e()) {
                 return;
             }
-            throw new IllegalStateException("Layout state should be one of " + Integer.toBinaryString(i2) + " but it is " + Integer.toBinaryString(this.f3995e));
+            RecyclerView.this.requestLayout();
         }
 
-        /* renamed from: b */
-        public int m4306b() {
-            return this.f3998h ? this.f3993c - this.f3994d : this.f3996f;
-        }
-
-        /* renamed from: c */
-        public int m4307c() {
-            return this.f3991a;
-        }
-
-        /* renamed from: d */
-        public boolean m4308d() {
-            return this.f3991a != -1;
-        }
-
-        /* renamed from: e */
-        public boolean m4309e() {
-            return this.f3998h;
-        }
-
-        /* renamed from: f */
-        void m4310f(AbstractC0594g abstractC0594g) {
-            this.f3995e = 1;
-            this.f3996f = abstractC0594g.getItemCount();
-            this.f3998h = false;
-            this.f3999i = false;
-            this.f4000j = false;
-        }
-
-        /* renamed from: g */
-        public boolean m4311g() {
-            return this.f4002l;
-        }
-
-        public String toString() {
-            return "State{mTargetPosition=" + this.f3991a + ", mData=" + this.f3992b + ", mItemCount=" + this.f3996f + ", mIsMeasuring=" + this.f4000j + ", mPreviousLayoutItemCount=" + this.f3993c + ", mDeletedInvisibleItemCountSincePreviousLayout=" + this.f3994d + ", mStructureChanged=" + this.f3997g + ", mInPreLayout=" + this.f3998h + ", mRunSimpleAnimations=" + this.f4001k + ", mRunPredictiveAnimations=" + this.f4002l + '}';
+        void h() {
+            RecyclerView recyclerView = RecyclerView.this;
+            if (recyclerView.f28605V && recyclerView.f28603U) {
+                X.f0(recyclerView, recyclerView.f28581J);
+            } else {
+                recyclerView.f28624g0 = true;
+                recyclerView.requestLayout();
+            }
         }
     }
 
     static {
-        int i2 = Build.VERSION.SDK_INT;
-        FORCE_INVALIDATE_DISPLAY_LIST = i2 == 18 || i2 == 19 || i2 == 20;
-        ALLOW_SIZE_IN_UNSPECIFIED_SPEC = i2 >= 23;
-        POST_UPDATES_ON_ANIMATION = i2 >= 16;
-        ALLOW_THREAD_GAP_WORK = i2 >= 21;
-        FORCE_ABS_FOCUS_SEARCH_DIRECTION = i2 <= 15;
-        IGNORE_DETACHED_FOCUSED_CHILD = i2 <= 15;
-        Class<?> cls = Integer.TYPE;
-        LAYOUT_MANAGER_CONSTRUCTOR_SIGNATURE = new Class[]{Context.class, AttributeSet.class, cls, cls};
-        sQuinticInterpolator = new InterpolatorC0589c();
+        Class cls = Integer.TYPE;
+        f28561n1 = new Class[]{Context.class, AttributeSet.class, cls, cls};
+        f28562o1 = new InterpolatorC2166c();
+        f28563p1 = new D();
     }
 
     public RecyclerView(Context context) {
         this(context, null);
     }
 
-    private void addAnimatingView(AbstractC0590c0 abstractC0590c0) {
-        View view = abstractC0590c0.itemView;
-        boolean z = view.getParent() == this;
-        this.mRecycler.m4271J(getChildViewHolder(view));
-        if (abstractC0590c0.isTmpDetached()) {
-            this.mChildHelper.m4446c(view, -1, view.getLayoutParams(), true);
-        } else if (z) {
-            this.mChildHelper.m4453k(view);
-        } else {
-            this.mChildHelper.m4445b(view, true);
-        }
+    private void A0() {
+        this.f28575G = new d(new C2169f());
     }
 
-    private void animateChange(AbstractC0590c0 abstractC0590c0, AbstractC0590c0 abstractC0590c02, AbstractC0599l.c cVar, AbstractC0599l.c cVar2, boolean z, boolean z2) {
-        abstractC0590c0.setIsRecyclable(false);
-        if (z) {
-            addAnimatingView(abstractC0590c0);
-        }
-        if (abstractC0590c0 != abstractC0590c02) {
-            if (z2) {
-                addAnimatingView(abstractC0590c02);
-            }
-            abstractC0590c0.mShadowedHolder = abstractC0590c02;
-            addAnimatingView(abstractC0590c0);
-            this.mRecycler.m4271J(abstractC0590c0);
-            abstractC0590c02.setIsRecyclable(false);
-            abstractC0590c02.mShadowingHolder = abstractC0590c0;
-        }
-        if (this.mItemAnimator.animateChange(abstractC0590c0, abstractC0590c02, cVar, cVar2)) {
-            postAnimationRunner();
-        }
-    }
-
-    private void cancelScroll() {
-        resetScroll();
-        setScrollState(0);
-    }
-
-    static void clearNestedRecyclerViewIfNotNested(AbstractC0590c0 abstractC0590c0) {
-        WeakReference<RecyclerView> weakReference = abstractC0590c0.mNestedRecyclerView;
-        if (weakReference != null) {
-            RecyclerView recyclerView = weakReference.get();
-            while (recyclerView != null) {
-                if (recyclerView == abstractC0590c0.itemView) {
-                    return;
-                }
-                Object parent = recyclerView.getParent();
-                recyclerView = parent instanceof View ? (View) parent : null;
-            }
-            abstractC0590c0.mNestedRecyclerView = null;
-        }
-    }
-
-    private void createLayoutManager(Context context, String str, AttributeSet attributeSet, int i2, int i3) throws NoSuchMethodException, SecurityException {
+    private void B(Context context, String str, AttributeSet attributeSet, int i10, int i11) throws NoSuchMethodException, SecurityException {
+        Object[] objArr;
         Constructor constructor;
         if (str != null) {
             String strTrim = str.trim();
             if (strTrim.isEmpty()) {
                 return;
             }
-            String fullClassName = getFullClassName(context, strTrim);
+            String strS0 = s0(context, strTrim);
             try {
-                Class<? extends U> clsAsSubclass = Class.forName(fullClassName, false, isInEditMode() ? getClass().getClassLoader() : context.getClassLoader()).asSubclass(AbstractC0602o.class);
-                Object[] objArr = null;
+                Class<? extends U> clsAsSubclass = Class.forName(strS0, false, isInEditMode() ? getClass().getClassLoader() : context.getClassLoader()).asSubclass(q.class);
                 try {
-                    constructor = clsAsSubclass.getConstructor(LAYOUT_MANAGER_CONSTRUCTOR_SIGNATURE);
-                    objArr = new Object[]{context, attributeSet, Integer.valueOf(i2), Integer.valueOf(i3)};
-                } catch (NoSuchMethodException e2) {
+                    constructor = clsAsSubclass.getConstructor(f28561n1);
+                    objArr = new Object[]{context, attributeSet, Integer.valueOf(i10), Integer.valueOf(i11)};
+                } catch (NoSuchMethodException e10) {
+                    objArr = null;
                     try {
-                        constructor = clsAsSubclass.getConstructor(new Class[0]);
-                    } catch (NoSuchMethodException e3) {
-                        e3.initCause(e2);
-                        throw new IllegalStateException(attributeSet.getPositionDescription() + ": Error creating LayoutManager " + fullClassName, e3);
+                        constructor = clsAsSubclass.getConstructor(null);
+                    } catch (NoSuchMethodException e11) {
+                        e11.initCause(e10);
+                        throw new IllegalStateException(attributeSet.getPositionDescription() + ": Error creating LayoutManager " + strS0, e11);
                     }
                 }
                 constructor.setAccessible(true);
-                setLayoutManager((AbstractC0602o) constructor.newInstance(objArr));
-            } catch (ClassCastException e4) {
-                throw new IllegalStateException(attributeSet.getPositionDescription() + ": Class is not a LayoutManager " + fullClassName, e4);
-            } catch (ClassNotFoundException e5) {
-                throw new IllegalStateException(attributeSet.getPositionDescription() + ": Unable to find LayoutManager " + fullClassName, e5);
-            } catch (IllegalAccessException e6) {
-                throw new IllegalStateException(attributeSet.getPositionDescription() + ": Cannot access non-public constructor " + fullClassName, e6);
-            } catch (InstantiationException e7) {
-                throw new IllegalStateException(attributeSet.getPositionDescription() + ": Could not instantiate the LayoutManager: " + fullClassName, e7);
-            } catch (InvocationTargetException e8) {
-                throw new IllegalStateException(attributeSet.getPositionDescription() + ": Could not instantiate the LayoutManager: " + fullClassName, e8);
+                setLayoutManager((q) constructor.newInstance(objArr));
+            } catch (ClassCastException e12) {
+                throw new IllegalStateException(attributeSet.getPositionDescription() + ": Class is not a LayoutManager " + strS0, e12);
+            } catch (ClassNotFoundException e13) {
+                throw new IllegalStateException(attributeSet.getPositionDescription() + ": Unable to find LayoutManager " + strS0, e13);
+            } catch (IllegalAccessException e14) {
+                throw new IllegalStateException(attributeSet.getPositionDescription() + ": Cannot access non-public constructor " + strS0, e14);
+            } catch (InstantiationException e15) {
+                throw new IllegalStateException(attributeSet.getPositionDescription() + ": Could not instantiate the LayoutManager: " + strS0, e15);
+            } catch (InvocationTargetException e16) {
+                throw new IllegalStateException(attributeSet.getPositionDescription() + ": Could not instantiate the LayoutManager: " + strS0, e16);
             }
         }
     }
 
-    private boolean didChildRangeChange(int i2, int i3) {
-        findMinMaxChildLayoutPositions(this.mMinMaxLayoutPositions);
-        int[] iArr = this.mMinMaxLayoutPositions;
-        return (iArr[0] == i2 && iArr[1] == i3) ? false : true;
+    private boolean D(int i10, int i11) {
+        a0(this.f28600S0);
+        int[] iArr = this.f28600S0;
+        return (iArr[0] == i10 && iArr[1] == i11) ? false : true;
     }
 
-    private void dispatchContentChangedIfNecessary() {
-        int i2 = this.mEatenAccessibilityChangeFlags;
-        this.mEatenAccessibilityChangeFlags = 0;
-        if (i2 == 0 || !isAccessibilityEnabled()) {
+    private boolean F0(View view, View view2, int i10) {
+        int i11;
+        if (view2 == null || view2 == this || view2 == view || X(view2) == null) {
+            return false;
+        }
+        if (view == null || X(view) == null) {
+            return true;
+        }
+        this.f28583K.set(0, 0, view.getWidth(), view.getHeight());
+        this.f28585L.set(0, 0, view2.getWidth(), view2.getHeight());
+        offsetDescendantRectToMyCoords(view, this.f28583K);
+        offsetDescendantRectToMyCoords(view2, this.f28585L);
+        char c10 = 65535;
+        int i12 = this.f28591O.d0() == 1 ? -1 : 1;
+        Rect rect = this.f28583K;
+        int i13 = rect.left;
+        Rect rect2 = this.f28585L;
+        int i14 = rect2.left;
+        if ((i13 < i14 || rect.right <= i14) && rect.right < rect2.right) {
+            i11 = 1;
+        } else {
+            int i15 = rect.right;
+            int i16 = rect2.right;
+            i11 = ((i15 > i16 || i13 >= i16) && i13 > i14) ? -1 : 0;
+        }
+        int i17 = rect.top;
+        int i18 = rect2.top;
+        if ((i17 < i18 || rect.bottom <= i18) && rect.bottom < rect2.bottom) {
+            c10 = 1;
+        } else {
+            int i19 = rect.bottom;
+            int i20 = rect2.bottom;
+            if ((i19 <= i20 && i17 < i20) || i17 <= i18) {
+                c10 = 0;
+            }
+        }
+        if (i10 == 1) {
+            return c10 < 0 || (c10 == 0 && i11 * i12 < 0);
+        }
+        if (i10 == 2) {
+            return c10 > 0 || (c10 == 0 && i11 * i12 > 0);
+        }
+        if (i10 == 17) {
+            return i11 < 0;
+        }
+        if (i10 == 33) {
+            return c10 < 0;
+        }
+        if (i10 == 66) {
+            return i11 > 0;
+        }
+        if (i10 == 130) {
+            return c10 > 0;
+        }
+        throw new IllegalArgumentException("Invalid direction: " + i10 + V());
+    }
+
+    private void G() {
+        int i10 = this.f28622f0;
+        this.f28622f0 = 0;
+        if (i10 == 0 || !D0()) {
             return;
         }
         AccessibilityEvent accessibilityEventObtain = AccessibilityEvent.obtain();
-        accessibilityEventObtain.setEventType(AbstractC0599l.FLAG_MOVED);
-        C0288b.m1934b(accessibilityEventObtain, i2);
+        accessibilityEventObtain.setEventType(2048);
+        t1.b.b(accessibilityEventObtain, i10);
         sendAccessibilityEventUnchecked(accessibilityEventObtain);
     }
 
-    private void dispatchLayoutStep1() {
-        this.mState.m4305a(1);
-        fillRemainingScrollValues(this.mState);
-        this.mState.f4000j = false;
-        startInterceptRequestLayout();
-        this.mViewInfoStore.m4568f();
-        onEnterLayoutOrScroll();
-        processAdapterUpdatesAndSetAnimationFlags();
-        saveFocusInfo();
-        C0613z c0613z = this.mState;
-        c0613z.f3999i = c0613z.f4001k && this.mItemsChanged;
-        this.mItemsChanged = false;
-        this.mItemsAddedOrRemoved = false;
-        c0613z.f3998h = c0613z.f4002l;
-        c0613z.f3996f = this.mAdapter.getItemCount();
-        findMinMaxChildLayoutPositions(this.mMinMaxLayoutPositions);
-        if (this.mState.f4001k) {
-            int iM4450g = this.mChildHelper.m4450g();
-            for (int i2 = 0; i2 < iM4450g; i2++) {
-                AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(this.mChildHelper.m4449f(i2));
-                if (!childViewHolderInt.shouldIgnore() && (!childViewHolderInt.isInvalid() || this.mAdapter.hasStableIds())) {
-                    this.mViewInfoStore.m4567e(childViewHolderInt, this.mItemAnimator.recordPreLayoutInformation(this.mState, childViewHolderInt, AbstractC0599l.buildAdapterChangeFlagsForAnimations(childViewHolderInt), childViewHolderInt.getUnmodifiedPayloads()));
-                    if (this.mState.f3999i && childViewHolderInt.isUpdated() && !childViewHolderInt.isRemoved() && !childViewHolderInt.shouldIgnore() && !childViewHolderInt.isInvalid()) {
-                        this.mViewInfoStore.m4565c(getChangedHolderKey(childViewHolderInt), childViewHolderInt);
-                    }
-                }
-            }
+    /* JADX WARN: Multi-variable type inference failed */
+    private void G1(int i10) {
+        boolean zP = this.f28591O.p();
+        int i11 = zP;
+        if (this.f28591O.q()) {
+            i11 = (zP ? 1 : 0) | 2;
         }
-        if (this.mState.f4002l) {
-            saveOldPositions();
-            C0613z c0613z2 = this.mState;
-            boolean z = c0613z2.f3997g;
-            c0613z2.f3997g = false;
-            this.mLayout.onLayoutChildren(this.mRecycler, c0613z2);
-            this.mState.f3997g = z;
-            for (int i3 = 0; i3 < this.mChildHelper.m4450g(); i3++) {
-                AbstractC0590c0 childViewHolderInt2 = getChildViewHolderInt(this.mChildHelper.m4449f(i3));
-                if (!childViewHolderInt2.shouldIgnore() && !this.mViewInfoStore.m4571i(childViewHolderInt2)) {
-                    int iBuildAdapterChangeFlagsForAnimations = AbstractC0599l.buildAdapterChangeFlagsForAnimations(childViewHolderInt2);
-                    boolean zHasAnyOfTheFlags = childViewHolderInt2.hasAnyOfTheFlags(8192);
-                    if (!zHasAnyOfTheFlags) {
-                        iBuildAdapterChangeFlagsForAnimations |= AbstractC0599l.FLAG_APPEARED_IN_PRE_LAYOUT;
-                    }
-                    AbstractC0599l.c cVarRecordPreLayoutInformation = this.mItemAnimator.recordPreLayoutInformation(this.mState, childViewHolderInt2, iBuildAdapterChangeFlagsForAnimations, childViewHolderInt2.getUnmodifiedPayloads());
-                    if (zHasAnyOfTheFlags) {
-                        recordAnimationInfoIfBouncedHiddenView(childViewHolderInt2, cVarRecordPreLayoutInformation);
-                    } else {
-                        this.mViewInfoStore.m4563a(childViewHolderInt2, cVarRecordPreLayoutInformation);
-                    }
-                }
-            }
-            clearOldPositions();
+        F1(i11, i10);
+    }
+
+    private boolean H1(MotionEvent motionEvent) {
+        boolean z10;
+        EdgeEffect edgeEffect = this.f28632o0;
+        if (edgeEffect == null || androidx.core.widget.e.b(edgeEffect) == 0.0f || canScrollHorizontally(-1)) {
+            z10 = false;
         } else {
-            clearOldPositions();
+            androidx.core.widget.e.d(this.f28632o0, 0.0f, 1.0f - (motionEvent.getY() / getHeight()));
+            z10 = true;
         }
-        onExitLayoutOrScroll();
-        stopInterceptRequestLayout(false);
-        this.mState.f3995e = 2;
+        EdgeEffect edgeEffect2 = this.f28634q0;
+        if (edgeEffect2 != null && androidx.core.widget.e.b(edgeEffect2) != 0.0f && !canScrollHorizontally(1)) {
+            androidx.core.widget.e.d(this.f28634q0, 0.0f, motionEvent.getY() / getHeight());
+            z10 = true;
+        }
+        EdgeEffect edgeEffect3 = this.f28633p0;
+        if (edgeEffect3 != null && androidx.core.widget.e.b(edgeEffect3) != 0.0f && !canScrollVertically(-1)) {
+            androidx.core.widget.e.d(this.f28633p0, 0.0f, motionEvent.getX() / getWidth());
+            z10 = true;
+        }
+        EdgeEffect edgeEffect4 = this.f28635r0;
+        if (edgeEffect4 == null || androidx.core.widget.e.b(edgeEffect4) == 0.0f || canScrollVertically(1)) {
+            return z10;
+        }
+        androidx.core.widget.e.d(this.f28635r0, 0.0f, 1.0f - (motionEvent.getX() / getWidth()));
+        return true;
     }
 
-    private void dispatchLayoutStep2() {
-        startInterceptRequestLayout();
-        onEnterLayoutOrScroll();
-        this.mState.m4305a(6);
-        this.mAdapterHelper.m4421j();
-        this.mState.f3996f = this.mAdapter.getItemCount();
-        C0613z c0613z = this.mState;
-        c0613z.f3994d = 0;
-        c0613z.f3998h = false;
-        this.mLayout.onLayoutChildren(this.mRecycler, c0613z);
-        C0613z c0613z2 = this.mState;
-        c0613z2.f3997g = false;
-        this.mPendingSavedState = null;
-        c0613z2.f4001k = c0613z2.f4001k && this.mItemAnimator != null;
-        c0613z2.f3995e = 4;
-        onExitLayoutOrScroll();
-        stopInterceptRequestLayout(false);
-    }
-
-    private void dispatchLayoutStep3() {
-        this.mState.m4305a(4);
-        startInterceptRequestLayout();
-        onEnterLayoutOrScroll();
-        C0613z c0613z = this.mState;
-        c0613z.f3995e = 1;
-        if (c0613z.f4001k) {
-            for (int iM4450g = this.mChildHelper.m4450g() - 1; iM4450g >= 0; iM4450g--) {
-                AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(this.mChildHelper.m4449f(iM4450g));
-                if (!childViewHolderInt.shouldIgnore()) {
-                    long changedHolderKey = getChangedHolderKey(childViewHolderInt);
-                    AbstractC0599l.c cVarRecordPostLayoutInformation = this.mItemAnimator.recordPostLayoutInformation(this.mState, childViewHolderInt);
-                    AbstractC0590c0 abstractC0590c0M4569g = this.mViewInfoStore.m4569g(changedHolderKey);
-                    if (abstractC0590c0M4569g == null || abstractC0590c0M4569g.shouldIgnore()) {
-                        this.mViewInfoStore.m4566d(childViewHolderInt, cVarRecordPostLayoutInformation);
+    private void I() {
+        this.f28584K0.a(1);
+        W(this.f28584K0);
+        this.f28584K0.f28669j = false;
+        E1();
+        this.f28577H.f();
+        R0();
+        Z0();
+        q1();
+        C c10 = this.f28584K0;
+        c10.f28668i = c10.f28670k && this.f28592O0;
+        this.f28592O0 = false;
+        this.f28590N0 = false;
+        c10.f28667h = c10.f28671l;
+        c10.f28665f = this.f28589N.h();
+        a0(this.f28600S0);
+        if (this.f28584K0.f28670k) {
+            int iG = this.f28575G.g();
+            for (int i10 = 0; i10 < iG; i10++) {
+                G gO0 = o0(this.f28575G.f(i10));
+                if (!gO0.shouldIgnore() && (!gO0.isInvalid() || this.f28589N.m())) {
+                    this.f28577H.e(gO0, this.f28636s0.t(this.f28584K0, gO0, n.e(gO0), gO0.getUnmodifiedPayloads()));
+                    if (this.f28584K0.f28668i && gO0.isUpdated() && !gO0.isRemoved() && !gO0.shouldIgnore() && !gO0.isInvalid()) {
+                        this.f28577H.c(k0(gO0), gO0);
+                    }
+                }
+            }
+        }
+        if (this.f28584K0.f28671l) {
+            r1();
+            C c11 = this.f28584K0;
+            boolean z10 = c11.f28666g;
+            c11.f28666g = false;
+            this.f28591O.c1(this.f28569D, c11);
+            this.f28584K0.f28666g = z10;
+            for (int i11 = 0; i11 < this.f28575G.g(); i11++) {
+                G gO02 = o0(this.f28575G.f(i11));
+                if (!gO02.shouldIgnore() && !this.f28577H.i(gO02)) {
+                    int iE = n.e(gO02);
+                    boolean zHasAnyOfTheFlags = gO02.hasAnyOfTheFlags(8192);
+                    if (!zHasAnyOfTheFlags) {
+                        iE |= 4096;
+                    }
+                    n.c cVarT = this.f28636s0.t(this.f28584K0, gO02, iE, gO02.getUnmodifiedPayloads());
+                    if (zHasAnyOfTheFlags) {
+                        c1(gO02, cVarT);
                     } else {
-                        boolean zM4570h = this.mViewInfoStore.m4570h(abstractC0590c0M4569g);
-                        boolean zM4570h2 = this.mViewInfoStore.m4570h(childViewHolderInt);
-                        if (zM4570h && abstractC0590c0M4569g == childViewHolderInt) {
-                            this.mViewInfoStore.m4566d(childViewHolderInt, cVarRecordPostLayoutInformation);
+                        this.f28577H.a(gO02, cVarT);
+                    }
+                }
+            }
+            v();
+        } else {
+            v();
+        }
+        S0();
+        I1(false);
+        this.f28584K0.f28664e = 2;
+    }
+
+    private void J() {
+        E1();
+        R0();
+        this.f28584K0.a(6);
+        this.f28573F.j();
+        this.f28584K0.f28665f = this.f28589N.h();
+        this.f28584K0.f28663d = 0;
+        if (this.f28571E != null && this.f28589N.e()) {
+            Parcelable parcelable = this.f28571E.f28644D;
+            if (parcelable != null) {
+                this.f28591O.h1(parcelable);
+            }
+            this.f28571E = null;
+        }
+        C c10 = this.f28584K0;
+        c10.f28667h = false;
+        this.f28591O.c1(this.f28569D, c10);
+        C c11 = this.f28584K0;
+        c11.f28666g = false;
+        c11.f28670k = c11.f28670k && this.f28636s0 != null;
+        c11.f28664e = 4;
+        S0();
+        I1(false);
+    }
+
+    private void J0(int i10, int i11, MotionEvent motionEvent, int i12) {
+        q qVar = this.f28591O;
+        if (qVar == null) {
+            Log.e("RecyclerView", "Cannot scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
+            return;
+        }
+        if (this.f28618d0) {
+            return;
+        }
+        int[] iArr = this.f28608W0;
+        iArr[0] = 0;
+        iArr[1] = 0;
+        boolean zP = qVar.p();
+        boolean zQ = this.f28591O.q();
+        int i13 = zQ ? (zP ? 1 : 0) | 2 : zP ? 1 : 0;
+        float height = motionEvent == null ? getHeight() / 2.0f : motionEvent.getY();
+        float width = motionEvent == null ? getWidth() / 2.0f : motionEvent.getX();
+        int iF1 = i10 - f1(i10, height);
+        int iG1 = i11 - g1(i11, width);
+        F1(i13, i12);
+        if (L(zP ? iF1 : 0, zQ ? iG1 : 0, this.f28608W0, this.f28604U0, i12)) {
+            int[] iArr2 = this.f28608W0;
+            iF1 -= iArr2[0];
+            iG1 -= iArr2[1];
+        }
+        s1(zP ? iF1 : 0, zQ ? iG1 : 0, motionEvent, i12);
+        androidx.recyclerview.widget.k kVar = this.f28580I0;
+        if (kVar != null && (iF1 != 0 || iG1 != 0)) {
+            kVar.f(this, iF1, iG1);
+        }
+        J1(i12);
+    }
+
+    private void K() {
+        this.f28584K0.a(4);
+        E1();
+        R0();
+        C c10 = this.f28584K0;
+        c10.f28664e = 1;
+        if (c10.f28670k) {
+            for (int iG = this.f28575G.g() - 1; iG >= 0; iG--) {
+                G gO0 = o0(this.f28575G.f(iG));
+                if (!gO0.shouldIgnore()) {
+                    long jK0 = k0(gO0);
+                    n.c cVarS = this.f28636s0.s(this.f28584K0, gO0);
+                    G g10 = this.f28577H.g(jK0);
+                    if (g10 == null || g10.shouldIgnore()) {
+                        this.f28577H.d(gO0, cVarS);
+                    } else {
+                        boolean zH = this.f28577H.h(g10);
+                        boolean zH2 = this.f28577H.h(gO0);
+                        if (zH && g10 == gO0) {
+                            this.f28577H.d(gO0, cVarS);
                         } else {
-                            AbstractC0599l.c cVarM4575n = this.mViewInfoStore.m4575n(abstractC0590c0M4569g);
-                            this.mViewInfoStore.m4566d(childViewHolderInt, cVarRecordPostLayoutInformation);
-                            AbstractC0599l.c cVarM4574m = this.mViewInfoStore.m4574m(childViewHolderInt);
-                            if (cVarM4575n == null) {
-                                handleMissingPreInfoForChangeError(changedHolderKey, childViewHolderInt, abstractC0590c0M4569g);
+                            n.c cVarN = this.f28577H.n(g10);
+                            this.f28577H.d(gO0, cVarS);
+                            n.c cVarM = this.f28577H.m(gO0);
+                            if (cVarN == null) {
+                                v0(jK0, gO0, g10);
                             } else {
-                                animateChange(abstractC0590c0M4569g, childViewHolderInt, cVarM4575n, cVarM4574m, zM4570h, zM4570h2);
+                                p(g10, gO0, cVarN, cVarM, zH, zH2);
                             }
                         }
                     }
                 }
             }
-            this.mViewInfoStore.m4576o(this.mViewInfoProcessCallback);
+            this.f28577H.o(this.f28619d1);
         }
-        this.mLayout.removeAndRecycleScrapInt(this.mRecycler);
-        C0613z c0613z2 = this.mState;
-        c0613z2.f3993c = c0613z2.f3996f;
-        this.mDataSetHasChangedAfterLayout = false;
-        this.mDispatchItemsChangedEvent = false;
-        c0613z2.f4001k = false;
-        c0613z2.f4002l = false;
-        this.mLayout.mRequestedSimpleAnimations = false;
-        ArrayList<AbstractC0590c0> arrayList = this.mRecycler.f3975b;
+        this.f28591O.q1(this.f28569D);
+        C c11 = this.f28584K0;
+        c11.f28662c = c11.f28665f;
+        this.f28627j0 = false;
+        this.f28628k0 = false;
+        c11.f28670k = false;
+        c11.f28671l = false;
+        this.f28591O.f28715h = false;
+        ArrayList<G> arrayList = this.f28569D.f28744b;
         if (arrayList != null) {
             arrayList.clear();
         }
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o.mPrefetchMaxObservedInInitialPrefetch) {
-            abstractC0602o.mPrefetchMaxCountObserved = 0;
-            abstractC0602o.mPrefetchMaxObservedInInitialPrefetch = false;
-            this.mRecycler.m4272K();
+        q qVar = this.f28591O;
+        if (qVar.f28721n) {
+            qVar.f28720m = 0;
+            qVar.f28721n = false;
+            this.f28569D.P();
         }
-        this.mLayout.onLayoutCompleted(this.mState);
-        onExitLayoutOrScroll();
-        stopInterceptRequestLayout(false);
-        this.mViewInfoStore.m4568f();
-        int[] iArr = this.mMinMaxLayoutPositions;
-        if (didChildRangeChange(iArr[0], iArr[1])) {
-            dispatchOnScrolled(0, 0);
+        this.f28591O.d1(this.f28584K0);
+        S0();
+        I1(false);
+        this.f28577H.f();
+        int[] iArr = this.f28600S0;
+        if (D(iArr[0], iArr[1])) {
+            O(0, 0);
         }
-        recoverFocusFromState();
-        resetFocusInfo();
+        d1();
+        o1();
     }
 
-    private boolean dispatchToOnItemTouchListeners(MotionEvent motionEvent) {
-        InterfaceC0606s interfaceC0606s = this.mInterceptingOnItemTouchListener;
-        if (interfaceC0606s == null) {
+    private void L1() {
+        this.f28578H0.f();
+        q qVar = this.f28591O;
+        if (qVar != null) {
+            qVar.P1();
+        }
+    }
+
+    private boolean Q(MotionEvent motionEvent) {
+        u uVar = this.f28601T;
+        if (uVar == null) {
             if (motionEvent.getAction() == 0) {
                 return false;
             }
-            return findInterceptingOnItemTouchListener(motionEvent);
+            return Z(motionEvent);
         }
-        interfaceC0606s.mo4244a(this, motionEvent);
+        uVar.a(this, motionEvent);
         int action = motionEvent.getAction();
         if (action == 3 || action == 1) {
-            this.mInterceptingOnItemTouchListener = null;
+            this.f28601T = null;
         }
         return true;
     }
 
-    private boolean findInterceptingOnItemTouchListener(MotionEvent motionEvent) {
+    private void U0(MotionEvent motionEvent) {
+        int actionIndex = motionEvent.getActionIndex();
+        if (motionEvent.getPointerId(actionIndex) == this.f28638u0) {
+            int i10 = actionIndex == 0 ? 1 : 0;
+            this.f28638u0 = motionEvent.getPointerId(i10);
+            int x10 = (int) (motionEvent.getX(i10) + 0.5f);
+            this.f28642y0 = x10;
+            this.f28640w0 = x10;
+            int y10 = (int) (motionEvent.getY(i10) + 0.5f);
+            this.f28643z0 = y10;
+            this.f28641x0 = y10;
+        }
+    }
+
+    private boolean Y0() {
+        return this.f28636s0 != null && this.f28591O.Q1();
+    }
+
+    private boolean Z(MotionEvent motionEvent) {
         int action = motionEvent.getAction();
-        int size = this.mOnItemTouchListeners.size();
-        for (int i2 = 0; i2 < size; i2++) {
-            InterfaceC0606s interfaceC0606s = this.mOnItemTouchListeners.get(i2);
-            if (interfaceC0606s.mo4245b(this, motionEvent) && action != 3) {
-                this.mInterceptingOnItemTouchListener = interfaceC0606s;
+        int size = this.f28599S.size();
+        for (int i10 = 0; i10 < size; i10++) {
+            u uVar = this.f28599S.get(i10);
+            if (uVar.b(this, motionEvent) && action != 3) {
+                this.f28601T = uVar;
                 return true;
             }
         }
         return false;
     }
 
-    private void findMinMaxChildLayoutPositions(int[] iArr) {
-        int iM4450g = this.mChildHelper.m4450g();
-        if (iM4450g == 0) {
+    private void Z0() {
+        boolean z10;
+        if (this.f28627j0) {
+            this.f28573F.y();
+            if (this.f28628k0) {
+                this.f28591O.X0(this);
+            }
+        }
+        if (Y0()) {
+            this.f28573F.w();
+        } else {
+            this.f28573F.j();
+        }
+        boolean z11 = this.f28590N0 || this.f28592O0;
+        this.f28584K0.f28670k = this.f28612a0 && this.f28636s0 != null && ((z10 = this.f28627j0) || z11 || this.f28591O.f28715h) && (!z10 || this.f28589N.m());
+        C c10 = this.f28584K0;
+        c10.f28671l = c10.f28670k && z11 && !this.f28627j0 && Y0();
+    }
+
+    private void a0(int[] iArr) {
+        int iG = this.f28575G.g();
+        if (iG == 0) {
             iArr[0] = -1;
             iArr[1] = -1;
             return;
         }
-        int i2 = Integer.MAX_VALUE;
-        int i3 = Integer.MIN_VALUE;
-        for (int i4 = 0; i4 < iM4450g; i4++) {
-            AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(this.mChildHelper.m4449f(i4));
-            if (!childViewHolderInt.shouldIgnore()) {
-                int layoutPosition = childViewHolderInt.getLayoutPosition();
-                if (layoutPosition < i2) {
-                    i2 = layoutPosition;
+        int i10 = Integer.MAX_VALUE;
+        int i11 = Integer.MIN_VALUE;
+        for (int i12 = 0; i12 < iG; i12++) {
+            G gO0 = o0(this.f28575G.f(i12));
+            if (!gO0.shouldIgnore()) {
+                int layoutPosition = gO0.getLayoutPosition();
+                if (layoutPosition < i10) {
+                    i10 = layoutPosition;
                 }
-                if (layoutPosition > i3) {
-                    i3 = layoutPosition;
+                if (layoutPosition > i11) {
+                    i11 = layoutPosition;
                 }
             }
         }
-        iArr[0] = i2;
-        iArr[1] = i3;
+        iArr[0] = i10;
+        iArr[1] = i11;
     }
 
-    static RecyclerView findNestedRecyclerView(View view) {
+    static RecyclerView b0(View view) {
         if (!(view instanceof ViewGroup)) {
             return null;
         }
@@ -4279,67 +2334,471 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
         }
         ViewGroup viewGroup = (ViewGroup) view;
         int childCount = viewGroup.getChildCount();
-        for (int i2 = 0; i2 < childCount; i2++) {
-            RecyclerView recyclerViewFindNestedRecyclerView = findNestedRecyclerView(viewGroup.getChildAt(i2));
-            if (recyclerViewFindNestedRecyclerView != null) {
-                return recyclerViewFindNestedRecyclerView;
+        for (int i10 = 0; i10 < childCount; i10++) {
+            RecyclerView recyclerViewB0 = b0(viewGroup.getChildAt(i10));
+            if (recyclerViewB0 != null) {
+                return recyclerViewB0;
             }
         }
         return null;
     }
 
-    private View findNextViewToFocus() {
-        AbstractC0590c0 abstractC0590c0FindViewHolderForAdapterPosition;
-        C0613z c0613z = this.mState;
-        int i2 = c0613z.f4003m;
-        if (i2 == -1) {
-            i2 = 0;
-        }
-        int iM4306b = c0613z.m4306b();
-        for (int i3 = i2; i3 < iM4306b; i3++) {
-            AbstractC0590c0 abstractC0590c0FindViewHolderForAdapterPosition2 = findViewHolderForAdapterPosition(i3);
-            if (abstractC0590c0FindViewHolderForAdapterPosition2 == null) {
-                break;
-            }
-            if (abstractC0590c0FindViewHolderForAdapterPosition2.itemView.hasFocusable()) {
-                return abstractC0590c0FindViewHolderForAdapterPosition2.itemView;
-            }
-        }
-        int iMin = Math.min(iM4306b, i2);
-        do {
-            iMin--;
-            if (iMin < 0 || (abstractC0590c0FindViewHolderForAdapterPosition = findViewHolderForAdapterPosition(iMin)) == null) {
-                return null;
-            }
-        } while (!abstractC0590c0FindViewHolderForAdapterPosition.itemView.hasFocusable());
-        return abstractC0590c0FindViewHolderForAdapterPosition.itemView;
+    /* JADX WARN: Removed duplicated region for block: B:12:0x0040  */
+    /* JADX WARN: Removed duplicated region for block: B:13:0x0056  */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    private void b1(float r7, float r8, float r9, float r10) {
+        /*
+            r6 = this;
+            r0 = 0
+            int r1 = (r8 > r0 ? 1 : (r8 == r0 ? 0 : -1))
+            r2 = 1065353216(0x3f800000, float:1.0)
+            r3 = 1
+            if (r1 >= 0) goto L21
+            r6.S()
+            android.widget.EdgeEffect r1 = r6.f28632o0
+            float r4 = -r8
+            int r5 = r6.getWidth()
+            float r5 = (float) r5
+            float r4 = r4 / r5
+            int r5 = r6.getHeight()
+            float r5 = (float) r5
+            float r9 = r9 / r5
+            float r9 = r2 - r9
+            androidx.core.widget.e.d(r1, r4, r9)
+        L1f:
+            r9 = r3
+            goto L3c
+        L21:
+            int r1 = (r8 > r0 ? 1 : (r8 == r0 ? 0 : -1))
+            if (r1 <= 0) goto L3b
+            r6.T()
+            android.widget.EdgeEffect r1 = r6.f28634q0
+            int r4 = r6.getWidth()
+            float r4 = (float) r4
+            float r4 = r8 / r4
+            int r5 = r6.getHeight()
+            float r5 = (float) r5
+            float r9 = r9 / r5
+            androidx.core.widget.e.d(r1, r4, r9)
+            goto L1f
+        L3b:
+            r9 = 0
+        L3c:
+            int r1 = (r10 > r0 ? 1 : (r10 == r0 ? 0 : -1))
+            if (r1 >= 0) goto L56
+            r6.U()
+            android.widget.EdgeEffect r9 = r6.f28633p0
+            float r1 = -r10
+            int r2 = r6.getHeight()
+            float r2 = (float) r2
+            float r1 = r1 / r2
+            int r2 = r6.getWidth()
+            float r2 = (float) r2
+            float r7 = r7 / r2
+            androidx.core.widget.e.d(r9, r1, r7)
+            goto L72
+        L56:
+            int r1 = (r10 > r0 ? 1 : (r10 == r0 ? 0 : -1))
+            if (r1 <= 0) goto L71
+            r6.R()
+            android.widget.EdgeEffect r9 = r6.f28635r0
+            int r1 = r6.getHeight()
+            float r1 = (float) r1
+            float r1 = r10 / r1
+            int r4 = r6.getWidth()
+            float r4 = (float) r4
+            float r7 = r7 / r4
+            float r2 = r2 - r7
+            androidx.core.widget.e.d(r9, r1, r2)
+            goto L72
+        L71:
+            r3 = r9
+        L72:
+            if (r3 != 0) goto L7c
+            int r7 = (r8 > r0 ? 1 : (r8 == r0 ? 0 : -1))
+            if (r7 != 0) goto L7c
+            int r7 = (r10 > r0 ? 1 : (r10 == r0 ? 0 : -1))
+            if (r7 == 0) goto L7f
+        L7c:
+            r6.postInvalidateOnAnimation()
+        L7f:
+            return
+        */
+        throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.RecyclerView.b1(float, float, float, float):void");
     }
 
-    static AbstractC0590c0 getChildViewHolderInt(View view) {
+    private View c0() {
+        G gD0;
+        C c10 = this.f28584K0;
+        int i10 = c10.f28672m;
+        if (i10 == -1) {
+            i10 = 0;
+        }
+        int iB = c10.b();
+        for (int i11 = i10; i11 < iB; i11++) {
+            G gD02 = d0(i11);
+            if (gD02 == null) {
+                break;
+            }
+            if (gD02.itemView.hasFocusable()) {
+                return gD02.itemView;
+            }
+        }
+        int iMin = Math.min(iB, i10);
+        do {
+            iMin--;
+            if (iMin < 0 || (gD0 = d0(iMin)) == null) {
+                return null;
+            }
+        } while (!gD0.itemView.hasFocusable());
+        return gD0.itemView;
+    }
+
+    private void d1() {
+        View viewFindViewById;
+        if (!this.f28576G0 || this.f28589N == null || !hasFocus() || getDescendantFocusability() == 393216) {
+            return;
+        }
+        if (getDescendantFocusability() == 131072 && isFocused()) {
+            return;
+        }
+        if (!isFocused()) {
+            if (!this.f28575G.n(getFocusedChild())) {
+                return;
+            }
+        }
+        View viewC0 = null;
+        G gE0 = (this.f28584K0.f28673n == -1 || !this.f28589N.m()) ? null : e0(this.f28584K0.f28673n);
+        if (gE0 != null && !this.f28575G.n(gE0.itemView) && gE0.itemView.hasFocusable()) {
+            viewC0 = gE0.itemView;
+        } else if (this.f28575G.g() > 0) {
+            viewC0 = c0();
+        }
+        if (viewC0 != null) {
+            int i10 = this.f28584K0.f28674o;
+            if (i10 != -1 && (viewFindViewById = viewC0.findViewById(i10)) != null && viewFindViewById.isFocusable()) {
+                viewC0 = viewFindViewById;
+            }
+            viewC0.requestFocus();
+        }
+    }
+
+    private void e1() {
+        boolean zIsFinished;
+        EdgeEffect edgeEffect = this.f28632o0;
+        if (edgeEffect != null) {
+            edgeEffect.onRelease();
+            zIsFinished = this.f28632o0.isFinished();
+        } else {
+            zIsFinished = false;
+        }
+        EdgeEffect edgeEffect2 = this.f28633p0;
+        if (edgeEffect2 != null) {
+            edgeEffect2.onRelease();
+            zIsFinished |= this.f28633p0.isFinished();
+        }
+        EdgeEffect edgeEffect3 = this.f28634q0;
+        if (edgeEffect3 != null) {
+            edgeEffect3.onRelease();
+            zIsFinished |= this.f28634q0.isFinished();
+        }
+        EdgeEffect edgeEffect4 = this.f28635r0;
+        if (edgeEffect4 != null) {
+            edgeEffect4.onRelease();
+            zIsFinished |= this.f28635r0.isFinished();
+        }
+        if (zIsFinished) {
+            postInvalidateOnAnimation();
+        }
+    }
+
+    private int f1(int i10, float f10) {
+        float height = f10 / getHeight();
+        float width = i10 / getWidth();
+        EdgeEffect edgeEffect = this.f28632o0;
+        float f11 = 0.0f;
+        if (edgeEffect == null || androidx.core.widget.e.b(edgeEffect) == 0.0f) {
+            EdgeEffect edgeEffect2 = this.f28634q0;
+            if (edgeEffect2 != null && androidx.core.widget.e.b(edgeEffect2) != 0.0f) {
+                if (canScrollHorizontally(1)) {
+                    this.f28634q0.onRelease();
+                } else {
+                    float fD = androidx.core.widget.e.d(this.f28634q0, width, height);
+                    if (androidx.core.widget.e.b(this.f28634q0) == 0.0f) {
+                        this.f28634q0.onRelease();
+                    }
+                    f11 = fD;
+                }
+                invalidate();
+            }
+        } else {
+            if (canScrollHorizontally(-1)) {
+                this.f28632o0.onRelease();
+            } else {
+                float f12 = -androidx.core.widget.e.d(this.f28632o0, -width, 1.0f - height);
+                if (androidx.core.widget.e.b(this.f28632o0) == 0.0f) {
+                    this.f28632o0.onRelease();
+                }
+                f11 = f12;
+            }
+            invalidate();
+        }
+        return Math.round(f11 * getWidth());
+    }
+
+    private int g1(int i10, float f10) {
+        float width = f10 / getWidth();
+        float height = i10 / getHeight();
+        EdgeEffect edgeEffect = this.f28633p0;
+        float f11 = 0.0f;
+        if (edgeEffect == null || androidx.core.widget.e.b(edgeEffect) == 0.0f) {
+            EdgeEffect edgeEffect2 = this.f28635r0;
+            if (edgeEffect2 != null && androidx.core.widget.e.b(edgeEffect2) != 0.0f) {
+                if (canScrollVertically(1)) {
+                    this.f28635r0.onRelease();
+                } else {
+                    float fD = androidx.core.widget.e.d(this.f28635r0, height, 1.0f - width);
+                    if (androidx.core.widget.e.b(this.f28635r0) == 0.0f) {
+                        this.f28635r0.onRelease();
+                    }
+                    f11 = fD;
+                }
+                invalidate();
+            }
+        } else {
+            if (canScrollVertically(-1)) {
+                this.f28633p0.onRelease();
+            } else {
+                float f12 = -androidx.core.widget.e.d(this.f28633p0, -height, width);
+                if (androidx.core.widget.e.b(this.f28633p0) == 0.0f) {
+                    this.f28633p0.onRelease();
+                }
+                f11 = f12;
+            }
+            invalidate();
+        }
+        return Math.round(f11 * getHeight());
+    }
+
+    private s1.D getScrollingChildHelper() {
+        if (this.f28602T0 == null) {
+            this.f28602T0 = new s1.D(this);
+        }
+        return this.f28602T0;
+    }
+
+    private boolean h0(int i10, int i11, int i12, int i13) {
+        int iMax;
+        int i14;
+        q qVar = this.f28591O;
+        if (qVar == null) {
+            Log.e("RecyclerView", "Cannot fling without a LayoutManager set. Call setLayoutManager with a non-null argument.");
+            return false;
+        }
+        if (this.f28618d0) {
+            return false;
+        }
+        boolean zP = qVar.p();
+        boolean zQ = this.f28591O.q();
+        if (!zP || Math.abs(i10) < i12) {
+            i10 = 0;
+        }
+        if (!zQ || Math.abs(i11) < i12) {
+            i11 = 0;
+        }
+        if (i10 == 0 && i11 == 0) {
+            return false;
+        }
+        if (i10 == 0) {
+            iMax = 0;
+        } else {
+            EdgeEffect edgeEffect = this.f28632o0;
+            if (edgeEffect == null || androidx.core.widget.e.b(edgeEffect) == 0.0f) {
+                EdgeEffect edgeEffect2 = this.f28634q0;
+                if (edgeEffect2 != null && androidx.core.widget.e.b(edgeEffect2) != 0.0f) {
+                    if (x1(this.f28634q0, i10, getWidth())) {
+                        this.f28634q0.onAbsorb(i10);
+                        i10 = 0;
+                    }
+                    iMax = i10;
+                    i10 = 0;
+                }
+                iMax = 0;
+            } else {
+                int i15 = -i10;
+                if (x1(this.f28632o0, i15, getWidth())) {
+                    this.f28632o0.onAbsorb(i15);
+                    i10 = 0;
+                }
+                iMax = i10;
+                i10 = 0;
+            }
+        }
+        if (i11 == 0) {
+            i14 = i11;
+            i11 = 0;
+        } else {
+            EdgeEffect edgeEffect3 = this.f28633p0;
+            if (edgeEffect3 == null || androidx.core.widget.e.b(edgeEffect3) == 0.0f) {
+                EdgeEffect edgeEffect4 = this.f28635r0;
+                if (edgeEffect4 != null && androidx.core.widget.e.b(edgeEffect4) != 0.0f) {
+                    if (x1(this.f28635r0, i11, getHeight())) {
+                        this.f28635r0.onAbsorb(i11);
+                        i11 = 0;
+                    }
+                    i14 = 0;
+                }
+                i14 = i11;
+                i11 = 0;
+            } else {
+                int i16 = -i11;
+                if (x1(this.f28633p0, i16, getHeight())) {
+                    this.f28633p0.onAbsorb(i16);
+                    i11 = 0;
+                }
+                i14 = 0;
+            }
+        }
+        if (iMax != 0 || i11 != 0) {
+            int i17 = -i13;
+            iMax = Math.max(i17, Math.min(iMax, i13));
+            i11 = Math.max(i17, Math.min(i11, i13));
+            G1(1);
+            this.f28578H0.b(iMax, i11);
+        }
+        if (i10 == 0 && i14 == 0) {
+            return (iMax == 0 && i11 == 0) ? false : true;
+        }
+        float f10 = i10;
+        float f11 = i14;
+        if (!dispatchNestedPreFling(f10, f11)) {
+            boolean z10 = zP || zQ;
+            dispatchNestedFling(f10, f11, z10);
+            t tVar = this.f28566B0;
+            if (tVar != null && tVar.a(i10, i14)) {
+                return true;
+            }
+            if (z10) {
+                G1(1);
+                int i18 = -i13;
+                this.f28578H0.b(Math.max(i18, Math.min(i10, i13)), Math.max(i18, Math.min(i14, i13)));
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void i(G g10) {
+        View view = g10.itemView;
+        boolean z10 = view.getParent() == this;
+        this.f28569D.O(n0(view));
+        if (g10.isTmpDetached()) {
+            this.f28575G.c(view, -1, view.getLayoutParams(), true);
+        } else if (z10) {
+            this.f28575G.k(view);
+        } else {
+            this.f28575G.b(view, true);
+        }
+    }
+
+    private void n1(View view, View view2) {
+        View view3 = view2 != null ? view2 : view;
+        this.f28583K.set(0, 0, view3.getWidth(), view3.getHeight());
+        ViewGroup.LayoutParams layoutParams = view3.getLayoutParams();
+        if (layoutParams instanceof r) {
+            r rVar = (r) layoutParams;
+            if (!rVar.f28734c) {
+                Rect rect = rVar.f28733b;
+                Rect rect2 = this.f28583K;
+                rect2.left -= rect.left;
+                rect2.right += rect.right;
+                rect2.top -= rect.top;
+                rect2.bottom += rect.bottom;
+            }
+        }
+        if (view2 != null) {
+            offsetDescendantRectToMyCoords(view2, this.f28583K);
+            offsetRectIntoDescendantCoords(view, this.f28583K);
+        }
+        this.f28591O.x1(this, view, this.f28583K, !this.f28612a0, view2 == null);
+    }
+
+    static G o0(View view) {
         if (view == null) {
             return null;
         }
-        return ((C0603p) view.getLayoutParams()).f3964a;
+        return ((r) view.getLayoutParams()).f28732a;
     }
 
-    static void getDecoratedBoundsWithMarginsInt(View view, Rect rect) {
-        C0603p c0603p = (C0603p) view.getLayoutParams();
-        Rect rect2 = c0603p.f3965b;
-        rect.set((view.getLeft() - rect2.left) - ((ViewGroup.MarginLayoutParams) c0603p).leftMargin, (view.getTop() - rect2.top) - ((ViewGroup.MarginLayoutParams) c0603p).topMargin, view.getRight() + rect2.right + ((ViewGroup.MarginLayoutParams) c0603p).rightMargin, view.getBottom() + rect2.bottom + ((ViewGroup.MarginLayoutParams) c0603p).bottomMargin);
+    private void o1() {
+        C c10 = this.f28584K0;
+        c10.f28673n = -1L;
+        c10.f28672m = -1;
+        c10.f28674o = -1;
     }
 
-    private int getDeepestFocusedViewWithId(View view) {
-        int id = view.getId();
+    private void p(G g10, G g11, n.c cVar, n.c cVar2, boolean z10, boolean z11) {
+        g10.setIsRecyclable(false);
+        if (z10) {
+            i(g10);
+        }
+        if (g10 != g11) {
+            if (z11) {
+                i(g11);
+            }
+            g10.mShadowedHolder = g11;
+            i(g10);
+            this.f28569D.O(g10);
+            g11.setIsRecyclable(false);
+            g11.mShadowingHolder = g10;
+        }
+        if (this.f28636s0.b(g10, g11, cVar, cVar2)) {
+            X0();
+        }
+    }
+
+    private void p1() {
+        VelocityTracker velocityTracker = this.f28639v0;
+        if (velocityTracker != null) {
+            velocityTracker.clear();
+        }
+        J1(0);
+        e1();
+    }
+
+    static void q0(View view, Rect rect) {
+        r rVar = (r) view.getLayoutParams();
+        Rect rect2 = rVar.f28733b;
+        rect.set((view.getLeft() - rect2.left) - ((ViewGroup.MarginLayoutParams) rVar).leftMargin, (view.getTop() - rect2.top) - ((ViewGroup.MarginLayoutParams) rVar).topMargin, view.getRight() + rect2.right + ((ViewGroup.MarginLayoutParams) rVar).rightMargin, view.getBottom() + rect2.bottom + ((ViewGroup.MarginLayoutParams) rVar).bottomMargin);
+    }
+
+    private void q1() {
+        View focusedChild = (this.f28576G0 && hasFocus() && this.f28589N != null) ? getFocusedChild() : null;
+        G gY = focusedChild != null ? Y(focusedChild) : null;
+        if (gY == null) {
+            o1();
+            return;
+        }
+        this.f28584K0.f28673n = this.f28589N.m() ? gY.getItemId() : -1L;
+        this.f28584K0.f28672m = this.f28627j0 ? -1 : gY.isRemoved() ? gY.mOldPosition : gY.getAbsoluteAdapterPosition();
+        this.f28584K0.f28674o = r0(gY.itemView);
+    }
+
+    private int r0(View view) {
+        int id2 = view.getId();
         while (!view.isFocused() && (view instanceof ViewGroup) && view.hasFocus()) {
             view = ((ViewGroup) view).getFocusedChild();
             if (view.getId() != -1) {
-                id = view.getId();
+                id2 = view.getId();
             }
         }
-        return id;
+        return id2;
     }
 
-    private String getFullClassName(Context context, String str) {
+    private String s0(Context context, String str) {
         if (str.charAt(0) == '.') {
             return context.getPackageName() + str;
         }
@@ -4349,767 +2808,853 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
         return RecyclerView.class.getPackage().getName() + '.' + str;
     }
 
-    private C0301k getScrollingChildHelper() {
-        if (this.mScrollingChildHelper == null) {
-            this.mScrollingChildHelper = new C0301k(this);
-        }
-        return this.mScrollingChildHelper;
+    public static void setDebugAssertionsEnabled(boolean z10) {
+        f28554g1 = z10;
     }
 
-    private void handleMissingPreInfoForChangeError(long j2, AbstractC0590c0 abstractC0590c0, AbstractC0590c0 abstractC0590c02) {
-        int iM4450g = this.mChildHelper.m4450g();
-        for (int i2 = 0; i2 < iM4450g; i2++) {
-            AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(this.mChildHelper.m4449f(i2));
-            if (childViewHolderInt != abstractC0590c0 && getChangedHolderKey(childViewHolderInt) == j2) {
-                AbstractC0594g abstractC0594g = this.mAdapter;
-                if (abstractC0594g == null || !abstractC0594g.hasStableIds()) {
-                    throw new IllegalStateException("Two different ViewHolders have the same change ID. This might happen due to inconsistent Adapter update events or if the LayoutManager lays out the same View multiple times.\n ViewHolder 1:" + childViewHolderInt + " \n View Holder 2:" + abstractC0590c0 + exceptionLabel());
+    public static void setVerboseLoggingEnabled(boolean z10) {
+        f28555h1 = z10;
+    }
+
+    private void t() {
+        p1();
+        setScrollState(0);
+    }
+
+    static void u(G g10) {
+        WeakReference<RecyclerView> weakReference = g10.mNestedRecyclerView;
+        if (weakReference != null) {
+            RecyclerView recyclerView = weakReference.get();
+            while (recyclerView != null) {
+                if (recyclerView == g10.itemView) {
+                    return;
                 }
-                throw new IllegalStateException("Two different ViewHolders have the same stable ID. Stable IDs in your adapter MUST BE unique and SHOULD NOT change.\n ViewHolder 1:" + childViewHolderInt + " \n View Holder 2:" + abstractC0590c0 + exceptionLabel());
+                Object parent = recyclerView.getParent();
+                recyclerView = parent instanceof View ? (View) parent : null;
+            }
+            g10.mNestedRecyclerView = null;
+        }
+    }
+
+    private float u0(int i10) {
+        double dLog = Math.log((Math.abs(i10) * 0.35f) / (this.f28565B * 0.015f));
+        float f10 = f28557j1;
+        return (float) (this.f28565B * 0.015f * Math.exp((f10 / (f10 - 1.0d)) * dLog));
+    }
+
+    private void v0(long j10, G g10, G g11) {
+        int iG = this.f28575G.g();
+        for (int i10 = 0; i10 < iG; i10++) {
+            G gO0 = o0(this.f28575G.f(i10));
+            if (gO0 != g10 && k0(gO0) == j10) {
+                h hVar = this.f28589N;
+                if (hVar == null || !hVar.m()) {
+                    throw new IllegalStateException("Two different ViewHolders have the same change ID. This might happen due to inconsistent Adapter update events or if the LayoutManager lays out the same View multiple times.\n ViewHolder 1:" + gO0 + " \n View Holder 2:" + g10 + V());
+                }
+                throw new IllegalStateException("Two different ViewHolders have the same stable ID. Stable IDs in your adapter MUST BE unique and SHOULD NOT change.\n ViewHolder 1:" + gO0 + " \n View Holder 2:" + g10 + V());
             }
         }
-        Log.e(TAG, "Problem while matching changed view holders with the newones. The pre-layout information for the change holder " + abstractC0590c02 + " cannot be found but it is necessary for " + abstractC0590c0 + exceptionLabel());
+        Log.e("RecyclerView", "Problem while matching changed view holders with the newones. The pre-layout information for the change holder " + g11 + " cannot be found but it is necessary for " + g10 + V());
     }
 
-    private boolean hasUpdatedView() {
-        int iM4450g = this.mChildHelper.m4450g();
-        for (int i2 = 0; i2 < iM4450g; i2++) {
-            AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(this.mChildHelper.m4449f(i2));
-            if (childViewHolderInt != null && !childViewHolderInt.shouldIgnore() && childViewHolderInt.isUpdated()) {
+    private void v1(h<?> hVar, boolean z10, boolean z11) {
+        h hVar2 = this.f28589N;
+        if (hVar2 != null) {
+            hVar2.H(this.f28567C);
+            this.f28589N.z(this);
+        }
+        if (!z10 || z11) {
+            h1();
+        }
+        this.f28573F.y();
+        h<?> hVar3 = this.f28589N;
+        this.f28589N = hVar;
+        if (hVar != null) {
+            hVar.E(this.f28567C);
+            hVar.v(this);
+        }
+        q qVar = this.f28591O;
+        if (qVar != null) {
+            qVar.J0(hVar3, this.f28589N);
+        }
+        this.f28569D.y(hVar3, this.f28589N, z10);
+        this.f28584K0.f28666g = true;
+    }
+
+    private boolean x0() {
+        int iG = this.f28575G.g();
+        for (int i10 = 0; i10 < iG; i10++) {
+            G gO0 = o0(this.f28575G.f(i10));
+            if (gO0 != null && !gO0.shouldIgnore() && gO0.isUpdated()) {
                 return true;
             }
         }
         return false;
     }
 
-    @SuppressLint({"InlinedApi"})
-    private void initAutofill() {
-        if (C0311u.m2160x(this) == 0) {
-            C0311u.m2155u0(this, 8);
-        }
-    }
-
-    private void initChildrenHelper() {
-        this.mChildHelper = new C0623d(new C0592e());
-    }
-
-    private boolean isPreferredNextFocus(View view, View view2, int i2) {
-        int i3;
-        if (view2 == null || view2 == this || findContainingItemView(view2) == null) {
-            return false;
-        }
-        if (view == null || findContainingItemView(view) == null) {
+    private boolean x1(EdgeEffect edgeEffect, int i10, int i11) {
+        if (i10 > 0) {
             return true;
         }
-        this.mTempRect.set(0, 0, view.getWidth(), view.getHeight());
-        this.mTempRect2.set(0, 0, view2.getWidth(), view2.getHeight());
-        offsetDescendantRectToMyCoords(view, this.mTempRect);
-        offsetDescendantRectToMyCoords(view2, this.mTempRect2);
-        char c2 = 65535;
-        int i4 = this.mLayout.getLayoutDirection() == 1 ? -1 : 1;
-        Rect rect = this.mTempRect;
-        int i5 = rect.left;
-        Rect rect2 = this.mTempRect2;
-        int i6 = rect2.left;
-        if ((i5 < i6 || rect.right <= i6) && rect.right < rect2.right) {
-            i3 = 1;
-        } else {
-            int i7 = rect.right;
-            int i8 = rect2.right;
-            i3 = ((i7 > i8 || i5 >= i8) && i5 > i6) ? -1 : 0;
-        }
-        int i9 = rect.top;
-        int i10 = rect2.top;
-        if ((i9 < i10 || rect.bottom <= i10) && rect.bottom < rect2.bottom) {
-            c2 = 1;
-        } else {
-            int i11 = rect.bottom;
-            int i12 = rect2.bottom;
-            if ((i11 <= i12 && i9 < i12) || i9 <= i10) {
-                c2 = 0;
+        return u0(-i10) < androidx.core.widget.e.b(edgeEffect) * ((float) i11);
+    }
+
+    private int y(int i10, EdgeEffect edgeEffect, EdgeEffect edgeEffect2, int i11) {
+        if (i10 > 0 && edgeEffect != null && androidx.core.widget.e.b(edgeEffect) != 0.0f) {
+            int iRound = Math.round(((-i11) / 4.0f) * androidx.core.widget.e.d(edgeEffect, ((-i10) * 4.0f) / i11, 0.5f));
+            if (iRound != i10) {
+                edgeEffect.finish();
             }
+            return i10 - iRound;
         }
-        if (i2 == 1) {
-            return c2 < 0 || (c2 == 0 && i3 * i4 <= 0);
+        if (i10 >= 0 || edgeEffect2 == null || androidx.core.widget.e.b(edgeEffect2) == 0.0f) {
+            return i10;
         }
-        if (i2 == 2) {
-            return c2 > 0 || (c2 == 0 && i3 * i4 >= 0);
+        float f10 = i11;
+        int iRound2 = Math.round((f10 / 4.0f) * androidx.core.widget.e.d(edgeEffect2, (i10 * 4.0f) / f10, 0.5f));
+        if (iRound2 != i10) {
+            edgeEffect2.finish();
         }
-        if (i2 == 17) {
-            return i3 < 0;
-        }
-        if (i2 == 33) {
-            return c2 < 0;
-        }
-        if (i2 == 66) {
-            return i3 > 0;
-        }
-        if (i2 == 130) {
-            return c2 > 0;
-        }
-        throw new IllegalArgumentException("Invalid direction: " + i2 + exceptionLabel());
+        return i10 - iRound2;
     }
 
-    private void onPointerUp(MotionEvent motionEvent) {
-        int actionIndex = motionEvent.getActionIndex();
-        if (motionEvent.getPointerId(actionIndex) == this.mScrollPointerId) {
-            int i2 = actionIndex == 0 ? 1 : 0;
-            this.mScrollPointerId = motionEvent.getPointerId(i2);
-            int x = (int) (motionEvent.getX(i2) + 0.5f);
-            this.mLastTouchX = x;
-            this.mInitialTouchX = x;
-            int y = (int) (motionEvent.getY(i2) + 0.5f);
-            this.mLastTouchY = y;
-            this.mInitialTouchY = y;
+    @SuppressLint({"InlinedApi"})
+    private void z0() {
+        if (X.y(this) == 0) {
+            X.z0(this, 8);
         }
     }
 
-    private boolean predictiveItemAnimationsEnabled() {
-        return this.mItemAnimator != null && this.mLayout.supportsPredictiveItemAnimations();
-    }
-
-    private void processAdapterUpdatesAndSetAnimationFlags() {
-        boolean z;
-        if (this.mDataSetHasChangedAfterLayout) {
-            this.mAdapterHelper.m4434y();
-            if (this.mDispatchItemsChangedEvent) {
-                this.mLayout.onItemsChanged(this);
-            }
-        }
-        if (predictiveItemAnimationsEnabled()) {
-            this.mAdapterHelper.m4432w();
-        } else {
-            this.mAdapterHelper.m4421j();
-        }
-        boolean z2 = false;
-        boolean z3 = this.mItemsAddedOrRemoved || this.mItemsChanged;
-        this.mState.f4001k = this.mFirstLayoutComplete && this.mItemAnimator != null && ((z = this.mDataSetHasChangedAfterLayout) || z3 || this.mLayout.mRequestedSimpleAnimations) && (!z || this.mAdapter.hasStableIds());
-        C0613z c0613z = this.mState;
-        if (c0613z.f4001k && z3 && !this.mDataSetHasChangedAfterLayout && predictiveItemAnimationsEnabled()) {
-            z2 = true;
-        }
-        c0613z.f4002l = z2;
-    }
-
-    /* JADX WARN: Removed duplicated region for block: B:12:0x0040  */
-    /* JADX WARN: Removed duplicated region for block: B:13:0x0056  */
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct code enable 'Show inconsistent code' option in preferences
-    */
-    private void pullGlows(float r7, float r8, float r9, float r10) {
-        /*
-            r6 = this;
-            r0 = 1065353216(0x3f800000, float:1.0)
-            r1 = 1
-            r2 = 0
-            int r3 = (r8 > r2 ? 1 : (r8 == r2 ? 0 : -1))
-            if (r3 >= 0) goto L21
-            r6.ensureLeftGlow()
-            android.widget.EdgeEffect r3 = r6.mLeftGlow
-            float r4 = -r8
-            int r5 = r6.getWidth()
-            float r5 = (float) r5
-            float r4 = r4 / r5
-            int r5 = r6.getHeight()
-            float r5 = (float) r5
-            float r9 = r9 / r5
-            float r9 = r0 - r9
-            androidx.core.widget.C0325f.m2310a(r3, r4, r9)
-        L1f:
-            r9 = 1
-            goto L3c
-        L21:
-            int r3 = (r8 > r2 ? 1 : (r8 == r2 ? 0 : -1))
-            if (r3 <= 0) goto L3b
-            r6.ensureRightGlow()
-            android.widget.EdgeEffect r3 = r6.mRightGlow
-            int r4 = r6.getWidth()
-            float r4 = (float) r4
-            float r4 = r8 / r4
-            int r5 = r6.getHeight()
-            float r5 = (float) r5
-            float r9 = r9 / r5
-            androidx.core.widget.C0325f.m2310a(r3, r4, r9)
-            goto L1f
-        L3b:
-            r9 = 0
-        L3c:
-            int r3 = (r10 > r2 ? 1 : (r10 == r2 ? 0 : -1))
-            if (r3 >= 0) goto L56
-            r6.ensureTopGlow()
-            android.widget.EdgeEffect r9 = r6.mTopGlow
-            float r0 = -r10
-            int r3 = r6.getHeight()
-            float r3 = (float) r3
-            float r0 = r0 / r3
-            int r3 = r6.getWidth()
-            float r3 = (float) r3
-            float r7 = r7 / r3
-            androidx.core.widget.C0325f.m2310a(r9, r0, r7)
-            goto L72
-        L56:
-            int r3 = (r10 > r2 ? 1 : (r10 == r2 ? 0 : -1))
-            if (r3 <= 0) goto L71
-            r6.ensureBottomGlow()
-            android.widget.EdgeEffect r9 = r6.mBottomGlow
-            int r3 = r6.getHeight()
-            float r3 = (float) r3
-            float r3 = r10 / r3
-            int r4 = r6.getWidth()
-            float r4 = (float) r4
-            float r7 = r7 / r4
-            float r0 = r0 - r7
-            androidx.core.widget.C0325f.m2310a(r9, r3, r0)
-            goto L72
-        L71:
-            r1 = r9
-        L72:
-            if (r1 != 0) goto L7c
-            int r7 = (r8 > r2 ? 1 : (r8 == r2 ? 0 : -1))
-            if (r7 != 0) goto L7c
-            int r7 = (r10 > r2 ? 1 : (r10 == r2 ? 0 : -1))
-            if (r7 == 0) goto L7f
-        L7c:
-            androidx.core.view.C0311u.m2113Z(r6)
-        L7f:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.RecyclerView.pullGlows(float, float, float, float):void");
-    }
-
-    private void recoverFocusFromState() {
-        View viewFindViewById;
-        if (!this.mPreserveFocusAfterLayout || this.mAdapter == null || !hasFocus() || getDescendantFocusability() == 393216) {
+    void A() {
+        if (!this.f28612a0 || this.f28627j0) {
+            Trace.beginSection("RV FullInvalidate");
+            H();
+            Trace.endSection();
             return;
         }
-        if (getDescendantFocusability() == 131072 && isFocused()) {
-            return;
-        }
-        if (!isFocused()) {
-            View focusedChild = getFocusedChild();
-            if (!IGNORE_DETACHED_FOCUSED_CHILD || (focusedChild.getParent() != null && focusedChild.hasFocus())) {
-                if (!this.mChildHelper.m4455n(focusedChild)) {
+        if (this.f28573F.p()) {
+            if (!this.f28573F.o(4) || this.f28573F.o(11)) {
+                if (this.f28573F.p()) {
+                    Trace.beginSection("RV FullInvalidate");
+                    H();
+                    Trace.endSection();
                     return;
                 }
-            } else if (this.mChildHelper.m4450g() == 0) {
-                requestFocus();
                 return;
             }
-        }
-        View viewFindNextViewToFocus = null;
-        AbstractC0590c0 abstractC0590c0FindViewHolderForItemId = (this.mState.f4004n == -1 || !this.mAdapter.hasStableIds()) ? null : findViewHolderForItemId(this.mState.f4004n);
-        if (abstractC0590c0FindViewHolderForItemId != null && !this.mChildHelper.m4455n(abstractC0590c0FindViewHolderForItemId.itemView) && abstractC0590c0FindViewHolderForItemId.itemView.hasFocusable()) {
-            viewFindNextViewToFocus = abstractC0590c0FindViewHolderForItemId.itemView;
-        } else if (this.mChildHelper.m4450g() > 0) {
-            viewFindNextViewToFocus = findNextViewToFocus();
-        }
-        if (viewFindNextViewToFocus != null) {
-            int i2 = this.mState.f4005o;
-            if (i2 != -1 && (viewFindViewById = viewFindNextViewToFocus.findViewById(i2)) != null && viewFindViewById.isFocusable()) {
-                viewFindNextViewToFocus = viewFindViewById;
+            Trace.beginSection("RV PartialInvalidate");
+            E1();
+            R0();
+            this.f28573F.w();
+            if (!this.f28616c0) {
+                if (x0()) {
+                    H();
+                } else {
+                    this.f28573F.i();
+                }
             }
-            viewFindNextViewToFocus.requestFocus();
+            I1(true);
+            S0();
+            Trace.endSection();
         }
     }
 
-    private void releaseGlows() {
-        boolean zIsFinished;
-        EdgeEffect edgeEffect = this.mLeftGlow;
-        if (edgeEffect != null) {
-            edgeEffect.onRelease();
-            zIsFinished = this.mLeftGlow.isFinished();
+    public void A1(int i10, int i11, Interpolator interpolator) {
+        B1(i10, i11, interpolator, Integer.MIN_VALUE);
+    }
+
+    void B0(StateListDrawable stateListDrawable, Drawable drawable, StateListDrawable stateListDrawable2, Drawable drawable2) {
+        if (stateListDrawable != null && drawable != null && stateListDrawable2 != null && drawable2 != null) {
+            Resources resources = getContext().getResources();
+            new androidx.recyclerview.widget.j(this, stateListDrawable, drawable, stateListDrawable2, drawable2, resources.getDimensionPixelSize(C4283b.f47995a), resources.getDimensionPixelSize(C4283b.f47997c), resources.getDimensionPixelOffset(C4283b.f47996b));
         } else {
-            zIsFinished = false;
-        }
-        EdgeEffect edgeEffect2 = this.mTopGlow;
-        if (edgeEffect2 != null) {
-            edgeEffect2.onRelease();
-            zIsFinished |= this.mTopGlow.isFinished();
-        }
-        EdgeEffect edgeEffect3 = this.mRightGlow;
-        if (edgeEffect3 != null) {
-            edgeEffect3.onRelease();
-            zIsFinished |= this.mRightGlow.isFinished();
-        }
-        EdgeEffect edgeEffect4 = this.mBottomGlow;
-        if (edgeEffect4 != null) {
-            edgeEffect4.onRelease();
-            zIsFinished |= this.mBottomGlow.isFinished();
-        }
-        if (zIsFinished) {
-            C0311u.m2113Z(this);
+            throw new IllegalArgumentException("Trying to set fast scroller without both required drawables." + V());
         }
     }
 
-    private void requestChildOnScreen(View view, View view2) {
-        View view3 = view2 != null ? view2 : view;
-        this.mTempRect.set(0, 0, view3.getWidth(), view3.getHeight());
-        ViewGroup.LayoutParams layoutParams = view3.getLayoutParams();
-        if (layoutParams instanceof C0603p) {
-            C0603p c0603p = (C0603p) layoutParams;
-            if (!c0603p.f3966c) {
-                Rect rect = c0603p.f3965b;
-                Rect rect2 = this.mTempRect;
-                rect2.left -= rect.left;
-                rect2.right += rect.right;
-                rect2.top -= rect.top;
-                rect2.bottom += rect.bottom;
-            }
-        }
-        if (view2 != null) {
-            offsetDescendantRectToMyCoords(view2, this.mTempRect);
-            offsetRectIntoDescendantCoords(view, this.mTempRect);
-        }
-        this.mLayout.requestChildRectangleOnScreen(this, view, this.mTempRect, !this.mFirstLayoutComplete, view2 == null);
+    public void B1(int i10, int i11, Interpolator interpolator, int i12) {
+        C1(i10, i11, interpolator, i12, false);
     }
 
-    private void resetFocusInfo() {
-        C0613z c0613z = this.mState;
-        c0613z.f4004n = -1L;
-        c0613z.f4003m = -1;
-        c0613z.f4005o = -1;
+    void C(int i10, int i11) {
+        setMeasuredDimension(q.s(i10, getPaddingLeft() + getPaddingRight(), X.B(this)), q.s(i11, getPaddingTop() + getPaddingBottom(), X.A(this)));
     }
 
-    private void resetScroll() {
-        VelocityTracker velocityTracker = this.mVelocityTracker;
-        if (velocityTracker != null) {
-            velocityTracker.clear();
-        }
-        stopNestedScroll(0);
-        releaseGlows();
+    void C0() {
+        this.f28635r0 = null;
+        this.f28633p0 = null;
+        this.f28634q0 = null;
+        this.f28632o0 = null;
     }
 
-    private void saveFocusInfo() {
-        View focusedChild = (this.mPreserveFocusAfterLayout && hasFocus() && this.mAdapter != null) ? getFocusedChild() : null;
-        AbstractC0590c0 abstractC0590c0FindContainingViewHolder = focusedChild != null ? findContainingViewHolder(focusedChild) : null;
-        if (abstractC0590c0FindContainingViewHolder == null) {
-            resetFocusInfo();
+    void C1(int i10, int i11, Interpolator interpolator, int i12, boolean z10) {
+        q qVar = this.f28591O;
+        if (qVar == null) {
+            Log.e("RecyclerView", "Cannot smooth scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
             return;
         }
-        this.mState.f4004n = this.mAdapter.hasStableIds() ? abstractC0590c0FindContainingViewHolder.getItemId() : -1L;
-        this.mState.f4003m = this.mDataSetHasChangedAfterLayout ? -1 : abstractC0590c0FindContainingViewHolder.isRemoved() ? abstractC0590c0FindContainingViewHolder.mOldPosition : abstractC0590c0FindContainingViewHolder.getAdapterPosition();
-        this.mState.f4005o = getDeepestFocusedViewWithId(abstractC0590c0FindContainingViewHolder.itemView);
-    }
-
-    private void setAdapterInternal(AbstractC0594g abstractC0594g, boolean z, boolean z2) {
-        AbstractC0594g abstractC0594g2 = this.mAdapter;
-        if (abstractC0594g2 != null) {
-            abstractC0594g2.unregisterAdapterDataObserver(this.mObserver);
-            this.mAdapter.onDetachedFromRecyclerView(this);
-        }
-        if (!z || z2) {
-            removeAndRecycleViews();
-        }
-        this.mAdapterHelper.m4434y();
-        AbstractC0594g abstractC0594g3 = this.mAdapter;
-        this.mAdapter = abstractC0594g;
-        if (abstractC0594g != null) {
-            abstractC0594g.registerAdapterDataObserver(this.mObserver);
-            abstractC0594g.onAttachedToRecyclerView(this);
-        }
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null) {
-            abstractC0602o.onAdapterChanged(abstractC0594g3, this.mAdapter);
-        }
-        this.mRecycler.m4295x(abstractC0594g3, this.mAdapter, z);
-        this.mState.f3997g = true;
-    }
-
-    private void stopScrollersInternal() {
-        this.mViewFlinger.m4194g();
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null) {
-            abstractC0602o.stopSmoothScroller();
-        }
-    }
-
-    void absorbGlows(int i2, int i3) {
-        if (i2 < 0) {
-            ensureLeftGlow();
-            if (this.mLeftGlow.isFinished()) {
-                this.mLeftGlow.onAbsorb(-i2);
-            }
-        } else if (i2 > 0) {
-            ensureRightGlow();
-            if (this.mRightGlow.isFinished()) {
-                this.mRightGlow.onAbsorb(i2);
-            }
-        }
-        if (i3 < 0) {
-            ensureTopGlow();
-            if (this.mTopGlow.isFinished()) {
-                this.mTopGlow.onAbsorb(-i3);
-            }
-        } else if (i3 > 0) {
-            ensureBottomGlow();
-            if (this.mBottomGlow.isFinished()) {
-                this.mBottomGlow.onAbsorb(i3);
-            }
-        }
-        if (i2 == 0 && i3 == 0) {
+        if (this.f28618d0) {
             return;
         }
-        C0311u.m2113Z(this);
+        if (!qVar.p()) {
+            i10 = 0;
+        }
+        if (!this.f28591O.q()) {
+            i11 = 0;
+        }
+        if (i10 == 0 && i11 == 0) {
+            return;
+        }
+        if (i12 != Integer.MIN_VALUE && i12 <= 0) {
+            scrollBy(i10, i11);
+            return;
+        }
+        if (z10) {
+            int i13 = i10 != 0 ? 1 : 0;
+            if (i11 != 0) {
+                i13 |= 2;
+            }
+            F1(i13, 1);
+        }
+        this.f28578H0.e(i10, i11, i12, interpolator);
     }
 
-    @Override // android.view.ViewGroup, android.view.View
-    public void addFocusables(ArrayList<View> arrayList, int i2, int i3) {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o == null || !abstractC0602o.onAddFocusables(this, arrayList, i2, i3)) {
-            super.addFocusables(arrayList, i2, i3);
-        }
+    boolean D0() {
+        AccessibilityManager accessibilityManager = this.f28625h0;
+        return accessibilityManager != null && accessibilityManager.isEnabled();
     }
 
-    public void addItemDecoration(AbstractC0601n abstractC0601n, int i2) {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null) {
-            abstractC0602o.assertNotInLayoutOrScroll("Cannot add item decoration during a scroll  or layout");
+    public void D1(int i10) {
+        if (this.f28618d0) {
+            return;
         }
-        if (this.mItemDecorations.isEmpty()) {
-            setWillNotDraw(false);
-        }
-        if (i2 < 0) {
-            this.mItemDecorations.add(abstractC0601n);
+        q qVar = this.f28591O;
+        if (qVar == null) {
+            Log.e("RecyclerView", "Cannot smooth scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
         } else {
-            this.mItemDecorations.add(i2, abstractC0601n);
+            qVar.N1(this, this.f28584K0, i10);
         }
-        markItemDecorInsetsDirty();
+    }
+
+    void E(View view) {
+        G gO0 = o0(view);
+        P0(view);
+        h hVar = this.f28589N;
+        if (hVar != null && gO0 != null) {
+            hVar.B(gO0);
+        }
+        List<s> list = this.f28626i0;
+        if (list != null) {
+            for (int size = list.size() - 1; size >= 0; size--) {
+                this.f28626i0.get(size).b(view);
+            }
+        }
+    }
+
+    public boolean E0() {
+        return this.f28629l0 > 0;
+    }
+
+    void E1() {
+        int i10 = this.f28614b0 + 1;
+        this.f28614b0 = i10;
+        if (i10 != 1 || this.f28618d0) {
+            return;
+        }
+        this.f28616c0 = false;
+    }
+
+    void F(View view) {
+        G gO0 = o0(view);
+        Q0(view);
+        h hVar = this.f28589N;
+        if (hVar != null && gO0 != null) {
+            hVar.C(gO0);
+        }
+        List<s> list = this.f28626i0;
+        if (list != null) {
+            for (int size = list.size() - 1; size >= 0; size--) {
+                this.f28626i0.get(size).a(view);
+            }
+        }
+    }
+
+    public boolean F1(int i10, int i11) {
+        return getScrollingChildHelper().p(i10, i11);
+    }
+
+    void G0(int i10) {
+        if (this.f28591O == null) {
+            return;
+        }
+        setScrollState(2);
+        this.f28591O.C1(i10);
+        awakenScrollBars();
+    }
+
+    void H() {
+        if (this.f28589N == null) {
+            Log.w("RecyclerView", "No adapter attached; skipping layout");
+            return;
+        }
+        if (this.f28591O == null) {
+            Log.e("RecyclerView", "No layout manager attached; skipping layout");
+            return;
+        }
+        this.f28584K0.f28669j = false;
+        boolean z10 = this.f28611Z0 && !(this.f28613a1 == getWidth() && this.f28615b1 == getHeight());
+        this.f28613a1 = 0;
+        this.f28615b1 = 0;
+        this.f28611Z0 = false;
+        if (this.f28584K0.f28664e == 1) {
+            I();
+            this.f28591O.E1(this);
+            J();
+        } else if (this.f28573F.q() || z10 || this.f28591O.s0() != getWidth() || this.f28591O.b0() != getHeight()) {
+            this.f28591O.E1(this);
+            J();
+        } else {
+            this.f28591O.E1(this);
+        }
+        K();
+    }
+
+    void H0() {
+        int iJ = this.f28575G.j();
+        for (int i10 = 0; i10 < iJ; i10++) {
+            ((r) this.f28575G.i(i10).getLayoutParams()).f28734c = true;
+        }
+        this.f28569D.s();
+    }
+
+    void I0() {
+        int iJ = this.f28575G.j();
+        for (int i10 = 0; i10 < iJ; i10++) {
+            G gO0 = o0(this.f28575G.i(i10));
+            if (gO0 != null && !gO0.shouldIgnore()) {
+                gO0.addFlags(6);
+            }
+        }
+        H0();
+        this.f28569D.t();
+    }
+
+    void I1(boolean z10) {
+        if (this.f28614b0 < 1) {
+            if (f28554g1) {
+                throw new IllegalStateException("stopInterceptRequestLayout was called more times than startInterceptRequestLayout." + V());
+            }
+            this.f28614b0 = 1;
+        }
+        if (!z10 && !this.f28618d0) {
+            this.f28616c0 = false;
+        }
+        if (this.f28614b0 == 1) {
+            if (z10 && this.f28616c0 && !this.f28618d0 && this.f28591O != null && this.f28589N != null) {
+                H();
+            }
+            if (!this.f28618d0) {
+                this.f28616c0 = false;
+            }
+        }
+        this.f28614b0--;
+    }
+
+    public void J1(int i10) {
+        getScrollingChildHelper().r(i10);
+    }
+
+    public void K0(int i10) {
+        int iG = this.f28575G.g();
+        for (int i11 = 0; i11 < iG; i11++) {
+            this.f28575G.f(i11).offsetLeftAndRight(i10);
+        }
+    }
+
+    public void K1() {
+        setScrollState(0);
+        L1();
+    }
+
+    public boolean L(int i10, int i11, int[] iArr, int[] iArr2, int i12) {
+        return getScrollingChildHelper().d(i10, i11, iArr, iArr2, i12);
+    }
+
+    public void L0(int i10) {
+        int iG = this.f28575G.g();
+        for (int i11 = 0; i11 < iG; i11++) {
+            this.f28575G.f(i11).offsetTopAndBottom(i10);
+        }
+    }
+
+    public final void M(int i10, int i11, int i12, int i13, int[] iArr, int i14, int[] iArr2) {
+        getScrollingChildHelper().e(i10, i11, i12, i13, iArr, i14, iArr2);
+    }
+
+    void M0(int i10, int i11) {
+        int iJ = this.f28575G.j();
+        for (int i12 = 0; i12 < iJ; i12++) {
+            G gO0 = o0(this.f28575G.i(i12));
+            if (gO0 != null && !gO0.shouldIgnore() && gO0.mPosition >= i10) {
+                if (f28555h1) {
+                    Log.d("RecyclerView", "offsetPositionRecordsForInsert attached child " + i12 + " holder " + gO0 + " now at position " + (gO0.mPosition + i11));
+                }
+                gO0.offsetPosition(i11, false);
+                this.f28584K0.f28666g = true;
+            }
+        }
+        this.f28569D.v(i10, i11);
         requestLayout();
     }
 
-    public void addOnChildAttachStateChangeListener(InterfaceC0604q interfaceC0604q) {
-        if (this.mOnChildAttachStateListeners == null) {
-            this.mOnChildAttachStateListeners = new ArrayList();
+    void M1(int i10, int i11, Object obj) {
+        int i12;
+        int iJ = this.f28575G.j();
+        int i13 = i10 + i11;
+        for (int i14 = 0; i14 < iJ; i14++) {
+            View viewI = this.f28575G.i(i14);
+            G gO0 = o0(viewI);
+            if (gO0 != null && !gO0.shouldIgnore() && (i12 = gO0.mPosition) >= i10 && i12 < i13) {
+                gO0.addFlags(2);
+                gO0.addChangePayload(obj);
+                ((r) viewI.getLayoutParams()).f28734c = true;
+            }
         }
-        this.mOnChildAttachStateListeners.add(interfaceC0604q);
+        this.f28569D.R(i10, i11);
     }
 
-    public void addOnItemTouchListener(InterfaceC0606s interfaceC0606s) {
-        this.mOnItemTouchListeners.add(interfaceC0606s);
-    }
-
-    public void addOnScrollListener(AbstractC0607t abstractC0607t) {
-        if (this.mScrollListeners == null) {
-            this.mScrollListeners = new ArrayList();
+    void N(int i10) {
+        q qVar = this.f28591O;
+        if (qVar != null) {
+            qVar.j1(i10);
         }
-        this.mScrollListeners.add(abstractC0607t);
-    }
-
-    void animateAppearance(AbstractC0590c0 abstractC0590c0, AbstractC0599l.c cVar, AbstractC0599l.c cVar2) {
-        abstractC0590c0.setIsRecyclable(false);
-        if (this.mItemAnimator.animateAppearance(abstractC0590c0, cVar, cVar2)) {
-            postAnimationRunner();
+        V0(i10);
+        v vVar = this.f28586L0;
+        if (vVar != null) {
+            vVar.a(this, i10);
         }
-    }
-
-    void animateDisappearance(AbstractC0590c0 abstractC0590c0, AbstractC0599l.c cVar, AbstractC0599l.c cVar2) {
-        addAnimatingView(abstractC0590c0);
-        abstractC0590c0.setIsRecyclable(false);
-        if (this.mItemAnimator.animateDisappearance(abstractC0590c0, cVar, cVar2)) {
-            postAnimationRunner();
+        List<v> list = this.f28588M0;
+        if (list != null) {
+            for (int size = list.size() - 1; size >= 0; size--) {
+                this.f28588M0.get(size).a(this, i10);
+            }
         }
     }
 
-    void assertInLayoutOrScroll(String str) {
-        if (isComputingLayout()) {
+    void N0(int i10, int i11) {
+        int i12;
+        int i13;
+        int i14;
+        int i15;
+        int iJ = this.f28575G.j();
+        if (i10 < i11) {
+            i14 = -1;
+            i13 = i10;
+            i12 = i11;
+        } else {
+            i12 = i10;
+            i13 = i11;
+            i14 = 1;
+        }
+        for (int i16 = 0; i16 < iJ; i16++) {
+            G gO0 = o0(this.f28575G.i(i16));
+            if (gO0 != null && (i15 = gO0.mPosition) >= i13 && i15 <= i12) {
+                if (f28555h1) {
+                    Log.d("RecyclerView", "offsetPositionRecordsForMove attached child " + i16 + " holder " + gO0);
+                }
+                if (gO0.mPosition == i10) {
+                    gO0.offsetPosition(i11 - i10, false);
+                } else {
+                    gO0.offsetPosition(i14, false);
+                }
+                this.f28584K0.f28666g = true;
+            }
+        }
+        this.f28569D.w(i10, i11);
+        requestLayout();
+    }
+
+    void O(int i10, int i11) {
+        this.f28630m0++;
+        int scrollX = getScrollX();
+        int scrollY = getScrollY();
+        onScrollChanged(scrollX, scrollY, scrollX - i10, scrollY - i11);
+        W0(i10, i11);
+        v vVar = this.f28586L0;
+        if (vVar != null) {
+            vVar.b(this, i10, i11);
+        }
+        List<v> list = this.f28588M0;
+        if (list != null) {
+            for (int size = list.size() - 1; size >= 0; size--) {
+                this.f28588M0.get(size).b(this, i10, i11);
+            }
+        }
+        this.f28630m0--;
+    }
+
+    void O0(int i10, int i11, boolean z10) {
+        int i12 = i10 + i11;
+        int iJ = this.f28575G.j();
+        for (int i13 = 0; i13 < iJ; i13++) {
+            G gO0 = o0(this.f28575G.i(i13));
+            if (gO0 != null && !gO0.shouldIgnore()) {
+                int i14 = gO0.mPosition;
+                if (i14 >= i12) {
+                    if (f28555h1) {
+                        Log.d("RecyclerView", "offsetPositionRecordsForRemove attached child " + i13 + " holder " + gO0 + " now at position " + (gO0.mPosition - i11));
+                    }
+                    gO0.offsetPosition(-i11, z10);
+                    this.f28584K0.f28666g = true;
+                } else if (i14 >= i10) {
+                    if (f28555h1) {
+                        Log.d("RecyclerView", "offsetPositionRecordsForRemove attached child " + i13 + " holder " + gO0 + " now REMOVED");
+                    }
+                    gO0.flagRemovedAndOffsetPosition(i10 - 1, -i11, z10);
+                    this.f28584K0.f28666g = true;
+                }
+            }
+        }
+        this.f28569D.x(i10, i11, z10);
+        requestLayout();
+    }
+
+    void P() {
+        int i10;
+        for (int size = this.f28609X0.size() - 1; size >= 0; size--) {
+            G g10 = this.f28609X0.get(size);
+            if (g10.itemView.getParent() == this && !g10.shouldIgnore() && (i10 = g10.mPendingAccessibilityState) != -1) {
+                g10.itemView.setImportantForAccessibility(i10);
+                g10.mPendingAccessibilityState = -1;
+            }
+        }
+        this.f28609X0.clear();
+    }
+
+    void R() {
+        if (this.f28635r0 != null) {
             return;
         }
-        if (str == null) {
-            throw new IllegalStateException("Cannot call this method unless RecyclerView is computing a layout or scrolling" + exceptionLabel());
+        EdgeEffect edgeEffectA = this.f28631n0.a(this, 3);
+        this.f28635r0 = edgeEffectA;
+        if (this.f28579I) {
+            edgeEffectA.setSize((getMeasuredWidth() - getPaddingLeft()) - getPaddingRight(), (getMeasuredHeight() - getPaddingTop()) - getPaddingBottom());
+        } else {
+            edgeEffectA.setSize(getMeasuredWidth(), getMeasuredHeight());
         }
-        throw new IllegalStateException(str + exceptionLabel());
     }
 
-    void assertNotInLayoutOrScroll(String str) {
-        if (isComputingLayout()) {
-            if (str != null) {
-                throw new IllegalStateException(str);
+    void R0() {
+        this.f28629l0++;
+    }
+
+    void S() {
+        if (this.f28632o0 != null) {
+            return;
+        }
+        EdgeEffect edgeEffectA = this.f28631n0.a(this, 0);
+        this.f28632o0 = edgeEffectA;
+        if (this.f28579I) {
+            edgeEffectA.setSize((getMeasuredHeight() - getPaddingTop()) - getPaddingBottom(), (getMeasuredWidth() - getPaddingLeft()) - getPaddingRight());
+        } else {
+            edgeEffectA.setSize(getMeasuredHeight(), getMeasuredWidth());
+        }
+    }
+
+    void S0() {
+        T0(true);
+    }
+
+    void T() {
+        if (this.f28634q0 != null) {
+            return;
+        }
+        EdgeEffect edgeEffectA = this.f28631n0.a(this, 2);
+        this.f28634q0 = edgeEffectA;
+        if (this.f28579I) {
+            edgeEffectA.setSize((getMeasuredHeight() - getPaddingTop()) - getPaddingBottom(), (getMeasuredWidth() - getPaddingLeft()) - getPaddingRight());
+        } else {
+            edgeEffectA.setSize(getMeasuredHeight(), getMeasuredWidth());
+        }
+    }
+
+    void T0(boolean z10) {
+        int i10 = this.f28629l0 - 1;
+        this.f28629l0 = i10;
+        if (i10 < 1) {
+            if (f28554g1 && i10 < 0) {
+                throw new IllegalStateException("layout or scroll counter cannot go below zero.Some calls are not matching" + V());
             }
-            throw new IllegalStateException("Cannot call this method while RecyclerView is computing a layout or scrolling" + exceptionLabel());
-        }
-        if (this.mDispatchScrollCounter > 0) {
-            Log.w(TAG, "Cannot call this method in a scroll callback. Scroll callbacks mightbe run during a measure & layout pass where you cannot change theRecyclerView data. Any method call that might change the structureof the RecyclerView or the adapter contents should be postponed tothe next frame.", new IllegalStateException(HttpUrl.FRAGMENT_ENCODE_SET + exceptionLabel()));
+            this.f28629l0 = 0;
+            if (z10) {
+                G();
+                P();
+            }
         }
     }
 
-    boolean canReuseUpdatedViewHolder(AbstractC0590c0 abstractC0590c0) {
-        AbstractC0599l abstractC0599l = this.mItemAnimator;
-        return abstractC0599l == null || abstractC0599l.canReuseUpdatedViewHolder(abstractC0590c0, abstractC0590c0.getUnmodifiedPayloads());
+    void U() {
+        if (this.f28633p0 != null) {
+            return;
+        }
+        EdgeEffect edgeEffectA = this.f28631n0.a(this, 1);
+        this.f28633p0 = edgeEffectA;
+        if (this.f28579I) {
+            edgeEffectA.setSize((getMeasuredWidth() - getPaddingLeft()) - getPaddingRight(), (getMeasuredHeight() - getPaddingTop()) - getPaddingBottom());
+        } else {
+            edgeEffectA.setSize(getMeasuredWidth(), getMeasuredHeight());
+        }
+    }
+
+    String V() {
+        return " " + super.toString() + ", adapter:" + this.f28589N + ", layout:" + this.f28591O + ", context:" + getContext();
+    }
+
+    final void W(C c10) {
+        if (getScrollState() != 2) {
+            c10.f28675p = 0;
+            c10.f28676q = 0;
+        } else {
+            OverScroller overScroller = this.f28578H0.f28679D;
+            c10.f28675p = overScroller.getFinalX() - overScroller.getCurrX();
+            c10.f28676q = overScroller.getFinalY() - overScroller.getCurrY();
+        }
+    }
+
+    public View X(View view) {
+        ViewParent parent = view.getParent();
+        while (parent != null && parent != this && (parent instanceof View)) {
+            view = parent;
+            parent = view.getParent();
+        }
+        if (parent == this) {
+            return view;
+        }
+        return null;
+    }
+
+    void X0() {
+        if (this.f28596Q0 || !this.f28603U) {
+            return;
+        }
+        X.f0(this, this.f28610Y0);
+        this.f28596Q0 = true;
+    }
+
+    public G Y(View view) {
+        View viewX = X(view);
+        if (viewX == null) {
+            return null;
+        }
+        return n0(viewX);
+    }
+
+    void a(int i10, int i11) {
+        if (i10 < 0) {
+            S();
+            if (this.f28632o0.isFinished()) {
+                this.f28632o0.onAbsorb(-i10);
+            }
+        } else if (i10 > 0) {
+            T();
+            if (this.f28634q0.isFinished()) {
+                this.f28634q0.onAbsorb(i10);
+            }
+        }
+        if (i11 < 0) {
+            U();
+            if (this.f28633p0.isFinished()) {
+                this.f28633p0.onAbsorb(-i11);
+            }
+        } else if (i11 > 0) {
+            R();
+            if (this.f28635r0.isFinished()) {
+                this.f28635r0.onAbsorb(i11);
+            }
+        }
+        if (i10 == 0 && i11 == 0) {
+            return;
+        }
+        postInvalidateOnAnimation();
+    }
+
+    void a1(boolean z10) {
+        this.f28628k0 = z10 | this.f28628k0;
+        this.f28627j0 = true;
+        I0();
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    public void addFocusables(ArrayList<View> arrayList, int i10, int i11) {
+        q qVar = this.f28591O;
+        if (qVar == null || !qVar.K0(this, arrayList, i10, i11)) {
+            super.addFocusables(arrayList, i10, i11);
+        }
+    }
+
+    void c1(G g10, n.c cVar) {
+        g10.setFlags(0, 8192);
+        if (this.f28584K0.f28668i && g10.isUpdated() && !g10.isRemoved() && !g10.shouldIgnore()) {
+            this.f28577H.c(k0(g10), g10);
+        }
+        this.f28577H.e(g10, cVar);
     }
 
     @Override // android.view.ViewGroup
     protected boolean checkLayoutParams(ViewGroup.LayoutParams layoutParams) {
-        return (layoutParams instanceof C0603p) && this.mLayout.checkLayoutParams((C0603p) layoutParams);
+        return (layoutParams instanceof r) && this.f28591O.r((r) layoutParams);
     }
 
-    void clearOldPositions() {
-        int iM4452j = this.mChildHelper.m4452j();
-        for (int i2 = 0; i2 < iM4452j; i2++) {
-            AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(this.mChildHelper.m4451i(i2));
-            if (!childViewHolderInt.shouldIgnore()) {
-                childViewHolderInt.clearOldPosition();
-            }
-        }
-        this.mRecycler.m4277d();
-    }
-
-    public void clearOnChildAttachStateChangeListeners() {
-        List<InterfaceC0604q> list = this.mOnChildAttachStateListeners;
-        if (list != null) {
-            list.clear();
-        }
-    }
-
-    public void clearOnScrollListeners() {
-        List<AbstractC0607t> list = this.mScrollListeners;
-        if (list != null) {
-            list.clear();
-        }
-    }
-
-    @Override // android.view.View, androidx.core.view.ScrollingView
+    @Override // android.view.View
     public int computeHorizontalScrollExtent() {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null && abstractC0602o.canScrollHorizontally()) {
-            return this.mLayout.computeHorizontalScrollExtent(this.mState);
+        q qVar = this.f28591O;
+        if (qVar != null && qVar.p()) {
+            return this.f28591O.v(this.f28584K0);
         }
         return 0;
     }
 
-    @Override // android.view.View, androidx.core.view.ScrollingView
+    @Override // android.view.View
     public int computeHorizontalScrollOffset() {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null && abstractC0602o.canScrollHorizontally()) {
-            return this.mLayout.computeHorizontalScrollOffset(this.mState);
+        q qVar = this.f28591O;
+        if (qVar != null && qVar.p()) {
+            return this.f28591O.w(this.f28584K0);
         }
         return 0;
     }
 
-    @Override // android.view.View, androidx.core.view.ScrollingView
+    @Override // android.view.View
     public int computeHorizontalScrollRange() {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null && abstractC0602o.canScrollHorizontally()) {
-            return this.mLayout.computeHorizontalScrollRange(this.mState);
+        q qVar = this.f28591O;
+        if (qVar != null && qVar.p()) {
+            return this.f28591O.x(this.f28584K0);
         }
         return 0;
     }
 
-    @Override // android.view.View, androidx.core.view.ScrollingView
+    @Override // android.view.View
     public int computeVerticalScrollExtent() {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null && abstractC0602o.canScrollVertically()) {
-            return this.mLayout.computeVerticalScrollExtent(this.mState);
+        q qVar = this.f28591O;
+        if (qVar != null && qVar.q()) {
+            return this.f28591O.y(this.f28584K0);
         }
         return 0;
     }
 
-    @Override // android.view.View, androidx.core.view.ScrollingView
+    @Override // android.view.View
     public int computeVerticalScrollOffset() {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null && abstractC0602o.canScrollVertically()) {
-            return this.mLayout.computeVerticalScrollOffset(this.mState);
+        q qVar = this.f28591O;
+        if (qVar != null && qVar.q()) {
+            return this.f28591O.z(this.f28584K0);
         }
         return 0;
     }
 
-    @Override // android.view.View, androidx.core.view.ScrollingView
+    @Override // android.view.View
     public int computeVerticalScrollRange() {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null && abstractC0602o.canScrollVertically()) {
-            return this.mLayout.computeVerticalScrollRange(this.mState);
+        q qVar = this.f28591O;
+        if (qVar != null && qVar.q()) {
+            return this.f28591O.A(this.f28584K0);
         }
         return 0;
     }
 
-    void considerReleasingGlowsOnScroll(int i2, int i3) {
-        boolean zIsFinished;
-        EdgeEffect edgeEffect = this.mLeftGlow;
-        if (edgeEffect == null || edgeEffect.isFinished() || i2 <= 0) {
-            zIsFinished = false;
-        } else {
-            this.mLeftGlow.onRelease();
-            zIsFinished = this.mLeftGlow.isFinished();
+    public G d0(int i10) {
+        G g10 = null;
+        if (this.f28627j0) {
+            return null;
         }
-        EdgeEffect edgeEffect2 = this.mRightGlow;
-        if (edgeEffect2 != null && !edgeEffect2.isFinished() && i2 < 0) {
-            this.mRightGlow.onRelease();
-            zIsFinished |= this.mRightGlow.isFinished();
+        int iJ = this.f28575G.j();
+        for (int i11 = 0; i11 < iJ; i11++) {
+            G gO0 = o0(this.f28575G.i(i11));
+            if (gO0 != null && !gO0.isRemoved() && j0(gO0) == i10) {
+                if (!this.f28575G.n(gO0.itemView)) {
+                    return gO0;
+                }
+                g10 = gO0;
+            }
         }
-        EdgeEffect edgeEffect3 = this.mTopGlow;
-        if (edgeEffect3 != null && !edgeEffect3.isFinished() && i3 > 0) {
-            this.mTopGlow.onRelease();
-            zIsFinished |= this.mTopGlow.isFinished();
-        }
-        EdgeEffect edgeEffect4 = this.mBottomGlow;
-        if (edgeEffect4 != null && !edgeEffect4.isFinished() && i3 < 0) {
-            this.mBottomGlow.onRelease();
-            zIsFinished |= this.mBottomGlow.isFinished();
-        }
-        if (zIsFinished) {
-            C0311u.m2113Z(this);
-        }
+        return g10;
     }
 
-    void consumePendingUpdateOperations() {
-        if (!this.mFirstLayoutComplete || this.mDataSetHasChangedAfterLayout) {
-            C0275d.m1840a(TRACE_ON_DATA_SET_CHANGE_LAYOUT_TAG);
-            dispatchLayout();
-            C0275d.m1841b();
-            return;
+    @Override // android.view.ViewGroup, android.view.View
+    public boolean dispatchKeyEvent(KeyEvent keyEvent) {
+        if (super.dispatchKeyEvent(keyEvent)) {
+            return true;
         }
-        if (this.mAdapterHelper.m4426p()) {
-            if (!this.mAdapterHelper.m4425o(4) || this.mAdapterHelper.m4425o(11)) {
-                if (this.mAdapterHelper.m4426p()) {
-                    C0275d.m1840a(TRACE_ON_DATA_SET_CHANGE_LAYOUT_TAG);
-                    dispatchLayout();
-                    C0275d.m1841b();
-                    return;
-                }
-                return;
-            }
-            C0275d.m1840a(TRACE_HANDLE_ADAPTER_UPDATES_TAG);
-            startInterceptRequestLayout();
-            onEnterLayoutOrScroll();
-            this.mAdapterHelper.m4432w();
-            if (!this.mLayoutWasDefered) {
-                if (hasUpdatedView()) {
-                    dispatchLayout();
+        q layoutManager = getLayoutManager();
+        int iH = 0;
+        if (layoutManager == null) {
+            return false;
+        }
+        if (layoutManager.q()) {
+            int keyCode = keyEvent.getKeyCode();
+            if (keyCode == 92 || keyCode == 93) {
+                int measuredHeight = getMeasuredHeight();
+                if (keyCode == 93) {
+                    B1(0, measuredHeight, null, Integer.MIN_VALUE);
                 } else {
-                    this.mAdapterHelper.m4420i();
+                    B1(0, -measuredHeight, null, Integer.MIN_VALUE);
                 }
+                return true;
             }
-            stopInterceptRequestLayout(true);
-            onExitLayoutOrScroll();
-            C0275d.m1841b();
-        }
-    }
-
-    void defaultOnMeasure(int i2, int i3) {
-        setMeasuredDimension(AbstractC0602o.chooseSize(i2, getPaddingLeft() + getPaddingRight(), C0311u.m2084A(this)), AbstractC0602o.chooseSize(i3, getPaddingTop() + getPaddingBottom(), C0311u.m2164z(this)));
-    }
-
-    void dispatchChildAttached(View view) {
-        AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(view);
-        onChildAttachedToWindow(view);
-        AbstractC0594g abstractC0594g = this.mAdapter;
-        if (abstractC0594g != null && childViewHolderInt != null) {
-            abstractC0594g.onViewAttachedToWindow(childViewHolderInt);
-        }
-        List<InterfaceC0604q> list = this.mOnChildAttachStateListeners;
-        if (list != null) {
-            for (int size = list.size() - 1; size >= 0; size--) {
-                this.mOnChildAttachStateListeners.get(size).m4243b(view);
+            if (keyCode == 122 || keyCode == 123) {
+                boolean zA0 = layoutManager.A0();
+                if (keyCode == 122) {
+                    if (zA0) {
+                        iH = getAdapter().h();
+                    }
+                } else if (!zA0) {
+                    iH = getAdapter().h();
+                }
+                D1(iH);
+                return true;
+            }
+        } else if (layoutManager.p()) {
+            int keyCode2 = keyEvent.getKeyCode();
+            if (keyCode2 == 92 || keyCode2 == 93) {
+                int measuredWidth = getMeasuredWidth();
+                if (keyCode2 == 93) {
+                    B1(measuredWidth, 0, null, Integer.MIN_VALUE);
+                } else {
+                    B1(-measuredWidth, 0, null, Integer.MIN_VALUE);
+                }
+                return true;
+            }
+            if (keyCode2 == 122 || keyCode2 == 123) {
+                boolean zA02 = layoutManager.A0();
+                if (keyCode2 == 122) {
+                    if (zA02) {
+                        iH = getAdapter().h();
+                    }
+                } else if (!zA02) {
+                    iH = getAdapter().h();
+                }
+                D1(iH);
+                return true;
             }
         }
-    }
-
-    void dispatchChildDetached(View view) {
-        AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(view);
-        onChildDetachedFromWindow(view);
-        AbstractC0594g abstractC0594g = this.mAdapter;
-        if (abstractC0594g != null && childViewHolderInt != null) {
-            abstractC0594g.onViewDetachedFromWindow(childViewHolderInt);
-        }
-        List<InterfaceC0604q> list = this.mOnChildAttachStateListeners;
-        if (list != null) {
-            for (int size = list.size() - 1; size >= 0; size--) {
-                this.mOnChildAttachStateListeners.get(size).m4242a(view);
-            }
-        }
-    }
-
-    void dispatchLayout() {
-        if (this.mAdapter == null) {
-            Log.e(TAG, "No adapter attached; skipping layout");
-            return;
-        }
-        if (this.mLayout == null) {
-            Log.e(TAG, "No layout manager attached; skipping layout");
-            return;
-        }
-        C0613z c0613z = this.mState;
-        c0613z.f4000j = false;
-        if (c0613z.f3995e == 1) {
-            dispatchLayoutStep1();
-            this.mLayout.setExactMeasureSpecsFrom(this);
-            dispatchLayoutStep2();
-        } else if (!this.mAdapterHelper.m4427q() && this.mLayout.getWidth() == getWidth() && this.mLayout.getHeight() == getHeight()) {
-            this.mLayout.setExactMeasureSpecsFrom(this);
-        } else {
-            this.mLayout.setExactMeasureSpecsFrom(this);
-            dispatchLayoutStep2();
-        }
-        dispatchLayoutStep3();
+        return false;
     }
 
     @Override // android.view.View
-    public boolean dispatchNestedFling(float f2, float f3, boolean z) {
-        return getScrollingChildHelper().m2060a(f2, f3, z);
+    public boolean dispatchNestedFling(float f10, float f11, boolean z10) {
+        return getScrollingChildHelper().a(f10, f11, z10);
     }
 
     @Override // android.view.View
-    public boolean dispatchNestedPreFling(float f2, float f3) {
-        return getScrollingChildHelper().m2061b(f2, f3);
+    public boolean dispatchNestedPreFling(float f10, float f11) {
+        return getScrollingChildHelper().b(f10, f11);
     }
 
     @Override // android.view.View
-    public boolean dispatchNestedPreScroll(int i2, int i3, int[] iArr, int[] iArr2) {
-        return getScrollingChildHelper().m2062c(i2, i3, iArr, iArr2);
+    public boolean dispatchNestedPreScroll(int i10, int i11, int[] iArr, int[] iArr2) {
+        return getScrollingChildHelper().c(i10, i11, iArr, iArr2);
     }
 
     @Override // android.view.View
-    public boolean dispatchNestedScroll(int i2, int i3, int i4, int i5, int[] iArr) {
-        return getScrollingChildHelper().m2065f(i2, i3, i4, i5, iArr);
-    }
-
-    void dispatchOnScrollStateChanged(int i2) {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null) {
-            abstractC0602o.onScrollStateChanged(i2);
-        }
-        onScrollStateChanged(i2);
-        AbstractC0607t abstractC0607t = this.mScrollListener;
-        if (abstractC0607t != null) {
-            abstractC0607t.onScrollStateChanged(this, i2);
-        }
-        List<AbstractC0607t> list = this.mScrollListeners;
-        if (list != null) {
-            for (int size = list.size() - 1; size >= 0; size--) {
-                this.mScrollListeners.get(size).onScrollStateChanged(this, i2);
-            }
-        }
-    }
-
-    void dispatchOnScrolled(int i2, int i3) {
-        this.mDispatchScrollCounter++;
-        int scrollX = getScrollX();
-        int scrollY = getScrollY();
-        onScrollChanged(scrollX, scrollY, scrollX - i2, scrollY - i3);
-        onScrolled(i2, i3);
-        AbstractC0607t abstractC0607t = this.mScrollListener;
-        if (abstractC0607t != null) {
-            abstractC0607t.onScrolled(this, i2, i3);
-        }
-        List<AbstractC0607t> list = this.mScrollListeners;
-        if (list != null) {
-            for (int size = list.size() - 1; size >= 0; size--) {
-                this.mScrollListeners.get(size).onScrolled(this, i2, i3);
-            }
-        }
-        this.mDispatchScrollCounter--;
-    }
-
-    void dispatchPendingImportantForAccessibilityChanges() {
-        int i2;
-        for (int size = this.mPendingAccessibilityImportanceChange.size() - 1; size >= 0; size--) {
-            AbstractC0590c0 abstractC0590c0 = this.mPendingAccessibilityImportanceChange.get(size);
-            if (abstractC0590c0.itemView.getParent() == this && !abstractC0590c0.shouldIgnore() && (i2 = abstractC0590c0.mPendingAccessibilityState) != -1) {
-                C0311u.m2153t0(abstractC0590c0.itemView, i2);
-                abstractC0590c0.mPendingAccessibilityState = -1;
-            }
-        }
-        this.mPendingAccessibilityImportanceChange.clear();
+    public boolean dispatchNestedScroll(int i10, int i11, int i12, int i13, int[] iArr) {
+        return getScrollingChildHelper().f(i10, i11, i12, i13, iArr);
     }
 
     @Override // android.view.View
@@ -5130,1684 +3675,88 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
 
     @Override // android.view.View
     public void draw(Canvas canvas) {
-        boolean z;
+        boolean z10;
         super.draw(canvas);
-        int size = this.mItemDecorations.size();
-        boolean z2 = false;
-        for (int i2 = 0; i2 < size; i2++) {
-            this.mItemDecorations.get(i2).onDrawOver(canvas, this, this.mState);
+        int size = this.f28597R.size();
+        boolean z11 = false;
+        for (int i10 = 0; i10 < size; i10++) {
+            this.f28597R.get(i10).i(canvas, this, this.f28584K0);
         }
-        EdgeEffect edgeEffect = this.mLeftGlow;
+        EdgeEffect edgeEffect = this.f28632o0;
         if (edgeEffect == null || edgeEffect.isFinished()) {
-            z = false;
+            z10 = false;
         } else {
             int iSave = canvas.save();
-            int paddingBottom = this.mClipToPadding ? getPaddingBottom() : 0;
+            int paddingBottom = this.f28579I ? getPaddingBottom() : 0;
             canvas.rotate(270.0f);
             canvas.translate((-getHeight()) + paddingBottom, 0.0f);
-            EdgeEffect edgeEffect2 = this.mLeftGlow;
-            z = edgeEffect2 != null && edgeEffect2.draw(canvas);
+            EdgeEffect edgeEffect2 = this.f28632o0;
+            z10 = edgeEffect2 != null && edgeEffect2.draw(canvas);
             canvas.restoreToCount(iSave);
         }
-        EdgeEffect edgeEffect3 = this.mTopGlow;
+        EdgeEffect edgeEffect3 = this.f28633p0;
         if (edgeEffect3 != null && !edgeEffect3.isFinished()) {
             int iSave2 = canvas.save();
-            if (this.mClipToPadding) {
+            if (this.f28579I) {
                 canvas.translate(getPaddingLeft(), getPaddingTop());
             }
-            EdgeEffect edgeEffect4 = this.mTopGlow;
-            z |= edgeEffect4 != null && edgeEffect4.draw(canvas);
+            EdgeEffect edgeEffect4 = this.f28633p0;
+            z10 |= edgeEffect4 != null && edgeEffect4.draw(canvas);
             canvas.restoreToCount(iSave2);
         }
-        EdgeEffect edgeEffect5 = this.mRightGlow;
+        EdgeEffect edgeEffect5 = this.f28634q0;
         if (edgeEffect5 != null && !edgeEffect5.isFinished()) {
             int iSave3 = canvas.save();
             int width = getWidth();
-            int paddingTop = this.mClipToPadding ? getPaddingTop() : 0;
+            int paddingTop = this.f28579I ? getPaddingTop() : 0;
             canvas.rotate(90.0f);
-            canvas.translate(-paddingTop, -width);
-            EdgeEffect edgeEffect6 = this.mRightGlow;
-            z |= edgeEffect6 != null && edgeEffect6.draw(canvas);
+            canvas.translate(paddingTop, -width);
+            EdgeEffect edgeEffect6 = this.f28634q0;
+            z10 |= edgeEffect6 != null && edgeEffect6.draw(canvas);
             canvas.restoreToCount(iSave3);
         }
-        EdgeEffect edgeEffect7 = this.mBottomGlow;
+        EdgeEffect edgeEffect7 = this.f28635r0;
         if (edgeEffect7 != null && !edgeEffect7.isFinished()) {
             int iSave4 = canvas.save();
             canvas.rotate(180.0f);
-            if (this.mClipToPadding) {
+            if (this.f28579I) {
                 canvas.translate((-getWidth()) + getPaddingRight(), (-getHeight()) + getPaddingBottom());
             } else {
                 canvas.translate(-getWidth(), -getHeight());
             }
-            EdgeEffect edgeEffect8 = this.mBottomGlow;
+            EdgeEffect edgeEffect8 = this.f28635r0;
             if (edgeEffect8 != null && edgeEffect8.draw(canvas)) {
-                z2 = true;
+                z11 = true;
             }
-            z |= z2;
+            z10 |= z11;
             canvas.restoreToCount(iSave4);
         }
-        if ((z || this.mItemAnimator == null || this.mItemDecorations.size() <= 0 || !this.mItemAnimator.isRunning()) ? z : true) {
-            C0311u.m2113Z(this);
+        if ((z10 || this.f28636s0 == null || this.f28597R.size() <= 0 || !this.f28636s0.p()) ? z10 : true) {
+            postInvalidateOnAnimation();
         }
     }
 
     @Override // android.view.ViewGroup
-    public boolean drawChild(Canvas canvas, View view, long j2) {
-        return super.drawChild(canvas, view, j2);
+    public boolean drawChild(Canvas canvas, View view, long j10) {
+        return super.drawChild(canvas, view, j10);
     }
 
-    void ensureBottomGlow() {
-        if (this.mBottomGlow != null) {
-            return;
-        }
-        EdgeEffect edgeEffectM4227a = this.mEdgeEffectFactory.m4227a(this, 3);
-        this.mBottomGlow = edgeEffectM4227a;
-        if (this.mClipToPadding) {
-            edgeEffectM4227a.setSize((getMeasuredWidth() - getPaddingLeft()) - getPaddingRight(), (getMeasuredHeight() - getPaddingTop()) - getPaddingBottom());
-        } else {
-            edgeEffectM4227a.setSize(getMeasuredWidth(), getMeasuredHeight());
-        }
-    }
-
-    void ensureLeftGlow() {
-        if (this.mLeftGlow != null) {
-            return;
-        }
-        EdgeEffect edgeEffectM4227a = this.mEdgeEffectFactory.m4227a(this, 0);
-        this.mLeftGlow = edgeEffectM4227a;
-        if (this.mClipToPadding) {
-            edgeEffectM4227a.setSize((getMeasuredHeight() - getPaddingTop()) - getPaddingBottom(), (getMeasuredWidth() - getPaddingLeft()) - getPaddingRight());
-        } else {
-            edgeEffectM4227a.setSize(getMeasuredHeight(), getMeasuredWidth());
-        }
-    }
-
-    void ensureRightGlow() {
-        if (this.mRightGlow != null) {
-            return;
-        }
-        EdgeEffect edgeEffectM4227a = this.mEdgeEffectFactory.m4227a(this, 2);
-        this.mRightGlow = edgeEffectM4227a;
-        if (this.mClipToPadding) {
-            edgeEffectM4227a.setSize((getMeasuredHeight() - getPaddingTop()) - getPaddingBottom(), (getMeasuredWidth() - getPaddingLeft()) - getPaddingRight());
-        } else {
-            edgeEffectM4227a.setSize(getMeasuredHeight(), getMeasuredWidth());
-        }
-    }
-
-    void ensureTopGlow() {
-        if (this.mTopGlow != null) {
-            return;
-        }
-        EdgeEffect edgeEffectM4227a = this.mEdgeEffectFactory.m4227a(this, 1);
-        this.mTopGlow = edgeEffectM4227a;
-        if (this.mClipToPadding) {
-            edgeEffectM4227a.setSize((getMeasuredWidth() - getPaddingLeft()) - getPaddingRight(), (getMeasuredHeight() - getPaddingTop()) - getPaddingBottom());
-        } else {
-            edgeEffectM4227a.setSize(getMeasuredWidth(), getMeasuredHeight());
-        }
-    }
-
-    String exceptionLabel() {
-        return " " + super.toString() + ", adapter:" + this.mAdapter + ", layout:" + this.mLayout + ", context:" + getContext();
-    }
-
-    final void fillRemainingScrollValues(C0613z c0613z) {
-        if (getScrollState() != 2) {
-            c0613z.f4006p = 0;
-            c0613z.f4007q = 0;
-        } else {
-            OverScroller overScroller = this.mViewFlinger.f3945h;
-            c0613z.f4006p = overScroller.getFinalX() - overScroller.getCurrX();
-            c0613z.f4007q = overScroller.getFinalY() - overScroller.getCurrY();
-        }
-    }
-
-    public View findChildViewUnder(float f2, float f3) {
-        for (int iM4450g = this.mChildHelper.m4450g() - 1; iM4450g >= 0; iM4450g--) {
-            View viewM4449f = this.mChildHelper.m4449f(iM4450g);
-            float translationX = viewM4449f.getTranslationX();
-            float translationY = viewM4449f.getTranslationY();
-            if (f2 >= viewM4449f.getLeft() + translationX && f2 <= viewM4449f.getRight() + translationX && f3 >= viewM4449f.getTop() + translationY && f3 <= viewM4449f.getBottom() + translationY) {
-                return viewM4449f;
-            }
-        }
-        return null;
-    }
-
-    public View findContainingItemView(View view) {
-        ViewParent parent = view.getParent();
-        while (parent != null && parent != this && (parent instanceof View)) {
-            view = parent;
-            parent = view.getParent();
-        }
-        if (parent == this) {
-            return view;
-        }
-        return null;
-    }
-
-    public AbstractC0590c0 findContainingViewHolder(View view) {
-        View viewFindContainingItemView = findContainingItemView(view);
-        if (viewFindContainingItemView == null) {
-            return null;
-        }
-        return getChildViewHolder(viewFindContainingItemView);
-    }
-
-    public AbstractC0590c0 findViewHolderForAdapterPosition(int i2) {
-        AbstractC0590c0 abstractC0590c0 = null;
-        if (this.mDataSetHasChangedAfterLayout) {
-            return null;
-        }
-        int iM4452j = this.mChildHelper.m4452j();
-        for (int i3 = 0; i3 < iM4452j; i3++) {
-            AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(this.mChildHelper.m4451i(i3));
-            if (childViewHolderInt != null && !childViewHolderInt.isRemoved() && getAdapterPositionFor(childViewHolderInt) == i2) {
-                if (!this.mChildHelper.m4455n(childViewHolderInt.itemView)) {
-                    return childViewHolderInt;
-                }
-                abstractC0590c0 = childViewHolderInt;
-            }
-        }
-        return abstractC0590c0;
-    }
-
-    public AbstractC0590c0 findViewHolderForItemId(long j2) {
-        AbstractC0594g abstractC0594g = this.mAdapter;
-        AbstractC0590c0 abstractC0590c0 = null;
-        if (abstractC0594g != null && abstractC0594g.hasStableIds()) {
-            int iM4452j = this.mChildHelper.m4452j();
-            for (int i2 = 0; i2 < iM4452j; i2++) {
-                AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(this.mChildHelper.m4451i(i2));
-                if (childViewHolderInt != null && !childViewHolderInt.isRemoved() && childViewHolderInt.getItemId() == j2) {
-                    if (!this.mChildHelper.m4455n(childViewHolderInt.itemView)) {
-                        return childViewHolderInt;
+    public G e0(long j10) {
+        h hVar = this.f28589N;
+        G g10 = null;
+        if (hVar != null && hVar.m()) {
+            int iJ = this.f28575G.j();
+            for (int i10 = 0; i10 < iJ; i10++) {
+                G gO0 = o0(this.f28575G.i(i10));
+                if (gO0 != null && !gO0.isRemoved() && gO0.getItemId() == j10) {
+                    if (!this.f28575G.n(gO0.itemView)) {
+                        return gO0;
                     }
-                    abstractC0590c0 = childViewHolderInt;
+                    g10 = gO0;
                 }
             }
         }
-        return abstractC0590c0;
-    }
-
-    public AbstractC0590c0 findViewHolderForLayoutPosition(int i2) {
-        return findViewHolderForPosition(i2, false);
-    }
-
-    @Deprecated
-    public AbstractC0590c0 findViewHolderForPosition(int i2) {
-        return findViewHolderForPosition(i2, false);
-    }
-
-    public boolean fling(int i2, int i3) {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o == null) {
-            Log.e(TAG, "Cannot fling without a LayoutManager set. Call setLayoutManager with a non-null argument.");
-            return false;
-        }
-        if (this.mLayoutSuppressed) {
-            return false;
-        }
-        boolean zCanScrollHorizontally = abstractC0602o.canScrollHorizontally();
-        boolean zCanScrollVertically = this.mLayout.canScrollVertically();
-        if (!zCanScrollHorizontally || Math.abs(i2) < this.mMinFlingVelocity) {
-            i2 = 0;
-        }
-        if (!zCanScrollVertically || Math.abs(i3) < this.mMinFlingVelocity) {
-            i3 = 0;
-        }
-        if (i2 == 0 && i3 == 0) {
-            return false;
-        }
-        float f2 = i2;
-        float f3 = i3;
-        if (!dispatchNestedPreFling(f2, f3)) {
-            boolean z = zCanScrollHorizontally || zCanScrollVertically;
-            dispatchNestedFling(f2, f3, z);
-            AbstractC0605r abstractC0605r = this.mOnFlingListener;
-            if (abstractC0605r != null && abstractC0605r.onFling(i2, i3)) {
-                return true;
-            }
-            if (z) {
-                int i4 = zCanScrollHorizontally ? 1 : 0;
-                if (zCanScrollVertically) {
-                    i4 |= 2;
-                }
-                startNestedScroll(i4, 1);
-                int i5 = this.mMaxFlingVelocity;
-                int iMax = Math.max(-i5, Math.min(i2, i5));
-                int i6 = this.mMaxFlingVelocity;
-                this.mViewFlinger.m4191c(iMax, Math.max(-i6, Math.min(i3, i6)));
-                return true;
-            }
-        }
-        return false;
-    }
-
-    @Override // android.view.ViewGroup, android.view.ViewParent
-    public View focusSearch(View view, int i2) {
-        View viewOnFocusSearchFailed;
-        boolean z;
-        View viewOnInterceptFocusSearch = this.mLayout.onInterceptFocusSearch(view, i2);
-        if (viewOnInterceptFocusSearch != null) {
-            return viewOnInterceptFocusSearch;
-        }
-        boolean z2 = (this.mAdapter == null || this.mLayout == null || isComputingLayout() || this.mLayoutSuppressed) ? false : true;
-        FocusFinder focusFinder = FocusFinder.getInstance();
-        if (z2 && (i2 == 2 || i2 == 1)) {
-            if (this.mLayout.canScrollVertically()) {
-                int i3 = i2 == 2 ? 130 : 33;
-                z = focusFinder.findNextFocus(this, view, i3) == null;
-                if (FORCE_ABS_FOCUS_SEARCH_DIRECTION) {
-                    i2 = i3;
-                }
-            } else {
-                z = false;
-            }
-            if (!z && this.mLayout.canScrollHorizontally()) {
-                int i4 = (this.mLayout.getLayoutDirection() == 1) ^ (i2 == 2) ? 66 : 17;
-                boolean z3 = focusFinder.findNextFocus(this, view, i4) == null;
-                if (FORCE_ABS_FOCUS_SEARCH_DIRECTION) {
-                    i2 = i4;
-                }
-                z = z3;
-            }
-            if (z) {
-                consumePendingUpdateOperations();
-                if (findContainingItemView(view) == null) {
-                    return null;
-                }
-                startInterceptRequestLayout();
-                this.mLayout.onFocusSearchFailed(view, i2, this.mRecycler, this.mState);
-                stopInterceptRequestLayout(false);
-            }
-            viewOnFocusSearchFailed = focusFinder.findNextFocus(this, view, i2);
-        } else {
-            View viewFindNextFocus = focusFinder.findNextFocus(this, view, i2);
-            if (viewFindNextFocus == null && z2) {
-                consumePendingUpdateOperations();
-                if (findContainingItemView(view) == null) {
-                    return null;
-                }
-                startInterceptRequestLayout();
-                viewOnFocusSearchFailed = this.mLayout.onFocusSearchFailed(view, i2, this.mRecycler, this.mState);
-                stopInterceptRequestLayout(false);
-            } else {
-                viewOnFocusSearchFailed = viewFindNextFocus;
-            }
-        }
-        if (viewOnFocusSearchFailed == null || viewOnFocusSearchFailed.hasFocusable()) {
-            return isPreferredNextFocus(view, viewOnFocusSearchFailed, i2) ? viewOnFocusSearchFailed : super.focusSearch(view, i2);
-        }
-        if (getFocusedChild() == null) {
-            return super.focusSearch(view, i2);
-        }
-        requestChildOnScreen(viewOnFocusSearchFailed, null);
-        return view;
-    }
-
-    @Override // android.view.ViewGroup
-    protected ViewGroup.LayoutParams generateDefaultLayoutParams() {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null) {
-            return abstractC0602o.generateDefaultLayoutParams();
-        }
-        throw new IllegalStateException("RecyclerView has no LayoutManager" + exceptionLabel());
-    }
-
-    @Override // android.view.ViewGroup
-    public ViewGroup.LayoutParams generateLayoutParams(AttributeSet attributeSet) {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null) {
-            return abstractC0602o.generateLayoutParams(getContext(), attributeSet);
-        }
-        throw new IllegalStateException("RecyclerView has no LayoutManager" + exceptionLabel());
-    }
-
-    @Override // android.view.ViewGroup, android.view.View
-    public CharSequence getAccessibilityClassName() {
-        return "androidx.recyclerview.widget.RecyclerView";
-    }
-
-    public AbstractC0594g getAdapter() {
-        return this.mAdapter;
-    }
-
-    int getAdapterPositionFor(AbstractC0590c0 abstractC0590c0) {
-        if (abstractC0590c0.hasAnyOfTheFlags(524) || !abstractC0590c0.isBound()) {
-            return -1;
-        }
-        return this.mAdapterHelper.m4419e(abstractC0590c0.mPosition);
-    }
-
-    @Override // android.view.View
-    public int getBaseline() {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        return abstractC0602o != null ? abstractC0602o.getBaseline() : super.getBaseline();
-    }
-
-    long getChangedHolderKey(AbstractC0590c0 abstractC0590c0) {
-        return this.mAdapter.hasStableIds() ? abstractC0590c0.getItemId() : abstractC0590c0.mPosition;
-    }
-
-    public int getChildAdapterPosition(View view) {
-        AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(view);
-        if (childViewHolderInt != null) {
-            return childViewHolderInt.getAdapterPosition();
-        }
-        return -1;
-    }
-
-    @Override // android.view.ViewGroup
-    protected int getChildDrawingOrder(int i2, int i3) {
-        InterfaceC0597j interfaceC0597j = this.mChildDrawingOrderCallback;
-        return interfaceC0597j == null ? super.getChildDrawingOrder(i2, i3) : interfaceC0597j.m4226a(i2, i3);
-    }
-
-    public long getChildItemId(View view) {
-        AbstractC0590c0 childViewHolderInt;
-        AbstractC0594g abstractC0594g = this.mAdapter;
-        if (abstractC0594g == null || !abstractC0594g.hasStableIds() || (childViewHolderInt = getChildViewHolderInt(view)) == null) {
-            return -1L;
-        }
-        return childViewHolderInt.getItemId();
-    }
-
-    public int getChildLayoutPosition(View view) {
-        AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(view);
-        if (childViewHolderInt != null) {
-            return childViewHolderInt.getLayoutPosition();
-        }
-        return -1;
-    }
-
-    @Deprecated
-    public int getChildPosition(View view) {
-        return getChildAdapterPosition(view);
-    }
-
-    public AbstractC0590c0 getChildViewHolder(View view) {
-        ViewParent parent = view.getParent();
-        if (parent == null || parent == this) {
-            return getChildViewHolderInt(view);
-        }
-        throw new IllegalArgumentException("View " + view + " is not a direct child of " + this);
-    }
-
-    @Override // android.view.ViewGroup
-    public boolean getClipToPadding() {
-        return this.mClipToPadding;
-    }
-
-    public C0634o getCompatAccessibilityDelegate() {
-        return this.mAccessibilityDelegate;
-    }
-
-    public void getDecoratedBoundsWithMargins(View view, Rect rect) {
-        getDecoratedBoundsWithMarginsInt(view, rect);
-    }
-
-    public C0598k getEdgeEffectFactory() {
-        return this.mEdgeEffectFactory;
-    }
-
-    public AbstractC0599l getItemAnimator() {
-        return this.mItemAnimator;
-    }
-
-    Rect getItemDecorInsetsForChild(View view) {
-        C0603p c0603p = (C0603p) view.getLayoutParams();
-        if (!c0603p.f3966c) {
-            return c0603p.f3965b;
-        }
-        if (this.mState.m4309e() && (c0603p.m4239b() || c0603p.m4241d())) {
-            return c0603p.f3965b;
-        }
-        Rect rect = c0603p.f3965b;
-        rect.set(0, 0, 0, 0);
-        int size = this.mItemDecorations.size();
-        for (int i2 = 0; i2 < size; i2++) {
-            this.mTempRect.set(0, 0, 0, 0);
-            this.mItemDecorations.get(i2).getItemOffsets(this.mTempRect, view, this, this.mState);
-            int i3 = rect.left;
-            Rect rect2 = this.mTempRect;
-            rect.left = i3 + rect2.left;
-            rect.top += rect2.top;
-            rect.right += rect2.right;
-            rect.bottom += rect2.bottom;
-        }
-        c0603p.f3966c = false;
-        return rect;
-    }
-
-    public AbstractC0601n getItemDecorationAt(int i2) {
-        int itemDecorationCount = getItemDecorationCount();
-        if (i2 >= 0 && i2 < itemDecorationCount) {
-            return this.mItemDecorations.get(i2);
-        }
-        throw new IndexOutOfBoundsException(i2 + " is an invalid index for size " + itemDecorationCount);
-    }
-
-    public int getItemDecorationCount() {
-        return this.mItemDecorations.size();
-    }
-
-    public AbstractC0602o getLayoutManager() {
-        return this.mLayout;
-    }
-
-    public int getMaxFlingVelocity() {
-        return this.mMaxFlingVelocity;
-    }
-
-    public int getMinFlingVelocity() {
-        return this.mMinFlingVelocity;
-    }
-
-    long getNanoTime() {
-        if (ALLOW_THREAD_GAP_WORK) {
-            return System.nanoTime();
-        }
-        return 0L;
-    }
-
-    public AbstractC0605r getOnFlingListener() {
-        return this.mOnFlingListener;
-    }
-
-    public boolean getPreserveFocusAfterLayout() {
-        return this.mPreserveFocusAfterLayout;
-    }
-
-    public C0608u getRecycledViewPool() {
-        return this.mRecycler.m4282i();
-    }
-
-    public int getScrollState() {
-        return this.mScrollState;
-    }
-
-    public boolean hasFixedSize() {
-        return this.mHasFixedSize;
-    }
-
-    @Override // android.view.View
-    public boolean hasNestedScrollingParent() {
-        return getScrollingChildHelper().m2067k();
-    }
-
-    public boolean hasPendingAdapterUpdates() {
-        return !this.mFirstLayoutComplete || this.mDataSetHasChangedAfterLayout || this.mAdapterHelper.m4426p();
-    }
-
-    void initAdapterManager() {
-        this.mAdapterHelper = new C0620a(new C0593f());
-    }
-
-    void initFastScroller(StateListDrawable stateListDrawable, Drawable drawable, StateListDrawable stateListDrawable2, Drawable drawable2) {
-        if (stateListDrawable != null && drawable != null && stateListDrawable2 != null && drawable2 != null) {
-            Resources resources = getContext().getResources();
-            new C0626g(this, stateListDrawable, drawable, stateListDrawable2, drawable2, resources.getDimensionPixelSize(C1005b.f6666a), resources.getDimensionPixelSize(C1005b.f6668c), resources.getDimensionPixelOffset(C1005b.f6667b));
-        } else {
-            throw new IllegalArgumentException("Trying to set fast scroller without both required drawables." + exceptionLabel());
-        }
-    }
-
-    void invalidateGlows() {
-        this.mBottomGlow = null;
-        this.mTopGlow = null;
-        this.mRightGlow = null;
-        this.mLeftGlow = null;
-    }
-
-    public void invalidateItemDecorations() {
-        if (this.mItemDecorations.size() == 0) {
-            return;
-        }
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null) {
-            abstractC0602o.assertNotInLayoutOrScroll("Cannot invalidate item decorations during a scroll or layout");
-        }
-        markItemDecorInsetsDirty();
-        requestLayout();
-    }
-
-    boolean isAccessibilityEnabled() {
-        AccessibilityManager accessibilityManager = this.mAccessibilityManager;
-        return accessibilityManager != null && accessibilityManager.isEnabled();
-    }
-
-    public boolean isAnimating() {
-        AbstractC0599l abstractC0599l = this.mItemAnimator;
-        return abstractC0599l != null && abstractC0599l.isRunning();
-    }
-
-    @Override // android.view.View
-    public boolean isAttachedToWindow() {
-        return this.mIsAttached;
-    }
-
-    public boolean isComputingLayout() {
-        return this.mLayoutOrScrollCounter > 0;
-    }
-
-    @Deprecated
-    public boolean isLayoutFrozen() {
-        return isLayoutSuppressed();
-    }
-
-    @Override // android.view.ViewGroup
-    public final boolean isLayoutSuppressed() {
-        return this.mLayoutSuppressed;
-    }
-
-    @Override // android.view.View, androidx.core.view.InterfaceC0300j
-    public boolean isNestedScrollingEnabled() {
-        return getScrollingChildHelper().m2069m();
-    }
-
-    void jumpToPositionForSmoothScroller(int i2) {
-        if (this.mLayout == null) {
-            return;
-        }
-        setScrollState(2);
-        this.mLayout.scrollToPosition(i2);
-        awakenScrollBars();
-    }
-
-    void markItemDecorInsetsDirty() {
-        int iM4452j = this.mChildHelper.m4452j();
-        for (int i2 = 0; i2 < iM4452j; i2++) {
-            ((C0603p) this.mChildHelper.m4451i(i2).getLayoutParams()).f3966c = true;
-        }
-        this.mRecycler.m4290s();
-    }
-
-    void markKnownViewsInvalid() {
-        int iM4452j = this.mChildHelper.m4452j();
-        for (int i2 = 0; i2 < iM4452j; i2++) {
-            AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(this.mChildHelper.m4451i(i2));
-            if (childViewHolderInt != null && !childViewHolderInt.shouldIgnore()) {
-                childViewHolderInt.addFlags(6);
-            }
-        }
-        markItemDecorInsetsDirty();
-        this.mRecycler.m4291t();
-    }
-
-    public void offsetChildrenHorizontal(int i2) {
-        int iM4450g = this.mChildHelper.m4450g();
-        for (int i3 = 0; i3 < iM4450g; i3++) {
-            this.mChildHelper.m4449f(i3).offsetLeftAndRight(i2);
-        }
-    }
-
-    public void offsetChildrenVertical(int i2) {
-        int iM4450g = this.mChildHelper.m4450g();
-        for (int i3 = 0; i3 < iM4450g; i3++) {
-            this.mChildHelper.m4449f(i3).offsetTopAndBottom(i2);
-        }
-    }
-
-    void offsetPositionRecordsForInsert(int i2, int i3) {
-        int iM4452j = this.mChildHelper.m4452j();
-        for (int i4 = 0; i4 < iM4452j; i4++) {
-            AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(this.mChildHelper.m4451i(i4));
-            if (childViewHolderInt != null && !childViewHolderInt.shouldIgnore() && childViewHolderInt.mPosition >= i2) {
-                childViewHolderInt.offsetPosition(i3, false);
-                this.mState.f3997g = true;
-            }
-        }
-        this.mRecycler.m4292u(i2, i3);
-        requestLayout();
-    }
-
-    void offsetPositionRecordsForMove(int i2, int i3) {
-        int i4;
-        int i5;
-        int i6;
-        int i7;
-        int iM4452j = this.mChildHelper.m4452j();
-        if (i2 < i3) {
-            i6 = -1;
-            i5 = i2;
-            i4 = i3;
-        } else {
-            i4 = i2;
-            i5 = i3;
-            i6 = 1;
-        }
-        for (int i8 = 0; i8 < iM4452j; i8++) {
-            AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(this.mChildHelper.m4451i(i8));
-            if (childViewHolderInt != null && (i7 = childViewHolderInt.mPosition) >= i5 && i7 <= i4) {
-                if (i7 == i2) {
-                    childViewHolderInt.offsetPosition(i3 - i2, false);
-                } else {
-                    childViewHolderInt.offsetPosition(i6, false);
-                }
-                this.mState.f3997g = true;
-            }
-        }
-        this.mRecycler.m4293v(i2, i3);
-        requestLayout();
-    }
-
-    void offsetPositionRecordsForRemove(int i2, int i3, boolean z) {
-        int i4 = i2 + i3;
-        int iM4452j = this.mChildHelper.m4452j();
-        for (int i5 = 0; i5 < iM4452j; i5++) {
-            AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(this.mChildHelper.m4451i(i5));
-            if (childViewHolderInt != null && !childViewHolderInt.shouldIgnore()) {
-                int i6 = childViewHolderInt.mPosition;
-                if (i6 >= i4) {
-                    childViewHolderInt.offsetPosition(-i3, z);
-                    this.mState.f3997g = true;
-                } else if (i6 >= i2) {
-                    childViewHolderInt.flagRemovedAndOffsetPosition(i2 - 1, -i3, z);
-                    this.mState.f3997g = true;
-                }
-            }
-        }
-        this.mRecycler.m4294w(i2, i3, z);
-        requestLayout();
-    }
-
-    @Override // android.view.ViewGroup, android.view.View
-    protected void onAttachedToWindow() {
-        super.onAttachedToWindow();
-        this.mLayoutOrScrollCounter = 0;
-        this.mIsAttached = true;
-        this.mFirstLayoutComplete = this.mFirstLayoutComplete && !isLayoutRequested();
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null) {
-            abstractC0602o.dispatchAttachedToWindow(this);
-        }
-        this.mPostedAnimatorRunner = false;
-        if (ALLOW_THREAD_GAP_WORK) {
-            ThreadLocal<RunnableC0627h> threadLocal = RunnableC0627h.f4182f;
-            RunnableC0627h runnableC0627h = threadLocal.get();
-            this.mGapWorker = runnableC0627h;
-            if (runnableC0627h == null) {
-                this.mGapWorker = new RunnableC0627h();
-                Display displayM2150s = C0311u.m2150s(this);
-                float f2 = 60.0f;
-                if (!isInEditMode() && displayM2150s != null) {
-                    float refreshRate = displayM2150s.getRefreshRate();
-                    if (refreshRate >= 30.0f) {
-                        f2 = refreshRate;
-                    }
-                }
-                RunnableC0627h runnableC0627h2 = this.mGapWorker;
-                runnableC0627h2.f4186j = (long) (1.0E9f / f2);
-                threadLocal.set(runnableC0627h2);
-            }
-            this.mGapWorker.m4512a(this);
-        }
-    }
-
-    public void onChildAttachedToWindow(View view) {
-    }
-
-    public void onChildDetachedFromWindow(View view) {
-    }
-
-    @Override // android.view.ViewGroup, android.view.View
-    protected void onDetachedFromWindow() {
-        RunnableC0627h runnableC0627h;
-        super.onDetachedFromWindow();
-        AbstractC0599l abstractC0599l = this.mItemAnimator;
-        if (abstractC0599l != null) {
-            abstractC0599l.endAnimations();
-        }
-        stopScroll();
-        this.mIsAttached = false;
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null) {
-            abstractC0602o.dispatchDetachedFromWindow(this, this.mRecycler);
-        }
-        this.mPendingAccessibilityImportanceChange.clear();
-        removeCallbacks(this.mItemAnimatorRunner);
-        this.mViewInfoStore.m4572j();
-        if (!ALLOW_THREAD_GAP_WORK || (runnableC0627h = this.mGapWorker) == null) {
-            return;
-        }
-        runnableC0627h.m4515j(this);
-        this.mGapWorker = null;
-    }
-
-    @Override // android.view.View
-    public void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-        int size = this.mItemDecorations.size();
-        for (int i2 = 0; i2 < size; i2++) {
-            this.mItemDecorations.get(i2).onDraw(canvas, this, this.mState);
-        }
-    }
-
-    void onEnterLayoutOrScroll() {
-        this.mLayoutOrScrollCounter++;
-    }
-
-    void onExitLayoutOrScroll() {
-        onExitLayoutOrScroll(true);
-    }
-
-    /* JADX WARN: Removed duplicated region for block: B:31:0x0066  */
-    /* JADX WARN: Removed duplicated region for block: B:33:0x006a  */
-    @Override // android.view.View
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct code enable 'Show inconsistent code' option in preferences
-    */
-    public boolean onGenericMotionEvent(android.view.MotionEvent r6) {
-        /*
-            r5 = this;
-            androidx.recyclerview.widget.RecyclerView$o r0 = r5.mLayout
-            r1 = 0
-            if (r0 != 0) goto L6
-            return r1
-        L6:
-            boolean r0 = r5.mLayoutSuppressed
-            if (r0 == 0) goto Lb
-            return r1
-        Lb:
-            int r0 = r6.getAction()
-            r2 = 8
-            if (r0 != r2) goto L77
-            int r0 = r6.getSource()
-            r0 = r0 & 2
-            r2 = 0
-            if (r0 == 0) goto L3c
-            androidx.recyclerview.widget.RecyclerView$o r0 = r5.mLayout
-            boolean r0 = r0.canScrollVertically()
-            if (r0 == 0) goto L2c
-            r0 = 9
-            float r0 = r6.getAxisValue(r0)
-            float r0 = -r0
-            goto L2d
-        L2c:
-            r0 = 0
-        L2d:
-            androidx.recyclerview.widget.RecyclerView$o r3 = r5.mLayout
-            boolean r3 = r3.canScrollHorizontally()
-            if (r3 == 0) goto L61
-            r3 = 10
-            float r3 = r6.getAxisValue(r3)
-            goto L62
-        L3c:
-            int r0 = r6.getSource()
-            r3 = 4194304(0x400000, float:5.877472E-39)
-            r0 = r0 & r3
-            if (r0 == 0) goto L60
-            r0 = 26
-            float r0 = r6.getAxisValue(r0)
-            androidx.recyclerview.widget.RecyclerView$o r3 = r5.mLayout
-            boolean r3 = r3.canScrollVertically()
-            if (r3 == 0) goto L55
-            float r0 = -r0
-            goto L61
-        L55:
-            androidx.recyclerview.widget.RecyclerView$o r3 = r5.mLayout
-            boolean r3 = r3.canScrollHorizontally()
-            if (r3 == 0) goto L60
-            r3 = r0
-            r0 = 0
-            goto L62
-        L60:
-            r0 = 0
-        L61:
-            r3 = 0
-        L62:
-            int r4 = (r0 > r2 ? 1 : (r0 == r2 ? 0 : -1))
-            if (r4 != 0) goto L6a
-            int r2 = (r3 > r2 ? 1 : (r3 == r2 ? 0 : -1))
-            if (r2 == 0) goto L77
-        L6a:
-            float r2 = r5.mScaledHorizontalScrollFactor
-            float r3 = r3 * r2
-            int r2 = (int) r3
-            float r3 = r5.mScaledVerticalScrollFactor
-            float r0 = r0 * r3
-            int r0 = (int) r0
-            r5.scrollByInternal(r2, r0, r6)
-        L77:
-            return r1
-        */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.RecyclerView.onGenericMotionEvent(android.view.MotionEvent):boolean");
-    }
-
-    /* JADX WARN: Multi-variable type inference failed */
-    @Override // android.view.ViewGroup
-    public boolean onInterceptTouchEvent(MotionEvent motionEvent) {
-        boolean z;
-        if (this.mLayoutSuppressed) {
-            return false;
-        }
-        this.mInterceptingOnItemTouchListener = null;
-        if (findInterceptingOnItemTouchListener(motionEvent)) {
-            cancelScroll();
-            return true;
-        }
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o == null) {
-            return false;
-        }
-        boolean zCanScrollHorizontally = abstractC0602o.canScrollHorizontally();
-        boolean zCanScrollVertically = this.mLayout.canScrollVertically();
-        if (this.mVelocityTracker == null) {
-            this.mVelocityTracker = VelocityTracker.obtain();
-        }
-        this.mVelocityTracker.addMovement(motionEvent);
-        int actionMasked = motionEvent.getActionMasked();
-        int actionIndex = motionEvent.getActionIndex();
-        if (actionMasked == 0) {
-            if (this.mIgnoreMotionEventTillDown) {
-                this.mIgnoreMotionEventTillDown = false;
-            }
-            this.mScrollPointerId = motionEvent.getPointerId(0);
-            int x = (int) (motionEvent.getX() + 0.5f);
-            this.mLastTouchX = x;
-            this.mInitialTouchX = x;
-            int y = (int) (motionEvent.getY() + 0.5f);
-            this.mLastTouchY = y;
-            this.mInitialTouchY = y;
-            if (this.mScrollState == 2) {
-                getParent().requestDisallowInterceptTouchEvent(true);
-                setScrollState(1);
-                stopNestedScroll(1);
-            }
-            int[] iArr = this.mNestedOffsets;
-            iArr[1] = 0;
-            iArr[0] = 0;
-            int i2 = zCanScrollHorizontally;
-            if (zCanScrollVertically) {
-                i2 = (zCanScrollHorizontally ? 1 : 0) | 2;
-            }
-            startNestedScroll(i2, 0);
-        } else if (actionMasked == 1) {
-            this.mVelocityTracker.clear();
-            stopNestedScroll(0);
-        } else if (actionMasked == 2) {
-            int iFindPointerIndex = motionEvent.findPointerIndex(this.mScrollPointerId);
-            if (iFindPointerIndex < 0) {
-                Log.e(TAG, "Error processing scroll; pointer index for id " + this.mScrollPointerId + " not found. Did any MotionEvents get skipped?");
-                return false;
-            }
-            int x2 = (int) (motionEvent.getX(iFindPointerIndex) + 0.5f);
-            int y2 = (int) (motionEvent.getY(iFindPointerIndex) + 0.5f);
-            if (this.mScrollState != 1) {
-                int i3 = x2 - this.mInitialTouchX;
-                int i4 = y2 - this.mInitialTouchY;
-                if (zCanScrollHorizontally == 0 || Math.abs(i3) <= this.mTouchSlop) {
-                    z = false;
-                } else {
-                    this.mLastTouchX = x2;
-                    z = true;
-                }
-                if (zCanScrollVertically && Math.abs(i4) > this.mTouchSlop) {
-                    this.mLastTouchY = y2;
-                    z = true;
-                }
-                if (z) {
-                    setScrollState(1);
-                }
-            }
-        } else if (actionMasked == 3) {
-            cancelScroll();
-        } else if (actionMasked == 5) {
-            this.mScrollPointerId = motionEvent.getPointerId(actionIndex);
-            int x3 = (int) (motionEvent.getX(actionIndex) + 0.5f);
-            this.mLastTouchX = x3;
-            this.mInitialTouchX = x3;
-            int y3 = (int) (motionEvent.getY(actionIndex) + 0.5f);
-            this.mLastTouchY = y3;
-            this.mInitialTouchY = y3;
-        } else if (actionMasked == 6) {
-            onPointerUp(motionEvent);
-        }
-        return this.mScrollState == 1;
-    }
-
-    @Override // android.view.ViewGroup, android.view.View
-    protected void onLayout(boolean z, int i2, int i3, int i4, int i5) {
-        C0275d.m1840a(TRACE_ON_LAYOUT_TAG);
-        dispatchLayout();
-        C0275d.m1841b();
-        this.mFirstLayoutComplete = true;
-    }
-
-    @Override // android.view.View
-    protected void onMeasure(int i2, int i3) {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o == null) {
-            defaultOnMeasure(i2, i3);
-            return;
-        }
-        boolean z = false;
-        if (abstractC0602o.isAutoMeasureEnabled()) {
-            int mode = View.MeasureSpec.getMode(i2);
-            int mode2 = View.MeasureSpec.getMode(i3);
-            this.mLayout.onMeasure(this.mRecycler, this.mState, i2, i3);
-            if (mode == 1073741824 && mode2 == 1073741824) {
-                z = true;
-            }
-            if (z || this.mAdapter == null) {
-                return;
-            }
-            if (this.mState.f3995e == 1) {
-                dispatchLayoutStep1();
-            }
-            this.mLayout.setMeasureSpecs(i2, i3);
-            this.mState.f4000j = true;
-            dispatchLayoutStep2();
-            this.mLayout.setMeasuredDimensionFromChildren(i2, i3);
-            if (this.mLayout.shouldMeasureTwice()) {
-                this.mLayout.setMeasureSpecs(View.MeasureSpec.makeMeasureSpec(getMeasuredWidth(), 1073741824), View.MeasureSpec.makeMeasureSpec(getMeasuredHeight(), 1073741824));
-                this.mState.f4000j = true;
-                dispatchLayoutStep2();
-                this.mLayout.setMeasuredDimensionFromChildren(i2, i3);
-                return;
-            }
-            return;
-        }
-        if (this.mHasFixedSize) {
-            this.mLayout.onMeasure(this.mRecycler, this.mState, i2, i3);
-            return;
-        }
-        if (this.mAdapterUpdateDuringMeasure) {
-            startInterceptRequestLayout();
-            onEnterLayoutOrScroll();
-            processAdapterUpdatesAndSetAnimationFlags();
-            onExitLayoutOrScroll();
-            C0613z c0613z = this.mState;
-            if (c0613z.f4002l) {
-                c0613z.f3998h = true;
-            } else {
-                this.mAdapterHelper.m4421j();
-                this.mState.f3998h = false;
-            }
-            this.mAdapterUpdateDuringMeasure = false;
-            stopInterceptRequestLayout(false);
-        } else if (this.mState.f4002l) {
-            setMeasuredDimension(getMeasuredWidth(), getMeasuredHeight());
-            return;
-        }
-        AbstractC0594g abstractC0594g = this.mAdapter;
-        if (abstractC0594g != null) {
-            this.mState.f3996f = abstractC0594g.getItemCount();
-        } else {
-            this.mState.f3996f = 0;
-        }
-        startInterceptRequestLayout();
-        this.mLayout.onMeasure(this.mRecycler, this.mState, i2, i3);
-        stopInterceptRequestLayout(false);
-        this.mState.f3998h = false;
-    }
-
-    @Override // android.view.ViewGroup
-    protected boolean onRequestFocusInDescendants(int i2, Rect rect) {
-        if (isComputingLayout()) {
-            return false;
-        }
-        return super.onRequestFocusInDescendants(i2, rect);
-    }
-
-    @Override // android.view.View
-    protected void onRestoreInstanceState(Parcelable parcelable) {
-        Parcelable parcelable2;
-        if (!(parcelable instanceof SavedState)) {
-            super.onRestoreInstanceState(parcelable);
-            return;
-        }
-        SavedState savedState = (SavedState) parcelable;
-        this.mPendingSavedState = savedState;
-        super.onRestoreInstanceState(savedState.m2342a());
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o == null || (parcelable2 = this.mPendingSavedState.f3940h) == null) {
-            return;
-        }
-        abstractC0602o.onRestoreInstanceState(parcelable2);
-    }
-
-    @Override // android.view.View
-    protected Parcelable onSaveInstanceState() {
-        SavedState savedState = new SavedState(super.onSaveInstanceState());
-        SavedState savedState2 = this.mPendingSavedState;
-        if (savedState2 != null) {
-            savedState.m4184b(savedState2);
-        } else {
-            AbstractC0602o abstractC0602o = this.mLayout;
-            if (abstractC0602o != null) {
-                savedState.f3940h = abstractC0602o.onSaveInstanceState();
-            } else {
-                savedState.f3940h = null;
-            }
-        }
-        return savedState;
-    }
-
-    public void onScrollStateChanged(int i2) {
-    }
-
-    public void onScrolled(int i2, int i3) {
-    }
-
-    @Override // android.view.View
-    protected void onSizeChanged(int i2, int i3, int i4, int i5) {
-        super.onSizeChanged(i2, i3, i4, i5);
-        if (i2 == i4 && i3 == i5) {
-            return;
-        }
-        invalidateGlows();
-    }
-
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Removed duplicated region for block: B:47:0x00df A[PHI: r0
-      0x00df: PHI (r0v36 int) = (r0v26 int), (r0v40 int) binds: [B:41:0x00c8, B:45:0x00db] A[DONT_GENERATE, DONT_INLINE]] */
-    /* JADX WARN: Removed duplicated region for block: B:49:0x00e2  */
-    /* JADX WARN: Removed duplicated region for block: B:55:0x00f8  */
-    @Override // android.view.View
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct code enable 'Show inconsistent code' option in preferences
-    */
-    public boolean onTouchEvent(android.view.MotionEvent r18) {
-        /*
-            Method dump skipped, instructions count: 480
-            To view this dump change 'Code comments level' option to 'DEBUG'
-        */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.RecyclerView.onTouchEvent(android.view.MotionEvent):boolean");
-    }
-
-    void postAnimationRunner() {
-        if (this.mPostedAnimatorRunner || !this.mIsAttached) {
-            return;
-        }
-        C0311u.m2115a0(this, this.mItemAnimatorRunner);
-        this.mPostedAnimatorRunner = true;
-    }
-
-    void processDataSetCompletelyChanged(boolean z) {
-        this.mDispatchItemsChangedEvent = z | this.mDispatchItemsChangedEvent;
-        this.mDataSetHasChangedAfterLayout = true;
-        markKnownViewsInvalid();
-    }
-
-    void recordAnimationInfoIfBouncedHiddenView(AbstractC0590c0 abstractC0590c0, AbstractC0599l.c cVar) {
-        abstractC0590c0.setFlags(0, 8192);
-        if (this.mState.f3999i && abstractC0590c0.isUpdated() && !abstractC0590c0.isRemoved() && !abstractC0590c0.shouldIgnore()) {
-            this.mViewInfoStore.m4565c(getChangedHolderKey(abstractC0590c0), abstractC0590c0);
-        }
-        this.mViewInfoStore.m4567e(abstractC0590c0, cVar);
-    }
-
-    void removeAndRecycleViews() {
-        AbstractC0599l abstractC0599l = this.mItemAnimator;
-        if (abstractC0599l != null) {
-            abstractC0599l.endAnimations();
-        }
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null) {
-            abstractC0602o.removeAndRecycleAllViews(this.mRecycler);
-            this.mLayout.removeAndRecycleScrapInt(this.mRecycler);
-        }
-        this.mRecycler.m4276c();
-    }
-
-    boolean removeAnimatingView(View view) {
-        startInterceptRequestLayout();
-        boolean zM4459r = this.mChildHelper.m4459r(view);
-        if (zM4459r) {
-            AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(view);
-            this.mRecycler.m4271J(childViewHolderInt);
-            this.mRecycler.m4265C(childViewHolderInt);
-        }
-        stopInterceptRequestLayout(!zM4459r);
-        return zM4459r;
-    }
-
-    @Override // android.view.ViewGroup
-    protected void removeDetachedView(View view, boolean z) {
-        AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(view);
-        if (childViewHolderInt != null) {
-            if (childViewHolderInt.isTmpDetached()) {
-                childViewHolderInt.clearTmpDetachFlag();
-            } else if (!childViewHolderInt.shouldIgnore()) {
-                throw new IllegalArgumentException("Called removeDetachedView with a view which is not flagged as tmp detached." + childViewHolderInt + exceptionLabel());
-            }
-        }
-        view.clearAnimation();
-        dispatchChildDetached(view);
-        super.removeDetachedView(view, z);
-    }
-
-    public void removeItemDecoration(AbstractC0601n abstractC0601n) {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null) {
-            abstractC0602o.assertNotInLayoutOrScroll("Cannot remove item decoration during a scroll  or layout");
-        }
-        this.mItemDecorations.remove(abstractC0601n);
-        if (this.mItemDecorations.isEmpty()) {
-            setWillNotDraw(getOverScrollMode() == 2);
-        }
-        markItemDecorInsetsDirty();
-        requestLayout();
-    }
-
-    public void removeItemDecorationAt(int i2) {
-        int itemDecorationCount = getItemDecorationCount();
-        if (i2 >= 0 && i2 < itemDecorationCount) {
-            removeItemDecoration(getItemDecorationAt(i2));
-            return;
-        }
-        throw new IndexOutOfBoundsException(i2 + " is an invalid index for size " + itemDecorationCount);
-    }
-
-    public void removeOnChildAttachStateChangeListener(InterfaceC0604q interfaceC0604q) {
-        List<InterfaceC0604q> list = this.mOnChildAttachStateListeners;
-        if (list == null) {
-            return;
-        }
-        list.remove(interfaceC0604q);
-    }
-
-    public void removeOnItemTouchListener(InterfaceC0606s interfaceC0606s) {
-        this.mOnItemTouchListeners.remove(interfaceC0606s);
-        if (this.mInterceptingOnItemTouchListener == interfaceC0606s) {
-            this.mInterceptingOnItemTouchListener = null;
-        }
-    }
-
-    public void removeOnScrollListener(AbstractC0607t abstractC0607t) {
-        List<AbstractC0607t> list = this.mScrollListeners;
-        if (list != null) {
-            list.remove(abstractC0607t);
-        }
-    }
-
-    void repositionShadowingViews() {
-        AbstractC0590c0 abstractC0590c0;
-        int iM4450g = this.mChildHelper.m4450g();
-        for (int i2 = 0; i2 < iM4450g; i2++) {
-            View viewM4449f = this.mChildHelper.m4449f(i2);
-            AbstractC0590c0 childViewHolder = getChildViewHolder(viewM4449f);
-            if (childViewHolder != null && (abstractC0590c0 = childViewHolder.mShadowingHolder) != null) {
-                View view = abstractC0590c0.itemView;
-                int left = viewM4449f.getLeft();
-                int top = viewM4449f.getTop();
-                if (left != view.getLeft() || top != view.getTop()) {
-                    view.layout(left, top, view.getWidth() + left, view.getHeight() + top);
-                }
-            }
-        }
-    }
-
-    @Override // android.view.ViewGroup, android.view.ViewParent
-    public void requestChildFocus(View view, View view2) {
-        if (!this.mLayout.onRequestChildFocus(this, this.mState, view, view2) && view2 != null) {
-            requestChildOnScreen(view, view2);
-        }
-        super.requestChildFocus(view, view2);
-    }
-
-    @Override // android.view.ViewGroup, android.view.ViewParent
-    public boolean requestChildRectangleOnScreen(View view, Rect rect, boolean z) {
-        return this.mLayout.requestChildRectangleOnScreen(this, view, rect, z);
-    }
-
-    @Override // android.view.ViewGroup, android.view.ViewParent
-    public void requestDisallowInterceptTouchEvent(boolean z) {
-        int size = this.mOnItemTouchListeners.size();
-        for (int i2 = 0; i2 < size; i2++) {
-            this.mOnItemTouchListeners.get(i2).mo4246c(z);
-        }
-        super.requestDisallowInterceptTouchEvent(z);
-    }
-
-    @Override // android.view.View, android.view.ViewParent
-    public void requestLayout() {
-        if (this.mInterceptRequestLayoutDepth != 0 || this.mLayoutSuppressed) {
-            this.mLayoutWasDefered = true;
-        } else {
-            super.requestLayout();
-        }
-    }
-
-    void saveOldPositions() {
-        int iM4452j = this.mChildHelper.m4452j();
-        for (int i2 = 0; i2 < iM4452j; i2++) {
-            AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(this.mChildHelper.m4451i(i2));
-            if (!childViewHolderInt.shouldIgnore()) {
-                childViewHolderInt.saveOldPosition();
-            }
-        }
-    }
-
-    @Override // android.view.View
-    public void scrollBy(int i2, int i3) {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o == null) {
-            Log.e(TAG, "Cannot scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
-            return;
-        }
-        if (this.mLayoutSuppressed) {
-            return;
-        }
-        boolean zCanScrollHorizontally = abstractC0602o.canScrollHorizontally();
-        boolean zCanScrollVertically = this.mLayout.canScrollVertically();
-        if (zCanScrollHorizontally || zCanScrollVertically) {
-            if (!zCanScrollHorizontally) {
-                i2 = 0;
-            }
-            if (!zCanScrollVertically) {
-                i3 = 0;
-            }
-            scrollByInternal(i2, i3, null);
-        }
-    }
-
-    boolean scrollByInternal(int i2, int i3, MotionEvent motionEvent) {
-        int i4;
-        int i5;
-        int i6;
-        int i7;
-        consumePendingUpdateOperations();
-        if (this.mAdapter != null) {
-            int[] iArr = this.mReusableIntPair;
-            iArr[0] = 0;
-            iArr[1] = 0;
-            scrollStep(i2, i3, iArr);
-            int[] iArr2 = this.mReusableIntPair;
-            int i8 = iArr2[0];
-            int i9 = iArr2[1];
-            i4 = i9;
-            i5 = i8;
-            i6 = i2 - i8;
-            i7 = i3 - i9;
-        } else {
-            i4 = 0;
-            i5 = 0;
-            i6 = 0;
-            i7 = 0;
-        }
-        if (!this.mItemDecorations.isEmpty()) {
-            invalidate();
-        }
-        int[] iArr3 = this.mReusableIntPair;
-        iArr3[0] = 0;
-        iArr3[1] = 0;
-        dispatchNestedScroll(i5, i4, i6, i7, this.mScrollOffset, 0, iArr3);
-        int[] iArr4 = this.mReusableIntPair;
-        int i10 = i6 - iArr4[0];
-        int i11 = i7 - iArr4[1];
-        boolean z = (iArr4[0] == 0 && iArr4[1] == 0) ? false : true;
-        int i12 = this.mLastTouchX;
-        int[] iArr5 = this.mScrollOffset;
-        this.mLastTouchX = i12 - iArr5[0];
-        this.mLastTouchY -= iArr5[1];
-        int[] iArr6 = this.mNestedOffsets;
-        iArr6[0] = iArr6[0] + iArr5[0];
-        iArr6[1] = iArr6[1] + iArr5[1];
-        if (getOverScrollMode() != 2) {
-            if (motionEvent != null && !C0299i.m2055a(motionEvent, 8194)) {
-                pullGlows(motionEvent.getX(), i10, motionEvent.getY(), i11);
-            }
-            considerReleasingGlowsOnScroll(i2, i3);
-        }
-        if (i5 != 0 || i4 != 0) {
-            dispatchOnScrolled(i5, i4);
-        }
-        if (!awakenScrollBars()) {
-            invalidate();
-        }
-        return (!z && i5 == 0 && i4 == 0) ? false : true;
-    }
-
-    void scrollStep(int i2, int i3, int[] iArr) {
-        startInterceptRequestLayout();
-        onEnterLayoutOrScroll();
-        C0275d.m1840a(TRACE_SCROLL_TAG);
-        fillRemainingScrollValues(this.mState);
-        int iScrollHorizontallyBy = i2 != 0 ? this.mLayout.scrollHorizontallyBy(i2, this.mRecycler, this.mState) : 0;
-        int iScrollVerticallyBy = i3 != 0 ? this.mLayout.scrollVerticallyBy(i3, this.mRecycler, this.mState) : 0;
-        C0275d.m1841b();
-        repositionShadowingViews();
-        onExitLayoutOrScroll();
-        stopInterceptRequestLayout(false);
-        if (iArr != null) {
-            iArr[0] = iScrollHorizontallyBy;
-            iArr[1] = iScrollVerticallyBy;
-        }
-    }
-
-    @Override // android.view.View
-    public void scrollTo(int i2, int i3) {
-        Log.w(TAG, "RecyclerView does not support scrolling to an absolute position. Use scrollToPosition instead");
-    }
-
-    public void scrollToPosition(int i2) {
-        if (this.mLayoutSuppressed) {
-            return;
-        }
-        stopScroll();
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o == null) {
-            Log.e(TAG, "Cannot scroll to position a LayoutManager set. Call setLayoutManager with a non-null argument.");
-        } else {
-            abstractC0602o.scrollToPosition(i2);
-            awakenScrollBars();
-        }
-    }
-
-    @Override // android.view.View, android.view.accessibility.AccessibilityEventSource
-    public void sendAccessibilityEventUnchecked(AccessibilityEvent accessibilityEvent) {
-        if (shouldDeferAccessibilityEvent(accessibilityEvent)) {
-            return;
-        }
-        super.sendAccessibilityEventUnchecked(accessibilityEvent);
-    }
-
-    public void setAccessibilityDelegateCompat(C0634o c0634o) {
-        this.mAccessibilityDelegate = c0634o;
-        C0311u.m2131i0(this, c0634o);
-    }
-
-    public void setAdapter(AbstractC0594g abstractC0594g) {
-        setLayoutFrozen(false);
-        setAdapterInternal(abstractC0594g, false, true);
-        processDataSetCompletelyChanged(false);
-        requestLayout();
-    }
-
-    public void setChildDrawingOrderCallback(InterfaceC0597j interfaceC0597j) {
-        if (interfaceC0597j == this.mChildDrawingOrderCallback) {
-            return;
-        }
-        this.mChildDrawingOrderCallback = interfaceC0597j;
-        setChildrenDrawingOrderEnabled(interfaceC0597j != null);
-    }
-
-    boolean setChildImportantForAccessibilityInternal(AbstractC0590c0 abstractC0590c0, int i2) {
-        if (!isComputingLayout()) {
-            C0311u.m2153t0(abstractC0590c0.itemView, i2);
-            return true;
-        }
-        abstractC0590c0.mPendingAccessibilityState = i2;
-        this.mPendingAccessibilityImportanceChange.add(abstractC0590c0);
-        return false;
-    }
-
-    @Override // android.view.ViewGroup
-    public void setClipToPadding(boolean z) {
-        if (z != this.mClipToPadding) {
-            invalidateGlows();
-        }
-        this.mClipToPadding = z;
-        super.setClipToPadding(z);
-        if (this.mFirstLayoutComplete) {
-            requestLayout();
-        }
-    }
-
-    public void setEdgeEffectFactory(C0598k c0598k) {
-        C0959i.m6065c(c0598k);
-        this.mEdgeEffectFactory = c0598k;
-        invalidateGlows();
-    }
-
-    public void setHasFixedSize(boolean z) {
-        this.mHasFixedSize = z;
-    }
-
-    public void setItemAnimator(AbstractC0599l abstractC0599l) {
-        AbstractC0599l abstractC0599l2 = this.mItemAnimator;
-        if (abstractC0599l2 != null) {
-            abstractC0599l2.endAnimations();
-            this.mItemAnimator.setListener(null);
-        }
-        this.mItemAnimator = abstractC0599l;
-        if (abstractC0599l != null) {
-            abstractC0599l.setListener(this.mItemAnimatorListener);
-        }
-    }
-
-    public void setItemViewCacheSize(int i2) {
-        this.mRecycler.m4269G(i2);
-    }
-
-    @Deprecated
-    public void setLayoutFrozen(boolean z) {
-        suppressLayout(z);
-    }
-
-    public void setLayoutManager(AbstractC0602o abstractC0602o) {
-        if (abstractC0602o == this.mLayout) {
-            return;
-        }
-        stopScroll();
-        if (this.mLayout != null) {
-            AbstractC0599l abstractC0599l = this.mItemAnimator;
-            if (abstractC0599l != null) {
-                abstractC0599l.endAnimations();
-            }
-            this.mLayout.removeAndRecycleAllViews(this.mRecycler);
-            this.mLayout.removeAndRecycleScrapInt(this.mRecycler);
-            this.mRecycler.m4276c();
-            if (this.mIsAttached) {
-                this.mLayout.dispatchDetachedFromWindow(this, this.mRecycler);
-            }
-            this.mLayout.setRecyclerView(null);
-            this.mLayout = null;
-        } else {
-            this.mRecycler.m4276c();
-        }
-        this.mChildHelper.m4456o();
-        this.mLayout = abstractC0602o;
-        if (abstractC0602o != null) {
-            if (abstractC0602o.mRecyclerView != null) {
-                throw new IllegalArgumentException("LayoutManager " + abstractC0602o + " is already attached to a RecyclerView:" + abstractC0602o.mRecyclerView.exceptionLabel());
-            }
-            abstractC0602o.setRecyclerView(this);
-            if (this.mIsAttached) {
-                this.mLayout.dispatchAttachedToWindow(this);
-            }
-        }
-        this.mRecycler.m4272K();
-        requestLayout();
-    }
-
-    @Override // android.view.ViewGroup
-    @Deprecated
-    public void setLayoutTransition(LayoutTransition layoutTransition) {
-        if (Build.VERSION.SDK_INT < 18) {
-            if (layoutTransition == null) {
-                suppressLayout(false);
-                return;
-            } else if (layoutTransition.getAnimator(0) == null && layoutTransition.getAnimator(1) == null && layoutTransition.getAnimator(2) == null && layoutTransition.getAnimator(3) == null && layoutTransition.getAnimator(4) == null) {
-                suppressLayout(true);
-                return;
-            }
-        }
-        if (layoutTransition != null) {
-            throw new IllegalArgumentException("Providing a LayoutTransition into RecyclerView is not supported. Please use setItemAnimator() instead for animating changes to the items in this RecyclerView");
-        }
-        super.setLayoutTransition(null);
-    }
-
-    @Override // android.view.View
-    public void setNestedScrollingEnabled(boolean z) {
-        getScrollingChildHelper().m2070n(z);
-    }
-
-    public void setOnFlingListener(AbstractC0605r abstractC0605r) {
-        this.mOnFlingListener = abstractC0605r;
-    }
-
-    @Deprecated
-    public void setOnScrollListener(AbstractC0607t abstractC0607t) {
-        this.mScrollListener = abstractC0607t;
-    }
-
-    public void setPreserveFocusAfterLayout(boolean z) {
-        this.mPreserveFocusAfterLayout = z;
-    }
-
-    public void setRecycledViewPool(C0608u c0608u) {
-        this.mRecycler.m4267E(c0608u);
-    }
-
-    public void setRecyclerListener(InterfaceC0610w interfaceC0610w) {
-        this.mRecyclerListener = interfaceC0610w;
-    }
-
-    void setScrollState(int i2) {
-        if (i2 == this.mScrollState) {
-            return;
-        }
-        this.mScrollState = i2;
-        if (i2 != 2) {
-            stopScrollersInternal();
-        }
-        dispatchOnScrollStateChanged(i2);
-    }
-
-    public void setScrollingTouchSlop(int i2) {
-        ViewConfiguration viewConfiguration = ViewConfiguration.get(getContext());
-        if (i2 != 0) {
-            if (i2 == 1) {
-                this.mTouchSlop = viewConfiguration.getScaledPagingTouchSlop();
-                return;
-            }
-            Log.w(TAG, "setScrollingTouchSlop(): bad argument constant " + i2 + "; using default value");
-        }
-        this.mTouchSlop = viewConfiguration.getScaledTouchSlop();
-    }
-
-    public void setViewCacheExtension(AbstractC0586a0 abstractC0586a0) {
-        this.mRecycler.m4268F(abstractC0586a0);
-    }
-
-    boolean shouldDeferAccessibilityEvent(AccessibilityEvent accessibilityEvent) {
-        if (!isComputingLayout()) {
-            return false;
-        }
-        int iM1933a = accessibilityEvent != null ? C0288b.m1933a(accessibilityEvent) : 0;
-        this.mEatenAccessibilityChangeFlags |= iM1933a != 0 ? iM1933a : 0;
-        return true;
-    }
-
-    public void smoothScrollBy(int i2, int i3) {
-        smoothScrollBy(i2, i3, null);
-    }
-
-    public void smoothScrollToPosition(int i2) {
-        if (this.mLayoutSuppressed) {
-            return;
-        }
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o == null) {
-            Log.e(TAG, "Cannot smooth scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
-        } else {
-            abstractC0602o.smoothScrollToPosition(this, this.mState, i2);
-        }
-    }
-
-    void startInterceptRequestLayout() {
-        int i2 = this.mInterceptRequestLayoutDepth + 1;
-        this.mInterceptRequestLayoutDepth = i2;
-        if (i2 != 1 || this.mLayoutSuppressed) {
-            return;
-        }
-        this.mLayoutWasDefered = false;
-    }
-
-    @Override // android.view.View
-    public boolean startNestedScroll(int i2) {
-        return getScrollingChildHelper().m2071p(i2);
-    }
-
-    void stopInterceptRequestLayout(boolean z) {
-        if (this.mInterceptRequestLayoutDepth < 1) {
-            this.mInterceptRequestLayoutDepth = 1;
-        }
-        if (!z && !this.mLayoutSuppressed) {
-            this.mLayoutWasDefered = false;
-        }
-        if (this.mInterceptRequestLayoutDepth == 1) {
-            if (z && this.mLayoutWasDefered && !this.mLayoutSuppressed && this.mLayout != null && this.mAdapter != null) {
-                dispatchLayout();
-            }
-            if (!this.mLayoutSuppressed) {
-                this.mLayoutWasDefered = false;
-            }
-        }
-        this.mInterceptRequestLayoutDepth--;
-    }
-
-    @Override // android.view.View, androidx.core.view.InterfaceC0300j
-    public void stopNestedScroll() {
-        getScrollingChildHelper().m2073r();
-    }
-
-    public void stopScroll() {
-        setScrollState(0);
-        stopScrollersInternal();
-    }
-
-    @Override // android.view.ViewGroup
-    public final void suppressLayout(boolean z) {
-        if (z != this.mLayoutSuppressed) {
-            assertNotInLayoutOrScroll("Do not suppressLayout in layout or scroll");
-            if (z) {
-                long jUptimeMillis = SystemClock.uptimeMillis();
-                onTouchEvent(MotionEvent.obtain(jUptimeMillis, jUptimeMillis, 3, 0.0f, 0.0f, 0));
-                this.mLayoutSuppressed = true;
-                this.mIgnoreMotionEventTillDown = true;
-                stopScroll();
-                return;
-            }
-            this.mLayoutSuppressed = false;
-            if (this.mLayoutWasDefered && this.mLayout != null && this.mAdapter != null) {
-                requestLayout();
-            }
-            this.mLayoutWasDefered = false;
-        }
-    }
-
-    public void swapAdapter(AbstractC0594g abstractC0594g, boolean z) {
-        setLayoutFrozen(false);
-        setAdapterInternal(abstractC0594g, true, z);
-        processDataSetCompletelyChanged(true);
-        requestLayout();
-    }
-
-    void viewRangeUpdate(int i2, int i3, Object obj) {
-        int i4;
-        int iM4452j = this.mChildHelper.m4452j();
-        int i5 = i2 + i3;
-        for (int i6 = 0; i6 < iM4452j; i6++) {
-            View viewM4451i = this.mChildHelper.m4451i(i6);
-            AbstractC0590c0 childViewHolderInt = getChildViewHolderInt(viewM4451i);
-            if (childViewHolderInt != null && !childViewHolderInt.shouldIgnore() && (i4 = childViewHolderInt.mPosition) >= i2 && i4 < i5) {
-                childViewHolderInt.addFlags(2);
-                childViewHolderInt.addChangePayload(obj);
-                ((C0603p) viewM4451i.getLayoutParams()).f3966c = true;
-            }
-        }
-        this.mRecycler.m4274M(i2, i3);
-    }
-
-    public RecyclerView(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C1004a.f6665a);
-    }
-
-    public boolean dispatchNestedPreScroll(int i2, int i3, int[] iArr, int[] iArr2, int i4) {
-        return getScrollingChildHelper().m2063d(i2, i3, iArr, iArr2, i4);
-    }
-
-    public boolean dispatchNestedScroll(int i2, int i3, int i4, int i5, int[] iArr, int i6) {
-        return getScrollingChildHelper().m2066g(i2, i3, i4, i5, iArr, i6);
+        return g10;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:15:0x002a  */
@@ -6815,18 +3764,18 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    androidx.recyclerview.widget.RecyclerView.AbstractC0590c0 findViewHolderForPosition(int r6, boolean r7) {
+    androidx.recyclerview.widget.RecyclerView.G f0(int r6, boolean r7) {
         /*
             r5 = this;
-            androidx.recyclerview.widget.d r0 = r5.mChildHelper
-            int r0 = r0.m4452j()
+            androidx.recyclerview.widget.d r0 = r5.f28575G
+            int r0 = r0.j()
             r1 = 0
             r2 = 0
         L8:
             if (r2 >= r0) goto L3a
-            androidx.recyclerview.widget.d r3 = r5.mChildHelper
-            android.view.View r3 = r3.m4451i(r2)
-            androidx.recyclerview.widget.RecyclerView$c0 r3 = getChildViewHolderInt(r3)
+            androidx.recyclerview.widget.d r3 = r5.f28575G
+            android.view.View r3 = r3.i(r2)
+            androidx.recyclerview.widget.RecyclerView$G r3 = o0(r3)
             if (r3 == 0) goto L37
             boolean r4 = r3.isRemoved()
             if (r4 != 0) goto L37
@@ -6839,9 +3788,9 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
             if (r4 == r6) goto L2a
             goto L37
         L2a:
-            androidx.recyclerview.widget.d r1 = r5.mChildHelper
+            androidx.recyclerview.widget.d r1 = r5.f28575G
             android.view.View r4 = r3.itemView
-            boolean r1 = r1.m4455n(r4)
+            boolean r1 = r1.n(r4)
             if (r1 == 0) goto L36
             r1 = r3
             goto L37
@@ -6853,295 +3802,3630 @@ public class RecyclerView extends ViewGroup implements ScrollingView, InterfaceC
         L3a:
             return r1
         */
-        throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.RecyclerView.findViewHolderForPosition(int, boolean):androidx.recyclerview.widget.RecyclerView$c0");
+        throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.RecyclerView.f0(int, boolean):androidx.recyclerview.widget.RecyclerView$G");
     }
 
-    public boolean hasNestedScrollingParent(int i2) {
-        return getScrollingChildHelper().m2068l(i2);
+    /* JADX WARN: Removed duplicated region for block: B:28:0x0043  */
+    /* JADX WARN: Removed duplicated region for block: B:34:0x0056  */
+    /* JADX WARN: Removed duplicated region for block: B:35:0x0058  */
+    /* JADX WARN: Removed duplicated region for block: B:37:0x005b  */
+    /* JADX WARN: Removed duplicated region for block: B:38:0x005d  */
+    /* JADX WARN: Removed duplicated region for block: B:41:0x0061  */
+    /* JADX WARN: Removed duplicated region for block: B:42:0x0064  */
+    /* JADX WARN: Removed duplicated region for block: B:46:0x006d  */
+    /* JADX WARN: Removed duplicated region for block: B:49:0x0071  */
+    @Override // android.view.ViewGroup, android.view.ViewParent
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    public android.view.View focusSearch(android.view.View r8, int r9) {
+        /*
+            Method dump skipped, instructions count: 214
+            To view this dump change 'Code comments level' option to 'DEBUG'
+        */
+        throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.RecyclerView.focusSearch(android.view.View, int):android.view.View");
     }
 
-    void onExitLayoutOrScroll(boolean z) {
-        int i2 = this.mLayoutOrScrollCounter - 1;
-        this.mLayoutOrScrollCounter = i2;
-        if (i2 < 1) {
-            this.mLayoutOrScrollCounter = 0;
-            if (z) {
-                dispatchContentChangedIfNecessary();
-                dispatchPendingImportantForAccessibilityChanges();
+    public boolean g0(int i10, int i11) {
+        return h0(i10, i11, this.f28568C0, this.f28570D0);
+    }
+
+    @Override // android.view.ViewGroup
+    protected ViewGroup.LayoutParams generateDefaultLayoutParams() {
+        q qVar = this.f28591O;
+        if (qVar != null) {
+            return qVar.I();
+        }
+        throw new IllegalStateException("RecyclerView has no LayoutManager" + V());
+    }
+
+    @Override // android.view.ViewGroup
+    public ViewGroup.LayoutParams generateLayoutParams(AttributeSet attributeSet) {
+        q qVar = this.f28591O;
+        if (qVar != null) {
+            return qVar.J(getContext(), attributeSet);
+        }
+        throw new IllegalStateException("RecyclerView has no LayoutManager" + V());
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    public CharSequence getAccessibilityClassName() {
+        return "androidx.recyclerview.widget.RecyclerView";
+    }
+
+    public h getAdapter() {
+        return this.f28589N;
+    }
+
+    @Override // android.view.View
+    public int getBaseline() {
+        q qVar = this.f28591O;
+        return qVar != null ? qVar.L() : super.getBaseline();
+    }
+
+    @Override // android.view.ViewGroup
+    protected int getChildDrawingOrder(int i10, int i11) {
+        return super.getChildDrawingOrder(i10, i11);
+    }
+
+    @Override // android.view.ViewGroup
+    public boolean getClipToPadding() {
+        return this.f28579I;
+    }
+
+    public androidx.recyclerview.widget.s getCompatAccessibilityDelegate() {
+        return this.f28598R0;
+    }
+
+    public m getEdgeEffectFactory() {
+        return this.f28631n0;
+    }
+
+    public n getItemAnimator() {
+        return this.f28636s0;
+    }
+
+    public int getItemDecorationCount() {
+        return this.f28597R.size();
+    }
+
+    public q getLayoutManager() {
+        return this.f28591O;
+    }
+
+    public int getMaxFlingVelocity() {
+        return this.f28570D0;
+    }
+
+    public int getMinFlingVelocity() {
+        return this.f28568C0;
+    }
+
+    long getNanoTime() {
+        if (f28560m1) {
+            return System.nanoTime();
+        }
+        return 0L;
+    }
+
+    public t getOnFlingListener() {
+        return this.f28566B0;
+    }
+
+    public boolean getPreserveFocusAfterLayout() {
+        return this.f28576G0;
+    }
+
+    public w getRecycledViewPool() {
+        return this.f28569D.i();
+    }
+
+    public int getScrollState() {
+        return this.f28637t0;
+    }
+
+    void h1() {
+        n nVar = this.f28636s0;
+        if (nVar != null) {
+            nVar.k();
+        }
+        q qVar = this.f28591O;
+        if (qVar != null) {
+            qVar.p1(this.f28569D);
+            this.f28591O.q1(this.f28569D);
+        }
+        this.f28569D.c();
+    }
+
+    @Override // android.view.View
+    public boolean hasNestedScrollingParent() {
+        return getScrollingChildHelper().j();
+    }
+
+    boolean i0(int i10, int i11) {
+        return h0(i10, i11, 0, Integer.MAX_VALUE);
+    }
+
+    boolean i1(View view) {
+        E1();
+        boolean zR = this.f28575G.r(view);
+        if (zR) {
+            G gO0 = o0(view);
+            this.f28569D.O(gO0);
+            this.f28569D.H(gO0);
+            if (f28555h1) {
+                Log.d("RecyclerView", "after removing animated view: " + view + ", " + this);
+            }
+        }
+        I1(!zR);
+        return zR;
+    }
+
+    @Override // android.view.View
+    public boolean isAttachedToWindow() {
+        return this.f28603U;
+    }
+
+    @Override // android.view.ViewGroup
+    public final boolean isLayoutSuppressed() {
+        return this.f28618d0;
+    }
+
+    @Override // android.view.View
+    public boolean isNestedScrollingEnabled() {
+        return getScrollingChildHelper().l();
+    }
+
+    public void j(p pVar) {
+        k(pVar, -1);
+    }
+
+    int j0(G g10) {
+        if (g10.hasAnyOfTheFlags(524) || !g10.isBound()) {
+            return -1;
+        }
+        return this.f28573F.e(g10.mPosition);
+    }
+
+    public void j1(p pVar) {
+        q qVar = this.f28591O;
+        if (qVar != null) {
+            qVar.l("Cannot remove item decoration during a scroll  or layout");
+        }
+        this.f28597R.remove(pVar);
+        if (this.f28597R.isEmpty()) {
+            setWillNotDraw(getOverScrollMode() == 2);
+        }
+        H0();
+        requestLayout();
+    }
+
+    public void k(p pVar, int i10) {
+        q qVar = this.f28591O;
+        if (qVar != null) {
+            qVar.l("Cannot add item decoration during a scroll  or layout");
+        }
+        if (this.f28597R.isEmpty()) {
+            setWillNotDraw(false);
+        }
+        if (i10 < 0) {
+            this.f28597R.add(pVar);
+        } else {
+            this.f28597R.add(i10, pVar);
+        }
+        H0();
+        requestLayout();
+    }
+
+    long k0(G g10) {
+        return this.f28589N.m() ? g10.getItemId() : g10.mPosition;
+    }
+
+    public void k1(u uVar) {
+        this.f28599S.remove(uVar);
+        if (this.f28601T == uVar) {
+            this.f28601T = null;
+        }
+    }
+
+    public void l(s sVar) {
+        if (this.f28626i0 == null) {
+            this.f28626i0 = new ArrayList();
+        }
+        this.f28626i0.add(sVar);
+    }
+
+    public int l0(View view) {
+        G gO0 = o0(view);
+        if (gO0 != null) {
+            return gO0.getAbsoluteAdapterPosition();
+        }
+        return -1;
+    }
+
+    public void l1(v vVar) {
+        List<v> list = this.f28588M0;
+        if (list != null) {
+            list.remove(vVar);
+        }
+    }
+
+    public void m(u uVar) {
+        this.f28599S.add(uVar);
+    }
+
+    public int m0(View view) {
+        G gO0 = o0(view);
+        if (gO0 != null) {
+            return gO0.getLayoutPosition();
+        }
+        return -1;
+    }
+
+    void m1() {
+        G g10;
+        int iG = this.f28575G.g();
+        for (int i10 = 0; i10 < iG; i10++) {
+            View viewF = this.f28575G.f(i10);
+            G gN0 = n0(viewF);
+            if (gN0 != null && (g10 = gN0.mShadowingHolder) != null) {
+                View view = g10.itemView;
+                int left = viewF.getLeft();
+                int top = viewF.getTop();
+                if (left != view.getLeft() || top != view.getTop()) {
+                    view.layout(left, top, view.getWidth() + left, view.getHeight() + top);
+                }
             }
         }
     }
 
-    public void smoothScrollBy(int i2, int i3, Interpolator interpolator) {
-        smoothScrollBy(i2, i3, interpolator, Integer.MIN_VALUE);
+    public void n(v vVar) {
+        if (this.f28588M0 == null) {
+            this.f28588M0 = new ArrayList();
+        }
+        this.f28588M0.add(vVar);
     }
 
-    public boolean startNestedScroll(int i2, int i3) {
-        return getScrollingChildHelper().m2072q(i2, i3);
+    public G n0(View view) {
+        ViewParent parent = view.getParent();
+        if (parent == null || parent == this) {
+            return o0(view);
+        }
+        throw new IllegalArgumentException("View " + view + " is not a direct child of " + this);
     }
 
-    public void stopNestedScroll(int i2) {
-        getScrollingChildHelper().m2074s(i2);
+    void o(G g10, n.c cVar, n.c cVar2) {
+        g10.setIsRecyclable(false);
+        if (this.f28636s0.a(g10, cVar, cVar2)) {
+            X0();
+        }
     }
 
-    public RecyclerView(Context context, AttributeSet attributeSet, int i2) throws NoSuchMethodException, SecurityException {
-        super(context, attributeSet, i2);
-        this.mObserver = new C0611x();
-        this.mRecycler = new C0609v();
-        this.mViewInfoStore = new C0639t();
-        this.mUpdateChildViewsRunnable = new RunnableC0585a();
-        this.mTempRect = new Rect();
-        this.mTempRect2 = new Rect();
-        this.mTempRectF = new RectF();
-        this.mItemDecorations = new ArrayList<>();
-        this.mOnItemTouchListeners = new ArrayList<>();
-        this.mInterceptRequestLayoutDepth = 0;
-        this.mDataSetHasChangedAfterLayout = false;
-        this.mDispatchItemsChangedEvent = false;
-        this.mLayoutOrScrollCounter = 0;
-        this.mDispatchScrollCounter = 0;
-        this.mEdgeEffectFactory = new C0598k();
-        this.mItemAnimator = new C0624e();
-        this.mScrollState = 0;
-        this.mScrollPointerId = -1;
-        this.mScaledHorizontalScrollFactor = Float.MIN_VALUE;
-        this.mScaledVerticalScrollFactor = Float.MIN_VALUE;
-        boolean z = true;
-        this.mPreserveFocusAfterLayout = true;
-        this.mViewFlinger = new RunnableC0588b0();
-        this.mPrefetchRegistry = ALLOW_THREAD_GAP_WORK ? new RunnableC0627h.b() : null;
-        this.mState = new C0613z();
-        this.mItemsAddedOrRemoved = false;
-        this.mItemsChanged = false;
-        this.mItemAnimatorListener = new C0600m();
-        this.mPostedAnimatorRunner = false;
-        this.mMinMaxLayoutPositions = new int[2];
-        this.mScrollOffset = new int[2];
-        this.mNestedOffsets = new int[2];
-        this.mReusableIntPair = new int[2];
-        this.mPendingAccessibilityImportanceChange = new ArrayList();
-        this.mItemAnimatorRunner = new RunnableC0587b();
-        this.mViewInfoProcessCallback = new C0591d();
-        setScrollContainer(true);
-        setFocusableInTouchMode(true);
-        ViewConfiguration viewConfiguration = ViewConfiguration.get(context);
-        this.mTouchSlop = viewConfiguration.getScaledTouchSlop();
-        this.mScaledHorizontalScrollFactor = C0312v.m2203b(viewConfiguration, context);
-        this.mScaledVerticalScrollFactor = C0312v.m2205d(viewConfiguration, context);
-        this.mMinFlingVelocity = viewConfiguration.getScaledMinimumFlingVelocity();
-        this.mMaxFlingVelocity = viewConfiguration.getScaledMaximumFlingVelocity();
-        setWillNotDraw(getOverScrollMode() == 2);
-        this.mItemAnimator.setListener(this.mItemAnimatorListener);
-        initAdapterManager();
-        initChildrenHelper();
-        initAutofill();
-        if (C0311u.m2158w(this) == 0) {
-            C0311u.m2153t0(this, 1);
+    /* JADX WARN: Removed duplicated region for block: B:21:0x0053  */
+    @Override // android.view.ViewGroup, android.view.View
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    protected void onAttachedToWindow() {
+        /*
+            r5 = this;
+            super.onAttachedToWindow()
+            r0 = 0
+            r5.f28629l0 = r0
+            r1 = 1
+            r5.f28603U = r1
+            boolean r2 = r5.f28612a0
+            if (r2 == 0) goto L14
+            boolean r2 = r5.isLayoutRequested()
+            if (r2 != 0) goto L14
+            goto L15
+        L14:
+            r1 = r0
+        L15:
+            r5.f28612a0 = r1
+            androidx.recyclerview.widget.RecyclerView$x r1 = r5.f28569D
+            r1.z()
+            androidx.recyclerview.widget.RecyclerView$q r1 = r5.f28591O
+            if (r1 == 0) goto L23
+            r1.E(r5)
+        L23:
+            r5.f28596Q0 = r0
+            boolean r0 = androidx.recyclerview.widget.RecyclerView.f28560m1
+            if (r0 == 0) goto L66
+            java.lang.ThreadLocal<androidx.recyclerview.widget.k> r0 = androidx.recyclerview.widget.k.f28968F
+            java.lang.Object r1 = r0.get()
+            androidx.recyclerview.widget.k r1 = (androidx.recyclerview.widget.k) r1
+            r5.f28580I0 = r1
+            if (r1 != 0) goto L61
+            androidx.recyclerview.widget.k r1 = new androidx.recyclerview.widget.k
+            r1.<init>()
+            r5.f28580I0 = r1
+            android.view.Display r1 = s1.X.t(r5)
+            boolean r2 = r5.isInEditMode()
+            if (r2 != 0) goto L53
+            if (r1 == 0) goto L53
+            float r1 = r1.getRefreshRate()
+            r2 = 1106247680(0x41f00000, float:30.0)
+            int r2 = (r1 > r2 ? 1 : (r1 == r2 ? 0 : -1))
+            if (r2 < 0) goto L53
+            goto L55
+        L53:
+            r1 = 1114636288(0x42700000, float:60.0)
+        L55:
+            androidx.recyclerview.widget.k r2 = r5.f28580I0
+            r3 = 1315859240(0x4e6e6b28, float:1.0E9)
+            float r3 = r3 / r1
+            long r3 = (long) r3
+            r2.f28972D = r3
+            r0.set(r2)
+        L61:
+            androidx.recyclerview.widget.k r0 = r5.f28580I0
+            r0.a(r5)
+        L66:
+            return
+        */
+        throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.RecyclerView.onAttachedToWindow():void");
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    protected void onDetachedFromWindow() {
+        androidx.recyclerview.widget.k kVar;
+        super.onDetachedFromWindow();
+        n nVar = this.f28636s0;
+        if (nVar != null) {
+            nVar.k();
         }
-        this.mAccessibilityManager = (AccessibilityManager) getContext().getSystemService("accessibility");
-        setAccessibilityDelegateCompat(new C0634o(this));
-        int[] iArr = C1006c.f6674f;
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr, i2, 0);
-        int i3 = Build.VERSION.SDK_INT;
-        if (i3 >= 29) {
-            saveAttributeDataForStyleable(context, iArr, attributeSet, typedArrayObtainStyledAttributes, i2, 0);
+        K1();
+        this.f28603U = false;
+        q qVar = this.f28591O;
+        if (qVar != null) {
+            qVar.F(this, this.f28569D);
         }
-        String string = typedArrayObtainStyledAttributes.getString(C1006c.f6683o);
-        if (typedArrayObtainStyledAttributes.getInt(C1006c.f6677i, -1) == -1) {
-            setDescendantFocusability(262144);
+        this.f28609X0.clear();
+        removeCallbacks(this.f28610Y0);
+        this.f28577H.j();
+        this.f28569D.A();
+        C5048a.c(this);
+        if (!f28560m1 || (kVar = this.f28580I0) == null) {
+            return;
         }
-        this.mClipToPadding = typedArrayObtainStyledAttributes.getBoolean(C1006c.f6676h, true);
-        boolean z2 = typedArrayObtainStyledAttributes.getBoolean(C1006c.f6678j, false);
-        this.mEnableFastScroller = z2;
-        if (z2) {
-            initFastScroller((StateListDrawable) typedArrayObtainStyledAttributes.getDrawable(C1006c.f6681m), typedArrayObtainStyledAttributes.getDrawable(C1006c.f6682n), (StateListDrawable) typedArrayObtainStyledAttributes.getDrawable(C1006c.f6679k), typedArrayObtainStyledAttributes.getDrawable(C1006c.f6680l));
+        kVar.j(this);
+        this.f28580I0 = null;
+    }
+
+    @Override // android.view.View
+    public void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        int size = this.f28597R.size();
+        for (int i10 = 0; i10 < size; i10++) {
+            this.f28597R.get(i10).g(canvas, this, this.f28584K0);
         }
-        typedArrayObtainStyledAttributes.recycle();
-        createLayoutManager(context, string, attributeSet, i2, 0);
-        if (i3 >= 21) {
-            int[] iArr2 = NESTED_SCROLLING_ATTRS;
-            TypedArray typedArrayObtainStyledAttributes2 = context.obtainStyledAttributes(attributeSet, iArr2, i2, 0);
-            if (i3 >= 29) {
-                saveAttributeDataForStyleable(context, iArr2, attributeSet, typedArrayObtainStyledAttributes2, i2, 0);
+    }
+
+    @Override // android.view.View
+    public boolean onGenericMotionEvent(MotionEvent motionEvent) {
+        int i10;
+        boolean z10;
+        float axisValue;
+        if (this.f28591O != null && !this.f28618d0 && motionEvent.getAction() == 8) {
+            if ((motionEvent.getSource() & 2) != 0) {
+                float f10 = this.f28591O.q() ? -motionEvent.getAxisValue(9) : 0.0f;
+                z10 = false;
+                axisValue = this.f28591O.p() ? motionEvent.getAxisValue(10) : 0.0f;
+                f = f10;
+                i10 = 0;
+            } else if ((motionEvent.getSource() & 4194304) != 0) {
+                i10 = 26;
+                axisValue = motionEvent.getAxisValue(26);
+                if (this.f28591O.q()) {
+                    float f11 = -axisValue;
+                    axisValue = 0.0f;
+                    f = f11;
+                } else if (!this.f28591O.p()) {
+                    axisValue = 0.0f;
+                }
+                z10 = this.f28617c1;
+            } else {
+                i10 = 0;
+                z10 = false;
+                axisValue = 0.0f;
             }
-            z = typedArrayObtainStyledAttributes2.getBoolean(0, true);
-            typedArrayObtainStyledAttributes2.recycle();
+            int i11 = (int) (f * this.f28574F0);
+            int i12 = (int) (axisValue * this.f28572E0);
+            if (z10) {
+                OverScroller overScroller = this.f28578H0.f28679D;
+                C1(i12 + (overScroller.getFinalX() - overScroller.getCurrX()), i11 + (overScroller.getFinalY() - overScroller.getCurrY()), null, Integer.MIN_VALUE, true);
+            } else {
+                J0(i12, i11, motionEvent, 1);
+            }
+            if (i10 != 0 && !z10) {
+                this.f28623f1.g(motionEvent, i10);
+            }
         }
-        setNestedScrollingEnabled(z);
+        return false;
     }
 
-    public final void dispatchNestedScroll(int i2, int i3, int i4, int i5, int[] iArr, int i6, int[] iArr2) {
-        getScrollingChildHelper().m2064e(i2, i3, i4, i5, iArr, i6, iArr2);
+    @Override // android.view.ViewGroup
+    public boolean onInterceptTouchEvent(MotionEvent motionEvent) {
+        boolean z10;
+        if (this.f28618d0) {
+            return false;
+        }
+        this.f28601T = null;
+        if (Z(motionEvent)) {
+            t();
+            return true;
+        }
+        q qVar = this.f28591O;
+        if (qVar == null) {
+            return false;
+        }
+        boolean zP = qVar.p();
+        boolean zQ = this.f28591O.q();
+        if (this.f28639v0 == null) {
+            this.f28639v0 = VelocityTracker.obtain();
+        }
+        this.f28639v0.addMovement(motionEvent);
+        int actionMasked = motionEvent.getActionMasked();
+        int actionIndex = motionEvent.getActionIndex();
+        if (actionMasked == 0) {
+            if (this.f28620e0) {
+                this.f28620e0 = false;
+            }
+            this.f28638u0 = motionEvent.getPointerId(0);
+            int x10 = (int) (motionEvent.getX() + 0.5f);
+            this.f28642y0 = x10;
+            this.f28640w0 = x10;
+            int y10 = (int) (motionEvent.getY() + 0.5f);
+            this.f28643z0 = y10;
+            this.f28641x0 = y10;
+            if (H1(motionEvent) || this.f28637t0 == 2) {
+                getParent().requestDisallowInterceptTouchEvent(true);
+                setScrollState(1);
+                J1(1);
+            }
+            int[] iArr = this.f28606V0;
+            iArr[1] = 0;
+            iArr[0] = 0;
+            G1(0);
+        } else if (actionMasked == 1) {
+            this.f28639v0.clear();
+            J1(0);
+        } else if (actionMasked == 2) {
+            int iFindPointerIndex = motionEvent.findPointerIndex(this.f28638u0);
+            if (iFindPointerIndex < 0) {
+                Log.e("RecyclerView", "Error processing scroll; pointer index for id " + this.f28638u0 + " not found. Did any MotionEvents get skipped?");
+                return false;
+            }
+            int x11 = (int) (motionEvent.getX(iFindPointerIndex) + 0.5f);
+            int y11 = (int) (motionEvent.getY(iFindPointerIndex) + 0.5f);
+            if (this.f28637t0 != 1) {
+                int i10 = x11 - this.f28640w0;
+                int i11 = y11 - this.f28641x0;
+                if (!zP || Math.abs(i10) <= this.f28564A0) {
+                    z10 = false;
+                } else {
+                    this.f28642y0 = x11;
+                    z10 = true;
+                }
+                if (zQ && Math.abs(i11) > this.f28564A0) {
+                    this.f28643z0 = y11;
+                    z10 = true;
+                }
+                if (z10) {
+                    setScrollState(1);
+                }
+            }
+        } else if (actionMasked == 3) {
+            t();
+        } else if (actionMasked == 5) {
+            this.f28638u0 = motionEvent.getPointerId(actionIndex);
+            int x12 = (int) (motionEvent.getX(actionIndex) + 0.5f);
+            this.f28642y0 = x12;
+            this.f28640w0 = x12;
+            int y12 = (int) (motionEvent.getY(actionIndex) + 0.5f);
+            this.f28643z0 = y12;
+            this.f28641x0 = y12;
+        } else if (actionMasked == 6) {
+            U0(motionEvent);
+        }
+        return this.f28637t0 == 1;
     }
 
-    public void smoothScrollBy(int i2, int i3, Interpolator interpolator, int i4) {
-        smoothScrollBy(i2, i3, interpolator, i4, false);
+    @Override // android.view.ViewGroup, android.view.View
+    protected void onLayout(boolean z10, int i10, int i11, int i12, int i13) {
+        Trace.beginSection("RV OnLayout");
+        H();
+        Trace.endSection();
+        this.f28612a0 = true;
     }
 
-    public static class SavedState extends AbsSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new C0584a();
+    @Override // android.view.View
+    protected void onMeasure(int i10, int i11) {
+        q qVar = this.f28591O;
+        if (qVar == null) {
+            C(i10, i11);
+            return;
+        }
+        boolean z10 = false;
+        if (qVar.w0()) {
+            int mode = View.MeasureSpec.getMode(i10);
+            int mode2 = View.MeasureSpec.getMode(i11);
+            this.f28591O.e1(this.f28569D, this.f28584K0, i10, i11);
+            if (mode == 1073741824 && mode2 == 1073741824) {
+                z10 = true;
+            }
+            this.f28611Z0 = z10;
+            if (z10 || this.f28589N == null) {
+                return;
+            }
+            if (this.f28584K0.f28664e == 1) {
+                I();
+            }
+            this.f28591O.F1(i10, i11);
+            this.f28584K0.f28669j = true;
+            J();
+            this.f28591O.I1(i10, i11);
+            if (this.f28591O.L1()) {
+                this.f28591O.F1(View.MeasureSpec.makeMeasureSpec(getMeasuredWidth(), 1073741824), View.MeasureSpec.makeMeasureSpec(getMeasuredHeight(), 1073741824));
+                this.f28584K0.f28669j = true;
+                J();
+                this.f28591O.I1(i10, i11);
+            }
+            this.f28613a1 = getMeasuredWidth();
+            this.f28615b1 = getMeasuredHeight();
+            return;
+        }
+        if (this.f28605V) {
+            this.f28591O.e1(this.f28569D, this.f28584K0, i10, i11);
+            return;
+        }
+        if (this.f28624g0) {
+            E1();
+            R0();
+            Z0();
+            S0();
+            C c10 = this.f28584K0;
+            if (c10.f28671l) {
+                c10.f28667h = true;
+            } else {
+                this.f28573F.j();
+                this.f28584K0.f28667h = false;
+            }
+            this.f28624g0 = false;
+            I1(false);
+        } else if (this.f28584K0.f28671l) {
+            setMeasuredDimension(getMeasuredWidth(), getMeasuredHeight());
+            return;
+        }
+        h hVar = this.f28589N;
+        if (hVar != null) {
+            this.f28584K0.f28665f = hVar.h();
+        } else {
+            this.f28584K0.f28665f = 0;
+        }
+        E1();
+        this.f28591O.e1(this.f28569D, this.f28584K0, i10, i11);
+        I1(false);
+        this.f28584K0.f28667h = false;
+    }
 
-        /* renamed from: h */
-        Parcelable f3940h;
+    @Override // android.view.ViewGroup
+    protected boolean onRequestFocusInDescendants(int i10, Rect rect) {
+        if (E0()) {
+            return false;
+        }
+        return super.onRequestFocusInDescendants(i10, rect);
+    }
 
-        /* renamed from: androidx.recyclerview.widget.RecyclerView$SavedState$a */
-        static class C0584a implements Parcelable.ClassLoaderCreator<SavedState> {
-            C0584a() {
+    @Override // android.view.View
+    protected void onRestoreInstanceState(Parcelable parcelable) {
+        if (!(parcelable instanceof A)) {
+            super.onRestoreInstanceState(parcelable);
+            return;
+        }
+        A a10 = (A) parcelable;
+        this.f28571E = a10;
+        super.onRestoreInstanceState(a10.a());
+        requestLayout();
+    }
+
+    @Override // android.view.View
+    protected Parcelable onSaveInstanceState() {
+        A a10 = new A(super.onSaveInstanceState());
+        A a11 = this.f28571E;
+        if (a11 != null) {
+            a10.b(a11);
+        } else {
+            q qVar = this.f28591O;
+            if (qVar != null) {
+                a10.f28644D = qVar.i1();
+            } else {
+                a10.f28644D = null;
+            }
+        }
+        return a10;
+    }
+
+    @Override // android.view.View
+    protected void onSizeChanged(int i10, int i11, int i12, int i13) {
+        super.onSizeChanged(i10, i11, i12, i13);
+        if (i10 == i12 && i11 == i13) {
+            return;
+        }
+        C0();
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:47:0x00df A[PHI: r0
+      0x00df: PHI (r0v37 int) = (r0v26 int), (r0v41 int) binds: [B:41:0x00c8, B:45:0x00db] A[DONT_GENERATE, DONT_INLINE]] */
+    /* JADX WARN: Removed duplicated region for block: B:49:0x00e2  */
+    /* JADX WARN: Removed duplicated region for block: B:55:0x00f8  */
+    @Override // android.view.View
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    public boolean onTouchEvent(android.view.MotionEvent r18) {
+        /*
+            Method dump skipped, instructions count: 492
+            To view this dump change 'Code comments level' option to 'DEBUG'
+        */
+        throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.RecyclerView.onTouchEvent(android.view.MotionEvent):boolean");
+    }
+
+    public void p0(View view, Rect rect) {
+        q0(view, rect);
+    }
+
+    void q(G g10, n.c cVar, n.c cVar2) {
+        i(g10);
+        g10.setIsRecyclable(false);
+        if (this.f28636s0.c(g10, cVar, cVar2)) {
+            X0();
+        }
+    }
+
+    void r(String str) {
+        if (E0()) {
+            if (str != null) {
+                throw new IllegalStateException(str);
+            }
+            throw new IllegalStateException("Cannot call this method while RecyclerView is computing a layout or scrolling" + V());
+        }
+        if (this.f28630m0 > 0) {
+            Log.w("RecyclerView", "Cannot call this method in a scroll callback. Scroll callbacks mightbe run during a measure & layout pass where you cannot change theRecyclerView data. Any method call that might change the structureof the RecyclerView or the adapter contents should be postponed tothe next frame.", new IllegalStateException("" + V()));
+        }
+    }
+
+    void r1() {
+        int iJ = this.f28575G.j();
+        for (int i10 = 0; i10 < iJ; i10++) {
+            G gO0 = o0(this.f28575G.i(i10));
+            if (f28554g1 && gO0.mPosition == -1 && !gO0.isRemoved()) {
+                throw new IllegalStateException("view holder cannot have position -1 unless it is removed" + V());
+            }
+            if (!gO0.shouldIgnore()) {
+                gO0.saveOldPosition();
+            }
+        }
+    }
+
+    @Override // android.view.ViewGroup
+    protected void removeDetachedView(View view, boolean z10) {
+        G gO0 = o0(view);
+        if (gO0 != null) {
+            if (gO0.isTmpDetached()) {
+                gO0.clearTmpDetachFlag();
+            } else if (!gO0.shouldIgnore()) {
+                throw new IllegalArgumentException("Called removeDetachedView with a view which is not flagged as tmp detached." + gO0 + V());
+            }
+        } else if (f28554g1) {
+            throw new IllegalArgumentException("No ViewHolder found for child: " + view + V());
+        }
+        view.clearAnimation();
+        F(view);
+        super.removeDetachedView(view, z10);
+    }
+
+    @Override // android.view.ViewGroup, android.view.ViewParent
+    public void requestChildFocus(View view, View view2) {
+        if (!this.f28591O.g1(this, this.f28584K0, view, view2) && view2 != null) {
+            n1(view, view2);
+        }
+        super.requestChildFocus(view, view2);
+    }
+
+    @Override // android.view.ViewGroup, android.view.ViewParent
+    public boolean requestChildRectangleOnScreen(View view, Rect rect, boolean z10) {
+        return this.f28591O.w1(this, view, rect, z10);
+    }
+
+    @Override // android.view.ViewGroup, android.view.ViewParent
+    public void requestDisallowInterceptTouchEvent(boolean z10) {
+        int size = this.f28599S.size();
+        for (int i10 = 0; i10 < size; i10++) {
+            this.f28599S.get(i10).c(z10);
+        }
+        super.requestDisallowInterceptTouchEvent(z10);
+    }
+
+    @Override // android.view.View, android.view.ViewParent
+    public void requestLayout() {
+        if (this.f28614b0 != 0 || this.f28618d0) {
+            this.f28616c0 = true;
+        } else {
+            super.requestLayout();
+        }
+    }
+
+    boolean s(G g10) {
+        n nVar = this.f28636s0;
+        return nVar == null || nVar.g(g10, g10.getUnmodifiedPayloads());
+    }
+
+    boolean s1(int i10, int i11, MotionEvent motionEvent, int i12) {
+        int i13;
+        int i14;
+        int i15;
+        int i16;
+        A();
+        if (this.f28589N != null) {
+            int[] iArr = this.f28608W0;
+            iArr[0] = 0;
+            iArr[1] = 0;
+            t1(i10, i11, iArr);
+            int[] iArr2 = this.f28608W0;
+            int i17 = iArr2[0];
+            int i18 = iArr2[1];
+            i13 = i18;
+            i14 = i17;
+            i15 = i10 - i17;
+            i16 = i11 - i18;
+        } else {
+            i13 = 0;
+            i14 = 0;
+            i15 = 0;
+            i16 = 0;
+        }
+        if (!this.f28597R.isEmpty()) {
+            invalidate();
+        }
+        int[] iArr3 = this.f28608W0;
+        iArr3[0] = 0;
+        iArr3[1] = 0;
+        M(i14, i13, i15, i16, this.f28604U0, i12, iArr3);
+        int[] iArr4 = this.f28608W0;
+        int i19 = iArr4[0];
+        int i20 = i15 - i19;
+        int i21 = iArr4[1];
+        int i22 = i16 - i21;
+        boolean z10 = (i19 == 0 && i21 == 0) ? false : true;
+        int i23 = this.f28642y0;
+        int[] iArr5 = this.f28604U0;
+        int i24 = iArr5[0];
+        this.f28642y0 = i23 - i24;
+        int i25 = this.f28643z0;
+        int i26 = iArr5[1];
+        this.f28643z0 = i25 - i26;
+        int[] iArr6 = this.f28606V0;
+        iArr6[0] = iArr6[0] + i24;
+        iArr6[1] = iArr6[1] + i26;
+        if (getOverScrollMode() != 2) {
+            if (motionEvent != null && !s1.B.a(motionEvent, 8194)) {
+                b1(motionEvent.getX(), i20, motionEvent.getY(), i22);
+                if (Build.VERSION.SDK_INT >= 31 && s1.B.a(motionEvent, 4194304)) {
+                    e1();
+                }
+            }
+            w(i10, i11);
+        }
+        if (i14 != 0 || i13 != 0) {
+            O(i14, i13);
+        }
+        if (!awakenScrollBars()) {
+            invalidate();
+        }
+        return (!z10 && i14 == 0 && i13 == 0) ? false : true;
+    }
+
+    @Override // android.view.View
+    public void scrollBy(int i10, int i11) {
+        q qVar = this.f28591O;
+        if (qVar == null) {
+            Log.e("RecyclerView", "Cannot scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
+            return;
+        }
+        if (this.f28618d0) {
+            return;
+        }
+        boolean zP = qVar.p();
+        boolean zQ = this.f28591O.q();
+        if (zP || zQ) {
+            if (!zP) {
+                i10 = 0;
+            }
+            if (!zQ) {
+                i11 = 0;
+            }
+            s1(i10, i11, null, 0);
+        }
+    }
+
+    @Override // android.view.View
+    public void scrollTo(int i10, int i11) {
+        Log.w("RecyclerView", "RecyclerView does not support scrolling to an absolute position. Use scrollToPosition instead");
+    }
+
+    @Override // android.view.View, android.view.accessibility.AccessibilityEventSource
+    public void sendAccessibilityEventUnchecked(AccessibilityEvent accessibilityEvent) {
+        if (y1(accessibilityEvent)) {
+            return;
+        }
+        super.sendAccessibilityEventUnchecked(accessibilityEvent);
+    }
+
+    public void setAccessibilityDelegateCompat(androidx.recyclerview.widget.s sVar) {
+        this.f28598R0 = sVar;
+        X.n0(this, sVar);
+    }
+
+    public void setAdapter(h hVar) {
+        setLayoutFrozen(false);
+        v1(hVar, false, true);
+        a1(false);
+        requestLayout();
+    }
+
+    public void setChildDrawingOrderCallback(l lVar) {
+        if (lVar == null) {
+            return;
+        }
+        setChildrenDrawingOrderEnabled(false);
+    }
+
+    @Override // android.view.ViewGroup
+    public void setClipToPadding(boolean z10) {
+        if (z10 != this.f28579I) {
+            C0();
+        }
+        this.f28579I = z10;
+        super.setClipToPadding(z10);
+        if (this.f28612a0) {
+            requestLayout();
+        }
+    }
+
+    public void setEdgeEffectFactory(m mVar) {
+        r1.i.g(mVar);
+        this.f28631n0 = mVar;
+        C0();
+    }
+
+    public void setHasFixedSize(boolean z10) {
+        this.f28605V = z10;
+    }
+
+    public void setItemAnimator(n nVar) {
+        n nVar2 = this.f28636s0;
+        if (nVar2 != null) {
+            nVar2.k();
+            this.f28636s0.v(null);
+        }
+        this.f28636s0 = nVar;
+        if (nVar != null) {
+            nVar.v(this.f28594P0);
+        }
+    }
+
+    public void setItemViewCacheSize(int i10) {
+        this.f28569D.L(i10);
+    }
+
+    @Deprecated
+    public void setLayoutFrozen(boolean z10) {
+        suppressLayout(z10);
+    }
+
+    public void setLayoutManager(q qVar) {
+        if (qVar == this.f28591O) {
+            return;
+        }
+        K1();
+        if (this.f28591O != null) {
+            n nVar = this.f28636s0;
+            if (nVar != null) {
+                nVar.k();
+            }
+            this.f28591O.p1(this.f28569D);
+            this.f28591O.q1(this.f28569D);
+            this.f28569D.c();
+            if (this.f28603U) {
+                this.f28591O.F(this, this.f28569D);
+            }
+            this.f28591O.J1(null);
+            this.f28591O = null;
+        } else {
+            this.f28569D.c();
+        }
+        this.f28575G.o();
+        this.f28591O = qVar;
+        if (qVar != null) {
+            if (qVar.f28709b != null) {
+                throw new IllegalArgumentException("LayoutManager " + qVar + " is already attached to a RecyclerView:" + qVar.f28709b.V());
+            }
+            qVar.J1(this);
+            if (this.f28603U) {
+                this.f28591O.E(this);
+            }
+        }
+        this.f28569D.P();
+        requestLayout();
+    }
+
+    @Override // android.view.ViewGroup
+    @Deprecated
+    public void setLayoutTransition(LayoutTransition layoutTransition) {
+        if (layoutTransition != null) {
+            throw new IllegalArgumentException("Providing a LayoutTransition into RecyclerView is not supported. Please use setItemAnimator() instead for animating changes to the items in this RecyclerView");
+        }
+        super.setLayoutTransition(null);
+    }
+
+    @Override // android.view.View
+    public void setNestedScrollingEnabled(boolean z10) {
+        getScrollingChildHelper().m(z10);
+    }
+
+    public void setOnFlingListener(t tVar) {
+        this.f28566B0 = tVar;
+    }
+
+    @Deprecated
+    public void setOnScrollListener(v vVar) {
+        this.f28586L0 = vVar;
+    }
+
+    public void setPreserveFocusAfterLayout(boolean z10) {
+        this.f28576G0 = z10;
+    }
+
+    public void setRecycledViewPool(w wVar) {
+        this.f28569D.J(wVar);
+    }
+
+    @Deprecated
+    public void setRecyclerListener(y yVar) {
+        this.f28593P = yVar;
+    }
+
+    void setScrollState(int i10) {
+        if (i10 == this.f28637t0) {
+            return;
+        }
+        if (f28555h1) {
+            Log.d("RecyclerView", "setting scroll state to " + i10 + " from " + this.f28637t0, new Exception());
+        }
+        this.f28637t0 = i10;
+        if (i10 != 2) {
+            L1();
+        }
+        N(i10);
+    }
+
+    public void setScrollingTouchSlop(int i10) {
+        ViewConfiguration viewConfiguration = ViewConfiguration.get(getContext());
+        if (i10 != 0) {
+            if (i10 == 1) {
+                this.f28564A0 = viewConfiguration.getScaledPagingTouchSlop();
+                return;
+            }
+            Log.w("RecyclerView", "setScrollingTouchSlop(): bad argument constant " + i10 + "; using default value");
+        }
+        this.f28564A0 = viewConfiguration.getScaledTouchSlop();
+    }
+
+    public void setViewCacheExtension(E e10) {
+        this.f28569D.K(e10);
+    }
+
+    @Override // android.view.View
+    public boolean startNestedScroll(int i10) {
+        return getScrollingChildHelper().o(i10);
+    }
+
+    @Override // android.view.View
+    public void stopNestedScroll() {
+        getScrollingChildHelper().q();
+    }
+
+    @Override // android.view.ViewGroup
+    public final void suppressLayout(boolean z10) {
+        if (z10 != this.f28618d0) {
+            r("Do not suppressLayout in layout or scroll");
+            if (z10) {
+                long jUptimeMillis = SystemClock.uptimeMillis();
+                onTouchEvent(MotionEvent.obtain(jUptimeMillis, jUptimeMillis, 3, 0.0f, 0.0f, 0));
+                this.f28618d0 = true;
+                this.f28620e0 = true;
+                K1();
+                return;
+            }
+            this.f28618d0 = false;
+            if (this.f28616c0 && this.f28591O != null && this.f28589N != null) {
+                requestLayout();
+            }
+            this.f28616c0 = false;
+        }
+    }
+
+    Rect t0(View view) {
+        r rVar = (r) view.getLayoutParams();
+        if (!rVar.f28734c) {
+            return rVar.f28733b;
+        }
+        if (this.f28584K0.e() && (rVar.b() || rVar.d())) {
+            return rVar.f28733b;
+        }
+        Rect rect = rVar.f28733b;
+        rect.set(0, 0, 0, 0);
+        int size = this.f28597R.size();
+        for (int i10 = 0; i10 < size; i10++) {
+            this.f28583K.set(0, 0, 0, 0);
+            this.f28597R.get(i10).e(this.f28583K, view, this, this.f28584K0);
+            int i11 = rect.left;
+            Rect rect2 = this.f28583K;
+            rect.left = i11 + rect2.left;
+            rect.top += rect2.top;
+            rect.right += rect2.right;
+            rect.bottom += rect2.bottom;
+        }
+        rVar.f28734c = false;
+        return rect;
+    }
+
+    void t1(int i10, int i11, int[] iArr) {
+        E1();
+        R0();
+        Trace.beginSection("RV Scroll");
+        W(this.f28584K0);
+        int iB1 = i10 != 0 ? this.f28591O.B1(i10, this.f28569D, this.f28584K0) : 0;
+        int iD1 = i11 != 0 ? this.f28591O.D1(i11, this.f28569D, this.f28584K0) : 0;
+        Trace.endSection();
+        m1();
+        S0();
+        I1(false);
+        if (iArr != null) {
+            iArr[0] = iB1;
+            iArr[1] = iD1;
+        }
+    }
+
+    public void u1(int i10) {
+        if (this.f28618d0) {
+            return;
+        }
+        K1();
+        q qVar = this.f28591O;
+        if (qVar == null) {
+            Log.e("RecyclerView", "Cannot scroll to position a LayoutManager set. Call setLayoutManager with a non-null argument.");
+        } else {
+            qVar.C1(i10);
+            awakenScrollBars();
+        }
+    }
+
+    void v() {
+        int iJ = this.f28575G.j();
+        for (int i10 = 0; i10 < iJ; i10++) {
+            G gO0 = o0(this.f28575G.i(i10));
+            if (!gO0.shouldIgnore()) {
+                gO0.clearOldPosition();
+            }
+        }
+        this.f28569D.d();
+    }
+
+    void w(int i10, int i11) {
+        boolean zIsFinished;
+        EdgeEffect edgeEffect = this.f28632o0;
+        if (edgeEffect == null || edgeEffect.isFinished() || i10 <= 0) {
+            zIsFinished = false;
+        } else {
+            this.f28632o0.onRelease();
+            zIsFinished = this.f28632o0.isFinished();
+        }
+        EdgeEffect edgeEffect2 = this.f28634q0;
+        if (edgeEffect2 != null && !edgeEffect2.isFinished() && i10 < 0) {
+            this.f28634q0.onRelease();
+            zIsFinished |= this.f28634q0.isFinished();
+        }
+        EdgeEffect edgeEffect3 = this.f28633p0;
+        if (edgeEffect3 != null && !edgeEffect3.isFinished() && i11 > 0) {
+            this.f28633p0.onRelease();
+            zIsFinished |= this.f28633p0.isFinished();
+        }
+        EdgeEffect edgeEffect4 = this.f28635r0;
+        if (edgeEffect4 != null && !edgeEffect4.isFinished() && i11 < 0) {
+            this.f28635r0.onRelease();
+            zIsFinished |= this.f28635r0.isFinished();
+        }
+        if (zIsFinished) {
+            postInvalidateOnAnimation();
+        }
+    }
+
+    public boolean w0() {
+        return !this.f28612a0 || this.f28627j0 || this.f28573F.p();
+    }
+
+    boolean w1(G g10, int i10) {
+        if (!E0()) {
+            g10.itemView.setImportantForAccessibility(i10);
+            return true;
+        }
+        g10.mPendingAccessibilityState = i10;
+        this.f28609X0.add(g10);
+        return false;
+    }
+
+    int x(int i10) {
+        return y(i10, this.f28632o0, this.f28634q0, getWidth());
+    }
+
+    void y0() {
+        this.f28573F = new a(new C2170g());
+    }
+
+    boolean y1(AccessibilityEvent accessibilityEvent) {
+        if (!E0()) {
+            return false;
+        }
+        int iA = accessibilityEvent != null ? t1.b.a(accessibilityEvent) : 0;
+        this.f28622f0 |= iA != 0 ? iA : 0;
+        return true;
+    }
+
+    int z(int i10) {
+        return y(i10, this.f28633p0, this.f28635r0, getHeight());
+    }
+
+    public void z1(int i10, int i11) {
+        A1(i10, i11, null);
+    }
+
+    public RecyclerView(Context context, AttributeSet attributeSet) {
+        this(context, attributeSet, C4282a.f47994a);
+    }
+
+    public static class A extends AbstractC5121a {
+        public static final Parcelable.Creator<A> CREATOR = new a();
+
+        /* renamed from: D, reason: collision with root package name */
+        Parcelable f28644D;
+
+        class a implements Parcelable.ClassLoaderCreator<A> {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
             /* renamed from: a, reason: merged with bridge method [inline-methods] */
-            public SavedState createFromParcel(Parcel parcel) {
-                return new SavedState(parcel, null);
+            public A createFromParcel(Parcel parcel) {
+                return new A(parcel, null);
             }
 
             @Override // android.os.Parcelable.ClassLoaderCreator
             /* renamed from: b, reason: merged with bridge method [inline-methods] */
-            public SavedState createFromParcel(Parcel parcel, ClassLoader classLoader) {
-                return new SavedState(parcel, classLoader);
+            public A createFromParcel(Parcel parcel, ClassLoader classLoader) {
+                return new A(parcel, classLoader);
             }
 
             @Override // android.os.Parcelable.Creator
             /* renamed from: c, reason: merged with bridge method [inline-methods] */
-            public SavedState[] newArray(int i2) {
-                return new SavedState[i2];
+            public A[] newArray(int i10) {
+                return new A[i10];
             }
         }
 
-        SavedState(Parcel parcel, ClassLoader classLoader) {
+        A(Parcel parcel, ClassLoader classLoader) {
             super(parcel, classLoader);
-            this.f3940h = parcel.readParcelable(classLoader == null ? AbstractC0602o.class.getClassLoader() : classLoader);
+            this.f28644D = parcel.readParcelable(classLoader == null ? q.class.getClassLoader() : classLoader);
         }
 
-        /* renamed from: b */
-        void m4184b(SavedState savedState) {
-            this.f3940h = savedState.f3940h;
+        void b(A a10) {
+            this.f28644D = a10.f28644D;
         }
 
-        @Override // androidx.customview.view.AbsSavedState, android.os.Parcelable
-        public void writeToParcel(Parcel parcel, int i2) {
-            super.writeToParcel(parcel, i2);
-            parcel.writeParcelable(this.f3940h, 0);
+        @Override // y1.AbstractC5121a, android.os.Parcelable
+        public void writeToParcel(Parcel parcel, int i10) {
+            super.writeToParcel(parcel, i10);
+            parcel.writeParcelable(this.f28644D, 0);
         }
 
-        SavedState(Parcelable parcelable) {
+        A(Parcelable parcelable) {
             super(parcelable);
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.RecyclerView$p */
-    public static class C0603p extends ViewGroup.MarginLayoutParams {
+    public RecyclerView(Context context, AttributeSet attributeSet, int i10) throws NoSuchMethodException, SecurityException {
+        super(context, attributeSet, i10);
+        this.f28567C = new z();
+        this.f28569D = new x();
+        this.f28577H = new androidx.recyclerview.widget.y();
+        this.f28581J = new RunnableC2164a();
+        this.f28583K = new Rect();
+        this.f28585L = new Rect();
+        this.f28587M = new RectF();
+        this.f28595Q = new ArrayList();
+        this.f28597R = new ArrayList<>();
+        this.f28599S = new ArrayList<>();
+        this.f28614b0 = 0;
+        this.f28627j0 = false;
+        this.f28628k0 = false;
+        this.f28629l0 = 0;
+        this.f28630m0 = 0;
+        this.f28631n0 = f28563p1;
+        this.f28636s0 = new g();
+        this.f28637t0 = 0;
+        this.f28638u0 = -1;
+        this.f28572E0 = Float.MIN_VALUE;
+        this.f28574F0 = Float.MIN_VALUE;
+        this.f28576G0 = true;
+        this.f28578H0 = new F();
+        this.f28582J0 = f28560m1 ? new k.b() : null;
+        this.f28584K0 = new C();
+        this.f28590N0 = false;
+        this.f28592O0 = false;
+        this.f28594P0 = new o();
+        this.f28596Q0 = false;
+        this.f28600S0 = new int[2];
+        this.f28604U0 = new int[2];
+        this.f28606V0 = new int[2];
+        this.f28608W0 = new int[2];
+        this.f28609X0 = new ArrayList();
+        this.f28610Y0 = new RunnableC2165b();
+        this.f28613a1 = 0;
+        this.f28615b1 = 0;
+        this.f28619d1 = new C2167d();
+        C2168e c2168e = new C2168e();
+        this.f28621e1 = c2168e;
+        this.f28623f1 = new C4449o(getContext(), c2168e);
+        setScrollContainer(true);
+        setFocusableInTouchMode(true);
+        ViewConfiguration viewConfiguration = ViewConfiguration.get(context);
+        this.f28564A0 = viewConfiguration.getScaledTouchSlop();
+        this.f28572E0 = C4422a0.e(viewConfiguration, context);
+        this.f28574F0 = C4422a0.h(viewConfiguration, context);
+        this.f28568C0 = viewConfiguration.getScaledMinimumFlingVelocity();
+        this.f28570D0 = viewConfiguration.getScaledMaximumFlingVelocity();
+        this.f28565B = context.getResources().getDisplayMetrics().density * 160.0f * 386.0878f * 0.84f;
+        setWillNotDraw(getOverScrollMode() == 2);
+        this.f28636s0.v(this.f28594P0);
+        y0();
+        A0();
+        z0();
+        if (getImportantForAccessibility() == 0) {
+            setImportantForAccessibility(1);
+        }
+        this.f28625h0 = (AccessibilityManager) getContext().getSystemService("accessibility");
+        setAccessibilityDelegateCompat(new androidx.recyclerview.widget.s(this));
+        int[] iArr = C4284c.f47998a;
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr, i10, 0);
+        X.l0(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, i10, 0);
+        String string = typedArrayObtainStyledAttributes.getString(C4284c.f48007j);
+        if (typedArrayObtainStyledAttributes.getInt(C4284c.f48001d, -1) == -1) {
+            setDescendantFocusability(262144);
+        }
+        this.f28579I = typedArrayObtainStyledAttributes.getBoolean(C4284c.f48000c, true);
+        boolean z10 = typedArrayObtainStyledAttributes.getBoolean(C4284c.f48002e, false);
+        this.f28607W = z10;
+        if (z10) {
+            B0((StateListDrawable) typedArrayObtainStyledAttributes.getDrawable(C4284c.f48005h), typedArrayObtainStyledAttributes.getDrawable(C4284c.f48006i), (StateListDrawable) typedArrayObtainStyledAttributes.getDrawable(C4284c.f48003f), typedArrayObtainStyledAttributes.getDrawable(C4284c.f48004g));
+        }
+        typedArrayObtainStyledAttributes.recycle();
+        this.f28617c1 = context.getPackageManager().hasSystemFeature("android.hardware.rotaryencoder.lowres");
+        B(context, string, attributeSet, i10, 0);
+        int[] iArr2 = f28556i1;
+        TypedArray typedArrayObtainStyledAttributes2 = context.obtainStyledAttributes(attributeSet, iArr2, i10, 0);
+        X.l0(this, context, iArr2, attributeSet, typedArrayObtainStyledAttributes2, i10, 0);
+        boolean z11 = typedArrayObtainStyledAttributes2.getBoolean(0, true);
+        typedArrayObtainStyledAttributes2.recycle();
+        setNestedScrollingEnabled(z11);
+        C5048a.h(this, true);
+    }
 
-        /* renamed from: a */
-        AbstractC0590c0 f3964a;
+    public static class r extends ViewGroup.MarginLayoutParams {
 
-        /* renamed from: b */
-        final Rect f3965b;
+        /* renamed from: a, reason: collision with root package name */
+        G f28732a;
 
-        /* renamed from: c */
-        boolean f3966c;
+        /* renamed from: b, reason: collision with root package name */
+        final Rect f28733b;
 
-        /* renamed from: d */
-        boolean f3967d;
+        /* renamed from: c, reason: collision with root package name */
+        boolean f28734c;
 
-        public C0603p(Context context, AttributeSet attributeSet) {
+        /* renamed from: d, reason: collision with root package name */
+        boolean f28735d;
+
+        public r(Context context, AttributeSet attributeSet) {
             super(context, attributeSet);
-            this.f3965b = new Rect();
-            this.f3966c = true;
-            this.f3967d = false;
+            this.f28733b = new Rect();
+            this.f28734c = true;
+            this.f28735d = false;
         }
 
-        /* renamed from: a */
-        public int m4238a() {
-            return this.f3964a.getLayoutPosition();
+        public int a() {
+            return this.f28732a.getLayoutPosition();
         }
 
-        /* renamed from: b */
-        public boolean m4239b() {
-            return this.f3964a.isUpdated();
+        public boolean b() {
+            return this.f28732a.isUpdated();
         }
 
-        /* renamed from: c */
-        public boolean m4240c() {
-            return this.f3964a.isRemoved();
+        public boolean c() {
+            return this.f28732a.isRemoved();
         }
 
-        /* renamed from: d */
-        public boolean m4241d() {
-            return this.f3964a.isInvalid();
+        public boolean d() {
+            return this.f28732a.isInvalid();
         }
 
-        public C0603p(int i2, int i3) {
-            super(i2, i3);
-            this.f3965b = new Rect();
-            this.f3966c = true;
-            this.f3967d = false;
+        public r(int i10, int i11) {
+            super(i10, i11);
+            this.f28733b = new Rect();
+            this.f28734c = true;
+            this.f28735d = false;
         }
 
-        public C0603p(ViewGroup.MarginLayoutParams marginLayoutParams) {
+        public r(ViewGroup.MarginLayoutParams marginLayoutParams) {
             super(marginLayoutParams);
-            this.f3965b = new Rect();
-            this.f3966c = true;
-            this.f3967d = false;
+            this.f28733b = new Rect();
+            this.f28734c = true;
+            this.f28735d = false;
         }
 
-        public C0603p(ViewGroup.LayoutParams layoutParams) {
+        public r(ViewGroup.LayoutParams layoutParams) {
             super(layoutParams);
-            this.f3965b = new Rect();
-            this.f3966c = true;
-            this.f3967d = false;
+            this.f28733b = new Rect();
+            this.f28734c = true;
+            this.f28735d = false;
         }
 
-        public C0603p(C0603p c0603p) {
-            super((ViewGroup.LayoutParams) c0603p);
-            this.f3965b = new Rect();
-            this.f3966c = true;
-            this.f3967d = false;
+        public r(r rVar) {
+            super((ViewGroup.LayoutParams) rVar);
+            this.f28733b = new Rect();
+            this.f28734c = true;
+            this.f28735d = false;
         }
     }
 
     @Override // android.view.ViewGroup
     protected ViewGroup.LayoutParams generateLayoutParams(ViewGroup.LayoutParams layoutParams) {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o != null) {
-            return abstractC0602o.generateLayoutParams(layoutParams);
+        q qVar = this.f28591O;
+        if (qVar != null) {
+            return qVar.K(layoutParams);
         }
-        throw new IllegalStateException("RecyclerView has no LayoutManager" + exceptionLabel());
+        throw new IllegalStateException("RecyclerView has no LayoutManager" + V());
     }
 
-    void smoothScrollBy(int i2, int i3, Interpolator interpolator, int i4, boolean z) {
-        AbstractC0602o abstractC0602o = this.mLayout;
-        if (abstractC0602o == null) {
-            Log.e(TAG, "Cannot smooth scroll without a LayoutManager set. Call setLayoutManager with a non-null argument.");
-            return;
+    public static abstract class j {
+        public void c(int i10, int i11, Object obj) {
+            b(i10, i11);
         }
-        if (this.mLayoutSuppressed) {
-            return;
+
+        public void a() {
         }
-        if (!abstractC0602o.canScrollHorizontally()) {
-            i2 = 0;
+
+        public void g() {
         }
-        if (!this.mLayout.canScrollVertically()) {
-            i3 = 0;
+
+        public void b(int i10, int i11) {
         }
-        if (i2 == 0 && i3 == 0) {
-            return;
+
+        public void d(int i10, int i11) {
         }
-        if (i4 == Integer.MIN_VALUE || i4 > 0) {
-            if (z) {
-                int i5 = i2 != 0 ? 1 : 0;
-                if (i3 != 0) {
-                    i5 |= 2;
-                }
-                startNestedScroll(i5, 1);
+
+        public void f(int i10, int i11) {
+        }
+
+        public void e(int i10, int i11, int i12) {
+        }
+    }
+
+    public static abstract class h<VH extends G> {
+
+        /* renamed from: B, reason: collision with root package name */
+        private final i f28690B = new i();
+
+        /* renamed from: C, reason: collision with root package name */
+        private boolean f28691C = false;
+
+        /* renamed from: D, reason: collision with root package name */
+        private a f28692D = a.ALLOW;
+
+        public enum a {
+            ALLOW,
+            PREVENT_WHEN_EMPTY,
+            PREVENT
+        }
+
+        public boolean A(VH vh) {
+            return false;
+        }
+
+        public void E(j jVar) {
+            this.f28690B.registerObserver(jVar);
+        }
+
+        public void F(boolean z10) {
+            if (l()) {
+                throw new IllegalStateException("Cannot change whether this adapter has stable IDs while the adapter has registered observers.");
             }
-            this.mViewFlinger.m4193f(i2, i3, i4, interpolator);
-            return;
+            this.f28691C = z10;
         }
-        scrollBy(i2, i3);
+
+        public void G(a aVar) {
+            this.f28692D = aVar;
+            this.f28690B.h();
+        }
+
+        public void H(j jVar) {
+            this.f28690B.unregisterObserver(jVar);
+        }
+
+        /* JADX WARN: Multi-variable type inference failed */
+        public final void d(VH vh, int i10) {
+            boolean z10 = vh.mBindingAdapter == null;
+            if (z10) {
+                vh.mPosition = i10;
+                if (m()) {
+                    vh.mItemId = i(i10);
+                }
+                vh.setFlags(1, 519);
+                if (n1.o.c()) {
+                    Trace.beginSection(String.format("RV onBindViewHolder type=0x%X", Integer.valueOf(vh.mItemViewType)));
+                }
+            }
+            vh.mBindingAdapter = this;
+            if (RecyclerView.f28554g1) {
+                if (vh.itemView.getParent() == null && vh.itemView.isAttachedToWindow() != vh.isTmpDetached()) {
+                    throw new IllegalStateException("Temp-detached state out of sync with reality. holder.isTmpDetached(): " + vh.isTmpDetached() + ", attached to window: " + vh.itemView.isAttachedToWindow() + ", holder: " + vh);
+                }
+                if (vh.itemView.getParent() == null && vh.itemView.isAttachedToWindow()) {
+                    throw new IllegalStateException("Attempting to bind attached holder with no parent (AKA temp detached): " + vh);
+                }
+            }
+            x(vh, i10, vh.getUnmodifiedPayloads());
+            if (z10) {
+                vh.clearPayload();
+                ViewGroup.LayoutParams layoutParams = vh.itemView.getLayoutParams();
+                if (layoutParams instanceof r) {
+                    ((r) layoutParams).f28734c = true;
+                }
+                Trace.endSection();
+            }
+        }
+
+        boolean e() {
+            int iOrdinal = this.f28692D.ordinal();
+            return iOrdinal != 1 ? iOrdinal != 2 : h() > 0;
+        }
+
+        public final VH f(ViewGroup viewGroup, int i10) {
+            try {
+                if (n1.o.c()) {
+                    Trace.beginSection(String.format("RV onCreateViewHolder type=0x%X", Integer.valueOf(i10)));
+                }
+                VH vh = (VH) y(viewGroup, i10);
+                if (vh.itemView.getParent() != null) {
+                    throw new IllegalStateException("ViewHolder views must not be attached when created. Ensure that you are not passing 'true' to the attachToRoot parameter of LayoutInflater.inflate(..., boolean attachToRoot)");
+                }
+                vh.mItemViewType = i10;
+                Trace.endSection();
+                return vh;
+            } catch (Throwable th) {
+                Trace.endSection();
+                throw th;
+            }
+        }
+
+        public int g(h<? extends G> hVar, G g10, int i10) {
+            if (hVar == this) {
+                return i10;
+            }
+            return -1;
+        }
+
+        public abstract int h();
+
+        public long i(int i10) {
+            return -1L;
+        }
+
+        public int j(int i10) {
+            return 0;
+        }
+
+        public final a k() {
+            return this.f28692D;
+        }
+
+        public final boolean l() {
+            return this.f28690B.a();
+        }
+
+        public final boolean m() {
+            return this.f28691C;
+        }
+
+        public final void n() {
+            this.f28690B.b();
+        }
+
+        public final void o(int i10) {
+            this.f28690B.d(i10, 1);
+        }
+
+        public final void p(int i10, int i11) {
+            this.f28690B.c(i10, i11);
+        }
+
+        public final void q(int i10, int i11) {
+            this.f28690B.d(i10, i11);
+        }
+
+        public final void r(int i10, int i11, Object obj) {
+            this.f28690B.e(i10, i11, obj);
+        }
+
+        public final void s(int i10, int i11) {
+            this.f28690B.f(i10, i11);
+        }
+
+        public final void t(int i10, int i11) {
+            this.f28690B.g(i10, i11);
+        }
+
+        public final void u(int i10) {
+            this.f28690B.g(i10, 1);
+        }
+
+        public abstract void w(VH vh, int i10);
+
+        public void x(VH vh, int i10, List<Object> list) {
+            w(vh, i10);
+        }
+
+        public abstract VH y(ViewGroup viewGroup, int i10);
+
+        public void B(VH vh) {
+        }
+
+        public void C(VH vh) {
+        }
+
+        public void D(VH vh) {
+        }
+
+        public void v(RecyclerView recyclerView) {
+        }
+
+        public void z(RecyclerView recyclerView) {
+        }
     }
 
-    public void addItemDecoration(AbstractC0601n abstractC0601n) {
-        addItemDecoration(abstractC0601n, -1);
+    public static abstract class n {
+
+        /* renamed from: a, reason: collision with root package name */
+        private b f28697a = null;
+
+        /* renamed from: b, reason: collision with root package name */
+        private ArrayList<a> f28698b = new ArrayList<>();
+
+        /* renamed from: c, reason: collision with root package name */
+        private long f28699c = 120;
+
+        /* renamed from: d, reason: collision with root package name */
+        private long f28700d = 120;
+
+        /* renamed from: e, reason: collision with root package name */
+        private long f28701e = 250;
+
+        /* renamed from: f, reason: collision with root package name */
+        private long f28702f = 250;
+
+        public interface a {
+            void a();
+        }
+
+        interface b {
+            void a(G g10);
+        }
+
+        public static class c {
+
+            /* renamed from: a, reason: collision with root package name */
+            public int f28703a;
+
+            /* renamed from: b, reason: collision with root package name */
+            public int f28704b;
+
+            /* renamed from: c, reason: collision with root package name */
+            public int f28705c;
+
+            /* renamed from: d, reason: collision with root package name */
+            public int f28706d;
+
+            public c a(G g10) {
+                return b(g10, 0);
+            }
+
+            public c b(G g10, int i10) {
+                View view = g10.itemView;
+                this.f28703a = view.getLeft();
+                this.f28704b = view.getTop();
+                this.f28705c = view.getRight();
+                this.f28706d = view.getBottom();
+                return this;
+            }
+        }
+
+        static int e(G g10) {
+            int i10 = g10.mFlags;
+            int i11 = i10 & 14;
+            if (g10.isInvalid()) {
+                return 4;
+            }
+            if ((i10 & 4) != 0) {
+                return i11;
+            }
+            int oldPosition = g10.getOldPosition();
+            int absoluteAdapterPosition = g10.getAbsoluteAdapterPosition();
+            return (oldPosition == -1 || absoluteAdapterPosition == -1 || oldPosition == absoluteAdapterPosition) ? i11 : i11 | 2048;
+        }
+
+        public abstract boolean a(G g10, c cVar, c cVar2);
+
+        public abstract boolean b(G g10, G g11, c cVar, c cVar2);
+
+        public abstract boolean c(G g10, c cVar, c cVar2);
+
+        public abstract boolean d(G g10, c cVar, c cVar2);
+
+        public abstract boolean f(G g10);
+
+        public boolean g(G g10, List<Object> list) {
+            return f(g10);
+        }
+
+        public final void h(G g10) {
+            r(g10);
+            b bVar = this.f28697a;
+            if (bVar != null) {
+                bVar.a(g10);
+            }
+        }
+
+        public final void i() {
+            int size = this.f28698b.size();
+            for (int i10 = 0; i10 < size; i10++) {
+                this.f28698b.get(i10).a();
+            }
+            this.f28698b.clear();
+        }
+
+        public abstract void j(G g10);
+
+        public abstract void k();
+
+        public long l() {
+            return this.f28699c;
+        }
+
+        public long m() {
+            return this.f28702f;
+        }
+
+        public long n() {
+            return this.f28701e;
+        }
+
+        public long o() {
+            return this.f28700d;
+        }
+
+        public abstract boolean p();
+
+        public c q() {
+            return new c();
+        }
+
+        public c s(C c10, G g10) {
+            return q().a(g10);
+        }
+
+        public c t(C c10, G g10, int i10, List<Object> list) {
+            return q().a(g10);
+        }
+
+        public abstract void u();
+
+        void v(b bVar) {
+            this.f28697a = bVar;
+        }
+
+        public void r(G g10) {
+        }
+    }
+
+    public static abstract class q {
+
+        /* renamed from: a, reason: collision with root package name */
+        androidx.recyclerview.widget.d f28708a;
+
+        /* renamed from: b, reason: collision with root package name */
+        RecyclerView f28709b;
+
+        /* renamed from: c, reason: collision with root package name */
+        private final x.b f28710c;
+
+        /* renamed from: d, reason: collision with root package name */
+        private final x.b f28711d;
+
+        /* renamed from: e, reason: collision with root package name */
+        androidx.recyclerview.widget.x f28712e;
+
+        /* renamed from: f, reason: collision with root package name */
+        androidx.recyclerview.widget.x f28713f;
+
+        /* renamed from: g, reason: collision with root package name */
+        B f28714g;
+
+        /* renamed from: h, reason: collision with root package name */
+        boolean f28715h;
+
+        /* renamed from: i, reason: collision with root package name */
+        boolean f28716i;
+
+        /* renamed from: j, reason: collision with root package name */
+        boolean f28717j;
+
+        /* renamed from: k, reason: collision with root package name */
+        private boolean f28718k;
+
+        /* renamed from: l, reason: collision with root package name */
+        private boolean f28719l;
+
+        /* renamed from: m, reason: collision with root package name */
+        int f28720m;
+
+        /* renamed from: n, reason: collision with root package name */
+        boolean f28721n;
+
+        /* renamed from: o, reason: collision with root package name */
+        private int f28722o;
+
+        /* renamed from: p, reason: collision with root package name */
+        private int f28723p;
+
+        /* renamed from: q, reason: collision with root package name */
+        private int f28724q;
+
+        /* renamed from: r, reason: collision with root package name */
+        private int f28725r;
+
+        class a implements x.b {
+            a() {
+            }
+
+            @Override // androidx.recyclerview.widget.x.b
+            public View a(int i10) {
+                return q.this.N(i10);
+            }
+
+            @Override // androidx.recyclerview.widget.x.b
+            public int b(View view) {
+                return q.this.V(view) - ((ViewGroup.MarginLayoutParams) ((r) view.getLayoutParams())).leftMargin;
+            }
+
+            @Override // androidx.recyclerview.widget.x.b
+            public int c() {
+                return q.this.i0();
+            }
+
+            @Override // androidx.recyclerview.widget.x.b
+            public int d() {
+                return q.this.s0() - q.this.j0();
+            }
+
+            @Override // androidx.recyclerview.widget.x.b
+            public int e(View view) {
+                return q.this.Y(view) + ((ViewGroup.MarginLayoutParams) ((r) view.getLayoutParams())).rightMargin;
+            }
+        }
+
+        class b implements x.b {
+            b() {
+            }
+
+            @Override // androidx.recyclerview.widget.x.b
+            public View a(int i10) {
+                return q.this.N(i10);
+            }
+
+            @Override // androidx.recyclerview.widget.x.b
+            public int b(View view) {
+                return q.this.Z(view) - ((ViewGroup.MarginLayoutParams) ((r) view.getLayoutParams())).topMargin;
+            }
+
+            @Override // androidx.recyclerview.widget.x.b
+            public int c() {
+                return q.this.k0();
+            }
+
+            @Override // androidx.recyclerview.widget.x.b
+            public int d() {
+                return q.this.b0() - q.this.h0();
+            }
+
+            @Override // androidx.recyclerview.widget.x.b
+            public int e(View view) {
+                return q.this.T(view) + ((ViewGroup.MarginLayoutParams) ((r) view.getLayoutParams())).bottomMargin;
+            }
+        }
+
+        public interface c {
+            void a(int i10, int i11);
+        }
+
+        public static class d {
+
+            /* renamed from: a, reason: collision with root package name */
+            public int f28728a;
+
+            /* renamed from: b, reason: collision with root package name */
+            public int f28729b;
+
+            /* renamed from: c, reason: collision with root package name */
+            public boolean f28730c;
+
+            /* renamed from: d, reason: collision with root package name */
+            public boolean f28731d;
+        }
+
+        public q() {
+            a aVar = new a();
+            this.f28710c = aVar;
+            b bVar = new b();
+            this.f28711d = bVar;
+            this.f28712e = new androidx.recyclerview.widget.x(aVar);
+            this.f28713f = new androidx.recyclerview.widget.x(bVar);
+            this.f28715h = false;
+            this.f28716i = false;
+            this.f28717j = false;
+            this.f28718k = true;
+            this.f28719l = true;
+        }
+
+        private void A1(x xVar, int i10, View view) {
+            G gO0 = RecyclerView.o0(view);
+            if (gO0.shouldIgnore()) {
+                if (RecyclerView.f28555h1) {
+                    Log.d("RecyclerView", "ignoring view " + gO0);
+                    return;
+                }
+                return;
+            }
+            if (gO0.isInvalid() && !gO0.isRemoved() && !this.f28709b.f28589N.m()) {
+                v1(i10);
+                xVar.H(gO0);
+            } else {
+                C(i10);
+                xVar.I(view);
+                this.f28709b.f28577H.k(gO0);
+            }
+        }
+
+        private static boolean B0(int i10, int i11, int i12) {
+            int mode = View.MeasureSpec.getMode(i11);
+            int size = View.MeasureSpec.getSize(i11);
+            if (i12 > 0 && i10 != i12) {
+                return false;
+            }
+            if (mode == Integer.MIN_VALUE) {
+                return size >= i10;
+            }
+            if (mode != 0) {
+                return mode == 1073741824 && size == i10;
+            }
+            return true;
+        }
+
+        private void D(int i10, View view) {
+            this.f28708a.d(i10);
+        }
+
+        /* JADX WARN: Removed duplicated region for block: B:10:0x001a  */
+        /* JADX WARN: Removed duplicated region for block: B:14:0x0022  */
+        /*
+            Code decompiled incorrectly, please refer to instructions dump.
+            To view partially-correct code enable 'Show inconsistent code' option in preferences
+        */
+        public static int P(int r4, int r5, int r6, int r7, boolean r8) {
+            /*
+                int r4 = r4 - r6
+                r6 = 0
+                int r4 = java.lang.Math.max(r6, r4)
+                r0 = -2
+                r1 = -1
+                r2 = -2147483648(0xffffffff80000000, float:-0.0)
+                r3 = 1073741824(0x40000000, float:2.0)
+                if (r8 == 0) goto L1d
+                if (r7 < 0) goto L12
+            L10:
+                r5 = r3
+                goto L30
+            L12:
+                if (r7 != r1) goto L1a
+                if (r5 == r2) goto L22
+                if (r5 == 0) goto L1a
+                if (r5 == r3) goto L22
+            L1a:
+                r5 = r6
+                r7 = r5
+                goto L30
+            L1d:
+                if (r7 < 0) goto L20
+                goto L10
+            L20:
+                if (r7 != r1) goto L24
+            L22:
+                r7 = r4
+                goto L30
+            L24:
+                if (r7 != r0) goto L1a
+                if (r5 == r2) goto L2e
+                if (r5 != r3) goto L2b
+                goto L2e
+            L2b:
+                r7 = r4
+                r5 = r6
+                goto L30
+            L2e:
+                r7 = r4
+                r5 = r2
+            L30:
+                int r4 = android.view.View.MeasureSpec.makeMeasureSpec(r7, r5)
+                return r4
+            */
+            throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.RecyclerView.q.P(int, int, int, int, boolean):int");
+        }
+
+        private int[] Q(View view, Rect rect) {
+            int iI0 = i0();
+            int iK0 = k0();
+            int iS0 = s0() - j0();
+            int iB0 = b0() - h0();
+            int left = (view.getLeft() + rect.left) - view.getScrollX();
+            int top = (view.getTop() + rect.top) - view.getScrollY();
+            int iWidth = rect.width() + left;
+            int iHeight = rect.height() + top;
+            int i10 = left - iI0;
+            int iMin = Math.min(0, i10);
+            int i11 = top - iK0;
+            int iMin2 = Math.min(0, i11);
+            int i12 = iWidth - iS0;
+            int iMax = Math.max(0, i12);
+            int iMax2 = Math.max(0, iHeight - iB0);
+            if (d0() != 1) {
+                if (iMin == 0) {
+                    iMin = Math.min(i10, iMax);
+                }
+                iMax = iMin;
+            } else if (iMax == 0) {
+                iMax = Math.max(iMin, i12);
+            }
+            if (iMin2 == 0) {
+                iMin2 = Math.min(i11, iMax2);
+            }
+            return new int[]{iMax, iMin2};
+        }
+
+        private void k(View view, int i10, boolean z10) {
+            G gO0 = RecyclerView.o0(view);
+            if (z10 || gO0.isRemoved()) {
+                this.f28709b.f28577H.b(gO0);
+            } else {
+                this.f28709b.f28577H.p(gO0);
+            }
+            r rVar = (r) view.getLayoutParams();
+            if (gO0.wasReturnedFromScrap() || gO0.isScrap()) {
+                if (gO0.isScrap()) {
+                    gO0.unScrap();
+                } else {
+                    gO0.clearReturnedFromScrapFlag();
+                }
+                this.f28708a.c(view, i10, view.getLayoutParams(), false);
+            } else if (view.getParent() == this.f28709b) {
+                int iM = this.f28708a.m(view);
+                if (i10 == -1) {
+                    i10 = this.f28708a.g();
+                }
+                if (iM == -1) {
+                    throw new IllegalStateException("Added View has RecyclerView as parent but view is not a real child. Unfiltered index:" + this.f28709b.indexOfChild(view) + this.f28709b.V());
+                }
+                if (iM != i10) {
+                    this.f28709b.f28591O.G0(iM, i10);
+                }
+            } else {
+                this.f28708a.a(view, i10, false);
+                rVar.f28734c = true;
+                B b10 = this.f28714g;
+                if (b10 != null && b10.h()) {
+                    this.f28714g.k(view);
+                }
+            }
+            if (rVar.f28735d) {
+                if (RecyclerView.f28555h1) {
+                    Log.d("RecyclerView", "consuming pending invalidate on child " + rVar.f28732a);
+                }
+                gO0.itemView.invalidate();
+                rVar.f28735d = false;
+            }
+        }
+
+        public static d m0(Context context, AttributeSet attributeSet, int i10, int i11) {
+            d dVar = new d();
+            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C4284c.f47998a, i10, i11);
+            dVar.f28728a = typedArrayObtainStyledAttributes.getInt(C4284c.f47999b, 1);
+            dVar.f28729b = typedArrayObtainStyledAttributes.getInt(C4284c.f48009l, 1);
+            dVar.f28730c = typedArrayObtainStyledAttributes.getBoolean(C4284c.f48008k, false);
+            dVar.f28731d = typedArrayObtainStyledAttributes.getBoolean(C4284c.f48010m, false);
+            typedArrayObtainStyledAttributes.recycle();
+            return dVar;
+        }
+
+        public static int s(int i10, int i11, int i12) {
+            int mode = View.MeasureSpec.getMode(i10);
+            int size = View.MeasureSpec.getSize(i10);
+            return mode != Integer.MIN_VALUE ? mode != 1073741824 ? Math.max(i11, i12) : size : Math.min(size, Math.max(i11, i12));
+        }
+
+        private boolean x0(RecyclerView recyclerView, int i10, int i11) {
+            View focusedChild = recyclerView.getFocusedChild();
+            if (focusedChild == null) {
+                return false;
+            }
+            int iI0 = i0();
+            int iK0 = k0();
+            int iS0 = s0() - j0();
+            int iB0 = b0() - h0();
+            Rect rect = this.f28709b.f28583K;
+            U(focusedChild, rect);
+            return rect.left - i10 < iS0 && rect.right - i10 > iI0 && rect.top - i11 < iB0 && rect.bottom - i11 > iK0;
+        }
+
+        public int A(C c10) {
+            return 0;
+        }
+
+        public boolean A0() {
+            return false;
+        }
+
+        public void B(x xVar) {
+            for (int iO = O() - 1; iO >= 0; iO--) {
+                A1(xVar, iO, N(iO));
+            }
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public int B1(int i10, x xVar, C c10) {
+            return 0;
+        }
+
+        public void C(int i10) {
+            D(i10, N(i10));
+        }
+
+        public boolean C0() {
+            B b10 = this.f28714g;
+            return b10 != null && b10.h();
+        }
+
+        public void C1(int i10) {
+            if (RecyclerView.f28555h1) {
+                Log.e("RecyclerView", "You MUST implement scrollToPosition. It will soon become abstract");
+            }
+        }
+
+        public boolean D0(View view, boolean z10, boolean z11) {
+            boolean z12 = this.f28712e.b(view, 24579) && this.f28713f.b(view, 24579);
+            return z10 ? z12 : !z12;
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public int D1(int i10, x xVar, C c10) {
+            return 0;
+        }
+
+        void E(RecyclerView recyclerView) {
+            this.f28716i = true;
+            L0(recyclerView);
+        }
+
+        public void E0(View view, int i10, int i11, int i12, int i13) {
+            r rVar = (r) view.getLayoutParams();
+            Rect rect = rVar.f28733b;
+            view.layout(i10 + rect.left + ((ViewGroup.MarginLayoutParams) rVar).leftMargin, i11 + rect.top + ((ViewGroup.MarginLayoutParams) rVar).topMargin, (i12 - rect.right) - ((ViewGroup.MarginLayoutParams) rVar).rightMargin, (i13 - rect.bottom) - ((ViewGroup.MarginLayoutParams) rVar).bottomMargin);
+        }
+
+        void E1(RecyclerView recyclerView) {
+            F1(View.MeasureSpec.makeMeasureSpec(recyclerView.getWidth(), 1073741824), View.MeasureSpec.makeMeasureSpec(recyclerView.getHeight(), 1073741824));
+        }
+
+        void F(RecyclerView recyclerView, x xVar) {
+            this.f28716i = false;
+            N0(recyclerView, xVar);
+        }
+
+        public void F0(View view, int i10, int i11) {
+            r rVar = (r) view.getLayoutParams();
+            Rect rectT0 = this.f28709b.t0(view);
+            int i12 = i10 + rectT0.left + rectT0.right;
+            int i13 = i11 + rectT0.top + rectT0.bottom;
+            int iP = P(s0(), t0(), i0() + j0() + ((ViewGroup.MarginLayoutParams) rVar).leftMargin + ((ViewGroup.MarginLayoutParams) rVar).rightMargin + i12, ((ViewGroup.MarginLayoutParams) rVar).width, p());
+            int iP2 = P(b0(), c0(), k0() + h0() + ((ViewGroup.MarginLayoutParams) rVar).topMargin + ((ViewGroup.MarginLayoutParams) rVar).bottomMargin + i13, ((ViewGroup.MarginLayoutParams) rVar).height, q());
+            if (K1(view, iP, iP2, rVar)) {
+                view.measure(iP, iP2);
+            }
+        }
+
+        void F1(int i10, int i11) {
+            this.f28724q = View.MeasureSpec.getSize(i10);
+            int mode = View.MeasureSpec.getMode(i10);
+            this.f28722o = mode;
+            if (mode == 0 && !RecyclerView.f28559l1) {
+                this.f28724q = 0;
+            }
+            this.f28725r = View.MeasureSpec.getSize(i11);
+            int mode2 = View.MeasureSpec.getMode(i11);
+            this.f28723p = mode2;
+            if (mode2 != 0 || RecyclerView.f28559l1) {
+                return;
+            }
+            this.f28725r = 0;
+        }
+
+        public View G(View view) {
+            View viewX;
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView == null || (viewX = recyclerView.X(view)) == null || this.f28708a.n(viewX)) {
+                return null;
+            }
+            return viewX;
+        }
+
+        public void G0(int i10, int i11) {
+            View viewN = N(i10);
+            if (viewN != null) {
+                C(i10);
+                m(viewN, i11);
+            } else {
+                throw new IllegalArgumentException("Cannot move a child from non-existing index:" + i10 + this.f28709b.toString());
+            }
+        }
+
+        public void G1(int i10, int i11) {
+            this.f28709b.setMeasuredDimension(i10, i11);
+        }
+
+        public View H(int i10) {
+            int iO = O();
+            for (int i11 = 0; i11 < iO; i11++) {
+                View viewN = N(i11);
+                G gO0 = RecyclerView.o0(viewN);
+                if (gO0 != null && gO0.getLayoutPosition() == i10 && !gO0.shouldIgnore() && (this.f28709b.f28584K0.e() || !gO0.isRemoved())) {
+                    return viewN;
+                }
+            }
+            return null;
+        }
+
+        public void H0(int i10) {
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView != null) {
+                recyclerView.K0(i10);
+            }
+        }
+
+        public void H1(Rect rect, int i10, int i11) {
+            G1(s(i10, rect.width() + i0() + j0(), g0()), s(i11, rect.height() + k0() + h0(), f0()));
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public abstract r I();
+
+        public void I0(int i10) {
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView != null) {
+                recyclerView.L0(i10);
+            }
+        }
+
+        void I1(int i10, int i11) {
+            int iO = O();
+            if (iO == 0) {
+                this.f28709b.C(i10, i11);
+                return;
+            }
+            int i12 = Integer.MIN_VALUE;
+            int i13 = Integer.MAX_VALUE;
+            int i14 = Integer.MIN_VALUE;
+            int i15 = Integer.MAX_VALUE;
+            for (int i16 = 0; i16 < iO; i16++) {
+                View viewN = N(i16);
+                Rect rect = this.f28709b.f28583K;
+                U(viewN, rect);
+                int i17 = rect.left;
+                if (i17 < i15) {
+                    i15 = i17;
+                }
+                int i18 = rect.right;
+                if (i18 > i12) {
+                    i12 = i18;
+                }
+                int i19 = rect.top;
+                if (i19 < i13) {
+                    i13 = i19;
+                }
+                int i20 = rect.bottom;
+                if (i20 > i14) {
+                    i14 = i20;
+                }
+            }
+            this.f28709b.f28583K.set(i15, i13, i12, i14);
+            H1(this.f28709b.f28583K, i10, i11);
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public r J(Context context, AttributeSet attributeSet) {
+            return new r(context, attributeSet);
+        }
+
+        void J1(RecyclerView recyclerView) {
+            if (recyclerView == null) {
+                this.f28709b = null;
+                this.f28708a = null;
+                this.f28724q = 0;
+                this.f28725r = 0;
+            } else {
+                this.f28709b = recyclerView;
+                this.f28708a = recyclerView.f28575G;
+                this.f28724q = recyclerView.getWidth();
+                this.f28725r = recyclerView.getHeight();
+            }
+            this.f28722o = 1073741824;
+            this.f28723p = 1073741824;
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public r K(ViewGroup.LayoutParams layoutParams) {
+            return layoutParams instanceof r ? new r((r) layoutParams) : layoutParams instanceof ViewGroup.MarginLayoutParams ? new r((ViewGroup.MarginLayoutParams) layoutParams) : new r(layoutParams);
+        }
+
+        public boolean K0(RecyclerView recyclerView, ArrayList<View> arrayList, int i10, int i11) {
+            return false;
+        }
+
+        boolean K1(View view, int i10, int i11, r rVar) {
+            return (!view.isLayoutRequested() && this.f28718k && B0(view.getWidth(), i10, ((ViewGroup.MarginLayoutParams) rVar).width) && B0(view.getHeight(), i11, ((ViewGroup.MarginLayoutParams) rVar).height)) ? false : true;
+        }
+
+        public int L() {
+            return -1;
+        }
+
+        boolean L1() {
+            return false;
+        }
+
+        public int M(View view) {
+            return ((r) view.getLayoutParams()).f28733b.bottom;
+        }
+
+        boolean M1(View view, int i10, int i11, r rVar) {
+            return (this.f28718k && B0(view.getMeasuredWidth(), i10, ((ViewGroup.MarginLayoutParams) rVar).width) && B0(view.getMeasuredHeight(), i11, ((ViewGroup.MarginLayoutParams) rVar).height)) ? false : true;
+        }
+
+        public View N(int i10) {
+            androidx.recyclerview.widget.d dVar = this.f28708a;
+            if (dVar != null) {
+                return dVar.f(i10);
+            }
+            return null;
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public void N0(RecyclerView recyclerView, x xVar) {
+            M0(recyclerView);
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public void N1(RecyclerView recyclerView, C c10, int i10) {
+            Log.e("RecyclerView", "You must override smoothScrollToPosition to support smooth scrolling");
+        }
+
+        public int O() {
+            androidx.recyclerview.widget.d dVar = this.f28708a;
+            if (dVar != null) {
+                return dVar.g();
+            }
+            return 0;
+        }
+
+        public View O0(View view, int i10, x xVar, C c10) {
+            return null;
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public void O1(B b10) {
+            B b11 = this.f28714g;
+            if (b11 != null && b10 != b11 && b11.h()) {
+                this.f28714g.r();
+            }
+            this.f28714g = b10;
+            b10.q(this.f28709b, this);
+        }
+
+        public void P0(AccessibilityEvent accessibilityEvent) {
+            RecyclerView recyclerView = this.f28709b;
+            Q0(recyclerView.f28569D, recyclerView.f28584K0, accessibilityEvent);
+        }
+
+        void P1() {
+            B b10 = this.f28714g;
+            if (b10 != null) {
+                b10.r();
+            }
+        }
+
+        public void Q0(x xVar, C c10, AccessibilityEvent accessibilityEvent) {
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView == null || accessibilityEvent == null) {
+                return;
+            }
+            boolean z10 = true;
+            if (!recyclerView.canScrollVertically(1) && !this.f28709b.canScrollVertically(-1) && !this.f28709b.canScrollHorizontally(-1) && !this.f28709b.canScrollHorizontally(1)) {
+                z10 = false;
+            }
+            accessibilityEvent.setScrollable(z10);
+            h hVar = this.f28709b.f28589N;
+            if (hVar != null) {
+                accessibilityEvent.setItemCount(hVar.h());
+            }
+        }
+
+        public boolean Q1() {
+            return false;
+        }
+
+        public boolean R() {
+            RecyclerView recyclerView = this.f28709b;
+            return recyclerView != null && recyclerView.f28579I;
+        }
+
+        public void R0(x xVar, C c10, t1.t tVar) {
+            if (this.f28709b.canScrollVertically(-1) || this.f28709b.canScrollHorizontally(-1)) {
+                tVar.a(8192);
+                tVar.K0(true);
+                tVar.t0(true);
+            }
+            if (this.f28709b.canScrollVertically(1) || this.f28709b.canScrollHorizontally(1)) {
+                tVar.a(4096);
+                tVar.K0(true);
+                tVar.t0(true);
+            }
+            tVar.j0(t.e.a(o0(xVar, c10), S(xVar, c10), z0(xVar, c10), p0(xVar, c10)));
+        }
+
+        public int S(x xVar, C c10) {
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView == null || recyclerView.f28589N == null || !p()) {
+                return 1;
+            }
+            return this.f28709b.f28589N.h();
+        }
+
+        void S0(t1.t tVar) {
+            RecyclerView recyclerView = this.f28709b;
+            R0(recyclerView.f28569D, recyclerView.f28584K0, tVar);
+        }
+
+        public int T(View view) {
+            return view.getBottom() + M(view);
+        }
+
+        void T0(View view, t1.t tVar) {
+            G gO0 = RecyclerView.o0(view);
+            if (gO0 == null || gO0.isRemoved() || this.f28708a.n(gO0.itemView)) {
+                return;
+            }
+            RecyclerView recyclerView = this.f28709b;
+            U0(recyclerView.f28569D, recyclerView.f28584K0, view, tVar);
+        }
+
+        public void U(View view, Rect rect) {
+            RecyclerView.q0(view, rect);
+        }
+
+        public void U0(x xVar, C c10, View view, t1.t tVar) {
+            tVar.k0(t.f.a(q() ? l0(view) : 0, 1, p() ? l0(view) : 0, 1, false, false));
+        }
+
+        public int V(View view) {
+            return view.getLeft() - e0(view);
+        }
+
+        public View V0(View view, int i10) {
+            return null;
+        }
+
+        public int W(View view) {
+            Rect rect = ((r) view.getLayoutParams()).f28733b;
+            return view.getMeasuredHeight() + rect.top + rect.bottom;
+        }
+
+        public int X(View view) {
+            Rect rect = ((r) view.getLayoutParams()).f28733b;
+            return view.getMeasuredWidth() + rect.left + rect.right;
+        }
+
+        public int Y(View view) {
+            return view.getRight() + n0(view);
+        }
+
+        public int Z(View view) {
+            return view.getTop() - q0(view);
+        }
+
+        public int a() {
+            RecyclerView recyclerView = this.f28709b;
+            h adapter = recyclerView != null ? recyclerView.getAdapter() : null;
+            if (adapter != null) {
+                return adapter.h();
+            }
+            return 0;
+        }
+
+        public View a0() {
+            View focusedChild;
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView == null || (focusedChild = recyclerView.getFocusedChild()) == null || this.f28708a.n(focusedChild)) {
+                return null;
+            }
+            return focusedChild;
+        }
+
+        public int b0() {
+            return this.f28725r;
+        }
+
+        public void b1(RecyclerView recyclerView, int i10, int i11, Object obj) {
+            a1(recyclerView, i10, i11);
+        }
+
+        public int c0() {
+            return this.f28723p;
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public void c1(x xVar, C c10) {
+            Log.e("RecyclerView", "You must override onLayoutChildren(Recycler recycler, State state) ");
+        }
+
+        public int d0() {
+            return this.f28709b.getLayoutDirection();
+        }
+
+        public int e0(View view) {
+            return ((r) view.getLayoutParams()).f28733b.left;
+        }
+
+        public void e1(x xVar, C c10, int i10, int i11) {
+            this.f28709b.C(i10, i11);
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public void f(View view) {
+            g(view, -1);
+        }
+
+        public int f0() {
+            return X.A(this.f28709b);
+        }
+
+        @Deprecated
+        public boolean f1(RecyclerView recyclerView, View view, View view2) {
+            return C0() || recyclerView.E0();
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public void g(View view, int i10) {
+            k(view, i10, true);
+        }
+
+        public int g0() {
+            return X.B(this.f28709b);
+        }
+
+        public boolean g1(RecyclerView recyclerView, C c10, View view, View view2) {
+            return f1(recyclerView, view, view2);
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public void h(View view) {
+            i(view, -1);
+        }
+
+        public int h0() {
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView != null) {
+                return recyclerView.getPaddingBottom();
+            }
+            return 0;
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public void i(View view, int i10) {
+            k(view, i10, false);
+        }
+
+        public int i0() {
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView != null) {
+                return recyclerView.getPaddingLeft();
+            }
+            return 0;
+        }
+
+        public Parcelable i1() {
+            return null;
+        }
+
+        public int j0() {
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView != null) {
+                return recyclerView.getPaddingRight();
+            }
+            return 0;
+        }
+
+        public int k0() {
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView != null) {
+                return recyclerView.getPaddingTop();
+            }
+            return 0;
+        }
+
+        void k1(B b10) {
+            if (this.f28714g == b10) {
+                this.f28714g = null;
+            }
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public void l(String str) {
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView != null) {
+                recyclerView.r(str);
+            }
+        }
+
+        public int l0(View view) {
+            return ((r) view.getLayoutParams()).a();
+        }
+
+        boolean l1(int i10, Bundle bundle) {
+            RecyclerView recyclerView = this.f28709b;
+            return m1(recyclerView.f28569D, recyclerView.f28584K0, i10, bundle);
+        }
+
+        public void m(View view, int i10) {
+            n(view, i10, (r) view.getLayoutParams());
+        }
+
+        /* JADX WARN: Removed duplicated region for block: B:21:0x0065 A[PHI: r11
+          0x0065: PHI (r11v8 int) = (r11v5 int), (r11v18 int) binds: [B:27:0x0081, B:19:0x0057] A[DONT_GENERATE, DONT_INLINE]] */
+        /*
+            Code decompiled incorrectly, please refer to instructions dump.
+            To view partially-correct code enable 'Show inconsistent code' option in preferences
+        */
+        public boolean m1(androidx.recyclerview.widget.RecyclerView.x r11, androidx.recyclerview.widget.RecyclerView.C r12, int r13, android.os.Bundle r14) {
+            /*
+                Method dump skipped, instructions count: 258
+                To view this dump change 'Code comments level' option to 'DEBUG'
+            */
+            throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.RecyclerView.q.m1(androidx.recyclerview.widget.RecyclerView$x, androidx.recyclerview.widget.RecyclerView$C, int, android.os.Bundle):boolean");
+        }
+
+        public void n(View view, int i10, r rVar) {
+            G gO0 = RecyclerView.o0(view);
+            if (gO0.isRemoved()) {
+                this.f28709b.f28577H.b(gO0);
+            } else {
+                this.f28709b.f28577H.p(gO0);
+            }
+            this.f28708a.c(view, i10, rVar, gO0.isRemoved());
+        }
+
+        public int n0(View view) {
+            return ((r) view.getLayoutParams()).f28733b.right;
+        }
+
+        boolean n1(View view, int i10, Bundle bundle) {
+            RecyclerView recyclerView = this.f28709b;
+            return o1(recyclerView.f28569D, recyclerView.f28584K0, view, i10, bundle);
+        }
+
+        public void o(View view, Rect rect) {
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView == null) {
+                rect.set(0, 0, 0, 0);
+            } else {
+                rect.set(recyclerView.t0(view));
+            }
+        }
+
+        public int o0(x xVar, C c10) {
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView == null || recyclerView.f28589N == null || !q()) {
+                return 1;
+            }
+            return this.f28709b.f28589N.h();
+        }
+
+        public boolean o1(x xVar, C c10, View view, int i10, Bundle bundle) {
+            return false;
+        }
+
+        public boolean p() {
+            return false;
+        }
+
+        public int p0(x xVar, C c10) {
+            return 0;
+        }
+
+        public void p1(x xVar) {
+            for (int iO = O() - 1; iO >= 0; iO--) {
+                if (!RecyclerView.o0(N(iO)).shouldIgnore()) {
+                    s1(iO, xVar);
+                }
+            }
+        }
+
+        public boolean q() {
+            return false;
+        }
+
+        public int q0(View view) {
+            return ((r) view.getLayoutParams()).f28733b.top;
+        }
+
+        void q1(x xVar) {
+            int iJ = xVar.j();
+            for (int i10 = iJ - 1; i10 >= 0; i10--) {
+                View viewN = xVar.n(i10);
+                G gO0 = RecyclerView.o0(viewN);
+                if (!gO0.shouldIgnore()) {
+                    gO0.setIsRecyclable(false);
+                    if (gO0.isTmpDetached()) {
+                        this.f28709b.removeDetachedView(viewN, false);
+                    }
+                    n nVar = this.f28709b.f28636s0;
+                    if (nVar != null) {
+                        nVar.j(gO0);
+                    }
+                    gO0.setIsRecyclable(true);
+                    xVar.D(viewN);
+                }
+            }
+            xVar.e();
+            if (iJ > 0) {
+                this.f28709b.invalidate();
+            }
+        }
+
+        public boolean r(r rVar) {
+            return rVar != null;
+        }
+
+        public void r0(View view, boolean z10, Rect rect) {
+            Matrix matrix;
+            if (z10) {
+                Rect rect2 = ((r) view.getLayoutParams()).f28733b;
+                rect.set(-rect2.left, -rect2.top, view.getWidth() + rect2.right, view.getHeight() + rect2.bottom);
+            } else {
+                rect.set(0, 0, view.getWidth(), view.getHeight());
+            }
+            if (this.f28709b != null && (matrix = view.getMatrix()) != null && !matrix.isIdentity()) {
+                RectF rectF = this.f28709b.f28587M;
+                rectF.set(rect);
+                matrix.mapRect(rectF);
+                rect.set((int) Math.floor(rectF.left), (int) Math.floor(rectF.top), (int) Math.ceil(rectF.right), (int) Math.ceil(rectF.bottom));
+            }
+            rect.offset(view.getLeft(), view.getTop());
+        }
+
+        public void r1(View view, x xVar) {
+            u1(view);
+            xVar.G(view);
+        }
+
+        public int s0() {
+            return this.f28724q;
+        }
+
+        public void s1(int i10, x xVar) {
+            View viewN = N(i10);
+            v1(i10);
+            xVar.G(viewN);
+        }
+
+        public int t0() {
+            return this.f28722o;
+        }
+
+        public boolean t1(Runnable runnable) {
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView != null) {
+                return recyclerView.removeCallbacks(runnable);
+            }
+            return false;
+        }
+
+        boolean u0() {
+            int iO = O();
+            for (int i10 = 0; i10 < iO; i10++) {
+                ViewGroup.LayoutParams layoutParams = N(i10).getLayoutParams();
+                if (layoutParams.width < 0 && layoutParams.height < 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public void u1(View view) {
+            this.f28708a.p(view);
+        }
+
+        public int v(C c10) {
+            return 0;
+        }
+
+        public boolean v0() {
+            return this.f28716i;
+        }
+
+        public void v1(int i10) {
+            if (N(i10) != null) {
+                this.f28708a.q(i10);
+            }
+        }
+
+        public int w(C c10) {
+            return 0;
+        }
+
+        public boolean w0() {
+            return this.f28717j;
+        }
+
+        public boolean w1(RecyclerView recyclerView, View view, Rect rect, boolean z10) {
+            return x1(recyclerView, view, rect, z10, false);
+        }
+
+        public int x(C c10) {
+            return 0;
+        }
+
+        public boolean x1(RecyclerView recyclerView, View view, Rect rect, boolean z10, boolean z11) {
+            int[] iArrQ = Q(view, rect);
+            int i10 = iArrQ[0];
+            int i11 = iArrQ[1];
+            if ((z11 && !x0(recyclerView, i10, i11)) || (i10 == 0 && i11 == 0)) {
+                return false;
+            }
+            if (z10) {
+                recyclerView.scrollBy(i10, i11);
+            } else {
+                recyclerView.z1(i10, i11);
+            }
+            return true;
+        }
+
+        public int y(C c10) {
+            return 0;
+        }
+
+        public final boolean y0() {
+            return this.f28719l;
+        }
+
+        public void y1() {
+            RecyclerView recyclerView = this.f28709b;
+            if (recyclerView != null) {
+                recyclerView.requestLayout();
+            }
+        }
+
+        public int z(C c10) {
+            return 0;
+        }
+
+        public boolean z0(x xVar, C c10) {
+            return false;
+        }
+
+        public void z1() {
+            this.f28715h = true;
+        }
+
+        public void L0(RecyclerView recyclerView) {
+        }
+
+        @Deprecated
+        public void M0(RecyclerView recyclerView) {
+        }
+
+        public void X0(RecyclerView recyclerView) {
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public void d1(C c10) {
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public void h1(Parcelable parcelable) {
+        }
+
+        public void j1(int i10) {
+        }
+
+        public void J0(h hVar, h hVar2) {
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public void u(int i10, c cVar) {
+        }
+
+        public void W0(RecyclerView recyclerView, int i10, int i11) {
+        }
+
+        public void Z0(RecyclerView recyclerView, int i10, int i11) {
+        }
+
+        public void a1(RecyclerView recyclerView, int i10, int i11) {
+        }
+
+        public void Y0(RecyclerView recyclerView, int i10, int i11, int i12) {
+        }
+
+        @SuppressLint({"UnknownNullness"})
+        public void t(int i10, int i11, C c10, c cVar) {
+        }
+    }
+
+    public final class x {
+
+        /* renamed from: a, reason: collision with root package name */
+        final ArrayList<G> f28743a;
+
+        /* renamed from: b, reason: collision with root package name */
+        ArrayList<G> f28744b;
+
+        /* renamed from: c, reason: collision with root package name */
+        final ArrayList<G> f28745c;
+
+        /* renamed from: d, reason: collision with root package name */
+        private final List<G> f28746d;
+
+        /* renamed from: e, reason: collision with root package name */
+        private int f28747e;
+
+        /* renamed from: f, reason: collision with root package name */
+        int f28748f;
+
+        /* renamed from: g, reason: collision with root package name */
+        w f28749g;
+
+        public x() {
+            ArrayList<G> arrayList = new ArrayList<>();
+            this.f28743a = arrayList;
+            this.f28744b = null;
+            this.f28745c = new ArrayList<>();
+            this.f28746d = Collections.unmodifiableList(arrayList);
+            this.f28747e = 2;
+            this.f28748f = 2;
+        }
+
+        private void B(h<?> hVar) {
+            C(hVar, false);
+        }
+
+        private void C(h<?> hVar, boolean z10) {
+            w wVar = this.f28749g;
+            if (wVar != null) {
+                wVar.e(hVar, z10);
+            }
+        }
+
+        private boolean M(G g10, int i10, int i11, long j10) {
+            g10.mBindingAdapter = null;
+            g10.mOwnerRecyclerView = RecyclerView.this;
+            int itemViewType = g10.getItemViewType();
+            long nanoTime = RecyclerView.this.getNanoTime();
+            boolean z10 = false;
+            if (j10 != Long.MAX_VALUE && !this.f28749g.m(itemViewType, nanoTime, j10)) {
+                return false;
+            }
+            if (g10.isTmpDetached()) {
+                RecyclerView recyclerView = RecyclerView.this;
+                recyclerView.attachViewToParent(g10.itemView, recyclerView.getChildCount(), g10.itemView.getLayoutParams());
+                z10 = true;
+            }
+            RecyclerView.this.f28589N.d(g10, i10);
+            if (z10) {
+                RecyclerView.this.detachViewFromParent(g10.itemView);
+            }
+            this.f28749g.f(g10.getItemViewType(), RecyclerView.this.getNanoTime() - nanoTime);
+            b(g10);
+            if (RecyclerView.this.f28584K0.e()) {
+                g10.mPreLayoutPosition = i11;
+            }
+            return true;
+        }
+
+        private void b(G g10) {
+            if (RecyclerView.this.D0()) {
+                View view = g10.itemView;
+                if (view.getImportantForAccessibility() == 0) {
+                    view.setImportantForAccessibility(1);
+                }
+                androidx.recyclerview.widget.s sVar = RecyclerView.this.f28598R0;
+                if (sVar == null) {
+                    return;
+                }
+                C4421a c4421aN = sVar.n();
+                if (c4421aN instanceof s.a) {
+                    ((s.a) c4421aN).o(view);
+                }
+                X.n0(view, c4421aN);
+            }
+        }
+
+        private void q(ViewGroup viewGroup, boolean z10) {
+            for (int childCount = viewGroup.getChildCount() - 1; childCount >= 0; childCount--) {
+                View childAt = viewGroup.getChildAt(childCount);
+                if (childAt instanceof ViewGroup) {
+                    q((ViewGroup) childAt, true);
+                }
+            }
+            if (z10) {
+                if (viewGroup.getVisibility() == 4) {
+                    viewGroup.setVisibility(0);
+                    viewGroup.setVisibility(4);
+                } else {
+                    int visibility = viewGroup.getVisibility();
+                    viewGroup.setVisibility(4);
+                    viewGroup.setVisibility(visibility);
+                }
+            }
+        }
+
+        private void r(G g10) {
+            View view = g10.itemView;
+            if (view instanceof ViewGroup) {
+                q((ViewGroup) view, false);
+            }
+        }
+
+        private void u() {
+            if (this.f28749g != null) {
+                RecyclerView recyclerView = RecyclerView.this;
+                if (recyclerView.f28589N == null || !recyclerView.isAttachedToWindow()) {
+                    return;
+                }
+                this.f28749g.b(RecyclerView.this.f28589N);
+            }
+        }
+
+        void A() {
+            for (int i10 = 0; i10 < this.f28745c.size(); i10++) {
+                C5048a.b(this.f28745c.get(i10).itemView);
+            }
+            B(RecyclerView.this.f28589N);
+        }
+
+        void D(View view) {
+            G gO0 = RecyclerView.o0(view);
+            gO0.mScrapContainer = null;
+            gO0.mInChangeScrap = false;
+            gO0.clearReturnedFromScrapFlag();
+            H(gO0);
+        }
+
+        void E() {
+            for (int size = this.f28745c.size() - 1; size >= 0; size--) {
+                F(size);
+            }
+            this.f28745c.clear();
+            if (RecyclerView.f28560m1) {
+                RecyclerView.this.f28582J0.b();
+            }
+        }
+
+        void F(int i10) {
+            if (RecyclerView.f28555h1) {
+                Log.d("RecyclerView", "Recycling cached view at index " + i10);
+            }
+            G g10 = this.f28745c.get(i10);
+            if (RecyclerView.f28555h1) {
+                Log.d("RecyclerView", "CachedViewHolder to be recycled: " + g10);
+            }
+            a(g10, true);
+            this.f28745c.remove(i10);
+        }
+
+        public void G(View view) {
+            G gO0 = RecyclerView.o0(view);
+            if (gO0.isTmpDetached()) {
+                RecyclerView.this.removeDetachedView(view, false);
+            }
+            if (gO0.isScrap()) {
+                gO0.unScrap();
+            } else if (gO0.wasReturnedFromScrap()) {
+                gO0.clearReturnedFromScrapFlag();
+            }
+            H(gO0);
+            if (RecyclerView.this.f28636s0 == null || gO0.isRecyclable()) {
+                return;
+            }
+            RecyclerView.this.f28636s0.j(gO0);
+        }
+
+        void H(G g10) {
+            boolean z10;
+            boolean z11 = true;
+            if (g10.isScrap() || g10.itemView.getParent() != null) {
+                StringBuilder sb2 = new StringBuilder();
+                sb2.append("Scrapped or attached views may not be recycled. isScrap:");
+                sb2.append(g10.isScrap());
+                sb2.append(" isAttached:");
+                sb2.append(g10.itemView.getParent() != null);
+                sb2.append(RecyclerView.this.V());
+                throw new IllegalArgumentException(sb2.toString());
+            }
+            if (g10.isTmpDetached()) {
+                throw new IllegalArgumentException("Tmp detached view should be removed from RecyclerView before it can be recycled: " + g10 + RecyclerView.this.V());
+            }
+            if (g10.shouldIgnore()) {
+                throw new IllegalArgumentException("Trying to recycle an ignored view holder. You should first call stopIgnoringView(view) before calling recycle." + RecyclerView.this.V());
+            }
+            boolean zDoesTransientStatePreventRecycling = g10.doesTransientStatePreventRecycling();
+            h hVar = RecyclerView.this.f28589N;
+            boolean z12 = hVar != null && zDoesTransientStatePreventRecycling && hVar.A(g10);
+            if (RecyclerView.f28554g1 && this.f28745c.contains(g10)) {
+                throw new IllegalArgumentException("cached view received recycle internal? " + g10 + RecyclerView.this.V());
+            }
+            if (z12 || g10.isRecyclable()) {
+                if (this.f28748f <= 0 || g10.hasAnyOfTheFlags(526)) {
+                    z10 = false;
+                } else {
+                    int size = this.f28745c.size();
+                    if (size >= this.f28748f && size > 0) {
+                        F(0);
+                        size--;
+                    }
+                    if (RecyclerView.f28560m1 && size > 0 && !RecyclerView.this.f28582J0.d(g10.mPosition)) {
+                        int i10 = size - 1;
+                        while (i10 >= 0) {
+                            if (!RecyclerView.this.f28582J0.d(this.f28745c.get(i10).mPosition)) {
+                                break;
+                            } else {
+                                i10--;
+                            }
+                        }
+                        size = i10 + 1;
+                    }
+                    this.f28745c.add(size, g10);
+                    z10 = true;
+                }
+                if (z10) {
+                    z11 = false;
+                } else {
+                    a(g10, true);
+                }
+                z = z10;
+            } else {
+                if (RecyclerView.f28555h1) {
+                    Log.d("RecyclerView", "trying to recycle a non-recycleable holder. Hopefully, it will re-visit here. We are still removing it from animation lists" + RecyclerView.this.V());
+                }
+                z11 = false;
+            }
+            RecyclerView.this.f28577H.q(g10);
+            if (z || z11 || !zDoesTransientStatePreventRecycling) {
+                return;
+            }
+            C5048a.b(g10.itemView);
+            g10.mBindingAdapter = null;
+            g10.mOwnerRecyclerView = null;
+        }
+
+        void I(View view) {
+            G gO0 = RecyclerView.o0(view);
+            if (!gO0.hasAnyOfTheFlags(12) && gO0.isUpdated() && !RecyclerView.this.s(gO0)) {
+                if (this.f28744b == null) {
+                    this.f28744b = new ArrayList<>();
+                }
+                gO0.setScrapContainer(this, true);
+                this.f28744b.add(gO0);
+                return;
+            }
+            if (!gO0.isInvalid() || gO0.isRemoved() || RecyclerView.this.f28589N.m()) {
+                gO0.setScrapContainer(this, false);
+                this.f28743a.add(gO0);
+            } else {
+                throw new IllegalArgumentException("Called scrap view with an invalid view. Invalid views cannot be reused from scrap, they should rebound from recycler pool." + RecyclerView.this.V());
+            }
+        }
+
+        void J(w wVar) {
+            B(RecyclerView.this.f28589N);
+            w wVar2 = this.f28749g;
+            if (wVar2 != null) {
+                wVar2.d();
+            }
+            this.f28749g = wVar;
+            if (wVar != null && RecyclerView.this.getAdapter() != null) {
+                this.f28749g.a();
+            }
+            u();
+        }
+
+        public void L(int i10) {
+            this.f28747e = i10;
+            P();
+        }
+
+        /* JADX WARN: Removed duplicated region for block: B:103:0x0226 A[ADDED_TO_REGION] */
+        /* JADX WARN: Removed duplicated region for block: B:105:0x0229  */
+        /* JADX WARN: Removed duplicated region for block: B:18:0x0037  */
+        /* JADX WARN: Removed duplicated region for block: B:27:0x005c  */
+        /* JADX WARN: Removed duplicated region for block: B:29:0x005f  */
+        /* JADX WARN: Removed duplicated region for block: B:72:0x0175  */
+        /* JADX WARN: Removed duplicated region for block: B:78:0x01a1  */
+        /* JADX WARN: Removed duplicated region for block: B:96:0x01fc  */
+        /* JADX WARN: Removed duplicated region for block: B:97:0x020a  */
+        /*
+            Code decompiled incorrectly, please refer to instructions dump.
+            To view partially-correct code enable 'Show inconsistent code' option in preferences
+        */
+        androidx.recyclerview.widget.RecyclerView.G N(int r19, boolean r20, long r21) {
+            /*
+                Method dump skipped, instructions count: 613
+                To view this dump change 'Code comments level' option to 'DEBUG'
+            */
+            throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.RecyclerView.x.N(int, boolean, long):androidx.recyclerview.widget.RecyclerView$G");
+        }
+
+        void O(G g10) {
+            if (g10.mInChangeScrap) {
+                this.f28744b.remove(g10);
+            } else {
+                this.f28743a.remove(g10);
+            }
+            g10.mScrapContainer = null;
+            g10.mInChangeScrap = false;
+            g10.clearReturnedFromScrapFlag();
+        }
+
+        void P() {
+            q qVar = RecyclerView.this.f28591O;
+            this.f28748f = this.f28747e + (qVar != null ? qVar.f28720m : 0);
+            for (int size = this.f28745c.size() - 1; size >= 0 && this.f28745c.size() > this.f28748f; size--) {
+                F(size);
+            }
+        }
+
+        boolean Q(G g10) {
+            if (g10.isRemoved()) {
+                if (!RecyclerView.f28554g1 || RecyclerView.this.f28584K0.e()) {
+                    return RecyclerView.this.f28584K0.e();
+                }
+                throw new IllegalStateException("should not receive a removed view unless it is pre layout" + RecyclerView.this.V());
+            }
+            int i10 = g10.mPosition;
+            if (i10 >= 0 && i10 < RecyclerView.this.f28589N.h()) {
+                if (RecyclerView.this.f28584K0.e() || RecyclerView.this.f28589N.j(g10.mPosition) == g10.getItemViewType()) {
+                    return !RecyclerView.this.f28589N.m() || g10.getItemId() == RecyclerView.this.f28589N.i(g10.mPosition);
+                }
+                return false;
+            }
+            throw new IndexOutOfBoundsException("Inconsistency detected. Invalid view holder adapter position" + g10 + RecyclerView.this.V());
+        }
+
+        void R(int i10, int i11) {
+            int i12;
+            int i13 = i11 + i10;
+            for (int size = this.f28745c.size() - 1; size >= 0; size--) {
+                G g10 = this.f28745c.get(size);
+                if (g10 != null && (i12 = g10.mPosition) >= i10 && i12 < i13) {
+                    g10.addFlags(2);
+                    F(size);
+                }
+            }
+        }
+
+        void a(G g10, boolean z10) {
+            RecyclerView.u(g10);
+            View view = g10.itemView;
+            androidx.recyclerview.widget.s sVar = RecyclerView.this.f28598R0;
+            if (sVar != null) {
+                C4421a c4421aN = sVar.n();
+                X.n0(view, c4421aN instanceof s.a ? ((s.a) c4421aN).n(view) : null);
+            }
+            if (z10) {
+                g(g10);
+            }
+            g10.mBindingAdapter = null;
+            g10.mOwnerRecyclerView = null;
+            i().k(g10);
+        }
+
+        public void c() {
+            this.f28743a.clear();
+            E();
+        }
+
+        void d() {
+            int size = this.f28745c.size();
+            for (int i10 = 0; i10 < size; i10++) {
+                this.f28745c.get(i10).clearOldPosition();
+            }
+            int size2 = this.f28743a.size();
+            for (int i11 = 0; i11 < size2; i11++) {
+                this.f28743a.get(i11).clearOldPosition();
+            }
+            ArrayList<G> arrayList = this.f28744b;
+            if (arrayList != null) {
+                int size3 = arrayList.size();
+                for (int i12 = 0; i12 < size3; i12++) {
+                    this.f28744b.get(i12).clearOldPosition();
+                }
+            }
+        }
+
+        void e() {
+            this.f28743a.clear();
+            ArrayList<G> arrayList = this.f28744b;
+            if (arrayList != null) {
+                arrayList.clear();
+            }
+        }
+
+        public int f(int i10) {
+            if (i10 >= 0 && i10 < RecyclerView.this.f28584K0.b()) {
+                return !RecyclerView.this.f28584K0.e() ? i10 : RecyclerView.this.f28573F.m(i10);
+            }
+            throw new IndexOutOfBoundsException("invalid position " + i10 + ". State item count is " + RecyclerView.this.f28584K0.b() + RecyclerView.this.V());
+        }
+
+        void g(G g10) {
+            y yVar = RecyclerView.this.f28593P;
+            if (yVar != null) {
+                yVar.a(g10);
+            }
+            int size = RecyclerView.this.f28595Q.size();
+            for (int i10 = 0; i10 < size; i10++) {
+                RecyclerView.this.f28595Q.get(i10).a(g10);
+            }
+            h hVar = RecyclerView.this.f28589N;
+            if (hVar != null) {
+                hVar.D(g10);
+            }
+            RecyclerView recyclerView = RecyclerView.this;
+            if (recyclerView.f28584K0 != null) {
+                recyclerView.f28577H.q(g10);
+            }
+            if (RecyclerView.f28555h1) {
+                Log.d("RecyclerView", "dispatchViewRecycled: " + g10);
+            }
+        }
+
+        G h(int i10) {
+            int size;
+            int iM;
+            ArrayList<G> arrayList = this.f28744b;
+            if (arrayList != null && (size = arrayList.size()) != 0) {
+                for (int i11 = 0; i11 < size; i11++) {
+                    G g10 = this.f28744b.get(i11);
+                    if (!g10.wasReturnedFromScrap() && g10.getLayoutPosition() == i10) {
+                        g10.addFlags(32);
+                        return g10;
+                    }
+                }
+                if (RecyclerView.this.f28589N.m() && (iM = RecyclerView.this.f28573F.m(i10)) > 0 && iM < RecyclerView.this.f28589N.h()) {
+                    long jI = RecyclerView.this.f28589N.i(iM);
+                    for (int i12 = 0; i12 < size; i12++) {
+                        G g11 = this.f28744b.get(i12);
+                        if (!g11.wasReturnedFromScrap() && g11.getItemId() == jI) {
+                            g11.addFlags(32);
+                            return g11;
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        w i() {
+            if (this.f28749g == null) {
+                this.f28749g = new w();
+                u();
+            }
+            return this.f28749g;
+        }
+
+        int j() {
+            return this.f28743a.size();
+        }
+
+        public List<G> k() {
+            return this.f28746d;
+        }
+
+        G l(long j10, int i10, boolean z10) {
+            for (int size = this.f28743a.size() - 1; size >= 0; size--) {
+                G g10 = this.f28743a.get(size);
+                if (g10.getItemId() == j10 && !g10.wasReturnedFromScrap()) {
+                    if (i10 == g10.getItemViewType()) {
+                        g10.addFlags(32);
+                        if (g10.isRemoved() && !RecyclerView.this.f28584K0.e()) {
+                            g10.setFlags(2, 14);
+                        }
+                        return g10;
+                    }
+                    if (!z10) {
+                        this.f28743a.remove(size);
+                        RecyclerView.this.removeDetachedView(g10.itemView, false);
+                        D(g10.itemView);
+                    }
+                }
+            }
+            int size2 = this.f28745c.size();
+            while (true) {
+                size2--;
+                if (size2 < 0) {
+                    return null;
+                }
+                G g11 = this.f28745c.get(size2);
+                if (g11.getItemId() == j10 && !g11.isAttachedToTransitionOverlay()) {
+                    if (i10 == g11.getItemViewType()) {
+                        if (!z10) {
+                            this.f28745c.remove(size2);
+                        }
+                        return g11;
+                    }
+                    if (!z10) {
+                        F(size2);
+                        return null;
+                    }
+                }
+            }
+        }
+
+        G m(int i10, boolean z10) {
+            View viewE;
+            int size = this.f28743a.size();
+            for (int i11 = 0; i11 < size; i11++) {
+                G g10 = this.f28743a.get(i11);
+                if (!g10.wasReturnedFromScrap() && g10.getLayoutPosition() == i10 && !g10.isInvalid() && (RecyclerView.this.f28584K0.f28667h || !g10.isRemoved())) {
+                    g10.addFlags(32);
+                    return g10;
+                }
+            }
+            if (!z10 && (viewE = RecyclerView.this.f28575G.e(i10)) != null) {
+                G gO0 = RecyclerView.o0(viewE);
+                RecyclerView.this.f28575G.s(viewE);
+                int iM = RecyclerView.this.f28575G.m(viewE);
+                if (iM != -1) {
+                    RecyclerView.this.f28575G.d(iM);
+                    I(viewE);
+                    gO0.addFlags(8224);
+                    return gO0;
+                }
+                throw new IllegalStateException("layout index should not be -1 after unhiding a view:" + gO0 + RecyclerView.this.V());
+            }
+            int size2 = this.f28745c.size();
+            for (int i12 = 0; i12 < size2; i12++) {
+                G g11 = this.f28745c.get(i12);
+                if (!g11.isInvalid() && g11.getLayoutPosition() == i10 && !g11.isAttachedToTransitionOverlay()) {
+                    if (!z10) {
+                        this.f28745c.remove(i12);
+                    }
+                    if (RecyclerView.f28555h1) {
+                        Log.d("RecyclerView", "getScrapOrHiddenOrCachedHolderForPosition(" + i10 + ") found match in cache: " + g11);
+                    }
+                    return g11;
+                }
+            }
+            return null;
+        }
+
+        View n(int i10) {
+            return this.f28743a.get(i10).itemView;
+        }
+
+        public View o(int i10) {
+            return p(i10, false);
+        }
+
+        View p(int i10, boolean z10) {
+            return N(i10, z10, Long.MAX_VALUE).itemView;
+        }
+
+        void s() {
+            int size = this.f28745c.size();
+            for (int i10 = 0; i10 < size; i10++) {
+                r rVar = (r) this.f28745c.get(i10).itemView.getLayoutParams();
+                if (rVar != null) {
+                    rVar.f28734c = true;
+                }
+            }
+        }
+
+        void t() {
+            int size = this.f28745c.size();
+            for (int i10 = 0; i10 < size; i10++) {
+                G g10 = this.f28745c.get(i10);
+                if (g10 != null) {
+                    g10.addFlags(6);
+                    g10.addChangePayload(null);
+                }
+            }
+            h hVar = RecyclerView.this.f28589N;
+            if (hVar == null || !hVar.m()) {
+                E();
+            }
+        }
+
+        void v(int i10, int i11) {
+            int size = this.f28745c.size();
+            for (int i12 = 0; i12 < size; i12++) {
+                G g10 = this.f28745c.get(i12);
+                if (g10 != null && g10.mPosition >= i10) {
+                    if (RecyclerView.f28555h1) {
+                        Log.d("RecyclerView", "offsetPositionRecordsForInsert cached " + i12 + " holder " + g10 + " now at position " + (g10.mPosition + i11));
+                    }
+                    g10.offsetPosition(i11, false);
+                }
+            }
+        }
+
+        void w(int i10, int i11) {
+            int i12;
+            int i13;
+            int i14;
+            int i15;
+            if (i10 < i11) {
+                i12 = -1;
+                i14 = i10;
+                i13 = i11;
+            } else {
+                i12 = 1;
+                i13 = i10;
+                i14 = i11;
+            }
+            int size = this.f28745c.size();
+            for (int i16 = 0; i16 < size; i16++) {
+                G g10 = this.f28745c.get(i16);
+                if (g10 != null && (i15 = g10.mPosition) >= i14 && i15 <= i13) {
+                    if (i15 == i10) {
+                        g10.offsetPosition(i11 - i10, false);
+                    } else {
+                        g10.offsetPosition(i12, false);
+                    }
+                    if (RecyclerView.f28555h1) {
+                        Log.d("RecyclerView", "offsetPositionRecordsForMove cached child " + i16 + " holder " + g10);
+                    }
+                }
+            }
+        }
+
+        void x(int i10, int i11, boolean z10) {
+            int i12 = i10 + i11;
+            for (int size = this.f28745c.size() - 1; size >= 0; size--) {
+                G g10 = this.f28745c.get(size);
+                if (g10 != null) {
+                    int i13 = g10.mPosition;
+                    if (i13 >= i12) {
+                        if (RecyclerView.f28555h1) {
+                            Log.d("RecyclerView", "offsetPositionRecordsForRemove cached " + size + " holder " + g10 + " now at position " + (g10.mPosition - i11));
+                        }
+                        g10.offsetPosition(-i11, z10);
+                    } else if (i13 >= i10) {
+                        g10.addFlags(8);
+                        F(size);
+                    }
+                }
+            }
+        }
+
+        void y(h<?> hVar, h<?> hVar2, boolean z10) {
+            c();
+            C(hVar, true);
+            i().j(hVar, hVar2, z10);
+            u();
+        }
+
+        void z() {
+            u();
+        }
+
+        void K(E e10) {
+        }
+    }
+
+    public void P0(View view) {
+    }
+
+    public void Q0(View view) {
+    }
+
+    public void V0(int i10) {
+    }
+
+    public static abstract class p {
+        @Deprecated
+        public void d(Rect rect, int i10, RecyclerView recyclerView) {
+            rect.set(0, 0, 0, 0);
+        }
+
+        public void e(Rect rect, View view, RecyclerView recyclerView, C c10) {
+            d(rect, ((r) view.getLayoutParams()).a(), recyclerView);
+        }
+
+        public void g(Canvas canvas, RecyclerView recyclerView, C c10) {
+            f(canvas, recyclerView);
+        }
+
+        public void i(Canvas canvas, RecyclerView recyclerView, C c10) {
+            h(canvas, recyclerView);
+        }
+
+        @Deprecated
+        public void f(Canvas canvas, RecyclerView recyclerView) {
+        }
+
+        @Deprecated
+        public void h(Canvas canvas, RecyclerView recyclerView) {
+        }
+    }
+
+    public static abstract class v {
+        public void a(RecyclerView recyclerView, int i10) {
+        }
+
+        public void b(RecyclerView recyclerView, int i10, int i11) {
+        }
+    }
+
+    public void W0(int i10, int i11) {
     }
 }

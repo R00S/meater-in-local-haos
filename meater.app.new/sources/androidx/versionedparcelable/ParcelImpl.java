@@ -4,18 +4,18 @@ import android.annotation.SuppressLint;
 import android.os.Parcel;
 import android.os.Parcelable;
 import java.lang.reflect.InvocationTargetException;
+import z3.b;
 
 @SuppressLint({"BanParcelableUsage"})
 /* loaded from: classes.dex */
 public class ParcelImpl implements Parcelable {
-    public static final Parcelable.Creator<ParcelImpl> CREATOR = new C0676a();
+    public static final Parcelable.Creator<ParcelImpl> CREATOR = new a();
 
-    /* renamed from: f */
-    private final InterfaceC0678b f4401f;
+    /* renamed from: B, reason: collision with root package name */
+    private final b f29701B;
 
-    /* renamed from: androidx.versionedparcelable.ParcelImpl$a */
-    static class C0676a implements Parcelable.Creator<ParcelImpl> {
-        C0676a() {
+    static class a implements Parcelable.Creator<ParcelImpl> {
+        a() {
         }
 
         @Override // android.os.Parcelable.Creator
@@ -26,13 +26,17 @@ public class ParcelImpl implements Parcelable {
 
         @Override // android.os.Parcelable.Creator
         /* renamed from: b, reason: merged with bridge method [inline-methods] */
-        public ParcelImpl[] newArray(int i2) {
-            return new ParcelImpl[i2];
+        public ParcelImpl[] newArray(int i10) {
+            return new ParcelImpl[i10];
         }
     }
 
     protected ParcelImpl(Parcel parcel) {
-        this.f4401f = new C0677a(parcel).m4739u();
+        this.f29701B = new androidx.versionedparcelable.a(parcel).u();
+    }
+
+    public <T extends b> T a() {
+        return (T) this.f29701B;
     }
 
     @Override // android.os.Parcelable
@@ -41,7 +45,7 @@ public class ParcelImpl implements Parcelable {
     }
 
     @Override // android.os.Parcelable
-    public void writeToParcel(Parcel parcel, int i2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-        new C0677a(parcel).m4720L(this.f4401f);
+    public void writeToParcel(Parcel parcel, int i10) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        new androidx.versionedparcelable.a(parcel).L(this.f29701B);
     }
 }

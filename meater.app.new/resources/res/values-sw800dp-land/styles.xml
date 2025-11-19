@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="StepsPreviewDialogFrame" parent="">
+        <item name="android:layout_width">1000dp</item>
+    </style>
+    <style name="SummaryDialogFrame" parent="">
+        <item name="android:layout_width">900dp</item>
+    </style>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rowContainer"
+        android:background="@drawable/meater_bg_layout_selector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/outline"
+            android:visibility="gone"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_play_video_outline"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:ellipsize="end"
+            android:id="@+id/title"
+            android:paddingTop="2dp"
+            android:paddingBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/outline"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            app:autoSizeMaxTextSize="14dp"
+            app:autoSizeMinTextSize="1dp"
+            app:autoSizeStepGranularity="1dp"
+            app:autoSizeTextType="uniform"
+            style="@style/MEATER.Body1.Normal"/>
+        <View
+            android:id="@+id/divider"
+            android:background="@color/grey_e"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_below="@+id/title"/>
+    </RelativeLayout>
+</RelativeLayout>

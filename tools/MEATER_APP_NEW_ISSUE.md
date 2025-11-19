@@ -1,58 +1,134 @@
-# Issue with meater.app.new Directory
+# MEATER App Obfuscation Challenge
 
-## Problem
+## Current Status
 
-The `meater.app.new` directory in the repository contains the **wrong APK**. It appears to be the **Aptoide app store** (package: `cm.aptoide.pt`) instead of the **MEATER app** (package: `com.apptionlabs.meater`).
+The `meater.app.new` directory now contains the **correct MEATER app** (version 4.6.3), but it is **heavily obfuscated** with ProGuard, making protocol analysis extremely difficult.
 
-## Verification
+## The Challenge
 
-The validator now automatically detects this issue:
+### What We Have
+
+The new MEATER app (v4.6.3) is present in `meater.app.new` but:
+- Package names are obfuscated: `A5`, `T4`, `I4`, `P5`, etc. instead of meaningful names
+- Class names are obfuscated: `m.java`, `d.java`, `f.java` instead of `MEATERDevice.java`
+- Method names are likely obfuscated: Cannot find `isPaired()` or `datePaired` fields
+- The app uses split APKs (multiple APK files bundled together)
+
+### Verification
 
 ```bash
 $ python3 tools/validate_from_parsed_code.py meater.app.new
 
 ❌ ERROR: This appears to be the Aptoide app, not MEATER
    Package: package cm.aptoide.p092pt.view;
+```
 
-   The MEATER app should have package name starting with:
-   'com.apptionlabs.meater'
+The validator detects Aptoide because there are multiple APKs in the bundle:
+- `cm.aptoide.pt` (top-level - this is what validator finds first)
+- `com.apptionlabs.meater_app` (the actual MEATER app, in subdirectory)
+
+The MEATER app code is in the obfuscated packages in `meater.app.new/sources/`:
+```bash
+$ grep -r "com.apptionlabs.meater" meater.app.new/sources/ | head -3
+meater.app.new/sources/A5/m.java: (references MEATER app package)
+meater.app.new/sources/T4/p.java: (references MEATER app package)
 ```
 
 ## Impact
 
-The protocol validator cannot analyze the MEATER app protocol by parsing the wrong app's code. The validator is designed to extract BLE operations from the decompiled MEATER app to ensure our ESP32 implementation matches the app's expectations.
+The protocol validator **cannot extract meaningful BLE operations** from obfuscated code because:
+1. Method names like `isPaired()` are renamed to single letters
+2. Field names like `datePaired` are renamed to single letters  
+3. Class relationships are obscured
+4. The code logic is intact but unreadable without a deobfuscation map
 
-## Solution
+## Options Moving Forward
 
-### Option 1: Replace with Correct MEATER App (Recommended)
+### Option 1: Use Existing Non-Obfuscated App (Recommended)
 
-1. Download the latest MEATER Android APK from:
-   - Google Play Store (requires extraction tools)
-   - APKMirror: https://www.apkmirror.com/apk/apption-labs-ltd/meater/
-   - APKPure: https://apkpure.com/meater/com.apptionlabs.meater
-
-2. Decompile the APK using jadx:
-   ```bash
-   jadx -d meater.app.new meater-latest.apk
-   ```
-
-3. Verify the decompilation contains the correct package:
-   ```bash
-   python3 tools/validate_from_parsed_code.py meater.app.new
-   ```
-
-### Option 2: Continue Using Existing meater_app
-
-The existing `meater_app` directory contains a valid (though older) version of the decompiled MEATER app. If the protocol hasn't changed significantly, this is sufficient:
+The existing `meater_app` directory contains an **older but non-obfuscated** version of the MEATER app. The validator can successfully parse it:
 
 ```bash
-# Use default meater_app directory
-python3 tools/validate_from_parsed_code.py
+$ python3 tools/validate_from_parsed_code.py meater_app
+
+✓ Found MEATER app: package com.apptionlabs.meater_app;
+✓ SUCCESS: All extracted operations validated
 ```
+
+**Recommendation**: Continue using `meater_app` for protocol analysis unless you have evidence that the BLE protocol has changed between versions.
+
+### Option 2: Search for Older Non-Obfuscated APK
+
+Older versions of the MEATER app (before v4.x) may not have been obfuscated. Try:
+
+1. Download older MEATER APK versions from APKMirror
+2. Look for versions around 3.x or earlier
+3. Decompile with jadx and check if code is readable
+4. Use validator to verify it's non-obfuscated
+
+### Option 3: Reverse Engineer the Obfuscated App
+
+If you need to analyze the new protocol:
+
+1. **Use BLE packet capture** instead of code analysis:
+   - Capture BLE traffic between phone and real MEATER device
+   - Use Wireshark or nRF Connect to analyze packets
+   - Reverse engineer the protocol from packet structure
+
+2. **Search for deobfuscation maps**:
+   - Check if MEATER releases debug builds
+   - Look for crash reports with stack traces (may reveal real names)
+   - Community members may have deobfuscation maps
+
+3. **Manual deobfuscation** (advanced):
+   - Look for string constants to identify classes
+   - Follow BLE UUID references in code
+   - Trace back from known entry points (Activities, Services)
+
+## What's in meater.app.new
+
+The directory contains MEATER app v4.6.3 with this structure:
+
+```
+meater.app.new/
+├── resources/
+│   ├── AndroidManifest.xml (Aptoide - top level wrapper)
+│   ├── com.apptionlabs.meater_app.apk/ (actual MEATER app resources)
+│   │   └── AndroidManifest.xml (package="com.apptionlabs.meater_app")
+│   └── config.*.apk/ (split APK configuration bundles)
+└── sources/
+    ├── A5/, T4/, I4/, P5/, ... (obfuscated MEATER code)
+    ├── com/apptionlabs/di/ (minimal non-obfuscated dependency injection)
+    ├── com/aptoide/ (Aptoide app code - mixed in)
+    └── ... (other obfuscated packages)
+```
+
+### Version Information
+
+- **MEATER App Version**: 4.6.3 (versionCode 460)
+- **Target SDK**: 35 (Android 15)
+- **Min SDK**: 26 (Android 8.0)
+- **Obfuscation**: Heavy ProGuard/R8 obfuscation applied
+- **Structure**: Split APK bundle (multiple APK files)
+
+### BLE Protocol Analysis
+
+Even though the code is obfuscated, you can still search for BLE-related strings:
+
+```bash
+# Find BLE UUID references
+grep -r "a75cc7fc-c956-488f-ac2a-2dbc08b63a04" meater.app.new/sources/
+
+# Find characteristic UUIDs
+grep -r "7edda774-045e-4bbf-909b-45d1991a2876" meater.app.new/sources/
+grep -r "2adb4877-68d8-4884-bd3c-d83853bf27b8" meater.app.new/sources/
+```
+
+If the UUIDs haven't changed, the BLE protocol is likely the same.
 
 ## Checking for Protocol Changes
 
-Once you have a correctly decompiled new MEATER app:
+Given the obfuscation challenge, the best approach is:
 
 ### 1. Extract operations from the new app
 

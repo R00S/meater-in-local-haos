@@ -1,81 +1,83 @@
 package androidx.media;
 
+import C9.h;
+import android.media.AudioAttributes;
 import android.util.SparseIntArray;
-import androidx.versionedparcelable.InterfaceC0678b;
+import z3.b;
 
 /* loaded from: classes.dex */
-public class AudioAttributesCompat implements InterfaceC0678b {
+public class AudioAttributesCompat implements b {
 
-    /* renamed from: a */
-    private static final SparseIntArray f3522a;
+    /* renamed from: b, reason: collision with root package name */
+    private static final SparseIntArray f26010b;
 
-    /* renamed from: b */
-    private static final int[] f3523b;
+    /* renamed from: c, reason: collision with root package name */
+    static boolean f26011c;
 
-    /* renamed from: c */
-    AudioAttributesImpl f3524c;
+    /* renamed from: d, reason: collision with root package name */
+    private static final int[] f26012d;
+
+    /* renamed from: a, reason: collision with root package name */
+    public AudioAttributesImpl f26013a;
 
     static {
         SparseIntArray sparseIntArray = new SparseIntArray();
-        f3522a = sparseIntArray;
+        f26010b = sparseIntArray;
         sparseIntArray.put(5, 1);
         sparseIntArray.put(6, 2);
         sparseIntArray.put(7, 2);
         sparseIntArray.put(8, 1);
         sparseIntArray.put(9, 1);
         sparseIntArray.put(10, 1);
-        f3523b = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16};
+        f26012d = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16};
     }
 
-    AudioAttributesCompat() {
+    public AudioAttributesCompat() {
     }
 
-    /* renamed from: a */
-    static int m3923a(boolean z, int i2, int i3) {
-        if ((i2 & 1) == 1) {
-            return z ? 1 : 7;
+    static int a(boolean z10, int i10, int i11) {
+        if ((i10 & 1) == 1) {
+            return z10 ? 1 : 7;
         }
-        if ((i2 & 4) == 4) {
-            return z ? 0 : 6;
+        if ((i10 & 4) == 4) {
+            return z10 ? 0 : 6;
         }
-        switch (i3) {
+        switch (i11) {
             case 0:
-                return z ? Integer.MIN_VALUE : 3;
             case 1:
-            case 12:
+            case h.CUSTOM_ATTRIBUTES_FIELD_NUMBER /* 12 */:
             case 14:
             case 16:
                 return 3;
             case 2:
                 return 0;
             case 3:
-                return z ? 0 : 8;
+                return z10 ? 0 : 8;
             case 4:
                 return 4;
             case 5:
             case 7:
             case 8:
             case 9:
-            case 10:
+            case h.TIME_TO_RESPONSE_COMPLETED_US_FIELD_NUMBER /* 10 */:
                 return 5;
             case 6:
                 return 2;
-            case 11:
+            case h.NETWORK_CLIENT_ERROR_REASON_FIELD_NUMBER /* 11 */:
                 return 10;
-            case 13:
+            case h.PERF_SESSIONS_FIELD_NUMBER /* 13 */:
                 return 1;
             case 15:
             default:
-                if (!z) {
+                if (!z10) {
                     return 3;
                 }
-                throw new IllegalArgumentException("Unknown usage value " + i3 + " in audio attributes");
+                throw new IllegalArgumentException("Unknown usage value " + i11 + " in audio attributes");
         }
     }
 
-    /* renamed from: b */
-    static String m3924b(int i2) {
-        switch (i2) {
+    static String b(int i10) {
+        switch (i10) {
             case 0:
                 return "USAGE_UNKNOWN";
             case 1:
@@ -96,22 +98,29 @@ public class AudioAttributesCompat implements InterfaceC0678b {
                 return "USAGE_NOTIFICATION_COMMUNICATION_INSTANT";
             case 9:
                 return "USAGE_NOTIFICATION_COMMUNICATION_DELAYED";
-            case 10:
+            case h.TIME_TO_RESPONSE_COMPLETED_US_FIELD_NUMBER /* 10 */:
                 return "USAGE_NOTIFICATION_EVENT";
-            case 11:
+            case h.NETWORK_CLIENT_ERROR_REASON_FIELD_NUMBER /* 11 */:
                 return "USAGE_ASSISTANCE_ACCESSIBILITY";
-            case 12:
+            case h.CUSTOM_ATTRIBUTES_FIELD_NUMBER /* 12 */:
                 return "USAGE_ASSISTANCE_NAVIGATION_GUIDANCE";
-            case 13:
+            case h.PERF_SESSIONS_FIELD_NUMBER /* 13 */:
                 return "USAGE_ASSISTANCE_SONIFICATION";
             case 14:
                 return "USAGE_GAME";
             case 15:
             default:
-                return "unknown usage " + i2;
+                return "unknown usage " + i10;
             case 16:
                 return "USAGE_ASSISTANT";
         }
+    }
+
+    public static AudioAttributesCompat c(Object obj) {
+        if (f26011c) {
+            return null;
+        }
+        return new AudioAttributesCompat(new AudioAttributesImplApi26((AudioAttributes) obj));
     }
 
     public boolean equals(Object obj) {
@@ -119,15 +128,19 @@ public class AudioAttributesCompat implements InterfaceC0678b {
             return false;
         }
         AudioAttributesCompat audioAttributesCompat = (AudioAttributesCompat) obj;
-        AudioAttributesImpl audioAttributesImpl = this.f3524c;
-        return audioAttributesImpl == null ? audioAttributesCompat.f3524c == null : audioAttributesImpl.equals(audioAttributesCompat.f3524c);
+        AudioAttributesImpl audioAttributesImpl = this.f26013a;
+        return audioAttributesImpl == null ? audioAttributesCompat.f26013a == null : audioAttributesImpl.equals(audioAttributesCompat.f26013a);
     }
 
     public int hashCode() {
-        return this.f3524c.hashCode();
+        return this.f26013a.hashCode();
     }
 
     public String toString() {
-        return this.f3524c.toString();
+        return this.f26013a.toString();
+    }
+
+    AudioAttributesCompat(AudioAttributesImpl audioAttributesImpl) {
+        this.f26013a = audioAttributesImpl;
     }
 }

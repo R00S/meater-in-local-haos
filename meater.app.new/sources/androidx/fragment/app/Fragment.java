@@ -8,10 +8,8 @@ import android.content.ComponentCallbacks;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
-import android.content.IntentSender;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -20,114 +18,219 @@ import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.SparseArray;
+import android.view.AbstractC2106m;
+import android.view.C2098e0;
+import android.view.C2116x;
 import android.view.ContextMenu;
+import android.view.InterfaceC2104k;
+import android.view.InterfaceC2111s;
+import android.view.InterfaceC2114v;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.S;
+import android.view.V;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.a0;
 import android.view.animation.Animation;
-import androidx.activity.result.AbstractC0051b;
-import androidx.activity.result.ActivityResultRegistry;
-import androidx.activity.result.InterfaceC0050a;
-import androidx.activity.result.InterfaceC0052c;
-import androidx.activity.result.p002d.AbstractC0053a;
-import androidx.core.app.AbstractC0251o;
-import androidx.core.app.C0238b;
-import androidx.core.view.C0296f;
-import androidx.lifecycle.AbstractC0511g;
-import androidx.lifecycle.C0503b0;
-import androidx.lifecycle.C0505c0;
-import androidx.lifecycle.C0516l;
-import androidx.lifecycle.C0521q;
-import androidx.lifecycle.C0526v;
-import androidx.lifecycle.C0529y;
-import androidx.lifecycle.C0530z;
-import androidx.lifecycle.InterfaceC0501a0;
-import androidx.lifecycle.InterfaceC0513i;
-import androidx.lifecycle.InterfaceC0515k;
-import androidx.lifecycle.LiveData;
-import androidx.savedstate.C0673b;
-import androidx.savedstate.C0675d;
-import androidx.savedstate.InterfaceC0674c;
-import androidx.savedstate.SavedStateRegistry;
+import android.view.b0;
+import android.view.c0;
+import f1.C3310c;
+import g.AbstractC3371c;
+import g.AbstractC3373e;
+import g.InterfaceC3370b;
+import g.InterfaceC3374f;
+import h.AbstractC3466a;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
-import p024c.p033b.p034a.p037c.InterfaceC0855a;
-import p024c.p073p.p074a.AbstractC0992a;
+import q.InterfaceC4257a;
+import s1.C4460u;
+import t3.C4547d;
+import t3.C4548e;
+import t3.C4550g;
+import t3.InterfaceC4549f;
 
 /* loaded from: classes.dex */
-public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuListener, InterfaceC0515k, InterfaceC0501a0, InterfaceC0674c {
-    static final int ACTIVITY_CREATED = 4;
-    static final int ATTACHED = 0;
-    static final int AWAITING_ENTER_EFFECTS = 6;
-    static final int AWAITING_EXIT_EFFECTS = 3;
-    static final int CREATED = 1;
-    static final int INITIALIZING = -1;
-    static final int RESUMED = 7;
-    static final int STARTED = 5;
-    static final Object USE_DEFAULT_TRANSITION = new Object();
-    static final int VIEW_CREATED = 2;
-    boolean mAdded;
-    C0438i mAnimationInfo;
-    Bundle mArguments;
-    int mBackStackNesting;
-    private boolean mCalled;
-    FragmentManager mChildFragmentManager;
-    ViewGroup mContainer;
-    int mContainerId;
-    private int mContentLayoutId;
-    private C0529y.b mDefaultFactory;
-    boolean mDeferStart;
-    boolean mDetached;
-    int mFragmentId;
-    FragmentManager mFragmentManager;
-    boolean mFromLayout;
-    boolean mHasMenu;
-    boolean mHidden;
-    boolean mHiddenChanged;
-    AbstractC0474j<?> mHost;
-    boolean mInLayout;
-    boolean mIsCreated;
-    boolean mIsNewlyAdded;
-    private Boolean mIsPrimaryNavigationFragment;
-    LayoutInflater mLayoutInflater;
-    C0516l mLifecycleRegistry;
-    AbstractC0511g.c mMaxState;
-    boolean mMenuVisible;
-    private final AtomicInteger mNextLocalRequestCode;
-    private final ArrayList<AbstractC0439j> mOnPreAttachedListeners;
-    Fragment mParentFragment;
-    boolean mPerformedCreateView;
-    float mPostponedAlpha;
-    Runnable mPostponedDurationRunnable;
-    boolean mRemoving;
-    boolean mRestored;
-    boolean mRetainInstance;
-    boolean mRetainInstanceChangedWhileDetached;
-    Bundle mSavedFragmentState;
-    C0673b mSavedStateRegistryController;
-    Boolean mSavedUserVisibleHint;
-    Bundle mSavedViewRegistryState;
-    SparseArray<Parcelable> mSavedViewState;
-    int mState;
-    String mTag;
-    Fragment mTarget;
-    int mTargetRequestCode;
-    String mTargetWho;
-    boolean mUserVisibleHint;
-    View mView;
-    C0489y mViewLifecycleOwner;
-    C0521q<InterfaceC0515k> mViewLifecycleOwnerLiveData;
-    String mWho;
+public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuListener, InterfaceC2114v, c0, InterfaceC2104k, InterfaceC4549f {
+
+    /* renamed from: F0, reason: collision with root package name */
+    static final Object f25447F0 = new Object();
+
+    /* renamed from: A0, reason: collision with root package name */
+    C4548e f25448A0;
+
+    /* renamed from: B, reason: collision with root package name */
+    int f25449B;
+
+    /* renamed from: B0, reason: collision with root package name */
+    private int f25450B0;
+
+    /* renamed from: C, reason: collision with root package name */
+    Bundle f25451C;
+
+    /* renamed from: C0, reason: collision with root package name */
+    private final AtomicInteger f25452C0;
+
+    /* renamed from: D, reason: collision with root package name */
+    SparseArray<Parcelable> f25453D;
+
+    /* renamed from: D0, reason: collision with root package name */
+    private final ArrayList<k> f25454D0;
+
+    /* renamed from: E, reason: collision with root package name */
+    Bundle f25455E;
+
+    /* renamed from: E0, reason: collision with root package name */
+    private final k f25456E0;
+
+    /* renamed from: F, reason: collision with root package name */
+    Boolean f25457F;
+
+    /* renamed from: G, reason: collision with root package name */
+    String f25458G;
+
+    /* renamed from: H, reason: collision with root package name */
+    Bundle f25459H;
+
+    /* renamed from: I, reason: collision with root package name */
+    Fragment f25460I;
+
+    /* renamed from: J, reason: collision with root package name */
+    String f25461J;
+
+    /* renamed from: K, reason: collision with root package name */
+    int f25462K;
+
+    /* renamed from: L, reason: collision with root package name */
+    private Boolean f25463L;
+
+    /* renamed from: M, reason: collision with root package name */
+    boolean f25464M;
+
+    /* renamed from: N, reason: collision with root package name */
+    boolean f25465N;
+
+    /* renamed from: O, reason: collision with root package name */
+    boolean f25466O;
+
+    /* renamed from: P, reason: collision with root package name */
+    boolean f25467P;
+
+    /* renamed from: Q, reason: collision with root package name */
+    boolean f25468Q;
+
+    /* renamed from: R, reason: collision with root package name */
+    boolean f25469R;
+
+    /* renamed from: S, reason: collision with root package name */
+    boolean f25470S;
+
+    /* renamed from: T, reason: collision with root package name */
+    boolean f25471T;
+
+    /* renamed from: U, reason: collision with root package name */
+    boolean f25472U;
+
+    /* renamed from: V, reason: collision with root package name */
+    int f25473V;
+
+    /* renamed from: W, reason: collision with root package name */
+    v f25474W;
+
+    /* renamed from: X, reason: collision with root package name */
+    s<?> f25475X;
+
+    /* renamed from: Y, reason: collision with root package name */
+    v f25476Y;
+
+    /* renamed from: Z, reason: collision with root package name */
+    Fragment f25477Z;
+
+    /* renamed from: a0, reason: collision with root package name */
+    int f25478a0;
+
+    /* renamed from: b0, reason: collision with root package name */
+    int f25479b0;
+
+    /* renamed from: c0, reason: collision with root package name */
+    String f25480c0;
+
+    /* renamed from: d0, reason: collision with root package name */
+    boolean f25481d0;
+
+    /* renamed from: e0, reason: collision with root package name */
+    boolean f25482e0;
+
+    /* renamed from: f0, reason: collision with root package name */
+    boolean f25483f0;
+
+    /* renamed from: g0, reason: collision with root package name */
+    boolean f25484g0;
+
+    /* renamed from: h0, reason: collision with root package name */
+    boolean f25485h0;
+
+    /* renamed from: i0, reason: collision with root package name */
+    boolean f25486i0;
+
+    /* renamed from: j0, reason: collision with root package name */
+    private boolean f25487j0;
+
+    /* renamed from: k0, reason: collision with root package name */
+    ViewGroup f25488k0;
+
+    /* renamed from: l0, reason: collision with root package name */
+    View f25489l0;
+
+    /* renamed from: m0, reason: collision with root package name */
+    boolean f25490m0;
+
+    /* renamed from: n0, reason: collision with root package name */
+    boolean f25491n0;
+
+    /* renamed from: o0, reason: collision with root package name */
+    j f25492o0;
+
+    /* renamed from: p0, reason: collision with root package name */
+    Handler f25493p0;
+
+    /* renamed from: q0, reason: collision with root package name */
+    Runnable f25494q0;
+
+    /* renamed from: r0, reason: collision with root package name */
+    boolean f25495r0;
+
+    /* renamed from: s0, reason: collision with root package name */
+    LayoutInflater f25496s0;
+
+    /* renamed from: t0, reason: collision with root package name */
+    boolean f25497t0;
+
+    /* renamed from: u0, reason: collision with root package name */
+    public String f25498u0;
+
+    /* renamed from: v0, reason: collision with root package name */
+    AbstractC2106m.b f25499v0;
+
+    /* renamed from: w0, reason: collision with root package name */
+    C2116x f25500w0;
+
+    /* renamed from: x0, reason: collision with root package name */
+    G f25501x0;
+
+    /* renamed from: y0, reason: collision with root package name */
+    android.view.D<InterfaceC2114v> f25502y0;
+
+    /* renamed from: z0, reason: collision with root package name */
+    a0.c f25503z0;
 
     public static class InstantiationException extends RuntimeException {
         public InstantiationException(String str, Exception exc) {
@@ -135,541 +238,1227 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$a */
-    class RunnableC0430a implements Runnable {
-        RunnableC0430a() {
+    /* JADX INFO: Add missing generic type declarations: [I] */
+    class a<I> extends AbstractC3371c<I> {
+
+        /* renamed from: a, reason: collision with root package name */
+        final /* synthetic */ AtomicReference f25504a;
+
+        /* renamed from: b, reason: collision with root package name */
+        final /* synthetic */ AbstractC3466a f25505b;
+
+        a(AtomicReference atomicReference, AbstractC3466a abstractC3466a) {
+            this.f25504a = atomicReference;
+            this.f25505b = abstractC3466a;
+        }
+
+        @Override // g.AbstractC3371c
+        public void b(I i10, C3310c c3310c) {
+            AbstractC3371c abstractC3371c = (AbstractC3371c) this.f25504a.get();
+            if (abstractC3371c == null) {
+                throw new IllegalStateException("Operation cannot be started before fragment is in created state");
+            }
+            abstractC3371c.b(i10, c3310c);
+        }
+
+        @Override // g.AbstractC3371c
+        public void c() {
+            AbstractC3371c abstractC3371c = (AbstractC3371c) this.f25504a.getAndSet(null);
+            if (abstractC3371c != null) {
+                abstractC3371c.c();
+            }
+        }
+    }
+
+    class b implements Runnable {
+        b() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            Fragment.this.startPostponedEnterTransition();
+            Fragment.this.w2();
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$b */
-    class RunnableC0431b implements Runnable {
-        RunnableC0431b() {
+    class c extends k {
+        c() {
+            super(null);
+        }
+
+        @Override // androidx.fragment.app.Fragment.k
+        void a() {
+            Fragment.this.f25448A0.c();
+            S.c(Fragment.this);
+            Bundle bundle = Fragment.this.f25451C;
+            Fragment.this.f25448A0.d(bundle != null ? bundle.getBundle("registryState") : null);
+        }
+    }
+
+    class d implements Runnable {
+        d() {
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            Fragment.this.callStartTransitionListener(false);
+            Fragment.this.N(false);
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$c */
-    class RunnableC0432c implements Runnable {
+    class e implements Runnable {
 
-        /* renamed from: f */
-        final /* synthetic */ AbstractC0463a0 f3057f;
+        /* renamed from: B, reason: collision with root package name */
+        final /* synthetic */ K f25510B;
 
-        RunnableC0432c(AbstractC0463a0 abstractC0463a0) {
-            this.f3057f = abstractC0463a0;
+        e(K k10) {
+            this.f25510B = k10;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            this.f3057f.m3572g();
+            if (this.f25510B.y()) {
+                this.f25510B.n();
+            }
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$d */
-    class C0433d extends AbstractC0470f {
-        C0433d() {
+    class f extends J1.g {
+        f() {
         }
 
-        @Override // androidx.fragment.app.AbstractC0470f
-        /* renamed from: c */
-        public View mo3383c(int i2) {
-            View view = Fragment.this.mView;
+        @Override // J1.g
+        public View e(int i10) {
+            View view = Fragment.this.f25489l0;
             if (view != null) {
-                return view.findViewById(i2);
+                return view.findViewById(i10);
             }
             throw new IllegalStateException("Fragment " + Fragment.this + " does not have a view");
         }
 
-        @Override // androidx.fragment.app.AbstractC0470f
-        /* renamed from: d */
-        public boolean mo3384d() {
-            return Fragment.this.mView != null;
+        @Override // J1.g
+        public boolean f() {
+            return Fragment.this.f25489l0 != null;
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$e */
-    class C0434e implements InterfaceC0855a<Void, ActivityResultRegistry> {
-        C0434e() {
+    class g implements InterfaceC2111s {
+        g() {
         }
 
-        @Override // p024c.p033b.p034a.p037c.InterfaceC0855a
-        /* renamed from: b, reason: merged with bridge method [inline-methods] */
-        public ActivityResultRegistry mo3385a(Void r3) {
+        @Override // android.view.InterfaceC2111s
+        public void f(InterfaceC2114v interfaceC2114v, AbstractC2106m.a aVar) {
+            View view;
+            if (aVar != AbstractC2106m.a.ON_STOP || (view = Fragment.this.f25489l0) == null) {
+                return;
+            }
+            view.cancelPendingInputEvents();
+        }
+    }
+
+    class h implements InterfaceC4257a<Void, AbstractC3373e> {
+        h() {
+        }
+
+        @Override // q.InterfaceC4257a
+        /* renamed from: a, reason: merged with bridge method [inline-methods] */
+        public AbstractC3373e apply(Void r32) {
             Fragment fragment = Fragment.this;
-            Object obj = fragment.mHost;
-            return obj instanceof InterfaceC0052c ? ((InterfaceC0052c) obj).getActivityResultRegistry() : fragment.requireActivity().getActivityResultRegistry();
+            Object obj = fragment.f25475X;
+            return obj instanceof InterfaceC3374f ? ((InterfaceC3374f) obj).getActivityResultRegistry() : fragment.c2().getActivityResultRegistry();
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$f */
-    class C0435f implements InterfaceC0855a<Void, ActivityResultRegistry> {
+    class i extends k {
 
-        /* renamed from: a */
-        final /* synthetic */ ActivityResultRegistry f3061a;
+        /* renamed from: a, reason: collision with root package name */
+        final /* synthetic */ InterfaceC4257a f25515a;
 
-        C0435f(ActivityResultRegistry activityResultRegistry) {
-            this.f3061a = activityResultRegistry;
-        }
+        /* renamed from: b, reason: collision with root package name */
+        final /* synthetic */ AtomicReference f25516b;
 
-        @Override // p024c.p033b.p034a.p037c.InterfaceC0855a
-        /* renamed from: b, reason: merged with bridge method [inline-methods] */
-        public ActivityResultRegistry mo3385a(Void r1) {
-            return this.f3061a;
-        }
-    }
+        /* renamed from: c, reason: collision with root package name */
+        final /* synthetic */ AbstractC3466a f25517c;
 
-    /* renamed from: androidx.fragment.app.Fragment$g */
-    class C0436g extends AbstractC0439j {
-
-        /* renamed from: a */
-        final /* synthetic */ InterfaceC0855a f3063a;
-
-        /* renamed from: b */
-        final /* synthetic */ AtomicReference f3064b;
-
-        /* renamed from: c */
-        final /* synthetic */ AbstractC0053a f3065c;
-
-        /* renamed from: d */
-        final /* synthetic */ InterfaceC0050a f3066d;
+        /* renamed from: d, reason: collision with root package name */
+        final /* synthetic */ InterfaceC3370b f25518d;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        C0436g(InterfaceC0855a interfaceC0855a, AtomicReference atomicReference, AbstractC0053a abstractC0053a, InterfaceC0050a interfaceC0050a) {
+        i(InterfaceC4257a interfaceC4257a, AtomicReference atomicReference, AbstractC3466a abstractC3466a, InterfaceC3370b interfaceC3370b) {
             super(null);
-            this.f3063a = interfaceC0855a;
-            this.f3064b = atomicReference;
-            this.f3065c = abstractC0053a;
-            this.f3066d = interfaceC0050a;
+            this.f25515a = interfaceC4257a;
+            this.f25516b = atomicReference;
+            this.f25517c = abstractC3466a;
+            this.f25518d = interfaceC3370b;
         }
 
-        @Override // androidx.fragment.app.Fragment.AbstractC0439j
-        /* renamed from: a */
-        void mo3388a() {
-            String strGenerateActivityResultKey = Fragment.this.generateActivityResultKey();
-            this.f3064b.set(((ActivityResultRegistry) this.f3063a.mo3385a(null)).m156j(strGenerateActivityResultKey, Fragment.this, this.f3065c, this.f3066d));
-        }
-    }
-
-    /* JADX INFO: Add missing generic type declarations: [I] */
-    /* renamed from: androidx.fragment.app.Fragment$h */
-    class C0437h<I> extends AbstractC0051b<I> {
-
-        /* renamed from: a */
-        final /* synthetic */ AtomicReference f3068a;
-
-        /* renamed from: b */
-        final /* synthetic */ AbstractC0053a f3069b;
-
-        C0437h(AtomicReference atomicReference, AbstractC0053a abstractC0053a) {
-            this.f3068a = atomicReference;
-            this.f3069b = abstractC0053a;
-        }
-
-        @Override // androidx.activity.result.AbstractC0051b
-        /* renamed from: b */
-        public void mo158b(I i2, C0238b c0238b) {
-            AbstractC0051b abstractC0051b = (AbstractC0051b) this.f3068a.get();
-            if (abstractC0051b == null) {
-                throw new IllegalStateException("Operation cannot be started before fragment is in created state");
-            }
-            abstractC0051b.mo158b(i2, c0238b);
-        }
-
-        @Override // androidx.activity.result.AbstractC0051b
-        /* renamed from: c */
-        public void mo159c() {
-            AbstractC0051b abstractC0051b = (AbstractC0051b) this.f3068a.getAndSet(null);
-            if (abstractC0051b != null) {
-                abstractC0051b.mo159c();
-            }
+        @Override // androidx.fragment.app.Fragment.k
+        void a() {
+            String strS = Fragment.this.S();
+            this.f25516b.set(((AbstractC3373e) this.f25515a.apply(null)).l(strS, Fragment.this, this.f25517c, this.f25518d));
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$i */
-    static class C0438i {
+    static class j {
 
-        /* renamed from: a */
-        View f3071a;
+        /* renamed from: a, reason: collision with root package name */
+        View f25520a;
 
-        /* renamed from: b */
-        Animator f3072b;
+        /* renamed from: b, reason: collision with root package name */
+        boolean f25521b;
 
-        /* renamed from: c */
-        int f3073c;
+        /* renamed from: c, reason: collision with root package name */
+        int f25522c;
 
-        /* renamed from: d */
-        int f3074d;
+        /* renamed from: d, reason: collision with root package name */
+        int f25523d;
 
-        /* renamed from: e */
-        ArrayList<String> f3075e;
+        /* renamed from: e, reason: collision with root package name */
+        int f25524e;
 
-        /* renamed from: f */
-        ArrayList<String> f3076f;
+        /* renamed from: f, reason: collision with root package name */
+        int f25525f;
 
-        /* renamed from: g */
-        Object f3077g = null;
+        /* renamed from: g, reason: collision with root package name */
+        int f25526g;
 
-        /* renamed from: h */
-        Object f3078h;
+        /* renamed from: h, reason: collision with root package name */
+        ArrayList<String> f25527h;
 
-        /* renamed from: i */
-        Object f3079i;
+        /* renamed from: i, reason: collision with root package name */
+        ArrayList<String> f25528i;
 
-        /* renamed from: j */
-        Object f3080j;
+        /* renamed from: j, reason: collision with root package name */
+        Object f25529j = null;
 
-        /* renamed from: k */
-        Object f3081k;
+        /* renamed from: k, reason: collision with root package name */
+        Object f25530k;
 
-        /* renamed from: l */
-        Object f3082l;
+        /* renamed from: l, reason: collision with root package name */
+        Object f25531l;
 
-        /* renamed from: m */
-        Boolean f3083m;
+        /* renamed from: m, reason: collision with root package name */
+        Object f25532m;
 
-        /* renamed from: n */
-        Boolean f3084n;
+        /* renamed from: n, reason: collision with root package name */
+        Object f25533n;
 
-        /* renamed from: o */
-        AbstractC0251o f3085o;
+        /* renamed from: o, reason: collision with root package name */
+        Object f25534o;
 
-        /* renamed from: p */
-        AbstractC0251o f3086p;
+        /* renamed from: p, reason: collision with root package name */
+        Boolean f25535p;
 
-        /* renamed from: q */
-        float f3087q;
+        /* renamed from: q, reason: collision with root package name */
+        Boolean f25536q;
 
-        /* renamed from: r */
-        View f3088r;
+        /* renamed from: r, reason: collision with root package name */
+        f1.y f25537r;
 
-        /* renamed from: s */
-        boolean f3089s;
+        /* renamed from: s, reason: collision with root package name */
+        f1.y f25538s;
 
-        /* renamed from: t */
-        InterfaceC0440k f3090t;
+        /* renamed from: t, reason: collision with root package name */
+        float f25539t;
 
-        /* renamed from: u */
-        boolean f3091u;
+        /* renamed from: u, reason: collision with root package name */
+        View f25540u;
 
-        C0438i() {
-            Object obj = Fragment.USE_DEFAULT_TRANSITION;
-            this.f3078h = obj;
-            this.f3079i = null;
-            this.f3080j = obj;
-            this.f3081k = null;
-            this.f3082l = obj;
-            this.f3087q = 1.0f;
-            this.f3088r = null;
+        /* renamed from: v, reason: collision with root package name */
+        boolean f25541v;
+
+        j() {
+            Object obj = Fragment.f25447F0;
+            this.f25530k = obj;
+            this.f25531l = null;
+            this.f25532m = obj;
+            this.f25533n = null;
+            this.f25534o = obj;
+            this.f25537r = null;
+            this.f25538s = null;
+            this.f25539t = 1.0f;
+            this.f25540u = null;
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$j */
-    private static abstract class AbstractC0439j {
-        private AbstractC0439j() {
+    private static abstract class k {
+        private k() {
         }
 
-        /* renamed from: a */
-        abstract void mo3388a();
+        abstract void a();
 
-        /* synthetic */ AbstractC0439j(RunnableC0430a runnableC0430a) {
+        /* synthetic */ k(b bVar) {
             this();
         }
     }
 
-    /* renamed from: androidx.fragment.app.Fragment$k */
-    interface InterfaceC0440k {
-        /* renamed from: a */
-        void mo3389a();
-
-        /* renamed from: b */
-        void mo3390b();
-    }
-
     public Fragment() {
-        this.mState = -1;
-        this.mWho = UUID.randomUUID().toString();
-        this.mTargetWho = null;
-        this.mIsPrimaryNavigationFragment = null;
-        this.mChildFragmentManager = new C0477m();
-        this.mMenuVisible = true;
-        this.mUserVisibleHint = true;
-        this.mPostponedDurationRunnable = new RunnableC0430a();
-        this.mMaxState = AbstractC0511g.c.RESUMED;
-        this.mViewLifecycleOwnerLiveData = new C0521q<>();
-        this.mNextLocalRequestCode = new AtomicInteger();
-        this.mOnPreAttachedListeners = new ArrayList<>();
-        initLifecycle();
+        this.f25449B = -1;
+        this.f25458G = UUID.randomUUID().toString();
+        this.f25461J = null;
+        this.f25463L = null;
+        this.f25476Y = new w();
+        this.f25486i0 = true;
+        this.f25491n0 = true;
+        this.f25494q0 = new b();
+        this.f25499v0 = AbstractC2106m.b.RESUMED;
+        this.f25502y0 = new android.view.D<>();
+        this.f25452C0 = new AtomicInteger();
+        this.f25454D0 = new ArrayList<>();
+        this.f25456E0 = new c();
+        H0();
     }
 
-    private C0438i ensureAnimationInfo() {
-        if (this.mAnimationInfo == null) {
-            this.mAnimationInfo = new C0438i();
+    private Fragment D0(boolean z10) {
+        String str;
+        if (z10) {
+            K1.b.h(this);
         }
-        return this.mAnimationInfo;
+        Fragment fragment = this.f25460I;
+        if (fragment != null) {
+            return fragment;
+        }
+        v vVar = this.f25474W;
+        if (vVar == null || (str = this.f25461J) == null) {
+            return null;
+        }
+        return vVar.k0(str);
     }
 
-    private int getMinimumMaxLifecycleState() {
-        AbstractC0511g.c cVar = this.mMaxState;
-        return (cVar == AbstractC0511g.c.INITIALIZED || this.mParentFragment == null) ? cVar.ordinal() : Math.min(cVar.ordinal(), this.mParentFragment.getMinimumMaxLifecycleState());
-    }
-
-    private void initLifecycle() {
-        this.mLifecycleRegistry = new C0516l(this);
-        this.mSavedStateRegistryController = C0673b.m4698a(this);
+    private void H0() {
+        this.f25500w0 = new C2116x(this);
+        this.f25448A0 = C4548e.a(this);
+        this.f25503z0 = null;
+        if (this.f25454D0.contains(this.f25456E0)) {
+            return;
+        }
+        b2(this.f25456E0);
     }
 
     @Deprecated
-    public static Fragment instantiate(Context context, String str) {
-        return instantiate(context, str, null);
+    public static Fragment J0(Context context, String str, Bundle bundle) throws IllegalAccessException, java.lang.InstantiationException, IllegalArgumentException, InvocationTargetException {
+        try {
+            Fragment fragmentNewInstance = r.f(context.getClassLoader(), str).getConstructor(null).newInstance(null);
+            if (bundle != null) {
+                bundle.setClassLoader(fragmentNewInstance.getClass().getClassLoader());
+                fragmentNewInstance.k2(bundle);
+            }
+            return fragmentNewInstance;
+        } catch (IllegalAccessException e10) {
+            throw new InstantiationException("Unable to instantiate fragment " + str + ": make sure class name exists, is public, and has an empty constructor that is public", e10);
+        } catch (java.lang.InstantiationException e11) {
+            throw new InstantiationException("Unable to instantiate fragment " + str + ": make sure class name exists, is public, and has an empty constructor that is public", e11);
+        } catch (NoSuchMethodException e12) {
+            throw new InstantiationException("Unable to instantiate fragment " + str + ": could not find Fragment constructor", e12);
+        } catch (InvocationTargetException e13) {
+            throw new InstantiationException("Unable to instantiate fragment " + str + ": calling Fragment constructor caused an exception", e13);
+        }
     }
 
-    private <I, O> AbstractC0051b<I> prepareCallInternal(AbstractC0053a<I, O> abstractC0053a, InterfaceC0855a<Void, ActivityResultRegistry> interfaceC0855a, InterfaceC0050a<O> interfaceC0050a) {
-        if (this.mState <= 1) {
+    private j Q() {
+        if (this.f25492o0 == null) {
+            this.f25492o0 = new j();
+        }
+        return this.f25492o0;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void S0() {
+        this.f25501x0.e(this.f25455E);
+        this.f25455E = null;
+    }
+
+    private <I, O> AbstractC3371c<I> Z1(AbstractC3466a<I, O> abstractC3466a, InterfaceC4257a<Void, AbstractC3373e> interfaceC4257a, InterfaceC3370b<O> interfaceC3370b) {
+        if (this.f25449B <= 1) {
             AtomicReference atomicReference = new AtomicReference();
-            registerOnPreAttachListener(new C0436g(interfaceC0855a, atomicReference, abstractC0053a, interfaceC0050a));
-            return new C0437h(atomicReference, abstractC0053a);
+            b2(new i(interfaceC4257a, atomicReference, abstractC3466a, interfaceC3370b));
+            return new a(atomicReference, abstractC3466a);
         }
         throw new IllegalStateException("Fragment " + this + " is attempting to registerForActivityResult after being created. Fragments must call registerForActivityResult() before they are created (i.e. initialization, onAttach(), or onCreate()).");
     }
 
-    private void registerOnPreAttachListener(AbstractC0439j abstractC0439j) {
-        if (this.mState >= 0) {
-            abstractC0439j.mo3388a();
+    private void b2(k kVar) {
+        if (this.f25449B >= 0) {
+            kVar.a();
         } else {
-            this.mOnPreAttachedListeners.add(abstractC0439j);
+            this.f25454D0.add(kVar);
         }
     }
 
-    void callStartTransitionListener(boolean z) {
+    private void h2() {
+        if (v.Q0(3)) {
+            Log.d("FragmentManager", "moveto RESTORE_VIEW_STATE: " + this);
+        }
+        if (this.f25489l0 != null) {
+            Bundle bundle = this.f25451C;
+            i2(bundle != null ? bundle.getBundle("savedInstanceState") : null);
+        }
+        this.f25451C = null;
+    }
+
+    private int l0() {
+        AbstractC2106m.b bVar = this.f25499v0;
+        return (bVar == AbstractC2106m.b.INITIALIZED || this.f25477Z == null) ? bVar.ordinal() : Math.min(bVar.ordinal(), this.f25477Z.l0());
+    }
+
+    public final String A0(int i10) {
+        return u0().getString(i10);
+    }
+
+    public void A1(Bundle bundle) {
+        this.f25487j0 = true;
+    }
+
+    @Override // t3.InterfaceC4549f
+    public final C4547d B() {
+        return this.f25448A0.getSavedStateRegistry();
+    }
+
+    public final String B0(int i10, Object... objArr) {
+        return u0().getString(i10, objArr);
+    }
+
+    void B1(Bundle bundle) {
+        this.f25476Y.g1();
+        this.f25449B = 3;
+        this.f25487j0 = false;
+        U0(bundle);
+        if (this.f25487j0) {
+            h2();
+            this.f25476Y.C();
+        } else {
+            throw new M("Fragment " + this + " did not call through to super.onActivityCreated()");
+        }
+    }
+
+    public final String C0() {
+        return this.f25480c0;
+    }
+
+    void C1() {
+        Iterator<k> it = this.f25454D0.iterator();
+        while (it.hasNext()) {
+            it.next().a();
+        }
+        this.f25454D0.clear();
+        this.f25476Y.p(this.f25475X, O(), this);
+        this.f25449B = 0;
+        this.f25487j0 = false;
+        X0(this.f25475X.getContext());
+        if (this.f25487j0) {
+            this.f25474W.M(this);
+            this.f25476Y.D();
+        } else {
+            throw new M("Fragment " + this + " did not call through to super.onAttach()");
+        }
+    }
+
+    void D1(Configuration configuration) {
+        onConfigurationChanged(configuration);
+    }
+
+    public View E0() {
+        return this.f25489l0;
+    }
+
+    boolean E1(MenuItem menuItem) {
+        if (this.f25481d0) {
+            return false;
+        }
+        if (Z0(menuItem)) {
+            return true;
+        }
+        return this.f25476Y.F(menuItem);
+    }
+
+    public InterfaceC2114v F0() {
+        G g10 = this.f25501x0;
+        if (g10 != null) {
+            return g10;
+        }
+        throw new IllegalStateException("Can't access the Fragment View's LifecycleOwner for " + this + " when getView() is null i.e., before onCreateView() or after onDestroyView()");
+    }
+
+    void F1(Bundle bundle) {
+        this.f25476Y.g1();
+        this.f25449B = 1;
+        this.f25487j0 = false;
+        this.f25500w0.a(new g());
+        a1(bundle);
+        this.f25497t0 = true;
+        if (this.f25487j0) {
+            this.f25500w0.i(AbstractC2106m.a.ON_CREATE);
+            return;
+        }
+        throw new M("Fragment " + this + " did not call through to super.onCreate()");
+    }
+
+    public android.view.B<InterfaceC2114v> G0() {
+        return this.f25502y0;
+    }
+
+    boolean G1(Menu menu, MenuInflater menuInflater) {
+        boolean z10 = false;
+        if (this.f25481d0) {
+            return false;
+        }
+        if (this.f25485h0 && this.f25486i0) {
+            d1(menu, menuInflater);
+            z10 = true;
+        }
+        return z10 | this.f25476Y.H(menu, menuInflater);
+    }
+
+    void H1(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
+        this.f25476Y.g1();
+        this.f25472U = true;
+        this.f25501x0 = new G(this, v(), new Runnable() { // from class: J1.b
+            @Override // java.lang.Runnable
+            public final void run() {
+                this.f7216B.S0();
+            }
+        });
+        View viewE1 = e1(layoutInflater, viewGroup, bundle);
+        this.f25489l0 = viewE1;
+        if (viewE1 == null) {
+            if (this.f25501x0.d()) {
+                throw new IllegalStateException("Called getViewLifecycleOwner() but onCreateView() returned null");
+            }
+            this.f25501x0 = null;
+            return;
+        }
+        this.f25501x0.b();
+        if (v.Q0(3)) {
+            Log.d("FragmentManager", "Setting ViewLifecycleOwner on View " + this.f25489l0 + " for Fragment " + this);
+        }
+        android.view.View.b(this.f25489l0, this.f25501x0);
+        C2098e0.b(this.f25489l0, this.f25501x0);
+        C4550g.b(this.f25489l0, this.f25501x0);
+        this.f25502y0.o(this.f25501x0);
+    }
+
+    void I0() {
+        H0();
+        this.f25498u0 = this.f25458G;
+        this.f25458G = UUID.randomUUID().toString();
+        this.f25464M = false;
+        this.f25465N = false;
+        this.f25468Q = false;
+        this.f25469R = false;
+        this.f25471T = false;
+        this.f25473V = 0;
+        this.f25474W = null;
+        this.f25476Y = new w();
+        this.f25475X = null;
+        this.f25478a0 = 0;
+        this.f25479b0 = 0;
+        this.f25480c0 = null;
+        this.f25481d0 = false;
+        this.f25482e0 = false;
+    }
+
+    void I1() {
+        this.f25476Y.I();
+        this.f25500w0.i(AbstractC2106m.a.ON_DESTROY);
+        this.f25449B = 0;
+        this.f25487j0 = false;
+        this.f25497t0 = false;
+        f1();
+        if (this.f25487j0) {
+            return;
+        }
+        throw new M("Fragment " + this + " did not call through to super.onDestroy()");
+    }
+
+    void J1() {
+        this.f25476Y.J();
+        if (this.f25489l0 != null && this.f25501x0.getLifecycle().getState().j(AbstractC2106m.b.CREATED)) {
+            this.f25501x0.a(AbstractC2106m.a.ON_DESTROY);
+        }
+        this.f25449B = 1;
+        this.f25487j0 = false;
+        h1();
+        if (this.f25487j0) {
+            androidx.loader.app.a.b(this).c();
+            this.f25472U = false;
+        } else {
+            throw new M("Fragment " + this + " did not call through to super.onDestroyView()");
+        }
+    }
+
+    public final boolean K0() {
+        return this.f25475X != null && this.f25464M;
+    }
+
+    void K1() {
+        this.f25449B = -1;
+        this.f25487j0 = false;
+        i1();
+        this.f25496s0 = null;
+        if (this.f25487j0) {
+            if (this.f25476Y.P0()) {
+                return;
+            }
+            this.f25476Y.I();
+            this.f25476Y = new w();
+            return;
+        }
+        throw new M("Fragment " + this + " did not call through to super.onDetach()");
+    }
+
+    public final boolean L0() {
+        v vVar;
+        return this.f25481d0 || ((vVar = this.f25474W) != null && vVar.T0(this.f25477Z));
+    }
+
+    LayoutInflater L1(Bundle bundle) {
+        LayoutInflater layoutInflaterJ1 = j1(bundle);
+        this.f25496s0 = layoutInflaterJ1;
+        return layoutInflaterJ1;
+    }
+
+    final boolean M0() {
+        return this.f25473V > 0;
+    }
+
+    void M1() {
+        onLowMemory();
+    }
+
+    void N(boolean z10) {
         ViewGroup viewGroup;
-        FragmentManager fragmentManager;
-        C0438i c0438i = this.mAnimationInfo;
-        InterfaceC0440k interfaceC0440k = null;
-        if (c0438i != null) {
-            c0438i.f3089s = false;
-            InterfaceC0440k interfaceC0440k2 = c0438i.f3090t;
-            c0438i.f3090t = null;
-            interfaceC0440k = interfaceC0440k2;
+        v vVar;
+        j jVar = this.f25492o0;
+        if (jVar != null) {
+            jVar.f25541v = false;
         }
-        if (interfaceC0440k != null) {
-            interfaceC0440k.mo3390b();
+        if (this.f25489l0 == null || (viewGroup = this.f25488k0) == null || (vVar = this.f25474W) == null) {
             return;
         }
-        if (!FragmentManager.f3093b || this.mView == null || (viewGroup = this.mContainer) == null || (fragmentManager = this.mFragmentManager) == null) {
-            return;
-        }
-        AbstractC0463a0 abstractC0463a0M3564n = AbstractC0463a0.m3564n(viewGroup, fragmentManager);
-        abstractC0463a0M3564n.m3577p();
-        if (z) {
-            this.mHost.m3655g().post(new RunnableC0432c(abstractC0463a0M3564n));
+        K kU = K.u(viewGroup, vVar);
+        kU.z();
+        if (z10) {
+            this.f25475X.getHandler().post(new e(kU));
         } else {
-            abstractC0463a0M3564n.m3572g();
+            kU.n();
+        }
+        Handler handler = this.f25493p0;
+        if (handler != null) {
+            handler.removeCallbacks(this.f25494q0);
+            this.f25493p0 = null;
         }
     }
 
-    AbstractC0470f createFragmentContainer() {
-        return new C0433d();
+    public final boolean N0() {
+        v vVar;
+        return this.f25486i0 && ((vVar = this.f25474W) == null || vVar.U0(this.f25477Z));
     }
 
-    public void dump(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
+    void N1(boolean z10) {
+        n1(z10);
+    }
+
+    J1.g O() {
+        return new f();
+    }
+
+    boolean O0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return false;
+        }
+        return jVar.f25541v;
+    }
+
+    boolean O1(MenuItem menuItem) {
+        if (this.f25481d0) {
+            return false;
+        }
+        if (this.f25485h0 && this.f25486i0 && o1(menuItem)) {
+            return true;
+        }
+        return this.f25476Y.O(menuItem);
+    }
+
+    public void P(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
         printWriter.print(str);
         printWriter.print("mFragmentId=#");
-        printWriter.print(Integer.toHexString(this.mFragmentId));
+        printWriter.print(Integer.toHexString(this.f25478a0));
         printWriter.print(" mContainerId=#");
-        printWriter.print(Integer.toHexString(this.mContainerId));
+        printWriter.print(Integer.toHexString(this.f25479b0));
         printWriter.print(" mTag=");
-        printWriter.println(this.mTag);
+        printWriter.println(this.f25480c0);
         printWriter.print(str);
         printWriter.print("mState=");
-        printWriter.print(this.mState);
+        printWriter.print(this.f25449B);
         printWriter.print(" mWho=");
-        printWriter.print(this.mWho);
+        printWriter.print(this.f25458G);
         printWriter.print(" mBackStackNesting=");
-        printWriter.println(this.mBackStackNesting);
+        printWriter.println(this.f25473V);
         printWriter.print(str);
         printWriter.print("mAdded=");
-        printWriter.print(this.mAdded);
+        printWriter.print(this.f25464M);
         printWriter.print(" mRemoving=");
-        printWriter.print(this.mRemoving);
+        printWriter.print(this.f25465N);
         printWriter.print(" mFromLayout=");
-        printWriter.print(this.mFromLayout);
+        printWriter.print(this.f25468Q);
         printWriter.print(" mInLayout=");
-        printWriter.println(this.mInLayout);
+        printWriter.println(this.f25469R);
         printWriter.print(str);
         printWriter.print("mHidden=");
-        printWriter.print(this.mHidden);
+        printWriter.print(this.f25481d0);
         printWriter.print(" mDetached=");
-        printWriter.print(this.mDetached);
+        printWriter.print(this.f25482e0);
         printWriter.print(" mMenuVisible=");
-        printWriter.print(this.mMenuVisible);
+        printWriter.print(this.f25486i0);
         printWriter.print(" mHasMenu=");
-        printWriter.println(this.mHasMenu);
+        printWriter.println(this.f25485h0);
         printWriter.print(str);
         printWriter.print("mRetainInstance=");
-        printWriter.print(this.mRetainInstance);
+        printWriter.print(this.f25483f0);
         printWriter.print(" mUserVisibleHint=");
-        printWriter.println(this.mUserVisibleHint);
-        if (this.mFragmentManager != null) {
+        printWriter.println(this.f25491n0);
+        if (this.f25474W != null) {
             printWriter.print(str);
             printWriter.print("mFragmentManager=");
-            printWriter.println(this.mFragmentManager);
+            printWriter.println(this.f25474W);
         }
-        if (this.mHost != null) {
+        if (this.f25475X != null) {
             printWriter.print(str);
             printWriter.print("mHost=");
-            printWriter.println(this.mHost);
+            printWriter.println(this.f25475X);
         }
-        if (this.mParentFragment != null) {
+        if (this.f25477Z != null) {
             printWriter.print(str);
             printWriter.print("mParentFragment=");
-            printWriter.println(this.mParentFragment);
+            printWriter.println(this.f25477Z);
         }
-        if (this.mArguments != null) {
+        if (this.f25459H != null) {
             printWriter.print(str);
             printWriter.print("mArguments=");
-            printWriter.println(this.mArguments);
+            printWriter.println(this.f25459H);
         }
-        if (this.mSavedFragmentState != null) {
+        if (this.f25451C != null) {
             printWriter.print(str);
             printWriter.print("mSavedFragmentState=");
-            printWriter.println(this.mSavedFragmentState);
+            printWriter.println(this.f25451C);
         }
-        if (this.mSavedViewState != null) {
+        if (this.f25453D != null) {
             printWriter.print(str);
             printWriter.print("mSavedViewState=");
-            printWriter.println(this.mSavedViewState);
+            printWriter.println(this.f25453D);
         }
-        if (this.mSavedViewRegistryState != null) {
+        if (this.f25455E != null) {
             printWriter.print(str);
             printWriter.print("mSavedViewRegistryState=");
-            printWriter.println(this.mSavedViewRegistryState);
+            printWriter.println(this.f25455E);
         }
-        Fragment targetFragment = getTargetFragment();
-        if (targetFragment != null) {
+        Fragment fragmentD0 = D0(false);
+        if (fragmentD0 != null) {
             printWriter.print(str);
             printWriter.print("mTarget=");
-            printWriter.print(targetFragment);
+            printWriter.print(fragmentD0);
             printWriter.print(" mTargetRequestCode=");
-            printWriter.println(this.mTargetRequestCode);
-        }
-        if (getNextAnim() != 0) {
-            printWriter.print(str);
-            printWriter.print("mNextAnim=");
-            printWriter.println(getNextAnim());
-        }
-        if (this.mContainer != null) {
-            printWriter.print(str);
-            printWriter.print("mContainer=");
-            printWriter.println(this.mContainer);
-        }
-        if (this.mView != null) {
-            printWriter.print(str);
-            printWriter.print("mView=");
-            printWriter.println(this.mView);
-        }
-        if (getAnimatingAway() != null) {
-            printWriter.print(str);
-            printWriter.print("mAnimatingAway=");
-            printWriter.println(getAnimatingAway());
-        }
-        if (getContext() != null) {
-            AbstractC0992a.m6272b(this).mo6273a(str, fileDescriptor, printWriter, strArr);
+            printWriter.println(this.f25462K);
         }
         printWriter.print(str);
-        printWriter.println("Child " + this.mChildFragmentManager + ":");
-        this.mChildFragmentManager.m3466X(str + "  ", fileDescriptor, printWriter, strArr);
+        printWriter.print("mPopDirection=");
+        printWriter.println(p0());
+        if (a0() != 0) {
+            printWriter.print(str);
+            printWriter.print("getEnterAnim=");
+            printWriter.println(a0());
+        }
+        if (d0() != 0) {
+            printWriter.print(str);
+            printWriter.print("getExitAnim=");
+            printWriter.println(d0());
+        }
+        if (q0() != 0) {
+            printWriter.print(str);
+            printWriter.print("getPopEnterAnim=");
+            printWriter.println(q0());
+        }
+        if (r0() != 0) {
+            printWriter.print(str);
+            printWriter.print("getPopExitAnim=");
+            printWriter.println(r0());
+        }
+        if (this.f25488k0 != null) {
+            printWriter.print(str);
+            printWriter.print("mContainer=");
+            printWriter.println(this.f25488k0);
+        }
+        if (this.f25489l0 != null) {
+            printWriter.print(str);
+            printWriter.print("mView=");
+            printWriter.println(this.f25489l0);
+        }
+        if (W() != null) {
+            printWriter.print(str);
+            printWriter.print("mAnimatingAway=");
+            printWriter.println(W());
+        }
+        if (Z() != null) {
+            androidx.loader.app.a.b(this).a(str, fileDescriptor, printWriter, strArr);
+        }
+        printWriter.print(str);
+        printWriter.println("Child " + this.f25476Y + ":");
+        this.f25476Y.b0(str + "  ", fileDescriptor, printWriter, strArr);
+    }
+
+    public final boolean P0() {
+        return this.f25465N;
+    }
+
+    void P1(Menu menu) {
+        if (this.f25481d0) {
+            return;
+        }
+        if (this.f25485h0 && this.f25486i0) {
+            p1(menu);
+        }
+        this.f25476Y.P(menu);
+    }
+
+    public final boolean Q0() {
+        v vVar = this.f25474W;
+        if (vVar == null) {
+            return false;
+        }
+        return vVar.X0();
+    }
+
+    void Q1() {
+        this.f25476Y.R();
+        if (this.f25489l0 != null) {
+            this.f25501x0.a(AbstractC2106m.a.ON_PAUSE);
+        }
+        this.f25500w0.i(AbstractC2106m.a.ON_PAUSE);
+        this.f25449B = 6;
+        this.f25487j0 = false;
+        q1();
+        if (this.f25487j0) {
+            return;
+        }
+        throw new M("Fragment " + this + " did not call through to super.onPause()");
+    }
+
+    Fragment R(String str) {
+        return str.equals(this.f25458G) ? this : this.f25476Y.o0(str);
+    }
+
+    public final boolean R0() {
+        View view;
+        return (!K0() || L0() || (view = this.f25489l0) == null || view.getWindowToken() == null || this.f25489l0.getVisibility() != 0) ? false : true;
+    }
+
+    void R1(boolean z10) {
+        r1(z10);
+    }
+
+    String S() {
+        return "fragment_" + this.f25458G + "_rq#" + this.f25452C0.getAndIncrement();
+    }
+
+    boolean S1(Menu menu) {
+        boolean z10 = false;
+        if (this.f25481d0) {
+            return false;
+        }
+        if (this.f25485h0 && this.f25486i0) {
+            s1(menu);
+            z10 = true;
+        }
+        return z10 | this.f25476Y.T(menu);
+    }
+
+    public final o T() {
+        s<?> sVar = this.f25475X;
+        if (sVar == null) {
+            return null;
+        }
+        return (o) sVar.getActivity();
+    }
+
+    void T0() {
+        this.f25476Y.g1();
+    }
+
+    void T1() {
+        boolean zV0 = this.f25474W.V0(this);
+        Boolean bool = this.f25463L;
+        if (bool == null || bool.booleanValue() != zV0) {
+            this.f25463L = Boolean.valueOf(zV0);
+            t1(zV0);
+            this.f25476Y.U();
+        }
+    }
+
+    public boolean U() {
+        Boolean bool;
+        j jVar = this.f25492o0;
+        if (jVar == null || (bool = jVar.f25536q) == null) {
+            return true;
+        }
+        return bool.booleanValue();
+    }
+
+    @Deprecated
+    public void U0(Bundle bundle) {
+        this.f25487j0 = true;
+    }
+
+    void U1() {
+        this.f25476Y.g1();
+        this.f25476Y.f0(true);
+        this.f25449B = 7;
+        this.f25487j0 = false;
+        v1();
+        if (!this.f25487j0) {
+            throw new M("Fragment " + this + " did not call through to super.onResume()");
+        }
+        C2116x c2116x = this.f25500w0;
+        AbstractC2106m.a aVar = AbstractC2106m.a.ON_RESUME;
+        c2116x.i(aVar);
+        if (this.f25489l0 != null) {
+            this.f25501x0.a(aVar);
+        }
+        this.f25476Y.V();
+    }
+
+    public boolean V() {
+        Boolean bool;
+        j jVar = this.f25492o0;
+        if (jVar == null || (bool = jVar.f25535p) == null) {
+            return true;
+        }
+        return bool.booleanValue();
+    }
+
+    @Deprecated
+    public void V0(int i10, int i11, Intent intent) {
+        if (v.Q0(2)) {
+            Log.v("FragmentManager", "Fragment " + this + " received the following in onActivityResult(): requestCode: " + i10 + " resultCode: " + i11 + " data: " + intent);
+        }
+    }
+
+    void V1(Bundle bundle) {
+        w1(bundle);
+    }
+
+    View W() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return null;
+        }
+        return jVar.f25520a;
+    }
+
+    @Deprecated
+    public void W0(Activity activity) {
+        this.f25487j0 = true;
+    }
+
+    void W1() {
+        this.f25476Y.g1();
+        this.f25476Y.f0(true);
+        this.f25449B = 5;
+        this.f25487j0 = false;
+        x1();
+        if (!this.f25487j0) {
+            throw new M("Fragment " + this + " did not call through to super.onStart()");
+        }
+        C2116x c2116x = this.f25500w0;
+        AbstractC2106m.a aVar = AbstractC2106m.a.ON_START;
+        c2116x.i(aVar);
+        if (this.f25489l0 != null) {
+            this.f25501x0.a(aVar);
+        }
+        this.f25476Y.W();
+    }
+
+    public final Bundle X() {
+        return this.f25459H;
+    }
+
+    public void X0(Context context) {
+        this.f25487j0 = true;
+        s<?> sVar = this.f25475X;
+        Activity activityH = sVar == null ? null : sVar.getActivity();
+        if (activityH != null) {
+            this.f25487j0 = false;
+            W0(activityH);
+        }
+    }
+
+    void X1() {
+        this.f25476Y.Y();
+        if (this.f25489l0 != null) {
+            this.f25501x0.a(AbstractC2106m.a.ON_STOP);
+        }
+        this.f25500w0.i(AbstractC2106m.a.ON_STOP);
+        this.f25449B = 4;
+        this.f25487j0 = false;
+        y1();
+        if (this.f25487j0) {
+            return;
+        }
+        throw new M("Fragment " + this + " did not call through to super.onStop()");
+    }
+
+    public final v Y() {
+        if (this.f25475X != null) {
+            return this.f25476Y;
+        }
+        throw new IllegalStateException("Fragment " + this + " has not been attached yet.");
+    }
+
+    void Y1() {
+        Bundle bundle = this.f25451C;
+        z1(this.f25489l0, bundle != null ? bundle.getBundle("savedInstanceState") : null);
+        this.f25476Y.Z();
+    }
+
+    public Context Z() {
+        s<?> sVar = this.f25475X;
+        if (sVar == null) {
+            return null;
+        }
+        return sVar.getContext();
+    }
+
+    public boolean Z0(MenuItem menuItem) {
+        return false;
+    }
+
+    int a0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return 0;
+        }
+        return jVar.f25522c;
+    }
+
+    public void a1(Bundle bundle) {
+        this.f25487j0 = true;
+        g2();
+        if (this.f25476Y.W0(1)) {
+            return;
+        }
+        this.f25476Y.G();
+    }
+
+    public final <I, O> AbstractC3371c<I> a2(AbstractC3466a<I, O> abstractC3466a, InterfaceC3370b<O> interfaceC3370b) {
+        return Z1(abstractC3466a, new h(), interfaceC3370b);
+    }
+
+    public Object b0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return null;
+        }
+        return jVar.f25529j;
+    }
+
+    public Animation b1(int i10, boolean z10, int i11) {
+        return null;
+    }
+
+    f1.y c0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return null;
+        }
+        return jVar.f25537r;
+    }
+
+    public Animator c1(int i10, boolean z10, int i11) {
+        return null;
+    }
+
+    public final o c2() {
+        o oVarT = T();
+        if (oVarT != null) {
+            return oVarT;
+        }
+        throw new IllegalStateException("Fragment " + this + " not attached to an activity.");
+    }
+
+    int d0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return 0;
+        }
+        return jVar.f25523d;
+    }
+
+    public final Bundle d2() {
+        Bundle bundleX = X();
+        if (bundleX != null) {
+            return bundleX;
+        }
+        throw new IllegalStateException("Fragment " + this + " does not have any arguments.");
+    }
+
+    public Object e0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return null;
+        }
+        return jVar.f25531l;
+    }
+
+    public View e1(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
+        int i10 = this.f25450B0;
+        if (i10 != 0) {
+            return layoutInflater.inflate(i10, viewGroup, false);
+        }
+        return null;
+    }
+
+    public final Context e2() {
+        Context contextZ = Z();
+        if (contextZ != null) {
+            return contextZ;
+        }
+        throw new IllegalStateException("Fragment " + this + " not attached to a context.");
     }
 
     public final boolean equals(Object obj) {
         return super.equals(obj);
     }
 
-    Fragment findFragmentByWho(String str) {
-        return str.equals(this.mWho) ? this : this.mChildFragmentManager.m3490k0(str);
-    }
-
-    String generateActivityResultKey() {
-        return "fragment_" + this.mWho + "_rq#" + this.mNextLocalRequestCode.getAndIncrement();
-    }
-
-    public final ActivityC0468d getActivity() {
-        AbstractC0474j<?> abstractC0474j = this.mHost;
-        if (abstractC0474j == null) {
+    f1.y f0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
             return null;
         }
-        return (ActivityC0468d) abstractC0474j.m3653e();
+        return jVar.f25538s;
     }
 
-    public boolean getAllowEnterTransitionOverlap() {
-        Boolean bool;
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null || (bool = c0438i.f3084n) == null) {
-            return true;
+    public void f1() {
+        this.f25487j0 = true;
+    }
+
+    public final View f2() {
+        View viewE0 = E0();
+        if (viewE0 != null) {
+            return viewE0;
         }
-        return bool.booleanValue();
+        throw new IllegalStateException("Fragment " + this + " did not return a View from onCreateView() or this was called before onCreateView().");
     }
 
-    public boolean getAllowReturnTransitionOverlap() {
-        Boolean bool;
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null || (bool = c0438i.f3083m) == null) {
-            return true;
-        }
-        return bool.booleanValue();
-    }
-
-    View getAnimatingAway() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
+    View g0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
             return null;
         }
-        return c0438i.f3071a;
+        return jVar.f25540u;
     }
 
-    Animator getAnimator() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
+    void g2() {
+        Bundle bundle;
+        Bundle bundle2 = this.f25451C;
+        if (bundle2 == null || (bundle = bundle2.getBundle("childFragmentManager")) == null) {
+            return;
+        }
+        this.f25476Y.z1(bundle);
+        this.f25476Y.G();
+    }
+
+    @Override // android.view.InterfaceC2114v
+    public AbstractC2106m getLifecycle() {
+        return this.f25500w0;
+    }
+
+    public final Object h0() {
+        s<?> sVar = this.f25475X;
+        if (sVar == null) {
             return null;
         }
-        return c0438i.f3072b;
+        return sVar.n();
     }
 
-    public final Bundle getArguments() {
-        return this.mArguments;
+    public void h1() {
+        this.f25487j0 = true;
     }
 
-    public final FragmentManager getChildFragmentManager() {
-        if (this.mHost != null) {
-            return this.mChildFragmentManager;
+    public final int hashCode() {
+        return super.hashCode();
+    }
+
+    public final int i0() {
+        return this.f25478a0;
+    }
+
+    public void i1() {
+        this.f25487j0 = true;
+    }
+
+    final void i2(Bundle bundle) {
+        SparseArray<Parcelable> sparseArray = this.f25453D;
+        if (sparseArray != null) {
+            this.f25489l0.restoreHierarchyState(sparseArray);
+            this.f25453D = null;
         }
-        throw new IllegalStateException("Fragment " + this + " has not been attached yet.");
-    }
-
-    public Context getContext() {
-        AbstractC0474j<?> abstractC0474j = this.mHost;
-        if (abstractC0474j == null) {
-            return null;
+        this.f25487j0 = false;
+        A1(bundle);
+        if (this.f25487j0) {
+            if (this.f25489l0 != null) {
+                this.f25501x0.a(AbstractC2106m.a.ON_CREATE);
+            }
+        } else {
+            throw new M("Fragment " + this + " did not call through to super.onViewStateRestored()");
         }
-        return abstractC0474j.m3654f();
     }
 
-    public C0529y.b getDefaultViewModelProviderFactory() {
-        if (this.mFragmentManager == null) {
+    public final LayoutInflater j0() {
+        LayoutInflater layoutInflater = this.f25496s0;
+        return layoutInflater == null ? L1(null) : layoutInflater;
+    }
+
+    public LayoutInflater j1(Bundle bundle) {
+        return k0(bundle);
+    }
+
+    void j2(int i10, int i11, int i12, int i13) {
+        if (this.f25492o0 == null && i10 == 0 && i11 == 0 && i12 == 0 && i13 == 0) {
+            return;
+        }
+        Q().f25522c = i10;
+        Q().f25523d = i11;
+        Q().f25524e = i12;
+        Q().f25525f = i13;
+    }
+
+    @Deprecated
+    public LayoutInflater k0(Bundle bundle) {
+        s<?> sVar = this.f25475X;
+        if (sVar == null) {
+            throw new IllegalStateException("onGetLayoutInflater() cannot be executed until the Fragment is attached to the FragmentManager.");
+        }
+        LayoutInflater layoutInflaterP = sVar.p();
+        C4460u.a(layoutInflaterP, this.f25476Y.E0());
+        return layoutInflaterP;
+    }
+
+    public void k2(Bundle bundle) {
+        if (this.f25474W != null && Q0()) {
+            throw new IllegalStateException("Fragment already added and state has been saved");
+        }
+        this.f25459H = bundle;
+    }
+
+    @Override // android.view.InterfaceC2104k
+    public a0.c l() {
+        Application application;
+        if (this.f25474W == null) {
             throw new IllegalStateException("Can't access ViewModels from detached fragment");
         }
-        if (this.mDefaultFactory == null) {
-            Application application = null;
-            Context applicationContext = requireContext().getApplicationContext();
+        if (this.f25503z0 == null) {
+            Context applicationContext = e2().getApplicationContext();
             while (true) {
                 if (!(applicationContext instanceof ContextWrapper)) {
+                    application = null;
                     break;
                 }
                 if (applicationContext instanceof Application) {
@@ -678,1186 +1467,362 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
                 }
                 applicationContext = ((ContextWrapper) applicationContext).getBaseContext();
             }
-            if (application == null && FragmentManager.m3392H0(3)) {
-                Log.d("FragmentManager", "Could not find Application instance from Context " + requireContext().getApplicationContext() + ", you will not be able to use AndroidViewModel with the default ViewModelProvider.Factory");
+            if (application == null && v.Q0(3)) {
+                Log.d("FragmentManager", "Could not find Application instance from Context " + e2().getApplicationContext() + ", you will need CreationExtras to use AndroidViewModel with the default ViewModelProvider.Factory");
             }
-            this.mDefaultFactory = new C0526v(application, this, getArguments());
+            this.f25503z0 = new V(application, this, X());
         }
-        return this.mDefaultFactory;
-    }
-
-    public Object getEnterTransition() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
-            return null;
-        }
-        return c0438i.f3077g;
-    }
-
-    AbstractC0251o getEnterTransitionCallback() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
-            return null;
-        }
-        return c0438i.f3085o;
-    }
-
-    public Object getExitTransition() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
-            return null;
-        }
-        return c0438i.f3079i;
-    }
-
-    AbstractC0251o getExitTransitionCallback() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
-            return null;
-        }
-        return c0438i.f3086p;
-    }
-
-    View getFocusedView() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
-            return null;
-        }
-        return c0438i.f3088r;
+        return this.f25503z0;
     }
 
     @Deprecated
-    public final FragmentManager getFragmentManager() {
-        return this.mFragmentManager;
+    public void l1(Activity activity, AttributeSet attributeSet, Bundle bundle) {
+        this.f25487j0 = true;
     }
 
-    public final Object getHost() {
-        AbstractC0474j<?> abstractC0474j = this.mHost;
-        if (abstractC0474j == null) {
-            return null;
+    void l2(View view) {
+        Q().f25540u = view;
+    }
+
+    @Override // android.view.InterfaceC2104k
+    public Q1.a m() {
+        Application application;
+        Context applicationContext = e2().getApplicationContext();
+        while (true) {
+            if (!(applicationContext instanceof ContextWrapper)) {
+                application = null;
+                break;
+            }
+            if (applicationContext instanceof Application) {
+                application = (Application) applicationContext;
+                break;
+            }
+            applicationContext = ((ContextWrapper) applicationContext).getBaseContext();
         }
-        return abstractC0474j.mo3615i();
+        if (application == null && v.Q0(3)) {
+            Log.d("FragmentManager", "Could not find Application instance from Context " + e2().getApplicationContext() + ", you will not be able to use AndroidViewModel with the default ViewModelProvider.Factory");
+        }
+        Q1.d dVar = new Q1.d();
+        if (application != null) {
+            dVar.c(a0.a.f25931h, application);
+        }
+        dVar.c(S.f25904a, this);
+        dVar.c(S.f25905b, this);
+        if (X() != null) {
+            dVar.c(S.f25906c, X());
+        }
+        return dVar;
     }
 
-    public final int getId() {
-        return this.mFragmentId;
+    int m0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return 0;
+        }
+        return jVar.f25526g;
     }
 
-    public final LayoutInflater getLayoutInflater() {
-        LayoutInflater layoutInflater = this.mLayoutInflater;
-        return layoutInflater == null ? performGetLayoutInflater(null) : layoutInflater;
-    }
-
-    @Override // androidx.lifecycle.InterfaceC0515k
-    public AbstractC0511g getLifecycle() {
-        return this.mLifecycleRegistry;
+    public void m1(Context context, AttributeSet attributeSet, Bundle bundle) {
+        this.f25487j0 = true;
+        s<?> sVar = this.f25475X;
+        Activity activityH = sVar == null ? null : sVar.getActivity();
+        if (activityH != null) {
+            this.f25487j0 = false;
+            l1(activityH, attributeSet, bundle);
+        }
     }
 
     @Deprecated
-    public AbstractC0992a getLoaderManager() {
-        return AbstractC0992a.m6272b(this);
-    }
-
-    int getNextAnim() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
-            return 0;
+    public void m2(boolean z10) {
+        if (this.f25485h0 != z10) {
+            this.f25485h0 = z10;
+            if (!K0() || L0()) {
+                return;
+            }
+            this.f25475X.s();
         }
-        return c0438i.f3073c;
     }
 
-    int getNextTransition() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
-            return 0;
+    public final Fragment n0() {
+        return this.f25477Z;
+    }
+
+    public void n2(l lVar) {
+        Bundle bundle;
+        if (this.f25474W != null) {
+            throw new IllegalStateException("Fragment already added");
         }
-        return c0438i.f3074d;
+        if (lVar == null || (bundle = lVar.f25542B) == null) {
+            bundle = null;
+        }
+        this.f25451C = bundle;
     }
 
-    public final Fragment getParentFragment() {
-        return this.mParentFragment;
-    }
-
-    public final FragmentManager getParentFragmentManager() {
-        FragmentManager fragmentManager = this.mFragmentManager;
-        if (fragmentManager != null) {
-            return fragmentManager;
+    public final v o0() {
+        v vVar = this.f25474W;
+        if (vVar != null) {
+            return vVar;
         }
         throw new IllegalStateException("Fragment " + this + " not associated with a fragment manager.");
     }
 
-    float getPostOnViewCreatedAlpha() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
-            return 1.0f;
-        }
-        return c0438i.f3087q;
-    }
-
-    public Object getReenterTransition() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
-            return null;
-        }
-        Object obj = c0438i.f3080j;
-        return obj == USE_DEFAULT_TRANSITION ? getExitTransition() : obj;
-    }
-
-    public final Resources getResources() {
-        return requireContext().getResources();
-    }
-
     @Deprecated
-    public final boolean getRetainInstance() {
-        return this.mRetainInstance;
+    public boolean o1(MenuItem menuItem) {
+        return false;
     }
 
-    public Object getReturnTransition() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
-            return null;
+    public void o2(boolean z10) {
+        if (this.f25486i0 != z10) {
+            this.f25486i0 = z10;
+            if (this.f25485h0 && K0() && !L0()) {
+                this.f25475X.s();
+            }
         }
-        Object obj = c0438i.f3078h;
-        return obj == USE_DEFAULT_TRANSITION ? getEnterTransition() : obj;
-    }
-
-    @Override // androidx.savedstate.InterfaceC0674c
-    public final SavedStateRegistry getSavedStateRegistry() {
-        return this.mSavedStateRegistryController.m4699b();
-    }
-
-    public Object getSharedElementEnterTransition() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
-            return null;
-        }
-        return c0438i.f3081k;
-    }
-
-    public Object getSharedElementReturnTransition() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
-            return null;
-        }
-        Object obj = c0438i.f3082l;
-        return obj == USE_DEFAULT_TRANSITION ? getSharedElementEnterTransition() : obj;
-    }
-
-    ArrayList<String> getSharedElementSourceNames() {
-        ArrayList<String> arrayList;
-        C0438i c0438i = this.mAnimationInfo;
-        return (c0438i == null || (arrayList = c0438i.f3075e) == null) ? new ArrayList<>() : arrayList;
-    }
-
-    ArrayList<String> getSharedElementTargetNames() {
-        ArrayList<String> arrayList;
-        C0438i c0438i = this.mAnimationInfo;
-        return (c0438i == null || (arrayList = c0438i.f3076f) == null) ? new ArrayList<>() : arrayList;
-    }
-
-    public final String getString(int i2) {
-        return getResources().getString(i2);
-    }
-
-    public final String getTag() {
-        return this.mTag;
-    }
-
-    @Deprecated
-    public final Fragment getTargetFragment() {
-        String str;
-        Fragment fragment = this.mTarget;
-        if (fragment != null) {
-            return fragment;
-        }
-        FragmentManager fragmentManager = this.mFragmentManager;
-        if (fragmentManager == null || (str = this.mTargetWho) == null) {
-            return null;
-        }
-        return fragmentManager.m3483h0(str);
-    }
-
-    @Deprecated
-    public final int getTargetRequestCode() {
-        return this.mTargetRequestCode;
-    }
-
-    public final CharSequence getText(int i2) {
-        return getResources().getText(i2);
-    }
-
-    @Deprecated
-    public boolean getUserVisibleHint() {
-        return this.mUserVisibleHint;
-    }
-
-    public View getView() {
-        return this.mView;
-    }
-
-    public InterfaceC0515k getViewLifecycleOwner() {
-        C0489y c0489y = this.mViewLifecycleOwner;
-        if (c0489y != null) {
-            return c0489y;
-        }
-        throw new IllegalStateException("Can't access the Fragment View's LifecycleOwner when getView() is null i.e., before onCreateView() or after onDestroyView()");
-    }
-
-    public LiveData<InterfaceC0515k> getViewLifecycleOwnerLiveData() {
-        return this.mViewLifecycleOwnerLiveData;
-    }
-
-    @Override // androidx.lifecycle.InterfaceC0501a0
-    public C0530z getViewModelStore() {
-        if (this.mFragmentManager == null) {
-            throw new IllegalStateException("Can't access ViewModels from detached fragment");
-        }
-        if (getMinimumMaxLifecycleState() != AbstractC0511g.c.INITIALIZED.ordinal()) {
-            return this.mFragmentManager.m3433D0(this);
-        }
-        throw new IllegalStateException("Calling getViewModelStore() before a Fragment reaches onCreate() when using setMaxLifecycle(INITIALIZED) is not supported");
-    }
-
-    @SuppressLint({"KotlinPropertyAccess"})
-    public final boolean hasOptionsMenu() {
-        return this.mHasMenu;
-    }
-
-    public final int hashCode() {
-        return super.hashCode();
-    }
-
-    void initState() {
-        initLifecycle();
-        this.mWho = UUID.randomUUID().toString();
-        this.mAdded = false;
-        this.mRemoving = false;
-        this.mFromLayout = false;
-        this.mInLayout = false;
-        this.mRestored = false;
-        this.mBackStackNesting = 0;
-        this.mFragmentManager = null;
-        this.mChildFragmentManager = new C0477m();
-        this.mHost = null;
-        this.mFragmentId = 0;
-        this.mContainerId = 0;
-        this.mTag = null;
-        this.mHidden = false;
-        this.mDetached = false;
-    }
-
-    public final boolean isAdded() {
-        return this.mHost != null && this.mAdded;
-    }
-
-    public final boolean isDetached() {
-        return this.mDetached;
-    }
-
-    public final boolean isHidden() {
-        return this.mHidden;
-    }
-
-    boolean isHideReplaced() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
-            return false;
-        }
-        return c0438i.f3091u;
-    }
-
-    final boolean isInBackStack() {
-        return this.mBackStackNesting > 0;
-    }
-
-    public final boolean isInLayout() {
-        return this.mInLayout;
-    }
-
-    public final boolean isMenuVisible() {
-        FragmentManager fragmentManager;
-        return this.mMenuVisible && ((fragmentManager = this.mFragmentManager) == null || fragmentManager.m3443J0(this.mParentFragment));
-    }
-
-    boolean isPostponed() {
-        C0438i c0438i = this.mAnimationInfo;
-        if (c0438i == null) {
-            return false;
-        }
-        return c0438i.f3089s;
-    }
-
-    public final boolean isRemoving() {
-        return this.mRemoving;
-    }
-
-    final boolean isRemovingParent() {
-        Fragment parentFragment = getParentFragment();
-        return parentFragment != null && (parentFragment.isRemoving() || parentFragment.isRemovingParent());
-    }
-
-    public final boolean isResumed() {
-        return this.mState >= 7;
-    }
-
-    public final boolean isStateSaved() {
-        FragmentManager fragmentManager = this.mFragmentManager;
-        if (fragmentManager == null) {
-            return false;
-        }
-        return fragmentManager.m3448M0();
-    }
-
-    public final boolean isVisible() {
-        View view;
-        return (!isAdded() || isHidden() || (view = this.mView) == null || view.getWindowToken() == null || this.mView.getVisibility() != 0) ? false : true;
-    }
-
-    void noteStateNotSaved() {
-        this.mChildFragmentManager.m3464V0();
-    }
-
-    @Deprecated
-    public void onActivityCreated(Bundle bundle) {
-        this.mCalled = true;
-    }
-
-    @Deprecated
-    public void onActivityResult(int i2, int i3, Intent intent) {
-        if (FragmentManager.m3392H0(2)) {
-            Log.v("FragmentManager", "Fragment " + this + " received the following in onActivityResult(): requestCode: " + i2 + " resultCode: " + i3 + " data: " + intent);
-        }
-    }
-
-    public void onAttach(Context context) {
-        this.mCalled = true;
-        AbstractC0474j<?> abstractC0474j = this.mHost;
-        Activity activityM3653e = abstractC0474j == null ? null : abstractC0474j.m3653e();
-        if (activityM3653e != null) {
-            this.mCalled = false;
-            onAttach(activityM3653e);
-        }
-    }
-
-    @Deprecated
-    public void onAttachFragment(Fragment fragment) {
     }
 
     @Override // android.content.ComponentCallbacks
     public void onConfigurationChanged(Configuration configuration) {
-        this.mCalled = true;
-    }
-
-    public boolean onContextItemSelected(MenuItem menuItem) {
-        return false;
-    }
-
-    public void onCreate(Bundle bundle) {
-        this.mCalled = true;
-        restoreChildFragmentState(bundle);
-        if (this.mChildFragmentManager.m3447L0(1)) {
-            return;
-        }
-        this.mChildFragmentManager.m3432D();
-    }
-
-    public Animation onCreateAnimation(int i2, boolean z, int i3) {
-        return null;
-    }
-
-    public Animator onCreateAnimator(int i2, boolean z, int i3) {
-        return null;
+        this.f25487j0 = true;
     }
 
     @Override // android.view.View.OnCreateContextMenuListener
     public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
-        requireActivity().onCreateContextMenu(contextMenu, view, contextMenuInfo);
-    }
-
-    public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
-    }
-
-    public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        int i2 = this.mContentLayoutId;
-        if (i2 != 0) {
-            return layoutInflater.inflate(i2, viewGroup, false);
-        }
-        return null;
-    }
-
-    public void onDestroy() {
-        this.mCalled = true;
-    }
-
-    public void onDestroyOptionsMenu() {
-    }
-
-    public void onDestroyView() {
-        this.mCalled = true;
-    }
-
-    public void onDetach() {
-        this.mCalled = true;
-    }
-
-    public LayoutInflater onGetLayoutInflater(Bundle bundle) {
-        return getLayoutInflater(bundle);
-    }
-
-    public void onHiddenChanged(boolean z) {
-    }
-
-    public void onInflate(Context context, AttributeSet attributeSet, Bundle bundle) {
-        this.mCalled = true;
-        AbstractC0474j<?> abstractC0474j = this.mHost;
-        Activity activityM3653e = abstractC0474j == null ? null : abstractC0474j.m3653e();
-        if (activityM3653e != null) {
-            this.mCalled = false;
-            onInflate(activityM3653e, attributeSet, bundle);
-        }
+        c2().onCreateContextMenu(contextMenu, view, contextMenuInfo);
     }
 
     @Override // android.content.ComponentCallbacks
     public void onLowMemory() {
-        this.mCalled = true;
+        this.f25487j0 = true;
     }
 
-    public void onMultiWindowModeChanged(boolean z) {
+    boolean p0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return false;
+        }
+        return jVar.f25521b;
     }
 
-    public boolean onOptionsItemSelected(MenuItem menuItem) {
-        return false;
+    void p2(int i10) {
+        if (this.f25492o0 == null && i10 == 0) {
+            return;
+        }
+        Q();
+        this.f25492o0.f25526g = i10;
     }
 
-    public void onOptionsMenuClosed(Menu menu) {
+    int q0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return 0;
+        }
+        return jVar.f25524e;
     }
 
-    public void onPause() {
-        this.mCalled = true;
+    public void q1() {
+        this.f25487j0 = true;
     }
 
-    public void onPictureInPictureModeChanged(boolean z) {
+    void q2(boolean z10) {
+        if (this.f25492o0 == null) {
+            return;
+        }
+        Q().f25521b = z10;
     }
 
-    public void onPrepareOptionsMenu(Menu menu) {
+    int r0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return 0;
+        }
+        return jVar.f25525f;
     }
 
-    public void onPrimaryNavigationFragmentChanged(boolean z) {
+    void r2(float f10) {
+        Q().f25539t = f10;
+    }
+
+    float s0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return 1.0f;
+        }
+        return jVar.f25539t;
+    }
+
+    void s2(ArrayList<String> arrayList, ArrayList<String> arrayList2) {
+        Q();
+        j jVar = this.f25492o0;
+        jVar.f25527h = arrayList;
+        jVar.f25528i = arrayList2;
     }
 
     @Deprecated
-    public void onRequestPermissionsResult(int i2, String[] strArr, int[] iArr) {
+    public void startActivityForResult(Intent intent, int i10) {
+        v2(intent, i10, null);
     }
 
-    public void onResume() {
-        this.mCalled = true;
-    }
-
-    public void onSaveInstanceState(Bundle bundle) {
-    }
-
-    public void onStart() {
-        this.mCalled = true;
-    }
-
-    public void onStop() {
-        this.mCalled = true;
-    }
-
-    public void onViewCreated(View view, Bundle bundle) {
-    }
-
-    public void onViewStateRestored(Bundle bundle) {
-        this.mCalled = true;
-    }
-
-    void performActivityCreated(Bundle bundle) {
-        this.mChildFragmentManager.m3464V0();
-        this.mState = 3;
-        this.mCalled = false;
-        onActivityCreated(bundle);
-        if (this.mCalled) {
-            restoreViewState();
-            this.mChildFragmentManager.m3516z();
-        } else {
-            throw new C0467c0("Fragment " + this + " did not call through to super.onActivityCreated()");
+    public Object t0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return null;
         }
+        Object obj = jVar.f25532m;
+        return obj == f25447F0 ? e0() : obj;
     }
 
-    void performAttach() {
-        Iterator<AbstractC0439j> it = this.mOnPreAttachedListeners.iterator();
-        while (it.hasNext()) {
-            it.next().mo3388a();
-        }
-        this.mOnPreAttachedListeners.clear();
-        this.mChildFragmentManager.m3489k(this.mHost, createFragmentContainer(), this);
-        this.mState = 0;
-        this.mCalled = false;
-        onAttach(this.mHost.m3654f());
-        if (this.mCalled) {
-            this.mFragmentManager.m3442J(this);
-            this.mChildFragmentManager.m3427A();
-        } else {
-            throw new C0467c0("Fragment " + this + " did not call through to super.onAttach()");
-        }
+    public void t2(Intent intent) {
+        u2(intent, null);
     }
 
-    void performConfigurationChanged(Configuration configuration) {
-        onConfigurationChanged(configuration);
-        this.mChildFragmentManager.m3429B(configuration);
+    public String toString() {
+        StringBuilder sb2 = new StringBuilder(128);
+        sb2.append(getClass().getSimpleName());
+        sb2.append("{");
+        sb2.append(Integer.toHexString(System.identityHashCode(this)));
+        sb2.append("}");
+        sb2.append(" (");
+        sb2.append(this.f25458G);
+        if (this.f25478a0 != 0) {
+            sb2.append(" id=0x");
+            sb2.append(Integer.toHexString(this.f25478a0));
+        }
+        if (this.f25480c0 != null) {
+            sb2.append(" tag=");
+            sb2.append(this.f25480c0);
+        }
+        sb2.append(")");
+        return sb2.toString();
     }
 
-    boolean performContextItemSelected(MenuItem menuItem) {
-        if (this.mHidden) {
-            return false;
-        }
-        if (onContextItemSelected(menuItem)) {
-            return true;
-        }
-        return this.mChildFragmentManager.m3431C(menuItem);
+    public final Resources u0() {
+        return e2().getResources();
     }
 
-    void performCreate(Bundle bundle) {
-        this.mChildFragmentManager.m3464V0();
-        this.mState = 1;
-        this.mCalled = false;
-        if (Build.VERSION.SDK_INT >= 19) {
-            this.mLifecycleRegistry.mo3861a(new InterfaceC0513i() { // from class: androidx.fragment.app.Fragment.5
-                @Override // androidx.lifecycle.InterfaceC0513i
-                /* renamed from: a */
-                public void mo124a(InterfaceC0515k interfaceC0515k, AbstractC0511g.b bVar) {
-                    View view;
-                    if (bVar != AbstractC0511g.b.ON_STOP || (view = Fragment.this.mView) == null) {
-                        return;
-                    }
-                    view.cancelPendingInputEvents();
-                }
-            });
-        }
-        this.mSavedStateRegistryController.m4700c(bundle);
-        onCreate(bundle);
-        this.mIsCreated = true;
-        if (this.mCalled) {
-            this.mLifecycleRegistry.m3879h(AbstractC0511g.b.ON_CREATE);
-            return;
-        }
-        throw new C0467c0("Fragment " + this + " did not call through to super.onCreate()");
-    }
-
-    boolean performCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
-        boolean z = false;
-        if (this.mHidden) {
-            return false;
-        }
-        if (this.mHasMenu && this.mMenuVisible) {
-            z = true;
-            onCreateOptionsMenu(menu, menuInflater);
-        }
-        return z | this.mChildFragmentManager.m3434E(menu, menuInflater);
-    }
-
-    void performCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        this.mChildFragmentManager.m3464V0();
-        this.mPerformedCreateView = true;
-        this.mViewLifecycleOwner = new C0489y();
-        View viewOnCreateView = onCreateView(layoutInflater, viewGroup, bundle);
-        this.mView = viewOnCreateView;
-        if (viewOnCreateView == null) {
-            if (this.mViewLifecycleOwner.m3805c()) {
-                throw new IllegalStateException("Called getViewLifecycleOwner() but onCreateView() returned null");
-            }
-            this.mViewLifecycleOwner = null;
-        } else {
-            this.mViewLifecycleOwner.m3804b();
-            C0503b0.m3852a(this.mView, this.mViewLifecycleOwner);
-            C0505c0.m3859a(this.mView, this);
-            C0675d.m4702a(this.mView, this.mViewLifecycleOwner);
-            this.mViewLifecycleOwnerLiveData.mo3822n(this.mViewLifecycleOwner);
-        }
-    }
-
-    void performDestroy() {
-        this.mChildFragmentManager.m3436F();
-        this.mLifecycleRegistry.m3879h(AbstractC0511g.b.ON_DESTROY);
-        this.mState = 0;
-        this.mCalled = false;
-        this.mIsCreated = false;
-        onDestroy();
-        if (this.mCalled) {
-            return;
-        }
-        throw new C0467c0("Fragment " + this + " did not call through to super.onDestroy()");
-    }
-
-    void performDestroyView() {
-        this.mChildFragmentManager.m3438G();
-        if (this.mView != null && this.mViewLifecycleOwner.getLifecycle().mo3862b().m3867g(AbstractC0511g.c.CREATED)) {
-            this.mViewLifecycleOwner.m3803a(AbstractC0511g.b.ON_DESTROY);
-        }
-        this.mState = 1;
-        this.mCalled = false;
-        onDestroyView();
-        if (this.mCalled) {
-            AbstractC0992a.m6272b(this).mo6275d();
-            this.mPerformedCreateView = false;
-        } else {
-            throw new C0467c0("Fragment " + this + " did not call through to super.onDestroyView()");
-        }
-    }
-
-    void performDetach() {
-        this.mState = -1;
-        this.mCalled = false;
-        onDetach();
-        this.mLayoutInflater = null;
-        if (this.mCalled) {
-            if (this.mChildFragmentManager.m3439G0()) {
-                return;
-            }
-            this.mChildFragmentManager.m3436F();
-            this.mChildFragmentManager = new C0477m();
-            return;
-        }
-        throw new C0467c0("Fragment " + this + " did not call through to super.onDetach()");
-    }
-
-    LayoutInflater performGetLayoutInflater(Bundle bundle) {
-        LayoutInflater layoutInflaterOnGetLayoutInflater = onGetLayoutInflater(bundle);
-        this.mLayoutInflater = layoutInflaterOnGetLayoutInflater;
-        return layoutInflaterOnGetLayoutInflater;
-    }
-
-    void performLowMemory() {
-        onLowMemory();
-        this.mChildFragmentManager.m3440H();
-    }
-
-    void performMultiWindowModeChanged(boolean z) {
-        onMultiWindowModeChanged(z);
-        this.mChildFragmentManager.m3441I(z);
-    }
-
-    boolean performOptionsItemSelected(MenuItem menuItem) {
-        if (this.mHidden) {
-            return false;
-        }
-        if (this.mHasMenu && this.mMenuVisible && onOptionsItemSelected(menuItem)) {
-            return true;
-        }
-        return this.mChildFragmentManager.m3444K(menuItem);
-    }
-
-    void performOptionsMenuClosed(Menu menu) {
-        if (this.mHidden) {
-            return;
-        }
-        if (this.mHasMenu && this.mMenuVisible) {
-            onOptionsMenuClosed(menu);
-        }
-        this.mChildFragmentManager.m3446L(menu);
-    }
-
-    void performPause() {
-        this.mChildFragmentManager.m3449N();
-        if (this.mView != null) {
-            this.mViewLifecycleOwner.m3803a(AbstractC0511g.b.ON_PAUSE);
-        }
-        this.mLifecycleRegistry.m3879h(AbstractC0511g.b.ON_PAUSE);
-        this.mState = 6;
-        this.mCalled = false;
-        onPause();
-        if (this.mCalled) {
-            return;
-        }
-        throw new C0467c0("Fragment " + this + " did not call through to super.onPause()");
-    }
-
-    void performPictureInPictureModeChanged(boolean z) {
-        onPictureInPictureModeChanged(z);
-        this.mChildFragmentManager.m3451O(z);
-    }
-
-    boolean performPrepareOptionsMenu(Menu menu) {
-        boolean z = false;
-        if (this.mHidden) {
-            return false;
-        }
-        if (this.mHasMenu && this.mMenuVisible) {
-            z = true;
-            onPrepareOptionsMenu(menu);
-        }
-        return z | this.mChildFragmentManager.m3453P(menu);
-    }
-
-    void performPrimaryNavigationFragmentChanged() {
-        boolean zM3445K0 = this.mFragmentManager.m3445K0(this);
-        Boolean bool = this.mIsPrimaryNavigationFragment;
-        if (bool == null || bool.booleanValue() != zM3445K0) {
-            this.mIsPrimaryNavigationFragment = Boolean.valueOf(zM3445K0);
-            onPrimaryNavigationFragmentChanged(zM3445K0);
-            this.mChildFragmentManager.m3455Q();
-        }
-    }
-
-    void performResume() {
-        this.mChildFragmentManager.m3464V0();
-        this.mChildFragmentManager.m3472b0(true);
-        this.mState = 7;
-        this.mCalled = false;
-        onResume();
-        if (!this.mCalled) {
-            throw new C0467c0("Fragment " + this + " did not call through to super.onResume()");
-        }
-        C0516l c0516l = this.mLifecycleRegistry;
-        AbstractC0511g.b bVar = AbstractC0511g.b.ON_RESUME;
-        c0516l.m3879h(bVar);
-        if (this.mView != null) {
-            this.mViewLifecycleOwner.m3803a(bVar);
-        }
-        this.mChildFragmentManager.m3456R();
-    }
-
-    void performSaveInstanceState(Bundle bundle) {
-        onSaveInstanceState(bundle);
-        this.mSavedStateRegistryController.m4701d(bundle);
-        Parcelable parcelableM3494m1 = this.mChildFragmentManager.m3494m1();
-        if (parcelableM3494m1 != null) {
-            bundle.putParcelable("android:support:fragments", parcelableM3494m1);
-        }
-    }
-
-    void performStart() {
-        this.mChildFragmentManager.m3464V0();
-        this.mChildFragmentManager.m3472b0(true);
-        this.mState = 5;
-        this.mCalled = false;
-        onStart();
-        if (!this.mCalled) {
-            throw new C0467c0("Fragment " + this + " did not call through to super.onStart()");
-        }
-        C0516l c0516l = this.mLifecycleRegistry;
-        AbstractC0511g.b bVar = AbstractC0511g.b.ON_START;
-        c0516l.m3879h(bVar);
-        if (this.mView != null) {
-            this.mViewLifecycleOwner.m3803a(bVar);
-        }
-        this.mChildFragmentManager.m3458S();
-    }
-
-    void performStop() {
-        this.mChildFragmentManager.m3461U();
-        if (this.mView != null) {
-            this.mViewLifecycleOwner.m3803a(AbstractC0511g.b.ON_STOP);
-        }
-        this.mLifecycleRegistry.m3879h(AbstractC0511g.b.ON_STOP);
-        this.mState = 4;
-        this.mCalled = false;
-        onStop();
-        if (this.mCalled) {
-            return;
-        }
-        throw new C0467c0("Fragment " + this + " did not call through to super.onStop()");
-    }
-
-    void performViewCreated() {
-        onViewCreated(this.mView, this.mSavedFragmentState);
-        this.mChildFragmentManager.m3463V();
-    }
-
-    public void postponeEnterTransition() {
-        ensureAnimationInfo().f3089s = true;
-    }
-
-    public final <I, O> AbstractC0051b<I> registerForActivityResult(AbstractC0053a<I, O> abstractC0053a, InterfaceC0050a<O> interfaceC0050a) {
-        return prepareCallInternal(abstractC0053a, new C0434e(), interfaceC0050a);
-    }
-
-    public void registerForContextMenu(View view) {
-        view.setOnCreateContextMenuListener(this);
-    }
-
-    @Deprecated
-    public final void requestPermissions(String[] strArr, int i2) {
-        if (this.mHost != null) {
-            getParentFragmentManager().m3450N0(this, strArr, i2);
+    public void u2(Intent intent, Bundle bundle) {
+        s<?> sVar = this.f25475X;
+        if (sVar != null) {
+            sVar.q(this, intent, -1, bundle);
             return;
         }
         throw new IllegalStateException("Fragment " + this + " not attached to Activity");
     }
 
-    public final ActivityC0468d requireActivity() {
-        ActivityC0468d activity = getActivity();
-        if (activity != null) {
-            return activity;
+    @Override // android.view.c0
+    public b0 v() {
+        if (this.f25474W == null) {
+            throw new IllegalStateException("Can't access ViewModels from detached fragment");
         }
-        throw new IllegalStateException("Fragment " + this + " not attached to an activity.");
+        if (l0() != AbstractC2106m.b.INITIALIZED.ordinal()) {
+            return this.f25474W.L0(this);
+        }
+        throw new IllegalStateException("Calling getViewModelStore() before a Fragment reaches onCreate() when using setMaxLifecycle(INITIALIZED) is not supported");
     }
 
-    public final Bundle requireArguments() {
-        Bundle arguments = getArguments();
-        if (arguments != null) {
-            return arguments;
+    public Object v0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return null;
         }
-        throw new IllegalStateException("Fragment " + this + " does not have any arguments.");
+        Object obj = jVar.f25530k;
+        return obj == f25447F0 ? b0() : obj;
     }
 
-    public final Context requireContext() {
-        Context context = getContext();
-        if (context != null) {
-            return context;
-        }
-        throw new IllegalStateException("Fragment " + this + " not attached to a context.");
+    public void v1() {
+        this.f25487j0 = true;
     }
 
     @Deprecated
-    public final FragmentManager requireFragmentManager() {
-        return getParentFragmentManager();
-    }
-
-    public final Object requireHost() {
-        Object host = getHost();
-        if (host != null) {
-            return host;
-        }
-        throw new IllegalStateException("Fragment " + this + " not attached to a host.");
-    }
-
-    public final Fragment requireParentFragment() {
-        Fragment parentFragment = getParentFragment();
-        if (parentFragment != null) {
-            return parentFragment;
-        }
-        if (getContext() == null) {
-            throw new IllegalStateException("Fragment " + this + " is not attached to any Fragment or host");
-        }
-        throw new IllegalStateException("Fragment " + this + " is not a child Fragment, it is directly attached to " + getContext());
-    }
-
-    public final View requireView() {
-        View view = getView();
-        if (view != null) {
-            return view;
-        }
-        throw new IllegalStateException("Fragment " + this + " did not return a View from onCreateView() or this was called before onCreateView().");
-    }
-
-    void restoreChildFragmentState(Bundle bundle) {
-        Parcelable parcelable;
-        if (bundle == null || (parcelable = bundle.getParcelable("android:support:fragments")) == null) {
+    public void v2(Intent intent, int i10, Bundle bundle) {
+        if (this.f25475X != null) {
+            o0().e1(this, intent, i10, bundle);
             return;
         }
-        this.mChildFragmentManager.m3491k1(parcelable);
-        this.mChildFragmentManager.m3432D();
+        throw new IllegalStateException("Fragment " + this + " not attached to Activity");
     }
 
-    final void restoreViewState(Bundle bundle) {
-        SparseArray<Parcelable> sparseArray = this.mSavedViewState;
-        if (sparseArray != null) {
-            this.mView.restoreHierarchyState(sparseArray);
-            this.mSavedViewState = null;
+    public Object w0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return null;
         }
-        if (this.mView != null) {
-            this.mViewLifecycleOwner.m3806d(this.mSavedViewRegistryState);
-            this.mSavedViewRegistryState = null;
+        return jVar.f25533n;
+    }
+
+    public void w2() {
+        if (this.f25492o0 == null || !Q().f25541v) {
+            return;
         }
-        this.mCalled = false;
-        onViewStateRestored(bundle);
-        if (this.mCalled) {
-            if (this.mView != null) {
-                this.mViewLifecycleOwner.m3803a(AbstractC0511g.b.ON_CREATE);
-            }
+        if (this.f25475X == null) {
+            Q().f25541v = false;
+        } else if (Looper.myLooper() != this.f25475X.getHandler().getLooper()) {
+            this.f25475X.getHandler().postAtFrontOfQueue(new d());
         } else {
-            throw new C0467c0("Fragment " + this + " did not call through to super.onViewStateRestored()");
+            N(true);
         }
     }
 
-    public void setAllowEnterTransitionOverlap(boolean z) {
-        ensureAnimationInfo().f3084n = Boolean.valueOf(z);
-    }
-
-    public void setAllowReturnTransitionOverlap(boolean z) {
-        ensureAnimationInfo().f3083m = Boolean.valueOf(z);
-    }
-
-    void setAnimatingAway(View view) {
-        ensureAnimationInfo().f3071a = view;
-    }
-
-    void setAnimator(Animator animator) {
-        ensureAnimationInfo().f3072b = animator;
-    }
-
-    public void setArguments(Bundle bundle) {
-        if (this.mFragmentManager != null && isStateSaved()) {
-            throw new IllegalStateException("Fragment already added and state has been saved");
+    public Object x0() {
+        j jVar = this.f25492o0;
+        if (jVar == null) {
+            return null;
         }
-        this.mArguments = bundle;
+        Object obj = jVar.f25534o;
+        return obj == f25447F0 ? w0() : obj;
     }
 
-    public void setEnterSharedElementCallback(AbstractC0251o abstractC0251o) {
-        ensureAnimationInfo().f3085o = abstractC0251o;
+    public void x1() {
+        this.f25487j0 = true;
     }
 
-    public void setEnterTransition(Object obj) {
-        ensureAnimationInfo().f3077g = obj;
+    ArrayList<String> y0() {
+        ArrayList<String> arrayList;
+        j jVar = this.f25492o0;
+        return (jVar == null || (arrayList = jVar.f25527h) == null) ? new ArrayList<>() : arrayList;
     }
 
-    public void setExitSharedElementCallback(AbstractC0251o abstractC0251o) {
-        ensureAnimationInfo().f3086p = abstractC0251o;
+    public void y1() {
+        this.f25487j0 = true;
     }
 
-    public void setExitTransition(Object obj) {
-        ensureAnimationInfo().f3079i = obj;
-    }
-
-    void setFocusedView(View view) {
-        ensureAnimationInfo().f3088r = view;
-    }
-
-    public void setHasOptionsMenu(boolean z) {
-        if (this.mHasMenu != z) {
-            this.mHasMenu = z;
-            if (!isAdded() || isHidden()) {
-                return;
-            }
-            this.mHost.mo3619p();
-        }
-    }
-
-    void setHideReplaced(boolean z) {
-        ensureAnimationInfo().f3091u = z;
-    }
-
-    public void setInitialSavedState(SavedState savedState) {
-        Bundle bundle;
-        if (this.mFragmentManager != null) {
-            throw new IllegalStateException("Fragment already added");
-        }
-        if (savedState == null || (bundle = savedState.f3054f) == null) {
-            bundle = null;
-        }
-        this.mSavedFragmentState = bundle;
-    }
-
-    public void setMenuVisibility(boolean z) {
-        if (this.mMenuVisible != z) {
-            this.mMenuVisible = z;
-            if (this.mHasMenu && isAdded() && !isHidden()) {
-                this.mHost.mo3619p();
-            }
-        }
-    }
-
-    void setNextAnim(int i2) {
-        if (this.mAnimationInfo == null && i2 == 0) {
-            return;
-        }
-        ensureAnimationInfo().f3073c = i2;
-    }
-
-    void setNextTransition(int i2) {
-        if (this.mAnimationInfo == null && i2 == 0) {
-            return;
-        }
-        ensureAnimationInfo();
-        this.mAnimationInfo.f3074d = i2;
-    }
-
-    void setOnStartEnterTransitionListener(InterfaceC0440k interfaceC0440k) {
-        ensureAnimationInfo();
-        C0438i c0438i = this.mAnimationInfo;
-        InterfaceC0440k interfaceC0440k2 = c0438i.f3090t;
-        if (interfaceC0440k == interfaceC0440k2) {
-            return;
-        }
-        if (interfaceC0440k != null && interfaceC0440k2 != null) {
-            throw new IllegalStateException("Trying to set a replacement startPostponedEnterTransition on " + this);
-        }
-        if (c0438i.f3089s) {
-            c0438i.f3090t = interfaceC0440k;
-        }
-        if (interfaceC0440k != null) {
-            interfaceC0440k.mo3389a();
-        }
-    }
-
-    void setPostOnViewCreatedAlpha(float f2) {
-        ensureAnimationInfo().f3087q = f2;
-    }
-
-    public void setReenterTransition(Object obj) {
-        ensureAnimationInfo().f3080j = obj;
-    }
-
-    @Deprecated
-    public void setRetainInstance(boolean z) {
-        this.mRetainInstance = z;
-        FragmentManager fragmentManager = this.mFragmentManager;
-        if (fragmentManager == null) {
-            this.mRetainInstanceChangedWhileDetached = true;
-        } else if (z) {
-            fragmentManager.m3484i(this);
-        } else {
-            fragmentManager.m3486i1(this);
-        }
-    }
-
-    public void setReturnTransition(Object obj) {
-        ensureAnimationInfo().f3078h = obj;
-    }
-
-    public void setSharedElementEnterTransition(Object obj) {
-        ensureAnimationInfo().f3081k = obj;
-    }
-
-    void setSharedElementNames(ArrayList<String> arrayList, ArrayList<String> arrayList2) {
-        ensureAnimationInfo();
-        C0438i c0438i = this.mAnimationInfo;
-        c0438i.f3075e = arrayList;
-        c0438i.f3076f = arrayList2;
-    }
-
-    public void setSharedElementReturnTransition(Object obj) {
-        ensureAnimationInfo().f3082l = obj;
-    }
-
-    @Deprecated
-    public void setTargetFragment(Fragment fragment, int i2) {
-        FragmentManager fragmentManager = this.mFragmentManager;
-        FragmentManager fragmentManager2 = fragment != null ? fragment.mFragmentManager : null;
-        if (fragmentManager != null && fragmentManager2 != null && fragmentManager != fragmentManager2) {
-            throw new IllegalArgumentException("Fragment " + fragment + " must share the same FragmentManager to be set as a target fragment");
-        }
-        for (Fragment targetFragment = fragment; targetFragment != null; targetFragment = targetFragment.getTargetFragment()) {
-            if (targetFragment.equals(this)) {
-                throw new IllegalArgumentException("Setting " + fragment + " as the target of " + this + " would create a target cycle");
-            }
-        }
-        if (fragment == null) {
-            this.mTargetWho = null;
-            this.mTarget = null;
-        } else if (this.mFragmentManager == null || fragment.mFragmentManager == null) {
-            this.mTargetWho = null;
-            this.mTarget = fragment;
-        } else {
-            this.mTargetWho = fragment.mWho;
-            this.mTarget = null;
-        }
-        this.mTargetRequestCode = i2;
-    }
-
-    @Deprecated
-    public void setUserVisibleHint(boolean z) {
-        if (!this.mUserVisibleHint && z && this.mState < 5 && this.mFragmentManager != null && isAdded() && this.mIsCreated) {
-            FragmentManager fragmentManager = this.mFragmentManager;
-            fragmentManager.m3465W0(fragmentManager.m3511w(this));
-        }
-        this.mUserVisibleHint = z;
-        this.mDeferStart = this.mState < 5 && !z;
-        if (this.mSavedFragmentState != null) {
-            this.mSavedUserVisibleHint = Boolean.valueOf(z);
-        }
-    }
-
-    public boolean shouldShowRequestPermissionRationale(String str) {
-        AbstractC0474j<?> abstractC0474j = this.mHost;
-        if (abstractC0474j != null) {
-            return abstractC0474j.mo3618m(str);
-        }
-        return false;
-    }
-
-    public void startActivity(@SuppressLint({"UnknownNullness"}) Intent intent) {
-        startActivity(intent, null);
-    }
-
-    @Deprecated
-    public void startActivityForResult(@SuppressLint({"UnknownNullness"}) Intent intent, int i2) {
-        startActivityForResult(intent, i2, null);
-    }
-
-    @Deprecated
-    public void startIntentSenderForResult(@SuppressLint({"UnknownNullness"}) IntentSender intentSender, int i2, Intent intent, int i3, int i4, int i5, Bundle bundle) throws IntentSender.SendIntentException {
-        if (this.mHost == null) {
-            throw new IllegalStateException("Fragment " + this + " not attached to Activity");
-        }
-        if (FragmentManager.m3392H0(2)) {
-            Log.v("FragmentManager", "Fragment " + this + " received the following in startIntentSenderForResult() requestCode: " + i2 + " IntentSender: " + intentSender + " fillInIntent: " + intent + " options: " + bundle);
-        }
-        getParentFragmentManager().m3454P0(this, intentSender, i2, intent, i3, i4, i5, bundle);
-    }
-
-    public void startPostponedEnterTransition() {
-        if (this.mAnimationInfo == null || !ensureAnimationInfo().f3089s) {
-            return;
-        }
-        if (this.mHost == null) {
-            ensureAnimationInfo().f3089s = false;
-        } else if (Looper.myLooper() != this.mHost.m3655g().getLooper()) {
-            this.mHost.m3655g().postAtFrontOfQueue(new RunnableC0431b());
-        } else {
-            callStartTransitionListener(true);
-        }
-    }
-
-    public String toString() {
-        StringBuilder sb = new StringBuilder(128);
-        sb.append(getClass().getSimpleName());
-        sb.append("{");
-        sb.append(Integer.toHexString(System.identityHashCode(this)));
-        sb.append("}");
-        sb.append(" (");
-        sb.append(this.mWho);
-        sb.append(")");
-        if (this.mFragmentId != 0) {
-            sb.append(" id=0x");
-            sb.append(Integer.toHexString(this.mFragmentId));
-        }
-        if (this.mTag != null) {
-            sb.append(" ");
-            sb.append(this.mTag);
-        }
-        sb.append('}');
-        return sb.toString();
-    }
-
-    public void unregisterForContextMenu(View view) {
-        view.setOnCreateContextMenuListener(null);
+    ArrayList<String> z0() {
+        ArrayList<String> arrayList;
+        j jVar = this.f25492o0;
+        return (jVar == null || (arrayList = jVar.f25528i) == null) ? new ArrayList<>() : arrayList;
     }
 
     @SuppressLint({"BanParcelableUsage, ParcelClassLoader"})
-    public static class SavedState implements Parcelable {
-        public static final Parcelable.Creator<SavedState> CREATOR = new C0429a();
+    public static class l implements Parcelable {
+        public static final Parcelable.Creator<l> CREATOR = new a();
 
-        /* renamed from: f */
-        final Bundle f3054f;
+        /* renamed from: B, reason: collision with root package name */
+        final Bundle f25542B;
 
-        /* renamed from: androidx.fragment.app.Fragment$SavedState$a */
-        class C0429a implements Parcelable.ClassLoaderCreator<SavedState> {
-            C0429a() {
+        class a implements Parcelable.ClassLoaderCreator<l> {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
             /* renamed from: a, reason: merged with bridge method [inline-methods] */
-            public SavedState createFromParcel(Parcel parcel) {
-                return new SavedState(parcel, null);
+            public l createFromParcel(Parcel parcel) {
+                return new l(parcel, null);
             }
 
             @Override // android.os.Parcelable.ClassLoaderCreator
             /* renamed from: b, reason: merged with bridge method [inline-methods] */
-            public SavedState createFromParcel(Parcel parcel, ClassLoader classLoader) {
-                return new SavedState(parcel, classLoader);
+            public l createFromParcel(Parcel parcel, ClassLoader classLoader) {
+                return new l(parcel, classLoader);
             }
 
             @Override // android.os.Parcelable.Creator
             /* renamed from: c, reason: merged with bridge method [inline-methods] */
-            public SavedState[] newArray(int i2) {
-                return new SavedState[i2];
+            public l[] newArray(int i10) {
+                return new l[i10];
             }
         }
 
-        SavedState(Bundle bundle) {
-            this.f3054f = bundle;
+        l(Bundle bundle) {
+            this.f25542B = bundle;
         }
 
         @Override // android.os.Parcelable
@@ -1866,13 +1831,13 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
 
         @Override // android.os.Parcelable
-        public void writeToParcel(Parcel parcel, int i2) {
-            parcel.writeBundle(this.f3054f);
+        public void writeToParcel(Parcel parcel, int i10) {
+            parcel.writeBundle(this.f25542B);
         }
 
-        SavedState(Parcel parcel, ClassLoader classLoader) {
+        l(Parcel parcel, ClassLoader classLoader) {
             Bundle bundle = parcel.readBundle();
-            this.f3054f = bundle;
+            this.f25542B = bundle;
             if (classLoader == null || bundle == null) {
                 return;
             }
@@ -1880,93 +1845,50 @@ public class Fragment implements ComponentCallbacks, View.OnCreateContextMenuLis
         }
     }
 
-    @Deprecated
-    public static Fragment instantiate(Context context, String str, Bundle bundle) throws IllegalAccessException, java.lang.InstantiationException, IllegalArgumentException, InvocationTargetException {
-        try {
-            Fragment fragmentNewInstance = C0473i.m3652d(context.getClassLoader(), str).getConstructor(new Class[0]).newInstance(new Object[0]);
-            if (bundle != null) {
-                bundle.setClassLoader(fragmentNewInstance.getClass().getClassLoader());
-                fragmentNewInstance.setArguments(bundle);
-            }
-            return fragmentNewInstance;
-        } catch (IllegalAccessException e2) {
-            throw new InstantiationException("Unable to instantiate fragment " + str + ": make sure class name exists, is public, and has an empty constructor that is public", e2);
-        } catch (java.lang.InstantiationException e3) {
-            throw new InstantiationException("Unable to instantiate fragment " + str + ": make sure class name exists, is public, and has an empty constructor that is public", e3);
-        } catch (NoSuchMethodException e4) {
-            throw new InstantiationException("Unable to instantiate fragment " + str + ": could not find Fragment constructor", e4);
-        } catch (InvocationTargetException e5) {
-            throw new InstantiationException("Unable to instantiate fragment " + str + ": calling Fragment constructor caused an exception", e5);
-        }
-    }
-
-    public final String getString(int i2, Object... objArr) {
-        return getResources().getString(i2, objArr);
-    }
-
-    public final void postponeEnterTransition(long j2, TimeUnit timeUnit) {
-        ensureAnimationInfo().f3089s = true;
-        FragmentManager fragmentManager = this.mFragmentManager;
-        Handler handlerM3655g = fragmentManager != null ? fragmentManager.m3512w0().m3655g() : new Handler(Looper.getMainLooper());
-        handlerM3655g.removeCallbacks(this.mPostponedDurationRunnable);
-        handlerM3655g.postDelayed(this.mPostponedDurationRunnable, timeUnit.toMillis(j2));
-    }
-
-    public final <I, O> AbstractC0051b<I> registerForActivityResult(AbstractC0053a<I, O> abstractC0053a, ActivityResultRegistry activityResultRegistry, InterfaceC0050a<O> interfaceC0050a) {
-        return prepareCallInternal(abstractC0053a, new C0435f(activityResultRegistry), interfaceC0050a);
-    }
-
-    public void startActivity(@SuppressLint({"UnknownNullness"}) Intent intent, Bundle bundle) {
-        AbstractC0474j<?> abstractC0474j = this.mHost;
-        if (abstractC0474j != null) {
-            abstractC0474j.m3657n(this, intent, -1, bundle);
-            return;
-        }
-        throw new IllegalStateException("Fragment " + this + " not attached to Activity");
-    }
-
-    @Deprecated
-    public void startActivityForResult(@SuppressLint({"UnknownNullness"}) Intent intent, int i2, Bundle bundle) {
-        if (this.mHost != null) {
-            getParentFragmentManager().m3452O0(this, intent, i2, bundle);
-            return;
-        }
-        throw new IllegalStateException("Fragment " + this + " not attached to Activity");
-    }
-
-    @Deprecated
-    public LayoutInflater getLayoutInflater(Bundle bundle) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
-        AbstractC0474j<?> abstractC0474j = this.mHost;
-        if (abstractC0474j != null) {
-            LayoutInflater layoutInflaterMo3616j = abstractC0474j.mo3616j();
-            C0296f.m2043b(layoutInflaterMo3616j, this.mChildFragmentManager.m3513x0());
-            return layoutInflaterMo3616j;
-        }
-        throw new IllegalStateException("onGetLayoutInflater() cannot be executed until the Fragment is attached to the FragmentManager.");
-    }
-
-    @Deprecated
-    public void onAttach(Activity activity) {
-        this.mCalled = true;
-    }
-
-    @Deprecated
-    public void onInflate(Activity activity, AttributeSet attributeSet, Bundle bundle) {
-        this.mCalled = true;
-    }
-
-    private void restoreViewState() {
-        if (FragmentManager.m3392H0(3)) {
-            Log.d("FragmentManager", "moveto RESTORE_VIEW_STATE: " + this);
-        }
-        if (this.mView != null) {
-            restoreViewState(this.mSavedFragmentState);
-        }
-        this.mSavedFragmentState = null;
-    }
-
-    public Fragment(int i2) {
+    public Fragment(int i10) {
         this();
-        this.mContentLayoutId = i2;
+        this.f25450B0 = i10;
+    }
+
+    @Deprecated
+    public void g1() {
+    }
+
+    @Deprecated
+    public void Y0(Fragment fragment) {
+    }
+
+    public void k1(boolean z10) {
+    }
+
+    public void n1(boolean z10) {
+    }
+
+    @Deprecated
+    public void p1(Menu menu) {
+    }
+
+    public void r1(boolean z10) {
+    }
+
+    @Deprecated
+    public void s1(Menu menu) {
+    }
+
+    public void t1(boolean z10) {
+    }
+
+    public void w1(Bundle bundle) {
+    }
+
+    @Deprecated
+    public void d1(Menu menu, MenuInflater menuInflater) {
+    }
+
+    public void z1(View view, Bundle bundle) {
+    }
+
+    @Deprecated
+    public void u1(int i10, String[] strArr, int[] iArr) {
     }
 }

@@ -1,5 +1,7 @@
 package com.google.android.material.transformation;
 
+import D7.b;
+import D7.i;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
@@ -13,96 +15,89 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
-import p241e.p254e.p256b.p271c.p273m.C8920b;
-import p241e.p254e.p256b.p271c.p273m.C8927i;
 
 @Deprecated
 /* loaded from: classes2.dex */
 public class FabTransformationScrimBehavior extends ExpandableTransformationBehavior {
 
-    /* renamed from: c */
-    private final C8927i f30628c;
+    /* renamed from: D, reason: collision with root package name */
+    private final i f37558D;
 
-    /* renamed from: d */
-    private final C8927i f30629d;
+    /* renamed from: E, reason: collision with root package name */
+    private final i f37559E;
 
-    /* renamed from: com.google.android.material.transformation.FabTransformationScrimBehavior$a */
-    class C8087a extends AnimatorListenerAdapter {
+    class a extends AnimatorListenerAdapter {
 
-        /* renamed from: a */
-        final /* synthetic */ boolean f30630a;
+        /* renamed from: a, reason: collision with root package name */
+        final /* synthetic */ boolean f37560a;
 
-        /* renamed from: b */
-        final /* synthetic */ View f30631b;
+        /* renamed from: b, reason: collision with root package name */
+        final /* synthetic */ View f37561b;
 
-        C8087a(boolean z, View view) {
-            this.f30630a = z;
-            this.f30631b = view;
+        a(boolean z10, View view) {
+            this.f37560a = z10;
+            this.f37561b = view;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
-            if (this.f30630a) {
+            if (this.f37560a) {
                 return;
             }
-            this.f30631b.setVisibility(4);
+            this.f37561b.setVisibility(4);
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationStart(Animator animator) {
-            if (this.f30630a) {
-                this.f30631b.setVisibility(0);
+            if (this.f37560a) {
+                this.f37561b.setVisibility(0);
             }
         }
     }
 
     public FabTransformationScrimBehavior() {
-        this.f30628c = new C8927i(75L, 150L);
-        this.f30629d = new C8927i(0L, 150L);
+        this.f37558D = new i(75L, 150L);
+        this.f37559E = new i(0L, 150L);
     }
 
-    /* renamed from: K */
-    private void m24935K(View view, boolean z, boolean z2, List<Animator> list, List<Animator.AnimatorListener> list2) {
+    private void O(View view, boolean z10, boolean z11, List<Animator> list, List<Animator.AnimatorListener> list2) {
         ObjectAnimator objectAnimatorOfFloat;
-        C8927i c8927i = z ? this.f30628c : this.f30629d;
-        if (z) {
-            if (!z2) {
+        i iVar = z10 ? this.f37558D : this.f37559E;
+        if (z10) {
+            if (!z11) {
                 view.setAlpha(0.0f);
             }
             objectAnimatorOfFloat = ObjectAnimator.ofFloat(view, (Property<View, Float>) View.ALPHA, 1.0f);
         } else {
             objectAnimatorOfFloat = ObjectAnimator.ofFloat(view, (Property<View, Float>) View.ALPHA, 0.0f);
         }
-        c8927i.m28451a(objectAnimatorOfFloat);
+        iVar.a(objectAnimatorOfFloat);
         list.add(objectAnimatorOfFloat);
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: D */
-    public boolean mo1446D(CoordinatorLayout coordinatorLayout, View view, MotionEvent motionEvent) {
-        return super.mo1446D(coordinatorLayout, view, motionEvent);
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public boolean H(CoordinatorLayout coordinatorLayout, View view, MotionEvent motionEvent) {
+        return super.H(coordinatorLayout, view, motionEvent);
     }
 
     @Override // com.google.android.material.transformation.ExpandableTransformationBehavior
-    /* renamed from: J */
-    protected AnimatorSet mo24912J(View view, View view2, boolean z, boolean z2) {
+    protected AnimatorSet N(View view, View view2, boolean z10, boolean z11) {
         ArrayList arrayList = new ArrayList();
-        m24935K(view2, z, z2, arrayList, new ArrayList());
+        O(view2, z10, z11, arrayList, new ArrayList());
         AnimatorSet animatorSet = new AnimatorSet();
-        C8920b.m28431a(animatorSet, arrayList);
-        animatorSet.addListener(new C8087a(z, view2));
+        b.a(animatorSet, arrayList);
+        animatorSet.addListener(new a(z10, view2));
         return animatorSet;
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: e */
-    public boolean mo1451e(CoordinatorLayout coordinatorLayout, View view, View view2) {
+    @Override // com.google.android.material.transformation.ExpandableBehavior, androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public boolean i(CoordinatorLayout coordinatorLayout, View view, View view2) {
         return view2 instanceof FloatingActionButton;
     }
 
     public FabTransformationScrimBehavior(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.f30628c = new C8927i(75L, 150L);
-        this.f30629d = new C8927i(0L, 150L);
+        this.f37558D = new i(75L, 150L);
+        this.f37559E = new i(0L, 150L);
     }
 }

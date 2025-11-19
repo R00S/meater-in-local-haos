@@ -14,6 +14,7 @@ import android.graphics.Shader;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Parcelable;
 import android.text.TextUtils;
 import android.util.Log;
@@ -25,196 +26,272 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.Charset;
+import r1.C4337d;
 
 /* loaded from: classes.dex */
 public class IconCompat extends CustomVersionedParcelable {
 
-    /* renamed from: a */
-    static final PorterDuff.Mode f2224a = PorterDuff.Mode.SRC_IN;
+    /* renamed from: k, reason: collision with root package name */
+    static final PorterDuff.Mode f24728k = PorterDuff.Mode.SRC_IN;
 
-    /* renamed from: b */
-    public int f2225b;
+    /* renamed from: a, reason: collision with root package name */
+    public int f24729a;
 
-    /* renamed from: c */
-    Object f2226c;
+    /* renamed from: b, reason: collision with root package name */
+    Object f24730b;
 
-    /* renamed from: d */
-    public byte[] f2227d;
+    /* renamed from: c, reason: collision with root package name */
+    public byte[] f24731c;
 
-    /* renamed from: e */
-    public Parcelable f2228e;
+    /* renamed from: d, reason: collision with root package name */
+    public Parcelable f24732d;
 
-    /* renamed from: f */
-    public int f2229f;
+    /* renamed from: e, reason: collision with root package name */
+    public int f24733e;
 
-    /* renamed from: g */
-    public int f2230g;
+    /* renamed from: f, reason: collision with root package name */
+    public int f24734f;
 
-    /* renamed from: h */
-    public ColorStateList f2231h;
+    /* renamed from: g, reason: collision with root package name */
+    public ColorStateList f24735g;
 
-    /* renamed from: i */
-    PorterDuff.Mode f2232i;
+    /* renamed from: h, reason: collision with root package name */
+    PorterDuff.Mode f24736h;
 
-    /* renamed from: j */
-    public String f2233j;
+    /* renamed from: i, reason: collision with root package name */
+    public String f24737i;
 
-    /* renamed from: k */
-    public String f2234k;
+    /* renamed from: j, reason: collision with root package name */
+    public String f24738j;
 
-    public IconCompat() {
-        this.f2225b = -1;
-        this.f2227d = null;
-        this.f2228e = null;
-        this.f2229f = 0;
-        this.f2230g = 0;
-        this.f2231h = null;
-        this.f2232i = f2224a;
-        this.f2233j = null;
+    static class a {
+        static int a(Object obj) {
+            if (Build.VERSION.SDK_INT >= 28) {
+                return c.a(obj);
+            }
+            try {
+                return ((Integer) obj.getClass().getMethod("getResId", null).invoke(obj, null)).intValue();
+            } catch (IllegalAccessException e10) {
+                Log.e("IconCompat", "Unable to get icon resource", e10);
+                return 0;
+            } catch (NoSuchMethodException e11) {
+                Log.e("IconCompat", "Unable to get icon resource", e11);
+                return 0;
+            } catch (InvocationTargetException e12) {
+                Log.e("IconCompat", "Unable to get icon resource", e12);
+                return 0;
+            }
+        }
+
+        static String b(Object obj) {
+            if (Build.VERSION.SDK_INT >= 28) {
+                return c.b(obj);
+            }
+            try {
+                return (String) obj.getClass().getMethod("getResPackage", null).invoke(obj, null);
+            } catch (IllegalAccessException e10) {
+                Log.e("IconCompat", "Unable to get icon package", e10);
+                return null;
+            } catch (NoSuchMethodException e11) {
+                Log.e("IconCompat", "Unable to get icon package", e11);
+                return null;
+            } catch (InvocationTargetException e12) {
+                Log.e("IconCompat", "Unable to get icon package", e12);
+                return null;
+            }
+        }
+
+        static int c(Object obj) {
+            if (Build.VERSION.SDK_INT >= 28) {
+                return c.c(obj);
+            }
+            try {
+                return ((Integer) obj.getClass().getMethod("getType", null).invoke(obj, null)).intValue();
+            } catch (IllegalAccessException e10) {
+                Log.e("IconCompat", "Unable to get icon type " + obj, e10);
+                return -1;
+            } catch (NoSuchMethodException e11) {
+                Log.e("IconCompat", "Unable to get icon type " + obj, e11);
+                return -1;
+            } catch (InvocationTargetException e12) {
+                Log.e("IconCompat", "Unable to get icon type " + obj, e12);
+                return -1;
+            }
+        }
+
+        static Uri d(Object obj) {
+            if (Build.VERSION.SDK_INT >= 28) {
+                return c.d(obj);
+            }
+            try {
+                return (Uri) obj.getClass().getMethod("getUri", null).invoke(obj, null);
+            } catch (IllegalAccessException e10) {
+                Log.e("IconCompat", "Unable to get icon uri", e10);
+                return null;
+            } catch (NoSuchMethodException e11) {
+                Log.e("IconCompat", "Unable to get icon uri", e11);
+                return null;
+            } catch (InvocationTargetException e12) {
+                Log.e("IconCompat", "Unable to get icon uri", e12);
+                return null;
+            }
+        }
+
+        static Icon e(IconCompat iconCompat, Context context) {
+            Icon iconCreateWithBitmap;
+            switch (iconCompat.f24729a) {
+                case -1:
+                    return (Icon) iconCompat.f24730b;
+                case 0:
+                default:
+                    throw new IllegalArgumentException("Unknown type");
+                case 1:
+                    iconCreateWithBitmap = Icon.createWithBitmap((Bitmap) iconCompat.f24730b);
+                    break;
+                case 2:
+                    iconCreateWithBitmap = Icon.createWithResource(iconCompat.g(), iconCompat.f24733e);
+                    break;
+                case 3:
+                    iconCreateWithBitmap = Icon.createWithData((byte[]) iconCompat.f24730b, iconCompat.f24733e, iconCompat.f24734f);
+                    break;
+                case 4:
+                    iconCreateWithBitmap = Icon.createWithContentUri((String) iconCompat.f24730b);
+                    break;
+                case 5:
+                    iconCreateWithBitmap = b.a((Bitmap) iconCompat.f24730b);
+                    break;
+                case 6:
+                    if (Build.VERSION.SDK_INT >= 30) {
+                        iconCreateWithBitmap = d.a(iconCompat.i());
+                        break;
+                    } else {
+                        if (context == null) {
+                            throw new IllegalArgumentException("Context is required to resolve the file uri of the icon: " + iconCompat.i());
+                        }
+                        InputStream inputStreamJ = iconCompat.j(context);
+                        if (inputStreamJ == null) {
+                            throw new IllegalStateException("Cannot load adaptive icon from uri: " + iconCompat.i());
+                        }
+                        iconCreateWithBitmap = b.a(BitmapFactory.decodeStream(inputStreamJ));
+                        break;
+                    }
+            }
+            ColorStateList colorStateList = iconCompat.f24735g;
+            if (colorStateList != null) {
+                iconCreateWithBitmap.setTintList(colorStateList);
+            }
+            PorterDuff.Mode mode = iconCompat.f24736h;
+            if (mode != IconCompat.f24728k) {
+                iconCreateWithBitmap.setTintMode(mode);
+            }
+            return iconCreateWithBitmap;
+        }
     }
 
-    /* renamed from: a */
-    static Bitmap m1786a(Bitmap bitmap, boolean z) {
+    static class b {
+        static Icon a(Bitmap bitmap) {
+            return Icon.createWithAdaptiveBitmap(bitmap);
+        }
+    }
+
+    static class c {
+        static int a(Object obj) {
+            return ((Icon) obj).getResId();
+        }
+
+        static String b(Object obj) {
+            return ((Icon) obj).getResPackage();
+        }
+
+        static int c(Object obj) {
+            return ((Icon) obj).getType();
+        }
+
+        static Uri d(Object obj) {
+            return ((Icon) obj).getUri();
+        }
+    }
+
+    static class d {
+        static Icon a(Uri uri) {
+            return Icon.createWithAdaptiveBitmapContentUri(uri);
+        }
+    }
+
+    public IconCompat() {
+        this.f24729a = -1;
+        this.f24731c = null;
+        this.f24732d = null;
+        this.f24733e = 0;
+        this.f24734f = 0;
+        this.f24735g = null;
+        this.f24736h = f24728k;
+        this.f24737i = null;
+    }
+
+    static Bitmap a(Bitmap bitmap, boolean z10) {
         int iMin = (int) (Math.min(bitmap.getWidth(), bitmap.getHeight()) * 0.6666667f);
         Bitmap bitmapCreateBitmap = Bitmap.createBitmap(iMin, iMin, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmapCreateBitmap);
         Paint paint = new Paint(3);
-        float f2 = iMin;
-        float f3 = 0.5f * f2;
-        float f4 = 0.9166667f * f3;
-        if (z) {
-            float f5 = 0.010416667f * f2;
+        float f10 = iMin;
+        float f11 = 0.5f * f10;
+        float f12 = 0.9166667f * f11;
+        if (z10) {
+            float f13 = 0.010416667f * f10;
             paint.setColor(0);
-            paint.setShadowLayer(f5, 0.0f, f2 * 0.020833334f, 1023410176);
-            canvas.drawCircle(f3, f3, f4, paint);
-            paint.setShadowLayer(f5, 0.0f, 0.0f, 503316480);
-            canvas.drawCircle(f3, f3, f4, paint);
+            paint.setShadowLayer(f13, 0.0f, f10 * 0.020833334f, 1023410176);
+            canvas.drawCircle(f11, f11, f12, paint);
+            paint.setShadowLayer(f13, 0.0f, 0.0f, 503316480);
+            canvas.drawCircle(f11, f11, f12, paint);
             paint.clearShadowLayer();
         }
         paint.setColor(-16777216);
         Shader.TileMode tileMode = Shader.TileMode.CLAMP;
         BitmapShader bitmapShader = new BitmapShader(bitmap, tileMode, tileMode);
         Matrix matrix = new Matrix();
-        matrix.setTranslate((-(bitmap.getWidth() - iMin)) / 2, (-(bitmap.getHeight() - iMin)) / 2);
+        matrix.setTranslate((-(bitmap.getWidth() - iMin)) / 2.0f, (-(bitmap.getHeight() - iMin)) / 2.0f);
         bitmapShader.setLocalMatrix(matrix);
         paint.setShader(bitmapShader);
-        canvas.drawCircle(f3, f3, f4, paint);
+        canvas.drawCircle(f11, f11, f12, paint);
         canvas.setBitmap(null);
         return bitmapCreateBitmap;
     }
 
-    /* renamed from: b */
-    public static IconCompat m1787b(Bitmap bitmap) {
-        if (bitmap == null) {
-            throw new IllegalArgumentException("Bitmap must not be null.");
-        }
+    public static IconCompat b(Bitmap bitmap) {
+        C4337d.c(bitmap);
         IconCompat iconCompat = new IconCompat(1);
-        iconCompat.f2226c = bitmap;
+        iconCompat.f24730b = bitmap;
         return iconCompat;
     }
 
-    /* renamed from: c */
-    public static IconCompat m1788c(Resources resources, String str, int i2) {
-        if (str == null) {
-            throw new IllegalArgumentException("Package must not be null.");
-        }
-        if (i2 == 0) {
+    public static IconCompat c(Context context, int i10) {
+        C4337d.c(context);
+        return d(context.getResources(), context.getPackageName(), i10);
+    }
+
+    public static IconCompat d(Resources resources, String str, int i10) {
+        C4337d.c(str);
+        if (i10 == 0) {
             throw new IllegalArgumentException("Drawable resource ID must not be 0");
         }
         IconCompat iconCompat = new IconCompat(2);
-        iconCompat.f2229f = i2;
+        iconCompat.f24733e = i10;
         if (resources != null) {
             try {
-                iconCompat.f2226c = resources.getResourceName(i2);
+                iconCompat.f24730b = resources.getResourceName(i10);
             } catch (Resources.NotFoundException unused) {
                 throw new IllegalArgumentException("Icon resource cannot be found");
             }
         } else {
-            iconCompat.f2226c = str;
+            iconCompat.f24730b = str;
         }
-        iconCompat.f2234k = str;
+        iconCompat.f24738j = str;
         return iconCompat;
     }
 
-    /* renamed from: f */
-    private static int m1789f(Icon icon) {
-        if (Build.VERSION.SDK_INT >= 28) {
-            return icon.getResId();
-        }
-        try {
-            return ((Integer) icon.getClass().getMethod("getResId", new Class[0]).invoke(icon, new Object[0])).intValue();
-        } catch (IllegalAccessException e2) {
-            Log.e("IconCompat", "Unable to get icon resource", e2);
-            return 0;
-        } catch (NoSuchMethodException e3) {
-            Log.e("IconCompat", "Unable to get icon resource", e3);
-            return 0;
-        } catch (InvocationTargetException e4) {
-            Log.e("IconCompat", "Unable to get icon resource", e4);
-            return 0;
-        }
-    }
-
-    /* renamed from: h */
-    private static String m1790h(Icon icon) {
-        if (Build.VERSION.SDK_INT >= 28) {
-            return icon.getResPackage();
-        }
-        try {
-            return (String) icon.getClass().getMethod("getResPackage", new Class[0]).invoke(icon, new Object[0]);
-        } catch (IllegalAccessException e2) {
-            Log.e("IconCompat", "Unable to get icon package", e2);
-            return null;
-        } catch (NoSuchMethodException e3) {
-            Log.e("IconCompat", "Unable to get icon package", e3);
-            return null;
-        } catch (InvocationTargetException e4) {
-            Log.e("IconCompat", "Unable to get icon package", e4);
-            return null;
-        }
-    }
-
-    /* renamed from: j */
-    private static int m1791j(Icon icon) {
-        if (Build.VERSION.SDK_INT >= 28) {
-            return icon.getType();
-        }
-        try {
-            return ((Integer) icon.getClass().getMethod("getType", new Class[0]).invoke(icon, new Object[0])).intValue();
-        } catch (IllegalAccessException e2) {
-            Log.e("IconCompat", "Unable to get icon type " + icon, e2);
-            return -1;
-        } catch (NoSuchMethodException e3) {
-            Log.e("IconCompat", "Unable to get icon type " + icon, e3);
-            return -1;
-        } catch (InvocationTargetException e4) {
-            Log.e("IconCompat", "Unable to get icon type " + icon, e4);
-            return -1;
-        }
-    }
-
-    /* renamed from: l */
-    private static Uri m1792l(Icon icon) {
-        if (Build.VERSION.SDK_INT >= 28) {
-            return icon.getUri();
-        }
-        try {
-            return (Uri) icon.getClass().getMethod("getUri", new Class[0]).invoke(icon, new Object[0]);
-        } catch (IllegalAccessException e2) {
-            Log.e("IconCompat", "Unable to get icon uri", e2);
-            return null;
-        } catch (NoSuchMethodException e3) {
-            Log.e("IconCompat", "Unable to get icon uri", e3);
-            return null;
-        } catch (InvocationTargetException e4) {
-            Log.e("IconCompat", "Unable to get icon uri", e4);
-            return null;
-        }
-    }
-
-    /* renamed from: r */
-    private static String m1793r(int i2) {
-        switch (i2) {
+    private static String p(int i10) {
+        switch (i10) {
             case 1:
                 return "BITMAP";
             case 2:
@@ -232,291 +309,261 @@ public class IconCompat extends CustomVersionedParcelable {
         }
     }
 
-    /* renamed from: d */
-    public Bitmap m1794d() {
-        int i2 = this.f2225b;
-        if (i2 == -1 && Build.VERSION.SDK_INT >= 23) {
-            Object obj = this.f2226c;
+    public Bitmap e() {
+        int i10 = this.f24729a;
+        if (i10 == -1) {
+            Object obj = this.f24730b;
             if (obj instanceof Bitmap) {
                 return (Bitmap) obj;
             }
             return null;
         }
-        if (i2 == 1) {
-            return (Bitmap) this.f2226c;
+        if (i10 == 1) {
+            return (Bitmap) this.f24730b;
         }
-        if (i2 == 5) {
-            return m1786a((Bitmap) this.f2226c, true);
+        if (i10 == 5) {
+            return a((Bitmap) this.f24730b, true);
         }
         throw new IllegalStateException("called getBitmap() on " + this);
     }
 
-    /* renamed from: e */
-    public int m1795e() {
-        int i2 = this.f2225b;
-        if (i2 == -1 && Build.VERSION.SDK_INT >= 23) {
-            return m1789f((Icon) this.f2226c);
+    public int f() {
+        int i10 = this.f24729a;
+        if (i10 == -1) {
+            return a.a(this.f24730b);
         }
-        if (i2 == 2) {
-            return this.f2229f;
+        if (i10 == 2) {
+            return this.f24733e;
         }
         throw new IllegalStateException("called getResId() on " + this);
     }
 
-    /* renamed from: g */
-    public String m1796g() {
-        int i2 = this.f2225b;
-        if (i2 == -1 && Build.VERSION.SDK_INT >= 23) {
-            return m1790h((Icon) this.f2226c);
+    public String g() {
+        int i10 = this.f24729a;
+        if (i10 == -1) {
+            return a.b(this.f24730b);
         }
-        if (i2 == 2) {
-            return TextUtils.isEmpty(this.f2234k) ? ((String) this.f2226c).split(":", -1)[0] : this.f2234k;
+        if (i10 == 2) {
+            String str = this.f24738j;
+            return (str == null || TextUtils.isEmpty(str)) ? ((String) this.f24730b).split(":", -1)[0] : this.f24738j;
         }
         throw new IllegalStateException("called getResPackage() on " + this);
     }
 
-    /* renamed from: i */
-    public int m1797i() {
-        int i2 = this.f2225b;
-        return (i2 != -1 || Build.VERSION.SDK_INT < 23) ? i2 : m1791j((Icon) this.f2226c);
+    public int h() {
+        int i10 = this.f24729a;
+        return i10 == -1 ? a.c(this.f24730b) : i10;
     }
 
-    /* renamed from: k */
-    public Uri m1798k() {
-        int i2 = this.f2225b;
-        if (i2 == -1 && Build.VERSION.SDK_INT >= 23) {
-            return m1792l((Icon) this.f2226c);
+    public Uri i() {
+        int i10 = this.f24729a;
+        if (i10 == -1) {
+            return a.d(this.f24730b);
         }
-        if (i2 == 4 || i2 == 6) {
-            return Uri.parse((String) this.f2226c);
+        if (i10 == 4 || i10 == 6) {
+            return Uri.parse((String) this.f24730b);
         }
         throw new IllegalStateException("called getUri() on " + this);
     }
 
-    /* renamed from: m */
-    public InputStream m1799m(Context context) {
-        Uri uriM1798k = m1798k();
-        String scheme = uriM1798k.getScheme();
+    public InputStream j(Context context) {
+        Uri uriI = i();
+        String scheme = uriI.getScheme();
         if ("content".equals(scheme) || "file".equals(scheme)) {
             try {
-                return context.getContentResolver().openInputStream(uriM1798k);
-            } catch (Exception e2) {
-                Log.w("IconCompat", "Unable to load image from URI: " + uriM1798k, e2);
+                return context.getContentResolver().openInputStream(uriI);
+            } catch (Exception e10) {
+                Log.w("IconCompat", "Unable to load image from URI: " + uriI, e10);
                 return null;
             }
         }
         try {
-            return new FileInputStream(new File((String) this.f2226c));
-        } catch (FileNotFoundException e3) {
-            Log.w("IconCompat", "Unable to load image from path: " + uriM1798k, e3);
+            return new FileInputStream(new File((String) this.f24730b));
+        } catch (FileNotFoundException e11) {
+            Log.w("IconCompat", "Unable to load image from path: " + uriI, e11);
             return null;
         }
     }
 
-    /* renamed from: n */
-    public void m1800n() {
-        this.f2232i = PorterDuff.Mode.valueOf(this.f2233j);
-        switch (this.f2225b) {
+    public void k() {
+        this.f24736h = PorterDuff.Mode.valueOf(this.f24737i);
+        switch (this.f24729a) {
             case -1:
-                Parcelable parcelable = this.f2228e;
+                Parcelable parcelable = this.f24732d;
                 if (parcelable == null) {
                     throw new IllegalArgumentException("Invalid icon");
                 }
-                this.f2226c = parcelable;
+                this.f24730b = parcelable;
                 return;
             case 0:
             default:
                 return;
             case 1:
             case 5:
-                Parcelable parcelable2 = this.f2228e;
+                Parcelable parcelable2 = this.f24732d;
                 if (parcelable2 != null) {
-                    this.f2226c = parcelable2;
+                    this.f24730b = parcelable2;
                     return;
                 }
-                byte[] bArr = this.f2227d;
-                this.f2226c = bArr;
-                this.f2225b = 3;
-                this.f2229f = 0;
-                this.f2230g = bArr.length;
+                byte[] bArr = this.f24731c;
+                this.f24730b = bArr;
+                this.f24729a = 3;
+                this.f24733e = 0;
+                this.f24734f = bArr.length;
                 return;
             case 2:
             case 4:
             case 6:
-                String str = new String(this.f2227d, Charset.forName("UTF-16"));
-                this.f2226c = str;
-                if (this.f2225b == 2 && this.f2234k == null) {
-                    this.f2234k = str.split(":", -1)[0];
+                String str = new String(this.f24731c, Charset.forName("UTF-16"));
+                this.f24730b = str;
+                if (this.f24729a == 2 && this.f24738j == null) {
+                    this.f24738j = str.split(":", -1)[0];
                     return;
                 }
                 return;
             case 3:
-                this.f2226c = this.f2227d;
+                this.f24730b = this.f24731c;
                 return;
         }
     }
 
-    /* renamed from: o */
-    public void m1801o(boolean z) {
-        this.f2233j = this.f2232i.name();
-        switch (this.f2225b) {
+    public void l(boolean z10) {
+        this.f24737i = this.f24736h.name();
+        switch (this.f24729a) {
             case -1:
-                if (z) {
+                if (z10) {
                     throw new IllegalArgumentException("Can't serialize Icon created with IconCompat#createFromIcon");
                 }
-                this.f2228e = (Parcelable) this.f2226c;
+                this.f24732d = (Parcelable) this.f24730b;
                 return;
             case 0:
             default:
                 return;
             case 1:
             case 5:
-                if (!z) {
-                    this.f2228e = (Parcelable) this.f2226c;
+                if (!z10) {
+                    this.f24732d = (Parcelable) this.f24730b;
                     return;
                 }
-                Bitmap bitmap = (Bitmap) this.f2226c;
+                Bitmap bitmap = (Bitmap) this.f24730b;
                 ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.PNG, 90, byteArrayOutputStream);
-                this.f2227d = byteArrayOutputStream.toByteArray();
+                this.f24731c = byteArrayOutputStream.toByteArray();
                 return;
             case 2:
-                this.f2227d = ((String) this.f2226c).getBytes(Charset.forName("UTF-16"));
+                this.f24731c = ((String) this.f24730b).getBytes(Charset.forName("UTF-16"));
                 return;
             case 3:
-                this.f2227d = (byte[]) this.f2226c;
+                this.f24731c = (byte[]) this.f24730b;
                 return;
             case 4:
             case 6:
-                this.f2227d = this.f2226c.toString().getBytes(Charset.forName("UTF-16"));
+                this.f24731c = this.f24730b.toString().getBytes(Charset.forName("UTF-16"));
                 return;
         }
+    }
+
+    public Bundle m() {
+        Bundle bundle = new Bundle();
+        switch (this.f24729a) {
+            case -1:
+                bundle.putParcelable("obj", (Parcelable) this.f24730b);
+                break;
+            case 0:
+            default:
+                throw new IllegalArgumentException("Invalid icon");
+            case 1:
+            case 5:
+                bundle.putParcelable("obj", (Bitmap) this.f24730b);
+                break;
+            case 2:
+            case 4:
+            case 6:
+                bundle.putString("obj", (String) this.f24730b);
+                break;
+            case 3:
+                bundle.putByteArray("obj", (byte[]) this.f24730b);
+                break;
+        }
+        bundle.putInt("type", this.f24729a);
+        bundle.putInt("int1", this.f24733e);
+        bundle.putInt("int2", this.f24734f);
+        bundle.putString("string1", this.f24738j);
+        ColorStateList colorStateList = this.f24735g;
+        if (colorStateList != null) {
+            bundle.putParcelable("tint_list", colorStateList);
+        }
+        PorterDuff.Mode mode = this.f24736h;
+        if (mode != f24728k) {
+            bundle.putString("tint_mode", mode.name());
+        }
+        return bundle;
     }
 
     @Deprecated
-    /* renamed from: p */
-    public Icon m1802p() {
-        return m1803q(null);
+    public Icon n() {
+        return o(null);
     }
 
-    /* renamed from: q */
-    public Icon m1803q(Context context) {
-        Icon iconCreateWithBitmap;
-        switch (this.f2225b) {
-            case -1:
-                return (Icon) this.f2226c;
-            case 0:
-            default:
-                throw new IllegalArgumentException("Unknown type");
-            case 1:
-                iconCreateWithBitmap = Icon.createWithBitmap((Bitmap) this.f2226c);
-                break;
-            case 2:
-                iconCreateWithBitmap = Icon.createWithResource(m1796g(), this.f2229f);
-                break;
-            case 3:
-                iconCreateWithBitmap = Icon.createWithData((byte[]) this.f2226c, this.f2229f, this.f2230g);
-                break;
-            case 4:
-                iconCreateWithBitmap = Icon.createWithContentUri((String) this.f2226c);
-                break;
-            case 5:
-                if (Build.VERSION.SDK_INT < 26) {
-                    iconCreateWithBitmap = Icon.createWithBitmap(m1786a((Bitmap) this.f2226c, false));
-                    break;
-                } else {
-                    iconCreateWithBitmap = Icon.createWithAdaptiveBitmap((Bitmap) this.f2226c);
-                    break;
-                }
-            case 6:
-                int i2 = Build.VERSION.SDK_INT;
-                if (i2 >= 30) {
-                    iconCreateWithBitmap = Icon.createWithAdaptiveBitmapContentUri(m1798k());
-                    break;
-                } else {
-                    if (context == null) {
-                        throw new IllegalArgumentException("Context is required to resolve the file uri of the icon: " + m1798k());
-                    }
-                    InputStream inputStreamM1799m = m1799m(context);
-                    if (inputStreamM1799m == null) {
-                        throw new IllegalStateException("Cannot load adaptive icon from uri: " + m1798k());
-                    }
-                    if (i2 < 26) {
-                        iconCreateWithBitmap = Icon.createWithBitmap(m1786a(BitmapFactory.decodeStream(inputStreamM1799m), false));
-                        break;
-                    } else {
-                        iconCreateWithBitmap = Icon.createWithAdaptiveBitmap(BitmapFactory.decodeStream(inputStreamM1799m));
-                        break;
-                    }
-                }
-        }
-        ColorStateList colorStateList = this.f2231h;
-        if (colorStateList != null) {
-            iconCreateWithBitmap.setTintList(colorStateList);
-        }
-        PorterDuff.Mode mode = this.f2232i;
-        if (mode != f2224a) {
-            iconCreateWithBitmap.setTintMode(mode);
-        }
-        return iconCreateWithBitmap;
+    public Icon o(Context context) {
+        return a.e(this, context);
     }
 
     public String toString() {
-        if (this.f2225b == -1) {
-            return String.valueOf(this.f2226c);
+        if (this.f24729a == -1) {
+            return String.valueOf(this.f24730b);
         }
-        StringBuilder sb = new StringBuilder("Icon(typ=");
-        sb.append(m1793r(this.f2225b));
-        switch (this.f2225b) {
+        StringBuilder sb2 = new StringBuilder("Icon(typ=");
+        sb2.append(p(this.f24729a));
+        switch (this.f24729a) {
             case 1:
             case 5:
-                sb.append(" size=");
-                sb.append(((Bitmap) this.f2226c).getWidth());
-                sb.append("x");
-                sb.append(((Bitmap) this.f2226c).getHeight());
+                sb2.append(" size=");
+                sb2.append(((Bitmap) this.f24730b).getWidth());
+                sb2.append("x");
+                sb2.append(((Bitmap) this.f24730b).getHeight());
                 break;
             case 2:
-                sb.append(" pkg=");
-                sb.append(this.f2234k);
-                sb.append(" id=");
-                sb.append(String.format("0x%08x", Integer.valueOf(m1795e())));
+                sb2.append(" pkg=");
+                sb2.append(this.f24738j);
+                sb2.append(" id=");
+                sb2.append(String.format("0x%08x", Integer.valueOf(f())));
                 break;
             case 3:
-                sb.append(" len=");
-                sb.append(this.f2229f);
-                if (this.f2230g != 0) {
-                    sb.append(" off=");
-                    sb.append(this.f2230g);
+                sb2.append(" len=");
+                sb2.append(this.f24733e);
+                if (this.f24734f != 0) {
+                    sb2.append(" off=");
+                    sb2.append(this.f24734f);
                     break;
                 }
                 break;
             case 4:
             case 6:
-                sb.append(" uri=");
-                sb.append(this.f2226c);
+                sb2.append(" uri=");
+                sb2.append(this.f24730b);
                 break;
         }
-        if (this.f2231h != null) {
-            sb.append(" tint=");
-            sb.append(this.f2231h);
+        if (this.f24735g != null) {
+            sb2.append(" tint=");
+            sb2.append(this.f24735g);
         }
-        if (this.f2232i != f2224a) {
-            sb.append(" mode=");
-            sb.append(this.f2232i);
+        if (this.f24736h != f24728k) {
+            sb2.append(" mode=");
+            sb2.append(this.f24736h);
         }
-        sb.append(")");
-        return sb.toString();
+        sb2.append(")");
+        return sb2.toString();
     }
 
-    private IconCompat(int i2) {
-        this.f2225b = -1;
-        this.f2227d = null;
-        this.f2228e = null;
-        this.f2229f = 0;
-        this.f2230g = 0;
-        this.f2231h = null;
-        this.f2232i = f2224a;
-        this.f2233j = null;
-        this.f2225b = i2;
+    IconCompat(int i10) {
+        this.f24731c = null;
+        this.f24732d = null;
+        this.f24733e = 0;
+        this.f24734f = 0;
+        this.f24735g = null;
+        this.f24736h = f24728k;
+        this.f24737i = null;
+        this.f24729a = i10;
     }
 }

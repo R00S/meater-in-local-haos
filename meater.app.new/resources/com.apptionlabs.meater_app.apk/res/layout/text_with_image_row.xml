@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    android:layout_below="@+id/finish_meater_cloud_text_view">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_bulletcheckmark"
+        android:scaleType="centerInside"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:textSize="17dp"
+        android:id="@+id/text"
+        android:paddingTop="2dp"
+        android:paddingBottom="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in_screen_title"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_marginStart="4dp"
+        style="@style/NormalTextViewLeft"/>
+</RelativeLayout>

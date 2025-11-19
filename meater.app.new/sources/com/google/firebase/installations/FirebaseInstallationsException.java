@@ -5,22 +5,21 @@ import com.google.firebase.FirebaseException;
 /* loaded from: classes2.dex */
 public class FirebaseInstallationsException extends FirebaseException {
 
-    /* renamed from: f */
-    private final EnumC8376a f31773f;
+    /* renamed from: B, reason: collision with root package name */
+    private final a f38172B;
 
-    /* renamed from: com.google.firebase.installations.FirebaseInstallationsException$a */
-    public enum EnumC8376a {
+    public enum a {
         BAD_CONFIG,
         UNAVAILABLE,
         TOO_MANY_REQUESTS
     }
 
-    public FirebaseInstallationsException(EnumC8376a enumC8376a) {
-        this.f31773f = enumC8376a;
+    public FirebaseInstallationsException(a aVar) {
+        this.f38172B = aVar;
     }
 
-    public FirebaseInstallationsException(String str, EnumC8376a enumC8376a) {
+    public FirebaseInstallationsException(String str, a aVar) {
         super(str);
-        this.f31773f = enumC8376a;
+        this.f38172B = aVar;
     }
 }

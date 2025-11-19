@@ -5,19 +5,14 @@ import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.TextUtils;
-import cm.aptoide.p092pt.DeepLinkIntentReceiver;
-import com.google.android.gms.common.annotation.KeepForSdk;
 import com.google.android.gms.common.api.Scope;
-import com.google.android.gms.common.internal.Preconditions;
 import com.google.android.gms.common.internal.ReflectedParcelable;
-import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
-import com.google.android.gms.common.internal.safeparcel.SafeParcelWriter;
-import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
-import com.google.android.gms.common.util.Clock;
-import com.google.android.gms.common.util.DefaultClock;
-import com.google.android.gms.common.util.VisibleForTesting;
+import com.google.android.gms.common.util.e;
+import com.google.android.gms.common.util.h;
+import g7.C3445p;
+import h7.AbstractC3492a;
+import h7.C3493b;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -26,180 +21,122 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-@SafeParcelable.Class
+/* compiled from: com.google.android.gms:play-services-base@@18.4.0 */
+@Deprecated
 /* loaded from: classes2.dex */
-public class GoogleSignInAccount extends AbstractSafeParcelable implements ReflectedParcelable {
-    public static final Parcelable.Creator<GoogleSignInAccount> CREATOR = new zab();
+public class GoogleSignInAccount extends AbstractC3492a implements ReflectedParcelable {
+    public static final Parcelable.Creator<GoogleSignInAccount> CREATOR = new a();
 
-    /* renamed from: f */
-    @VisibleForTesting
-    private static Clock f17022f = DefaultClock.m14620c();
+    /* renamed from: O, reason: collision with root package name */
+    public static final e f33409O = h.d();
 
-    /* renamed from: g */
-    @SafeParcelable.VersionField
-    private final int f17023g;
+    /* renamed from: B, reason: collision with root package name */
+    final int f33410B;
 
-    /* renamed from: h */
-    @SafeParcelable.Field
-    private String f17024h;
+    /* renamed from: C, reason: collision with root package name */
+    private final String f33411C;
 
-    /* renamed from: i */
-    @SafeParcelable.Field
-    private String f17025i;
+    /* renamed from: D, reason: collision with root package name */
+    private final String f33412D;
 
-    /* renamed from: j */
-    @SafeParcelable.Field
-    private String f17026j;
+    /* renamed from: E, reason: collision with root package name */
+    private final String f33413E;
 
-    /* renamed from: k */
-    @SafeParcelable.Field
-    private String f17027k;
+    /* renamed from: F, reason: collision with root package name */
+    private final String f33414F;
 
-    /* renamed from: l */
-    @SafeParcelable.Field
-    private Uri f17028l;
+    /* renamed from: G, reason: collision with root package name */
+    private final Uri f33415G;
 
-    /* renamed from: m */
-    @SafeParcelable.Field
-    private String f17029m;
+    /* renamed from: H, reason: collision with root package name */
+    private String f33416H;
 
-    /* renamed from: n */
-    @SafeParcelable.Field
-    private long f17030n;
+    /* renamed from: I, reason: collision with root package name */
+    private final long f33417I;
 
-    /* renamed from: o */
-    @SafeParcelable.Field
-    private String f17031o;
+    /* renamed from: J, reason: collision with root package name */
+    private final String f33418J;
 
-    /* renamed from: p */
-    @SafeParcelable.Field
-    private List<Scope> f17032p;
+    /* renamed from: K, reason: collision with root package name */
+    final List f33419K;
 
-    /* renamed from: q */
-    @SafeParcelable.Field
-    private String f17033q;
+    /* renamed from: L, reason: collision with root package name */
+    private final String f33420L;
 
-    /* renamed from: r */
-    @SafeParcelable.Field
-    private String f17034r;
+    /* renamed from: M, reason: collision with root package name */
+    private final String f33421M;
 
-    /* renamed from: s */
-    private Set<Scope> f17035s = new HashSet();
+    /* renamed from: N, reason: collision with root package name */
+    private final Set f33422N = new HashSet();
 
-    @SafeParcelable.Constructor
-    GoogleSignInAccount(@SafeParcelable.Param(id = 1) int i2, @SafeParcelable.Param(id = 2) String str, @SafeParcelable.Param(id = 3) String str2, @SafeParcelable.Param(id = 4) String str3, @SafeParcelable.Param(id = 5) String str4, @SafeParcelable.Param(id = 6) Uri uri, @SafeParcelable.Param(id = 7) String str5, @SafeParcelable.Param(id = 8) long j2, @SafeParcelable.Param(id = 9) String str6, @SafeParcelable.Param(id = 10) List<Scope> list, @SafeParcelable.Param(id = 11) String str7, @SafeParcelable.Param(id = 12) String str8) {
-        this.f17023g = i2;
-        this.f17024h = str;
-        this.f17025i = str2;
-        this.f17026j = str3;
-        this.f17027k = str4;
-        this.f17028l = uri;
-        this.f17029m = str5;
-        this.f17030n = j2;
-        this.f17031o = str6;
-        this.f17032p = list;
-        this.f17033q = str7;
-        this.f17034r = str8;
+    GoogleSignInAccount(int i10, String str, String str2, String str3, String str4, Uri uri, String str5, long j10, String str6, List list, String str7, String str8) {
+        this.f33410B = i10;
+        this.f33411C = str;
+        this.f33412D = str2;
+        this.f33413E = str3;
+        this.f33414F = str4;
+        this.f33415G = uri;
+        this.f33416H = str5;
+        this.f33417I = j10;
+        this.f33418J = str6;
+        this.f33419K = list;
+        this.f33420L = str7;
+        this.f33421M = str8;
     }
 
-    /* renamed from: a1 */
-    public static GoogleSignInAccount m13646a1(String str) throws JSONException, NumberFormatException {
+    public static GoogleSignInAccount D1(String str, String str2, String str3, String str4, String str5, String str6, Uri uri, Long l10, String str7, Set set) {
+        return new GoogleSignInAccount(3, str, str2, str3, str4, uri, null, l10.longValue(), C3445p.e(str7), new ArrayList((Collection) C3445p.k(set)), str5, str6);
+    }
+
+    public static GoogleSignInAccount E1(String str) throws JSONException, NumberFormatException {
         if (TextUtils.isEmpty(str)) {
             return null;
         }
         JSONObject jSONObject = new JSONObject(str);
-        String strOptString = jSONObject.optString("photoUrl", null);
+        String strOptString = jSONObject.optString("photoUrl");
         Uri uri = !TextUtils.isEmpty(strOptString) ? Uri.parse(strOptString) : null;
-        long j2 = Long.parseLong(jSONObject.getString("expirationTime"));
+        long j10 = Long.parseLong(jSONObject.getString("expirationTime"));
         HashSet hashSet = new HashSet();
         JSONArray jSONArray = jSONObject.getJSONArray("grantedScopes");
         int length = jSONArray.length();
-        for (int i2 = 0; i2 < length; i2++) {
-            hashSet.add(new Scope(jSONArray.getString(i2)));
+        for (int i10 = 0; i10 < length; i10++) {
+            hashSet.add(new Scope(jSONArray.getString(i10)));
         }
-        GoogleSignInAccount googleSignInAccountM13647q1 = m13647q1(jSONObject.optString(DeepLinkIntentReceiver.DeepLinksKeys.f7163ID), jSONObject.optString("tokenId", null), jSONObject.optString("email", null), jSONObject.optString("displayName", null), jSONObject.optString("givenName", null), jSONObject.optString("familyName", null), uri, Long.valueOf(j2), jSONObject.getString("obfuscatedIdentifier"), hashSet);
-        googleSignInAccountM13647q1.f17029m = jSONObject.optString("serverAuthCode", null);
-        return googleSignInAccountM13647q1;
+        GoogleSignInAccount googleSignInAccountD1 = D1(jSONObject.optString("id"), jSONObject.has("tokenId") ? jSONObject.optString("tokenId") : null, jSONObject.has("email") ? jSONObject.optString("email") : null, jSONObject.has("displayName") ? jSONObject.optString("displayName") : null, jSONObject.has("givenName") ? jSONObject.optString("givenName") : null, jSONObject.has("familyName") ? jSONObject.optString("familyName") : null, uri, Long.valueOf(j10), jSONObject.getString("obfuscatedIdentifier"), hashSet);
+        googleSignInAccountD1.f33416H = jSONObject.has("serverAuthCode") ? jSONObject.optString("serverAuthCode") : null;
+        return googleSignInAccountD1;
     }
 
-    /* renamed from: q1 */
-    private static GoogleSignInAccount m13647q1(String str, String str2, String str3, String str4, String str5, String str6, Uri uri, Long l, String str7, Set<Scope> set) {
-        return new GoogleSignInAccount(3, str, str2, str3, str4, uri, null, (l == null ? Long.valueOf(f17022f.mo14608a() / 1000) : l).longValue(), Preconditions.m14368g(str7), new ArrayList((Collection) Preconditions.m14372k(set)), str5, str6);
-    }
-
-    /* renamed from: t1 */
-    private final JSONObject m13648t1() throws JSONException {
-        JSONObject jSONObject = new JSONObject();
-        try {
-            if (m13653e0() != null) {
-                jSONObject.put(DeepLinkIntentReceiver.DeepLinksKeys.f7163ID, m13653e0());
-            }
-            if (m13654i0() != null) {
-                jSONObject.put("tokenId", m13654i0());
-            }
-            if (m13659z() != null) {
-                jSONObject.put("email", m13659z());
-            }
-            if (m13658y() != null) {
-                jSONObject.put("displayName", m13658y());
-            }
-            if (m13652Y() != null) {
-                jSONObject.put("givenName", m13652Y());
-            }
-            if (m13651W() != null) {
-                jSONObject.put("familyName", m13651W());
-            }
-            if (m13655p0() != null) {
-                jSONObject.put("photoUrl", m13655p0().toString());
-            }
-            if (m13650M0() != null) {
-                jSONObject.put("serverAuthCode", m13650M0());
-            }
-            jSONObject.put("expirationTime", this.f17030n);
-            jSONObject.put("obfuscatedIdentifier", this.f17031o);
-            JSONArray jSONArray = new JSONArray();
-            List<Scope> list = this.f17032p;
-            Scope[] scopeArr = (Scope[]) list.toArray(new Scope[list.size()]);
-            Arrays.sort(scopeArr, C6315a.f17071f);
-            for (Scope scope : scopeArr) {
-                jSONArray.put(scope.m13912y());
-            }
-            jSONObject.put("grantedScopes", jSONArray);
-            return jSONObject;
-        } catch (JSONException e2) {
-            throw new RuntimeException(e2);
-        }
-    }
-
-    @KeepForSdk
-    /* renamed from: J0 */
-    public Set<Scope> m13649J0() {
-        HashSet hashSet = new HashSet(this.f17032p);
-        hashSet.addAll(this.f17035s);
+    public Set<Scope> B1() {
+        HashSet hashSet = new HashSet(this.f33419K);
+        hashSet.addAll(this.f33422N);
         return hashSet;
     }
 
-    /* renamed from: M0 */
-    public String m13650M0() {
-        return this.f17029m;
+    public String C1() {
+        return this.f33416H;
     }
 
-    /* renamed from: W */
-    public String m13651W() {
-        return this.f17034r;
+    public String G0() {
+        return this.f33420L;
     }
 
-    /* renamed from: Y */
-    public String m13652Y() {
-        return this.f17033q;
+    public String O0() {
+        return this.f33412D;
     }
 
-    /* renamed from: e0 */
-    public String m13653e0() {
-        return this.f17024h;
+    public Uri U0() {
+        return this.f33415G;
+    }
+
+    public String c() {
+        return this.f33411C;
     }
 
     public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
         if (obj == this) {
             return true;
         }
@@ -207,67 +144,48 @@ public class GoogleSignInAccount extends AbstractSafeParcelable implements Refle
             return false;
         }
         GoogleSignInAccount googleSignInAccount = (GoogleSignInAccount) obj;
-        return googleSignInAccount.f17031o.equals(this.f17031o) && googleSignInAccount.m13649J0().equals(m13649J0());
+        return googleSignInAccount.f33418J.equals(this.f33418J) && googleSignInAccount.B1().equals(B1());
     }
 
-    public Account getAccount() {
-        if (this.f17026j == null) {
+    public Account f0() {
+        String str = this.f33413E;
+        if (str == null) {
             return null;
         }
-        return new Account(this.f17026j, "com.google");
+        return new Account(str, "com.google");
+    }
+
+    public String h0() {
+        return this.f33414F;
     }
 
     public int hashCode() {
-        return ((this.f17031o.hashCode() + 527) * 31) + m13649J0().hashCode();
+        return ((this.f33418J.hashCode() + 527) * 31) + B1().hashCode();
     }
 
-    /* renamed from: i0 */
-    public String m13654i0() {
-        return this.f17025i;
+    public String r0() {
+        return this.f33413E;
     }
 
-    /* renamed from: p0 */
-    public Uri m13655p0() {
-        return this.f17028l;
-    }
-
-    /* renamed from: r1 */
-    public final String m13656r1() {
-        return this.f17031o;
-    }
-
-    /* renamed from: s1 */
-    public final String m13657s1() throws JSONException {
-        JSONObject jSONObjectM13648t1 = m13648t1();
-        jSONObjectM13648t1.remove("serverAuthCode");
-        return jSONObjectM13648t1.toString();
+    public String v0() {
+        return this.f33421M;
     }
 
     @Override // android.os.Parcelable
-    public void writeToParcel(Parcel parcel, int i2) {
-        int iM14466a = SafeParcelWriter.m14466a(parcel);
-        SafeParcelWriter.m14477l(parcel, 1, this.f17023g);
-        SafeParcelWriter.m14486u(parcel, 2, m13653e0(), false);
-        SafeParcelWriter.m14486u(parcel, 3, m13654i0(), false);
-        SafeParcelWriter.m14486u(parcel, 4, m13659z(), false);
-        SafeParcelWriter.m14486u(parcel, 5, m13658y(), false);
-        SafeParcelWriter.m14484s(parcel, 6, m13655p0(), i2, false);
-        SafeParcelWriter.m14486u(parcel, 7, m13650M0(), false);
-        SafeParcelWriter.m14481p(parcel, 8, this.f17030n);
-        SafeParcelWriter.m14486u(parcel, 9, this.f17031o, false);
-        SafeParcelWriter.m14490y(parcel, 10, this.f17032p, false);
-        SafeParcelWriter.m14486u(parcel, 11, m13652Y(), false);
-        SafeParcelWriter.m14486u(parcel, 12, m13651W(), false);
-        SafeParcelWriter.m14467b(parcel, iM14466a);
-    }
-
-    /* renamed from: y */
-    public String m13658y() {
-        return this.f17027k;
-    }
-
-    /* renamed from: z */
-    public String m13659z() {
-        return this.f17026j;
+    public void writeToParcel(Parcel parcel, int i10) {
+        int iA = C3493b.a(parcel);
+        C3493b.k(parcel, 1, this.f33410B);
+        C3493b.q(parcel, 2, c(), false);
+        C3493b.q(parcel, 3, O0(), false);
+        C3493b.q(parcel, 4, r0(), false);
+        C3493b.q(parcel, 5, h0(), false);
+        C3493b.p(parcel, 6, U0(), i10, false);
+        C3493b.q(parcel, 7, C1(), false);
+        C3493b.n(parcel, 8, this.f33417I);
+        C3493b.q(parcel, 9, this.f33418J, false);
+        C3493b.u(parcel, 10, this.f33419K, false);
+        C3493b.q(parcel, 11, G0(), false);
+        C3493b.q(parcel, 12, v0(), false);
+        C3493b.b(parcel, iA);
     }
 }
