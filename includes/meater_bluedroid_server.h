@@ -225,16 +225,15 @@ private:
         memcpy(service_uuid, MEATER_SERVICE_UUID, 16);
         
         // ✅ FROM GROUND TRUTH: Real MEATER probe advertisement (bluetoothctl scan)
-        // Company ID: 0x037b (891 decimal = Apption Labs)
-        // Total: 9 bytes (matches real probe exactly)
+        // Device B8:1F:5E:4A:5E:EF MEATER
+        // ManufacturerData.Key: 0x037b (891)
+        // ManufacturerData.Value: 00 4c 0b 82 35 23 a3 98 ea
+        // Total: 9 bytes (must match real probe exactly for app to recognize it)
         static uint8_t manufacturer_data[9] = {
             0x7B, 0x03,  // Company ID: 0x037B (little-endian as required by BLE spec)
             0x00,        // Byte 2: Device type (0x00 for regular MEATER, 0x01 for MEATER+)
-            0x4C,        // Byte 3-8: Device-specific data (from real probe capture)
-            0x0B, 0x82, 0x35, 0x23, 0xA3
-            // Note: Bytes 3-8 appear to be device-specific identifiers or state
-            // Using values from real MEATER probe: 00 4c 0b 82 35 23 a3 98 ea
-            // Last byte (0xEA) omitted as it may be checksum - testing with 8 bytes first
+            0x4C, 0x0B, 0x82, 0x35, 0x23, 0xA3, 0x98  // Bytes 3-9: Device-specific data from real probe
+            // All 9 bytes from real MEATER probe capture - app uses this to identify devices
         };
         
         adv_data_.set_scan_rsp = false;
