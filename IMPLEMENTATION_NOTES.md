@@ -1,4 +1,6 @@
-# Implementation Notes - UDP Broadcast for MEATER Block Emulation
+# Implementation Notes
+
+> ⚠️ **CONTAINS ASSUMPTIONS**: This document contains implementation notes based on testing and observation. It is NOT based on direct extraction from decompiled app code. - UDP Broadcast for MEATER Block Emulation
 
 ## Summary
 

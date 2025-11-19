@@ -1,5 +1,7 @@
 package com.google.android.material.behavior;
 
+import C7.c;
+import R7.i;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.TimeInterpolator;
@@ -9,108 +11,170 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewPropertyAnimator;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import p241e.p254e.p256b.p271c.p273m.C8919a;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
 
 /* loaded from: classes2.dex */
-public class HideBottomViewOnScrollBehavior<V extends View> extends CoordinatorLayout.AbstractC0226c<V> {
+public class HideBottomViewOnScrollBehavior<V extends View> extends CoordinatorLayout.c<V> {
 
-    /* renamed from: a */
-    private int f29707a;
+    /* renamed from: K, reason: collision with root package name */
+    private static final int f35910K = c.f2282F;
 
-    /* renamed from: b */
-    private int f29708b;
+    /* renamed from: L, reason: collision with root package name */
+    private static final int f35911L = c.f2285I;
 
-    /* renamed from: c */
-    private int f29709c;
+    /* renamed from: M, reason: collision with root package name */
+    private static final int f35912M = c.f2292P;
 
-    /* renamed from: d */
-    private ViewPropertyAnimator f29710d;
+    /* renamed from: B, reason: collision with root package name */
+    private final LinkedHashSet<b> f35913B;
 
-    /* renamed from: com.google.android.material.behavior.HideBottomViewOnScrollBehavior$a */
-    class C7940a extends AnimatorListenerAdapter {
-        C7940a() {
+    /* renamed from: C, reason: collision with root package name */
+    private int f35914C;
+
+    /* renamed from: D, reason: collision with root package name */
+    private int f35915D;
+
+    /* renamed from: E, reason: collision with root package name */
+    private TimeInterpolator f35916E;
+
+    /* renamed from: F, reason: collision with root package name */
+    private TimeInterpolator f35917F;
+
+    /* renamed from: G, reason: collision with root package name */
+    private int f35918G;
+
+    /* renamed from: H, reason: collision with root package name */
+    private int f35919H;
+
+    /* renamed from: I, reason: collision with root package name */
+    private int f35920I;
+
+    /* renamed from: J, reason: collision with root package name */
+    private ViewPropertyAnimator f35921J;
+
+    class a extends AnimatorListenerAdapter {
+        a() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
-            HideBottomViewOnScrollBehavior.this.f29710d = null;
+            HideBottomViewOnScrollBehavior.this.f35921J = null;
         }
+    }
+
+    public interface b {
+        void a(View view, int i10);
     }
 
     public HideBottomViewOnScrollBehavior() {
-        this.f29707a = 0;
-        this.f29708b = 2;
-        this.f29709c = 0;
+        this.f35913B = new LinkedHashSet<>();
+        this.f35918G = 0;
+        this.f35919H = 2;
+        this.f35920I = 0;
     }
 
-    /* renamed from: F */
-    private void m23859F(V v, int i2, long j2, TimeInterpolator timeInterpolator) {
-        this.f29710d = v.animate().translationY(i2).setInterpolator(timeInterpolator).setDuration(j2).setListener(new C7940a());
+    private void J(V v10, int i10, long j10, TimeInterpolator timeInterpolator) {
+        this.f35921J = v10.animate().translationY(i10).setInterpolator(timeInterpolator).setDuration(j10).setListener(new a());
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: A */
-    public boolean mo1443A(CoordinatorLayout coordinatorLayout, V v, View view, View view2, int i2, int i3) {
-        return i2 == 2;
-    }
-
-    /* renamed from: G */
-    public void m23860G(V v, int i2) {
-        this.f29709c = i2;
-        if (this.f29708b == 1) {
-            v.setTranslationY(this.f29707a + i2);
+    private void R(V v10, int i10) {
+        this.f35919H = i10;
+        Iterator<b> it = this.f35913B.iterator();
+        while (it.hasNext()) {
+            it.next().a(v10, this.f35919H);
         }
     }
 
-    /* renamed from: H */
-    public void m23861H(V v) {
-        if (this.f29708b == 1) {
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public boolean E(CoordinatorLayout coordinatorLayout, V v10, View view, View view2, int i10, int i11) {
+        return i10 == 2;
+    }
+
+    public boolean K() {
+        return this.f35919H == 1;
+    }
+
+    public boolean L() {
+        return this.f35919H == 2;
+    }
+
+    public void M(V v10, int i10) {
+        this.f35920I = i10;
+        if (this.f35919H == 1) {
+            v10.setTranslationY(this.f35918G + i10);
+        }
+    }
+
+    public void N(V v10) {
+        O(v10, true);
+    }
+
+    public void O(V v10, boolean z10) {
+        if (K()) {
             return;
         }
-        ViewPropertyAnimator viewPropertyAnimator = this.f29710d;
+        ViewPropertyAnimator viewPropertyAnimator = this.f35921J;
         if (viewPropertyAnimator != null) {
             viewPropertyAnimator.cancel();
-            v.clearAnimation();
+            v10.clearAnimation();
         }
-        this.f29708b = 1;
-        m23859F(v, this.f29707a + this.f29709c, 175L, C8919a.f34372c);
+        R(v10, 1);
+        int i10 = this.f35918G + this.f35920I;
+        if (z10) {
+            J(v10, i10, this.f35915D, this.f35917F);
+        } else {
+            v10.setTranslationY(i10);
+        }
     }
 
-    /* renamed from: I */
-    public void m23862I(V v) {
-        if (this.f29708b == 2) {
+    public void P(V v10) {
+        Q(v10, true);
+    }
+
+    public void Q(V v10, boolean z10) {
+        if (L()) {
             return;
         }
-        ViewPropertyAnimator viewPropertyAnimator = this.f29710d;
+        ViewPropertyAnimator viewPropertyAnimator = this.f35921J;
         if (viewPropertyAnimator != null) {
             viewPropertyAnimator.cancel();
-            v.clearAnimation();
+            v10.clearAnimation();
         }
-        this.f29708b = 2;
-        m23859F(v, 0, 225L, C8919a.f34373d);
+        R(v10, 2);
+        if (z10) {
+            J(v10, 0, this.f35914C, this.f35916E);
+        } else {
+            v10.setTranslationY(0);
+        }
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: l */
-    public boolean mo1458l(CoordinatorLayout coordinatorLayout, V v, int i2) {
-        this.f29707a = v.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) v.getLayoutParams()).bottomMargin;
-        return super.mo1458l(coordinatorLayout, v, i2);
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public boolean p(CoordinatorLayout coordinatorLayout, V v10, int i10) {
+        this.f35918G = v10.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) v10.getLayoutParams()).bottomMargin;
+        this.f35914C = i.f(v10.getContext(), f35910K, 225);
+        this.f35915D = i.f(v10.getContext(), f35911L, 175);
+        Context context = v10.getContext();
+        int i11 = f35912M;
+        this.f35916E = i.g(context, i11, D7.a.f3489d);
+        this.f35917F = i.g(v10.getContext(), i11, D7.a.f3488c);
+        return super.p(coordinatorLayout, v10, i10);
     }
 
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-    /* renamed from: t */
-    public void mo1466t(CoordinatorLayout coordinatorLayout, V v, View view, int i2, int i3, int i4, int i5, int i6, int[] iArr) {
-        if (i3 > 0) {
-            m23861H(v);
-        } else if (i3 < 0) {
-            m23862I(v);
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+    public void x(CoordinatorLayout coordinatorLayout, V v10, View view, int i10, int i11, int i12, int i13, int i14, int[] iArr) {
+        if (i11 > 0) {
+            N(v10);
+        } else if (i11 < 0) {
+            P(v10);
         }
     }
 
     public HideBottomViewOnScrollBehavior(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.f29707a = 0;
-        this.f29708b = 2;
-        this.f29709c = 0;
+        this.f35913B = new LinkedHashSet<>();
+        this.f35918G = 0;
+        this.f35919H = 2;
+        this.f35920I = 0;
     }
 }

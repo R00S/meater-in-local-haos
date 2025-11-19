@@ -169,11 +169,13 @@ class MeaterUDPBroadcaster {
   }
   
   void set_device_name(const std::string& name) {
-    // MEATER Block emulation - always use "MEATER Block" regardless of probe name
-    // The decompiled app shows DevicesType.MEATER_BLOCK("MEATER Block", ...)
+    // MEATER Block emulation for UDP/Home Assistant
+    // The UDP protocol uses "MEATER Block" device type
+    // Note: This is separate from BLE advertising which uses the probe name
     device_name_ = "MEATER Block";
-    ESP_LOGI("meater_udp", "Device name set to: %s (simulating MEATER Block with probe: %s)", 
+    ESP_LOGI("meater_udp", "UDP device name: %s (for Home Assistant integration, probe name: %s)", 
              device_name_.c_str(), name.c_str());
+    ESP_LOGI("meater_udp", "BLE advertising name: %s (standalone MEATER probe)", name.c_str());
   }
   
   // Poll for incoming packets and broadcast on interval

@@ -1,0 +1,307 @@
+[
+  {
+    "type": "UUID_MISSING",
+    "old_name": "BLECharacteristicConfigUUID",
+    "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "BLESoftwareRevisionCharacteristicUUID",
+    "uuid": "00002a28-0000-1000-8000-00805f9b34fb",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "DeviceInformationServiceUUID",
+    "uuid": "0000180a-0000-1000-8000-00805f9b34fb",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "FirmwareRevisionCharacteristicUUID",
+    "uuid": "00002a26-0000-1000-8000-00805f9b34fb",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERBLETemperatureServiceUUID",
+    "uuid": "a75cc7fc-c956-488f-ac2a-2dbc08b63a04",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERBatteryBLECharacteristicUUID",
+    "uuid": "2adb4877-68d8-4884-bd3c-d83853bf27b8",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERBlockAvailableSSIDsUUID",
+    "uuid": "B904156A-5B64-44AD-8349-CE7912F34008",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERBlockChosenWiFiSSIDUUID",
+    "uuid": "53475F12-D6D2-45DC-A046-53C65BB0D814",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_FOUND",
+    "old_name": "MEATERBlockConnectionStateSSIDUUID",
+    "uuid": "E03C6CCC-2AA7-40A4-8A66-C98B599B737A",
+    "new_file": "sources/z4/O.java",
+    "context": "\n    /* renamed from: s, reason: collision with root package name */\n    public static final UUID f53441s = UUID.fromString(\"E03C6CCC-2AA7-40A4-8A66-C98B599B737A\");\n\n    /* renamed from: t, reason: collision with root package name */",
+    "status": "UNCHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERBlockKeepAliveUUID",
+    "uuid": "24B299D9-61F7-48BA-86E0-F459DAD3FC87",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERBlockSecondGenerationServiceUUID",
+    "uuid": "B7107BBE-DA2A-4124-B2CC-AAFD624B61CE",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERBlockSerialNumberUUID",
+    "uuid": "D6FEDC54-C9F8-4FC9-9CF0-0ABCF9E68F13",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERBlockServiceUUID",
+    "uuid": "097F9DB4-BE9B-43C0-931D-51A6599FF70D",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERBlockWiFiMACUUID",
+    "uuid": "9B08C95C-A1EF-477B-AFD4-3B3BE98DAA07",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_FOUND",
+    "old_name": "MEATERBlockWiFiScanRequestUUID",
+    "uuid": "B4663775-9045-479E-B496-D4CA549CFDDA",
+    "new_file": "sources/z4/O.java",
+    "context": "\n    /* renamed from: q, reason: collision with root package name */\n    public static final UUID f53439q = UUID.fromString(\"B4663775-9045-479E-B496-D4CA549CFDDA\");\n\n    /* renamed from: r, reason: collision with root package name */",
+    "status": "UNCHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERCookSetupBLECharacteristicUUID",
+    "uuid": "caf28e64-3b17-4cb4-bb0a-2eaa33c47af7",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERPlusBatteryLevelUUID",
+    "uuid": "22DB81C4-D125-4E8F-99A4-3609E4C9A017",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERPlusChipTemperatureUUID",
+    "uuid": "BB9B2404-FCFB-4B73-8ACD-B1B08DA3749D",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_FOUND",
+    "old_name": "MEATERPlusProbeConnectionStateUUID",
+    "uuid": "E03C6CCC-2AA7-40A4-8A66-C98B599B737A",
+    "new_file": "sources/z4/O.java",
+    "context": "\n    /* renamed from: s, reason: collision with root package name */\n    public static final UUID f53441s = UUID.fromString(\"E03C6CCC-2AA7-40A4-8A66-C98B599B737A\");\n\n    /* renamed from: t, reason: collision with root package name */",
+    "status": "UNCHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERPlusProbeInfoUUID",
+    "uuid": "1CBFF55E-9A06-4721-A178-1E2D84246DD1",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERPlusProbeRSSIUUID",
+    "uuid": "370AABE7-4837-4BEE-AADC-CD1836DBCE53",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERPlusSETemperatureServiceUUID",
+    "uuid": "49141A23-307F-4E25-AD82-0A3F00D8B90B",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERPlusV2TemperatureServiceUUID",
+    "uuid": "C9E2746C-59F1-4E54-A0DD-E1E54555CF8B",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERSimulatedDISUUID",
+    "uuid": "1E5A67E5-63D8-4242-9882-95D9A7F4E114",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERTemperatureBLECharacteristicUUID",
+    "uuid": "7edda774-045e-4bbf-909b-45d1991a2876",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERTemperatureLogBLECharactertisticUUID",
+    "uuid": "b3e02c20-85be-4d1e-8da8-30cd88aaf0d4",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "MEATERTemperatureLogModeBLECharacteristicUUID",
+    "uuid": "575d3bf1-2757-45ad-94d9-875c2f6120d3",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "SimulatedFirmwareRevisionCharacteristicUUID",
+    "uuid": "BFDBCCAD-224B-4CB6-8B89-0473131A970A",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "UUID_MISSING",
+    "old_name": "V2TemperatureServiceUUID",
+    "uuid": "DCBB67CA-64FB-41A3-99D1-5D9FD8CF33CA",
+    "status": "POTENTIALLY_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "MEATERDeviceTemperatureRecording",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "ProbeReadCookSetupEvent",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "BLEProbeConnectionEvent",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "ProbeCharacteristicValueWriteStatusMessage",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "DiscoverProbeServicesRequestMessage",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "BLERadioStateChange",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "ProbeTestMessage",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "ProbeBatteryLevelChange",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "ProbeCharacteristicValueUpdatedMessage",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "MEATERBlockBLERSSIChange",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "MEATERDeviceReset",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "SimulatedProbeMessage",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "ProbeReadTempLogEvent",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "ProbeSimulatorHeader",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "DiscoverProbeServicesResponseMessage",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "ProbeConnectionRequestMessage",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "ProbeWriteCookSetupEvent",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "ProbeRSSIChange",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "ProbeDisconnectedMessage",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "MLChildDevice",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "MLDevice",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "ProbeAdvertisingMessage",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "MEATERPlusProbeConnectionEvent",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "MLProbe",
+    "status": "OBFUSCATED_OR_CHANGED"
+  },
+  {
+    "type": "STRUCTURE_MISSING",
+    "name": "ProbeConnectedMessage",
+    "status": "OBFUSCATED_OR_CHANGED"
+  }
+]

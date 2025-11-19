@@ -1,36 +1,26 @@
 package com.google.android.gms.measurement;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.google.android.gms.measurement.internal.zzfn;
-import com.google.android.gms.measurement.internal.zzfs;
-import p024c.p071o.p072a.AbstractC0991a;
+import v7.C4916s;
 
-/* compiled from: com.google.android.gms:play-services-measurement@@17.2.0 */
+/* compiled from: com.google.android.gms:play-services-measurement@@22.2.0 */
 /* loaded from: classes2.dex */
-public final class AppMeasurementReceiver extends AbstractC0991a implements zzfs {
+public final class AppMeasurementReceiver extends N1.a implements C4916s.a {
 
-    /* renamed from: c */
-    private zzfn f28528c;
+    /* renamed from: D, reason: collision with root package name */
+    private C4916s f34728D;
 
-    @Override // com.google.android.gms.measurement.internal.zzfs
-    /* renamed from: a */
-    public final void mo22667a(Context context, Intent intent) {
-        AbstractC0991a.m6271d(context, intent);
-    }
-
-    @Override // com.google.android.gms.measurement.internal.zzfs
-    /* renamed from: b */
-    public final BroadcastReceiver.PendingResult mo22668b() {
-        return goAsync();
+    @Override // v7.C4916s.a
+    public final void a(Context context, Intent intent) {
+        N1.a.c(context, intent);
     }
 
     @Override // android.content.BroadcastReceiver
-    public final void onReceive(Context context, Intent intent) throws IllegalStateException {
-        if (this.f28528c == null) {
-            this.f28528c = new zzfn(this);
+    public final void onReceive(Context context, Intent intent) {
+        if (this.f34728D == null) {
+            this.f34728D = new C4916s(this);
         }
-        this.f28528c.m23170a(context, intent);
+        this.f34728D.a(context, intent);
     }
 }

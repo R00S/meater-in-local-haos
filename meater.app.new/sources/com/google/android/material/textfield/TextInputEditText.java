@@ -4,73 +4,30 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Point;
 import android.graphics.Rect;
-import android.os.Build;
-import android.text.Editable;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewParent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
-import androidx.appcompat.widget.C0168i;
-import com.google.android.material.internal.C8027e;
-import com.google.android.material.internal.C8032j;
-import com.google.android.material.theme.p178a.C8079a;
-import okhttp3.HttpUrl;
-import p241e.p254e.p256b.p271c.C8908b;
-import p241e.p254e.p256b.p271c.C8910d;
-import p241e.p254e.p256b.p271c.C8917k;
-import p241e.p254e.p256b.p271c.C8918l;
+import androidx.appcompat.widget.AppCompatEditText;
+import b8.C2272a;
 
 /* loaded from: classes2.dex */
-public class TextInputEditText extends C0168i {
+public class TextInputEditText extends AppCompatEditText {
 
-    /* renamed from: i */
-    private final Rect f30505i;
+    /* renamed from: H, reason: collision with root package name */
+    private final Rect f37240H;
 
-    /* renamed from: j */
-    private boolean f30506j;
+    /* renamed from: I, reason: collision with root package name */
+    private boolean f37241I;
 
     public TextInputEditText(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C8908b.f33826p);
+        this(context, attributeSet, C7.c.f2332q);
     }
 
-    /* renamed from: a */
-    private String m24792a(TextInputLayout textInputLayout) {
-        Editable text = getText();
-        CharSequence hint = textInputLayout.getHint();
-        CharSequence helperText = textInputLayout.getHelperText();
-        CharSequence error = textInputLayout.getError();
-        boolean z = !TextUtils.isEmpty(text);
-        boolean z2 = !TextUtils.isEmpty(hint);
-        boolean z3 = !TextUtils.isEmpty(helperText);
-        boolean z4 = !TextUtils.isEmpty(error);
-        String str = HttpUrl.FRAGMENT_ENCODE_SET;
-        String string = z2 ? hint.toString() : HttpUrl.FRAGMENT_ENCODE_SET;
-        StringBuilder sb = new StringBuilder();
-        sb.append(string);
-        sb.append(((z4 || z3) && !TextUtils.isEmpty(string)) ? ", " : HttpUrl.FRAGMENT_ENCODE_SET);
-        String string2 = sb.toString();
-        StringBuilder sb2 = new StringBuilder();
-        sb2.append(string2);
-        if (z4) {
-            helperText = error;
-        } else if (!z3) {
-            helperText = HttpUrl.FRAGMENT_ENCODE_SET;
-        }
-        sb2.append((Object) helperText);
-        String string3 = sb2.toString();
-        if (!z) {
-            return !TextUtils.isEmpty(string3) ? string3 : HttpUrl.FRAGMENT_ENCODE_SET;
-        }
-        StringBuilder sb3 = new StringBuilder();
-        sb3.append((Object) text);
-        if (!TextUtils.isEmpty(string3)) {
-            str = ", " + string3;
-        }
-        sb3.append(str);
-        return sb3.toString();
+    private boolean e(TextInputLayout textInputLayout) {
+        return textInputLayout != null && this.f37241I;
     }
 
     private CharSequence getHintFromLayout() {
@@ -94,20 +51,22 @@ public class TextInputEditText extends C0168i {
     public void getFocusedRect(Rect rect) {
         super.getFocusedRect(rect);
         TextInputLayout textInputLayout = getTextInputLayout();
-        if (textInputLayout == null || !this.f30506j || rect == null) {
+        if (!e(textInputLayout) || rect == null) {
             return;
         }
-        textInputLayout.getFocusedRect(this.f30505i);
-        rect.bottom = this.f30505i.bottom;
+        textInputLayout.getFocusedRect(this.f37240H);
+        rect.bottom = this.f37240H.bottom;
     }
 
     @Override // android.view.View
     public boolean getGlobalVisibleRect(Rect rect, Point point) {
-        boolean globalVisibleRect = super.getGlobalVisibleRect(rect, point);
         TextInputLayout textInputLayout = getTextInputLayout();
-        if (textInputLayout != null && this.f30506j && rect != null) {
-            textInputLayout.getGlobalVisibleRect(this.f30505i, point);
-            rect.bottom = this.f30505i.bottom;
+        if (!e(textInputLayout)) {
+            return super.getGlobalVisibleRect(rect, point);
+        }
+        boolean globalVisibleRect = textInputLayout.getGlobalVisibleRect(rect, point);
+        if (globalVisibleRect && point != null) {
+            point.offset(-getScrollX(), -getScrollY());
         }
         return globalVisibleRect;
     }
@@ -115,19 +74,19 @@ public class TextInputEditText extends C0168i {
     @Override // android.widget.TextView
     public CharSequence getHint() {
         TextInputLayout textInputLayout = getTextInputLayout();
-        return (textInputLayout == null || !textInputLayout.isProvidingHint()) ? super.getHint() : textInputLayout.getHint();
+        return (textInputLayout == null || !textInputLayout.R()) ? super.getHint() : textInputLayout.getHint();
     }
 
     @Override // android.widget.TextView, android.view.View
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
         TextInputLayout textInputLayout = getTextInputLayout();
-        if (textInputLayout != null && textInputLayout.isProvidingHint() && super.getHint() == null && C8027e.m24662a()) {
-            setHint(HttpUrl.FRAGMENT_ENCODE_SET);
+        if (textInputLayout != null && textInputLayout.R() && super.getHint() == null && com.google.android.material.internal.i.b()) {
+            setHint("");
         }
     }
 
-    @Override // androidx.appcompat.widget.C0168i, android.widget.TextView, android.view.View
+    @Override // androidx.appcompat.widget.AppCompatEditText, android.widget.TextView, android.view.View
     public InputConnection onCreateInputConnection(EditorInfo editorInfo) {
         InputConnection inputConnectionOnCreateInputConnection = super.onCreateInputConnection(editorInfo);
         if (inputConnectionOnCreateInputConnection != null && editorInfo.hintText == null) {
@@ -139,33 +98,28 @@ public class TextInputEditText extends C0168i {
     @Override // android.view.View
     public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
-        TextInputLayout textInputLayout = getTextInputLayout();
-        if (Build.VERSION.SDK_INT >= 23 || textInputLayout == null) {
-            return;
-        }
-        accessibilityNodeInfo.setText(m24792a(textInputLayout));
+        getTextInputLayout();
     }
 
     @Override // android.view.View
     public boolean requestRectangleOnScreen(Rect rect) {
-        boolean zRequestRectangleOnScreen = super.requestRectangleOnScreen(rect);
         TextInputLayout textInputLayout = getTextInputLayout();
-        if (textInputLayout != null && this.f30506j) {
-            this.f30505i.set(0, textInputLayout.getHeight() - getResources().getDimensionPixelOffset(C8910d.f33856J), textInputLayout.getWidth(), textInputLayout.getHeight());
-            textInputLayout.requestRectangleOnScreen(this.f30505i, true);
+        if (!e(textInputLayout) || rect == null) {
+            return super.requestRectangleOnScreen(rect);
         }
-        return zRequestRectangleOnScreen;
+        this.f37240H.set(rect.left, rect.top, rect.right, rect.bottom + (textInputLayout.getHeight() - getHeight()));
+        return super.requestRectangleOnScreen(this.f37240H);
     }
 
-    public void setTextInputLayoutFocusedRectEnabled(boolean z) {
-        this.f30506j = z;
+    public void setTextInputLayoutFocusedRectEnabled(boolean z10) {
+        this.f37241I = z10;
     }
 
-    public TextInputEditText(Context context, AttributeSet attributeSet, int i2) {
-        super(C8079a.m24906c(context, attributeSet, i2, 0), attributeSet, i2);
-        this.f30505i = new Rect();
-        TypedArray typedArrayM24694h = C8032j.m24694h(context, attributeSet, C8918l.f34082L4, i2, C8917k.f33987l, new int[0]);
-        setTextInputLayoutFocusedRectEnabled(typedArrayM24694h.getBoolean(C8918l.f34089M4, false));
-        typedArrayM24694h.recycle();
+    public TextInputEditText(Context context, AttributeSet attributeSet, int i10) {
+        super(C2272a.c(context, attributeSet, i10, 0), attributeSet, i10);
+        this.f37240H = new Rect();
+        TypedArray typedArrayI = com.google.android.material.internal.r.i(context, attributeSet, C7.m.f2708L7, i10, C7.l.f2576m, new int[0]);
+        setTextInputLayoutFocusedRectEnabled(typedArrayI.getBoolean(C7.m.f2718M7, false));
+        typedArrayI.recycle();
     }
 }

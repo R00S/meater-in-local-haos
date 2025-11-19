@@ -1,4 +1,6 @@
-# Protocol Fix Summary - MEATER Link UDP Broadcast
+# Protocol Fix Summary
+
+> ⚠️ **CONTAINS ASSUMPTIONS**: This document describes protocol fixes based on testing and reverse engineering. For verified protocol information extracted directly from source, see `CRITICAL_BLE_FIX_NEEDED.md` which references actual Config.java constants. - MEATER Link UDP Broadcast
 
 ## Issue Resolution
 

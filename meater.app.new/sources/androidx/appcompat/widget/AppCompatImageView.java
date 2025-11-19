@@ -8,17 +8,18 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-import androidx.core.view.InterfaceC0310t;
-import androidx.core.widget.InterfaceC0333n;
 
 /* loaded from: classes.dex */
-public class AppCompatImageView extends ImageView implements InterfaceC0310t, InterfaceC0333n {
+public class AppCompatImageView extends ImageView {
 
-    /* renamed from: f */
-    private final C0158d f801f;
+    /* renamed from: B, reason: collision with root package name */
+    private final C1983e f21211B;
 
-    /* renamed from: g */
-    private final C0174l f802g;
+    /* renamed from: C, reason: collision with root package name */
+    private final C1992n f21212C;
+
+    /* renamed from: D, reason: collision with root package name */
+    private boolean f21213D;
 
     public AppCompatImageView(Context context) {
         this(context, null);
@@ -27,139 +28,145 @@ public class AppCompatImageView extends ImageView implements InterfaceC0310t, In
     @Override // android.widget.ImageView, android.view.View
     protected void drawableStateChanged() {
         super.drawableStateChanged();
-        C0158d c0158d = this.f801f;
-        if (c0158d != null) {
-            c0158d.m918b();
+        C1983e c1983e = this.f21211B;
+        if (c1983e != null) {
+            c1983e.b();
         }
-        C0174l c0174l = this.f802g;
-        if (c0174l != null) {
-            c0174l.m1060b();
+        C1992n c1992n = this.f21212C;
+        if (c1992n != null) {
+            c1992n.c();
         }
     }
 
-    @Override // androidx.core.view.InterfaceC0310t
     public ColorStateList getSupportBackgroundTintList() {
-        C0158d c0158d = this.f801f;
-        if (c0158d != null) {
-            return c0158d.m919c();
+        C1983e c1983e = this.f21211B;
+        if (c1983e != null) {
+            return c1983e.c();
         }
         return null;
     }
 
-    @Override // androidx.core.view.InterfaceC0310t
     public PorterDuff.Mode getSupportBackgroundTintMode() {
-        C0158d c0158d = this.f801f;
-        if (c0158d != null) {
-            return c0158d.m920d();
+        C1983e c1983e = this.f21211B;
+        if (c1983e != null) {
+            return c1983e.d();
         }
         return null;
     }
 
-    @Override // androidx.core.widget.InterfaceC0333n
     public ColorStateList getSupportImageTintList() {
-        C0174l c0174l = this.f802g;
-        if (c0174l != null) {
-            return c0174l.m1061c();
+        C1992n c1992n = this.f21212C;
+        if (c1992n != null) {
+            return c1992n.d();
         }
         return null;
     }
 
-    @Override // androidx.core.widget.InterfaceC0333n
     public PorterDuff.Mode getSupportImageTintMode() {
-        C0174l c0174l = this.f802g;
-        if (c0174l != null) {
-            return c0174l.m1062d();
+        C1992n c1992n = this.f21212C;
+        if (c1992n != null) {
+            return c1992n.e();
         }
         return null;
     }
 
     @Override // android.widget.ImageView, android.view.View
     public boolean hasOverlappingRendering() {
-        return this.f802g.m1063e() && super.hasOverlappingRendering();
+        return this.f21212C.f() && super.hasOverlappingRendering();
     }
 
     @Override // android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
-        C0158d c0158d = this.f801f;
-        if (c0158d != null) {
-            c0158d.m922f(drawable);
+        C1983e c1983e = this.f21211B;
+        if (c1983e != null) {
+            c1983e.f(drawable);
         }
     }
 
     @Override // android.view.View
-    public void setBackgroundResource(int i2) {
-        super.setBackgroundResource(i2);
-        C0158d c0158d = this.f801f;
-        if (c0158d != null) {
-            c0158d.m923g(i2);
+    public void setBackgroundResource(int i10) {
+        super.setBackgroundResource(i10);
+        C1983e c1983e = this.f21211B;
+        if (c1983e != null) {
+            c1983e.g(i10);
         }
     }
 
     @Override // android.widget.ImageView
     public void setImageBitmap(Bitmap bitmap) {
         super.setImageBitmap(bitmap);
-        C0174l c0174l = this.f802g;
-        if (c0174l != null) {
-            c0174l.m1060b();
+        C1992n c1992n = this.f21212C;
+        if (c1992n != null) {
+            c1992n.c();
         }
     }
 
     @Override // android.widget.ImageView
     public void setImageDrawable(Drawable drawable) {
+        C1992n c1992n = this.f21212C;
+        if (c1992n != null && drawable != null && !this.f21213D) {
+            c1992n.h(drawable);
+        }
         super.setImageDrawable(drawable);
-        C0174l c0174l = this.f802g;
-        if (c0174l != null) {
-            c0174l.m1060b();
+        C1992n c1992n2 = this.f21212C;
+        if (c1992n2 != null) {
+            c1992n2.c();
+            if (this.f21213D) {
+                return;
+            }
+            this.f21212C.b();
         }
     }
 
     @Override // android.widget.ImageView
-    public void setImageResource(int i2) {
-        C0174l c0174l = this.f802g;
-        if (c0174l != null) {
-            c0174l.m1065g(i2);
+    public void setImageLevel(int i10) {
+        super.setImageLevel(i10);
+        this.f21213D = true;
+    }
+
+    @Override // android.widget.ImageView
+    public void setImageResource(int i10) {
+        C1992n c1992n = this.f21212C;
+        if (c1992n != null) {
+            c1992n.i(i10);
         }
     }
 
     @Override // android.widget.ImageView
     public void setImageURI(Uri uri) {
         super.setImageURI(uri);
-        C0174l c0174l = this.f802g;
-        if (c0174l != null) {
-            c0174l.m1060b();
+        C1992n c1992n = this.f21212C;
+        if (c1992n != null) {
+            c1992n.c();
         }
     }
 
-    @Override // androidx.core.view.InterfaceC0310t
     public void setSupportBackgroundTintList(ColorStateList colorStateList) {
-        C0158d c0158d = this.f801f;
-        if (c0158d != null) {
-            c0158d.m925i(colorStateList);
+        C1983e c1983e = this.f21211B;
+        if (c1983e != null) {
+            c1983e.i(colorStateList);
         }
     }
 
-    @Override // androidx.core.view.InterfaceC0310t
     public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
-        C0158d c0158d = this.f801f;
-        if (c0158d != null) {
-            c0158d.m926j(mode);
+        C1983e c1983e = this.f21211B;
+        if (c1983e != null) {
+            c1983e.j(mode);
         }
     }
 
-    @Override // androidx.core.widget.InterfaceC0333n
     public void setSupportImageTintList(ColorStateList colorStateList) {
-        C0174l c0174l = this.f802g;
-        if (c0174l != null) {
-            c0174l.m1066h(colorStateList);
+        C1992n c1992n = this.f21212C;
+        if (c1992n != null) {
+            c1992n.j(colorStateList);
         }
     }
 
-    @Override // androidx.core.widget.InterfaceC0333n
     public void setSupportImageTintMode(PorterDuff.Mode mode) {
-        C0174l c0174l = this.f802g;
-        if (c0174l != null) {
-            c0174l.m1067i(mode);
+        C1992n c1992n = this.f21212C;
+        if (c1992n != null) {
+            c1992n.k(mode);
         }
     }
 
@@ -167,14 +174,15 @@ public class AppCompatImageView extends ImageView implements InterfaceC0310t, In
         this(context, attributeSet, 0);
     }
 
-    public AppCompatImageView(Context context, AttributeSet attributeSet, int i2) {
-        super(C0179n0.m1077b(context), attributeSet, i2);
-        C0175l0.m1068a(this, getContext());
-        C0158d c0158d = new C0158d(this);
-        this.f801f = c0158d;
-        c0158d.m921e(attributeSet, i2);
-        C0174l c0174l = new C0174l(this);
-        this.f802g = c0174l;
-        c0174l.m1064f(attributeSet, i2);
+    public AppCompatImageView(Context context, AttributeSet attributeSet, int i10) {
+        super(X.b(context), attributeSet, i10);
+        this.f21213D = false;
+        V.a(this, getContext());
+        C1983e c1983e = new C1983e(this);
+        this.f21211B = c1983e;
+        c1983e.e(attributeSet, i10);
+        C1992n c1992n = new C1992n(this);
+        this.f21212C = c1992n;
+        c1992n.g(attributeSet, i10);
     }
 }

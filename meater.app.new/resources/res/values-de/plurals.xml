@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="updates_notification_body">
-        <item quantity="one">%d Apps können aktualisiert werden</item>
-        <item quantity="other">%d Apps können noch aktualisiert werden</item>
+    <plurals name="connection_details_extended_probes_plural">
+        <item quantity="one">Mit %d Thermometer verbunde</item>
+        <item quantity="other">Mit %d Thermometern verbunden</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">%d Sekunde vorspulen</item>
+        <item quantity="other">%d Sekunden vorspulen</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">%d Sekunde zurückspulen</item>
+        <item quantity="other">%d Sekunden zurückspulen</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d neue Benachrichtigung</item>
+        <item quantity="other">%d neue Benachrichtigungen</item>
+    </plurals>
+    <plurals name="nearby_devices">
+        <item quantity="zero">Keine naheliegenden Geräte gefunden</item>
+        <item quantity="one">%d Gerät in Ihrer Nähe gefunden</item>
+        <item quantity="other">%d Geräte in Ihrer Nähe gefunden</item>
+    </plurals>
+    <plurals name="paired_devices">
+        <item quantity="one">%d gekoppeltes gerät</item>
+        <item quantity="other">%d gekoppelte geräte</item>
     </plurals>
 </resources>

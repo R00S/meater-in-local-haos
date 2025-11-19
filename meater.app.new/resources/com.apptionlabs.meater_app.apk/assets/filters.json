@@ -1,0 +1,14 @@
+[
+  {
+    "tag": "sauce",
+    "localizedName": "Sauce"
+  },
+  {
+    "tag": "indoor",
+    "localizedName": "Indoors"
+  },
+  {
+    "tag": "outdoor",
+    "localizedName": "Outdoors"
+  }
+]

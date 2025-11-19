@@ -11,17 +11,16 @@ import android.view.View;
 /* loaded from: classes2.dex */
 public abstract class ExpandableTransformationBehavior extends ExpandableBehavior {
 
-    /* renamed from: b */
-    private AnimatorSet f30607b;
+    /* renamed from: C, reason: collision with root package name */
+    private AnimatorSet f37537C;
 
-    /* renamed from: com.google.android.material.transformation.ExpandableTransformationBehavior$a */
-    class C8081a extends AnimatorListenerAdapter {
-        C8081a() {
+    class a extends AnimatorListenerAdapter {
+        a() {
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
-            ExpandableTransformationBehavior.this.f30607b = null;
+            ExpandableTransformationBehavior.this.f37537C = null;
         }
     }
 
@@ -29,25 +28,23 @@ public abstract class ExpandableTransformationBehavior extends ExpandableBehavio
     }
 
     @Override // com.google.android.material.transformation.ExpandableBehavior
-    /* renamed from: H */
-    protected boolean mo24910H(View view, View view2, boolean z, boolean z2) {
-        AnimatorSet animatorSet = this.f30607b;
-        boolean z3 = animatorSet != null;
-        if (z3) {
+    protected boolean L(View view, View view2, boolean z10, boolean z11) {
+        AnimatorSet animatorSet = this.f37537C;
+        boolean z12 = animatorSet != null;
+        if (z12) {
             animatorSet.cancel();
         }
-        AnimatorSet animatorSetMo24912J = mo24912J(view, view2, z, z3);
-        this.f30607b = animatorSetMo24912J;
-        animatorSetMo24912J.addListener(new C8081a());
-        this.f30607b.start();
-        if (!z2) {
-            this.f30607b.end();
+        AnimatorSet animatorSetN = N(view, view2, z10, z12);
+        this.f37537C = animatorSetN;
+        animatorSetN.addListener(new a());
+        this.f37537C.start();
+        if (!z11) {
+            this.f37537C.end();
         }
         return true;
     }
 
-    /* renamed from: J */
-    protected abstract AnimatorSet mo24912J(View view, View view2, boolean z, boolean z2);
+    protected abstract AnimatorSet N(View view, View view2, boolean z10, boolean z11);
 
     public ExpandableTransformationBehavior(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);

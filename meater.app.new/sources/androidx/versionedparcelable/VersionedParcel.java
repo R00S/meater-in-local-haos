@@ -3,264 +3,224 @@ package androidx.versionedparcelable;
 import android.os.Parcelable;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import p024c.p041e.C0867a;
+import s.C4391a;
+import z3.b;
 
 /* loaded from: classes.dex */
 public abstract class VersionedParcel {
 
-    /* renamed from: a */
-    protected final C0867a<String, Method> f4402a;
+    /* renamed from: a, reason: collision with root package name */
+    protected final C4391a<String, Method> f29702a;
 
-    /* renamed from: b */
-    protected final C0867a<String, Method> f4403b;
+    /* renamed from: b, reason: collision with root package name */
+    protected final C4391a<String, Method> f29703b;
 
-    /* renamed from: c */
-    protected final C0867a<String, Class> f4404c;
+    /* renamed from: c, reason: collision with root package name */
+    protected final C4391a<String, Class> f29704c;
 
     public static class ParcelException extends RuntimeException {
     }
 
-    public VersionedParcel(C0867a<String, Method> c0867a, C0867a<String, Method> c0867a2, C0867a<String, Class> c0867a3) {
-        this.f4402a = c0867a;
-        this.f4403b = c0867a2;
-        this.f4404c = c0867a3;
+    public VersionedParcel(C4391a<String, Method> c4391a, C4391a<String, Method> c4391a2, C4391a<String, Class> c4391a3) {
+        this.f29702a = c4391a;
+        this.f29703b = c4391a2;
+        this.f29704c = c4391a3;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: N */
-    private void m4705N(InterfaceC0678b interfaceC0678b) {
+    private void N(b bVar) {
         try {
-            mo4717I(m4706c(interfaceC0678b.getClass()).getName());
-        } catch (ClassNotFoundException e2) {
-            throw new RuntimeException(interfaceC0678b.getClass().getSimpleName() + " does not have a Parcelizer", e2);
+            I(c(bVar.getClass()).getName());
+        } catch (ClassNotFoundException e10) {
+            throw new RuntimeException(bVar.getClass().getSimpleName() + " does not have a Parcelizer", e10);
         }
     }
 
-    /* renamed from: c */
-    private Class m4706c(Class<? extends InterfaceC0678b> cls) throws ClassNotFoundException {
-        Class cls2 = this.f4404c.get(cls.getName());
+    private Class c(Class<? extends b> cls) throws ClassNotFoundException {
+        Class cls2 = this.f29704c.get(cls.getName());
         if (cls2 != null) {
             return cls2;
         }
         Class<?> cls3 = Class.forName(String.format("%s.%sParcelizer", cls.getPackage().getName(), cls.getSimpleName()), false, cls.getClassLoader());
-        this.f4404c.put(cls.getName(), cls3);
+        this.f29704c.put(cls.getName(), cls3);
         return cls3;
     }
 
-    /* renamed from: d */
-    private Method m4707d(String str) throws IllegalAccessException, NoSuchMethodException, SecurityException, ClassNotFoundException {
-        Method method = this.f4402a.get(str);
+    private Method d(String str) throws NoSuchMethodException, SecurityException {
+        Method method = this.f29702a.get(str);
         if (method != null) {
             return method;
         }
         System.currentTimeMillis();
         Method declaredMethod = Class.forName(str, true, VersionedParcel.class.getClassLoader()).getDeclaredMethod("read", VersionedParcel.class);
-        this.f4402a.put(str, declaredMethod);
+        this.f29702a.put(str, declaredMethod);
         return declaredMethod;
     }
 
-    /* JADX WARN: Multi-variable type inference failed */
-    /* renamed from: e */
-    private Method m4708e(Class cls) throws IllegalAccessException, NoSuchMethodException, ClassNotFoundException, SecurityException {
-        Method method = this.f4403b.get(cls.getName());
+    private Method e(Class cls) throws NoSuchMethodException, ClassNotFoundException, SecurityException {
+        Method method = this.f29703b.get(cls.getName());
         if (method != null) {
             return method;
         }
-        Class clsM4706c = m4706c(cls);
+        Class clsC = c(cls);
         System.currentTimeMillis();
-        Method declaredMethod = clsM4706c.getDeclaredMethod("write", cls, VersionedParcel.class);
-        this.f4403b.put(cls.getName(), declaredMethod);
+        Method declaredMethod = clsC.getDeclaredMethod("write", cls, VersionedParcel.class);
+        this.f29703b.put(cls.getName(), declaredMethod);
         return declaredMethod;
     }
 
-    /* renamed from: A */
-    protected abstract void mo4709A(byte[] bArr);
+    protected abstract void A(byte[] bArr);
 
-    /* renamed from: B */
-    public void m4710B(byte[] bArr, int i2) {
-        mo4741w(i2);
-        mo4709A(bArr);
+    public void B(byte[] bArr, int i10) {
+        w(i10);
+        A(bArr);
     }
 
-    /* renamed from: C */
-    protected abstract void mo4711C(CharSequence charSequence);
+    protected abstract void C(CharSequence charSequence);
 
-    /* renamed from: D */
-    public void m4712D(CharSequence charSequence, int i2) {
-        mo4741w(i2);
-        mo4711C(charSequence);
+    public void D(CharSequence charSequence, int i10) {
+        w(i10);
+        C(charSequence);
     }
 
-    /* renamed from: E */
-    protected abstract void mo4713E(int i2);
+    protected abstract void E(int i10);
 
-    /* renamed from: F */
-    public void m4714F(int i2, int i3) {
-        mo4741w(i3);
-        mo4713E(i2);
+    public void F(int i10, int i11) {
+        w(i11);
+        E(i10);
     }
 
-    /* renamed from: G */
-    protected abstract void mo4715G(Parcelable parcelable);
+    protected abstract void G(Parcelable parcelable);
 
-    /* renamed from: H */
-    public void m4716H(Parcelable parcelable, int i2) {
-        mo4741w(i2);
-        mo4715G(parcelable);
+    public void H(Parcelable parcelable, int i10) {
+        w(i10);
+        G(parcelable);
     }
 
-    /* renamed from: I */
-    protected abstract void mo4717I(String str);
+    protected abstract void I(String str);
 
-    /* renamed from: J */
-    public void m4718J(String str, int i2) {
-        mo4741w(i2);
-        mo4717I(str);
+    public void J(String str, int i10) {
+        w(i10);
+        I(str);
     }
 
-    /* renamed from: K */
-    protected <T extends InterfaceC0678b> void m4719K(T t, VersionedParcel versionedParcel) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    protected <T extends b> void K(T t10, VersionedParcel versionedParcel) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         try {
-            m4708e(t.getClass()).invoke(null, t, versionedParcel);
-        } catch (ClassNotFoundException e2) {
-            throw new RuntimeException("VersionedParcel encountered ClassNotFoundException", e2);
-        } catch (IllegalAccessException e3) {
-            throw new RuntimeException("VersionedParcel encountered IllegalAccessException", e3);
-        } catch (NoSuchMethodException e4) {
-            throw new RuntimeException("VersionedParcel encountered NoSuchMethodException", e4);
-        } catch (InvocationTargetException e5) {
-            if (!(e5.getCause() instanceof RuntimeException)) {
-                throw new RuntimeException("VersionedParcel encountered InvocationTargetException", e5);
+            e(t10.getClass()).invoke(null, t10, versionedParcel);
+        } catch (ClassNotFoundException e10) {
+            throw new RuntimeException("VersionedParcel encountered ClassNotFoundException", e10);
+        } catch (IllegalAccessException e11) {
+            throw new RuntimeException("VersionedParcel encountered IllegalAccessException", e11);
+        } catch (NoSuchMethodException e12) {
+            throw new RuntimeException("VersionedParcel encountered NoSuchMethodException", e12);
+        } catch (InvocationTargetException e13) {
+            if (!(e13.getCause() instanceof RuntimeException)) {
+                throw new RuntimeException("VersionedParcel encountered InvocationTargetException", e13);
             }
-            throw ((RuntimeException) e5.getCause());
+            throw ((RuntimeException) e13.getCause());
         }
     }
 
-    /* renamed from: L */
-    protected void m4720L(InterfaceC0678b interfaceC0678b) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-        if (interfaceC0678b == null) {
-            mo4717I(null);
+    protected void L(b bVar) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        if (bVar == null) {
+            I(null);
             return;
         }
-        m4705N(interfaceC0678b);
-        VersionedParcel versionedParcelMo4723b = mo4723b();
-        m4719K(interfaceC0678b, versionedParcelMo4723b);
-        versionedParcelMo4723b.mo4722a();
+        N(bVar);
+        VersionedParcel versionedParcelB = b();
+        K(bVar, versionedParcelB);
+        versionedParcelB.a();
     }
 
-    /* renamed from: M */
-    public void m4721M(InterfaceC0678b interfaceC0678b, int i2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-        mo4741w(i2);
-        m4720L(interfaceC0678b);
+    public void M(b bVar, int i10) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        w(i10);
+        L(bVar);
     }
 
-    /* renamed from: a */
-    protected abstract void mo4722a();
+    protected abstract void a();
 
-    /* renamed from: b */
-    protected abstract VersionedParcel mo4723b();
+    protected abstract VersionedParcel b();
 
-    /* renamed from: f */
-    public boolean m4724f() {
+    public boolean f() {
         return false;
     }
 
-    /* renamed from: g */
-    protected abstract boolean mo4725g();
+    protected abstract boolean g();
 
-    /* renamed from: h */
-    public boolean m4726h(boolean z, int i2) {
-        return !mo4731m(i2) ? z : mo4725g();
+    public boolean h(boolean z10, int i10) {
+        return !m(i10) ? z10 : g();
     }
 
-    /* renamed from: i */
-    protected abstract byte[] mo4727i();
+    protected abstract byte[] i();
 
-    /* renamed from: j */
-    public byte[] m4728j(byte[] bArr, int i2) {
-        return !mo4731m(i2) ? bArr : mo4727i();
+    public byte[] j(byte[] bArr, int i10) {
+        return !m(i10) ? bArr : i();
     }
 
-    /* renamed from: k */
-    protected abstract CharSequence mo4729k();
+    protected abstract CharSequence k();
 
-    /* renamed from: l */
-    public CharSequence m4730l(CharSequence charSequence, int i2) {
-        return !mo4731m(i2) ? charSequence : mo4729k();
+    public CharSequence l(CharSequence charSequence, int i10) {
+        return !m(i10) ? charSequence : k();
     }
 
-    /* renamed from: m */
-    protected abstract boolean mo4731m(int i2);
+    protected abstract boolean m(int i10);
 
-    /* renamed from: n */
-    protected <T extends InterfaceC0678b> T m4732n(String str, VersionedParcel versionedParcel) {
+    protected <T extends b> T n(String str, VersionedParcel versionedParcel) {
         try {
-            return (T) m4707d(str).invoke(null, versionedParcel);
-        } catch (ClassNotFoundException e2) {
-            throw new RuntimeException("VersionedParcel encountered ClassNotFoundException", e2);
-        } catch (IllegalAccessException e3) {
-            throw new RuntimeException("VersionedParcel encountered IllegalAccessException", e3);
-        } catch (NoSuchMethodException e4) {
-            throw new RuntimeException("VersionedParcel encountered NoSuchMethodException", e4);
-        } catch (InvocationTargetException e5) {
-            if (e5.getCause() instanceof RuntimeException) {
-                throw ((RuntimeException) e5.getCause());
+            return (T) d(str).invoke(null, versionedParcel);
+        } catch (ClassNotFoundException e10) {
+            throw new RuntimeException("VersionedParcel encountered ClassNotFoundException", e10);
+        } catch (IllegalAccessException e11) {
+            throw new RuntimeException("VersionedParcel encountered IllegalAccessException", e11);
+        } catch (NoSuchMethodException e12) {
+            throw new RuntimeException("VersionedParcel encountered NoSuchMethodException", e12);
+        } catch (InvocationTargetException e13) {
+            if (e13.getCause() instanceof RuntimeException) {
+                throw ((RuntimeException) e13.getCause());
             }
-            throw new RuntimeException("VersionedParcel encountered InvocationTargetException", e5);
+            throw new RuntimeException("VersionedParcel encountered InvocationTargetException", e13);
         }
     }
 
-    /* renamed from: o */
-    protected abstract int mo4733o();
+    protected abstract int o();
 
-    /* renamed from: p */
-    public int m4734p(int i2, int i3) {
-        return !mo4731m(i3) ? i2 : mo4733o();
+    public int p(int i10, int i11) {
+        return !m(i11) ? i10 : o();
     }
 
-    /* renamed from: q */
-    protected abstract <T extends Parcelable> T mo4735q();
+    protected abstract <T extends Parcelable> T q();
 
-    /* renamed from: r */
-    public <T extends Parcelable> T m4736r(T t, int i2) {
-        return !mo4731m(i2) ? t : (T) mo4735q();
+    public <T extends Parcelable> T r(T t10, int i10) {
+        return !m(i10) ? t10 : (T) q();
     }
 
-    /* renamed from: s */
-    protected abstract String mo4737s();
+    protected abstract String s();
 
-    /* renamed from: t */
-    public String m4738t(String str, int i2) {
-        return !mo4731m(i2) ? str : mo4737s();
+    public String t(String str, int i10) {
+        return !m(i10) ? str : s();
     }
 
-    /* renamed from: u */
-    protected <T extends InterfaceC0678b> T m4739u() {
-        String strMo4737s = mo4737s();
-        if (strMo4737s == null) {
+    protected <T extends b> T u() {
+        String strS = s();
+        if (strS == null) {
             return null;
         }
-        return (T) m4732n(strMo4737s, mo4723b());
+        return (T) n(strS, b());
     }
 
-    /* renamed from: v */
-    public <T extends InterfaceC0678b> T m4740v(T t, int i2) {
-        return !mo4731m(i2) ? t : (T) m4739u();
+    public <T extends b> T v(T t10, int i10) {
+        return !m(i10) ? t10 : (T) u();
     }
 
-    /* renamed from: w */
-    protected abstract void mo4741w(int i2);
+    protected abstract void w(int i10);
 
-    /* renamed from: x */
-    public void m4742x(boolean z, boolean z2) {
+    protected abstract void y(boolean z10);
+
+    public void z(boolean z10, int i10) {
+        w(i10);
+        y(z10);
     }
 
-    /* renamed from: y */
-    protected abstract void mo4743y(boolean z);
-
-    /* renamed from: z */
-    public void m4744z(boolean z, int i2) {
-        mo4741w(i2);
-        mo4743y(z);
+    public void x(boolean z10, boolean z11) {
     }
 }

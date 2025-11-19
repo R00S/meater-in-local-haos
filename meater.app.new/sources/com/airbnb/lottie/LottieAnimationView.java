@@ -1,557 +1,817 @@
 package com.airbnb.lottie;
 
+import L3.C;
+import L3.C1357b;
+import L3.C1360e;
+import L3.D;
+import L3.E;
+import L3.EnumC1356a;
+import L3.F;
+import L3.G;
+import L3.H;
+import L3.InterfaceC1358c;
+import L3.q;
+import L3.v;
+import L3.x;
+import L3.y;
+import L3.z;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.util.JsonReader;
 import android.util.Log;
 import android.view.View;
 import androidx.appcompat.widget.AppCompatImageView;
-import com.airbnb.lottie.p112s.C5233e;
-import com.airbnb.lottie.p119w.C5323c;
-import java.io.StringReader;
+import com.airbnb.lottie.LottieAnimationView;
+import j.C3699a;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.lang.ref.WeakReference;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.Callable;
 
 /* loaded from: classes.dex */
 public class LottieAnimationView extends AppCompatImageView {
 
-    /* renamed from: h */
-    private static final String f12304h = LottieAnimationView.class.getSimpleName();
+    /* renamed from: R, reason: collision with root package name */
+    private static final String f31213R = "LottieAnimationView";
 
-    /* renamed from: i */
-    private final InterfaceC5184h<C5180d> f12305i;
+    /* renamed from: S, reason: collision with root package name */
+    private static final v<Throwable> f31214S = new v() { // from class: L3.g
+        @Override // L3.v
+        public final void onResult(Object obj) {
+            LottieAnimationView.t((Throwable) obj);
+        }
+    };
 
-    /* renamed from: j */
-    private final InterfaceC5184h<Throwable> f12306j;
+    /* renamed from: E, reason: collision with root package name */
+    private final v<L3.i> f31215E;
 
-    /* renamed from: k */
-    private final C5182f f12307k;
+    /* renamed from: F, reason: collision with root package name */
+    private final v<Throwable> f31216F;
 
-    /* renamed from: l */
-    private String f12308l;
+    /* renamed from: G, reason: collision with root package name */
+    private v<Throwable> f31217G;
 
-    /* renamed from: m */
-    private int f12309m;
+    /* renamed from: H, reason: collision with root package name */
+    private int f31218H;
 
-    /* renamed from: n */
-    private boolean f12310n;
+    /* renamed from: I, reason: collision with root package name */
+    private final n f31219I;
 
-    /* renamed from: o */
-    private boolean f12311o;
+    /* renamed from: J, reason: collision with root package name */
+    private String f31220J;
 
-    /* renamed from: p */
-    private boolean f12312p;
+    /* renamed from: K, reason: collision with root package name */
+    private int f31221K;
 
-    /* renamed from: q */
-    private Set<InterfaceC5185i> f12313q;
+    /* renamed from: L, reason: collision with root package name */
+    private boolean f31222L;
 
-    /* renamed from: r */
-    private C5188l<C5180d> f12314r;
+    /* renamed from: M, reason: collision with root package name */
+    private boolean f31223M;
 
-    /* renamed from: s */
-    private C5180d f12315s;
+    /* renamed from: N, reason: collision with root package name */
+    private boolean f31224N;
 
-    private static class SavedState extends View.BaseSavedState {
-        public static final Parcelable.Creator<SavedState> CREATOR = new C5174a();
+    /* renamed from: O, reason: collision with root package name */
+    private final Set<c> f31225O;
 
-        /* renamed from: f */
-        String f12316f;
+    /* renamed from: P, reason: collision with root package name */
+    private final Set<x> f31226P;
 
-        /* renamed from: g */
-        int f12317g;
+    /* renamed from: Q, reason: collision with root package name */
+    private o<L3.i> f31227Q;
 
-        /* renamed from: h */
-        float f12318h;
+    /* JADX INFO: Add missing generic type declarations: [T] */
+    class a<T> extends Y3.c<T> {
 
-        /* renamed from: i */
-        boolean f12319i;
+        /* renamed from: d, reason: collision with root package name */
+        final /* synthetic */ Y3.e f31228d;
 
-        /* renamed from: j */
-        String f12320j;
+        a(Y3.e eVar) {
+            this.f31228d = eVar;
+        }
 
-        /* renamed from: k */
-        int f12321k;
+        @Override // Y3.c
+        public T a(Y3.b<T> bVar) {
+            return (T) this.f31228d.a(bVar);
+        }
+    }
 
-        /* renamed from: l */
-        int f12322l;
+    private static class b extends View.BaseSavedState {
+        public static final Parcelable.Creator<b> CREATOR = new a();
 
-        /* renamed from: com.airbnb.lottie.LottieAnimationView$SavedState$a */
-        static class C5174a implements Parcelable.Creator<SavedState> {
-            C5174a() {
+        /* renamed from: B, reason: collision with root package name */
+        String f31230B;
+
+        /* renamed from: C, reason: collision with root package name */
+        int f31231C;
+
+        /* renamed from: D, reason: collision with root package name */
+        float f31232D;
+
+        /* renamed from: E, reason: collision with root package name */
+        boolean f31233E;
+
+        /* renamed from: F, reason: collision with root package name */
+        String f31234F;
+
+        /* renamed from: G, reason: collision with root package name */
+        int f31235G;
+
+        /* renamed from: H, reason: collision with root package name */
+        int f31236H;
+
+        class a implements Parcelable.Creator<b> {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
             /* renamed from: a, reason: merged with bridge method [inline-methods] */
-            public SavedState createFromParcel(Parcel parcel) {
-                return new SavedState(parcel, null);
+            public b createFromParcel(Parcel parcel) {
+                return new b(parcel, null);
             }
 
             @Override // android.os.Parcelable.Creator
             /* renamed from: b, reason: merged with bridge method [inline-methods] */
-            public SavedState[] newArray(int i2) {
-                return new SavedState[i2];
+            public b[] newArray(int i10) {
+                return new b[i10];
             }
         }
 
-        /* synthetic */ SavedState(Parcel parcel, C5175a c5175a) {
+        /* synthetic */ b(Parcel parcel, a aVar) {
             this(parcel);
         }
 
         @Override // android.view.View.BaseSavedState, android.view.AbsSavedState, android.os.Parcelable
-        public void writeToParcel(Parcel parcel, int i2) {
-            super.writeToParcel(parcel, i2);
-            parcel.writeString(this.f12316f);
-            parcel.writeFloat(this.f12318h);
-            parcel.writeInt(this.f12319i ? 1 : 0);
-            parcel.writeString(this.f12320j);
-            parcel.writeInt(this.f12321k);
-            parcel.writeInt(this.f12322l);
+        public void writeToParcel(Parcel parcel, int i10) {
+            super.writeToParcel(parcel, i10);
+            parcel.writeString(this.f31230B);
+            parcel.writeFloat(this.f31232D);
+            parcel.writeInt(this.f31233E ? 1 : 0);
+            parcel.writeString(this.f31234F);
+            parcel.writeInt(this.f31235G);
+            parcel.writeInt(this.f31236H);
         }
 
-        SavedState(Parcelable parcelable) {
+        b(Parcelable parcelable) {
             super(parcelable);
         }
 
-        private SavedState(Parcel parcel) {
+        private b(Parcel parcel) {
             super(parcel);
-            this.f12316f = parcel.readString();
-            this.f12318h = parcel.readFloat();
-            this.f12319i = parcel.readInt() == 1;
-            this.f12320j = parcel.readString();
-            this.f12321k = parcel.readInt();
-            this.f12322l = parcel.readInt();
+            this.f31230B = parcel.readString();
+            this.f31232D = parcel.readFloat();
+            this.f31233E = parcel.readInt() == 1;
+            this.f31234F = parcel.readString();
+            this.f31235G = parcel.readInt();
+            this.f31236H = parcel.readInt();
         }
     }
 
-    /* renamed from: com.airbnb.lottie.LottieAnimationView$a */
-    class C5175a implements InterfaceC5184h<C5180d> {
-        C5175a() {
-        }
-
-        @Override // com.airbnb.lottie.InterfaceC5184h
-        /* renamed from: b, reason: merged with bridge method [inline-methods] */
-        public void mo9387a(C5180d c5180d) {
-            LottieAnimationView.this.setComposition(c5180d);
-        }
+    private enum c {
+        SET_ANIMATION,
+        SET_PROGRESS,
+        SET_REPEAT_MODE,
+        SET_REPEAT_COUNT,
+        SET_IMAGE_ASSETS,
+        PLAY_OPTION
     }
 
-    /* renamed from: com.airbnb.lottie.LottieAnimationView$b */
-    class C5176b implements InterfaceC5184h<Throwable> {
-        C5176b() {
+    private static class d implements v<Throwable> {
+
+        /* renamed from: a, reason: collision with root package name */
+        private final WeakReference<LottieAnimationView> f31244a;
+
+        public d(LottieAnimationView lottieAnimationView) {
+            this.f31244a = new WeakReference<>(lottieAnimationView);
         }
 
-        @Override // com.airbnb.lottie.InterfaceC5184h
-        /* renamed from: b, reason: merged with bridge method [inline-methods] */
-        public void mo9387a(Throwable th) {
-            throw new IllegalStateException("Unable to parse composition", th);
-        }
-    }
-
-    public LottieAnimationView(Context context) {
-        super(context);
-        this.f12305i = new C5175a();
-        this.f12306j = new C5176b();
-        this.f12307k = new C5182f();
-        this.f12310n = false;
-        this.f12311o = false;
-        this.f12312p = false;
-        this.f12313q = new HashSet();
-        m9374i(null);
-    }
-
-    /* renamed from: e */
-    private void m9371e() {
-        C5188l<C5180d> c5188l = this.f12314r;
-        if (c5188l != null) {
-            c5188l.m9505m(this.f12305i);
-            this.f12314r.m9504l(this.f12306j);
+        @Override // L3.v
+        /* renamed from: a, reason: merged with bridge method [inline-methods] */
+        public void onResult(Throwable th) {
+            LottieAnimationView lottieAnimationView = this.f31244a.get();
+            if (lottieAnimationView == null) {
+                return;
+            }
+            if (lottieAnimationView.f31218H != 0) {
+                lottieAnimationView.setImageResource(lottieAnimationView.f31218H);
+            }
+            (lottieAnimationView.f31217G == null ? LottieAnimationView.f31214S : lottieAnimationView.f31217G).onResult(th);
         }
     }
 
-    /* renamed from: f */
-    private void m9372f() {
-        this.f12315s = null;
-        this.f12307k.m9464f();
+    private static class e implements v<L3.i> {
+
+        /* renamed from: a, reason: collision with root package name */
+        private final WeakReference<LottieAnimationView> f31245a;
+
+        public e(LottieAnimationView lottieAnimationView) {
+            this.f31245a = new WeakReference<>(lottieAnimationView);
+        }
+
+        @Override // L3.v
+        /* renamed from: a, reason: merged with bridge method [inline-methods] */
+        public void onResult(L3.i iVar) {
+            LottieAnimationView lottieAnimationView = this.f31245a.get();
+            if (lottieAnimationView == null) {
+                return;
+            }
+            lottieAnimationView.setComposition(iVar);
+        }
     }
 
-    /* renamed from: h */
-    private void m9373h() {
-        setLayerType(this.f12312p && this.f12307k.m9441B() ? 2 : 1, null);
+    public LottieAnimationView(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
+        this.f31215E = new e(this);
+        this.f31216F = new d(this);
+        this.f31218H = 0;
+        this.f31219I = new n();
+        this.f31222L = false;
+        this.f31223M = false;
+        this.f31224N = true;
+        this.f31225O = new HashSet();
+        this.f31226P = new HashSet();
+        p(attributeSet, D.f9109a);
     }
 
-    /* renamed from: i */
-    private void m9374i(AttributeSet attributeSet) {
+    private void k() {
+        o<L3.i> oVar = this.f31227Q;
+        if (oVar != null) {
+            oVar.k(this.f31215E);
+            this.f31227Q.j(this.f31216F);
+        }
+    }
+
+    private void l() {
+        this.f31219I.t();
+    }
+
+    private o<L3.i> n(final String str) {
+        return isInEditMode() ? new o<>(new Callable() { // from class: L3.f
+            @Override // java.util.concurrent.Callable
+            public final Object call() {
+                return this.f9156a.r(str);
+            }
+        }, true) : this.f31224N ? q.j(getContext(), str) : q.k(getContext(), str, null);
+    }
+
+    private o<L3.i> o(final int i10) {
+        return isInEditMode() ? new o<>(new Callable() { // from class: L3.h
+            @Override // java.util.concurrent.Callable
+            public final Object call() {
+                return this.f9158a.s(i10);
+            }
+        }, true) : this.f31224N ? q.s(getContext(), i10) : q.t(getContext(), i10, null);
+    }
+
+    private void p(AttributeSet attributeSet, int i10) {
         String string;
-        TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, C5190n.f12481w);
-        if (!isInEditMode()) {
-            int i2 = C5190n.f12440E;
-            boolean zHasValue = typedArrayObtainStyledAttributes.hasValue(i2);
-            int i3 = C5190n.f12436A;
-            boolean zHasValue2 = typedArrayObtainStyledAttributes.hasValue(i3);
-            int i4 = C5190n.f12444I;
-            boolean zHasValue3 = typedArrayObtainStyledAttributes.hasValue(i4);
-            if (zHasValue && zHasValue2) {
-                throw new IllegalArgumentException("lottie_rawRes and lottie_fileName cannot be used at the same time. Please use only one at once.");
+        TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(attributeSet, E.f9110a, i10, 0);
+        this.f31224N = typedArrayObtainStyledAttributes.getBoolean(E.f9113d, true);
+        int i11 = E.f9125p;
+        boolean zHasValue = typedArrayObtainStyledAttributes.hasValue(i11);
+        int i12 = E.f9120k;
+        boolean zHasValue2 = typedArrayObtainStyledAttributes.hasValue(i12);
+        int i13 = E.f9130u;
+        boolean zHasValue3 = typedArrayObtainStyledAttributes.hasValue(i13);
+        if (zHasValue && zHasValue2) {
+            throw new IllegalArgumentException("lottie_rawRes and lottie_fileName cannot be used at the same time. Please use only one at once.");
+        }
+        if (zHasValue) {
+            int resourceId = typedArrayObtainStyledAttributes.getResourceId(i11, 0);
+            if (resourceId != 0) {
+                setAnimation(resourceId);
             }
-            if (zHasValue) {
-                int resourceId = typedArrayObtainStyledAttributes.getResourceId(i2, 0);
-                if (resourceId != 0) {
-                    setAnimation(resourceId);
-                }
-            } else if (zHasValue2) {
-                String string2 = typedArrayObtainStyledAttributes.getString(i3);
-                if (string2 != null) {
-                    setAnimation(string2);
-                }
-            } else if (zHasValue3 && (string = typedArrayObtainStyledAttributes.getString(i4)) != null) {
-                setAnimationFromUrl(string);
+        } else if (zHasValue2) {
+            String string2 = typedArrayObtainStyledAttributes.getString(i12);
+            if (string2 != null) {
+                setAnimation(string2);
             }
+        } else if (zHasValue3 && (string = typedArrayObtainStyledAttributes.getString(i13)) != null) {
+            setAnimationFromUrl(string);
         }
-        if (typedArrayObtainStyledAttributes.getBoolean(C5190n.f12482x, false)) {
-            this.f12310n = true;
-            this.f12311o = true;
+        setFallbackResource(typedArrayObtainStyledAttributes.getResourceId(E.f9119j, 0));
+        if (typedArrayObtainStyledAttributes.getBoolean(E.f9112c, false)) {
+            this.f31223M = true;
         }
-        if (typedArrayObtainStyledAttributes.getBoolean(C5190n.f12438C, false)) {
-            this.f12307k.m9456Q(-1);
+        if (typedArrayObtainStyledAttributes.getBoolean(E.f9123n, false)) {
+            this.f31219I.a1(-1);
         }
-        int i5 = C5190n.f12442G;
-        if (typedArrayObtainStyledAttributes.hasValue(i5)) {
-            setRepeatMode(typedArrayObtainStyledAttributes.getInt(i5, 1));
+        int i14 = E.f9128s;
+        if (typedArrayObtainStyledAttributes.hasValue(i14)) {
+            setRepeatMode(typedArrayObtainStyledAttributes.getInt(i14, 1));
         }
-        int i6 = C5190n.f12441F;
-        if (typedArrayObtainStyledAttributes.hasValue(i6)) {
-            setRepeatCount(typedArrayObtainStyledAttributes.getInt(i6, -1));
+        int i15 = E.f9127r;
+        if (typedArrayObtainStyledAttributes.hasValue(i15)) {
+            setRepeatCount(typedArrayObtainStyledAttributes.getInt(i15, -1));
         }
-        setImageAssetsFolder(typedArrayObtainStyledAttributes.getString(C5190n.f12437B));
-        setProgress(typedArrayObtainStyledAttributes.getFloat(C5190n.f12439D, 0.0f));
-        m9378g(typedArrayObtainStyledAttributes.getBoolean(C5190n.f12484z, false));
-        int i7 = C5190n.f12483y;
-        if (typedArrayObtainStyledAttributes.hasValue(i7)) {
-            m9376c(new C5233e("**"), InterfaceC5186j.f12418x, new C5323c(new C5191o(typedArrayObtainStyledAttributes.getColor(i7, 0))));
+        int i16 = E.f9129t;
+        if (typedArrayObtainStyledAttributes.hasValue(i16)) {
+            setSpeed(typedArrayObtainStyledAttributes.getFloat(i16, 1.0f));
         }
-        int i8 = C5190n.f12443H;
-        if (typedArrayObtainStyledAttributes.hasValue(i8)) {
-            this.f12307k.m9458S(typedArrayObtainStyledAttributes.getFloat(i8, 1.0f));
+        int i17 = E.f9115f;
+        if (typedArrayObtainStyledAttributes.hasValue(i17)) {
+            setClipToCompositionBounds(typedArrayObtainStyledAttributes.getBoolean(i17, true));
+        }
+        int i18 = E.f9114e;
+        if (typedArrayObtainStyledAttributes.hasValue(i18)) {
+            setClipTextToBoundingBox(typedArrayObtainStyledAttributes.getBoolean(i18, false));
+        }
+        int i19 = E.f9117h;
+        if (typedArrayObtainStyledAttributes.hasValue(i19)) {
+            setDefaultFontFileExtension(typedArrayObtainStyledAttributes.getString(i19));
+        }
+        setImageAssetsFolder(typedArrayObtainStyledAttributes.getString(E.f9122m));
+        int i20 = E.f9124o;
+        z(typedArrayObtainStyledAttributes.getFloat(i20, 0.0f), typedArrayObtainStyledAttributes.hasValue(i20));
+        m(typedArrayObtainStyledAttributes.getBoolean(E.f9118i, false));
+        int i21 = E.f9116g;
+        if (typedArrayObtainStyledAttributes.hasValue(i21)) {
+            i(new Q3.e("**"), y.f9216K, new Y3.c(new G(C3699a.a(getContext(), typedArrayObtainStyledAttributes.getResourceId(i21, -1)).getDefaultColor())));
+        }
+        int i22 = E.f9126q;
+        if (typedArrayObtainStyledAttributes.hasValue(i22)) {
+            F f10 = F.AUTOMATIC;
+            int iOrdinal = typedArrayObtainStyledAttributes.getInt(i22, f10.ordinal());
+            if (iOrdinal >= F.values().length) {
+                iOrdinal = f10.ordinal();
+            }
+            setRenderMode(F.values()[iOrdinal]);
+        }
+        int i23 = E.f9111b;
+        if (typedArrayObtainStyledAttributes.hasValue(i23)) {
+            EnumC1356a enumC1356a = EnumC1356a.AUTOMATIC;
+            int iOrdinal2 = typedArrayObtainStyledAttributes.getInt(i23, enumC1356a.ordinal());
+            if (iOrdinal2 >= F.values().length) {
+                iOrdinal2 = enumC1356a.ordinal();
+            }
+            setAsyncUpdates(EnumC1356a.values()[iOrdinal2]);
+        }
+        setIgnoreDisabledSystemAnimations(typedArrayObtainStyledAttributes.getBoolean(E.f9121l, false));
+        int i24 = E.f9131v;
+        if (typedArrayObtainStyledAttributes.hasValue(i24)) {
+            setUseCompositionFrameRate(typedArrayObtainStyledAttributes.getBoolean(i24, false));
         }
         typedArrayObtainStyledAttributes.recycle();
-        m9373h();
+        this.f31219I.e1(Boolean.valueOf(X3.j.f(getContext()) != 0.0f));
     }
 
-    /* renamed from: p */
-    private void m9375p(Drawable drawable, boolean z) {
-        if (z && drawable != this.f12307k) {
-            m9382m();
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ z r(String str) {
+        return this.f31224N ? q.l(getContext(), str) : q.m(getContext(), str, null);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ z s(int i10) {
+        return this.f31224N ? q.u(getContext(), i10) : q.v(getContext(), i10, null);
+    }
+
+    private void setCompositionTask(o<L3.i> oVar) {
+        z<L3.i> zVarE = oVar.e();
+        n nVar = this.f31219I;
+        if (zVarE != null && nVar == getDrawable() && nVar.I() == zVarE.b()) {
+            return;
         }
-        m9371e();
-        super.setImageDrawable(drawable);
+        this.f31225O.add(c.SET_ANIMATION);
+        l();
+        k();
+        this.f31227Q = oVar.d(this.f31215E).c(this.f31216F);
     }
 
-    private void setCompositionTask(C5188l<C5180d> c5188l) {
-        m9372f();
-        m9371e();
-        this.f12314r = c5188l.m9503h(this.f12305i).m9502g(this.f12306j);
+    /* JADX INFO: Access modifiers changed from: private */
+    public static /* synthetic */ void t(Throwable th) {
+        if (!X3.j.k(th)) {
+            throw new IllegalStateException("Unable to parse composition", th);
+        }
+        X3.d.d("Unable to load composition.", th);
     }
 
-    /* renamed from: c */
-    public <T> void m9376c(C5233e c5233e, T t, C5323c<T> c5323c) {
-        this.f12307k.m9462c(c5233e, t, c5323c);
+    private void y() {
+        boolean zQ = q();
+        setImageDrawable(null);
+        setImageDrawable(this.f31219I);
+        if (zQ) {
+            this.f31219I.z0();
+        }
     }
 
-    /* renamed from: d */
-    public void m9377d() {
-        this.f12307k.m9463e();
-        m9373h();
+    private void z(float f10, boolean z10) {
+        if (z10) {
+            this.f31225O.add(c.SET_PROGRESS);
+        }
+        this.f31219I.Y0(f10);
     }
 
-    /* renamed from: g */
-    public void m9378g(boolean z) {
-        this.f12307k.m9465g(z);
+    public EnumC1356a getAsyncUpdates() {
+        return this.f31219I.D();
     }
 
-    public C5180d getComposition() {
-        return this.f12315s;
+    public boolean getAsyncUpdatesEnabled() {
+        return this.f31219I.E();
+    }
+
+    public boolean getClipTextToBoundingBox() {
+        return this.f31219I.G();
+    }
+
+    public boolean getClipToCompositionBounds() {
+        return this.f31219I.H();
+    }
+
+    public L3.i getComposition() {
+        Drawable drawable = getDrawable();
+        n nVar = this.f31219I;
+        if (drawable == nVar) {
+            return nVar.I();
+        }
+        return null;
     }
 
     public long getDuration() {
-        C5180d c5180d = this.f12315s;
-        if (c5180d != null) {
-            return (long) c5180d.m9398d();
+        L3.i composition = getComposition();
+        if (composition != null) {
+            return (long) composition.d();
         }
         return 0L;
     }
 
     public int getFrame() {
-        return this.f12307k.m9469m();
+        return this.f31219I.L();
     }
 
     public String getImageAssetsFolder() {
-        return this.f12307k.m9471p();
+        return this.f31219I.N();
+    }
+
+    public boolean getMaintainOriginalImageBounds() {
+        return this.f31219I.P();
     }
 
     public float getMaxFrame() {
-        return this.f12307k.m9472q();
+        return this.f31219I.R();
     }
 
     public float getMinFrame() {
-        return this.f12307k.m9473s();
+        return this.f31219I.S();
     }
 
-    public C5189m getPerformanceTracker() {
-        return this.f12307k.m9474t();
+    public C getPerformanceTracker() {
+        return this.f31219I.T();
     }
 
     public float getProgress() {
-        return this.f12307k.m9475u();
+        return this.f31219I.U();
+    }
+
+    public F getRenderMode() {
+        return this.f31219I.V();
     }
 
     public int getRepeatCount() {
-        return this.f12307k.m9476v();
+        return this.f31219I.W();
     }
 
     public int getRepeatMode() {
-        return this.f12307k.m9477w();
-    }
-
-    public float getScale() {
-        return this.f12307k.m9478x();
+        return this.f31219I.X();
     }
 
     public float getSpeed() {
-        return this.f12307k.m9479y();
+        return this.f31219I.Y();
     }
 
-    public boolean getUseHardwareAcceleration() {
-        return this.f12312p;
+    public <T> void i(Q3.e eVar, T t10, Y3.c<T> cVar) {
+        this.f31219I.q(eVar, t10, cVar);
+    }
+
+    @Override // android.view.View
+    public void invalidate() {
+        super.invalidate();
+        Drawable drawable = getDrawable();
+        if ((drawable instanceof n) && ((n) drawable).V() == F.SOFTWARE) {
+            this.f31219I.invalidateSelf();
+        }
     }
 
     @Override // android.widget.ImageView, android.view.View, android.graphics.drawable.Drawable.Callback
     public void invalidateDrawable(Drawable drawable) {
         Drawable drawable2 = getDrawable();
-        C5182f c5182f = this.f12307k;
-        if (drawable2 == c5182f) {
-            super.invalidateDrawable(c5182f);
+        n nVar = this.f31219I;
+        if (drawable2 == nVar) {
+            super.invalidateDrawable(nVar);
         } else {
             super.invalidateDrawable(drawable);
         }
     }
 
-    /* renamed from: j */
-    public boolean m9379j() {
-        return this.f12307k.m9441B();
+    public <T> void j(Q3.e eVar, T t10, Y3.e<T> eVar2) {
+        this.f31219I.q(eVar, t10, new a(eVar2));
     }
 
-    @Deprecated
-    /* renamed from: k */
-    public void m9380k(boolean z) {
-        this.f12307k.m9456Q(z ? -1 : 0);
-    }
-
-    /* renamed from: l */
-    public void m9381l() {
-        this.f12307k.m9442C();
-        m9373h();
-    }
-
-    /* renamed from: m */
-    void m9382m() {
-        this.f12307k.m9443D();
-    }
-
-    /* renamed from: n */
-    public void m9383n(JsonReader jsonReader, String str) {
-        setCompositionTask(C5181e.m9418h(jsonReader, str));
-    }
-
-    /* renamed from: o */
-    public void m9384o(String str, String str2) {
-        m9383n(new JsonReader(new StringReader(str)), str2);
+    public void m(boolean z10) {
+        this.f31219I.y(z10);
     }
 
     @Override // android.widget.ImageView, android.view.View
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        if (this.f12311o && this.f12310n) {
-            m9381l();
+        if (isInEditMode() || !this.f31223M) {
+            return;
         }
-    }
-
-    @Override // android.widget.ImageView, android.view.View
-    protected void onDetachedFromWindow() {
-        if (m9379j()) {
-            m9377d();
-            this.f12310n = true;
-        }
-        m9382m();
-        super.onDetachedFromWindow();
+        this.f31219I.w0();
     }
 
     @Override // android.view.View
     protected void onRestoreInstanceState(Parcelable parcelable) {
-        if (!(parcelable instanceof SavedState)) {
+        int i10;
+        if (!(parcelable instanceof b)) {
             super.onRestoreInstanceState(parcelable);
             return;
         }
-        SavedState savedState = (SavedState) parcelable;
-        super.onRestoreInstanceState(savedState.getSuperState());
-        String str = savedState.f12316f;
-        this.f12308l = str;
-        if (!TextUtils.isEmpty(str)) {
-            setAnimation(this.f12308l);
+        b bVar = (b) parcelable;
+        super.onRestoreInstanceState(bVar.getSuperState());
+        this.f31220J = bVar.f31230B;
+        Set<c> set = this.f31225O;
+        c cVar = c.SET_ANIMATION;
+        if (!set.contains(cVar) && !TextUtils.isEmpty(this.f31220J)) {
+            setAnimation(this.f31220J);
         }
-        int i2 = savedState.f12317g;
-        this.f12309m = i2;
-        if (i2 != 0) {
-            setAnimation(i2);
+        this.f31221K = bVar.f31231C;
+        if (!this.f31225O.contains(cVar) && (i10 = this.f31221K) != 0) {
+            setAnimation(i10);
         }
-        setProgress(savedState.f12318h);
-        if (savedState.f12319i) {
-            m9381l();
+        if (!this.f31225O.contains(c.SET_PROGRESS)) {
+            z(bVar.f31232D, false);
         }
-        this.f12307k.m9449J(savedState.f12320j);
-        setRepeatMode(savedState.f12321k);
-        setRepeatCount(savedState.f12322l);
+        if (!this.f31225O.contains(c.PLAY_OPTION) && bVar.f31233E) {
+            v();
+        }
+        if (!this.f31225O.contains(c.SET_IMAGE_ASSETS)) {
+            setImageAssetsFolder(bVar.f31234F);
+        }
+        if (!this.f31225O.contains(c.SET_REPEAT_MODE)) {
+            setRepeatMode(bVar.f31235G);
+        }
+        if (this.f31225O.contains(c.SET_REPEAT_COUNT)) {
+            return;
+        }
+        setRepeatCount(bVar.f31236H);
     }
 
     @Override // android.view.View
     protected Parcelable onSaveInstanceState() {
-        SavedState savedState = new SavedState(super.onSaveInstanceState());
-        savedState.f12316f = this.f12308l;
-        savedState.f12317g = this.f12309m;
-        savedState.f12318h = this.f12307k.m9475u();
-        savedState.f12319i = this.f12307k.m9441B();
-        savedState.f12320j = this.f12307k.m9471p();
-        savedState.f12321k = this.f12307k.m9477w();
-        savedState.f12322l = this.f12307k.m9476v();
-        return savedState;
+        b bVar = new b(super.onSaveInstanceState());
+        bVar.f31230B = this.f31220J;
+        bVar.f31231C = this.f31221K;
+        bVar.f31232D = this.f31219I.U();
+        bVar.f31233E = this.f31219I.d0();
+        bVar.f31234F = this.f31219I.N();
+        bVar.f31235G = this.f31219I.X();
+        bVar.f31236H = this.f31219I.W();
+        return bVar;
     }
 
-    public void setAnimation(int i2) {
-        this.f12309m = i2;
-        this.f12308l = null;
-        setCompositionTask(C5181e.m9420j(getContext(), i2));
+    public boolean q() {
+        return this.f31219I.c0();
+    }
+
+    public void setAnimation(int i10) {
+        this.f31221K = i10;
+        this.f31220J = null;
+        setCompositionTask(o(i10));
     }
 
     @Deprecated
     public void setAnimationFromJson(String str) {
-        m9384o(str, null);
+        x(str, null);
     }
 
     public void setAnimationFromUrl(String str) {
-        setCompositionTask(C5181e.m9422l(getContext(), str));
+        setCompositionTask(this.f31224N ? q.w(getContext(), str) : q.x(getContext(), str, null));
     }
 
-    public void setComposition(C5180d c5180d) {
-        if (C5179c.f12325a) {
-            Log.v(f12304h, "Set Composition \n" + c5180d);
+    public void setApplyingOpacityToLayersEnabled(boolean z10) {
+        this.f31219I.B0(z10);
+    }
+
+    public void setAsyncUpdates(EnumC1356a enumC1356a) {
+        this.f31219I.C0(enumC1356a);
+    }
+
+    public void setCacheComposition(boolean z10) {
+        this.f31224N = z10;
+    }
+
+    public void setClipTextToBoundingBox(boolean z10) {
+        this.f31219I.D0(z10);
+    }
+
+    public void setClipToCompositionBounds(boolean z10) {
+        this.f31219I.E0(z10);
+    }
+
+    public void setComposition(L3.i iVar) {
+        if (C1360e.f9146a) {
+            Log.v(f31213R, "Set Composition \n" + iVar);
         }
-        this.f12307k.setCallback(this);
-        this.f12315s = c5180d;
-        boolean zM9445F = this.f12307k.m9445F(c5180d);
-        m9373h();
-        if (getDrawable() != this.f12307k || zM9445F) {
-            setImageDrawable(null);
-            setImageDrawable(this.f12307k);
+        this.f31219I.setCallback(this);
+        this.f31222L = true;
+        boolean zF0 = this.f31219I.F0(iVar);
+        if (this.f31223M) {
+            this.f31219I.w0();
+        }
+        this.f31222L = false;
+        if (getDrawable() != this.f31219I || zF0) {
+            if (!zF0) {
+                y();
+            }
+            onVisibilityChanged(this, getVisibility());
             requestLayout();
-            Iterator<InterfaceC5185i> it = this.f12313q.iterator();
+            Iterator<x> it = this.f31226P.iterator();
             while (it.hasNext()) {
-                it.next().m9486a(c5180d);
+                it.next().a(iVar);
             }
         }
     }
 
-    public void setFontAssetDelegate(C5177a c5177a) {
-        this.f12307k.m9446G(c5177a);
+    public void setDefaultFontFileExtension(String str) {
+        this.f31219I.G0(str);
     }
 
-    public void setFrame(int i2) {
-        this.f12307k.m9447H(i2);
+    public void setFailureListener(v<Throwable> vVar) {
+        this.f31217G = vVar;
     }
 
-    public void setImageAssetDelegate(InterfaceC5178b interfaceC5178b) {
-        this.f12307k.m9448I(interfaceC5178b);
+    public void setFallbackResource(int i10) {
+        this.f31218H = i10;
+    }
+
+    public void setFontAssetDelegate(C1357b c1357b) {
+        this.f31219I.H0(c1357b);
+    }
+
+    public void setFontMap(Map<String, Typeface> map) {
+        this.f31219I.I0(map);
+    }
+
+    public void setFrame(int i10) {
+        this.f31219I.J0(i10);
+    }
+
+    public void setIgnoreDisabledSystemAnimations(boolean z10) {
+        this.f31219I.K0(z10);
+    }
+
+    public void setImageAssetDelegate(InterfaceC1358c interfaceC1358c) {
+        this.f31219I.L0(interfaceC1358c);
     }
 
     public void setImageAssetsFolder(String str) {
-        this.f12307k.m9449J(str);
+        this.f31219I.M0(str);
     }
 
     @Override // androidx.appcompat.widget.AppCompatImageView, android.widget.ImageView
     public void setImageBitmap(Bitmap bitmap) {
-        m9382m();
-        m9371e();
+        this.f31221K = 0;
+        this.f31220J = null;
+        k();
         super.setImageBitmap(bitmap);
     }
 
     @Override // androidx.appcompat.widget.AppCompatImageView, android.widget.ImageView
     public void setImageDrawable(Drawable drawable) {
-        m9375p(drawable, true);
+        this.f31221K = 0;
+        this.f31220J = null;
+        k();
+        super.setImageDrawable(drawable);
     }
 
     @Override // androidx.appcompat.widget.AppCompatImageView, android.widget.ImageView
-    public void setImageResource(int i2) {
-        m9382m();
-        m9371e();
-        super.setImageResource(i2);
+    public void setImageResource(int i10) {
+        this.f31221K = 0;
+        this.f31220J = null;
+        k();
+        super.setImageResource(i10);
     }
 
-    public void setMaxFrame(int i2) {
-        this.f12307k.m9450K(i2);
+    public void setMaintainOriginalImageBounds(boolean z10) {
+        this.f31219I.N0(z10);
     }
 
-    public void setMaxProgress(float f2) {
-        this.f12307k.m9451L(f2);
+    public void setMaxFrame(int i10) {
+        this.f31219I.O0(i10);
     }
 
-    public void setMinFrame(int i2) {
-        this.f12307k.m9452M(i2);
+    public void setMaxProgress(float f10) {
+        this.f31219I.Q0(f10);
     }
 
-    public void setMinProgress(float f2) {
-        this.f12307k.m9453N(f2);
+    public void setMinAndMaxFrame(String str) {
+        this.f31219I.S0(str);
     }
 
-    public void setPerformanceTrackingEnabled(boolean z) {
-        this.f12307k.m9454O(z);
+    public void setMinFrame(int i10) {
+        this.f31219I.T0(i10);
     }
 
-    public void setProgress(float f2) {
-        this.f12307k.m9455P(f2);
+    public void setMinProgress(float f10) {
+        this.f31219I.V0(f10);
     }
 
-    public void setRepeatCount(int i2) {
-        this.f12307k.m9456Q(i2);
+    public void setOutlineMasksAndMattes(boolean z10) {
+        this.f31219I.W0(z10);
     }
 
-    public void setRepeatMode(int i2) {
-        this.f12307k.m9457R(i2);
+    public void setPerformanceTrackingEnabled(boolean z10) {
+        this.f31219I.X0(z10);
     }
 
-    public void setScale(float f2) {
-        this.f12307k.m9458S(f2);
-        if (getDrawable() == this.f12307k) {
-            m9375p(null, false);
-            m9375p(this.f12307k, false);
+    public void setProgress(float f10) {
+        z(f10, true);
+    }
+
+    public void setRenderMode(F f10) {
+        this.f31219I.Z0(f10);
+    }
+
+    public void setRepeatCount(int i10) {
+        this.f31225O.add(c.SET_REPEAT_COUNT);
+        this.f31219I.a1(i10);
+    }
+
+    public void setRepeatMode(int i10) {
+        this.f31225O.add(c.SET_REPEAT_MODE);
+        this.f31219I.b1(i10);
+    }
+
+    public void setSafeMode(boolean z10) {
+        this.f31219I.c1(z10);
+    }
+
+    public void setSpeed(float f10) {
+        this.f31219I.d1(f10);
+    }
+
+    public void setTextDelegate(H h10) {
+        this.f31219I.f1(h10);
+    }
+
+    public void setUseCompositionFrameRate(boolean z10) {
+        this.f31219I.g1(z10);
+    }
+
+    public void u() {
+        this.f31223M = false;
+        this.f31219I.v0();
+    }
+
+    @Override // android.view.View
+    public void unscheduleDrawable(Drawable drawable) {
+        n nVar;
+        if (!this.f31222L && drawable == (nVar = this.f31219I) && nVar.c0()) {
+            u();
+        } else if (!this.f31222L && (drawable instanceof n)) {
+            n nVar2 = (n) drawable;
+            if (nVar2.c0()) {
+                nVar2.v0();
+            }
         }
+        super.unscheduleDrawable(drawable);
     }
 
-    public void setSpeed(float f2) {
-        this.f12307k.m9459T(f2);
+    public void v() {
+        this.f31225O.add(c.PLAY_OPTION);
+        this.f31219I.w0();
     }
 
-    public void setTextDelegate(C5192p c5192p) {
-        this.f12307k.m9460U(c5192p);
+    public void w(InputStream inputStream, String str) {
+        setCompositionTask(q.n(inputStream, str));
+    }
+
+    public void x(String str, String str2) {
+        w(new ByteArrayInputStream(str.getBytes()), str2);
+    }
+
+    public void setMaxFrame(String str) {
+        this.f31219I.P0(str);
+    }
+
+    public void setMinFrame(String str) {
+        this.f31219I.U0(str);
     }
 
     public void setAnimation(String str) {
-        this.f12308l = str;
-        this.f12309m = 0;
-        setCompositionTask(C5181e.m9414d(getContext(), str));
+        this.f31220J = str;
+        this.f31221K = 0;
+        setCompositionTask(n(str));
     }
 }

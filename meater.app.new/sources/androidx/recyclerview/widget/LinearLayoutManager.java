@@ -3,82 +3,319 @@ package androidx.recyclerview.widget;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.PointF;
+import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
+import t1.t;
 
 /* loaded from: classes.dex */
-public class LinearLayoutManager extends RecyclerView.AbstractC0602o implements RecyclerView.AbstractC0612y.b {
-    static final boolean DEBUG = false;
-    public static final int HORIZONTAL = 0;
-    public static final int INVALID_OFFSET = Integer.MIN_VALUE;
-    private static final float MAX_SCROLL_FACTOR = 0.33333334f;
-    private static final String TAG = "LinearLayoutManager";
-    public static final int VERTICAL = 1;
-    final C0581a mAnchorInfo;
-    private int mInitialPrefetchItemCount;
-    private boolean mLastStackFromEnd;
-    private final C0582b mLayoutChunkResult;
-    private C0583c mLayoutState;
-    int mOrientation;
-    AbstractC0633n mOrientationHelper;
-    SavedState mPendingSavedState;
-    int mPendingScrollPosition;
-    int mPendingScrollPositionOffset;
-    private boolean mRecycleChildrenOnDetach;
-    private int[] mReusableIntPair;
-    private boolean mReverseLayout;
-    boolean mShouldReverseLayout;
-    private boolean mSmoothScrollbarEnabled;
-    private boolean mStackFromEnd;
+public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.B.b {
+
+    /* renamed from: A, reason: collision with root package name */
+    int f28513A;
+
+    /* renamed from: B, reason: collision with root package name */
+    int f28514B;
+
+    /* renamed from: C, reason: collision with root package name */
+    private boolean f28515C;
+
+    /* renamed from: D, reason: collision with root package name */
+    d f28516D;
+
+    /* renamed from: E, reason: collision with root package name */
+    final a f28517E;
+
+    /* renamed from: F, reason: collision with root package name */
+    private final b f28518F;
+
+    /* renamed from: G, reason: collision with root package name */
+    private int f28519G;
+
+    /* renamed from: H, reason: collision with root package name */
+    private int[] f28520H;
+
+    /* renamed from: s, reason: collision with root package name */
+    int f28521s;
+
+    /* renamed from: t, reason: collision with root package name */
+    private c f28522t;
+
+    /* renamed from: u, reason: collision with root package name */
+    q f28523u;
+
+    /* renamed from: v, reason: collision with root package name */
+    private boolean f28524v;
+
+    /* renamed from: w, reason: collision with root package name */
+    private boolean f28525w;
+
+    /* renamed from: x, reason: collision with root package name */
+    boolean f28526x;
+
+    /* renamed from: y, reason: collision with root package name */
+    private boolean f28527y;
+
+    /* renamed from: z, reason: collision with root package name */
+    private boolean f28528z;
+
+    static class a {
+
+        /* renamed from: a, reason: collision with root package name */
+        q f28529a;
+
+        /* renamed from: b, reason: collision with root package name */
+        int f28530b;
+
+        /* renamed from: c, reason: collision with root package name */
+        int f28531c;
+
+        /* renamed from: d, reason: collision with root package name */
+        boolean f28532d;
+
+        /* renamed from: e, reason: collision with root package name */
+        boolean f28533e;
+
+        a() {
+            e();
+        }
+
+        void a() {
+            this.f28531c = this.f28532d ? this.f28529a.i() : this.f28529a.m();
+        }
+
+        public void b(View view, int i10) {
+            if (this.f28532d) {
+                this.f28531c = this.f28529a.d(view) + this.f28529a.o();
+            } else {
+                this.f28531c = this.f28529a.g(view);
+            }
+            this.f28530b = i10;
+        }
+
+        public void c(View view, int i10) {
+            int iO = this.f28529a.o();
+            if (iO >= 0) {
+                b(view, i10);
+                return;
+            }
+            this.f28530b = i10;
+            if (this.f28532d) {
+                int i11 = (this.f28529a.i() - iO) - this.f28529a.d(view);
+                this.f28531c = this.f28529a.i() - i11;
+                if (i11 > 0) {
+                    int iE = this.f28531c - this.f28529a.e(view);
+                    int iM = this.f28529a.m();
+                    int iMin = iE - (iM + Math.min(this.f28529a.g(view) - iM, 0));
+                    if (iMin < 0) {
+                        this.f28531c += Math.min(i11, -iMin);
+                        return;
+                    }
+                    return;
+                }
+                return;
+            }
+            int iG = this.f28529a.g(view);
+            int iM2 = iG - this.f28529a.m();
+            this.f28531c = iG;
+            if (iM2 > 0) {
+                int i12 = (this.f28529a.i() - Math.min(0, (this.f28529a.i() - iO) - this.f28529a.d(view))) - (iG + this.f28529a.e(view));
+                if (i12 < 0) {
+                    this.f28531c -= Math.min(iM2, -i12);
+                }
+            }
+        }
+
+        boolean d(View view, RecyclerView.C c10) {
+            RecyclerView.r rVar = (RecyclerView.r) view.getLayoutParams();
+            return !rVar.c() && rVar.a() >= 0 && rVar.a() < c10.b();
+        }
+
+        void e() {
+            this.f28530b = -1;
+            this.f28531c = Integer.MIN_VALUE;
+            this.f28532d = false;
+            this.f28533e = false;
+        }
+
+        public String toString() {
+            return "AnchorInfo{mPosition=" + this.f28530b + ", mCoordinate=" + this.f28531c + ", mLayoutFromEnd=" + this.f28532d + ", mValid=" + this.f28533e + '}';
+        }
+    }
+
+    protected static class b {
+
+        /* renamed from: a, reason: collision with root package name */
+        public int f28534a;
+
+        /* renamed from: b, reason: collision with root package name */
+        public boolean f28535b;
+
+        /* renamed from: c, reason: collision with root package name */
+        public boolean f28536c;
+
+        /* renamed from: d, reason: collision with root package name */
+        public boolean f28537d;
+
+        protected b() {
+        }
+
+        void a() {
+            this.f28534a = 0;
+            this.f28535b = false;
+            this.f28536c = false;
+            this.f28537d = false;
+        }
+    }
+
+    static class c {
+
+        /* renamed from: b, reason: collision with root package name */
+        int f28539b;
+
+        /* renamed from: c, reason: collision with root package name */
+        int f28540c;
+
+        /* renamed from: d, reason: collision with root package name */
+        int f28541d;
+
+        /* renamed from: e, reason: collision with root package name */
+        int f28542e;
+
+        /* renamed from: f, reason: collision with root package name */
+        int f28543f;
+
+        /* renamed from: g, reason: collision with root package name */
+        int f28544g;
+
+        /* renamed from: k, reason: collision with root package name */
+        int f28548k;
+
+        /* renamed from: m, reason: collision with root package name */
+        boolean f28550m;
+
+        /* renamed from: a, reason: collision with root package name */
+        boolean f28538a = true;
+
+        /* renamed from: h, reason: collision with root package name */
+        int f28545h = 0;
+
+        /* renamed from: i, reason: collision with root package name */
+        int f28546i = 0;
+
+        /* renamed from: j, reason: collision with root package name */
+        boolean f28547j = false;
+
+        /* renamed from: l, reason: collision with root package name */
+        List<RecyclerView.G> f28549l = null;
+
+        c() {
+        }
+
+        private View e() {
+            int size = this.f28549l.size();
+            for (int i10 = 0; i10 < size; i10++) {
+                View view = this.f28549l.get(i10).itemView;
+                RecyclerView.r rVar = (RecyclerView.r) view.getLayoutParams();
+                if (!rVar.c() && this.f28541d == rVar.a()) {
+                    b(view);
+                    return view;
+                }
+            }
+            return null;
+        }
+
+        public void a() {
+            b(null);
+        }
+
+        public void b(View view) {
+            View viewF = f(view);
+            if (viewF == null) {
+                this.f28541d = -1;
+            } else {
+                this.f28541d = ((RecyclerView.r) viewF.getLayoutParams()).a();
+            }
+        }
+
+        boolean c(RecyclerView.C c10) {
+            int i10 = this.f28541d;
+            return i10 >= 0 && i10 < c10.b();
+        }
+
+        View d(RecyclerView.x xVar) {
+            if (this.f28549l != null) {
+                return e();
+            }
+            View viewO = xVar.o(this.f28541d);
+            this.f28541d += this.f28542e;
+            return viewO;
+        }
+
+        public View f(View view) {
+            int iA;
+            int size = this.f28549l.size();
+            View view2 = null;
+            int i10 = Integer.MAX_VALUE;
+            for (int i11 = 0; i11 < size; i11++) {
+                View view3 = this.f28549l.get(i11).itemView;
+                RecyclerView.r rVar = (RecyclerView.r) view3.getLayoutParams();
+                if (view3 != view && !rVar.c() && (iA = (rVar.a() - this.f28541d) * this.f28542e) >= 0 && iA < i10) {
+                    view2 = view3;
+                    if (iA == 0) {
+                        break;
+                    }
+                    i10 = iA;
+                }
+            }
+            return view2;
+        }
+    }
 
     @SuppressLint({"BanParcelableUsage"})
-    public static class SavedState implements Parcelable {
-        public static final Parcelable.Creator<SavedState> CREATOR = new C0580a();
+    public static class d implements Parcelable {
+        public static final Parcelable.Creator<d> CREATOR = new a();
 
-        /* renamed from: f */
-        int f3915f;
+        /* renamed from: B, reason: collision with root package name */
+        int f28551B;
 
-        /* renamed from: g */
-        int f3916g;
+        /* renamed from: C, reason: collision with root package name */
+        int f28552C;
 
-        /* renamed from: h */
-        boolean f3917h;
+        /* renamed from: D, reason: collision with root package name */
+        boolean f28553D;
 
-        /* renamed from: androidx.recyclerview.widget.LinearLayoutManager$SavedState$a */
-        static class C0580a implements Parcelable.Creator<SavedState> {
-            C0580a() {
+        class a implements Parcelable.Creator<d> {
+            a() {
             }
 
             @Override // android.os.Parcelable.Creator
             /* renamed from: a, reason: merged with bridge method [inline-methods] */
-            public SavedState createFromParcel(Parcel parcel) {
-                return new SavedState(parcel);
+            public d createFromParcel(Parcel parcel) {
+                return new d(parcel);
             }
 
             @Override // android.os.Parcelable.Creator
             /* renamed from: b, reason: merged with bridge method [inline-methods] */
-            public SavedState[] newArray(int i2) {
-                return new SavedState[i2];
+            public d[] newArray(int i10) {
+                return new d[i10];
             }
         }
 
-        public SavedState() {
+        public d() {
         }
 
-        /* renamed from: a */
-        boolean m4168a() {
-            return this.f3915f >= 0;
+        boolean a() {
+            return this.f28551B >= 0;
         }
 
-        /* renamed from: b */
-        void m4169b() {
-            this.f3915f = -1;
+        void b() {
+            this.f28551B = -1;
         }
 
         @Override // android.os.Parcelable
@@ -87,1508 +324,1311 @@ public class LinearLayoutManager extends RecyclerView.AbstractC0602o implements 
         }
 
         @Override // android.os.Parcelable
-        public void writeToParcel(Parcel parcel, int i2) {
-            parcel.writeInt(this.f3915f);
-            parcel.writeInt(this.f3916g);
-            parcel.writeInt(this.f3917h ? 1 : 0);
+        public void writeToParcel(Parcel parcel, int i10) {
+            parcel.writeInt(this.f28551B);
+            parcel.writeInt(this.f28552C);
+            parcel.writeInt(this.f28553D ? 1 : 0);
         }
 
-        SavedState(Parcel parcel) {
-            this.f3915f = parcel.readInt();
-            this.f3916g = parcel.readInt();
-            this.f3917h = parcel.readInt() == 1;
+        d(Parcel parcel) {
+            this.f28551B = parcel.readInt();
+            this.f28552C = parcel.readInt();
+            this.f28553D = parcel.readInt() == 1;
         }
 
-        public SavedState(SavedState savedState) {
-            this.f3915f = savedState.f3915f;
-            this.f3916g = savedState.f3916g;
-            this.f3917h = savedState.f3917h;
-        }
-    }
-
-    /* renamed from: androidx.recyclerview.widget.LinearLayoutManager$a */
-    static class C0581a {
-
-        /* renamed from: a */
-        AbstractC0633n f3918a;
-
-        /* renamed from: b */
-        int f3919b;
-
-        /* renamed from: c */
-        int f3920c;
-
-        /* renamed from: d */
-        boolean f3921d;
-
-        /* renamed from: e */
-        boolean f3922e;
-
-        C0581a() {
-            m4176e();
-        }
-
-        /* renamed from: a */
-        void m4172a() {
-            this.f3920c = this.f3921d ? this.f3918a.mo4538i() : this.f3918a.mo4542m();
-        }
-
-        /* renamed from: b */
-        public void m4173b(View view, int i2) {
-            if (this.f3921d) {
-                this.f3920c = this.f3918a.mo4533d(view) + this.f3918a.m4544o();
-            } else {
-                this.f3920c = this.f3918a.mo4536g(view);
-            }
-            this.f3919b = i2;
-        }
-
-        /* renamed from: c */
-        public void m4174c(View view, int i2) {
-            int iM4544o = this.f3918a.m4544o();
-            if (iM4544o >= 0) {
-                m4173b(view, i2);
-                return;
-            }
-            this.f3919b = i2;
-            if (this.f3921d) {
-                int iMo4538i = (this.f3918a.mo4538i() - iM4544o) - this.f3918a.mo4533d(view);
-                this.f3920c = this.f3918a.mo4538i() - iMo4538i;
-                if (iMo4538i > 0) {
-                    int iMo4534e = this.f3920c - this.f3918a.mo4534e(view);
-                    int iMo4542m = this.f3918a.mo4542m();
-                    int iMin = iMo4534e - (iMo4542m + Math.min(this.f3918a.mo4536g(view) - iMo4542m, 0));
-                    if (iMin < 0) {
-                        this.f3920c += Math.min(iMo4538i, -iMin);
-                        return;
-                    }
-                    return;
-                }
-                return;
-            }
-            int iMo4536g = this.f3918a.mo4536g(view);
-            int iMo4542m2 = iMo4536g - this.f3918a.mo4542m();
-            this.f3920c = iMo4536g;
-            if (iMo4542m2 > 0) {
-                int iMo4538i2 = (this.f3918a.mo4538i() - Math.min(0, (this.f3918a.mo4538i() - iM4544o) - this.f3918a.mo4533d(view))) - (iMo4536g + this.f3918a.mo4534e(view));
-                if (iMo4538i2 < 0) {
-                    this.f3920c -= Math.min(iMo4542m2, -iMo4538i2);
-                }
-            }
-        }
-
-        /* renamed from: d */
-        boolean m4175d(View view, RecyclerView.C0613z c0613z) {
-            RecyclerView.C0603p c0603p = (RecyclerView.C0603p) view.getLayoutParams();
-            return !c0603p.m4240c() && c0603p.m4238a() >= 0 && c0603p.m4238a() < c0613z.m4306b();
-        }
-
-        /* renamed from: e */
-        void m4176e() {
-            this.f3919b = -1;
-            this.f3920c = Integer.MIN_VALUE;
-            this.f3921d = false;
-            this.f3922e = false;
-        }
-
-        public String toString() {
-            return "AnchorInfo{mPosition=" + this.f3919b + ", mCoordinate=" + this.f3920c + ", mLayoutFromEnd=" + this.f3921d + ", mValid=" + this.f3922e + '}';
+        @SuppressLint({"UnknownNullness"})
+        public d(d dVar) {
+            this.f28551B = dVar.f28551B;
+            this.f28552C = dVar.f28552C;
+            this.f28553D = dVar.f28553D;
         }
     }
 
-    /* renamed from: androidx.recyclerview.widget.LinearLayoutManager$b */
-    protected static class C0582b {
-
-        /* renamed from: a */
-        public int f3923a;
-
-        /* renamed from: b */
-        public boolean f3924b;
-
-        /* renamed from: c */
-        public boolean f3925c;
-
-        /* renamed from: d */
-        public boolean f3926d;
-
-        protected C0582b() {
-        }
-
-        /* renamed from: a */
-        void m4177a() {
-            this.f3923a = 0;
-            this.f3924b = false;
-            this.f3925c = false;
-            this.f3926d = false;
-        }
-    }
-
-    /* renamed from: androidx.recyclerview.widget.LinearLayoutManager$c */
-    static class C0583c {
-
-        /* renamed from: b */
-        int f3928b;
-
-        /* renamed from: c */
-        int f3929c;
-
-        /* renamed from: d */
-        int f3930d;
-
-        /* renamed from: e */
-        int f3931e;
-
-        /* renamed from: f */
-        int f3932f;
-
-        /* renamed from: g */
-        int f3933g;
-
-        /* renamed from: k */
-        int f3937k;
-
-        /* renamed from: m */
-        boolean f3939m;
-
-        /* renamed from: a */
-        boolean f3927a = true;
-
-        /* renamed from: h */
-        int f3934h = 0;
-
-        /* renamed from: i */
-        int f3935i = 0;
-
-        /* renamed from: j */
-        boolean f3936j = false;
-
-        /* renamed from: l */
-        List<RecyclerView.AbstractC0590c0> f3938l = null;
-
-        C0583c() {
-        }
-
-        /* renamed from: e */
-        private View m4178e() {
-            int size = this.f3938l.size();
-            for (int i2 = 0; i2 < size; i2++) {
-                View view = this.f3938l.get(i2).itemView;
-                RecyclerView.C0603p c0603p = (RecyclerView.C0603p) view.getLayoutParams();
-                if (!c0603p.m4240c() && this.f3930d == c0603p.m4238a()) {
-                    m4180b(view);
-                    return view;
-                }
-            }
-            return null;
-        }
-
-        /* renamed from: a */
-        public void m4179a() {
-            m4180b(null);
-        }
-
-        /* renamed from: b */
-        public void m4180b(View view) {
-            View viewM4183f = m4183f(view);
-            if (viewM4183f == null) {
-                this.f3930d = -1;
-            } else {
-                this.f3930d = ((RecyclerView.C0603p) viewM4183f.getLayoutParams()).m4238a();
-            }
-        }
-
-        /* renamed from: c */
-        boolean m4181c(RecyclerView.C0613z c0613z) {
-            int i2 = this.f3930d;
-            return i2 >= 0 && i2 < c0613z.m4306b();
-        }
-
-        /* renamed from: d */
-        View m4182d(RecyclerView.C0609v c0609v) {
-            if (this.f3938l != null) {
-                return m4178e();
-            }
-            View viewM4288o = c0609v.m4288o(this.f3930d);
-            this.f3930d += this.f3931e;
-            return viewM4288o;
-        }
-
-        /* renamed from: f */
-        public View m4183f(View view) {
-            int iM4238a;
-            int size = this.f3938l.size();
-            View view2 = null;
-            int i2 = Integer.MAX_VALUE;
-            for (int i3 = 0; i3 < size; i3++) {
-                View view3 = this.f3938l.get(i3).itemView;
-                RecyclerView.C0603p c0603p = (RecyclerView.C0603p) view3.getLayoutParams();
-                if (view3 != view && !c0603p.m4240c() && (iM4238a = (c0603p.m4238a() - this.f3930d) * this.f3931e) >= 0 && iM4238a < i2) {
-                    view2 = view3;
-                    if (iM4238a == 0) {
-                        break;
-                    }
-                    i2 = iM4238a;
-                }
-            }
-            return view2;
-        }
-    }
-
-    public LinearLayoutManager(Context context) {
+    public LinearLayoutManager(@SuppressLint({"UnknownNullness"}) Context context) {
         this(context, 1, false);
     }
 
-    private int computeScrollExtent(RecyclerView.C0613z c0613z) {
-        if (getChildCount() == 0) {
-            return 0;
-        }
-        ensureLayoutState();
-        return C0635p.m4552a(c0613z, this.mOrientationHelper, findFirstVisibleChildClosestToStart(!this.mSmoothScrollbarEnabled, true), findFirstVisibleChildClosestToEnd(!this.mSmoothScrollbarEnabled, true), this, this.mSmoothScrollbarEnabled);
-    }
-
-    private int computeScrollOffset(RecyclerView.C0613z c0613z) {
-        if (getChildCount() == 0) {
-            return 0;
-        }
-        ensureLayoutState();
-        return C0635p.m4553b(c0613z, this.mOrientationHelper, findFirstVisibleChildClosestToStart(!this.mSmoothScrollbarEnabled, true), findFirstVisibleChildClosestToEnd(!this.mSmoothScrollbarEnabled, true), this, this.mSmoothScrollbarEnabled, this.mShouldReverseLayout);
-    }
-
-    private int computeScrollRange(RecyclerView.C0613z c0613z) {
-        if (getChildCount() == 0) {
-            return 0;
-        }
-        ensureLayoutState();
-        return C0635p.m4554c(c0613z, this.mOrientationHelper, findFirstVisibleChildClosestToStart(!this.mSmoothScrollbarEnabled, true), findFirstVisibleChildClosestToEnd(!this.mSmoothScrollbarEnabled, true), this, this.mSmoothScrollbarEnabled);
-    }
-
-    private View findFirstPartiallyOrCompletelyInvisibleChild() {
-        return findOnePartiallyOrCompletelyInvisibleChild(0, getChildCount());
-    }
-
-    private View findFirstReferenceChild(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z) {
-        return findReferenceChild(c0609v, c0613z, 0, getChildCount(), c0613z.m4306b());
-    }
-
-    private View findLastPartiallyOrCompletelyInvisibleChild() {
-        return findOnePartiallyOrCompletelyInvisibleChild(getChildCount() - 1, -1);
-    }
-
-    private View findLastReferenceChild(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z) {
-        return findReferenceChild(c0609v, c0613z, getChildCount() - 1, -1, c0613z.m4306b());
-    }
-
-    private View findPartiallyOrCompletelyInvisibleChildClosestToEnd() {
-        return this.mShouldReverseLayout ? findFirstPartiallyOrCompletelyInvisibleChild() : findLastPartiallyOrCompletelyInvisibleChild();
-    }
-
-    private View findPartiallyOrCompletelyInvisibleChildClosestToStart() {
-        return this.mShouldReverseLayout ? findLastPartiallyOrCompletelyInvisibleChild() : findFirstPartiallyOrCompletelyInvisibleChild();
-    }
-
-    private View findReferenceChildClosestToEnd(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z) {
-        return this.mShouldReverseLayout ? findFirstReferenceChild(c0609v, c0613z) : findLastReferenceChild(c0609v, c0613z);
-    }
-
-    private View findReferenceChildClosestToStart(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z) {
-        return this.mShouldReverseLayout ? findLastReferenceChild(c0609v, c0613z) : findFirstReferenceChild(c0609v, c0613z);
-    }
-
-    private int fixLayoutEndGap(int i2, RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, boolean z) {
-        int iMo4538i;
-        int iMo4538i2 = this.mOrientationHelper.mo4538i() - i2;
-        if (iMo4538i2 <= 0) {
-            return 0;
-        }
-        int i3 = -scrollBy(-iMo4538i2, c0609v, c0613z);
-        int i4 = i2 + i3;
-        if (!z || (iMo4538i = this.mOrientationHelper.mo4538i() - i4) <= 0) {
-            return i3;
-        }
-        this.mOrientationHelper.mo4547r(iMo4538i);
-        return iMo4538i + i3;
-    }
-
-    private int fixLayoutStartGap(int i2, RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, boolean z) {
-        int iMo4542m;
-        int iMo4542m2 = i2 - this.mOrientationHelper.mo4542m();
-        if (iMo4542m2 <= 0) {
-            return 0;
-        }
-        int i3 = -scrollBy(iMo4542m2, c0609v, c0613z);
-        int i4 = i2 + i3;
-        if (!z || (iMo4542m = i4 - this.mOrientationHelper.mo4542m()) <= 0) {
-            return i3;
-        }
-        this.mOrientationHelper.mo4547r(-iMo4542m);
-        return i3 - iMo4542m;
-    }
-
-    private View getChildClosestToEnd() {
-        return getChildAt(this.mShouldReverseLayout ? 0 : getChildCount() - 1);
-    }
-
-    private View getChildClosestToStart() {
-        return getChildAt(this.mShouldReverseLayout ? getChildCount() - 1 : 0);
-    }
-
-    private void layoutForPredictiveAnimations(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, int i2, int i3) {
-        if (!c0613z.m4311g() || getChildCount() == 0 || c0613z.m4309e() || !supportsPredictiveItemAnimations()) {
+    private void A2(RecyclerView.x xVar, int i10, int i11) {
+        if (i10 < 0) {
             return;
         }
-        List<RecyclerView.AbstractC0590c0> listM4284k = c0609v.m4284k();
-        int size = listM4284k.size();
-        int position = getPosition(getChildAt(0));
-        int iMo4534e = 0;
-        int iMo4534e2 = 0;
-        for (int i4 = 0; i4 < size; i4++) {
-            RecyclerView.AbstractC0590c0 abstractC0590c0 = listM4284k.get(i4);
-            if (!abstractC0590c0.isRemoved()) {
-                if (((abstractC0590c0.getLayoutPosition() < position) != this.mShouldReverseLayout ? (char) 65535 : (char) 1) == 65535) {
-                    iMo4534e += this.mOrientationHelper.mo4534e(abstractC0590c0.itemView);
-                } else {
-                    iMo4534e2 += this.mOrientationHelper.mo4534e(abstractC0590c0.itemView);
-                }
-            }
-        }
-        this.mLayoutState.f3938l = listM4284k;
-        if (iMo4534e > 0) {
-            updateLayoutStateToFillStart(getPosition(getChildClosestToStart()), i2);
-            C0583c c0583c = this.mLayoutState;
-            c0583c.f3934h = iMo4534e;
-            c0583c.f3929c = 0;
-            c0583c.m4179a();
-            fill(c0609v, this.mLayoutState, c0613z, false);
-        }
-        if (iMo4534e2 > 0) {
-            updateLayoutStateToFillEnd(getPosition(getChildClosestToEnd()), i3);
-            C0583c c0583c2 = this.mLayoutState;
-            c0583c2.f3934h = iMo4534e2;
-            c0583c2.f3929c = 0;
-            c0583c2.m4179a();
-            fill(c0609v, this.mLayoutState, c0613z, false);
-        }
-        this.mLayoutState.f3938l = null;
-    }
-
-    private void logChildren() {
-        Log.d(TAG, "internal representation of views on the screen");
-        for (int i2 = 0; i2 < getChildCount(); i2++) {
-            View childAt = getChildAt(i2);
-            Log.d(TAG, "item " + getPosition(childAt) + ", coord:" + this.mOrientationHelper.mo4536g(childAt));
-        }
-        Log.d(TAG, "==============");
-    }
-
-    private void recycleByLayoutState(RecyclerView.C0609v c0609v, C0583c c0583c) {
-        if (!c0583c.f3927a || c0583c.f3939m) {
-            return;
-        }
-        int i2 = c0583c.f3933g;
-        int i3 = c0583c.f3935i;
-        if (c0583c.f3932f == -1) {
-            recycleViewsFromEnd(c0609v, i2, i3);
-        } else {
-            recycleViewsFromStart(c0609v, i2, i3);
-        }
-    }
-
-    private void recycleChildren(RecyclerView.C0609v c0609v, int i2, int i3) {
-        if (i2 == i3) {
-            return;
-        }
-        if (i3 <= i2) {
-            while (i2 > i3) {
-                removeAndRecycleViewAt(i2, c0609v);
-                i2--;
-            }
-        } else {
-            for (int i4 = i3 - 1; i4 >= i2; i4--) {
-                removeAndRecycleViewAt(i4, c0609v);
-            }
-        }
-    }
-
-    private void recycleViewsFromEnd(RecyclerView.C0609v c0609v, int i2, int i3) {
-        int childCount = getChildCount();
-        if (i2 < 0) {
-            return;
-        }
-        int iMo4537h = (this.mOrientationHelper.mo4537h() - i2) + i3;
-        if (this.mShouldReverseLayout) {
-            for (int i4 = 0; i4 < childCount; i4++) {
-                View childAt = getChildAt(i4);
-                if (this.mOrientationHelper.mo4536g(childAt) < iMo4537h || this.mOrientationHelper.mo4546q(childAt) < iMo4537h) {
-                    recycleChildren(c0609v, 0, i4);
+        int i12 = i10 - i11;
+        int iO = O();
+        if (!this.f28526x) {
+            for (int i13 = 0; i13 < iO; i13++) {
+                View viewN = N(i13);
+                if (this.f28523u.d(viewN) > i12 || this.f28523u.p(viewN) > i12) {
+                    y2(xVar, 0, i13);
                     return;
                 }
             }
             return;
         }
-        int i5 = childCount - 1;
-        for (int i6 = i5; i6 >= 0; i6--) {
-            View childAt2 = getChildAt(i6);
-            if (this.mOrientationHelper.mo4536g(childAt2) < iMo4537h || this.mOrientationHelper.mo4546q(childAt2) < iMo4537h) {
-                recycleChildren(c0609v, i5, i6);
+        int i14 = iO - 1;
+        for (int i15 = i14; i15 >= 0; i15--) {
+            View viewN2 = N(i15);
+            if (this.f28523u.d(viewN2) > i12 || this.f28523u.p(viewN2) > i12) {
+                y2(xVar, i14, i15);
                 return;
             }
         }
     }
 
-    private void recycleViewsFromStart(RecyclerView.C0609v c0609v, int i2, int i3) {
-        if (i2 < 0) {
-            return;
-        }
-        int i4 = i2 - i3;
-        int childCount = getChildCount();
-        if (!this.mShouldReverseLayout) {
-            for (int i5 = 0; i5 < childCount; i5++) {
-                View childAt = getChildAt(i5);
-                if (this.mOrientationHelper.mo4533d(childAt) > i4 || this.mOrientationHelper.mo4545p(childAt) > i4) {
-                    recycleChildren(c0609v, 0, i5);
-                    return;
-                }
-            }
-            return;
-        }
-        int i6 = childCount - 1;
-        for (int i7 = i6; i7 >= 0; i7--) {
-            View childAt2 = getChildAt(i7);
-            if (this.mOrientationHelper.mo4533d(childAt2) > i4 || this.mOrientationHelper.mo4545p(childAt2) > i4) {
-                recycleChildren(c0609v, i6, i7);
-                return;
-            }
-        }
-    }
-
-    private void resolveShouldLayoutReverse() {
-        if (this.mOrientation == 1 || !isLayoutRTL()) {
-            this.mShouldReverseLayout = this.mReverseLayout;
+    private void C2() {
+        if (this.f28521s == 1 || !s2()) {
+            this.f28526x = this.f28525w;
         } else {
-            this.mShouldReverseLayout = !this.mReverseLayout;
+            this.f28526x = !this.f28525w;
         }
     }
 
-    private boolean updateAnchorFromChildren(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, C0581a c0581a) {
-        if (getChildCount() == 0) {
+    private boolean I2(RecyclerView.x xVar, RecyclerView.C c10, a aVar) {
+        View viewL2;
+        boolean z10 = false;
+        if (O() == 0) {
             return false;
         }
-        View focusedChild = getFocusedChild();
-        if (focusedChild != null && c0581a.m4175d(focusedChild, c0613z)) {
-            c0581a.m4174c(focusedChild, getPosition(focusedChild));
+        View viewA0 = a0();
+        if (viewA0 != null && aVar.d(viewA0, c10)) {
+            aVar.c(viewA0, l0(viewA0));
             return true;
         }
-        if (this.mLastStackFromEnd != this.mStackFromEnd) {
+        boolean z11 = this.f28524v;
+        boolean z12 = this.f28527y;
+        if (z11 != z12 || (viewL2 = l2(xVar, c10, aVar.f28532d, z12)) == null) {
             return false;
         }
-        View viewFindReferenceChildClosestToEnd = c0581a.f3921d ? findReferenceChildClosestToEnd(c0609v, c0613z) : findReferenceChildClosestToStart(c0609v, c0613z);
-        if (viewFindReferenceChildClosestToEnd == null) {
-            return false;
-        }
-        c0581a.m4173b(viewFindReferenceChildClosestToEnd, getPosition(viewFindReferenceChildClosestToEnd));
-        if (!c0613z.m4309e() && supportsPredictiveItemAnimations()) {
-            if (this.mOrientationHelper.mo4536g(viewFindReferenceChildClosestToEnd) >= this.mOrientationHelper.mo4538i() || this.mOrientationHelper.mo4533d(viewFindReferenceChildClosestToEnd) < this.mOrientationHelper.mo4542m()) {
-                c0581a.f3920c = c0581a.f3921d ? this.mOrientationHelper.mo4538i() : this.mOrientationHelper.mo4542m();
+        aVar.b(viewL2, l0(viewL2));
+        if (!c10.e() && Q1()) {
+            int iG = this.f28523u.g(viewL2);
+            int iD = this.f28523u.d(viewL2);
+            int iM = this.f28523u.m();
+            int i10 = this.f28523u.i();
+            boolean z13 = iD <= iM && iG < iM;
+            if (iG >= i10 && iD > i10) {
+                z10 = true;
+            }
+            if (z13 || z10) {
+                if (aVar.f28532d) {
+                    iM = i10;
+                }
+                aVar.f28531c = iM;
             }
         }
         return true;
     }
 
-    private boolean updateAnchorFromPendingData(RecyclerView.C0613z c0613z, C0581a c0581a) {
-        int i2;
-        if (!c0613z.m4309e() && (i2 = this.mPendingScrollPosition) != -1) {
-            if (i2 >= 0 && i2 < c0613z.m4306b()) {
-                c0581a.f3919b = this.mPendingScrollPosition;
-                SavedState savedState = this.mPendingSavedState;
-                if (savedState != null && savedState.m4168a()) {
-                    boolean z = this.mPendingSavedState.f3917h;
-                    c0581a.f3921d = z;
-                    if (z) {
-                        c0581a.f3920c = this.mOrientationHelper.mo4538i() - this.mPendingSavedState.f3916g;
+    private boolean J2(RecyclerView.C c10, a aVar) {
+        int i10;
+        if (!c10.e() && (i10 = this.f28513A) != -1) {
+            if (i10 >= 0 && i10 < c10.b()) {
+                aVar.f28530b = this.f28513A;
+                d dVar = this.f28516D;
+                if (dVar != null && dVar.a()) {
+                    boolean z10 = this.f28516D.f28553D;
+                    aVar.f28532d = z10;
+                    if (z10) {
+                        aVar.f28531c = this.f28523u.i() - this.f28516D.f28552C;
                     } else {
-                        c0581a.f3920c = this.mOrientationHelper.mo4542m() + this.mPendingSavedState.f3916g;
+                        aVar.f28531c = this.f28523u.m() + this.f28516D.f28552C;
                     }
                     return true;
                 }
-                if (this.mPendingScrollPositionOffset != Integer.MIN_VALUE) {
-                    boolean z2 = this.mShouldReverseLayout;
-                    c0581a.f3921d = z2;
-                    if (z2) {
-                        c0581a.f3920c = this.mOrientationHelper.mo4538i() - this.mPendingScrollPositionOffset;
+                if (this.f28514B != Integer.MIN_VALUE) {
+                    boolean z11 = this.f28526x;
+                    aVar.f28532d = z11;
+                    if (z11) {
+                        aVar.f28531c = this.f28523u.i() - this.f28514B;
                     } else {
-                        c0581a.f3920c = this.mOrientationHelper.mo4542m() + this.mPendingScrollPositionOffset;
+                        aVar.f28531c = this.f28523u.m() + this.f28514B;
                     }
                     return true;
                 }
-                View viewFindViewByPosition = findViewByPosition(this.mPendingScrollPosition);
-                if (viewFindViewByPosition == null) {
-                    if (getChildCount() > 0) {
-                        c0581a.f3921d = (this.mPendingScrollPosition < getPosition(getChildAt(0))) == this.mShouldReverseLayout;
+                View viewH = H(this.f28513A);
+                if (viewH == null) {
+                    if (O() > 0) {
+                        aVar.f28532d = (this.f28513A < l0(N(0))) == this.f28526x;
                     }
-                    c0581a.m4172a();
+                    aVar.a();
                 } else {
-                    if (this.mOrientationHelper.mo4534e(viewFindViewByPosition) > this.mOrientationHelper.mo4543n()) {
-                        c0581a.m4172a();
+                    if (this.f28523u.e(viewH) > this.f28523u.n()) {
+                        aVar.a();
                         return true;
                     }
-                    if (this.mOrientationHelper.mo4536g(viewFindViewByPosition) - this.mOrientationHelper.mo4542m() < 0) {
-                        c0581a.f3920c = this.mOrientationHelper.mo4542m();
-                        c0581a.f3921d = false;
+                    if (this.f28523u.g(viewH) - this.f28523u.m() < 0) {
+                        aVar.f28531c = this.f28523u.m();
+                        aVar.f28532d = false;
                         return true;
                     }
-                    if (this.mOrientationHelper.mo4538i() - this.mOrientationHelper.mo4533d(viewFindViewByPosition) < 0) {
-                        c0581a.f3920c = this.mOrientationHelper.mo4538i();
-                        c0581a.f3921d = true;
+                    if (this.f28523u.i() - this.f28523u.d(viewH) < 0) {
+                        aVar.f28531c = this.f28523u.i();
+                        aVar.f28532d = true;
                         return true;
                     }
-                    c0581a.f3920c = c0581a.f3921d ? this.mOrientationHelper.mo4533d(viewFindViewByPosition) + this.mOrientationHelper.m4544o() : this.mOrientationHelper.mo4536g(viewFindViewByPosition);
+                    aVar.f28531c = aVar.f28532d ? this.f28523u.d(viewH) + this.f28523u.o() : this.f28523u.g(viewH);
                 }
                 return true;
             }
-            this.mPendingScrollPosition = -1;
-            this.mPendingScrollPositionOffset = Integer.MIN_VALUE;
+            this.f28513A = -1;
+            this.f28514B = Integer.MIN_VALUE;
         }
         return false;
     }
 
-    private void updateAnchorInfoForLayout(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, C0581a c0581a) {
-        if (updateAnchorFromPendingData(c0613z, c0581a) || updateAnchorFromChildren(c0609v, c0613z, c0581a)) {
+    private void K2(RecyclerView.x xVar, RecyclerView.C c10, a aVar) {
+        if (J2(c10, aVar) || I2(xVar, c10, aVar)) {
             return;
         }
-        c0581a.m4172a();
-        c0581a.f3919b = this.mStackFromEnd ? c0613z.m4306b() - 1 : 0;
+        aVar.a();
+        aVar.f28530b = this.f28527y ? c10.b() - 1 : 0;
     }
 
-    private void updateLayoutState(int i2, int i3, boolean z, RecyclerView.C0613z c0613z) {
-        int iMo4542m;
-        this.mLayoutState.f3939m = resolveIsInfinite();
-        this.mLayoutState.f3932f = i2;
-        int[] iArr = this.mReusableIntPair;
+    private void L2(int i10, int i11, boolean z10, RecyclerView.C c10) {
+        int iM;
+        this.f28522t.f28550m = B2();
+        this.f28522t.f28543f = i10;
+        int[] iArr = this.f28520H;
         iArr[0] = 0;
         iArr[1] = 0;
-        calculateExtraLayoutSpace(c0613z, iArr);
-        int iMax = Math.max(0, this.mReusableIntPair[0]);
-        int iMax2 = Math.max(0, this.mReusableIntPair[1]);
-        boolean z2 = i2 == 1;
-        C0583c c0583c = this.mLayoutState;
-        int i4 = z2 ? iMax2 : iMax;
-        c0583c.f3934h = i4;
-        if (!z2) {
+        R1(c10, iArr);
+        int iMax = Math.max(0, this.f28520H[0]);
+        int iMax2 = Math.max(0, this.f28520H[1]);
+        boolean z11 = i10 == 1;
+        c cVar = this.f28522t;
+        int i12 = z11 ? iMax2 : iMax;
+        cVar.f28545h = i12;
+        if (!z11) {
             iMax = iMax2;
         }
-        c0583c.f3935i = iMax;
-        if (z2) {
-            c0583c.f3934h = i4 + this.mOrientationHelper.mo4539j();
-            View childClosestToEnd = getChildClosestToEnd();
-            C0583c c0583c2 = this.mLayoutState;
-            c0583c2.f3931e = this.mShouldReverseLayout ? -1 : 1;
-            int position = getPosition(childClosestToEnd);
-            C0583c c0583c3 = this.mLayoutState;
-            c0583c2.f3930d = position + c0583c3.f3931e;
-            c0583c3.f3928b = this.mOrientationHelper.mo4533d(childClosestToEnd);
-            iMo4542m = this.mOrientationHelper.mo4533d(childClosestToEnd) - this.mOrientationHelper.mo4538i();
+        cVar.f28546i = iMax;
+        if (z11) {
+            cVar.f28545h = i12 + this.f28523u.j();
+            View viewO2 = o2();
+            c cVar2 = this.f28522t;
+            cVar2.f28542e = this.f28526x ? -1 : 1;
+            int iL0 = l0(viewO2);
+            c cVar3 = this.f28522t;
+            cVar2.f28541d = iL0 + cVar3.f28542e;
+            cVar3.f28539b = this.f28523u.d(viewO2);
+            iM = this.f28523u.d(viewO2) - this.f28523u.i();
         } else {
-            View childClosestToStart = getChildClosestToStart();
-            this.mLayoutState.f3934h += this.mOrientationHelper.mo4542m();
-            C0583c c0583c4 = this.mLayoutState;
-            c0583c4.f3931e = this.mShouldReverseLayout ? 1 : -1;
-            int position2 = getPosition(childClosestToStart);
-            C0583c c0583c5 = this.mLayoutState;
-            c0583c4.f3930d = position2 + c0583c5.f3931e;
-            c0583c5.f3928b = this.mOrientationHelper.mo4536g(childClosestToStart);
-            iMo4542m = (-this.mOrientationHelper.mo4536g(childClosestToStart)) + this.mOrientationHelper.mo4542m();
+            View viewP2 = p2();
+            this.f28522t.f28545h += this.f28523u.m();
+            c cVar4 = this.f28522t;
+            cVar4.f28542e = this.f28526x ? 1 : -1;
+            int iL02 = l0(viewP2);
+            c cVar5 = this.f28522t;
+            cVar4.f28541d = iL02 + cVar5.f28542e;
+            cVar5.f28539b = this.f28523u.g(viewP2);
+            iM = (-this.f28523u.g(viewP2)) + this.f28523u.m();
         }
-        C0583c c0583c6 = this.mLayoutState;
-        c0583c6.f3929c = i3;
-        if (z) {
-            c0583c6.f3929c = i3 - iMo4542m;
+        c cVar6 = this.f28522t;
+        cVar6.f28540c = i11;
+        if (z10) {
+            cVar6.f28540c = i11 - iM;
         }
-        c0583c6.f3933g = iMo4542m;
+        cVar6.f28544g = iM;
     }
 
-    private void updateLayoutStateToFillEnd(C0581a c0581a) {
-        updateLayoutStateToFillEnd(c0581a.f3919b, c0581a.f3920c);
+    private void M2(int i10, int i11) {
+        this.f28522t.f28540c = this.f28523u.i() - i11;
+        c cVar = this.f28522t;
+        cVar.f28542e = this.f28526x ? -1 : 1;
+        cVar.f28541d = i10;
+        cVar.f28543f = 1;
+        cVar.f28539b = i11;
+        cVar.f28544g = Integer.MIN_VALUE;
     }
 
-    private void updateLayoutStateToFillStart(C0581a c0581a) {
-        updateLayoutStateToFillStart(c0581a.f3919b, c0581a.f3920c);
+    private void N2(a aVar) {
+        M2(aVar.f28530b, aVar.f28531c);
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void assertNotInLayoutOrScroll(String str) {
-        if (this.mPendingSavedState == null) {
-            super.assertNotInLayoutOrScroll(str);
+    private void O2(int i10, int i11) {
+        this.f28522t.f28540c = i11 - this.f28523u.m();
+        c cVar = this.f28522t;
+        cVar.f28541d = i10;
+        cVar.f28542e = this.f28526x ? 1 : -1;
+        cVar.f28543f = -1;
+        cVar.f28539b = i11;
+        cVar.f28544g = Integer.MIN_VALUE;
+    }
+
+    private void P2(a aVar) {
+        O2(aVar.f28530b, aVar.f28531c);
+    }
+
+    private int T1(RecyclerView.C c10) {
+        if (O() == 0) {
+            return 0;
         }
+        Y1();
+        return t.a(c10, this.f28523u, d2(!this.f28528z, true), c2(!this.f28528z, true), this, this.f28528z);
     }
 
-    protected void calculateExtraLayoutSpace(RecyclerView.C0613z c0613z, int[] iArr) {
-        int i2;
-        int extraLayoutSpace = getExtraLayoutSpace(c0613z);
-        if (this.mLayoutState.f3932f == -1) {
-            i2 = 0;
-        } else {
-            i2 = extraLayoutSpace;
-            extraLayoutSpace = 0;
+    private int U1(RecyclerView.C c10) {
+        if (O() == 0) {
+            return 0;
         }
-        iArr[0] = extraLayoutSpace;
-        iArr[1] = i2;
+        Y1();
+        return t.b(c10, this.f28523u, d2(!this.f28528z, true), c2(!this.f28528z, true), this, this.f28528z, this.f28526x);
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public boolean canScrollHorizontally() {
-        return this.mOrientation == 0;
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public boolean canScrollVertically() {
-        return this.mOrientation == 1;
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void collectAdjacentPrefetchPositions(int i2, int i3, RecyclerView.C0613z c0613z, RecyclerView.AbstractC0602o.c cVar) {
-        if (this.mOrientation != 0) {
-            i2 = i3;
+    private int V1(RecyclerView.C c10) {
+        if (O() == 0) {
+            return 0;
         }
-        if (getChildCount() == 0 || i2 == 0) {
+        Y1();
+        return t.c(c10, this.f28523u, d2(!this.f28528z, true), c2(!this.f28528z, true), this, this.f28528z);
+    }
+
+    private View b2() {
+        return h2(0, O());
+    }
+
+    private View f2() {
+        return h2(O() - 1, -1);
+    }
+
+    private View j2() {
+        return this.f28526x ? b2() : f2();
+    }
+
+    private View k2() {
+        return this.f28526x ? f2() : b2();
+    }
+
+    private int m2(int i10, RecyclerView.x xVar, RecyclerView.C c10, boolean z10) {
+        int i11;
+        int i12 = this.f28523u.i() - i10;
+        if (i12 <= 0) {
+            return 0;
+        }
+        int i13 = -D2(-i12, xVar, c10);
+        int i14 = i10 + i13;
+        if (!z10 || (i11 = this.f28523u.i() - i14) <= 0) {
+            return i13;
+        }
+        this.f28523u.r(i11);
+        return i11 + i13;
+    }
+
+    private int n2(int i10, RecyclerView.x xVar, RecyclerView.C c10, boolean z10) {
+        int iM;
+        int iM2 = i10 - this.f28523u.m();
+        if (iM2 <= 0) {
+            return 0;
+        }
+        int i11 = -D2(iM2, xVar, c10);
+        int i12 = i10 + i11;
+        if (!z10 || (iM = i12 - this.f28523u.m()) <= 0) {
+            return i11;
+        }
+        this.f28523u.r(-iM);
+        return i11 - iM;
+    }
+
+    private View o2() {
+        return N(this.f28526x ? 0 : O() - 1);
+    }
+
+    private View p2() {
+        return N(this.f28526x ? O() - 1 : 0);
+    }
+
+    private void v2(RecyclerView.x xVar, RecyclerView.C c10, int i10, int i11) {
+        if (!c10.g() || O() == 0 || c10.e() || !Q1()) {
             return;
         }
-        ensureLayoutState();
-        updateLayoutState(i2 > 0 ? 1 : -1, Math.abs(i2), true, c0613z);
-        collectPrefetchPositionsForLayoutState(c0613z, this.mLayoutState, cVar);
+        List<RecyclerView.G> listK = xVar.k();
+        int size = listK.size();
+        int iL0 = l0(N(0));
+        int iE = 0;
+        int iE2 = 0;
+        for (int i12 = 0; i12 < size; i12++) {
+            RecyclerView.G g10 = listK.get(i12);
+            if (!g10.isRemoved()) {
+                if ((g10.getLayoutPosition() < iL0) != this.f28526x) {
+                    iE += this.f28523u.e(g10.itemView);
+                } else {
+                    iE2 += this.f28523u.e(g10.itemView);
+                }
+            }
+        }
+        this.f28522t.f28549l = listK;
+        if (iE > 0) {
+            O2(l0(p2()), i10);
+            c cVar = this.f28522t;
+            cVar.f28545h = iE;
+            cVar.f28540c = 0;
+            cVar.a();
+            Z1(xVar, this.f28522t, c10, false);
+        }
+        if (iE2 > 0) {
+            M2(l0(o2()), i11);
+            c cVar2 = this.f28522t;
+            cVar2.f28545h = iE2;
+            cVar2.f28540c = 0;
+            cVar2.a();
+            Z1(xVar, this.f28522t, c10, false);
+        }
+        this.f28522t.f28549l = null;
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void collectInitialPrefetchPositions(int i2, RecyclerView.AbstractC0602o.c cVar) {
-        boolean z;
-        int i3;
-        SavedState savedState = this.mPendingSavedState;
-        if (savedState == null || !savedState.m4168a()) {
-            resolveShouldLayoutReverse();
-            z = this.mShouldReverseLayout;
-            i3 = this.mPendingScrollPosition;
-            if (i3 == -1) {
-                i3 = z ? i2 - 1 : 0;
+    private void x2(RecyclerView.x xVar, c cVar) {
+        if (!cVar.f28538a || cVar.f28550m) {
+            return;
+        }
+        int i10 = cVar.f28544g;
+        int i11 = cVar.f28546i;
+        if (cVar.f28543f == -1) {
+            z2(xVar, i10, i11);
+        } else {
+            A2(xVar, i10, i11);
+        }
+    }
+
+    private void y2(RecyclerView.x xVar, int i10, int i11) {
+        if (i10 == i11) {
+            return;
+        }
+        if (i11 <= i10) {
+            while (i10 > i11) {
+                s1(i10, xVar);
+                i10--;
             }
         } else {
-            SavedState savedState2 = this.mPendingSavedState;
-            z = savedState2.f3917h;
-            i3 = savedState2.f3915f;
-        }
-        int i4 = z ? -1 : 1;
-        for (int i5 = 0; i5 < this.mInitialPrefetchItemCount && i3 >= 0 && i3 < i2; i5++) {
-            cVar.mo4237a(i3, 0);
-            i3 += i4;
+            for (int i12 = i11 - 1; i12 >= i10; i12--) {
+                s1(i12, xVar);
+            }
         }
     }
 
-    void collectPrefetchPositionsForLayoutState(RecyclerView.C0613z c0613z, C0583c c0583c, RecyclerView.AbstractC0602o.c cVar) {
-        int i2 = c0583c.f3930d;
-        if (i2 < 0 || i2 >= c0613z.m4306b()) {
+    private void z2(RecyclerView.x xVar, int i10, int i11) {
+        int iO = O();
+        if (i10 < 0) {
             return;
         }
-        cVar.mo4237a(i2, Math.max(0, c0583c.f3933g));
+        int iH = (this.f28523u.h() - i10) + i11;
+        if (this.f28526x) {
+            for (int i12 = 0; i12 < iO; i12++) {
+                View viewN = N(i12);
+                if (this.f28523u.g(viewN) < iH || this.f28523u.q(viewN) < iH) {
+                    y2(xVar, 0, i12);
+                    return;
+                }
+            }
+            return;
+        }
+        int i13 = iO - 1;
+        for (int i14 = i13; i14 >= 0; i14--) {
+            View viewN2 = N(i14);
+            if (this.f28523u.g(viewN2) < iH || this.f28523u.q(viewN2) < iH) {
+                y2(xVar, i13, i14);
+                return;
+            }
+        }
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int computeHorizontalScrollExtent(RecyclerView.C0613z c0613z) {
-        return computeScrollExtent(c0613z);
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public int A(RecyclerView.C c10) {
+        return V1(c10);
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int computeHorizontalScrollOffset(RecyclerView.C0613z c0613z) {
-        return computeScrollOffset(c0613z);
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public boolean A0() {
+        return this.f28525w;
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int computeHorizontalScrollRange(RecyclerView.C0613z c0613z) {
-        return computeScrollRange(c0613z);
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public int B1(int i10, RecyclerView.x xVar, RecyclerView.C c10) {
+        if (this.f28521s == 1) {
+            return 0;
+        }
+        return D2(i10, xVar, c10);
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0612y.b
-    public PointF computeScrollVectorForPosition(int i2) {
-        if (getChildCount() == 0) {
+    boolean B2() {
+        return this.f28523u.k() == 0 && this.f28523u.h() == 0;
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public void C1(int i10) {
+        this.f28513A = i10;
+        this.f28514B = Integer.MIN_VALUE;
+        d dVar = this.f28516D;
+        if (dVar != null) {
+            dVar.b();
+        }
+        y1();
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public int D1(int i10, RecyclerView.x xVar, RecyclerView.C c10) {
+        if (this.f28521s == 0) {
+            return 0;
+        }
+        return D2(i10, xVar, c10);
+    }
+
+    int D2(int i10, RecyclerView.x xVar, RecyclerView.C c10) {
+        if (O() == 0 || i10 == 0) {
+            return 0;
+        }
+        Y1();
+        this.f28522t.f28538a = true;
+        int i11 = i10 > 0 ? 1 : -1;
+        int iAbs = Math.abs(i10);
+        L2(i11, iAbs, true, c10);
+        c cVar = this.f28522t;
+        int iZ1 = cVar.f28544g + Z1(xVar, cVar, c10, false);
+        if (iZ1 < 0) {
+            return 0;
+        }
+        if (iAbs > iZ1) {
+            i10 = i11 * iZ1;
+        }
+        this.f28523u.r(-i10);
+        this.f28522t.f28548k = i10;
+        return i10;
+    }
+
+    public void E2(int i10, int i11) {
+        this.f28513A = i10;
+        this.f28514B = i11;
+        d dVar = this.f28516D;
+        if (dVar != null) {
+            dVar.b();
+        }
+        y1();
+    }
+
+    public void F2(int i10) {
+        if (i10 != 0 && i10 != 1) {
+            throw new IllegalArgumentException("invalid orientation:" + i10);
+        }
+        l(null);
+        if (i10 != this.f28521s || this.f28523u == null) {
+            q qVarB = q.b(this, i10);
+            this.f28523u = qVarB;
+            this.f28517E.f28529a = qVarB;
+            this.f28521s = i10;
+            y1();
+        }
+    }
+
+    public void G2(boolean z10) {
+        l(null);
+        if (z10 == this.f28525w) {
+            return;
+        }
+        this.f28525w = z10;
+        y1();
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public View H(int i10) {
+        int iO = O();
+        if (iO == 0) {
             return null;
         }
-        int i3 = (i2 < getPosition(getChildAt(0))) != this.mShouldReverseLayout ? -1 : 1;
-        return this.mOrientation == 0 ? new PointF(i3, 0.0f) : new PointF(0.0f, i3);
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int computeVerticalScrollExtent(RecyclerView.C0613z c0613z) {
-        return computeScrollExtent(c0613z);
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int computeVerticalScrollOffset(RecyclerView.C0613z c0613z) {
-        return computeScrollOffset(c0613z);
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int computeVerticalScrollRange(RecyclerView.C0613z c0613z) {
-        return computeScrollRange(c0613z);
-    }
-
-    int convertFocusDirectionToLayoutDirection(int i2) {
-        return i2 != 1 ? i2 != 2 ? i2 != 17 ? i2 != 33 ? i2 != 66 ? (i2 == 130 && this.mOrientation == 1) ? 1 : Integer.MIN_VALUE : this.mOrientation == 0 ? 1 : Integer.MIN_VALUE : this.mOrientation == 1 ? -1 : Integer.MIN_VALUE : this.mOrientation == 0 ? -1 : Integer.MIN_VALUE : (this.mOrientation != 1 && isLayoutRTL()) ? -1 : 1 : (this.mOrientation != 1 && isLayoutRTL()) ? 1 : -1;
-    }
-
-    C0583c createLayoutState() {
-        return new C0583c();
-    }
-
-    void ensureLayoutState() {
-        if (this.mLayoutState == null) {
-            this.mLayoutState = createLayoutState();
-        }
-    }
-
-    int fill(RecyclerView.C0609v c0609v, C0583c c0583c, RecyclerView.C0613z c0613z, boolean z) {
-        int i2 = c0583c.f3929c;
-        int i3 = c0583c.f3933g;
-        if (i3 != Integer.MIN_VALUE) {
-            if (i2 < 0) {
-                c0583c.f3933g = i3 + i2;
+        int iL0 = i10 - l0(N(0));
+        if (iL0 >= 0 && iL0 < iO) {
+            View viewN = N(iL0);
+            if (l0(viewN) == i10) {
+                return viewN;
             }
-            recycleByLayoutState(c0609v, c0583c);
         }
-        int i4 = c0583c.f3929c + c0583c.f3934h;
-        C0582b c0582b = this.mLayoutChunkResult;
+        return super.H(i10);
+    }
+
+    public void H2(boolean z10) {
+        l(null);
+        if (this.f28527y == z10) {
+            return;
+        }
+        this.f28527y = z10;
+        y1();
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public RecyclerView.r I() {
+        return new RecyclerView.r(-2, -2);
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    boolean L1() {
+        return (c0() == 1073741824 || t0() == 1073741824 || !u0()) ? false : true;
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public void N0(RecyclerView recyclerView, RecyclerView.x xVar) {
+        super.N0(recyclerView, xVar);
+        if (this.f28515C) {
+            p1(xVar);
+            xVar.c();
+        }
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public void N1(RecyclerView recyclerView, RecyclerView.C c10, int i10) {
+        m mVar = new m(recyclerView.getContext());
+        mVar.p(i10);
+        O1(mVar);
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public View O0(View view, int i10, RecyclerView.x xVar, RecyclerView.C c10) {
+        int iW1;
+        C2();
+        if (O() == 0 || (iW1 = W1(i10)) == Integer.MIN_VALUE) {
+            return null;
+        }
+        Y1();
+        L2(iW1, (int) (this.f28523u.n() * 0.33333334f), false, c10);
+        c cVar = this.f28522t;
+        cVar.f28544g = Integer.MIN_VALUE;
+        cVar.f28538a = false;
+        Z1(xVar, cVar, c10, true);
+        View viewK2 = iW1 == -1 ? k2() : j2();
+        View viewP2 = iW1 == -1 ? p2() : o2();
+        if (!viewP2.hasFocusable()) {
+            return viewK2;
+        }
+        if (viewK2 == null) {
+            return null;
+        }
+        return viewP2;
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public void P0(AccessibilityEvent accessibilityEvent) {
+        super.P0(accessibilityEvent);
+        if (O() > 0) {
+            accessibilityEvent.setFromIndex(e2());
+            accessibilityEvent.setToIndex(g2());
+        }
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public boolean Q1() {
+        return this.f28516D == null && this.f28524v == this.f28527y;
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public void R0(RecyclerView.x xVar, RecyclerView.C c10, t1.t tVar) {
+        super.R0(xVar, c10, tVar);
+        RecyclerView.h hVar = this.f28709b.f28589N;
+        if (hVar == null || hVar.h() <= 0) {
+            return;
+        }
+        tVar.b(t.a.f49757B);
+    }
+
+    protected void R1(RecyclerView.C c10, int[] iArr) {
+        int i10;
+        int iQ2 = q2(c10);
+        if (this.f28522t.f28543f == -1) {
+            i10 = 0;
+        } else {
+            i10 = iQ2;
+            iQ2 = 0;
+        }
+        iArr[0] = iQ2;
+        iArr[1] = i10;
+    }
+
+    void S1(RecyclerView.C c10, c cVar, RecyclerView.q.c cVar2) {
+        int i10 = cVar.f28541d;
+        if (i10 < 0 || i10 >= c10.b()) {
+            return;
+        }
+        cVar2.a(i10, Math.max(0, cVar.f28544g));
+    }
+
+    int W1(int i10) {
+        return i10 != 1 ? i10 != 2 ? i10 != 17 ? i10 != 33 ? i10 != 66 ? (i10 == 130 && this.f28521s == 1) ? 1 : Integer.MIN_VALUE : this.f28521s == 0 ? 1 : Integer.MIN_VALUE : this.f28521s == 1 ? -1 : Integer.MIN_VALUE : this.f28521s == 0 ? -1 : Integer.MIN_VALUE : (this.f28521s != 1 && s2()) ? -1 : 1 : (this.f28521s != 1 && s2()) ? 1 : -1;
+    }
+
+    c X1() {
+        return new c();
+    }
+
+    void Y1() {
+        if (this.f28522t == null) {
+            this.f28522t = X1();
+        }
+    }
+
+    int Z1(RecyclerView.x xVar, c cVar, RecyclerView.C c10, boolean z10) {
+        int i10 = cVar.f28540c;
+        int i11 = cVar.f28544g;
+        if (i11 != Integer.MIN_VALUE) {
+            if (i10 < 0) {
+                cVar.f28544g = i11 + i10;
+            }
+            x2(xVar, cVar);
+        }
+        int i12 = cVar.f28540c + cVar.f28545h;
+        b bVar = this.f28518F;
         while (true) {
-            if ((!c0583c.f3939m && i4 <= 0) || !c0583c.m4181c(c0613z)) {
+            if ((!cVar.f28550m && i12 <= 0) || !cVar.c(c10)) {
                 break;
             }
-            c0582b.m4177a();
-            layoutChunk(c0609v, c0613z, c0583c, c0582b);
-            if (!c0582b.f3924b) {
-                c0583c.f3928b += c0582b.f3923a * c0583c.f3932f;
-                if (!c0582b.f3925c || c0583c.f3938l != null || !c0613z.m4309e()) {
-                    int i5 = c0583c.f3929c;
-                    int i6 = c0582b.f3923a;
-                    c0583c.f3929c = i5 - i6;
-                    i4 -= i6;
+            bVar.a();
+            u2(xVar, c10, cVar, bVar);
+            if (!bVar.f28535b) {
+                cVar.f28539b += bVar.f28534a * cVar.f28543f;
+                if (!bVar.f28536c || cVar.f28549l != null || !c10.e()) {
+                    int i13 = cVar.f28540c;
+                    int i14 = bVar.f28534a;
+                    cVar.f28540c = i13 - i14;
+                    i12 -= i14;
                 }
-                int i7 = c0583c.f3933g;
-                if (i7 != Integer.MIN_VALUE) {
-                    int i8 = i7 + c0582b.f3923a;
-                    c0583c.f3933g = i8;
-                    int i9 = c0583c.f3929c;
-                    if (i9 < 0) {
-                        c0583c.f3933g = i8 + i9;
+                int i15 = cVar.f28544g;
+                if (i15 != Integer.MIN_VALUE) {
+                    int i16 = i15 + bVar.f28534a;
+                    cVar.f28544g = i16;
+                    int i17 = cVar.f28540c;
+                    if (i17 < 0) {
+                        cVar.f28544g = i16 + i17;
                     }
-                    recycleByLayoutState(c0609v, c0583c);
+                    x2(xVar, cVar);
                 }
-                if (z && c0582b.f3926d) {
+                if (z10 && bVar.f28537d) {
                     break;
                 }
             } else {
                 break;
             }
         }
-        return i2 - c0583c.f3929c;
+        return i10 - cVar.f28540c;
     }
 
-    public int findFirstCompletelyVisibleItemPosition() {
-        View viewFindOneVisibleChild = findOneVisibleChild(0, getChildCount(), true, false);
-        if (viewFindOneVisibleChild == null) {
+    public int a2() {
+        View viewI2 = i2(0, O(), true, false);
+        if (viewI2 == null) {
             return -1;
         }
-        return getPosition(viewFindOneVisibleChild);
+        return l0(viewI2);
     }
 
-    View findFirstVisibleChildClosestToEnd(boolean z, boolean z2) {
-        return this.mShouldReverseLayout ? findOneVisibleChild(0, getChildCount(), z, z2) : findOneVisibleChild(getChildCount() - 1, -1, z, z2);
-    }
-
-    View findFirstVisibleChildClosestToStart(boolean z, boolean z2) {
-        return this.mShouldReverseLayout ? findOneVisibleChild(getChildCount() - 1, -1, z, z2) : findOneVisibleChild(0, getChildCount(), z, z2);
-    }
-
-    public int findFirstVisibleItemPosition() {
-        View viewFindOneVisibleChild = findOneVisibleChild(0, getChildCount(), false, true);
-        if (viewFindOneVisibleChild == null) {
-            return -1;
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public void c1(RecyclerView.x xVar, RecyclerView.C c10) {
+        int i10;
+        int i11;
+        int i12;
+        int i13;
+        int iM2;
+        int i14;
+        View viewH;
+        int iG;
+        int i15;
+        int i16 = -1;
+        if (!(this.f28516D == null && this.f28513A == -1) && c10.b() == 0) {
+            p1(xVar);
+            return;
         }
-        return getPosition(viewFindOneVisibleChild);
-    }
-
-    public int findLastCompletelyVisibleItemPosition() {
-        View viewFindOneVisibleChild = findOneVisibleChild(getChildCount() - 1, -1, true, false);
-        if (viewFindOneVisibleChild == null) {
-            return -1;
+        d dVar = this.f28516D;
+        if (dVar != null && dVar.a()) {
+            this.f28513A = this.f28516D.f28551B;
         }
-        return getPosition(viewFindOneVisibleChild);
-    }
-
-    public int findLastVisibleItemPosition() {
-        View viewFindOneVisibleChild = findOneVisibleChild(getChildCount() - 1, -1, false, true);
-        if (viewFindOneVisibleChild == null) {
-            return -1;
+        Y1();
+        this.f28522t.f28538a = false;
+        C2();
+        View viewA0 = a0();
+        a aVar = this.f28517E;
+        if (!aVar.f28533e || this.f28513A != -1 || this.f28516D != null) {
+            aVar.e();
+            a aVar2 = this.f28517E;
+            aVar2.f28532d = this.f28526x ^ this.f28527y;
+            K2(xVar, c10, aVar2);
+            this.f28517E.f28533e = true;
+        } else if (viewA0 != null && (this.f28523u.g(viewA0) >= this.f28523u.i() || this.f28523u.d(viewA0) <= this.f28523u.m())) {
+            this.f28517E.c(viewA0, l0(viewA0));
         }
-        return getPosition(viewFindOneVisibleChild);
-    }
-
-    View findOnePartiallyOrCompletelyInvisibleChild(int i2, int i3) {
-        int i4;
-        int i5;
-        ensureLayoutState();
-        if ((i3 > i2 ? (char) 1 : i3 < i2 ? (char) 65535 : (char) 0) == 0) {
-            return getChildAt(i2);
-        }
-        if (this.mOrientationHelper.mo4536g(getChildAt(i2)) < this.mOrientationHelper.mo4542m()) {
-            i4 = 16644;
-            i5 = 16388;
-        } else {
-            i4 = 4161;
-            i5 = 4097;
-        }
-        return this.mOrientation == 0 ? this.mHorizontalBoundCheck.m4555a(i2, i3, i4, i5) : this.mVerticalBoundCheck.m4555a(i2, i3, i4, i5);
-    }
-
-    View findOneVisibleChild(int i2, int i3, boolean z, boolean z2) {
-        ensureLayoutState();
-        int i4 = z ? 24579 : 320;
-        int i5 = z2 ? 320 : 0;
-        return this.mOrientation == 0 ? this.mHorizontalBoundCheck.m4555a(i2, i3, i4, i5) : this.mVerticalBoundCheck.m4555a(i2, i3, i4, i5);
-    }
-
-    View findReferenceChild(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, int i2, int i3, int i4) {
-        ensureLayoutState();
-        int iMo4542m = this.mOrientationHelper.mo4542m();
-        int iMo4538i = this.mOrientationHelper.mo4538i();
-        int i5 = i3 > i2 ? 1 : -1;
-        View view = null;
-        View view2 = null;
-        while (i2 != i3) {
-            View childAt = getChildAt(i2);
-            int position = getPosition(childAt);
-            if (position >= 0 && position < i4) {
-                if (((RecyclerView.C0603p) childAt.getLayoutParams()).m4240c()) {
-                    if (view2 == null) {
-                        view2 = childAt;
-                    }
-                } else {
-                    if (this.mOrientationHelper.mo4536g(childAt) < iMo4538i && this.mOrientationHelper.mo4533d(childAt) >= iMo4542m) {
-                        return childAt;
-                    }
-                    if (view == null) {
-                        view = childAt;
-                    }
-                }
+        c cVar = this.f28522t;
+        cVar.f28543f = cVar.f28548k >= 0 ? 1 : -1;
+        int[] iArr = this.f28520H;
+        iArr[0] = 0;
+        iArr[1] = 0;
+        R1(c10, iArr);
+        int iMax = Math.max(0, this.f28520H[0]) + this.f28523u.m();
+        int iMax2 = Math.max(0, this.f28520H[1]) + this.f28523u.j();
+        if (c10.e() && (i14 = this.f28513A) != -1 && this.f28514B != Integer.MIN_VALUE && (viewH = H(i14)) != null) {
+            if (this.f28526x) {
+                i15 = this.f28523u.i() - this.f28523u.d(viewH);
+                iG = this.f28514B;
+            } else {
+                iG = this.f28523u.g(viewH) - this.f28523u.m();
+                i15 = this.f28514B;
             }
-            i2 += i5;
+            int i17 = i15 - iG;
+            if (i17 > 0) {
+                iMax += i17;
+            } else {
+                iMax2 -= i17;
+            }
         }
-        return view != null ? view : view2;
+        a aVar3 = this.f28517E;
+        if (!aVar3.f28532d ? !this.f28526x : this.f28526x) {
+            i16 = 1;
+        }
+        w2(xVar, c10, aVar3, i16);
+        B(xVar);
+        this.f28522t.f28550m = B2();
+        this.f28522t.f28547j = c10.e();
+        this.f28522t.f28546i = 0;
+        a aVar4 = this.f28517E;
+        if (aVar4.f28532d) {
+            P2(aVar4);
+            c cVar2 = this.f28522t;
+            cVar2.f28545h = iMax;
+            Z1(xVar, cVar2, c10, false);
+            c cVar3 = this.f28522t;
+            i11 = cVar3.f28539b;
+            int i18 = cVar3.f28541d;
+            int i19 = cVar3.f28540c;
+            if (i19 > 0) {
+                iMax2 += i19;
+            }
+            N2(this.f28517E);
+            c cVar4 = this.f28522t;
+            cVar4.f28545h = iMax2;
+            cVar4.f28541d += cVar4.f28542e;
+            Z1(xVar, cVar4, c10, false);
+            c cVar5 = this.f28522t;
+            i10 = cVar5.f28539b;
+            int i20 = cVar5.f28540c;
+            if (i20 > 0) {
+                O2(i18, i11);
+                c cVar6 = this.f28522t;
+                cVar6.f28545h = i20;
+                Z1(xVar, cVar6, c10, false);
+                i11 = this.f28522t.f28539b;
+            }
+        } else {
+            N2(aVar4);
+            c cVar7 = this.f28522t;
+            cVar7.f28545h = iMax2;
+            Z1(xVar, cVar7, c10, false);
+            c cVar8 = this.f28522t;
+            i10 = cVar8.f28539b;
+            int i21 = cVar8.f28541d;
+            int i22 = cVar8.f28540c;
+            if (i22 > 0) {
+                iMax += i22;
+            }
+            P2(this.f28517E);
+            c cVar9 = this.f28522t;
+            cVar9.f28545h = iMax;
+            cVar9.f28541d += cVar9.f28542e;
+            Z1(xVar, cVar9, c10, false);
+            c cVar10 = this.f28522t;
+            i11 = cVar10.f28539b;
+            int i23 = cVar10.f28540c;
+            if (i23 > 0) {
+                M2(i21, i10);
+                c cVar11 = this.f28522t;
+                cVar11.f28545h = i23;
+                Z1(xVar, cVar11, c10, false);
+                i10 = this.f28522t.f28539b;
+            }
+        }
+        if (O() > 0) {
+            if (this.f28526x ^ this.f28527y) {
+                int iM22 = m2(i10, xVar, c10, true);
+                i12 = i11 + iM22;
+                i13 = i10 + iM22;
+                iM2 = n2(i12, xVar, c10, false);
+            } else {
+                int iN2 = n2(i11, xVar, c10, true);
+                i12 = i11 + iN2;
+                i13 = i10 + iN2;
+                iM2 = m2(i13, xVar, c10, false);
+            }
+            i11 = i12 + iM2;
+            i10 = i13 + iM2;
+        }
+        v2(xVar, c10, i11, i10);
+        if (c10.e()) {
+            this.f28517E.e();
+        } else {
+            this.f28523u.s();
+        }
+        this.f28524v = this.f28527y;
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public View findViewByPosition(int i2) {
-        int childCount = getChildCount();
-        if (childCount == 0) {
+    View c2(boolean z10, boolean z11) {
+        return this.f28526x ? i2(0, O(), z10, z11) : i2(O() - 1, -1, z10, z11);
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.B.b
+    @SuppressLint({"UnknownNullness"})
+    public PointF d(int i10) {
+        if (O() == 0) {
             return null;
         }
-        int position = i2 - getPosition(getChildAt(0));
-        if (position >= 0 && position < childCount) {
-            View childAt = getChildAt(position);
-            if (getPosition(childAt) == i2) {
-                return childAt;
-            }
-        }
-        return super.findViewByPosition(i2);
+        int i11 = (i10 < l0(N(0))) != this.f28526x ? -1 : 1;
+        return this.f28521s == 0 ? new PointF(i11, 0.0f) : new PointF(0.0f, i11);
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public RecyclerView.C0603p generateDefaultLayoutParams() {
-        return new RecyclerView.C0603p(-2, -2);
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public void d1(RecyclerView.C c10) {
+        super.d1(c10);
+        this.f28516D = null;
+        this.f28513A = -1;
+        this.f28514B = Integer.MIN_VALUE;
+        this.f28517E.e();
+    }
+
+    View d2(boolean z10, boolean z11) {
+        return this.f28526x ? i2(O() - 1, -1, z10, z11) : i2(0, O(), z10, z11);
+    }
+
+    public int e2() {
+        View viewI2 = i2(0, O(), false, true);
+        if (viewI2 == null) {
+            return -1;
+        }
+        return l0(viewI2);
+    }
+
+    public int g2() {
+        View viewI2 = i2(O() - 1, -1, false, true);
+        if (viewI2 == null) {
+            return -1;
+        }
+        return l0(viewI2);
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public void h1(Parcelable parcelable) {
+        if (parcelable instanceof d) {
+            d dVar = (d) parcelable;
+            this.f28516D = dVar;
+            if (this.f28513A != -1) {
+                dVar.b();
+            }
+            y1();
+        }
+    }
+
+    View h2(int i10, int i11) {
+        int i12;
+        int i13;
+        Y1();
+        if (i11 <= i10 && i11 >= i10) {
+            return N(i10);
+        }
+        if (this.f28523u.g(N(i10)) < this.f28523u.m()) {
+            i12 = 16644;
+            i13 = 16388;
+        } else {
+            i12 = 4161;
+            i13 = 4097;
+        }
+        return this.f28521s == 0 ? this.f28712e.a(i10, i11, i12, i13) : this.f28713f.a(i10, i11, i12, i13);
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public Parcelable i1() {
+        if (this.f28516D != null) {
+            return new d(this.f28516D);
+        }
+        d dVar = new d();
+        if (O() > 0) {
+            Y1();
+            boolean z10 = this.f28524v ^ this.f28526x;
+            dVar.f28553D = z10;
+            if (z10) {
+                View viewO2 = o2();
+                dVar.f28552C = this.f28523u.i() - this.f28523u.d(viewO2);
+                dVar.f28551B = l0(viewO2);
+            } else {
+                View viewP2 = p2();
+                dVar.f28551B = l0(viewP2);
+                dVar.f28552C = this.f28523u.g(viewP2) - this.f28523u.m();
+            }
+        } else {
+            dVar.b();
+        }
+        return dVar;
+    }
+
+    View i2(int i10, int i11, boolean z10, boolean z11) {
+        Y1();
+        int i12 = z10 ? 24579 : 320;
+        int i13 = z11 ? 320 : 0;
+        return this.f28521s == 0 ? this.f28712e.a(i10, i11, i12, i13) : this.f28713f.a(i10, i11, i12, i13);
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public void l(String str) {
+        if (this.f28516D == null) {
+            super.l(str);
+        }
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    boolean l1(int i10, Bundle bundle) {
+        int iMin;
+        if (super.l1(i10, bundle)) {
+            return true;
+        }
+        if (i10 == 16908343 && bundle != null) {
+            if (this.f28521s == 1) {
+                int i11 = bundle.getInt("android.view.accessibility.action.ARGUMENT_ROW_INT", -1);
+                if (i11 < 0) {
+                    return false;
+                }
+                RecyclerView recyclerView = this.f28709b;
+                iMin = Math.min(i11, o0(recyclerView.f28569D, recyclerView.f28584K0) - 1);
+            } else {
+                int i12 = bundle.getInt("android.view.accessibility.action.ARGUMENT_COLUMN_INT", -1);
+                if (i12 < 0) {
+                    return false;
+                }
+                RecyclerView recyclerView2 = this.f28709b;
+                iMin = Math.min(i12, S(recyclerView2.f28569D, recyclerView2.f28584K0) - 1);
+            }
+            if (iMin >= 0) {
+                E2(iMin, 0);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:33:0x0073  */
+    /* JADX WARN: Removed duplicated region for block: B:35:0x0077  */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct code enable 'Show inconsistent code' option in preferences
+    */
+    android.view.View l2(androidx.recyclerview.widget.RecyclerView.x r17, androidx.recyclerview.widget.RecyclerView.C r18, boolean r19, boolean r20) {
+        /*
+            r16 = this;
+            r0 = r16
+            r16.Y1()
+            int r1 = r16.O()
+            r2 = 0
+            r3 = 1
+            if (r20 == 0) goto L15
+            int r1 = r16.O()
+            int r1 = r1 - r3
+            r4 = -1
+            r5 = r4
+            goto L18
+        L15:
+            r4 = r1
+            r1 = r2
+            r5 = r3
+        L18:
+            int r6 = r18.b()
+            androidx.recyclerview.widget.q r7 = r0.f28523u
+            int r7 = r7.m()
+            androidx.recyclerview.widget.q r8 = r0.f28523u
+            int r8 = r8.i()
+            r9 = 0
+            r10 = r9
+            r11 = r10
+        L2b:
+            if (r1 == r4) goto L7a
+            android.view.View r12 = r0.N(r1)
+            int r13 = r0.l0(r12)
+            androidx.recyclerview.widget.q r14 = r0.f28523u
+            int r14 = r14.g(r12)
+            androidx.recyclerview.widget.q r15 = r0.f28523u
+            int r15 = r15.d(r12)
+            if (r13 < 0) goto L78
+            if (r13 >= r6) goto L78
+            android.view.ViewGroup$LayoutParams r13 = r12.getLayoutParams()
+            androidx.recyclerview.widget.RecyclerView$r r13 = (androidx.recyclerview.widget.RecyclerView.r) r13
+            boolean r13 = r13.c()
+            if (r13 == 0) goto L55
+            if (r11 != 0) goto L78
+            r11 = r12
+            goto L78
+        L55:
+            if (r15 > r7) goto L5b
+            if (r14 >= r7) goto L5b
+            r13 = r3
+            goto L5c
+        L5b:
+            r13 = r2
+        L5c:
+            if (r14 < r8) goto L62
+            if (r15 <= r8) goto L62
+            r14 = r3
+            goto L63
+        L62:
+            r14 = r2
+        L63:
+            if (r13 != 0) goto L69
+            if (r14 == 0) goto L68
+            goto L69
+        L68:
+            return r12
+        L69:
+            if (r19 == 0) goto L71
+            if (r14 == 0) goto L6e
+            goto L73
+        L6e:
+            if (r9 != 0) goto L78
+            goto L77
+        L71:
+            if (r13 == 0) goto L75
+        L73:
+            r10 = r12
+            goto L78
+        L75:
+            if (r9 != 0) goto L78
+        L77:
+            r9 = r12
+        L78:
+            int r1 = r1 + r5
+            goto L2b
+        L7a:
+            if (r9 == 0) goto L7d
+            goto L82
+        L7d:
+            if (r10 == 0) goto L81
+            r9 = r10
+            goto L82
+        L81:
+            r9 = r11
+        L82:
+            return r9
+        */
+        throw new UnsupportedOperationException("Method not decompiled: androidx.recyclerview.widget.LinearLayoutManager.l2(androidx.recyclerview.widget.RecyclerView$x, androidx.recyclerview.widget.RecyclerView$C, boolean, boolean):android.view.View");
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public boolean p() {
+        return this.f28521s == 0;
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public boolean q() {
+        return this.f28521s == 1;
     }
 
     @Deprecated
-    protected int getExtraLayoutSpace(RecyclerView.C0613z c0613z) {
-        if (c0613z.m4308d()) {
-            return this.mOrientationHelper.mo4543n();
+    protected int q2(RecyclerView.C c10) {
+        if (c10.d()) {
+            return this.f28523u.n();
         }
         return 0;
     }
 
-    public int getInitialPrefetchItemCount() {
-        return this.mInitialPrefetchItemCount;
+    public int r2() {
+        return this.f28521s;
     }
 
-    public int getOrientation() {
-        return this.mOrientation;
+    protected boolean s2() {
+        return d0() == 1;
     }
 
-    public boolean getRecycleChildrenOnDetach() {
-        return this.mRecycleChildrenOnDetach;
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public void t(int i10, int i11, RecyclerView.C c10, RecyclerView.q.c cVar) {
+        if (this.f28521s != 0) {
+            i10 = i11;
+        }
+        if (O() == 0 || i10 == 0) {
+            return;
+        }
+        Y1();
+        L2(i10 > 0 ? 1 : -1, Math.abs(i10), true, c10);
+        S1(c10, this.f28522t, cVar);
     }
 
-    public boolean getReverseLayout() {
-        return this.mReverseLayout;
+    public boolean t2() {
+        return this.f28528z;
     }
 
-    public boolean getStackFromEnd() {
-        return this.mStackFromEnd;
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public void u(int i10, RecyclerView.q.c cVar) {
+        boolean z10;
+        int i11;
+        d dVar = this.f28516D;
+        if (dVar == null || !dVar.a()) {
+            C2();
+            z10 = this.f28526x;
+            i11 = this.f28513A;
+            if (i11 == -1) {
+                i11 = z10 ? i10 - 1 : 0;
+            }
+        } else {
+            d dVar2 = this.f28516D;
+            z10 = dVar2.f28553D;
+            i11 = dVar2.f28551B;
+        }
+        int i12 = z10 ? -1 : 1;
+        for (int i13 = 0; i13 < this.f28519G && i11 >= 0 && i11 < i10; i13++) {
+            cVar.a(i11, 0);
+            i11 += i12;
+        }
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public boolean isAutoMeasureEnabled() {
+    void u2(RecyclerView.x xVar, RecyclerView.C c10, c cVar, b bVar) {
+        int i10;
+        int i11;
+        int i12;
+        int iI0;
+        int iF;
+        View viewD = cVar.d(xVar);
+        if (viewD == null) {
+            bVar.f28535b = true;
+            return;
+        }
+        RecyclerView.r rVar = (RecyclerView.r) viewD.getLayoutParams();
+        if (cVar.f28549l == null) {
+            if (this.f28526x == (cVar.f28543f == -1)) {
+                h(viewD);
+            } else {
+                i(viewD, 0);
+            }
+        } else {
+            if (this.f28526x == (cVar.f28543f == -1)) {
+                f(viewD);
+            } else {
+                g(viewD, 0);
+            }
+        }
+        F0(viewD, 0, 0);
+        bVar.f28534a = this.f28523u.e(viewD);
+        if (this.f28521s == 1) {
+            if (s2()) {
+                iF = s0() - j0();
+                iI0 = iF - this.f28523u.f(viewD);
+            } else {
+                iI0 = i0();
+                iF = this.f28523u.f(viewD) + iI0;
+            }
+            if (cVar.f28543f == -1) {
+                int i13 = cVar.f28539b;
+                i12 = i13;
+                i11 = iF;
+                i10 = i13 - bVar.f28534a;
+            } else {
+                int i14 = cVar.f28539b;
+                i10 = i14;
+                i11 = iF;
+                i12 = bVar.f28534a + i14;
+            }
+        } else {
+            int iK0 = k0();
+            int iF2 = this.f28523u.f(viewD) + iK0;
+            if (cVar.f28543f == -1) {
+                int i15 = cVar.f28539b;
+                i11 = i15;
+                i10 = iK0;
+                i12 = iF2;
+                iI0 = i15 - bVar.f28534a;
+            } else {
+                int i16 = cVar.f28539b;
+                i10 = iK0;
+                i11 = bVar.f28534a + i16;
+                i12 = iF2;
+                iI0 = i16;
+            }
+        }
+        E0(viewD, iI0, i10, i11, i12);
+        if (rVar.c() || rVar.b()) {
+            bVar.f28536c = true;
+        }
+        bVar.f28537d = viewD.hasFocusable();
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public int v(RecyclerView.C c10) {
+        return T1(c10);
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public int w(RecyclerView.C c10) {
+        return U1(c10);
+    }
+
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    public boolean w0() {
         return true;
     }
 
-    protected boolean isLayoutRTL() {
-        return getLayoutDirection() == 1;
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public int x(RecyclerView.C c10) {
+        return V1(c10);
     }
 
-    public boolean isSmoothScrollbarEnabled() {
-        return this.mSmoothScrollbarEnabled;
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public int y(RecyclerView.C c10) {
+        return T1(c10);
     }
 
-    void layoutChunk(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, C0583c c0583c, C0582b c0582b) {
-        int i2;
-        int i3;
-        int i4;
-        int paddingLeft;
-        int iMo4535f;
-        View viewM4182d = c0583c.m4182d(c0609v);
-        if (viewM4182d == null) {
-            c0582b.f3924b = true;
-            return;
-        }
-        RecyclerView.C0603p c0603p = (RecyclerView.C0603p) viewM4182d.getLayoutParams();
-        if (c0583c.f3938l == null) {
-            if (this.mShouldReverseLayout == (c0583c.f3932f == -1)) {
-                addView(viewM4182d);
-            } else {
-                addView(viewM4182d, 0);
-            }
-        } else {
-            if (this.mShouldReverseLayout == (c0583c.f3932f == -1)) {
-                addDisappearingView(viewM4182d);
-            } else {
-                addDisappearingView(viewM4182d, 0);
-            }
-        }
-        measureChildWithMargins(viewM4182d, 0, 0);
-        c0582b.f3923a = this.mOrientationHelper.mo4534e(viewM4182d);
-        if (this.mOrientation == 1) {
-            if (isLayoutRTL()) {
-                iMo4535f = getWidth() - getPaddingRight();
-                paddingLeft = iMo4535f - this.mOrientationHelper.mo4535f(viewM4182d);
-            } else {
-                paddingLeft = getPaddingLeft();
-                iMo4535f = this.mOrientationHelper.mo4535f(viewM4182d) + paddingLeft;
-            }
-            if (c0583c.f3932f == -1) {
-                int i5 = c0583c.f3928b;
-                i4 = i5;
-                i3 = iMo4535f;
-                i2 = i5 - c0582b.f3923a;
-            } else {
-                int i6 = c0583c.f3928b;
-                i2 = i6;
-                i3 = iMo4535f;
-                i4 = c0582b.f3923a + i6;
-            }
-        } else {
-            int paddingTop = getPaddingTop();
-            int iMo4535f2 = this.mOrientationHelper.mo4535f(viewM4182d) + paddingTop;
-            if (c0583c.f3932f == -1) {
-                int i7 = c0583c.f3928b;
-                i3 = i7;
-                i2 = paddingTop;
-                i4 = iMo4535f2;
-                paddingLeft = i7 - c0582b.f3923a;
-            } else {
-                int i8 = c0583c.f3928b;
-                i2 = paddingTop;
-                i3 = c0582b.f3923a + i8;
-                i4 = iMo4535f2;
-                paddingLeft = i8;
-            }
-        }
-        layoutDecoratedWithMargins(viewM4182d, paddingLeft, i2, i3, i4);
-        if (c0603p.m4240c() || c0603p.m4239b()) {
-            c0582b.f3925c = true;
-        }
-        c0582b.f3926d = viewM4182d.hasFocusable();
+    @Override // androidx.recyclerview.widget.RecyclerView.q
+    @SuppressLint({"UnknownNullness"})
+    public int z(RecyclerView.C c10) {
+        return U1(c10);
     }
 
-    void onAnchorReady(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z, C0581a c0581a, int i2) {
+    public LinearLayoutManager(@SuppressLint({"UnknownNullness"}) Context context, int i10, boolean z10) {
+        this.f28521s = 1;
+        this.f28525w = false;
+        this.f28526x = false;
+        this.f28527y = false;
+        this.f28528z = true;
+        this.f28513A = -1;
+        this.f28514B = Integer.MIN_VALUE;
+        this.f28516D = null;
+        this.f28517E = new a();
+        this.f28518F = new b();
+        this.f28519G = 2;
+        this.f28520H = new int[2];
+        F2(i10);
+        G2(z10);
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void onDetachedFromWindow(RecyclerView recyclerView, RecyclerView.C0609v c0609v) {
-        super.onDetachedFromWindow(recyclerView, c0609v);
-        if (this.mRecycleChildrenOnDetach) {
-            removeAndRecycleAllViews(c0609v);
-            c0609v.m4276c();
-        }
+    @SuppressLint({"UnknownNullness"})
+    public LinearLayoutManager(Context context, AttributeSet attributeSet, int i10, int i11) {
+        this.f28521s = 1;
+        this.f28525w = false;
+        this.f28526x = false;
+        this.f28527y = false;
+        this.f28528z = true;
+        this.f28513A = -1;
+        this.f28514B = Integer.MIN_VALUE;
+        this.f28516D = null;
+        this.f28517E = new a();
+        this.f28518F = new b();
+        this.f28519G = 2;
+        this.f28520H = new int[2];
+        RecyclerView.q.d dVarM0 = RecyclerView.q.m0(context, attributeSet, i10, i11);
+        F2(dVarM0.f28728a);
+        G2(dVarM0.f28730c);
+        H2(dVarM0.f28731d);
     }
 
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public View onFocusSearchFailed(View view, int i2, RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z) {
-        int iConvertFocusDirectionToLayoutDirection;
-        resolveShouldLayoutReverse();
-        if (getChildCount() == 0 || (iConvertFocusDirectionToLayoutDirection = convertFocusDirectionToLayoutDirection(i2)) == Integer.MIN_VALUE) {
-            return null;
-        }
-        ensureLayoutState();
-        updateLayoutState(iConvertFocusDirectionToLayoutDirection, (int) (this.mOrientationHelper.mo4543n() * MAX_SCROLL_FACTOR), false, c0613z);
-        C0583c c0583c = this.mLayoutState;
-        c0583c.f3933g = Integer.MIN_VALUE;
-        c0583c.f3927a = false;
-        fill(c0609v, c0583c, c0613z, true);
-        View viewFindPartiallyOrCompletelyInvisibleChildClosestToStart = iConvertFocusDirectionToLayoutDirection == -1 ? findPartiallyOrCompletelyInvisibleChildClosestToStart() : findPartiallyOrCompletelyInvisibleChildClosestToEnd();
-        View childClosestToStart = iConvertFocusDirectionToLayoutDirection == -1 ? getChildClosestToStart() : getChildClosestToEnd();
-        if (!childClosestToStart.hasFocusable()) {
-            return viewFindPartiallyOrCompletelyInvisibleChildClosestToStart;
-        }
-        if (viewFindPartiallyOrCompletelyInvisibleChildClosestToStart == null) {
-            return null;
-        }
-        return childClosestToStart;
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void onInitializeAccessibilityEvent(AccessibilityEvent accessibilityEvent) {
-        super.onInitializeAccessibilityEvent(accessibilityEvent);
-        if (getChildCount() > 0) {
-            accessibilityEvent.setFromIndex(findFirstVisibleItemPosition());
-            accessibilityEvent.setToIndex(findLastVisibleItemPosition());
-        }
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void onLayoutChildren(RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z) {
-        int i2;
-        int i3;
-        int i4;
-        int i5;
-        int iFixLayoutEndGap;
-        int i6;
-        View viewFindViewByPosition;
-        int iMo4536g;
-        int iMo4538i;
-        int i7 = -1;
-        if (!(this.mPendingSavedState == null && this.mPendingScrollPosition == -1) && c0613z.m4306b() == 0) {
-            removeAndRecycleAllViews(c0609v);
-            return;
-        }
-        SavedState savedState = this.mPendingSavedState;
-        if (savedState != null && savedState.m4168a()) {
-            this.mPendingScrollPosition = this.mPendingSavedState.f3915f;
-        }
-        ensureLayoutState();
-        this.mLayoutState.f3927a = false;
-        resolveShouldLayoutReverse();
-        View focusedChild = getFocusedChild();
-        C0581a c0581a = this.mAnchorInfo;
-        if (!c0581a.f3922e || this.mPendingScrollPosition != -1 || this.mPendingSavedState != null) {
-            c0581a.m4176e();
-            C0581a c0581a2 = this.mAnchorInfo;
-            c0581a2.f3921d = this.mShouldReverseLayout ^ this.mStackFromEnd;
-            updateAnchorInfoForLayout(c0609v, c0613z, c0581a2);
-            this.mAnchorInfo.f3922e = true;
-        } else if (focusedChild != null && (this.mOrientationHelper.mo4536g(focusedChild) >= this.mOrientationHelper.mo4538i() || this.mOrientationHelper.mo4533d(focusedChild) <= this.mOrientationHelper.mo4542m())) {
-            this.mAnchorInfo.m4174c(focusedChild, getPosition(focusedChild));
-        }
-        C0583c c0583c = this.mLayoutState;
-        c0583c.f3932f = c0583c.f3937k >= 0 ? 1 : -1;
-        int[] iArr = this.mReusableIntPair;
-        iArr[0] = 0;
-        iArr[1] = 0;
-        calculateExtraLayoutSpace(c0613z, iArr);
-        int iMax = Math.max(0, this.mReusableIntPair[0]) + this.mOrientationHelper.mo4542m();
-        int iMax2 = Math.max(0, this.mReusableIntPair[1]) + this.mOrientationHelper.mo4539j();
-        if (c0613z.m4309e() && (i6 = this.mPendingScrollPosition) != -1 && this.mPendingScrollPositionOffset != Integer.MIN_VALUE && (viewFindViewByPosition = findViewByPosition(i6)) != null) {
-            if (this.mShouldReverseLayout) {
-                iMo4538i = this.mOrientationHelper.mo4538i() - this.mOrientationHelper.mo4533d(viewFindViewByPosition);
-                iMo4536g = this.mPendingScrollPositionOffset;
-            } else {
-                iMo4536g = this.mOrientationHelper.mo4536g(viewFindViewByPosition) - this.mOrientationHelper.mo4542m();
-                iMo4538i = this.mPendingScrollPositionOffset;
-            }
-            int i8 = iMo4538i - iMo4536g;
-            if (i8 > 0) {
-                iMax += i8;
-            } else {
-                iMax2 -= i8;
-            }
-        }
-        C0581a c0581a3 = this.mAnchorInfo;
-        if (!c0581a3.f3921d ? !this.mShouldReverseLayout : this.mShouldReverseLayout) {
-            i7 = 1;
-        }
-        onAnchorReady(c0609v, c0613z, c0581a3, i7);
-        detachAndScrapAttachedViews(c0609v);
-        this.mLayoutState.f3939m = resolveIsInfinite();
-        this.mLayoutState.f3936j = c0613z.m4309e();
-        this.mLayoutState.f3935i = 0;
-        C0581a c0581a4 = this.mAnchorInfo;
-        if (c0581a4.f3921d) {
-            updateLayoutStateToFillStart(c0581a4);
-            C0583c c0583c2 = this.mLayoutState;
-            c0583c2.f3934h = iMax;
-            fill(c0609v, c0583c2, c0613z, false);
-            C0583c c0583c3 = this.mLayoutState;
-            i3 = c0583c3.f3928b;
-            int i9 = c0583c3.f3930d;
-            int i10 = c0583c3.f3929c;
-            if (i10 > 0) {
-                iMax2 += i10;
-            }
-            updateLayoutStateToFillEnd(this.mAnchorInfo);
-            C0583c c0583c4 = this.mLayoutState;
-            c0583c4.f3934h = iMax2;
-            c0583c4.f3930d += c0583c4.f3931e;
-            fill(c0609v, c0583c4, c0613z, false);
-            C0583c c0583c5 = this.mLayoutState;
-            i2 = c0583c5.f3928b;
-            int i11 = c0583c5.f3929c;
-            if (i11 > 0) {
-                updateLayoutStateToFillStart(i9, i3);
-                C0583c c0583c6 = this.mLayoutState;
-                c0583c6.f3934h = i11;
-                fill(c0609v, c0583c6, c0613z, false);
-                i3 = this.mLayoutState.f3928b;
-            }
-        } else {
-            updateLayoutStateToFillEnd(c0581a4);
-            C0583c c0583c7 = this.mLayoutState;
-            c0583c7.f3934h = iMax2;
-            fill(c0609v, c0583c7, c0613z, false);
-            C0583c c0583c8 = this.mLayoutState;
-            i2 = c0583c8.f3928b;
-            int i12 = c0583c8.f3930d;
-            int i13 = c0583c8.f3929c;
-            if (i13 > 0) {
-                iMax += i13;
-            }
-            updateLayoutStateToFillStart(this.mAnchorInfo);
-            C0583c c0583c9 = this.mLayoutState;
-            c0583c9.f3934h = iMax;
-            c0583c9.f3930d += c0583c9.f3931e;
-            fill(c0609v, c0583c9, c0613z, false);
-            C0583c c0583c10 = this.mLayoutState;
-            i3 = c0583c10.f3928b;
-            int i14 = c0583c10.f3929c;
-            if (i14 > 0) {
-                updateLayoutStateToFillEnd(i12, i2);
-                C0583c c0583c11 = this.mLayoutState;
-                c0583c11.f3934h = i14;
-                fill(c0609v, c0583c11, c0613z, false);
-                i2 = this.mLayoutState.f3928b;
-            }
-        }
-        if (getChildCount() > 0) {
-            if (this.mShouldReverseLayout ^ this.mStackFromEnd) {
-                int iFixLayoutEndGap2 = fixLayoutEndGap(i2, c0609v, c0613z, true);
-                i4 = i3 + iFixLayoutEndGap2;
-                i5 = i2 + iFixLayoutEndGap2;
-                iFixLayoutEndGap = fixLayoutStartGap(i4, c0609v, c0613z, false);
-            } else {
-                int iFixLayoutStartGap = fixLayoutStartGap(i3, c0609v, c0613z, true);
-                i4 = i3 + iFixLayoutStartGap;
-                i5 = i2 + iFixLayoutStartGap;
-                iFixLayoutEndGap = fixLayoutEndGap(i5, c0609v, c0613z, false);
-            }
-            i3 = i4 + iFixLayoutEndGap;
-            i2 = i5 + iFixLayoutEndGap;
-        }
-        layoutForPredictiveAnimations(c0609v, c0613z, i3, i2);
-        if (c0613z.m4309e()) {
-            this.mAnchorInfo.m4176e();
-        } else {
-            this.mOrientationHelper.m4548s();
-        }
-        this.mLastStackFromEnd = this.mStackFromEnd;
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void onLayoutCompleted(RecyclerView.C0613z c0613z) {
-        super.onLayoutCompleted(c0613z);
-        this.mPendingSavedState = null;
-        this.mPendingScrollPosition = -1;
-        this.mPendingScrollPositionOffset = Integer.MIN_VALUE;
-        this.mAnchorInfo.m4176e();
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void onRestoreInstanceState(Parcelable parcelable) {
-        if (parcelable instanceof SavedState) {
-            this.mPendingSavedState = (SavedState) parcelable;
-            requestLayout();
-        }
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public Parcelable onSaveInstanceState() {
-        if (this.mPendingSavedState != null) {
-            return new SavedState(this.mPendingSavedState);
-        }
-        SavedState savedState = new SavedState();
-        if (getChildCount() > 0) {
-            ensureLayoutState();
-            boolean z = this.mLastStackFromEnd ^ this.mShouldReverseLayout;
-            savedState.f3917h = z;
-            if (z) {
-                View childClosestToEnd = getChildClosestToEnd();
-                savedState.f3916g = this.mOrientationHelper.mo4538i() - this.mOrientationHelper.mo4533d(childClosestToEnd);
-                savedState.f3915f = getPosition(childClosestToEnd);
-            } else {
-                View childClosestToStart = getChildClosestToStart();
-                savedState.f3915f = getPosition(childClosestToStart);
-                savedState.f3916g = this.mOrientationHelper.mo4536g(childClosestToStart) - this.mOrientationHelper.mo4542m();
-            }
-        } else {
-            savedState.m4169b();
-        }
-        return savedState;
-    }
-
-    public void prepareForDrop(View view, View view2, int i2, int i3) {
-        assertNotInLayoutOrScroll("Cannot drop a view during a scroll or layout calculation");
-        ensureLayoutState();
-        resolveShouldLayoutReverse();
-        int position = getPosition(view);
-        int position2 = getPosition(view2);
-        char c2 = position < position2 ? (char) 1 : (char) 65535;
-        if (this.mShouldReverseLayout) {
-            if (c2 == 1) {
-                scrollToPositionWithOffset(position2, this.mOrientationHelper.mo4538i() - (this.mOrientationHelper.mo4536g(view2) + this.mOrientationHelper.mo4534e(view)));
-                return;
-            } else {
-                scrollToPositionWithOffset(position2, this.mOrientationHelper.mo4538i() - this.mOrientationHelper.mo4533d(view2));
-                return;
-            }
-        }
-        if (c2 == 65535) {
-            scrollToPositionWithOffset(position2, this.mOrientationHelper.mo4536g(view2));
-        } else {
-            scrollToPositionWithOffset(position2, this.mOrientationHelper.mo4533d(view2) - this.mOrientationHelper.mo4534e(view));
-        }
-    }
-
-    boolean resolveIsInfinite() {
-        return this.mOrientationHelper.mo4540k() == 0 && this.mOrientationHelper.mo4537h() == 0;
-    }
-
-    int scrollBy(int i2, RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z) {
-        if (getChildCount() == 0 || i2 == 0) {
-            return 0;
-        }
-        ensureLayoutState();
-        this.mLayoutState.f3927a = true;
-        int i3 = i2 > 0 ? 1 : -1;
-        int iAbs = Math.abs(i2);
-        updateLayoutState(i3, iAbs, true, c0613z);
-        C0583c c0583c = this.mLayoutState;
-        int iFill = c0583c.f3933g + fill(c0609v, c0583c, c0613z, false);
-        if (iFill < 0) {
-            return 0;
-        }
-        if (iAbs > iFill) {
-            i2 = i3 * iFill;
-        }
-        this.mOrientationHelper.mo4547r(-i2);
-        this.mLayoutState.f3937k = i2;
-        return i2;
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int scrollHorizontallyBy(int i2, RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z) {
-        if (this.mOrientation == 1) {
-            return 0;
-        }
-        return scrollBy(i2, c0609v, c0613z);
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void scrollToPosition(int i2) {
-        this.mPendingScrollPosition = i2;
-        this.mPendingScrollPositionOffset = Integer.MIN_VALUE;
-        SavedState savedState = this.mPendingSavedState;
-        if (savedState != null) {
-            savedState.m4169b();
-        }
-        requestLayout();
-    }
-
-    public void scrollToPositionWithOffset(int i2, int i3) {
-        this.mPendingScrollPosition = i2;
-        this.mPendingScrollPositionOffset = i3;
-        SavedState savedState = this.mPendingSavedState;
-        if (savedState != null) {
-            savedState.m4169b();
-        }
-        requestLayout();
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public int scrollVerticallyBy(int i2, RecyclerView.C0609v c0609v, RecyclerView.C0613z c0613z) {
-        if (this.mOrientation == 0) {
-            return 0;
-        }
-        return scrollBy(i2, c0609v, c0613z);
-    }
-
-    public void setInitialPrefetchItemCount(int i2) {
-        this.mInitialPrefetchItemCount = i2;
-    }
-
-    public void setOrientation(int i2) {
-        if (i2 != 0 && i2 != 1) {
-            throw new IllegalArgumentException("invalid orientation:" + i2);
-        }
-        assertNotInLayoutOrScroll(null);
-        if (i2 != this.mOrientation || this.mOrientationHelper == null) {
-            AbstractC0633n abstractC0633nM4531b = AbstractC0633n.m4531b(this, i2);
-            this.mOrientationHelper = abstractC0633nM4531b;
-            this.mAnchorInfo.f3918a = abstractC0633nM4531b;
-            this.mOrientation = i2;
-            requestLayout();
-        }
-    }
-
-    public void setRecycleChildrenOnDetach(boolean z) {
-        this.mRecycleChildrenOnDetach = z;
-    }
-
-    public void setReverseLayout(boolean z) {
-        assertNotInLayoutOrScroll(null);
-        if (z == this.mReverseLayout) {
-            return;
-        }
-        this.mReverseLayout = z;
-        requestLayout();
-    }
-
-    public void setSmoothScrollbarEnabled(boolean z) {
-        this.mSmoothScrollbarEnabled = z;
-    }
-
-    public void setStackFromEnd(boolean z) {
-        assertNotInLayoutOrScroll(null);
-        if (this.mStackFromEnd == z) {
-            return;
-        }
-        this.mStackFromEnd = z;
-        requestLayout();
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    boolean shouldMeasureTwice() {
-        return (getHeightMode() == 1073741824 || getWidthMode() == 1073741824 || !hasFlexibleChildInBothOrientations()) ? false : true;
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public void smoothScrollToPosition(RecyclerView recyclerView, RecyclerView.C0613z c0613z, int i2) {
-        C0629j c0629j = new C0629j(recyclerView.getContext());
-        c0629j.setTargetPosition(i2);
-        startSmoothScroll(c0629j);
-    }
-
-    @Override // androidx.recyclerview.widget.RecyclerView.AbstractC0602o
-    public boolean supportsPredictiveItemAnimations() {
-        return this.mPendingSavedState == null && this.mLastStackFromEnd == this.mStackFromEnd;
-    }
-
-    void validateChildOrder() {
-        Log.d(TAG, "validating child count " + getChildCount());
-        if (getChildCount() < 1) {
-            return;
-        }
-        int position = getPosition(getChildAt(0));
-        int iMo4536g = this.mOrientationHelper.mo4536g(getChildAt(0));
-        if (this.mShouldReverseLayout) {
-            for (int i2 = 1; i2 < getChildCount(); i2++) {
-                View childAt = getChildAt(i2);
-                int position2 = getPosition(childAt);
-                int iMo4536g2 = this.mOrientationHelper.mo4536g(childAt);
-                if (position2 < position) {
-                    logChildren();
-                    StringBuilder sb = new StringBuilder();
-                    sb.append("detected invalid position. loc invalid? ");
-                    sb.append(iMo4536g2 < iMo4536g);
-                    throw new RuntimeException(sb.toString());
-                }
-                if (iMo4536g2 > iMo4536g) {
-                    logChildren();
-                    throw new RuntimeException("detected invalid location");
-                }
-            }
-            return;
-        }
-        for (int i3 = 1; i3 < getChildCount(); i3++) {
-            View childAt2 = getChildAt(i3);
-            int position3 = getPosition(childAt2);
-            int iMo4536g3 = this.mOrientationHelper.mo4536g(childAt2);
-            if (position3 < position) {
-                logChildren();
-                StringBuilder sb2 = new StringBuilder();
-                sb2.append("detected invalid position. loc invalid? ");
-                sb2.append(iMo4536g3 < iMo4536g);
-                throw new RuntimeException(sb2.toString());
-            }
-            if (iMo4536g3 < iMo4536g) {
-                logChildren();
-                throw new RuntimeException("detected invalid location");
-            }
-        }
-    }
-
-    public LinearLayoutManager(Context context, int i2, boolean z) {
-        this.mOrientation = 1;
-        this.mReverseLayout = false;
-        this.mShouldReverseLayout = false;
-        this.mStackFromEnd = false;
-        this.mSmoothScrollbarEnabled = true;
-        this.mPendingScrollPosition = -1;
-        this.mPendingScrollPositionOffset = Integer.MIN_VALUE;
-        this.mPendingSavedState = null;
-        this.mAnchorInfo = new C0581a();
-        this.mLayoutChunkResult = new C0582b();
-        this.mInitialPrefetchItemCount = 2;
-        this.mReusableIntPair = new int[2];
-        setOrientation(i2);
-        setReverseLayout(z);
-    }
-
-    private void updateLayoutStateToFillEnd(int i2, int i3) {
-        this.mLayoutState.f3929c = this.mOrientationHelper.mo4538i() - i3;
-        C0583c c0583c = this.mLayoutState;
-        c0583c.f3931e = this.mShouldReverseLayout ? -1 : 1;
-        c0583c.f3930d = i2;
-        c0583c.f3932f = 1;
-        c0583c.f3928b = i3;
-        c0583c.f3933g = Integer.MIN_VALUE;
-    }
-
-    private void updateLayoutStateToFillStart(int i2, int i3) {
-        this.mLayoutState.f3929c = i3 - this.mOrientationHelper.mo4542m();
-        C0583c c0583c = this.mLayoutState;
-        c0583c.f3930d = i2;
-        c0583c.f3931e = this.mShouldReverseLayout ? 1 : -1;
-        c0583c.f3932f = -1;
-        c0583c.f3928b = i3;
-        c0583c.f3933g = Integer.MIN_VALUE;
-    }
-
-    public LinearLayoutManager(Context context, AttributeSet attributeSet, int i2, int i3) {
-        this.mOrientation = 1;
-        this.mReverseLayout = false;
-        this.mShouldReverseLayout = false;
-        this.mStackFromEnd = false;
-        this.mSmoothScrollbarEnabled = true;
-        this.mPendingScrollPosition = -1;
-        this.mPendingScrollPositionOffset = Integer.MIN_VALUE;
-        this.mPendingSavedState = null;
-        this.mAnchorInfo = new C0581a();
-        this.mLayoutChunkResult = new C0582b();
-        this.mInitialPrefetchItemCount = 2;
-        this.mReusableIntPair = new int[2];
-        RecyclerView.AbstractC0602o.d properties = RecyclerView.AbstractC0602o.getProperties(context, attributeSet, i2, i3);
-        setOrientation(properties.f3960a);
-        setReverseLayout(properties.f3962c);
-        setStackFromEnd(properties.f3963d);
+    void w2(RecyclerView.x xVar, RecyclerView.C c10, a aVar, int i10) {
     }
 }

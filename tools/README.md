@@ -1,122 +1,205 @@
-# MEATER Link Protocol Validation Tools
+# MEATER App Code Analysis Tools
 
-This directory contains tools for validating the MEATER Link UDP protocol implementation.
+This directory contains tools for analyzing the decompiled MEATER Android app to extract BLE protocol information **directly from source code without making assumptions**.
 
-## Documentation
+## Philosophy
 
-- **[TESTING_NEW_IMPLEMENTATIONS.md](TESTING_NEW_IMPLEMENTATIONS.md)** - **START HERE** for step-by-step guide to test new implementations
-- **[VALIDATOR_USAGE.md](VALIDATOR_USAGE.md)** - Detailed validator usage and troubleshooting
-- **[PROTOCOL_ANALYSIS_NOTES.md](PROTOCOL_ANALYSIS_NOTES.md)** - Technical protocol analysis
-- **[DISCOVERY_ANALYSIS.md](DISCOVERY_ANALYSIS.md)** - Device discovery process analysis
+**NO ASSUMPTIONS OR DEDUCTIONS** - These tools only extract what's explicitly present in the decompiled app code. No protocol testing, simulation, or interpretation.
 
-## validate_protocol.py
+## Available Tools
 
-Python script that decodes and validates MEATER Link protobuf packets using the same wire format decoder logic as the official MEATER app (based on decompiled v3protobuf structures).
+### 1. `validate_from_parsed_code.py` ✅
 
-### Usage
+**Purpose:** Extract BLE operations directly from decompiled Java source code.
 
+**What it does:**
+- Parses Config.java to extract all UUID constants
+- Parses MEATERDevice.java to extract pairing logic (isPaired() method)
+- Parses NearbyDevicesFragment.java to extract scanner initialization
+- Parses DevicePairingFragment.java to extract GATT operations
+- Outputs extracted operations to JSON for reference
+
+**What it does NOT do:**
+- Does not make assumptions about protocol behavior
+- Does not test or simulate connections
+- Does not validate against implementation
+- Only reads and extracts actual code
+
+**Usage:**
 ```bash
-python tools/validate_protocol.py <hex_packet>
+# Analyze old non-obfuscated app (default)
+python3 validate_from_parsed_code.py
+
+# Analyze specific app directory
+python3 validate_from_parsed_code.py meater.app.new
+
+# With custom path
+python3 validate_from_parsed_code.py /path/to/decompiled/app
 ```
 
-### Example
+**Output:** `extracted_operations.json` containing all extracted code elements
 
-Test with a sample packet from ESP32 logs:
+---
 
+### 2. `compare_protocol_versions.py` ✅
+
+**Purpose:** Compare BLE protocol elements between two versions of the MEATER app.
+
+**What it does:**
+- Extracts UUID constants from Config.java in both apps
+- Searches for corresponding code patterns in obfuscated app
+- Compares protocol elements to identify changes
+- Reports differences (if any) between versions
+
+**What it does NOT do:**
+- Does not assume what UUIDs should be
+- Does not test protocol functionality
+- Does not validate implementation correctness
+- Only compares what's in the actual code
+
+**Usage:**
 ```bash
-# Example from ESP32 TX logs
-python tools/validate_protocol.py "0a1308c9f903100118072003291...6e"
+python3 compare_protocol_versions.py
 ```
 
-### Output
+**Output:** 
+- Console report of comparison results
+- `protocol_elements_old.json` - UUIDs from old app
+- `protocol_comparison_findings.json` - Comparison results
 
-The script will:
-1. Decode the packet using protobuf wire format
-2. Display all fields in human-readable format
-3. Validate against MEATER app requirements
-4. Report any errors or warnings
+---
 
-### Validation Checks
+### 3. `trace_add_probe_flow.py` ✅
 
-**Critical Errors (packet rejected):**
-- Missing MeaterLinkHeader (field 1)
-- Missing MasterMessage (field 3) - causes discovery failure
-- Missing required fields in nested messages
+**Purpose:** Trace the complete "Add Probe" flow through decompiled app code.
 
-**Warnings (may work but suspicious):**
-- Unexpected protocol version
-- Wrong master type (not MASTER_TYPE_BLOCK)
-- Missing optional fields
+**What it does:**
+- Follows code paths in NearbyDevicesFragment, DevicePairingFragment
+- Extracts actual method calls and control flow
+- Maps out the sequence of BLE operations
+- Documents what the app does during pairing
 
-### Example Output
+**What it does NOT do:**
+- Does not simulate the pairing process
+- Does not test against ESP32 implementation
+- Does not make assumptions about expected behavior
+- Only traces actual code execution paths
 
-```
-=== Decoding 150 byte packet ===
-
-=== Decoded Message ===
-header:
-  timestamp_ms: 250000
-  sequence: 1
-  version: 7
-  unknown1: 3
-  unknown2: 0x47d87193396eac16
-masterMessage:
-  masterType: 0
-  masterTypeName: MASTER_TYPE_BLOCK
-  cloudConnectionState: 0
-  cloudConnectionStateName: CLOUD_CONNECTION_STATE_DISABLED
-  devices: [
-    [0]:
-      probe:
-        parentIdentifier: 0x4f292c3b3e4
-        setup:
-          sequenceNumber: 0
-          state: 0
-          targetInternalTemperature: -1024
-          lastItem: 96
-        status:
-          internalTemperature: 300
-          ambientTemperature: 250
-          ...
-      identifier: 0x4f292c3b3e4
-      probeNumber: 0
-      chargeState:
-        chargingStatus: 0
-        batteryLevelPercent: 85
-        batteryMinutesRemaining: 0
-      firmwareRevision: v1.0.6_0
-      connectionState: 1
-      connectionType: 0
-      bleSignalLevel: -50
-  ]
-
-=== Validation ===
-
-✅ No critical errors found
-
-🎉 Perfect! Packet should be recognized by MEATER app
+**Usage:**
+```bash
+python3 trace_add_probe_flow.py
 ```
 
-## Testing Your Implementation
+---
 
-1. Flash the firmware to ESP32-C3
-2. Monitor the serial logs to capture TX packet hex dumps
-3. Copy a full packet hex string from the logs
-4. Run this validator to check if the packet structure is correct
-5. Fix any errors reported before testing with the actual MEATER app
+## Documentation Files
 
-## Technical Details
+### `MEATER_APP_NEW_ISSUE.md`
+Explains the obfuscation challenge with meater.app.new and documents the structure of the decompiled apps.
 
-The validator implements the same protobuf wire format decoding as the MEATER app's `ProtoAdapter_*` classes:
+### `PROTOCOL_COMPARISON_RESULTS.md`
+Complete analysis results showing that BLE protocol is unchanged between app versions v3.x and v4.6.3.
 
-- **Wire Type 0 (varint)**: Variable-length integers for small numbers
-- **Wire Type 1 (fixed64)**: 64-bit little-endian for device IDs, timestamps
-- **Wire Type 2 (length-delimited)**: Strings, bytes, and nested messages
-- **ZigZag encoding**: Used for signed integers (sint32)
+---
 
-Based on decompiled code from:
-- `meater_app/v3protobuf/MeaterLinkMessage.java`
-- `meater_app/v3protobuf/MasterMessage.java`
-- `meater_app/v3protobuf/MLDevice.java`
-- `meater_app/v3protobuf/MLProbe.java`
-- And other supporting message types
+## JSON Output Files
+
+### `extracted_operations.json`
+All operations extracted by `validate_from_parsed_code.py` including:
+- 29 UUID constants from Config.java
+- isPaired() method implementation
+- Scanner initialization code
+- GATT connection operations
+
+### `protocol_elements_old.json`
+Protocol elements (UUIDs, constants) extracted from old non-obfuscated app.
+
+### `protocol_comparison_findings.json`
+Detailed comparison results between old and new app versions.
+
+---
+
+## Removed Tools (Made Assumptions)
+
+The following types of tools have been removed because they made assumptions, tested, simulated, or validated the protocol:
+
+- **Test scripts** (test_*.py) - Made assumptions about expected behavior
+- **Validation scripts** (validate_*.py except validate_from_parsed_code.py) - Validated against assumed protocol
+- **Simulation scripts** (simulate_*.py, demonstrate_*.py) - Simulated protocol behavior
+- **Analysis scripts** (analyze_*.py) - Made deductions about protocol
+- **Protocol documentation** (PROTOCOL_ANALYSIS_NOTES.md, etc.) - Contained interpretations
+
+These tools were useful for development but should not be relied upon as they contained assumptions rather than direct code extraction.
+
+---
+
+## Key Findings (From Direct Code Extraction)
+
+### Protocol Unchanged Between Versions ✅
+
+Comparison between old app (v3.x non-obfuscated) and new app (v4.6.3 obfuscated) shows:
+
+**All 29 UUID constants identical:**
+```
+MEATERBLETemperatureServiceUUID = "a75cc7fc-c956-488f-ac2a-2dbc08b63a04"
+MEATERTemperatureBLECharacteristicUUID = "7edda774-045e-4bbf-909b-45d1991a2876"
+MEATERBatteryBLECharacteristicUUID = "2adb4877-68d8-4884-bd3c-d83853bf27b8"
+MEATERCookSetupBLECharacteristicUUID = "caf28e64-3b17-4cb4-bb0a-2eaa33c47af7"
+... (and 25 more)
+```
+
+**Pairing logic identical:**
+```java
+public boolean isPaired() {
+    if (this.datePaired != null) {
+        return true;
+    }
+    return false;
+}
+```
+
+Source: `extracted_operations.json` and `protocol_comparison_findings.json`
+
+---
+
+## Usage Workflow
+
+1. **Extract protocol from decompiled app:**
+   ```bash
+   python3 validate_from_parsed_code.py meater_app
+   ```
+
+2. **Compare between app versions:**
+   ```bash
+   python3 compare_protocol_versions.py
+   ```
+
+3. **Trace pairing flow in app:**
+   ```bash
+   python3 trace_add_probe_flow.py
+   ```
+
+4. **Review extracted data:**
+   - Check `extracted_operations.json` for all protocol elements
+   - Check `protocol_comparison_findings.json` for version differences
+
+---
+
+## Contributing
+
+When adding new tools, ensure they:
+- ✅ Extract information directly from decompiled code
+- ✅ Make zero assumptions about protocol behavior
+- ✅ Only report what's explicitly in the source
+- ❌ Do not test, simulate, or validate protocols
+- ❌ Do not make deductions or interpretations
+- ❌ Do not contain hardcoded expected values
+
+---
+
+## See Also
+
+- `/meater.yaml` - ESPHome configuration for ESP32 MEATER probe
+- `/includes/meater_bluedroid_server.h` - BLE server implementation
+- `/CRITICAL_BLE_FIX_NEEDED.md` - Root cause analysis (in parent directory)
+- `/FIX_VALIDATION_REPORT.md` - Fix validation results (in parent directory)

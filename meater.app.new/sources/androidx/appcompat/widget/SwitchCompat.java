@@ -12,6 +12,7 @@ import android.graphics.Region;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.text.InputFilter;
 import android.text.Layout;
 import android.text.StaticLayout;
 import android.text.TextPaint;
@@ -22,303 +23,369 @@ import android.util.Property;
 import android.view.ActionMode;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
+import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.CompoundButton;
-import androidx.core.graphics.drawable.C0265a;
-import androidx.core.view.C0311u;
-import androidx.core.widget.C0330k;
-import java.lang.reflect.InvocationTargetException;
-import p024c.p025a.C0823a;
-import p024c.p025a.C0832j;
-import p024c.p025a.p026k.p027a.C0833a;
-import p024c.p025a.p031n.C0840a;
+import androidx.emoji2.text.f;
+import j.C3699a;
+import java.lang.ref.Reference;
+import java.lang.ref.WeakReference;
+import k1.C3784a;
+import m.C3943a;
 
 /* loaded from: classes.dex */
 public class SwitchCompat extends CompoundButton {
 
-    /* renamed from: f */
-    private static final Property<SwitchCompat, Float> f925f = new C0143a(Float.class, "thumbPos");
+    /* renamed from: w0, reason: collision with root package name */
+    private static final Property<SwitchCompat, Float> f21437w0 = new a(Float.class, "thumbPos");
 
-    /* renamed from: g */
-    private static final int[] f926g = {R.attr.state_checked};
+    /* renamed from: x0, reason: collision with root package name */
+    private static final int[] f21438x0 = {R.attr.state_checked};
 
-    /* renamed from: A */
-    private float f927A;
+    /* renamed from: B, reason: collision with root package name */
+    private Drawable f21439B;
 
-    /* renamed from: B */
-    private float f928B;
+    /* renamed from: C, reason: collision with root package name */
+    private ColorStateList f21440C;
 
-    /* renamed from: C */
-    private VelocityTracker f929C;
+    /* renamed from: D, reason: collision with root package name */
+    private PorterDuff.Mode f21441D;
 
-    /* renamed from: D */
-    private int f930D;
+    /* renamed from: E, reason: collision with root package name */
+    private boolean f21442E;
 
-    /* renamed from: E */
-    float f931E;
+    /* renamed from: F, reason: collision with root package name */
+    private boolean f21443F;
 
-    /* renamed from: F */
-    private int f932F;
+    /* renamed from: G, reason: collision with root package name */
+    private Drawable f21444G;
 
-    /* renamed from: G */
-    private int f933G;
+    /* renamed from: H, reason: collision with root package name */
+    private ColorStateList f21445H;
 
-    /* renamed from: H */
-    private int f934H;
+    /* renamed from: I, reason: collision with root package name */
+    private PorterDuff.Mode f21446I;
 
-    /* renamed from: I */
-    private int f935I;
+    /* renamed from: J, reason: collision with root package name */
+    private boolean f21447J;
 
-    /* renamed from: J */
-    private int f936J;
+    /* renamed from: K, reason: collision with root package name */
+    private boolean f21448K;
 
-    /* renamed from: K */
-    private int f937K;
+    /* renamed from: L, reason: collision with root package name */
+    private int f21449L;
 
-    /* renamed from: L */
-    private int f938L;
+    /* renamed from: M, reason: collision with root package name */
+    private int f21450M;
 
-    /* renamed from: M */
-    private final TextPaint f939M;
+    /* renamed from: N, reason: collision with root package name */
+    private int f21451N;
 
-    /* renamed from: N */
-    private ColorStateList f940N;
+    /* renamed from: O, reason: collision with root package name */
+    private boolean f21452O;
 
-    /* renamed from: O */
-    private Layout f941O;
+    /* renamed from: P, reason: collision with root package name */
+    private CharSequence f21453P;
 
-    /* renamed from: P */
-    private Layout f942P;
+    /* renamed from: Q, reason: collision with root package name */
+    private CharSequence f21454Q;
 
-    /* renamed from: Q */
-    private TransformationMethod f943Q;
+    /* renamed from: R, reason: collision with root package name */
+    private CharSequence f21455R;
 
-    /* renamed from: R */
-    ObjectAnimator f944R;
+    /* renamed from: S, reason: collision with root package name */
+    private CharSequence f21456S;
 
-    /* renamed from: S */
-    private final C0188s f945S;
+    /* renamed from: T, reason: collision with root package name */
+    private boolean f21457T;
 
-    /* renamed from: T */
-    private final Rect f946T;
+    /* renamed from: U, reason: collision with root package name */
+    private int f21458U;
 
-    /* renamed from: h */
-    private Drawable f947h;
+    /* renamed from: V, reason: collision with root package name */
+    private int f21459V;
 
-    /* renamed from: i */
-    private ColorStateList f948i;
+    /* renamed from: W, reason: collision with root package name */
+    private float f21460W;
 
-    /* renamed from: j */
-    private PorterDuff.Mode f949j;
+    /* renamed from: a0, reason: collision with root package name */
+    private float f21461a0;
 
-    /* renamed from: k */
-    private boolean f950k;
+    /* renamed from: b0, reason: collision with root package name */
+    private VelocityTracker f21462b0;
 
-    /* renamed from: l */
-    private boolean f951l;
+    /* renamed from: c0, reason: collision with root package name */
+    private int f21463c0;
 
-    /* renamed from: m */
-    private Drawable f952m;
+    /* renamed from: d0, reason: collision with root package name */
+    float f21464d0;
 
-    /* renamed from: n */
-    private ColorStateList f953n;
+    /* renamed from: e0, reason: collision with root package name */
+    private int f21465e0;
 
-    /* renamed from: o */
-    private PorterDuff.Mode f954o;
+    /* renamed from: f0, reason: collision with root package name */
+    private int f21466f0;
 
-    /* renamed from: p */
-    private boolean f955p;
+    /* renamed from: g0, reason: collision with root package name */
+    private int f21467g0;
 
-    /* renamed from: q */
-    private boolean f956q;
+    /* renamed from: h0, reason: collision with root package name */
+    private int f21468h0;
 
-    /* renamed from: r */
-    private int f957r;
+    /* renamed from: i0, reason: collision with root package name */
+    private int f21469i0;
 
-    /* renamed from: s */
-    private int f958s;
+    /* renamed from: j0, reason: collision with root package name */
+    private int f21470j0;
 
-    /* renamed from: t */
-    private int f959t;
+    /* renamed from: k0, reason: collision with root package name */
+    private int f21471k0;
 
-    /* renamed from: u */
-    private boolean f960u;
+    /* renamed from: l0, reason: collision with root package name */
+    private boolean f21472l0;
 
-    /* renamed from: v */
-    private CharSequence f961v;
+    /* renamed from: m0, reason: collision with root package name */
+    private final TextPaint f21473m0;
 
-    /* renamed from: w */
-    private CharSequence f962w;
+    /* renamed from: n0, reason: collision with root package name */
+    private ColorStateList f21474n0;
 
-    /* renamed from: x */
-    private boolean f963x;
+    /* renamed from: o0, reason: collision with root package name */
+    private Layout f21475o0;
 
-    /* renamed from: y */
-    private int f964y;
+    /* renamed from: p0, reason: collision with root package name */
+    private Layout f21476p0;
 
-    /* renamed from: z */
-    private int f965z;
+    /* renamed from: q0, reason: collision with root package name */
+    private TransformationMethod f21477q0;
 
-    /* renamed from: androidx.appcompat.widget.SwitchCompat$a */
-    class C0143a extends Property<SwitchCompat, Float> {
-        C0143a(Class cls, String str) {
+    /* renamed from: r0, reason: collision with root package name */
+    ObjectAnimator f21478r0;
+
+    /* renamed from: s0, reason: collision with root package name */
+    private final C2001x f21479s0;
+
+    /* renamed from: t0, reason: collision with root package name */
+    private C1989k f21480t0;
+
+    /* renamed from: u0, reason: collision with root package name */
+    private b f21481u0;
+
+    /* renamed from: v0, reason: collision with root package name */
+    private final Rect f21482v0;
+
+    class a extends Property<SwitchCompat, Float> {
+        a(Class cls, String str) {
             super(cls, str);
         }
 
         @Override // android.util.Property
         /* renamed from: a, reason: merged with bridge method [inline-methods] */
         public Float get(SwitchCompat switchCompat) {
-            return Float.valueOf(switchCompat.f931E);
+            return Float.valueOf(switchCompat.f21464d0);
         }
 
         @Override // android.util.Property
         /* renamed from: b, reason: merged with bridge method [inline-methods] */
-        public void set(SwitchCompat switchCompat, Float f2) {
-            switchCompat.setThumbPosition(f2.floatValue());
+        public void set(SwitchCompat switchCompat, Float f10) {
+            switchCompat.setThumbPosition(f10.floatValue());
+        }
+    }
+
+    static class b extends f.AbstractC0355f {
+
+        /* renamed from: a, reason: collision with root package name */
+        private final Reference<SwitchCompat> f21483a;
+
+        b(SwitchCompat switchCompat) {
+            this.f21483a = new WeakReference(switchCompat);
+        }
+
+        @Override // androidx.emoji2.text.f.AbstractC0355f
+        public void a(Throwable th) {
+            SwitchCompat switchCompat = this.f21483a.get();
+            if (switchCompat != null) {
+                switchCompat.j();
+            }
+        }
+
+        @Override // androidx.emoji2.text.f.AbstractC0355f
+        public void b() {
+            SwitchCompat switchCompat = this.f21483a.get();
+            if (switchCompat != null) {
+                switchCompat.j();
+            }
         }
     }
 
     public SwitchCompat(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C0823a.f5023L);
+        this(context, attributeSet, i.a.f42390M);
     }
 
-    /* renamed from: a */
-    private void m824a(boolean z) {
-        ObjectAnimator objectAnimatorOfFloat = ObjectAnimator.ofFloat(this, f925f, z ? 1.0f : 0.0f);
-        this.f944R = objectAnimatorOfFloat;
+    private void a(boolean z10) {
+        ObjectAnimator objectAnimatorOfFloat = ObjectAnimator.ofFloat(this, f21437w0, z10 ? 1.0f : 0.0f);
+        this.f21478r0 = objectAnimatorOfFloat;
         objectAnimatorOfFloat.setDuration(250L);
-        if (Build.VERSION.SDK_INT >= 18) {
-            this.f944R.setAutoCancel(true);
-        }
-        this.f944R.start();
+        this.f21478r0.setAutoCancel(true);
+        this.f21478r0.start();
     }
 
-    /* renamed from: b */
-    private void m825b() {
-        Drawable drawable = this.f947h;
+    private void b() {
+        Drawable drawable = this.f21439B;
         if (drawable != null) {
-            if (this.f950k || this.f951l) {
-                Drawable drawableMutate = C0265a.m1821r(drawable).mutate();
-                this.f947h = drawableMutate;
-                if (this.f950k) {
-                    C0265a.m1818o(drawableMutate, this.f948i);
+            if (this.f21442E || this.f21443F) {
+                Drawable drawableMutate = C3784a.r(drawable).mutate();
+                this.f21439B = drawableMutate;
+                if (this.f21442E) {
+                    C3784a.o(drawableMutate, this.f21440C);
                 }
-                if (this.f951l) {
-                    C0265a.m1819p(this.f947h, this.f949j);
+                if (this.f21443F) {
+                    C3784a.p(this.f21439B, this.f21441D);
                 }
-                if (this.f947h.isStateful()) {
-                    this.f947h.setState(getDrawableState());
+                if (this.f21439B.isStateful()) {
+                    this.f21439B.setState(getDrawableState());
                 }
             }
         }
     }
 
-    /* renamed from: c */
-    private void m826c() {
-        Drawable drawable = this.f952m;
+    private void c() {
+        Drawable drawable = this.f21444G;
         if (drawable != null) {
-            if (this.f955p || this.f956q) {
-                Drawable drawableMutate = C0265a.m1821r(drawable).mutate();
-                this.f952m = drawableMutate;
-                if (this.f955p) {
-                    C0265a.m1818o(drawableMutate, this.f953n);
+            if (this.f21447J || this.f21448K) {
+                Drawable drawableMutate = C3784a.r(drawable).mutate();
+                this.f21444G = drawableMutate;
+                if (this.f21447J) {
+                    C3784a.o(drawableMutate, this.f21445H);
                 }
-                if (this.f956q) {
-                    C0265a.m1819p(this.f952m, this.f954o);
+                if (this.f21448K) {
+                    C3784a.p(this.f21444G, this.f21446I);
                 }
-                if (this.f952m.isStateful()) {
-                    this.f952m.setState(getDrawableState());
+                if (this.f21444G.isStateful()) {
+                    this.f21444G.setState(getDrawableState());
                 }
             }
         }
     }
 
-    /* renamed from: d */
-    private void m827d() {
-        ObjectAnimator objectAnimator = this.f944R;
+    private void d() {
+        ObjectAnimator objectAnimator = this.f21478r0;
         if (objectAnimator != null) {
             objectAnimator.cancel();
         }
     }
 
-    /* renamed from: e */
-    private void m828e(MotionEvent motionEvent) {
+    private void e(MotionEvent motionEvent) {
         MotionEvent motionEventObtain = MotionEvent.obtain(motionEvent);
         motionEventObtain.setAction(3);
         super.onTouchEvent(motionEventObtain);
         motionEventObtain.recycle();
     }
 
-    /* renamed from: f */
-    private static float m829f(float f2, float f3, float f4) {
-        return f2 < f3 ? f3 : f2 > f4 ? f4 : f2;
+    private static float f(float f10, float f11, float f12) {
+        return f10 < f11 ? f11 : f10 > f12 ? f12 : f10;
     }
 
-    /* renamed from: g */
-    private boolean m830g(float f2, float f3) {
-        if (this.f947h == null) {
-            return false;
+    private CharSequence g(CharSequence charSequence) {
+        TransformationMethod transformationMethodF = getEmojiTextViewHelper().f(this.f21477q0);
+        return transformationMethodF != null ? transformationMethodF.getTransformation(charSequence, this) : charSequence;
+    }
+
+    private C1989k getEmojiTextViewHelper() {
+        if (this.f21480t0 == null) {
+            this.f21480t0 = new C1989k(this);
         }
-        int thumbOffset = getThumbOffset();
-        this.f947h.getPadding(this.f946T);
-        int i2 = this.f936J;
-        int i3 = this.f965z;
-        int i4 = i2 - i3;
-        int i5 = (this.f935I + thumbOffset) - i3;
-        int i6 = this.f934H + i5;
-        Rect rect = this.f946T;
-        return f2 > ((float) i5) && f2 < ((float) (((i6 + rect.left) + rect.right) + i3)) && f3 > ((float) i4) && f3 < ((float) (this.f938L + i3));
+        return this.f21480t0;
     }
 
     private boolean getTargetCheckedState() {
-        return this.f931E > 0.5f;
+        return this.f21464d0 > 0.5f;
     }
 
     private int getThumbOffset() {
-        return (int) (((C0197w0.m1231b(this) ? 1.0f - this.f931E : this.f931E) * getThumbScrollRange()) + 0.5f);
+        return (int) (((h0.b(this) ? 1.0f - this.f21464d0 : this.f21464d0) * getThumbScrollRange()) + 0.5f);
     }
 
     private int getThumbScrollRange() {
-        Drawable drawable = this.f952m;
+        Drawable drawable = this.f21444G;
         if (drawable == null) {
             return 0;
         }
-        Rect rect = this.f946T;
+        Rect rect = this.f21482v0;
         drawable.getPadding(rect);
-        Drawable drawable2 = this.f947h;
-        Rect rectM1237d = drawable2 != null ? C0200y.m1237d(drawable2) : C0200y.f1327c;
-        return ((((this.f932F - this.f934H) - rect.left) - rect.right) - rectM1237d.left) - rectM1237d.right;
+        Drawable drawable2 = this.f21439B;
+        Rect rectD = drawable2 != null ? I.d(drawable2) : I.f21243c;
+        return ((((this.f21465e0 - this.f21467g0) - rect.left) - rect.right) - rectD.left) - rectD.right;
     }
 
-    /* renamed from: h */
-    private Layout m831h(CharSequence charSequence) {
-        TransformationMethod transformationMethod = this.f943Q;
-        if (transformationMethod != null) {
-            charSequence = transformationMethod.getTransformation(charSequence, this);
+    private boolean h(float f10, float f11) {
+        if (this.f21439B == null) {
+            return false;
         }
-        CharSequence charSequence2 = charSequence;
-        return new StaticLayout(charSequence2, this.f939M, charSequence2 != null ? (int) Math.ceil(Layout.getDesiredWidth(charSequence2, r2)) : 0, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, true);
+        int thumbOffset = getThumbOffset();
+        this.f21439B.getPadding(this.f21482v0);
+        int i10 = this.f21469i0;
+        int i11 = this.f21459V;
+        int i12 = i10 - i11;
+        int i13 = (this.f21468h0 + thumbOffset) - i11;
+        int i14 = this.f21467g0 + i13;
+        Rect rect = this.f21482v0;
+        return f10 > ((float) i13) && f10 < ((float) (((i14 + rect.left) + rect.right) + i11)) && f11 > ((float) i12) && f11 < ((float) (this.f21471k0 + i11));
     }
 
-    /* renamed from: k */
-    private void m832k(int i2, int i3) {
-        m835j(i2 != 1 ? i2 != 2 ? i2 != 3 ? null : Typeface.MONOSPACE : Typeface.SERIF : Typeface.SANS_SERIF, i3);
+    private Layout i(CharSequence charSequence) {
+        return new StaticLayout(charSequence, this.f21473m0, charSequence != null ? (int) Math.ceil(Layout.getDesiredWidth(charSequence, r2)) : 0, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, true);
     }
 
-    /* renamed from: l */
-    private void m833l(MotionEvent motionEvent) {
-        this.f964y = 0;
+    private void k() throws Resources.NotFoundException {
+        if (Build.VERSION.SDK_INT >= 30) {
+            CharSequence string = this.f21455R;
+            if (string == null) {
+                string = getResources().getString(i.h.f42546b);
+            }
+            s1.X.G0(this, string);
+        }
+    }
+
+    private void l() throws Resources.NotFoundException {
+        if (Build.VERSION.SDK_INT >= 30) {
+            CharSequence string = this.f21453P;
+            if (string == null) {
+                string = getResources().getString(i.h.f42547c);
+            }
+            s1.X.G0(this, string);
+        }
+    }
+
+    private void o(int i10, int i11) {
+        n(i10 != 1 ? i10 != 2 ? i10 != 3 ? null : Typeface.MONOSPACE : Typeface.SERIF : Typeface.SANS_SERIF, i11);
+    }
+
+    private void p() {
+        if (this.f21481u0 == null && this.f21480t0.b() && androidx.emoji2.text.f.i()) {
+            androidx.emoji2.text.f fVarC = androidx.emoji2.text.f.c();
+            int iE = fVarC.e();
+            if (iE == 3 || iE == 0) {
+                b bVar = new b(this);
+                this.f21481u0 = bVar;
+                fVarC.t(bVar);
+            }
+        }
+    }
+
+    private void q(MotionEvent motionEvent) throws Resources.NotFoundException {
+        this.f21458U = 0;
         boolean targetCheckedState = true;
-        boolean z = motionEvent.getAction() == 1 && isEnabled();
+        boolean z10 = motionEvent.getAction() == 1 && isEnabled();
         boolean zIsChecked = isChecked();
-        if (z) {
-            this.f929C.computeCurrentVelocity(1000);
-            float xVelocity = this.f929C.getXVelocity();
-            if (Math.abs(xVelocity) <= this.f930D) {
+        if (z10) {
+            this.f21462b0.computeCurrentVelocity(1000);
+            float xVelocity = this.f21462b0.getXVelocity();
+            if (Math.abs(xVelocity) <= this.f21463c0) {
                 targetCheckedState = getTargetCheckedState();
-            } else if (!C0197w0.m1231b(this) ? xVelocity <= 0.0f : xVelocity >= 0.0f) {
+            } else if (!h0.b(this) ? xVelocity <= 0.0f : xVelocity >= 0.0f) {
                 targetCheckedState = false;
             }
         } else {
@@ -328,77 +395,93 @@ public class SwitchCompat extends CompoundButton {
             playSoundEffect(0);
         }
         setChecked(targetCheckedState);
-        m828e(motionEvent);
+        e(motionEvent);
+    }
+
+    private void setTextOffInternal(CharSequence charSequence) {
+        this.f21455R = charSequence;
+        this.f21456S = g(charSequence);
+        this.f21476p0 = null;
+        if (this.f21457T) {
+            p();
+        }
+    }
+
+    private void setTextOnInternal(CharSequence charSequence) {
+        this.f21453P = charSequence;
+        this.f21454Q = g(charSequence);
+        this.f21475o0 = null;
+        if (this.f21457T) {
+            p();
+        }
     }
 
     @Override // android.view.View
     public void draw(Canvas canvas) {
-        int i2;
-        int i3;
-        Rect rect = this.f946T;
-        int i4 = this.f935I;
-        int i5 = this.f936J;
-        int i6 = this.f937K;
-        int i7 = this.f938L;
-        int thumbOffset = getThumbOffset() + i4;
-        Drawable drawable = this.f947h;
-        Rect rectM1237d = drawable != null ? C0200y.m1237d(drawable) : C0200y.f1327c;
-        Drawable drawable2 = this.f952m;
+        int i10;
+        int i11;
+        Rect rect = this.f21482v0;
+        int i12 = this.f21468h0;
+        int i13 = this.f21469i0;
+        int i14 = this.f21470j0;
+        int i15 = this.f21471k0;
+        int thumbOffset = getThumbOffset() + i12;
+        Drawable drawable = this.f21439B;
+        Rect rectD = drawable != null ? I.d(drawable) : I.f21243c;
+        Drawable drawable2 = this.f21444G;
         if (drawable2 != null) {
             drawable2.getPadding(rect);
-            int i8 = rect.left;
-            thumbOffset += i8;
-            if (rectM1237d != null) {
-                int i9 = rectM1237d.left;
-                if (i9 > i8) {
-                    i4 += i9 - i8;
+            int i16 = rect.left;
+            thumbOffset += i16;
+            if (rectD != null) {
+                int i17 = rectD.left;
+                if (i17 > i16) {
+                    i12 += i17 - i16;
                 }
-                int i10 = rectM1237d.top;
-                int i11 = rect.top;
-                i2 = i10 > i11 ? (i10 - i11) + i5 : i5;
-                int i12 = rectM1237d.right;
-                int i13 = rect.right;
-                if (i12 > i13) {
-                    i6 -= i12 - i13;
+                int i18 = rectD.top;
+                int i19 = rect.top;
+                i10 = i18 > i19 ? (i18 - i19) + i13 : i13;
+                int i20 = rectD.right;
+                int i21 = rect.right;
+                if (i20 > i21) {
+                    i14 -= i20 - i21;
                 }
-                int i14 = rectM1237d.bottom;
-                int i15 = rect.bottom;
-                if (i14 > i15) {
-                    i3 = i7 - (i14 - i15);
+                int i22 = rectD.bottom;
+                int i23 = rect.bottom;
+                if (i22 > i23) {
+                    i11 = i15 - (i22 - i23);
                 }
-                this.f952m.setBounds(i4, i2, i6, i3);
+                this.f21444G.setBounds(i12, i10, i14, i11);
             } else {
-                i2 = i5;
+                i10 = i13;
             }
-            i3 = i7;
-            this.f952m.setBounds(i4, i2, i6, i3);
+            i11 = i15;
+            this.f21444G.setBounds(i12, i10, i14, i11);
         }
-        Drawable drawable3 = this.f947h;
+        Drawable drawable3 = this.f21439B;
         if (drawable3 != null) {
             drawable3.getPadding(rect);
-            int i16 = thumbOffset - rect.left;
-            int i17 = thumbOffset + this.f934H + rect.right;
-            this.f947h.setBounds(i16, i5, i17, i7);
+            int i24 = thumbOffset - rect.left;
+            int i25 = thumbOffset + this.f21467g0 + rect.right;
+            this.f21439B.setBounds(i24, i13, i25, i15);
             Drawable background = getBackground();
             if (background != null) {
-                C0265a.m1815l(background, i16, i5, i17, i7);
+                C3784a.l(background, i24, i13, i25, i15);
             }
         }
         super.draw(canvas);
     }
 
     @Override // android.widget.CompoundButton, android.widget.TextView, android.view.View
-    public void drawableHotspotChanged(float f2, float f3) {
-        if (Build.VERSION.SDK_INT >= 21) {
-            super.drawableHotspotChanged(f2, f3);
-        }
-        Drawable drawable = this.f947h;
+    public void drawableHotspotChanged(float f10, float f11) {
+        super.drawableHotspotChanged(f10, f11);
+        Drawable drawable = this.f21439B;
         if (drawable != null) {
-            C0265a.m1814k(drawable, f2, f3);
+            C3784a.k(drawable, f10, f11);
         }
-        Drawable drawable2 = this.f952m;
+        Drawable drawable2 = this.f21444G;
         if (drawable2 != null) {
-            C0265a.m1814k(drawable2, f2, f3);
+            C3784a.k(drawable2, f10, f11);
         }
     }
 
@@ -406,12 +489,9 @@ public class SwitchCompat extends CompoundButton {
     protected void drawableStateChanged() {
         super.drawableStateChanged();
         int[] drawableState = getDrawableState();
-        Drawable drawable = this.f947h;
-        boolean state = false;
-        if (drawable != null && drawable.isStateful()) {
-            state = false | drawable.setState(drawableState);
-        }
-        Drawable drawable2 = this.f952m;
+        Drawable drawable = this.f21439B;
+        boolean state = (drawable == null || !drawable.isStateful()) ? false : drawable.setState(drawableState);
+        Drawable drawable2 = this.f21444G;
         if (drawable2 != null && drawable2.isStateful()) {
             state |= drawable2.setState(drawableState);
         }
@@ -422,167 +502,182 @@ public class SwitchCompat extends CompoundButton {
 
     @Override // android.widget.CompoundButton, android.widget.TextView
     public int getCompoundPaddingLeft() {
-        if (!C0197w0.m1231b(this)) {
+        if (!h0.b(this)) {
             return super.getCompoundPaddingLeft();
         }
-        int compoundPaddingLeft = super.getCompoundPaddingLeft() + this.f932F;
-        return !TextUtils.isEmpty(getText()) ? compoundPaddingLeft + this.f959t : compoundPaddingLeft;
+        int compoundPaddingLeft = super.getCompoundPaddingLeft() + this.f21465e0;
+        return !TextUtils.isEmpty(getText()) ? compoundPaddingLeft + this.f21451N : compoundPaddingLeft;
     }
 
     @Override // android.widget.CompoundButton, android.widget.TextView
     public int getCompoundPaddingRight() {
-        if (C0197w0.m1231b(this)) {
+        if (h0.b(this)) {
             return super.getCompoundPaddingRight();
         }
-        int compoundPaddingRight = super.getCompoundPaddingRight() + this.f932F;
-        return !TextUtils.isEmpty(getText()) ? compoundPaddingRight + this.f959t : compoundPaddingRight;
+        int compoundPaddingRight = super.getCompoundPaddingRight() + this.f21465e0;
+        return !TextUtils.isEmpty(getText()) ? compoundPaddingRight + this.f21451N : compoundPaddingRight;
+    }
+
+    @Override // android.widget.TextView
+    public ActionMode.Callback getCustomSelectionActionModeCallback() {
+        return androidx.core.widget.j.s(super.getCustomSelectionActionModeCallback());
     }
 
     public boolean getShowText() {
-        return this.f963x;
+        return this.f21457T;
     }
 
     public boolean getSplitTrack() {
-        return this.f960u;
+        return this.f21452O;
     }
 
     public int getSwitchMinWidth() {
-        return this.f958s;
+        return this.f21450M;
     }
 
     public int getSwitchPadding() {
-        return this.f959t;
+        return this.f21451N;
     }
 
     public CharSequence getTextOff() {
-        return this.f962w;
+        return this.f21455R;
     }
 
     public CharSequence getTextOn() {
-        return this.f961v;
+        return this.f21453P;
     }
 
     public Drawable getThumbDrawable() {
-        return this.f947h;
+        return this.f21439B;
+    }
+
+    protected final float getThumbPosition() {
+        return this.f21464d0;
     }
 
     public int getThumbTextPadding() {
-        return this.f957r;
+        return this.f21449L;
     }
 
     public ColorStateList getThumbTintList() {
-        return this.f948i;
+        return this.f21440C;
     }
 
     public PorterDuff.Mode getThumbTintMode() {
-        return this.f949j;
+        return this.f21441D;
     }
 
     public Drawable getTrackDrawable() {
-        return this.f952m;
+        return this.f21444G;
     }
 
     public ColorStateList getTrackTintList() {
-        return this.f953n;
+        return this.f21445H;
     }
 
     public PorterDuff.Mode getTrackTintMode() {
-        return this.f954o;
+        return this.f21446I;
     }
 
-    /* renamed from: i */
-    public void m834i(Context context, int i2) {
-        C0185q0 c0185q0M1089t = C0185q0.m1089t(context, i2, C0832j.f5317X2);
-        ColorStateList colorStateListM1094c = c0185q0M1089t.m1094c(C0832j.f5337b3);
-        if (colorStateListM1094c != null) {
-            this.f940N = colorStateListM1094c;
-        } else {
-            this.f940N = getTextColors();
-        }
-        int iM1097f = c0185q0M1089t.m1097f(C0832j.f5322Y2, 0);
-        if (iM1097f != 0) {
-            float f2 = iM1097f;
-            if (f2 != this.f939M.getTextSize()) {
-                this.f939M.setTextSize(f2);
-                requestLayout();
-            }
-        }
-        m832k(c0185q0M1089t.m1102k(C0832j.f5327Z2, -1), c0185q0M1089t.m1102k(C0832j.f5332a3, -1));
-        if (c0185q0M1089t.m1092a(C0832j.f5372i3, false)) {
-            this.f943Q = new C0840a(getContext());
-        } else {
-            this.f943Q = null;
-        }
-        c0185q0M1089t.m1111w();
-    }
-
-    /* renamed from: j */
-    public void m835j(Typeface typeface, int i2) {
-        if (i2 <= 0) {
-            this.f939M.setFakeBoldText(false);
-            this.f939M.setTextSkewX(0.0f);
-            setSwitchTypeface(typeface);
-        } else {
-            Typeface typefaceDefaultFromStyle = typeface == null ? Typeface.defaultFromStyle(i2) : Typeface.create(typeface, i2);
-            setSwitchTypeface(typefaceDefaultFromStyle);
-            int style = ((typefaceDefaultFromStyle != null ? typefaceDefaultFromStyle.getStyle() : 0) ^ (-1)) & i2;
-            this.f939M.setFakeBoldText((style & 1) != 0);
-            this.f939M.setTextSkewX((style & 2) != 0 ? -0.25f : 0.0f);
-        }
+    void j() {
+        setTextOnInternal(this.f21453P);
+        setTextOffInternal(this.f21455R);
+        requestLayout();
     }
 
     @Override // android.widget.CompoundButton, android.widget.TextView, android.view.View
     public void jumpDrawablesToCurrentState() {
         super.jumpDrawablesToCurrentState();
-        Drawable drawable = this.f947h;
+        Drawable drawable = this.f21439B;
         if (drawable != null) {
             drawable.jumpToCurrentState();
         }
-        Drawable drawable2 = this.f952m;
+        Drawable drawable2 = this.f21444G;
         if (drawable2 != null) {
             drawable2.jumpToCurrentState();
         }
-        ObjectAnimator objectAnimator = this.f944R;
+        ObjectAnimator objectAnimator = this.f21478r0;
         if (objectAnimator == null || !objectAnimator.isStarted()) {
             return;
         }
-        this.f944R.end();
-        this.f944R = null;
+        this.f21478r0.end();
+        this.f21478r0 = null;
+    }
+
+    public void m(Context context, int i10) {
+        a0 a0VarT = a0.t(context, i10, i.j.f42655S2);
+        ColorStateList colorStateListC = a0VarT.c(i.j.f42671W2);
+        if (colorStateListC != null) {
+            this.f21474n0 = colorStateListC;
+        } else {
+            this.f21474n0 = getTextColors();
+        }
+        int iF = a0VarT.f(i.j.f42659T2, 0);
+        if (iF != 0) {
+            float f10 = iF;
+            if (f10 != this.f21473m0.getTextSize()) {
+                this.f21473m0.setTextSize(f10);
+                requestLayout();
+            }
+        }
+        o(a0VarT.k(i.j.f42663U2, -1), a0VarT.k(i.j.f42667V2, -1));
+        if (a0VarT.a(i.j.f42693b3, false)) {
+            this.f21477q0 = new C3943a(getContext());
+        } else {
+            this.f21477q0 = null;
+        }
+        setTextOnInternal(this.f21453P);
+        setTextOffInternal(this.f21455R);
+        a0VarT.x();
+    }
+
+    public void n(Typeface typeface, int i10) {
+        if (i10 <= 0) {
+            this.f21473m0.setFakeBoldText(false);
+            this.f21473m0.setTextSkewX(0.0f);
+            setSwitchTypeface(typeface);
+        } else {
+            Typeface typefaceDefaultFromStyle = typeface == null ? Typeface.defaultFromStyle(i10) : Typeface.create(typeface, i10);
+            setSwitchTypeface(typefaceDefaultFromStyle);
+            int i11 = (~(typefaceDefaultFromStyle != null ? typefaceDefaultFromStyle.getStyle() : 0)) & i10;
+            this.f21473m0.setFakeBoldText((i11 & 1) != 0);
+            this.f21473m0.setTextSkewX((i11 & 2) != 0 ? -0.25f : 0.0f);
+        }
     }
 
     @Override // android.widget.CompoundButton, android.widget.TextView, android.view.View
-    protected int[] onCreateDrawableState(int i2) {
-        int[] iArrOnCreateDrawableState = super.onCreateDrawableState(i2 + 1);
+    protected int[] onCreateDrawableState(int i10) {
+        int[] iArrOnCreateDrawableState = super.onCreateDrawableState(i10 + 1);
         if (isChecked()) {
-            CompoundButton.mergeDrawableStates(iArrOnCreateDrawableState, f926g);
+            View.mergeDrawableStates(iArrOnCreateDrawableState, f21438x0);
         }
         return iArrOnCreateDrawableState;
     }
 
     @Override // android.widget.CompoundButton, android.widget.TextView, android.view.View
-    protected void onDraw(Canvas canvas) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    protected void onDraw(Canvas canvas) {
         int width;
         super.onDraw(canvas);
-        Rect rect = this.f946T;
-        Drawable drawable = this.f952m;
+        Rect rect = this.f21482v0;
+        Drawable drawable = this.f21444G;
         if (drawable != null) {
             drawable.getPadding(rect);
         } else {
             rect.setEmpty();
         }
-        int i2 = this.f936J;
-        int i3 = this.f938L;
-        int i4 = i2 + rect.top;
-        int i5 = i3 - rect.bottom;
-        Drawable drawable2 = this.f947h;
+        int i10 = this.f21469i0;
+        int i11 = this.f21471k0;
+        int i12 = i10 + rect.top;
+        int i13 = i11 - rect.bottom;
+        Drawable drawable2 = this.f21439B;
         if (drawable != null) {
-            if (!this.f960u || drawable2 == null) {
+            if (!this.f21452O || drawable2 == null) {
                 drawable.draw(canvas);
             } else {
-                Rect rectM1237d = C0200y.m1237d(drawable2);
+                Rect rectD = I.d(drawable2);
                 drawable2.copyBounds(rect);
-                rect.left += rectM1237d.left;
-                rect.right -= rectM1237d.right;
+                rect.left += rectD.left;
+                rect.right -= rectD.right;
                 int iSave = canvas.save();
                 canvas.clipRect(rect, Region.Op.DIFFERENCE);
                 drawable.draw(canvas);
@@ -593,21 +688,21 @@ public class SwitchCompat extends CompoundButton {
         if (drawable2 != null) {
             drawable2.draw(canvas);
         }
-        Layout layout = getTargetCheckedState() ? this.f941O : this.f942P;
+        Layout layout = getTargetCheckedState() ? this.f21475o0 : this.f21476p0;
         if (layout != null) {
             int[] drawableState = getDrawableState();
-            ColorStateList colorStateList = this.f940N;
+            ColorStateList colorStateList = this.f21474n0;
             if (colorStateList != null) {
-                this.f939M.setColor(colorStateList.getColorForState(drawableState, 0));
+                this.f21473m0.setColor(colorStateList.getColorForState(drawableState, 0));
             }
-            this.f939M.drawableState = drawableState;
+            this.f21473m0.drawableState = drawableState;
             if (drawable2 != null) {
                 Rect bounds = drawable2.getBounds();
                 width = bounds.left + bounds.right;
             } else {
                 width = getWidth();
             }
-            canvas.translate((width / 2) - (layout.getWidth() / 2), ((i4 + i5) / 2) - (layout.getHeight() / 2));
+            canvas.translate((width / 2) - (layout.getWidth() / 2), ((i12 + i13) / 2) - (layout.getHeight() / 2));
             layout.draw(canvas);
         }
         canvas.restoreToCount(iSave2);
@@ -623,121 +718,123 @@ public class SwitchCompat extends CompoundButton {
     public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
         accessibilityNodeInfo.setClassName("android.widget.Switch");
-        CharSequence charSequence = isChecked() ? this.f961v : this.f962w;
-        if (TextUtils.isEmpty(charSequence)) {
-            return;
+        if (Build.VERSION.SDK_INT < 30) {
+            CharSequence charSequence = isChecked() ? this.f21453P : this.f21455R;
+            if (TextUtils.isEmpty(charSequence)) {
+                return;
+            }
+            CharSequence text = accessibilityNodeInfo.getText();
+            if (TextUtils.isEmpty(text)) {
+                accessibilityNodeInfo.setText(charSequence);
+                return;
+            }
+            StringBuilder sb2 = new StringBuilder();
+            sb2.append(text);
+            sb2.append(' ');
+            sb2.append(charSequence);
+            accessibilityNodeInfo.setText(sb2);
         }
-        CharSequence text = accessibilityNodeInfo.getText();
-        if (TextUtils.isEmpty(text)) {
-            accessibilityNodeInfo.setText(charSequence);
-            return;
-        }
-        StringBuilder sb = new StringBuilder();
-        sb.append(text);
-        sb.append(' ');
-        sb.append(charSequence);
-        accessibilityNodeInfo.setText(sb);
     }
 
     @Override // android.widget.TextView, android.view.View
-    protected void onLayout(boolean z, int i2, int i3, int i4, int i5) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    protected void onLayout(boolean z10, int i10, int i11, int i12, int i13) {
         int iMax;
         int width;
         int paddingLeft;
-        int i6;
+        int i14;
         int paddingTop;
         int height;
-        super.onLayout(z, i2, i3, i4, i5);
+        super.onLayout(z10, i10, i11, i12, i13);
         int iMax2 = 0;
-        if (this.f947h != null) {
-            Rect rect = this.f946T;
-            Drawable drawable = this.f952m;
+        if (this.f21439B != null) {
+            Rect rect = this.f21482v0;
+            Drawable drawable = this.f21444G;
             if (drawable != null) {
                 drawable.getPadding(rect);
             } else {
                 rect.setEmpty();
             }
-            Rect rectM1237d = C0200y.m1237d(this.f947h);
-            iMax = Math.max(0, rectM1237d.left - rect.left);
-            iMax2 = Math.max(0, rectM1237d.right - rect.right);
+            Rect rectD = I.d(this.f21439B);
+            iMax = Math.max(0, rectD.left - rect.left);
+            iMax2 = Math.max(0, rectD.right - rect.right);
         } else {
             iMax = 0;
         }
-        if (C0197w0.m1231b(this)) {
+        if (h0.b(this)) {
             paddingLeft = getPaddingLeft() + iMax;
-            width = ((this.f932F + paddingLeft) - iMax) - iMax2;
+            width = ((this.f21465e0 + paddingLeft) - iMax) - iMax2;
         } else {
             width = (getWidth() - getPaddingRight()) - iMax2;
-            paddingLeft = (width - this.f932F) + iMax + iMax2;
+            paddingLeft = (width - this.f21465e0) + iMax + iMax2;
         }
         int gravity = getGravity() & 112;
         if (gravity == 16) {
             int paddingTop2 = ((getPaddingTop() + getHeight()) - getPaddingBottom()) / 2;
-            i6 = this.f933G;
-            paddingTop = paddingTop2 - (i6 / 2);
+            i14 = this.f21466f0;
+            paddingTop = paddingTop2 - (i14 / 2);
         } else {
             if (gravity == 80) {
                 height = getHeight() - getPaddingBottom();
-                paddingTop = height - this.f933G;
-                this.f935I = paddingLeft;
-                this.f936J = paddingTop;
-                this.f938L = height;
-                this.f937K = width;
+                paddingTop = height - this.f21466f0;
+                this.f21468h0 = paddingLeft;
+                this.f21469i0 = paddingTop;
+                this.f21471k0 = height;
+                this.f21470j0 = width;
             }
             paddingTop = getPaddingTop();
-            i6 = this.f933G;
+            i14 = this.f21466f0;
         }
-        height = i6 + paddingTop;
-        this.f935I = paddingLeft;
-        this.f936J = paddingTop;
-        this.f938L = height;
-        this.f937K = width;
+        height = i14 + paddingTop;
+        this.f21468h0 = paddingLeft;
+        this.f21469i0 = paddingTop;
+        this.f21471k0 = height;
+        this.f21470j0 = width;
     }
 
     @Override // android.widget.TextView, android.view.View
-    public void onMeasure(int i2, int i3) throws IllegalAccessException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    public void onMeasure(int i10, int i11) {
         int intrinsicWidth;
         int intrinsicHeight;
-        if (this.f963x) {
-            if (this.f941O == null) {
-                this.f941O = m831h(this.f961v);
+        if (this.f21457T) {
+            if (this.f21475o0 == null) {
+                this.f21475o0 = i(this.f21454Q);
             }
-            if (this.f942P == null) {
-                this.f942P = m831h(this.f962w);
+            if (this.f21476p0 == null) {
+                this.f21476p0 = i(this.f21456S);
             }
         }
-        Rect rect = this.f946T;
-        Drawable drawable = this.f947h;
+        Rect rect = this.f21482v0;
+        Drawable drawable = this.f21439B;
         int intrinsicHeight2 = 0;
         if (drawable != null) {
             drawable.getPadding(rect);
-            intrinsicWidth = (this.f947h.getIntrinsicWidth() - rect.left) - rect.right;
-            intrinsicHeight = this.f947h.getIntrinsicHeight();
+            intrinsicWidth = (this.f21439B.getIntrinsicWidth() - rect.left) - rect.right;
+            intrinsicHeight = this.f21439B.getIntrinsicHeight();
         } else {
             intrinsicWidth = 0;
             intrinsicHeight = 0;
         }
-        this.f934H = Math.max(this.f963x ? Math.max(this.f941O.getWidth(), this.f942P.getWidth()) + (this.f957r * 2) : 0, intrinsicWidth);
-        Drawable drawable2 = this.f952m;
+        this.f21467g0 = Math.max(this.f21457T ? Math.max(this.f21475o0.getWidth(), this.f21476p0.getWidth()) + (this.f21449L * 2) : 0, intrinsicWidth);
+        Drawable drawable2 = this.f21444G;
         if (drawable2 != null) {
             drawable2.getPadding(rect);
-            intrinsicHeight2 = this.f952m.getIntrinsicHeight();
+            intrinsicHeight2 = this.f21444G.getIntrinsicHeight();
         } else {
             rect.setEmpty();
         }
         int iMax = rect.left;
         int iMax2 = rect.right;
-        Drawable drawable3 = this.f947h;
+        Drawable drawable3 = this.f21439B;
         if (drawable3 != null) {
-            Rect rectM1237d = C0200y.m1237d(drawable3);
-            iMax = Math.max(iMax, rectM1237d.left);
-            iMax2 = Math.max(iMax2, rectM1237d.right);
+            Rect rectD = I.d(drawable3);
+            iMax = Math.max(iMax, rectD.left);
+            iMax2 = Math.max(iMax2, rectD.right);
         }
-        int iMax3 = Math.max(this.f958s, (this.f934H * 2) + iMax + iMax2);
+        int iMax3 = this.f21472l0 ? Math.max(this.f21450M, (this.f21467g0 * 2) + iMax + iMax2) : this.f21450M;
         int iMax4 = Math.max(intrinsicHeight2, intrinsicHeight);
-        this.f932F = iMax3;
-        this.f933G = iMax4;
-        super.onMeasure(i2, i3);
+        this.f21465e0 = iMax3;
+        this.f21466f0 = iMax4;
+        super.onMeasure(i10, i11);
         if (getMeasuredHeight() < iMax4) {
             setMeasuredDimension(getMeasuredWidthAndState(), iMax4);
         }
@@ -746,331 +843,371 @@ public class SwitchCompat extends CompoundButton {
     @Override // android.view.View
     public void onPopulateAccessibilityEvent(AccessibilityEvent accessibilityEvent) {
         super.onPopulateAccessibilityEvent(accessibilityEvent);
-        CharSequence charSequence = isChecked() ? this.f961v : this.f962w;
+        CharSequence charSequence = isChecked() ? this.f21453P : this.f21455R;
         if (charSequence != null) {
             accessibilityEvent.getText().add(charSequence);
         }
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:34:0x008b  */
+    /* JADX WARN: Removed duplicated region for block: B:34:0x0089  */
     @Override // android.widget.TextView, android.view.View
     /*
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct code enable 'Show inconsistent code' option in preferences
     */
-    public boolean onTouchEvent(android.view.MotionEvent r7) {
+    public boolean onTouchEvent(android.view.MotionEvent r7) throws android.content.res.Resources.NotFoundException {
         /*
             r6 = this;
-            android.view.VelocityTracker r0 = r6.f929C
+            android.view.VelocityTracker r0 = r6.f21462b0
             r0.addMovement(r7)
             int r0 = r7.getActionMasked()
             r1 = 1
-            if (r0 == 0) goto L9f
+            if (r0 == 0) goto L9d
             r2 = 2
-            if (r0 == r1) goto L8b
+            if (r0 == r1) goto L89
             if (r0 == r2) goto L16
             r3 = 3
-            if (r0 == r3) goto L8b
-            goto Lb9
+            if (r0 == r3) goto L89
+            goto Lb7
         L16:
-            int r0 = r6.f964y
-            if (r0 == r1) goto L57
+            int r0 = r6.f21458U
+            if (r0 == r1) goto L55
             if (r0 == r2) goto L1e
-            goto Lb9
+            goto Lb7
         L1e:
             float r7 = r7.getX()
             int r0 = r6.getThumbScrollRange()
-            float r2 = r6.f927A
+            float r2 = r6.f21460W
             float r2 = r7 - r2
             r3 = 1065353216(0x3f800000, float:1.0)
             r4 = 0
             if (r0 == 0) goto L32
             float r0 = (float) r0
             float r2 = r2 / r0
-            goto L3d
+            goto L3b
         L32:
             int r0 = (r2 > r4 ? 1 : (r2 == r4 ? 0 : -1))
-            if (r0 <= 0) goto L39
-            r2 = 1065353216(0x3f800000, float:1.0)
-            goto L3d
-        L39:
+            if (r0 <= 0) goto L38
+            r2 = r3
+            goto L3b
+        L38:
             r0 = -1082130432(0xffffffffbf800000, float:-1.0)
-            r2 = -1082130432(0xffffffffbf800000, float:-1.0)
-        L3d:
-            boolean r0 = androidx.appcompat.widget.C0197w0.m1231b(r6)
-            if (r0 == 0) goto L44
+            r2 = r0
+        L3b:
+            boolean r0 = androidx.appcompat.widget.h0.b(r6)
+            if (r0 == 0) goto L42
             float r2 = -r2
-        L44:
-            float r0 = r6.f931E
+        L42:
+            float r0 = r6.f21464d0
             float r0 = r0 + r2
-            float r0 = m829f(r0, r4, r3)
-            float r2 = r6.f931E
+            float r0 = f(r0, r4, r3)
+            float r2 = r6.f21464d0
             int r2 = (r0 > r2 ? 1 : (r0 == r2 ? 0 : -1))
-            if (r2 == 0) goto L56
-            r6.f927A = r7
+            if (r2 == 0) goto L54
+            r6.f21460W = r7
             r6.setThumbPosition(r0)
-        L56:
+        L54:
             return r1
-        L57:
+        L55:
             float r0 = r7.getX()
             float r3 = r7.getY()
-            float r4 = r6.f927A
+            float r4 = r6.f21460W
             float r4 = r0 - r4
             float r4 = java.lang.Math.abs(r4)
-            int r5 = r6.f965z
+            int r5 = r6.f21459V
             float r5 = (float) r5
             int r4 = (r4 > r5 ? 1 : (r4 == r5 ? 0 : -1))
-            if (r4 > 0) goto L7d
-            float r4 = r6.f928B
+            if (r4 > 0) goto L7b
+            float r4 = r6.f21461a0
             float r4 = r3 - r4
             float r4 = java.lang.Math.abs(r4)
-            int r5 = r6.f965z
+            int r5 = r6.f21459V
             float r5 = (float) r5
             int r4 = (r4 > r5 ? 1 : (r4 == r5 ? 0 : -1))
-            if (r4 <= 0) goto Lb9
-        L7d:
-            r6.f964y = r2
+            if (r4 <= 0) goto Lb7
+        L7b:
+            r6.f21458U = r2
             android.view.ViewParent r7 = r6.getParent()
             r7.requestDisallowInterceptTouchEvent(r1)
-            r6.f927A = r0
-            r6.f928B = r3
+            r6.f21460W = r0
+            r6.f21461a0 = r3
             return r1
-        L8b:
-            int r0 = r6.f964y
-            if (r0 != r2) goto L96
-            r6.m833l(r7)
+        L89:
+            int r0 = r6.f21458U
+            if (r0 != r2) goto L94
+            r6.q(r7)
             super.onTouchEvent(r7)
             return r1
-        L96:
+        L94:
             r0 = 0
-            r6.f964y = r0
-            android.view.VelocityTracker r0 = r6.f929C
+            r6.f21458U = r0
+            android.view.VelocityTracker r0 = r6.f21462b0
             r0.clear()
-            goto Lb9
-        L9f:
+            goto Lb7
+        L9d:
             float r0 = r7.getX()
             float r2 = r7.getY()
             boolean r3 = r6.isEnabled()
-            if (r3 == 0) goto Lb9
-            boolean r3 = r6.m830g(r0, r2)
-            if (r3 == 0) goto Lb9
-            r6.f964y = r1
-            r6.f927A = r0
-            r6.f928B = r2
-        Lb9:
+            if (r3 == 0) goto Lb7
+            boolean r3 = r6.h(r0, r2)
+            if (r3 == 0) goto Lb7
+            r6.f21458U = r1
+            r6.f21460W = r0
+            r6.f21461a0 = r2
+        Lb7:
             boolean r7 = super.onTouchEvent(r7)
             return r7
         */
         throw new UnsupportedOperationException("Method not decompiled: androidx.appcompat.widget.SwitchCompat.onTouchEvent(android.view.MotionEvent):boolean");
     }
 
+    @Override // android.widget.TextView
+    public void setAllCaps(boolean z10) {
+        super.setAllCaps(z10);
+        getEmojiTextViewHelper().d(z10);
+    }
+
     @Override // android.widget.CompoundButton, android.widget.Checkable
-    public void setChecked(boolean z) {
-        super.setChecked(z);
+    public void setChecked(boolean z10) throws Resources.NotFoundException {
+        super.setChecked(z10);
         boolean zIsChecked = isChecked();
-        if (getWindowToken() != null && C0311u.m2102O(this)) {
-            m824a(zIsChecked);
+        if (zIsChecked) {
+            l();
         } else {
-            m827d();
+            k();
+        }
+        if (getWindowToken() != null && isLaidOut()) {
+            a(zIsChecked);
+        } else {
+            d();
             setThumbPosition(zIsChecked ? 1.0f : 0.0f);
         }
     }
 
     @Override // android.widget.TextView
     public void setCustomSelectionActionModeCallback(ActionMode.Callback callback) {
-        super.setCustomSelectionActionModeCallback(C0330k.m2335p(this, callback));
+        super.setCustomSelectionActionModeCallback(androidx.core.widget.j.t(this, callback));
     }
 
-    public void setShowText(boolean z) {
-        if (this.f963x != z) {
-            this.f963x = z;
-            requestLayout();
-        }
-    }
-
-    public void setSplitTrack(boolean z) {
-        this.f960u = z;
-        invalidate();
-    }
-
-    public void setSwitchMinWidth(int i2) {
-        this.f958s = i2;
+    public void setEmojiCompatEnabled(boolean z10) {
+        getEmojiTextViewHelper().e(z10);
+        setTextOnInternal(this.f21453P);
+        setTextOffInternal(this.f21455R);
         requestLayout();
     }
 
-    public void setSwitchPadding(int i2) {
-        this.f959t = i2;
+    protected final void setEnforceSwitchWidth(boolean z10) {
+        this.f21472l0 = z10;
+        invalidate();
+    }
+
+    @Override // android.widget.TextView
+    public void setFilters(InputFilter[] inputFilterArr) {
+        super.setFilters(getEmojiTextViewHelper().a(inputFilterArr));
+    }
+
+    public void setShowText(boolean z10) {
+        if (this.f21457T != z10) {
+            this.f21457T = z10;
+            requestLayout();
+            if (z10) {
+                p();
+            }
+        }
+    }
+
+    public void setSplitTrack(boolean z10) {
+        this.f21452O = z10;
+        invalidate();
+    }
+
+    public void setSwitchMinWidth(int i10) {
+        this.f21450M = i10;
+        requestLayout();
+    }
+
+    public void setSwitchPadding(int i10) {
+        this.f21451N = i10;
         requestLayout();
     }
 
     public void setSwitchTypeface(Typeface typeface) {
-        if ((this.f939M.getTypeface() == null || this.f939M.getTypeface().equals(typeface)) && (this.f939M.getTypeface() != null || typeface == null)) {
+        if ((this.f21473m0.getTypeface() == null || this.f21473m0.getTypeface().equals(typeface)) && (this.f21473m0.getTypeface() != null || typeface == null)) {
             return;
         }
-        this.f939M.setTypeface(typeface);
+        this.f21473m0.setTypeface(typeface);
         requestLayout();
         invalidate();
     }
 
-    public void setTextOff(CharSequence charSequence) {
-        this.f962w = charSequence;
+    public void setTextOff(CharSequence charSequence) throws Resources.NotFoundException {
+        setTextOffInternal(charSequence);
         requestLayout();
+        if (isChecked()) {
+            return;
+        }
+        k();
     }
 
-    public void setTextOn(CharSequence charSequence) {
-        this.f961v = charSequence;
+    public void setTextOn(CharSequence charSequence) throws Resources.NotFoundException {
+        setTextOnInternal(charSequence);
         requestLayout();
+        if (isChecked()) {
+            l();
+        }
     }
 
     public void setThumbDrawable(Drawable drawable) {
-        Drawable drawable2 = this.f947h;
+        Drawable drawable2 = this.f21439B;
         if (drawable2 != null) {
             drawable2.setCallback(null);
         }
-        this.f947h = drawable;
+        this.f21439B = drawable;
         if (drawable != null) {
             drawable.setCallback(this);
         }
         requestLayout();
     }
 
-    void setThumbPosition(float f2) {
-        this.f931E = f2;
+    void setThumbPosition(float f10) {
+        this.f21464d0 = f10;
         invalidate();
     }
 
-    public void setThumbResource(int i2) {
-        setThumbDrawable(C0833a.m5262d(getContext(), i2));
+    public void setThumbResource(int i10) {
+        setThumbDrawable(C3699a.b(getContext(), i10));
     }
 
-    public void setThumbTextPadding(int i2) {
-        this.f957r = i2;
+    public void setThumbTextPadding(int i10) {
+        this.f21449L = i10;
         requestLayout();
     }
 
     public void setThumbTintList(ColorStateList colorStateList) {
-        this.f948i = colorStateList;
-        this.f950k = true;
-        m825b();
+        this.f21440C = colorStateList;
+        this.f21442E = true;
+        b();
     }
 
     public void setThumbTintMode(PorterDuff.Mode mode) {
-        this.f949j = mode;
-        this.f951l = true;
-        m825b();
+        this.f21441D = mode;
+        this.f21443F = true;
+        b();
     }
 
     public void setTrackDrawable(Drawable drawable) {
-        Drawable drawable2 = this.f952m;
+        Drawable drawable2 = this.f21444G;
         if (drawable2 != null) {
             drawable2.setCallback(null);
         }
-        this.f952m = drawable;
+        this.f21444G = drawable;
         if (drawable != null) {
             drawable.setCallback(this);
         }
         requestLayout();
     }
 
-    public void setTrackResource(int i2) {
-        setTrackDrawable(C0833a.m5262d(getContext(), i2));
+    public void setTrackResource(int i10) {
+        setTrackDrawable(C3699a.b(getContext(), i10));
     }
 
     public void setTrackTintList(ColorStateList colorStateList) {
-        this.f953n = colorStateList;
-        this.f955p = true;
-        m826c();
+        this.f21445H = colorStateList;
+        this.f21447J = true;
+        c();
     }
 
     public void setTrackTintMode(PorterDuff.Mode mode) {
-        this.f954o = mode;
-        this.f956q = true;
-        m826c();
+        this.f21446I = mode;
+        this.f21448K = true;
+        c();
     }
 
     @Override // android.widget.CompoundButton, android.widget.Checkable
-    public void toggle() {
+    public void toggle() throws Resources.NotFoundException {
         setChecked(!isChecked());
     }
 
     @Override // android.widget.CompoundButton, android.widget.TextView, android.view.View
     protected boolean verifyDrawable(Drawable drawable) {
-        return super.verifyDrawable(drawable) || drawable == this.f947h || drawable == this.f952m;
+        return super.verifyDrawable(drawable) || drawable == this.f21439B || drawable == this.f21444G;
     }
 
-    public SwitchCompat(Context context, AttributeSet attributeSet, int i2) throws Resources.NotFoundException, IllegalArgumentException {
-        super(context, attributeSet, i2);
-        this.f948i = null;
-        this.f949j = null;
-        this.f950k = false;
-        this.f951l = false;
-        this.f953n = null;
-        this.f954o = null;
-        this.f955p = false;
-        this.f956q = false;
-        this.f929C = VelocityTracker.obtain();
-        this.f946T = new Rect();
-        C0175l0.m1068a(this, getContext());
+    public SwitchCompat(Context context, AttributeSet attributeSet, int i10) throws Resources.NotFoundException {
+        super(context, attributeSet, i10);
+        this.f21440C = null;
+        this.f21441D = null;
+        this.f21442E = false;
+        this.f21443F = false;
+        this.f21445H = null;
+        this.f21446I = null;
+        this.f21447J = false;
+        this.f21448K = false;
+        this.f21462b0 = VelocityTracker.obtain();
+        this.f21472l0 = true;
+        this.f21482v0 = new Rect();
+        V.a(this, getContext());
         TextPaint textPaint = new TextPaint(1);
-        this.f939M = textPaint;
+        this.f21473m0 = textPaint;
         textPaint.density = getResources().getDisplayMetrics().density;
-        int[] iArr = C0832j.f5242I2;
-        C0185q0 c0185q0M1091v = C0185q0.m1091v(context, attributeSet, iArr, i2, 0);
-        C0311u.m2127g0(this, context, iArr, attributeSet, c0185q0M1091v.m1109r(), i2, 0);
-        Drawable drawableM1098g = c0185q0M1091v.m1098g(C0832j.f5257L2);
-        this.f947h = drawableM1098g;
-        if (drawableM1098g != null) {
-            drawableM1098g.setCallback(this);
+        int[] iArr = i.j.f42580D2;
+        a0 a0VarV = a0.v(context, attributeSet, iArr, i10, 0);
+        s1.X.l0(this, context, iArr, attributeSet, a0VarV.r(), i10, 0);
+        Drawable drawableG = a0VarV.g(i.j.f42595G2);
+        this.f21439B = drawableG;
+        if (drawableG != null) {
+            drawableG.setCallback(this);
         }
-        Drawable drawableM1098g2 = c0185q0M1091v.m1098g(C0832j.f5302U2);
-        this.f952m = drawableM1098g2;
-        if (drawableM1098g2 != null) {
-            drawableM1098g2.setCallback(this);
+        Drawable drawableG2 = a0VarV.g(i.j.f42640P2);
+        this.f21444G = drawableG2;
+        if (drawableG2 != null) {
+            drawableG2.setCallback(this);
         }
-        this.f961v = c0185q0M1091v.m1107p(C0832j.f5247J2);
-        this.f962w = c0185q0M1091v.m1107p(C0832j.f5252K2);
-        this.f963x = c0185q0M1091v.m1092a(C0832j.f5262M2, true);
-        this.f957r = c0185q0M1091v.m1097f(C0832j.f5287R2, 0);
-        this.f958s = c0185q0M1091v.m1097f(C0832j.f5272O2, 0);
-        this.f959t = c0185q0M1091v.m1097f(C0832j.f5277P2, 0);
-        this.f960u = c0185q0M1091v.m1092a(C0832j.f5267N2, false);
-        ColorStateList colorStateListM1094c = c0185q0M1091v.m1094c(C0832j.f5292S2);
-        if (colorStateListM1094c != null) {
-            this.f948i = colorStateListM1094c;
-            this.f950k = true;
+        setTextOnInternal(a0VarV.p(i.j.f42585E2));
+        setTextOffInternal(a0VarV.p(i.j.f42590F2));
+        this.f21457T = a0VarV.a(i.j.f42600H2, true);
+        this.f21449L = a0VarV.f(i.j.f42625M2, 0);
+        this.f21450M = a0VarV.f(i.j.f42610J2, 0);
+        this.f21451N = a0VarV.f(i.j.f42615K2, 0);
+        this.f21452O = a0VarV.a(i.j.f42605I2, false);
+        ColorStateList colorStateListC = a0VarV.c(i.j.f42630N2);
+        if (colorStateListC != null) {
+            this.f21440C = colorStateListC;
+            this.f21442E = true;
         }
-        PorterDuff.Mode modeM1238e = C0200y.m1238e(c0185q0M1091v.m1102k(C0832j.f5297T2, -1), null);
-        if (this.f949j != modeM1238e) {
-            this.f949j = modeM1238e;
-            this.f951l = true;
+        PorterDuff.Mode modeE = I.e(a0VarV.k(i.j.f42635O2, -1), null);
+        if (this.f21441D != modeE) {
+            this.f21441D = modeE;
+            this.f21443F = true;
         }
-        if (this.f950k || this.f951l) {
-            m825b();
+        if (this.f21442E || this.f21443F) {
+            b();
         }
-        ColorStateList colorStateListM1094c2 = c0185q0M1091v.m1094c(C0832j.f5307V2);
-        if (colorStateListM1094c2 != null) {
-            this.f953n = colorStateListM1094c2;
-            this.f955p = true;
+        ColorStateList colorStateListC2 = a0VarV.c(i.j.f42645Q2);
+        if (colorStateListC2 != null) {
+            this.f21445H = colorStateListC2;
+            this.f21447J = true;
         }
-        PorterDuff.Mode modeM1238e2 = C0200y.m1238e(c0185q0M1091v.m1102k(C0832j.f5312W2, -1), null);
-        if (this.f954o != modeM1238e2) {
-            this.f954o = modeM1238e2;
-            this.f956q = true;
+        PorterDuff.Mode modeE2 = I.e(a0VarV.k(i.j.f42650R2, -1), null);
+        if (this.f21446I != modeE2) {
+            this.f21446I = modeE2;
+            this.f21448K = true;
         }
-        if (this.f955p || this.f956q) {
-            m826c();
+        if (this.f21447J || this.f21448K) {
+            c();
         }
-        int iM1105n = c0185q0M1091v.m1105n(C0832j.f5282Q2, 0);
-        if (iM1105n != 0) {
-            m834i(context, iM1105n);
+        int iN = a0VarV.n(i.j.f42620L2, 0);
+        if (iN != 0) {
+            m(context, iN);
         }
-        C0188s c0188s = new C0188s(this);
-        this.f945S = c0188s;
-        c0188s.m1165m(attributeSet, i2);
-        c0185q0M1091v.m1111w();
+        C2001x c2001x = new C2001x(this);
+        this.f21479s0 = c2001x;
+        c2001x.m(attributeSet, i10);
+        a0VarV.x();
         ViewConfiguration viewConfiguration = ViewConfiguration.get(context);
-        this.f965z = viewConfiguration.getScaledTouchSlop();
-        this.f930D = viewConfiguration.getScaledMinimumFlingVelocity();
+        this.f21459V = viewConfiguration.getScaledTouchSlop();
+        this.f21463c0 = viewConfiguration.getScaledMinimumFlingVelocity();
+        getEmojiTextViewHelper().c(attributeSet, i10);
         refreshDrawableState();
         setChecked(isChecked());
     }

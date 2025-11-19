@@ -1,5 +1,10 @@
 package com.google.android.material.appbar;
 
+import C7.l;
+import C7.m;
+import R7.i;
+import X7.h;
+import android.animation.TimeInterpolator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -9,1099 +14,358 @@ import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
+import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewOutlineProvider;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Interpolator;
+import android.widget.AbsListView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.ScrollView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.graphics.drawable.C0265a;
-import androidx.core.view.C0285c0;
-import androidx.core.view.C0311u;
-import androidx.core.view.InterfaceC0300j;
-import androidx.core.view.InterfaceC0306p;
-import androidx.core.view.p004d0.C0289c;
-import androidx.core.view.p004d0.InterfaceC0292f;
-import androidx.customview.view.AbsSavedState;
-import com.google.android.material.internal.C8032j;
-import com.google.android.material.theme.p178a.C8079a;
+import b8.C2272a;
+import com.google.android.material.internal.r;
+import j.C3699a;
 import java.lang.ref.WeakReference;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-import p024c.p025a.p026k.p027a.C0833a;
-import p024c.p052i.p056g.C0937a;
-import p024c.p052i.p059j.C0954d;
-import p241e.p254e.p256b.p271c.C8908b;
-import p241e.p254e.p256b.p271c.C8910d;
-import p241e.p254e.p256b.p271c.C8913g;
-import p241e.p254e.p256b.p271c.C8917k;
-import p241e.p254e.p256b.p271c.C8918l;
-import p241e.p254e.p256b.p271c.p272a0.C8900g;
-import p241e.p254e.p256b.p271c.p272a0.C8901h;
-import p241e.p254e.p256b.p271c.p273m.C8919a;
+import k1.C3784a;
+import m1.C3946a;
+import r1.C4337d;
+import s1.C;
+import s1.C4421a;
+import s1.C4469y0;
+import s1.I;
+import s1.X;
+import t1.t;
+import y1.AbstractC5121a;
 
 /* loaded from: classes2.dex */
-public class AppBarLayout extends LinearLayout implements CoordinatorLayout.InterfaceC0225b {
+public class AppBarLayout extends LinearLayout implements CoordinatorLayout.b {
 
-    /* renamed from: f */
-    private static final int f29577f = C8917k.f33982g;
+    /* renamed from: d0, reason: collision with root package name */
+    private static final int f35823d0 = l.f2571h;
 
-    /* renamed from: g */
-    private int f29578g;
+    /* renamed from: B, reason: collision with root package name */
+    private int f35824B;
 
-    /* renamed from: h */
-    private int f29579h;
+    /* renamed from: C, reason: collision with root package name */
+    private int f35825C;
 
-    /* renamed from: i */
-    private int f29580i;
+    /* renamed from: D, reason: collision with root package name */
+    private int f35826D;
 
-    /* renamed from: j */
-    private int f29581j;
+    /* renamed from: E, reason: collision with root package name */
+    private int f35827E;
 
-    /* renamed from: k */
-    private boolean f29582k;
+    /* renamed from: F, reason: collision with root package name */
+    private boolean f35828F;
 
-    /* renamed from: l */
-    private int f29583l;
+    /* renamed from: G, reason: collision with root package name */
+    private int f35829G;
 
-    /* renamed from: m */
-    private C0285c0 f29584m;
+    /* renamed from: H, reason: collision with root package name */
+    private C4469y0 f35830H;
 
-    /* renamed from: n */
-    private List<InterfaceC7926c> f29585n;
+    /* renamed from: I, reason: collision with root package name */
+    private List<b> f35831I;
 
-    /* renamed from: o */
-    private boolean f29586o;
+    /* renamed from: J, reason: collision with root package name */
+    private boolean f35832J;
 
-    /* renamed from: p */
-    private boolean f29587p;
+    /* renamed from: K, reason: collision with root package name */
+    private boolean f35833K;
 
-    /* renamed from: q */
-    private boolean f29588q;
+    /* renamed from: L, reason: collision with root package name */
+    private boolean f35834L;
 
-    /* renamed from: r */
-    private boolean f29589r;
+    /* renamed from: M, reason: collision with root package name */
+    private boolean f35835M;
 
-    /* renamed from: s */
-    private int f29590s;
+    /* renamed from: N, reason: collision with root package name */
+    private int f35836N;
 
-    /* renamed from: t */
-    private WeakReference<View> f29591t;
+    /* renamed from: O, reason: collision with root package name */
+    private WeakReference<View> f35837O;
 
-    /* renamed from: u */
-    private ValueAnimator f29592u;
+    /* renamed from: P, reason: collision with root package name */
+    private final boolean f35838P;
 
-    /* renamed from: v */
-    private int[] f29593v;
+    /* renamed from: Q, reason: collision with root package name */
+    private ValueAnimator f35839Q;
 
-    /* renamed from: w */
-    private Drawable f29594w;
+    /* renamed from: R, reason: collision with root package name */
+    private ValueAnimator.AnimatorUpdateListener f35840R;
 
-    public static class Behavior extends BaseBehavior<AppBarLayout> {
-        public Behavior() {
-        }
+    /* renamed from: S, reason: collision with root package name */
+    private final List<f> f35841S;
 
-        @Override // com.google.android.material.appbar.C7935c
-        /* renamed from: E */
-        public /* bridge */ /* synthetic */ int mo23760E() {
-            return super.mo23760E();
-        }
+    /* renamed from: T, reason: collision with root package name */
+    private final long f35842T;
 
-        @Override // com.google.android.material.appbar.C7935c
-        /* renamed from: G */
-        public /* bridge */ /* synthetic */ boolean mo23761G(int i2) {
-            return super.mo23761G(i2);
-        }
+    /* renamed from: U, reason: collision with root package name */
+    private final TimeInterpolator f35843U;
 
-        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
-        /* renamed from: g0 */
-        public /* bridge */ /* synthetic */ boolean mo1458l(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, int i2) {
-            return super.mo1458l(coordinatorLayout, appBarLayout, i2);
-        }
+    /* renamed from: V, reason: collision with root package name */
+    private int[] f35844V;
 
-        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
-        /* renamed from: h0 */
-        public /* bridge */ /* synthetic */ boolean mo1459m(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, int i2, int i3, int i4, int i5) {
-            return super.mo1459m(coordinatorLayout, appBarLayout, i2, i3, i4, i5);
-        }
+    /* renamed from: W, reason: collision with root package name */
+    private Drawable f35845W;
 
-        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
-        /* renamed from: i0 */
-        public /* bridge */ /* synthetic */ void mo1463q(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, View view, int i2, int i3, int[] iArr, int i4) throws Resources.NotFoundException {
-            super.mo1463q(coordinatorLayout, appBarLayout, view, i2, i3, iArr, i4);
-        }
+    /* renamed from: a0, reason: collision with root package name */
+    private Integer f35846a0;
 
-        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
-        /* renamed from: j0 */
-        public /* bridge */ /* synthetic */ void mo1466t(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, View view, int i2, int i3, int i4, int i5, int i6, int[] iArr) {
-            super.mo1466t(coordinatorLayout, appBarLayout, view, i2, i3, i4, i5, i6, iArr);
-        }
+    /* renamed from: b0, reason: collision with root package name */
+    private final float f35847b0;
 
-        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
-        /* renamed from: k0 */
-        public /* bridge */ /* synthetic */ void mo1470x(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, Parcelable parcelable) {
-            super.mo1470x(coordinatorLayout, appBarLayout, parcelable);
-        }
+    /* renamed from: c0, reason: collision with root package name */
+    private Behavior f35848c0;
 
-        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
-        /* renamed from: l0 */
-        public /* bridge */ /* synthetic */ Parcelable mo1471y(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout) {
-            return super.mo1471y(coordinatorLayout, appBarLayout);
-        }
+    protected static class BaseBehavior<T extends AppBarLayout> extends com.google.android.material.appbar.c<T> {
 
-        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
-        /* renamed from: m0 */
-        public /* bridge */ /* synthetic */ boolean mo1443A(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, View view, View view2, int i2, int i3) {
-            return super.mo1443A(coordinatorLayout, appBarLayout, view, view2, i2, i3);
-        }
+        /* renamed from: L, reason: collision with root package name */
+        private int f35849L;
 
-        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
-        /* renamed from: n0 */
-        public /* bridge */ /* synthetic */ void mo1445C(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, View view, int i2) throws Resources.NotFoundException {
-            super.mo1445C(coordinatorLayout, appBarLayout, view, i2);
-        }
+        /* renamed from: M, reason: collision with root package name */
+        private int f35850M;
 
-        public Behavior(Context context, AttributeSet attributeSet) {
-            super(context, attributeSet);
-        }
-    }
+        /* renamed from: N, reason: collision with root package name */
+        private ValueAnimator f35851N;
 
-    public static class ScrollingViewBehavior extends AbstractC7934b {
-        public ScrollingViewBehavior() {
-        }
+        /* renamed from: O, reason: collision with root package name */
+        private c f35852O;
 
-        /* renamed from: R */
-        private static int m23762R(AppBarLayout appBarLayout) {
-            CoordinatorLayout.AbstractC0226c abstractC0226cM1481f = ((CoordinatorLayout.C0229f) appBarLayout.getLayoutParams()).m1481f();
-            if (abstractC0226cM1481f instanceof BaseBehavior) {
-                return ((BaseBehavior) abstractC0226cM1481f).mo23741M();
+        /* renamed from: P, reason: collision with root package name */
+        private WeakReference<View> f35853P;
+
+        class a implements ValueAnimator.AnimatorUpdateListener {
+
+            /* renamed from: a, reason: collision with root package name */
+            final /* synthetic */ CoordinatorLayout f35854a;
+
+            /* renamed from: b, reason: collision with root package name */
+            final /* synthetic */ AppBarLayout f35855b;
+
+            a(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout) {
+                this.f35854a = coordinatorLayout;
+                this.f35855b = appBarLayout;
             }
-            return 0;
-        }
 
-        /* renamed from: S */
-        private void m23763S(View view, View view2) {
-            CoordinatorLayout.AbstractC0226c abstractC0226cM1481f = ((CoordinatorLayout.C0229f) view2.getLayoutParams()).m1481f();
-            if (abstractC0226cM1481f instanceof BaseBehavior) {
-                C0311u.m2108U(view, (((view2.getBottom() - view.getTop()) + ((BaseBehavior) abstractC0226cM1481f).f29595k) + m23796M()) - m23794I(view2));
+            @Override // android.animation.ValueAnimator.AnimatorUpdateListener
+            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                BaseBehavior.this.T(this.f35854a, this.f35855b, ((Integer) valueAnimator.getAnimatedValue()).intValue());
             }
         }
 
-        /* renamed from: T */
-        private void m23764T(View view, View view2) throws Resources.NotFoundException {
-            if (view2 instanceof AppBarLayout) {
-                AppBarLayout appBarLayout = (AppBarLayout) view2;
-                if (appBarLayout.m23714l()) {
-                    appBarLayout.m23721u(appBarLayout.m23722w(view));
+        class b extends C4421a {
+
+            /* renamed from: d, reason: collision with root package name */
+            final /* synthetic */ AppBarLayout f35857d;
+
+            /* renamed from: e, reason: collision with root package name */
+            final /* synthetic */ CoordinatorLayout f35858e;
+
+            b(AppBarLayout appBarLayout, CoordinatorLayout coordinatorLayout) {
+                this.f35857d = appBarLayout;
+                this.f35858e = coordinatorLayout;
+            }
+
+            @Override // s1.C4421a
+            public void g(View view, t tVar) {
+                View viewJ0;
+                super.g(view, tVar);
+                tVar.h0(ScrollView.class.getName());
+                if (this.f35857d.getTotalScrollRange() == 0 || (viewJ0 = BaseBehavior.this.j0(this.f35858e)) == null || !BaseBehavior.this.f0(this.f35857d)) {
+                    return;
+                }
+                if (BaseBehavior.this.Q() != (-this.f35857d.getTotalScrollRange())) {
+                    tVar.b(t.a.f49790q);
+                    tVar.K0(true);
+                }
+                if (BaseBehavior.this.Q() != 0) {
+                    if (!viewJ0.canScrollVertically(-1)) {
+                        tVar.b(t.a.f49791r);
+                        tVar.K0(true);
+                    } else if ((-this.f35857d.getDownNestedPreScrollRange()) != 0) {
+                        tVar.b(t.a.f49791r);
+                        tVar.K0(true);
+                    }
+                }
+            }
+
+            /* JADX WARN: Multi-variable type inference failed */
+            @Override // s1.C4421a
+            public boolean j(View view, int i10, Bundle bundle) {
+                if (i10 == 4096) {
+                    this.f35857d.setExpanded(false);
+                    return true;
+                }
+                if (i10 != 8192) {
+                    return super.j(view, i10, bundle);
+                }
+                if (BaseBehavior.this.Q() != 0) {
+                    View viewJ0 = BaseBehavior.this.j0(this.f35858e);
+                    if (!viewJ0.canScrollVertically(-1)) {
+                        this.f35857d.setExpanded(true);
+                        return true;
+                    }
+                    int i11 = -this.f35857d.getDownNestedPreScrollRange();
+                    if (i11 != 0) {
+                        BaseBehavior.this.u(this.f35858e, this.f35857d, viewJ0, 0, i11, new int[]{0, 0}, 1);
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
+
+        public BaseBehavior() {
+        }
+
+        private void A0(CoordinatorLayout coordinatorLayout, T t10) {
+            int topInset = t10.getTopInset() + t10.getPaddingTop();
+            int iQ = Q() - topInset;
+            int iI0 = i0(t10, iQ);
+            if (iI0 >= 0) {
+                View childAt = t10.getChildAt(iI0);
+                e eVar = (e) childAt.getLayoutParams();
+                int iC = eVar.c();
+                if ((iC & 17) == 17) {
+                    int topInset2 = -childAt.getTop();
+                    int iA = -childAt.getBottom();
+                    if (iI0 == 0 && X.w(t10) && X.w(childAt)) {
+                        topInset2 -= t10.getTopInset();
+                    }
+                    if (e0(iC, 2)) {
+                        iA += X.A(childAt);
+                    } else if (e0(iC, 5)) {
+                        int iA2 = X.A(childAt) + iA;
+                        if (iQ < iA2) {
+                            topInset2 = iA2;
+                        } else {
+                            iA = iA2;
+                        }
+                    }
+                    if (e0(iC, 32)) {
+                        topInset2 += ((LinearLayout.LayoutParams) eVar).topMargin;
+                        iA -= ((LinearLayout.LayoutParams) eVar).bottomMargin;
+                    }
+                    Z(coordinatorLayout, t10, C3946a.b(b0(iQ, iA, topInset2) + topInset, -t10.getTotalScrollRange(), 0), 0.0f);
                 }
             }
         }
 
-        @Override // com.google.android.material.appbar.AbstractC7934b
-        /* renamed from: J */
-        float mo23766J(View view) throws NoSuchFieldException {
-            int i2;
-            if (view instanceof AppBarLayout) {
-                AppBarLayout appBarLayout = (AppBarLayout) view;
-                int totalScrollRange = appBarLayout.getTotalScrollRange();
-                int downNestedPreScrollRange = appBarLayout.getDownNestedPreScrollRange();
-                int iM23762R = m23762R(appBarLayout);
-                if ((downNestedPreScrollRange == 0 || totalScrollRange + iM23762R > downNestedPreScrollRange) && (i2 = totalScrollRange - downNestedPreScrollRange) != 0) {
-                    return (iM23762R / i2) + 1.0f;
+        private void B0(CoordinatorLayout coordinatorLayout, T t10, int i10, int i11, boolean z10) {
+            View viewH0 = h0(t10, i10);
+            boolean zB = false;
+            if (viewH0 != null) {
+                int iC = ((e) viewH0.getLayoutParams()).c();
+                if ((iC & 1) != 0) {
+                    int iA = X.A(viewH0);
+                    if (i11 <= 0 || (iC & 12) == 0 ? !((iC & 2) == 0 || (-i10) < (viewH0.getBottom() - iA) - t10.getTopInset()) : (-i10) >= (viewH0.getBottom() - iA) - t10.getTopInset()) {
+                        zB = true;
+                    }
                 }
             }
-            return 0.0f;
-        }
-
-        @Override // com.google.android.material.appbar.AbstractC7934b
-        /* renamed from: L */
-        int mo23767L(View view) {
-            return view instanceof AppBarLayout ? ((AppBarLayout) view).getTotalScrollRange() : super.mo23767L(view);
-        }
-
-        /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.android.material.appbar.AbstractC7934b
-        /* renamed from: Q, reason: merged with bridge method [inline-methods] */
-        public AppBarLayout mo23765H(List<View> list) {
-            int size = list.size();
-            for (int i2 = 0; i2 < size; i2++) {
-                View view = list.get(i2);
-                if (view instanceof AppBarLayout) {
-                    return (AppBarLayout) view;
+            if (t10.o()) {
+                zB = t10.B(g0(coordinatorLayout));
+            }
+            boolean zY = t10.y(zB);
+            if (z10 || (zY && z0(coordinatorLayout, t10))) {
+                if (t10.getBackground() != null) {
+                    t10.getBackground().jumpToCurrentState();
+                }
+                if (t10.getForeground() != null) {
+                    t10.getForeground().jumpToCurrentState();
+                }
+                if (t10.getStateListAnimator() != null) {
+                    t10.getStateListAnimator().jumpToCurrentState();
                 }
             }
-            return null;
         }
 
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-        /* renamed from: e */
-        public boolean mo1451e(CoordinatorLayout coordinatorLayout, View view, View view2) {
-            return view2 instanceof AppBarLayout;
-        }
-
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-        /* renamed from: h */
-        public boolean mo1454h(CoordinatorLayout coordinatorLayout, View view, View view2) throws Resources.NotFoundException {
-            m23763S(view, view2);
-            m23764T(view, view2);
-            return false;
-        }
-
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-        /* renamed from: i */
-        public void mo1455i(CoordinatorLayout coordinatorLayout, View view, View view2) {
-            if (view2 instanceof AppBarLayout) {
-                C0311u.m2119c0(coordinatorLayout, C0289c.a.f2360m.m2013b());
-                C0311u.m2119c0(coordinatorLayout, C0289c.a.f2361n.m2013b());
+        private void Y(CoordinatorLayout coordinatorLayout, T t10) {
+            if (X.M(coordinatorLayout)) {
+                return;
             }
+            X.n0(coordinatorLayout, new b(t10, coordinatorLayout));
         }
 
-        @Override // com.google.android.material.appbar.C7935c, androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-        /* renamed from: l */
-        public /* bridge */ /* synthetic */ boolean mo1458l(CoordinatorLayout coordinatorLayout, View view, int i2) {
-            return super.mo1458l(coordinatorLayout, view, i2);
+        private void Z(CoordinatorLayout coordinatorLayout, T t10, int i10, float f10) {
+            int iAbs = Math.abs(Q() - i10);
+            float fAbs = Math.abs(f10);
+            a0(coordinatorLayout, t10, i10, fAbs > 0.0f ? Math.round((iAbs / fAbs) * 1000.0f) * 3 : (int) (((iAbs / t10.getHeight()) + 1.0f) * 150.0f));
         }
 
-        @Override // com.google.android.material.appbar.AbstractC7934b, androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-        /* renamed from: m */
-        public /* bridge */ /* synthetic */ boolean mo1459m(CoordinatorLayout coordinatorLayout, View view, int i2, int i3, int i4, int i5) {
-            return super.mo1459m(coordinatorLayout, view, i2, i3, i4, i5);
+        private void a0(CoordinatorLayout coordinatorLayout, T t10, int i10, int i11) {
+            int iQ = Q();
+            if (iQ == i10) {
+                ValueAnimator valueAnimator = this.f35851N;
+                if (valueAnimator == null || !valueAnimator.isRunning()) {
+                    return;
+                }
+                this.f35851N.cancel();
+                return;
+            }
+            ValueAnimator valueAnimator2 = this.f35851N;
+            if (valueAnimator2 == null) {
+                ValueAnimator valueAnimator3 = new ValueAnimator();
+                this.f35851N = valueAnimator3;
+                valueAnimator3.setInterpolator(D7.a.f3490e);
+                this.f35851N.addUpdateListener(new a(coordinatorLayout, t10));
+            } else {
+                valueAnimator2.cancel();
+            }
+            this.f35851N.setDuration(Math.min(i11, 600));
+            this.f35851N.setIntValues(iQ, i10);
+            this.f35851N.start();
         }
 
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-        /* renamed from: w */
-        public boolean mo1469w(CoordinatorLayout coordinatorLayout, View view, Rect rect, boolean z) {
-            AppBarLayout appBarLayoutMo23765H = mo23765H(coordinatorLayout.m1434r(view));
-            if (appBarLayoutMo23765H != null) {
-                rect.offset(view.getLeft(), view.getTop());
-                Rect rect2 = this.f29662d;
-                rect2.set(0, 0, coordinatorLayout.getWidth(), coordinatorLayout.getHeight());
-                if (!rect2.contains(rect)) {
-                    appBarLayoutMo23765H.m23720r(false, !z);
+        private int b0(int i10, int i11, int i12) {
+            return i10 < (i11 + i12) / 2 ? i11 : i12;
+        }
+
+        private boolean d0(CoordinatorLayout coordinatorLayout, T t10, View view) {
+            return t10.k() && coordinatorLayout.getHeight() - view.getHeight() <= t10.getHeight();
+        }
+
+        private static boolean e0(int i10, int i11) {
+            return (i10 & i11) == i11;
+        }
+
+        /* JADX INFO: Access modifiers changed from: private */
+        public boolean f0(AppBarLayout appBarLayout) {
+            int childCount = appBarLayout.getChildCount();
+            for (int i10 = 0; i10 < childCount; i10++) {
+                if (((e) appBarLayout.getChildAt(i10).getLayoutParams()).f35868a != 0) {
                     return true;
                 }
             }
             return false;
         }
 
-        public ScrollingViewBehavior(Context context, AttributeSet attributeSet) {
-            super(context, attributeSet);
-            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C8918l.f34116Q3);
-            m23797O(typedArrayObtainStyledAttributes.getDimensionPixelSize(C8918l.f34123R3, 0));
-            typedArrayObtainStyledAttributes.recycle();
-        }
-    }
-
-    /* renamed from: com.google.android.material.appbar.AppBarLayout$a */
-    class C7924a implements InterfaceC0306p {
-        C7924a() {
-        }
-
-        @Override // androidx.core.view.InterfaceC0306p
-        /* renamed from: a */
-        public C0285c0 mo363a(View view, C0285c0 c0285c0) {
-            return AppBarLayout.this.m23716n(c0285c0);
-        }
-    }
-
-    /* renamed from: com.google.android.material.appbar.AppBarLayout$b */
-    class C7925b implements ValueAnimator.AnimatorUpdateListener {
-
-        /* renamed from: a */
-        final /* synthetic */ C8900g f29618a;
-
-        C7925b(C8900g c8900g) {
-            this.f29618a = c8900g;
-        }
-
-        @Override // android.animation.ValueAnimator.AnimatorUpdateListener
-        public void onAnimationUpdate(ValueAnimator valueAnimator) {
-            this.f29618a.m28283W(((Float) valueAnimator.getAnimatedValue()).floatValue());
-        }
-    }
-
-    /* renamed from: com.google.android.material.appbar.AppBarLayout$c */
-    public interface InterfaceC7926c<T extends AppBarLayout> {
-        void onOffsetChanged(T t, int i2);
-    }
-
-    /* renamed from: com.google.android.material.appbar.AppBarLayout$e */
-    public interface InterfaceC7928e extends InterfaceC7926c<AppBarLayout> {
-    }
-
-    public AppBarLayout(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, C8908b.f33811a);
-    }
-
-    /* renamed from: c */
-    private void m23697c() {
-        WeakReference<View> weakReference = this.f29591t;
-        if (weakReference != null) {
-            weakReference.clear();
-        }
-        this.f29591t = null;
-    }
-
-    /* renamed from: d */
-    private View m23698d(View view) {
-        int i2;
-        if (this.f29591t == null && (i2 = this.f29590s) != -1) {
-            View viewFindViewById = view != null ? view.findViewById(i2) : null;
-            if (viewFindViewById == null && (getParent() instanceof ViewGroup)) {
-                viewFindViewById = ((ViewGroup) getParent()).findViewById(this.f29590s);
-            }
-            if (viewFindViewById != null) {
-                this.f29591t = new WeakReference<>(viewFindViewById);
-            }
-        }
-        WeakReference<View> weakReference = this.f29591t;
-        if (weakReference != null) {
-            return weakReference.get();
-        }
-        return null;
-    }
-
-    /* renamed from: i */
-    private boolean m23699i() {
-        int childCount = getChildCount();
-        for (int i2 = 0; i2 < childCount; i2++) {
-            if (((C7927d) getChildAt(i2).getLayoutParams()).m23771c()) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /* renamed from: k */
-    private void m23700k() {
-        this.f29579h = -1;
-        this.f29580i = -1;
-        this.f29581j = -1;
-    }
-
-    /* renamed from: s */
-    private void m23701s(boolean z, boolean z2, boolean z3) {
-        this.f29583l = (z ? 1 : 2) | (z2 ? 4 : 0) | (z3 ? 8 : 0);
-        requestLayout();
-    }
-
-    /* renamed from: t */
-    private boolean m23702t(boolean z) {
-        if (this.f29587p == z) {
-            return false;
-        }
-        this.f29587p = z;
-        refreshDrawableState();
-        return true;
-    }
-
-    /* renamed from: v */
-    private boolean m23703v() {
-        return this.f29594w != null && getTopInset() > 0;
-    }
-
-    /* renamed from: x */
-    private boolean m23704x() {
-        if (getChildCount() <= 0) {
-            return false;
-        }
-        View childAt = getChildAt(0);
-        return (childAt.getVisibility() == 8 || C0311u.m2156v(childAt)) ? false : true;
-    }
-
-    /* renamed from: y */
-    private void m23705y(C8900g c8900g, boolean z) throws Resources.NotFoundException {
-        float dimension = getResources().getDimension(C8910d.f33866a);
-        float f2 = z ? 0.0f : dimension;
-        if (!z) {
-            dimension = 0.0f;
-        }
-        ValueAnimator valueAnimator = this.f29592u;
-        if (valueAnimator != null) {
-            valueAnimator.cancel();
-        }
-        ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(f2, dimension);
-        this.f29592u = valueAnimatorOfFloat;
-        valueAnimatorOfFloat.setDuration(getResources().getInteger(C8913g.f33937a));
-        this.f29592u.setInterpolator(C8919a.f34370a);
-        this.f29592u.addUpdateListener(new C7925b(c8900g));
-        this.f29592u.start();
-    }
-
-    /* renamed from: z */
-    private void m23706z() {
-        setWillNotDraw(!m23703v());
-    }
-
-    /* renamed from: a */
-    public void m23707a(InterfaceC7926c interfaceC7926c) {
-        if (this.f29585n == null) {
-            this.f29585n = new ArrayList();
-        }
-        if (interfaceC7926c == null || this.f29585n.contains(interfaceC7926c)) {
-            return;
-        }
-        this.f29585n.add(interfaceC7926c);
-    }
-
-    /* renamed from: b */
-    public void m23708b(InterfaceC7928e interfaceC7928e) {
-        m23707a(interfaceC7928e);
-    }
-
-    @Override // android.widget.LinearLayout, android.view.ViewGroup
-    protected boolean checkLayoutParams(ViewGroup.LayoutParams layoutParams) {
-        return layoutParams instanceof C7927d;
-    }
-
-    @Override // android.view.View
-    public void draw(Canvas canvas) {
-        super.draw(canvas);
-        if (m23703v()) {
-            int iSave = canvas.save();
-            canvas.translate(0.0f, -this.f29578g);
-            this.f29594w.draw(canvas);
-            canvas.restoreToCount(iSave);
-        }
-    }
-
-    @Override // android.view.ViewGroup, android.view.View
-    protected void drawableStateChanged() {
-        super.drawableStateChanged();
-        int[] drawableState = getDrawableState();
-        Drawable drawable = this.f29594w;
-        if (drawable != null && drawable.isStateful() && drawable.setState(drawableState)) {
-            invalidateDrawable(drawable);
-        }
-    }
-
-    /* JADX INFO: Access modifiers changed from: protected */
-    @Override // android.widget.LinearLayout, android.view.ViewGroup
-    /* renamed from: e, reason: merged with bridge method [inline-methods] */
-    public C7927d generateDefaultLayoutParams() {
-        return new C7927d(-1, -2);
-    }
-
-    @Override // android.widget.LinearLayout, android.view.ViewGroup
-    /* renamed from: f, reason: merged with bridge method [inline-methods] */
-    public C7927d generateLayoutParams(AttributeSet attributeSet) {
-        return new C7927d(getContext(), attributeSet);
-    }
-
-    /* JADX INFO: Access modifiers changed from: protected */
-    @Override // android.widget.LinearLayout, android.view.ViewGroup
-    /* renamed from: g, reason: merged with bridge method [inline-methods] */
-    public C7927d generateLayoutParams(ViewGroup.LayoutParams layoutParams) {
-        return (Build.VERSION.SDK_INT < 19 || !(layoutParams instanceof LinearLayout.LayoutParams)) ? layoutParams instanceof ViewGroup.MarginLayoutParams ? new C7927d((ViewGroup.MarginLayoutParams) layoutParams) : new C7927d(layoutParams) : new C7927d((LinearLayout.LayoutParams) layoutParams);
-    }
-
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.InterfaceC0225b
-    public CoordinatorLayout.AbstractC0226c<AppBarLayout> getBehavior() {
-        return new Behavior();
-    }
-
-    int getDownNestedPreScrollRange() throws NoSuchFieldException {
-        int iMin;
-        int iM2164z;
-        int i2 = this.f29580i;
-        if (i2 != -1) {
-            return i2;
-        }
-        int i3 = 0;
-        for (int childCount = getChildCount() - 1; childCount >= 0; childCount--) {
-            View childAt = getChildAt(childCount);
-            C7927d c7927d = (C7927d) childAt.getLayoutParams();
-            int measuredHeight = childAt.getMeasuredHeight();
-            int i4 = c7927d.f29620a;
-            if ((i4 & 5) != 5) {
-                if (i3 > 0) {
-                    break;
-                }
-            } else {
-                int i5 = ((LinearLayout.LayoutParams) c7927d).topMargin + ((LinearLayout.LayoutParams) c7927d).bottomMargin;
-                if ((i4 & 8) != 0) {
-                    iM2164z = C0311u.m2164z(childAt);
-                } else if ((i4 & 2) != 0) {
-                    iM2164z = measuredHeight - C0311u.m2164z(childAt);
-                } else {
-                    iMin = i5 + measuredHeight;
-                    if (childCount == 0 && C0311u.m2156v(childAt)) {
-                        iMin = Math.min(iMin, measuredHeight - getTopInset());
-                    }
-                    i3 += iMin;
-                }
-                iMin = i5 + iM2164z;
-                if (childCount == 0) {
-                    iMin = Math.min(iMin, measuredHeight - getTopInset());
-                }
-                i3 += iMin;
-            }
-        }
-        int iMax = Math.max(0, i3);
-        this.f29580i = iMax;
-        return iMax;
-    }
-
-    int getDownNestedScrollRange() {
-        int i2 = this.f29581j;
-        if (i2 != -1) {
-            return i2;
-        }
-        int childCount = getChildCount();
-        int i3 = 0;
-        int iM2164z = 0;
-        while (true) {
-            if (i3 >= childCount) {
-                break;
-            }
-            View childAt = getChildAt(i3);
-            C7927d c7927d = (C7927d) childAt.getLayoutParams();
-            int measuredHeight = childAt.getMeasuredHeight() + ((LinearLayout.LayoutParams) c7927d).topMargin + ((LinearLayout.LayoutParams) c7927d).bottomMargin;
-            int i4 = c7927d.f29620a;
-            if ((i4 & 1) == 0) {
-                break;
-            }
-            iM2164z += measuredHeight;
-            if ((i4 & 2) != 0) {
-                iM2164z -= C0311u.m2164z(childAt);
-                break;
-            }
-            i3++;
-        }
-        int iMax = Math.max(0, iM2164z);
-        this.f29581j = iMax;
-        return iMax;
-    }
-
-    public int getLiftOnScrollTargetViewId() {
-        return this.f29590s;
-    }
-
-    public final int getMinimumHeightForVisibleOverlappingContent() throws NoSuchFieldException {
-        int topInset = getTopInset();
-        int iM2164z = C0311u.m2164z(this);
-        if (iM2164z == 0) {
-            int childCount = getChildCount();
-            iM2164z = childCount >= 1 ? C0311u.m2164z(getChildAt(childCount - 1)) : 0;
-            if (iM2164z == 0) {
-                return getHeight() / 3;
-            }
-        }
-        return (iM2164z * 2) + topInset;
-    }
-
-    int getPendingAction() {
-        return this.f29583l;
-    }
-
-    public Drawable getStatusBarForeground() {
-        return this.f29594w;
-    }
-
-    @Deprecated
-    public float getTargetElevation() {
-        return 0.0f;
-    }
-
-    final int getTopInset() {
-        C0285c0 c0285c0 = this.f29584m;
-        if (c0285c0 != null) {
-            return c0285c0.m1884k();
-        }
-        return 0;
-    }
-
-    public final int getTotalScrollRange() {
-        int i2 = this.f29579h;
-        if (i2 != -1) {
-            return i2;
-        }
-        int childCount = getChildCount();
-        int i3 = 0;
-        int iM2164z = 0;
-        while (true) {
-            if (i3 >= childCount) {
-                break;
-            }
-            View childAt = getChildAt(i3);
-            C7927d c7927d = (C7927d) childAt.getLayoutParams();
-            int measuredHeight = childAt.getMeasuredHeight();
-            int i4 = c7927d.f29620a;
-            if ((i4 & 1) == 0) {
-                break;
-            }
-            iM2164z += measuredHeight + ((LinearLayout.LayoutParams) c7927d).topMargin + ((LinearLayout.LayoutParams) c7927d).bottomMargin;
-            if (i3 == 0 && C0311u.m2156v(childAt)) {
-                iM2164z -= getTopInset();
-            }
-            if ((i4 & 2) != 0) {
-                iM2164z -= C0311u.m2164z(childAt);
-                break;
-            }
-            i3++;
-        }
-        int iMax = Math.max(0, iM2164z);
-        this.f29579h = iMax;
-        return iMax;
-    }
-
-    int getUpNestedPreScrollRange() {
-        return getTotalScrollRange();
-    }
-
-    /* renamed from: h */
-    boolean m23712h() {
-        return this.f29582k;
-    }
-
-    /* renamed from: j */
-    boolean m23713j() {
-        return getTotalScrollRange() != 0;
-    }
-
-    /* renamed from: l */
-    public boolean m23714l() {
-        return this.f29589r;
-    }
-
-    /* renamed from: m */
-    void m23715m(int i2) {
-        this.f29578g = i2;
-        if (!willNotDraw()) {
-            C0311u.m2113Z(this);
-        }
-        List<InterfaceC7926c> list = this.f29585n;
-        if (list != null) {
-            int size = list.size();
-            for (int i3 = 0; i3 < size; i3++) {
-                InterfaceC7926c interfaceC7926c = this.f29585n.get(i3);
-                if (interfaceC7926c != null) {
-                    interfaceC7926c.onOffsetChanged(this, i2);
-                }
-            }
-        }
-    }
-
-    /* renamed from: n */
-    C0285c0 m23716n(C0285c0 c0285c0) {
-        C0285c0 c0285c02 = C0311u.m2156v(this) ? c0285c0 : null;
-        if (!C0954d.m6056a(this.f29584m, c0285c02)) {
-            this.f29584m = c0285c02;
-            m23706z();
-            requestLayout();
-        }
-        return c0285c0;
-    }
-
-    /* renamed from: o */
-    public void m23717o(InterfaceC7926c interfaceC7926c) {
-        List<InterfaceC7926c> list = this.f29585n;
-        if (list == null || interfaceC7926c == null) {
-            return;
-        }
-        list.remove(interfaceC7926c);
-    }
-
-    @Override // android.view.ViewGroup, android.view.View
-    protected void onAttachedToWindow() {
-        super.onAttachedToWindow();
-        C8901h.m28311e(this);
-    }
-
-    @Override // android.view.ViewGroup, android.view.View
-    protected int[] onCreateDrawableState(int i2) {
-        if (this.f29593v == null) {
-            this.f29593v = new int[4];
-        }
-        int[] iArr = this.f29593v;
-        int[] iArrOnCreateDrawableState = super.onCreateDrawableState(i2 + iArr.length);
-        boolean z = this.f29587p;
-        int i3 = C8908b.f33805F;
-        if (!z) {
-            i3 = -i3;
-        }
-        iArr[0] = i3;
-        iArr[1] = (z && this.f29588q) ? C8908b.f33806G : -C8908b.f33806G;
-        int i4 = C8908b.f33803D;
-        if (!z) {
-            i4 = -i4;
-        }
-        iArr[2] = i4;
-        iArr[3] = (z && this.f29588q) ? C8908b.f33802C : -C8908b.f33802C;
-        return LinearLayout.mergeDrawableStates(iArrOnCreateDrawableState, iArr);
-    }
-
-    @Override // android.view.ViewGroup, android.view.View
-    protected void onDetachedFromWindow() {
-        super.onDetachedFromWindow();
-        m23697c();
-    }
-
-    @Override // android.widget.LinearLayout, android.view.ViewGroup, android.view.View
-    protected void onLayout(boolean z, int i2, int i3, int i4, int i5) {
-        super.onLayout(z, i2, i3, i4, i5);
-        boolean z2 = true;
-        if (C0311u.m2156v(this) && m23704x()) {
-            int topInset = getTopInset();
-            for (int childCount = getChildCount() - 1; childCount >= 0; childCount--) {
-                C0311u.m2108U(getChildAt(childCount), topInset);
-            }
-        }
-        m23700k();
-        this.f29582k = false;
-        int childCount2 = getChildCount();
-        int i6 = 0;
-        while (true) {
-            if (i6 >= childCount2) {
-                break;
-            }
-            if (((C7927d) getChildAt(i6).getLayoutParams()).m23770b() != null) {
-                this.f29582k = true;
-                break;
-            }
-            i6++;
-        }
-        Drawable drawable = this.f29594w;
-        if (drawable != null) {
-            drawable.setBounds(0, 0, getWidth(), getTopInset());
-        }
-        if (this.f29586o) {
-            return;
-        }
-        if (!this.f29589r && !m23699i()) {
-            z2 = false;
-        }
-        m23702t(z2);
-    }
-
-    @Override // android.widget.LinearLayout, android.view.View
-    protected void onMeasure(int i2, int i3) {
-        super.onMeasure(i2, i3);
-        int mode = View.MeasureSpec.getMode(i3);
-        if (mode != 1073741824 && C0311u.m2156v(this) && m23704x()) {
-            int measuredHeight = getMeasuredHeight();
-            if (mode == Integer.MIN_VALUE) {
-                measuredHeight = C0937a.m5966b(getMeasuredHeight() + getTopInset(), 0, View.MeasureSpec.getSize(i3));
-            } else if (mode == 0) {
-                measuredHeight += getTopInset();
-            }
-            setMeasuredDimension(getMeasuredWidth(), measuredHeight);
-        }
-        m23700k();
-    }
-
-    /* renamed from: p */
-    public void m23718p(InterfaceC7928e interfaceC7928e) {
-        m23717o(interfaceC7928e);
-    }
-
-    /* renamed from: q */
-    void m23719q() {
-        this.f29583l = 0;
-    }
-
-    /* renamed from: r */
-    public void m23720r(boolean z, boolean z2) {
-        m23701s(z, z2, true);
-    }
-
-    @Override // android.view.View
-    public void setElevation(float f2) {
-        super.setElevation(f2);
-        C8901h.m28310d(this, f2);
-    }
-
-    public void setExpanded(boolean z) {
-        m23720r(z, C0311u.m2102O(this));
-    }
-
-    public void setLiftOnScroll(boolean z) {
-        this.f29589r = z;
-    }
-
-    public void setLiftOnScrollTargetViewId(int i2) {
-        this.f29590s = i2;
-        m23697c();
-    }
-
-    @Override // android.widget.LinearLayout
-    public void setOrientation(int i2) {
-        if (i2 != 1) {
-            throw new IllegalArgumentException("AppBarLayout is always vertical and does not support horizontal orientation");
-        }
-        super.setOrientation(i2);
-    }
-
-    public void setStatusBarForeground(Drawable drawable) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
-        Drawable drawable2 = this.f29594w;
-        if (drawable2 != drawable) {
-            if (drawable2 != null) {
-                drawable2.setCallback(null);
-            }
-            Drawable drawableMutate = drawable != null ? drawable.mutate() : null;
-            this.f29594w = drawableMutate;
-            if (drawableMutate != null) {
-                if (drawableMutate.isStateful()) {
-                    this.f29594w.setState(getDrawableState());
-                }
-                C0265a.m1816m(this.f29594w, C0311u.m2162y(this));
-                this.f29594w.setVisible(getVisibility() == 0, false);
-                this.f29594w.setCallback(this);
-            }
-            m23706z();
-            C0311u.m2113Z(this);
-        }
-    }
-
-    public void setStatusBarForegroundColor(int i2) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
-        setStatusBarForeground(new ColorDrawable(i2));
-    }
-
-    public void setStatusBarForegroundResource(int i2) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
-        setStatusBarForeground(C0833a.m5262d(getContext(), i2));
-    }
-
-    @Deprecated
-    public void setTargetElevation(float f2) throws Resources.NotFoundException {
-        if (Build.VERSION.SDK_INT >= 21) {
-            C7937e.m23806b(this, f2);
-        }
-    }
-
-    @Override // android.view.View
-    public void setVisibility(int i2) {
-        super.setVisibility(i2);
-        boolean z = i2 == 0;
-        Drawable drawable = this.f29594w;
-        if (drawable != null) {
-            drawable.setVisible(z, false);
-        }
-    }
-
-    /* renamed from: u */
-    boolean m23721u(boolean z) throws Resources.NotFoundException {
-        if (this.f29588q == z) {
-            return false;
-        }
-        this.f29588q = z;
-        refreshDrawableState();
-        if (!this.f29589r || !(getBackground() instanceof C8900g)) {
-            return true;
-        }
-        m23705y((C8900g) getBackground(), z);
-        return true;
-    }
-
-    @Override // android.view.View
-    protected boolean verifyDrawable(Drawable drawable) {
-        return super.verifyDrawable(drawable) || drawable == this.f29594w;
-    }
-
-    /* renamed from: w */
-    boolean m23722w(View view) {
-        View viewM23698d = m23698d(view);
-        if (viewM23698d != null) {
-            view = viewM23698d;
-        }
-        return view != null && (view.canScrollVertically(-1) || view.getScrollY() > 0);
-    }
-
-    protected static class BaseBehavior<T extends AppBarLayout> extends AbstractC7933a<T> {
-
-        /* renamed from: k */
-        private int f29595k;
-
-        /* renamed from: l */
-        private int f29596l;
-
-        /* renamed from: m */
-        private ValueAnimator f29597m;
-
-        /* renamed from: n */
-        private int f29598n;
-
-        /* renamed from: o */
-        private boolean f29599o;
-
-        /* renamed from: p */
-        private float f29600p;
-
-        /* renamed from: q */
-        private WeakReference<View> f29601q;
-
-        /* renamed from: r */
-        private AbstractC7923d f29602r;
-
-        /* renamed from: com.google.android.material.appbar.AppBarLayout$BaseBehavior$a */
-        class C7920a implements ValueAnimator.AnimatorUpdateListener {
-
-            /* renamed from: a */
-            final /* synthetic */ CoordinatorLayout f29606a;
-
-            /* renamed from: b */
-            final /* synthetic */ AppBarLayout f29607b;
-
-            C7920a(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout) {
-                this.f29606a = coordinatorLayout;
-                this.f29607b = appBarLayout;
-            }
-
-            @Override // android.animation.ValueAnimator.AnimatorUpdateListener
-            public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                BaseBehavior.this.m23791P(this.f29606a, this.f29607b, ((Integer) valueAnimator.getAnimatedValue()).intValue());
-            }
-        }
-
-        /* renamed from: com.google.android.material.appbar.AppBarLayout$BaseBehavior$b */
-        class C7921b implements InterfaceC0292f {
-
-            /* renamed from: a */
-            final /* synthetic */ CoordinatorLayout f29609a;
-
-            /* renamed from: b */
-            final /* synthetic */ AppBarLayout f29610b;
-
-            /* renamed from: c */
-            final /* synthetic */ View f29611c;
-
-            /* renamed from: d */
-            final /* synthetic */ int f29612d;
-
-            C7921b(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, View view, int i2) {
-                this.f29609a = coordinatorLayout;
-                this.f29610b = appBarLayout;
-                this.f29611c = view;
-                this.f29612d = i2;
-            }
-
-            /* JADX WARN: Multi-variable type inference failed */
-            @Override // androidx.core.view.p004d0.InterfaceC0292f
-            /* renamed from: a */
-            public boolean mo2032a(View view, InterfaceC0292f.a aVar) throws Resources.NotFoundException {
-                BaseBehavior.this.mo1463q(this.f29609a, this.f29610b, this.f29611c, 0, this.f29612d, new int[]{0, 0}, 1);
-                return true;
-            }
-        }
-
-        /* renamed from: com.google.android.material.appbar.AppBarLayout$BaseBehavior$c */
-        class C7922c implements InterfaceC0292f {
-
-            /* renamed from: a */
-            final /* synthetic */ AppBarLayout f29614a;
-
-            /* renamed from: b */
-            final /* synthetic */ boolean f29615b;
-
-            C7922c(AppBarLayout appBarLayout, boolean z) {
-                this.f29614a = appBarLayout;
-                this.f29615b = z;
-            }
-
-            @Override // androidx.core.view.p004d0.InterfaceC0292f
-            /* renamed from: a */
-            public boolean mo2032a(View view, InterfaceC0292f.a aVar) {
-                this.f29614a.setExpanded(this.f29615b);
-                return true;
-            }
-        }
-
-        /* renamed from: com.google.android.material.appbar.AppBarLayout$BaseBehavior$d */
-        public static abstract class AbstractC7923d<T extends AppBarLayout> {
-        }
-
-        public BaseBehavior() {
-            this.f29598n = -1;
-        }
-
-        /* renamed from: S */
-        private void m23724S(CoordinatorLayout coordinatorLayout, T t, View view) {
-            if (mo23741M() != (-t.getTotalScrollRange()) && view.canScrollVertically(1)) {
-                m23725T(coordinatorLayout, t, C0289c.a.f2360m, false);
-            }
-            if (mo23741M() != 0) {
-                if (!view.canScrollVertically(-1)) {
-                    m23725T(coordinatorLayout, t, C0289c.a.f2361n, true);
-                    return;
-                }
-                int i2 = -t.getDownNestedPreScrollRange();
-                if (i2 != 0) {
-                    C0311u.m2123e0(coordinatorLayout, C0289c.a.f2361n, null, new C7921b(coordinatorLayout, t, view, i2));
-                }
-            }
-        }
-
-        /* renamed from: T */
-        private void m23725T(CoordinatorLayout coordinatorLayout, T t, C0289c.a aVar, boolean z) {
-            C0311u.m2123e0(coordinatorLayout, aVar, null, new C7922c(t, z));
-        }
-
-        /* renamed from: U */
-        private void m23726U(CoordinatorLayout coordinatorLayout, T t, int i2, float f2) {
-            int iAbs = Math.abs(mo23741M() - i2);
-            float fAbs = Math.abs(f2);
-            m23727V(coordinatorLayout, t, i2, fAbs > 0.0f ? Math.round((iAbs / fAbs) * 1000.0f) * 3 : (int) (((iAbs / t.getHeight()) + 1.0f) * 150.0f));
-        }
-
-        /* renamed from: V */
-        private void m23727V(CoordinatorLayout coordinatorLayout, T t, int i2, int i3) {
-            int iMo23741M = mo23741M();
-            if (iMo23741M == i2) {
-                ValueAnimator valueAnimator = this.f29597m;
-                if (valueAnimator == null || !valueAnimator.isRunning()) {
-                    return;
-                }
-                this.f29597m.cancel();
-                return;
-            }
-            ValueAnimator valueAnimator2 = this.f29597m;
-            if (valueAnimator2 == null) {
-                ValueAnimator valueAnimator3 = new ValueAnimator();
-                this.f29597m = valueAnimator3;
-                valueAnimator3.setInterpolator(C8919a.f34374e);
-                this.f29597m.addUpdateListener(new C7920a(coordinatorLayout, t));
-            } else {
-                valueAnimator2.cancel();
-            }
-            this.f29597m.setDuration(Math.min(i3, 600));
-            this.f29597m.setIntValues(iMo23741M, i2);
-            this.f29597m.start();
-        }
-
-        /* renamed from: X */
-        private boolean m23728X(CoordinatorLayout coordinatorLayout, T t, View view) {
-            return t.m23713j() && coordinatorLayout.getHeight() - view.getHeight() <= t.getHeight();
-        }
-
-        /* renamed from: Y */
-        private static boolean m23729Y(int i2, int i3) {
-            return (i2 & i3) == i3;
-        }
-
-        /* renamed from: Z */
-        private View m23730Z(CoordinatorLayout coordinatorLayout) {
+        private View g0(CoordinatorLayout coordinatorLayout) {
             int childCount = coordinatorLayout.getChildCount();
-            for (int i2 = 0; i2 < childCount; i2++) {
-                View childAt = coordinatorLayout.getChildAt(i2);
-                if ((childAt instanceof InterfaceC0300j) || (childAt instanceof ListView) || (childAt instanceof ScrollView)) {
+            for (int i10 = 0; i10 < childCount; i10++) {
+                View childAt = coordinatorLayout.getChildAt(i10);
+                if ((childAt instanceof C) || (childAt instanceof AbsListView) || (childAt instanceof ScrollView)) {
                     return childAt;
                 }
             }
             return null;
         }
 
-        /* renamed from: a0 */
-        private static View m23731a0(AppBarLayout appBarLayout, int i2) {
-            int iAbs = Math.abs(i2);
+        private static View h0(AppBarLayout appBarLayout, int i10) {
+            int iAbs = Math.abs(i10);
             int childCount = appBarLayout.getChildCount();
-            for (int i3 = 0; i3 < childCount; i3++) {
-                View childAt = appBarLayout.getChildAt(i3);
+            for (int i11 = 0; i11 < childCount; i11++) {
+                View childAt = appBarLayout.getChildAt(i11);
                 if (iAbs >= childAt.getTop() && iAbs <= childAt.getBottom()) {
                     return childAt;
                 }
@@ -1109,157 +373,93 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Inte
             return null;
         }
 
-        /* renamed from: b0 */
-        private int m23732b0(T t, int i2) {
-            int childCount = t.getChildCount();
-            for (int i3 = 0; i3 < childCount; i3++) {
-                View childAt = t.getChildAt(i3);
+        private int i0(T t10, int i10) {
+            int childCount = t10.getChildCount();
+            for (int i11 = 0; i11 < childCount; i11++) {
+                View childAt = t10.getChildAt(i11);
                 int top = childAt.getTop();
                 int bottom = childAt.getBottom();
-                C7927d c7927d = (C7927d) childAt.getLayoutParams();
-                if (m23729Y(c7927d.m23769a(), 32)) {
-                    top -= ((LinearLayout.LayoutParams) c7927d).topMargin;
-                    bottom += ((LinearLayout.LayoutParams) c7927d).bottomMargin;
+                e eVar = (e) childAt.getLayoutParams();
+                if (e0(eVar.c(), 32)) {
+                    top -= ((LinearLayout.LayoutParams) eVar).topMargin;
+                    bottom += ((LinearLayout.LayoutParams) eVar).bottomMargin;
                 }
-                int i4 = -i2;
-                if (top <= i4 && bottom >= i4) {
-                    return i3;
+                int i12 = -i10;
+                if (top <= i12 && bottom >= i12) {
+                    return i11;
                 }
             }
             return -1;
         }
 
-        /* renamed from: e0 */
-        private int m23733e0(T t, int i2) {
-            int iAbs = Math.abs(i2);
-            int childCount = t.getChildCount();
+        /* JADX INFO: Access modifiers changed from: private */
+        public View j0(CoordinatorLayout coordinatorLayout) {
+            int childCount = coordinatorLayout.getChildCount();
+            for (int i10 = 0; i10 < childCount; i10++) {
+                View childAt = coordinatorLayout.getChildAt(i10);
+                if (((CoordinatorLayout.f) childAt.getLayoutParams()).f() instanceof ScrollingViewBehavior) {
+                    return childAt;
+                }
+            }
+            return null;
+        }
+
+        private int m0(T t10, int i10) {
+            int iAbs = Math.abs(i10);
+            int childCount = t10.getChildCount();
             int topInset = 0;
-            int i3 = 0;
+            int i11 = 0;
             while (true) {
-                if (i3 >= childCount) {
+                if (i11 >= childCount) {
                     break;
                 }
-                View childAt = t.getChildAt(i3);
-                C7927d c7927d = (C7927d) childAt.getLayoutParams();
-                Interpolator interpolatorM23770b = c7927d.m23770b();
+                View childAt = t10.getChildAt(i11);
+                e eVar = (e) childAt.getLayoutParams();
+                Interpolator interpolatorD = eVar.d();
                 if (iAbs < childAt.getTop() || iAbs > childAt.getBottom()) {
-                    i3++;
-                } else if (interpolatorM23770b != null) {
-                    int iM23769a = c7927d.m23769a();
-                    if ((iM23769a & 1) != 0) {
-                        topInset = 0 + childAt.getHeight() + ((LinearLayout.LayoutParams) c7927d).topMargin + ((LinearLayout.LayoutParams) c7927d).bottomMargin;
-                        if ((iM23769a & 2) != 0) {
-                            topInset -= C0311u.m2164z(childAt);
+                    i11++;
+                } else if (interpolatorD != null) {
+                    int iC = eVar.c();
+                    if ((iC & 1) != 0) {
+                        topInset = childAt.getHeight() + ((LinearLayout.LayoutParams) eVar).topMargin + ((LinearLayout.LayoutParams) eVar).bottomMargin;
+                        if ((iC & 2) != 0) {
+                            topInset -= X.A(childAt);
                         }
                     }
-                    if (C0311u.m2156v(childAt)) {
-                        topInset -= t.getTopInset();
+                    if (X.w(childAt)) {
+                        topInset -= t10.getTopInset();
                     }
                     if (topInset > 0) {
-                        float f2 = topInset;
-                        return Integer.signum(i2) * (childAt.getTop() + Math.round(f2 * interpolatorM23770b.getInterpolation((iAbs - childAt.getTop()) / f2)));
+                        float f10 = topInset;
+                        return Integer.signum(i10) * (childAt.getTop() + Math.round(f10 * interpolatorD.getInterpolation((iAbs - childAt.getTop()) / f10)));
                     }
                 }
             }
-            return i2;
+            return i10;
         }
 
-        /* renamed from: p0 */
-        private boolean m23734p0(CoordinatorLayout coordinatorLayout, T t) {
-            List<View> listM1435s = coordinatorLayout.m1435s(t);
-            int size = listM1435s.size();
-            for (int i2 = 0; i2 < size; i2++) {
-                CoordinatorLayout.AbstractC0226c abstractC0226cM1481f = ((CoordinatorLayout.C0229f) listM1435s.get(i2).getLayoutParams()).m1481f();
-                if (abstractC0226cM1481f instanceof ScrollingViewBehavior) {
-                    return ((ScrollingViewBehavior) abstractC0226cM1481f).m23795K() != 0;
+        private boolean z0(CoordinatorLayout coordinatorLayout, T t10) {
+            List<View> listS = coordinatorLayout.s(t10);
+            int size = listS.size();
+            for (int i10 = 0; i10 < size; i10++) {
+                CoordinatorLayout.c cVarF = ((CoordinatorLayout.f) listS.get(i10).getLayoutParams()).f();
+                if (cVarF instanceof ScrollingViewBehavior) {
+                    return ((ScrollingViewBehavior) cVarF).O() != 0;
                 }
             }
             return false;
         }
 
-        /* renamed from: q0 */
-        private void m23735q0(CoordinatorLayout coordinatorLayout, T t) {
-            int iMo23741M = mo23741M();
-            int iM23732b0 = m23732b0(t, iMo23741M);
-            if (iM23732b0 >= 0) {
-                View childAt = t.getChildAt(iM23732b0);
-                C7927d c7927d = (C7927d) childAt.getLayoutParams();
-                int iM23769a = c7927d.m23769a();
-                if ((iM23769a & 17) == 17) {
-                    int i2 = -childAt.getTop();
-                    int iM2164z = -childAt.getBottom();
-                    if (iM23732b0 == t.getChildCount() - 1) {
-                        iM2164z += t.getTopInset();
-                    }
-                    if (m23729Y(iM23769a, 2)) {
-                        iM2164z += C0311u.m2164z(childAt);
-                    } else if (m23729Y(iM23769a, 5)) {
-                        int iM2164z2 = C0311u.m2164z(childAt) + iM2164z;
-                        if (iMo23741M < iM2164z2) {
-                            i2 = iM2164z2;
-                        } else {
-                            iM2164z = iM2164z2;
-                        }
-                    }
-                    if (m23729Y(iM23769a, 32)) {
-                        i2 += ((LinearLayout.LayoutParams) c7927d).topMargin;
-                        iM2164z -= ((LinearLayout.LayoutParams) c7927d).bottomMargin;
-                    }
-                    if (iMo23741M < (iM2164z + i2) / 2) {
-                        i2 = iM2164z;
-                    }
-                    m23726U(coordinatorLayout, t, C0937a.m5966b(i2, -t.getTotalScrollRange(), 0), 0.0f);
-                }
-            }
-        }
-
-        /* renamed from: r0 */
-        private void m23736r0(CoordinatorLayout coordinatorLayout, T t) {
-            C0311u.m2119c0(coordinatorLayout, C0289c.a.f2360m.m2013b());
-            C0311u.m2119c0(coordinatorLayout, C0289c.a.f2361n.m2013b());
-            View viewM23730Z = m23730Z(coordinatorLayout);
-            if (viewM23730Z == null || t.getTotalScrollRange() == 0 || !(((CoordinatorLayout.C0229f) viewM23730Z.getLayoutParams()).m1481f() instanceof ScrollingViewBehavior)) {
-                return;
-            }
-            m23724S(coordinatorLayout, t, viewM23730Z);
-        }
-
-        /* renamed from: s0 */
-        private void m23737s0(CoordinatorLayout coordinatorLayout, T t, int i2, int i3, boolean z) throws NoSuchFieldException, Resources.NotFoundException {
-            View viewM23731a0 = m23731a0(t, i2);
-            if (viewM23731a0 != null) {
-                int iM23769a = ((C7927d) viewM23731a0.getLayoutParams()).m23769a();
-                boolean zM23722w = false;
-                if ((iM23769a & 1) != 0) {
-                    int iM2164z = C0311u.m2164z(viewM23731a0);
-                    if (i3 <= 0 || (iM23769a & 12) == 0 ? !((iM23769a & 2) == 0 || (-i2) < (viewM23731a0.getBottom() - iM2164z) - t.getTopInset()) : (-i2) >= (viewM23731a0.getBottom() - iM2164z) - t.getTopInset()) {
-                        zM23722w = true;
-                    }
-                }
-                if (t.m23714l()) {
-                    zM23722w = t.m23722w(m23730Z(coordinatorLayout));
-                }
-                boolean zM23721u = t.m23721u(zM23722w);
-                if (z || (zM23721u && m23734p0(coordinatorLayout, t))) {
-                    t.jumpDrawablesToCurrentState();
-                }
-            }
-        }
-
-        @Override // com.google.android.material.appbar.AbstractC7933a
-        /* renamed from: M */
-        int mo23741M() {
-            return mo23760E() + this.f29595k;
+        @Override // com.google.android.material.appbar.c
+        int Q() {
+            return I() + this.f35849L;
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.android.material.appbar.AbstractC7933a
-        /* renamed from: W, reason: merged with bridge method [inline-methods] */
-        public boolean mo23738H(T t) {
-            if (this.f29602r != null) {
-                throw null;
-            }
-            WeakReference<View> weakReference = this.f29601q;
+        @Override // com.google.android.material.appbar.c
+        /* renamed from: c0, reason: merged with bridge method [inline-methods] */
+        public boolean L(T t10) {
+            WeakReference<View> weakReference = this.f35853P;
             if (weakReference == null) {
                 return true;
             }
@@ -1268,361 +468,1316 @@ public class AppBarLayout extends LinearLayout implements CoordinatorLayout.Inte
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.android.material.appbar.AbstractC7933a
-        /* renamed from: c0, reason: merged with bridge method [inline-methods] */
-        public int mo23739K(T t) {
-            return -t.getDownNestedScrollRange();
+        @Override // com.google.android.material.appbar.c
+        /* renamed from: k0, reason: merged with bridge method [inline-methods] */
+        public int O(T t10) {
+            return (-t10.getDownNestedScrollRange()) + t10.getTopInset();
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.android.material.appbar.AbstractC7933a
-        /* renamed from: d0, reason: merged with bridge method [inline-methods] */
-        public int mo23740L(T t) {
-            return t.getTotalScrollRange();
+        @Override // com.google.android.material.appbar.c
+        /* renamed from: l0, reason: merged with bridge method [inline-methods] */
+        public int P(T t10) {
+            return t10.getTotalScrollRange();
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.android.material.appbar.AbstractC7933a
-        /* renamed from: f0, reason: merged with bridge method [inline-methods] */
-        public void mo23742N(CoordinatorLayout coordinatorLayout, T t) throws Resources.NotFoundException {
-            m23735q0(coordinatorLayout, t);
-            if (t.m23714l()) {
-                t.m23721u(t.m23722w(m23730Z(coordinatorLayout)));
+        @Override // com.google.android.material.appbar.c
+        /* renamed from: n0, reason: merged with bridge method [inline-methods] */
+        public void R(CoordinatorLayout coordinatorLayout, T t10) {
+            A0(coordinatorLayout, t10);
+            if (t10.o()) {
+                t10.y(t10.B(g0(coordinatorLayout)));
             }
         }
 
-        @Override // com.google.android.material.appbar.C7935c, androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-        /* renamed from: g0, reason: merged with bridge method [inline-methods] */
-        public boolean mo1458l(CoordinatorLayout coordinatorLayout, T t, int i2) throws NoSuchFieldException, Resources.NotFoundException {
-            boolean zMo1458l = super.mo1458l(coordinatorLayout, t, i2);
-            int pendingAction = t.getPendingAction();
-            int i3 = this.f29598n;
-            if (i3 >= 0 && (pendingAction & 8) == 0) {
-                View childAt = t.getChildAt(i3);
-                m23791P(coordinatorLayout, t, (-childAt.getBottom()) + (this.f29599o ? C0311u.m2164z(childAt) + t.getTopInset() : Math.round(childAt.getHeight() * this.f29600p)));
-            } else if (pendingAction != 0) {
-                boolean z = (pendingAction & 4) != 0;
-                if ((pendingAction & 2) != 0) {
-                    int i4 = -t.getUpNestedPreScrollRange();
-                    if (z) {
-                        m23726U(coordinatorLayout, t, i4, 0.0f);
-                    } else {
-                        m23791P(coordinatorLayout, t, i4);
-                    }
-                } else if ((pendingAction & 1) != 0) {
-                    if (z) {
-                        m23726U(coordinatorLayout, t, 0, 0.0f);
-                    } else {
-                        m23791P(coordinatorLayout, t, 0);
+        @Override // com.google.android.material.appbar.e, androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        /* renamed from: o0, reason: merged with bridge method [inline-methods] */
+        public boolean p(CoordinatorLayout coordinatorLayout, T t10, int i10) {
+            boolean zP = super.p(coordinatorLayout, t10, i10);
+            int pendingAction = t10.getPendingAction();
+            c cVar = this.f35852O;
+            if (cVar == null || (pendingAction & 8) != 0) {
+                if (pendingAction != 0) {
+                    boolean z10 = (pendingAction & 4) != 0;
+                    if ((pendingAction & 2) != 0) {
+                        int i11 = -t10.getUpNestedPreScrollRange();
+                        if (z10) {
+                            Z(coordinatorLayout, t10, i11, 0.0f);
+                        } else {
+                            T(coordinatorLayout, t10, i11);
+                        }
+                    } else if ((pendingAction & 1) != 0) {
+                        if (z10) {
+                            Z(coordinatorLayout, t10, 0, 0.0f);
+                        } else {
+                            T(coordinatorLayout, t10, 0);
+                        }
                     }
                 }
+            } else if (cVar.f35860D) {
+                T(coordinatorLayout, t10, -t10.getTotalScrollRange());
+            } else if (cVar.f35861E) {
+                T(coordinatorLayout, t10, 0);
+            } else {
+                View childAt = t10.getChildAt(cVar.f35862F);
+                T(coordinatorLayout, t10, (-childAt.getBottom()) + (this.f35852O.f35864H ? X.A(childAt) + t10.getTopInset() : Math.round(childAt.getHeight() * this.f35852O.f35863G)));
             }
-            t.m23719q();
-            this.f29598n = -1;
-            mo23761G(C0937a.m5966b(mo23760E(), -t.getTotalScrollRange(), 0));
-            m23737s0(coordinatorLayout, t, mo23760E(), 0, true);
-            t.m23715m(mo23760E());
-            m23736r0(coordinatorLayout, t);
-            return zMo1458l;
+            t10.u();
+            this.f35852O = null;
+            K(C3946a.b(I(), -t10.getTotalScrollRange(), 0));
+            B0(coordinatorLayout, t10, I(), 0, true);
+            t10.s(I());
+            Y(coordinatorLayout, t10);
+            return zP;
         }
 
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-        /* renamed from: h0, reason: merged with bridge method [inline-methods] */
-        public boolean mo1459m(CoordinatorLayout coordinatorLayout, T t, int i2, int i3, int i4, int i5) {
-            if (((ViewGroup.MarginLayoutParams) ((CoordinatorLayout.C0229f) t.getLayoutParams())).height != -2) {
-                return super.mo1459m(coordinatorLayout, t, i2, i3, i4, i5);
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        /* renamed from: p0, reason: merged with bridge method [inline-methods] */
+        public boolean q(CoordinatorLayout coordinatorLayout, T t10, int i10, int i11, int i12, int i13) {
+            if (((ViewGroup.MarginLayoutParams) ((CoordinatorLayout.f) t10.getLayoutParams())).height != -2) {
+                return super.q(coordinatorLayout, t10, i10, i11, i12, i13);
             }
-            coordinatorLayout.m1423J(t, i2, i3, View.MeasureSpec.makeMeasureSpec(0, 0), i5);
+            coordinatorLayout.J(t10, i10, i11, View.MeasureSpec.makeMeasureSpec(0, 0), i13);
             return true;
         }
 
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-        /* renamed from: i0, reason: merged with bridge method [inline-methods] */
-        public void mo1463q(CoordinatorLayout coordinatorLayout, T t, View view, int i2, int i3, int[] iArr, int i4) throws Resources.NotFoundException {
-            int i5;
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        /* renamed from: q0, reason: merged with bridge method [inline-methods] */
+        public void u(CoordinatorLayout coordinatorLayout, T t10, View view, int i10, int i11, int[] iArr, int i12) {
+            int i13;
             int downNestedPreScrollRange;
-            if (i3 != 0) {
-                if (i3 < 0) {
-                    int i6 = -t.getTotalScrollRange();
-                    i5 = i6;
-                    downNestedPreScrollRange = t.getDownNestedPreScrollRange() + i6;
+            if (i11 != 0) {
+                if (i11 < 0) {
+                    i13 = -t10.getTotalScrollRange();
+                    downNestedPreScrollRange = t10.getDownNestedPreScrollRange() + i13;
                 } else {
-                    i5 = -t.getUpNestedPreScrollRange();
+                    i13 = -t10.getUpNestedPreScrollRange();
                     downNestedPreScrollRange = 0;
                 }
-                if (i5 != downNestedPreScrollRange) {
-                    iArr[1] = m23790O(coordinatorLayout, t, i3, i5, downNestedPreScrollRange);
+                int i14 = i13;
+                int i15 = downNestedPreScrollRange;
+                if (i14 != i15) {
+                    iArr[1] = S(coordinatorLayout, t10, i11, i14, i15);
                 }
             }
-            if (t.m23714l()) {
-                t.m23721u(t.m23722w(view));
+            if (t10.o()) {
+                t10.y(t10.B(view));
             }
         }
 
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-        /* renamed from: j0, reason: merged with bridge method [inline-methods] */
-        public void mo1466t(CoordinatorLayout coordinatorLayout, T t, View view, int i2, int i3, int i4, int i5, int i6, int[] iArr) {
-            if (i5 < 0) {
-                iArr[1] = m23790O(coordinatorLayout, t, i5, -t.getDownNestedScrollRange(), 0);
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        /* renamed from: r0, reason: merged with bridge method [inline-methods] */
+        public void x(CoordinatorLayout coordinatorLayout, T t10, View view, int i10, int i11, int i12, int i13, int i14, int[] iArr) {
+            if (i13 < 0) {
+                iArr[1] = S(coordinatorLayout, t10, i13, -t10.getDownNestedScrollRange(), 0);
             }
-            if (i5 == 0) {
-                m23736r0(coordinatorLayout, t);
+            if (i13 == 0) {
+                Y(coordinatorLayout, t10);
             }
         }
 
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-        /* renamed from: k0, reason: merged with bridge method [inline-methods] */
-        public void mo1470x(CoordinatorLayout coordinatorLayout, T t, Parcelable parcelable) {
-            if (!(parcelable instanceof SavedState)) {
-                super.mo1470x(coordinatorLayout, t, parcelable);
-                this.f29598n = -1;
-                return;
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        /* renamed from: s0, reason: merged with bridge method [inline-methods] */
+        public void B(CoordinatorLayout coordinatorLayout, T t10, Parcelable parcelable) {
+            if (parcelable instanceof c) {
+                w0((c) parcelable, true);
+                super.B(coordinatorLayout, t10, this.f35852O.a());
+            } else {
+                super.B(coordinatorLayout, t10, parcelable);
+                this.f35852O = null;
             }
-            SavedState savedState = (SavedState) parcelable;
-            super.mo1470x(coordinatorLayout, t, savedState.m2342a());
-            this.f29598n = savedState.f29603h;
-            this.f29600p = savedState.f29604i;
-            this.f29599o = savedState.f29605j;
         }
 
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-        /* renamed from: l0, reason: merged with bridge method [inline-methods] */
-        public Parcelable mo1471y(CoordinatorLayout coordinatorLayout, T t) {
-            Parcelable parcelableMo1471y = super.mo1471y(coordinatorLayout, t);
-            int iMo23760E = mo23760E();
-            int childCount = t.getChildCount();
-            for (int i2 = 0; i2 < childCount; i2++) {
-                View childAt = t.getChildAt(i2);
-                int bottom = childAt.getBottom() + iMo23760E;
-                if (childAt.getTop() + iMo23760E <= 0 && bottom >= 0) {
-                    SavedState savedState = new SavedState(parcelableMo1471y);
-                    savedState.f29603h = i2;
-                    savedState.f29605j = bottom == C0311u.m2164z(childAt) + t.getTopInset();
-                    savedState.f29604i = bottom / childAt.getHeight();
-                    return savedState;
-                }
-            }
-            return parcelableMo1471y;
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        /* renamed from: t0, reason: merged with bridge method [inline-methods] */
+        public Parcelable C(CoordinatorLayout coordinatorLayout, T t10) {
+            Parcelable parcelableC = super.C(coordinatorLayout, t10);
+            c cVarX0 = x0(parcelableC, t10);
+            return cVarX0 == null ? parcelableC : cVarX0;
         }
 
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-        /* renamed from: m0, reason: merged with bridge method [inline-methods] */
-        public boolean mo1443A(CoordinatorLayout coordinatorLayout, T t, View view, View view2, int i2, int i3) {
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        /* renamed from: u0, reason: merged with bridge method [inline-methods] */
+        public boolean E(CoordinatorLayout coordinatorLayout, T t10, View view, View view2, int i10, int i11) {
             ValueAnimator valueAnimator;
-            boolean z = (i2 & 2) != 0 && (t.m23714l() || m23728X(coordinatorLayout, t, view));
-            if (z && (valueAnimator = this.f29597m) != null) {
+            boolean z10 = (i10 & 2) != 0 && (t10.o() || d0(coordinatorLayout, t10, view));
+            if (z10 && (valueAnimator = this.f35851N) != null) {
                 valueAnimator.cancel();
             }
-            this.f29601q = null;
-            this.f29596l = i3;
-            return z;
+            this.f35853P = null;
+            this.f35850M = i11;
+            return z10;
         }
 
-        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.AbstractC0226c
-        /* renamed from: n0, reason: merged with bridge method [inline-methods] */
-        public void mo1445C(CoordinatorLayout coordinatorLayout, T t, View view, int i2) throws Resources.NotFoundException {
-            if (this.f29596l == 0 || i2 == 1) {
-                m23735q0(coordinatorLayout, t);
-                if (t.m23714l()) {
-                    t.m23721u(t.m23722w(view));
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        /* renamed from: v0, reason: merged with bridge method [inline-methods] */
+        public void G(CoordinatorLayout coordinatorLayout, T t10, View view, int i10) {
+            if (this.f35850M == 0 || i10 == 1) {
+                A0(coordinatorLayout, t10);
+                if (t10.o()) {
+                    t10.y(t10.B(view));
                 }
             }
-            this.f29601q = new WeakReference<>(view);
+            this.f35853P = new WeakReference<>(view);
+        }
+
+        void w0(c cVar, boolean z10) {
+            if (this.f35852O == null || z10) {
+                this.f35852O = cVar;
+            }
+        }
+
+        c x0(Parcelable parcelable, T t10) {
+            int I10 = I();
+            int childCount = t10.getChildCount();
+            for (int i10 = 0; i10 < childCount; i10++) {
+                View childAt = t10.getChildAt(i10);
+                int bottom = childAt.getBottom() + I10;
+                if (childAt.getTop() + I10 <= 0 && bottom >= 0) {
+                    if (parcelable == null) {
+                        parcelable = AbstractC5121a.f53100C;
+                    }
+                    c cVar = new c(parcelable);
+                    boolean z10 = I10 == 0;
+                    cVar.f35861E = z10;
+                    cVar.f35860D = !z10 && (-I10) >= t10.getTotalScrollRange();
+                    cVar.f35862F = i10;
+                    cVar.f35864H = bottom == X.A(childAt) + t10.getTopInset();
+                    cVar.f35863G = bottom / childAt.getHeight();
+                    return cVar;
+                }
+            }
+            return null;
         }
 
         /* JADX INFO: Access modifiers changed from: package-private */
-        @Override // com.google.android.material.appbar.AbstractC7933a
-        /* renamed from: o0, reason: merged with bridge method [inline-methods] */
-        public int mo23743Q(CoordinatorLayout coordinatorLayout, T t, int i2, int i3, int i4) throws NoSuchFieldException, Resources.NotFoundException {
-            int iMo23741M = mo23741M();
-            int i5 = 0;
-            if (i3 == 0 || iMo23741M < i3 || iMo23741M > i4) {
-                this.f29595k = 0;
+        @Override // com.google.android.material.appbar.c
+        /* renamed from: y0, reason: merged with bridge method [inline-methods] */
+        public int U(CoordinatorLayout coordinatorLayout, T t10, int i10, int i11, int i12) {
+            int iQ = Q();
+            int i13 = 0;
+            if (i11 == 0 || iQ < i11 || iQ > i12) {
+                this.f35849L = 0;
             } else {
-                int iM5966b = C0937a.m5966b(i2, i3, i4);
-                if (iMo23741M != iM5966b) {
-                    int iM23733e0 = t.m23712h() ? m23733e0(t, iM5966b) : iM5966b;
-                    boolean zMo23761G = mo23761G(iM23733e0);
-                    i5 = iMo23741M - iM5966b;
-                    this.f29595k = iM5966b - iM23733e0;
-                    if (!zMo23761G && t.m23712h()) {
-                        coordinatorLayout.m1428f(t);
+                int iB = C3946a.b(i10, i11, i12);
+                if (iQ != iB) {
+                    int iM0 = t10.i() ? m0(t10, iB) : iB;
+                    boolean zK = K(iM0);
+                    int i14 = iQ - iB;
+                    this.f35849L = iB - iM0;
+                    if (zK) {
+                        while (i13 < t10.getChildCount()) {
+                            e eVar = (e) t10.getChildAt(i13).getLayoutParams();
+                            c cVarB = eVar.b();
+                            if (cVarB != null && (eVar.c() & 1) != 0) {
+                                cVarB.a(t10, t10.getChildAt(i13), I());
+                            }
+                            i13++;
+                        }
                     }
-                    t.m23715m(mo23760E());
-                    m23737s0(coordinatorLayout, t, iM5966b, iM5966b < iMo23741M ? -1 : 1, false);
+                    if (!zK && t10.i()) {
+                        coordinatorLayout.f(t10);
+                    }
+                    t10.s(I());
+                    B0(coordinatorLayout, t10, iB, iB < iQ ? -1 : 1, false);
+                    i13 = i14;
                 }
             }
-            m23736r0(coordinatorLayout, t);
-            return i5;
+            Y(coordinatorLayout, t10);
+            return i13;
         }
 
         public BaseBehavior(Context context, AttributeSet attributeSet) {
             super(context, attributeSet);
-            this.f29598n = -1;
         }
 
-        protected static class SavedState extends AbsSavedState {
-            public static final Parcelable.Creator<SavedState> CREATOR = new C7919a();
+        protected static class c extends AbstractC5121a {
+            public static final Parcelable.Creator<c> CREATOR = new a();
 
-            /* renamed from: h */
-            int f29603h;
+            /* renamed from: D, reason: collision with root package name */
+            boolean f35860D;
 
-            /* renamed from: i */
-            float f29604i;
+            /* renamed from: E, reason: collision with root package name */
+            boolean f35861E;
 
-            /* renamed from: j */
-            boolean f29605j;
+            /* renamed from: F, reason: collision with root package name */
+            int f35862F;
 
-            /* renamed from: com.google.android.material.appbar.AppBarLayout$BaseBehavior$SavedState$a */
-            static class C7919a implements Parcelable.ClassLoaderCreator<SavedState> {
-                C7919a() {
+            /* renamed from: G, reason: collision with root package name */
+            float f35863G;
+
+            /* renamed from: H, reason: collision with root package name */
+            boolean f35864H;
+
+            class a implements Parcelable.ClassLoaderCreator<c> {
+                a() {
                 }
 
                 @Override // android.os.Parcelable.Creator
                 /* renamed from: a, reason: merged with bridge method [inline-methods] */
-                public SavedState createFromParcel(Parcel parcel) {
-                    return new SavedState(parcel, null);
+                public c createFromParcel(Parcel parcel) {
+                    return new c(parcel, null);
                 }
 
                 @Override // android.os.Parcelable.ClassLoaderCreator
                 /* renamed from: b, reason: merged with bridge method [inline-methods] */
-                public SavedState createFromParcel(Parcel parcel, ClassLoader classLoader) {
-                    return new SavedState(parcel, classLoader);
+                public c createFromParcel(Parcel parcel, ClassLoader classLoader) {
+                    return new c(parcel, classLoader);
                 }
 
                 @Override // android.os.Parcelable.Creator
                 /* renamed from: c, reason: merged with bridge method [inline-methods] */
-                public SavedState[] newArray(int i2) {
-                    return new SavedState[i2];
+                public c[] newArray(int i10) {
+                    return new c[i10];
                 }
             }
 
-            public SavedState(Parcel parcel, ClassLoader classLoader) {
+            public c(Parcel parcel, ClassLoader classLoader) {
                 super(parcel, classLoader);
-                this.f29603h = parcel.readInt();
-                this.f29604i = parcel.readFloat();
-                this.f29605j = parcel.readByte() != 0;
+                this.f35860D = parcel.readByte() != 0;
+                this.f35861E = parcel.readByte() != 0;
+                this.f35862F = parcel.readInt();
+                this.f35863G = parcel.readFloat();
+                this.f35864H = parcel.readByte() != 0;
             }
 
-            @Override // androidx.customview.view.AbsSavedState, android.os.Parcelable
-            public void writeToParcel(Parcel parcel, int i2) {
-                super.writeToParcel(parcel, i2);
-                parcel.writeInt(this.f29603h);
-                parcel.writeFloat(this.f29604i);
-                parcel.writeByte(this.f29605j ? (byte) 1 : (byte) 0);
+            @Override // y1.AbstractC5121a, android.os.Parcelable
+            public void writeToParcel(Parcel parcel, int i10) {
+                super.writeToParcel(parcel, i10);
+                parcel.writeByte(this.f35860D ? (byte) 1 : (byte) 0);
+                parcel.writeByte(this.f35861E ? (byte) 1 : (byte) 0);
+                parcel.writeInt(this.f35862F);
+                parcel.writeFloat(this.f35863G);
+                parcel.writeByte(this.f35864H ? (byte) 1 : (byte) 0);
             }
 
-            public SavedState(Parcelable parcelable) {
+            public c(Parcelable parcelable) {
                 super(parcelable);
             }
         }
     }
 
-    /* JADX WARN: Illegal instructions before constructor call */
-    public AppBarLayout(Context context, AttributeSet attributeSet, int i2) throws IllegalAccessException, Resources.NotFoundException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
-        int i3 = f29577f;
-        super(C8079a.m24906c(context, attributeSet, i2, i3), attributeSet, i2);
-        this.f29579h = -1;
-        this.f29580i = -1;
-        this.f29581j = -1;
-        this.f29583l = 0;
-        Context context2 = getContext();
-        setOrientation(1);
-        int i4 = Build.VERSION.SDK_INT;
-        if (i4 >= 21) {
-            C7937e.m23805a(this);
-            C7937e.m23807c(this, attributeSet, i2, i3);
+    public static class Behavior extends BaseBehavior<AppBarLayout> {
+        public Behavior() {
         }
-        TypedArray typedArrayM24694h = C8032j.m24694h(context2, attributeSet, C8918l.f34258k, i2, i3, new int[0]);
-        C0311u.m2139m0(this, typedArrayM24694h.getDrawable(C8918l.f34265l));
-        if (getBackground() instanceof ColorDrawable) {
-            ColorDrawable colorDrawable = (ColorDrawable) getBackground();
-            C8900g c8900g = new C8900g();
-            c8900g.m28284X(ColorStateList.valueOf(colorDrawable.getColor()));
-            c8900g.m28278N(context2);
-            C0311u.m2139m0(this, c8900g);
+
+        @Override // com.google.android.material.appbar.c, androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        public /* bridge */ /* synthetic */ boolean H(CoordinatorLayout coordinatorLayout, View view, MotionEvent motionEvent) {
+            return super.H(coordinatorLayout, view, motionEvent);
         }
-        int i5 = C8918l.f34293p;
-        if (typedArrayM24694h.hasValue(i5)) {
-            m23701s(typedArrayM24694h.getBoolean(i5, false), false, false);
+
+        @Override // com.google.android.material.appbar.e
+        public /* bridge */ /* synthetic */ int I() {
+            return super.I();
         }
-        if (i4 >= 21) {
-            if (typedArrayM24694h.hasValue(C8918l.f34286o)) {
-                C7937e.m23806b(this, typedArrayM24694h.getDimensionPixelSize(r13, 0));
-            }
+
+        @Override // com.google.android.material.appbar.e
+        public /* bridge */ /* synthetic */ boolean K(int i10) {
+            return super.K(i10);
         }
-        if (i4 >= 26) {
-            int i6 = C8918l.f34279n;
-            if (typedArrayM24694h.hasValue(i6)) {
-                setKeyboardNavigationCluster(typedArrayM24694h.getBoolean(i6, false));
-            }
-            int i7 = C8918l.f34272m;
-            if (typedArrayM24694h.hasValue(i7)) {
-                setTouchscreenBlocksFocus(typedArrayM24694h.getBoolean(i7, false));
-            }
+
+        @Override // com.google.android.material.appbar.c, androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        public /* bridge */ /* synthetic */ boolean o(CoordinatorLayout coordinatorLayout, View view, MotionEvent motionEvent) {
+            return super.o(coordinatorLayout, view, motionEvent);
         }
-        this.f29589r = typedArrayM24694h.getBoolean(C8918l.f34300q, false);
-        this.f29590s = typedArrayM24694h.getResourceId(C8918l.f34307r, -1);
-        setStatusBarForeground(typedArrayM24694h.getDrawable(C8918l.f34314s));
-        typedArrayM24694h.recycle();
-        C0311u.m2157v0(this, new C7924a());
+
+        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
+        /* renamed from: o0 */
+        public /* bridge */ /* synthetic */ boolean p(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, int i10) {
+            return super.p(coordinatorLayout, appBarLayout, i10);
+        }
+
+        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
+        /* renamed from: p0 */
+        public /* bridge */ /* synthetic */ boolean q(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, int i10, int i11, int i12, int i13) {
+            return super.q(coordinatorLayout, appBarLayout, i10, i11, i12, i13);
+        }
+
+        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
+        /* renamed from: q0 */
+        public /* bridge */ /* synthetic */ void u(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, View view, int i10, int i11, int[] iArr, int i12) {
+            super.u(coordinatorLayout, appBarLayout, view, i10, i11, iArr, i12);
+        }
+
+        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
+        /* renamed from: r0 */
+        public /* bridge */ /* synthetic */ void x(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, View view, int i10, int i11, int i12, int i13, int i14, int[] iArr) {
+            super.x(coordinatorLayout, appBarLayout, view, i10, i11, i12, i13, i14, iArr);
+        }
+
+        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
+        /* renamed from: s0 */
+        public /* bridge */ /* synthetic */ void B(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, Parcelable parcelable) {
+            super.B(coordinatorLayout, appBarLayout, parcelable);
+        }
+
+        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
+        /* renamed from: t0 */
+        public /* bridge */ /* synthetic */ Parcelable C(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout) {
+            return super.C(coordinatorLayout, appBarLayout);
+        }
+
+        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
+        /* renamed from: u0 */
+        public /* bridge */ /* synthetic */ boolean E(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, View view, View view2, int i10, int i11) {
+            return super.E(coordinatorLayout, appBarLayout, view, view2, i10, i11);
+        }
+
+        @Override // com.google.android.material.appbar.AppBarLayout.BaseBehavior
+        /* renamed from: v0 */
+        public /* bridge */ /* synthetic */ void G(CoordinatorLayout coordinatorLayout, AppBarLayout appBarLayout, View view, int i10) {
+            super.G(coordinatorLayout, appBarLayout, view, i10);
+        }
+
+        public Behavior(Context context, AttributeSet attributeSet) {
+            super(context, attributeSet);
+        }
     }
 
-    /* renamed from: com.google.android.material.appbar.AppBarLayout$d */
-    public static class C7927d extends LinearLayout.LayoutParams {
+    public static class ScrollingViewBehavior extends com.google.android.material.appbar.d {
+        public ScrollingViewBehavior() {
+        }
 
-        /* renamed from: a */
-        int f29620a;
+        private static int V(AppBarLayout appBarLayout) {
+            CoordinatorLayout.c cVarF = ((CoordinatorLayout.f) appBarLayout.getLayoutParams()).f();
+            if (cVarF instanceof BaseBehavior) {
+                return ((BaseBehavior) cVarF).Q();
+            }
+            return 0;
+        }
 
-        /* renamed from: b */
-        Interpolator f29621b;
+        private void W(View view, View view2) {
+            CoordinatorLayout.c cVarF = ((CoordinatorLayout.f) view2.getLayoutParams()).f();
+            if (cVarF instanceof BaseBehavior) {
+                X.Y(view, (((view2.getBottom() - view.getTop()) + ((BaseBehavior) cVarF).f35849L) + Q()) - M(view2));
+            }
+        }
 
-        public C7927d(Context context, AttributeSet attributeSet) {
+        private void X(View view, View view2) {
+            if (view2 instanceof AppBarLayout) {
+                AppBarLayout appBarLayout = (AppBarLayout) view2;
+                if (appBarLayout.o()) {
+                    appBarLayout.y(appBarLayout.B(view));
+                }
+            }
+        }
+
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        public boolean A(CoordinatorLayout coordinatorLayout, View view, Rect rect, boolean z10) {
+            AppBarLayout appBarLayoutL = L(coordinatorLayout.r(view));
+            if (appBarLayoutL != null) {
+                Rect rect2 = new Rect(rect);
+                rect2.offset(view.getLeft(), view.getTop());
+                Rect rect3 = this.f35895E;
+                rect3.set(0, 0, coordinatorLayout.getWidth(), coordinatorLayout.getHeight());
+                if (!rect3.contains(rect2)) {
+                    appBarLayoutL.v(false, !z10);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        @Override // com.google.android.material.appbar.d
+        float N(View view) {
+            int i10;
+            if (view instanceof AppBarLayout) {
+                AppBarLayout appBarLayout = (AppBarLayout) view;
+                int totalScrollRange = appBarLayout.getTotalScrollRange();
+                int downNestedPreScrollRange = appBarLayout.getDownNestedPreScrollRange();
+                int iV = V(appBarLayout);
+                if ((downNestedPreScrollRange == 0 || totalScrollRange + iV > downNestedPreScrollRange) && (i10 = totalScrollRange - downNestedPreScrollRange) != 0) {
+                    return (iV / i10) + 1.0f;
+                }
+            }
+            return 0.0f;
+        }
+
+        @Override // com.google.android.material.appbar.d
+        int P(View view) {
+            return view instanceof AppBarLayout ? ((AppBarLayout) view).getTotalScrollRange() : super.P(view);
+        }
+
+        /* JADX INFO: Access modifiers changed from: package-private */
+        @Override // com.google.android.material.appbar.d
+        /* renamed from: U, reason: merged with bridge method [inline-methods] */
+        public AppBarLayout L(List<View> list) {
+            int size = list.size();
+            for (int i10 = 0; i10 < size; i10++) {
+                View view = list.get(i10);
+                if (view instanceof AppBarLayout) {
+                    return (AppBarLayout) view;
+                }
+            }
+            return null;
+        }
+
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        public boolean i(CoordinatorLayout coordinatorLayout, View view, View view2) {
+            return view2 instanceof AppBarLayout;
+        }
+
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        public boolean l(CoordinatorLayout coordinatorLayout, View view, View view2) {
+            W(view, view2);
+            X(view, view2);
+            return false;
+        }
+
+        @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        public void m(CoordinatorLayout coordinatorLayout, View view, View view2) {
+            if (view2 instanceof AppBarLayout) {
+                X.n0(coordinatorLayout, null);
+            }
+        }
+
+        @Override // com.google.android.material.appbar.e, androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        public /* bridge */ /* synthetic */ boolean p(CoordinatorLayout coordinatorLayout, View view, int i10) {
+            return super.p(coordinatorLayout, view, i10);
+        }
+
+        @Override // com.google.android.material.appbar.d, androidx.coordinatorlayout.widget.CoordinatorLayout.c
+        public /* bridge */ /* synthetic */ boolean q(CoordinatorLayout coordinatorLayout, View view, int i10, int i11, int i12, int i13) {
+            return super.q(coordinatorLayout, view, i10, i11, i12, i13);
+        }
+
+        public ScrollingViewBehavior(Context context, AttributeSet attributeSet) {
             super(context, attributeSet);
-            this.f29620a = 1;
-            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C8918l.f34328u);
-            this.f29620a = typedArrayObtainStyledAttributes.getInt(C8918l.f34335v, 0);
-            int i2 = C8918l.f34342w;
-            if (typedArrayObtainStyledAttributes.hasValue(i2)) {
-                this.f29621b = AnimationUtils.loadInterpolator(context, typedArrayObtainStyledAttributes.getResourceId(i2, 0));
+            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, m.f2868b6);
+            S(typedArrayObtainStyledAttributes.getDimensionPixelSize(m.f2879c6, 0));
+            typedArrayObtainStyledAttributes.recycle();
+        }
+    }
+
+    class a implements I {
+        a() {
+        }
+
+        @Override // s1.I
+        public C4469y0 a(View view, C4469y0 c4469y0) {
+            return AppBarLayout.this.t(c4469y0);
+        }
+    }
+
+    public interface b<T extends AppBarLayout> {
+        void a(T t10, int i10);
+    }
+
+    public static abstract class c {
+        public abstract void a(AppBarLayout appBarLayout, View view, float f10);
+    }
+
+    public static class d extends c {
+
+        /* renamed from: a, reason: collision with root package name */
+        private final Rect f35866a = new Rect();
+
+        /* renamed from: b, reason: collision with root package name */
+        private final Rect f35867b = new Rect();
+
+        private static void b(Rect rect, AppBarLayout appBarLayout, View view) {
+            view.getDrawingRect(rect);
+            appBarLayout.offsetDescendantRectToMyCoords(view, rect);
+            rect.offset(0, -appBarLayout.getTopInset());
+        }
+
+        @Override // com.google.android.material.appbar.AppBarLayout.c
+        public void a(AppBarLayout appBarLayout, View view, float f10) {
+            b(this.f35866a, appBarLayout, view);
+            float fAbs = this.f35866a.top - Math.abs(f10);
+            if (fAbs > 0.0f) {
+                X.u0(view, null);
+                view.setTranslationY(0.0f);
+                view.setVisibility(0);
+                return;
+            }
+            float fA = 1.0f - C3946a.a(Math.abs(fAbs / this.f35866a.height()), 0.0f, 1.0f);
+            float fHeight = (-fAbs) - ((this.f35866a.height() * 0.3f) * (1.0f - (fA * fA)));
+            view.setTranslationY(fHeight);
+            view.getDrawingRect(this.f35867b);
+            this.f35867b.offset(0, (int) (-fHeight));
+            if (fHeight >= this.f35867b.height()) {
+                view.setVisibility(4);
+            } else {
+                view.setVisibility(0);
+            }
+            X.u0(view, this.f35867b);
+        }
+    }
+
+    public interface f {
+        void a(float f10, int i10);
+    }
+
+    public AppBarLayout(Context context, AttributeSet attributeSet) {
+        this(context, attributeSet, C7.c.f2303a);
+    }
+
+    private boolean A() {
+        return this.f35845W != null && getTopInset() > 0;
+    }
+
+    private boolean C() {
+        if (getChildCount() <= 0) {
+            return false;
+        }
+        View childAt = getChildAt(0);
+        return (childAt.getVisibility() == 8 || X.w(childAt)) ? false : true;
+    }
+
+    private void D(float f10, float f11) {
+        ValueAnimator valueAnimator = this.f35839Q;
+        if (valueAnimator != null) {
+            valueAnimator.cancel();
+        }
+        ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(f10, f11);
+        this.f35839Q = valueAnimatorOfFloat;
+        valueAnimatorOfFloat.setDuration(this.f35842T);
+        this.f35839Q.setInterpolator(this.f35843U);
+        ValueAnimator.AnimatorUpdateListener animatorUpdateListener = this.f35840R;
+        if (animatorUpdateListener != null) {
+            this.f35839Q.addUpdateListener(animatorUpdateListener);
+        }
+        this.f35839Q.start();
+    }
+
+    private void E() {
+        setWillNotDraw(!A());
+    }
+
+    private void c() {
+        WeakReference<View> weakReference = this.f35837O;
+        if (weakReference != null) {
+            weakReference.clear();
+        }
+        this.f35837O = null;
+    }
+
+    private Integer d() {
+        Drawable drawable = this.f35845W;
+        if (drawable instanceof X7.g) {
+            return Integer.valueOf(((X7.g) drawable).A());
+        }
+        ColorStateList colorStateListF = com.google.android.material.drawable.d.f(drawable);
+        if (colorStateListF != null) {
+            return Integer.valueOf(colorStateListF.getDefaultColor());
+        }
+        return null;
+    }
+
+    private View e(View view) {
+        int i10;
+        if (this.f35837O == null && (i10 = this.f35836N) != -1) {
+            View viewFindViewById = view != null ? view.findViewById(i10) : null;
+            if (viewFindViewById == null && (getParent() instanceof ViewGroup)) {
+                viewFindViewById = ((ViewGroup) getParent()).findViewById(this.f35836N);
+            }
+            if (viewFindViewById != null) {
+                this.f35837O = new WeakReference<>(viewFindViewById);
+            }
+        }
+        WeakReference<View> weakReference = this.f35837O;
+        if (weakReference != null) {
+            return weakReference.get();
+        }
+        return null;
+    }
+
+    private boolean j() {
+        int childCount = getChildCount();
+        for (int i10 = 0; i10 < childCount; i10++) {
+            if (((e) getChildAt(i10).getLayoutParams()).e()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void l(final X7.g gVar, final ColorStateList colorStateList, final ColorStateList colorStateList2) {
+        final Integer numF = M7.a.f(getContext(), C7.c.f2331p);
+        this.f35840R = new ValueAnimator.AnimatorUpdateListener() { // from class: com.google.android.material.appbar.a
+            @Override // android.animation.ValueAnimator.AnimatorUpdateListener
+            public final void onAnimationUpdate(ValueAnimator valueAnimator) {
+                this.f35878a.q(colorStateList, colorStateList2, gVar, numF, valueAnimator);
+            }
+        };
+        X.r0(this, gVar);
+    }
+
+    private void m(Context context, final X7.g gVar) {
+        gVar.Q(context);
+        this.f35840R = new ValueAnimator.AnimatorUpdateListener() { // from class: com.google.android.material.appbar.b
+            @Override // android.animation.ValueAnimator.AnimatorUpdateListener
+            public final void onAnimationUpdate(ValueAnimator valueAnimator) {
+                this.f35883a.r(gVar, valueAnimator);
+            }
+        };
+        X.r0(this, gVar);
+    }
+
+    private void n() {
+        Behavior behavior = this.f35848c0;
+        BaseBehavior.c cVarX0 = (behavior == null || this.f35825C == -1 || this.f35829G != 0) ? null : behavior.x0(AbstractC5121a.f53100C, this);
+        this.f35825C = -1;
+        this.f35826D = -1;
+        this.f35827E = -1;
+        if (cVarX0 != null) {
+            this.f35848c0.w0(cVarX0, false);
+        }
+    }
+
+    private boolean p() {
+        return getBackground() instanceof X7.g;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void q(ColorStateList colorStateList, ColorStateList colorStateList2, X7.g gVar, Integer num, ValueAnimator valueAnimator) {
+        Integer num2;
+        int iJ = M7.a.j(colorStateList.getDefaultColor(), colorStateList2.getDefaultColor(), ((Float) valueAnimator.getAnimatedValue()).floatValue());
+        gVar.b0(ColorStateList.valueOf(iJ));
+        if (this.f35845W != null && (num2 = this.f35846a0) != null && num2.equals(num)) {
+            C3784a.n(this.f35845W, iJ);
+        }
+        if (this.f35841S.isEmpty()) {
+            return;
+        }
+        for (f fVar : this.f35841S) {
+            if (gVar.x() != null) {
+                fVar.a(0.0f, iJ);
+            }
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public /* synthetic */ void r(X7.g gVar, ValueAnimator valueAnimator) {
+        float fFloatValue = ((Float) valueAnimator.getAnimatedValue()).floatValue();
+        gVar.a0(fFloatValue);
+        Drawable drawable = this.f35845W;
+        if (drawable instanceof X7.g) {
+            ((X7.g) drawable).a0(fFloatValue);
+        }
+        Iterator<f> it = this.f35841S.iterator();
+        while (it.hasNext()) {
+            it.next().a(fFloatValue, gVar.A());
+        }
+    }
+
+    private void w(boolean z10, boolean z11, boolean z12) {
+        this.f35829G = (z10 ? 1 : 2) | (z11 ? 4 : 0) | (z12 ? 8 : 0);
+        requestLayout();
+    }
+
+    private boolean x(boolean z10) {
+        if (this.f35833K == z10) {
+            return false;
+        }
+        this.f35833K = z10;
+        refreshDrawableState();
+        return true;
+    }
+
+    boolean B(View view) {
+        View viewE = e(view);
+        if (viewE != null) {
+            view = viewE;
+        }
+        return view != null && (view.canScrollVertically(-1) || view.getScrollY() > 0);
+    }
+
+    @Override // android.widget.LinearLayout, android.view.ViewGroup
+    protected boolean checkLayoutParams(ViewGroup.LayoutParams layoutParams) {
+        return layoutParams instanceof e;
+    }
+
+    @Override // android.view.View
+    public void draw(Canvas canvas) {
+        super.draw(canvas);
+        if (A()) {
+            int iSave = canvas.save();
+            canvas.translate(0.0f, -this.f35824B);
+            this.f35845W.draw(canvas);
+            canvas.restoreToCount(iSave);
+        }
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    protected void drawableStateChanged() {
+        super.drawableStateChanged();
+        int[] drawableState = getDrawableState();
+        Drawable drawable = this.f35845W;
+        if (drawable != null && drawable.isStateful() && drawable.setState(drawableState)) {
+            invalidateDrawable(drawable);
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // android.widget.LinearLayout, android.view.ViewGroup
+    /* renamed from: f, reason: merged with bridge method [inline-methods] */
+    public e generateDefaultLayoutParams() {
+        return new e(-1, -2);
+    }
+
+    @Override // android.widget.LinearLayout, android.view.ViewGroup
+    /* renamed from: g, reason: merged with bridge method [inline-methods] */
+    public e generateLayoutParams(AttributeSet attributeSet) {
+        return new e(getContext(), attributeSet);
+    }
+
+    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.b
+    public CoordinatorLayout.c<AppBarLayout> getBehavior() {
+        Behavior behavior = new Behavior();
+        this.f35848c0 = behavior;
+        return behavior;
+    }
+
+    int getDownNestedPreScrollRange() {
+        int iMin;
+        int iA;
+        int i10 = this.f35826D;
+        if (i10 != -1) {
+            return i10;
+        }
+        int i11 = 0;
+        for (int childCount = getChildCount() - 1; childCount >= 0; childCount--) {
+            View childAt = getChildAt(childCount);
+            if (childAt.getVisibility() != 8) {
+                e eVar = (e) childAt.getLayoutParams();
+                int measuredHeight = childAt.getMeasuredHeight();
+                int i12 = eVar.f35868a;
+                if ((i12 & 5) != 5) {
+                    if (i11 > 0) {
+                        break;
+                    }
+                } else {
+                    int i13 = ((LinearLayout.LayoutParams) eVar).topMargin + ((LinearLayout.LayoutParams) eVar).bottomMargin;
+                    if ((i12 & 8) != 0) {
+                        iA = X.A(childAt);
+                    } else if ((i12 & 2) != 0) {
+                        iA = measuredHeight - X.A(childAt);
+                    } else {
+                        iMin = i13 + measuredHeight;
+                        if (childCount == 0 && X.w(childAt)) {
+                            iMin = Math.min(iMin, measuredHeight - getTopInset());
+                        }
+                        i11 += iMin;
+                    }
+                    iMin = i13 + iA;
+                    if (childCount == 0) {
+                        iMin = Math.min(iMin, measuredHeight - getTopInset());
+                    }
+                    i11 += iMin;
+                }
+            }
+        }
+        int iMax = Math.max(0, i11);
+        this.f35826D = iMax;
+        return iMax;
+    }
+
+    int getDownNestedScrollRange() {
+        int i10 = this.f35827E;
+        if (i10 != -1) {
+            return i10;
+        }
+        int childCount = getChildCount();
+        int i11 = 0;
+        int iA = 0;
+        while (true) {
+            if (i11 >= childCount) {
+                break;
+            }
+            View childAt = getChildAt(i11);
+            if (childAt.getVisibility() != 8) {
+                e eVar = (e) childAt.getLayoutParams();
+                int measuredHeight = childAt.getMeasuredHeight() + ((LinearLayout.LayoutParams) eVar).topMargin + ((LinearLayout.LayoutParams) eVar).bottomMargin;
+                int i12 = eVar.f35868a;
+                if ((i12 & 1) == 0) {
+                    break;
+                }
+                iA += measuredHeight;
+                if ((i12 & 2) != 0) {
+                    iA -= X.A(childAt);
+                    break;
+                }
+            }
+            i11++;
+        }
+        int iMax = Math.max(0, iA);
+        this.f35827E = iMax;
+        return iMax;
+    }
+
+    public int getLiftOnScrollTargetViewId() {
+        return this.f35836N;
+    }
+
+    public X7.g getMaterialShapeBackground() {
+        Drawable background = getBackground();
+        if (background instanceof X7.g) {
+            return (X7.g) background;
+        }
+        return null;
+    }
+
+    public final int getMinimumHeightForVisibleOverlappingContent() {
+        int topInset = getTopInset();
+        int iA = X.A(this);
+        if (iA == 0) {
+            int childCount = getChildCount();
+            iA = childCount >= 1 ? X.A(getChildAt(childCount - 1)) : 0;
+            if (iA == 0) {
+                return getHeight() / 3;
+            }
+        }
+        return (iA * 2) + topInset;
+    }
+
+    int getPendingAction() {
+        return this.f35829G;
+    }
+
+    public Drawable getStatusBarForeground() {
+        return this.f35845W;
+    }
+
+    @Deprecated
+    public float getTargetElevation() {
+        return 0.0f;
+    }
+
+    final int getTopInset() {
+        C4469y0 c4469y0 = this.f35830H;
+        if (c4469y0 != null) {
+            return c4469y0.l();
+        }
+        return 0;
+    }
+
+    public final int getTotalScrollRange() {
+        int i10 = this.f35825C;
+        if (i10 != -1) {
+            return i10;
+        }
+        int childCount = getChildCount();
+        int i11 = 0;
+        int iA = 0;
+        while (true) {
+            if (i11 >= childCount) {
+                break;
+            }
+            View childAt = getChildAt(i11);
+            if (childAt.getVisibility() != 8) {
+                e eVar = (e) childAt.getLayoutParams();
+                int measuredHeight = childAt.getMeasuredHeight();
+                int i12 = eVar.f35868a;
+                if ((i12 & 1) == 0) {
+                    break;
+                }
+                iA += measuredHeight + ((LinearLayout.LayoutParams) eVar).topMargin + ((LinearLayout.LayoutParams) eVar).bottomMargin;
+                if (i11 == 0 && X.w(childAt)) {
+                    iA -= getTopInset();
+                }
+                if ((i12 & 2) != 0) {
+                    iA -= X.A(childAt);
+                    break;
+                }
+            }
+            i11++;
+        }
+        int iMax = Math.max(0, iA);
+        this.f35825C = iMax;
+        return iMax;
+    }
+
+    int getUpNestedPreScrollRange() {
+        return getTotalScrollRange();
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // android.widget.LinearLayout, android.view.ViewGroup
+    /* renamed from: h, reason: merged with bridge method [inline-methods] */
+    public e generateLayoutParams(ViewGroup.LayoutParams layoutParams) {
+        return layoutParams instanceof LinearLayout.LayoutParams ? new e((LinearLayout.LayoutParams) layoutParams) : layoutParams instanceof ViewGroup.MarginLayoutParams ? new e((ViewGroup.MarginLayoutParams) layoutParams) : new e(layoutParams);
+    }
+
+    boolean i() {
+        return this.f35828F;
+    }
+
+    boolean k() {
+        return getTotalScrollRange() != 0;
+    }
+
+    public boolean o() {
+        return this.f35835M;
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        h.e(this);
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    protected int[] onCreateDrawableState(int i10) {
+        if (this.f35844V == null) {
+            this.f35844V = new int[4];
+        }
+        int[] iArr = this.f35844V;
+        int[] iArrOnCreateDrawableState = super.onCreateDrawableState(i10 + iArr.length);
+        boolean z10 = this.f35833K;
+        int i11 = C7.c.f2312e0;
+        if (!z10) {
+            i11 = -i11;
+        }
+        iArr[0] = i11;
+        iArr[1] = (z10 && this.f35834L) ? C7.c.f2314f0 : -C7.c.f2314f0;
+        int i12 = C7.c.f2304a0;
+        if (!z10) {
+            i12 = -i12;
+        }
+        iArr[2] = i12;
+        iArr[3] = (z10 && this.f35834L) ? C7.c.f2302Z : -C7.c.f2302Z;
+        return View.mergeDrawableStates(iArrOnCreateDrawableState, iArr);
+    }
+
+    @Override // android.view.ViewGroup, android.view.View
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        c();
+    }
+
+    @Override // android.widget.LinearLayout, android.view.ViewGroup, android.view.View
+    protected void onLayout(boolean z10, int i10, int i11, int i12, int i13) {
+        super.onLayout(z10, i10, i11, i12, i13);
+        boolean z11 = true;
+        if (X.w(this) && C()) {
+            int topInset = getTopInset();
+            for (int childCount = getChildCount() - 1; childCount >= 0; childCount--) {
+                X.Y(getChildAt(childCount), topInset);
+            }
+        }
+        n();
+        this.f35828F = false;
+        int childCount2 = getChildCount();
+        int i14 = 0;
+        while (true) {
+            if (i14 >= childCount2) {
+                break;
+            }
+            if (((e) getChildAt(i14).getLayoutParams()).d() != null) {
+                this.f35828F = true;
+                break;
+            }
+            i14++;
+        }
+        Drawable drawable = this.f35845W;
+        if (drawable != null) {
+            drawable.setBounds(0, 0, getWidth(), getTopInset());
+        }
+        if (this.f35832J) {
+            return;
+        }
+        if (!this.f35835M && !j()) {
+            z11 = false;
+        }
+        x(z11);
+    }
+
+    @Override // android.widget.LinearLayout, android.view.View
+    protected void onMeasure(int i10, int i11) {
+        super.onMeasure(i10, i11);
+        int mode = View.MeasureSpec.getMode(i11);
+        if (mode != 1073741824 && X.w(this) && C()) {
+            int measuredHeight = getMeasuredHeight();
+            if (mode == Integer.MIN_VALUE) {
+                measuredHeight = C3946a.b(getMeasuredHeight() + getTopInset(), 0, View.MeasureSpec.getSize(i11));
+            } else if (mode == 0) {
+                measuredHeight += getTopInset();
+            }
+            setMeasuredDimension(getMeasuredWidth(), measuredHeight);
+        }
+        n();
+    }
+
+    void s(int i10) {
+        this.f35824B = i10;
+        if (!willNotDraw()) {
+            X.e0(this);
+        }
+        List<b> list = this.f35831I;
+        if (list != null) {
+            int size = list.size();
+            for (int i11 = 0; i11 < size; i11++) {
+                b bVar = this.f35831I.get(i11);
+                if (bVar != null) {
+                    bVar.a(this, i10);
+                }
+            }
+        }
+    }
+
+    @Override // android.view.View
+    public void setElevation(float f10) {
+        super.setElevation(f10);
+        h.d(this, f10);
+    }
+
+    public void setExpanded(boolean z10) {
+        v(z10, X.R(this));
+    }
+
+    public void setLiftOnScroll(boolean z10) {
+        this.f35835M = z10;
+    }
+
+    public void setLiftOnScrollTargetView(View view) {
+        this.f35836N = -1;
+        if (view == null) {
+            c();
+        } else {
+            this.f35837O = new WeakReference<>(view);
+        }
+    }
+
+    public void setLiftOnScrollTargetViewId(int i10) {
+        this.f35836N = i10;
+        c();
+    }
+
+    public void setLiftableOverrideEnabled(boolean z10) {
+        this.f35832J = z10;
+    }
+
+    @Override // android.widget.LinearLayout
+    public void setOrientation(int i10) {
+        if (i10 != 1) {
+            throw new IllegalArgumentException("AppBarLayout is always vertical and does not support horizontal orientation");
+        }
+        super.setOrientation(i10);
+    }
+
+    public void setStatusBarForeground(Drawable drawable) {
+        Drawable drawable2 = this.f35845W;
+        if (drawable2 != drawable) {
+            if (drawable2 != null) {
+                drawable2.setCallback(null);
+            }
+            this.f35845W = drawable != null ? drawable.mutate() : null;
+            this.f35846a0 = d();
+            Drawable drawable3 = this.f35845W;
+            if (drawable3 != null) {
+                if (drawable3.isStateful()) {
+                    this.f35845W.setState(getDrawableState());
+                }
+                C3784a.m(this.f35845W, X.z(this));
+                this.f35845W.setVisible(getVisibility() == 0, false);
+                this.f35845W.setCallback(this);
+            }
+            E();
+            X.e0(this);
+        }
+    }
+
+    public void setStatusBarForegroundColor(int i10) {
+        setStatusBarForeground(new ColorDrawable(i10));
+    }
+
+    public void setStatusBarForegroundResource(int i10) {
+        setStatusBarForeground(C3699a.b(getContext(), i10));
+    }
+
+    @Deprecated
+    public void setTargetElevation(float f10) throws Resources.NotFoundException {
+        g.b(this, f10);
+    }
+
+    @Override // android.view.View
+    public void setVisibility(int i10) {
+        super.setVisibility(i10);
+        boolean z10 = i10 == 0;
+        Drawable drawable = this.f35845W;
+        if (drawable != null) {
+            drawable.setVisible(z10, false);
+        }
+    }
+
+    C4469y0 t(C4469y0 c4469y0) {
+        C4469y0 c4469y02 = X.w(this) ? c4469y0 : null;
+        if (!C4337d.a(this.f35830H, c4469y02)) {
+            this.f35830H = c4469y02;
+            E();
+            requestLayout();
+        }
+        return c4469y0;
+    }
+
+    void u() {
+        this.f35829G = 0;
+    }
+
+    public void v(boolean z10, boolean z11) {
+        w(z10, z11, true);
+    }
+
+    @Override // android.view.View
+    protected boolean verifyDrawable(Drawable drawable) {
+        return super.verifyDrawable(drawable) || drawable == this.f35845W;
+    }
+
+    boolean y(boolean z10) {
+        return z(z10, !this.f35832J);
+    }
+
+    boolean z(boolean z10, boolean z11) {
+        if (!z11 || this.f35834L == z10) {
+            return false;
+        }
+        this.f35834L = z10;
+        refreshDrawableState();
+        if (!p()) {
+            return true;
+        }
+        if (this.f35838P) {
+            D(z10 ? 0.0f : 1.0f, z10 ? 1.0f : 0.0f);
+            return true;
+        }
+        if (!this.f35835M) {
+            return true;
+        }
+        D(z10 ? 0.0f : this.f35847b0, z10 ? this.f35847b0 : 0.0f);
+        return true;
+    }
+
+    /* JADX WARN: Illegal instructions before constructor call */
+    public AppBarLayout(Context context, AttributeSet attributeSet, int i10) throws Resources.NotFoundException {
+        int i11 = f35823d0;
+        super(C2272a.c(context, attributeSet, i10, i11), attributeSet, i10);
+        this.f35825C = -1;
+        this.f35826D = -1;
+        this.f35827E = -1;
+        this.f35829G = 0;
+        this.f35841S = new ArrayList();
+        Context context2 = getContext();
+        setOrientation(1);
+        if (getOutlineProvider() == ViewOutlineProvider.BACKGROUND) {
+            g.a(this);
+        }
+        g.c(this, attributeSet, i10, i11);
+        TypedArray typedArrayI = r.i(context2, attributeSet, m.f2960k, i10, i11, new int[0]);
+        X.r0(this, typedArrayI.getDrawable(m.f2971l));
+        ColorStateList colorStateListA = U7.c.a(context2, typedArrayI, m.f3037r);
+        this.f35838P = colorStateListA != null;
+        ColorStateList colorStateListF = com.google.android.material.drawable.d.f(getBackground());
+        if (colorStateListF != null) {
+            X7.g gVar = new X7.g();
+            gVar.b0(colorStateListF);
+            if (colorStateListA != null) {
+                l(gVar, colorStateListF, colorStateListA);
+            } else {
+                m(context2, gVar);
+            }
+        }
+        this.f35842T = i.f(context2, C7.c.f2284H, getResources().getInteger(C7.h.f2500a));
+        this.f35843U = i.g(context2, C7.c.f2296T, D7.a.f3486a);
+        int i12 = m.f3015p;
+        if (typedArrayI.hasValue(i12)) {
+            w(typedArrayI.getBoolean(i12, false), false, false);
+        }
+        if (typedArrayI.hasValue(m.f3004o)) {
+            g.b(this, typedArrayI.getDimensionPixelSize(r12, 0));
+        }
+        int i13 = m.f2993n;
+        if (typedArrayI.hasValue(i13)) {
+            setKeyboardNavigationCluster(typedArrayI.getBoolean(i13, false));
+        }
+        int i14 = m.f2982m;
+        if (typedArrayI.hasValue(i14)) {
+            setTouchscreenBlocksFocus(typedArrayI.getBoolean(i14, false));
+        }
+        this.f35847b0 = getResources().getDimension(C7.e.f2379a);
+        this.f35835M = typedArrayI.getBoolean(m.f3026q, false);
+        this.f35836N = typedArrayI.getResourceId(m.f3048s, -1);
+        setStatusBarForeground(typedArrayI.getDrawable(m.f3059t));
+        typedArrayI.recycle();
+        X.B0(this, new a());
+    }
+
+    public static class e extends LinearLayout.LayoutParams {
+
+        /* renamed from: a, reason: collision with root package name */
+        int f35868a;
+
+        /* renamed from: b, reason: collision with root package name */
+        private c f35869b;
+
+        /* renamed from: c, reason: collision with root package name */
+        Interpolator f35870c;
+
+        public e(Context context, AttributeSet attributeSet) {
+            super(context, attributeSet);
+            this.f35868a = 1;
+            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, m.f3081v);
+            this.f35868a = typedArrayObtainStyledAttributes.getInt(m.f3101x, 0);
+            f(typedArrayObtainStyledAttributes.getInt(m.f3091w, 0));
+            int i10 = m.f3111y;
+            if (typedArrayObtainStyledAttributes.hasValue(i10)) {
+                this.f35870c = AnimationUtils.loadInterpolator(context, typedArrayObtainStyledAttributes.getResourceId(i10, 0));
             }
             typedArrayObtainStyledAttributes.recycle();
         }
 
-        /* renamed from: a */
-        public int m23769a() {
-            return this.f29620a;
+        private c a(int i10) {
+            if (i10 != 1) {
+                return null;
+            }
+            return new d();
         }
 
-        /* renamed from: b */
-        public Interpolator m23770b() {
-            return this.f29621b;
+        public c b() {
+            return this.f35869b;
         }
 
-        /* renamed from: c */
-        boolean m23771c() {
-            int i2 = this.f29620a;
-            return (i2 & 1) == 1 && (i2 & 10) != 0;
+        public int c() {
+            return this.f35868a;
         }
 
-        public C7927d(int i2, int i3) {
-            super(i2, i3);
-            this.f29620a = 1;
+        public Interpolator d() {
+            return this.f35870c;
         }
 
-        public C7927d(ViewGroup.LayoutParams layoutParams) {
+        boolean e() {
+            int i10 = this.f35868a;
+            return (i10 & 1) == 1 && (i10 & 10) != 0;
+        }
+
+        public void f(int i10) {
+            this.f35869b = a(i10);
+        }
+
+        public void g(int i10) {
+            this.f35868a = i10;
+        }
+
+        public e(int i10, int i11) {
+            super(i10, i11);
+            this.f35868a = 1;
+        }
+
+        public e(ViewGroup.LayoutParams layoutParams) {
             super(layoutParams);
-            this.f29620a = 1;
+            this.f35868a = 1;
         }
 
-        public C7927d(ViewGroup.MarginLayoutParams marginLayoutParams) {
+        public e(ViewGroup.MarginLayoutParams marginLayoutParams) {
             super(marginLayoutParams);
-            this.f29620a = 1;
+            this.f35868a = 1;
         }
 
-        public C7927d(LinearLayout.LayoutParams layoutParams) {
+        public e(LinearLayout.LayoutParams layoutParams) {
             super(layoutParams);
-            this.f29620a = 1;
+            this.f35868a = 1;
         }
     }
 }

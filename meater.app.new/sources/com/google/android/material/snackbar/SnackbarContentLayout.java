@@ -1,181 +1,131 @@
 package com.google.android.material.snackbar;
 
+import C7.e;
+import C7.g;
+import R7.i;
+import android.animation.TimeInterpolator;
 import android.content.Context;
-import android.content.res.TypedArray;
+import android.content.res.Resources;
+import android.text.Layout;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import androidx.core.view.C0311u;
-import p241e.p254e.p256b.p271c.C8908b;
-import p241e.p254e.p256b.p271c.C8912f;
-import p241e.p254e.p256b.p271c.C8918l;
-import p241e.p254e.p256b.p271c.p278q.C8937a;
+import s1.X;
 
 /* loaded from: classes2.dex */
-public class SnackbarContentLayout extends LinearLayout implements InterfaceC8059a {
+public class SnackbarContentLayout extends LinearLayout implements a {
 
-    /* renamed from: f */
-    private TextView f30491f;
+    /* renamed from: B, reason: collision with root package name */
+    private TextView f37138B;
 
-    /* renamed from: g */
-    private Button f30492g;
+    /* renamed from: C, reason: collision with root package name */
+    private Button f37139C;
 
-    /* renamed from: h */
-    private int f30493h;
+    /* renamed from: D, reason: collision with root package name */
+    private final TimeInterpolator f37140D;
 
-    /* renamed from: i */
-    private int f30494i;
+    /* renamed from: E, reason: collision with root package name */
+    private int f37141E;
 
     public SnackbarContentLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, C8918l.f34242h4);
-        this.f30493h = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8918l.f34249i4, -1);
-        this.f30494i = typedArrayObtainStyledAttributes.getDimensionPixelSize(C8918l.f34298p4, -1);
-        typedArrayObtainStyledAttributes.recycle();
+        this.f37140D = i.g(context, C7.c.f2292P, D7.a.f3487b);
     }
 
-    /* renamed from: d */
-    private static void m24769d(View view, int i2, int i3) {
-        if (C0311u.m2104Q(view)) {
-            C0311u.m2159w0(view, C0311u.m2090D(view), i2, C0311u.m2088C(view), i3);
+    private static void d(View view, int i10, int i11) {
+        if (X.T(view)) {
+            X.C0(view, X.E(view), i10, X.D(view), i11);
         } else {
-            view.setPadding(view.getPaddingLeft(), i2, view.getPaddingRight(), i3);
+            view.setPadding(view.getPaddingLeft(), i10, view.getPaddingRight(), i11);
         }
     }
 
-    /* renamed from: e */
-    private boolean m24770e(int i2, int i3, int i4) {
-        boolean z;
-        if (i2 != getOrientation()) {
-            setOrientation(i2);
-            z = true;
+    private boolean e(int i10, int i11, int i12) {
+        boolean z10;
+        if (i10 != getOrientation()) {
+            setOrientation(i10);
+            z10 = true;
         } else {
-            z = false;
+            z10 = false;
         }
-        if (this.f30491f.getPaddingTop() == i3 && this.f30491f.getPaddingBottom() == i4) {
-            return z;
+        if (this.f37138B.getPaddingTop() == i11 && this.f37138B.getPaddingBottom() == i12) {
+            return z10;
         }
-        m24769d(this.f30491f, i3, i4);
+        d(this.f37138B, i11, i12);
         return true;
     }
 
-    @Override // com.google.android.material.snackbar.InterfaceC8059a
-    /* renamed from: a */
-    public void mo24771a(int i2, int i3) {
-        this.f30491f.setAlpha(0.0f);
-        long j2 = i3;
-        long j3 = i2;
-        this.f30491f.animate().alpha(1.0f).setDuration(j2).setStartDelay(j3).start();
-        if (this.f30492g.getVisibility() == 0) {
-            this.f30492g.setAlpha(0.0f);
-            this.f30492g.animate().alpha(1.0f).setDuration(j2).setStartDelay(j3).start();
+    @Override // com.google.android.material.snackbar.a
+    public void a(int i10, int i11) {
+        this.f37138B.setAlpha(0.0f);
+        long j10 = i11;
+        long j11 = i10;
+        this.f37138B.animate().alpha(1.0f).setDuration(j10).setInterpolator(this.f37140D).setStartDelay(j11).start();
+        if (this.f37139C.getVisibility() == 0) {
+            this.f37139C.setAlpha(0.0f);
+            this.f37139C.animate().alpha(1.0f).setDuration(j10).setInterpolator(this.f37140D).setStartDelay(j11).start();
         }
     }
 
-    @Override // com.google.android.material.snackbar.InterfaceC8059a
-    /* renamed from: b */
-    public void mo24772b(int i2, int i3) {
-        this.f30491f.setAlpha(1.0f);
-        long j2 = i3;
-        long j3 = i2;
-        this.f30491f.animate().alpha(0.0f).setDuration(j2).setStartDelay(j3).start();
-        if (this.f30492g.getVisibility() == 0) {
-            this.f30492g.setAlpha(1.0f);
-            this.f30492g.animate().alpha(0.0f).setDuration(j2).setStartDelay(j3).start();
+    @Override // com.google.android.material.snackbar.a
+    public void b(int i10, int i11) {
+        this.f37138B.setAlpha(1.0f);
+        long j10 = i11;
+        long j11 = i10;
+        this.f37138B.animate().alpha(0.0f).setDuration(j10).setInterpolator(this.f37140D).setStartDelay(j11).start();
+        if (this.f37139C.getVisibility() == 0) {
+            this.f37139C.setAlpha(1.0f);
+            this.f37139C.animate().alpha(0.0f).setDuration(j10).setInterpolator(this.f37140D).setStartDelay(j11).start();
         }
     }
 
-    /* renamed from: c */
-    void m24773c(float f2) {
-        if (f2 != 1.0f) {
-            this.f30492g.setTextColor(C8937a.m28475f(C8937a.m28472c(this, C8908b.f33825o), this.f30492g.getCurrentTextColor(), f2));
+    void c(float f10) {
+        if (f10 != 1.0f) {
+            this.f37139C.setTextColor(M7.a.j(M7.a.d(this, C7.c.f2331p), this.f37139C.getCurrentTextColor(), f10));
         }
     }
 
     public Button getActionView() {
-        return this.f30492g;
+        return this.f37139C;
     }
 
     public TextView getMessageView() {
-        return this.f30491f;
+        return this.f37138B;
     }
 
     @Override // android.view.View
     protected void onFinishInflate() {
         super.onFinishInflate();
-        this.f30491f = (TextView) findViewById(C8912f.f33902C);
-        this.f30492g = (Button) findViewById(C8912f.f33901B);
+        this.f37138B = (TextView) findViewById(g.f2463T);
+        this.f37139C = (Button) findViewById(g.f2462S);
     }
 
-    /* JADX WARN: Removed duplicated region for block: B:24:0x0060  */
     @Override // android.widget.LinearLayout, android.view.View
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct code enable 'Show inconsistent code' option in preferences
-    */
-    protected void onMeasure(int r8, int r9) throws android.content.res.Resources.NotFoundException {
-        /*
-            r7 = this;
-            super.onMeasure(r8, r9)
-            int r0 = r7.f30493h
-            if (r0 <= 0) goto L18
-            int r0 = r7.getMeasuredWidth()
-            int r1 = r7.f30493h
-            if (r0 <= r1) goto L18
-            r8 = 1073741824(0x40000000, float:2.0)
-            int r8 = android.view.View.MeasureSpec.makeMeasureSpec(r1, r8)
-            super.onMeasure(r8, r9)
-        L18:
-            android.content.res.Resources r0 = r7.getResources()
-            int r1 = p241e.p254e.p256b.p271c.C8910d.f33880o
-            int r0 = r0.getDimensionPixelSize(r1)
-            android.content.res.Resources r1 = r7.getResources()
-            int r2 = p241e.p254e.p256b.p271c.C8910d.f33879n
-            int r1 = r1.getDimensionPixelSize(r2)
-            android.widget.TextView r2 = r7.f30491f
-            android.text.Layout r2 = r2.getLayout()
-            int r2 = r2.getLineCount()
-            r3 = 0
-            r4 = 1
-            if (r2 <= r4) goto L3c
-            r2 = 1
-            goto L3d
-        L3c:
-            r2 = 0
-        L3d:
-            if (r2 == 0) goto L56
-            int r5 = r7.f30494i
-            if (r5 <= 0) goto L56
-            android.widget.Button r5 = r7.f30492g
-            int r5 = r5.getMeasuredWidth()
-            int r6 = r7.f30494i
-            if (r5 <= r6) goto L56
-            int r1 = r0 - r1
-            boolean r0 = r7.m24770e(r4, r0, r1)
-            if (r0 == 0) goto L61
-            goto L60
-        L56:
-            if (r2 == 0) goto L59
-            goto L5a
-        L59:
-            r0 = r1
-        L5a:
-            boolean r0 = r7.m24770e(r3, r0, r0)
-            if (r0 == 0) goto L61
-        L60:
-            r3 = 1
-        L61:
-            if (r3 == 0) goto L66
-            super.onMeasure(r8, r9)
-        L66:
-            return
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.google.android.material.snackbar.SnackbarContentLayout.onMeasure(int, int):void");
+    protected void onMeasure(int i10, int i11) throws Resources.NotFoundException {
+        super.onMeasure(i10, i11);
+        if (getOrientation() == 1) {
+            return;
+        }
+        int dimensionPixelSize = getResources().getDimensionPixelSize(e.f2403m);
+        int dimensionPixelSize2 = getResources().getDimensionPixelSize(e.f2401l);
+        Layout layout = this.f37138B.getLayout();
+        boolean z10 = layout != null && layout.getLineCount() > 1;
+        if (!z10 || this.f37141E <= 0 || this.f37139C.getMeasuredWidth() <= this.f37141E) {
+            if (!z10) {
+                dimensionPixelSize = dimensionPixelSize2;
+            }
+            if (!e(0, dimensionPixelSize, dimensionPixelSize)) {
+                return;
+            }
+        } else if (!e(1, dimensionPixelSize, dimensionPixelSize - dimensionPixelSize2)) {
+            return;
+        }
+        super.onMeasure(i10, i11);
     }
 
-    public void setMaxInlineActionWidth(int i2) {
-        this.f30494i = i2;
+    public void setMaxInlineActionWidth(int i10) {
+        this.f37141E = i10;
     }
 }

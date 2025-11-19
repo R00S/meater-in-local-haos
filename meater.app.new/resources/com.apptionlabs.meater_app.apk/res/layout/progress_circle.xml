@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/lib/com.apptionlabs.meater_app"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.apptionlabs.meater_app.views.ProgressArcView
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/progressArcView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:layout_constraintRight_toRightOf="parent"
+        app:small_view_item="true"/>
+</RelativeLayout>

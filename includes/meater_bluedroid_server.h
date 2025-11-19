@@ -37,10 +37,11 @@ static const uint8_t BATTERY_CHAR_UUID[16] = {
     0xbd, 0x3c, 0x77, 0x48, 0xdb, 0x2a, 0x00, 0x00
 };
 
-// Config Characteristic: 575d3bf1-0be4-4e8f-a41e-be090726ed0b
+// Cook Setup Characteristic: caf28e64-3b17-4cb4-bb0a-2eaa33c47af7
+// This is the characteristic the app writes to during pairing
 static const uint8_t CONFIG_CHAR_UUID[16] = {
-    0x0b, 0xed, 0x26, 0x07, 0x09, 0xbe, 0x1e, 0xa4,
-    0x8f, 0x4e, 0xe4, 0x0b, 0xf1, 0x3b, 0x5d, 0x57
+    0xf7, 0x7a, 0xc4, 0x33, 0xaa, 0x2e, 0x0a, 0xbb,
+    0xb4, 0x4c, 0x17, 0x3b, 0x64, 0x8e, 0xf2, 0xca
 };
 
 // Device Information Service UUID: 0x180A
@@ -223,13 +224,16 @@ private:
         static uint8_t service_uuid[16];
         memcpy(service_uuid, MEATER_SERVICE_UUID, 16);
         
-        static uint8_t manufacturer_data[24] = {
-            0x7B, 0x03,  // Company ID: 0x037B (Apption Labs)
-            0x00, 0x00,  // Device type indicator (0x00 for regular MEATER)
-            // Rest filled with zeros
-            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-            0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-            0x00, 0x00, 0x00, 0x00
+        // ✅ FROM GROUND TRUTH: Real MEATER probe advertisement (bluetoothctl scan)
+        // Device B8:1F:5E:4A:5E:EF MEATER
+        // ManufacturerData.Key: 0x037b (891)
+        // ManufacturerData.Value: 00 4c 0b 82 35 23 a3 98 ea
+        // Total: 9 bytes data + company ID embedded = 10 bytes total array
+        static uint8_t manufacturer_data[10] = {
+            0x7B, 0x03,  // Company ID: 0x037B (little-endian as required by BLE spec)
+            0x00,        // Byte 2: Device type (0x00 for regular MEATER, 0x01 for MEATER+)
+            0x4C, 0x0B, 0x82, 0x35, 0x23, 0xA3, 0x98  // Bytes 3-9: Device-specific data from real probe
+            // All 9 bytes from real MEATER probe capture - app uses this to identify devices
         };
         
         adv_data_.set_scan_rsp = false;
@@ -472,21 +476,21 @@ public:
     }
     
     bool setup() {
-        ESP_LOGI("meater_ble_server", "Setting up MEATER BLE server (Bluedroid)");
+        ESP_LOGI("meater_ble_server", "Setting up MEATER BLE server (using esp32_ble_tracker's Bluedroid)");
         
-        // NOTE: BT controller and Bluedroid initialization is handled by esp32_ble_tracker component
-        // We only need to register our GATT server callbacks
+        // esp32_ble_tracker component handles Bluedroid initialization
+        // We just need to register our callbacks
+        esp_err_t ret;
         
-        // Verify Bluedroid is enabled and initialized
+        // Verify Bluedroid is enabled (should be done by esp32_ble_tracker)
         if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
-            ESP_LOGE("meater_ble_server", "Bluedroid is not enabled! Status: %d", esp_bluedroid_get_status());
-            ESP_LOGE("meater_ble_server", "esp32_ble_tracker should have initialized Bluedroid");
+            ESP_LOGE("meater_ble_server", "Bluedroid not enabled - esp32_ble_tracker may not have initialized");
             return false;
         }
-        ESP_LOGI("meater_ble_server", "✓ Bluedroid is enabled and ready");
+        ESP_LOGI("meater_ble_server", "✓ Bluedroid already enabled by esp32_ble_tracker");
         
         // Register GAP callback
-        esp_err_t ret = esp_ble_gap_register_callback(gap_event_handler);
+        ret = esp_ble_gap_register_callback(gap_event_handler);
         if (ret) {
             ESP_LOGE("meater_ble_server", "GAP callback register failed: %d", ret);
             return false;
