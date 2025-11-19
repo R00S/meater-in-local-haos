@@ -58,7 +58,7 @@ class JavaCodeParser:
         return None
     
     def parse_nearby_devices_fragment(self):
-        """Parse NearbyDevicesFragment for scan operations."""
+        """Parse NearbyDevicesFragment - extracts actual code only, no assumptions."""
         files = self.find_java_files('NearbyDevicesFragment')
         
         for file in files:
@@ -67,36 +67,50 @@ class JavaCodeParser:
                 content = f.read()
                 lines = content.split('\n')
                 
-                # Find scan initialization
+                # Extract all BLE-related method calls and operations
                 for i, line in enumerate(lines):
-                    if 'serviceScanner' in line and 'new' in line:
+                    stripped = line.strip()
+                    
+                    # Capture scanner initialization
+                    if 'scanner' in stripped.lower() and ('new' in stripped or 'Scanner' in stripped):
                         self.operations.append({
-                            'type': 'SCAN_INIT',
+                            'type': 'SCANNER_OPERATION',
                             'source': f"{file.name}:{i+1}",
-                            'code': line.strip(),
-                            'description': 'Initialize BLE scanner'
+                            'code': stripped,
+                            'category': 'scanning'
                         })
                     
-                    # Find state definitions
-                    if 'NO_DEVICE_FOUND' in line or 'no_device_found' in line.lower():
+                    # Capture service UUID references
+                    if 'UUID' in stripped and ('service' in stripped.lower() or 'Service' in stripped):
                         self.operations.append({
-                            'type': 'STATE_NO_DEVICE',
+                            'type': 'SERVICE_UUID_REF',
                             'source': f"{file.name}:{i+1}",
-                            'code': line.strip(),
-                            'description': 'State when no devices found'
+                            'code': stripped,
+                            'category': 'scanning'
                         })
                     
-                    if 'DEVICES_FOUND' in line or ('devices' in line.lower() and 'found' in line.lower()):
+                    # Capture device filtering
+                    if 'filter' in stripped.lower() or 'Filter' in stripped:
                         self.operations.append({
-                            'type': 'STATE_DEVICES_FOUND',
+                            'type': 'DEVICE_FILTER',
                             'source': f"{file.name}:{i+1}",
-                            'code': line.strip(),
-                            'description': 'State when devices are found'
+                            'code': stripped,
+                            'category': 'scanning'
+                        })
+                    
+                    # Capture adapter/list operations
+                    if ('adapter' in stripped.lower() or 'Adapter' in stripped) and ('notify' in stripped.lower() or 'set' in stripped.lower()):
+                        self.operations.append({
+                            'type': 'UI_UPDATE',
+                            'source': f"{file.name}:{i+1}",
+                            'code': stripped,
+                            'category': 'scanning'
                         })
     
     def parse_device_pairing_fragment(self):
-        """Parse DevicePairingFragment for pairing operations."""
+        """Parse DevicePairingFragment - extracts actual code only, no assumptions."""
         files = self.find_java_files('DevicePairingFragment')
+        files += self.find_java_files('Pairing')
         
         for file in files:
             print(f"Parsing: {file.name}")
@@ -104,43 +118,82 @@ class JavaCodeParser:
                 content = f.read()
                 lines = content.split('\n')
                 
-                # Find characteristic operations
+                # Extract characteristic operations (actual method calls)
                 for i, line in enumerate(lines):
-                    if 'characteristic' in line.lower():
-                        # Check for read/write/subscribe operations
-                        if 'read' in line.lower():
-                            self.operations.append({
-                                'type': 'READ_CHARACTERISTIC',
-                                'source': f"{file.name}:{i+1}",
-                                'code': line.strip(),
-                                'description': 'Read characteristic value'
-                            })
-                        elif 'write' in line.lower():
-                            self.operations.append({
-                                'type': 'WRITE_CHARACTERISTIC',
-                                'source': f"{file.name}:{i+1}",
-                                'code': line.strip(),
-                                'description': 'Write characteristic value'
-                            })
-                        elif 'notify' in line.lower() or 'subscribe' in line.lower():
-                            self.operations.append({
-                                'type': 'SUBSCRIBE_CHARACTERISTIC',
-                                'source': f"{file.name}:{i+1}",
-                                'code': line.strip(),
-                                'description': 'Subscribe to characteristic notifications'
-                            })
+                    stripped = line.strip()
                     
-                    # Find connection operations
-                    if 'connect' in line.lower() and 'bluetooth' in line.lower():
+                    # Capture characteristic reads
+                    if 'readCharacteristic' in stripped or '.read' in stripped and 'Characteristic' in stripped:
                         self.operations.append({
-                            'type': 'CONNECT',
+                            'type': 'READ_CHARACTERISTIC',
                             'source': f"{file.name}:{i+1}",
-                            'code': line.strip(),
-                            'description': 'Connect to BLE device'
+                            'code': stripped,
+                            'category': 'pairing'
+                        })
+                    
+                    # Capture characteristic writes
+                    if 'writeCharacteristic' in stripped or '.write' in stripped and 'Characteristic' in stripped:
+                        self.operations.append({
+                            'type': 'WRITE_CHARACTERISTIC',
+                            'source': f"{file.name}:{i+1}",
+                            'code': stripped,
+                            'category': 'pairing',
+                            'critical': True  # Writes are critical for pairing
+                        })
+                    
+                    # Capture notification subscriptions
+                    if 'setCharacteristicNotification' in stripped or ('notify' in stripped.lower() and 'characteristic' in stripped.lower()):
+                        self.operations.append({
+                            'type': 'ENABLE_NOTIFICATIONS',
+                            'source': f"{file.name}:{i+1}",
+                            'code': stripped,
+                            'category': 'pairing'
+                        })
+                    
+                    # Capture GATT connection operations
+                    if 'connectGatt' in stripped or ('connect' in stripped.lower() and 'gatt' in stripped.lower()):
+                        self.operations.append({
+                            'type': 'GATT_CONNECT',
+                            'source': f"{file.name}:{i+1}",
+                            'code': stripped,
+                            'category': 'pairing'
+                        })
+                    
+                    # Capture service discovery
+                    if 'discoverServices' in stripped:
+                        self.operations.append({
+                            'type': 'DISCOVER_SERVICES',
+                            'source': f"{file.name}:{i+1}",
+                            'code': stripped,
+                            'category': 'pairing'
+                        })
+    
+    def parse_config_file(self):
+        """Parse Config.java to extract UUID constants - actual values only."""
+        files = self.find_java_files('Config')
+        
+        for file in files:
+            if 'Config.java' == file.name:
+                print(f"Parsing: {file.name}")
+                with open(file, 'r', encoding='utf-8', errors='ignore') as f:
+                    content = f.read()
+                    
+                    # Extract UUID constant definitions
+                    uuid_pattern = r'public static final String (\w+UUID\w*)\s*=\s*"([0-9a-fA-F-]+)"'
+                    for match in re.finditer(uuid_pattern, content):
+                        name = match.group(1)
+                        uuid_value = match.group(2)
+                        self.operations.append({
+                            'type': 'UUID_CONSTANT',
+                            'name': name,
+                            'value': uuid_value,
+                            'source': f"{file.name}",
+                            'code': match.group(0),
+                            'category': 'protocol'
                         })
     
     def parse_meater_device(self):
-        """Parse MEATERDevice model for pairing logic."""
+        """Parse MEATERDevice model - extracts actual code only, no assumptions."""
         files = self.find_java_files('MEATERDevice')
         
         for file in files:
@@ -148,46 +201,48 @@ class JavaCodeParser:
             with open(file, 'r', encoding='utf-8', errors='ignore') as f:
                 content = f.read()
                 
-                # Find isPaired method
+                # Find isPaired method - exact code extraction
                 is_paired = self.extract_method_body(content, 'public boolean isPaired()')
                 if is_paired:
                     self.operations.append({
                         'type': 'CHECK_IS_PAIRED',
                         'source': f"{file.name}:isPaired()",
                         'code': is_paired,
-                        'description': 'Check if device is paired',
+                        'category': 'pairing_logic',
                         'critical': True
                     })
                 
-                # Find datePaired field
+                # Find datePaired field - exact declaration
                 date_paired_match = re.search(r'(private|public|protected)\s+\w*\s*datePaired[^;]*;', content)
                 if date_paired_match:
                     self.operations.append({
                         'type': 'DATE_PAIRED_FIELD',
                         'source': f"{file.name}:datePaired",
                         'code': date_paired_match.group(0),
-                        'description': 'Pairing timestamp field',
+                        'category': 'pairing_logic',
                         'critical': True
                     })
                 
-                # Find setDatePaired method
+                # Find setDatePaired method - exact code
                 set_date_paired = self.extract_method_body(content, 'public void setDatePaired(')
                 if set_date_paired:
                     self.operations.append({
                         'type': 'SET_DATE_PAIRED',
                         'source': f"{file.name}:setDatePaired()",
                         'code': set_date_paired,
-                        'description': 'Set pairing timestamp',
+                        'category': 'pairing_logic',
                         'critical': True
                     })
     
     def parse_all(self):
-        """Parse all relevant files."""
+        """Parse all relevant files - extracts only actual code."""
         print("=" * 70)
-        print("PARSING DECOMPILED JAVA CODE")
+        print("PARSING DECOMPILED JAVA CODE - EXTRACTING ACTUAL CODE ONLY")
+        print("NO ASSUMPTIONS - Direct code extraction")
         print("=" * 70)
         print()
         
+        self.parse_config_file()
         self.parse_nearby_devices_fragment()
         self.parse_device_pairing_fragment()
         self.parse_meater_device()

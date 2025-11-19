@@ -1,34 +1,284 @@
 [
   {
-    "type": "SCAN_INIT",
+    "type": "UUID_CONSTANT",
+    "name": "BLECharacteristicConfigUUID",
+    "value": "00002902-0000-1000-8000-00805f9b34fb",
+    "source": "Config.java",
+    "code": "public static final String BLECharacteristicConfigUUID = \"00002902-0000-1000-8000-00805f9b34fb\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "BLESoftwareRevisionCharacteristicUUID",
+    "value": "00002a28-0000-1000-8000-00805f9b34fb",
+    "source": "Config.java",
+    "code": "public static final String BLESoftwareRevisionCharacteristicUUID = \"00002a28-0000-1000-8000-00805f9b34fb\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "DeviceInformationServiceUUID",
+    "value": "0000180a-0000-1000-8000-00805f9b34fb",
+    "source": "Config.java",
+    "code": "public static final String DeviceInformationServiceUUID = \"0000180a-0000-1000-8000-00805f9b34fb\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "FirmwareRevisionCharacteristicUUID",
+    "value": "00002a26-0000-1000-8000-00805f9b34fb",
+    "source": "Config.java",
+    "code": "public static final String FirmwareRevisionCharacteristicUUID = \"00002a26-0000-1000-8000-00805f9b34fb\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERBLETemperatureServiceUUID",
+    "value": "a75cc7fc-c956-488f-ac2a-2dbc08b63a04",
+    "source": "Config.java",
+    "code": "public static final String MEATERBLETemperatureServiceUUID = \"a75cc7fc-c956-488f-ac2a-2dbc08b63a04\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERBatteryBLECharacteristicUUID",
+    "value": "2adb4877-68d8-4884-bd3c-d83853bf27b8",
+    "source": "Config.java",
+    "code": "public static final String MEATERBatteryBLECharacteristicUUID = \"2adb4877-68d8-4884-bd3c-d83853bf27b8\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERBlockAvailableSSIDsUUID",
+    "value": "B904156A-5B64-44AD-8349-CE7912F34008",
+    "source": "Config.java",
+    "code": "public static final String MEATERBlockAvailableSSIDsUUID = \"B904156A-5B64-44AD-8349-CE7912F34008\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERBlockChosenWiFiSSIDUUID",
+    "value": "53475F12-D6D2-45DC-A046-53C65BB0D814",
+    "source": "Config.java",
+    "code": "public static final String MEATERBlockChosenWiFiSSIDUUID = \"53475F12-D6D2-45DC-A046-53C65BB0D814\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERBlockConnectionStateSSIDUUID",
+    "value": "E03C6CCC-2AA7-40A4-8A66-C98B599B737A",
+    "source": "Config.java",
+    "code": "public static final String MEATERBlockConnectionStateSSIDUUID = \"E03C6CCC-2AA7-40A4-8A66-C98B599B737A\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERBlockKeepAliveUUID",
+    "value": "24B299D9-61F7-48BA-86E0-F459DAD3FC87",
+    "source": "Config.java",
+    "code": "public static final String MEATERBlockKeepAliveUUID = \"24B299D9-61F7-48BA-86E0-F459DAD3FC87\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERBlockSecondGenerationServiceUUID",
+    "value": "B7107BBE-DA2A-4124-B2CC-AAFD624B61CE",
+    "source": "Config.java",
+    "code": "public static final String MEATERBlockSecondGenerationServiceUUID = \"B7107BBE-DA2A-4124-B2CC-AAFD624B61CE\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERBlockSerialNumberUUID",
+    "value": "D6FEDC54-C9F8-4FC9-9CF0-0ABCF9E68F13",
+    "source": "Config.java",
+    "code": "public static final String MEATERBlockSerialNumberUUID = \"D6FEDC54-C9F8-4FC9-9CF0-0ABCF9E68F13\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERBlockServiceUUID",
+    "value": "097F9DB4-BE9B-43C0-931D-51A6599FF70D",
+    "source": "Config.java",
+    "code": "public static final String MEATERBlockServiceUUID = \"097F9DB4-BE9B-43C0-931D-51A6599FF70D\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERBlockWiFiMACUUID",
+    "value": "9B08C95C-A1EF-477B-AFD4-3B3BE98DAA07",
+    "source": "Config.java",
+    "code": "public static final String MEATERBlockWiFiMACUUID = \"9B08C95C-A1EF-477B-AFD4-3B3BE98DAA07\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERBlockWiFiScanRequestUUID",
+    "value": "B4663775-9045-479E-B496-D4CA549CFDDA",
+    "source": "Config.java",
+    "code": "public static final String MEATERBlockWiFiScanRequestUUID = \"B4663775-9045-479E-B496-D4CA549CFDDA\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERCookSetupBLECharacteristicUUID",
+    "value": "caf28e64-3b17-4cb4-bb0a-2eaa33c47af7",
+    "source": "Config.java",
+    "code": "public static final String MEATERCookSetupBLECharacteristicUUID = \"caf28e64-3b17-4cb4-bb0a-2eaa33c47af7\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERPlusBatteryLevelUUID",
+    "value": "22DB81C4-D125-4E8F-99A4-3609E4C9A017",
+    "source": "Config.java",
+    "code": "public static final String MEATERPlusBatteryLevelUUID = \"22DB81C4-D125-4E8F-99A4-3609E4C9A017\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERPlusChipTemperatureUUID",
+    "value": "BB9B2404-FCFB-4B73-8ACD-B1B08DA3749D",
+    "source": "Config.java",
+    "code": "public static final String MEATERPlusChipTemperatureUUID = \"BB9B2404-FCFB-4B73-8ACD-B1B08DA3749D\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERPlusProbeConnectionStateUUID",
+    "value": "E03C6CCC-2AA7-40A4-8A66-C98B599B737A",
+    "source": "Config.java",
+    "code": "public static final String MEATERPlusProbeConnectionStateUUID = \"E03C6CCC-2AA7-40A4-8A66-C98B599B737A\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERPlusProbeInfoUUID",
+    "value": "1CBFF55E-9A06-4721-A178-1E2D84246DD1",
+    "source": "Config.java",
+    "code": "public static final String MEATERPlusProbeInfoUUID = \"1CBFF55E-9A06-4721-A178-1E2D84246DD1\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERPlusProbeRSSIUUID",
+    "value": "370AABE7-4837-4BEE-AADC-CD1836DBCE53",
+    "source": "Config.java",
+    "code": "public static final String MEATERPlusProbeRSSIUUID = \"370AABE7-4837-4BEE-AADC-CD1836DBCE53\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERPlusSETemperatureServiceUUID",
+    "value": "49141A23-307F-4E25-AD82-0A3F00D8B90B",
+    "source": "Config.java",
+    "code": "public static final String MEATERPlusSETemperatureServiceUUID = \"49141A23-307F-4E25-AD82-0A3F00D8B90B\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERPlusV2TemperatureServiceUUID",
+    "value": "C9E2746C-59F1-4E54-A0DD-E1E54555CF8B",
+    "source": "Config.java",
+    "code": "public static final String MEATERPlusV2TemperatureServiceUUID = \"C9E2746C-59F1-4E54-A0DD-E1E54555CF8B\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERSimulatedDISUUID",
+    "value": "1E5A67E5-63D8-4242-9882-95D9A7F4E114",
+    "source": "Config.java",
+    "code": "public static final String MEATERSimulatedDISUUID = \"1E5A67E5-63D8-4242-9882-95D9A7F4E114\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERTemperatureBLECharacteristicUUID",
+    "value": "7edda774-045e-4bbf-909b-45d1991a2876",
+    "source": "Config.java",
+    "code": "public static final String MEATERTemperatureBLECharacteristicUUID = \"7edda774-045e-4bbf-909b-45d1991a2876\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERTemperatureLogBLECharactertisticUUID",
+    "value": "b3e02c20-85be-4d1e-8da8-30cd88aaf0d4",
+    "source": "Config.java",
+    "code": "public static final String MEATERTemperatureLogBLECharactertisticUUID = \"b3e02c20-85be-4d1e-8da8-30cd88aaf0d4\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "MEATERTemperatureLogModeBLECharacteristicUUID",
+    "value": "575d3bf1-2757-45ad-94d9-875c2f6120d3",
+    "source": "Config.java",
+    "code": "public static final String MEATERTemperatureLogModeBLECharacteristicUUID = \"575d3bf1-2757-45ad-94d9-875c2f6120d3\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "SimulatedFirmwareRevisionCharacteristicUUID",
+    "value": "BFDBCCAD-224B-4CB6-8B89-0473131A970A",
+    "source": "Config.java",
+    "code": "public static final String SimulatedFirmwareRevisionCharacteristicUUID = \"BFDBCCAD-224B-4CB6-8B89-0473131A970A\"",
+    "category": "protocol"
+  },
+  {
+    "type": "UUID_CONSTANT",
+    "name": "V2TemperatureServiceUUID",
+    "value": "DCBB67CA-64FB-41A3-99D1-5D9FD8CF33CA",
+    "source": "Config.java",
+    "code": "public static final String V2TemperatureServiceUUID = \"DCBB67CA-64FB-41A3-99D1-5D9FD8CF33CA\"",
+    "category": "protocol"
+  },
+  {
+    "type": "SCANNER_OPERATION",
+    "source": "NearbyDevicesFragment.java:39",
+    "code": "@Metadata(d1 = {\"\\u0000r\\n\\u0002\\u0018\\u0002\\n\\u0002\\u0018\\u0002\\n\\u0002\\u0018\\u0002\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0004\\n\\u0002\\u0018\\u0002\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0003\\n\\u0002\\u0010\\u000b\\n\\u0002\\b\\u000b\\n\\u0002\\u0018\\u0002\\n\\u0000\\n\\u0002\\u0010\\b\\n\\u0002\\b\\u0005\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0006\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0003\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0003\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0003\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0003\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0003\\n\\u0002\\u0018\\u0002\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u000b\\u0018\\u00002\\u00020\\u00012\\u00020\\u0002:\\u0001\\u001eB\\u0007\u00a2\\u0006\\u0004\\bF\\u0010GJ\\b\\u0010\\u0004\\u001a\\u00020\\u0003H\\u0002J\\b\\u0010\\u0005\\u001a\\u00020\\u0003H\\u0002J\\b\\u0010\\u0006\\u001a\\u00020\\u0003H\\u0002J\\b\\u0010\\u0007\\u001a\\u00020\\u0003H\\u0002J\\u0018\\u0010\\u000b\\u001a\\u0004\\u0018\\u00010\\t2\\f\\u0010\\n\\u001a\\b\\u0012\\u0004\\u0012\\u00020\\t0\\bH\\u0002J\\u0010\\u0010\\u000e\\u001a\\u00020\\r2\\u0006\\u0010\\f\\u001a\\u00020\\tH\\u0002J\\u0016\\u0010\\u000f\\u001a\\u00020\\r2\\f\\u0010\\n\\u001a\\b\\u0012\\u0004\\u0012\\u00020\\t0\\bH\\u0002J\\b\\u0010\\u0010\\u001a\\u00020\\u0003H\\u0002J\\u0010\\u0010\\u0011\\u001a\\u00020\\r2\\u0006\\u0010\\f\\u001a\\u00020\\tH\\u0002J\\b\\u0010\\u0012\\u001a\\u00020\\u0003H\\u0016J\\b\\u0010\\u0013\\u001a\\u00020\\u0003H\\u0016J\\b\\u0010\\u0014\\u001a\\u00020\\u0003H\\u0016J\\b\\u0010\\u0015\\u001a\\u00020\\u0003H\\u0016J\\b\\u0010\\u0016\\u001a\\u00020\\u0003H\\u0016J\\b\\u0010\\u0017\\u001a\\u00020\\u0003H\\u0016J\\b\\u0010\\u0018\\u001a\\u00020\\u0003H\\u0016J\\u001a\\u0010\\u001d\\u001a\\u00020\\u00032\\b\\u0010\\u001a\\u001a\\u0004\\u0018\\u00010\\u00192\\u0006\\u0010\\u001c\\u001a\\u00020\\u001bH\\u0016J\\u0010\\u0010\\u001e\\u001a\\u00020\\u00032\\u0006\\u0010\\u001c\\u001a\\u00020\\u001bH\\u0016J\\b\\u0010\\u001f\\u001a\\u00020\\u0003H\\u0016J\\b\\u0010 \\u001a\\u00020\\u0003H\\u0016R\\u0016\\u0010$\\u001a\\u00020!8\\u0002@\\u0002X\\u0082.\u00a2\\u0006\\u0006\\n\\u0004\\b\\\"\\u0010#R\\u001c\\u0010'\\u001a\\b\\u0012\\u0004\\u0012\\u00020\\t0\\b8\\u0002@\\u0002X\\u0082.\u00a2\\u0006\\u0006\\n\\u0004\\b%\\u0010&R\\u0014\\u0010+\\u001a\\u00020(8\\u0002X\\u0082\\u0004\u00a2\\u0006\\u0006\\n\\u0004\\b)\\u0010*R\\u0016\\u0010/\\u001a\\u00020,8\\u0002@\\u0002X\\u0082\\u000e\u00a2\\u0006\\u0006\\n\\u0004\\b-\\u0010.R\\u0018\\u00103\\u001a\\u0004\\u0018\\u0001008\\u0002@\\u0002X\\u0082\\u000e\u00a2\\u0006\\u0006\\n\\u0004\\b1\\u00102R\\u0018\\u00107\\u001a\\u0004\\u0018\\u0001048\\u0002@\\u0002X\\u0082\\u000e\u00a2\\u0006\\u0006\\n\\u0004\\b5\\u00106R\\u0016\\u0010;\\u001a\\u0002088\\u0002@\\u0002X\\u0082.\u00a2\\u0006\\u0006\\n\\u0004\\b9\\u0010:R0\\u0010E\\u001a\\u0010\\u0012\\f\\u0012\\n >*\\u0004\\u0018\\u00010=0=0<8\\u0006@\\u0006X\\u0086\\u000e\u00a2\\u0006\\u0012\\n\\u0004\\b?\\u0010@\\u001a\\u0004\\bA\\u0010B\\\"\\u0004\\bC\\u0010D\u00a8\\u0006H\"}, d2 = {\"Lcom/apptionlabs/meater_app/qsg/ui/pairing/NearbyDevicesFragment;\", \"Le7/b;\", \"Lj6/j;\", \"Lih/u;\", \"j3\", \"f3\", \"d3\", \"l3\", \"Ljava/util/ArrayList;\", \"Lcom/apptionlabs/meater_app/model/MEATERDevice;\", \"deviceList\", \"Z2\", \"device\", \"\", \"b3\", \"a3\", \"k3\", \"c3\", \"y2\", \"I2\", \"H2\", \"G2\", \"L2\", \"M2\", \"F2\", \"Lq5/l$a;\", \"DevicesListType\", \"\", \"position\", \"q\", \"a\", \"v1\", \"y1\", \"Li7/o;\", \"v0\", \"Li7/o;\", \"nearByDevicesAdapter\", \"w0\", \"Ljava/util/ArrayList;\", \"nearByDevicesList\", \"Lx5/a;\", \"x0\", \"Lx5/a;\", \"serviceScanner\", \"Lcom/apptionlabs/meater_app/qsg/ui/pairing/NearbyDevicesFragment$a;\", \"y0\", \"Lcom/apptionlabs/meater_app/qsg/ui/pairing/NearbyDevicesFragment$a;\", \"screenState\", \"Landroid/os/Handler;\", \"z0\", \"Landroid/os/Handler;\", \"searchingHandler\", \"Ljava/lang/Runnable;\", \"A0\", \"Ljava/lang/Runnable;\", \"searchingRunnable\", \"Lw6/b;\", \"B0\", \"Lw6/b;\", \"meaterDeviceType\", \"Landroidx/activity/result/c;\", \"Landroid/content/Intent;\", \"kotlin.jvm.PlatformType\", \"C0\", \"Landroidx/activity/result/c;\", \"getActivityResultLauncher\", \"()Landroidx/activity/result/c;\", \"setActivityResultLauncher\", \"(Landroidx/activity/result/c;)V\", \"activityResultLauncher\", \"<init>\", \"()V\", \"app_playstoreLiveRelease\"}, k = 1, mv = {1, 9, 0})",
+    "category": "scanning"
+  },
+  {
+    "type": "UI_UPDATE",
+    "source": "NearbyDevicesFragment.java:39",
+    "code": "@Metadata(d1 = {\"\\u0000r\\n\\u0002\\u0018\\u0002\\n\\u0002\\u0018\\u0002\\n\\u0002\\u0018\\u0002\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0004\\n\\u0002\\u0018\\u0002\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0003\\n\\u0002\\u0010\\u000b\\n\\u0002\\b\\u000b\\n\\u0002\\u0018\\u0002\\n\\u0000\\n\\u0002\\u0010\\b\\n\\u0002\\b\\u0005\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0006\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0003\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0003\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0003\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0003\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u0003\\n\\u0002\\u0018\\u0002\\n\\u0002\\u0018\\u0002\\n\\u0002\\b\\u000b\\u0018\\u00002\\u00020\\u00012\\u00020\\u0002:\\u0001\\u001eB\\u0007\u00a2\\u0006\\u0004\\bF\\u0010GJ\\b\\u0010\\u0004\\u001a\\u00020\\u0003H\\u0002J\\b\\u0010\\u0005\\u001a\\u00020\\u0003H\\u0002J\\b\\u0010\\u0006\\u001a\\u00020\\u0003H\\u0002J\\b\\u0010\\u0007\\u001a\\u00020\\u0003H\\u0002J\\u0018\\u0010\\u000b\\u001a\\u0004\\u0018\\u00010\\t2\\f\\u0010\\n\\u001a\\b\\u0012\\u0004\\u0012\\u00020\\t0\\bH\\u0002J\\u0010\\u0010\\u000e\\u001a\\u00020\\r2\\u0006\\u0010\\f\\u001a\\u00020\\tH\\u0002J\\u0016\\u0010\\u000f\\u001a\\u00020\\r2\\f\\u0010\\n\\u001a\\b\\u0012\\u0004\\u0012\\u00020\\t0\\bH\\u0002J\\b\\u0010\\u0010\\u001a\\u00020\\u0003H\\u0002J\\u0010\\u0010\\u0011\\u001a\\u00020\\r2\\u0006\\u0010\\f\\u001a\\u00020\\tH\\u0002J\\b\\u0010\\u0012\\u001a\\u00020\\u0003H\\u0016J\\b\\u0010\\u0013\\u001a\\u00020\\u0003H\\u0016J\\b\\u0010\\u0014\\u001a\\u00020\\u0003H\\u0016J\\b\\u0010\\u0015\\u001a\\u00020\\u0003H\\u0016J\\b\\u0010\\u0016\\u001a\\u00020\\u0003H\\u0016J\\b\\u0010\\u0017\\u001a\\u00020\\u0003H\\u0016J\\b\\u0010\\u0018\\u001a\\u00020\\u0003H\\u0016J\\u001a\\u0010\\u001d\\u001a\\u00020\\u00032\\b\\u0010\\u001a\\u001a\\u0004\\u0018\\u00010\\u00192\\u0006\\u0010\\u001c\\u001a\\u00020\\u001bH\\u0016J\\u0010\\u0010\\u001e\\u001a\\u00020\\u00032\\u0006\\u0010\\u001c\\u001a\\u00020\\u001bH\\u0016J\\b\\u0010\\u001f\\u001a\\u00020\\u0003H\\u0016J\\b\\u0010 \\u001a\\u00020\\u0003H\\u0016R\\u0016\\u0010$\\u001a\\u00020!8\\u0002@\\u0002X\\u0082.\u00a2\\u0006\\u0006\\n\\u0004\\b\\\"\\u0010#R\\u001c\\u0010'\\u001a\\b\\u0012\\u0004\\u0012\\u00020\\t0\\b8\\u0002@\\u0002X\\u0082.\u00a2\\u0006\\u0006\\n\\u0004\\b%\\u0010&R\\u0014\\u0010+\\u001a\\u00020(8\\u0002X\\u0082\\u0004\u00a2\\u0006\\u0006\\n\\u0004\\b)\\u0010*R\\u0016\\u0010/\\u001a\\u00020,8\\u0002@\\u0002X\\u0082\\u000e\u00a2\\u0006\\u0006\\n\\u0004\\b-\\u0010.R\\u0018\\u00103\\u001a\\u0004\\u0018\\u0001008\\u0002@\\u0002X\\u0082\\u000e\u00a2\\u0006\\u0006\\n\\u0004\\b1\\u00102R\\u0018\\u00107\\u001a\\u0004\\u0018\\u0001048\\u0002@\\u0002X\\u0082\\u000e\u00a2\\u0006\\u0006\\n\\u0004\\b5\\u00106R\\u0016\\u0010;\\u001a\\u0002088\\u0002@\\u0002X\\u0082.\u00a2\\u0006\\u0006\\n\\u0004\\b9\\u0010:R0\\u0010E\\u001a\\u0010\\u0012\\f\\u0012\\n >*\\u0004\\u0018\\u00010=0=0<8\\u0006@\\u0006X\\u0086\\u000e\u00a2\\u0006\\u0012\\n\\u0004\\b?\\u0010@\\u001a\\u0004\\bA\\u0010B\\\"\\u0004\\bC\\u0010D\u00a8\\u0006H\"}, d2 = {\"Lcom/apptionlabs/meater_app/qsg/ui/pairing/NearbyDevicesFragment;\", \"Le7/b;\", \"Lj6/j;\", \"Lih/u;\", \"j3\", \"f3\", \"d3\", \"l3\", \"Ljava/util/ArrayList;\", \"Lcom/apptionlabs/meater_app/model/MEATERDevice;\", \"deviceList\", \"Z2\", \"device\", \"\", \"b3\", \"a3\", \"k3\", \"c3\", \"y2\", \"I2\", \"H2\", \"G2\", \"L2\", \"M2\", \"F2\", \"Lq5/l$a;\", \"DevicesListType\", \"\", \"position\", \"q\", \"a\", \"v1\", \"y1\", \"Li7/o;\", \"v0\", \"Li7/o;\", \"nearByDevicesAdapter\", \"w0\", \"Ljava/util/ArrayList;\", \"nearByDevicesList\", \"Lx5/a;\", \"x0\", \"Lx5/a;\", \"serviceScanner\", \"Lcom/apptionlabs/meater_app/qsg/ui/pairing/NearbyDevicesFragment$a;\", \"y0\", \"Lcom/apptionlabs/meater_app/qsg/ui/pairing/NearbyDevicesFragment$a;\", \"screenState\", \"Landroid/os/Handler;\", \"z0\", \"Landroid/os/Handler;\", \"searchingHandler\", \"Ljava/lang/Runnable;\", \"A0\", \"Ljava/lang/Runnable;\", \"searchingRunnable\", \"Lw6/b;\", \"B0\", \"Lw6/b;\", \"meaterDeviceType\", \"Landroidx/activity/result/c;\", \"Landroid/content/Intent;\", \"kotlin.jvm.PlatformType\", \"C0\", \"Landroidx/activity/result/c;\", \"getActivityResultLauncher\", \"()Landroidx/activity/result/c;\", \"setActivityResultLauncher\", \"(Landroidx/activity/result/c;)V\", \"activityResultLauncher\", \"<init>\", \"()V\", \"app_playstoreLiveRelease\"}, k = 1, mv = {1, 9, 0})",
+    "category": "scanning"
+  },
+  {
+    "type": "SCANNER_OPERATION",
     "source": "NearbyDevicesFragment.java:59",
     "code": "private final x5.a serviceScanner = new x5.a();",
-    "description": "Initialize BLE scanner"
+    "category": "scanning"
   },
   {
-    "type": "STATE_NO_DEVICE",
-    "source": "NearbyDevicesFragment.java:78",
-    "code": "public static final a f9857r = new a(\"NO_DEVICE_FOUND\", 1);",
-    "description": "State when no devices found"
+    "type": "SCANNER_OPERATION",
+    "source": "NearbyDevicesFragment.java:605",
+    "code": "this.serviceScanner.b();",
+    "category": "scanning"
   },
   {
-    "type": "STATE_DEVICES_FOUND",
-    "source": "NearbyDevicesFragment.java:81",
-    "code": "public static final a f9858s = new a(\"DEVICES_FOUND\", 2);",
-    "description": "State when devices are found"
+    "type": "UI_UPDATE",
+    "source": "NearbyDevicesFragment.java:716",
+    "code": "recyclerView.setAdapter(oVar2);",
+    "category": "scanning"
+  },
+  {
+    "type": "SCANNER_OPERATION",
+    "source": "NearbyDevicesFragment.java:825",
+    "code": "this.serviceScanner.d();",
+    "category": "scanning"
   },
   {
     "type": "CHECK_IS_PAIRED",
     "source": "MEATERDevice.java:isPaired()",
     "code": "public boolean isPaired() {\n        if (this.datePaired != null) {\n            return true;\n        }\n        return false;\n    }",
-    "description": "Check if device is paired",
+    "category": "pairing_logic",
     "critical": true
   },
   {
     "type": "DATE_PAIRED_FIELD",
     "source": "MEATERDevice.java:datePaired",
     "code": "protected Long datePaired;",
-    "description": "Pairing timestamp field",
+    "category": "pairing_logic",
     "critical": true
   }
 ]
