@@ -4,12 +4,11 @@ esphome:
   includes:
     - includes/meater_bluedroid_server.h
   on_boot:
-    # Priority -600 ensures this runs AFTER esp32_ble_tracker initializes Bluedroid
-    # Lower priority number = runs later. Default components run at priority 0.
-    # esp32_ble_tracker Setup priority is around 1000, so -600 runs much later
-    priority: -600
+    # Priority 600 ensures this runs LATE (higher priority = later)
+    # esp32_ble_tracker runs early (~-100), so 600 ensures we run much later
+    priority: 600
     then:
-      - delay: 2s  # Extra delay to ensure Bluedroid is fully initialized
+      - delay: 3s  # Wait for Bluedroid initialization
       - lambda: |-
           ESP_LOGI("meater", "=== BOOT: Initializing MEATER BLE server (after Bluedroid init) ===");
       - script.execute: init_ble_server
