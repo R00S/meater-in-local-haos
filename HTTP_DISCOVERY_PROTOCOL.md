@@ -1,5 +1,7 @@
 # HTTP Discovery Protocol
 
+> ⚠️ **CONTAINS ASSUMPTIONS**: This document contains reverse-engineered protocol information and assumptions about MEATER Block behavior. It is NOT based on direct extraction from decompiled app code. For verified protocol information extracted directly from source, see `tools/extracted_operations.json` and `tools/PROTOCOL_COMPARISON_RESULTS.md`.
+
 ## Overview
 This document outlines the discovery process for MEATER Blocks, focusing on the limitations of using UDP broadcasts alone in the discovery mechanism.
 

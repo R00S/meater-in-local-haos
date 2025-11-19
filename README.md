@@ -1,45 +1,43 @@
-# MEATER WiFi Bridge for Home Assistant
+# MEATER BLE Probe Emulator for Home Assistant
 
-This ESPHome configuration allows an ESP32 to act as a WiFi bridge for a MEATER probe, enabling simultaneous use with Home Assistant and the MEATER phone app.
+This ESPHome configuration allows an ESP32 to emulate a MEATER probe via BLE, providing temperature and battery data to both the MEATER phone app and Home Assistant simultaneously.
 
 > **📝 Note for Home Assistant GUI Users**: This configuration requires adding a custom C++ include file. See the detailed [setup instructions below](#setup) for how to add this file through the File Editor add-on. If you prefer a simpler setup process, you can use the ESPHome command line interface instead.
 
 ## Problem
 
-The MEATER probe/block has limitations when used with multiple systems:
-- Direct BLE connection to Home Assistant means the phone app can't connect
-- Using only the phone app means no Home Assistant integration
-- The MEATER Block WiFi functionality requires the official hardware
+MEATER probes only allow one BLE connection at a time:
+- Connecting via the phone app means no Home Assistant integration
+- Connecting to Home Assistant means the phone app can't connect
+- Official MEATER Block hardware is required for simultaneous connectivity
 
 ## Solution
 
-This configuration makes the ESP32 act as a MEATER Block emulator:
+This configuration makes the ESP32 act as a standalone MEATER probe via BLE:
 
-1. **BLE Client**: Connects to the MEATER probe/device via Bluetooth and reads temperature/battery/device info
-2. **UDP Broadcaster**: Emulates MEATER Block WiFi functionality by broadcasting data on UDP port 7878
-3. **Data Forwarder**: Forwards all data from the MEATER device to both Home Assistant and the WiFi network for phone app discovery
+1. **BLE Server**: Advertises as "MEATER" with proper GATT services and characteristics
+2. **Protocol Compatible**: Implements the exact BLE protocol used by real MEATER probes
+3. **Dual Integration**: Exposes data to both MEATER app (via BLE) and Home Assistant (via ESPHome API)
 
 ## How It Works
 
 ```
-MEATER Probe
-    ↓ (BLE connection)
-ESP32 with this config
-    ↓                    ↓
-Home Assistant      UDP Broadcast (port 7878)
-(existing sensors)   ↓
-                Phone App (discovers via WiFi)
+ESP32 (BLE Server)
+    ↓ BLE Advertisement
+MEATER Phone App connects via BLE
+    ↓ Reads temperature/battery
+ESP32 also exposes sensors to Home Assistant via WiFi/API
 ```
 
 ### Initialization Flow
 
-1. **On Boot**: ESP32 connects to WiFi and starts BLE scanning
-2. **BLE Client Connection**: ESP32 connects to the real MEATER probe/block
-3. **Device Detection**: Reads the device name from MEATER (e.g., "MEATER+", "MEATER 2")
-4. **UDP Broadcasting**: Starts broadcasting temperature and battery data on UDP port 7878
-5. **Data Forwarding**: Continuously forwards data to both Home Assistant sensors and UDP broadcasts
+1. **On Boot**: ESP32 initializes Bluedroid BLE stack
+2. **BLE Advertising**: Starts advertising as "MEATER" with correct service UUIDs
+3. **GATT Services**: Exposes temperature, battery, and pairing characteristics
+4. **Phone App Connection**: MEATER app discovers device and pairs
+5. **Data Updates**: Temperature and battery notifications sent to both app and Home Assistant
 
-This approach allows the phone app to discover the ESP32 as if it were a MEATER Block on WiFi.
+This approach accurately emulates a real MEATER probe - it's BLE only, no UDP broadcasting (real probes don't have WiFi).
 
 ## Security & Secrets
 

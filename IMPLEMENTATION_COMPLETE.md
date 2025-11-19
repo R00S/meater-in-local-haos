@@ -1,5 +1,7 @@
 # Implementation Complete
 
+> ⚠️ **CONTAINS ASSUMPTIONS**: This document describes implementation based on reverse-engineered protocol assumptions. It is NOT based on direct extraction from decompiled app code.
+
 ## Summary
 
 Successfully implemented bidirectional UDP listener and protobuf wire format encoding for the MEATER ESP32 WiFi bridge.

@@ -1,5 +1,7 @@
 # Validator Update Summary
 
+> ⚠️ **PARTIALLY CONTAINS ASSUMPTIONS**: This document describes the validator update process. The validator tool itself (`tools/validate_from_parsed_code.py`) extracts directly from code without assumptions, but this summary document may contain interpretations.
+
 ## Problem Statement
 
 The original issue requested: "Try to use the validator with the current implemented protocol, but parse through the meater.app.new code instead of the old. Maybe the protocol changed."

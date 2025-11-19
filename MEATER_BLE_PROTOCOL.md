@@ -1,6 +1,6 @@
 # MEATER BLE Protocol Documentation
 
-This document contains reverse-engineered MEATER BLE protocol information from [nathanfaber/meaterble](https://github.com/nathanfaber/meaterble).
+> ⚠️ **CONTAINS ASSUMPTIONS**: This document contains reverse-engineered MEATER BLE protocol information from [nathanfaber/meaterble](https://github.com/nathanfaber/meaterble). It includes assumptions and interpretations about protocol behavior. For verified UUID constants extracted directly from decompiled app code, see `tools/extracted_operations.json` which contains all 29 UUID constants from Config.java.
 
 ## Important Notes
 
