@@ -380,7 +380,11 @@ private:
         esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_NOTIFY;
         esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
         
-        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, nullptr);
+        // Don't use auto_rsp - we'll handle read responses manually to return live data
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
+        
+        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, &control);
     }
     
     void add_battery_char() {
@@ -391,7 +395,11 @@ private:
         esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_NOTIFY;
         esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
         
-        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, nullptr);
+        // Don't use auto_rsp - we'll handle read responses manually to return live data
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
+        
+        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, &control);
     }
     
     void add_config_char() {
@@ -403,7 +411,11 @@ private:
         esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_WRITE;
         esp_gatt_perm_t permissions = ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE;
         
-        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, nullptr);
+        // Manual response for read/write to handle pairing logic
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;
+        
+        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, &control);
     }
     
     void add_firmware_char() {
@@ -419,7 +431,11 @@ private:
         attr_val.attr_len = strlen(MEATER_FIRMWARE);
         attr_val.attr_value = (uint8_t*)MEATER_FIRMWARE;
         
-        esp_ble_gatts_add_char(device_info_service_handle_, &char_uuid, permissions, properties, &attr_val, nullptr);
+        // Manual response to ensure we return data
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;
+        
+        esp_ble_gatts_add_char(device_info_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
     }
     
     void add_device_name_char() {
@@ -435,7 +451,11 @@ private:
         attr_val.attr_len = strlen(MEATER_NAME);
         attr_val.attr_value = (uint8_t*)MEATER_NAME;
         
-        esp_ble_gatts_add_char(gap_service_handle_, &char_uuid, permissions, properties, &attr_val, nullptr);
+        // Manual response
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;
+        
+        esp_ble_gatts_add_char(gap_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
     }
     
     void handle_char_added(esp_ble_gatts_cb_param_t *param) {
@@ -492,26 +512,32 @@ private:
             // Return temperature data (8 bytes)
             memcpy(rsp.attr_value.value, temp_data_, 8);
             rsp.attr_value.len = 8;
-            ESP_LOGI("meater_ble_server", "Returning temperature data");
+            ESP_LOGI("meater_ble_server", "Returning temperature data (8 bytes)");
         } else if (param->read.handle == battery_char_handle_) {
             // Return battery data (2 bytes)
             memcpy(rsp.attr_value.value, battery_data_, 2);
             rsp.attr_value.len = 2;
-            ESP_LOGI("meater_ble_server", "Returning battery data");
+            ESP_LOGI("meater_ble_server", "Returning battery data (2 bytes)");
         } else if (param->read.handle == config_char_handle_) {
             // Return config data (4 bytes)
             memcpy(rsp.attr_value.value, config_data_, 4);
             rsp.attr_value.len = 4;
-            ESP_LOGI("meater_ble_server", "Returning config data");
+            ESP_LOGI("meater_ble_server", "Returning config data (4 bytes)");
         } else if (param->read.handle == firmware_char_handle_) {
             // Return firmware version string
             const char* firmware = "v1.0.4_0";
             strcpy((char*)rsp.attr_value.value, firmware);
             rsp.attr_value.len = strlen(firmware);
             ESP_LOGI("meater_ble_server", "Returning firmware: %s", firmware);
+        } else if (param->read.handle == device_name_char_handle_) {
+            // Return device name
+            strcpy((char*)rsp.attr_value.value, MEATER_NAME);
+            rsp.attr_value.len = strlen(MEATER_NAME);
+            ESP_LOGI("meater_ble_server", "Returning device name: %s", MEATER_NAME);
         } else {
             // Unknown characteristic, return empty
             rsp.attr_value.len = 0;
+            ESP_LOGW("meater_ble_server", "Read request for unknown handle: %d", param->read.handle);
         }
         
         esp_ble_gatts_send_response(gatts_if_, param->read.conn_id, param->read.trans_id, ESP_GATT_OK, &rsp);
