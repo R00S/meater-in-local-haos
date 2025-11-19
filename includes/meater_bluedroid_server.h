@@ -251,10 +251,19 @@ private:
         adv_data_.p_service_uuid = service_uuid;
         adv_data_.flag = (ESP_BLE_ADV_FLAG_GEN_DISC | ESP_BLE_ADV_FLAG_BREDR_NOT_SPT);
         
+        // Debug: Log manufacturer data to verify it's correct
+        ESP_LOGI("meater_ble_server", "Manufacturer data (%d bytes): %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x",
+                 (int)sizeof(manufacturer_data),
+                 manufacturer_data[0], manufacturer_data[1], manufacturer_data[2], manufacturer_data[3],
+                 manufacturer_data[4], manufacturer_data[5], manufacturer_data[6], manufacturer_data[7],
+                 manufacturer_data[8], manufacturer_data[9], manufacturer_data[10]);
+        
         ESP_LOGI("meater_ble_server", "Setting advertising data...");
         esp_err_t ret = esp_ble_gap_config_adv_data(&adv_data_);
         if (ret != ESP_OK) {
             ESP_LOGE("meater_ble_server", "Config advertising data failed: 0x%x", ret);
+        } else {
+            ESP_LOGI("meater_ble_server", "✓ Advertising data set successfully");
         }
         
         // Advertising parameters
