@@ -475,16 +475,54 @@ public:
     bool setup() {
         ESP_LOGI("meater_ble_server", "Setting up MEATER BLE server (Bluedroid)");
         
-        // NOTE: BT controller and Bluedroid initialization is handled by esp32_ble_tracker component
-        // We only need to register our GATT server callbacks
+        // Initialize Bluedroid stack (since esp32_ble_tracker is disabled)
+        esp_err_t ret;
         
-        // Verify Bluedroid is enabled and initialized
-        if (esp_bluedroid_get_status() != ESP_BLUEDROID_STATUS_ENABLED) {
-            ESP_LOGE("meater_ble_server", "Bluedroid is not enabled! Status: %d", esp_bluedroid_get_status());
-            ESP_LOGE("meater_ble_server", "esp32_ble_tracker should have initialized Bluedroid");
+        // Check if Bluedroid is already initialized
+        if (esp_bluedroid_get_status() == ESP_BLUEDROID_STATUS_UNINITIALIZED) {
+            ESP_LOGI("meater_ble_server", "Initializing BT controller...");
+            
+            // Release BT controller memory if needed
+            esp_bt_controller_mem_release(ESP_BT_MODE_CLASSIC_BT);
+            
+            // Initialize BT controller
+            esp_bt_controller_config_t bt_cfg = BT_CONTROLLER_INIT_CONFIG_DEFAULT();
+            ret = esp_bt_controller_init(&bt_cfg);
+            if (ret != ESP_OK) {
+                ESP_LOGE("meater_ble_server", "BT controller init failed: 0x%x", ret);
+                return false;
+            }
+            ESP_LOGI("meater_ble_server", "✓ BT controller initialized");
+            
+            // Enable BT controller in BLE mode
+            ret = esp_bt_controller_enable(ESP_BT_MODE_BLE);
+            if (ret != ESP_OK) {
+                ESP_LOGE("meater_ble_server", "BT controller enable failed: 0x%x", ret);
+                return false;
+            }
+            ESP_LOGI("meater_ble_server", "✓ BT controller enabled (BLE mode)");
+            
+            // Initialize Bluedroid
+            ret = esp_bluedroid_init();
+            if (ret != ESP_OK) {
+                ESP_LOGE("meater_ble_server", "Bluedroid init failed: 0x%x", ret);
+                return false;
+            }
+            ESP_LOGI("meater_ble_server", "✓ Bluedroid initialized");
+            
+            // Enable Bluedroid
+            ret = esp_bluedroid_enable();
+            if (ret != ESP_OK) {
+                ESP_LOGE("meater_ble_server", "Bluedroid enable failed: 0x%x", ret);
+                return false;
+            }
+            ESP_LOGI("meater_ble_server", "✓ Bluedroid enabled");
+        } else if (esp_bluedroid_get_status() == ESP_BLUEDROID_STATUS_ENABLED) {
+            ESP_LOGI("meater_ble_server", "✓ Bluedroid already enabled");
+        } else {
+            ESP_LOGE("meater_ble_server", "Bluedroid in unexpected state: %d", esp_bluedroid_get_status());
             return false;
         }
-        ESP_LOGI("meater_ble_server", "✓ Bluedroid is enabled and ready");
         
         // Register GAP callback
         esp_err_t ret = esp_ble_gap_register_callback(gap_event_handler);
