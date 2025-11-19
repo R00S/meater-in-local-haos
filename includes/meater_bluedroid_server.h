@@ -388,9 +388,7 @@ private:
         control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
         
         esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, &control);
-        
-        // Explicitly add CCCD descriptor for notifications
-        add_cccd_descriptor();
+        // CCCD will be added in handle_char_added() after characteristic is created
     }
     
     void add_cccd_descriptor() {
@@ -428,9 +426,7 @@ private:
         control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
         
         esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, &control);
-        
-        // Explicitly add CCCD descriptor for notifications
-        add_cccd_descriptor();
+        // CCCD will be added in handle_char_added() after characteristic is created
     }
     
     void add_config_char() {
@@ -498,9 +494,13 @@ private:
             if (temp_char_handle_ == 0) {
                 temp_char_handle_ = char_handle;
                 ESP_LOGI("meater_ble_server", "Temperature char handle: %d", temp_char_handle_);
+                // Now add CCCD descriptor for temperature characteristic
+                add_cccd_descriptor();
             } else if (battery_char_handle_ == 0) {
                 battery_char_handle_ = char_handle;
                 ESP_LOGI("meater_ble_server", "Battery char handle: %d", battery_char_handle_);
+                // Now add CCCD descriptor for battery characteristic
+                add_cccd_descriptor();
             } else if (config_char_handle_ == 0) {
                 config_char_handle_ = char_handle;
                 ESP_LOGI("meater_ble_server", "Config char handle: %d", config_char_handle_);
