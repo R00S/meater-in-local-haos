@@ -237,18 +237,20 @@ private:
             // Device ID is unique to avoid conflicts with real probes
         };
         
+        // Primary advertising packet - keep under 31 bytes
+        // Contents: Flags (3) + Name (8) + Manufacturer Data (13) = 24 bytes (fits!)
         adv_data_.set_scan_rsp = false;
         adv_data_.include_name = true;
-        adv_data_.include_txpower = true;
-        adv_data_.min_interval = 0x0006;
-        adv_data_.max_interval = 0x0010;
+        adv_data_.include_txpower = false;  // Disabled to save space
+        adv_data_.min_interval = 0;
+        adv_data_.max_interval = 0;
         adv_data_.appearance = 0x00;
         adv_data_.manufacturer_len = sizeof(manufacturer_data);
         adv_data_.p_manufacturer_data = manufacturer_data;
         adv_data_.service_data_len = 0;
         adv_data_.p_service_data = nullptr;
-        adv_data_.service_uuid_len = 16;
-        adv_data_.p_service_uuid = service_uuid;
+        adv_data_.service_uuid_len = 0;  // Will be in scan response instead
+        adv_data_.p_service_uuid = nullptr;
         adv_data_.flag = (ESP_BLE_ADV_FLAG_GEN_DISC | ESP_BLE_ADV_FLAG_BREDR_NOT_SPT);
         
         // Debug: Log manufacturer data to verify it's correct
@@ -258,12 +260,34 @@ private:
                  manufacturer_data[4], manufacturer_data[5], manufacturer_data[6], manufacturer_data[7],
                  manufacturer_data[8], manufacturer_data[9], manufacturer_data[10]);
         
-        ESP_LOGI("meater_ble_server", "Setting advertising data...");
+        ESP_LOGI("meater_ble_server", "Setting advertising data (primary packet)...");
         esp_err_t ret = esp_ble_gap_config_adv_data(&adv_data_);
         if (ret != ESP_OK) {
             ESP_LOGE("meater_ble_server", "Config advertising data failed: 0x%x", ret);
         } else {
             ESP_LOGI("meater_ble_server", "✓ Advertising data set successfully");
+        }
+        
+        // Scan response packet - contains service UUID
+        static esp_ble_adv_data_t scan_rsp_data = {};
+        scan_rsp_data.set_scan_rsp = true;
+        scan_rsp_data.include_name = false;
+        scan_rsp_data.include_txpower = false;
+        scan_rsp_data.appearance = 0x00;
+        scan_rsp_data.manufacturer_len = 0;
+        scan_rsp_data.p_manufacturer_data = nullptr;
+        scan_rsp_data.service_data_len = 0;
+        scan_rsp_data.p_service_data = nullptr;
+        scan_rsp_data.service_uuid_len = 16;
+        scan_rsp_data.p_service_uuid = service_uuid;
+        scan_rsp_data.flag = 0;
+        
+        ESP_LOGI("meater_ble_server", "Setting scan response data (service UUID)...");
+        ret = esp_ble_gap_config_adv_data(&scan_rsp_data);
+        if (ret != ESP_OK) {
+            ESP_LOGE("meater_ble_server", "Config scan response data failed: 0x%x", ret);
+        } else {
+            ESP_LOGI("meater_ble_server", "✓ Scan response data set successfully");
         }
         
         // Advertising parameters
