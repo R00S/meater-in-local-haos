@@ -621,7 +621,7 @@ private:
                 // This triggers the app to set datePaired field in database
                 if (!is_paired_) {
                     is_paired_ = true;
-                    pairing_timestamp_ = millis();  // Use ESPHome's millis() instead
+                    pairing_timestamp_ = esp_timer_get_time() / 1000;  // μs to ms
                     ESP_LOGI("meater_ble_server", "✓ Device paired! Timestamp: %llu", pairing_timestamp_);
                     ESP_LOGI("meater_ble_server", "App should now set datePaired field in database");
                 } else {
