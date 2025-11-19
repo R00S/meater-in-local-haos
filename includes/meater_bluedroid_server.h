@@ -224,16 +224,17 @@ private:
         static uint8_t service_uuid[16];
         memcpy(service_uuid, MEATER_SERVICE_UUID, 16);
         
-        // ✅ FROM GROUND TRUTH: Real MEATER probe advertisement (bluetoothctl scan)
-        // Device B8:1F:5E:4A:5E:EF MEATER
-        // ManufacturerData.Key: 0x037b (891)
-        // ManufacturerData.Value: 00 4c 0b 82 35 23 a3 98 ea
+        // ✅ Manufacturer data structure based on real MEATER probe format
+        // Structure: Company ID (2 bytes) + Probe number (1 byte) + Device ID (8 bytes)
         // Total: 9 bytes data + company ID (2 bytes) = 11 bytes total array
+        // 
+        // NOTE: Device ID bytes are unique to this ESP32 to avoid conflicts with
+        // real MEATER probes or MEATER Block devices that might try to connect
         static uint8_t manufacturer_data[11] = {
-            0x7B, 0x03,  // Company ID: 0x037B (little-endian as required by BLE spec)
-            0x00,        // Byte 2: Device type (0x00 for regular MEATER, 0x01 for MEATER+)
-            0x4C, 0x0B, 0x82, 0x35, 0x23, 0xA3, 0x98, 0xEA  // Bytes 3-10: All 9 bytes from real probe
-            // Complete manufacturer data from real MEATER probe - app uses this to identify devices
+            0x7B, 0x03,  // Company ID: 0x037B (Apption Labs) - little-endian as required by BLE spec
+            0x00,        // Byte 2: Probe number (0x00 = regular MEATER probe)
+            0xE5, 0xF3, 0x32, 0xC0, 0xDE, 0x00, 0x01, 0x23  // Bytes 3-10: Unique device identifier for this ESP32
+            // Device ID is unique to avoid conflicts with real probes
         };
         
         adv_data_.set_scan_rsp = false;
