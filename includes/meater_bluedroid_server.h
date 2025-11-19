@@ -430,9 +430,28 @@ private:
     }
     
     void handle_char_added(esp_ble_gatts_cb_param_t *param) {
-        // Store characteristic handles
-        // Note: Need to add battery and config characteristics as well
-        // This is simplified - full implementation would track which char was added
+        // Store characteristic handles based on service
+        uint16_t char_handle = param->add_char.attr_handle;
+        
+        if (param->add_char.service_handle == meater_service_handle_) {
+            // MEATER service characteristics - store in order they were added
+            if (temp_char_handle_ == 0) {
+                temp_char_handle_ = char_handle;
+                ESP_LOGI("meater_ble_server", "Temperature char handle: %d", temp_char_handle_);
+            } else if (battery_char_handle_ == 0) {
+                battery_char_handle_ = char_handle;
+                ESP_LOGI("meater_ble_server", "Battery char handle: %d", battery_char_handle_);
+            } else if (config_char_handle_ == 0) {
+                config_char_handle_ = char_handle;
+                ESP_LOGI("meater_ble_server", "Config char handle: %d", config_char_handle_);
+            }
+        } else if (param->add_char.service_handle == device_info_service_handle_) {
+            firmware_char_handle_ = char_handle;
+            ESP_LOGI("meater_ble_server", "Firmware char handle: %d", firmware_char_handle_);
+        } else if (param->add_char.service_handle == gap_service_handle_) {
+            device_name_char_handle_ = char_handle;
+            ESP_LOGI("meater_ble_server", "Device name char handle: %d", device_name_char_handle_);
+        }
     }
     
     void handle_read(esp_ble_gatts_cb_param_t *param) {
@@ -451,6 +470,25 @@ private:
     
     void handle_write(esp_ble_gatts_cb_param_t *param) {
         ESP_LOGI("meater_ble_server", "Write request for handle: %d, len: %d", param->write.handle, param->write.len);
+        
+        // Check if this is a CCCD write (handle + 1 for notification enable/disable)
+        // CCCD descriptor is always at characteristic handle + 1
+        if (param->write.len == 2) {
+            uint16_t descr_value = param->write.value[0] | (param->write.value[1] << 8);
+            
+            // Temperature characteristic CCCD (handle + 1)
+            if (temp_char_handle_ != 0 && param->write.handle == temp_char_handle_ + 1) {
+                temp_notify_enabled_ = (descr_value == 0x0001);
+                ESP_LOGI("meater_ble_server", "Temperature notifications %s", 
+                         temp_notify_enabled_ ? "ENABLED" : "DISABLED");
+            }
+            // Battery characteristic CCCD (handle + 1)
+            else if (battery_char_handle_ != 0 && param->write.handle == battery_char_handle_ + 1) {
+                battery_notify_enabled_ = (descr_value == 0x0001);
+                ESP_LOGI("meater_ble_server", "Battery notifications %s", 
+                         battery_notify_enabled_ ? "ENABLED" : "DISABLED");
+            }
+        }
         
         // Check if this is a config characteristic write (pairing)
         if (param->write.handle == config_char_handle_) {
