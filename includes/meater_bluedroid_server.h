@@ -222,6 +222,16 @@ private:
                 
             case ESP_GATTS_START_EVT:
                 ESP_LOGI("meater_ble_server", "Service started");
+                service_creation_count_++;
+                // All 3 services started (MEATER, Device Info, GAP)
+                if (service_creation_count_ >= 3) {
+                    ESP_LOGI("meater_ble_server", "=== All services started ===");
+                    ESP_LOGI("meater_ble_server", "Temp handle: %d, CCCD: %d", temp_char_handle_, temp_cccd_handle_);
+                    ESP_LOGI("meater_ble_server", "Battery handle: %d, CCCD: %d", battery_char_handle_, battery_cccd_handle_);
+                    ESP_LOGI("meater_ble_server", "Config handle: %d", config_char_handle_);
+                    ESP_LOGI("meater_ble_server", "Firmware handle: %d", firmware_char_handle_);
+                    ESP_LOGI("meater_ble_server", "Device name handle: %d", device_name_char_handle_);
+                }
                 break;
                 
             default:
