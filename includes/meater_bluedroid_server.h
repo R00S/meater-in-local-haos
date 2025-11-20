@@ -744,6 +744,11 @@ public:
         if (data.size() == 8) {
             memcpy(temp_data_, data.data(), 8);
             
+            // Update GATT database attribute value so auto-response returns current data
+            if (temp_char_handle_ != 0) {
+                esp_ble_gatts_set_attr_value(temp_char_handle_, 8, temp_data_);
+            }
+            
             // Send notification if enabled and connected
             if (connected_ && temp_notify_enabled_ && temp_char_handle_ != 0) {
                 esp_ble_gatts_send_indicate(gatts_if_, conn_id_, temp_char_handle_, 8, temp_data_, false);
@@ -754,6 +759,11 @@ public:
     void update_battery(const std::vector<uint8_t>& data) {
         if (data.size() == 2) {
             memcpy(battery_data_, data.data(), 2);
+            
+            // Update GATT database attribute value so auto-response returns current data
+            if (battery_char_handle_ != 0) {
+                esp_ble_gatts_set_attr_value(battery_char_handle_, 2, battery_data_);
+            }
             
             // Send notification if enabled and connected
             if (connected_ && battery_notify_enabled_ && battery_char_handle_ != 0) {
