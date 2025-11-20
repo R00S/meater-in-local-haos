@@ -403,7 +403,13 @@ private:
         esp_attr_control_t control;
         control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
         
-        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, &control);
+        // MUST provide initial attribute value when using ESP_GATT_RSP_BY_APP
+        esp_attr_value_t attr_val;
+        attr_val.attr_max_len = 8;
+        attr_val.attr_len = 8;
+        attr_val.attr_value = temp_data_;
+        
+        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
         // CCCD will be added in handle_char_added() after characteristic is created
     }
     
@@ -441,7 +447,83 @@ private:
         esp_attr_control_t control;
         control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
         
-        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, &control);
+        // MUST provide initial attribute value when using ESP_GATT_RSP_BY_APP
+        esp_attr_value_t attr_val;
+        attr_val.attr_max_len = 2;
+        attr_val.attr_len = 2;
+        attr_val.attr_value = battery_data_;
+        
+        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
+        // CCCD will be added in handle_char_added() after characteristic is created
+    }
+    
+    void add_config_char() {
+        ESP_LOGI(TAG, "Adding config char: caf28e64-3b17-4cb4-bb0a-2eaa33c47af7");
+        esp_bt_uuid_t char_uuid;
+        char_uuid.len = ESP_UUID_LEN_128;
+        memcpy(char_uuid.uuid.uuid128, CONFIG_CHAR_UUID, 16);
+        
+        esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_WRITE;
+        esp_gatt_perm_t permissions = ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE;
+        
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
+        
+        // MUST provide initial attribute value
+        esp_attr_value_t attr_val;
+        attr_val.attr_max_len = 4;
+        attr_val.attr_len = 4;
+        attr_val.attr_value = config_data_;
+        
+        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
+    }
+    
+    void add_firmware_char() {
+        ESP_LOGI(TAG, "Adding firmware char: 00002a26-0000-1000-8000-00805f9b34fb");
+        esp_bt_uuid_t char_uuid;
+        char_uuid.len = ESP_UUID_LEN_16;
+        char_uuid.uuid.uuid16 = 0x2A26;  // Firmware Revision String
+        
+        esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ;
+        esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
+        
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
+        
+        // MUST provide initial attribute value
+        esp_attr_value_t attr_val;
+        attr_val.attr_max_len = 16;
+        attr_val.attr_len = strlen(firmware_version_);
+        attr_val.attr_value = (uint8_t*)firmware_version_;
+        
+        esp_ble_gatts_add_char(device_info_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
+    }
+    
+    void add_device_name_char() {
+        ESP_LOGI(TAG, "Adding device name char: 00002a00-0000-1000-8000-00805f9b34fb");
+        esp_bt_uuid_t char_uuid;
+        char_uuid.len = ESP_UUID_LEN_16;
+        char_uuid.uuid.uuid16 = 0x2A00;  // Device Name
+        
+        esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ;
+        esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
+        
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
+        
+        // MUST provide initial attribute value
+        esp_attr_value_t attr_val;
+        attr_val.attr_max_len = 16;
+        attr_val.attr_len = strlen(device_name_);
+        attr_val.attr_value = (uint8_t*)device_name_;
+        
+        esp_ble_gatts_add_char(gap_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
+        esp_attr_value_t attr_val;
+        attr_val.attr_max_len = 2;
+        attr_val.attr_len = 2;
+        attr_val.attr_value = battery_data_;
+        
+        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
         // CCCD will be added in handle_char_added() after characteristic is created
     }
     
