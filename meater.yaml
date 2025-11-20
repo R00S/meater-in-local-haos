@@ -131,7 +131,7 @@ interval:
           }
           
           // Update Home Assistant sensors with mock data
-          uint16_t tip_temp = (temp_data[0] + (temp_data[1] << 8) + 8.0) / 16.0;
+          uint16_t tip_temp = (temp_data[0] + (temp_data[1] << 8) + 8.0) / 32.0;
           id(meater_tip_temp).publish_state(tip_temp);
           
           uint16_t tip = temp_data[0] + (temp_data[1] << 8);

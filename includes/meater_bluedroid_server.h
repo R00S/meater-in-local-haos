@@ -163,6 +163,61 @@ private:
             case ESP_GAP_BLE_SCAN_RESULT_EVT:
                 // Ignore scan results from esp32_ble_tracker - too noisy
                 break;
+            case ESP_GAP_BLE_NC_REQ_EVT:
+                // Numeric Comparison Request event (event 20)
+                ESP_LOGI("meater_ble_server", "Numeric Comparison Request event received");
+                // Auto-accept pairing request
+                esp_ble_confirm_reply(param->ble_security.ble_req.bd_addr, true);
+                break;
+            case ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT:
+                // Advertising stop complete event (event 21)
+                if (param->adv_stop_cmpl.status == ESP_BT_STATUS_SUCCESS) {
+                    ESP_LOGI("meater_ble_server", "Advertising stopped successfully");
+                } else {
+                    ESP_LOGE("meater_ble_server", "Advertising stop failed with status: %d", param->adv_stop_cmpl.status);
+                }
+                break;
+            case ESP_GAP_BLE_PHY_UPDATE_COMPLETE_EVT:
+                // PHY update complete event (event 60)
+                ESP_LOGI("meater_ble_server", "PHY update complete, status: %d", param->phy_update.status);
+                break;
+            case ESP_GAP_BLE_PASSKEY_REQ_EVT:
+                // Passkey request event
+                ESP_LOGI("meater_ble_server", "Passkey request event received");
+                break;
+            case ESP_GAP_BLE_OOB_REQ_EVT:
+                // OOB request event
+                ESP_LOGI("meater_ble_server", "OOB request event received");
+                break;
+            case ESP_GAP_BLE_LOCAL_IR_EVT:
+                // Local IR event
+                ESP_LOGI("meater_ble_server", "Local IR event received");
+                break;
+            case ESP_GAP_BLE_LOCAL_ER_EVT:
+                // Local ER event
+                ESP_LOGI("meater_ble_server", "Local ER event received");
+                break;
+            case ESP_GAP_BLE_SEC_REQ_EVT:
+                // Security request event
+                ESP_LOGI("meater_ble_server", "Security request event received");
+                esp_ble_gap_security_rsp(param->ble_security.ble_req.bd_addr, true);
+                break;
+            case ESP_GAP_BLE_PASSKEY_NOTIF_EVT:
+                // Passkey notification event
+                ESP_LOGI("meater_ble_server", "Passkey notification: %d", param->ble_security.key_notif.passkey);
+                break;
+            case ESP_GAP_BLE_KEY_EVT:
+                // Key event
+                ESP_LOGI("meater_ble_server", "Key event received");
+                break;
+            case ESP_GAP_BLE_AUTH_CMPL_EVT:
+                // Authentication complete event
+                if (param->ble_security.auth_cmpl.success) {
+                    ESP_LOGI("meater_ble_server", "Authentication complete successfully");
+                } else {
+                    ESP_LOGE("meater_ble_server", "Authentication failed, status: %d", param->ble_security.auth_cmpl.fail_reason);
+                }
+                break;
             default:
                 ESP_LOGD("meater_ble_server", "Unhandled GAP event: %d", event);
                 break;
