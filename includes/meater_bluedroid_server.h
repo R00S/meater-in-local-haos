@@ -496,8 +496,8 @@ private:
         // MUST provide initial attribute value
         esp_attr_value_t attr_val;
         attr_val.attr_max_len = 16;
-        attr_val.attr_len = strlen(firmware_version_);
-        attr_val.attr_value = (uint8_t*)firmware_version_;
+        attr_val.attr_len = strlen(MEATER_FIRMWARE);
+        attr_val.attr_value = (uint8_t*)MEATER_FIRMWARE;
         
         esp_ble_gatts_add_char(device_info_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
     }
@@ -517,8 +517,8 @@ private:
         // MUST provide initial attribute value
         esp_attr_value_t attr_val;
         attr_val.attr_max_len = 16;
-        attr_val.attr_len = strlen(device_name_);
-        attr_val.attr_value = (uint8_t*)device_name_;
+        attr_val.attr_len = strlen(MEATER_NAME);
+        attr_val.attr_value = (uint8_t*)MEATER_NAME;
         
         esp_ble_gatts_add_char(gap_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
     }
