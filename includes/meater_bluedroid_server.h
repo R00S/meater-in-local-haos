@@ -163,6 +163,74 @@ private:
             case ESP_GAP_BLE_SCAN_RESULT_EVT:
                 // Ignore scan results from esp32_ble_tracker - too noisy
                 break;
+            
+            // BLE Pairing Event Handlers
+            case ESP_GAP_BLE_NC_REQ_EVT:
+                // Numeric Comparison Request (Event 20)
+                // Auto-accept pairing without user confirmation
+                ESP_LOGI("meater_ble_server", "🔐 NC_REQ_EVT (Event 20): Auto-accepting pairing request");
+                esp_ble_confirm_reply(param->ble_security.ble_req.bd_addr, true);
+                break;
+            
+            case ESP_GAP_BLE_AUTH_CMPL_EVT:
+                // Authentication Complete
+                if (param->ble_security.auth_cmpl.success) {
+                    ESP_LOGI("meater_ble_server", "✓ AUTH_CMPL_EVT: Pairing successful!");
+                    ESP_LOGI("meater_ble_server", "  Device: %02x:%02x:%02x:%02x:%02x:%02x",
+                             param->ble_security.auth_cmpl.bd_addr[0],
+                             param->ble_security.auth_cmpl.bd_addr[1],
+                             param->ble_security.auth_cmpl.bd_addr[2],
+                             param->ble_security.auth_cmpl.bd_addr[3],
+                             param->ble_security.auth_cmpl.bd_addr[4],
+                             param->ble_security.auth_cmpl.bd_addr[5]);
+                    ESP_LOGI("meater_ble_server", "  Auth mode: 0x%x", param->ble_security.auth_cmpl.auth_mode);
+                } else {
+                    ESP_LOGE("meater_ble_server", "✗ AUTH_CMPL_EVT: Pairing failed! Reason: 0x%x", 
+                             param->ble_security.auth_cmpl.fail_reason);
+                }
+                break;
+            
+            case ESP_GAP_BLE_SEC_REQ_EVT:
+                // Security Request from peer device
+                ESP_LOGI("meater_ble_server", "🔐 SEC_REQ_EVT: Granting security request");
+                // Grant security request to initiate pairing
+                esp_ble_gap_security_rsp(param->ble_security.ble_req.bd_addr, true);
+                break;
+            
+            case ESP_GAP_BLE_KEY_EVT:
+                // Key Exchange Event
+                ESP_LOGI("meater_ble_server", "🔑 KEY_EVT: Key exchange in progress");
+                break;
+            
+            case ESP_GAP_BLE_PASSKEY_REQ_EVT:
+                // Passkey Request (for devices requiring PIN entry)
+                ESP_LOGI("meater_ble_server", "🔐 PASSKEY_REQ_EVT: Passkey requested (using NoInputNoOutput, auto-pairing)");
+                break;
+            
+            case ESP_GAP_BLE_OOB_REQ_EVT:
+                // Out-of-Band pairing request
+                ESP_LOGI("meater_ble_server", "🔐 OOB_REQ_EVT: Out-of-Band pairing requested");
+                break;
+            
+            case ESP_GAP_BLE_PHY_UPDATE_COMPLETE_EVT:
+                // PHY Update Complete (Event 60)
+                ESP_LOGI("meater_ble_server", "📡 PHY_UPDATE_COMPLETE_EVT (Event 60): PHY updated");
+                ESP_LOGI("meater_ble_server", "  TX PHY: %d, RX PHY: %d, Status: %d",
+                         param->phy_update.tx_phy,
+                         param->phy_update.rx_phy,
+                         param->phy_update.status);
+                break;
+            
+            case ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT:
+                // Advertising Stop Complete (Event 21)
+                if (param->adv_stop_cmpl.status == ESP_BT_STATUS_SUCCESS) {
+                    ESP_LOGI("meater_ble_server", "✓ ADV_STOP_COMPLETE_EVT (Event 21): Advertising stopped successfully");
+                } else {
+                    ESP_LOGE("meater_ble_server", "✗ ADV_STOP_COMPLETE_EVT (Event 21): Advertising stop failed, status: %d", 
+                             param->adv_stop_cmpl.status);
+                }
+                break;
+            
             default:
                 ESP_LOGD("meater_ble_server", "Unhandled GAP event: %d", event);
                 break;
@@ -723,6 +791,56 @@ public:
         } else {
             ESP_LOGI("meater_ble_server", "GATTS callback registered successfully");
         }
+        
+        // Configure BLE security parameters for pairing
+        ESP_LOGI("meater_ble_server", "Configuring BLE security parameters...");
+        
+        // Set authentication mode: bonding with MITM protection
+        esp_ble_auth_req_t auth_req = ESP_LE_AUTH_REQ_SC_MITM_BOND;
+        ret = esp_ble_gap_set_security_param(ESP_BLE_SM_AUTHEN_REQ_MODE, &auth_req, sizeof(uint8_t));
+        if (ret) {
+            ESP_LOGE("meater_ble_server", "Set auth mode failed: %d", ret);
+        } else {
+            ESP_LOGI("meater_ble_server", "✓ Auth mode set: SC_MITM_BOND");
+        }
+        
+        // Set I/O capability: NoInputNoOutput (for auto-pairing)
+        esp_ble_io_cap_t iocap = ESP_IO_CAP_NONE;
+        ret = esp_ble_gap_set_security_param(ESP_BLE_SM_IOCAP_MODE, &iocap, sizeof(uint8_t));
+        if (ret) {
+            ESP_LOGE("meater_ble_server", "Set IO capability failed: %d", ret);
+        } else {
+            ESP_LOGI("meater_ble_server", "✓ IO capability set: NoInputNoOutput");
+        }
+        
+        // Set key size (16 bytes max for BLE)
+        uint8_t key_size = 16;
+        ret = esp_ble_gap_set_security_param(ESP_BLE_SM_MAX_KEY_SIZE, &key_size, sizeof(uint8_t));
+        if (ret) {
+            ESP_LOGE("meater_ble_server", "Set key size failed: %d", ret);
+        } else {
+            ESP_LOGI("meater_ble_server", "✓ Max key size set: 16 bytes");
+        }
+        
+        // Set initiator key distribution (send all keys)
+        uint8_t init_key = ESP_BLE_ENC_KEY_MASK | ESP_BLE_ID_KEY_MASK;
+        ret = esp_ble_gap_set_security_param(ESP_BLE_SM_SET_INIT_KEY, &init_key, sizeof(uint8_t));
+        if (ret) {
+            ESP_LOGE("meater_ble_server", "Set init key failed: %d", ret);
+        } else {
+            ESP_LOGI("meater_ble_server", "✓ Initiator key distribution set");
+        }
+        
+        // Set responder key distribution (send all keys)
+        uint8_t rsp_key = ESP_BLE_ENC_KEY_MASK | ESP_BLE_ID_KEY_MASK;
+        ret = esp_ble_gap_set_security_param(ESP_BLE_SM_SET_RSP_KEY, &rsp_key, sizeof(uint8_t));
+        if (ret) {
+            ESP_LOGE("meater_ble_server", "Set rsp key failed: %d", ret);
+        } else {
+            ESP_LOGI("meater_ble_server", "✓ Responder key distribution set");
+        }
+        
+        ESP_LOGI("meater_ble_server", "✓ BLE security parameters configured");
         
         // Register application
         ret = esp_ble_gatts_app_register(0);
