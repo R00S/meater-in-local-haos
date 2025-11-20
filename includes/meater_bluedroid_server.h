@@ -71,6 +71,9 @@ static const char* MEATER_NAME = "MEATER";
 static const char* MANUFACTURER_NAME = "Apption Labs";
 static const char* MODEL_NUMBER = "MEATER";
 
+// Logging tag
+static const char* TAG = "meater_ble_server";
+
 class MeaterBluedroidServer {
 private:
     esp_gatt_if_t gatts_if_;
@@ -518,66 +521,7 @@ private:
         attr_val.attr_value = (uint8_t*)device_name_;
         
         esp_ble_gatts_add_char(gap_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
-        esp_attr_value_t attr_val;
-        attr_val.attr_max_len = 2;
-        attr_val.attr_len = 2;
-        attr_val.attr_value = battery_data_;
-        
-        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
-        // CCCD will be added in handle_char_added() after characteristic is created
     }
-    
-    void add_config_char() {
-        esp_bt_uuid_t char_uuid;
-        char_uuid.len = ESP_UUID_LEN_128;
-        memcpy(char_uuid.uuid.uuid128, CONFIG_CHAR_UUID, 16);
-        
-        // Config characteristic: READ + WRITE (for pairing)
-        esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_WRITE;
-        esp_gatt_perm_t permissions = ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE;
-        
-        // Manual response for read/write to handle pairing logic
-        esp_attr_control_t control;
-        control.auto_rsp = ESP_GATT_RSP_BY_APP;
-        
-        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, &control);
-    }
-    
-    void add_firmware_char() {
-        esp_bt_uuid_t char_uuid;
-        char_uuid.len = ESP_UUID_LEN_16;
-        char_uuid.uuid.uuid16 = FIRMWARE_CHAR_UUID;
-        
-        esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ;
-        esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
-        
-        esp_attr_value_t attr_val;
-        attr_val.attr_max_len = 32;
-        attr_val.attr_len = strlen(MEATER_FIRMWARE);
-        attr_val.attr_value = (uint8_t*)MEATER_FIRMWARE;
-        
-        // Manual response to ensure we return data
-        esp_attr_control_t control;
-        control.auto_rsp = ESP_GATT_RSP_BY_APP;
-        
-        esp_ble_gatts_add_char(device_info_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
-    }
-    
-    void add_device_name_char() {
-        esp_bt_uuid_t char_uuid;
-        char_uuid.len = ESP_UUID_LEN_16;
-        char_uuid.uuid.uuid16 = DEVICE_NAME_CHAR_UUID;
-        
-        esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ;
-        esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
-        
-        esp_attr_value_t attr_val;
-        attr_val.attr_max_len = 32;
-        attr_val.attr_len = strlen(MEATER_NAME);
-        attr_val.attr_value = (uint8_t*)MEATER_NAME;
-        
-        // Manual response
-        esp_attr_control_t control;
         control.auto_rsp = ESP_GATT_RSP_BY_APP;
         
         esp_ble_gatts_add_char(gap_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
