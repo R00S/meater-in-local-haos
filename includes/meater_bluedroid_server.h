@@ -33,8 +33,8 @@ static const uint8_t TEMP_CHAR_UUID[16] = {
 
 // Battery Characteristic: 2adb4877-68d8-4884-bd3c-d83853bf27b8
 static const uint8_t BATTERY_CHAR_UUID[16] = {
-    0xb8, 0x27, 0x3b, 0x85, 0x3c, 0xd8, 0x84, 0x48,
-    0xbd, 0x3c, 0x77, 0x48, 0xdb, 0x2a, 0x00, 0x00
+    0xb8, 0x27, 0xbf, 0x53, 0x38, 0xd8, 0x3c, 0xbd,
+    0x84, 0x48, 0xd8, 0x68, 0x77, 0x48, 0xdb, 0x2a
 };
 
 // Cook Setup Characteristic: caf28e64-3b17-4cb4-bb0a-2eaa33c47af7
@@ -62,11 +62,17 @@ static const uint16_t GAP_SERVICE_UUID = 0x1800;
 // Device Name UUID: 0x2A00
 static const uint16_t DEVICE_NAME_CHAR_UUID = 0x2A00;
 
+// Client Characteristic Configuration Descriptor (CCCD) UUID: 0x2902
+static const uint16_t CCCD_UUID = 0x2902;
+
 // MEATER firmware version (probe number 0 for singleton/standalone probes)
 static const char* MEATER_FIRMWARE = "v1.0.4_0";
 static const char* MEATER_NAME = "MEATER";
 static const char* MANUFACTURER_NAME = "Apption Labs";
 static const char* MODEL_NUMBER = "MEATER";
+
+// Logging tag
+static const char* TAG = "meater_ble_server";
 
 class MeaterBluedroidServer {
 private:
@@ -104,6 +110,10 @@ private:
     // Notification enabled flags
     bool temp_notify_enabled_;
     bool battery_notify_enabled_;
+    
+    // CCCD descriptor handles (for notification enable/disable)
+    uint16_t temp_cccd_handle_;
+    uint16_t battery_cccd_handle_;
     
     // Service creation counter
     int service_creation_count_;
@@ -185,6 +195,11 @@ private:
                 handle_char_added(param);
                 break;
                 
+            case ESP_GATTS_ADD_CHAR_DESCR_EVT:
+                ESP_LOGI("meater_ble_server", "Descriptor added, handle: %d", param->add_char_descr.attr_handle);
+                handle_descr_added(param);
+                break;
+                
             case ESP_GATTS_CONNECT_EVT:
                 ESP_LOGI("meater_ble_server", "Client connected, conn_id: %d", param->connect.conn_id);
                 conn_id_ = param->connect.conn_id;
@@ -210,6 +225,16 @@ private:
                 
             case ESP_GATTS_START_EVT:
                 ESP_LOGI("meater_ble_server", "Service started");
+                service_creation_count_++;
+                // All 3 services started (MEATER, Device Info, GAP)
+                if (service_creation_count_ >= 3) {
+                    ESP_LOGI("meater_ble_server", "=== All services started ===");
+                    ESP_LOGI("meater_ble_server", "Temp handle: %d, CCCD: %d", temp_char_handle_, temp_cccd_handle_);
+                    ESP_LOGI("meater_ble_server", "Battery handle: %d, CCCD: %d", battery_char_handle_, battery_cccd_handle_);
+                    ESP_LOGI("meater_ble_server", "Config handle: %d", config_char_handle_);
+                    ESP_LOGI("meater_ble_server", "Firmware handle: %d", firmware_char_handle_);
+                    ESP_LOGI("meater_ble_server", "Device name handle: %d", device_name_char_handle_);
+                }
                 break;
                 
             default:
@@ -224,36 +249,70 @@ private:
         static uint8_t service_uuid[16];
         memcpy(service_uuid, MEATER_SERVICE_UUID, 16);
         
-        // ✅ FROM GROUND TRUTH: Real MEATER probe advertisement (bluetoothctl scan)
-        // Device B8:1F:5E:4A:5E:EF MEATER
-        // ManufacturerData.Key: 0x037b (891)
-        // ManufacturerData.Value: 00 4c 0b 82 35 23 a3 98 ea
-        // Total: 9 bytes data + company ID embedded = 10 bytes total array
-        static uint8_t manufacturer_data[10] = {
-            0x7B, 0x03,  // Company ID: 0x037B (little-endian as required by BLE spec)
-            0x00,        // Byte 2: Device type (0x00 for regular MEATER, 0x01 for MEATER+)
-            0x4C, 0x0B, 0x82, 0x35, 0x23, 0xA3, 0x98  // Bytes 3-9: Device-specific data from real probe
-            // All 9 bytes from real MEATER probe capture - app uses this to identify devices
+        // ✅ Manufacturer data structure based on real MEATER probe format
+        // Structure: Company ID (2 bytes) + Probe number (1 byte) + Device ID (8 bytes)
+        // Total: 9 bytes data + company ID (2 bytes) = 11 bytes total array
+        // 
+        // NOTE: Device ID bytes are unique to this ESP32 to avoid conflicts with
+        // real MEATER probes or MEATER Block devices that might try to connect
+        static uint8_t manufacturer_data[11] = {
+            0x7B, 0x03,  // Company ID: 0x037B (Apption Labs) - little-endian as required by BLE spec
+            0x00,        // Byte 2: Probe number (0x00 = regular MEATER probe)
+            0xE5, 0xF3, 0x32, 0xC0, 0xDE, 0x00, 0x01, 0x23  // Bytes 3-10: Unique device identifier for this ESP32
+            // Device ID is unique to avoid conflicts with real probes
         };
         
+        // Primary advertising packet - keep under 31 bytes
+        // Contents: Flags (3) + Name (8) + Manufacturer Data (13) = 24 bytes (fits!)
         adv_data_.set_scan_rsp = false;
         adv_data_.include_name = true;
-        adv_data_.include_txpower = true;
-        adv_data_.min_interval = 0x0006;
-        adv_data_.max_interval = 0x0010;
+        adv_data_.include_txpower = false;  // Disabled to save space
+        adv_data_.min_interval = 0;
+        adv_data_.max_interval = 0;
         adv_data_.appearance = 0x00;
         adv_data_.manufacturer_len = sizeof(manufacturer_data);
         adv_data_.p_manufacturer_data = manufacturer_data;
         adv_data_.service_data_len = 0;
         adv_data_.p_service_data = nullptr;
-        adv_data_.service_uuid_len = 16;
-        adv_data_.p_service_uuid = service_uuid;
+        adv_data_.service_uuid_len = 0;  // Will be in scan response instead
+        adv_data_.p_service_uuid = nullptr;
         adv_data_.flag = (ESP_BLE_ADV_FLAG_GEN_DISC | ESP_BLE_ADV_FLAG_BREDR_NOT_SPT);
         
-        ESP_LOGI("meater_ble_server", "Setting advertising data...");
+        // Debug: Log manufacturer data to verify it's correct
+        ESP_LOGI("meater_ble_server", "Manufacturer data (%d bytes): %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x",
+                 (int)sizeof(manufacturer_data),
+                 manufacturer_data[0], manufacturer_data[1], manufacturer_data[2], manufacturer_data[3],
+                 manufacturer_data[4], manufacturer_data[5], manufacturer_data[6], manufacturer_data[7],
+                 manufacturer_data[8], manufacturer_data[9], manufacturer_data[10]);
+        
+        ESP_LOGI("meater_ble_server", "Setting advertising data (primary packet)...");
         esp_err_t ret = esp_ble_gap_config_adv_data(&adv_data_);
         if (ret != ESP_OK) {
             ESP_LOGE("meater_ble_server", "Config advertising data failed: 0x%x", ret);
+        } else {
+            ESP_LOGI("meater_ble_server", "✓ Advertising data set successfully");
+        }
+        
+        // Scan response packet - contains service UUID
+        static esp_ble_adv_data_t scan_rsp_data = {};
+        scan_rsp_data.set_scan_rsp = true;
+        scan_rsp_data.include_name = false;
+        scan_rsp_data.include_txpower = false;
+        scan_rsp_data.appearance = 0x00;
+        scan_rsp_data.manufacturer_len = 0;
+        scan_rsp_data.p_manufacturer_data = nullptr;
+        scan_rsp_data.service_data_len = 0;
+        scan_rsp_data.p_service_data = nullptr;
+        scan_rsp_data.service_uuid_len = 16;
+        scan_rsp_data.p_service_uuid = service_uuid;
+        scan_rsp_data.flag = 0;
+        
+        ESP_LOGI("meater_ble_server", "Setting scan response data (service UUID)...");
+        ret = esp_ble_gap_config_adv_data(&scan_rsp_data);
+        if (ret != ESP_OK) {
+            ESP_LOGE("meater_ble_server", "Config scan response data failed: 0x%x", ret);
+        } else {
+            ESP_LOGI("meater_ble_server", "✓ Scan response data set successfully");
         }
         
         // Advertising parameters
@@ -275,6 +334,7 @@ private:
         meater_srvc_id.id.uuid.len = ESP_UUID_LEN_128;
         memcpy(meater_srvc_id.id.uuid.uuid.uuid128, MEATER_SERVICE_UUID, 16);
         
+        ESP_LOGI("meater_ble_server", "Creating MEATER service: a75cc7fc-c956-488f-ac2a-2dbc08b63a04");
         esp_ble_gatts_create_service(gatts_if_, &meater_srvc_id, 12); // 12 handles
         
         // Create Device Information service
@@ -307,8 +367,11 @@ private:
             esp_ble_gatts_start_service(service_handle);
             
             // Add temperature, battery, and config characteristics
+            ESP_LOGI("meater_ble_server", "Adding temp char: 7edda774-045e-4bbf-909b-45d1991a2876");
             add_temperature_char();
+            ESP_LOGI("meater_ble_server", "Adding battery char: 2adb4877-68d8-4884-bd3c-d83853bf27b8");
             add_battery_char();
+            ESP_LOGI("meater_ble_server", "Adding config char: caf28e64-3b17-4cb4-bb0a-2eaa33c47af7");
             add_config_char();
         } else if (service_creation_count_ == 1) {
             // Device Information service (second created, 16-bit UUID)
@@ -316,6 +379,7 @@ private:
             esp_ble_gatts_start_service(service_handle);
             
             // Add firmware characteristic
+            ESP_LOGI("meater_ble_server", "Adding firmware char: 00002a26-0000-1000-8000-00805f9b34fb");
             add_firmware_char();
         } else if (service_creation_count_ == 2) {
             // GAP service (third created, 16-bit UUID)
@@ -323,6 +387,7 @@ private:
             esp_ble_gatts_start_service(service_handle);
             
             // Add device name characteristic
+            ESP_LOGI("meater_ble_server", "Adding device name char: 00002a00-0000-1000-8000-00805f9b34fb");
             add_device_name_char();
         }
         
@@ -337,7 +402,40 @@ private:
         esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_NOTIFY;
         esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
         
-        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, nullptr);
+        // Don't use auto_rsp - we'll handle read responses manually to return live data
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
+        
+        // MUST provide initial attribute value when using ESP_GATT_RSP_BY_APP
+        esp_attr_value_t attr_val;
+        attr_val.attr_max_len = 8;
+        attr_val.attr_len = 8;
+        attr_val.attr_value = temp_data_;
+        
+        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
+        // CCCD will be added in handle_char_added() after characteristic is created
+    }
+    
+    void add_cccd_descriptor() {
+        esp_bt_uuid_t descr_uuid;
+        descr_uuid.len = ESP_UUID_LEN_16;
+        descr_uuid.uuid.uuid16 = CCCD_UUID;
+        
+        // CCCD permissions: read + write
+        esp_gatt_perm_t permissions = ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE;
+        
+        // CCCD value (2 bytes: notifications disabled by default)
+        uint8_t cccd_value[2] = {0x00, 0x00};
+        esp_attr_value_t attr_val;
+        attr_val.attr_max_len = 2;
+        attr_val.attr_len = 2;
+        attr_val.attr_value = cccd_value;
+        
+        // Manual response for CCCD writes
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;
+        
+        esp_ble_gatts_add_char_descr(meater_service_handle_, &descr_uuid, permissions, &attr_val, &control);
     }
     
     void add_battery_char() {
@@ -348,57 +446,127 @@ private:
         esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_NOTIFY;
         esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
         
-        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, nullptr);
+        // Don't use auto_rsp - we'll handle read responses manually to return live data
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
+        
+        // MUST provide initial attribute value when using ESP_GATT_RSP_BY_APP
+        esp_attr_value_t attr_val;
+        attr_val.attr_max_len = 2;
+        attr_val.attr_len = 2;
+        attr_val.attr_value = battery_data_;
+        
+        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
+        // CCCD will be added in handle_char_added() after characteristic is created
     }
     
     void add_config_char() {
+        ESP_LOGI(TAG, "Adding config char: caf28e64-3b17-4cb4-bb0a-2eaa33c47af7");
         esp_bt_uuid_t char_uuid;
         char_uuid.len = ESP_UUID_LEN_128;
         memcpy(char_uuid.uuid.uuid128, CONFIG_CHAR_UUID, 16);
         
-        // Config characteristic: READ + WRITE (for pairing)
         esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ | ESP_GATT_CHAR_PROP_BIT_WRITE;
         esp_gatt_perm_t permissions = ESP_GATT_PERM_READ | ESP_GATT_PERM_WRITE;
         
-        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, nullptr, nullptr);
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
+        
+        // MUST provide initial attribute value
+        esp_attr_value_t attr_val;
+        attr_val.attr_max_len = 4;
+        attr_val.attr_len = 4;
+        attr_val.attr_value = config_data_;
+        
+        esp_ble_gatts_add_char(meater_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
     }
     
     void add_firmware_char() {
+        ESP_LOGI(TAG, "Adding firmware char: 00002a26-0000-1000-8000-00805f9b34fb");
         esp_bt_uuid_t char_uuid;
         char_uuid.len = ESP_UUID_LEN_16;
-        char_uuid.uuid.uuid16 = FIRMWARE_CHAR_UUID;
+        char_uuid.uuid.uuid16 = 0x2A26;  // Firmware Revision String
         
         esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ;
         esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
         
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
+        
+        // MUST provide initial attribute value
         esp_attr_value_t attr_val;
-        attr_val.attr_max_len = 32;
+        attr_val.attr_max_len = 16;
         attr_val.attr_len = strlen(MEATER_FIRMWARE);
         attr_val.attr_value = (uint8_t*)MEATER_FIRMWARE;
         
-        esp_ble_gatts_add_char(device_info_service_handle_, &char_uuid, permissions, properties, &attr_val, nullptr);
+        esp_ble_gatts_add_char(device_info_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
     }
     
     void add_device_name_char() {
+        ESP_LOGI(TAG, "Adding device name char: 00002a00-0000-1000-8000-00805f9b34fb");
         esp_bt_uuid_t char_uuid;
         char_uuid.len = ESP_UUID_LEN_16;
-        char_uuid.uuid.uuid16 = DEVICE_NAME_CHAR_UUID;
+        char_uuid.uuid.uuid16 = 0x2A00;  // Device Name
         
         esp_gatt_char_prop_t properties = ESP_GATT_CHAR_PROP_BIT_READ;
         esp_gatt_perm_t permissions = ESP_GATT_PERM_READ;
         
+        esp_attr_control_t control;
+        control.auto_rsp = ESP_GATT_RSP_BY_APP;  // Manual response
+        
+        // MUST provide initial attribute value
         esp_attr_value_t attr_val;
-        attr_val.attr_max_len = 32;
+        attr_val.attr_max_len = 16;
         attr_val.attr_len = strlen(MEATER_NAME);
         attr_val.attr_value = (uint8_t*)MEATER_NAME;
         
-        esp_ble_gatts_add_char(gap_service_handle_, &char_uuid, permissions, properties, &attr_val, nullptr);
+        esp_ble_gatts_add_char(gap_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
     }
     
     void handle_char_added(esp_ble_gatts_cb_param_t *param) {
-        // Store characteristic handles
-        // Note: Need to add battery and config characteristics as well
-        // This is simplified - full implementation would track which char was added
+        // Store characteristic handles based on service
+        uint16_t char_handle = param->add_char.attr_handle;
+        
+        if (param->add_char.service_handle == meater_service_handle_) {
+            // MEATER service characteristics - store in order they were added
+            if (temp_char_handle_ == 0) {
+                temp_char_handle_ = char_handle;
+                ESP_LOGI("meater_ble_server", "Temperature char handle: %d", temp_char_handle_);
+                // Now add CCCD descriptor for temperature characteristic
+                add_cccd_descriptor();
+            } else if (battery_char_handle_ == 0) {
+                battery_char_handle_ = char_handle;
+                ESP_LOGI("meater_ble_server", "Battery char handle: %d", battery_char_handle_);
+                // Now add CCCD descriptor for battery characteristic
+                add_cccd_descriptor();
+            } else if (config_char_handle_ == 0) {
+                config_char_handle_ = char_handle;
+                ESP_LOGI("meater_ble_server", "Config char handle: %d", config_char_handle_);
+            }
+        } else if (param->add_char.service_handle == device_info_service_handle_) {
+            firmware_char_handle_ = char_handle;
+            ESP_LOGI("meater_ble_server", "Firmware char handle: %d", firmware_char_handle_);
+        } else if (param->add_char.service_handle == gap_service_handle_) {
+            device_name_char_handle_ = char_handle;
+            ESP_LOGI("meater_ble_server", "Device name char handle: %d", device_name_char_handle_);
+        }
+    }
+    
+    void handle_descr_added(esp_ble_gatts_cb_param_t *param) {
+        // CCCD descriptors are added automatically after characteristics with NOTIFY property
+        // Track them by checking which was the last characteristic added
+        uint16_t descr_handle = param->add_char_descr.attr_handle;
+        
+        // The descriptor follows its characteristic, so check which one was just added
+        if (temp_char_handle_ != 0 && battery_char_handle_ == 0 && temp_cccd_handle_ == 0) {
+            // First descriptor after temp char
+            temp_cccd_handle_ = descr_handle;
+            ESP_LOGI("meater_ble_server", "Temperature CCCD handle: %d", temp_cccd_handle_);
+        } else if (battery_char_handle_ != 0 && config_char_handle_ == 0 && battery_cccd_handle_ == 0) {
+            // First descriptor after battery char
+            battery_cccd_handle_ = descr_handle;
+            ESP_LOGI("meater_ble_server", "Battery CCCD handle: %d", battery_cccd_handle_);
+        }
     }
     
     void handle_read(esp_ble_gatts_cb_param_t *param) {
@@ -408,15 +576,62 @@ private:
         memset(&rsp, 0, sizeof(esp_gatt_rsp_t));
         rsp.attr_value.handle = param->read.handle;
         
-        // Determine which characteristic is being read
-        // For now, return empty response
-        rsp.attr_value.len = 0;
+        // Determine which characteristic is being read and return appropriate data
+        if (param->read.handle == temp_char_handle_) {
+            // Return temperature data (8 bytes)
+            memcpy(rsp.attr_value.value, temp_data_, 8);
+            rsp.attr_value.len = 8;
+            ESP_LOGI("meater_ble_server", "Returning temperature data (8 bytes)");
+        } else if (param->read.handle == battery_char_handle_) {
+            // Return battery data (2 bytes)
+            memcpy(rsp.attr_value.value, battery_data_, 2);
+            rsp.attr_value.len = 2;
+            ESP_LOGI("meater_ble_server", "Returning battery data (2 bytes)");
+        } else if (param->read.handle == config_char_handle_) {
+            // Return config data (4 bytes)
+            memcpy(rsp.attr_value.value, config_data_, 4);
+            rsp.attr_value.len = 4;
+            ESP_LOGI("meater_ble_server", "Returning config data (4 bytes)");
+        } else if (param->read.handle == firmware_char_handle_) {
+            // Return firmware version string
+            const char* firmware = "v1.0.4_0";
+            strcpy((char*)rsp.attr_value.value, firmware);
+            rsp.attr_value.len = strlen(firmware);
+            ESP_LOGI("meater_ble_server", "Returning firmware: %s", firmware);
+        } else if (param->read.handle == device_name_char_handle_) {
+            // Return device name
+            strcpy((char*)rsp.attr_value.value, MEATER_NAME);
+            rsp.attr_value.len = strlen(MEATER_NAME);
+            ESP_LOGI("meater_ble_server", "Returning device name: %s", MEATER_NAME);
+        } else {
+            // Unknown characteristic, return empty
+            rsp.attr_value.len = 0;
+            ESP_LOGW("meater_ble_server", "Read request for unknown handle: %d", param->read.handle);
+        }
         
         esp_ble_gatts_send_response(gatts_if_, param->read.conn_id, param->read.trans_id, ESP_GATT_OK, &rsp);
     }
     
     void handle_write(esp_ble_gatts_cb_param_t *param) {
         ESP_LOGI("meater_ble_server", "Write request for handle: %d, len: %d", param->write.handle, param->write.len);
+        
+        // Check if this is a CCCD write (2 bytes for notification enable/disable)
+        if (param->write.len == 2) {
+            uint16_t descr_value = param->write.value[0] | (param->write.value[1] << 8);
+            
+            // Temperature characteristic CCCD
+            if (temp_cccd_handle_ != 0 && param->write.handle == temp_cccd_handle_) {
+                temp_notify_enabled_ = (descr_value == 0x0001);
+                ESP_LOGI("meater_ble_server", "Temperature notifications %s", 
+                         temp_notify_enabled_ ? "ENABLED" : "DISABLED");
+            }
+            // Battery characteristic CCCD
+            else if (battery_cccd_handle_ != 0 && param->write.handle == battery_cccd_handle_) {
+                battery_notify_enabled_ = (descr_value == 0x0001);
+                ESP_LOGI("meater_ble_server", "Battery notifications %s", 
+                         battery_notify_enabled_ ? "ENABLED" : "DISABLED");
+            }
+        }
         
         // Check if this is a config characteristic write (pairing)
         if (param->write.handle == config_char_handle_) {
@@ -428,7 +643,7 @@ private:
                 // This triggers the app to set datePaired field in database
                 if (!is_paired_) {
                     is_paired_ = true;
-                    pairing_timestamp_ = millis();  // Use ESPHome's millis() instead
+                    pairing_timestamp_ = esp_timer_get_time() / 1000;  // μs to ms
                     ESP_LOGI("meater_ble_server", "✓ Device paired! Timestamp: %llu", pairing_timestamp_);
                     ESP_LOGI("meater_ble_server", "App should now set datePaired field in database");
                 } else {
@@ -460,6 +675,8 @@ public:
         device_name_char_handle_(0),
         temp_notify_enabled_(false),
         battery_notify_enabled_(false),
+        temp_cccd_handle_(0),
+        battery_cccd_handle_(0),
         service_creation_count_(0),
         is_paired_(false),
         pairing_timestamp_(0) {
@@ -527,6 +744,11 @@ public:
         if (data.size() == 8) {
             memcpy(temp_data_, data.data(), 8);
             
+            // Update GATT database attribute value so auto-response returns current data
+            if (temp_char_handle_ != 0) {
+                esp_ble_gatts_set_attr_value(temp_char_handle_, 8, temp_data_);
+            }
+            
             // Send notification if enabled and connected
             if (connected_ && temp_notify_enabled_ && temp_char_handle_ != 0) {
                 esp_ble_gatts_send_indicate(gatts_if_, conn_id_, temp_char_handle_, 8, temp_data_, false);
@@ -537,6 +759,11 @@ public:
     void update_battery(const std::vector<uint8_t>& data) {
         if (data.size() == 2) {
             memcpy(battery_data_, data.data(), 2);
+            
+            // Update GATT database attribute value so auto-response returns current data
+            if (battery_char_handle_ != 0) {
+                esp_ble_gatts_set_attr_value(battery_char_handle_, 2, battery_data_);
+            }
             
             // Send notification if enabled and connected
             if (connected_ && battery_notify_enabled_ && battery_char_handle_ != 0) {
