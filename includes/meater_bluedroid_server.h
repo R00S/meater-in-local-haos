@@ -522,10 +522,6 @@ private:
         
         esp_ble_gatts_add_char(gap_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
     }
-        control.auto_rsp = ESP_GATT_RSP_BY_APP;
-        
-        esp_ble_gatts_add_char(gap_service_handle_, &char_uuid, permissions, properties, &attr_val, &control);
-    }
     
     void handle_char_added(esp_ble_gatts_cb_param_t *param) {
         // Store characteristic handles based on service
