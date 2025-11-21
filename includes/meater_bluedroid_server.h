@@ -308,6 +308,18 @@ private:
                 battery_notify_enabled_ = true;
                 ESP_LOGI("meater_ble_server", "Auto-enabled notifications for temperature and battery");
                 
+                // Send initial notifications immediately
+                // Real MEATER probes send temperature/battery data right after connection
+                // App expects immediate data to confirm device is working
+                if (temp_char_handle_ != 0) {
+                    esp_ble_gatts_send_indicate(gatts_if_, conn_id_, temp_char_handle_, 8, temp_data_, false);
+                    ESP_LOGI("meater_ble_server", "Sent initial temperature notification");
+                }
+                if (battery_char_handle_ != 0) {
+                    esp_ble_gatts_send_indicate(gatts_if_, conn_id_, battery_char_handle_, 2, battery_data_, false);
+                    ESP_LOGI("meater_ble_server", "Sent initial battery notification");
+                }
+                
                 // Update connection parameters for optimal performance
                 esp_ble_conn_update_params_t conn_params = {};
                 memcpy(conn_params.bda, param->connect.remote_bda, sizeof(esp_bd_addr_t));
