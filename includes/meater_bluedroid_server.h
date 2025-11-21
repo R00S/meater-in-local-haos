@@ -291,7 +291,7 @@ private:
                 handle_descr_added(param);
                 break;
                 
-            case ESP_GATTS_CONNECT_EVT:
+            case ESP_GATTS_CONNECT_EVT: {
                 ESP_LOGI("meater_ble_server", "Client connected, conn_id: %d, remote_bda: %02x:%02x:%02x:%02x:%02x:%02x",
                          param->connect.conn_id,
                          param->connect.remote_bda[0], param->connect.remote_bda[1], param->connect.remote_bda[2],
@@ -309,6 +309,7 @@ private:
                 esp_ble_gap_update_conn_params(&conn_params);
                 ESP_LOGI("meater_ble_server", "Requested connection parameter update");
                 break;
+            }
                 
             case ESP_GATTS_DISCONNECT_EVT:
                 ESP_LOGI("meater_ble_server", "Client disconnected");
