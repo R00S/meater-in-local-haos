@@ -1,8 +1,24 @@
 # HTTP Discovery Protocol
 
+> ⚠️ **INVESTIGATED AND RULED OUT**: This document describes the MEATER Block WiFi discovery protocol that was investigated as a possible approach but has been ruled out for this project.
+
 > ⚠️ **CONTAINS ASSUMPTIONS**: This document contains reverse-engineered protocol information and assumptions about MEATER Block behavior. It is NOT based on direct extraction from decompiled app code. For verified protocol information extracted directly from source, see `tools/extracted_operations.json` and `tools/PROTOCOL_COMPARISON_RESULTS.md`.
 
-## Overview
+## Status: RULED OUT
+
+**Decision Date:** 2025-11-21
+
+**Reason:** This approach was investigated but ruled out because:
+1. It requires both UDP broadcasting AND HTTP server implementation
+2. It adds significant complexity compared to direct BLE emulation
+3. Real MEATER probes use BLE only, not WiFi
+4. The BLE-only approach is closer to actual probe behavior
+
+**Current Focus:** BLE server implementation to directly emulate MEATER probe behavior
+
+---
+
+## Overview (Historical)
 This document outlines the discovery process for MEATER Blocks, focusing on the limitations of using UDP broadcasts alone in the discovery mechanism.
 
 ## Key Points
@@ -12,3 +28,5 @@ This document outlines the discovery process for MEATER Blocks, focusing on the 
 
 ## Conclusion
 The reliance on UDP alone for discovery is insufficient for the comprehensive operation of MEATER Blocks. An HTTP server component is essential for enabling effective communication and data transfer.
+
+**This approach has been ruled out in favor of BLE-only implementation.**

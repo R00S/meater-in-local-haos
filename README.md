@@ -1,6 +1,13 @@
 # MEATER BLE Probe Emulator for Home Assistant
 
-This ESPHome configuration allows an ESP32 to emulate a MEATER probe via BLE, providing temperature and battery data to both the MEATER phone app and Home Assistant simultaneously.
+⚠️ **DEVELOPMENT STATUS** - See [STATUS.md](STATUS.md) for current project state.
+
+This ESPHome configuration implements a BLE server that emulates a MEATER probe, with the goal of providing temperature and battery data to both the MEATER phone app and Home Assistant simultaneously.
+
+**Current State:**
+- BLE server is working and can be added to the MEATER app
+- Connection to the device fails after being added to the app
+- BLE client (connection to real MEATER probe) is temporarily disabled to free memory for server debugging
 
 > **📝 Note for Home Assistant GUI Users**: This configuration requires adding a custom C++ include file. See the detailed [setup instructions below](#setup) for how to add this file through the File Editor add-on. If you prefer a simpler setup process, you can use the ESPHome command line interface instead.
 
@@ -11,33 +18,39 @@ MEATER probes only allow one BLE connection at a time:
 - Connecting to Home Assistant means the phone app can't connect
 - Official MEATER Block hardware is required for simultaneous connectivity
 
-## Solution
+## Solution (In Development)
 
-This configuration makes the ESP32 act as a standalone MEATER probe via BLE:
+This configuration is implementing an ESP32 BLE server that acts as a MEATER probe:
 
 1. **BLE Server**: Advertises as "MEATER" with proper GATT services and characteristics
-2. **Protocol Compatible**: Implements the exact BLE protocol used by real MEATER probes
-3. **Dual Integration**: Exposes data to both MEATER app (via BLE) and Home Assistant (via ESPHome API)
+2. **Protocol Implementation**: Implements the BLE protocol used by real MEATER probes
+3. **Dual Integration Goal**: Aims to expose data to both MEATER app (via BLE) and Home Assistant (via ESPHome API)
 
-## How It Works
+**Current Limitations:**
+- BLE client functionality (connection to real MEATER probe) is not included in the current build due to memory constraints needed for debugging the BLE server
+- The device can be added to the MEATER app but cannot maintain a stable connection afterward
+
+## How It Works (Current Implementation)
 
 ```
 ESP32 (BLE Server)
     ↓ BLE Advertisement
-MEATER Phone App connects via BLE
-    ↓ Reads temperature/battery
-ESP32 also exposes sensors to Home Assistant via WiFi/API
+MEATER Phone App discovers device
+    ↓ Attempts to connect via BLE
+    ❌ Connection fails after device is added
+ESP32 exposes mock sensors to Home Assistant via WiFi/API
 ```
 
-### Initialization Flow
+### Current Initialization Flow
 
 1. **On Boot**: ESP32 initializes Bluedroid BLE stack
-2. **BLE Advertising**: Starts advertising as "MEATER" with correct service UUIDs
-3. **GATT Services**: Exposes temperature, battery, and pairing characteristics
-4. **Phone App Connection**: MEATER app discovers device and pairs
-5. **Data Updates**: Temperature and battery notifications sent to both app and Home Assistant
+2. **BLE Advertising**: Starts advertising as "MEATER" with MEATER service UUIDs
+3. **GATT Services**: Exposes temperature, battery, and device info characteristics
+4. **Phone App Discovery**: MEATER app can find and add the device
+5. **Connection Issue**: App cannot establish stable connection after adding device
+6. **Home Assistant**: Mock temperature and battery data available in Home Assistant
 
-This approach accurately emulates a real MEATER probe - it's BLE only, no UDP broadcasting (real probes don't have WiFi).
+This implementation focuses on BLE only. UDP broadcasting was investigated but ruled out as it requires an HTTP server component in addition to UDP discovery.
 
 ## Security & Secrets
 
@@ -55,45 +68,40 @@ This approach ensures that:
 ## Configuration
 
 ### Hardware Required
-- **ESP32-C6 board** (recommended: ESP32-C6-DevKitC-1) - Required for NimBLE compatibility
-- MEATER Block (WiFi bridge device that connects to MEATER probes)
+- **ESP32-C3 board** (currently using: ESP32-C3-DevKitM-1 with 4MB flash)
+- MEATER probe (for future integration when BLE client is re-enabled)
 
-### Memory Requirements
+### Hardware Notes
 
-**Why ESP32-C6?** 
+**Current Implementation: ESP32-C3 with Bluedroid**
 
-This project requires BLE client functionality and WiFi connectivity. The ESP32-C6 is the recommended choice because:
+The project currently uses ESP32-C3 with the Bluedroid BLE stack (ESP-IDF framework) for the BLE server implementation.
 
-- **BLE 5.3 support**: Modern Bluetooth stack with reliable client connectivity
-- **More RAM**: 512KB provides headroom for BLE client and WiFi operations
-- **WiFi performance**: Good WiFi range for UDP broadcasting
-- **Stable operation**: Handles BLE client and WiFi concurrently without issues
-- **Flash memory**: 4MB is sufficient for all features with room for OTA updates
-- **Modern chipset**: Latest ESP32 generation with better power efficiency
+**ESP32-C6 with NimBLE - Not Used**
+- NimBLE on ESP32-C6 was attempted but found not mature enough in ESPHome yet
+- Current ESPHome/ESP-IDF toolchain for C6 has compatibility issues
+- Development focuses on C3 with Bluedroid which is more stable
 
 **Compatible boards**:
-- ✅ **ESP32-C6-DevKitC-1** (4MB flash) - **Recommended** - Best overall performance
-- ✅ ESP32-C3-DevKitM-1 (4MB flash) - Also good choice, slightly less powerful
-- ✅ ESP32-DevKitC (4MB+ flash, dual-core) - Classic option, works well
-- ✅ ESP32-WROOM-32 (4MB+ flash, dual-core) - Works great
+- ✅ ESP32-C3-DevKitM-1 (4MB flash) - **Currently used**
+- ✅ ESP32-DevKitC (4MB+ flash, dual-core) - Should work
+- ✅ ESP32-WROOM-32 (4MB+ flash, dual-core) - Should work
+- ❌ ESP32-C6 - Not recommended until ESPHome NimBLE support matures
 - ❌ ESP8266 - Not compatible (no BLE support)
-- ❌ Raspberry Pi Pico W - Not compatible (ESPHome requires ESP32/ESP8266)
 
-Any ESP32 variant with BLE and WiFi will work for this application.
+**Memory Constraints:**
+- BLE server currently requires most available RAM for debugging
+- BLE client (connection to real MEATER probe) is disabled in current build to free memory
+- Future versions will need memory optimization to run both client and server
 
-### Finding Your MEATER MAC Address
+### Note About MEATER MAC Address
 
-Before setup, you need to find your MEATER+ device's Bluetooth MAC address. You can do this several ways:
+**Not currently needed:** The BLE client functionality (which would connect to a real MEATER probe) is disabled in the current build. The configuration currently runs only as a BLE server advertising as a MEATER device.
 
-1. **Using a BLE scanner app on your phone**:
-   - Android: "nRF Connect" or "BLE Scanner"
-   - iOS: "LightBlue" or "nRF Connect"
-   - Look for a device named "MEATER" or similar
-   - Note the MAC address (format: XX:XX:XX:XX:XX:XX)
-
-2. **Using ESPHome logs**:
-   - Flash a basic ESP32 with BLE scanning enabled
-   - Check logs for nearby BLE devices
+When BLE client is re-enabled in future versions, you will need your MEATER device's MAC address:
+- Use a BLE scanner app (nRF Connect, BLE Scanner, LightBlue)
+- Look for a device named "MEATER"
+- Note the MAC address (format: XX:XX:XX:XX:XX:XX)
 
 ### Setup
 
@@ -121,11 +129,11 @@ There are two ways to set this up, depending on whether you're using the ESPHome
    ```
 
 3. Once the ESP32 is running:
-   - The ESP32 will connect to your real MEATER+ device
-   - It will start advertising as "MEATER" via BLE
+   - The ESP32 will start advertising as "MEATER" via BLE
    - In your phone's MEATER app, scan for devices
-   - Connect to "MEATER" (which is actually the ESP32)
-   - The app should work normally, receiving data forwarded from the real MEATER+
+   - You can add the device to the app, but connection will fail afterward
+   - Mock temperature and battery data will be visible in Home Assistant
+   - Note: BLE client (connection to real MEATER probe) is currently disabled
 
 #### Option B: Using Home Assistant ESPHome GUI
 
@@ -169,22 +177,22 @@ If you're using the ESPHome integration in Home Assistant, you'll need to manual
    - Click the folder icon in the top left and navigate to `/config/esphome/`
    - Click the folder icon with a plus sign to create a new folder called `includes`
    - Click on the `includes` folder to enter it
-   - Click the file icon with a plus sign to create a new file called `meater_udp_broadcast.h`
-   - Open the file [`includes/meater_udp_broadcast.h`](includes/meater_udp_broadcast.h) from this GitHub repository in your browser
+   - Click the file icon with a plus sign to create a new file called `meater_bluedroid_server.h`
+   - Open the file [`includes/meater_bluedroid_server.h`](includes/meater_bluedroid_server.h) from this GitHub repository in your browser
    - Click the "Raw" button to view the raw content
    - Select all (Ctrl+A or Cmd+A) and copy the entire file contents
    - Paste into the new file in your File Editor
    - Click the save icon (floppy disk) to save the file
-   - Verify the full path is `/config/esphome/includes/meater_udp_broadcast.h`
+   - Verify the full path is `/config/esphome/includes/meater_bluedroid_server.h`
    
    **OR using SSH/Terminal** (Advanced users):
    ```bash
    # SSH into your Home Assistant instance, then run:
    mkdir -p /config/esphome/includes
    cd /config/esphome/includes
-   wget https://raw.githubusercontent.com/R00S/meater-in-local-haos/main/includes/meater_udp_broadcast.h
+   wget https://raw.githubusercontent.com/R00S/meater-in-local-haos/main/includes/meater_bluedroid_server.h
    # Or if wget is not available:
-   curl -o meater_udp_broadcast.h https://raw.githubusercontent.com/R00S/meater-in-local-haos/main/includes/meater_udp_broadcast.h
+   curl -o meater_bluedroid_server.h https://raw.githubusercontent.com/R00S/meater-in-local-haos/main/includes/meater_bluedroid_server.h
    ```
 
 4. **Install to your ESP32**:
@@ -193,102 +201,82 @@ If you're using the ESPHome integration in Home Assistant, you'll need to manual
    - Choose your installation method (USB, Wireless, etc.)
    - Wait for compilation and installation to complete
 
-5. **Verify it's working**:
+5. **Current behavior**:
    - Check the logs in the ESPHome dashboard for your device
-   - Look for messages like "UDP broadcaster started successfully"
-   - The ESP32 should connect to your real MEATER+ device
-   - In your phone's MEATER app, scan for devices and connect to "MEATER"
+   - Look for messages like "BLE server initialization complete"
+   - The ESP32 will advertise as "MEATER" via BLE
+   - In your phone's MEATER app, you can scan for and add the device
+   - Note: Connection will fail after adding - this is a known issue being investigated
 
 ### Important Notes
 
-- The real MEATER device must be powered on and within BLE range of the ESP32
-- The ESP32 must be connected to WiFi for both Home Assistant integration and UDP broadcasting
-- Phone app should be on the same WiFi network as the ESP32 to discover UDP broadcasts
-- UDP broadcasts are sent to the local subnet (x.x.x.255) on port 7878
+- The ESP32 must be connected to WiFi for Home Assistant integration
+- BLE client functionality (connection to real MEATER probe) is currently disabled
+- The device generates mock temperature and battery data
+- UDP broadcasting was investigated but ruled out (requires HTTP server implementation)
 
 ## Features
 
-### Preserved Functionality
-- ✅ MEATER tip temperature sensor in Home Assistant
-- ✅ MEATER ambient temperature sensor in Home Assistant
-- ✅ MEATER battery level sensor in Home Assistant
-- ✅ MEATER firmware version in Home Assistant
-- ✅ MEATER RSSI signal strength in Home Assistant
-- ✅ Bluetooth proxy for other devices
+### Currently Working
+- ✅ BLE server advertising as "MEATER"
+- ✅ MEATER GATT services and characteristics configured
+- ✅ Mock tip temperature sensor in Home Assistant
+- ✅ Mock ambient temperature sensor in Home Assistant
+- ✅ Mock battery level sensor in Home Assistant
+- ✅ Mock RSSI signal strength in Home Assistant
 - ✅ OTA updates
 - ✅ WiFi connectivity with fallback AP
 
-### New Functionality
-- ✅ **UDP broadcasting on port 7878** - Emulates MEATER Block WiFi functionality
-- ✅ **Automatic device name detection** - Reads device name from real MEATER device
-- ✅ Broadcasts raw temperature data for phone app discovery
-- ✅ Broadcasts battery data
-- ✅ MEATER device name sensor showing detected variant
-- ✅ Works with MEATER app's WiFi discovery feature
+### Not Working Yet
+- ❌ MEATER app connection (device can be added but cannot connect)
+- ❌ BLE client (connection to real MEATER probe - currently disabled)
+- ❌ Real temperature data (using mock data currently)
 
 ## Technical Details
 
-### BLE Client Implementation
+### BLE Server Implementation
 
-The ESP32 connects to the MEATER device as a BLE client and reads:
+The ESP32 acts as a BLE server (peripheral) advertising as "MEATER":
 
 **MEATER Service** (`a75cc7fc-c956-488f-ac2a-2dbc08b63a04`):
-- Temperature Characteristic (`7edda774-045e-4bbf-909b-45d1991a2876`) - 8 bytes of raw temperature data
+- Temperature Characteristic (`7edda774-045e-4bbf-909b-45d1991a2876`) - 8 bytes of temperature data
 - Battery Characteristic (`2adb4877-68d8-4884-bd3c-d83853bf27b8`) - 2 bytes of battery data
 
 **Device Information Service** (`180A`):
 - Firmware Revision Characteristic (`00002a26-0000-1000-8000-00805f9b34fb`)
 
 **Generic Access Profile Service** (`1800`):
-- Device Name Characteristic (`2A00`) - Used to detect MEATER variant (MEATER, MEATER+, etc.)
-
-### UDP Broadcasting
-
-The ESP32 broadcasts on **UDP port 7878** (MEATER_LINK_UDP_PORT) to emulate MEATER Block WiFi functionality:
-
-**Broadcast Format**:
-- Device name (null-terminated string)
-- Raw temperature data (8 bytes)
-- Raw battery data (2 bytes)
-
-**Broadcast Behavior**:
-- Sends to local subnet broadcast address (e.g., 192.168.1.255)
-- Rate limited to once per second
-- Only broadcasts when WiFi is connected
-- Triggered whenever new temperature data is received from MEATER device
-
-### How It Works
-
-1. ESP32 boots and connects to WiFi
-2. ESP32 connects to the real MEATER device via BLE
-3. Reads device name from MEATER (e.g., "MEATER+")
-4. Initializes UDP broadcaster with detected device name
-5. Continuously reads temperature and battery data from MEATER
-6. Broadcasts raw data via UDP for phone app discovery
-7. Also publishes processed data to Home Assistant sensors
+- Device Name Characteristic (`2A00`) - Set to "MEATER"
 
 ### BLE Stack Implementation
 
-This project uses **NimBLE** for BLE client operations:
+This project uses **Bluedroid** on ESP32-C3:
 
-**Why NimBLE?**
-- **ESP32-C6 Requirement**: C6 only supports NimBLE, not the older Bluedroid stack
-- **BLE Client**: Efficient BLE scanning and client connectivity
-- **Better Performance**: Lower memory footprint
-- **Modern**: Active development and better BLE 5.x support
+**Why Bluedroid on C3?**
+- **Stability**: Bluedroid is mature and well-supported in ESPHome
+- **ESP32-C3 Compatibility**: Works reliably with ESP-IDF framework
+- **NimBLE Not Ready**: ESP32-C6 with NimBLE was attempted but ESPHome support is not mature enough yet
 
 **Key Implementation Details**:
-- BLE client only (no server/peripheral role needed)
-- Scans for and connects to MEATER device by MAC address
-- Subscribes to temperature and battery characteristics for notifications
-- Reads device name, firmware version on connection
+- BLE server (peripheral role)
+- Advertises as "MEATER" with proper service UUIDs
+- Implements MEATER GATT service structure
+- Currently using mock data (BLE client disabled to free memory for debugging)
+
+### BLE Client (Currently Disabled)
+
+The BLE client functionality that would connect to a real MEATER probe is currently commented out due to memory constraints needed for debugging the BLE server. When re-enabled, it will:
+- Connect to real MEATER device via BLE
+- Read temperature and battery characteristics
+- Forward data to BLE server for app connectivity
 
 ### Files
 
 - `meater.yaml` - Main ESPHome configuration file
 - `secrets.yaml.example` - Template for your secrets file (copy to `secrets.yaml`)
 - `secrets.yaml` - Your personal secrets file (gitignored, not in repo)
-- `includes/meater_udp_broadcast.h` - Custom C++ code for UDP broadcasting
+- `includes/meater_bluedroid_server.h` - Custom C++ BLE server implementation
+- `STATUS.md` - Current project status and development notes
 
 ## Credits
 
@@ -299,14 +287,14 @@ UDP broadcast implementation based on analysis of the MEATER Android app.
 
 ## Troubleshooting
 
-### "Could not find file '/config/esphome/includes/meater_udp_broadcast.h'" Error
+### "Could not find file '/config/esphome/includes/meater_bluedroid_server.h'" Error
 
 This error occurs when using the ESPHome GUI and the include file hasn't been added yet.
 
 **Solution**: Follow the steps in "Option B: Using Home Assistant ESPHome GUI" above, specifically step 3 about adding the include file. You need to:
 1. Create the directory `/config/esphome/includes/` (use File Editor add-on or SSH)
-2. Copy the file `includes/meater_udp_broadcast.h` from this repository into that directory
-3. Make sure the file path is exactly `/config/esphome/includes/meater_udp_broadcast.h`
+2. Copy the file `includes/meater_bluedroid_server.h` from this repository into that directory
+3. Make sure the file path is exactly `/config/esphome/includes/meater_bluedroid_server.h`
 
 If you prefer not to manage external files, you can use the ESPHome command line interface instead (see Option A).
 
@@ -346,97 +334,36 @@ esp32:
 
 The ESP-IDF framework with NimBLE is recommended and will work once the toolchain is fixed. It requires no version pinning and is fully compatible with ESP32-C6 BLE functionality.
 
-### ESP32 not connecting to MEATER device (Cannot poll, not connected)
+### MEATER app can add device but cannot connect
 
-If you see repeated warnings like `[MEATER battery level] Cannot poll, not connected` in the logs:
-
-**Symptoms:**
-- ESP32 connects to WiFi successfully
-- BLE scanner shows "Scanner State: RUNNING"
-- Logs show "Connecting: 0, discovered: 0, disconnecting: 0"
-- Continuous "Cannot poll, not connected" warnings for all sensors
-
-**Common Causes:**
-
-1. **MEATER device is off or out of range**
-   - Make sure your MEATER probe is powered on
-   - Move the ESP32 closer to the MEATER device (within 10-30 feet)
-   - Check MEATER battery level (low battery reduces range)
-
-2. **Wrong MAC address in configuration**
-   - Verify the MAC address in `secrets.yaml` matches your actual MEATER device
-   - Use a BLE scanner app to confirm the correct MAC address
-   - MAC address format should be: `XX:XX:XX:XX:XX:XX` (with colons)
-
-3. **MEATER already connected to another device**
-   - MEATER can only connect to one BLE device at a time
-   - Disconnect MEATER from phone app before ESP32 connection
-   - Power cycle the MEATER probe to clear any stuck connections
-
-4. **BLE interference or conflicts**
-   - Reduce number of active BLE devices nearby
-   - Move away from WiFi routers (2.4GHz can interfere with BLE)
-   - Try restarting the ESP32
-
-**Troubleshooting Steps:**
-1. Check logs for: `"UDP broadcaster started successfully"` and `"Read device name from real MEATER: XXX"` - this confirms connection
-2. If you never see these messages, the BLE client hasn't connected to the real MEATER
-3. Power cycle both the MEATER probe and ESP32
-4. Verify MAC address with a BLE scanner app
-5. Move devices closer together
-
-### Phone app can't discover the ESP32 via WiFi
-
-If the MEATER app isn't discovering the ESP32 as a Block device:
+This is a known issue currently being investigated.
 
 **Symptoms:**
-- ESP32 is connected to WiFi
-- Home Assistant sensors are working
-- Phone app doesn't show any Block devices
+- ESP32 advertises as "MEATER" successfully
+- MEATER app can discover and add the device
+- Connection fails immediately after adding
+- Home Assistant sensors show mock data
 
-**Common Causes:**
+**Current Status:**
+This issue is under investigation. The next step is to perform an extremely thorough examination of the decompiled MEATER app to understand exactly how the BLE connection process works and what the app expects from the device.
 
-1. **Phone not on same WiFi network**
-   - The ESP32 broadcasts UDP packets to the local subnet only
-   - Make sure your phone is connected to the same WiFi network as the ESP32
-   - Check that both are on the same subnet (e.g., 192.168.1.x)
+**Workaround:**
+None currently available. The project is in development to resolve this issue.
 
-2. **UDP broadcasts not working**
-   - Check ESP32 logs for: `"UDP broadcaster started successfully"`
-   - Look for: `"Broadcast X bytes to X.X.X.255:7878"` messages
-   - If you don't see broadcast messages, the UDP broadcaster may not be initialized
+### Home Assistant sensors showing mock data
 
-3. **Firewall or router blocking UDP**
-   - Some routers or firewalls block UDP broadcast traffic
-   - Check router settings for broadcast/multicast filtering
-   - Try disabling AP isolation if enabled
+This is expected behavior in the current development version.
 
-4. **MEATER Link feature not enabled in app**
-   - The app needs to have Link features enabled to listen for UDP broadcasts
-   - Check app settings for Link/WiFi connectivity options
+**Why:**
+- BLE client (connection to real MEATER probe) is currently disabled
+- Mock temperature and battery data is generated every 2 seconds
+- This allows testing of Home Assistant integration while BLE server is being debugged
 
-**Troubleshooting Steps:**
-1. Verify ESP32 and phone are on same WiFi network
-2. Check ESP32 logs for UDP broadcast messages
-3. Use a network analyzer tool (like Wireshark or tcpdump) to verify UDP packets are being sent
-4. Temporarily disable any firewalls to test
-5. Try restarting the MEATER app
+**When will this change:**
+Once the BLE server connection issues are resolved, the BLE client will be re-enabled to read real data from MEATER probes.
 
-### Home Assistant sensors not updating
-- Verify the MAC address in the configuration matches your MEATER device
-- Check that the MEATER is powered on and within range
-- Review the ESP32 logs for connection errors
-- Look for `"Read device name from real MEATER: XXX"` message - this confirms successful connection
-- If sensors were working before, see "ESP32 not connecting to MEATER device" section above
-
-### Both phone and Home Assistant not working
-- The MEATER might be too far away or have a low battery
-- Check the ESP32 logs for BLE connection issues
-- Try power cycling the MEATER and ESP32
-- Verify the ESP32 is connected to WiFi (check Home Assistant device status)
-
-### Compilation errors about BLE or WiFi functions
+### Compilation errors about BLE functions
 - Make sure you're using `esp-idf` framework (not Arduino) as specified in the configuration
-- The ESP32 board must support BLE and WiFi (ESP32, ESP32-C3, ESP32-C6, ESP32-S3 work; ESP8266 does not)
-- ESP32-C6 requires NimBLE stack (included in the current implementation)
-- WiFiUDP library should be available by default in ESP-IDF
+- The ESP32 board must support BLE (ESP32, ESP32-C3, ESP32-S3 work; ESP8266 does not)
+- Current implementation uses Bluedroid stack on ESP32-C3
+- If you're trying to use ESP32-C6 with NimBLE, be aware that ESPHome support is not mature enough yet
