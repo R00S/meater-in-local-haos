@@ -239,6 +239,12 @@ private:
                 break;
             }
             
+            case ESP_GAP_BLE_CHANNEL_SELECT_ALGORITHM_EVT:
+                // Channel selection algorithm event - this is informational
+                ESP_LOGI("meater_ble_server", "Channel select algorithm: %d", 
+                         param->channel_sel_alg.channel_sel_alg);
+                break;
+            
             default:
                 ESP_LOGD("meater_ble_server", "Unhandled GAP event: %d", event);
                 break;
@@ -311,6 +317,15 @@ private:
                     ESP_LOGI("meater_ble_server", "Firmware handle: %d", firmware_char_handle_);
                     ESP_LOGI("meater_ble_server", "Device name handle: %d", device_name_char_handle_);
                 }
+                break;
+                
+            case ESP_GATTS_MTU_EVT:
+                ESP_LOGI("meater_ble_server", "MTU exchange complete, MTU: %d", param->mtu.mtu);
+                break;
+                
+            case ESP_GATTS_CONF_EVT:
+                // Confirmation event after indication/notification
+                ESP_LOGD("meater_ble_server", "Notification/indication confirmed, status: %d", param->conf.status);
                 break;
                 
             default:
