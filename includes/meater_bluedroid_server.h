@@ -252,20 +252,29 @@ private:
     }
     
     void handle_gatts_event(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param) {
+        // REG_EVT is special - gatts_if is not valid yet, so handle it separately
+        if (event == ESP_GATTS_REG_EVT) {
+            ESP_LOGI("meater_ble_server", "GATTS app registered, app_id: %d", param->reg.app_id);
+            gatts_if_ = gatts_if;
+            
+            // Set device name
+            esp_ble_gap_set_device_name(MEATER_NAME);
+            
+            // Configure advertising data
+            configure_advertising();
+            
+            // Create services
+            create_services();
+            return;
+        }
+        
+        // For all other events, only handle if gatts_if matches our registered interface
+        if (gatts_if != ESP_GATT_IF_NONE && gatts_if != gatts_if_) {
+            ESP_LOGD("meater_ble_server", "Event %d for different gatts_if (%d vs %d), ignoring", event, gatts_if, gatts_if_);
+            return;
+        }
+        
         switch (event) {
-            case ESP_GATTS_REG_EVT:
-                ESP_LOGI("meater_ble_server", "GATTS app registered, app_id: %d", param->reg.app_id);
-                gatts_if_ = gatts_if;
-                
-                // Set device name
-                esp_ble_gap_set_device_name(MEATER_NAME);
-                
-                // Configure advertising data
-                configure_advertising();
-                
-                // Create services
-                create_services();
-                break;
                 
             case ESP_GATTS_CREATE_EVT:
                 ESP_LOGI("meater_ble_server", "Service created, handle: %d", param->create.service_handle);
