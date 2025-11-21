@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:drawable="@drawable/_ic_pause_to_resume_white__0_res_0x7f080018">
-    <target
-        android:name="path"
-        android:animation="@drawable/_ic_pause_to_resume_white__1_res_0x7f080019"/>
-    <target
-        android:name="group"
-        android:animation="@drawable/_ic_pause_to_resume_white__2_res_0x7f08001a"/>
-</animated-vector>

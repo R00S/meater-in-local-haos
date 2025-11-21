@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="product_selection_item_dimension">1:1</string>
-    <string name="recipe_browse_video_size">9:11.5</string>
-    <string name="recipe_steps_player_dimension">9:13</string>
-</resources>

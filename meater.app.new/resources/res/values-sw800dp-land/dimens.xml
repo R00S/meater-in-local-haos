@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="product_selection_item_width">280dp</dimen>
-    <dimen name="product_selection_list_margin_top">32dp</dimen>
-</resources>
