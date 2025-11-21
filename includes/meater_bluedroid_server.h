@@ -380,6 +380,13 @@ private:
                          param->rsp.status, param->rsp.handle);
                 break;
                 
+            case ESP_GATTS_SET_ATTR_VAL_EVT:
+                // This event occurs when we call esp_ble_gatts_set_attr_value()
+                // It's normal and expected when updating characteristic values
+                ESP_LOGV("meater_ble_server", "Attribute value set, status: %d, attr_handle: %d",
+                         param->set_attr_val.status, param->set_attr_val.attr_handle);
+                break;
+                
             default:
                 ESP_LOGD("meater_ble_server", "Unhandled GATTS event: %d", event);
                 break;
