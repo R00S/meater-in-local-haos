@@ -163,6 +163,63 @@ private:
             case ESP_GAP_BLE_SCAN_RESULT_EVT:
                 // Ignore scan results from esp32_ble_tracker - too noisy
                 break;
+            
+            // Pairing and bonding event handlers (for MEATER app compatibility)
+            case ESP_GAP_BLE_NC_REQ_EVT:
+                // Numeric Comparison Request - auto-accept pairing
+                ESP_LOGI("meater_ble_server", "ESP_GAP_BLE_NC_REQ_EVT - Auto-accepting pairing request");
+                esp_ble_confirm_reply(param->ble_security.ble_req.bd_addr, true);
+                break;
+            
+            case ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT:
+                ESP_LOGI("meater_ble_server", "Advertising stopped");
+                break;
+            
+            case ESP_GAP_BLE_PHY_UPDATE_COMPLETE_EVT:
+                ESP_LOGI("meater_ble_server", "PHY update complete, status: %d", param->phy_update.status);
+                break;
+            
+            case ESP_GAP_BLE_AUTH_CMPL_EVT: {
+                // Authentication complete
+                esp_ble_auth_cmpl_t auth_cmpl = param->ble_security.auth_cmpl;
+                ESP_LOGI("meater_ble_server", "Authentication %s, addr: %02x:%02x:%02x:%02x:%02x:%02x",
+                         auth_cmpl.success ? "complete" : "failed",
+                         auth_cmpl.bd_addr[0], auth_cmpl.bd_addr[1], auth_cmpl.bd_addr[2],
+                         auth_cmpl.bd_addr[3], auth_cmpl.bd_addr[4], auth_cmpl.bd_addr[5]);
+                break;
+            }
+            
+            case ESP_GAP_BLE_SEC_REQ_EVT:
+                // Security request from peer - auto-accept
+                ESP_LOGI("meater_ble_server", "ESP_GAP_BLE_SEC_REQ_EVT - Accepting security request");
+                esp_ble_gap_security_rsp(param->ble_security.ble_req.bd_addr, true);
+                break;
+            
+            case ESP_GAP_BLE_PASSKEY_REQ_EVT:
+                ESP_LOGI("meater_ble_server", "ESP_GAP_BLE_PASSKEY_REQ_EVT");
+                break;
+            
+            case ESP_GAP_BLE_OOB_REQ_EVT:
+                ESP_LOGI("meater_ble_server", "ESP_GAP_BLE_OOB_REQ_EVT");
+                break;
+            
+            case ESP_GAP_BLE_LOCAL_IR_EVT:
+                ESP_LOGI("meater_ble_server", "ESP_GAP_BLE_LOCAL_IR_EVT");
+                break;
+            
+            case ESP_GAP_BLE_LOCAL_ER_EVT:
+                ESP_LOGI("meater_ble_server", "ESP_GAP_BLE_LOCAL_ER_EVT");
+                break;
+            
+            case ESP_GAP_BLE_PASSKEY_NOTIF_EVT:
+                ESP_LOGI("meater_ble_server", "ESP_GAP_BLE_PASSKEY_NOTIF_EVT, passkey: %d", 
+                         param->ble_security.key_notif.passkey);
+                break;
+            
+            case ESP_GAP_BLE_KEY_EVT:
+                ESP_LOGI("meater_ble_server", "ESP_GAP_BLE_KEY_EVT");
+                break;
+            
             default:
                 ESP_LOGD("meater_ble_server", "Unhandled GAP event: %d", event);
                 break;
