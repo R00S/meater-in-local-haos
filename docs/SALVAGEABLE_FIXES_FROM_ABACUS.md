@@ -275,13 +275,16 @@ If all fixes are applied:
 
 | Fix | Status | Tested | Notes |
 |-----|--------|--------|-------|
-| Temperature (16.0 → 32.0) | ❌ Not Applied | ⏳ Pending | Ready to apply |
-| Event 20 (NC_REQ) | ❌ Not Applied | ⏳ Pending | Critical for pairing |
-| Event 21 (ADV_STOP) | ❌ Not Applied | ⏳ Pending | Lifecycle handling |
-| Event 60 (PHY_UPDATE) | ❌ Not Applied | ⏳ Pending | Connection quality |
-| Additional handlers | ❌ Not Applied | ⏳ Pending | Robustness |
+| Temperature (16.0 → 32.0) | ✅ Applied | ⏳ Pending Hardware | meater.yaml line 134 |
+| Event 20 (NC_REQ) | ✅ Applied | ⏳ Pending Hardware | Critical for pairing |
+| Event 21 (ADV_STOP) | ✅ Applied | ⏳ Pending Hardware | Lifecycle handling |
+| Event 60 (PHY_UPDATE) | ✅ Applied | ⏳ Pending Hardware | Connection quality |
+| Additional handlers | ✅ Applied | ⏳ Pending Hardware | 8 handlers added |
 | Security config | ❓ Unknown | ⏳ Pending | Needs investigation |
+
+**Applied**: 2025-11-21  
+**Changes**: 58 lines (+57 in meater_bluedroid_server.h, -1/+1 in meater.yaml)
 
 ---
 
-Last Updated: 2025-11-21 (from Abacus chat dated 2024-11-20)
+Last Updated: 2025-11-21 (fixes applied from Abacus chat dated 2024-11-20)
