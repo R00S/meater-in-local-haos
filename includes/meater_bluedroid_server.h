@@ -11,6 +11,7 @@
 #include <esp_gatt_common_api.h>
 #include <esp_timer.h>
 #include <nvs_flash.h>
+#include <esp_system.h>
 #include <string.h>
 
 // MEATER Probe Emulation using Bluedroid
@@ -367,10 +368,9 @@ private:
             case ESP_GATTS_EXEC_WRITE_EVT:
                 ESP_LOGI("meater_ble_server", "Execute write event, exec_write_flag: %d", 
                          param->exec_write.exec_write_flag);
-                if (param->exec_write.need_rsp) {
-                    esp_ble_gatts_send_response(gatts_if_, param->exec_write.conn_id,
-                                                param->exec_write.trans_id, ESP_GATT_OK, nullptr);
-                }
+                // Always send response for exec write
+                esp_ble_gatts_send_response(gatts_if_, param->exec_write.conn_id,
+                                            param->exec_write.trans_id, ESP_GATT_OK, nullptr);
                 break;
                 
             case ESP_GATTS_RESPONSE_EVT:
@@ -853,8 +853,12 @@ public:
         // This makes the device appear as legitimate MEATER hardware to the app
         // The app validates MAC prefix to prevent counterfeit devices
         
-        // Get ESP32 chip ID for generating unique MAC address
-        uint64_t chip_id = ESP.getEfuseMac();
+        // Get ESP32 chip ID for generating unique MAC address (ESP-IDF way)
+        uint8_t base_mac[6];
+        esp_efuse_mac_get_default(base_mac);
+        uint64_t chip_id = ((uint64_t)base_mac[0] << 40) | ((uint64_t)base_mac[1] << 32) |
+                          ((uint64_t)base_mac[2] << 24) | ((uint64_t)base_mac[3] << 16) |
+                          ((uint64_t)base_mac[4] << 8) | (uint64_t)base_mac[5];
         
         // Create custom MAC with Apption Labs prefix B8:1F:5E
         // Last 3 bytes derived from ESP32 chip ID to ensure uniqueness
