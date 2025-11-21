@@ -220,6 +220,25 @@ private:
                 ESP_LOGI("meater_ble_server", "ESP_GAP_BLE_KEY_EVT");
                 break;
             
+            case ESP_GAP_BLE_UPDATE_CONN_PARAMS_EVT: {
+                // Connection parameters updated - this is normal during connection establishment
+                ESP_LOGI("meater_ble_server", "Connection parameters updated:");
+                ESP_LOGI("meater_ble_server", "  Status: %d", param->update_conn_params.status);
+                ESP_LOGI("meater_ble_server", "  Connection interval: %d", param->update_conn_params.conn_int);
+                ESP_LOGI("meater_ble_server", "  Latency: %d", param->update_conn_params.latency);
+                ESP_LOGI("meater_ble_server", "  Timeout: %d", param->update_conn_params.timeout);
+                break;
+            }
+            
+            case ESP_GAP_BLE_SET_PKT_LENGTH_COMPLETE_EVT: {
+                // Packet length setting completed - this is normal during connection establishment
+                ESP_LOGI("meater_ble_server", "Packet length update complete:");
+                ESP_LOGI("meater_ble_server", "  Status: %d", param->pkt_data_length_cmpl.status);
+                ESP_LOGI("meater_ble_server", "  RX length: %d", param->pkt_data_length_cmpl.params.rx_len);
+                ESP_LOGI("meater_ble_server", "  TX length: %d", param->pkt_data_length_cmpl.params.tx_len);
+                break;
+            }
+            
             default:
                 ESP_LOGD("meater_ble_server", "Unhandled GAP event: %d", event);
                 break;
