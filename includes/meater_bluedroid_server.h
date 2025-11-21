@@ -12,6 +12,8 @@
 #include <esp_timer.h>
 #include <nvs_flash.h>
 #include <esp_system.h>
+#include <esp_efuse.h>
+#include <esp_mac.h>
 #include <string.h>
 
 // MEATER Probe Emulation using Bluedroid
