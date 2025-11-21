@@ -847,6 +847,44 @@ public:
         }
         ESP_LOGI("meater_ble_server", "✓ Bluedroid already enabled by esp32_ble_tracker");
         
+        // ========== MAC ADDRESS SPOOFING ==========
+        // Spoof MAC address to use Apption Labs registered prefix (B8:1F:5E)
+        // This makes the device appear as legitimate MEATER hardware to the app
+        // The app validates MAC prefix to prevent counterfeit devices
+        
+        // Get ESP32 chip ID for generating unique MAC address
+        uint64_t chip_id = ESP.getEfuseMac();
+        
+        // Create custom MAC with Apption Labs prefix B8:1F:5E
+        // Last 3 bytes derived from ESP32 chip ID to ensure uniqueness
+        esp_bd_addr_t custom_mac = {
+            0xB8, 0x1F, 0x5E,                    // Apption Labs registered OUI
+            (uint8_t)((chip_id >> 16) & 0xFF),   // Unique byte 1 from chip ID
+            (uint8_t)((chip_id >> 8) & 0xFF),    // Unique byte 2 from chip ID
+            (uint8_t)(chip_id & 0xFF)            // Unique byte 3 from chip ID
+        };
+        
+        // Log the original and spoofed MAC addresses
+        uint8_t original_mac[6];
+        esp_read_mac(original_mac, ESP_MAC_BT);
+        ESP_LOGI("meater_ble_server", "Original ESP32 BLE MAC: %02X:%02X:%02X:%02X:%02X:%02X",
+                 original_mac[0], original_mac[1], original_mac[2],
+                 original_mac[3], original_mac[4], original_mac[5]);
+        
+        ESP_LOGI("meater_ble_server", "Spoofing MAC to Apption Labs prefix: %02X:%02X:%02X:%02X:%02X:%02X",
+                 custom_mac[0], custom_mac[1], custom_mac[2],
+                 custom_mac[3], custom_mac[4], custom_mac[5]);
+        
+        // Set the custom random address for BLE advertising
+        ret = esp_ble_gap_set_rand_addr(custom_mac);
+        if (ret != ESP_OK) {
+            ESP_LOGE("meater_ble_server", "Failed to set custom MAC address: 0x%x", ret);
+            ESP_LOGW("meater_ble_server", "Continuing with original MAC - app may reject device");
+        } else {
+            ESP_LOGI("meater_ble_server", "✓ MAC address spoofed successfully - device should appear as real MEATER");
+        }
+        // ========== END MAC ADDRESS SPOOFING ==========
+        
         // Register GAP callback
         ret = esp_ble_gap_register_callback(gap_event_handler);
         if (ret) {
