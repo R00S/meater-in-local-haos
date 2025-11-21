@@ -839,6 +839,29 @@ public:
         memset(battery_data_, 0, sizeof(battery_data_));
         memset(config_data_, 0, sizeof(config_data_));
         
+        // CRITICAL FIX: Pre-populate temperature and battery with valid data
+        // App reads these characteristics immediately after connection
+        // If they're zero, app interprets as uninitialized probe and stops
+        // Decompiled code trace: DevicePairingFragment.java expects non-zero values
+        
+        // Initialize with realistic default values (room temperature)
+        // Format: tip_raw (2 bytes LE), ra (2 bytes), oa (2 bytes), max_temp (2 bytes)
+        uint16_t default_temp = 320;  // ~18°C
+        temp_data_[0] = default_temp & 0xFF;
+        temp_data_[1] = (default_temp >> 8) & 0xFF;
+        temp_data_[2] = 100;  // ra coefficient
+        temp_data_[3] = 0;
+        temp_data_[4] = 80;   // oa coefficient  
+        temp_data_[5] = 0;
+        temp_data_[6] = 0;    // max_temp
+        temp_data_[7] = 0;
+        
+        // Initialize battery to 90% (4+5)*10 = 90%
+        battery_data_[0] = 4;
+        battery_data_[1] = 5;
+        
+        ESP_LOGI("meater_ble_server", "✓ Initialized temp/battery with valid default values");
+        
         instance_ = this;
         ESP_LOGI("meater_ble_server", "Constructor complete - instance pointer set");
     }
