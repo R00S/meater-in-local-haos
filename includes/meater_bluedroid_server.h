@@ -292,9 +292,22 @@ private:
                 break;
                 
             case ESP_GATTS_CONNECT_EVT:
-                ESP_LOGI("meater_ble_server", "Client connected, conn_id: %d", param->connect.conn_id);
+                ESP_LOGI("meater_ble_server", "Client connected, conn_id: %d, remote_bda: %02x:%02x:%02x:%02x:%02x:%02x",
+                         param->connect.conn_id,
+                         param->connect.remote_bda[0], param->connect.remote_bda[1], param->connect.remote_bda[2],
+                         param->connect.remote_bda[3], param->connect.remote_bda[4], param->connect.remote_bda[5]);
                 conn_id_ = param->connect.conn_id;
                 connected_ = true;
+                
+                // Update connection parameters for optimal performance
+                esp_ble_conn_update_params_t conn_params = {};
+                memcpy(conn_params.bda, param->connect.remote_bda, sizeof(esp_bd_addr_t));
+                conn_params.latency = 0;
+                conn_params.max_int = 0x20;  // 40ms
+                conn_params.min_int = 0x10;  // 20ms
+                conn_params.timeout = 400;    // 4000ms
+                esp_ble_gap_update_conn_params(&conn_params);
+                ESP_LOGI("meater_ble_server", "Requested connection parameter update");
                 break;
                 
             case ESP_GATTS_DISCONNECT_EVT:
@@ -337,7 +350,35 @@ private:
                 ESP_LOGD("meater_ble_server", "Notification/indication confirmed, status: %d", param->conf.status);
                 break;
                 
+            case ESP_GATTS_OPEN_EVT:
+                ESP_LOGI("meater_ble_server", "GATT server open event, status: %d", param->open.status);
+                break;
+                
+            case ESP_GATTS_CLOSE_EVT:
+                ESP_LOGI("meater_ble_server", "GATT server close event, status: %d, conn_id: %d",
+                         param->close.status, param->close.conn_id);
+                break;
+                
+            case ESP_GATTS_LISTEN_EVT:
+                ESP_LOGI("meater_ble_server", "GATT server listen event");
+                break;
+                
+            case ESP_GATTS_EXEC_WRITE_EVT:
+                ESP_LOGI("meater_ble_server", "Execute write event, exec_write_flag: %d", 
+                         param->exec_write.exec_write_flag);
+                if (param->exec_write.need_rsp) {
+                    esp_ble_gatts_send_response(gatts_if_, param->exec_write.conn_id,
+                                                param->exec_write.trans_id, ESP_GATT_OK, nullptr);
+                }
+                break;
+                
+            case ESP_GATTS_RESPONSE_EVT:
+                ESP_LOGD("meater_ble_server", "Response event, status: %d, handle: %d",
+                         param->rsp.status, param->rsp.handle);
+                break;
+                
             default:
+                ESP_LOGD("meater_ble_server", "Unhandled GATTS event: %d", event);
                 break;
         }
     }

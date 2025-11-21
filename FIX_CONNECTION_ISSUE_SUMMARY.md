@@ -1,12 +1,14 @@
 # Fix Summary: MEATER App Connection Issues
 
 **Date:** 2025-11-21  
-**Issue:** ESP32 device could be added to MEATER app but connection would fail afterward  
-**Status:** ✅ FIXED
+**Issue:** ESP32 device could be discovered by MEATER app but wouldn't connect or show temperature after adding  
+**Status:** 🔧 IN PROGRESS (Multiple fixes applied)
 
 ## Problem Description
 
-The MEATER app could discover and add the ESP32 BLE server, but the connection would fail immediately after. The logs showed:
+The MEATER app could discover the ESP32 BLE server (showing it as available to add), but after adding the device, it wouldn't connect or show temperature data.
+
+### Initial Issue (Logs from first report)
 
 ```
 [11:26:54.701][I][meater_ble_server:261][BTC_TASK]: Client connected, conn_id: 0
