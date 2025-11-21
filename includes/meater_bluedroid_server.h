@@ -302,6 +302,12 @@ private:
                 conn_id_ = param->connect.conn_id;
                 connected_ = true;
                 
+                // Auto-enable notifications for temperature and battery
+                // Real MEATER probes enable notifications automatically without waiting for CCCD writes
+                temp_notify_enabled_ = true;
+                battery_notify_enabled_ = true;
+                ESP_LOGI("meater_ble_server", "Auto-enabled notifications for temperature and battery");
+                
                 // Update connection parameters for optimal performance
                 esp_ble_conn_update_params_t conn_params = {};
                 memcpy(conn_params.bda, param->connect.remote_bda, sizeof(esp_bd_addr_t));
