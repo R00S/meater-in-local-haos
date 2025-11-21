@@ -863,15 +863,26 @@ public:
         // Decompiled code trace: DevicePairingFragment.java expects non-zero values
         
         // Initialize with realistic default values (room temperature)
-        // Format: tip_raw (2 bytes LE), ra (2 bytes), oa (2 bytes), max_temp (2 bytes)
-        uint16_t default_temp = 320;  // ~18°C
-        temp_data_[0] = default_temp & 0xFF;
-        temp_data_[1] = (default_temp >> 8) & 0xFF;
-        temp_data_[2] = 100;  // ra coefficient
-        temp_data_[3] = 0;
-        temp_data_[4] = 80;   // oa coefficient  
-        temp_data_[5] = 0;
-        temp_data_[6] = 0;    // max_temp
+        // Format: tip_raw (2 bytes LE), ra (2 bytes LE), oa (2 bytes LE), unknown (2 bytes)
+        // Each value is little-endian 16-bit: accum + count*256
+        uint16_t default_tip = 576;   // 18°C * 32 = 576 (raw format from Temperature.java)
+        uint16_t default_ra = 48;     // ra coefficient (typical value)
+        uint16_t default_oa = 32;     // oa coefficient (typical value)
+        
+        // Tip temperature (bytes 0-1, little-endian)
+        temp_data_[0] = default_tip & 0xFF;
+        temp_data_[1] = (default_tip >> 8) & 0xFF;
+        
+        // ra coefficient (bytes 2-3, little-endian)
+        temp_data_[2] = default_ra & 0xFF;
+        temp_data_[3] = (default_ra >> 8) & 0xFF;
+        
+        // oa coefficient (bytes 4-5, little-endian)
+        temp_data_[4] = default_oa & 0xFF;
+        temp_data_[5] = (default_oa >> 8) & 0xFF;
+        
+        // Unknown/reserved (bytes 6-7)
+        temp_data_[6] = 0;
         temp_data_[7] = 0;
         
         // Initialize battery to 90% (4+5)*10 = 90%
