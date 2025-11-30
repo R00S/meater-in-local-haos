@@ -140,14 +140,19 @@ These categories require:
 
 ### 📷 AI-Powered Grocery Recognition & Inventory
 
-#### Automatic Grocery Intake
-- [ ] Camera on kitchen table to photograph unpacked groceries
-- [ ] AI vision model identifies items from photos
-- [ ] Parse receipts (photo or digital) to extract items, quantities, prices, expiry hints
+#### Low-Effort Grocery Intake (No Barcode Scanning)
+
+**Two inputs only:**
+1. **Receipt photo/scan** → OCR extracts items, quantities, prices, expiry hints
+2. **One photo of all groceries** on kitchen table → AI vision identifies items
+
+- [ ] Receipt OCR to extract items, quantities, prices
+- [ ] Single photo of groceries on table for AI identification
+- [ ] Cross-reference receipt + photo for accuracy
 - [ ] Auto-add identified items to inventory (Grocy/Mealie)
 - [ ] Match purchased items to shopping list, mark as complete
 
-#### Label Printing Integration
+#### Label Printing Integration (Optional)
 - [ ] Generate labels for identified items
 - [ ] Include: item name, purchase date, expiry date, storage location
 - [ ] Print via ESPHome label printer or network printer
@@ -291,7 +296,7 @@ System generates:
 
 **Features:**
 - Stock/inventory tracking with expiry dates
-- Barcode scanning for quick entry
+- Manual entry or API-based intake
 - Recipe management with ingredient consumption
 - **Auto-consume ingredients when cooking recipes**
 - Shopping list generation
@@ -319,7 +324,7 @@ System generates:
 - Self-hosted, privacy-focused
 - API for integration
 
-**Use Case:** Scan grocery receipts → extract items → add to Grocy inventory
+**Use Case:** Photo of grocery receipt → extract items → add to Grocy inventory
 
 ---
 
@@ -334,21 +339,6 @@ System generates:
 - Docker deployment
 - Batch processing
 - Structured data extraction (items, prices, dates)
-
----
-
-### 4. Open Food Facts
-
-**Website:** [openfoodfacts.org](https://openfoodfacts.org/)  
-**Description:** Free, open database of food products
-
-**Features:**
-- Barcode → product info lookup
-- Nutritional information
-- Allergens and ingredients
-- API for integration
-
-**Use Case:** Scan barcode → get product details → add to inventory with full info
 
 ---
 
@@ -486,7 +476,7 @@ services:
 - Web-based ERP for household
 - Stock/inventory tracking
 - Recipe management with ingredient tracking
-- Barcode scanning
+- Manual and API-based entry
 - Chores and tasks
 - Home Assistant integration via API
 

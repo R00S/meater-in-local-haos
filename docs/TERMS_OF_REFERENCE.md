@@ -202,12 +202,12 @@ These features are explicitly **not** part of the first development stage:
 - Baking & pastry-specific rules
 - Fermentation workflows (yogurt, sourdough, kombucha)
 - Sous vide profiles / slow cooking frameworks
-- Grocery barcode scanning
 - Full automated pantry accuracy
 - Complex MEATER-style cooking algorithms (predictions, rest modeling)
 - AI-powered grocery recognition from photos
 - Receipt OCR processing
 - Label printing integration
+- Alternative temperature probes (Combustion Inc, iGrill)
 
 These will be added in later phases.
 
@@ -252,13 +252,6 @@ The system will use:
 - Tip & ambient temperature
 - Battery and RSSI
 - Graphs and ETA (later)
-
-**Alternative Hardware Option:**
-- **Combustion Inc Predictive Thermometer** - Has officially documented, open BLE protocol
-  - Full BLE spec: [`combustion-inc/combustion-documentation`](https://github.com/combustion-inc/combustion-documentation)
-  - Official SDKs (iOS, Android, Python)
-  - Existing HA integration: [`legrego/homeassistant-combustion`](https://github.com/legrego/homeassistant-combustion)
-  - 8 temperature sensors (vs MEATER's 2)
 
 ### Architecture Diagram
 
@@ -419,16 +412,27 @@ To be added after Phase 1:
 - Sous vide profiles and water bath monitoring
 
 ### 📷 AI-Powered Grocery Recognition
-- Camera on kitchen table photographs unpacked groceries
-- AI vision identifies items from photos
-- Receipt OCR extracts items, prices, expiry dates
-- Auto-add to inventory (Grocy)
-- Label printing with QR codes
+
+**Low-effort grocery intake** (no barcode scanning required):
+1. **Receipt photo/scan** → OCR extracts items, quantities, prices, expiry hints
+2. **One photo of all groceries** on kitchen table → AI vision identifies items
+
+- Cross-reference receipt + photo for accuracy
+- Auto-add identified items to inventory (Grocy)
+- Label printing with QR codes (optional)
 
 **Open Source Tools for Phase 2:**
 - **Receipt Wrangler** ([receiptwrangler.io](https://receiptwrangler.io/)) - Receipt OCR
 - **Receipt-OCR** ([`bhimrazy/receipt-ocr`](https://github.com/bhimrazy/receipt-ocr)) - FastAPI receipt processing
-- **Open Food Facts** ([openfoodfacts.org](https://openfoodfacts.org/)) - Barcode → product lookup
+
+### 🌡️ Alternative Temperature Probes
+
+**Combustion Inc Predictive Thermometer** - Has officially documented, open BLE protocol:
+- Full BLE spec: [`combustion-inc/combustion-documentation`](https://github.com/combustion-inc/combustion-documentation)
+- Official SDKs (iOS, Android, Python)
+- Existing HA integration: [`legrego/homeassistant-combustion`](https://github.com/legrego/homeassistant-combustion)
+- 8 temperature sensors (vs MEATER's 2)
+- Predictive cooking with ML
 
 ### 🔬 Advanced Cooking Algorithms
 - Complex MEATER-style predictions
