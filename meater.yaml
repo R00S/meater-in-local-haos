@@ -1,39 +1,21 @@
+# MEATER+ BLE Client Configuration
+# This configuration reads temperature data from a real MEATER+ probe via BLE
+# and exposes the data to Home Assistant. No cloud connection required.
+#
+# The BLE server emulation (for MEATER app compatibility) has been put on hold.
+# See docs/TERMS_OF_REFERENCE.md for the Kitchen Cooking Engine project vision.
+
 esphome:
   name: meater
   friendly_name: meater
-  includes:
-    - includes/meater_bluedroid_server.h
-  on_boot:
-    # Priority 600 ensures this runs LATE (higher priority = later)
-    # esp32_ble_tracker runs early (~-100), so 600 ensures we run much later
-    priority: 600
-    then:
-      - delay: 3s  # Wait for Bluedroid initialization
-      - lambda: |-
-          ESP_LOGI("meater", "=== BOOT: Initializing MEATER BLE server (after Bluedroid init) ===");
-      - script.execute: init_ble_server
-      - delay: 1s
-      - lambda: |-
-          ESP_LOGI("meater", "=== BOOT: BLE server initialization complete ===");
 
 esp32:
   board: esp32-c3-devkitm-1
   framework:
     type: esp-idf
-    sdkconfig_options:
-      CONFIG_BT_ENABLED: y
-      CONFIG_BT_BLE_ENABLED: y
-      CONFIG_BT_BLUEDROID_ENABLED: y
-      CONFIG_BT_CLASSIC_ENABLED: n
-      CONFIG_BT_NIMBLE_ENABLED: n
-      CONFIG_BTDM_CTRL_MODE_BLE_ONLY: y
-      CONFIG_BTDM_CTRL_MODE_BR_EDR_ONLY: n
-      CONFIG_BTDM_CTRL_MODE_BTDM: n
-      CONFIG_BT_RESERVE_DRAM: "0x10000"
 
 # Enable logging
 logger:
-  level: DEBUG
 
 # Enable Home Assistant API
 api:
@@ -55,132 +37,82 @@ wifi:
 
 captive_portal:
 
-# BLE TRACKER ENABLED - initializes Bluedroid stack required for BLE GAP functions
-# Scanning is disabled (interval: 0) so it doesn't interfere with BLE server advertising
-esp32_ble_tracker:
-  scan_parameters:
-    interval: 0ms  # Disable scanning - only initializes Bluedroid
-    window: 0ms
-    active: false
+# BLE proxy allows Home Assistant to see other BLE devices through this ESP32
+bluetooth_proxy:
 
-# BLE CLIENT REMOVED - see meater_ble_client_backup.yaml for restoration
-# ble_client:
-#   - mac_address: !secret meater_mac_address
-#     id: meater
+# BLE client to connect to the real MEATER+ probe
+ble_client:
+  - mac_address: !secret meater_mac_address
+    id: meater
 
-# Global variable to store the BLE server instance
-globals:
-  - id: ble_server_ptr
-    type: void*
-    restore_value: no
-    initial_value: 'nullptr'
-
-# Initialize BLE server on boot
-script:
-  - id: init_ble_server
-    then:
-      - lambda: |-
-          static bool ble_initialized = false;
-          if (!ble_initialized && id(ble_server_ptr) == nullptr) {
-            ESP_LOGI("meater", "Initializing MEATER BLE probe (standalone)");
-            static MeaterBluedroidServer* ble_server = new MeaterBluedroidServer();
-            if (ble_server->setup()) {
-              id(ble_server_ptr) = (void*)ble_server;
-              ble_initialized = true;
-              ESP_LOGI("meater", "✓ MEATER BLE probe started - advertising as 'MEATER'");
-              
-              // Set initial firmware and device name for display
-              id(meater_firmware).publish_state("v1.0.4_0");
-              id(meater_device_name_display).publish_state("MEATER");
-            } else {
-              ESP_LOGE("meater", "✗ Failed to initialize BLE server");
-            }
-          }
-
-# Generate mock temperature data and update BLE server
-interval:
-  - interval: 2s
-    then:
-      - lambda: |-
-          // Generate mock temperature and battery data
-          static uint32_t counter = 0;
-          counter++;
-          
-          // Mock temperature data (8 bytes) - simulating slowly rising temperature
-          // Format: tip_raw (2 bytes), ra (2 bytes), oa (2 bytes), max_temp (2 bytes)
-          std::vector<uint8_t> temp_data(8);
-          uint16_t base_temp = 300 + (counter % 200);  // Simulate 18-30°C range
-          temp_data[0] = base_temp & 0xFF;
-          temp_data[1] = (base_temp >> 8) & 0xFF;
-          temp_data[2] = 100;  // ra
-          temp_data[3] = 0;
-          temp_data[4] = 80;   // oa
-          temp_data[5] = 0;
-          temp_data[6] = 0;    // max_temp
-          temp_data[7] = 0;
-          
-          // Mock battery data (2 bytes) - simulating 90% battery
-          std::vector<uint8_t> battery_data(2);
-          battery_data[0] = 4;  // Battery data byte 1
-          battery_data[1] = 5;  // Battery data byte 2 (4+5)*10 = 90%
-          
-          // Update BLE server with mock data
-          if (id(ble_server_ptr) != nullptr) {
-            ((MeaterBluedroidServer*)id(ble_server_ptr))->update_temperature(temp_data);
-            ((MeaterBluedroidServer*)id(ble_server_ptr))->update_battery(battery_data);
-          }
-          
-          // Update Home Assistant sensors with mock data
-          uint16_t tip_temp = (temp_data[0] + (temp_data[1] << 8) + 8.0) / 32.0;
-          id(meater_tip_temp).publish_state(tip_temp);
-          
-          uint16_t tip = temp_data[0] + (temp_data[1] << 8);
-          uint16_t ra = temp_data[2] + (temp_data[3] << 8);
-          uint16_t oa = temp_data[4] + (temp_data[5] << 8);
-          uint16_t min_val = 48;
-          uint16_t ambient = (tip + std::max(0, (((ra - std::min(min_val, oa)) * 16 * 589) / 1487)) + 8.0) / 16;
-          id(meater_ambient_temp).publish_state(ambient);
-          
-          uint16_t battery = (battery_data[0] + battery_data[1]) * 10;
-          id(meater_battery).publish_state(battery);
-          
-          // Mock RSSI
-          id(meater_rssi).publish_state(-50.0);
- 
 text_sensor:
   - platform: template
     name: "MEATER firmware"
     id: meater_firmware
-  - platform: template
-    name: "MEATER device name"
-    id: meater_device_name_display
- 
-# Template sensors for Home Assistant integration
-# Real MEATER probe only does BLE - these sensors show what the probe is advertising
+
 sensor:
-  - platform: template
+  # Tip temperature - internal meat temperature
+  - platform: ble_client
+    type: characteristic
+    ble_client_id: meater
     name: "MEATER tip temperature"
-    id: meater_tip_temp
+    service_uuid: 'a75cc7fc-c956-488f-ac2a-2dbc08b63a04'
+    characteristic_uuid: '7edda774-045e-4bbf-909b-45d1991a2876'
     icon: 'mdi:thermometer'
     unit_of_measurement: '°C'
     accuracy_decimals: 2
-    
-  - platform: template
+    notify: true
+    lambda: |-
+      uint16_t tip_temp = (x[0] + (x[1] << 8) + 8.0) / 16.0;
+      return (float)tip_temp;
+
+  # Ambient temperature - oven/grill environment temperature
+  - platform: ble_client
+    type: characteristic
+    ble_client_id: meater
     name: "MEATER ambient temperature"
-    id: meater_ambient_temp
+    service_uuid: 'a75cc7fc-c956-488f-ac2a-2dbc08b63a04'
+    characteristic_uuid: '7edda774-045e-4bbf-909b-45d1991a2876'
     icon: 'mdi:thermometer'
     unit_of_measurement: '°C'
     accuracy_decimals: 2
-    
-  - platform: template
+    notify: true
+    lambda: |-
+      uint16_t tip = x[0] + (x[1] << 8);
+      uint16_t ra = x[2] + (x[3] << 8);
+      uint16_t oa = x[4] + (x[5] << 8);
+      uint16_t min_val = 48;
+      uint16_t ambient = (tip + std::max(0, (((ra - std::min(min_val, oa)) * 16 * 589) / 1487)) + 8.0) / 16;
+      return (float)ambient;
+
+  # Battery level
+  - platform: ble_client
+    type: characteristic
+    ble_client_id: meater
     name: "MEATER battery level"
-    id: meater_battery
+    service_uuid: 'a75cc7fc-c956-488f-ac2a-2dbc08b63a04'
+    characteristic_uuid: '2adb4877-68d8-4884-bd3c-d83853bf27b8'
     icon: 'mdi:battery'
     unit_of_measurement: '%'
-    accuracy_decimals: 0
-    
-  - platform: template
+    notify: true
+    lambda: |-
+      uint16_t battery = (x[0] + x[1]) * 10;
+      return (float)battery;
+
+  # Firmware version reader
+  - platform: ble_client
+    type: characteristic
+    ble_client_id: meater
+    id: firmware
+    service_uuid: '180A'
+    characteristic_uuid: '00002a26-0000-1000-8000-00805f9b34fb'
+    lambda: |-
+      std::string data_string(x.begin(), x.end());
+      id(meater_firmware).publish_state(data_string.c_str());
+      return (float)x.size();
+
+  # RSSI signal strength
+  - platform: ble_client
+    type: rssi
+    ble_client_id: meater
     name: "MEATER RSSI"
-    id: meater_rssi
-    unit_of_measurement: 'dBm'
-    accuracy_decimals: 0
