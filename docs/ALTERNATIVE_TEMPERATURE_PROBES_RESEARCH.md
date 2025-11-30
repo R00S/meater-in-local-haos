@@ -11,16 +11,64 @@ Since the MEATER Block protocol analysis has reached an impasse, this document e
 
 The research identified several promising paths forward:
 
-1. **iGrill/Weber Thermometers** - Already have working ESPHome integration (`esphome-igrill`)
-2. **Inkbird BLE Thermometers** - Have open-source ESP32 integrations and Home Assistant support
-3. **Open-source Kitchen/BBQ Controllers** - PiFire, HeaterMeter, PitmasterPi for DIY temperature monitoring
-4. **Grill Buddy** - Home Assistant integration for managing cooking with any temperature probe
+1. **🌟 Combustion Inc Predictive Thermometer** - **BEST OPTION**: Fully open, documented BLE protocol with official SDKs and existing Home Assistant integration
+2. **iGrill/Weber Thermometers** - Working ESPHome integration (`esphome-igrill`)
+3. **Inkbird BLE Thermometers** - Open-source ESP32 integrations and native Home Assistant support
+4. **Open-source Kitchen/BBQ Controllers** - PiFire, HeaterMeter, PitmasterPi for DIY temperature monitoring
+5. **Grill Buddy** - Home Assistant integration for managing cooking with any temperature probe
+
+**Key Finding:** Combustion Inc has **officially published** their BLE protocol documentation and provides SDKs, making it the ideal MEATER alternative for developers wanting to build custom integrations.
 
 ---
 
 ## Part 1: Alternative BLE Temperature Probes
 
-### 1. iGrill / Weber Thermometers
+### 1. Combustion Inc Predictive Thermometer 🌟🌟🌟 (HIGHLY RECOMMENDED)
+
+**Why This is the Best Alternative:**
+- **Fully open, officially documented BLE protocol** - No reverse engineering needed!
+- **Official SDKs provided** (iOS, Android, Python)
+- **Working Home Assistant integration** exists
+- **8 temperature sensors** in one probe (internal + surface gradients)
+- **Predictive cooking** with machine learning for cook time estimation
+- **MeatNet** for extended range via boosters/displays
+
+**Official Documentation & SDKs:**
+- **BLE Protocol Spec:** [`combustion-inc/combustion-documentation`](https://github.com/combustion-inc/combustion-documentation)
+- **iOS SDK:** [`combustion-inc/combustion-ios-ble`](https://github.com/combustion-inc/combustion-ios-ble)
+- **Android SDK:** [`combustion-inc/combustion-android-ble`](https://github.com/combustion-inc/combustion-android-ble)
+- **Python SDK:** [`combustion-ble`](https://pypi.org/project/combustion-ble/) (via Bleak library)
+
+**Home Assistant Integration:**
+- **GitHub:** [`legrego/homeassistant-combustion`](https://github.com/legrego/homeassistant-combustion)
+- **Features:**
+  - Temperature sensors for all 8 probe points
+  - Battery status
+  - Works directly with probe or via MeatNet repeaters
+  - Auto-discovery in Home Assistant
+
+**Comparison to MEATER:**
+
+| Feature | MEATER | Combustion Inc |
+|---------|--------|----------------|
+| BLE Protocol | Proprietary, undocumented | **Open, fully documented** |
+| Official SDKs | None | iOS, Android, Python |
+| Home Assistant Integration | Cloud-only (official) | **Local BLE integration** |
+| Temperature Sensors | 2 (tip + ambient) | **8 (gradient mapping)** |
+| Predictive Cooking | Yes | Yes (with ML) |
+| Range Extension | Block required | Boosters, Displays |
+| Developer-Friendly | No | **Very Yes** |
+
+**Why Choose Combustion Inc:**
+This is the most viable alternative because:
+1. The manufacturer **wants** developers to integrate their devices
+2. No reverse engineering required - protocol is MIT licensed
+3. Python SDK works with any platform (Raspberry Pi, ESP32 via MicroPython, etc.)
+4. Home Assistant integration already exists and works
+
+---
+
+### 2. iGrill / Weber Thermometers
 
 **Why This is Promising:**
 - **Working ESPHome integration exists**: [`bendikwa/esphome-igrill`](https://github.com/bendikwa/esphome-igrill)
@@ -469,7 +517,39 @@ Home Assistant has a native `inkbird` integration that works with supported Inkb
 
 ## Part 4: Recommended Paths Forward
 
-### Path A: Pivot to iGrill (Lower Risk)
+### Path A: Pivot to Combustion Inc 🌟🌟🌟 (BEST OPTION)
+
+**Approach:** Purchase a Combustion Inc Predictive Thermometer and use existing integration
+
+**Why This is the Best Path:**
+- **Officially documented BLE protocol** - No reverse engineering needed
+- **Official SDKs** (iOS, Android, Python) for custom development
+- **Existing Home Assistant integration** ([`homeassistant-combustion`](https://github.com/legrego/homeassistant-combustion))
+- **8 temperature sensors** in one probe for gradient mapping
+- **Predictive cooking** with machine learning (similar to MEATER)
+- **Developer-friendly** company that welcomes integrations
+
+**Setup:**
+1. Purchase Combustion Predictive Thermometer (~$150-200)
+2. Install `homeassistant-combustion` integration
+3. Use Grill Buddy for guided cooking (protein presets, doneness, methods)
+4. Full local control, no cloud dependency
+
+**Pros:**
+- Open protocol = no roadblocks
+- Better than MEATER in many ways (8 sensors vs 2)
+- Active community and manufacturer support
+- Can build custom ESPHome integration if needed
+
+**Cons:**
+- Requires purchasing new hardware
+- No MEATER app compatibility (but better alternatives exist)
+
+**Estimated Effort:** Very Low (days)
+
+---
+
+### Path B: Pivot to iGrill (Lower Risk)
 
 **Approach:** Purchase an iGrill V2/V3 and use `esphome-igrill`
 
@@ -486,7 +566,7 @@ Home Assistant has a native `inkbird` integration that works with supported Inkb
 
 ---
 
-### Path B: Study esphome-igrill Implementation (Medium Risk)
+### Path C: Study esphome-igrill Implementation (Medium Risk)
 
 **Approach:** Study how `esphome-igrill` implements BLE client successfully and apply learnings to MEATER
 
@@ -503,7 +583,7 @@ Home Assistant has a native `inkbird` integration that works with supported Inkb
 
 ---
 
-### Path C: Abandon BLE Server, Focus on BLE Client Only (Recommended)
+### Path D: MEATER BLE Client Only (If keeping MEATER hardware)
 
 **Approach:** 
 1. Keep ESP32 as BLE client to MEATER probe only
@@ -520,23 +600,22 @@ Home Assistant has a native `inkbird` integration that works with supported Inkb
 - Monitor temperature ranges and get out-of-range alerts
 
 **Pros:**
+- Uses existing MEATER probe
 - Simpler architecture (no BLE server)
-- BLE client connection to MEATER probes is proven to work
 - **Grill Buddy provides ~90% of MEATER app cooking features**
 - Works with any temperature probe in Home Assistant
 - Supports all kitchen cooking methods (oven, stove-top, air fryer, sous vide, etc.)
-- Open source and customizable
 
 **Cons:**
 - MEATER app still doesn't work
 - Users need Home Assistant
-- Missing: rest time calculation, step-by-step guidance (can be added via automations)
+- BLE client implementation still needs work
 
 **Estimated Effort:** Medium (weeks)
 
 ---
 
-### Path D: Use Alternative Open-Source Platform (Different Project)
+### Path E: Use Alternative Open-Source Platform (Different Project)
 
 **Approach:** Build custom hardware using PiFire, HeaterMeter, or similar
 
@@ -557,16 +636,18 @@ Home Assistant has a native `inkbird` integration that works with supported Inkb
 
 The most pragmatic paths forward are:
 
-1. **Path C (Recommended):** Focus on BLE client only, use Home Assistant + Grill Buddy for the "app experience"
+1. **Path A (BEST):** Switch to Combustion Inc thermometer - open protocol, official SDKs, existing HA integration
 
-2. **Path B:** Study `esphome-igrill` to understand proper BLE client implementation and apply learnings
+2. **Path B:** Switch to iGrill - proven ESPHome integration available
 
-3. **Path A:** If switching hardware is acceptable, iGrill with `esphome-igrill` is a proven solution
+3. **Path D:** Keep MEATER hardware, use BLE client + Grill Buddy for cooking features
 
 The MEATER Block protocol remains difficult to reverse-engineer because it likely includes:
 - Proprietary authentication handshakes
 - Encrypted or obfuscated data
 - Complex state machine requirements
+
+**Combustion Inc is the clear winner** for anyone wanting to build custom integrations - their developer-friendly approach with open protocol documentation makes them the ideal choice.
 
 Alternative approaches may provide better value for development effort.
 
