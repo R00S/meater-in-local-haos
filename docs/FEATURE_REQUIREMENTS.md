@@ -7,7 +7,19 @@
 
 ## Vision
 
-Build a **local, cloud-free cooking management system** that replicates and extends MEATER app functionality, integrated with Home Assistant and open-source recipe management platforms.
+Build a **local, cloud-free cooking management system** that replicates and extends MEATER app functionality, integrated with Home Assistant, AI-powered meal planning, and open-source recipe management platforms.
+
+**Ultimate Goal:** An intelligent cooking assistant where users can say:
+
+> *"You know my current ingredients. I want to have a nice seafood dinner for me and 5 friends. They can shop a few things on the way here. I have 2h of prep time and they can help me cooking for 1h when they arrive. Give me 3 recipes based on my gear and stuff that we can make and let me pick."*
+
+The system should then:
+- Analyze available ingredients (from inventory)
+- Suggest 3 suitable recipes matching constraints
+- Let user pick one
+- Generate step-by-step prep instructions in Lovelace
+- Create a todo-list for the user's prep work
+- Generate a shopping list for friends to bring
 
 ---
 
@@ -74,28 +86,305 @@ Build a **local, cloud-free cooking management system** that replicates and exte
 
 ---
 
+## 🤖 AI-Powered Meal Planning Assistant
+
+### Natural Language Meal Planning
+- [ ] Accept natural language queries about meal planning
+- [ ] Understand constraints: number of guests, prep time, cooking time, dietary restrictions
+- [ ] Know what help is available (friends can shop, help cook)
+- [ ] Suggest multiple recipe options based on constraints
+
+### Ingredient Inventory Awareness
+- [ ] Track current ingredients in pantry/fridge (via Grocy or Mealie)
+- [ ] Know what's running low or expired
+- [ ] Suggest recipes based on available ingredients
+- [ ] Identify what needs to be purchased
+
+### 📷 AI-Powered Grocery Recognition & Inventory
+
+#### Automatic Grocery Intake
+- [ ] Camera on kitchen table to photograph unpacked groceries
+- [ ] AI vision model identifies items from photos
+- [ ] Parse receipts (photo or digital) to extract items, quantities, prices, expiry hints
+- [ ] Auto-add identified items to inventory (Grocy/Mealie)
+- [ ] Match purchased items to shopping list, mark as complete
+
+#### Label Printing Integration
+- [ ] Generate labels for identified items
+- [ ] Include: item name, purchase date, expiry date, storage location
+- [ ] Print via ESPHome label printer or network printer
+- [ ] QR codes linking to inventory entry
+
+#### Automatic Inventory Depletion
+- [ ] Track expiry dates from receipts/packaging
+- [ ] AI estimates expiry for items without dates (e.g., produce)
+- [ ] Notifications before items expire
+- [ ] Suggest recipes that use soon-to-expire ingredients first
+- [ ] **Auto-remove expired items from inventory**
+- [ ] **Auto-deduct ingredients when used in cooks**
+- [ ] Track partial usage (e.g., used half the onions)
+- [ ] Link cook sessions to ingredient consumption
+
+#### Inventory Removal Triggers
+| Trigger | Action |
+|---------|--------|
+| Item expires | Auto-remove from inventory, log as waste |
+| Item used in cook | Deduct quantity, link to recipe/cook session |
+| Item marked spoiled | Remove, log as waste, update expiry estimates |
+| Item manually consumed | Deduct via UI or voice command |
+
+#### Inventory Flow
+```
+Groceries arrive → Photo on kitchen table → AI identifies items
+       ↓
+Receipt scanned → Prices/expiry extracted → Label printed
+       ↓
+Items added to Grocy/Mealie inventory → Expiry tracked
+       ↓
+┌─────────────────────────────────────────────────────┐
+│                 ITEM LIFECYCLE                       │
+├─────────────────────────────────────────────────────┤
+│ Approaching expiry → Notification + recipe suggest  │
+│ Used in cook → Auto-deduct from inventory           │
+│ Expired → Auto-remove + log as waste                │
+│ Spoiled early → Manual remove + adjust AI estimates │
+└─────────────────────────────────────────────────────┘
+```
+
+### Smart Recipe Suggestions
+- [ ] Filter by cuisine type, dietary needs, cooking skill level
+- [ ] Match recipes to available equipment (oven, grill, sous vide, etc.)
+- [ ] Consider prep time + cooking time constraints
+- [ ] Account for multi-dish meal coordination
+
+### Dynamic Task Generation
+- [ ] Generate prep todo-list in Lovelace
+- [ ] Create cooking step-by-step instructions
+- [ ] Time-synchronized prompts ("start rice now, it'll be ready when fish is done")
+- [ ] Assign tasks to helpers when available
+
+### Shopping List Generation
+- [ ] Auto-generate shopping list for missing ingredients
+- [ ] Split list by store sections (produce, meat, dairy)
+- [ ] Share shopping list with guests/helpers
+- [ ] Track what's been purchased
+
+### Example Workflow
+```
+User: "Seafood dinner for 6, 2h prep, friends can shop and help cook 1h"
+     ↓
+AI: Analyzes inventory, suggests 3 recipes:
+    1. Grilled Salmon with Roasted Vegetables
+    2. Shrimp Scampi with Garlic Bread
+    3. Seafood Paella
+     ↓
+User: Picks "Seafood Paella"
+     ↓
+System generates:
+    • Prep todo-list for user (2h before guests arrive)
+    • Shopping list for friends (shared via HA app)
+    • Cooking instructions for when friends arrive (1h)
+    • MEATER probe target temps for proteins
+    • Timing coordination for all components
+```
+
+---
+
+## Open Source AI Cooking Projects
+
+### 1. RecipeLLM 🌟 (RECOMMENDED - Integrates with Mealie)
+
+**Repository:** [`wsargent/recipellm`](https://github.com/wsargent/recipellm)  
+**Description:** AI Agent that walks you through cooking recipes
+
+**Features:**
+- Integrates directly with **Mealie** (recipe manager)
+- Uses **Letta** (formerly MemGPT) for AI memory
+- **ntfy** for notifications
+- Step-by-step recipe guidance
+- Docker deployment
+
+**Why RecipeLLM:**
+- Already combines Mealie + AI + Notifications
+- Designed for Home Assistant-style workflows
+- Open source and self-hosted
+
+---
+
+### 2. Chefmate AI
+
+**Repository:** [`ThakkarVidhi/chefmate-ai`](https://github.com/ThakkarVidhi/chefmate-ai)  
+**Description:** AI cooking assistant with RAG and local LLM
+
+**Features:**
+- Retrieval-Augmented Generation (RAG) for recipes
+- Local LLM (Mistral 7B) - no cloud needed
+- Semantic search with MiniLM embeddings
+- FAISS vector database for recipe retrieval
+- Dietary filter support
+- Chat interface for queries
+
+**Why Chefmate:**
+- Fully local/private - no external APIs
+- Can query "what can I make with X ingredients"
+- Conversational interface
+
+---
+
+### 3. Home Assistant Cooking Proof of Concept
+
+**Source:** [HA Community Thread](https://community.home-assistant.io/t/cooking-with-home-assistant-proof-of-concept/815041)
+
+**Features:**
+- Recipe storage and retrieval via HA
+- Set current dinner
+- List ingredients
+- Step-by-step instructions
+- Avoids AI hallucination by using stored recipes
+
+---
+
+## Open Source Inventory & Receipt Tools
+
+### 1. Grocy 🌟 (RECOMMENDED for Inventory)
+
+**Website:** [grocy.info](https://grocy.info/)  
+**Description:** ERP beyond your fridge - self-hosted groceries & household management
+
+**Features:**
+- Stock/inventory tracking with expiry dates
+- Barcode scanning for quick entry
+- Recipe management with ingredient consumption
+- **Auto-consume ingredients when cooking recipes**
+- Shopping list generation
+- Chores and tasks management
+- REST API for integration
+- Home Assistant integration available
+
+**Why Grocy:**
+- Mature, well-maintained project
+- Built-in recipe → inventory consumption
+- Tracks expiry and sends notifications
+- Perfect for the "use in cooks" requirement
+
+---
+
+### 2. Receipt Wrangler
+
+**Website:** [receiptwrangler.io](https://receiptwrangler.io/)  
+**Description:** Open-source receipt management with AI extraction
+
+**Features:**
+- OCR scanning of receipts
+- AI extraction of line items, prices, dates
+- Email integration for digital receipts
+- Self-hosted, privacy-focused
+- API for integration
+
+**Use Case:** Scan grocery receipts → extract items → add to Grocy inventory
+
+---
+
+### 3. Receipt-OCR
+
+**Repository:** [`bhimrazy/receipt-ocr`](https://github.com/bhimrazy/receipt-ocr)  
+**Description:** Efficient OCR engine for receipt image processing
+
+**Features:**
+- Tesseract OCR + AI models (OpenAI/Gemini/Groq)
+- FastAPI web service
+- Docker deployment
+- Batch processing
+- Structured data extraction (items, prices, dates)
+
+---
+
+### 4. Open Food Facts
+
+**Website:** [openfoodfacts.org](https://openfoodfacts.org/)  
+**Description:** Free, open database of food products
+
+**Features:**
+- Barcode → product info lookup
+- Nutritional information
+- Allergens and ingredients
+- API for integration
+
+**Use Case:** Scan barcode → get product details → add to inventory with full info
+
+---
+
 ## System Architecture
 
-### Temperature Data Layer
+### Complete Integrated System
 ```
-MEATER+ Probe → BLE → ESP32/HA Bluetooth → Home Assistant Sensors
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           KITCHEN MANAGEMENT SYSTEM                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐       │
+│  │   MEATER+ Probe │     │  Kitchen Camera │     │ Receipt Scanner │       │
+│  │   (Temperature) │     │ (Grocery Photos)│     │    (OCR/AI)     │       │
+│  └────────┬────────┘     └────────┬────────┘     └────────┬────────┘       │
+│           │                       │                       │                 │
+│           ▼                       ▼                       ▼                 │
+│  ┌─────────────────────────────────────────────────────────────────┐       │
+│  │                      HOME ASSISTANT                              │       │
+│  │  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────────┐  │       │
+│  │  │ Temperature │  │   AI/LLM    │  │    Grocy Integration    │  │       │
+│  │  │   Sensors   │  │   Layer     │  │      (Inventory)        │  │       │
+│  │  └─────────────┘  └─────────────┘  └─────────────────────────┘  │       │
+│  │         │                │                      │                │       │
+│  │         ▼                ▼                      ▼                │       │
+│  │  ┌─────────────────────────────────────────────────────────┐    │       │
+│  │  │              LOVELACE DASHBOARD                          │    │       │
+│  │  │  • Cook progress      • Inventory status                 │    │       │
+│  │  │  • Recipe steps       • Shopping lists                   │    │       │
+│  │  │  • Todo lists         • Expiry warnings                  │    │       │
+│  │  │  • Notifications      • AI meal suggestions              │    │       │
+│  │  └─────────────────────────────────────────────────────────┘    │       │
+│  └─────────────────────────────────────────────────────────────────┘       │
+│           │                       │                       │                 │
+│           ▼                       ▼                       ▼                 │
+│  ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐       │
+│  │   Grill Buddy   │     │     Mealie      │     │      Grocy      │       │
+│  │ (Cook Management│     │ (Recipe Database│     │   (Inventory)   │       │
+│  │   + Temps)      │     │  + Meal Plans)  │     │                 │       │
+│  └─────────────────┘     └─────────────────┘     └─────────────────┘       │
+│                                   │                       │                 │
+│                                   └───────────┬───────────┘                 │
+│                                               ▼                             │
+│                                  ┌─────────────────────┐                   │
+│                                  │   COOK A RECIPE     │                   │
+│                                  │   → Ingredients     │                   │
+│                                  │     auto-deducted   │                   │
+│                                  │     from inventory  │                   │
+│                                  └─────────────────────┘                   │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Cooking Management Layer
+### Data Flow: Grocery → Cook → Depletion
 ```
-Home Assistant → Grill Buddy (or custom integration) → Notifications
-                                                     → Dashboard
-                                                     → Automations
-```
+1. GROCERY INTAKE
+   Groceries arrive → Photo/Receipt → AI identifies → Added to Grocy
+                                                    → Labels printed
+                                                    → Expiry tracked
 
-### Recipe & Ingredient Layer
-```
-Mealie/Tandoor ← API → Home Assistant → Lovelace Dashboard
-      ↓
-Recipe Database
-Meal Planning
-Shopping Lists
-Ingredient Photos
+2. MEAL PLANNING
+   User asks AI → "Seafood dinner for 6"
+   AI checks Grocy → Suggests recipes using available ingredients
+   User picks recipe → Todo list generated → Shopping list for missing items
+
+3. COOKING
+   Recipe started → Step-by-step in Lovelace
+   MEATER+ monitors temps → Alerts when done
+   Recipe completed → Ingredients auto-deducted from Grocy
+
+4. LIFECYCLE MANAGEMENT
+   Items approaching expiry → AI suggests recipes to use them
+   Items expired → Auto-removed from inventory
+   Items used in cook → Auto-deducted from inventory
 ```
 
 ---
