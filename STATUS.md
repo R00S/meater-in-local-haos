@@ -1,107 +1,85 @@
-# Project Status - MEATER BLE Proxy Development
+# Project Status - Kitchen Cooking Engine
 
 **Last Updated:** 2025-11-30
 
-## Current Implementation
+## Project Direction
 
-This project is in active development with the goal of creating an ESP32-based BLE proxy for MEATER temperature probes.
+This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen Cooking Engine** - a local-first, AI-assisted cooking system for Home Assistant.
 
-> **📊 New Research Available:** MEATER Block protocol analysis has reached an impasse. See [Alternative Temperature Probes Research](docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md) for exploration of alternative approaches including other BLE probes (iGrill, Inkbird) and open-source BBQ monitoring projects.
+## ✅ Current Status
 
-### ✅ What's Working
+### Working Now
+- **MEATER+ BLE Client**: ESP32 connects to real MEATER+ probe and reads temperature data
+- **Home Assistant Integration**: Tip temp, ambient temp, battery level, RSSI exposed as sensors
+- **No Cloud Required**: All data stays local via ESPHome
 
-- **BLE Server Implementation**: ESP32 successfully initializes and runs a BLE GATT server
-- **BLE Advertising**: Device advertises as "MEATER" with proper service UUIDs
-- **GATT Services**: All MEATER services and characteristics are properly configured
-- **Home Assistant Integration**: Mock temperature and battery data exposed to Home Assistant
-- **Bluedroid Stack**: Stable operation using ESP-IDF Bluedroid BLE stack
-- **OTA Updates**: Over-the-air firmware updates functional
-- **WiFi Connectivity**: Reliable WiFi connection with fallback AP
+### Documented & Planned
+- **Terms of Reference**: Complete project specification in `docs/TERMS_OF_REFERENCE.md`
+- **Feature Requirements**: Detailed specs in `docs/FEATURE_REQUIREMENTS.md`
+- **Use Cases**: 12 real-world scenarios in `docs/USE_CASES.md`
+- **Temperature Research**: Protein tables, doneness levels, cooking methods
 
-### ❌ Current Issues
+## 🎯 Phase 1 Goals
 
-- **App Connection Failure**: MEATER mobile app can discover and add the device, but cannot establish a stable connection afterward
-- **BLE Client Disabled**: BLE client functionality (connection to real MEATER probe) is currently commented out due to memory constraints needed for BLE server debugging
-- **No Real Data**: Currently using mock data instead of actual probe readings
+Build a smart cooking engine that:
+1. **Uses MEATER hardware without cloud** ✅ (working)
+2. **Reproduces MEATER's cooking algorithm locally** (planned)
+3. **Supports multiple cuts and cooking styles** (documented)
+4. **Provides dynamic ETA predictions** (planned)
+5. **Includes resting-phase forecasts** (planned)
+6. **Shows graphs and notifications** (planned)
+7. **Integrates with recipes (Mealie) and inventory (Grocy)** (planned)
+8. **Offers AI-powered meal planning** (planned)
 
-### 🔬 Approaches Tried and Ruled Out
+## 📁 Repository Structure
 
-#### UDP Broadcasting (Ruled Out)
-- **Attempt**: Implemented UDP broadcast on port 7878 to emulate MEATER Block WiFi functionality
-- **Finding**: MEATER app requires both UDP discovery AND HTTP server component
-- **Reason Ruled Out**: HTTP server implementation adds significant complexity and the BLE-only approach is closer to the actual MEATER probe behavior
-- **Status**: Code remains in repository for reference but is not part of current development focus
+```
+├── meater.yaml                 # Working BLE client config
+├── secrets.yaml.example        # Credentials template
+├── docs/                       # Project documentation
+│   ├── TERMS_OF_REFERENCE.md   # Full project spec
+│   ├── FEATURE_REQUIREMENTS.md # Detailed features
+│   ├── USE_CASES.md            # 12 scenarios
+│   └── ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md
+├── meater_app/                 # Decompiled MEATER app (for research)
+├── halted-ble-server-dev/      # [ON HOLD] BLE server emulation
+└── halted-udp-server-dev/      # [ON HOLD] UDP/MEATER Link protocol
+```
 
-#### NimBLE on ESP32-C6 (Ruled Out - For Now)
-- **Attempt**: Use ESP32-C6 with NimBLE stack for better BLE performance
-- **Finding**: ESPHome's NimBLE support for ESP32-C6 is not mature enough yet
-- **Issues**: Compilation errors, unstable operation, missing features
-- **Reason Ruled Out**: Current ESPHome/ESP-IDF toolchain for C6 has issues, Bluedroid on C3 is more stable
-- **Status**: May revisit when ESPHome C6 support improves
+## 🔬 Halted Development Paths
 
-#### MEATER Block Protocol Analysis (On Hold - 2025-11-30)
-- **Attempt**: Reverse engineer the MEATER Block BLE protocol to emulate it on ESP32
-- **Finding**: Protocol is complex with proprietary authentication handshakes
-- **Issues**: App can discover and add device but fails to establish stable connection
-- **Reason On Hold**: Running out of ideas for protocol analysis; exploring alternative paths
-- **Status**: See [Alternative Research](docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md) for other approaches
+### BLE Server Emulation (ON HOLD - Promising with Block) 🟡
+- **Goal**: Make ESP32 appear as a MEATER probe to the official app
+- **Status**: Could advertise but couldn't maintain stable connection
+- **Resumption**: **Likely possible** with a MEATER Block available for BLE sniffing
+- **Files**: Moved to `halted-ble-server-dev/`
 
-### 🎯 Current Development Focus
+### UDP/MEATER Link Protocol (ON HOLD - Hard) 🔴
+- **Goal**: Emulate a MEATER Block on LAN
+- **Status**: Protocol is complex (protobuf-based, 30+ message types)
+- **Resumption**: **Difficult** - weeks/months of effort, uncertain outcome
+- **Files**: Moved to `halted-udp-server-dev/`
 
-**Goal**: Get BLE server working so MEATER app can connect and read data
+## 🚀 Next Steps
 
-**Hardware**: ESP32-C3-DevKitM-1 with 4MB flash
-**BLE Stack**: Bluedroid (ESP-IDF)
-**Mode**: BLE Server only (client temporarily disabled)
+1. **Implement local cooking algorithm** using MEATER data in Home Assistant
+2. **Evaluate Grill Buddy** for temperature-based cooking management
+3. **Set up Mealie** for recipe integration
+4. **Build Lovelace dashboard** for unified cooking UI
+5. **Add AI meal planning** (natural language → recipe suggestions)
 
-**Current Task**: Debug why MEATER app disconnects after initially adding the device
+## 📚 Documentation
 
-**Known Issues to Investigate**:
-1. BLE connection parameters may not match app expectations
-2. Characteristic read/write/notify behavior might need adjustment  
-3. Pairing/bonding process may be incomplete
-4. Device appearance or other GAP parameters might be incorrect
+| Document | Description |
+|----------|-------------|
+| [Terms of Reference](docs/TERMS_OF_REFERENCE.md) | Complete project specification |
+| [Feature Requirements](docs/FEATURE_REQUIREMENTS.md) | Detailed feature specs |
+| [Use Cases](docs/USE_CASES.md) | 12 real-world scenarios |
+| [Temperature Research](docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md) | Probes, temps, methods |
 
-### 📋 Future Plans
+## 🔗 Key Resources
 
-1. **Evaluate alternative approaches** (NEW)
-   - Consider pivoting to iGrill with `esphome-igrill` (proven working solution)
-   - Study `esphome-igrill` implementation for BLE client best practices
-   - Consider BLE client-only mode with Home Assistant + Grill Buddy for app experience
-   - See [Alternative Research](docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md) for details
-
-2. **Make the BLE server work** (On Hold)
-   - Perform extremely thorough examination of decompiled app to understand how BLE connection really works
-   - Fix connection issues so MEATER app can successfully connect
-
-3. **Re-add the BLE client** - Restore client functionality to connect to real MEATER probe
-
-### 🛠️ Technical Details
-
-**Current Hardware**: ESP32-C3-DevKitM-1 (4MB flash, 400KB RAM)
-
-**BLE Configuration**:
-- Framework: ESP-IDF
-- Stack: Bluedroid (not NimBLE)
-- Mode: Server only (client disabled for debugging)
-- Services: MEATER Service (temperature, battery), Device Info Service
-
-**Memory Usage**:
-- Running BLE server requires most available RAM
-- Client currently disabled to free memory for server debugging
-- Will need optimization to run both client and server simultaneously
-
-### 📚 Reference Documentation
-
-For detailed technical information, see:
-- `BLE_ADVERTISING_STATUS.md` - BLE advertising implementation details
-- `IMPLEMENTATION_NOTES.md` - Implementation history and notes
-- `docs/DEVELOPMENT_SESSION_SUMMARY.md` - Detailed protocol investigation findings
-- `docs/BLE_PAIRING_FLOW_FROM_CODE.md` - BLE pairing process analysis
-- `docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md` - **NEW:** Alternative approaches and open-source projects
-
-### 🔗 Useful Resources
-
-- MEATER BLE Protocol: https://github.com/nathanfaber/meaterble
-- ESP32 BLE Documentation: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/bluetooth/index.html
-- ESPHome ESP32 Documentation: https://esphome.io/components/esp32.html
+- **Grill Buddy**: https://github.com/jeroenterheerdt/grillbuddy
+- **Mealie**: https://github.com/mealie-recipes/mealie
+- **Grocy**: https://github.com/grocy/grocy
+- **MEATER BLE Protocol**: https://github.com/nathanfaber/meaterble
