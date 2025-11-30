@@ -1,10 +1,12 @@
 # Project Status - MEATER BLE Proxy Development
 
-**Last Updated:** 2025-11-21
+**Last Updated:** 2025-11-30
 
 ## Current Implementation
 
 This project is in active development with the goal of creating an ESP32-based BLE proxy for MEATER temperature probes.
+
+> **📊 New Research Available:** MEATER Block protocol analysis has reached an impasse. See [Alternative Temperature Probes Research](docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md) for exploration of alternative approaches including other BLE probes (iGrill, Inkbird) and open-source BBQ monitoring projects.
 
 ### ✅ What's Working
 
@@ -37,6 +39,13 @@ This project is in active development with the goal of creating an ESP32-based B
 - **Reason Ruled Out**: Current ESPHome/ESP-IDF toolchain for C6 has issues, Bluedroid on C3 is more stable
 - **Status**: May revisit when ESPHome C6 support improves
 
+#### MEATER Block Protocol Analysis (On Hold - 2025-11-30)
+- **Attempt**: Reverse engineer the MEATER Block BLE protocol to emulate it on ESP32
+- **Finding**: Protocol is complex with proprietary authentication handshakes
+- **Issues**: App can discover and add device but fails to establish stable connection
+- **Reason On Hold**: Running out of ideas for protocol analysis; exploring alternative paths
+- **Status**: See [Alternative Research](docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md) for other approaches
+
 ### 🎯 Current Development Focus
 
 **Goal**: Get BLE server working so MEATER app can connect and read data
@@ -55,10 +64,17 @@ This project is in active development with the goal of creating an ESP32-based B
 
 ### 📋 Future Plans
 
-1. **Make the BLE server work**
+1. **Evaluate alternative approaches** (NEW)
+   - Consider pivoting to iGrill with `esphome-igrill` (proven working solution)
+   - Study `esphome-igrill` implementation for BLE client best practices
+   - Consider BLE client-only mode with Home Assistant + Grill Buddy for app experience
+   - See [Alternative Research](docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md) for details
+
+2. **Make the BLE server work** (On Hold)
    - Perform extremely thorough examination of decompiled app to understand how BLE connection really works
    - Fix connection issues so MEATER app can successfully connect
-2. **Re-add the BLE client** - Restore client functionality to connect to real MEATER probe
+
+3. **Re-add the BLE client** - Restore client functionality to connect to real MEATER probe
 
 ### 🛠️ Technical Details
 
@@ -82,6 +98,7 @@ For detailed technical information, see:
 - `IMPLEMENTATION_NOTES.md` - Implementation history and notes
 - `docs/DEVELOPMENT_SESSION_SUMMARY.md` - Detailed protocol investigation findings
 - `docs/BLE_PAIRING_FLOW_FROM_CODE.md` - BLE pairing process analysis
+- `docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md` - **NEW:** Alternative approaches and open-source projects
 
 ### 🔗 Useful Resources
 
