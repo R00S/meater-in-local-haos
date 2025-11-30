@@ -201,29 +201,113 @@ These projects provide temperature monitoring without needing to reverse-enginee
 
 ---
 
-## Part 3: Home Assistant Native Integrations
+## Part 3: Cooking Management & Guided Cook Functionality
 
-### 1. Grill Buddy for Home Assistant
+This section specifically addresses the MEATER app's guided cook functionality and alternatives that provide similar features for setting up cooks with different cooking methods and doneness levels.
 
-**GitHub:** https://github.com/jeroenterheerdt/grillbuddy  
-**Type:** Custom Home Assistant Integration
+### What the MEATER App Provides
 
-**Features:**
-- Works with **any temperature probe** connected to Home Assistant
-- Provides cooking management features
-- Tracks internal temperature targets for different meats
-- Not tied to any specific hardware
+The MEATER app offers comprehensive guided cooking with:
 
-**Topics:** `barbecue`, `bbq`, `grill`, `homeassistant`, `internal-temperature`, `meat`, `probe`, `protein`, `sensor`, `smoker`
-
-**Why This Matters:** Instead of emulating the MEATER app, we could:
-1. Connect ESP32 to MEATER probe (BLE client only)
-2. Expose temperatures to Home Assistant
-3. Use Grill Buddy for the "app experience" in Home Assistant
+| Feature | Description |
+|---------|-------------|
+| **Meat Selection** | Beef (steak cuts, roasts), Pork (chops, roasts), Chicken (whole, breast, thigh), Fish, Lamb, Game |
+| **Cut Selection** | Specific cuts within each meat type (ribeye, sirloin, brisket, pork butt, etc.) |
+| **Doneness Levels** | Rare, Medium-Rare, Medium, Medium-Well, Well-Done (varies by meat type for food safety) |
+| **Cooking Methods** | Oven, Grill, Smoker, Sous-vide, Pan-sear |
+| **Cook Time Estimation** | Predicts when meat will reach target temperature |
+| **Rest Time Calculation** | Accounts for carryover cooking during rest |
+| **Step-by-Step Guidance** | Real-time instructions during the cook |
+| **Master Class Recipes** | Expert-driven cooking tutorials |
 
 ---
 
-### 2. Native Inkbird Integration
+### Grill Buddy for Home Assistant 🌟 (Best Alternative for Guided Cooks)
+
+**GitHub:** https://github.com/jeroenterheerdt/grillbuddy  
+**Type:** Custom Home Assistant Integration (HACS)
+
+**Key Features Matching MEATER App:**
+
+| MEATER Feature | Grill Buddy Equivalent |
+|----------------|----------------------|
+| Meat & Doneness Presets | ✅ Protein presets (beef, pork, fish) with doneness levels (rare, medium, well-done) |
+| Target Temperature | ✅ Set specific target temperature per probe |
+| Cook Time Estimation | ✅ "Time to target" prediction with countdown |
+| Goal Reached Notification | ✅ Status changes from "goal_not_reached" to "goal_reached" |
+| Temperature Range Monitoring | ✅ Monitor within specific ranges |
+| Out-of-Range Alerts | ✅ Notifications when temp falls outside limits |
+| Multiple Probes | ✅ Supports multiple probe sensors |
+
+**Presets Available:**
+- **Proteins:** Beef, Pork, Fish, and more
+- **Doneness:** Rare, Medium, Well-Done
+- **Planned additions:** Hot smoke (52-80°C), Cold smoke (20-30°C), BBQ smoke (102-110°C)
+
+**Setup with Any Probe:**
+```yaml
+# Example automation for goal reached
+alias: Grill Buddy Steak Done
+trigger:
+  - platform: state
+    entity_id: sensor.grill_buddy_steak
+    attribute: Status
+    from: goal_not_reached
+    to: goal_reached
+action:
+  - service: notify.mobile_app
+    data:
+      message: "Your steak is ready!"
+```
+
+**Installation:**
+1. Install via HACS (search "Grill Buddy")
+2. Add integration in Home Assistant
+3. Configure probes via sidebar panel
+4. Select protein type and doneness
+5. Build automations for notifications
+
+---
+
+### Comparison: MEATER App vs Grill Buddy
+
+| Feature | MEATER App | Grill Buddy |
+|---------|------------|-------------|
+| Meat type selection | ✅ Extensive | ✅ Good (beef, pork, fish) |
+| Specific cut selection | ✅ Yes | ❌ Not yet |
+| Doneness levels | ✅ 5 levels | ✅ 3 levels (rare, medium, well) |
+| Cooking method selection | ✅ Oven/Grill/Smoker | ❌ Not applicable |
+| Time estimation | ✅ Yes | ✅ Yes ("Time to target") |
+| Rest time calculation | ✅ Yes | ❌ Not yet |
+| Step-by-step guidance | ✅ Yes | ❌ Not yet |
+| Multiple probes | ✅ With MEATER Block | ✅ Yes |
+| Works with any probe | ❌ MEATER only | ✅ Any HA sensor |
+| Notifications | ✅ Push | ✅ Via HA automations |
+| History/logging | ✅ In-app | ✅ Via HA history |
+| Price | Included with probe | Free (open source) |
+
+**Key Insight:** Grill Buddy provides ~80% of MEATER app functionality and works with ANY temperature probe connected to Home Assistant, including MEATER probes if connected via BLE client.
+
+---
+
+### Other Home Assistant Integrations
+
+#### Native MEATER Integration
+
+Home Assistant has a native MEATER integration that works with MEATER Cloud:
+
+**Documentation:** https://www.home-assistant.io/integrations/meater/
+
+**Features:**
+- Track internal and ambient temperatures
+- Works via MEATER Cloud account
+- Can be combined with Grill Buddy for guided cooks
+
+**Limitation:** Requires MEATER Cloud connectivity (not local-only)
+
+---
+
+#### Native Inkbird Integration
 
 Home Assistant has a native `inkbird` integration that works with supported Inkbird devices.
 
@@ -272,18 +356,27 @@ Home Assistant has a native `inkbird` integration that works with supported Inkb
 **Approach:** 
 1. Keep ESP32 as BLE client to MEATER probe only
 2. Expose temperatures to Home Assistant via ESPHome API
-3. Use Grill Buddy or custom HA dashboard for the "app experience"
+3. Use **Grill Buddy** for guided cook functionality (see Part 3)
 4. Accept that MEATER phone app won't work with this setup
+
+**Guided Cook Features with Grill Buddy:**
+- Select protein type (beef, pork, fish) and doneness (rare, medium, well-done)
+- Set target temperatures per probe
+- Get "time to target" predictions
+- Receive notifications when goal is reached
+- Monitor temperature ranges and get out-of-range alerts
 
 **Pros:**
 - Simpler architecture (no BLE server)
 - BLE client connection to MEATER probes is proven to work
-- Home Assistant provides similar features to MEATER app
-- Grill Buddy adds cooking management features
+- **Grill Buddy provides ~80% of MEATER app cooking features**
+- Works with any temperature probe in Home Assistant
+- Open source and customizable
 
 **Cons:**
 - MEATER app still doesn't work
 - Users need Home Assistant
+- Missing: specific cut selection, rest time calculation, step-by-step guidance
 
 **Estimated Effort:** Medium (weeks)
 
