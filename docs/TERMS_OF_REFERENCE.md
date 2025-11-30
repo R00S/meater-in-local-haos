@@ -107,15 +107,29 @@ System interprets:
 - Ingredient availability
 - Gear availability
 - Guest count
-- Time windows
+- **Multiple time blocks** (solo prep vs helper time vs serving)
 - Cooking methods
 
+**Multi-Phase Timeline Support:**
+
+The system must understand distinct time windows:
+| Phase | Example | Description |
+|-------|---------|-------------|
+| Solo prep | "I have 2h before guests arrive" | Tasks user does alone |
+| Helper time | "Friends can help cook for 1h" | Tasks with assistance |
+| Serving time | "Dinner at 7pm" | When food should be ready |
+
+The planner assigns tasks to appropriate phases:
+- Complex prep (marinating, chopping) → Solo prep phase
+- Simple tasks, multiple dishes → Helper phase
+- Final plating, resting → Just before serving
+
 Returns 3 recipe/menu options with:
-- Steps
+- Steps assigned to each time phase
 - Required ingredients (mark what is already available)
-- What to buy
+- What to buy (shopping list for friends if needed)
 - Equipment list
-- Time plan (prep now, prep with helpers, serving time)
+- Timeline showing prep → helper → serve phases
 
 #### Cook Session
 
@@ -125,6 +139,7 @@ A structured "cooking event" with:
 - Attached grocery photo(s)
 - Guests & servings
 - Start time & time limits
+- **Phase timeline** (solo prep, helper, serve)
 - Step-by-step cooking instructions
 - Optional temperature probe integration
 
@@ -308,11 +323,18 @@ The system will use:
 
 1. **Local-first** – No cloud dependence required
 2. **Low user workload** – Don't push users through heavy data entry
+   - **Never require barcodes or excessive manual entry**
+   - Inventory and gear are **progressively improved, not enforced**
+   - System works with incomplete data and gets better over time
 3. **"Good enough" ingredient accuracy** – Perfect pantry tracking is not required
-4. **Flexible & expandable** – All features should be modular
-5. **Kitchen-first** – Not grill-oriented; supports everyday indoor cooking
-6. **Human interaction first** – Natural language conversation and intuitive UI
-7. **Start simple, grow over time** – Phase 1 builds the foundation
+4. **Inspiration over strict filtering** – Inventory is used to:
+   - **Bias AI toward recipes that use up what you have**
+   - **Generate ideas** ("what could I make tonight?"), not just narrow matching
+   - Suggest creative combinations, not just exact matches
+5. **Flexible & expandable** – All features should be modular
+6. **Kitchen-first** – Not grill-oriented; supports everyday indoor cooking
+7. **Human interaction first** – Natural language conversation and intuitive UI
+8. **Start simple, grow over time** – Phase 1 builds the foundation
 8. **Open source preference** – Use existing open source tools where possible
 
 ---
