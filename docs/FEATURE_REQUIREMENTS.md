@@ -144,12 +144,12 @@ These categories require:
 
 **Two inputs only:**
 1. **Receipt photo/scan** → OCR extracts items, quantities, prices, expiry hints
-2. **One photo of all groceries** on kitchen table → AI vision identifies items
+2. **One photo of all groceries** on kitchen table → AI identifies items and matches them to receipt
 
 - [ ] Receipt OCR to extract items, quantities, prices
 - [ ] Single photo of groceries on table for AI identification
-- [ ] Cross-reference receipt + photo for accuracy
-- [ ] Auto-add identified items to inventory (Grocy/Mealie)
+- [ ] AI matches visible items to receipt line items for verification
+- [ ] Auto-add verified items to inventory (Grocy/Mealie)
 - [ ] Match purchased items to shopping list, mark as complete
 
 #### Label Printing Integration (Optional)

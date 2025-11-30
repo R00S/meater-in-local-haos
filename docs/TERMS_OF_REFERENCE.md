@@ -415,9 +415,9 @@ To be added after Phase 1:
 
 **Low-effort grocery intake** (no barcode scanning required):
 1. **Receipt photo/scan** → OCR extracts items, quantities, prices, expiry hints
-2. **One photo of all groceries** on kitchen table → AI vision identifies items
+2. **One photo of all groceries** on kitchen table → AI identifies items and matches them to receipt
 
-- Cross-reference receipt + photo for accuracy
+- AI matches visible items to receipt line items for verification
 - Auto-add identified items to inventory (Grocy)
 - Label printing with QR codes (optional)
 
