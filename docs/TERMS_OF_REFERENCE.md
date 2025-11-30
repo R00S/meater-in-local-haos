@@ -56,7 +56,24 @@ The system should then:
 
 ## 3. Scope (Phase 1 – Core System)
 
-### 3.1 Functional Scope
+### 3.1 Core Requirement: Local MEATER Cooking Algorithm
+
+**This is a foundational requirement for Phase 1:**
+
+Reproduce MEATER's full cooking algorithm locally, including:
+
+| Feature | Description |
+|---------|-------------|
+| **Tip temperature** | Internal meat temperature from probe tip |
+| **Ambient temperature** | Oven/grill/cooking environment temperature |
+| **Dynamic ETA** | Time-to-target prediction based on temperature curve |
+| **Resting phase** | Carryover cooking prediction (temp continues rising after removal) |
+| **Target by doneness** | Automatic target temp based on protein + cut + doneness level |
+| **Notifications** | Alerts at key moments (approaching target, remove now, rest complete) |
+
+The system must work with existing MEATER+ data already flowing into Home Assistant via ESPHome BLE proxy. No cloud connection required.
+
+### 3.2 Functional Scope
 
 The core system includes:
 
