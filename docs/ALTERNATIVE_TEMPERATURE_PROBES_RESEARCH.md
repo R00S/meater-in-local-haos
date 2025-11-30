@@ -26,7 +26,7 @@ The research identified several promising paths forward:
 - **Working ESPHome integration exists**: [`bendikwa/esphome-igrill`](https://github.com/bendikwa/esphome-igrill)
 - BLE protocol has been reverse-engineered and documented
 - Same single-connection limitation as MEATER can be bypassed with ESP32 proxy
-- 60+ GitHub stars, actively maintained
+- Actively maintained with regular updates
 
 **Supported Models:**
 - ✅ iGrill mini
@@ -79,7 +79,7 @@ This could serve as a reference for improving our MEATER implementation.
 - GitHub: https://github.com/satrik/esp32_ble_inkbird
 - ESP32 web server for Inkbird BBQ thermometers
 - Detects probes, shows battery, web interface
-- 8 stars, last updated 2025
+- Actively maintained
 
 #### b) `runningtoy/InkBird_BLE2MQTT`
 - ESP32 bridge from Inkbird BLE to MQTT
@@ -143,7 +143,7 @@ These projects provide temperature monitoring without needing to reverse-enginee
 
 ### 2. PiFire 🌟 (Highly Recommended)
 
-**GitHub:** https://github.com/nebhead/PiFire (122 stars)  
+**GitHub:** https://github.com/nebhead/PiFire  
 **Platform:** Raspberry Pi  
 **Language:** Python/JavaScript
 
@@ -160,7 +160,7 @@ These projects provide temperature monitoring without needing to reverse-enginee
 
 ### 3. PitmasterPi
 
-**GitHub:** https://github.com/justindean/PitmasterPi (75 stars)  
+**GitHub:** https://github.com/justindean/PitmasterPi  
 **Platform:** Raspberry Pi  
 **Language:** Python
 
@@ -205,7 +205,7 @@ These projects provide temperature monitoring without needing to reverse-enginee
 
 ### 1. Grill Buddy for Home Assistant
 
-**GitHub:** https://github.com/jeroenterheerdt/grillbuddy (23 stars)  
+**GitHub:** https://github.com/jeroenterheerdt/grillbuddy  
 **Type:** Custom Home Assistant Integration
 
 **Features:**
