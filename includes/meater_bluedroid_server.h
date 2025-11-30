@@ -11,6 +11,9 @@
 #include <esp_gatt_common_api.h>
 #include <esp_timer.h>
 #include <nvs_flash.h>
+#include <esp_system.h>
+#include <esp_efuse.h>
+#include <esp_mac.h>
 #include <string.h>
 
 // MEATER Probe Emulation using Bluedroid
@@ -220,6 +223,31 @@ private:
                 ESP_LOGI("meater_ble_server", "ESP_GAP_BLE_KEY_EVT");
                 break;
             
+            case ESP_GAP_BLE_UPDATE_CONN_PARAMS_EVT: {
+                // Connection parameters updated - this is normal during connection establishment
+                ESP_LOGI("meater_ble_server", "Connection parameters updated:");
+                ESP_LOGI("meater_ble_server", "  Status: %d", param->update_conn_params.status);
+                ESP_LOGI("meater_ble_server", "  Connection interval: %d", param->update_conn_params.conn_int);
+                ESP_LOGI("meater_ble_server", "  Latency: %d", param->update_conn_params.latency);
+                ESP_LOGI("meater_ble_server", "  Timeout: %d", param->update_conn_params.timeout);
+                break;
+            }
+            
+            case ESP_GAP_BLE_SET_PKT_LENGTH_COMPLETE_EVT: {
+                // Packet length setting completed - this is normal during connection establishment
+                ESP_LOGI("meater_ble_server", "Packet length update complete:");
+                ESP_LOGI("meater_ble_server", "  Status: %d", param->pkt_data_length_cmpl.status);
+                ESP_LOGI("meater_ble_server", "  RX length: %d", param->pkt_data_length_cmpl.params.rx_len);
+                ESP_LOGI("meater_ble_server", "  TX length: %d", param->pkt_data_length_cmpl.params.tx_len);
+                break;
+            }
+            
+            case ESP_GAP_BLE_CHANNEL_SELECT_ALGORITHM_EVT:
+                // Channel selection algorithm event - this is informational
+                ESP_LOGI("meater_ble_server", "Channel select algorithm: %d", 
+                         param->channel_sel_alg.channel_sel_alg);
+                break;
+            
             default:
                 ESP_LOGD("meater_ble_server", "Unhandled GAP event: %d", event);
                 break;
@@ -227,20 +255,29 @@ private:
     }
     
     void handle_gatts_event(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param) {
+        // REG_EVT is special - gatts_if is not valid yet, so handle it separately
+        if (event == ESP_GATTS_REG_EVT) {
+            ESP_LOGI("meater_ble_server", "GATTS app registered, app_id: %d", param->reg.app_id);
+            gatts_if_ = gatts_if;
+            
+            // Set device name
+            esp_ble_gap_set_device_name(MEATER_NAME);
+            
+            // Configure advertising data
+            configure_advertising();
+            
+            // Create services
+            create_services();
+            return;
+        }
+        
+        // For all other events, only handle if gatts_if matches our registered interface
+        if (gatts_if != ESP_GATT_IF_NONE && gatts_if != gatts_if_) {
+            ESP_LOGD("meater_ble_server", "Event %d for different gatts_if (%d vs %d), ignoring", event, gatts_if, gatts_if_);
+            return;
+        }
+        
         switch (event) {
-            case ESP_GATTS_REG_EVT:
-                ESP_LOGI("meater_ble_server", "GATTS app registered, app_id: %d", param->reg.app_id);
-                gatts_if_ = gatts_if;
-                
-                // Set device name
-                esp_ble_gap_set_device_name(MEATER_NAME);
-                
-                // Configure advertising data
-                configure_advertising();
-                
-                // Create services
-                create_services();
-                break;
                 
             case ESP_GATTS_CREATE_EVT:
                 ESP_LOGI("meater_ble_server", "Service created, handle: %d", param->create.service_handle);
@@ -257,11 +294,43 @@ private:
                 handle_descr_added(param);
                 break;
                 
-            case ESP_GATTS_CONNECT_EVT:
-                ESP_LOGI("meater_ble_server", "Client connected, conn_id: %d", param->connect.conn_id);
+            case ESP_GATTS_CONNECT_EVT: {
+                ESP_LOGI("meater_ble_server", "Client connected, conn_id: %d, remote_bda: %02x:%02x:%02x:%02x:%02x:%02x",
+                         param->connect.conn_id,
+                         param->connect.remote_bda[0], param->connect.remote_bda[1], param->connect.remote_bda[2],
+                         param->connect.remote_bda[3], param->connect.remote_bda[4], param->connect.remote_bda[5]);
                 conn_id_ = param->connect.conn_id;
                 connected_ = true;
+                
+                // Auto-enable notifications for temperature and battery
+                // Real MEATER probes enable notifications automatically without waiting for CCCD writes
+                temp_notify_enabled_ = true;
+                battery_notify_enabled_ = true;
+                ESP_LOGI("meater_ble_server", "Auto-enabled notifications for temperature and battery");
+                
+                // Send initial notifications immediately
+                // Real MEATER probes send temperature/battery data right after connection
+                // App expects immediate data to confirm device is working
+                if (temp_char_handle_ != 0) {
+                    esp_ble_gatts_send_indicate(gatts_if_, conn_id_, temp_char_handle_, 8, temp_data_, false);
+                    ESP_LOGI("meater_ble_server", "Sent initial temperature notification");
+                }
+                if (battery_char_handle_ != 0) {
+                    esp_ble_gatts_send_indicate(gatts_if_, conn_id_, battery_char_handle_, 2, battery_data_, false);
+                    ESP_LOGI("meater_ble_server", "Sent initial battery notification");
+                }
+                
+                // Update connection parameters for optimal performance
+                esp_ble_conn_update_params_t conn_params = {};
+                memcpy(conn_params.bda, param->connect.remote_bda, sizeof(esp_bd_addr_t));
+                conn_params.latency = 0;
+                conn_params.max_int = 0x20;  // 40ms
+                conn_params.min_int = 0x10;  // 20ms
+                conn_params.timeout = 400;    // 4000ms
+                esp_ble_gap_update_conn_params(&conn_params);
+                ESP_LOGI("meater_ble_server", "Requested connection parameter update");
                 break;
+            }
                 
             case ESP_GATTS_DISCONNECT_EVT:
                 ESP_LOGI("meater_ble_server", "Client disconnected");
@@ -294,7 +363,50 @@ private:
                 }
                 break;
                 
+            case ESP_GATTS_MTU_EVT:
+                ESP_LOGI("meater_ble_server", "MTU exchange complete, MTU: %d", param->mtu.mtu);
+                break;
+                
+            case ESP_GATTS_CONF_EVT:
+                // Confirmation event after indication/notification
+                ESP_LOGD("meater_ble_server", "Notification/indication confirmed, status: %d", param->conf.status);
+                break;
+                
+            case ESP_GATTS_OPEN_EVT:
+                ESP_LOGI("meater_ble_server", "GATT server open event, status: %d", param->open.status);
+                break;
+                
+            case ESP_GATTS_CLOSE_EVT:
+                ESP_LOGI("meater_ble_server", "GATT server close event, status: %d, conn_id: %d",
+                         param->close.status, param->close.conn_id);
+                break;
+                
+            case ESP_GATTS_LISTEN_EVT:
+                ESP_LOGI("meater_ble_server", "GATT server listen event");
+                break;
+                
+            case ESP_GATTS_EXEC_WRITE_EVT:
+                ESP_LOGI("meater_ble_server", "Execute write event, exec_write_flag: %d", 
+                         param->exec_write.exec_write_flag);
+                // Always send response for exec write
+                esp_ble_gatts_send_response(gatts_if_, param->exec_write.conn_id,
+                                            param->exec_write.trans_id, ESP_GATT_OK, nullptr);
+                break;
+                
+            case ESP_GATTS_RESPONSE_EVT:
+                ESP_LOGD("meater_ble_server", "Response event, status: %d, handle: %d",
+                         param->rsp.status, param->rsp.handle);
+                break;
+                
+            case ESP_GATTS_SET_ATTR_VAL_EVT:
+                // This event occurs when we call esp_ble_gatts_set_attr_value()
+                // It's normal and expected when updating characteristic values
+                ESP_LOGV("meater_ble_server", "Attribute value set, status: %d, attr_handle: %d",
+                         param->set_attr_val.status, param->set_attr_val.attr_handle);
+                break;
+                
             default:
+                ESP_LOGD("meater_ble_server", "Unhandled GATTS event: %d", event);
                 break;
         }
     }
@@ -745,6 +857,40 @@ public:
         memset(battery_data_, 0, sizeof(battery_data_));
         memset(config_data_, 0, sizeof(config_data_));
         
+        // CRITICAL FIX: Pre-populate temperature and battery with valid data
+        // App reads these characteristics immediately after connection
+        // If they're zero, app interprets as uninitialized probe and stops
+        // Decompiled code trace: DevicePairingFragment.java expects non-zero values
+        
+        // Initialize with realistic default values (room temperature)
+        // Format: tip_raw (2 bytes LE), ra (2 bytes LE), oa (2 bytes LE), unknown (2 bytes)
+        // Each value is little-endian 16-bit: accum + count*256
+        uint16_t default_tip = 576;   // 18°C * 32 = 576 (raw format from Temperature.java)
+        uint16_t default_ra = 48;     // ra coefficient (typical value)
+        uint16_t default_oa = 32;     // oa coefficient (typical value)
+        
+        // Tip temperature (bytes 0-1, little-endian)
+        temp_data_[0] = default_tip & 0xFF;
+        temp_data_[1] = (default_tip >> 8) & 0xFF;
+        
+        // ra coefficient (bytes 2-3, little-endian)
+        temp_data_[2] = default_ra & 0xFF;
+        temp_data_[3] = (default_ra >> 8) & 0xFF;
+        
+        // oa coefficient (bytes 4-5, little-endian)
+        temp_data_[4] = default_oa & 0xFF;
+        temp_data_[5] = (default_oa >> 8) & 0xFF;
+        
+        // Unknown/reserved (bytes 6-7)
+        temp_data_[6] = 0;
+        temp_data_[7] = 0;
+        
+        // Initialize battery to 90% (4+5)*10 = 90%
+        battery_data_[0] = 4;
+        battery_data_[1] = 5;
+        
+        ESP_LOGI("meater_ble_server", "✓ Initialized temp/battery with valid default values");
+        
         instance_ = this;
         ESP_LOGI("meater_ble_server", "Constructor complete - instance pointer set");
     }
@@ -762,6 +908,48 @@ public:
             return false;
         }
         ESP_LOGI("meater_ble_server", "✓ Bluedroid already enabled by esp32_ble_tracker");
+        
+        // ========== MAC ADDRESS SPOOFING ==========
+        // Spoof MAC address to use Apption Labs registered prefix (B8:1F:5E)
+        // This makes the device appear as legitimate MEATER hardware to the app
+        // The app validates MAC prefix to prevent counterfeit devices
+        
+        // Get ESP32 chip ID for generating unique MAC address (ESP-IDF way)
+        uint8_t base_mac[6];
+        esp_efuse_mac_get_default(base_mac);
+        uint64_t chip_id = ((uint64_t)base_mac[0] << 40) | ((uint64_t)base_mac[1] << 32) |
+                          ((uint64_t)base_mac[2] << 24) | ((uint64_t)base_mac[3] << 16) |
+                          ((uint64_t)base_mac[4] << 8) | (uint64_t)base_mac[5];
+        
+        // Create custom MAC with Apption Labs prefix B8:1F:5E
+        // Last 3 bytes derived from ESP32 chip ID to ensure uniqueness
+        esp_bd_addr_t custom_mac = {
+            0xB8, 0x1F, 0x5E,                    // Apption Labs registered OUI
+            (uint8_t)((chip_id >> 16) & 0xFF),   // Unique byte 1 from chip ID
+            (uint8_t)((chip_id >> 8) & 0xFF),    // Unique byte 2 from chip ID
+            (uint8_t)(chip_id & 0xFF)            // Unique byte 3 from chip ID
+        };
+        
+        // Log the original and spoofed MAC addresses
+        uint8_t original_mac[6];
+        esp_read_mac(original_mac, ESP_MAC_BT);
+        ESP_LOGI("meater_ble_server", "Original ESP32 BLE MAC: %02X:%02X:%02X:%02X:%02X:%02X",
+                 original_mac[0], original_mac[1], original_mac[2],
+                 original_mac[3], original_mac[4], original_mac[5]);
+        
+        ESP_LOGI("meater_ble_server", "Spoofing MAC to Apption Labs prefix: %02X:%02X:%02X:%02X:%02X:%02X",
+                 custom_mac[0], custom_mac[1], custom_mac[2],
+                 custom_mac[3], custom_mac[4], custom_mac[5]);
+        
+        // Set the custom random address for BLE advertising
+        ret = esp_ble_gap_set_rand_addr(custom_mac);
+        if (ret != ESP_OK) {
+            ESP_LOGE("meater_ble_server", "Failed to set custom MAC address: 0x%x", ret);
+            ESP_LOGW("meater_ble_server", "Continuing with original MAC - app may reject device");
+        } else {
+            ESP_LOGI("meater_ble_server", "✓ MAC address spoofed successfully - device should appear as real MEATER");
+        }
+        // ========== END MAC ADDRESS SPOOFING ==========
         
         // Register GAP callback
         ret = esp_ble_gap_register_callback(gap_event_handler);
