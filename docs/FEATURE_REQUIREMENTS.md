@@ -86,6 +86,44 @@ The system should then:
 
 ---
 
+## 🔮 Future Cooking Categories (Phase 2+)
+
+### 🥖 Baking
+- [ ] Bread baking with proofing temperature monitoring
+- [ ] Internal bread temperature for doneness
+- [ ] Oven temperature tracking and alerts
+- [ ] Timer integrations for bake times
+
+### 🥐 Pastries
+- [ ] Laminated dough temperature monitoring (butter layer temps)
+- [ ] Proofing environment control
+- [ ] Pastry cream and custard temperature targets
+- [ ] Choux pastry internal temperatures
+
+### 🧫 Fermentation
+- [ ] **Yogurt** - Temperature hold at 43-46°C (110-115°F) for 6-12 hours
+- [ ] **Sourdough** - Proofing temperature monitoring (24-27°C / 75-80°F)
+- [ ] **Kombucha** - Fermentation temperature (20-30°C / 68-86°F) over days/weeks
+- [ ] **Kefir, Kimchi, Sauerkraut** - Long-term fermentation tracking
+- [ ] Ambient environment monitoring
+- [ ] Multi-day/week tracking with notifications
+
+### 🍲 Slow Cooking
+- [ ] Extended cook time support (8-24+ hours)
+- [ ] Low temperature holds (90-95°C / 195-205°F)
+- [ ] Overnight cook safety monitoring
+- [ ] Power failure detection and alerts
+- [ ] Braising and stewing temperature curves
+
+### Integration Considerations
+These categories require:
+- Extended time tracking (hours to weeks vs minutes to hours)
+- Ambient/environment temperature monitoring (not just probe)
+- Different notification patterns (periodic check-ins vs goal alerts)
+- Historical tracking for fermentation batches
+
+---
+
 ## 🤖 AI-Powered Meal Planning Assistant
 
 ### Natural Language Meal Planning
