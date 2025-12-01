@@ -1,0 +1,106 @@
+start_cook:
+  name: Start Cook
+  description: Start a new cooking session with selected protein, cut, and doneness.
+  target:
+    entity:
+      domain: sensor
+      integration: kitchen_cooking_engine
+  fields:
+    cut_id:
+      name: Cut ID
+      description: The ID of the cut to cook (from cooking_data.py).
+      required: true
+      example: 100
+      selector:
+        number:
+          min: 1
+          max: 999
+          mode: box
+    doneness:
+      name: Doneness
+      description: The desired doneness level.
+      required: true
+      example: "medium_rare"
+      selector:
+        select:
+          options:
+            - "rare"
+            - "medium_rare"
+            - "medium"
+            - "medium_well"
+            - "well_done"
+            - "pulled"
+            - "safe"
+            - "tender"
+            - "crisp_tender"
+            - "caramelized"
+    cooking_method:
+      name: Cooking Method
+      description: The cooking method to use.
+      required: true
+      example: "oven_roast"
+      selector:
+        select:
+          options:
+            - "oven_roast"
+            - "oven_bake"
+            - "oven_broil"
+            - "pan_fry"
+            - "pan_sear"
+            - "saute"
+            - "braise"
+            - "poach"
+            - "simmer"
+            - "boil"
+            - "steam"
+            - "air_fryer"
+            - "sous_vide"
+            - "slow_cooker"
+            - "pressure_cooker"
+            - "grill"
+            - "smoker"
+            - "charcoal_grill"
+
+stop_cook:
+  name: Stop Cook
+  description: Stop the current cooking session.
+  target:
+    entity:
+      domain: sensor
+      integration: kitchen_cooking_engine
+
+start_rest:
+  name: Start Rest
+  description: Start the resting phase after cooking.
+  target:
+    entity:
+      domain: sensor
+      integration: kitchen_cooking_engine
+
+complete_session:
+  name: Complete Session
+  description: Mark the cooking session as complete.
+  target:
+    entity:
+      domain: sensor
+      integration: kitchen_cooking_engine
+
+set_target:
+  name: Set Target Temperature
+  description: Set a custom target temperature (overrides doneness selection).
+  target:
+    entity:
+      domain: sensor
+      integration: kitchen_cooking_engine
+  fields:
+    target_temp:
+      name: Target Temperature
+      description: The target internal temperature.
+      required: true
+      example: 57
+      selector:
+        number:
+          min: 35
+          max: 100
+          unit_of_measurement: "°C"
+          mode: slider
