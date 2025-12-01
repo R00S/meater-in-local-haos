@@ -1,8 +1,5 @@
 {
   "name": "Kitchen Cooking Engine",
   "content_in_root": false,
-  "render_readme": true,
-  "domains": ["kitchen_cooking_engine"],
-  "homeassistant": "2024.1.0",
-  "iot_class": "local_polling"
+  "render_readme": true
 }
