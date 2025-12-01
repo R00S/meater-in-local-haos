@@ -143,6 +143,17 @@ SWEDISH_DONENESS_PULLED = TemperatureRange(
     end_hex="#A0522D",
 )
 
+# All Swedish doneness levels available for user preference
+# Define this early so it can be used by all cut definitions
+SWEDISH_FULL_DONENESS = [
+    SWEDISH_DONENESS_RARE,
+    SWEDISH_DONENESS_MEDIUM_RARE,
+    SWEDISH_DONENESS_MEDIUM,
+    SWEDISH_DONENESS_MEDIUM_WELL,
+    SWEDISH_DONENESS_WELL_DONE,
+    SWEDISH_DONENESS_PULLED,
+]
+
 # Pork Swedish temperatures (per Livsmedelsverket)
 SWEDISH_PORK_MEDIUM = TemperatureRange(
     id=1010,
@@ -882,16 +893,6 @@ SWEDISH_PORK_RIBS = [
 # SWEDISH VEAL (KALV)
 # Based on Stekguiden.se temperatures for kalv
 # ============================================================================
-
-# All Swedish doneness levels available for user preference
-SWEDISH_FULL_DONENESS = [
-    SWEDISH_DONENESS_RARE,
-    SWEDISH_DONENESS_MEDIUM_RARE,
-    SWEDISH_DONENESS_MEDIUM,
-    SWEDISH_DONENESS_MEDIUM_WELL,
-    SWEDISH_DONENESS_WELL_DONE,
-    SWEDISH_DONENESS_PULLED,
-]
 
 SWEDISH_VEAL_ROASTS = [
     MeatCut(
