@@ -1,14 +1,12 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * Last Updated: 1 Dec 2025, 19:40 CET
- * Last Change: v0.1.1.1 - Full doneness options for all proteins, Swedish terminology fixes
- *              - Changed "stekstyck" to "helstekt" (roast) and "stek" to "skiva" (steak/chop)
- *              - All proteins now have full doneness range (blodig, medium_rare, medium, 
- *                medium_well, genomstekt, långkokt) - user chooses based on preference
- *              - Added Kalv (veal) as separate category
- *              - Added Tonfisk (tuna) with blodig as default
- *              - Fish can now be served blodig/rare for sushi-grade cuts
+ * Last Updated: 1 Dec 2025, 20:15 CET
+ * Last Change: v0.1.1.1 - Unified data source API
+ *              - Frontend now fetches cooking data from backend API
+ *              - Single source of truth: cooking_data.py and swedish_cooking_data.py
+ *              - Fallback to hardcoded data if API unavailable
+ *              - Both International (USDA) and Swedish data sources work via API
  * 
  * NOTE: Temperature values are suggestions based on cooking style, not just safety.
  *       Livsmedelsverket safety info can be shown separately if needed.
@@ -764,6 +762,101 @@ const MEAT_CATEGORIES = {
         ]
       }
     ]
+  },
+  vegetables: {
+    id: 7,
+    name: "Vegetables",
+    icon: "🥕",
+    color: "#228B22",
+    meats: [
+      {
+        id: 70,
+        name: "Root Vegetables",
+        cutTypes: [
+          {
+            id: 700,
+            name: "Root Vegetables",
+            cuts: [
+              { id: 700, name: "Baked Potato", doneness: VEG_DONENESS },
+              { id: 701, name: "Roasted Potatoes", doneness: VEG_DONENESS },
+              { id: 702, name: "Roasted Carrots", doneness: VEG_DONENESS },
+              { id: 703, name: "Roasted Parsnips", doneness: VEG_DONENESS },
+              { id: 704, name: "Roasted Beets", doneness: VEG_DONENESS },
+              { id: 705, name: "Roasted Sweet Potato", doneness: VEG_DONENESS },
+            ]
+          }
+        ]
+      },
+      {
+        id: 71,
+        name: "Green Vegetables",
+        cutTypes: [
+          {
+            id: 710,
+            name: "Green Vegetables",
+            cuts: [
+              { id: 710, name: "Broccoli", doneness: VEG_DONENESS },
+              { id: 711, name: "Brussels Sprouts", doneness: VEG_DONENESS },
+              { id: 712, name: "Asparagus", doneness: VEG_DONENESS },
+              { id: 713, name: "Green Beans", doneness: VEG_DONENESS },
+              { id: 714, name: "Spinach", doneness: VEG_DONENESS },
+            ]
+          }
+        ]
+      },
+      {
+        id: 72,
+        name: "Alliums",
+        cutTypes: [
+          {
+            id: 720,
+            name: "Alliums",
+            cuts: [
+              { id: 720, name: "Roasted Onion", doneness: VEG_DONENESS },
+              { id: 721, name: "Caramelized Onions", doneness: VEG_DONENESS },
+              { id: 722, name: "Roasted Garlic", doneness: VEG_DONENESS },
+              { id: 723, name: "Leeks", doneness: VEG_DONENESS },
+            ]
+          }
+        ]
+      },
+      {
+        id: 73,
+        name: "Squash",
+        cutTypes: [
+          {
+            id: 730,
+            name: "Squash",
+            cuts: [
+              { id: 730, name: "Zucchini", doneness: VEG_DONENESS },
+              { id: 731, name: "Butternut Squash", doneness: VEG_DONENESS },
+              { id: 732, name: "Acorn Squash", doneness: VEG_DONENESS },
+              { id: 733, name: "Spaghetti Squash", doneness: VEG_DONENESS },
+            ]
+          }
+        ]
+      },
+      {
+        id: 74,
+        name: "Other Vegetables",
+        cutTypes: [
+          {
+            id: 740,
+            name: "Other Vegetables",
+            cuts: [
+              { id: 740, name: "Cauliflower", doneness: VEG_DONENESS },
+              { id: 741, name: "Cabbage", doneness: VEG_DONENESS },
+              { id: 750, name: "Bell Peppers", doneness: VEG_DONENESS },
+              { id: 760, name: "Button Mushrooms", doneness: VEG_DONENESS },
+              { id: 761, name: "Portobello Mushrooms", doneness: VEG_DONENESS },
+              { id: 770, name: "Corn on the Cob", doneness: VEG_DONENESS },
+              { id: 780, name: "Eggplant", doneness: VEG_DONENESS },
+              { id: 790, name: "Roasted Tomatoes", doneness: VEG_DONENESS },
+            ]
+          }
+        ]
+      }
+    ]
   }
 };
 
@@ -1229,6 +1322,10 @@ class KitchenCookingPanel extends LitElement {
       _dataSource: { type: String },
       _customTargetTempC: { type: Number },
       _showTempAdjust: { type: Boolean },
+      _apiCategories: { type: Object },
+      _apiDonenessOptions: { type: Object },
+      _apiLoading: { type: Boolean },
+      _apiError: { type: String },
     };
   }
 
@@ -1244,13 +1341,72 @@ class KitchenCookingPanel extends LitElement {
     this._dataSource = DATA_SOURCE_INTERNATIONAL;
     this._customTargetTempC = null;
     this._showTempAdjust = false;
+    // API-fetched data (single source of truth from backend)
+    this._apiCategories = null;
+    this._apiDonenessOptions = null;
+    this._apiLoading = false;
+    this._apiError = null;
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    // Fetch cooking data from API on component load
+    this._fetchCookingData();
+  }
+
+  async _fetchCookingData() {
+    this._apiLoading = true;
+    this._apiError = null;
+    
+    try {
+      // Fetch categories
+      const categoriesResponse = await fetch(
+        `/api/kitchen_cooking_engine/cooking_data?source=${this._dataSource}`
+      );
+      if (!categoriesResponse.ok) {
+        throw new Error(`Failed to fetch categories: ${categoriesResponse.status}`);
+      }
+      const categoriesData = await categoriesResponse.json();
+      this._apiCategories = categoriesData.categories;
+      
+      // Fetch doneness options
+      const donenessResponse = await fetch(
+        `/api/kitchen_cooking_engine/doneness_options?source=${this._dataSource}`
+      );
+      if (!donenessResponse.ok) {
+        throw new Error(`Failed to fetch doneness options: ${donenessResponse.status}`);
+      }
+      const donenessData = await donenessResponse.json();
+      this._apiDonenessOptions = donenessData.options;
+      
+      console.log("Kitchen Cooking Engine: Loaded cooking data from API", {
+        source: this._dataSource,
+        categories: Object.keys(this._apiCategories || {}),
+      });
+    } catch (error) {
+      console.warn("Kitchen Cooking Engine: API fetch failed, using fallback data", error);
+      this._apiError = error.message;
+      // Fall back to hardcoded data
+      this._apiCategories = null;
+      this._apiDonenessOptions = null;
+    } finally {
+      this._apiLoading = false;
+    }
   }
 
   _getDataCategories() {
+    // Use API data if available, otherwise fall back to hardcoded data
+    if (this._apiCategories) {
+      return this._apiCategories;
+    }
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_MEAT_CATEGORIES : MEAT_CATEGORIES;
   }
 
   _getDonenessOptions() {
+    // Use API data if available, otherwise fall back to hardcoded data
+    if (this._apiDonenessOptions) {
+      return this._apiDonenessOptions;
+    }
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
   }
 
@@ -1322,17 +1478,69 @@ class KitchenCookingPanel extends LitElement {
 
   _getAvailableDoneness() {
     const cut = this._getSelectedCutData();
-    if (!cut || !cut.doneness) return [];
+    if (!cut) return [];
+    
+    // If API data with temperature_ranges is available, use that for more detailed info
+    if (cut.temperature_ranges && cut.temperature_ranges.length > 0) {
+      return cut.temperature_ranges.map(tr => ({
+        value: tr.name,
+        name: tr.name.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+        icon: this._getDonenessIcon(tr.name),
+        description: tr.description,
+        temp_c: tr.target_temp_c,
+        temp_f: tr.target_temp_f,
+      }));
+    }
+    
+    // Fall back to doneness array with lookup from donenessOptions
+    if (!cut.doneness) return [];
     const donenessOptions = this._getDonenessOptions();
-    return cut.doneness.map(d => donenessOptions[d]).filter(Boolean);
+    return cut.doneness.map(d => {
+      const opt = donenessOptions[d];
+      return opt ? { ...opt, value: d } : null;
+    }).filter(Boolean);
+  }
+
+  _getDonenessIcon(donenessName) {
+    const icons = {
+      rare: "🔴",
+      blodig: "🔴",
+      medium_rare: "🟠",
+      medium: "🟡",
+      medium_well: "🟤",
+      well_done: "⚪",
+      genomstekt: "⚪",
+      pulled: "🍖",
+      långkokt: "🍖",
+      safe: "✅",
+      dark_meat_optimal: "🍗",
+      crispy: "🥓",
+      heated_through: "♨️",
+      done: "✓",
+      tender: "🥔",
+      crisp_tender: "🥦",
+      caramelized: "🧅",
+      charred: "🔥",
+    };
+    return icons[donenessName] || "🍖";
   }
 
   _getRecommendedDoneness() {
     const cut = this._getSelectedCutData();
     if (!cut) return null;
-    // Use explicit recommendedDoneness if set
+    // Use explicit recommended_doneness (API format) or recommendedDoneness (JS format)
+    if (cut.recommended_doneness) {
+      return cut.recommended_doneness;
+    }
     if (cut.recommendedDoneness) {
       return cut.recommendedDoneness;
+    }
+    // Check for is_meater_recommended in temperature_ranges (API format)
+    if (cut.temperature_ranges) {
+      const recommended = cut.temperature_ranges.find(tr => tr.is_meater_recommended);
+      if (recommended) {
+        return recommended.name;
+      }
     }
     // Fall back to first doneness option
     if (cut.doneness && cut.doneness.length > 0) {
@@ -1342,6 +1550,17 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _getTargetTempForDoneness(donenessValue) {
+    const cut = this._getSelectedCutData();
+    
+    // If cut has temperature_ranges (API format), use that for accurate temps
+    if (cut && cut.temperature_ranges) {
+      const range = cut.temperature_ranges.find(tr => tr.name === donenessValue);
+      if (range) {
+        return { c: range.target_temp_c, f: range.target_temp_f };
+      }
+    }
+    
+    // Fall back to global doneness options
     const donenessOptions = this._getDonenessOptions();
     const option = donenessOptions[donenessValue];
     return option ? { c: option.temp_c, f: option.temp_f } : null;
@@ -1357,6 +1576,8 @@ class KitchenCookingPanel extends LitElement {
     this._selectedDoneness = null;
     this._customTargetTempC = null;
     this._showTempAdjust = false;
+    // Refetch data for the new source
+    this._fetchCookingData();
   }
 
   _selectCategory(categoryKey) {
@@ -1407,8 +1628,10 @@ class KitchenCookingPanel extends LitElement {
     // Auto-select recommended doneness for this cut
     const cut = this._getCuts().find(c => c.id === cutId);
     if (cut) {
-      // First try explicit recommendedDoneness
-      if (cut.recommendedDoneness) {
+      // First try explicit recommended_doneness (API format) or recommendedDoneness (JS format)
+      if (cut.recommended_doneness) {
+        this._selectedDoneness = cut.recommended_doneness;
+      } else if (cut.recommendedDoneness) {
         this._selectedDoneness = cut.recommendedDoneness;
       } else if (cut.doneness && cut.doneness.length > 0) {
         // Fall back to first valid doneness
@@ -1468,9 +1691,10 @@ class KitchenCookingPanel extends LitElement {
             .hass=${this.hass}
             .narrow=${this.narrow}
         ></ha-menu-button>
-        <div slot="title">🍳 Kitchen Cooking Engine</div>
+        <div slot="title">🍳 Kitchen Cooking Engine${this._apiLoading ? ' (Loading...)' : ''}</div>
         
         <div class="content">
+          ${this._apiLoading ? html`<div class="loading-overlay">Loading cooking data...</div>` : ''}
           ${entities.length === 0 ? this._renderNoEntities() : 
             (isActive ? this._renderActiveCook(state) : this._renderSetupForm(entities))}
         </div>
@@ -1608,7 +1832,7 @@ class KitchenCookingPanel extends LitElement {
               <option value="">Choose a cut...</option>
               ${cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
-                  ${cut.name}${cut.recommendedDoneness ? ' ⭐' : ''}
+                  ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
                 </option>
               `)}
             </select>
@@ -2272,7 +2496,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "18";
+const PANEL_VERSION = "19";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

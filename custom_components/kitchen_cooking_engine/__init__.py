@@ -50,6 +50,7 @@ from .swedish_cooking_data import (
     get_swedish_cut_by_id,
     SWEDISH_MEAT_CATEGORIES,
 )
+from .api import async_register_api
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -192,6 +193,9 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     # Register the sidebar panel
     await _async_register_panel(hass)
+
+    # Register API endpoints for cooking data
+    async_register_api(hass)
 
     # Register services
     await _async_register_services(hass)
