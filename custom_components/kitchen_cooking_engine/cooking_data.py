@@ -1559,7 +1559,49 @@ CHICKEN_DARK_MEAT = [
         carryover_temp_c=2,
         temperature_ranges=[POULTRY_SAFE, POULTRY_DARK_MEAT],
     ),
-    # Additional turkey cuts from MEATER app reference (2025)
+]
+
+# Turkey cuts
+TURKEY = [
+    MeatCut(
+        id=330,
+        name="whole_turkey",
+        name_long="Whole Turkey",
+        cut_order=1,
+        estimated_thickness_mm=150,
+        usda_safe_c=74,
+        usda_safe_f=165,
+        rest_time_min=20,
+        rest_time_max=45,
+        carryover_temp_c=8,
+        temperature_ranges=[POULTRY_SAFE],
+    ),
+    MeatCut(
+        id=331,
+        name="turkey_breast",
+        name_long="Turkey Breast",
+        cut_order=2,
+        estimated_thickness_mm=80,
+        usda_safe_c=74,
+        usda_safe_f=165,
+        rest_time_min=10,
+        rest_time_max=20,
+        carryover_temp_c=5,
+        temperature_ranges=[POULTRY_SAFE],
+    ),
+    MeatCut(
+        id=332,
+        name="turkey_leg",
+        name_long="Turkey Leg",
+        cut_order=3,
+        estimated_thickness_mm=60,
+        usda_safe_c=74,
+        usda_safe_f=165,
+        rest_time_min=10,
+        rest_time_max=15,
+        carryover_temp_c=4,
+        temperature_ranges=[POULTRY_SAFE, POULTRY_DARK_MEAT],
+    ),
     MeatCut(
         id=333,
         name="turkey_thigh",
