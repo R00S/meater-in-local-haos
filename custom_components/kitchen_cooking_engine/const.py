@@ -1,10 +1,13 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 1 Dec 2025, 12:31 CET
-Last Change: Added ATTR_CUT_DISPLAY for user-friendly cut names
+Last Updated: 1 Dec 2025, 17:10 CET
+Last Change: Added PANEL_VERSION for cache busting
 """
 
 DOMAIN = "kitchen_cooking_engine"
+
+# Panel version - increment this to force browsers to reload the panel JS
+PANEL_VERSION = "14"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

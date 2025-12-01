@@ -102,6 +102,8 @@ async def _cleanup_old_entities(hass: HomeAssistant, entry: ConfigEntry) -> None
 
 async def _async_register_panel(hass: HomeAssistant) -> None:
     """Register the sidebar panel."""
+    from .const import PANEL_VERSION
+    
     # Only register once
     if hass.data.get(DOMAIN, {}).get("panel_registered"):
         return
@@ -128,6 +130,7 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
         return
     
     # Register the custom panel in the sidebar
+    # Use PANEL_VERSION in URL to bust browser cache
     async_register_built_in_panel(
         hass,
         component_name="custom",
@@ -139,14 +142,14 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
                 "name": "kitchen-cooking-panel",
                 "embed_iframe": False,
                 "trust_external": False,
-                "module_url": "/kitchen_cooking_engine_panel/kitchen-cooking-panel.js",
+                "module_url": f"/kitchen_cooking_engine_panel/kitchen-cooking-panel.js?v={PANEL_VERSION}",
             }
         },
         require_admin=False,
     )
     
     hass.data[DOMAIN]["panel_registered"] = True
-    _LOGGER.info("Kitchen Cooking Engine: Sidebar panel registered")
+    _LOGGER.info("Kitchen Cooking Engine: Sidebar panel registered (version %s)", PANEL_VERSION)
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
