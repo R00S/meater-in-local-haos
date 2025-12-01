@@ -1416,6 +1416,11 @@ class KitchenCookingPanel extends LitElement {
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
   }
 
+  _isUsingFallbackData() {
+    // Returns true if we're using hardcoded fallback data instead of API data
+    return !this._apiCategories && !this._apiLoading;
+  }
+
   _findCookingEntities() {
     if (!this.hass) return [];
     
@@ -1701,6 +1706,14 @@ class KitchenCookingPanel extends LitElement {
         
         <div class="content">
           ${this._apiLoading ? html`<div class="loading-overlay">Loading cooking data...</div>` : ''}
+          ${this._isUsingFallbackData() ? html`
+            <div class="fallback-warning">
+              ⚠️ <strong>Warning:</strong> Using offline fallback data. 
+              ${this._apiError ? html`<br>API Error: ${this._apiError}` : ''}
+              <br>This may cause cook start failures. Please check the Kitchen Cooking Engine integration.
+              <button @click=${() => this._fetchCookingData()}>Retry</button>
+            </div>
+          ` : ''}
           ${entities.length === 0 ? this._renderNoEntities() : 
             (isActive ? this._renderActiveCook(state) : this._renderSetupForm(entities))}
         </div>
@@ -2069,6 +2082,31 @@ class KitchenCookingPanel extends LitElement {
         border-radius: 8px;
         margin-bottom: 16px;
         border: 1px dashed var(--divider-color);
+      }
+
+      .fallback-warning {
+        background: #fff3cd;
+        border: 2px solid #ffc107;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 16px;
+        color: #856404;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .fallback-warning button {
+        margin-top: 8px;
+        padding: 8px 16px;
+        background: #ffc107;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+      }
+
+      .fallback-warning button:hover {
+        background: #e0a800;
       }
 
       ha-card {
@@ -2512,7 +2550,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "19";
+const PANEL_VERSION = "20";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
