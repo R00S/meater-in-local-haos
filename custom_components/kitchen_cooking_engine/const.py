@@ -1,10 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 2024-11-30T23:50:00Z
-Last Agent Edit: 2024-11-30T23:50:00Z
+Last Updated: 1 Dec 2025, 17:10 CET
+Last Change: Added PANEL_VERSION for cache busting
 """
 
 DOMAIN = "kitchen_cooking_engine"
+
+# Panel version - increment this to force browsers to reload the panel JS
+# This is appended to both the URL and element name to bust all caches
+PANEL_VERSION = "16"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
@@ -32,6 +36,7 @@ MINUTES_PER_DEGREE_C = 2.5  # Rough ETA estimate (varies by cut/method)
 # Attribute keys
 ATTR_PROTEIN = "protein"
 ATTR_CUT = "cut"
+ATTR_CUT_DISPLAY = "cut_display"
 ATTR_DONENESS = "doneness"
 ATTR_TARGET_TEMP_C = "target_temp_c"
 ATTR_TARGET_TEMP_F = "target_temp_f"

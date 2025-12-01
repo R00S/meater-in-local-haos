@@ -1,7 +1,7 @@
 """Sensor platform for Kitchen Cooking Engine.
 
-Last Updated: 2024-11-30T23:50:00Z
-Last Agent Edit: 2024-11-30T23:50:00Z
+Last Updated: 1 Dec 2025, 12:31 CET
+Last Change: Added event firing, dynamic icons, device registry support
 """
 
 from __future__ import annotations
@@ -13,6 +13,7 @@ from typing import Any
 from homeassistant.components.sensor import SensorEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant, callback
+from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.event import async_track_state_change_event
 
@@ -22,6 +23,7 @@ from .const import (
     ATTR_COOKING_METHOD,
     ATTR_CURRENT_TEMP,
     ATTR_CUT,
+    ATTR_CUT_DISPLAY,
     ATTR_DONENESS,
     ATTR_ETA_MINUTES,
     ATTR_MAX_TEMP_C,
@@ -39,6 +41,8 @@ from .const import (
     CONF_TEMPERATURE_SENSOR,
     CONF_TEMPERATURE_UNIT,
     DOMAIN,
+    EVENT_APPROACHING_TARGET,
+    EVENT_GOAL_REACHED,
     MINUTES_PER_DEGREE_C,
     PROGRESS_START_OFFSET_C,
     STATE_APPROACHING,
@@ -63,15 +67,26 @@ async def async_setup_entry(
     ambient_sensor = config_entry.data.get(CONF_AMBIENT_SENSOR)
     temp_unit = config_entry.data.get(CONF_TEMPERATURE_UNIT, TEMP_CELSIUS)
 
-    entities = [
-        CookingSessionSensor(
-            hass,
-            config_entry.entry_id,
-            temp_sensor,
-            ambient_sensor,
-            temp_unit,
-        ),
-    ]
+    cooking_session = CookingSessionSensor(
+        hass,
+        config_entry.entry_id,
+        temp_sensor,
+        ambient_sensor,
+        temp_unit,
+    )
+    
+    entities = [cooking_session]
+
+    # Store reference to the entity for service handlers
+    # Ensure the data structure exists
+    if DOMAIN not in hass.data:
+        hass.data[DOMAIN] = {}
+    if config_entry.entry_id not in hass.data[DOMAIN]:
+        hass.data[DOMAIN][config_entry.entry_id] = {}
+    if not isinstance(hass.data[DOMAIN][config_entry.entry_id], dict):
+        hass.data[DOMAIN][config_entry.entry_id] = {}
+    
+    hass.data[DOMAIN][config_entry.entry_id]["entities"] = entities
 
     async_add_entities(entities)
 
@@ -81,6 +96,7 @@ class CookingSessionSensor(SensorEntity):
 
     _attr_has_entity_name = True
     _attr_should_poll = False
+    _attr_icon = "mdi:food-steak"
 
     def __init__(
         self,
@@ -101,6 +117,7 @@ class CookingSessionSensor(SensorEntity):
         self._state = STATE_IDLE
         self._protein: str | None = None
         self._cut: str | None = None
+        self._cut_display: str | None = None
         self._doneness: str | None = None
         self._cooking_method: str | None = None
         self._target_temp_c: int | None = None
@@ -121,6 +138,17 @@ class CookingSessionSensor(SensorEntity):
         # Entity attributes
         self._attr_unique_id = f"{DOMAIN}_{entry_id}_session"
         self._attr_name = "Cooking Session"
+        
+        # Device info - group entities under a device
+        # Extract sensor name for device identification
+        sensor_name = temp_sensor.split(".")[-1] if temp_sensor else "unknown"
+        self._attr_device_info = DeviceInfo(
+            identifiers={(DOMAIN, entry_id)},
+            name=f"Kitchen Cooking Engine ({sensor_name})",
+            manufacturer="Kitchen Cooking Engine",
+            model="Cooking Session",
+            sw_version="0.1.0",
+        )
 
     @property
     def native_value(self) -> str:
@@ -128,11 +156,25 @@ class CookingSessionSensor(SensorEntity):
         return self._state
 
     @property
+    def icon(self) -> str:
+        """Return the icon based on cooking state."""
+        state_icons = {
+            STATE_IDLE: "mdi:food-steak",
+            STATE_COOKING: "mdi:fire",
+            STATE_APPROACHING: "mdi:thermometer-alert",
+            STATE_GOAL_REACHED: "mdi:check-circle",
+            STATE_RESTING: "mdi:timer-sand",
+            STATE_COMPLETE: "mdi:silverware-fork-knife",
+        }
+        return state_icons.get(self._state, "mdi:food-steak")
+
+    @property
     def extra_state_attributes(self) -> dict[str, Any]:
         """Return entity specific state attributes."""
         attrs = {
             ATTR_PROTEIN: self._protein,
             ATTR_CUT: self._cut,
+            ATTR_CUT_DISPLAY: self._cut_display,
             ATTR_DONENESS: self._doneness,
             ATTR_COOKING_METHOD: self._cooking_method,
             ATTR_TARGET_TEMP_C: self._target_temp_c,
@@ -251,18 +293,50 @@ class CookingSessionSensor(SensorEntity):
                     100.0, max(0.0, (current_c - start_temp) / temp_range * 100)
                 )
 
-        # State transitions
+        # State transitions with event firing
         if self._state == STATE_COOKING:
             # Check if approaching target
             if current_c >= self._target_temp_c - APPROACHING_THRESHOLD_C:
                 self._state = STATE_APPROACHING
+                self._fire_event(EVENT_APPROACHING_TARGET)
+                _LOGGER.info(
+                    "Approaching target: %s at %.1f°C (target: %d°C)",
+                    self._cut_display,
+                    current_c,
+                    self._target_temp_c,
+                )
         elif self._state == STATE_APPROACHING:
             # Check if goal reached
             if current_c >= self._target_temp_c:
                 self._state = STATE_GOAL_REACHED
+                self._fire_event(EVENT_GOAL_REACHED)
+                _LOGGER.info(
+                    "Goal reached: %s at %.1f°C - Time to rest!",
+                    self._cut_display,
+                    current_c,
+                )
         elif self._state == STATE_RESTING:
             # Resting state is managed by service calls
             pass
+
+    def _fire_event(self, event_type: str) -> None:
+        """Fire an event with current cooking session data."""
+        event_data = {
+            "entity_id": self.entity_id,
+            "protein": self._protein,
+            "cut": self._cut,
+            "cut_display": self._cut_display,
+            "doneness": self._doneness,
+            "cooking_method": self._cooking_method,
+            "target_temp_c": self._target_temp_c,
+            "target_temp_f": self._target_temp_f,
+            "current_temp": self._current_temp,
+            "progress": round(self._progress, 1),
+            "rest_time_min": self._rest_time_min,
+            "rest_time_max": self._rest_time_max,
+        }
+        self._hass.bus.async_fire(event_type, event_data)
+        _LOGGER.debug("Fired event %s with data: %s", event_type, event_data)
 
     def _calculate_eta(self) -> int | None:
         """Estimate time to reach target temperature.
@@ -301,10 +375,12 @@ class CookingSessionSensor(SensorEntity):
         rest_time_max: int,
         usda_safe: bool,
         carryover_temp_c: int,
+        cut_display: str | None = None,
     ) -> None:
         """Start a new cooking session."""
         self._protein = protein
         self._cut = cut
+        self._cut_display = cut_display or cut
         self._doneness = doneness
         self._cooking_method = cooking_method
         self._target_temp_c = target_temp_c
@@ -321,19 +397,33 @@ class CookingSessionSensor(SensorEntity):
         self._state = STATE_COOKING
         self._progress = 0.0
         self.async_write_ha_state()
+        _LOGGER.info(
+            "Started cooking session: %s (%s) - Target: %d°C (%d°F)",
+            self._cut_display,
+            self._doneness,
+            self._target_temp_c,
+            self._target_temp_f,
+        )
 
     def stop_cook(self) -> None:
         """Stop the current cooking session."""
+        _LOGGER.info("Stopped cooking session")
         self._state = STATE_IDLE
         self._progress = 0.0
         self.async_write_ha_state()
 
     def start_rest(self) -> None:
         """Start the resting phase."""
+        _LOGGER.info(
+            "Started rest phase - Rest time: %d-%d minutes",
+            self._rest_time_min,
+            self._rest_time_max,
+        )
         self._state = STATE_RESTING
         self.async_write_ha_state()
 
     def complete_session(self) -> None:
         """Mark session as complete."""
+        _LOGGER.info("Cooking session completed")
         self._state = STATE_COMPLETE
         self.async_write_ha_state()
