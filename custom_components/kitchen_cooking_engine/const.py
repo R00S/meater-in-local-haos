@@ -1,4 +1,8 @@
-"""Constants for the Kitchen Cooking Engine integration."""
+"""Constants for the Kitchen Cooking Engine integration.
+
+Last Updated: 2024-11-30T23:50:00Z
+Last Agent Edit: 2024-11-30T23:50:00Z
+"""
 
 DOMAIN = "kitchen_cooking_engine"
 
@@ -19,6 +23,11 @@ STATE_APPROACHING = "approaching"
 STATE_GOAL_REACHED = "goal_reached"
 STATE_RESTING = "resting"
 STATE_COMPLETE = "complete"
+
+# Temperature calculation constants
+APPROACHING_THRESHOLD_C = 5  # Notify when within 5°C of target
+PROGRESS_START_OFFSET_C = 10  # Offset below min temp for progress calculation
+MINUTES_PER_DEGREE_C = 2.5  # Rough ETA estimate (varies by cut/method)
 
 # Attribute keys
 ATTR_PROTEIN = "protein"

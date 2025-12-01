@@ -1,23 +1,23 @@
-"""Sensor platform for Kitchen Cooking Engine."""
+"""Sensor platform for Kitchen Cooking Engine.
+
+Last Updated: 2024-11-30T23:50:00Z
+Last Agent Edit: 2024-11-30T23:50:00Z
+"""
 
 from __future__ import annotations
 
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime
 from typing import Any
 
-from homeassistant.components.sensor import (
-    SensorDeviceClass,
-    SensorEntity,
-    SensorStateClass,
-)
+from homeassistant.components.sensor import SensorEntity
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import UnitOfTemperature
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.event import async_track_state_change_event
 
 from .const import (
+    APPROACHING_THRESHOLD_C,
     ATTR_AMBIENT_TEMP,
     ATTR_COOKING_METHOD,
     ATTR_CURRENT_TEMP,
@@ -39,13 +39,14 @@ from .const import (
     CONF_TEMPERATURE_SENSOR,
     CONF_TEMPERATURE_UNIT,
     DOMAIN,
+    MINUTES_PER_DEGREE_C,
+    PROGRESS_START_OFFSET_C,
     STATE_APPROACHING,
     STATE_COMPLETE,
     STATE_COOKING,
     STATE_GOAL_REACHED,
     STATE_IDLE,
     STATE_RESTING,
-    STATE_SETUP,
     TEMP_CELSIUS,
 )
 
@@ -243,7 +244,7 @@ class CookingSessionSensor(SensorEntity):
 
         # Calculate progress (0-100%)
         if self._min_temp_c and self._target_temp_c:
-            start_temp = min(current_c, self._min_temp_c - 10)
+            start_temp = min(current_c, self._min_temp_c - PROGRESS_START_OFFSET_C)
             temp_range = self._target_temp_c - start_temp
             if temp_range > 0:
                 self._progress = min(
@@ -252,8 +253,8 @@ class CookingSessionSensor(SensorEntity):
 
         # State transitions
         if self._state == STATE_COOKING:
-            # Check if approaching target (within 5°C)
-            if current_c >= self._target_temp_c - 5:
+            # Check if approaching target
+            if current_c >= self._target_temp_c - APPROACHING_THRESHOLD_C:
                 self._state = STATE_APPROACHING
         elif self._state == STATE_APPROACHING:
             # Check if goal reached
@@ -280,9 +281,9 @@ class CookingSessionSensor(SensorEntity):
         if temp_diff <= 0:
             return 0
 
-        # Simple estimate: approximately 2-3 minutes per degree C
+        # Simple estimate based on typical cooking rates
         # This varies significantly based on cut thickness, cooking method, etc.
-        return int(temp_diff * 2.5)
+        return int(temp_diff * MINUTES_PER_DEGREE_C)
 
     def start_cook(
         self,
