@@ -78,8 +78,15 @@ async def async_setup_entry(
     entities = [cooking_session]
 
     # Store reference to the entity for service handlers
-    if config_entry.entry_id in hass.data.get(DOMAIN, {}):
-        hass.data[DOMAIN][config_entry.entry_id]["entities"] = entities
+    # Ensure the data structure exists
+    if DOMAIN not in hass.data:
+        hass.data[DOMAIN] = {}
+    if config_entry.entry_id not in hass.data[DOMAIN]:
+        hass.data[DOMAIN][config_entry.entry_id] = {}
+    if not isinstance(hass.data[DOMAIN][config_entry.entry_id], dict):
+        hass.data[DOMAIN][config_entry.entry_id] = {}
+    
+    hass.data[DOMAIN][config_entry.entry_id]["entities"] = entities
 
     async_add_entities(entities)
 

@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 2024-12-01T02:00:00Z
-Last Agent Edit: 2024-12-01T02:00:00Z
+Last Updated: 2024-12-01T02:30:00Z
+Last Agent Edit: 2024-12-01T02:30:00Z
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -39,6 +39,7 @@ from .cooking_data import (
     get_cut_by_id,
     get_doneness_for_cut,
     CookingMethod,
+    MEAT_CATEGORIES,
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -133,34 +134,44 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 def _get_cooking_session_entities(hass: HomeAssistant, entity_ids: list[str]) -> list:
     """Get CookingSessionSensor entities from entity IDs.
     
-    This imports the sensor module locally to avoid circular imports.
+    Searches through stored entity references to find matching entities.
+    Returns a list of CookingSessionSensor instances.
     """
+    # Import here to avoid circular imports at module load time
     from .sensor import CookingSessionSensor
     
     entities = []
     for entity_id in entity_ids:
+        # Verify entity exists in state machine
         state = hass.states.get(entity_id)
         if state is None:
-            _LOGGER.warning("Entity %s not found", entity_id)
+            _LOGGER.warning("Entity %s not found in state machine", entity_id)
             continue
             
-        # Get the actual entity object from entity registry
-        entity_reg = er.async_get(hass)
-        entity_entry = entity_reg.async_get(entity_id)
-        if entity_entry is None:
-            _LOGGER.warning("Entity %s not in registry", entity_id)
-            continue
-            
-        # Find the entity in our stored data
+        # Search through all config entries for this domain
         for entry_id, data in hass.data.get(DOMAIN, {}).items():
-            if isinstance(data, dict) and "entities" in data:
-                for entity in data["entities"]:
-                    if hasattr(entity, "entity_id") and entity.entity_id == entity_id:
-                        if isinstance(entity, CookingSessionSensor):
-                            entities.append(entity)
-                            break
+            if not isinstance(data, dict) or "entities" not in data:
+                continue
+            for entity in data["entities"]:
+                if (
+                    isinstance(entity, CookingSessionSensor)
+                    and hasattr(entity, "entity_id")
+                    and entity.entity_id == entity_id
+                ):
+                    entities.append(entity)
+                    break
     
     return entities
+
+
+def _get_protein_name_for_cut(cut) -> str | None:
+    """Get the protein category name for a cut."""
+    for category in MEAT_CATEGORIES:
+        for meat in category.meats:
+            for cut_type in meat.cut_types:
+                if cut in cut_type.cuts:
+                    return category.name
+    return None
 
 
 async def _async_register_services(hass: HomeAssistant) -> None:
@@ -206,48 +217,16 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         )
 
         # Get the category name for the protein
-        protein_name = None
-        from .cooking_data import MEAT_CATEGORIES
-        for category in MEAT_CATEGORIES:
-            for meat in category.meats:
-                for cut_type in meat.cut_types:
-                    if cut in cut_type.cuts:
-                        protein_name = category.name
-                        break
+        protein_name = _get_protein_name_for_cut(cut)
         
         # Find and update the target entities
         entities = _get_cooking_session_entities(hass, entity_ids)
         if not entities:
-            _LOGGER.warning("No cooking session entities found for %s", entity_ids)
-            # Fall back to finding entities via state machine
-            for entity_id in entity_ids:
-                # Store the cook parameters for the entity
-                # The entity will pick these up on next state update
-                entry_id_match = None
-                for entry_id in hass.data.get(DOMAIN, {}):
-                    if isinstance(hass.data[DOMAIN].get(entry_id), dict):
-                        entry_id_match = entry_id
-                        break
-                if entry_id_match:
-                    hass.data[DOMAIN][entry_id_match]["pending_cook"] = {
-                        "protein": protein_name,
-                        "cut": cut.name,
-                        "cut_name_long": cut.name_long,
-                        "doneness": doneness,
-                        "cooking_method": cooking_method,
-                        "target_temp_c": temp_range.target_temp_c,
-                        "target_temp_f": temp_range.target_temp_f,
-                        "min_temp_c": temp_range.min_temp_c,
-                        "min_temp_f": temp_range.min_temp_f,
-                        "max_temp_c": temp_range.max_temp_c,
-                        "max_temp_f": temp_range.max_temp_f,
-                        "rest_time_min": cut.rest_time_min,
-                        "rest_time_max": cut.rest_time_max,
-                        "usda_safe": temp_range.usda_safe,
-                        "carryover_temp_c": cut.carryover_temp_c,
-                        "cut_display": cut.name_long,
-                    }
-                    _LOGGER.info("Stored pending cook for next entity update")
+            _LOGGER.error(
+                "No cooking session entities found for %s. "
+                "Make sure the entity exists and the integration is properly set up.",
+                entity_ids,
+            )
             return
             
         for entity in entities:
