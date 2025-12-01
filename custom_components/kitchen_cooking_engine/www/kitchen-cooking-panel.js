@@ -2061,6 +2061,16 @@ class KitchenCookingPanel extends LitElement {
         color: var(--secondary-text-color);
       }
 
+      .loading-overlay {
+        text-align: center;
+        padding: 16px;
+        color: var(--secondary-text-color);
+        background: var(--primary-background-color);
+        border-radius: 8px;
+        margin-bottom: 16px;
+        border: 1px dashed var(--divider-color);
+      }
+
       ha-card {
         margin-bottom: 16px;
       }

@@ -152,7 +152,7 @@ class CookingDataView(HomeAssistantView):
 
     url = "/api/kitchen_cooking_engine/cooking_data"
     name = "api:kitchen_cooking_engine:cooking_data"
-    requires_auth = False  # Panel users are already authenticated
+    requires_auth = True  # Require authentication for security
 
     async def get(self, request: web.Request) -> web.Response:
         """Handle GET request for cooking data."""
@@ -174,7 +174,7 @@ class DonenessOptionsView(HomeAssistantView):
 
     url = "/api/kitchen_cooking_engine/doneness_options"
     name = "api:kitchen_cooking_engine:doneness_options"
-    requires_auth = False
+    requires_auth = True  # Require authentication for security
 
     async def get(self, request: web.Request) -> web.Response:
         """Handle GET request for doneness options."""
