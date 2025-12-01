@@ -1,8 +1,8 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * Last Updated: 1 Dec 2025, 14:00 CET
- * Last Change: Fixed to use LitElement like working HA panels
+ * Last Updated: 1 Dec 2025, 14:16 CET
+ * Last Change: Fixed doneness options to only show valid options per cut type
  * 
  * A custom panel for the Kitchen Cooking Engine integration.
  */
@@ -13,70 +13,82 @@ import {
   css,
 } from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
 
+// Doneness options per cut type (matching cooking_data.py)
+const ALL_STEAK_DONENESS = ["rare", "medium_rare", "medium", "medium_well", "well_done"];
+const BRAISING_DONENESS = ["pulled"];
+const PORK_DONENESS = ["medium", "well_done"];
+const POULTRY_DONENESS = ["safe"];
+const POULTRY_DARK_DONENESS = ["safe", "dark_meat_optimal"];
+const DUCK_DONENESS = ["medium_rare", "medium", "safe"];
+const FISH_DONENESS = ["medium_rare", "medium", "well_done"];
+const TUNA_DONENESS = ["rare", "medium_rare", "medium"];
+
 const CUTS_DATA = {
   beef: {
     name: "🥩 Beef",
     cuts: [
-      { id: 100, name: "Ribeye Steak" },
-      { id: 101, name: "Sirloin Steak" },
-      { id: 102, name: "Filet Mignon" },
-      { id: 103, name: "New York Strip" },
-      { id: 104, name: "T-Bone / Porterhouse" },
-      { id: 105, name: "Flank Steak" },
-      { id: 120, name: "Prime Rib Roast" },
-      { id: 130, name: "Chuck Roast" },
-      { id: 131, name: "Brisket" },
-      { id: 140, name: "Beef Burger" },
+      { id: 100, name: "Ribeye Steak", doneness: ALL_STEAK_DONENESS },
+      { id: 101, name: "Sirloin Steak", doneness: ALL_STEAK_DONENESS },
+      { id: 102, name: "Filet Mignon", doneness: ALL_STEAK_DONENESS },
+      { id: 103, name: "New York Strip", doneness: ALL_STEAK_DONENESS },
+      { id: 104, name: "T-Bone / Porterhouse", doneness: ALL_STEAK_DONENESS },
+      { id: 105, name: "Flank Steak", doneness: ["rare", "medium_rare", "medium", "medium_well"] },
+      { id: 120, name: "Prime Rib Roast", doneness: ALL_STEAK_DONENESS },
+      { id: 130, name: "Chuck Roast", doneness: BRAISING_DONENESS },
+      { id: 131, name: "Brisket", doneness: BRAISING_DONENESS },
+      { id: 140, name: "Beef Burger", doneness: ["well_done"] },
     ]
   },
   pork: {
     name: "🐷 Pork",
     cuts: [
-      { id: 200, name: "Pork Chop" },
-      { id: 201, name: "Pork Tenderloin" },
-      { id: 210, name: "Pork Loin Roast" },
-      { id: 211, name: "Pork Shoulder" },
-      { id: 220, name: "Baby Back Ribs" },
+      { id: 200, name: "Pork Chop", doneness: PORK_DONENESS },
+      { id: 201, name: "Pork Tenderloin", doneness: PORK_DONENESS },
+      { id: 210, name: "Pork Loin Roast", doneness: PORK_DONENESS },
+      { id: 211, name: "Pork Shoulder", doneness: BRAISING_DONENESS },
+      { id: 220, name: "Baby Back Ribs", doneness: BRAISING_DONENESS },
     ]
   },
   poultry: {
     name: "🍗 Poultry",
     cuts: [
-      { id: 300, name: "Whole Chicken" },
-      { id: 310, name: "Chicken Breast" },
-      { id: 320, name: "Chicken Thigh" },
-      { id: 330, name: "Whole Turkey" },
-      { id: 340, name: "Duck Breast" },
+      { id: 300, name: "Whole Chicken", doneness: POULTRY_DONENESS },
+      { id: 310, name: "Chicken Breast", doneness: POULTRY_DONENESS },
+      { id: 320, name: "Chicken Thigh", doneness: POULTRY_DARK_DONENESS },
+      { id: 330, name: "Whole Turkey", doneness: POULTRY_DONENESS },
+      { id: 340, name: "Duck Breast", doneness: DUCK_DONENESS },
     ]
   },
   fish: {
     name: "🐟 Fish & Seafood",
     cuts: [
-      { id: 400, name: "Salmon Fillet" },
-      { id: 410, name: "Tuna Steak" },
-      { id: 420, name: "Cod Fillet" },
-      { id: 430, name: "Shrimp" },
-      { id: 431, name: "Lobster Tail" },
+      { id: 400, name: "Salmon Fillet", doneness: FISH_DONENESS },
+      { id: 410, name: "Tuna Steak", doneness: TUNA_DONENESS },
+      { id: 420, name: "Cod Fillet", doneness: ["medium", "well_done"] },
+      { id: 430, name: "Shrimp", doneness: ["well_done"] },
+      { id: 431, name: "Lobster Tail", doneness: ["well_done"] },
     ]
   },
   lamb: {
     name: "🐑 Lamb",
     cuts: [
-      { id: 500, name: "Leg of Lamb" },
-      { id: 501, name: "Rack of Lamb" },
-      { id: 510, name: "Lamb Chops" },
+      { id: 500, name: "Leg of Lamb", doneness: ALL_STEAK_DONENESS },
+      { id: 501, name: "Rack of Lamb", doneness: ["rare", "medium_rare", "medium", "medium_well"] },
+      { id: 510, name: "Lamb Chops", doneness: ALL_STEAK_DONENESS },
     ]
   }
 };
 
-const DONENESS_OPTIONS = [
-  { value: "rare", name: "Rare", icon: "🔴" },
-  { value: "medium_rare", name: "Medium Rare", icon: "🟠" },
-  { value: "medium", name: "Medium", icon: "🟡" },
-  { value: "medium_well", name: "Medium Well", icon: "🟤" },
-  { value: "well_done", name: "Well Done", icon: "⚪" },
-  { value: "pulled", name: "Pulled", icon: "🍖" },
-];
+const DONENESS_OPTIONS = {
+  rare: { value: "rare", name: "Rare", icon: "🔴" },
+  medium_rare: { value: "medium_rare", name: "Medium Rare", icon: "🟠" },
+  medium: { value: "medium", name: "Medium", icon: "🟡" },
+  medium_well: { value: "medium_well", name: "Medium Well", icon: "🟤" },
+  well_done: { value: "well_done", name: "Well Done", icon: "⚪" },
+  pulled: { value: "pulled", name: "Pulled", icon: "🍖" },
+  safe: { value: "safe", name: "Safe (Cooked)", icon: "✅" },
+  dark_meat_optimal: { value: "dark_meat_optimal", name: "Dark Meat", icon: "🍗" },
+};
 
 const COOKING_METHODS = [
   { value: "oven_roast", name: "Oven Roast" },
@@ -109,7 +121,7 @@ class KitchenCookingPanel extends LitElement {
     super();
     this._selectedCategory = null;
     this._selectedCut = null;
-    this._selectedDoneness = "medium_rare";
+    this._selectedDoneness = null;
     this._selectedMethod = "oven_roast";
     this._selectedEntity = null;
   }
@@ -143,6 +155,30 @@ class KitchenCookingPanel extends LitElement {
       complete: '🍽️'
     };
     return icons[state] || '🍳';
+  }
+
+  _getSelectedCutData() {
+    if (!this._selectedCategory || !this._selectedCut) return null;
+    const category = CUTS_DATA[this._selectedCategory];
+    if (!category) return null;
+    return category.cuts.find(c => c.id === this._selectedCut);
+  }
+
+  _getAvailableDoneness() {
+    const cut = this._getSelectedCutData();
+    if (!cut || !cut.doneness) return [];
+    return cut.doneness.map(d => DONENESS_OPTIONS[d]).filter(Boolean);
+  }
+
+  _selectCut(cutId) {
+    this._selectedCut = cutId;
+    // Auto-select first valid doneness for this cut
+    const cut = CUTS_DATA[this._selectedCategory]?.cuts.find(c => c.id === cutId);
+    if (cut && cut.doneness && cut.doneness.length > 0) {
+      this._selectedDoneness = cut.doneness[0];
+    } else {
+      this._selectedDoneness = null;
+    }
   }
 
   render() {
@@ -217,14 +253,14 @@ class KitchenCookingPanel extends LitElement {
             ${Object.entries(CUTS_DATA).map(([key, cat]) => html`
               <button 
                 class="category-btn ${this._selectedCategory === key ? 'selected' : ''}" 
-                @click=${() => { this._selectedCategory = key; this._selectedCut = null; }}>
+                @click=${() => { this._selectedCategory = key; this._selectedCut = null; this._selectedDoneness = null; }}>
                 ${cat.name}
               </button>
             `)}
           </div>
           
           ${this._selectedCategory ? html`
-            <select @change=${(e) => this._selectedCut = parseInt(e.target.value) || null}>
+            <select @change=${(e) => this._selectCut(parseInt(e.target.value) || null)}>
               <option value="">Choose a cut...</option>
               ${CUTS_DATA[this._selectedCategory].cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
@@ -241,7 +277,7 @@ class KitchenCookingPanel extends LitElement {
           <div class="card-content">
             <h3>🌡️ Doneness Level</h3>
             <div class="doneness-grid">
-              ${DONENESS_OPTIONS.map(opt => html`
+              ${this._getAvailableDoneness().map(opt => html`
                 <button 
                   class="doneness-btn ${this._selectedDoneness === opt.value ? 'selected' : ''}"
                   @click=${() => this._selectedDoneness = opt.value}>
@@ -269,7 +305,7 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
         
         <div class="action-container">
-          <ha-button unelevated @click=${this._startCook}>
+          <ha-button unelevated @click=${this._startCook} ?disabled=${!this._selectedDoneness}>
             🔥 Start Cooking
           </ha-button>
         </div>
