@@ -1,6 +1,6 @@
 # Agent Handoff Document
 
-**Last Updated:** 1 Dec 2025, 12:31 CET
+**Last Updated:** 1 Dec 2025, 13:52 CET
 
 ## Development Workflow
 
@@ -11,6 +11,25 @@ The development workflow for this project is:
 3. **User imports via HACS** - User uses HACS to import the integration into HAOS
 4. **User tests in HAOS** - User tests the integration in Home Assistant
 5. **Iterate** - Repeat the cycle based on feedback
+
+### ⚠️ CRITICAL: Version Compatibility Check
+
+**Before asking the user to test ANY implementation, ALWAYS verify that:**
+
+1. The code is compatible with the **latest stable version of Home Assistant** (YYYY.MM.x where MM is current or last month)
+2. Check the Home Assistant developer documentation for any API changes
+3. Test imports and function signatures match what's available in the target HA version
+4. Do NOT use deprecated APIs or `hass.components.*` patterns that may not work in newer versions
+
+**Example issues to avoid:**
+- Using `hass.components.frontend.async_register_built_in_panel()` → Use imported `async_register_built_in_panel(hass, ...)` instead
+- Using deprecated helper functions that were removed in recent HA versions
+- Relying on internal APIs that are subject to change
+
+**When unsure:**
+- Check the HA core source code on GitHub for the current implementation
+- Reference the official Home Assistant developer documentation
+- Look at how other well-maintained custom integrations handle similar functionality
 
 ### Timestamp Format
 
