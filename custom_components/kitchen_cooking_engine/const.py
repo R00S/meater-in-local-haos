@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 1 Dec 2025, 20:15 CET
-Last Change: Updated PANEL_VERSION for unified data API (v0.1.1.1 release)
+Last Updated: 1 Dec 2025, 22:30 CET
+Last Change: Updated PANEL_VERSION for API auth fix (v0.1.1.5 release)
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - increment this to force browsers to reload the panel JS
 # This is appended to both the URL and element name to bust all caches
-PANEL_VERSION = "19"
+PANEL_VERSION = "21"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

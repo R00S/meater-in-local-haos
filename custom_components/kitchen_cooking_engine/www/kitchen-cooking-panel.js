@@ -1,12 +1,11 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * Last Updated: 1 Dec 2025, 20:15 CET
- * Last Change: v0.1.1.1 - Unified data source API
- *              - Frontend now fetches cooking data from backend API
- *              - Single source of truth: cooking_data.py and swedish_cooking_data.py
- *              - Fallback to hardcoded data if API unavailable
- *              - Both International (USDA) and Swedish data sources work via API
+ * Last Updated: 1 Dec 2025, 22:30 CET
+ * Last Change: v0.1.1.5 - Fix API authentication
+ *              - Use hass.callApi() for authenticated API requests
+ *              - Fixes "invalid authentication" errors when fetching cooking data
+ *              - Warning banner displayed when using fallback data
  * 
  * NOTE: Temperature values are suggestions based on cooking style, not just safety.
  *       Livsmedelsverket safety info can be shown separately if needed.
@@ -1365,30 +1364,30 @@ class KitchenCookingPanel extends LitElement {
       : DATA_SOURCE_INTERNATIONAL;
     
     try {
-      // Fetch categories
-      const categoriesResponse = await fetch(
-        `/api/kitchen_cooking_engine/cooking_data?source=${encodeURIComponent(source)}`
-      );
-      if (!categoriesResponse.ok) {
-        throw new Error(`Failed to fetch categories: ${categoriesResponse.status}`);
+      // Use hass.callApi for authenticated requests
+      // This properly includes the auth token in requests
+      if (this.hass && this.hass.callApi) {
+        // Fetch categories using authenticated API call
+        const categoriesData = await this.hass.callApi(
+          'GET',
+          `kitchen_cooking_engine/cooking_data?source=${encodeURIComponent(source)}`
+        );
+        this._apiCategories = categoriesData.categories;
+        
+        // Fetch doneness options using authenticated API call
+        const donenessData = await this.hass.callApi(
+          'GET',
+          `kitchen_cooking_engine/doneness_options?source=${encodeURIComponent(source)}`
+        );
+        this._apiDonenessOptions = donenessData.options;
+        
+        console.log("Kitchen Cooking Engine: Loaded cooking data from API", {
+          source: this._dataSource,
+          categories: Object.keys(this._apiCategories || {}),
+        });
+      } else {
+        throw new Error("Home Assistant API not available");
       }
-      const categoriesData = await categoriesResponse.json();
-      this._apiCategories = categoriesData.categories;
-      
-      // Fetch doneness options
-      const donenessResponse = await fetch(
-        `/api/kitchen_cooking_engine/doneness_options?source=${encodeURIComponent(source)}`
-      );
-      if (!donenessResponse.ok) {
-        throw new Error(`Failed to fetch doneness options: ${donenessResponse.status}`);
-      }
-      const donenessData = await donenessResponse.json();
-      this._apiDonenessOptions = donenessData.options;
-      
-      console.log("Kitchen Cooking Engine: Loaded cooking data from API", {
-        source: this._dataSource,
-        categories: Object.keys(this._apiCategories || {}),
-      });
     } catch (error) {
       console.warn("Kitchen Cooking Engine: API fetch failed, using fallback data", error);
       this._apiError = error.message;
