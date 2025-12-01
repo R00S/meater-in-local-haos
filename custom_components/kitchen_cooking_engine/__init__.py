@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 1 Dec 2025, 13:46 CET
-Last Change: Fixed panel registration API call
+Last Updated: 1 Dec 2025, 14:00 CET
+Last Change: Switched to custom panel JS instead of iframe for proper HA integration
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -108,13 +108,13 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
     
     # Get the path to the www directory
     www_path = Path(__file__).parent / "www"
-    panel_path = www_path / "panel.html"
+    panel_js_path = www_path / "kitchen-cooking-panel.js"
     
-    if not panel_path.exists():
-        _LOGGER.warning("Kitchen Cooking Engine: Panel file not found at %s", panel_path)
+    if not panel_js_path.exists():
+        _LOGGER.warning("Kitchen Cooking Engine: Panel JS file not found at %s", panel_js_path)
         return
     
-    # Register static path to serve the panel HTML
+    # Register static path to serve the panel JS
     try:
         await hass.http.async_register_static_paths([
             StaticPathConfig(
@@ -127,14 +127,21 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
         _LOGGER.warning("Kitchen Cooking Engine: Could not register static path: %s", e)
         return
     
-    # Register the panel in the sidebar using the imported function
+    # Register the custom panel in the sidebar
     async_register_built_in_panel(
         hass,
-        component_name="iframe",
+        component_name="custom",
         sidebar_title="Cooking",
         sidebar_icon="mdi:pot-steam",
         frontend_url_path="kitchen-cooking",
-        config={"url": "/kitchen_cooking_engine_panel/panel.html"},
+        config={
+            "_panel_custom": {
+                "name": "kitchen-cooking-panel",
+                "embed_iframe": False,
+                "trust_external": False,
+                "module_url": "/kitchen_cooking_engine_panel/kitchen-cooking-panel.js",
+            }
+        },
         require_admin=False,
     )
     

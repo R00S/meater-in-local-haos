@@ -390,6 +390,8 @@
 
   <script>
     // Kitchen Cooking Engine Panel
+    // Works as an iframe panel in Home Assistant
+    
     const CUTS_DATA = {
       beef: {
         name: "🥩 Beef",
@@ -470,6 +472,7 @@
     class KitchenCookingPanel {
       constructor() {
         this.hass = null;
+        this.connection = null;
         this.entities = [];
         this.selectedEntity = null;
         this.selectedCategory = null;
@@ -482,35 +485,75 @@
       }
       
       async init() {
-        // Wait for HASS to be available
-        await this.waitForHass();
-        this.findEntities();
-        this.render();
-        
-        // Auto-refresh every 2 seconds
-        this.refreshInterval = setInterval(() => {
-          if (this.selectedEntity) {
+        try {
+          // Connect to Home Assistant WebSocket API
+          await this.connectToHA();
+          this.findEntities();
+          this.render();
+          
+          // Auto-refresh every 3 seconds
+          this.refreshInterval = setInterval(async () => {
+            await this.refreshStates();
             this.render();
-          }
-        }, 2000);
+          }, 3000);
+        } catch (err) {
+          console.error('Failed to initialize:', err);
+          document.getElementById('app').innerHTML = `
+            <div class="error">
+              <h3>Connection Error</h3>
+              <p>Could not connect to Home Assistant: ${err.message}</p>
+              <p>Make sure the integration is properly set up.</p>
+            </div>
+          `;
+        }
       }
       
-      async waitForHass() {
-        return new Promise((resolve) => {
-          const check = () => {
-            if (window.hassConnection) {
-              window.hassConnection.then(conn => {
-                conn.subscribeStates((states) => {
-                  this.hass = { states };
-                  resolve();
-                });
-              });
-            } else {
-              setTimeout(check, 100);
-            }
-          };
-          check();
+      async connectToHA() {
+        // Get the auth token from the URL or localStorage
+        const hassUrl = window.location.origin;
+        
+        // Try to get states via REST API (simpler for iframe panels)
+        const response = await fetch(`${hassUrl}/api/states`, {
+          headers: {
+            'Authorization': `Bearer ${this.getAuthToken()}`,
+            'Content-Type': 'application/json',
+          },
+          credentials: 'same-origin'
         });
+        
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const states = await response.json();
+        this.hass = { states: {} };
+        states.forEach(state => {
+          this.hass.states[state.entity_id] = state;
+        });
+      }
+      
+      getAuthToken() {
+        // Try to get token from HA frontend storage
+        try {
+          const hassTokens = JSON.parse(localStorage.getItem('hassTokens') || '{}');
+          if (hassTokens.access_token) {
+            return hassTokens.access_token;
+          }
+        } catch (e) {
+          console.warn('Could not get token from hassTokens');
+        }
+        
+        // Fallback - try to get from URL params (for dev)
+        const params = new URLSearchParams(window.location.search);
+        return params.get('token') || '';
+      }
+      
+      async refreshStates() {
+        try {
+          await this.connectToHA();
+        } catch (err) {
+          console.error('Failed to refresh states:', err);
+        }
       }
       
       findEntities() {
@@ -532,17 +575,29 @@
       
       async callService(service, data = {}) {
         try {
-          const conn = await window.hassConnection;
-          await conn.sendMessage({
-            type: 'call_service',
-            domain: 'kitchen_cooking_engine',
-            service: service,
-            service_data: {
+          const hassUrl = window.location.origin;
+          const response = await fetch(`${hassUrl}/api/services/kitchen_cooking_engine/${service}`, {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${this.getAuthToken()}`,
+              'Content-Type': 'application/json',
+            },
+            credentials: 'same-origin',
+            body: JSON.stringify({
               entity_id: this.selectedEntity,
               ...data
-            }
+            })
           });
-          setTimeout(() => this.render(), 500);
+          
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+          
+          // Refresh after service call
+          setTimeout(async () => {
+            await this.refreshStates();
+            this.render();
+          }, 500);
         } catch (err) {
           console.error('Service call failed:', err);
           alert('Service call failed: ' + err.message);
