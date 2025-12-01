@@ -1,23 +1,51 @@
 # Agent Handoff Document
 
-**Last Updated:** 1 Dec 2025, 15:50 CET
+**Last Updated:** 1 Dec 2025, 17:40 CET
+
+## 🚨 PRIORITY TODO FOR NEXT AGENT (v0.1.1.0)
+
+The following items are the **FIRST PRIORITY** for the next agent session:
+
+### 1. Merge and Deduplicate Cut/Protein Lists
+**Problem:** There are two separate lists of cuts/proteins that got out of sync:
+- `cooking_data.py` - 151 MeatCut definitions (used by Python backend for temperature validation)
+- `kitchen-cooking-panel.js` - 188 cut definitions in `MEAT_CATEGORIES` (used by UI rendering)
+
+**Solution:**
+- Create a **single source of truth** for all cuts/proteins
+- Option A: Create a WebSocket API endpoint that serves the Python data to the frontend
+- Option B: Generate the JS data from Python at build time
+- Ensure NO cuts are lost when merging - combine both lists
+
+### 2. Doneness Selection for All Proteins
+**Problem:** Currently doneness selection may only work properly for beef. All proteins should have:
+- Proper doneness options (Fish: medium/well, Poultry: safe, Lamb: rare-well, etc.)
+- **Suggested doneness** that auto-selects based on the cut
+- User should be able to **edit the suggestion** before starting the cook
+
+**Implementation:**
+- Each cut should have a `recommended_doneness` field
+- UI should pre-select the recommended doneness
+- User can change it via the doneness buttons before clicking "Start Cooking"
+
+---
 
 ## Release Numbering
 
-Release versions follow this pattern: `v0.1.0.XXdev`
+Release versions follow this pattern: `v0.1.X.YY` (removed "dev" suffix per user request)
 
 | Position | Meaning | Current |
 |----------|---------|---------|
 | `0` | Still in beta | 0 |
 | `1` | First batch of features | 1 |
-| `0` | First agent at this stage | 0 |
-| `XX` | Release number with this agent (0-indexed) | 12 = 13th release |
+| `X` | Agent number at this stage | 0 = first agent, 1 = second agent, etc. |
+| `YY` | Release number with this agent (0-indexed) | e.g., 16 = 17th release |
 
 **Examples:**
-- `v0.1.0.0dev` = First release by first agent in beta/first-features stage
-- `v0.1.0.12dev` = 13th release by first agent
-- `v0.1.1.0dev` = First release by second agent at this stage
-- `v0.2.0.0dev` = First release in second batch of features
+- `v0.1.0.0` = First release by first agent in beta/first-features stage
+- `v0.1.0.16` = 17th release by first agent (CURRENT)
+- `v0.1.1.0` = First release by second agent at this stage (NEXT)
+- `v0.2.0.0` = First release in second batch of features
 
 ## Development Workflow
 
@@ -212,12 +240,20 @@ The integration follows patterns from the working `haos_feature_forecast` integr
 
 ## What's Next for Phase 2
 
+### PRIORITY (for next agent v0.1.1.0):
+1. [ ] **Merge cut/protein lists** - Deduplicate cooking_data.py and kitchen-cooking-panel.js (see TODO above)
+2. [ ] **Doneness for all proteins** - Add recommended doneness that user can edit (see TODO above)
+
+### Already Completed:
 1. [x] **Full service handlers** - ✅ Implemented start_cook, stop_cook, start_rest, complete_session with entity targeting
 2. [x] **Notification automations** - ✅ Events fired for approaching_target and goal_reached
-3. [ ] **Test via HACS** - After PR merge, import via HACS and test config flow
-4. [ ] **Lovelace dashboard cards** - Create cooking UI cards
+3. [x] **Sidebar panel** - ✅ MEATER app structure with Steak/Roast/Other flow
+
+### Future Work:
+4. [ ] **Test via HACS** - After PR merge, import via HACS and test config flow
 5. [ ] **Temperature history** - Store temperature curves for ETA predictions
-6. [ ] **Integration with Mealie/Grocy** - Link recipes to cooking sessions
+6. [ ] **Swedish language tree** - Add Swedish butcher cut names
+7. [ ] **Integration with Mealie/Grocy** - Link recipes to cooking sessions
 
 ---
 
