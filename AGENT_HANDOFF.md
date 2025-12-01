@@ -20,23 +20,73 @@ The development workflow for this project is:
 - **HACS testing** - The integration is tested by importing via HACS into a real Home Assistant instance
 - **NO manual file editing on HAOS** - For HAOS integrity, all file changes must come through HACS imports
 
-### HACS Branch-Based Development Workflow
+### Development Workflow Options
 
-To iterate without merging PRs for every test:
+There are two ways to test development branches:
 
-1. **Initial Setup (one-time)**:
-   - Merge the first PR to `main` so HACS validates the repository structure
-   - Add the repo as a custom repository in HACS
+#### Option 1: Manual Installation (Recommended for Dev Testing)
 
-2. **Iterative Development**:
-   - Agent pushes changes to a feature branch (e.g., `copilot/fix-xyz` or `dev`)
-   - In HACS, when downloading/redownloading, specify the branch name
-   - User redownloads from HACS after each push - no PR merge needed
-   - User restarts HA and tests
+Since HACS 2.0 no longer supports branch selection (only releases/tags), use this method for rapid iteration:
 
-3. **Key Insight**: HACS can pull from **any branch** once the repo is validated. Only `main` needs the basic structure for initial HACS validation. All future iterations happen on feature branches that are downloaded directly via HACS.
+1. **SSH into your Home Assistant** or use the File Editor add-on
+2. **Navigate to** `/config/custom_components/`
+3. **Download the branch directly** using Terminal:
+   ```bash
+   cd /config/custom_components
+   rm -rf kitchen_cooking_engine  # Remove existing if present
+   wget https://github.com/R00S/meater-in-local-haos/archive/refs/heads/copilot/setup-workflow-with-dev-branches.zip
+   unzip setup-workflow-with-dev-branches.zip
+   mv meater-in-local-haos-copilot-setup-workflow-with-dev-branches/custom_components/kitchen_cooking_engine .
+   rm -rf meater-in-local-haos-copilot-setup-workflow-with-dev-branches setup-workflow-with-dev-branches.zip
+   ```
+4. **Restart Home Assistant** to apply changes
 
-This allows continuous iteration without closing the agent session between tests.
+#### Option 2: Merge PR to Main
+
+For production-ready changes:
+1. Merge the PR to `main`
+2. HACS will automatically detect the update
+3. Redownload via HACS → Integrations → Kitchen Cooking Engine → ⋮ → Redownload
+
+#### Option 3: Create a Release from Branch (Recommended - No Merge Required)
+
+**This is the best solution for HACS + dev branches without merging:**
+
+You can create a GitHub release directly from any branch - no merge to main required! HACS will then show it in the version dropdown.
+
+**Step 1: Go to GitHub Releases**
+1. Go to: https://github.com/R00S/meater-in-local-haos/releases/new
+
+**Step 2: Create the Release**
+1. Click "Choose a tag" → type a new tag like `v0.1.0-dev` → click "Create new tag"
+2. **IMPORTANT**: Click "Target: main" dropdown → select the dev branch (e.g., `copilot/setup-workflow-with-dev-branches`)
+3. Fill in:
+   - **Release title**: `v0.1.0-dev - Dev Testing`
+   - **Description**: `Development release for testing`
+4. Check ☑️ "Set as a pre-release" (optional, marks it as non-production)
+5. Click **"Publish release"**
+
+**Step 3: Download in HACS**
+1. In HACS → Integrations → Kitchen Cooking Engine
+2. Click ⋮ → Redownload
+3. Select the new version (e.g., `v0.1.0-dev`) from the dropdown
+4. Click Download → Restart HA
+
+**For subsequent updates:**
+- Create new releases (v0.1.1-dev, v0.1.2-dev, etc.) from the same branch as changes are pushed
+- HACS will show all versions in the dropdown
+
+> **Note:** HACS 2.0 [removed branch selection](https://github.com/hacs/integration/issues/4203). Only releases/tags appear in the version dropdown.
+
+### GitHub Actions Workflow
+
+A HACS validation workflow runs automatically on:
+- Every push to any branch
+- Every pull request
+- Daily scheduled runs
+- Manual trigger (workflow_dispatch)
+
+The workflow file is at `.github/workflows/hacs-validation.yml` and validates that the repository structure is HACS-compliant. Check the GitHub Actions tab to see validation results for any branch before downloading via HACS.
 
 ---
 
