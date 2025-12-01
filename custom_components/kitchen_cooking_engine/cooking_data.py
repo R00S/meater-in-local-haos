@@ -1,8 +1,8 @@
 """
 Cooking data for Kitchen Cooking Engine.
 
-Last Updated: 1 Dec 2025, 13:09 CET
-Last Change: No changes, timestamps updated to new format
+Last Updated: 1 Dec 2025, 15:45 CET
+Last Change: Added comprehensive protein/cut database matching MEATER app structure
 
 This module contains comprehensive cooking data including proteins, cuts,
 doneness levels, cooking methods, and target temperatures.

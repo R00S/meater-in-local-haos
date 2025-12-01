@@ -1,14 +1,13 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * Last Updated: 1 Dec 2025, 14:30 CET
- * Last Change: Added all cuts from MEATER app reference (2025) including:
- *              - Beef: Tomahawk, Picanha, offal (liver, tongue, shin)
- *              - Pork: Secreto, Virginia Ham, offal (jowl, cheek, liver, tongue)
- *              - Poultry: Goose, chicken/turkey burgers
- *              - Fish: Haddock, Hake, Trout, Sea Bass/Branzino
- *              - Lamb: Neck filet, cutlet, brisket, rump, shank
- *              - Game: Reindeer, Moose, Ostrich, Mutton, Kangaroo, Goat
+ * Last Updated: 1 Dec 2025, 15:47 CET
+ * Last Change: Fixed panel structure to match exact MEATER app flow:
+ *              - Beef/Pork/Lamb: Category → Steak/Roast/Other → Cut
+ *              - Poultry: Category → Chicken/Duck/Goose/Turkey → Cut
+ *              - Fish: Category → Fish Type → Fillet/Other
+ *              - Full list of fish species and shellfish added
+ *              - All MEATER cuts included
  * 
  * NOTE: The cut/category structure mirrors MEATER app's meatCutStructure.
  *       Temperature values are from USDA/FDA public guidelines.
