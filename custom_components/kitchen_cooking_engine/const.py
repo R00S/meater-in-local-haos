@@ -7,7 +7,8 @@ Last Change: Added PANEL_VERSION for cache busting
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - increment this to force browsers to reload the panel JS
-PANEL_VERSION = "14"
+# This is appended to both the URL and element name to bust all caches
+PANEL_VERSION = "16"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

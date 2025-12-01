@@ -130,7 +130,9 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
         return
     
     # Register the custom panel in the sidebar
-    # Use PANEL_VERSION in URL to bust browser cache
+    # Use PANEL_VERSION in both URL and element name to bust ALL caches
+    # The element name must match what's in kitchen-cooking-panel.js
+    panel_element_name = f"kitchen-cooking-panel-v{PANEL_VERSION}"
     async_register_built_in_panel(
         hass,
         component_name="custom",
@@ -139,7 +141,7 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
         frontend_url_path="kitchen-cooking",
         config={
             "_panel_custom": {
-                "name": "kitchen-cooking-panel",
+                "name": panel_element_name,
                 "embed_iframe": False,
                 "trust_external": False,
                 "module_url": f"/kitchen_cooking_engine_panel/kitchen-cooking-panel.js?v={PANEL_VERSION}",

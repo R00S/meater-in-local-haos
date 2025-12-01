@@ -1444,6 +1444,13 @@ class KitchenCookingPanel extends LitElement {
   }
 }
 
-if (!customElements.get("kitchen-cooking-panel")) {
-  customElements.define("kitchen-cooking-panel", KitchenCookingPanel);
+// Force re-registration by using a versioned element name
+// This bypasses browser's cached customElements registry
+// MUST match the "name" in __init__.py panel config
+const PANEL_VERSION = "16";
+
+// Register with versioned name (what HA frontend will look for)
+const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
+if (!customElements.get(VERSIONED_NAME)) {
+  customElements.define(VERSIONED_NAME, KitchenCookingPanel);
 }
