@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 1 Dec 2025, 13:31 CET
-Last Change: Added sidebar panel for cooking session UI
+Last Updated: 1 Dec 2025, 13:46 CET
+Last Change: Fixed panel registration API call
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -127,8 +127,9 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
         _LOGGER.warning("Kitchen Cooking Engine: Could not register static path: %s", e)
         return
     
-    # Register the panel in the sidebar
-    hass.components.frontend.async_register_built_in_panel(
+    # Register the panel in the sidebar using the imported function
+    async_register_built_in_panel(
+        hass,
         component_name="iframe",
         sidebar_title="Cooking",
         sidebar_icon="mdi:pot-steam",
