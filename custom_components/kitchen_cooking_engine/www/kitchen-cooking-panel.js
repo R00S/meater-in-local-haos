@@ -2,10 +2,16 @@
  * Kitchen Cooking Engine Panel
  * 
  * Last Updated: 1 Dec 2025, 14:00 CET
- * Last Change: Created proper custom panel using LitElement
+ * Last Change: Fixed to use LitElement like working HA panels
  * 
  * A custom panel for the Kitchen Cooking Engine integration.
  */
+
+import {
+  LitElement,
+  html,
+  css,
+} from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
 
 const CUTS_DATA = {
   beef: {
@@ -84,12 +90,23 @@ const COOKING_METHODS = [
   { value: "slow_cooker", name: "Slow Cooker" },
 ];
 
-class KitchenCookingPanel extends HTMLElement {
+class KitchenCookingPanel extends LitElement {
+  static get properties() {
+    return {
+      hass: { type: Object },
+      narrow: { type: Boolean },
+      route: { type: Object },
+      panel: { type: Object },
+      _selectedCategory: { type: String },
+      _selectedCut: { type: Number },
+      _selectedDoneness: { type: String },
+      _selectedMethod: { type: String },
+      _selectedEntity: { type: String },
+    };
+  }
+
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
-    this._hass = null;
-    this._config = null;
     this._selectedCategory = null;
     this._selectedCut = null;
     this._selectedDoneness = "medium_rare";
@@ -97,450 +114,165 @@ class KitchenCookingPanel extends HTMLElement {
     this._selectedEntity = null;
   }
 
-  set hass(hass) {
-    this._hass = hass;
-    this._findCookingEntities();
-    this._render();
-  }
-
-  setConfig(config) {
-    this._config = config;
-  }
-
   _findCookingEntities() {
-    if (!this._hass) return;
+    if (!this.hass) return [];
     
-    const entities = Object.keys(this._hass.states)
+    return Object.keys(this.hass.states)
       .filter(id => id.startsWith('sensor.') && id.includes('cooking_session'));
-    
-    if (entities.length > 0 && !this._selectedEntity) {
-      this._selectedEntity = entities[0];
-    }
-    
-    this._entities = entities;
   }
 
   _getState() {
-    if (!this._selectedEntity || !this._hass) return null;
-    return this._hass.states[this._selectedEntity];
+    if (!this._selectedEntity || !this.hass) return null;
+    return this.hass.states[this._selectedEntity];
   }
 
   _callService(service, data = {}) {
-    this._hass.callService('kitchen_cooking_engine', service, {
+    this.hass.callService('kitchen_cooking_engine', service, {
       entity_id: this._selectedEntity,
       ...data
     });
   }
 
-  _render() {
+  _getStateIcon(state) {
+    const icons = {
+      idle: '🥩',
+      cooking: '🔥',
+      approaching: '⚠️',
+      goal_reached: '✅',
+      resting: '⏱️',
+      complete: '🍽️'
+    };
+    return icons[state] || '🍳';
+  }
+
+  render() {
+    if (!this.hass) {
+      return html`<div class="loading">Loading...</div>`;
+    }
+
+    const entities = this._findCookingEntities();
+    
+    // Auto-select first entity if not selected
+    if (!this._selectedEntity && entities.length > 0) {
+      this._selectedEntity = entities[0];
+    }
+
     const state = this._getState();
     const isActive = state && state.state !== 'idle';
 
-    this.shadowRoot.innerHTML = `
-      <style>
-        :host {
-          display: block;
-          padding: 16px;
-          background: var(--primary-background-color);
-          min-height: 100vh;
-        }
+    return html`
+      <ha-top-app-bar-fixed>
+        <ha-menu-button
+            slot="navigationIcon"
+            .hass=${this.hass}
+            .narrow=${this.narrow}
+        ></ha-menu-button>
+        <div slot="title">🍳 Kitchen Cooking Engine</div>
         
-        .container {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-        
-        .header {
-          display: flex;
-          align-items: center;
-          margin-bottom: 24px;
-          padding-bottom: 16px;
-          border-bottom: 1px solid var(--divider-color);
-        }
-        
-        .header-icon {
-          font-size: 32px;
-          margin-right: 16px;
-        }
-        
-        .header h1 {
-          font-size: 24px;
-          font-weight: 500;
-          margin: 0;
-          color: var(--primary-text-color);
-        }
-        
-        .card {
-          background: var(--card-background-color);
-          border-radius: 12px;
-          box-shadow: var(--ha-card-box-shadow, 0 2px 8px rgba(0,0,0,0.1));
-          padding: 24px;
-          margin-bottom: 24px;
-        }
-        
-        .card-title {
-          font-size: 18px;
-          font-weight: 500;
-          margin-bottom: 16px;
-          color: var(--primary-text-color);
-        }
-        
-        .status-banner {
-          padding: 16px;
-          border-radius: 8px;
-          margin-bottom: 24px;
-          text-align: center;
-        }
-        
-        .status-banner.idle {
-          background: var(--divider-color);
-          color: var(--secondary-text-color);
-        }
-        
-        .status-banner.cooking {
-          background: #ff5722;
-          color: white;
-        }
-        
-        .status-banner.approaching {
-          background: #ff9800;
-          color: white;
-        }
-        
-        .status-banner.goal_reached {
-          background: #4caf50;
-          color: white;
-        }
-        
-        .status-banner.resting {
-          background: #03a9f4;
-          color: white;
-        }
-        
-        .status-banner h2 {
-          margin: 0 0 4px 0;
-          font-size: 20px;
-          text-transform: capitalize;
-        }
-        
-        .status-banner p {
-          margin: 0;
-          opacity: 0.9;
-        }
-        
-        .button-group {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-          margin-bottom: 16px;
-        }
-        
-        .category-btn {
-          padding: 10px 20px;
-          border: 2px solid var(--divider-color);
-          border-radius: 24px;
-          background: transparent;
-          cursor: pointer;
-          font-size: 14px;
-          transition: all 0.2s;
-          color: var(--primary-text-color);
-        }
-        
-        .category-btn:hover {
-          border-color: var(--primary-color);
-          color: var(--primary-color);
-        }
-        
-        .category-btn.selected {
-          background: var(--primary-color);
-          border-color: var(--primary-color);
-          color: white;
-        }
-        
-        select {
-          width: 100%;
-          padding: 12px;
-          border: 2px solid var(--divider-color);
-          border-radius: 8px;
-          font-size: 16px;
-          background: var(--card-background-color);
-          color: var(--primary-text-color);
-          cursor: pointer;
-        }
-        
-        .doneness-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-          gap: 12px;
-        }
-        
-        .doneness-btn {
-          padding: 12px;
-          border: 2px solid var(--divider-color);
-          border-radius: 12px;
-          background: var(--card-background-color);
-          cursor: pointer;
-          text-align: center;
-          transition: all 0.2s;
-          color: var(--primary-text-color);
-        }
-        
-        .doneness-btn:hover {
-          border-color: var(--primary-color);
-        }
-        
-        .doneness-btn.selected {
-          background: var(--primary-color);
-          border-color: var(--primary-color);
-          color: white;
-        }
-        
-        .doneness-btn .icon {
-          font-size: 20px;
-          display: block;
-          margin-bottom: 4px;
-        }
-        
-        .method-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-          gap: 8px;
-        }
-        
-        .method-btn {
-          padding: 10px 8px;
-          border: 2px solid var(--divider-color);
-          border-radius: 8px;
-          background: var(--card-background-color);
-          cursor: pointer;
-          text-align: center;
-          font-size: 13px;
-          transition: all 0.2s;
-          color: var(--primary-text-color);
-        }
-        
-        .method-btn:hover {
-          border-color: var(--primary-color);
-        }
-        
-        .method-btn.selected {
-          background: var(--primary-color);
-          border-color: var(--primary-color);
-          color: white;
-        }
-        
-        .action-button {
-          width: 100%;
-          padding: 16px;
-          border: none;
-          border-radius: 8px;
-          font-size: 18px;
-          font-weight: 600;
-          cursor: pointer;
-          transition: all 0.2s;
-          margin-top: 16px;
-        }
-        
-        .action-button.primary {
-          background: #ff5722;
-          color: white;
-        }
-        
-        .action-button.primary:disabled {
-          background: var(--divider-color);
-          color: var(--secondary-text-color);
-          cursor: not-allowed;
-        }
-        
-        .action-button.danger {
-          background: #f44336;
-          color: white;
-        }
-        
-        .action-button.success {
-          background: #4caf50;
-          color: white;
-        }
-        
-        .progress-section {
-          margin: 16px 0;
-        }
-        
-        .progress-bar-container {
-          height: 12px;
-          background: var(--divider-color);
-          border-radius: 6px;
-          overflow: hidden;
-        }
-        
-        .progress-bar {
-          height: 100%;
-          background: var(--primary-color);
-          transition: width 0.5s;
-        }
-        
-        .temp-display {
-          display: flex;
-          justify-content: space-between;
-          margin-top: 16px;
-        }
-        
-        .temp-current {
-          font-size: 32px;
-          font-weight: 600;
-          color: #ff5722;
-        }
-        
-        .temp-target {
-          font-size: 18px;
-          color: var(--secondary-text-color);
-        }
-        
-        .cook-info {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 16px;
-          margin-top: 16px;
-        }
-        
-        .cook-info-item {
-          text-align: center;
-          padding: 12px;
-          background: var(--primary-background-color);
-          border-radius: 8px;
-        }
-        
-        .cook-info-item .label {
-          font-size: 12px;
-          color: var(--secondary-text-color);
-        }
-        
-        .cook-info-item .value {
-          font-size: 16px;
-          font-weight: 500;
-          color: var(--primary-text-color);
-        }
-        
-        .action-buttons {
-          display: flex;
-          gap: 12px;
-        }
-        
-        .action-buttons button {
-          flex: 1;
-        }
-        
-        .entity-selector {
-          margin-bottom: 16px;
-        }
-        
-        .no-entities {
-          text-align: center;
-          padding: 48px;
-          color: var(--secondary-text-color);
-        }
-      </style>
-      
-      <div class="container">
-        <div class="header">
-          <span class="header-icon">🍳</span>
-          <h1>Kitchen Cooking Engine</h1>
+        <div class="content">
+          ${entities.length === 0 ? this._renderNoEntities() : 
+            (isActive ? this._renderActiveCook(state) : this._renderSetupForm(entities))}
         </div>
-        
-        ${this._renderContent(state, isActive)}
-      </div>
+      </ha-top-app-bar-fixed>
     `;
-
-    this._attachEventListeners();
   }
 
-  _renderContent(state, isActive) {
-    if (!this._entities || this._entities.length === 0) {
-      return `
-        <div class="card">
-          <div class="no-entities">
-            <p>No cooking session entities found.</p>
-            <p>Please configure the Kitchen Cooking Engine integration first.</p>
-          </div>
+  _renderNoEntities() {
+    return html`
+      <ha-card>
+        <div class="card-content no-entities">
+          <p>No cooking session entities found.</p>
+          <p>Please configure the Kitchen Cooking Engine integration first.</p>
         </div>
-      `;
-    }
-
-    if (this._entities.length > 1) {
-      return `
-        <div class="entity-selector">
-          <select id="entity-select">
-            ${this._entities.map(e => `
-              <option value="${e}" ${this._selectedEntity === e ? 'selected' : ''}>
-                ${this._hass.states[e]?.attributes?.friendly_name || e}
-              </option>
-            `).join('')}
-          </select>
-        </div>
-        ${isActive ? this._renderActiveCook(state) : this._renderSetupForm()}
-      `;
-    }
-
-    return isActive ? this._renderActiveCook(state) : this._renderSetupForm();
+      </ha-card>
+    `;
   }
 
-  _renderSetupForm() {
-    return `
+  _renderSetupForm(entities) {
+    return html`
       <div class="status-banner idle">
         <h2>🍳 Ready to Cook</h2>
         <p>Select your protein and preferences below</p>
       </div>
       
-      <div class="card">
-        <div class="card-title">🥩 Select Protein</div>
-        <div class="button-group">
-          ${Object.entries(CUTS_DATA).map(([key, cat]) => `
-            <button class="category-btn ${this._selectedCategory === key ? 'selected' : ''}" 
-                    data-category="${key}">${cat.name}</button>
-          `).join('')}
-        </div>
-        
-        ${this._selectedCategory ? `
-          <select id="cut-select">
-            <option value="">Choose a cut...</option>
-            ${CUTS_DATA[this._selectedCategory].cuts.map(cut => `
-              <option value="${cut.id}" ${this._selectedCut === cut.id ? 'selected' : ''}>
-                ${cut.name}
-              </option>
-            `).join('')}
-          </select>
-        ` : ''}
-      </div>
+      ${entities.length > 1 ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>Select Session</h3>
+            <select @change=${(e) => this._selectedEntity = e.target.value}>
+              ${entities.map(e => html`
+                <option value="${e}" ?selected=${this._selectedEntity === e}>
+                  ${this.hass.states[e]?.attributes?.friendly_name || e}
+                </option>
+              `)}
+            </select>
+          </div>
+        </ha-card>
+      ` : ''}
       
-      ${this._selectedCut ? `
-        <div class="card">
-          <div class="card-title">🌡️ Doneness Level</div>
-          <div class="doneness-grid">
-            ${DONENESS_OPTIONS.map(opt => `
-              <button class="doneness-btn ${this._selectedDoneness === opt.value ? 'selected' : ''}"
-                      data-doneness="${opt.value}">
-                <span class="icon">${opt.icon}</span>
-                ${opt.name}
+      <ha-card>
+        <div class="card-content">
+          <h3>🥩 Select Protein</h3>
+          <div class="button-group">
+            ${Object.entries(CUTS_DATA).map(([key, cat]) => html`
+              <button 
+                class="category-btn ${this._selectedCategory === key ? 'selected' : ''}" 
+                @click=${() => { this._selectedCategory = key; this._selectedCut = null; }}>
+                ${cat.name}
               </button>
-            `).join('')}
+            `)}
           </div>
+          
+          ${this._selectedCategory ? html`
+            <select @change=${(e) => this._selectedCut = parseInt(e.target.value) || null}>
+              <option value="">Choose a cut...</option>
+              ${CUTS_DATA[this._selectedCategory].cuts.map(cut => html`
+                <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
+                  ${cut.name}
+                </option>
+              `)}
+            </select>
+          ` : ''}
         </div>
-        
-        <div class="card">
-          <div class="card-title">🍳 Cooking Method</div>
-          <div class="method-grid">
-            ${COOKING_METHODS.map(opt => `
-              <button class="method-btn ${this._selectedMethod === opt.value ? 'selected' : ''}"
-                      data-method="${opt.value}">
-                ${opt.name}
-              </button>
-            `).join('')}
+      </ha-card>
+      
+      ${this._selectedCut ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>🌡️ Doneness Level</h3>
+            <div class="doneness-grid">
+              ${DONENESS_OPTIONS.map(opt => html`
+                <button 
+                  class="doneness-btn ${this._selectedDoneness === opt.value ? 'selected' : ''}"
+                  @click=${() => this._selectedDoneness = opt.value}>
+                  <span class="icon">${opt.icon}</span>
+                  ${opt.name}
+                </button>
+              `)}
+            </div>
           </div>
-        </div>
+        </ha-card>
         
-        <button class="action-button primary" id="start-cook">
-          🔥 Start Cooking
-        </button>
+        <ha-card>
+          <div class="card-content">
+            <h3>🍳 Cooking Method</h3>
+            <div class="method-grid">
+              ${COOKING_METHODS.map(opt => html`
+                <button 
+                  class="method-btn ${this._selectedMethod === opt.value ? 'selected' : ''}"
+                  @click=${() => this._selectedMethod = opt.value}>
+                  ${opt.name}
+                </button>
+              `)}
+            </div>
+          </div>
+        </ha-card>
+        
+        <div class="action-container">
+          <ha-button unelevated @click=${this._startCook}>
+            🔥 Start Cooking
+          </ha-button>
+        </div>
       ` : ''}
     `;
   }
@@ -556,152 +288,353 @@ class KitchenCookingPanel extends HTMLElement {
     const eta = attrs.eta_minutes;
     const cookState = state.state;
 
-    return `
+    return html`
       <div class="status-banner ${cookState}">
         <h2>${this._getStateIcon(cookState)} ${cookState.replace("_", " ")}</h2>
         <p>${cut} • ${doneness}</p>
       </div>
       
-      <div class="card">
-        <div class="temp-display">
-          <div>
-            <div class="temp-current">${currentTemp !== null && currentTemp !== undefined ? currentTemp + '°C' : '--'}</div>
-            <div style="color: var(--secondary-text-color);">Current</div>
+      <ha-card>
+        <div class="card-content">
+          <div class="temp-display">
+            <div class="temp-current">
+              <div class="value">${currentTemp !== null && currentTemp !== undefined ? currentTemp + '°C' : '--'}</div>
+              <div class="label">Current</div>
+            </div>
+            <div class="temp-target">
+              <div class="value">${targetTemp}°C</div>
+              <div class="label">Target</div>
+            </div>
           </div>
-          <div style="text-align: right;">
-            <div class="temp-target">${targetTemp}°C</div>
-            <div style="color: var(--secondary-text-color);">Target</div>
+          
+          <div class="progress-section">
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: ${Math.min(100, progress)}%"></div>
+            </div>
+            <div class="progress-info">
+              <span>${progress.toFixed(0)}% complete</span>
+              ${eta !== null && eta !== undefined ? html`<span>ETA: ${eta} min</span>` : ''}
+            </div>
+          </div>
+          
+          <div class="cook-info">
+            <div class="cook-info-item">
+              <div class="label">Method</div>
+              <div class="value">${method}</div>
+            </div>
+            <div class="cook-info-item">
+              <div class="label">Rest Time</div>
+              <div class="value">${attrs.rest_time_minutes || '--'} min</div>
+            </div>
+          </div>
+          
+          <div class="action-buttons">
+            ${cookState === 'goal_reached' ? html`
+              <ha-button unelevated @click=${this._startRest}>⏱️ Start Rest</ha-button>
+            ` : ''}
+            ${cookState === 'resting' ? html`
+              <ha-button unelevated @click=${this._complete}>✅ Complete</ha-button>
+            ` : ''}
+            <ha-button outlined @click=${this._stopCook}>⏹️ Stop</ha-button>
           </div>
         </div>
-        
-        <div class="progress-section">
-          <div class="progress-bar-container">
-            <div class="progress-bar" style="width: ${Math.min(100, progress)}%"></div>
-          </div>
-          <div style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 14px;">
-            <span>${progress.toFixed(0)}% complete</span>
-            ${eta !== null && eta !== undefined ? `<span>ETA: ${eta} min</span>` : ''}
-          </div>
-        </div>
-        
-        <div class="cook-info">
-          <div class="cook-info-item">
-            <div class="label">Method</div>
-            <div class="value">${method}</div>
-          </div>
-          <div class="cook-info-item">
-            <div class="label">Rest Time</div>
-            <div class="value">${attrs.rest_time_minutes || '--'} min</div>
-          </div>
-        </div>
-        
-        <div class="action-buttons" style="margin-top: 16px;">
-          ${cookState === 'goal_reached' ? `
-            <button class="action-button success" id="start-rest">⏱️ Start Rest</button>
-          ` : ''}
-          ${cookState === 'resting' ? `
-            <button class="action-button success" id="complete">✅ Complete</button>
-          ` : ''}
-          <button class="action-button danger" id="stop-cook">⏹️ Stop</button>
-        </div>
-      </div>
+      </ha-card>
     `;
   }
 
-  _getStateIcon(state) {
-    const icons = {
-      idle: '🥩',
-      cooking: '🔥',
-      approaching: '⚠️',
-      goal_reached: '✅',
-      resting: '⏱️',
-      complete: '🍽️'
-    };
-    return icons[state] || '🍳';
+  _startCook() {
+    this._callService('start_cook', {
+      cut_id: this._selectedCut,
+      doneness: this._selectedDoneness,
+      cooking_method: this._selectedMethod
+    });
   }
 
-  _attachEventListeners() {
-    // Entity selector
-    const entitySelect = this.shadowRoot.getElementById('entity-select');
-    if (entitySelect) {
-      entitySelect.addEventListener('change', (e) => {
-        this._selectedEntity = e.target.value;
-        this._render();
-      });
+  _stopCook() {
+    if (confirm('Are you sure you want to stop this cook?')) {
+      this._callService('stop_cook');
     }
+  }
 
-    // Category buttons
-    this.shadowRoot.querySelectorAll('[data-category]').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        this._selectedCategory = e.target.dataset.category;
-        this._selectedCut = null;
-        this._render();
-      });
-    });
+  _startRest() {
+    this._callService('start_rest');
+  }
 
-    // Cut selector
-    const cutSelect = this.shadowRoot.getElementById('cut-select');
-    if (cutSelect) {
-      cutSelect.addEventListener('change', (e) => {
-        this._selectedCut = parseInt(e.target.value) || null;
-        this._render();
-      });
-    }
+  _complete() {
+    this._callService('complete_session');
+  }
 
-    // Doneness buttons
-    this.shadowRoot.querySelectorAll('[data-doneness]').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        this._selectedDoneness = e.target.closest('[data-doneness]').dataset.doneness;
-        this._render();
-      });
-    });
+  static get styles() {
+    return css`
+      :host {
+        display: block;
+      }
 
-    // Method buttons
-    this.shadowRoot.querySelectorAll('[data-method]').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        this._selectedMethod = e.target.closest('[data-method]').dataset.method;
-        this._render();
-      });
-    });
+      .content {
+        padding: 16px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
 
-    // Start cook
-    const startBtn = this.shadowRoot.getElementById('start-cook');
-    if (startBtn) {
-      startBtn.addEventListener('click', () => {
-        this._callService('start_cook', {
-          cut_id: this._selectedCut,
-          doneness: this._selectedDoneness,
-          cooking_method: this._selectedMethod
-        });
-      });
-    }
+      .loading {
+        text-align: center;
+        padding: 48px;
+        color: var(--secondary-text-color);
+      }
 
-    // Stop cook
-    const stopBtn = this.shadowRoot.getElementById('stop-cook');
-    if (stopBtn) {
-      stopBtn.addEventListener('click', () => {
-        if (confirm('Are you sure you want to stop this cook?')) {
-          this._callService('stop_cook');
-        }
-      });
-    }
+      ha-card {
+        margin-bottom: 16px;
+      }
 
-    // Start rest
-    const restBtn = this.shadowRoot.getElementById('start-rest');
-    if (restBtn) {
-      restBtn.addEventListener('click', () => {
-        this._callService('start_rest');
-      });
-    }
+      .card-content {
+        padding: 16px;
+      }
 
-    // Complete
-    const completeBtn = this.shadowRoot.getElementById('complete');
-    if (completeBtn) {
-      completeBtn.addEventListener('click', () => {
-        this._callService('complete_session');
-      });
-    }
+      .card-content h3 {
+        margin: 0 0 16px 0;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .no-entities {
+        text-align: center;
+        color: var(--secondary-text-color);
+      }
+
+      .status-banner {
+        padding: 16px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+
+      .status-banner h2 {
+        margin: 0 0 4px 0;
+        font-size: 20px;
+        text-transform: capitalize;
+      }
+
+      .status-banner p {
+        margin: 0;
+        opacity: 0.9;
+      }
+
+      .status-banner.idle {
+        background: var(--divider-color);
+        color: var(--secondary-text-color);
+      }
+
+      .status-banner.cooking {
+        background: #ff5722;
+        color: white;
+      }
+
+      .status-banner.approaching {
+        background: #ff9800;
+        color: white;
+      }
+
+      .status-banner.goal_reached {
+        background: #4caf50;
+        color: white;
+      }
+
+      .status-banner.resting {
+        background: #03a9f4;
+        color: white;
+      }
+
+      .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+
+      .category-btn {
+        padding: 10px 20px;
+        border: 2px solid var(--divider-color);
+        border-radius: 24px;
+        background: transparent;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.2s;
+        color: var(--primary-text-color);
+      }
+
+      .category-btn:hover {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+      }
+
+      .category-btn.selected {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+        color: white;
+      }
+
+      select {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid var(--divider-color);
+        border-radius: 8px;
+        font-size: 16px;
+        background: var(--card-background-color);
+        color: var(--primary-text-color);
+        cursor: pointer;
+      }
+
+      .doneness-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 12px;
+      }
+
+      .doneness-btn {
+        padding: 12px;
+        border: 2px solid var(--divider-color);
+        border-radius: 12px;
+        background: var(--card-background-color);
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.2s;
+        color: var(--primary-text-color);
+      }
+
+      .doneness-btn:hover {
+        border-color: var(--primary-color);
+      }
+
+      .doneness-btn.selected {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+        color: white;
+      }
+
+      .doneness-btn .icon {
+        font-size: 20px;
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .method-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 8px;
+      }
+
+      .method-btn {
+        padding: 10px 8px;
+        border: 2px solid var(--divider-color);
+        border-radius: 8px;
+        background: var(--card-background-color);
+        cursor: pointer;
+        text-align: center;
+        font-size: 13px;
+        transition: all 0.2s;
+        color: var(--primary-text-color);
+      }
+
+      .method-btn:hover {
+        border-color: var(--primary-color);
+      }
+
+      .method-btn.selected {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+        color: white;
+      }
+
+      .action-container {
+        text-align: center;
+        margin-top: 16px;
+      }
+
+      .temp-display {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+      }
+
+      .temp-current .value {
+        font-size: 32px;
+        font-weight: 600;
+        color: #ff5722;
+      }
+
+      .temp-target .value {
+        font-size: 18px;
+        text-align: right;
+      }
+
+      .temp-current .label,
+      .temp-target .label {
+        font-size: 14px;
+        color: var(--secondary-text-color);
+      }
+
+      .temp-target .label {
+        text-align: right;
+      }
+
+      .progress-section {
+        margin: 16px 0;
+      }
+
+      .progress-bar-container {
+        height: 12px;
+        background: var(--divider-color);
+        border-radius: 6px;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        height: 100%;
+        background: var(--primary-color);
+        transition: width 0.5s;
+      }
+
+      .progress-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+        font-size: 14px;
+      }
+
+      .cook-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      .cook-info-item {
+        text-align: center;
+        padding: 12px;
+        background: var(--primary-background-color);
+        border-radius: 8px;
+      }
+
+      .cook-info-item .label {
+        font-size: 12px;
+        color: var(--secondary-text-color);
+      }
+
+      .cook-info-item .value {
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 16px;
+        justify-content: center;
+      }
+    `;
   }
 }
 
-customElements.define('kitchen-cooking-panel', KitchenCookingPanel);
+if (!customElements.get("kitchen-cooking-panel")) {
+  customElements.define("kitchen-cooking-panel", KitchenCookingPanel);
+}
