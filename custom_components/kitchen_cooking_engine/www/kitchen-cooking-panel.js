@@ -770,7 +770,6 @@ const MEAT_CATEGORIES = {
 // Swedish doneness arrays - based on cooking style, not safety guidelines
 // Full range available for all cuts - user chooses based on preference
 const SWEDISH_FULL_DONENESS = ["blodig", "medium_rare", "medium", "medium_well", "genomstekt", "långkokt"];
-const SWEDISH_STEAK_DONENESS = ["blodig", "medium_rare", "medium", "medium_well", "genomstekt", "långkokt"];
 const SWEDISH_FISH_FULL = ["blodig", "medium_rare", "medium", "genomstekt"];
 const SWEDISH_POULTRY_FULL = ["medium", "genomstekt", "långkokt"];
 
@@ -780,6 +779,9 @@ const SWEDISH_POULTRY_FULL = ["medium", "genomstekt", "långkokt"];
  * Temperature recommendations based on cooking style, not just safety.
  * All cuts have full doneness range - users choose based on preference.
  * Livsmedelsverket safety info can be shown separately in the UI if needed.
+ * 
+ * Note: For raw/rare preparations (e.g., tuna tataki, beef tartare),
+ * use sushi-grade or properly sourced ingredients.
  * 
  * Terminology:
  * - "Skiva" = steak/chop style cuts
