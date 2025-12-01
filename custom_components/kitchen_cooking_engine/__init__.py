@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 2024-11-30T23:50:00Z
-Last Agent Edit: 2024-11-30T23:50:00Z
+Last Updated: 2024-12-01T01:45:00Z
+Last Agent Edit: 2024-12-01T01:45:00Z
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -19,10 +19,9 @@ This integration provides:
 from __future__ import annotations
 
 import logging
-from typing import Any
 
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import Platform
+from homeassistant.const import ATTR_ENTITY_ID, Platform
 from homeassistant.core import HomeAssistant, ServiceCall
 from homeassistant.helpers import entity_registry as er
 
@@ -36,7 +35,6 @@ from .const import (
 from .cooking_data import (
     get_cut_by_id,
     get_doneness_for_cut,
-    CookingMethod,
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -107,12 +105,56 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     return unload_ok
 
 
+def _get_cooking_session_entities(hass: HomeAssistant, entity_ids: list[str]) -> list:
+    """Get CookingSessionSensor entities from entity IDs.
+    
+    This imports the sensor module locally to avoid circular imports.
+    """
+    from .sensor import CookingSessionSensor
+    
+    entities = []
+    for entity_id in entity_ids:
+        state = hass.states.get(entity_id)
+        if state is None:
+            _LOGGER.warning("Entity %s not found", entity_id)
+            continue
+            
+        # Get the actual entity object from entity registry
+        entity_reg = er.async_get(hass)
+        entity_entry = entity_reg.async_get(entity_id)
+        if entity_entry is None:
+            _LOGGER.warning("Entity %s not in registry", entity_id)
+            continue
+            
+        # Find the entity in our stored data
+        for entry_id, data in hass.data.get(DOMAIN, {}).items():
+            if isinstance(data, dict) and "entities" in data:
+                for entity in data["entities"]:
+                    if hasattr(entity, "entity_id") and entity.entity_id == entity_id:
+                        if isinstance(entity, CookingSessionSensor):
+                            entities.append(entity)
+                            break
+    
+    return entities
+
+
 async def _async_register_services(hass: HomeAssistant) -> None:
     """Register integration services."""
 
     async def handle_start_cook(call: ServiceCall) -> None:
         """Handle start cook service call."""
         _LOGGER.info("Kitchen Cooking Engine: Start cook service called")
+        
+        # Get entity IDs from service call
+        entity_ids = call.data.get(ATTR_ENTITY_ID)
+        if entity_ids is None:
+            _LOGGER.error("No entity_id specified for start_cook service")
+            return
+        
+        # Ensure entity_ids is a list
+        if isinstance(entity_ids, str):
+            entity_ids = [entity_ids]
+        
         cut_id = call.data.get("cut_id")
         doneness = call.data.get("doneness")
         cooking_method = call.data.get("cooking_method")
@@ -138,20 +180,117 @@ async def _async_register_services(hass: HomeAssistant) -> None:
             cooking_method,
         )
 
-        # Find the sensor entity and call start_cook
-        # This would be implemented when we have entity references
+        # Get the category name for the protein
+        protein_name = None
+        from .cooking_data import MEAT_CATEGORIES
+        for category in MEAT_CATEGORIES:
+            for meat in category.meats:
+                for cut_type in meat.cut_types:
+                    if cut in cut_type.cuts:
+                        protein_name = category.name
+                        break
+        
+        # Find and update the target entities
+        entities = _get_cooking_session_entities(hass, entity_ids)
+        if not entities:
+            _LOGGER.warning("No cooking session entities found for %s", entity_ids)
+            # Fall back to finding entities via state machine
+            for entity_id in entity_ids:
+                # Store the cook parameters for the entity
+                # The entity will pick these up on next state update
+                entry_id_match = None
+                for entry_id in hass.data.get(DOMAIN, {}):
+                    if isinstance(hass.data[DOMAIN].get(entry_id), dict):
+                        entry_id_match = entry_id
+                        break
+                if entry_id_match:
+                    hass.data[DOMAIN][entry_id_match]["pending_cook"] = {
+                        "protein": protein_name,
+                        "cut": cut.name,
+                        "cut_name_long": cut.name_long,
+                        "doneness": doneness,
+                        "cooking_method": cooking_method,
+                        "target_temp_c": temp_range.target_temp_c,
+                        "target_temp_f": temp_range.target_temp_f,
+                        "min_temp_c": temp_range.min_temp_c,
+                        "min_temp_f": temp_range.min_temp_f,
+                        "max_temp_c": temp_range.max_temp_c,
+                        "max_temp_f": temp_range.max_temp_f,
+                        "rest_time_min": cut.rest_time_min,
+                        "rest_time_max": cut.rest_time_max,
+                        "usda_safe": temp_range.usda_safe,
+                        "carryover_temp_c": cut.carryover_temp_c,
+                        "cut_display": cut.name_long,
+                    }
+                    _LOGGER.info("Stored pending cook for next entity update")
+            return
+            
+        for entity in entities:
+            entity.start_cook(
+                protein=protein_name or "unknown",
+                cut=cut.name,
+                doneness=doneness,
+                cooking_method=cooking_method,
+                target_temp_c=temp_range.target_temp_c,
+                target_temp_f=temp_range.target_temp_f,
+                min_temp_c=temp_range.min_temp_c,
+                min_temp_f=temp_range.min_temp_f,
+                max_temp_c=temp_range.max_temp_c,
+                max_temp_f=temp_range.max_temp_f,
+                rest_time_min=cut.rest_time_min,
+                rest_time_max=cut.rest_time_max,
+                usda_safe=temp_range.usda_safe,
+                carryover_temp_c=cut.carryover_temp_c,
+                cut_display=cut.name_long,
+            )
 
     async def handle_stop_cook(call: ServiceCall) -> None:
         """Handle stop cook service call."""
         _LOGGER.info("Kitchen Cooking Engine: Stop cook service called")
+        
+        entity_ids = call.data.get(ATTR_ENTITY_ID)
+        if entity_ids is None:
+            _LOGGER.error("No entity_id specified for stop_cook service")
+            return
+        
+        if isinstance(entity_ids, str):
+            entity_ids = [entity_ids]
+        
+        entities = _get_cooking_session_entities(hass, entity_ids)
+        for entity in entities:
+            entity.stop_cook()
 
     async def handle_start_rest(call: ServiceCall) -> None:
         """Handle start rest service call."""
         _LOGGER.info("Kitchen Cooking Engine: Start rest service called")
+        
+        entity_ids = call.data.get(ATTR_ENTITY_ID)
+        if entity_ids is None:
+            _LOGGER.error("No entity_id specified for start_rest service")
+            return
+        
+        if isinstance(entity_ids, str):
+            entity_ids = [entity_ids]
+        
+        entities = _get_cooking_session_entities(hass, entity_ids)
+        for entity in entities:
+            entity.start_rest()
 
     async def handle_complete(call: ServiceCall) -> None:
         """Handle complete session service call."""
         _LOGGER.info("Kitchen Cooking Engine: Complete session service called")
+        
+        entity_ids = call.data.get(ATTR_ENTITY_ID)
+        if entity_ids is None:
+            _LOGGER.error("No entity_id specified for complete_session service")
+            return
+        
+        if isinstance(entity_ids, str):
+            entity_ids = [entity_ids]
+        
+        entities = _get_cooking_session_entities(hass, entity_ids)
+        for entity in entities:
+            entity.complete_session()
 
     # Only register if not already registered
     if not hass.services.has_service(DOMAIN, SERVICE_START_COOK):

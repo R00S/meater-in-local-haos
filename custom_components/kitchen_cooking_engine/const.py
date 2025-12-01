@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 2024-11-30T23:50:00Z
-Last Agent Edit: 2024-11-30T23:50:00Z
+Last Updated: 2024-12-01T01:55:00Z
+Last Agent Edit: 2024-12-01T01:55:00Z
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -32,6 +32,7 @@ MINUTES_PER_DEGREE_C = 2.5  # Rough ETA estimate (varies by cut/method)
 # Attribute keys
 ATTR_PROTEIN = "protein"
 ATTR_CUT = "cut"
+ATTR_CUT_DISPLAY = "cut_display"
 ATTR_DONENESS = "doneness"
 ATTR_TARGET_TEMP_C = "target_temp_c"
 ATTR_TARGET_TEMP_F = "target_temp_f"
