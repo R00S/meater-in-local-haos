@@ -1,0 +1,40 @@
+{
+  "title": "Kitchen Cooking Engine",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Kitchen Cooking Engine",
+        "description": "Set up the Kitchen Cooking Engine integration to monitor cooking with any temperature sensor.",
+        "data": {
+          "temperature_sensor": "Temperature Sensor",
+          "ambient_sensor": "Ambient Temperature Sensor (optional)",
+          "temperature_unit": "Temperature Unit"
+        },
+        "data_description": {
+          "temperature_sensor": "Select the temperature sensor to use for cooking (e.g., MEATER probe)",
+          "ambient_sensor": "Optional ambient temperature sensor for better ETA predictions",
+          "temperature_unit": "Choose Celsius or Fahrenheit for display"
+        }
+      }
+    },
+    "error": {
+      "sensor_not_found": "The selected sensor was not found.",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This sensor is already configured for cooking."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Kitchen Cooking Engine Options",
+        "data": {
+          "temperature_sensor": "Temperature Sensor",
+          "ambient_sensor": "Ambient Temperature Sensor (optional)",
+          "temperature_unit": "Temperature Unit"
+        }
+      }
+    }
+  }
+}

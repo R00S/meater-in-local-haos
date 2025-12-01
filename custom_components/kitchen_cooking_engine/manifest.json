@@ -1,0 +1,14 @@
+{
+  "domain": "kitchen_cooking_engine",
+  "name": "Kitchen Cooking Engine",
+  "codeowners": ["@R00S"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/R00S/meater-in-local-haos",
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/R00S/meater-in-local-haos/issues",
+  "requirements": [],
+  "version": "0.1.0",
+  "homeassistant": "2024.1.0"
+}

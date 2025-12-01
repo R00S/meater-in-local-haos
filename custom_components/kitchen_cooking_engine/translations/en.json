@@ -1,0 +1,65 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Kitchen Cooking Engine Setup",
+        "description": "Configure your cooking session with a temperature sensor.",
+        "data": {
+          "temperature_sensor": "Temperature Sensor (required)",
+          "ambient_sensor": "Ambient Temperature Sensor (optional)",
+          "temperature_unit": "Temperature Unit"
+        }
+      }
+    },
+    "error": {
+      "sensor_not_found": "The selected sensor was not found."
+    },
+    "abort": {
+      "already_configured": "This sensor is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Kitchen Cooking Engine Options",
+        "data": {
+          "temperature_sensor": "Temperature Sensor",
+          "ambient_sensor": "Ambient Temperature Sensor",
+          "temperature_unit": "Temperature Unit"
+        }
+      }
+    }
+  },
+  "services": {
+    "start_cook": {
+      "name": "Start Cook",
+      "description": "Start a new cooking session with selected protein, cut, and doneness.",
+      "fields": {
+        "cut_id": {
+          "name": "Cut ID",
+          "description": "The ID of the cut to cook."
+        },
+        "doneness": {
+          "name": "Doneness",
+          "description": "The desired doneness level."
+        },
+        "cooking_method": {
+          "name": "Cooking Method",
+          "description": "The cooking method to use."
+        }
+      }
+    },
+    "stop_cook": {
+      "name": "Stop Cook",
+      "description": "Stop the current cooking session."
+    },
+    "start_rest": {
+      "name": "Start Rest",
+      "description": "Start the resting phase after cooking."
+    },
+    "complete_session": {
+      "name": "Complete Session",
+      "description": "Mark the cooking session as complete."
+    }
+  }
+}
