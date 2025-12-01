@@ -1,7 +1,7 @@
 """Sensor platform for Kitchen Cooking Engine.
 
-Last Updated: 2024-12-01T01:50:00Z
-Last Agent Edit: 2024-12-01T01:50:00Z
+Last Updated: 1 Dec 2025, 12:31 CET
+Last Change: Added event firing, dynamic icons, device registry support
 """
 
 from __future__ import annotations

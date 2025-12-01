@@ -1,7 +1,6 @@
 # Agent Handoff Document
 
-**Last Updated:** 2024-12-01T02:15:00Z
-**Last Agent Edit:** 2024-12-01T02:15:00Z
+**Last Updated:** 1 Dec 2025, 12:31 CET
 
 ## Development Workflow
 
@@ -12,6 +11,31 @@ The development workflow for this project is:
 3. **User imports via HACS** - User uses HACS to import the integration into HAOS
 4. **User tests in HAOS** - User tests the integration in Home Assistant
 5. **Iterate** - Repeat the cycle based on feedback
+
+### Timestamp Format
+
+When editing code files, use the following format at the top of each file:
+
+```
+Last Updated: D MMM YYYY, HH:MM CET
+Last Change: Brief description of what was changed
+```
+
+**Example:**
+```python
+"""Module description.
+
+Last Updated: 1 Dec 2025, 12:31 CET
+Last Change: Added event firing for state transitions
+"""
+```
+
+**Rules:**
+- Use Central European Time (CET/CEST) timezone
+- Use human-readable date format: `D MMM YYYY` (e.g., "1 Dec 2025")
+- Use 24-hour time format: `HH:MM` (e.g., "12:31")
+- Keep the "Last Change" description short (under 60 characters)
+- Update timestamp on every edit, even small ones
 
 ### Important Notes
 

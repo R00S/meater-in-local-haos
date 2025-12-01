@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 2024-12-01T01:55:00Z
-Last Agent Edit: 2024-12-01T01:55:00Z
+Last Updated: 1 Dec 2025, 12:31 CET
+Last Change: Added ATTR_CUT_DISPLAY for user-friendly cut names
 """
 
 DOMAIN = "kitchen_cooking_engine"
