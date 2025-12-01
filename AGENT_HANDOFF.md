@@ -1,7 +1,7 @@
 # Agent Handoff Document
 
-**Last Updated:** 2024-12-01T00:25:00Z
-**Last Agent Edit:** 2024-12-01T00:25:00Z
+**Last Updated:** 2024-12-01T00:35:00Z
+**Last Agent Edit:** 2024-12-01T00:35:00Z
 
 ## Development Workflow
 
@@ -18,6 +18,25 @@ The development workflow for this project is:
 - **Code files are ONLY edited by the AI agent** - You can be confident that any code is never edited by anyone else
 - **Documentation MAY be edited by the user** - The user may update documentation files
 - **HACS testing** - The integration is tested by importing via HACS into a real Home Assistant instance
+- **NO manual file editing on HAOS** - For HAOS integrity, all file changes must come through HACS imports
+
+### HACS Branch-Based Development Workflow
+
+To iterate without merging PRs for every test:
+
+1. **Initial Setup (one-time)**:
+   - Merge the first PR to `main` so HACS validates the repository structure
+   - Add the repo as a custom repository in HACS
+
+2. **Iterative Development**:
+   - Agent pushes changes to a feature branch (e.g., `copilot/fix-xyz` or `dev`)
+   - In HACS, when downloading/redownloading, specify the branch name
+   - User redownloads from HACS after each push - no PR merge needed
+   - User restarts HA and tests
+
+3. **Key Insight**: HACS can pull from **any branch** once the repo is validated. Only `main` needs the basic structure for initial HACS validation. All future iterations happen on feature branches that are downloaded directly via HACS.
+
+This allows continuous iteration without closing the agent session between tests.
 
 ---
 
