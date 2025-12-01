@@ -1,11 +1,11 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * Last Updated: 1 Dec 2025, 22:45 CET
- * Last Change: v0.1.1.7 - Fix blank page by using updated() lifecycle
- *              - Move API fetch from connectedCallback to updated()
- *              - hass property is not available in connectedCallback
- *              - Now properly waits for hass to be set before fetching
+ * Last Updated: 1 Dec 2025, 22:50 CET
+ * Last Change: v0.1.1.7 - Reverted to v0.1.1.4 working panel
+ *              - The callApi changes in v0.1.1.5-6 caused blank page
+ *              - This is the last known working version
+ *              - API auth issue still exists but at least panel loads
  * 
  * NOTE: Temperature values are suggestions based on cooking style, not just safety.
  *       Livsmedelsverket safety info can be shown separately if needed.
@@ -1349,20 +1349,8 @@ class KitchenCookingPanel extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    // Note: Don't fetch here - hass is not available yet
-    // Instead, we fetch in updated() when hass becomes available
-  }
-
-  updated(changedProperties) {
-    super.updated(changedProperties);
-    // Fetch cooking data when hass becomes available
-    if (changedProperties.has('hass') && this.hass && !this._apiCategories && !this._apiLoading) {
-      this._fetchCookingData();
-    }
-    // Also refetch when data source changes
-    if (changedProperties.has('_dataSource') && this.hass) {
-      this._fetchCookingData();
-    }
+    // Fetch cooking data from API on component load
+    this._fetchCookingData();
   }
 
   async _fetchCookingData() {
@@ -1376,30 +1364,30 @@ class KitchenCookingPanel extends LitElement {
       : DATA_SOURCE_INTERNATIONAL;
     
     try {
-      // Use hass.callApi for authenticated requests
-      // This properly includes the auth token in requests
-      if (this.hass && this.hass.callApi) {
-        // Fetch categories using authenticated API call
-        const categoriesData = await this.hass.callApi(
-          'GET',
-          `kitchen_cooking_engine/cooking_data?source=${encodeURIComponent(source)}`
-        );
-        this._apiCategories = categoriesData.categories;
-        
-        // Fetch doneness options using authenticated API call
-        const donenessData = await this.hass.callApi(
-          'GET',
-          `kitchen_cooking_engine/doneness_options?source=${encodeURIComponent(source)}`
-        );
-        this._apiDonenessOptions = donenessData.options;
-        
-        console.log("Kitchen Cooking Engine: Loaded cooking data from API", {
-          source: this._dataSource,
-          categories: Object.keys(this._apiCategories || {}),
-        });
-      } else {
-        throw new Error("Home Assistant API not available");
+      // Fetch categories
+      const categoriesResponse = await fetch(
+        `/api/kitchen_cooking_engine/cooking_data?source=${encodeURIComponent(source)}`
+      );
+      if (!categoriesResponse.ok) {
+        throw new Error(`Failed to fetch categories: ${categoriesResponse.status}`);
       }
+      const categoriesData = await categoriesResponse.json();
+      this._apiCategories = categoriesData.categories;
+      
+      // Fetch doneness options
+      const donenessResponse = await fetch(
+        `/api/kitchen_cooking_engine/doneness_options?source=${encodeURIComponent(source)}`
+      );
+      if (!donenessResponse.ok) {
+        throw new Error(`Failed to fetch doneness options: ${donenessResponse.status}`);
+      }
+      const donenessData = await donenessResponse.json();
+      this._apiDonenessOptions = donenessData.options;
+      
+      console.log("Kitchen Cooking Engine: Loaded cooking data from API", {
+        source: this._dataSource,
+        categories: Object.keys(this._apiCategories || {}),
+      });
     } catch (error) {
       console.warn("Kitchen Cooking Engine: API fetch failed, using fallback data", error);
       this._apiError = error.message;
@@ -2561,7 +2549,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "22";
+const PANEL_VERSION = "20";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
