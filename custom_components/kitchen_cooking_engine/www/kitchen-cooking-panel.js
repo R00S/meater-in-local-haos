@@ -1,11 +1,11 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * Last Updated: 1 Dec 2025, 22:30 CET
- * Last Change: v0.1.1.5 - Fix API authentication
- *              - Use hass.callApi() for authenticated API requests
- *              - Fixes "invalid authentication" errors when fetching cooking data
- *              - Warning banner displayed when using fallback data
+ * Last Updated: 1 Dec 2025, 22:40 CET
+ * Last Change: v0.1.1.6 - Fix blank page caused by panel version mismatch
+ *              - Sync PANEL_VERSION in JS (21) with const.py (21)
+ *              - The browser was trying to load kitchen-cooking-panel-v21
+ *                but only v20 was registered in the JS
  * 
  * NOTE: Temperature values are suggestions based on cooking style, not just safety.
  *       Livsmedelsverket safety info can be shown separately if needed.
@@ -2549,7 +2549,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "20";
+const PANEL_VERSION = "21";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
