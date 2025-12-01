@@ -1,11 +1,12 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * Last Updated: 1 Dec 2025, 22:50 CET
- * Last Change: v0.1.1.7 - Reverted to v0.1.1.4 working panel
- *              - The callApi changes in v0.1.1.5-6 caused blank page
- *              - This is the last known working version
- *              - API auth issue still exists but at least panel loads
+ * Last Updated: 1 Dec 2025, 23:00 CET
+ * Last Change: v0.1.1.8 - Simplified data source approach
+ *              - Removed API fetch logic (caused auth issues)
+ *              - Uses hardcoded frontend data directly
+ *              - Both International and Swedish data maintained in frontend
+ *              - Backend Python data is canonical; frontend updated at release
  * 
  * NOTE: Temperature values are suggestions based on cooking style, not just safety.
  *       Livsmedelsverket safety info can be shown separately if needed.
@@ -1321,10 +1322,6 @@ class KitchenCookingPanel extends LitElement {
       _dataSource: { type: String },
       _customTargetTempC: { type: Number },
       _showTempAdjust: { type: Boolean },
-      _apiCategories: { type: Object },
-      _apiDonenessOptions: { type: Object },
-      _apiLoading: { type: Boolean },
-      _apiError: { type: String },
     };
   }
 
@@ -1340,84 +1337,24 @@ class KitchenCookingPanel extends LitElement {
     this._dataSource = DATA_SOURCE_INTERNATIONAL;
     this._customTargetTempC = null;
     this._showTempAdjust = false;
-    // API-fetched data (single source of truth from backend)
-    this._apiCategories = null;
-    this._apiDonenessOptions = null;
-    this._apiLoading = false;
-    this._apiError = null;
+    // Removed API fetch - using hardcoded frontend data directly
+    // Both International and Swedish data maintained in frontend
+    // Backend Python data is canonical; frontend updated at release
   }
 
   connectedCallback() {
     super.connectedCallback();
-    // Fetch cooking data from API on component load
-    this._fetchCookingData();
-  }
-
-  async _fetchCookingData() {
-    this._apiLoading = true;
-    this._apiError = null;
-    
-    // Validate data source to prevent injection
-    const validSources = [DATA_SOURCE_INTERNATIONAL, DATA_SOURCE_SWEDISH];
-    const source = validSources.includes(this._dataSource) 
-      ? this._dataSource 
-      : DATA_SOURCE_INTERNATIONAL;
-    
-    try {
-      // Fetch categories
-      const categoriesResponse = await fetch(
-        `/api/kitchen_cooking_engine/cooking_data?source=${encodeURIComponent(source)}`
-      );
-      if (!categoriesResponse.ok) {
-        throw new Error(`Failed to fetch categories: ${categoriesResponse.status}`);
-      }
-      const categoriesData = await categoriesResponse.json();
-      this._apiCategories = categoriesData.categories;
-      
-      // Fetch doneness options
-      const donenessResponse = await fetch(
-        `/api/kitchen_cooking_engine/doneness_options?source=${encodeURIComponent(source)}`
-      );
-      if (!donenessResponse.ok) {
-        throw new Error(`Failed to fetch doneness options: ${donenessResponse.status}`);
-      }
-      const donenessData = await donenessResponse.json();
-      this._apiDonenessOptions = donenessData.options;
-      
-      console.log("Kitchen Cooking Engine: Loaded cooking data from API", {
-        source: this._dataSource,
-        categories: Object.keys(this._apiCategories || {}),
-      });
-    } catch (error) {
-      console.warn("Kitchen Cooking Engine: API fetch failed, using fallback data", error);
-      this._apiError = error.message;
-      // Fall back to hardcoded data
-      this._apiCategories = null;
-      this._apiDonenessOptions = null;
-    } finally {
-      this._apiLoading = false;
-    }
+    // No API calls needed - using hardcoded data
   }
 
   _getDataCategories() {
-    // Use API data if available, otherwise fall back to hardcoded data
-    if (this._apiCategories) {
-      return this._apiCategories;
-    }
+    // Use hardcoded data based on selected source
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_MEAT_CATEGORIES : MEAT_CATEGORIES;
   }
 
   _getDonenessOptions() {
-    // Use API data if available, otherwise fall back to hardcoded data
-    if (this._apiDonenessOptions) {
-      return this._apiDonenessOptions;
-    }
+    // Use hardcoded data based on selected source
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
-  }
-
-  _isUsingFallbackData() {
-    // Returns true if we're using hardcoded fallback data instead of API data
-    return !this._apiCategories && !this._apiLoading;
   }
 
   _findCookingEntities() {
@@ -1586,8 +1523,7 @@ class KitchenCookingPanel extends LitElement {
     this._selectedDoneness = null;
     this._customTargetTempC = null;
     this._showTempAdjust = false;
-    // Refetch data for the new source
-    this._fetchCookingData();
+    // No API refetch needed - data source switch handled locally
   }
 
   _selectCategory(categoryKey) {
@@ -1701,18 +1637,9 @@ class KitchenCookingPanel extends LitElement {
             .hass=${this.hass}
             .narrow=${this.narrow}
         ></ha-menu-button>
-        <div slot="title">🍳 Kitchen Cooking Engine${this._apiLoading ? ' (Loading...)' : ''}</div>
+        <div slot="title">🍳 Kitchen Cooking Engine</div>
         
         <div class="content">
-          ${this._apiLoading ? html`<div class="loading-overlay">Loading cooking data...</div>` : ''}
-          ${this._isUsingFallbackData() ? html`
-            <div class="fallback-warning">
-              ⚠️ <strong>Warning:</strong> Using offline fallback data. 
-              ${this._apiError ? html`<br>API Error: ${this._apiError}` : ''}
-              <br>This may cause cook start failures. Please check the Kitchen Cooking Engine integration.
-              <button @click=${() => this._fetchCookingData()}>Retry</button>
-            </div>
-          ` : ''}
           ${entities.length === 0 ? this._renderNoEntities() : 
             (isActive ? this._renderActiveCook(state) : this._renderSetupForm(entities))}
         </div>
@@ -2071,41 +1998,6 @@ class KitchenCookingPanel extends LitElement {
         text-align: center;
         padding: 48px;
         color: var(--secondary-text-color);
-      }
-
-      .loading-overlay {
-        text-align: center;
-        padding: 16px;
-        color: var(--secondary-text-color);
-        background: var(--primary-background-color);
-        border-radius: 8px;
-        margin-bottom: 16px;
-        border: 1px dashed var(--divider-color);
-      }
-
-      .fallback-warning {
-        background: #fff3cd;
-        border: 2px solid #ffc107;
-        border-radius: 8px;
-        padding: 16px;
-        margin-bottom: 16px;
-        color: #856404;
-        text-align: center;
-        font-size: 14px;
-      }
-
-      .fallback-warning button {
-        margin-top: 8px;
-        padding: 8px 16px;
-        background: #ffc107;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-weight: 500;
-      }
-
-      .fallback-warning button:hover {
-        background: #e0a800;
       }
 
       ha-card {
@@ -2549,7 +2441,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "20";
+const PANEL_VERSION = "23";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
