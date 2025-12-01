@@ -61,12 +61,25 @@ const VEG_DONENESS = ["tender", "crisp_tender", "caramelized", "charred"];
 /**
  * MEAT_CATEGORIES - Hierarchical meat/protein data structure
  * 
- * Structure: Category → Meats/Animals → Cut Types → Cuts
- * This mirrors the MEATER app's meatCutStructure package structure.
+ * Structure mirrors the EXACT MEATER app Guided Cook flow (2025):
+ * - Beef/Pork/Lamb: Category → Group (Steak/Roast/Other) → Cuts
+ * - Poultry: Category → Species (Chicken/Duck/Goose/Turkey) → Cuts
+ * - Fish: Category → Fish Type → Fillet/Other
+ * - Other/Game: Category → Animal Type → Steak/Roast/Other
  * 
- * NOTE: The organizational structure and cut names are based on MEATER app.
+ * Source: https://support.meater.com/hc/en-us/articles/36774867052827-Cooking-with-the-MEATER-App
+ * Last verified: 2025-05-28
+ * 
+ * NOTE: Cut names and structure from MEATER app public documentation.
  *       All temperature values come from USDA/FDA public safety guidelines.
  *       Cut IDs match cooking_data.py for backend compatibility.
+ * 
+ * Additional sources consulted (for completeness):
+ * - Hank's True BBQ Meat Cuts and Cooking Temps
+ * - FoodFireFriends Smoking Times and Temperatures Chart
+ * - Cookery Hut Meat Cooking Times and Temperatures Chart
+ * - GourmetFoodStore Meat & Poultry Cooking Temperatures
+ * - Swedish sources: Stekguiden.se, Gårdssällskapet, Scan Köttguiden, ICA, Köket.se
  */
 const MEAT_CATEGORIES = {
   beef: {
@@ -74,68 +87,76 @@ const MEAT_CATEGORIES = {
     name: "Beef",
     icon: "🥩",
     color: "#8B0000",
+    // MEATER app flow: Beef → Steak/Roast/Other → Cut
     meats: [
       {
         id: 10,
-        name: "Cow",
+        name: "Steak",  // Group name as shown in MEATER app
         cutTypes: [
           {
             id: 100,
-            name: "Steaks",
+            name: "Steak Cuts",
             cuts: [
-              { id: 100, name: "Ribeye Steak", doneness: STEAK_DONENESS },
-              { id: 101, name: "Sirloin Steak", doneness: STEAK_DONENESS },
-              { id: 102, name: "Filet Mignon / Tenderloin", doneness: STEAK_DONENESS },
-              { id: 103, name: "New York Strip", doneness: STEAK_DONENESS },
-              { id: 104, name: "T-Bone / Porterhouse", doneness: STEAK_DONENESS },
-              { id: 105, name: "Flank Steak", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 106, name: "Skirt Steak", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 107, name: "Flat Iron Steak", doneness: STEAK_DONENESS },
-              { id: 108, name: "Hanger Steak", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 109, name: "Tri-Tip", doneness: STEAK_DONENESS },
-              { id: 110, name: "Tomahawk Steak", doneness: STEAK_DONENESS },
-              { id: 111, name: "Picanha", doneness: STEAK_DONENESS },
+              { id: 100, name: "Sirloin", doneness: STEAK_DONENESS },
+              { id: 101, name: "Rib Eye", doneness: STEAK_DONENESS },
+              { id: 102, name: "Flank", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 103, name: "T-Bone", doneness: STEAK_DONENESS },
+              { id: 104, name: "Tomahawk", doneness: STEAK_DONENESS },
+              { id: 105, name: "Filet Mignon", doneness: STEAK_DONENESS },
+              { id: 106, name: "Picanha", doneness: STEAK_DONENESS },
+              { id: 107, name: "New York Strip", doneness: STEAK_DONENESS },
+              { id: 108, name: "Skirt Steak", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 109, name: "Flat Iron Steak", doneness: STEAK_DONENESS },
+              { id: 110, name: "Hanger Steak", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 111, name: "Porterhouse", doneness: STEAK_DONENESS },
+              { id: 199, name: "Other", doneness: STEAK_DONENESS },
             ]
-          },
+          }
+        ]
+      },
+      {
+        id: 11,
+        name: "Roast",  // Group name as shown in MEATER app
+        cutTypes: [
           {
-            id: 101,
-            name: "Roasts",
+            id: 110,
+            name: "Roast Cuts",
             cuts: [
-              { id: 120, name: "Prime Rib / Standing Rib Roast", doneness: STEAK_DONENESS },
-              { id: 121, name: "Beef Tenderloin Roast", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 122, name: "Top Round Roast", doneness: STEAK_DONENESS_NO_RARE },
-              { id: 123, name: "Sirloin Tip Roast", doneness: STEAK_DONENESS_NO_RARE },
-              { id: 124, name: "Roasting Joint", doneness: STEAK_DONENESS },
-              { id: 125, name: "Round Roast", doneness: STEAK_DONENESS_NO_RARE },
-              { id: 126, name: "Rump Roast", doneness: STEAK_DONENESS_NO_RARE },
+              { id: 120, name: "Roasting Joint", doneness: STEAK_DONENESS },
+              { id: 121, name: "Tenderloin", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 122, name: "Brisket", doneness: BRAISING_DONENESS },
+              { id: 123, name: "Prime Rib", doneness: STEAK_DONENESS },
+              { id: 124, name: "Round", doneness: STEAK_DONENESS_NO_RARE },
+              { id: 125, name: "Tri-Tip", doneness: STEAK_DONENESS },
+              { id: 126, name: "Shank", doneness: BRAISING_DONENESS },
+              { id: 127, name: "Rump", doneness: STEAK_DONENESS_NO_RARE },
+              { id: 128, name: "Chuck", doneness: BRAISING_DONENESS },
+              { id: 129, name: "Sirloin Roast", doneness: STEAK_DONENESS },
+              { id: 130, name: "Top Round Roast", doneness: STEAK_DONENESS_NO_RARE },
+              { id: 199, name: "Other", doneness: STEAK_DONENESS },
             ]
-          },
+          }
+        ]
+      },
+      {
+        id: 12,
+        name: "Other",  // Group name as shown in MEATER app
+        cutTypes: [
           {
-            id: 102,
-            name: "Braising Cuts",
+            id: 120,
+            name: "Other Cuts",
             cuts: [
-              { id: 130, name: "Chuck Roast / Pot Roast", doneness: BRAISING_DONENESS },
-              { id: 131, name: "Brisket", doneness: BRAISING_DONENESS },
-              { id: 132, name: "Short Ribs", doneness: BRAISING_DONENESS },
-              { id: 133, name: "Beef Shank / Osso Buco", doneness: BRAISING_DONENESS },
-            ]
-          },
-          {
-            id: 103,
-            name: "Ground",
-            cuts: [
-              { id: 140, name: "Beef Burger / Patty", doneness: ["well_done"] },
-              { id: 142, name: "Meatloaf", doneness: ["done"] },
-            ]
-          },
-          {
-            id: 104,
-            name: "Other / Offal",
-            cuts: [
-              { id: 145, name: "Beef Liver", doneness: ["medium", "well_done"] },
-              { id: 147, name: "Beef Tongue", doneness: BRAISING_DONENESS },
-              { id: 148, name: "Beef Shin", doneness: BRAISING_DONENESS },
-              { id: 149, name: "Beef Rib", doneness: BRAISING_DONENESS },
+              { id: 140, name: "Ground", doneness: ["well_done"] },
+              { id: 141, name: "Burger", doneness: ["well_done"] },
+              { id: 142, name: "Rib", doneness: BRAISING_DONENESS },
+              { id: 143, name: "Meatloaf", doneness: ["done"] },
+              { id: 144, name: "Liver", doneness: ["medium", "well_done"] },
+              { id: 145, name: "Shin", doneness: BRAISING_DONENESS },
+              { id: 146, name: "Tongue", doneness: BRAISING_DONENESS },
+              { id: 147, name: "Short Ribs", doneness: BRAISING_DONENESS },
+              { id: 148, name: "Oxtail", doneness: BRAISING_DONENESS },
+              { id: 149, name: "Cheek", doneness: BRAISING_DONENESS },
+              { id: 199, name: "Other", doneness: STEAK_DONENESS },
             ]
           }
         ]
@@ -147,66 +168,66 @@ const MEAT_CATEGORIES = {
     name: "Pork",
     icon: "🐷",
     color: "#FFB6C1",
+    // MEATER app flow: Pork → Steak/Roast/Other → Cut
     meats: [
       {
         id: 20,
-        name: "Pig",
+        name: "Steak",
         cutTypes: [
           {
             id: 200,
-            name: "Steaks & Chops",
+            name: "Steak Cuts",
             cuts: [
-              { id: 200, name: "Pork Chop", doneness: PORK_DONENESS },
-              { id: 201, name: "Pork Tenderloin", doneness: PORK_DONENESS },
-              { id: 202, name: "Pork Loin Steak", doneness: PORK_DONENESS },
-              { id: 203, name: "Pork Shoulder Steak", doneness: PORK_DONENESS },
-              { id: 204, name: "Secreto (Ibérico)", doneness: PORK_DONENESS },
+              { id: 200, name: "Chop", doneness: PORK_DONENESS },
+              { id: 201, name: "Loin", doneness: PORK_DONENESS },
+              { id: 202, name: "Tenderloin", doneness: PORK_DONENESS },
+              { id: 203, name: "Shoulder", doneness: PORK_DONENESS },
+              { id: 204, name: "Secreto", doneness: PORK_DONENESS },
+              { id: 299, name: "Other", doneness: PORK_DONENESS },
             ]
-          },
+          }
+        ]
+      },
+      {
+        id: 21,
+        name: "Roast",
+        cutTypes: [
           {
-            id: 201,
-            name: "Roasts",
+            id: 210,
+            name: "Roast Cuts",
             cuts: [
-              { id: 210, name: "Pork Loin Roast", doneness: PORK_DONENESS },
-              { id: 211, name: "Pork Shoulder / Boston Butt", doneness: BRAISING_DONENESS },
-              { id: 212, name: "Pork Belly", doneness: ["well_done", "crispy"] },
-              { id: 214, name: "Pork Leg Roast", doneness: PORK_DONENESS },
+              { id: 210, name: "Butt", doneness: BRAISING_DONENESS },
+              { id: 211, name: "Shoulder", doneness: BRAISING_DONENESS },
+              { id: 212, name: "Leg", doneness: PORK_DONENESS },
+              { id: 213, name: "Ham", doneness: PORK_DONENESS },
+              { id: 214, name: "Loin", doneness: PORK_DONENESS },
               { id: 215, name: "Virginia Ham", doneness: ["heated_through"] },
+              { id: 216, name: "Belly", doneness: ["well_done", "crispy"] },
+              { id: 217, name: "Baby Back Ribs", doneness: BRAISING_DONENESS },
+              { id: 218, name: "Spare Ribs", doneness: BRAISING_DONENESS },
+              { id: 219, name: "St. Louis Style Ribs", doneness: BRAISING_DONENESS },
+              { id: 220, name: "Country Style Ribs", doneness: BRAISING_DONENESS },
+              { id: 299, name: "Other", doneness: PORK_DONENESS },
             ]
-          },
+          }
+        ]
+      },
+      {
+        id: 22,
+        name: "Other",
+        cutTypes: [
           {
-            id: 202,
-            name: "Ribs",
+            id: 220,
+            name: "Other Cuts",
             cuts: [
-              { id: 220, name: "Baby Back Ribs", doneness: BRAISING_DONENESS },
-              { id: 221, name: "Spare Ribs", doneness: BRAISING_DONENESS },
-              { id: 222, name: "St. Louis Style Ribs", doneness: BRAISING_DONENESS },
-            ]
-          },
-          {
-            id: 203,
-            name: "Ham",
-            cuts: [
-              { id: 230, name: "Fresh Ham", doneness: PORK_DONENESS },
-              { id: 231, name: "Cured Ham (Pre-cooked)", doneness: ["heated_through"] },
-            ]
-          },
-          {
-            id: 204,
-            name: "Ground",
-            cuts: [
-              { id: 240, name: "Pork Sausage", doneness: ["well_done"] },
-              { id: 241, name: "Ground Pork", doneness: ["well_done"] },
-            ]
-          },
-          {
-            id: 205,
-            name: "Other / Offal",
-            cuts: [
-              { id: 245, name: "Pork Jowl / Guanciale", doneness: BRAISING_DONENESS },
-              { id: 246, name: "Pork Cheek", doneness: BRAISING_DONENESS },
-              { id: 247, name: "Pork Liver", doneness: ["well_done"] },
-              { id: 248, name: "Pork Tongue", doneness: BRAISING_DONENESS },
+              { id: 240, name: "Ground", doneness: ["well_done"] },
+              { id: 241, name: "Tongue", doneness: BRAISING_DONENESS },
+              { id: 242, name: "Jowl", doneness: BRAISING_DONENESS },
+              { id: 243, name: "Cheek", doneness: BRAISING_DONENESS },
+              { id: 244, name: "Liver", doneness: ["well_done"] },
+              { id: 245, name: "Rib", doneness: BRAISING_DONENESS },
+              { id: 246, name: "Sausage", doneness: ["well_done"] },
+              { id: 299, name: "Other", doneness: PORK_DONENESS },
             ]
           }
         ]
@@ -218,6 +239,7 @@ const MEAT_CATEGORIES = {
     name: "Poultry",
     icon: "🍗",
     color: "#FFD700",
+    // MEATER app flow: Poultry → Chicken/Duck/Goose/Turkey → Cut
     meats: [
       {
         id: 30,
@@ -225,89 +247,64 @@ const MEAT_CATEGORIES = {
         cutTypes: [
           {
             id: 300,
-            name: "Whole",
+            name: "Chicken Cuts",
             cuts: [
-              { id: 300, name: "Whole Chicken", doneness: POULTRY_DONENESS },
-            ]
-          },
-          {
-            id: 301,
-            name: "Breast",
-            cuts: [
-              { id: 310, name: "Chicken Breast", doneness: POULTRY_DONENESS },
-              { id: 311, name: "Chicken Breast (Bone-in)", doneness: POULTRY_DONENESS },
-            ]
-          },
-          {
-            id: 302,
-            name: "Dark Meat",
-            cuts: [
-              { id: 320, name: "Chicken Thigh", doneness: POULTRY_DARK_DONENESS },
-              { id: 321, name: "Chicken Leg / Drumstick", doneness: POULTRY_DARK_DONENESS },
-              { id: 322, name: "Chicken Wing", doneness: POULTRY_DARK_DONENESS },
+              { id: 300, name: "Whole", doneness: POULTRY_DONENESS },
+              { id: 301, name: "Breast", doneness: POULTRY_DONENESS },
+              { id: 302, name: "Thigh", doneness: POULTRY_DARK_DONENESS },
+              { id: 303, name: "Leg", doneness: POULTRY_DARK_DONENESS },
+              { id: 304, name: "Ground", doneness: POULTRY_DONENESS },
+              { id: 305, name: "Burger", doneness: POULTRY_DONENESS },
+              { id: 306, name: "Wing", doneness: POULTRY_DARK_DONENESS },
             ]
           }
         ]
       },
       {
         id: 31,
-        name: "Turkey",
+        name: "Duck",
         cutTypes: [
           {
             id: 310,
-            name: "Turkey",
+            name: "Duck Cuts",
             cuts: [
-              { id: 330, name: "Whole Turkey", doneness: POULTRY_DONENESS },
-              { id: 331, name: "Turkey Breast", doneness: POULTRY_DONENESS },
-              { id: 332, name: "Turkey Leg", doneness: POULTRY_DARK_DONENESS },
-              { id: 333, name: "Turkey Thigh", doneness: POULTRY_DARK_DONENESS },
+              { id: 340, name: "Whole", doneness: POULTRY_DONENESS },
+              { id: 341, name: "Breast", doneness: DUCK_BREAST_DONENESS },
+              { id: 342, name: "Leg", doneness: ["dark_meat_optimal"] },
             ]
           }
         ]
       },
       {
         id: 32,
-        name: "Duck",
-        cutTypes: [
-          {
-            id: 320,
-            name: "Duck",
-            cuts: [
-              { id: 340, name: "Duck Breast", doneness: DUCK_BREAST_DONENESS },
-              { id: 341, name: "Whole Duck", doneness: POULTRY_DONENESS },
-              { id: 342, name: "Duck Leg Confit", doneness: ["dark_meat_optimal"] },
-            ]
-          }
-        ]
-      },
-      {
-        id: 34,
         name: "Goose",
         cutTypes: [
           {
-            id: 345,
-            name: "Goose",
+            id: 320,
+            name: "Goose Cuts",
             cuts: [
-              { id: 345, name: "Whole Goose", doneness: POULTRY_DONENESS },
-              { id: 346, name: "Goose Breast", doneness: DUCK_BREAST_DONENESS },
-              { id: 347, name: "Goose Thigh", doneness: POULTRY_DARK_DONENESS },
-              { id: 348, name: "Goose Leg", doneness: POULTRY_DARK_DONENESS },
+              { id: 345, name: "Whole", doneness: POULTRY_DONENESS },
+              { id: 346, name: "Breast", doneness: DUCK_BREAST_DONENESS },
+              { id: 347, name: "Thigh", doneness: POULTRY_DARK_DONENESS },
+              { id: 348, name: "Leg", doneness: POULTRY_DARK_DONENESS },
             ]
           }
         ]
       },
       {
         id: 33,
-        name: "Ground Poultry",
+        name: "Turkey",
         cutTypes: [
           {
             id: 330,
-            name: "Ground",
+            name: "Turkey Cuts",
             cuts: [
-              { id: 350, name: "Ground Chicken", doneness: POULTRY_DONENESS },
-              { id: 351, name: "Ground Turkey", doneness: POULTRY_DONENESS },
-              { id: 352, name: "Chicken Burger", doneness: POULTRY_DONENESS },
-              { id: 353, name: "Turkey Burger", doneness: POULTRY_DONENESS },
+              { id: 330, name: "Whole", doneness: POULTRY_DONENESS },
+              { id: 331, name: "Breast", doneness: POULTRY_DONENESS },
+              { id: 332, name: "Thigh", doneness: POULTRY_DARK_DONENESS },
+              { id: 333, name: "Leg", doneness: POULTRY_DARK_DONENESS },
+              { id: 334, name: "Ground", doneness: POULTRY_DONENESS },
+              { id: 335, name: "Burger", doneness: POULTRY_DONENESS },
             ]
           }
         ]
@@ -316,9 +313,10 @@ const MEAT_CATEGORIES = {
   },
   fish: {
     id: 4,
-    name: "Fish & Seafood",
+    name: "Fish",
     icon: "🐟",
     color: "#4682B4",
+    // MEATER app flow: Fish → Fish Type → Fillet/Other
     meats: [
       {
         id: 40,
@@ -326,58 +324,188 @@ const MEAT_CATEGORIES = {
         cutTypes: [
           {
             id: 400,
-            name: "Salmon",
+            name: "Salmon Cuts",
             cuts: [
-              { id: 400, name: "Salmon Fillet", doneness: FISH_DONENESS },
-              { id: 401, name: "Salmon Steak", doneness: FISH_DONENESS },
+              { id: 400, name: "Fillet (Wild)", doneness: FISH_DONENESS },
+              { id: 401, name: "Fillet (Farmed)", doneness: FISH_DONENESS },
+              { id: 402, name: "Steak", doneness: FISH_DONENESS },
+              { id: 499, name: "Other", doneness: FISH_DONENESS },
             ]
           }
         ]
       },
       {
         id: 41,
-        name: "Tuna",
+        name: "Cod",
         cutTypes: [
           {
             id: 410,
-            name: "Tuna",
+            name: "Cod Cuts",
             cuts: [
-              { id: 410, name: "Tuna Steak", doneness: FISH_RARE_OK },
+              { id: 410, name: "Fillet", doneness: ["medium", "well_done"] },
+              { id: 419, name: "Other", doneness: ["medium", "well_done"] },
             ]
           }
         ]
       },
       {
         id: 42,
-        name: "White Fish",
+        name: "Halibut",
         cutTypes: [
           {
             id: 420,
-            name: "White Fish",
+            name: "Halibut Cuts",
             cuts: [
-              { id: 420, name: "Cod Fillet", doneness: ["medium", "well_done"] },
-              { id: 421, name: "Halibut Fillet", doneness: ["medium", "well_done"] },
-              { id: 422, name: "Sea Bass / Branzino", doneness: ["medium", "well_done"] },
-              { id: 423, name: "Swordfish Steak", doneness: ["medium", "well_done"] },
-              { id: 424, name: "Mahi-Mahi", doneness: ["medium", "well_done"] },
-              { id: 425, name: "Haddock Fillet", doneness: ["medium", "well_done"] },
-              { id: 426, name: "Hake Fillet", doneness: ["medium", "well_done"] },
-              { id: 427, name: "Trout Fillet", doneness: FISH_DONENESS },
+              { id: 420, name: "Fillet", doneness: ["medium", "well_done"] },
+              { id: 421, name: "Steak", doneness: ["medium", "well_done"] },
+              { id: 429, name: "Other", doneness: ["medium", "well_done"] },
             ]
           }
         ]
       },
       {
         id: 43,
-        name: "Shellfish",
+        name: "Haddock",
         cutTypes: [
           {
             id: 430,
+            name: "Haddock Cuts",
+            cuts: [
+              { id: 430, name: "Fillet", doneness: ["medium", "well_done"] },
+              { id: 439, name: "Other", doneness: ["medium", "well_done"] },
+            ]
+          }
+        ]
+      },
+      {
+        id: 44,
+        name: "Hake",
+        cutTypes: [
+          {
+            id: 440,
+            name: "Hake Cuts",
+            cuts: [
+              { id: 440, name: "Fillet", doneness: ["medium", "well_done"] },
+              { id: 449, name: "Other", doneness: ["medium", "well_done"] },
+            ]
+          }
+        ]
+      },
+      {
+        id: 45,
+        name: "Tuna",
+        cutTypes: [
+          {
+            id: 450,
+            name: "Tuna Cuts",
+            cuts: [
+              { id: 450, name: "Steak", doneness: FISH_RARE_OK },
+              { id: 451, name: "Fillet", doneness: FISH_RARE_OK },
+              { id: 459, name: "Other", doneness: FISH_RARE_OK },
+            ]
+          }
+        ]
+      },
+      {
+        id: 46,
+        name: "Lobster",
+        cutTypes: [
+          {
+            id: 460,
+            name: "Lobster Cuts",
+            cuts: [
+              { id: 460, name: "Tail", doneness: FISH_WELL_ONLY },
+              { id: 461, name: "Whole", doneness: FISH_WELL_ONLY },
+              { id: 462, name: "Claw", doneness: FISH_WELL_ONLY },
+            ]
+          }
+        ]
+      },
+      {
+        id: 47,
+        name: "Swordfish",
+        cutTypes: [
+          {
+            id: 470,
+            name: "Swordfish Cuts",
+            cuts: [
+              { id: 470, name: "Steak", doneness: ["medium", "well_done"] },
+              { id: 479, name: "Other", doneness: ["medium", "well_done"] },
+            ]
+          }
+        ]
+      },
+      {
+        id: 48,
+        name: "Trout",
+        cutTypes: [
+          {
+            id: 480,
+            name: "Trout Cuts",
+            cuts: [
+              { id: 480, name: "Fillet", doneness: FISH_DONENESS },
+              { id: 481, name: "Whole", doneness: FISH_DONENESS },
+              { id: 489, name: "Other", doneness: FISH_DONENESS },
+            ]
+          }
+        ]
+      },
+      {
+        id: 49,
+        name: "Sea Bass / Branzino",
+        cutTypes: [
+          {
+            id: 490,
+            name: "Sea Bass Cuts",
+            cuts: [
+              { id: 490, name: "Fillet", doneness: ["medium", "well_done"] },
+              { id: 491, name: "Whole", doneness: ["medium", "well_done"] },
+              { id: 499, name: "Other", doneness: ["medium", "well_done"] },
+            ]
+          }
+        ]
+      },
+      {
+        id: 50,
+        name: "Other Fish",
+        cutTypes: [
+          {
+            id: 500,
+            name: "Other Fish Cuts",
+            cuts: [
+              { id: 500, name: "Mahi-Mahi Fillet", doneness: ["medium", "well_done"] },
+              { id: 501, name: "Tilapia Fillet", doneness: ["medium", "well_done"] },
+              { id: 502, name: "Snapper Fillet", doneness: ["medium", "well_done"] },
+              { id: 503, name: "Grouper Fillet", doneness: ["medium", "well_done"] },
+              { id: 504, name: "Flounder Fillet", doneness: ["medium", "well_done"] },
+              { id: 505, name: "Sole Fillet", doneness: ["medium", "well_done"] },
+              { id: 506, name: "Catfish Fillet", doneness: ["well_done"] },
+              { id: 507, name: "Perch Fillet", doneness: ["medium", "well_done"] },
+              { id: 508, name: "Walleye Fillet", doneness: ["medium", "well_done"] },
+              { id: 509, name: "Arctic Char Fillet", doneness: FISH_DONENESS },
+              { id: 510, name: "Mackerel Fillet", doneness: FISH_DONENESS },
+              { id: 511, name: "Sardines", doneness: FISH_DONENESS },
+              { id: 599, name: "Other", doneness: FISH_DONENESS },
+            ]
+          }
+        ]
+      },
+      {
+        id: 51,
+        name: "Shellfish",
+        cutTypes: [
+          {
+            id: 510,
             name: "Shellfish",
             cuts: [
-              { id: 430, name: "Shrimp", doneness: FISH_WELL_ONLY },
-              { id: 431, name: "Lobster Tail", doneness: FISH_WELL_ONLY },
-              { id: 432, name: "Scallops", doneness: ["medium_rare", "well_done"] },
+              { id: 550, name: "Shrimp / Prawns", doneness: FISH_WELL_ONLY },
+              { id: 551, name: "Scallops", doneness: ["medium_rare", "well_done"] },
+              { id: 552, name: "Crab", doneness: FISH_WELL_ONLY },
+              { id: 553, name: "Mussels", doneness: FISH_WELL_ONLY },
+              { id: 554, name: "Clams", doneness: FISH_WELL_ONLY },
+              { id: 555, name: "Oysters", doneness: FISH_WELL_ONLY },
+              { id: 556, name: "Calamari / Squid", doneness: FISH_WELL_ONLY },
+              { id: 557, name: "Octopus", doneness: ["well_done", "tender"] },
             ]
           }
         ]
@@ -389,53 +517,71 @@ const MEAT_CATEGORIES = {
     name: "Lamb",
     icon: "🐑",
     color: "#800020",
+    // MEATER app flow: Lamb → Steak/Roast/Other → Cut
     meats: [
       {
         id: 50,
-        name: "Lamb",
+        name: "Steak",
         cutTypes: [
           {
             id: 500,
-            name: "Roasts",
+            name: "Steak Cuts",
             cuts: [
-              { id: 500, name: "Leg of Lamb", doneness: STEAK_DONENESS },
-              { id: 501, name: "Rack of Lamb", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 502, name: "Lamb Shoulder", doneness: BRAISING_DONENESS },
-              { id: 503, name: "Lamb Loin Roast", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 504, name: "Lamb Brisket", doneness: BRAISING_DONENESS },
-              { id: 505, name: "Lamb Rump", doneness: STEAK_DONENESS },
-              { id: 506, name: "Lamb Shank", doneness: BRAISING_DONENESS },
-              { id: 507, name: "Lamb Rib", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 500, name: "Chop", doneness: STEAK_DONENESS },
+              { id: 501, name: "Neck Filet", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 502, name: "Cutlet", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 503, name: "Loin Chop", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 599, name: "Other", doneness: STEAK_DONENESS },
             ]
-          },
+          }
+        ]
+      },
+      {
+        id: 51,
+        name: "Roast",
+        cutTypes: [
           {
-            id: 501,
-            name: "Chops",
+            id: 510,
+            name: "Roast Cuts",
             cuts: [
-              { id: 510, name: "Lamb Chops", doneness: STEAK_DONENESS },
-              { id: 511, name: "Lamb Loin Chops", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 512, name: "Lamb Neck Filet", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 513, name: "Lamb Cutlet", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 510, name: "Loin", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 511, name: "Brisket", doneness: BRAISING_DONENESS },
+              { id: 512, name: "Leg", doneness: STEAK_DONENESS },
+              { id: 513, name: "Rump", doneness: STEAK_DONENESS },
+              { id: 514, name: "Shank", doneness: BRAISING_DONENESS },
+              { id: 515, name: "Rib Rack", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 516, name: "Shoulder", doneness: BRAISING_DONENESS },
+              { id: 517, name: "Crown Roast", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 599, name: "Other", doneness: STEAK_DONENESS },
             ]
-          },
+          }
+        ]
+      },
+      {
+        id: 52,
+        name: "Other",
+        cutTypes: [
           {
-            id: 502,
-            name: "Ground",
+            id: 520,
+            name: "Other Cuts",
             cuts: [
-              { id: 520, name: "Ground Lamb", doneness: ["well_done"] },
-              { id: 521, name: "Lamb Kofta / Kebab", doneness: ["well_done"] },
-              { id: 522, name: "Lamb Burger", doneness: ["well_done"] },
+              { id: 520, name: "Ground", doneness: ["well_done"] },
+              { id: 521, name: "Burger", doneness: ["well_done"] },
+              { id: 522, name: "Rib", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 523, name: "Kofta / Kebab", doneness: ["well_done"] },
+              { id: 599, name: "Other", doneness: STEAK_DONENESS },
             ]
           }
         ]
       }
     ]
   },
-  game: {
+  other: {
     id: 6,
-    name: "Game / Other",
+    name: "Other",
     icon: "🦌",
     color: "#2F4F4F",
+    // MEATER app flow: Other → Animal Type → Steak/Roast/Other
     meats: [
       {
         id: 60,
@@ -443,180 +589,155 @@ const MEAT_CATEGORIES = {
         cutTypes: [
           {
             id: 600,
-            name: "Venison",
+            name: "Venison Cuts",
             cuts: [
-              { id: 600, name: "Venison Steak", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 601, name: "Venison Roast", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 602, name: "Venison Loin", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 600, name: "Steak", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 601, name: "Roast", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 602, name: "Loin", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 603, name: "Leg", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 604, name: "Shoulder", doneness: BRAISING_DONENESS },
+              { id: 699, name: "Other", doneness: STEAK_DONENESS_NO_WELL },
             ]
           }
         ]
       },
       {
         id: 61,
-        name: "Wild Boar",
+        name: "Reindeer",
         cutTypes: [
           {
             id: 610,
-            name: "Wild Boar",
+            name: "Reindeer Cuts",
             cuts: [
-              { id: 610, name: "Wild Boar Chop", doneness: ["well_done"] },
-              { id: 611, name: "Wild Boar Shoulder", doneness: BRAISING_DONENESS },
+              { id: 610, name: "Steak", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 611, name: "Roast", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 612, name: "Loin", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 699, name: "Other", doneness: STEAK_DONENESS_NO_WELL },
             ]
           }
         ]
       },
       {
         id: 62,
-        name: "Bison / Buffalo",
+        name: "Moose",
         cutTypes: [
           {
             id: 620,
-            name: "Bison",
+            name: "Moose Cuts",
             cuts: [
-              { id: 620, name: "Bison Steak", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 621, name: "Bison Burger", doneness: ["well_done"] },
-              { id: 622, name: "Bison Roast", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 620, name: "Steak", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 621, name: "Roast", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 622, name: "Loin", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 699, name: "Other", doneness: STEAK_DONENESS_NO_WELL },
             ]
           }
         ]
       },
       {
         id: 63,
-        name: "Reindeer",
+        name: "Buffalo",
         cutTypes: [
           {
             id: 630,
-            name: "Reindeer",
+            name: "Buffalo Cuts",
             cuts: [
-              { id: 630, name: "Reindeer Steak", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 631, name: "Reindeer Roast", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 630, name: "Steak", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 631, name: "Roast", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 632, name: "Burger", doneness: ["well_done"] },
+              { id: 699, name: "Other", doneness: STEAK_DONENESS_NO_WELL },
             ]
           }
         ]
       },
       {
         id: 64,
-        name: "Moose",
+        name: "Ostrich",
         cutTypes: [
           {
             id: 640,
-            name: "Moose",
+            name: "Ostrich Cuts",
             cuts: [
-              { id: 640, name: "Moose Steak", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 641, name: "Moose Roast", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 640, name: "Steak", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 641, name: "Fillet", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 699, name: "Other", doneness: STEAK_DONENESS_MR_TO_M },
+            ]
+          }
+        ]
+      },
+      {
+        id: 65,
+        name: "Mutton",
+        cutTypes: [
+          {
+            id: 650,
+            name: "Mutton Cuts",
+            cuts: [
+              { id: 650, name: "Chop", doneness: STEAK_DONENESS },
+              { id: 651, name: "Leg Roast", doneness: STEAK_DONENESS_NO_RARE },
+              { id: 652, name: "Shoulder", doneness: BRAISING_DONENESS },
+              { id: 699, name: "Other", doneness: STEAK_DONENESS },
             ]
           }
         ]
       },
       {
         id: 66,
-        name: "Ostrich",
+        name: "Kangaroo",
         cutTypes: [
           {
             id: 660,
-            name: "Ostrich",
+            name: "Kangaroo Cuts",
             cuts: [
-              { id: 660, name: "Ostrich Steak", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 661, name: "Ostrich Fillet", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 660, name: "Steak", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 661, name: "Fillet", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 699, name: "Other", doneness: STEAK_DONENESS_MR_TO_M },
             ]
           }
         ]
       },
       {
         id: 67,
-        name: "Mutton",
+        name: "Goat",
         cutTypes: [
           {
             id: 670,
-            name: "Mutton",
+            name: "Goat Cuts",
             cuts: [
-              { id: 670, name: "Mutton Chop", doneness: STEAK_DONENESS },
-              { id: 671, name: "Mutton Leg Roast", doneness: STEAK_DONENESS_NO_RARE },
-              { id: 672, name: "Mutton Shoulder", doneness: BRAISING_DONENESS },
+              { id: 670, name: "Chop", doneness: STEAK_DONENESS_NO_RARE },
+              { id: 671, name: "Leg Roast", doneness: STEAK_DONENESS_NO_RARE },
+              { id: 672, name: "Shoulder", doneness: BRAISING_DONENESS },
+              { id: 699, name: "Other", doneness: STEAK_DONENESS_NO_RARE },
             ]
           }
         ]
       },
       {
         id: 68,
-        name: "Kangaroo",
+        name: "Wild Boar",
         cutTypes: [
           {
             id: 680,
-            name: "Kangaroo",
+            name: "Wild Boar Cuts",
             cuts: [
-              { id: 680, name: "Kangaroo Steak", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 681, name: "Kangaroo Fillet", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 680, name: "Chop", doneness: ["well_done"] },
+              { id: 681, name: "Shoulder", doneness: BRAISING_DONENESS },
+              { id: 682, name: "Leg Roast", doneness: ["well_done"] },
+              { id: 699, name: "Other", doneness: ["well_done"] },
             ]
           }
         ]
       },
       {
         id: 69,
-        name: "Goat",
+        name: "Other Game",
         cutTypes: [
           {
             id: 690,
-            name: "Goat",
+            name: "Other Game Cuts",
             cuts: [
-              { id: 690, name: "Goat Chop", doneness: STEAK_DONENESS_NO_RARE },
-              { id: 691, name: "Goat Leg Roast", doneness: STEAK_DONENESS_NO_RARE },
-              { id: 692, name: "Goat Shoulder", doneness: BRAISING_DONENESS },
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  vegetables: {
-    id: 7,
-    name: "Vegetables",
-    icon: "🥔",
-    color: "#228B22",
-    meats: [
-      {
-        id: 70,
-        name: "Root Vegetables",
-        cutTypes: [
-          {
-            id: 700,
-            name: "Potatoes & Roots",
-            cuts: [
-              { id: 700, name: "Baked Potato", doneness: ["tender"] },
-              { id: 701, name: "Roasted Potatoes", doneness: ["caramelized"] },
-              { id: 702, name: "Roasted Carrots", doneness: ["tender", "caramelized"] },
-              { id: 705, name: "Roasted Sweet Potato", doneness: ["tender", "caramelized"] },
-            ]
-          }
-        ]
-      },
-      {
-        id: 71,
-        name: "Green Vegetables",
-        cutTypes: [
-          {
-            id: 710,
-            name: "Greens",
-            cuts: [
-              { id: 710, name: "Broccoli", doneness: ["crisp_tender", "tender"] },
-              { id: 711, name: "Brussels Sprouts", doneness: ["tender", "caramelized"] },
-              { id: 712, name: "Asparagus", doneness: ["crisp_tender", "tender"] },
-            ]
-          }
-        ]
-      },
-      {
-        id: 72,
-        name: "Alliums",
-        cutTypes: [
-          {
-            id: 720,
-            name: "Onions & Garlic",
-            cuts: [
-              { id: 720, name: "Roasted Onion", doneness: ["tender", "caramelized"] },
-              { id: 721, name: "Caramelized Onions", doneness: ["caramelized"] },
-              { id: 722, name: "Roasted Garlic", doneness: ["tender", "caramelized"] },
+              { id: 690, name: "Steak", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 691, name: "Roast", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 699, name: "Other", doneness: STEAK_DONENESS_MR_TO_M },
             ]
           }
         ]
