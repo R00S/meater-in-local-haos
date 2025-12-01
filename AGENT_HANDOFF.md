@@ -1,6 +1,23 @@
 # Agent Handoff Document
 
-**Last Updated:** 1 Dec 2025, 13:52 CET
+**Last Updated:** 1 Dec 2025, 15:50 CET
+
+## Release Numbering
+
+Release versions follow this pattern: `v0.1.0.XXdev`
+
+| Position | Meaning | Current |
+|----------|---------|---------|
+| `0` | Still in beta | 0 |
+| `1` | First batch of features | 1 |
+| `0` | First agent at this stage | 0 |
+| `XX` | Release number with this agent (0-indexed) | 12 = 13th release |
+
+**Examples:**
+- `v0.1.0.0dev` = First release by first agent in beta/first-features stage
+- `v0.1.0.12dev` = 13th release by first agent
+- `v0.1.1.0dev` = First release by second agent at this stage
+- `v0.2.0.0dev` = First release in second batch of features
 
 ## Development Workflow
 
