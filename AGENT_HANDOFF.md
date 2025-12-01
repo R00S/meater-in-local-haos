@@ -48,11 +48,33 @@ For production-ready changes:
 2. HACS will automatically detect the update
 3. Redownload via HACS → Integrations → Kitchen Cooking Engine → ⋮ → Redownload
 
-#### Option 3: Create a Release Tag (For Version Selection in HACS)
+#### Option 3: Create a Release from Branch (Recommended - No Merge Required)
 
-HACS 2.0 only shows releases/tags in the version selector. To enable version selection:
-1. Create a GitHub release with a tag (e.g., `v0.1.0-dev`)
-2. In HACS, the release will appear in the version dropdown when redownloading
+**This is the best solution for HACS + dev branches without merging:**
+
+You can create a GitHub release directly from any branch - no merge to main required! HACS will then show it in the version dropdown.
+
+**Step 1: Go to GitHub Releases**
+1. Go to: https://github.com/R00S/meater-in-local-haos/releases/new
+
+**Step 2: Create the Release**
+1. Click "Choose a tag" → type a new tag like `v0.1.0-dev` → click "Create new tag"
+2. **IMPORTANT**: Click "Target: main" dropdown → select the dev branch (e.g., `copilot/setup-workflow-with-dev-branches`)
+3. Fill in:
+   - **Release title**: `v0.1.0-dev - Dev Testing`
+   - **Description**: `Development release for testing`
+4. Check ☑️ "Set as a pre-release" (optional, marks it as non-production)
+5. Click **"Publish release"**
+
+**Step 3: Download in HACS**
+1. In HACS → Integrations → Kitchen Cooking Engine
+2. Click ⋮ → Redownload
+3. Select the new version (e.g., `v0.1.0-dev`) from the dropdown
+4. Click Download → Restart HA
+
+**For subsequent updates:**
+- Create new releases (v0.1.1-dev, v0.1.2-dev, etc.) from the same branch as changes are pushed
+- HACS will show all versions in the dropdown
 
 > **Note:** HACS 2.0 [removed branch selection](https://github.com/hacs/integration/issues/4203). Only releases/tags appear in the version dropdown.
 
