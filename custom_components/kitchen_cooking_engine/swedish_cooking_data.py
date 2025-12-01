@@ -1330,7 +1330,7 @@ SWEDISH_OTHER_FISH = [
     ),
     MeatCut(
         id=2423,
-        name="gosingfile",
+        name="gosfile",
         name_long="Gösfilé",
         cut_order=4,
         estimated_thickness_mm=25,

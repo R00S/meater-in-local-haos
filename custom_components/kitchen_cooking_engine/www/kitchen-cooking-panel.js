@@ -1358,7 +1358,9 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _updateCustomTemp(tempC) {
-    this._customTargetTempC = parseInt(tempC);
+    const parsed = parseInt(tempC, 10);
+    // Clamp temperature to valid range (35-100°C)
+    this._customTargetTempC = Math.max(35, Math.min(100, parsed));
   }
 
   render() {
@@ -1599,7 +1601,7 @@ class KitchenCookingPanel extends LitElement {
                   <button 
                     class="reset-btn"
                     @click=${() => { this._customTargetTempC = null; }}>
-                    Reset to ${donenessTemps?.c}°C (${this._selectedDoneness.replace('_', ' ')})
+                    Reset to ${donenessTemps?.c}°C (${this._selectedDoneness ? this._selectedDoneness.replace('_', ' ') : ''})
                   </button>
                 </div>
               ` : ''}
