@@ -1,8 +1,8 @@
 """
 Cooking data for Kitchen Cooking Engine.
 
-Last Updated: 1 Dec 2025, 15:45 CET
-Last Change: Added comprehensive protein/cut database matching MEATER app structure
+Last Updated: 1 Dec 2025, 17:00 CET
+Last Change: Added recommended_doneness field to MeatCut for pre-selection
 
 This module contains comprehensive cooking data including proteins, cuts,
 doneness levels, cooking methods, and target temperatures.
@@ -274,6 +274,8 @@ class MeatCut:
     carryover_temp_c: int = 3
     # Supported cooking methods for this cut
     supported_methods: list[CookingMethod] = field(default_factory=list)
+    # Recommended doneness level for this cut (for pre-selection in UI)
+    recommended_doneness: Optional[str] = None
 
 
 @dataclass
@@ -3582,10 +3584,23 @@ def get_doneness_for_cut(cut: MeatCut, doneness_name: str) -> TemperatureRange |
 
 
 def get_recommended_doneness(cut: MeatCut) -> TemperatureRange | None:
-    """Get the MEATER-recommended doneness for a cut."""
+    """Get the recommended doneness for a cut.
+    
+    First checks if cut has a recommended_doneness field set,
+    then looks for MEATER recommended range in temperature_ranges,
+    finally falls back to first available range.
+    """
+    # First check if cut has explicit recommended_doneness
+    if cut.recommended_doneness:
+        for temp_range in cut.temperature_ranges:
+            if temp_range.name.lower() == cut.recommended_doneness.lower():
+                return temp_range
+    
+    # Then check for is_meater_recommended flag
     for temp_range in cut.temperature_ranges:
         if temp_range.is_meater_recommended:
             return temp_range
+    
     # Fall back to first range if no recommendation
     if cut.temperature_ranges:
         return cut.temperature_ranges[0]

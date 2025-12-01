@@ -1,18 +1,13 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * Last Updated: 1 Dec 2025, 15:47 CET
- * Last Change: Fixed panel structure to match exact MEATER app flow:
- *              - Beef/Pork/Lamb: Category → Steak/Roast/Other → Cut
- *              - Poultry: Category → Chicken/Duck/Goose/Turkey → Cut
- *              - Fish: Category → Fish Type → Fillet/Other
- *              - Full list of fish species and shellfish added
- *              - All MEATER cuts included
+ * Last Updated: 1 Dec 2025, 17:00 CET
+ * Last Change: Added Swedish data support, temperature fine-tuning, and 
+ *              recommended doneness pre-selection for all proteins
  * 
  * NOTE: The cut/category structure mirrors MEATER app's meatCutStructure.
  *       Temperature values are from USDA/FDA public guidelines.
- *       TODO: Verify all cuts against latest MEATER app version and mark
- *             any proprietary data for replacement with verified free info.
+ *       Swedish temperature values from Stekguiden.se, Livsmedelsverket, etc.
  * 
  * A custom panel for the Kitchen Cooking Engine integration.
  */
@@ -23,23 +18,46 @@ import {
   css,
 } from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
 
-// Doneness option definitions
+// Data source options
+const DATA_SOURCE_INTERNATIONAL = "international";
+const DATA_SOURCE_SWEDISH = "swedish";
+
+// Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
-  rare: { value: "rare", name: "Rare", icon: "🔴", description: "Cool red center" },
-  medium_rare: { value: "medium_rare", name: "Medium Rare", icon: "🟠", description: "Warm red center" },
-  medium: { value: "medium", name: "Medium", icon: "🟡", description: "Warm pink center" },
-  medium_well: { value: "medium_well", name: "Medium Well", icon: "🟤", description: "Slightly pink center" },
-  well_done: { value: "well_done", name: "Well Done", icon: "⚪", description: "No pink, fully cooked" },
-  pulled: { value: "pulled", name: "Pulled", icon: "🍖", description: "Shreddable, collagen broken down" },
-  safe: { value: "safe", name: "Safe (165°F)", icon: "✅", description: "USDA safe, cooked through" },
-  dark_meat_optimal: { value: "dark_meat_optimal", name: "Dark Meat", icon: "🍗", description: "Optimal texture for dark meat" },
-  crispy: { value: "crispy", name: "Crispy", icon: "🥓", description: "Crispy and rendered" },
-  heated_through: { value: "heated_through", name: "Heated Through", icon: "♨️", description: "Warmed through (pre-cooked)" },
-  done: { value: "done", name: "Done", icon: "✓", description: "Cooked through" },
-  tender: { value: "tender", name: "Tender", icon: "🥔", description: "Fork-tender" },
-  crisp_tender: { value: "crisp_tender", name: "Crisp-Tender", icon: "🥦", description: "Slightly firm with bite" },
-  caramelized: { value: "caramelized", name: "Caramelized", icon: "🧅", description: "Golden brown" },
-  charred: { value: "charred", name: "Charred", icon: "🔥", description: "Charred exterior" },
+  rare: { value: "rare", name: "Rare", icon: "🔴", description: "Cool red center", temp_c: 49, temp_f: 120 },
+  medium_rare: { value: "medium_rare", name: "Medium Rare", icon: "🟠", description: "Warm red center", temp_c: 54, temp_f: 130 },
+  medium: { value: "medium", name: "Medium", icon: "🟡", description: "Warm pink center", temp_c: 60, temp_f: 140 },
+  medium_well: { value: "medium_well", name: "Medium Well", icon: "🟤", description: "Slightly pink center", temp_c: 66, temp_f: 150 },
+  well_done: { value: "well_done", name: "Well Done", icon: "⚪", description: "No pink, fully cooked", temp_c: 71, temp_f: 160 },
+  pulled: { value: "pulled", name: "Pulled", icon: "🍖", description: "Shreddable, collagen broken down", temp_c: 93, temp_f: 200 },
+  safe: { value: "safe", name: "Safe (165°F)", icon: "✅", description: "USDA safe, cooked through", temp_c: 74, temp_f: 165 },
+  dark_meat_optimal: { value: "dark_meat_optimal", name: "Dark Meat", icon: "🍗", description: "Optimal texture for dark meat", temp_c: 77, temp_f: 170 },
+  crispy: { value: "crispy", name: "Crispy", icon: "🥓", description: "Crispy and rendered", temp_c: 90, temp_f: 195 },
+  heated_through: { value: "heated_through", name: "Heated Through", icon: "♨️", description: "Warmed through (pre-cooked)", temp_c: 60, temp_f: 140 },
+  done: { value: "done", name: "Done", icon: "✓", description: "Cooked through", temp_c: 71, temp_f: 160 },
+  tender: { value: "tender", name: "Tender", icon: "🥔", description: "Fork-tender", temp_c: 95, temp_f: 203 },
+  crisp_tender: { value: "crisp_tender", name: "Crisp-Tender", icon: "🥦", description: "Slightly firm with bite", temp_c: 85, temp_f: 185 },
+  caramelized: { value: "caramelized", name: "Caramelized", icon: "🧅", description: "Golden brown", temp_c: 160, temp_f: 320 },
+  charred: { value: "charred", name: "Charred", icon: "🔥", description: "Charred exterior", temp_c: 200, temp_f: 390 },
+};
+
+// Swedish doneness option definitions
+const SWEDISH_DONENESS_OPTIONS = {
+  blodig: { value: "blodig", name: "Blodig", icon: "🔴", description: "Sval röd kärna", temp_c: 50, temp_f: 122 },
+  medium_rare: { value: "medium_rare", name: "Medium Rare", icon: "🟠", description: "Rosa kärna", temp_c: 54, temp_f: 129 },
+  medium: { value: "medium", name: "Medium", icon: "🟡", description: "Varm rosa kärna", temp_c: 58, temp_f: 136 },
+  medium_well: { value: "medium_well", name: "Medium Well", icon: "🟤", description: "Nästan genomstekt", temp_c: 64, temp_f: 147 },
+  genomstekt: { value: "genomstekt", name: "Genomstekt", icon: "⚪", description: "Ingen rosa färg", temp_c: 70, temp_f: 158 },
+  långkokt: { value: "långkokt", name: "Långkokt", icon: "🍖", description: "Strimlningsbart", temp_c: 92, temp_f: 198 },
+  safe: { value: "safe", name: "Säker (72°C)", icon: "✅", description: "Genomstekt, säker att äta", temp_c: 72, temp_f: 162 },
+  dark_meat_optimal: { value: "dark_meat_optimal", name: "Mörkt kött", icon: "🍗", description: "Optimal textur för mörkt kött", temp_c: 77, temp_f: 170 },
+  crispy: { value: "crispy", name: "Krispig", icon: "🥓", description: "Krispigt och utstekt", temp_c: 90, temp_f: 195 },
+  heated_through: { value: "heated_through", name: "Uppvärmd", icon: "♨️", description: "Genomvärmd (förkokt)", temp_c: 60, temp_f: 140 },
+  well_done: { value: "well_done", name: "Genomstekt", icon: "⚪", description: "Ingen rosa färg", temp_c: 70, temp_f: 158 },
+  done: { value: "done", name: "Färdig", icon: "✓", description: "Genomstekt", temp_c: 71, temp_f: 160 },
+  tender: { value: "tender", name: "Mjuk", icon: "🥔", description: "Mjuk och mör", temp_c: 95, temp_f: 203 },
+  pulled: { value: "pulled", name: "Långkokt", icon: "🍖", description: "Strimlningsbart", temp_c: 92, temp_f: 198 },
+  rare: { value: "rare", name: "Blodig", icon: "🔴", description: "Sval röd kärna", temp_c: 50, temp_f: 122 },
 };
 
 // Doneness arrays for different cut types
@@ -745,6 +763,360 @@ const MEAT_CATEGORIES = {
   }
 };
 
+// Swedish doneness arrays
+const SWEDISH_STEAK_DONENESS = ["blodig", "medium_rare", "medium", "medium_well", "genomstekt"];
+const SWEDISH_STEAK_DONENESS_NO_WELL = ["blodig", "medium_rare", "medium", "medium_well"];
+const SWEDISH_BRAISING_DONENESS = ["långkokt"];
+const SWEDISH_PORK_DONENESS = ["medium", "genomstekt"];
+const SWEDISH_POULTRY_DONENESS = ["genomstekt"];
+const SWEDISH_FISH_DONENESS = ["medium", "genomstekt"];
+const SWEDISH_GAME_DONENESS = ["blodig", "medium", "medium_well"];
+
+/**
+ * SWEDISH_MEAT_CATEGORIES - Swedish meat/protein data structure
+ * 
+ * Data sources:
+ * - Stekguiden.se - Aggregated from Livsmedelsverket, Svenskt Kött
+ * - Gårdssällskapet - Swedish butcher style cuts
+ * - Scan Köttguiden - Detailed cut and temperature guide
+ * - ICA.se - Temperature guide
+ * - Köket.se - Swedish temperature recommendations
+ * - Livsmedelsverket (Swedish Food Agency) - Official food safety
+ */
+const SWEDISH_MEAT_CATEGORIES = {
+  notkott: {
+    id: 2001,
+    name: "Nötkött",
+    icon: "🥩",
+    color: "#8B0000",
+    meats: [
+      {
+        id: 2010,
+        name: "Stek",
+        cutTypes: [
+          {
+            id: 2100,
+            name: "Biff & Stek",
+            cuts: [
+              { id: 2100, name: "Entrecôte", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2101, name: "Ryggbiff", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2102, name: "Oxfilé", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2103, name: "Flankstek", doneness: SWEDISH_STEAK_DONENESS_NO_WELL, recommendedDoneness: "medium_rare" },
+              { id: 2104, name: "Flat Iron", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2105, name: "Flapsteak (Bavette)", doneness: SWEDISH_STEAK_DONENESS_NO_WELL, recommendedDoneness: "medium_rare" },
+              { id: 2106, name: "Tomahawk", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2107, name: "Picanha", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2108, name: "Njurtapp", doneness: SWEDISH_STEAK_DONENESS_NO_WELL, recommendedDoneness: "medium_rare" },
+              { id: 2109, name: "Hanger Steak (Onglet)", doneness: ["blodig", "medium_rare", "medium"], recommendedDoneness: "medium_rare" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2011,
+        name: "Stekstyck",
+        cutTypes: [
+          {
+            id: 2120,
+            name: "Stekstyck",
+            cuts: [
+              { id: 2120, name: "Rostbiff", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium" },
+              { id: 2121, name: "Innanlår", doneness: SWEDISH_STEAK_DONENESS.slice(1), recommendedDoneness: "medium" },
+              { id: 2122, name: "Ytterlår", doneness: SWEDISH_STEAK_DONENESS.slice(1), recommendedDoneness: "medium" },
+              { id: 2123, name: "Fransyska", doneness: SWEDISH_STEAK_DONENESS.slice(1), recommendedDoneness: "medium" },
+              { id: 2124, name: "Nötrulle", doneness: ["medium", "medium_well", "genomstekt"], recommendedDoneness: "medium" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2012,
+        name: "Grytbitar/Långkok",
+        cutTypes: [
+          {
+            id: 2130,
+            name: "Långkokt",
+            cuts: [
+              { id: 2130, name: "Högrev", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2131, name: "Bringa (Brisket)", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2132, name: "Bog", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2133, name: "Oxsvans", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2134, name: "Lägg", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2135, name: "Oxkind", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2136, name: "Märgpipa", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  flask: {
+    id: 2002,
+    name: "Fläsk",
+    icon: "🐷",
+    color: "#FFB6C1",
+    meats: [
+      {
+        id: 2020,
+        name: "Stek/Kotlett",
+        cutTypes: [
+          {
+            id: 2200,
+            name: "Stek & Kotlett",
+            cuts: [
+              { id: 2200, name: "Fläskkotlett", doneness: SWEDISH_PORK_DONENESS, recommendedDoneness: "medium" },
+              { id: 2201, name: "Fläskfilé", doneness: SWEDISH_PORK_DONENESS, recommendedDoneness: "medium" },
+              { id: 2202, name: "Karrékoteletter", doneness: SWEDISH_PORK_DONENESS, recommendedDoneness: "medium" },
+              { id: 2203, name: "Secreto (Ibérico)", doneness: SWEDISH_PORK_DONENESS, recommendedDoneness: "medium" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2021,
+        name: "Stekstyck",
+        cutTypes: [
+          {
+            id: 2210,
+            name: "Stekstyck",
+            cuts: [
+              { id: 2210, name: "Fläsksida", doneness: SWEDISH_PORK_DONENESS, recommendedDoneness: "medium" },
+              { id: 2211, name: "Fläskkarré", doneness: SWEDISH_PORK_DONENESS, recommendedDoneness: "medium" },
+              { id: 2212, name: "Skinka", doneness: SWEDISH_PORK_DONENESS, recommendedDoneness: "medium" },
+              { id: 2213, name: "Julskinka (kokt)", doneness: ["genomstekt"], recommendedDoneness: "genomstekt" },
+              { id: 2214, name: "Fläskbog", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2022,
+        name: "Revben",
+        cutTypes: [
+          {
+            id: 2220,
+            name: "Revben",
+            cuts: [
+              { id: 2220, name: "Revbensspjäll", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2221, name: "Sidfläsk med revben", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  fagel: {
+    id: 2003,
+    name: "Fågel",
+    icon: "🍗",
+    color: "#FFD700",
+    meats: [
+      {
+        id: 2030,
+        name: "Kyckling",
+        cutTypes: [
+          {
+            id: 2300,
+            name: "Kyckling",
+            cuts: [
+              { id: 2300, name: "Hel kyckling", doneness: SWEDISH_POULTRY_DONENESS, recommendedDoneness: "genomstekt" },
+              { id: 2301, name: "Kycklingbröst", doneness: SWEDISH_POULTRY_DONENESS, recommendedDoneness: "genomstekt" },
+              { id: 2302, name: "Kycklingleår", doneness: SWEDISH_POULTRY_DONENESS, recommendedDoneness: "genomstekt" },
+              { id: 2303, name: "Kycklingvingar", doneness: SWEDISH_POULTRY_DONENESS, recommendedDoneness: "genomstekt" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2031,
+        name: "Kalkon",
+        cutTypes: [
+          {
+            id: 2310,
+            name: "Kalkon",
+            cuts: [
+              { id: 2310, name: "Hel kalkon", doneness: SWEDISH_POULTRY_DONENESS, recommendedDoneness: "genomstekt" },
+              { id: 2311, name: "Kalkonbröst", doneness: SWEDISH_POULTRY_DONENESS, recommendedDoneness: "genomstekt" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2032,
+        name: "Anka",
+        cutTypes: [
+          {
+            id: 2320,
+            name: "Anka",
+            cuts: [
+              { id: 2320, name: "Ankbröst", doneness: ["medium_rare", "medium", "genomstekt"], recommendedDoneness: "medium_rare" },
+              { id: 2321, name: "Hel anka", doneness: SWEDISH_POULTRY_DONENESS, recommendedDoneness: "genomstekt" },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  fisk: {
+    id: 2004,
+    name: "Fisk",
+    icon: "🐟",
+    color: "#4682B4",
+    meats: [
+      {
+        id: 2040,
+        name: "Lax",
+        cutTypes: [
+          {
+            id: 2400,
+            name: "Lax",
+            cuts: [
+              { id: 2400, name: "Laxfilé", doneness: SWEDISH_FISH_DONENESS, recommendedDoneness: "medium" },
+              { id: 2401, name: "Gravad lax (uppvärmd)", doneness: ["medium"], recommendedDoneness: "medium" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2041,
+        name: "Torsk",
+        cutTypes: [
+          {
+            id: 2410,
+            name: "Torsk",
+            cuts: [
+              { id: 2410, name: "Torskfilé", doneness: SWEDISH_FISH_DONENESS, recommendedDoneness: "medium" },
+              { id: 2411, name: "Torskrygg", doneness: SWEDISH_FISH_DONENESS, recommendedDoneness: "medium" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2042,
+        name: "Övrig fisk",
+        cutTypes: [
+          {
+            id: 2420,
+            name: "Övrig fisk",
+            cuts: [
+              { id: 2420, name: "Sikfilé", doneness: SWEDISH_FISH_DONENESS, recommendedDoneness: "medium" },
+              { id: 2421, name: "Rödingfilé", doneness: SWEDISH_FISH_DONENESS, recommendedDoneness: "medium" },
+              { id: 2422, name: "Abborrfilé", doneness: ["genomstekt"], recommendedDoneness: "genomstekt" },
+              { id: 2423, name: "Gösfilé", doneness: SWEDISH_FISH_DONENESS, recommendedDoneness: "medium" },
+              { id: 2424, name: "Hälleflundra", doneness: SWEDISH_FISH_DONENESS, recommendedDoneness: "medium" },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  lamm: {
+    id: 2005,
+    name: "Lamm",
+    icon: "🐑",
+    color: "#800020",
+    meats: [
+      {
+        id: 2050,
+        name: "Stekstyck",
+        cutTypes: [
+          {
+            id: 2500,
+            name: "Stekstyck",
+            cuts: [
+              { id: 2500, name: "Lammstek", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2501, name: "Lammrack", doneness: SWEDISH_STEAK_DONENESS_NO_WELL, recommendedDoneness: "medium_rare" },
+              { id: 2502, name: "Lammbog", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2503, name: "Lammsadel", doneness: SWEDISH_STEAK_DONENESS_NO_WELL, recommendedDoneness: "medium_rare" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2051,
+        name: "Kotletter",
+        cutTypes: [
+          {
+            id: 2510,
+            name: "Kotletter",
+            cuts: [
+              { id: 2510, name: "Lammkotletter", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2511, name: "Lammhalsfilé", doneness: SWEDISH_STEAK_DONENESS_NO_WELL, recommendedDoneness: "medium_rare" },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  vilt: {
+    id: 2006,
+    name: "Vilt",
+    icon: "🦌",
+    color: "#2F4F4F",
+    meats: [
+      {
+        id: 2060,
+        name: "Hjort/Rådjur",
+        cutTypes: [
+          {
+            id: 2600,
+            name: "Hjort & Rådjur",
+            cuts: [
+              { id: 2600, name: "Hjortfilé", doneness: SWEDISH_GAME_DONENESS, recommendedDoneness: "medium" },
+              { id: 2601, name: "Hjortstek", doneness: ["blodig", "medium"], recommendedDoneness: "medium" },
+              { id: 2602, name: "Rådjursfilé", doneness: SWEDISH_GAME_DONENESS, recommendedDoneness: "medium" },
+              { id: 2603, name: "Rådjursstek", doneness: ["blodig", "medium"], recommendedDoneness: "medium" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2061,
+        name: "Älg",
+        cutTypes: [
+          {
+            id: 2610,
+            name: "Älg",
+            cuts: [
+              { id: 2610, name: "Älgfilé", doneness: SWEDISH_GAME_DONENESS, recommendedDoneness: "medium" },
+              { id: 2611, name: "Älgstek", doneness: ["blodig", "medium"], recommendedDoneness: "medium" },
+              { id: 2612, name: "Älgfärsbiff", doneness: ["genomstekt"], recommendedDoneness: "genomstekt" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2062,
+        name: "Ren",
+        cutTypes: [
+          {
+            id: 2620,
+            name: "Ren",
+            cuts: [
+              { id: 2620, name: "Renfilé", doneness: SWEDISH_GAME_DONENESS, recommendedDoneness: "medium" },
+              { id: 2621, name: "Renstek", doneness: ["blodig", "medium"], recommendedDoneness: "medium" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2063,
+        name: "Vildsvin",
+        cutTypes: [
+          {
+            id: 2630,
+            name: "Vildsvin",
+            cuts: [
+              { id: 2630, name: "Vildsvinsfil", doneness: ["genomstekt"], recommendedDoneness: "genomstekt" },
+              { id: 2631, name: "Vildsvinsstek", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+            ]
+          }
+        ]
+      }
+    ]
+  }
+};
+
 const COOKING_METHODS = [
   { value: "oven_roast", name: "Oven Roast" },
   { value: "oven_bake", name: "Oven Bake" },
@@ -771,6 +1143,9 @@ class KitchenCookingPanel extends LitElement {
       _selectedDoneness: { type: String },
       _selectedMethod: { type: String },
       _selectedEntity: { type: String },
+      _dataSource: { type: String },
+      _customTargetTempC: { type: Number },
+      _showTempAdjust: { type: Boolean },
     };
   }
 
@@ -783,6 +1158,17 @@ class KitchenCookingPanel extends LitElement {
     this._selectedDoneness = null;
     this._selectedMethod = "oven_roast";
     this._selectedEntity = null;
+    this._dataSource = DATA_SOURCE_INTERNATIONAL;
+    this._customTargetTempC = null;
+    this._showTempAdjust = false;
+  }
+
+  _getDataCategories() {
+    return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_MEAT_CATEGORIES : MEAT_CATEGORIES;
+  }
+
+  _getDonenessOptions() {
+    return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
   }
 
   _findCookingEntities() {
@@ -817,7 +1203,8 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _getCategory() {
-    return this._selectedCategory ? MEAT_CATEGORIES[this._selectedCategory] : null;
+    const categories = this._getDataCategories();
+    return this._selectedCategory ? categories[this._selectedCategory] : null;
   }
 
   _getMeats() {
@@ -853,7 +1240,40 @@ class KitchenCookingPanel extends LitElement {
   _getAvailableDoneness() {
     const cut = this._getSelectedCutData();
     if (!cut || !cut.doneness) return [];
-    return cut.doneness.map(d => DONENESS_OPTIONS[d]).filter(Boolean);
+    const donenessOptions = this._getDonenessOptions();
+    return cut.doneness.map(d => donenessOptions[d]).filter(Boolean);
+  }
+
+  _getRecommendedDoneness() {
+    const cut = this._getSelectedCutData();
+    if (!cut) return null;
+    // Use explicit recommendedDoneness if set
+    if (cut.recommendedDoneness) {
+      return cut.recommendedDoneness;
+    }
+    // Fall back to first doneness option
+    if (cut.doneness && cut.doneness.length > 0) {
+      return cut.doneness[0];
+    }
+    return null;
+  }
+
+  _getTargetTempForDoneness(donenessValue) {
+    const donenessOptions = this._getDonenessOptions();
+    const option = donenessOptions[donenessValue];
+    return option ? { c: option.temp_c, f: option.temp_f } : null;
+  }
+
+  _switchDataSource(source) {
+    this._dataSource = source;
+    // Reset all selections when switching data source
+    this._selectedCategory = null;
+    this._selectedMeat = null;
+    this._selectedCutType = null;
+    this._selectedCut = null;
+    this._selectedDoneness = null;
+    this._customTargetTempC = null;
+    this._showTempAdjust = false;
   }
 
   _selectCategory(categoryKey) {
@@ -862,9 +1282,12 @@ class KitchenCookingPanel extends LitElement {
     this._selectedCutType = null;
     this._selectedCut = null;
     this._selectedDoneness = null;
+    this._customTargetTempC = null;
+    this._showTempAdjust = false;
     
     // Auto-select meat if only one
-    const meats = MEAT_CATEGORIES[categoryKey]?.meats || [];
+    const categories = this._getDataCategories();
+    const meats = categories[categoryKey]?.meats || [];
     if (meats.length === 1) {
       this._selectMeat(meats[0].id);
     }
@@ -875,6 +1298,8 @@ class KitchenCookingPanel extends LitElement {
     this._selectedCutType = null;
     this._selectedCut = null;
     this._selectedDoneness = null;
+    this._customTargetTempC = null;
+    this._showTempAdjust = false;
     
     // Auto-select cut type if only one
     const meat = this._getMeats().find(m => m.id === meatId);
@@ -887,17 +1312,53 @@ class KitchenCookingPanel extends LitElement {
     this._selectedCutType = cutTypeId;
     this._selectedCut = null;
     this._selectedDoneness = null;
+    this._customTargetTempC = null;
+    this._showTempAdjust = false;
   }
 
   _selectCut(cutId) {
     this._selectedCut = cutId;
-    // Auto-select first valid doneness for this cut
+    this._customTargetTempC = null;
+    this._showTempAdjust = false;
+    
+    // Auto-select recommended doneness for this cut
     const cut = this._getCuts().find(c => c.id === cutId);
-    if (cut && cut.doneness && cut.doneness.length > 0) {
-      this._selectedDoneness = cut.doneness[0];
+    if (cut) {
+      // First try explicit recommendedDoneness
+      if (cut.recommendedDoneness) {
+        this._selectedDoneness = cut.recommendedDoneness;
+      } else if (cut.doneness && cut.doneness.length > 0) {
+        // Fall back to first valid doneness
+        this._selectedDoneness = cut.doneness[0];
+      } else {
+        this._selectedDoneness = null;
+      }
     } else {
       this._selectedDoneness = null;
     }
+  }
+
+  _selectDoneness(donenessValue) {
+    this._selectedDoneness = donenessValue;
+    // Reset custom temp when changing doneness
+    this._customTargetTempC = null;
+  }
+
+  _toggleTempAdjust() {
+    this._showTempAdjust = !this._showTempAdjust;
+    if (!this._showTempAdjust) {
+      this._customTargetTempC = null;
+    } else {
+      // Initialize with current doneness temp
+      const temps = this._getTargetTempForDoneness(this._selectedDoneness);
+      if (temps) {
+        this._customTargetTempC = temps.c;
+      }
+    }
+  }
+
+  _updateCustomTemp(tempC) {
+    this._customTargetTempC = parseInt(tempC);
   }
 
   render() {
@@ -944,12 +1405,17 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _renderSetupForm(entities) {
+    const categories = this._getDataCategories();
     const category = this._getCategory();
     const meats = this._getMeats();
     const cutTypes = this._getCutTypes();
     const cuts = this._getCuts();
     const showMeatSelector = meats.length > 1;
     const showCutTypeSelector = cutTypes.length > 1 || (cutTypes.length === 1 && this._selectedMeat);
+    const recommendedDoneness = this._getRecommendedDoneness();
+    const donenessTemps = this._selectedDoneness ? this._getTargetTempForDoneness(this._selectedDoneness) : null;
+    const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
+    const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
     
     return html`
       <div class="status-banner idle">
@@ -972,12 +1438,36 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : ''}
       
+      <!-- Data Source Selector -->
+      <ha-card>
+        <div class="card-content">
+          <h3>🌍 Temperature Data Source</h3>
+          <div class="button-group">
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
+              🇺🇸 International (USDA)
+            </button>
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
+              🇸🇪 Svenska (Livsmedelsverket)
+            </button>
+          </div>
+          <p class="source-description">
+            ${this._dataSource === DATA_SOURCE_SWEDISH 
+              ? 'Använder svenska temperaturrekommendationer från Livsmedelsverket, Stekguiden.se och Gårdssällskapet.'
+              : 'Using international temperature guidelines from USDA, FDA and professional culinary sources.'}
+          </p>
+        </div>
+      </ha-card>
+      
       <!-- Step 1: Select Category -->
       <ha-card>
         <div class="card-content">
           <h3>1️⃣ Select Category</h3>
           <div class="button-group">
-            ${Object.entries(MEAT_CATEGORIES).map(([key, cat]) => html`
+            ${Object.entries(categories).map(([key, cat]) => html`
               <button 
                 class="category-btn ${this._selectedCategory === key ? 'selected' : ''}" 
                 @click=${() => this._selectCategory(key)}>
@@ -1033,7 +1523,7 @@ class KitchenCookingPanel extends LitElement {
               <option value="">Choose a cut...</option>
               ${cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
-                  ${cut.name}
+                  ${cut.name}${cut.recommendedDoneness ? ' ⭐' : ''}
                 </option>
               `)}
             </select>
@@ -1045,20 +1535,77 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCut ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🌡️ Doneness Level</h3>
+            <h3>🌡️ Doneness Level ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = recommended)</span>` : ''}</h3>
             <div class="doneness-grid">
               ${this._getAvailableDoneness().map(opt => html`
                 <button 
-                  class="doneness-btn ${this._selectedDoneness === opt.value ? 'selected' : ''}"
-                  @click=${() => this._selectedDoneness = opt.value}
+                  class="doneness-btn ${this._selectedDoneness === opt.value ? 'selected' : ''} ${opt.value === recommendedDoneness ? 'recommended' : ''}"
+                  @click=${() => this._selectDoneness(opt.value)}
                   title="${opt.description || ''}">
                   <span class="icon">${opt.icon}</span>
                   ${opt.name}
+                  ${opt.value === recommendedDoneness ? html`<span class="star">⭐</span>` : ''}
+                  <span class="temp-hint">${opt.temp_c}°C</span>
                 </button>
               `)}
             </div>
           </div>
         </ha-card>
+        
+        <!-- Temperature Fine-Tuning -->
+        ${this._selectedDoneness ? html`
+          <ha-card>
+            <div class="card-content">
+              <h3>🎯 Target Temperature</h3>
+              <div class="temp-display-setup">
+                <div class="target-temp">
+                  <span class="temp-value">${displayTemp}°C</span>
+                  <span class="temp-fahrenheit">(${displayTempF}°F)</span>
+                </div>
+                ${this._customTargetTempC ? html`
+                  <span class="custom-indicator">Custom</span>
+                ` : ''}
+              </div>
+              
+              <button 
+                class="adjust-btn ${this._showTempAdjust ? 'active' : ''}"
+                @click=${() => this._toggleTempAdjust()}>
+                ${this._showTempAdjust ? '✓ Done Adjusting' : '⚙️ Fine-tune Temperature'}
+              </button>
+              
+              ${this._showTempAdjust ? html`
+                <div class="temp-adjust-section">
+                  <input 
+                    type="range" 
+                    min="35" 
+                    max="100" 
+                    step="1"
+                    .value="${displayTemp}"
+                    @input=${(e) => this._updateCustomTemp(e.target.value)}
+                    class="temp-slider"
+                  />
+                  <div class="temp-adjust-controls">
+                    <button class="temp-btn" @click=${() => this._updateCustomTemp(displayTemp - 1)}>-1°C</button>
+                    <input 
+                      type="number" 
+                      min="35" 
+                      max="100" 
+                      .value="${displayTemp}"
+                      @change=${(e) => this._updateCustomTemp(e.target.value)}
+                      class="temp-input"
+                    />
+                    <button class="temp-btn" @click=${() => this._updateCustomTemp(displayTemp + 1)}>+1°C</button>
+                  </div>
+                  <button 
+                    class="reset-btn"
+                    @click=${() => { this._customTargetTempC = null; }}>
+                    Reset to ${donenessTemps?.c}°C (${this._selectedDoneness.replace('_', ' ')})
+                  </button>
+                </div>
+              ` : ''}
+            </div>
+          </ha-card>
+        ` : ''}
         
         <!-- Step 6: Cooking Method -->
         <ha-card>
@@ -1079,7 +1626,7 @@ class KitchenCookingPanel extends LitElement {
         <!-- Start Button -->
         <div class="action-container">
           <ha-button unelevated @click=${this._startCook} ?disabled=${!this._selectedDoneness}>
-            🔥 Start Cooking
+            🔥 Start Cooking${this._customTargetTempC ? ` at ${this._customTargetTempC}°C` : ''}
           </ha-button>
         </div>
       ` : ''}
@@ -1152,11 +1699,19 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _startCook() {
-    this._callService('start_cook', {
+    const serviceData = {
       cut_id: this._selectedCut,
       doneness: this._selectedDoneness,
-      cooking_method: this._selectedMethod
-    });
+      cooking_method: this._selectedMethod,
+      data_source: this._dataSource,
+    };
+    
+    // Include custom target temperature if set
+    if (this._customTargetTempC) {
+      serviceData.custom_target_temp_c = this._customTargetTempC;
+    }
+    
+    this._callService('start_cook', serviceData);
   }
 
   _stopCook() {
@@ -1440,6 +1995,191 @@ class KitchenCookingPanel extends LitElement {
         margin-top: 16px;
         justify-content: center;
       }
+
+      /* Data source selector styles */
+      .source-description {
+        font-size: 12px;
+        color: var(--secondary-text-color);
+        margin-top: 8px;
+        font-style: italic;
+      }
+
+      /* Recommended doneness styles */
+      .recommended-hint {
+        font-size: 12px;
+        color: var(--secondary-text-color);
+        font-weight: normal;
+      }
+
+      .doneness-btn.recommended {
+        border-color: #ffd700;
+      }
+
+      .doneness-btn .star {
+        font-size: 10px;
+        margin-left: 4px;
+      }
+
+      .doneness-btn .temp-hint {
+        display: block;
+        font-size: 11px;
+        color: var(--secondary-text-color);
+        margin-top: 4px;
+      }
+
+      .doneness-btn.selected .temp-hint {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Temperature fine-tuning styles */
+      .temp-display-setup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .target-temp {
+        text-align: center;
+      }
+
+      .temp-value {
+        font-size: 36px;
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      .temp-fahrenheit {
+        font-size: 18px;
+        color: var(--secondary-text-color);
+        margin-left: 8px;
+      }
+
+      .custom-indicator {
+        background: #ff9800;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .adjust-btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border: 2px dashed var(--divider-color);
+        border-radius: 8px;
+        background: transparent;
+        cursor: pointer;
+        color: var(--primary-text-color);
+        font-size: 14px;
+        transition: all 0.2s;
+      }
+
+      .adjust-btn:hover {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+      }
+
+      .adjust-btn.active {
+        border-style: solid;
+        border-color: var(--primary-color);
+        background: var(--primary-color);
+        color: white;
+      }
+
+      .temp-adjust-section {
+        margin-top: 16px;
+        padding: 16px;
+        background: var(--primary-background-color);
+        border-radius: 8px;
+      }
+
+      .temp-slider {
+        width: 100%;
+        height: 8px;
+        -webkit-appearance: none;
+        appearance: none;
+        background: var(--divider-color);
+        border-radius: 4px;
+        outline: none;
+        margin-bottom: 16px;
+      }
+
+      .temp-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .temp-slider::-moz-range-thumb {
+        width: 24px;
+        height: 24px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .temp-adjust-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .temp-btn {
+        padding: 8px 16px;
+        border: 1px solid var(--divider-color);
+        border-radius: 4px;
+        background: var(--card-background-color);
+        cursor: pointer;
+        color: var(--primary-text-color);
+        font-size: 14px;
+        transition: all 0.2s;
+      }
+
+      .temp-btn:hover {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+      }
+
+      .temp-input {
+        width: 80px;
+        padding: 8px;
+        border: 2px solid var(--divider-color);
+        border-radius: 4px;
+        font-size: 18px;
+        text-align: center;
+        background: var(--card-background-color);
+        color: var(--primary-text-color);
+      }
+
+      .reset-btn {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        background: transparent;
+        cursor: pointer;
+        color: var(--secondary-text-color);
+        font-size: 12px;
+        text-decoration: underline;
+      }
+
+      .reset-btn:hover {
+        color: var(--primary-color);
+      }
     `;
   }
 }
@@ -1447,7 +2187,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "16";
+const PANEL_VERSION = "17";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

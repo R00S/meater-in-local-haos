@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 1 Dec 2025, 14:00 CET
-Last Change: Switched to custom panel JS instead of iframe for proper HA integration
+Last Updated: 1 Dec 2025, 17:00 CET
+Last Change: Added Swedish cooking data support and temperature tree selection
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -42,27 +42,47 @@ from .const import (
 from .cooking_data import (
     get_cut_by_id,
     get_doneness_for_cut,
+    get_recommended_doneness,
     CookingMethod,
     MEAT_CATEGORIES,
+)
+from .swedish_cooking_data import (
+    get_swedish_cut_by_id,
+    SWEDISH_MEAT_CATEGORIES,
 )
 
 _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
+
+# Data source options
+DATA_SOURCE_INTERNATIONAL = "international"
+DATA_SOURCE_SWEDISH = "swedish"
 
 # Service schema for start_cook
 SERVICE_START_COOK_SCHEMA = vol.Schema(
     {
         vol.Required(ATTR_ENTITY_ID): cv.entity_ids,
-        vol.Required("cut_id"): vol.All(vol.Coerce(int), vol.Range(min=1, max=999)),
+        vol.Required("cut_id"): vol.All(vol.Coerce(int), vol.Range(min=1, max=9999)),
         vol.Required("doneness"): vol.In([
             "rare", "medium_rare", "medium", "medium_well", "well_done",
             "pulled", "safe", "tender", "crisp_tender", "caramelized",
             "dark_meat_optimal", "heated_through", "crispy", "charred", "done",
+            # Swedish doneness levels
+            "blodig", "genomstekt", "långkokt",
         ]),
         vol.Required("cooking_method"): vol.In([m.value for m in CookingMethod]),
+        # Optional: data source for temperature recommendations
+        vol.Optional("data_source", default=DATA_SOURCE_INTERNATIONAL): vol.In([
+            DATA_SOURCE_INTERNATIONAL,
+            DATA_SOURCE_SWEDISH,
+        ]),
+        # Optional: custom target temperature (for fine-tuning)
+        vol.Optional("custom_target_temp_c"): vol.All(
+            vol.Coerce(int), vol.Range(min=30, max=100)
+        ),
     }
 )
 
@@ -235,6 +255,16 @@ def _get_protein_name_for_cut(cut) -> str | None:
     return None
 
 
+def _get_protein_name_for_cut_with_categories(cut, categories) -> str | None:
+    """Get the protein category name for a cut from specified categories."""
+    for category in categories:
+        for meat in category.meats:
+            for cut_type in meat.cut_types:
+                if cut in cut_type.cuts:
+                    return category.name
+    return None
+
+
 async def _async_register_services(hass: HomeAssistant) -> None:
     """Register integration services."""
 
@@ -255,11 +285,19 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         cut_id = call.data.get("cut_id")
         doneness = call.data.get("doneness")
         cooking_method = call.data.get("cooking_method")
+        data_source = call.data.get("data_source", DATA_SOURCE_INTERNATIONAL)
+        custom_target_temp_c = call.data.get("custom_target_temp_c")
 
-        # Get the cut data
-        cut = get_cut_by_id(cut_id)
+        # Get the cut data based on data source
+        if data_source == DATA_SOURCE_SWEDISH:
+            cut = get_swedish_cut_by_id(cut_id)
+            categories = SWEDISH_MEAT_CATEGORIES
+        else:
+            cut = get_cut_by_id(cut_id)
+            categories = MEAT_CATEGORIES
+        
         if not cut:
-            _LOGGER.error("Cut ID %s not found", cut_id)
+            _LOGGER.error("Cut ID %s not found in %s data source", cut_id, data_source)
             return
 
         # Get the doneness level
@@ -268,17 +306,23 @@ async def _async_register_services(hass: HomeAssistant) -> None:
             _LOGGER.error("Doneness %s not valid for cut %s", doneness, cut.name)
             return
 
+        # Use custom target temperature if provided, otherwise use standard
+        target_temp_c = custom_target_temp_c if custom_target_temp_c else temp_range.target_temp_c
+        target_temp_f = int(target_temp_c * 9 / 5 + 32) if custom_target_temp_c else temp_range.target_temp_f
+
         _LOGGER.info(
-            "Starting cook: %s (%s) at %d°C (%d°F) using %s",
+            "Starting cook: %s (%s) at %d°C (%d°F) using %s [data: %s]%s",
             cut.name_long,
             doneness,
-            temp_range.target_temp_c,
-            temp_range.target_temp_f,
+            target_temp_c,
+            target_temp_f,
             cooking_method,
+            data_source,
+            " (custom temp)" if custom_target_temp_c else "",
         )
 
         # Get the category name for the protein
-        protein_name = _get_protein_name_for_cut(cut)
+        protein_name = _get_protein_name_for_cut_with_categories(cut, categories)
         
         # Find and update the target entities
         entities = _get_cooking_session_entities(hass, entity_ids)
@@ -296,8 +340,8 @@ async def _async_register_services(hass: HomeAssistant) -> None:
                 cut=cut.name,
                 doneness=doneness,
                 cooking_method=cooking_method,
-                target_temp_c=temp_range.target_temp_c,
-                target_temp_f=temp_range.target_temp_f,
+                target_temp_c=target_temp_c,
+                target_temp_f=target_temp_f,
                 min_temp_c=temp_range.min_temp_c,
                 min_temp_f=temp_range.min_temp_f,
                 max_temp_c=temp_range.max_temp_c,

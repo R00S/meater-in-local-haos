@@ -1,6 +1,6 @@
 # Project Status - Kitchen Cooking Engine
 
-**Last Updated:** 2025-11-30
+**Last Updated:** 2025-12-01
 
 ## Project Direction
 
@@ -8,10 +8,27 @@ This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen 
 
 ## ✅ Current Status
 
-### Working Now
+### Working Now (v0.1.1.0)
 - **MEATER+ BLE Client**: ESP32 connects to real MEATER+ probe and reads temperature data
 - **Home Assistant Integration**: Tip temp, ambient temp, battery level, RSSI exposed as sensors
 - **No Cloud Required**: All data stays local via ESPHome
+- **Cooking Panel UI**: Select protein, cut, doneness, and cooking method
+- **Swedish Temperature Data**: Full Swedish cut tree with temperatures from Livsmedelsverket, Stekguiden.se, Gårdssällskapet
+- **Temperature Fine-Tuning**: Adjust target temperature before starting cooks
+- **Recommended Doneness**: Pre-selected recommended doneness for each cut
+
+### New in v0.1.1.0
+- **Swedish Data Source**: Choose between International (USDA) or Swedish (Livsmedelsverket) temperature recommendations
+- **Merged Protein Lists**: Comprehensive list of cuts from both data sources
+- **Temperature Fine-Tuning UI**: Slider and input controls to adjust target temperature
+- **Recommended Doneness**: ⭐ indicator for recommended doneness levels
+- **Swedish Cuts**: Full Swedish butcher-style cuts including:
+  - Nötkött: Entrecôte, Ryggbiff, Oxfilé, Högrev, Bringa, etc.
+  - Fläsk: Fläskkotlett, Fläskkarré, Revbensspjäll, Julskinka, etc.
+  - Lamm: Lammstek, Lammrack, Lammkotletter, etc.
+  - Vilt: Älgfilé, Renfilé, Rådjursfilé, Hjortfilé, Vildsvin, etc.
+  - Fågel: Kyckling, Kalkon, Anka
+  - Fisk: Lax, Torsk, Sik, Röding, Gös, etc.
 
 ### Documented & Planned
 - **Terms of Reference**: Complete project specification in `docs/TERMS_OF_REFERENCE.md`
@@ -24,7 +41,7 @@ This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen 
 Build a smart cooking engine that:
 1. **Uses MEATER hardware without cloud** ✅ (working)
 2. **Reproduces MEATER's cooking algorithm locally** (planned)
-3. **Supports multiple cuts and cooking styles** (documented)
+3. **Supports multiple cuts and cooking styles** ✅ (working - International + Swedish)
 4. **Provides dynamic ETA predictions** (planned)
 5. **Includes resting-phase forecasts** (planned)
 6. **Shows graphs and notifications** (planned)
