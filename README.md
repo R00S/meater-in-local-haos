@@ -1,5 +1,8 @@
 # Kitchen Cooking Engine
 
+[![HACS Badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
+[![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2024.1.0+-blue.svg)](https://www.home-assistant.io/)
+
 A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes, and temperature sensors.
 
 ## 🎯 Project Vision
@@ -27,25 +30,57 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 See [STATUS.md](STATUS.md) for detailed project status.
 
-## 🏗️ Installation
+---
 
-### HACS (Recommended)
+## 🏗️ Installation via HACS
 
-1. Open HACS in Home Assistant
-2. Click on "Integrations"
-3. Click the three dots menu → "Custom repositories"
-4. Add this repository URL: `https://github.com/R00S/meater-in-local-haos`
-5. Category: Integration
-6. Click "Add"
-7. Search for "Kitchen Cooking Engine" and install
-8. Restart Home Assistant
-9. Go to Settings → Devices & Services → Add Integration → Kitchen Cooking Engine
+### Prerequisites
 
-### Manual Installation
+- Home Assistant 2024.1.0 or newer
+- [HACS](https://hacs.xyz/) installed and configured
 
-1. Copy the `custom_components/kitchen_cooking_engine` folder to your Home Assistant's `custom_components` directory
-2. Restart Home Assistant
-3. Configure via UI
+### Step 1: Add Custom Repository
+
+1. Open Home Assistant
+2. Go to **HACS** → **Integrations**
+3. Click the **⋮** (three dots) menu in the top right
+4. Select **Custom repositories**
+5. Enter the repository URL:
+   ```
+   https://github.com/R00S/meater-in-local-haos
+   ```
+6. Select **Integration** as the category
+7. Click **Add**
+
+### Step 2: Install the Integration
+
+1. In HACS → Integrations, click **+ Explore & Download Repositories**
+2. Search for **Kitchen Cooking Engine**
+3. Click on it and then click **Download**
+4. **Restart Home Assistant**
+
+### Step 3: Configure the Integration
+
+1. Go to **Settings** → **Devices & Services**
+2. Click **+ Add Integration**
+3. Search for **Kitchen Cooking Engine**
+4. Select your temperature sensor (e.g., MEATER probe sensor)
+5. Optionally select an ambient temperature sensor
+6. Choose your preferred temperature unit (Celsius/Fahrenheit)
+7. Click **Submit**
+
+> **Note:** No `configuration.yaml` editing is required! The integration is fully configured through the UI.
+
+### Manual Installation (Alternative)
+
+If you prefer not to use HACS:
+
+1. Download the `custom_components/kitchen_cooking_engine` folder from this repository
+2. Copy it to your Home Assistant's `config/custom_components/` directory
+3. Restart Home Assistant
+4. Configure via Settings → Devices & Services → Add Integration
+
+---
 
 ## 🍖 Supported Proteins & Cuts
 
