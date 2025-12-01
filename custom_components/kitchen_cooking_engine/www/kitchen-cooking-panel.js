@@ -871,8 +871,7 @@ const SWEDISH_MEAT_CATEGORIES = {
             cuts: [
               { id: 2200, name: "Fläskkotlett med ben", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
               { id: 2204, name: "Fläskkotlett utan ben", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
-              { id: 2201, name: "Fläskfilé (hel)", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
-              { id: 2205, name: "Fläskfilé (skiva)", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2205, name: "Fläskfiléskiva", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
               { id: 2202, name: "Karrékoteletter", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
               { id: 2203, name: "Secreto (Ibérico)", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
             ]
@@ -887,6 +886,10 @@ const SWEDISH_MEAT_CATEGORIES = {
             id: 2210,
             name: "Helstekt",
             cuts: [
+              { id: 2201, name: "Fläskfilé", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2215, name: "Fläskytterfilé", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2216, name: "Fläskkotlett med ben", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2217, name: "Fläskkotlett utan ben", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
               { id: 2210, name: "Fläsksida", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "genomstekt" },
               { id: 2211, name: "Fläskkarré", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
               { id: 2212, name: "Skinka", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
