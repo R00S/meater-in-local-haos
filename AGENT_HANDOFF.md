@@ -38,6 +38,33 @@ To iterate without merging PRs for every test:
 
 This allows continuous iteration without closing the agent session between tests.
 
+### How to Download a Development Branch in HACS
+
+**Step-by-step instructions:**
+
+1. **Open HACS** in Home Assistant
+2. **Go to Integrations** tab
+3. **Find "Kitchen Cooking Engine"** (or add it first via Custom Repositories if not yet added)
+4. **Click on the integration** to open its details
+5. **Click the 3-dot menu (⋮)** in the top right
+6. **Select "Redownload"**
+7. **In the version dropdown**, you'll see releases AND branches
+8. **Select the development branch** (e.g., `copilot/setup-workflow-with-dev-branches`)
+9. **Click Download**
+10. **Restart Home Assistant** to apply changes
+
+> **Note:** HACS 2.x shows branches in the version selector when redownloading. If you don't see branches, ensure you're using HACS 2.0 or later.
+
+### GitHub Actions Workflow
+
+A HACS validation workflow runs automatically on:
+- Every push to any branch
+- Every pull request
+- Daily scheduled runs
+- Manual trigger (workflow_dispatch)
+
+The workflow file is at `.github/workflows/hacs-validation.yml` and validates that the repository structure is HACS-compliant. Check the GitHub Actions tab to see validation results for any branch before downloading via HACS.
+
 ---
 
 ## 🚀 PHASE 1 COMPLETE - Kitchen Cooking Engine Integration
