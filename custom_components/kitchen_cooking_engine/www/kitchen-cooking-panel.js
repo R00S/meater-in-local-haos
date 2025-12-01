@@ -1,11 +1,11 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * Last Updated: 1 Dec 2025, 22:40 CET
- * Last Change: v0.1.1.6 - Fix blank page caused by panel version mismatch
- *              - Sync PANEL_VERSION in JS (21) with const.py (21)
- *              - The browser was trying to load kitchen-cooking-panel-v21
- *                but only v20 was registered in the JS
+ * Last Updated: 1 Dec 2025, 22:45 CET
+ * Last Change: v0.1.1.7 - Fix blank page by using updated() lifecycle
+ *              - Move API fetch from connectedCallback to updated()
+ *              - hass property is not available in connectedCallback
+ *              - Now properly waits for hass to be set before fetching
  * 
  * NOTE: Temperature values are suggestions based on cooking style, not just safety.
  *       Livsmedelsverket safety info can be shown separately if needed.
@@ -1349,8 +1349,20 @@ class KitchenCookingPanel extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    // Fetch cooking data from API on component load
-    this._fetchCookingData();
+    // Note: Don't fetch here - hass is not available yet
+    // Instead, we fetch in updated() when hass becomes available
+  }
+
+  updated(changedProperties) {
+    super.updated(changedProperties);
+    // Fetch cooking data when hass becomes available
+    if (changedProperties.has('hass') && this.hass && !this._apiCategories && !this._apiLoading) {
+      this._fetchCookingData();
+    }
+    // Also refetch when data source changes
+    if (changedProperties.has('_dataSource') && this.hass) {
+      this._fetchCookingData();
+    }
   }
 
   async _fetchCookingData() {
@@ -2549,7 +2561,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "21";
+const PANEL_VERSION = "22";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
