@@ -71,21 +71,17 @@ See [STATUS.md](STATUS.md) for detailed project status.
 
 > **Note:** No `configuration.yaml` editing is required! The integration is fully configured through the UI.
 
-### Step 4: Add the Lovelace Card
+### Step 4: Access the Cooking Panel
 
-1. Go to **Settings** → **Dashboards** → **Resources** (top right menu)
-2. Click **+ Add Resource**
-3. Enter URL: `/local/community/kitchen_cooking_engine/kitchen-cooking-card.js`
-4. Select **JavaScript Module**
-5. Click **Create**
+After installation, a **"Cooking"** entry will appear in your Home Assistant sidebar. Click it to access the cooking interface.
 
-Now add the card to your dashboard:
-
-1. Edit any dashboard
-2. Click **+ Add Card**
-3. Search for **Kitchen Cooking Card**
-4. Select your cooking session entity
-5. Click **Save**
+The sidebar panel provides:
+- **Protein Selection**: Choose from Beef, Pork, Poultry, Fish, or Lamb
+- **Cut Selection**: Pick the specific cut you're cooking
+- **Doneness Levels**: Visual buttons for Rare through Well Done
+- **Cooking Methods**: Oven, Pan, Grill, Air Fryer, and more
+- **Live Monitoring**: Real-time temperature and progress tracking
+- **Control Actions**: Stop cook, start rest, complete session
 
 ### Manual Installation (Alternative)
 
@@ -95,27 +91,6 @@ If you prefer not to use HACS:
 2. Copy it to your Home Assistant's `config/custom_components/` directory
 3. Restart Home Assistant
 4. Configure via Settings → Devices & Services → Add Integration
-
----
-
-## 🎮 Lovelace Card
-
-The Kitchen Cooking Card provides a visual interface for:
-
-- **Starting Cooks**: Select protein, cut, doneness, and cooking method
-- **Monitoring Progress**: Real-time temperature and progress bar
-- **State Awareness**: Dynamic icons and colors for each cooking state
-- **Control Actions**: Stop cook, start rest, complete session
-
-![Kitchen Cooking Card States](docs/images/card-states.png)
-
-### Card Configuration
-
-```yaml
-type: custom:kitchen-cooking-card
-entity: sensor.cooking_session
-title: My Cook  # optional
-```
 
 ---
 

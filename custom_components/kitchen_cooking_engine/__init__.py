@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 1 Dec 2025, 13:09 CET
-Last Change: Added Lovelace card for cooking session UI
+Last Updated: 1 Dec 2025, 13:31 CET
+Last Change: Added sidebar panel for cooking session UI
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -14,15 +14,18 @@ This integration provides:
 - Time-to-target estimation
 - Notifications for approaching target and goal reached
 - Rest time recommendations with carryover cooking estimation
-- Lovelace card for easy cooking setup and monitoring
+- Sidebar panel for easy cooking setup and monitoring
 """
 
 from __future__ import annotations
 
 import logging
+from pathlib import Path
 
 import voluptuous as vol
 
+from homeassistant.components.frontend import async_register_built_in_panel
+from homeassistant.components.http import StaticPathConfig
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import ATTR_ENTITY_ID, Platform
 from homeassistant.core import HomeAssistant, ServiceCall
@@ -97,6 +100,47 @@ async def _cleanup_old_entities(hass: HomeAssistant, entry: ConfigEntry) -> None
             seen_unique_ids.add(entity.unique_id)
 
 
+async def _async_register_panel(hass: HomeAssistant) -> None:
+    """Register the sidebar panel."""
+    # Only register once
+    if hass.data.get(DOMAIN, {}).get("panel_registered"):
+        return
+    
+    # Get the path to the www directory
+    www_path = Path(__file__).parent / "www"
+    panel_path = www_path / "panel.html"
+    
+    if not panel_path.exists():
+        _LOGGER.warning("Kitchen Cooking Engine: Panel file not found at %s", panel_path)
+        return
+    
+    # Register static path to serve the panel HTML
+    try:
+        await hass.http.async_register_static_paths([
+            StaticPathConfig(
+                url_path="/kitchen_cooking_engine_panel",
+                path=str(www_path),
+                cache_headers=False,
+            )
+        ])
+    except Exception as e:
+        _LOGGER.warning("Kitchen Cooking Engine: Could not register static path: %s", e)
+        return
+    
+    # Register the panel in the sidebar
+    hass.components.frontend.async_register_built_in_panel(
+        component_name="iframe",
+        sidebar_title="Cooking",
+        sidebar_icon="mdi:pot-steam",
+        frontend_url_path="kitchen-cooking",
+        config={"url": "/kitchen_cooking_engine_panel/panel.html"},
+        require_admin=False,
+    )
+    
+    hass.data[DOMAIN]["panel_registered"] = True
+    _LOGGER.info("Kitchen Cooking Engine: Sidebar panel registered")
+
+
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up Kitchen Cooking Engine from a config entry."""
     _LOGGER.info("=" * 60)
@@ -113,6 +157,9 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         "config": entry.data,
     }
 
+    # Register the sidebar panel
+    await _async_register_panel(hass)
+
     # Register services
     await _async_register_services(hass)
 
@@ -121,10 +168,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
 
     _LOGGER.info("Kitchen Cooking Engine: Integration setup complete")
-    _LOGGER.info(
-        "Kitchen Cooking Engine: Lovelace card available at "
-        "/local/community/kitchen_cooking_engine/kitchen-cooking-card.js"
-    )
     return True
 
 
