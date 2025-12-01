@@ -1,13 +1,17 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * Last Updated: 1 Dec 2025, 17:00 CET
- * Last Change: Added Swedish data support, temperature fine-tuning, and 
- *              recommended doneness pre-selection for all proteins
+ * Last Updated: 1 Dec 2025, 19:40 CET
+ * Last Change: v0.1.1.1 - Full doneness options for all proteins, Swedish terminology fixes
+ *              - Changed "stekstyck" to "helstekt" (roast) and "stek" to "skiva" (steak/chop)
+ *              - All proteins now have full doneness range (blodig, medium_rare, medium, 
+ *                medium_well, genomstekt, långkokt) - user chooses based on preference
+ *              - Added Kalv (veal) as separate category
+ *              - Added Tonfisk (tuna) with blodig as default
+ *              - Fish can now be served blodig/rare for sushi-grade cuts
  * 
- * NOTE: The cut/category structure mirrors MEATER app's meatCutStructure.
- *       Temperature values are from USDA/FDA public guidelines.
- *       Swedish temperature values from Stekguiden.se, Livsmedelsverket, etc.
+ * NOTE: Temperature values are suggestions based on cooking style, not just safety.
+ *       Livsmedelsverket safety info can be shown separately if needed.
  * 
  * A custom panel for the Kitchen Cooking Engine integration.
  */
@@ -763,25 +767,24 @@ const MEAT_CATEGORIES = {
   }
 };
 
-// Swedish doneness arrays
-const SWEDISH_STEAK_DONENESS = ["blodig", "medium_rare", "medium", "medium_well", "genomstekt"];
-const SWEDISH_STEAK_DONENESS_NO_WELL = ["blodig", "medium_rare", "medium", "medium_well"];
-const SWEDISH_BRAISING_DONENESS = ["långkokt"];
-const SWEDISH_PORK_DONENESS = ["medium", "genomstekt"];
-const SWEDISH_POULTRY_DONENESS = ["genomstekt"];
-const SWEDISH_FISH_DONENESS = ["medium", "genomstekt"];
-const SWEDISH_GAME_DONENESS = ["blodig", "medium", "medium_well"];
+// Swedish doneness arrays - based on cooking style, not safety guidelines
+// Full range available for all cuts - user chooses based on preference
+const SWEDISH_FULL_DONENESS = ["blodig", "medium_rare", "medium", "medium_well", "genomstekt", "långkokt"];
+const SWEDISH_STEAK_DONENESS = ["blodig", "medium_rare", "medium", "medium_well", "genomstekt", "långkokt"];
+const SWEDISH_FISH_FULL = ["blodig", "medium_rare", "medium", "genomstekt"];
+const SWEDISH_POULTRY_FULL = ["medium", "genomstekt", "långkokt"];
 
 /**
  * SWEDISH_MEAT_CATEGORIES - Swedish meat/protein data structure
  * 
- * Data sources:
- * - Stekguiden.se - Aggregated from Livsmedelsverket, Svenskt Kött
- * - Gårdssällskapet - Swedish butcher style cuts
- * - Scan Köttguiden - Detailed cut and temperature guide
- * - ICA.se - Temperature guide
- * - Köket.se - Swedish temperature recommendations
- * - Livsmedelsverket (Swedish Food Agency) - Official food safety
+ * Temperature recommendations based on cooking style, not just safety.
+ * All cuts have full doneness range - users choose based on preference.
+ * Livsmedelsverket safety info can be shown separately in the UI if needed.
+ * 
+ * Terminology:
+ * - "Skiva" = steak/chop style cuts
+ * - "Helstekt" = roast style cuts
+ * - "Långkokt" = braised/pulled style
  */
 const SWEDISH_MEAT_CATEGORIES = {
   notkott: {
@@ -792,39 +795,39 @@ const SWEDISH_MEAT_CATEGORIES = {
     meats: [
       {
         id: 2010,
-        name: "Stek",
+        name: "Skiva",
         cutTypes: [
           {
             id: 2100,
-            name: "Biff & Stek",
+            name: "Biff & Skiva",
             cuts: [
-              { id: 2100, name: "Entrecôte", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
-              { id: 2101, name: "Ryggbiff", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
-              { id: 2102, name: "Oxfilé", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
-              { id: 2103, name: "Flankstek", doneness: SWEDISH_STEAK_DONENESS_NO_WELL, recommendedDoneness: "medium_rare" },
-              { id: 2104, name: "Flat Iron", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
-              { id: 2105, name: "Flapsteak (Bavette)", doneness: SWEDISH_STEAK_DONENESS_NO_WELL, recommendedDoneness: "medium_rare" },
-              { id: 2106, name: "Tomahawk", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
-              { id: 2107, name: "Picanha", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
-              { id: 2108, name: "Njurtapp", doneness: SWEDISH_STEAK_DONENESS_NO_WELL, recommendedDoneness: "medium_rare" },
-              { id: 2109, name: "Hanger Steak (Onglet)", doneness: ["blodig", "medium_rare", "medium"], recommendedDoneness: "medium_rare" },
+              { id: 2100, name: "Entrecôte", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2101, name: "Ryggbiff", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2102, name: "Oxfilé", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2103, name: "Flankstek", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2104, name: "Flat Iron", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2105, name: "Flapsteak (Bavette)", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2106, name: "Tomahawk", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2107, name: "Picanha", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2108, name: "Njurtapp", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2109, name: "Hanger Steak (Onglet)", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
             ]
           }
         ]
       },
       {
         id: 2011,
-        name: "Stekstyck",
+        name: "Helstekt",
         cutTypes: [
           {
             id: 2120,
-            name: "Stekstyck",
+            name: "Helstekt",
             cuts: [
-              { id: 2120, name: "Rostbiff", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium" },
-              { id: 2121, name: "Innanlår", doneness: SWEDISH_STEAK_DONENESS.slice(1), recommendedDoneness: "medium" },
-              { id: 2122, name: "Ytterlår", doneness: SWEDISH_STEAK_DONENESS.slice(1), recommendedDoneness: "medium" },
-              { id: 2123, name: "Fransyska", doneness: SWEDISH_STEAK_DONENESS.slice(1), recommendedDoneness: "medium" },
-              { id: 2124, name: "Nötrulle", doneness: ["medium", "medium_well", "genomstekt"], recommendedDoneness: "medium" },
+              { id: 2120, name: "Rostbiff", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2121, name: "Innanlår", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2122, name: "Ytterlår", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2123, name: "Fransyska", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2124, name: "Nötrulle", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
             ]
           }
         ]
@@ -837,13 +840,13 @@ const SWEDISH_MEAT_CATEGORIES = {
             id: 2130,
             name: "Långkokt",
             cuts: [
-              { id: 2130, name: "Högrev", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
-              { id: 2131, name: "Bringa (Brisket)", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
-              { id: 2132, name: "Bog", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
-              { id: 2133, name: "Oxsvans", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
-              { id: 2134, name: "Lägg", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
-              { id: 2135, name: "Oxkind", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
-              { id: 2136, name: "Märgpipa", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2130, name: "Högrev", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2131, name: "Bringa (Brisket)", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2132, name: "Bog", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2133, name: "Oxsvans", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2134, name: "Lägg", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2135, name: "Oxkind", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2136, name: "Märgpipa", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
             ]
           }
         ]
@@ -858,33 +861,33 @@ const SWEDISH_MEAT_CATEGORIES = {
     meats: [
       {
         id: 2020,
-        name: "Stek/Kotlett",
+        name: "Skiva/Kotlett",
         cutTypes: [
           {
             id: 2200,
-            name: "Stek & Kotlett",
+            name: "Skiva & Kotlett",
             cuts: [
-              { id: 2200, name: "Fläskkotlett", doneness: SWEDISH_PORK_DONENESS, recommendedDoneness: "medium" },
-              { id: 2201, name: "Fläskfilé", doneness: SWEDISH_PORK_DONENESS, recommendedDoneness: "medium" },
-              { id: 2202, name: "Karrékoteletter", doneness: SWEDISH_PORK_DONENESS, recommendedDoneness: "medium" },
-              { id: 2203, name: "Secreto (Ibérico)", doneness: SWEDISH_PORK_DONENESS, recommendedDoneness: "medium" },
+              { id: 2200, name: "Fläskkotlett", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2201, name: "Fläskfilé", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2202, name: "Karrékoteletter", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2203, name: "Secreto (Ibérico)", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
             ]
           }
         ]
       },
       {
         id: 2021,
-        name: "Stekstyck",
+        name: "Helstekt",
         cutTypes: [
           {
             id: 2210,
-            name: "Stekstyck",
+            name: "Helstekt",
             cuts: [
-              { id: 2210, name: "Fläsksida", doneness: SWEDISH_PORK_DONENESS, recommendedDoneness: "medium" },
-              { id: 2211, name: "Fläskkarré", doneness: SWEDISH_PORK_DONENESS, recommendedDoneness: "medium" },
-              { id: 2212, name: "Skinka", doneness: SWEDISH_PORK_DONENESS, recommendedDoneness: "medium" },
-              { id: 2213, name: "Julskinka (kokt)", doneness: ["genomstekt"], recommendedDoneness: "genomstekt" },
-              { id: 2214, name: "Fläskbog", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2210, name: "Fläsksida", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "genomstekt" },
+              { id: 2211, name: "Fläskkarré", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2212, name: "Skinka", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2213, name: "Julskinka (kokt)", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "genomstekt" },
+              { id: 2214, name: "Fläskbog", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
             ]
           }
         ]
@@ -897,8 +900,8 @@ const SWEDISH_MEAT_CATEGORIES = {
             id: 2220,
             name: "Revben",
             cuts: [
-              { id: 2220, name: "Revbensspjäll", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
-              { id: 2221, name: "Sidfläsk med revben", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2220, name: "Revbensspjäll", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2221, name: "Sidfläsk med revben", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
             ]
           }
         ]
@@ -919,10 +922,10 @@ const SWEDISH_MEAT_CATEGORIES = {
             id: 2300,
             name: "Kyckling",
             cuts: [
-              { id: 2300, name: "Hel kyckling", doneness: SWEDISH_POULTRY_DONENESS, recommendedDoneness: "genomstekt" },
-              { id: 2301, name: "Kycklingbröst", doneness: SWEDISH_POULTRY_DONENESS, recommendedDoneness: "genomstekt" },
-              { id: 2302, name: "Kycklingleår", doneness: SWEDISH_POULTRY_DONENESS, recommendedDoneness: "genomstekt" },
-              { id: 2303, name: "Kycklingvingar", doneness: SWEDISH_POULTRY_DONENESS, recommendedDoneness: "genomstekt" },
+              { id: 2300, name: "Hel kyckling", doneness: SWEDISH_POULTRY_FULL, recommendedDoneness: "genomstekt" },
+              { id: 2301, name: "Kycklingbröst", doneness: SWEDISH_POULTRY_FULL, recommendedDoneness: "genomstekt" },
+              { id: 2302, name: "Kycklingleår", doneness: SWEDISH_POULTRY_FULL, recommendedDoneness: "genomstekt" },
+              { id: 2303, name: "Kycklingvingar", doneness: SWEDISH_POULTRY_FULL, recommendedDoneness: "genomstekt" },
             ]
           }
         ]
@@ -935,8 +938,8 @@ const SWEDISH_MEAT_CATEGORIES = {
             id: 2310,
             name: "Kalkon",
             cuts: [
-              { id: 2310, name: "Hel kalkon", doneness: SWEDISH_POULTRY_DONENESS, recommendedDoneness: "genomstekt" },
-              { id: 2311, name: "Kalkonbröst", doneness: SWEDISH_POULTRY_DONENESS, recommendedDoneness: "genomstekt" },
+              { id: 2310, name: "Hel kalkon", doneness: SWEDISH_POULTRY_FULL, recommendedDoneness: "genomstekt" },
+              { id: 2311, name: "Kalkonbröst", doneness: SWEDISH_POULTRY_FULL, recommendedDoneness: "genomstekt" },
             ]
           }
         ]
@@ -949,8 +952,8 @@ const SWEDISH_MEAT_CATEGORIES = {
             id: 2320,
             name: "Anka",
             cuts: [
-              { id: 2320, name: "Ankbröst", doneness: ["medium_rare", "medium", "genomstekt"], recommendedDoneness: "medium_rare" },
-              { id: 2321, name: "Hel anka", doneness: SWEDISH_POULTRY_DONENESS, recommendedDoneness: "genomstekt" },
+              { id: 2320, name: "Ankbröst", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2321, name: "Hel anka", doneness: SWEDISH_POULTRY_FULL, recommendedDoneness: "genomstekt" },
             ]
           }
         ]
@@ -971,8 +974,8 @@ const SWEDISH_MEAT_CATEGORIES = {
             id: 2400,
             name: "Lax",
             cuts: [
-              { id: 2400, name: "Laxfilé", doneness: SWEDISH_FISH_DONENESS, recommendedDoneness: "medium" },
-              { id: 2401, name: "Gravad lax (uppvärmd)", doneness: ["medium"], recommendedDoneness: "medium" },
+              { id: 2400, name: "Laxfilé", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
+              { id: 2401, name: "Gravad lax (uppvärmd)", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
             ]
           }
         ]
@@ -985,25 +988,92 @@ const SWEDISH_MEAT_CATEGORIES = {
             id: 2410,
             name: "Torsk",
             cuts: [
-              { id: 2410, name: "Torskfilé", doneness: SWEDISH_FISH_DONENESS, recommendedDoneness: "medium" },
-              { id: 2411, name: "Torskrygg", doneness: SWEDISH_FISH_DONENESS, recommendedDoneness: "medium" },
+              { id: 2410, name: "Torskfilé", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
+              { id: 2411, name: "Torskrygg", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
             ]
           }
         ]
       },
       {
         id: 2042,
+        name: "Tonfisk",
+        cutTypes: [
+          {
+            id: 2430,
+            name: "Tonfisk",
+            cuts: [
+              { id: 2430, name: "Tonfiskskiva", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "blodig" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2043,
         name: "Övrig fisk",
         cutTypes: [
           {
             id: 2420,
             name: "Övrig fisk",
             cuts: [
-              { id: 2420, name: "Sikfilé", doneness: SWEDISH_FISH_DONENESS, recommendedDoneness: "medium" },
-              { id: 2421, name: "Rödingfilé", doneness: SWEDISH_FISH_DONENESS, recommendedDoneness: "medium" },
-              { id: 2422, name: "Abborrfilé", doneness: ["genomstekt"], recommendedDoneness: "genomstekt" },
-              { id: 2423, name: "Gösfilé", doneness: SWEDISH_FISH_DONENESS, recommendedDoneness: "medium" },
-              { id: 2424, name: "Hälleflundra", doneness: SWEDISH_FISH_DONENESS, recommendedDoneness: "medium" },
+              { id: 2420, name: "Sikfilé", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
+              { id: 2421, name: "Rödingfilé", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
+              { id: 2422, name: "Abborrfilé", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "genomstekt" },
+              { id: 2423, name: "Gösfilé", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
+              { id: 2424, name: "Hälleflundra", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  kalv: {
+    id: 2007,
+    name: "Kalv",
+    icon: "🐄",
+    color: "#DEB887",
+    meats: [
+      {
+        id: 2070,
+        name: "Helstekt",
+        cutTypes: [
+          {
+            id: 2700,
+            name: "Helstekt",
+            cuts: [
+              { id: 2700, name: "Kalvstek", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2701, name: "Kalvfilé", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2702, name: "Kalvfransyska", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2703, name: "Kalvrostbiff", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2071,
+        name: "Skiva/Kotlett",
+        cutTypes: [
+          {
+            id: 2710,
+            name: "Skiva & Kotlett",
+            cuts: [
+              { id: 2710, name: "Kalvkotlett", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2711, name: "Kalvschnitzel", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "genomstekt" },
+              { id: 2712, name: "Kalvlever", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+            ]
+          }
+        ]
+      },
+      {
+        id: 2072,
+        name: "Långkok",
+        cutTypes: [
+          {
+            id: 2720,
+            name: "Långkokt",
+            cuts: [
+              { id: 2720, name: "Kalvbog", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2721, name: "Kalvlägg", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2722, name: "Kalvbringa", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
             ]
           }
         ]
@@ -1018,30 +1088,30 @@ const SWEDISH_MEAT_CATEGORIES = {
     meats: [
       {
         id: 2050,
-        name: "Stekstyck",
+        name: "Helstekt",
         cutTypes: [
           {
             id: 2500,
-            name: "Stekstyck",
+            name: "Helstekt",
             cuts: [
-              { id: 2500, name: "Lammstek", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
-              { id: 2501, name: "Lammrack", doneness: SWEDISH_STEAK_DONENESS_NO_WELL, recommendedDoneness: "medium_rare" },
-              { id: 2502, name: "Lammbog", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
-              { id: 2503, name: "Lammsadel", doneness: SWEDISH_STEAK_DONENESS_NO_WELL, recommendedDoneness: "medium_rare" },
+              { id: 2500, name: "Lammstek", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2501, name: "Lammrack", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2502, name: "Lammbog", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2503, name: "Lammsadel", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
             ]
           }
         ]
       },
       {
         id: 2051,
-        name: "Kotletter",
+        name: "Skiva/Kotlett",
         cutTypes: [
           {
             id: 2510,
-            name: "Kotletter",
+            name: "Skiva & Kotlett",
             cuts: [
-              { id: 2510, name: "Lammkotletter", doneness: SWEDISH_STEAK_DONENESS, recommendedDoneness: "medium_rare" },
-              { id: 2511, name: "Lammhalsfilé", doneness: SWEDISH_STEAK_DONENESS_NO_WELL, recommendedDoneness: "medium_rare" },
+              { id: 2510, name: "Lammkotletter", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
+              { id: 2511, name: "Lammhalsfilé", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium_rare" },
             ]
           }
         ]
@@ -1062,10 +1132,10 @@ const SWEDISH_MEAT_CATEGORIES = {
             id: 2600,
             name: "Hjort & Rådjur",
             cuts: [
-              { id: 2600, name: "Hjortfilé", doneness: SWEDISH_GAME_DONENESS, recommendedDoneness: "medium" },
-              { id: 2601, name: "Hjortstek", doneness: ["blodig", "medium"], recommendedDoneness: "medium" },
-              { id: 2602, name: "Rådjursfilé", doneness: SWEDISH_GAME_DONENESS, recommendedDoneness: "medium" },
-              { id: 2603, name: "Rådjursstek", doneness: ["blodig", "medium"], recommendedDoneness: "medium" },
+              { id: 2600, name: "Hjortfilé", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2601, name: "Hjortstek", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2602, name: "Rådjursfilé", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2603, name: "Rådjursstek", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
             ]
           }
         ]
@@ -1078,9 +1148,9 @@ const SWEDISH_MEAT_CATEGORIES = {
             id: 2610,
             name: "Älg",
             cuts: [
-              { id: 2610, name: "Älgfilé", doneness: SWEDISH_GAME_DONENESS, recommendedDoneness: "medium" },
-              { id: 2611, name: "Älgstek", doneness: ["blodig", "medium"], recommendedDoneness: "medium" },
-              { id: 2612, name: "Älgfärsbiff", doneness: ["genomstekt"], recommendedDoneness: "genomstekt" },
+              { id: 2610, name: "Älgfilé", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2611, name: "Älgstek", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2612, name: "Älgfärsbiff", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "genomstekt" },
             ]
           }
         ]
@@ -1093,8 +1163,8 @@ const SWEDISH_MEAT_CATEGORIES = {
             id: 2620,
             name: "Ren",
             cuts: [
-              { id: 2620, name: "Renfilé", doneness: SWEDISH_GAME_DONENESS, recommendedDoneness: "medium" },
-              { id: 2621, name: "Renstek", doneness: ["blodig", "medium"], recommendedDoneness: "medium" },
+              { id: 2620, name: "Renfilé", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2621, name: "Renstek", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
             ]
           }
         ]
@@ -1107,8 +1177,8 @@ const SWEDISH_MEAT_CATEGORIES = {
             id: 2630,
             name: "Vildsvin",
             cuts: [
-              { id: 2630, name: "Vildsvinsfil", doneness: ["genomstekt"], recommendedDoneness: "genomstekt" },
-              { id: 2631, name: "Vildsvinsstek", doneness: SWEDISH_BRAISING_DONENESS, recommendedDoneness: "långkokt" },
+              { id: 2630, name: "Vildsvinsfil", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "genomstekt" },
+              { id: 2631, name: "Vildsvinsstek", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "långkokt" },
             ]
           }
         ]
@@ -2189,7 +2259,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "17";
+const PANEL_VERSION = "18";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

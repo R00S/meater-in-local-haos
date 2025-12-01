@@ -801,6 +801,171 @@ SWEDISH_PORK_RIBS = [
 
 
 # ============================================================================
+# SWEDISH VEAL (KALV)
+# Based on Stekguiden.se temperatures for kalv
+# ============================================================================
+
+# All Swedish doneness levels available for user preference
+SWEDISH_FULL_DONENESS = [
+    SWEDISH_DONENESS_RARE,
+    SWEDISH_DONENESS_MEDIUM_RARE,
+    SWEDISH_DONENESS_MEDIUM,
+    SWEDISH_DONENESS_MEDIUM_WELL,
+    SWEDISH_DONENESS_WELL_DONE,
+    SWEDISH_DONENESS_PULLED,
+]
+
+SWEDISH_VEAL_ROASTS = [
+    MeatCut(
+        id=2700,
+        name="kalvstek",
+        name_long="Kalvstek",
+        cut_order=1,
+        estimated_thickness_mm=80,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=15,
+        rest_time_max=30,
+        carryover_temp_c=5,
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium",
+    ),
+    MeatCut(
+        id=2701,
+        name="kalvfile",
+        name_long="Kalvfilé",
+        cut_order=2,
+        estimated_thickness_mm=50,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=4,
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium_rare",
+    ),
+    MeatCut(
+        id=2702,
+        name="kalvfransyska",
+        name_long="Kalvfransyska",
+        cut_order=3,
+        estimated_thickness_mm=80,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=10,
+        rest_time_max=20,
+        carryover_temp_c=5,
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium",
+    ),
+    MeatCut(
+        id=2703,
+        name="kalvrostbiff",
+        name_long="Kalvrostbiff",
+        cut_order=4,
+        estimated_thickness_mm=80,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=15,
+        rest_time_max=30,
+        carryover_temp_c=5,
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium",
+    ),
+]
+
+SWEDISH_VEAL_CHOPS = [
+    MeatCut(
+        id=2710,
+        name="kalvkotlett",
+        name_long="Kalvkotlett",
+        cut_order=1,
+        estimated_thickness_mm=25,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=3,
+        rest_time_max=5,
+        carryover_temp_c=3,
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium",
+    ),
+    MeatCut(
+        id=2711,
+        name="kalvschnitzel",
+        name_long="Kalvschnitzel",
+        cut_order=2,
+        estimated_thickness_mm=10,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=1,
+        rest_time_max=3,
+        carryover_temp_c=2,
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="genomstekt",
+    ),
+    MeatCut(
+        id=2712,
+        name="kalvlever",
+        name_long="Kalvlever",
+        cut_order=3,
+        estimated_thickness_mm=15,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=1,
+        rest_time_max=2,
+        carryover_temp_c=2,
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium",
+    ),
+]
+
+SWEDISH_VEAL_BRAISING = [
+    MeatCut(
+        id=2720,
+        name="kalvbog",
+        name_long="Kalvbog",
+        cut_order=1,
+        estimated_thickness_mm=100,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=15,
+        rest_time_max=30,
+        carryover_temp_c=5,
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="långkokt",
+    ),
+    MeatCut(
+        id=2721,
+        name="kalvlagg",
+        name_long="Kalvlägg",
+        cut_order=2,
+        estimated_thickness_mm=50,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=10,
+        rest_time_max=20,
+        carryover_temp_c=3,
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="långkokt",
+    ),
+    MeatCut(
+        id=2722,
+        name="kalvbringa",
+        name_long="Kalvbringa",
+        cut_order=3,
+        estimated_thickness_mm=60,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=30,
+        rest_time_max=60,
+        carryover_temp_c=5,
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="långkokt",
+    ),
+]
+
+
+# ============================================================================
 # SWEDISH LAMB (LAMM)
 # ============================================================================
 
@@ -816,13 +981,8 @@ SWEDISH_LAMB_ROASTS = [
         rest_time_min=15,
         rest_time_max=30,
         carryover_temp_c=8,
-        temperature_ranges=[
-            SWEDISH_DONENESS_RARE,
-            SWEDISH_DONENESS_MEDIUM_RARE,
-            SWEDISH_DONENESS_MEDIUM,
-            SWEDISH_DONENESS_MEDIUM_WELL,
-            SWEDISH_DONENESS_WELL_DONE,
-        ],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=2501,
@@ -835,12 +995,8 @@ SWEDISH_LAMB_ROASTS = [
         rest_time_min=10,
         rest_time_max=15,
         carryover_temp_c=5,
-        temperature_ranges=[
-            SWEDISH_DONENESS_RARE,
-            SWEDISH_DONENESS_MEDIUM_RARE,
-            SWEDISH_DONENESS_MEDIUM,
-            SWEDISH_DONENESS_MEDIUM_WELL,
-        ],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=2502,
@@ -853,7 +1009,8 @@ SWEDISH_LAMB_ROASTS = [
         rest_time_min=15,
         rest_time_max=30,
         carryover_temp_c=5,
-        temperature_ranges=[SWEDISH_DONENESS_PULLED],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="långkokt",
     ),
     MeatCut(
         id=2503,
@@ -866,12 +1023,8 @@ SWEDISH_LAMB_ROASTS = [
         rest_time_min=10,
         rest_time_max=20,
         carryover_temp_c=5,
-        temperature_ranges=[
-            SWEDISH_DONENESS_RARE,
-            SWEDISH_DONENESS_MEDIUM_RARE,
-            SWEDISH_DONENESS_MEDIUM,
-            SWEDISH_DONENESS_MEDIUM_WELL,
-        ],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium_rare",
     ),
 ]
 
@@ -887,13 +1040,8 @@ SWEDISH_LAMB_CHOPS = [
         rest_time_min=3,
         rest_time_max=5,
         carryover_temp_c=3,
-        temperature_ranges=[
-            SWEDISH_DONENESS_RARE,
-            SWEDISH_DONENESS_MEDIUM_RARE,
-            SWEDISH_DONENESS_MEDIUM,
-            SWEDISH_DONENESS_MEDIUM_WELL,
-            SWEDISH_DONENESS_WELL_DONE,
-        ],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=2511,
@@ -906,12 +1054,8 @@ SWEDISH_LAMB_CHOPS = [
         rest_time_min=5,
         rest_time_max=10,
         carryover_temp_c=3,
-        temperature_ranges=[
-            SWEDISH_DONENESS_RARE,
-            SWEDISH_DONENESS_MEDIUM_RARE,
-            SWEDISH_DONENESS_MEDIUM,
-            SWEDISH_DONENESS_MEDIUM_WELL,
-        ],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium_rare",
     ),
 ]
 
@@ -932,11 +1076,8 @@ SWEDISH_VENISON = [
         rest_time_min=5,
         rest_time_max=10,
         carryover_temp_c=4,
-        temperature_ranges=[
-            SWEDISH_GAME_RARE,
-            SWEDISH_GAME_MEDIUM,
-            SWEDISH_DONENESS_MEDIUM_WELL,
-        ],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium",
     ),
     MeatCut(
         id=2601,
@@ -949,10 +1090,8 @@ SWEDISH_VENISON = [
         rest_time_min=10,
         rest_time_max=20,
         carryover_temp_c=5,
-        temperature_ranges=[
-            SWEDISH_GAME_RARE,
-            SWEDISH_GAME_MEDIUM,
-        ],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium",
     ),
     MeatCut(
         id=2602,
@@ -965,11 +1104,8 @@ SWEDISH_VENISON = [
         rest_time_min=5,
         rest_time_max=10,
         carryover_temp_c=3,
-        temperature_ranges=[
-            SWEDISH_GAME_RARE,
-            SWEDISH_GAME_MEDIUM,
-            SWEDISH_DONENESS_MEDIUM_WELL,
-        ],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium",
     ),
     MeatCut(
         id=2603,
@@ -982,10 +1118,8 @@ SWEDISH_VENISON = [
         rest_time_min=10,
         rest_time_max=20,
         carryover_temp_c=5,
-        temperature_ranges=[
-            SWEDISH_GAME_RARE,
-            SWEDISH_GAME_MEDIUM,
-        ],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium",
     ),
 ]
 
@@ -1001,11 +1135,8 @@ SWEDISH_MOOSE = [
         rest_time_min=5,
         rest_time_max=10,
         carryover_temp_c=4,
-        temperature_ranges=[
-            SWEDISH_GAME_RARE,
-            SWEDISH_GAME_MEDIUM,
-            SWEDISH_DONENESS_MEDIUM_WELL,
-        ],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium",
     ),
     MeatCut(
         id=2611,
@@ -1018,10 +1149,8 @@ SWEDISH_MOOSE = [
         rest_time_min=15,
         rest_time_max=30,
         carryover_temp_c=8,
-        temperature_ranges=[
-            SWEDISH_GAME_RARE,
-            SWEDISH_GAME_MEDIUM,
-        ],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium",
     ),
     MeatCut(
         id=2612,
@@ -1034,7 +1163,8 @@ SWEDISH_MOOSE = [
         rest_time_min=2,
         rest_time_max=5,
         carryover_temp_c=2,
-        temperature_ranges=[SWEDISH_DONENESS_WELL_DONE],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="genomstekt",
     ),
 ]
 
@@ -1050,11 +1180,8 @@ SWEDISH_REINDEER = [
         rest_time_min=5,
         rest_time_max=10,
         carryover_temp_c=4,
-        temperature_ranges=[
-            SWEDISH_GAME_RARE,
-            SWEDISH_GAME_MEDIUM,
-            SWEDISH_DONENESS_MEDIUM_WELL,
-        ],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium",
     ),
     MeatCut(
         id=2621,
@@ -1067,10 +1194,8 @@ SWEDISH_REINDEER = [
         rest_time_min=10,
         rest_time_max=20,
         carryover_temp_c=5,
-        temperature_ranges=[
-            SWEDISH_GAME_RARE,
-            SWEDISH_GAME_MEDIUM,
-        ],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium",
     ),
 ]
 
@@ -1086,7 +1211,8 @@ SWEDISH_WILD_BOAR = [
         rest_time_min=5,
         rest_time_max=10,
         carryover_temp_c=4,
-        temperature_ranges=[SWEDISH_PORK_WELL_DONE],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="genomstekt",
     ),
     MeatCut(
         id=2631,
@@ -1099,7 +1225,8 @@ SWEDISH_WILD_BOAR = [
         rest_time_min=15,
         rest_time_max=30,
         carryover_temp_c=5,
-        temperature_ranges=[SWEDISH_DONENESS_PULLED],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="långkokt",
     ),
 ]
 
@@ -1107,6 +1234,13 @@ SWEDISH_WILD_BOAR = [
 # ============================================================================
 # SWEDISH POULTRY (FÅGEL)
 # ============================================================================
+
+# Poultry with full range (including genomstekt and långkokt for pulled)
+SWEDISH_POULTRY_FULL = [
+    SWEDISH_DONENESS_MEDIUM,
+    SWEDISH_POULTRY_SAFE,
+    SWEDISH_DONENESS_PULLED,
+]
 
 SWEDISH_CHICKEN = [
     MeatCut(
@@ -1120,7 +1254,8 @@ SWEDISH_CHICKEN = [
         rest_time_min=10,
         rest_time_max=20,
         carryover_temp_c=5,
-        temperature_ranges=[SWEDISH_POULTRY_SAFE],
+        temperature_ranges=SWEDISH_POULTRY_FULL,
+        recommended_doneness="genomstekt",
     ),
     MeatCut(
         id=2301,
@@ -1133,7 +1268,8 @@ SWEDISH_CHICKEN = [
         rest_time_min=3,
         rest_time_max=5,
         carryover_temp_c=3,
-        temperature_ranges=[SWEDISH_POULTRY_SAFE],
+        temperature_ranges=SWEDISH_POULTRY_FULL,
+        recommended_doneness="genomstekt",
     ),
     MeatCut(
         id=2302,
@@ -1146,7 +1282,8 @@ SWEDISH_CHICKEN = [
         rest_time_min=3,
         rest_time_max=5,
         carryover_temp_c=3,
-        temperature_ranges=[SWEDISH_POULTRY_SAFE],
+        temperature_ranges=SWEDISH_POULTRY_FULL,
+        recommended_doneness="genomstekt",
     ),
     MeatCut(
         id=2303,
@@ -1159,7 +1296,8 @@ SWEDISH_CHICKEN = [
         rest_time_min=2,
         rest_time_max=3,
         carryover_temp_c=2,
-        temperature_ranges=[SWEDISH_POULTRY_SAFE],
+        temperature_ranges=SWEDISH_POULTRY_FULL,
+        recommended_doneness="genomstekt",
     ),
 ]
 
@@ -1175,7 +1313,8 @@ SWEDISH_TURKEY = [
         rest_time_min=20,
         rest_time_max=45,
         carryover_temp_c=8,
-        temperature_ranges=[SWEDISH_POULTRY_SAFE],
+        temperature_ranges=SWEDISH_POULTRY_FULL,
+        recommended_doneness="genomstekt",
     ),
     MeatCut(
         id=2311,
@@ -1188,7 +1327,8 @@ SWEDISH_TURKEY = [
         rest_time_min=10,
         rest_time_max=20,
         carryover_temp_c=5,
-        temperature_ranges=[SWEDISH_POULTRY_SAFE],
+        temperature_ranges=SWEDISH_POULTRY_FULL,
+        recommended_doneness="genomstekt",
     ),
 ]
 
@@ -1204,11 +1344,8 @@ SWEDISH_DUCK = [
         rest_time_min=5,
         rest_time_max=10,
         carryover_temp_c=4,
-        temperature_ranges=[
-            SWEDISH_DONENESS_MEDIUM_RARE,
-            SWEDISH_DONENESS_MEDIUM,
-            SWEDISH_POULTRY_SAFE,
-        ],
+        temperature_ranges=SWEDISH_FULL_DONENESS,
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=2321,
@@ -1221,7 +1358,8 @@ SWEDISH_DUCK = [
         rest_time_min=10,
         rest_time_max=15,
         carryover_temp_c=5,
-        temperature_ranges=[SWEDISH_POULTRY_SAFE],
+        temperature_ranges=SWEDISH_POULTRY_FULL,
+        recommended_doneness="genomstekt",
     ),
 ]
 
@@ -1229,6 +1367,14 @@ SWEDISH_DUCK = [
 # ============================================================================
 # SWEDISH FISH (FISK)
 # ============================================================================
+
+# Fish with full range - including blodig for tuna/salmon
+SWEDISH_FISH_FULL = [
+    SWEDISH_DONENESS_RARE,
+    SWEDISH_DONENESS_MEDIUM_RARE,
+    SWEDISH_FISH_MEDIUM,
+    SWEDISH_FISH_WELL_DONE,
+]
 
 SWEDISH_SALMON = [
     MeatCut(
@@ -1242,7 +1388,8 @@ SWEDISH_SALMON = [
         rest_time_min=0,
         rest_time_max=2,
         carryover_temp_c=2,
-        temperature_ranges=[SWEDISH_FISH_MEDIUM, SWEDISH_FISH_WELL_DONE],
+        temperature_ranges=SWEDISH_FISH_FULL,
+        recommended_doneness="medium",
     ),
     MeatCut(
         id=2401,
@@ -1255,7 +1402,26 @@ SWEDISH_SALMON = [
         rest_time_min=0,
         rest_time_max=0,
         carryover_temp_c=1,
-        temperature_ranges=[SWEDISH_FISH_MEDIUM],
+        temperature_ranges=SWEDISH_FISH_FULL,
+        recommended_doneness="medium",
+    ),
+]
+
+# Tuna category
+SWEDISH_TUNA = [
+    MeatCut(
+        id=2430,
+        name="tonfiskskiva",
+        name_long="Tonfiskskiva",
+        cut_order=1,
+        estimated_thickness_mm=25,
+        usda_safe_c=60,
+        usda_safe_f=140,
+        rest_time_min=0,
+        rest_time_max=1,
+        carryover_temp_c=2,
+        temperature_ranges=SWEDISH_FISH_FULL,
+        recommended_doneness="blodig",
     ),
 ]
 
@@ -1271,7 +1437,8 @@ SWEDISH_COD = [
         rest_time_min=0,
         rest_time_max=2,
         carryover_temp_c=2,
-        temperature_ranges=[SWEDISH_FISH_MEDIUM, SWEDISH_FISH_WELL_DONE],
+        temperature_ranges=SWEDISH_FISH_FULL,
+        recommended_doneness="medium",
     ),
     MeatCut(
         id=2411,
@@ -1284,7 +1451,8 @@ SWEDISH_COD = [
         rest_time_min=0,
         rest_time_max=3,
         carryover_temp_c=2,
-        temperature_ranges=[SWEDISH_FISH_MEDIUM, SWEDISH_FISH_WELL_DONE],
+        temperature_ranges=SWEDISH_FISH_FULL,
+        recommended_doneness="medium",
     ),
 ]
 
@@ -1300,7 +1468,8 @@ SWEDISH_OTHER_FISH = [
         rest_time_min=0,
         rest_time_max=2,
         carryover_temp_c=2,
-        temperature_ranges=[SWEDISH_FISH_MEDIUM, SWEDISH_FISH_WELL_DONE],
+        temperature_ranges=SWEDISH_FISH_FULL,
+        recommended_doneness="medium",
     ),
     MeatCut(
         id=2421,
@@ -1313,7 +1482,8 @@ SWEDISH_OTHER_FISH = [
         rest_time_min=0,
         rest_time_max=2,
         carryover_temp_c=2,
-        temperature_ranges=[SWEDISH_FISH_MEDIUM, SWEDISH_FISH_WELL_DONE],
+        temperature_ranges=SWEDISH_FISH_FULL,
+        recommended_doneness="medium",
     ),
     MeatCut(
         id=2422,
@@ -1326,7 +1496,8 @@ SWEDISH_OTHER_FISH = [
         rest_time_min=0,
         rest_time_max=2,
         carryover_temp_c=1,
-        temperature_ranges=[SWEDISH_FISH_WELL_DONE],
+        temperature_ranges=SWEDISH_FISH_FULL,
+        recommended_doneness="genomstekt",
     ),
     MeatCut(
         id=2423,
@@ -1339,7 +1510,8 @@ SWEDISH_OTHER_FISH = [
         rest_time_min=0,
         rest_time_max=2,
         carryover_temp_c=2,
-        temperature_ranges=[SWEDISH_FISH_MEDIUM, SWEDISH_FISH_WELL_DONE],
+        temperature_ranges=SWEDISH_FISH_FULL,
+        recommended_doneness="medium",
     ),
     MeatCut(
         id=2424,
@@ -1372,8 +1544,8 @@ SWEDISH_MEAT_CATEGORIES = [
                 name="nötkreatur",
                 description="Nötköttsstyckningar",
                 cut_types=[
-                    CutType(id=2100, name="Stek", cuts=SWEDISH_BEEF_STEAKS),
-                    CutType(id=2101, name="Stekstyck", cuts=SWEDISH_BEEF_ROASTS),
+                    CutType(id=2100, name="Skiva", cuts=SWEDISH_BEEF_STEAKS),
+                    CutType(id=2101, name="Helstekt", cuts=SWEDISH_BEEF_ROASTS),
                     CutType(id=2102, name="Grytbitar/Långkok", cuts=SWEDISH_BEEF_BRAISING),
                 ],
             ),
@@ -1389,8 +1561,8 @@ SWEDISH_MEAT_CATEGORIES = [
                 name="gris",
                 description="Fläskstyckningar",
                 cut_types=[
-                    CutType(id=2200, name="Stek/Kotlett", cuts=SWEDISH_PORK_STEAKS),
-                    CutType(id=2201, name="Stekstyck", cuts=SWEDISH_PORK_ROASTS),
+                    CutType(id=2200, name="Skiva/Kotlett", cuts=SWEDISH_PORK_STEAKS),
+                    CutType(id=2201, name="Helstekt", cuts=SWEDISH_PORK_ROASTS),
                     CutType(id=2202, name="Revben", cuts=SWEDISH_PORK_RIBS),
                 ],
             ),
@@ -1450,10 +1622,35 @@ SWEDISH_MEAT_CATEGORIES = [
             ),
             Meat(
                 id=2042,
+                name="tonfisk",
+                description="Tonfiskstyckningar",
+                cut_types=[
+                    CutType(id=2430, name="Tonfisk", cuts=SWEDISH_TUNA),
+                ],
+            ),
+            Meat(
+                id=2043,
                 name="övrig_fisk",
                 description="Övriga fiskar",
                 cut_types=[
                     CutType(id=2420, name="Övrig fisk", cuts=SWEDISH_OTHER_FISH),
+                ],
+            ),
+        ],
+    ),
+    MeatCategory(
+        id=2007,
+        name="kalv",
+        color_hex="#DEB887",
+        meats=[
+            Meat(
+                id=2070,
+                name="kalv",
+                description="Kalvstyckningar",
+                cut_types=[
+                    CutType(id=2700, name="Helstekt", cuts=SWEDISH_VEAL_ROASTS),
+                    CutType(id=2710, name="Skiva/Kotlett", cuts=SWEDISH_VEAL_CHOPS),
+                    CutType(id=2720, name="Långkok", cuts=SWEDISH_VEAL_BRAISING),
                 ],
             ),
         ],
@@ -1468,8 +1665,8 @@ SWEDISH_MEAT_CATEGORIES = [
                 name="lamm",
                 description="Lammstyckningar",
                 cut_types=[
-                    CutType(id=2500, name="Stekstyck", cuts=SWEDISH_LAMB_ROASTS),
-                    CutType(id=2501, name="Kotletter", cuts=SWEDISH_LAMB_CHOPS),
+                    CutType(id=2500, name="Helstekt", cuts=SWEDISH_LAMB_ROASTS),
+                    CutType(id=2510, name="Skiva/Kotlett", cuts=SWEDISH_LAMB_CHOPS),
                 ],
             ),
         ],
