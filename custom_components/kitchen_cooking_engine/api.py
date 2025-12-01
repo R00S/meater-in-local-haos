@@ -95,23 +95,45 @@ def _category_to_dict(cat: MeatCategory) -> dict:
     }
 
 
+def _normalize_swedish_key(name: str) -> str:
+    """Normalize Swedish text to ASCII-friendly key."""
+    return name.lower().replace("ö", "o").replace("ä", "a").replace("å", "a")
+
+
+def _get_category_icon(name: str) -> str:
+    """Get icon for a category name (supports both English and Swedish)."""
+    # Normalize the name for lookup
+    normalized = _normalize_swedish_key(name)
+    
+    # Icon mapping for both English and Swedish category names
+    icons = {
+        # English
+        "beef": "🥩",
+        "pork": "🐷",
+        "poultry": "🍗",
+        "fish": "🐟",
+        "lamb": "🐑",
+        "game": "🦌",
+        "vegetables": "🥕",
+        # Swedish (normalized)
+        "notkott": "🥩",
+        "flask": "🐷",
+        "fagel": "🍗",
+        "fisk": "🐟",
+        "lamm": "🐑",
+        "vilt": "🦌",
+        "kalv": "🐄",
+    }
+    return icons.get(normalized, "🍖")
+
+
 def get_international_categories_dict() -> dict:
     """Get international meat categories as a dictionary keyed by name."""
     result = {}
     for cat in MEAT_CATEGORIES:
         key = cat.name.lower()
         result[key] = _category_to_dict(cat)
-        # Add icon based on category
-        icons = {
-            "beef": "🥩",
-            "pork": "🐷",
-            "poultry": "🍗",
-            "fish": "🐟",
-            "lamb": "🐑",
-            "game": "🦌",
-            "vegetables": "🥕",
-        }
-        result[key]["icon"] = icons.get(key, "🍖")
+        result[key]["icon"] = _get_category_icon(cat.name)
     return result
 
 
@@ -119,36 +141,9 @@ def get_swedish_categories_dict() -> dict:
     """Get Swedish meat categories as a dictionary keyed by name."""
     result = {}
     for cat in SWEDISH_MEAT_CATEGORIES:
-        key = cat.name.lower().replace("ö", "o").replace("ä", "a").replace("å", "a")
+        key = _normalize_swedish_key(cat.name)
         result[key] = _category_to_dict(cat)
-        # Add icon based on category
-        icons = {
-            "notkott": "🥩",
-            "flask": "🐷",
-            "fagel": "🍗",
-            "fisk": "🐟",
-            "lamm": "🐑",
-            "vilt": "🦌",
-            "kalv": "🐄",
-        }
-        # Use original name for lookup
-        orig_key = cat.name.lower()
-        if "nöt" in orig_key:
-            result[key]["icon"] = "🥩"
-        elif "fläsk" in orig_key:
-            result[key]["icon"] = "🐷"
-        elif "fågel" in orig_key:
-            result[key]["icon"] = "🍗"
-        elif "fisk" in orig_key:
-            result[key]["icon"] = "🐟"
-        elif "lamm" in orig_key:
-            result[key]["icon"] = "🐑"
-        elif "vilt" in orig_key:
-            result[key]["icon"] = "🦌"
-        elif "kalv" in orig_key:
-            result[key]["icon"] = "🐄"
-        else:
-            result[key]["icon"] = "🍖"
+        result[key]["icon"] = _get_category_icon(cat.name)
     return result
 
 

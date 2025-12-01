@@ -1358,10 +1358,16 @@ class KitchenCookingPanel extends LitElement {
     this._apiLoading = true;
     this._apiError = null;
     
+    // Validate data source to prevent injection
+    const validSources = [DATA_SOURCE_INTERNATIONAL, DATA_SOURCE_SWEDISH];
+    const source = validSources.includes(this._dataSource) 
+      ? this._dataSource 
+      : DATA_SOURCE_INTERNATIONAL;
+    
     try {
       // Fetch categories
       const categoriesResponse = await fetch(
-        `/api/kitchen_cooking_engine/cooking_data?source=${this._dataSource}`
+        `/api/kitchen_cooking_engine/cooking_data?source=${encodeURIComponent(source)}`
       );
       if (!categoriesResponse.ok) {
         throw new Error(`Failed to fetch categories: ${categoriesResponse.status}`);
@@ -1371,7 +1377,7 @@ class KitchenCookingPanel extends LitElement {
       
       // Fetch doneness options
       const donenessResponse = await fetch(
-        `/api/kitchen_cooking_engine/doneness_options?source=${this._dataSource}`
+        `/api/kitchen_cooking_engine/doneness_options?source=${encodeURIComponent(source)}`
       );
       if (!donenessResponse.ok) {
         throw new Error(`Failed to fetch doneness options: ${donenessResponse.status}`);
