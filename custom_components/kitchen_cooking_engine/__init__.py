@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 1 Dec 2025, 12:31 CET
-Last Change: Connected services to entities, added voluptuous validation schemas
+Last Updated: 1 Dec 2025, 13:09 CET
+Last Change: Added Lovelace card for cooking session UI
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -14,6 +14,7 @@ This integration provides:
 - Time-to-target estimation
 - Notifications for approaching target and goal reached
 - Rest time recommendations with carryover cooking estimation
+- Lovelace card for easy cooking setup and monitoring
 """
 
 from __future__ import annotations
@@ -120,6 +121,10 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
 
     _LOGGER.info("Kitchen Cooking Engine: Integration setup complete")
+    _LOGGER.info(
+        "Kitchen Cooking Engine: Lovelace card available at "
+        "/local/community/kitchen_cooking_engine/kitchen-cooking-card.js"
+    )
     return True
 
 

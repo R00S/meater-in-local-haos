@@ -1,8 +1,8 @@
 """
 Cooking data for Kitchen Cooking Engine.
 
-Last Updated: 2024-11-30T23:50:00Z
-Last Agent Edit: 2024-11-30T23:50:00Z
+Last Updated: 1 Dec 2025, 13:09 CET
+Last Change: No changes, timestamps updated to new format
 
 This module contains comprehensive cooking data including proteins, cuts,
 doneness levels, cooking methods, and target temperatures.
