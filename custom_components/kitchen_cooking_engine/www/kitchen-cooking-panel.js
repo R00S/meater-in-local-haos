@@ -869,8 +869,10 @@ const SWEDISH_MEAT_CATEGORIES = {
             id: 2200,
             name: "Skiva & Kotlett",
             cuts: [
-              { id: 2200, name: "Fläskkotlett", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
-              { id: 2201, name: "Fläskfilé", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2200, name: "Fläskkotlett med ben", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2204, name: "Fläskkotlett utan ben", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2201, name: "Fläskfilé (hel)", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
+              { id: 2205, name: "Fläskfilé (skiva)", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
               { id: 2202, name: "Karrékoteletter", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
               { id: 2203, name: "Secreto (Ibérico)", doneness: SWEDISH_FULL_DONENESS, recommendedDoneness: "medium" },
             ]
@@ -978,6 +980,7 @@ const SWEDISH_MEAT_CATEGORIES = {
             cuts: [
               { id: 2400, name: "Laxfilé", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
               { id: 2401, name: "Gravad lax (uppvärmd)", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
+              { id: 2402, name: "Hel lax på ben", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
             ]
           }
         ]
@@ -992,6 +995,7 @@ const SWEDISH_MEAT_CATEGORIES = {
             cuts: [
               { id: 2410, name: "Torskfilé", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
               { id: 2411, name: "Torskrygg", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
+              { id: 2412, name: "Hel torsk på ben", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
             ]
           }
         ]
@@ -1018,9 +1022,13 @@ const SWEDISH_MEAT_CATEGORIES = {
             name: "Övrig fisk",
             cuts: [
               { id: 2420, name: "Sikfilé", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
+              { id: 2425, name: "Hel sik på ben", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
               { id: 2421, name: "Rödingfilé", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
+              { id: 2426, name: "Hel röding på ben", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
               { id: 2422, name: "Abborrfilé", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "genomstekt" },
+              { id: 2427, name: "Hel abborre på ben", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "genomstekt" },
               { id: 2423, name: "Gösfilé", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
+              { id: 2428, name: "Hel gös på ben", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
               { id: 2424, name: "Hälleflundra", doneness: SWEDISH_FISH_FULL, recommendedDoneness: "medium" },
             ]
           }
