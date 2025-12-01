@@ -1,7 +1,7 @@
 # Agent Handoff Document
 
-**Last Updated:** 2024-12-01T00:35:00Z
-**Last Agent Edit:** 2024-12-01T00:35:00Z
+**Last Updated:** 2024-12-01T02:15:00Z
+**Last Agent Edit:** 2024-12-01T02:15:00Z
 
 ## Development Workflow
 
@@ -152,10 +152,10 @@ The integration follows patterns from the working `haos_feature_forecast` integr
 
 ## What's Next for Phase 2
 
-1. [ ] **Test via HACS** - After PR merge, import via HACS and test config flow
-2. [ ] **Lovelace dashboard cards** - Create cooking UI cards
-3. [ ] **Full service handlers** - Implement start_cook, stop_cook, etc. with entity targeting
-4. [ ] **Notification automations** - Goal reached, approaching target alerts
+1. [x] **Full service handlers** - ✅ Implemented start_cook, stop_cook, start_rest, complete_session with entity targeting
+2. [x] **Notification automations** - ✅ Events fired for approaching_target and goal_reached
+3. [ ] **Test via HACS** - After PR merge, import via HACS and test config flow
+4. [ ] **Lovelace dashboard cards** - Create cooking UI cards
 5. [ ] **Temperature history** - Store temperature curves for ETA predictions
 6. [ ] **Integration with Mealie/Grocy** - Link recipes to cooking sessions
 

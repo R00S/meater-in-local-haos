@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 2024-12-01T01:45:00Z
-Last Agent Edit: 2024-12-01T01:45:00Z
+Last Updated: 2024-12-01T02:00:00Z
+Last Agent Edit: 2024-12-01T02:00:00Z
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -20,9 +20,12 @@ from __future__ import annotations
 
 import logging
 
+import voluptuous as vol
+
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import ATTR_ENTITY_ID, Platform
 from homeassistant.core import HomeAssistant, ServiceCall
+from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers import entity_registry as er
 
 from .const import (
@@ -35,6 +38,7 @@ from .const import (
 from .cooking_data import (
     get_cut_by_id,
     get_doneness_for_cut,
+    CookingMethod,
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -42,6 +46,27 @@ _LOGGER = logging.getLogger(__name__)
 PLATFORMS = [Platform.SENSOR]
 
 __version__ = "0.1.0"
+
+# Service schema for start_cook
+SERVICE_START_COOK_SCHEMA = vol.Schema(
+    {
+        vol.Required(ATTR_ENTITY_ID): cv.entity_ids,
+        vol.Required("cut_id"): vol.All(vol.Coerce(int), vol.Range(min=1, max=999)),
+        vol.Required("doneness"): vol.In([
+            "rare", "medium_rare", "medium", "medium_well", "well_done",
+            "pulled", "safe", "tender", "crisp_tender", "caramelized",
+            "dark_meat_optimal", "heated_through", "crispy", "charred", "done",
+        ]),
+        vol.Required("cooking_method"): vol.In([m.value for m in CookingMethod]),
+    }
+)
+
+# Service schema for entity-targeting services (no additional params)
+SERVICE_ENTITY_SCHEMA = vol.Schema(
+    {
+        vol.Required(ATTR_ENTITY_ID): cv.entity_ids,
+    }
+)
 
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
@@ -294,11 +319,31 @@ async def _async_register_services(hass: HomeAssistant) -> None:
 
     # Only register if not already registered
     if not hass.services.has_service(DOMAIN, SERVICE_START_COOK):
-        hass.services.async_register(DOMAIN, SERVICE_START_COOK, handle_start_cook)
+        hass.services.async_register(
+            DOMAIN,
+            SERVICE_START_COOK,
+            handle_start_cook,
+            schema=SERVICE_START_COOK_SCHEMA,
+        )
     if not hass.services.has_service(DOMAIN, SERVICE_STOP_COOK):
-        hass.services.async_register(DOMAIN, SERVICE_STOP_COOK, handle_stop_cook)
+        hass.services.async_register(
+            DOMAIN,
+            SERVICE_STOP_COOK,
+            handle_stop_cook,
+            schema=SERVICE_ENTITY_SCHEMA,
+        )
     if not hass.services.has_service(DOMAIN, SERVICE_START_REST):
-        hass.services.async_register(DOMAIN, SERVICE_START_REST, handle_start_rest)
+        hass.services.async_register(
+            DOMAIN,
+            SERVICE_START_REST,
+            handle_start_rest,
+            schema=SERVICE_ENTITY_SCHEMA,
+        )
     if not hass.services.has_service(DOMAIN, SERVICE_COMPLETE):
-        hass.services.async_register(DOMAIN, SERVICE_COMPLETE, handle_complete)
+        hass.services.async_register(
+            DOMAIN,
+            SERVICE_COMPLETE,
+            handle_complete,
+            schema=SERVICE_ENTITY_SCHEMA,
+        )
 

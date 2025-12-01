@@ -41,6 +41,8 @@ from .const import (
     CONF_TEMPERATURE_SENSOR,
     CONF_TEMPERATURE_UNIT,
     DOMAIN,
+    EVENT_APPROACHING_TARGET,
+    EVENT_GOAL_REACHED,
     MINUTES_PER_DEGREE_C,
     PROGRESS_START_OFFSET_C,
     STATE_APPROACHING,
@@ -284,18 +286,50 @@ class CookingSessionSensor(SensorEntity):
                     100.0, max(0.0, (current_c - start_temp) / temp_range * 100)
                 )
 
-        # State transitions
+        # State transitions with event firing
         if self._state == STATE_COOKING:
             # Check if approaching target
             if current_c >= self._target_temp_c - APPROACHING_THRESHOLD_C:
                 self._state = STATE_APPROACHING
+                self._fire_event(EVENT_APPROACHING_TARGET)
+                _LOGGER.info(
+                    "Approaching target: %s at %.1f°C (target: %d°C)",
+                    self._cut_display,
+                    current_c,
+                    self._target_temp_c,
+                )
         elif self._state == STATE_APPROACHING:
             # Check if goal reached
             if current_c >= self._target_temp_c:
                 self._state = STATE_GOAL_REACHED
+                self._fire_event(EVENT_GOAL_REACHED)
+                _LOGGER.info(
+                    "Goal reached: %s at %.1f°C - Time to rest!",
+                    self._cut_display,
+                    current_c,
+                )
         elif self._state == STATE_RESTING:
             # Resting state is managed by service calls
             pass
+
+    def _fire_event(self, event_type: str) -> None:
+        """Fire an event with current cooking session data."""
+        event_data = {
+            "entity_id": self.entity_id,
+            "protein": self._protein,
+            "cut": self._cut,
+            "cut_display": self._cut_display,
+            "doneness": self._doneness,
+            "cooking_method": self._cooking_method,
+            "target_temp_c": self._target_temp_c,
+            "target_temp_f": self._target_temp_f,
+            "current_temp": self._current_temp,
+            "progress": round(self._progress, 1),
+            "rest_time_min": self._rest_time_min,
+            "rest_time_max": self._rest_time_max,
+        }
+        self._hass.bus.async_fire(event_type, event_data)
+        _LOGGER.debug("Fired event %s with data: %s", event_type, event_data)
 
     def _calculate_eta(self) -> int | None:
         """Estimate time to reach target temperature.

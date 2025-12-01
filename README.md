@@ -155,6 +155,92 @@ If you prefer not to use HACS:
 | **Smoker** | Low heat with smoke |
 | **Charcoal Grill** | Traditional charcoal grilling |
 
+## 🔧 Using Services
+
+The integration provides services to control cooking sessions. You can call these from automations, scripts, or the Developer Tools → Services panel.
+
+### Start a Cook
+
+```yaml
+service: kitchen_cooking_engine.start_cook
+target:
+  entity_id: sensor.cooking_session
+data:
+  cut_id: 100  # Ribeye Steak
+  doneness: medium_rare
+  cooking_method: pan_sear
+```
+
+### Common Cut IDs
+
+| Cut ID | Cut Name |
+|--------|----------|
+| 100 | Ribeye Steak |
+| 101 | Sirloin Steak |
+| 102 | Filet Mignon |
+| 103 | New York Strip |
+| 200 | Pork Chop |
+| 201 | Pork Tenderloin |
+| 300 | Whole Chicken |
+| 310 | Chicken Breast |
+| 400 | Salmon Fillet |
+
+### Stop a Cook
+
+```yaml
+service: kitchen_cooking_engine.stop_cook
+target:
+  entity_id: sensor.cooking_session
+```
+
+### Start Resting Phase
+
+```yaml
+service: kitchen_cooking_engine.start_rest
+target:
+  entity_id: sensor.cooking_session
+```
+
+### Complete Session
+
+```yaml
+service: kitchen_cooking_engine.complete_session
+target:
+  entity_id: sensor.cooking_session
+```
+
+### Automation Example
+
+Notify when approaching target temperature:
+
+```yaml
+automation:
+  - alias: "Cooking Alert - Approaching Target"
+    trigger:
+      - platform: event
+        event_type: kitchen_cooking_engine_approaching_target
+    action:
+      - service: notify.mobile_app
+        data:
+          title: "🍖 Almost Ready!"
+          message: "{{ trigger.event.data.cut_display }} is approaching target ({{ trigger.event.data.target_temp_c }}°C)"
+```
+
+Notify when goal is reached:
+
+```yaml
+automation:
+  - alias: "Cooking Alert - Goal Reached"
+    trigger:
+      - platform: event
+        event_type: kitchen_cooking_engine_goal_reached
+    action:
+      - service: notify.mobile_app
+        data:
+          title: "✅ Done Cooking!"
+          message: "{{ trigger.event.data.cut_display }} is ready! Rest for {{ trigger.event.data.rest_time_min }}-{{ trigger.event.data.rest_time_max }} minutes."
+```
+
 ## 🌡️ Temperature Data Sources
 
 All temperature data comes from publicly available sources:
