@@ -1,8 +1,15 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * Last Updated: 1 Dec 2025, 14:16 CET
- * Last Change: Fixed doneness options to only show valid options per cut type
+ * Last Updated: 1 Dec 2025, 14:17 CET
+ * Last Change: Added hierarchical cut selection (Category → Cut Type → Cut)
+ *              matching the MEATER app structure. All cuts are from cooking_data.py
+ *              which mirrors MEATER app structure. Temperature data is from USDA/FDA.
+ * 
+ * NOTE: The cut/category structure mirrors MEATER app's meatCutStructure.
+ *       Temperature values are from USDA/FDA public guidelines.
+ *       TODO: Verify all cuts against latest MEATER app version and mark
+ *             any proprietary data for replacement with verified free info.
  * 
  * A custom panel for the Kitchen Cooking Engine integration.
  */
@@ -13,81 +20,457 @@ import {
   css,
 } from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
 
-// Doneness options per cut type (matching cooking_data.py)
-const ALL_STEAK_DONENESS = ["rare", "medium_rare", "medium", "medium_well", "well_done"];
+// Doneness option definitions
+const DONENESS_OPTIONS = {
+  rare: { value: "rare", name: "Rare", icon: "🔴", description: "Cool red center" },
+  medium_rare: { value: "medium_rare", name: "Medium Rare", icon: "🟠", description: "Warm red center" },
+  medium: { value: "medium", name: "Medium", icon: "🟡", description: "Warm pink center" },
+  medium_well: { value: "medium_well", name: "Medium Well", icon: "🟤", description: "Slightly pink center" },
+  well_done: { value: "well_done", name: "Well Done", icon: "⚪", description: "No pink, fully cooked" },
+  pulled: { value: "pulled", name: "Pulled", icon: "🍖", description: "Shreddable, collagen broken down" },
+  safe: { value: "safe", name: "Safe (165°F)", icon: "✅", description: "USDA safe, cooked through" },
+  dark_meat_optimal: { value: "dark_meat_optimal", name: "Dark Meat", icon: "🍗", description: "Optimal texture for dark meat" },
+  crispy: { value: "crispy", name: "Crispy", icon: "🥓", description: "Crispy and rendered" },
+  heated_through: { value: "heated_through", name: "Heated Through", icon: "♨️", description: "Warmed through (pre-cooked)" },
+  done: { value: "done", name: "Done", icon: "✓", description: "Cooked through" },
+  tender: { value: "tender", name: "Tender", icon: "🥔", description: "Fork-tender" },
+  crisp_tender: { value: "crisp_tender", name: "Crisp-Tender", icon: "🥦", description: "Slightly firm with bite" },
+  caramelized: { value: "caramelized", name: "Caramelized", icon: "🧅", description: "Golden brown" },
+  charred: { value: "charred", name: "Charred", icon: "🔥", description: "Charred exterior" },
+};
+
+// Doneness arrays for different cut types
+const STEAK_DONENESS = ["rare", "medium_rare", "medium", "medium_well", "well_done"];
+const STEAK_DONENESS_NO_WELL = ["rare", "medium_rare", "medium", "medium_well"];
+const STEAK_DONENESS_NO_RARE = ["medium_rare", "medium", "medium_well", "well_done"];
+const STEAK_DONENESS_MR_TO_M = ["rare", "medium_rare", "medium"];
 const BRAISING_DONENESS = ["pulled"];
 const PORK_DONENESS = ["medium", "well_done"];
 const POULTRY_DONENESS = ["safe"];
 const POULTRY_DARK_DONENESS = ["safe", "dark_meat_optimal"];
-const DUCK_DONENESS = ["medium_rare", "medium", "safe"];
+const DUCK_BREAST_DONENESS = ["medium_rare", "medium", "safe"];
 const FISH_DONENESS = ["medium_rare", "medium", "well_done"];
-const TUNA_DONENESS = ["rare", "medium_rare", "medium"];
+const FISH_RARE_OK = ["rare", "medium_rare", "medium"];
+const FISH_WELL_ONLY = ["well_done"];
+const VEG_DONENESS = ["tender", "crisp_tender", "caramelized", "charred"];
 
-const CUTS_DATA = {
+/**
+ * MEAT_CATEGORIES - Hierarchical meat/protein data structure
+ * 
+ * Structure: Category → Meats/Animals → Cut Types → Cuts
+ * This mirrors the MEATER app's meatCutStructure package structure.
+ * 
+ * NOTE: The organizational structure and cut names are based on MEATER app.
+ *       All temperature values come from USDA/FDA public safety guidelines.
+ *       Cut IDs match cooking_data.py for backend compatibility.
+ */
+const MEAT_CATEGORIES = {
   beef: {
-    name: "🥩 Beef",
-    cuts: [
-      { id: 100, name: "Ribeye Steak", doneness: ALL_STEAK_DONENESS },
-      { id: 101, name: "Sirloin Steak", doneness: ALL_STEAK_DONENESS },
-      { id: 102, name: "Filet Mignon", doneness: ALL_STEAK_DONENESS },
-      { id: 103, name: "New York Strip", doneness: ALL_STEAK_DONENESS },
-      { id: 104, name: "T-Bone / Porterhouse", doneness: ALL_STEAK_DONENESS },
-      { id: 105, name: "Flank Steak", doneness: ["rare", "medium_rare", "medium", "medium_well"] },
-      { id: 120, name: "Prime Rib Roast", doneness: ALL_STEAK_DONENESS },
-      { id: 130, name: "Chuck Roast", doneness: BRAISING_DONENESS },
-      { id: 131, name: "Brisket", doneness: BRAISING_DONENESS },
-      { id: 140, name: "Beef Burger", doneness: ["well_done"] },
+    id: 1,
+    name: "Beef",
+    icon: "🥩",
+    color: "#8B0000",
+    meats: [
+      {
+        id: 10,
+        name: "Cow",
+        cutTypes: [
+          {
+            id: 100,
+            name: "Steaks",
+            cuts: [
+              { id: 100, name: "Ribeye Steak", doneness: STEAK_DONENESS },
+              { id: 101, name: "Sirloin Steak", doneness: STEAK_DONENESS },
+              { id: 102, name: "Filet Mignon / Tenderloin", doneness: STEAK_DONENESS },
+              { id: 103, name: "New York Strip", doneness: STEAK_DONENESS },
+              { id: 104, name: "T-Bone / Porterhouse", doneness: STEAK_DONENESS },
+              { id: 105, name: "Flank Steak", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 106, name: "Skirt Steak", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 107, name: "Flat Iron Steak", doneness: STEAK_DONENESS },
+              { id: 108, name: "Hanger Steak", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 109, name: "Tri-Tip", doneness: STEAK_DONENESS },
+            ]
+          },
+          {
+            id: 101,
+            name: "Roasts",
+            cuts: [
+              { id: 120, name: "Prime Rib / Standing Rib Roast", doneness: STEAK_DONENESS },
+              { id: 121, name: "Beef Tenderloin Roast", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 122, name: "Top Round Roast", doneness: STEAK_DONENESS_NO_RARE },
+              { id: 123, name: "Sirloin Tip Roast", doneness: STEAK_DONENESS_NO_RARE },
+            ]
+          },
+          {
+            id: 102,
+            name: "Braising Cuts",
+            cuts: [
+              { id: 130, name: "Chuck Roast / Pot Roast", doneness: BRAISING_DONENESS },
+              { id: 131, name: "Brisket", doneness: BRAISING_DONENESS },
+              { id: 132, name: "Short Ribs", doneness: BRAISING_DONENESS },
+              { id: 133, name: "Beef Shank / Osso Buco", doneness: BRAISING_DONENESS },
+            ]
+          },
+          {
+            id: 103,
+            name: "Ground",
+            cuts: [
+              { id: 140, name: "Beef Burger / Patty", doneness: ["well_done"] },
+              { id: 142, name: "Meatloaf", doneness: ["done"] },
+            ]
+          }
+        ]
+      }
     ]
   },
   pork: {
-    name: "🐷 Pork",
-    cuts: [
-      { id: 200, name: "Pork Chop", doneness: PORK_DONENESS },
-      { id: 201, name: "Pork Tenderloin", doneness: PORK_DONENESS },
-      { id: 210, name: "Pork Loin Roast", doneness: PORK_DONENESS },
-      { id: 211, name: "Pork Shoulder", doneness: BRAISING_DONENESS },
-      { id: 220, name: "Baby Back Ribs", doneness: BRAISING_DONENESS },
+    id: 2,
+    name: "Pork",
+    icon: "🐷",
+    color: "#FFB6C1",
+    meats: [
+      {
+        id: 20,
+        name: "Pig",
+        cutTypes: [
+          {
+            id: 200,
+            name: "Chops & Tenderloin",
+            cuts: [
+              { id: 200, name: "Pork Chop", doneness: PORK_DONENESS },
+              { id: 201, name: "Pork Tenderloin", doneness: PORK_DONENESS },
+            ]
+          },
+          {
+            id: 201,
+            name: "Roasts",
+            cuts: [
+              { id: 210, name: "Pork Loin Roast", doneness: PORK_DONENESS },
+              { id: 211, name: "Pork Shoulder / Boston Butt", doneness: BRAISING_DONENESS },
+              { id: 212, name: "Pork Belly", doneness: ["well_done", "crispy"] },
+            ]
+          },
+          {
+            id: 202,
+            name: "Ribs",
+            cuts: [
+              { id: 220, name: "Baby Back Ribs", doneness: BRAISING_DONENESS },
+              { id: 221, name: "Spare Ribs", doneness: BRAISING_DONENESS },
+              { id: 222, name: "St. Louis Style Ribs", doneness: BRAISING_DONENESS },
+            ]
+          },
+          {
+            id: 203,
+            name: "Ham",
+            cuts: [
+              { id: 230, name: "Fresh Ham", doneness: PORK_DONENESS },
+              { id: 231, name: "Cured Ham (Pre-cooked)", doneness: ["heated_through"] },
+            ]
+          },
+          {
+            id: 204,
+            name: "Ground",
+            cuts: [
+              { id: 240, name: "Pork Sausage", doneness: ["well_done"] },
+            ]
+          }
+        ]
+      }
     ]
   },
   poultry: {
-    name: "🍗 Poultry",
-    cuts: [
-      { id: 300, name: "Whole Chicken", doneness: POULTRY_DONENESS },
-      { id: 310, name: "Chicken Breast", doneness: POULTRY_DONENESS },
-      { id: 320, name: "Chicken Thigh", doneness: POULTRY_DARK_DONENESS },
-      { id: 330, name: "Whole Turkey", doneness: POULTRY_DONENESS },
-      { id: 340, name: "Duck Breast", doneness: DUCK_DONENESS },
+    id: 3,
+    name: "Poultry",
+    icon: "🍗",
+    color: "#FFD700",
+    meats: [
+      {
+        id: 30,
+        name: "Chicken",
+        cutTypes: [
+          {
+            id: 300,
+            name: "Whole",
+            cuts: [
+              { id: 300, name: "Whole Chicken", doneness: POULTRY_DONENESS },
+            ]
+          },
+          {
+            id: 301,
+            name: "Breast",
+            cuts: [
+              { id: 310, name: "Chicken Breast", doneness: POULTRY_DONENESS },
+              { id: 311, name: "Chicken Breast (Bone-in)", doneness: POULTRY_DONENESS },
+            ]
+          },
+          {
+            id: 302,
+            name: "Dark Meat",
+            cuts: [
+              { id: 320, name: "Chicken Thigh", doneness: POULTRY_DARK_DONENESS },
+              { id: 321, name: "Chicken Leg / Drumstick", doneness: POULTRY_DARK_DONENESS },
+              { id: 322, name: "Chicken Wing", doneness: POULTRY_DARK_DONENESS },
+            ]
+          }
+        ]
+      },
+      {
+        id: 31,
+        name: "Turkey",
+        cutTypes: [
+          {
+            id: 310,
+            name: "Turkey",
+            cuts: [
+              { id: 330, name: "Whole Turkey", doneness: POULTRY_DONENESS },
+              { id: 331, name: "Turkey Breast", doneness: POULTRY_DONENESS },
+              { id: 332, name: "Turkey Leg", doneness: POULTRY_DARK_DONENESS },
+            ]
+          }
+        ]
+      },
+      {
+        id: 32,
+        name: "Duck",
+        cutTypes: [
+          {
+            id: 320,
+            name: "Duck",
+            cuts: [
+              { id: 340, name: "Duck Breast", doneness: DUCK_BREAST_DONENESS },
+              { id: 341, name: "Whole Duck", doneness: POULTRY_DONENESS },
+              { id: 342, name: "Duck Leg Confit", doneness: ["dark_meat_optimal"] },
+            ]
+          }
+        ]
+      },
+      {
+        id: 33,
+        name: "Ground Poultry",
+        cutTypes: [
+          {
+            id: 330,
+            name: "Ground",
+            cuts: [
+              { id: 350, name: "Ground Chicken", doneness: POULTRY_DONENESS },
+              { id: 351, name: "Ground Turkey", doneness: POULTRY_DONENESS },
+            ]
+          }
+        ]
+      }
     ]
   },
   fish: {
-    name: "🐟 Fish & Seafood",
-    cuts: [
-      { id: 400, name: "Salmon Fillet", doneness: FISH_DONENESS },
-      { id: 410, name: "Tuna Steak", doneness: TUNA_DONENESS },
-      { id: 420, name: "Cod Fillet", doneness: ["medium", "well_done"] },
-      { id: 430, name: "Shrimp", doneness: ["well_done"] },
-      { id: 431, name: "Lobster Tail", doneness: ["well_done"] },
+    id: 4,
+    name: "Fish & Seafood",
+    icon: "🐟",
+    color: "#4682B4",
+    meats: [
+      {
+        id: 40,
+        name: "Salmon",
+        cutTypes: [
+          {
+            id: 400,
+            name: "Salmon",
+            cuts: [
+              { id: 400, name: "Salmon Fillet", doneness: FISH_DONENESS },
+              { id: 401, name: "Salmon Steak", doneness: FISH_DONENESS },
+            ]
+          }
+        ]
+      },
+      {
+        id: 41,
+        name: "Tuna",
+        cutTypes: [
+          {
+            id: 410,
+            name: "Tuna",
+            cuts: [
+              { id: 410, name: "Tuna Steak", doneness: FISH_RARE_OK },
+            ]
+          }
+        ]
+      },
+      {
+        id: 42,
+        name: "White Fish",
+        cutTypes: [
+          {
+            id: 420,
+            name: "White Fish",
+            cuts: [
+              { id: 420, name: "Cod Fillet", doneness: ["medium", "well_done"] },
+              { id: 421, name: "Halibut Fillet", doneness: ["medium", "well_done"] },
+              { id: 422, name: "Sea Bass", doneness: ["medium", "well_done"] },
+              { id: 423, name: "Swordfish Steak", doneness: ["medium", "well_done"] },
+              { id: 424, name: "Mahi-Mahi", doneness: ["medium", "well_done"] },
+            ]
+          }
+        ]
+      },
+      {
+        id: 43,
+        name: "Shellfish",
+        cutTypes: [
+          {
+            id: 430,
+            name: "Shellfish",
+            cuts: [
+              { id: 430, name: "Shrimp", doneness: FISH_WELL_ONLY },
+              { id: 431, name: "Lobster Tail", doneness: FISH_WELL_ONLY },
+              { id: 432, name: "Scallops", doneness: ["medium_rare", "well_done"] },
+            ]
+          }
+        ]
+      }
     ]
   },
   lamb: {
-    name: "🐑 Lamb",
-    cuts: [
-      { id: 500, name: "Leg of Lamb", doneness: ALL_STEAK_DONENESS },
-      { id: 501, name: "Rack of Lamb", doneness: ["rare", "medium_rare", "medium", "medium_well"] },
-      { id: 510, name: "Lamb Chops", doneness: ALL_STEAK_DONENESS },
+    id: 5,
+    name: "Lamb",
+    icon: "🐑",
+    color: "#800020",
+    meats: [
+      {
+        id: 50,
+        name: "Lamb",
+        cutTypes: [
+          {
+            id: 500,
+            name: "Roasts",
+            cuts: [
+              { id: 500, name: "Leg of Lamb", doneness: STEAK_DONENESS },
+              { id: 501, name: "Rack of Lamb", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 502, name: "Lamb Shoulder", doneness: BRAISING_DONENESS },
+            ]
+          },
+          {
+            id: 501,
+            name: "Chops",
+            cuts: [
+              { id: 510, name: "Lamb Chops", doneness: STEAK_DONENESS },
+              { id: 511, name: "Lamb Loin Chops", doneness: STEAK_DONENESS_NO_WELL },
+            ]
+          },
+          {
+            id: 502,
+            name: "Ground",
+            cuts: [
+              { id: 520, name: "Ground Lamb", doneness: ["well_done"] },
+              { id: 521, name: "Lamb Kofta / Kebab", doneness: ["well_done"] },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  game: {
+    id: 6,
+    name: "Game",
+    icon: "🦌",
+    color: "#2F4F4F",
+    meats: [
+      {
+        id: 60,
+        name: "Venison",
+        cutTypes: [
+          {
+            id: 600,
+            name: "Venison",
+            cuts: [
+              { id: 600, name: "Venison Steak", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 601, name: "Venison Roast", doneness: STEAK_DONENESS_MR_TO_M },
+              { id: 602, name: "Venison Loin", doneness: STEAK_DONENESS_MR_TO_M },
+            ]
+          }
+        ]
+      },
+      {
+        id: 61,
+        name: "Wild Boar",
+        cutTypes: [
+          {
+            id: 610,
+            name: "Wild Boar",
+            cuts: [
+              { id: 610, name: "Wild Boar Chop", doneness: ["well_done"] },
+              { id: 611, name: "Wild Boar Shoulder", doneness: BRAISING_DONENESS },
+            ]
+          }
+        ]
+      },
+      {
+        id: 62,
+        name: "Bison",
+        cutTypes: [
+          {
+            id: 620,
+            name: "Bison",
+            cuts: [
+              { id: 620, name: "Bison Steak", doneness: STEAK_DONENESS_NO_WELL },
+              { id: 621, name: "Bison Burger", doneness: ["well_done"] },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  vegetables: {
+    id: 7,
+    name: "Vegetables",
+    icon: "🥔",
+    color: "#228B22",
+    meats: [
+      {
+        id: 70,
+        name: "Root Vegetables",
+        cutTypes: [
+          {
+            id: 700,
+            name: "Potatoes & Roots",
+            cuts: [
+              { id: 700, name: "Baked Potato", doneness: ["tender"] },
+              { id: 701, name: "Roasted Potatoes", doneness: ["caramelized"] },
+              { id: 702, name: "Roasted Carrots", doneness: ["tender", "caramelized"] },
+              { id: 705, name: "Roasted Sweet Potato", doneness: ["tender", "caramelized"] },
+            ]
+          }
+        ]
+      },
+      {
+        id: 71,
+        name: "Green Vegetables",
+        cutTypes: [
+          {
+            id: 710,
+            name: "Greens",
+            cuts: [
+              { id: 710, name: "Broccoli", doneness: ["crisp_tender", "tender"] },
+              { id: 711, name: "Brussels Sprouts", doneness: ["tender", "caramelized"] },
+              { id: 712, name: "Asparagus", doneness: ["crisp_tender", "tender"] },
+            ]
+          }
+        ]
+      },
+      {
+        id: 72,
+        name: "Alliums",
+        cutTypes: [
+          {
+            id: 720,
+            name: "Onions & Garlic",
+            cuts: [
+              { id: 720, name: "Roasted Onion", doneness: ["tender", "caramelized"] },
+              { id: 721, name: "Caramelized Onions", doneness: ["caramelized"] },
+              { id: 722, name: "Roasted Garlic", doneness: ["tender", "caramelized"] },
+            ]
+          }
+        ]
+      }
     ]
   }
-};
-
-const DONENESS_OPTIONS = {
-  rare: { value: "rare", name: "Rare", icon: "🔴" },
-  medium_rare: { value: "medium_rare", name: "Medium Rare", icon: "🟠" },
-  medium: { value: "medium", name: "Medium", icon: "🟡" },
-  medium_well: { value: "medium_well", name: "Medium Well", icon: "🟤" },
-  well_done: { value: "well_done", name: "Well Done", icon: "⚪" },
-  pulled: { value: "pulled", name: "Pulled", icon: "🍖" },
-  safe: { value: "safe", name: "Safe (Cooked)", icon: "✅" },
-  dark_meat_optimal: { value: "dark_meat_optimal", name: "Dark Meat", icon: "🍗" },
 };
 
 const COOKING_METHODS = [
@@ -110,6 +493,8 @@ class KitchenCookingPanel extends LitElement {
       route: { type: Object },
       panel: { type: Object },
       _selectedCategory: { type: String },
+      _selectedMeat: { type: Number },
+      _selectedCutType: { type: Number },
       _selectedCut: { type: Number },
       _selectedDoneness: { type: String },
       _selectedMethod: { type: String },
@@ -120,6 +505,8 @@ class KitchenCookingPanel extends LitElement {
   constructor() {
     super();
     this._selectedCategory = null;
+    this._selectedMeat = null;
+    this._selectedCutType = null;
     this._selectedCut = null;
     this._selectedDoneness = null;
     this._selectedMethod = "oven_roast";
@@ -157,11 +544,38 @@ class KitchenCookingPanel extends LitElement {
     return icons[state] || '🍳';
   }
 
+  _getCategory() {
+    return this._selectedCategory ? MEAT_CATEGORIES[this._selectedCategory] : null;
+  }
+
+  _getMeats() {
+    const category = this._getCategory();
+    return category ? category.meats : [];
+  }
+
+  _getMeat() {
+    const meats = this._getMeats();
+    return meats.find(m => m.id === this._selectedMeat);
+  }
+
+  _getCutTypes() {
+    const meat = this._getMeat();
+    return meat ? meat.cutTypes : [];
+  }
+
+  _getCutType() {
+    const cutTypes = this._getCutTypes();
+    return cutTypes.find(ct => ct.id === this._selectedCutType);
+  }
+
+  _getCuts() {
+    const cutType = this._getCutType();
+    return cutType ? cutType.cuts : [];
+  }
+
   _getSelectedCutData() {
-    if (!this._selectedCategory || !this._selectedCut) return null;
-    const category = CUTS_DATA[this._selectedCategory];
-    if (!category) return null;
-    return category.cuts.find(c => c.id === this._selectedCut);
+    const cuts = this._getCuts();
+    return cuts.find(c => c.id === this._selectedCut);
   }
 
   _getAvailableDoneness() {
@@ -170,10 +584,43 @@ class KitchenCookingPanel extends LitElement {
     return cut.doneness.map(d => DONENESS_OPTIONS[d]).filter(Boolean);
   }
 
+  _selectCategory(categoryKey) {
+    this._selectedCategory = categoryKey;
+    this._selectedMeat = null;
+    this._selectedCutType = null;
+    this._selectedCut = null;
+    this._selectedDoneness = null;
+    
+    // Auto-select meat if only one
+    const meats = MEAT_CATEGORIES[categoryKey]?.meats || [];
+    if (meats.length === 1) {
+      this._selectMeat(meats[0].id);
+    }
+  }
+
+  _selectMeat(meatId) {
+    this._selectedMeat = meatId;
+    this._selectedCutType = null;
+    this._selectedCut = null;
+    this._selectedDoneness = null;
+    
+    // Auto-select cut type if only one
+    const meat = this._getMeats().find(m => m.id === meatId);
+    if (meat && meat.cutTypes.length === 1) {
+      this._selectCutType(meat.cutTypes[0].id);
+    }
+  }
+
+  _selectCutType(cutTypeId) {
+    this._selectedCutType = cutTypeId;
+    this._selectedCut = null;
+    this._selectedDoneness = null;
+  }
+
   _selectCut(cutId) {
     this._selectedCut = cutId;
     // Auto-select first valid doneness for this cut
-    const cut = CUTS_DATA[this._selectedCategory]?.cuts.find(c => c.id === cutId);
+    const cut = this._getCuts().find(c => c.id === cutId);
     if (cut && cut.doneness && cut.doneness.length > 0) {
       this._selectedDoneness = cut.doneness[0];
     } else {
@@ -225,6 +672,13 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _renderSetupForm(entities) {
+    const category = this._getCategory();
+    const meats = this._getMeats();
+    const cutTypes = this._getCutTypes();
+    const cuts = this._getCuts();
+    const showMeatSelector = meats.length > 1;
+    const showCutTypeSelector = cutTypes.length > 1 || (cutTypes.length === 1 && this._selectedMeat);
+    
     return html`
       <div class="status-banner idle">
         <h2>🍳 Ready to Cook</h2>
@@ -246,32 +700,76 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : ''}
       
+      <!-- Step 1: Select Category -->
       <ha-card>
         <div class="card-content">
-          <h3>🥩 Select Protein</h3>
+          <h3>1️⃣ Select Category</h3>
           <div class="button-group">
-            ${Object.entries(CUTS_DATA).map(([key, cat]) => html`
+            ${Object.entries(MEAT_CATEGORIES).map(([key, cat]) => html`
               <button 
                 class="category-btn ${this._selectedCategory === key ? 'selected' : ''}" 
-                @click=${() => { this._selectedCategory = key; this._selectedCut = null; this._selectedDoneness = null; }}>
-                ${cat.name}
+                @click=${() => this._selectCategory(key)}>
+                ${cat.icon} ${cat.name}
               </button>
             `)}
           </div>
-          
-          ${this._selectedCategory ? html`
+        </div>
+      </ha-card>
+      
+      <!-- Step 2: Select Animal/Meat (if multiple) -->
+      ${this._selectedCategory && showMeatSelector ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>2️⃣ Select Type</h3>
+            <div class="button-group">
+              ${meats.map(meat => html`
+                <button 
+                  class="category-btn ${this._selectedMeat === meat.id ? 'selected' : ''}" 
+                  @click=${() => this._selectMeat(meat.id)}>
+                  ${meat.name}
+                </button>
+              `)}
+            </div>
+          </div>
+        </ha-card>
+      ` : ''}
+      
+      <!-- Step 3: Select Cut Type (Steaks, Roasts, etc.) -->
+      ${this._selectedMeat && cutTypes.length > 0 ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} Select Cut Type</h3>
+            <div class="button-group">
+              ${cutTypes.map(ct => html`
+                <button 
+                  class="category-btn ${this._selectedCutType === ct.id ? 'selected' : ''}" 
+                  @click=${() => this._selectCutType(ct.id)}>
+                  ${ct.name}
+                </button>
+              `)}
+            </div>
+          </div>
+        </ha-card>
+      ` : ''}
+      
+      <!-- Step 4: Select Specific Cut -->
+      ${this._selectedCutType && cuts.length > 0 ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} Select Cut</h3>
             <select @change=${(e) => this._selectCut(parseInt(e.target.value) || null)}>
               <option value="">Choose a cut...</option>
-              ${CUTS_DATA[this._selectedCategory].cuts.map(cut => html`
+              ${cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
                   ${cut.name}
                 </option>
               `)}
             </select>
-          ` : ''}
-        </div>
-      </ha-card>
+          </div>
+        </ha-card>
+      ` : ''}
       
+      <!-- Step 5: Doneness Level -->
       ${this._selectedCut ? html`
         <ha-card>
           <div class="card-content">
@@ -280,7 +778,8 @@ class KitchenCookingPanel extends LitElement {
               ${this._getAvailableDoneness().map(opt => html`
                 <button 
                   class="doneness-btn ${this._selectedDoneness === opt.value ? 'selected' : ''}"
-                  @click=${() => this._selectedDoneness = opt.value}>
+                  @click=${() => this._selectedDoneness = opt.value}
+                  title="${opt.description || ''}">
                   <span class="icon">${opt.icon}</span>
                   ${opt.name}
                 </button>
@@ -289,6 +788,7 @@ class KitchenCookingPanel extends LitElement {
           </div>
         </ha-card>
         
+        <!-- Step 6: Cooking Method -->
         <ha-card>
           <div class="card-content">
             <h3>🍳 Cooking Method</h3>
@@ -304,6 +804,7 @@ class KitchenCookingPanel extends LitElement {
           </div>
         </ha-card>
         
+        <!-- Start Button -->
         <div class="action-container">
           <ha-button unelevated @click=${this._startCook} ?disabled=${!this._selectedDoneness}>
             🔥 Start Cooking
