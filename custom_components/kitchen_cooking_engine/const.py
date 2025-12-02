@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 1 Dec 2025, 17:10 CET
-Last Change: Added PANEL_VERSION for cache busting
+Last Updated: 2 Dec 2025, 08:30 CET
+Last Change: v0.1.1.11 - Frontend data generated at install/update time
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
-# Panel version - increment this to force browsers to reload the panel JS
-# This is appended to both the URL and element name to bust all caches
-PANEL_VERSION = "16"
+# Panel version - This is updated automatically by generate_frontend_data.py
+# when the integration is installed/updated. Do not edit manually.
+PANEL_VERSION = "27"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

@@ -1,18 +1,12 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * Last Updated: 1 Dec 2025, 15:47 CET
- * Last Change: Fixed panel structure to match exact MEATER app flow:
- *              - Beef/Pork/Lamb: Category → Steak/Roast/Other → Cut
- *              - Poultry: Category → Chicken/Duck/Goose/Turkey → Cut
- *              - Fish: Category → Fish Type → Fillet/Other
- *              - Full list of fish species and shellfish added
- *              - All MEATER cuts included
+ * AUTO-REGENERATED: 02 Dec 2025, 10:23 CET
+ * Data generated from cooking_data.py and swedish_cooking_data.py
  * 
- * NOTE: The cut/category structure mirrors MEATER app's meatCutStructure.
- *       Temperature values are from USDA/FDA public guidelines.
- *       TODO: Verify all cuts against latest MEATER app version and mark
- *             any proprietary data for replacement with verified free info.
+ * NOTE: This file's data section is regenerated at install/update time.
+ *       Do not manually edit the data constants - they will be overwritten.
+ *       Temperature values are suggestions based on cooking style, not just safety.
  * 
  * A custom panel for the Kitchen Cooking Engine integration.
  */
@@ -23,720 +17,2224 @@ import {
   css,
 } from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
 
-// Doneness option definitions
+
+
+// Data source options
+const DATA_SOURCE_INTERNATIONAL = "international";
+const DATA_SOURCE_SWEDISH = "swedish";
+
+// AUTO-GENERATED DATA - DO NOT EDIT
+// Generated from cooking_data.py and swedish_cooking_data.py
+// Last generated: 02 Dec 2025, 10:23 CET
+
+// Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
-  rare: { value: "rare", name: "Rare", icon: "🔴", description: "Cool red center" },
-  medium_rare: { value: "medium_rare", name: "Medium Rare", icon: "🟠", description: "Warm red center" },
-  medium: { value: "medium", name: "Medium", icon: "🟡", description: "Warm pink center" },
-  medium_well: { value: "medium_well", name: "Medium Well", icon: "🟤", description: "Slightly pink center" },
-  well_done: { value: "well_done", name: "Well Done", icon: "⚪", description: "No pink, fully cooked" },
-  pulled: { value: "pulled", name: "Pulled", icon: "🍖", description: "Shreddable, collagen broken down" },
-  safe: { value: "safe", name: "Safe (165°F)", icon: "✅", description: "USDA safe, cooked through" },
-  dark_meat_optimal: { value: "dark_meat_optimal", name: "Dark Meat", icon: "🍗", description: "Optimal texture for dark meat" },
-  crispy: { value: "crispy", name: "Crispy", icon: "🥓", description: "Crispy and rendered" },
-  heated_through: { value: "heated_through", name: "Heated Through", icon: "♨️", description: "Warmed through (pre-cooked)" },
-  done: { value: "done", name: "Done", icon: "✓", description: "Cooked through" },
-  tender: { value: "tender", name: "Tender", icon: "🥔", description: "Fork-tender" },
-  crisp_tender: { value: "crisp_tender", name: "Crisp-Tender", icon: "🥦", description: "Slightly firm with bite" },
-  caramelized: { value: "caramelized", name: "Caramelized", icon: "🧅", description: "Golden brown" },
-  charred: { value: "charred", name: "Charred", icon: "🔥", description: "Charred exterior" },
+  "rare": {
+    "value": "rare",
+    "name": "Rare",
+    "icon": "🔴",
+    "description": "Cool red center",
+    "temp_c": 49,
+    "temp_f": 120
+  },
+  "medium_rare": {
+    "value": "medium_rare",
+    "name": "Medium Rare",
+    "icon": "🟠",
+    "description": "Warm red center",
+    "temp_c": 54,
+    "temp_f": 130
+  },
+  "medium": {
+    "value": "medium",
+    "name": "Medium",
+    "icon": "🟡",
+    "description": "Warm pink center",
+    "temp_c": 60,
+    "temp_f": 140
+  },
+  "medium_well": {
+    "value": "medium_well",
+    "name": "Medium Well",
+    "icon": "🟤",
+    "description": "Slightly pink center",
+    "temp_c": 66,
+    "temp_f": 150
+  },
+  "well_done": {
+    "value": "well_done",
+    "name": "Well Done",
+    "icon": "⚪",
+    "description": "No pink, fully cooked",
+    "temp_c": 71,
+    "temp_f": 160
+  },
+  "pulled": {
+    "value": "pulled",
+    "name": "Pulled",
+    "icon": "🍖",
+    "description": "Shreddable, collagen broken down",
+    "temp_c": 93,
+    "temp_f": 200
+  },
+  "done": {
+    "value": "done",
+    "name": "Done",
+    "icon": "✓",
+    "description": "Cooked through",
+    "temp_c": 71,
+    "temp_f": 160
+  },
+  "crispy": {
+    "value": "crispy",
+    "name": "Crispy",
+    "icon": "🥓",
+    "description": "Crispy and rendered",
+    "temp_c": 90,
+    "temp_f": 195
+  },
+  "heated_through": {
+    "value": "heated_through",
+    "name": "Heated Through",
+    "icon": "♨️",
+    "description": "Heated through",
+    "temp_c": 60,
+    "temp_f": 140
+  },
+  "safe": {
+    "value": "safe",
+    "name": "Safe",
+    "icon": "✅",
+    "description": "Cooked through, safe to eat",
+    "temp_c": 74,
+    "temp_f": 165
+  },
+  "dark_meat_optimal": {
+    "value": "dark_meat_optimal",
+    "name": "Dark Meat Optimal",
+    "icon": "🍗",
+    "description": "Dark meat optimal texture",
+    "temp_c": 77,
+    "temp_f": 170
+  },
+  "tender": {
+    "value": "tender",
+    "name": "Tender",
+    "icon": "🥔",
+    "description": "Fully tender, fork-pierces easily",
+    "temp_c": 95,
+    "temp_f": 203
+  },
+  "caramelized": {
+    "value": "caramelized",
+    "name": "Caramelized",
+    "icon": "🧅",
+    "description": "Golden brown, enhanced sweetness",
+    "temp_c": 160,
+    "temp_f": 320
+  },
+  "crisp_tender": {
+    "value": "crisp_tender",
+    "name": "Crisp Tender",
+    "icon": "🥦",
+    "description": "Slightly firm with some bite",
+    "temp_c": 85,
+    "temp_f": 185
+  },
+  "charred": {
+    "value": "charred",
+    "name": "Charred",
+    "icon": "🔥",
+    "description": "Charred exterior with smoky flavor",
+    "temp_c": 200,
+    "temp_f": 390
+  }
 };
 
-// Doneness arrays for different cut types
-const STEAK_DONENESS = ["rare", "medium_rare", "medium", "medium_well", "well_done"];
-const STEAK_DONENESS_NO_WELL = ["rare", "medium_rare", "medium", "medium_well"];
-const STEAK_DONENESS_NO_RARE = ["medium_rare", "medium", "medium_well", "well_done"];
-const STEAK_DONENESS_MR_TO_M = ["rare", "medium_rare", "medium"];
-const BRAISING_DONENESS = ["pulled"];
-const PORK_DONENESS = ["medium", "well_done"];
-const POULTRY_DONENESS = ["safe"];
-const POULTRY_DARK_DONENESS = ["safe", "dark_meat_optimal"];
-const DUCK_BREAST_DONENESS = ["medium_rare", "medium", "safe"];
-const FISH_DONENESS = ["medium_rare", "medium", "well_done"];
-const FISH_RARE_OK = ["rare", "medium_rare", "medium"];
-const FISH_WELL_ONLY = ["well_done"];
-const VEG_DONENESS = ["tender", "crisp_tender", "caramelized", "charred"];
+// Swedish doneness option definitions
+const SWEDISH_DONENESS_OPTIONS = {
+  "blodig": {
+    "value": "blodig",
+    "name": "Blodig",
+    "icon": "🔴",
+    "description": "Blodig - Sval röd kärna",
+    "temp_c": 50,
+    "temp_f": 122
+  },
+  "medium_rare": {
+    "value": "medium_rare",
+    "name": "Medium Rare",
+    "icon": "🟠",
+    "description": "Medium Rare - Rosa kärna",
+    "temp_c": 54,
+    "temp_f": 129
+  },
+  "medium": {
+    "value": "medium",
+    "name": "Medium",
+    "icon": "🟡",
+    "description": "Medium - Varm rosa kärna",
+    "temp_c": 58,
+    "temp_f": 136
+  },
+  "medium_well": {
+    "value": "medium_well",
+    "name": "Medium Well",
+    "icon": "🟤",
+    "description": "Medium Well - Nästan genomstekt",
+    "temp_c": 64,
+    "temp_f": 147
+  },
+  "genomstekt": {
+    "value": "genomstekt",
+    "name": "Genomstekt",
+    "icon": "⚪",
+    "description": "Genomstekt - Ingen rosa färg",
+    "temp_c": 70,
+    "temp_f": 158
+  },
+  "långkokt": {
+    "value": "långkokt",
+    "name": "Långkokt",
+    "icon": "🍖",
+    "description": "Långkokt - Strimlningsbart",
+    "temp_c": 92,
+    "temp_f": 198
+  }
+};
 
-/**
- * MEAT_CATEGORIES - Hierarchical meat/protein data structure
- * 
- * Structure mirrors the EXACT MEATER app Guided Cook flow (2025):
- * - Beef/Pork/Lamb: Category → Group (Steak/Roast/Other) → Cuts
- * - Poultry: Category → Species (Chicken/Duck/Goose/Turkey) → Cuts
- * - Fish: Category → Fish Type → Fillet/Other
- * - Other/Game: Category → Animal Type → Steak/Roast/Other
- * 
- * Source: https://support.meater.com/hc/en-us/articles/36774867052827-Cooking-with-the-MEATER-App
- * Last verified: 2025-05-28
- * 
- * NOTE: Cut names and structure from MEATER app public documentation.
- *       All temperature values come from USDA/FDA public safety guidelines.
- *       Cut IDs match cooking_data.py for backend compatibility.
- * 
- * Additional sources consulted (for completeness):
- * - Hank's True BBQ Meat Cuts and Cooking Temps
- * - FoodFireFriends Smoking Times and Temperatures Chart
- * - Cookery Hut Meat Cooking Times and Temperatures Chart
- * - GourmetFoodStore Meat & Poultry Cooking Temperatures
- * - Swedish sources: Stekguiden.se, Gårdssällskapet, Scan Köttguiden, ICA, Köket.se
- */
+// International meat categories
 const MEAT_CATEGORIES = {
-  beef: {
-    id: 1,
-    name: "Beef",
-    icon: "🥩",
-    color: "#8B0000",
-    // MEATER app flow: Beef → Steak/Roast/Other → Cut
-    meats: [
+  "beef": {
+    "id": 1,
+    "name": "Beef",
+    "icon": "🥩",
+    "color": "#8B0000",
+    "meats": [
       {
-        id: 10,
-        name: "Steak",  // Group name as shown in MEATER app
-        cutTypes: [
+        "id": 10,
+        "name": "cow",
+        "cutTypes": [
           {
-            id: 100,
-            name: "Steak Cuts",
-            cuts: [
-              { id: 100, name: "Sirloin", doneness: STEAK_DONENESS },
-              { id: 101, name: "Rib Eye", doneness: STEAK_DONENESS },
-              { id: 102, name: "Flank", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 103, name: "T-Bone", doneness: STEAK_DONENESS },
-              { id: 104, name: "Tomahawk", doneness: STEAK_DONENESS },
-              { id: 105, name: "Filet Mignon", doneness: STEAK_DONENESS },
-              { id: 106, name: "Picanha", doneness: STEAK_DONENESS },
-              { id: 107, name: "New York Strip", doneness: STEAK_DONENESS },
-              { id: 108, name: "Skirt Steak", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 109, name: "Flat Iron Steak", doneness: STEAK_DONENESS },
-              { id: 110, name: "Hanger Steak", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 111, name: "Porterhouse", doneness: STEAK_DONENESS },
-              { id: 199, name: "Other", doneness: STEAK_DONENESS },
+            "id": 100,
+            "name": "Steaks",
+            "cuts": [
+              {
+                "id": 100,
+                "name": "Ribeye Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 101,
+                "name": "Sirloin Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 102,
+                "name": "Filet Mignon / Tenderloin Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 103,
+                "name": "New York Strip",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 104,
+                "name": "T-Bone / Porterhouse",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 105,
+                "name": "Flank Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 106,
+                "name": "Skirt Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              },
+              {
+                "id": 107,
+                "name": "Flat Iron Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 108,
+                "name": "Hanger Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              },
+              {
+                "id": 109,
+                "name": "Tri-Tip",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 110,
+                "name": "Tomahawk Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 111,
+                "name": "Picanha",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              }
             ]
-          }
-        ]
-      },
-      {
-        id: 11,
-        name: "Roast",  // Group name as shown in MEATER app
-        cutTypes: [
+          },
           {
-            id: 110,
-            name: "Roast Cuts",
-            cuts: [
-              { id: 120, name: "Roasting Joint", doneness: STEAK_DONENESS },
-              { id: 121, name: "Tenderloin", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 122, name: "Brisket", doneness: BRAISING_DONENESS },
-              { id: 123, name: "Prime Rib", doneness: STEAK_DONENESS },
-              { id: 124, name: "Round", doneness: STEAK_DONENESS_NO_RARE },
-              { id: 125, name: "Tri-Tip", doneness: STEAK_DONENESS },
-              { id: 126, name: "Shank", doneness: BRAISING_DONENESS },
-              { id: 127, name: "Rump", doneness: STEAK_DONENESS_NO_RARE },
-              { id: 128, name: "Chuck", doneness: BRAISING_DONENESS },
-              { id: 129, name: "Sirloin Roast", doneness: STEAK_DONENESS },
-              { id: 130, name: "Top Round Roast", doneness: STEAK_DONENESS_NO_RARE },
-              { id: 199, name: "Other", doneness: STEAK_DONENESS },
+            "id": 101,
+            "name": "Roasts",
+            "cuts": [
+              {
+                "id": 120,
+                "name": "Prime Rib / Standing Rib Roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 121,
+                "name": "Beef Tenderloin Roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 122,
+                "name": "Top Round Roast",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 123,
+                "name": "Sirloin Tip Roast",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 124,
+                "name": "Roasting Joint",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 125,
+                "name": "Round Roast",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 126,
+                "name": "Rump Roast",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 127,
+                "name": "Rump",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 128,
+                "name": "Chuck",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 129,
+                "name": "Sirloin Roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              }
             ]
-          }
-        ]
-      },
-      {
-        id: 12,
-        name: "Other",  // Group name as shown in MEATER app
-        cutTypes: [
+          },
           {
-            id: 120,
-            name: "Other Cuts",
-            cuts: [
-              { id: 140, name: "Ground", doneness: ["well_done"] },
-              { id: 141, name: "Burger", doneness: ["well_done"] },
-              { id: 142, name: "Rib", doneness: BRAISING_DONENESS },
-              { id: 143, name: "Meatloaf", doneness: ["done"] },
-              { id: 144, name: "Liver", doneness: ["medium", "well_done"] },
-              { id: 145, name: "Shin", doneness: BRAISING_DONENESS },
-              { id: 146, name: "Tongue", doneness: BRAISING_DONENESS },
-              { id: 147, name: "Short Ribs", doneness: BRAISING_DONENESS },
-              { id: 148, name: "Oxtail", doneness: BRAISING_DONENESS },
-              { id: 149, name: "Cheek", doneness: BRAISING_DONENESS },
-              { id: 199, name: "Other", doneness: STEAK_DONENESS },
+            "id": 102,
+            "name": "Braising Cuts",
+            "cuts": [
+              {
+                "id": 130,
+                "name": "Chuck Roast / Pot Roast",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 131,
+                "name": "Brisket",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 132,
+                "name": "Short Ribs",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 133,
+                "name": "Beef Shank / Osso Buco",
+                "doneness": [
+                  "pulled"
+                ]
+              }
             ]
-          }
-        ]
-      }
-    ]
-  },
-  pork: {
-    id: 2,
-    name: "Pork",
-    icon: "🐷",
-    color: "#FFB6C1",
-    // MEATER app flow: Pork → Steak/Roast/Other → Cut
-    meats: [
-      {
-        id: 20,
-        name: "Steak",
-        cutTypes: [
+          },
           {
-            id: 200,
-            name: "Steak Cuts",
-            cuts: [
-              { id: 200, name: "Chop", doneness: PORK_DONENESS },
-              { id: 201, name: "Loin", doneness: PORK_DONENESS },
-              { id: 202, name: "Tenderloin", doneness: PORK_DONENESS },
-              { id: 203, name: "Shoulder", doneness: PORK_DONENESS },
-              { id: 204, name: "Secreto", doneness: PORK_DONENESS },
-              { id: 299, name: "Other", doneness: PORK_DONENESS },
+            "id": 103,
+            "name": "Ground",
+            "cuts": [
+              {
+                "id": 140,
+                "name": "Beef Burger / Ground Beef Patty",
+                "doneness": [
+                  "well_done"
+                ]
+              },
+              {
+                "id": 142,
+                "name": "Meatloaf",
+                "doneness": [
+                  "done"
+                ]
+              },
+              {
+                "id": 141,
+                "name": "Burger",
+                "doneness": [
+                  "well_done"
+                ]
+              },
+              {
+                "id": 143,
+                "name": "Meatloaf",
+                "doneness": [
+                  "well_done"
+                ]
+              },
+              {
+                "id": 144,
+                "name": "Liver",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 146,
+                "name": "Tongue",
+                "doneness": [
+                  "pulled"
+                ]
+              }
             ]
-          }
-        ]
-      },
-      {
-        id: 21,
-        name: "Roast",
-        cutTypes: [
+          },
           {
-            id: 210,
-            name: "Roast Cuts",
-            cuts: [
-              { id: 210, name: "Butt", doneness: BRAISING_DONENESS },
-              { id: 211, name: "Shoulder", doneness: BRAISING_DONENESS },
-              { id: 212, name: "Leg", doneness: PORK_DONENESS },
-              { id: 213, name: "Ham", doneness: PORK_DONENESS },
-              { id: 214, name: "Loin", doneness: PORK_DONENESS },
-              { id: 215, name: "Virginia Ham", doneness: ["heated_through"] },
-              { id: 216, name: "Belly", doneness: ["well_done", "crispy"] },
-              { id: 217, name: "Baby Back Ribs", doneness: BRAISING_DONENESS },
-              { id: 218, name: "Spare Ribs", doneness: BRAISING_DONENESS },
-              { id: 219, name: "St. Louis Style Ribs", doneness: BRAISING_DONENESS },
-              { id: 220, name: "Country Style Ribs", doneness: BRAISING_DONENESS },
-              { id: 299, name: "Other", doneness: PORK_DONENESS },
-            ]
-          }
-        ]
-      },
-      {
-        id: 22,
-        name: "Other",
-        cutTypes: [
-          {
-            id: 220,
-            name: "Other Cuts",
-            cuts: [
-              { id: 240, name: "Ground", doneness: ["well_done"] },
-              { id: 241, name: "Tongue", doneness: BRAISING_DONENESS },
-              { id: 242, name: "Jowl", doneness: BRAISING_DONENESS },
-              { id: 243, name: "Cheek", doneness: BRAISING_DONENESS },
-              { id: 244, name: "Liver", doneness: ["well_done"] },
-              { id: 245, name: "Rib", doneness: BRAISING_DONENESS },
-              { id: 246, name: "Sausage", doneness: ["well_done"] },
-              { id: 299, name: "Other", doneness: PORK_DONENESS },
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  poultry: {
-    id: 3,
-    name: "Poultry",
-    icon: "🍗",
-    color: "#FFD700",
-    // MEATER app flow: Poultry → Chicken/Duck/Goose/Turkey → Cut
-    meats: [
-      {
-        id: 30,
-        name: "Chicken",
-        cutTypes: [
-          {
-            id: 300,
-            name: "Chicken Cuts",
-            cuts: [
-              { id: 300, name: "Whole", doneness: POULTRY_DONENESS },
-              { id: 301, name: "Breast", doneness: POULTRY_DONENESS },
-              { id: 302, name: "Thigh", doneness: POULTRY_DARK_DONENESS },
-              { id: 303, name: "Leg", doneness: POULTRY_DARK_DONENESS },
-              { id: 304, name: "Ground", doneness: POULTRY_DONENESS },
-              { id: 305, name: "Burger", doneness: POULTRY_DONENESS },
-              { id: 306, name: "Wing", doneness: POULTRY_DARK_DONENESS },
-            ]
-          }
-        ]
-      },
-      {
-        id: 31,
-        name: "Duck",
-        cutTypes: [
-          {
-            id: 310,
-            name: "Duck Cuts",
-            cuts: [
-              { id: 340, name: "Whole", doneness: POULTRY_DONENESS },
-              { id: 341, name: "Breast", doneness: DUCK_BREAST_DONENESS },
-              { id: 342, name: "Leg", doneness: ["dark_meat_optimal"] },
-            ]
-          }
-        ]
-      },
-      {
-        id: 32,
-        name: "Goose",
-        cutTypes: [
-          {
-            id: 320,
-            name: "Goose Cuts",
-            cuts: [
-              { id: 345, name: "Whole", doneness: POULTRY_DONENESS },
-              { id: 346, name: "Breast", doneness: DUCK_BREAST_DONENESS },
-              { id: 347, name: "Thigh", doneness: POULTRY_DARK_DONENESS },
-              { id: 348, name: "Leg", doneness: POULTRY_DARK_DONENESS },
-            ]
-          }
-        ]
-      },
-      {
-        id: 33,
-        name: "Turkey",
-        cutTypes: [
-          {
-            id: 330,
-            name: "Turkey Cuts",
-            cuts: [
-              { id: 330, name: "Whole", doneness: POULTRY_DONENESS },
-              { id: 331, name: "Breast", doneness: POULTRY_DONENESS },
-              { id: 332, name: "Thigh", doneness: POULTRY_DARK_DONENESS },
-              { id: 333, name: "Leg", doneness: POULTRY_DARK_DONENESS },
-              { id: 334, name: "Ground", doneness: POULTRY_DONENESS },
-              { id: 335, name: "Burger", doneness: POULTRY_DONENESS },
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  fish: {
-    id: 4,
-    name: "Fish",
-    icon: "🐟",
-    color: "#4682B4",
-    // MEATER app flow: Fish → Fish Type → Fillet/Other
-    meats: [
-      {
-        id: 40,
-        name: "Salmon",
-        cutTypes: [
-          {
-            id: 400,
-            name: "Salmon Cuts",
-            cuts: [
-              { id: 400, name: "Fillet (Wild)", doneness: FISH_DONENESS },
-              { id: 401, name: "Fillet (Farmed)", doneness: FISH_DONENESS },
-              { id: 402, name: "Steak", doneness: FISH_DONENESS },
-              { id: 499, name: "Other", doneness: FISH_DONENESS },
-            ]
-          }
-        ]
-      },
-      {
-        id: 41,
-        name: "Cod",
-        cutTypes: [
-          {
-            id: 410,
-            name: "Cod Cuts",
-            cuts: [
-              { id: 410, name: "Fillet", doneness: ["medium", "well_done"] },
-              { id: 419, name: "Other", doneness: ["medium", "well_done"] },
-            ]
-          }
-        ]
-      },
-      {
-        id: 42,
-        name: "Halibut",
-        cutTypes: [
-          {
-            id: 420,
-            name: "Halibut Cuts",
-            cuts: [
-              { id: 420, name: "Fillet", doneness: ["medium", "well_done"] },
-              { id: 421, name: "Steak", doneness: ["medium", "well_done"] },
-              { id: 429, name: "Other", doneness: ["medium", "well_done"] },
-            ]
-          }
-        ]
-      },
-      {
-        id: 43,
-        name: "Haddock",
-        cutTypes: [
-          {
-            id: 430,
-            name: "Haddock Cuts",
-            cuts: [
-              { id: 430, name: "Fillet", doneness: ["medium", "well_done"] },
-              { id: 439, name: "Other", doneness: ["medium", "well_done"] },
-            ]
-          }
-        ]
-      },
-      {
-        id: 44,
-        name: "Hake",
-        cutTypes: [
-          {
-            id: 440,
-            name: "Hake Cuts",
-            cuts: [
-              { id: 440, name: "Fillet", doneness: ["medium", "well_done"] },
-              { id: 449, name: "Other", doneness: ["medium", "well_done"] },
-            ]
-          }
-        ]
-      },
-      {
-        id: 45,
-        name: "Tuna",
-        cutTypes: [
-          {
-            id: 450,
-            name: "Tuna Cuts",
-            cuts: [
-              { id: 450, name: "Steak", doneness: FISH_RARE_OK },
-              { id: 451, name: "Fillet", doneness: FISH_RARE_OK },
-              { id: 459, name: "Other", doneness: FISH_RARE_OK },
-            ]
-          }
-        ]
-      },
-      {
-        id: 46,
-        name: "Lobster",
-        cutTypes: [
-          {
-            id: 460,
-            name: "Lobster Cuts",
-            cuts: [
-              { id: 460, name: "Tail", doneness: FISH_WELL_ONLY },
-              { id: 461, name: "Whole", doneness: FISH_WELL_ONLY },
-              { id: 462, name: "Claw", doneness: FISH_WELL_ONLY },
-            ]
-          }
-        ]
-      },
-      {
-        id: 47,
-        name: "Swordfish",
-        cutTypes: [
-          {
-            id: 470,
-            name: "Swordfish Cuts",
-            cuts: [
-              { id: 470, name: "Steak", doneness: ["medium", "well_done"] },
-              { id: 479, name: "Other", doneness: ["medium", "well_done"] },
-            ]
-          }
-        ]
-      },
-      {
-        id: 48,
-        name: "Trout",
-        cutTypes: [
-          {
-            id: 480,
-            name: "Trout Cuts",
-            cuts: [
-              { id: 480, name: "Fillet", doneness: FISH_DONENESS },
-              { id: 481, name: "Whole", doneness: FISH_DONENESS },
-              { id: 489, name: "Other", doneness: FISH_DONENESS },
-            ]
-          }
-        ]
-      },
-      {
-        id: 49,
-        name: "Sea Bass / Branzino",
-        cutTypes: [
-          {
-            id: 490,
-            name: "Sea Bass Cuts",
-            cuts: [
-              { id: 490, name: "Fillet", doneness: ["medium", "well_done"] },
-              { id: 491, name: "Whole", doneness: ["medium", "well_done"] },
-              { id: 499, name: "Other", doneness: ["medium", "well_done"] },
-            ]
-          }
-        ]
-      },
-      {
-        id: 50,
-        name: "Other Fish",
-        cutTypes: [
-          {
-            id: 500,
-            name: "Other Fish Cuts",
-            cuts: [
-              { id: 500, name: "Mahi-Mahi Fillet", doneness: ["medium", "well_done"] },
-              { id: 501, name: "Tilapia Fillet", doneness: ["medium", "well_done"] },
-              { id: 502, name: "Snapper Fillet", doneness: ["medium", "well_done"] },
-              { id: 503, name: "Grouper Fillet", doneness: ["medium", "well_done"] },
-              { id: 504, name: "Flounder Fillet", doneness: ["medium", "well_done"] },
-              { id: 505, name: "Sole Fillet", doneness: ["medium", "well_done"] },
-              { id: 506, name: "Catfish Fillet", doneness: ["well_done"] },
-              { id: 507, name: "Perch Fillet", doneness: ["medium", "well_done"] },
-              { id: 508, name: "Walleye Fillet", doneness: ["medium", "well_done"] },
-              { id: 509, name: "Arctic Char Fillet", doneness: FISH_DONENESS },
-              { id: 510, name: "Mackerel Fillet", doneness: FISH_DONENESS },
-              { id: 511, name: "Sardines", doneness: FISH_DONENESS },
-              { id: 599, name: "Other", doneness: FISH_DONENESS },
-            ]
-          }
-        ]
-      },
-      {
-        id: 51,
-        name: "Shellfish",
-        cutTypes: [
-          {
-            id: 510,
-            name: "Shellfish",
-            cuts: [
-              { id: 550, name: "Shrimp / Prawns", doneness: FISH_WELL_ONLY },
-              { id: 551, name: "Scallops", doneness: ["medium_rare", "well_done"] },
-              { id: 552, name: "Crab", doneness: FISH_WELL_ONLY },
-              { id: 553, name: "Mussels", doneness: FISH_WELL_ONLY },
-              { id: 554, name: "Clams", doneness: FISH_WELL_ONLY },
-              { id: 555, name: "Oysters", doneness: FISH_WELL_ONLY },
-              { id: 556, name: "Calamari / Squid", doneness: FISH_WELL_ONLY },
-              { id: 557, name: "Octopus", doneness: ["well_done", "tender"] },
+            "id": 104,
+            "name": "Other / Offal",
+            "cuts": [
+              {
+                "id": 145,
+                "name": "Beef Liver",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 147,
+                "name": "Beef Tongue",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 148,
+                "name": "Beef Shin",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 149,
+                "name": "Beef Rib",
+                "doneness": [
+                  "pulled"
+                ]
+              }
             ]
           }
         ]
       }
     ]
   },
-  lamb: {
-    id: 5,
-    name: "Lamb",
-    icon: "🐑",
-    color: "#800020",
-    // MEATER app flow: Lamb → Steak/Roast/Other → Cut
-    meats: [
+  "pork": {
+    "id": 2,
+    "name": "Pork",
+    "icon": "🐷",
+    "color": "#FFB6C1",
+    "meats": [
       {
-        id: 50,
-        name: "Steak",
-        cutTypes: [
+        "id": 20,
+        "name": "pig",
+        "cutTypes": [
           {
-            id: 500,
-            name: "Steak Cuts",
-            cuts: [
-              { id: 500, name: "Chop", doneness: STEAK_DONENESS },
-              { id: 501, name: "Neck Filet", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 502, name: "Cutlet", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 503, name: "Loin Chop", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 599, name: "Other", doneness: STEAK_DONENESS },
+            "id": 200,
+            "name": "Chops & Tenderloin",
+            "cuts": [
+              {
+                "id": 200,
+                "name": "Pork Chop",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 201,
+                "name": "Pork Tenderloin",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 202,
+                "name": "Pork Loin Steak",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 203,
+                "name": "Pork Shoulder Steak",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 204,
+                "name": "Secreto (Ibérico Pork)",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              }
             ]
-          }
-        ]
-      },
-      {
-        id: 51,
-        name: "Roast",
-        cutTypes: [
+          },
           {
-            id: 510,
-            name: "Roast Cuts",
-            cuts: [
-              { id: 510, name: "Loin", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 511, name: "Brisket", doneness: BRAISING_DONENESS },
-              { id: 512, name: "Leg", doneness: STEAK_DONENESS },
-              { id: 513, name: "Rump", doneness: STEAK_DONENESS },
-              { id: 514, name: "Shank", doneness: BRAISING_DONENESS },
-              { id: 515, name: "Rib Rack", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 516, name: "Shoulder", doneness: BRAISING_DONENESS },
-              { id: 517, name: "Crown Roast", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 599, name: "Other", doneness: STEAK_DONENESS },
+            "id": 201,
+            "name": "Roasts",
+            "cuts": [
+              {
+                "id": 210,
+                "name": "Pork Loin Roast",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 211,
+                "name": "Pork Shoulder / Boston Butt",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 212,
+                "name": "Pork Belly",
+                "doneness": [
+                  "well_done",
+                  "crispy"
+                ]
+              },
+              {
+                "id": 214,
+                "name": "Pork Leg Roast",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 215,
+                "name": "Virginia Ham",
+                "doneness": [
+                  "heated_through"
+                ]
+              },
+              {
+                "id": 213,
+                "name": "Ham",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 216,
+                "name": "Belly",
+                "doneness": [
+                  "well_done",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 217,
+                "name": "Baby Back Ribs",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 218,
+                "name": "Spare Ribs",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 219,
+                "name": "St. Louis Style Ribs",
+                "doneness": [
+                  "pulled"
+                ]
+              }
             ]
-          }
-        ]
-      },
-      {
-        id: 52,
-        name: "Other",
-        cutTypes: [
+          },
           {
-            id: 520,
-            name: "Other Cuts",
-            cuts: [
-              { id: 520, name: "Ground", doneness: ["well_done"] },
-              { id: 521, name: "Burger", doneness: ["well_done"] },
-              { id: 522, name: "Rib", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 523, name: "Kofta / Kebab", doneness: ["well_done"] },
-              { id: 599, name: "Other", doneness: STEAK_DONENESS },
+            "id": 202,
+            "name": "Ribs",
+            "cuts": [
+              {
+                "id": 220,
+                "name": "Baby Back Ribs",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 221,
+                "name": "Spare Ribs",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 222,
+                "name": "St. Louis Style Ribs",
+                "doneness": [
+                  "pulled"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 203,
+            "name": "Ham",
+            "cuts": [
+              {
+                "id": 230,
+                "name": "Fresh Ham",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 231,
+                "name": "Cured Ham (Pre-cooked)",
+                "doneness": [
+                  "heated_through"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 204,
+            "name": "Ground",
+            "cuts": [
+              {
+                "id": 240,
+                "name": "Pork Sausage",
+                "doneness": [
+                  "well_done"
+                ]
+              },
+              {
+                "id": 241,
+                "name": "Ground Pork",
+                "doneness": [
+                  "well_done"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 205,
+            "name": "Other / Offal",
+            "cuts": [
+              {
+                "id": 245,
+                "name": "Pork Jowl / Guanciale",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 246,
+                "name": "Pork Cheek",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 247,
+                "name": "Pork Liver",
+                "doneness": [
+                  "well_done"
+                ]
+              },
+              {
+                "id": 248,
+                "name": "Pork Tongue",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 242,
+                "name": "Jowl",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 243,
+                "name": "Cheek",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 244,
+                "name": "Liver",
+                "doneness": [
+                  "well_done"
+                ]
+              }
             ]
           }
         ]
       }
     ]
   },
-  other: {
-    id: 6,
-    name: "Other",
-    icon: "🦌",
-    color: "#2F4F4F",
-    // MEATER app flow: Other → Animal Type → Steak/Roast/Other
-    meats: [
+  "poultry": {
+    "id": 3,
+    "name": "Poultry",
+    "icon": "🍗",
+    "color": "#FFD700",
+    "meats": [
       {
-        id: 60,
-        name: "Venison",
-        cutTypes: [
+        "id": 30,
+        "name": "chicken",
+        "cutTypes": [
           {
-            id: 600,
-            name: "Venison Cuts",
-            cuts: [
-              { id: 600, name: "Steak", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 601, name: "Roast", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 602, name: "Loin", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 603, name: "Leg", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 604, name: "Shoulder", doneness: BRAISING_DONENESS },
-              { id: 699, name: "Other", doneness: STEAK_DONENESS_NO_WELL },
+            "id": 300,
+            "name": "Whole",
+            "cuts": [
+              {
+                "id": 300,
+                "name": "Whole Chicken",
+                "doneness": [
+                  "safe"
+                ]
+              },
+              {
+                "id": 301,
+                "name": "Breast",
+                "doneness": [
+                  "safe"
+                ]
+              },
+              {
+                "id": 302,
+                "name": "Thigh",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ]
+              },
+              {
+                "id": 303,
+                "name": "Leg",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ]
+              },
+              {
+                "id": 304,
+                "name": "Ground",
+                "doneness": [
+                  "safe"
+                ]
+              },
+              {
+                "id": 305,
+                "name": "Burger",
+                "doneness": [
+                  "safe"
+                ]
+              },
+              {
+                "id": 306,
+                "name": "Wing",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 301,
+            "name": "Breast",
+            "cuts": [
+              {
+                "id": 310,
+                "name": "Chicken Breast",
+                "doneness": [
+                  "safe"
+                ]
+              },
+              {
+                "id": 311,
+                "name": "Chicken Breast (Bone-in)",
+                "doneness": [
+                  "safe"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 302,
+            "name": "Dark Meat",
+            "cuts": [
+              {
+                "id": 320,
+                "name": "Chicken Thigh",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ]
+              },
+              {
+                "id": 321,
+                "name": "Chicken Leg / Drumstick",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ]
+              },
+              {
+                "id": 322,
+                "name": "Chicken Wing",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        id: 61,
-        name: "Reindeer",
-        cutTypes: [
+        "id": 31,
+        "name": "turkey",
+        "cutTypes": [
           {
-            id: 610,
-            name: "Reindeer Cuts",
-            cuts: [
-              { id: 610, name: "Steak", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 611, name: "Roast", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 612, name: "Loin", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 699, name: "Other", doneness: STEAK_DONENESS_NO_WELL },
+            "id": 310,
+            "name": "Turkey",
+            "cuts": [
+              {
+                "id": 330,
+                "name": "Whole Turkey",
+                "doneness": [
+                  "safe"
+                ]
+              },
+              {
+                "id": 331,
+                "name": "Turkey Breast",
+                "doneness": [
+                  "safe"
+                ]
+              },
+              {
+                "id": 332,
+                "name": "Turkey Leg",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ]
+              },
+              {
+                "id": 333,
+                "name": "Turkey Thigh",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ]
+              },
+              {
+                "id": 334,
+                "name": "Ground",
+                "doneness": [
+                  "safe"
+                ]
+              },
+              {
+                "id": 335,
+                "name": "Burger",
+                "doneness": [
+                  "safe"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        id: 62,
-        name: "Moose",
-        cutTypes: [
+        "id": 32,
+        "name": "duck",
+        "cutTypes": [
           {
-            id: 620,
-            name: "Moose Cuts",
-            cuts: [
-              { id: 620, name: "Steak", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 621, name: "Roast", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 622, name: "Loin", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 699, name: "Other", doneness: STEAK_DONENESS_NO_WELL },
+            "id": 320,
+            "name": "Duck",
+            "cuts": [
+              {
+                "id": 340,
+                "name": "Duck Breast",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "safe"
+                ]
+              },
+              {
+                "id": 341,
+                "name": "Whole Duck",
+                "doneness": [
+                  "safe"
+                ]
+              },
+              {
+                "id": 342,
+                "name": "Duck Leg Confit",
+                "doneness": [
+                  "dark_meat_optimal"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        id: 63,
-        name: "Buffalo",
-        cutTypes: [
+        "id": 34,
+        "name": "goose",
+        "cutTypes": [
           {
-            id: 630,
-            name: "Buffalo Cuts",
-            cuts: [
-              { id: 630, name: "Steak", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 631, name: "Roast", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 632, name: "Burger", doneness: ["well_done"] },
-              { id: 699, name: "Other", doneness: STEAK_DONENESS_NO_WELL },
+            "id": 345,
+            "name": "Goose",
+            "cuts": [
+              {
+                "id": 345,
+                "name": "Whole Goose",
+                "doneness": [
+                  "safe"
+                ]
+              },
+              {
+                "id": 346,
+                "name": "Goose Breast",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "safe"
+                ]
+              },
+              {
+                "id": 347,
+                "name": "Goose Thigh",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ]
+              },
+              {
+                "id": 348,
+                "name": "Goose Leg",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        id: 64,
-        name: "Ostrich",
-        cutTypes: [
+        "id": 33,
+        "name": "ground_poultry",
+        "cutTypes": [
           {
-            id: 640,
-            name: "Ostrich Cuts",
-            cuts: [
-              { id: 640, name: "Steak", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 641, name: "Fillet", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 699, name: "Other", doneness: STEAK_DONENESS_MR_TO_M },
+            "id": 330,
+            "name": "Ground",
+            "cuts": [
+              {
+                "id": 350,
+                "name": "Ground Chicken",
+                "doneness": [
+                  "safe"
+                ]
+              },
+              {
+                "id": 351,
+                "name": "Ground Turkey",
+                "doneness": [
+                  "safe"
+                ]
+              },
+              {
+                "id": 352,
+                "name": "Chicken Burger",
+                "doneness": [
+                  "safe"
+                ]
+              },
+              {
+                "id": 353,
+                "name": "Turkey Burger",
+                "doneness": [
+                  "safe"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "fish": {
+    "id": 4,
+    "name": "Fish",
+    "icon": "🐟",
+    "color": "#4682B4",
+    "meats": [
+      {
+        "id": 40,
+        "name": "salmon",
+        "cutTypes": [
+          {
+            "id": 400,
+            "name": "Salmon",
+            "cuts": [
+              {
+                "id": 400,
+                "name": "Salmon Fillet",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 401,
+                "name": "Salmon Steak",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "well_done"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        id: 65,
-        name: "Mutton",
-        cutTypes: [
+        "id": 41,
+        "name": "tuna",
+        "cutTypes": [
           {
-            id: 650,
-            name: "Mutton Cuts",
-            cuts: [
-              { id: 650, name: "Chop", doneness: STEAK_DONENESS },
-              { id: 651, name: "Leg Roast", doneness: STEAK_DONENESS_NO_RARE },
-              { id: 652, name: "Shoulder", doneness: BRAISING_DONENESS },
-              { id: 699, name: "Other", doneness: STEAK_DONENESS },
+            "id": 410,
+            "name": "Tuna",
+            "cuts": [
+              {
+                "id": 410,
+                "name": "Tuna Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        id: 66,
-        name: "Kangaroo",
-        cutTypes: [
+        "id": 42,
+        "name": "white_fish",
+        "cutTypes": [
           {
-            id: 660,
-            name: "Kangaroo Cuts",
-            cuts: [
-              { id: 660, name: "Steak", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 661, name: "Fillet", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 699, name: "Other", doneness: STEAK_DONENESS_MR_TO_M },
+            "id": 420,
+            "name": "White Fish",
+            "cuts": [
+              {
+                "id": 420,
+                "name": "Cod Fillet",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 421,
+                "name": "Halibut Fillet",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 422,
+                "name": "Sea Bass",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 423,
+                "name": "Swordfish Steak",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 424,
+                "name": "Mahi-Mahi",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 425,
+                "name": "Haddock Fillet",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 426,
+                "name": "Hake Fillet",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 427,
+                "name": "Trout Fillet",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "well_done"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        id: 67,
-        name: "Goat",
-        cutTypes: [
+        "id": 43,
+        "name": "shellfish",
+        "cutTypes": [
           {
-            id: 670,
-            name: "Goat Cuts",
-            cuts: [
-              { id: 670, name: "Chop", doneness: STEAK_DONENESS_NO_RARE },
-              { id: 671, name: "Leg Roast", doneness: STEAK_DONENESS_NO_RARE },
-              { id: 672, name: "Shoulder", doneness: BRAISING_DONENESS },
-              { id: 699, name: "Other", doneness: STEAK_DONENESS_NO_RARE },
+            "id": 430,
+            "name": "Shellfish",
+            "cuts": [
+              {
+                "id": 430,
+                "name": "Shrimp",
+                "doneness": [
+                  "well_done"
+                ]
+              },
+              {
+                "id": 431,
+                "name": "Lobster Tail",
+                "doneness": [
+                  "well_done"
+                ]
+              },
+              {
+                "id": 432,
+                "name": "Scallops",
+                "doneness": [
+                  "medium_rare",
+                  "well_done"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "lamb": {
+    "id": 5,
+    "name": "Lamb",
+    "icon": "🐑",
+    "color": "#800020",
+    "meats": [
+      {
+        "id": 50,
+        "name": "lamb",
+        "cutTypes": [
+          {
+            "id": 500,
+            "name": "Roasts",
+            "cuts": [
+              {
+                "id": 500,
+                "name": "Leg of Lamb",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 501,
+                "name": "Rack of Lamb",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 502,
+                "name": "Lamb Shoulder",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 503,
+                "name": "Lamb Loin Roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 504,
+                "name": "Lamb Brisket",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 505,
+                "name": "Lamb Rump",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 506,
+                "name": "Lamb Shank",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 507,
+                "name": "Lamb Rib",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 501,
+            "name": "Chops",
+            "cuts": [
+              {
+                "id": 510,
+                "name": "Lamb Chops",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 511,
+                "name": "Lamb Loin Chops",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 512,
+                "name": "Lamb Neck Filet",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 513,
+                "name": "Lamb Cutlet",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 502,
+            "name": "Ground",
+            "cuts": [
+              {
+                "id": 520,
+                "name": "Ground Lamb",
+                "doneness": [
+                  "well_done"
+                ]
+              },
+              {
+                "id": 521,
+                "name": "Lamb Kofta / Kebab",
+                "doneness": [
+                  "well_done"
+                ]
+              },
+              {
+                "id": 522,
+                "name": "Lamb Burger",
+                "doneness": [
+                  "well_done"
+                ]
+              },
+              {
+                "id": 514,
+                "name": "Shank",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 515,
+                "name": "Rib Rack",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 516,
+                "name": "Shoulder",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 517,
+                "name": "Crown Roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 523,
+                "name": "Kofta / Kebab",
+                "doneness": [
+                  "well_done"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "game": {
+    "id": 6,
+    "name": "Game",
+    "icon": "🦌",
+    "color": "#2F4F4F",
+    "meats": [
+      {
+        "id": 60,
+        "name": "venison",
+        "cutTypes": [
+          {
+            "id": 600,
+            "name": "Venison",
+            "cuts": [
+              {
+                "id": 600,
+                "name": "Venison Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 601,
+                "name": "Venison Roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              },
+              {
+                "id": 602,
+                "name": "Venison Loin",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              },
+              {
+                "id": 603,
+                "name": "Leg",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              },
+              {
+                "id": 604,
+                "name": "Shoulder",
+                "doneness": [
+                  "pulled"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        id: 68,
-        name: "Wild Boar",
-        cutTypes: [
+        "id": 61,
+        "name": "wild_boar",
+        "cutTypes": [
           {
-            id: 680,
-            name: "Wild Boar Cuts",
-            cuts: [
-              { id: 680, name: "Chop", doneness: ["well_done"] },
-              { id: 681, name: "Shoulder", doneness: BRAISING_DONENESS },
-              { id: 682, name: "Leg Roast", doneness: ["well_done"] },
-              { id: 699, name: "Other", doneness: ["well_done"] },
+            "id": 610,
+            "name": "Wild Boar",
+            "cuts": [
+              {
+                "id": 610,
+                "name": "Wild Boar Chop",
+                "doneness": [
+                  "well_done"
+                ]
+              },
+              {
+                "id": 611,
+                "name": "Wild Boar Shoulder",
+                "doneness": [
+                  "pulled"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        id: 69,
-        name: "Other Game",
-        cutTypes: [
+        "id": 62,
+        "name": "bison",
+        "cutTypes": [
           {
-            id: 690,
-            name: "Other Game Cuts",
-            cuts: [
-              { id: 690, name: "Steak", doneness: STEAK_DONENESS_NO_WELL },
-              { id: 691, name: "Roast", doneness: STEAK_DONENESS_MR_TO_M },
-              { id: 699, name: "Other", doneness: STEAK_DONENESS_MR_TO_M },
+            "id": 620,
+            "name": "Bison",
+            "cuts": [
+              {
+                "id": 620,
+                "name": "Bison Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 621,
+                "name": "Bison Burger",
+                "doneness": [
+                  "well_done"
+                ]
+              },
+              {
+                "id": 622,
+                "name": "Bison Roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 63,
+        "name": "reindeer",
+        "cutTypes": [
+          {
+            "id": 630,
+            "name": "Reindeer",
+            "cuts": [
+              {
+                "id": 630,
+                "name": "Reindeer Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 631,
+                "name": "Reindeer Roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              },
+              {
+                "id": 612,
+                "name": "Loin",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 64,
+        "name": "moose",
+        "cutTypes": [
+          {
+            "id": 640,
+            "name": "Moose",
+            "cuts": [
+              {
+                "id": 640,
+                "name": "Moose Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 641,
+                "name": "Moose Roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 65,
+        "name": "buffalo",
+        "cutTypes": [
+          {
+            "id": 650,
+            "name": "Buffalo",
+            "cuts": [
+              {
+                "id": 650,
+                "name": "Buffalo Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 651,
+                "name": "Buffalo Roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              },
+              {
+                "id": 632,
+                "name": "Burger",
+                "doneness": [
+                  "well_done"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 66,
+        "name": "ostrich",
+        "cutTypes": [
+          {
+            "id": 660,
+            "name": "Ostrich",
+            "cuts": [
+              {
+                "id": 660,
+                "name": "Ostrich Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              },
+              {
+                "id": 661,
+                "name": "Ostrich Fillet",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 67,
+        "name": "mutton",
+        "cutTypes": [
+          {
+            "id": 670,
+            "name": "Mutton",
+            "cuts": [
+              {
+                "id": 670,
+                "name": "Mutton Chop",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 671,
+                "name": "Mutton Leg Roast",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 672,
+                "name": "Mutton Shoulder",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 652,
+                "name": "Shoulder",
+                "doneness": [
+                  "pulled"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 68,
+        "name": "kangaroo",
+        "cutTypes": [
+          {
+            "id": 680,
+            "name": "Kangaroo",
+            "cuts": [
+              {
+                "id": 680,
+                "name": "Kangaroo Steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              },
+              {
+                "id": 681,
+                "name": "Kangaroo Fillet",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 69,
+        "name": "goat",
+        "cutTypes": [
+          {
+            "id": 690,
+            "name": "Goat",
+            "cuts": [
+              {
+                "id": 690,
+                "name": "Goat Chop",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 691,
+                "name": "Goat Leg Roast",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ]
+              },
+              {
+                "id": 692,
+                "name": "Goat Shoulder",
+                "doneness": [
+                  "pulled"
+                ]
+              },
+              {
+                "id": 682,
+                "name": "Leg Roast",
+                "doneness": [
+                  "well_done"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vegetables": {
+    "id": 7,
+    "name": "Vegetables",
+    "icon": "🍖",
+    "color": "#228B22",
+    "meats": [
+      {
+        "id": 70,
+        "name": "root_vegetables",
+        "cutTypes": [
+          {
+            "id": 700,
+            "name": "Root Vegetables",
+            "cuts": [
+              {
+                "id": 700,
+                "name": "Baked Potato",
+                "doneness": [
+                  "tender"
+                ]
+              },
+              {
+                "id": 701,
+                "name": "Roasted Potatoes",
+                "doneness": [
+                  "caramelized"
+                ]
+              },
+              {
+                "id": 702,
+                "name": "Roasted Carrots",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ]
+              },
+              {
+                "id": 703,
+                "name": "Roasted Parsnips",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ]
+              },
+              {
+                "id": 704,
+                "name": "Roasted Beets",
+                "doneness": [
+                  "tender"
+                ]
+              },
+              {
+                "id": 705,
+                "name": "Roasted Sweet Potato",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 71,
+        "name": "green_vegetables",
+        "cutTypes": [
+          {
+            "id": 710,
+            "name": "Green Vegetables",
+            "cuts": [
+              {
+                "id": 710,
+                "name": "Broccoli",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ]
+              },
+              {
+                "id": 711,
+                "name": "Brussels Sprouts",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ]
+              },
+              {
+                "id": 712,
+                "name": "Asparagus",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ]
+              },
+              {
+                "id": 713,
+                "name": "Green Beans",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ]
+              },
+              {
+                "id": 714,
+                "name": "Spinach",
+                "doneness": [
+                  "tender"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 72,
+        "name": "alliums",
+        "cutTypes": [
+          {
+            "id": 720,
+            "name": "Alliums",
+            "cuts": [
+              {
+                "id": 720,
+                "name": "Roasted Onion",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ]
+              },
+              {
+                "id": 721,
+                "name": "Caramelized Onions",
+                "doneness": [
+                  "caramelized"
+                ]
+              },
+              {
+                "id": 722,
+                "name": "Roasted Garlic",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ]
+              },
+              {
+                "id": 723,
+                "name": "Leeks",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 73,
+        "name": "squash",
+        "cutTypes": [
+          {
+            "id": 730,
+            "name": "Squash",
+            "cuts": [
+              {
+                "id": 730,
+                "name": "Zucchini",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ]
+              },
+              {
+                "id": 731,
+                "name": "Butternut Squash",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ]
+              },
+              {
+                "id": 732,
+                "name": "Acorn Squash",
+                "doneness": [
+                  "tender"
+                ]
+              },
+              {
+                "id": 733,
+                "name": "Spaghetti Squash",
+                "doneness": [
+                  "tender"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 74,
+        "name": "cruciferous",
+        "cutTypes": [
+          {
+            "id": 740,
+            "name": "Cruciferous",
+            "cuts": [
+              {
+                "id": 740,
+                "name": "Cauliflower",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ]
+              },
+              {
+                "id": 741,
+                "name": "Cabbage",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 75,
+        "name": "peppers",
+        "cutTypes": [
+          {
+            "id": 750,
+            "name": "Peppers",
+            "cuts": [
+              {
+                "id": 750,
+                "name": "Bell Peppers",
+                "doneness": [
+                  "crisp_tender",
+                  "charred"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 76,
+        "name": "mushrooms",
+        "cutTypes": [
+          {
+            "id": 760,
+            "name": "Mushrooms",
+            "cuts": [
+              {
+                "id": 760,
+                "name": "Button/Cremini Mushrooms",
+                "doneness": [
+                  "caramelized"
+                ]
+              },
+              {
+                "id": 761,
+                "name": "Portobello Mushrooms",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 77,
+        "name": "corn",
+        "cutTypes": [
+          {
+            "id": 770,
+            "name": "Corn",
+            "cuts": [
+              {
+                "id": 770,
+                "name": "Corn on the Cob",
+                "doneness": [
+                  "tender",
+                  "charred"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 78,
+        "name": "eggplant",
+        "cutTypes": [
+          {
+            "id": 780,
+            "name": "Eggplant",
+            "cuts": [
+              {
+                "id": 780,
+                "name": "Eggplant / Aubergine",
+                "doneness": [
+                  "tender",
+                  "charred"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 79,
+        "name": "tomatoes",
+        "cutTypes": [
+          {
+            "id": 790,
+            "name": "Tomatoes",
+            "cuts": [
+              {
+                "id": 790,
+                "name": "Roasted Tomatoes",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ]
+              }
             ]
           }
         ]
@@ -745,6 +2243,1282 @@ const MEAT_CATEGORIES = {
   }
 };
 
+// Swedish meat categories
+const SWEDISH_MEAT_CATEGORIES = {
+  "nötkött": {
+    "id": 2001,
+    "name": "Nötkött",
+    "icon": "🥩",
+    "color": "#8B0000",
+    "meats": [
+      {
+        "id": 2010,
+        "name": "nötkreatur",
+        "cutTypes": [
+          {
+            "id": 2100,
+            "name": "Skiva",
+            "cuts": [
+              {
+                "id": 2100,
+                "name": "Entrecôte",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ]
+              },
+              {
+                "id": 2101,
+                "name": "Ryggbiff",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ]
+              },
+              {
+                "id": 2102,
+                "name": "Oxfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ]
+              },
+              {
+                "id": 2103,
+                "name": "Flankstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 2104,
+                "name": "Flat Iron",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ]
+              },
+              {
+                "id": 2105,
+                "name": "Flapsteak (Bavette)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 2106,
+                "name": "Tomahawk",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ]
+              },
+              {
+                "id": 2107,
+                "name": "Picanha",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ]
+              },
+              {
+                "id": 2108,
+                "name": "Njurtapp",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
+              },
+              {
+                "id": 2109,
+                "name": "Hanger Steak (Onglet)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 2101,
+            "name": "Helstekt",
+            "cuts": [
+              {
+                "id": 2120,
+                "name": "Rostbiff",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ]
+              },
+              {
+                "id": 2121,
+                "name": "Innanlår",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ]
+              },
+              {
+                "id": 2122,
+                "name": "Ytterlår",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ]
+              },
+              {
+                "id": 2123,
+                "name": "Fransyska",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ]
+              },
+              {
+                "id": 2124,
+                "name": "Nötrulle",
+                "doneness": [
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 2102,
+            "name": "Grytbitar/Långkok",
+            "cuts": [
+              {
+                "id": 2130,
+                "name": "Högrev",
+                "doneness": [
+                  "långkokt"
+                ]
+              },
+              {
+                "id": 2131,
+                "name": "Bringa (Brisket)",
+                "doneness": [
+                  "långkokt"
+                ]
+              },
+              {
+                "id": 2132,
+                "name": "Bog",
+                "doneness": [
+                  "långkokt"
+                ]
+              },
+              {
+                "id": 2133,
+                "name": "Oxsvans",
+                "doneness": [
+                  "långkokt"
+                ]
+              },
+              {
+                "id": 2134,
+                "name": "Lägg",
+                "doneness": [
+                  "långkokt"
+                ]
+              },
+              {
+                "id": 2135,
+                "name": "Oxkind",
+                "doneness": [
+                  "långkokt"
+                ]
+              },
+              {
+                "id": 2136,
+                "name": "Märgpipa",
+                "doneness": [
+                  "långkokt"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "fläsk": {
+    "id": 2002,
+    "name": "Fläsk",
+    "icon": "🐷",
+    "color": "#FFB6C1",
+    "meats": [
+      {
+        "id": 2020,
+        "name": "gris",
+        "cutTypes": [
+          {
+            "id": 2200,
+            "name": "Skiva/Kotlett",
+            "cuts": [
+              {
+                "id": 2200,
+                "name": "Fläskkotlett med ben",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2204,
+                "name": "Fläskkotlett utan ben",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2205,
+                "name": "Fläskfiléskiva",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2202,
+                "name": "Karrékoteletter",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2203,
+                "name": "Secreto (Ibérico)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              }
+            ]
+          },
+          {
+            "id": 2201,
+            "name": "Helstekt",
+            "cuts": [
+              {
+                "id": 2201,
+                "name": "Fläskfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2215,
+                "name": "Fläskytterfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2216,
+                "name": "Fläskkotlett med ben",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2217,
+                "name": "Fläskkotlett utan ben",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2210,
+                "name": "Fläsksida",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 2211,
+                "name": "Fläskkarré",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2212,
+                "name": "Skinka",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ]
+              },
+              {
+                "id": 2213,
+                "name": "Julskinka (kokt)",
+                "doneness": [
+                  "genomstekt"
+                ]
+              },
+              {
+                "id": 2214,
+                "name": "Fläskbog",
+                "doneness": [
+                  "långkokt"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 2202,
+            "name": "Revben",
+            "cuts": [
+              {
+                "id": 2220,
+                "name": "Revbensspjäll",
+                "doneness": [
+                  "långkokt"
+                ]
+              },
+              {
+                "id": 2221,
+                "name": "Sidfläsk med revben",
+                "doneness": [
+                  "långkokt"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "fågel": {
+    "id": 2003,
+    "name": "Fågel",
+    "icon": "🍗",
+    "color": "#FFD700",
+    "meats": [
+      {
+        "id": 2030,
+        "name": "kyckling",
+        "cutTypes": [
+          {
+            "id": 2300,
+            "name": "Kyckling",
+            "cuts": [
+              {
+                "id": 2300,
+                "name": "Hel kyckling",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 2301,
+                "name": "Kycklingbröst",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 2302,
+                "name": "Kycklingleår",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 2303,
+                "name": "Kycklingvingar",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2031,
+        "name": "kalkon",
+        "cutTypes": [
+          {
+            "id": 2310,
+            "name": "Kalkon",
+            "cuts": [
+              {
+                "id": 2310,
+                "name": "Hel kalkon",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 2311,
+                "name": "Kalkonbröst",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2032,
+        "name": "anka",
+        "cutTypes": [
+          {
+            "id": 2320,
+            "name": "Anka",
+            "cuts": [
+              {
+                "id": 2320,
+                "name": "Ankbröst",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 2321,
+                "name": "Hel anka",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "fisk": {
+    "id": 2004,
+    "name": "Fisk",
+    "icon": "🐟",
+    "color": "#4682B4",
+    "meats": [
+      {
+        "id": 2040,
+        "name": "lax",
+        "cutTypes": [
+          {
+            "id": 2400,
+            "name": "Lax",
+            "cuts": [
+              {
+                "id": 2400,
+                "name": "Laxfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2401,
+                "name": "Gravad lax (uppvärmd)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2402,
+                "name": "Hel lax på ben",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2041,
+        "name": "torsk",
+        "cutTypes": [
+          {
+            "id": 2410,
+            "name": "Torsk",
+            "cuts": [
+              {
+                "id": 2410,
+                "name": "Torskfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2411,
+                "name": "Torskrygg",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2412,
+                "name": "Hel torsk på ben",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2042,
+        "name": "tonfisk",
+        "cutTypes": [
+          {
+            "id": 2430,
+            "name": "Tonfisk",
+            "cuts": [
+              {
+                "id": 2430,
+                "name": "Tonfiskskiva",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "blodig"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2043,
+        "name": "övrig_fisk",
+        "cutTypes": [
+          {
+            "id": 2420,
+            "name": "Övrig fisk",
+            "cuts": [
+              {
+                "id": 2420,
+                "name": "Sikfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2425,
+                "name": "Hel sik på ben",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2421,
+                "name": "Rödingfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2426,
+                "name": "Hel röding på ben",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2422,
+                "name": "Abborrfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 2427,
+                "name": "Hel abborre på ben",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 2423,
+                "name": "Gösfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2428,
+                "name": "Hel gös på ben",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2424,
+                "name": "Hälleflundra",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "kalv": {
+    "id": 2007,
+    "name": "Kalv",
+    "icon": "🐄",
+    "color": "#DEB887",
+    "meats": [
+      {
+        "id": 2070,
+        "name": "kalv",
+        "cutTypes": [
+          {
+            "id": 2700,
+            "name": "Helstekt",
+            "cuts": [
+              {
+                "id": 2700,
+                "name": "Kalvstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2701,
+                "name": "Kalvfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 2702,
+                "name": "Kalvfransyska",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2703,
+                "name": "Kalvrostbiff",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              }
+            ]
+          },
+          {
+            "id": 2710,
+            "name": "Skiva/Kotlett",
+            "cuts": [
+              {
+                "id": 2710,
+                "name": "Kalvkotlett",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2711,
+                "name": "Kalvschnitzel",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 2712,
+                "name": "Kalvlever",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              }
+            ]
+          },
+          {
+            "id": 2720,
+            "name": "Långkok",
+            "cuts": [
+              {
+                "id": 2720,
+                "name": "Kalvbog",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "långkokt"
+              },
+              {
+                "id": 2721,
+                "name": "Kalvlägg",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "långkokt"
+              },
+              {
+                "id": 2722,
+                "name": "Kalvbringa",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "långkokt"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "lamm": {
+    "id": 2005,
+    "name": "Lamm",
+    "icon": "🐑",
+    "color": "#800020",
+    "meats": [
+      {
+        "id": 2050,
+        "name": "lamm",
+        "cutTypes": [
+          {
+            "id": 2500,
+            "name": "Helstekt",
+            "cuts": [
+              {
+                "id": 2500,
+                "name": "Lammstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 2501,
+                "name": "Lammrack",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 2502,
+                "name": "Lammbog",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "långkokt"
+              },
+              {
+                "id": 2503,
+                "name": "Lammsadel",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium_rare"
+              }
+            ]
+          },
+          {
+            "id": 2510,
+            "name": "Skiva/Kotlett",
+            "cuts": [
+              {
+                "id": 2510,
+                "name": "Lammkotletter",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 2511,
+                "name": "Lammhalsfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium_rare"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vilt": {
+    "id": 2006,
+    "name": "Vilt",
+    "icon": "🦌",
+    "color": "#2F4F4F",
+    "meats": [
+      {
+        "id": 2060,
+        "name": "hjort_rådjur",
+        "cutTypes": [
+          {
+            "id": 2600,
+            "name": "Hjort/Rådjur",
+            "cuts": [
+              {
+                "id": 2600,
+                "name": "Hjortfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2601,
+                "name": "Hjortstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2602,
+                "name": "Rådjursfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2603,
+                "name": "Rådjursstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2061,
+        "name": "älg",
+        "cutTypes": [
+          {
+            "id": 2610,
+            "name": "Älg",
+            "cuts": [
+              {
+                "id": 2610,
+                "name": "Älgfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2611,
+                "name": "Älgstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2612,
+                "name": "Älgfärsbiff",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2062,
+        "name": "ren",
+        "cutTypes": [
+          {
+            "id": 2620,
+            "name": "Ren",
+            "cuts": [
+              {
+                "id": 2620,
+                "name": "Renfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 2621,
+                "name": "Renstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2063,
+        "name": "vildsvin",
+        "cutTypes": [
+          {
+            "id": 2630,
+            "name": "Vildsvin",
+            "cuts": [
+              {
+                "id": 2630,
+                "name": "Vildsvinsfil",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 2631,
+                "name": "Vildsvinsstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "långkokt"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+};
+
+// Cooking methods
 const COOKING_METHODS = [
   { value: "oven_roast", name: "Oven Roast" },
   { value: "oven_bake", name: "Oven Bake" },
@@ -771,6 +3545,9 @@ class KitchenCookingPanel extends LitElement {
       _selectedDoneness: { type: String },
       _selectedMethod: { type: String },
       _selectedEntity: { type: String },
+      _dataSource: { type: String },
+      _customTargetTempC: { type: Number },
+      _showTempAdjust: { type: Boolean },
     };
   }
 
@@ -783,6 +3560,26 @@ class KitchenCookingPanel extends LitElement {
     this._selectedDoneness = null;
     this._selectedMethod = "oven_roast";
     this._selectedEntity = null;
+    this._dataSource = DATA_SOURCE_INTERNATIONAL;
+    this._customTargetTempC = null;
+    this._showTempAdjust = false;
+    // Data is generated from backend Python files at install/update time
+    // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    // Data is embedded in this file - generated from backend at build time
+  }
+
+  _getDataCategories() {
+    // Return generated data based on selected source
+    return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_MEAT_CATEGORIES : MEAT_CATEGORIES;
+  }
+
+  _getDonenessOptions() {
+    // Return generated data based on selected source
+    return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
   }
 
   _findCookingEntities() {
@@ -817,7 +3614,8 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _getCategory() {
-    return this._selectedCategory ? MEAT_CATEGORIES[this._selectedCategory] : null;
+    const categories = this._getDataCategories();
+    return this._selectedCategory ? categories[this._selectedCategory] : null;
   }
 
   _getMeats() {
@@ -852,8 +3650,105 @@ class KitchenCookingPanel extends LitElement {
 
   _getAvailableDoneness() {
     const cut = this._getSelectedCutData();
-    if (!cut || !cut.doneness) return [];
-    return cut.doneness.map(d => DONENESS_OPTIONS[d]).filter(Boolean);
+    if (!cut) return [];
+    
+    // If API data with temperature_ranges is available, use that for more detailed info
+    if (cut.temperature_ranges && cut.temperature_ranges.length > 0) {
+      return cut.temperature_ranges.map(tr => ({
+        value: tr.name,
+        name: tr.name.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+        icon: this._getDonenessIcon(tr.name),
+        description: tr.description,
+        temp_c: tr.target_temp_c,
+        temp_f: tr.target_temp_f,
+      }));
+    }
+    
+    // Fall back to doneness array with lookup from donenessOptions
+    if (!cut.doneness) return [];
+    const donenessOptions = this._getDonenessOptions();
+    return cut.doneness.map(d => {
+      const opt = donenessOptions[d];
+      return opt ? { ...opt, value: d } : null;
+    }).filter(Boolean);
+  }
+
+  _getDonenessIcon(donenessName) {
+    const icons = {
+      rare: "🔴",
+      blodig: "🔴",
+      medium_rare: "🟠",
+      medium: "🟡",
+      medium_well: "🟤",
+      well_done: "⚪",
+      genomstekt: "⚪",
+      pulled: "🍖",
+      långkokt: "🍖",
+      safe: "✅",
+      dark_meat_optimal: "🍗",
+      crispy: "🥓",
+      heated_through: "♨️",
+      done: "✓",
+      tender: "🥔",
+      crisp_tender: "🥦",
+      caramelized: "🧅",
+      charred: "🔥",
+    };
+    return icons[donenessName] || "🍖";
+  }
+
+  _getRecommendedDoneness() {
+    const cut = this._getSelectedCutData();
+    if (!cut) return null;
+    // Use explicit recommended_doneness (API format) or recommendedDoneness (JS format)
+    if (cut.recommended_doneness) {
+      return cut.recommended_doneness;
+    }
+    if (cut.recommendedDoneness) {
+      return cut.recommendedDoneness;
+    }
+    // Check for is_meater_recommended in temperature_ranges (API format)
+    if (cut.temperature_ranges) {
+      const recommended = cut.temperature_ranges.find(tr => tr.is_meater_recommended);
+      if (recommended) {
+        return recommended.name;
+      }
+    }
+    // Fall back to first doneness option
+    if (cut.doneness && cut.doneness.length > 0) {
+      return cut.doneness[0];
+    }
+    return null;
+  }
+
+  _getTargetTempForDoneness(donenessValue) {
+    const cut = this._getSelectedCutData();
+    
+    // If cut has temperature_ranges (API format), use that for accurate temps
+    if (cut && cut.temperature_ranges) {
+      const range = cut.temperature_ranges.find(tr => tr.name === donenessValue);
+      if (range) {
+        return { c: range.target_temp_c, f: range.target_temp_f };
+      }
+    }
+    
+    // Fall back to global doneness options
+    const donenessOptions = this._getDonenessOptions();
+    const option = donenessOptions[donenessValue];
+    return option ? { c: option.temp_c, f: option.temp_f } : null;
+  }
+
+  _switchDataSource(source) {
+    this._dataSource = source;
+    // Reset all selections when switching data source
+    this._selectedCategory = null;
+    this._selectedMeat = null;
+    this._selectedCutType = null;
+    this._selectedCut = null;
+    this._selectedDoneness = null;
+    this._customTargetTempC = null;
+    this._showTempAdjust = false;
+    // Data source switch handled locally - both datasets are embedded
   }
 
   _selectCategory(categoryKey) {
@@ -862,9 +3757,12 @@ class KitchenCookingPanel extends LitElement {
     this._selectedCutType = null;
     this._selectedCut = null;
     this._selectedDoneness = null;
+    this._customTargetTempC = null;
+    this._showTempAdjust = false;
     
     // Auto-select meat if only one
-    const meats = MEAT_CATEGORIES[categoryKey]?.meats || [];
+    const categories = this._getDataCategories();
+    const meats = categories[categoryKey]?.meats || [];
     if (meats.length === 1) {
       this._selectMeat(meats[0].id);
     }
@@ -875,6 +3773,8 @@ class KitchenCookingPanel extends LitElement {
     this._selectedCutType = null;
     this._selectedCut = null;
     this._selectedDoneness = null;
+    this._customTargetTempC = null;
+    this._showTempAdjust = false;
     
     // Auto-select cut type if only one
     const meat = this._getMeats().find(m => m.id === meatId);
@@ -887,17 +3787,57 @@ class KitchenCookingPanel extends LitElement {
     this._selectedCutType = cutTypeId;
     this._selectedCut = null;
     this._selectedDoneness = null;
+    this._customTargetTempC = null;
+    this._showTempAdjust = false;
   }
 
   _selectCut(cutId) {
     this._selectedCut = cutId;
-    // Auto-select first valid doneness for this cut
+    this._customTargetTempC = null;
+    this._showTempAdjust = false;
+    
+    // Auto-select recommended doneness for this cut
     const cut = this._getCuts().find(c => c.id === cutId);
-    if (cut && cut.doneness && cut.doneness.length > 0) {
-      this._selectedDoneness = cut.doneness[0];
+    if (cut) {
+      // First try explicit recommended_doneness (API format) or recommendedDoneness (JS format)
+      if (cut.recommended_doneness) {
+        this._selectedDoneness = cut.recommended_doneness;
+      } else if (cut.recommendedDoneness) {
+        this._selectedDoneness = cut.recommendedDoneness;
+      } else if (cut.doneness && cut.doneness.length > 0) {
+        // Fall back to first valid doneness
+        this._selectedDoneness = cut.doneness[0];
+      } else {
+        this._selectedDoneness = null;
+      }
     } else {
       this._selectedDoneness = null;
     }
+  }
+
+  _selectDoneness(donenessValue) {
+    this._selectedDoneness = donenessValue;
+    // Reset custom temp when changing doneness
+    this._customTargetTempC = null;
+  }
+
+  _toggleTempAdjust() {
+    this._showTempAdjust = !this._showTempAdjust;
+    if (!this._showTempAdjust) {
+      this._customTargetTempC = null;
+    } else {
+      // Initialize with current doneness temp
+      const temps = this._getTargetTempForDoneness(this._selectedDoneness);
+      if (temps) {
+        this._customTargetTempC = temps.c;
+      }
+    }
+  }
+
+  _updateCustomTemp(tempC) {
+    const parsed = parseInt(tempC, 10);
+    // Clamp temperature to valid range (35-100°C)
+    this._customTargetTempC = Math.max(35, Math.min(100, parsed));
   }
 
   render() {
@@ -944,12 +3884,17 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _renderSetupForm(entities) {
+    const categories = this._getDataCategories();
     const category = this._getCategory();
     const meats = this._getMeats();
     const cutTypes = this._getCutTypes();
     const cuts = this._getCuts();
     const showMeatSelector = meats.length > 1;
     const showCutTypeSelector = cutTypes.length > 1 || (cutTypes.length === 1 && this._selectedMeat);
+    const recommendedDoneness = this._getRecommendedDoneness();
+    const donenessTemps = this._selectedDoneness ? this._getTargetTempForDoneness(this._selectedDoneness) : null;
+    const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
+    const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
     
     return html`
       <div class="status-banner idle">
@@ -972,12 +3917,36 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : ''}
       
+      <!-- Data Source Selector -->
+      <ha-card>
+        <div class="card-content">
+          <h3>🌍 Temperature Data Source</h3>
+          <div class="button-group">
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
+              🇺🇸 International (USDA)
+            </button>
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
+              🇸🇪 Svenska (Livsmedelsverket)
+            </button>
+          </div>
+          <p class="source-description">
+            ${this._dataSource === DATA_SOURCE_SWEDISH 
+              ? 'Använder svenska temperaturrekommendationer från Livsmedelsverket, Stekguiden.se och Gårdssällskapet.'
+              : 'Using international temperature guidelines from USDA, FDA and professional culinary sources.'}
+          </p>
+        </div>
+      </ha-card>
+      
       <!-- Step 1: Select Category -->
       <ha-card>
         <div class="card-content">
           <h3>1️⃣ Select Category</h3>
           <div class="button-group">
-            ${Object.entries(MEAT_CATEGORIES).map(([key, cat]) => html`
+            ${Object.entries(categories).map(([key, cat]) => html`
               <button 
                 class="category-btn ${this._selectedCategory === key ? 'selected' : ''}" 
                 @click=${() => this._selectCategory(key)}>
@@ -1033,7 +4002,7 @@ class KitchenCookingPanel extends LitElement {
               <option value="">Choose a cut...</option>
               ${cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
-                  ${cut.name}
+                  ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
                 </option>
               `)}
             </select>
@@ -1045,20 +4014,77 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCut ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🌡️ Doneness Level</h3>
+            <h3>🌡️ Doneness Level ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = recommended)</span>` : ''}</h3>
             <div class="doneness-grid">
               ${this._getAvailableDoneness().map(opt => html`
                 <button 
-                  class="doneness-btn ${this._selectedDoneness === opt.value ? 'selected' : ''}"
-                  @click=${() => this._selectedDoneness = opt.value}
+                  class="doneness-btn ${this._selectedDoneness === opt.value ? 'selected' : ''} ${opt.value === recommendedDoneness ? 'recommended' : ''}"
+                  @click=${() => this._selectDoneness(opt.value)}
                   title="${opt.description || ''}">
                   <span class="icon">${opt.icon}</span>
                   ${opt.name}
+                  ${opt.value === recommendedDoneness ? html`<span class="star">⭐</span>` : ''}
+                  <span class="temp-hint">${opt.temp_c}°C</span>
                 </button>
               `)}
             </div>
           </div>
         </ha-card>
+        
+        <!-- Temperature Fine-Tuning -->
+        ${this._selectedDoneness ? html`
+          <ha-card>
+            <div class="card-content">
+              <h3>🎯 Target Temperature</h3>
+              <div class="temp-display-setup">
+                <div class="target-temp">
+                  <span class="temp-value">${displayTemp}°C</span>
+                  <span class="temp-fahrenheit">(${displayTempF}°F)</span>
+                </div>
+                ${this._customTargetTempC ? html`
+                  <span class="custom-indicator">Custom</span>
+                ` : ''}
+              </div>
+              
+              <button 
+                class="adjust-btn ${this._showTempAdjust ? 'active' : ''}"
+                @click=${() => this._toggleTempAdjust()}>
+                ${this._showTempAdjust ? '✓ Done Adjusting' : '⚙️ Fine-tune Temperature'}
+              </button>
+              
+              ${this._showTempAdjust ? html`
+                <div class="temp-adjust-section">
+                  <input 
+                    type="range" 
+                    min="35" 
+                    max="100" 
+                    step="1"
+                    .value="${displayTemp}"
+                    @input=${(e) => this._updateCustomTemp(e.target.value)}
+                    class="temp-slider"
+                  />
+                  <div class="temp-adjust-controls">
+                    <button class="temp-btn" @click=${() => this._updateCustomTemp(displayTemp - 1)}>-1°C</button>
+                    <input 
+                      type="number" 
+                      min="35" 
+                      max="100" 
+                      .value="${displayTemp}"
+                      @change=${(e) => this._updateCustomTemp(e.target.value)}
+                      class="temp-input"
+                    />
+                    <button class="temp-btn" @click=${() => this._updateCustomTemp(displayTemp + 1)}>+1°C</button>
+                  </div>
+                  <button 
+                    class="reset-btn"
+                    @click=${() => { this._customTargetTempC = null; }}>
+                    Reset to ${donenessTemps?.c}°C (${this._selectedDoneness ? this._selectedDoneness.replace('_', ' ') : ''})
+                  </button>
+                </div>
+              ` : ''}
+            </div>
+          </ha-card>
+        ` : ''}
         
         <!-- Step 6: Cooking Method -->
         <ha-card>
@@ -1079,7 +4105,7 @@ class KitchenCookingPanel extends LitElement {
         <!-- Start Button -->
         <div class="action-container">
           <ha-button unelevated @click=${this._startCook} ?disabled=${!this._selectedDoneness}>
-            🔥 Start Cooking
+            🔥 Start Cooking${this._customTargetTempC ? ` at ${this._customTargetTempC}°C` : ''}
           </ha-button>
         </div>
       ` : ''}
@@ -1152,11 +4178,19 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _startCook() {
-    this._callService('start_cook', {
+    const serviceData = {
       cut_id: this._selectedCut,
       doneness: this._selectedDoneness,
-      cooking_method: this._selectedMethod
-    });
+      cooking_method: this._selectedMethod,
+      data_source: this._dataSource,
+    };
+    
+    // Include custom target temperature if set
+    if (this._customTargetTempC) {
+      serviceData.custom_target_temp_c = this._customTargetTempC;
+    }
+    
+    this._callService('start_cook', serviceData);
   }
 
   _stopCook() {
@@ -1440,6 +4474,191 @@ class KitchenCookingPanel extends LitElement {
         margin-top: 16px;
         justify-content: center;
       }
+
+      /* Data source selector styles */
+      .source-description {
+        font-size: 12px;
+        color: var(--secondary-text-color);
+        margin-top: 8px;
+        font-style: italic;
+      }
+
+      /* Recommended doneness styles */
+      .recommended-hint {
+        font-size: 12px;
+        color: var(--secondary-text-color);
+        font-weight: normal;
+      }
+
+      .doneness-btn.recommended {
+        border-color: #ffd700;
+      }
+
+      .doneness-btn .star {
+        font-size: 10px;
+        margin-left: 4px;
+      }
+
+      .doneness-btn .temp-hint {
+        display: block;
+        font-size: 11px;
+        color: var(--secondary-text-color);
+        margin-top: 4px;
+      }
+
+      .doneness-btn.selected .temp-hint {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Temperature fine-tuning styles */
+      .temp-display-setup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .target-temp {
+        text-align: center;
+      }
+
+      .temp-value {
+        font-size: 36px;
+        font-weight: bold;
+        color: var(--primary-color);
+      }
+
+      .temp-fahrenheit {
+        font-size: 18px;
+        color: var(--secondary-text-color);
+        margin-left: 8px;
+      }
+
+      .custom-indicator {
+        background: #ff9800;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .adjust-btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border: 2px dashed var(--divider-color);
+        border-radius: 8px;
+        background: transparent;
+        cursor: pointer;
+        color: var(--primary-text-color);
+        font-size: 14px;
+        transition: all 0.2s;
+      }
+
+      .adjust-btn:hover {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+      }
+
+      .adjust-btn.active {
+        border-style: solid;
+        border-color: var(--primary-color);
+        background: var(--primary-color);
+        color: white;
+      }
+
+      .temp-adjust-section {
+        margin-top: 16px;
+        padding: 16px;
+        background: var(--primary-background-color);
+        border-radius: 8px;
+      }
+
+      .temp-slider {
+        width: 100%;
+        height: 8px;
+        -webkit-appearance: none;
+        appearance: none;
+        background: var(--divider-color);
+        border-radius: 4px;
+        outline: none;
+        margin-bottom: 16px;
+      }
+
+      .temp-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .temp-slider::-moz-range-thumb {
+        width: 24px;
+        height: 24px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .temp-adjust-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .temp-btn {
+        padding: 8px 16px;
+        border: 1px solid var(--divider-color);
+        border-radius: 4px;
+        background: var(--card-background-color);
+        cursor: pointer;
+        color: var(--primary-text-color);
+        font-size: 14px;
+        transition: all 0.2s;
+      }
+
+      .temp-btn:hover {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+      }
+
+      .temp-input {
+        width: 80px;
+        padding: 8px;
+        border: 2px solid var(--divider-color);
+        border-radius: 4px;
+        font-size: 18px;
+        text-align: center;
+        background: var(--card-background-color);
+        color: var(--primary-text-color);
+      }
+
+      .reset-btn {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        background: transparent;
+        cursor: pointer;
+        color: var(--secondary-text-color);
+        font-size: 12px;
+        text-decoration: underline;
+      }
+
+      .reset-btn:hover {
+        color: var(--primary-color);
+      }
     `;
   }
 }
@@ -1447,7 +4666,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "16";
+const PANEL_VERSION = "27";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
