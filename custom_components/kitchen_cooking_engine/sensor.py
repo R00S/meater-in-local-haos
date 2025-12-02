@@ -1,7 +1,7 @@
 """Sensor platform for Kitchen Cooking Engine.
 
-Last Updated: 2 Dec 2025, 13:30 CET
-Last Change: v0.1.2.3 - Added indicator light control, persistent notifications
+Last Updated: 2 Dec 2025, 15:00 CET
+Last Change: v0.1.2.5 - Added TTS announcements, rest light transition
 """
 
 from __future__ import annotations
@@ -47,9 +47,11 @@ from .const import (
     CONF_AMBIENT_SENSOR,
     CONF_BATTERY_SENSOR,
     CONF_INDICATOR_LIGHT,
+    CONF_MEDIA_PLAYER,
     CONF_NOTIFY_SERVICE,
     CONF_TEMPERATURE_SENSOR,
     CONF_TEMPERATURE_UNIT,
+    CONF_TTS_ENTITY,
     DOMAIN,
     EVENT_APPROACHING_TARGET,
     EVENT_COOK_STARTED,
@@ -84,6 +86,7 @@ ETA_CHANGE_THRESHOLD_MINUTES = 2  # Fire event if ETA changes by this much
 LIGHT_COLOR_COLD = (66, 135, 245)    # Cold blue at room temp (23°C)
 LIGHT_COLOR_WARM = (255, 165, 0)     # Warm orange (midpoint)
 LIGHT_COLOR_HOT = (255, 0, 0)        # Deep red at target temp
+LIGHT_COLOR_WHITE = (255, 255, 255)  # White for rest complete
 LIGHT_START_TEMP_C = 23              # Temperature at which light starts (room temp)
 
 
@@ -98,6 +101,8 @@ async def async_setup_entry(
     battery_sensor = config_entry.data.get(CONF_BATTERY_SENSOR)
     indicator_light = config_entry.data.get(CONF_INDICATOR_LIGHT)
     notify_service = config_entry.data.get(CONF_NOTIFY_SERVICE)
+    tts_entity = config_entry.data.get(CONF_TTS_ENTITY)
+    media_player = config_entry.data.get(CONF_MEDIA_PLAYER)
     temp_unit = config_entry.data.get(CONF_TEMPERATURE_UNIT, TEMP_CELSIUS)
 
     cooking_session = CookingSessionSensor(
@@ -108,6 +113,8 @@ async def async_setup_entry(
         battery_sensor,
         indicator_light,
         notify_service,
+        tts_entity,
+        media_player,
         temp_unit,
     )
     
@@ -143,6 +150,8 @@ class CookingSessionSensor(SensorEntity):
         battery_sensor: str | None,
         indicator_light: str | None,
         notify_service: str | None,
+        tts_entity: str | None,
+        media_player: str | None,
         temp_unit: str,
     ) -> None:
         """Initialize the cooking session sensor."""
@@ -153,6 +162,8 @@ class CookingSessionSensor(SensorEntity):
         self._battery_sensor = battery_sensor
         self._indicator_light = indicator_light
         self._notify_service = notify_service.strip() if notify_service else None
+        self._tts_entity = tts_entity.strip() if tts_entity else None
+        self._media_player = media_player.strip() if media_player else None
         self._temp_unit = temp_unit
 
         # Session state
@@ -203,7 +214,7 @@ class CookingSessionSensor(SensorEntity):
             name=f"Kitchen Cooking Engine ({sensor_name})",
             manufacturer="Kitchen Cooking Engine",
             model="Cooking Session",
-            sw_version="0.1.2.3",
+            sw_version="0.1.2.5",
         )
 
     def _to_celsius(self, temp: float) -> float:
@@ -499,26 +510,33 @@ class CookingSessionSensor(SensorEntity):
         self._send_notification(event_type, event_data)
 
     def _send_notification(self, event_type: str, event_data: dict) -> None:
-        """Send notifications for cooking events via persistent_notification and mobile app."""
+        """Send notifications for cooking events via persistent_notification, mobile app, and TTS."""
+        cut_display = event_data.get('cut_display', 'Your food')
+        target_temp = event_data.get('target_temp_c', '')
+        
         notification_map = {
             EVENT_APPROACHING_TARGET: {
                 "title": "🔥 Almost There!",
-                "message": f"{event_data.get('cut_display', 'Your food')} is approaching target temperature ({event_data.get('target_temp_c')}°C)",
+                "message": f"{cut_display} is approaching target temperature ({target_temp}°C)",
+                "tts_message": f"Attention! Your {cut_display} is approaching the target temperature of {target_temp} degrees.",
                 "notification_id": f"cooking_approaching_{self.entity_id}",
             },
             EVENT_FIVE_MINUTES_REMAINING: {
                 "title": "⏰ 5 Minutes Remaining!",
-                "message": f"{event_data.get('cut_display', 'Your food')} will reach target in about 5 minutes",
+                "message": f"{cut_display} will reach target in about 5 minutes",
+                "tts_message": f"5 minutes remaining! Your {cut_display} will be done in about 5 minutes.",
                 "notification_id": f"cooking_5min_{self.entity_id}",
             },
             EVENT_GOAL_REACHED: {
                 "title": "✅ Target Reached!",
-                "message": f"{event_data.get('cut_display', 'Your food')} has reached {event_data.get('target_temp_c')}°C - Time to rest!",
+                "message": f"{cut_display} has reached {target_temp}°C - Time to rest!",
+                "tts_message": f"Target reached! Your {cut_display} has reached {target_temp} degrees. Time to let it rest.",
                 "notification_id": f"cooking_goal_{self.entity_id}",
             },
             EVENT_REST_COMPLETE: {
                 "title": "🍽️ Ready to Serve!",
-                "message": f"{event_data.get('cut_display', 'Your food')} has finished resting and is ready to serve!",
+                "message": f"{cut_display} has finished resting and is ready to serve!",
+                "tts_message": f"Ready to serve! Your {cut_display} has finished resting and is ready to eat.",
                 "notification_id": f"cooking_complete_{self.entity_id}",
             },
         }
@@ -556,6 +574,22 @@ class CookingSessionSensor(SensorEntity):
                     )
                 )
                 _LOGGER.debug("Sent mobile notification: %s", notification["title"])
+            
+            # Send TTS announcement if configured
+            if self._tts_entity and self._media_player:
+                self._hass.async_create_task(
+                    self._hass.services.async_call(
+                        "tts",
+                        "speak",
+                        {
+                            "entity_id": self._tts_entity,
+                            "media_player_entity_id": self._media_player,
+                            "message": notification["tts_message"],
+                            "cache": True,
+                        },
+                    )
+                )
+                _LOGGER.debug("Sent TTS announcement: %s", notification["tts_message"])
             
             _LOGGER.debug("Sent notification: %s", notification["title"])
 
@@ -668,6 +702,31 @@ class CookingSessionSensor(SensorEntity):
         except Exception as e:
             _LOGGER.warning("Failed to update indicator light: %s", e)
     
+    async def _update_rest_light_color(self, rest_elapsed: float, rest_total: float) -> None:
+        """Update indicator light during rest phase (red → white transition)."""
+        if not self._indicator_light or rest_total <= 0:
+            return
+        
+        # Calculate progress through rest period (0 = start, 1 = complete)
+        progress = min(1.0, rest_elapsed / rest_total)
+        
+        # Interpolate from hot red to white
+        r = int(LIGHT_COLOR_HOT[0] + (LIGHT_COLOR_WHITE[0] - LIGHT_COLOR_HOT[0]) * progress)
+        g = int(LIGHT_COLOR_HOT[1] + (LIGHT_COLOR_WHITE[1] - LIGHT_COLOR_HOT[1]) * progress)
+        b = int(LIGHT_COLOR_HOT[2] + (LIGHT_COLOR_WHITE[2] - LIGHT_COLOR_HOT[2]) * progress)
+        
+        try:
+            await self._hass.services.async_call(
+                "light", "turn_on",
+                {
+                    "entity_id": self._indicator_light,
+                    "rgb_color": [r, g, b],
+                    "brightness": 255,
+                }
+            )
+        except Exception as e:
+            _LOGGER.warning("Failed to update rest light color: %s", e)
+    
     async def _start_light_flash(self) -> None:
         """Start flashing the indicator light (for goal reached, rest complete)."""
         if not self._indicator_light:
@@ -770,6 +829,12 @@ class CookingSessionSensor(SensorEntity):
             return
             
         rest_elapsed = (now - self._rest_start).total_seconds() / 60
+        
+        # Update indicator light color during rest (red → white transition)
+        if self._indicator_light and self._rest_time_min > 0:
+            self._hass.async_create_task(
+                self._update_rest_light_color(rest_elapsed, self._rest_time_min)
+            )
         
         # Check if rest time is complete (using minimum rest time)
         if rest_elapsed >= self._rest_time_min:

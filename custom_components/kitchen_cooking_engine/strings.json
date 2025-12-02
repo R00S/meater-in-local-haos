@@ -11,6 +11,8 @@
           "battery_sensor": "Battery Level Sensor (optional)",
           "indicator_light": "Indicator Light (optional)",
           "notify_service": "Mobile App Notify Service (optional)",
+          "tts_entity": "TTS Entity (optional)",
+          "media_player": "Media Player for TTS (optional)",
           "temperature_unit": "Temperature Unit"
         },
         "data_description": {
@@ -19,6 +21,8 @@
           "battery_sensor": "Optional battery level sensor (e.g., MEATER battery percentage)",
           "indicator_light": "Optional RGB light that changes color from blue (cold) to red (target) during cooking",
           "notify_service": "Find in Developer Tools → Actions → search 'notify.mobile_app'. Enter the part after 'notify.' (e.g., mobile_app_johns_iphone)",
+          "tts_entity": "TTS entity for voice announcements (e.g., tts.google_en_com). Find in Developer Tools → Actions → search 'tts.speak'",
+          "media_player": "Media player for TTS announcements (e.g., media_player.living_room_speaker)",
           "temperature_unit": "Choose Celsius or Fahrenheit for display"
         }
       }
@@ -41,6 +45,8 @@
           "battery_sensor": "Battery Level Sensor (optional)",
           "indicator_light": "Indicator Light (optional)",
           "notify_service": "Mobile App Notify Service (optional)",
+          "tts_entity": "TTS Entity (optional)",
+          "media_player": "Media Player for TTS (optional)",
           "temperature_unit": "Temperature Unit"
         },
         "data_description": {
@@ -49,6 +55,8 @@
           "battery_sensor": "Optional battery level sensor",
           "indicator_light": "Optional RGB light that changes color from blue (cold) to red (target) during cooking",
           "notify_service": "Find in Developer Tools → Actions → search 'notify.mobile_app'. Enter the part after 'notify.' (e.g., mobile_app_johns_iphone)",
+          "tts_entity": "TTS entity for voice announcements (e.g., tts.google_en_com)",
+          "media_player": "Media player for TTS announcements (e.g., media_player.living_room_speaker)",
           "temperature_unit": "Choose Celsius or Fahrenheit for display"
         }
       }
