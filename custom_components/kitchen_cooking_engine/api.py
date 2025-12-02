@@ -276,7 +276,8 @@ class CookHistoryView(HomeAssistantView):
                 return self.json({"status": "ok"})
             return self.json({"status": "error", "message": "Failed to save"})
         except Exception as e:
-            return self.json({"status": "error", "message": str(e)})
+            _LOGGER.error("Error adding cook to history: %s", e)
+            return self.json({"status": "error", "message": "Failed to process request"})
 
 
 class CookHistoryItemView(HomeAssistantView):
@@ -297,7 +298,8 @@ class CookHistoryItemView(HomeAssistantView):
                 return self.json({"status": "ok"})
             return self.json({"status": "error", "message": "Cook not found"})
         except Exception as e:
-            return self.json({"status": "error", "message": str(e)})
+            _LOGGER.error("Error updating cook notes: %s", e)
+            return self.json({"status": "error", "message": "Failed to process request"})
 
     async def delete(self, request: web.Request, cook_id: str) -> web.Response:
         """Delete a cook from history."""
@@ -356,4 +358,5 @@ class CutPreferenceView(HomeAssistantView):
                 return self.json({"status": "ok"})
             return self.json({"status": "error", "message": "Failed to save"})
         except Exception as e:
-            return self.json({"status": "error", "message": str(e)})
+            _LOGGER.error("Error setting cut preference: %s", e)
+            return self.json({"status": "error", "message": "Failed to process request"})

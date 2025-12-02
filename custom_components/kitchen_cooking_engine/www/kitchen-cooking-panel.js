@@ -4349,7 +4349,9 @@ class KitchenCookingPanel extends LitElement {
     // Find min/max temps
     const tipTemps = history.map(h => h.tip_temp).filter(t => t != null);
     const ambientTemps = history.map(h => h.ambient_temp).filter(t => t != null);
-    const allTemps = [...tipTemps, ...ambientTemps, targetTemp || 0];
+    const allTemps = [...tipTemps, ...ambientTemps];
+    if (targetTemp != null) allTemps.push(targetTemp);
+    if (allTemps.length === 0) return '';
     const minTemp = Math.min(...allTemps) - 5;
     const maxTemp = Math.max(...allTemps) + 5;
     

@@ -1001,7 +1001,7 @@ class CookingSessionSensor(SensorEntity):
         self._hass.async_create_task(self._save_cook_to_history())
         
         # Save user preference for this cut
-        if hasattr(self, '_cut_id') and self._cut_id:
+        if self._cut_id:
             self._hass.async_create_task(self._save_cut_preference())
         
         self._state = STATE_COMPLETE
@@ -1019,13 +1019,13 @@ class CookingSessionSensor(SensorEntity):
 
     async def _save_cook_to_history(self) -> None:
         """Save completed cook to history."""
-        from .storage import async_add_cook_to_history, async_set_cut_preference
+        from .storage import async_add_cook_to_history
         
         cook_data = {
             "protein": self._protein,
             "cut": self._cut,
             "cut_display": self._cut_display,
-            "cut_id": getattr(self, '_cut_id', None),
+            "cut_id": self._cut_id,
             "doneness": self._doneness,
             "cooking_method": self._cooking_method,
             "target_temp_c": self._target_temp_c,
@@ -1044,7 +1044,7 @@ class CookingSessionSensor(SensorEntity):
         """Save user preference for this cut."""
         from .storage import async_set_cut_preference
         
-        if hasattr(self, '_cut_id') and self._cut_id:
+        if self._cut_id:
             await async_set_cut_preference(
                 self._hass,
                 self._cut_id,
