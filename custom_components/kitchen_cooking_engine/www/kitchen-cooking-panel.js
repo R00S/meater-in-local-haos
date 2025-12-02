@@ -4386,44 +4386,48 @@ class KitchenCookingPanel extends LitElement {
     const ambientSensor = attrs.ambient_sensor;
     const sessionStart = attrs.session_start;
     
-    // Only show graph if we have at least the tip sensor and an active cook
-    if (!tipSensor || !sessionStart) {
+    // Always show a graph section (with fallback messages if needed)
+    // Build entity list for history URL
+    const entities = tipSensor ? [tipSensor] : [];
+    if (ambientSensor) entities.push(ambientSensor);
+    const entityList = entities.join(',');
+    
+    // Calculate hours since cook start (default to 1 hour)
+    let hoursSinceStart = 1;
+    let historyUrl = '/history';
+    
+    if (sessionStart) {
+      const startDate = new Date(sessionStart);
+      const now = new Date();
+      hoursSinceStart = Math.max(1, Math.ceil((now - startDate) / (1000 * 60 * 60)));
+      historyUrl = `/history?entity_id=${entityList}&start_date=${encodeURIComponent(startDate.toISOString().split('.')[0])}`;
+    }
+    
+    // If no tip sensor configured, show a message
+    if (!tipSensor) {
       return html`
-        <div class="temp-graph-container">
-          <h4>📈 Temperature Graph</h4>
-          <ha-card>
-            <div class="card-content" style="text-align: center; padding: 20px; color: var(--secondary-text-color);">
-              <p>No sensor data available</p>
-              <p style="font-size: 12px;">Tip sensor: ${tipSensor || 'not configured'}</p>
-            </div>
-          </ha-card>
+        <div class="temp-graph-section" style="margin: 16px 0; padding: 16px; background: var(--primary-background-color); border-radius: 8px;">
+          <h4 style="margin: 0 0 8px 0;">📈 Temperature Graph</h4>
+          <p style="color: var(--secondary-text-color); margin: 0;">
+            Temperature sensor not configured. The graph will appear here once a temperature sensor is set up.
+          </p>
         </div>
       `;
     }
     
-    // Build entity list for history URL (for the link)
-    const entities = [tipSensor];
-    if (ambientSensor) entities.push(ambientSensor);
-    const entityList = entities.join(',');
-    
-    // Calculate hours since cook start
-    const startDate = new Date(sessionStart);
-    const now = new Date();
-    const hoursSinceStart = Math.max(1, Math.ceil((now - startDate) / (1000 * 60 * 60)));
-    
-    // Build history URL for link
-    const historyUrl = `/history?entity_id=${entityList}&start_date=${encodeURIComponent(startDate.toISOString().split('.')[0])}`;
-    
-    // Create the card config
+    // Create the graph entities config
     const graphEntities = [{entity: tipSensor, name: 'Tip Temp'}];
     if (ambientSensor) {
       graphEntities.push({entity: ambientSensor, name: 'Ambient'});
     }
     
     // Create or update the graph card after render
-    this.updateComplete.then(() => {
-      const container = this.shadowRoot?.querySelector('#temp-graph-container');
-      if (!container) return;
+    this.updateComplete.then(async () => {
+      const container = this.shadowRoot?.querySelector('#temp-graph-holder');
+      if (!container) {
+        console.log('Graph container not found');
+        return;
+      }
       
       // Only create card once, then just update hass
       if (this._graphCard) {
@@ -4431,12 +4435,11 @@ class KitchenCookingPanel extends LitElement {
         return;
       }
       
-      // Create history-graph card using HA's card helpers
-      const createCard = async () => {
-        try {
-          // Try to get the card helpers
-          const helpers = await window.loadCardHelpers?.();
-          if (helpers) {
+      try {
+        // Try to get the card helpers
+        if (typeof window.loadCardHelpers === 'function') {
+          const helpers = await window.loadCardHelpers();
+          if (helpers && helpers.createCardElement) {
             const card = await helpers.createCardElement({
               type: 'history-graph',
               entities: graphEntities,
@@ -4447,44 +4450,42 @@ class KitchenCookingPanel extends LitElement {
             this._graphCard = card;
             container.innerHTML = '';
             container.appendChild(card);
-          } else {
-            // Fallback: just show a link to history
-            container.innerHTML = `
-              <div style="text-align: center; padding: 40px; color: var(--secondary-text-color);">
-                <p>📊 Graph not available</p>
-                <p style="font-size: 12px;"><a href="${historyUrl}" target="_blank">View in History</a></p>
-              </div>
-            `;
+            console.log('History graph card created successfully');
+            return;
           }
-        } catch (e) {
-          console.error('Error creating history graph card:', e);
-          container.innerHTML = `
-            <div style="text-align: center; padding: 20px;">
-              <a href="${historyUrl}" target="_blank" style="color: var(--primary-color);">
-                📈 View Temperature History
-              </a>
-              <p style="font-size: 10px; color: var(--secondary-text-color);">Error: ${e.message}</p>
-            </div>
-          `;
         }
-      };
-      createCard();
+        // Fallback: show link to history
+        container.innerHTML = `
+          <div style="text-align: center; padding: 20px; color: var(--secondary-text-color);">
+            <p>📊 <a href="${historyUrl}" target="_blank" style="color: var(--primary-color);">View Temperature History</a></p>
+            <p style="font-size: 11px;">Tip: ${tipSensor}</p>
+            ${ambientSensor ? `<p style="font-size: 11px;">Ambient: ${ambientSensor}</p>` : ''}
+          </div>
+        `;
+      } catch (e) {
+        console.error('Error creating history graph card:', e);
+        container.innerHTML = `
+          <div style="text-align: center; padding: 20px;">
+            <a href="${historyUrl}" target="_blank" style="color: var(--primary-color);">
+              📈 View Temperature History
+            </a>
+            <p style="font-size: 10px; color: var(--error-color);">Graph error: ${e.message}</p>
+          </div>
+        `;
+      }
     });
     
     return html`
-      <div class="temp-graph-container">
-        <h4>📈 Temperature Graph</h4>
-        <ha-card>
-          <div id="temp-graph-container" class="card-content" style="min-height: 200px; padding: 8px;">
-            <div style="text-align: center; padding: 40px; color: var(--secondary-text-color);">
-              Loading temperature graph...
-            </div>
+      <div class="temp-graph-section" style="margin: 16px 0; padding: 12px; background: var(--primary-background-color); border-radius: 8px;">
+        <h4 style="margin: 0 0 8px 0; font-size: 14px;">📈 Temperature Graph</h4>
+        <div id="temp-graph-holder" style="min-height: 150px; background: var(--card-background-color); border-radius: 4px;">
+          <div style="text-align: center; padding: 40px; color: var(--secondary-text-color);">
+            Loading graph...
           </div>
-        </ha-card>
+        </div>
         <div style="text-align: center; margin-top: 8px;">
-          <a href="${historyUrl}" target="_blank" 
-             style="color: var(--primary-color); font-size: 12px;">
-            🔗 Open in full History view
+          <a href="${historyUrl}" target="_blank" style="color: var(--primary-color); font-size: 12px;">
+            🔗 Open full History view
           </a>
         </div>
       </div>
@@ -5228,7 +5229,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "35";
+const PANEL_VERSION = "36";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
