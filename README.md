@@ -19,16 +19,24 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 **Phase 1: Kitchen Cooking Engine HACS Integration** 🚧 In Development
 
+### v0.1.1.14 Features (Current)
 - ✅ MEATER+ temperature data flowing into Home Assistant via ESPHome BLE client
-- ✅ Comprehensive cooking data model (proteins, cuts, cooking methods, doneness levels)
+- ✅ Comprehensive cooking data model (185+ international cuts, 89 Swedish cuts)
+- ✅ **Swedish data source** with proper terminology (helstekt, skiva)
+- ✅ **Temperature fine-tuning** with slider (35-100°C)
+- ✅ **Recommended doneness** per cut with ⭐ indicator
+- ✅ **Data source selector** - Switch between International (USDA) and Swedish
+- ✅ **Auto-generated frontend data** - No discrepancy between frontend/backend
 - ✅ HACS-compatible custom integration structure
 - ✅ Kitchen-focused cooking methods (oven, stovetop, air fryer, sous vide, etc.)
 - ✅ Vegetable support (root vegetables, greens, squash, mushrooms, etc.)
-- ⏳ Service implementation for cooking sessions
-- ⏳ Lovelace dashboard cards
+- ⏳ Advanced cook monitoring (ambient temp, battery, time estimation)
+- ⏳ Notifications and alerts
+- ⏳ Cook history
 - ⏳ AI-powered recipe integration
 
 See [STATUS.md](STATUS.md) for detailed project status.
+See [TODO_v0.1.2.0.md](TODO_v0.1.2.0.md) for upcoming features.
 
 ---
 
@@ -76,9 +84,11 @@ See [STATUS.md](STATUS.md) for detailed project status.
 After installation, a **"Cooking"** entry will appear in your Home Assistant sidebar. Click it to access the cooking interface.
 
 The sidebar panel provides:
-- **Protein Selection**: Choose from Beef, Pork, Poultry, Fish, or Lamb
-- **Cut Selection**: Pick the specific cut you're cooking
-- **Doneness Levels**: Visual buttons for Rare through Well Done
+- **Data Source**: Choose between International (USDA) or Swedish temperature standards
+- **Protein Selection**: Choose from Beef, Pork, Poultry, Fish, Lamb, Game
+- **Cut Selection**: Pick the specific cut you're cooking (185+ international, 89 Swedish cuts)
+- **Doneness Levels**: Visual buttons with ⭐ for recommended doneness per cut
+- **Temperature Fine-tuning**: Slider to adjust target temperature (35-100°C)
 - **Cooking Methods**: Oven, Pan, Grill, Air Fryer, and more
 - **Live Monitoring**: Real-time temperature and progress tracking
 - **Control Actions**: Stop cook, start rest, complete session
@@ -93,6 +103,22 @@ If you prefer not to use HACS:
 4. Configure via Settings → Devices & Services → Add Integration
 
 ---
+
+### 🇸🇪 Swedish Cuts (Svenska)
+
+The integration includes Swedish-specific cuts with proper Swedish terminology:
+
+| Category | Swedish Name | Examples |
+|----------|--------------|----------|
+| **Nötkött** | Beef | Entrecôte, Ryggbiff, Oxfilé, Högrev, Bringa, Oxsvans |
+| **Fläsk** | Pork | Fläskkotlett, Fläskfilé, Fläskytterfilé, Julskinka, Revbensspjäll |
+| **Lamm** | Lamb | Lammstek, Lammrack, Lammkotletter |
+| **Kalv** | Veal | Kalvstek, Kalvfilé, Kalvkotlett, Kalvschnitzel |
+| **Vilt** | Game | Älgfilé, Renfilé, Rådjursfilé, Hjortfilé, Vildsvin |
+| **Fågel** | Poultry | Kycklingbröst, Kycklinglegg, Kalkonbröst, Ankbröst |
+| **Fisk** | Fish | Laxfilé, Torskfilé, Tonfiskskiva, Hel lax/torsk/sik/röding på ben |
+
+Swedish doneness levels: blodig, medium_rare, medium, medium_well, genomstekt, långkokt
 
 ## 🍖 Supported Proteins & Cuts
 

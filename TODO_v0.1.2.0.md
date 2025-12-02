@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine - TODO for v0.1.2.0
 
-Last Updated: 2 Dec 2025, 11:00 CET
+Last Updated: 2 Dec 2025, 11:20 CET
 Prepared by: Copilot agent for handover to next agent
 
 ## Current State (v0.1.1.14)
@@ -10,6 +10,7 @@ Prepared by: Copilot agent for handover to next agent
 - Recommended doneness per cut with ⭐ indicator
 - Data source selector (International/Swedish)
 - Basic cook start/stop functionality working
+- Temperature unit preference is set when adding probes (already implemented)
 
 ---
 
@@ -18,7 +19,6 @@ Prepared by: Copilot agent for handover to next agent
 ### 1. Sensor Integration
 - **Integrate ambient temperature sensor** - Currently only tip temp is used
 - **Battery level display** - Show remaining battery from MEATER probe
-- **Multi-probe support** - Handle multiple MEATER probes simultaneously
 
 ### 2. Notifications & Alerts
 - Alert when **approaching target temp** (configurable threshold)
@@ -36,6 +36,7 @@ Prepared by: Copilot agent for handover to next agent
   - Cut type and size
   - Historical rise rate
 - Display remaining time in UI
+- Note: Time remaining changes dynamically as tip temp changes - better algorithm may be needed
 
 ### 4. Rest Time Recommendations
 - Carryover cooking estimation after removing from heat
@@ -75,9 +76,9 @@ Prepared by: Copilot agent for handover to next agent
   - Cut and doneness used
 - Display history in UI
 
-### 3. Multiple Simultaneous Cooks
-- Support monitoring more than one probe/item at once
-- UI to switch between active cooks or show all
+### 3. Remember Last Doneness/Temp Per Cut
+- **Default to last used doneness/temperature** instead of recommended when cooking the same cut again
+- Store user preferences per cut
 
 ### 4. Temperature Graph
 - Visual chart showing temp over time during cook
@@ -91,23 +92,21 @@ Prepared by: Copilot agent for handover to next agent
 
 ## LOW PRIORITY - Nice to Have
 
-### 1. Dark/Light Theme
+### 1. Multiple Simultaneous Cooks
+- Support monitoring more than one probe/item at once
+- UI to switch between active cooks or show all
+
+### 2. Dark/Light Theme
 - Follow Home Assistant theme settings
 
-### 2. Custom Cuts
+### 3. Custom Cuts
 - Allow users to add their own cuts with custom temps
 
-### 3. Favorite Cuts
+### 4. Favorite Cuts
 - Mark frequently used cuts as favorites for quick access
 
-### 4. Cook Profiles/Presets
+### 5. Cook Profiles/Presets
 - Save complete cook configurations for reuse
-
-### 5. Temperature Unit Preference
-- °C/°F toggle saved in user settings
-
-### 6. Sous Vide Mode
-- Add sous vide times/temps for cuts that support it
 
 ---
 
