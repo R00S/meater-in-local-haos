@@ -205,7 +205,7 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
     )
     
     hass.data[DOMAIN]["panel_registered"] = True
-    _LOGGER.info("Kitchen Cooking Engine: Sidebar panel registered (version %s)", PANEL_VERSION)
+    _LOGGER.info("Kitchen Cooking Engine: Sidebar panel registered (version %s)", panel_version)
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
