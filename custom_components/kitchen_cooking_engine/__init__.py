@@ -147,14 +147,19 @@ async def _async_regenerate_frontend_data(hass: HomeAssistant) -> bool:
 
 async def _async_register_panel(hass: HomeAssistant) -> None:
     """Register the sidebar panel."""
-    from .const import PANEL_VERSION
-    
     # Only register once
     if hass.data.get(DOMAIN, {}).get("panel_registered"):
         return
     
     # Regenerate frontend data from backend before registering panel
     await _async_regenerate_frontend_data(hass)
+    
+    # Re-read PANEL_VERSION after regeneration (it may have been updated)
+    # We need to reload the const module to get the updated value
+    import importlib
+    from . import const as const_module
+    importlib.reload(const_module)
+    panel_version = const_module.PANEL_VERSION
     
     # Get the path to the www directory
     www_path = Path(__file__).parent / "www"
@@ -178,9 +183,10 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
         return
     
     # Register the custom panel in the sidebar
-    # Use PANEL_VERSION in both URL and element name to bust ALL caches
+    # Use panel_version in both URL and element name to bust ALL caches
     # The element name must match what's in kitchen-cooking-panel.js
-    panel_element_name = f"kitchen-cooking-panel-v{PANEL_VERSION}"
+    panel_element_name = f"kitchen-cooking-panel-v{panel_version}"
+    _LOGGER.info("Kitchen Cooking Engine: Registering panel with version %s", panel_version)
     async_register_built_in_panel(
         hass,
         component_name="custom",
@@ -192,7 +198,7 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
                 "name": panel_element_name,
                 "embed_iframe": False,
                 "trust_external": False,
-                "module_url": f"/kitchen_cooking_engine_panel/kitchen-cooking-panel.js?v={PANEL_VERSION}",
+                "module_url": f"/kitchen_cooking_engine_panel/kitchen-cooking-panel.js?v={panel_version}",
             }
         },
         require_admin=False,
