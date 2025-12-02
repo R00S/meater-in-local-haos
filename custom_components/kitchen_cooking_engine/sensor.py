@@ -17,6 +17,7 @@ from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.event import async_track_state_change_event, async_track_time_interval
+from homeassistant.util import dt as dt_util
 
 from .const import (
     APPROACHING_THRESHOLD_C,
@@ -236,7 +237,7 @@ class CookingSessionSensor(SensorEntity):
         if self._rest_start:
             attrs[ATTR_REST_START] = self._rest_start.isoformat()
             # Calculate remaining rest time
-            rest_elapsed = (datetime.now() - self._rest_start).total_seconds() / 60
+            rest_elapsed = (dt_util.utcnow() - self._rest_start).total_seconds() / 60
             rest_remaining = max(0, self._rest_time_min - rest_elapsed)
             attrs[ATTR_REST_TIME_REMAINING] = round(rest_remaining, 1)
 
@@ -611,7 +612,7 @@ class CookingSessionSensor(SensorEntity):
             self._rest_time_max,
         )
         self._state = STATE_RESTING
-        self._rest_start = datetime.now()
+        self._rest_start = dt_util.utcnow()
         
         # Fire rest started event
         self._fire_event(EVENT_REST_START)
