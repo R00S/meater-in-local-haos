@@ -3965,7 +3965,10 @@ class KitchenCookingPanel extends LitElement {
     }
 
     const state = this._getState();
-    const isActive = state && state.state !== 'idle' && state.state !== 'complete';
+    // Only consider as active if state exists, is not unavailable/unknown, and is in an active cooking state
+    const stateValue = state?.state;
+    const isValidState = stateValue && stateValue !== 'unavailable' && stateValue !== 'unknown';
+    const isActive = isValidState && stateValue !== 'idle' && stateValue !== 'complete';
 
     return html`
       <ha-top-app-bar-fixed>
