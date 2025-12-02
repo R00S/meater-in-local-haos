@@ -3553,7 +3553,6 @@ class KitchenCookingPanel extends LitElement {
       _cutPreferences: { type: Object },
       _currentNotes: { type: String },
       _showNotes: { type: Boolean },
-      _haHistory: { type: Array },
     };
   }
 
@@ -3575,8 +3574,6 @@ class KitchenCookingPanel extends LitElement {
     this._currentNotes = "";
     this._showNotes = false;
     this._visibilityHandler = null;
-    this._haHistory = [];
-    this._historyFetchInterval = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -3606,11 +3603,6 @@ class KitchenCookingPanel extends LitElement {
       this.requestUpdate();
     };
     window.addEventListener('focus', this._focusHandler);
-    
-    // Start fetching history periodically when cooking
-    this._historyFetchInterval = setInterval(() => this._fetchHistory(), 10000);
-    // Initial fetch
-    setTimeout(() => this._fetchHistory(), 1000);
   }
 
   disconnectedCallback() {
@@ -3623,10 +3615,6 @@ class KitchenCookingPanel extends LitElement {
     if (this._focusHandler) {
       window.removeEventListener('focus', this._focusHandler);
       this._focusHandler = null;
-    }
-    if (this._historyFetchInterval) {
-      clearInterval(this._historyFetchInterval);
-      this._historyFetchInterval = null;
     }
   }
 
@@ -3668,152 +3656,6 @@ class KitchenCookingPanel extends LitElement {
       await this._loadHistory();
     } catch (e) {
       console.error('Could not delete cook:', e);
-    }
-  }
-
-  async _fetchHistory() {
-    // Fetch temperature history from Home Assistant's history API
-    const state = this._getState();
-    if (!state || !this.hass) return;
-    
-    // Only fetch when actively cooking
-    const cookState = state.state;
-    if (cookState === 'idle' || cookState === 'complete') {
-      this._haHistory = [];
-      return;
-    }
-    
-    const attrs = state.attributes;
-    const sessionStart = attrs.session_start;
-    if (!sessionStart) return;
-    
-    // Get the temperature sensor entity ID from the cooking session's entity_id
-    // The cooking session entity ID contains the temp sensor name
-    const entityId = this._selectedEntity;
-    if (!entityId) return;
-    
-    // Extract the base entity name to find the temp sensor
-    // Format: sensor.kitchen_cooking_engine_<temp_sensor_name>_cooking_session
-    // We need to find the original temp sensor
-    const match = entityId.match(/sensor\.kitchen_cooking_engine_(.+)_cooking_session/);
-    if (!match) return;
-    
-    const sensorName = match[1];
-    // Common patterns for MEATER probes
-    const possibleSensors = [
-      `sensor.${sensorName}`,
-      `sensor.${sensorName}_tip_temperature`,
-      `sensor.${sensorName.replace(/_tip_temperature$/, '')}`,
-    ];
-    
-    // Find the ambient sensor too
-    const ambientSensor = attrs.ambient_sensor || null;
-    
-    try {
-      // Fetch history from HA's history API
-      const startTime = new Date(sessionStart);
-      const endTime = new Date();
-      const startIso = startTime.toISOString();
-      
-      // Build history request - need to find the actual sensor entities
-      // Look for entities with state history
-      const allEntities = Object.keys(this.hass.states);
-      
-      // Find likely tip temperature sensor
-      let tipSensor = null;
-      for (const sensor of possibleSensors) {
-        if (allEntities.includes(sensor)) {
-          tipSensor = sensor;
-          break;
-        }
-      }
-      
-      // Fallback - try to find any entity containing the sensor name
-      if (!tipSensor) {
-        tipSensor = allEntities.find(e => 
-          e.includes(sensorName) && 
-          e.includes('tip') && 
-          e.startsWith('sensor.')
-        );
-      }
-      if (!tipSensor) {
-        tipSensor = allEntities.find(e => 
-          e.includes(sensorName) && 
-          e.startsWith('sensor.') &&
-          !e.includes('ambient') &&
-          !e.includes('battery') &&
-          !e.includes('cooking_session')
-        );
-      }
-      
-      // Find ambient sensor
-      let ambSensor = ambientSensor;
-      if (!ambSensor) {
-        ambSensor = allEntities.find(e => 
-          e.includes(sensorName.replace(/_tip_temperature$/, '')) && 
-          e.includes('ambient') && 
-          e.startsWith('sensor.')
-        );
-      }
-      
-      if (!tipSensor) {
-        // Use internal history as fallback
-        return;
-      }
-      
-      // Fetch history for both sensors
-      const entities = [tipSensor];
-      if (ambSensor) entities.push(ambSensor);
-      
-      const historyUrl = `history/period/${startIso}?filter_entity_id=${entities.join(',')}&minimal_response&significant_changes_only&no_attributes`;
-      
-      const response = await this.hass.callApi('GET', historyUrl);
-      
-      if (!response || !Array.isArray(response) || response.length === 0) {
-        return;
-      }
-      
-      // Process the history data
-      const tipHistory = response.find(h => h.length > 0 && h[0]?.entity_id === tipSensor) || [];
-      const ambHistory = ambSensor ? (response.find(h => h.length > 0 && h[0]?.entity_id === ambSensor) || []) : [];
-      
-      // Merge into our format: [{tip_temp, ambient_temp, timestamp}, ...]
-      const mergedHistory = [];
-      
-      // Create a map of ambient temps by timestamp (within 30 second windows)
-      const ambientMap = new Map();
-      for (const point of ambHistory) {
-        if (point.state && !isNaN(parseFloat(point.state))) {
-          const ts = new Date(point.last_changed).getTime();
-          ambientMap.set(Math.floor(ts / 30000), parseFloat(point.state));
-        }
-      }
-      
-      // Build merged history from tip temps
-      for (const point of tipHistory) {
-        if (point.state && !isNaN(parseFloat(point.state))) {
-          const ts = new Date(point.last_changed).getTime();
-          const tipTemp = parseFloat(point.state);
-          // Find matching ambient temp
-          const ambKey = Math.floor(ts / 30000);
-          const ambTemp = ambientMap.get(ambKey) || ambientMap.get(ambKey - 1) || ambientMap.get(ambKey + 1);
-          
-          mergedHistory.push({
-            tip_temp: tipTemp,
-            ambient_temp: ambTemp || null,
-            timestamp: point.last_changed
-          });
-        }
-      }
-      
-      // Sort by timestamp
-      mergedHistory.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
-      
-      this._haHistory = mergedHistory;
-      this.requestUpdate();
-      
-    } catch (e) {
-      console.error('Could not fetch history:', e);
     }
   }
 
@@ -4453,17 +4295,38 @@ class KitchenCookingPanel extends LitElement {
             </div>
           ` : ''}
           
-          <!-- Temperature Graph - use HA history API data if available, fallback to internal -->
+          <!-- Temperature Graph - using Home Assistant's built-in history graph -->
           ${(() => {
-            const history = this._haHistory && this._haHistory.length > 1 
-              ? this._haHistory 
-              : (attrs.temp_history && attrs.temp_history.length > 1 ? attrs.temp_history : null);
-            return history ? html`
+            const tipSensor = attrs.tip_sensor;
+            const ambientSensor = attrs.ambient_sensor;
+            const sessionStart = attrs.session_start;
+            
+            // Only show graph if we have at least the tip sensor and an active cook
+            if (!tipSensor || !sessionStart) return '';
+            
+            // Build entities array for the graph
+            const entities = [tipSensor];
+            if (ambientSensor) entities.push(ambientSensor);
+            
+            // Calculate hours since cook started
+            const startTime = new Date(sessionStart);
+            const now = new Date();
+            const hoursElapsed = Math.max(1, Math.ceil((now - startTime) / (1000 * 60 * 60)));
+            
+            return html`
               <div class="temp-graph-container">
                 <h4>📈 Temperature Graph</h4>
-                ${this._renderTempGraph(history, targetTemp)}
+                <hui-history-graph-card
+                  .hass=${this.hass}
+                  .config=${{
+                    type: "history-graph",
+                    entities: entities,
+                    hours_to_show: hoursElapsed,
+                    refresh_interval: 10
+                  }}
+                ></hui-history-graph-card>
               </div>
-            ` : '';
+            `;
           })()}
           
           <div class="progress-section">
@@ -4521,105 +4384,6 @@ class KitchenCookingPanel extends LitElement {
           </div>
         </div>
       </ha-card>
-    `;
-  }
-
-  _renderTempGraph(history, targetTemp) {
-    if (!history || history.length < 2) return '';
-    
-    const width = 300;
-    const height = 120;
-    const padding = 20;
-    
-    // Dynamic X-axis scaling based on cook duration
-    // Early in cook: show all data points spread across full width
-    // As cook progresses: keep graph ~75% filled by adjusting visible window
-    // This gives meaningful visual feedback at all stages
-    
-    let displayHistory;
-    if (history.length <= 15) {
-      // Early in cook - show all data, spread across full width
-      displayHistory = history;
-    } else {
-      // Later in cook - show a sliding window that keeps graph ~75% utilized
-      // Calculate how many samples to show to keep graph looking good
-      const targetFillRatio = 0.75;
-      const samplesToShow = Math.max(15, Math.floor(history.length / targetFillRatio));
-      displayHistory = history.slice(-Math.min(samplesToShow, 60));
-    }
-    
-    // Find min/max temps from displayed history
-    const tipTemps = displayHistory.map(h => h.tip_temp).filter(t => t != null);
-    const ambientTemps = displayHistory.map(h => h.ambient_temp).filter(t => t != null);
-    const allTemps = [...tipTemps, ...ambientTemps];
-    if (targetTemp != null) allTemps.push(targetTemp);
-    if (allTemps.length === 0) return '';
-    
-    // Add some padding to temp range for visual clarity
-    const dataMinTemp = Math.min(...allTemps);
-    const dataMaxTemp = Math.max(...allTemps);
-    const tempRange = dataMaxTemp - dataMinTemp;
-    const minTemp = dataMinTemp - Math.max(5, tempRange * 0.1);
-    const maxTemp = dataMaxTemp + Math.max(5, tempRange * 0.1);
-    
-    // Handle edge case where all temps are the same
-    const effectiveMaxTemp = maxTemp === minTemp ? maxTemp + 10 : maxTemp;
-    
-    const scaleX = (i) => padding + (i / Math.max(1, displayHistory.length - 1)) * (width - 2 * padding);
-    const scaleY = (temp) => height - padding - ((temp - minTemp) / (effectiveMaxTemp - minTemp)) * (height - 2 * padding);
-    
-    // Build tip temp path
-    let tipPath = '';
-    displayHistory.forEach((h, i) => {
-      if (h.tip_temp != null) {
-        const x = scaleX(i);
-        const y = scaleY(h.tip_temp);
-        tipPath += (tipPath === '' ? `M ${x} ${y}` : ` L ${x} ${y}`);
-      }
-    });
-    
-    // Build ambient temp path
-    let ambientPath = '';
-    displayHistory.forEach((h, i) => {
-      if (h.ambient_temp != null) {
-        const x = scaleX(i);
-        const y = scaleY(h.ambient_temp);
-        ambientPath += (ambientPath === '' ? `M ${x} ${y}` : ` L ${x} ${y}`);
-      }
-    });
-    
-    const targetY = targetTemp ? scaleY(targetTemp) : null;
-    
-    return html`
-      <svg viewBox="0 0 ${width} ${height}" class="temp-graph">
-        <!-- Grid lines -->
-        <line x1="${padding}" y1="${scaleY(minTemp)}" x2="${width - padding}" y2="${scaleY(minTemp)}" stroke="#ddd" stroke-width="0.5"/>
-        <line x1="${padding}" y1="${scaleY(effectiveMaxTemp)}" x2="${width - padding}" y2="${scaleY(effectiveMaxTemp)}" stroke="#ddd" stroke-width="0.5"/>
-        
-        <!-- Target line -->
-        ${targetY !== null ? html`
-          <line x1="${padding}" y1="${targetY}" x2="${width - padding}" y2="${targetY}" stroke="#4caf50" stroke-width="1" stroke-dasharray="4"/>
-          <text x="${width - padding + 2}" y="${targetY + 3}" font-size="8" fill="#4caf50">Target</text>
-        ` : ''}
-        
-        <!-- Ambient temp line -->
-        ${ambientPath ? html`
-          <path d="${ambientPath}" stroke="#03a9f4" stroke-width="2" fill="none"/>
-        ` : ''}
-        
-        <!-- Tip temp line -->
-        ${tipPath ? html`
-          <path d="${tipPath}" stroke="#ff5722" stroke-width="2" fill="none"/>
-        ` : ''}
-        
-        <!-- Legend -->
-        <circle cx="${padding + 5}" cy="${height - 5}" r="3" fill="#ff5722"/>
-        <text x="${padding + 12}" y="${height - 2}" font-size="8" fill="var(--primary-text-color)">Tip</text>
-        ${ambientPath ? html`
-          <circle cx="${padding + 45}" cy="${height - 5}" r="3" fill="#03a9f4"/>
-          <text x="${padding + 52}" y="${height - 2}" font-size="8" fill="var(--primary-text-color)">Ambient</text>
-        ` : ''}
-      </svg>
     `;
   }
 

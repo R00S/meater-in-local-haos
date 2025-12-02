@@ -271,6 +271,9 @@ class CookingSessionSensor(SensorEntity):
             ATTR_USDA_SAFE: self._usda_safe,
             ATTR_REST_TIME_MINUTES: f"{self._rest_time_min}-{self._rest_time_max}",
             ATTR_NOTES: self._cook_notes,
+            # Expose sensor entity IDs for HA history graph
+            "tip_sensor": self._temp_sensor,
+            "ambient_sensor": self._ambient_sensor,
         }
 
         if self._session_start:

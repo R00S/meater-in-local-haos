@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 2 Dec 2025, 19:52 CET
-Last Change: v0.1.2.10 - Use HA history API for temperature graph
+Last Updated: 2 Dec 2025, 21:07 CET
+Last Change: v0.1.2.11 - Use Home Assistant's built-in hui-history-graph-card for temperature graph
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "33"
+PANEL_VERSION = "34"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
@@ -64,6 +64,8 @@ ATTR_SESSION_START = "session_start"
 ATTR_REST_START = "rest_start"
 ATTR_NOTES = "notes"
 ATTR_TEMP_HISTORY = "temp_history"
+ATTR_TIP_SENSOR = "tip_sensor"
+ATTR_AMBIENT_SENSOR = "ambient_sensor"
 
 # Service names
 SERVICE_START_COOK = "start_cook"
