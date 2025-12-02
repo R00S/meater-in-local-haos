@@ -384,17 +384,29 @@ class CookingSessionSensor(SensorEntity):
                     100.0, max(0.0, (current_c - start_temp) / temp_range * 100)
                 )
 
-        # Check for 5-minute remaining alert
-        if not self._five_min_alert_fired and self._state == STATE_COOKING:
+        # Check for 5-minute remaining alert and ETA changes
+        if self._state == STATE_COOKING:
             eta = self._calculate_eta()
-            if eta is not None and eta <= FIVE_MIN_REMAINING_THRESHOLD and eta > 0:
-                self._five_min_alert_fired = True
-                self._fire_event(EVENT_FIVE_MINUTES_REMAINING)
-                _LOGGER.info(
-                    "5 minutes remaining for %s - ETA: %d minutes",
-                    self._cut_display,
-                    eta,
-                )
+            if eta is not None:
+                # Check for significant ETA change (fire event directly to avoid recursion)
+                if self._last_eta is not None and abs(eta - self._last_eta) > ETA_CHANGE_THRESHOLD_MINUTES:
+                    self._hass.bus.async_fire(EVENT_ETA_CHANGED, {
+                        "entity_id": self.entity_id,
+                        "previous_eta": self._last_eta,
+                        "new_eta": eta,
+                    })
+                    _LOGGER.debug("ETA changed from %d to %d minutes", self._last_eta, eta)
+                self._last_eta = eta
+                
+                # Check for 5-minute remaining alert
+                if not self._five_min_alert_fired and eta <= FIVE_MIN_REMAINING_THRESHOLD and eta > 0:
+                    self._five_min_alert_fired = True
+                    self._fire_event(EVENT_FIVE_MINUTES_REMAINING)
+                    _LOGGER.info(
+                        "5 minutes remaining for %s - ETA: %d minutes",
+                        self._cut_display,
+                        eta,
+                    )
 
         # State transitions with event firing
         if self._state == STATE_COOKING:
@@ -491,20 +503,10 @@ class CookingSessionSensor(SensorEntity):
                 if time_diff_minutes > MIN_RATE_CALC_TIME_MINUTES and temp_change > 0:
                     rise_rate = temp_change / time_diff_minutes  # °C per minute
                     eta = int(temp_diff / rise_rate)
-                    
-                    # Check if ETA changed significantly
-                    if self._last_eta is not None and abs(eta - self._last_eta) > ETA_CHANGE_THRESHOLD_MINUTES:
-                        self._fire_event(EVENT_ETA_CHANGED, {
-                            "previous_eta": self._last_eta,
-                            "new_eta": eta,
-                        })
-                    
-                    self._last_eta = eta
                     return max(0, eta)
 
         # Fall back to simple estimate based on typical cooking rates
         eta = int(temp_diff * MINUTES_PER_DEGREE_C)
-        self._last_eta = eta
         return eta
 
     @callback
