@@ -20,34 +20,46 @@ import sys
 import os
 from datetime import datetime, timezone, timedelta
 
-base_dir = os.path.dirname(os.path.abspath(__file__))
+# Lazy-loaded module references
+_INT_CATEGORIES = None
+_SWE_CATEGORIES = None
 
-# Load cooking_data module
-import importlib.util
-cooking_spec = importlib.util.spec_from_file_location(
-    "cooking_data",
-    os.path.join(base_dir, "cooking_data.py")
-)
-cooking_data = importlib.util.module_from_spec(cooking_spec)
-sys.modules["cooking_data"] = cooking_data
-cooking_spec.loader.exec_module(cooking_data)
 
-INT_CATEGORIES = cooking_data.MEAT_CATEGORIES
-
-# Load Swedish data
-swedish_file = os.path.join(base_dir, "swedish_cooking_data.py")
-with open(swedish_file, "r", encoding="utf-8") as f:
-    swedish_code = f.read()
-
-swedish_code = swedish_code.replace("from .cooking_data import", "from cooking_data import")
-
-swedish_globals = {
-    "__name__": "swedish_cooking_data",
-    "__file__": swedish_file,
-}
-exec(swedish_code, swedish_globals)
-
-SWE_CATEGORIES = swedish_globals.get("SWEDISH_MEAT_CATEGORIES", [])
+def _load_cooking_data():
+    """Load cooking data modules on demand to avoid blocking at import time."""
+    global _INT_CATEGORIES, _SWE_CATEGORIES
+    
+    if _INT_CATEGORIES is not None:
+        return
+    
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Load cooking_data module
+    import importlib.util
+    cooking_spec = importlib.util.spec_from_file_location(
+        "cooking_data",
+        os.path.join(base_dir, "cooking_data.py")
+    )
+    cooking_data = importlib.util.module_from_spec(cooking_spec)
+    sys.modules["cooking_data"] = cooking_data
+    cooking_spec.loader.exec_module(cooking_data)
+    
+    _INT_CATEGORIES = cooking_data.MEAT_CATEGORIES
+    
+    # Load Swedish data
+    swedish_file = os.path.join(base_dir, "swedish_cooking_data.py")
+    with open(swedish_file, "r", encoding="utf-8") as f:
+        swedish_code = f.read()
+    
+    swedish_code = swedish_code.replace("from .cooking_data import", "from cooking_data import")
+    
+    swedish_globals = {
+        "__name__": "swedish_cooking_data",
+        "__file__": swedish_file,
+    }
+    exec(swedish_code, swedish_globals)
+    
+    _SWE_CATEGORIES = swedish_globals.get("SWEDISH_MEAT_CATEGORIES", [])
 
 
 def get_category_icon(name):
@@ -156,18 +168,20 @@ def get_cet_timestamp():
 
 def generate_js_data():
     """Generate the JavaScript data section."""
+    _load_cooking_data()
+    
     # Convert categories
     int_categories = {}
-    for category in INT_CATEGORIES:
+    for category in _INT_CATEGORIES:
         int_categories[category.name.lower()] = category_to_js(category)
     
     swe_categories = {}
-    for category in SWE_CATEGORIES:
+    for category in _SWE_CATEGORIES:
         swe_categories[category.name.lower()] = category_to_js(category)
     
     # Extract doneness levels
-    int_doneness = get_doneness_levels(INT_CATEGORIES)
-    swe_doneness = get_doneness_levels(SWE_CATEGORIES)
+    int_doneness = get_doneness_levels(_INT_CATEGORIES)
+    swe_doneness = get_doneness_levels(_SWE_CATEGORIES)
     
     cet_time = get_cet_timestamp()
     
@@ -193,7 +207,9 @@ def generate_js_data():
 
 def regenerate_panel():
     """Regenerate the panel JS file with fresh data from backend."""
+    _load_cooking_data()
     
+    base_dir = os.path.dirname(os.path.abspath(__file__))
     panel_file = os.path.join(base_dir, "www", "kitchen-cooking-panel.js")
     
     # Read existing panel
@@ -318,12 +334,12 @@ import {{
             print(f"Updated PANEL_VERSION in const.py: {old_const_version} -> {new_version}")
     
     print(f"Regenerated {panel_file}")
-    print(f"  International categories: {len(INT_CATEGORIES)}")
-    print(f"  Swedish categories: {len(SWE_CATEGORIES)}")
+    print(f"  International categories: {len(_INT_CATEGORIES)}")
+    print(f"  Swedish categories: {len(_SWE_CATEGORIES)}")
     
     # Count cuts
-    int_cuts = sum(len(ct.cuts) for cat in INT_CATEGORIES for m in cat.meats for ct in m.cut_types)
-    swe_cuts = sum(len(ct.cuts) for cat in SWE_CATEGORIES for m in cat.meats for ct in m.cut_types)
+    int_cuts = sum(len(ct.cuts) for cat in _INT_CATEGORIES for m in cat.meats for ct in m.cut_types)
+    swe_cuts = sum(len(ct.cuts) for cat in _SWE_CATEGORIES for m in cat.meats for ct in m.cut_types)
     print(f"  International cuts: {int_cuts}")
     print(f"  Swedish cuts: {swe_cuts}")
     

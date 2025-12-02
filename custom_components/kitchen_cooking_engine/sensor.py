@@ -34,6 +34,7 @@ from .const import (
     ATTR_MAX_TEMP_F,
     ATTR_MIN_TEMP_C,
     ATTR_MIN_TEMP_F,
+    ATTR_NOTES,
     ATTR_PROGRESS,
     ATTR_PROTEIN,
     ATTR_REST_TIME_MINUTES,
