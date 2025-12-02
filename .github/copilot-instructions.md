@@ -1,6 +1,22 @@
 # Kitchen Cooking Engine - Copilot Instructions
 
-## 🚨 CRITICAL: READ THIS FIRST - PANEL_VERSION SYNC
+## ⛔ CRITICAL: READ THIS FIRST
+
+### 1. The JS File Gets OVERWRITTEN on User Install
+
+The file `www/kitchen-cooking-panel.js` is **partially regenerated** when a user installs/updates:
+
+| Part of file | What happens on install |
+|--------------|------------------------|
+| Header + data constants | **OVERWRITTEN** by `generate_frontend_data.py` |
+| `class KitchenCookingPanel` onwards | **PRESERVED** |
+
+**This means:**
+- ❌ Changes to DATA CONSTANTS in JS will be LOST on user's system
+- ✅ Changes to CLASS CODE in JS will be deployed when user updates
+- To change cooking data: Edit `cooking_data.py` or `swedish_cooking_data.py` instead
+
+### 2. PANEL_VERSION Must Be Synced
 
 When editing `kitchen-cooking-panel.js`, you MUST keep PANEL_VERSION synchronized:
 
@@ -12,6 +28,15 @@ When editing `kitchen-cooking-panel.js`, you MUST keep PANEL_VERSION synchronize
 **If these don't match, the panel will NOT load on the user's Home Assistant!**
 
 The safest approach is to run `generate_frontend_data.py` which syncs both automatically.
+
+### 3. Why Your Changes Don't Work
+
+If you edit the JS file but the PANEL_VERSION in `const.py` is different:
+- Home Assistant looks for `kitchen-cooking-panel-vXX` (from const.py)
+- But the JS registers `kitchen-cooking-panel-vYY` (from the JS file)
+- **Result: Your changes are INVISIBLE to the user**
+
+This is why 10+ commits of graph changes had no effect - the version was mismatched.
 
 ---
 
@@ -35,37 +60,12 @@ This is a Home Assistant custom integration for kitchen temperature cooking (MEA
 | `cooking_data.py` | International meat/cut data (source of truth) |
 | `swedish_cooking_data.py` | Swedish meat/cut data |
 | `const.py` | Constants including PANEL_VERSION |
-| `generate_frontend_data.py` | Regenerates JS data from Python |
+| `generate_frontend_data.py` | Regenerates JS data from Python, syncs PANEL_VERSION |
 
 ### Frontend (JavaScript)
 | File | Purpose |
 |------|---------|
-| `www/kitchen-cooking-panel.js` | Lovelace panel UI |
-
-## Frontend Panel Behavior
-
-The `kitchen-cooking-panel.js` file has **special regeneration behavior**:
-
-When a user installs/updates via HACS, `generate_frontend_data.py` runs and:
-1. **REPLACES**: Header and data constants (DONENESS_OPTIONS, MEAT_CATEGORIES, etc.)
-2. **PRESERVES**: Everything from `class KitchenCookingPanel` onwards
-
-### What This Means For You
-
-| What you want to change | Where to edit |
-|------------------------|---------------|
-| Cooking data (temps, cuts, doneness) | `cooking_data.py` or `swedish_cooking_data.py` |
-| UI behavior, rendering, graphs | Class code in `kitchen-cooking-panel.js` |
-| **Any JS change** | Also update PANEL_VERSION in BOTH files |
-
-### The PANEL_VERSION Trap (Why Your Changes Don't Work)
-
-If you edit the JS file but the PANEL_VERSION in `const.py` is different:
-- Home Assistant looks for `kitchen-cooking-panel-vXX` (from const.py)
-- But the JS registers `kitchen-cooking-panel-vYY` (from the JS file)
-- **Result: Your changes are INVISIBLE to the user**
-
-This is why 10+ commits of graph changes had no effect - the version was mismatched.
+| `www/kitchen-cooking-panel.js` | Lovelace panel UI (partially overwritten on install - see above) |
 
 ---
 
