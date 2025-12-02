@@ -4295,7 +4295,7 @@ class KitchenCookingPanel extends LitElement {
             </div>
           ` : ''}
           
-          <!-- Temperature Graph - embedded from Home Assistant history -->
+          <!-- Temperature Graph using Lovelace history-graph card -->
           ${(() => {
             const tipSensor = attrs.tip_sensor;
             const ambientSensor = attrs.ambient_sensor;
@@ -4304,28 +4304,81 @@ class KitchenCookingPanel extends LitElement {
             // Only show graph if we have at least the tip sensor and an active cook
             if (!tipSensor || !sessionStart) return '';
             
-            // Build entity list for history URL
+            // Build entity list for history URL (for the link)
             const entities = [tipSensor];
             if (ambientSensor) entities.push(ambientSensor);
             const entityList = entities.join(',');
             
-            // Calculate start date for history
+            // Calculate hours since cook start
             const startDate = new Date(sessionStart);
-            const startDateStr = startDate.toISOString().split('.')[0];
+            const now = new Date();
+            const hoursSinceStart = Math.max(1, Math.ceil((now - startDate) / (1000 * 60 * 60)));
             
-            // Build history URL
-            const historyUrl = `/history?entity_id=${entityList}&start_date=${encodeURIComponent(startDateStr)}`;
+            // Build history URL for link
+            const historyUrl = `/history?entity_id=${entityList}&start_date=${encodeURIComponent(startDate.toISOString().split('.')[0])}`;
+            
+            // Create the card config
+            const graphEntities = [{entity: tipSensor, name: 'Tip Temp'}];
+            if (ambientSensor) {
+              graphEntities.push({entity: ambientSensor, name: 'Ambient'});
+            }
+            
+            // Unique ID for this graph instance
+            const graphId = `temp-graph-${Date.now()}`;
+            
+            // Schedule card creation after render
+            setTimeout(() => {
+              const container = this.shadowRoot?.querySelector(`#${graphId}`);
+              if (container && !container._cardCreated) {
+                container._cardCreated = true;
+                
+                // Create history-graph card using HA's card helpers
+                const createCard = async () => {
+                  try {
+                    // Try to get the card helpers
+                    const helpers = await window.loadCardHelpers?.();
+                    if (helpers) {
+                      const card = await helpers.createCardElement({
+                        type: 'history-graph',
+                        entities: graphEntities,
+                        hours_to_show: hoursSinceStart,
+                        refresh_interval: 30,
+                      });
+                      card.hass = this.hass;
+                      container.innerHTML = '';
+                      container.appendChild(card);
+                    } else {
+                      // Fallback: just show a link to history
+                      container.innerHTML = `
+                        <div style="text-align: center; padding: 40px; color: var(--secondary-text-color);">
+                          <p>📊 Graph loading...</p>
+                          <p style="font-size: 12px;">If graph doesn't appear, <a href="${historyUrl}" target="_blank">view in History</a></p>
+                        </div>
+                      `;
+                    }
+                  } catch (e) {
+                    console.error('Error creating history graph card:', e);
+                    container.innerHTML = `
+                      <div style="text-align: center; padding: 20px;">
+                        <a href="${historyUrl}" target="_blank" style="color: var(--primary-color);">
+                          📈 View Temperature History
+                        </a>
+                      </div>
+                    `;
+                  }
+                };
+                createCard();
+              }
+            }, 100);
             
             return html`
               <div class="temp-graph-container">
                 <h4>📈 Temperature Graph</h4>
                 <ha-card>
-                  <div class="card-content" style="padding: 0;">
-                    <iframe 
-                      src="${historyUrl}"
-                      style="width: 100%; height: 300px; border: none; border-radius: 8px;"
-                      title="Temperature History"
-                    ></iframe>
+                  <div id="${graphId}" class="card-content" style="min-height: 200px; padding: 8px;">
+                    <div style="text-align: center; padding: 40px; color: var(--secondary-text-color);">
+                      Loading temperature graph...
+                    </div>
                   </div>
                 </ha-card>
                 <div style="text-align: center; margin-top: 8px;">
