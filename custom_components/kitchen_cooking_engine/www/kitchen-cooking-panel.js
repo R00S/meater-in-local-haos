@@ -1,12 +1,11 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * Last Updated: 1 Dec 2025, 23:00 CET
- * Last Change: v0.1.1.8 - Simplified data source approach
- *              - Removed API fetch logic (caused auth issues)
- *              - Uses hardcoded frontend data directly
- *              - Both International and Swedish data maintained in frontend
- *              - Backend Python data is canonical; frontend updated at release
+ * Last Updated: 2 Dec 2025, 08:00 CET
+ * Last Change: v0.1.1.10 - Frontend data generated from backend
+ *              - All cooking data generated from cooking_data.py and swedish_cooking_data.py
+ *              - Run generate_frontend_data.py to regenerate after backend changes
+ *              - No hardcoded fallback data - backend is single source of truth
  * 
  * NOTE: Temperature values are suggestions based on cooking style, not just safety.
  *       Livsmedelsverket safety info can be shown separately if needed.
@@ -3565,23 +3564,22 @@ class KitchenCookingPanel extends LitElement {
     this._dataSource = DATA_SOURCE_INTERNATIONAL;
     this._customTargetTempC = null;
     this._showTempAdjust = false;
-    // Removed API fetch - using hardcoded frontend data directly
-    // Both International and Swedish data maintained in frontend
-    // Backend Python data is canonical; frontend updated at release
+    // Data is generated from backend Python files at install/update time
+    // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
 
   connectedCallback() {
     super.connectedCallback();
-    // No API calls needed - using hardcoded data
+    // Data is embedded in this file - generated from backend at build time
   }
 
   _getDataCategories() {
-    // Use hardcoded data based on selected source
+    // Return generated data based on selected source
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_MEAT_CATEGORIES : MEAT_CATEGORIES;
   }
 
   _getDonenessOptions() {
-    // Use hardcoded data based on selected source
+    // Return generated data based on selected source
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
   }
 
@@ -3751,7 +3749,7 @@ class KitchenCookingPanel extends LitElement {
     this._selectedDoneness = null;
     this._customTargetTempC = null;
     this._showTempAdjust = false;
-    // No API refetch needed - data source switch handled locally
+    // Data source switch handled locally - both datasets are embedded
   }
 
   _selectCategory(categoryKey) {
