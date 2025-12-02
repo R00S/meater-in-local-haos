@@ -4295,7 +4295,7 @@ class KitchenCookingPanel extends LitElement {
             </div>
           ` : ''}
           
-          <!-- Temperature Graph - using Home Assistant's built-in history graph -->
+          <!-- Temperature Graph - embedded from Home Assistant history -->
           ${(() => {
             const tipSensor = attrs.tip_sensor;
             const ambientSensor = attrs.ambient_sensor;
@@ -4304,27 +4304,36 @@ class KitchenCookingPanel extends LitElement {
             // Only show graph if we have at least the tip sensor and an active cook
             if (!tipSensor || !sessionStart) return '';
             
-            // Build entities array for the graph
+            // Build entity list for history URL
             const entities = [tipSensor];
             if (ambientSensor) entities.push(ambientSensor);
+            const entityList = entities.join(',');
             
-            // Calculate hours since cook started
-            const startTime = new Date(sessionStart);
-            const now = new Date();
-            const hoursElapsed = Math.max(1, Math.ceil((now - startTime) / (1000 * 60 * 60)));
+            // Calculate start date for history
+            const startDate = new Date(sessionStart);
+            const startDateStr = startDate.toISOString().split('.')[0];
+            
+            // Build history URL
+            const historyUrl = `/history?entity_id=${entityList}&start_date=${encodeURIComponent(startDateStr)}`;
             
             return html`
               <div class="temp-graph-container">
                 <h4>📈 Temperature Graph</h4>
-                <hui-history-graph-card
-                  .hass=${this.hass}
-                  .config=${{
-                    type: "history-graph",
-                    entities: entities,
-                    hours_to_show: hoursElapsed,
-                    refresh_interval: 10
-                  }}
-                ></hui-history-graph-card>
+                <ha-card>
+                  <div class="card-content" style="padding: 0;">
+                    <iframe 
+                      src="${historyUrl}"
+                      style="width: 100%; height: 300px; border: none; border-radius: 8px;"
+                      title="Temperature History"
+                    ></iframe>
+                  </div>
+                </ha-card>
+                <div style="text-align: center; margin-top: 8px;">
+                  <a href="${historyUrl}" target="_blank" 
+                     style="color: var(--primary-color); font-size: 12px;">
+                    🔗 Open in full History view
+                  </a>
+                </div>
               </div>
             `;
           })()}
