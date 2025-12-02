@@ -257,14 +257,36 @@ def regenerate_panel():
     header = f"""/**
  * Kitchen Cooking Engine Panel
  * 
+ * ╔══════════════════════════════════════════════════════════════════════════════╗
+ * ║  ⛔ STOP! BEFORE EDITING THIS FILE, READ THIS:                              ║
+ * ╠══════════════════════════════════════════════════════════════════════════════╣
+ * ║                                                                              ║
+ * ║  If you edit ANYTHING in this file, you MUST ALSO update PANEL_VERSION      ║
+ * ║  in BOTH files to match:                                                    ║
+ * ║                                                                              ║
+ * ║    1. const.py line 11:  PANEL_VERSION = "XX"                               ║
+ * ║    2. This file (bottom): const PANEL_VERSION = "XX";                       ║
+ * ║                                                                              ║
+ * ║  If they don't match, YOUR CHANGES WILL NOT WORK!                           ║
+ * ║  (Home Assistant will look for wrong custom element name)                   ║
+ * ║                                                                              ║
+ * ╠══════════════════════════════════════════════════════════════════════════════╣
+ * ║                                                                              ║
+ * ║  This file is AUTO-REGENERATED when user installs/updates:                  ║
+ * ║    - REPLACED: Header and data constants (DONENESS_OPTIONS, etc.)           ║
+ * ║    - PRESERVED: Everything from "class KitchenCookingPanel" onwards         ║
+ * ║                                                                              ║
+ * ║  FOR AI AGENTS / DEVELOPERS:                                                 ║
+ * ║    - To change cooking data: Edit cooking_data.py or swedish_cooking_data.py║
+ * ║    - To change UI/behavior: Edit the class code below (it gets preserved)   ║
+ * ║    - After editing: Update PANEL_VERSION in BOTH const.py AND this file     ║
+ * ║                                                                              ║
+ * ╚══════════════════════════════════════════════════════════════════════════════╝
+ * 
  * AUTO-REGENERATED: {cet_time}
  * Data generated from cooking_data.py and swedish_cooking_data.py
  * 
- * NOTE: This file's data section is regenerated at install/update time.
- *       Do not manually edit the data constants - they will be overwritten.
- *       Temperature values are suggestions based on cooking style, not just safety.
- * 
- * A custom panel for the Kitchen Cooking Engine integration.
+ * Temperature values are suggestions based on cooking style, not just safety.
  */
 
 import {{
