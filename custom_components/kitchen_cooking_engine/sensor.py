@@ -1,7 +1,7 @@
 """Sensor platform for Kitchen Cooking Engine.
 
-Last Updated: 2 Dec 2025, 15:00 CET
-Last Change: v0.1.2.5 - Added TTS announcements, rest light transition
+Last Updated: 2 Dec 2025, 15:30 CET
+Last Change: v0.1.2.8 - Added cook history, user preferences, notes, temp graph
 """
 
 from __future__ import annotations
@@ -171,6 +171,7 @@ class CookingSessionSensor(SensorEntity):
         self._protein: str | None = None
         self._cut: str | None = None
         self._cut_display: str | None = None
+        self._cut_id: int | None = None
         self._doneness: str | None = None
         self._cooking_method: str | None = None
         self._target_temp_c: int | None = None
@@ -190,10 +191,13 @@ class CookingSessionSensor(SensorEntity):
         self._usda_safe: bool = False
         self._carryover_temp_c: int = 0
         
-        # Temperature history for ETA calculation
+        # Temperature history for ETA calculation and graphing
+        # Each entry: {"time": datetime, "tip_temp": float, "ambient_temp": float|None}
         self._temp_history: deque = deque(maxlen=TEMP_HISTORY_MAX_SAMPLES)
+        self._full_cook_history: list = []  # Complete history for the current cook
         self._last_eta: int | None = None
         self._five_min_alert_fired: bool = False
+        self._cook_notes: str = ""  # Notes for current cook
         
         # Timer for rest countdown
         self._rest_timer_unsub = None
@@ -262,6 +266,7 @@ class CookingSessionSensor(SensorEntity):
             ATTR_PROGRESS: round(self._progress, 1),
             ATTR_USDA_SAFE: self._usda_safe,
             ATTR_REST_TIME_MINUTES: f"{self._rest_time_min}-{self._rest_time_max}",
+            ATTR_NOTES: self._cook_notes,
         }
 
         if self._session_start:
@@ -279,6 +284,10 @@ class CookingSessionSensor(SensorEntity):
             eta = self._calculate_eta()
             if eta is not None:
                 attrs[ATTR_ETA_MINUTES] = eta
+
+        # Include temperature history for graphing (last 60 entries to limit attribute size)
+        if self._state not in (STATE_IDLE,) and self._full_cook_history:
+            attrs[ATTR_TEMP_HISTORY] = self._full_cook_history[-60:]
 
         return attrs
 
@@ -334,12 +343,21 @@ class CookingSessionSensor(SensorEntity):
             new_temp = float(new_state.state)
             self._current_temp = new_temp
             
-            # Record temperature history for ETA calculation
-            if self._state in (STATE_COOKING, STATE_APPROACHING):
+            # Record temperature history for ETA calculation and graphing
+            if self._state in (STATE_COOKING, STATE_APPROACHING, STATE_GOAL_REACHED, STATE_RESTING):
+                now = datetime.now()
+                history_entry = {
+                    "time": now.isoformat(),
+                    "tip_temp": new_temp,
+                    "ambient_temp": self._ambient_temp,
+                }
+                # For ETA calculation (uses temp key for backwards compatibility)
                 self._temp_history.append({
-                    "time": datetime.now(),
+                    "time": now,
                     "temp": new_temp,
                 })
+                # Full history for graphing
+                self._full_cook_history.append(history_entry)
             
             self._update_cooking_state()
             self.async_write_ha_state()
@@ -869,11 +887,13 @@ class CookingSessionSensor(SensorEntity):
         usda_safe: bool,
         carryover_temp_c: int,
         cut_display: str | None = None,
+        cut_id: int | None = None,
     ) -> None:
         """Start a new cooking session."""
         self._protein = protein
         self._cut = cut
         self._cut_display = cut_display or cut
+        self._cut_id = cut_id
         self._doneness = doneness
         self._cooking_method = cooking_method
         self._target_temp_c = target_temp_c
@@ -891,6 +911,8 @@ class CookingSessionSensor(SensorEntity):
         self._state = STATE_COOKING
         self._progress = 0.0
         self._temp_history.clear()
+        self._full_cook_history.clear()  # Clear graph history
+        self._cook_notes = ""  # Clear notes
         self._last_eta = None
         self._five_min_alert_fired = False
         
@@ -965,9 +987,22 @@ class CookingSessionSensor(SensorEntity):
         
         self.async_write_ha_state()
 
+    def set_notes(self, notes: str) -> None:
+        """Set notes for the current cook."""
+        self._cook_notes = notes
+        self.async_write_ha_state()
+
     def complete_session(self) -> None:
-        """Mark session as complete."""
+        """Mark session as complete and save to history."""
         _LOGGER.info("Cooking session completed")
+        
+        # Save cook to history before clearing state
+        self._hass.async_create_task(self._save_cook_to_history())
+        
+        # Save user preference for this cut
+        if hasattr(self, '_cut_id') and self._cut_id:
+            self._hass.async_create_task(self._save_cut_preference())
+        
         self._state = STATE_COMPLETE
         
         # Restore indicator light to original state
@@ -980,3 +1015,40 @@ class CookingSessionSensor(SensorEntity):
             self._rest_timer_unsub = None
             
         self.async_write_ha_state()
+
+    async def _save_cook_to_history(self) -> None:
+        """Save completed cook to history."""
+        from .storage import async_add_cook_to_history, async_set_cut_preference
+        
+        cook_data = {
+            "protein": self._protein,
+            "cut": self._cut,
+            "cut_display": self._cut_display,
+            "cut_id": getattr(self, '_cut_id', None),
+            "doneness": self._doneness,
+            "cooking_method": self._cooking_method,
+            "target_temp_c": self._target_temp_c,
+            "target_temp_f": self._target_temp_f,
+            "started_at": self._session_start.isoformat() if self._session_start else None,
+            "rest_started_at": self._rest_start.isoformat() if self._rest_start else None,
+            "temp_history": self._full_cook_history,
+            "notes": self._cook_notes,
+            "final_temp": self._current_temp,
+        }
+        
+        await async_add_cook_to_history(self._hass, cook_data)
+        _LOGGER.info("Saved cook to history: %s", self._cut_display)
+
+    async def _save_cut_preference(self) -> None:
+        """Save user preference for this cut."""
+        from .storage import async_set_cut_preference
+        
+        if hasattr(self, '_cut_id') and self._cut_id:
+            await async_set_cut_preference(
+                self._hass,
+                self._cut_id,
+                self._doneness,
+                None,  # custom_temp_c - not tracked yet
+                self._cooking_method,
+            )
+            _LOGGER.debug("Saved cut preference for cut_id: %s", self._cut_id)

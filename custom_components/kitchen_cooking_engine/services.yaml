@@ -111,11 +111,28 @@ start_rest:
 
 complete_session:
   name: Complete Session
-  description: Mark the cooking session as complete.
+  description: Mark the cooking session as complete. Saves cook to history and updates user preferences.
   target:
     entity:
       domain: sensor
       integration: kitchen_cooking_engine
+
+set_notes:
+  name: Set Notes
+  description: Set notes for the current cooking session. Notes will be saved with cook history when session is completed.
+  target:
+    entity:
+      domain: sensor
+      integration: kitchen_cooking_engine
+  fields:
+    notes:
+      name: Notes
+      description: Notes about this cook (adjustments, observations, etc.)
+      required: true
+      example: "Added rosemary, turned at 45°C"
+      selector:
+        text:
+          multiline: true
 
 set_target:
   name: Set Target Temperature

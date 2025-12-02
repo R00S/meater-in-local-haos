@@ -64,7 +64,7 @@ Prepared by: Copilot agent
 
 ## MEDIUM PRIORITY - UI/UX Improvements
 
-### 1. Active Cook Monitoring Panel ✅ (Partially Complete)
+### 1. Active Cook Monitoring Panel ✅
 - ✅ Show current tip temperature
 - ✅ Show current ambient temperature
 - ✅ Show target temperature
@@ -72,25 +72,25 @@ Prepared by: Copilot agent
 - ✅ Time estimate display (dynamic)
 - ✅ Battery level indicator
 
-### 2. Cook History
-- Log completed cooks with:
-  - Timestamps (start, target reached, rest start, complete)
-  - Temperatures recorded
-  - Duration
-  - Cut and doneness used
-- Display history in UI
+### 2. Cook History ✅
+- ✅ Log completed cooks with:
+  - ✅ Timestamps (start, target reached, rest start, complete)
+  - ✅ Temperatures recorded
+  - ✅ Duration
+  - ✅ Cut and doneness used
+- ✅ Display history in UI
 
-### 3. Remember Last Doneness/Temp Per Cut
-- **Default to last used doneness/temperature** instead of recommended when cooking the same cut again
-- Store user preferences per cut
+### 3. Remember Last Doneness/Temp Per Cut ✅
+- ✅ **Default to last used doneness/temperature** instead of recommended when cooking the same cut again
+- ✅ Store user preferences per cut
 
-### 4. Temperature Graph
-- Visual chart showing temp over time during cook
-- Mark key events (target reached, rest started, etc.)
+### 4. Temperature Graph ✅
+- ✅ Visual chart showing temp over time during cook (tip and ambient)
+- Target line shown on graph
 
-### 5. Cooking Notes
-- Save notes per cook (what worked, adjustments made)
-- View notes in cook history
+### 5. Cooking Notes ✅
+- ✅ Save notes per cook (what worked, adjustments made)
+- ✅ View notes in cook history
 
 ---
 

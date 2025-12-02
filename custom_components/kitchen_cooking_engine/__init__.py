@@ -40,6 +40,7 @@ from .const import (
     SERVICE_STOP_COOK,
     SERVICE_START_REST,
     SERVICE_COMPLETE,
+    SERVICE_SET_NOTES,
 )
 from .cooking_data import (
     get_cut_by_id,
@@ -93,6 +94,14 @@ SERVICE_START_COOK_SCHEMA = vol.Schema(
 SERVICE_ENTITY_SCHEMA = vol.Schema(
     {
         vol.Required(ATTR_ENTITY_ID): cv.entity_ids,
+    }
+)
+
+# Service schema for set_notes
+SERVICE_SET_NOTES_SCHEMA = vol.Schema(
+    {
+        vol.Required(ATTR_ENTITY_ID): cv.entity_ids,
+        vol.Required("notes"): cv.string,
     }
 )
 
@@ -390,6 +399,7 @@ async def _async_register_services(hass: HomeAssistant) -> None:
                 usda_safe=temp_range.usda_safe,
                 carryover_temp_c=cut.carryover_temp_c,
                 cut_display=cut.name_long,
+                cut_id=cut_id,
             )
 
     async def handle_stop_cook(call: ServiceCall) -> None:
@@ -440,6 +450,24 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         for entity in entities:
             entity.complete_session()
 
+    async def handle_set_notes(call: ServiceCall) -> None:
+        """Handle set notes service call."""
+        _LOGGER.info("Kitchen Cooking Engine: Set notes service called")
+        
+        entity_ids = call.data.get(ATTR_ENTITY_ID)
+        notes = call.data.get("notes", "")
+        
+        if entity_ids is None:
+            _LOGGER.error("No entity_id specified for set_notes service")
+            return
+        
+        if isinstance(entity_ids, str):
+            entity_ids = [entity_ids]
+        
+        entities = _get_cooking_session_entities(hass, entity_ids)
+        for entity in entities:
+            entity.set_notes(notes)
+
     # Only register if not already registered
     if not hass.services.has_service(DOMAIN, SERVICE_START_COOK):
         hass.services.async_register(
@@ -468,5 +496,12 @@ async def _async_register_services(hass: HomeAssistant) -> None:
             SERVICE_COMPLETE,
             handle_complete,
             schema=SERVICE_ENTITY_SCHEMA,
+        )
+    if not hass.services.has_service(DOMAIN, SERVICE_SET_NOTES):
+        hass.services.async_register(
+            DOMAIN,
+            SERVICE_SET_NOTES,
+            handle_set_notes,
+            schema=SERVICE_SET_NOTES_SCHEMA,
         )
 

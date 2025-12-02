@@ -3548,6 +3548,11 @@ class KitchenCookingPanel extends LitElement {
       _dataSource: { type: String },
       _customTargetTempC: { type: Number },
       _showTempAdjust: { type: Boolean },
+      _showHistory: { type: Boolean },
+      _cookHistory: { type: Array },
+      _cutPreferences: { type: Object },
+      _currentNotes: { type: String },
+      _showNotes: { type: Boolean },
     };
   }
 
@@ -3563,6 +3568,11 @@ class KitchenCookingPanel extends LitElement {
     this._dataSource = DATA_SOURCE_INTERNATIONAL;
     this._customTargetTempC = null;
     this._showTempAdjust = false;
+    this._showHistory = false;
+    this._cookHistory = [];
+    this._cutPreferences = {};
+    this._currentNotes = "";
+    this._showNotes = false;
     this._visibilityHandler = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
@@ -3571,6 +3581,9 @@ class KitchenCookingPanel extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     // Data is embedded in this file - generated from backend at build time
+    
+    // Load user preferences
+    this._loadPreferences();
     
     // Fix for white screen when returning to browser tab
     // Force re-render when tab becomes visible again
@@ -3588,6 +3601,47 @@ class KitchenCookingPanel extends LitElement {
     if (this._visibilityHandler) {
       document.removeEventListener('visibilitychange', this._visibilityHandler);
       this._visibilityHandler = null;
+    }
+  }
+
+  async _loadPreferences() {
+    try {
+      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/preferences');
+      if (response && response.cut_preferences) {
+        this._cutPreferences = response.cut_preferences;
+      }
+    } catch (e) {
+      console.log('Could not load preferences:', e);
+    }
+  }
+
+  async _loadHistory() {
+    try {
+      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/history');
+      if (response && response.history) {
+        this._cookHistory = response.history;
+      }
+    } catch (e) {
+      console.log('Could not load history:', e);
+    }
+  }
+
+  async _updateCookNotes(cookId, notes) {
+    try {
+      await this.hass.callApi('PATCH', `kitchen_cooking_engine/history/${cookId}`, { notes });
+      await this._loadHistory();
+    } catch (e) {
+      console.error('Could not update notes:', e);
+    }
+  }
+
+  async _deleteCook(cookId) {
+    if (!confirm('Delete this cook from history?')) return;
+    try {
+      await this.hass.callApi('DELETE', `kitchen_cooking_engine/history/${cookId}`);
+      await this._loadHistory();
+    } catch (e) {
+      console.error('Could not delete cook:', e);
     }
   }
 
@@ -3618,6 +3672,11 @@ class KitchenCookingPanel extends LitElement {
       entity_id: this._selectedEntity,
       ...data
     });
+  }
+
+  _setNotes(notes) {
+    this._currentNotes = notes;
+    this._callService('set_notes', { notes });
   }
 
   _getStateIcon(state) {
@@ -3815,6 +3874,16 @@ class KitchenCookingPanel extends LitElement {
     this._customTargetTempC = null;
     this._showTempAdjust = false;
     
+    // Check if user has a saved preference for this cut
+    const savedPref = this._cutPreferences[String(cutId)];
+    if (savedPref && savedPref.doneness) {
+      this._selectedDoneness = savedPref.doneness;
+      if (savedPref.cooking_method) {
+        this._selectedMethod = savedPref.cooking_method;
+      }
+      return;
+    }
+    
     // Auto-select recommended doneness for this cut
     const cut = this._getCuts().find(c => c.id === cutId);
     if (cut) {
@@ -3859,6 +3928,30 @@ class KitchenCookingPanel extends LitElement {
     this._customTargetTempC = Math.max(35, Math.min(100, parsed));
   }
 
+  _toggleHistory() {
+    this._showHistory = !this._showHistory;
+    if (this._showHistory) {
+      this._loadHistory();
+    }
+  }
+
+  _formatDateTime(isoString) {
+    if (!isoString) return '';
+    const date = new Date(isoString);
+    return date.toLocaleString();
+  }
+
+  _formatDuration(startIso, endIso) {
+    if (!startIso) return '';
+    const start = new Date(startIso);
+    const end = endIso ? new Date(endIso) : new Date();
+    const mins = Math.round((end - start) / 60000);
+    if (mins < 60) return `${mins} min`;
+    const hours = Math.floor(mins / 60);
+    const remainMins = mins % 60;
+    return `${hours}h ${remainMins}m`;
+  }
+
   render() {
     if (!this.hass) {
       return html`<div class="loading">Loading Home Assistant connection...</div>`;
@@ -3884,8 +3977,17 @@ class KitchenCookingPanel extends LitElement {
         <div slot="title">🍳 Kitchen Cooking Engine</div>
         
         <div class="content">
-          ${entities.length === 0 ? this._renderNoEntities() : 
-            (isActive ? this._renderActiveCook(state) : this._renderSetupForm(entities))}
+          ${this._showHistory ? this._renderHistory() :
+            (entities.length === 0 ? this._renderNoEntities() : 
+              (isActive ? this._renderActiveCook(state) : this._renderSetupForm(entities)))}
+          
+          ${!isActive && entities.length > 0 ? html`
+            <div class="history-toggle">
+              <button class="history-btn ${this._showHistory ? 'active' : ''}" @click=${this._toggleHistory}>
+                📜 ${this._showHistory ? 'Back to Cooking' : 'View Cook History'}
+              </button>
+            </div>
+          ` : ''}
         </div>
       </ha-top-app-bar-fixed>
     `;
@@ -4171,6 +4273,14 @@ class KitchenCookingPanel extends LitElement {
             </div>
           ` : ''}
           
+          <!-- Temperature Graph -->
+          ${attrs.temp_history && attrs.temp_history.length > 1 ? html`
+            <div class="temp-graph-container">
+              <h4>📈 Temperature Graph</h4>
+              ${this._renderTempGraph(attrs.temp_history, targetTemp)}
+            </div>
+          ` : ''}
+          
           <div class="progress-section">
             <div class="progress-bar-container">
               <div class="progress-bar" style="width: ${Math.min(100, progress)}%"></div>
@@ -4200,6 +4310,21 @@ class KitchenCookingPanel extends LitElement {
             ` : ''}
           </div>
           
+          <!-- Notes Section -->
+          <div class="notes-section">
+            <button class="notes-toggle" @click=${() => this._showNotes = !this._showNotes}>
+              📝 ${this._showNotes ? 'Hide Notes' : 'Add Notes'}
+            </button>
+            ${this._showNotes ? html`
+              <textarea 
+                class="notes-input" 
+                placeholder="Add notes about this cook (adjustments, observations, etc.)"
+                .value=${attrs.notes || this._currentNotes}
+                @change=${(e) => this._setNotes(e.target.value)}
+              ></textarea>
+            ` : ''}
+          </div>
+          
           <div class="action-buttons">
             ${cookState === 'goal_reached' ? html`
               <ha-button unelevated @click=${this._startRest}>⏱️ Start Rest</ha-button>
@@ -4211,6 +4336,125 @@ class KitchenCookingPanel extends LitElement {
           </div>
         </div>
       </ha-card>
+    `;
+  }
+
+  _renderTempGraph(history, targetTemp) {
+    if (!history || history.length < 2) return '';
+    
+    const width = 300;
+    const height = 120;
+    const padding = 20;
+    
+    // Find min/max temps
+    const tipTemps = history.map(h => h.tip_temp).filter(t => t != null);
+    const ambientTemps = history.map(h => h.ambient_temp).filter(t => t != null);
+    const allTemps = [...tipTemps, ...ambientTemps, targetTemp || 0];
+    const minTemp = Math.min(...allTemps) - 5;
+    const maxTemp = Math.max(...allTemps) + 5;
+    
+    const scaleX = (i) => padding + (i / (history.length - 1)) * (width - 2 * padding);
+    const scaleY = (temp) => height - padding - ((temp - minTemp) / (maxTemp - minTemp)) * (height - 2 * padding);
+    
+    // Build tip temp path
+    let tipPath = '';
+    history.forEach((h, i) => {
+      if (h.tip_temp != null) {
+        const x = scaleX(i);
+        const y = scaleY(h.tip_temp);
+        tipPath += (tipPath === '' ? `M ${x} ${y}` : ` L ${x} ${y}`);
+      }
+    });
+    
+    // Build ambient temp path
+    let ambientPath = '';
+    history.forEach((h, i) => {
+      if (h.ambient_temp != null) {
+        const x = scaleX(i);
+        const y = scaleY(h.ambient_temp);
+        ambientPath += (ambientPath === '' ? `M ${x} ${y}` : ` L ${x} ${y}`);
+      }
+    });
+    
+    const targetY = targetTemp ? scaleY(targetTemp) : null;
+    
+    return html`
+      <svg viewBox="0 0 ${width} ${height}" class="temp-graph">
+        <!-- Grid lines -->
+        <line x1="${padding}" y1="${scaleY(minTemp)}" x2="${width - padding}" y2="${scaleY(minTemp)}" stroke="#ddd" stroke-width="0.5"/>
+        <line x1="${padding}" y1="${scaleY(maxTemp)}" x2="${width - padding}" y2="${scaleY(maxTemp)}" stroke="#ddd" stroke-width="0.5"/>
+        
+        <!-- Target line -->
+        ${targetY !== null ? html`
+          <line x1="${padding}" y1="${targetY}" x2="${width - padding}" y2="${targetY}" stroke="#4caf50" stroke-width="1" stroke-dasharray="4"/>
+          <text x="${width - padding + 2}" y="${targetY + 3}" font-size="8" fill="#4caf50">Target</text>
+        ` : ''}
+        
+        <!-- Ambient temp line -->
+        ${ambientPath ? html`
+          <path d="${ambientPath}" stroke="#03a9f4" stroke-width="2" fill="none"/>
+        ` : ''}
+        
+        <!-- Tip temp line -->
+        ${tipPath ? html`
+          <path d="${tipPath}" stroke="#ff5722" stroke-width="2" fill="none"/>
+        ` : ''}
+        
+        <!-- Legend -->
+        <circle cx="${padding + 5}" cy="${height - 5}" r="3" fill="#ff5722"/>
+        <text x="${padding + 12}" y="${height - 2}" font-size="8" fill="var(--primary-text-color)">Tip</text>
+        ${ambientPath ? html`
+          <circle cx="${padding + 45}" cy="${height - 5}" r="3" fill="#03a9f4"/>
+          <text x="${padding + 52}" y="${height - 2}" font-size="8" fill="var(--primary-text-color)">Ambient</text>
+        ` : ''}
+      </svg>
+    `;
+  }
+
+  _renderHistory() {
+    return html`
+      <div class="status-banner idle">
+        <h2>📜 Cook History</h2>
+        <p>Your past cooking sessions</p>
+      </div>
+      
+      ${this._cookHistory.length === 0 ? html`
+        <ha-card>
+          <div class="card-content">
+            <p class="no-history">No cooks recorded yet. Complete a cooking session to see it here!</p>
+          </div>
+        </ha-card>
+      ` : html`
+        ${this._cookHistory.map(cook => html`
+          <ha-card class="history-card">
+            <div class="card-content">
+              <div class="history-header">
+                <h3>${cook.cut_display || cook.cut}</h3>
+                <span class="history-date">${this._formatDateTime(cook.completed_at)}</span>
+              </div>
+              <div class="history-details">
+                <span class="history-detail">🥩 ${cook.protein}</span>
+                <span class="history-detail">🎯 ${(cook.doneness || '').replace('_', ' ')}</span>
+                <span class="history-detail">🍳 ${(cook.cooking_method || '').replace(/_/g, ' ')}</span>
+                <span class="history-detail">🌡️ ${cook.target_temp_c}°C target</span>
+                ${cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C final</span>` : ''}
+              </div>
+              ${cook.notes ? html`
+                <div class="history-notes">
+                  <strong>📝 Notes:</strong> ${cook.notes}
+                </div>
+              ` : ''}
+              <div class="history-actions">
+                <button class="small-btn" @click=${() => {
+                  const notes = prompt('Update notes:', cook.notes || '');
+                  if (notes !== null) this._updateCookNotes(cook.id, notes);
+                }}>✏️ Edit Notes</button>
+                <button class="small-btn danger" @click=${() => this._deleteCook(cook.id)}>🗑️ Delete</button>
+              </div>
+            </div>
+          </ha-card>
+        `)}
+      `}
     `;
   }
 
@@ -4742,6 +4986,159 @@ class KitchenCookingPanel extends LitElement {
         color: var(--secondary-text-color);
         font-size: 16px;
       }
+
+      /* History styles */
+      .history-toggle {
+        text-align: center;
+        margin-top: 16px;
+      }
+
+      .history-btn {
+        padding: 12px 24px;
+        border: 2px solid var(--divider-color);
+        border-radius: 8px;
+        background: transparent;
+        cursor: pointer;
+        font-size: 14px;
+        color: var(--primary-text-color);
+        transition: all 0.2s;
+      }
+
+      .history-btn:hover {
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+      }
+
+      .history-btn.active {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+        color: white;
+      }
+
+      .history-card {
+        margin-bottom: 12px;
+      }
+
+      .history-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+
+      .history-header h3 {
+        margin: 0;
+        font-size: 16px;
+      }
+
+      .history-date {
+        font-size: 12px;
+        color: var(--secondary-text-color);
+      }
+
+      .history-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 8px;
+      }
+
+      .history-detail {
+        font-size: 12px;
+        background: var(--primary-background-color);
+        padding: 4px 8px;
+        border-radius: 4px;
+      }
+
+      .history-notes {
+        font-size: 13px;
+        padding: 8px;
+        background: var(--primary-background-color);
+        border-radius: 4px;
+        margin-bottom: 8px;
+      }
+
+      .history-actions {
+        display: flex;
+        gap: 8px;
+      }
+
+      .small-btn {
+        padding: 6px 12px;
+        border: 1px solid var(--divider-color);
+        border-radius: 4px;
+        background: transparent;
+        cursor: pointer;
+        font-size: 12px;
+        color: var(--primary-text-color);
+      }
+
+      .small-btn:hover {
+        border-color: var(--primary-color);
+      }
+
+      .small-btn.danger:hover {
+        border-color: #f44336;
+        color: #f44336;
+      }
+
+      .no-history {
+        text-align: center;
+        color: var(--secondary-text-color);
+        padding: 24px;
+      }
+
+      /* Notes section */
+      .notes-section {
+        margin-top: 16px;
+      }
+
+      .notes-toggle {
+        width: 100%;
+        padding: 10px;
+        border: 1px dashed var(--divider-color);
+        border-radius: 8px;
+        background: transparent;
+        cursor: pointer;
+        color: var(--primary-text-color);
+        font-size: 14px;
+      }
+
+      .notes-toggle:hover {
+        border-color: var(--primary-color);
+      }
+
+      .notes-input {
+        width: 100%;
+        min-height: 80px;
+        margin-top: 8px;
+        padding: 12px;
+        border: 1px solid var(--divider-color);
+        border-radius: 8px;
+        font-size: 14px;
+        resize: vertical;
+        background: var(--card-background-color);
+        color: var(--primary-text-color);
+        font-family: inherit;
+      }
+
+      /* Temperature graph */
+      .temp-graph-container {
+        margin: 16px 0;
+        padding: 12px;
+        background: var(--primary-background-color);
+        border-radius: 8px;
+      }
+
+      .temp-graph-container h4 {
+        margin: 0 0 8px 0;
+        font-size: 14px;
+      }
+
+      .temp-graph {
+        width: 100%;
+        max-height: 120px;
+      }
     `;
   }
 }
@@ -4749,7 +5146,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "29";
+const PANEL_VERSION = "30";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

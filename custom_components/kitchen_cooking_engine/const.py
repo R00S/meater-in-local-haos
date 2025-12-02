@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 2 Dec 2025, 15:00 CET
-Last Change: v0.1.2.5 - Added TTS announcement support
+Last Updated: 2 Dec 2025, 15:30 CET
+Last Change: v0.1.2.8 - Added cook history, preferences, notes, temp graph
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "29"
+PANEL_VERSION = "30"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
@@ -71,6 +71,7 @@ SERVICE_STOP_COOK = "stop_cook"
 SERVICE_SET_TARGET = "set_target"
 SERVICE_START_REST = "start_rest"
 SERVICE_COMPLETE = "complete_session"
+SERVICE_SET_NOTES = "set_notes"
 
 # Event names
 EVENT_APPROACHING_TARGET = "kitchen_cooking_engine_approaching_target"
