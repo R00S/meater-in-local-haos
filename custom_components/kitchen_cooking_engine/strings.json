@@ -18,7 +18,7 @@
           "ambient_sensor": "Optional ambient temperature sensor for better ETA predictions (e.g., MEATER ambient)",
           "battery_sensor": "Optional battery level sensor (e.g., MEATER battery percentage)",
           "indicator_light": "Optional RGB light that changes color from blue (cold) to red (target) during cooking",
-          "notify_service": "Mobile app notify service name for push notifications (e.g., mobile_app_your_phone)",
+          "notify_service": "Find in Developer Tools → Actions → search 'notify.mobile_app'. Enter the part after 'notify.' (e.g., mobile_app_johns_iphone)",
           "temperature_unit": "Choose Celsius or Fahrenheit for display"
         }
       }
@@ -48,7 +48,7 @@
           "ambient_sensor": "Optional ambient temperature sensor for better ETA predictions",
           "battery_sensor": "Optional battery level sensor",
           "indicator_light": "Optional RGB light that changes color from blue (cold) to red (target) during cooking",
-          "notify_service": "Mobile app notify service name for push notifications (e.g., mobile_app_your_phone)",
+          "notify_service": "Find in Developer Tools → Actions → search 'notify.mobile_app'. Enter the part after 'notify.' (e.g., mobile_app_johns_iphone)",
           "temperature_unit": "Choose Celsius or Fahrenheit for display"
         }
       }
