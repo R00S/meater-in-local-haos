@@ -214,7 +214,7 @@ class CookingSessionSensor(SensorEntity):
             name=f"Kitchen Cooking Engine ({sensor_name})",
             manufacturer="Kitchen Cooking Engine",
             model="Cooking Session",
-            sw_version="0.1.2.5",
+            sw_version="0.1.2.6",
         )
 
     def _to_celsius(self, temp: float) -> float:
@@ -582,14 +582,15 @@ class CookingSessionSensor(SensorEntity):
                         "tts",
                         "speak",
                         {
-                            "entity_id": self._tts_entity,
                             "media_player_entity_id": self._media_player,
                             "message": notification["tts_message"],
                             "cache": True,
                         },
+                        target={"entity_id": self._tts_entity},
                     )
                 )
-                _LOGGER.debug("Sent TTS announcement: %s", notification["tts_message"])
+                _LOGGER.debug("Sent TTS announcement to %s via %s: %s", 
+                             self._media_player, self._tts_entity, notification["tts_message"])
             
             _LOGGER.debug("Sent notification: %s", notification["title"])
 
@@ -944,9 +945,13 @@ class CookingSessionSensor(SensorEntity):
         self._state = STATE_RESTING
         self._rest_start = dt_util.utcnow()
         
-        # Stop flashing (user acknowledged goal reached)
+        # Stop flashing and set initial rest color (red)
         if self._indicator_light:
             self._hass.async_create_task(self._stop_light_flash())
+            # Set initial rest color (hot red - will transition to white)
+            self._hass.async_create_task(
+                self._update_rest_light_color(0, self._rest_time_min)
+            )
         
         # Fire rest started event
         self._fire_event(EVENT_REST_START)
