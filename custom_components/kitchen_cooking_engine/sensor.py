@@ -72,6 +72,8 @@ _LOGGER = logging.getLogger(__name__)
 # Temperature history settings
 TEMP_HISTORY_MAX_SAMPLES = 60  # Store up to 60 samples
 TEMP_HISTORY_INTERVAL_SECONDS = 30  # Sample every 30 seconds
+MIN_RATE_CALC_TIME_MINUTES = 0.5  # Minimum time for reliable rate calculation
+ETA_CHANGE_THRESHOLD_MINUTES = 2  # Fire event if ETA changes by this much
 
 
 async def async_setup_entry(
@@ -180,6 +182,12 @@ class CookingSessionSensor(SensorEntity):
             model="Cooking Session",
             sw_version="0.1.2.0",
         )
+
+    def _to_celsius(self, temp: float) -> float:
+        """Convert temperature to Celsius if needed."""
+        if self._temp_unit != TEMP_CELSIUS:
+            return (temp - 32) * 5 / 9
+        return temp
 
     @property
     def native_value(self) -> str:
@@ -364,10 +372,8 @@ class CookingSessionSensor(SensorEntity):
         if self._current_temp is None:
             return
 
-        # Convert to Celsius if needed for comparison
-        current_c = self._current_temp
-        if self._temp_unit != TEMP_CELSIUS:
-            current_c = (self._current_temp - 32) * 5 / 9
+        # Convert to Celsius for comparison
+        current_c = self._to_celsius(self._current_temp)
 
         # Calculate progress (0-100%)
         if self._min_temp_c and self._target_temp_c:
@@ -456,9 +462,7 @@ class CookingSessionSensor(SensorEntity):
         if not self._current_temp or not self._target_temp_c:
             return None
 
-        current_c = self._current_temp
-        if self._temp_unit != TEMP_CELSIUS:
-            current_c = (self._current_temp - 32) * 5 / 9
+        current_c = self._to_celsius(self._current_temp)
 
         temp_diff = self._target_temp_c - current_c
         if temp_diff <= 0:
@@ -478,21 +482,18 @@ class CookingSessionSensor(SensorEntity):
                 first = recent_samples[0]
                 last = recent_samples[-1]
                 
-                first_temp_c = first["temp"]
-                last_temp_c = last["temp"]
-                if self._temp_unit != TEMP_CELSIUS:
-                    first_temp_c = (first["temp"] - 32) * 5 / 9
-                    last_temp_c = (last["temp"] - 32) * 5 / 9
+                first_temp_c = self._to_celsius(first["temp"])
+                last_temp_c = self._to_celsius(last["temp"])
                 
                 temp_change = last_temp_c - first_temp_c
                 time_diff_minutes = (last["time"] - first["time"]).total_seconds() / 60
                 
-                if time_diff_minutes > 0.5 and temp_change > 0:
+                if time_diff_minutes > MIN_RATE_CALC_TIME_MINUTES and temp_change > 0:
                     rise_rate = temp_change / time_diff_minutes  # °C per minute
                     eta = int(temp_diff / rise_rate)
                     
-                    # Check if ETA changed significantly (by more than 2 minutes)
-                    if self._last_eta is not None and abs(eta - self._last_eta) > 2:
+                    # Check if ETA changed significantly
+                    if self._last_eta is not None and abs(eta - self._last_eta) > ETA_CHANGE_THRESHOLD_MINUTES:
                         self._fire_event(EVENT_ETA_CHANGED, {
                             "previous_eta": self._last_eta,
                             "new_eta": eta,
