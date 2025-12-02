@@ -436,7 +436,7 @@ class CookingSessionSensor(SensorEntity):
             pass
 
     def _fire_event(self, event_type: str, extra_data: dict | None = None) -> None:
-        """Fire an event with current cooking session data."""
+        """Fire an event with current cooking session data and send notifications."""
         event_data = {
             "entity_id": self.entity_id,
             "protein": self._protein,
@@ -465,6 +465,50 @@ class CookingSessionSensor(SensorEntity):
             
         self._hass.bus.async_fire(event_type, event_data)
         _LOGGER.debug("Fired event %s with data: %s", event_type, event_data)
+        
+        # Send Home Assistant notifications for important events
+        self._send_notification(event_type, event_data)
+
+    def _send_notification(self, event_type: str, event_data: dict) -> None:
+        """Send Home Assistant persistent notification for cooking events."""
+        notification_map = {
+            EVENT_APPROACHING_TARGET: {
+                "title": "🔥 Almost There!",
+                "message": f"{event_data.get('cut_display', 'Your food')} is approaching target temperature ({event_data.get('target_temp_c')}°C)",
+                "notification_id": f"cooking_approaching_{self.entity_id}",
+            },
+            EVENT_FIVE_MINUTES_REMAINING: {
+                "title": "⏰ 5 Minutes Remaining!",
+                "message": f"{event_data.get('cut_display', 'Your food')} will reach target in about 5 minutes",
+                "notification_id": f"cooking_5min_{self.entity_id}",
+            },
+            EVENT_GOAL_REACHED: {
+                "title": "✅ Target Reached!",
+                "message": f"{event_data.get('cut_display', 'Your food')} has reached {event_data.get('target_temp_c')}°C - Time to rest!",
+                "notification_id": f"cooking_goal_{self.entity_id}",
+            },
+            EVENT_REST_COMPLETE: {
+                "title": "🍽️ Ready to Serve!",
+                "message": f"{event_data.get('cut_display', 'Your food')} has finished resting and is ready to serve!",
+                "notification_id": f"cooking_complete_{self.entity_id}",
+            },
+        }
+        
+        notification = notification_map.get(event_type)
+        if notification:
+            # Create persistent notification in Home Assistant
+            self._hass.async_create_task(
+                self._hass.services.async_call(
+                    "persistent_notification",
+                    "create",
+                    {
+                        "title": notification["title"],
+                        "message": notification["message"],
+                        "notification_id": notification["notification_id"],
+                    },
+                )
+            )
+            _LOGGER.debug("Sent notification: %s", notification["title"])
 
     def _calculate_eta(self) -> int | None:
         """Estimate time to reach target temperature.
