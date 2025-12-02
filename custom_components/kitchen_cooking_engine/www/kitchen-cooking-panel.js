@@ -3589,10 +3589,20 @@ class KitchenCookingPanel extends LitElement {
     // Force re-render when tab becomes visible again
     this._visibilityHandler = () => {
       if (document.visibilityState === 'visible') {
+        // Force multiple re-renders to ensure UI is properly updated
         this.requestUpdate();
+        // Also trigger after a short delay for any async state
+        setTimeout(() => this.requestUpdate(), 100);
+        setTimeout(() => this.requestUpdate(), 500);
       }
     };
     document.addEventListener('visibilitychange', this._visibilityHandler);
+    
+    // Also handle focus event for additional reliability
+    this._focusHandler = () => {
+      this.requestUpdate();
+    };
+    window.addEventListener('focus', this._focusHandler);
   }
 
   disconnectedCallback() {
@@ -3601,6 +3611,10 @@ class KitchenCookingPanel extends LitElement {
     if (this._visibilityHandler) {
       document.removeEventListener('visibilitychange', this._visibilityHandler);
       this._visibilityHandler = null;
+    }
+    if (this._focusHandler) {
+      window.removeEventListener('focus', this._focusHandler);
+      this._focusHandler = null;
     }
   }
 
@@ -3880,6 +3894,11 @@ class KitchenCookingPanel extends LitElement {
       this._selectedDoneness = savedPref.doneness;
       if (savedPref.cooking_method) {
         this._selectedMethod = savedPref.cooking_method;
+      }
+      // Restore fine-tuned temperature if saved
+      if (savedPref.custom_temp_c) {
+        this._customTargetTempC = savedPref.custom_temp_c;
+        this._showTempAdjust = true;  // Show temp adjust section since user had custom temp
       }
       return;
     }
@@ -4349,21 +4368,27 @@ class KitchenCookingPanel extends LitElement {
     const height = 120;
     const padding = 20;
     
-    // Find min/max temps
-    const tipTemps = history.map(h => h.tip_temp).filter(t => t != null);
-    const ambientTemps = history.map(h => h.ambient_temp).filter(t => t != null);
+    // Dynamic scaling: show only the last N samples based on cook time
+    // Goal: keep ~3/4 of the graph filled with data
+    // This gives a "sliding window" effect as the cook progresses
+    const maxSamplesToShow = Math.max(10, Math.min(60, Math.ceil(history.length * 1.33)));
+    const displayHistory = history.slice(-maxSamplesToShow);
+    
+    // Find min/max temps from displayed history
+    const tipTemps = displayHistory.map(h => h.tip_temp).filter(t => t != null);
+    const ambientTemps = displayHistory.map(h => h.ambient_temp).filter(t => t != null);
     const allTemps = [...tipTemps, ...ambientTemps];
     if (targetTemp != null) allTemps.push(targetTemp);
     if (allTemps.length === 0) return '';
     const minTemp = Math.min(...allTemps) - 5;
     const maxTemp = Math.max(...allTemps) + 5;
     
-    const scaleX = (i) => padding + (i / (history.length - 1)) * (width - 2 * padding);
+    const scaleX = (i) => padding + (i / (displayHistory.length - 1)) * (width - 2 * padding);
     const scaleY = (temp) => height - padding - ((temp - minTemp) / (maxTemp - minTemp)) * (height - 2 * padding);
     
     // Build tip temp path
     let tipPath = '';
-    history.forEach((h, i) => {
+    displayHistory.forEach((h, i) => {
       if (h.tip_temp != null) {
         const x = scaleX(i);
         const y = scaleY(h.tip_temp);
@@ -4373,7 +4398,7 @@ class KitchenCookingPanel extends LitElement {
     
     // Build ambient temp path
     let ambientPath = '';
-    history.forEach((h, i) => {
+    displayHistory.forEach((h, i) => {
       if (h.ambient_temp != null) {
         const x = scaleX(i);
         const y = scaleY(h.ambient_temp);
@@ -4442,7 +4467,9 @@ class KitchenCookingPanel extends LitElement {
                 <span class="history-detail">🎯 ${(cook.doneness || '').replace('_', ' ')}</span>
                 <span class="history-detail">🍳 ${(cook.cooking_method || '').replace(/_/g, ' ')}</span>
                 <span class="history-detail">🌡️ ${cook.target_temp_c}°C target</span>
-                ${cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C final</span>` : ''}
+                ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C peak</span>` : ''}
+                ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C after rest</span>` : 
+                  cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C final</span>` : ''}
               </div>
               ${cook.notes ? html`
                 <div class="history-notes">
@@ -5151,7 +5178,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "30";
+const PANEL_VERSION = "31";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

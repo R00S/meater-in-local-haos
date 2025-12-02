@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 2 Dec 2025, 15:30 CET
-Last Change: v0.1.2.8 - Added cook history, preferences, notes, temp graph
+Last Updated: 2 Dec 2025, 19:30 CET
+Last Change: v0.1.2.9 - Remember fine-tuning, dynamic graph scale, peak/final temps
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "30"
+PANEL_VERSION = "31"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

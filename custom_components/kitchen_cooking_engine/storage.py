@@ -169,18 +169,23 @@ async def async_set_cut_preference(
     custom_temp_c: int | None = None,
     cooking_method: str | None = None,
 ) -> bool:
-    """Set user preference for a specific cut."""
+    """Set user preference for a specific cut including fine-tuned temperature."""
     preferences = await async_load_user_preferences(hass)
     
     if "cut_preferences" not in preferences:
         preferences["cut_preferences"] = {}
     
-    preferences["cut_preferences"][str(cut_id)] = {
+    pref_data = {
         "doneness": doneness,
-        "custom_temp_c": custom_temp_c,
         "cooking_method": cooking_method,
         "last_used": dt_util.utcnow().isoformat(),
     }
+    
+    # Only store custom_temp_c if it's set (user fine-tuned)
+    if custom_temp_c is not None:
+        pref_data["custom_temp_c"] = custom_temp_c
+    
+    preferences["cut_preferences"][str(cut_id)] = pref_data
     
     return await async_save_user_preferences(hass, preferences)
 

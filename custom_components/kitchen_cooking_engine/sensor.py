@@ -199,6 +199,9 @@ class CookingSessionSensor(SensorEntity):
         self._last_eta: int | None = None
         self._five_min_alert_fired: bool = False
         self._cook_notes: str = ""  # Notes for current cook
+        self._custom_target_temp_c: int | None = None  # User fine-tuned target
+        self._peak_temp_c: float | None = None  # Peak temp during cook
+        self._final_temp_after_rest: float | None = None  # Temp when rest completed
         
         # Timer for rest countdown
         self._rest_timer_unsub = None
@@ -219,7 +222,7 @@ class CookingSessionSensor(SensorEntity):
             name=f"Kitchen Cooking Engine ({sensor_name})",
             manufacturer="Kitchen Cooking Engine",
             model="Cooking Session",
-            sw_version="0.1.2.6",
+            sw_version="0.1.2.9",
         )
 
     def _to_celsius(self, temp: float) -> float:
@@ -343,6 +346,12 @@ class CookingSessionSensor(SensorEntity):
         try:
             new_temp = float(new_state.state)
             self._current_temp = new_temp
+            
+            # Track peak temperature during cook
+            if self._state in (STATE_COOKING, STATE_APPROACHING, STATE_GOAL_REACHED):
+                current_c = self._to_celsius(new_temp)
+                if self._peak_temp_c is None or current_c > self._peak_temp_c:
+                    self._peak_temp_c = current_c
             
             # Record temperature history for ETA calculation and graphing
             if self._state in (STATE_COOKING, STATE_APPROACHING, STATE_GOAL_REACHED, STATE_RESTING):
@@ -857,7 +866,12 @@ class CookingSessionSensor(SensorEntity):
             )
         
         # Check if rest time is complete (using minimum rest time)
-        if rest_elapsed >= self._rest_time_min:
+        # Only fire event once by checking if we haven't recorded final temp yet
+        if rest_elapsed >= self._rest_time_min and self._final_temp_after_rest is None:
+            # Record final temperature when rest completes
+            if self._current_temp:
+                self._final_temp_after_rest = self._to_celsius(self._current_temp)
+            
             self._fire_event(EVENT_REST_COMPLETE)
             # Start flashing the light to indicate food is ready
             if self._indicator_light:
@@ -889,6 +903,7 @@ class CookingSessionSensor(SensorEntity):
         carryover_temp_c: int,
         cut_display: str | None = None,
         cut_id: int | None = None,
+        custom_target_temp_c: int | None = None,
     ) -> None:
         """Start a new cooking session."""
         self._protein = protein
@@ -907,6 +922,7 @@ class CookingSessionSensor(SensorEntity):
         self._rest_time_max = rest_time_max
         self._usda_safe = usda_safe
         self._carryover_temp_c = carryover_temp_c
+        self._custom_target_temp_c = custom_target_temp_c  # Store for preferences
         self._session_start = datetime.now()
         self._rest_start = None
         self._state = STATE_COOKING
@@ -916,6 +932,8 @@ class CookingSessionSensor(SensorEntity):
         self._cook_notes = ""  # Clear notes
         self._last_eta = None
         self._five_min_alert_fired = False
+        self._peak_temp_c = None  # Track peak temperature during cook
+        self._final_temp_after_rest = None  # Track temp when rest completed
         
         # Save indicator light state and take control
         if self._indicator_light:
@@ -1035,13 +1053,16 @@ class CookingSessionSensor(SensorEntity):
             "temp_history": self._full_cook_history,
             "notes": self._cook_notes,
             "final_temp": self._current_temp,
+            "peak_temp_c": self._peak_temp_c,  # Highest temp reached during cook
+            "final_temp_after_rest": self._final_temp_after_rest,  # Temp when rest completed
+            "custom_target_temp_c": self._custom_target_temp_c,  # User fine-tuned temp if any
         }
         
         await async_add_cook_to_history(self._hass, cook_data)
         _LOGGER.info("Saved cook to history: %s", self._cut_display)
 
     async def _save_cut_preference(self) -> None:
-        """Save user preference for this cut."""
+        """Save user preference for this cut including fine-tuned temperature."""
         from .storage import async_set_cut_preference
         
         if self._cut_id:
@@ -1049,7 +1070,7 @@ class CookingSessionSensor(SensorEntity):
                 self._hass,
                 self._cut_id,
                 self._doneness,
-                None,  # custom_temp_c - not tracked yet
+                self._custom_target_temp_c,  # Save fine-tuned temperature
                 self._cooking_method,
             )
             _LOGGER.debug("Saved cut preference for cut_id: %s", self._cut_id)
