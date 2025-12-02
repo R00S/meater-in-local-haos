@@ -2,7 +2,18 @@
  * Kitchen Cooking Engine Panel
  * 
  * ╔══════════════════════════════════════════════════════════════════════════════╗
- * ║  ⚠️  WARNING: THIS FILE IS AUTO-REGENERATED ON USER'S HAOS INSTALLATION  ⚠️  ║
+ * ║  ⛔ STOP! BEFORE EDITING THIS FILE, READ THIS:                              ║
+ * ╠══════════════════════════════════════════════════════════════════════════════╣
+ * ║                                                                              ║
+ * ║  If you edit ANYTHING in this file, you MUST ALSO update PANEL_VERSION      ║
+ * ║  in BOTH files to match:                                                    ║
+ * ║                                                                              ║
+ * ║    1. const.py line 11:  PANEL_VERSION = "XX"                               ║
+ * ║    2. This file (bottom): const PANEL_VERSION = "XX";                       ║
+ * ║                                                                              ║
+ * ║  If they don't match, YOUR CHANGES WILL NOT WORK!                           ║
+ * ║  (Home Assistant will look for wrong custom element name)                   ║
+ * ║                                                                              ║
  * ╠══════════════════════════════════════════════════════════════════════════════╣
  * ║                                                                              ║
  * ║  When a user installs/updates this integration, generate_frontend_data.py   ║
@@ -10,17 +21,10 @@
  * ║    1. Replaces the header and data constants (DONENESS_OPTIONS, etc.)       ║
  * ║    2. PRESERVES everything from "class KitchenCookingPanel" onwards         ║
  * ║                                                                              ║
- * ║  This means:                                                                 ║
- * ║    - Changes to DATA CONSTANTS here will be LOST on user's system           ║
- * ║    - Changes to CLASS CODE here WILL be deployed when user updates          ║
- * ║                                                                              ║
  * ║  FOR AI AGENTS / DEVELOPERS:                                                 ║
  * ║    - To change cooking data: Edit cooking_data.py or swedish_cooking_data.py║
  * ║    - To change UI/behavior: Edit the class code below (it gets preserved)   ║
- * ║    - After editing class code: COMMIT the changes to the repo               ║
- * ║    - The user must UPDATE their integration to get class code changes       ║
- * ║                                                                              ║
- * ║  See generate_frontend_data.py for the regeneration logic.                  ║
+ * ║    - After editing: Update PANEL_VERSION in BOTH const.py AND this file     ║
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 

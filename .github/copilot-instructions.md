@@ -1,157 +1,124 @@
-# MEATER BLE Proxy - Copilot Instructions
+# Kitchen Cooking Engine - Copilot Instructions
+
+## 🚨 CRITICAL: READ THIS FIRST - PANEL_VERSION SYNC
+
+When editing `kitchen-cooking-panel.js`, you MUST keep PANEL_VERSION synchronized:
+
+| File | Variable |
+|------|----------|
+| `custom_components/kitchen_cooking_engine/const.py` | `PANEL_VERSION = "XX"` |
+| `custom_components/kitchen_cooking_engine/www/kitchen-cooking-panel.js` | `const PANEL_VERSION = "XX";` |
+
+**If these don't match, the panel will NOT load on the user's Home Assistant!**
+
+The safest approach is to run `generate_frontend_data.py` which syncs both automatically.
+
+---
 
 ## Project Overview
 
-This is an ESPHome configuration for an ESP32 device that acts as a BLE proxy between a MEATER+ temperature probe and both Home Assistant and the MEATER phone app simultaneously. The MEATER+ device only allows one BLE connection at a time, so this proxy enables dual connectivity by:
+This is a Home Assistant custom integration for kitchen temperature cooking (MEATER probes, etc.). It provides:
+- Temperature monitoring with cooking sessions
+- Meat/protein selection with doneness levels
+- Dynamic ETA calculation
+- Notifications (mobile, TTS, persistent)
+- Indicator light control
+- Cook history with notes
 
-1. Acting as a BLE client to connect to the real MEATER+ device
-2. Acting as a BLE server that emulates a MEATER device for phone apps
-3. Forwarding all temperature, battery, and firmware data bidirectionally
+## Key Files
 
-## Technology Stack
+### Backend (Python)
+| File | Purpose |
+|------|---------|
+| `__init__.py` | Integration setup, panel registration |
+| `sensor.py` | Cooking session sensor entity |
+| `cooking_data.py` | International meat/cut data (source of truth) |
+| `swedish_cooking_data.py` | Swedish meat/cut data |
+| `const.py` | Constants including PANEL_VERSION |
+| `generate_frontend_data.py` | Regenerates JS data from Python |
 
-- **ESPHome**: YAML-based configuration framework for ESP32/ESP8266 devices
-- **ESP32**: Microcontroller with BLE capabilities (specifically ESP32-C3-DevKitM-1)
-- **ESP-IDF**: ESP32 development framework (used instead of Arduino)
-- **BLE (Bluetooth Low Energy)**: For communication with MEATER device and phone apps
-- **C++**: Custom BLE server implementation in header file
-- **Home Assistant**: Integration for smart home monitoring
+### Frontend (JavaScript)
+| File | Purpose |
+|------|---------|
+| `www/kitchen-cooking-panel.js` | Lovelace panel UI |
 
-## Key Files and Their Purposes
+## Frontend Panel Behavior
 
-### Configuration Files
+The `kitchen-cooking-panel.js` file has **special regeneration behavior**:
 
-- **`meater.yaml`**: Main ESPHome configuration file
-  - Defines ESP32 board and framework settings
-  - Configures WiFi, API, and OTA update settings
-  - Sets up BLE client to connect to MEATER device
-  - Defines sensors for temperature, battery, and RSSI
-  - Contains lambda functions to forward data to BLE server
-  - Uses secrets for sensitive data (WiFi credentials, MAC address, etc.)
+When a user installs/updates via HACS, `generate_frontend_data.py` runs and:
+1. **REPLACES**: Header and data constants (DONENESS_OPTIONS, MEAT_CATEGORIES, etc.)
+2. **PRESERVES**: Everything from `class KitchenCookingPanel` onwards
 
-- **`secrets.yaml.example`**: Template for user secrets
-  - Shows structure of required secrets without exposing actual values
-  - Users copy this to `secrets.yaml` and fill in their specific values
+### What This Means For You
 
-- **`secrets.yaml`**: User's actual secrets (gitignored, never committed)
-  - WiFi SSID and password
-  - API encryption key
-  - OTA password
-  - MEATER device MAC address
-  - Fallback AP credentials
+| What you want to change | Where to edit |
+|------------------------|---------------|
+| Cooking data (temps, cuts, doneness) | `cooking_data.py` or `swedish_cooking_data.py` |
+| UI behavior, rendering, graphs | Class code in `kitchen-cooking-panel.js` |
+| **Any JS change** | Also update PANEL_VERSION in BOTH files |
 
-### Code Files
+### The PANEL_VERSION Trap (Why Your Changes Don't Work)
 
-- **`includes/meater_ble_server.h`**: Custom C++ BLE server implementation
-  - Implements GATT server using ESP32 BLE APIs
-  - Emulates MEATER+ device services and characteristics
-  - Handles BLE connections, reads, writes, and notifications
-  - Forwards temperature and battery data to connected phone apps
-  - Uses ESP32-IDF BLE stack directly (not Arduino BLE library)
+If you edit the JS file but the PANEL_VERSION in `const.py` is different:
+- Home Assistant looks for `kitchen-cooking-panel-vXX` (from const.py)
+- But the JS registers `kitchen-cooking-panel-vYY` (from the JS file)
+- **Result: Your changes are INVISIBLE to the user**
 
-### Documentation
+This is why 10+ commits of graph changes had no effect - the version was mismatched.
 
-- **`README.md`**: Comprehensive user documentation
-  - Hardware requirements and compatibility
-  - Setup instructions
-  - Configuration guide
-  - Troubleshooting section
-  - Technical details about BLE services
+---
 
-## MEATER BLE Protocol
+## Safe Workflow for Frontend Changes
 
-The MEATER device exposes these BLE services and characteristics:
+### Option 1: Edit JS Only (When You Need to)
+1. Edit `www/kitchen-cooking-panel.js`
+2. Find the PANEL_VERSION at the bottom of the file
+3. **Immediately** edit `const.py` to match
+4. Commit both files together
 
-### MEATER Service (`a75cc7fc-c956-488f-ac2a-2dbc08b63a04`)
-- **Temperature Characteristic** (`7edda774-045e-4bbf-909b-45d1991a2876`): 
-  - 8-byte payload with raw temperature data
-  - Includes tip temp, ambient temp, and calculation parameters
-  - Supports read and notify operations
-  
-- **Battery Characteristic** (`2adb4877-68d8-4884-bd3c-d83853bf27b8`):
-  - 2-byte payload for battery level
-  - Supports read and notify operations
+### Option 2: Run the Generator (Safer)
+```bash
+cd custom_components/kitchen_cooking_engine
+python3 generate_frontend_data.py
+```
+This regenerates data from Python AND syncs PANEL_VERSION automatically.
 
-### Device Information Service (`180A`)
-- **Firmware Revision** (`00002a26-0000-1000-8000-00805f9b34fb`):
-  - String value with firmware version
-  - Read-only
+---
 
-## Development Guidelines
+## Backend Changes
 
-### Making Changes to BLE Implementation
+For Python changes:
+1. Edit the relevant `.py` file
+2. If adding new attributes to the sensor, also update `services.yaml`
+3. Update `manifest.json` version number
 
-- The BLE server code in `includes/meater_ble_server.h` uses ESP-IDF APIs directly
-- UUIDs must be in reverse byte order for ESP32 (compared to standard UUID format)
-- All BLE operations are asynchronous with callback-based event handling
-- Logging uses ESP-IDF macros: `ESP_LOGI`, `ESP_LOGD`, `ESP_LOGE`
+---
 
-### ESPHome Configuration Changes
+## Version Numbering
 
-- Always use secrets for sensitive data: `!secret secret_name`
-- Lambda functions must capture IDs properly: `id(sensor_name)`
-- BLE client sensors use characteristic UUIDs to subscribe to notifications
-- Data forwarding happens in lambda functions within sensor definitions
+Format: `v0.1.X.YY`
+- `0` = Beta
+- `1` = First feature batch
+- `X` = Agent number (increments when a new agent takes over)
+- `YY` = Release number with current agent
 
-### Testing and Validation
+---
 
-- **No automated tests**: This is an embedded hardware project
-- **Testing requires physical hardware**: ESP32 board and MEATER probe
-- **Testing workflow**:
-  1. Make configuration changes
-  2. Compile with: `esphome compile meater.yaml`
-  3. Flash to ESP32: `esphome run meater.yaml`
-  4. Monitor logs: `esphome logs meater.yaml`
-  5. Test with real MEATER device and phone app
+## Testing
 
-### Build and Deployment
+User tests via HACS:
+1. Create a GitHub release from the branch
+2. User downloads in HACS
+3. User restarts Home Assistant
 
-- **Build**: ESPHome compiles YAML + C++ to ESP32 firmware
-- **Flash**: Initial flash via USB, subsequent updates via OTA (Over-The-Air)
-- **Dependencies**: Managed automatically by ESPHome (ESP-IDF, BLE libraries)
-- **Build artifacts**: Created in `.esphome/` and `build/` (gitignored)
+No automated tests exist - all testing is manual on real HAOS.
 
-## Common Tasks
+---
 
-### Adding New Sensors
-1. Add sensor definition in `meater.yaml` under appropriate platform
-2. Use `ble_client` platform for reading from MEATER device
-3. Add lambda to forward data to BLE server if needed
-4. Test with physical hardware
+## Common Mistakes to Avoid
 
-### Modifying BLE Server Behavior
-1. Edit `includes/meater_ble_server.h`
-2. Consider event-driven architecture (callbacks)
-3. Update characteristic values and trigger notifications
-4. Rebuild and reflash to test
-
-### Adding New Secrets
-1. Update `secrets.yaml.example` with placeholder
-2. Update documentation in README.md
-3. Add usage in `meater.yaml` with `!secret` syntax
-
-## Important Constraints
-
-- **Memory limits**: ESP32-C3 has 4MB flash, code uses ~1.5-2MB
-- **BLE connections**: Configured for max 4 simultaneous connections
-- **Range**: BLE range typically 10-30 meters depending on environment
-- **Power**: ESP32 must be continuously powered (not battery operated)
-- **Real-time**: BLE notifications are near real-time but not deterministic
-
-## Security Considerations
-
-- Never commit `secrets.yaml` (it's gitignored)
-- API encryption key required for Home Assistant connection
-- OTA password protects firmware updates
-- Fallback AP password for emergency WiFi access
-- BLE communication is not encrypted (standard MEATER limitation)
-
-## When Helping with Code Changes
-
-1. **Preserve existing functionality**: This is working code, make minimal changes
-2. **Test considerations**: Remember this requires physical hardware to test
-3. **Documentation**: Update README.md if user-facing changes are made
-4. **Secrets**: Never expose or commit actual secret values
-5. **ESPHome patterns**: Follow existing patterns for sensors and lambdas
-6. **BLE protocol**: Respect MEATER's existing BLE protocol structure
-7. **ESP32-specific**: Use ESP-IDF APIs, not Arduino APIs for BLE
+1. ❌ Editing JS file without updating PANEL_VERSION in const.py
+2. ❌ Editing data constants in JS (they get overwritten on install)
+3. ❌ Forgetting to commit both const.py and JS file together
+4. ❌ Using deprecated HA APIs (check HA 2024.1.0+ compatibility)

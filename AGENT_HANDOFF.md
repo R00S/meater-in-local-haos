@@ -1,10 +1,33 @@
 # Agent Handoff Document
 
-**Last Updated:** 2 Dec 2025, 23:30 CET
+**Last Updated:** 3 Dec 2025, 00:00 CET
 
-## 🚨 CRITICAL: Frontend Panel Regeneration Behavior
+## ⛔ CRITICAL: PANEL_VERSION SYNC (READ FIRST!)
 
-### ⚠️ READ THIS FIRST - How kitchen-cooking-panel.js Works
+**THIS IS THE #1 CAUSE OF FRONTEND BUGS:** If you edit `kitchen-cooking-panel.js`, you MUST also update the PANEL_VERSION in `const.py` to match!
+
+| File | What to sync |
+|------|-------------|
+| `const.py` line 11 | `PANEL_VERSION = "34"` |
+| `kitchen-cooking-panel.js` (near bottom) | `const PANEL_VERSION = "34";` |
+
+**If these don't match:**
+- Home Assistant looks for custom element `kitchen-cooking-panel-v34`
+- But JS only registers `kitchen-cooking-panel-v35`
+- **Result: YOUR CHANGES ARE INVISIBLE** (this caused 10+ commits of graph changes to not work)
+
+**Safe workflow:**
+1. Edit JS file
+2. **IMMEDIATELY** edit const.py to match the JS PANEL_VERSION
+3. Commit BOTH files together
+
+Or run `python3 generate_frontend_data.py` which syncs both automatically.
+
+---
+
+## 🚨 Frontend Panel Regeneration Behavior
+
+### How kitchen-cooking-panel.js Works
 
 The file `custom_components/kitchen_cooking_engine/www/kitchen-cooking-panel.js` has **special regeneration behavior** that you MUST understand:
 
