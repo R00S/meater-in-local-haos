@@ -1,14 +1,33 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
+ * ╔══════════════════════════════════════════════════════════════════════════════╗
+ * ║  ⚠️  WARNING: THIS FILE IS AUTO-REGENERATED ON USER'S HAOS INSTALLATION  ⚠️  ║
+ * ╠══════════════════════════════════════════════════════════════════════════════╣
+ * ║                                                                              ║
+ * ║  When a user installs/updates this integration, generate_frontend_data.py   ║
+ * ║  runs and REGENERATES this file. It:                                        ║
+ * ║    1. Replaces the header and data constants (DONENESS_OPTIONS, etc.)       ║
+ * ║    2. PRESERVES everything from "class KitchenCookingPanel" onwards         ║
+ * ║                                                                              ║
+ * ║  This means:                                                                 ║
+ * ║    - Changes to DATA CONSTANTS here will be LOST on user's system           ║
+ * ║    - Changes to CLASS CODE here WILL be deployed when user updates          ║
+ * ║                                                                              ║
+ * ║  FOR AI AGENTS / DEVELOPERS:                                                 ║
+ * ║    - To change cooking data: Edit cooking_data.py or swedish_cooking_data.py║
+ * ║    - To change UI/behavior: Edit the class code below (it gets preserved)   ║
+ * ║    - After editing class code: COMMIT the changes to the repo               ║
+ * ║    - The user must UPDATE their integration to get class code changes       ║
+ * ║                                                                              ║
+ * ║  See generate_frontend_data.py for the regeneration logic.                  ║
+ * ║                                                                              ║
+ * ╚══════════════════════════════════════════════════════════════════════════════╝
+ * 
  * AUTO-REGENERATED: 02 Dec 2025, 12:07 CET
  * Data generated from cooking_data.py and swedish_cooking_data.py
  * 
- * NOTE: This file's data section is regenerated at install/update time.
- *       Do not manually edit the data constants - they will be overwritten.
- *       Temperature values are suggestions based on cooking style, not just safety.
- * 
- * A custom panel for the Kitchen Cooking Engine integration.
+ * Temperature values are suggestions based on cooking style, not just safety.
  */
 
 import {

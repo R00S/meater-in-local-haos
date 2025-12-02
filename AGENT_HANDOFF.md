@@ -1,8 +1,35 @@
 # Agent Handoff Document
 
-**Last Updated:** 1 Dec 2025, 17:40 CET
+**Last Updated:** 2 Dec 2025, 23:30 CET
 
-## 🚨 PRIORITY TODO FOR NEXT AGENT (v0.1.1.0)
+## 🚨 CRITICAL: Frontend Panel Regeneration Behavior
+
+### ⚠️ READ THIS FIRST - How kitchen-cooking-panel.js Works
+
+The file `custom_components/kitchen_cooking_engine/www/kitchen-cooking-panel.js` has **special regeneration behavior** that you MUST understand:
+
+When a user installs/updates this integration, `generate_frontend_data.py` runs and **REGENERATES** the panel file:
+
+1. **REPLACED on user's system**: The header and all data constants (DONENESS_OPTIONS, MEAT_CATEGORIES, etc.)
+2. **PRESERVED on user's system**: Everything from `class KitchenCookingPanel` onwards (all the UI/behavior code)
+
+**This means:**
+- ❌ Changes to DATA CONSTANTS in kitchen-cooking-panel.js will be LOST on user's installation
+- ✅ Changes to CLASS CODE in kitchen-cooking-panel.js WILL be deployed when user updates
+
+**For AI Agents / Developers:**
+| What you want to change | Where to edit |
+|------------------------|---------------|
+| Cooking data (temps, cuts, doneness) | `cooking_data.py` or `swedish_cooking_data.py` |
+| UI behavior, rendering, graph code | Class code in `kitchen-cooking-panel.js` (it gets preserved) |
+
+**After editing class code:** You MUST COMMIT the changes to the repo. The user must UPDATE their integration to get class code changes.
+
+See `generate_frontend_data.py` for the regeneration logic (specifically the `regenerate_panel()` function).
+
+---
+
+## 🚨 PRIORITY TODO FOR NEXT AGENT (v0.1.2.x)
 
 The following items are the **FIRST PRIORITY** for the next agent session:
 
