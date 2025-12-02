@@ -4368,11 +4368,22 @@ class KitchenCookingPanel extends LitElement {
     const height = 120;
     const padding = 20;
     
-    // Dynamic scaling: show only the last N samples based on cook time
-    // Goal: keep ~3/4 of the graph filled with data
-    // This gives a "sliding window" effect as the cook progresses
-    const maxSamplesToShow = Math.max(10, Math.min(60, Math.ceil(history.length * 1.33)));
-    const displayHistory = history.slice(-maxSamplesToShow);
+    // Dynamic X-axis scaling based on cook duration
+    // Early in cook: show all data points spread across full width
+    // As cook progresses: keep graph ~75% filled by adjusting visible window
+    // This gives meaningful visual feedback at all stages
+    
+    let displayHistory;
+    if (history.length <= 15) {
+      // Early in cook - show all data, spread across full width
+      displayHistory = history;
+    } else {
+      // Later in cook - show a sliding window that keeps graph ~75% utilized
+      // Calculate how many samples to show to keep graph looking good
+      const targetFillRatio = 0.75;
+      const samplesToShow = Math.max(15, Math.floor(history.length / targetFillRatio));
+      displayHistory = history.slice(-Math.min(samplesToShow, 60));
+    }
     
     // Find min/max temps from displayed history
     const tipTemps = displayHistory.map(h => h.tip_temp).filter(t => t != null);
@@ -4380,11 +4391,19 @@ class KitchenCookingPanel extends LitElement {
     const allTemps = [...tipTemps, ...ambientTemps];
     if (targetTemp != null) allTemps.push(targetTemp);
     if (allTemps.length === 0) return '';
-    const minTemp = Math.min(...allTemps) - 5;
-    const maxTemp = Math.max(...allTemps) + 5;
     
-    const scaleX = (i) => padding + (i / (displayHistory.length - 1)) * (width - 2 * padding);
-    const scaleY = (temp) => height - padding - ((temp - minTemp) / (maxTemp - minTemp)) * (height - 2 * padding);
+    // Add some padding to temp range for visual clarity
+    const dataMinTemp = Math.min(...allTemps);
+    const dataMaxTemp = Math.max(...allTemps);
+    const tempRange = dataMaxTemp - dataMinTemp;
+    const minTemp = dataMinTemp - Math.max(5, tempRange * 0.1);
+    const maxTemp = dataMaxTemp + Math.max(5, tempRange * 0.1);
+    
+    // Handle edge case where all temps are the same
+    const effectiveMaxTemp = maxTemp === minTemp ? maxTemp + 10 : maxTemp;
+    
+    const scaleX = (i) => padding + (i / Math.max(1, displayHistory.length - 1)) * (width - 2 * padding);
+    const scaleY = (temp) => height - padding - ((temp - minTemp) / (effectiveMaxTemp - minTemp)) * (height - 2 * padding);
     
     // Build tip temp path
     let tipPath = '';
@@ -4412,7 +4431,7 @@ class KitchenCookingPanel extends LitElement {
       <svg viewBox="0 0 ${width} ${height}" class="temp-graph">
         <!-- Grid lines -->
         <line x1="${padding}" y1="${scaleY(minTemp)}" x2="${width - padding}" y2="${scaleY(minTemp)}" stroke="#ddd" stroke-width="0.5"/>
-        <line x1="${padding}" y1="${scaleY(maxTemp)}" x2="${width - padding}" y2="${scaleY(maxTemp)}" stroke="#ddd" stroke-width="0.5"/>
+        <line x1="${padding}" y1="${scaleY(effectiveMaxTemp)}" x2="${width - padding}" y2="${scaleY(effectiveMaxTemp)}" stroke="#ddd" stroke-width="0.5"/>
         
         <!-- Target line -->
         ${targetY !== null ? html`
@@ -5178,7 +5197,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "31";
+const PANEL_VERSION = "32";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
