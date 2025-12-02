@@ -18,7 +18,7 @@ This will regenerate www/kitchen-cooking-panel.js with data from the backend.
 import json
 import sys
 import os
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -145,6 +145,15 @@ def get_doneness_levels(categories):
     return doneness
 
 
+def get_cet_timestamp():
+    """Get current time in CET/CEST as a human-readable string."""
+    # CET is UTC+1, CEST is UTC+2
+    # For simplicity, use CET (UTC+1) - Central European Time
+    cet = timezone(timedelta(hours=1))
+    now_cet = datetime.now(cet)
+    return now_cet.strftime("%d %b %Y, %H:%M CET")
+
+
 def generate_js_data():
     """Generate the JavaScript data section."""
     # Convert categories
@@ -160,10 +169,12 @@ def generate_js_data():
     int_doneness = get_doneness_levels(INT_CATEGORIES)
     swe_doneness = get_doneness_levels(SWE_CATEGORIES)
     
+    cet_time = get_cet_timestamp()
+    
     lines = []
     lines.append(f"// AUTO-GENERATED DATA - DO NOT EDIT")
     lines.append(f"// Generated from cooking_data.py and swedish_cooking_data.py")
-    lines.append(f"// Last generated: {datetime.now().isoformat()}")
+    lines.append(f"// Last generated: {cet_time}")
     lines.append("")
     lines.append("// Doneness option definitions (International/USDA)")
     lines.append(f"const DONENESS_OPTIONS = {json.dumps(int_doneness, indent=2, ensure_ascii=False)};")
@@ -222,10 +233,32 @@ def regenerate_panel():
             data_start = 0
     
     # Extract the parts we want to keep
-    # Header: from start to data_start
     # Footer: from class definition to end
-    header = content[:data_start]
     footer = content[class_idx:]
+    
+    # Generate new header with current CET timestamp
+    cet_time = get_cet_timestamp()
+    header = f"""/**
+ * Kitchen Cooking Engine Panel
+ * 
+ * AUTO-REGENERATED: {cet_time}
+ * Data generated from cooking_data.py and swedish_cooking_data.py
+ * 
+ * NOTE: This file's data section is regenerated at install/update time.
+ *       Do not manually edit the data constants - they will be overwritten.
+ *       Temperature values are suggestions based on cooking style, not just safety.
+ * 
+ * A custom panel for the Kitchen Cooking Engine integration.
+ */
+
+import {{
+  LitElement,
+  html,
+  css,
+}} from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
+
+
+"""
     
     # Build new panel
     new_content = header

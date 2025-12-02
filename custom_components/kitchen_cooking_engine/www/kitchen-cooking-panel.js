@@ -1,14 +1,12 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * Last Updated: 2 Dec 2025, 08:00 CET
- * Last Change: v0.1.1.10 - Frontend data generated from backend
- *              - All cooking data generated from cooking_data.py and swedish_cooking_data.py
- *              - Run generate_frontend_data.py to regenerate after backend changes
- *              - No hardcoded fallback data - backend is single source of truth
+ * AUTO-REGENERATED: 02 Dec 2025, 10:23 CET
+ * Data generated from cooking_data.py and swedish_cooking_data.py
  * 
- * NOTE: Temperature values are suggestions based on cooking style, not just safety.
- *       Livsmedelsverket safety info can be shown separately if needed.
+ * NOTE: This file's data section is regenerated at install/update time.
+ *       Do not manually edit the data constants - they will be overwritten.
+ *       Temperature values are suggestions based on cooking style, not just safety.
  * 
  * A custom panel for the Kitchen Cooking Engine integration.
  */
@@ -20,13 +18,14 @@ import {
 } from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
 
 
+
 // Data source options
 const DATA_SOURCE_INTERNATIONAL = "international";
 const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py and swedish_cooking_data.py
-// Last generated: 2025-12-02T00:10:24.945045
+// Last generated: 02 Dec 2025, 10:23 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -4667,7 +4666,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "25";
+const PANEL_VERSION = "27";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
