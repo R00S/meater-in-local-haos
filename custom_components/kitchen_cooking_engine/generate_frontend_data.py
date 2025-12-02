@@ -249,9 +249,10 @@ def regenerate_panel():
 """
     new_content += footer
     
-    # Update panel version
+    # Update panel version in JS
     old_version_line = 'const PANEL_VERSION = "'
     version_idx = new_content.find(old_version_line)
+    new_version = "25"
     if version_idx != -1:
         version_end = new_content.find('"', version_idx + len(old_version_line))
         old_version = new_content[version_idx + len(old_version_line):version_end]
@@ -260,11 +261,28 @@ def regenerate_panel():
         except:
             new_version = "25"
         new_content = new_content[:version_idx + len(old_version_line)] + new_version + new_content[version_end:]
-        print(f"Updated PANEL_VERSION: {old_version} -> {new_version}")
+        print(f"Updated PANEL_VERSION in JS: {old_version} -> {new_version}")
     
     # Write new panel
     with open(panel_file, "w", encoding="utf-8") as f:
         f.write(new_content)
+    
+    # Also update const.py to keep PANEL_VERSION in sync
+    const_file = os.path.join(base_dir, "const.py")
+    if os.path.exists(const_file):
+        with open(const_file, "r", encoding="utf-8") as f:
+            const_content = f.read()
+        
+        const_version_line = 'PANEL_VERSION = "'
+        const_idx = const_content.find(const_version_line)
+        if const_idx != -1:
+            const_end = const_content.find('"', const_idx + len(const_version_line))
+            old_const_version = const_content[const_idx + len(const_version_line):const_end]
+            const_content = const_content[:const_idx + len(const_version_line)] + new_version + const_content[const_end:]
+            
+            with open(const_file, "w", encoding="utf-8") as f:
+                f.write(const_content)
+            print(f"Updated PANEL_VERSION in const.py: {old_const_version} -> {new_version}")
     
     print(f"Regenerated {panel_file}")
     print(f"  International categories: {len(INT_CATEGORIES)}")

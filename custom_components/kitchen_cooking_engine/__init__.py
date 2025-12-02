@@ -121,6 +121,30 @@ async def _cleanup_old_entities(hass: HomeAssistant, entry: ConfigEntry) -> None
             seen_unique_ids.add(entity.unique_id)
 
 
+async def _async_regenerate_frontend_data(hass: HomeAssistant) -> bool:
+    """Regenerate the frontend JS data from backend Python files.
+    
+    This ensures the frontend always matches the backend data,
+    eliminating discrepancies between frontend and backend.
+    """
+    try:
+        # Import the generator module
+        from .generate_frontend_data import regenerate_panel
+        
+        # Run in executor to avoid blocking the event loop
+        result = await hass.async_add_executor_job(regenerate_panel)
+        
+        if result:
+            _LOGGER.info("Kitchen Cooking Engine: Frontend data regenerated from backend")
+        else:
+            _LOGGER.warning("Kitchen Cooking Engine: Failed to regenerate frontend data")
+        
+        return result
+    except Exception as e:
+        _LOGGER.error("Kitchen Cooking Engine: Error regenerating frontend data: %s", e)
+        return False
+
+
 async def _async_register_panel(hass: HomeAssistant) -> None:
     """Register the sidebar panel."""
     from .const import PANEL_VERSION
@@ -128,6 +152,9 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
     # Only register once
     if hass.data.get(DOMAIN, {}).get("panel_registered"):
         return
+    
+    # Regenerate frontend data from backend before registering panel
+    await _async_regenerate_frontend_data(hass)
     
     # Get the path to the www directory
     www_path = Path(__file__).parent / "www"
