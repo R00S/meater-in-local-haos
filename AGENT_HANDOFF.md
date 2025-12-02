@@ -2,26 +2,53 @@
 
 **Last Updated:** 3 Dec 2025, 00:00 CET
 
-## ⛔ CRITICAL: PANEL_VERSION SYNC (READ FIRST!)
+```
+████████████████████████████████████████████████████████████████████████████████
+█                                                                              █
+█   🛑🛑🛑 STOP! YOU MUST READ THIS BEFORE EDITING ANY CODE! 🛑🛑🛑            █
+█                                                                              █
+█   THE #1 BUG THAT WASTES HOURS:                                              █
+█                                                                              █
+█   kitchen-cooking-panel.js has TWO PARTS:                                    █
+█                                                                              █
+█   PART 1 (Header + Data): GETS OVERWRITTEN when user installs!               █
+█   → Lines 1 to "class KitchenCookingPanel"                                   █
+█   → DON'T edit data here - edit cooking_data.py instead                      █
+█                                                                              █
+█   PART 2 (Class Code): IS PRESERVED when user installs                       █
+█   → From "class KitchenCookingPanel" to end of file                          █
+█   → Your changes here WILL work, BUT...                                      █
+█                                                                              █
+█   ⚠️  YOU MUST ALSO BUMP PANEL_VERSION IN BOTH FILES! ⚠️                      █
+█                                                                              █
+█   After ANY edit to the JS file:                                             █
+█   1. Bump const.py: PANEL_VERSION = "34" → "35"                              █
+█   2. Bump JS file (bottom): const PANEL_VERSION = "34"; → "35";              █
+█   3. Commit BOTH files together                                              █
+█                                                                              █
+█   If you skip this: YOUR CHANGES WILL BE INVISIBLE!                          █
+█   (A previous agent wasted 10+ commits because of this)                      █
+█                                                                              █
+████████████████████████████████████████████████████████████████████████████████
+```
 
-**THIS IS THE #1 CAUSE OF FRONTEND BUGS:** If you edit `kitchen-cooking-panel.js`, you MUST also update the PANEL_VERSION in `const.py` to match!
+## Quick Reference: What File to Edit
 
-| File | What to sync |
-|------|-------------|
-| `const.py` line 11 | `PANEL_VERSION = "34"` |
-| `kitchen-cooking-panel.js` (near bottom) | `const PANEL_VERSION = "34";` |
+| I want to change... | Edit this file | Also update |
+|---------------------|----------------|-------------|
+| Meat/cut data, temperatures | `cooking_data.py` | Nothing |
+| Swedish data | `swedish_cooking_data.py` | Nothing |
+| UI, graph, buttons | `kitchen-cooking-panel.js` CLASS section | **PANEL_VERSION in both files!** |
+| Sensor attributes | `sensor.py` | Nothing |
+| Services | `sensor.py` + `services.yaml` | Nothing |
 
-**If these don't match:**
-- Home Assistant looks for custom element `kitchen-cooking-panel-v34`
-- But JS only registers `kitchen-cooking-panel-v35`
-- **Result: YOUR CHANGES ARE INVISIBLE** (this caused 10+ commits of graph changes to not work)
+## Quick Commands
 
-**Safe workflow:**
-1. Edit JS file
-2. **IMMEDIATELY** edit const.py to match the JS PANEL_VERSION
-3. Commit BOTH files together
-
-Or run `python3 generate_frontend_data.py` which syncs both automatically.
+```bash
+# Check PANEL_VERSION (must match!):
+grep "PANEL_VERSION" custom_components/kitchen_cooking_engine/const.py
+grep "const PANEL_VERSION" custom_components/kitchen_cooking_engine/www/kitchen-cooking-panel.js
+```
 
 ---
 
