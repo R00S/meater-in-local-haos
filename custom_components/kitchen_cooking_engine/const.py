@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 2 Dec 2025, 11:30 CET
-Last Change: v0.1.2.0 - Added battery sensor, improved notification events
+Last Updated: 2 Dec 2025, 14:00 CET
+Last Change: v0.1.2.4 - Added indicator light and mobile notification configuration
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -15,6 +15,8 @@ CONF_TEMPERATURE_SENSOR = "temperature_sensor"
 CONF_AMBIENT_SENSOR = "ambient_sensor"
 CONF_BATTERY_SENSOR = "battery_sensor"
 CONF_TEMPERATURE_UNIT = "temperature_unit"
+CONF_INDICATOR_LIGHT = "indicator_light"
+CONF_NOTIFY_SERVICE = "notify_service"
 
 # Temperature units
 TEMP_CELSIUS = "celsius"

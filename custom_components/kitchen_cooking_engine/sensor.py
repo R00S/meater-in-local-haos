@@ -1,11 +1,12 @@
 """Sensor platform for Kitchen Cooking Engine.
 
-Last Updated: 2 Dec 2025, 11:45 CET
-Last Change: v0.1.2.0 - Added battery sensor, improved ETA calculation, temp history, rest countdown
+Last Updated: 2 Dec 2025, 13:30 CET
+Last Change: v0.1.2.3 - Added indicator light control, persistent notifications
 """
 
 from __future__ import annotations
 
+import asyncio
 import logging
 from datetime import datetime, timedelta
 from typing import Any
@@ -45,6 +46,8 @@ from .const import (
     ATTR_USDA_SAFE,
     CONF_AMBIENT_SENSOR,
     CONF_BATTERY_SENSOR,
+    CONF_INDICATOR_LIGHT,
+    CONF_NOTIFY_SERVICE,
     CONF_TEMPERATURE_SENSOR,
     CONF_TEMPERATURE_UNIT,
     DOMAIN,
@@ -76,6 +79,13 @@ TEMP_HISTORY_INTERVAL_SECONDS = 30  # Sample every 30 seconds
 MIN_RATE_CALC_TIME_MINUTES = 0.5  # Minimum time for reliable rate calculation
 ETA_CHANGE_THRESHOLD_MINUTES = 2  # Fire event if ETA changes by this much
 
+# Light color gradient from cold (blue) to hot (red)
+# Uses RGB values for color temperature progression
+LIGHT_COLOR_COLD = (66, 135, 245)    # Cold blue at room temp (23°C)
+LIGHT_COLOR_WARM = (255, 165, 0)     # Warm orange (midpoint)
+LIGHT_COLOR_HOT = (255, 0, 0)        # Deep red at target temp
+LIGHT_START_TEMP_C = 23              # Temperature at which light starts (room temp)
+
 
 async def async_setup_entry(
     hass: HomeAssistant,
@@ -86,6 +96,8 @@ async def async_setup_entry(
     temp_sensor = config_entry.data.get(CONF_TEMPERATURE_SENSOR)
     ambient_sensor = config_entry.data.get(CONF_AMBIENT_SENSOR)
     battery_sensor = config_entry.data.get(CONF_BATTERY_SENSOR)
+    indicator_light = config_entry.data.get(CONF_INDICATOR_LIGHT)
+    notify_service = config_entry.data.get(CONF_NOTIFY_SERVICE)
     temp_unit = config_entry.data.get(CONF_TEMPERATURE_UNIT, TEMP_CELSIUS)
 
     cooking_session = CookingSessionSensor(
@@ -94,6 +106,8 @@ async def async_setup_entry(
         temp_sensor,
         ambient_sensor,
         battery_sensor,
+        indicator_light,
+        notify_service,
         temp_unit,
     )
     
@@ -127,6 +141,8 @@ class CookingSessionSensor(SensorEntity):
         temp_sensor: str,
         ambient_sensor: str | None,
         battery_sensor: str | None,
+        indicator_light: str | None,
+        notify_service: str | None,
         temp_unit: str,
     ) -> None:
         """Initialize the cooking session sensor."""
@@ -135,6 +151,8 @@ class CookingSessionSensor(SensorEntity):
         self._temp_sensor = temp_sensor
         self._ambient_sensor = ambient_sensor
         self._battery_sensor = battery_sensor
+        self._indicator_light = indicator_light
+        self._notify_service = notify_service.strip() if notify_service else None
         self._temp_unit = temp_unit
 
         # Session state
@@ -168,6 +186,10 @@ class CookingSessionSensor(SensorEntity):
         
         # Timer for rest countdown
         self._rest_timer_unsub = None
+        
+        # Indicator light state (saved when cook starts)
+        self._light_original_state: dict | None = None
+        self._light_flash_task: asyncio.Task | None = None
 
         # Entity attributes
         self._attr_unique_id = f"{DOMAIN}_{entry_id}_session"
@@ -181,7 +203,7 @@ class CookingSessionSensor(SensorEntity):
             name=f"Kitchen Cooking Engine ({sensor_name})",
             manufacturer="Kitchen Cooking Engine",
             model="Cooking Session",
-            sw_version="0.1.2.0",
+            sw_version="0.1.2.3",
         )
 
     def _to_celsius(self, temp: float) -> float:
@@ -384,6 +406,10 @@ class CookingSessionSensor(SensorEntity):
                 self._progress = min(
                     100.0, max(0.0, (current_c - start_temp) / temp_range * 100)
                 )
+        
+        # Update indicator light color based on temperature
+        if self._indicator_light and self._state in (STATE_COOKING, STATE_APPROACHING):
+            self._hass.async_create_task(self._update_indicator_light())
 
         # Check for 5-minute remaining alert and ETA changes
         if self._state == STATE_COOKING:
@@ -426,6 +452,9 @@ class CookingSessionSensor(SensorEntity):
             if current_c >= self._target_temp_c:
                 self._state = STATE_GOAL_REACHED
                 self._fire_event(EVENT_GOAL_REACHED)
+                # Start flashing the light to indicate user action needed
+                if self._indicator_light:
+                    self._hass.async_create_task(self._start_light_flash())
                 _LOGGER.info(
                     "Goal reached: %s at %.1f°C - Time to rest!",
                     self._cut_display,
@@ -470,7 +499,7 @@ class CookingSessionSensor(SensorEntity):
         self._send_notification(event_type, event_data)
 
     def _send_notification(self, event_type: str, event_data: dict) -> None:
-        """Send Home Assistant persistent notification for cooking events."""
+        """Send notifications for cooking events via persistent_notification and mobile app."""
         notification_map = {
             EVENT_APPROACHING_TARGET: {
                 "title": "🔥 Almost There!",
@@ -496,7 +525,7 @@ class CookingSessionSensor(SensorEntity):
         
         notification = notification_map.get(event_type)
         if notification:
-            # Create persistent notification in Home Assistant
+            # Create persistent notification in Home Assistant UI
             self._hass.async_create_task(
                 self._hass.services.async_call(
                     "persistent_notification",
@@ -508,7 +537,187 @@ class CookingSessionSensor(SensorEntity):
                     },
                 )
             )
+            
+            # Send push notification to mobile app if configured
+            if self._notify_service:
+                self._hass.async_create_task(
+                    self._hass.services.async_call(
+                        "notify",
+                        self._notify_service,
+                        {
+                            "title": notification["title"],
+                            "message": notification["message"],
+                            "data": {
+                                "tag": notification["notification_id"],
+                                "importance": "high",
+                                "channel": "cooking_alerts",
+                            },
+                        },
+                    )
+                )
+                _LOGGER.debug("Sent mobile notification: %s", notification["title"])
+            
             _LOGGER.debug("Sent notification: %s", notification["title"])
+
+    # ---- Indicator Light Control Methods ----
+    
+    async def _save_light_state(self) -> None:
+        """Save the current state of the indicator light before taking control."""
+        if not self._indicator_light:
+            return
+            
+        light_state = self._hass.states.get(self._indicator_light)
+        if light_state:
+            self._light_original_state = {
+                "state": light_state.state,
+                "brightness": light_state.attributes.get("brightness"),
+                "rgb_color": light_state.attributes.get("rgb_color"),
+                "hs_color": light_state.attributes.get("hs_color"),
+                "color_temp": light_state.attributes.get("color_temp"),
+            }
+            _LOGGER.debug("Saved light state: %s", self._light_original_state)
+    
+    async def _restore_light_state(self) -> None:
+        """Restore the indicator light to its original state."""
+        if not self._indicator_light or not self._light_original_state:
+            return
+        
+        # Stop any flashing
+        await self._stop_light_flash()
+        
+        try:
+            if self._light_original_state["state"] == "off":
+                await self._hass.services.async_call(
+                    "light", "turn_off",
+                    {"entity_id": self._indicator_light}
+                )
+            else:
+                service_data = {"entity_id": self._indicator_light}
+                if self._light_original_state.get("brightness"):
+                    service_data["brightness"] = self._light_original_state["brightness"]
+                if self._light_original_state.get("rgb_color"):
+                    service_data["rgb_color"] = self._light_original_state["rgb_color"]
+                elif self._light_original_state.get("hs_color"):
+                    service_data["hs_color"] = self._light_original_state["hs_color"]
+                elif self._light_original_state.get("color_temp"):
+                    service_data["color_temp"] = self._light_original_state["color_temp"]
+                    
+                await self._hass.services.async_call("light", "turn_on", service_data)
+                
+            _LOGGER.debug("Restored light to original state")
+        except Exception as e:
+            _LOGGER.warning("Failed to restore light state: %s", e)
+        
+        self._light_original_state = None
+    
+    def _calculate_temp_color(self, current_temp_c: float, target_temp_c: float) -> tuple[int, int, int]:
+        """Calculate RGB color based on temperature.
+        
+        Transitions from cold blue (23°C) -> warm orange (midpoint) -> deep red (target).
+        """
+        if current_temp_c is None or target_temp_c is None:
+            return LIGHT_COLOR_COLD
+        
+        # Calculate progress from 23°C to target
+        temp_range = target_temp_c - LIGHT_START_TEMP_C
+        if temp_range <= 0:
+            return LIGHT_COLOR_HOT
+        
+        current_progress = (current_temp_c - LIGHT_START_TEMP_C) / temp_range
+        current_progress = max(0, min(1, current_progress))  # Clamp 0-1
+        
+        if current_progress <= 0.5:
+            # Transition from blue to orange (0-50%)
+            t = current_progress / 0.5
+            r = int(LIGHT_COLOR_COLD[0] + (LIGHT_COLOR_WARM[0] - LIGHT_COLOR_COLD[0]) * t)
+            g = int(LIGHT_COLOR_COLD[1] + (LIGHT_COLOR_WARM[1] - LIGHT_COLOR_COLD[1]) * t)
+            b = int(LIGHT_COLOR_COLD[2] + (LIGHT_COLOR_WARM[2] - LIGHT_COLOR_COLD[2]) * t)
+        else:
+            # Transition from orange to deep red (50-100%)
+            t = (current_progress - 0.5) / 0.5
+            r = int(LIGHT_COLOR_WARM[0] + (LIGHT_COLOR_HOT[0] - LIGHT_COLOR_WARM[0]) * t)
+            g = int(LIGHT_COLOR_WARM[1] + (LIGHT_COLOR_HOT[1] - LIGHT_COLOR_WARM[1]) * t)
+            b = int(LIGHT_COLOR_WARM[2] + (LIGHT_COLOR_HOT[2] - LIGHT_COLOR_WARM[2]) * t)
+        
+        return (r, g, b)
+    
+    async def _update_indicator_light(self) -> None:
+        """Update the indicator light color based on current temperature."""
+        if not self._indicator_light:
+            return
+        
+        # Only update during active cooking states
+        if self._state not in (STATE_COOKING, STATE_APPROACHING):
+            return
+        
+        if not self._current_temp or not self._target_temp_c:
+            return
+        
+        current_c = self._to_celsius(self._current_temp)
+        rgb_color = self._calculate_temp_color(current_c, self._target_temp_c)
+        
+        try:
+            await self._hass.services.async_call(
+                "light", "turn_on",
+                {
+                    "entity_id": self._indicator_light,
+                    "rgb_color": list(rgb_color),
+                    "brightness": 255,
+                }
+            )
+        except Exception as e:
+            _LOGGER.warning("Failed to update indicator light: %s", e)
+    
+    async def _start_light_flash(self) -> None:
+        """Start flashing the indicator light (for goal reached, rest complete)."""
+        if not self._indicator_light:
+            return
+        
+        # Cancel existing flash task
+        await self._stop_light_flash()
+        
+        async def flash_loop():
+            """Flash the light on and off."""
+            flash_on = True
+            try:
+                while True:
+                    if flash_on:
+                        await self._hass.services.async_call(
+                            "light", "turn_on",
+                            {
+                                "entity_id": self._indicator_light,
+                                "rgb_color": [0, 255, 0],  # Green for success
+                                "brightness": 255,
+                            }
+                        )
+                    else:
+                        await self._hass.services.async_call(
+                            "light", "turn_on",
+                            {
+                                "entity_id": self._indicator_light,
+                                "brightness": 50,
+                            }
+                        )
+                    flash_on = not flash_on
+                    await asyncio.sleep(0.5)
+            except asyncio.CancelledError:
+                pass
+            except Exception as e:
+                _LOGGER.warning("Flash loop error: %s", e)
+        
+        self._light_flash_task = self._hass.async_create_task(flash_loop())
+        _LOGGER.debug("Started light flashing")
+    
+    async def _stop_light_flash(self) -> None:
+        """Stop the flashing indicator light."""
+        if self._light_flash_task:
+            self._light_flash_task.cancel()
+            try:
+                await self._light_flash_task
+            except asyncio.CancelledError:
+                pass
+            self._light_flash_task = None
+            _LOGGER.debug("Stopped light flashing")
 
     def _calculate_eta(self) -> int | None:
         """Estimate time to reach target temperature.
@@ -565,6 +774,9 @@ class CookingSessionSensor(SensorEntity):
         # Check if rest time is complete (using minimum rest time)
         if rest_elapsed >= self._rest_time_min:
             self._fire_event(EVENT_REST_COMPLETE)
+            # Start flashing the light to indicate food is ready
+            if self._indicator_light:
+                self._hass.async_create_task(self._start_light_flash())
             _LOGGER.info(
                 "Rest complete for %s after %.1f minutes",
                 self._cut_display,
@@ -616,6 +828,11 @@ class CookingSessionSensor(SensorEntity):
         self._last_eta = None
         self._five_min_alert_fired = False
         
+        # Save indicator light state and take control
+        if self._indicator_light:
+            self._hass.async_create_task(self._save_light_state())
+            self._hass.async_create_task(self._update_indicator_light())
+        
         # Fire cook started event
         self._fire_event(EVENT_COOK_STARTED)
         
@@ -634,6 +851,10 @@ class CookingSessionSensor(SensorEntity):
         
         # Fire event before resetting state
         self._fire_event(EVENT_COOK_STOPPED)
+        
+        # Restore indicator light to original state
+        if self._indicator_light:
+            self._hass.async_create_task(self._restore_light_state())
         
         self._state = STATE_IDLE
         self._progress = 0.0
@@ -658,6 +879,10 @@ class CookingSessionSensor(SensorEntity):
         self._state = STATE_RESTING
         self._rest_start = dt_util.utcnow()
         
+        # Stop flashing (user acknowledged goal reached)
+        if self._indicator_light:
+            self._hass.async_create_task(self._stop_light_flash())
+        
         # Fire rest started event
         self._fire_event(EVENT_REST_START)
         
@@ -674,6 +899,10 @@ class CookingSessionSensor(SensorEntity):
         """Mark session as complete."""
         _LOGGER.info("Cooking session completed")
         self._state = STATE_COMPLETE
+        
+        # Restore indicator light to original state
+        if self._indicator_light:
+            self._hass.async_create_task(self._restore_light_state())
         
         # Cancel rest timer if running
         if self._rest_timer_unsub:

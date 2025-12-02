@@ -1,7 +1,7 @@
 """Config flow for Kitchen Cooking Engine integration.
 
-Last Updated: 2 Dec 2025, 11:30 CET
-Last Change: Added battery sensor configuration option
+Last Updated: 2 Dec 2025, 14:00 CET
+Last Change: Added indicator light and mobile notification configuration
 """
 
 from __future__ import annotations
@@ -19,6 +19,8 @@ from .const import (
     CONF_AMBIENT_SENSOR,
     CONF_BATTERY_SENSOR,
     CONF_TEMPERATURE_UNIT,
+    CONF_INDICATOR_LIGHT,
+    CONF_NOTIFY_SERVICE,
     DOMAIN,
     TEMP_CELSIUS,
     TEMP_FAHRENHEIT,
@@ -64,12 +66,17 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     vol.Required(CONF_TEMPERATURE_SENSOR, default=""): str,
                     vol.Optional(CONF_AMBIENT_SENSOR, default=""): str,
                     vol.Optional(CONF_BATTERY_SENSOR, default=""): str,
+                    vol.Optional(CONF_INDICATOR_LIGHT, default=""): str,
+                    vol.Optional(CONF_NOTIFY_SERVICE, default=""): str,
                     vol.Required(
                         CONF_TEMPERATURE_UNIT, default=TEMP_CELSIUS
                     ): vol.In([TEMP_CELSIUS, TEMP_FAHRENHEIT]),
                 }
             ),
             errors=errors,
+            description_placeholders={
+                "notify_hint": "e.g., mobile_app_your_phone"
+            },
         )
 
     @staticmethod
@@ -115,11 +122,22 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
                         CONF_BATTERY_SENSOR,
                         default=current_data.get(CONF_BATTERY_SENSOR, ""),
                     ): str,
+                    vol.Optional(
+                        CONF_INDICATOR_LIGHT,
+                        default=current_data.get(CONF_INDICATOR_LIGHT, ""),
+                    ): str,
+                    vol.Optional(
+                        CONF_NOTIFY_SERVICE,
+                        default=current_data.get(CONF_NOTIFY_SERVICE, ""),
+                    ): str,
                     vol.Required(
                         CONF_TEMPERATURE_UNIT,
                         default=current_data.get(CONF_TEMPERATURE_UNIT, TEMP_CELSIUS),
                     ): vol.In([TEMP_CELSIUS, TEMP_FAHRENHEIT]),
                 }
             ),
+            description_placeholders={
+                "notify_hint": "e.g., mobile_app_your_phone"
+            },
         )
 
