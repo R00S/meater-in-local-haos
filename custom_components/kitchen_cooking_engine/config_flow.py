@@ -1,7 +1,7 @@
 """Config flow for Kitchen Cooking Engine integration.
 
-Last Updated: 2024-11-30T23:50:00Z
-Last Agent Edit: 2024-11-30T23:50:00Z
+Last Updated: 2 Dec 2025, 11:30 CET
+Last Change: Added battery sensor configuration option
 """
 
 from __future__ import annotations
@@ -17,6 +17,7 @@ from homeassistant.core import callback
 from .const import (
     CONF_TEMPERATURE_SENSOR,
     CONF_AMBIENT_SENSOR,
+    CONF_BATTERY_SENSOR,
     CONF_TEMPERATURE_UNIT,
     DOMAIN,
     TEMP_CELSIUS,
@@ -62,6 +63,7 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 {
                     vol.Required(CONF_TEMPERATURE_SENSOR, default=""): str,
                     vol.Optional(CONF_AMBIENT_SENSOR, default=""): str,
+                    vol.Optional(CONF_BATTERY_SENSOR, default=""): str,
                     vol.Required(
                         CONF_TEMPERATURE_UNIT, default=TEMP_CELSIUS
                     ): vol.In([TEMP_CELSIUS, TEMP_FAHRENHEIT]),
@@ -112,6 +114,10 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
                     vol.Optional(
                         CONF_AMBIENT_SENSOR,
                         default=current_data.get(CONF_AMBIENT_SENSOR, ""),
+                    ): str,
+                    vol.Optional(
+                        CONF_BATTERY_SENSOR,
+                        default=current_data.get(CONF_BATTERY_SENSOR, ""),
                     ): str,
                     vol.Required(
                         CONF_TEMPERATURE_UNIT,

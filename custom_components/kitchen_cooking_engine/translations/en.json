@@ -7,6 +7,7 @@
         "data": {
           "temperature_sensor": "Temperature Sensor (required)",
           "ambient_sensor": "Ambient Temperature Sensor (optional)",
+          "battery_sensor": "Battery Level Sensor (optional)",
           "temperature_unit": "Temperature Unit"
         }
       }
@@ -25,6 +26,7 @@
         "data": {
           "temperature_sensor": "Temperature Sensor",
           "ambient_sensor": "Ambient Temperature Sensor",
+          "battery_sensor": "Battery Level Sensor",
           "temperature_unit": "Temperature Unit"
         }
       }
@@ -46,6 +48,14 @@
         "cooking_method": {
           "name": "Cooking Method",
           "description": "The cooking method to use."
+        },
+        "data_source": {
+          "name": "Data Source",
+          "description": "Temperature data source (international or swedish)."
+        },
+        "custom_target_temp_c": {
+          "name": "Custom Target Temperature",
+          "description": "Optional custom target temperature in Celsius."
         }
       }
     },

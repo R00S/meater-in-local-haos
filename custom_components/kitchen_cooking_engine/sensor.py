@@ -1,25 +1,27 @@
 """Sensor platform for Kitchen Cooking Engine.
 
-Last Updated: 1 Dec 2025, 12:31 CET
-Last Change: Added event firing, dynamic icons, device registry support
+Last Updated: 2 Dec 2025, 11:45 CET
+Last Change: v0.1.2.0 - Added battery sensor, improved ETA calculation, temp history, rest countdown
 """
 
 from __future__ import annotations
 
 import logging
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Any
+from collections import deque
 
 from homeassistant.components.sensor import SensorEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from homeassistant.helpers.event import async_track_state_change_event
+from homeassistant.helpers.event import async_track_state_change_event, async_track_time_interval
 
 from .const import (
     APPROACHING_THRESHOLD_C,
     ATTR_AMBIENT_TEMP,
+    ATTR_BATTERY_LEVEL,
     ATTR_COOKING_METHOD,
     ATTR_CURRENT_TEMP,
     ATTR_CUT,
@@ -33,16 +35,27 @@ from .const import (
     ATTR_PROGRESS,
     ATTR_PROTEIN,
     ATTR_REST_TIME_MINUTES,
+    ATTR_REST_TIME_REMAINING,
+    ATTR_REST_START,
     ATTR_SESSION_START,
     ATTR_TARGET_TEMP_C,
     ATTR_TARGET_TEMP_F,
+    ATTR_TEMP_HISTORY,
     ATTR_USDA_SAFE,
     CONF_AMBIENT_SENSOR,
+    CONF_BATTERY_SENSOR,
     CONF_TEMPERATURE_SENSOR,
     CONF_TEMPERATURE_UNIT,
     DOMAIN,
     EVENT_APPROACHING_TARGET,
+    EVENT_COOK_STARTED,
+    EVENT_COOK_STOPPED,
+    EVENT_ETA_CHANGED,
+    EVENT_FIVE_MINUTES_REMAINING,
     EVENT_GOAL_REACHED,
+    EVENT_REST_COMPLETE,
+    EVENT_REST_START,
+    FIVE_MIN_REMAINING_THRESHOLD,
     MINUTES_PER_DEGREE_C,
     PROGRESS_START_OFFSET_C,
     STATE_APPROACHING,
@@ -56,6 +69,10 @@ from .const import (
 
 _LOGGER = logging.getLogger(__name__)
 
+# Temperature history settings
+TEMP_HISTORY_MAX_SAMPLES = 60  # Store up to 60 samples
+TEMP_HISTORY_INTERVAL_SECONDS = 30  # Sample every 30 seconds
+
 
 async def async_setup_entry(
     hass: HomeAssistant,
@@ -65,6 +82,7 @@ async def async_setup_entry(
     """Set up the Kitchen Cooking Engine sensors."""
     temp_sensor = config_entry.data.get(CONF_TEMPERATURE_SENSOR)
     ambient_sensor = config_entry.data.get(CONF_AMBIENT_SENSOR)
+    battery_sensor = config_entry.data.get(CONF_BATTERY_SENSOR)
     temp_unit = config_entry.data.get(CONF_TEMPERATURE_UNIT, TEMP_CELSIUS)
 
     cooking_session = CookingSessionSensor(
@@ -72,6 +90,7 @@ async def async_setup_entry(
         config_entry.entry_id,
         temp_sensor,
         ambient_sensor,
+        battery_sensor,
         temp_unit,
     )
     
@@ -104,6 +123,7 @@ class CookingSessionSensor(SensorEntity):
         entry_id: str,
         temp_sensor: str,
         ambient_sensor: str | None,
+        battery_sensor: str | None,
         temp_unit: str,
     ) -> None:
         """Initialize the cooking session sensor."""
@@ -111,6 +131,7 @@ class CookingSessionSensor(SensorEntity):
         self._entry_id = entry_id
         self._temp_sensor = temp_sensor
         self._ambient_sensor = ambient_sensor
+        self._battery_sensor = battery_sensor
         self._temp_unit = temp_unit
 
         # Session state
@@ -128,12 +149,22 @@ class CookingSessionSensor(SensorEntity):
         self._max_temp_f: int | None = None
         self._current_temp: float | None = None
         self._ambient_temp: float | None = None
+        self._battery_level: float | None = None
         self._session_start: datetime | None = None
+        self._rest_start: datetime | None = None
         self._progress: float = 0.0
         self._rest_time_min: int = 0
         self._rest_time_max: int = 0
         self._usda_safe: bool = False
         self._carryover_temp_c: int = 0
+        
+        # Temperature history for ETA calculation
+        self._temp_history: deque = deque(maxlen=TEMP_HISTORY_MAX_SAMPLES)
+        self._last_eta: int | None = None
+        self._five_min_alert_fired: bool = False
+        
+        # Timer for rest countdown
+        self._rest_timer_unsub = None
 
         # Entity attributes
         self._attr_unique_id = f"{DOMAIN}_{entry_id}_session"
@@ -147,7 +178,7 @@ class CookingSessionSensor(SensorEntity):
             name=f"Kitchen Cooking Engine ({sensor_name})",
             manufacturer="Kitchen Cooking Engine",
             model="Cooking Session",
-            sw_version="0.1.0",
+            sw_version="0.1.2.0",
         )
 
     @property
@@ -185,6 +216,7 @@ class CookingSessionSensor(SensorEntity):
             ATTR_MAX_TEMP_F: self._max_temp_f,
             ATTR_CURRENT_TEMP: self._current_temp,
             ATTR_AMBIENT_TEMP: self._ambient_temp,
+            ATTR_BATTERY_LEVEL: self._battery_level,
             ATTR_PROGRESS: round(self._progress, 1),
             ATTR_USDA_SAFE: self._usda_safe,
             ATTR_REST_TIME_MINUTES: f"{self._rest_time_min}-{self._rest_time_max}",
@@ -193,10 +225,17 @@ class CookingSessionSensor(SensorEntity):
         if self._session_start:
             attrs[ATTR_SESSION_START] = self._session_start.isoformat()
 
+        if self._rest_start:
+            attrs[ATTR_REST_START] = self._rest_start.isoformat()
+            # Calculate remaining rest time
+            rest_elapsed = (datetime.now() - self._rest_start).total_seconds() / 60
+            rest_remaining = max(0, self._rest_time_min - rest_elapsed)
+            attrs[ATTR_REST_TIME_REMAINING] = round(rest_remaining, 1)
+
         # Calculate ETA if cooking
-        if self._state == STATE_COOKING and self._current_temp and self._target_temp_c:
+        if self._state in (STATE_COOKING, STATE_APPROACHING) and self._current_temp and self._target_temp_c:
             eta = self._calculate_eta()
-            if eta:
+            if eta is not None:
                 attrs[ATTR_ETA_MINUTES] = eta
 
         return attrs
@@ -223,8 +262,24 @@ class CookingSessionSensor(SensorEntity):
                 )
             )
 
+        # Track battery sensor changes
+        if self._battery_sensor:
+            self.async_on_remove(
+                async_track_state_change_event(
+                    self._hass,
+                    [self._battery_sensor],
+                    self._async_battery_changed,
+                )
+            )
+
         # Get initial values
-        await self._async_update_temps()
+        await self._async_update_sensors()
+
+    async def async_will_remove_from_hass(self) -> None:
+        """Clean up when entity is removed."""
+        if self._rest_timer_unsub:
+            self._rest_timer_unsub()
+            self._rest_timer_unsub = None
 
     @callback
     def _async_temp_changed(self, event) -> None:
@@ -234,7 +289,16 @@ class CookingSessionSensor(SensorEntity):
             return
 
         try:
-            self._current_temp = float(new_state.state)
+            new_temp = float(new_state.state)
+            self._current_temp = new_temp
+            
+            # Record temperature history for ETA calculation
+            if self._state in (STATE_COOKING, STATE_APPROACHING):
+                self._temp_history.append({
+                    "time": datetime.now(),
+                    "temp": new_temp,
+                })
+            
             self._update_cooking_state()
             self.async_write_ha_state()
         except ValueError:
@@ -253,8 +317,21 @@ class CookingSessionSensor(SensorEntity):
         except ValueError:
             _LOGGER.warning("Invalid ambient temperature: %s", new_state.state)
 
-    async def _async_update_temps(self) -> None:
-        """Update temperature values from sensors."""
+    @callback
+    def _async_battery_changed(self, event) -> None:
+        """Handle battery sensor state changes."""
+        new_state = event.data.get("new_state")
+        if new_state is None or new_state.state in ("unknown", "unavailable"):
+            return
+
+        try:
+            self._battery_level = float(new_state.state)
+            self.async_write_ha_state()
+        except ValueError:
+            _LOGGER.warning("Invalid battery level: %s", new_state.state)
+
+    async def _async_update_sensors(self) -> None:
+        """Update values from all configured sensors."""
         if self._temp_sensor:
             state = self._hass.states.get(self._temp_sensor)
             if state and state.state not in ("unknown", "unavailable"):
@@ -268,6 +345,14 @@ class CookingSessionSensor(SensorEntity):
             if state and state.state not in ("unknown", "unavailable"):
                 try:
                     self._ambient_temp = float(state.state)
+                except ValueError:
+                    pass
+
+        if self._battery_sensor:
+            state = self._hass.states.get(self._battery_sensor)
+            if state and state.state not in ("unknown", "unavailable"):
+                try:
+                    self._battery_level = float(state.state)
                 except ValueError:
                     pass
 
@@ -293,6 +378,18 @@ class CookingSessionSensor(SensorEntity):
                     100.0, max(0.0, (current_c - start_temp) / temp_range * 100)
                 )
 
+        # Check for 5-minute remaining alert
+        if not self._five_min_alert_fired and self._state == STATE_COOKING:
+            eta = self._calculate_eta()
+            if eta is not None and eta <= FIVE_MIN_REMAINING_THRESHOLD and eta > 0:
+                self._five_min_alert_fired = True
+                self._fire_event(EVENT_FIVE_MINUTES_REMAINING)
+                _LOGGER.info(
+                    "5 minutes remaining for %s - ETA: %d minutes",
+                    self._cut_display,
+                    eta,
+                )
+
         # State transitions with event firing
         if self._state == STATE_COOKING:
             # Check if approaching target
@@ -316,10 +413,10 @@ class CookingSessionSensor(SensorEntity):
                     current_c,
                 )
         elif self._state == STATE_RESTING:
-            # Resting state is managed by service calls
+            # Resting state is managed by service calls and timer
             pass
 
-    def _fire_event(self, event_type: str) -> None:
+    def _fire_event(self, event_type: str, extra_data: dict | None = None) -> None:
         """Fire an event with current cooking session data."""
         event_data = {
             "entity_id": self.entity_id,
@@ -331,18 +428,30 @@ class CookingSessionSensor(SensorEntity):
             "target_temp_c": self._target_temp_c,
             "target_temp_f": self._target_temp_f,
             "current_temp": self._current_temp,
+            "ambient_temp": self._ambient_temp,
+            "battery_level": self._battery_level,
             "progress": round(self._progress, 1),
             "rest_time_min": self._rest_time_min,
             "rest_time_max": self._rest_time_max,
         }
+        
+        # Add ETA if available
+        eta = self._calculate_eta()
+        if eta is not None:
+            event_data["eta_minutes"] = eta
+            
+        # Merge any extra data
+        if extra_data:
+            event_data.update(extra_data)
+            
         self._hass.bus.async_fire(event_type, event_data)
         _LOGGER.debug("Fired event %s with data: %s", event_type, event_data)
 
     def _calculate_eta(self) -> int | None:
         """Estimate time to reach target temperature.
 
-        This is a simplified calculation. A more sophisticated version
-        would use temperature history and Newton's law of cooling.
+        Uses temperature history to calculate rise rate for better estimates.
+        Falls back to simple calculation if insufficient history.
         """
         if not self._current_temp or not self._target_temp_c:
             return None
@@ -355,9 +464,67 @@ class CookingSessionSensor(SensorEntity):
         if temp_diff <= 0:
             return 0
 
-        # Simple estimate based on typical cooking rates
-        # This varies significantly based on cut thickness, cooking method, etc.
-        return int(temp_diff * MINUTES_PER_DEGREE_C)
+        # Try to calculate from temperature history
+        if len(self._temp_history) >= 3:
+            # Get readings from the last 5 minutes for rate calculation
+            now = datetime.now()
+            recent_samples = [
+                s for s in self._temp_history
+                if (now - s["time"]).total_seconds() <= 300  # Last 5 minutes
+            ]
+            
+            if len(recent_samples) >= 2:
+                # Calculate temperature rise rate (°C per minute)
+                first = recent_samples[0]
+                last = recent_samples[-1]
+                
+                first_temp_c = first["temp"]
+                last_temp_c = last["temp"]
+                if self._temp_unit != TEMP_CELSIUS:
+                    first_temp_c = (first["temp"] - 32) * 5 / 9
+                    last_temp_c = (last["temp"] - 32) * 5 / 9
+                
+                temp_change = last_temp_c - first_temp_c
+                time_diff_minutes = (last["time"] - first["time"]).total_seconds() / 60
+                
+                if time_diff_minutes > 0.5 and temp_change > 0:
+                    rise_rate = temp_change / time_diff_minutes  # °C per minute
+                    eta = int(temp_diff / rise_rate)
+                    
+                    # Check if ETA changed significantly (by more than 2 minutes)
+                    if self._last_eta is not None and abs(eta - self._last_eta) > 2:
+                        self._fire_event(EVENT_ETA_CHANGED, {
+                            "previous_eta": self._last_eta,
+                            "new_eta": eta,
+                        })
+                    
+                    self._last_eta = eta
+                    return max(0, eta)
+
+        # Fall back to simple estimate based on typical cooking rates
+        eta = int(temp_diff * MINUTES_PER_DEGREE_C)
+        self._last_eta = eta
+        return eta
+
+    @callback
+    def _async_rest_timer_tick(self, now: datetime) -> None:
+        """Handle rest timer tick - check if rest is complete."""
+        if self._state != STATE_RESTING or self._rest_start is None:
+            return
+            
+        rest_elapsed = (now - self._rest_start).total_seconds() / 60
+        
+        # Check if rest time is complete (using minimum rest time)
+        if rest_elapsed >= self._rest_time_min:
+            self._fire_event(EVENT_REST_COMPLETE)
+            _LOGGER.info(
+                "Rest complete for %s after %.1f minutes",
+                self._cut_display,
+                rest_elapsed,
+            )
+            # Don't auto-complete, let user manually complete when ready
+            
+        self.async_write_ha_state()
 
     def start_cook(
         self,
@@ -394,8 +561,16 @@ class CookingSessionSensor(SensorEntity):
         self._usda_safe = usda_safe
         self._carryover_temp_c = carryover_temp_c
         self._session_start = datetime.now()
+        self._rest_start = None
         self._state = STATE_COOKING
         self._progress = 0.0
+        self._temp_history.clear()
+        self._last_eta = None
+        self._five_min_alert_fired = False
+        
+        # Fire cook started event
+        self._fire_event(EVENT_COOK_STARTED)
+        
         self.async_write_ha_state()
         _LOGGER.info(
             "Started cooking session: %s (%s) - Target: %d°C (%d°F)",
@@ -408,8 +583,21 @@ class CookingSessionSensor(SensorEntity):
     def stop_cook(self) -> None:
         """Stop the current cooking session."""
         _LOGGER.info("Stopped cooking session")
+        
+        # Fire event before resetting state
+        self._fire_event(EVENT_COOK_STOPPED)
+        
         self._state = STATE_IDLE
         self._progress = 0.0
+        self._temp_history.clear()
+        self._last_eta = None
+        self._five_min_alert_fired = False
+        
+        # Cancel rest timer if running
+        if self._rest_timer_unsub:
+            self._rest_timer_unsub()
+            self._rest_timer_unsub = None
+            
         self.async_write_ha_state()
 
     def start_rest(self) -> None:
@@ -420,10 +608,28 @@ class CookingSessionSensor(SensorEntity):
             self._rest_time_max,
         )
         self._state = STATE_RESTING
+        self._rest_start = datetime.now()
+        
+        # Fire rest started event
+        self._fire_event(EVENT_REST_START)
+        
+        # Start timer to track rest time
+        self._rest_timer_unsub = async_track_time_interval(
+            self._hass,
+            self._async_rest_timer_tick,
+            timedelta(seconds=30),  # Check every 30 seconds
+        )
+        
         self.async_write_ha_state()
 
     def complete_session(self) -> None:
         """Mark session as complete."""
         _LOGGER.info("Cooking session completed")
         self._state = STATE_COMPLETE
+        
+        # Cancel rest timer if running
+        if self._rest_timer_unsub:
+            self._rest_timer_unsub()
+            self._rest_timer_unsub = None
+            
         self.async_write_ha_state()

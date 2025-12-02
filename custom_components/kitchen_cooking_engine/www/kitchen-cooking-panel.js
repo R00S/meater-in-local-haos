@@ -1,7 +1,7 @@
 /**
  * Kitchen Cooking Engine Panel
  * 
- * AUTO-REGENERATED: 02 Dec 2025, 10:23 CET
+ * AUTO-REGENERATED: 02 Dec 2025, 12:07 CET
  * Data generated from cooking_data.py and swedish_cooking_data.py
  * 
  * NOTE: This file's data section is regenerated at install/update time.
@@ -25,7 +25,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py and swedish_cooking_data.py
-// Last generated: 02 Dec 2025, 10:23 CET
+// Last generated: 02 Dec 2025, 12:07 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -3563,6 +3563,7 @@ class KitchenCookingPanel extends LitElement {
     this._dataSource = DATA_SOURCE_INTERNATIONAL;
     this._customTargetTempC = null;
     this._showTempAdjust = false;
+    this._visibilityHandler = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -3570,6 +3571,24 @@ class KitchenCookingPanel extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     // Data is embedded in this file - generated from backend at build time
+    
+    // Fix for white screen when returning to browser tab
+    // Force re-render when tab becomes visible again
+    this._visibilityHandler = () => {
+      if (document.visibilityState === 'visible') {
+        this.requestUpdate();
+      }
+    };
+    document.addEventListener('visibilitychange', this._visibilityHandler);
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    // Clean up visibility handler
+    if (this._visibilityHandler) {
+      document.removeEventListener('visibilitychange', this._visibilityHandler);
+      this._visibilityHandler = null;
+    }
   }
 
   _getDataCategories() {
@@ -3842,18 +3861,18 @@ class KitchenCookingPanel extends LitElement {
 
   render() {
     if (!this.hass) {
-      return html`<div class="loading">Loading...</div>`;
+      return html`<div class="loading">Loading Home Assistant connection...</div>`;
     }
 
     const entities = this._findCookingEntities();
     
-    // Auto-select first entity if not selected
-    if (!this._selectedEntity && entities.length > 0) {
+    // Auto-select first entity if not selected or if selected entity no longer exists
+    if ((!this._selectedEntity || !entities.includes(this._selectedEntity)) && entities.length > 0) {
       this._selectedEntity = entities[0];
     }
 
     const state = this._getState();
-    const isActive = state && state.state !== 'idle';
+    const isActive = state && state.state !== 'idle' && state.state !== 'complete';
 
     return html`
       <ha-top-app-bar-fixed>
@@ -4116,11 +4135,14 @@ class KitchenCookingPanel extends LitElement {
     const attrs = state.attributes;
     const progress = attrs.progress || 0;
     const currentTemp = attrs.current_temp;
+    const ambientTemp = attrs.ambient_temp;
+    const batteryLevel = attrs.battery_level;
     const targetTemp = attrs.target_temp_c;
     const cut = attrs.cut_display || attrs.cut || "Unknown";
     const doneness = (attrs.doneness || "").replace("_", " ");
     const method = (attrs.cooking_method || "").replace(/_/g, " ");
     const eta = attrs.eta_minutes;
+    const restTimeRemaining = attrs.rest_time_remaining;
     const cookState = state.state;
 
     return html`
@@ -4134,7 +4156,7 @@ class KitchenCookingPanel extends LitElement {
           <div class="temp-display">
             <div class="temp-current">
               <div class="value">${currentTemp !== null && currentTemp !== undefined ? currentTemp + '°C' : '--'}</div>
-              <div class="label">Current</div>
+              <div class="label">Tip Temp</div>
             </div>
             <div class="temp-target">
               <div class="value">${targetTemp}°C</div>
@@ -4142,13 +4164,22 @@ class KitchenCookingPanel extends LitElement {
             </div>
           </div>
           
+          ${ambientTemp !== null && ambientTemp !== undefined ? html`
+            <div class="ambient-temp-display">
+              <span class="ambient-label">🌡️ Ambient:</span>
+              <span class="ambient-value">${ambientTemp}°C</span>
+            </div>
+          ` : ''}
+          
           <div class="progress-section">
             <div class="progress-bar-container">
               <div class="progress-bar" style="width: ${Math.min(100, progress)}%"></div>
             </div>
             <div class="progress-info">
               <span>${progress.toFixed(0)}% complete</span>
-              ${eta !== null && eta !== undefined ? html`<span>ETA: ${eta} min</span>` : ''}
+              ${eta !== null && eta !== undefined && cookState !== 'resting' ? html`<span>ETA: ${eta} min</span>` : ''}
+              ${cookState === 'resting' && restTimeRemaining !== null && restTimeRemaining !== undefined ? 
+                html`<span>Rest remaining: ${restTimeRemaining.toFixed(1)} min</span>` : ''}
             </div>
           </div>
           
@@ -4161,6 +4192,12 @@ class KitchenCookingPanel extends LitElement {
               <div class="label">Rest Time</div>
               <div class="value">${attrs.rest_time_minutes || '--'} min</div>
             </div>
+            ${batteryLevel !== null && batteryLevel !== undefined ? html`
+              <div class="cook-info-item">
+                <div class="label">🔋 Battery</div>
+                <div class="value battery-${batteryLevel <= 20 ? 'low' : batteryLevel <= 50 ? 'medium' : 'high'}">${batteryLevel}%</div>
+              </div>
+            ` : ''}
           </div>
           
           <div class="action-buttons">
@@ -4659,6 +4696,52 @@ class KitchenCookingPanel extends LitElement {
       .reset-btn:hover {
         color: var(--primary-color);
       }
+
+      /* Ambient temperature and battery display styles */
+      .ambient-temp-display {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 8px 16px;
+        background: var(--primary-background-color);
+        border-radius: 8px;
+        margin-top: 12px;
+      }
+
+      .ambient-label {
+        color: var(--secondary-text-color);
+        font-size: 14px;
+      }
+
+      .ambient-value {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--primary-text-color);
+      }
+
+      /* Battery level indicator styles */
+      .battery-low {
+        color: #f44336 !important;
+      }
+
+      .battery-medium {
+        color: #ff9800 !important;
+      }
+
+      .battery-high {
+        color: #4caf50 !important;
+      }
+
+      /* Loading state */
+      .loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 64px 16px;
+        color: var(--secondary-text-color);
+        font-size: 16px;
+      }
     `;
   }
 }
@@ -4666,7 +4749,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "27";
+const PANEL_VERSION = "29";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

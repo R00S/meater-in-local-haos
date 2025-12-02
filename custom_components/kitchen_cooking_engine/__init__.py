@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 1 Dec 2025, 17:00 CET
-Last Change: Added Swedish cooking data support and temperature tree selection
+Last Updated: 2 Dec 2025, 11:50 CET
+Last Change: v0.1.2.0 - Added battery sensor, improved notifications, external API
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -11,10 +11,12 @@ This integration provides:
 - Target temperature recommendations from USDA/professional culinary sources
 - Cooking method selection (kitchen-focused: oven, stovetop, air fryer, etc.)
 - Cooking session management with progress tracking
-- Time-to-target estimation
-- Notifications for approaching target and goal reached
+- Dynamic ETA calculation based on temperature rise rate
+- Comprehensive notifications (approaching, 5-min warning, goal reached, rest complete)
 - Rest time recommendations with carryover cooking estimation
+- Battery level monitoring (for MEATER probes)
 - Sidebar panel for easy cooking setup and monitoring
+- External API for 3rd party integrations and automations
 """
 
 from __future__ import annotations
@@ -56,7 +58,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

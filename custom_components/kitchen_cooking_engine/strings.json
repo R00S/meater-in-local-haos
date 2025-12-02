@@ -8,11 +8,13 @@
         "data": {
           "temperature_sensor": "Temperature Sensor",
           "ambient_sensor": "Ambient Temperature Sensor (optional)",
+          "battery_sensor": "Battery Level Sensor (optional)",
           "temperature_unit": "Temperature Unit"
         },
         "data_description": {
-          "temperature_sensor": "Select the temperature sensor to use for cooking (e.g., MEATER probe)",
-          "ambient_sensor": "Optional ambient temperature sensor for better ETA predictions",
+          "temperature_sensor": "Select the temperature sensor to use for cooking (e.g., MEATER probe tip temperature)",
+          "ambient_sensor": "Optional ambient temperature sensor for better ETA predictions (e.g., MEATER ambient)",
+          "battery_sensor": "Optional battery level sensor (e.g., MEATER battery percentage)",
           "temperature_unit": "Choose Celsius or Fahrenheit for display"
         }
       }
@@ -32,6 +34,7 @@
         "data": {
           "temperature_sensor": "Temperature Sensor",
           "ambient_sensor": "Ambient Temperature Sensor (optional)",
+          "battery_sensor": "Battery Level Sensor (optional)",
           "temperature_unit": "Temperature Unit"
         }
       }
