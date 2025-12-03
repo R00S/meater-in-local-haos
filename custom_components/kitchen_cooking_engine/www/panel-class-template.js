@@ -42,7 +42,7 @@ class KitchenCookingPanel extends LitElement {
     this._showNotes = false;
     this._visibilityHandler = null;
     this._graphCard = null;
-    this._graphCardCreated = false;
+    this._graphCardSessionStart = null; // Track which session the graph was created for
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -829,6 +829,7 @@ class KitchenCookingPanel extends LitElement {
     const tipSensor = attrs.tip_sensor;
     const ambientSensor = attrs.ambient_sensor;
     const sessionStart = attrs.session_start;
+    const targetTemp = attrs.target_temp_c;
     
     // Always show a graph section (with fallback messages if needed)
     // Build entity list for history URL
@@ -836,14 +837,18 @@ class KitchenCookingPanel extends LitElement {
     if (ambientSensor) entities.push(ambientSensor);
     const entityList = entities.join(',');
     
-    // Calculate hours since cook start (default to 1 hour)
+    // Calculate hours since cook start more precisely
+    // We want to show ONLY data from cook start, so we calculate exact hours
     let hoursSinceStart = 1;
     let historyUrl = '/history';
     
     if (sessionStart) {
       const startDate = new Date(sessionStart);
       const now = new Date();
-      hoursSinceStart = Math.max(1, Math.ceil((now - startDate) / (1000 * 60 * 60)));
+      // Calculate hours with some precision - round up to nearest 0.5 hours minimum
+      const hoursDiff = (now - startDate) / (1000 * 60 * 60);
+      // Add a small buffer (5 min = 0.083 hours) to ensure we capture the start
+      hoursSinceStart = Math.max(0.5, Math.ceil((hoursDiff + 0.1) * 2) / 2);
       historyUrl = `/history?entity_id=${entityList}&start_date=${encodeURIComponent(startDate.toISOString().split('.')[0])}`;
     }
     
@@ -873,7 +878,15 @@ class KitchenCookingPanel extends LitElement {
         return;
       }
       
-      // Only create card once, then just update hass
+      // Recreate graph if session changed (new cook started)
+      // This ensures we show only data from the current cook
+      if (this._graphCard && this._graphCardSessionStart !== sessionStart) {
+        console.log('Session changed, recreating graph card');
+        this._graphCard = null;
+        container.innerHTML = '<div style="text-align: center; padding: 40px; color: var(--secondary-text-color);">Loading graph...</div>';
+      }
+      
+      // Only create card once per session, then just update hass
       if (this._graphCard) {
         this._graphCard.hass = this.hass;
         return;
@@ -892,9 +905,10 @@ class KitchenCookingPanel extends LitElement {
             });
             card.hass = this.hass;
             this._graphCard = card;
+            this._graphCardSessionStart = sessionStart;
             container.innerHTML = '';
             container.appendChild(card);
-            console.log('History graph card created successfully');
+            console.log('History graph card created successfully, hours_to_show:', hoursSinceStart);
             return;
           }
         }
@@ -922,10 +936,19 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="temp-graph-section" style="margin: 16px 0; padding: 12px; background: var(--primary-background-color); border-radius: 8px;">
         <h4 style="margin: 0 0 8px 0; font-size: 14px;">📈 Temperature Graph</h4>
+        ${targetTemp ? html`
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px; padding: 6px 10px; background: rgba(76, 175, 80, 0.1); border-left: 3px solid #4caf50; border-radius: 0 4px 4px 0;">
+            <span style="font-size: 12px; color: var(--secondary-text-color);">🎯 Target:</span>
+            <span style="font-size: 14px; font-weight: 600; color: #4caf50;">${targetTemp}°C</span>
+          </div>
+        ` : ''}
         <div id="temp-graph-holder" style="min-height: 150px; background: var(--card-background-color); border-radius: 4px;">
           <div style="text-align: center; padding: 40px; color: var(--secondary-text-color);">
             Loading graph...
           </div>
+        </div>
+        <div style="font-size: 11px; color: var(--secondary-text-color); margin-top: 6px; text-align: center;">
+          📍 Showing data from cook start${sessionStart ? ` (${new Date(sessionStart).toLocaleTimeString()})` : ''}
         </div>
         <div style="text-align: center; margin-top: 8px;">
           <a href="${historyUrl}" target="_blank" style="color: var(--primary-color); font-size: 12px;">
@@ -1673,7 +1696,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "36";
+const PANEL_VERSION = "39";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
