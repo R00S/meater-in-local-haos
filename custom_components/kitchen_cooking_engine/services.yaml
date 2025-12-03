@@ -1,6 +1,8 @@
 start_cook:
   name: Start Cook
-  description: Start a new cooking session with selected protein, cut, and doneness.
+  description: >
+    Start a new cooking session with selected protein, cut, and doneness.
+    This service can be called by automations or 3rd party integrations to start cooks programmatically.
   target:
     entity:
       domain: sensor
@@ -8,17 +10,17 @@ start_cook:
   fields:
     cut_id:
       name: Cut ID
-      description: The ID of the cut to cook (from cooking_data.py).
+      description: The ID of the cut to cook (from cooking_data.py). Required.
       required: true
       example: 100
       selector:
         number:
           min: 1
-          max: 999
+          max: 9999
           mode: box
     doneness:
       name: Doneness
-      description: The desired doneness level.
+      description: The desired doneness level. Required.
       required: true
       example: "medium_rare"
       selector:
@@ -34,9 +36,17 @@ start_cook:
             - "tender"
             - "crisp_tender"
             - "caramelized"
+            - "blodig"
+            - "genomstekt"
+            - "långkokt"
+            - "dark_meat_optimal"
+            - "heated_through"
+            - "crispy"
+            - "charred"
+            - "done"
     cooking_method:
       name: Cooking Method
-      description: The cooking method to use.
+      description: The cooking method to use. Required.
       required: true
       example: "oven_roast"
       selector:
@@ -60,10 +70,32 @@ start_cook:
             - "grill"
             - "smoker"
             - "charcoal_grill"
+    data_source:
+      name: Data Source
+      description: Temperature data source - international (USDA) or swedish (Livsmedelsverket). Optional, defaults to international.
+      required: false
+      default: "international"
+      example: "swedish"
+      selector:
+        select:
+          options:
+            - "international"
+            - "swedish"
+    custom_target_temp_c:
+      name: Custom Target Temperature
+      description: Optional custom target temperature in Celsius (30-100). Overrides the standard temperature for the doneness level.
+      required: false
+      example: 57
+      selector:
+        number:
+          min: 30
+          max: 100
+          unit_of_measurement: "°C"
+          mode: box
 
 stop_cook:
   name: Stop Cook
-  description: Stop the current cooking session.
+  description: Stop the current cooking session. Fires kitchen_cooking_engine_cook_stopped event.
   target:
     entity:
       domain: sensor
@@ -71,7 +103,7 @@ stop_cook:
 
 start_rest:
   name: Start Rest
-  description: Start the resting phase after cooking.
+  description: Start the resting phase after cooking. Fires kitchen_cooking_engine_rest_start event and starts rest countdown timer.
   target:
     entity:
       domain: sensor
@@ -79,11 +111,28 @@ start_rest:
 
 complete_session:
   name: Complete Session
-  description: Mark the cooking session as complete.
+  description: Mark the cooking session as complete. Saves cook to history and updates user preferences.
   target:
     entity:
       domain: sensor
       integration: kitchen_cooking_engine
+
+set_notes:
+  name: Set Notes
+  description: Set notes for the current cooking session. Notes will be saved with cook history when session is completed.
+  target:
+    entity:
+      domain: sensor
+      integration: kitchen_cooking_engine
+  fields:
+    notes:
+      name: Notes
+      description: Notes about this cook (adjustments, observations, etc.)
+      required: true
+      example: "Added rosemary, turned at 45°C"
+      selector:
+        text:
+          multiline: true
 
 set_target:
   name: Set Target Temperature

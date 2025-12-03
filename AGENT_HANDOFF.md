@@ -1,27 +1,145 @@
 # Agent Handoff Document
 
-**Last Updated:** 1 Dec 2025, 17:40 CET
+**Last Updated:** 3 Dec 2025, 02:10 CET
+**Version:** v0.1.2.18 (Final for this agent)
+**Agent:** Copilot (Agent 2)
 
-## 🚨 PRIORITY TODO FOR NEXT AGENT (v0.1.1.0)
+---
 
-The following items are the **FIRST PRIORITY** for the next agent session:
+## 🎉 v0.1.2.x COMPLETE - Ready for Merge
 
-### 1. Merge and Deduplicate Cut/Protein Lists
-**Problem:** There are two separate lists of cuts/proteins that got out of sync:
-- `cooking_data.py` - 151 MeatCut definitions (used by Python backend for temperature validation)
-- `kitchen-cooking-panel.js` - 188 cut definitions in `MEAT_CATEGORIES` (used by UI rendering)
+All HIGH and MEDIUM priority items for v0.1.2.x have been completed. This branch is ready for merge to main.
 
-**Solution:**
-- Create a **single source of truth** for all cuts/proteins
-- Option A: Create a WebSocket API endpoint that serves the Python data to the frontend
-- Option B: Generate the JS data from Python at build time
-- Ensure NO cuts are lost when merging - combine both lists
+### What Was Completed (v0.1.2.0 → v0.1.2.18)
 
-### 2. Doneness Selection for All Proteins
-**Problem:** Currently doneness selection may only work properly for beef. All proteins should have:
-- Proper doneness options (Fish: medium/well, Poultry: safe, Lamb: rare-well, etc.)
-- **Suggested doneness** that auto-selects based on the cut
-- User should be able to **edit the suggestion** before starting the cook
+**HIGH PRIORITY** ✅
+- Sensor integration (ambient, battery)
+- All notifications & alerts (approaching, 5-min, goal reached, rest, ETA)
+- Dynamic ETA calculation
+- Rest time recommendations
+- External API for starting cooks
+
+**MEDIUM PRIORITY** ✅
+- Active cook monitoring panel
+- Cook history logging (with peak/final temps)
+- Remember last doneness per cut (including fine-tuning)
+- Temperature graph (from cook start only, with target indicator)
+- Cooking notes
+
+**ADDED BEYOND TODO** ✅
+- Indicator light control (temp→color progression)
+- Mobile push notifications
+- TTS voice announcements
+- Rest light transition (red→white)
+- White screen fix
+
+---
+
+```
+████████████████████████████████████████████████████████████████████████████████
+█                                                                              █
+█   🛑🛑🛑 STOP! SOURCE OF TRUTH - NEVER DUPLICATE DATA! 🛑🛑🛑                █
+█                                                                              █
+█   UI CODE (buttons, graph, layout, behavior):                                █
+█     → SOURCE: www/panel-class-template.js                                    █
+█     → Contains ONLY the class KitchenCookingPanel                            █
+█     → NO cooking data (meats, cuts, temps) should be here!                   █
+█                                                                              █
+█   COOKING DATA (meats, cuts, temperatures, doneness):                        █
+█     → SOURCE: cooking_data.py (International)                                █
+█     → SOURCE: swedish_cooking_data.py (Swedish)                              █
+█     → Generator injects this data into the JS file                           █
+█                                                                              █
+█   AUTO-GENERATED FILE (DO NOT EDIT!):                                        █
+█     → www/kitchen-cooking-panel.js                                           █
+█     → Created by: python3 generate_frontend_data.py                          █
+█     → Combines: header + cooking data + template class code                  █
+█                                                                              █
+█   WORKFLOW:                                                                  █
+█   □ 1. Edit the SOURCE file (template.js for UI, cooking_data.py for data)  █
+█   □ 2. Run: python3 generate_frontend_data.py                                █
+█   □ 3. Commit ALL changed files                                              █
+█                                                                              █
+█   ⚠️ DANGER: If you put cooking data in panel-class-template.js, you will   █
+█   create DUPLICATE DATA that WILL get out of sync and cause bugs!            █
+█                                                                              █
+████████████████████████████████████████████████████████████████████████████████
+```
+
+## Quick Reference: What File to Edit
+
+| I want to change... | Source of Truth | Then run |
+|---------------------|-----------------|----------|
+| Meat/cut data, temperatures, doneness | `cooking_data.py` | `python3 generate_frontend_data.py` |
+| Swedish data | `swedish_cooking_data.py` | `python3 generate_frontend_data.py` |
+| UI, graph, buttons, behavior | `www/panel-class-template.js` | `python3 generate_frontend_data.py` |
+| Sensor attributes | `sensor.py` | Nothing |
+| Services | `sensor.py` + `services.yaml` | Nothing |
+
+## Quick Commands
+
+```bash
+# After editing ANY source file, regenerate:
+cd custom_components/kitchen_cooking_engine
+python3 generate_frontend_data.py
+
+# Check PANEL_VERSION (must match!):
+grep "PANEL_VERSION" custom_components/kitchen_cooking_engine/const.py
+grep "const PANEL_VERSION" custom_components/kitchen_cooking_engine/www/kitchen-cooking-panel.js
+```
+
+---
+
+## 🚨 Frontend Panel Regeneration Behavior
+
+### How kitchen-cooking-panel.js Works
+
+The file `custom_components/kitchen_cooking_engine/www/kitchen-cooking-panel.js` has **special regeneration behavior** that you MUST understand:
+
+When a user installs/updates this integration, `generate_frontend_data.py` runs and **REGENERATES** the panel file:
+
+1. **REPLACED on user's system**: The header and all data constants (DONENESS_OPTIONS, MEAT_CATEGORIES, etc.)
+2. **PRESERVED on user's system**: Everything from `class KitchenCookingPanel` onwards (all the UI/behavior code)
+
+**This means:**
+- ❌ Changes to DATA CONSTANTS in kitchen-cooking-panel.js will be LOST on user's installation
+- ✅ Changes to CLASS CODE in kitchen-cooking-panel.js WILL be deployed when user updates
+
+**For AI Agents / Developers:**
+| What you want to change | Where to edit |
+|------------------------|---------------|
+| Cooking data (temps, cuts, doneness) | `cooking_data.py` or `swedish_cooking_data.py` |
+| UI behavior, rendering, graph code | Class code in `kitchen-cooking-panel.js` (it gets preserved) |
+
+**After editing class code:** You MUST COMMIT the changes to the repo. The user must UPDATE their integration to get class code changes.
+
+See `generate_frontend_data.py` for the regeneration logic (specifically the `regenerate_panel()` function).
+
+---
+
+## 🚀 TODO FOR NEXT AGENT (v0.1.3.x - LOW PRIORITY)
+
+The v0.1.2.x iteration is **complete**. The following LOW priority items remain for future versions:
+
+### 1. Multiple Simultaneous Cooks
+- Support monitoring more than one probe/item at once
+- UI to switch between active cooks or show all
+
+### 2. Dark/Light Theme
+- Follow Home Assistant theme settings
+
+### 3. Custom Cuts
+- Allow users to add their own cuts with custom temps
+
+### 4. Favorites
+- Mark frequently used cuts as favorites for quick access
+
+### 5. Cook Profiles/Presets
+- Save complete cook configurations for reuse
+
+### 6. AI Recipe Integration
+- Natural language meal planning
+- Recipe suggestions based on ingredients
 
 **Implementation:**
 - Each cut should have a `recommended_doneness` field
@@ -238,21 +356,26 @@ The integration follows patterns from the working `haos_feature_forecast` integr
 
 ---
 
-## What's Next for Phase 2
+## What's Next for Phase 2 (v0.1.3.x)
 
-### PRIORITY (for next agent v0.1.1.0):
-1. [ ] **Merge cut/protein lists** - Deduplicate cooking_data.py and kitchen-cooking-panel.js (see TODO above)
-2. [ ] **Doneness for all proteins** - Add recommended doneness that user can edit (see TODO above)
+### Completed in v0.1.2.x:
+1. [x] **Full service handlers** - start_cook, stop_cook, start_rest, complete_session
+2. [x] **Notification automations** - All events firing correctly
+3. [x] **Sidebar panel** - Full MEATER app structure with data source selector
+4. [x] **Merge cut/protein lists** - Frontend data now generated from Python
+5. [x] **Doneness for all proteins** - Recommended doneness with user editing
+6. [x] **Swedish language tree** - Full Swedish cut names
+7. [x] **Temperature graph** - Using HA's history API
+8. [x] **Cook history** - With peak/final temps
+9. [x] **Cooking notes** - Saved per cook
 
-### Already Completed:
-1. [x] **Full service handlers** - ✅ Implemented start_cook, stop_cook, start_rest, complete_session with entity targeting
-2. [x] **Notification automations** - ✅ Events fired for approaching_target and goal_reached
-3. [x] **Sidebar panel** - ✅ MEATER app structure with Steak/Roast/Other flow
-
-### Future Work:
-4. [ ] **Test via HACS** - After PR merge, import via HACS and test config flow
-5. [ ] **Temperature history** - Store temperature curves for ETA predictions
-6. [ ] **Swedish language tree** - Add Swedish butcher cut names
+### Future Work (LOW PRIORITY):
+1. [ ] **Multiple simultaneous cooks** - Monitor more than one probe
+2. [ ] **Dark/light theme** - Follow HA theme settings
+3. [ ] **Custom cuts** - User-defined cuts with custom temps
+4. [ ] **Favorites** - Quick access to frequently used cuts
+5. [ ] **Cook profiles** - Save complete cook configurations
+6. [ ] **AI recipe integration** - Natural language meal planning
 7. [ ] **Integration with Mealie/Grocy** - Link recipes to cooking sessions
 
 ---

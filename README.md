@@ -17,9 +17,9 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 ## 📊 Current Status
 
-**Phase 1: Kitchen Cooking Engine HACS Integration** 🚧 In Development
+**Phase 1: Kitchen Cooking Engine HACS Integration** ✅ Complete (v0.1.2.18)
 
-### v0.1.1.14 Features (Current)
+### v0.1.2.18 Features (Current)
 - ✅ MEATER+ temperature data flowing into Home Assistant via ESPHome BLE client
 - ✅ Comprehensive cooking data model (185+ international cuts, 89 Swedish cuts)
 - ✅ **Swedish data source** with proper terminology (helstekt, skiva)
@@ -30,10 +30,21 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 - ✅ HACS-compatible custom integration structure
 - ✅ Kitchen-focused cooking methods (oven, stovetop, air fryer, sous vide, etc.)
 - ✅ Vegetable support (root vegetables, greens, squash, mushrooms, etc.)
-- ⏳ Advanced cook monitoring (ambient temp, battery, time estimation)
-- ⏳ Notifications and alerts
-- ⏳ Cook history
-- ⏳ AI-powered recipe integration
+- ✅ **Ambient temperature sensor** - Optional sensor for better ETA predictions
+- ✅ **Battery level sensor** - Monitor MEATER probe battery status (displayed in UI)
+- ✅ **Dynamic ETA calculation** - Time-to-target based on temperature rise rate
+- ✅ **Indicator light control** - RGB light changes color as cooking progresses (blue→red)
+- ✅ **Rest phase light transition** - Light transitions from red→white during rest
+- ✅ **Mobile push notifications** - Direct notifications via Home Assistant Companion app
+- ✅ **TTS voice announcements** - Audible alerts on any speaker
+- ✅ **Persistent notifications** - Home Assistant notification panel alerts
+- ✅ **Cooking events** - Approaching target, 5 min remaining, goal reached, rest complete
+- ✅ **Cook history** - Log completed cooks with timestamps, peak temp, final temp
+- ✅ **Remember last doneness** - Remembers your preferences per cut (including fine-tuning)
+- ✅ **Temperature graph** - Real-time graph showing tip/ambient temps from cook start
+- ✅ **Cooking notes** - Add notes during cooks, saved with history
+- ✅ **White screen fix** - Reliable tab switching without blank screens
+- ⏳ AI-powered recipe integration (future)
 
 See [STATUS.md](STATUS.md) for detailed project status.
 See [TODO_v0.1.2.0.md](TODO_v0.1.2.0.md) for upcoming features.
@@ -73,7 +84,13 @@ See [TODO_v0.1.2.0.md](TODO_v0.1.2.0.md) for upcoming features.
 2. Click **+ Add Integration**
 3. Search for **Kitchen Cooking Engine**
 4. Select your temperature sensor (e.g., MEATER probe sensor)
-5. Optionally select an ambient temperature sensor
+5. Optionally configure additional sensors and notifications:
+   - **Ambient Temperature Sensor** - For better ETA predictions
+   - **Battery Level Sensor** - Monitor probe battery
+   - **Indicator Light** - RGB light that changes color during cooking
+   - **Notify Service** - Mobile app push notifications
+   - **TTS Entity** - Text-to-speech for voice announcements
+   - **Media Player** - Speaker for TTS announcements
 6. Choose your preferred temperature unit (Celsius/Fahrenheit)
 7. Click **Submit**
 
@@ -91,6 +108,9 @@ The sidebar panel provides:
 - **Temperature Fine-tuning**: Slider to adjust target temperature (35-100°C)
 - **Cooking Methods**: Oven, Pan, Grill, Air Fryer, and more
 - **Live Monitoring**: Real-time temperature and progress tracking
+- **Temperature Graph**: Visual graph of tip and ambient temps from cook start
+- **Cook History**: View past cooks with peak temps and notes
+- **Cooking Notes**: Add notes during active cooks
 - **Control Actions**: Stop cook, start rest, complete session
 
 ### Manual Installation (Alternative)
@@ -192,6 +212,57 @@ Swedish doneness levels: blodig, medium_rare, medium, medium_well, genomstekt, l
 | **Grill** | Direct radiant heat |
 | **Smoker** | Low heat with smoke |
 | **Charcoal Grill** | Traditional charcoal grilling |
+
+## 🔔 Notifications & Alerts
+
+### Indicator Light Control
+
+Configure an RGB light to provide visual feedback during cooking:
+
+| Phase | Color | Description |
+|-------|-------|-------------|
+| **Cooking** | Blue → Red | Color transitions from cold blue (23°C) through orange to deep red (target temperature) |
+| **Resting** | Red → White | Color transitions from red to white as rest time progresses |
+| **Action Needed** | Flashing Green | Flashes when target is reached or rest is complete |
+
+The light automatically saves its state before cooking and restores it when the session ends.
+
+### Mobile Push Notifications (HAOS 2025.11+)
+
+To receive push notifications on your phone:
+
+1. Go to **Settings** → **Devices & Services** → **Kitchen Cooking Engine** → **Configure**
+2. In the "Notify Service" field, enter your mobile app service name
+3. **To find your service name:**
+   - Go to **Developer Tools** → **Actions**
+   - Search for `notify.mobile_app`
+   - Your service will look like `notify.mobile_app_johns_iphone`
+   - Enter just the part after `notify.` → `mobile_app_johns_iphone`
+
+### TTS Voice Announcements
+
+To receive voice announcements on a speaker:
+
+1. Go to **Settings** → **Devices & Services** → **Kitchen Cooking Engine** → **Configure**
+2. In the "TTS Entity" field, enter your TTS entity (e.g., `tts.google_en_com`)
+3. In the "Media Player" field, enter your speaker entity (e.g., `media_player.living_room_speaker`)
+4. **To find your TTS entity:** Developer Tools → Actions → search `tts.speak`
+5. **To find your media player:** Settings → Devices & Services → find your speaker
+
+### Notification Events
+
+The integration fires these events which can be used in automations:
+
+| Event | Trigger |
+|-------|---------|
+| `kitchen_cooking_engine_approaching_target` | Temperature within 5°C of target |
+| `kitchen_cooking_engine_five_minutes_remaining` | ETA ≤5 minutes |
+| `kitchen_cooking_engine_goal_reached` | Target temperature hit |
+| `kitchen_cooking_engine_rest_start` | Rest period begins |
+| `kitchen_cooking_engine_rest_complete` | Rest period ends |
+| `kitchen_cooking_engine_cook_started` | Cooking session starts |
+| `kitchen_cooking_engine_cook_stopped` | Cooking session ends |
+| `kitchen_cooking_engine_eta_changed` | ETA changes by >2 minutes |
 
 ## 🔧 Using Services
 

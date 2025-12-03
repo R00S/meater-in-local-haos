@@ -2,10 +2,14 @@
 
 This module provides HTTP endpoints to serve cooking data to the frontend,
 ensuring a single source of truth for all cut/protein/doneness data.
+
+Last Updated: 2 Dec 2025, 15:30 CET
+Last Change: Added cook history, preferences, and notes endpoints
 """
 
 from __future__ import annotations
 
+import json
 import logging
 from aiohttp import web
 
@@ -21,6 +25,15 @@ from .cooking_data import (
     MeatCategory,
 )
 from .swedish_cooking_data import SWEDISH_MEAT_CATEGORIES
+from .storage import (
+    async_load_cook_history,
+    async_add_cook_to_history,
+    async_update_cook_notes,
+    async_delete_cook_from_history,
+    async_load_user_preferences,
+    async_set_cut_preference,
+    async_get_cut_preference,
+)
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -231,4 +244,119 @@ def async_register_api(hass: HomeAssistant) -> None:
     """Register API endpoints."""
     hass.http.register_view(CookingDataView)
     hass.http.register_view(DonenessOptionsView)
+    hass.http.register_view(CookHistoryView)
+    hass.http.register_view(CookHistoryItemView)
+    hass.http.register_view(UserPreferencesView)
+    hass.http.register_view(CutPreferenceView)
     _LOGGER.info("Kitchen Cooking Engine: API endpoints registered")
+
+
+class CookHistoryView(HomeAssistantView):
+    """API endpoint for cook history."""
+
+    url = "/api/kitchen_cooking_engine/history"
+    name = "api:kitchen_cooking_engine:history"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Get all cook history."""
+        hass = request.app["hass"]
+        history = await async_load_cook_history(hass)
+        # Return most recent first
+        history.reverse()
+        return self.json({"history": history})
+
+    async def post(self, request: web.Request) -> web.Response:
+        """Add a new cook to history."""
+        hass = request.app["hass"]
+        try:
+            data = await request.json()
+            success = await async_add_cook_to_history(hass, data)
+            if success:
+                return self.json({"status": "ok"})
+            return self.json({"status": "error", "message": "Failed to save"})
+        except Exception as e:
+            _LOGGER.error("Error adding cook to history: %s", e)
+            return self.json({"status": "error", "message": "Failed to process request"})
+
+
+class CookHistoryItemView(HomeAssistantView):
+    """API endpoint for individual cook history items."""
+
+    url = "/api/kitchen_cooking_engine/history/{cook_id}"
+    name = "api:kitchen_cooking_engine:history_item"
+    requires_auth = True
+
+    async def patch(self, request: web.Request, cook_id: str) -> web.Response:
+        """Update cook notes."""
+        hass = request.app["hass"]
+        try:
+            data = await request.json()
+            notes = data.get("notes", "")
+            success = await async_update_cook_notes(hass, cook_id, notes)
+            if success:
+                return self.json({"status": "ok"})
+            return self.json({"status": "error", "message": "Cook not found"})
+        except Exception as e:
+            _LOGGER.error("Error updating cook notes: %s", e)
+            return self.json({"status": "error", "message": "Failed to process request"})
+
+    async def delete(self, request: web.Request, cook_id: str) -> web.Response:
+        """Delete a cook from history."""
+        hass = request.app["hass"]
+        success = await async_delete_cook_from_history(hass, cook_id)
+        if success:
+            return self.json({"status": "ok"})
+        return self.json({"status": "error", "message": "Cook not found"})
+
+
+class UserPreferencesView(HomeAssistantView):
+    """API endpoint for user preferences."""
+
+    url = "/api/kitchen_cooking_engine/preferences"
+    name = "api:kitchen_cooking_engine:preferences"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Get all user preferences."""
+        hass = request.app["hass"]
+        preferences = await async_load_user_preferences(hass)
+        return self.json(preferences)
+
+
+class CutPreferenceView(HomeAssistantView):
+    """API endpoint for cut-specific preferences."""
+
+    url = "/api/kitchen_cooking_engine/preferences/cut/{cut_id}"
+    name = "api:kitchen_cooking_engine:cut_preference"
+    requires_auth = True
+
+    async def get(self, request: web.Request, cut_id: str) -> web.Response:
+        """Get preference for a specific cut."""
+        hass = request.app["hass"]
+        try:
+            preference = await async_get_cut_preference(hass, int(cut_id))
+            if preference:
+                return self.json({"preference": preference})
+            return self.json({"preference": None})
+        except ValueError:
+            return self.json({"status": "error", "message": "Invalid cut_id"})
+
+    async def post(self, request: web.Request, cut_id: str) -> web.Response:
+        """Set preference for a specific cut."""
+        hass = request.app["hass"]
+        try:
+            data = await request.json()
+            success = await async_set_cut_preference(
+                hass,
+                int(cut_id),
+                data.get("doneness"),
+                data.get("custom_temp_c"),
+                data.get("cooking_method"),
+            )
+            if success:
+                return self.json({"status": "ok"})
+            return self.json({"status": "error", "message": "Failed to save"})
+        except Exception as e:
+            _LOGGER.error("Error setting cut preference: %s", e)
+            return self.json({"status": "error", "message": "Failed to process request"})
