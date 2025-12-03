@@ -86,6 +86,8 @@ sensor:
       return (float)ambient;
 
   # Battery level
+  # Battery data is 2 bytes: byte0 + byte1*256 gives raw value, multiply by 10 for percentage
+  # Reference: https://github.com/nathanfaber/meaterble
   - platform: ble_client
     type: characteristic
     ble_client_id: meater
@@ -96,7 +98,7 @@ sensor:
     unit_of_measurement: '%'
     notify: true
     lambda: |-
-      uint16_t battery = (x[0] + x[1]) * 10;
+      uint16_t battery = (x[0] + (x[1] << 8)) * 10;
       return (float)battery;
 
   # Firmware version reader
