@@ -206,51 +206,34 @@ def generate_js_data():
 
 
 def regenerate_panel():
-    """Regenerate the panel JS file with fresh data from backend."""
+    """Regenerate the panel JS file with fresh data from backend.
+    
+    This function:
+    1. Reads the class code from panel-class-template.js (the source of truth for UI code)
+    2. Generates fresh data constants from the Python cooking data files
+    3. Combines them into a new kitchen-cooking-panel.js
+    
+    The template file contains the UI class code and is updated by developers.
+    The data constants are generated from cooking_data.py and swedish_cooking_data.py.
+    """
     _load_cooking_data()
     
     base_dir = os.path.dirname(os.path.abspath(__file__))
     panel_file = os.path.join(base_dir, "www", "kitchen-cooking-panel.js")
+    template_file = os.path.join(base_dir, "www", "panel-class-template.js")
     
-    # Read existing panel
-    with open(panel_file, "r", encoding="utf-8") as f:
-        content = f.read()
-    
-    # Find where the data ends and the class begins
-    # Look for "class KitchenCookingPanel"
-    class_marker = "class KitchenCookingPanel"
-    class_idx = content.find(class_marker)
-    
-    if class_idx == -1:
-        print("ERROR: Could not find 'class KitchenCookingPanel' in panel file", file=sys.stderr)
+    # Read the class template (source of truth for UI code)
+    if not os.path.exists(template_file):
+        print(f"ERROR: Template file not found: {template_file}", file=sys.stderr)
+        print("The template file contains the UI class code and must exist.", file=sys.stderr)
         return False
     
-    # Find the start of data (after the imports)
-    # Look for "// Data source options" or similar
-    data_start_markers = [
-        "// AUTO-GENERATED DATA",
-        "// Doneness option definitions",
-        "// Data source options",
-        "const DONENESS_OPTIONS",
-    ]
+    with open(template_file, "r", encoding="utf-8") as f:
+        class_code = f.read()
     
-    data_start = -1
-    for marker in data_start_markers:
-        idx = content.find(marker)
-        if idx != -1 and (data_start == -1 or idx < data_start):
-            data_start = idx
-    
-    if data_start == -1:
-        # Fall back to after imports
-        import_end = content.rfind("from \"https://unpkg.com/lit-element")
-        if import_end != -1:
-            data_start = content.find("\n", import_end) + 1
-        else:
-            data_start = 0
-    
-    # Extract the parts we want to keep
-    # Footer: from class definition to end
-    footer = content[class_idx:]
+    if "class KitchenCookingPanel" not in class_code:
+        print("ERROR: Template file does not contain 'class KitchenCookingPanel'", file=sys.stderr)
+        return False
     
     # Generate new header with current CET timestamp
     cet_time = get_cet_timestamp()
@@ -261,30 +244,24 @@ def regenerate_panel():
  * ║  ⛔ STOP! BEFORE EDITING THIS FILE, READ THIS:                              ║
  * ╠══════════════════════════════════════════════════════════════════════════════╣
  * ║                                                                              ║
- * ║  If you edit ANYTHING in this file, you MUST ALSO update PANEL_VERSION      ║
- * ║  in BOTH files to match:                                                    ║
+ * ║  This file is AUTO-GENERATED. Do not edit it directly!                      ║
  * ║                                                                              ║
- * ║    1. const.py line 11:  PANEL_VERSION = "XX"                               ║
- * ║    2. This file (bottom): const PANEL_VERSION = "XX";                       ║
+ * ║  TO CHANGE UI/BEHAVIOR:                                                      ║
+ * ║    1. Edit www/panel-class-template.js (the source of truth for UI code)    ║
+ * ║    2. Run: python3 generate_frontend_data.py                                ║
+ * ║    3. This regenerates kitchen-cooking-panel.js with your changes           ║
  * ║                                                                              ║
- * ║  If they don't match, YOUR CHANGES WILL NOT WORK!                           ║
- * ║  (Home Assistant will look for wrong custom element name)                   ║
+ * ║  TO CHANGE COOKING DATA:                                                     ║
+ * ║    1. Edit cooking_data.py or swedish_cooking_data.py                       ║
+ * ║    2. Run: python3 generate_frontend_data.py                                ║
  * ║                                                                              ║
- * ╠══════════════════════════════════════════════════════════════════════════════╣
- * ║                                                                              ║
- * ║  This file is AUTO-REGENERATED when user installs/updates:                  ║
- * ║    - REPLACED: Header and data constants (DONENESS_OPTIONS, etc.)           ║
- * ║    - PRESERVED: Everything from "class KitchenCookingPanel" onwards         ║
- * ║                                                                              ║
- * ║  FOR AI AGENTS / DEVELOPERS:                                                 ║
- * ║    - To change cooking data: Edit cooking_data.py or swedish_cooking_data.py║
- * ║    - To change UI/behavior: Edit the class code below (it gets preserved)   ║
- * ║    - After editing: Update PANEL_VERSION in BOTH const.py AND this file     ║
+ * ║  PANEL_VERSION is automatically kept in sync between const.py and this file ║
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-REGENERATED: {cet_time}
+ * AUTO-GENERATED: {cet_time}
  * Data generated from cooking_data.py and swedish_cooking_data.py
+ * UI class from panel-class-template.js
  * 
  * Temperature values are suggestions based on cooking style, not just safety.
  */
@@ -318,7 +295,7 @@ import {{
 ];
 
 """
-    new_content += footer
+    new_content += class_code
     
     # Update panel version in JS
     old_version_line = 'const PANEL_VERSION = "'

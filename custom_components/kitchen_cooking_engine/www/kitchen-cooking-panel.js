@@ -5,31 +5,24 @@
  * ║  ⛔ STOP! BEFORE EDITING THIS FILE, READ THIS:                              ║
  * ╠══════════════════════════════════════════════════════════════════════════════╣
  * ║                                                                              ║
- * ║  If you edit ANYTHING in this file, you MUST ALSO update PANEL_VERSION      ║
- * ║  in BOTH files to match:                                                    ║
+ * ║  This file is AUTO-GENERATED. Do not edit it directly!                      ║
  * ║                                                                              ║
- * ║    1. const.py line 11:  PANEL_VERSION = "XX"                               ║
- * ║    2. This file (bottom): const PANEL_VERSION = "XX";                       ║
+ * ║  TO CHANGE UI/BEHAVIOR:                                                      ║
+ * ║    1. Edit www/panel-class-template.js (the source of truth for UI code)    ║
+ * ║    2. Run: python3 generate_frontend_data.py                                ║
+ * ║    3. This regenerates kitchen-cooking-panel.js with your changes           ║
  * ║                                                                              ║
- * ║  If they don't match, YOUR CHANGES WILL NOT WORK!                           ║
- * ║  (Home Assistant will look for wrong custom element name)                   ║
+ * ║  TO CHANGE COOKING DATA:                                                     ║
+ * ║    1. Edit cooking_data.py or swedish_cooking_data.py                       ║
+ * ║    2. Run: python3 generate_frontend_data.py                                ║
  * ║                                                                              ║
- * ╠══════════════════════════════════════════════════════════════════════════════╣
- * ║                                                                              ║
- * ║  When a user installs/updates this integration, generate_frontend_data.py   ║
- * ║  runs and REGENERATES this file. It:                                        ║
- * ║    1. Replaces the header and data constants (DONENESS_OPTIONS, etc.)       ║
- * ║    2. PRESERVES everything from "class KitchenCookingPanel" onwards         ║
- * ║                                                                              ║
- * ║  FOR AI AGENTS / DEVELOPERS:                                                 ║
- * ║    - To change cooking data: Edit cooking_data.py or swedish_cooking_data.py║
- * ║    - To change UI/behavior: Edit the class code below (it gets preserved)   ║
- * ║    - After editing: Update PANEL_VERSION in BOTH const.py AND this file     ║
+ * ║  PANEL_VERSION is automatically kept in sync between const.py and this file ║
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-REGENERATED: 02 Dec 2025, 12:07 CET
+ * AUTO-GENERATED: 03 Dec 2025, 01:18 CET
  * Data generated from cooking_data.py and swedish_cooking_data.py
+ * UI class from panel-class-template.js
  * 
  * Temperature values are suggestions based on cooking style, not just safety.
  */
@@ -48,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py and swedish_cooking_data.py
-// Last generated: 02 Dec 2025, 12:07 CET
+// Last generated: 03 Dec 2025, 01:18 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5229,7 +5222,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "36";
+const PANEL_VERSION = "37";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
