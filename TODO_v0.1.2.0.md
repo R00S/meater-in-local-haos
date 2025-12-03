@@ -1,11 +1,12 @@
 # Kitchen Cooking Engine - TODO for v0.1.2.0
 
-Last Updated: 2 Dec 2025, 12:30 CET
+Last Updated: 3 Dec 2025, 02:10 CET
 Prepared by: Copilot agent
+Status: ✅ **ALL HIGH AND MEDIUM PRIORITY ITEMS COMPLETE**
 
-## Current State (v0.1.2.0)
+## Current State (v0.1.2.18 - FINAL)
 
-### Completed in v0.1.2.0:
+### Completed in v0.1.2.x:
 - ✅ Battery sensor configuration and display
 - ✅ Ambient temperature display in active cook view
 - ✅ Comprehensive notification events (approaching, 5-min warning, goal reached, rest start/complete, ETA changes)
@@ -18,6 +19,15 @@ Prepared by: Copilot agent
 - ✅ Temperature fine-tuning with slider (35-100°C)
 - ✅ Recommended doneness per cut with ⭐ indicator
 - ✅ Data source selector (International/Swedish)
+- ✅ Cook history with timestamps, peak temp, final temp
+- ✅ Remember last doneness per cut (including fine-tuning)
+- ✅ Temperature graph from cook start (using HA history API)
+- ✅ Target temp indicator on graph
+- ✅ Cooking notes (saved per cook)
+- ✅ Indicator light control (temp→color progression)
+- ✅ Mobile push notifications
+- ✅ TTS voice announcements
+- ✅ Rest light transition (red→white)
 
 ---
 
@@ -62,7 +72,7 @@ Prepared by: Copilot agent
 
 ---
 
-## MEDIUM PRIORITY - UI/UX Improvements
+## MEDIUM PRIORITY - UI/UX Improvements ✅ ALL COMPLETE
 
 ### 1. Active Cook Monitoring Panel ✅
 - ✅ Show current tip temperature
@@ -75,7 +85,7 @@ Prepared by: Copilot agent
 ### 2. Cook History ✅
 - ✅ Log completed cooks with:
   - ✅ Timestamps (start, target reached, rest start, complete)
-  - ✅ Temperatures recorded
+  - ✅ Temperatures recorded (peak temp, final temp after rest)
   - ✅ Duration
   - ✅ Cut and doneness used
 - ✅ Display history in UI
@@ -83,10 +93,13 @@ Prepared by: Copilot agent
 ### 3. Remember Last Doneness/Temp Per Cut ✅
 - ✅ **Default to last used doneness/temperature** instead of recommended when cooking the same cut again
 - ✅ Store user preferences per cut
+- ✅ Remember fine-tuned temperatures
 
 ### 4. Temperature Graph ✅
 - ✅ Visual chart showing temp over time during cook (tip and ambient)
-- Target line shown on graph
+- ✅ Uses Home Assistant's history API
+- ✅ Shows data only from cook start
+- ✅ Target temperature indicator displayed above graph
 
 ### 5. Cooking Notes ✅
 - ✅ Save notes per cook (what worked, adjustments made)

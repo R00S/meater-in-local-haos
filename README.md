@@ -17,9 +17,9 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 ## 📊 Current Status
 
-**Phase 1: Kitchen Cooking Engine HACS Integration** 🚧 In Development
+**Phase 1: Kitchen Cooking Engine HACS Integration** ✅ Complete (v0.1.2.18)
 
-### v0.1.2.7 Features (Current)
+### v0.1.2.18 Features (Current)
 - ✅ MEATER+ temperature data flowing into Home Assistant via ESPHome BLE client
 - ✅ Comprehensive cooking data model (185+ international cuts, 89 Swedish cuts)
 - ✅ **Swedish data source** with proper terminology (helstekt, skiva)
@@ -31,7 +31,7 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 - ✅ Kitchen-focused cooking methods (oven, stovetop, air fryer, sous vide, etc.)
 - ✅ Vegetable support (root vegetables, greens, squash, mushrooms, etc.)
 - ✅ **Ambient temperature sensor** - Optional sensor for better ETA predictions
-- ✅ **Battery level sensor** - Monitor MEATER probe battery status
+- ✅ **Battery level sensor** - Monitor MEATER probe battery status (displayed in UI)
 - ✅ **Dynamic ETA calculation** - Time-to-target based on temperature rise rate
 - ✅ **Indicator light control** - RGB light changes color as cooking progresses (blue→red)
 - ✅ **Rest phase light transition** - Light transitions from red→white during rest
@@ -39,8 +39,12 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 - ✅ **TTS voice announcements** - Audible alerts on any speaker
 - ✅ **Persistent notifications** - Home Assistant notification panel alerts
 - ✅ **Cooking events** - Approaching target, 5 min remaining, goal reached, rest complete
-- ⏳ Cook history
-- ⏳ AI-powered recipe integration
+- ✅ **Cook history** - Log completed cooks with timestamps, peak temp, final temp
+- ✅ **Remember last doneness** - Remembers your preferences per cut (including fine-tuning)
+- ✅ **Temperature graph** - Real-time graph showing tip/ambient temps from cook start
+- ✅ **Cooking notes** - Add notes during cooks, saved with history
+- ✅ **White screen fix** - Reliable tab switching without blank screens
+- ⏳ AI-powered recipe integration (future)
 
 See [STATUS.md](STATUS.md) for detailed project status.
 See [TODO_v0.1.2.0.md](TODO_v0.1.2.0.md) for upcoming features.
@@ -104,6 +108,9 @@ The sidebar panel provides:
 - **Temperature Fine-tuning**: Slider to adjust target temperature (35-100°C)
 - **Cooking Methods**: Oven, Pan, Grill, Air Fryer, and more
 - **Live Monitoring**: Real-time temperature and progress tracking
+- **Temperature Graph**: Visual graph of tip and ambient temps from cook start
+- **Cook History**: View past cooks with peak temps and notes
+- **Cooking Notes**: Add notes during active cooks
 - **Control Actions**: Stop cook, start rest, complete session
 
 ### Manual Installation (Alternative)

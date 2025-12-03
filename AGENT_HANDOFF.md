@@ -1,6 +1,39 @@
 # Agent Handoff Document
 
-**Last Updated:** 3 Dec 2025, 01:00 CET
+**Last Updated:** 3 Dec 2025, 02:10 CET
+**Version:** v0.1.2.18 (Final for this agent)
+**Agent:** Copilot (Agent 2)
+
+---
+
+## 🎉 v0.1.2.x COMPLETE - Ready for Merge
+
+All HIGH and MEDIUM priority items for v0.1.2.x have been completed. This branch is ready for merge to main.
+
+### What Was Completed (v0.1.2.0 → v0.1.2.18)
+
+**HIGH PRIORITY** ✅
+- Sensor integration (ambient, battery)
+- All notifications & alerts (approaching, 5-min, goal reached, rest, ETA)
+- Dynamic ETA calculation
+- Rest time recommendations
+- External API for starting cooks
+
+**MEDIUM PRIORITY** ✅
+- Active cook monitoring panel
+- Cook history logging (with peak/final temps)
+- Remember last doneness per cut (including fine-tuning)
+- Temperature graph (from cook start only, with target indicator)
+- Cooking notes
+
+**ADDED BEYOND TODO** ✅
+- Indicator light control (temp→color progression)
+- Mobile push notifications
+- TTS voice announcements
+- Rest light transition (red→white)
+- White screen fix
+
+---
 
 ```
 ████████████████████████████████████████████████████████████████████████████████
@@ -84,26 +117,29 @@ See `generate_frontend_data.py` for the regeneration logic (specifically the `re
 
 ---
 
-## 🚨 PRIORITY TODO FOR NEXT AGENT (v0.1.2.x)
+## 🚀 TODO FOR NEXT AGENT (v0.1.3.x - LOW PRIORITY)
 
-The following items are the **FIRST PRIORITY** for the next agent session:
+The v0.1.2.x iteration is **complete**. The following LOW priority items remain for future versions:
 
-### 1. Merge and Deduplicate Cut/Protein Lists
-**Problem:** There are two separate lists of cuts/proteins that got out of sync:
-- `cooking_data.py` - 151 MeatCut definitions (used by Python backend for temperature validation)
-- `kitchen-cooking-panel.js` - 188 cut definitions in `MEAT_CATEGORIES` (used by UI rendering)
+### 1. Multiple Simultaneous Cooks
+- Support monitoring more than one probe/item at once
+- UI to switch between active cooks or show all
 
-**Solution:**
-- Create a **single source of truth** for all cuts/proteins
-- Option A: Create a WebSocket API endpoint that serves the Python data to the frontend
-- Option B: Generate the JS data from Python at build time
-- Ensure NO cuts are lost when merging - combine both lists
+### 2. Dark/Light Theme
+- Follow Home Assistant theme settings
 
-### 2. Doneness Selection for All Proteins
-**Problem:** Currently doneness selection may only work properly for beef. All proteins should have:
-- Proper doneness options (Fish: medium/well, Poultry: safe, Lamb: rare-well, etc.)
-- **Suggested doneness** that auto-selects based on the cut
-- User should be able to **edit the suggestion** before starting the cook
+### 3. Custom Cuts
+- Allow users to add their own cuts with custom temps
+
+### 4. Favorites
+- Mark frequently used cuts as favorites for quick access
+
+### 5. Cook Profiles/Presets
+- Save complete cook configurations for reuse
+
+### 6. AI Recipe Integration
+- Natural language meal planning
+- Recipe suggestions based on ingredients
 
 **Implementation:**
 - Each cut should have a `recommended_doneness` field
@@ -320,21 +356,26 @@ The integration follows patterns from the working `haos_feature_forecast` integr
 
 ---
 
-## What's Next for Phase 2
+## What's Next for Phase 2 (v0.1.3.x)
 
-### PRIORITY (for next agent v0.1.1.0):
-1. [ ] **Merge cut/protein lists** - Deduplicate cooking_data.py and kitchen-cooking-panel.js (see TODO above)
-2. [ ] **Doneness for all proteins** - Add recommended doneness that user can edit (see TODO above)
+### Completed in v0.1.2.x:
+1. [x] **Full service handlers** - start_cook, stop_cook, start_rest, complete_session
+2. [x] **Notification automations** - All events firing correctly
+3. [x] **Sidebar panel** - Full MEATER app structure with data source selector
+4. [x] **Merge cut/protein lists** - Frontend data now generated from Python
+5. [x] **Doneness for all proteins** - Recommended doneness with user editing
+6. [x] **Swedish language tree** - Full Swedish cut names
+7. [x] **Temperature graph** - Using HA's history API
+8. [x] **Cook history** - With peak/final temps
+9. [x] **Cooking notes** - Saved per cook
 
-### Already Completed:
-1. [x] **Full service handlers** - ✅ Implemented start_cook, stop_cook, start_rest, complete_session with entity targeting
-2. [x] **Notification automations** - ✅ Events fired for approaching_target and goal_reached
-3. [x] **Sidebar panel** - ✅ MEATER app structure with Steak/Roast/Other flow
-
-### Future Work:
-4. [ ] **Test via HACS** - After PR merge, import via HACS and test config flow
-5. [ ] **Temperature history** - Store temperature curves for ETA predictions
-6. [ ] **Swedish language tree** - Add Swedish butcher cut names
+### Future Work (LOW PRIORITY):
+1. [ ] **Multiple simultaneous cooks** - Monitor more than one probe
+2. [ ] **Dark/light theme** - Follow HA theme settings
+3. [ ] **Custom cuts** - User-defined cuts with custom temps
+4. [ ] **Favorites** - Quick access to frequently used cuts
+5. [ ] **Cook profiles** - Save complete cook configurations
+6. [ ] **AI recipe integration** - Natural language meal planning
 7. [ ] **Integration with Mealie/Grocy** - Link recipes to cooking sessions
 
 ---
