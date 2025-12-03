@@ -1,50 +1,55 @@
 # Agent Handoff Document
 
-**Last Updated:** 3 Dec 2025, 00:00 CET
+**Last Updated:** 3 Dec 2025, 01:00 CET
 
 ```
 ████████████████████████████████████████████████████████████████████████████████
 █                                                                              █
-█   🛑🛑🛑 STOP! YOU MUST READ THIS BEFORE EDITING ANY CODE! 🛑🛑🛑            █
+█   🛑🛑🛑 STOP! SOURCE OF TRUTH - NEVER DUPLICATE DATA! 🛑🛑🛑                █
 █                                                                              █
-█   THE #1 BUG THAT WASTES HOURS:                                              █
+█   UI CODE (buttons, graph, layout, behavior):                                █
+█     → SOURCE: www/panel-class-template.js                                    █
+█     → Contains ONLY the class KitchenCookingPanel                            █
+█     → NO cooking data (meats, cuts, temps) should be here!                   █
 █                                                                              █
-█   kitchen-cooking-panel.js has TWO PARTS:                                    █
+█   COOKING DATA (meats, cuts, temperatures, doneness):                        █
+█     → SOURCE: cooking_data.py (International)                                █
+█     → SOURCE: swedish_cooking_data.py (Swedish)                              █
+█     → Generator injects this data into the JS file                           █
 █                                                                              █
-█   PART 1 (Header + Data): GETS OVERWRITTEN when user installs!               █
-█   → Lines 1 to "class KitchenCookingPanel"                                   █
-█   → DON'T edit data here - edit cooking_data.py instead                      █
+█   AUTO-GENERATED FILE (DO NOT EDIT!):                                        █
+█     → www/kitchen-cooking-panel.js                                           █
+█     → Created by: python3 generate_frontend_data.py                          █
+█     → Combines: header + cooking data + template class code                  █
 █                                                                              █
-█   PART 2 (Class Code): IS PRESERVED when user installs                       █
-█   → From "class KitchenCookingPanel" to end of file                          █
-█   → Your changes here WILL work, BUT...                                      █
+█   WORKFLOW:                                                                  █
+█   □ 1. Edit the SOURCE file (template.js for UI, cooking_data.py for data)  █
+█   □ 2. Run: python3 generate_frontend_data.py                                █
+█   □ 3. Commit ALL changed files                                              █
 █                                                                              █
-█   ⚠️  YOU MUST ALSO BUMP PANEL_VERSION IN BOTH FILES! ⚠️                      █
-█                                                                              █
-█   After ANY edit to the JS file:                                             █
-█   1. Bump const.py: PANEL_VERSION = "34" → "35"                              █
-█   2. Bump JS file (bottom): const PANEL_VERSION = "34"; → "35";              █
-█   3. Commit BOTH files together                                              █
-█                                                                              █
-█   If you skip this: YOUR CHANGES WILL BE INVISIBLE!                          █
-█   (A previous agent wasted 10+ commits because of this)                      █
+█   ⚠️ DANGER: If you put cooking data in panel-class-template.js, you will   █
+█   create DUPLICATE DATA that WILL get out of sync and cause bugs!            █
 █                                                                              █
 ████████████████████████████████████████████████████████████████████████████████
 ```
 
 ## Quick Reference: What File to Edit
 
-| I want to change... | Edit this file | Also update |
-|---------------------|----------------|-------------|
-| Meat/cut data, temperatures | `cooking_data.py` | Nothing |
-| Swedish data | `swedish_cooking_data.py` | Nothing |
-| UI, graph, buttons | `kitchen-cooking-panel.js` CLASS section | **PANEL_VERSION in both files!** |
+| I want to change... | Source of Truth | Then run |
+|---------------------|-----------------|----------|
+| Meat/cut data, temperatures, doneness | `cooking_data.py` | `python3 generate_frontend_data.py` |
+| Swedish data | `swedish_cooking_data.py` | `python3 generate_frontend_data.py` |
+| UI, graph, buttons, behavior | `www/panel-class-template.js` | `python3 generate_frontend_data.py` |
 | Sensor attributes | `sensor.py` | Nothing |
 | Services | `sensor.py` + `services.yaml` | Nothing |
 
 ## Quick Commands
 
 ```bash
+# After editing ANY source file, regenerate:
+cd custom_components/kitchen_cooking_engine
+python3 generate_frontend_data.py
+
 # Check PANEL_VERSION (must match!):
 grep "PANEL_VERSION" custom_components/kitchen_cooking_engine/const.py
 grep "const PANEL_VERSION" custom_components/kitchen_cooking_engine/www/kitchen-cooking-panel.js

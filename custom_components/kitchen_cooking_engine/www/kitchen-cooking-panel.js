@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 03 Dec 2025, 01:34 CET
+ * AUTO-GENERATED: 03 Dec 2025, 01:37 CET
  * Data generated from cooking_data.py and swedish_cooking_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py and swedish_cooking_data.py
-// Last generated: 03 Dec 2025, 01:34 CET
+// Last generated: 03 Dec 2025, 01:37 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -3547,6 +3547,30 @@ const COOKING_METHODS = [
   { value: "slow_cooker", name: "Slow Cooker" },
 ];
 
+/**
+ * Kitchen Cooking Panel - UI Class Template
+ * 
+ * ╔══════════════════════════════════════════════════════════════════════════════╗
+ * ║  THIS FILE IS THE SOURCE OF TRUTH FOR UI CODE ONLY                          ║
+ * ╠══════════════════════════════════════════════════════════════════════════════╣
+ * ║                                                                              ║
+ * ║  ✅ EDIT THIS FILE FOR: UI buttons, graph, layout, behavior                 ║
+ * ║  ❌ DO NOT ADD HERE: Cooking data (meats, cuts, temps, doneness)            ║
+ * ║                                                                              ║
+ * ║  COOKING DATA SOURCE OF TRUTH:                                               ║
+ * ║    → cooking_data.py (International)                                         ║
+ * ║    → swedish_cooking_data.py (Swedish)                                       ║
+ * ║                                                                              ║
+ * ║  The generator (generate_frontend_data.py) combines:                         ║
+ * ║    1. Header + imports                                                       ║
+ * ║    2. Cooking data constants (from Python files)                             ║
+ * ║    3. This class code (from this template)                                   ║
+ * ║                                                                              ║
+ * ║  After editing, run: python3 generate_frontend_data.py                       ║
+ * ║                                                                              ║
+ * ╚══════════════════════════════════════════════════════════════════════════════╝
+ */
+
 class KitchenCookingPanel extends LitElement {
   static get properties() {
     return {
@@ -5245,7 +5269,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "39";
+const PANEL_VERSION = "40";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

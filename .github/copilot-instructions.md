@@ -3,22 +3,24 @@
 ```
 ████████████████████████████████████████████████████████████████████████████████
 █                                                                              █
-█   🛑 CRITICAL: HOW THE FRONTEND FILES WORK 🛑                                █
+█   🛑 CRITICAL: SOURCE OF TRUTH FOR DIFFERENT DATA 🛑                        █
 █                                                                              █
-█   There are TWO frontend files:                                              █
+█   ⚠️  DO NOT DUPLICATE DATA BETWEEN FILES! Each has ONE source of truth:    █
 █                                                                              █
-█   1. panel-class-template.js  ← EDIT THIS ONE for UI changes                 █
-█      Contains: class KitchenCookingPanel and all UI code                     █
-█      This is the SOURCE OF TRUTH for UI code                                 █
+█   UI CODE (buttons, graph, layout, behavior):                                █
+█     → Edit: www/panel-class-template.js                                      █
 █                                                                              █
-█   2. kitchen-cooking-panel.js ← DO NOT EDIT THIS DIRECTLY                    █
-█      This is AUTO-GENERATED from template + cooking data                     █
-█      Gets regenerated on every install/update                                █
+█   COOKING DATA (meats, cuts, temperatures, doneness):                        █
+█     → Edit: cooking_data.py (International) or swedish_cooking_data.py       █
+█     → NEVER put cooking data in the JS template!                             █
 █                                                                              █
-█   WORKFLOW FOR UI CHANGES:                                                   █
-█   □ 1. Edit www/panel-class-template.js                                      █
+█   AUTO-GENERATED (combines UI + data):                                       █
+█     → www/kitchen-cooking-panel.js ← DO NOT EDIT THIS DIRECTLY               █
+█                                                                              █
+█   WORKFLOW:                                                                  █
+█   □ 1. Edit the appropriate SOURCE file (template.js OR cooking_data.py)    █
 █   □ 2. Run: python3 generate_frontend_data.py                                █
-█   □ 3. Commit BOTH files (template + generated kitchen-cooking-panel.js)     █
+█   □ 3. Commit ALL changed files                                              █
 █                                                                              █
 █   The generator automatically keeps PANEL_VERSION in sync!                   █
 █                                                                              █
@@ -28,7 +30,7 @@
 ## Quick Commands
 
 ```bash
-# After editing panel-class-template.js, regenerate the panel:
+# After editing panel-class-template.js OR cooking_data.py, regenerate:
 cd custom_components/kitchen_cooking_engine
 python3 generate_frontend_data.py
 
@@ -39,14 +41,21 @@ grep "const PANEL_VERSION" custom_components/kitchen_cooking_engine/www/kitchen-
 
 ## What File to Edit for Each Change
 
-| I want to change... | Edit this file | Then run |
-|---------------------|----------------|----------|
-| UI buttons, graph, layout | `www/panel-class-template.js` | `python3 generate_frontend_data.py` |
-| Meat/cut names, temperatures | `cooking_data.py` | `python3 generate_frontend_data.py` |
+| I want to change... | Source of Truth | Then run |
+|---------------------|-----------------|----------|
+| UI buttons, graph, layout, behavior | `www/panel-class-template.js` | `python3 generate_frontend_data.py` |
+| Meat/cut names, temperatures, doneness | `cooking_data.py` | `python3 generate_frontend_data.py` |
 | Swedish meat data | `swedish_cooking_data.py` | `python3 generate_frontend_data.py` |
 | Sensor attributes | `sensor.py` | - |
 | Services | `sensor.py` + `services.yaml` | - |
 | Config options | `config_flow.py` | - |
+
+### ⚠️ DANGER: Duplicate Data
+
+**NEVER** put cooking data (MEAT_CATEGORIES, DONENESS_OPTIONS, etc.) in panel-class-template.js!
+- The template should only have UI code (the class definition)
+- Cooking data constants are injected by the generator from the Python files
+- If you duplicate data, it WILL get out of sync and cause bugs
 
 ---
 
@@ -62,21 +71,21 @@ This is a Home Assistant custom integration for kitchen temperature cooking (MEA
 
 ## Key Files
 
-### Backend (Python)
+### Backend (Python) - Sources of Truth
 | File | Purpose |
 |------|---------|
-| `__init__.py` | Integration setup, panel registration |
+| `cooking_data.py` | **SOURCE OF TRUTH** - International meat/cut/temp data |
+| `swedish_cooking_data.py` | **SOURCE OF TRUTH** - Swedish meat/cut/temp data |
 | `sensor.py` | Cooking session sensor entity |
-| `cooking_data.py` | International meat/cut data (source of truth) |
-| `swedish_cooking_data.py` | Swedish meat/cut data |
 | `const.py` | Constants including PANEL_VERSION |
 | `generate_frontend_data.py` | Generates JS from template + data |
+| `__init__.py` | Integration setup, panel registration |
 
 ### Frontend (JavaScript)
 | File | Purpose |
 |------|---------|
-| `www/panel-class-template.js` | **EDIT THIS** - UI class code (source of truth) |
-| `www/kitchen-cooking-panel.js` | Auto-generated - DO NOT EDIT DIRECTLY |
+| `www/panel-class-template.js` | **SOURCE OF TRUTH** - UI class code ONLY |
+| `www/kitchen-cooking-panel.js` | **AUTO-GENERATED** - DO NOT EDIT |
 
 ---
 
@@ -104,6 +113,7 @@ No automated tests exist - all testing is manual on real HAOS.
 ## Common Mistakes to Avoid
 
 1. ❌ Editing kitchen-cooking-panel.js directly (it gets overwritten!)
-2. ❌ Forgetting to run generate_frontend_data.py after editing template
-3. ❌ Forgetting to commit both template AND generated file
-4. ❌ Using deprecated HA APIs (check HA 2024.1.0+ compatibility)
+2. ❌ Putting cooking data in panel-class-template.js (causes duplicates!)
+3. ❌ Forgetting to run generate_frontend_data.py after editing
+4. ❌ Forgetting to commit ALL changed files (template + generated + data)
+5. ❌ Using deprecated HA APIs (check HA 2024.1.0+ compatibility)
