@@ -164,7 +164,7 @@ light:
     restore_mode: ALWAYS_OFF
 
 # Script to update LED based on connection status
-# Uses light.addressable_set for proper color control on WS2812 addressable LEDs
+# Uses light.control action for proper color control on addressable LEDs
 script:
   - id: update_status_led
     then:
@@ -174,36 +174,31 @@ script:
               wifi.connected:
           then:
             # Red: Not connected to WiFi
-            - light.turn_on:
+            - light.control:
                 id: onboard_led
-                brightness: 100%
-            - light.addressable_set:
-                id: onboard_led
-                range_from: 0
-                range_to: 0
+                state: on
                 red: 100%
                 green: 0%
                 blue: 0%
+                brightness: 100%
           else:
             - if:
                 condition:
                   lambda: 'return id(meater_connected);'
                 then:
                   # Green: Connected to both WiFi and MEATER
-                  - light.turn_on:
+                  - light.control:
                       id: onboard_led
-                      brightness: 100%
-                  - light.addressable_set:
-                      id: onboard_led
-                      range_from: 0
-                      range_to: 0
+                      state: on
                       red: 0%
                       green: 100%
                       blue: 0%
+                      brightness: 100%
                 else:
                   # Off: Connected to WiFi but not MEATER
-                  - light.turn_off:
+                  - light.control:
                       id: onboard_led
+                      state: off
 
 # Update LED status periodically and on WiFi state changes
 interval:
