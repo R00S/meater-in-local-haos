@@ -390,21 +390,15 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 
 ### ESP32-C3 Onboard RGB LED
 
-The ESP32-C3-DevKitM-1 includes an **onboard RGB LED** (WS2812) on GPIO8 that can display any color:
+The ESP32-C3-DevKitM-1 includes an **onboard RGB LED** (WS2812) on GPIO8 that indicates connection status:
 
-| Color | Use Case |
-|-------|----------|
-| **Blue** | Cold/starting temperature |
-| **Orange** | Medium temperature (warming up) |
-| **Red** | High temperature/target reached |
-| **Green** | Success/ready/flashing alerts |
-| **White** | Rest phase complete |
-| **Any RGB** | Full spectrum - 16 million colors! |
+| Color | Status |
+|-------|--------|
+| **Red** | Not connected to WiFi |
+| **Green** | Connected to both WiFi and MEATER probe |
+| **Off** | Connected to WiFi but not connected to MEATER probe |
 
-The LED is exposed to Home Assistant as `light.meater_status_led` and can be:
-- Used as the **Indicator Light** in Kitchen Cooking Engine configuration
-- Controlled via automations, scripts, or the Home Assistant dashboard
-- Set to any RGB color, brightness, or effects
+The LED automatically updates based on connection status. It is also exposed to Home Assistant as `light.meater_status_led` and can be controlled manually if needed.
 
 **Note:** The onboard LED is connected to GPIO8, which is a strapping pin. If you experience boot issues, try power-cycling the board.
 

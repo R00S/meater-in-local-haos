@@ -44,6 +44,20 @@ bluetooth_proxy:
 ble_client:
   - mac_address: !secret meater_mac_address
     id: meater
+    on_connect:
+      then:
+        - lambda: 'id(meater_connected) = true;'
+        - script.execute: update_status_led
+    on_disconnect:
+      then:
+        - lambda: 'id(meater_connected) = false;'
+        - script.execute: update_status_led
+
+# Global variable to track MEATER connection status
+globals:
+  - id: meater_connected
+    type: bool
+    initial_value: 'false'
 
 text_sensor:
   - platform: template
@@ -120,13 +134,10 @@ sensor:
     name: "MEATER RSSI"
 
 # Onboard RGB LED (WS2812) on ESP32-C3-DevKitM-1
-# Connected to GPIO8. Supports full RGB color control via Home Assistant.
-# Can be used as an indicator light for cooking progress:
-#   - Blue: Cold/low temperature
-#   - Orange: Medium temperature
-#   - Red: High temperature/target reached
-#   - Green: Success/ready
-#   - Any RGB color: Full color spectrum available
+# Status indicator:
+#   - Red: Not connected to WiFi
+#   - Green: Connected to both WiFi and MEATER probe
+#   - Off: Connected to WiFi but not connected to MEATER probe
 light:
   - platform: esp32_rmt_led_strip
     id: onboard_led
@@ -136,3 +147,42 @@ light:
     chipset: WS2812
     rgb_order: GRB
     rmt_channel: 0
+
+# Script to update LED based on connection status
+script:
+  - id: update_status_led
+    then:
+      - if:
+          condition:
+            not:
+              wifi.connected:
+          then:
+            # Red: Not connected to WiFi
+            - light.turn_on:
+                id: onboard_led
+                red: 100%
+                green: 0%
+                blue: 0%
+                brightness: 100%
+          else:
+            - if:
+                condition:
+                  lambda: 'return id(meater_connected);'
+                then:
+                  # Green: Connected to both WiFi and MEATER
+                  - light.turn_on:
+                      id: onboard_led
+                      red: 0%
+                      green: 100%
+                      blue: 0%
+                      brightness: 100%
+                else:
+                  # Off: Connected to WiFi but not MEATER
+                  - light.turn_off:
+                      id: onboard_led
+
+# Update LED status periodically and on WiFi state changes
+interval:
+  - interval: 5s
+    then:
+      - script.execute: update_status_led
