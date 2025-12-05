@@ -142,11 +142,12 @@ light:
   - platform: esp32_rmt_led_strip
     id: onboard_led
     name: "MEATER Status LED"
-    pin: GPIO8
+    pin:
+      number: GPIO8
+      ignore_strapping_warning: true
     num_leds: 1
     chipset: WS2812
     rgb_order: GRB
-    rmt_channel: 0
 
 # Script to update LED based on connection status
 script:
