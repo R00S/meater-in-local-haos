@@ -8,6 +8,10 @@
 esphome:
   name: meater
   friendly_name: meater
+  on_boot:
+    priority: -100
+    then:
+      - script.execute: update_status_led
 
 esp32:
   board: esp32-c3-devkitm-1
@@ -29,6 +33,10 @@ ota:
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
+  on_connect:
+    - script.execute: update_status_led
+  on_disconnect:
+    - script.execute: update_status_led
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
@@ -138,6 +146,7 @@ sensor:
 #   - Red: Not connected to WiFi
 #   - Green: Connected to both WiFi and MEATER probe
 #   - Off: Connected to WiFi but not connected to MEATER probe
+# Note: The red "power LED" on the board is hardwired and cannot be controlled.
 light:
   - platform: esp32_rmt_led_strip
     id: onboard_led
@@ -148,6 +157,7 @@ light:
     num_leds: 1
     chipset: WS2812
     rgb_order: GRB
+    restore_mode: ALWAYS_OFF
 
 # Script to update LED based on connection status
 script:

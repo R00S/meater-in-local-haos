@@ -400,7 +400,7 @@ The ESP32-C3-DevKitM-1 includes an **onboard RGB LED** (WS2812) on GPIO8 that in
 
 The LED automatically updates based on connection status. It is also exposed to Home Assistant as `light.meater_status_led` and can be controlled manually if needed.
 
-**Note:** The onboard LED is connected to GPIO8, which is a strapping pin. If you experience boot issues, try power-cycling the board.
+> **Note:** The ESP32-C3-DevKitM-1 also has a **red power LED** that is always on when the board is powered. This LED is hardwired to the power rail and **cannot be controlled or turned off** via software.
 
 ### Setup
 
