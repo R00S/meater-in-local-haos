@@ -45,6 +45,10 @@ wifi:
 
 captive_portal:
 
+# BLE configuration - need 4 connection slots for bluetooth_proxy and ble_client
+esp32_ble:
+  max_connections: 4
+
 # BLE proxy allows Home Assistant to see other BLE devices through this ESP32
 bluetooth_proxy:
 
