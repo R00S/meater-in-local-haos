@@ -118,3 +118,21 @@ sensor:
     type: rssi
     ble_client_id: meater
     name: "MEATER RSSI"
+
+# Onboard RGB LED (WS2812) on ESP32-C3-DevKitM-1
+# Connected to GPIO8. Supports full RGB color control via Home Assistant.
+# Can be used as an indicator light for cooking progress:
+#   - Blue: Cold/low temperature
+#   - Orange: Medium temperature
+#   - Red: High temperature/target reached
+#   - Green: Success/ready
+#   - Any RGB color: Full color spectrum available
+light:
+  - platform: esp32_rmt_led_strip
+    id: onboard_led
+    name: "MEATER Status LED"
+    pin: GPIO8
+    num_leds: 1
+    chipset: WS2812
+    rgb_order: GRB
+    rmt_channel: 0
