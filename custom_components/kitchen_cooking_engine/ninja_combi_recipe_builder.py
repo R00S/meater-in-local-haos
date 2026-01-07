@@ -238,6 +238,12 @@ class CombiMealRecipe:
         output.append("- Don't forget to add liquid to Level 1 (creates steam)")
         output.append("- If base needs more time, switch to SEAR/SAUTÉ with door open")
         
+        # Add MEATER cook session button if probe is enabled
+        if self.use_meater_probe and target_c:
+            meater_session = create_meater_cook_session_from_combi_meal(self)
+            if meater_session:
+                output.append(meater_session.get_start_cook_button())
+        
         output.append("\n" + "=" * 80)
         return "\n".join(output)
 
@@ -849,3 +855,455 @@ def print_cooking_mode_summary():
     print("\n" + "=" * 80)
     print("All modes support MEATER+ probe integration for precise temperature monitoring!")
     print("=" * 80)
+
+
+# ============================================================================
+# COMBI-CRISP COOKING CHARTS (from manual pages 18-20)
+# ============================================================================
+
+class CombiCrispIngredient(Enum):
+    """Ingredients for Combi-Crisp mode from cooking charts."""
+    # Vegetables
+    ACORN_SQUASH = "acorn_squash"
+    BEETS = "beets"
+    BROCCOLI_CC = "broccoli_cc"
+    BRUSSELS_SPROUTS_CC = "brussels_sprouts_cc"
+    CARROTS_CC = "carrots_cc"
+    CAULIFLOWER_CC = "cauliflower_cc"
+    RUSSET_POTATOES = "russet_potatoes"
+    RUSSET_FRIES = "russet_fries"
+    SWEET_POTATOES_CC = "sweet_potatoes_cc"
+    
+    # Fresh Poultry
+    CHICKEN_BREAST_BONE_IN = "chicken_breast_bone_in"
+    CHICKEN_BREAST_BONELESS_CC = "chicken_breast_boneless_cc"
+    CHICKEN_THIGHS_BONE_IN_CC = "chicken_thighs_bone_in_cc"
+    CHICKEN_THIGHS_BONELESS_CC = "chicken_thighs_boneless_cc"
+    CHICKEN_WHOLE_CC = "chicken_whole_cc"
+    CHICKEN_WINGS_CC = "chicken_wings_cc"
+    
+    # Fresh Pork
+    PORK_CHOPS_BONELESS_CC = "pork_chops_boneless_cc"
+    PORK_TENDERLOINS_CC = "pork_tenderloins_cc"
+    
+    # Fresh Fish
+    SALMON_CC = "salmon_cc"
+    COD_CC = "cod_cc"
+    
+    # Fresh Beef
+    ROAST_BEEF = "roast_beef"
+    BEEF_TENDERLOIN = "beef_tenderloin"
+    
+    # Frozen Proteins
+    FROZEN_CHICKEN_BREAST = "frozen_chicken_breast"
+    FROZEN_CHICKEN_THIGHS_BONELESS = "frozen_chicken_thighs_boneless"
+    FROZEN_CHICKEN_WINGS = "frozen_chicken_wings"
+    FROZEN_SALMON = "frozen_salmon"
+    FROZEN_PORK_CHOPS = "frozen_pork_chops"
+
+
+@dataclass
+class CombiCrispGuide:
+    """Cooking guide for Combi-Crisp mode ingredients."""
+    
+    ingredient: CombiCrispIngredient
+    name: str
+    amount: str
+    preparation: str
+    oil: str
+    water: str
+    temp_f: int
+    cook_time_min: int
+    cook_time_max: int
+    use_probe: bool = False
+    probe_temp_c: Optional[int] = None
+    probe_temp_f: Optional[int] = None
+    accessory: str = "Combi Cooker Pan, Crisper Plate"
+    notes: str = ""
+
+
+# Combi-Crisp Cooking Chart Data (from manual pages 18-20)
+COMBI_CRISP_GUIDES = {
+    # Vegetables
+    CombiCrispIngredient.RUSSET_POTATOES: CombiCrispGuide(
+        ingredient=CombiCrispIngredient.RUSSET_POTATOES,
+        name="Russet Potatoes (Wedges)",
+        amount="1.5-2 lbs",
+        preparation="Cut into 8 wedges",
+        oil="1 Tbsp",
+        water="1/2 cup",
+        temp_f=400,
+        cook_time_min=15,
+        cook_time_max=20,
+        notes="Steam builds in 5-10 minutes"
+    ),
+    
+    CombiCrispIngredient.BROCCOLI_CC: CombiCrispGuide(
+        ingredient=CombiCrispIngredient.BROCCOLI_CC,
+        name="Broccoli",
+        amount="1 1/2 head",
+        preparation="Large florets",
+        oil="1-1 1/2 Tbsp",
+        water="1/2 cup",
+        temp_f=425,
+        cook_time_min=10,
+        cook_time_max=12,
+        notes="Crispy outside, tender inside"
+    ),
+    
+    # Fresh Poultry
+    CombiCrispIngredient.CHICKEN_BREAST_BONELESS_CC: CombiCrispGuide(
+        ingredient=CombiCrispIngredient.CHICKEN_BREAST_BONELESS_CC,
+        name="Chicken Breasts (Boneless)",
+        amount="6 breasts, 6-8 oz each",
+        preparation="Brush with oil",
+        oil="2 Tbsp",
+        water="1 cup",
+        temp_f=375,
+        cook_time_min=15,
+        cook_time_max=20,
+        use_probe=True,
+        probe_temp_c=74,
+        probe_temp_f=165,
+        accessory="Combi Cooker Pan, Bake Tray",
+        notes="Use MEATER+ probe for perfect doneness"
+    ),
+    
+    CombiCrispIngredient.CHICKEN_THIGHS_BONELESS_CC: CombiCrispGuide(
+        ingredient=CombiCrispIngredient.CHICKEN_THIGHS_BONELESS_CC,
+        name="Chicken Thighs (Boneless)",
+        amount="6 thighs, 6-8 oz each",
+        preparation="Brush with oil",
+        oil="2 Tbsp",
+        water="1 cup",
+        temp_f=400,
+        cook_time_min=10,
+        cook_time_max=12,
+        use_probe=True,
+        probe_temp_c=74,
+        probe_temp_f=165,
+        accessory="Combi Cooker Pan, Bake Tray",
+        notes="Use MEATER+ probe for perfect doneness"
+    ),
+    
+    CombiCrispIngredient.CHICKEN_WHOLE_CC: CombiCrispGuide(
+        ingredient=CombiCrispIngredient.CHICKEN_WHOLE_CC,
+        name="Whole Chicken",
+        amount="4 1/2-5 lbs",
+        preparation="Trussed, brushed with oil",
+        oil="Brushed with oil",
+        water="1 cup",
+        temp_f=400,
+        cook_time_min=35,
+        cook_time_max=40,
+        use_probe=True,
+        probe_temp_c=74,
+        probe_temp_f=165,
+        notes="Insert MEATER+ probe into thickest part of breast"
+    ),
+    
+    # Fresh Pork
+    CombiCrispIngredient.PORK_TENDERLOINS_CC: CombiCrispGuide(
+        ingredient=CombiCrispIngredient.PORK_TENDERLOINS_CC,
+        name="Pork Tenderloins",
+        amount="3 tenderloins (1 lb each)",
+        preparation="Brush with oil",
+        oil="2 Tbsp",
+        water="1 cup",
+        temp_f=365,
+        cook_time_min=25,
+        cook_time_max=30,
+        use_probe=True,
+        probe_temp_c=63,
+        probe_temp_f=145,
+        notes="Use MEATER+ probe for safe doneness"
+    ),
+    
+    # Fresh Fish
+    CombiCrispIngredient.SALMON_CC: CombiCrispGuide(
+        ingredient=CombiCrispIngredient.SALMON_CC,
+        name="Salmon Filets",
+        amount="6 filets, 6-7 oz each",
+        preparation="None",
+        oil="1 Tbsp",
+        water="1 cup",
+        temp_f=400,
+        cook_time_min=6,
+        cook_time_max=8,
+        use_probe=True,
+        probe_temp_c=54,
+        probe_temp_f=130,
+        accessory="Combi Cooker Pan, Bake Tray",
+        notes="Use MEATER+ probe for perfect medium doneness"
+    ),
+    
+    # Fresh Beef
+    CombiCrispIngredient.BEEF_TENDERLOIN: CombiCrispGuide(
+        ingredient=CombiCrispIngredient.BEEF_TENDERLOIN,
+        name="Beef Tenderloin",
+        amount="2-3 lbs",
+        preparation="None",
+        oil="2 Tbsp",
+        water="1 cup",
+        temp_f=365,
+        cook_time_min=25,
+        cook_time_max=30,
+        use_probe=True,
+        probe_temp_c=54,
+        probe_temp_f=130,
+        notes="Use MEATER+ probe - 54°C for medium-rare, 60°C for medium"
+    ),
+    
+    # Frozen Proteins
+    CombiCrispIngredient.FROZEN_CHICKEN_BREAST: CombiCrispGuide(
+        ingredient=CombiCrispIngredient.FROZEN_CHICKEN_BREAST,
+        name="Frozen Chicken Breasts (Boneless)",
+        amount="4 breasts, 4-6 oz each",
+        preparation="As desired",
+        oil="2 Tbsp",
+        water="2 cups",
+        temp_f=390,
+        cook_time_min=18,
+        cook_time_max=23,
+        use_probe=True,
+        probe_temp_c=74,
+        probe_temp_f=165,
+        accessory="Combi Cooker Pan, Bake Tray",
+        notes="Frozen proteins need 2 cups water. Use MEATER+ probe"
+    ),
+    
+    CombiCrispIngredient.FROZEN_SALMON: CombiCrispGuide(
+        ingredient=CombiCrispIngredient.FROZEN_SALMON,
+        name="Frozen Salmon Filets",
+        amount="5-6 filets, 6 oz each",
+        preparation="None",
+        oil="2 Tbsp",
+        water="2 cups",
+        temp_f=450,
+        cook_time_min=10,
+        cook_time_max=13,
+        use_probe=True,
+        probe_temp_c=54,
+        probe_temp_f=130,
+        accessory="Combi Cooker Pan, Bake Tray",
+        notes="Frozen proteins need 2 cups water. Use MEATER+ probe"
+    ),
+}
+
+
+# ============================================================================
+# SOUS VIDE COOKING CHART (from manual pages 33-34)
+# ============================================================================
+
+class SousVideIngredient(Enum):
+    """Ingredients for Sous Vide mode from cooking charts."""
+    # Beef
+    BEEF_FILET_MIGNON = "beef_filet_mignon"
+    BEEF_RIBEYE = "beef_ribeye"
+    
+    # Pork
+    PORK_CHOPS_SV = "pork_chops_sv"
+    PORK_TENDERLOIN_SV = "pork_tenderloin_sv"
+    PORK_SAUSAGES_SV = "pork_sausages_sv"
+    
+    # Chicken
+    CHICKEN_BREAST_SV = "chicken_breast_sv"
+    CHICKEN_THIGHS_SV = "chicken_thighs_sv"
+    CHICKEN_WINGS_SV = "chicken_wings_sv"
+    
+    # Seafood
+    SALMON_SV = "salmon_sv"
+    SHRIMP_SV = "shrimp_sv"
+    WHITEFISH_SV = "whitefish_sv"
+
+
+@dataclass
+class SousVideGuide:
+    """Cooking guide for Sous Vide mode ingredients."""
+    
+    ingredient: SousVideIngredient
+    name: str
+    amount: str
+    temp_f: int
+    cook_time_min_hrs: float
+    cook_time_max_hrs: float
+    doneness: str
+    use_probe: bool = True  # Always use probe with sous vide
+    probe_temp_c: Optional[int] = None
+    probe_temp_f: Optional[int] = None
+    notes: str = ""
+
+
+# Sous Vide Cooking Chart Data (from manual pages 33-34)
+SOUS_VIDE_GUIDES = {
+    SousVideIngredient.BEEF_FILET_MIGNON: SousVideGuide(
+        ingredient=SousVideIngredient.BEEF_FILET_MIGNON,
+        name="Filet Mignon (Medium-Rare)",
+        amount="4 steaks, 8 oz each, 1-2 inches thick",
+        temp_f=130,
+        cook_time_min_hrs=1,
+        cook_time_max_hrs=5,
+        doneness="Medium Rare",
+        probe_temp_c=54,
+        probe_temp_f=130,
+        notes="Finish with searing for crust. Use MEATER+ to monitor bath temp"
+    ),
+    
+    SousVideIngredient.PORK_CHOPS_SV: SousVideGuide(
+        ingredient=SousVideIngredient.PORK_CHOPS_SV,
+        name="Pork Chops (Boneless)",
+        amount="4 chops, 6-8 oz each, 1-2 inches thick",
+        temp_f=145,
+        cook_time_min_hrs=1,
+        cook_time_max_hrs=4,
+        doneness="Safe",
+        probe_temp_c=63,
+        probe_temp_f=145,
+        notes="Finish with searing. Use MEATER+ to monitor bath temp"
+    ),
+    
+    SousVideIngredient.CHICKEN_BREAST_SV: SousVideGuide(
+        ingredient=SousVideIngredient.CHICKEN_BREAST_SV,
+        name="Chicken Breasts",
+        amount="4 breasts, 6-8 oz each, 1-2 inches thick",
+        temp_f=165,
+        cook_time_min_hrs=1,
+        cook_time_max_hrs=3,
+        doneness="Safe",
+        probe_temp_c=74,
+        probe_temp_f=165,
+        notes="Finish with searing or air frying. Use MEATER+ to monitor"
+    ),
+    
+    SousVideIngredient.SALMON_SV: SousVideGuide(
+        ingredient=SousVideIngredient.SALMON_SV,
+        name="Salmon",
+        amount="4 portions, 6-10 oz each, 1-2 inches thick",
+        temp_f=130,
+        cook_time_min_hrs=1,
+        cook_time_max_hrs=1.5,
+        doneness="Medium",
+        probe_temp_c=54,
+        probe_temp_f=130,
+        notes="Finish with searing. Use MEATER+ to monitor bath temp"
+    ),
+}
+
+
+# ============================================================================
+# HELPER FUNCTIONS FOR START MEATER COOK
+# ============================================================================
+
+@dataclass
+class MeaterCookSession:
+    """Data structure for starting a MEATER cook session."""
+    
+    recipe_name: str
+    cooking_mode: str  # "combi_meal", "air_fry", "combi_crisp", "sous_vide"
+    target_temp_c: int
+    target_temp_f: int
+    cook_time_minutes: int
+    oven_temp_f: int
+    instructions: list[str]
+    
+    def get_ha_service_call(self) -> dict:
+        """Generate Home Assistant service call data for starting a MEATER cook."""
+        return {
+            "service": "kitchen_cooking_engine.start_cook",
+            "data": {
+                "recipe_name": self.recipe_name,
+                "cooking_mode": self.cooking_mode,
+                "target_temp_c": self.target_temp_c,
+                "target_temp_f": self.target_temp_f,
+                "cook_time_minutes": self.cook_time_minutes,
+                "oven_temp_f": self.oven_temp_f,
+                "use_probe": True,
+                "instructions": self.instructions,
+            }
+        }
+    
+    def get_start_cook_button(self) -> str:
+        """Generate a formatted button/instruction for starting MEATER cook."""
+        output = []
+        output.append("\n" + "="*80)
+        output.append("🌡️ START COOK WITH MEATER+ PROBE")
+        output.append("="*80)
+        output.append(f"\n**Recipe:** {self.recipe_name}")
+        output.append(f"**Mode:** {self.cooking_mode.replace('_', ' ').title()}")
+        output.append(f"**Target Temp:** {self.target_temp_c}°C / {self.target_temp_f}°F")
+        output.append(f"**Cook Time:** {self.cook_time_minutes} minutes")
+        output.append(f"**Oven Temp:** {self.oven_temp_f}°F")
+        
+        output.append("\n### TO START COOK IN HOME ASSISTANT:")
+        output.append("1. Open Home Assistant")
+        output.append("2. Go to Kitchen Cooking Engine panel")
+        output.append("3. Click 'Start New Cook'")
+        output.append(f"4. Select '{self.recipe_name}'")
+        output.append("5. Insert MEATER+ probe into protein")
+        output.append("6. Click 'Start Cooking'")
+        output.append("7. Monitor temperature in real-time")
+        output.append("8. Get notification when target reached!")
+        
+        output.append("\n### OR USE SERVICE CALL:")
+        output.append("```yaml")
+        output.append(f"service: kitchen_cooking_engine.start_cook")
+        output.append(f"data:")
+        output.append(f"  recipe_name: {self.recipe_name}")
+        output.append(f"  target_temp_c: {self.target_temp_c}")
+        output.append(f"  target_temp_f: {self.target_temp_f}")
+        output.append(f"  cook_time_minutes: {self.cook_time_minutes}")
+        output.append("```")
+        output.append("\n" + "="*80 + "\n")
+        
+        return "\n".join(output)
+
+
+def create_meater_cook_session_from_combi_meal(recipe: 'CombiMealRecipe') -> Optional[MeaterCookSession]:
+    """Create a MEATER cook session from a Combi Meal recipe."""
+    if not recipe.use_meater_probe:
+        return None
+    
+    target_c, target_f = recipe.get_probe_target_temps()
+    if not target_c or not target_f:
+        return None
+    
+    time_min, time_max = recipe.get_cook_time_minutes()
+    
+    instructions = [
+        f"1. Add {recipe.base.name} ingredients to Level 1",
+        "2. Insert MEATER+ probe into protein",
+        "3. Place protein on Level 2",
+        f"4. Set oven to {recipe.get_temperature_f()}°F",
+        f"5. Cook for {time_max} minutes",
+        f"6. Monitor probe until {target_c}°C / {target_f}°F",
+    ]
+    
+    return MeaterCookSession(
+        recipe_name=f"{recipe.protein.name} with {recipe.base.name}",
+        cooking_mode="combi_meal",
+        target_temp_c=target_c,
+        target_temp_f=target_f,
+        cook_time_minutes=time_max,
+        oven_temp_f=recipe.get_temperature_f(),
+        instructions=instructions,
+    )
+
+
+def get_combi_crisp_guide(ingredient: CombiCrispIngredient) -> Optional[CombiCrispGuide]:
+    """Get Combi-Crisp cooking guide for an ingredient."""
+    return COMBI_CRISP_GUIDES.get(ingredient)
+
+
+def get_sous_vide_guide(ingredient: SousVideIngredient) -> Optional[SousVideGuide]:
+    """Get Sous Vide cooking guide for an ingredient."""
+    return SOUS_VIDE_GUIDES.get(ingredient)
+
+
+def list_combi_crisp_ingredients() -> list[str]:
+    """List all ingredients with Combi-Crisp guides."""
+    return [guide.name for guide in COMBI_CRISP_GUIDES.values()]
+
+
+def list_sous_vide_ingredients() -> list[str]:
+    """List all ingredients with Sous Vide guides."""
+    return [guide.name for guide in SOUS_VIDE_GUIDES.values()]
