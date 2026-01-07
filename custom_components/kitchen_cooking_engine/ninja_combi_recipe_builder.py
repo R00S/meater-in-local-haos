@@ -244,6 +244,15 @@ class CombiMealRecipe:
             if meater_session:
                 output.append(meater_session.get_start_cook_button())
         
+        # Add recipe suggestions from database
+        suggestions = suggest_similar_recipes(
+            protein=self.protein.protein_type,
+            base=self.base.base_type,
+            mode="combi_meal"
+        )
+        if suggestions:
+            output.append(format_recipe_suggestions(suggestions))
+        
         output.append("\n" + "=" * 80)
         return "\n".join(output)
 
@@ -1307,3 +1316,553 @@ def list_combi_crisp_ingredients() -> list[str]:
 def list_sous_vide_ingredients() -> list[str]:
     """List all ingredients with Sous Vide guides."""
     return [guide.name for guide in SOUS_VIDE_GUIDES.values()]
+
+
+# ============================================================================
+# COMBI-BAKE BUILDER (NEW)
+# ============================================================================
+
+class BakeType(Enum):
+    """Types of baked goods for Combi-Bake mode."""
+    
+    ARTISAN_BREAD = "artisan_bread"
+    PASTRIES = "pastries"
+    CAKES = "cakes"
+    COOKIES = "cookies"
+    BISCUITS = "biscuits"
+    PIE_CRUST = "pie_crust"
+    CROISSANTS = "croissants"
+    PIZZA_DOUGH = "pizza_dough"
+
+
+@dataclass
+class CombiBakeParams:
+    """Parameters for Combi-Bake recipes."""
+    
+    bake_type: BakeType
+    name: str
+    steam_temp_f: int
+    steam_minutes: int
+    bake_temp_f: int
+    bake_minutes: int
+    water_cups: float
+    tray_position: str
+    description: str
+
+
+# Combi-Bake parameter mapping
+COMBI_BAKE_PARAMS = {
+    BakeType.ARTISAN_BREAD: CombiBakeParams(
+        bake_type=BakeType.ARTISAN_BREAD,
+        name="Artisan Bread",
+        steam_temp_f=400,
+        steam_minutes=15,
+        bake_temp_f=375,
+        bake_minutes=20,
+        water_cups=2.0,
+        tray_position="Middle",
+        description="Steam creates professional bakery crust, then bake completes interior"
+    ),
+    BakeType.PASTRIES: CombiBakeParams(
+        bake_type=BakeType.PASTRIES,
+        name="Pastries",
+        steam_temp_f=375,
+        steam_minutes=10,
+        bake_temp_f=350,
+        bake_minutes=15,
+        water_cups=1.0,
+        tray_position="Middle",
+        description="Light steam for flaky layers, gentle bake to finish"
+    ),
+    BakeType.CAKES: CombiBakeParams(
+        bake_type=BakeType.CAKES,
+        name="Cakes",
+        steam_temp_f=325,
+        steam_minutes=0,
+        bake_temp_f=325,
+        bake_minutes=35,
+        water_cups=0.5,
+        tray_position="Middle",
+        description="Minimal steam for moisture, even baking throughout"
+    ),
+    BakeType.COOKIES: CombiBakeParams(
+        bake_type=BakeType.COOKIES,
+        name="Cookies",
+        steam_temp_f=350,
+        steam_minutes=0,
+        bake_temp_f=350,
+        bake_minutes=12,
+        water_cups=0.0,
+        tray_position="Middle",
+        description="No steam needed, direct baking for crispy edges"
+    ),
+    BakeType.BISCUITS: CombiBakeParams(
+        bake_type=BakeType.BISCUITS,
+        name="Biscuits",
+        steam_temp_f=425,
+        steam_minutes=5,
+        bake_temp_f=400,
+        bake_minutes=10,
+        water_cups=1.0,
+        tray_position="Middle",
+        description="Quick steam for rise, hot bake for golden tops"
+    ),
+    BakeType.PIE_CRUST: CombiBakeParams(
+        bake_type=BakeType.PIE_CRUST,
+        name="Pie Crust",
+        steam_temp_f=375,
+        steam_minutes=0,
+        bake_temp_f=375,
+        bake_minutes=25,
+        water_cups=0.0,
+        tray_position="Lower",
+        description="No steam, direct heat from below for crispy bottom"
+    ),
+    BakeType.CROISSANTS: CombiBakeParams(
+        bake_type=BakeType.CROISSANTS,
+        name="Croissants",
+        steam_temp_f=400,
+        steam_minutes=10,
+        bake_temp_f=375,
+        bake_minutes=15,
+        water_cups=1.5,
+        tray_position="Middle",
+        description="Steam expands butter layers, bake creates golden exterior"
+    ),
+    BakeType.PIZZA_DOUGH: CombiBakeParams(
+        bake_type=BakeType.PIZZA_DOUGH,
+        name="Pizza Dough",
+        steam_temp_f=450,
+        steam_minutes=5,
+        bake_temp_f=450,
+        bake_minutes=12,
+        water_cups=1.0,
+        tray_position="Lower",
+        description="Quick steam for chewy texture, high heat for crispy crust"
+    ),
+}
+
+
+def build_combi_bake_recipe(
+    bake_type: BakeType,
+    custom_name: Optional[str] = None,
+    servings: int = 8,
+    use_meater_probe: bool = False
+) -> str:
+    """
+    Build a Combi-Bake recipe with steam + bake phases.
+    
+    Args:
+        bake_type: Type of baked good
+        custom_name: Optional custom recipe name
+        servings: Number of servings
+        use_meater_probe: Whether to use MEATER+ (not typical for baking)
+    
+    Returns:
+        Formatted recipe card
+    """
+    params = COMBI_BAKE_PARAMS.get(bake_type)
+    if not params:
+        return f"Error: No parameters found for {bake_type}"
+    
+    recipe_name = custom_name if custom_name else params.name
+    
+    output = []
+    output.append("=" * 80)
+    output.append(f"COMBI-BAKE: {recipe_name.upper()}")
+    output.append("=" * 80)
+    
+    if params.steam_minutes > 0:
+        output.append(f"\n**Phase 1 - Steam:** {params.steam_temp_f}°F for {params.steam_minutes} minutes")
+        output.append(f"**Phase 2 - Bake:** {params.bake_temp_f}°F for {params.bake_minutes} minutes")
+        output.append(f"**Total Time:** {params.steam_minutes + params.bake_minutes} minutes")
+    else:
+        output.append(f"\n**Temperature:** {params.bake_temp_f}°F")
+        output.append(f"**Bake Time:** {params.bake_minutes} minutes")
+    
+    output.append(f"**Water Required:** {params.water_cups} cups")
+    output.append(f"**Tray Position:** {params.tray_position}")
+    output.append(f"**Servings:** {servings}")
+    
+    output.append(f"\n## ABOUT THIS METHOD")
+    output.append(params.description)
+    
+    output.append("\n## SETUP")
+    if params.water_cups > 0:
+        output.append(f"1. Fill water tank with {params.water_cups} cups water")
+    else:
+        output.append("1. No water needed for this recipe")
+    output.append(f"2. Position tray in {params.tray_position} position")
+    output.append("3. Prepare your baked goods on tray")
+    
+    output.append("\n## COOKING INSTRUCTIONS")
+    output.append("1. Close door and flip SmartSwitch to COMBI COOKER")
+    output.append("2. Select COMBI-BAKE mode")
+    
+    if params.steam_minutes > 0:
+        output.append(f"3. Set temperature to {params.steam_temp_f}°F")
+        output.append(f"4. Set time to {params.steam_minutes} minutes (steam phase)")
+        output.append("5. Press START/STOP")
+        output.append(f"6. When steam phase completes, oven will automatically continue")
+        output.append(f"7. Bake phase: {params.bake_temp_f}°F for {params.bake_minutes} minutes")
+        output.append("8. Check for doneness - golden brown, sounds hollow when tapped")
+    else:
+        output.append(f"3. Set temperature to {params.bake_temp_f}°F")
+        output.append(f"4. Set time to {params.bake_minutes} minutes")
+        output.append("5. Press START/STOP")
+        output.append("6. Check for doneness - golden brown")
+    
+    output.append("\n## TIPS")
+    output.append(f"- Steam phase creates professional bakery-quality {params.name.lower()}")
+    output.append("- Don't open door during steam phase (releases steam)")
+    output.append("- Check 2-3 minutes before end time to prevent over-baking")
+    output.append("- Let cool on wire rack for best texture")
+    
+    if bake_type == BakeType.ARTISAN_BREAD:
+        output.append("- For extra-crispy crust, add 5 minutes to bake time")
+        output.append("- Score dough before baking for professional appearance")
+    elif bake_type == BakeType.CROISSANTS:
+        output.append("- Brush with egg wash before baking for golden shine")
+        output.append("- Don't overbake - should be deep golden, not dark brown")
+    elif bake_type == BakeType.PIZZA_DOUGH:
+        output.append("- Use parchment paper for easy removal")
+        output.append("- Add toppings before baking")
+    
+    output.append("\n" + "=" * 80)
+    return "\n".join(output)
+
+
+# ============================================================================
+# RECIPE SUGGESTIONS FROM DATABASE
+# ============================================================================
+
+def suggest_similar_recipes(
+    protein: Optional[CombiMealProtein] = None,
+    base: Optional[CombiMealBase] = None,
+    mode: Optional[str] = None,
+    limit: int = 5
+) -> list[dict]:
+    """
+    Suggest similar recipes from the database based on ingredients/mode.
+    
+    Args:
+        protein: Protein type to match
+        base: Base ingredient to match
+        mode: Cooking mode to match
+        limit: Maximum number of suggestions
+    
+    Returns:
+        List of recipe suggestions with match scores
+    """
+    try:
+        from . import ninja_combi_data
+    except ImportError:
+        # Standalone script mode
+        try:
+            import ninja_combi_data
+        except ImportError:
+            # No recipe database available
+            return []
+    
+    suggestions = []
+    
+    # Score each recipe
+    for recipe in ninja_combi_data.NINJA_COMBI_RECIPES:
+        score = 0
+        match_reasons = []
+        
+        # Check protein match (50 points)
+        if protein:
+            protein_name = protein.value.replace("_", " ")
+            recipe_ingredients_lower = " ".join([ing.lower() for ing in recipe.ingredients])
+            
+            if "chicken" in protein_name and "chicken" in recipe_ingredients_lower:
+                score += 50
+                match_reasons.append("chicken")
+            elif "salmon" in protein_name and "salmon" in recipe_ingredients_lower:
+                score += 50
+                match_reasons.append("salmon")
+            elif "pork" in protein_name and "pork" in recipe_ingredients_lower:
+                score += 50
+                match_reasons.append("pork")
+            elif "beef" in protein_name and "beef" in recipe_ingredients_lower:
+                score += 50
+                match_reasons.append("beef")
+            elif "shrimp" in protein_name and "shrimp" in recipe_ingredients_lower:
+                score += 50
+                match_reasons.append("shrimp")
+        
+        # Check base match (30 points)
+        if base:
+            base_name = base.value.replace("_", " ")
+            recipe_ingredients_lower = " ".join([ing.lower() for ing in recipe.ingredients])
+            
+            if "rice" in base_name and "rice" in recipe_ingredients_lower:
+                score += 30
+                match_reasons.append("rice")
+            elif "pasta" in base_name and "pasta" in recipe_ingredients_lower:
+                score += 30
+                match_reasons.append("pasta")
+            elif "couscous" in base_name and "couscous" in recipe_ingredients_lower:
+                score += 30
+                match_reasons.append("couscous")
+            elif "quinoa" in base_name and "quinoa" in recipe_ingredients_lower:
+                score += 30
+                match_reasons.append("quinoa")
+        
+        # Check mode match (20 points)
+        if mode:
+            if recipe.mode.value == mode:
+                score += 20
+                match_reasons.append(f"{mode} mode")
+        
+        if score > 0:
+            suggestions.append({
+                "recipe": recipe,
+                "score": score,
+                "match_reasons": match_reasons
+            })
+    
+    # Sort by score (highest first) and return top matches
+    suggestions.sort(key=lambda x: x["score"], reverse=True)
+    return suggestions[:limit]
+
+
+def format_recipe_suggestions(suggestions: list[dict]) -> str:
+    """Format recipe suggestions for display."""
+    if not suggestions:
+        return ""
+    
+    output = []
+    output.append("\n" + "=" * 80)
+    output.append("💡 SIMILAR RECIPES FROM DATABASE")
+    output.append("=" * 80)
+    output.append("\nYou might also like these tested recipes:\n")
+    
+    for i, suggestion in enumerate(suggestions, 1):
+        recipe = suggestion["recipe"]
+        reasons = ", ".join(suggestion["match_reasons"])
+        
+        output.append(f"{i}. **{recipe.name}** (Recipe #{recipe.id})")
+        output.append(f"   Mode: {recipe.mode.value.replace('_', ' ').title()}")
+        output.append(f"   Cook Time: {recipe.cook_time_minutes} min | Difficulty: {recipe.difficulty.title()}")
+        output.append(f"   Match: {reasons}")
+        if recipe.use_probe:
+            output.append(f"   🌡️ MEATER+ Probe: {recipe.target_temp_c}°C / {recipe.target_temp_f}°F")
+        output.append("")
+    
+    output.append("=" * 80)
+    return "\n".join(output)
+
+
+# ============================================================================
+# INGREDIENT MODIFICATION (START FROM RECIPE)
+# ============================================================================
+
+def modify_recipe_ingredient(
+    recipe_id: int,
+    ingredient_to_replace: str,
+    new_ingredient: Optional[CombiMealProtein] = None,
+    new_base: Optional[CombiMealBase] = None,
+) -> str:
+    """
+    Start from an existing recipe and modify ingredients.
+    Automatically adjusts cooking parameters based on new ingredients.
+    
+    Args:
+        recipe_id: ID of recipe to start from
+        ingredient_to_replace: Name of ingredient to replace (e.g., "salmon", "rice")
+        new_ingredient: New protein to use (if replacing protein)
+        new_base: New base to use (if replacing base)
+    
+    Returns:
+        Modified recipe with adjusted parameters
+    """
+    try:
+        from . import ninja_combi_data
+    except ImportError:
+        # Standalone script mode
+        try:
+            import ninja_combi_data
+        except ImportError:
+            return "Error: Recipe database not available"
+    
+    # Find original recipe
+    original = None
+    for recipe in ninja_combi_data.NINJA_COMBI_RECIPES:
+        if recipe.id == recipe_id:
+            original = recipe
+            break
+    
+    if not original:
+        return f"Error: Recipe #{recipe_id} not found"
+    
+    output = []
+    output.append("=" * 80)
+    output.append(f"MODIFIED RECIPE: {original.name.upper()}")
+    output.append("=" * 80)
+    output.append(f"\n**Original Recipe:** {original.name} (#{original.id})")
+    output.append(f"**Modification:** Replacing {ingredient_to_replace}")
+    
+    # Determine what's being replaced and adjust parameters
+    modifications = []
+    new_temp_f = None
+    new_time_min = None
+    new_probe_temp_c = None
+    new_probe_temp_f = None
+    new_water_amount = None
+    new_mode = original.mode
+    
+    # PROTEIN REPLACEMENT
+    if new_ingredient:
+        protein_details = PROTEIN_RECIPES.get(new_ingredient)
+        if protein_details:
+            new_temp_f = protein_details.temperature_f
+            new_time_min = protein_details.cook_time_minutes[1]  # Use max time
+            
+            # Get probe temps
+            if new_ingredient in [CombiMealProtein.CHICKEN_BREAST_FRESH, CombiMealProtein.CHICKEN_BREAST_FROZEN,
+                                 CombiMealProtein.CHICKEN_THIGH_BONELESS, CombiMealProtein.CHICKEN_THIGH_BONE_IN]:
+                new_probe_temp_c, new_probe_temp_f = 74, 165
+            elif new_ingredient in [CombiMealProtein.PORK_CHOPS_BONELESS, CombiMealProtein.PORK_CHOPS_BONE_IN]:
+                new_probe_temp_c, new_probe_temp_f = 63, 145
+            elif new_ingredient == CombiMealProtein.SALMON_FILETS:
+                new_probe_temp_c, new_probe_temp_f = 54, 130
+            elif new_ingredient in [CombiMealProtein.STEAK_TIPS, CombiMealProtein.SIRLOIN_STEAKS]:
+                new_probe_temp_c, new_probe_temp_f = 54, 130
+            elif new_ingredient in [CombiMealProtein.GROUND_BEEF, CombiMealProtein.MEATBALLS]:
+                new_probe_temp_c, new_probe_temp_f = 71, 160
+            
+            modifications.append(f"- Protein: {ingredient_to_replace} → {protein_details.name}")
+            modifications.append(f"- Temperature: {new_temp_f}°F (adjusted for {protein_details.name})")
+            modifications.append(f"- Cook Time: ~{new_time_min} minutes (adjusted)")
+            if new_probe_temp_c:
+                modifications.append(f"- MEATER+ Target: {new_probe_temp_c}°C / {new_probe_temp_f}°F")
+    
+    # BASE REPLACEMENT
+    if new_base:
+        base_details = BASE_RECIPES.get(new_base)
+        if base_details:
+            # Extract liquid amount from base recipe
+            liquid_parts = base_details.liquid.split()
+            if len(liquid_parts) >= 2:
+                new_water_amount = f"{liquid_parts[0]} {liquid_parts[1]}"
+            
+            modifications.append(f"- Base: {ingredient_to_replace} → {base_details.name}")
+            if new_water_amount:
+                modifications.append(f"- Liquid: {new_water_amount} (adjusted for {base_details.name})")
+    
+    # Display modifications
+    if modifications:
+        output.append(f"\n## AUTOMATIC ADJUSTMENTS")
+        for mod in modifications:
+            output.append(mod)
+    
+    # Show adjusted recipe details
+    output.append(f"\n## ADJUSTED RECIPE DETAILS")
+    output.append(f"**Mode:** {new_mode.value.replace('_', ' ').title()}")
+    
+    if new_temp_f:
+        output.append(f"**Temperature:** {new_temp_f}°F")
+    elif original.phases:
+        # For multi-phase recipes, show phase temps
+        output.append(f"**Temperature:** See phases below")
+    
+    if new_time_min:
+        output.append(f"**Cook Time:** ~{new_time_min} minutes")
+    else:
+        output.append(f"**Cook Time:** {original.cook_time_minutes} minutes (from original)")
+    
+    output.append(f"**Servings:** {original.servings}")
+    output.append(f"**Difficulty:** {original.difficulty.title()}")
+    
+    if new_probe_temp_c:
+        output.append(f"\n**🌡️ MEATER+ Probe Recommended**")
+        output.append(f"**Target Temperature:** {new_probe_temp_c}°C / {new_probe_temp_f}°F")
+    
+    # Show phases if multi-phase recipe
+    if original.phases:
+        output.append(f"\n## COOKING PHASES")
+        for i, phase in enumerate(original.phases, 1):
+            output.append(f"\n**Phase {i}: {phase.description}**")
+            
+            # Use adjusted temp if available, otherwise original
+            phase_temp = new_temp_f if new_temp_f and i == len(original.phases) else phase.temperature_f
+            output.append(f"- Temperature: {phase_temp}°F ({phase.temperature_c}°C)")
+            output.append(f"- Duration: {phase.duration_minutes} minutes")
+            if phase.steam_enabled:
+                output.append(f"- Steam: Enabled")
+    
+    # Ingredients (modified)
+    output.append(f"\n## INGREDIENTS")
+    for ingredient in original.ingredients:
+        # Replace ingredient text if it matches
+        if ingredient_to_replace.lower() in ingredient.lower():
+            if new_ingredient:
+                protein_details = PROTEIN_RECIPES.get(new_ingredient)
+                output.append(f"- {protein_details.quantity} (MODIFIED)")
+            elif new_base:
+                base_details = BASE_RECIPES.get(new_base)
+                output.append(f"- {base_details.main_ingredient} (MODIFIED)")
+            else:
+                output.append(f"- {ingredient}")
+        else:
+            output.append(f"- {ingredient}")
+    
+    # Instructions (adapted from original)
+    output.append(f"\n## INSTRUCTIONS")
+    output.append("(Adapted from original recipe with modifications)")
+    for i, instruction in enumerate(original.instructions, 1):
+        # Update instructions with new ingredient names
+        modified_instruction = instruction
+        if new_ingredient:
+            protein_details = PROTEIN_RECIPES.get(new_ingredient)
+            modified_instruction = modified_instruction.replace(
+                ingredient_to_replace,
+                protein_details.name.lower()
+            )
+        if new_base:
+            base_details = BASE_RECIPES.get(new_base)
+            modified_instruction = modified_instruction.replace(
+                ingredient_to_replace,
+                base_details.name.lower()
+            )
+        
+        output.append(f"{i}. {modified_instruction}")
+    
+    # Tips from original
+    if original.tips:
+        output.append(f"\n## TIPS")
+        for tip in original.tips:
+            output.append(f"- {tip}")
+        
+        # Add modification-specific tip
+        if new_ingredient:
+            output.append(f"- Cooking time and temperature adjusted for {protein_details.name}")
+        if new_base:
+            output.append(f"- Liquid amount adjusted for {base_details.name}")
+    
+    output.append("\n## NOTES")
+    output.append(f"This recipe was automatically adapted from '{original.name}'.")
+    output.append("Parameters have been adjusted based on the new ingredients.")
+    output.append("Monitor cooking progress and adjust as needed.")
+    
+    output.append("\n" + "=" * 80)
+    return "\n".join(output)
+
+
+def get_recipe_by_id(recipe_id: int):
+    """Get a recipe from the database by ID."""
+    try:
+        from . import ninja_combi_data
+    except ImportError:
+        # Standalone script mode
+        try:
+            import ninja_combi_data
+        except ImportError:
+            return None
+    
+    for recipe in ninja_combi_data.NINJA_COMBI_RECIPES:
+        if recipe.id == recipe_id:
+            return recipe
+    return None

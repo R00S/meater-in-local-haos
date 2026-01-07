@@ -128,7 +128,38 @@ def main():
    - Perfect results every time - no overcooking!
 """)
     
-    print("=" * 80)
+    # Example 4: Combi-Bake Recipe
+    print("\n" + "=" * 80)
+    print("EXAMPLE 4: BUILD COMBI-BAKE RECIPE (ARTISAN BREAD)")
+    print("=" * 80 + "\n")
+    
+    from ninja_combi_recipe_builder import build_combi_bake_recipe, BakeType
+    
+    bread_recipe = build_combi_bake_recipe(
+        bake_type=BakeType.ARTISAN_BREAD,
+        custom_name="Rosemary Focaccia",
+        servings=8
+    )
+    
+    print(bread_recipe)
+    
+    # Example 5: Modify Recipe Ingredient
+    print("\n" + "=" * 80)
+    print("EXAMPLE 5: MODIFY EXISTING RECIPE")
+    print("=" * 80 + "\n")
+    print("Starting from Combi-Meal Salmon recipe, swapping salmon for chicken...\n")
+    
+    from ninja_combi_recipe_builder import modify_recipe_ingredient
+    
+    modified = modify_recipe_ingredient(
+        recipe_id=1004,  # Salmon with Rice recipe
+        ingredient_to_replace="salmon",
+        new_ingredient=CombiMealProtein.CHICKEN_BREAST_FRESH
+    )
+    
+    print(modified)
+    
+    print("\n" + "=" * 80)
     print("The recipe builder + MEATER+ probe = Perfect cooking every time!")
     print("=" * 80 + "\n")
 
