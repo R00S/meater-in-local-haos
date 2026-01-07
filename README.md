@@ -44,10 +44,12 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 - ✅ **Temperature graph** - Real-time graph showing tip/ambient temps from cook start
 - ✅ **Cooking notes** - Add notes during cooks, saved with history
 - ✅ **White screen fix** - Reliable tab switching without blank screens
+- ✅ **Ninja Combi support** - Recipes and cooking modes for Ninja Combi SFP700EU oven
 - ⏳ AI-powered recipe integration (future)
 
 See [STATUS.md](STATUS.md) for detailed project status.
 See [TODO_v0.1.2.0.md](TODO_v0.1.2.0.md) for upcoming features.
+See [NINJA_COMBI_GUIDE.md](docs/NINJA_COMBI_GUIDE.md) for Ninja Combi oven guide.
 
 ---
 
@@ -212,6 +214,29 @@ Swedish doneness levels: blodig, medium_rare, medium, medium_well, genomstekt, l
 | **Grill** | Direct radiant heat |
 | **Smoker** | Low heat with smoke |
 | **Charcoal Grill** | Traditional charcoal grilling |
+
+## 🥷 Ninja Combi SFP700EU Support
+
+The Kitchen Cooking Engine includes comprehensive support for the **Ninja Combi (SFP700EU)** multi-function oven, featuring:
+
+### 12 Cooking Modes
+- **Standard Modes** (use existing recipes): Convection, Air Fryer, Steamer, Proving
+- **Modified Modes** (adapted recipes): Searing, Grilling, Rice/Pasta, Slow Cook
+- **Combi Modes** (signature features): Combi-Crisp, Combi-Bake, Combi-Roast, Combi-Meal
+
+### 17 Built-in Recipes
+Including Combi-Crisp Chicken Thighs, Artisan Bread, Whole Chicken, Salmon Complete Meal, and more.
+
+### Features
+- Multi-phase cooking programs (steam + air fry/bake/roast)
+- Tray position guidance
+- Temperature monitoring with MEATER probe
+- Recipe conversion guidelines
+- Troubleshooting tips
+
+📖 **[Complete Ninja Combi Guide](docs/NINJA_COMBI_GUIDE.md)** - Detailed cooking modes, recipes, and tips
+
+The Ninja Combi excels at combining cooking methods (like steam + air fry) to create results that aren't possible with traditional single-function appliances. Use your MEATER probe with the provided recipes for perfect results every time.
 
 ## 🔔 Notifications & Alerts
 
