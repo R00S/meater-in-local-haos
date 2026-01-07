@@ -80,68 +80,66 @@ jobs:
           echo "Created ZIP: $ZIP_NAME"
 
       - name: Create GitHub Release
-        id: create_release
-        uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ steps.generate_tag.outputs.version_tag }}
-          release_name: "Test Release ${{ steps.generate_tag.outputs.version_tag }}"
-          body: |
-            ## 🧪 Test Release
-            
-            **Branch:** `${{ steps.generate_tag.outputs.branch_name }}`
-            **Base Version:** `${{ steps.version.outputs.base_version }}`
-            **Release Type:** `${{ github.event.inputs.release_type }}`
-            **Created:** ${{ github.event.repository.updated_at }}
-            
-            ---
-            
-            ### 📦 Installation via HACS
-            
-            1. Open HACS → Integrations
-            2. Find "Kitchen Cooking Engine" in your custom repositories
-            3. Click "Redownload" or download if not installed
-            4. Select version `${{ steps.generate_tag.outputs.version_tag }}`
-            5. Restart Home Assistant
-            
-            ### ⚠️ Important Notes
-            
-            - This is a **test/pre-release** version from a feature branch
-            - It may contain unstable or incomplete features
-            - Use for testing purposes only
-            - Report issues on the [issue tracker](https://github.com/${{ github.repository }}/issues)
-            
-            ### 📝 Changes
-            
-            See commits since base version for detailed changes.
-            
-            ---
-            
-            **Auto-generated release notes below:**
-          draft: false
-          prerelease: true
-          commitish: ${{ steps.generate_tag.outputs.branch_name }}
-
-      - name: Upload ZIP to release
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./${{ steps.create_zip.outputs.zip_name }}
-          asset_name: ${{ steps.create_zip.outputs.zip_name }}
-          asset_content_type: application/zip
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION_TAG="${{ steps.generate_tag.outputs.version_tag }}"
+          BRANCH_NAME="${{ steps.generate_tag.outputs.branch_name }}"
+          BASE_VERSION="${{ steps.version.outputs.base_version }}"
+          RELEASE_TYPE="${{ github.event.inputs.release_type }}"
+          ZIP_NAME="${{ steps.create_zip.outputs.zip_name }}"
+          REPO="${{ github.repository }}"
+          
+          # Create release notes
+          cat > /tmp/release_notes.md << EOF
+          ## 🧪 Test Release
+          
+          **Branch:** \`${BRANCH_NAME}\`
+          **Base Version:** \`${BASE_VERSION}\`
+          **Release Type:** \`${RELEASE_TYPE}\`
+          
+          ---
+          
+          ### 📦 Installation via HACS
+          
+          1. Open HACS → Integrations
+          2. Find "Kitchen Cooking Engine" in your custom repositories
+          3. Click "Redownload" or download if not installed
+          4. Select version \`${VERSION_TAG}\`
+          5. Restart Home Assistant
+          
+          ### ⚠️ Important Notes
+          
+          - This is a **test/pre-release** version from a feature branch
+          - It may contain unstable or incomplete features
+          - Use for testing purposes only
+          - Report issues on the [issue tracker](https://github.com/${REPO}/issues)
+          
+          ### 📝 Changes
+          
+          See commits since base version for detailed changes.
+          EOF
+          
+          # Create release with GitHub CLI
+          gh release create "$VERSION_TAG" \
+            "$ZIP_NAME" \
+            --title "Test Release $VERSION_TAG" \
+            --notes-file /tmp/release_notes.md \
+            --prerelease \
+            --target "$BRANCH_NAME"
 
       - name: Release summary
         run: |
+          VERSION_TAG="${{ steps.generate_tag.outputs.version_tag }}"
+          RELEASE_URL="https://github.com/${{ github.repository }}/releases/tag/$VERSION_TAG"
+          
           echo "## ✅ Release Created Successfully" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Version:** \`${{ steps.generate_tag.outputs.version_tag }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** \`$VERSION_TAG\`" >> $GITHUB_STEP_SUMMARY
           echo "**Branch:** \`${{ steps.generate_tag.outputs.branch_name }}\`" >> $GITHUB_STEP_SUMMARY
-          echo "**Release URL:** ${{ steps.create_release.outputs.html_url }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Release URL:** $RELEASE_URL" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### Next Steps" >> $GITHUB_STEP_SUMMARY
-          echo "1. Install via HACS (select version \`${{ steps.generate_tag.outputs.version_tag }}\`)" >> $GITHUB_STEP_SUMMARY
+          echo "1. Install via HACS (select version \`$VERSION_TAG\`)" >> $GITHUB_STEP_SUMMARY
           echo "2. Test the integration thoroughly" >> $GITHUB_STEP_SUMMARY
           echo "3. Report any issues found" >> $GITHUB_STEP_SUMMARY
