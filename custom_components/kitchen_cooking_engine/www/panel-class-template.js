@@ -44,6 +44,8 @@ class KitchenCookingPanel extends LitElement {
       _cutPreferences: { type: Object },
       _currentNotes: { type: String },
       _showNotes: { type: Boolean },
+      _showNinjaCombi: { type: Boolean },
+      _selectedNinjaRecipe: { type: Number },
     };
   }
 
@@ -64,6 +66,8 @@ class KitchenCookingPanel extends LitElement {
     this._cutPreferences = {};
     this._currentNotes = "";
     this._showNotes = false;
+    this._showNinjaCombi = false;
+    this._selectedNinjaRecipe = null;
     this._visibilityHandler = null;
     this._graphCard = null;
     this._graphCardSessionStart = null; // Track which session the graph was created for
@@ -444,7 +448,214 @@ class KitchenCookingPanel extends LitElement {
     this._showHistory = !this._showHistory;
     if (this._showHistory) {
       this._loadHistory();
+      this._showNinjaCombi = false;
     }
+  }
+
+  _toggleNinjaCombi() {
+    this._showNinjaCombi = !this._showNinjaCombi;
+    if (this._showNinjaCombi) {
+      this._showHistory = false;
+    }
+  }
+
+  _selectNinjaRecipe(recipeId) {
+    this._selectedNinjaRecipe = recipeId;
+  }
+
+  _renderNinjaCombi() {
+    // Check if NINJA_COMBI_RECIPES is available
+    if (typeof NINJA_COMBI_RECIPES === 'undefined' || !NINJA_COMBI_RECIPES || NINJA_COMBI_RECIPES.length === 0) {
+      return html`
+        <div class="status-banner idle">
+          <h2>🥘 Ninja Combi Recipes</h2>
+          <p>No recipes available</p>
+        </div>
+        <ha-card>
+          <div class="card-content">
+            <p class="no-history">Ninja Combi recipes not loaded. Please ensure the integration is up to date.</p>
+          </div>
+        </ha-card>
+      `;
+    }
+
+    // Group recipes by mode
+    const recipesByMode = {};
+    NINJA_COMBI_RECIPES.forEach(recipe => {
+      if (!recipesByMode[recipe.mode]) {
+        recipesByMode[recipe.mode] = [];
+      }
+      recipesByMode[recipe.mode].push(recipe);
+    });
+
+    const modeIcons = {
+      'combi_crisp': '🔥',
+      'combi_bake': '🥖',
+      'combi_meal': '🍱',
+      'combi_roast': '🍖',
+      'convection': '🔥',
+      'air_fry': '🍟',
+      'steam': '💨',
+      'prove': '🫓',
+      'sear': '🥩',
+      'grill': '🍢',
+      'rice_pasta': '🍚',
+      'slow_cook': '🍲',
+    };
+
+    const modeNames = {
+      'combi_crisp': 'Combi-Crisp (Steam + Air Fry)',
+      'combi_bake': 'Combi-Bake (Steam + Bake)',
+      'combi_meal': 'Combi-Meal (Multi-tray)',
+      'combi_roast': 'Combi-Roast (Steam + Roast)',
+      'convection': 'Convection Oven',
+      'air_fry': 'Air Fry',
+      'steam': 'Steam',
+      'prove': 'Prove/Proof',
+      'sear': 'Sear',
+      'grill': 'Grill',
+      'rice_pasta': 'Rice/Pasta',
+      'slow_cook': 'Slow Cook',
+    };
+
+    if (this._selectedNinjaRecipe) {
+      const recipe = NINJA_COMBI_RECIPES.find(r => r.id === this._selectedNinjaRecipe);
+      if (recipe) {
+        return this._renderNinjaRecipeDetail(recipe);
+      }
+    }
+
+    return html`
+      <div class="status-banner idle">
+        <h2>🥘 Ninja Combi Recipes</h2>
+        <p>${NINJA_COMBI_RECIPES.length} recipes for the Ninja Combi SFP700EU</p>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          <h3>🛠️ Recipe Builder</h3>
+          <p>Build custom meals with automatic parameter adjustment</p>
+          <button class="action-btn" @click=${() => this._showRecipeBuilder = true} style="width: 100%; margin-top: 8px;">
+            ✨ Open Recipe Builder
+          </button>
+        </div>
+      </ha-card>
+
+      ${Object.entries(recipesByMode).map(([mode, recipes]) => html`
+        <ha-card>
+          <div class="card-content">
+            <h3>${modeIcons[mode] || '🍳'} ${modeNames[mode] || mode}</h3>
+            <div class="button-group" style="display: flex; flex-direction: column; gap: 8px;">
+              ${recipes.map(recipe => html`
+                <button 
+                  class="category-btn" 
+                  style="text-align: left; padding: 12px; justify-content: space-between; display: flex; align-items: center;"
+                  @click=${() => this._selectNinjaRecipe(recipe.id)}>
+                  <span>
+                    ${recipe.name}
+                    ${recipe.use_probe ? ' 🌡️' : ''}
+                  </span>
+                  <span style="font-size: 11px; color: var(--secondary-text-color);">
+                    ${recipe.cook_time_minutes} min
+                  </span>
+                </button>
+              `)}
+            </div>
+          </div>
+        </ha-card>
+      `)}
+    `;
+  }
+
+  _renderNinjaRecipeDetail(recipe) {
+    return html`
+      <div class="status-banner idle">
+        <h2>🥘 ${recipe.name}</h2>
+        <p>${recipe.description}</p>
+        <button class="history-btn" @click=${() => this._selectedNinjaRecipe = null} style="margin-top: 12px;">
+          ← Back to Recipes
+        </button>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          <h3>📋 Recipe Details</h3>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 12px 0;">
+            <div>
+              <strong>⏱️ Prep:</strong> ${recipe.prep_time_minutes} min
+            </div>
+            <div>
+              <strong>🔥 Cook:</strong> ${recipe.cook_time_minutes} min
+            </div>
+            <div>
+              <strong>🍽️ Servings:</strong> ${recipe.servings}
+            </div>
+            <div>
+              <strong>📊 Difficulty:</strong> ${recipe.difficulty}
+            </div>
+          </div>
+          ${recipe.use_probe ? html`
+            <div style="margin-top: 12px; padding: 12px; background: rgba(76, 175, 80, 0.1); border-left: 3px solid #4caf50; border-radius: 0 4px 4px 0;">
+              <strong>🌡️ MEATER+ Probe:</strong> Target ${recipe.target_temp_c}°C (${recipe.target_temp_f}°F)
+            </div>
+          ` : ''}
+        </div>
+      </ha-card>
+
+      ${recipe.phases && recipe.phases.length > 0 ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>🔄 Cooking Phases</h3>
+            ${recipe.phases.map((phase, idx) => html`
+              <div style="margin: 12px 0; padding: 12px; background: var(--primary-background-color); border-radius: 8px;">
+                <strong>Phase ${idx + 1}:</strong> ${phase.description}<br>
+                🌡️ ${phase.temperature_c}°C (${phase.temperature_f}°F)<br>
+                ⏱️ ${phase.duration_minutes} minutes<br>
+                ${phase.steam_enabled ? '💨 Steam enabled' : ''}
+              </div>
+            `)}
+          </div>
+        </ha-card>
+      ` : ''}
+
+      <ha-card>
+        <div class="card-content">
+          <h3>🛒 Ingredients</h3>
+          <ul style="margin: 0; padding-left: 20px;">
+            ${recipe.ingredients.map(ing => html`<li>${ing}</li>`)}
+          </ul>
+        </div>
+      </ha-card>
+
+      <ha-card>
+        <div class="card-content">
+          <h3>👨‍🍳 Instructions</h3>
+          <ol style="margin: 0; padding-left: 20px;">
+            ${recipe.instructions.map(step => html`<li style="margin-bottom: 8px;">${step}</li>`)}
+          </ol>
+        </div>
+      </ha-card>
+
+      ${recipe.tips && recipe.tips.length > 0 ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>💡 Tips</h3>
+            <ul style="margin: 0; padding-left: 20px;">
+              ${recipe.tips.map(tip => html`<li style="margin-bottom: 6px;">${tip}</li>`)}
+            </ul>
+          </div>
+        </ha-card>
+      ` : ''}
+
+      ${recipe.notes ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>📝 Notes</h3>
+            <p>${recipe.notes}</p>
+          </div>
+        </ha-card>
+      ` : ''}
+    `;
   }
 
   _formatDateTime(isoString) {
@@ -493,6 +704,7 @@ class KitchenCookingPanel extends LitElement {
         
         <div class="content">
           ${this._showHistory ? this._renderHistory() :
+            this._showNinjaCombi ? this._renderNinjaCombi() :
             (entities.length === 0 ? this._renderNoEntities() : 
               (isActive ? this._renderActiveCook(state) : this._renderSetupForm(entities)))}
           
@@ -500,6 +712,9 @@ class KitchenCookingPanel extends LitElement {
             <div class="history-toggle">
               <button class="history-btn ${this._showHistory ? 'active' : ''}" @click=${this._toggleHistory}>
                 📜 ${this._showHistory ? 'Back to Cooking' : 'View Cook History'}
+              </button>
+              <button class="history-btn ${this._showNinjaCombi ? 'active' : ''}" @click=${this._toggleNinjaCombi}>
+                🥘 ${this._showNinjaCombi ? 'Back to Cooking' : 'Ninja Combi Recipes'}
               </button>
             </div>
           ` : ''}

@@ -1,6 +1,9 @@
 """
 Ninja Speedi to Ninja Combi Recipe Converter.
 
+Last Updated: 07 Jan 2026, 23:50 CET
+Last Change: Added CET timestamp for HACS release
+
 This module converts recipes from the Ninja Speedi/Crispi format to Ninja Combi format,
 translating mode names, button labels, and cooking parameters.
 

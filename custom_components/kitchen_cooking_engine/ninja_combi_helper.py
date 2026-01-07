@@ -1,6 +1,9 @@
 """
 Ninja Combi Recipe Helper Module
 
+Last Updated: 07 Jan 2026, 23:50 CET
+Last Change: Added CET timestamp for HACS release
+
 This module provides helper functions and utilities for working with
 Ninja Combi recipes in the Kitchen Cooking Engine.
 

@@ -1,6 +1,9 @@
 """
 Ninja Combi Recipe Builder
 
+Last Updated: 07 Jan 2026, 23:50 CET
+Last Change: Added CET timestamp for HACS release
+
 This module implements the "Build Your Combi Meal" formula from the
 Ninja Combi user manual. It allows users to create custom 3-part meals
 by selecting a base (grains/pasta), protein, and vegetables.

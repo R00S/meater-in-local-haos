@@ -1,8 +1,8 @@
 """
 Ninja Combi SFP700EU cooking data for Kitchen Cooking Engine.
 
-Last Updated: 7 Jan 2026
-Last Change: Initial creation for Ninja Combi support
+Last Updated: 07 Jan 2026, 23:50 CET
+Last Change: Added frontend integration and recipe display in cooking panel
 
 This module contains cooking modes, recipes, and guidelines specific to the
 Ninja Combi (SFP700EU) multi-function oven.
