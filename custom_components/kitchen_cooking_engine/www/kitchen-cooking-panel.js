@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 08 Jan 2026, 00:28 CET
+ * AUTO-GENERATED: 08 Jan 2026, 00:55 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 08 Jan 2026, 00:28 CET
+// Last generated: 08 Jan 2026, 00:55 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5903,6 +5903,9 @@ class KitchenCookingPanel extends LitElement {
         <button class="history-btn" @click=${() => this._selectedNinjaRecipe = null} style="margin-top: 12px;">
           ← Back to Recipes
         </button>
+        <button class="action-btn" @click=${() => this._openRecipeInBuilder(recipe)} style="margin-top: 12px; margin-left: 8px;">
+          🛠️ Modify in Builder
+        </button>
       </div>
 
       <ha-card>
@@ -5916,7 +5919,14 @@ class KitchenCookingPanel extends LitElement {
               <strong>🔥 Cook:</strong> ${recipe.cook_time_minutes} min
             </div>
             <div>
-              <strong>🍽️ Servings:</strong> ${recipe.servings}
+              <strong>🍽️ Servings:</strong> 
+              <input 
+                type="number" 
+                min="1" 
+                max="12" 
+                .value=${recipe._adjustedServings || recipe.servings}
+                @input=${(e) => this._updateRecipeServings(recipe, parseInt(e.target.value))}
+                style="width: 50px; padding: 4px; border: 1px solid var(--divider-color); border-radius: 4px; background: var(--primary-background-color); color: var(--primary-text-color);">
             </div>
             <div>
               <strong>📊 Difficulty:</strong> ${recipe.difficulty}
@@ -5956,7 +5966,7 @@ class KitchenCookingPanel extends LitElement {
         <div class="card-content">
           <h3>🛒 Ingredients</h3>
           <ul style="margin: 0; padding-left: 20px;">
-            ${recipe.ingredients.map(ing => html`<li>${ing}</li>`)}
+            ${(recipe._adjustedIngredients || recipe.ingredients).map(ing => html`<li>${ing}</li>`)}
           </ul>
         </div>
       </ha-card>
@@ -6055,7 +6065,7 @@ class KitchenCookingPanel extends LitElement {
             ${Object.entries(bases).map(([key, base]) => html`
               <button 
                 class="category-btn ${this._builderBase === key ? 'active' : ''}" 
-                @click=${() => this._builderBase = key}
+                @click=${() => { this._builderBase = key; this.requestUpdate(); }}
                 style="padding: 12px; text-align: left;">
                 <div style="font-size: 20px; margin-bottom: 4px;">${base.icon}</div>
                 <div style="font-size: 13px; font-weight: 500;">${base.name}</div>
@@ -6075,7 +6085,7 @@ class KitchenCookingPanel extends LitElement {
             ${Object.entries(proteins).map(([key, protein]) => html`
               <button 
                 class="category-btn ${this._builderProtein === key ? 'active' : ''}" 
-                @click=${() => this._builderProtein = key}
+                @click=${() => { this._builderProtein = key; this.requestUpdate(); }}
                 style="padding: 12px; text-align: left;">
                 <div style="font-size: 20px; margin-bottom: 4px;">${protein.icon}</div>
                 <div style="font-size: 13px; font-weight: 500;">${protein.name}</div>
@@ -6121,7 +6131,7 @@ class KitchenCookingPanel extends LitElement {
             <input 
               type="checkbox" 
               .checked=${this._builderUseMeater}
-              @change=${(e) => this._builderUseMeater = e.target.checked}
+              @change=${(e) => { this._builderUseMeater = e.target.checked; this.requestUpdate(); }}
               style="width: 18px; height: 18px; cursor: pointer;">
             <span style="font-size: 14px;">
               🌡️ Use MEATER+ probe for temperature monitoring
@@ -6195,6 +6205,7 @@ class KitchenCookingPanel extends LitElement {
     } else {
       this._builderVeggies = [...this._builderVeggies, veggieName];
     }
+    this.requestUpdate();
   }
 
   _buildRecipe() {
@@ -6283,6 +6294,74 @@ class KitchenCookingPanel extends LitElement {
           alert(`❌ Error starting cook:\n\n${err.message}`);
         });
     }
+  }
+
+  _updateRecipeServings(recipe, newServings) {
+    if (isNaN(newServings) || newServings < 1) return;
+    
+    const originalServings = recipe.servings;
+    const multiplier = newServings / originalServings;
+    
+    // Store adjusted servings
+    recipe._adjustedServings = newServings;
+    
+    // Scale ingredients
+    recipe._adjustedIngredients = recipe.ingredients.map(ing => {
+      // Try to find numbers in the ingredient string and scale them
+      return ing.replace(/(\d+(?:\.\d+)?)\s*([a-zA-Z]*)/g, (match, num, unit) => {
+        const scaledNum = (parseFloat(num) * multiplier).toFixed(1).replace(/\.0$/, '');
+        return `${scaledNum} ${unit}`;
+      });
+    });
+    
+    this.requestUpdate();
+  }
+
+  _openRecipeInBuilder(recipe) {
+    // Map recipe to builder settings (best effort mapping)
+    // This is a simplified mapping - in production you'd have more sophisticated logic
+    
+    // Try to detect base from recipe name/ingredients
+    const recipeLower = recipe.name.toLowerCase();
+    if (recipeLower.includes('rice')) {
+      this._builderBase = 'white_rice';
+    } else if (recipeLower.includes('pasta')) {
+      this._builderBase = 'plain_pasta';
+    } else if (recipeLower.includes('quinoa')) {
+      this._builderBase = 'quinoa';
+    } else if (recipeLower.includes('couscous')) {
+      this._builderBase = 'israeli_couscous';
+    } else {
+      this._builderBase = 'white_rice'; // default
+    }
+    
+    // Try to detect protein
+    if (recipeLower.includes('chicken breast')) {
+      this._builderProtein = 'chicken_breast';
+    } else if (recipeLower.includes('chicken')) {
+      this._builderProtein = 'chicken_thighs';
+    } else if (recipeLower.includes('salmon')) {
+      this._builderProtein = 'salmon';
+    } else if (recipeLower.includes('pork')) {
+      this._builderProtein = 'pork_chops';
+    } else if (recipeLower.includes('beef')) {
+      this._builderProtein = 'beef_steak';
+    } else if (recipeLower.includes('shrimp')) {
+      this._builderProtein = 'shrimp';
+    } else {
+      this._builderProtein = 'chicken_breast'; // default
+    }
+    
+    // Set MEATER based on recipe
+    this._builderUseMeater = recipe.use_probe || false;
+    
+    // Clear veggies (user can add them in builder)
+    this._builderVeggies = [];
+    
+    // Switch to builder view
+    this._selectedNinjaRecipe = null;
+    this._showRecipeBuilder = true;
+    this.requestUpdate();
   }
 
   _formatDateTime(isoString) {
