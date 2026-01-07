@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Demo of the Ninja Combi Recipe Builder.
+Demo of the Ninja Combi Recipe Builder with MEATER+ Probe Integration.
 
 This shows how to use the "Build Your Combi Meal" formula to create
-custom 3-part meals (base + protein + veggies).
+custom 3-part meals (base + protein + veggies) with MEATER+ temperature monitoring.
 
 Run from repository root:
     python3 docs/examples/ninja_combi_recipe_builder_demo.py
@@ -22,11 +22,14 @@ from ninja_combi_recipe_builder import (
     CombiMealProtein,
     list_all_bases,
     list_all_proteins,
+    build_air_fry_recipe,
+    AirFryIngredient,
+    list_air_fry_ingredients,
 )
 
 def main():
     print("=" * 80)
-    print("NINJA COMBI RECIPE BUILDER - DEMO")
+    print("NINJA COMBI RECIPE BUILDER WITH MEATER+ PROBE - DEMO")
     print("=" * 80)
     
     # Show available options
@@ -40,77 +43,93 @@ def main():
     for protein_name in list_all_proteins():
         print(f"  • {protein_name}")
     
-    # Example 1: Simple meal
+    print("\n\n🍗 AVAILABLE AIR FRY INGREDIENTS:")
+    print("-" * 80)
+    for ingredient_name in list_air_fry_ingredients():
+        print(f"  • {ingredient_name}")
+    
+    # Example 1: Combi Meal with MEATER+ probe
     print("\n\n" + "=" * 80)
-    print("EXAMPLE 1: Simple Chicken & Rice Meal")
+    print("EXAMPLE 1: Chicken & Rice with MEATER+ Probe Monitoring")
     print("=" * 80)
     
     recipe1 = build_combi_meal(
         base=CombiMealBase.WHITE_RICE,
         protein=CombiMealProtein.CHICKEN_BREAST_FRESH,
-        crispy_veggies=["2 cups broccoli florets"]
+        crispy_veggies=["2 cups broccoli florets"],
+        use_meater_probe=True  # Enable MEATER+ probe
     )
     
     print(recipe1.get_recipe_card())
     
-    # Example 2: Pasta meal
+    # Example 2: Salmon with custom probe temp
     print("\n\n" + "=" * 80)
-    print("EXAMPLE 2: Italian Sausage with Marinara Pasta")
+    print("EXAMPLE 2: Salmon with Quinoa (Custom Probe Temperature)")
     print("=" * 80)
     
     recipe2 = build_combi_meal(
-        base=CombiMealBase.MARINARA_PASTA,
-        protein=CombiMealProtein.ITALIAN_SAUSAGES,
-        crispy_veggies=["1 red bell pepper, sliced", "1 green bell pepper, sliced"]
+        base=CombiMealBase.QUINOA,
+        protein=CombiMealProtein.SALMON_FILETS,
+        tender_veggies=["1 cup frozen peas"],
+        crispy_veggies=["2 cups asparagus, trimmed (add last 5 min)"],
+        use_meater_probe=True,
+        target_temp_c=54,  # Medium doneness
+        target_temp_f=130
     )
     
     print(recipe2.get_recipe_card())
     
-    # Example 3: Seafood meal
+    # Example 3: Air Fry with probe
     print("\n\n" + "=" * 80)
-    print("EXAMPLE 3: Salmon with Quinoa and Veggies")
+    print("EXAMPLE 3: Air Fry Chicken Wings with MEATER+ Probe")
     print("=" * 80)
     
-    recipe3 = build_combi_meal(
-        base=CombiMealBase.QUINOA,
-        protein=CombiMealProtein.SALMON_FILETS,
-        tender_veggies=["1 cup frozen peas"],
-        crispy_veggies=["2 cups asparagus, trimmed (add last 5 min)"]
+    air_fry_recipe = build_air_fry_recipe(
+        ingredient=AirFryIngredient.CHICKEN_WINGS,
+        use_meater_probe=True
     )
     
-    print(recipe3.get_recipe_card())
+    print(air_fry_recipe)
     
     print("\n\n" + "=" * 80)
-    print("RECIPE BUILDER TIPS")
+    print("MEATER+ PROBE INTEGRATION TIPS")
     print("=" * 80)
     print("""
-📝 How to Use the Recipe Builder:
+🌡️ How MEATER+ Works with Recipe Builder:
     
-1. Choose Your Base (grains or pasta)
-2. Choose Your Protein (chicken, beef, pork, seafood, or plant-based)
-3. Optionally add vegetables:
-   - Tender veggies: Cook with base (peas, spinach, etc.)
-   - Crispy veggies: Cook with protein (broccoli, carrots, etc.)
+1. **Automatic Target Temps**: Recipe builder sets safe temperatures based on protein
+2. **Real-Time Monitoring**: Watch temperature rise in Home Assistant
+3. **Notifications**: Get alerted when target temperature reached
+4. **Perfect Doneness**: No more guessing - precise to the degree
 
-🔥 Temperature & Time:
-   - Temperature set automatically based on protein
-   - Times are for well-done proteins
-   - Monitor and adjust for your preferred doneness
+📱 Using MEATER+ in Home Assistant:
+   - Open Kitchen Cooking Engine panel
+   - Start cook with selected recipe
+   - Monitor temperature graph in real-time
+   - Get mobile/TTS notifications when done
 
 💡 Pro Tips:
-   - Hearty veggies (potatoes, carrots): Add at start
-   - Delicate veggies (broccoli, green beans): Add last 5-7 minutes
-   - For smaller servings (2-3 people): Halve all quantities
-   - Don't forget liquid in Level 1 (creates steam)!
+   - Insert probe into thickest part of protein
+   - Avoid touching bone (gives false readings)
+   - Remove food 2-3°C before target for carryover cooking
+   - Keep probe in during rest to monitor temperature plateau
 
-🌡️ MEATER+ Integration:
-   - Insert probe into protein for precise monitoring
-   - Track temperature through cooking
-   - Get notifications when target reached
+🎯 Common Target Temperatures:
+   - Chicken: 74°C / 165°F (safe)
+   - Pork: 63°C / 145°F (safe)
+   - Beef Steak: 54°C / 130°F (medium-rare), 60°C / 140°F (medium)
+   - Salmon: 54°C / 130°F (medium)
+   - Ground Beef: 71°C / 160°F (safe)
+
+🔥 Benefits in Ninja Combi:
+   - Monitor through multi-phase cooking (steam → air fry/roast)
+   - Track temperature rise during steam phase
+   - Verify safe temp before crisping phase
+   - Perfect results every time - no overcooking!
 """)
     
     print("=" * 80)
-    print("The recipe builder makes it easy to create custom meals!")
+    print("The recipe builder + MEATER+ probe = Perfect cooking every time!")
     print("=" * 80 + "\n")
 
 if __name__ == "__main__":
