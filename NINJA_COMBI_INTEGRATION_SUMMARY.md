@@ -17,7 +17,6 @@ This document summarizes the complete implementation of Ninja Combi (SFP700EU) s
 **All 12 cooking modes covered:**
 
 #### Standard Modes (No recipe adaptation needed)
-- ✅ Convection: Classic Roasted Potatoes (45 min)
 - ✅ Air Fryer: Chicken Wings (25 min)
 - ✅ Steam: Broccoli and Carrots (12 min)
 - ✅ Prove: Soft Dinner Rolls (110 min)
@@ -34,6 +33,7 @@ This document summarizes the complete implementation of Ninja Combi (SFP700EU) s
 #### Combi Modes (Signature multi-phase cooking)
 - ✅ Combi-Crisp: Chicken Thighs (22 min, 2 phases)
 - ✅ Combi-Crisp: Root Vegetables (22 min, 2 phases)
+- ✅ **Combi-Crisp: Roasted Potatoes (35 min, 2 phases)** - Moved from Convection
 - ✅ Combi-Bake: Artisan Bread (35 min, 2 phases)
 - ✅ Combi-Roast: Whole Chicken (60 min, 2 phases)
 - ✅ Combi-Roast: Pork Loin (50 min, 2 phases)
@@ -42,12 +42,38 @@ This document summarizes the complete implementation of Ninja Combi (SFP700EU) s
 ### 2. Comprehensive Documentation
 
 #### User Documentation
-- **NINJA_COMBI_GUIDE.md** (9,700 words)
+- **NINJA_COMBI_GUIDE.md** (10,000+ words)
   - Detailed explanation of all 12 modes
+  - **MEATER+ probe integration section** (NEW)
   - Tray positioning guide
   - Temperature reference table
   - Recipe conversion tips
   - Troubleshooting section
+  - Safety and maintenance
+
+- **NINJA_COMBI_QUICK_REF.md**
+  - Quick mode reference
+  - Recipe statistics
+  - Common questions
+  - Code examples
+
+- **NINJA_COMBI_INTEGRATION_SUMMARY.md**
+  - Complete implementation details
+  - Technical specifications
+  - File structure
+
+#### Developer Documentation
+- **examples/README.md**
+  - How to use recipe database
+  - Code examples
+  - API reference
+  - Integration guide
+
+- **examples/ninja_combi_simple_demo.py**
+  - Working demo of recipe database
+  
+- **examples/ninja_combi_recipe_builder_demo.py** (NEW)
+  - Demo of recipe builder formula
   - Safety and maintenance
 
 - **NINJA_COMBI_QUICK_REF.md**
@@ -126,18 +152,22 @@ This document summarizes the complete implementation of Ninja Combi (SFP700EU) s
 
 ```
 custom_components/kitchen_cooking_engine/
-├── ninja_combi_data.py          # Recipe database (NEW)
-└── ninja_combi_helper.py        # Helper functions (NEW)
+├── ninja_combi_data.py              # Recipe database (17 recipes)
+├── ninja_combi_helper.py            # Helper functions
+└── ninja_combi_recipe_builder.py   # Recipe builder (NEW)
 
 docs/
-├── NINJA_COMBI_GUIDE.md         # Complete guide (NEW)
-├── NINJA_COMBI_QUICK_REF.md     # Quick reference (NEW)
+├── NINJA_COMBI_GUIDE.md             # Complete guide (10,000+ words)
+├── NINJA_COMBI_QUICK_REF.md         # Quick reference
+├── NINJA_COMBI_INTEGRATION_SUMMARY.md  # This file
+├── SFP700Series_IG_QSG_REV_Mv4.pdf  # User manual (reference)
 └── examples/
-    ├── README.md                # Code guide (NEW)
-    ├── ninja_combi_simple_demo.py  # Demo script (NEW)
-    └── ninja_combi_example.py      # Advanced examples (NEW)
+    ├── README.md                    # Code guide
+    ├── ninja_combi_simple_demo.py   # Recipe database demo
+    ├── ninja_combi_example.py       # Advanced examples
+    └── ninja_combi_recipe_builder_demo.py  # Recipe builder demo (NEW)
 
-README.md                         # Updated with Ninja Combi section
+README.md                            # Updated with Ninja Combi section
 ```
 
 ---
@@ -172,9 +202,33 @@ Multi-phase cooking that combines steam with other methods:
 - Perfect doneness every time
 - Works with existing Kitchen Cooking Engine
 
+### 5. Recipe Builder (NEW)
+Custom meal builder from user manual:
+- **10 base options**: Rice, pasta, grains with correct liquid ratios
+- **16 protein options**: Chicken, beef, pork, seafood, plant-based
+- **Automatic temps/times**: Based on protein selection
+- **Vegetable support**: Tender (with base) and crispy (with protein)
+- **Complete recipe cards**: Generated with full instructions
+
 ---
 
 ## Usage Examples
+
+### Build Custom Meals (NEW)
+```python
+from ninja_combi_recipe_builder import build_combi_meal, CombiMealBase, CombiMealProtein
+
+# Create a custom meal
+recipe = build_combi_meal(
+    base=CombiMealBase.WHITE_RICE,
+    protein=CombiMealProtein.CHICKEN_BREAST_FRESH,
+    crispy_veggies=["2 cups broccoli florets"]
+)
+
+# Get formatted recipe card
+print(recipe.get_recipe_card())
+# Outputs: Complete recipe with temps, times, instructions
+```
 
 ### Search Recipes
 ```python
@@ -330,8 +384,61 @@ Each recipe should include:
 
 ---
 
+## Updates Based on User Feedback (Jan 7, 2026)
+
+### 1. ✅ Recipe Builder Implementation (Commit 34c6b8b)
+**Request**: "I added a pdf with the users manual. It provides further recipies and a confusing recipy builder that should be implemented so that it gets easier to use."
+
+**Implementation**:
+- Extracted "Build Your Combi Meal" formula from manual (page 7)
+- Created `ninja_combi_recipe_builder.py` with complete implementation
+- **10 base options**: All grains, rice varieties, and pasta options with correct liquid ratios
+- **16 protein options**: Chicken (5 types), beef (4 types), pork (3 types), seafood (2 types), plant-based (2 types)
+- **Automatic parameters**: Temperature and time set based on protein selection
+- **Vegetable support**: Tender veggies (cook with base) and crispy veggies (cook with protein)
+- **Demo script**: Working examples showing how to build custom meals
+- **Output**: Complete recipe cards with ingredients, instructions, temps, times
+
+**Result**: Users can now programmatically create custom 3-part meals by selecting base + protein + veggies, with automatic cooking parameters.
+
+### 2. ✅ Roasted Potatoes Moved to Combi-Crisp (Commit af6a728)
+**Request**: "Roasted potatoes is one of the things that gets so much better with combi crisp, Move it."
+
+**Changes**:
+- Recipe #1016 changed from Convection mode to Combi-Crisp mode
+- Method changed: Single 45min roast → Steam 15min + Air Fry 20min
+- **Benefits**:
+  - No parboiling needed (steam phase handles it)
+  - 10 minutes faster prep time (20min → 10min)
+  - 10 minutes faster cook time (45min → 35min)
+  - Ultra-crispy exterior with fluffy interior
+  - Added note: "significantly better than traditional roasting"
+- Updated documentation in NINJA_COMBI_GUIDE.md with Combi-Crisp roasted potatoes example
+
+### 3. ✅ MEATER+ Probe Integration Documented (Commit af6a728)
+**Request**: "The meater+ probe is usable in the combi. Dont forget to combine the usage."
+
+**Added Section in NINJA_COMBI_GUIDE.md**:
+- **Benefits of MEATER+ with Ninja Combi** (4 key points)
+- **How to Use MEATER+** (probe placement, temperature monitoring)
+- **Best Recipes for MEATER+** (9 recipes listed with target temps)
+- **Tips for Probe Usage** (steam phase, air fry phase, carryover cooking)
+- **Combi Mode + Probe Examples** (Combi-Crisp, Combi-Roast workflows)
+- **Detailed Example**: Combi-Crisp Chicken with MEATER+ walkthrough
+  - Track temperature through steam phase (20°C → 65°C)
+  - Monitor during air fry phase (65°C → 74°C)
+  - Get notifications when safe temperature reached
+  - Rest with probe to monitor temperature plateau
+
+**Updated README.md**:
+- Enhanced Ninja Combi section with MEATER+ integration emphasis
+- Listed 9 recipes with temperature monitoring
+- Explained real-time tracking through multi-phase cooking
+
+---
+
 ## Conclusion
 
-This implementation provides a complete, production-ready foundation for Ninja Combi support in the Kitchen Cooking Engine. All 12 cooking modes are documented and exemplified with practical recipes. The integration works seamlessly with existing MEATER probe monitoring, and the comprehensive documentation ensures both users and developers can effectively use and extend the system.
+This implementation provides a complete, production-ready foundation for Ninja Combi support in the Kitchen Cooking Engine. All 12 cooking modes are documented and exemplified with practical recipes. The recipe builder makes it easy to create custom meals. The integration works seamlessly with existing MEATER probe monitoring, and the comprehensive documentation ensures both users and developers can effectively use and extend the system.
 
 The Ninja Combi integration transforms Home Assistant into an intelligent cooking coach that understands the unique capabilities of this multi-function oven, helping users achieve professional results at home. 🥷🍳
