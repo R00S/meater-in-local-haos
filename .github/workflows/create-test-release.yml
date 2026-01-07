@@ -1,0 +1,145 @@
+name: Create Test Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_type:
+        description: 'Release type'
+        required: true
+        default: 'test'
+        type: choice
+        options:
+          - test
+          - beta
+          - rc
+      version_suffix:
+        description: 'Custom version suffix (optional, leave empty for auto-generated)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  create-test-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract base version from manifest.json
+        id: version
+        run: |
+          BASE_VERSION=$(jq -r '.version' custom_components/kitchen_cooking_engine/manifest.json)
+          echo "base_version=$BASE_VERSION" >> $GITHUB_OUTPUT
+          echo "Base version: $BASE_VERSION"
+
+      - name: Generate version tag
+        id: generate_tag
+        run: |
+          BASE_VERSION="${{ steps.version.outputs.base_version }}"
+          RELEASE_TYPE="${{ github.event.inputs.release_type }}"
+          CUSTOM_SUFFIX="${{ github.event.inputs.version_suffix }}"
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          # Sanitize branch name for use in tag (replace / with -)
+          BRANCH_SAFE="${BRANCH_NAME//\//-}"
+          TIMESTAMP=$(date +%Y%m%d%H%M%S)
+          
+          if [ -n "$CUSTOM_SUFFIX" ]; then
+            VERSION_TAG="v${BASE_VERSION}-${RELEASE_TYPE}.${CUSTOM_SUFFIX}"
+          else
+            VERSION_TAG="v${BASE_VERSION}-${RELEASE_TYPE}.${BRANCH_SAFE}.${TIMESTAMP}"
+          fi
+          
+          echo "version_tag=$VERSION_TAG" >> $GITHUB_OUTPUT
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          echo "Generated version tag: $VERSION_TAG"
+
+      - name: Create ZIP archive
+        id: create_zip
+        run: |
+          VERSION_TAG="${{ steps.generate_tag.outputs.version_tag }}"
+          ZIP_NAME="kitchen-cooking-engine-${VERSION_TAG}.zip"
+          
+          # Create ZIP from the integration directory
+          cd custom_components
+          zip -r "../${ZIP_NAME}" kitchen_cooking_engine/ -x "*.pyc" -x "*__pycache__*" -x "*.git*"
+          cd ..
+          
+          # Verify ZIP was created
+          if [ ! -f "$ZIP_NAME" ]; then
+            echo "Error: ZIP file was not created"
+            exit 1
+          fi
+          
+          # Show ZIP contents for verification
+          echo "ZIP contents:"
+          unzip -l "$ZIP_NAME" | head -20
+          
+          echo "zip_name=$ZIP_NAME" >> $GITHUB_OUTPUT
+          echo "Created ZIP: $ZIP_NAME"
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION_TAG="${{ steps.generate_tag.outputs.version_tag }}"
+          BRANCH_NAME="${{ steps.generate_tag.outputs.branch_name }}"
+          BASE_VERSION="${{ steps.version.outputs.base_version }}"
+          RELEASE_TYPE="${{ github.event.inputs.release_type }}"
+          ZIP_NAME="${{ steps.create_zip.outputs.zip_name }}"
+          REPO="${{ github.repository }}"
+          
+          # Create release notes
+          cat > /tmp/release_notes.md << EOF
+          ## 🧪 Test Release
+          
+          **Branch:** \`${BRANCH_NAME}\`
+          **Base Version:** \`${BASE_VERSION}\`
+          **Release Type:** \`${RELEASE_TYPE}\`
+          
+          ---
+          
+          ### 📦 Installation via HACS
+          
+          1. Open HACS → Integrations
+          2. Find "Kitchen Cooking Engine" in your custom repositories
+          3. Click "Redownload" or download if not installed
+          4. Select version \`${VERSION_TAG}\`
+          5. Restart Home Assistant
+          
+          ### ⚠️ Important Notes
+          
+          - This is a **test/pre-release** version from a feature branch
+          - It may contain unstable or incomplete features
+          - Use for testing purposes only
+          - Report issues on the [issue tracker](https://github.com/${REPO}/issues)
+          
+          ### 📝 Changes
+          
+          See commits since base version for detailed changes.
+          EOF
+          
+          # Create release with GitHub CLI
+          gh release create "$VERSION_TAG" \
+            "$ZIP_NAME" \
+            --title "Test Release $VERSION_TAG" \
+            --notes-file /tmp/release_notes.md \
+            --prerelease \
+            --target "$BRANCH_NAME"
+
+      - name: Release summary
+        run: |
+          VERSION_TAG="${{ steps.generate_tag.outputs.version_tag }}"
+          RELEASE_URL="https://github.com/${{ github.repository }}/releases/tag/$VERSION_TAG"
+          
+          echo "## ✅ Release Created Successfully" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** \`$VERSION_TAG\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Branch:** \`${{ steps.generate_tag.outputs.branch_name }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Release URL:** $RELEASE_URL" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Next Steps" >> $GITHUB_STEP_SUMMARY
+          echo "1. Install via HACS (select version \`$VERSION_TAG\`)" >> $GITHUB_STEP_SUMMARY
+          echo "2. Test the integration thoroughly" >> $GITHUB_STEP_SUMMARY
+          echo "3. Report any issues found" >> $GITHUB_STEP_SUMMARY
