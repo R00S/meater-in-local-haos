@@ -549,7 +549,7 @@ class KitchenCookingPanel extends LitElement {
         <div class="card-content">
           <h3>🛠️ Recipe Builder</h3>
           <p>Build custom meals with automatic parameter adjustment</p>
-          <button class="action-btn" @click=${() => this._showRecipeBuilder = true} style="width: 100%; margin-top: 8px;">
+          <button class="action-btn" @click=${() => { this._selectedNinjaRecipe = null; this._showRecipeBuilder = true; }} style="width: 100%; margin-top: 8px;">
             ✨ Open Recipe Builder
           </button>
         </div>
@@ -611,6 +611,12 @@ class KitchenCookingPanel extends LitElement {
           ${recipe.use_probe ? html`
             <div style="margin-top: 12px; padding: 12px; background: rgba(76, 175, 80, 0.1); border-left: 3px solid #4caf50; border-radius: 0 4px 4px 0;">
               <strong>🌡️ MEATER+ Probe:</strong> Target ${recipe.target_temp_c}°C (${recipe.target_temp_f}°F)
+              <button 
+                class="action-btn" 
+                @click=${() => this._startMeaterCook(recipe)}
+                style="width: 100%; margin-top: 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                🚀 Start Cook with MEATER+
+              </button>
             </div>
           ` : ''}
         </div>
@@ -917,6 +923,52 @@ class KitchenCookingPanel extends LitElement {
     const recipeName = `${proteinName} with ${baseName}${veggiesText}`;
     
     alert(`✨ Custom Recipe Built!\n\n${recipeName}\n\n${this._builderUseMeater ? '🌡️ MEATER+ probe enabled\n\n' : ''}This is a demo. Full recipe generation coming soon!`);
+  }
+
+  _startMeaterCook(recipe) {
+    // Find a MEATER sensor entity
+    const meaterEntity = Object.keys(this.hass.states).find(entity_id => 
+      entity_id.includes('meater') && 
+      entity_id.includes('sensor') && 
+      entity_id.includes('cook')
+    );
+
+    if (!meaterEntity) {
+      alert('⚠️ No MEATER sensor found.\n\nPlease ensure your MEATER device is connected to Home Assistant.');
+      return;
+    }
+
+    // Prepare the service call data
+    const serviceData = {
+      entity_id: meaterEntity,
+      meat_type: recipe.name,
+      target_temp_c: recipe.target_temp_c,
+      target_temp_f: recipe.target_temp_f,
+      cooking_method: recipe.mode,
+      notes: `Ninja Combi: ${recipe.name}\n${recipe.description}`
+    };
+
+    // Show confirmation with recipe details
+    const confirmMsg = `🚀 Start Cook with MEATER+\n\n` +
+      `Recipe: ${recipe.name}\n` +
+      `Target: ${recipe.target_temp_c}°C (${recipe.target_temp_f}°F)\n` +
+      `Mode: ${recipe.mode}\n` +
+      `Cook Time: ${recipe.cook_time_minutes} min\n\n` +
+      `This will start a cooking session with your MEATER probe.`;
+
+    if (confirm(confirmMsg)) {
+      // Call the Home Assistant service to start the cook
+      this.hass.callService('kitchen_cooking_engine', 'start_cook', serviceData)
+        .then(() => {
+          alert('✅ Cooking session started!\n\nMonitor your cook in the main panel.');
+          // Return to main view
+          this._showNinjaCombi = false;
+          this._selectedNinjaRecipe = null;
+        })
+        .catch(err => {
+          alert(`❌ Error starting cook:\n\n${err.message}`);
+        });
+    }
   }
 
   _formatDateTime(isoString) {
