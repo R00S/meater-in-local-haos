@@ -2140,6 +2140,16 @@ NINJA_COMBI_RECIPES = [
 ]
 
 
+# Import converted Speedi recipes
+try:
+    from .speedi_to_combi_converter import get_all_converted_recipes
+    CONVERTED_RECIPES = get_all_converted_recipes()
+    NINJA_COMBI_RECIPES.extend(CONVERTED_RECIPES)
+except ImportError:
+    # If converter not available, continue without converted recipes
+    pass
+
+
 def get_ninja_combi_mode_info(mode: NinjaCombiMode) -> NinjaCombiModeInfo:
     """Get information about a specific Ninja Combi mode."""
     return NINJA_COMBI_MODES.get(mode)
