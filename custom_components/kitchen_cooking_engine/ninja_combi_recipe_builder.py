@@ -255,6 +255,141 @@ class CombiMealRecipe:
         
         output.append("\n" + "=" * 80)
         return "\n".join(output)
+    
+    def get_speedi_recipe_card(self) -> str:
+        """Generate a Speedi-formatted recipe card (official Ninja Speedi style)."""
+        temp_f = self.get_temperature_f()
+        temp_c = int((temp_f - 32) * 5 / 9)  # Convert to Celsius
+        time_min, time_max = self.get_cook_time_minutes()
+        target_c, target_f = self.get_probe_target_temps()
+        
+        output = []
+        output.append(f"SPEEDI MEAL: {self.protein.name.upper()} WITH {self.base.name.upper()}")
+        output.append("")
+        output.append("Ingredients")
+        output.append("━" * 80)
+        output.append("")
+        
+        # Base ingredients (bottom level)
+        output.append("Base (Combi Cooker Pan - Bottom):")
+        output.append(f"• {self.base.main_ingredient}")
+        liquid_parts = self.base.liquid.split()
+        output.append(f"• {self.base.liquid}")
+        if self.base.oil_amount:
+            output.append(f"• {self.base.oil_amount}")
+        for ingredient in self.base.additional_ingredients:
+            output.append(f"• {ingredient}")
+        output.append("")
+        
+        # Vegetables with base
+        if self.tender_veggies:
+            output.append("Vegetables (with base):")
+            for veggie in self.tender_veggies:
+                output.append(f"• {veggie}")
+            output.append("")
+        
+        # Protein (top level)
+        output.append("Protein (Cook & Crisp Tray - Top):")
+        output.append(f"• {self.protein.quantity}")
+        output.append(f"• Seasoning")
+        output.append("")
+        
+        # Crispy vegetables
+        if self.crispy_veggies:
+            output.append("Additional Vegetables (Cook & Crisp Tray):")
+            for veggie in self.crispy_veggies:
+                output.append(f"• {veggie}")
+            output.append("")
+        
+        # Instructions
+        output.append("Instructions")
+        output.append("━" * 80)
+        output.append("")
+        
+        # Tip: Serving size adjustment
+        output.append(f"💡 TIP: This recipe is {self.servings//2}-{self.servings} servings. To reduce servings")
+        output.append(f"for 1-2 people, cut the quantities in half for the base, veggies, and")
+        output.append(f"protein, then follow temperature and time recommendations as listed.")
+        output.append(f"Then, cover Crisper Tray with foil to protect base from additional heat.")
+        output.append("")
+        
+        # Step 1: Add base
+        output.append(f"1. Start by adding {self.base.name.lower()} ({self.base.main_ingredient.split(',')[0]}) to the")
+        output.append(f"   bottom of the unit")
+        output.append("")
+        
+        # Step 2: Add liquid and oil
+        output.append(f"2. Add {self.base.liquid.lower()}")
+        if self.base.oil_amount:
+            output.append(f"   and {self.base.oil_amount.lower()}")
+        output.append("")
+        
+        # Step 3: Mix vegetables with base
+        if self.tender_veggies:
+            veggie_list = ", ".join([v.lower() for v in self.tender_veggies])
+            output.append(f"3. Mix {veggie_list} with the {self.base.name.lower()}.")
+            if self.crispy_veggies:
+                output.append(f"   (Alternatively vegetables can be cooked to tender in a foil packet")
+                output.append(f"   placed on the Cook & Crisp tray with the {self.protein.name.lower()})")
+            output.append("")
+            
+            # Tip: Crispy vegetables
+            if self.crispy_veggies:
+                output.append(f"   💡 TIP: For extra crispy results, add vegetables directly to the")
+                output.append(f"   Cook & Crisp tray with the {self.protein.name.lower()}. Delicate vegetables")
+                output.append(f"   should be added for the remaining 5-7 minutes.")
+                output.append("")
+            step_num = 4
+        else:
+            step_num = 3
+        
+        # Step: Season protein
+        output.append(f"{step_num}. Season the {self.protein.name.lower()}")
+        output.append("")
+        
+        # Tip: Marination
+        output.append(f"   💡 TIP: Marinate the {self.protein.name.lower()} for a minimum of 30 minutes")
+        output.append(f"   and up to 6 hours ahead of time with your favorite marinade, or buy")
+        output.append(f"   pre-marinated proteins to save time.")
+        output.append("")
+        
+        step_num += 1
+        
+        # Step: Place protein on tray
+        output.append(f"{step_num}. Place your {self.protein.name.lower()} on the Cook & Crisp tray in the")
+        output.append(f"   top position")
+        output.append("")
+        
+        step_num += 1
+        
+        # Step: Cook
+        output.append(f"{step_num}. Close the lid and flip the SmartSwitch to RAPID COOKER. Select")
+        output.append(f"   SPEEDI MEALS, set temperature to {temp_c}°C, and set time for {time_min}")
+        output.append(f"   to {time_max} minutes. Press START/STOP to begin cooking (the unit will")
+        output.append(f"   steam for approximately 10 minutes before countdown timer begins).")
+        output.append("")
+        
+        # Tip: Thickness
+        output.append(f"   💡 TIP: We recommend sticking to the suggested heights and weights")
+        output.append(f"   above for your protein. Thicker cuts of meat may need 3-5 extra")
+        output.append(f"   minutes of cooking time which could overcook your grains.")
+        output.append("")
+        
+        step_num += 1
+        
+        # MEATER+ monitoring
+        if self.use_meater_probe and target_c:
+            output.append(f"{step_num}. Monitor MEATER+ probe in Home Assistant")
+            output.append(f"   - Target temperature: {target_c}°C / {target_f}°F")
+            output.append(f"   - Get notification when target reached")
+            output.append("")
+            step_num += 1
+        
+        # Final step
+        output.append(f"{step_num}. Enjoy!")
+        output.append("")
+        
+        return "\n".join(output)
 
 
 # ============================================================================

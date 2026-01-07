@@ -17,14 +17,14 @@ This guide explains how the Ninja Combi SFP700EU recipe builder is compatible wi
 
 ## Mode Compatibility Matrix
 
-### Direct Equivalents
+### Direct Equivalents (Official Speedi Terminology)
 
 | Ninja Combi Mode | Ninja Speedi/Crispi Mode | Notes |
 |------------------|--------------------------|-------|
-| **Combi-Crisp** | **Steam & Crisp** | Identical function - steam keeps food moist while air frying creates crispy exterior |
+| **Combi Meals** | **Speedi Meals** | Multi-level cooking - base layer + protein/veggie layer. **SmartSwitch: RAPID COOKER position** |
+| **Combi-Crisp** | **Steam Air Fry** | Identical function - steam keeps food moist while air frying creates crispy exterior |
 | **Combi-Bake** | **Steam & Bake** | Same principle - steam + baking for fluffy breads and pastries |
-| **Combi-Roast** | **Rapid Cook** (protein + base) | Speedi's Rapid Cook does 2-level cooking like Combi-Roast |
-| **Combi-Meal** | **Rapid Cook** (complete meal) | Identical concept - base layer + protein layer for complete meal |
+| **Combi-Roast** | **Speedi Meals** (with protein) | Same as Combi Meals - use Speedi Meals mode with protein |
 | **Air Fry** | **Air Fry** | Identical - convection air frying |
 | **Steam** | **Steam** | Identical - moist steam cooking |
 | **Slow Cook** | **Slow Cook** | Identical - traditional slow cooker method |
@@ -32,12 +32,18 @@ This guide explains how the Ninja Combi SFP700EU recipe builder is compatible wi
 | **Sear/Saute** | **Sear/Saute** | Identical - stovetop-style browning |
 | **Prove** | **Proof** | Identical - bread dough rising |
 
+### Important: SmartSwitch Position
+
+**"Rapid Cook" is NOT a mode name** - it's the SmartSwitch position:
+- **SmartSwitch: RAPID COOKER** = Enables Speedi Meals functionality
+- When recipes say "Rapid Cook mode", they mean: Flip SmartSwitch to RAPID COOKER position, then select SPEEDI MEALS
+
 ### Mode Not Available
 
 | Ninja Combi Mode | Availability in Speedi/Crispi |
 |------------------|-------------------------------|
 | **Grill** | ❌ Not available (use Air Fry or Broil as alternative) |
-| **Rice/Pasta** | ✅ Available through Rapid Cook mode |
+| **Rice/Pasta** | ✅ Available through Speedi Meals (SmartSwitch: RAPID COOKER) |
 
 ---
 
