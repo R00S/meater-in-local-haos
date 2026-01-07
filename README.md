@@ -225,7 +225,14 @@ The Kitchen Cooking Engine includes comprehensive support for the **Ninja Combi 
 - **Combi Modes** (signature features): Combi-Crisp, Combi-Bake, Combi-Roast, Combi-Meal
 
 ### 17 Built-in Recipes
-Including Combi-Crisp Chicken Thighs, Artisan Bread, Whole Chicken, Salmon Complete Meal, and more.
+Including Combi-Crisp Chicken Thighs, Combi-Crisp Roasted Potatoes (better than traditional roasting!), Artisan Bread, Whole Chicken, Salmon Complete Meal, and more.
+
+### MEATER+ Probe Integration
+- **9 recipes** include temperature monitoring
+- Real-time temperature tracking through multi-phase cooking
+- Notifications when target temperature reached
+- Works in all modes including steam phase
+- Perfect doneness every time - no guesswork
 
 ### Features
 - Multi-phase cooking programs (steam + air fry/bake/roast)
@@ -234,9 +241,9 @@ Including Combi-Crisp Chicken Thighs, Artisan Bread, Whole Chicken, Salmon Compl
 - Recipe conversion guidelines
 - Troubleshooting tips
 
-📖 **[Complete Ninja Combi Guide](docs/NINJA_COMBI_GUIDE.md)** - Detailed cooking modes, recipes, and tips
+📖 **[Complete Ninja Combi Guide](docs/NINJA_COMBI_GUIDE.md)** - Detailed cooking modes, recipes, MEATER+ integration, and tips
 
-The Ninja Combi excels at combining cooking methods (like steam + air fry) to create results that aren't possible with traditional single-function appliances. Use your MEATER probe with the provided recipes for perfect results every time.
+The Ninja Combi excels at combining cooking methods (like steam + air fry) to create results that aren't possible with traditional single-function appliances. The integration with MEATER+ probe monitoring ensures perfect results every time - monitor internal temperature through steam phases and track progress as the exterior crisps.
 
 ## 🔔 Notifications & Alerts
 

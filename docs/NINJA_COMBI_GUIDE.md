@@ -85,12 +85,13 @@ These are the signature features of the Ninja Combi that combine steaming with o
 - **Unique advantage**: Perfectly cooked interior with crispy outside in one step
 - **Perfect for**: 
   - Chicken thighs (moist inside, crispy skin)
+  - Roasted potatoes (fluffy inside, ultra-crispy outside - better than traditional roasting!)
   - Root vegetables (tender inside, caramelized outside)
   - Fish with crispy skin
   - Frozen foods that stay moist
 - **Programming**: 
   - Phase 1: Steam at 100°C for 10-15 minutes
-  - Phase 2: Air Fry at 200°C for 8-12 minutes
+  - Phase 2: Air Fry at 200°C for 8-20 minutes
 - **Tray position**: Crisper tray on lower rack
 
 ### 10. Combi-Bake (Steam + Convection)
@@ -187,6 +188,12 @@ Drip Tray (Bottom)      ─────  Collects drippings
 3. Program: Steam 100°C for 12 min → Air Fry 200°C for 10 min
 4. Result: Juicy meat with crispy skin
 
+### Combi-Crisp Roasted Potatoes
+1. Cut potatoes into chunks, toss with oil and seasonings
+2. Place on crisper tray
+3. Program: Steam 100°C for 15 min → Air Fry 200°C for 20 min
+4. Result: Fluffy inside with ultra-crispy outside (better than traditional roasting!)
+
 ### Combi-Bake Artisan Bread
 1. Prepare bread dough (standard recipe)
 2. Shape and score
@@ -228,6 +235,84 @@ Drip Tray (Bottom)      ─────  Collects drippings
 - Check water tank is filled to correct level
 - Ensure steam vent is not blocked
 - Descale water tank regularly
+
+## Using MEATER+ Temperature Probe with Ninja Combi
+
+The MEATER+ wireless temperature probe is fully compatible with the Ninja Combi oven and provides significant benefits for precise cooking:
+
+### Benefits of Using MEATER+ with Ninja Combi
+
+1. **Perfect Doneness Every Time**
+   - Monitor internal temperature in real-time
+   - Get notified when food reaches target temperature
+   - No guesswork - especially useful for expensive cuts
+
+2. **Multi-Phase Cooking Integration**
+   - Monitor temperature through steam phase
+   - Track temperature rise during air fry/roast phase
+   - Ensure proteins are cooked through before crisping
+
+3. **Home Assistant Integration**
+   - View temperature on your phone/tablet
+   - Get push notifications when food is ready
+   - Track cooking history with temperature graphs
+   - Automate indicator lights based on cooking progress
+
+### How to Use MEATER+ in Ninja Combi
+
+#### Probe Placement
+- Insert probe into thickest part of meat (away from bone)
+- Ensure probe tip is in center of food
+- MEATER+ is wireless - no wires to route through door
+- Safe to use in all Ninja Combi modes (steam, air fry, roast, combi)
+
+#### Temperature Monitoring
+- Open Home Assistant Kitchen Cooking Engine panel
+- Select Ninja Combi recipe or set custom target
+- Monitor real-time temperature during cooking
+- Get notifications at key milestones
+
+#### Best Recipes for MEATER+ Probe
+The following Ninja Combi recipes benefit most from probe monitoring:
+- **Combi-Crisp Chicken Thighs** (74°C / 165°F)
+- **Combi-Roast Whole Chicken** (74°C / 165°F)
+- **Combi-Roast Pork Loin** (63°C / 145°F)
+- **Combi-Meal Salmon** (54°C / 130°F for medium)
+- **Oven-Seared Ribeye Steak** (54°C / 130°F for medium-rare)
+- **Grilled Lamb Chops** (54°C / 130°F for medium-rare)
+- **Slow-Cooked Beef Stew** (93°C / 200°F for tender)
+- **Slow-Cooked Pulled Pork** (93°C / 200°F for shreddable)
+
+#### Tips for Probe Usage
+- **Steam phase**: Probe works perfectly through steam
+- **Air fry phase**: Monitor temperature rise as exterior crisps
+- **Multiple pieces**: Place probe in thickest piece
+- **Carryover cooking**: Remove food 2-3°C before target (especially for steaks/roasts)
+- **Resting**: Keep probe in during rest to monitor temperature plateau
+
+#### Combi Mode + Probe = Perfect Results
+The combination of Ninja Combi's multi-phase cooking with MEATER+ probe monitoring is particularly powerful:
+
+- **Combi-Crisp**: Steam to safe internal temp → Air fry for crispy exterior
+  - Monitor temp during steam phase
+  - Ensure target reached before crisping
+  - No risk of overcooking interior while crisping
+
+- **Combi-Roast**: Steam keeps meat moist → Roast for browning
+  - Track even temperature rise during steam phase
+  - Final roast phase develops color without drying
+  - Perfect for large roasts and whole birds
+
+### Example: Combi-Crisp Chicken with MEATER+
+
+1. Insert MEATER+ probe into thickest part of chicken thigh
+2. Start Combi-Crisp program (Steam 12 min → Air Fry 10 min)
+3. During steam phase: Monitor temp rise from ~20°C to ~65°C
+4. During air fry phase: Watch temp climb to 74°C while skin crisps
+5. Get notification when 74°C reached (safe to eat)
+6. Remove and rest 5 minutes (monitor temperature plateau)
+
+**Result**: Perfectly cooked chicken (74°C internal) with crispy skin - no guesswork!
 
 ## Safety Notes
 
