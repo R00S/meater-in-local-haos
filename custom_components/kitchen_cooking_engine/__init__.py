@@ -186,7 +186,7 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
             StaticPathConfig(
                 url_path="/kitchen_cooking_engine_panel",
                 path=str(www_path),
-                cache_headers=False,
+                cache_headers=True,
             )
         ])
     except Exception as e:

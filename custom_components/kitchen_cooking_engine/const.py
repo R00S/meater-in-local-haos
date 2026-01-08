@@ -8,7 +8,7 @@ DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "40"
+PANEL_VERSION = "41"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
@@ -19,6 +19,12 @@ CONF_INDICATOR_LIGHT = "indicator_light"
 CONF_NOTIFY_SERVICE = "notify_service"
 CONF_TTS_ENTITY = "tts_entity"
 CONF_MEDIA_PLAYER = "media_player"
+
+# Appliance device control configuration keys
+CONF_POWER_OUTLET = "power_outlet"          # Switch/outlet entity to control power
+CONF_START_BUTTON = "start_button"          # Button/switch entity to start cooking
+CONF_AUTO_SHUTOFF = "auto_shutoff_enabled"  # Auto turn off when complete
+CONF_AUTO_START = "auto_start_enabled"      # Enable remote start
 
 # Temperature units
 TEMP_CELSIUS = "celsius"
@@ -74,6 +80,8 @@ SERVICE_SET_TARGET = "set_target"
 SERVICE_START_REST = "start_rest"
 SERVICE_COMPLETE = "complete_session"
 SERVICE_SET_NOTES = "set_notes"
+SERVICE_APPLIANCE_POWER_OFF = "appliance_power_off"
+SERVICE_APPLIANCE_START = "appliance_start"
 
 # Event names
 EVENT_APPROACHING_TARGET = "kitchen_cooking_engine_approaching_target"

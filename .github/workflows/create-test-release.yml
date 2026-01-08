@@ -6,140 +6,156 @@ on:
       release_type:
         description: 'Release type'
         required: true
-        default: 'test'
         type: choice
         options:
           - test
           - beta
           - rc
+        default: 'test'
       version_suffix:
-        description: 'Custom version suffix (optional, leave empty for auto-generated)'
+        description: 'Version suffix (e.g., branch name or identifier)'
         required: false
         type: string
-
-permissions:
-  contents: write
 
 jobs:
   create-test-release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Extract base version from manifest.json
+        with:
+          fetch-depth: 0
+      
+      - name: Get current branch name
+        id: branch
+        run: |
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          echo "name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          # Sanitize branch name for use in version (replace / with -)
+          SAFE_BRANCH=$(echo "$BRANCH_NAME" | sed 's/\//-/g')
+          echo "safe_name=$SAFE_BRANCH" >> $GITHUB_OUTPUT
+      
+      - name: Extract version from manifest
         id: version
         run: |
-          BASE_VERSION=$(jq -r '.version' custom_components/kitchen_cooking_engine/manifest.json)
-          echo "base_version=$BASE_VERSION" >> $GITHUB_OUTPUT
-          echo "Base version: $BASE_VERSION"
-
-      - name: Generate version tag
-        id: generate_tag
-        run: |
-          BASE_VERSION="${{ steps.version.outputs.base_version }}"
-          RELEASE_TYPE="${{ github.event.inputs.release_type }}"
-          CUSTOM_SUFFIX="${{ github.event.inputs.version_suffix }}"
-          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
-          # Sanitize branch name for use in tag (replace / with -)
-          BRANCH_SAFE="${BRANCH_NAME//\//-}"
-          TIMESTAMP=$(date +%Y%m%d%H%M%S)
+          VERSION=$(grep -oP '"version":\s*"\K[^"]+' custom_components/kitchen_cooking_engine/manifest.json)
+          echo "base=$VERSION" >> $GITHUB_OUTPUT
           
-          if [ -n "$CUSTOM_SUFFIX" ]; then
-            VERSION_TAG="v${BASE_VERSION}-${RELEASE_TYPE}.${CUSTOM_SUFFIX}"
-          else
-            VERSION_TAG="v${BASE_VERSION}-${RELEASE_TYPE}.${BRANCH_SAFE}.${TIMESTAMP}"
+          # Create test version based on release type
+          SUFFIX="${{ github.event.inputs.version_suffix }}"
+          if [ -z "$SUFFIX" ]; then
+            SUFFIX="${{ steps.branch.outputs.safe_name }}"
           fi
           
-          echo "version_tag=$VERSION_TAG" >> $GITHUB_OUTPUT
-          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
-          echo "Generated version tag: $VERSION_TAG"
-
-      - name: Create ZIP archive
-        id: create_zip
-        run: |
-          VERSION_TAG="${{ steps.generate_tag.outputs.version_tag }}"
-          ZIP_NAME="kitchen-cooking-engine-${VERSION_TAG}.zip"
+          RELEASE_TYPE="${{ github.event.inputs.release_type }}"
+          TIMESTAMP=$(date +%Y%m%d-%H%M%S)
           
-          # Create ZIP from the integration directory
+          case "$RELEASE_TYPE" in
+            test)
+              TEST_VERSION="${VERSION}-test.${SUFFIX}.${TIMESTAMP}"
+              ;;
+            beta)
+              TEST_VERSION="${VERSION}-beta.${SUFFIX}"
+              ;;
+            rc)
+              TEST_VERSION="${VERSION}-rc.${SUFFIX}"
+              ;;
+            *)
+              TEST_VERSION="${VERSION}-test.${SUFFIX}.${TIMESTAMP}"
+              ;;
+          esac
+          
+          echo "test=$TEST_VERSION" >> $GITHUB_OUTPUT
+          echo "tag=v${TEST_VERSION}" >> $GITHUB_OUTPUT
+      
+      - name: Update manifest.json with test version
+        run: |
+          sed -i 's/"version": "[^"]*"/"version": "${{ steps.version.outputs.test }}"/' custom_components/kitchen_cooking_engine/manifest.json
+          cat custom_components/kitchen_cooking_engine/manifest.json
+      
+      - name: Create release archive
+        run: |
           cd custom_components
-          zip -r "../${ZIP_NAME}" kitchen_cooking_engine/ -x "*.pyc" -x "*__pycache__*" -x "*.git*"
+          zip -r ../kitchen-cooking-engine-${{ steps.version.outputs.test }}.zip kitchen_cooking_engine/
           cd ..
-          
-          # Verify ZIP was created
-          if [ ! -f "$ZIP_NAME" ]; then
-            echo "Error: ZIP file was not created"
-            exit 1
-          fi
-          
-          # Show ZIP contents for verification
-          echo "ZIP contents:"
-          unzip -l "$ZIP_NAME" | head -20
-          
-          echo "zip_name=$ZIP_NAME" >> $GITHUB_OUTPUT
-          echo "Created ZIP: $ZIP_NAME"
-
-      - name: Create GitHub Release
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Generate release notes
+        id: release_notes
         run: |
-          VERSION_TAG="${{ steps.generate_tag.outputs.version_tag }}"
-          BRANCH_NAME="${{ steps.generate_tag.outputs.branch_name }}"
-          BASE_VERSION="${{ steps.version.outputs.base_version }}"
-          RELEASE_TYPE="${{ github.event.inputs.release_type }}"
-          ZIP_NAME="${{ steps.create_zip.outputs.zip_name }}"
-          REPO="${{ github.repository }}"
+          cat > release_notes.md << 'EOF'
+          # 🧪 Test Release: ${{ steps.version.outputs.test }}
           
-          # Create release notes
-          cat > /tmp/release_notes.md << EOF
-          ## 🧪 Test Release
+          **⚠️ This is a TEST release from branch `${{ steps.branch.outputs.name }}`**
           
-          **Branch:** \`${BRANCH_NAME}\`
-          **Base Version:** \`${BASE_VERSION}\`
-          **Release Type:** \`${RELEASE_TYPE}\`
+          This release is for testing purposes only and has NOT been merged to the main branch.
+          
+          ## Installation via HACS
+          
+          1. In HACS, go to Integrations
+          2. Click the three dots in the top right corner
+          3. Select "Custom repositories"
+          4. Add this repository URL: `https://github.com/${{ github.repository }}`
+          5. Select category: "Integration"
+          6. Click "Add"
+          7. Find "Kitchen Cooking Engine" and install version `${{ steps.version.outputs.test }}`
+          8. Restart Home Assistant
+          
+          ## What's Included
+          
+          This test release includes all changes from the `${{ steps.branch.outputs.name }}` branch:
+          
+          - Latest commit: `${{ github.sha }}`
+          - Base version: `${{ steps.version.outputs.base }}`
+          - Release type: `${{ github.event.inputs.release_type }}`
+          
+          ## Testing Instructions
+          
+          1. Install this version via HACS
+          2. Restart Home Assistant
+          3. Test the new features
+          4. Report any issues on the PR or as GitHub issues
+          
+          ## Recent Commits
+          
+          ```
+          $(git log --oneline -10)
+          ```
           
           ---
           
-          ### 📦 Installation via HACS
-          
-          1. Open HACS → Integrations
-          2. Find "Kitchen Cooking Engine" in your custom repositories
-          3. Click "Redownload" or download if not installed
-          4. Select version \`${VERSION_TAG}\`
-          5. Restart Home Assistant
-          
-          ### ⚠️ Important Notes
-          
-          - This is a **test/pre-release** version from a feature branch
-          - It may contain unstable or incomplete features
-          - Use for testing purposes only
-          - Report issues on the [issue tracker](https://github.com/${REPO}/issues)
-          
-          ### 📝 Changes
-          
-          See commits since base version for detailed changes.
+          **Note:** Once testing is complete and issues are resolved, these changes will be merged to main and a production release will be created.
           EOF
           
-          # Create release with GitHub CLI
-          gh release create "$VERSION_TAG" \
-            "$ZIP_NAME" \
-            --title "Test Release $VERSION_TAG" \
-            --notes-file /tmp/release_notes.md \
-            --prerelease \
-            --target "$BRANCH_NAME"
-
-      - name: Release summary
+          cat release_notes.md
+      
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: "Test Release ${{ steps.version.outputs.test }}"
+          body_path: release_notes.md
+          files: kitchen-cooking-engine-${{ steps.version.outputs.test }}.zip
+          draft: false
+          prerelease: true
+          target_commitish: ${{ github.sha }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Summary
         run: |
-          VERSION_TAG="${{ steps.generate_tag.outputs.version_tag }}"
-          RELEASE_URL="https://github.com/${{ github.repository }}/releases/tag/$VERSION_TAG"
-          
-          echo "## ✅ Release Created Successfully" >> $GITHUB_STEP_SUMMARY
+          echo "## 🎉 Test Release Created!" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "**Version:** \`$VERSION_TAG\`" >> $GITHUB_STEP_SUMMARY
-          echo "**Branch:** \`${{ steps.generate_tag.outputs.branch_name }}\`" >> $GITHUB_STEP_SUMMARY
-          echo "**Release URL:** $RELEASE_URL" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** \`${{ steps.version.outputs.test }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Tag:** \`${{ steps.version.outputs.tag }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Branch:** \`${{ steps.branch.outputs.name }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Release Type:** \`${{ github.event.inputs.release_type }}\`" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Next Steps" >> $GITHUB_STEP_SUMMARY
-          echo "1. Install via HACS (select version \`$VERSION_TAG\`)" >> $GITHUB_STEP_SUMMARY
-          echo "2. Test the integration thoroughly" >> $GITHUB_STEP_SUMMARY
-          echo "3. Report any issues found" >> $GITHUB_STEP_SUMMARY
+          echo "### Installation" >> $GITHUB_STEP_SUMMARY
+          echo "This release can now be installed via HACS." >> $GITHUB_STEP_SUMMARY
+          echo "HACS will automatically detect this version." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Release URL" >> $GITHUB_STEP_SUMMARY
+          echo "https://github.com/${{ github.repository }}/releases/tag/${{ steps.version.outputs.tag }}" >> $GITHUB_STEP_SUMMARY

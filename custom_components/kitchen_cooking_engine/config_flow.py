@@ -17,10 +17,14 @@ from homeassistant.core import callback
 from .const import (
     CONF_TEMPERATURE_SENSOR,
     CONF_AMBIENT_SENSOR,
+    CONF_AUTO_SHUTOFF,
+    CONF_AUTO_START,
     CONF_BATTERY_SENSOR,
     CONF_TEMPERATURE_UNIT,
     CONF_INDICATOR_LIGHT,
     CONF_NOTIFY_SERVICE,
+    CONF_POWER_OUTLET,
+    CONF_START_BUTTON,
     CONF_TTS_ENTITY,
     CONF_MEDIA_PLAYER,
     DOMAIN,
@@ -72,6 +76,10 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     vol.Optional(CONF_NOTIFY_SERVICE, default=""): str,
                     vol.Optional(CONF_TTS_ENTITY, default=""): str,
                     vol.Optional(CONF_MEDIA_PLAYER, default=""): str,
+                    vol.Optional(CONF_POWER_OUTLET, default=""): str,
+                    vol.Optional(CONF_START_BUTTON, default=""): str,
+                    vol.Optional(CONF_AUTO_SHUTOFF, default=True): bool,
+                    vol.Optional(CONF_AUTO_START, default=False): bool,
                     vol.Required(
                         CONF_TEMPERATURE_UNIT, default=TEMP_CELSIUS
                     ): vol.In([TEMP_CELSIUS, TEMP_FAHRENHEIT]),
@@ -79,7 +87,9 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             ),
             errors=errors,
             description_placeholders={
-                "notify_hint": "e.g., mobile_app_your_phone"
+                "notify_hint": "e.g., mobile_app_your_phone",
+                "power_outlet_hint": "e.g., switch.kitchen_outlet",
+                "start_button_hint": "e.g., button.appliance_start",
             },
         )
 

@@ -166,6 +166,44 @@ def get_cet_timestamp():
     return now_cet.strftime("%d %b %Y, %H:%M CET")
 
 
+def recipe_to_js(recipe):
+    """Convert a NinjaCombiRecipe to JS object format."""
+    phases_js = []
+    for phase in recipe.phases:
+        phases_js.append({
+            "mode": phase.mode.value,
+            "temperature_c": phase.temperature_c,
+            "temperature_f": phase.temperature_f,
+            "duration_minutes": phase.duration_minutes,
+            "description": phase.description,
+            "steam_enabled": phase.steam_enabled,
+        })
+    
+    result = {
+        "id": recipe.id,
+        "name": recipe.name,
+        "description": recipe.description,
+        "mode": recipe.mode.value,
+        "tray_position": recipe.tray_position.value,
+        "phases": phases_js,
+        "use_probe": recipe.use_probe,
+        "ingredients": recipe.ingredients,
+        "instructions": recipe.instructions,
+        "prep_time_minutes": recipe.prep_time_minutes,
+        "cook_time_minutes": recipe.cook_time_minutes,
+        "servings": recipe.servings,
+        "difficulty": recipe.difficulty,
+        "tips": recipe.tips,
+        "notes": recipe.notes,
+    }
+    
+    if recipe.target_temp_c:
+        result["target_temp_c"] = recipe.target_temp_c
+        result["target_temp_f"] = recipe.target_temp_f
+    
+    return result
+
+
 def generate_js_data():
     """Generate the JavaScript data section."""
     _load_cooking_data()
@@ -183,11 +221,28 @@ def generate_js_data():
     int_doneness = get_doneness_levels(_INT_CATEGORIES)
     swe_doneness = get_doneness_levels(_SWE_CATEGORIES)
     
+    # Load Ninja Combi recipes
+    ninja_combi_recipes = []
+    try:
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        import importlib.util
+        ninja_spec = importlib.util.spec_from_file_location(
+            "ninja_combi_data",
+            os.path.join(base_dir, "ninja_combi_data.py")
+        )
+        ninja_module = importlib.util.module_from_spec(ninja_spec)
+        ninja_spec.loader.exec_module(ninja_module)
+        
+        for recipe in ninja_module.NINJA_COMBI_RECIPES:
+            ninja_combi_recipes.append(recipe_to_js(recipe))
+    except Exception as e:
+        print(f"Warning: Could not load Ninja Combi recipes: {e}")
+    
     cet_time = get_cet_timestamp()
     
     lines = []
     lines.append(f"// AUTO-GENERATED DATA - DO NOT EDIT")
-    lines.append(f"// Generated from cooking_data.py and swedish_cooking_data.py")
+    lines.append(f"// Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py")
     lines.append(f"// Last generated: {cet_time}")
     lines.append("")
     lines.append("// Doneness option definitions (International/USDA)")
@@ -201,6 +256,9 @@ def generate_js_data():
     lines.append("")
     lines.append("// Swedish meat categories")
     lines.append(f"const SWEDISH_MEAT_CATEGORIES = {json.dumps(swe_categories, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// Ninja Combi recipes")
+    lines.append(f"const NINJA_COMBI_RECIPES = {json.dumps(ninja_combi_recipes, indent=2, ensure_ascii=False)};")
     
     return "\n".join(lines)
 
@@ -252,7 +310,7 @@ def regenerate_panel():
  * ║    3. This regenerates kitchen-cooking-panel.js with your changes           ║
  * ║                                                                              ║
  * ║  TO CHANGE COOKING DATA:                                                     ║
- * ║    1. Edit cooking_data.py or swedish_cooking_data.py                       ║
+ * ║    1. Edit cooking_data.py, swedish_cooking_data.py, or ninja_combi_data.py ║
  * ║    2. Run: python3 generate_frontend_data.py                                ║
  * ║                                                                              ║
  * ║  PANEL_VERSION is automatically kept in sync between const.py and this file ║
@@ -260,7 +318,7 @@ def regenerate_panel():
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
  * AUTO-GENERATED: {cet_time}
- * Data generated from cooking_data.py and swedish_cooking_data.py
+ * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
  * Temperature values are suggestions based on cooking style, not just safety.
@@ -341,6 +399,20 @@ import {{
     swe_cuts = sum(len(ct.cuts) for cat in _SWE_CATEGORIES for m in cat.meats for ct in m.cut_types)
     print(f"  International cuts: {int_cuts}")
     print(f"  Swedish cuts: {swe_cuts}")
+    
+    # Count Ninja Combi recipes
+    try:
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        import importlib.util
+        ninja_spec = importlib.util.spec_from_file_location(
+            "ninja_combi_data",
+            os.path.join(base_dir, "ninja_combi_data.py")
+        )
+        ninja_module = importlib.util.module_from_spec(ninja_spec)
+        ninja_spec.loader.exec_module(ninja_module)
+        print(f"  Ninja Combi recipes: {len(ninja_module.NINJA_COMBI_RECIPES)}")
+    except Exception as e:
+        print(f"  Ninja Combi recipes: Error loading ({e})")
     
     return True
 
