@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 2 Dec 2025, 11:50 CET
-Last Change: v0.1.2.0 - Added battery sensor, improved notifications, external API
+Last Updated: 8 Jan 2026, 23:59 CET
+Last Change: Phase 3.1 - Added multi-appliance backend infrastructure
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -17,6 +17,7 @@ This integration provides:
 - Battery level monitoring (for MEATER probes)
 - Sidebar panel for easy cooking setup and monitoring
 - External API for 3rd party integrations and automations
+- Phase 3.1: Multi-appliance support with feature-based recipe matching
 """
 
 from __future__ import annotations
@@ -227,6 +228,40 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     hass.data.setdefault(DOMAIN, {})
 
+    # Phase 3.1: Check and migrate legacy configs
+    from .migration import needs_migration, async_migrate_entry
+    
+    if needs_migration(entry):
+        _LOGGER.info("Config entry needs migration: %s", entry.title)
+        migration_success = await async_migrate_entry(hass, entry)
+        if not migration_success:
+            _LOGGER.error("Failed to migrate config entry: %s", entry.title)
+            return False
+
+    # Phase 3.1: Initialize Appliance Manager (if not already done)
+    from .appliance_manager import ApplianceManager
+    
+    if "appliance_manager" not in hass.data[DOMAIN]:
+        manager = ApplianceManager(hass)
+        await manager.async_setup()
+        _LOGGER.info("Appliance Manager initialized")
+    else:
+        manager = hass.data[DOMAIN]["appliance_manager"]
+    
+    # Phase 3.1: Initialize Panel Data Service (if not already done)
+    from .panel_data import PanelDataService
+    
+    if "panel_data_service" not in hass.data[DOMAIN]:
+        panel_data = PanelDataService(hass, manager)
+        await panel_data.async_setup()
+        hass.data[DOMAIN]["panel_data_service"] = panel_data
+        _LOGGER.info("Panel Data Service initialized")
+    
+    # Phase 3.1: Setup appliance from this config entry
+    appliance = await manager.async_setup_appliance(entry)
+    if appliance:
+        _LOGGER.info("Appliance registered: %s", appliance.name)
+
     # Clean up any duplicate sensor entities from old versions
     await _cleanup_old_entities(hass, entry)
 
@@ -254,6 +289,14 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Handle removal of a config entry."""
+    # Phase 3.1: Unload appliance from manager
+    from .appliance_manager import get_appliance_manager
+    
+    manager = get_appliance_manager(hass)
+    if manager:
+        await manager.async_unload_appliance(entry.entry_id)
+        _LOGGER.info("Appliance unloaded: %s", entry.title)
+    
     unload_ok = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
     if unload_ok:
         hass.data[DOMAIN].pop(entry.entry_id, None)
