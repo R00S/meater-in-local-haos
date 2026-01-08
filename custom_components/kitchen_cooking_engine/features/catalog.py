@@ -1,8 +1,8 @@
 """
 Centralized catalog of all cooking features.
 
-Last Updated: 08 Jan 2026, 21:00 CET
-Last Change: Initial feature catalog with all cooking features
+Last Updated: 08 Jan 2026, 21:55 CET
+Last Change: Added stovetop and microwave features
 
 This catalog defines all available cooking features across all appliances.
 Features are used for recipe matching and UI visibility.
@@ -353,6 +353,96 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
         supports_probe=True,
         icon="mdi:water",
         description="Precise low-temperature water bath cooking"
+    ),
+    
+    # =========================================================================
+    # STOVETOP FEATURES
+    # =========================================================================
+    "boil": CookingFeature(
+        name="boil",
+        display_name="Boil",
+        feature_type=FeatureType.STANDARD,
+        temperature_range_c=(100, 100),
+        temperature_range_f=(212, 212),
+        supports_probe=False,
+        icon="mdi:pot-steam",
+        description="Boiling water and liquids"
+    ),
+    
+    "simmer": CookingFeature(
+        name="simmer",
+        display_name="Simmer",
+        feature_type=FeatureType.STANDARD,
+        temperature_range_c=(85, 95),
+        temperature_range_f=(185, 203),
+        supports_probe=True,
+        oil_levels=[OilLevel.ZERO, OilLevel.LOW],
+        default_oil=OilLevel.ZERO,
+        icon="mdi:pot",
+        description="Low-heat gentle cooking"
+    ),
+    
+    "saute": CookingFeature(
+        name="saute",
+        display_name="Sauté",
+        feature_type=FeatureType.STANDARD,
+        temperature_range_c=(150, 180),
+        temperature_range_f=(302, 356),
+        supports_probe=False,
+        oil_levels=[OilLevel.LOW, OilLevel.MEDIUM],
+        default_oil=OilLevel.MEDIUM,
+        icon="mdi:frying-pan",
+        description="Quick high-heat cooking with stirring"
+    ),
+    
+    # =========================================================================
+    # MICROWAVE FEATURES
+    # =========================================================================
+    "microwave": CookingFeature(
+        name="microwave",
+        display_name="Microwave",
+        feature_type=FeatureType.MODIFIED,
+        supports_probe=False,
+        icon="mdi:microwave",
+        description="Microwave heating (requires recipe adaptation)"
+    ),
+    
+    "defrost": CookingFeature(
+        name="defrost",
+        display_name="Defrost",
+        feature_type=FeatureType.MODIFIED,
+        supports_probe=False,
+        icon="mdi:snowflake-off",
+        description="Microwave defrosting"
+    ),
+    
+    "reheat": CookingFeature(
+        name="reheat",
+        display_name="Reheat",
+        feature_type=FeatureType.STANDARD,
+        supports_probe=False,
+        icon="mdi:fire",
+        description="Reheating pre-cooked food"
+    ),
+    
+    "sensor_cook": CookingFeature(
+        name="sensor_cook",
+        display_name="Sensor Cook",
+        feature_type=FeatureType.MODIFIED,
+        supports_probe=False,
+        icon="mdi:auto-fix",
+        description="Automatic sensor-based cooking"
+    ),
+    
+    "convection_microwave": CookingFeature(
+        name="convection_microwave",
+        display_name="Convection Microwave",
+        feature_type=FeatureType.MODIFIED,
+        temperature_range_c=(100, 230),
+        temperature_range_f=(212, 446),
+        supports_probe=False,
+        icon="mdi:microwave",
+        description="Combined microwave and convection cooking"
     ),
 }
 
