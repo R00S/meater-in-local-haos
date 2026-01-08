@@ -17,6 +17,14 @@ from .models import (
 )
 
 from .matcher import RecipeMatcher
+from .converter import RecipeConverter
+from .examples import (
+    get_example_recipes,
+    get_single_appliance_recipes,
+    get_multi_appliance_recipes,
+    get_recipes_with_alternatives,
+    ALL_EXAMPLE_RECIPES,
+)
 
 __all__ = [
     "UnifiedRecipe",
@@ -28,4 +36,10 @@ __all__ = [
     "RecipeMatchResult",
     "ImplementationQuality",
     "RecipeMatcher",
+    "RecipeConverter",
+    "get_example_recipes",
+    "get_single_appliance_recipes",
+    "get_multi_appliance_recipes",
+    "get_recipes_with_alternatives",
+    "ALL_EXAMPLE_RECIPES",
 ]
