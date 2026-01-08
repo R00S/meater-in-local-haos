@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 08 Jan 2026, 01:12 CET
+ * AUTO-GENERATED: 08 Jan 2026, 01:25 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 08 Jan 2026, 01:12 CET
+// Last generated: 08 Jan 2026, 01:25 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
