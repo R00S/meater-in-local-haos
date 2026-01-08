@@ -895,45 +895,126 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _buildRecipe() {
-    // Show alert with recipe summary for now (full implementation would integrate with backend)
+    // Create a custom recipe from builder selections
     const bases = {
-      'white_rice': { name: 'White Rice' },
-      'brown_rice': { name: 'Brown Rice' },
-      'rice_pilaf': { name: 'Rice Pilaf' },
-      'spanish_rice': { name: 'Spanish Rice' },
-      'wild_rice': { name: 'Wild Rice' },
-      'israeli_couscous': { name: 'Israeli Couscous' },
-      'quinoa': { name: 'Quinoa' },
-      'plain_pasta': { name: 'Plain Pasta' },
-      'marinara_pasta': { name: 'Marinara Pasta' },
-      'alfredo_pasta': { name: 'Alfredo Pasta' },
+      'white_rice': { name: 'White Rice', water: '4 cups', time: 18, icon: '🍚' },
+      'brown_rice': { name: 'Brown Rice', water: '4.5 cups', time: 22, icon: '🍚' },
+      'rice_pilaf': { name: 'Rice Pilaf', water: '3.5 cups', time: 16, icon: '🍚' },
+      'spanish_rice': { name: 'Spanish Rice', water: '3.5 cups', time: 18, icon: '🍚' },
+      'wild_rice': { name: 'Wild Rice', water: '5 cups', time: 25, icon: '🍚' },
+      'israeli_couscous': { name: 'Israeli Couscous', water: '3 cups', time: 12, icon: '🫘' },
+      'quinoa': { name: 'Quinoa', water: '3.5 cups', time: 15, icon: '🌾' },
+      'plain_pasta': { name: 'Plain Pasta', water: '5 cups', time: 14, icon: '🍝' },
+      'marinara_pasta': { name: 'Marinara Pasta', water: '4.5 cups', time: 16, icon: '🍝' },
+      'alfredo_pasta': { name: 'Alfredo Pasta', water: '4.5 cups', time: 16, icon: '🍝' },
     };
 
     const proteins = {
-      'chicken_breast': { name: 'Chicken Breast (Fresh)' },
-      'chicken_breast_frozen': { name: 'Chicken Breast (Frozen)' },
-      'chicken_thighs': { name: 'Chicken Thighs' },
-      'chicken_drumsticks': { name: 'Chicken Drumsticks' },
-      'chicken_wings': { name: 'Chicken Wings' },
-      'beef_steak': { name: 'Beef Steak' },
-      'beef_ground': { name: 'Ground Beef' },
-      'beef_meatballs': { name: 'Beef Meatballs' },
-      'beef_strips': { name: 'Beef Strips' },
-      'pork_chops': { name: 'Pork Chops' },
-      'pork_tenderloin': { name: 'Pork Tenderloin' },
-      'pork_sausage': { name: 'Pork Sausage' },
-      'salmon': { name: 'Salmon Fillet' },
-      'shrimp': { name: 'Shrimp' },
-      'tofu': { name: 'Tofu (Firm)' },
-      'tempeh': { name: 'Tempeh' },
+      'chicken_breast': { name: 'Chicken Breast (Fresh)', temp: '390°F (200°C)', time: 18, probe: '74°C (165°F)', icon: '🍗' },
+      'chicken_breast_frozen': { name: 'Chicken Breast (Frozen)', temp: '375°F (190°C)', time: 22, probe: '74°C (165°F)', icon: '🍗' },
+      'chicken_thighs': { name: 'Chicken Thighs', temp: '390°F (200°C)', time: 16, probe: '74°C (165°F)', icon: '🍗' },
+      'chicken_drumsticks': { name: 'Chicken Drumsticks', temp: '390°F (200°C)', time: 20, probe: '74°C (165°F)', icon: '🍗' },
+      'chicken_wings': { name: 'Chicken Wings', temp: '400°F (205°C)', time: 15, probe: 'N/A', icon: '🍗' },
+      'beef_steak': { name: 'Beef Steak', temp: '400°F (205°C)', time: 12, probe: '54°C (130°F)', icon: '🥩' },
+      'beef_ground': { name: 'Ground Beef', temp: '375°F (190°C)', time: 14, probe: '71°C (160°F)', icon: '🥩' },
+      'beef_meatballs': { name: 'Beef Meatballs', temp: '375°F (190°C)', time: 16, probe: '71°C (160°F)', icon: '🥩' },
+      'beef_strips': { name: 'Beef Strips', temp: '390°F (200°C)', time: 10, probe: 'N/A', icon: '🥩' },
+      'pork_chops': { name: 'Pork Chops', temp: '390°F (200°C)', time: 14, probe: '63°C (145°F)', icon: '🥓' },
+      'pork_tenderloin': { name: 'Pork Tenderloin', temp: '375°F (190°C)', time: 18, probe: '63°C (145°F)', icon: '🥓' },
+      'pork_sausage': { name: 'Pork Sausage', temp: '390°F (200°C)', time: 14, probe: '71°C (160°F)', icon: '🥓' },
+      'salmon': { name: 'Salmon Fillet', temp: '360°F (180°C)', time: 12, probe: '54°C (130°F)', icon: '🐟' },
+      'shrimp': { name: 'Shrimp', temp: '390°F (200°C)', time: 8, probe: 'N/A', icon: '🍤' },
+      'tofu': { name: 'Tofu (Firm)', temp: '390°F (200°C)', time: 14, probe: 'N/A', icon: '🧈' },
+      'tempeh': { name: 'Tempeh', temp: '390°F (200°C)', time: 14, probe: 'N/A', icon: '🧈' },
     };
 
-    const baseName = bases[this._builderBase].name;
-    const proteinName = proteins[this._builderProtein].name;
-    const veggiesText = this._builderVeggies.length > 0 ? ` with ${this._builderVeggies.join(', ')}` : '';
-    const recipeName = `${proteinName} with ${baseName}${veggiesText}`;
+    const selectedBase = bases[this._builderBase];
+    const selectedProtein = proteins[this._builderProtein];
     
-    alert(`✨ Custom Recipe Built!\n\n${recipeName}\n\n${this._builderUseMeater ? '🌡️ MEATER+ probe enabled\n\n' : ''}This is a demo. Full recipe generation coming soon!`);
+    const baseName = selectedBase.name;
+    const proteinName = selectedProtein.name;
+    const veggiesText = this._builderVeggies.length > 0 ? ` with ${this._builderVeggies.join(', ')}` : '';
+    const recipeName = `Custom ${proteinName} and ${baseName}${veggiesText}`;
+    
+    // Create a custom recipe object that can be displayed
+    const customRecipe = {
+      id: 9000, // Custom recipe ID
+      name: recipeName,
+      description: 'Custom recipe created with Recipe Builder',
+      mode: 'Combi-Meal',
+      prep_time_minutes: 10,
+      cook_time_minutes: selectedProtein.time,
+      servings: 4,
+      difficulty: 'Easy',
+      use_probe: this._builderUseMeater && selectedProtein.probe !== 'N/A',
+      target_temp_c: this._builderUseMeater && selectedProtein.probe !== 'N/A' ? parseInt(selectedProtein.probe) : null,
+      target_temp_f: this._builderUseMeater && selectedProtein.probe !== 'N/A' ? parseInt(selectedProtein.probe.match(/\((\d+)/)[1]) : null,
+      ingredients: [
+        `${baseName} - ${selectedBase.water} water`,
+        `${proteinName}`,
+        ...this._builderVeggies.map(v => `${v}`)
+      ],
+      instructions: [
+        `Add ${baseName.toLowerCase()} to the bottom of the Ninja Combi`,
+        `Add ${selectedBase.water} water or stock`,
+        this._builderVeggies.filter(v => ['Carrots', 'Zucchini', 'Cherry Tomatoes'].includes(v)).length > 0 
+          ? `Mix tender vegetables (${this._builderVeggies.filter(v => ['Carrots', 'Zucchini', 'Cherry Tomatoes'].includes(v)).join(', ')}) with the ${baseName.toLowerCase()}`
+          : null,
+        `Season ${proteinName.toLowerCase()} with your favorite seasonings`,
+        `Place ${proteinName.toLowerCase()} on the Crisper Tray in the top position`,
+        this._builderVeggies.filter(v => !['Carrots', 'Zucchini', 'Cherry Tomatoes'].includes(v)).length > 0
+          ? `Add crispy vegetables (${this._builderVeggies.filter(v => !['Carrots', 'Zucchini', 'Cherry Tomatoes'].includes(v)).join(', ')}) to the Crisper Tray with the protein`
+          : null,
+        `Close lid and flip SmartSwitch to COMBI COOKER position`,
+        `Select COMBI-MEAL mode`,
+        `Set temperature to ${selectedProtein.temp}`,
+        `Set time for ${selectedProtein.time} minutes`,
+        this._builderUseMeater && selectedProtein.probe !== 'N/A'
+          ? `Insert MEATER+ probe into thickest part of protein (target: ${selectedProtein.probe})`
+          : null,
+        `Press START`,
+        `Enjoy your custom meal!`
+      ].filter(Boolean), // Remove null instructions
+      phases: [
+        {
+          description: 'Steam Phase',
+          temperature_c: 100,
+          temperature_f: 212,
+          duration_minutes: Math.floor(selectedProtein.time * 0.4),
+          steam_enabled: true
+        },
+        {
+          description: 'Air Fry Phase',
+          temperature_c: parseInt(selectedProtein.temp.match(/\((\d+)/)[1]),
+          temperature_f: parseInt(selectedProtein.temp),
+          duration_minutes: Math.ceil(selectedProtein.time * 0.6),
+          steam_enabled: false
+        }
+      ],
+      tips: [
+        `This recipe serves ${4} people`,
+        `Adjust servings using the input field above`,
+        this._builderUseMeater ? `Use MEATER+ probe for precise temperature control` : null,
+        `You can modify ingredients anytime by returning to the Recipe Builder`
+      ].filter(Boolean),
+      notes: []
+    };
+    
+    // Show the built recipe
+    this._selectedNinjaRecipe = customRecipe.id;
+    this._showRecipeBuilder = false;
+    
+    // Temporarily add to recipes list so it can be displayed
+    // In production, this would be saved to backend
+    if (!NINJA_COMBI_RECIPES.find(r => r.id === 9000)) {
+      NINJA_COMBI_RECIPES.push(customRecipe);
+    } else {
+      // Update existing custom recipe
+      const idx = NINJA_COMBI_RECIPES.findIndex(r => r.id === 9000);
+      NINJA_COMBI_RECIPES[idx] = customRecipe;
+    }
+    
+    this.requestUpdate();
   }
 
   _startMeaterCook(recipe) {
@@ -1776,6 +1857,13 @@ class KitchenCookingPanel extends LitElement {
         background: var(--primary-color);
         border-color: var(--primary-color);
         color: white;
+      }
+
+      .category-btn.active {
+        background: var(--primary-color);
+        border-color: var(--primary-color);
+        color: white;
+        font-weight: 600;
       }
 
       select {
