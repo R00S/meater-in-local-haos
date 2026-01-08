@@ -13,7 +13,10 @@ from .models import (
     CuisineType,
     MealType,
     RecipeMatchResult,
+    ImplementationQuality,
 )
+
+from .matcher import RecipeMatcher
 
 __all__ = [
     "UnifiedRecipe",
@@ -23,4 +26,6 @@ __all__ = [
     "CuisineType",
     "MealType",
     "RecipeMatchResult",
+    "ImplementationQuality",
+    "RecipeMatcher",
 ]
