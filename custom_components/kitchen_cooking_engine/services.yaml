@@ -153,3 +153,19 @@ set_target:
           max: 100
           unit_of_measurement: "°C"
           mode: slider
+
+appliance_power_off:
+  name: Appliance Power Off
+  description: Turn off the appliance power outlet (if configured).
+  target:
+    entity:
+      domain: sensor
+      integration: kitchen_cooking_engine
+
+appliance_start:
+  name: Appliance Start
+  description: Trigger the appliance start button (if configured). Use this to remotely start a pre-configured cook program on the appliance.
+  target:
+    entity:
+      domain: sensor
+      integration: kitchen_cooking_engine

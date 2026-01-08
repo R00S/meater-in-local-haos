@@ -113,6 +113,16 @@ class RecipeAdapter(ABC):
         pass
 
 
+@dataclass
+class ApplianceDeviceControl:
+    """Device control configuration for an appliance."""
+    
+    power_outlet_entity: Optional[str] = None    # Switch/outlet to turn off appliance
+    start_button_entity: Optional[str] = None     # Button/switch to start cooking
+    auto_shutoff_enabled: bool = True             # Auto turn off when cook completes
+    auto_start_enabled: bool = False              # Enable remote start capability
+
+
 class KitchenAppliance(ABC):
     """Base class for all kitchen appliances."""
     
@@ -124,6 +134,7 @@ class KitchenAppliance(ABC):
         self.features: Dict[str, CookingFeature] = {}
         self.recipes: List[ApplianceRecipe] = []
         self.adapter: Optional[RecipeAdapter] = None
+        self.device_control: Optional[ApplianceDeviceControl] = None
     
     @abstractmethod
     def get_supported_features(self) -> List[CookingFeature]:

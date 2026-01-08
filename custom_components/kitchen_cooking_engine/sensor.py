@@ -46,10 +46,14 @@ from .const import (
     ATTR_TEMP_HISTORY,
     ATTR_USDA_SAFE,
     CONF_AMBIENT_SENSOR,
+    CONF_AUTO_SHUTOFF,
+    CONF_AUTO_START,
     CONF_BATTERY_SENSOR,
     CONF_INDICATOR_LIGHT,
     CONF_MEDIA_PLAYER,
     CONF_NOTIFY_SERVICE,
+    CONF_POWER_OUTLET,
+    CONF_START_BUTTON,
     CONF_TEMPERATURE_SENSOR,
     CONF_TEMPERATURE_UNIT,
     CONF_TTS_ENTITY,
@@ -105,6 +109,12 @@ async def async_setup_entry(
     tts_entity = config_entry.data.get(CONF_TTS_ENTITY)
     media_player = config_entry.data.get(CONF_MEDIA_PLAYER)
     temp_unit = config_entry.data.get(CONF_TEMPERATURE_UNIT, TEMP_CELSIUS)
+    
+    # Appliance device control entities
+    power_outlet = config_entry.data.get(CONF_POWER_OUTLET)
+    start_button = config_entry.data.get(CONF_START_BUTTON)
+    auto_shutoff = config_entry.data.get(CONF_AUTO_SHUTOFF, True)
+    auto_start = config_entry.data.get(CONF_AUTO_START, False)
 
     cooking_session = CookingSessionSensor(
         hass,
@@ -117,6 +127,10 @@ async def async_setup_entry(
         tts_entity,
         media_player,
         temp_unit,
+        power_outlet,
+        start_button,
+        auto_shutoff,
+        auto_start,
     )
     
     entities = [cooking_session]
@@ -154,6 +168,10 @@ class CookingSessionSensor(SensorEntity):
         tts_entity: str | None,
         media_player: str | None,
         temp_unit: str,
+        power_outlet: str | None = None,
+        start_button: str | None = None,
+        auto_shutoff: bool = True,
+        auto_start: bool = False,
     ) -> None:
         """Initialize the cooking session sensor."""
         self._hass = hass
@@ -166,6 +184,12 @@ class CookingSessionSensor(SensorEntity):
         self._tts_entity = tts_entity.strip() if tts_entity else None
         self._media_player = media_player.strip() if media_player else None
         self._temp_unit = temp_unit
+        
+        # Appliance device control
+        self._power_outlet = power_outlet.strip() if power_outlet else None
+        self._start_button = start_button.strip() if start_button else None
+        self._auto_shutoff_enabled = auto_shutoff
+        self._auto_start_enabled = auto_start
 
         # Session state
         self._state = STATE_IDLE
@@ -1013,10 +1037,63 @@ class CookingSessionSensor(SensorEntity):
         """Set notes for the current cook."""
         self._cook_notes = notes
         self.async_write_ha_state()
+    
+    async def appliance_power_off(self) -> None:
+        """Turn off the appliance power outlet."""
+        if not self._power_outlet:
+            _LOGGER.warning("No power outlet configured for appliance control")
+            return
+        
+        _LOGGER.info(f"Turning off appliance power outlet: {self._power_outlet}")
+        
+        try:
+            await self._hass.services.async_call(
+                "switch",
+                "turn_off",
+                {"entity_id": self._power_outlet},
+                blocking=True,
+            )
+            _LOGGER.info(f"Successfully turned off {self._power_outlet}")
+        except Exception as e:
+            _LOGGER.error(f"Failed to turn off power outlet {self._power_outlet}: {e}")
+    
+    async def appliance_start(self) -> None:
+        """Trigger the appliance start button."""
+        if not self._start_button:
+            _LOGGER.warning("No start button configured for appliance control")
+            return
+        
+        _LOGGER.info(f"Triggering appliance start button: {self._start_button}")
+        
+        try:
+            # Press the button (works for button entities and switches)
+            if self._start_button.startswith("button."):
+                await self._hass.services.async_call(
+                    "button",
+                    "press",
+                    {"entity_id": self._start_button},
+                    blocking=True,
+                )
+            else:
+                # For switches or other entities, turn on
+                await self._hass.services.async_call(
+                    "switch",
+                    "turn_on",
+                    {"entity_id": self._start_button},
+                    blocking=True,
+                )
+            _LOGGER.info(f"Successfully triggered {self._start_button}")
+        except Exception as e:
+            _LOGGER.error(f"Failed to trigger start button {self._start_button}: {e}")
 
     def complete_session(self) -> None:
         """Mark session as complete and save to history."""
         _LOGGER.info("Cooking session completed")
+        
+        # Auto shut off appliance if enabled
+        if self._auto_shutoff_enabled and self._power_outlet:
+            _LOGGER.info("Auto-shutoff enabled, turning off appliance")
+            self._hass.async_create_task(self.appliance_power_off())
         
         # Save cook to history before clearing state
         self._hass.async_create_task(self._save_cook_to_history())
