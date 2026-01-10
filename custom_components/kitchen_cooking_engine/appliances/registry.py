@@ -150,7 +150,7 @@ class ApplianceRegistry:
         """
         recipes = []
         for appliance in self._appliances.values():
-            recipes.extend(appliance.recipes)
+            recipes.extend(appliance.get_recipes())
         return recipes
         
     def get_recipe_by_id(self, recipe_id: int) -> Optional[ApplianceRecipe]:
