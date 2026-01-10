@@ -220,8 +220,9 @@ class RecipeMatcher:
             
             for feature in required_features:
                 if feature in appliance.get_features():
-                    impl_type = appliance.get_feature_implementation(feature)
-                    feature_implementations[feature].append(impl_type)
+                    impl_type = appliance.get_feature_type(feature)
+                    if impl_type:
+                        feature_implementations[feature].append(impl_type)
         
         # Analyze implementations
         standard_count = 0

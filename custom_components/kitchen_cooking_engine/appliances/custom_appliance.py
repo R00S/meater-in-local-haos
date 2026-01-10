@@ -1,8 +1,8 @@
 """
 Custom Appliance support for user-defined appliances.
 
-Last Updated: 10 Jan 2026, 23:45 CET
-Last Change: Initial custom appliance implementation
+Last Updated: 10 Jan 2026, 23:55 CET
+Last Change: Updated to use per-appliance feature types
 
 This module allows users to create custom appliances by selecting features
 from the feature catalog. Once configured, custom appliances are treated
@@ -18,6 +18,7 @@ from typing import List, Dict, Optional
 from ..appliances import (
     KitchenAppliance,
     CookingFeature,
+    FeatureType,
     ApplianceRecipe,
     ApplianceDeviceControl,
 )
@@ -52,23 +53,27 @@ class CustomAppliance(KitchenAppliance):
         self.model = "User Defined"
         self.device_control = device_control
         
-        # Build features dictionary from catalog
+        # Build features dictionary and feature types from catalog
         self.features = {}
+        self._feature_types = {}
         
         # Add standard features
         for feature_name in config_features.get("standard_features", []):
             if feature_name in FEATURE_CATALOG:
                 self.features[feature_name] = FEATURE_CATALOG[feature_name]
+                self._feature_types[feature_name] = FeatureType.STANDARD
         
         # Add modified features
         for feature_name in config_features.get("modified_features", []):
             if feature_name in FEATURE_CATALOG:
                 self.features[feature_name] = FEATURE_CATALOG[feature_name]
+                self._feature_types[feature_name] = FeatureType.MODIFIED
         
         # Add special features
         for feature_name in config_features.get("special_features", []):
             if feature_name in FEATURE_CATALOG:
                 self.features[feature_name] = FEATURE_CATALOG[feature_name]
+                self._feature_types[feature_name] = FeatureType.SPECIAL
         
         # Custom appliances don't have pre-defined recipes
         # (users can add recipes through recipe matcher)
