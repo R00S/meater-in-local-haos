@@ -42,6 +42,7 @@ from .const import (
     SERVICE_START_REST,
     SERVICE_COMPLETE,
     SERVICE_SET_NOTES,
+    SERVICE_START_MULTI_APPLIANCE_COOK,
 )
 from .cooking_data import (
     get_cut_by_id,
@@ -103,6 +104,21 @@ SERVICE_SET_NOTES_SCHEMA = vol.Schema(
     {
         vol.Required(ATTR_ENTITY_ID): cv.entity_ids,
         vol.Required("notes"): cv.string,
+    }
+)
+
+# Phase 4: Service schema for start_multi_appliance_cook
+SERVICE_START_MULTI_APPLIANCE_COOK_SCHEMA = vol.Schema(
+    {
+        vol.Required("recipe_id"): vol.Any(cv.string, vol.Coerce(int)),
+        vol.Optional("appliances"): vol.Schema({
+            vol.Optional("oven"): cv.entity_id,
+            vol.Optional("probe"): cv.entity_id,
+            vol.Optional("air_fryer"): cv.entity_id,
+            vol.Optional("combi"): cv.entity_id,
+        }),
+        vol.Optional("target_temp_c"): vol.All(vol.Coerce(int), vol.Range(min=30, max=250)),
+        vol.Optional("cook_time_minutes"): vol.All(vol.Coerce(int), vol.Range(min=1, max=1440)),
     }
 )
 
@@ -511,6 +527,86 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         for entity in entities:
             entity.set_notes(notes)
 
+    async def handle_start_multi_appliance_cook(call: ServiceCall) -> None:
+        """Handle start multi-appliance cook service call.
+        
+        Phase 4: Coordinates cooking across multiple appliances simultaneously.
+        """
+        _LOGGER.info("Kitchen Cooking Engine: Start multi-appliance cook service called")
+        
+        from .coordinator import get_coordinator
+        from .recipes.matcher import RecipeMatcher
+        from .appliances.registry import get_registry
+        
+        coordinator = get_coordinator(hass)
+        registry = get_registry(hass)
+        
+        recipe_id = call.data.get("recipe_id")
+        appliances_map = call.data.get("appliances", {})
+        target_temp_c = call.data.get("target_temp_c")
+        cook_time_minutes = call.data.get("cook_time_minutes")
+        
+        # Build a simple recipe dict from the service call
+        # In a real implementation, this would look up a full recipe by ID
+        recipe = {
+            "id": recipe_id,
+            "name": f"Recipe {recipe_id}",
+            "required_features": list(appliances_map.keys()) if appliances_map else [],
+        }
+        
+        # Build appliance assignments from the service call
+        from .coordinator import ApplianceAssignment
+        assignments = []
+        
+        for role, entity_id in appliances_map.items():
+            # Try to find the appliance by entity
+            # This is a simplified lookup - in production, would have proper entity->appliance mapping
+            appliances = registry.get_all_appliances()
+            for appliance in appliances:
+                # For now, create assignment based on role
+                assignments.append(ApplianceAssignment(
+                    feature_role=role,
+                    appliance_id=appliance.get("id", "unknown"),
+                    appliance_name=appliance.get("name", "Unknown"),
+                    entity_id=entity_id
+                ))
+                break  # Use first appliance for now
+        
+        # Start the multi-appliance cook session
+        try:
+            options = {}
+            if target_temp_c:
+                options["target_temp_c"] = target_temp_c
+            if cook_time_minutes:
+                options["cook_time_minutes"] = cook_time_minutes
+            
+            session = await coordinator.start_multi_appliance_cook(
+                recipe=recipe,
+                appliance_assignments=assignments if assignments else None,
+                options=options
+            )
+            
+            _LOGGER.info(
+                "Started multi-appliance cook session %s for recipe %s",
+                session.session_id,
+                session.recipe_name
+            )
+            
+            # Update sensor entities with multi-appliance session info
+            for assignment in session.appliance_assignments:
+                if assignment.entity_id:
+                    entities = _get_cooking_session_entities(hass, [assignment.entity_id])
+                    for entity in entities:
+                        entity._multi_cook_session_id = session.session_id
+                        entity._active_appliances = [a.appliance_id for a in session.appliance_assignments]
+                        entity._primary_appliance = session.primary_appliance_id
+                        entity._secondary_appliances = session.secondary_appliance_ids
+                        entity.async_write_ha_state()
+                        
+        except Exception as err:
+            _LOGGER.error("Failed to start multi-appliance cook: %s", err)
+            raise
+
     # Only register if not already registered
     if not hass.services.has_service(DOMAIN, SERVICE_START_COOK):
         hass.services.async_register(
@@ -546,5 +642,13 @@ async def _async_register_services(hass: HomeAssistant) -> None:
             SERVICE_SET_NOTES,
             handle_set_notes,
             schema=SERVICE_SET_NOTES_SCHEMA,
+        )
+    # Phase 4: Register multi-appliance cook service
+    if not hass.services.has_service(DOMAIN, SERVICE_START_MULTI_APPLIANCE_COOK):
+        hass.services.async_register(
+            DOMAIN,
+            SERVICE_START_MULTI_APPLIANCE_COOK,
+            handle_start_multi_appliance_cook,
+            schema=SERVICE_START_MULTI_APPLIANCE_COOK_SCHEMA,
         )
 

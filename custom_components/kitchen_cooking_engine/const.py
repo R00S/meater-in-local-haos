@@ -72,6 +72,11 @@ ATTR_NOTES = "notes"
 ATTR_TEMP_HISTORY = "temp_history"
 ATTR_TIP_SENSOR = "tip_sensor"
 ATTR_AMBIENT_SENSOR = "ambient_sensor"
+# Phase 4: Multi-appliance session attributes
+ATTR_ACTIVE_APPLIANCES = "active_appliances"
+ATTR_PRIMARY_APPLIANCE = "primary_appliance"
+ATTR_SECONDARY_APPLIANCES = "secondary_appliances"
+ATTR_MULTI_COOK_SESSION_ID = "multi_cook_session_id"
 
 # Service names
 SERVICE_START_COOK = "start_cook"
@@ -82,6 +87,8 @@ SERVICE_COMPLETE = "complete_session"
 SERVICE_SET_NOTES = "set_notes"
 SERVICE_APPLIANCE_POWER_OFF = "appliance_power_off"
 SERVICE_APPLIANCE_START = "appliance_start"
+# Phase 4: Multi-appliance service
+SERVICE_START_MULTI_APPLIANCE_COOK = "start_multi_appliance_cook"
 
 # Event names
 EVENT_APPROACHING_TARGET = "kitchen_cooking_engine_approaching_target"
