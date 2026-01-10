@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 09 Jan 2026, 08:32 CET
+ * AUTO-GENERATED: 10 Jan 2026, 21:27 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 09 Jan 2026, 08:32 CET
+// Last generated: 10 Jan 2026, 21:27 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5372,6 +5372,8 @@ class KitchenCookingPanel extends LitElement {
       _showRecipes: { type: Boolean },
       _compatibleRecipes: { type: Array },
       _recipeQualityFilter: { type: String },
+      // Phase 3.4: Recipe detail view
+      _selectedRecipeDetail: { type: Object },
     };
   }
 
@@ -5409,6 +5411,8 @@ class KitchenCookingPanel extends LitElement {
     this._showRecipes = false;
     this._compatibleRecipes = [];
     this._recipeQualityFilter = 'acceptable'; // Show acceptable and better by default
+    // Phase 3.4: Recipe detail view
+    this._selectedRecipeDetail = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -6611,6 +6615,11 @@ class KitchenCookingPanel extends LitElement {
 
   // Phase 3.3: Render compatible recipes view
   _renderRecipes() {
+    // Phase 3.4: Show recipe detail if selected
+    if (this._selectedRecipeDetail) {
+      return this._renderRecipeDetail();
+    }
+
     return html`
       <div class="status-banner idle">
         <h2>📖 Compatible Recipes</h2>
@@ -6653,7 +6662,7 @@ class KitchenCookingPanel extends LitElement {
             const recipe = recipeData.recipe;
             const match = recipeData.match;
             return html`
-              <ha-card class="recipe-card">
+              <ha-card class="recipe-card clickable" @click=${() => this._showRecipeDetail(recipeData)}>
                 <div class="card-content">
                   <div class="recipe-header">
                     <h3>${recipe.name}</h3>
@@ -6693,6 +6702,10 @@ class KitchenCookingPanel extends LitElement {
                       <span class="feature-chip">${this._formatFeatureName(f)}</span>
                     `)}
                   </div>
+
+                  <div class="recipe-action">
+                    <span class="click-hint">Click for details →</span>
+                  </div>
                 </div>
               </ha-card>
             `;
@@ -6700,6 +6713,149 @@ class KitchenCookingPanel extends LitElement {
         </div>
       `}
     `;
+  }
+
+  // Phase 3.4: Render recipe detail view
+  _renderRecipeDetail() {
+    const recipe = this._selectedRecipeDetail.recipe;
+    const match = this._selectedRecipeDetail.match;
+
+    return html`
+      <div class="status-banner idle">
+        <h2>📖 Recipe Details</h2>
+        <button class="back-btn" @click=${() => this._selectedRecipeDetail = null}>
+          ← Back to Recipes
+        </button>
+      </div>
+
+      <ha-card class="recipe-detail-card">
+        <div class="card-content">
+          <div class="recipe-detail-header">
+            <h2>${recipe.name}</h2>
+            <span class="quality-badge quality-${match.quality.toLowerCase()} large">
+              ${this._getQualityIcon(match.quality)} ${match.quality}
+            </span>
+          </div>
+
+          <p class="recipe-description large">${recipe.description}</p>
+
+          <div class="recipe-detail-meta">
+            <div class="meta-item">
+              <strong>Match Score:</strong> ${Math.round(match.score * 100)}%
+            </div>
+            ${match.confidence < 1.0 ? html`
+              <div class="meta-item">
+                <strong>Confidence:</strong> ${Math.round(match.confidence * 100)}%
+              </div>
+            ` : ''}
+          </div>
+
+          ${match.suggested_appliances && match.suggested_appliances.length > 0 ? html`
+            <div class="appliances-section">
+              <h3>✅ You'll Need:</h3>
+              <div class="appliance-list-detail">
+                ${match.suggested_appliances.map(appId => {
+                  const appliance = this._appliances.find(a => a.id === appId);
+                  if (!appliance) return '';
+                  return html`
+                    <div class="appliance-item">
+                      <span class="appliance-icon">${this._getApplianceIcon(appliance.name)}</span>
+                      <span class="appliance-name">${appliance.name}</span>
+                      <span class="status-check">✅ You have this</span>
+                    </div>
+                  `;
+                })}
+              </div>
+            </div>
+          ` : ''}
+
+          ${match.alternative_appliances && match.alternative_appliances.length > 0 ? html`
+            <div class="alternatives-section">
+              <h3>🔄 Or Alternatively:</h3>
+              <div class="alternative-combos">
+                ${match.alternative_appliances.map((combo, idx) => html`
+                  <button class="combo-btn" @click=${() => this._selectApplianceCombo(combo)}>
+                    ${combo.map(appId => {
+                      const appliance = this._appliances.find(a => a.id === appId);
+                      return appliance ? appliance.name : appId;
+                    }).join(' + ')}
+                  </button>
+                `)}
+              </div>
+            </div>
+          ` : ''}
+
+          <div class="features-section">
+            <h3>🔧 Required Features:</h3>
+            <div class="feature-list-detail">
+              ${recipe.required_features.map(f => html`
+                <div class="feature-item">
+                  <span class="feature-icon">✓</span>
+                  <span class="feature-name">${this._formatFeatureName(f)}</span>
+                </div>
+              `)}
+            </div>
+          </div>
+
+          ${recipe.optional_features && recipe.optional_features.length > 0 ? html`
+            <div class="features-section optional">
+              <h3>💡 Optional Features:</h3>
+              <div class="feature-list-detail">
+                ${recipe.optional_features.map(f => html`
+                  <div class="feature-item optional">
+                    <span class="feature-icon">+</span>
+                    <span class="feature-name">${this._formatFeatureName(f)}</span>
+                    ${this._hasFeature(f) ? html`<span class="status-badge">Available</span>` : ''}
+                  </div>
+                `)}
+              </div>
+            </div>
+          ` : ''}
+
+          ${match.notes ? html`
+            <div class="notes-section">
+              <h3>📝 Notes:</h3>
+              <p class="recipe-notes-detail">${match.notes}</p>
+            </div>
+          ` : ''}
+
+          <div class="recipe-actions">
+            <button class="primary-btn" @click=${() => this._startCookFromRecipe(recipe, match)}>
+              🚀 Start Cooking
+            </button>
+            <button class="secondary-btn" @click=${() => this._selectedRecipeDetail = null}>
+              Cancel
+            </button>
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  // Phase 3.4: Show recipe detail
+  _showRecipeDetail(recipeData) {
+    this._selectedRecipeDetail = recipeData;
+    this.requestUpdate();
+  }
+
+  // Phase 3.4: Select alternative appliance combination
+  _selectApplianceCombo(combo) {
+    // For now, just show an alert - in future this could actually configure the appliances
+    const comboNames = combo.map(appId => {
+      const appliance = this._appliances.find(a => a.id === appId);
+      return appliance ? appliance.name : appId;
+    }).join(' + ');
+    alert(`Selected combination: ${comboNames}\n\nThis combination will be used for cooking.`);
+  }
+
+  // Phase 3.4: Start cooking from recipe
+  _startCookFromRecipe(recipe, match) {
+    // TODO: Implement actual cooking start logic based on recipe requirements
+    // For now, show info about what would happen
+    alert(`Starting cook with recipe: ${recipe.name}\n\nUsing appliances:\n${match.suggested_appliances.map(id => {
+      const app = this._appliances.find(a => a.id === id);
+      return app ? `- ${app.name}` : `- ${id}`;
+    }).join('\n')}\n\nThis would start the cooking process.`);
   }
 
   // Phase 3.3: Helper methods for appliances and recipes
@@ -8199,6 +8355,251 @@ class KitchenCookingPanel extends LitElement {
 
       .help-text p:last-child {
         margin-bottom: 0;
+      }
+
+      /* Phase 3.4: Recipe Detail View Styles */
+      .recipe-card.clickable {
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .recipe-card.clickable:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .recipe-action {
+        margin-top: 12px;
+        text-align: right;
+      }
+
+      .click-hint {
+        font-size: 12px;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+
+      .back-btn {
+        padding: 8px 16px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-left: 16px;
+      }
+
+      .back-btn:hover {
+        opacity: 0.9;
+      }
+
+      .recipe-detail-card {
+        margin-bottom: 16px;
+      }
+
+      .recipe-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        gap: 16px;
+      }
+
+      .recipe-detail-header h2 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 500;
+        flex: 1;
+      }
+
+      .quality-badge.large {
+        font-size: 13px;
+        padding: 6px 12px;
+      }
+
+      .recipe-description.large {
+        font-size: 15px;
+        line-height: 1.5;
+        margin: 0 0 20px 0;
+        color: var(--primary-text-color);
+      }
+
+      .recipe-detail-meta {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 24px;
+        padding: 12px;
+        background: var(--divider-color);
+        border-radius: 4px;
+      }
+
+      .meta-item {
+        font-size: 14px;
+      }
+
+      .meta-item strong {
+        margin-right: 4px;
+      }
+
+      .appliances-section,
+      .alternatives-section,
+      .features-section,
+      .notes-section {
+        margin-bottom: 24px;
+      }
+
+      .appliances-section h3,
+      .alternatives-section h3,
+      .features-section h3,
+      .notes-section h3 {
+        margin: 0 0 12px 0;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .appliance-list-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .appliance-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+        background: var(--divider-color);
+        border-radius: 4px;
+      }
+
+      .appliance-item .appliance-icon {
+        font-size: 24px;
+      }
+
+      .appliance-item .appliance-name {
+        flex: 1;
+        font-weight: 500;
+      }
+
+      .status-check {
+        color: #4caf50;
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .alternative-combos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .combo-btn {
+        padding: 8px 16px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 13px;
+        transition: opacity 0.2s;
+      }
+
+      .combo-btn:hover {
+        opacity: 0.85;
+      }
+
+      .feature-list-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        background: var(--divider-color);
+        border-radius: 4px;
+      }
+
+      .feature-item.optional {
+        opacity: 0.7;
+      }
+
+      .feature-icon {
+        width: 20px;
+        text-align: center;
+        font-weight: bold;
+        color: #4caf50;
+      }
+
+      .feature-item.optional .feature-icon {
+        color: var(--secondary-text-color);
+      }
+
+      .feature-name {
+        flex: 1;
+        font-size: 14px;
+      }
+
+      .status-badge {
+        padding: 2px 8px;
+        background: #4caf50;
+        color: white;
+        border-radius: 10px;
+        font-size: 11px;
+      }
+
+      .recipe-notes-detail {
+        padding: 12px;
+        background: var(--divider-color);
+        border-radius: 4px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5;
+        font-style: italic;
+      }
+
+      .recipe-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid var(--divider-color);
+      }
+
+      .primary-btn {
+        flex: 1;
+        padding: 12px 24px;
+        background: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        transition: opacity 0.2s;
+      }
+
+      .primary-btn:hover {
+        opacity: 0.9;
+      }
+
+      .secondary-btn {
+        padding: 12px 24px;
+        background: var(--divider-color);
+        color: var(--primary-text-color);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: opacity 0.2s;
+      }
+
+      .secondary-btn:hover {
+        opacity: 0.8;
       }
     `;
   }
