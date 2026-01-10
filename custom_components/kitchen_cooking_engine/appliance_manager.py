@@ -481,11 +481,11 @@ class ApplianceManager:
                 power_outlet_entity=power_outlet
             )
         
-        # Extract features from config
+        # Extract features from config (keys have "custom_" prefix from config flow)
         config_features = {
-            "standard_features": config_entry.data.get("standard_features", []),
-            "modified_features": config_entry.data.get("modified_features", []),
-            "special_features": config_entry.data.get("special_features", []),
+            "standard_features": config_entry.data.get("custom_standard_features", []),
+            "modified_features": config_entry.data.get("custom_modified_features", []),
+            "special_features": config_entry.data.get("custom_special_features", []),
         }
         
         return CustomAppliance(name, config_features, device_control)
