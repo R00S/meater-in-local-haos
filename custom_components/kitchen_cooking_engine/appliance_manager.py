@@ -193,7 +193,7 @@ class ApplianceManager:
         # Import appliance classes (avoid circular imports)
         from .appliances.standard_oven import StandardOven
         from .appliances.stovetop import Stovetop
-        from .appliances.microwave import MicrowaveOven
+        from .appliances.microwave import Microwave
         from .appliances.delonghi_multifry import DelonghiMultiFry
         from .appliances.custom_appliance import CustomAppliance
         from .appliances import ApplianceDeviceControl
@@ -320,21 +320,22 @@ class ApplianceManager:
             config_entry: Configuration entry
             
         Returns:
-            MicrowaveOven instance
+            Microwave instance
         """
-        from .appliances.microwave import MicrowaveOven
+        from .appliances.microwave import Microwave
         
         name = config_entry.data.get("name", "Microwave")
         wattage = config_entry.data.get("wattage", 1000)
         has_sensor = config_entry.data.get("has_sensor", False)
         has_convection = config_entry.data.get("has_convection", False)
         
-        return MicrowaveOven(
-            name,
+        microwave = Microwave(
             wattage=wattage,
-            has_sensor_cook=has_sensor,
-            has_convection=has_convection
+            has_convection=has_convection,
+            has_sensor=has_sensor
         )
+        microwave.name = name
+        return microwave
     
     def get_available_features(self) -> Set[str]:
         """Get all available features across all appliances.
