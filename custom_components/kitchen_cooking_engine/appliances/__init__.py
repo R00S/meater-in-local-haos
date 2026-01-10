@@ -38,8 +38,8 @@ class CookingFeature:
     name: str                           # Feature identifier (e.g., "air_fry")
     display_name: str                   # User-friendly name
     feature_type: FeatureType          # How recipes are handled
-    temperature_range_c: tuple[int, int]  # (min, max) in Celsius
-    temperature_range_f: tuple[int, int]  # (min, max) in Fahrenheit
+    temperature_range_c: Optional[tuple[int, int]] = None  # (min, max) in Celsius (optional for non-temp features)
+    temperature_range_f: Optional[tuple[int, int]] = None  # (min, max) in Fahrenheit (optional for non-temp features)
     supports_probe: bool = False        # MEATER+ compatible
     supports_paddle: bool = False       # Rotating paddle/stirrer
     oil_levels: List[OilLevel] = field(default_factory=lambda: [OilLevel.ZERO])
