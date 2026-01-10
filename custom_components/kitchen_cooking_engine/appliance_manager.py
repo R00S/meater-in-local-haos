@@ -194,6 +194,9 @@ class ApplianceManager:
         from .appliances.standard_oven import StandardOven
         from .appliances.stovetop import Stovetop
         from .appliances.microwave import MicrowaveOven
+        from .appliances.delonghi_multifry import DelonghiMultiFry
+        from .appliances.custom_appliance import CustomAppliance
+        from .appliances import ApplianceDeviceControl
         
         # For now, we'll handle MEATER+ specially since it's the existing sensor
         # In Phase 3.2, this will be refactored to proper appliance class
@@ -211,14 +214,13 @@ class ApplianceManager:
             return self._create_microwave(config_entry)
         
         elif appliance_type == "ninja_combi":
-            # Placeholder for Ninja Combi
-            _LOGGER.warning("Ninja Combi appliance type not yet implemented")
-            return None
+            return self._create_ninja_combi(config_entry)
         
         elif appliance_type == "multifry":
-            # Placeholder for MultiFry
-            _LOGGER.warning("MultiFry appliance type not yet implemented")
-            return None
+            return self._create_multifry(config_entry)
+        
+        elif appliance_type == "custom":
+            return self._create_custom_appliance(config_entry)
         
         else:
             _LOGGER.error("Unknown appliance type: %s", appliance_type)
@@ -360,6 +362,133 @@ class ApplianceManager:
             Appliance instance or None if not found
         """
         return self._appliances.get(entry_id)
+    
+    def _create_ninja_combi(
+        self,
+        config_entry: ConfigEntry
+    ) -> Optional[KitchenAppliance]:
+        """Create Ninja Combi appliance.
+        
+        Args:
+            config_entry: Configuration entry
+            
+        Returns:
+            Ninja Combi instance
+        """
+        from .appliances import KitchenAppliance, CookingFeature, FeatureType, ApplianceDeviceControl
+        from .features.catalog import FEATURE_CATALOG
+        
+        name = config_entry.data.get("name", "Ninja Combi")
+        power_outlet = config_entry.data.get("power_outlet_entity")
+        start_button = config_entry.data.get("start_button_entity")
+        
+        # Create device control if entities configured
+        device_control = None
+        if power_outlet or start_button:
+            device_control = ApplianceDeviceControl(
+                power_outlet_entity=power_outlet,
+                start_button_entity=start_button
+            )
+        
+        # Create a minimal Ninja Combi appliance
+        # Full implementation with recipes will be in separate ninja_combi.py file
+        class NinjaCombiAppliance(KitchenAppliance):
+            """Ninja Combi appliance."""
+            
+            def __init__(self, appliance_name: str, device_ctrl):
+                super().__init__()
+                self.appliance_id = f"ninja_combi_{appliance_name.lower().replace(' ', '_')}"
+                self.name = appliance_name
+                self.brand = "Ninja"
+                self.model = "Combi"
+                self.device_control = device_ctrl
+                
+                # Ninja Combi features from catalog
+                self.features = {
+                    "combi_crisp": FEATURE_CATALOG.get("combi_crisp"),
+                    "air_fry": FEATURE_CATALOG.get("air_fry"),
+                    "steam": FEATURE_CATALOG.get("steam"),
+                }
+                self.recipes = []
+            
+            def get_supported_features(self):
+                return list(self.features.values())
+            
+            def get_recipes(self):
+                return self.recipes
+        
+        return NinjaCombiAppliance(name, device_control)
+    
+    def _create_multifry(
+        self,
+        config_entry: ConfigEntry
+    ) -> Optional[KitchenAppliance]:
+        """Create MultiFry appliance.
+        
+        Args:
+            config_entry: Configuration entry
+            
+        Returns:
+            DelonghiMultiFry instance
+        """
+        from .appliances.delonghi_multifry import DelonghiMultiFry
+        from .appliances import ApplianceDeviceControl
+        
+        name = config_entry.data.get("name", "De'Longhi MultiFry")
+        bowl_type = config_entry.data.get("bowl_type", "paddle")
+        power_outlet = config_entry.data.get("power_outlet_entity")
+        start_button = config_entry.data.get("start_button_entity")
+        
+        # Create device control if entities configured
+        device_control = None
+        if power_outlet or start_button:
+            device_control = ApplianceDeviceControl(
+                power_outlet_entity=power_outlet,
+                start_button_entity=start_button
+            )
+        
+        appliance = DelonghiMultiFry()
+        appliance.name = name
+        appliance.device_control = device_control
+        
+        # Store bowl type in appliance (could affect feature availability)
+        appliance.bowl_type = bowl_type
+        
+        return appliance
+    
+    def _create_custom_appliance(
+        self,
+        config_entry: ConfigEntry
+    ) -> Optional[KitchenAppliance]:
+        """Create custom user-defined appliance.
+        
+        Args:
+            config_entry: Configuration entry
+            
+        Returns:
+            CustomAppliance instance
+        """
+        from .appliances.custom_appliance import CustomAppliance
+        from .appliances import ApplianceDeviceControl
+        
+        name = config_entry.data.get("name", "Custom Appliance")
+        power_outlet = config_entry.data.get("power_outlet_entity")
+        
+        # Create device control if power outlet configured
+        device_control = None
+        if power_outlet:
+            device_control = ApplianceDeviceControl(
+                power_outlet_entity=power_outlet
+            )
+        
+        # Extract features from config
+        config_features = {
+            "standard_features": config_entry.data.get("standard_features", []),
+            "modified_features": config_entry.data.get("modified_features", []),
+            "special_features": config_entry.data.get("special_features", []),
+        }
+        
+        return CustomAppliance(name, config_features, device_control)
 
 
 def get_appliance_manager(hass: HomeAssistant) -> Optional[ApplianceManager]:
