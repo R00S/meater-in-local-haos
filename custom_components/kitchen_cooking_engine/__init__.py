@@ -299,8 +299,10 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         "config": entry.data,
     }
 
-    # Register the sidebar panel
-    await _async_register_panel(hass)
+    # Register the sidebar panel (only once, not per config entry)
+    if not hass.data[DOMAIN].get("panel_registered", False):
+        await _async_register_panel(hass)
+        hass.data[DOMAIN]["panel_registered"] = True
 
     # Register API endpoints for cooking data
     async_register_api(hass)

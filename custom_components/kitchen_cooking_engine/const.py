@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 2 Dec 2025, 21:07 CET
-Last Change: v0.1.2.11 - Use Home Assistant's built-in hui-history-graph-card for temperature graph
+Last Updated: 10 Jan 2026
+Last Change: v0.3.2.1 - Phase 3 & 4: Multi-appliance architecture complete
 """
 
 DOMAIN = "kitchen_cooking_engine"
