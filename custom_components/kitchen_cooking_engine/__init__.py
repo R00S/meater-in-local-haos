@@ -130,6 +130,29 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
     return True
 
 
+async def async_migrate_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+    """Migrate old config entry to new format.
+    
+    This function is called by Home Assistant when it detects that the
+    config entry version is lower than the current integration version.
+    Phase 3.1: Handles migration from v0.2 single-appliance to v0.3+ multi-appliance.
+    """
+    _LOGGER.info("Migrating config entry from version %s", entry.version)
+    
+    from .migration import async_migrate_entry as migrate_impl
+    
+    try:
+        success = await migrate_impl(hass, entry)
+        if success:
+            _LOGGER.info("Config entry migration completed successfully")
+        else:
+            _LOGGER.error("Config entry migration failed")
+        return success
+    except Exception as err:
+        _LOGGER.error("Error during config entry migration: %s", err)
+        return False
+
+
 async def _cleanup_old_entities(hass: HomeAssistant, entry: ConfigEntry) -> None:
     """Clean up old duplicate sensor entities from previous versions."""
     entity_reg = er.async_get(hass)
@@ -243,16 +266,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     _LOGGER.info("=" * 60)
 
     hass.data.setdefault(DOMAIN, {})
-
-    # Phase 3.1: Check and migrate legacy configs
-    from .migration import needs_migration, async_migrate_entry
-    
-    if needs_migration(entry):
-        _LOGGER.info("Config entry needs migration: %s", entry.title)
-        migration_success = await async_migrate_entry(hass, entry)
-        if not migration_success:
-            _LOGGER.error("Failed to migrate config entry: %s", entry.title)
-            return False
 
     # Phase 3.1: Initialize Appliance Manager (if not already done)
     from .appliance_manager import ApplianceManager

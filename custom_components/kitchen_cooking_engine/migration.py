@@ -77,8 +77,9 @@ async def async_migrate_entry(
     1. Detect old format
     2. Add appliance_type field
     3. Preserve all existing settings
-    4. Mark as migrated
-    5. Notify user
+    4. Update entry version
+    5. Mark as migrated
+    6. Notify user
     
     Args:
         hass: Home Assistant instance
@@ -102,11 +103,16 @@ async def async_migrate_entry(
             MIGRATION_VERSION_KEY: CURRENT_MIGRATION_VERSION,
         }
         
-        # Update config entry
-        hass.config_entries.async_update_entry(entry, data=new_data)
+        # Update config entry with new version
+        # Version 1 is the base version for migrated entries
+        hass.config_entries.async_update_entry(
+            entry, 
+            data=new_data,
+            version=1
+        )
         
         _LOGGER.info(
-            "Migration successful for entry: %s",
+            "Migration successful for entry: %s (updated to version 1)",
             entry.title
         )
         
