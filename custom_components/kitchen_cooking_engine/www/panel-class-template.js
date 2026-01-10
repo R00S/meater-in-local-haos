@@ -60,6 +60,10 @@ class KitchenCookingPanel extends LitElement {
       _recipeQualityFilter: { type: String },
       // Phase 3.4: Recipe detail view
       _selectedRecipeDetail: { type: Object },
+      // Phase 3.5: Loading and error states
+      _isLoadingAppliances: { type: Boolean },
+      _isLoadingRecipes: { type: Boolean },
+      _errorMessage: { type: String },
     };
   }
 
@@ -99,6 +103,10 @@ class KitchenCookingPanel extends LitElement {
     this._recipeQualityFilter = 'acceptable'; // Show acceptable and better by default
     // Phase 3.4: Recipe detail view
     this._selectedRecipeDetail = null;
+    // Phase 3.5: Loading and error states
+    this._isLoadingAppliances = false;
+    this._isLoadingRecipes = false;
+    this._errorMessage = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -171,14 +179,21 @@ class KitchenCookingPanel extends LitElement {
 
   // Phase 3.3: Load appliances from new API
   async _loadAppliances() {
+    this._isLoadingAppliances = true;
+    this._errorMessage = null;
+    this.requestUpdate();
+    
     try {
       const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/appliances');
       if (response && response.appliances) {
         this._appliances = response.appliances;
-        this.requestUpdate();
       }
     } catch (e) {
-      console.log('Could not load appliances:', e);
+      console.error('Could not load appliances:', e);
+      this._errorMessage = 'Failed to load appliances. Please check your connection.';
+    } finally {
+      this._isLoadingAppliances = false;
+      this.requestUpdate();
     }
   }
 
@@ -191,21 +206,28 @@ class KitchenCookingPanel extends LitElement {
         this.requestUpdate();
       }
     } catch (e) {
-      console.log('Could not load features:', e);
+      console.error('Could not load features:', e);
     }
   }
 
   // Phase 3.3: Load compatible recipes
   async _loadCompatibleRecipes() {
+    this._isLoadingRecipes = true;
+    this._errorMessage = null;
+    this.requestUpdate();
+    
     try {
       const response = await this.hass.callApi('GET', 
         `kitchen_cooking_engine/recipes/compatible?min_quality=${this._recipeQualityFilter}`);
       if (response && response.recipes) {
         this._compatibleRecipes = response.recipes;
-        this.requestUpdate();
       }
     } catch (e) {
-      console.log('Could not load recipes:', e);
+      console.error('Could not load recipes:', e);
+      this._errorMessage = 'Failed to load recipes. Please check your connection.';
+    } finally {
+      this._isLoadingRecipes = false;
+      this.requestUpdate();
     }
   }
 
@@ -1249,11 +1271,30 @@ class KitchenCookingPanel extends LitElement {
         <p>${this._appliances.length} appliance${this._appliances.length !== 1 ? 's' : ''} configured</p>
       </div>
 
-      ${this._appliances.length === 0 ? html`
+      ${this._errorMessage ? html`
+        <ha-card class="error-card">
+          <div class="card-content error-message">
+            <p>⚠️ ${this._errorMessage}</p>
+            <button class="retry-btn" @click=${() => this._loadAppliances()}>
+              🔄 Retry
+            </button>
+          </div>
+        </ha-card>
+      ` : ''}
+
+      ${this._isLoadingAppliances ? html`
+        <ha-card>
+          <div class="card-content loading-state">
+            <div class="spinner"></div>
+            <p>Loading appliances...</p>
+          </div>
+        </ha-card>
+      ` : this._appliances.length === 0 ? html`
         <ha-card>
           <div class="card-content no-entities">
             <p>No appliances configured yet.</p>
-            <p>Go to <strong>Settings</strong> → <strong>Devices & Services</strong> to add appliances.</p>
+            <p>Go to <strong>Settings</strong> → <strong>Devices & Services</strong> → <strong>Add Integration</strong></p>
+            <p>Search for <strong>Kitchen Cooking Engine</strong> and add your appliances.</p>
           </div>
         </ha-card>
       ` : html`
@@ -1318,28 +1359,49 @@ class KitchenCookingPanel extends LitElement {
           <div class="button-group">
             <button 
               class="category-btn ${this._recipeQualityFilter === 'excellent' ? 'selected' : ''}" 
-              @click=${() => { this._recipeQualityFilter = 'excellent'; this._loadCompatibleRecipes(); }}>
+              @click=${() => { this._recipeQualityFilter = 'excellent'; this._loadCompatibleRecipes(); }}
+              ?disabled=${this._isLoadingRecipes}>
               ⭐ Excellent Only
             </button>
             <button 
               class="category-btn ${this._recipeQualityFilter === 'good' ? 'selected' : ''}" 
-              @click=${() => { this._recipeQualityFilter = 'good'; this._loadCompatibleRecipes(); }}>
+              @click=${() => { this._recipeQualityFilter = 'good'; this._loadCompatibleRecipes(); }}
+              ?disabled=${this._isLoadingRecipes}>
               ✅ Good or Better
             </button>
             <button 
               class="category-btn ${this._recipeQualityFilter === 'acceptable' ? 'selected' : ''}" 
-              @click=${() => { this._recipeQualityFilter = 'acceptable'; this._loadCompatibleRecipes(); }}>
+              @click=${() => { this._recipeQualityFilter = 'acceptable'; this._loadCompatibleRecipes(); }}
+              ?disabled=${this._isLoadingRecipes}>
               ⚠️ All Compatible
             </button>
           </div>
         </div>
       </ha-card>
 
-      ${this._compatibleRecipes.length === 0 ? html`
+      ${this._errorMessage ? html`
+        <ha-card class="error-card">
+          <div class="card-content error-message">
+            <p>⚠️ ${this._errorMessage}</p>
+            <button class="retry-btn" @click=${() => this._loadCompatibleRecipes()}>
+              🔄 Retry
+            </button>
+          </div>
+        </ha-card>
+      ` : ''}
+
+      ${this._isLoadingRecipes ? html`
+        <ha-card>
+          <div class="card-content loading-state">
+            <div class="spinner"></div>
+            <p>Loading recipes...</p>
+          </div>
+        </ha-card>
+      ` : this._compatibleRecipes.length === 0 ? html`
         <ha-card>
           <div class="card-content no-entities">
-            <p>No compatible recipes found.</p>
-            <p>Try adding more appliances or adjusting the quality filter.</p>
+            <p>No compatible recipes found with current filter.</p>
+            <p>Try adjusting the quality filter or adding more appliances.</p>
           </div>
         </ha-card>
       ` : html`
@@ -3286,6 +3348,68 @@ class KitchenCookingPanel extends LitElement {
 
       .secondary-btn:hover {
         opacity: 0.8;
+      }
+
+      /* Phase 3.5: Loading and Error States */
+      .loading-state {
+        text-align: center;
+        padding: 32px 16px;
+      }
+
+      .spinner {
+        border: 4px solid var(--divider-color);
+        border-top: 4px solid var(--primary-color);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 16px auto;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .loading-state p {
+        margin: 0;
+        color: var(--secondary-text-color);
+        font-size: 14px;
+      }
+
+      .error-card {
+        background: #ffebee;
+        border-left: 4px solid #f44336;
+      }
+
+      .error-message {
+        text-align: center;
+        color: #c62828;
+      }
+
+      .error-message p {
+        margin: 0 0 12px 0;
+        font-weight: 500;
+      }
+
+      .retry-btn {
+        padding: 8px 16px;
+        background: #f44336;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: opacity 0.2s;
+      }
+
+      .retry-btn:hover {
+        opacity: 0.9;
+      }
+
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
       }
     `;
   }
