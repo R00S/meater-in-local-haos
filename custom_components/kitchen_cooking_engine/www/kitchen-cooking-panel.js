@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 10 Jan 2026, 21:30 CET
+ * AUTO-GENERATED: 10 Jan 2026, 21:40 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 10 Jan 2026, 21:30 CET
+// Last generated: 10 Jan 2026, 21:40 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5984,6 +5984,16 @@ class KitchenCookingPanel extends LitElement {
         </div>
       </ha-card>
 
+      <ha-card>
+        <div class="card-content">
+          <h3>📖 Browse All Recipes</h3>
+          <p>View all compatible recipes across all your appliances</p>
+          <button class="action-btn" @click=${() => { this._showNinjaCombi = false; this._showRecipes = true; this._loadCompatibleRecipes(); }} style="width: 100%; margin-top: 8px;">
+            📖 Go to All Recipes
+          </button>
+        </div>
+      </ha-card>
+
       ${Object.entries(recipesByMode).map(([mode, recipes]) => html`
         <ha-card>
           <div class="card-content">
@@ -6015,12 +6025,17 @@ class KitchenCookingPanel extends LitElement {
       <div class="status-banner idle">
         <h2>🥘 ${recipe.name}</h2>
         <p>${recipe.description}</p>
-        <button class="history-btn" @click=${() => this._selectedNinjaRecipe = null} style="margin-top: 12px;">
-          ← Back to Recipes
-        </button>
-        <button class="action-btn" @click=${() => this._openRecipeInBuilder(recipe)} style="margin-top: 12px; margin-left: 8px;">
-          🛠️ Modify in Builder
-        </button>
+        <div style="display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap;">
+          <button class="history-btn" @click=${() => this._selectedNinjaRecipe = null}>
+            ← Back to Ninja Combi
+          </button>
+          <button class="action-btn" @click=${() => this._openRecipeInBuilder(recipe)}>
+            🛠️ Modify in Builder
+          </button>
+          <button class="history-btn" @click=${() => { this._selectedNinjaRecipe = null; this._showNinjaCombi = false; this._showRecipes = true; this._loadCompatibleRecipes(); }}>
+            📖 All Recipes
+          </button>
+        </div>
       </div>
 
       <ha-card>
@@ -6168,9 +6183,14 @@ class KitchenCookingPanel extends LitElement {
       <div class="status-banner idle">
         <h2>🛠️ Recipe Builder</h2>
         <p>Build custom Combi-Meal recipes with automatic parameter adjustment</p>
-        <button class="history-btn" @click=${() => { this._showRecipeBuilder = false; this._resetBuilder(); }} style="margin-top: 12px;">
-          ← Back to Recipes
-        </button>
+        <div style="display: flex; gap: 8px; margin-top: 12px;">
+          <button class="history-btn" @click=${() => { this._showRecipeBuilder = false; this._resetBuilder(); }}>
+            ← Back to Ninja Combi
+          </button>
+          <button class="history-btn" @click=${() => { this._showRecipeBuilder = false; this._showNinjaCombi = false; this._showRecipes = true; this._loadCompatibleRecipes(); }}>
+            📖 All Recipes
+          </button>
+        </div>
       </div>
 
       <ha-card>
@@ -6693,6 +6713,16 @@ class KitchenCookingPanel extends LitElement {
         </div>
       </ha-card>
 
+      <ha-card>
+        <div class="card-content">
+          <h3>🥘 Ninja Combi Recipes</h3>
+          <p>View Ninja Combi-specific recipes and use the Recipe Builder</p>
+          <button class="action-btn" @click=${() => { this._showRecipes = false; this._showNinjaCombi = true; }} style="width: 100%; margin-top: 8px;">
+            🥘 Go to Ninja Combi Recipes
+          </button>
+        </div>
+      </ha-card>
+
       ${this._errorMessage ? html`
         <ha-card class="error-card">
           <div class="card-content error-message">
@@ -6900,24 +6930,74 @@ class KitchenCookingPanel extends LitElement {
     this.requestUpdate();
   }
 
-  // Phase 3.4: Select alternative appliance combination
+  // Phase 3.4/4: Select alternative appliance combination
   _selectApplianceCombo(combo) {
-    // For now, just show an alert - in future this could actually configure the appliances
-    const comboNames = combo.map(appId => {
-      const appliance = this._appliances.find(a => a.id === appId);
-      return appliance ? appliance.name : appId;
-    }).join(' + ');
-    alert(`Selected combination: ${comboNames}\n\nThis combination will be used for cooking.`);
+    this._selectedApplianceCombo = combo;
+    this.requestUpdate();
   }
 
-  // Phase 3.4: Start cooking from recipe
-  _startCookFromRecipe(recipe, match) {
-    // TODO: Implement actual cooking start logic based on recipe requirements
-    // For now, show info about what would happen
-    alert(`Starting cook with recipe: ${recipe.name}\n\nUsing appliances:\n${match.suggested_appliances.map(id => {
+  // Phase 4: Start cooking from recipe
+  async _startCookFromRecipe(recipe, match) {
+    // Check if we have a temperature probe appliance
+    const probeAppliances = this._appliances.filter(app => 
+      app.features && app.features.includes('temperature_probe')
+    );
+    
+    if (probeAppliances.length === 0) {
+      alert(`Cannot start cooking session!\n\n` +
+        `This recipe requires temperature monitoring, but no MEATER+ probe is configured.\n\n` +
+        `Please add a MEATER+ appliance in:\n` +
+        `Settings → Devices & Services → Add Integration → Kitchen Cooking Engine`);
+      return;
+    }
+
+    // Find cooking session entities for temperature probes
+    const entities = this._findCookingEntities();
+    if (entities.length === 0) {
+      alert(`No cooking session entities available.\n\nPlease ensure your MEATER+ probe is configured properly.`);
+      return;
+    }
+
+    // For now, we'll use recipes to guide cook setup, but actual cooking uses the normal flow
+    // Future enhancement: Auto-populate fields based on recipe
+    
+    // Show a confirmation dialog
+    const applianceNames = match.suggested_appliances.map(id => {
       const app = this._appliances.find(a => a.id === id);
-      return app ? `- ${app.name}` : `- ${id}`;
-    }).join('\n')}\n\nThis would start the cooking process.`);
+      return app ? app.name : id;
+    }).join(', ');
+
+    const confirmMsg = `Start cooking session for:\n\n` +
+      `Recipe: ${recipe.name}\n` +
+      `Appliances: ${applianceNames}\n\n` +
+      `You'll be taken to the cooking setup screen where you can configure your cook.`;
+    
+    if (!confirm(confirmMsg)) {
+      return;
+    }
+
+    // Close the recipe detail and recipes view
+    this._selectedRecipeDetail = null;
+    this._showRecipes = false;
+    
+    // Store recipe info for reference (future: could auto-populate fields)
+    this._lastSelectedRecipe = {
+      recipe: recipe,
+      match: match
+    };
+    
+    this.requestUpdate();
+    
+    // Show a helpful message about manual setup
+    setTimeout(() => {
+      alert(`Recipe loaded!\n\n` +
+        `Now configure your cook on the setup screen:\n` +
+        `- Select protein and cut\n` +
+        `- Choose doneness level\n` +
+        `- Select cooking method\n` +
+        `- Start your cook\n\n` +
+        `Tip: The recipe "${recipe.name}" works best with ${applianceNames}.`);
+    }, 500);
   }
 
   // Phase 3.3: Helper methods for appliances and recipes
