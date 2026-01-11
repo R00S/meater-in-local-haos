@@ -395,30 +395,6 @@ class ApplianceManager:
             )
         
         return NinjaCombi(name=name, device_control=device_control, feature_types=feature_types)
-            
-            def __init__(self, appliance_name: str, device_ctrl):
-                super().__init__()
-                self.appliance_id = f"ninja_combi_{appliance_name.lower().replace(' ', '_')}"
-                self.name = appliance_name
-                self.brand = "Ninja"
-                self.model = "Combi"
-                self.device_control = device_ctrl
-                
-                # Ninja Combi features from catalog
-                self.features = {
-                    "combi_crisp": FEATURE_CATALOG.get("combi_crisp"),
-                    "air_fry": FEATURE_CATALOG.get("air_fry"),
-                    "steam": FEATURE_CATALOG.get("steam"),
-                }
-                self.recipes = []
-            
-            def get_supported_features(self):
-                return list(self.features.values())
-            
-            def get_recipes(self):
-                return self.recipes
-        
-        return NinjaCombiAppliance(name, device_control)
     
     def _create_multifry(
         self,
