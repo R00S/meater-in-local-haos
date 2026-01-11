@@ -149,8 +149,21 @@ class ApplianceRegistry:
             List of all recipes across all appliances
         """
         recipes = []
+        
+        # Get recipes from all registered appliances
         for appliance in self._appliances.values():
             recipes.extend(appliance.get_recipes())
+        
+        # Also include example recipes from central recipe database
+        # These are universal recipes that can be matched to any compatible appliances
+        try:
+            from ..recipes.examples import ALL_EXAMPLE_RECIPES
+            # Convert UnifiedRecipes to ApplianceRecipes if needed
+            # For now, include them as-is since matcher can handle both types
+            recipes.extend(ALL_EXAMPLE_RECIPES)
+        except Exception as ex:
+            _LOGGER.warning("Could not load example recipes: %s", ex)
+        
         return recipes
         
     def get_recipe_by_id(self, recipe_id: int) -> Optional[ApplianceRecipe]:
