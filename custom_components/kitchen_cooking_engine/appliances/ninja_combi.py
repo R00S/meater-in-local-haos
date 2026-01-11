@@ -84,6 +84,14 @@ class NinjaCombi(KitchenAppliance):
         # Store feature types for querying
         self._feature_types = default_features
     
+    def get_supported_features(self) -> List[CookingFeature]:
+        """Return list of cooking features this appliance supports.
+        
+        Returns:
+            List of CookingFeature objects supported by this appliance
+        """
+        return list(self.features.values())
+    
     def get_feature_type(self, feature_name: str) -> FeatureType:
         """Get the implementation type for a specific feature.
         
