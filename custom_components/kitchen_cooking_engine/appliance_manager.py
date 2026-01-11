@@ -244,14 +244,34 @@ class ApplianceManager:
         # For now, create a minimal appliance that declares probe features
         # The actual sensor logic remains in sensor.py until Phase 3.2
         
-        from .appliances import KitchenAppliance, FeatureType
+        from .appliances import KitchenAppliance, FeatureType, CookingFeature
+        from .features.catalog import FEATURE_CATALOG
         
         class MeaterPlusAppliance(KitchenAppliance):
             """Temporary MEATER+ appliance wrapper."""
             
             def __init__(self, name: str, config: Dict[str, Any]):
-                super().__init__(name, "MEATER+ Temperature Probe")
+                super().__init__()
+                self.appliance_id = f"meater_plus_{name.lower().replace(' ', '_')}"
+                self.name = name
+                self.appliance_type = "meater_plus"
                 self.config = config
+                
+                # Add MEATER+ features from catalog
+                self.features = {}
+                feature_names = ["temperature_probe", "ambient_temperature"]
+                for fname in feature_names:
+                    if fname in FEATURE_CATALOG:
+                        self.features[fname] = FEATURE_CATALOG[fname]
+                        self._feature_types[fname] = FeatureType.STANDARD
+            
+            def get_supported_features(self) -> List[CookingFeature]:
+                """Return list of cooking features this appliance supports."""
+                return list(self.features.values())
+            
+            def get_recipes(self) -> List:
+                """MEATER+ doesn't have recipes - it's a probe accessory."""
+                return []
             
             def get_features(self) -> Set[str]:
                 """Return MEATER+ features."""
