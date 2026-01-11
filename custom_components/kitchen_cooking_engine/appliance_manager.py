@@ -376,12 +376,15 @@ class ApplianceManager:
         Returns:
             Ninja Combi instance
         """
-        from .appliances import KitchenAppliance, CookingFeature, FeatureType, ApplianceDeviceControl
-        from .features.catalog import FEATURE_CATALOG
+        from .appliances.ninja_combi import NinjaCombi
+        from .appliances import ApplianceDeviceControl
         
         name = config_entry.data.get("name", "Ninja Combi")
         power_outlet = config_entry.data.get("power_outlet_entity")
         start_button = config_entry.data.get("start_button_entity")
+        
+        # Read custom feature types if user has modified them
+        feature_types = config_entry.data.get("features", {})
         
         # Create device control if entities configured
         device_control = None
@@ -391,10 +394,7 @@ class ApplianceManager:
                 start_button_entity=start_button
             )
         
-        # Create a minimal Ninja Combi appliance
-        # Full implementation with recipes will be in separate ninja_combi.py file
-        class NinjaCombiAppliance(KitchenAppliance):
-            """Ninja Combi appliance."""
+        return NinjaCombi(name=name, device_control=device_control, feature_types=feature_types)
             
             def __init__(self, appliance_name: str, device_ctrl):
                 super().__init__()
