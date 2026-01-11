@@ -45,6 +45,10 @@ from .const import (
     ATTR_TARGET_TEMP_F,
     ATTR_TEMP_HISTORY,
     ATTR_USDA_SAFE,
+    ATTR_ACTIVE_APPLIANCES,
+    ATTR_PRIMARY_APPLIANCE,
+    ATTR_SECONDARY_APPLIANCES,
+    ATTR_MULTI_COOK_SESSION_ID,
     CONF_AMBIENT_SENSOR,
     CONF_AUTO_SHUTOFF,
     CONF_AUTO_START,
@@ -233,6 +237,12 @@ class CookingSessionSensor(SensorEntity):
         # Indicator light state (saved when cook starts)
         self._light_original_state: dict | None = None
         self._light_flash_task: asyncio.Task | None = None
+        
+        # Phase 4: Multi-appliance session tracking
+        self._active_appliances: list[str] = []  # List of appliance IDs involved in session
+        self._primary_appliance: str | None = None  # Main appliance (e.g., oven)
+        self._secondary_appliances: list[str] = []  # Support appliances (e.g., probe)
+        self._multi_cook_session_id: str | None = None  # Reference to coordinator session
 
         # Entity attributes
         self._attr_unique_id = f"{DOMAIN}_{entry_id}_session"
@@ -298,6 +308,11 @@ class CookingSessionSensor(SensorEntity):
             # Expose sensor entity IDs for HA history graph
             "tip_sensor": self._temp_sensor,
             "ambient_sensor": self._ambient_sensor,
+            # Phase 4: Multi-appliance session attributes
+            ATTR_ACTIVE_APPLIANCES: self._active_appliances,
+            ATTR_PRIMARY_APPLIANCE: self._primary_appliance,
+            ATTR_SECONDARY_APPLIANCES: self._secondary_appliances,
+            ATTR_MULTI_COOK_SESSION_ID: self._multi_cook_session_id,
         }
 
         if self._session_start:

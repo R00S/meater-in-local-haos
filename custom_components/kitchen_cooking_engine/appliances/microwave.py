@@ -1,8 +1,8 @@
 """
 Microwave Oven appliance support.
 
-Last Updated: 08 Jan 2026, 21:50 CET
-Last Change: Initial microwave implementation
+Last Updated: 11 Jan 2026, 00:00 CET
+Last Change: Updated to use KitchenAppliance base class with per-appliance feature types
 
 This module implements support for standard residential microwave ovens.
 Supports basic microwave cooking, defrost, and reheat functions.
@@ -15,11 +15,14 @@ FEATURES:
 - Convection Microwave (MODIFIED) - Combination microwave + convection (if available)
 """
 
-from typing import Dict, Set
+from typing import List
 from ..appliances import (
     KitchenAppliance,
+    CookingFeature,
     FeatureType,
+    ApplianceRecipe,
 )
+from ..features.catalog import FEATURE_CATALOG
 
 
 class Microwave(KitchenAppliance):
@@ -34,72 +37,59 @@ class Microwave(KitchenAppliance):
             has_convection: Whether it's a combination microwave+convection oven
             has_sensor: Whether it has automatic sensor cooking
         """
+        super().__init__()
+        
+        self.appliance_id = f"microwave_{wattage}w"
+        self.brand = "Generic"
+        self.model = "Standard"
+        
+        # Type-specific attributes
         self.wattage = wattage
         self.has_convection = has_convection
         self.has_sensor = has_sensor
-    
-    def get_features(self) -> Set[str]:
-        """Get list of features supported by this microwave."""
-        features = {
-            "microwave",     # Microwave cooking
-            "defrost",       # Defrosting mode
-            "reheat",        # Reheating mode
-        }
         
-        if self.has_sensor:
-            features.add("sensor_cook")
-        
-        if self.has_convection:
-            features.add("convection_microwave")
-            features.add("bake")  # Convection microwaves can bake
-        
-        return features
-    
-    def get_feature_implementation(self, feature: str) -> FeatureType:
-        """
-        Get implementation type for a feature.
-        
-        Microwave cooking requires recipe adaptation due to different heating
-        mechanism. Most features are MODIFIED.
-        """
-        supported_features = self.get_features()
-        
-        if feature not in supported_features:
-            raise ValueError(f"Feature '{feature}' not supported by this microwave")
-        
-        # Reheating is straightforward - STANDARD
-        if feature == "reheat":
-            return FeatureType.STANDARD
-        
-        # All other microwave features require adaptation - MODIFIED
-        # (Different cooking times, power levels, techniques)
-        return FeatureType.MODIFIED
-    
-    def get_display_name(self) -> str:
-        """Get human-readable name for this appliance."""
-        if self.has_convection:
-            return f"Convection Microwave ({self.wattage}W)"
-        elif self.has_sensor:
-            return f"Sensor Microwave ({self.wattage}W)"
+        # Set display name
+        if has_convection:
+            self.name = f"Convection Microwave ({wattage}W)"
+        elif has_sensor:
+            self.name = f"Sensor Microwave ({wattage}W)"
         else:
-            return f"Microwave ({self.wattage}W)"
-    
-    def get_capabilities(self) -> Dict[str, any]:
-        """Get appliance-specific capabilities and settings."""
-        # Calculate power level relative to standard 1000W
-        power_factor = self.wattage / 1000.0
+            self.name = f"Microwave ({wattage}W)"
         
-        return {
-            "appliance_type": "microwave",
-            "wattage": self.wattage,
-            "power_factor": power_factor,  # For recipe time adjustment
-            "has_convection": self.has_convection,
-            "has_sensor": self.has_sensor,
-            "supports_probe": False,  # Metal probes not safe in microwaves
-            "power_levels": 10,  # Typical microwave power levels
-            "turntable": True,  # Most microwaves have turntable
-            "capacity_liters": 20 if not self.has_convection else 30,  # Typical sizes
+        # Build features
+        self.features = {
+            "microwave": FEATURE_CATALOG["microwave"],
+            "defrost": FEATURE_CATALOG["defrost"],
+            "reheat": FEATURE_CATALOG["reheat"],
         }
+        
+        # Set feature types - microwave requires recipe adaptation
+        self._feature_types = {
+            "microwave": FeatureType.MODIFIED,  # Requires adaptation
+            "defrost": FeatureType.MODIFIED,    # Requires adaptation
+            "reheat": FeatureType.STANDARD,     # Straightforward reheating
+        }
+        
+        if has_sensor:
+            self.features["sensor_cook"] = FEATURE_CATALOG["sensor_cook"]
+            self._feature_types["sensor_cook"] = FeatureType.MODIFIED
+        
+        if has_convection:
+            self.features["convection_microwave"] = FEATURE_CATALOG["convection_microwave"]
+            self.features["bake"] = FEATURE_CATALOG["bake"]
+            self._feature_types["convection_microwave"] = FeatureType.MODIFIED
+            self._feature_types["bake"] = FeatureType.MODIFIED
+        
+        # No built-in recipes
+        self.recipes = []
+    
+    def get_supported_features(self) -> List[CookingFeature]:
+        """Return list of supported cooking features."""
+        return list(self.features.values())
+    
+    def get_recipes(self) -> List[ApplianceRecipe]:
+        """Return appliance-specific recipes (none for microwaves)."""
+        return []
     
     def adapt_time_for_wattage(self, recipe_minutes: int, recipe_wattage: int = 1000) -> int:
         """

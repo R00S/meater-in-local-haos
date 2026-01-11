@@ -15,7 +15,7 @@ import os
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from appliances import CookingFeature, FeatureType, OilLevel
+from appliances import CookingFeature, OilLevel
 
 
 # =============================================================================
@@ -29,7 +29,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "temperature_probe": CookingFeature(
         name="temperature_probe",
         display_name="Temperature Probe",
-        feature_type=FeatureType.STANDARD,
         temperature_range_c=(0, 100),
         temperature_range_f=(32, 212),
         supports_probe=True,
@@ -40,7 +39,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "ambient_temperature": CookingFeature(
         name="ambient_temperature",
         display_name="Ambient Temperature",
-        feature_type=FeatureType.STANDARD,
         temperature_range_c=(0, 300),
         temperature_range_f=(32, 572),
         icon="mdi:thermometer-lines",
@@ -53,7 +51,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "oven": CookingFeature(
         name="oven",
         display_name="Oven",
-        feature_type=FeatureType.STANDARD,
         temperature_range_c=(50, 250),
         temperature_range_f=(122, 482),
         supports_probe=True,
@@ -64,7 +61,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "convection": CookingFeature(
         name="convection",
         display_name="Convection Oven",
-        feature_type=FeatureType.STANDARD,
         temperature_range_c=(50, 250),
         temperature_range_f=(122, 482),
         supports_probe=True,
@@ -75,7 +71,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "grill": CookingFeature(
         name="grill",
         display_name="Grill",
-        feature_type=FeatureType.STANDARD,
         temperature_range_c=(150, 280),
         temperature_range_f=(302, 536),
         supports_probe=True,
@@ -86,7 +81,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "broil": CookingFeature(
         name="broil",
         display_name="Broil",
-        feature_type=FeatureType.STANDARD,
         temperature_range_c=(200, 280),
         temperature_range_f=(392, 536),
         supports_probe=False,
@@ -97,7 +91,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "roast": CookingFeature(
         name="roast",
         display_name="Roast",
-        feature_type=FeatureType.STANDARD,
         temperature_range_c=(120, 220),
         temperature_range_f=(248, 428),
         supports_probe=True,
@@ -108,7 +101,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "bake": CookingFeature(
         name="bake",
         display_name="Bake",
-        feature_type=FeatureType.STANDARD,
         temperature_range_c=(50, 230),
         temperature_range_f=(122, 446),
         supports_probe=False,
@@ -119,7 +111,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "steam": CookingFeature(
         name="steam",
         display_name="Steam",
-        feature_type=FeatureType.STANDARD,
         temperature_range_c=(80, 100),
         temperature_range_f=(176, 212),
         supports_probe=True,
@@ -133,7 +124,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "air_fry": CookingFeature(
         name="air_fry",
         display_name="Air Fry",
-        feature_type=FeatureType.MODIFIED,
         temperature_range_c=(80, 200),
         temperature_range_f=(176, 392),
         supports_probe=True,
@@ -146,7 +136,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "pressure_cook": CookingFeature(
         name="pressure_cook",
         display_name="Pressure Cook",
-        feature_type=FeatureType.MODIFIED,
         temperature_range_c=(100, 120),
         temperature_range_f=(212, 248),
         supports_probe=False,
@@ -159,7 +148,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "slow_cook": CookingFeature(
         name="slow_cook",
         display_name="Slow Cook",
-        feature_type=FeatureType.MODIFIED,
         temperature_range_c=(80, 100),
         temperature_range_f=(176, 212),
         supports_probe=True,
@@ -172,7 +160,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "dehydrate": CookingFeature(
         name="dehydrate",
         display_name="Dehydrate",
-        feature_type=FeatureType.MODIFIED,
         temperature_range_c=(35, 75),
         temperature_range_f=(95, 167),
         supports_probe=False,
@@ -183,7 +170,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "fry": CookingFeature(
         name="fry",
         display_name="Fry",
-        feature_type=FeatureType.MODIFIED,
         temperature_range_c=(150, 190),
         temperature_range_f=(302, 374),
         supports_probe=True,
@@ -197,7 +183,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "pan_fry": CookingFeature(
         name="pan_fry",
         display_name="Pan Fry",
-        feature_type=FeatureType.MODIFIED,
         temperature_range_c=(140, 180),
         temperature_range_f=(284, 356),
         supports_probe=True,
@@ -210,7 +195,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "sear": CookingFeature(
         name="sear",
         display_name="Sear",
-        feature_type=FeatureType.MODIFIED,
         temperature_range_c=(180, 220),
         temperature_range_f=(356, 428),
         supports_probe=True,
@@ -223,7 +207,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "prove": CookingFeature(
         name="prove",
         display_name="Prove/Proof",
-        feature_type=FeatureType.MODIFIED,
         temperature_range_c=(25, 40),
         temperature_range_f=(77, 104),
         supports_probe=False,
@@ -234,7 +217,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "casserole_risotto": CookingFeature(
         name="casserole_risotto",
         display_name="Casserole/Risotto",
-        feature_type=FeatureType.MODIFIED,
         temperature_range_c=(80, 180),
         temperature_range_f=(176, 356),
         supports_probe=True,
@@ -248,7 +230,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "gratin_grill": CookingFeature(
         name="gratin_grill",
         display_name="Gratin/Grilled",
-        feature_type=FeatureType.MODIFIED,
         temperature_range_c=(180, 200),
         temperature_range_f=(356, 392),
         supports_probe=False,
@@ -261,7 +242,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "pizza_bread": CookingFeature(
         name="pizza_bread",
         display_name="Pizza/Bread",
-        feature_type=FeatureType.MODIFIED,
         temperature_range_c=(180, 250),
         temperature_range_f=(356, 482),
         supports_probe=False,
@@ -274,7 +254,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "dessert": CookingFeature(
         name="dessert",
         display_name="Dessert",
-        feature_type=FeatureType.MODIFIED,
         temperature_range_c=(140, 180),
         temperature_range_f=(284, 356),
         supports_probe=False,
@@ -287,7 +266,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "rice_pasta": CookingFeature(
         name="rice_pasta",
         display_name="Rice/Pasta",
-        feature_type=FeatureType.MODIFIED,
         temperature_range_c=(80, 100),
         temperature_range_f=(176, 212),
         supports_probe=False,
@@ -303,7 +281,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "combi_crisp": CookingFeature(
         name="combi_crisp",
         display_name="Combi Crisp",
-        feature_type=FeatureType.SPECIAL,
         temperature_range_c=(150, 230),
         temperature_range_f=(302, 446),
         supports_probe=True,
@@ -314,7 +291,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "combi_bake": CookingFeature(
         name="combi_bake",
         display_name="Combi Bake",
-        feature_type=FeatureType.SPECIAL,
         temperature_range_c=(100, 230),
         temperature_range_f=(212, 446),
         supports_probe=False,
@@ -325,7 +301,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "combi_roast": CookingFeature(
         name="combi_roast",
         display_name="Combi Roast",
-        feature_type=FeatureType.SPECIAL,
         temperature_range_c=(120, 220),
         temperature_range_f=(248, 428),
         supports_probe=True,
@@ -336,7 +311,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "combi_meal": CookingFeature(
         name="combi_meal",
         display_name="Combi Meal",
-        feature_type=FeatureType.SPECIAL,
         temperature_range_c=(100, 200),
         temperature_range_f=(212, 392),
         supports_probe=True,
@@ -347,7 +321,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "sous_vide": CookingFeature(
         name="sous_vide",
         display_name="Sous Vide",
-        feature_type=FeatureType.SPECIAL,
         temperature_range_c=(50, 90),
         temperature_range_f=(122, 194),
         supports_probe=True,
@@ -361,7 +334,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "boil": CookingFeature(
         name="boil",
         display_name="Boil",
-        feature_type=FeatureType.STANDARD,
         temperature_range_c=(100, 100),
         temperature_range_f=(212, 212),
         supports_probe=False,
@@ -372,7 +344,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "simmer": CookingFeature(
         name="simmer",
         display_name="Simmer",
-        feature_type=FeatureType.STANDARD,
         temperature_range_c=(85, 95),
         temperature_range_f=(185, 203),
         supports_probe=True,
@@ -385,7 +356,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "saute": CookingFeature(
         name="saute",
         display_name="Sauté",
-        feature_type=FeatureType.STANDARD,
         temperature_range_c=(150, 180),
         temperature_range_f=(302, 356),
         supports_probe=False,
@@ -401,7 +371,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "microwave": CookingFeature(
         name="microwave",
         display_name="Microwave",
-        feature_type=FeatureType.MODIFIED,
         supports_probe=False,
         icon="mdi:microwave",
         description="Microwave heating (requires recipe adaptation)"
@@ -410,7 +379,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "defrost": CookingFeature(
         name="defrost",
         display_name="Defrost",
-        feature_type=FeatureType.MODIFIED,
         supports_probe=False,
         icon="mdi:snowflake-off",
         description="Microwave defrosting"
@@ -419,7 +387,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "reheat": CookingFeature(
         name="reheat",
         display_name="Reheat",
-        feature_type=FeatureType.STANDARD,
         supports_probe=False,
         icon="mdi:fire",
         description="Reheating pre-cooked food"
@@ -428,7 +395,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "sensor_cook": CookingFeature(
         name="sensor_cook",
         display_name="Sensor Cook",
-        feature_type=FeatureType.MODIFIED,
         supports_probe=False,
         icon="mdi:auto-fix",
         description="Automatic sensor-based cooking"
@@ -437,7 +403,6 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
     "convection_microwave": CookingFeature(
         name="convection_microwave",
         display_name="Convection Microwave",
-        feature_type=FeatureType.MODIFIED,
         temperature_range_c=(100, 230),
         temperature_range_f=(212, 446),
         supports_probe=False,
@@ -470,18 +435,6 @@ def get_all_features() -> List[CookingFeature]:
         List of all CookingFeature definitions
     """
     return list(FEATURE_CATALOG.values())
-
-
-def get_features_by_type(feature_type: FeatureType) -> List[CookingFeature]:
-    """Get all features of a specific type.
-    
-    Args:
-        feature_type: The type of features to retrieve
-        
-    Returns:
-        List of CookingFeature definitions matching the type
-    """
-    return [f for f in FEATURE_CATALOG.values() if f.feature_type == feature_type]
 
 
 def get_feature_names() -> Set[str]:

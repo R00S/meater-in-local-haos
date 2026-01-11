@@ -1,8 +1,8 @@
 """
 De'Longhi MultiFry FH1394 appliance support.
 
-Last Updated: 08 Jan 2026, 10:50 CET
-Last Change: Initial De'Longhi MultiFry implementation with all cooking modes
+Last Updated: 10 Jan 2026, 23:50 CET
+Last Change: Updated to use FEATURE_CATALOG with per-appliance feature types
 
 This module implements support for the De'Longhi MultiFry FH1394, a multi-cooker
 with hot air circulation and optional rotating paddle.
@@ -36,6 +36,7 @@ from ..appliances import (
     ApplianceRecipe,
     CookingPhase,
 )
+from ..features.catalog import FEATURE_CATALOG
 
 
 class MultiFryAdapter(RecipeAdapter):
@@ -133,142 +134,31 @@ class DelonghiMultiFry(KitchenAppliance):
         self.model = "FH1394"
         self.adapter = MultiFryAdapter()
         
-        # Initialize features
+        # Initialize features from catalog
         self.features = {
-            # Casserole/Risotto - MODIFIED (adapts slow-cooker recipes)
-            "casserole_risotto": CookingFeature(
-                name="casserole_risotto",
-                display_name="Casserole/Risotto",
-                feature_type=FeatureType.MODIFIED,
-                temperature_range_c=(80, 180),
-                temperature_range_f=(176, 356),
-                supports_probe=True,  # For meat-based casseroles
-                supports_paddle=True,  # Uses bowl J with paddle
-                oil_levels=[OilLevel.ZERO, OilLevel.LOW, OilLevel.MEDIUM],
-                default_oil=OilLevel.LOW,
-                icon="mdi:pot-steam",
-                description="Slow cooking with paddle for risotto, casseroles, and stews"
-            ),
-            
-            # Fry - MODIFIED (adapts frying recipes)
-            "fry": CookingFeature(
-                name="fry",
-                display_name="Fry",
-                feature_type=FeatureType.MODIFIED,
-                temperature_range_c=(150, 180),
-                temperature_range_f=(302, 356),
-                supports_probe=True,  # For proteins
-                supports_paddle=True,  # Can use with or without paddle
-                oil_levels=[OilLevel.LOW, OilLevel.MEDIUM, OilLevel.RICH],
-                default_oil=OilLevel.MEDIUM,
-                icon="mdi:french-fries",
-                description="Traditional frying with hot air circulation - uses less oil"
-            ),
-            
-            # Roast - STANDARD (uses recipes without modification)
-            "roast": CookingFeature(
-                name="roast",
-                display_name="Roast",
-                feature_type=FeatureType.STANDARD,
-                temperature_range_c=(160, 220),
-                temperature_range_f=(320, 428),
-                supports_probe=True,  # Perfect for roasting proteins
-                supports_paddle=False,  # Uses bowl Z without paddle
-                oil_levels=[OilLevel.ZERO, OilLevel.LOW],
-                default_oil=OilLevel.LOW,
-                icon="mdi:turkey",
-                description="Roasting meats and vegetables"
-            ),
-            
-            # Gratin/Grilled - STANDARD
-            "gratin_grill": CookingFeature(
-                name="gratin_grill",
-                display_name="Gratin/Grilled",
-                feature_type=FeatureType.STANDARD,
-                temperature_range_c=(180, 200),
-                temperature_range_f=(356, 392),
-                supports_probe=False,
-                supports_paddle=False,
-                oil_levels=[OilLevel.ZERO, OilLevel.LOW],
-                default_oil=OilLevel.ZERO,
-                icon="mdi:grill",
-                description="Top heat for gratins and grilling"
-            ),
-            
-            # Pizza/Bread - STANDARD
-            "pizza_bread": CookingFeature(
-                name="pizza_bread",
-                display_name="Pizza/Bread",
-                feature_type=FeatureType.STANDARD,
-                temperature_range_c=(180, 220),
-                temperature_range_f=(356, 428),
-                supports_probe=False,
-                supports_paddle=False,
-                oil_levels=[OilLevel.ZERO],
-                default_oil=OilLevel.ZERO,
-                icon="mdi:pizza",
-                description="Baking pizza and bread"
-            ),
-            
-            # Dessert - MODIFIED (adapts baking recipes)
-            "dessert": CookingFeature(
-                name="dessert",
-                display_name="Dessert",
-                feature_type=FeatureType.MODIFIED,
-                temperature_range_c=(140, 180),
-                temperature_range_f=(284, 356),
-                supports_probe=False,
-                supports_paddle=False,
-                oil_levels=[OilLevel.ZERO, OilLevel.LOW],
-                default_oil=OilLevel.ZERO,
-                icon="mdi:cupcake",
-                description="Cakes, brownies, and other desserts"
-            ),
-            
-            # Air Fry - MODIFIED (user requested)
-            "air_fry": CookingFeature(
-                name="air_fry",
-                display_name="Air Fry",
-                feature_type=FeatureType.MODIFIED,
-                temperature_range_c=(160, 200),
-                temperature_range_f=(320, 392),
-                supports_probe=True,  # For proteins
-                supports_paddle=False,  # High heat, no paddle
-                oil_levels=[OilLevel.ZERO, OilLevel.LOW],
-                default_oil=OilLevel.ZERO,
-                icon="mdi:air-filter",
-                description="Air frying with minimal/no oil"
-            ),
-            
-            # Pan Fry - MODIFIED (user requested, non-stick only)
-            "pan_fry": CookingFeature(
-                name="pan_fry",
-                display_name="Pan Fry",
-                feature_type=FeatureType.MODIFIED,
-                temperature_range_c=(160, 180),
-                temperature_range_f=(320, 356),
-                supports_probe=True,  # For proteins
-                supports_paddle=False,  # Non-stick bowl Z only
-                oil_levels=[OilLevel.LOW, OilLevel.MEDIUM],
-                default_oil=OilLevel.LOW,
-                icon="mdi:frying-pan",
-                description="Pan frying in non-stick bowl (bowl Z only)"
-            ),
-            
-            # Sear - MODIFIED (user requested, non-stick only)
-            "sear": CookingFeature(
-                name="sear",
-                display_name="Sear",
-                feature_type=FeatureType.MODIFIED,
-                temperature_range_c=(180, 200),
-                temperature_range_f=(356, 392),
-                supports_probe=True,  # For checking doneness after searing
-                supports_paddle=False,  # Non-stick bowl Z only
-                oil_levels=[OilLevel.LOW, OilLevel.MEDIUM],
-                default_oil=OilLevel.LOW,
-                icon="mdi:fire",
-                description="High-heat searing in non-stick bowl (bowl Z only)"
-            ),
+            "casserole_risotto": FEATURE_CATALOG["casserole_risotto"],
+            "fry": FEATURE_CATALOG["fry"],
+            "roast": FEATURE_CATALOG["roast"],
+            "gratin_grill": FEATURE_CATALOG["gratin_grill"],
+            "pizza_bread": FEATURE_CATALOG["pizza_bread"],
+            "dessert": FEATURE_CATALOG["dessert"],
+            "air_fry": FEATURE_CATALOG["air_fry"],
+            "pan_fry": FEATURE_CATALOG["pan_fry"],
+            "sear": FEATURE_CATALOG["sear"],
+        }
+        
+        # Set feature types for this specific appliance
+        # Key insight: MultiFry MODIFIES most features due to hot air circulation
+        self._feature_types = {
+            "casserole_risotto": FeatureType.MODIFIED,  # Adapts slow-cooker recipes
+            "fry": FeatureType.MODIFIED,                # Adapts frying recipes (less oil)
+            "roast": FeatureType.STANDARD,              # Standard roasting
+            "gratin_grill": FeatureType.STANDARD,       # Standard gratin/grill
+            "pizza_bread": FeatureType.STANDARD,        # Standard baking
+            "dessert": FeatureType.MODIFIED,            # Adapts baking recipes
+            "air_fry": FeatureType.MODIFIED,            # MultiFry's air fry is slower than dedicated air fryers
+            "pan_fry": FeatureType.MODIFIED,            # Non-stick bowl only, different from stovetop
+            "sear": FeatureType.MODIFIED,               # Non-stick bowl only, different from stovetop
         }
         
         # Initialize recipes

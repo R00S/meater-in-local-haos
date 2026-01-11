@@ -169,3 +169,48 @@ appliance_start:
     entity:
       domain: sensor
       integration: kitchen_cooking_engine
+
+start_multi_appliance_cook:
+  name: Start Multi-Appliance Cook
+  description: >
+    Start a coordinated cooking session across multiple appliances (Phase 4).
+    This service coordinates cooking with multiple appliances simultaneously,
+    such as oven + probe or air fryer + temperature monitoring.
+    Ideal for automations that need to orchestrate complex multi-appliance recipes.
+  fields:
+    recipe_id:
+      name: Recipe ID
+      description: The ID of the recipe to cook. Can be a string or number.
+      required: true
+      example: 1001
+      selector:
+        text:
+    appliances:
+      name: Appliance Assignments
+      description: Map of appliance roles to entity IDs. Keys can be 'oven', 'probe', 'air_fryer', 'combi', etc.
+      required: false
+      example:
+        oven: sensor.ninja_combi_cooking_session
+        probe: sensor.meater_cooking_session
+    target_temp_c:
+      name: Target Temperature (Celsius)
+      description: Optional target temperature in Celsius for the cook.
+      required: false
+      example: 74
+      selector:
+        number:
+          min: 30
+          max: 250
+          unit_of_measurement: "°C"
+          mode: box
+    cook_time_minutes:
+      name: Cook Time (Minutes)
+      description: Optional cook time in minutes.
+      required: false
+      example: 45
+      selector:
+        number:
+          min: 1
+          max: 1440
+          unit_of_measurement: "minutes"
+          mode: box
