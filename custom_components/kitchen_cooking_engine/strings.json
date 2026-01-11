@@ -29,7 +29,8 @@
     },
     "error": {
       "sensor_not_found": "The selected sensor was not found.",
-      "unknown": "An unexpected error occurred."
+      "unknown": "An unexpected error occurred.",
+      "no_features_selected": "Please select at least one feature for your custom appliance."
     },
     "abort": {
       "already_configured": "This sensor is already configured for cooking."

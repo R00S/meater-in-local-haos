@@ -1,8 +1,8 @@
 """
 Custom Appliance support for user-defined appliances.
 
-Last Updated: 10 Jan 2026, 23:55 CET
-Last Change: Updated to use per-appliance feature types
+Last Updated: 11 Jan 2026, 01:00 CET
+Last Change: Updated to support new per-feature type configuration format
 
 This module allows users to create custom appliances by selecting features
 from the feature catalog. Once configured, custom appliances are treated
@@ -14,7 +14,7 @@ that implemented appliances have default features, while custom appliances
 require the user to select features. After configuration, they are identical.
 """
 
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Union
 from ..appliances import (
     KitchenAppliance,
     CookingFeature,
@@ -31,7 +31,7 @@ class CustomAppliance(KitchenAppliance):
     def __init__(
         self,
         name: str,
-        config_features: Dict[str, List[str]],
+        config_features: Union[Dict[str, str], Dict[str, List[str]]],
         device_control: Optional[ApplianceDeviceControl] = None
     ):
         """
@@ -39,10 +39,17 @@ class CustomAppliance(KitchenAppliance):
         
         Args:
             name: User-provided appliance name
-            config_features: Dictionary with feature lists:
-                - "standard_features": List of standard feature names
-                - "modified_features": List of modified feature names  
-                - "special_features": List of special feature names
+            config_features: Feature configuration in one of two formats:
+                NEW FORMAT (preferred):
+                    {"feature_name": "standard"|"modified"|"special", ...}
+                    Example: {"air_fry": "standard", "oven": "modified"}
+                
+                OLD FORMAT (backward compatibility):
+                    {
+                        "standard_features": ["oven", "grill"],
+                        "modified_features": ["air_fry", "roast"],
+                        "special_features": ["combi_crisp"]
+                    }
             device_control: Optional device control configuration
         """
         super().__init__()
@@ -57,6 +64,64 @@ class CustomAppliance(KitchenAppliance):
         self.features = {}
         self._feature_types = {}
         
+        # Detect which format we're using
+        if self._is_new_format(config_features):
+            # NEW FORMAT: {"feature_name": "standard"|"modified"|"special"}
+            self._load_new_format(config_features)
+        else:
+            # OLD FORMAT: {"standard_features": [...], "modified_features": [...], ...}
+            self._load_old_format(config_features)
+        
+        # Custom appliances don't have pre-defined recipes
+        # (users can add recipes through recipe matcher)
+        self.recipes = []
+    
+    def _is_new_format(self, config_features: Dict) -> bool:
+        """
+        Detect if config is in new format or old format.
+        
+        New format: Keys are feature names from FEATURE_CATALOG
+        Old format: Keys are "standard_features", "modified_features", "special_features"
+        """
+        if not config_features:
+            return True  # Empty dict is technically new format
+        
+        # Check if any key is one of the old format keys
+        old_format_keys = {"standard_features", "modified_features", "special_features"}
+        return not any(key in old_format_keys for key in config_features.keys())
+    
+    def _load_new_format(self, config_features: Dict[str, str]) -> None:
+        """
+        Load features from new format.
+        
+        Format: {"feature_name": "standard"|"modified"|"special"}
+        """
+        for feature_name, feature_type_str in config_features.items():
+            if feature_name in FEATURE_CATALOG:
+                # Add feature definition from catalog
+                self.features[feature_name] = FEATURE_CATALOG[feature_name]
+                
+                # Map string to FeatureType enum
+                if feature_type_str == "standard":
+                    self._feature_types[feature_name] = FeatureType.STANDARD
+                elif feature_type_str == "modified":
+                    self._feature_types[feature_name] = FeatureType.MODIFIED
+                elif feature_type_str == "special":
+                    self._feature_types[feature_name] = FeatureType.SPECIAL
+                else:
+                    # Default to STANDARD if unknown
+                    self._feature_types[feature_name] = FeatureType.STANDARD
+    
+    def _load_old_format(self, config_features: Dict[str, List[str]]) -> None:
+        """
+        Load features from old format (backward compatibility).
+        
+        Format: {
+            "standard_features": ["oven", "grill"],
+            "modified_features": ["air_fry"],
+            "special_features": ["combi_crisp"]
+        }
+        """
         # Add standard features
         for feature_name in config_features.get("standard_features", []):
             if feature_name in FEATURE_CATALOG:
@@ -74,10 +139,6 @@ class CustomAppliance(KitchenAppliance):
             if feature_name in FEATURE_CATALOG:
                 self.features[feature_name] = FEATURE_CATALOG[feature_name]
                 self._feature_types[feature_name] = FeatureType.SPECIAL
-        
-        # Custom appliances don't have pre-defined recipes
-        # (users can add recipes through recipe matcher)
-        self.recipes = []
     
     def get_supported_features(self) -> List[CookingFeature]:
         """Return list of cooking features this appliance supports."""

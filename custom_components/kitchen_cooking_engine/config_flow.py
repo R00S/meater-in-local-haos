@@ -1,7 +1,7 @@
 """Config flow for Kitchen Cooking Engine integration.
 
-Last Updated: 9 Jan 2026, 00:10 CET
-Last Change: Phase 3.2 - Redesigned for multi-appliance support
+Last Updated: 11 Jan 2026, 01:00 CET
+Last Change: Redesigned custom appliance config to use per-feature type selection
 """
 
 from __future__ import annotations
@@ -31,6 +31,7 @@ from .const import (
     TEMP_CELSIUS,
     TEMP_FAHRENHEIT,
 )
+from .features.catalog import FEATURE_CATALOG
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -44,6 +45,15 @@ CONF_NUM_BURNERS = "num_burners"
 CONF_MICROWAVE_WATTAGE = "wattage"
 CONF_HAS_SENSOR_COOK = "has_sensor"
 CONF_MULTIFRY_BOWL_TYPE = "bowl_type"
+
+# Custom appliance feature configuration
+CONF_FEATURES = "features"  # New: stores {"feature_name": "standard"|"modified"|"special"}
+
+# Feature type options for UI
+FEATURE_TYPE_STANDARD = "standard"
+FEATURE_TYPE_MODIFIED = "modified"
+FEATURE_TYPE_SPECIAL = "special"
+FEATURE_TYPE_OPTIONS = [FEATURE_TYPE_STANDARD, FEATURE_TYPE_MODIFIED, FEATURE_TYPE_SPECIAL]
 
 # Appliance type options
 APPLIANCE_TYPE_MEATER_PLUS = "meater_plus"
@@ -352,85 +362,87 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     async def async_step_custom(
         self, user_input: dict[str, Any] | None = None
     ) -> config_entries.ConfigFlowResult:
-        """Configure custom appliance with feature selection."""
+        """Configure custom appliance with per-feature type selection."""
         errors: dict[str, str] = {}
 
         if user_input is not None:
-            # Merge with saved data
-            self._config_data.update(user_input)
-            
-            # Extract selected features from checkboxes
-            standard_features = []
-            modified_features = []
-            special_features = []
-            
-            # Available features for custom appliances
-            standard_list = ["oven", "convection", "grill", "stovetop", "temperature_probe"]
-            modified_list = ["air_fry", "roast", "bake", "dehydrate", "slow_cook"]
-            special_list = ["combi_crisp", "steam", "pressure_cook", "sous_vide"]
-            
-            for feature in standard_list:
-                if user_input.get(f"feature_standard_{feature}", False):
-                    standard_features.append(feature)
-            
-            for feature in modified_list:
-                if user_input.get(f"feature_modified_{feature}", False):
-                    modified_features.append(feature)
-            
-            for feature in special_list:
-                if user_input.get(f"feature_special_{feature}", False):
-                    special_features.append(feature)
-            
-            # Store features in config
-            self._config_data["custom_standard_features"] = standard_features
-            self._config_data["custom_modified_features"] = modified_features
-            self._config_data["custom_special_features"] = special_features
-            
-            # Create unique ID
+            # Extract appliance name and power outlet
             name = user_input.get(CONF_APPLIANCE_NAME, "Custom Appliance")
-            await self.async_set_unique_id(f"kce_custom_{name.lower().replace(' ', '_')}")
-            self._abort_if_unique_id_configured()
+            power_outlet = user_input.get(CONF_POWER_OUTLET, "")
+            
+            # Build features dictionary from user input
+            # Format: {"feature_name": "standard"|"modified"|"special"}
+            features = {}
+            
+            # Scan all features from catalog
+            for feature_name in FEATURE_CATALOG.keys():
+                # Check if feature is enabled (checkbox)
+                feature_enabled_key = f"feature_enabled_{feature_name}"
+                if user_input.get(feature_enabled_key, False):
+                    # Get feature type (dropdown)
+                    feature_type_key = f"feature_type_{feature_name}"
+                    feature_type = user_input.get(feature_type_key, FEATURE_TYPE_STANDARD)
+                    features[feature_name] = feature_type
+            
+            # Validate that at least one feature is selected
+            if not features:
+                errors["base"] = "no_features_selected"
+            else:
+                # Store in config_data
+                self._config_data.update({
+                    CONF_APPLIANCE_NAME: name,
+                    CONF_POWER_OUTLET: power_outlet,
+                    CONF_FEATURES: features,
+                    CONF_APPLIANCE_TYPE: APPLIANCE_TYPE_CUSTOM,
+                })
+                
+                # Create unique ID
+                await self.async_set_unique_id(f"kce_custom_{name.lower().replace(' ', '_')}")
+                self._abort_if_unique_id_configured()
 
-            return self.async_create_entry(
-                title=name,
-                data=self._config_data,
-            )
+                return self.async_create_entry(
+                    title=name,
+                    data=self._config_data,
+                )
 
-        # Show custom appliance configuration form with feature selection
+        # Build dynamic form schema with all features from catalog
         schema_dict = {
             vol.Required(CONF_APPLIANCE_NAME, default="Custom Appliance"): str,
             vol.Optional(CONF_POWER_OUTLET, default=""): str,
         }
         
-        # Add standard features section
-        schema_dict[vol.Optional("info_standard", default="--- Standard Features (use recipes as-is) ---")] = str
-        schema_dict[vol.Optional("feature_standard_oven", default=False)] = bool
-        schema_dict[vol.Optional("feature_standard_convection", default=False)] = bool
-        schema_dict[vol.Optional("feature_standard_grill", default=False)] = bool
-        schema_dict[vol.Optional("feature_standard_stovetop", default=False)] = bool
-        schema_dict[vol.Optional("feature_standard_temperature_probe", default=False)] = bool
+        # Add section for each feature from catalog
+        # Sort features alphabetically for better UX
+        sorted_features = sorted(FEATURE_CATALOG.items(), key=lambda x: x[1].display_name)
         
-        # Add modified features section
-        schema_dict[vol.Optional("info_modified", default="--- Modified Features (adapt recipes) ---")] = str
-        schema_dict[vol.Optional("feature_modified_air_fry", default=False)] = bool
-        schema_dict[vol.Optional("feature_modified_roast", default=False)] = bool
-        schema_dict[vol.Optional("feature_modified_bake", default=False)] = bool
-        schema_dict[vol.Optional("feature_modified_dehydrate", default=False)] = bool
-        schema_dict[vol.Optional("feature_modified_slow_cook", default=False)] = bool
-        
-        # Add special features section
-        schema_dict[vol.Optional("info_special", default="--- Special Features (need specific recipes) ---")] = str
-        schema_dict[vol.Optional("feature_special_combi_crisp", default=False)] = bool
-        schema_dict[vol.Optional("feature_special_steam", default=False)] = bool
-        schema_dict[vol.Optional("feature_special_pressure_cook", default=False)] = bool
-        schema_dict[vol.Optional("feature_special_sous_vide", default=False)] = bool
+        for feature_name, feature_def in sorted_features:
+            # Add checkbox for enabling the feature
+            schema_dict[vol.Optional(f"feature_enabled_{feature_name}", default=False)] = bool
+            
+            # Add dropdown for selecting feature type
+            schema_dict[vol.Optional(
+                f"feature_type_{feature_name}", 
+                default=FEATURE_TYPE_STANDARD
+            )] = vol.In({
+                FEATURE_TYPE_STANDARD: "Standard (use recipes as-is)",
+                FEATURE_TYPE_MODIFIED: "Modified (auto-adapt recipes)",
+                FEATURE_TYPE_SPECIAL: "Special (needs specific recipes)"
+            })
         
         return self.async_show_form(
             step_id="custom",
             data_schema=vol.Schema(schema_dict),
             errors=errors,
             description_placeholders={
-                "info": "Configure custom appliance and select available cooking features."
+                "info": (
+                    "Configure custom appliance by selecting features.\n\n"
+                    "For each feature:\n"
+                    "1. Check the box to enable it\n"
+                    "2. Select how your appliance implements it:\n"
+                    "   - Standard: Works like traditional method (no adaptation)\n"
+                    "   - Modified: Requires recipe adjustments (time/temp)\n"
+                    "   - Special: Needs appliance-specific recipes"
+                )
             },
         )
 
@@ -721,37 +733,36 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
     async def async_step_custom(
         self, user_input: dict[str, Any] | None = None
     ) -> config_entries.ConfigFlowResult:
-        """Configure custom appliance options with feature management."""
+        """Configure custom appliance options with per-feature type management."""
         if user_input is not None:
-            # Extract selected features from checkboxes
-            standard_features = []
-            modified_features = []
-            special_features = []
+            # Extract appliance name and power outlet
+            name = user_input.get(CONF_APPLIANCE_NAME, "Custom Appliance")
+            power_outlet = user_input.get(CONF_POWER_OUTLET, "")
             
-            # Available features for custom appliances
-            standard_list = ["oven", "convection", "grill", "stovetop", "temperature_probe"]
-            modified_list = ["air_fry", "roast", "bake", "dehydrate", "slow_cook"]
-            special_list = ["combi_crisp", "steam", "pressure_cook", "sous_vide"]
+            # Build features dictionary from user input
+            features = {}
             
-            for feature in standard_list:
-                if user_input.get(f"feature_standard_{feature}", False):
-                    standard_features.append(feature)
+            # Scan all features from catalog
+            for feature_name in FEATURE_CATALOG.keys():
+                # Check if feature is enabled (checkbox)
+                feature_enabled_key = f"feature_enabled_{feature_name}"
+                if user_input.get(feature_enabled_key, False):
+                    # Get feature type (dropdown)
+                    feature_type_key = f"feature_type_{feature_name}"
+                    feature_type = user_input.get(feature_type_key, FEATURE_TYPE_STANDARD)
+                    features[feature_name] = feature_type
             
-            for feature in modified_list:
-                if user_input.get(f"feature_modified_{feature}", False):
-                    modified_features.append(feature)
-            
-            for feature in special_list:
-                if user_input.get(f"feature_special_{feature}", False):
-                    special_features.append(feature)
-            
-            # Update config with all data including features
+            # Update config with new data
             updated_data = {**self.config_entry.data}
-            updated_data[CONF_APPLIANCE_NAME] = user_input.get(CONF_APPLIANCE_NAME, "Custom Appliance")
-            updated_data[CONF_POWER_OUTLET] = user_input.get(CONF_POWER_OUTLET, "")
-            updated_data["custom_standard_features"] = standard_features
-            updated_data["custom_modified_features"] = modified_features
-            updated_data["custom_special_features"] = special_features
+            updated_data[CONF_APPLIANCE_NAME] = name
+            updated_data[CONF_POWER_OUTLET] = power_outlet
+            updated_data[CONF_FEATURES] = features
+            
+            # Migrate old format if present (backward compatibility)
+            # Remove old keys if they exist
+            updated_data.pop("custom_standard_features", None)
+            updated_data.pop("custom_modified_features", None)
+            updated_data.pop("custom_special_features", None)
             
             self.hass.config_entries.async_update_entry(
                 self.config_entry,
@@ -761,10 +772,20 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
 
         current_data = self.config_entry.data
         
-        # Get currently configured features
-        current_standard = current_data.get("custom_standard_features", [])
-        current_modified = current_data.get("custom_modified_features", [])
-        current_special = current_data.get("custom_special_features", [])
+        # Get currently configured features (handle both old and new format)
+        current_features = {}
+        
+        # New format (preferred)
+        if CONF_FEATURES in current_data:
+            current_features = current_data[CONF_FEATURES]
+        else:
+            # Migrate from old format (backward compatibility)
+            for feature in current_data.get("custom_standard_features", []):
+                current_features[feature] = FEATURE_TYPE_STANDARD
+            for feature in current_data.get("custom_modified_features", []):
+                current_features[feature] = FEATURE_TYPE_MODIFIED
+            for feature in current_data.get("custom_special_features", []):
+                current_features[feature] = FEATURE_TYPE_SPECIAL
 
         # Build schema with pre-selected features
         schema_dict = {
@@ -778,34 +799,45 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
             ): str,
         }
         
-        # Add standard features section
-        schema_dict[vol.Optional("info_standard", default="--- Standard Features (use recipes as-is) ---")] = str
-        schema_dict[vol.Optional("feature_standard_oven", default="oven" in current_standard)] = bool
-        schema_dict[vol.Optional("feature_standard_convection", default="convection" in current_standard)] = bool
-        schema_dict[vol.Optional("feature_standard_grill", default="grill" in current_standard)] = bool
-        schema_dict[vol.Optional("feature_standard_stovetop", default="stovetop" in current_standard)] = bool
-        schema_dict[vol.Optional("feature_standard_temperature_probe", default="temperature_probe" in current_standard)] = bool
+        # Add section for each feature from catalog
+        # Sort features alphabetically for better UX
+        sorted_features = sorted(FEATURE_CATALOG.items(), key=lambda x: x[1].display_name)
         
-        # Add modified features section
-        schema_dict[vol.Optional("info_modified", default="--- Modified Features (adapt recipes) ---")] = str
-        schema_dict[vol.Optional("feature_modified_air_fry", default="air_fry" in current_modified)] = bool
-        schema_dict[vol.Optional("feature_modified_roast", default="roast" in current_modified)] = bool
-        schema_dict[vol.Optional("feature_modified_bake", default="bake" in current_modified)] = bool
-        schema_dict[vol.Optional("feature_modified_dehydrate", default="dehydrate" in current_modified)] = bool
-        schema_dict[vol.Optional("feature_modified_slow_cook", default="slow_cook" in current_modified)] = bool
-        
-        # Add special features section
-        schema_dict[vol.Optional("info_special", default="--- Special Features (need specific recipes) ---")] = str
-        schema_dict[vol.Optional("feature_special_combi_crisp", default="combi_crisp" in current_special)] = bool
-        schema_dict[vol.Optional("feature_special_steam", default="steam" in current_special)] = bool
-        schema_dict[vol.Optional("feature_special_pressure_cook", default="pressure_cook" in current_special)] = bool
-        schema_dict[vol.Optional("feature_special_sous_vide", default="sous_vide" in current_special)] = bool
+        for feature_name, feature_def in sorted_features:
+            # Pre-fill checkbox based on current configuration
+            is_enabled = feature_name in current_features
+            
+            # Add checkbox for enabling the feature
+            schema_dict[vol.Optional(
+                f"feature_enabled_{feature_name}", 
+                default=is_enabled
+            )] = bool
+            
+            # Add dropdown for selecting feature type
+            # Pre-fill with current type or default to STANDARD
+            current_type = current_features.get(feature_name, FEATURE_TYPE_STANDARD)
+            schema_dict[vol.Optional(
+                f"feature_type_{feature_name}", 
+                default=current_type
+            )] = vol.In({
+                FEATURE_TYPE_STANDARD: "Standard (use recipes as-is)",
+                FEATURE_TYPE_MODIFIED: "Modified (auto-adapt recipes)",
+                FEATURE_TYPE_SPECIAL: "Special (needs specific recipes)"
+            })
 
         return self.async_show_form(
             step_id="custom",
             data_schema=vol.Schema(schema_dict),
             description_placeholders={
-                "info": "Configure custom appliance and manage cooking features."
+                "info": (
+                    "Manage custom appliance features.\n\n"
+                    "For each feature:\n"
+                    "1. Check the box to enable it\n"
+                    "2. Select how your appliance implements it:\n"
+                    "   - Standard: Works like traditional method (no adaptation)\n"
+                    "   - Modified: Requires recipe adjustments (time/temp)\n"
+                    "   - Special: Needs appliance-specific recipes"
+                )
             },
         )
 
