@@ -66,23 +66,23 @@ class NinjaCombi(KitchenAppliance):
                 for feat, ftype in feature_types.items()
             })
         
-        # Build feature list from catalog
-        features: List[CookingFeature] = []
-        for feature_name, feature_type in default_features.items():
-            if feature_name in FEATURE_CATALOG:
-                feature = FEATURE_CATALOG[feature_name]
-                features.append(feature)
-            
-        super().__init__(
-            appliance_id=f"ninja_combi_{name.lower().replace(' ', '_')}",
-            name=name,
-            appliance_type="ninja_combi",
-            features=features,
-            device_control=device_control
-        )
+        super().__init__()
+        
+        # Set appliance properties
+        self.appliance_id = f"ninja_combi_{name.lower().replace(' ', '_')}"
+        self.name = name
+        self.appliance_type = "ninja_combi"
+        self.device_control = device_control
         
         # Store feature types for querying
         self._feature_types = default_features
+        
+        # Build features dict from catalog
+        self.features = {}
+        for feature_name, feature_type in default_features.items():
+            if feature_name in FEATURE_CATALOG:
+                feature = FEATURE_CATALOG[feature_name]
+                self.features[feature_name] = feature
     
     def get_supported_features(self) -> List[CookingFeature]:
         """Return list of cooking features this appliance supports.
