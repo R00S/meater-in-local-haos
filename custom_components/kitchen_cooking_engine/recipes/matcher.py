@@ -79,7 +79,7 @@ class RecipeMatcher:
                 implementation_quality=ImplementationQuality.INCOMPATIBLE,
                 quality_score=0.0,
                 confidence=1.0,
-                notes=f"Missing required features: {', '.join(sorted(missing))}"
+                notes=[f"Missing required features: {', '.join(sorted(missing))}"]
             )
         
         # Find optimal appliance combination
@@ -103,7 +103,7 @@ class RecipeMatcher:
             implementation_quality=quality,
             quality_score=score,
             confidence=confidence,
-            notes=notes
+            notes=[notes]  # Wrap single note in list
         )
     
     def _find_optimal_combination(self, required_features: Set[str]) -> List[str]:
