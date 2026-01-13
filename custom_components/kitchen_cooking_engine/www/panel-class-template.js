@@ -25,7 +25,23 @@
 class KitchenCookingPanel extends LitElement {
   static get properties() {
     return {
-      hass: { type: Object },
+      hass: { 
+        type: Object,
+        hasChanged(newVal, oldVal) {
+          // Force re-render when entity state changes
+          // This is needed because HA updates hass.states but hass object reference stays the same
+          if (!oldVal || !newVal) return true;
+          // Check if any cooking session entity changed
+          for (const key in newVal.states) {
+            if (key.includes('kitchen_cooking_engine') && key.includes('session')) {
+              if (!oldVal.states[key] || oldVal.states[key] !== newVal.states[key]) {
+                return true;
+              }
+            }
+          }
+          return false;
+        }
+      },
       narrow: { type: Boolean },
       route: { type: Object },
       panel: { type: Object },

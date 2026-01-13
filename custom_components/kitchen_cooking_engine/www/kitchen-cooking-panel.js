@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 13 Jan 2026, 20:43 CET
+ * AUTO-GENERATED: 13 Jan 2026, 20:50 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 13 Jan 2026, 20:43 CET
+// Last generated: 13 Jan 2026, 20:50 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5339,7 +5339,23 @@ const COOKING_METHODS = [
 class KitchenCookingPanel extends LitElement {
   static get properties() {
     return {
-      hass: { type: Object },
+      hass: { 
+        type: Object,
+        hasChanged(newVal, oldVal) {
+          // Force re-render when entity state changes
+          // This is needed because HA updates hass.states but hass object reference stays the same
+          if (!oldVal || !newVal) return true;
+          // Check if any cooking session entity changed
+          for (const key in newVal.states) {
+            if (key.includes('kitchen_cooking_engine') && key.includes('session')) {
+              if (!oldVal.states[key] || oldVal.states[key] !== newVal.states[key]) {
+                return true;
+              }
+            }
+          }
+          return false;
+        }
+      },
       narrow: { type: Boolean },
       route: { type: Object },
       panel: { type: Object },
