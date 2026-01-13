@@ -202,17 +202,11 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             data_schema=vol.Schema(
                 {
                     vol.Required(CONF_APPLIANCE_NAME, default="Ninja Combi"): str,
-                    vol.Optional(CONF_TEMPERATURE_SENSOR, default=""): str,
-                    vol.Optional(CONF_AMBIENT_SENSOR, default=""): str,
-                    vol.Optional(CONF_BATTERY_SENSOR, default=""): str,
                     vol.Optional(CONF_POWER_OUTLET, default=""): str,
                     vol.Optional(CONF_START_BUTTON, default=""): str,
                 }
             ),
             errors=errors,
-            description_placeholders={
-                "sensor_hint": "Optional: Only if appliance has temperature probe feature"
-            },
         )
 
     async def async_step_multifry(
@@ -567,18 +561,6 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
                     vol.Required(
                         CONF_APPLIANCE_NAME,
                         default=current_data.get(CONF_APPLIANCE_NAME, "Ninja Combi"),
-                    ): str,
-                    vol.Optional(
-                        CONF_TEMPERATURE_SENSOR,
-                        default=current_data.get(CONF_TEMPERATURE_SENSOR, ""),
-                    ): str,
-                    vol.Optional(
-                        CONF_AMBIENT_SENSOR,
-                        default=current_data.get(CONF_AMBIENT_SENSOR, ""),
-                    ): str,
-                    vol.Optional(
-                        CONF_BATTERY_SENSOR,
-                        default=current_data.get(CONF_BATTERY_SENSOR, ""),
                     ): str,
                     vol.Optional(
                         CONF_POWER_OUTLET,
