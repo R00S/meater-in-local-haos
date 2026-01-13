@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 13 Jan 2026, 23:19 CET
+ * AUTO-GENERATED: 13 Jan 2026, 23:47 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 13 Jan 2026, 23:19 CET
+// Last generated: 13 Jan 2026, 23:47 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -6671,26 +6671,31 @@ class KitchenCookingPanel extends LitElement {
                     <h3>${appliance.name}</h3>
                     ${appliance.brand ? html`<div class="appliance-brand">${appliance.brand} ${appliance.model || ''}</div>` : ''}
                   </div>
-                  <div class="expand-icon">
-                    ${appliance._expanded ? '▼' : '▶'}
+                  <div class="appliance-actions">
+                    <button 
+                      class="settings-icon-btn" 
+                      @click=${(e) => { e.stopPropagation(); this._openApplianceConfig(appliance.id); }}
+                      title="Configure features">
+                      ⚙️
+                    </button>
+                    <div class="expand-icon">
+                      ${appliance._expanded ? '▼' : '▶'}
+                    </div>
                   </div>
                 </div>
                 
                 <div class="appliance-features">
-                  <h4>Features (${appliance.features.length}):</h4>
-                  <div class="feature-badges">
-                    ${appliance._expanded ? 
-                      appliance.features.map(feature => html`
+                  ${appliance._expanded ? this._renderFeaturesByType(appliance) : html`
+                    <h4>Features (${appliance.features.length}):</h4>
+                    <div class="feature-badges">
+                      ${appliance.features.slice(0, 6).map(feature => html`
                         <span class="feature-badge">${this._formatFeatureName(feature)}</span>
-                      `) :
-                      appliance.features.slice(0, 6).map(feature => html`
-                        <span class="feature-badge">${this._formatFeatureName(feature)}</span>
-                      `)
-                    }
-                    ${!appliance._expanded && appliance.features.length > 6 ? html`
-                      <span class="feature-badge more">+${appliance.features.length - 6} more</span>
-                    ` : ''}
-                  </div>
+                      `)}
+                      ${appliance.features.length > 6 ? html`
+                        <span class="feature-badge more">+${appliance.features.length - 6} more</span>
+                      ` : ''}
+                    </div>
+                  `}
                 </div>
 
                 ${appliance.recipe_count > 0 ? html`
@@ -7059,6 +7064,80 @@ class KitchenCookingPanel extends LitElement {
 
   _formatFeatureName(feature) {
     return feature.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  }
+
+  _renderFeaturesByType(appliance) {
+    // Group features by type
+    const standard = [];
+    const modified = [];
+    const special = [];
+    
+    appliance.features.forEach(feature => {
+      const ftype = appliance.feature_types && appliance.feature_types[feature];
+      if (ftype === 'standard') {
+        standard.push(feature);
+      } else if (ftype === 'modified') {
+        modified.push(feature);
+      } else if (ftype === 'special') {
+        special.push(feature);
+      } else {
+        // Default to standard if no type specified
+        standard.push(feature);
+      }
+    });
+    
+    return html`
+      ${standard.length > 0 ? html`
+        <div class="feature-group">
+          <h4>✓ Standard Features (${standard.length})</h4>
+          <div class="feature-badges">
+            ${standard.map(feature => html`
+              <span class="feature-badge standard">${this._formatFeatureName(feature)}</span>
+            `)}
+          </div>
+        </div>
+      ` : ''}
+      
+      ${modified.length > 0 ? html`
+        <div class="feature-group">
+          <h4>⚡ Modified Features (${modified.length})</h4>
+          <div class="feature-badges">
+            ${modified.map(feature => html`
+              <span class="feature-badge modified">${this._formatFeatureName(feature)}</span>
+            `)}
+          </div>
+        </div>
+      ` : ''}
+      
+      ${special.length > 0 ? html`
+        <div class="feature-group">
+          <h4>⭐ Special Features (${special.length})</h4>
+          <div class="feature-badges">
+            ${special.map(feature => html`
+              <span class="feature-badge special">${this._formatFeatureName(feature)}</span>
+            `)}
+          </div>
+        </div>
+      ` : ''}
+    `;
+  }
+
+  _openApplianceConfig(applianceId) {
+    // Open the config flow for this appliance
+    // Find the config entry ID from the appliance ID
+    const event = new CustomEvent('hass-more-info', {
+      detail: { entityId: null },
+      bubbles: true,
+      composed: true
+    });
+    
+    // Navigate to the integrations page with the specific integration
+    window.history.pushState(null, '', '/config/integrations/integration/kitchen_cooking_engine');
+    const navEvent = new CustomEvent('location-changed', {
+      bubbles: true,
+      composed: true
+    });
+    window.dispatchEvent(navEvent);
   }
 
   _getQualityIcon(quality) {
@@ -8394,8 +8473,29 @@ class KitchenCookingPanel extends LitElement {
         position: relative;
       }
 
-      .expand-icon {
+      .appliance-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
         margin-left: auto;
+      }
+
+      .settings-icon-btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        padding: 4px;
+        opacity: 0.7;
+        transition: opacity 0.2s, transform 0.2s;
+      }
+
+      .settings-icon-btn:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+
+      .expand-icon {
         font-size: 14px;
         color: var(--secondary-text-color);
         transition: transform 0.2s;
@@ -8424,6 +8524,17 @@ class KitchenCookingPanel extends LitElement {
         color: var(--secondary-text-color);
       }
 
+      .feature-group {
+        margin-bottom: 16px;
+      }
+
+      .feature-group h4 {
+        margin: 12px 0 8px 0;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--primary-text-color);
+      }
+
       .feature-badges {
         display: flex;
         flex-wrap: wrap;
@@ -8437,6 +8548,21 @@ class KitchenCookingPanel extends LitElement {
         border-radius: 12px;
         font-size: 11px;
         color: var(--primary-text-color);
+      }
+
+      .feature-badge.standard {
+        background: #4caf50;
+        color: white;
+      }
+
+      .feature-badge.modified {
+        background: #ff9800;
+        color: white;
+      }
+
+      .feature-badge.special {
+        background: #9c27b0;
+        color: white;
       }
 
       .feature-badge.more {

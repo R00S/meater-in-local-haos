@@ -158,12 +158,21 @@ class PanelDataService:
         # Build fresh data
         appliances = []
         for appliance in self.manager.get_appliances():
+            # Get features grouped by type
+            features = sorted(list(appliance.get_features()))
+            feature_types = {}
+            for feature_name in features:
+                ftype = appliance.get_feature_type(feature_name)
+                if ftype:
+                    feature_types[feature_name] = ftype.value
+            
             appliances.append({
                 "id": appliance.appliance_id,
                 "name": appliance.name,
                 "brand": appliance.brand,
                 "model": appliance.model,
-                "features": sorted(list(appliance.get_features())),
+                "features": features,
+                "feature_types": feature_types,
                 "recipe_count": len(appliance.recipes) if hasattr(appliance, 'recipes') else 0,
             })
         
