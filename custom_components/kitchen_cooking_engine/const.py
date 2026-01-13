@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 11 Jan 2026
-Last Change: v0.3.2.2 - Ninja Combi implementation, all appliances editable, recipe loading fixed
+Last Updated: 13 Jan 2026, 21:00 CET
+Last Change: v0.3.2.3 - Fixed temperature display with proper LitElement change detection
 """
 
 DOMAIN = "kitchen_cooking_engine"

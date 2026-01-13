@@ -1,7 +1,7 @@
 """Sensor platform for Kitchen Cooking Engine.
 
-Last Updated: 2 Dec 2025, 15:30 CET
-Last Change: v0.1.2.8 - Added cook history, user preferences, notes, temp graph
+Last Updated: 13 Jan 2026, 21:00 CET
+Last Change: v0.3.2.3 - Multi-device support with proper temperature probe feature handling
 """
 
 from __future__ import annotations

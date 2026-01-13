@@ -28,29 +28,26 @@ class KitchenCookingPanel extends LitElement {
       hass: { 
         type: Object,
         hasChanged(newVal, oldVal) {
-          // Force re-render when entity state changes
+          // Force re-render when ANY cooking session entity state changes
           // This is needed because HA updates hass.states but hass object reference stays the same
           if (!oldVal || !newVal) return true;
           
-          // Check if the selected entity's state changed
-          const selectedEntity = this._selectedEntity;
-          if (selectedEntity) {
-            const oldState = oldVal.states?.[selectedEntity];
-            const newState = newVal.states?.[selectedEntity];
-            // Check if state object reference changed OR if attributes changed
-            if (oldState !== newState) {
-              return true;
-            }
-            // Deep check attributes if state object is same (shouldn't happen but be safe)
-            if (oldState && newState && oldState.attributes !== newState.attributes) {
-              return true;
-            }
-          }
-          
-          // Also check if any cooking session entity changed (for entity list updates)
+          // Check if any cooking session entity changed
+          // We check ALL session entities because:
+          // 1. User might switch between appliances
+          // 2. Temperature updates need to trigger re-render regardless of which entity is selected
           for (const key in newVal.states) {
             if (key.includes('kitchen_cooking_engine') && key.includes('session')) {
-              if (!oldVal.states[key] || oldVal.states[key] !== newVal.states[key]) {
+              const oldState = oldVal.states[key];
+              const newState = newVal.states[key];
+              
+              // State object reference changes when entity updates
+              if (oldState !== newState) {
+                return true;
+              }
+              
+              // Defensive: also check if attributes object changed
+              if (oldState && newState && oldState.attributes !== newState.attributes) {
                 return true;
               }
             }
