@@ -1,7 +1,7 @@
 """Sensor platform for Kitchen Cooking Engine.
 
-Last Updated: 13 Jan 2026, 21:35 CET
-Last Change: v0.3.2.4 - Multi-appliance temperature reading in frontend
+Last Updated: 14 Jan 2026, 00:00 CET
+Last Change: v0.3.2.5 - Settings icon on appliances + feature grouping by type
 """
 
 from __future__ import annotations
