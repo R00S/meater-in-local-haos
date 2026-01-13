@@ -1348,8 +1348,8 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : html`
         <div class="appliances-grid">
-          ${this._appliances.map(appliance => html`
-            <ha-card class="appliance-card">
+          ${this._appliances.map((appliance, idx) => html`
+            <ha-card class="appliance-card clickable" @click=${() => this._toggleApplianceExpanded(idx)}>
               <div class="card-content">
                 <div class="appliance-header">
                   <div class="appliance-icon">${this._getApplianceIcon(appliance.brand || appliance.name)}</div>
@@ -1357,15 +1357,23 @@ class KitchenCookingPanel extends LitElement {
                     <h3>${appliance.name}</h3>
                     ${appliance.brand ? html`<div class="appliance-brand">${appliance.brand} ${appliance.model || ''}</div>` : ''}
                   </div>
+                  <div class="expand-icon">
+                    ${appliance._expanded ? '▼' : '▶'}
+                  </div>
                 </div>
                 
                 <div class="appliance-features">
                   <h4>Features (${appliance.features.length}):</h4>
                   <div class="feature-badges">
-                    ${appliance.features.slice(0, 6).map(feature => html`
-                      <span class="feature-badge">${this._formatFeatureName(feature)}</span>
-                    `)}
-                    ${appliance.features.length > 6 ? html`
+                    ${appliance._expanded ? 
+                      appliance.features.map(feature => html`
+                        <span class="feature-badge">${this._formatFeatureName(feature)}</span>
+                      `) :
+                      appliance.features.slice(0, 6).map(feature => html`
+                        <span class="feature-badge">${this._formatFeatureName(feature)}</span>
+                      `)
+                    }
+                    ${!appliance._expanded && appliance.features.length > 6 ? html`
                       <span class="feature-badge more">+${appliance.features.length - 6} more</span>
                     ` : ''}
                   </div>
@@ -1727,6 +1735,14 @@ class KitchenCookingPanel extends LitElement {
     return '🔧';
   }
 
+  _toggleApplianceExpanded(index) {
+    // Toggle expanded state for appliance at index
+    const appliance = this._appliances[index];
+    appliance._expanded = !appliance._expanded;
+    // Force re-render
+    this.requestUpdate();
+  }
+
   _formatFeatureName(feature) {
     return feature.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   }
@@ -1785,9 +1801,12 @@ class KitchenCookingPanel extends LitElement {
               <button class="history-btn ${this._showAppliances ? 'active' : ''}" @click=${this._toggleAppliances}>
                 🔧 ${this._showAppliances ? 'Back to Cooking' : 'Appliances'}
               </button>
+              <!-- Temporarily removed: All Recipes button - will be rebuilt in next major upgrade -->
+              <!--
               <button class="history-btn ${this._showRecipes ? 'active' : ''}" @click=${this._toggleRecipes}>
                 📖 ${this._showRecipes ? 'Back to Cooking' : 'All Recipes'}
               </button>
+              -->
             </div>
           ` : ''}
         </div>
@@ -3043,11 +3062,29 @@ class KitchenCookingPanel extends LitElement {
         padding: 16px;
       }
 
+      .appliance-card.clickable {
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .appliance-card.clickable:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
       .appliance-header {
         display: flex;
         align-items: center;
         gap: 12px;
         margin-bottom: 16px;
+        position: relative;
+      }
+
+      .expand-icon {
+        margin-left: auto;
+        font-size: 14px;
+        color: var(--secondary-text-color);
+        transition: transform 0.2s;
       }
 
       .appliance-icon {
