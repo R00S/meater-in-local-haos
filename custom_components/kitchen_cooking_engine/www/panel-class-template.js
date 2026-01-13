@@ -31,7 +31,23 @@ class KitchenCookingPanel extends LitElement {
           // Force re-render when entity state changes
           // This is needed because HA updates hass.states but hass object reference stays the same
           if (!oldVal || !newVal) return true;
-          // Check if any cooking session entity changed
+          
+          // Check if the selected entity's state changed
+          const selectedEntity = this._selectedEntity;
+          if (selectedEntity) {
+            const oldState = oldVal.states?.[selectedEntity];
+            const newState = newVal.states?.[selectedEntity];
+            // Check if state object reference changed OR if attributes changed
+            if (oldState !== newState) {
+              return true;
+            }
+            // Deep check attributes if state object is same (shouldn't happen but be safe)
+            if (oldState && newState && oldState.attributes !== newState.attributes) {
+              return true;
+            }
+          }
+          
+          // Also check if any cooking session entity changed (for entity list updates)
           for (const key in newVal.states) {
             if (key.includes('kitchen_cooking_engine') && key.includes('session')) {
               if (!oldVal.states[key] || oldVal.states[key] !== newVal.states[key]) {
