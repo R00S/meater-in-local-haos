@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 13 Jan 2026, 21:00 CET
-Last Change: v0.3.2.3 - Fixed temperature display with proper LitElement change detection
+Last Updated: 13 Jan 2026, 21:35 CET
+Last Change: v0.3.2.4 - Multi-appliance temperature reading in frontend
 """
 
 DOMAIN = "kitchen_cooking_engine"

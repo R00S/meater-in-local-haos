@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 13 Jan 2026, 21:18 CET
+ * AUTO-GENERATED: 13 Jan 2026, 21:41 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 13 Jan 2026, 21:18 CET
+// Last generated: 13 Jan 2026, 21:41 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -7352,9 +7352,32 @@ class KitchenCookingPanel extends LitElement {
   _renderActiveCook(state) {
     const attrs = state.attributes;
     const progress = attrs.progress || 0;
-    const currentTemp = attrs.current_temp;
-    const ambientTemp = attrs.ambient_temp;
-    const batteryLevel = attrs.battery_level;
+    
+    // Multi-appliance temperature reading:
+    // If current entity doesn't have temperature, find it from entities with temperature_probe feature
+    let currentTemp = attrs.current_temp;
+    let ambientTemp = attrs.ambient_temp;
+    let batteryLevel = attrs.battery_level;
+    
+    if ((currentTemp === null || currentTemp === undefined) && this.hass) {
+      // Current entity has no temperature - look for temperature probe entity
+      const entities = this._findCookingEntities();
+      for (const entityId of entities) {
+        const entityState = this.hass.states[entityId];
+        if (!entityState) continue;
+        
+        // Check if this entity has temperature_probe feature
+        // by looking for current_temp in its attributes
+        const entityAttrs = entityState.attributes || {};
+        if (entityAttrs.current_temp !== null && entityAttrs.current_temp !== undefined) {
+          currentTemp = entityAttrs.current_temp;
+          ambientTemp = entityAttrs.ambient_temp;
+          batteryLevel = entityAttrs.battery_level;
+          break; // Found temperature source
+        }
+      }
+    }
+    
     const targetTemp = attrs.target_temp_c;
     const cut = attrs.cut_display || attrs.cut || "Unknown";
     const doneness = (attrs.doneness || "").replace("_", " ");

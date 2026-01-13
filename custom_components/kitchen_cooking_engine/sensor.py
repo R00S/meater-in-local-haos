@@ -1,7 +1,7 @@
 """Sensor platform for Kitchen Cooking Engine.
 
-Last Updated: 13 Jan 2026, 21:00 CET
-Last Change: v0.3.2.3 - Multi-device support with proper temperature probe feature handling
+Last Updated: 13 Jan 2026, 21:35 CET
+Last Change: v0.3.2.4 - Multi-appliance temperature reading in frontend
 """
 
 from __future__ import annotations
