@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 13 Jan 2026, 20:41 CET
+ * AUTO-GENERATED: 13 Jan 2026, 20:43 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 13 Jan 2026, 20:41 CET
+// Last generated: 13 Jan 2026, 20:43 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5423,18 +5423,6 @@ class KitchenCookingPanel extends LitElement {
     this._errorMessage = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
-    this._hass = null;
-  }
-
-  // Override hass setter to force re-render on state changes
-  set hass(value) {
-    const oldValue = this._hass;
-    this._hass = value;
-    this.requestUpdate('hass', oldValue);
-  }
-
-  get hass() {
-    return this._hass;
   }
 
   connectedCallback() {

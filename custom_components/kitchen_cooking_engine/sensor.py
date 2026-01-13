@@ -927,7 +927,7 @@ class CookingSessionSensor(SensorEntity):
             
         self.async_write_ha_state()
 
-    async def start_cook(
+    def start_cook(
         self,
         protein: str,
         cut: str,
@@ -976,9 +976,6 @@ class CookingSessionSensor(SensorEntity):
         self._five_min_alert_fired = False
         self._peak_temp_c = None  # Track peak temperature during cook
         self._final_temp_after_rest = None  # Track temp when rest completed
-        
-        # Update current sensor readings immediately
-        await self._async_update_sensors()
         
         # Save indicator light state and take control
         if self._indicator_light:

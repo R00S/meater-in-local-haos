@@ -109,18 +109,6 @@ class KitchenCookingPanel extends LitElement {
     this._errorMessage = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
-    this._hass = null;
-  }
-
-  // Override hass setter to force re-render on state changes
-  set hass(value) {
-    const oldValue = this._hass;
-    this._hass = value;
-    this.requestUpdate('hass', oldValue);
-  }
-
-  get hass() {
-    return this._hass;
   }
 
   connectedCallback() {
