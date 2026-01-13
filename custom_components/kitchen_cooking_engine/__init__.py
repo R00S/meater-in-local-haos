@@ -198,65 +198,74 @@ async def _async_regenerate_frontend_data(hass: HomeAssistant) -> bool:
 
 async def _async_register_panel(hass: HomeAssistant) -> None:
     """Register the sidebar panel."""
-    # Only register once
-    if hass.data.get(DOMAIN, {}).get("panel_registered"):
+    # Only register once - check and set flag atomically
+    if hass.data[DOMAIN].get("panel_registered"):
+        _LOGGER.debug("Kitchen Cooking Engine: Panel already registered, skipping")
         return
     
-    # Regenerate frontend data from backend before registering panel
-    await _async_regenerate_frontend_data(hass)
-    
-    # Re-read PANEL_VERSION after regeneration (it may have been updated)
-    # We need to reload the const module to get the updated value
-    import importlib
-    from . import const as const_module
-    importlib.reload(const_module)
-    panel_version = const_module.PANEL_VERSION
-    
-    # Get the path to the www directory
-    www_path = Path(__file__).parent / "www"
-    panel_js_path = www_path / "kitchen-cooking-panel.js"
-    
-    if not panel_js_path.exists():
-        _LOGGER.warning("Kitchen Cooking Engine: Panel JS file not found at %s", panel_js_path)
-        return
-    
-    # Register static path to serve the panel JS
-    try:
-        await hass.http.async_register_static_paths([
-            StaticPathConfig(
-                url_path="/kitchen_cooking_engine_panel",
-                path=str(www_path),
-                cache_headers=True,
-            )
-        ])
-    except Exception as e:
-        _LOGGER.warning("Kitchen Cooking Engine: Could not register static path: %s", e)
-        return
-    
-    # Register the custom panel in the sidebar
-    # Use panel_version in both URL and element name to bust ALL caches
-    # The element name must match what's in kitchen-cooking-panel.js
-    panel_element_name = f"kitchen-cooking-panel-v{panel_version}"
-    _LOGGER.info("Kitchen Cooking Engine: Registering panel with version %s", panel_version)
-    async_register_built_in_panel(
-        hass,
-        component_name="custom",
-        sidebar_title="Cooking",
-        sidebar_icon="mdi:pot-steam",
-        frontend_url_path="kitchen-cooking",
-        config={
-            "_panel_custom": {
-                "name": panel_element_name,
-                "embed_iframe": False,
-                "trust_external": False,
-                "module_url": f"/kitchen_cooking_engine_panel/kitchen-cooking-panel.js?v={panel_version}",
-            }
-        },
-        require_admin=False,
-    )
-    
+    # Set flag immediately to prevent race conditions
     hass.data[DOMAIN]["panel_registered"] = True
-    _LOGGER.info("Kitchen Cooking Engine: Sidebar panel registered (version %s)", panel_version)
+    
+    try:
+        # Regenerate frontend data from backend before registering panel
+        await _async_regenerate_frontend_data(hass)
+        
+        # Re-read PANEL_VERSION after regeneration (it may have been updated)
+        # We need to reload the const module to get the updated value
+        import importlib
+        from . import const as const_module
+        importlib.reload(const_module)
+        panel_version = const_module.PANEL_VERSION
+        
+        # Get the path to the www directory
+        www_path = Path(__file__).parent / "www"
+        panel_js_path = www_path / "kitchen-cooking-panel.js"
+        
+        if not panel_js_path.exists():
+            _LOGGER.warning("Kitchen Cooking Engine: Panel JS file not found at %s", panel_js_path)
+            return
+        
+        # Register static path to serve the panel JS
+        try:
+            await hass.http.async_register_static_paths([
+                StaticPathConfig(
+                    url_path="/kitchen_cooking_engine_panel",
+                    path=str(www_path),
+                    cache_headers=True,
+                )
+            ])
+        except Exception as e:
+            _LOGGER.warning("Kitchen Cooking Engine: Could not register static path: %s", e)
+            return
+        
+        # Register the custom panel in the sidebar
+        # Use panel_version in both URL and element name to bust ALL caches
+        # The element name must match what's in kitchen-cooking-panel.js
+        panel_element_name = f"kitchen-cooking-panel-v{panel_version}"
+        _LOGGER.info("Kitchen Cooking Engine: Registering panel with version %s", panel_version)
+        async_register_built_in_panel(
+            hass,
+            component_name="custom",
+            sidebar_title="Cooking",
+            sidebar_icon="mdi:pot-steam",
+            frontend_url_path="kitchen-cooking",
+            config={
+                "_panel_custom": {
+                    "name": panel_element_name,
+                    "embed_iframe": False,
+                    "trust_external": False,
+                    "module_url": f"/kitchen_cooking_engine_panel/kitchen-cooking-panel.js?v={panel_version}",
+                }
+            },
+            require_admin=False,
+        )
+        
+        _LOGGER.info("Kitchen Cooking Engine: Sidebar panel registered (version %s)", panel_version)
+    except Exception as e:
+        _LOGGER.error("Kitchen Cooking Engine: Failed to register panel: %s", e, exc_info=True)
+        # Clear flag on failure so it can be retried
+        hass.data[DOMAIN]["panel_registered"] = False
+        raise
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
@@ -302,7 +311,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     # Register the sidebar panel (only once, not per config entry)
     if not hass.data[DOMAIN].get("panel_registered", False):
         await _async_register_panel(hass)
-        hass.data[DOMAIN]["panel_registered"] = True
 
     # Register API endpoints for cooking data
     async_register_api(hass)

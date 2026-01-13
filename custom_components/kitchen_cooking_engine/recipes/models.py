@@ -56,11 +56,16 @@ class MealType(Enum):
 
 class ImplementationQuality(Enum):
     """Quality of recipe implementation with available appliances."""
-    EXCELLENT = "excellent"       # All features STANDARD
-    GOOD = "good"                # Mix of STANDARD/MODIFIED
-    ACCEPTABLE = "acceptable"    # Some MODIFIED features
-    POOR = "poor"                # Many MODIFIED features
-    INCOMPATIBLE = "incompatible"  # Missing required features
+    EXCELLENT = 5       # All features STANDARD
+    GOOD = 4            # Mix of STANDARD/MODIFIED
+    ACCEPTABLE = 3      # Some MODIFIED features
+    POOR = 2            # Many MODIFIED features
+    INCOMPATIBLE = 1    # Missing required features
+    
+    @property
+    def display_name(self) -> str:
+        """Get display name for UI."""
+        return self.name.lower()
 
 
 @dataclass

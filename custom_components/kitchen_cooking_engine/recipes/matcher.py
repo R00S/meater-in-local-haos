@@ -343,6 +343,7 @@ class RecipeMatcher:
             
             if min_quality is not None:
                 match_result = self.match_recipe(recipe)
+                # Compare enum values numerically (higher is better)
                 if match_result.implementation_quality.value < min_quality.value:
                     continue
             
