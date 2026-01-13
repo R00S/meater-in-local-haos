@@ -457,7 +457,7 @@ async def _async_register_services(hass: HomeAssistant) -> None:
             return
             
         for entity in entities:
-            entity.start_cook(
+            await entity.start_cook(
                 protein=protein_name or "unknown",
                 cut=cut.name,
                 doneness=doneness,
