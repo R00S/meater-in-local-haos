@@ -303,30 +303,29 @@ class ApplianceManager:
             StandardOven instance
         """
         from .appliances.standard_oven import StandardOven
-        from .appliances import FeatureType
+        from .config_flow import APPLIANCE_DEFAULT_FEATURES, APPLIANCE_TYPE_STANDARD_OVEN
         
         name = config_entry.data.get("name", "Standard Oven")
         has_convection = config_entry.data.get("has_convection", False)
         has_grill = config_entry.data.get("has_grill", False)
         
-        oven = StandardOven(has_convection=has_convection, has_grill=has_grill)
-        oven.name = name  # Set custom name after creation
+        # Merge default features with user overrides
+        # Filter defaults based on appliance capabilities
+        default_features = APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_STANDARD_OVEN, {})
+        feature_types = {}
+        for feature_name, feature_type in default_features.items():
+            # Only include convection if has_convection
+            if feature_name == "convection" and not has_convection:
+                continue
+            # Only include grill if has_grill
+            if feature_name == "grill" and not has_grill:
+                continue
+            feature_types[feature_name] = feature_type
         
-        # Apply config feature overrides if present
-        config_features = config_entry.data.get("features", {})
-        if config_features:
-            for feature_name, feature_type_str in config_features.items():
-                if feature_name in oven._feature_types:
-                    # Convert string to FeatureType enum
-                    try:
-                        oven._feature_types[feature_name] = FeatureType[feature_type_str.upper()]
-                    except (KeyError, AttributeError):
-                        _LOGGER.warning(
-                            "Invalid feature type '%s' for feature '%s', using default",
-                            feature_type_str, feature_name
-                        )
+        user_overrides = config_entry.data.get("features", {})
+        feature_types.update(user_overrides)
         
-        return oven
+        return StandardOven(name=name, has_convection=has_convection, has_grill=has_grill, feature_types=feature_types)
     
     def _create_stovetop(
         self,
@@ -341,30 +340,18 @@ class ApplianceManager:
             Stovetop instance
         """
         from .appliances.stovetop import Stovetop
-        from .appliances import FeatureType
+        from .config_flow import APPLIANCE_DEFAULT_FEATURES, APPLIANCE_TYPE_STOVETOP
         
         name = config_entry.data.get("name", "Stovetop")
         stove_type = config_entry.data.get("type", "gas")
         num_burners = config_entry.data.get("num_burners", 4)
         
-        stovetop = Stovetop(stove_type=stove_type, num_burners=num_burners)
-        stovetop.name = name  # Set custom name after creation
+        # Merge default features with user overrides
+        feature_types = dict(APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_STOVETOP, {}))
+        user_overrides = config_entry.data.get("features", {})
+        feature_types.update(user_overrides)
         
-        # Apply config feature overrides if present
-        config_features = config_entry.data.get("features", {})
-        if config_features:
-            for feature_name, feature_type_str in config_features.items():
-                if feature_name in stovetop._feature_types:
-                    # Convert string to FeatureType enum
-                    try:
-                        stovetop._feature_types[feature_name] = FeatureType[feature_type_str.upper()]
-                    except (KeyError, AttributeError):
-                        _LOGGER.warning(
-                            "Invalid feature type '%s' for feature '%s', using default",
-                            feature_type_str, feature_name
-                        )
-        
-        return stovetop
+        return Stovetop(name=name, stove_type=stove_type, num_burners=num_burners, feature_types=feature_types)
     
     def _create_microwave(
         self,
@@ -379,35 +366,30 @@ class ApplianceManager:
             Microwave instance
         """
         from .appliances.microwave import Microwave
-        from .appliances import FeatureType
+        from .config_flow import APPLIANCE_DEFAULT_FEATURES, APPLIANCE_TYPE_MICROWAVE
         
         name = config_entry.data.get("name", "Microwave")
         wattage = config_entry.data.get("wattage", 1000)
         has_sensor = config_entry.data.get("has_sensor", False)
         has_convection = config_entry.data.get("has_convection", False)
         
-        microwave = Microwave(
-            wattage=wattage,
-            has_convection=has_convection,
-            has_sensor=has_sensor
-        )
-        microwave.name = name
+        # Merge default features with user overrides
+        # Filter defaults based on appliance capabilities
+        default_features = APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_MICROWAVE, {})
+        feature_types = {}
+        for feature_name, feature_type in default_features.items():
+            # Only include sensor_cook if has_sensor
+            if feature_name == "sensor_cook" and not has_sensor:
+                continue
+            # Only include convection features if has_convection
+            if feature_name in ["convection_microwave", "bake"] and not has_convection:
+                continue
+            feature_types[feature_name] = feature_type
         
-        # Apply config feature overrides if present
-        config_features = config_entry.data.get("features", {})
-        if config_features:
-            for feature_name, feature_type_str in config_features.items():
-                if feature_name in microwave._feature_types:
-                    # Convert string to FeatureType enum
-                    try:
-                        microwave._feature_types[feature_name] = FeatureType[feature_type_str.upper()]
-                    except (KeyError, AttributeError):
-                        _LOGGER.warning(
-                            "Invalid feature type '%s' for feature '%s', using default",
-                            feature_type_str, feature_name
-                        )
+        user_overrides = config_entry.data.get("features", {})
+        feature_types.update(user_overrides)
         
-        return microwave
+        return Microwave(name=name, wattage=wattage, has_convection=has_convection, has_sensor=has_sensor, feature_types=feature_types)
     
     def get_available_features(self) -> Set[str]:
         """Get all available features across all appliances.
@@ -450,13 +432,16 @@ class ApplianceManager:
         """
         from .appliances.ninja_combi import NinjaCombi
         from .appliances import ApplianceDeviceControl
+        from .config_flow import APPLIANCE_DEFAULT_FEATURES, APPLIANCE_TYPE_NINJA_COMBI
         
         name = config_entry.data.get("name", "Ninja Combi")
         power_outlet = config_entry.data.get("power_outlet_entity")
         start_button = config_entry.data.get("start_button_entity")
         
-        # Read custom feature types if user has modified them
-        feature_types = config_entry.data.get("features", {})
+        # Merge default features with user overrides
+        feature_types = dict(APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_NINJA_COMBI, {}))
+        user_overrides = config_entry.data.get("features", {})
+        feature_types.update(user_overrides)
         
         # Create device control if entities configured
         device_control = None
@@ -481,12 +466,18 @@ class ApplianceManager:
             DelonghiMultiFry instance
         """
         from .appliances.delonghi_multifry import DelonghiMultiFry
-        from .appliances import ApplianceDeviceControl, FeatureType
+        from .appliances import ApplianceDeviceControl
+        from .config_flow import APPLIANCE_DEFAULT_FEATURES, APPLIANCE_TYPE_MULTIFRY
         
         name = config_entry.data.get("name", "De'Longhi MultiFry")
         bowl_type = config_entry.data.get("bowl_type", "paddle")
         power_outlet = config_entry.data.get("power_outlet_entity")
         start_button = config_entry.data.get("start_button_entity")
+        
+        # Merge default features with user overrides
+        feature_types = dict(APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_MULTIFRY, {}))
+        user_overrides = config_entry.data.get("features", {})
+        feature_types.update(user_overrides)
         
         # Create device control if entities configured
         device_control = None
@@ -496,28 +487,7 @@ class ApplianceManager:
                 start_button_entity=start_button
             )
         
-        appliance = DelonghiMultiFry()
-        appliance.name = name
-        appliance.device_control = device_control
-        
-        # Store bowl type in appliance (could affect feature availability)
-        appliance.bowl_type = bowl_type
-        
-        # Apply config feature overrides if present
-        config_features = config_entry.data.get("features", {})
-        if config_features:
-            for feature_name, feature_type_str in config_features.items():
-                if feature_name in appliance._feature_types:
-                    # Convert string to FeatureType enum
-                    try:
-                        appliance._feature_types[feature_name] = FeatureType[feature_type_str.upper()]
-                    except (KeyError, AttributeError):
-                        _LOGGER.warning(
-                            "Invalid feature type '%s' for feature '%s', using default",
-                            feature_type_str, feature_name
-                        )
-        
-        return appliance
+        return DelonghiMultiFry(name=name, device_control=device_control, feature_types=feature_types, bowl_type=bowl_type)
     
     def _create_custom_appliance(
         self,

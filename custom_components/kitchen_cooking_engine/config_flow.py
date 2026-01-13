@@ -139,7 +139,7 @@ def _build_feature_schema_dict(
     
     Args:
         appliance_type: Type of appliance (ninja_combi, multifry, etc.)
-        current_features: Currently configured features from config
+        current_features: Currently configured features from config (overrides only)
         appliance_config: Current appliance configuration (for conditional features)
         
     Returns:
@@ -187,7 +187,16 @@ def _build_feature_schema_dict(
         feature_def = FEATURE_CATALOG[feature_name]
         
         # Determine if feature is currently enabled
-        is_enabled = feature_name in current_features
+        # Feature is enabled if it's in the config overrides OR if it's explicitly disabled
+        # For new configs: default features start as enabled
+        # For existing configs: check if feature was explicitly disabled (value is None or False)
+        if current_features:
+            # Existing config: check if explicitly disabled
+            is_enabled = current_features.get(feature_name) is not None
+        else:
+            # New config: all default features start enabled
+            is_enabled = True
+        
         current_type = current_features.get(feature_name, default_type)
         
         # Add checkbox for enabling/disabling the feature
