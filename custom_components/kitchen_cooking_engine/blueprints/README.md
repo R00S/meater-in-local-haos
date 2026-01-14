@@ -1,4 +1,6 @@
 # Kitchen Cooking Engine Blueprints
+# Last Updated: 14 Jan 2026, 02:40 UTC
+# Version: 0.3.3.1
 
 This directory contains automation blueprints for the Kitchen Cooking Engine integration.
 
