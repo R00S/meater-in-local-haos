@@ -545,6 +545,7 @@ Format as JSON:
                     # Try different common OpenAI agent IDs without testing them
                     # Just try them in order when making the actual call
                     possible_ids = [
+                        "extended_openai_conversation_2",  # Extended OpenAI Conversation
                         "conversation.openai_conversation",  # OpenAI Conversation integration
                         "conversation.openai",  # Alternative format
                         "openai",
