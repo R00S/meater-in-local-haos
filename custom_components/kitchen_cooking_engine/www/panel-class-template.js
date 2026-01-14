@@ -160,6 +160,8 @@ class KitchenCookingPanel extends LitElement {
     this._isLoadingAISuggestions = false;
     this._isLoadingAIDetail = false;
     this._aiOpenAIAvailable = null;
+    this._showAISettingsModal = false;
+    this._aiAgentId = 'extended_openai_conversation_2';  // Default
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -777,6 +779,45 @@ class KitchenCookingPanel extends LitElement {
       console.error('[AI Recipe Builder] Failed to check OpenAI status:', e);
       this._aiOpenAIAvailable = false;
       this.requestUpdate();
+    }
+  }
+
+  async _showAISettings() {
+    // Load current settings
+    try {
+      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_settings');
+      if (response.status === 'ok') {
+        this._aiAgentId = response.settings.agent_id;
+      }
+    } catch (e) {
+      console.error('[AI Settings] Failed to load settings:', e);
+    }
+    
+    this._showAISettingsModal = true;
+    this.requestUpdate();
+  }
+
+  _closeAISettings() {
+    this._showAISettingsModal = false;
+    this.requestUpdate();
+  }
+
+  async _saveAISettings() {
+    try {
+      const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_settings', {
+        agent_id: this._aiAgentId
+      });
+      
+      if (response.status === 'ok') {
+        // Show success message
+        alert(`✅ AI Settings Saved!\n\nAgent ID: ${this._aiAgentId}\n\nYour AI Recipe Builder will now use this agent.`);
+        this._closeAISettings();
+      } else {
+        alert(`❌ Failed to save settings: ${response.message}`);
+      }
+    } catch (e) {
+      console.error('[AI Settings] Failed to save settings:', e);
+      alert(`❌ Error saving settings: ${e.message}`);
     }
   }
 
@@ -1838,11 +1879,21 @@ class KitchenCookingPanel extends LitElement {
   _renderAIIngredientSelection() {
     return html`
       <ha-card>
-        <div class="card-header">
-          <h2>🤖 AI Recipe Builder</h2>
-          <p style="margin: 8px 0 0 0; font-size: 0.9em; color: var(--secondary-text-color);">
-            Select ingredients and cooking style to generate custom recipes
-          </p>
+        <div class="card-header" style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <div>
+            <h2>🤖 AI Recipe Builder</h2>
+            <p style="margin: 8px 0 0 0; font-size: 0.9em; color: var(--secondary-text-color);">
+              Select ingredients and cooking style to generate custom recipes
+            </p>
+          </div>
+          <button
+            class="icon-button"
+            @click=${this._showAISettings}
+            title="AI Settings"
+            style="margin-top: 4px;"
+          >
+            ⚙️
+          </button>
         </div>
         <div class="card-content">
           <!-- Show warning if OpenAI might not be configured -->
@@ -2316,6 +2367,56 @@ class KitchenCookingPanel extends LitElement {
               </button>
             </div>
           `}
+          
+          <!-- AI Settings Modal -->
+          ${this._showAISettingsModal ? html`
+            <div class="modal-overlay" @click=${this._closeAISettings}>
+              <div class="modal-dialog" @click=${(e) => e.stopPropagation()}>
+                <div class="modal-header">
+                  <h2>⚙️ AI Recipe Builder Settings</h2>
+                  <button class="modal-close" @click=${this._closeAISettings}>✕</button>
+                </div>
+                <div class="modal-body">
+                  <p style="margin-bottom: 16px;">
+                    Configure which AI conversation agent to use for recipe generation.
+                  </p>
+                  
+                  <label for="ai-agent-id" style="display: block; margin-bottom: 8px; font-weight: 600;">
+                    AI Agent ID:
+                  </label>
+                  <input
+                    id="ai-agent-id"
+                    type="text"
+                    .value=${this._aiAgentId}
+                    @input=${(e) => { this._aiAgentId = e.target.value; }}
+                    placeholder="extended_openai_conversation_2"
+                    style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; font-family: monospace;"
+                  />
+                  
+                  <p style="margin-top: 12px; font-size: 0.9em; color: var(--secondary-text-color);">
+                    <strong>Common agent IDs:</strong>
+                  </p>
+                  <ul style="margin: 8px 0; padding-left: 24px; font-size: 0.9em; color: var(--secondary-text-color);">
+                    <li><code>extended_openai_conversation_2</code> - Extended OpenAI Conversation</li>
+                    <li><code>conversation.openai_conversation</code> - OpenAI Conversation</li>
+                    <li><code>conversation.home_assistant_cloud</code> - Nabu Casa Cloud</li>
+                  </ul>
+                  
+                  <p style="margin-top: 12px; font-size: 0.9em; color: var(--secondary-text-color);">
+                    Find your agent ID in <strong>Developer Tools → States</strong> - look for entities starting with "conversation."
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button class="secondary-btn" @click=${this._closeAISettings}>
+                    Cancel
+                  </button>
+                  <button class="primary-btn" @click=${this._saveAISettings}>
+                    Save Settings
+                  </button>
+                </div>
+              </div>
+            </div>
+          ` : ''}
         </div>
       </ha-top-app-bar-fixed>
     `;
@@ -4434,6 +4535,91 @@ class KitchenCookingPanel extends LitElement {
       .loading-spinner p:first-child {
         font-size: 20px;
         font-weight: 600;
+      }
+
+      /* Modal styles */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        padding: 20px;
+      }
+
+      .modal-dialog {
+        background: var(--card-background-color);
+        border-radius: 12px;
+        max-width: 600px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      }
+
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 24px;
+        border-bottom: 1px solid var(--divider-color);
+      }
+
+      .modal-header h2 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .modal-close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 0;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        color: var(--secondary-text-color);
+      }
+
+      .modal-close:hover {
+        background: var(--secondary-background-color);
+        color: var(--primary-text-color);
+      }
+
+      .modal-body {
+        padding: 24px;
+      }
+
+      .modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        padding: 16px 24px;
+        border-top: 1px solid var(--divider-color);
+      }
+
+      .icon-button {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 4px;
+        transition: background 0.2s;
+      }
+
+      .icon-button:hover {
+        background: var(--secondary-background-color);
       }
     `;
   }

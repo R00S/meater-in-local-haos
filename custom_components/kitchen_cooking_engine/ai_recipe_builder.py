@@ -531,37 +531,14 @@ Format as JSON:
             AI response text
         """
         try:
-            # Try to find and use the OpenAI conversation agent
-            # Default to None (use default agent) if not found
-            agent_id = None
+            # Load AI settings from storage to get user-configured agent ID
+            from .storage import async_load_ai_settings
             
-            # Try to find OpenAI agent in conversation data
-            try:
-                # Check if conversation component has agent info
-                if "conversation" in self.hass.data:
-                    conversation_data = self.hass.data.get("conversation", {})
-                    _LOGGER.debug(f"Conversation data keys: {conversation_data.keys()}")
-                    
-                    # Try different common OpenAI agent IDs without testing them
-                    # Just try them in order when making the actual call
-                    possible_ids = [
-                        "extended_openai_conversation_2",  # Extended OpenAI Conversation
-                        "conversation.openai_conversation",  # OpenAI Conversation integration
-                        "conversation.openai",  # Alternative format
-                        "openai",
-                        "conversation.home_assistant_cloud",  # In case using Nabu Casa
-                    ]
-                    
-                    # Don't test - just use the first one we try
-                    # If it fails, we'll catch the error and user will see it
-                    agent_id = possible_ids[0]  # Start with most common
-                    _LOGGER.info(f"Will try OpenAI agent: {agent_id}")
-                else:
-                    _LOGGER.warning("Conversation component not loaded in hass.data")
-            except Exception as e:
-                _LOGGER.debug(f"Could not access conversation data: {e}")
+            ai_settings = await async_load_ai_settings(self.hass)
+            agent_id = ai_settings.get("agent_id", "extended_openai_conversation_2")
             
-            _LOGGER.info(f"Calling conversation agent: {agent_id or 'default'} with prompt length: {len(prompt)}")
+            _LOGGER.info(f"Using configured AI agent: {agent_id}")
+            _LOGGER.info(f"Calling conversation agent with prompt length: {len(prompt)}")
             
             # Use Home Assistant's conversation component
             # This handles the OpenAI API integration

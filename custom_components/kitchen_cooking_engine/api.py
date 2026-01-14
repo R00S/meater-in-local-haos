@@ -262,6 +262,7 @@ def async_register_api(hass: HomeAssistant) -> None:
     hass.http.register_view(AIRecipeGenerateView)
     hass.http.register_view(AIRecipeDetailView)
     hass.http.register_view(AIRecipeCheckView)
+    hass.http.register_view(AISettingsView)
     
     _LOGGER.info("Kitchen Cooking Engine: API endpoints registered")
 
@@ -817,6 +818,80 @@ class AIRecipeDetailView(HomeAssistantView):
             
         except Exception as ex:
             _LOGGER.error("Error getting AI recipe detail: %s", ex)
+            return self.json({
+                "status": "error",
+                "message": str(ex)
+            })
+
+
+class AISettingsView(HomeAssistantView):
+    """API endpoint to get and update AI settings."""
+
+    url = "/api/kitchen_cooking_engine/ai_settings"
+    name = "api:kitchen_cooking_engine:ai_settings"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Get current AI settings including agent ID."""
+        from .storage import async_load_ai_settings
+        
+        hass = request.app["hass"]
+        
+        try:
+            settings = await async_load_ai_settings(hass)
+            
+            return self.json({
+                "status": "ok",
+                "settings": settings
+            })
+            
+        except Exception as ex:
+            _LOGGER.error("Error loading AI settings: %s", ex)
+            return self.json({
+                "status": "error",
+                "message": str(ex)
+            })
+    
+    async def post(self, request: web.Request) -> web.Response:
+        """Update AI settings.
+        
+        Request body:
+        {
+            "agent_id": "extended_openai_conversation_2"
+        }
+        """
+        from .storage import async_save_ai_settings
+        
+        hass = request.app["hass"]
+        
+        try:
+            data = await request.json()
+            
+            if "agent_id" not in data:
+                return self.json({
+                    "status": "error",
+                    "message": "agent_id is required"
+                })
+            
+            settings = {
+                "agent_id": data["agent_id"]
+            }
+            
+            success = await async_save_ai_settings(hass, settings)
+            
+            if success:
+                return self.json({
+                    "status": "ok",
+                    "settings": settings
+                })
+            else:
+                return self.json({
+                    "status": "error",
+                    "message": "Failed to save settings"
+                })
+            
+        except Exception as ex:
+            _LOGGER.error("Error saving AI settings: %s", ex)
             return self.json({
                 "status": "error",
                 "message": str(ex)

@@ -8,7 +8,7 @@ DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "65"
+PANEL_VERSION = "67"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
@@ -25,6 +25,7 @@ CONF_POWER_OUTLET = "power_outlet"          # Switch/outlet entity to control po
 CONF_START_BUTTON = "start_button"          # Button/switch entity to start cooking
 CONF_AUTO_SHUTOFF = "auto_shutoff_enabled"  # Auto turn off when complete
 CONF_AUTO_START = "auto_start_enabled"      # Enable remote start
+CONF_AI_AGENT_ID = "ai_agent_id"            # OpenAI conversation agent ID for AI Recipe Builder
 
 # Temperature units
 TEMP_CELSIUS = "celsius"
