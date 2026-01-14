@@ -17,9 +17,16 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 ## 📊 Current Status
 
-**Phase 1: Kitchen Cooking Engine HACS Integration** ✅ Complete (v0.1.2.18)
+**Phase 3, 4 & 5: Multi-Appliance Infrastructure** ✅ Complete (v0.3.3.0)
 
-### v0.1.2.18 Features (Current)
+### v0.3.3.0 Features (Current - January 2026)
+- ✅ **Multi-appliance support** - Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom appliances
+- ✅ **Unified configuration** - All appliances use identical backend logic
+- ✅ **Dynamic feature management** - Enable/disable features per appliance
+- ✅ **Feature type system** - Standard/Modified/Special implementations with color-coded UI
+- ✅ **Architectural unification** - Predefined appliances indistinguishable from custom once created
+- ✅ **Enhanced UI** - Expandable appliance cards with grouped features
+- ✅ **Settings on all appliances** - Gear icon for feature editing on every appliance
 - ✅ MEATER+ temperature data flowing into Home Assistant via ESPHome BLE client
 - ✅ Comprehensive cooking data model (185+ international cuts, 89 Swedish cuts)
 - ✅ **Swedish data source** with proper terminology (helstekt, skiva)
@@ -44,12 +51,14 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 - ✅ **Temperature graph** - Real-time graph showing tip/ambient temps from cook start
 - ✅ **Cooking notes** - Add notes during cooks, saved with history
 - ✅ **White screen fix** - Reliable tab switching without blank screens
-- ✅ **Ninja Combi support** - Recipes and cooking modes for Ninja Combi SFP700EU oven
+- ✅ **Ninja Combi support** - Full integration with recipes and cooking modes for Ninja Combi SFP700EU oven
+- ✅ **MultiFry support** - DeLonghi MultiFry with all cooking modes
 - ⏳ AI-powered recipe integration (future)
 
+### Previous Releases
+- **v0.1.2.18** (December 2025) - Initial HACS integration with MEATER+ support
+
 See [STATUS.md](STATUS.md) for detailed project status.
-See [TODO_v0.1.2.0.md](TODO_v0.1.2.0.md) for upcoming features.
-See [NINJA_COMBI_GUIDE.md](docs/NINJA_COMBI_GUIDE.md) for Ninja Combi oven guide.
 
 ---
 
