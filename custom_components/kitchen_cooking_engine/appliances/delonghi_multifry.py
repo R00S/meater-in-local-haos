@@ -126,13 +126,29 @@ class MultiFryAdapter(RecipeAdapter):
 class DelonghiMultiFry(KitchenAppliance):
     """De'Longhi MultiFry FH1394 multi-cooker."""
     
-    def __init__(self):
+    def __init__(
+        self,
+        name: str = "De'Longhi MultiFry",
+        device_control: Optional[ApplianceDeviceControl] = None,
+        feature_types: Optional[Dict[str, str]] = None,
+        bowl_type: str = "paddle"
+    ):
+        """Initialize MultiFry appliance.
+        
+        Args:
+            name: Appliance name
+            device_control: Optional device control configuration
+            feature_types: Optional user overrides for feature types
+            bowl_type: Bowl type ("paddle" or "non_paddle")
+        """
         super().__init__()
         self.appliance_id = "delonghi_multifry_fh1394"
-        self.name = "De'Longhi MultiFry"
+        self.name = name
         self.brand = "De'Longhi"
         self.model = "FH1394"
         self.adapter = MultiFryAdapter()
+        self.device_control = device_control
+        self.bowl_type = bowl_type
         
         # Initialize features from catalog
         self.features = {
@@ -147,9 +163,9 @@ class DelonghiMultiFry(KitchenAppliance):
             "sear": FEATURE_CATALOG["sear"],
         }
         
-        # Set feature types for this specific appliance
+        # Set default feature types for this specific appliance
         # Key insight: MultiFry MODIFIES most features due to hot air circulation
-        self._feature_types = {
+        default_feature_types = {
             "casserole_risotto": FeatureType.MODIFIED,  # Adapts slow-cooker recipes
             "fry": FeatureType.MODIFIED,                # Adapts frying recipes (less oil)
             "roast": FeatureType.STANDARD,              # Standard roasting
@@ -160,6 +176,20 @@ class DelonghiMultiFry(KitchenAppliance):
             "pan_fry": FeatureType.MODIFIED,            # Non-stick bowl only, different from stovetop
             "sear": FeatureType.MODIFIED,               # Non-stick bowl only, different from stovetop
         }
+        
+        # Allow user override of feature types via config
+        if feature_types:
+            for feat, ftype in feature_types.items():
+                # Convert string to FeatureType enum
+                if ftype == "standard":
+                    default_feature_types[feat] = FeatureType.STANDARD
+                elif ftype == "modified":
+                    default_feature_types[feat] = FeatureType.MODIFIED
+                elif ftype == "special":
+                    default_feature_types[feat] = FeatureType.SPECIAL
+                # If unknown, keep default
+        
+        self._feature_types = default_feature_types
         
         # Initialize recipes
         self.recipes = self._load_recipes()

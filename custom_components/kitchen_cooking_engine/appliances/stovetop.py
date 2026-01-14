@@ -36,35 +36,40 @@ class StoretopType:
 class Stovetop(KitchenAppliance):
     """Residential stovetop/cooktop."""
     
-    def __init__(self, stovetop_type: str = StoretopType.GAS, num_burners: int = 4):
+    def __init__(self, name: str = None, stove_type: str = StoretopType.GAS, num_burners: int = 4, feature_types: Optional[Dict[str, str]] = None):
         """
         Initialize stovetop.
         
         Args:
-            stovetop_type: Type of stovetop (gas, electric_coil, electric_smoothtop, induction)
+            name: Custom name (auto-generated if None)
+            stove_type: Type of stovetop (gas, electric_coil, electric_smoothtop, induction)
             num_burners: Number of cooking zones/burners
+            feature_types: Optional user overrides for feature types
         """
         super().__init__()
         
-        self.appliance_id = f"stovetop_{stovetop_type}"
+        self.appliance_id = f"stovetop_{stove_type}"
         self.brand = "Generic"
         self.model = "Standard"
         
         # Type-specific attributes
-        self.stovetop_type = stovetop_type
+        self.stovetop_type = stove_type
         self.num_burners = num_burners
-        self.is_induction = stovetop_type == StoretopType.INDUCTION
+        self.is_induction = stove_type == StoretopType.INDUCTION
         
         # Set display name
-        type_names = {
-            StoretopType.GAS: "Gas Stovetop",
-            StoretopType.ELECTRIC_COIL: "Electric Coil Stovetop",
-            StoretopType.ELECTRIC_SMOOTHTOP: "Electric Smoothtop",
-            StoretopType.INDUCTION: "Induction Cooktop",
-        }
-        self.name = type_names.get(stovetop_type, "Stovetop")
-        if num_burners != 4:
-            self.name = f"{self.name} ({num_burners} burners)"
+        if name:
+            self.name = name
+        else:
+            type_names = {
+                StoretopType.GAS: "Gas Stovetop",
+                StoretopType.ELECTRIC_COIL: "Electric Coil Stovetop",
+                StoretopType.ELECTRIC_SMOOTHTOP: "Electric Smoothtop",
+                StoretopType.INDUCTION: "Induction Cooktop",
+            }
+            self.name = type_names.get(stove_type, "Stovetop")
+            if num_burners != 4:
+                self.name = f"{self.name} ({num_burners} burners)"
         
         # Build features - all stovetops support these
         self.features = {
@@ -75,15 +80,29 @@ class Stovetop(KitchenAppliance):
             "saute": FEATURE_CATALOG["saute"],
         }
         
-        # Stovetops implement all features as STANDARD
+        # Stovetops implement all features as STANDARD by default
         # They are the traditional baseline for pan cooking
-        self._feature_types = {
+        default_feature_types = {
             "pan_fry": FeatureType.STANDARD,
             "sear": FeatureType.STANDARD,
             "boil": FeatureType.STANDARD,
             "simmer": FeatureType.STANDARD,
             "saute": FeatureType.STANDARD,
         }
+        
+        # Allow user override of feature types via config
+        if feature_types:
+            for feat, ftype in feature_types.items():
+                if feat in self.features:
+                    # Convert string to FeatureType enum
+                    if ftype == "standard":
+                        default_feature_types[feat] = FeatureType.STANDARD
+                    elif ftype == "modified":
+                        default_feature_types[feat] = FeatureType.MODIFIED
+                    elif ftype == "special":
+                        default_feature_types[feat] = FeatureType.SPECIAL
+        
+        self._feature_types = default_feature_types
         
         # No built-in recipes
         self.recipes = []

@@ -28,14 +28,16 @@ from ..features.catalog import FEATURE_CATALOG
 class Microwave(KitchenAppliance):
     """Standard residential microwave oven."""
     
-    def __init__(self, wattage: int = 1000, has_convection: bool = False, has_sensor: bool = False):
+    def __init__(self, name: str = None, wattage: int = 1000, has_convection: bool = False, has_sensor: bool = False, feature_types: Optional[Dict[str, str]] = None):
         """
         Initialize microwave.
         
         Args:
+            name: Custom name (auto-generated if None)
             wattage: Microwave power in watts (typical: 700-1200W)
             has_convection: Whether it's a combination microwave+convection oven
             has_sensor: Whether it has automatic sensor cooking
+            feature_types: Optional user overrides for feature types
         """
         super().__init__()
         
@@ -49,7 +51,9 @@ class Microwave(KitchenAppliance):
         self.has_sensor = has_sensor
         
         # Set display name
-        if has_convection:
+        if name:
+            self.name = name
+        elif has_convection:
             self.name = f"Convection Microwave ({wattage}W)"
         elif has_sensor:
             self.name = f"Sensor Microwave ({wattage}W)"
@@ -63,8 +67,8 @@ class Microwave(KitchenAppliance):
             "reheat": FEATURE_CATALOG["reheat"],
         }
         
-        # Set feature types - microwave requires recipe adaptation
-        self._feature_types = {
+        # Set default feature types - microwave requires recipe adaptation
+        default_feature_types = {
             "microwave": FeatureType.MODIFIED,  # Requires adaptation
             "defrost": FeatureType.MODIFIED,    # Requires adaptation
             "reheat": FeatureType.STANDARD,     # Straightforward reheating
@@ -72,13 +76,27 @@ class Microwave(KitchenAppliance):
         
         if has_sensor:
             self.features["sensor_cook"] = FEATURE_CATALOG["sensor_cook"]
-            self._feature_types["sensor_cook"] = FeatureType.MODIFIED
+            default_feature_types["sensor_cook"] = FeatureType.MODIFIED
         
         if has_convection:
             self.features["convection_microwave"] = FEATURE_CATALOG["convection_microwave"]
             self.features["bake"] = FEATURE_CATALOG["bake"]
-            self._feature_types["convection_microwave"] = FeatureType.MODIFIED
-            self._feature_types["bake"] = FeatureType.MODIFIED
+            default_feature_types["convection_microwave"] = FeatureType.MODIFIED
+            default_feature_types["bake"] = FeatureType.MODIFIED
+        
+        # Allow user override of feature types via config
+        if feature_types:
+            for feat, ftype in feature_types.items():
+                if feat in self.features:
+                    # Convert string to FeatureType enum
+                    if ftype == "standard":
+                        default_feature_types[feat] = FeatureType.STANDARD
+                    elif ftype == "modified":
+                        default_feature_types[feat] = FeatureType.MODIFIED
+                    elif ftype == "special":
+                        default_feature_types[feat] = FeatureType.SPECIAL
+        
+        self._feature_types = default_feature_types
         
         # No built-in recipes
         self.recipes = []

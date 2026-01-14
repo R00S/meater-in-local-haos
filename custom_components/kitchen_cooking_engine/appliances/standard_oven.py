@@ -29,18 +29,20 @@ from ..features.catalog import FEATURE_CATALOG
 class StandardOven(KitchenAppliance):
     """Standard residential oven (electric or gas)."""
     
-    def __init__(self, has_convection: bool = False, has_grill: bool = False):
+    def __init__(self, name: str = "Standard Oven", has_convection: bool = False, has_grill: bool = False, feature_types: Optional[Dict[str, str]] = None):
         """
         Initialize standard oven.
         
         Args:
+            name: Appliance name
             has_convection: Whether oven has convection/fan mode
             has_grill: Whether oven has grill mode
+            feature_types: Optional user overrides for feature types
         """
         super().__init__()
         
         self.appliance_id = "standard_oven"
-        self.name = "Standard Oven"
+        self.name = name
         self.brand = "Generic"
         self.model = "Standard"
         
@@ -52,9 +54,9 @@ class StandardOven(KitchenAppliance):
             "roast": FEATURE_CATALOG["roast"],
         }
         
-        # Standard ovens implement all features as STANDARD
+        # Standard ovens implement all features as STANDARD by default
         # They are the baseline that other appliances compare against
-        self._feature_types = {
+        default_feature_types = {
             "oven": FeatureType.STANDARD,
             "bake": FeatureType.STANDARD,
             "broil": FeatureType.STANDARD,
@@ -63,16 +65,26 @@ class StandardOven(KitchenAppliance):
         
         if has_convection:
             self.features["convection"] = FEATURE_CATALOG["convection"]
-            self._feature_types["convection"] = FeatureType.STANDARD
-            self.name = "Convection Oven"
+            default_feature_types["convection"] = FeatureType.STANDARD
         
         if has_grill:
             self.features["grill"] = FEATURE_CATALOG["grill"]
-            self._feature_types["grill"] = FeatureType.STANDARD
-            if has_convection:
-                self.name = "Convection Oven with Grill"
-            else:
-                self.name = "Oven with Grill"
+            default_feature_types["grill"] = FeatureType.STANDARD
+        
+        # Allow user override of feature types via config
+        if feature_types:
+            for feat, ftype in feature_types.items():
+                # Only apply to features that exist
+                if feat in self.features:
+                    # Convert string to FeatureType enum
+                    if ftype == "standard":
+                        default_feature_types[feat] = FeatureType.STANDARD
+                    elif ftype == "modified":
+                        default_feature_types[feat] = FeatureType.MODIFIED
+                    elif ftype == "special":
+                        default_feature_types[feat] = FeatureType.SPECIAL
+        
+        self._feature_types = default_feature_types
         
         # Standard ovens don't have built-in recipes
         self.recipes = []

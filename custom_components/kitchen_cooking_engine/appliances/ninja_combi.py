@@ -61,10 +61,16 @@ class NinjaCombi(KitchenAppliance):
         
         # Allow user override of feature types via config
         if feature_types:
-            default_features.update({
-                feat: FeatureType[ftype.upper()] 
-                for feat, ftype in feature_types.items()
-            })
+            for feat, ftype in feature_types.items():
+                # Convert string to FeatureType enum
+                if ftype == "standard":
+                    default_features[feat] = FeatureType.STANDARD
+                elif ftype == "modified":
+                    default_features[feat] = FeatureType.MODIFIED
+                elif ftype == "special":
+                    default_features[feat] = FeatureType.SPECIAL
+                else:
+                    default_features[feat] = FeatureType.STANDARD  # default
         
         super().__init__()
         
