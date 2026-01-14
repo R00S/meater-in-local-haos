@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 2 Dec 2025, 11:50 CET
-Last Change: v0.1.2.0 - Added battery sensor, improved notifications, external API
+Last Updated: 14 Jan 2026, 00:00 CET
+Last Change: v0.3.2.5 - Settings icon on appliances + feature grouping by type
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -17,6 +17,7 @@ This integration provides:
 - Battery level monitoring (for MEATER probes)
 - Sidebar panel for easy cooking setup and monitoring
 - External API for 3rd party integrations and automations
+- Phase 3.1: Multi-appliance support with feature-based recipe matching
 """
 
 from __future__ import annotations
@@ -41,6 +42,7 @@ from .const import (
     SERVICE_START_REST,
     SERVICE_COMPLETE,
     SERVICE_SET_NOTES,
+    SERVICE_START_MULTI_APPLIANCE_COOK,
 )
 from .cooking_data import (
     get_cut_by_id,
@@ -105,12 +107,50 @@ SERVICE_SET_NOTES_SCHEMA = vol.Schema(
     }
 )
 
+# Phase 4: Service schema for start_multi_appliance_cook
+SERVICE_START_MULTI_APPLIANCE_COOK_SCHEMA = vol.Schema(
+    {
+        vol.Required("recipe_id"): vol.Any(cv.string, vol.Coerce(int)),
+        vol.Optional("appliances"): vol.Schema({
+            vol.Optional("oven"): cv.entity_id,
+            vol.Optional("probe"): cv.entity_id,
+            vol.Optional("air_fryer"): cv.entity_id,
+            vol.Optional("combi"): cv.entity_id,
+        }),
+        vol.Optional("target_temp_c"): vol.All(vol.Coerce(int), vol.Range(min=30, max=250)),
+        vol.Optional("cook_time_minutes"): vol.All(vol.Coerce(int), vol.Range(min=1, max=1440)),
+    }
+)
+
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
     """Initialize the integration (called before any entry setup)."""
     hass.data.setdefault(DOMAIN, {})
     _LOGGER.info("Kitchen Cooking Engine: Integration initialized")
     return True
+
+
+async def async_migrate_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+    """Migrate old config entry to new format.
+    
+    This function is called by Home Assistant when it detects that the
+    config entry version is lower than the current integration version.
+    Phase 3.1: Handles migration from v0.2 single-appliance to v0.3+ multi-appliance.
+    """
+    _LOGGER.info("Migrating config entry from version %s", entry.version)
+    
+    from .migration import async_migrate_entry as migrate_impl
+    
+    try:
+        success = await migrate_impl(hass, entry)
+        if success:
+            _LOGGER.info("Config entry migration completed successfully")
+        else:
+            _LOGGER.error("Config entry migration failed")
+        return success
+    except Exception as err:
+        _LOGGER.error("Error during config entry migration: %s", err)
+        return False
 
 
 async def _cleanup_old_entities(hass: HomeAssistant, entry: ConfigEntry) -> None:
@@ -158,65 +198,74 @@ async def _async_regenerate_frontend_data(hass: HomeAssistant) -> bool:
 
 async def _async_register_panel(hass: HomeAssistant) -> None:
     """Register the sidebar panel."""
-    # Only register once
-    if hass.data.get(DOMAIN, {}).get("panel_registered"):
+    # Only register once - check and set flag atomically
+    if hass.data[DOMAIN].get("panel_registered"):
+        _LOGGER.debug("Kitchen Cooking Engine: Panel already registered, skipping")
         return
     
-    # Regenerate frontend data from backend before registering panel
-    await _async_regenerate_frontend_data(hass)
-    
-    # Re-read PANEL_VERSION after regeneration (it may have been updated)
-    # We need to reload the const module to get the updated value
-    import importlib
-    from . import const as const_module
-    importlib.reload(const_module)
-    panel_version = const_module.PANEL_VERSION
-    
-    # Get the path to the www directory
-    www_path = Path(__file__).parent / "www"
-    panel_js_path = www_path / "kitchen-cooking-panel.js"
-    
-    if not panel_js_path.exists():
-        _LOGGER.warning("Kitchen Cooking Engine: Panel JS file not found at %s", panel_js_path)
-        return
-    
-    # Register static path to serve the panel JS
-    try:
-        await hass.http.async_register_static_paths([
-            StaticPathConfig(
-                url_path="/kitchen_cooking_engine_panel",
-                path=str(www_path),
-                cache_headers=True,
-            )
-        ])
-    except Exception as e:
-        _LOGGER.warning("Kitchen Cooking Engine: Could not register static path: %s", e)
-        return
-    
-    # Register the custom panel in the sidebar
-    # Use panel_version in both URL and element name to bust ALL caches
-    # The element name must match what's in kitchen-cooking-panel.js
-    panel_element_name = f"kitchen-cooking-panel-v{panel_version}"
-    _LOGGER.info("Kitchen Cooking Engine: Registering panel with version %s", panel_version)
-    async_register_built_in_panel(
-        hass,
-        component_name="custom",
-        sidebar_title="Cooking",
-        sidebar_icon="mdi:pot-steam",
-        frontend_url_path="kitchen-cooking",
-        config={
-            "_panel_custom": {
-                "name": panel_element_name,
-                "embed_iframe": False,
-                "trust_external": False,
-                "module_url": f"/kitchen_cooking_engine_panel/kitchen-cooking-panel.js?v={panel_version}",
-            }
-        },
-        require_admin=False,
-    )
-    
+    # Set flag immediately to prevent race conditions
     hass.data[DOMAIN]["panel_registered"] = True
-    _LOGGER.info("Kitchen Cooking Engine: Sidebar panel registered (version %s)", panel_version)
+    
+    try:
+        # Regenerate frontend data from backend before registering panel
+        await _async_regenerate_frontend_data(hass)
+        
+        # Re-read PANEL_VERSION after regeneration (it may have been updated)
+        # We need to reload the const module to get the updated value
+        import importlib
+        from . import const as const_module
+        importlib.reload(const_module)
+        panel_version = const_module.PANEL_VERSION
+        
+        # Get the path to the www directory
+        www_path = Path(__file__).parent / "www"
+        panel_js_path = www_path / "kitchen-cooking-panel.js"
+        
+        if not panel_js_path.exists():
+            _LOGGER.warning("Kitchen Cooking Engine: Panel JS file not found at %s", panel_js_path)
+            return
+        
+        # Register static path to serve the panel JS
+        try:
+            await hass.http.async_register_static_paths([
+                StaticPathConfig(
+                    url_path="/kitchen_cooking_engine_panel",
+                    path=str(www_path),
+                    cache_headers=True,
+                )
+            ])
+        except Exception as e:
+            _LOGGER.warning("Kitchen Cooking Engine: Could not register static path: %s", e)
+            return
+        
+        # Register the custom panel in the sidebar
+        # Use panel_version in both URL and element name to bust ALL caches
+        # The element name must match what's in kitchen-cooking-panel.js
+        panel_element_name = f"kitchen-cooking-panel-v{panel_version}"
+        _LOGGER.info("Kitchen Cooking Engine: Registering panel with version %s", panel_version)
+        async_register_built_in_panel(
+            hass,
+            component_name="custom",
+            sidebar_title="Cooking",
+            sidebar_icon="mdi:pot-steam",
+            frontend_url_path="kitchen-cooking",
+            config={
+                "_panel_custom": {
+                    "name": panel_element_name,
+                    "embed_iframe": False,
+                    "trust_external": False,
+                    "module_url": f"/kitchen_cooking_engine_panel/kitchen-cooking-panel.js?v={panel_version}",
+                }
+            },
+            require_admin=False,
+        )
+        
+        _LOGGER.info("Kitchen Cooking Engine: Sidebar panel registered (version %s)", panel_version)
+    except Exception as e:
+        _LOGGER.error("Kitchen Cooking Engine: Failed to register panel: %s", e, exc_info=True)
+        # Clear flag on failure so it can be retried
+        hass.data[DOMAIN]["panel_registered"] = False
+        raise
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
@@ -227,6 +276,30 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     hass.data.setdefault(DOMAIN, {})
 
+    # Phase 3.1: Initialize Appliance Manager (if not already done)
+    from .appliance_manager import ApplianceManager
+    
+    if "appliance_manager" not in hass.data[DOMAIN]:
+        manager = ApplianceManager(hass)
+        await manager.async_setup()
+        _LOGGER.info("Appliance Manager initialized")
+    else:
+        manager = hass.data[DOMAIN]["appliance_manager"]
+    
+    # Phase 3.1: Initialize Panel Data Service (if not already done)
+    from .panel_data import PanelDataService
+    
+    if "panel_data_service" not in hass.data[DOMAIN]:
+        panel_data = PanelDataService(hass, manager)
+        await panel_data.async_setup()
+        hass.data[DOMAIN]["panel_data_service"] = panel_data
+        _LOGGER.info("Panel Data Service initialized")
+    
+    # Phase 3.1: Setup appliance from this config entry
+    appliance = await manager.async_setup_appliance(entry)
+    if appliance:
+        _LOGGER.info("Appliance registered: %s", appliance.name)
+
     # Clean up any duplicate sensor entities from old versions
     await _cleanup_old_entities(hass, entry)
 
@@ -235,8 +308,9 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         "config": entry.data,
     }
 
-    # Register the sidebar panel
-    await _async_register_panel(hass)
+    # Register the sidebar panel (only once, not per config entry)
+    if not hass.data[DOMAIN].get("panel_registered", False):
+        await _async_register_panel(hass)
 
     # Register API endpoints for cooking data
     async_register_api(hass)
@@ -254,6 +328,14 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Handle removal of a config entry."""
+    # Phase 3.1: Unload appliance from manager
+    from .appliance_manager import get_appliance_manager
+    
+    manager = get_appliance_manager(hass)
+    if manager:
+        await manager.async_unload_appliance(entry.entry_id)
+        _LOGGER.info("Appliance unloaded: %s", entry.title)
+    
     unload_ok = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
     if unload_ok:
         hass.data[DOMAIN].pop(entry.entry_id, None)
@@ -468,6 +550,86 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         for entity in entities:
             entity.set_notes(notes)
 
+    async def handle_start_multi_appliance_cook(call: ServiceCall) -> None:
+        """Handle start multi-appliance cook service call.
+        
+        Phase 4: Coordinates cooking across multiple appliances simultaneously.
+        """
+        _LOGGER.info("Kitchen Cooking Engine: Start multi-appliance cook service called")
+        
+        from .coordinator import get_coordinator
+        from .recipes.matcher import RecipeMatcher
+        from .appliances.registry import get_registry
+        
+        coordinator = get_coordinator(hass)
+        registry = get_registry(hass)
+        
+        recipe_id = call.data.get("recipe_id")
+        appliances_map = call.data.get("appliances", {})
+        target_temp_c = call.data.get("target_temp_c")
+        cook_time_minutes = call.data.get("cook_time_minutes")
+        
+        # Build a simple recipe dict from the service call
+        # In a real implementation, this would look up a full recipe by ID
+        recipe = {
+            "id": recipe_id,
+            "name": f"Recipe {recipe_id}",
+            "required_features": list(appliances_map.keys()) if appliances_map else [],
+        }
+        
+        # Build appliance assignments from the service call
+        from .coordinator import ApplianceAssignment
+        assignments = []
+        
+        for role, entity_id in appliances_map.items():
+            # Try to find the appliance by entity
+            # This is a simplified lookup - in production, would have proper entity->appliance mapping
+            appliances = registry.get_all_appliances()
+            for appliance in appliances:
+                # For now, create assignment based on role
+                assignments.append(ApplianceAssignment(
+                    feature_role=role,
+                    appliance_id=appliance.get("id", "unknown"),
+                    appliance_name=appliance.get("name", "Unknown"),
+                    entity_id=entity_id
+                ))
+                break  # Use first appliance for now
+        
+        # Start the multi-appliance cook session
+        try:
+            options = {}
+            if target_temp_c:
+                options["target_temp_c"] = target_temp_c
+            if cook_time_minutes:
+                options["cook_time_minutes"] = cook_time_minutes
+            
+            session = await coordinator.start_multi_appliance_cook(
+                recipe=recipe,
+                appliance_assignments=assignments if assignments else None,
+                options=options
+            )
+            
+            _LOGGER.info(
+                "Started multi-appliance cook session %s for recipe %s",
+                session.session_id,
+                session.recipe_name
+            )
+            
+            # Update sensor entities with multi-appliance session info
+            for assignment in session.appliance_assignments:
+                if assignment.entity_id:
+                    entities = _get_cooking_session_entities(hass, [assignment.entity_id])
+                    for entity in entities:
+                        entity._multi_cook_session_id = session.session_id
+                        entity._active_appliances = [a.appliance_id for a in session.appliance_assignments]
+                        entity._primary_appliance = session.primary_appliance_id
+                        entity._secondary_appliances = session.secondary_appliance_ids
+                        entity.async_write_ha_state()
+                        
+        except Exception as err:
+            _LOGGER.error("Failed to start multi-appliance cook: %s", err)
+            raise
+
     # Only register if not already registered
     if not hass.services.has_service(DOMAIN, SERVICE_START_COOK):
         hass.services.async_register(
@@ -503,5 +665,13 @@ async def _async_register_services(hass: HomeAssistant) -> None:
             SERVICE_SET_NOTES,
             handle_set_notes,
             schema=SERVICE_SET_NOTES_SCHEMA,
+        )
+    # Phase 4: Register multi-appliance cook service
+    if not hass.services.has_service(DOMAIN, SERVICE_START_MULTI_APPLIANCE_COOK):
+        hass.services.async_register(
+            DOMAIN,
+            SERVICE_START_MULTI_APPLIANCE_COOK,
+            handle_start_multi_appliance_cook,
+            schema=SERVICE_START_MULTI_APPLIANCE_COOK_SCHEMA,
         )
 

@@ -54,6 +54,20 @@ class MealType(Enum):
     SIDE_DISH = "side_dish"
 
 
+class ImplementationQuality(Enum):
+    """Quality of recipe implementation with available appliances."""
+    EXCELLENT = 5       # All features STANDARD
+    GOOD = 4            # Mix of STANDARD/MODIFIED
+    ACCEPTABLE = 3      # Some MODIFIED features
+    POOR = 2            # Many MODIFIED features
+    INCOMPATIBLE = 1    # Missing required features
+    
+    @property
+    def display_name(self) -> str:
+        """Get display name for UI."""
+        return self.name.lower()
+
+
 @dataclass
 class CookingPhase:
     """A single phase in a multi-phase cooking program."""
@@ -158,33 +172,26 @@ class UnifiedRecipe:
 class RecipeMatchResult:
     """Result of matching a recipe against available appliances."""
     
-    recipe: UnifiedRecipe
     can_cook: bool
-    
-    # Appliance suggestions
-    suggested_combination: List[str]  # Appliance IDs
-    alternative_combinations: List[List[str]]
-    
-    # Feature analysis
-    missing_required_features: Set[str]
-    available_optional_features: Set[str]
-    
-    # Implementation quality
-    has_standard_implementations: bool  # All features are STANDARD
-    has_modified_implementations: bool  # Some features are MODIFIED
-    needs_adaptation: bool  # Recipe will be auto-adapted
-    
-    confidence_score: float  # 0.0 to 1.0
+    missing_features: Set[str]
+    suggested_appliances: List[str]  # Appliance names/IDs
+    alternative_appliances: List[List[str]]  # Alternative combinations
+    implementation_quality: ImplementationQuality
+    quality_score: float  # 0.0 to 1.0
+    confidence: float  # 0.0 to 1.0
+    notes: List[str] = field(default_factory=list)  # Implementation notes
     
     def get_recommendation_text(self) -> str:
         """Get human-readable recommendation."""
         if not self.can_cook:
-            missing = ", ".join(self.missing_required_features)
+            missing = ", ".join(self.missing_features)
             return f"Cannot cook: missing {missing}"
         
-        if self.has_standard_implementations:
+        if self.implementation_quality == ImplementationQuality.EXCELLENT:
             return "Perfect match - all features supported"
-        elif self.has_modified_implementations:
+        elif self.implementation_quality == ImplementationQuality.GOOD:
             return "Good match - recipe will be auto-adapted"
+        elif self.implementation_quality == ImplementationQuality.ACCEPTABLE:
+            return "Acceptable - some features modified"
         else:
             return "Can cook with some adjustments"

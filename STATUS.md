@@ -1,89 +1,70 @@
 # Project Status - Kitchen Cooking Engine
 
-**Last Updated:** 2025-12-01
+**Last Updated:** 14 January 2026
 
 ## Project Direction
 
-This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen Cooking Engine** - a local-first, AI-assisted cooking system for Home Assistant.
+This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen Cooking Engine** - a local-first, multi-appliance cooking system for Home Assistant.
 
-## ✅ Current Status
+## ✅ Current Status - v0.3.3.0 (Production Release)
 
-### Working Now (v0.1.1.0)
+### Phase 3, 4 & 5 Complete
+- **Multi-Appliance Infrastructure** ✅ - Support for Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom appliances
+- **Unified Configuration** ✅ - All appliances use identical backend logic
+- **Dynamic Feature Management** ✅ - Enable/disable features per appliance
+- **Feature Type System** ✅ - Standard/Modified/Special implementations with color-coded UI
+- **Architectural Unification** ✅ - Predefined appliances indistinguishable from custom once created
+- **Enhanced UI** ✅ - Expandable appliance cards with grouped features
+- **Settings on All Appliances** ✅ - Gear icon for feature editing on every appliance
+
+### Core Functionality
 - **MEATER+ BLE Client**: ESP32 connects to real MEATER+ probe and reads temperature data
 - **Home Assistant Integration**: Tip temp, ambient temp, battery level, RSSI exposed as sensors
 - **No Cloud Required**: All data stays local via ESPHome
 - **Cooking Panel UI**: Select protein, cut, doneness, and cooking method
-- **Swedish Temperature Data**: Full Swedish cut tree with temperatures from Livsmedelsverket, Stekguiden.se, Gårdssällskapet
+- **Swedish Temperature Data**: Full Swedish cut tree with temperatures from Livsmedelsverket
 - **Temperature Fine-Tuning**: Adjust target temperature before starting cooks
 - **Recommended Doneness**: Pre-selected recommended doneness for each cut
+- **Live Temperature Monitoring**: Real-time graphs and progress tracking
+- **Cook History**: Log completed cooks with notes and temperatures
+- **Notifications**: Mobile push, TTS announcements, persistent notifications
+- **Indicator Light Control**: RGB light changes color during cooking progress
 
-### New in v0.1.1.0
-- **Swedish Data Source**: Choose between International (USDA) or Swedish (Livsmedelsverket) temperature recommendations
-- **Merged Protein Lists**: Comprehensive list of cuts from both data sources
-- **Temperature Fine-Tuning UI**: Slider and input controls to adjust target temperature
-- **Recommended Doneness**: ⭐ indicator for recommended doneness levels
-- **Swedish Cuts**: Full Swedish butcher-style cuts including:
-  - Nötkött: Entrecôte, Ryggbiff, Oxfilé, Högrev, Bringa, etc.
-  - Fläsk: Fläskkotlett, Fläskkarré, Revbensspjäll, Julskinka, etc.
-  - Lamm: Lammstek, Lammrack, Lammkotletter, etc.
-  - Vilt: Älgfilé, Renfilé, Rådjursfilé, Hjortfilé, Vildsvin, etc.
-  - Fågel: Kyckling, Kalkon, Anka
-  - Fisk: Lax, Torsk, Sik, Röding, Gös, etc.
-
-### Documented & Planned
-- **Terms of Reference**: Complete project specification in `docs/TERMS_OF_REFERENCE.md`
-- **Feature Requirements**: Detailed specs in `docs/FEATURE_REQUIREMENTS.md`
-- **Use Cases**: 12 real-world scenarios in `docs/USE_CASES.md`
-- **Temperature Research**: Protein tables, doneness levels, cooking methods
-
-## 🎯 Phase 1 Goals
-
-Build a smart cooking engine that:
-1. **Uses MEATER hardware without cloud** ✅ (working)
-2. **Reproduces MEATER's cooking algorithm locally** (planned)
-3. **Supports multiple cuts and cooking styles** ✅ (working - International + Swedish)
-4. **Provides dynamic ETA predictions** (planned)
-5. **Includes resting-phase forecasts** (planned)
-6. **Shows graphs and notifications** (planned)
-7. **Integrates with recipes (Mealie) and inventory (Grocy)** (planned)
-8. **Offers AI-powered meal planning** (planned)
+### Data Sources
+- **International (USDA)**: 185+ cuts with safe minimum temperatures
+- **Swedish (Livsmedelsverket)**: 89+ cuts with Swedish terminology
+- **Comprehensive coverage**: Beef, Pork, Poultry, Lamb, Game, Fish, Vegetables
 
 ## 📁 Repository Structure
 
 ```
-├── meater.yaml                 # Working BLE client config
-├── secrets.yaml.example        # Credentials template
+├── custom_components/kitchen_cooking_engine/  # HACS Custom Integration
+│   ├── __init__.py            # Integration setup
+│   ├── config_flow.py         # Configuration UI (unified)
+│   ├── const.py               # Constants (v0.3.3.0, Panel v55)
+│   ├── cooking_data.py        # International cooking data
+│   ├── swedish_cooking_data.py # Swedish cooking data
+│   ├── ninja_combi_data.py    # Ninja Combi recipes
+│   ├── sensor.py              # Cooking session sensor
+│   ├── api.py                 # REST API endpoints
+│   ├── appliance_manager.py   # Multi-appliance management
+│   ├── appliances/            # Appliance implementations
+│   ├── services.yaml          # Service definitions
+│   ├── manifest.json          # HACS manifest
+│   └── www/                   # Frontend panel
+├── meater.yaml                 # ESPHome BLE client config
+├── hacs.json                   # HACS repository config
 ├── docs/                       # Project documentation
-│   ├── TERMS_OF_REFERENCE.md   # Full project spec
-│   ├── FEATURE_REQUIREMENTS.md # Detailed features
-│   ├── USE_CASES.md            # 12 scenarios
-│   └── ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md
-├── meater_app/                 # Decompiled MEATER app (for research)
-├── halted-ble-server-dev/      # [ON HOLD] BLE server emulation
-└── halted-udp-server-dev/      # [ON HOLD] UDP/MEATER Link protocol
+└── README.md                   # Installation & usage guide
 ```
 
-## 🔬 Halted Development Paths
+## 🚀 Next Steps (Phase 6+)
 
-### BLE Server Emulation (ON HOLD - Promising with Block) 🟡
-- **Goal**: Make ESP32 appear as a MEATER probe to the official app
-- **Status**: Could advertise but couldn't maintain stable connection
-- **Resumption**: **Likely possible** with a MEATER Block available for BLE sniffing
-- **Files**: Moved to `halted-ble-server-dev/`
-
-### UDP/MEATER Link Protocol (ON HOLD - Hard) 🔴
-- **Goal**: Emulate a MEATER Block on LAN
-- **Status**: Protocol is complex (protobuf-based, 30+ message types)
-- **Resumption**: **Difficult** - weeks/months of effort, uncertain outcome
-- **Files**: Moved to `halted-udp-server-dev/`
-
-## 🚀 Next Steps
-
-1. **Implement local cooking algorithm** using MEATER data in Home Assistant
-2. **Evaluate Grill Buddy** for temperature-based cooking management
-3. **Set up Mealie** for recipe integration
-4. **Build Lovelace dashboard** for unified cooking UI
-5. **Add AI meal planning** (natural language → recipe suggestions)
+1. **Recipe Integration** - Connect with Mealie for recipe management
+2. **AI Meal Planning** - Natural language → recipe suggestions
+3. **Inventory Integration** - Connect with Grocy
+4. **Advanced Notifications** - Custom automation templates
+5. **Multi-probe Support** - Track multiple cooks simultaneously
 
 ## 📚 Documentation
 

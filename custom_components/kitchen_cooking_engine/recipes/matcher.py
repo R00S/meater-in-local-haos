@@ -79,7 +79,7 @@ class RecipeMatcher:
                 implementation_quality=ImplementationQuality.INCOMPATIBLE,
                 quality_score=0.0,
                 confidence=1.0,
-                notes=f"Missing required features: {', '.join(sorted(missing))}"
+                notes=[f"Missing required features: {', '.join(sorted(missing))}"]
             )
         
         # Find optimal appliance combination
@@ -103,7 +103,7 @@ class RecipeMatcher:
             implementation_quality=quality,
             quality_score=score,
             confidence=confidence,
-            notes=notes
+            notes=[notes]  # Wrap single note in list
         )
     
     def _find_optimal_combination(self, required_features: Set[str]) -> List[str]:
@@ -117,7 +117,7 @@ class RecipeMatcher:
         
         Args:
             required_features: Set of required feature names
-            
+        
         Returns:
             List of appliance IDs that provide all features
         """
@@ -127,14 +127,14 @@ class RecipeMatcher:
             return []
         
         # Try to find single appliance with all features
-        for appliance in all_appliances.values():
+        for appliance in all_appliances:
             if required_features.issubset(appliance.get_features()):
                 return [appliance.appliance_id]
         
         # Need multiple appliances - use greedy algorithm
         # Sort appliances by number of required features they provide (descending)
         appliance_coverage = []
-        for appliance in all_appliances.values():
+        for appliance in all_appliances:
             coverage = len(required_features & appliance.get_features())
             if coverage > 0:
                 appliance_coverage.append((coverage, appliance))
@@ -175,7 +175,7 @@ class RecipeMatcher:
         alternatives = []
         
         # Find other single appliances that have all features
-        for appliance in all_appliances.values():
+        for appliance in all_appliances:
             if appliance.appliance_id not in suggested:
                 if required_features.issubset(appliance.get_features()):
                     alternatives.append([appliance.appliance_id])
@@ -207,18 +207,22 @@ class RecipeMatcher:
         """
         all_appliances = self.registry.get_all_appliances()
         
+        # Create a mapping of appliance_id to appliance for easy lookup
+        appliance_map = {app.appliance_id: app for app in all_appliances}
+        
         # Collect implementation types for each feature
         feature_implementations: Dict[str, List[FeatureType]] = defaultdict(list)
         
         for appliance_id in appliance_ids:
-            appliance = all_appliances.get(appliance_id)
+            appliance = appliance_map.get(appliance_id)
             if not appliance:
                 continue
             
             for feature in required_features:
                 if feature in appliance.get_features():
-                    impl_type = appliance.get_feature_implementation(feature)
-                    feature_implementations[feature].append(impl_type)
+                    impl_type = appliance.get_feature_type(feature)
+                    if impl_type:
+                        feature_implementations[feature].append(impl_type)
         
         # Analyze implementations
         standard_count = 0
@@ -292,9 +296,12 @@ class RecipeMatcher:
         """
         all_appliances = self.registry.get_all_appliances()
         
+        # Create mapping for lookup
+        appliance_map = {app.appliance_id: app for app in all_appliances}
+        
         appliance_names = []
         for aid in appliance_ids:
-            appliance = all_appliances.get(aid)
+            appliance = appliance_map.get(aid)
             if appliance:
                 appliance_names.append(appliance.name)
         
@@ -336,6 +343,7 @@ class RecipeMatcher:
             
             if min_quality is not None:
                 match_result = self.match_recipe(recipe)
+                # Compare enum values numerically (higher is better)
                 if match_result.implementation_quality.value < min_quality.value:
                     continue
             

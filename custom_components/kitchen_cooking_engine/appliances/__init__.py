@@ -10,7 +10,7 @@ appliances with different cooking features and capabilities.
 
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Set
 from abc import ABC, abstractmethod
 
 
@@ -37,9 +37,8 @@ class CookingFeature:
     
     name: str                           # Feature identifier (e.g., "air_fry")
     display_name: str                   # User-friendly name
-    feature_type: FeatureType          # How recipes are handled
-    temperature_range_c: tuple[int, int]  # (min, max) in Celsius
-    temperature_range_f: tuple[int, int]  # (min, max) in Fahrenheit
+    temperature_range_c: Optional[tuple[int, int]] = None  # (min, max) in Celsius (optional for non-temp features)
+    temperature_range_f: Optional[tuple[int, int]] = None  # (min, max) in Fahrenheit (optional for non-temp features)
     supports_probe: bool = False        # MEATER+ compatible
     supports_paddle: bool = False       # Rotating paddle/stirrer
     oil_levels: List[OilLevel] = field(default_factory=lambda: [OilLevel.ZERO])
@@ -135,6 +134,7 @@ class KitchenAppliance(ABC):
         self.recipes: List[ApplianceRecipe] = []
         self.adapter: Optional[RecipeAdapter] = None
         self.device_control: Optional[ApplianceDeviceControl] = None
+        self._feature_types: Dict[str, FeatureType] = {}  # Maps feature_name -> FeatureType
     
     @abstractmethod
     def get_supported_features(self) -> List[CookingFeature]:
@@ -161,3 +161,22 @@ class KitchenAppliance(ABC):
     def get_feature(self, feature_name: str) -> Optional[CookingFeature]:
         """Get feature definition."""
         return self.features.get(feature_name)
+    
+    def get_feature_type(self, feature_name: str) -> Optional[FeatureType]:
+        """
+        Get the feature type (STANDARD/MODIFIED/SPECIAL) for this appliance.
+        
+        This is appliance-specific - the same feature can be STANDARD on one
+        appliance and MODIFIED on another.
+        
+        Args:
+            feature_name: The feature identifier (e.g., "air_fry")
+            
+        Returns:
+            FeatureType if this appliance supports the feature, None otherwise
+        """
+        return self._feature_types.get(feature_name)
+    
+    def get_features(self) -> Set[str]:
+        """Get set of all feature names this appliance supports."""
+        return set(self.features.keys())

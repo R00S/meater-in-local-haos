@@ -33,14 +33,14 @@ class ApplianceRegistry:
         
     def register_appliance(
         self,
-        appliance: KitchenAppliance,
-        entry_id: str
+        entry_id: str,
+        appliance: KitchenAppliance
     ) -> None:
         """Register an appliance with the registry.
         
         Args:
-            appliance: The appliance instance to register
             entry_id: The config entry ID associated with this appliance
+            appliance: The appliance instance to register
         """
         if not appliance.appliance_id:
             _LOGGER.error("Cannot register appliance without appliance_id")
@@ -53,7 +53,7 @@ class ApplianceRegistry:
             "Registered appliance: %s (%s) with %d features",
             appliance.name,
             appliance.appliance_id,
-            len(appliance.features)
+            len(appliance.get_features())
         )
         
     def unregister_appliance(self, entry_id: str) -> None:
@@ -149,8 +149,21 @@ class ApplianceRegistry:
             List of all recipes across all appliances
         """
         recipes = []
+        
+        # Get recipes from all registered appliances
         for appliance in self._appliances.values():
-            recipes.extend(appliance.recipes)
+            recipes.extend(appliance.get_recipes())
+        
+        # Also include example recipes from central recipe database
+        # These are universal recipes that can be matched to any compatible appliances
+        try:
+            from ..recipes.examples import ALL_EXAMPLE_RECIPES
+            # Convert UnifiedRecipes to ApplianceRecipes if needed
+            # For now, include them as-is since matcher can handle both types
+            recipes.extend(ALL_EXAMPLE_RECIPES)
+        except Exception as ex:
+            _LOGGER.warning("Could not load example recipes: %s", ex)
+        
         return recipes
         
     def get_recipe_by_id(self, recipe_id: int) -> Optional[ApplianceRecipe]:

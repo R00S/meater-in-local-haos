@@ -1,8 +1,8 @@
 """
 Stovetop (Cooktop) appliance support.
 
-Last Updated: 08 Jan 2026, 21:50 CET
-Last Change: Initial stovetop implementation
+Last Updated: 10 Jan 2026, 23:59 CET
+Last Change: Updated to use KitchenAppliance base class with per-appliance feature types
 
 This module implements support for residential stovetops/cooktops.
 Supports gas, electric coil, smooth-top electric, and induction variants.
@@ -15,12 +15,14 @@ FEATURES:
 - Sauté (STANDARD) - Sautéing vegetables and proteins
 """
 
-from typing import Dict, Set
+from typing import Dict, List, Optional
 from ..appliances import (
     KitchenAppliance,
+    CookingFeature,
     FeatureType,
-    OilLevel,
+    ApplianceRecipe,
 )
+from ..features.catalog import FEATURE_CATALOG
 
 
 class StoretopType:
@@ -34,81 +36,84 @@ class StoretopType:
 class Stovetop(KitchenAppliance):
     """Residential stovetop/cooktop."""
     
-    def __init__(self, stovetop_type: str = StoretopType.GAS, num_burners: int = 4):
+    def __init__(self, name: str = None, stove_type: str = StoretopType.GAS, num_burners: int = 4, feature_types: Optional[Dict[str, str]] = None):
         """
         Initialize stovetop.
         
         Args:
-            stovetop_type: Type of stovetop (gas, electric_coil, electric_smoothtop, induction)
+            name: Custom name (auto-generated if None)
+            stove_type: Type of stovetop (gas, electric_coil, electric_smoothtop, induction)
             num_burners: Number of cooking zones/burners
+            feature_types: Optional user overrides for feature types
         """
-        self.stovetop_type = stovetop_type
+        super().__init__()
+        
+        self.appliance_id = f"stovetop_{stove_type}"
+        self.brand = "Generic"
+        self.model = "Standard"
+        
+        # Type-specific attributes
+        self.stovetop_type = stove_type
         self.num_burners = num_burners
+        self.is_induction = stove_type == StoretopType.INDUCTION
         
-        # Induction has fastest response
-        self.is_induction = stovetop_type == StoretopType.INDUCTION
-    
-    def get_features(self) -> Set[str]:
-        """Get list of features supported by this stovetop."""
-        # Core stovetop features available on all types
-        features = {
-            "pan_fry",       # Pan frying
-            "sear",          # High-heat searing
-            "boil",          # Boiling water/liquids
-            "simmer",        # Low-heat simmering
-            "saute",         # Sautéing
+        # Set display name
+        if name:
+            self.name = name
+        else:
+            type_names = {
+                StoretopType.GAS: "Gas Stovetop",
+                StoretopType.ELECTRIC_COIL: "Electric Coil Stovetop",
+                StoretopType.ELECTRIC_SMOOTHTOP: "Electric Smoothtop",
+                StoretopType.INDUCTION: "Induction Cooktop",
+            }
+            self.name = type_names.get(stove_type, "Stovetop")
+            if num_burners != 4:
+                self.name = f"{self.name} ({num_burners} burners)"
+        
+        # Build features - all stovetops support these
+        self.features = {
+            "pan_fry": FEATURE_CATALOG["pan_fry"],
+            "sear": FEATURE_CATALOG["sear"],
+            "boil": FEATURE_CATALOG["boil"],
+            "simmer": FEATURE_CATALOG["simmer"],
+            "saute": FEATURE_CATALOG["saute"],
         }
         
-        # Induction can do precise temperature control for some special tasks
-        if self.is_induction:
-            features.add("precise_temp_control")
-        
-        return features
-    
-    def get_feature_implementation(self, feature: str) -> FeatureType:
-        """
-        Get implementation type for a feature.
-        
-        Stovetops implement all features as STANDARD - they are the
-        traditional baseline for pan cooking.
-        """
-        supported_features = self.get_features()
-        
-        if feature not in supported_features:
-            raise ValueError(f"Feature '{feature}' not supported by this stovetop")
-        
-        # All stovetop features are STANDARD implementations
-        return FeatureType.STANDARD
-    
-    def get_display_name(self) -> str:
-        """Get human-readable name for this appliance."""
-        type_names = {
-            StoretopType.GAS: "Gas Stovetop",
-            StoretopType.ELECTRIC_COIL: "Electric Coil Stovetop",
-            StoretopType.ELECTRIC_SMOOTHTOP: "Electric Smoothtop",
-            StoretopType.INDUCTION: "Induction Cooktop",
+        # Stovetops implement all features as STANDARD by default
+        # They are the traditional baseline for pan cooking
+        default_feature_types = {
+            "pan_fry": FeatureType.STANDARD,
+            "sear": FeatureType.STANDARD,
+            "boil": FeatureType.STANDARD,
+            "simmer": FeatureType.STANDARD,
+            "saute": FeatureType.STANDARD,
         }
         
-        base_name = type_names.get(self.stovetop_type, "Stovetop")
+        # Allow user override of feature types via config
+        if feature_types:
+            for feat, ftype in feature_types.items():
+                if feat in self.features:
+                    # Convert string to FeatureType enum
+                    if ftype == "standard":
+                        default_feature_types[feat] = FeatureType.STANDARD
+                    elif ftype == "modified":
+                        default_feature_types[feat] = FeatureType.MODIFIED
+                    elif ftype == "special":
+                        default_feature_types[feat] = FeatureType.SPECIAL
         
-        if self.num_burners != 4:
-            return f"{base_name} ({self.num_burners} burners)"
+        self._feature_types = default_feature_types
         
-        return base_name
+        # No built-in recipes
+        self.recipes = []
     
-    def get_capabilities(self) -> Dict[str, any]:
-        """Get appliance-specific capabilities and settings."""
-        return {
-            "appliance_type": "stovetop",
-            "stovetop_type": self.stovetop_type,
-            "num_burners": self.num_burners,
-            "is_induction": self.is_induction,
-            "supports_probe": True,  # Can use external probe like MEATER+
-            "heat_levels": "continuous" if self.stovetop_type == StoretopType.GAS else "discrete",
-            "instant_on": self.is_induction,
-            "oil_required": True,  # Stovetop cooking typically needs some oil
-            "default_oil_level": OilLevel.MEDIUM,
-        }
+    def get_supported_features(self) -> List[CookingFeature]:
+        """Return list of supported cooking features."""
+        return list(self.features.values())
+    
+    def get_recipes(self) -> List[ApplianceRecipe]:
+        """Return appliance-specific recipes (none for stovetops)."""
+        return []
 
 
 # Common stovetop configurations

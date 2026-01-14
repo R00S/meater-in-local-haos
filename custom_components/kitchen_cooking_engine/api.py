@@ -3,8 +3,8 @@
 This module provides HTTP endpoints to serve cooking data to the frontend,
 ensuring a single source of truth for all cut/protein/doneness data.
 
-Last Updated: 2 Dec 2025, 15:30 CET
-Last Change: Added cook history, preferences, and notes endpoints
+Last Updated: 8 Jan 2026, 23:50 CET
+Last Change: Added Phase 3.1 multi-appliance API endpoints
 """
 
 from __future__ import annotations
@@ -242,12 +242,20 @@ class DonenessOptionsView(HomeAssistantView):
 
 def async_register_api(hass: HomeAssistant) -> None:
     """Register API endpoints."""
+    # Existing endpoints
     hass.http.register_view(CookingDataView)
     hass.http.register_view(DonenessOptionsView)
     hass.http.register_view(CookHistoryView)
     hass.http.register_view(CookHistoryItemView)
     hass.http.register_view(UserPreferencesView)
     hass.http.register_view(CutPreferenceView)
+    
+    # Phase 3.1: Multi-appliance endpoints
+    hass.http.register_view(AppliancesView)
+    hass.http.register_view(AvailableFeaturesView)
+    hass.http.register_view(CompatibleRecipesView)
+    hass.http.register_view(RecipeMatchView)
+    
     _LOGGER.info("Kitchen Cooking Engine: API endpoints registered")
 
 
@@ -355,8 +363,215 @@ class CutPreferenceView(HomeAssistantView):
                 data.get("cooking_method"),
             )
             if success:
-                return self.json({"status": "ok"})
+                    return self.json({"status": "ok"})
             return self.json({"status": "error", "message": "Failed to save"})
         except Exception as e:
             _LOGGER.error("Error setting cut preference: %s", e)
             return self.json({"status": "error", "message": "Failed to process request"})
+
+
+# =============================================================================
+# PHASE 3.1: MULTI-APPLIANCE API ENDPOINTS
+# =============================================================================
+
+
+class AppliancesView(HomeAssistantView):
+    """API endpoint to list all configured appliances."""
+
+    url = "/api/kitchen_cooking_engine/appliances"
+    name = "api:kitchen_cooking_engine:appliances"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Get all configured appliances with their features."""
+        from .appliance_manager import get_appliance_manager
+        from .const import DOMAIN
+        
+        hass = request.app["hass"]
+        manager = get_appliance_manager(hass)
+        
+        if not manager:
+            return self.json({
+                "appliances": [],
+                "count": 0
+            })
+        
+        appliances = []
+        for appliance in manager.get_appliances():
+            # Build feature_types dictionary: feature_name -> type string
+            feature_types = {}
+            for feature_name in appliance.get_features():
+                ftype = appliance.get_feature_type(feature_name)
+                if ftype:
+                    # Convert FeatureType enum to string
+                    feature_types[feature_name] = ftype.value
+            
+            appliances.append({
+                "id": appliance.appliance_id,
+                "name": appliance.name,
+                "brand": appliance.brand,
+                "model": appliance.model,
+                "features": list(appliance.get_features()),
+                "feature_types": feature_types,
+                "recipe_count": len(appliance.recipes) if hasattr(appliance, 'recipes') else 0,
+            })
+        
+        return self.json({
+            "appliances": appliances,
+            "count": len(appliances)
+        })
+
+
+class AvailableFeaturesView(HomeAssistantView):
+    """API endpoint to get aggregated features across all appliances."""
+
+    url = "/api/kitchen_cooking_engine/available_features"
+    name = "api:kitchen_cooking_engine:available_features"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Get all available features across all configured appliances."""
+        from .appliance_manager import get_appliance_manager
+        
+        hass = request.app["hass"]
+        manager = get_appliance_manager(hass)
+        
+        if not manager:
+            return self.json({
+                "features": [],
+                "count": 0
+            })
+        
+        features = manager.get_available_features()
+        
+        return self.json({
+            "features": sorted(list(features)),
+            "count": len(features)
+        })
+
+
+class CompatibleRecipesView(HomeAssistantView):
+    """API endpoint to get recipes compatible with user's appliances."""
+
+    url = "/api/kitchen_cooking_engine/recipes/compatible"
+    name = "api:kitchen_cooking_engine:recipes_compatible"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Get recipes that can be cooked with available appliances."""
+        from .appliance_manager import get_appliance_manager
+        from .recipes.matcher import RecipeMatcher
+        from .recipes.models import ImplementationQuality
+        
+        hass = request.app["hass"]
+        manager = get_appliance_manager(hass)
+        
+        if not manager or not manager.registry.has_appliances():
+            return self.json({
+                "recipes": [],
+                "count": 0,
+                "message": "No appliances configured"
+            })
+        
+        # Get quality filter from query params
+        min_quality_str = request.query.get("min_quality", "acceptable").upper()
+        try:
+            min_quality = ImplementationQuality[min_quality_str]
+        except KeyError:
+            min_quality = ImplementationQuality.ACCEPTABLE
+        
+        # Get all recipes from all appliances
+        all_recipes = manager.registry.get_all_recipes()
+        
+        # Filter using recipe matcher
+        matcher = RecipeMatcher(manager.registry)
+        compatible_recipes = matcher.filter_recipes(all_recipes, min_quality=min_quality)
+        
+        # Build response with match results
+        recipes_with_results = []
+        for recipe in compatible_recipes:
+            result = matcher.match_recipe(recipe)
+            recipes_with_results.append({
+                "recipe": {
+                    "id": recipe.id,
+                    "name": recipe.name,
+                    "description": recipe.description,
+                    "required_features": list(recipe.required_features),
+                    "optional_features": list(recipe.optional_features),
+                },
+                "match": {
+                    "quality": result.implementation_quality.name,
+                    "score": result.quality_score,
+                    "confidence": result.confidence,
+                    "suggested_appliances": result.suggested_appliances,
+                    "alternative_appliances": result.alternative_appliances,
+                    "notes": result.notes,
+                }
+            })
+        
+        return self.json({
+            "recipes": recipes_with_results,
+            "count": len(recipes_with_results),
+            "min_quality": min_quality.name
+        })
+
+
+class RecipeMatchView(HomeAssistantView):
+    """API endpoint to match a specific recipe against available appliances."""
+
+    url = "/api/kitchen_cooking_engine/recipes/{recipe_id}/match"
+    name = "api:kitchen_cooking_engine:recipe_match"
+    requires_auth = True
+
+    async def get(self, request: web.Request, recipe_id: str) -> web.Response:
+        """Get match result for a specific recipe."""
+        from .appliance_manager import get_appliance_manager
+        from .recipes.matcher import RecipeMatcher
+        
+        hass = request.app["hass"]
+        manager = get_appliance_manager(hass)
+        
+        if not manager:
+            return self.json({
+                "status": "error",
+                "message": "Appliance manager not initialized"
+            })
+        
+        # Find recipe by ID
+        try:
+            recipe_id_int = int(recipe_id)
+        except ValueError:
+            return self.json({
+                "status": "error",
+                "message": "Invalid recipe ID"
+            })
+        
+        recipe = manager.registry.get_recipe_by_id(recipe_id_int)
+        if not recipe:
+            return self.json({
+                "status": "error",
+                "message": f"Recipe {recipe_id} not found"
+            })
+        
+        # Match recipe
+        matcher = RecipeMatcher(manager.registry)
+        result = matcher.match_recipe(recipe)
+        
+        # Get suggestions for missing appliances if not cookable
+        missing_appliances = {}
+        if not result.can_cook:
+            missing_appliances = matcher.suggest_missing_appliances(recipe)
+        
+        return self.json({
+            "recipe_id": recipe_id_int,
+            "recipe_name": recipe.name,
+            "can_cook": result.can_cook,
+            "missing_features": list(result.missing_features),
+            "suggested_appliances": result.suggested_appliances,
+            "alternative_appliances": result.alternative_appliances,
+            "implementation_quality": result.implementation_quality.name,
+            "quality_score": result.quality_score,
+            "confidence": result.confidence,
+            "notes": result.notes,
+            "missing_appliances_suggestions": missing_appliances
+        })

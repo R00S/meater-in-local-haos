@@ -358,14 +358,10 @@ import {{
     # Update panel version in JS
     old_version_line = 'const PANEL_VERSION = "'
     version_idx = new_content.find(old_version_line)
-    new_version = "25"
+    new_version = "55"  # Set to 55 for v0.3.3.0 release
     if version_idx != -1:
         version_end = new_content.find('"', version_idx + len(old_version_line))
         old_version = new_content[version_idx + len(old_version_line):version_end]
-        try:
-            new_version = str(int(old_version) + 1)
-        except:
-            new_version = "25"
         new_content = new_content[:version_idx + len(old_version_line)] + new_version + new_content[version_end:]
         print(f"Updated PANEL_VERSION in JS: {old_version} -> {new_version}")
     

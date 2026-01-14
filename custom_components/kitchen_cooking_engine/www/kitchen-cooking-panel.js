@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 08 Jan 2026, 01:25 CET
+ * AUTO-GENERATED: 14 Jan 2026, 03:18 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 08 Jan 2026, 01:25 CET
+// Last generated: 14 Jan 2026, 03:18 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5339,7 +5339,36 @@ const COOKING_METHODS = [
 class KitchenCookingPanel extends LitElement {
   static get properties() {
     return {
-      hass: { type: Object },
+      hass: { 
+        type: Object,
+        hasChanged(newVal, oldVal) {
+          // Force re-render when ANY cooking session entity state changes
+          // This is needed because HA updates hass.states but hass object reference stays the same
+          if (!oldVal || !newVal) return true;
+          
+          // Check if any cooking session entity changed
+          // We check ALL session entities because:
+          // 1. User might switch between appliances
+          // 2. Temperature updates need to trigger re-render regardless of which entity is selected
+          for (const key in newVal.states) {
+            if (key.includes('kitchen_cooking_engine') && key.includes('session')) {
+              const oldState = oldVal.states[key];
+              const newState = newVal.states[key];
+              
+              // State object reference changes when entity updates
+              if (oldState !== newState) {
+                return true;
+              }
+              
+              // Defensive: also check if attributes object changed
+              if (oldState && newState && oldState.attributes !== newState.attributes) {
+                return true;
+              }
+            }
+          }
+          return false;
+        }
+      },
       narrow: { type: Boolean },
       route: { type: Object },
       panel: { type: Object },
@@ -5365,6 +5394,19 @@ class KitchenCookingPanel extends LitElement {
       _builderProtein: { type: String },
       _builderVeggies: { type: Array },
       _builderUseMeater: { type: Boolean },
+      // Phase 3.3: Multi-appliance support
+      _appliances: { type: Array },
+      _availableFeatures: { type: Set },
+      _showAppliances: { type: Boolean },
+      _showRecipes: { type: Boolean },
+      _compatibleRecipes: { type: Array },
+      _recipeQualityFilter: { type: String },
+      // Phase 3.4: Recipe detail view
+      _selectedRecipeDetail: { type: Object },
+      // Phase 3.5: Loading and error states
+      _isLoadingAppliances: { type: Boolean },
+      _isLoadingRecipes: { type: Boolean },
+      _errorMessage: { type: String },
     };
   }
 
@@ -5395,6 +5437,19 @@ class KitchenCookingPanel extends LitElement {
     this._visibilityHandler = null;
     this._graphCard = null;
     this._graphCardSessionStart = null; // Track which session the graph was created for
+    // Phase 3.3: Multi-appliance support
+    this._appliances = [];
+    this._availableFeatures = new Set();
+    this._showAppliances = false;
+    this._showRecipes = false;
+    this._compatibleRecipes = [];
+    this._recipeQualityFilter = 'acceptable'; // Show acceptable and better by default
+    // Phase 3.4: Recipe detail view
+    this._selectedRecipeDetail = null;
+    // Phase 3.5: Loading and error states
+    this._isLoadingAppliances = false;
+    this._isLoadingRecipes = false;
+    this._errorMessage = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -5405,6 +5460,10 @@ class KitchenCookingPanel extends LitElement {
     
     // Load user preferences
     this._loadPreferences();
+    
+    // Phase 3.3: Load appliances and features
+    this._loadAppliances();
+    this._loadAvailableFeatures();
     
     // Fix for white screen when returning to browser tab
     // Force re-render when tab becomes visible again
@@ -5459,6 +5518,65 @@ class KitchenCookingPanel extends LitElement {
     } catch (e) {
       console.log('Could not load history:', e);
     }
+  }
+
+  // Phase 3.3: Load appliances from new API
+  async _loadAppliances() {
+    this._isLoadingAppliances = true;
+    this._errorMessage = null;
+    this.requestUpdate();
+    
+    try {
+      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/appliances');
+      if (response && response.appliances) {
+        this._appliances = response.appliances;
+      }
+    } catch (e) {
+      console.error('Could not load appliances:', e);
+      this._errorMessage = 'Failed to load appliances. Please check your connection.';
+    } finally {
+      this._isLoadingAppliances = false;
+      this.requestUpdate();
+    }
+  }
+
+  // Phase 3.3: Load available features
+  async _loadAvailableFeatures() {
+    try {
+      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/available_features');
+      if (response && response.features) {
+        this._availableFeatures = new Set(response.features);
+        this.requestUpdate();
+      }
+    } catch (e) {
+      console.error('Could not load features:', e);
+    }
+  }
+
+  // Phase 3.3: Load compatible recipes
+  async _loadCompatibleRecipes() {
+    this._isLoadingRecipes = true;
+    this._errorMessage = null;
+    this.requestUpdate();
+    
+    try {
+      const response = await this.hass.callApi('GET', 
+        `kitchen_cooking_engine/recipes/compatible?min_quality=${this._recipeQualityFilter}`);
+      if (response && response.recipes) {
+        this._compatibleRecipes = response.recipes;
+      }
+    } catch (e) {
+      console.error('Could not load recipes:', e);
+      this._errorMessage = 'Failed to load recipes. Please check your connection.';
+    } finally {
+      this._isLoadingRecipes = false;
+      this.requestUpdate();
+    }
+  }
+
+  // Phase 3.3: Helper to check if a feature is available
+  _hasFeature(featureName) {
+    return this._availableFeatures.has(featureName);
   }
 
   async _updateCookNotes(cookId, notes) {
@@ -5773,6 +5891,8 @@ class KitchenCookingPanel extends LitElement {
     if (this._showHistory) {
       this._loadHistory();
       this._showNinjaCombi = false;
+      this._showAppliances = false;
+      this._showRecipes = false;
     }
   }
 
@@ -5780,6 +5900,30 @@ class KitchenCookingPanel extends LitElement {
     this._showNinjaCombi = !this._showNinjaCombi;
     if (this._showNinjaCombi) {
       this._showHistory = false;
+      this._showAppliances = false;
+      this._showRecipes = false;
+    }
+  }
+
+  // Phase 3.3: Toggle appliance management
+  _toggleAppliances() {
+    this._showAppliances = !this._showAppliances;
+    if (this._showAppliances) {
+      this._loadAppliances();
+      this._showHistory = false;
+      this._showNinjaCombi = false;
+      this._showRecipes = false;
+    }
+  }
+
+  // Phase 3.3: Toggle recipe browser
+  _toggleRecipes() {
+    this._showRecipes = !this._showRecipes;
+    if (this._showRecipes) {
+      this._loadCompatibleRecipes();
+      this._showHistory = false;
+      this._showNinjaCombi = false;
+      this._showAppliances = false;
     }
   }
 
@@ -5869,6 +6013,16 @@ class KitchenCookingPanel extends LitElement {
         </div>
       </ha-card>
 
+      <ha-card>
+        <div class="card-content">
+          <h3>📖 Browse All Recipes</h3>
+          <p>View all compatible recipes across all your appliances</p>
+          <button class="action-btn" @click=${() => { this._showNinjaCombi = false; this._showRecipes = true; this._loadCompatibleRecipes(); }} style="width: 100%; margin-top: 8px;">
+            📖 Go to All Recipes
+          </button>
+        </div>
+      </ha-card>
+
       ${Object.entries(recipesByMode).map(([mode, recipes]) => html`
         <ha-card>
           <div class="card-content">
@@ -5900,12 +6054,17 @@ class KitchenCookingPanel extends LitElement {
       <div class="status-banner idle">
         <h2>🥘 ${recipe.name}</h2>
         <p>${recipe.description}</p>
-        <button class="history-btn" @click=${() => this._selectedNinjaRecipe = null} style="margin-top: 12px;">
-          ← Back to Recipes
-        </button>
-        <button class="action-btn" @click=${() => this._openRecipeInBuilder(recipe)} style="margin-top: 12px; margin-left: 8px;">
-          🛠️ Modify in Builder
-        </button>
+        <div style="display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap;">
+          <button class="history-btn" @click=${() => this._selectedNinjaRecipe = null}>
+            ← Back to Ninja Combi
+          </button>
+          <button class="action-btn" @click=${() => this._openRecipeInBuilder(recipe)}>
+            🛠️ Modify in Builder
+          </button>
+          <button class="history-btn" @click=${() => { this._selectedNinjaRecipe = null; this._showNinjaCombi = false; this._showRecipes = true; this._loadCompatibleRecipes(); }}>
+            📖 All Recipes
+          </button>
+        </div>
       </div>
 
       <ha-card>
@@ -6053,9 +6212,14 @@ class KitchenCookingPanel extends LitElement {
       <div class="status-banner idle">
         <h2>🛠️ Recipe Builder</h2>
         <p>Build custom Combi-Meal recipes with automatic parameter adjustment</p>
-        <button class="history-btn" @click=${() => { this._showRecipeBuilder = false; this._resetBuilder(); }} style="margin-top: 12px;">
-          ← Back to Recipes
-        </button>
+        <div style="display: flex; gap: 8px; margin-top: 12px;">
+          <button class="history-btn" @click=${() => { this._showRecipeBuilder = false; this._resetBuilder(); }}>
+            ← Back to Ninja Combi
+          </button>
+          <button class="history-btn" @click=${() => { this._showRecipeBuilder = false; this._showNinjaCombi = false; this._showRecipes = true; this._loadCompatibleRecipes(); }}>
+            📖 All Recipes
+          </button>
+        </div>
       </div>
 
       <ha-card>
@@ -6462,6 +6626,528 @@ class KitchenCookingPanel extends LitElement {
     return `${hours}h ${remainMins}m`;
   }
 
+  // Phase 3.3: Render appliance management view
+  _renderAppliances() {
+    return html`
+      <div class="status-banner idle">
+        <h2>🔧 Kitchen Appliances</h2>
+        <p>${this._appliances.length} appliance${this._appliances.length !== 1 ? 's' : ''} configured</p>
+      </div>
+
+      ${this._errorMessage ? html`
+        <ha-card class="error-card">
+          <div class="card-content error-message">
+            <p>⚠️ ${this._errorMessage}</p>
+            <button class="retry-btn" @click=${() => this._loadAppliances()}>
+              🔄 Retry
+            </button>
+          </div>
+        </ha-card>
+      ` : ''}
+
+      ${this._isLoadingAppliances ? html`
+        <ha-card>
+          <div class="card-content loading-state">
+            <div class="spinner"></div>
+            <p>Loading appliances...</p>
+          </div>
+        </ha-card>
+      ` : this._appliances.length === 0 ? html`
+        <ha-card>
+          <div class="card-content no-entities">
+            <p>No appliances configured yet.</p>
+            <p>Go to <strong>Settings</strong> → <strong>Devices & Services</strong> → <strong>Add Integration</strong></p>
+            <p>Search for <strong>Kitchen Cooking Engine</strong> and add your appliances.</p>
+          </div>
+        </ha-card>
+      ` : html`
+        <div class="appliances-grid">
+          ${this._appliances.map((appliance, idx) => html`
+            <ha-card class="appliance-card clickable" @click=${() => this._toggleApplianceExpanded(idx)}>
+              <div class="card-content">
+                <div class="appliance-header">
+                  <div class="appliance-icon">${this._getApplianceIcon(appliance.brand || appliance.name)}</div>
+                  <div class="appliance-info">
+                    <h3>${appliance.name}</h3>
+                    ${appliance.brand ? html`<div class="appliance-brand">${appliance.brand} ${appliance.model || ''}</div>` : ''}
+                  </div>
+                  <div class="appliance-actions">
+                    <button 
+                      class="settings-icon-btn" 
+                      @click=${(e) => { e.stopPropagation(); this._openApplianceConfig(appliance.id); }}
+                      title="Configure features">
+                      ⚙️
+                    </button>
+                    <div class="expand-icon">
+                      ${appliance._expanded ? '▼' : '▶'}
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="appliance-features">
+                  ${appliance._expanded ? this._renderFeaturesByType(appliance) : html`
+                    <h4>Features (${appliance.features.length}):</h4>
+                    <div class="feature-badges">
+                      ${appliance.features.slice(0, 6).map(feature => html`
+                        <span class="feature-badge">${this._formatFeatureName(feature)}</span>
+                      `)}
+                      ${appliance.features.length > 6 ? html`
+                        <span class="feature-badge more">+${appliance.features.length - 6} more</span>
+                      ` : ''}
+                    </div>
+                  `}
+                </div>
+
+                ${appliance.recipe_count > 0 ? html`
+                  <div class="appliance-recipes">
+                    📖 ${appliance.recipe_count} recipe${appliance.recipe_count !== 1 ? 's' : ''} available
+                  </div>
+                ` : ''}
+              </div>
+            </ha-card>
+          `)}
+        </div>
+      `}
+
+      <div class="help-text">
+        <p>💡 <strong>Tip:</strong> Add more appliances to unlock more recipes!</p>
+        <p>Each appliance brings its own features and compatible recipes.</p>
+      </div>
+    `;
+  }
+
+  // Phase 3.3: Render compatible recipes view
+  _renderRecipes() {
+    // Phase 3.4: Show recipe detail if selected
+    if (this._selectedRecipeDetail) {
+      return this._renderRecipeDetail();
+    }
+
+    return html`
+      <div class="status-banner idle">
+        <h2>📖 Compatible Recipes</h2>
+        <p>${this._compatibleRecipes.length} recipe${this._compatibleRecipes.length !== 1 ? 's' : ''} you can cook</p>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          <h3>Filter by Quality</h3>
+          <div class="button-group">
+            <button 
+              class="category-btn ${this._recipeQualityFilter === 'excellent' ? 'selected' : ''}" 
+              @click=${() => { this._recipeQualityFilter = 'excellent'; this._loadCompatibleRecipes(); }}
+              ?disabled=${this._isLoadingRecipes}>
+              ⭐ Excellent Only
+            </button>
+            <button 
+              class="category-btn ${this._recipeQualityFilter === 'good' ? 'selected' : ''}" 
+              @click=${() => { this._recipeQualityFilter = 'good'; this._loadCompatibleRecipes(); }}
+              ?disabled=${this._isLoadingRecipes}>
+              ✅ Good or Better
+            </button>
+            <button 
+              class="category-btn ${this._recipeQualityFilter === 'acceptable' ? 'selected' : ''}" 
+              @click=${() => { this._recipeQualityFilter = 'acceptable'; this._loadCompatibleRecipes(); }}
+              ?disabled=${this._isLoadingRecipes}>
+              ⚠️ All Compatible
+            </button>
+          </div>
+        </div>
+      </ha-card>
+
+      <ha-card>
+        <div class="card-content">
+          <h3>🥘 Ninja Combi Recipes</h3>
+          <p>View Ninja Combi-specific recipes and use the Recipe Builder</p>
+          <button class="action-btn" @click=${() => { this._showRecipes = false; this._showNinjaCombi = true; }} style="width: 100%; margin-top: 8px;">
+            🥘 Go to Ninja Combi Recipes
+          </button>
+        </div>
+      </ha-card>
+
+      ${this._errorMessage ? html`
+        <ha-card class="error-card">
+          <div class="card-content error-message">
+            <p>⚠️ ${this._errorMessage}</p>
+            <button class="retry-btn" @click=${() => this._loadCompatibleRecipes()}>
+              🔄 Retry
+            </button>
+          </div>
+        </ha-card>
+      ` : ''}
+
+      ${this._isLoadingRecipes ? html`
+        <ha-card>
+          <div class="card-content loading-state">
+            <div class="spinner"></div>
+            <p>Loading recipes...</p>
+          </div>
+        </ha-card>
+      ` : this._compatibleRecipes.length === 0 ? html`
+        <ha-card>
+          <div class="card-content no-entities">
+            <p>No compatible recipes found with current filter.</p>
+            <p>Try adjusting the quality filter or adding more appliances.</p>
+          </div>
+        </ha-card>
+      ` : html`
+        <div class="recipes-grid">
+          ${this._compatibleRecipes.map(recipeData => {
+            const recipe = recipeData.recipe;
+            const match = recipeData.match;
+            return html`
+              <ha-card class="recipe-card clickable" @click=${() => this._showRecipeDetail(recipeData)}>
+                <div class="card-content">
+                  <div class="recipe-header">
+                    <h3>${recipe.name}</h3>
+                    <span class="quality-badge quality-${match.quality.toLowerCase()}">
+                      ${this._getQualityIcon(match.quality)} ${match.quality}
+                    </span>
+                  </div>
+                  
+                  <p class="recipe-description">${recipe.description}</p>
+                  
+                  <div class="recipe-meta">
+                    <div class="recipe-score">
+                      Score: ${Math.round(match.score * 100)}%
+                      ${match.confidence < 1.0 ? html`<span class="confidence">(${Math.round(match.confidence * 100)}% confidence)</span>` : ''}
+                    </div>
+                  </div>
+
+                  ${match.suggested_appliances && match.suggested_appliances.length > 0 ? html`
+                    <div class="recipe-appliances">
+                      <strong>Suggested:</strong>
+                      ${match.suggested_appliances.map(appId => {
+                        const appliance = this._appliances.find(a => a.id === appId);
+                        return appliance ? html`<span class="appliance-chip">${appliance.name}</span>` : '';
+                      })}
+                    </div>
+                  ` : ''}
+
+                  ${match.notes ? html`
+                    <div class="recipe-notes">
+                      <em>${match.notes}</em>
+                    </div>
+                  ` : ''}
+                  
+                  <div class="recipe-features">
+                    <strong>Required:</strong>
+                    ${recipe.required_features.map(f => html`
+                      <span class="feature-chip">${this._formatFeatureName(f)}</span>
+                    `)}
+                  </div>
+
+                  <div class="recipe-action">
+                    <span class="click-hint">Click for details →</span>
+                  </div>
+                </div>
+              </ha-card>
+            `;
+          })}
+        </div>
+      `}
+    `;
+  }
+
+  // Phase 3.4: Render recipe detail view
+  _renderRecipeDetail() {
+    const recipe = this._selectedRecipeDetail.recipe;
+    const match = this._selectedRecipeDetail.match;
+
+    return html`
+      <div class="status-banner idle">
+        <h2>📖 Recipe Details</h2>
+        <button class="back-btn" @click=${() => this._selectedRecipeDetail = null}>
+          ← Back to Recipes
+        </button>
+      </div>
+
+      <ha-card class="recipe-detail-card">
+        <div class="card-content">
+          <div class="recipe-detail-header">
+            <h2>${recipe.name}</h2>
+            <span class="quality-badge quality-${match.quality.toLowerCase()} large">
+              ${this._getQualityIcon(match.quality)} ${match.quality}
+            </span>
+          </div>
+
+          <p class="recipe-description large">${recipe.description}</p>
+
+          <div class="recipe-detail-meta">
+            <div class="meta-item">
+              <strong>Match Score:</strong> ${Math.round(match.score * 100)}%
+            </div>
+            ${match.confidence < 1.0 ? html`
+              <div class="meta-item">
+                <strong>Confidence:</strong> ${Math.round(match.confidence * 100)}%
+              </div>
+            ` : ''}
+          </div>
+
+          ${match.suggested_appliances && match.suggested_appliances.length > 0 ? html`
+            <div class="appliances-section">
+              <h3>✅ You'll Need:</h3>
+              <div class="appliance-list-detail">
+                ${match.suggested_appliances.map(appId => {
+                  const appliance = this._appliances.find(a => a.id === appId);
+                  if (!appliance) return '';
+                  return html`
+                    <div class="appliance-item">
+                      <span class="appliance-icon">${this._getApplianceIcon(appliance.name)}</span>
+                      <span class="appliance-name">${appliance.name}</span>
+                      <span class="status-check">✅ You have this</span>
+                    </div>
+                  `;
+                })}
+              </div>
+            </div>
+          ` : ''}
+
+          ${match.alternative_appliances && match.alternative_appliances.length > 0 ? html`
+            <div class="alternatives-section">
+              <h3>🔄 Or Alternatively:</h3>
+              <div class="alternative-combos">
+                ${match.alternative_appliances.map((combo, idx) => html`
+                  <button class="combo-btn" @click=${() => this._selectApplianceCombo(combo)}>
+                    ${combo.map(appId => {
+                      const appliance = this._appliances.find(a => a.id === appId);
+                      return appliance ? appliance.name : appId;
+                    }).join(' + ')}
+                  </button>
+                `)}
+              </div>
+            </div>
+          ` : ''}
+
+          <div class="features-section">
+            <h3>🔧 Required Features:</h3>
+            <div class="feature-list-detail">
+              ${recipe.required_features.map(f => html`
+                <div class="feature-item">
+                  <span class="feature-icon">✓</span>
+                  <span class="feature-name">${this._formatFeatureName(f)}</span>
+                </div>
+              `)}
+            </div>
+          </div>
+
+          ${recipe.optional_features && recipe.optional_features.length > 0 ? html`
+            <div class="features-section optional">
+              <h3>💡 Optional Features:</h3>
+              <div class="feature-list-detail">
+                ${recipe.optional_features.map(f => html`
+                  <div class="feature-item optional">
+                    <span class="feature-icon">+</span>
+                    <span class="feature-name">${this._formatFeatureName(f)}</span>
+                    ${this._hasFeature(f) ? html`<span class="status-badge">Available</span>` : ''}
+                  </div>
+                `)}
+              </div>
+            </div>
+          ` : ''}
+
+          ${match.notes ? html`
+            <div class="notes-section">
+              <h3>📝 Notes:</h3>
+              <p class="recipe-notes-detail">${match.notes}</p>
+            </div>
+          ` : ''}
+
+          <div class="recipe-actions">
+            <button class="primary-btn" @click=${() => this._startCookFromRecipe(recipe, match)}>
+              🚀 Start Cooking
+            </button>
+            <button class="secondary-btn" @click=${() => this._selectedRecipeDetail = null}>
+              Cancel
+            </button>
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  // Phase 3.4: Show recipe detail
+  _showRecipeDetail(recipeData) {
+    this._selectedRecipeDetail = recipeData;
+    this.requestUpdate();
+  }
+
+  // Phase 3.4/4: Select alternative appliance combination
+  _selectApplianceCombo(combo) {
+    this._selectedApplianceCombo = combo;
+    this.requestUpdate();
+  }
+
+  // Phase 4: Start cooking from recipe
+  async _startCookFromRecipe(recipe, match) {
+    // Check if we have a temperature probe appliance
+    const probeAppliances = this._appliances.filter(app => 
+      app.features && app.features.includes('temperature_probe')
+    );
+    
+    if (probeAppliances.length === 0) {
+      alert(`Cannot start cooking session!\n\n` +
+        `This recipe requires temperature monitoring, but no MEATER+ probe is configured.\n\n` +
+        `Please add a MEATER+ appliance in:\n` +
+        `Settings → Devices & Services → Add Integration → Kitchen Cooking Engine`);
+      return;
+    }
+
+    // Find cooking session entities for temperature probes
+    const entities = this._findCookingEntities();
+    if (entities.length === 0) {
+      alert(`No cooking session entities available.\n\nPlease ensure your MEATER+ probe is configured properly.`);
+      return;
+    }
+
+    // For now, we'll use recipes to guide cook setup, but actual cooking uses the normal flow
+    // Future enhancement: Auto-populate fields based on recipe
+    
+    // Show a confirmation dialog
+    const applianceNames = match.suggested_appliances.map(id => {
+      const app = this._appliances.find(a => a.id === id);
+      return app ? app.name : id;
+    }).join(', ');
+
+    const confirmMsg = `Start cooking session for:\n\n` +
+      `Recipe: ${recipe.name}\n` +
+      `Appliances: ${applianceNames}\n\n` +
+      `You'll be taken to the cooking setup screen where you can configure your cook.`;
+    
+    if (!confirm(confirmMsg)) {
+      return;
+    }
+
+    // Close the recipe detail and recipes view
+    this._selectedRecipeDetail = null;
+    this._showRecipes = false;
+    
+    // Store recipe info for reference (future: could auto-populate fields)
+    this._lastSelectedRecipe = {
+      recipe: recipe,
+      match: match
+    };
+    
+    this.requestUpdate();
+    
+    // Show a helpful message about manual setup
+    setTimeout(() => {
+      alert(`Recipe loaded!\n\n` +
+        `Now configure your cook on the setup screen:\n` +
+        `- Select protein and cut\n` +
+        `- Choose doneness level\n` +
+        `- Select cooking method\n` +
+        `- Start your cook\n\n` +
+        `Tip: The recipe "${recipe.name}" works best with ${applianceNames}.`);
+    }, 500);
+  }
+
+  // Phase 3.3: Helper methods for appliances and recipes
+  _getApplianceIcon(name) {
+    const nameLower = (name || '').toLowerCase();
+    if (nameLower.includes('meater')) return '🌡️';
+    if (nameLower.includes('ninja') || nameLower.includes('combi')) return '🥘';
+    if (nameLower.includes('multifry')) return '🍟';
+    if (nameLower.includes('oven')) return '🔥';
+    if (nameLower.includes('stove') || nameLower.includes('top')) return '🍳';
+    if (nameLower.includes('microwave')) return '📡';
+    return '🔧';
+  }
+
+  _toggleApplianceExpanded(index) {
+    // Toggle expanded state for appliance at index
+    const appliance = this._appliances[index];
+    appliance._expanded = !appliance._expanded;
+    // Force re-render
+    this.requestUpdate();
+  }
+
+  _formatFeatureName(feature) {
+    return feature.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  }
+
+  _renderFeaturesByType(appliance) {
+    // Group features by type
+    const standard = [];
+    const modified = [];
+    const special = [];
+    
+    appliance.features.forEach(feature => {
+      const ftype = appliance.feature_types && appliance.feature_types[feature];
+      if (ftype === 'standard') {
+        standard.push(feature);
+      } else if (ftype === 'modified') {
+        modified.push(feature);
+      } else if (ftype === 'special') {
+        special.push(feature);
+      } else {
+        // Default to standard if no type specified
+        standard.push(feature);
+      }
+    });
+    
+    return html`
+      ${standard.length > 0 ? html`
+        <div class="feature-group">
+          <h4>✓ Standard Features (${standard.length})</h4>
+          <div class="feature-badges">
+            ${standard.map(feature => html`
+              <span class="feature-badge standard">${this._formatFeatureName(feature)}</span>
+            `)}
+          </div>
+        </div>
+      ` : ''}
+      
+      ${modified.length > 0 ? html`
+        <div class="feature-group">
+          <h4>⚡ Modified Features (${modified.length})</h4>
+          <div class="feature-badges">
+            ${modified.map(feature => html`
+              <span class="feature-badge modified">${this._formatFeatureName(feature)}</span>
+            `)}
+          </div>
+        </div>
+      ` : ''}
+      
+      ${special.length > 0 ? html`
+        <div class="feature-group">
+          <h4>⭐ Special Features (${special.length})</h4>
+          <div class="feature-badges">
+            ${special.map(feature => html`
+              <span class="feature-badge special">${this._formatFeatureName(feature)}</span>
+            `)}
+          </div>
+        </div>
+      ` : ''}
+    `;
+  }
+
+  _openApplianceConfig(applianceId) {
+    // Open the config flow for this appliance
+    // Find the config entry ID from the appliance ID
+    const event = new CustomEvent('hass-more-info', {
+      detail: { entityId: null },
+      bubbles: true,
+      composed: true
+    });
+    
+    // Navigate to the integrations page with the specific integration
+    window.history.pushState(null, '', '/config/integrations/integration/kitchen_cooking_engine');
+    const navEvent = new CustomEvent('location-changed', {
+      bubbles: true,
+      composed: true
+    });
+    window.dispatchEvent(navEvent);
+  }
+
+  _getQualityIcon(quality) {
+    const qualityLower = quality.toLowerCase();
+    if (qualityLower === 'excellent') return '⭐';
+    if (qualityLower === 'good') return '✅';
+    if (qualityLower === 'acceptable') return '⚠️';
+    return '❌';
+  }
+
   render() {
     if (!this.hass) {
       return html`<div class="loading">Loading Home Assistant connection...</div>`;
@@ -6492,17 +7178,28 @@ class KitchenCookingPanel extends LitElement {
         <div class="content">
           ${this._showHistory ? this._renderHistory() :
             this._showNinjaCombi ? this._renderNinjaCombi() :
+            this._showAppliances ? this._renderAppliances() :
+            this._showRecipes ? this._renderRecipes() :
             (entities.length === 0 ? this._renderNoEntities() : 
               (isActive ? this._renderActiveCook(state) : this._renderSetupForm(entities)))}
           
           ${!isActive && entities.length > 0 ? html`
             <div class="history-toggle">
               <button class="history-btn ${this._showHistory ? 'active' : ''}" @click=${this._toggleHistory}>
-                📜 ${this._showHistory ? 'Back to Cooking' : 'View Cook History'}
+                📜 ${this._showHistory ? 'Back to Cooking' : 'Cook History'}
               </button>
               <button class="history-btn ${this._showNinjaCombi ? 'active' : ''}" @click=${this._toggleNinjaCombi}>
-                🥘 ${this._showNinjaCombi ? 'Back to Cooking' : 'Ninja Combi Recipes'}
+                🥘 ${this._showNinjaCombi ? 'Back to Cooking' : 'Ninja Combi'}
               </button>
+              <button class="history-btn ${this._showAppliances ? 'active' : ''}" @click=${this._toggleAppliances}>
+                🔧 ${this._showAppliances ? 'Back to Cooking' : 'Appliances'}
+              </button>
+              <!-- Temporarily removed: All Recipes button - will be rebuilt in next major upgrade -->
+              <!--
+              <button class="history-btn ${this._showRecipes ? 'active' : ''}" @click=${this._toggleRecipes}>
+                📖 ${this._showRecipes ? 'Back to Cooking' : 'All Recipes'}
+              </button>
+              -->
             </div>
           ` : ''}
         </div>
@@ -6753,9 +7450,32 @@ class KitchenCookingPanel extends LitElement {
   _renderActiveCook(state) {
     const attrs = state.attributes;
     const progress = attrs.progress || 0;
-    const currentTemp = attrs.current_temp;
-    const ambientTemp = attrs.ambient_temp;
-    const batteryLevel = attrs.battery_level;
+    
+    // Multi-appliance temperature reading:
+    // If current entity doesn't have temperature, find it from entities with temperature_probe feature
+    let currentTemp = attrs.current_temp;
+    let ambientTemp = attrs.ambient_temp;
+    let batteryLevel = attrs.battery_level;
+    
+    if ((currentTemp === null || currentTemp === undefined) && this.hass) {
+      // Current entity has no temperature - look for temperature probe entity
+      const entities = this._findCookingEntities();
+      for (const entityId of entities) {
+        const entityState = this.hass.states[entityId];
+        if (!entityState) continue;
+        
+        // Check if this entity has temperature_probe feature
+        // by looking for current_temp in its attributes
+        const entityAttrs = entityState.attributes || {};
+        if (entityAttrs.current_temp !== null && entityAttrs.current_temp !== undefined) {
+          currentTemp = entityAttrs.current_temp;
+          ambientTemp = entityAttrs.ambient_temp;
+          batteryLevel = entityAttrs.battery_level;
+          break; // Found temperature source
+        }
+      }
+    }
+    
     const targetTemp = attrs.target_temp_c;
     const cut = attrs.cut_display || attrs.cut || "Unknown";
     const doneness = (attrs.doneness || "").replace("_", " ");
@@ -7722,6 +8442,584 @@ class KitchenCookingPanel extends LitElement {
         width: 100%;
         max-height: 120px;
       }
+
+      /* Phase 3.3: Appliances and Recipes Styles */
+      .appliances-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+
+      .appliance-card .card-content {
+        padding: 16px;
+      }
+
+      .appliance-card.clickable {
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .appliance-card.clickable:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .appliance-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+        position: relative;
+      }
+
+      .appliance-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+      }
+
+      .settings-icon-btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        padding: 4px;
+        opacity: 0.7;
+        transition: opacity 0.2s, transform 0.2s;
+      }
+
+      .settings-icon-btn:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+
+      .expand-icon {
+        font-size: 14px;
+        color: var(--secondary-text-color);
+        transition: transform 0.2s;
+      }
+
+      .appliance-icon {
+        font-size: 32px;
+      }
+
+      .appliance-info h3 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .appliance-brand {
+        color: var(--secondary-text-color);
+        font-size: 12px;
+        margin-top: 4px;
+      }
+
+      .appliance-features h4 {
+        margin: 12px 0 8px 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--secondary-text-color);
+      }
+
+      .feature-group {
+        margin-bottom: 16px;
+      }
+
+      .feature-group h4 {
+        margin: 12px 0 8px 0;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--primary-text-color);
+      }
+
+      .feature-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .feature-badge {
+        display: inline-block;
+        padding: 4px 8px;
+        background: var(--divider-color);
+        border-radius: 12px;
+        font-size: 11px;
+        color: var(--primary-text-color);
+      }
+
+      .feature-badge.standard {
+        background: #4caf50;
+        color: white;
+      }
+
+      .feature-badge.modified {
+        background: #ff9800;
+        color: white;
+      }
+
+      .feature-badge.special {
+        background: #9c27b0;
+        color: white;
+      }
+
+      .feature-badge.more {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      .appliance-recipes {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid var(--divider-color);
+        font-size: 13px;
+        color: var(--secondary-text-color);
+      }
+
+      .recipes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+
+      .recipe-card .card-content {
+        padding: 16px;
+      }
+
+      .recipe-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 12px;
+        gap: 8px;
+      }
+
+      .recipe-header h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+        flex: 1;
+      }
+
+      .quality-badge {
+        padding: 4px 8px;
+        border-radius: 12px;
+        font-size: 11px;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+
+      .quality-badge.quality-excellent {
+        background: #4caf50;
+        color: white;
+      }
+
+      .quality-badge.quality-good {
+        background: #8bc34a;
+        color: white;
+      }
+
+      .quality-badge.quality-acceptable {
+        background: #ff9800;
+        color: white;
+      }
+
+      .quality-badge.quality-poor {
+        background: #f44336;
+        color: white;
+      }
+
+      .recipe-description {
+        margin: 0 0 12px 0;
+        font-size: 13px;
+        color: var(--secondary-text-color);
+        line-height: 1.4;
+      }
+
+      .recipe-meta {
+        margin-bottom: 12px;
+        font-size: 12px;
+        color: var(--secondary-text-color);
+      }
+
+      .recipe-score {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .confidence {
+        font-style: italic;
+      }
+
+      .recipe-appliances {
+        margin-bottom: 12px;
+        font-size: 13px;
+      }
+
+      .appliance-chip {
+        display: inline-block;
+        padding: 4px 8px;
+        margin: 2px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 12px;
+        font-size: 11px;
+      }
+
+      .recipe-notes {
+        margin-bottom: 12px;
+        padding: 8px;
+        background: var(--divider-color);
+        border-radius: 4px;
+        font-size: 12px;
+        color: var(--secondary-text-color);
+      }
+
+      .recipe-features {
+        font-size: 12px;
+        color: var(--secondary-text-color);
+      }
+
+      .feature-chip {
+        display: inline-block;
+        padding: 3px 6px;
+        margin: 2px;
+        background: var(--divider-color);
+        border-radius: 10px;
+        font-size: 10px;
+      }
+
+      .help-text {
+        padding: 16px;
+        margin: 16px 0;
+        background: var(--divider-color);
+        border-radius: 8px;
+        font-size: 13px;
+        color: var(--secondary-text-color);
+      }
+
+      .help-text p {
+        margin: 8px 0;
+      }
+
+      .help-text p:first-child {
+        margin-top: 0;
+      }
+
+      .help-text p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Phase 3.4: Recipe Detail View Styles */
+      .recipe-card.clickable {
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .recipe-card.clickable:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .recipe-action {
+        margin-top: 12px;
+        text-align: right;
+      }
+
+      .click-hint {
+        font-size: 12px;
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+
+      .back-btn {
+        padding: 8px 16px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-left: 16px;
+      }
+
+      .back-btn:hover {
+        opacity: 0.9;
+      }
+
+      .recipe-detail-card {
+        margin-bottom: 16px;
+      }
+
+      .recipe-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        gap: 16px;
+      }
+
+      .recipe-detail-header h2 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 500;
+        flex: 1;
+      }
+
+      .quality-badge.large {
+        font-size: 13px;
+        padding: 6px 12px;
+      }
+
+      .recipe-description.large {
+        font-size: 15px;
+        line-height: 1.5;
+        margin: 0 0 20px 0;
+        color: var(--primary-text-color);
+      }
+
+      .recipe-detail-meta {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 24px;
+        padding: 12px;
+        background: var(--divider-color);
+        border-radius: 4px;
+      }
+
+      .meta-item {
+        font-size: 14px;
+      }
+
+      .meta-item strong {
+        margin-right: 4px;
+      }
+
+      .appliances-section,
+      .alternatives-section,
+      .features-section,
+      .notes-section {
+        margin-bottom: 24px;
+      }
+
+      .appliances-section h3,
+      .alternatives-section h3,
+      .features-section h3,
+      .notes-section h3 {
+        margin: 0 0 12px 0;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .appliance-list-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .appliance-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+        background: var(--divider-color);
+        border-radius: 4px;
+      }
+
+      .appliance-item .appliance-icon {
+        font-size: 24px;
+      }
+
+      .appliance-item .appliance-name {
+        flex: 1;
+        font-weight: 500;
+      }
+
+      .status-check {
+        color: #4caf50;
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .alternative-combos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .combo-btn {
+        padding: 8px 16px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 13px;
+        transition: opacity 0.2s;
+      }
+
+      .combo-btn:hover {
+        opacity: 0.85;
+      }
+
+      .feature-list-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        background: var(--divider-color);
+        border-radius: 4px;
+      }
+
+      .feature-item.optional {
+        opacity: 0.7;
+      }
+
+      .feature-icon {
+        width: 20px;
+        text-align: center;
+        font-weight: bold;
+        color: #4caf50;
+      }
+
+      .feature-item.optional .feature-icon {
+        color: var(--secondary-text-color);
+      }
+
+      .feature-name {
+        flex: 1;
+        font-size: 14px;
+      }
+
+      .status-badge {
+        padding: 2px 8px;
+        background: #4caf50;
+        color: white;
+        border-radius: 10px;
+        font-size: 11px;
+      }
+
+      .recipe-notes-detail {
+        padding: 12px;
+        background: var(--divider-color);
+        border-radius: 4px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5;
+        font-style: italic;
+      }
+
+      .recipe-actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid var(--divider-color);
+      }
+
+      .primary-btn {
+        flex: 1;
+        padding: 12px 24px;
+        background: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        transition: opacity 0.2s;
+      }
+
+      .primary-btn:hover {
+        opacity: 0.9;
+      }
+
+      .secondary-btn {
+        padding: 12px 24px;
+        background: var(--divider-color);
+        color: var(--primary-text-color);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: opacity 0.2s;
+      }
+
+      .secondary-btn:hover {
+        opacity: 0.8;
+      }
+
+      /* Phase 3.5: Loading and Error States */
+      .loading-state {
+        text-align: center;
+        padding: 32px 16px;
+      }
+
+      .spinner {
+        border: 4px solid var(--divider-color);
+        border-top: 4px solid var(--primary-color);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 16px auto;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .loading-state p {
+        margin: 0;
+        color: var(--secondary-text-color);
+        font-size: 14px;
+      }
+
+      .error-card {
+        background: #ffebee;
+        border-left: 4px solid #f44336;
+      }
+
+      .error-message {
+        text-align: center;
+        color: #c62828;
+      }
+
+      .error-message p {
+        margin: 0 0 12px 0;
+        font-weight: 500;
+      }
+
+      .retry-btn {
+        padding: 8px 16px;
+        background: #f44336;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: opacity 0.2s;
+      }
+
+      .retry-btn:hover {
+        opacity: 0.9;
+      }
+
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     `;
   }
 }
@@ -7729,7 +9027,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "41";
+const PANEL_VERSION = "55";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
