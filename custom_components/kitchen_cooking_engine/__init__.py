@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 14 Jan 2026, 00:00 CET
-Last Change: v0.3.2.5 - Settings icon on appliances + feature grouping by type
+Last Updated: 14 Jan 2026, 03:10 UTC
+Last Change: v0.3.4.0 - View Assist integration ready for merge
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
