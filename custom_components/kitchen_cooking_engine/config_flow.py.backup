@@ -672,137 +672,558 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
             },
         )
 
-
-    async def async_step_appliance_features(
+    async def async_step_ninja_combi(
         self, user_input: dict[str, Any] | None = None
     ) -> config_entries.ConfigFlowResult:
-        """Unified options flow for ALL non-probe appliances."""
-        appliance_type = self.config_entry.data.get(CONF_APPLIANCE_TYPE, APPLIANCE_TYPE_CUSTOM)
-        current_data = self.config_entry.data
-        
+        """Configure Ninja Combi options."""
         if user_input is not None:
-            # Extract common fields
-            name = user_input.get(CONF_APPLIANCE_NAME, current_data.get(CONF_APPLIANCE_NAME, ""))
+            # Extract appliance name and power outlet/start button
+            name = user_input.get(CONF_APPLIANCE_NAME, "Ninja Combi")
             power_outlet = user_input.get(CONF_POWER_OUTLET, "")
             start_button = user_input.get(CONF_START_BUTTON, "")
             
-            # Extract appliance-specific fields
-            bowl_type = user_input.get(CONF_BOWL_TYPE)
-            has_convection = user_input.get(CONF_HAS_CONVECTION, False)
-            has_grill = user_input.get(CONF_HAS_GRILL, False)
-            has_sensor = user_input.get(CONF_HAS_SENSOR_COOK, False)
-            
-            # Build features dictionary
+            # Build features dictionary from user input
             features = {}
-            default_features = APPLIANCE_DEFAULT_FEATURES.get(appliance_type, {})
             
+            # Get default features for Ninja Combi
+            default_features = APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_NINJA_COMBI, {})
+            
+            # Scan all features that this appliance supports
             for feature_name in default_features.keys():
-                # Check if feature is enabled
-                is_enabled = user_input.get(f"feature_enabled_{feature_name}", False)
-                if is_enabled:
-                    # Get feature type
-                    feature_type = user_input.get(f"feature_type_{feature_name}", FEATURE_TYPE_STANDARD)
+                # Check if feature is enabled (checkbox)
+                feature_enabled_key = f"feature_enabled_{feature_name}"
+                if user_input.get(feature_enabled_key, False):
+                    # Get feature type (dropdown)
+                    feature_type_key = f"feature_type_{feature_name}"
+                    feature_type = user_input.get(feature_type_key, FEATURE_TYPE_STANDARD)
                     features[feature_name] = feature_type
             
-            # Build updated data
-            updated_data = {
-                **current_data,
-                CONF_APPLIANCE_NAME: name,
-                CONF_FEATURES: features,
-            }
+            # Update config with new data
+            updated_data = {**self.config_entry.data}
+            updated_data[CONF_APPLIANCE_NAME] = name
+            updated_data[CONF_POWER_OUTLET] = power_outlet
+            updated_data[CONF_START_BUTTON] = start_button
+            updated_data[CONF_FEATURES] = features
             
-            if power_outlet:
-                updated_data[CONF_POWER_OUTLET] = power_outlet
-            if start_button:
-                updated_data[CONF_START_BUTTON] = start_button
-            if bowl_type:
-                updated_data[CONF_BOWL_TYPE] = bowl_type
-            if appliance_type == APPLIANCE_TYPE_STANDARD_OVEN:
-                updated_data[CONF_HAS_CONVECTION] = has_convection
-                updated_data[CONF_HAS_GRILL] = has_grill
-            if appliance_type == APPLIANCE_TYPE_MICROWAVE:
-                updated_data[CONF_HAS_SENSOR_COOK] = has_sensor
-                updated_data[CONF_HAS_CONVECTION] = has_convection
-            
-            # Update config entry
             self.hass.config_entries.async_update_entry(
                 self.config_entry,
                 data=updated_data,
             )
             return self.async_create_entry(title="", data={})
 
-        # Build schema dynamically based on appliance type
-        schema_dict = {}
+        current_data = self.config_entry.data
         
-        # Common fields for all appliances
-        schema_dict[vol.Required(
-            CONF_APPLIANCE_NAME,
-            default=current_data.get(CONF_APPLIANCE_NAME, "")
-        )] = str
-        
-        schema_dict[vol.Optional(
-            CONF_POWER_OUTLET,
-            default=current_data.get(CONF_POWER_OUTLET, "")
-        )] = str
-        
-        # Appliance-specific fields
-        if appliance_type == APPLIANCE_TYPE_MULTIFRY:
-            schema_dict[vol.Optional(
-                CONF_BOWL_TYPE,
-                default=current_data.get(CONF_BOWL_TYPE, "standard")
-            )] = vol.In(["standard", "ceramic"])
-            
-        elif appliance_type == APPLIANCE_TYPE_STANDARD_OVEN:
-            schema_dict[vol.Optional(
-                CONF_HAS_CONVECTION,
-                default=current_data.get(CONF_HAS_CONVECTION, False)
-            )] = bool
-            schema_dict[vol.Optional(
-                CONF_HAS_GRILL,
-                default=current_data.get(CONF_HAS_GRILL, False)
-            )] = bool
-            
-        elif appliance_type == APPLIANCE_TYPE_MICROWAVE:
-            schema_dict[vol.Optional(
-                CONF_HAS_SENSOR_COOK,
-                default=current_data.get(CONF_HAS_SENSOR_COOK, False)
-            )] = bool
-            schema_dict[vol.Optional(
-                CONF_HAS_CONVECTION,
-                default=current_data.get(CONF_HAS_CONVECTION, False)
-            )] = bool
-        
-        # Add feature editing fields
+        # Get currently configured features
         current_features = current_data.get(CONF_FEATURES, {})
-        default_features = APPLIANCE_DEFAULT_FEATURES.get(appliance_type, {})
         
-        # Filter features based on configuration
-        features_to_show = dict(default_features)
-        if appliance_type == APPLIANCE_TYPE_STANDARD_OVEN:
-            if not current_data.get(CONF_HAS_CONVECTION, False):
-                features_to_show.pop("convection", None)
-            if not current_data.get(CONF_HAS_GRILL, False):
-                features_to_show.pop("grill", None)
-        elif appliance_type == APPLIANCE_TYPE_MICROWAVE:
-            if not current_data.get(CONF_HAS_SENSOR_COOK, False):
-                features_to_show.pop("sensor_cook", None)
-            if not current_data.get(CONF_HAS_CONVECTION, False):
-                features_to_show.pop("convection_microwave", None)
-                features_to_show.pop("bake", None)
+        # Build schema with appliance-specific settings first, then features
+        schema_dict = {
+            vol.Required(
+                CONF_APPLIANCE_NAME,
+                default=current_data.get(CONF_APPLIANCE_NAME, "Ninja Combi"),
+            ): str,
+            vol.Optional(
+                CONF_POWER_OUTLET,
+                default=current_data.get(CONF_POWER_OUTLET, ""),
+            ): str,
+            vol.Optional(
+                CONF_START_BUTTON,
+                default=current_data.get(CONF_START_BUTTON, ""),
+            ): str,
+        }
         
-        # Sort and add feature fields
-        for feature_name, default_type in sorted(features_to_show.items()):
-            # Checkbox to enable feature
+        # Add feature editing schema
+        feature_schema = _build_feature_schema_dict(
+            APPLIANCE_TYPE_NINJA_COMBI,
+            current_features,
+            current_data
+        )
+        schema_dict.update(feature_schema)
+
+        return self.async_show_form(
+            step_id="ninja_combi",
+            data_schema=vol.Schema(schema_dict),
+            description_placeholders={
+                "info": (
+                    "Configure Ninja Combi settings and features.\n\n"
+                    "For each feature:\n"
+                    "1. Check the box to enable it\n"
+                    "2. Select how it implements the feature:\n"
+                    "   - Standard: Works like traditional method (no adaptation)\n"
+                    "   - Modified: Requires recipe adjustments (time/temp)\n"
+                    "   - Special: Needs appliance-specific recipes"
+                )
+            },
+        )
+
+    async def async_step_multifry(
+        self, user_input: dict[str, Any] | None = None
+    ) -> config_entries.ConfigFlowResult:
+        """Configure MultiFry options."""
+        if user_input is not None:
+            # Extract appliance settings
+            name = user_input.get(CONF_APPLIANCE_NAME, "MultiFry")
+            bowl_type = user_input.get(CONF_MULTIFRY_BOWL_TYPE, "nonstick_paddle")
+            power_outlet = user_input.get(CONF_POWER_OUTLET, "")
+            start_button = user_input.get(CONF_START_BUTTON, "")
+            
+            # Build features dictionary from user input
+            features = {}
+            
+            # Get default features for MultiFry
+            default_features = APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_MULTIFRY, {})
+            
+            # Scan all features that this appliance supports
+            for feature_name in default_features.keys():
+                # Check if feature is enabled (checkbox)
+                feature_enabled_key = f"feature_enabled_{feature_name}"
+                if user_input.get(feature_enabled_key, False):
+                    # Get feature type (dropdown)
+                    feature_type_key = f"feature_type_{feature_name}"
+                    feature_type = user_input.get(feature_type_key, FEATURE_TYPE_STANDARD)
+                    features[feature_name] = feature_type
+            
+            # Update config with new data
+            updated_data = {**self.config_entry.data}
+            updated_data[CONF_APPLIANCE_NAME] = name
+            updated_data[CONF_MULTIFRY_BOWL_TYPE] = bowl_type
+            updated_data[CONF_POWER_OUTLET] = power_outlet
+            updated_data[CONF_START_BUTTON] = start_button
+            updated_data[CONF_FEATURES] = features
+            
+            self.hass.config_entries.async_update_entry(
+                self.config_entry,
+                data=updated_data,
+            )
+            return self.async_create_entry(title="", data={})
+
+        current_data = self.config_entry.data
+        
+        # Get currently configured features
+        current_features = current_data.get(CONF_FEATURES, {})
+        
+        # Build schema with appliance-specific settings first, then features
+        schema_dict = {
+            vol.Required(
+                CONF_APPLIANCE_NAME,
+                default=current_data.get(CONF_APPLIANCE_NAME, "MultiFry"),
+            ): str,
+            vol.Required(
+                CONF_MULTIFRY_BOWL_TYPE,
+                default=current_data.get(CONF_MULTIFRY_BOWL_TYPE, "nonstick_paddle"),
+            ): vol.In({
+                "nonstick_paddle": "Non-stick with Paddle (J)",
+                "nonstick_flat": "Non-stick Flat Bottom (Z)"
+            }),
+            vol.Optional(
+                CONF_POWER_OUTLET,
+                default=current_data.get(CONF_POWER_OUTLET, ""),
+            ): str,
+            vol.Optional(
+                CONF_START_BUTTON,
+                default=current_data.get(CONF_START_BUTTON, ""),
+            ): str,
+        }
+        
+        # Add feature editing schema
+        feature_schema = _build_feature_schema_dict(
+            APPLIANCE_TYPE_MULTIFRY,
+            current_features,
+            current_data
+        )
+        schema_dict.update(feature_schema)
+
+        return self.async_show_form(
+            step_id="multifry",
+            data_schema=vol.Schema(schema_dict),
+            description_placeholders={
+                "info": (
+                    "Configure MultiFry settings and features.\n\n"
+                    "For each feature:\n"
+                    "1. Check the box to enable it\n"
+                    "2. Select how it implements the feature:\n"
+                    "   - Standard: Works like traditional method (no adaptation)\n"
+                    "   - Modified: Requires recipe adjustments (time/temp)\n"
+                    "   - Special: Needs appliance-specific recipes"
+                )
+            },
+        )
+
+    async def async_step_standard_oven(
+        self, user_input: dict[str, Any] | None = None
+    ) -> config_entries.ConfigFlowResult:
+        """Configure standard oven options."""
+        if user_input is not None:
+            # Extract appliance settings
+            name = user_input.get(CONF_APPLIANCE_NAME, "Standard Oven")
+            has_convection = user_input.get(CONF_HAS_CONVECTION, False)
+            has_grill = user_input.get(CONF_HAS_GRILL, False)
+            power_outlet = user_input.get(CONF_POWER_OUTLET, "")
+            
+            # Build features dictionary from user input
+            features = {}
+            
+            # Get default features for Standard Oven
+            default_features = APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_STANDARD_OVEN, {})
+            
+            # Scan all features that this appliance supports
+            for feature_name in default_features.keys():
+                # Skip conditional features if they're not enabled
+                if feature_name == "convection" and not has_convection:
+                    continue
+                if feature_name == "grill" and not has_grill:
+                    continue
+                
+                # Check if feature is enabled (checkbox)
+                feature_enabled_key = f"feature_enabled_{feature_name}"
+                if user_input.get(feature_enabled_key, False):
+                    # Get feature type (dropdown)
+                    feature_type_key = f"feature_type_{feature_name}"
+                    feature_type = user_input.get(feature_type_key, FEATURE_TYPE_STANDARD)
+                    features[feature_name] = feature_type
+            
+            # Update config with new data
+            updated_data = {**self.config_entry.data}
+            updated_data[CONF_APPLIANCE_NAME] = name
+            updated_data[CONF_HAS_CONVECTION] = has_convection
+            updated_data[CONF_HAS_GRILL] = has_grill
+            updated_data[CONF_POWER_OUTLET] = power_outlet
+            updated_data[CONF_FEATURES] = features
+            
+            self.hass.config_entries.async_update_entry(
+                self.config_entry,
+                data=updated_data,
+            )
+            return self.async_create_entry(title="", data={})
+
+        current_data = self.config_entry.data
+        
+        # Get currently configured features
+        current_features = current_data.get(CONF_FEATURES, {})
+        
+        # Build schema with appliance-specific settings first, then features
+        schema_dict = {
+            vol.Required(
+                CONF_APPLIANCE_NAME,
+                default=current_data.get(CONF_APPLIANCE_NAME, "Standard Oven"),
+            ): str,
+            vol.Optional(
+                CONF_HAS_CONVECTION,
+                default=current_data.get(CONF_HAS_CONVECTION, False),
+            ): bool,
+            vol.Optional(
+                CONF_HAS_GRILL,
+                default=current_data.get(CONF_HAS_GRILL, False),
+            ): bool,
+            vol.Optional(
+                CONF_POWER_OUTLET,
+                default=current_data.get(CONF_POWER_OUTLET, ""),
+            ): str,
+        }
+        
+        # Add feature editing schema (will filter based on has_convection/has_grill)
+        feature_schema = _build_feature_schema_dict(
+            APPLIANCE_TYPE_STANDARD_OVEN,
+            current_features,
+            current_data
+        )
+        schema_dict.update(feature_schema)
+
+        return self.async_show_form(
+            step_id="standard_oven",
+            data_schema=vol.Schema(schema_dict),
+            description_placeholders={
+                "info": (
+                    "Configure oven settings and features.\n\n"
+                    "For each feature:\n"
+                    "1. Check the box to enable it\n"
+                    "2. Select how it implements the feature:\n"
+                    "   - Standard: Works like traditional method (no adaptation)\n"
+                    "   - Modified: Requires recipe adjustments (time/temp)\n"
+                    "   - Special: Needs appliance-specific recipes"
+                )
+            },
+        )
+
+    async def async_step_stovetop(
+        self, user_input: dict[str, Any] | None = None
+    ) -> config_entries.ConfigFlowResult:
+        """Configure stovetop options."""
+        if user_input is not None:
+            # Extract appliance settings
+            name = user_input.get(CONF_APPLIANCE_NAME, "Stovetop")
+            stove_type = user_input.get(CONF_STOVE_TYPE, "gas")
+            num_burners = user_input.get(CONF_NUM_BURNERS, 4)
+            
+            # Build features dictionary from user input
+            features = {}
+            
+            # Get default features for Stovetop
+            default_features = APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_STOVETOP, {})
+            
+            # Scan all features that this appliance supports
+            for feature_name in default_features.keys():
+                # Check if feature is enabled (checkbox)
+                feature_enabled_key = f"feature_enabled_{feature_name}"
+                if user_input.get(feature_enabled_key, False):
+                    # Get feature type (dropdown)
+                    feature_type_key = f"feature_type_{feature_name}"
+                    feature_type = user_input.get(feature_type_key, FEATURE_TYPE_STANDARD)
+                    features[feature_name] = feature_type
+            
+            # Update config with new data
+            updated_data = {**self.config_entry.data}
+            updated_data[CONF_APPLIANCE_NAME] = name
+            updated_data[CONF_STOVE_TYPE] = stove_type
+            updated_data[CONF_NUM_BURNERS] = num_burners
+            updated_data[CONF_FEATURES] = features
+            
+            self.hass.config_entries.async_update_entry(
+                self.config_entry,
+                data=updated_data,
+            )
+            return self.async_create_entry(title="", data={})
+
+        current_data = self.config_entry.data
+        
+        # Get currently configured features
+        current_features = current_data.get(CONF_FEATURES, {})
+        
+        # Build schema with appliance-specific settings first, then features
+        schema_dict = {
+            vol.Required(
+                CONF_APPLIANCE_NAME,
+                default=current_data.get(CONF_APPLIANCE_NAME, "Stovetop"),
+            ): str,
+            vol.Required(
+                CONF_STOVE_TYPE,
+                default=current_data.get(CONF_STOVE_TYPE, "gas"),
+            ): vol.In({
+                "gas": "Gas",
+                "electric_coil": "Electric Coil",
+                "electric_smoothtop": "Electric Smoothtop",
+                "induction": "Induction",
+            }),
+            vol.Required(
+                CONF_NUM_BURNERS,
+                default=current_data.get(CONF_NUM_BURNERS, 4),
+            ): vol.In([1, 2, 3, 4, 5, 6]),
+        }
+        
+        # Add feature editing schema
+        feature_schema = _build_feature_schema_dict(
+            APPLIANCE_TYPE_STOVETOP,
+            current_features,
+            current_data
+        )
+        schema_dict.update(feature_schema)
+
+        return self.async_show_form(
+            step_id="stovetop",
+            data_schema=vol.Schema(schema_dict),
+            description_placeholders={
+                "info": (
+                    "Configure stovetop settings and features.\n\n"
+                    "For each feature:\n"
+                    "1. Check the box to enable it\n"
+                    "2. Select how it implements the feature:\n"
+                    "   - Standard: Works like traditional method (no adaptation)\n"
+                    "   - Modified: Requires recipe adjustments (time/temp)\n"
+                    "   - Special: Needs appliance-specific recipes"
+                )
+            },
+        )
+
+    async def async_step_microwave(
+        self, user_input: dict[str, Any] | None = None
+    ) -> config_entries.ConfigFlowResult:
+        """Configure microwave options."""
+        if user_input is not None:
+            # Extract appliance settings
+            name = user_input.get(CONF_APPLIANCE_NAME, "Microwave")
+            wattage = user_input.get(CONF_MICROWAVE_WATTAGE, 1000)
+            has_sensor = user_input.get(CONF_HAS_SENSOR_COOK, False)
+            has_convection = user_input.get(CONF_HAS_CONVECTION, False)
+            power_outlet = user_input.get(CONF_POWER_OUTLET, "")
+            
+            # Build features dictionary from user input
+            features = {}
+            
+            # Get default features for Microwave
+            default_features = APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_MICROWAVE, {})
+            
+            # Scan all features that this appliance supports
+            for feature_name in default_features.keys():
+                # Skip conditional features if they're not enabled
+                if feature_name == "sensor_cook" and not has_sensor:
+                    continue
+                if feature_name in ["convection_microwave", "bake"] and not has_convection:
+                    continue
+                
+                # Check if feature is enabled (checkbox)
+                feature_enabled_key = f"feature_enabled_{feature_name}"
+                if user_input.get(feature_enabled_key, False):
+                    # Get feature type (dropdown)
+                    feature_type_key = f"feature_type_{feature_name}"
+                    feature_type = user_input.get(feature_type_key, FEATURE_TYPE_STANDARD)
+                    features[feature_name] = feature_type
+            
+            # Update config with new data
+            updated_data = {**self.config_entry.data}
+            updated_data[CONF_APPLIANCE_NAME] = name
+            updated_data[CONF_MICROWAVE_WATTAGE] = wattage
+            updated_data[CONF_HAS_SENSOR_COOK] = has_sensor
+            updated_data[CONF_HAS_CONVECTION] = has_convection
+            updated_data[CONF_POWER_OUTLET] = power_outlet
+            updated_data[CONF_FEATURES] = features
+            
+            self.hass.config_entries.async_update_entry(
+                self.config_entry,
+                data=updated_data,
+            )
+            return self.async_create_entry(title="", data={})
+
+        current_data = self.config_entry.data
+        
+        # Get currently configured features
+        current_features = current_data.get(CONF_FEATURES, {})
+        
+        # Build schema with appliance-specific settings first, then features
+        schema_dict = {
+            vol.Required(
+                CONF_APPLIANCE_NAME,
+                default=current_data.get(CONF_APPLIANCE_NAME, "Microwave"),
+            ): str,
+            vol.Required(
+                CONF_MICROWAVE_WATTAGE,
+                default=current_data.get(CONF_MICROWAVE_WATTAGE, 1000),
+            ): vol.In([600, 700, 800, 900, 1000, 1100, 1200, 1500]),
+            vol.Optional(
+                CONF_HAS_SENSOR_COOK,
+                default=current_data.get(CONF_HAS_SENSOR_COOK, False),
+            ): bool,
+            vol.Optional(
+                CONF_HAS_CONVECTION,
+                default=current_data.get(CONF_HAS_CONVECTION, False),
+            ): bool,
+            vol.Optional(
+                CONF_POWER_OUTLET,
+                default=current_data.get(CONF_POWER_OUTLET, ""),
+            ): str,
+        }
+        
+        # Add feature editing schema (will filter based on has_sensor/has_convection)
+        feature_schema = _build_feature_schema_dict(
+            APPLIANCE_TYPE_MICROWAVE,
+            current_features,
+            current_data
+        )
+        schema_dict.update(feature_schema)
+
+        return self.async_show_form(
+            step_id="microwave",
+            data_schema=vol.Schema(schema_dict),
+            description_placeholders={
+                "info": (
+                    "Configure microwave settings and features.\n\n"
+                    "For each feature:\n"
+                    "1. Check the box to enable it\n"
+                    "2. Select how it implements the feature:\n"
+                    "   - Standard: Works like traditional method (no adaptation)\n"
+                    "   - Modified: Requires recipe adjustments (time/temp)\n"
+                    "   - Special: Needs appliance-specific recipes"
+                )
+            },
+        )
+
+    async def async_step_custom(
+        self, user_input: dict[str, Any] | None = None
+    ) -> config_entries.ConfigFlowResult:
+        """Configure custom appliance options with per-feature type management."""
+        if user_input is not None:
+            # Extract appliance name and power outlet
+            name = user_input.get(CONF_APPLIANCE_NAME, "Custom Appliance")
+            power_outlet = user_input.get(CONF_POWER_OUTLET, "")
+            
+            # Build features dictionary from user input
+            features = {}
+            
+            # Scan all features from catalog
+            for feature_name in FEATURE_CATALOG.keys():
+                # Check if feature is enabled (checkbox)
+                feature_enabled_key = f"feature_enabled_{feature_name}"
+                if user_input.get(feature_enabled_key, False):
+                    # Get feature type (dropdown)
+                    feature_type_key = f"feature_type_{feature_name}"
+                    feature_type = user_input.get(feature_type_key, FEATURE_TYPE_STANDARD)
+                    features[feature_name] = feature_type
+            
+            # Update config with new data
+            updated_data = {**self.config_entry.data}
+            updated_data[CONF_APPLIANCE_NAME] = name
+            updated_data[CONF_POWER_OUTLET] = power_outlet
+            updated_data[CONF_FEATURES] = features
+            
+            # Migrate old format if present (backward compatibility)
+            # Remove old keys if they exist
+            updated_data.pop("custom_standard_features", None)
+            updated_data.pop("custom_modified_features", None)
+            updated_data.pop("custom_special_features", None)
+            
+            self.hass.config_entries.async_update_entry(
+                self.config_entry,
+                data=updated_data,
+            )
+            return self.async_create_entry(title="", data={})
+
+        current_data = self.config_entry.data
+        
+        # Get currently configured features (handle both old and new format)
+        current_features = {}
+        
+        # New format (preferred)
+        if CONF_FEATURES in current_data:
+            current_features = current_data[CONF_FEATURES]
+        else:
+            # Migrate from old format (backward compatibility)
+            for feature in current_data.get("custom_standard_features", []):
+                current_features[feature] = FEATURE_TYPE_STANDARD
+            for feature in current_data.get("custom_modified_features", []):
+                current_features[feature] = FEATURE_TYPE_MODIFIED
+            for feature in current_data.get("custom_special_features", []):
+                current_features[feature] = FEATURE_TYPE_SPECIAL
+
+        # Build schema with pre-selected features
+        schema_dict = {
+            vol.Required(
+                CONF_APPLIANCE_NAME,
+                default=current_data.get(CONF_APPLIANCE_NAME, "Custom Appliance"),
+            ): str,
+            vol.Optional(
+                CONF_POWER_OUTLET,
+                default=current_data.get(CONF_POWER_OUTLET, ""),
+            ): str,
+        }
+        
+        # Add section for each feature from catalog
+        # Sort features alphabetically for better UX
+        sorted_features = sorted(FEATURE_CATALOG.items(), key=lambda x: x[1].display_name)
+        
+        for feature_name, feature_def in sorted_features:
+            # Pre-fill checkbox based on current configuration
             is_enabled = feature_name in current_features
+            
+            # Add checkbox for enabling the feature
             schema_dict[vol.Optional(
-                f"feature_enabled_{feature_name}",
+                f"feature_enabled_{feature_name}", 
                 default=is_enabled
             )] = bool
             
-            # Dropdown for feature type
-            current_type = current_features.get(feature_name, default_type)
+            # Add dropdown for selecting feature type
+            # Pre-fill with current type or default to STANDARD
+            current_type = current_features.get(feature_name, FEATURE_TYPE_STANDARD)
             schema_dict[vol.Optional(
-                f"feature_type_{feature_name}",
+                f"feature_type_{feature_name}", 
                 default=current_type
             )] = vol.In({
                 FEATURE_TYPE_STANDARD: "Standard (use recipes as-is)",
@@ -811,11 +1232,11 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
             })
 
         return self.async_show_form(
-            step_id="appliance_features",
+            step_id="custom",
             data_schema=vol.Schema(schema_dict),
             description_placeholders={
                 "info": (
-                    f"Configure {appliance_type.replace('_', ' ').title()} features.\n\n"
+                    "Manage custom appliance features.\n\n"
                     "For each feature:\n"
                     "1. Check the box to enable it\n"
                     "2. Select how your appliance implements it:\n"
