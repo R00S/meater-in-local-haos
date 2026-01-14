@@ -687,16 +687,24 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
             start_button = user_input.get(CONF_START_BUTTON, "")
             
             # Extract appliance-specific fields
-            bowl_type = user_input.get(CONF_BOWL_TYPE)
+            bowl_type = user_input.get(CONF_MULTIFRY_BOWL_TYPE)
             has_convection = user_input.get(CONF_HAS_CONVECTION, False)
             has_grill = user_input.get(CONF_HAS_GRILL, False)
             has_sensor = user_input.get(CONF_HAS_SENSOR_COOK, False)
             
             # Build features dictionary
             features = {}
-            default_features = APPLIANCE_DEFAULT_FEATURES.get(appliance_type, {})
             
-            for feature_name in default_features.keys():
+            # Get the list of features to process
+            if appliance_type == APPLIANCE_TYPE_CUSTOM:
+                # Custom appliances: check ALL features from FEATURE_CATALOG
+                all_features = FEATURE_CATALOG.keys()
+            else:
+                # Predefined appliances: only process features from defaults
+                default_features = APPLIANCE_DEFAULT_FEATURES.get(appliance_type, {})
+                all_features = default_features.keys()
+            
+            for feature_name in all_features:
                 # Check if feature is enabled
                 is_enabled = user_input.get(f"feature_enabled_{feature_name}", False)
                 if is_enabled:
@@ -716,7 +724,7 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
             if start_button:
                 updated_data[CONF_START_BUTTON] = start_button
             if bowl_type:
-                updated_data[CONF_BOWL_TYPE] = bowl_type
+                updated_data[CONF_MULTIFRY_BOWL_TYPE] = bowl_type
             if appliance_type == APPLIANCE_TYPE_STANDARD_OVEN:
                 updated_data[CONF_HAS_CONVECTION] = has_convection
                 updated_data[CONF_HAS_GRILL] = has_grill
@@ -748,9 +756,9 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
         # Appliance-specific fields
         if appliance_type == APPLIANCE_TYPE_MULTIFRY:
             schema_dict[vol.Optional(
-                CONF_BOWL_TYPE,
-                default=current_data.get(CONF_BOWL_TYPE, "standard")
-            )] = vol.In(["standard", "ceramic"])
+                CONF_MULTIFRY_BOWL_TYPE,
+                default=current_data.get(CONF_MULTIFRY_BOWL_TYPE, "nonstick_paddle")
+            )] = vol.In(["nonstick_paddle", "ceramic"])
             
         elif appliance_type == APPLIANCE_TYPE_STANDARD_OVEN:
             schema_dict[vol.Optional(
@@ -774,21 +782,31 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
         
         # Add feature editing fields
         current_features = current_data.get(CONF_FEATURES, {})
-        default_features = APPLIANCE_DEFAULT_FEATURES.get(appliance_type, {})
         
-        # Filter features based on configuration
-        features_to_show = dict(default_features)
-        if appliance_type == APPLIANCE_TYPE_STANDARD_OVEN:
-            if not current_data.get(CONF_HAS_CONVECTION, False):
-                features_to_show.pop("convection", None)
-            if not current_data.get(CONF_HAS_GRILL, False):
-                features_to_show.pop("grill", None)
-        elif appliance_type == APPLIANCE_TYPE_MICROWAVE:
-            if not current_data.get(CONF_HAS_SENSOR_COOK, False):
-                features_to_show.pop("sensor_cook", None)
-            if not current_data.get(CONF_HAS_CONVECTION, False):
-                features_to_show.pop("convection_microwave", None)
-                features_to_show.pop("bake", None)
+        # Get features to show based on appliance type
+        if appliance_type == APPLIANCE_TYPE_CUSTOM:
+            # Custom appliances: show ALL features from FEATURE_CATALOG
+            features_to_show = {
+                feature_name: FEATURE_TYPE_STANDARD  # Default type for custom
+                for feature_name in FEATURE_CATALOG.keys()
+            }
+        else:
+            # Predefined appliances: use defaults from APPLIANCE_DEFAULT_FEATURES
+            default_features = APPLIANCE_DEFAULT_FEATURES.get(appliance_type, {})
+            features_to_show = dict(default_features)
+            
+            # Filter features based on configuration for predefined appliances
+            if appliance_type == APPLIANCE_TYPE_STANDARD_OVEN:
+                if not current_data.get(CONF_HAS_CONVECTION, False):
+                    features_to_show.pop("convection", None)
+                if not current_data.get(CONF_HAS_GRILL, False):
+                    features_to_show.pop("grill", None)
+            elif appliance_type == APPLIANCE_TYPE_MICROWAVE:
+                if not current_data.get(CONF_HAS_SENSOR_COOK, False):
+                    features_to_show.pop("sensor_cook", None)
+                if not current_data.get(CONF_HAS_CONVECTION, False):
+                    features_to_show.pop("convection_microwave", None)
+                    features_to_show.pop("bake", None)
         
         # Sort and add feature fields
         for feature_name, default_type in sorted(features_to_show.items()):
