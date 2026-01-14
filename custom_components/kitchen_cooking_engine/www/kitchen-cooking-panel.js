@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 14 Jan 2026, 05:09 CET
+ * AUTO-GENERATED: 14 Jan 2026, 05:19 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 14 Jan 2026, 05:09 CET
+// Last generated: 14 Jan 2026, 05:19 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5601,22 +5601,28 @@ class KitchenCookingPanel extends LitElement {
   // AI Recipe Builder: Load data
   async _loadAIRecipeBuilderData() {
     try {
+      console.log('[AI Recipe Builder] Loading data...');
+      
       // Check if OpenAI is available
       const checkResponse = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/check');
       this._aiOpenAIAvailable = checkResponse.available;
+      console.log('[AI Recipe Builder] OpenAI available:', this._aiOpenAIAvailable);
       
       // Load ingredients
       const ingredientsResponse = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
       this._aiIngredients = ingredientsResponse.ingredients;
+      console.log('[AI Recipe Builder] Ingredients loaded:', Object.keys(this._aiIngredients || {}).length, 'categories');
       
       // Load cooking styles
       const stylesResponse = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/cooking_styles');
       this._aiCookingStyles = stylesResponse.cooking_styles;
+      console.log('[AI Recipe Builder] Cooking styles loaded:', this._aiCookingStyles?.length || 0, 'styles');
       
       this.requestUpdate();
     } catch (e) {
-      console.error('Failed to load AI recipe builder data:', e);
+      console.error('[AI Recipe Builder] Failed to load data:', e);
       this._errorMessage = 'Failed to load AI recipe builder. Please try again.';
+      this.requestUpdate();
     }
   }
 
@@ -7177,36 +7183,48 @@ class KitchenCookingPanel extends LitElement {
             <!-- Cooking Style Selection -->
             <div class="ai-section">
               <h3>1. Choose Your Cooking Style</h3>
-              <div class="cooking-styles-grid">
-                ${this._aiCookingStyles.map(style => html`
-                  <button
-                    class="cooking-style-btn ${this._aiSelectedStyle === style.id ? 'selected' : ''}"
-                    @click=${() => { this._aiSelectedStyle = style.id; this.requestUpdate(); }}
-                  >
-                    ${style.name}
-                  </button>
-                `)}
-              </div>
+              ${this._aiCookingStyles && this._aiCookingStyles.length > 0 ? html`
+                <div class="cooking-styles-grid">
+                  ${this._aiCookingStyles.map(style => html`
+                    <button
+                      class="cooking-style-btn ${this._aiSelectedStyle === style.id ? 'selected' : ''}"
+                      @click=${() => { this._aiSelectedStyle = style.id; this.requestUpdate(); }}
+                    >
+                      ${style.name}
+                    </button>
+                  `)}
+                </div>
+              ` : html`
+                <p style="color: var(--secondary-text-color); font-style: italic;">
+                  Loading cooking styles... If this persists, check browser console for errors.
+                </p>
+              `}
             </div>
 
             <!-- Ingredient Selection -->
             <div class="ai-section">
               <h3>2. Select Ingredients (${this._aiSelectedIngredients.size} selected)</h3>
-              ${Object.entries(this._aiIngredients || {}).map(([category, ingredients]) => html`
-                <div class="ingredient-category">
-                  <h4>${category.replace('_', ' ').toUpperCase()}</h4>
-                  <div class="ingredients-grid">
-                    ${ingredients.map(ing => html`
-                      <button
-                        class="ingredient-btn ${this._aiSelectedIngredients.has(ing.id) ? 'selected' : ''}"
-                        @click=${() => this._toggleIngredient(ing.id)}
-                      >
-                        ${ing.name}
-                      </button>
-                    `)}
+              ${this._aiIngredients && Object.keys(this._aiIngredients).length > 0 ? html`
+                ${Object.entries(this._aiIngredients).map(([category, ingredients]) => html`
+                  <div class="ingredient-category">
+                    <h4>${category.replace('_', ' ').toUpperCase()}</h4>
+                    <div class="ingredients-grid">
+                      ${ingredients.map(ing => html`
+                        <button
+                          class="ingredient-btn ${this._aiSelectedIngredients.has(ing.id) ? 'selected' : ''}"
+                          @click=${() => this._toggleIngredient(ing.id)}
+                        >
+                          ${ing.name}
+                        </button>
+                      `)}
+                    </div>
                   </div>
-                </div>
-              `)}
+                `)}
+              ` : html`
+                <p style="color: var(--secondary-text-color); font-style: italic;">
+                  Loading ingredients... If this persists, check browser console for errors.
+                </p>
+              `}
             </div>
 
             <!-- Available Appliances Info -->
@@ -9755,7 +9773,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "56";
+const PANEL_VERSION = "57";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
