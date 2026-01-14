@@ -746,10 +746,20 @@ class AIRecipeDetailView(HomeAssistantView):
         Request body:
         {
             "suggestion_id": "ai_recipe_1",
+            "suggestion": {
+                "id": "ai_recipe_1",
+                "name": "Recipe Name",
+                "description": "Description",
+                "cook_time_minutes": 45,
+                "difficulty": "medium",
+                "main_ingredients": ["ingredient1", "ingredient2"],
+                "cuisine_type": "italian",
+                "required_appliances": ["oven"]
+            },
             "appliance_ids": ["ninja_combi_1"]  // optional
         }
         """
-        from .ai_recipe_builder import AIRecipeBuilder
+        from .ai_recipe_builder import AIRecipeBuilder, AIRecipeSuggestion
         
         hass = request.app["hass"]
         
@@ -762,10 +772,30 @@ class AIRecipeDetailView(HomeAssistantView):
                     "message": "suggestion_id is required"
                 })
             
+            if "suggestion" not in data:
+                return self.json({
+                    "status": "error",
+                    "message": "suggestion object is required"
+                })
+            
+            # Reconstruct the suggestion object from the data
+            suggestion_data = data["suggestion"]
+            suggestion = AIRecipeSuggestion(
+                id=suggestion_data["id"],
+                name=suggestion_data["name"],
+                description=suggestion_data["description"],
+                cook_time_minutes=suggestion_data["cook_time_minutes"],
+                difficulty=suggestion_data["difficulty"],
+                main_ingredients=suggestion_data["main_ingredients"],
+                cuisine_type=suggestion_data.get("cuisine_type"),
+                required_appliances=suggestion_data.get("required_appliances", []),
+            )
+            
             builder = AIRecipeBuilder(hass)
             
             detail = await builder.get_recipe_detail(
                 suggestion_id=data["suggestion_id"],
+                suggestion=suggestion,
                 appliance_ids=data.get("appliance_ids"),
             )
             

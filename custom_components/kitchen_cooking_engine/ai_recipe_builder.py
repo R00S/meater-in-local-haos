@@ -255,12 +255,14 @@ class AIRecipeBuilder:
     async def get_recipe_detail(
         self,
         suggestion_id: str,
+        suggestion: AIRecipeSuggestion,
         appliance_ids: Optional[List[str]] = None,
     ) -> Optional[AIRecipeDetail]:
         """Get detailed recipe for a suggestion.
         
         Args:
             suggestion_id: ID of the suggestion to expand
+            suggestion: The suggestion object with recipe summary
             appliance_ids: Optional list of available appliance IDs
         
         Returns:
@@ -274,20 +276,20 @@ class AIRecipeBuilder:
         appliance_info = await self._get_appliance_info(appliance_ids)
         
         # Build prompt for detailed recipe
-        prompt = self._build_detail_prompt(suggestion_id, appliance_info)
+        prompt = self._build_detail_prompt(suggestion, appliance_info)
         
         # Call OpenAI
         try:
             response = await self._call_openai(prompt)
-            detail = self._parse_recipe_detail(response, suggestion_id)
+            detail = self._parse_recipe_detail(response, suggestion)
             
             # Cache the detail
             self._session_recipes[suggestion_id] = detail
             return detail
             
         except Exception as ex:
-            _LOGGER.error("Failed to get recipe detail: %s", ex)
-            return None
+            _LOGGER.error("Failed to get recipe detail: %s", ex, exc_info=True)
+            raise RuntimeError(f"Failed to get recipe detail: {str(ex)}")
     
     def convert_to_unified_recipe(
         self,
@@ -474,43 +476,55 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
     
     def _build_detail_prompt(
         self,
-        suggestion_id: str,
+        suggestion: AIRecipeSuggestion,
         appliance_info: Dict[str, Any],
     ) -> str:
         """Build prompt for detailed recipe.
         
         Args:
-            suggestion_id: ID of the suggestion to expand
+            suggestion: The recipe suggestion to expand
             appliance_info: Available appliances
         
         Returns:
             Formatted prompt for detailed recipe
         """
-        # This would reference the previously selected suggestion
-        # For now, this is a placeholder - full implementation would track
-        # the conversation history or store the suggestion
+        appliance_list = ", ".join([
+            f"{a['brand']} {a['model']}" 
+            for a in appliance_info["appliances"]
+        ]) if appliance_info["appliances"] else "standard kitchen equipment"
         
-        prompt = f"""Please provide the complete, detailed recipe for suggestion {suggestion_id}.
+        prompt = f"""You are a professional chef. Please provide the complete, detailed recipe for:
 
-Include:
-1. Full ingredient list with measurements
-2. Step-by-step instructions (numbered)
-3. Cooking phases with temperatures and times
-4. Helpful tips and tricks
-5. Temperature probe usage if applicable
+Recipe Name: {suggestion.name}
+Description: {suggestion.description}
+Main Ingredients: {', '.join(suggestion.main_ingredients)}
+Cooking Time: {suggestion.cook_time_minutes} minutes
+Difficulty: {suggestion.difficulty}
+Cuisine Type: {suggestion.cuisine_type or 'Any'}
+Required Appliances: {', '.join(suggestion.required_appliances)}
 
-Format as JSON:
+Available kitchen equipment:
+{appliance_list}
+
+Please provide the full detailed recipe with:
+1. Complete ingredient list with precise measurements (for 4 servings)
+2. Detailed step-by-step cooking instructions (numbered)
+3. Cooking phases with specific temperatures and times
+4. Helpful tips and tricks for best results
+5. Temperature probe usage if meat/protein is involved
+
+Format your response as JSON:
 {{
-  "ingredients": ["ingredient with measurement", ...],
-  "instructions": ["Step 1: ...", "Step 2: ...", ...],
-  "tips": ["Tip 1", "Tip 2", ...],
+  "ingredients": ["1 lb chicken breast, diced", "2 cups rice", ...],
+  "instructions": ["Step 1: Preheat oven to 400°F (200°C)", "Step 2: Season chicken with salt and pepper", ...],
+  "tips": ["Tip 1: Let meat rest 5 minutes before serving", "Tip 2: Use fresh herbs for best flavor", ...],
   "phases": [
     {{
       "mode": "oven",
       "temperature_c": 200,
       "temperature_f": 392,
       "duration_minutes": 25,
-      "description": "Roast chicken"
+      "description": "Roast chicken until golden"
     }}
   ],
   "use_probe": true,
@@ -619,13 +633,13 @@ Format as JSON:
     def _parse_recipe_detail(
         self,
         response: str,
-        suggestion_id: str
+        suggestion: AIRecipeSuggestion
     ) -> AIRecipeDetail:
         """Parse detailed recipe from AI response.
         
         Args:
             response: AI response text
-            suggestion_id: ID of the original suggestion
+            suggestion: The original suggestion object
         
         Returns:
             Parsed recipe detail
@@ -657,17 +671,6 @@ Format as JSON:
                     description=phase_data.get("description", ""),
                 )
                 phases.append(phase)
-            
-            # Create detail object (we need the original suggestion)
-            # For now, create a minimal suggestion
-            suggestion = AIRecipeSuggestion(
-                id=suggestion_id,
-                name=data.get("name", "AI Generated Recipe"),
-                description=data.get("description", ""),
-                cook_time_minutes=sum(p.duration_minutes for p in phases),
-                difficulty=data.get("difficulty", "medium"),
-                main_ingredients=data.get("main_ingredients", []),
-            )
             
             detail = AIRecipeDetail(
                 suggestion=suggestion,

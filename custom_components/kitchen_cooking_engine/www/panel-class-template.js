@@ -366,6 +366,7 @@ class KitchenCookingPanel extends LitElement {
       
       const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/detail', {
         suggestion_id: suggestion.id,
+        suggestion: suggestion,  // Pass the full suggestion object
         appliance_ids: applianceIds,
       });
       
