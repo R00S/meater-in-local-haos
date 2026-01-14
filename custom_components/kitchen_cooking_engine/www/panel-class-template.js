@@ -284,30 +284,14 @@ class KitchenCookingPanel extends LitElement {
     }
   }
 
-  // AI Recipe Builder: Load data
-  async _loadAIRecipeBuilderData() {
+  async _loadAIOpenAIStatus() {
     try {
-      console.log('[AI Recipe Builder] Loading data...');
-      
-      // Check if OpenAI is available
       const checkResponse = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/check');
       this._aiOpenAIAvailable = checkResponse.available;
-      console.log('[AI Recipe Builder] OpenAI available:', this._aiOpenAIAvailable);
-      
-      // Load ingredients
-      const ingredientsResponse = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
-      this._aiIngredients = ingredientsResponse.ingredients;
-      console.log('[AI Recipe Builder] Ingredients loaded:', Object.keys(this._aiIngredients || {}).length, 'categories');
-      
-      // Load cooking styles
-      const stylesResponse = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/cooking_styles');
-      this._aiCookingStyles = stylesResponse.cooking_styles;
-      console.log('[AI Recipe Builder] Cooking styles loaded:', this._aiCookingStyles?.length || 0, 'styles');
-      
       this.requestUpdate();
     } catch (e) {
-      console.error('[AI Recipe Builder] Failed to load data:', e);
-      this._errorMessage = 'Failed to load AI recipe builder. Please try again.';
+      console.error('[AI Recipe Builder] Failed to check OpenAI status:', e);
+      this._aiOpenAIAvailable = false;
       this.requestUpdate();
     }
   }
@@ -773,7 +757,23 @@ class KitchenCookingPanel extends LitElement {
       this._showNinjaCombi = false;
       this._showAppliances = false;
       this._showRecipes = false;
-      await this._loadAIRecipeBuilderData();
+      // Load AI data from constants (like Ninja Combi does)
+      this._aiCookingStyles = AI_COOKING_STYLES || [];
+      this._aiIngredients = AI_INGREDIENTS || {};
+      // Still check OpenAI availability via API
+      this._loadAIOpenAIStatus();
+    }
+  }
+
+  async _loadAIOpenAIStatus() {
+    try {
+      const checkResponse = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/check');
+      this._aiOpenAIAvailable = checkResponse.available;
+      this.requestUpdate();
+    } catch (e) {
+      console.error('[AI Recipe Builder] Failed to check OpenAI status:', e);
+      this._aiOpenAIAvailable = false;
+      this.requestUpdate();
     }
   }
 
@@ -1869,48 +1869,36 @@ class KitchenCookingPanel extends LitElement {
             <!-- Cooking Style Selection -->
             <div class="ai-section">
               <h3>1. Choose Your Cooking Style</h3>
-              ${this._aiCookingStyles && this._aiCookingStyles.length > 0 ? html`
-                <div class="cooking-styles-grid">
-                  ${this._aiCookingStyles.map(style => html`
-                    <button
-                      class="cooking-style-btn ${this._aiSelectedStyle === style.id ? 'selected' : ''}"
-                      @click=${() => { this._aiSelectedStyle = style.id; this.requestUpdate(); }}
-                    >
-                      ${style.name}
-                    </button>
-                  `)}
-                </div>
-              ` : html`
-                <p style="color: var(--secondary-text-color); font-style: italic;">
-                  Loading cooking styles... If this persists, check browser console for errors.
-                </p>
-              `}
+              <div class="cooking-styles-grid">
+                ${this._aiCookingStyles.map(style => html`
+                  <button
+                    class="cooking-style-btn ${this._aiSelectedStyle === style.id ? 'selected' : ''}"
+                    @click=${() => { this._aiSelectedStyle = style.id; this.requestUpdate(); }}
+                  >
+                    ${style.name}
+                  </button>
+                `)}
+              </div>
             </div>
 
             <!-- Ingredient Selection -->
             <div class="ai-section">
               <h3>2. Select Ingredients (${this._aiSelectedIngredients.size} selected)</h3>
-              ${this._aiIngredients && Object.keys(this._aiIngredients).length > 0 ? html`
-                ${Object.entries(this._aiIngredients).map(([category, ingredients]) => html`
-                  <div class="ingredient-category">
-                    <h4>${category.replace('_', ' ').toUpperCase()}</h4>
-                    <div class="ingredients-grid">
-                      ${ingredients.map(ing => html`
-                        <button
-                          class="ingredient-btn ${this._aiSelectedIngredients.has(ing.id) ? 'selected' : ''}"
-                          @click=${() => this._toggleIngredient(ing.id)}
-                        >
-                          ${ing.name}
-                        </button>
-                      `)}
-                    </div>
+              ${Object.entries(this._aiIngredients || {}).map(([category, ingredients]) => html`
+                <div class="ingredient-category">
+                  <h4>${category.replace('_', ' ').toUpperCase()}</h4>
+                  <div class="ingredients-grid">
+                    ${ingredients.map(ing => html`
+                      <button
+                        class="ingredient-btn ${this._aiSelectedIngredients.has(ing.id) ? 'selected' : ''}"
+                        @click=${() => this._toggleIngredient(ing.id)}
+                      >
+                        ${ing.name}
+                      </button>
+                    `)}
                   </div>
-                `)}
-              ` : html`
-                <p style="color: var(--secondary-text-color); font-style: italic;">
-                  Loading ingredients... If this persists, check browser console for errors.
-                </p>
-              `}
+                </div>
+              `)}
             </div>
 
             <!-- Available Appliances Info -->

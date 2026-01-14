@@ -709,10 +709,8 @@ def get_cooking_styles() -> List[Dict[str, str]]:
     Returns:
         List of cooking style options for UI
     """
-    return [
-        {"id": style.value, "name": style.value.replace("_", " ").title()}
-        for style in CookingStyle
-    ]
+    from .ai_recipe_data import COOKING_STYLES
+    return COOKING_STYLES
 
 
 def get_common_ingredients() -> Dict[str, List[Dict[str, str]]]:
@@ -721,15 +719,5 @@ def get_common_ingredients() -> Dict[str, List[Dict[str, str]]]:
     Returns:
         Dictionary mapping categories to ingredient lists
     """
-    grouped = {}
-    for ingredient in COMMON_INGREDIENTS:
-        category = ingredient.category.value
-        if category not in grouped:
-            grouped[category] = []
-        grouped[category].append({
-            "id": ingredient.id,
-            "name": ingredient.name,
-            "common": ingredient.common,
-        })
-    
-    return grouped
+    from .ai_recipe_data import COMMON_INGREDIENTS
+    return COMMON_INGREDIENTS
