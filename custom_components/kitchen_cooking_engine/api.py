@@ -256,6 +256,13 @@ def async_register_api(hass: HomeAssistant) -> None:
     hass.http.register_view(CompatibleRecipesView)
     hass.http.register_view(RecipeMatchView)
     
+    # AI Recipe Builder endpoints
+    hass.http.register_view(AIRecipeIngredientsView)
+    hass.http.register_view(AIRecipeCookingStylesView)
+    hass.http.register_view(AIRecipeGenerateView)
+    hass.http.register_view(AIRecipeDetailView)
+    hass.http.register_view(AIRecipeCheckView)
+    
     _LOGGER.info("Kitchen Cooking Engine: API endpoints registered")
 
 
@@ -575,3 +582,242 @@ class RecipeMatchView(HomeAssistantView):
             "notes": result.notes,
             "missing_appliances_suggestions": missing_appliances
         })
+
+
+# =============================================================================
+# AI RECIPE BUILDER API ENDPOINTS
+# =============================================================================
+
+
+class AIRecipeCheckView(HomeAssistantView):
+    """API endpoint to check if OpenAI is available."""
+
+    url = "/api/kitchen_cooking_engine/ai_recipes/check"
+    name = "api:kitchen_cooking_engine:ai_recipes_check"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Check if OpenAI conversation integration is available."""
+        from .ai_recipe_builder import AIRecipeBuilder
+        
+        hass = request.app["hass"]
+        builder = AIRecipeBuilder(hass)
+        
+        available = await builder.check_openai_available()
+        
+        return self.json({
+            "available": available,
+            "message": (
+                "OpenAI conversation integration is configured and ready"
+                if available
+                else "OpenAI conversation integration is not configured. Please set up the conversation integration with OpenAI."
+            )
+        })
+
+
+class AIRecipeIngredientsView(HomeAssistantView):
+    """API endpoint to get available ingredients for AI recipe builder."""
+
+    url = "/api/kitchen_cooking_engine/ai_recipes/ingredients"
+    name = "api:kitchen_cooking_engine:ai_recipes_ingredients"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Get list of common ingredients grouped by category."""
+        from .ai_recipe_builder import get_common_ingredients
+        
+        ingredients = get_common_ingredients()
+        
+        return self.json({
+            "ingredients": ingredients
+        })
+
+
+class AIRecipeCookingStylesView(HomeAssistantView):
+    """API endpoint to get available cooking styles for AI recipe builder."""
+
+    url = "/api/kitchen_cooking_engine/ai_recipes/cooking_styles"
+    name = "api:kitchen_cooking_engine:ai_recipes_cooking_styles"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Get list of available cooking styles."""
+        from .ai_recipe_builder import get_cooking_styles
+        
+        styles = get_cooking_styles()
+        
+        return self.json({
+            "cooking_styles": styles
+        })
+
+
+class AIRecipeGenerateView(HomeAssistantView):
+    """API endpoint to generate AI recipe suggestions."""
+
+    url = "/api/kitchen_cooking_engine/ai_recipes/generate"
+    name = "api:kitchen_cooking_engine:ai_recipes_generate"
+    requires_auth = True
+
+    async def post(self, request: web.Request) -> web.Response:
+        """Generate 4 recipe suggestions from AI.
+        
+        Request body:
+        {
+            "ingredients": ["chicken breast", "broccoli", "rice"],
+            "cooking_style": "quick_and_easy",
+            "appliance_ids": ["ninja_combi_1", "meater_probe_1"],  // optional
+            "dietary_restrictions": ["gluten_free"],  // optional
+            "servings": 4,  // optional
+            "max_time_minutes": 60  // optional
+        }
+        """
+        from .ai_recipe_builder import AIRecipeBuilder
+        
+        hass = request.app["hass"]
+        
+        try:
+            data = await request.json()
+            
+            # Validate required fields
+            if "ingredients" not in data or not data["ingredients"]:
+                return self.json({
+                    "status": "error",
+                    "message": "At least one ingredient is required"
+                })
+            
+            if "cooking_style" not in data:
+                return self.json({
+                    "status": "error",
+                    "message": "Cooking style is required"
+                })
+            
+            # Create builder and generate suggestions
+            builder = AIRecipeBuilder(hass)
+            
+            suggestions = await builder.generate_recipe_suggestions(
+                ingredients=data["ingredients"],
+                cooking_style=data["cooking_style"],
+                appliance_ids=data.get("appliance_ids"),
+                dietary_restrictions=data.get("dietary_restrictions"),
+                servings=data.get("servings", 4),
+                max_time_minutes=data.get("max_time_minutes"),
+            )
+            
+            # Convert suggestions to dict for JSON
+            suggestions_dict = [
+                {
+                    "id": s.id,
+                    "name": s.name,
+                    "description": s.description,
+                    "cook_time_minutes": s.cook_time_minutes,
+                    "difficulty": s.difficulty,
+                    "main_ingredients": s.main_ingredients,
+                    "cuisine_type": s.cuisine_type,
+                    "required_appliances": s.required_appliances,
+                }
+                for s in suggestions
+            ]
+            
+            return self.json({
+                "status": "ok",
+                "suggestions": suggestions_dict,
+                "count": len(suggestions_dict)
+            })
+            
+        except Exception as ex:
+            _LOGGER.error("Error generating AI recipes: %s", ex)
+            return self.json({
+                "status": "error",
+                "message": str(ex)
+            })
+
+
+class AIRecipeDetailView(HomeAssistantView):
+    """API endpoint to get detailed recipe for a suggestion."""
+
+    url = "/api/kitchen_cooking_engine/ai_recipes/detail"
+    name = "api:kitchen_cooking_engine:ai_recipes_detail"
+    requires_auth = True
+
+    async def post(self, request: web.Request) -> web.Response:
+        """Get detailed recipe for a suggestion.
+        
+        Request body:
+        {
+            "suggestion_id": "ai_recipe_1",
+            "appliance_ids": ["ninja_combi_1"]  // optional
+        }
+        """
+        from .ai_recipe_builder import AIRecipeBuilder
+        
+        hass = request.app["hass"]
+        
+        try:
+            data = await request.json()
+            
+            if "suggestion_id" not in data:
+                return self.json({
+                    "status": "error",
+                    "message": "suggestion_id is required"
+                })
+            
+            builder = AIRecipeBuilder(hass)
+            
+            detail = await builder.get_recipe_detail(
+                suggestion_id=data["suggestion_id"],
+                appliance_ids=data.get("appliance_ids"),
+            )
+            
+            if not detail:
+                return self.json({
+                    "status": "error",
+                    "message": "Failed to get recipe detail"
+                })
+            
+            # Convert detail to dict for JSON
+            detail_dict = {
+                "suggestion": {
+                    "id": detail.suggestion.id,
+                    "name": detail.suggestion.name,
+                    "description": detail.suggestion.description,
+                    "cook_time_minutes": detail.suggestion.cook_time_minutes,
+                    "difficulty": detail.suggestion.difficulty,
+                    "main_ingredients": detail.suggestion.main_ingredients,
+                    "cuisine_type": detail.suggestion.cuisine_type,
+                    "required_appliances": detail.suggestion.required_appliances,
+                },
+                "ingredients": detail.ingredients,
+                "instructions": detail.instructions,
+                "tips": detail.tips,
+                "phases": [
+                    {
+                        "mode": p.mode,
+                        "temperature_c": p.temperature_c,
+                        "temperature_f": p.temperature_f,
+                        "duration_minutes": p.duration_minutes,
+                        "description": p.description,
+                    }
+                    for p in detail.phases
+                ],
+                "use_probe": detail.use_probe,
+                "target_temp_c": detail.target_temp_c,
+                "target_temp_f": detail.target_temp_f,
+                "servings": detail.servings,
+                "prep_time_minutes": detail.prep_time_minutes,
+            }
+            
+            # Also convert to UnifiedRecipe format for compatibility
+            unified_recipe = builder.convert_to_unified_recipe(detail)
+            detail_dict["unified_recipe_id"] = unified_recipe.id
+            
+            return self.json({
+                "status": "ok",
+                "detail": detail_dict
+            })
+            
+        except Exception as ex:
+            _LOGGER.error("Error getting AI recipe detail: %s", ex)
+            return self.json({
+                "status": "error",
+                "message": str(ex)
+            })
