@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 14 Jan 2026, 03:18 CET
+ * AUTO-GENERATED: 14 Jan 2026, 04:35 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 14 Jan 2026, 03:18 CET
+// Last generated: 14 Jan 2026, 04:35 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5407,6 +5407,18 @@ class KitchenCookingPanel extends LitElement {
       _isLoadingAppliances: { type: Boolean },
       _isLoadingRecipes: { type: Boolean },
       _errorMessage: { type: String },
+      // AI Recipe Builder
+      _showAIRecipeBuilder: { type: Boolean },
+      _aiIngredients: { type: Array },
+      _aiCookingStyles: { type: Array },
+      _aiSelectedIngredients: { type: Set },
+      _aiSelectedStyle: { type: String },
+      _aiSuggestions: { type: Array },
+      _aiSelectedSuggestion: { type: Object },
+      _aiRecipeDetail: { type: Object },
+      _isLoadingAISuggestions: { type: Boolean },
+      _isLoadingAIDetail: { type: Boolean },
+      _aiOpenAIAvailable: { type: Boolean },
     };
   }
 
@@ -5450,6 +5462,18 @@ class KitchenCookingPanel extends LitElement {
     this._isLoadingAppliances = false;
     this._isLoadingRecipes = false;
     this._errorMessage = null;
+    // AI Recipe Builder
+    this._showAIRecipeBuilder = false;
+    this._aiIngredients = [];
+    this._aiCookingStyles = [];
+    this._aiSelectedIngredients = new Set();
+    this._aiSelectedStyle = null;
+    this._aiSuggestions = [];
+    this._aiSelectedSuggestion = null;
+    this._aiRecipeDetail = null;
+    this._isLoadingAISuggestions = false;
+    this._isLoadingAIDetail = false;
+    this._aiOpenAIAvailable = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -5572,6 +5596,127 @@ class KitchenCookingPanel extends LitElement {
       this._isLoadingRecipes = false;
       this.requestUpdate();
     }
+  }
+
+  // AI Recipe Builder: Load data
+  async _loadAIRecipeBuilderData() {
+    try {
+      // Check if OpenAI is available
+      const checkResponse = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/check');
+      this._aiOpenAIAvailable = checkResponse.available;
+      
+      // Load ingredients
+      const ingredientsResponse = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
+      this._aiIngredients = ingredientsResponse.ingredients;
+      
+      // Load cooking styles
+      const stylesResponse = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/cooking_styles');
+      this._aiCookingStyles = stylesResponse.cooking_styles;
+      
+      this.requestUpdate();
+    } catch (e) {
+      console.error('Failed to load AI recipe builder data:', e);
+      this._errorMessage = 'Failed to load AI recipe builder. Please try again.';
+    }
+  }
+
+  // AI Recipe Builder: Toggle ingredient selection
+  _toggleIngredient(ingredientId) {
+    if (this._aiSelectedIngredients.has(ingredientId)) {
+      this._aiSelectedIngredients.delete(ingredientId);
+    } else {
+      this._aiSelectedIngredients.add(ingredientId);
+    }
+    this.requestUpdate();
+  }
+
+  // AI Recipe Builder: Generate recipe suggestions
+  async _generateAIRecipes() {
+    if (this._aiSelectedIngredients.size === 0) {
+      alert('Please select at least one ingredient');
+      return;
+    }
+    
+    if (!this._aiSelectedStyle) {
+      alert('Please select a cooking style');
+      return;
+    }
+    
+    this._isLoadingAISuggestions = true;
+    this._aiSuggestions = [];
+    this._aiSelectedSuggestion = null;
+    this._aiRecipeDetail = null;
+    this.requestUpdate();
+    
+    try {
+      // Get appliance IDs if available
+      const applianceIds = this._appliances.map(a => a.id);
+      
+      const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/generate', {
+        ingredients: Array.from(this._aiSelectedIngredients),
+        cooking_style: this._aiSelectedStyle,
+        appliance_ids: applianceIds,
+        servings: 4,
+      });
+      
+      if (response.status === 'ok') {
+        this._aiSuggestions = response.suggestions;
+      } else {
+        alert('Failed to generate recipes: ' + response.message);
+      }
+    } catch (e) {
+      console.error('Failed to generate AI recipes:', e);
+      alert('Failed to generate recipes. Please check your OpenAI configuration.');
+    } finally {
+      this._isLoadingAISuggestions = false;
+      this.requestUpdate();
+    }
+  }
+
+  // AI Recipe Builder: Get recipe detail
+  async _getAIRecipeDetail(suggestion) {
+    this._isLoadingAIDetail = true;
+    this._aiSelectedSuggestion = suggestion;
+    this._aiRecipeDetail = null;
+    this.requestUpdate();
+    
+    try {
+      const applianceIds = this._appliances.map(a => a.id);
+      
+      const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/detail', {
+        suggestion_id: suggestion.id,
+        appliance_ids: applianceIds,
+      });
+      
+      if (response.status === 'ok') {
+        this._aiRecipeDetail = response.detail;
+      } else {
+        alert('Failed to get recipe detail: ' + response.message);
+      }
+    } catch (e) {
+      console.error('Failed to get AI recipe detail:', e);
+      alert('Failed to get recipe detail. Please try again.');
+    } finally {
+      this._isLoadingAIDetail = false;
+      this.requestUpdate();
+    }
+  }
+
+  // AI Recipe Builder: Back to suggestions
+  _backToAISuggestions() {
+    this._aiSelectedSuggestion = null;
+    this._aiRecipeDetail = null;
+    this.requestUpdate();
+  }
+
+  // AI Recipe Builder: Reset and start over
+  _resetAIRecipeBuilder() {
+    this._aiSelectedIngredients.clear();
+    this._aiSelectedStyle = null;
+    this._aiSuggestions = [];
+    this._aiSelectedSuggestion = null;
+    this._aiRecipeDetail = null;
+    this.requestUpdate();
   }
 
   // Phase 3.3: Helper to check if a feature is available
@@ -5893,6 +6038,7 @@ class KitchenCookingPanel extends LitElement {
       this._showNinjaCombi = false;
       this._showAppliances = false;
       this._showRecipes = false;
+      this._showAIRecipeBuilder = false;
     }
   }
 
@@ -5902,28 +6048,40 @@ class KitchenCookingPanel extends LitElement {
       this._showHistory = false;
       this._showAppliances = false;
       this._showRecipes = false;
+      this._showAIRecipeBuilder = false;
     }
   }
 
-  // Phase 3.3: Toggle appliance management
   _toggleAppliances() {
     this._showAppliances = !this._showAppliances;
     if (this._showAppliances) {
-      this._loadAppliances();
       this._showHistory = false;
+      this._loadAppliances();
       this._showNinjaCombi = false;
       this._showRecipes = false;
+      this._showAIRecipeBuilder = false;
     }
   }
 
-  // Phase 3.3: Toggle recipe browser
   _toggleRecipes() {
     this._showRecipes = !this._showRecipes;
     if (this._showRecipes) {
-      this._loadCompatibleRecipes();
       this._showHistory = false;
       this._showNinjaCombi = false;
       this._showAppliances = false;
+      this._showAIRecipeBuilder = false;
+      this._loadCompatibleRecipes();
+    }
+  }
+
+  async _toggleAIRecipeBuilder() {
+    this._showAIRecipeBuilder = !this._showAIRecipeBuilder;
+    if (this._showAIRecipeBuilder) {
+      this._showHistory = false;
+      this._showNinjaCombi = false;
+      this._showAppliances = false;
+      this._showRecipes = false;
+      await this._loadAIRecipeBuilderData();
     }
   }
 
@@ -6966,6 +7124,262 @@ class KitchenCookingPanel extends LitElement {
     `;
   }
 
+  // AI Recipe Builder: Main render function
+  _renderAIRecipeBuilder() {
+    // Check if OpenAI is not available
+    if (this._aiOpenAIAvailable === false) {
+      return html`
+        <ha-card>
+          <div class="card-header">
+            <h2>🤖 AI Recipe Builder</h2>
+          </div>
+          <div class="card-content">
+            <div class="warning-message">
+              <p><strong>⚠️ OpenAI Not Configured</strong></p>
+              <p>The AI Recipe Builder requires the OpenAI conversation integration to be set up.</p>
+              <p>Please configure it in: <strong>Settings → Voice Assistants → Add Assistant → OpenAI</strong></p>
+            </div>
+          </div>
+        </ha-card>
+      `;
+    }
+
+    // Show recipe detail if selected
+    if (this._aiRecipeDetail) {
+      return this._renderAIRecipeDetail();
+    }
+
+    // Show suggestions if generated
+    if (this._aiSuggestions.length > 0) {
+      return this._renderAISuggestions();
+    }
+
+    // Show ingredient/style selection
+    return this._renderAIIngredientSelection();
+  }
+
+  _renderAIIngredientSelection() {
+    return html`
+      <ha-card>
+        <div class="card-header">
+          <h2>🤖 AI Recipe Builder</h2>
+          <p style="margin: 8px 0 0 0; font-size: 0.9em; color: var(--secondary-text-color);">
+            Select ingredients and cooking style to generate custom recipes
+          </p>
+        </div>
+        <div class="card-content">
+          ${this._isLoadingAISuggestions ? html`
+            <div class="loading-spinner">
+              <p>🤖 Generating recipes with AI...</p>
+              <p style="font-size: 0.9em; color: var(--secondary-text-color);">This may take a few moments</p>
+            </div>
+          ` : html`
+            <!-- Cooking Style Selection -->
+            <div class="ai-section">
+              <h3>1. Choose Your Cooking Style</h3>
+              <div class="cooking-styles-grid">
+                ${this._aiCookingStyles.map(style => html`
+                  <button
+                    class="cooking-style-btn ${this._aiSelectedStyle === style.id ? 'selected' : ''}"
+                    @click=${() => { this._aiSelectedStyle = style.id; this.requestUpdate(); }}
+                  >
+                    ${style.name}
+                  </button>
+                `)}
+              </div>
+            </div>
+
+            <!-- Ingredient Selection -->
+            <div class="ai-section">
+              <h3>2. Select Ingredients (${this._aiSelectedIngredients.size} selected)</h3>
+              ${Object.entries(this._aiIngredients || {}).map(([category, ingredients]) => html`
+                <div class="ingredient-category">
+                  <h4>${category.replace('_', ' ').toUpperCase()}</h4>
+                  <div class="ingredients-grid">
+                    ${ingredients.map(ing => html`
+                      <button
+                        class="ingredient-btn ${this._aiSelectedIngredients.has(ing.id) ? 'selected' : ''}"
+                        @click=${() => this._toggleIngredient(ing.id)}
+                      >
+                        ${ing.name}
+                      </button>
+                    `)}
+                  </div>
+                </div>
+              `)}
+            </div>
+
+            <!-- Available Appliances Info -->
+            ${this._appliances.length > 0 ? html`
+              <div class="ai-section">
+                <h3>📍 Your Kitchen Equipment</h3>
+                <div class="appliances-info">
+                  ${this._appliances.map(a => html`
+                    <span class="appliance-tag">${a.brand} ${a.model}</span>
+                  `)}
+                </div>
+                <p style="font-size: 0.85em; color: var(--secondary-text-color); margin-top: 8px;">
+                  AI will generate recipes optimized for your equipment
+                </p>
+              </div>
+            ` : ''}
+
+            <!-- Generate Button -->
+            <div class="ai-actions">
+              <button
+                class="primary-btn large"
+                @click=${this._generateAIRecipes}
+                ?disabled=${this._aiSelectedIngredients.size === 0 || !this._aiSelectedStyle}
+              >
+                🤖 Generate 4 Recipe Ideas
+              </button>
+              ${this._aiSelectedIngredients.size > 0 || this._aiSelectedStyle ? html`
+                <button
+                  class="secondary-btn"
+                  @click=${this._resetAIRecipeBuilder}
+                >
+                  Reset Selection
+                </button>
+              ` : ''}
+            </div>
+          `}
+        </div>
+      </ha-card>
+    `;
+  }
+
+  _renderAISuggestions() {
+    return html`
+      <ha-card>
+        <div class="card-header">
+          <h2>🤖 AI Recipe Suggestions</h2>
+          <p style="margin: 8px 0 0 0; font-size: 0.9em; color: var(--secondary-text-color);">
+            Select a recipe to see full details and instructions
+          </p>
+        </div>
+        <div class="card-content">
+          <div class="ai-suggestions-grid">
+            ${this._aiSuggestions.map(suggestion => html`
+              <div class="ai-suggestion-card" @click=${() => this._getAIRecipeDetail(suggestion)}>
+                <h3>${suggestion.name}</h3>
+                <p class="suggestion-description">${suggestion.description}</p>
+                <div class="suggestion-meta">
+                  <span>⏱️ ${suggestion.cook_time_minutes} min</span>
+                  <span>📊 ${suggestion.difficulty}</span>
+                  ${suggestion.cuisine_type ? html`<span>🌍 ${suggestion.cuisine_type}</span>` : ''}
+                </div>
+                <div class="suggestion-ingredients">
+                  ${suggestion.main_ingredients.map(ing => html`
+                    <span class="ingredient-tag">${ing}</span>
+                  `)}
+                </div>
+                <button class="view-recipe-btn">View Full Recipe →</button>
+              </div>
+            `)}
+          </div>
+          
+          <div class="ai-actions">
+            <button class="secondary-btn" @click=${this._resetAIRecipeBuilder}>
+              ← Start Over with New Ingredients
+            </button>
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  _renderAIRecipeDetail() {
+    const detail = this._aiRecipeDetail;
+    const suggestion = detail.suggestion;
+
+    return html`
+      <ha-card>
+        <div class="card-header">
+          <h2>${suggestion.name}</h2>
+          <p style="margin: 8px 0 0 0; font-size: 0.9em; color: var(--secondary-text-color);">
+            AI-Generated Recipe
+          </p>
+        </div>
+        <div class="card-content">
+          ${this._isLoadingAIDetail ? html`
+            <div class="loading-spinner">
+              <p>🤖 Generating detailed recipe...</p>
+            </div>
+          ` : html`
+            <!-- Recipe Overview -->
+            <div class="recipe-overview">
+              <p><strong>${suggestion.description}</strong></p>
+              <div class="recipe-meta">
+                <span>⏱️ Total: ${suggestion.cook_time_minutes + detail.prep_time_minutes} min</span>
+                <span>👨‍🍳 Prep: ${detail.prep_time_minutes} min</span>
+                <span>🔥 Cook: ${suggestion.cook_time_minutes} min</span>
+                <span>🍽️ Serves: ${detail.servings}</span>
+                <span>📊 ${suggestion.difficulty}</span>
+              </div>
+            </div>
+
+            ${detail.use_probe ? html`
+              <div class="probe-info">
+                <p><strong>🌡️ Temperature Probe Recommended</strong></p>
+                <p>Target: ${detail.target_temp_c}°C / ${detail.target_temp_f}°F</p>
+              </div>
+            ` : ''}
+
+            <!-- Ingredients -->
+            <div class="recipe-section">
+              <h3>📝 Ingredients</h3>
+              <ul class="ingredients-list">
+                ${detail.ingredients.map(ing => html`<li>${ing}</li>`)}
+              </ul>
+            </div>
+
+            <!-- Cooking Phases (if available) -->
+            ${detail.phases.length > 0 ? html`
+              <div class="recipe-section">
+                <h3>🔥 Cooking Program</h3>
+                ${detail.phases.map((phase, idx) => html`
+                  <div class="cooking-phase">
+                    <strong>Phase ${idx + 1}:</strong> ${phase.description}
+                    <br>
+                    <span>${phase.temperature_c}°C (${phase.temperature_f}°F) for ${phase.duration_minutes} minutes</span>
+                  </div>
+                `)}
+              </div>
+            ` : ''}
+
+            <!-- Instructions -->
+            <div class="recipe-section">
+              <h3>👨‍🍳 Instructions</h3>
+              <ol class="instructions-list">
+                ${detail.instructions.map(inst => html`<li>${inst}</li>`)}
+              </ol>
+            </div>
+
+            <!-- Tips -->
+            ${detail.tips.length > 0 ? html`
+              <div class="recipe-section">
+                <h3>💡 Tips</h3>
+                <ul class="tips-list">
+                  ${detail.tips.map(tip => html`<li>${tip}</li>`)}
+                </ul>
+              </div>
+            ` : ''}
+
+            <!-- Actions -->
+            <div class="ai-actions">
+              <button class="secondary-btn" @click=${this._backToAISuggestions}>
+                ← Back to Suggestions
+              </button>
+              <button class="primary-btn" @click=${this._resetAIRecipeBuilder}>
+                🔄 Generate New Recipes
+              </button>
+            </div>
+          `}
+        </div>
+      </ha-card>
+    `;
+  }
+
   // Phase 3.4: Show recipe detail
   _showRecipeDetail(recipeData) {
     this._selectedRecipeDetail = recipeData;
@@ -7180,6 +7594,7 @@ class KitchenCookingPanel extends LitElement {
             this._showNinjaCombi ? this._renderNinjaCombi() :
             this._showAppliances ? this._renderAppliances() :
             this._showRecipes ? this._renderRecipes() :
+            this._showAIRecipeBuilder ? this._renderAIRecipeBuilder() :
             (entities.length === 0 ? this._renderNoEntities() : 
               (isActive ? this._renderActiveCook(state) : this._renderSetupForm(entities)))}
           
@@ -7193,6 +7608,9 @@ class KitchenCookingPanel extends LitElement {
               </button>
               <button class="history-btn ${this._showAppliances ? 'active' : ''}" @click=${this._toggleAppliances}>
                 🔧 ${this._showAppliances ? 'Back to Cooking' : 'Appliances'}
+              </button>
+              <button class="history-btn ${this._showAIRecipeBuilder ? 'active' : ''}" @click=${this._toggleAIRecipeBuilder}>
+                🤖 ${this._showAIRecipeBuilder ? 'Back to Cooking' : 'AI Recipe Builder'}
               </button>
               <!-- Temporarily removed: All Recipes button - will be rebuilt in next major upgrade -->
               <!--
@@ -9019,6 +9437,307 @@ class KitchenCookingPanel extends LitElement {
       button:disabled {
         opacity: 0.5;
         cursor: not-allowed;
+      }
+
+      /* AI Recipe Builder Styles */
+      .ai-section {
+        margin-bottom: 32px;
+      }
+
+      .ai-section h3 {
+        margin: 0 0 16px 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--primary-text-color);
+      }
+
+      .ai-section h4 {
+        margin: 16px 0 8px 0;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--secondary-text-color);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .cooking-styles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .cooking-style-btn {
+        padding: 16px;
+        border: 2px solid var(--divider-color);
+        border-radius: 8px;
+        background: var(--card-background-color);
+        color: var(--primary-text-color);
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .cooking-style-btn:hover {
+        border-color: var(--primary-color);
+        background: var(--primary-color);
+        color: white;
+      }
+
+      .cooking-style-btn.selected {
+        border-color: var(--primary-color);
+        background: var(--primary-color);
+        color: white;
+        font-weight: 600;
+      }
+
+      .ingredient-category {
+        margin-bottom: 24px;
+      }
+
+      .ingredients-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 8px;
+        margin-top: 8px;
+      }
+
+      .ingredient-btn {
+        padding: 12px;
+        border: 1px solid var(--divider-color);
+        border-radius: 6px;
+        background: var(--card-background-color);
+        color: var(--primary-text-color);
+        font-size: 13px;
+        cursor: pointer;
+        transition: all 0.2s;
+        text-align: center;
+      }
+
+      .ingredient-btn:hover {
+        border-color: var(--accent-color);
+        background: var(--accent-color);
+        color: white;
+      }
+
+      .ingredient-btn.selected {
+        border-color: var(--accent-color);
+        background: var(--accent-color);
+        color: white;
+        font-weight: 600;
+      }
+
+      .appliances-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .appliance-tag {
+        display: inline-block;
+        padding: 6px 12px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 16px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      .ai-actions {
+        margin-top: 24px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .ai-actions button {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .primary-btn.large {
+        padding: 16px 24px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .ai-suggestions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .ai-suggestion-card {
+        border: 2px solid var(--divider-color);
+        border-radius: 12px;
+        padding: 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+        background: var(--card-background-color);
+      }
+
+      .ai-suggestion-card:hover {
+        border-color: var(--primary-color);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transform: translateY(-2px);
+      }
+
+      .ai-suggestion-card h3 {
+        margin: 0 0 12px 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--primary-text-color);
+      }
+
+      .suggestion-description {
+        margin: 0 0 12px 0;
+        color: var(--secondary-text-color);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .suggestion-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 12px;
+        font-size: 13px;
+        color: var(--secondary-text-color);
+      }
+
+      .suggestion-ingredients {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 16px;
+      }
+
+      .ingredient-tag {
+        display: inline-block;
+        padding: 4px 10px;
+        background: var(--secondary-background-color);
+        color: var(--secondary-text-color);
+        border-radius: 12px;
+        font-size: 11px;
+      }
+
+      .view-recipe-btn {
+        width: 100%;
+        padding: 10px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: opacity 0.2s;
+      }
+
+      .view-recipe-btn:hover {
+        opacity: 0.9;
+      }
+
+      .recipe-overview {
+        margin-bottom: 24px;
+      }
+
+      .recipe-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 12px;
+        padding: 12px;
+        background: var(--secondary-background-color);
+        border-radius: 8px;
+        font-size: 14px;
+      }
+
+      .probe-info {
+        padding: 16px;
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        border-radius: 4px;
+        margin-bottom: 24px;
+      }
+
+      .probe-info p {
+        margin: 0 0 4px 0;
+      }
+
+      .recipe-section {
+        margin-bottom: 32px;
+      }
+
+      .recipe-section h3 {
+        margin: 0 0 16px 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--primary-text-color);
+      }
+
+      .ingredients-list,
+      .instructions-list,
+      .tips-list {
+        margin: 0;
+        padding-left: 24px;
+      }
+
+      .ingredients-list li,
+      .instructions-list li,
+      .tips-list li {
+        margin-bottom: 8px;
+        line-height: 1.6;
+      }
+
+      .cooking-phase {
+        padding: 12px;
+        background: var(--secondary-background-color);
+        border-radius: 6px;
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+
+      .cooking-phase strong {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--primary-text-color);
+      }
+
+      .cooking-phase span {
+        color: var(--secondary-text-color);
+      }
+
+      .warning-message {
+        padding: 24px;
+        background: #fff3cd;
+        border-left: 4px solid #ffc107;
+        border-radius: 4px;
+        text-align: center;
+      }
+
+      .warning-message p {
+        margin: 0 0 12px 0;
+      }
+
+      .warning-message p:last-child {
+        margin-bottom: 0;
+      }
+
+      .loading-spinner {
+        text-align: center;
+        padding: 48px 24px;
+      }
+
+      .loading-spinner p {
+        margin: 0 0 12px 0;
+        font-size: 16px;
+      }
+
+      .loading-spinner p:first-child {
+        font-size: 20px;
+        font-weight: 600;
       }
     `;
   }

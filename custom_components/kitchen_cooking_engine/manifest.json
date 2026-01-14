@@ -7,13 +7,14 @@
   "config_flow": true,
   "dependencies": [
     "frontend",
-    "http"
+    "http",
+    "conversation"
   ],
   "documentation": "https://github.com/R00S/meater-in-local-haos",
   "integration_type": "service",
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/R00S/meater-in-local-haos/issues",
   "requirements": [],
-  "version": "0.3.4.0",
+  "version": "0.3.5.0",
   "homeassistant": "2024.1.0"
 }
