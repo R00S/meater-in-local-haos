@@ -531,49 +531,35 @@ Format as JSON:
             AI response text
         """
         try:
-            # Find the OpenAI conversation agent
-            # The user may have configured an assistant named "OpenAI"
+            # Try to find and use the OpenAI conversation agent
+            # Default to None (use default agent) if not found
             agent_id = None
             
-            # Try to get the conversation agents
+            # Try to find OpenAI agent in conversation data
             try:
-                # In newer HA versions, we can list agents
-                agents = await self.hass.async_add_executor_job(
-                    conversation.async_get_agent_list, self.hass
-                )
-                
-                # Look for an agent with "openai" in the ID or name
-                for agent_info in agents:
-                    agent_id_lower = agent_info.get("id", "").lower()
-                    agent_name_lower = agent_info.get("name", "").lower()
+                # Check if conversation component has agent info
+                if "conversation" in self.hass.data:
+                    conversation_data = self.hass.data.get("conversation", {})
+                    _LOGGER.debug(f"Conversation data keys: {conversation_data.keys()}")
                     
-                    if "openai" in agent_id_lower or "openai" in agent_name_lower:
-                        agent_id = agent_info.get("id")
-                        _LOGGER.debug(f"Found OpenAI agent: {agent_id}")
-                        break
-            except (AttributeError, TypeError) as e:
-                # Fallback: try common OpenAI agent IDs
-                _LOGGER.debug(f"Could not list agents ({e}), trying common IDs")
-                # Common OpenAI agent IDs in Home Assistant
-                for possible_id in ["conversation.openai", "openai", "conversation.home_assistant_openai"]:
-                    try:
-                        # Test if this agent exists by trying to get it
-                        test_result = await conversation.async_converse(
-                            hass=self.hass,
-                            text="test",
-                            conversation_id=None,
-                            context=None,
-                            language=None,
-                            agent_id=possible_id,
-                        )
-                        if test_result:
-                            agent_id = possible_id
-                            _LOGGER.info(f"Using OpenAI agent: {agent_id}")
-                            break
-                    except Exception:
-                        continue
+                    # Try different common OpenAI agent IDs without testing them
+                    # Just try them in order when making the actual call
+                    possible_ids = [
+                        "conversation.openai",  # Most common format
+                        "openai",
+                        "conversation.home_assistant_cloud",  # In case using Nabu Casa
+                    ]
+                    
+                    # Don't test - just use the first one we try
+                    # If it fails, we'll catch the error and user will see it
+                    agent_id = possible_ids[0]  # Start with most common
+                    _LOGGER.info(f"Will try OpenAI agent: {agent_id}")
+                else:
+                    _LOGGER.warning("Conversation component not loaded in hass.data")
+            except Exception as e:
+                _LOGGER.debug(f"Could not access conversation data: {e}")
             
-            _LOGGER.info(f"Calling conversation agent: {agent_id or 'default'}")
+            _LOGGER.info(f"Calling conversation agent: {agent_id or 'default'} with prompt length: {len(prompt)}")
             
             # Use Home Assistant's conversation component
             # This handles the OpenAI API integration
@@ -590,13 +576,20 @@ Format as JSON:
             
             if not response_text:
                 _LOGGER.error("Empty response from conversation agent")
-                raise ValueError("Empty response from AI")
+                raise ValueError("Empty response from AI - check if the agent is configured correctly")
             
+            _LOGGER.info(f"Received response of length: {len(response_text)}")
             return response_text
             
         except Exception as ex:
-            _LOGGER.error("Failed to call OpenAI: %s", ex, exc_info=True)
-            raise
+            _LOGGER.error("Failed to call conversation agent: %s", ex, exc_info=True)
+            raise RuntimeError(
+                f"Failed to communicate with OpenAI. "
+                f"Error: {str(ex)}. "
+                f"Please verify: 1) OpenAI assistant is configured in Voice Assistants, "
+                f"2) Your OpenAI API key is valid, "
+                f"3) Check Home Assistant logs for more details"
+            )
     
     def _parse_suggestions(self, response: str) -> List[AIRecipeSuggestion]:
         """Parse AI response into recipe suggestions.
