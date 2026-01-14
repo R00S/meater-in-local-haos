@@ -828,7 +828,14 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
         # Sort and add feature fields
         for feature_name, default_type in sorted(features_to_show.items()):
             # Checkbox to enable feature
-            is_enabled = feature_name in current_features
+            # For predefined appliances: feature is enabled if it's in defaults OR explicitly set
+            # For custom appliances: feature is enabled only if explicitly set
+            if appliance_type == APPLIANCE_TYPE_CUSTOM:
+                is_enabled = feature_name in current_features
+            else:
+                # Predefined: enabled by default (in features_to_show) unless explicitly disabled
+                is_enabled = feature_name in current_features or feature_name in features_to_show
+            
             schema_dict[vol.Optional(
                 f"feature_enabled_{feature_name}",
                 default=is_enabled
