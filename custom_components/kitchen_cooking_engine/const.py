@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 14 Jan 2026, 02:08 CET
-Last Change: v0.3.2.12 - Critical fix: Added missing ApplianceDeviceControl import
+Last Updated: 14 Jan 2026, 02:47 CET
+Last Change: v0.3.2.16 - Architectural fix: Predefined appliances now save defaults to config
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "50"
+PANEL_VERSION = "54"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
