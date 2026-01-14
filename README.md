@@ -53,6 +53,7 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 - ✅ **White screen fix** - Reliable tab switching without blank screens
 - ✅ **Ninja Combi support** - Full integration with recipes and cooking modes for Ninja Combi SFP700EU oven
 - ✅ **MultiFry support** - DeLonghi MultiFry with all cooking modes
+- ✅ **View Assist integration** - Voice command "start cooking" opens panel on View Assist devices
 - ⏳ AI-powered recipe integration (future)
 
 ### Previous Releases
@@ -391,6 +392,34 @@ automation:
           message: "{{ trigger.event.data.cut_display }} is ready! Rest for {{ trigger.event.data.rest_time_min }}-{{ trigger.event.data.rest_time_max }} minutes."
 ```
 
+## 🎤 View Assist Voice Control
+
+The Kitchen Cooking Engine integrates with [View Assist](https://github.com/dinki/View-Assist) to provide voice-controlled panel navigation on your smart display devices.
+
+### Voice Commands
+
+Say: **"[wake word] start cooking"** to instantly open the cooking panel on your View Assist device.
+
+Other supported phrases:
+- "open cooking"
+- "show cooking panel"
+- "open cooking panel"
+
+### Quick Setup
+
+1. Install **Browser Mod** via HACS
+2. Import the included automation blueprint
+3. Say "**start cooking**" to your View Assist device
+
+📖 **[Complete View Assist Setup Guide](docs/VIEW_ASSIST_INTEGRATION.md)** - Detailed installation, configuration, and troubleshooting
+
+### Requirements
+- Home Assistant Assist configured with wake word
+- Browser Mod integration (for navigation)
+- View Assist Companion App (recommended)
+
+The integration includes custom sentences and a ready-to-use automation blueprint for seamless voice control.
+
 ## 🌡️ Temperature Data Sources
 
 All temperature data comes from publicly available sources:
@@ -461,6 +490,7 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 | [Feature Requirements](docs/FEATURE_REQUIREMENTS.md) | Detailed feature specifications |
 | [Use Cases](docs/USE_CASES.md) | 12 real-world cooking scenarios |
 | [Temperature Research](docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md) | Alternative probes, temperature tables |
+| [View Assist Integration](docs/VIEW_ASSIST_INTEGRATION.md) | Voice control setup and troubleshooting |
 
 ## 🔮 Future Features (Phase 2+)
 

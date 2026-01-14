@@ -34,6 +34,7 @@ from homeassistant.const import ATTR_ENTITY_ID, Platform
 from homeassistant.core import HomeAssistant, ServiceCall
 from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers import entity_registry as er
+from homeassistant.helpers import intent
 
 from .const import (
     DOMAIN,
@@ -121,6 +122,36 @@ SERVICE_START_MULTI_APPLIANCE_COOK_SCHEMA = vol.Schema(
         vol.Optional("cook_time_minutes"): vol.All(vol.Coerce(int), vol.Range(min=1, max=1440)),
     }
 )
+
+
+class KitchenCookingOpenIntent(intent.IntentHandler):
+    """Handle KitchenCookingOpen intent to open the cooking panel."""
+
+    intent_type = "KitchenCookingOpen"
+    description = "Open the Kitchen Cooking Engine panel"
+
+    async def async_handle(self, intent_obj: intent.Intent) -> intent.IntentResponse:
+        """Handle the intent to open the cooking panel."""
+        hass = intent_obj.hass
+        
+        _LOGGER.info("KitchenCookingOpen intent triggered - opening cooking panel")
+        
+        # Create response
+        response = intent_obj.create_response()
+        response.async_set_speech("Opening the cooking panel")
+        
+        # Fire event for blueprint/automation to catch
+        # The blueprint will handle the actual navigation via browser_mod
+        hass.bus.async_fire(
+            "intent_script.KitchenCookingOpen",
+            {
+                "path": "/kitchen-cooking",
+                "user_id": intent_obj.context.user_id if intent_obj.context else None,
+                "device_id": intent_obj.device_id if hasattr(intent_obj, "device_id") else None,
+            }
+        )
+        
+        return response
 
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
@@ -311,6 +342,12 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     # Register the sidebar panel (only once, not per config entry)
     if not hass.data[DOMAIN].get("panel_registered", False):
         await _async_register_panel(hass)
+    
+    # Register intent handler (only once, not per config entry)
+    if not hass.data[DOMAIN].get("intent_registered", False):
+        intent.async_register(hass, KitchenCookingOpenIntent())
+        hass.data[DOMAIN]["intent_registered"] = True
+        _LOGGER.info("Kitchen Cooking Engine: Intent handler registered")
 
     # Register API endpoints for cooking data
     async_register_api(hass)

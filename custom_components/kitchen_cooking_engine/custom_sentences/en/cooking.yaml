@@ -1,0 +1,11 @@
+language: "en"
+intents:
+  KitchenCookingOpen:
+    data:
+      - sentences:
+          - "start cooking"
+          - "open cooking"
+          - "show cooking"
+          - "open cooking panel"
+          - "show cooking panel"
+          - "start cooking panel"

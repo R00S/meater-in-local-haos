@@ -1,0 +1,69 @@
+blueprint:
+  name: View Assist - Open Cooking Panel
+  description: >
+    Automatically opens the Kitchen Cooking Engine panel on a View Assist device
+    when the "start cooking" voice command is detected.
+    
+    This blueprint works with View Assist to provide visual feedback for voice commands.
+    It uses the KitchenCookingOpen intent that is triggered by phrases like:
+    - "start cooking"
+    - "open cooking"
+    - "show cooking panel"
+    
+    Requires:
+    - Kitchen Cooking Engine integration installed
+    - Browser Mod integration (for navigation)
+    - View Assist companion app (optional but recommended)
+  domain: automation
+  source_url: https://github.com/R00S/meater-in-local-haos/blob/main/custom_components/kitchen_cooking_engine/blueprints/view_assist_open_cooking_panel.yaml
+  
+  input:
+    browser_id:
+      name: Browser ID
+      description: >
+        The browser ID of your View Assist device. 
+        Leave as "this" to target the device where the command was spoken,
+        or specify a specific browser ID for a fixed tablet.
+      default: "this"
+      selector:
+        text:
+    
+    include_response:
+      name: Include Voice Response
+      description: Should the automation speak a response when opening the panel?
+      default: true
+      selector:
+        boolean:
+    
+    response_text:
+      name: Response Text
+      description: What should be spoken when opening the cooking panel?
+      default: "Opening the cooking panel"
+      selector:
+        text:
+
+mode: single
+max_exceeded: silent
+
+trigger:
+  - platform: event
+    event_type: intent_script.KitchenCookingOpen
+
+action:
+  # Navigate to the cooking panel using browser_mod
+  - service: browser_mod.navigate
+    data:
+      path: "/kitchen-cooking"
+      browser_id: !input browser_id
+  
+  # Optional: Speak response if enabled
+  - choose:
+      - conditions:
+          - condition: template
+            value_template: "{{ include_response }}"
+        sequence:
+          - service: tts.speak
+            data:
+              message: !input response_text
+              media_player_entity_id: "{{ trigger.event.data.device_id }}"
+    default: []
