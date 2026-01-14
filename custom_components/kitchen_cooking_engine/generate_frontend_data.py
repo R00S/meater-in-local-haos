@@ -355,10 +355,25 @@ import {{
 """
     new_content += class_code
     
-    # Update panel version in JS
+    # Update panel version in JS - increment from const.py version
+    # Read current version from const.py first
+    const_file = os.path.join(base_dir, "const.py")
+    current_version = "55"  # Default fallback
+    if os.path.exists(const_file):
+        with open(const_file, "r", encoding="utf-8") as f:
+            const_content = f.read()
+        
+        const_version_line = 'PANEL_VERSION = "'
+        const_idx = const_content.find(const_version_line)
+        if const_idx != -1:
+            const_end = const_content.find('"', const_idx + len(const_version_line))
+            current_version = const_content[const_idx + len(const_version_line):const_end]
+    
+    # Increment version for cache busting
+    new_version = str(int(current_version) + 1)
+    
     old_version_line = 'const PANEL_VERSION = "'
     version_idx = new_content.find(old_version_line)
-    new_version = "55"  # Set to 55 for v0.3.3.0 release
     if version_idx != -1:
         version_end = new_content.find('"', version_idx + len(old_version_line))
         old_version = new_content[version_idx + len(old_version_line):version_end]
@@ -370,7 +385,6 @@ import {{
         f.write(new_content)
     
     # Also update const.py to keep PANEL_VERSION in sync
-    const_file = os.path.join(base_dir, "const.py")
     if os.path.exists(const_file):
         with open(const_file, "r", encoding="utf-8") as f:
             const_content = f.read()
