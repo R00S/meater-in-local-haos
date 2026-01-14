@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 14 Jan 2026, 05:25 CET
+ * AUTO-GENERATED: 14 Jan 2026, 10:32 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 14 Jan 2026, 05:25 CET
+// Last generated: 14 Jan 2026, 10:32 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -7347,24 +7347,6 @@ class KitchenCookingPanel extends LitElement {
 
   // AI Recipe Builder: Main render function
   _renderAIRecipeBuilder() {
-    // Check if OpenAI is not available
-    if (this._aiOpenAIAvailable === false) {
-      return html`
-        <ha-card>
-          <div class="card-header">
-            <h2>🤖 AI Recipe Builder</h2>
-          </div>
-          <div class="card-content">
-            <div class="warning-message">
-              <p><strong>⚠️ OpenAI Not Configured</strong></p>
-              <p>The AI Recipe Builder requires the OpenAI conversation integration to be set up.</p>
-              <p>Please configure it in: <strong>Settings → Voice Assistants → Add Assistant → OpenAI</strong></p>
-            </div>
-          </div>
-        </ha-card>
-      `;
-    }
-
     // Show recipe detail if selected
     if (this._aiRecipeDetail) {
       return this._renderAIRecipeDetail();
@@ -7389,6 +7371,16 @@ class KitchenCookingPanel extends LitElement {
           </p>
         </div>
         <div class="card-content">
+          <!-- Show warning if OpenAI might not be configured -->
+          ${this._aiOpenAIAvailable === false ? html`
+            <div class="warning-message" style="margin-bottom: 16px;">
+              <p><strong>⚠️ OpenAI May Not Be Configured</strong></p>
+              <p>The AI Recipe Builder requires the OpenAI conversation integration.</p>
+              <p>If not configured: <strong>Settings → Voice Assistants → Add Assistant → OpenAI</strong></p>
+              <p style="margin-top: 8px;"><em>You can still try - if OpenAI is configured, it will work.</em></p>
+            </div>
+          ` : ''}
+          
           ${this._isLoadingAISuggestions ? html`
             <div class="loading-spinner">
               <p>🤖 Generating recipes with AI...</p>
@@ -9976,7 +9968,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "59";
+const PANEL_VERSION = "60";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

@@ -173,21 +173,31 @@ class AIRecipeBuilder:
         try:
             # Check if conversation component is loaded
             if "conversation" not in self.hass.data:
+                _LOGGER.debug("Conversation component not in hass.data")
                 return False
             
             # Check if there's a conversation agent configured
             # The conversation component manages agents including OpenAI
-            agents = await self.hass.async_add_executor_job(
-                conversation.async_get_conversation_agent, self.hass, None
-            )
+            try:
+                agents = await self.hass.async_add_executor_job(
+                    conversation.async_get_conversation_agent, self.hass, None
+                )
+                # If we get an agent, conversation is available
+                if agents:
+                    _LOGGER.debug("Conversation agent found, OpenAI should be available")
+                    return True
+            except AttributeError:
+                # async_get_conversation_agent might not exist in older HA versions
+                # Just check if conversation domain exists
+                _LOGGER.debug("Using fallback check - conversation domain exists")
+                return True
             
-            # If we get here, conversation is available
-            # The actual OpenAI check happens when we try to use it
-            return True
+            return False
             
         except Exception as ex:
-            _LOGGER.warning("OpenAI conversation not available: %s", ex)
-            return False
+            _LOGGER.warning("OpenAI conversation check failed: %s", ex)
+            # Return True anyway to let user try - they'll get error if it doesn't work
+            return True
     
     async def generate_recipe_suggestions(
         self,

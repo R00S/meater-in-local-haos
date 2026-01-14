@@ -1818,24 +1818,6 @@ class KitchenCookingPanel extends LitElement {
 
   // AI Recipe Builder: Main render function
   _renderAIRecipeBuilder() {
-    // Check if OpenAI is not available
-    if (this._aiOpenAIAvailable === false) {
-      return html`
-        <ha-card>
-          <div class="card-header">
-            <h2>🤖 AI Recipe Builder</h2>
-          </div>
-          <div class="card-content">
-            <div class="warning-message">
-              <p><strong>⚠️ OpenAI Not Configured</strong></p>
-              <p>The AI Recipe Builder requires the OpenAI conversation integration to be set up.</p>
-              <p>Please configure it in: <strong>Settings → Voice Assistants → Add Assistant → OpenAI</strong></p>
-            </div>
-          </div>
-        </ha-card>
-      `;
-    }
-
     // Show recipe detail if selected
     if (this._aiRecipeDetail) {
       return this._renderAIRecipeDetail();
@@ -1860,6 +1842,16 @@ class KitchenCookingPanel extends LitElement {
           </p>
         </div>
         <div class="card-content">
+          <!-- Show warning if OpenAI might not be configured -->
+          ${this._aiOpenAIAvailable === false ? html`
+            <div class="warning-message" style="margin-bottom: 16px;">
+              <p><strong>⚠️ OpenAI May Not Be Configured</strong></p>
+              <p>The AI Recipe Builder requires the OpenAI conversation integration.</p>
+              <p>If not configured: <strong>Settings → Voice Assistants → Add Assistant → OpenAI</strong></p>
+              <p style="margin-top: 8px;"><em>You can still try - if OpenAI is configured, it will work.</em></p>
+            </div>
+          ` : ''}
+          
           ${this._isLoadingAISuggestions ? html`
             <div class="loading-spinner">
               <p>🤖 Generating recipes with AI...</p>
