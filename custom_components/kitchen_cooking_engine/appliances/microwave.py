@@ -15,7 +15,7 @@ FEATURES:
 - Convection Microwave (MODIFIED) - Combination microwave + convection (if available)
 """
 
-from typing import List
+from typing import Dict, List, Optional
 from ..appliances import (
     KitchenAppliance,
     CookingFeature,

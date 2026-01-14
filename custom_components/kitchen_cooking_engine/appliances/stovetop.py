@@ -15,7 +15,7 @@ FEATURES:
 - Sauté (STANDARD) - Sautéing vegetables and proteins
 """
 
-from typing import List
+from typing import Dict, List, Optional
 from ..appliances import (
     KitchenAppliance,
     CookingFeature,

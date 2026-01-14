@@ -26,7 +26,7 @@ DATA SOURCE:
 - Cooking tables from pages with time/temperature/quantity data
 """
 
-from typing import List, Optional
+from typing import Dict, List, Optional
 from ..appliances import (
     KitchenAppliance,
     CookingFeature,

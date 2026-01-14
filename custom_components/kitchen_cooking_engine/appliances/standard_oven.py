@@ -16,7 +16,7 @@ FEATURES:
 - Grill (STANDARD) - Grilling mode (if available)
 """
 
-from typing import List, Optional
+from typing import Dict, List, Optional
 from ..appliances import (
     KitchenAppliance,
     CookingFeature,

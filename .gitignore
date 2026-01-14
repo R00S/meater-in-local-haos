@@ -18,3 +18,4 @@ Thumbs.db
 # Secrets (if using secrets.yaml)
 secrets.yaml
 meater_app/
+*.backup
