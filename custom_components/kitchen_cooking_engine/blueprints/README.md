@@ -1,5 +1,5 @@
 # Kitchen Cooking Engine Blueprints
-# Last Updated: 14 Jan 2026, 02:40 UTC
+# Last Updated: 14 Jan 2026, 02:47 UTC
 # Version: 0.3.3.1
 
 This directory contains automation blueprints for the Kitchen Cooking Engine integration.
@@ -11,6 +11,8 @@ This directory contains automation blueprints for the Kitchen Cooking Engine int
 **File:** `view_assist_open_cooking_panel.yaml`
 
 Opens the Kitchen Cooking Engine panel on a View Assist device when voice commands like "start cooking" are detected.
+
+This blueprint follows the standard View Assist pattern using the conversation platform and `view_assist.navigate` service.
 
 **Import URL:**
 ```
@@ -30,6 +32,10 @@ https://github.com/R00S/meater-in-local-haos/blob/main/custom_components/kitchen
 ## Requirements
 
 - Kitchen Cooking Engine integration installed
-- Browser Mod integration (for navigation)
+- View Assist Companion App installed on your device
+- View Assist integration configured in Home Assistant
 - Home Assistant Assist configured with wake word
-- View Assist Companion App (recommended)
+
+## Note
+
+This implementation uses the **conversation platform** (not custom sentences or intent handlers) which is the standard approach for View Assist automations.

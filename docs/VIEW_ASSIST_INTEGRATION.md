@@ -1,5 +1,5 @@
 # Kitchen Cooking Engine - View Assist Integration Guide
-# Last Updated: 14 Jan 2026, 02:40 UTC
+# Last Updated: 14 Jan 2026, 02:47 UTC
 # Version: 0.3.3.1
 
 The Kitchen Cooking Engine integration now supports **View Assist**, allowing you to open the cooking panel on your View Assist device using voice commands.
@@ -8,6 +8,8 @@ The Kitchen Cooking Engine integration now supports **View Assist**, allowing yo
 
 View Assist provides visual feedback for Home Assistant's Assist voice assistant on Android devices, turning tablets and phones into smart displays similar to Echo Show or Google Nest Hub.
 
+The **View Assist Companion App** handles navigation natively using the conversation platform - simple and straightforward!
+
 **Project:** https://github.com/dinki/View-Assist
 
 ## Voice Commands
@@ -15,10 +17,7 @@ View Assist provides visual feedback for Home Assistant's Assist voice assistant
 Once configured, you can use any of these phrases:
 - "**start cooking**"
 - "**open cooking**"
-- "**show cooking**"
-- "**open cooking panel**"
 - "**show cooking panel**"
-- "**start cooking panel**"
 
 The cooking panel will automatically open on your View Assist device.
 
@@ -26,23 +25,28 @@ The cooking panel will automatically open on your View Assist device.
 
 1. **Kitchen Cooking Engine** integration installed (this integration)
 2. **Home Assistant Assist** configured with a wake word
-3. **Browser Mod** integration installed
-4. **View Assist Companion App** (optional but highly recommended)
+3. **View Assist Companion App** installed on your Android device
+4. **View Assist Integration** installed in Home Assistant
 
 ## Installation Steps
 
-### 1. Install Browser Mod
+### 1. Install View Assist Integration
 
-Browser Mod is required for the automation to navigate to different panels.
+1. Open HACS → Integrations
+2. Search for "**View Assist**"
+3. Install the View Assist integration
+4. Restart Home Assistant
 
-1. Install via HACS:
-   - Go to **HACS** → **Frontend**
-   - Search for "**Browser Mod**"
-   - Click **Download**
-2. Restart Home Assistant
-3. Clear your browser cache (important!)
+### 2. Install View Assist Companion App
 
-### 2. Import the Blueprint
+1. Download the View Assist Companion App on your Android device
+2. Install and open the app
+3. Connect to your Home Assistant instance
+4. Configure the device in the app
+
+**App Repository:** https://github.com/msp1974/ViewAssist_Companion_App
+
+### 3. Import the Blueprint
 
 1. Go to **Settings** → **Automations & Scenes** → **Blueprints**
 2. Click **Import Blueprint**
@@ -52,21 +56,32 @@ Browser Mod is required for the automation to navigate to different panels.
    ```
 4. Click **Preview** then **Import**
 
-### 3. Create an Automation from the Blueprint
+### 4. Create an Automation from the Blueprint
 
 1. In Blueprints, find "**View Assist - Open Cooking Panel**"
 2. Click **Create Automation**
 3. Configure the settings:
    - **Name:** "Open Cooking Panel on Voice Command" (or your preference)
-   - **Browser ID:** Leave as "this" (targets the device where voice command was spoken)
-   - **Include Voice Response:** Enable if you want spoken confirmation
+   - **Command Text 1:** "start cooking" (default)
+   - **Command Text 2:** "open cooking" (optional alternative)
+   - **Command Text 3:** "show cooking panel" (optional alternative)
+   - **Dashboard Path:** "/kitchen-cooking" (default)
    - **Response Text:** "Opening the cooking panel" (or customize)
 4. Click **Save**
 
-### 4. Test the Voice Command
+### 5. Test the Voice Command
 
 1. Say: "**[Your wake word] start cooking**"
-2. The cooking panel should open on your device
+2. The cooking panel should open on your View Assist device
+
+## How It Works
+
+1. **Voice Recognition**: Home Assistant's Assist recognizes your voice command
+2. **Conversation Platform**: The blueprint uses `platform: conversation` to catch the command
+3. **View Assist Navigation**: Uses `view_assist.navigate` service to open the panel
+4. **Response**: Speaks "Opening the cooking panel" and updates View Assist state
+
+This follows the standard View Assist pattern - simple, clean, and reliable!
 
 ## Alternative: Manual Automation (Without Blueprint)
 
@@ -76,67 +91,74 @@ If you prefer not to use the blueprint, you can create a manual automation:
 alias: Open Cooking Panel on Voice Command
 description: Opens Kitchen Cooking Engine panel when "start cooking" is said
 trigger:
-  - platform: event
-    event_type: intent_script.KitchenCookingOpen
+  - platform: conversation
+    command:
+      - "start cooking"
+      - "open cooking"
+      - "show cooking panel"
+condition: []
 action:
-  - service: browser_mod.navigate
+  - variables:
+      target_satellite_device: "{{ view_assist_entity(trigger.device_id) }}"
+      response: "Opening the cooking panel"
+  - action: view_assist.navigate
     data:
-      path: /kitchen-cooking
-      browser_id: this
+      device: "{{ target_satellite_device }}"
+      path: "/kitchen-cooking"
+  - set_conversation_response: "{{ response }}"
+  - action: view_assist.set_state
+    target:
+      entity_id: "{{ target_satellite_device }}"
+    data:
+      last_said: "{{ response }}"
 mode: single
 ```
-
-## How It Works
-
-1. **Voice Recognition**: Home Assistant's Assist recognizes your voice command
-2. **Intent Matching**: The custom sentence matches to the `KitchenCookingOpen` intent
-3. **Event Fired**: The intent handler fires an event
-4. **Automation Triggered**: Your automation (blueprint or manual) catches the event
-5. **Navigation**: Browser Mod navigates the device to `/kitchen-cooking`
 
 ## Troubleshooting
 
 ### Voice command not recognized
 - Make sure Home Assistant Assist is configured with a wake word
-- Check that the Kitchen Cooking Engine integration is installed
+- Check that the View Assist integration is installed
+- Verify the automation is enabled
 - Try restarting Home Assistant after installation
 
 ### Panel doesn't open
-- Verify Browser Mod is installed and browser cache is cleared
+- Verify View Assist Companion App is installed and connected
+- Check that the View Assist integration is installed in Home Assistant
 - Check that the automation is enabled
-- Look at **Developer Tools** → **Events** and listen for `intent_script.KitchenCookingOpen` events
+- Look at **Developer Tools** → **Events** and listen for conversation events
 - Check automation traces in **Settings** → **Automations** → (your automation) → **Traces**
 
-### Wrong device opens the panel
-- Change `browser_id` from "this" to a specific browser ID
-- Find your browser ID in Browser Mod settings: **Developer Tools** → **Services** → `browser_mod.navigate`
+### Wrong device responds
+- Make sure you're speaking to the correct View Assist device
+- The automation automatically targets the device where the command was spoken
+- Verify the View Assist Companion App is properly configured on each device
 
 ## Advanced Configuration
 
-### Target Specific Device
+### Customize Voice Commands
 
-If you always want to open the panel on the same device (like a kitchen tablet):
+You can add more phrases by editing the blueprint inputs:
+- "open the cooking panel"
+- "show me cooking"
+- "let's cook"
+- Any phrase you prefer!
 
-1. Find your browser ID:
-   - Go to **Developer Tools** → **Services**
-   - Select `browser_mod.navigate`
-   - Check the "Browser ID" dropdown for device IDs
-2. Edit your automation
-3. Change `browser_id: "this"` to `browser_id: "your-browser-id"`
+Just add them to Command Text 1, 2, or 3 in the blueprint configuration.
 
 ### Multiple View Assist Devices
 
-You can create separate automations for different devices:
-- Kitchen tablet opens cooking panel
-- Living room tablet shows something else
-- Bedroom tablet opens a different view
+You can have multiple View Assist devices, each responding to voice commands independently:
+- Kitchen tablet opens cooking panel when you say "start cooking" in the kitchen
+- Each device responds to commands spoken directly to it
+- No need for device-specific configurations
 
-Each automation can use different browser IDs.
+The blueprint automatically targets the device where the voice command was spoken using View Assist's native device tracking.
 
 ## Related Documentation
 
 - [View Assist Documentation](https://dinki.github.io/View-Assist/)
-- [Browser Mod Documentation](https://github.com/thomasloven/hass-browser_mod)
+- [View Assist Companion App](https://github.com/msp1974/ViewAssist_Companion_App)
 - [Home Assistant Assist](https://www.home-assistant.io/voice_control/)
 
 ## Support

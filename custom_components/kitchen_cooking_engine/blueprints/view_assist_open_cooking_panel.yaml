@@ -1,9 +1,9 @@
 # Kitchen Cooking Engine - View Assist Blueprint
-# Last Updated: 14 Jan 2026, 02:40 UTC
+# Last Updated: 14 Jan 2026, 02:47 UTC
 # Version: 0.3.3.1
 #
 # Automation blueprint for opening the cooking panel via voice command
-# Works with View Assist to provide visual feedback for voice commands
+# Works natively with View Assist Companion App
 
 blueprint:
   name: View Assist - Open Cooking Panel
@@ -11,66 +11,75 @@ blueprint:
     Automatically opens the Kitchen Cooking Engine panel on a View Assist device
     when the "start cooking" voice command is detected.
     
-    This blueprint works with View Assist to provide visual feedback for voice commands.
-    It uses the KitchenCookingOpen intent that is triggered by phrases like:
+    This blueprint works with View Assist Companion App to provide visual feedback 
+    for voice commands using the conversation platform.
+    
+    Voice commands supported:
     - "start cooking"
     - "open cooking"
     - "show cooking panel"
     
     Requires:
     - Kitchen Cooking Engine integration installed
-    - Browser Mod integration (for navigation)
-    - View Assist companion app (optional but recommended)
+    - View Assist Companion App installed on your device
+    - View Assist integration configured in Home Assistant
   domain: automation
   source_url: https://github.com/R00S/meater-in-local-haos/blob/main/custom_components/kitchen_cooking_engine/blueprints/view_assist_open_cooking_panel.yaml
   
   input:
-    browser_id:
-      name: Browser ID
-      description: >
-        The browser ID of your View Assist device. 
-        Leave as "this" to target the device where the command was spoken,
-        or specify a specific browser ID for a fixed tablet.
-      default: "this"
-      selector:
-        text:
+    command_prompt1:
+      name: Command Text 1
+      description: The first phrase to trigger opening the cooking panel
+      default: "start cooking"
+    command_prompt2:
+      name: Command Text 2
+      description: The second phrase to trigger the automation (optional)
+      default: "open cooking"
+    command_prompt3:
+      name: Command Text 3
+      description: The third phrase to trigger the automation (optional)
+      default: "show cooking panel"
     
-    include_response:
-      name: Include Voice Response
-      description: Should the automation speak a response when opening the panel?
-      default: true
-      selector:
-        boolean:
+    dashboard_path:
+      name: Dashboard Path
+      description: The path to the Kitchen Cooking Engine panel
+      default: "/kitchen-cooking"
     
     response_text:
       name: Response Text
       description: What should be spoken when opening the cooking panel?
       default: "Opening the cooking panel"
-      selector:
-        text:
 
 mode: single
 max_exceeded: silent
 
 trigger:
-  - platform: event
-    event_type: intent_script.KitchenCookingOpen
+  - platform: conversation
+    command:
+      - !input command_prompt1
+      - !input command_prompt2
+      - !input command_prompt3
+
+condition: []
 
 action:
-  # Navigate to the cooking panel using browser_mod
-  - service: browser_mod.navigate
-    data:
-      path: "/kitchen-cooking"
-      browser_id: !input browser_id
+  - variables:
+      target_satellite_device: "{{ view_assist_entity(trigger.device_id) }}"
+      dashboard_path: !input dashboard_path
+      response: !input response_text
   
-  # Optional: Speak response if enabled
-  - choose:
-      - conditions:
-          - condition: template
-            value_template: "{{ include_response }}"
-        sequence:
-          - service: tts.speak
-            data:
-              message: !input response_text
-              media_player_entity_id: "{{ trigger.event.data.device_id }}"
-    default: []
+  # Navigate to the cooking panel using View Assist native navigation
+  - action: view_assist.navigate
+    data:
+      device: "{{ target_satellite_device }}"
+      path: "{{ dashboard_path }}"
+  
+  # Speak the response
+  - set_conversation_response: "{{ response }}"
+  
+  # Update View Assist state
+  - action: view_assist.set_state
+    target:
+      entity_id: "{{ target_satellite_device }}"
+    data:
+      last_said: "{{ response }}"
