@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 14 Jan 2026, 01:45 CET
-Last Change: v0.3.2.7 - Fixed feature checkbox pre-checking and feature grouping display
+Last Updated: 14 Jan 2026, 01:48 CET
+Last Change: v0.3.2.11 - Critical fix: Added missing Dict import to appliance files
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "48"
+PANEL_VERSION = "49"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
