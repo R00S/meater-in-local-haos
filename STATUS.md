@@ -6,13 +6,13 @@
 
 This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen Cooking Engine** - a local-first, multi-appliance cooking system for Home Assistant.
 
-## ✅ Current Status - v0.3.3.1 (Production Release)
+## ✅ Current Status - v0.3.4.0 (Production Release)
 
-### New in v0.3.3.1
+### New in v0.3.4.0
 - **View Assist Integration** ✅ - Voice command "start cooking" opens panel on View Assist devices
-- **Custom Sentences** ✅ - Built-in voice command definitions for Home Assistant Assist
 - **Automation Blueprint** ✅ - Ready-to-use blueprint for View Assist navigation
 - **Complete Documentation** ✅ - Setup guide for View Assist integration
+- **Blueprint Import Fixed** ✅ - Corrected YAML format for seamless import
 
 ### Phase 3, 4 & 5 Complete
 - **Multi-Appliance Infrastructure** ✅ - Support for Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom appliances
@@ -47,7 +47,7 @@ This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen 
 ├── custom_components/kitchen_cooking_engine/  # HACS Custom Integration
 │   ├── __init__.py            # Integration setup
 │   ├── config_flow.py         # Configuration UI (unified)
-│   ├── const.py               # Constants (v0.3.3.1, Panel v55)
+│   ├── const.py               # Constants (v0.3.4.0, Panel v55)
 │   ├── cooking_data.py        # International cooking data
 │   ├── swedish_cooking_data.py # Swedish cooking data
 │   ├── ninja_combi_data.py    # Ninja Combi recipes

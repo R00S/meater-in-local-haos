@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine - View Assist Integration Guide
-# Last Updated: 14 Jan 2026, 02:47 UTC
-# Version: 0.3.3.1
+# Last Updated: 14 Jan 2026, 03:11 UTC
+# Version: 0.3.4.0
 
 The Kitchen Cooking Engine integration now supports **View Assist**, allowing you to open the cooking panel on your View Assist device using voice commands.
 

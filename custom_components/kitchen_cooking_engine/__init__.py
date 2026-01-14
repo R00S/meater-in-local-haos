@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 14 Jan 2026, 02:40 UTC
-Last Change: v0.3.3.1 - View Assist integration with voice command "start cooking"
+Last Updated: 14 Jan 2026, 03:10 UTC
+Last Change: v0.3.4.0 - View Assist integration ready for merge
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.

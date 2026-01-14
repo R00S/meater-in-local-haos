@@ -17,9 +17,9 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 ## 📊 Current Status
 
-**Phase 3, 4 & 5: Multi-Appliance Infrastructure** ✅ Complete (v0.3.3.1)
+**Phase 3, 4 & 5: Multi-Appliance Infrastructure** ✅ Complete (v0.3.4.0)
 
-### v0.3.3.1 Features (Current - January 2026)
+### v0.3.4.0 Features (Current - January 2026)
 - ✅ **Multi-appliance support** - Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom appliances
 - ✅ **Unified configuration** - All appliances use identical backend logic
 - ✅ **Dynamic feature management** - Enable/disable features per appliance
@@ -57,6 +57,7 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 - ⏳ AI-powered recipe integration (future)
 
 ### Previous Releases
+- **v0.3.3.1** (January 2026) - View Assist integration with voice commands
 - **v0.3.3.0** (January 2026) - Multi-appliance infrastructure complete
 - **v0.1.2.18** (December 2025) - Initial HACS integration with MEATER+ support
 
