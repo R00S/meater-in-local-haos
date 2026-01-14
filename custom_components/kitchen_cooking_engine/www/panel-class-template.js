@@ -338,11 +338,14 @@ class KitchenCookingPanel extends LitElement {
       if (response.status === 'ok') {
         this._aiSuggestions = response.suggestions;
       } else {
-        alert('Failed to generate recipes: ' + response.message);
+        const errorMsg = response.message || 'Unknown error';
+        console.error('API error:', errorMsg);
+        alert(`Failed to generate recipes:\n\n${errorMsg}\n\nPlease check:\n1. OpenAI assistant is configured in Voice Assistants\n2. The assistant is named "OpenAI"\n3. Your OpenAI API key is valid`);
       }
     } catch (e) {
       console.error('Failed to generate AI recipes:', e);
-      alert('Failed to generate recipes. Please check your OpenAI configuration.');
+      const errorMsg = e.message || e.toString();
+      alert(`Failed to generate recipes:\n\n${errorMsg}\n\nPlease check:\n1. OpenAI assistant is configured in Voice Assistants\n2. The assistant is named "OpenAI"\n3. Your OpenAI API key is valid\n4. Check Home Assistant logs for more details`);
     } finally {
       this._isLoadingAISuggestions = false;
       this.requestUpdate();
