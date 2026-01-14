@@ -35,6 +35,7 @@ from ..appliances import (
     RecipeAdapter,
     ApplianceRecipe,
     CookingPhase,
+    ApplianceDeviceControl,
 )
 from ..features.catalog import FEATURE_CATALOG
 
