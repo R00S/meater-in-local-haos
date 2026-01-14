@@ -607,12 +607,25 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
         """Manage the options - route to appliance-specific step."""
         appliance_type = self.config_entry.data.get(CONF_APPLIANCE_TYPE, APPLIANCE_TYPE_MEATER_PLUS)
         
-        # Route: MEATER+ probes get their own flow, all other appliances use unified flow
+        # Route to appliance-specific step methods
+        # Each method calls the unified logic but uses its own step_id
         if appliance_type == APPLIANCE_TYPE_MEATER_PLUS:
             return await self.async_step_meater_plus(user_input)
+        elif appliance_type == APPLIANCE_TYPE_NINJA_COMBI:
+            return await self.async_step_ninja_combi(user_input)
+        elif appliance_type == APPLIANCE_TYPE_MULTIFRY:
+            return await self.async_step_multifry(user_input)
+        elif appliance_type == APPLIANCE_TYPE_STANDARD_OVEN:
+            return await self.async_step_standard_oven(user_input)
+        elif appliance_type == APPLIANCE_TYPE_STOVETOP:
+            return await self.async_step_stovetop(user_input)
+        elif appliance_type == APPLIANCE_TYPE_MICROWAVE:
+            return await self.async_step_microwave(user_input)
+        elif appliance_type == APPLIANCE_TYPE_CUSTOM:
+            return await self.async_step_custom(user_input)
         else:
-            # ALL non-probe appliances use the same unified feature editing flow
-            return await self.async_step_appliance_features(user_input)
+            # Fallback
+            return await self.async_step_meater_plus(user_input)
 
     async def async_step_meater_plus(
         self, user_input: dict[str, Any] | None = None
@@ -673,11 +686,15 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
         )
 
 
-    async def async_step_appliance_features(
-        self, user_input: dict[str, Any] | None = None
+    async def _handle_appliance_features(
+        self, user_input: dict[str, Any] | None, appliance_type: str
     ) -> config_entries.ConfigFlowResult:
-        """Unified options flow for ALL non-probe appliances."""
-        appliance_type = self.config_entry.data.get(CONF_APPLIANCE_TYPE, APPLIANCE_TYPE_CUSTOM)
+        """Unified feature handling for all non-probe appliances.
+        
+        This is the actual implementation that all appliance-specific steps call.
+        Each appliance type has its own async_step_X method that calls this with
+        the appropriate appliance_type and step_id.
+        """
         current_data = self.config_entry.data
         
         if user_input is not None:
@@ -828,8 +845,10 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
                 FEATURE_TYPE_SPECIAL: "Special (needs specific recipes)"
             })
 
+        # Use appliance-specific step_id to avoid config flow conflicts
+        # Each appliance type needs its own step_id for Home Assistant to handle it properly
         return self.async_show_form(
-            step_id="appliance_features",
+            step_id=appliance_type,  # Dynamic step_id based on appliance type
             data_schema=vol.Schema(schema_dict),
             description_placeholders={
                 "info": (
@@ -843,4 +862,43 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
                 )
             },
         )
+
+    # Individual step methods for each appliance type
+    # All call the unified _handle_appliance_features with their specific type
+    
+    async def async_step_ninja_combi(
+        self, user_input: dict[str, Any] | None = None
+    ) -> config_entries.ConfigFlowResult:
+        """Configure Ninja Combi options."""
+        return await self._handle_appliance_features(user_input, APPLIANCE_TYPE_NINJA_COMBI)
+
+    async def async_step_multifry(
+        self, user_input: dict[str, Any] | None = None
+    ) -> config_entries.ConfigFlowResult:
+        """Configure MultiFry options."""
+        return await self._handle_appliance_features(user_input, APPLIANCE_TYPE_MULTIFRY)
+
+    async def async_step_standard_oven(
+        self, user_input: dict[str, Any] | None = None
+    ) -> config_entries.ConfigFlowResult:
+        """Configure Standard Oven options."""
+        return await self._handle_appliance_features(user_input, APPLIANCE_TYPE_STANDARD_OVEN)
+
+    async def async_step_stovetop(
+        self, user_input: dict[str, Any] | None = None
+    ) -> config_entries.ConfigFlowResult:
+        """Configure Stovetop options."""
+        return await self._handle_appliance_features(user_input, APPLIANCE_TYPE_STOVETOP)
+
+    async def async_step_microwave(
+        self, user_input: dict[str, Any] | None = None
+    ) -> config_entries.ConfigFlowResult:
+        """Configure Microwave options."""
+        return await self._handle_appliance_features(user_input, APPLIANCE_TYPE_MICROWAVE)
+
+    async def async_step_custom(
+        self, user_input: dict[str, Any] | None = None
+    ) -> config_entries.ConfigFlowResult:
+        """Configure Custom Appliance options."""
+        return await self._handle_appliance_features(user_input, APPLIANCE_TYPE_CUSTOM)
 
