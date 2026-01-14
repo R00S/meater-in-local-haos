@@ -17,9 +17,16 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 ## 📊 Current Status
 
-**Phase 3, 4 & 5: Multi-Appliance Infrastructure** ✅ Complete (v0.3.4.0)
+**Phase 6: AI-Powered Recipe Integration** ✅ Complete (v0.3.5.0)
 
-### v0.3.4.0 Features (Current - January 2026)
+### v0.3.5.0 Features (Current - January 2026)
+- ✅ **AI Recipe Builder** - Generate custom recipes with OpenAI based on your ingredients and cooking style
+- ✅ **Intelligent ingredient selection** - Choose from proteins, vegetables, grains, dairy, and spices
+- ✅ **Multiple cooking styles** - Quick & Easy, Gourmet, Healthy, Comfort Food, Family Friendly, and more
+- ✅ **4 diverse recipe suggestions** - AI generates 4 quite different recipes from your selections
+- ✅ **Detailed recipe instructions** - Full ingredients, step-by-step instructions, cooking phases, and tips
+- ✅ **Appliance-aware** - AI considers your available kitchen equipment when generating recipes
+- ✅ **OpenAI conversation integration** - Uses Home Assistant's conversation component for AI generation
 - ✅ **Multi-appliance support** - Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom appliances
 - ✅ **Unified configuration** - All appliances use identical backend logic
 - ✅ **Dynamic feature management** - Enable/disable features per appliance
@@ -54,14 +61,43 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 - ✅ **Ninja Combi support** - Full integration with recipes and cooking modes for Ninja Combi SFP700EU oven
 - ✅ **MultiFry support** - DeLonghi MultiFry with all cooking modes
 - ✅ **View Assist integration** - Voice command "start cooking" opens panel on View Assist devices
-- ⏳ AI-powered recipe integration (future)
 
 ### Previous Releases
+- **v0.3.4.0** (January 2026) - Multi-appliance infrastructure complete
 - **v0.3.3.1** (January 2026) - View Assist integration with voice commands
-- **v0.3.3.0** (January 2026) - Multi-appliance infrastructure complete
+- **v0.3.3.0** (January 2026) - Multi-appliance infrastructure
 - **v0.1.2.18** (December 2025) - Initial HACS integration with MEATER+ support
 
 See [STATUS.md](STATUS.md) for detailed project status.
+
+---
+
+## 🤖 AI Recipe Builder Setup
+
+The AI Recipe Builder requires the OpenAI conversation integration to be configured in Home Assistant.
+
+### Setting up OpenAI Conversation
+
+1. Go to **Settings** → **Voice Assistants**
+2. Click **Add Assistant**
+3. Select **OpenAI Conversation**
+4. Enter your OpenAI API key
+5. Configure your preferred model (GPT-4 recommended for best results)
+6. Save the configuration
+
+Once configured, the AI Recipe Builder will automatically detect the integration and become available in the Kitchen Cooking Engine panel.
+
+### Using the AI Recipe Builder
+
+1. Open the Kitchen Cooking Engine panel
+2. Click the **🤖 AI Recipe Builder** button
+3. Select your cooking style (Quick & Easy, Gourmet, etc.)
+4. Choose your available ingredients
+5. Click **Generate 4 Recipe Ideas**
+6. Browse the suggestions and select one for full details
+7. Follow the detailed instructions to cook
+
+The AI will consider your available kitchen appliances when generating recipes and optimize them for your equipment!
 
 ---
 

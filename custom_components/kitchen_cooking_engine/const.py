@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 14 Jan 2026, 03:10 UTC
-Last Change: v0.3.4.0 - View Assist integration ready for merge
+Last Updated: 14 Jan 2026, 03:27 UTC
+Last Change: v0.3.5.0 - AI Recipe Builder integration complete
 """
 
 DOMAIN = "kitchen_cooking_engine"
