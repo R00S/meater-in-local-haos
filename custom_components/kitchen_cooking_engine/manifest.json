@@ -15,6 +15,6 @@
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/R00S/meater-in-local-haos/issues",
   "requirements": [],
-  "version": "0.3.5.0",
+  "version": "0.3.5.1",
   "homeassistant": "2024.1.0"
 }

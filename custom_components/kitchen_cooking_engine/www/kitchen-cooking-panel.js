@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 14 Jan 2026, 04:35 CET
+ * AUTO-GENERATED: 14 Jan 2026, 04:58 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 14 Jan 2026, 04:35 CET
+// Last generated: 14 Jan 2026, 04:58 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -7609,17 +7609,26 @@ class KitchenCookingPanel extends LitElement {
               <button class="history-btn ${this._showAppliances ? 'active' : ''}" @click=${this._toggleAppliances}>
                 🔧 ${this._showAppliances ? 'Back to Cooking' : 'Appliances'}
               </button>
+            </div>
+          ` : ''}
+          
+          <!-- AI Recipe Builder and Appliances - Always visible -->
+          ${entities.length === 0 ? html`
+            <div class="history-toggle">
+              <button class="history-btn ${this._showAppliances ? 'active' : ''}" @click=${this._toggleAppliances}>
+                🔧 ${this._showAppliances ? 'Back to Cooking' : 'Appliances'}
+              </button>
               <button class="history-btn ${this._showAIRecipeBuilder ? 'active' : ''}" @click=${this._toggleAIRecipeBuilder}>
                 🤖 ${this._showAIRecipeBuilder ? 'Back to Cooking' : 'AI Recipe Builder'}
               </button>
-              <!-- Temporarily removed: All Recipes button - will be rebuilt in next major upgrade -->
-              <!--
-              <button class="history-btn ${this._showRecipes ? 'active' : ''}" @click=${this._toggleRecipes}>
-                📖 ${this._showRecipes ? 'Back to Cooking' : 'All Recipes'}
-              </button>
-              -->
             </div>
-          ` : ''}
+          ` : html`
+            <div class="history-toggle" style="margin-top: 8px;">
+              <button class="history-btn ${this._showAIRecipeBuilder ? 'active' : ''}" @click=${this._toggleAIRecipeBuilder}>
+                🤖 ${this._showAIRecipeBuilder ? 'Back to Cooking' : 'AI Recipe Builder'}
+              </button>
+            </div>
+          `}
         </div>
       </ha-top-app-bar-fixed>
     `;
