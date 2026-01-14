@@ -1,10 +1,3 @@
-# Kitchen Cooking Engine - View Assist Blueprint
-# Last Updated: 14 Jan 2026, 02:47 UTC
-# Version: 0.3.3.1
-#
-# Automation blueprint for opening the cooking panel via voice command
-# Works natively with View Assist Companion App
-
 blueprint:
   name: View Assist - Open Cooking Panel
   description: >
@@ -50,6 +43,8 @@ blueprint:
       description: What should be spoken when opening the cooking panel?
       default: "Opening the cooking panel"
 
+alias: Kitchen Cooking Engine - Open Cooking Panel
+description: ""
 mode: single
 max_exceeded: silent
 
@@ -68,16 +63,13 @@ action:
       dashboard_path: !input dashboard_path
       response: !input response_text
   
-  # Navigate to the cooking panel using View Assist native navigation
   - action: view_assist.navigate
     data:
       device: "{{ target_satellite_device }}"
       path: "{{ dashboard_path }}"
   
-  # Speak the response
   - set_conversation_response: "{{ response }}"
   
-  # Update View Assist state
   - action: view_assist.set_state
     target:
       entity_id: "{{ target_satellite_device }}"
