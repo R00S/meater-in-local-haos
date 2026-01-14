@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 14 Jan 2026, 10:05 UTC
-Last Change: v0.3.5.4 - Simplify OpenAI agent discovery to prevent freezing
+Last Updated: 14 Jan 2026, 23:02 UTC
+Last Change: v0.3.5.5 - Use correct OpenAI agent ID: conversation.openai_conversation
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "63"
+PANEL_VERSION = "64"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

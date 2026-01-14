@@ -545,7 +545,8 @@ Format as JSON:
                     # Try different common OpenAI agent IDs without testing them
                     # Just try them in order when making the actual call
                     possible_ids = [
-                        "conversation.openai",  # Most common format
+                        "conversation.openai_conversation",  # OpenAI Conversation integration
+                        "conversation.openai",  # Alternative format
                         "openai",
                         "conversation.home_assistant_cloud",  # In case using Nabu Casa
                     ]
