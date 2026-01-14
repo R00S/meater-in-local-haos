@@ -329,6 +329,10 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             # Merge with saved data
             self._config_data.update(user_input)
             
+            # Add default features to config so predefined appliances look like custom appliances
+            if CONF_FEATURES not in self._config_data:
+                self._config_data[CONF_FEATURES] = dict(APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_NINJA_COMBI, {}))
+            
             # Create unique ID
             name = user_input.get(CONF_APPLIANCE_NAME, "Ninja Combi")
             await self.async_set_unique_id(f"kce_ninja_combi_{name.lower().replace(' ', '_')}")
@@ -361,6 +365,10 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         if user_input is not None:
             # Merge with saved data
             self._config_data.update(user_input)
+            
+            # Add default features to config so predefined appliances look like custom appliances
+            if CONF_FEATURES not in self._config_data:
+                self._config_data[CONF_FEATURES] = dict(APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_MULTIFRY, {}))
             
             # Create unique ID
             name = user_input.get(CONF_APPLIANCE_NAME, "MultiFry")
@@ -401,6 +409,25 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             # Merge with saved data
             self._config_data.update(user_input)
             
+            # Add default features to config so predefined appliances look like custom appliances
+            # Filter features based on convection/grill capabilities
+            if CONF_FEATURES not in self._config_data:
+                default_features = APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_STANDARD_OVEN, {})
+                features = {}
+                has_convection = user_input.get(CONF_HAS_CONVECTION, False)
+                has_grill = user_input.get(CONF_HAS_GRILL, False)
+                
+                for feature_name, feature_type in default_features.items():
+                    # Only include convection if has_convection
+                    if feature_name == "convection" and not has_convection:
+                        continue
+                    # Only include grill if has_grill
+                    if feature_name == "grill" and not has_grill:
+                        continue
+                    features[feature_name] = feature_type
+                
+                self._config_data[CONF_FEATURES] = features
+            
             # Create unique ID
             name = user_input.get(CONF_APPLIANCE_NAME, "Oven")
             await self.async_set_unique_id(f"kce_oven_{name.lower().replace(' ', '_')}")
@@ -434,6 +461,10 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         if user_input is not None:
             # Merge with saved data
             self._config_data.update(user_input)
+            
+            # Add default features to config so predefined appliances look like custom appliances
+            if CONF_FEATURES not in self._config_data:
+                self._config_data[CONF_FEATURES] = dict(APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_STOVETOP, {}))
             
             # Create unique ID
             name = user_input.get(CONF_APPLIANCE_NAME, "Stovetop")
@@ -474,6 +505,25 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         if user_input is not None:
             # Merge with saved data
             self._config_data.update(user_input)
+            
+            # Add default features to config so predefined appliances look like custom appliances
+            # Filter features based on sensor/convection capabilities
+            if CONF_FEATURES not in self._config_data:
+                default_features = APPLIANCE_DEFAULT_FEATURES.get(APPLIANCE_TYPE_MICROWAVE, {})
+                features = {}
+                has_sensor = user_input.get(CONF_HAS_SENSOR_COOK, False)
+                has_convection = user_input.get(CONF_HAS_CONVECTION, False)
+                
+                for feature_name, feature_type in default_features.items():
+                    # Only include sensor_cook if has_sensor
+                    if feature_name == "sensor_cook" and not has_sensor:
+                        continue
+                    # Only include convection features if has_convection
+                    if feature_name in ["convection_microwave", "bake"] and not has_convection:
+                        continue
+                    features[feature_name] = feature_type
+                
+                self._config_data[CONF_FEATURES] = features
             
             # Create unique ID
             name = user_input.get(CONF_APPLIANCE_NAME, "Microwave")
@@ -828,13 +878,8 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
         # Sort and add feature fields
         for feature_name, default_type in sorted(features_to_show.items()):
             # Checkbox to enable feature
-            # For predefined appliances: feature is enabled if it's in defaults OR explicitly set
-            # For custom appliances: feature is enabled only if explicitly set
-            if appliance_type == APPLIANCE_TYPE_CUSTOM:
-                is_enabled = feature_name in current_features
-            else:
-                # Predefined: enabled by default (in features_to_show) unless explicitly disabled
-                is_enabled = feature_name in current_features or feature_name in features_to_show
+            # Feature is enabled if it's explicitly in current_features (for all appliances now)
+            is_enabled = feature_name in current_features
             
             schema_dict[vol.Optional(
                 f"feature_enabled_{feature_name}",
