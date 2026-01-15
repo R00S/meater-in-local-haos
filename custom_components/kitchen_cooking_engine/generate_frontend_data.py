@@ -238,6 +238,24 @@ def generate_js_data():
     except Exception as e:
         print(f"Warning: Could not load Ninja Combi recipes: {e}")
     
+    # Load AI Recipe Builder data
+    ai_cooking_styles = []
+    ai_ingredients = {}
+    try:
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        import importlib.util
+        ai_data_spec = importlib.util.spec_from_file_location(
+            "ai_recipe_data",
+            os.path.join(base_dir, "ai_recipe_data.py")
+        )
+        ai_data_module = importlib.util.module_from_spec(ai_data_spec)
+        ai_data_spec.loader.exec_module(ai_data_module)
+        
+        ai_cooking_styles = ai_data_module.COOKING_STYLES
+        ai_ingredients = ai_data_module.COMMON_INGREDIENTS
+    except Exception as e:
+        print(f"Warning: Could not load AI Recipe Builder data: {e}")
+    
     cet_time = get_cet_timestamp()
     
     lines = []
@@ -259,6 +277,12 @@ def generate_js_data():
     lines.append("")
     lines.append("// Ninja Combi recipes")
     lines.append(f"const NINJA_COMBI_RECIPES = {json.dumps(ninja_combi_recipes, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Cooking Styles")
+    lines.append(f"const AI_COOKING_STYLES = {json.dumps(ai_cooking_styles, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Common Ingredients")
+    lines.append(f"const AI_INGREDIENTS = {json.dumps(ai_ingredients, indent=2, ensure_ascii=False)};")
     
     return "\n".join(lines)
 
@@ -355,10 +379,25 @@ import {{
 """
     new_content += class_code
     
-    # Update panel version in JS
+    # Update panel version in JS - increment from const.py version
+    # Read current version from const.py first
+    const_file = os.path.join(base_dir, "const.py")
+    current_version = "55"  # Default fallback
+    if os.path.exists(const_file):
+        with open(const_file, "r", encoding="utf-8") as f:
+            const_content = f.read()
+        
+        const_version_line = 'PANEL_VERSION = "'
+        const_idx = const_content.find(const_version_line)
+        if const_idx != -1:
+            const_end = const_content.find('"', const_idx + len(const_version_line))
+            current_version = const_content[const_idx + len(const_version_line):const_end]
+    
+    # Increment version for cache busting
+    new_version = str(int(current_version) + 1)
+    
     old_version_line = 'const PANEL_VERSION = "'
     version_idx = new_content.find(old_version_line)
-    new_version = "55"  # Set to 55 for v0.3.3.0 release
     if version_idx != -1:
         version_end = new_content.find('"', version_idx + len(old_version_line))
         old_version = new_content[version_idx + len(old_version_line):version_end]
@@ -370,7 +409,6 @@ import {{
         f.write(new_content)
     
     # Also update const.py to keep PANEL_VERSION in sync
-    const_file = os.path.join(base_dir, "const.py")
     if os.path.exists(const_file):
         with open(const_file, "r", encoding="utf-8") as f:
             const_content = f.read()

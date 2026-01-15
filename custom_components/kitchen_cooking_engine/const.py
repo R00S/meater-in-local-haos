@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 14 Jan 2026, 03:10 UTC
-Last Change: v0.3.4.0 - View Assist integration ready for merge
+Last Updated: 15 Jan 2026, 10:34 UTC
+Last Change: v0.4.0.0-alpha - ALPHA RELEASE: AI Recipe Builder experimental feature
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "55"
+PANEL_VERSION = "71"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
@@ -25,6 +25,7 @@ CONF_POWER_OUTLET = "power_outlet"          # Switch/outlet entity to control po
 CONF_START_BUTTON = "start_button"          # Button/switch entity to start cooking
 CONF_AUTO_SHUTOFF = "auto_shutoff_enabled"  # Auto turn off when complete
 CONF_AUTO_START = "auto_start_enabled"      # Enable remote start
+CONF_AI_AGENT_ID = "ai_agent_id"            # OpenAI conversation agent ID for AI Recipe Builder
 
 # Temperature units
 TEMP_CELSIUS = "celsius"

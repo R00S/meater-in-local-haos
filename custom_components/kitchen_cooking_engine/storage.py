@@ -25,9 +25,13 @@ _LOGGER = logging.getLogger(__name__)
 # Storage file names
 COOK_HISTORY_FILE = "cook_history.json"
 USER_PREFERENCES_FILE = "user_preferences.json"
+AI_SETTINGS_FILE = "ai_settings.json"
 
 # Maximum history entries to keep
 MAX_HISTORY_ENTRIES = 100
+
+# Default AI settings
+DEFAULT_AI_AGENT_ID = "extended_openai_conversation_2"
 
 
 def _get_storage_path(hass: HomeAssistant, filename: str) -> Path:
@@ -91,6 +95,43 @@ async def async_add_cook_to_history(
     
     history.append(cook_data)
     return await async_save_cook_history(hass, history)
+
+
+async def async_load_ai_settings(hass: HomeAssistant) -> dict[str, Any]:
+    """Load AI settings from storage."""
+    storage_path = _get_storage_path(hass, AI_SETTINGS_FILE)
+    
+    def load_settings():
+        if not storage_path.exists():
+            return {"agent_id": DEFAULT_AI_AGENT_ID}
+        try:
+            with open(storage_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                # Ensure agent_id is present
+                if "agent_id" not in data:
+                    data["agent_id"] = DEFAULT_AI_AGENT_ID
+                return data
+        except (json.JSONDecodeError, IOError) as e:
+            _LOGGER.warning("Failed to load AI settings: %s", e)
+            return {"agent_id": DEFAULT_AI_AGENT_ID}
+    
+    return await hass.async_add_executor_job(load_settings)
+
+
+async def async_save_ai_settings(hass: HomeAssistant, settings: dict[str, Any]) -> bool:
+    """Save AI settings to storage."""
+    storage_path = _get_storage_path(hass, AI_SETTINGS_FILE)
+    
+    def save_settings():
+        try:
+            with open(storage_path, "w", encoding="utf-8") as f:
+                json.dump(settings, f, indent=2, default=str)
+            return True
+        except IOError as e:
+            _LOGGER.error("Failed to save AI settings: %s", e)
+            return False
+    
+    return await hass.async_add_executor_job(save_settings)
 
 
 async def async_update_cook_notes(
