@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 15 Jan 2026, 11:00 UTC
-Last Change: v0.4.1.01 - Fixed error dialogs (copyable text) and ninja combi recipe bug
+Last Updated: 15 Jan 2026, 12:31 UTC
+Last Change: v0.4.1.02 - Fixed Ninja Combi cooking method mapping for MEATER+ integration
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "74"
+PANEL_VERSION = "75"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
