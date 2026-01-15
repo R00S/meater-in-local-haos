@@ -594,24 +594,55 @@ Format your response as JSON:
             List of parsed suggestions
         """
         import json
+        import re
         
         try:
+            # Log raw response for debugging
+            _LOGGER.debug(f"Raw AI response (first 500 chars): {response[:500]}")
+            
             # Try to extract JSON from response
-            # AI might wrap it in markdown code blocks
+            # AI might wrap it in markdown code blocks or add extra text
             response = response.strip()
+            
+            # Handle markdown code blocks
             if "```json" in response:
                 start = response.find("```json") + 7
                 end = response.find("```", start)
+                if end == -1:
+                    end = len(response)
                 response = response[start:end].strip()
             elif "```" in response:
                 start = response.find("```") + 3
                 end = response.find("```", start)
+                if end == -1:
+                    end = len(response)
                 response = response[start:end].strip()
+            
+            # Try to find JSON array in the response
+            # Look for [ at start and ] at end
+            json_match = re.search(r'\[\s*\{.*\}\s*\]', response, re.DOTALL)
+            if json_match:
+                response = json_match.group(0)
+            
+            # Check if response is empty or too short
+            if not response or len(response) < 10:
+                raise ValueError(f"Response too short or empty: '{response}'")
             
             data = json.loads(response)
             
+            # Validate that we got a list
+            if not isinstance(data, list):
+                raise ValueError(f"Expected JSON array, got {type(data).__name__}")
+            
+            if len(data) == 0:
+                raise ValueError("AI returned empty recipe list")
+            
             suggestions = []
             for i, item in enumerate(data[:4]):  # Max 4 suggestions
+                if not isinstance(item, dict):
+                    _LOGGER.warning(f"Skipping invalid suggestion item {i}: {item}")
+                    continue
+                    
                 suggestion = AIRecipeSuggestion(
                     id=f"ai_recipe_{i+1}",
                     name=item.get("name", "Unnamed Recipe"),
@@ -624,11 +655,32 @@ Format your response as JSON:
                 )
                 suggestions.append(suggestion)
             
+            if not suggestions:
+                raise ValueError("No valid recipes found in AI response")
+            
             return suggestions
             
+        except json.JSONDecodeError as ex:
+            _LOGGER.error(
+                "Failed to parse JSON from AI response. "
+                f"Error: {ex}. "
+                f"Response (first 200 chars): {response[:200]}"
+            )
+            raise ValueError(
+                f"AI returned invalid JSON format. "
+                f"This usually means the AI assistant needs better configuration or the response was cut off. "
+                f"Error: {str(ex)}"
+            )
         except Exception as ex:
-            _LOGGER.error("Failed to parse AI suggestions: %s", ex)
-            raise
+            _LOGGER.error("Failed to parse AI suggestions: %s", ex, exc_info=True)
+            # Include part of the response in the error for debugging
+            response_preview = response[:200] if response else "(empty response)"
+            raise ValueError(
+                f"Could not parse AI response into recipe suggestions. "
+                f"Response preview: {response_preview}... "
+                f"Error: {str(ex)}"
+            )
+
     
     def _parse_recipe_detail(
         self,
@@ -645,24 +697,49 @@ Format your response as JSON:
             Parsed recipe detail
         """
         import json
+        import re
         
         try:
+            # Log raw response for debugging
+            _LOGGER.debug(f"Raw AI detail response (first 500 chars): {response[:500]}")
+            
             # Extract JSON from response
             response = response.strip()
+            
+            # Handle markdown code blocks
             if "```json" in response:
                 start = response.find("```json") + 7
                 end = response.find("```", start)
+                if end == -1:
+                    end = len(response)
                 response = response[start:end].strip()
             elif "```" in response:
                 start = response.find("```") + 3
                 end = response.find("```", start)
+                if end == -1:
+                    end = len(response)
                 response = response[start:end].strip()
             
+            # Try to find JSON object in the response
+            json_match = re.search(r'\{.*\}', response, re.DOTALL)
+            if json_match:
+                response = json_match.group(0)
+            
+            # Check if response is empty or too short
+            if not response or len(response) < 10:
+                raise ValueError(f"Response too short or empty: '{response}'")
+            
             data = json.loads(response)
+            
+            # Validate that we got an object
+            if not isinstance(data, dict):
+                raise ValueError(f"Expected JSON object, got {type(data).__name__}")
             
             # Parse cooking phases
             phases = []
             for phase_data in data.get("phases", []):
+                if not isinstance(phase_data, dict):
+                    continue
                 phase = CookingPhase(
                     mode=phase_data.get("mode", "oven"),
                     temperature_c=phase_data.get("temperature_c", 200),
@@ -687,9 +764,25 @@ Format your response as JSON:
             
             return detail
             
+        except json.JSONDecodeError as ex:
+            _LOGGER.error(
+                "Failed to parse JSON from AI detail response. "
+                f"Error: {ex}. "
+                f"Response (first 200 chars): {response[:200]}"
+            )
+            raise ValueError(
+                f"AI returned invalid JSON format for recipe details. "
+                f"Error: {str(ex)}"
+            )
         except Exception as ex:
-            _LOGGER.error("Failed to parse recipe detail: %s", ex)
-            raise
+            _LOGGER.error("Failed to parse recipe detail: %s", ex, exc_info=True)
+            response_preview = response[:200] if response else "(empty response)"
+            raise ValueError(
+                f"Could not parse AI response into recipe details. "
+                f"Response preview: {response_preview}... "
+                f"Error: {str(ex)}"
+            )
+
     
     def _get_fallback_suggestions(
         self,
