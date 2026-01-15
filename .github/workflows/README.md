@@ -2,6 +2,8 @@
 
 This directory contains GitHub Actions workflows for the Kitchen Cooking Engine integration.
 
+<!-- Branch update: 2026-01-15 to trigger GitHub Actions indexing -->
+
 ## Workflows
 
 ### 1. HACS Validation (`hacs-validation.yml`)
