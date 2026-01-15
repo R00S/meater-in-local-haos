@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 15 Jan 2026, 10:27 UTC
-Last Change: v0.4.0.0 - AI Recipe Builder feature complete and ready for production
+Last Updated: 15 Jan 2026, 10:34 UTC
+Last Change: v0.4.0.0-alpha - ALPHA RELEASE: AI Recipe Builder experimental feature
 """
 
 DOMAIN = "kitchen_cooking_engine"

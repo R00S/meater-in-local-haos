@@ -2,6 +2,9 @@
 
 [![HACS Badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2024.1.0+-blue.svg)](https://www.home-assistant.io/)
+[![Alpha](https://img.shields.io/badge/Status-ALPHA-orange.svg)](https://github.com/R00S/meater-in-local-haos)
+
+⚠️ **ALPHA SOFTWARE** - AI Recipe Builder is experimental. Use for testing purposes only.
 
 A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes, and temperature sensors.
 
@@ -17,9 +20,11 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 ## 📊 Current Status
 
-**Phase 6: AI-Powered Recipe Integration** ✅ Complete (v0.4.0.0)
+**Phase 6: AI-Powered Recipe Integration** 🧪 ALPHA (v0.4.0.0-alpha)
 
-### v0.4.0.0 Features (Current - January 2026)
+⚠️ **ALPHA RELEASE**: The AI Recipe Builder feature is experimental and in early testing. Expect bugs, performance issues, and potential breaking changes. Not recommended for production use.
+
+### v0.4.0.0-alpha Features (EXPERIMENTAL - January 2026)
 - ✅ **AI Recipe Builder** - Generate custom recipes with OpenAI based on your ingredients and cooking style
 - ✅ **User-configurable AI agent** - Configure which conversation agent to use via settings UI (⚙️ button)
 - ✅ **Intelligent ingredient selection** - Choose from 31 common ingredients across 4 categories
