@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 14 Jan 2026, 23:22 UTC
-Last Change: v0.3.5.6 - Use Extended OpenAI Conversation agent: extended_openai_conversation_2
+Last Updated: 15 Jan 2026, 10:27 UTC
+Last Change: v0.4.0.0 - AI Recipe Builder feature complete and ready for production
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "70"
+PANEL_VERSION = "71"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

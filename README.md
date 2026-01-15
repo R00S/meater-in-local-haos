@@ -17,16 +17,20 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 ## 📊 Current Status
 
-**Phase 6: AI-Powered Recipe Integration** ✅ Complete (v0.3.5.0)
+**Phase 6: AI-Powered Recipe Integration** ✅ Complete (v0.4.0.0)
 
-### v0.3.5.0 Features (Current - January 2026)
+### v0.4.0.0 Features (Current - January 2026)
 - ✅ **AI Recipe Builder** - Generate custom recipes with OpenAI based on your ingredients and cooking style
-- ✅ **Intelligent ingredient selection** - Choose from proteins, vegetables, grains, dairy, and spices
-- ✅ **Multiple cooking styles** - Quick & Easy, Gourmet, Healthy, Comfort Food, Family Friendly, and more
+- ✅ **User-configurable AI agent** - Configure which conversation agent to use via settings UI (⚙️ button)
+- ✅ **Intelligent ingredient selection** - Choose from 31 common ingredients across 4 categories
+- ✅ **11 cooking styles** - Quick & Easy, Gourmet, Healthy, Comfort Food, Family Friendly, Meal Prep, One Pot, Low Carb, High Protein, Vegetarian, Vegan
 - ✅ **4 diverse recipe suggestions** - AI generates 4 quite different recipes from your selections
-- ✅ **Detailed recipe instructions** - Full ingredients, step-by-step instructions, cooking phases, and tips
-- ✅ **Appliance-aware** - AI considers your available kitchen equipment when generating recipes
-- ✅ **OpenAI conversation integration** - Uses Home Assistant's conversation component for AI generation
+- ✅ **Detailed recipe instructions** - Full ingredients, step-by-step instructions, cooking phases, and expert tips
+- ✅ **Appliance-aware generation** - AI considers your available kitchen equipment when creating recipes
+- ✅ **Flexible AI integration** - Works with Extended OpenAI Conversation, standard OpenAI Conversation, or any conversation agent
+- ✅ **Persistent settings** - Agent preferences saved across Home Assistant restarts
+- ✅ **Robust error handling** - Clear, actionable error messages for configuration issues (MAX_TOKENS, content violations)
+- ✅ **Instant loading** - Ingredient and style data embedded at build time (no API delays)
 - ✅ **Multi-appliance support** - Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom appliances
 - ✅ **Unified configuration** - All appliances use identical backend logic
 - ✅ **Dynamic feature management** - Enable/disable features per appliance
@@ -63,6 +67,8 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 - ✅ **View Assist integration** - Voice command "start cooking" opens panel on View Assist devices
 
 ### Previous Releases
+- **v0.3.5.10** (January 2026) - AI Recipe Builder bug fixes (error handling, JSON parsing)
+- **v0.3.5.7** (January 2026) - User-configurable AI agent with settings UI
 - **v0.3.4.0** (January 2026) - Multi-appliance infrastructure complete
 - **v0.3.3.1** (January 2026) - View Assist integration with voice commands
 - **v0.3.3.0** (January 2026) - Multi-appliance infrastructure
@@ -72,32 +78,81 @@ See [STATUS.md](STATUS.md) for detailed project status.
 
 ---
 
-## 🤖 AI Recipe Builder Setup
+## 🤖 AI Recipe Builder
 
-The AI Recipe Builder requires the OpenAI conversation integration to be configured in Home Assistant.
+The AI Recipe Builder generates custom recipes on-the-fly using OpenAI based on your ingredients, cooking style, and available kitchen equipment.
 
-### Setting up OpenAI Conversation
+### Features
 
-1. Go to **Settings** → **Voice Assistants**
-2. Click **Add Assistant**
-3. Select **OpenAI Conversation**
-4. Enter your OpenAI API key
-5. Configure your preferred model (GPT-4 recommended for best results)
-6. Save the configuration
+- **31 Common Ingredients** - Proteins (9), Vegetables (12), Grains (5), Dairy (5)
+- **11 Cooking Styles** - Quick & Easy, Gourmet, Healthy, Comfort Food, Family Friendly, Meal Prep, One Pot, Low Carb, High Protein, Vegetarian, Vegan
+- **4 Diverse Suggestions** - AI generates 4 quite different recipes from your selections
+- **Detailed Instructions** - Full ingredient lists with measurements, step-by-step instructions, cooking phases, expert tips
+- **Appliance-Aware** - AI considers your configured appliances (Ninja Combi, MultiFry, etc.) when generating recipes
+- **User-Configurable Agent** - Choose which AI conversation agent to use via settings (⚙️ button)
 
-Once configured, the AI Recipe Builder will automatically detect the integration and become available in the Kitchen Cooking Engine panel.
+### Setup Requirements
+
+1. **Install an AI Conversation Integration** (choose one):
+   - **Extended OpenAI Conversation** (recommended) - Most flexible, supports advanced features
+   - **OpenAI Conversation** (standard) - Built-in Home Assistant integration
+   - **Home Assistant Cloud** - If you have Nabu Casa subscription
+
+2. **Configure Your AI Assistant:**
+   - Go to **Settings** → **Voice Assistants** → **Add Assistant**
+   - Select your preferred AI integration
+   - Enter API key (if required)
+   - **Important:** Set **max_tokens** to **2000 or higher** (prevents response cut-off)
+   - Configure your preferred model (GPT-4 recommended for best results)
+
+3. **Configure AI Recipe Builder:**
+   - Open Kitchen Cooking Engine panel
+   - Click **🤖 AI Recipe Builder** button
+   - Click **⚙️ Settings** button in the header
+   - Enter your AI conversation agent ID
+   - **To find your agent ID:** Developer Tools → States → Search for "conversation." → Copy entity ID
+   - Common agent IDs:
+     - `extended_openai_conversation_2` (Extended OpenAI Conversation)
+     - `conversation.openai_conversation` (Standard OpenAI Conversation)
+     - `conversation.home_assistant_cloud` (Nabu Casa Cloud)
 
 ### Using the AI Recipe Builder
 
 1. Open the Kitchen Cooking Engine panel
 2. Click the **🤖 AI Recipe Builder** button
-3. Select your cooking style (Quick & Easy, Gourmet, etc.)
-4. Choose your available ingredients
+3. Select your **cooking style** (Quick & Easy, Gourmet, Healthy, etc.)
+4. Choose your **available ingredients** (click multiple to select)
 5. Click **Generate 4 Recipe Ideas**
-6. Browse the suggestions and select one for full details
-7. Follow the detailed instructions to cook
+6. Browse the 4 AI-generated suggestions
+7. Click **Get Details** on your preferred recipe
+8. Follow the detailed instructions including:
+   - Complete ingredient list with measurements
+   - Step-by-step cooking instructions
+   - Cooking phases with temperatures and times
+   - Expert tips for best results
 
-The AI will consider your available kitchen appliances when generating recipes and optimize them for your equipment!
+### Troubleshooting
+
+**"Failed to generate recipes" errors:**
+- Check your AI agent configuration in Settings (⚙️ button)
+- Verify your API key is valid and has available credits
+- Ensure max_tokens is set to 2000 or higher
+
+**"MAX_TOKENS" or "response was cut off" errors:**
+- Increase max_tokens setting in your AI assistant configuration
+- Recommended: 2000 or higher for recipe generation
+
+**"Content violations" errors:**
+- Try different ingredient combinations
+- Try a different cooking style
+- This can be a false positive - try again with slight variations
+
+**Agent ID not working:**
+- Check Developer Tools → States for correct agent entity ID
+- Update agent ID in AI Recipe Builder settings (⚙️ button)
+- Restart Home Assistant after changing configuration
+
+The AI Recipe Builder works entirely through Home Assistant's conversation component - no additional cloud services or accounts required beyond your chosen AI provider!
 
 ---
 
