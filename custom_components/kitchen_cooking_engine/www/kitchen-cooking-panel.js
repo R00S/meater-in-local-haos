@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 15 Jan 2026, 13:31 CET
+ * AUTO-GENERATED: 15 Jan 2026, 13:44 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 15 Jan 2026, 13:31 CET
+// Last generated: 15 Jan 2026, 13:44 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -7004,9 +7004,17 @@ class KitchenCookingPanel extends LitElement {
 
       // Call the Home Assistant service to start the cook
       this.hass.callService('kitchen_cooking_engine', 'start_cook', serviceData)
-        .then(() => {
-          this._showMessage('Cooking Session Started', `✅ Session started successfully!\n\nRecipe: ${recipe.name}\n\nMonitor your cook in the main panel.`, false);
-          // Return to main view
+        .then(async () => {
+          // Wait a moment for the service to update the entity state
+          await new Promise(resolve => setTimeout(resolve, 500));
+          
+          // Force a state update check
+          this.requestUpdate();
+          
+          // Show success message
+          this._showMessage('Cooking Session Started', `✅ Session started successfully!\n\nRecipe: ${recipe.name}\n\nThe cooking session is now active.`, false);
+          
+          // Close Ninja Combi view to return to main panel which will show active cook
           this._showNinjaCombi = false;
           this._selectedNinjaRecipe = null;
         })
@@ -10230,7 +10238,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "75";
+const PANEL_VERSION = "77";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

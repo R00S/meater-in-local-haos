@@ -1475,9 +1475,17 @@ class KitchenCookingPanel extends LitElement {
 
       // Call the Home Assistant service to start the cook
       this.hass.callService('kitchen_cooking_engine', 'start_cook', serviceData)
-        .then(() => {
-          this._showMessage('Cooking Session Started', `✅ Session started successfully!\n\nRecipe: ${recipe.name}\n\nMonitor your cook in the main panel.`, false);
-          // Return to main view
+        .then(async () => {
+          // Wait a moment for the service to update the entity state
+          await new Promise(resolve => setTimeout(resolve, 500));
+          
+          // Force a state update check
+          this.requestUpdate();
+          
+          // Show success message
+          this._showMessage('Cooking Session Started', `✅ Session started successfully!\n\nRecipe: ${recipe.name}\n\nThe cooking session is now active.`, false);
+          
+          // Close Ninja Combi view to return to main panel which will show active cook
           this._showNinjaCombi = false;
           this._selectedNinjaRecipe = null;
         })
