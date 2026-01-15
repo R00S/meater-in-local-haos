@@ -600,6 +600,41 @@ Format your response as JSON:
             # Log raw response for debugging
             _LOGGER.debug(f"Raw AI response (first 500 chars): {response[:500]}")
             
+            # Check for common error patterns from AI conversation component
+            error_patterns = [
+                "Sorry, I had a problem",
+                "FinishReason.MAX_TOKENS",
+                "content violations",
+                "got blocked",
+                "Reason:",
+            ]
+            
+            response_lower = response.lower()
+            for pattern in error_patterns:
+                if pattern.lower() in response_lower:
+                    _LOGGER.error(f"AI conversation component returned an error: {response[:500]}")
+                    
+                    # Provide specific guidance based on error type
+                    if "MAX_TOKENS" in response or "max_tokens" in response_lower:
+                        error_msg = (
+                            "The AI response was cut off due to token limits. "
+                            "Please configure your AI assistant with a higher max_tokens setting "
+                            "(recommended: 2000 or more for recipe generation)."
+                        )
+                    elif "content violations" in response_lower or "got blocked" in response_lower:
+                        error_msg = (
+                            "The AI blocked the response due to content policy. "
+                            "This may be a false positive. Try different ingredients or cooking style. "
+                            "If this persists, check your AI assistant's content filtering settings."
+                        )
+                    else:
+                        error_msg = (
+                            f"The AI conversation component encountered an error: {response[:200]}... "
+                            f"Please check your AI assistant configuration."
+                        )
+                    
+                    raise ValueError(error_msg)
+            
             # Try to extract JSON from response
             # AI might wrap it in markdown code blocks or add extra text
             response = response.strip()
@@ -702,6 +737,41 @@ Format your response as JSON:
         try:
             # Log raw response for debugging
             _LOGGER.debug(f"Raw AI detail response (first 500 chars): {response[:500]}")
+            
+            # Check for common error patterns from AI conversation component
+            error_patterns = [
+                "Sorry, I had a problem",
+                "FinishReason.MAX_TOKENS",
+                "content violations",
+                "got blocked",
+                "Reason:",
+            ]
+            
+            response_lower = response.lower()
+            for pattern in error_patterns:
+                if pattern.lower() in response_lower:
+                    _LOGGER.error(f"AI conversation component returned an error: {response[:500]}")
+                    
+                    # Provide specific guidance based on error type
+                    if "MAX_TOKENS" in response or "max_tokens" in response_lower:
+                        error_msg = (
+                            "The AI response was cut off due to token limits. "
+                            "Please configure your AI assistant with a higher max_tokens setting "
+                            "(recommended: 2000 or more for recipe details)."
+                        )
+                    elif "content violations" in response_lower or "got blocked" in response_lower:
+                        error_msg = (
+                            "The AI blocked the response due to content policy. "
+                            "This may be a false positive. Try a different recipe. "
+                            "If this persists, check your AI assistant's content filtering settings."
+                        )
+                    else:
+                        error_msg = (
+                            f"The AI conversation component encountered an error: {response[:200]}... "
+                            f"Please check your AI assistant configuration."
+                        )
+                    
+                    raise ValueError(error_msg)
             
             # Extract JSON from response
             response = response.strip()
