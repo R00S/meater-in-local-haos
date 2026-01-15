@@ -105,6 +105,11 @@ class KitchenCookingPanel extends LitElement {
       _isLoadingAISuggestions: { type: Boolean },
       _isLoadingAIDetail: { type: Boolean },
       _aiOpenAIAvailable: { type: Boolean },
+      // Message dialog (replaces non-copyable alert())
+      _showMessageDialog: { type: Boolean },
+      _messageDialogTitle: { type: String },
+      _messageDialogContent: { type: String },
+      _messageDialogIsError: { type: Boolean },
     };
   }
 
@@ -162,6 +167,11 @@ class KitchenCookingPanel extends LitElement {
     this._aiOpenAIAvailable = null;
     this._showAISettingsModal = false;
     this._aiAgentId = 'extended_openai_conversation_2';  // Default
+    // Message dialog
+    this._showMessageDialog = false;
+    this._messageDialogTitle = '';
+    this._messageDialogContent = '';
+    this._messageDialogIsError = false;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -311,12 +321,12 @@ class KitchenCookingPanel extends LitElement {
   // AI Recipe Builder: Generate recipe suggestions
   async _generateAIRecipes() {
     if (this._aiSelectedIngredients.size === 0) {
-      alert('Please select at least one ingredient');
+      this._showMessage('Missing Ingredients', 'Please select at least one ingredient', false);
       return;
     }
     
     if (!this._aiSelectedStyle) {
-      alert('Please select a cooking style');
+      this._showMessage('Missing Cooking Style', 'Please select a cooking style', false);
       return;
     }
     
@@ -342,12 +352,12 @@ class KitchenCookingPanel extends LitElement {
       } else {
         const errorMsg = response.message || 'Unknown error';
         console.error('API error:', errorMsg);
-        alert(`Failed to generate recipes:\n\n${errorMsg}\n\nPlease check:\n1. OpenAI assistant is configured in Voice Assistants\n2. The assistant is named "OpenAI"\n3. Your OpenAI API key is valid`);
+        this._showMessage('Failed to Generate Recipes', `${errorMsg}\n\nPlease check:\n1. OpenAI assistant is configured in Voice Assistants\n2. The assistant is named "OpenAI"\n3. Your OpenAI API key is valid`, true);
       }
     } catch (e) {
       console.error('Failed to generate AI recipes:', e);
       const errorMsg = e.message || e.toString();
-      alert(`Failed to generate recipes:\n\n${errorMsg}\n\nPlease check:\n1. OpenAI assistant is configured in Voice Assistants\n2. The assistant is named "OpenAI"\n3. Your OpenAI API key is valid\n4. Check Home Assistant logs for more details`);
+      this._showMessage('Failed to Generate Recipes', `${errorMsg}\n\nPlease check:\n1. OpenAI assistant is configured in Voice Assistants\n2. The assistant is named "OpenAI"\n3. Your OpenAI API key is valid\n4. Check Home Assistant logs for more details`, true);
     } finally {
       this._isLoadingAISuggestions = false;
       this.requestUpdate();
@@ -373,11 +383,11 @@ class KitchenCookingPanel extends LitElement {
       if (response.status === 'ok') {
         this._aiRecipeDetail = response.detail;
       } else {
-        alert('Failed to get recipe detail: ' + response.message);
+        this._showMessage('Failed to Get Recipe Detail', response.message, true);
       }
     } catch (e) {
       console.error('Failed to get AI recipe detail:', e);
-      alert('Failed to get recipe detail. Please try again.');
+      this._showMessage('Failed to Get Recipe Detail', 'Please try again.', true);
     } finally {
       this._isLoadingAIDetail = false;
       this.requestUpdate();
@@ -811,15 +821,35 @@ class KitchenCookingPanel extends LitElement {
       
       if (response.status === 'ok') {
         // Show success message
-        alert(`✅ AI Settings Saved!\n\nAgent ID: ${this._aiAgentId}\n\nYour AI Recipe Builder will now use this agent.`);
+        this._showMessage('AI Settings Saved', `✅ Settings saved successfully!\n\nAgent ID: ${this._aiAgentId}\n\nYour AI Recipe Builder will now use this agent.`, false);
         this._closeAISettings();
       } else {
-        alert(`❌ Failed to save settings: ${response.message}`);
+        this._showMessage('Failed to Save Settings', `❌ ${response.message}`, true);
       }
     } catch (e) {
       console.error('[AI Settings] Failed to save settings:', e);
-      alert(`❌ Error saving settings: ${e.message}`);
+      this._showMessage('Error Saving Settings', `❌ ${e.message}`, true);
     }
+  }
+
+  /**
+   * Show a message dialog with selectable/copyable text.
+   * Replaces alert() to allow users to select and copy error messages.
+   * @param {string} title - Dialog title
+   * @param {string} content - Dialog content (can contain newlines)
+   * @param {boolean} isError - Whether this is an error message (affects styling)
+   */
+  _showMessage(title, content, isError = false) {
+    this._messageDialogTitle = title;
+    this._messageDialogContent = content;
+    this._messageDialogIsError = isError;
+    this._showMessageDialog = true;
+    this.requestUpdate();
+  }
+
+  _closeMessageDialog() {
+    this._showMessageDialog = false;
+    this.requestUpdate();
   }
 
   _selectNinjaRecipe(recipeId) {
@@ -1399,19 +1429,9 @@ class KitchenCookingPanel extends LitElement {
     );
 
     if (!meaterEntity) {
-      alert('⚠️ No MEATER sensor found.\n\nPlease ensure your MEATER device is connected to Home Assistant.');
+      this._showMessage('No MEATER Sensor Found', '⚠️ Please ensure your MEATER device is connected to Home Assistant.', true);
       return;
     }
-
-    // Prepare the service call data
-    const serviceData = {
-      entity_id: meaterEntity,
-      meat_type: recipe.name,
-      target_temp_c: recipe.target_temp_c,
-      target_temp_f: recipe.target_temp_f,
-      cooking_method: recipe.mode,
-      notes: `Ninja Combi: ${recipe.name}\n${recipe.description}`
-    };
 
     // Show confirmation with recipe details
     const confirmMsg = `🚀 Start Cook with MEATER+\n\n` +
@@ -1422,16 +1442,28 @@ class KitchenCookingPanel extends LitElement {
       `This will start a cooking session with your MEATER probe.`;
 
     if (confirm(confirmMsg)) {
+      // For Ninja Combi recipes, we need to use a generic cut with custom temperature
+      // since these recipes are appliance-specific and don't map to traditional meat cuts.
+      // We'll use ribeye steak (ID 100) as a generic meat cut with custom target temp.
+      const serviceData = {
+        entity_id: meaterEntity,
+        cut_id: 100, // Ribeye steak as generic cut
+        doneness: 'done', // Generic doneness
+        cooking_method: recipe.mode || 'oven_roast',
+        data_source: 'international',
+        custom_target_temp_c: recipe.target_temp_c
+      };
+
       // Call the Home Assistant service to start the cook
       this.hass.callService('kitchen_cooking_engine', 'start_cook', serviceData)
         .then(() => {
-          alert('✅ Cooking session started!\n\nMonitor your cook in the main panel.');
+          this._showMessage('Cooking Session Started', `✅ Session started successfully!\n\nRecipe: ${recipe.name}\n\nMonitor your cook in the main panel.`, false);
           // Return to main view
           this._showNinjaCombi = false;
           this._selectedNinjaRecipe = null;
         })
         .catch(err => {
-          alert(`❌ Error starting cook:\n\n${err.message}`);
+          this._showMessage('Error Starting Cook', `❌ ${err.message}`, true);
         });
     }
   }
@@ -2139,17 +2171,18 @@ class KitchenCookingPanel extends LitElement {
     );
     
     if (probeAppliances.length === 0) {
-      alert(`Cannot start cooking session!\n\n` +
+      this._showMessage('Cannot Start Cooking Session', 
         `This recipe requires temperature monitoring, but no MEATER+ probe is configured.\n\n` +
         `Please add a MEATER+ appliance in:\n` +
-        `Settings → Devices & Services → Add Integration → Kitchen Cooking Engine`);
+        `Settings → Devices & Services → Add Integration → Kitchen Cooking Engine`, true);
       return;
     }
 
     // Find cooking session entities for temperature probes
     const entities = this._findCookingEntities();
     if (entities.length === 0) {
-      alert(`No cooking session entities available.\n\nPlease ensure your MEATER+ probe is configured properly.`);
+      this._showMessage('No Cooking Session Entities', 
+        `Please ensure your MEATER+ probe is configured properly.`, true);
       return;
     }
 
@@ -2185,13 +2218,13 @@ class KitchenCookingPanel extends LitElement {
     
     // Show a helpful message about manual setup
     setTimeout(() => {
-      alert(`Recipe loaded!\n\n` +
+      this._showMessage('Recipe Loaded', 
         `Now configure your cook on the setup screen:\n` +
         `- Select protein and cut\n` +
         `- Choose doneness level\n` +
         `- Select cooking method\n` +
         `- Start your cook\n\n` +
-        `Tip: The recipe "${recipe.name}" works best with ${applianceNames}.`);
+        `Tip: The recipe "${recipe.name}" works best with ${applianceNames}.`, false);
     }, 500);
   }
 
@@ -2413,6 +2446,26 @@ class KitchenCookingPanel extends LitElement {
                   </button>
                   <button class="primary-btn" @click=${this._saveAISettings}>
                     Save Settings
+                  </button>
+                </div>
+              </div>
+            </div>
+          ` : ''}
+          
+          <!-- Message Dialog (replaces alert() for copyable error messages) -->
+          ${this._showMessageDialog ? html`
+            <div class="modal-overlay" @click=${this._closeMessageDialog}>
+              <div class="modal-dialog" @click=${(e) => e.stopPropagation()}>
+                <div class="modal-header">
+                  <h2>${this._messageDialogIsError ? '⚠️' : '💬'} ${this._messageDialogTitle}</h2>
+                  <button class="modal-close" @click=${this._closeMessageDialog}>✕</button>
+                </div>
+                <div class="modal-body">
+                  <pre style="white-space: pre-wrap; word-wrap: break-word; font-family: inherit; margin: 0; user-select: text;">${this._messageDialogContent}</pre>
+                </div>
+                <div class="modal-footer">
+                  <button class="primary-btn" @click=${this._closeMessageDialog}>
+                    OK
                   </button>
                 </div>
               </div>
