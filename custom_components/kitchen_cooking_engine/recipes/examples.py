@@ -7,7 +7,7 @@ Demonstrates various recipe patterns:
 - Recipes with optional features
 """
 
-from .models import UnifiedRecipe
+from .models import UnifiedRecipe, RecipeDifficulty
 from ..appliances import CookingPhase
 
 
@@ -23,10 +23,11 @@ AIR_FRIED_WINGS = UnifiedRecipe(
     alternative_appliances=[["multifry"], ["standard_oven_with_convection"]],
     phases=[
         CookingPhase(
-            name="Air Fry",
+            feature_name="air_fry",
             temperature_c=200,
+            temperature_f=392,
             duration_minutes=25,
-            mode="Air Fry"
+            description="Air Fry"
         )
     ],
     use_probe=True,
@@ -51,14 +52,14 @@ AIR_FRIED_WINGS = UnifiedRecipe(
     prep_time_minutes=10,
     cook_time_minutes=25,
     servings=4,
-    difficulty="easy",
+    difficulty=RecipeDifficulty.EASY,
     tips=[
         "Pat wings very dry for maximum crispiness",
         "Don't overcrowd the basket",
         "Flip halfway through for even cooking",
         "MEATER+ probe ensures perfect doneness"
     ],
-    tags={"chicken", "dinner", "air-fried", "crispy"}
+    custom_tags={"chicken", "dinner", "air-fried", "crispy"}
 )
 
 
@@ -72,10 +73,11 @@ PRESSURE_COOKED_BEANS = UnifiedRecipe(
     alternative_appliances=[["pressure_cooker"]],
     phases=[
         CookingPhase(
-            name="Pressure Cook",
+            feature_name="pressure_cook",
             temperature_c=120,
+            temperature_f=248,
             duration_minutes=30,
-            mode="High Pressure"
+            description="High Pressure"
         )
     ],
     use_probe=False,
@@ -99,13 +101,13 @@ PRESSURE_COOKED_BEANS = UnifiedRecipe(
     prep_time_minutes=5,
     cook_time_minutes=30,
     servings=8,
-    difficulty="easy",
+    difficulty=RecipeDifficulty.EASY,
     tips=[
         "No need to soak beans when pressure cooking",
         "Natural release prevents bean skins from bursting",
         "Salt after cooking for tender beans"
     ],
-    tags={"vegetarian", "vegan", "beans", "pressure-cooker"}
+    custom_tags={"vegetarian", "vegan", "beans", "pressure-cooker"}
 )
 
 
@@ -124,10 +126,11 @@ PERFECT_ROAST_CHICKEN = UnifiedRecipe(
     ],
     phases=[
         CookingPhase(
-            name="Roast",
+            feature_name="roast",
             temperature_c=200,
+            temperature_f=392,
             duration_minutes=75,
-            mode="Roast"
+            description="Roast"
         )
     ],
     use_probe=True,
@@ -154,14 +157,14 @@ PERFECT_ROAST_CHICKEN = UnifiedRecipe(
     prep_time_minutes=15,
     cook_time_minutes=75,
     servings=4,
-    difficulty="medium",
+    difficulty=RecipeDifficulty.MEDIUM,
     tips=[
         "MEATER+ ensures perfect doneness every time",
         "Convection mode reduces cook time by ~10%",
         "Smart power outlet can auto-shutoff oven",
         "Let chicken rest to redistribute juices"
     ],
-    tags={"chicken", "roast", "dinner", "meater"}
+    custom_tags={"chicken", "roast", "dinner", "meater"}
 )
 
 
@@ -175,10 +178,11 @@ PAN_SEARED_STEAK = UnifiedRecipe(
     alternative_appliances=[["multifry", "meater_plus"]],
     phases=[
         CookingPhase(
-            name="Sear",
+            feature_name="sear",
             temperature_c=230,
+            temperature_f=446,
             duration_minutes=8,
-            mode="High Heat Sear"
+            description="High Heat Sear"
         )
     ],
     use_probe=True,
@@ -205,14 +209,14 @@ PAN_SEARED_STEAK = UnifiedRecipe(
     prep_time_minutes=5,
     cook_time_minutes=8,
     servings=2,
-    difficulty="medium",
+    difficulty=RecipeDifficulty.MEDIUM,
     tips=[
         "MEATER+ probe inserted from side for accuracy",
         "High heat is crucial for good sear",
         "Internal temp will rise 3-5°C during rest",
         "Adjust target temp for your preferred doneness"
     ],
-    tags={"beef", "steak", "dinner", "meater", "stovetop"}
+    custom_tags={"beef", "steak", "dinner", "meater", "stovetop"}
 )
 
 
@@ -232,10 +236,11 @@ CRISPY_FRIES = UnifiedRecipe(
     ],
     phases=[
         CookingPhase(
-            name="Air Fry",
+            feature_name="air_fry",
             temperature_c=200,
+            temperature_f=392,
             duration_minutes=25,
-            mode="Air Fry"
+            description="Air Fry"
         )
     ],
     use_probe=False,
@@ -257,7 +262,7 @@ CRISPY_FRIES = UnifiedRecipe(
     prep_time_minutes=35,
     cook_time_minutes=25,
     servings=4,
-    difficulty="easy",
+    difficulty=RecipeDifficulty.EASY,
     tips=[
         "Soaking removes excess starch for crispier fries",
         "Completely dry potatoes before cooking",
@@ -265,7 +270,7 @@ CRISPY_FRIES = UnifiedRecipe(
         "MultiFry: Will take +20% longer (MODIFIED)",
         "Convection oven: Works well with high temp"
     ],
-    tags={"side-dish", "potatoes", "air-fried", "vegetarian"}
+    custom_tags={"side-dish", "potatoes", "air-fried", "vegetarian"}
 )
 
 
@@ -282,10 +287,11 @@ STEAMED_VEGETABLES = UnifiedRecipe(
     ],
     phases=[
         CookingPhase(
-            name="Steam",
+            feature_name="steam",
             temperature_c=100,
+            temperature_f=212,
             duration_minutes=8,
-            mode="Steam"
+            description="Steam"
         )
     ],
     use_probe=False,
@@ -305,14 +311,14 @@ STEAMED_VEGETABLES = UnifiedRecipe(
     prep_time_minutes=10,
     cook_time_minutes=8,
     servings=4,
-    difficulty="easy",
+    difficulty=RecipeDifficulty.EASY,
     tips=[
         "Ninja Combi: Perfect steam function",
         "Stovetop: Use steamer basket over boiling water",
         "Microwave: Add 2 tbsp water, cover, steam 5-7 min",
         "Don't overcook - should be bright and crisp"
     ],
-    tags={"vegetables", "healthy", "side-dish", "vegetarian", "vegan"}
+    custom_tags={"vegetables", "healthy", "side-dish", "vegetarian", "vegan"}
 )
 
 

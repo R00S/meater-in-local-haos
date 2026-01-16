@@ -43,6 +43,7 @@ from .const import (
     SERVICE_COMPLETE,
     SERVICE_SET_NOTES,
     SERVICE_START_MULTI_APPLIANCE_COOK,
+    SERVICE_START_SIMPLE_PROBE_COOK,
 )
 from .cooking_data import (
     get_cut_by_id,
@@ -56,6 +57,10 @@ from .swedish_cooking_data import (
     SWEDISH_MEAT_CATEGORIES,
 )
 from .api import async_register_api
+from .view_assist_dashboard import (
+    async_create_view_assist_dashboard,
+    async_remove_view_assist_dashboard,
+)
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -119,6 +124,15 @@ SERVICE_START_MULTI_APPLIANCE_COOK_SCHEMA = vol.Schema(
         }),
         vol.Optional("target_temp_c"): vol.All(vol.Coerce(int), vol.Range(min=30, max=250)),
         vol.Optional("cook_time_minutes"): vol.All(vol.Coerce(int), vol.Range(min=1, max=1440)),
+    }
+)
+
+# Service schema for simple probe cook (temperature-only monitoring)
+SERVICE_START_SIMPLE_PROBE_COOK_SCHEMA = vol.Schema(
+    {
+        vol.Required(ATTR_ENTITY_ID): cv.entity_ids,
+        vol.Required("target_temp_c"): vol.All(vol.Coerce(int), vol.Range(min=30, max=100)),
+        vol.Optional("session_name"): cv.string,
     }
 )
 
@@ -209,6 +223,9 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
     try:
         # Regenerate frontend data from backend before registering panel
         await _async_regenerate_frontend_data(hass)
+        
+        # Create View Assist dashboard for zero-config compatibility
+        await async_create_view_assist_dashboard(hass)
         
         # Re-read PANEL_VERSION after regeneration (it may have been updated)
         # We need to reload the const module to get the updated value
@@ -335,6 +352,12 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     if manager:
         await manager.async_unload_appliance(entry.entry_id)
         _LOGGER.info("Appliance unloaded: %s", entry.title)
+    
+    # Remove View Assist dashboard if this is the last config entry
+    remaining_entries = [e for e in hass.config_entries.async_entries(DOMAIN) if e.entry_id != entry.entry_id]
+    if not remaining_entries:
+        await async_remove_view_assist_dashboard(hass)
+        _LOGGER.info("Removed View Assist dashboard (last config entry)")
     
     unload_ok = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
     if unload_ok:
@@ -569,13 +592,31 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         target_temp_c = call.data.get("target_temp_c")
         cook_time_minutes = call.data.get("cook_time_minutes")
         
-        # Build a simple recipe dict from the service call
-        # In a real implementation, this would look up a full recipe by ID
-        recipe = {
-            "id": recipe_id,
-            "name": f"Recipe {recipe_id}",
-            "required_features": list(appliances_map.keys()) if appliances_map else [],
-        }
+        # Look up the Ninja Combi recipe if recipe_id is provided
+        recipe = None
+        if recipe_id:
+            try:
+                from .ninja_combi_data import NINJA_COMBI_RECIPES
+                ninja_recipe = NINJA_COMBI_RECIPES.get(recipe_id)
+                if ninja_recipe:
+                    recipe = {
+                        "id": ninja_recipe.id,
+                        "name": ninja_recipe.name,
+                        "required_features": ["probe"] if ninja_recipe.use_probe else [],
+                    }
+                    # Use recipe's target temp if not overridden
+                    if not target_temp_c and ninja_recipe.target_temp_c:
+                        target_temp_c = ninja_recipe.target_temp_c
+            except Exception as e:
+                _LOGGER.warning("Could not load Ninja Combi recipe %s: %s", recipe_id, e)
+        
+        # Fallback to simple recipe dict if lookup failed
+        if not recipe:
+            recipe = {
+                "id": recipe_id,
+                "name": f"Recipe {recipe_id}",
+                "required_features": list(appliances_map.keys()) if appliances_map else [],
+            }
         
         # Build appliance assignments from the service call
         from .coordinator import ApplianceAssignment
@@ -587,10 +628,18 @@ async def _async_register_services(hass: HomeAssistant) -> None:
             appliances = registry.get_all_appliances()
             for appliance in appliances:
                 # For now, create assignment based on role
+                # Handle both dict-like and object-like appliances
+                if hasattr(appliance, 'appliance_id'):
+                    appliance_id = appliance.appliance_id
+                    appliance_name = appliance.name
+                else:
+                    appliance_id = appliance.get("id", "unknown")
+                    appliance_name = appliance.get("name", "Unknown")
+                
                 assignments.append(ApplianceAssignment(
                     feature_role=role,
-                    appliance_id=appliance.get("id", "unknown"),
-                    appliance_name=appliance.get("name", "Unknown"),
+                    appliance_id=appliance_id,
+                    appliance_name=appliance_name,
                     entity_id=entity_id
                 ))
                 break  # Use first appliance for now
@@ -629,6 +678,68 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         except Exception as err:
             _LOGGER.error("Failed to start multi-appliance cook: %s", err)
             raise
+
+    async def handle_start_simple_probe_cook(call: ServiceCall) -> None:
+        """Handle start simple probe cook service call.
+        
+        This creates a lightweight cooking session with just a target temperature.
+        Perfect for sub-processes in recipe guides or appliance-specific monitoring.
+        """
+        _LOGGER.info("Kitchen Cooking Engine: Start simple probe cook service called")
+        
+        # Get entity IDs from service call
+        entity_ids = call.data.get(ATTR_ENTITY_ID)
+        if entity_ids is None:
+            _LOGGER.error("No entity_id specified for start_simple_probe_cook service")
+            return
+        
+        # Ensure entity_ids is a list
+        if isinstance(entity_ids, str):
+            entity_ids = [entity_ids]
+        
+        target_temp_c = call.data.get("target_temp_c")
+        session_name = call.data.get("session_name", "Simple Probe Cook")
+        
+        # Calculate target temperature in Fahrenheit
+        target_temp_f = int(target_temp_c * 9 / 5 + 32)
+        
+        _LOGGER.info(
+            "Starting simple probe cook: %s at %d°C (%d°F)",
+            session_name,
+            target_temp_c,
+            target_temp_f,
+        )
+        
+        # Find and update the target entities
+        entities = _get_cooking_session_entities(hass, entity_ids)
+        if not entities:
+            _LOGGER.error(
+                "No cooking session entities found for %s. "
+                "Make sure the entity exists and the integration is properly set up.",
+                entity_ids,
+            )
+            return
+            
+        for entity in entities:
+            # Start a simple cook with minimal info
+            entity.start_cook(
+                protein="Probe Cook",
+                cut=session_name,
+                doneness="target",
+                cooking_method="probe_only",
+                target_temp_c=target_temp_c,
+                target_temp_f=target_temp_f,
+                min_temp_c=target_temp_c - 2,  # Small tolerance
+                min_temp_f=target_temp_f - 4,
+                max_temp_c=target_temp_c + 2,
+                max_temp_f=target_temp_f + 4,
+                rest_time_min=0,
+                rest_time_max=0,
+                usda_safe=False,
+                carryover_temp_c=0,
+                cut_display=session_name,
+                cut_id=0,  # No cut ID for simple sessions
+            )
 
     # Only register if not already registered
     if not hass.services.has_service(DOMAIN, SERVICE_START_COOK):
@@ -673,5 +784,13 @@ async def _async_register_services(hass: HomeAssistant) -> None:
             SERVICE_START_MULTI_APPLIANCE_COOK,
             handle_start_multi_appliance_cook,
             schema=SERVICE_START_MULTI_APPLIANCE_COOK_SCHEMA,
+        )
+    # Register simple probe cook service
+    if not hass.services.has_service(DOMAIN, SERVICE_START_SIMPLE_PROBE_COOK):
+        hass.services.async_register(
+            DOMAIN,
+            SERVICE_START_SIMPLE_PROBE_COOK,
+            handle_start_simple_probe_cook,
+            schema=SERVICE_START_SIMPLE_PROBE_COOK_SCHEMA,
         )
 

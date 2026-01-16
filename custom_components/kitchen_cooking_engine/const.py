@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 15 Jan 2026, 10:34 UTC
-Last Change: v0.4.0.0-alpha - ALPHA RELEASE: AI Recipe Builder experimental feature
+Last Updated: 16 Jan 2026, 13:16 UTC
+Last Change: v0.4.2.01 - Add View Assist dashboard integration for zero-config compatibility
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "71"
+PANEL_VERSION = "92"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
@@ -90,6 +90,8 @@ SERVICE_APPLIANCE_POWER_OFF = "appliance_power_off"
 SERVICE_APPLIANCE_START = "appliance_start"
 # Phase 4: Multi-appliance service
 SERVICE_START_MULTI_APPLIANCE_COOK = "start_multi_appliance_cook"
+# Simple probe service for temperature-only monitoring
+SERVICE_START_SIMPLE_PROBE_COOK = "start_simple_probe_cook"
 
 # Event names
 EVENT_APPROACHING_TARGET = "kitchen_cooking_engine_approaching_target"

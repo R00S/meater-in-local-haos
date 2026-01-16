@@ -20,9 +20,16 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 ## 📊 Current Status
 
-**Phase 6: AI-Powered Recipe Integration** 🧪 ALPHA (v0.4.0.0-alpha)
+**Phase 6: AI-Powered Recipe Integration** 🧪 ALPHA (v0.4.2.01)
 
 ⚠️ **ALPHA RELEASE**: The AI Recipe Builder feature is experimental and in early testing. Expect bugs, performance issues, and potential breaking changes. Not recommended for production use.
+
+### v0.4.2.01 Features (January 2026)
+- ✅ **Copyable error dialogs** - All error messages now use custom modal dialogs instead of browser alerts, allowing text selection and copying
+- ✅ **Simple probe monitoring** - New `start_simple_probe_cook` service for temperature-only monitoring without cut/doneness requirements
+- ✅ **Ninja Combi MEATER integration fixed** - Start MEATER+ monitoring directly from Ninja Combi recipes with one click
+- ✅ **View Assist dashboard** - Automatic dashboard creation at `/cooking-va` for zero-config View Assist compatibility
+- ✅ **Entity selection improvements** - Better entity discovery for both regular and recipe-based cooking sessions
 
 ### v0.4.0.0-alpha Features (EXPERIMENTAL - January 2026)
 - ✅ **AI Recipe Builder** - Generate custom recipes with OpenAI based on your ingredients and cooking style
@@ -72,6 +79,7 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 - ✅ **View Assist integration** - Voice command "start cooking" opens panel on View Assist devices
 
 ### Previous Releases
+- **v0.4.0.0-alpha** (January 2026) - AI Recipe Builder with OpenAI integration
 - **v0.3.5.10** (January 2026) - AI Recipe Builder bug fixes (error handling, JSON parsing)
 - **v0.3.5.7** (January 2026) - User-configurable AI agent with settings UI
 - **v0.3.4.0** (January 2026) - Multi-appliance infrastructure complete
@@ -420,6 +428,24 @@ data:
   cooking_method: pan_sear
 ```
 
+### Start a Simple Probe Cook (NEW in v0.4.2.01)
+
+For temperature-only monitoring without requiring cut/doneness selection:
+
+```yaml
+service: kitchen_cooking_engine.start_simple_probe_cook
+target:
+  entity_id: sensor.cooking_session
+data:
+  target_temp_c: 65  # Target temperature in Celsius
+  session_name: "Ninja Combi Chicken"  # Optional display name
+```
+
+This service is perfect for:
+- Monitoring temperature during appliance-specific recipes (Ninja Combi, MultiFry)
+- Recipe guide sub-processes where cut/doneness isn't relevant
+- Simple temperature-based cooking without full meat cut tracking
+
 ### Common Cut IDs
 
 | Cut ID | Cut Name |
@@ -490,9 +516,23 @@ automation:
           message: "{{ trigger.event.data.cut_display }} is ready! Rest for {{ trigger.event.data.rest_time_min }}-{{ trigger.event.data.rest_time_max }} minutes."
 ```
 
-## 🎤 View Assist Voice Control
+## 🎤 View Assist Integration
 
-The Kitchen Cooking Engine integrates with [View Assist](https://github.com/dinki/View-Assist) to provide voice-controlled panel navigation on your smart display devices.
+The Kitchen Cooking Engine provides seamless integration with [View Assist](https://github.com/dinki/View-Assist) smart display devices.
+
+### Automatic Dashboard (NEW in v0.4.2.01)
+
+The integration automatically creates a View Assist-compatible dashboard at `/cooking-va` during setup:
+- **Zero configuration required** - Dashboard appears automatically after installation
+- **Automatic cleanup** - Removed when integration is unloaded
+- **Full-screen interface** - Panel-mode dashboard optimized for View Assist displays
+- **Direct access** - Navigate directly via `http://your-ha-url/cooking-va`
+
+To access the cooking interface on View Assist:
+1. Navigate to Settings → Dashboards
+2. Look for "Kitchen Cooking (View Assist)" 
+3. Or navigate directly to `/cooking-va`
+4. View Assist can navigate to this dashboard via voice commands or automations
 
 ### Voice Commands
 
@@ -516,7 +556,7 @@ Other supported phrases:
 - Browser Mod integration (for navigation)
 - View Assist Companion App (recommended)
 
-The integration includes custom sentences and a ready-to-use automation blueprint for seamless voice control.
+The integration includes custom sentences, a ready-to-use automation blueprint, and automatic dashboard creation for seamless voice control.
 
 ## 🌡️ Temperature Data Sources
 

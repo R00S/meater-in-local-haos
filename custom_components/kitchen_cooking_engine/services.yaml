@@ -214,3 +214,33 @@ start_multi_appliance_cook:
           max: 1440
           unit_of_measurement: "minutes"
           mode: box
+
+start_simple_probe_cook:
+  name: Start Simple Probe Cook
+  description: >
+    Start a simple probe monitoring session with just a target temperature.
+    This creates a lightweight cooking session without requiring cut/doneness info.
+    Perfect for sub-processes in recipe guides or appliance-specific temperature monitoring.
+  target:
+    entity:
+      domain: sensor
+      integration: kitchen_cooking_engine
+  fields:
+    target_temp_c:
+      name: Target Temperature
+      description: Target internal temperature in Celsius (30-100). Required.
+      required: true
+      example: 74
+      selector:
+        number:
+          min: 30
+          max: 100
+          unit_of_measurement: "°C"
+          mode: box
+    session_name:
+      name: Session Name
+      description: Optional name for this cooking session (e.g., "Ninja Combi - Chicken")
+      required: false
+      example: "Probe monitoring for Ninja recipe"
+      selector:
+        text:

@@ -23,7 +23,8 @@ Hardware Translation:
 
 from dataclasses import dataclass
 from typing import List, Dict, Any
-from ninja_combi_data import NinjaCombiRecipe, NinjaCombiMode, TrayPosition, CookingPhase
+from .ninja_combi_data import NinjaCombiRecipe, NinjaCombiMode, TrayPosition
+from .recipes.models import CookingPhase
 
 
 # Mode translation mapping
