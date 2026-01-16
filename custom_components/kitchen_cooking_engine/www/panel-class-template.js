@@ -1433,48 +1433,28 @@ class KitchenCookingPanel extends LitElement {
       return;
     }
 
-    // Map Ninja Combi modes to valid cooking methods
-    const ninjaModeToCookingMethod = {
-      'combi_crisp': 'air_fryer',
-      'combi_bake': 'oven_bake',
-      'combi_roast': 'oven_roast',
-      'combi_meal': 'oven_bake',
-      'convection': 'oven_bake',
-      'air_fry': 'air_fryer',
-      'steam': 'steam',
-      'prove': 'oven_bake',
-      'sear': 'pan_sear',
-      'grill': 'grill',
-      'rice_pasta': 'boil',
-      'slow_cook': 'slow_cooker'
-    };
-
     // Show confirmation with recipe details
     const confirmMsg = `🚀 Start Cook with MEATER+\n\n` +
       `Recipe: ${recipe.name}\n` +
       `Target: ${recipe.target_temp_c}°C (${recipe.target_temp_f}°F)\n` +
       `Mode: ${recipe.mode}\n` +
       `Cook Time: ${recipe.cook_time_minutes} min\n\n` +
-      `This will start a cooking session with your MEATER probe.`;
+      `This will start a multi-appliance cooking session with your MEATER probe.`;
 
     if (confirm(confirmMsg)) {
-      // For Ninja Combi recipes, we need to use a generic cut with custom temperature
-      // since these recipes are appliance-specific and don't map to traditional meat cuts.
-      // We'll use ribeye steak (ID 100) as a generic meat cut with custom target temp.
-      // Map the Ninja mode to a valid cooking method
-      const cookingMethod = ninjaModeToCookingMethod[recipe.mode] || 'oven_roast';
-      
+      // Use start_multi_appliance_cook service for Ninja Combi recipes
+      // This service is designed for appliance-specific recipes with custom temperatures
       const serviceData = {
-        entity_id: meaterEntity,
-        cut_id: 100, // Ribeye steak as generic cut
-        doneness: 'done', // Generic doneness
-        cooking_method: cookingMethod,
-        data_source: 'international',
-        custom_target_temp_c: recipe.target_temp_c
+        recipe_id: recipe.id,
+        appliances: {
+          probe: meaterEntity
+        },
+        target_temp_c: recipe.target_temp_c,
+        cook_time_minutes: recipe.cook_time_minutes
       };
 
-      // Call the Home Assistant service to start the cook
-      this.hass.callService('kitchen_cooking_engine', 'start_cook', serviceData)
+      // Call the Home Assistant service to start the multi-appliance cook
+      this.hass.callService('kitchen_cooking_engine', 'start_multi_appliance_cook', serviceData)
         .then(async () => {
           // Wait a moment for the service to update the entity state
           await new Promise(resolve => setTimeout(resolve, 500));
