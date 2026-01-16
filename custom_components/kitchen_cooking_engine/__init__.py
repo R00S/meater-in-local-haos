@@ -56,6 +56,10 @@ from .swedish_cooking_data import (
     SWEDISH_MEAT_CATEGORIES,
 )
 from .api import async_register_api
+from .view_assist_dashboard import (
+    async_create_view_assist_dashboard,
+    async_remove_view_assist_dashboard,
+)
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -312,6 +316,18 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     if not hass.data[DOMAIN].get("panel_registered", False):
         await _async_register_panel(hass)
 
+    # Register View Assist compatible dashboard (only once, not per config entry)
+    if not hass.data[DOMAIN].get("view_assist_dashboard_registered", False):
+        try:
+            success = await async_create_view_assist_dashboard(hass)
+            if success:
+                hass.data[DOMAIN]["view_assist_dashboard_registered"] = True
+                _LOGGER.info("Kitchen Cooking Engine: View Assist dashboard registered")
+        except Exception as e:
+            _LOGGER.warning(
+                "Kitchen Cooking Engine: Failed to create View Assist dashboard: %s", e
+            )
+
     # Register API endpoints for cooking data
     async_register_api(hass)
 
@@ -339,6 +355,17 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     unload_ok = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
     if unload_ok:
         hass.data[DOMAIN].pop(entry.entry_id, None)
+    
+    # Clean up View Assist dashboard if this is the last config entry
+    entries = hass.config_entries.async_entries(DOMAIN)
+    if len(entries) <= 1:  # This is the last entry being unloaded
+        try:
+            await async_remove_view_assist_dashboard(hass)
+            hass.data[DOMAIN].pop("view_assist_dashboard_registered", None)
+            _LOGGER.info("Kitchen Cooking Engine: View Assist dashboard removed")
+        except Exception as e:
+            _LOGGER.warning("Failed to remove View Assist dashboard: %s", e)
+    
     return unload_ok
 
 

@@ -65,7 +65,7 @@ The cooking panel will automatically open on your View Assist device.
    - **Command Text 1:** "start cooking" (default)
    - **Command Text 2:** "open cooking" (optional alternative)
    - **Command Text 3:** "show cooking panel" (optional alternative)
-   - **Dashboard Path:** "/kitchen-cooking" (default)
+   - **Dashboard Path:** "/cooking-va/main" (default - View Assist dashboard)
    - **Response Text:** "Opening the cooking panel" (or customize)
 4. Click **Save**
 
@@ -82,6 +82,20 @@ The cooking panel will automatically open on your View Assist device.
 4. **Response**: Speaks "Opening the cooking panel" and updates View Assist state
 
 This follows the standard View Assist pattern - simple, clean, and reliable!
+
+## Dashboard Architecture
+
+The Kitchen Cooking Engine automatically creates a View Assist-compatible dashboard during installation:
+
+- **Main Panel:** `/kitchen-cooking` - Sidebar panel for normal Home Assistant use
+- **View Assist Dashboard:** `/cooking-va` - Hidden dashboard with iframe embedding the main panel
+  - Path: `/cooking-va/main`
+  - Not shown in sidebar (View Assist only)
+  - Single source of truth - iframe displays the full panel
+  - Zero code duplication - all changes to main panel automatically apply
+
+The View Assist dashboard is created automatically when you install the integration via HACS.
+No manual configuration required.
 
 ## Alternative: Manual Automation (Without Blueprint)
 
@@ -104,7 +118,7 @@ action:
   - action: view_assist.navigate
     data:
       device: "{{ target_satellite_device }}"
-      path: "/kitchen-cooking"
+      path: "/cooking-va/main"
   - set_conversation_response: "{{ response }}"
   - action: view_assist.set_state
     target:

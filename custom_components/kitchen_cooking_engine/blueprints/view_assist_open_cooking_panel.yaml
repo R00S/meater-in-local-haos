@@ -1,11 +1,12 @@
 blueprint:
   name: View Assist - Open Cooking Panel
   description: >
-    Automatically opens the Kitchen Cooking Engine panel on a View Assist device
-    when the "start cooking" voice command is detected.
+    Automatically opens the Kitchen Cooking Engine View Assist dashboard when
+    "start cooking" voice command is detected.
     
-    This blueprint works with View Assist Companion App to provide visual feedback 
-    for voice commands using the conversation platform.
+    This blueprint works with View Assist Companion App to provide visual feedback.
+    It navigates to the View Assist-compatible dashboard which embeds the full
+    cooking panel interface.
     
     Voice commands supported:
     - "start cooking"
@@ -13,7 +14,7 @@ blueprint:
     - "show cooking panel"
     
     Requires:
-    - Kitchen Cooking Engine integration installed
+    - Kitchen Cooking Engine integration installed (v0.4+)
     - View Assist Companion App installed on your device
     - View Assist integration configured in Home Assistant
   domain: automation
@@ -35,8 +36,8 @@ blueprint:
     
     dashboard_path:
       name: Dashboard Path
-      description: The path to the Kitchen Cooking Engine panel
-      default: "/kitchen-cooking"
+      description: The path to the Kitchen Cooking Engine View Assist dashboard
+      default: "/cooking-va/main"
     
     response_text:
       name: Response Text
