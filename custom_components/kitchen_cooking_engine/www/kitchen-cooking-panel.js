@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Jan 2026, 19:40 CET
+ * AUTO-GENERATED: 16 Jan 2026, 22:26 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Jan 2026, 19:40 CET
+// Last generated: 16 Jan 2026, 22:26 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5707,6 +5707,8 @@ class KitchenCookingPanel extends LitElement {
     // Phase 1: GUI Redesign - Navigation state
     this._currentPath = 'welcome';  // Start at welcome screen
     this._selectedAppliance = null;
+    // Phase 2: MEATER cooking mode state
+    this._showMeaterCooking = false;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -8686,6 +8688,25 @@ class KitchenCookingPanel extends LitElement {
    * Render MEATER path (cook type 6.1)
    */
   _renderMeaterPath() {
+    // If in cooking mode, show the setup form
+    if (this._showMeaterCooking) {
+      const entities = this._getEntities();
+      return html`
+        <div class="path-header">
+          <button class="back-btn" @click=${() => { 
+            this._showMeaterCooking = false;
+            this.requestUpdate();
+          }}>
+            ← Back to MEATER Path
+          </button>
+          <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
+        </div>
+        
+        ${this._renderSetupForm(entities)}
+      `;
+    }
+    
+    // Otherwise show the path buttons
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
@@ -8862,8 +8883,9 @@ class KitchenCookingPanel extends LitElement {
   // ============================================================================
 
   _startMeaterCooking() {
-    // TODO Phase 2: Implement MEATER cooking interface
-    this._showMessage('Coming Soon', 'MEATER cooking interface will be implemented in Phase 2.', false);
+    // Phase 2: Show MEATER cooking interface
+    this._showMeaterCooking = true;
+    this.requestUpdate();
   }
 
   _showRecentMeaterCooks() {
@@ -10849,7 +10871,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "93";
+const PANEL_VERSION = "94";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

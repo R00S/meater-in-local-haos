@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 16 Jan 2026, 20:46 UTC
-Last Change: v0.5.0.01 - GUI Redesign Phase 1: Welcome screen and navigation architecture
+Last Updated: 16 Jan 2026, 21:25 UTC
+Last Change: v0.5.0.02 - GUI Redesign Phase 2: MEATER path integration with cooking interface
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -19,6 +19,7 @@ This integration provides:
 - External API for 3rd party integrations and automations
 - Phase 3.1: Multi-appliance support with feature-based recipe matching
 - Phase 1 GUI Redesign: Welcome screen with appliance selector and path-based navigation
+- Phase 2 GUI Redesign: MEATER path with integrated cooking interface
 """
 
 from __future__ import annotations

@@ -178,6 +178,8 @@ class KitchenCookingPanel extends LitElement {
     // Phase 1: GUI Redesign - Navigation state
     this._currentPath = 'welcome';  // Start at welcome screen
     this._selectedAppliance = null;
+    // Phase 2: MEATER cooking mode state
+    this._showMeaterCooking = false;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -3157,6 +3159,25 @@ class KitchenCookingPanel extends LitElement {
    * Render MEATER path (cook type 6.1)
    */
   _renderMeaterPath() {
+    // If in cooking mode, show the setup form
+    if (this._showMeaterCooking) {
+      const entities = this._getEntities();
+      return html`
+        <div class="path-header">
+          <button class="back-btn" @click=${() => { 
+            this._showMeaterCooking = false;
+            this.requestUpdate();
+          }}>
+            ← Back to MEATER Path
+          </button>
+          <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
+        </div>
+        
+        ${this._renderSetupForm(entities)}
+      `;
+    }
+    
+    // Otherwise show the path buttons
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
@@ -3333,8 +3354,9 @@ class KitchenCookingPanel extends LitElement {
   // ============================================================================
 
   _startMeaterCooking() {
-    // TODO Phase 2: Implement MEATER cooking interface
-    this._showMessage('Coming Soon', 'MEATER cooking interface will be implemented in Phase 2.', false);
+    // Phase 2: Show MEATER cooking interface
+    this._showMeaterCooking = true;
+    this.requestUpdate();
   }
 
   _showRecentMeaterCooks() {
