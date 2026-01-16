@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 16 Jan 2026, 13:16 UTC
-Last Change: v0.4.2.01 - Add View Assist dashboard integration for zero-config compatibility
+Last Updated: 16 Jan 2026, 20:46 UTC
+Last Change: v0.5.0.01 - GUI Redesign Phase 1: Welcome screen and navigation architecture
 """
 
 DOMAIN = "kitchen_cooking_engine"
