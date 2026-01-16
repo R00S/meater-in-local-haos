@@ -38,6 +38,18 @@ The GUI redesign aims to:
 - Recipe cook flow with step-by-step guidance
 - MEATER probe integration within recipe cook
 - Star rating system for completed cooks
+- **Multilingual support**:
+  - Swedish and English implemented
+  - Architecture supports adding more languages in the future
+- **Measurement systems**:
+  - Swedish measurements (default)
+  - UK measurements (if different from Swedish)
+  - US measurements
+  - Pure metric (g, kg, cl, dl, l)
+  - User-selectable with system-wide preference
+- **Serving size adjustment**:
+  - Number of servings selectable in all recipes
+  - Automatic ingredient scaling based on servings
 
 ### 3.2 Out of Scope
 
@@ -81,6 +93,86 @@ The GUI redesign aims to:
 | Ninja Combi | Check appliance type = Ninja combi | Ninja Combi Path |
 | Any Other Appliance | Check appliance type ≠ MEATER/Ninja combi | AI Recipe Builder Path |
 | Previous Cooks | Navigate to history | Previous Cooks Path |
+
+### 4.3 Global System Features
+
+These features apply system-wide across all paths and cook types:
+
+#### 4.3.1 Multilingual Support
+
+**Requirement:** The system must be multilingual with Swedish and English implemented, and the ability to add more languages in the future.
+
+**Implementation:**
+- All UI text, labels, buttons, and messages must be translatable
+- Language selector in system settings
+- **Default language:** Based on Home Assistant's configured language
+- **Implemented languages:** Swedish (sv), English (en)
+- **Future extensibility:** Architecture supports adding additional languages through translation files
+
+**Translation coverage:**
+- All UI elements (buttons, labels, headers)
+- Path names and navigation
+- Cook type names
+- Recipe instructions and ingredient names
+- Error messages and notifications
+- Guide step instructions
+- System messages and alerts
+
+**Format:** Use i18n/l10n standard approach (e.g., JSON translation files or Home Assistant's translation system)
+
+#### 4.3.2 Measurement Systems
+
+**Requirement:** Measurements and scales should be selectable with Swedish measurements as default, UK (if different from Swedish), US, and pure metric as options.
+
+**Measurement System Options:**
+1. **Swedish** (default)
+   - Mass: gram (g), kilogram (kg)
+   - Volume: centiliter (cl), deciliter (dl), liter (l)
+   - Temperature: Celsius (°C)
+   
+2. **UK** (if different from Swedish)
+   - Imperial measurements where applicable
+   - Temperature: Celsius (°C)
+   
+3. **US**
+   - Mass: ounces (oz), pounds (lb)
+   - Volume: teaspoon (tsp), tablespoon (tbsp), cup, pint, quart, gallon
+   - Temperature: Fahrenheit (°F)
+   
+4. **Pure Metric**
+   - Mass: gram (g), kilogram (kg)
+   - Volume: milliliter (ml), centiliter (cl), deciliter (dl), liter (l)
+   - Temperature: Celsius (°C)
+
+**Implementation:**
+- Measurement system selector in system settings
+- Real-time conversion of all ingredient quantities
+- Temperature conversion for all cooking targets
+- Persistent preference across sessions
+- Applies to all recipes regardless of source (Ninja combi, AI, etc.)
+
+#### 4.3.3 Serving Size Adjustment
+
+**Requirement:** Number of servings should be selectable in all recipes.
+
+**Implementation:**
+- **Default servings:** Display recipe's original serving count
+- **Serving selector:** Dropdown or +/- buttons to adjust servings
+- **Range:** Typically 1-12 servings (configurable per recipe)
+- **Automatic scaling:** All ingredient quantities scale proportionally
+- **Display:** Show both "Original: 4 servings" and "Adjusted: 6 servings"
+- **Rounding:** Intelligent rounding for practical measurements (e.g., "1.33 eggs" → "1-2 eggs")
+
+**Applies to:**
+- Ninja combi recipe builder recipes
+- Ninja combi built-in recipes
+- AI recipe builder recipes
+- Previous cooks when restarted (can adjust before starting)
+
+**Location in UI:**
+- Recipe detail view (before clicking "Start Cooking")
+- Recipe cook flow (adjustable during active cook if needed)
+- Previous cooks detail view (when restarting)
 
 ---
 
@@ -380,6 +472,29 @@ This is a **unified cook type** that encompasses:
 
 **Source from specification:** "Recipe cooks - These are started from a new button in added in Ninja combi recipes and ai recipe builder recipes called 'Start cooking'."
 
+**Pre-Start Configuration:**
+
+Before clicking "Start Cooking", user can configure:
+
+**Serving Size Selector:**
+```
+┌────────────────────────────────────────────┐
+│   Servings:  [−]  4  [+]                   │
+│   Original recipe: 4 servings              │
+└────────────────────────────────────────────┘
+```
+- Adjust number of servings (1-12 typical range)
+- Ingredient quantities automatically scale
+- Shows original serving count for reference
+
+**Measurement System:**
+- Applied from user's system-wide preference
+- All quantities shown in selected measurement system (Swedish, UK, US, or Pure Metric)
+
+**Language:**
+- Applied from user's language preference (Swedish or English)
+- All text, labels, and instructions in selected language
+
 **Trigger:** User clicks "Start Cooking" button in:
 - Ninja combi recipe detail view (built-in recipes)
 - Ninja combi recipe builder created recipe
@@ -394,27 +509,29 @@ This is a **unified cook type** that encompasses:
 ```
 ┌────────────────────────────────────────────┐
 │   Combi-Crisp Chicken Thighs         45:32 │
-│                                 (timer)     │
+│   6 servings                     (timer)   │
 └────────────────────────────────────────────┘
 ```
 - Recipe title (top left)
+- Number of servings (below title)
 - Timer showing elapsed time since "Start Cooking" pressed (top right)
 - Format: MM:SS or HH:MM:SS for long cooks
 
 #### Ingredients List
 ```
 ┌────────────────────────────────────────────┐
-│   Ingredients:                             │
+│   Ingredients: (6 servings)                │
 │                                            │
-│   • 6 chicken thighs                       │
-│   • 2 tbsp olive oil                       │
-│   • **1 tsp paprika**                      │
+│   • 9 chicken thighs                       │
+│   • 3 tbsp olive oil                       │
+│   • **1½ tsp paprika**                     │
 │   • **Salt & pepper**                      │
-│   • 1 lemon, quartered                     │
+│   • 1-2 lemons, quartered                  │
 └────────────────────────────────────────────┘
 ```
 - **Source from specification:** "Below the title close to the top, a list of ingreadents with amounts. Ingredients that are used in the current guilde step are bold."
-- List all ingredients with quantities
+- List all ingredients with quantities (scaled to selected servings)
+- Quantities shown in user's selected measurement system
 - **Bold** ingredients currently used in active guide step
 - Position: Below title, near top of screen
 
@@ -630,6 +747,9 @@ interface CookHistory {
   notes?: string;
   peak_temp_c?: number;
   final_temp_c?: number;
+  servings?: number;  // Number of servings for this cook
+  measurement_system?: 'swedish' | 'uk' | 'us' | 'metric';  // Measurement system used
+  language?: string;  // Language used (e.g., 'sv', 'en')
 }
 ```
 
@@ -638,6 +758,7 @@ interface CookHistory {
 interface Recipe {
   id: string;
   title: string;
+  title_translations?: Record<string, string>;  // Multilingual titles
   source: 'ninja_combi_recipe_builder' | 'ninja_builtin' | 'ai_recipe_builder';
   main_appliance: string;
   secondary_appliances?: string[];  // Deselectable list
@@ -645,7 +766,32 @@ interface Recipe {
   steps: RecipeStep[];  // Guide steps
   total_time_minutes: number;
   meater_integration?: boolean;  // Can use meater as subprocess
+  default_servings: number;  // Original serving count
+  servings_range?: [number, number];  // Min and max servings (e.g., [1, 12])
 }
+```
+
+#### Ingredient Object
+```typescript
+interface Ingredient {
+  id: string;
+  name: string;
+  name_translations?: Record<string, string>;  // Multilingual names
+  quantity: number;  // Base quantity for default servings
+  unit: string;  // Unit in base system
+  unit_translations?: Record<string, string>;  // Translated units if needed
+  scaling_behavior?: 'linear' | 'stepped' | 'fixed';  // How it scales with servings
+}
+```
+
+#### User Preferences Object
+```typescript
+interface UserPreferences {
+  language: string;  // 'sv' (Swedish) or 'en' (English), extensible
+  measurement_system: 'swedish' | 'uk' | 'us' | 'metric';
+  temperature_unit: 'celsius' | 'fahrenheit';
+}
+```
 ```
 
 #### Recipe Step Object (Guide Step)
@@ -870,7 +1016,7 @@ The GUI redesign is considered successful when:
 ### 11.4 Previous Cooks System Works
 - [ ] All completed cooks appear in previous cook path
 - [ ] Cooks display with correct metadata (sorted by latest first)
-- [ ] Detail view shows full cook information (ingredients, ratings, notes)
+- [ ] Detail view shows full cook information (ingredients, ratings, notes, servings used)
 - [ ] Restart functionality works for all cook types
 - [ ] Filtered views work in path-specific recent lists (recent recipes)
 
@@ -880,6 +1026,34 @@ The GUI redesign is considered successful when:
 - [ ] Recipe cook interface is clean and readable
 - [ ] Mobile responsive design works on small screens
 - [ ] Icons and visual elements are intuitive
+
+### 11.6 Multilingual Support Works
+- [ ] Language selector in system settings
+- [ ] Swedish language fully implemented
+- [ ] English language fully implemented
+- [ ] All UI text translates correctly
+- [ ] Language preference persists across sessions
+- [ ] System defaults to Home Assistant's configured language
+
+### 11.7 Measurement Systems Work
+- [ ] Measurement system selector in system settings
+- [ ] Swedish measurements (default) work correctly
+- [ ] UK measurements work correctly (if different from Swedish)
+- [ ] US measurements work correctly
+- [ ] Pure metric measurements work correctly
+- [ ] Ingredient quantities convert accurately
+- [ ] Temperature values convert between °C and °F
+- [ ] Measurement preference persists across sessions
+
+### 11.8 Serving Size Adjustment Works
+- [ ] Serving size selector appears in all recipes
+- [ ] +/- buttons or dropdown adjust servings (1-12 range)
+- [ ] All ingredient quantities scale proportionally
+- [ ] Intelligent rounding for practical measurements
+- [ ] Original serving count shown for reference
+- [ ] Adjusted serving count displayed in recipe cook flow
+- [ ] Serving size can be adjusted before starting cook
+- [ ] Serving size saved in cook history
 
 ---
 
@@ -905,9 +1079,11 @@ The GUI redesign is considered successful when:
 
 ### Phase 4: Recipe Cook Flow (Weeks 5-6)
 - [ ] Build recipe cook screen layout
+- [ ] Implement serving size selector with scaling
 - [ ] Implement guide step navigation
 - [ ] Add timer functionality (time since pressing Start Cooking)
 - [ ] Build ingredient list with guide step highlighting
+- [ ] Apply measurement system conversion to ingredients
 - [ ] Create overview and detail guide pages
 - [ ] Implement MEATER probe subprocess integration (not a meater probe cook)
 - [ ] Build star rating interface (ease and result)
@@ -929,12 +1105,28 @@ The GUI redesign is considered successful when:
 - [ ] Implement filtered recent recipes for selected appliance
 - [ ] Test full AI recipe cook workflow
 
-### Phase 7: Polish & Testing (Weeks 9-10)
+### Phase 7: Multilingual & Measurement Systems (Week 9)
+- [ ] Implement translation infrastructure (i18n)
+- [ ] Create Swedish translation files
+- [ ] Create English translation files
+- [ ] Build language selector in settings
+- [ ] Implement measurement system conversion engine
+- [ ] Build measurement system selector in settings
+- [ ] Test Swedish measurement system (default)
+- [ ] Test UK measurement system
+- [ ] Test US measurement system
+- [ ] Test pure metric system
+- [ ] Test language switching across all screens
+- [ ] Validate ingredient scaling with all measurement systems
+
+### Phase 8: Polish & Testing (Week 10)
 - [ ] Visual design refinement
 - [ ] Mobile responsive testing
 - [ ] Edge case handling
 - [ ] Performance optimization
-- [ ] User acceptance testing
+- [ ] User acceptance testing in both languages
+- [ ] Test all measurement system conversions
+- [ ] Test serving size scaling edge cases
 - [ ] Documentation updates
 
 ---
@@ -1011,10 +1203,13 @@ The GUI redesign is considered successful when:
 | **Recipe cook** | Unified cook type encompassing ninja combi recipe builder, ninja combi recipe (built-in), and ai recipe builder recipes (cook type 6.2) |
 | **Guide Step** | Individual step in the recipe cook flow |
 | **Main Appliance** | Primary cooking device used in a recipe cook |
-| **Secondary Appliances** | Additional deselectable appliances available for recipe generation |
+| **Measurement System** | User's preferred unit system: Swedish (default), UK, US, or Pure Metric |
+| **Multilingual** | System support for multiple languages (Swedish and English implemented, extensible) |
 | **Path** | A navigation flow within the GUI (meater path, ninja combi path, ai recipe builder path, previous cook path) |
 | **Previous Cooks** | History list showing all completed cooking sessions |
 | **Recipe Cook Flow** | A structured cooking session with step-by-step guide, started by "Start Cooking" button |
+| **Secondary Appliances** | Additional deselectable appliances available for recipe generation |
+| **Serving Size** | Number of portions a recipe makes; selectable and scales ingredient quantities |
 | **Subprocess** | MEATER probe monitoring running within a recipe cook (not a meater probe cook, just a sub process) |
 | **Welcome Screen** | Initial landing page with appliance selector |
 
@@ -1026,6 +1221,8 @@ The GUI redesign is considered successful when:
 |---------|------|---------|--------|
 | 2.0 | 2026-01-16 | Initial GUI redesign ToR based on Cooking gui.odt | AI Agent |
 | 2.1 | 2026-01-16 | Corrected terminology to match ODT exactly: paths/cooks naming, guide steps, recipe cooks as unified type. Added deselectable secondary appliances. | AI Agent |
+| 2.2 | 2026-01-16 | Simplified cook type names: "Meater probe cook" and "Recipe cook". Changed back to "recipe cook flow". Never abbreviate "Ninja combi" to just "Ninja". | AI Agent |
+| 2.3 | 2026-01-16 | Added three major features: (a) Multilingual support (Swedish/English), (b) Measurement systems (Swedish default, UK, US, Pure Metric), (c) Serving size adjustment for all recipes. | AI Agent |
 | 2.2 | 2026-01-16 | Simplified cook type names: "Meater probe cook" and "Recipe cook". Changed back to "recipe cook flow". Never abbreviate "Ninja combi" to just "Ninja". | AI Agent |
 
 ---
