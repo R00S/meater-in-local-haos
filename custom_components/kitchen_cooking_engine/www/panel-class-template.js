@@ -1421,12 +1421,20 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _startMeaterCook(recipe) {
-    // Find the currently selected MEATER cooking session entity
-    // Use the same entity that's selected in the UI
-    const meaterEntity = this._selectedEntity;
+    // Find a MEATER cooking session entity
+    // Look for the selected entity first, then search if not found
+    let meaterEntity = this._selectedEntity;
+    
+    if (!meaterEntity) {
+      // Search for any MEATER cooking session entity
+      meaterEntity = Object.keys(this.hass.states).find(entity_id => 
+        entity_id.includes('kitchen_cooking_engine') && 
+        entity_id.includes('cooking_session')
+      );
+    }
 
     if (!meaterEntity) {
-      this._showMessage('No MEATER Sensor Found', '⚠️ Please select a MEATER cooking session sensor first.', true);
+      this._showMessage('No MEATER Sensor Found', '⚠️ Please ensure your MEATER device is connected and the Kitchen Cooking Engine integration is set up.', true);
       return;
     }
 

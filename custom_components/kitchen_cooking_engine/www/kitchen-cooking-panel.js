@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Jan 2026, 13:50 CET
+ * AUTO-GENERATED: 16 Jan 2026, 13:55 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Jan 2026, 13:50 CET
+// Last generated: 16 Jan 2026, 13:55 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -6950,12 +6950,20 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _startMeaterCook(recipe) {
-    // Find the currently selected MEATER cooking session entity
-    // Use the same entity that's selected in the UI
-    const meaterEntity = this._selectedEntity;
+    // Find a MEATER cooking session entity
+    // Look for the selected entity first, then search if not found
+    let meaterEntity = this._selectedEntity;
+    
+    if (!meaterEntity) {
+      // Search for any MEATER cooking session entity
+      meaterEntity = Object.keys(this.hass.states).find(entity_id => 
+        entity_id.includes('kitchen_cooking_engine') && 
+        entity_id.includes('cooking_session')
+      );
+    }
 
     if (!meaterEntity) {
-      this._showMessage('No MEATER Sensor Found', '⚠️ Please select a MEATER cooking session sensor first.', true);
+      this._showMessage('No MEATER Sensor Found', '⚠️ Please ensure your MEATER device is connected and the Kitchen Cooking Engine integration is set up.', true);
       return;
     }
 
@@ -10212,7 +10220,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "89";
+const PANEL_VERSION = "90";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
