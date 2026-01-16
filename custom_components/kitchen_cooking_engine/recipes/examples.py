@@ -23,10 +23,11 @@ AIR_FRIED_WINGS = UnifiedRecipe(
     alternative_appliances=[["multifry"], ["standard_oven_with_convection"]],
     phases=[
         CookingPhase(
-            name="Air Fry",
+            feature_name="air_fry",
             temperature_c=200,
+            temperature_f=392,
             duration_minutes=25,
-            mode="Air Fry"
+            description="Air Fry"
         )
     ],
     use_probe=True,
@@ -72,10 +73,11 @@ PRESSURE_COOKED_BEANS = UnifiedRecipe(
     alternative_appliances=[["pressure_cooker"]],
     phases=[
         CookingPhase(
-            name="Pressure Cook",
+            feature_name="pressure_cook",
             temperature_c=120,
+            temperature_f=248,
             duration_minutes=30,
-            mode="High Pressure"
+            description="High Pressure"
         )
     ],
     use_probe=False,
@@ -124,10 +126,11 @@ PERFECT_ROAST_CHICKEN = UnifiedRecipe(
     ],
     phases=[
         CookingPhase(
-            name="Roast",
+            feature_name="roast",
             temperature_c=200,
+            temperature_f=392,
             duration_minutes=75,
-            mode="Roast"
+            description="Roast"
         )
     ],
     use_probe=True,
@@ -175,10 +178,11 @@ PAN_SEARED_STEAK = UnifiedRecipe(
     alternative_appliances=[["multifry", "meater_plus"]],
     phases=[
         CookingPhase(
-            name="Sear",
+            feature_name="sear",
             temperature_c=230,
+            temperature_f=446,
             duration_minutes=8,
-            mode="High Heat Sear"
+            description="High Heat Sear"
         )
     ],
     use_probe=True,
@@ -232,10 +236,11 @@ CRISPY_FRIES = UnifiedRecipe(
     ],
     phases=[
         CookingPhase(
-            name="Air Fry",
+            feature_name="air_fry",
             temperature_c=200,
+            temperature_f=392,
             duration_minutes=25,
-            mode="Air Fry"
+            description="Air Fry"
         )
     ],
     use_probe=False,
@@ -282,10 +287,11 @@ STEAMED_VEGETABLES = UnifiedRecipe(
     ],
     phases=[
         CookingPhase(
-            name="Steam",
+            feature_name="steam",
             temperature_c=100,
+            temperature_f=212,
             duration_minutes=8,
-            mode="Steam"
+            description="Steam"
         )
     ],
     use_probe=False,
