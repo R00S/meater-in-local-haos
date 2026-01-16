@@ -214,6 +214,7 @@ The GUI redesign aims to:
    - Show selected main appliance name
    - Display main appliance features
    - List all available secondary appliances (names only, no features)
+   - **Secondary appliances are deselectable** (checkboxes to include/exclude)
 
 2. **Start AI Recipe Builder** (Button 1)
    - Launch AI Recipe Builder
@@ -237,9 +238,9 @@ The GUI redesign aims to:
 │   Features: Air Fry, Grill, Bake, Roast   │
 │                                            │
 │   Secondary Appliances Available:          │
-│   • Stovetop                               │
-│   • Microwave                              │
-│   • MEATER+ Probe                          │
+│   ☑ Stovetop                               │
+│   ☑ Microwave                              │
+│   ☑ MEATER+ Probe                          │
 │                                            │
 │   ┌──────────────────────────────────┐   │
 │   │  🤖  Create AI Recipe            │   │
@@ -336,48 +337,58 @@ The GUI redesign aims to:
 
 ## 6. Cook Types
 
-The system supports four distinct cook types:
+The system supports three distinct cook types as defined in the source specification:
 
-### 6.1 MEATER Only Cook
+### 6.1 A Meater Only Cook
 - Temperature-based cooking with MEATER probe
 - Protein/cut selection with target temperature
 - Real-time temperature monitoring
 - ETA calculation
 - Notifications at key milestones
+- **This is standalone MEATER monitoring**, not part of a recipe
 
-### 6.2 Recipe Cook
-- Started from Ninja Combi recipes or AI Recipe Builder
-- Full recipe with ingredients and steps
-- Step-by-step guidance
-- Optional MEATER probe integration as subprocess
-- Star ratings on completion
+### 6.2 A Recipe Cooks
+This is a **unified cook type** that encompasses:
+- **Ninja combi recipe builder recipes** - Custom recipes created with Ninja builder
+- **Ninja recipe cooks** - Pre-defined built-in Ninja Combi recipes
+- **AI recipe builder recipes** - AI-generated custom recipes for any appliance
 
-### 6.3 AI Recipe Builder Cook
-- AI-generated custom recipe
-- Ingredient-based creation
-- Cooking style selection
-- Appliance-aware generation
-- Full recipe structure (same as Recipe Cook)
+**All recipe cooks share the same flow:**
+- Started by clicking "Start Cooking" button in recipe detail view
+- Full recipe with ingredients list and step-by-step instructions
+- Recipe title on top with elapsed timer
+- Step-by-step guide with overview page + detail pages
+- Ingredients that are used in current guide step are **bolded**
+- Optional MEATER probe integration as subprocess within the recipe
+- Final rating page with two 1-5 star selectors (ease and result)
+- Navigation: Back button (left), MEATER info (center if active), Next/Finish button (right)
 
-### 6.4 Ninja Combi Recipe Cook
-- Pre-defined Ninja Combi recipes
-- Multi-phase cooking programs
-- Tray position guidance
-- Optional MEATER probe monitoring
-- Full recipe structure (same as Recipe Cook)
+**Important distinction:** When MEATER probe is used within a recipe cook, **it is a subprocess of the recipe cook**, not a standalone "meater only cook".
+
+### 6.3 Can Also Use a Meater
+- Recipe cooks (type 6.2) can optionally integrate MEATER probe monitoring
+- This is activated via "Start MEATER probe" button in relevant recipe steps
+- The probe monitors temperature during the recipe
+- This is **not** a separate cook type, but a feature within recipe cooks
+- MEATER data is saved as part of the recipe cook history
 
 ---
 
-## 7. Recipe Cook Flow (Detailed Specification)
+## 7. Recipe Cooks Flow (Detailed Specification)
 
 ### 7.1 Starting a Recipe Cook
 
-**Trigger:** User clicks "Start Cooking" button in:
-- Ninja Combi recipe detail view
-- AI Recipe Builder generated recipe
-- Previous cooks detail view (restart)
+**Source from specification:** "Recipe cooks - These are started from a new button in added in Ninja combi recipes and ai recipe builder recipes called 'Start cooking'."
 
-### 7.2 Recipe Cook Screen Components
+**Trigger:** User clicks "Start Cooking" button in:
+- Ninja Combi recipe detail view (built-in recipes)
+- Ninja Combi recipe builder created recipe
+- AI Recipe Builder generated recipe
+- Previous cooks detail view (restart any recipe cook)
+
+### 7.2 Recipe Cooks Screen Components
+
+**Source from specification:** "It has: A recipe title on top with a timer with the time passed since pressing Start cooking in the top right corner."
 
 #### Header Section
 ```
@@ -402,11 +413,14 @@ The system supports four distinct cook types:
 │   • 1 lemon, quartered                     │
 └────────────────────────────────────────────┘
 ```
+- **Source from specification:** "Below the title close to the top, a list of ingreadents with amounts. Ingredients that are used in the current guilde step are bold."
 - List all ingredients with quantities
-- **Bold** ingredients currently used in active step
+- **Bold** ingredients currently used in active guide step
 - Position: Below title, near top of screen
 
 #### Step-by-Step Guide (Middle Section)
+
+**Source from specification:** "A step by step guide guilde in the middle. First guide page is a step overview with expected time of each step. The other guilde pages are detailed guide for each step."
 
 **First Page: Overview**
 ```
@@ -455,6 +469,9 @@ The system supports four distinct cook types:
 - Clear indication of current step (X of Y)
 
 **Optional: MEATER Probe Integration**
+
+**Source from specification:** "They can also have a start meater probe button that starts a the use of a probe with the info used at the button. This is not a meater probe cook, just a sub process of the recipe cook"
+
 ```
 ┌────────────────────────────────────────────┐
 │   Step 3 of 5: Steam Phase                 │
@@ -477,11 +494,13 @@ The system supports four distinct cook types:
 └────────────────────────────────────────────┘
 ```
 - Button to start MEATER probe monitoring
-- Pre-populated with recipe target temp
-- Starts as subprocess (not standalone cook)
+- Pre-populated with recipe target temp and info
+- **This is not a meater probe cook, just a sub process of the recipe cook**
 - Temperature progress shown in footer
 
 **Final Page: Rating**
+
+**Source from specification:** "Last guide page has two 1-5 star selectors, one for how easy it was and one for how good the result was."
 ```
 ┌────────────────────────────────────────────┐
 │   Cook Complete! 🎉                        │
@@ -505,6 +524,9 @@ The system supports four distinct cook types:
 - Optional text field for notes
 
 #### Footer Controls
+
+**Source from specification:** "At the button there is a: Back button to the left, Meater probe info with progress, target and stop probe button in the middle, A next/finish button to the right."
+
 ```
 ┌────────────────────────────────────────────┐
 │                                            │
@@ -513,22 +535,24 @@ The system supports four distinct cook types:
 └────────────────────────────────────────────┘
 ```
 
-**Left Button: Back**
-- Navigate to previous step
+**Left: Back button**
+- Navigate to previous guide step
 - Disabled on first page (overview)
 
-**Center Section: MEATER Info** (if probe active)
+**Center: Meater probe info** (if probe active)
 - Current temperature / Target temperature
 - Progress percentage
-- "Stop" button to end probe monitoring
+- "Stop probe" button to end probe monitoring
 - Hidden if probe not in use
 
-**Right Button: Next / Finish**
+**Right: Next/Finish button**
 - "Next" on all pages except last
 - "Finish" on final (rating) page
-- Advances to next step
+- Advances to next guide step
 
 ### 7.3 Cook Completion and Saving
+
+**Source from specification:** "One a Recipe cook is finished by pressing the finish button it is saved and can be revied or restarted from previous recipes."
 
 When user presses "Finish" on final page:
 
@@ -552,18 +576,20 @@ When user presses "Finish" on final page:
 
 ### 7.4 MEATER Probe as Subprocess
 
+**Source from specification:** "They can also have a start meater probe button that starts a the use of a probe with the info used at the button. This is not a meater probe cook, just a sub process of the recipe cook"
+
 **Important Distinction:**
-- Recipe cook is the parent process
+- Recipe cooks (type 6.2) is the parent process
 - MEATER monitoring is a subprocess
-- This is **not** a standalone MEATER cook
+- **This is not a meater probe cook, just a sub process of the recipe cook**
 - Probe data enhances recipe, doesn't define it
 
 **Integration Points:**
-- "Start MEATER Probe" button appears in relevant recipe steps
-- Pre-configured with recipe-specific targets
+- "Start MEATER Probe" button appears in relevant guide steps
+- Pre-configured with recipe-specific targets and info
 - Temperature displayed in footer during active monitoring
-- Can be stopped independently without ending recipe
-- Temperature data saved with recipe cook history
+- Can be stopped independently without ending recipe cooks
+- Temperature data saved with recipe cooks history
 
 ---
 
@@ -587,7 +613,11 @@ interface Appliance {
 interface CookHistory {
   id: string;
   recipe_name: string;
-  cook_type: 'meater_only' | 'recipe' | 'ai_recipe' | 'ninja_recipe';
+  cook_type: 'meater_only_cook' | 'recipe_cooks';
+  // recipe_cooks encompasses:
+  //  - ninja combi recipe builder recipes
+  //  - ninja recipe cooks (built-in)
+  //  - ai recipe builder recipes
   main_appliance: string;
   start_time: Date;
   end_time: Date;
@@ -608,24 +638,24 @@ interface CookHistory {
 interface Recipe {
   id: string;
   title: string;
-  source: 'ninja_builtin' | 'ai_generated' | 'user_created';
+  source: 'ninja_combi_recipe_builder' | 'ninja_builtin' | 'ai_recipe_builder';
   main_appliance: string;
-  secondary_appliances?: string[];
+  secondary_appliances?: string[];  // Deselectable list
   ingredients: Ingredient[];
-  steps: RecipeStep[];
+  steps: RecipeStep[];  // Guide steps
   total_time_minutes: number;
-  meater_integration?: boolean;
+  meater_integration?: boolean;  // Can use meater as subprocess
 }
 ```
 
-#### Recipe Step Object
+#### Recipe Step Object (Guide Step)
 ```typescript
 interface RecipeStep {
   step_number: number;
   title: string;
   instructions: string[];
   estimated_time_minutes: number;
-  ingredients_used?: string[];  // Refs to ingredient IDs
+  ingredients_used?: string[];  // Refs to ingredient IDs (will be bolded)
   meater_config?: {
     target_temp_c: number;
     doneness: string;
@@ -638,11 +668,11 @@ interface RecipeStep {
 ### 8.2 Navigation State Management
 
 The system must maintain:
-- Current navigation path
+- Current navigation path (meater path, ninja combi path, ai recipe builder path, previous cook path)
 - Active appliance selection
-- Recipe cook session state
-- MEATER subprocess state (if active)
-- Step navigation history
+- Recipe cooks session state
+- MEATER subprocess state (if active within recipe cooks)
+- Guide step navigation history
 
 ### 8.3 Component Reusability
 
@@ -665,28 +695,28 @@ The system must maintain:
 
 ```yaml
 # New services needed
-kitchen_cooking_engine.start_recipe_cook:
-  description: Start a recipe-based cooking session
+kitchen_cooking_engine.start_recipe_cooks:
+  description: Start a recipe cooks session (includes ninja/ai recipes)
   fields:
     recipe_id: string
     appliance_id: string
 
-kitchen_cooking_engine.advance_recipe_step:
-  description: Move to next step in recipe
+kitchen_cooking_engine.advance_guide_step:
+  description: Move to next guide step in recipe cooks
   fields:
     session_id: string
     direction: 'next' | 'previous'
 
-kitchen_cooking_engine.start_probe_subprocess:
-  description: Start MEATER probe as subprocess in recipe
+kitchen_cooking_engine.start_meater_subprocess:
+  description: Start MEATER probe as subprocess in recipe cooks (not a meater probe cook)
   fields:
     session_id: string
     target_temp_c: number
     cut_id: number
     doneness: string
 
-kitchen_cooking_engine.complete_recipe_cook:
-  description: Finish recipe and save to history
+kitchen_cooking_engine.complete_recipe_cooks:
+  description: Finish recipe cooks by pressing finish button and save to history
   fields:
     session_id: string
     rating_ease: number
@@ -694,7 +724,7 @@ kitchen_cooking_engine.complete_recipe_cook:
     notes: string
 
 kitchen_cooking_engine.restart_cook:
-  description: Restart a previous cook from history
+  description: Restart a previous cook from previous cooks path
   fields:
     history_id: string
 ```
@@ -708,8 +738,8 @@ kitchen_cooking_engine.restart_cook:
 - User ratings and notes
 
 **Session Storage:**
-- Active recipe cook state
-- Current step index
+- Active recipe cooks state
+- Current guide step index
 - Timer start time
 - MEATER subprocess state
 
@@ -746,66 +776,68 @@ kitchen_cooking_engine.restart_cook:
 
 ## 10. User Flows
 
-### 10.1 Temperature Cooking with MEATER
+### 10.1 Temperature Cooking with MEATER (A Meater Only Cook)
 ```
 Welcome Screen
   → Click MEATER appliance
-  → MEATER Path
+  → Meater Path
   → Click "Start MEATER Cooking"
   → Select protein/cut
   → Set target/doneness
   → Monitor temperature
   → Complete cook
-  → Save to history
+  → Save to history (as meater_only_cook)
 ```
 
-### 10.2 Ninja Combi Built-in Recipe
+### 10.2 Ninja Combi Built-in Recipe (Recipe Cooks)
 ```
 Welcome Screen
   → Click Ninja Combi appliance
   → Ninja Combi Path
-  → Click "Built-in Recipes"
+  → Click "Built-in Recipes" (ninja combi recipe selector)
   → Browse/select recipe
   → Click "Start Cooking"
-  → Recipe Cook Flow
-    → View overview
-    → Follow steps
-    → (Optional) Start MEATER probe
-    → Rate cook
-  → Complete and save
+  → Recipe Cooks Flow
+    → View overview (first guide page)
+    → Follow guide steps
+    → (Optional) Start MEATER probe as subprocess
+    → Rate cook (ease and result)
+  → Press finish button
+  → Complete and save to previous cooks
 ```
 
-### 10.3 AI-Generated Recipe for Any Appliance
+### 10.3 AI-Generated Recipe for Any Appliance (Recipe Cooks)
 ```
 Welcome Screen
   → Click any appliance (e.g., MultiFry)
   → AI Recipe Builder Path
     → See appliance features
-    → See secondary appliances
+    → See secondary appliances (deselectable checkboxes)
   → Click "Create AI Recipe"
   → Select ingredients
   → Choose cooking style
   → Generate recipes
   → Pick recipe
   → Click "Start Cooking"
-  → Recipe Cook Flow
-    → Follow generated steps
+  → Recipe Cooks Flow
+    → Follow generated guide steps
     → Rate cook
-  → Complete and save
+  → Press finish button
+  → Complete and save to previous cooks
 ```
 
 ### 10.4 Restart Previous Cook
 ```
 Welcome Screen
   → Click "Previous Cooks"
-  → Previous Cooks Path
-  → Browse history list
+  → Previous Cook Path
+  → Browse history list (sorted by latest first)
   → Click specific cook
-  → View full details
+  → View full details (ingredients, ratings, notes)
   → Click "Restart This Cook"
   → System determines cook type and launches appropriate flow
-    → MEATER Cook: Go to MEATER interface with saved settings
-    → Recipe Cook: Go to Recipe Cook Flow with saved recipe
+    → meater_only_cook: Go to MEATER interface with saved settings
+    → recipe_cooks: Go to Recipe Cooks Flow with saved recipe
 ```
 
 ---
@@ -820,31 +852,32 @@ The GUI redesign is considered successful when:
 - [ ] Navigation path is clear and predictable
 
 ### 11.2 All Cook Types Are Accessible
-- [ ] MEATER-only cooks can be started
-- [ ] Ninja Combi recipes can be accessed and cooked
+- [ ] Meater only cooks can be started (type 6.1)
+- [ ] Recipe cooks can be started (type 6.2 - includes Ninja and AI recipes)
+- [ ] Ninja Combi recipes (built-in and builder) can be accessed and cooked
 - [ ] AI recipe generation works for all appliances
 - [ ] Previous cooks can be browsed and restarted
 
-### 11.3 Recipe Cook Flow Functions Completely
-- [ ] Recipe overview displays correctly
-- [ ] Step-by-step navigation works (next/back)
-- [ ] Ingredients bold correctly based on current step
-- [ ] Timer displays elapsed time accurately
-- [ ] MEATER probe can be started as subprocess
-- [ ] Star ratings can be entered
-- [ ] Cook saves to history with all data
+### 11.3 Recipe Cooks Flow Functions Completely
+- [ ] Recipe overview displays correctly (first guide page)
+- [ ] Guide step navigation works (next/back buttons)
+- [ ] Ingredients bold correctly based on current guide step
+- [ ] Timer displays elapsed time accurately since pressing Start Cooking
+- [ ] MEATER probe can be started as subprocess (not a meater probe cook)
+- [ ] Star ratings can be entered (ease and result, 1-5 stars)
+- [ ] Pressing finish button saves cook to previous cooks with all data
 
-### 11.4 History System Works
-- [ ] All completed cooks appear in history
-- [ ] Cooks display with correct metadata
-- [ ] Detail view shows full cook information
+### 11.4 Previous Cooks System Works
+- [ ] All completed cooks appear in previous cook path
+- [ ] Cooks display with correct metadata (sorted by latest first)
+- [ ] Detail view shows full cook information (ingredients, ratings, notes)
 - [ ] Restart functionality works for all cook types
-- [ ] Filtered views work in path-specific recent lists
+- [ ] Filtered views work in path-specific recent lists (recent recipes)
 
 ### 11.5 Visual Design Is Cohesive
 - [ ] Welcome screen is attractive and clear
-- [ ] Path screens follow consistent design language
-- [ ] Recipe cook interface is clean and readable
+- [ ] Path screens follow consistent design language (meater path, ninja combi path, ai recipe builder path, previous cook path)
+- [ ] Recipe cooks interface is clean and readable
 - [ ] Mobile responsive design works on small screens
 - [ ] Icons and visual elements are intuitive
 
@@ -858,42 +891,43 @@ The GUI redesign is considered successful when:
 - [ ] Create basic path screens (skeleton views)
 - [ ] Set up navigation state management
 
-### Phase 2: MEATER Path (Week 3)
+### Phase 2: Meater Path (Week 3)
 - [ ] Integrate existing MEATER cooking interface
-- [ ] Implement filtered recent cooks for MEATER
-- [ ] Test MEATER-only cook flow end-to-end
+- [ ] Implement filtered recent recipes for MEATER
+- [ ] Test meater only cook flow end-to-end
 
-### Phase 3: Previous Cooks (Week 4)
+### Phase 3: Previous Cook Path (Week 4)
 - [ ] Build cook history data model
 - [ ] Create previous cooks list component
 - [ ] Implement cook detail view
 - [ ] Add restart functionality
-- [ ] Build filtering system for path-specific views
+- [ ] Build filtering system for path-specific views (recent recipes)
 
-### Phase 4: Recipe Cook Flow (Weeks 5-6)
-- [ ] Build recipe cook screen layout
-- [ ] Implement step navigation
-- [ ] Add timer functionality
-- [ ] Build ingredient list with highlighting
-- [ ] Create overview and detail step pages
-- [ ] Implement MEATER probe subprocess integration
-- [ ] Build star rating interface
-- [ ] Wire up save to history
+### Phase 4: Recipe Cooks Flow (Weeks 5-6)
+- [ ] Build recipe cooks screen layout
+- [ ] Implement guide step navigation
+- [ ] Add timer functionality (time since pressing Start Cooking)
+- [ ] Build ingredient list with guide step highlighting
+- [ ] Create overview and detail guide pages
+- [ ] Implement MEATER probe subprocess integration (not a meater probe cook)
+- [ ] Build star rating interface (ease and result)
+- [ ] Wire up finish button to save to previous cooks
 
-### Phase 5: Ninja Path (Week 7)
-- [ ] Integrate existing Ninja recipe builder
-- [ ] Connect built-in recipe selector
-- [ ] Link to AI Recipe Builder with Ninja preselected
-- [ ] Implement filtered recent Ninja cooks
-- [ ] Test full Ninja recipe cook flow
+### Phase 5: Ninja Combi Path (Week 7)
+- [ ] Integrate existing Ninja combi recipe builder
+- [ ] Connect ninja combi recipe selector (built-in recipes)
+- [ ] Link to AI Recipe Builder path with Ninja preselected
+- [ ] Implement filtered recent recipes for Ninja
+- [ ] Test full Ninja recipe cooks flow
 
 ### Phase 6: AI Recipe Builder Path (Week 8)
 - [ ] Build AI Recipe Builder path screen
 - [ ] Display appliance features
+- [ ] Add deselectable secondary appliances (checkboxes)
 - [ ] Integrate existing AI recipe generation
-- [ ] Connect to recipe cook flow
-- [ ] Implement filtered recent AI recipes
-- [ ] Test full AI recipe workflow
+- [ ] Connect to recipe cooks flow
+- [ ] Implement filtered recent recipes for selected appliance
+- [ ] Test full AI recipe cooks workflow
 
 ### Phase 7: Polish & Testing (Weeks 9-10)
 - [ ] Visual design refinement
@@ -972,11 +1006,16 @@ The GUI redesign is considered successful when:
 |------|------------|
 | **Appliance** | A cooking device configured in the system (MEATER probe, Ninja Combi, etc.) |
 | **Cook** | A cooking session from start to completion |
-| **Cook Type** | Category of cooking session (MEATER-only, recipe, AI recipe, Ninja recipe) |
-| **Main Appliance** | Primary cooking device used in a recipe cook |
-| **Path** | A navigation flow within the GUI (MEATER Path, Ninja Path, etc.) |
-| **Recipe Cook** | A structured cooking session with step-by-step guidance |
-| **Subprocess** | MEATER probe monitoring running within a recipe cook (not standalone) |
+| **Cook Type** | Category of cooking session: "a meater only cook" (type 6.1) or "a recipe cooks" (type 6.2) |
+| **A Meater Only Cook** | Standalone temperature monitoring with MEATER probe (cook type 6.1) |
+| **A Recipe Cooks** | Unified cook type encompassing ninja combi recipe builder, ninja recipe cooks, and ai recipe builder recipes (cook type 6.2) |
+| **Guide Step** | Individual step in the recipe cooks flow |
+| **Main Appliance** | Primary cooking device used in a recipe cooks |
+| **Secondary Appliances** | Additional deselectable appliances available for recipe generation |
+| **Path** | A navigation flow within the GUI (meater path, ninja combi path, ai recipe builder path, previous cook path) |
+| **Previous Cooks** | History list showing all completed cooking sessions |
+| **Recipe Cooks** | A structured cooking session with step-by-step guide, started by "Start Cooking" button |
+| **Subprocess** | MEATER probe monitoring running within a recipe cooks (not a meater probe cook, just a sub process) |
 | **Welcome Screen** | Initial landing page with appliance selector |
 
 ---
@@ -986,6 +1025,7 @@ The GUI redesign is considered successful when:
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
 | 2.0 | 2026-01-16 | Initial GUI redesign ToR based on Cooking gui.odt | AI Agent |
+| 2.1 | 2026-01-16 | Corrected terminology to match ODT exactly: paths/cooks naming, guide steps, recipe cooks as unified type. Added deselectable secondary appliances. | AI Agent |
 
 ---
 
