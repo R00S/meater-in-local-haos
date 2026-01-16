@@ -111,8 +111,9 @@ class KitchenCookingPanel extends LitElement {
       _messageDialogContent: { type: String },
       _messageDialogIsError: { type: Boolean },
       // Phase 1: GUI Redesign - Navigation state
-      _currentPath: { type: String },  // 'welcome', 'meater', 'ninja_combi', 'ai_recipe_builder', 'previous_cooks'
+      _currentPath: { type: String },  // 'welcome', 'meater', 'ninja_combi', 'ai_recipe_builder', 'previous_cooks', 'recent_meater'
       _selectedAppliance: { type: Object },  // Selected appliance from welcome screen
+      _showMeaterCooking: { type: Boolean },  // Show MEATER cooking form in MEATER path
     };
   }
 
