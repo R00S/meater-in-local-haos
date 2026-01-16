@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 16 Jan 2026, 21:25 UTC
-Last Change: v0.5.0.02 - GUI Redesign Phase 2: MEATER path integration with cooking interface
+Last Updated: 16 Jan 2026, 21:30 UTC
+Last Change: v0.5.0.03 - GUI Redesign Phase 2: MEATER path with filtered recent cooks
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "94"
+PANEL_VERSION = "95"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

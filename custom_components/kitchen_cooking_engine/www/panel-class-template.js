@@ -2582,6 +2582,9 @@ class KitchenCookingPanel extends LitElement {
       case 'meater':
         return this._renderMeaterPath();
       
+      case 'recent_meater':
+        return this._renderRecentMeaterCooks();
+      
       case 'ninja_combi':
         return this._renderNinjaCombiPath();
       
@@ -3207,6 +3210,84 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
+   * Render Recent MEATER Cooks (filtered history)
+   * Shows only meater probe cooks (type 6.1)
+   */
+  _renderRecentMeaterCooks() {
+    // Filter history for MEATER probe cooks only
+    const meaterCooks = (this._cookHistory || []).filter(cook => {
+      // Check if it's a MEATER-only cook (no recipe, just temperature monitoring)
+      return cook.appliance_type === 'meater_probe' || 
+             (cook.protein && !cook.recipe_name);
+    });
+
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => {
+          this._currentPath = 'meater';
+          this.requestUpdate();
+        }}>
+          ← Back to MEATER Path
+        </button>
+        <h2>📋 Recent MEATER Cooks</h2>
+      </div>
+
+      ${meaterCooks.length === 0 ? html`
+        <ha-card>
+          <div class="card-content">
+            <p class="no-history">No previous MEATER cooks found.</p>
+            <p class="no-history-hint">Temperature-based cooks you complete will appear here for easy restart.</p>
+          </div>
+        </ha-card>
+      ` : html`
+        <div class="history-list">
+          ${meaterCooks.map(cook => html`
+            <ha-card class="history-card">
+              <div class="history-card-header">
+                <div class="history-title-row">
+                  <h3 class="history-title">
+                    ${cook.protein || 'Unknown Protein'}
+                    ${cook.cut ? html` - ${cook.cut}` : ''}
+                  </h3>
+                  <span class="history-date">${this._formatDate(cook.start_time)}</span>
+                </div>
+              </div>
+              
+              <div class="history-details">
+                <span class="history-detail">🥩 ${cook.protein}</span>
+                <span class="history-detail">🎯 ${(cook.doneness || '').replace('_', ' ')}</span>
+                <span class="history-detail">🍳 ${(cook.cooking_method || '').replace(/_/g, ' ')}</span>
+                <span class="history-detail">🌡️ ${cook.target_temp_c}°C target</span>
+                ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C peak</span>` : ''}
+                ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C after rest</span>` : 
+                  cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C final</span>` : ''}
+              </div>
+              
+              ${cook.notes ? html`
+                <div class="history-notes">
+                  <strong>📝 Notes:</strong> ${cook.notes}
+                </div>
+              ` : ''}
+              
+              <div class="history-actions">
+                <button class="history-action-btn restart" @click=${() => this._restartCook(cook)}>
+                  🔄 Restart This Cook
+                </button>
+                <button class="history-action-btn edit" @click=${() => this._editCookNotes(cook)}>
+                  ✏️ Edit Notes
+                </button>
+                <button class="history-action-btn delete" @click=${() => this._deleteCook(cook.id)}>
+                  🗑️ Delete
+                </button>
+              </div>
+            </ha-card>
+          `)}
+        </div>
+      `}
+    `;
+  }
+
+  /**
    * Render Ninja Combi path (part of cook type 6.2)
    */
   _renderNinjaCombiPath() {
@@ -3360,8 +3441,9 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _showRecentMeaterCooks() {
-    // TODO Phase 3: Implement filtered history
-    this._showMessage('Coming Soon', 'Recent MEATER cooks will be implemented in Phase 3.', false);
+    // Phase 2: Show filtered MEATER cook history
+    this._currentPath = 'recent_meater';
+    this.requestUpdate();
   }
 
   _startNinjaRecipeBuilder() {
