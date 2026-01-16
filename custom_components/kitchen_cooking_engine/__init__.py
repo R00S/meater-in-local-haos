@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 14 Jan 2026, 03:10 UTC
-Last Change: v0.3.4.0 - View Assist integration ready for merge
+Last Updated: 16 Jan 2026, 13:11 UTC
+Last Change: v0.4.2.01 - View Assist dashboard integration with automatic iframe embedding
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -18,6 +18,7 @@ This integration provides:
 - Sidebar panel for easy cooking setup and monitoring
 - External API for 3rd party integrations and automations
 - Phase 3.1: Multi-appliance support with feature-based recipe matching
+- View Assist integration with automatic dashboard creation
 """
 
 from __future__ import annotations
@@ -65,7 +66,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.1.2"
+__version__ = "0.4.2.01"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
