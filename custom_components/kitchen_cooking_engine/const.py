@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 16 Jan 2026, 12:33 UTC
-Last Change: v0.4.1.11 - Added start_simple_probe_cook service for temperature-only monitoring
+Last Updated: 16 Jan 2026, 13:16 UTC
+Last Change: v0.4.2.01 - Add View Assist dashboard integration for zero-config compatibility
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "90"
+PANEL_VERSION = "92"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

@@ -57,6 +57,10 @@ from .swedish_cooking_data import (
     SWEDISH_MEAT_CATEGORIES,
 )
 from .api import async_register_api
+from .view_assist_dashboard import (
+    async_create_view_assist_dashboard,
+    async_remove_view_assist_dashboard,
+)
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -220,6 +224,9 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
         # Regenerate frontend data from backend before registering panel
         await _async_regenerate_frontend_data(hass)
         
+        # Create View Assist dashboard for zero-config compatibility
+        await async_create_view_assist_dashboard(hass)
+        
         # Re-read PANEL_VERSION after regeneration (it may have been updated)
         # We need to reload the const module to get the updated value
         import importlib
@@ -345,6 +352,12 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     if manager:
         await manager.async_unload_appliance(entry.entry_id)
         _LOGGER.info("Appliance unloaded: %s", entry.title)
+    
+    # Remove View Assist dashboard if this is the last config entry
+    remaining_entries = [e for e in hass.config_entries.async_entries(DOMAIN) if e.entry_id != entry.entry_id]
+    if not remaining_entries:
+        await async_remove_view_assist_dashboard(hass)
+        _LOGGER.info("Removed View Assist dashboard (last config entry)")
     
     unload_ok = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
     if unload_ok:
