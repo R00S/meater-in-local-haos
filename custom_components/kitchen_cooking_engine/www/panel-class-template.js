@@ -1421,15 +1421,12 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _startMeaterCook(recipe) {
-    // Find a MEATER sensor entity
-    const meaterEntity = Object.keys(this.hass.states).find(entity_id => 
-      entity_id.includes('meater') && 
-      entity_id.includes('sensor') && 
-      entity_id.includes('cook')
-    );
+    // Find the currently selected MEATER cooking session entity
+    // Use the same entity that's selected in the UI
+    const meaterEntity = this._selectedEntity;
 
     if (!meaterEntity) {
-      this._showMessage('No MEATER Sensor Found', '⚠️ Please ensure your MEATER device is connected to Home Assistant.', true);
+      this._showMessage('No MEATER Sensor Found', '⚠️ Please select a MEATER cooking session sensor first.', true);
       return;
     }
 

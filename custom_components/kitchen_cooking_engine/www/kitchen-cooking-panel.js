@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Jan 2026, 13:49 CET
+ * AUTO-GENERATED: 16 Jan 2026, 13:50 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Jan 2026, 13:49 CET
+// Last generated: 16 Jan 2026, 13:50 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -6950,15 +6950,12 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _startMeaterCook(recipe) {
-    // Find a MEATER sensor entity
-    const meaterEntity = Object.keys(this.hass.states).find(entity_id => 
-      entity_id.includes('meater') && 
-      entity_id.includes('sensor') && 
-      entity_id.includes('cook')
-    );
+    // Find the currently selected MEATER cooking session entity
+    // Use the same entity that's selected in the UI
+    const meaterEntity = this._selectedEntity;
 
     if (!meaterEntity) {
-      this._showMessage('No MEATER Sensor Found', '⚠️ Please ensure your MEATER device is connected to Home Assistant.', true);
+      this._showMessage('No MEATER Sensor Found', '⚠️ Please select a MEATER cooking session sensor first.', true);
       return;
     }
 
@@ -10215,7 +10212,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "88";
+const PANEL_VERSION = "89";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
