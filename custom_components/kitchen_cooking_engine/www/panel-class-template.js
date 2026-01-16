@@ -887,8 +887,8 @@ class KitchenCookingPanel extends LitElement {
   _navigateToMeaterPath(appliance) {
     this._currentPath = 'meater';
     this._selectedAppliance = appliance;
-    // Show cooking form immediately (old behavior - start right away)
-    this._showMeaterCooking = true;
+    // Don't show cooking form immediately - show path buttons first
+    this._showMeaterCooking = false;
     // Reset old navigation flags
     this._showHistory = false;
     this._showNinjaCombi = false;
