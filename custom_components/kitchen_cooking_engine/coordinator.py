@@ -18,7 +18,7 @@ from homeassistant.exceptions import HomeAssistantError
 
 from .const import DOMAIN
 from .appliances.registry import get_registry
-from .recipes.matcher import RecipeMatcher, MatchQuality
+from .recipes.matcher import RecipeMatcher
 
 _LOGGER = logging.getLogger(__name__)
 

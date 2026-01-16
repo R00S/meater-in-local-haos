@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 16 Jan 2026, 11:08 UTC
-Last Change: v0.4.1.04 - Use start_multi_appliance_cook for Ninja Combi recipes
+Last Updated: 16 Jan 2026, 11:17 UTC
+Last Change: v0.4.1.05 - Fixed MatchQuality import error in coordinator
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "79"
+PANEL_VERSION = "80"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
