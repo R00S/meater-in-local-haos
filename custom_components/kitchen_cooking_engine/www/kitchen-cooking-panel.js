@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Jan 2026, 14:18 CET
+ * AUTO-GENERATED: 16 Jan 2026, 19:40 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Jan 2026, 14:18 CET
+// Last generated: 16 Jan 2026, 19:40 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5639,6 +5639,9 @@ class KitchenCookingPanel extends LitElement {
       _messageDialogTitle: { type: String },
       _messageDialogContent: { type: String },
       _messageDialogIsError: { type: Boolean },
+      // Phase 1: GUI Redesign - Navigation state
+      _currentPath: { type: String },  // 'welcome', 'meater', 'ninja_combi', 'ai_recipe_builder', 'previous_cooks'
+      _selectedAppliance: { type: Object },  // Selected appliance from welcome screen
     };
   }
 
@@ -5701,6 +5704,9 @@ class KitchenCookingPanel extends LitElement {
     this._messageDialogTitle = '';
     this._messageDialogContent = '';
     this._messageDialogIsError = false;
+    // Phase 1: GUI Redesign - Navigation state
+    this._currentPath = 'welcome';  // Start at welcome screen
+    this._selectedAppliance = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -6379,6 +6385,116 @@ class KitchenCookingPanel extends LitElement {
   _closeMessageDialog() {
     this._showMessageDialog = false;
     this.requestUpdate();
+  }
+
+  // ============================================================================
+  // PHASE 1: GUI REDESIGN - NAVIGATION METHODS
+  // ============================================================================
+
+  /**
+   * Navigate to welcome screen (appliance selector)
+   */
+  _navigateToWelcome() {
+    this._currentPath = 'welcome';
+    this._selectedAppliance = null;
+    // Reset old navigation flags for compatibility
+    this._showHistory = false;
+    this._showNinjaCombi = false;
+    this._showAppliances = false;
+    this._showRecipes = false;
+    this._showAIRecipeBuilder = false;
+    this.requestUpdate();
+  }
+
+  /**
+   * Navigate to MEATER path
+   * @param {Object} appliance - Selected MEATER appliance
+   */
+  _navigateToMeaterPath(appliance) {
+    this._currentPath = 'meater';
+    this._selectedAppliance = appliance;
+    // Reset old navigation flags
+    this._showHistory = false;
+    this._showNinjaCombi = false;
+    this._showAppliances = false;
+    this._showRecipes = false;
+    this._showAIRecipeBuilder = false;
+    this.requestUpdate();
+  }
+
+  /**
+   * Navigate to Ninja Combi path
+   * @param {Object} appliance - Selected Ninja Combi appliance
+   */
+  _navigateToNinjaCombiPath(appliance) {
+    this._currentPath = 'ninja_combi';
+    this._selectedAppliance = appliance;
+    // Reset old navigation flags
+    this._showHistory = false;
+    this._showNinjaCombi = false;
+    this._showAppliances = false;
+    this._showRecipes = false;
+    this._showAIRecipeBuilder = false;
+    this.requestUpdate();
+  }
+
+  /**
+   * Navigate to AI Recipe Builder path
+   * @param {Object} appliance - Selected appliance (any non-MEATER/Ninja appliance)
+   */
+  _navigateToAIRecipeBuilderPath(appliance) {
+    this._currentPath = 'ai_recipe_builder';
+    this._selectedAppliance = appliance;
+    // Reset old navigation flags
+    this._showHistory = false;
+    this._showNinjaCombi = false;
+    this._showAppliances = false;
+    this._showRecipes = false;
+    this._showAIRecipeBuilder = false;
+    this.requestUpdate();
+  }
+
+  /**
+   * Navigate to Previous Cooks path
+   */
+  _navigateToPreviousCooks() {
+    this._currentPath = 'previous_cooks';
+    this._selectedAppliance = null;
+    this._loadHistory();
+    // Reset old navigation flags
+    this._showHistory = true;  // Keep this for compatibility with existing render
+    this._showNinjaCombi = false;
+    this._showAppliances = false;
+    this._showRecipes = false;
+    this._showAIRecipeBuilder = false;
+    this.requestUpdate();
+  }
+
+  /**
+   * Route to appropriate path based on appliance type
+   * @param {Object} appliance - Selected appliance
+   */
+  _routeToAppliancePath(appliance) {
+    // Determine appliance type based on brand/model or features
+    const brand = (appliance.brand || '').toLowerCase();
+    const model = (appliance.model || '').toLowerCase();
+    const name = (appliance.name || '').toLowerCase();
+    
+    // Check for MEATER probe (cook type 6.1)
+    if (brand.includes('meater') || model.includes('meater') || name.includes('meater')) {
+      this._navigateToMeaterPath(appliance);
+      return;
+    }
+    
+    // Check for Ninja Combi (part of cook type 6.2)
+    if ((brand.includes('ninja') && model.includes('combi')) || 
+        name.includes('ninja combi')) {
+      this._navigateToNinjaCombiPath(appliance);
+      return;
+    }
+    
+    // All other appliances go to AI Recipe Builder path (cook type 6.2)
+    this._navigateToAIRecipeBuilderPath(appliance);
   }
 
   _selectNinjaRecipe(recipeId) {
@@ -7900,45 +8016,7 @@ class KitchenCookingPanel extends LitElement {
         <div slot="title">🍳 Kitchen Cooking Engine</div>
         
         <div class="content">
-          ${this._showHistory ? this._renderHistory() :
-            this._showNinjaCombi ? this._renderNinjaCombi() :
-            this._showAppliances ? this._renderAppliances() :
-            this._showRecipes ? this._renderRecipes() :
-            this._showAIRecipeBuilder ? this._renderAIRecipeBuilder() :
-            (entities.length === 0 ? this._renderNoEntities() : 
-              (isActive ? this._renderActiveCook(state) : this._renderSetupForm(entities)))}
-          
-          ${!isActive && entities.length > 0 ? html`
-            <div class="history-toggle">
-              <button class="history-btn ${this._showHistory ? 'active' : ''}" @click=${this._toggleHistory}>
-                📜 ${this._showHistory ? 'Back to Cooking' : 'Cook History'}
-              </button>
-              <button class="history-btn ${this._showNinjaCombi ? 'active' : ''}" @click=${this._toggleNinjaCombi}>
-                🥘 ${this._showNinjaCombi ? 'Back to Cooking' : 'Ninja Combi'}
-              </button>
-              <button class="history-btn ${this._showAppliances ? 'active' : ''}" @click=${this._toggleAppliances}>
-                🔧 ${this._showAppliances ? 'Back to Cooking' : 'Appliances'}
-              </button>
-            </div>
-          ` : ''}
-          
-          <!-- AI Recipe Builder and Appliances - Always visible -->
-          ${entities.length === 0 ? html`
-            <div class="history-toggle">
-              <button class="history-btn ${this._showAppliances ? 'active' : ''}" @click=${this._toggleAppliances}>
-                🔧 ${this._showAppliances ? 'Back to Cooking' : 'Appliances'}
-              </button>
-              <button class="history-btn ${this._showAIRecipeBuilder ? 'active' : ''}" @click=${this._toggleAIRecipeBuilder}>
-                🤖 ${this._showAIRecipeBuilder ? 'Back to Cooking' : 'AI Recipe Builder'}
-              </button>
-            </div>
-          ` : html`
-            <div class="history-toggle" style="margin-top: 8px;">
-              <button class="history-btn ${this._showAIRecipeBuilder ? 'active' : ''}" @click=${this._toggleAIRecipeBuilder}>
-                🤖 ${this._showAIRecipeBuilder ? 'Back to Cooking' : 'AI Recipe Builder'}
-              </button>
-            </div>
-          `}
+          ${this._renderContent(entities, isActive, state)}
           
           <!-- AI Settings Modal -->
           ${this._showAISettingsModal ? html`
@@ -8012,6 +8090,38 @@ class KitchenCookingPanel extends LitElement {
         </div>
       </ha-top-app-bar-fixed>
     `;
+  }
+
+  /**
+   * Route content rendering based on current path
+   */
+  _renderContent(entities, isActive, state) {
+    // If there's an active cook, always show it regardless of path
+    if (isActive && entities.length > 0) {
+      return this._renderActiveCook(state);
+    }
+
+    // Otherwise, render based on current path
+    switch (this._currentPath) {
+      case 'welcome':
+        return this._renderWelcomeScreen();
+      
+      case 'meater':
+        return this._renderMeaterPath();
+      
+      case 'ninja_combi':
+        return this._renderNinjaCombiPath();
+      
+      case 'ai_recipe_builder':
+        return this._renderAIRecipeBuilderPath();
+      
+      case 'previous_cooks':
+        return this._renderPreviousCooksPath();
+      
+      default:
+        // Fallback to welcome screen
+        return this._renderWelcomeScreen();
+    }
   }
 
   _renderNoEntities() {
@@ -8510,6 +8620,290 @@ class KitchenCookingPanel extends LitElement {
         </div>
       </div>
     `;
+  }
+
+  // ============================================================================
+  // PHASE 1: GUI REDESIGN - PATH RENDER METHODS
+  // ============================================================================
+
+  /**
+   * Render welcome screen with appliance selector
+   */
+  _renderWelcomeScreen() {
+    return html`
+      <div class="welcome-header">
+        <h1>🍳 Kitchen Cooking Engine</h1>
+        <p class="welcome-subtitle">Select Your Appliance</p>
+      </div>
+
+      ${this._isLoadingAppliances ? html`
+        <div class="loading">Loading appliances...</div>
+      ` : this._errorMessage ? html`
+        <ha-card>
+          <div class="card-content error-message">
+            <p>⚠️ ${this._errorMessage}</p>
+            <button class="primary-btn" @click=${() => this._loadAppliances()}>
+              🔄 Retry
+            </button>
+          </div>
+        </ha-card>
+      ` : this._appliances.length === 0 ? html`
+        <ha-card>
+          <div class="card-content no-entities">
+            <p>No appliances configured.</p>
+            <p>Please add appliances in the Kitchen Cooking Engine integration settings.</p>
+          </div>
+        </ha-card>
+      ` : html`
+        <div class="appliance-grid">
+          ${this._appliances.map(appliance => html`
+            <ha-card class="appliance-card clickable" @click=${() => this._routeToAppliancePath(appliance)}>
+              <div class="card-content appliance-card-content">
+                <div class="appliance-icon">
+                  ${this._getApplianceIcon(appliance)}
+                </div>
+                <div class="appliance-name">${appliance.name}</div>
+                <div class="appliance-model">${appliance.brand} ${appliance.model}</div>
+              </div>
+            </ha-card>
+          `)}
+        </div>
+
+        <ha-card class="previous-cooks-card clickable" @click=${() => this._navigateToPreviousCooks()}>
+          <div class="card-content previous-cooks-content">
+            <div class="previous-cooks-icon">📋</div>
+            <div class="previous-cooks-text">
+              <h3>Previous Cooks</h3>
+              <p>View and restart your past cooking sessions</p>
+            </div>
+          </div>
+        </ha-card>
+      `}
+    `;
+  }
+
+  /**
+   * Render MEATER path (cook type 6.1)
+   */
+  _renderMeaterPath() {
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => this._navigateToWelcome()}>
+          ← Back to Appliances
+        </button>
+        <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
+      </div>
+
+      <div class="path-buttons">
+        <ha-card class="path-card clickable" @click=${() => this._startMeaterCooking()}>
+          <div class="card-content path-card-content">
+            <div class="path-icon">🌡️</div>
+            <h3>Start MEATER Cooking</h3>
+            <p>Select protein, set target, monitor temperature</p>
+          </div>
+        </ha-card>
+
+        <ha-card class="path-card clickable" @click=${() => this._showRecentMeaterCooks()}>
+          <div class="card-content path-card-content">
+            <div class="path-icon">📋</div>
+            <h3>Recent MEATER Cooks</h3>
+            <p>View and restart previous temperature-based cooks</p>
+          </div>
+        </ha-card>
+      </div>
+    `;
+  }
+
+  /**
+   * Render Ninja Combi path (part of cook type 6.2)
+   */
+  _renderNinjaCombiPath() {
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => this._navigateToWelcome()}>
+          ← Back to Appliances
+        </button>
+        <h2>🥘 ${this._selectedAppliance?.name || 'Ninja Combi Cooking'}</h2>
+      </div>
+
+      <div class="path-buttons">
+        <ha-card class="path-card clickable" @click=${() => this._startNinjaRecipeBuilder()}>
+          <div class="card-content path-card-content">
+            <div class="path-icon">🎨</div>
+            <h3>Recipe Builder</h3>
+            <p>Create custom recipes with Ninja Combi modes</p>
+          </div>
+        </ha-card>
+
+        <ha-card class="path-card clickable" @click=${() => this._showNinjaBuiltInRecipes()}>
+          <div class="card-content path-card-content">
+            <div class="path-icon">📖</div>
+            <h3>Built-in Recipes</h3>
+            <p>Browse pre-configured Ninja Combi recipes</p>
+          </div>
+        </ha-card>
+
+        <ha-card class="path-card clickable" @click=${() => this._startAIWithNinjaCombi()}>
+          <div class="card-content path-card-content">
+            <div class="path-icon">🤖</div>
+            <h3>AI Recipe with Ninja Combi</h3>
+            <p>Generate AI recipes using your Ninja Combi</p>
+          </div>
+        </ha-card>
+
+        <ha-card class="path-card clickable" @click=${() => this._showRecentNinjaCooks()}>
+          <div class="card-content path-card-content">
+            <div class="path-icon">📋</div>
+            <h3>Recent Ninja Combi Cooks</h3>
+            <p>View and restart previous Ninja Combi recipes</p>
+          </div>
+        </ha-card>
+      </div>
+    `;
+  }
+
+  /**
+   * Render AI Recipe Builder path (part of cook type 6.2)
+   */
+  _renderAIRecipeBuilderPath() {
+    const appliance = this._selectedAppliance;
+    
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => this._navigateToWelcome()}>
+          ← Back to Appliances
+        </button>
+        <h2>🤖 AI Recipe Builder</h2>
+      </div>
+
+      <ha-card>
+        <div class="card-content appliance-info">
+          <h3>Main Appliance: ${appliance?.name}</h3>
+          <p class="appliance-features">
+            <strong>Features:</strong> ${appliance?.features?.join(', ') || 'N/A'}
+          </p>
+          
+          ${this._appliances.length > 1 ? html`
+            <div class="secondary-appliances">
+              <h4>Secondary Appliances Available:</h4>
+              ${this._appliances.filter(a => a.id !== appliance?.id).map(a => html`
+                <label class="checkbox-label">
+                  <input type="checkbox" checked @change=${(e) => this._toggleSecondaryAppliance(a.id, e.target.checked)} />
+                  ${a.name}
+                </label>
+              `)}
+            </div>
+          ` : ''}
+        </div>
+      </ha-card>
+
+      <div class="path-buttons">
+        <ha-card class="path-card clickable" @click=${() => this._startAIRecipeCreation()}>
+          <div class="card-content path-card-content">
+            <div class="path-icon">🤖</div>
+            <h3>Create AI Recipe</h3>
+            <p>Generate custom recipes using your appliances and ingredients</p>
+          </div>
+        </ha-card>
+
+        <ha-card class="path-card clickable" @click=${() => this._showRecentApplianceRecipes()}>
+          <div class="card-content path-card-content">
+            <div class="path-icon">📋</div>
+            <h3>Recent ${appliance?.name} Recipes</h3>
+            <p>View and restart previous AI recipes for this appliance</p>
+          </div>
+        </ha-card>
+      </div>
+    `;
+  }
+
+  /**
+   * Render Previous Cooks path (uses existing _renderHistory)
+   */
+  _renderPreviousCooksPath() {
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => this._navigateToWelcome()}>
+          ← Back to Appliances
+        </button>
+        <h2>📋 Previous Cooks</h2>
+      </div>
+      ${this._renderHistory()}
+    `;
+  }
+
+  // ============================================================================
+  // PHASE 1: HELPER METHODS
+  // ============================================================================
+
+  /**
+   * Get icon for appliance
+   */
+  _getApplianceIcon(appliance) {
+    const brand = (appliance.brand || '').toLowerCase();
+    const model = (appliance.model || '').toLowerCase();
+    const name = (appliance.name || '').toLowerCase();
+    
+    if (brand.includes('meater') || model.includes('meater') || name.includes('meater')) {
+      return '🌡️';
+    }
+    if (brand.includes('ninja')) {
+      if (model.includes('combi')) return '🥘';
+      return '🍳';
+    }
+    if (name.includes('oven')) return '🔥';
+    if (name.includes('grill')) return '🍢';
+    if (name.includes('fryer')) return '🍟';
+    return '🍳';
+  }
+
+  // ============================================================================
+  // PHASE 1: PLACEHOLDER ACTION METHODS (TO BE IMPLEMENTED IN FUTURE PHASES)
+  // ============================================================================
+
+  _startMeaterCooking() {
+    // TODO Phase 2: Implement MEATER cooking interface
+    this._showMessage('Coming Soon', 'MEATER cooking interface will be implemented in Phase 2.', false);
+  }
+
+  _showRecentMeaterCooks() {
+    // TODO Phase 3: Implement filtered history
+    this._showMessage('Coming Soon', 'Recent MEATER cooks will be implemented in Phase 3.', false);
+  }
+
+  _startNinjaRecipeBuilder() {
+    // TODO Phase 5: Integrate existing recipe builder
+    this._showMessage('Coming Soon', 'Ninja Recipe Builder will be integrated in Phase 5.', false);
+  }
+
+  _showNinjaBuiltInRecipes() {
+    // TODO Phase 5: Show built-in recipes
+    this._showMessage('Coming Soon', 'Built-in Ninja Combi recipes will be available in Phase 5.', false);
+  }
+
+  _startAIWithNinjaCombi() {
+    // TODO Phase 6: Pre-select Ninja Combi in AI builder
+    this._showMessage('Coming Soon', 'AI Recipe with Ninja Combi will be available in Phase 6.', false);
+  }
+
+  _showRecentNinjaCooks() {
+    // TODO Phase 3: Implement filtered history
+    this._showMessage('Coming Soon', 'Recent Ninja Combi cooks will be implemented in Phase 3.', false);
+  }
+
+  _startAIRecipeCreation() {
+    // TODO Phase 6: Integrate AI recipe builder
+    this._showMessage('Coming Soon', 'AI Recipe creation will be integrated in Phase 6.', false);
+  }
+
+  _showRecentApplianceRecipes() {
+    // TODO Phase 3: Implement filtered history
+    this._showMessage('Coming Soon', 'Recent appliance recipes will be implemented in Phase 3.', false);
+  }
+
+  _toggleSecondaryAppliance(applianceId, enabled) {
+    // TODO Phase 6: Implement secondary appliance selection
+    console.log(`Toggle secondary appliance ${applianceId}: ${enabled}`);
   }
 
   _renderHistory() {
@@ -10213,6 +10607,241 @@ class KitchenCookingPanel extends LitElement {
       .icon-button:hover {
         background: var(--secondary-background-color);
       }
+
+      /* ========================================================================
+         PHASE 1: GUI REDESIGN STYLES
+         ======================================================================== */
+
+      /* Welcome Screen */
+      .welcome-header {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .welcome-header h1 {
+        font-size: 32px;
+        margin: 0 0 8px 0;
+        color: var(--primary-text-color);
+      }
+
+      .welcome-subtitle {
+        font-size: 18px;
+        color: var(--secondary-text-color);
+        margin: 0;
+      }
+
+      /* Appliance Grid */
+      .appliance-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .appliance-card {
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .appliance-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .appliance-card-content {
+        text-align: center;
+        padding: 24px 16px !important;
+      }
+
+      .appliance-icon {
+        font-size: 48px;
+        margin-bottom: 12px;
+      }
+
+      .appliance-name {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: var(--primary-text-color);
+      }
+
+      .appliance-model {
+        font-size: 14px;
+        color: var(--secondary-text-color);
+      }
+
+      /* Previous Cooks Card */
+      .previous-cooks-card {
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .previous-cooks-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .previous-cooks-content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 24px !important;
+      }
+
+      .previous-cooks-icon {
+        font-size: 48px;
+        flex-shrink: 0;
+      }
+
+      .previous-cooks-text h3 {
+        margin: 0 0 8px 0;
+        font-size: 20px;
+        color: var(--primary-text-color);
+      }
+
+      .previous-cooks-text p {
+        margin: 0;
+        color: var(--secondary-text-color);
+      }
+
+      /* Path Header */
+      .path-header {
+        margin-bottom: 24px;
+      }
+
+      .path-header h2 {
+        font-size: 24px;
+        margin: 16px 0 0 0;
+        color: var(--primary-text-color);
+      }
+
+      .back-btn {
+        background: none;
+        border: none;
+        color: var(--primary-color);
+        cursor: pointer;
+        font-size: 14px;
+        padding: 8px 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        transition: opacity 0.2s;
+      }
+
+      .back-btn:hover {
+        opacity: 0.8;
+      }
+
+      /* Path Buttons */
+      .path-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .path-card {
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .path-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .path-card-content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px !important;
+      }
+
+      .path-icon {
+        font-size: 40px;
+        flex-shrink: 0;
+      }
+
+      .path-card-content h3 {
+        margin: 0 0 8px 0;
+        font-size: 18px;
+        color: var(--primary-text-color);
+      }
+
+      .path-card-content p {
+        margin: 0;
+        color: var(--secondary-text-color);
+        font-size: 14px;
+      }
+
+      /* Appliance Info */
+      .appliance-info h3 {
+        margin: 0 0 12px 0;
+        font-size: 20px;
+      }
+
+      .appliance-features {
+        margin: 0 0 16px 0;
+        color: var(--secondary-text-color);
+      }
+
+      .secondary-appliances {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid var(--divider-color);
+      }
+
+      .secondary-appliances h4 {
+        margin: 0 0 12px 0;
+        font-size: 16px;
+      }
+
+      .checkbox-label {
+        display: block;
+        margin-bottom: 8px;
+        cursor: pointer;
+      }
+
+      .checkbox-label input[type="checkbox"] {
+        margin-right: 8px;
+      }
+
+      /* Error Message */
+      .error-message {
+        text-align: center;
+        padding: 24px;
+      }
+
+      .error-message p {
+        margin-bottom: 16px;
+        color: var(--error-color);
+      }
+
+      /* Clickable Cards */
+      .clickable {
+        cursor: pointer;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 600px) {
+        .appliance-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .welcome-header h1 {
+          font-size: 24px;
+        }
+
+        .welcome-subtitle {
+          font-size: 16px;
+        }
+
+        .path-card-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .previous-cooks-content {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
     `;
   }
 }
@@ -10220,7 +10849,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "92";
+const PANEL_VERSION = "93";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
