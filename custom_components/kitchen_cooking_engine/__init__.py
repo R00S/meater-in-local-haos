@@ -122,6 +122,15 @@ SERVICE_START_MULTI_APPLIANCE_COOK_SCHEMA = vol.Schema(
     }
 )
 
+# Service schema for simple probe cook (temperature-only monitoring)
+SERVICE_START_SIMPLE_PROBE_COOK_SCHEMA = vol.Schema(
+    {
+        vol.Required(ATTR_ENTITY_ID): cv.entity_ids,
+        vol.Required("target_temp_c"): vol.All(vol.Coerce(int), vol.Range(min=30, max=100)),
+        vol.Optional("session_name"): cv.string,
+    }
+)
+
 
 async def async_setup(hass: HomeAssistant, config: dict) -> bool:
     """Initialize the integration (called before any entry setup)."""
@@ -656,6 +665,68 @@ async def _async_register_services(hass: HomeAssistant) -> None:
             _LOGGER.error("Failed to start multi-appliance cook: %s", err)
             raise
 
+    async def handle_start_simple_probe_cook(call: ServiceCall) -> None:
+        """Handle start simple probe cook service call.
+        
+        This creates a lightweight cooking session with just a target temperature.
+        Perfect for sub-processes in recipe guides or appliance-specific monitoring.
+        """
+        _LOGGER.info("Kitchen Cooking Engine: Start simple probe cook service called")
+        
+        # Get entity IDs from service call
+        entity_ids = call.data.get(ATTR_ENTITY_ID)
+        if entity_ids is None:
+            _LOGGER.error("No entity_id specified for start_simple_probe_cook service")
+            return
+        
+        # Ensure entity_ids is a list
+        if isinstance(entity_ids, str):
+            entity_ids = [entity_ids]
+        
+        target_temp_c = call.data.get("target_temp_c")
+        session_name = call.data.get("session_name", "Simple Probe Cook")
+        
+        # Calculate target temperature in Fahrenheit
+        target_temp_f = int(target_temp_c * 9 / 5 + 32)
+        
+        _LOGGER.info(
+            "Starting simple probe cook: %s at %d°C (%d°F)",
+            session_name,
+            target_temp_c,
+            target_temp_f,
+        )
+        
+        # Find and update the target entities
+        entities = _get_cooking_session_entities(hass, entity_ids)
+        if not entities:
+            _LOGGER.error(
+                "No cooking session entities found for %s. "
+                "Make sure the entity exists and the integration is properly set up.",
+                entity_ids,
+            )
+            return
+            
+        for entity in entities:
+            # Start a simple cook with minimal info
+            entity.start_cook(
+                protein="Probe Cook",
+                cut=session_name,
+                doneness="target",
+                cooking_method="probe_only",
+                target_temp_c=target_temp_c,
+                target_temp_f=target_temp_f,
+                min_temp_c=target_temp_c - 2,  # Small tolerance
+                min_temp_f=target_temp_f - 4,
+                max_temp_c=target_temp_c + 2,
+                max_temp_f=target_temp_f + 4,
+                rest_time_min=0,
+                rest_time_max=0,
+                usda_safe=False,
+                carryover_temp_c=0,
+                cut_display=session_name,
+                cut_id=0,  # No cut ID for simple sessions
+            )
+
     # Only register if not already registered
     if not hass.services.has_service(DOMAIN, SERVICE_START_COOK):
         hass.services.async_register(
@@ -699,5 +770,13 @@ async def _async_register_services(hass: HomeAssistant) -> None:
             SERVICE_START_MULTI_APPLIANCE_COOK,
             handle_start_multi_appliance_cook,
             schema=SERVICE_START_MULTI_APPLIANCE_COOK_SCHEMA,
+        )
+    # Register simple probe cook service
+    if not hass.services.has_service(DOMAIN, SERVICE_START_SIMPLE_PROBE_COOK):
+        hass.services.async_register(
+            DOMAIN,
+            SERVICE_START_SIMPLE_PROBE_COOK,
+            handle_start_simple_probe_cook,
+            schema=SERVICE_START_SIMPLE_PROBE_COOK_SCHEMA,
         )
 

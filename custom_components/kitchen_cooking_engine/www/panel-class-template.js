@@ -1439,22 +1439,19 @@ class KitchenCookingPanel extends LitElement {
       `Target: ${recipe.target_temp_c}°C (${recipe.target_temp_f}°F)\n` +
       `Mode: ${recipe.mode}\n` +
       `Cook Time: ${recipe.cook_time_minutes} min\n\n` +
-      `This will start a multi-appliance cooking session with your MEATER probe.`;
+      `This will start a simple probe monitoring session.`;
 
     if (confirm(confirmMsg)) {
-      // Use start_multi_appliance_cook service for Ninja Combi recipes
-      // This service is designed for appliance-specific recipes with custom temperatures
+      // Use start_simple_probe_cook service for temperature-only monitoring
+      // This creates a lightweight session without requiring cut/doneness info
       const serviceData = {
-        recipe_id: recipe.id,
-        appliances: {
-          probe: meaterEntity
-        },
+        entity_id: meaterEntity,
         target_temp_c: recipe.target_temp_c,
-        cook_time_minutes: recipe.cook_time_minutes
+        session_name: `Ninja Combi - ${recipe.name}`
       };
 
-      // Call the Home Assistant service to start the multi-appliance cook
-      this.hass.callService('kitchen_cooking_engine', 'start_multi_appliance_cook', serviceData)
+      // Call the Home Assistant service to start the simple probe cook
+      this.hass.callService('kitchen_cooking_engine', 'start_simple_probe_cook', serviceData)
         .then(async () => {
           // Wait a moment for the service to update the entity state
           await new Promise(resolve => setTimeout(resolve, 500));

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Jan 2026, 13:21 CET
+ * AUTO-GENERATED: 16 Jan 2026, 13:36 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Jan 2026, 13:21 CET
+// Last generated: 16 Jan 2026, 13:36 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -6968,22 +6968,19 @@ class KitchenCookingPanel extends LitElement {
       `Target: ${recipe.target_temp_c}°C (${recipe.target_temp_f}°F)\n` +
       `Mode: ${recipe.mode}\n` +
       `Cook Time: ${recipe.cook_time_minutes} min\n\n` +
-      `This will start a multi-appliance cooking session with your MEATER probe.`;
+      `This will start a simple probe monitoring session.`;
 
     if (confirm(confirmMsg)) {
-      // Use start_multi_appliance_cook service for Ninja Combi recipes
-      // This service is designed for appliance-specific recipes with custom temperatures
+      // Use start_simple_probe_cook service for temperature-only monitoring
+      // This creates a lightweight session without requiring cut/doneness info
       const serviceData = {
-        recipe_id: recipe.id,
-        appliances: {
-          probe: meaterEntity
-        },
+        entity_id: meaterEntity,
         target_temp_c: recipe.target_temp_c,
-        cook_time_minutes: recipe.cook_time_minutes
+        session_name: `Ninja Combi - ${recipe.name}`
       };
 
-      // Call the Home Assistant service to start the multi-appliance cook
-      this.hass.callService('kitchen_cooking_engine', 'start_multi_appliance_cook', serviceData)
+      // Call the Home Assistant service to start the simple probe cook
+      this.hass.callService('kitchen_cooking_engine', 'start_simple_probe_cook', serviceData)
         .then(async () => {
           // Wait a moment for the service to update the entity state
           await new Promise(resolve => setTimeout(resolve, 500));
@@ -10218,7 +10215,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "86";
+const PANEL_VERSION = "87";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

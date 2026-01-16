@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 16 Jan 2026, 12:05 UTC
-Last Change: v0.4.1.09 - Fixed CookingPhase parameter mismatch in recipes/examples.py
+Last Updated: 16 Jan 2026, 12:33 UTC
+Last Change: v0.4.1.11 - Added start_simple_probe_cook service for temperature-only monitoring
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "86"
+PANEL_VERSION = "87"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
@@ -90,6 +90,8 @@ SERVICE_APPLIANCE_POWER_OFF = "appliance_power_off"
 SERVICE_APPLIANCE_START = "appliance_start"
 # Phase 4: Multi-appliance service
 SERVICE_START_MULTI_APPLIANCE_COOK = "start_multi_appliance_cook"
+# Simple probe service for temperature-only monitoring
+SERVICE_START_SIMPLE_PROBE_COOK = "start_simple_probe_cook"
 
 # Event names
 EVENT_APPROACHING_TARGET = "kitchen_cooking_engine_approaching_target"
