@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 16 Jan 2026, 11:17 UTC
-Last Change: v0.4.1.05 - Fixed MatchQuality import error in coordinator
+Last Updated: 16 Jan 2026, 11:28 UTC
+Last Change: v0.4.1.06 - Fixed start_multi_appliance_cook to look up Ninja recipes
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "80"
+PANEL_VERSION = "81"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

@@ -569,13 +569,31 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         target_temp_c = call.data.get("target_temp_c")
         cook_time_minutes = call.data.get("cook_time_minutes")
         
-        # Build a simple recipe dict from the service call
-        # In a real implementation, this would look up a full recipe by ID
-        recipe = {
-            "id": recipe_id,
-            "name": f"Recipe {recipe_id}",
-            "required_features": list(appliances_map.keys()) if appliances_map else [],
-        }
+        # Look up the Ninja Combi recipe if recipe_id is provided
+        recipe = None
+        if recipe_id:
+            try:
+                from .ninja_combi_data import NINJA_COMBI_RECIPES
+                ninja_recipe = NINJA_COMBI_RECIPES.get(recipe_id)
+                if ninja_recipe:
+                    recipe = {
+                        "id": ninja_recipe.id,
+                        "name": ninja_recipe.name,
+                        "required_features": ["probe"] if ninja_recipe.use_probe else [],
+                    }
+                    # Use recipe's target temp if not overridden
+                    if not target_temp_c and ninja_recipe.target_temp_c:
+                        target_temp_c = ninja_recipe.target_temp_c
+            except Exception as e:
+                _LOGGER.warning("Could not load Ninja Combi recipe %s: %s", recipe_id, e)
+        
+        # Fallback to simple recipe dict if lookup failed
+        if not recipe:
+            recipe = {
+                "id": recipe_id,
+                "name": f"Recipe {recipe_id}",
+                "required_features": list(appliances_map.keys()) if appliances_map else [],
+            }
         
         # Build appliance assignments from the service call
         from .coordinator import ApplianceAssignment
