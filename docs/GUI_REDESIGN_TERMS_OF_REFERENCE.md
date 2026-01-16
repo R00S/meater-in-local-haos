@@ -125,24 +125,33 @@ These features apply system-wide across all paths and cook types:
 **Requirement:** Measurements and scales should be selectable with Swedish measurements as default, UK (if different from Swedish), US, and pure metric as options.
 
 **Measurement System Options:**
+
 1. **Swedish** (default)
-   - Mass: gram (g), kilogram (kg)
-   - Volume: centiliter (cl), deciliter (dl), liter (l)
-   - Temperature: Celsius (°C)
+   - **Mass:** gram (g), hektogram (hg), kilogram (kg)
+   - **Volume:** kryddmått (krm), tesked (tsk), matsked (msk), centiliter (cl), deciliter (dl), liter (l)
+   - **Temperature:** Celsius (°C)
+   - **Standard conversions:**
+     - 1 krm = 1 ml (spice measure)
+     - 1 tsk = 5 ml = 5 krm (teaspoon)
+     - 1 msk = 15 ml = 3 tsk (tablespoon)
+     - 1 dl = 100 ml = 10 cl
+     - 1 hg = 100 g (hectogram, common in Swedish grocery stores)
+   - **Note:** Swedish cooking traditionally uses kryddmått, tesked, and matsked. **Cups are NOT used** in Swedish recipes. Deciliter (dl) is commonly used for both liquids and dry goods like flour and sugar.
    
 2. **UK** (if different from Swedish)
    - Imperial measurements where applicable
    - Temperature: Celsius (°C)
    
 3. **US**
-   - Mass: ounces (oz), pounds (lb)
-   - Volume: teaspoon (tsp), tablespoon (tbsp), cup, pint, quart, gallon
-   - Temperature: Fahrenheit (°F)
+   - **Mass:** ounces (oz), pounds (lb)
+   - **Volume:** teaspoon (tsp), tablespoon (tbsp), cup, pint, quart, gallon
+   - **Temperature:** Fahrenheit (°F)
    
 4. **Pure Metric**
-   - Mass: gram (g), kilogram (kg)
-   - Volume: milliliter (ml), centiliter (cl), deciliter (dl), liter (l)
-   - Temperature: Celsius (°C)
+   - **Mass:** gram (g), kilogram (kg)
+   - **Volume:** milliliter (ml), centiliter (cl), deciliter (dl), liter (l)
+   - **Temperature:** Celsius (°C)
+   - **Note:** Pure metric (without tsk/msk/krm) is becoming more common in Swedish baking recipes, especially professional and modern recipes.
 
 **Implementation:**
 - Measurement system selector in system settings
@@ -150,6 +159,27 @@ These features apply system-wide across all paths and cook types:
 - Temperature conversion for all cooking targets
 - Persistent preference across sessions
 - Applies to all recipes regardless of source (Ninja combi, AI, etc.)
+
+**Swedish Measurement Conversion Reference:**
+
+| Swedish Unit | Abbreviation | Metric Equivalent | Notes |
+|--------------|--------------|-------------------|-------|
+| Kryddmått | krm | 1 ml | Spice measure, smallest unit |
+| Tesked | tsk | 5 ml | Teaspoon = 5 krm |
+| Matsked | msk | 15 ml | Tablespoon = 3 tsk = 15 krm |
+| Centiliter | cl | 10 ml | Rarely used in recipes |
+| Deciliter | dl | 100 ml | Very common for both liquid and dry |
+| Liter | l | 1000 ml | Standard liquid measure |
+| Gram | g | 1 g | Standard weight for baking/cooking |
+| Hektogram | hg | 100 g | Common in grocery stores |
+| Kilogram | kg | 1000 g | Larger quantities |
+
+**Common Swedish Recipe Patterns:**
+- Flour: typically measured in dl (e.g., "6 dl vetemjöl")
+- Sugar: typically measured in dl (e.g., "2 dl socker")
+- Butter: typically measured in g (e.g., "100 g smör")
+- Spices: typically measured in tsk, msk, or krm
+- Liquids: typically measured in dl or l
 
 #### 4.3.3 Serving Size Adjustment
 
@@ -1223,7 +1253,7 @@ The GUI redesign is considered successful when:
 | 2.1 | 2026-01-16 | Corrected terminology to match ODT exactly: paths/cooks naming, guide steps, recipe cooks as unified type. Added deselectable secondary appliances. | AI Agent |
 | 2.2 | 2026-01-16 | Simplified cook type names: "Meater probe cook" and "Recipe cook". Changed back to "recipe cook flow". Never abbreviate "Ninja combi" to just "Ninja". | AI Agent |
 | 2.3 | 2026-01-16 | Added three major features: (a) Multilingual support (Swedish/English), (b) Measurement systems (Swedish default, UK, US, Pure Metric), (c) Serving size adjustment for all recipes. | AI Agent |
-| 2.2 | 2026-01-16 | Simplified cook type names: "Meater probe cook" and "Recipe cook". Changed back to "recipe cook flow". Never abbreviate "Ninja combi" to just "Ninja". | AI Agent |
+| 2.4 | 2026-01-16 | Research-based update of Swedish measurements: Added accurate abbreviations (krm, tsk, msk, hg), conversion table, and common recipe patterns. Clarified that cups are NOT used in Swedish recipes and dl is standard for flour/sugar. | AI Agent |
 
 ---
 
