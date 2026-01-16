@@ -43,6 +43,7 @@ from .const import (
     SERVICE_COMPLETE,
     SERVICE_SET_NOTES,
     SERVICE_START_MULTI_APPLIANCE_COOK,
+    SERVICE_START_SIMPLE_PROBE_COOK,
 )
 from .cooking_data import (
     get_cut_by_id,
