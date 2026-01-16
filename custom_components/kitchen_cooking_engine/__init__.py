@@ -605,10 +605,18 @@ async def _async_register_services(hass: HomeAssistant) -> None:
             appliances = registry.get_all_appliances()
             for appliance in appliances:
                 # For now, create assignment based on role
+                # Handle both dict-like and object-like appliances
+                if hasattr(appliance, 'appliance_id'):
+                    appliance_id = appliance.appliance_id
+                    appliance_name = appliance.name
+                else:
+                    appliance_id = appliance.get("id", "unknown")
+                    appliance_name = appliance.get("name", "Unknown")
+                
                 assignments.append(ApplianceAssignment(
                     feature_role=role,
-                    appliance_id=appliance.get("id", "unknown"),
-                    appliance_name=appliance.get("name", "Unknown"),
+                    appliance_id=appliance_id,
+                    appliance_name=appliance_name,
                     entity_id=entity_id
                 ))
                 break  # Use first appliance for now
