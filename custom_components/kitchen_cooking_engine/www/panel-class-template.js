@@ -3219,9 +3219,13 @@ class KitchenCookingPanel extends LitElement {
   _renderRecentMeaterCooks() {
     // Filter history for MEATER probe cooks only
     const meaterCooks = (this._cookHistory || []).filter(cook => {
-      // Check if it's a MEATER-only cook (no recipe, just temperature monitoring)
+      // Check if it's a MEATER-only cook (temperature monitoring)
+      // Include cooks that have protein/meat data and target temperature
+      // Exclude cooks that are primarily recipe-based
       return cook.appliance_type === 'meater_probe' || 
-             (cook.protein && !cook.recipe_name);
+             (cook.protein && cook.target_temp_c) ||
+             (cook.meat && cook.target_temp_c) ||
+             (!cook.recipe_name && cook.target_temp_c);
     });
 
     return html`

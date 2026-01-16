@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Jan 2026, 23:05 CET
+ * AUTO-GENERATED: 16 Jan 2026, 23:17 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Jan 2026, 23:05 CET
+// Last generated: 16 Jan 2026, 23:17 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -8748,9 +8748,13 @@ class KitchenCookingPanel extends LitElement {
   _renderRecentMeaterCooks() {
     // Filter history for MEATER probe cooks only
     const meaterCooks = (this._cookHistory || []).filter(cook => {
-      // Check if it's a MEATER-only cook (no recipe, just temperature monitoring)
+      // Check if it's a MEATER-only cook (temperature monitoring)
+      // Include cooks that have protein/meat data and target temperature
+      // Exclude cooks that are primarily recipe-based
       return cook.appliance_type === 'meater_probe' || 
-             (cook.protein && !cook.recipe_name);
+             (cook.protein && cook.target_temp_c) ||
+             (cook.meat && cook.target_temp_c) ||
+             (!cook.recipe_name && cook.target_temp_c);
     });
 
     return html`
@@ -10956,7 +10960,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "101";
+const PANEL_VERSION = "103";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
