@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 16 Jan 2026, 11:54 UTC
-Last Change: v0.4.1.07 - Fixed AttributeError when accessing appliance properties
+Last Updated: 16 Jan 2026, 12:05 UTC
+Last Change: v0.4.1.09 - Fixed CookingPhase parameter mismatch in recipes/examples.py
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "84"
+PANEL_VERSION = "85"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
