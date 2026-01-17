@@ -3574,6 +3574,11 @@ class KitchenCookingPanel extends LitElement {
     }
     
     this._callService('start_cook', serviceData);
+    
+    // Navigate back to welcome screen so the active cook will be shown
+    this._showMeaterCooking = false;
+    this._currentPath = 'welcome';
+    this.requestUpdate();
   }
 
   _stopCook() {
