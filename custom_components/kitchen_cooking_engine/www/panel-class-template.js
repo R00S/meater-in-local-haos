@@ -4036,6 +4036,31 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
+   * Restart a cook from history
+   */
+  _restartCook(cook) {
+    // If it's a recipe cook, restart the recipe
+    if (cook.recipe_name && cook.recipe) {
+      this._startRecipeCook(cook.recipe, cook.serving_size);
+      return;
+    }
+
+    // If it's a MEATER probe cook with temperature data
+    if (cook.target_temp_c && cook.protein) {
+      // Navigate to MEATER cooking path with pre-filled data
+      this._currentPath = 'meater';
+      this._showMeaterCooking = true;
+      // Pre-select the protein/cut/doneness if available
+      // This would need the actual form data structure from cook history
+      this.requestUpdate();
+      return;
+    }
+
+    // Fallback: show message that this cook type can't be restarted
+    alert('This cook type cannot be automatically restarted. Please set up a new cook manually.');
+  }
+
+  /**
    * Start a recipe cook session
    */
   _startRecipeCook(recipe, servingSize = null) {

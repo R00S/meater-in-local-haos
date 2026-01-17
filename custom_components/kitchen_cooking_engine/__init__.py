@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 17 Jan 2026, 01:52 UTC
-Last Change: v0.5.0.22 - Phases 5 & 6: Ninja Combi Path & AI Recipe Builder
+Last Updated: 17 Jan 2026, 12:09 UTC
+Last Change: v0.5.0.23 - Bug fixes: Added _restartCook method and fixed sidebar title Promise issue
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -265,7 +265,7 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
         async_register_built_in_panel(
             hass,
             component_name="custom",
-            sidebar_title="Cooking",
+            sidebar_title="Kitchen Cooking Engine",
             sidebar_icon="mdi:pot-steam",
             frontend_url_path="kitchen-cooking",
             config={

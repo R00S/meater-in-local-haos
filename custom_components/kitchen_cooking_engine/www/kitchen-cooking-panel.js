@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Jan 2026, 03:14 CET
+ * AUTO-GENERATED: 17 Jan 2026, 13:12 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Jan 2026, 03:14 CET
+// Last generated: 17 Jan 2026, 13:12 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -9565,6 +9565,31 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
+   * Restart a cook from history
+   */
+  _restartCook(cook) {
+    // If it's a recipe cook, restart the recipe
+    if (cook.recipe_name && cook.recipe) {
+      this._startRecipeCook(cook.recipe, cook.serving_size);
+      return;
+    }
+
+    // If it's a MEATER probe cook with temperature data
+    if (cook.target_temp_c && cook.protein) {
+      // Navigate to MEATER cooking path with pre-filled data
+      this._currentPath = 'meater';
+      this._showMeaterCooking = true;
+      // Pre-select the protein/cut/doneness if available
+      // This would need the actual form data structure from cook history
+      this.requestUpdate();
+      return;
+    }
+
+    // Fallback: show message that this cook type can't be restarted
+    alert('This cook type cannot be automatically restarted. Please set up a new cook manually.');
+  }
+
+  /**
    * Start a recipe cook session
    */
   _startRecipeCook(recipe, servingSize = null) {
@@ -12523,7 +12548,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "118";
+const PANEL_VERSION = "119";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

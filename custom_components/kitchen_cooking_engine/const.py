@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 17 Jan 2026, 01:52 UTC
-Last Change: v0.5.0.22 - Phases 5 & 6: Ninja Combi Path & AI Recipe Builder - Full implementation with recipe selection, AI generation, and filtered history
+Last Updated: 17 Jan 2026, 12:09 UTC
+Last Change: v0.5.0.23 - Bug fixes: Added _restartCook method and fixed sidebar title Promise issue
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "118"
+PANEL_VERSION = "119"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
