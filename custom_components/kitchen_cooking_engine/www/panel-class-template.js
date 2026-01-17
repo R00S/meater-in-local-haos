@@ -3217,16 +3217,38 @@ class KitchenCookingPanel extends LitElement {
    * Shows only meater probe cooks (type 6.1)
    */
   _renderRecentMeaterCooks() {
+    // Debug: Log all cook history to see the actual data structure
+    console.log('DEBUG: Total cook history entries:', this._cookHistory?.length || 0);
+    if (this._cookHistory && this._cookHistory.length > 0) {
+      console.log('DEBUG: First cook entry keys:', Object.keys(this._cookHistory[0]));
+      console.log('DEBUG: First cook entry:', this._cookHistory[0]);
+    }
+    
     // Filter history for MEATER probe cooks only
     const meaterCooks = (this._cookHistory || []).filter(cook => {
       // Check if it's a MEATER-only cook (temperature monitoring)
       // Include cooks that have protein/meat data and target temperature
       // Exclude cooks that are primarily recipe-based
-      return cook.appliance_type === 'meater_probe' || 
+      const isMetering = cook.appliance_type === 'meater_probe' || 
              (cook.protein && cook.target_temp_c) ||
              (cook.meat && cook.target_temp_c) ||
              (!cook.recipe_name && cook.target_temp_c);
+      
+      // Debug log for each cook
+      if (!isMetering && cook.target_temp_c) {
+        console.log('DEBUG: Filtered OUT cook:', {
+          appliance_type: cook.appliance_type,
+          protein: cook.protein,
+          meat: cook.meat,
+          recipe_name: cook.recipe_name,
+          target_temp_c: cook.target_temp_c
+        });
+      }
+      
+      return isMetering;
     });
+    
+    console.log('DEBUG: Filtered MEATER cooks:', meaterCooks.length);
 
     return html`
       <div class="path-header">
