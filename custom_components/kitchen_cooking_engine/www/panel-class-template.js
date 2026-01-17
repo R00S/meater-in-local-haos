@@ -3471,6 +3471,7 @@ class KitchenCookingPanel extends LitElement {
   _showRecentMeaterCooks() {
     // Phase 2: Show filtered MEATER cook history
     this._currentPath = 'recent_meater';
+    this._loadHistory();  // Load cook history before displaying
     this.requestUpdate();
   }
 

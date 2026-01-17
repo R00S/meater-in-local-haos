@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Jan 2026, 02:15 CET
+ * AUTO-GENERATED: 17 Jan 2026, 02:19 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Jan 2026, 02:15 CET
+// Last generated: 17 Jan 2026, 02:19 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -9000,6 +9000,7 @@ class KitchenCookingPanel extends LitElement {
   _showRecentMeaterCooks() {
     // Phase 2: Show filtered MEATER cook history
     this._currentPath = 'recent_meater';
+    this._loadHistory();  // Load cook history before displaying
     this.requestUpdate();
   }
 
@@ -10981,7 +10982,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "110";
+const PANEL_VERSION = "111";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 17 Jan 2026, 01:00 UTC
-Last Change: v0.5.0.16 - Fixed _getEntities bug in MEATER path
+Last Change: v0.5.0.17 - Fixed cook history not loading in Recent MEATER Cooks
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
