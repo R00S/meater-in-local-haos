@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 17 Jan 2026, 12:09 UTC
-Last Change: v0.5.0.23 - Bug fixes: Added _restartCook method and fixed sidebar title Promise issue
+Last Change: v0.5.0.24 - Bug fixes: Fixed async render methods causing "[object Promise]" and improved state management for blank page issue
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.

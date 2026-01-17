@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Jan 2026, 13:12 CET
+ * AUTO-GENERATED: 17 Jan 2026, 13:56 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Jan 2026, 13:12 CET
+// Last generated: 17 Jan 2026, 13:56 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5743,6 +5743,11 @@ class KitchenCookingPanel extends LitElement {
     super.connectedCallback();
     // Data is embedded in this file - generated from backend at build time
     
+    // Ensure _currentPath is always set to a valid value
+    if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
+      this._currentPath = 'welcome';
+    }
+    
     // Load user preferences
     this._loadPreferences();
     
@@ -5754,6 +5759,10 @@ class KitchenCookingPanel extends LitElement {
     // Force re-render when tab becomes visible again
     this._visibilityHandler = () => {
       if (document.visibilityState === 'visible') {
+        // Validate and restore state
+        if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
+          this._currentPath = 'welcome';
+        }
         // Force multiple re-renders to ensure UI is properly updated
         this.requestUpdate();
         // Also trigger after a short delay for any async state
@@ -5765,6 +5774,10 @@ class KitchenCookingPanel extends LitElement {
     
     // Also handle focus event for additional reliability
     this._focusHandler = () => {
+      // Validate state on focus
+      if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
+        this._currentPath = 'welcome';
+      }
       this.requestUpdate();
     };
     window.addEventListener('focus', this._focusHandler);
@@ -8158,6 +8171,11 @@ class KitchenCookingPanel extends LitElement {
       return this._renderActiveCook(state);
     }
 
+    // Validate current path - ensure it has a valid value
+    if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
+      this._currentPath = 'welcome';
+    }
+
     // Otherwise, render based on current path
     switch (this._currentPath) {
       case 'welcome':
@@ -8191,7 +8209,9 @@ class KitchenCookingPanel extends LitElement {
         return this._renderPreviousCooksPath();
       
       default:
-        // Fallback to welcome screen
+        // Fallback to welcome screen for any unrecognized path
+        console.warn('Unrecognized path:', this._currentPath, '- falling back to welcome');
+        this._currentPath = 'welcome';
         return this._renderWelcomeScreen();
     }
   }
@@ -9143,16 +9163,11 @@ class KitchenCookingPanel extends LitElement {
   /**
    * Phase 6: Render AI ingredient selection interface
    */
-  async _renderAIIngredientSelection() {
-    // Load common ingredients if not already loaded
+  _renderAIIngredientSelection() {
+    // Data should already be loaded by _startAIRecipeCreation()
+    // If not loaded, show loading state
     if (!this._commonIngredients) {
-      try {
-        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
-        this._commonIngredients = response.ingredients || [];
-      } catch (e) {
-        console.error('Error loading ingredients:', e);
-        this._commonIngredients = [];
-      }
+      return html`<div class="loading">Loading ingredients...</div>`;
     }
 
     return html`
@@ -9225,16 +9240,11 @@ class KitchenCookingPanel extends LitElement {
   /**
    * Phase 6: Render cooking style selection
    */
-  async _renderAICookingStyleSelection() {
-    // Load cooking styles if not already loaded
+  _renderAICookingStyleSelection() {
+    // Data should already be loaded by _startAIRecipeCreation()
+    // If not loaded, show loading state
     if (!this._cookingStyles) {
-      try {
-        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/cooking_styles');
-        this._cookingStyles = response.styles || [];
-      } catch (e) {
-        console.error('Error loading cooking styles:', e);
-        this._cookingStyles = [];
-      }
+      return html`<div class="loading">Loading cooking styles...</div>`;
     }
 
     return html`
@@ -10211,13 +10221,34 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Start AI Recipe Creation
    * Opens ingredient selection for AI recipe generation
    */
-  _startAIRecipeCreation() {
+  async _startAIRecipeCreation() {
     console.log('Starting AI Recipe Creation...');
     this._currentPath = 'ai_recipe_builder';
-    this._showAIIngredientSelector = true;
     this._selectedIngredients = [];
     this._selectedCookingStyle = null;
     this._aiRecipeSuggestions = [];
+    
+    // Load data before showing UI to avoid "[object Promise]" display
+    try {
+      // Load ingredients if not already loaded
+      if (!this._commonIngredients) {
+        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
+        this._commonIngredients = response.ingredients || [];
+      }
+      
+      // Load cooking styles if not already loaded
+      if (!this._cookingStyles) {
+        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/cooking_styles');
+        this._cookingStyles = response.styles || [];
+      }
+    } catch (e) {
+      console.error('Error loading AI recipe data:', e);
+      this._commonIngredients = this._commonIngredients || [];
+      this._cookingStyles = this._cookingStyles || [];
+    }
+    
+    // NOW show the UI with data already loaded
+    this._showAIIngredientSelector = true;
     this.requestUpdate();
   }
 
@@ -12548,7 +12579,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "119";
+const PANEL_VERSION = "120";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
