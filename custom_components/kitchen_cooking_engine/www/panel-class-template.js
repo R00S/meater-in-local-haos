@@ -3167,7 +3167,6 @@ class KitchenCookingPanel extends LitElement {
   _renderMeaterPath() {
     // If in cooking mode, show the setup form
     if (this._showMeaterCooking) {
-      const entities = this._getEntities();
       return html`
         <div class="path-header">
           <button class="back-btn" @click=${() => { 
