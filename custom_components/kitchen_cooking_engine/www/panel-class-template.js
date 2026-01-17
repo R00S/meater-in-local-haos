@@ -3523,7 +3523,13 @@ class KitchenCookingPanel extends LitElement {
       <ha-card>
         <div class="card-content">
           <p class="info-text">Create custom recipes using Ninja Combi cooking modes and features.</p>
-          ${this._renderNinjaCombiForm()}
+          <p>Recipe builder interface coming soon. For now, use the Ninja Combi built-in recipes.</p>
+          <button class="primary-btn" @click=${() => {
+            this._currentPath = 'ninja_built_in_recipes';
+            this._showNinjaBuiltInRecipes();
+          }}>
+            📖 View Built-in Recipes
+          </button>
         </div>
       </ha-card>
     `;
@@ -4051,7 +4057,13 @@ class KitchenCookingPanel extends LitElement {
   _restartCook(cook) {
     // If it's a recipe cook, restart the recipe
     if (cook.recipe_name && cook.recipe) {
-      this._startRecipeCook(cook.recipe, cook.serving_size);
+      this._startRecipeCook(cook.recipe, cook.serving_size || 4);
+      return;
+    }
+
+    // If it has a recipe in recipe_data field (alternative storage)
+    if (cook.recipe_data) {
+      this._startRecipeCook(cook.recipe_data, cook.serving_size || 4);
       return;
     }
 
@@ -4060,8 +4072,6 @@ class KitchenCookingPanel extends LitElement {
       // Navigate to MEATER cooking path with pre-filled data
       this._currentPath = 'meater';
       this._showMeaterCooking = true;
-      // Pre-select the protein/cut/doneness if available
-      // This would need the actual form data structure from cook history
       this.requestUpdate();
       return;
     }
@@ -4644,22 +4654,19 @@ class KitchenCookingPanel extends LitElement {
    * Phase 5: Show Ninja Combi built-in recipes
    * Loads and displays pre-configured Ninja Combi recipes
    */
-  async _showNinjaBuiltInRecipes() {
+  _showNinjaBuiltInRecipes() {
     console.log('Loading Ninja built-in recipes...');
-    try {
-      // Call backend API to get built-in ninja recipes
-      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ninja_recipes');
-      if (response && response.recipes) {
-        this._ninjaBuiltInRecipes = response.recipes;
-        this._showNinjaRecipeList = true;
-        this._currentPath = 'ninja_built_in_recipes';
-        this.requestUpdate();
-      } else {
-        this._showMessage('No Recipes', 'No built-in Ninja Combi recipes found.', false);
-      }
-    } catch (e) {
-      console.error('Error loading ninja recipes:', e);
-      this._showMessage('Error', 'Failed to load Ninja Combi recipes. Please try again.', true);
+    
+    // Use embedded NINJA_COMBI_RECIPES data
+    if (typeof NINJA_COMBI_RECIPES !== 'undefined' && NINJA_COMBI_RECIPES && NINJA_COMBI_RECIPES.length > 0) {
+      this._ninjaBuiltInRecipes = NINJA_COMBI_RECIPES;
+      this._showNinjaRecipeList = true;
+      this._currentPath = 'ninja_built_in_recipes';
+      this.requestUpdate();
+    } else {
+      alert('No Ninja Combi recipes available. Please ensure the integration is up to date.');
+      this._currentPath = 'ninja_combi';
+      this.requestUpdate();
     }
   }
 
