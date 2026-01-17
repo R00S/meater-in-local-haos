@@ -114,16 +114,6 @@ class KitchenCookingPanel extends LitElement {
       _currentPath: { type: String },  // 'welcome', 'meater', 'ninja_combi', 'ai_recipe_builder', 'previous_cooks', 'recent_meater'
       _selectedAppliance: { type: Object },  // Selected appliance from welcome screen
       _showMeaterCooking: { type: Boolean },  // Show MEATER cooking form in MEATER path
-      // Phase 5/6: Recipe and AI builder states
-      _selectedSecondaryAppliances: { type: Array },  // Selected secondary appliances for AI builder
-      _ninjaBuiltInRecipes: { type: Array },  // List of built-in Ninja Combi recipes
-      _aiRecipeSuggestions: { type: Array },  // AI-generated recipe suggestions
-      _selectedIngredients: { type: Array },  // Selected ingredients for AI recipe
-      _selectedCookingStyle: { type: String },  // Selected cooking style for AI recipe
-      _showNinjaRecipeList: { type: Boolean },  // Show Ninja built-in recipe list
-      _showAIIngredientSelector: { type: Boolean },  // Show AI ingredient selection
-      _showAIStyleSelector: { type: Boolean },  // Show AI cooking style selection
-      _showAIRecipeSuggestions: { type: Boolean },  // Show AI recipe suggestions
     };
   }
 
@@ -158,16 +148,6 @@ class KitchenCookingPanel extends LitElement {
     this._appliances = [];
     this._availableFeatures = new Set();
     this._showAppliances = false;
-    // Phase 5/6: Recipe and AI builder states
-    this._selectedSecondaryAppliances = [];
-    this._ninjaBuiltInRecipes = [];
-    this._aiRecipeSuggestions = [];
-    this._selectedIngredients = [];
-    this._selectedCookingStyle = null;
-    this._showNinjaRecipeList = false;
-    this._showAIIngredientSelector = false;
-    this._showAIStyleSelector = false;
-    this._showAIRecipeSuggestions = false;
     this._showRecipes = false;
     this._compatibleRecipes = [];
     this._recipeQualityFilter = 'acceptable'; // Show acceptable and better by default
@@ -2643,20 +2623,8 @@ class KitchenCookingPanel extends LitElement {
       case 'ninja_combi':
         return this._renderNinjaCombiPath();
       
-      case 'ninja_recipe_builder':
-        return this._renderNinjaRecipeBuilderView();
-      
-      case 'ninja_built_in_recipes':
-        return this._renderNinjaBuiltInRecipesView();
-      
-      case 'recent_ninja':
-        return this._renderRecentNinjaCooks();
-      
       case 'ai_recipe_builder':
-        return this._renderAIRecipeBuilderFlow();
-      
-      case 'recent_appliance':
-        return this._renderRecentApplianceRecipes();
+        return this._renderAIRecipeBuilderPath();
       
       case 'previous_cooks':
         return this._renderPreviousCooksPath();
@@ -3480,388 +3448,6 @@ class KitchenCookingPanel extends LitElement {
           </div>
         </ha-card>
       </div>
-        `;
-  }
-
-  /**
-   * Phase 5: Render Ninja Recipe Builder view
-   * Displays the existing ninja_combi_recipe_builder interface
-   */
-  _renderNinjaRecipeBuilderView() {
-    return html`
-      <div class="path-header">
-        <button class="back-btn" @click=${() => {
-          this._showRecipeBuilder = false;
-          this._currentPath = 'ninja_combi';
-          this.requestUpdate();
-        }}>
-          ← Back to Ninja Combi
-        </button>
-        <h2>🎨 Ninja Combi Recipe Builder</h2>
-      </div>
-
-      <ha-card>
-        <div class="card-content">
-          <p class="info-text">Create custom recipes using Ninja Combi cooking modes and features.</p>
-          ${this._renderNinjaCombiForm()}
-        </div>
-      </ha-card>
-    `;
-  }
-
-  /**
-   * Phase 5: Render Ninja built-in recipes list
-   * Displays pre-configured Ninja Combi recipes
-   */
-  _renderNinjaBuiltInRecipesView() {
-    return html`
-      <div class="path-header">
-        <button class="back-btn" @click=${() => {
-          this._showNinjaRecipeList = false;
-          this._ninjaBuiltInRecipes = [];
-          this._currentPath = 'ninja_combi';
-          this.requestUpdate();
-        }}>
-          ← Back to Ninja Combi
-        </button>
-        <h2>📖 Built-in Ninja Combi Recipes</h2>
-      </div>
-
-      ${this._ninjaBuiltInRecipes.length === 0 ? html`
-        <ha-card>
-          <div class="card-content">
-            <p>No built-in recipes available. Check back later!</p>
-          </div>
-        </ha-card>
-      ` : html`
-        <div class="recipe-list">
-          ${this._ninjaBuiltInRecipes.map(recipe => html`
-            <ha-card class="recipe-card clickable" @click=${() => this._selectNinjaRecipe(recipe)}>
-              <div class="card-content">
-                <h3>${recipe.name}</h3>
-                <p class="recipe-description">${recipe.description || ''}</p>
-                <div class="recipe-meta">
-                  <span>⏱️ ${recipe.cook_time || 'N/A'}</span>
-                  <span>🍽️ Serves ${recipe.serving_size || '4'}</span>
-                </div>
-              </div>
-            </ha-card>
-          `)}
-        </div>
-      `}
-    `;
-  }
-
-  /**
-   * Phase 5: Render recent Ninja Combi cooks (filtered history)
-   */
-  _renderRecentNinjaCooks() {
-    // Filter history for Ninja Combi cooks
-    const ninjaCooks = this._cookHistory.filter(cook => 
-      cook.main_appliance === 'ninja_combi' || 
-      (cook.appliance_type && cook.appliance_type.toLowerCase().includes('ninja'))
-    );
-
-    return html`
-      <div class="path-header">
-        <button class="back-btn" @click=${() => {
-          this._currentPath = 'ninja_combi';
-          this.requestUpdate();
-        }}>
-          ← Back to Ninja Combi
-        </button>
-        <h2>📋 Recent Ninja Combi Cooks</h2>
-      </div>
-
-      ${ninjaCooks.length === 0 ? html`
-        <ha-card>
-          <div class="card-content">
-            <p>No Ninja Combi cooking history yet. Start your first Ninja Combi cook!</p>
-          </div>
-        </ha-card>
-      ` : html`
-        <div class="history-list">
-          ${ninjaCooks.map(cook => this._renderHistoryCard(cook))}
-        </div>
-      `}
-    `;
-  }
-
-  /**
-   * Phase 6: Render AI Recipe Builder flow
-   * Complete AI recipe generation interface with ingredient and style selection
-   */
-  _renderAIRecipeBuilderFlow() {
-    // Step 1: Ingredient Selection
-    if (this._showAIIngredientSelector && !this._showAIStyleSelector) {
-      return this._renderAIIngredientSelection();
-    }
-
-    // Step 2: Cooking Style Selection
-    if (this._showAIStyleSelector && !this._showAIRecipeSuggestions) {
-      return this._renderAICookingStyleSelection();
-    }
-
-    // Step 3: Recipe Suggestions
-    if (this._showAIRecipeSuggestions) {
-      return this._renderAIRecipeSuggestions();
-    }
-
-    // Default: Return to appliance path selection
-    return this._renderAIRecipeBuilderPath();
-  }
-
-  /**
-   * Phase 6: Render AI ingredient selection interface
-   */
-  async _renderAIIngredientSelection() {
-    // Load common ingredients if not already loaded
-    if (!this._commonIngredients) {
-      try {
-        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
-        this._commonIngredients = response.ingredients || [];
-      } catch (e) {
-        console.error('Error loading ingredients:', e);
-        this._commonIngredients = [];
-      }
-    }
-
-    return html`
-      <div class="path-header">
-        <button class="back-btn" @click=${() => {
-          this._showAIIngredientSelector = false;
-          this._selectedIngredients = [];
-          this._currentPath = this._selectedAppliance?.type === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
-          this.requestUpdate();
-        }}>
-          ← Back
-        </button>
-        <h2>🥘 Select Ingredients</h2>
-      </div>
-
-      <ha-card>
-        <div class="card-content">
-          <p class="info-text">Choose ingredients you have available (select at least 2):</p>
-          
-          <div class="ingredient-grid">
-            ${(this._commonIngredients || []).map(ingredient => html`
-              <label class="ingredient-checkbox">
-                <input 
-                  type="checkbox" 
-                  ?checked=${this._selectedIngredients.includes(ingredient)}
-                  @change=${(e) => this._toggleIngredient(ingredient, e.target.checked)}
-                />
-                ${ingredient}
-              </label>
-            `)}
-          </div>
-
-          <div class="ingredient-custom">
-            <input 
-              type="text" 
-              placeholder="Add custom ingredient..." 
-              @keypress=${(e) => {
-                if (e.key === 'Enter' && e.target.value.trim()) {
-                  this._addCustomIngredient(e.target.value.trim());
-                  e.target.value = '';
-                }
-              }}
-            />
-          </div>
-
-          <div class="selected-ingredients">
-            <h4>Selected Ingredients (${this._selectedIngredients.length}):</h4>
-            <div class="ingredient-tags">
-              ${this._selectedIngredients.map(ing => html`
-                <span class="ingredient-tag">
-                  ${ing}
-                  <button @click=${() => this._removeIngredient(ing)}>×</button>
-                </span>
-              `)}
-            </div>
-          </div>
-
-          <button 
-            class="primary-btn"
-            ?disabled=${this._selectedIngredients.length < 2}
-            @click=${() => this._proceedToCookingStyle()}
-          >
-            Next: Choose Cooking Style
-          </button>
-        </div>
-      </ha-card>
-    `;
-  }
-
-  /**
-   * Phase 6: Render cooking style selection
-   */
-  async _renderAICookingStyleSelection() {
-    // Load cooking styles if not already loaded
-    if (!this._cookingStyles) {
-      try {
-        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/cooking_styles');
-        this._cookingStyles = response.styles || [];
-      } catch (e) {
-        console.error('Error loading cooking styles:', e);
-        this._cookingStyles = [];
-      }
-    }
-
-    return html`
-      <div class="path-header">
-        <button class="back-btn" @click=${() => {
-          this._showAIStyleSelector = false;
-          this._showAIIngredientSelector = true;
-          this.requestUpdate();
-        }}>
-          ← Back to Ingredients
-        </button>
-        <h2>🍳 Choose Cooking Style</h2>
-      </div>
-
-      <ha-card>
-        <div class="card-content">
-          <p class="info-text">Select your preferred cooking style:</p>
-          
-          <div class="style-grid">
-            ${(this._cookingStyles || []).map(style => html`
-              <ha-card 
-                class="style-card ${this._selectedCookingStyle === style.id ? 'selected' : ''} clickable"
-                @click=${() => {
-                  this._selectedCookingStyle = style.id;
-                  this.requestUpdate();
-                }}
-              >
-                <div class="card-content">
-                  <div class="style-icon">${style.icon || '🍳'}</div>
-                  <h3>${style.name}</h3>
-                  <p>${style.description || ''}</p>
-                </div>
-              </ha-card>
-            `)}
-          </div>
-
-          <button 
-            class="primary-btn"
-            ?disabled=${!this._selectedCookingStyle}
-            @click=${() => this._generateAIRecipes()}
-          >
-            Generate Recipes 🤖
-          </button>
-        </div>
-      </ha-card>
-    `;
-  }
-
-  /**
-   * Phase 6: Render AI recipe suggestions
-   */
-  _renderAIRecipeSuggestions() {
-    return html`
-      <div class="path-header">
-        <button class="back-btn" @click=${() => {
-          this._showAIRecipeSuggestions = false;
-          this._showAIStyleSelector = true;
-          this._aiRecipeSuggestions = [];
-          this.requestUpdate();
-        }}>
-          ← Back to Cooking Style
-        </button>
-        <h2>🤖 AI Recipe Suggestions</h2>
-      </div>
-
-      ${this._aiRecipeSuggestions.length === 0 ? html`
-        <ha-card>
-          <div class="card-content loading-state">
-            <ha-circular-progress active></ha-circular-progress>
-            <p>Generating recipes with AI...</p>
-          </div>
-        </ha-card>
-      ` : html`
-        <div class="recipe-suggestions">
-          ${this._aiRecipeSuggestions.map(recipe => html`
-            <ha-card class="recipe-suggestion-card">
-              <div class="card-content">
-                <h3>${recipe.name}</h3>
-                <p class="recipe-description">${recipe.description || ''}</p>
-                
-                <div class="recipe-details">
-                  <div class="detail-item">
-                    <strong>⏱️ Prep Time:</strong> ${recipe.prep_time || 'N/A'}
-                  </div>
-                  <div class="detail-item">
-                    <strong>🍳 Cook Time:</strong> ${recipe.cook_time || 'N/A'}
-                  </div>
-                  <div class="detail-item">
-                    <strong>🍽️ Servings:</strong> ${recipe.serving_size || '4'}
-                  </div>
-                </div>
-
-                <div class="recipe-ingredients">
-                  <h4>Ingredients:</h4>
-                  <ul>
-                    ${(recipe.ingredients || []).map(ing => html`<li>${ing}</li>`)}
-                  </ul>
-                </div>
-
-                <button 
-                  class="primary-btn"
-                  @click=${() => this._startCookingFromAIRecipe(recipe)}
-                >
-                  Start Cooking This Recipe
-                </button>
-              </div>
-            </ha-card>
-          `)}
-        </div>
-
-        <div class="action-buttons">
-          <button 
-            class="secondary-btn"
-            @click=${() => this._generateAIRecipes()}
-          >
-            🔄 Generate Different Recipes
-          </button>
-        </div>
-      `}
-    `;
-  }
-
-  /**
-   * Phase 6: Render recent recipes for selected appliance (filtered history)
-   */
-  _renderRecentApplianceRecipes() {
-    const applianceId = this._selectedAppliance?.id;
-    
-    // Filter history for current appliance
-    const applianceCooks = this._cookHistory.filter(cook => 
-      cook.main_appliance === applianceId || 
-      cook.appliance_id === applianceId
-    );
-
-    return html`
-      <div class="path-header">
-        <button class="back-btn" @click=${() => {
-          this._currentPath = 'ai_recipe_builder';
-          this.requestUpdate();
-        }}>
-          ← Back to AI Recipe Builder
-        </button>
-        <h2>📋 Recent ${this._selectedAppliance?.name || 'Appliance'} Recipes</h2>
-      </div>
-
-      ${applianceCooks.length === 0 ? html`
-        <ha-card>
-          <div class="card-content">
-            <p>No cooking history for this appliance yet. Create your first AI recipe!</p>
-          </div>
-        </ha-card>
-      ` : html`
-        <div class="history-list">
-          ${applianceCooks.map(cook => this._renderHistoryCard(cook))}
-        </div>
-      `}
     `;
   }
 
@@ -4150,142 +3736,6 @@ class KitchenCookingPanel extends LitElement {
       console.error('Error saving recipe cook:', error);
       this._showMessage(`Error saving recipe cook: ${error.message}`, true);
     }
-  }
-
-  /**
-   * Phase 6: Toggle ingredient selection
-   */
-  _toggleIngredient(ingredient, enabled) {
-    if (enabled) {
-      if (!this._selectedIngredients.includes(ingredient)) {
-        this._selectedIngredients = [...this._selectedIngredients, ingredient];
-      }
-    } else {
-      this._selectedIngredients = this._selectedIngredients.filter(i => i !== ingredient);
-    }
-    this.requestUpdate();
-  }
-
-  /**
-   * Phase 6: Add custom ingredient
-   */
-  _addCustomIngredient(ingredient) {
-    if (ingredient && !this._selectedIngredients.includes(ingredient)) {
-      this._selectedIngredients = [...this._selectedIngredients, ingredient];
-      this.requestUpdate();
-    }
-  }
-
-  /**
-   * Phase 6: Remove ingredient from selection
-   */
-  _removeIngredient(ingredient) {
-    this._selectedIngredients = this._selectedIngredients.filter(i => i !== ingredient);
-    this.requestUpdate();
-  }
-
-  /**
-   * Phase 6: Proceed to cooking style selection
-   */
-  _proceedToCookingStyle() {
-    if (this._selectedIngredients.length < 2) {
-      this._showMessage('Please select at least 2 ingredients', true);
-      return;
-    }
-    
-    this._showAIIngredientSelector = false;
-    this._showAIStyleSelector = true;
-    this.requestUpdate();
-  }
-
-  /**
-   * Phase 6: Generate AI recipes based on selections
-   */
-  async _generateAIRecipes() {
-    if (!this._selectedCookingStyle || this._selectedIngredients.length < 2) {
-      this._showMessage('Please complete ingredient and style selection', true);
-      return;
-    }
-
-    this._showAIStyleSelector = false;
-    this._showAIRecipeSuggestions = true;
-    this._aiRecipeSuggestions = []; // Clear previous suggestions
-    this.requestUpdate();
-
-    try {
-      // Get appliance IDs (main + selected secondaries)
-      const applianceIds = [this._selectedAppliance.id, ...this._selectedSecondaryAppliances];
-
-      // Call AI recipe generation API
-      const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/generate', {
-        ingredients: this._selectedIngredients,
-        cooking_style: this._selectedCookingStyle,
-        appliance_ids: applianceIds,
-        main_appliance_id: this._selectedAppliance.id
-      });
-
-      if (response && response.suggestions) {
-        this._aiRecipeSuggestions = response.suggestions;
-      } else {
-        this._showMessage('No recipes generated. Please try different ingredients or styles.', false);
-      }
-    } catch (error) {
-      console.error('Error generating AI recipes:', error);
-      this._showMessage('Error generating recipes. Please try again.', true);
-      // Go back to style selection
-      this._showAIRecipeSuggestions = false;
-      this._showAIStyleSelector = true;
-    }
-
-    this.requestUpdate();
-  }
-
-  /**
-   * Phase 6: Start cooking from an AI-generated recipe
-   */
-  _startCookingFromAIRecipe(recipe) {
-    console.log('Starting cook from AI recipe:', recipe);
-    
-    // Start recipe cook flow (Phase 4)
-    this._recipeCookState = {
-      recipe: recipe,
-      startTime: Date.now(),
-      currentStep: -1, // Start with overview
-      servingSize: recipe.serving_size || 4,
-      easeRating: 0,
-      resultRating: 0,
-      notes: '',
-      meaterSubprocess: null
-    };
-
-    // Start the timer
-    this._startRecipeCookTimer();
-    
-    this.requestUpdate();
-  }
-
-  /**
-   * Phase 5: Select a Ninja built-in recipe and start cooking
-   */
-  _selectNinjaRecipe(recipe) {
-    console.log('Selected Ninja recipe:', recipe);
-    
-    // Start recipe cook flow (Phase 4)
-    this._recipeCookState = {
-      recipe: recipe,
-      startTime: Date.now(),
-      currentStep: -1, // Start with overview
-      servingSize: recipe.serving_size || 4,
-      easeRating: 0,
-      resultRating: 0,
-      notes: '',
-      meaterSubprocess: null
-    };
-
-    // Start the timer
-    this._startRecipeCookTimer();
-    
-    this.requestUpdate();
   }
 
   /**
@@ -4594,105 +4044,39 @@ class KitchenCookingPanel extends LitElement {
     this.requestUpdate();
   }
 
-  /**
-   * Phase 5: Start Ninja Combi Recipe Builder
-   * Opens the existing ninja_combi_recipe_builder functionality
-   */
   _startNinjaRecipeBuilder() {
-    console.log('Starting Ninja Recipe Builder...');
-    this._showRecipeBuilder = true;
-    this._currentPath = 'ninja_recipe_builder';
-    this.requestUpdate();
+    // TODO Phase 5: Integrate existing recipe builder
+    this._showMessage('Coming Soon', 'Ninja Recipe Builder will be integrated in Phase 5.', false);
   }
 
-  /**
-   * Phase 5: Show Ninja Combi built-in recipes
-   * Loads and displays pre-configured Ninja Combi recipes
-   */
-  async _showNinjaBuiltInRecipes() {
-    console.log('Loading Ninja built-in recipes...');
-    try {
-      // Call backend API to get built-in ninja recipes
-      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ninja_recipes');
-      if (response && response.recipes) {
-        this._ninjaBuiltInRecipes = response.recipes;
-        this._showNinjaRecipeList = true;
-        this._currentPath = 'ninja_built_in_recipes';
-        this.requestUpdate();
-      } else {
-        this._showMessage('No Recipes', 'No built-in Ninja Combi recipes found.', false);
-      }
-    } catch (e) {
-      console.error('Error loading ninja recipes:', e);
-      this._showMessage('Error', 'Failed to load Ninja Combi recipes. Please try again.', true);
-    }
+  _showNinjaBuiltInRecipes() {
+    // TODO Phase 5: Show built-in recipes
+    this._showMessage('Coming Soon', 'Built-in Ninja Combi recipes will be available in Phase 5.', false);
   }
 
-  /**
-   * Phase 6: Launch AI Recipe Builder with Ninja Combi pre-selected
-   * Pre-selects Ninja Combi as main appliance and opens AI builder
-   */
   _startAIWithNinjaCombi() {
-    console.log('Starting AI Recipe Builder with Ninja Combi...');
-    // Pre-select Ninja Combi and launch AI builder
-    this._currentPath = 'ai_recipe_builder';
-    this._showAIIngredientSelector = true;
-    this._selectedIngredients = [];
-    this._selectedCookingStyle = null;
-    this.requestUpdate();
+    // TODO Phase 6: Pre-select Ninja Combi in AI builder
+    this._showMessage('Coming Soon', 'AI Recipe with Ninja Combi will be available in Phase 6.', false);
   }
 
-  /**
-   * Phase 5: Show recent Ninja Combi cooks (filtered history)
-   * Displays cook history filtered for Ninja Combi recipes
-   */
   _showRecentNinjaCooks() {
-    console.log('Showing recent Ninja Combi cooks...');
-    this._currentPath = 'recent_ninja';
-    this._loadHistory();
-    this.requestUpdate();
+    // TODO Phase 3: Implement filtered history
+    this._showMessage('Coming Soon', 'Recent Ninja Combi cooks will be implemented in Phase 3.', false);
   }
 
-  /**
-   * Phase 6: Start AI Recipe Creation
-   * Opens ingredient selection for AI recipe generation
-   */
   _startAIRecipeCreation() {
-    console.log('Starting AI Recipe Creation...');
-    this._currentPath = 'ai_recipe_builder';
-    this._showAIIngredientSelector = true;
-    this._selectedIngredients = [];
-    this._selectedCookingStyle = null;
-    this._aiRecipeSuggestions = [];
-    this.requestUpdate();
+    // TODO Phase 6: Integrate AI recipe builder
+    this._showMessage('Coming Soon', 'AI Recipe creation will be integrated in Phase 6.', false);
   }
 
-  /**
-   * Phase 6: Show recent recipes for selected appliance
-   * Displays cook history filtered for current appliance
-   */
   _showRecentApplianceRecipes() {
-    console.log('Showing recent appliance recipes...');
-    this._currentPath = 'recent_appliance';
-    this._loadHistory();
-    this.requestUpdate();
+    // TODO Phase 3: Implement filtered history
+    this._showMessage('Coming Soon', 'Recent appliance recipes will be implemented in Phase 3.', false);
   }
 
-  /**
-   * Phase 6: Toggle secondary appliance selection
-   * @param {string} applianceId - ID of appliance to toggle
-   * @param {boolean} enabled - Whether appliance is enabled
-   */
   _toggleSecondaryAppliance(applianceId, enabled) {
+    // TODO Phase 6: Implement secondary appliance selection
     console.log(`Toggle secondary appliance ${applianceId}: ${enabled}`);
-    if (enabled) {
-      if (!this._selectedSecondaryAppliances.includes(applianceId)) {
-        this._selectedSecondaryAppliances = [...this._selectedSecondaryAppliances, applianceId];
-      }
-    } else {
-      this._selectedSecondaryAppliances = this._selectedSecondaryAppliances.filter(id => id !== applianceId);
-    }
-    this.requestUpdate();
   }
 
   _renderHistory() {

@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 17 Jan 2026, 01:52 UTC
-Last Change: v0.5.0.21 - Phase 4: Recipe Cook Flow Implementation
+Last Change: v0.5.0.22 - Phases 5 & 6: Ninja Combi Path & AI Recipe Builder
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
