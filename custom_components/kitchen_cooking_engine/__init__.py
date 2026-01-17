@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 14 Jan 2026, 03:10 UTC
-Last Change: v0.3.4.0 - View Assist integration ready for merge
+Last Updated: 17 Jan 2026, 12:09 UTC
+Last Change: v0.5.0.24 - Bug fixes: Fixed async render methods causing "[object Promise]" and improved state management for blank page issue
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -18,6 +18,8 @@ This integration provides:
 - Sidebar panel for easy cooking setup and monitoring
 - External API for 3rd party integrations and automations
 - Phase 3.1: Multi-appliance support with feature-based recipe matching
+- Phase 1 GUI Redesign: Welcome screen with appliance selector and path-based navigation
+- Phase 2 GUI Redesign: MEATER path with integrated cooking interface
 """
 
 from __future__ import annotations
@@ -66,7 +68,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.1.2"
+__version__ = "0.5.0.25"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -263,7 +265,7 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
         async_register_built_in_panel(
             hass,
             component_name="custom",
-            sidebar_title="Cooking",
+            sidebar_title="Kitchen Cooking Engine",
             sidebar_icon="mdi:pot-steam",
             frontend_url_path="kitchen-cooking",
             config={
