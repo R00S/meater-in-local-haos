@@ -3893,10 +3893,21 @@ class KitchenCookingPanel extends LitElement {
             <h5>📋 All Ingredients</h5>
             <ul>
               ${recipe.ingredients.map(ing => {
-                const isActive = stepIngredients.some(si => 
-                  ing.toLowerCase().includes(si.toLowerCase()) || 
-                  si.toLowerCase().includes(ing.toLowerCase())
-                );
+                // Improved matching: check if step ingredient words appear in full ingredient
+                // This reduces false positives like 'chicken breast' matching 'chicken stock'
+                const ingLower = ing.toLowerCase();
+                const isActive = stepIngredients.some(si => {
+                  const siLower = si.toLowerCase();
+                  // Extract key words (ignore common measurements and prepositions)
+                  const keyWords = siLower.split(/[\s,]+/).filter(w => 
+                    w.length > 3 && !['cups', 'tbsp', 'tsp', 'ounce', 'pound', 'gram'].includes(w)
+                  );
+                  // Match if any key word is found as a whole word in ingredient
+                  return keyWords.some(word => {
+                    const regex = new RegExp(`\\b${word}\\b`, 'i');
+                    return regex.test(ingLower);
+                  }) || ingLower === siLower; // Exact match fallback
+                });
                 return html`
                   <li class="${isActive ? 'active-ingredient' : ''}">${ing}</li>
                 `;
@@ -6367,7 +6378,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "115";
+const PANEL_VERSION = "116";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
