@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 17 Jan 2026, 01:00 UTC
-Last Change: v0.5.0.20 - Phase 3: Previous Cook Path - Cook Detail View
+Last Updated: 17 Jan 2026, 01:52 UTC
+Last Change: v0.5.0.21 - Phase 4: Recipe Cook Flow - Full implementation with step navigation, ratings, and timer
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "114"
+PANEL_VERSION = "115"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

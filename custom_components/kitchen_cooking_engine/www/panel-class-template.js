@@ -183,6 +183,9 @@ class KitchenCookingPanel extends LitElement {
     this._showMeaterCooking = false;
     // Phase 3: Cook detail view state
     this._selectedCookForDetail = null;
+    // Phase 4: Recipe Cook Flow state
+    this._recipeCookState = null; // {recipe, startTime, currentStep, servingSize, easeRating, resultRating, notes, meaterSubprocess}
+    this._recipeCookTimer = null; // setInterval handle for elapsed time updates
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -2574,6 +2577,11 @@ class KitchenCookingPanel extends LitElement {
    * Route content rendering based on current path
    */
   _renderContent(entities, isActive, state) {
+    // Phase 4: If in recipe cook flow, always show it (highest priority)
+    if (this._recipeCookState) {
+      return this._renderRecipeCookFlow();
+    }
+
     // If there's an active cook, always show it regardless of path
     if (isActive && entities.length > 0) {
       return this._renderActiveCook(state);
@@ -3567,6 +3575,398 @@ class KitchenCookingPanel extends LitElement {
     const hours = Math.floor(minutes / 60);
     const mins = Math.round(minutes % 60);
     return `${hours}h ${mins}min`;
+  }
+
+  // ============================================================================
+  // PHASE 4: RECIPE COOK FLOW METHODS
+  // ============================================================================
+
+  /**
+   * Format elapsed time from seconds to HH:MM:SS or MM:SS
+   */
+  _formatElapsedTime(seconds) {
+    if (!seconds || seconds < 0) return '00:00';
+    
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const secs = Math.floor(seconds % 60);
+    
+    const pad = (num) => String(num).padStart(2, '0');
+    
+    if (hours > 0) {
+      return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
+    }
+    return `${pad(minutes)}:${pad(secs)}`;
+  }
+
+  /**
+   * Start a recipe cook session
+   */
+  _startRecipeCook(recipe, servingSize = null) {
+    // Clear any existing timer
+    if (this._recipeCookTimer) {
+      clearInterval(this._recipeCookTimer);
+    }
+
+    // Initialize cook state
+    this._recipeCookState = {
+      recipe: recipe,
+      startTime: Date.now(),
+      currentStep: -1, // -1 = overview page, 0+ = step index
+      servingSize: servingSize || recipe.serving_size || 4,
+      easeRating: null,
+      resultRating: null,
+      notes: '',
+      meaterSubprocess: null // Will store subprocess info if MEATER is started
+    };
+
+    // Start timer that updates every second
+    this._recipeCookTimer = setInterval(() => {
+      this.requestUpdate();
+    }, 1000);
+
+    this.requestUpdate();
+  }
+
+  /**
+   * Stop the recipe cook and clean up
+   */
+  _stopRecipeCook() {
+    // Clear timer
+    if (this._recipeCookTimer) {
+      clearInterval(this._recipeCookTimer);
+      this._recipeCookTimer = null;
+    }
+
+    // Clear state
+    this._recipeCookState = null;
+    
+    // Navigate back to welcome
+    this._navigateToWelcome();
+  }
+
+  /**
+   * Advance to next recipe step
+   */
+  _nextRecipeStep() {
+    if (!this._recipeCookState) return;
+
+    const recipe = this._recipeCookState.recipe;
+    const maxStep = recipe.steps ? recipe.steps.length - 1 : 0;
+    
+    // If we're on the last step, go to finish page
+    if (this._recipeCookState.currentStep >= maxStep) {
+      this._recipeCookState.currentStep = maxStep + 1; // Finish page
+    } else {
+      this._recipeCookState.currentStep++;
+    }
+    
+    this.requestUpdate();
+  }
+
+  /**
+   * Go back to previous recipe step
+   */
+  _previousRecipeStep() {
+    if (!this._recipeCookState) return;
+
+    if (this._recipeCookState.currentStep > -1) {
+      this._recipeCookState.currentStep--;
+    } else {
+      // If at overview, exit cook flow
+      this._stopRecipeCook();
+    }
+    
+    this.requestUpdate();
+  }
+
+  /**
+   * Save completed recipe cook
+   */
+  async _saveRecipeCook() {
+    if (!this._recipeCookState) return;
+
+    const state = this._recipeCookState;
+    const recipe = state.recipe;
+    const elapsedSeconds = Math.floor((Date.now() - state.startTime) / 1000);
+
+    try {
+      // Call the save_recipe_cook service
+      await this.hass.callService('kitchen_cooking_engine', 'save_recipe_cook', {
+        recipe_id: recipe.id || recipe.name,
+        recipe_name: recipe.name,
+        serving_size: state.servingSize,
+        duration_seconds: elapsedSeconds,
+        ease_rating: state.easeRating,
+        result_rating: state.resultRating,
+        notes: state.notes,
+        ingredients: recipe.ingredients || [],
+        appliance_id: this._selectedAppliance?.id || null
+      });
+
+      // Show success message
+      this._showMessage('Recipe cook saved successfully! 🎉');
+
+      // Stop the cook flow
+      this._stopRecipeCook();
+
+    } catch (error) {
+      console.error('Error saving recipe cook:', error);
+      this._showMessage(`Error saving recipe cook: ${error.message}`, true);
+    }
+  }
+
+  /**
+   * Render the Recipe Cook Flow interface
+   */
+  _renderRecipeCookFlow() {
+    if (!this._recipeCookState) return html``;
+
+    const state = this._recipeCookState;
+    const recipe = state.recipe;
+    const elapsedSeconds = Math.floor((Date.now() - state.startTime) / 1000);
+    const currentStepIndex = state.currentStep;
+    const isOverview = currentStepIndex === -1;
+    const isFinishPage = currentStepIndex >= (recipe.steps ? recipe.steps.length : 0);
+    
+    return html`
+      <!-- Recipe Cook Header -->
+      <div class="recipe-cook-header">
+        <div class="recipe-cook-title">
+          <h2>${recipe.name}</h2>
+          <p class="recipe-cook-serving">
+            Serves: ${state.servingSize} | Elapsed: ${this._formatElapsedTime(elapsedSeconds)}
+          </p>
+        </div>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          ${isOverview ? this._renderRecipeCookOverview() : 
+            isFinishPage ? this._renderRecipeCookFinish() : 
+            this._renderRecipeCookStep(currentStepIndex)}
+        </div>
+      </ha-card>
+
+      <!-- Recipe Cook Footer -->
+      <div class="recipe-cook-footer">
+        <div class="footer-left">
+          <button class="secondary-btn" @click=${this._previousRecipeStep}>
+            ${isOverview ? '✕ Exit' : '← Back'}
+          </button>
+        </div>
+        <div class="footer-middle">
+          ${this._renderMeaterProbeInfo()}
+        </div>
+        <div class="footer-right">
+          ${isFinishPage ? html`
+            <button class="primary-btn" @click=${this._saveRecipeCook}
+              ?disabled=${!state.easeRating || !state.resultRating}>
+              ✓ Save Cook
+            </button>
+          ` : html`
+            <button class="primary-btn" @click=${this._nextRecipeStep}>
+              ${isOverview ? 'Start →' : currentStepIndex === recipe.steps.length - 1 ? 'Finish' : 'Next →'}
+            </button>
+          `}
+        </div>
+      </div>
+    `;
+  }
+
+  /**
+   * Render recipe overview page (step -1)
+   */
+  _renderRecipeCookOverview() {
+    const recipe = this._recipeCookState.recipe;
+    
+    return html`
+      <div class="recipe-cook-overview">
+        <h3>📋 Recipe Overview</h3>
+        
+        ${recipe.description ? html`
+          <p class="recipe-description">${recipe.description}</p>
+        ` : ''}
+
+        ${recipe.total_time ? html`
+          <p><strong>⏱️ Total Time:</strong> ${recipe.total_time} minutes</p>
+        ` : ''}
+
+        <div class="recipe-cook-ingredients">
+          <h4>🛒 Ingredients</h4>
+          <ul>
+            ${(recipe.ingredients || []).map(ing => html`
+              <li>${ing}</li>
+            `)}
+          </ul>
+        </div>
+
+        ${recipe.steps && recipe.steps.length > 0 ? html`
+          <div class="recipe-cook-step-overview">
+            <h4>📝 Steps (${recipe.steps.length})</h4>
+            <ol>
+              ${recipe.steps.map((step, idx) => html`
+                <li>
+                  ${step.name || `Step ${idx + 1}`}
+                  ${step.time ? html` <span class="step-time">(~${step.time} min)</span>` : ''}
+                </li>
+              `)}
+            </ol>
+          </div>
+        ` : ''}
+      </div>
+    `;
+  }
+
+  /**
+   * Render individual recipe step
+   */
+  _renderRecipeCookStep(stepIndex) {
+    const recipe = this._recipeCookState.recipe;
+    const step = recipe.steps[stepIndex];
+    
+    if (!step) {
+      return html`<p>Step not found</p>`;
+    }
+
+    // Get ingredients mentioned in this step (if available)
+    const stepIngredients = step.ingredients || [];
+    
+    return html`
+      <div class="recipe-cook-step-detail">
+        <div class="step-header">
+          <h3>Step ${stepIndex + 1} of ${recipe.steps.length}</h3>
+          <h4>${step.name || `Step ${stepIndex + 1}`}</h4>
+          ${step.time ? html`<p class="step-time">⏱️ ~${step.time} minutes</p>` : ''}
+        </div>
+
+        <div class="step-instructions">
+          <p>${step.instructions || step.description || 'No instructions available.'}</p>
+        </div>
+
+        ${stepIngredients.length > 0 ? html`
+          <div class="step-ingredients">
+            <h5>Ingredients for this step:</h5>
+            <ul>
+              ${stepIngredients.map(ing => html`<li>${ing}</li>`)}
+            </ul>
+          </div>
+        ` : ''}
+
+        ${step.temperature ? html`
+          <div class="step-temp">
+            <strong>🌡️ Temperature:</strong> ${step.temperature}
+          </div>
+        ` : ''}
+
+        ${step.notes ? html`
+          <div class="step-notes">
+            <strong>💡 Tip:</strong> ${step.notes}
+          </div>
+        ` : ''}
+
+        <!-- Show all ingredients with current step's ingredients highlighted -->
+        ${recipe.ingredients && recipe.ingredients.length > 0 ? html`
+          <div class="recipe-cook-ingredients">
+            <h5>📋 All Ingredients</h5>
+            <ul>
+              ${recipe.ingredients.map(ing => {
+                const isActive = stepIngredients.some(si => 
+                  ing.toLowerCase().includes(si.toLowerCase()) || 
+                  si.toLowerCase().includes(ing.toLowerCase())
+                );
+                return html`
+                  <li class="${isActive ? 'active-ingredient' : ''}">${ing}</li>
+                `;
+              })}
+            </ul>
+          </div>
+        ` : ''}
+      </div>
+    `;
+  }
+
+  /**
+   * Render recipe cook finish page with ratings
+   */
+  _renderRecipeCookFinish() {
+    const state = this._recipeCookState;
+    
+    return html`
+      <div class="recipe-cook-finish">
+        <h3>🎉 Cook Complete!</h3>
+        <p>How did it go? Please rate your experience:</p>
+
+        <div class="recipe-cook-rating">
+          <h4>😊 Ease of Cooking</h4>
+          <p class="rating-description">How easy was this recipe to follow?</p>
+          <div class="star-selector">
+            ${[1, 2, 3, 4, 5].map(rating => html`
+              <button 
+                class="star-btn ${state.easeRating >= rating ? 'active' : ''}"
+                @click=${() => {
+                  this._recipeCookState.easeRating = rating;
+                  this.requestUpdate();
+                }}
+              >
+                ${state.easeRating >= rating ? '⭐' : '☆'}
+              </button>
+            `)}
+          </div>
+        </div>
+
+        <div class="recipe-cook-rating">
+          <h4>😋 Result Quality</h4>
+          <p class="rating-description">How did the final dish turn out?</p>
+          <div class="star-selector">
+            ${[1, 2, 3, 4, 5].map(rating => html`
+              <button 
+                class="star-btn ${state.resultRating >= rating ? 'active' : ''}"
+                @click=${() => {
+                  this._recipeCookState.resultRating = rating;
+                  this.requestUpdate();
+                }}
+              >
+                ${state.resultRating >= rating ? '⭐' : '☆'}
+              </button>
+            `)}
+          </div>
+        </div>
+
+        <div class="recipe-cook-notes">
+          <h4>📝 Notes (Optional)</h4>
+          <textarea
+            placeholder="Any notes, modifications, or thoughts about this cook..."
+            .value=${state.notes || ''}
+            @input=${(e) => {
+              this._recipeCookState.notes = e.target.value;
+            }}
+            rows="4"
+          ></textarea>
+        </div>
+
+        ${!state.easeRating || !state.resultRating ? html`
+          <p class="rating-required">⚠️ Please provide both ratings to save this cook</p>
+        ` : ''}
+      </div>
+    `;
+  }
+
+  /**
+   * Render MEATER probe info in footer middle section
+   */
+  _renderMeaterProbeInfo() {
+    // TODO: Integrate with MEATER subprocess if active
+    // For now, just show placeholder
+    if (this._recipeCookState?.meaterSubprocess) {
+      return html`
+        <div class="meater-probe-info">
+          <span class="probe-temp">🌡️ 45°C</span>
+          <span class="probe-status">Cooking</span>
+        </div>
+      `;
+    }
+    return html``;
   }
 
   // ============================================================================
@@ -5566,6 +5966,329 @@ class KitchenCookingPanel extends LitElement {
         cursor: pointer;
       }
 
+      /* ========================================
+         PHASE 4: RECIPE COOK FLOW STYLES
+         ======================================== */
+
+      /* Recipe Cook Header */
+      .recipe-cook-header {
+        background: var(--primary-color);
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+      }
+
+      .recipe-cook-header h2 {
+        margin: 0 0 8px 0;
+        font-size: 24px;
+      }
+
+      .recipe-cook-serving {
+        margin: 0;
+        opacity: 0.9;
+        font-size: 14px;
+      }
+
+      /* Recipe Cook Overview */
+      .recipe-cook-overview {
+        padding: 8px 0;
+      }
+
+      .recipe-cook-overview h3 {
+        margin: 0 0 16px 0;
+        font-size: 20px;
+        color: var(--primary-text-color);
+      }
+
+      .recipe-description {
+        margin: 0 0 16px 0;
+        color: var(--secondary-text-color);
+        line-height: 1.5;
+      }
+
+      .recipe-cook-ingredients {
+        margin: 16px 0;
+      }
+
+      .recipe-cook-ingredients h4,
+      .recipe-cook-ingredients h5 {
+        margin: 0 0 12px 0;
+        font-size: 16px;
+        color: var(--primary-text-color);
+      }
+
+      .recipe-cook-ingredients ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .recipe-cook-ingredients li {
+        padding: 8px 12px;
+        margin-bottom: 6px;
+        background: var(--divider-color);
+        border-radius: 6px;
+        transition: all 0.2s;
+      }
+
+      .recipe-cook-ingredients li.active-ingredient {
+        background: var(--primary-color);
+        color: white;
+        font-weight: 600;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Recipe Step Overview */
+      .recipe-cook-step-overview {
+        margin: 16px 0;
+      }
+
+      .recipe-cook-step-overview h4 {
+        margin: 0 0 12px 0;
+        font-size: 16px;
+        color: var(--primary-text-color);
+      }
+
+      .recipe-cook-step-overview ol {
+        padding-left: 24px;
+        margin: 0;
+      }
+
+      .recipe-cook-step-overview li {
+        padding: 8px 0;
+        color: var(--primary-text-color);
+      }
+
+      .step-time {
+        color: var(--secondary-text-color);
+        font-size: 0.9em;
+      }
+
+      /* Recipe Step Detail */
+      .recipe-cook-step-detail {
+        padding: 8px 0;
+      }
+
+      .step-header {
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid var(--divider-color);
+      }
+
+      .step-header h3 {
+        margin: 0 0 8px 0;
+        font-size: 14px;
+        color: var(--secondary-text-color);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .step-header h4 {
+        margin: 0 0 8px 0;
+        font-size: 22px;
+        color: var(--primary-text-color);
+      }
+
+      .step-header .step-time {
+        margin: 0;
+        font-size: 14px;
+      }
+
+      .step-instructions {
+        margin: 20px 0;
+        padding: 16px;
+        background: var(--card-background-color);
+        border-left: 4px solid var(--primary-color);
+        border-radius: 4px;
+      }
+
+      .step-instructions p {
+        margin: 0;
+        line-height: 1.6;
+        font-size: 16px;
+        color: var(--primary-text-color);
+      }
+
+      .step-ingredients {
+        margin: 16px 0;
+        padding: 12px;
+        background: var(--divider-color);
+        border-radius: 6px;
+      }
+
+      .step-ingredients h5 {
+        margin: 0 0 8px 0;
+        font-size: 14px;
+        color: var(--primary-text-color);
+      }
+
+      .step-ingredients ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .step-ingredients li {
+        padding: 4px 0;
+        color: var(--primary-text-color);
+      }
+
+      .step-temp,
+      .step-notes {
+        margin: 12px 0;
+        padding: 12px;
+        background: var(--divider-color);
+        border-radius: 6px;
+        font-size: 14px;
+      }
+
+      /* Recipe Cook Finish Page */
+      .recipe-cook-finish {
+        padding: 8px 0;
+      }
+
+      .recipe-cook-finish h3 {
+        margin: 0 0 8px 0;
+        font-size: 24px;
+        color: var(--primary-text-color);
+        text-align: center;
+      }
+
+      .recipe-cook-finish > p {
+        margin: 0 0 24px 0;
+        text-align: center;
+        color: var(--secondary-text-color);
+      }
+
+      /* Recipe Cook Rating */
+      .recipe-cook-rating {
+        margin: 24px 0;
+        padding: 20px;
+        background: var(--divider-color);
+        border-radius: 8px;
+      }
+
+      .recipe-cook-rating h4 {
+        margin: 0 0 8px 0;
+        font-size: 18px;
+        color: var(--primary-text-color);
+      }
+
+      .rating-description {
+        margin: 0 0 12px 0;
+        font-size: 14px;
+        color: var(--secondary-text-color);
+      }
+
+      .star-selector {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+      }
+
+      .star-btn {
+        background: none;
+        border: none;
+        font-size: 32px;
+        cursor: pointer;
+        padding: 4px;
+        transition: transform 0.2s;
+        color: var(--secondary-text-color);
+      }
+
+      .star-btn:hover {
+        transform: scale(1.1);
+      }
+
+      .star-btn.active {
+        color: #ffc107;
+      }
+
+      /* Recipe Cook Notes */
+      .recipe-cook-notes {
+        margin: 24px 0;
+      }
+
+      .recipe-cook-notes h4 {
+        margin: 0 0 12px 0;
+        font-size: 16px;
+        color: var(--primary-text-color);
+      }
+
+      .recipe-cook-notes textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid var(--divider-color);
+        border-radius: 8px;
+        font-size: 14px;
+        font-family: inherit;
+        background: var(--card-background-color);
+        color: var(--primary-text-color);
+        resize: vertical;
+        box-sizing: border-box;
+      }
+
+      .recipe-cook-notes textarea:focus {
+        outline: none;
+        border-color: var(--primary-color);
+      }
+
+      .rating-required {
+        margin: 16px 0 0 0;
+        padding: 12px;
+        background: var(--error-color);
+        color: white;
+        border-radius: 6px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      /* Recipe Cook Footer */
+      .recipe-cook-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 16px;
+        padding: 16px;
+        background: var(--card-background-color);
+        border-radius: 8px;
+        border: 1px solid var(--divider-color);
+      }
+
+      .footer-left,
+      .footer-right {
+        flex: 1;
+      }
+
+      .footer-middle {
+        flex: 1;
+        text-align: center;
+      }
+
+      .footer-right {
+        text-align: right;
+      }
+
+      .meater-probe-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .probe-temp {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--primary-text-color);
+      }
+
+      .probe-status {
+        font-size: 12px;
+        color: var(--secondary-text-color);
+      }
+
       /* Mobile Responsive */
       @media (max-width: 600px) {
         .appliance-grid {
@@ -5589,6 +6312,31 @@ class KitchenCookingPanel extends LitElement {
           flex-direction: column;
           text-align: center;
         }
+
+        /* Recipe Cook Flow Mobile */
+        .recipe-cook-footer {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .footer-left,
+        .footer-middle,
+        .footer-right {
+          width: 100%;
+          text-align: center;
+        }
+
+        .footer-right {
+          text-align: center;
+        }
+
+        .star-selector {
+          flex-wrap: wrap;
+        }
+
+        .star-btn {
+          font-size: 28px;
+        }
       }
     `;
   }
@@ -5597,7 +6345,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "44";
+const PANEL_VERSION = "115";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

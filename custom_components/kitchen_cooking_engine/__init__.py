@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 17 Jan 2026, 01:42 UTC
-Last Change: v0.5.0.20 - Phase 3: Previous Cook Path - Cook Detail View Implementation
+Last Updated: 17 Jan 2026, 01:52 UTC
+Last Change: v0.5.0.21 - Phase 4: Recipe Cook Flow Implementation
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
