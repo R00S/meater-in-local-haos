@@ -181,6 +181,8 @@ class KitchenCookingPanel extends LitElement {
     this._selectedAppliance = null;
     // Phase 2: MEATER cooking mode state
     this._showMeaterCooking = false;
+    // Phase 3: Cook detail view state
+    this._selectedCookForDetail = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -3423,6 +3425,11 @@ class KitchenCookingPanel extends LitElement {
    * Render Previous Cooks path (uses existing _renderHistory)
    */
   _renderPreviousCooksPath() {
+    // Phase 3: Show detail view if a cook is selected
+    if (this._selectedCookForDetail) {
+      return this._renderCookDetailView(this._selectedCookForDetail);
+    }
+    
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
@@ -3432,6 +3439,134 @@ class KitchenCookingPanel extends LitElement {
       </div>
       ${this._renderHistory()}
     `;
+  }
+
+  /**
+   * Phase 3: Render detailed view of a single cook
+   */
+  _renderCookDetailView(cook) {
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => {
+          this._selectedCookForDetail = null;
+          this.requestUpdate();
+        }}>
+          ← Back to List
+        </button>
+        <h2>${cook.cut_display || cook.cut || cook.recipe_name || 'Cook Details'}</h2>
+      </div>
+
+      <ha-card>
+        <div class="card-content cook-detail">
+          <div class="detail-header">
+            <h3>${cook.cut_display || cook.cut || cook.recipe_name}</h3>
+            <p class="detail-meta">
+              ${cook.appliance_name || 'Unknown Appliance'} • 
+              ${this._formatDateTime(cook.completed_at)}
+            </p>
+          </div>
+
+          ${cook.duration ? html`
+            <div class="detail-section">
+              <strong>⏱️ Duration:</strong> ${this._formatDuration(cook.duration)}
+            </div>
+          ` : ''}
+
+          ${cook.protein ? html`
+            <div class="detail-section">
+              <strong>🥩 Protein:</strong> ${cook.protein}
+              ${cook.doneness ? html` • <strong>Doneness:</strong> ${(cook.doneness || '').replace('_', ' ')}` : ''}
+            </div>
+          ` : ''}
+
+          ${cook.target_temp_c || cook.peak_temp_c || cook.final_temp ? html`
+            <div class="detail-section">
+              <strong>🌡️ Temperature Data:</strong>
+              <div class="temp-data">
+                ${cook.target_temp_c ? html`<p>Target: ${cook.target_temp_c}°C</p>` : ''}
+                ${cook.peak_temp_c ? html`<p>Peak: ${Math.round(cook.peak_temp_c)}°C</p>` : ''}
+                ${cook.final_temp_after_rest ? html`<p>After Rest: ${Math.round(cook.final_temp_after_rest)}°C</p>` : 
+                  cook.final_temp ? html`<p>Final: ${cook.final_temp}°C</p>` : ''}
+              </div>
+            </div>
+          ` : ''}
+
+          ${cook.cooking_method ? html`
+            <div class="detail-section">
+              <strong>🍳 Cooking Method:</strong> ${(cook.cooking_method || '').replace(/_/g, ' ')}
+            </div>
+          ` : ''}
+
+          ${cook.ingredients && cook.ingredients.length > 0 ? html`
+            <div class="detail-section">
+              <strong>📝 Ingredients:</strong>
+              <ul class="ingredients-list">
+                ${cook.ingredients.map(ing => html`<li>${ing}</li>`)}
+              </ul>
+            </div>
+          ` : ''}
+
+          ${cook.timeline && cook.timeline.length > 0 ? html`
+            <div class="detail-section">
+              <strong>📅 Cook Timeline:</strong>
+              <div class="timeline">
+                ${cook.timeline.map(event => html`
+                  <div class="timeline-event">
+                    <span class="timeline-time">${this._formatDateTime(event.timestamp)}</span>
+                    <span class="timeline-desc">${event.description}</span>
+                  </div>
+                `)}
+              </div>
+            </div>
+          ` : ''}
+
+          ${cook.ease_rating || cook.result_rating ? html`
+            <div class="detail-section">
+              <strong>⭐ Ratings:</strong>
+              ${cook.ease_rating ? html`
+                <p>Ease: ${'⭐'.repeat(cook.ease_rating)}${'☆'.repeat(5 - cook.ease_rating)}</p>
+              ` : ''}
+              ${cook.result_rating ? html`
+                <p>Result: ${'⭐'.repeat(cook.result_rating)}${'☆'.repeat(5 - cook.result_rating)}</p>
+              ` : ''}
+            </div>
+          ` : ''}
+
+          ${cook.notes ? html`
+            <div class="detail-section">
+              <strong>📝 Notes:</strong>
+              <p class="cook-notes">${cook.notes}</p>
+            </div>
+          ` : ''}
+
+          <div class="detail-actions">
+            <button class="primary-btn" @click=${() => this._restartCook(cook)}>
+              🔄 Restart This Cook
+            </button>
+            <button class="small-btn" @click=${() => {
+              const notes = prompt('Update notes:', cook.notes || '');
+              if (notes !== null) {
+                this._updateCookNotes(cook.id, notes);
+                // Update the displayed cook
+                cook.notes = notes;
+                this.requestUpdate();
+              }
+            }}>✏️ Edit Notes</button>
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /**
+   * Helper to format duration in minutes
+   */
+  _formatDuration(minutes) {
+    if (!minutes) return 'N/A';
+    if (minutes < 60) return `${Math.round(minutes)} min`;
+    const hours = Math.floor(minutes / 60);
+    const mins = Math.round(minutes % 60);
+    return `${hours}h ${mins}min`;
   }
 
   // ============================================================================
@@ -3526,7 +3661,10 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : html`
         ${this._cookHistory.map(cook => html`
-          <ha-card class="history-card">
+          <ha-card class="history-card clickable" @click=${() => {
+            this._selectedCookForDetail = cook;
+            this.requestUpdate();
+          }}>
             <div class="card-content">
               <div class="history-header">
                 <h3>${cook.cut_display || cook.cut}</h3>
@@ -3546,7 +3684,7 @@ class KitchenCookingPanel extends LitElement {
                   <strong>📝 Notes:</strong> ${cook.notes}
                 </div>
               ` : ''}
-              <div class="history-actions">
+              <div class="history-actions" @click=${(e) => e.stopPropagation()}>
                 <button class="small-btn" @click=${() => {
                   const notes = prompt('Update notes:', cook.notes || '');
                   if (notes !== null) this._updateCookNotes(cook.id, notes);
