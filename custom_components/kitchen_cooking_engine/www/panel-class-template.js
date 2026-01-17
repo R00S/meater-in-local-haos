@@ -2300,6 +2300,28 @@ class KitchenCookingPanel extends LitElement {
 
   // Phase 4: Start cooking from recipe
   async _startCookFromRecipe(recipe, match) {
+    // Phase 4: Start Recipe Cook Flow
+    // Check if recipe has steps - if so, use new Recipe Cook Flow
+    if (recipe.steps && recipe.steps.length > 0) {
+      // Close the recipe detail view
+      this._selectedRecipeDetail = null;
+      this._showRecipes = false;
+      
+      // Ask for serving size adjustment (optional)
+      const defaultServingSize = recipe.serving_size || 4;
+      const servingSizeInput = prompt(
+        `How many servings?\n\nDefault: ${defaultServingSize}`,
+        defaultServingSize
+      );
+      
+      const servingSize = servingSizeInput ? parseInt(servingSizeInput, 10) : defaultServingSize;
+      
+      // Start the Recipe Cook Flow
+      this._startRecipeCook(recipe, servingSize);
+      return;
+    }
+    
+    // Legacy flow for recipes without steps (MEATER probe setup)
     // Check if we have a temperature probe appliance
     const probeAppliances = this._appliances.filter(app => 
       app.features && app.features.includes('temperature_probe')

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Jan 2026, 02:53 CET
+ * AUTO-GENERATED: 17 Jan 2026, 02:56 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Jan 2026, 02:53 CET
+// Last generated: 17 Jan 2026, 02:56 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -7829,6 +7829,28 @@ class KitchenCookingPanel extends LitElement {
 
   // Phase 4: Start cooking from recipe
   async _startCookFromRecipe(recipe, match) {
+    // Phase 4: Start Recipe Cook Flow
+    // Check if recipe has steps - if so, use new Recipe Cook Flow
+    if (recipe.steps && recipe.steps.length > 0) {
+      // Close the recipe detail view
+      this._selectedRecipeDetail = null;
+      this._showRecipes = false;
+      
+      // Ask for serving size adjustment (optional)
+      const defaultServingSize = recipe.serving_size || 4;
+      const servingSizeInput = prompt(
+        `How many servings?\n\nDefault: ${defaultServingSize}`,
+        defaultServingSize
+      );
+      
+      const servingSize = servingSizeInput ? parseInt(servingSizeInput, 10) : defaultServingSize;
+      
+      // Start the Recipe Cook Flow
+      this._startRecipeCook(recipe, servingSize);
+      return;
+    }
+    
+    // Legacy flow for recipes without steps (MEATER probe setup)
     // Check if we have a temperature probe appliance
     const probeAppliances = this._appliances.filter(app => 
       app.features && app.features.includes('temperature_probe')
@@ -11874,7 +11896,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "115";
+const PANEL_VERSION = "116";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
