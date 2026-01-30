@@ -23,6 +23,13 @@ if ! command -v gh &> /dev/null; then
     exit 1
 fi
 
+# Check if jq is installed
+if ! command -v jq &> /dev/null; then
+    echo "ERROR: jq is not installed."
+    echo "Install it from: https://stedolan.github.io/jq/"
+    exit 1
+fi
+
 # Check if gh is authenticated
 if ! gh auth status &> /dev/null; then
     echo "ERROR: GitHub CLI is not authenticated."
