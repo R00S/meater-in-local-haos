@@ -44,15 +44,31 @@ All releases with `prerelease=true` will be deleted, including:
 
 ## How to Use
 
-### Option 1: GitHub Actions Workflow (Recommended)
+### Option 1: GitHub Actions Workflow (Recommended - Web-Based) ⭐
 
-1. Go to the "Actions" tab in GitHub
-2. Select "Cleanup Prerelease Versions" workflow
-3. Click "Run workflow"
-4. Choose "dry_run: true" to preview what will be deleted
-5. Once confirmed, run again with "dry_run: false" to actually delete
+**This is the easiest method - everything runs in the GitHub web interface!**
 
-### Option 2: Manual Script Execution
+1. Go to: https://github.com/R00S/meater-in-local-haos/actions/workflows/cleanup-prereleases.yml
+2. Click the "Run workflow" button (on the right side)
+3. First time: Choose "dry_run: **true**" to preview what will be deleted
+4. Review the workflow output to confirm the correct releases will be deleted
+5. Second time: Run again with "dry_run: **false**" to actually delete the releases
+
+No local setup needed! The workflow has the necessary permissions to delete releases.
+
+### Option 2: Using GitHub CLI (gh)
+
+If you have GitHub CLI installed and authenticated:
+
+```bash
+# Dry run (preview what will be deleted)
+bash scripts/cleanup_prereleases.sh true
+
+# Actually delete
+bash scripts/cleanup_prereleases.sh false
+```
+
+### Option 3: Using Python Script
 
 ```bash
 # Install dependencies
@@ -65,12 +81,6 @@ python3 scripts/cleanup_prereleases.py --dry-run
 export GITHUB_TOKEN=your_github_token_here
 python3 scripts/cleanup_prereleases.py
 ```
-
-To create a GitHub personal access token:
-1. Go to GitHub Settings > Developer settings > Personal access tokens > Tokens (classic)
-2. Click "Generate new token (classic)"
-3. Select scope: `repo` (Full control of private repositories)
-4. Generate and copy the token
 
 ## Expected Result
 
