@@ -2295,9 +2295,20 @@ class KitchenCookingPanel extends LitElement {
       return this._renderRecipeCookFlow();
     }
 
-    // If there's an active cook on the SELECTED entity, show it
-    if (isActive && entities.length > 0) {
-      return this._renderActiveCook(state);
+    // Find ACTUAL active entity (not relying on this._selectedEntity)
+    // This ensures graph and attributes always come from the right entity
+    const activeEntity = activeCooks.length > 0 ? activeCooks[0] : null;
+    
+    // If there's an active cook AND we're on welcome/default, show it
+    if (activeEntity && 
+        (this._currentPath === 'welcome' || !this._currentPath || this._currentPath === '')) {
+      const activeState = this.hass.states[activeEntity];
+      // Keep selected entity in sync with active entity for service calls
+      if (this._selectedEntity !== activeEntity) {
+        console.log('Syncing selected entity to active entity:', activeEntity);
+        this._selectedEntity = activeEntity;
+      }
+      return this._renderActiveCook(activeState);
     }
     
     // If multiple active cooks but none selected, show selector on welcome screen

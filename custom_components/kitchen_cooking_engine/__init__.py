@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 17 Feb 2026, 18:55 UTC
-Last Change: v0.5.0.40 - Fix MEATER entity selection + recent cooks navigation with active cook
+Last Change: v0.5.0.42 - Use actual active entity for graph, not this._selectedEntity
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -69,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.41"
+__version__ = "0.5.0.42"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

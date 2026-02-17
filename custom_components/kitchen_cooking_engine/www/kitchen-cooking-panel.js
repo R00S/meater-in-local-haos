@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Feb 2026, 21:39 CET
+ * AUTO-GENERATED: 17 Feb 2026, 21:48 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Feb 2026, 21:39 CET
+// Last generated: 17 Feb 2026, 21:48 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -7824,9 +7824,20 @@ class KitchenCookingPanel extends LitElement {
       return this._renderRecipeCookFlow();
     }
 
-    // If there's an active cook on the SELECTED entity, show it
-    if (isActive && entities.length > 0) {
-      return this._renderActiveCook(state);
+    // Find ACTUAL active entity (not relying on this._selectedEntity)
+    // This ensures graph and attributes always come from the right entity
+    const activeEntity = activeCooks.length > 0 ? activeCooks[0] : null;
+    
+    // If there's an active cook AND we're on welcome/default, show it
+    if (activeEntity && 
+        (this._currentPath === 'welcome' || !this._currentPath || this._currentPath === '')) {
+      const activeState = this.hass.states[activeEntity];
+      // Keep selected entity in sync with active entity for service calls
+      if (this._selectedEntity !== activeEntity) {
+        console.log('Syncing selected entity to active entity:', activeEntity);
+        this._selectedEntity = activeEntity;
+      }
+      return this._renderActiveCook(activeState);
     }
     
     // If multiple active cooks but none selected, show selector on welcome screen
@@ -12448,7 +12459,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "135";
+const PANEL_VERSION = "136";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
