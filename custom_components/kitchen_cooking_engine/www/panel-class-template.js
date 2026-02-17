@@ -2386,9 +2386,10 @@ class KitchenCookingPanel extends LitElement {
     const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
     
     // Filter to only MEATER-type entities for session selection
-    const meaterEntities = entities.filter(e => 
-      this.hass.states[e]?.attributes?.appliance_type === 'meater'
-    );
+    const meaterEntities = entities.filter(e => {
+      const applianceType = this.hass.states[e]?.attributes?.appliance_type;
+      return applianceType === 'meater' || applianceType === 'meater_probe';
+    });
     
     // Auto-select MEATER entity when in MEATER path
     // Force selection if no entity selected OR if selected entity is not a MEATER
@@ -4621,9 +4622,10 @@ class KitchenCookingPanel extends LitElement {
     try {
       // CRITICAL: Verify we're using a MEATER entity before starting cook!
       const entities = this._findCookingEntities();
-      const meaterEntities = entities.filter(e => 
-        this.hass.states[e]?.attributes?.appliance_type === 'meater'
-      );
+      const meaterEntities = entities.filter(e => {
+        const applianceType = this.hass.states[e]?.attributes?.appliance_type;
+        return applianceType === 'meater' || applianceType === 'meater_probe';
+      });
       
       console.log('DEBUG: All entities:', entities);
       console.log('DEBUG: MEATER entities:', meaterEntities);

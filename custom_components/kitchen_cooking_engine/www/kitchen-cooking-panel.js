@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Feb 2026, 21:48 CET
+ * AUTO-GENERATED: 17 Feb 2026, 21:57 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Feb 2026, 21:48 CET
+// Last generated: 17 Feb 2026, 21:57 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -7915,9 +7915,10 @@ class KitchenCookingPanel extends LitElement {
     const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
     
     // Filter to only MEATER-type entities for session selection
-    const meaterEntities = entities.filter(e => 
-      this.hass.states[e]?.attributes?.appliance_type === 'meater'
-    );
+    const meaterEntities = entities.filter(e => {
+      const applianceType = this.hass.states[e]?.attributes?.appliance_type;
+      return applianceType === 'meater' || applianceType === 'meater_probe';
+    });
     
     // Auto-select MEATER entity when in MEATER path
     // Force selection if no entity selected OR if selected entity is not a MEATER
@@ -10150,9 +10151,10 @@ class KitchenCookingPanel extends LitElement {
     try {
       // CRITICAL: Verify we're using a MEATER entity before starting cook!
       const entities = this._findCookingEntities();
-      const meaterEntities = entities.filter(e => 
-        this.hass.states[e]?.attributes?.appliance_type === 'meater'
-      );
+      const meaterEntities = entities.filter(e => {
+        const applianceType = this.hass.states[e]?.attributes?.appliance_type;
+        return applianceType === 'meater' || applianceType === 'meater_probe';
+      });
       
       console.log('DEBUG: All entities:', entities);
       console.log('DEBUG: MEATER entities:', meaterEntities);
@@ -12459,7 +12461,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "136";
+const PANEL_VERSION = "137";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
