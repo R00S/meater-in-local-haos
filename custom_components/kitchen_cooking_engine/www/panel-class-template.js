@@ -2404,7 +2404,10 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <h3>Select Session</h3>
-            <select @change=${(e) => this._selectedEntity = e.target.value}>
+            <select 
+              .value=${this._selectedEntity}
+              @change=${(e) => this._selectedEntity = e.target.value}
+            >
               ${entities.map(e => html`
                 <option value="${e}" ?selected=${this._selectedEntity === e}>
                   ${this.hass.states[e]?.attributes?.friendly_name || e}
