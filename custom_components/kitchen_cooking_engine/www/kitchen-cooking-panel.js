@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Feb 2026, 21:24 CET
+ * AUTO-GENERATED: 17 Feb 2026, 21:39 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Feb 2026, 21:24 CET
+// Last generated: 17 Feb 2026, 21:39 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -10137,6 +10137,29 @@ class KitchenCookingPanel extends LitElement {
 
   async _startCook() {
     try {
+      // CRITICAL: Verify we're using a MEATER entity before starting cook!
+      const entities = this._findCookingEntities();
+      const meaterEntities = entities.filter(e => 
+        this.hass.states[e]?.attributes?.appliance_type === 'meater'
+      );
+      
+      console.log('DEBUG: All entities:', entities);
+      console.log('DEBUG: MEATER entities:', meaterEntities);
+      console.log('DEBUG: Currently selected entity:', this._selectedEntity);
+      
+      // Force MEATER entity selection if wrong entity is selected
+      if (!this._selectedEntity || !meaterEntities.includes(this._selectedEntity)) {
+        if (meaterEntities.length > 0) {
+          console.warn('CORRECTING: Wrong entity selected, switching to MEATER entity');
+          this._selectedEntity = meaterEntities[0];
+        } else {
+          alert('No MEATER entities found! Cannot start cook.');
+          return;
+        }
+      }
+      
+      console.log('DEBUG: Final entity for cook:', this._selectedEntity);
+      
       const serviceData = {
         cut_id: this._selectedCut,
         doneness: this._selectedDoneness,
@@ -10150,7 +10173,7 @@ class KitchenCookingPanel extends LitElement {
       }
       
       console.log('DEBUG: Starting cook with data:', serviceData);
-      console.log('DEBUG: Entity ID:', this._selectedEntity);
+      console.log('DEBUG: Entity ID being sent to service:', this._selectedEntity);
       
       // Wait for service call to complete before navigating
       await this._callService('start_cook', serviceData);
@@ -12425,7 +12448,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "134";
+const PANEL_VERSION = "135";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

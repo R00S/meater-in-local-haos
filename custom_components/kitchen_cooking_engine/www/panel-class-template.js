@@ -4608,6 +4608,29 @@ class KitchenCookingPanel extends LitElement {
 
   async _startCook() {
     try {
+      // CRITICAL: Verify we're using a MEATER entity before starting cook!
+      const entities = this._findCookingEntities();
+      const meaterEntities = entities.filter(e => 
+        this.hass.states[e]?.attributes?.appliance_type === 'meater'
+      );
+      
+      console.log('DEBUG: All entities:', entities);
+      console.log('DEBUG: MEATER entities:', meaterEntities);
+      console.log('DEBUG: Currently selected entity:', this._selectedEntity);
+      
+      // Force MEATER entity selection if wrong entity is selected
+      if (!this._selectedEntity || !meaterEntities.includes(this._selectedEntity)) {
+        if (meaterEntities.length > 0) {
+          console.warn('CORRECTING: Wrong entity selected, switching to MEATER entity');
+          this._selectedEntity = meaterEntities[0];
+        } else {
+          alert('No MEATER entities found! Cannot start cook.');
+          return;
+        }
+      }
+      
+      console.log('DEBUG: Final entity for cook:', this._selectedEntity);
+      
       const serviceData = {
         cut_id: this._selectedCut,
         doneness: this._selectedDoneness,
@@ -4621,7 +4644,7 @@ class KitchenCookingPanel extends LitElement {
       }
       
       console.log('DEBUG: Starting cook with data:', serviceData);
-      console.log('DEBUG: Entity ID:', this._selectedEntity);
+      console.log('DEBUG: Entity ID being sent to service:', this._selectedEntity);
       
       // Wait for service call to complete before navigating
       await this._callService('start_cook', serviceData);
