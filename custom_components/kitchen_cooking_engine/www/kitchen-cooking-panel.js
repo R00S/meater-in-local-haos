@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Jan 2026, 14:38 CET
+ * AUTO-GENERATED: 17 Feb 2026, 17:21 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Jan 2026, 14:38 CET
+// Last generated: 17 Feb 2026, 17:21 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5624,16 +5624,7 @@ class KitchenCookingPanel extends LitElement {
       _errorMessage: { type: String },
       // AI Recipe Builder
       _showAIRecipeBuilder: { type: Boolean },
-      _aiIngredients: { type: Array },
-      _aiCookingStyles: { type: Array },
-      _aiSelectedIngredients: { type: Set },
-      _aiSelectedStyle: { type: String },
-      _aiSuggestions: { type: Array },
-      _aiSelectedSuggestion: { type: Object },
-      _aiRecipeDetail: { type: Object },
-      _isLoadingAISuggestions: { type: Boolean },
-      _isLoadingAIDetail: { type: Boolean },
-      _aiOpenAIAvailable: { type: Boolean },
+      // Old AI builder properties removed - Phase 6 uses different state variables
       // Message dialog (replaces non-copyable alert())
       _showMessageDialog: { type: Boolean },
       _messageDialogTitle: { type: String },
@@ -5710,16 +5701,16 @@ class KitchenCookingPanel extends LitElement {
     this._showAIRecipeBuilder = false;
     this._aiIngredients = [];
     this._aiCookingStyles = [];
-    this._aiSelectedIngredients = new Set();
-    this._aiSelectedStyle = null;
-    this._aiSuggestions = [];
-    this._aiSelectedSuggestion = null;
-    this._aiRecipeDetail = null;
-    this._isLoadingAISuggestions = false;
-    this._isLoadingAIDetail = false;
-    this._aiOpenAIAvailable = null;
-    this._showAISettingsModal = false;
-    this._aiAgentId = 'extended_openai_conversation_2';  // Default
+    // Old AI builder state removed - Phase 6 uses different variables
+    // Phase 6: AI Recipe Builder state (new implementation)
+    this._commonIngredients = [];
+    this._cookingStyles = [];
+    this._selectedIngredients = [];
+    this._selectedCookingStyle = null;
+    this._aiRecipeSuggestions = [];
+    this._selectedMainAppliance = null;
+    this._selectedSecondaryAppliances = [];
+    this._showAIIngredientSelector = false;
     // Message dialog
     this._showMessageDialog = false;
     this._messageDialogTitle = '';
@@ -5884,108 +5875,7 @@ class KitchenCookingPanel extends LitElement {
     }
   }
 
-  // AI Recipe Builder: Toggle ingredient selection
-  _toggleIngredient(ingredientId) {
-    if (this._aiSelectedIngredients.has(ingredientId)) {
-      this._aiSelectedIngredients.delete(ingredientId);
-    } else {
-      this._aiSelectedIngredients.add(ingredientId);
-    }
-    this.requestUpdate();
-  }
-
-  // AI Recipe Builder: Generate recipe suggestions
-  async _generateAIRecipes() {
-    if (this._aiSelectedIngredients.size === 0) {
-      this._showMessage('Missing Ingredients', 'Please select at least one ingredient', false);
-      return;
-    }
-    
-    if (!this._aiSelectedStyle) {
-      this._showMessage('Missing Cooking Style', 'Please select a cooking style', false);
-      return;
-    }
-    
-    this._isLoadingAISuggestions = true;
-    this._aiSuggestions = [];
-    this._aiSelectedSuggestion = null;
-    this._aiRecipeDetail = null;
-    this.requestUpdate();
-    
-    try {
-      // Get appliance IDs if available
-      const applianceIds = this._appliances.map(a => a.id);
-      
-      const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/generate', {
-        ingredients: Array.from(this._aiSelectedIngredients),
-        cooking_style: this._aiSelectedStyle,
-        appliance_ids: applianceIds,
-        servings: 4,
-      });
-      
-      if (response.status === 'ok') {
-        this._aiSuggestions = response.suggestions;
-      } else {
-        const errorMsg = response.message || 'Unknown error';
-        console.error('API error:', errorMsg);
-        this._showMessage('Failed to Generate Recipes', `${errorMsg}\n\nPlease check:\n1. OpenAI assistant is configured in Voice Assistants\n2. The assistant is named "OpenAI"\n3. Your OpenAI API key is valid`, true);
-      }
-    } catch (e) {
-      console.error('Failed to generate AI recipes:', e);
-      const errorMsg = e.message || e.toString();
-      this._showMessage('Failed to Generate Recipes', `${errorMsg}\n\nPlease check:\n1. OpenAI assistant is configured in Voice Assistants\n2. The assistant is named "OpenAI"\n3. Your OpenAI API key is valid\n4. Check Home Assistant logs for more details`, true);
-    } finally {
-      this._isLoadingAISuggestions = false;
-      this.requestUpdate();
-    }
-  }
-
-  // AI Recipe Builder: Get recipe detail
-  async _getAIRecipeDetail(suggestion) {
-    this._isLoadingAIDetail = true;
-    this._aiSelectedSuggestion = suggestion;
-    this._aiRecipeDetail = null;
-    this.requestUpdate();
-    
-    try {
-      const applianceIds = this._appliances.map(a => a.id);
-      
-      const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/detail', {
-        suggestion_id: suggestion.id,
-        suggestion: suggestion,  // Pass the full suggestion object
-        appliance_ids: applianceIds,
-      });
-      
-      if (response.status === 'ok') {
-        this._aiRecipeDetail = response.detail;
-      } else {
-        this._showMessage('Failed to Get Recipe Detail', response.message, true);
-      }
-    } catch (e) {
-      console.error('Failed to get AI recipe detail:', e);
-      this._showMessage('Failed to Get Recipe Detail', 'Please try again.', true);
-    } finally {
-      this._isLoadingAIDetail = false;
-      this.requestUpdate();
-    }
-  }
-
-  // AI Recipe Builder: Back to suggestions
-  _backToAISuggestions() {
-    this._aiSelectedSuggestion = null;
-    this._aiRecipeDetail = null;
-    this.requestUpdate();
-  }
-
-  // AI Recipe Builder: Reset and start over
-  _resetAIRecipeBuilder() {
-    this._aiSelectedIngredients.clear();
-    this._aiSelectedStyle = null;
-    this._aiSuggestions = [];
-    this._aiSelectedSuggestion = null;
-    this._aiRecipeDetail = null;
-    this.requestUpdate();
-  }
+  // OLD AI Recipe Builder methods removed - Phase 6 implementation used instead
 
   // Phase 3.3: Helper to check if a feature is available
   _hasFeature(featureName) {
@@ -6538,10 +6428,6 @@ class KitchenCookingPanel extends LitElement {
     
     // All other appliances go to AI Recipe Builder path (cook type 6.2)
     this._navigateToAIRecipeBuilderPath(appliance);
-  }
-
-  _selectNinjaRecipe(recipeId) {
-    this._selectedNinjaRecipe = recipeId;
   }
 
   _renderNinjaCombi() {
@@ -7590,263 +7476,6 @@ class KitchenCookingPanel extends LitElement {
     `;
   }
 
-  // AI Recipe Builder: Main render function
-  _renderAIRecipeBuilder() {
-    // Show recipe detail if selected
-    if (this._aiRecipeDetail) {
-      return this._renderAIRecipeDetail();
-    }
-
-    // Show suggestions if generated
-    if (this._aiSuggestions.length > 0) {
-      return this._renderAISuggestions();
-    }
-
-    // Show ingredient/style selection
-    return this._renderAIIngredientSelection();
-  }
-
-  _renderAIIngredientSelection() {
-    return html`
-      <ha-card>
-        <div class="card-header" style="display: flex; justify-content: space-between; align-items: flex-start;">
-          <div>
-            <h2>🤖 AI Recipe Builder</h2>
-            <p style="margin: 8px 0 0 0; font-size: 0.9em; color: var(--secondary-text-color);">
-              Select ingredients and cooking style to generate custom recipes
-            </p>
-          </div>
-          <button
-            class="icon-button"
-            @click=${this._showAISettings}
-            title="AI Settings"
-            style="margin-top: 4px;"
-          >
-            ⚙️
-          </button>
-        </div>
-        <div class="card-content">
-          <!-- Show warning if OpenAI might not be configured -->
-          ${this._aiOpenAIAvailable === false ? html`
-            <div class="warning-message" style="margin-bottom: 16px;">
-              <p><strong>⚠️ OpenAI May Not Be Configured</strong></p>
-              <p>The AI Recipe Builder requires the OpenAI conversation integration.</p>
-              <p>If not configured: <strong>Settings → Voice Assistants → Add Assistant → OpenAI</strong></p>
-              <p style="margin-top: 8px;"><em>You can still try - if OpenAI is configured, it will work.</em></p>
-            </div>
-          ` : ''}
-          
-          ${this._isLoadingAISuggestions ? html`
-            <div class="loading-spinner">
-              <p>🤖 Generating recipes with AI...</p>
-              <p style="font-size: 0.9em; color: var(--secondary-text-color);">This may take a few moments</p>
-            </div>
-          ` : html`
-            <!-- Cooking Style Selection -->
-            <div class="ai-section">
-              <h3>1. Choose Your Cooking Style</h3>
-              <div class="cooking-styles-grid">
-                ${this._aiCookingStyles.map(style => html`
-                  <button
-                    class="cooking-style-btn ${this._aiSelectedStyle === style.id ? 'selected' : ''}"
-                    @click=${() => { this._aiSelectedStyle = style.id; this.requestUpdate(); }}
-                  >
-                    ${style.name}
-                  </button>
-                `)}
-              </div>
-            </div>
-
-            <!-- Ingredient Selection -->
-            <div class="ai-section">
-              <h3>2. Select Ingredients (${this._aiSelectedIngredients.size} selected)</h3>
-              ${Object.entries(this._aiIngredients || {}).map(([category, ingredients]) => html`
-                <div class="ingredient-category">
-                  <h4>${category.replace('_', ' ').toUpperCase()}</h4>
-                  <div class="ingredients-grid">
-                    ${ingredients.map(ing => html`
-                      <button
-                        class="ingredient-btn ${this._aiSelectedIngredients.has(ing.id) ? 'selected' : ''}"
-                        @click=${() => this._toggleIngredient(ing.id)}
-                      >
-                        ${ing.name}
-                      </button>
-                    `)}
-                  </div>
-                </div>
-              `)}
-            </div>
-
-            <!-- Available Appliances Info -->
-            ${this._appliances.length > 0 ? html`
-              <div class="ai-section">
-                <h3>📍 Your Kitchen Equipment</h3>
-                <div class="appliances-info">
-                  ${this._appliances.map(a => html`
-                    <span class="appliance-tag">${a.brand} ${a.model}</span>
-                  `)}
-                </div>
-                <p style="font-size: 0.85em; color: var(--secondary-text-color); margin-top: 8px;">
-                  AI will generate recipes optimized for your equipment
-                </p>
-              </div>
-            ` : ''}
-
-            <!-- Generate Button -->
-            <div class="ai-actions">
-              <button
-                class="primary-btn large"
-                @click=${this._generateAIRecipes}
-                ?disabled=${this._aiSelectedIngredients.size === 0 || !this._aiSelectedStyle}
-              >
-                🤖 Generate 4 Recipe Ideas
-              </button>
-              ${this._aiSelectedIngredients.size > 0 || this._aiSelectedStyle ? html`
-                <button
-                  class="secondary-btn"
-                  @click=${this._resetAIRecipeBuilder}
-                >
-                  Reset Selection
-                </button>
-              ` : ''}
-            </div>
-          `}
-        </div>
-      </ha-card>
-    `;
-  }
-
-  _renderAISuggestions() {
-    return html`
-      <ha-card>
-        <div class="card-header">
-          <h2>🤖 AI Recipe Suggestions</h2>
-          <p style="margin: 8px 0 0 0; font-size: 0.9em; color: var(--secondary-text-color);">
-            Select a recipe to see full details and instructions
-          </p>
-        </div>
-        <div class="card-content">
-          <div class="ai-suggestions-grid">
-            ${this._aiSuggestions.map(suggestion => html`
-              <div class="ai-suggestion-card" @click=${() => this._getAIRecipeDetail(suggestion)}>
-                <h3>${suggestion.name}</h3>
-                <p class="suggestion-description">${suggestion.description}</p>
-                <div class="suggestion-meta">
-                  <span>⏱️ ${suggestion.cook_time_minutes} min</span>
-                  <span>📊 ${suggestion.difficulty}</span>
-                  ${suggestion.cuisine_type ? html`<span>🌍 ${suggestion.cuisine_type}</span>` : ''}
-                </div>
-                <div class="suggestion-ingredients">
-                  ${suggestion.main_ingredients.map(ing => html`
-                    <span class="ingredient-tag">${ing}</span>
-                  `)}
-                </div>
-                <button class="view-recipe-btn">View Full Recipe →</button>
-              </div>
-            `)}
-          </div>
-          
-          <div class="ai-actions">
-            <button class="secondary-btn" @click=${this._resetAIRecipeBuilder}>
-              ← Start Over with New Ingredients
-            </button>
-          </div>
-        </div>
-      </ha-card>
-    `;
-  }
-
-  _renderAIRecipeDetail() {
-    const detail = this._aiRecipeDetail;
-    const suggestion = detail.suggestion;
-
-    return html`
-      <ha-card>
-        <div class="card-header">
-          <h2>${suggestion.name}</h2>
-          <p style="margin: 8px 0 0 0; font-size: 0.9em; color: var(--secondary-text-color);">
-            AI-Generated Recipe
-          </p>
-        </div>
-        <div class="card-content">
-          ${this._isLoadingAIDetail ? html`
-            <div class="loading-spinner">
-              <p>🤖 Generating detailed recipe...</p>
-            </div>
-          ` : html`
-            <!-- Recipe Overview -->
-            <div class="recipe-overview">
-              <p><strong>${suggestion.description}</strong></p>
-              <div class="recipe-meta">
-                <span>⏱️ Total: ${suggestion.cook_time_minutes + detail.prep_time_minutes} min</span>
-                <span>👨‍🍳 Prep: ${detail.prep_time_minutes} min</span>
-                <span>🔥 Cook: ${suggestion.cook_time_minutes} min</span>
-                <span>🍽️ Serves: ${detail.servings}</span>
-                <span>📊 ${suggestion.difficulty}</span>
-              </div>
-            </div>
-
-            ${detail.use_probe ? html`
-              <div class="probe-info">
-                <p><strong>🌡️ Temperature Probe Recommended</strong></p>
-                <p>Target: ${detail.target_temp_c}°C / ${detail.target_temp_f}°F</p>
-              </div>
-            ` : ''}
-
-            <!-- Ingredients -->
-            <div class="recipe-section">
-              <h3>📝 Ingredients</h3>
-              <ul class="ingredients-list">
-                ${detail.ingredients.map(ing => html`<li>${ing}</li>`)}
-              </ul>
-            </div>
-
-            <!-- Cooking Phases (if available) -->
-            ${detail.phases.length > 0 ? html`
-              <div class="recipe-section">
-                <h3>🔥 Cooking Program</h3>
-                ${detail.phases.map((phase, idx) => html`
-                  <div class="cooking-phase">
-                    <strong>Phase ${idx + 1}:</strong> ${phase.description}
-                    <br>
-                    <span>${phase.temperature_c}°C (${phase.temperature_f}°F) for ${phase.duration_minutes} minutes</span>
-                  </div>
-                `)}
-              </div>
-            ` : ''}
-
-            <!-- Instructions -->
-            <div class="recipe-section">
-              <h3>👨‍🍳 Instructions</h3>
-              <ol class="instructions-list">
-                ${detail.instructions.map(inst => html`<li>${inst}</li>`)}
-              </ol>
-            </div>
-
-            <!-- Tips -->
-            ${detail.tips.length > 0 ? html`
-              <div class="recipe-section">
-                <h3>💡 Tips</h3>
-                <ul class="tips-list">
-                  ${detail.tips.map(tip => html`<li>${tip}</li>`)}
-                </ul>
-              </div>
-            ` : ''}
-
-            <!-- Actions -->
-            <div class="ai-actions">
-              <button class="secondary-btn" @click=${this._backToAISuggestions}>
-                ← Back to Suggestions
-              </button>
-              <button class="primary-btn" @click=${this._resetAIRecipeBuilder}>
-                🔄 Generate New Recipes
-              </button>
-            </div>
-          `}
-        </div>
-      </ha-card>
-    `;
-  }
 
   // Phase 3.4: Show recipe detail
   _showRecipeDetail(recipeData) {
@@ -10203,9 +9832,30 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Launch AI Recipe Builder with Ninja Combi pre-selected
    * Pre-selects Ninja Combi as main appliance and opens AI builder
    */
-  _startAIWithNinjaCombi() {
+  async _startAIWithNinjaCombi() {
     console.log('Starting AI Recipe Builder with Ninja Combi...');
-    // Pre-select Ninja Combi and launch AI builder
+    
+    // Load data FIRST (same pattern as _startAIRecipeCreation)
+    try {
+      // Load ingredients if not already loaded
+      if (!this._commonIngredients) {
+        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
+        this._commonIngredients = response.ingredients || [];
+      }
+      
+      // Load cooking styles if not already loaded
+      if (!this._cookingStyles) {
+        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/cooking_styles');
+        this._cookingStyles = response.cooking_styles || [];
+      }
+    } catch (e) {
+      console.error('Error loading AI recipe data:', e);
+      this._commonIngredients = this._commonIngredients || [];
+      this._cookingStyles = this._cookingStyles || [];
+    }
+    
+    // Pre-select Ninja Combi and launch AI builder with data loaded
+    this._selectedMainAppliance = 'ninja_combi';
     this._currentPath = 'ai_recipe_builder';
     this._showAIIngredientSelector = true;
     this._selectedIngredients = [];
@@ -10246,7 +9896,7 @@ class KitchenCookingPanel extends LitElement {
       // Load cooking styles if not already loaded
       if (!this._cookingStyles) {
         const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/cooking_styles');
-        this._cookingStyles = response.styles || [];
+        this._cookingStyles = response.cooking_styles || [];
       }
     } catch (e) {
       console.error('Error loading AI recipe data:', e);
@@ -12586,7 +12236,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "122";
+const PANEL_VERSION = "123";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 17 Jan 2026, 12:09 UTC
-Last Change: v0.5.0.24 - Bug fixes: Fixed async render methods causing "[object Promise]" and improved state management for blank page issue
+Last Updated: 17 Feb 2026, 16:15 UTC
+Last Change: v0.5.0.26 - Bug fixes: Removed duplicate AI Recipe Builder code that was causing method conflicts and undefined behavior
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -20,6 +20,7 @@ This integration provides:
 - Phase 3.1: Multi-appliance support with feature-based recipe matching
 - Phase 1 GUI Redesign: Welcome screen with appliance selector and path-based navigation
 - Phase 2 GUI Redesign: MEATER path with integrated cooking interface
+- Phase 6 GUI Redesign: AI Recipe Builder with 3-step flow (ingredients → style → suggestions)
 """
 
 from __future__ import annotations
