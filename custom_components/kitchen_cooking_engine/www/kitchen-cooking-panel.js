@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Feb 2026, 22:42 CET
+ * AUTO-GENERATED: 17 Feb 2026, 23:12 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Feb 2026, 22:42 CET
+// Last generated: 17 Feb 2026, 23:12 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -7914,16 +7914,9 @@ class KitchenCookingPanel extends LitElement {
     const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
     const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
     
-    // Filter to only MEATER-type entities for session selection
-    const meaterEntities = entities.filter(e => {
-      const applianceType = this.hass.states[e]?.attributes?.appliance_type;
-      return applianceType === 'meater' || applianceType === 'meater_probe';
-    });
-    
-    // Default to first MEATER entity if none selected (v0.5.0.30 + default selection)
-    // Only set default if no selection exists - don't override user's choice
-    if (meaterEntities.length > 0 && !this._selectedEntity) {
-      this._selectedEntity = meaterEntities[0];
+    // v0.5.0.30 EXACT CODE: Default to first entity if none selected
+    if (entities.length > 0 && !this._selectedEntity) {
+      this._selectedEntity = entities[0];
     }
     
     return html`
@@ -7932,12 +7925,12 @@ class KitchenCookingPanel extends LitElement {
         <p>Select your protein and preferences below</p>
       </div>
       
-      ${meaterEntities.length > 1 ? html`
+      ${entities.length > 1 ? html`
         <ha-card>
           <div class="card-content">
             <h3>Select Session</h3>
             <select @change=${(e) => this._selectedEntity = e.target.value}>
-              ${meaterEntities.map(e => html`
+              ${entities.map(e => html`
                 <option value="${e}" ?selected=${this._selectedEntity === e}>
                   ${this.hass.states[e]?.attributes?.friendly_name || e}
                 </option>
@@ -10145,48 +10138,25 @@ class KitchenCookingPanel extends LitElement {
     `;
   }
 
-  async _startCook() {
-    try {
-      // v0.5.0.30 pattern restored: Trust the entity selection from the form
-      const serviceData = {
-        cut_id: this._selectedCut,
-        doneness: this._selectedDoneness,
-        cooking_method: this._selectedMethod,
-        data_source: this._dataSource,
-      };
-      
-      // Include custom target temperature if set
-      if (this._customTargetTempC) {
-        serviceData.custom_target_temp_c = this._customTargetTempC;
-      }
-      
-      console.log('Starting cook with entity:', this._selectedEntity);
-      console.log('Service data:', serviceData);
-      
-      // Wait for service call to complete before navigating
-      await this._callService('start_cook', serviceData);
-      
-      // Small delay to ensure entity state propagates to frontend
-      await new Promise(resolve => setTimeout(resolve, 300));
-      
-      // Check if cook actually started by verifying entity state
-      const entity = this.hass.states[this._selectedEntity];
-      const entityState = entity?.state?.toLowerCase();
-      
-      if (entityState === 'cooking' || entityState === 'approaching') {
-        // Success! Close the MEATER setup UI and navigate
-        this._showMeaterCooking = false;
-        this._currentPath = 'welcome';
-        this.requestUpdate();
-      } else {
-        // Cook didn't start - show error to user
-        console.error('Cook failed to start. Entity state:', entity.state);
-        alert(`Failed to start cook. Entity state is "${entity.state}" instead of "cooking".\n\nPlease check:\n1. All fields are filled\n2. Valid meat/cut selection\n3. Home Assistant logs for errors`);
-      }
-    } catch (error) {
-      console.error('Error starting cook:', error);
-      alert(`Failed to start cook: ${error.message || 'Unknown error'}\n\nCheck browser console and Home Assistant logs for details.`);
+  _startCook() {
+    const serviceData = {
+      cut_id: this._selectedCut,
+      doneness: this._selectedDoneness,
+      cooking_method: this._selectedMethod,
+      data_source: this._dataSource,
+    };
+    
+    // Include custom target temperature if set
+    if (this._customTargetTempC) {
+      serviceData.custom_target_temp_c = this._customTargetTempC;
     }
+    
+    this._callService('start_cook', serviceData);
+    
+    // Navigate back to welcome screen so the active cook will be shown
+    this._showMeaterCooking = false;
+    this._currentPath = 'welcome';
+    this.requestUpdate();
   }
 
   _stopCook() {
@@ -12415,7 +12385,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "140";
+const PANEL_VERSION = "141";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
