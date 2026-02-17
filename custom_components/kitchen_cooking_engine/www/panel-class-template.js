@@ -4409,6 +4409,19 @@ class KitchenCookingPanel extends LitElement {
 
   _startMeaterCooking() {
     // Phase 2: Show MEATER cooking interface
+    // CRITICAL: Select MEATER entity BEFORE showing the form
+    const entities = this._findCookingEntities();
+    const meaterEntities = entities.filter(e => {
+      const applianceType = this.hass.states[e]?.attributes?.appliance_type;
+      return applianceType === 'meater' || applianceType === 'meater_probe';
+    });
+    
+    // Force MEATER entity selection (persist through form → service call)
+    if (meaterEntities.length > 0) {
+      this._selectedEntity = meaterEntities[0];
+      console.log('MEATER entity selected on navigation:', this._selectedEntity);
+    }
+    
     this._showMeaterCooking = true;
     this.requestUpdate();
   }
