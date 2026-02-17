@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 17 Feb 2026, 21:30 UTC
-Last Change: v0.5.0.47 - PROPERLY restored v0.5.0.30 MEATER path code by COPYING exact code (not reimplementing)
+Last Updated: 17 Feb 2026, 22:30 UTC
+Last Change: v0.5.0.48 - Fixed default MEATER entity selection in session selector
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -69,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.47"
+__version__ = "0.5.0.48"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
