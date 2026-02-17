@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 17 Feb 2026, 23:15 UTC
-Last Change: v0.5.0.51 - Use entity ID pattern matching instead of appliance_type for MEATER identification
+Last Updated: 17 Feb 2026, 23:30 UTC
+Last Change: v0.5.0.52 - Version bump for new release (entity ID pattern matching fix)
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -69,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.51"
+__version__ = "0.5.0.52"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
