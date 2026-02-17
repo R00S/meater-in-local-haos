@@ -569,13 +569,12 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             
             # Scan all features from catalog
             for feature_name in FEATURE_CATALOG.keys():
-                # Check if feature is enabled (checkbox)
-                feature_enabled_key = f"feature_enabled_{feature_name}"
-                if user_input.get(feature_enabled_key, False):
-                    # Get feature type (dropdown)
-                    feature_type_key = f"feature_type_{feature_name}"
-                    feature_type = user_input.get(feature_type_key, FEATURE_TYPE_STANDARD)
-                    features[feature_name] = feature_type
+                # Get feature setting from combined dropdown
+                # Key is "feat_{name}", value is "disabled" or a type
+                feature_key = f"feat_{feature_name}"
+                feature_value = user_input.get(feature_key, "disabled")
+                if feature_value != "disabled":
+                    features[feature_name] = feature_value
             
             # Validate that at least one feature is selected
             if not features:
@@ -609,17 +608,19 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         sorted_features = sorted(FEATURE_CATALOG.items(), key=lambda x: x[1].display_name)
         
         for feature_name, feature_def in sorted_features:
-            # Add checkbox for enabling the feature
-            schema_dict[vol.Optional(f"feature_enabled_{feature_name}", default=False)] = bool
-            
-            # Add dropdown for selecting feature type
+            # Single dropdown per feature - combines enabled/disabled with type selection
+            # Use display name as much as possible for readability
+            # Key format: just the feature name (will be made readable via translations if available)
+            readable_key = feature_def.display_name.replace("/", " or ").replace("  ", " ")
             schema_dict[vol.Optional(
-                f"feature_type_{feature_name}", 
-                default=FEATURE_TYPE_STANDARD
+                f"feat_{feature_name}",  # Shortened prefix: "feat_" instead of "feature_enabled_"
+                default="disabled",
+                description=readable_key  # This becomes hover text in some HA versions
             )] = vol.In({
-                FEATURE_TYPE_STANDARD: "Standard (use recipes as-is)",
-                FEATURE_TYPE_MODIFIED: "Modified (auto-adapt recipes)",
-                FEATURE_TYPE_SPECIAL: "Special (needs specific recipes)"
+                "disabled": "❌ Disabled",
+                FEATURE_TYPE_STANDARD: "✓ Standard (use recipes as-is)",
+                FEATURE_TYPE_MODIFIED: "✓ Modified (auto-adapt recipes)",
+                FEATURE_TYPE_SPECIAL: "✓ Special (needs specific recipes)"
             })
         
         return self.async_show_form(
@@ -772,12 +773,12 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
                 all_features = default_features.keys()
             
             for feature_name in all_features:
-                # Check if feature is enabled
-                is_enabled = user_input.get(f"feature_enabled_{feature_name}", False)
-                if is_enabled:
-                    # Get feature type
-                    feature_type = user_input.get(f"feature_type_{feature_name}", FEATURE_TYPE_STANDARD)
-                    features[feature_name] = feature_type
+                # Get feature setting from combined dropdown
+                # Key is "feat_{name}", value is "disabled" or a type  
+                feature_key = f"feat_{feature_name}"
+                feature_value = user_input.get(feature_key, "disabled")
+                if feature_value != "disabled":
+                    features[feature_name] = feature_value
             
             # Build updated data
             updated_data = {
@@ -877,24 +878,25 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
         
         # Sort and add feature fields
         for feature_name, default_type in sorted(features_to_show.items()):
-            # Checkbox to enable feature
-            # Feature is enabled if it's explicitly in current_features (for all appliances now)
-            is_enabled = feature_name in current_features
-            
-            schema_dict[vol.Optional(
-                f"feature_enabled_{feature_name}",
-                default=is_enabled
-            )] = bool
-            
-            # Dropdown for feature type
+            # Single dropdown combining enabled state and feature type
+            # Feature is enabled if it's in current_features
             current_type = current_features.get(feature_name, default_type)
+            is_enabled = feature_name in current_features
+            default_value = current_type if is_enabled else "disabled"
+            
+            # Use shortened prefix and get display name
+            feature_def = FEATURE_CATALOG.get(feature_name)
+            readable_key = feature_def.display_name.replace("/", " or ") if feature_def else feature_name
+            
             schema_dict[vol.Optional(
-                f"feature_type_{feature_name}",
-                default=current_type
+                f"feat_{feature_name}",
+                default=default_value,
+                description=readable_key
             )] = vol.In({
-                FEATURE_TYPE_STANDARD: "Standard (use recipes as-is)",
-                FEATURE_TYPE_MODIFIED: "Modified (auto-adapt recipes)",
-                FEATURE_TYPE_SPECIAL: "Special (needs specific recipes)"
+                "disabled": "❌ Disabled",
+                FEATURE_TYPE_STANDARD: "✓ Standard (use recipes as-is)",
+                FEATURE_TYPE_MODIFIED: "✓ Modified (auto-adapt recipes)",
+                FEATURE_TYPE_SPECIAL: "✓ Special (needs specific recipes)"
             })
 
         # Use appliance-specific step_id to avoid config flow conflicts
