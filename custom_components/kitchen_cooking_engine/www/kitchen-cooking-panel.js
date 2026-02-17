@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Feb 2026, 18:06 CET
+ * AUTO-GENERATED: 17 Feb 2026, 18:37 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Feb 2026, 18:06 CET
+// Last generated: 17 Feb 2026, 18:37 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -7869,18 +7869,28 @@ class KitchenCookingPanel extends LitElement {
     const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
     const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
     
+    // Filter to only MEATER-type entities for session selection
+    const meaterEntities = entities.filter(e => 
+      this.hass.states[e]?.attributes?.appliance_type === 'meater'
+    );
+    
+    // Auto-select if there's only one MEATER device
+    if (meaterEntities.length === 1 && !this._selectedEntity) {
+      this._selectedEntity = meaterEntities[0];
+    }
+    
     return html`
       <div class="status-banner idle">
         <h2>🍳 Ready to Cook</h2>
         <p>Select your protein and preferences below</p>
       </div>
       
-      ${entities.length > 1 ? html`
+      ${meaterEntities.length > 1 ? html`
         <ha-card>
           <div class="card-content">
             <h3>Select Session</h3>
             <select @change=${(e) => this._selectedEntity = e.target.value}>
-              ${entities.map(e => html`
+              ${meaterEntities.map(e => html`
                 <option value="${e}" ?selected=${this._selectedEntity === e}>
                   ${this.hass.states[e]?.attributes?.friendly_name || e}
                 </option>
@@ -12236,7 +12246,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "124";
+const PANEL_VERSION = "125";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

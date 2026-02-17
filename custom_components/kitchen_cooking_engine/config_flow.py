@@ -13,6 +13,7 @@ import voluptuous as vol
 
 from homeassistant import config_entries
 from homeassistant.core import callback
+from homeassistant.helpers import selector
 
 from .const import (
     CONF_TEMPERATURE_SENSOR,
@@ -609,19 +610,22 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         
         for feature_name, feature_def in sorted_features:
             # Single dropdown per feature - combines enabled/disabled with type selection
-            # Use display name as much as possible for readability
-            # Key format: just the feature name (will be made readable via translations if available)
+            # Use display name for label
             readable_key = feature_def.display_name.replace("/", " or ").replace("  ", " ")
-            schema_dict[vol.Optional(
+            schema_dict[vol.Required(
                 f"feat_{feature_name}",  # Shortened prefix: "feat_" instead of "feature_enabled_"
-                default="disabled",
-                description=readable_key  # This becomes hover text in some HA versions
-            )] = vol.In({
-                "disabled": "❌ Disabled",
-                FEATURE_TYPE_STANDARD: "✓ Standard (use recipes as-is)",
-                FEATURE_TYPE_MODIFIED: "✓ Modified (auto-adapt recipes)",
-                FEATURE_TYPE_SPECIAL: "✓ Special (needs specific recipes)"
-            })
+                default="disabled"
+            )] = selector.SelectSelector(
+                selector.SelectSelectorConfig(
+                    options=[
+                        selector.SelectOptionDict(value="disabled", label=f"❌ {readable_key}: Disabled"),
+                        selector.SelectOptionDict(value=FEATURE_TYPE_STANDARD, label=f"✓ {readable_key}: Standard"),
+                        selector.SelectOptionDict(value=FEATURE_TYPE_MODIFIED, label=f"✓ {readable_key}: Modified"),
+                        selector.SelectOptionDict(value=FEATURE_TYPE_SPECIAL, label=f"✓ {readable_key}: Special"),
+                    ],
+                    mode=selector.SelectSelectorMode.DROPDOWN
+                )
+            )
         
         return self.async_show_form(
             step_id="custom",
@@ -888,16 +892,20 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
             feature_def = FEATURE_CATALOG.get(feature_name)
             readable_key = feature_def.display_name.replace("/", " or ") if feature_def else feature_name
             
-            schema_dict[vol.Optional(
+            schema_dict[vol.Required(
                 f"feat_{feature_name}",
-                default=default_value,
-                description=readable_key
-            )] = vol.In({
-                "disabled": "❌ Disabled",
-                FEATURE_TYPE_STANDARD: "✓ Standard (use recipes as-is)",
-                FEATURE_TYPE_MODIFIED: "✓ Modified (auto-adapt recipes)",
-                FEATURE_TYPE_SPECIAL: "✓ Special (needs specific recipes)"
-            })
+                default=default_value
+            )] = selector.SelectSelector(
+                selector.SelectSelectorConfig(
+                    options=[
+                        selector.SelectOptionDict(value="disabled", label=f"❌ {readable_key}: Disabled"),
+                        selector.SelectOptionDict(value=FEATURE_TYPE_STANDARD, label=f"✓ {readable_key}: Standard"),
+                        selector.SelectOptionDict(value=FEATURE_TYPE_MODIFIED, label=f"✓ {readable_key}: Modified"),
+                        selector.SelectOptionDict(value=FEATURE_TYPE_SPECIAL, label=f"✓ {readable_key}: Special"),
+                    ],
+                    mode=selector.SelectSelectorMode.DROPDOWN
+                )
+            )
 
         # Use appliance-specific step_id to avoid config flow conflicts
         # Each appliance type needs its own step_id for Home Assistant to handle it properly

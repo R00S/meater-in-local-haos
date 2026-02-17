@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 17 Feb 2026, 16:15 UTC
-Last Change: v0.5.0.30 - UX: Compact appliance config UI - one row per feature with combined dropdown
+Last Updated: 17 Feb 2026, 17:35 UTC
+Last Change: v0.5.0.31 - Fix: MEATER session selector filtering, config dropdown UI, HA version requirement
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -69,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.30"
+__version__ = "0.5.0.31"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

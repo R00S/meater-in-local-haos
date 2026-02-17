@@ -2340,18 +2340,28 @@ class KitchenCookingPanel extends LitElement {
     const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
     const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
     
+    // Filter to only MEATER-type entities for session selection
+    const meaterEntities = entities.filter(e => 
+      this.hass.states[e]?.attributes?.appliance_type === 'meater'
+    );
+    
+    // Auto-select if there's only one MEATER device
+    if (meaterEntities.length === 1 && !this._selectedEntity) {
+      this._selectedEntity = meaterEntities[0];
+    }
+    
     return html`
       <div class="status-banner idle">
         <h2>🍳 Ready to Cook</h2>
         <p>Select your protein and preferences below</p>
       </div>
       
-      ${entities.length > 1 ? html`
+      ${meaterEntities.length > 1 ? html`
         <ha-card>
           <div class="card-content">
             <h3>Select Session</h3>
             <select @change=${(e) => this._selectedEntity = e.target.value}>
-              ${entities.map(e => html`
+              ${meaterEntities.map(e => html`
                 <option value="${e}" ?selected=${this._selectedEntity === e}>
                   ${this.hass.states[e]?.attributes?.friendly_name || e}
                 </option>
