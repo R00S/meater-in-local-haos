@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 17 Feb 2026, 16:15 UTC
-Last Change: v0.5.0.28 - Critical fix: Dashboard creation errors no longer block panel registration; LovelaceData object access fixed
+Last Change: v0.5.0.29 - UX: MEATER session auto-selects when single device, selector hidden for single device
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -69,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.28"
+__version__ = "0.5.0.29"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
