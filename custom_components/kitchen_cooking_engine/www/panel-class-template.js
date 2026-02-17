@@ -356,61 +356,6 @@ class KitchenCookingPanel extends LitElement {
   }
 
   // AI Recipe Builder: Toggle ingredient selection
-  _toggleIngredient(ingredientId) {
-    if (this._aiSelectedIngredients.has(ingredientId)) {
-      this._aiSelectedIngredients.delete(ingredientId);
-    } else {
-      this._aiSelectedIngredients.add(ingredientId);
-    }
-    this.requestUpdate();
-  }
-
-  // AI Recipe Builder: Generate recipe suggestions
-  async _generateAIRecipes() {
-    if (this._aiSelectedIngredients.size === 0) {
-      this._showMessage('Missing Ingredients', 'Please select at least one ingredient', false);
-      return;
-    }
-    
-    if (!this._aiSelectedStyle) {
-      this._showMessage('Missing Cooking Style', 'Please select a cooking style', false);
-      return;
-    }
-    
-    this._isLoadingAISuggestions = true;
-    this._aiSuggestions = [];
-    this._aiSelectedSuggestion = null;
-    this._aiRecipeDetail = null;
-    this.requestUpdate();
-    
-    try {
-      // Get appliance IDs if available
-      const applianceIds = this._appliances.map(a => a.id);
-      
-      const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/generate', {
-        ingredients: Array.from(this._aiSelectedIngredients),
-        cooking_style: this._aiSelectedStyle,
-        appliance_ids: applianceIds,
-        servings: 4,
-      });
-      
-      if (response.status === 'ok') {
-        this._aiSuggestions = response.suggestions;
-      } else {
-        const errorMsg = response.message || 'Unknown error';
-        console.error('API error:', errorMsg);
-        this._showMessage('Failed to Generate Recipes', `${errorMsg}\n\nPlease check:\n1. OpenAI assistant is configured in Voice Assistants\n2. The assistant is named "OpenAI"\n3. Your OpenAI API key is valid`, true);
-      }
-    } catch (e) {
-      console.error('Failed to generate AI recipes:', e);
-      const errorMsg = e.message || e.toString();
-      this._showMessage('Failed to Generate Recipes', `${errorMsg}\n\nPlease check:\n1. OpenAI assistant is configured in Voice Assistants\n2. The assistant is named "OpenAI"\n3. Your OpenAI API key is valid\n4. Check Home Assistant logs for more details`, true);
-    } finally {
-      this._isLoadingAISuggestions = false;
-      this.requestUpdate();
-    }
-  }
-
   // AI Recipe Builder: Get recipe detail
   async _getAIRecipeDetail(suggestion) {
     this._isLoadingAIDetail = true;
@@ -1009,10 +954,6 @@ class KitchenCookingPanel extends LitElement {
     
     // All other appliances go to AI Recipe Builder path (cook type 6.2)
     this._navigateToAIRecipeBuilderPath(appliance);
-  }
-
-  _selectNinjaRecipe(recipeId) {
-    this._selectedNinjaRecipe = recipeId;
   }
 
   _renderNinjaCombi() {
@@ -4674,9 +4615,30 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Launch AI Recipe Builder with Ninja Combi pre-selected
    * Pre-selects Ninja Combi as main appliance and opens AI builder
    */
-  _startAIWithNinjaCombi() {
+  async _startAIWithNinjaCombi() {
     console.log('Starting AI Recipe Builder with Ninja Combi...');
-    // Pre-select Ninja Combi and launch AI builder
+    
+    // Load data FIRST (same pattern as _startAIRecipeCreation)
+    try {
+      // Load ingredients if not already loaded
+      if (!this._commonIngredients) {
+        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
+        this._commonIngredients = response.ingredients || [];
+      }
+      
+      // Load cooking styles if not already loaded
+      if (!this._cookingStyles) {
+        const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/cooking_styles');
+        this._cookingStyles = response.cooking_styles || [];
+      }
+    } catch (e) {
+      console.error('Error loading AI recipe data:', e);
+      this._commonIngredients = this._commonIngredients || [];
+      this._cookingStyles = this._cookingStyles || [];
+    }
+    
+    // Pre-select Ninja Combi and launch AI builder with data loaded
+    this._selectedMainAppliance = 'ninja_combi';
     this._currentPath = 'ai_recipe_builder';
     this._showAIIngredientSelector = true;
     this._selectedIngredients = [];
@@ -4717,7 +4679,7 @@ class KitchenCookingPanel extends LitElement {
       // Load cooking styles if not already loaded
       if (!this._cookingStyles) {
         const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/cooking_styles');
-        this._cookingStyles = response.styles || [];
+        this._cookingStyles = response.cooking_styles || [];
       }
     } catch (e) {
       console.error('Error loading AI recipe data:', e);
