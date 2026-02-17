@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 17 Feb 2026, 17:35 UTC
-Last Change: v0.5.0.35 - CRITICAL: Added missing custom_target_temp_c parameter to start_cook service call - cook start now fully functional
+Last Change: v0.5.0.36 - CRITICAL: Fixed Recent MEATER Cooks button - callApi to callWS, added error handling
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -69,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.35"
+__version__ = "0.5.0.36"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
