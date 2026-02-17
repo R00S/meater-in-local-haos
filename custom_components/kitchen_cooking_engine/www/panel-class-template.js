@@ -2391,12 +2391,10 @@ class KitchenCookingPanel extends LitElement {
       return applianceType === 'meater' || applianceType === 'meater_probe';
     });
     
-    // Auto-select MEATER entity when in MEATER path
-    // Force selection if no entity selected OR if selected entity is not a MEATER
-    if (meaterEntities.length > 0) {
-      if (!this._selectedEntity || !meaterEntities.includes(this._selectedEntity)) {
-        this._selectedEntity = meaterEntities[0];
-      }
+    // Default to first MEATER entity if none selected (v0.5.0.30 + default selection)
+    // Only set default if no selection exists - don't override user's choice
+    if (meaterEntities.length > 0 && !this._selectedEntity) {
+      this._selectedEntity = meaterEntities[0];
     }
     
     return html`
@@ -4408,20 +4406,7 @@ class KitchenCookingPanel extends LitElement {
   // ============================================================================
 
   _startMeaterCooking() {
-    // Phase 2: Show MEATER cooking interface
-    // CRITICAL: Select MEATER entity BEFORE showing the form
-    const entities = this._findCookingEntities();
-    const meaterEntities = entities.filter(e => {
-      const applianceType = this.hass.states[e]?.attributes?.appliance_type;
-      return applianceType === 'meater' || applianceType === 'meater_probe';
-    });
-    
-    // Force MEATER entity selection (persist through form → service call)
-    if (meaterEntities.length > 0) {
-      this._selectedEntity = meaterEntities[0];
-      console.log('MEATER entity selected on navigation:', this._selectedEntity);
-    }
-    
+    // Phase 2: Show MEATER cooking interface (v0.5.0.30 pattern restored)
     this._showMeaterCooking = true;
     this.requestUpdate();
   }
@@ -4633,30 +4618,7 @@ class KitchenCookingPanel extends LitElement {
 
   async _startCook() {
     try {
-      // CRITICAL: Verify we're using a MEATER entity before starting cook!
-      const entities = this._findCookingEntities();
-      const meaterEntities = entities.filter(e => {
-        const applianceType = this.hass.states[e]?.attributes?.appliance_type;
-        return applianceType === 'meater' || applianceType === 'meater_probe';
-      });
-      
-      console.log('DEBUG: All entities:', entities);
-      console.log('DEBUG: MEATER entities:', meaterEntities);
-      console.log('DEBUG: Currently selected entity:', this._selectedEntity);
-      
-      // Force MEATER entity selection if wrong entity is selected
-      if (!this._selectedEntity || !meaterEntities.includes(this._selectedEntity)) {
-        if (meaterEntities.length > 0) {
-          console.warn('CORRECTING: Wrong entity selected, switching to MEATER entity');
-          this._selectedEntity = meaterEntities[0];
-        } else {
-          alert('No MEATER entities found! Cannot start cook.');
-          return;
-        }
-      }
-      
-      console.log('DEBUG: Final entity for cook:', this._selectedEntity);
-      
+      // v0.5.0.30 pattern restored: Trust the entity selection from the form
       const serviceData = {
         cut_id: this._selectedCut,
         doneness: this._selectedDoneness,
@@ -4669,8 +4631,8 @@ class KitchenCookingPanel extends LitElement {
         serviceData.custom_target_temp_c = this._customTargetTempC;
       }
       
-      console.log('DEBUG: Starting cook with data:', serviceData);
-      console.log('DEBUG: Entity ID being sent to service:', this._selectedEntity);
+      console.log('Starting cook with entity:', this._selectedEntity);
+      console.log('Service data:', serviceData);
       
       // Wait for service call to complete before navigating
       await this._callService('start_cook', serviceData);
@@ -4680,29 +4642,8 @@ class KitchenCookingPanel extends LitElement {
       
       // Check if cook actually started by verifying entity state
       const entity = this.hass.states[this._selectedEntity];
-      console.log('DEBUG: Entity after cook start:', entity);
-      console.log('DEBUG: Entity state (raw):', entity?.state);
-      console.log('DEBUG: Entity state (lowercase):', entity?.state?.toLowerCase());
+      const entityState = entity?.state?.toLowerCase();
       
-      // Check if entity exists and has a state
-      if (!entity) {
-        console.error('Entity not found in hass.states:', this._selectedEntity);
-        alert('Cook may have started, but entity not found in state.\n\nCheck Home Assistant to see if cook is running.\n\nIf this happens on first page load, try again in a moment.');
-        // Still navigate - cook might have started even if state not visible yet
-        this._showMeaterCooking = false;
-        this._currentPath = 'welcome';
-        this.requestUpdate();
-        return;
-      }
-      
-      if (!entity.state) {
-        console.error('Entity has no state property:', entity);
-        alert('Entity exists but has no state. This should not happen.\n\nCheck Home Assistant logs for errors.');
-        return;
-      }
-      
-      // Case-insensitive state check (Home Assistant may capitalize states)
-      const entityState = entity.state.toLowerCase();
       if (entityState === 'cooking' || entityState === 'approaching') {
         // Success! Close the MEATER setup UI and navigate
         this._showMeaterCooking = false;
