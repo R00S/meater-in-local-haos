@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Feb 2026, 19:31 CET
+ * AUTO-GENERATED: 17 Feb 2026, 19:46 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Feb 2026, 19:31 CET
+// Last generated: 17 Feb 2026, 19:46 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -8478,7 +8478,27 @@ class KitchenCookingPanel extends LitElement {
     console.log('DEBUG: Total cook history entries:', this._cookHistory?.length || 0);
     if (this._cookHistory && this._cookHistory.length > 0) {
       console.log('DEBUG: First cook entry keys:', Object.keys(this._cookHistory[0]));
-      console.log('DEBUG: First cook entry:', this._cookHistory[0]);
+      console.log('DEBUG: First cook entry FULL DATA:', this._cookHistory[0]);
+      // Log every cook to find MEATER-specific fields
+      console.log('DEBUG: Analyzing ALL cook entries for MEATER fields...');
+      this._cookHistory.forEach((cook, index) => {
+        console.log(`DEBUG: Cook #${index}:`, {
+          appliance_type: cook.appliance_type,
+          protein: cook.protein,
+          meat: cook.meat,
+          doneness: cook.doneness,
+          cooking_method: cook.cooking_method,
+          recipe_name: cook.recipe_name,
+          target_temp_c: cook.target_temp_c,
+          checks: {
+            has_appliance_meater: cook.appliance_type === 'meater' || cook.appliance_type === 'meater_probe',
+            has_protein_temp: !!(cook.protein && cook.target_temp_c),
+            has_meat_temp: !!(cook.meat && cook.target_temp_c),
+            has_doneness_temp: !!(cook.doneness && cook.target_temp_c),
+            has_method_temp_no_recipe: !!(cook.cooking_method && cook.target_temp_c && !cook.recipe_name)
+          }
+        });
+      });
     }
     
     // Filter history for MEATER probe cooks only
@@ -8498,18 +8518,13 @@ class KitchenCookingPanel extends LitElement {
         (cook.doneness && cook.target_temp_c) ||
         (cook.cooking_method && cook.target_temp_c && !cook.recipe_name);
       
-      // Debug log for each cook
-      if (!isMetering && cook.target_temp_c) {
-        console.log('DEBUG: Filtered OUT cook:', {
-          appliance_type: cook.appliance_type,
-          protein: cook.protein,
-          meat: cook.meat,
-          doneness: cook.doneness,
-          cooking_method: cook.cooking_method,
-          recipe_name: cook.recipe_name,
-          target_temp_c: cook.target_temp_c
-        });
-      }
+      // Debug log result for EACH cook
+      console.log(`DEBUG: Cook filter - isMetering=${isMetering}:`, {
+        appliance_type: cook.appliance_type,
+        protein: cook.protein,
+        target_temp_c: cook.target_temp_c,
+        recipe_name: cook.recipe_name
+      });
       
       return isMetering;
     });
@@ -10040,21 +10055,42 @@ class KitchenCookingPanel extends LitElement {
       await this._callService('start_cook', serviceData);
       
       // Small delay to ensure entity state propagates to frontend
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await new Promise(resolve => setTimeout(resolve, 300));
       
       // Check if cook actually started by verifying entity state
       const entity = this.hass.states[this._selectedEntity];
-      console.log('DEBUG: Entity state after cook start:', entity?.state);
+      console.log('DEBUG: Entity after cook start:', entity);
+      console.log('DEBUG: Entity state (raw):', entity?.state);
+      console.log('DEBUG: Entity state (lowercase):', entity?.state?.toLowerCase());
       
-      if (entity && (entity.state === 'cooking' || entity.state === 'Cooking')) {
+      // Check if entity exists and has a state
+      if (!entity) {
+        console.error('Entity not found in hass.states:', this._selectedEntity);
+        alert('Cook may have started, but entity not found in state.\n\nCheck Home Assistant to see if cook is running.\n\nIf this happens on first page load, try again in a moment.');
+        // Still navigate - cook might have started even if state not visible yet
+        this._showMeaterCooking = false;
+        this._currentPath = 'welcome';
+        this.requestUpdate();
+        return;
+      }
+      
+      if (!entity.state) {
+        console.error('Entity has no state property:', entity);
+        alert('Entity exists but has no state. This should not happen.\n\nCheck Home Assistant logs for errors.');
+        return;
+      }
+      
+      // Case-insensitive state check (Home Assistant may capitalize states)
+      const entityState = entity.state.toLowerCase();
+      if (entityState === 'cooking' || entityState === 'approaching') {
         // Success! Close the MEATER setup UI and navigate
         this._showMeaterCooking = false;
         this._currentPath = 'welcome';
         this.requestUpdate();
       } else {
         // Cook didn't start - show error to user
-        console.error('Cook failed to start. Entity state:', entity?.state);
-        alert('Failed to start cook. Please check:\n1. All fields are filled\n2. Valid meat/cut selection\n3. Home Assistant logs for errors');
+        console.error('Cook failed to start. Entity state:', entity.state);
+        alert(`Failed to start cook. Entity state is "${entity.state}" instead of "cooking".\n\nPlease check:\n1. All fields are filled\n2. Valid meat/cut selection\n3. Home Assistant logs for errors`);
       }
     } catch (error) {
       console.error('Error starting cook:', error);
@@ -12288,7 +12324,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "130";
+const PANEL_VERSION = "131";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
