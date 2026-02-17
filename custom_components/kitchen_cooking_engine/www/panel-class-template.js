@@ -395,7 +395,7 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _callService(service, data = {}) {
-    this.hass.callService('kitchen_cooking_engine', service, {
+    return this.hass.callService('kitchen_cooking_engine', service, {
       entity_id: this._selectedEntity,
       ...data
     });
@@ -4479,7 +4479,7 @@ class KitchenCookingPanel extends LitElement {
     `;
   }
 
-  _startCook() {
+  async _startCook() {
     const serviceData = {
       cut_id: this._selectedCut,
       doneness: this._selectedDoneness,
@@ -4492,9 +4492,13 @@ class KitchenCookingPanel extends LitElement {
       serviceData.custom_target_temp_c = this._customTargetTempC;
     }
     
-    this._callService('start_cook', serviceData);
+    // Wait for service call to complete before navigating
+    await this._callService('start_cook', serviceData);
     
-    // Close the MEATER cooking setup UI so the active cook will be shown
+    // Small delay to ensure entity state propagates to frontend
+    await new Promise(resolve => setTimeout(resolve, 300));
+    
+    // Now close the MEATER cooking setup UI - the active cook will be shown
     // The render logic at line 2269-2272 will automatically show active cook
     this._showMeaterCooking = false;
     this._currentPath = 'welcome';

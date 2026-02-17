@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Feb 2026, 18:57 CET
+ * AUTO-GENERATED: 17 Feb 2026, 19:03 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Feb 2026, 18:57 CET
+// Last generated: 17 Feb 2026, 19:03 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5924,7 +5924,7 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _callService(service, data = {}) {
-    this.hass.callService('kitchen_cooking_engine', service, {
+    return this.hass.callService('kitchen_cooking_engine', service, {
       entity_id: this._selectedEntity,
       ...data
     });
@@ -10008,7 +10008,7 @@ class KitchenCookingPanel extends LitElement {
     `;
   }
 
-  _startCook() {
+  async _startCook() {
     const serviceData = {
       cut_id: this._selectedCut,
       doneness: this._selectedDoneness,
@@ -10021,9 +10021,13 @@ class KitchenCookingPanel extends LitElement {
       serviceData.custom_target_temp_c = this._customTargetTempC;
     }
     
-    this._callService('start_cook', serviceData);
+    // Wait for service call to complete before navigating
+    await this._callService('start_cook', serviceData);
     
-    // Close the MEATER cooking setup UI so the active cook will be shown
+    // Small delay to ensure entity state propagates to frontend
+    await new Promise(resolve => setTimeout(resolve, 300));
+    
+    // Now close the MEATER cooking setup UI - the active cook will be shown
     // The render logic at line 2269-2272 will automatically show active cook
     this._showMeaterCooking = false;
     this._currentPath = 'welcome';
@@ -12256,7 +12260,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "127";
+const PANEL_VERSION = "128";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

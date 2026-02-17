@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 17 Feb 2026, 17:35 UTC
-Last Change: v0.5.0.31 - Fix: MEATER session selector filtering, config dropdown UI, HA version requirement
+Last Change: v0.5.0.33 - Fixed: MEATER cook start now awaits service completion before navigating, ensuring active cook is visible
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -69,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.32"
+__version__ = "0.5.0.33"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
