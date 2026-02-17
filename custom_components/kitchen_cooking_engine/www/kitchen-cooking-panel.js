@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Feb 2026, 20:25 CET
+ * AUTO-GENERATED: 17 Feb 2026, 21:24 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Feb 2026, 20:25 CET
+// Last generated: 17 Feb 2026, 21:24 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -7908,9 +7908,12 @@ class KitchenCookingPanel extends LitElement {
       this.hass.states[e]?.attributes?.appliance_type === 'meater'
     );
     
-    // Auto-select if there's only one MEATER device
-    if (meaterEntities.length === 1 && !this._selectedEntity) {
-      this._selectedEntity = meaterEntities[0];
+    // Auto-select MEATER entity when in MEATER path
+    // Force selection if no entity selected OR if selected entity is not a MEATER
+    if (meaterEntities.length > 0) {
+      if (!this._selectedEntity || !meaterEntities.includes(this._selectedEntity)) {
+        this._selectedEntity = meaterEntities[0];
+      }
     }
     
     return html`
@@ -12422,7 +12425,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "133";
+const PANEL_VERSION = "134";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

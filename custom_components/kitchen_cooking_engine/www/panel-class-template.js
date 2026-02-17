@@ -2379,9 +2379,12 @@ class KitchenCookingPanel extends LitElement {
       this.hass.states[e]?.attributes?.appliance_type === 'meater'
     );
     
-    // Auto-select if there's only one MEATER device
-    if (meaterEntities.length === 1 && !this._selectedEntity) {
-      this._selectedEntity = meaterEntities[0];
+    // Auto-select MEATER entity when in MEATER path
+    // Force selection if no entity selected OR if selected entity is not a MEATER
+    if (meaterEntities.length > 0) {
+      if (!this._selectedEntity || !meaterEntities.includes(this._selectedEntity)) {
+        this._selectedEntity = meaterEntities[0];
+      }
     }
     
     return html`
