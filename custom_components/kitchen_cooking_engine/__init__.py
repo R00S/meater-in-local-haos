@@ -228,7 +228,14 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
         await _async_regenerate_frontend_data(hass)
         
         # Create View Assist dashboard for zero-config compatibility
-        await async_create_view_assist_dashboard(hass)
+        # Don't let dashboard creation failure block panel registration
+        try:
+            await async_create_view_assist_dashboard(hass)
+        except Exception as dashboard_err:
+            _LOGGER.warning(
+                "Kitchen Cooking Engine: Failed to create View Assist dashboard (non-critical): %s",
+                dashboard_err
+            )
         
         # Re-read PANEL_VERSION after regeneration (it may have been updated)
         # We need to reload the const module to get the updated value
