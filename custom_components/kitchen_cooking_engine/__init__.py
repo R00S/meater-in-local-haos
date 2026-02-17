@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 17 Feb 2026, 17:35 UTC
-Last Change: v0.5.0.33 - Fixed: MEATER cook start now awaits service completion before navigating, ensuring active cook is visible
+Last Change: v0.5.0.35 - CRITICAL: Added missing custom_target_temp_c parameter to start_cook service call - cook start now fully functional
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -69,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.34"
+__version__ = "0.5.0.35"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -515,6 +515,7 @@ async def _async_register_services(hass: HomeAssistant) -> None:
                 carryover_temp_c=cut.carryover_temp_c,
                 cut_display=cut.name_long,
                 cut_id=cut_id,
+                custom_target_temp_c=custom_target_temp_c,
             )
 
     async def handle_stop_cook(call: ServiceCall) -> None:
