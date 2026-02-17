@@ -271,12 +271,17 @@ class KitchenCookingPanel extends LitElement {
 
   async _loadHistory() {
     try {
-      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/history');
+      const response = await this.hass.callWS({
+        type: 'kitchen_cooking_engine/get_cook_history'
+      });
       if (response && response.history) {
         this._cookHistory = response.history;
+      } else {
+        this._cookHistory = [];
       }
     } catch (e) {
-      console.log('Could not load history:', e);
+      console.error('Could not load history:', e);
+      this._cookHistory = [];  // Set to empty array to prevent undefined errors
     }
   }
 
@@ -4283,9 +4288,14 @@ class KitchenCookingPanel extends LitElement {
   async _showRecentMeaterCooks() {
     // Phase 2: Show filtered MEATER cook history
     // MUST await history load before rendering!
-    await this._loadHistory();
-    this._currentPath = 'recent_meater';
-    this.requestUpdate();
+    try {
+      await this._loadHistory();
+      this._currentPath = 'recent_meater';
+      this.requestUpdate();
+    } catch (error) {
+      console.error('Failed to show recent MEATER cooks:', error);
+      alert('Failed to load MEATER cook history.\n\nPlease check:\n1. Integration is running\n2. Home Assistant logs for errors\n3. Browser console for details');
+    }
   }
 
   /**

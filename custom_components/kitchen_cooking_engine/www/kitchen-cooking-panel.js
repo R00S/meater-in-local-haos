@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Feb 2026, 19:11 CET
+ * AUTO-GENERATED: 17 Feb 2026, 19:31 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Feb 2026, 19:11 CET
+// Last generated: 17 Feb 2026, 19:31 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5800,12 +5800,17 @@ class KitchenCookingPanel extends LitElement {
 
   async _loadHistory() {
     try {
-      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/history');
+      const response = await this.hass.callWS({
+        type: 'kitchen_cooking_engine/get_cook_history'
+      });
       if (response && response.history) {
         this._cookHistory = response.history;
+      } else {
+        this._cookHistory = [];
       }
     } catch (e) {
-      console.log('Could not load history:', e);
+      console.error('Could not load history:', e);
+      this._cookHistory = [];  // Set to empty array to prevent undefined errors
     }
   }
 
@@ -9812,9 +9817,14 @@ class KitchenCookingPanel extends LitElement {
   async _showRecentMeaterCooks() {
     // Phase 2: Show filtered MEATER cook history
     // MUST await history load before rendering!
-    await this._loadHistory();
-    this._currentPath = 'recent_meater';
-    this.requestUpdate();
+    try {
+      await this._loadHistory();
+      this._currentPath = 'recent_meater';
+      this.requestUpdate();
+    } catch (error) {
+      console.error('Failed to show recent MEATER cooks:', error);
+      alert('Failed to load MEATER cook history.\n\nPlease check:\n1. Integration is running\n2. Home Assistant logs for errors\n3. Browser console for details');
+    }
   }
 
   /**
@@ -12278,7 +12288,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "129";
+const PANEL_VERSION = "130";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
