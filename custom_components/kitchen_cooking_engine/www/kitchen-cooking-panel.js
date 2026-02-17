@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Feb 2026, 19:58 CET
+ * AUTO-GENERATED: 17 Feb 2026, 20:25 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Feb 2026, 19:58 CET
+// Last generated: 17 Feb 2026, 20:25 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5801,10 +5801,14 @@ class KitchenCookingPanel extends LitElement {
   async _loadHistory() {
     try {
       // Call REST API endpoint at /api/kitchen_cooking_engine/history
-      const response = await fetch('/api/kitchen_cooking_engine/history', {
+      // Add cache-busting to prevent browser from serving stale data
+      const timestamp = new Date().getTime();
+      const response = await fetch(`/api/kitchen_cooking_engine/history?_=${timestamp}`, {
         headers: {
           'Authorization': `Bearer ${this.hass.auth.data.access_token}`,
           'Content-Type': 'application/json',
+          'Cache-Control': 'no-cache',  // Prevent caching
+          'Pragma': 'no-cache'            // IE11 compatibility
         }
       });
       
@@ -7711,11 +7715,19 @@ class KitchenCookingPanel extends LitElement {
       this._selectedEntity = entities[0];
     }
 
+    // Check if SELECTED entity is active
     const state = this._getState();
-    // Only consider as active if state exists, is not unavailable/unknown, and is in an active cooking state
     const stateValue = state?.state;
     const isValidState = stateValue && stateValue !== 'unavailable' && stateValue !== 'unknown';
     const isActive = isValidState && stateValue !== 'idle' && stateValue !== 'complete';
+    
+    // Find ALL active cooks (not just selected entity)
+    const activeCooks = entities.filter(entityId => {
+      const entityState = this.hass.states[entityId];
+      const entityStateValue = entityState?.state;
+      const entityIsValidState = entityStateValue && entityStateValue !== 'unavailable' && entityStateValue !== 'unknown';
+      return entityIsValidState && entityStateValue !== 'idle' && entityStateValue !== 'complete';
+    });
 
     return html`
       <ha-top-app-bar-fixed>
@@ -7727,7 +7739,7 @@ class KitchenCookingPanel extends LitElement {
         <div slot="title">🍳 Kitchen Cooking Engine</div>
         
         <div class="content">
-          ${this._renderContent(entities, isActive, state)}
+          ${this._renderContent(entities, isActive, state, activeCooks)}
           
           <!-- AI Settings Modal -->
           ${this._showAISettingsModal ? html`
@@ -7806,15 +7818,20 @@ class KitchenCookingPanel extends LitElement {
   /**
    * Route content rendering based on current path
    */
-  _renderContent(entities, isActive, state) {
+  _renderContent(entities, isActive, state, activeCooks) {
     // Phase 4: If in recipe cook flow, always show it (highest priority)
     if (this._recipeCookState) {
       return this._renderRecipeCookFlow();
     }
 
-    // If there's an active cook, always show it regardless of path
+    // If there's an active cook on the SELECTED entity, show it
     if (isActive && entities.length > 0) {
       return this._renderActiveCook(state);
+    }
+    
+    // If multiple active cooks but none selected, show selector on welcome screen
+    if (activeCooks.length > 1 && this._currentPath === 'welcome') {
+      return this._renderMultiCookSelector(activeCooks);
     }
 
     // Validate current path - ensure it has a valid value
@@ -8373,6 +8390,75 @@ class KitchenCookingPanel extends LitElement {
   // ============================================================================
   // PHASE 1: GUI REDESIGN - PATH RENDER METHODS
   // ============================================================================
+
+  /**
+   * Render multi-cook selector when multiple cooks are active
+   */
+  _renderMultiCookSelector(activeCooks) {
+    return html`
+      <div class="welcome-header">
+        <h1>🍳 Kitchen Cooking Engine</h1>
+        <p class="welcome-subtitle">Multiple Active Cooks</p>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          <h2>🔥 Active Cooks (${activeCooks.length})</h2>
+          <p class="info-text">Select a cook to view and manage:</p>
+          
+          <div class="multi-cook-list">
+            ${activeCooks.map(entityId => {
+              const state = this.hass.states[entityId];
+              const name = state.attributes?.friendly_name || entityId;
+              const protein = state.attributes?.protein || 'Cook';
+              const currentTemp = state.attributes?.current_temp_c;
+              const targetTemp = state.attributes?.target_temp_c;
+              const cookState = state.state;
+              const progress = state.attributes?.progress || 0;
+              
+              return html`
+                <ha-card 
+                  class="active-cook-card clickable"
+                  @click=${() => {
+                    this._selectedEntity = entityId;
+                    this.requestUpdate();
+                  }}
+                >
+                  <div class="card-content">
+                    <div class="cook-header">
+                      <strong>${name}</strong>
+                      <span class="cook-state-badge">${cookState}</span>
+                    </div>
+                    <div class="cook-details">
+                      <div class="cook-protein">${protein}</div>
+                      ${currentTemp && targetTemp ? html`
+                        <div class="cook-temp">
+                          🌡️ ${currentTemp}°C / ${targetTemp}°C
+                        </div>
+                      ` : ''}
+                      ${progress > 0 ? html`
+                        <div class="cook-progress">
+                          <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${progress}%"></div>
+                          </div>
+                          <span>${Math.round(progress)}%</span>
+                        </div>
+                      ` : ''}
+                    </div>
+                    <div class="cook-action">
+                      <button class="primary-btn">View Cook →</button>
+                    </div>
+                  </div>
+                </ha-card>
+              `;
+            })}
+          </div>
+        </div>
+      </ha-card>
+
+      ${this._renderWelcomeScreen()}
+    `;
+  }
 
   /**
    * Render welcome screen with appliance selector
@@ -12336,7 +12422,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "132";
+const PANEL_VERSION = "133";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
