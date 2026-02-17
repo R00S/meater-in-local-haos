@@ -2385,9 +2385,13 @@ class KitchenCookingPanel extends LitElement {
     const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
     const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
     
-    // v0.5.0.30 EXACT CODE: Default to first entity if none selected
-    if (entities.length > 0 && !this._selectedEntity) {
-      this._selectedEntity = entities[0];
+    // v0.5.0.53: Force default to first entity if selected entity not in list
+    // This handles navigation from other paths where this._selectedEntity might contain
+    // a different appliance type (e.g., Ninja when navigating to MEATER path)
+    if (entities.length > 0) {
+      if (!this._selectedEntity || !entities.includes(this._selectedEntity)) {
+        this._selectedEntity = entities[0];  // First entity (MEATER after sorting in _renderMeaterPath)
+      }
     }
     
     return html`

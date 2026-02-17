@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 18 Feb 2026, 00:27 CET
+ * AUTO-GENERATED: 18 Feb 2026, 00:36 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 18 Feb 2026, 00:27 CET
+// Last generated: 18 Feb 2026, 00:36 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -7914,9 +7914,13 @@ class KitchenCookingPanel extends LitElement {
     const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
     const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
     
-    // v0.5.0.30 EXACT CODE: Default to first entity if none selected
-    if (entities.length > 0 && !this._selectedEntity) {
-      this._selectedEntity = entities[0];
+    // v0.5.0.53: Force default to first entity if selected entity not in list
+    // This handles navigation from other paths where this._selectedEntity might contain
+    // a different appliance type (e.g., Ninja when navigating to MEATER path)
+    if (entities.length > 0) {
+      if (!this._selectedEntity || !entities.includes(this._selectedEntity)) {
+        this._selectedEntity = entities[0];  // First entity (MEATER after sorting in _renderMeaterPath)
+      }
     }
     
     return html`
@@ -12399,7 +12403,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "143";
+const PANEL_VERSION = "144";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
