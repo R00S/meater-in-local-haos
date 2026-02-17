@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Feb 2026, 19:03 CET
+ * AUTO-GENERATED: 17 Feb 2026, 19:11 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Feb 2026, 19:03 CET
+// Last generated: 17 Feb 2026, 19:11 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -9809,10 +9809,11 @@ class KitchenCookingPanel extends LitElement {
     this.requestUpdate();
   }
 
-  _showRecentMeaterCooks() {
+  async _showRecentMeaterCooks() {
     // Phase 2: Show filtered MEATER cook history
+    // MUST await history load before rendering!
+    await this._loadHistory();
     this._currentPath = 'recent_meater';
-    this._loadHistory();  // Load cook history before displaying
     this.requestUpdate();
   }
 
@@ -10009,29 +10010,46 @@ class KitchenCookingPanel extends LitElement {
   }
 
   async _startCook() {
-    const serviceData = {
-      cut_id: this._selectedCut,
-      doneness: this._selectedDoneness,
-      cooking_method: this._selectedMethod,
-      data_source: this._dataSource,
-    };
-    
-    // Include custom target temperature if set
-    if (this._customTargetTempC) {
-      serviceData.custom_target_temp_c = this._customTargetTempC;
+    try {
+      const serviceData = {
+        cut_id: this._selectedCut,
+        doneness: this._selectedDoneness,
+        cooking_method: this._selectedMethod,
+        data_source: this._dataSource,
+      };
+      
+      // Include custom target temperature if set
+      if (this._customTargetTempC) {
+        serviceData.custom_target_temp_c = this._customTargetTempC;
+      }
+      
+      console.log('DEBUG: Starting cook with data:', serviceData);
+      console.log('DEBUG: Entity ID:', this._selectedEntity);
+      
+      // Wait for service call to complete before navigating
+      await this._callService('start_cook', serviceData);
+      
+      // Small delay to ensure entity state propagates to frontend
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      // Check if cook actually started by verifying entity state
+      const entity = this.hass.states[this._selectedEntity];
+      console.log('DEBUG: Entity state after cook start:', entity?.state);
+      
+      if (entity && (entity.state === 'cooking' || entity.state === 'Cooking')) {
+        // Success! Close the MEATER setup UI and navigate
+        this._showMeaterCooking = false;
+        this._currentPath = 'welcome';
+        this.requestUpdate();
+      } else {
+        // Cook didn't start - show error to user
+        console.error('Cook failed to start. Entity state:', entity?.state);
+        alert('Failed to start cook. Please check:\n1. All fields are filled\n2. Valid meat/cut selection\n3. Home Assistant logs for errors');
+      }
+    } catch (error) {
+      console.error('Error starting cook:', error);
+      alert(`Failed to start cook: ${error.message || 'Unknown error'}\n\nCheck browser console and Home Assistant logs for details.`);
     }
-    
-    // Wait for service call to complete before navigating
-    await this._callService('start_cook', serviceData);
-    
-    // Small delay to ensure entity state propagates to frontend
-    await new Promise(resolve => setTimeout(resolve, 300));
-    
-    // Now close the MEATER cooking setup UI - the active cook will be shown
-    // The render logic at line 2269-2272 will automatically show active cook
-    this._showMeaterCooking = false;
-    this._currentPath = 'welcome';
-    this.requestUpdate();
   }
 
   _stopCook() {
@@ -12260,7 +12278,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "128";
+const PANEL_VERSION = "129";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
