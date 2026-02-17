@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Feb 2026, 18:37 CET
+ * AUTO-GENERATED: 17 Feb 2026, 18:57 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Feb 2026, 18:37 CET
+// Last generated: 17 Feb 2026, 18:57 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -8481,10 +8481,17 @@ class KitchenCookingPanel extends LitElement {
       // Check if it's a MEATER-only cook (temperature monitoring)
       // Include cooks that have protein/meat data and target temperature
       // Exclude cooks that are primarily recipe-based
-      const isMetering = cook.appliance_type === 'meater_probe' || 
-             (cook.protein && cook.target_temp_c) ||
-             (cook.meat && cook.target_temp_c) ||
-             (!cook.recipe_name && cook.target_temp_c);
+      const isMetering = 
+        // New way: explicit appliance type
+        cook.appliance_type === 'meater_probe' || 
+        cook.appliance_type === 'meater' ||
+        
+        // Backwards compatibility: Old cooks without appliance_type
+        // These cooks have MEATER-specific fields:
+        (cook.protein && cook.target_temp_c) ||
+        (cook.meat && cook.target_temp_c) ||
+        (cook.doneness && cook.target_temp_c) ||
+        (cook.cooking_method && cook.target_temp_c && !cook.recipe_name);
       
       // Debug log for each cook
       if (!isMetering && cook.target_temp_c) {
@@ -8492,6 +8499,8 @@ class KitchenCookingPanel extends LitElement {
           appliance_type: cook.appliance_type,
           protein: cook.protein,
           meat: cook.meat,
+          doneness: cook.doneness,
+          cooking_method: cook.cooking_method,
           recipe_name: cook.recipe_name,
           target_temp_c: cook.target_temp_c
         });
@@ -10014,7 +10023,8 @@ class KitchenCookingPanel extends LitElement {
     
     this._callService('start_cook', serviceData);
     
-    // Navigate back to welcome screen so the active cook will be shown
+    // Close the MEATER cooking setup UI so the active cook will be shown
+    // The render logic at line 2269-2272 will automatically show active cook
     this._showMeaterCooking = false;
     this._currentPath = 'welcome';
     this.requestUpdate();
@@ -12246,7 +12256,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "125";
+const PANEL_VERSION = "127";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

@@ -2952,10 +2952,17 @@ class KitchenCookingPanel extends LitElement {
       // Check if it's a MEATER-only cook (temperature monitoring)
       // Include cooks that have protein/meat data and target temperature
       // Exclude cooks that are primarily recipe-based
-      const isMetering = cook.appliance_type === 'meater_probe' || 
-             (cook.protein && cook.target_temp_c) ||
-             (cook.meat && cook.target_temp_c) ||
-             (!cook.recipe_name && cook.target_temp_c);
+      const isMetering = 
+        // New way: explicit appliance type
+        cook.appliance_type === 'meater_probe' || 
+        cook.appliance_type === 'meater' ||
+        
+        // Backwards compatibility: Old cooks without appliance_type
+        // These cooks have MEATER-specific fields:
+        (cook.protein && cook.target_temp_c) ||
+        (cook.meat && cook.target_temp_c) ||
+        (cook.doneness && cook.target_temp_c) ||
+        (cook.cooking_method && cook.target_temp_c && !cook.recipe_name);
       
       // Debug log for each cook
       if (!isMetering && cook.target_temp_c) {
@@ -2963,6 +2970,8 @@ class KitchenCookingPanel extends LitElement {
           appliance_type: cook.appliance_type,
           protein: cook.protein,
           meat: cook.meat,
+          doneness: cook.doneness,
+          cooking_method: cook.cooking_method,
           recipe_name: cook.recipe_name,
           target_temp_c: cook.target_temp_c
         });
@@ -4485,7 +4494,8 @@ class KitchenCookingPanel extends LitElement {
     
     this._callService('start_cook', serviceData);
     
-    // Navigate back to welcome screen so the active cook will be shown
+    // Close the MEATER cooking setup UI so the active cook will be shown
+    // The render logic at line 2269-2272 will automatically show active cook
     this._showMeaterCooking = false;
     this._currentPath = 'welcome';
     this.requestUpdate();
