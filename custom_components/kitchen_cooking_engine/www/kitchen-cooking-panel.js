@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Feb 2026, 19:46 CET
+ * AUTO-GENERATED: 17 Feb 2026, 19:58 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 17 Feb 2026, 19:46 CET
+// Last generated: 17 Feb 2026, 19:58 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5800,11 +5800,23 @@ class KitchenCookingPanel extends LitElement {
 
   async _loadHistory() {
     try {
-      const response = await this.hass.callWS({
-        type: 'kitchen_cooking_engine/get_cook_history'
+      // Call REST API endpoint at /api/kitchen_cooking_engine/history
+      const response = await fetch('/api/kitchen_cooking_engine/history', {
+        headers: {
+          'Authorization': `Bearer ${this.hass.auth.data.access_token}`,
+          'Content-Type': 'application/json',
+        }
       });
-      if (response && response.history) {
-        this._cookHistory = response.history;
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      
+      const data = await response.json();
+      console.log('DEBUG: History loaded successfully. Count:', data.history?.length || 0);
+      
+      if (data && data.history) {
+        this._cookHistory = data.history;
       } else {
         this._cookHistory = [];
       }
@@ -12324,7 +12336,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "131";
+const PANEL_VERSION = "132";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
