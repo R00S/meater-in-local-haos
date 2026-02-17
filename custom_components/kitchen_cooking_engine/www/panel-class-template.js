@@ -3001,13 +3001,12 @@ class KitchenCookingPanel extends LitElement {
     if (this._showMeaterCooking) {
       let entities = this._findCookingEntities();
       
-      // v0.5.0.50: Sort entities so MEATER entities appear first in the list
-      // This ensures default selection (entities[0]) picks a MEATER entity
+      // v0.5.0.51: Sort entities by entity ID pattern (more reliable than attributes)
+      // Entity IDs like "kitchen_cooking_engine_bt_proxy_meater_tip_temperature_cooking_session"
+      // contain "meater" - use this to identify and sort MEATER entities first
       entities = entities.sort((a, b) => {
-        const aType = this.hass.states[a]?.attributes?.appliance_type;
-        const bType = this.hass.states[b]?.attributes?.appliance_type;
-        const aIsMeater = aType === 'meater' || aType === 'meater_probe';
-        const bIsMeater = bType === 'meater' || bType === 'meater_probe';
+        const aIsMeater = a.toLowerCase().includes('meater');
+        const bIsMeater = b.toLowerCase().includes('meater');
         
         // MEATER entities first, others after
         if (aIsMeater && !bIsMeater) return -1;

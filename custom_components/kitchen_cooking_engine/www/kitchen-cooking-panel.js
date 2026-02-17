@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 18 Feb 2026, 00:03 CET
+ * AUTO-GENERATED: 18 Feb 2026, 00:27 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 18 Feb 2026, 00:03 CET
+// Last generated: 18 Feb 2026, 00:27 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -8530,13 +8530,12 @@ class KitchenCookingPanel extends LitElement {
     if (this._showMeaterCooking) {
       let entities = this._findCookingEntities();
       
-      // v0.5.0.50: Sort entities so MEATER entities appear first in the list
-      // This ensures default selection (entities[0]) picks a MEATER entity
+      // v0.5.0.51: Sort entities by entity ID pattern (more reliable than attributes)
+      // Entity IDs like "kitchen_cooking_engine_bt_proxy_meater_tip_temperature_cooking_session"
+      // contain "meater" - use this to identify and sort MEATER entities first
       entities = entities.sort((a, b) => {
-        const aType = this.hass.states[a]?.attributes?.appliance_type;
-        const bType = this.hass.states[b]?.attributes?.appliance_type;
-        const aIsMeater = aType === 'meater' || aType === 'meater_probe';
-        const bIsMeater = bType === 'meater' || bType === 'meater_probe';
+        const aIsMeater = a.toLowerCase().includes('meater');
+        const bIsMeater = b.toLowerCase().includes('meater');
         
         // MEATER entities first, others after
         if (aIsMeater && !bIsMeater) return -1;
@@ -12400,7 +12399,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "142";
+const PANEL_VERSION = "143";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
