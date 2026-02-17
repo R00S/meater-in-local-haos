@@ -2999,7 +2999,22 @@ class KitchenCookingPanel extends LitElement {
   _renderMeaterPath() {
     // If in cooking mode, show the setup form
     if (this._showMeaterCooking) {
-      const entities = this._findCookingEntities();
+      let entities = this._findCookingEntities();
+      
+      // v0.5.0.50: Sort entities so MEATER entities appear first in the list
+      // This ensures default selection (entities[0]) picks a MEATER entity
+      entities = entities.sort((a, b) => {
+        const aType = this.hass.states[a]?.attributes?.appliance_type;
+        const bType = this.hass.states[b]?.attributes?.appliance_type;
+        const aIsMeater = aType === 'meater' || aType === 'meater_probe';
+        const bIsMeater = bType === 'meater' || bType === 'meater_probe';
+        
+        // MEATER entities first, others after
+        if (aIsMeater && !bIsMeater) return -1;
+        if (!aIsMeater && bIsMeater) return 1;
+        return 0;  // Preserve original order for same type
+      });
+      
       return html`
         <div class="path-header">
           <button class="back-btn" @click=${() => { 
