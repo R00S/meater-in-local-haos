@@ -56,6 +56,7 @@ from .const import (
     CONF_INDICATOR_LIGHT,
     CONF_MEDIA_PLAYER,
     CONF_NOTIFY_SERVICE,
+    CONF_PERSISTENT_NOTIFICATIONS,
     CONF_POWER_OUTLET,
     CONF_START_BUTTON,
     CONF_TEMPERATURE_SENSOR,
@@ -113,6 +114,7 @@ async def async_setup_entry(
     tts_entity = config_entry.data.get(CONF_TTS_ENTITY)
     media_player = config_entry.data.get(CONF_MEDIA_PLAYER)
     temp_unit = config_entry.data.get(CONF_TEMPERATURE_UNIT, TEMP_CELSIUS)
+    persistent_notifications = config_entry.data.get(CONF_PERSISTENT_NOTIFICATIONS, True)
     
     # Appliance device control entities
     power_outlet = config_entry.data.get(CONF_POWER_OUTLET)
@@ -139,6 +141,7 @@ async def async_setup_entry(
         auto_shutoff,
         auto_start,
         appliance_type,
+        persistent_notifications,
     )
     
     entities = [cooking_session]
@@ -181,6 +184,7 @@ class CookingSessionSensor(SensorEntity):
         auto_shutoff: bool = True,
         auto_start: bool = False,
         appliance_type: str = "meater_probe",
+        persistent_notifications: bool = True,
     ) -> None:
         """Initialize the cooking session sensor."""
         self._hass = hass
@@ -193,6 +197,7 @@ class CookingSessionSensor(SensorEntity):
         self._tts_entity = tts_entity.strip() if tts_entity else None
         self._media_player = media_player.strip() if media_player else None
         self._temp_unit = temp_unit
+        self._persistent_notifications = persistent_notifications
         
         # Appliance device control
         self._power_outlet = power_outlet.strip() if power_outlet else None
@@ -623,18 +628,19 @@ class CookingSessionSensor(SensorEntity):
         
         notification = notification_map.get(event_type)
         if notification:
-            # Create persistent notification in Home Assistant UI
-            self._hass.async_create_task(
-                self._hass.services.async_call(
-                    "persistent_notification",
-                    "create",
-                    {
-                        "title": notification["title"],
-                        "message": notification["message"],
-                        "notification_id": notification["notification_id"],
-                    },
+            # Create persistent notification in Home Assistant UI (if enabled)
+            if self._persistent_notifications:
+                self._hass.async_create_task(
+                    self._hass.services.async_call(
+                        "persistent_notification",
+                        "create",
+                        {
+                            "title": notification["title"],
+                            "message": notification["message"],
+                            "notification_id": notification["notification_id"],
+                        },
+                    )
                 )
-            )
             
             # Send push notification to mobile app if configured
             if self._notify_service:

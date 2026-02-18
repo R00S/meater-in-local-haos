@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 17 Jan 2026, 12:09 UTC
-Last Change: v0.5.0.23 - Bug fixes: Added _restartCook method and fixed sidebar title Promise issue
+Last Updated: 18 Feb 2026, 23:40 UTC
+Last Change: v0.5.0.63 - Added option to disable persistent notifications
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -19,6 +19,7 @@ CONF_INDICATOR_LIGHT = "indicator_light"
 CONF_NOTIFY_SERVICE = "notify_service"
 CONF_TTS_ENTITY = "tts_entity"
 CONF_MEDIA_PLAYER = "media_player"
+CONF_PERSISTENT_NOTIFICATIONS = "persistent_notifications"  # Enable/disable sidebar notifications
 
 # Appliance device control configuration keys
 CONF_POWER_OUTLET = "power_outlet"          # Switch/outlet entity to control power
