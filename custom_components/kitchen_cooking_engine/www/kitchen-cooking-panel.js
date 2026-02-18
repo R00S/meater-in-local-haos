@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 18 Feb 2026, 01:15 CET
+ * AUTO-GENERATED: 18 Feb 2026, 01:50 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 18 Feb 2026, 01:15 CET
+// Last generated: 18 Feb 2026, 01:50 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -8835,31 +8835,337 @@ class KitchenCookingPanel extends LitElement {
    * Displays the existing ninja_combi_recipe_builder interface
    */
   _renderNinjaRecipeBuilderView() {
+    const bases = {
+      'white_rice': { name: 'White Rice', icon: '🍚', water: '4 cups', time: 15 },
+      'brown_rice': { name: 'Brown Rice', icon: '🍙', water: '4.5 cups', time: 18 },
+      'rice_pilaf': { name: 'Rice Pilaf', icon: '🍚', water: '3 cups', time: 16 },
+      'spanish_rice': { name: 'Spanish Rice', icon: '🍛', water: '4 cups', time: 15 },
+      'wild_rice': { name: 'Wild Rice', icon: '🌾', water: '5 cups', time: 20 },
+      'israeli_couscous': { name: 'Israeli Couscous', icon: '⚪', water: '3.5 cups', time: 12 },
+      'quinoa': { name: 'Quinoa', icon: '🌿', water: '4 cups', time: 15 },
+      'plain_pasta': { name: 'Plain Pasta', icon: '🍝', water: '5 cups', time: 12 },
+      'marinara_pasta': { name: 'Marinara Pasta', icon: '🍝', water: '5 cups + 2 cups marinara', time: 14 },
+      'alfredo_pasta': { name: 'Alfredo Pasta', icon: '🍝', water: '5 cups + 1.5 cups alfredo', time: 14 },
+    };
+
+    const proteins = {
+      'chicken_breast': { name: 'Chicken Breast (Fresh)', icon: '🐔', temp: '390°F / 199°C', time: 18, probe: '74°C / 165°F' },
+      'chicken_breast_frozen': { name: 'Chicken Breast (Frozen)', icon: '🧊🐔', temp: '390°F / 199°C', time: 24, probe: '74°C / 165°F' },
+      'chicken_thighs': { name: 'Chicken Thighs', icon: '🍗', temp: '385°F / 196°C', time: 18, probe: '74°C / 165°F' },
+      'chicken_drumsticks': { name: 'Chicken Drumsticks', icon: '🍗', temp: '385°F / 196°C', time: 20, probe: '74°C / 165°F' },
+      'chicken_wings': { name: 'Chicken Wings', icon: '🍗', temp: '390°F / 199°C', time: 16, probe: '74°C / 165°F' },
+      'beef_steak': { name: 'Beef Steak (Medium)', icon: '🥩', temp: '360°F / 182°C', time: 16, probe: '54-57°C / 130-135°F' },
+      'beef_ground': { name: 'Ground Beef', icon: '🍖', temp: '375°F / 191°C', time: 14, probe: '71°C / 160°F' },
+      'beef_meatballs': { name: 'Beef Meatballs', icon: '🧆', temp: '370°F / 188°C', time: 15, probe: '71°C / 160°F' },
+      'beef_strips': { name: 'Beef Strips', icon: '🥩', temp: '380°F / 193°C', time: 12, probe: '63°C / 145°F' },
+      'pork_chops': { name: 'Pork Chops', icon: '🥓', temp: '380°F / 193°C', time: 16, probe: '63°C / 145°F' },
+      'pork_tenderloin': { name: 'Pork Tenderloin', icon: '🥓', temp: '375°F / 191°C', time: 18, probe: '63°C / 145°F' },
+      'pork_sausage': { name: 'Pork Sausage', icon: '🌭', temp: '370°F / 188°C', time: 14, probe: '71°C / 160°F' },
+      'salmon': { name: 'Salmon Fillet', icon: '🐟', temp: '360°F / 182°C', time: 14, probe: '54-60°C / 130-140°F' },
+      'shrimp': { name: 'Shrimp', icon: '🦐', temp: '350°F / 177°C', time: 10, probe: '63°C / 145°F' },
+      'tofu': { name: 'Tofu (Firm)', icon: '🧈', temp: '375°F / 191°C', time: 15, probe: 'N/A' },
+      'tempeh': { name: 'Tempeh', icon: '🌱', temp: '375°F / 191°C', time: 14, probe: 'N/A' },
+    };
+
+    const veggies = [
+      { name: 'Broccoli', icon: '🥦', type: 'crispy' },
+      { name: 'Carrots', icon: '🥕', type: 'tender' },
+      { name: 'Bell Peppers', icon: '🫑', type: 'crispy' },
+      { name: 'Zucchini', icon: '🥒', type: 'tender' },
+      { name: 'Asparagus', icon: '🎋', type: 'crispy' },
+      { name: 'Green Beans', icon: '🫘', type: 'crispy' },
+      { name: 'Brussels Sprouts', icon: '🥬', type: 'crispy' },
+      { name: 'Cherry Tomatoes', icon: '🍅', type: 'tender' },
+    ];
+
+    const selectedBase = bases[this._builderBase];
+    const selectedProtein = proteins[this._builderProtein];
+
     return html`
-      <div class="path-header">
-        <button class="back-btn" @click=${() => {
-          this._showRecipeBuilder = false;
-          this._currentPath = 'ninja_combi';
-          this.requestUpdate();
-        }}>
-          ← Back to Ninja Combi
-        </button>
-        <h2>🎨 Ninja Combi Recipe Builder</h2>
+      <div class="status-banner idle">
+        <h2>🛠️ Recipe Builder</h2>
+        <p>Build custom Combi-Meal recipes with automatic parameter adjustment</p>
+        <div style="display: flex; gap: 8px; margin-top: 12px;">
+          <button class="history-btn" @click=${() => { this._currentPath = 'ninja_combi'; this._resetBuilder(); }}>
+            ← Back to Ninja Combi
+          </button>
+          <button class="history-btn" @click=${() => { this._showRecipeBuilder = false; this._showNinjaCombi = false; this._showRecipes = true; this._loadCompatibleRecipes(); }}>
+            📖 All Recipes
+          </button>
+        </div>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <p class="info-text">Create custom recipes using Ninja Combi cooking modes and features.</p>
-          <p>Recipe builder interface coming soon. For now, use the Ninja Combi built-in recipes.</p>
-          <button class="primary-btn" @click=${() => {
-            this._currentPath = 'ninja_built_in_recipes';
-            this._showNinjaBuiltInRecipes();
-          }}>
-            📖 View Built-in Recipes
-          </button>
+          <h3>1️⃣ Select Base (Required)</h3>
+          <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px;">
+            ${Object.entries(bases).map(([key, base]) => html`
+              <button 
+                class="category-btn ${this._builderBase === key ? 'active' : ''}" 
+                @click=${() => { this._builderBase = key; this.requestUpdate(); }}
+                style="padding: 12px; text-align: left;">
+                <div style="font-size: 20px; margin-bottom: 4px;">${base.icon}</div>
+                <div style="font-size: 13px; font-weight: 500;">${base.name}</div>
+                <div style="font-size: 11px; color: var(--secondary-text-color); margin-top: 2px;">
+                  ${base.water} • ${base.time} min
+                </div>
+              </button>
+            `)}
+          </div>
         </div>
       </ha-card>
+
+      <ha-card>
+        <div class="card-content">
+          <h3>2️⃣ Select Protein (Required)</h3>
+          <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px;">
+            ${Object.entries(proteins).map(([key, protein]) => html`
+              <button 
+                class="category-btn ${this._builderProtein === key ? 'active' : ''}" 
+                @click=${() => { this._builderProtein = key; this.requestUpdate(); }}
+                style="padding: 12px; text-align: left;">
+                <div style="font-size: 20px; margin-bottom: 4px;">${protein.icon}</div>
+                <div style="font-size: 13px; font-weight: 500;">${protein.name}</div>
+                <div style="font-size: 11px; color: var(--secondary-text-color); margin-top: 2px;">
+                  ${protein.temp} • ${protein.time} min
+                </div>
+              </button>
+            `)}
+          </div>
+        </div>
+      </ha-card>
+
+      <ha-card>
+        <div class="card-content">
+          <h3>3️⃣ Add Vegetables (Optional)</h3>
+          <p style="font-size: 12px; color: var(--secondary-text-color); margin-bottom: 8px;">
+            💡 Tender veggies cook with base, crispy veggies cook with protein
+          </p>
+          <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
+            ${veggies.map(veggie => {
+              const isSelected = this._builderVeggies.includes(veggie.name);
+              return html`
+                <button 
+                  class="category-btn ${isSelected ? 'active' : ''}" 
+                  @click=${() => this._toggleVeggie(veggie.name)}
+                  style="padding: 12px; text-align: left;">
+                  <div style="font-size: 20px; margin-bottom: 4px;">${veggie.icon}</div>
+                  <div style="font-size: 13px; font-weight: 500;">${veggie.name}</div>
+                  <div style="font-size: 11px; color: var(--secondary-text-color); margin-top: 2px;">
+                    ${veggie.type === 'tender' ? '🥘 With base' : '🔥 With protein'}
+                  </div>
+                </button>
+              `;
+            })}
+          </div>
+        </div>
+      </ha-card>
+
+      <ha-card>
+        <div class="card-content">
+          <h3>4️⃣ MEATER+ Probe</h3>
+          <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+            <input 
+              type="checkbox" 
+              .checked=${this._builderUseMeater}
+              @change=${(e) => { this._builderUseMeater = e.target.checked; this.requestUpdate(); }}
+              style="width: 18px; height: 18px; cursor: pointer;">
+            <span style="font-size: 14px;">
+              🌡️ Use MEATER+ probe for temperature monitoring
+              ${this._builderUseMeater && selectedProtein ? html`
+                <div style="font-size: 12px; color: var(--secondary-text-color); margin-top: 4px;">
+                  Target: ${selectedProtein.probe}
+                </div>
+              ` : ''}
+            </span>
+          </label>
+        </div>
+      </ha-card>
+
+      ${this._builderBase && this._builderProtein ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>📊 Calculated Parameters</h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 12px 0;">
+              <div>
+                <strong>🌡️ Temperature:</strong><br>
+                ${selectedProtein.temp}
+              </div>
+              <div>
+                <strong>⏱️ Cook Time:</strong><br>
+                ${selectedProtein.time} minutes
+              </div>
+              <div>
+                <strong>💧 Water:</strong><br>
+                ${selectedBase.water}
+              </div>
+              <div>
+                <strong>🍴 Mode:</strong><br>
+                Combi-Meal
+              </div>
+            </div>
+            ${this._builderUseMeater && selectedProtein.probe !== 'N/A' ? html`
+              <div style="margin-top: 12px; padding: 12px; background: rgba(76, 175, 80, 0.1); border-left: 3px solid #4caf50; border-radius: 0 4px 4px 0;">
+                <strong>🌡️ Probe Target:</strong> ${selectedProtein.probe}
+              </div>
+            ` : ''}
+            <button 
+              class="action-btn" 
+              @click=${() => this._buildRecipe()}
+              style="width: 100%; margin-top: 16px; padding: 14px; font-size: 15px; font-weight: 600;">
+              ✨ Build Custom Recipe
+            </button>
+          </div>
+        </ha-card>
+      ` : html`
+        <ha-card>
+          <div class="card-content">
+            <p style="text-align: center; color: var(--secondary-text-color); padding: 20px 0;">
+              👆 Select a base and protein to see calculated parameters
+            </p>
+          </div>
+        </ha-card>
+      `}
     `;
+  }
+
+  _resetBuilder() {
+    this._builderBase = null;
+    this._builderProtein = null;
+    this._builderVeggies = [];
+    this._builderUseMeater = true;
+  }
+
+  _toggleVeggie(veggieName) {
+    if (this._builderVeggies.includes(veggieName)) {
+      this._builderVeggies = this._builderVeggies.filter(v => v !== veggieName);
+    } else {
+      this._builderVeggies = [...this._builderVeggies, veggieName];
+    }
+    this.requestUpdate();
+  }
+
+  _buildRecipe() {
+    // Create a custom recipe from builder selections
+    const bases = {
+      'white_rice': { name: 'White Rice', water: '4 cups', time: 18, icon: '🍚' },
+      'brown_rice': { name: 'Brown Rice', water: '4.5 cups', time: 22, icon: '🍚' },
+      'rice_pilaf': { name: 'Rice Pilaf', water: '3.5 cups', time: 16, icon: '🍚' },
+      'spanish_rice': { name: 'Spanish Rice', water: '3.5 cups', time: 18, icon: '🍚' },
+      'wild_rice': { name: 'Wild Rice', water: '5 cups', time: 25, icon: '🍚' },
+      'israeli_couscous': { name: 'Israeli Couscous', water: '3 cups', time: 12, icon: '🫘' },
+      'quinoa': { name: 'Quinoa', water: '3.5 cups', time: 15, icon: '🌾' },
+      'plain_pasta': { name: 'Plain Pasta', water: '5 cups', time: 14, icon: '🍝' },
+      'marinara_pasta': { name: 'Marinara Pasta', water: '4.5 cups', time: 16, icon: '🍝' },
+      'alfredo_pasta': { name: 'Alfredo Pasta', water: '4.5 cups', time: 16, icon: '🍝' },
+    };
+
+    const proteins = {
+      'chicken_breast': { name: 'Chicken Breast (Fresh)', temp: '390°F (200°C)', time: 18, probe: '74°C (165°F)', icon: '🍗' },
+      'chicken_breast_frozen': { name: 'Chicken Breast (Frozen)', temp: '375°F (190°C)', time: 22, probe: '74°C (165°F)', icon: '🍗' },
+      'chicken_thighs': { name: 'Chicken Thighs', temp: '390°F (200°C)', time: 16, probe: '74°C (165°F)', icon: '🍗' },
+      'chicken_drumsticks': { name: 'Chicken Drumsticks', temp: '390°F (200°C)', time: 20, probe: '74°C (165°F)', icon: '🍗' },
+      'chicken_wings': { name: 'Chicken Wings', temp: '400°F (205°C)', time: 15, probe: 'N/A', icon: '🍗' },
+      'beef_steak': { name: 'Beef Steak', temp: '400°F (205°C)', time: 12, probe: '54°C (130°F)', icon: '🥩' },
+      'beef_ground': { name: 'Ground Beef', temp: '375°F (190°C)', time: 14, probe: '71°C (160°F)', icon: '🥩' },
+      'beef_meatballs': { name: 'Beef Meatballs', temp: '375°F (190°C)', time: 16, probe: '71°C (160°F)', icon: '🥩' },
+      'beef_strips': { name: 'Beef Strips', temp: '390°F (200°C)', time: 10, probe: 'N/A', icon: '🥩' },
+      'pork_chops': { name: 'Pork Chops', temp: '390°F (200°C)', time: 14, probe: '63°C (145°F)', icon: '🥓' },
+      'pork_tenderloin': { name: 'Pork Tenderloin', temp: '375°F (190°C)', time: 18, probe: '63°C (145°F)', icon: '🥓' },
+      'pork_sausage': { name: 'Pork Sausage', temp: '390°F (200°C)', time: 14, probe: '71°C (160°F)', icon: '🥓' },
+      'salmon': { name: 'Salmon Fillet', temp: '360°F (180°C)', time: 12, probe: '54°C (130°F)', icon: '🐟' },
+      'shrimp': { name: 'Shrimp', temp: '390°F (200°C)', time: 8, probe: 'N/A', icon: '🍤' },
+      'tofu': { name: 'Tofu (Firm)', temp: '390°F (200°C)', time: 14, probe: 'N/A', icon: '🧈' },
+      'tempeh': { name: 'Tempeh', temp: '390°F (200°C)', time: 14, probe: 'N/A', icon: '🧈' },
+    };
+
+    const selectedBase = bases[this._builderBase];
+    const selectedProtein = proteins[this._builderProtein];
+    
+    const baseName = selectedBase.name;
+    const proteinName = selectedProtein.name;
+    const veggiesText = this._builderVeggies.length > 0 ? ` with ${this._builderVeggies.join(', ')}` : '';
+    const recipeName = `Custom ${proteinName} and ${baseName}${veggiesText}`;
+    
+    // Create a custom recipe object that can be displayed
+    const customRecipe = {
+      id: 9000, // Custom recipe ID
+      name: recipeName,
+      description: 'Custom recipe created with Recipe Builder',
+      mode: 'Combi-Meal',
+      prep_time_minutes: 10,
+      cook_time_minutes: selectedProtein.time,
+      servings: 4,
+      difficulty: 'Easy',
+      use_probe: this._builderUseMeater && selectedProtein.probe !== 'N/A',
+      target_temp_c: this._builderUseMeater && selectedProtein.probe !== 'N/A' ? parseInt(selectedProtein.probe) : null,
+      target_temp_f: this._builderUseMeater && selectedProtein.probe !== 'N/A' ? parseInt(selectedProtein.probe.match(/\((\d+)/)[1]) : null,
+      ingredients: [
+        `${baseName} - ${selectedBase.water} water`,
+        `${proteinName}`,
+        ...this._builderVeggies.map(v => `${v}`)
+      ],
+      instructions: [
+        `Add ${baseName.toLowerCase()} to the bottom of the Ninja Combi`,
+        `Add ${selectedBase.water} water or stock`,
+        this._builderVeggies.filter(v => ['Carrots', 'Zucchini', 'Cherry Tomatoes'].includes(v)).length > 0 
+          ? `Mix tender vegetables (${this._builderVeggies.filter(v => ['Carrots', 'Zucchini', 'Cherry Tomatoes'].includes(v)).join(', ')}) with the ${baseName.toLowerCase()}`
+          : null,
+        `Season ${proteinName.toLowerCase()} with your favorite seasonings`,
+        `Place ${proteinName.toLowerCase()} on the Crisper Tray in the top position`,
+        this._builderVeggies.filter(v => !['Carrots', 'Zucchini', 'Cherry Tomatoes'].includes(v)).length > 0
+          ? `Add crispy vegetables (${this._builderVeggies.filter(v => !['Carrots', 'Zucchini', 'Cherry Tomatoes'].includes(v)).join(', ')}) to the Crisper Tray with the protein`
+          : null,
+        `Close lid and flip SmartSwitch to COMBI COOKER position`,
+        `Select COMBI-MEAL mode`,
+        `Set temperature to ${selectedProtein.temp}`,
+        `Set time for ${selectedProtein.time} minutes`,
+        this._builderUseMeater && selectedProtein.probe !== 'N/A'
+          ? `Insert MEATER+ probe into thickest part of protein (target: ${selectedProtein.probe})`
+          : null,
+        `Press START`,
+        `Enjoy your custom meal!`
+      ].filter(Boolean), // Remove null instructions
+      phases: [
+        {
+          description: 'Steam Phase',
+          temperature_c: 100,
+          temperature_f: 212,
+          duration_minutes: Math.floor(selectedProtein.time * 0.4),
+          steam_enabled: true
+        },
+        {
+          description: 'Air Fry Phase',
+          temperature_c: parseInt(selectedProtein.temp.match(/\((\d+)/)[1]),
+          temperature_f: parseInt(selectedProtein.temp),
+          duration_minutes: Math.ceil(selectedProtein.time * 0.6),
+          steam_enabled: false
+        }
+      ],
+      tips: [
+        `This recipe serves ${4} people`,
+        `Adjust servings using the input field above`,
+        this._builderUseMeater ? `Use MEATER+ probe for precise temperature control` : null,
+        `You can modify ingredients anytime by returning to the Recipe Builder`
+      ].filter(Boolean),
+      notes: []
+    };
+    
+    // Show the built recipe
+    this._selectedNinjaRecipe = customRecipe.id;
+    this._showRecipeBuilder = false;
+    
+    // Temporarily add to recipes list so it can be displayed
+    // In production, this would be saved to backend
+    if (!NINJA_COMBI_RECIPES.find(r => r.id === 9000)) {
+      NINJA_COMBI_RECIPES.push(customRecipe);
+    } else {
+      // Update existing custom recipe
+      const idx = NINJA_COMBI_RECIPES.findIndex(r => r.id === 9000);
+      NINJA_COMBI_RECIPES[idx] = customRecipe;
+    }
+    
+    this.requestUpdate();
   }
 
   /**
@@ -12411,7 +12717,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "149";
+const PANEL_VERSION = "150";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

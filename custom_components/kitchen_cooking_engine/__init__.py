@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 18 Feb 2026, 00:14 UTC
-Last Change: v0.5.0.58 - Fix Recent MEATER Cooks: Changed _formatDate to _formatDateTime
+Last Updated: 18 Feb 2026, 00:30 UTC
+Last Change: v0.5.0.59 - Implemented Ninja Combi Recipe Builder with full UI and helper methods
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
