@@ -1469,9 +1469,9 @@ class KitchenCookingPanel extends LitElement {
       notes: []
     };
     
-    // Show the built recipe - use path-based routing
-    this._selectedRecipe = customRecipe;
-    this._currentPath = 'recipe_details';
+    // Navigate to built-in recipes to show the custom recipe
+    // Custom recipe is already added to NINJA_COMBI_RECIPES above
+    this._currentPath = 'ninja_built_in_recipes';
     
     // Temporarily add to recipes list so it can be displayed
     // In production, this would be saved to backend
@@ -3622,9 +3622,9 @@ class KitchenCookingPanel extends LitElement {
       notes: []
     };
     
-    // Show the built recipe - use path-based routing
-    this._selectedRecipe = customRecipe;
-    this._currentPath = 'recipe_details';
+    // Navigate to built-in recipes to show the custom recipe
+    // Custom recipe is already added to NINJA_COMBI_RECIPES above
+    this._currentPath = 'ninja_built_in_recipes';
     
     // Temporarily add to recipes list so it can be displayed
     // In production, this would be saved to backend
