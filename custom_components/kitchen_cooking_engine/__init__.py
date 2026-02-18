@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 18 Feb 2026, 00:30 UTC
-Last Change: v0.5.0.59 - Implemented Ninja Combi Recipe Builder with full UI and helper methods
+Last Change: v0.5.0.60 - Fixed Ninja Combi Recipe Builder buttons (Create Custom Recipe & All Recipes)
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -69,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.58"
+__version__ = "0.5.0.60"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

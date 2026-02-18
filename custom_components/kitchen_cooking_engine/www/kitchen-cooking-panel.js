@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 18 Feb 2026, 01:50 CET
+ * AUTO-GENERATED: 18 Feb 2026, 02:01 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 18 Feb 2026, 01:50 CET
+// Last generated: 18 Feb 2026, 02:01 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -6736,7 +6736,7 @@ class KitchenCookingPanel extends LitElement {
           <button class="history-btn" @click=${() => { this._showRecipeBuilder = false; this._resetBuilder(); }}>
             ← Back to Ninja Combi
           </button>
-          <button class="history-btn" @click=${() => { this._showRecipeBuilder = false; this._showNinjaCombi = false; this._showRecipes = true; this._loadCompatibleRecipes(); }}>
+          <button class="history-btn" @click=${() => { this._currentPath = 'ninja_built_in_recipes'; this.requestUpdate(); }}>
             📖 All Recipes
           </button>
         </div>
@@ -6998,9 +6998,9 @@ class KitchenCookingPanel extends LitElement {
       notes: []
     };
     
-    // Show the built recipe
-    this._selectedNinjaRecipe = customRecipe.id;
-    this._showRecipeBuilder = false;
+    // Show the built recipe - use path-based routing
+    this._selectedRecipe = customRecipe;
+    this._currentPath = 'recipe_details';
     
     // Temporarily add to recipes list so it can be displayed
     // In production, this would be saved to backend
@@ -8889,7 +8889,7 @@ class KitchenCookingPanel extends LitElement {
           <button class="history-btn" @click=${() => { this._currentPath = 'ninja_combi'; this._resetBuilder(); }}>
             ← Back to Ninja Combi
           </button>
-          <button class="history-btn" @click=${() => { this._showRecipeBuilder = false; this._showNinjaCombi = false; this._showRecipes = true; this._loadCompatibleRecipes(); }}>
+          <button class="history-btn" @click=${() => { this._currentPath = 'ninja_built_in_recipes'; this.requestUpdate(); }}>
             📖 All Recipes
           </button>
         </div>
@@ -9151,9 +9151,9 @@ class KitchenCookingPanel extends LitElement {
       notes: []
     };
     
-    // Show the built recipe
-    this._selectedNinjaRecipe = customRecipe.id;
-    this._showRecipeBuilder = false;
+    // Show the built recipe - use path-based routing
+    this._selectedRecipe = customRecipe;
+    this._currentPath = 'recipe_details';
     
     // Temporarily add to recipes list so it can be displayed
     // In production, this would be saved to backend
@@ -12717,7 +12717,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "150";
+const PANEL_VERSION = "151";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

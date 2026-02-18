@@ -1207,7 +1207,7 @@ class KitchenCookingPanel extends LitElement {
           <button class="history-btn" @click=${() => { this._showRecipeBuilder = false; this._resetBuilder(); }}>
             ← Back to Ninja Combi
           </button>
-          <button class="history-btn" @click=${() => { this._showRecipeBuilder = false; this._showNinjaCombi = false; this._showRecipes = true; this._loadCompatibleRecipes(); }}>
+          <button class="history-btn" @click=${() => { this._currentPath = 'ninja_built_in_recipes'; this.requestUpdate(); }}>
             📖 All Recipes
           </button>
         </div>
@@ -1469,9 +1469,9 @@ class KitchenCookingPanel extends LitElement {
       notes: []
     };
     
-    // Show the built recipe
-    this._selectedNinjaRecipe = customRecipe.id;
-    this._showRecipeBuilder = false;
+    // Show the built recipe - use path-based routing
+    this._selectedRecipe = customRecipe;
+    this._currentPath = 'recipe_details';
     
     // Temporarily add to recipes list so it can be displayed
     // In production, this would be saved to backend
@@ -3360,7 +3360,7 @@ class KitchenCookingPanel extends LitElement {
           <button class="history-btn" @click=${() => { this._currentPath = 'ninja_combi'; this._resetBuilder(); }}>
             ← Back to Ninja Combi
           </button>
-          <button class="history-btn" @click=${() => { this._showRecipeBuilder = false; this._showNinjaCombi = false; this._showRecipes = true; this._loadCompatibleRecipes(); }}>
+          <button class="history-btn" @click=${() => { this._currentPath = 'ninja_built_in_recipes'; this.requestUpdate(); }}>
             📖 All Recipes
           </button>
         </div>
@@ -3622,9 +3622,9 @@ class KitchenCookingPanel extends LitElement {
       notes: []
     };
     
-    // Show the built recipe
-    this._selectedNinjaRecipe = customRecipe.id;
-    this._showRecipeBuilder = false;
+    // Show the built recipe - use path-based routing
+    this._selectedRecipe = customRecipe;
+    this._currentPath = 'recipe_details';
     
     // Temporarily add to recipes list so it can be displayed
     // In production, this would be saved to backend
