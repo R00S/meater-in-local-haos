@@ -3160,7 +3160,7 @@ class KitchenCookingPanel extends LitElement {
                     ${cook.protein || 'Unknown Protein'}
                     ${cook.cut ? html` - ${cook.cut}` : ''}
                   </h3>
-                  <span class="history-date">${this._formatDate(cook.start_time)}</span>
+                  <span class="history-date">${this._formatDateTime(cook.start_time)}</span>
                 </div>
               </div>
               
