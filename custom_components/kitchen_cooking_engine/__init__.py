@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 17 Feb 2026, 23:45 UTC
-Last Change: v0.5.0.55 - Fixed default MEATER selection using proper .value binding on select element (Lit pattern)
+Last Updated: 18 Feb 2026, 00:00 UTC
+Last Change: v0.5.0.57 - Check if entity IS MEATER (not just in list) for default selection
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -69,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.56"
+__version__ = "0.5.0.57"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

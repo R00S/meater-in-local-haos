@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 18 Feb 2026, 00:52 CET
+ * AUTO-GENERATED: 18 Feb 2026, 01:03 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 18 Feb 2026, 00:52 CET
+// Last generated: 18 Feb 2026, 01:03 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -7914,36 +7914,19 @@ class KitchenCookingPanel extends LitElement {
     const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
     const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
     
-    // v0.5.0.56: Add diagnostics to understand why default selection fails
-    console.log('=== DEFAULT SELECTION DIAGNOSTIC v0.5.0.56 ===');
-    console.log('1. Entities array:', entities);
-    console.log('2. Entities count:', entities.length);
-    console.log('3. First entity (should be MEATER):', entities[0]);
-    console.log('4. this._selectedEntity BEFORE logic:', this._selectedEntity);
-    
-    // v0.5.0.53: Force default to first entity if selected entity not in list
-    // This handles navigation from other paths where this._selectedEntity might contain
-    // a different appliance type (e.g., Ninja when navigating to MEATER path)
+    // v0.5.0.57: Check if selected entity is specifically a MEATER entity
+    // Diagnostic data revealed: entities.includes() returns TRUE for non-MEATER entities
+    // because all cooking_session entities are in the list. We need to check if the
+    // selected entity IS a MEATER entity, not just if it's in the list.
     if (entities.length > 0) {
-      console.log('5. Condition checks:');
-      console.log('   - entities.length > 0:', entities.length > 0);
-      console.log('   - !this._selectedEntity:', !this._selectedEntity);
-      console.log('   - entities.includes(this._selectedEntity):', entities.includes(this._selectedEntity));
-      console.log('   - Will execute default?:', !this._selectedEntity || !entities.includes(this._selectedEntity));
+      // Check if selected entity contains "meater" in its ID (same pattern as sorting)
+      const isMeaterEntity = this._selectedEntity && 
+                             this._selectedEntity.toLowerCase().includes('meater');
       
-      if (!this._selectedEntity || !entities.includes(this._selectedEntity)) {
-        console.log('6. SETTING this._selectedEntity to:', entities[0]);
+      if (!this._selectedEntity || !isMeaterEntity) {
         this._selectedEntity = entities[0];  // First entity (MEATER after sorting in _renderMeaterPath)
-        console.log('7. this._selectedEntity AFTER set:', this._selectedEntity);
-      } else {
-        console.log('6. NOT setting - entity already in list');
       }
-    } else {
-      console.log('5. NOT setting - entities.length is 0');
     }
-    
-    console.log('8. FINAL this._selectedEntity before render:', this._selectedEntity);
-    console.log('=== END DIAGNOSTIC ===');
     
     return html`
       <div class="status-banner idle">
@@ -12428,7 +12411,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "147";
+const PANEL_VERSION = "148";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
