@@ -28,6 +28,7 @@ from .const import (
     CONF_START_BUTTON,
     CONF_TTS_ENTITY,
     CONF_MEDIA_PLAYER,
+    CONF_PERSISTENT_NOTIFICATIONS,
     DOMAIN,
     TEMP_CELSIUS,
     TEMP_FAHRENHEIT,
@@ -312,6 +313,7 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     vol.Optional(CONF_START_BUTTON, default=""): str,
                     vol.Optional(CONF_AUTO_SHUTOFF, default=True): bool,
                     vol.Optional(CONF_AUTO_START, default=False): bool,
+                    vol.Optional(CONF_PERSISTENT_NOTIFICATIONS, default=True): bool,
                     vol.Required(
                         CONF_TEMPERATURE_UNIT, default=TEMP_CELSIUS
                     ): vol.In([TEMP_CELSIUS, TEMP_FAHRENHEIT]),
@@ -729,6 +731,10 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
                         CONF_MEDIA_PLAYER,
                         default=current_data.get(CONF_MEDIA_PLAYER, ""),
                     ): str,
+                    vol.Optional(
+                        CONF_PERSISTENT_NOTIFICATIONS,
+                        default=current_data.get(CONF_PERSISTENT_NOTIFICATIONS, True),
+                    ): bool,
                     vol.Required(
                         CONF_TEMPERATURE_UNIT,
                         default=current_data.get(CONF_TEMPERATURE_UNIT, TEMP_CELSIUS),

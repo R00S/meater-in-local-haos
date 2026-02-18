@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 18 Feb 2026, 22:55 UTC
-Last Change: v0.5.0.62 - Fixed Ninja recipe field names (cook_time_minutes, servings, instructions)
+Last Updated: 18 Feb 2026, 23:40 UTC
+Last Change: v0.5.0.63 - Added option to disable persistent notifications
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -69,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.62"
+__version__ = "0.5.0.63"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
