@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 18 Feb 2026, 02:03 CET
+ * AUTO-GENERATED: 18 Feb 2026, 23:54 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 18 Feb 2026, 02:03 CET
+// Last generated: 18 Feb 2026, 23:54 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -7513,14 +7513,14 @@ class KitchenCookingPanel extends LitElement {
   // Phase 4: Start cooking from recipe
   async _startCookFromRecipe(recipe, match) {
     // Phase 4: Start Recipe Cook Flow
-    // Check if recipe has steps - if so, use new Recipe Cook Flow
-    if (recipe.steps && recipe.steps.length > 0) {
+    // Check if recipe has instructions - if so, use new Recipe Cook Flow
+    if (recipe.instructions && recipe.instructions.length > 0) {
       // Close the recipe detail view
       this._selectedRecipeDetail = null;
       this._showRecipes = false;
       
       // Ask for serving size adjustment (optional)
-      const defaultServingSize = recipe.serving_size || 4;
+      const defaultServingSize = recipe.servings || 4;
       const servingSizeInput = prompt(
         `How many servings?\n\nDefault: ${defaultServingSize}`,
         defaultServingSize
@@ -9173,6 +9173,11 @@ class KitchenCookingPanel extends LitElement {
    * Displays pre-configured Ninja Combi recipes
    */
   _renderNinjaBuiltInRecipesView() {
+    // Load recipes if not already loaded
+    if (this._ninjaBuiltInRecipes.length === 0 && typeof NINJA_COMBI_RECIPES !== 'undefined') {
+      this._ninjaBuiltInRecipes = NINJA_COMBI_RECIPES;
+    }
+    
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => {
@@ -9200,8 +9205,8 @@ class KitchenCookingPanel extends LitElement {
                 <h3>${recipe.name}</h3>
                 <p class="recipe-description">${recipe.description || ''}</p>
                 <div class="recipe-meta">
-                  <span>⏱️ ${recipe.cook_time || 'N/A'}</span>
-                  <span>🍽️ Serves ${recipe.serving_size || '4'}</span>
+                  <span>⏱️ ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' min' : 'N/A'}</span>
+                  <span>🍽️ Serves ${recipe.servings || '4'}</span>
                 </div>
               </div>
             </ha-card>
@@ -9727,7 +9732,7 @@ class KitchenCookingPanel extends LitElement {
       recipe: recipe,
       startTime: Date.now(),
       currentStep: -1, // -1 = overview page, 0+ = step index
-      servingSize: servingSize || recipe.serving_size || 4,
+      servingSize: servingSize || recipe.servings || 4,
       easeRating: null,
       resultRating: null,
       notes: '',
@@ -9766,7 +9771,7 @@ class KitchenCookingPanel extends LitElement {
     if (!this._recipeCookState) return;
 
     const recipe = this._recipeCookState.recipe;
-    const maxStep = recipe.steps ? recipe.steps.length - 1 : 0;
+    const maxStep = recipe.instructions ? recipe.instructions.length - 1 : 0;
     
     // If we're on the last step, go to finish page
     if (this._recipeCookState.currentStep >= maxStep) {
@@ -12717,7 +12722,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "152";
+const PANEL_VERSION = "153";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
