@@ -100,7 +100,8 @@ async def async_create_view_assist_dashboard(hass: HomeAssistant) -> bool:
         return False
 
     # Check if dashboard already exists
-    dashboards = lovelace_data.get("dashboards", {})
+    # Note: lovelace_data is a LovelaceData object in newer HA versions, not a dict
+    dashboards = getattr(lovelace_data, "dashboards", {})
     if DASHBOARD_URL_PATH in dashboards:
         _LOGGER.debug("View Assist dashboard already exists at /%s", DASHBOARD_URL_PATH)
         return True
@@ -174,7 +175,8 @@ async def async_remove_view_assist_dashboard(hass: HomeAssistant) -> bool:
         return True
 
     # Check if dashboard exists
-    dashboards = lovelace_data.get("dashboards", {})
+    # Note: lovelace_data is a LovelaceData object in newer HA versions, not a dict
+    dashboards = getattr(lovelace_data, "dashboards", {})
     if DASHBOARD_URL_PATH not in dashboards:
         _LOGGER.debug("View Assist dashboard doesn't exist, nothing to remove")
         return True

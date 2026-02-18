@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 16 Jan 2026, 13:16 UTC
-Last Change: v0.4.2.01 - Add View Assist dashboard integration for zero-config compatibility
+Last Updated: 17 Jan 2026, 12:09 UTC
+Last Change: v0.5.0.23 - Bug fixes: Added _restartCook method and fixed sidebar title Promise issue
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "92"
+PANEL_VERSION = "153"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

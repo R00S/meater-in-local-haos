@@ -119,6 +119,9 @@ async def async_setup_entry(
     start_button = config_entry.data.get(CONF_START_BUTTON)
     auto_shutoff = config_entry.data.get(CONF_AUTO_SHUTOFF, True)
     auto_start = config_entry.data.get(CONF_AUTO_START, False)
+    
+    # Get appliance type (critical for frontend filtering)
+    appliance_type = config_entry.data.get("appliance_type", "meater_probe")
 
     cooking_session = CookingSessionSensor(
         hass,
@@ -135,6 +138,7 @@ async def async_setup_entry(
         start_button,
         auto_shutoff,
         auto_start,
+        appliance_type,
     )
     
     entities = [cooking_session]
@@ -176,6 +180,7 @@ class CookingSessionSensor(SensorEntity):
         start_button: str | None = None,
         auto_shutoff: bool = True,
         auto_start: bool = False,
+        appliance_type: str = "meater_probe",
     ) -> None:
         """Initialize the cooking session sensor."""
         self._hass = hass
@@ -194,6 +199,9 @@ class CookingSessionSensor(SensorEntity):
         self._start_button = start_button.strip() if start_button else None
         self._auto_shutoff_enabled = auto_shutoff
         self._auto_start_enabled = auto_start
+        
+        # Store appliance type for frontend filtering
+        self._appliance_type = appliance_type
 
         # Session state
         self._state = STATE_IDLE
@@ -308,6 +316,8 @@ class CookingSessionSensor(SensorEntity):
             # Expose sensor entity IDs for HA history graph
             "tip_sensor": self._temp_sensor,
             "ambient_sensor": self._ambient_sensor,
+            # Appliance type for frontend filtering (CRITICAL!)
+            "appliance_type": self._appliance_type,
             # Phase 4: Multi-appliance session attributes
             ATTR_ACTIVE_APPLIANCES: self._active_appliances,
             ATTR_PRIMARY_APPLIANCE: self._primary_appliance,

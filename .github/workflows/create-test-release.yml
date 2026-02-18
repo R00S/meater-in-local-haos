@@ -1,3 +1,4 @@
+# Updated: 2026-01-16 for branch copilot/create-terms-of-reference
 name: Create Test Release
 
 on:
@@ -22,6 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: read
     
     steps:
       - name: Checkout repository

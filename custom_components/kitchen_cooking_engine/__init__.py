@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 14 Jan 2026, 03:10 UTC
-Last Change: v0.3.4.0 - View Assist integration ready for merge
+Last Updated: 18 Feb 2026, 22:55 UTC
+Last Change: v0.5.0.62 - Fixed Ninja recipe field names (cook_time_minutes, servings, instructions)
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -18,6 +18,9 @@ This integration provides:
 - Sidebar panel for easy cooking setup and monitoring
 - External API for 3rd party integrations and automations
 - Phase 3.1: Multi-appliance support with feature-based recipe matching
+- Phase 1 GUI Redesign: Welcome screen with appliance selector and path-based navigation
+- Phase 2 GUI Redesign: MEATER path with integrated cooking interface
+- Phase 6 GUI Redesign: AI Recipe Builder with 3-step flow (ingredients → style → suggestions)
 """
 
 from __future__ import annotations
@@ -66,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.1.2"
+__version__ = "0.5.0.62"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -225,7 +228,14 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
         await _async_regenerate_frontend_data(hass)
         
         # Create View Assist dashboard for zero-config compatibility
-        await async_create_view_assist_dashboard(hass)
+        # Don't let dashboard creation failure block panel registration
+        try:
+            await async_create_view_assist_dashboard(hass)
+        except Exception as dashboard_err:
+            _LOGGER.warning(
+                "Kitchen Cooking Engine: Failed to create View Assist dashboard (non-critical): %s",
+                dashboard_err
+            )
         
         # Re-read PANEL_VERSION after regeneration (it may have been updated)
         # We need to reload the const module to get the updated value
@@ -263,7 +273,7 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
         async_register_built_in_panel(
             hass,
             component_name="custom",
-            sidebar_title="Cooking",
+            sidebar_title="Kitchen Cooking Engine",
             sidebar_icon="mdi:pot-steam",
             frontend_url_path="kitchen-cooking",
             config={
@@ -505,6 +515,7 @@ async def _async_register_services(hass: HomeAssistant) -> None:
                 carryover_temp_c=cut.carryover_temp_c,
                 cut_display=cut.name_long,
                 cut_id=cut_id,
+                custom_target_temp_c=custom_target_temp_c,
             )
 
     async def handle_stop_cook(call: ServiceCall) -> None:
