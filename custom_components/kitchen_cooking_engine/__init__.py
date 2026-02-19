@@ -65,7 +65,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.70"
+__version__ = "0.5.0.73"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
