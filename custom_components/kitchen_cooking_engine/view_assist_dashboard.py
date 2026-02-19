@@ -1,7 +1,7 @@
 """View Assist Dashboard Integration.
 
-Last Updated: 16 Jan 2026, 13:16 UTC
-Last Change: v0.4.2.01 - Create View Assist dashboard for zero-config compatibility
+Last Updated: 19 Feb 2026, 02:40 UTC
+Last Change: v0.5.0.71 - Fix WebSocket handler tuple format for HA 2024.1+
 
 This module manages the automatic creation and removal of a storage-mode Lovelace
 dashboard that embeds the cooking panel in an iframe, enabling View Assist compatibility
@@ -70,10 +70,13 @@ class MockWSConnection:
             return False
 
         # Get the handler for this command type
-        handler = ws_api.get(ws_type)
-        if not handler:
+        handler_entry = ws_api.get(ws_type)
+        if not handler_entry:
             _LOGGER.error("WebSocket handler not found for type: %s", ws_type)
             return False
+
+        # In HA 2024.1+, ws_api stores (handler, schema) tuples
+        handler = handler_entry[0] if isinstance(handler_entry, tuple) else handler_entry
 
         # Execute the handler
         try:

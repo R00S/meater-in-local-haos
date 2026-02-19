@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 19 Feb 2026, 01:45 UTC
-Last Change: v0.5.0.70 - Add metric for oz, lbs, °F; fix fluid oz vs weight oz
+Last Updated: 19 Feb 2026, 02:40 UTC
+Last Change: v0.5.0.71 - Fix View Assist dashboard WebSocket handler tuple format for HA 2024.1+
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
