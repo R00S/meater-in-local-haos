@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 19 Feb 2026, 13:12 UTC
-Last Change: v0.5.1.1 - AI Recipe Builder: fetch detail API before starting cook flow
+Last Change: v0.5.1.2 - AI Recipe Builder: fetch detail API before starting cook flow
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -65,7 +65,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.1.1"
+__version__ = "0.5.1.2"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

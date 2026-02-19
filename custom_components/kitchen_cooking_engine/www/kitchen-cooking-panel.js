@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 19 Feb 2026, 14:04 CET
+ * AUTO-GENERATED: 19 Feb 2026, 14:32 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 19 Feb 2026, 14:04 CET
+// Last generated: 19 Feb 2026, 14:32 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -9281,20 +9281,20 @@ class KitchenCookingPanel extends LitElement {
                 
                 <div class="recipe-details">
                   <div class="detail-item">
-                    <strong>⏱️ Prep Time:</strong> ${recipe.prep_time || 'N/A'}
+                    <strong>🍳 Cook Time:</strong> ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' min' : 'N/A'}
                   </div>
                   <div class="detail-item">
-                    <strong>🍳 Cook Time:</strong> ${recipe.cook_time_minutes || recipe.cook_time || 'N/A'}
+                    <strong>🍽️ Servings:</strong> ${recipe.servings || '4'}
                   </div>
                   <div class="detail-item">
-                    <strong>🍽️ Servings:</strong> ${recipe.servings || recipe.serving_size || '4'}
+                    <strong>📊 Difficulty:</strong> ${recipe.difficulty || 'N/A'}
                   </div>
                 </div>
 
                 <div class="recipe-ingredients">
-                  <h4>Ingredients:</h4>
+                  <h4>Key Ingredients:</h4>
                   <ul>
-                    ${(recipe.ingredients || []).map(ing => html`<li>${ing}</li>`)}
+                    ${(recipe.main_ingredients || recipe.ingredients || []).map(ing => html`<li>${ing}</li>`)}
                   </ul>
                 </div>
 
@@ -9808,48 +9808,53 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Start cooking from an AI-generated recipe
    */
   async _startCookingFromAIRecipe(recipe) {
+    // Work on a COPY so we don't mutate the suggestion in _aiRecipeSuggestions
+    const fullRecipe = Object.assign({}, recipe);
+    
     // Fetch full recipe detail (instructions, ingredients, tips) from backend
     try {
-      this._showMessage('Loading recipe details...', false);
+      this._showMessage('Loading Recipe', 'Please wait while we generate the full recipe details...');
       const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/detail', {
-        suggestion_id: recipe.id,
+        suggestion_id: fullRecipe.id,
         suggestion: {
-          id: recipe.id,
-          name: recipe.name,
-          description: recipe.description,
-          cook_time_minutes: recipe.cook_time_minutes,
-          difficulty: recipe.difficulty,
-          main_ingredients: recipe.main_ingredients || recipe.ingredients || [],
-          cuisine_type: recipe.cuisine_type,
-          required_appliances: recipe.required_appliances || []
+          id: fullRecipe.id,
+          name: fullRecipe.name,
+          description: fullRecipe.description,
+          cook_time_minutes: fullRecipe.cook_time_minutes,
+          difficulty: fullRecipe.difficulty,
+          main_ingredients: fullRecipe.main_ingredients || fullRecipe.ingredients || [],
+          cuisine_type: fullRecipe.cuisine_type,
+          required_appliances: fullRecipe.required_appliances || []
         },
         appliance_ids: this._selectedAppliance ? [this._selectedAppliance.id] : []
       });
 
       if (response && response.detail) {
-        // Merge detail into recipe object
         const detail = response.detail;
-        recipe.instructions = detail.instructions || [];
-        recipe.ingredients = detail.ingredients || recipe.main_ingredients || [];
-        recipe.tips = detail.tips || [];
-        recipe.servings = detail.servings || recipe.servings || 4;
-        recipe.prep_time_minutes = detail.prep_time_minutes || 0;
-        recipe.phases = detail.phases || [];
-        recipe.use_probe = detail.use_probe || false;
-        recipe.target_temp_c = detail.target_temp_c;
-        recipe.target_temp_f = detail.target_temp_f;
+        fullRecipe.instructions = detail.instructions || [];
+        fullRecipe.ingredients = detail.ingredients || fullRecipe.main_ingredients || [];
+        fullRecipe.tips = detail.tips || [];
+        fullRecipe.servings = detail.servings || fullRecipe.servings || 4;
+        fullRecipe.prep_time_minutes = detail.prep_time_minutes || 0;
+        fullRecipe.phases = detail.phases || [];
+        fullRecipe.use_probe = detail.use_probe || false;
+        fullRecipe.target_temp_c = detail.target_temp_c;
+        fullRecipe.target_temp_f = detail.target_temp_f;
       }
     } catch (error) {
       console.error('Error fetching recipe detail:', error);
       // Continue with whatever data we have
     }
 
+    // Dismiss the loading dialog
+    this._showMessageDialog = false;
+
     // Start recipe cook flow (Phase 4)
     this._recipeCookState = {
-      recipe: recipe,
+      recipe: fullRecipe,
       startTime: Date.now(),
       currentStep: -1, // Start with overview
-      servingSize: recipe.servings || recipe.serving_size || 4,
+      servingSize: fullRecipe.servings || 4,
       easeRating: 0,
       resultRating: 0,
       notes: '',
@@ -12864,7 +12869,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "162";
+const PANEL_VERSION = "163";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
