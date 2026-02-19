@@ -1167,16 +1167,16 @@ class KitchenCookingPanel extends LitElement {
 
   _renderRecipeBuilder() {
     const bases = {
-      'white_rice': { name: 'White Rice', icon: '🍚', water: '4 cups', time: 15 },
-      'brown_rice': { name: 'Brown Rice', icon: '🍙', water: '4.5 cups', time: 18 },
-      'rice_pilaf': { name: 'Rice Pilaf', icon: '🍚', water: '3 cups', time: 16 },
-      'spanish_rice': { name: 'Spanish Rice', icon: '🍛', water: '4 cups', time: 15 },
-      'wild_rice': { name: 'Wild Rice', icon: '🌾', water: '5 cups', time: 20 },
-      'israeli_couscous': { name: 'Israeli Couscous', icon: '⚪', water: '3.5 cups', time: 12 },
-      'quinoa': { name: 'Quinoa', icon: '🌿', water: '4 cups', time: 15 },
-      'plain_pasta': { name: 'Plain Pasta', icon: '🍝', water: '5 cups', time: 12 },
-      'marinara_pasta': { name: 'Marinara Pasta', icon: '🍝', water: '5 cups + 2 cups marinara', time: 14 },
-      'alfredo_pasta': { name: 'Alfredo Pasta', icon: '🍝', water: '5 cups + 1.5 cups alfredo', time: 14 },
+      'white_rice': { name: 'White Rice', icon: '🍚', water: '4 cups (9.6 dl)', time: 15 },
+      'brown_rice': { name: 'Brown Rice', icon: '🍙', water: '4.5 cups (10.8 dl)', time: 18 },
+      'rice_pilaf': { name: 'Rice Pilaf', icon: '🍚', water: '3 cups (7.2 dl)', time: 16 },
+      'spanish_rice': { name: 'Spanish Rice', icon: '🍛', water: '4 cups (9.6 dl)', time: 15 },
+      'wild_rice': { name: 'Wild Rice', icon: '🌾', water: '5 cups (12 dl)', time: 20 },
+      'israeli_couscous': { name: 'Israeli Couscous', icon: '⚪', water: '3.5 cups (8.4 dl)', time: 12 },
+      'quinoa': { name: 'Quinoa', icon: '🌿', water: '4 cups (9.6 dl)', time: 15 },
+      'plain_pasta': { name: 'Plain Pasta', icon: '🍝', water: '5 cups (12 dl)', time: 12 },
+      'marinara_pasta': { name: 'Marinara Pasta', icon: '🍝', water: '5 cups (12 dl) + 2 cups (4.8 dl) marinara', time: 14 },
+      'alfredo_pasta': { name: 'Alfredo Pasta', icon: '🍝', water: '5 cups (12 dl) + 1.5 cups (3.6 dl) alfredo', time: 14 },
     };
 
     const proteins = {
@@ -3143,16 +3143,16 @@ class KitchenCookingPanel extends LitElement {
    */
   _renderNinjaRecipeBuilderView() {
     const bases = {
-      'white_rice': { name: 'White Rice', icon: '🍚', water: '4 cups', time: 15 },
-      'brown_rice': { name: 'Brown Rice', icon: '🍙', water: '4.5 cups', time: 18 },
-      'rice_pilaf': { name: 'Rice Pilaf', icon: '🍚', water: '3 cups', time: 16 },
-      'spanish_rice': { name: 'Spanish Rice', icon: '🍛', water: '4 cups', time: 15 },
-      'wild_rice': { name: 'Wild Rice', icon: '🌾', water: '5 cups', time: 20 },
-      'israeli_couscous': { name: 'Israeli Couscous', icon: '⚪', water: '3.5 cups', time: 12 },
-      'quinoa': { name: 'Quinoa', icon: '🌿', water: '4 cups', time: 15 },
-      'plain_pasta': { name: 'Plain Pasta', icon: '🍝', water: '5 cups', time: 12 },
-      'marinara_pasta': { name: 'Marinara Pasta', icon: '🍝', water: '5 cups + 2 cups marinara', time: 14 },
-      'alfredo_pasta': { name: 'Alfredo Pasta', icon: '🍝', water: '5 cups + 1.5 cups alfredo', time: 14 },
+      'white_rice': { name: 'White Rice', icon: '🍚', water: '4 cups (9.6 dl)', time: 15 },
+      'brown_rice': { name: 'Brown Rice', icon: '🍙', water: '4.5 cups (10.8 dl)', time: 18 },
+      'rice_pilaf': { name: 'Rice Pilaf', icon: '🍚', water: '3 cups (7.2 dl)', time: 16 },
+      'spanish_rice': { name: 'Spanish Rice', icon: '🍛', water: '4 cups (9.6 dl)', time: 15 },
+      'wild_rice': { name: 'Wild Rice', icon: '🌾', water: '5 cups (12 dl)', time: 20 },
+      'israeli_couscous': { name: 'Israeli Couscous', icon: '⚪', water: '3.5 cups (8.4 dl)', time: 12 },
+      'quinoa': { name: 'Quinoa', icon: '🌿', water: '4 cups (9.6 dl)', time: 15 },
+      'plain_pasta': { name: 'Plain Pasta', icon: '🍝', water: '5 cups (12 dl)', time: 12 },
+      'marinara_pasta': { name: 'Marinara Pasta', icon: '🍝', water: '5 cups (12 dl) + 2 cups (4.8 dl) marinara', time: 14 },
+      'alfredo_pasta': { name: 'Alfredo Pasta', icon: '🍝', water: '5 cups (12 dl) + 1.5 cups (3.6 dl) alfredo', time: 14 },
     };
 
     const proteins = {
@@ -3355,16 +3355,16 @@ class KitchenCookingPanel extends LitElement {
   _buildRecipe() {
     // Create a custom recipe from builder selections
     const bases = {
-      'white_rice': { name: 'White Rice', water: '4 cups', time: 18, icon: '🍚' },
-      'brown_rice': { name: 'Brown Rice', water: '4.5 cups', time: 22, icon: '🍚' },
-      'rice_pilaf': { name: 'Rice Pilaf', water: '3.5 cups', time: 16, icon: '🍚' },
-      'spanish_rice': { name: 'Spanish Rice', water: '3.5 cups', time: 18, icon: '🍚' },
-      'wild_rice': { name: 'Wild Rice', water: '5 cups', time: 25, icon: '🍚' },
-      'israeli_couscous': { name: 'Israeli Couscous', water: '3 cups', time: 12, icon: '🫘' },
-      'quinoa': { name: 'Quinoa', water: '3.5 cups', time: 15, icon: '🌾' },
-      'plain_pasta': { name: 'Plain Pasta', water: '5 cups', time: 14, icon: '🍝' },
-      'marinara_pasta': { name: 'Marinara Pasta', water: '4.5 cups', time: 16, icon: '🍝' },
-      'alfredo_pasta': { name: 'Alfredo Pasta', water: '4.5 cups', time: 16, icon: '🍝' },
+      'white_rice': { name: 'White Rice', water: '4 cups (9.6 dl)', time: 18, icon: '🍚' },
+      'brown_rice': { name: 'Brown Rice', water: '4.5 cups (10.8 dl)', time: 22, icon: '🍚' },
+      'rice_pilaf': { name: 'Rice Pilaf', water: '3.5 cups (8.4 dl)', time: 16, icon: '🍚' },
+      'spanish_rice': { name: 'Spanish Rice', water: '3.5 cups (8.4 dl)', time: 18, icon: '🍚' },
+      'wild_rice': { name: 'Wild Rice', water: '5 cups (12 dl)', time: 25, icon: '🍚' },
+      'israeli_couscous': { name: 'Israeli Couscous', water: '3 cups (7.2 dl)', time: 12, icon: '🫘' },
+      'quinoa': { name: 'Quinoa', water: '3.5 cups (8.4 dl)', time: 15, icon: '🌾' },
+      'plain_pasta': { name: 'Plain Pasta', water: '5 cups (12 dl)', time: 14, icon: '🍝' },
+      'marinara_pasta': { name: 'Marinara Pasta', water: '4.5 cups (10.8 dl)', time: 16, icon: '🍝' },
+      'alfredo_pasta': { name: 'Alfredo Pasta', water: '4.5 cups (10.8 dl)', time: 16, icon: '🍝' },
     };
 
     const proteins = {
