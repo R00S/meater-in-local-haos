@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 19 Feb 2026, 02:40 UTC
-Last Change: v0.5.0.71 - Fix View Assist dashboard WebSocket handler tuple format for HA 2024.1+
+Last Updated: 19 Feb 2026, 02:52 UTC
+Last Change: v0.5.0.72 - Replace mock WebSocket with direct DashboardsCollection API for View Assist dashboard
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.

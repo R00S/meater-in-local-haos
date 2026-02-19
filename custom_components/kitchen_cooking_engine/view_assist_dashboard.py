@@ -1,19 +1,25 @@
 """View Assist Dashboard Integration.
 
-Last Updated: 19 Feb 2026, 02:40 UTC
-Last Change: v0.5.0.71 - Fix WebSocket handler tuple format for HA 2024.1+
+Last Updated: 19 Feb 2026, 02:52 UTC
+Last Change: v0.5.0.72 - Replace mock WebSocket with direct DashboardsCollection API
 
 This module manages the automatic creation and removal of a storage-mode Lovelace
 dashboard that embeds the cooking panel in an iframe, enabling View Assist compatibility
 with zero user configuration.
+
+Uses DashboardsCollection.async_create_item() directly — the same pattern used by
+HA core's _create_map_dashboard() and the R290_heatpump integration. No mock WebSocket
+connections needed.
 """
 
 from __future__ import annotations
 
-from dataclasses import dataclass
 import logging
 from typing import Any
 
+from homeassistant.components import frontend
+from homeassistant.components.lovelace import const as lovelace_const
+from homeassistant.components.lovelace import dashboard as lovelace_dashboard
 from homeassistant.core import HomeAssistant
 
 _LOGGER = logging.getLogger(__name__)
@@ -24,71 +30,31 @@ DASHBOARD_TITLE = "Kitchen Cooking (View Assist)"
 DASHBOARD_ICON = "mdi:pot-steam"
 DASHBOARD_REQUIRE_ADMIN = False
 
-
-@dataclass
-class MockAdminUser:
-    """Mock admin user for WebSocket operations."""
-
-    is_admin: bool = True
-
-
-class MockWSConnection:
-    """Mock WebSocket connection for programmatic Lovelace dashboard operations."""
-
-    def __init__(self, hass: HomeAssistant) -> None:
-        """Initialize the mock WebSocket connection."""
-        self.hass = hass
-        self.user = MockAdminUser()
-        self.failed_request = False
-
-    def send_result(self, msg_id: int, result: Any) -> None:
-        """Mock send_result - marks request as successful."""
-        self.failed_request = False
-        _LOGGER.debug("WS request %s succeeded", msg_id)
-
-    def send_error(self, msg_id: int, code: str, message: str) -> None:
-        """Mock send_error - marks request as failed and logs error."""
-        self.failed_request = True
-        _LOGGER.error("WS request %s failed: %s - %s", msg_id, code, message)
-
-    async def execute_ws_func(self, ws_type: str, msg: dict) -> bool:
-        """Execute a WebSocket handler function.
-
-        Args:
-            ws_type: The WebSocket command type (e.g. "lovelace/dashboards/create")
-            msg: The message dict containing command parameters
-
-        Returns:
-            bool: True if the request succeeded, False otherwise
-        """
-        self.failed_request = False
-
-        # Get the WebSocket API registry
-        ws_api = self.hass.data.get("websocket_api")
-        if not ws_api:
-            _LOGGER.error("WebSocket API not available")
-            return False
-
-        # Get the handler for this command type
-        handler_entry = ws_api.get(ws_type)
-        if not handler_entry:
-            _LOGGER.error("WebSocket handler not found for type: %s", ws_type)
-            return False
-
-        # In HA 2024.1+, ws_api stores (handler, schema) tuples
-        handler = handler_entry[0] if isinstance(handler_entry, tuple) else handler_entry
-
-        # Execute the handler
-        try:
-            await handler(self.hass, self, msg)
-            return not self.failed_request
-        except Exception as err:
-            _LOGGER.error("Error executing WebSocket handler %s: %s", ws_type, err)
-            return False
+# Dashboard view config (iframe embedding our cooking panel)
+DASHBOARD_VIEW_CONFIG: dict[str, Any] = {
+    "views": [
+        {
+            "title": "Kitchen Cooking",
+            "path": "cooking",
+            "icon": "mdi:pot-steam",
+            "panel": True,
+            "cards": [
+                {
+                    "type": "iframe",
+                    "url": "/kitchen-cooking-panel",
+                    "aspect_ratio": "100%",
+                }
+            ],
+        }
+    ]
+}
 
 
 async def async_create_view_assist_dashboard(hass: HomeAssistant) -> bool:
     """Create the View Assist dashboard if it doesn't exist.
+
+    Uses DashboardsCollection directly (same pattern as HA core's
+    _create_map_dashboard and R290_heatpump integration).
 
     Args:
         hass: Home Assistant instance
@@ -96,70 +62,75 @@ async def async_create_view_assist_dashboard(hass: HomeAssistant) -> bool:
     Returns:
         bool: True if dashboard was created or already exists, False on error
     """
-    # Check if lovelace data is available
-    lovelace_data = hass.data.get("lovelace")
-    if not lovelace_data:
+    lovelace_data = hass.data.get(lovelace_const.LOVELACE_DATA)
+    if lovelace_data is None:
         _LOGGER.warning("Lovelace not loaded yet, cannot create View Assist dashboard")
         return False
 
-    # Check if dashboard already exists
-    # Note: lovelace_data is a LovelaceData object in newer HA versions, not a dict
+    # Check if dashboard already exists in memory
     dashboards = getattr(lovelace_data, "dashboards", {})
     if DASHBOARD_URL_PATH in dashboards:
         _LOGGER.debug("View Assist dashboard already exists at /%s", DASHBOARD_URL_PATH)
         return True
 
-    # Create the dashboard using WebSocket API
-    conn = MockWSConnection(hass)
+    try:
+        # Load the dashboards storage collection
+        dashboards_collection = lovelace_dashboard.DashboardsCollection(hass)
+        await dashboards_collection.async_load()
 
-    create_msg = {
-        "id": 1,
-        "url_path": DASHBOARD_URL_PATH,
-        "title": DASHBOARD_TITLE,
-        "icon": DASHBOARD_ICON,
-        "require_admin": DASHBOARD_REQUIRE_ADMIN,
-        "mode": "storage",  # Storage mode for View Assist compatibility
-    }
+        # Check if it already exists in storage (but not yet in memory)
+        existing_id: str | None = None
+        for item_id, item in dashboards_collection.data.items():
+            if item.get(lovelace_const.CONF_URL_PATH) == DASHBOARD_URL_PATH:
+                existing_id = item_id
+                break
 
-    success = await conn.execute_ws_func("lovelace/dashboards/create", create_msg)
-
-    if not success:
-        _LOGGER.error("Failed to create View Assist dashboard")
-        return False
-
-    _LOGGER.info("Created View Assist dashboard at /%s", DASHBOARD_URL_PATH)
-
-    # Now configure the dashboard with an iframe view
-    config_msg = {
-        "id": 2,
-        "url_path": DASHBOARD_URL_PATH,
-        "config": {
-            "views": [
+        if existing_id is None:
+            # Create the dashboard entry in storage
+            _LOGGER.info(
+                "Creating storage-backed View Assist dashboard '%s'",
+                DASHBOARD_URL_PATH,
+            )
+            item = await dashboards_collection.async_create_item(
                 {
-                    "title": "Kitchen Cooking",
-                    "path": "cooking",
-                    "icon": "mdi:pot-steam",
-                    "panel": True,  # Full-width panel mode
-                    "cards": [
-                        {
-                            "type": "iframe",
-                            "url": "/kitchen-cooking-panel",
-                            "aspect_ratio": "100%",
-                        }
-                    ],
+                    lovelace_const.CONF_URL_PATH: DASHBOARD_URL_PATH,
+                    lovelace_const.CONF_TITLE: DASHBOARD_TITLE,
+                    lovelace_const.CONF_ICON: DASHBOARD_ICON,
+                    lovelace_const.CONF_REQUIRE_ADMIN: DASHBOARD_REQUIRE_ADMIN,
+                    lovelace_const.CONF_SHOW_IN_SIDEBAR: True,
                 }
-            ]
-        },
-    }
+            )
+        else:
+            _LOGGER.debug("Dashboard already in storage, registering in memory")
+            item = dashboards_collection.data[existing_id]
 
-    success = await conn.execute_ws_func("lovelace/config/save", config_msg)
+        # Register in lovelace data for immediate use
+        lovelace_config = lovelace_data.dashboards.get(DASHBOARD_URL_PATH)
+        if not isinstance(lovelace_config, lovelace_dashboard.LovelaceStorage):
+            lovelace_config = lovelace_dashboard.LovelaceStorage(hass, item)
+            lovelace_data.dashboards[DASHBOARD_URL_PATH] = lovelace_config
 
-    if not success:
-        _LOGGER.error("Failed to configure View Assist dashboard")
+        # Save the dashboard view config (iframe to our cooking panel)
+        await lovelace_config.async_save(DASHBOARD_VIEW_CONFIG)
+
+        # Register the sidebar panel
+        frontend.async_register_built_in_panel(
+            hass,
+            lovelace_const.DOMAIN,
+            frontend_url_path=DASHBOARD_URL_PATH,
+            sidebar_title=DASHBOARD_TITLE,
+            sidebar_icon=DASHBOARD_ICON,
+            require_admin=DASHBOARD_REQUIRE_ADMIN,
+            config={"mode": lovelace_config.mode},
+            update=True,
+        )
+
+        _LOGGER.info("View Assist dashboard ready at /%s", DASHBOARD_URL_PATH)
+        return True
+
+    except Exception as err:
+        _LOGGER.error("Failed to create View Assist dashboard: %s", err)
         return False
-
-    _LOGGER.info("Configured View Assist dashboard with iframe view")
-    return True
 
 
 async def async_remove_view_assist_dashboard(hass: HomeAssistant) -> bool:
@@ -171,32 +142,36 @@ async def async_remove_view_assist_dashboard(hass: HomeAssistant) -> bool:
     Returns:
         bool: True if dashboard was removed or didn't exist, False on error
     """
-    # Check if lovelace data is available
-    lovelace_data = hass.data.get("lovelace")
-    if not lovelace_data:
+    lovelace_data = hass.data.get(lovelace_const.LOVELACE_DATA)
+    if lovelace_data is None:
         _LOGGER.debug("Lovelace not loaded, nothing to remove")
         return True
 
-    # Check if dashboard exists
-    # Note: lovelace_data is a LovelaceData object in newer HA versions, not a dict
+    # Remove from lovelace data
     dashboards = getattr(lovelace_data, "dashboards", {})
     if DASHBOARD_URL_PATH not in dashboards:
         _LOGGER.debug("View Assist dashboard doesn't exist, nothing to remove")
         return True
 
-    # Delete the dashboard using WebSocket API
-    conn = MockWSConnection(hass)
+    try:
+        # Remove from storage collection
+        dashboards_collection = lovelace_dashboard.DashboardsCollection(hass)
+        await dashboards_collection.async_load()
 
-    delete_msg = {
-        "id": 1,
-        "url_path": DASHBOARD_URL_PATH,
-    }
+        for item_id, item in list(dashboards_collection.data.items()):
+            if item.get(lovelace_const.CONF_URL_PATH) == DASHBOARD_URL_PATH:
+                await dashboards_collection.async_delete_item(item_id)
+                break
 
-    success = await conn.execute_ws_func("lovelace/dashboards/delete", delete_msg)
+        # Remove from in-memory lovelace data
+        lovelace_data.dashboards.pop(DASHBOARD_URL_PATH, None)
 
-    if not success:
-        _LOGGER.error("Failed to remove View Assist dashboard")
+        # Remove sidebar panel
+        frontend.async_remove_panel(hass, DASHBOARD_URL_PATH)
+
+        _LOGGER.info("Removed View Assist dashboard from /%s", DASHBOARD_URL_PATH)
+        return True
+
+    except Exception as err:
+        _LOGGER.error("Failed to remove View Assist dashboard: %s", err)
         return False
-
-    _LOGGER.info("Removed View Assist dashboard from /%s", DASHBOARD_URL_PATH)
-    return True
