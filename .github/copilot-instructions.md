@@ -97,6 +97,32 @@ Format: `v0.1.X.YY`
 - `X` = Agent number (increments when a new agent takes over)
 - `YY` = Release number with current agent
 
+### 🛑 MANDATORY: Version Update Checklist
+
+**Every release MUST update ALL 4 version locations.** Mismatches cause broken releases.
+
+When bumping the version (e.g. from `0.5.1.0` to `0.5.1.1`):
+
+```
+□ 1. manifest.json        → "version": "0.5.1.1"
+□ 2. __init__.py           → __version__ = "0.5.1.1"
+□ 3. __init__.py           → Last Change: v0.5.1.1 - <description>
+□ 4. const.py              → Last Change: v0.5.1.1 - <description>
+     (PANEL_VERSION is auto-incremented by generate_frontend_data.py)
+```
+
+**Quick verification command:**
+```bash
+grep '"version"' custom_components/kitchen_cooking_engine/manifest.json
+grep '__version__' custom_components/kitchen_cooking_engine/__init__.py
+grep 'PANEL_VERSION' custom_components/kitchen_cooking_engine/const.py
+```
+
+**All 3 version strings MUST match.** If they don't, fix them before committing.
+
+This has caused failed releases multiple times (v0.5.0.72, v0.5.1.0) where code
+changes were committed but version numbers were left stale or inconsistent.
+
 ---
 
 ## Testing

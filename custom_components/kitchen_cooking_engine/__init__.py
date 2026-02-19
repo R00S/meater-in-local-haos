@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 19 Feb 2026, 12:24 UTC
-Last Change: v0.5.1.0 - AI Recipe Builder: fix data format, add CSS, wire up ingredient/style/generation flow
+Last Updated: 19 Feb 2026, 13:12 UTC
+Last Change: v0.5.1.1 - AI Recipe Builder: fetch detail API before starting cook flow
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.

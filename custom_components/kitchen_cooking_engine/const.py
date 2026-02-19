@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 18 Feb 2026, 23:40 UTC
-Last Change: v0.5.0.63 - Added option to disable persistent notifications
+Last Updated: 19 Feb 2026, 13:12 UTC
+Last Change: v0.5.1.1 - AI Recipe Builder: fetch detail API before starting cook flow
 """
 
 DOMAIN = "kitchen_cooking_engine"
