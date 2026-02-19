@@ -288,7 +288,6 @@ class KitchenCookingPanel extends LitElement {
       }
       
       const data = await response.json();
-      console.log('DEBUG: History loaded successfully. Count:', data.history?.length || 0);
       
       if (data && data.history) {
         this._cookHistory = data.history;
@@ -372,6 +371,13 @@ class KitchenCookingPanel extends LitElement {
   // Phase 3.3: Helper to check if a feature is available
   _hasFeature(featureName) {
     return this._availableFeatures.has(featureName);
+  }
+
+  _editCookNotes(cook) {
+    const newNotes = prompt('Edit notes for this cook:', cook.notes || '');
+    if (newNotes !== null) {
+      this._updateCookNotes(cook.id, newNotes);
+    }
   }
 
   async _updateCookNotes(cookId, notes) {
@@ -1023,7 +1029,11 @@ class KitchenCookingPanel extends LitElement {
                 <button 
                   class="category-btn" 
                   style="text-align: left; padding: 12px; justify-content: space-between; display: flex; align-items: center;"
-                  @click=${() => this._selectNinjaRecipe(recipe.id)}>
+                  @click=${() => {
+                    this._selectedNinjaRecipe = recipe.id;
+                    this._currentPath = 'ninja_recipe_detail';
+                    this.requestUpdate();
+                  }}>
                   <span>
                     ${recipe.name}
                     ${recipe.use_probe ? ' 🌡️' : ''}
@@ -1046,14 +1056,15 @@ class KitchenCookingPanel extends LitElement {
         <h2>🥘 ${recipe.name}</h2>
         <p>${recipe.description}</p>
         <div style="display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap;">
-          <button class="history-btn" @click=${() => this._selectedNinjaRecipe = null}>
-            ← Back to Ninja Combi
+          <button class="history-btn" @click=${() => {
+            this._selectedNinjaRecipe = null;
+            this._currentPath = 'ninja_built_in_recipes';
+            this.requestUpdate();
+          }}>
+            ← Back to Recipes
           </button>
           <button class="action-btn" @click=${() => this._openRecipeInBuilder(recipe)}>
             🛠️ Modify in Builder
-          </button>
-          <button class="history-btn" @click=${() => { this._selectedNinjaRecipe = null; this._showNinjaCombi = false; this._showRecipes = true; this._loadCompatibleRecipes(); }}>
-            📖 All Recipes
           </button>
         </div>
       </div>
@@ -1085,14 +1096,16 @@ class KitchenCookingPanel extends LitElement {
           ${recipe.use_probe ? html`
             <div style="margin-top: 12px; padding: 12px; background: rgba(76, 175, 80, 0.1); border-left: 3px solid #4caf50; border-radius: 0 4px 4px 0;">
               <strong>🌡️ MEATER+ Probe:</strong> Target ${recipe.target_temp_c}°C (${recipe.target_temp_f}°F)
-              <button 
-                class="action-btn" 
-                @click=${() => this._startMeaterCook(recipe)}
-                style="width: 100%; margin-top: 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                🚀 Start Cook with MEATER+
-              </button>
             </div>
           ` : ''}
+
+          <!-- Start Cooking button (ToR Section 7.1) -->
+          <button 
+            class="action-btn" 
+            @click=${() => this._startRecipeCook(recipe, recipe._adjustedServings || recipe.servings)}
+            style="width: 100%; margin-top: 16px; padding: 16px; font-size: 16px; background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);">
+            🍳 Start Cooking
+          </button>
         </div>
       </ha-card>
 
@@ -1347,145 +1360,6 @@ class KitchenCookingPanel extends LitElement {
     `;
   }
 
-  _resetBuilder() {
-    this._builderBase = null;
-    this._builderProtein = null;
-    this._builderVeggies = [];
-    this._builderUseMeater = true;
-  }
-
-  _toggleVeggie(veggieName) {
-    if (this._builderVeggies.includes(veggieName)) {
-      this._builderVeggies = this._builderVeggies.filter(v => v !== veggieName);
-    } else {
-      this._builderVeggies = [...this._builderVeggies, veggieName];
-    }
-    this.requestUpdate();
-  }
-
-  _buildRecipe() {
-    // Create a custom recipe from builder selections
-    const bases = {
-      'white_rice': { name: 'White Rice', water: '4 cups', time: 18, icon: '🍚' },
-      'brown_rice': { name: 'Brown Rice', water: '4.5 cups', time: 22, icon: '🍚' },
-      'rice_pilaf': { name: 'Rice Pilaf', water: '3.5 cups', time: 16, icon: '🍚' },
-      'spanish_rice': { name: 'Spanish Rice', water: '3.5 cups', time: 18, icon: '🍚' },
-      'wild_rice': { name: 'Wild Rice', water: '5 cups', time: 25, icon: '🍚' },
-      'israeli_couscous': { name: 'Israeli Couscous', water: '3 cups', time: 12, icon: '🫘' },
-      'quinoa': { name: 'Quinoa', water: '3.5 cups', time: 15, icon: '🌾' },
-      'plain_pasta': { name: 'Plain Pasta', water: '5 cups', time: 14, icon: '🍝' },
-      'marinara_pasta': { name: 'Marinara Pasta', water: '4.5 cups', time: 16, icon: '🍝' },
-      'alfredo_pasta': { name: 'Alfredo Pasta', water: '4.5 cups', time: 16, icon: '🍝' },
-    };
-
-    const proteins = {
-      'chicken_breast': { name: 'Chicken Breast (Fresh)', temp: '390°F (200°C)', time: 18, probe: '74°C (165°F)', icon: '🍗' },
-      'chicken_breast_frozen': { name: 'Chicken Breast (Frozen)', temp: '375°F (190°C)', time: 22, probe: '74°C (165°F)', icon: '🍗' },
-      'chicken_thighs': { name: 'Chicken Thighs', temp: '390°F (200°C)', time: 16, probe: '74°C (165°F)', icon: '🍗' },
-      'chicken_drumsticks': { name: 'Chicken Drumsticks', temp: '390°F (200°C)', time: 20, probe: '74°C (165°F)', icon: '🍗' },
-      'chicken_wings': { name: 'Chicken Wings', temp: '400°F (205°C)', time: 15, probe: 'N/A', icon: '🍗' },
-      'beef_steak': { name: 'Beef Steak', temp: '400°F (205°C)', time: 12, probe: '54°C (130°F)', icon: '🥩' },
-      'beef_ground': { name: 'Ground Beef', temp: '375°F (190°C)', time: 14, probe: '71°C (160°F)', icon: '🥩' },
-      'beef_meatballs': { name: 'Beef Meatballs', temp: '375°F (190°C)', time: 16, probe: '71°C (160°F)', icon: '🥩' },
-      'beef_strips': { name: 'Beef Strips', temp: '390°F (200°C)', time: 10, probe: 'N/A', icon: '🥩' },
-      'pork_chops': { name: 'Pork Chops', temp: '390°F (200°C)', time: 14, probe: '63°C (145°F)', icon: '🥓' },
-      'pork_tenderloin': { name: 'Pork Tenderloin', temp: '375°F (190°C)', time: 18, probe: '63°C (145°F)', icon: '🥓' },
-      'pork_sausage': { name: 'Pork Sausage', temp: '390°F (200°C)', time: 14, probe: '71°C (160°F)', icon: '🥓' },
-      'salmon': { name: 'Salmon Fillet', temp: '360°F (180°C)', time: 12, probe: '54°C (130°F)', icon: '🐟' },
-      'shrimp': { name: 'Shrimp', temp: '390°F (200°C)', time: 8, probe: 'N/A', icon: '🍤' },
-      'tofu': { name: 'Tofu (Firm)', temp: '390°F (200°C)', time: 14, probe: 'N/A', icon: '🧈' },
-      'tempeh': { name: 'Tempeh', temp: '390°F (200°C)', time: 14, probe: 'N/A', icon: '🧈' },
-    };
-
-    const selectedBase = bases[this._builderBase];
-    const selectedProtein = proteins[this._builderProtein];
-    
-    const baseName = selectedBase.name;
-    const proteinName = selectedProtein.name;
-    const veggiesText = this._builderVeggies.length > 0 ? ` with ${this._builderVeggies.join(', ')}` : '';
-    const recipeName = `Custom ${proteinName} and ${baseName}${veggiesText}`;
-    
-    // Create a custom recipe object that can be displayed
-    const customRecipe = {
-      id: 9000, // Custom recipe ID
-      name: recipeName,
-      description: 'Custom recipe created with Recipe Builder',
-      mode: 'Combi-Meal',
-      prep_time_minutes: 10,
-      cook_time_minutes: selectedProtein.time,
-      servings: 4,
-      difficulty: 'Easy',
-      use_probe: this._builderUseMeater && selectedProtein.probe !== 'N/A',
-      target_temp_c: this._builderUseMeater && selectedProtein.probe !== 'N/A' ? parseInt(selectedProtein.probe) : null,
-      target_temp_f: this._builderUseMeater && selectedProtein.probe !== 'N/A' ? parseInt(selectedProtein.probe.match(/\((\d+)/)[1]) : null,
-      ingredients: [
-        `${baseName} - ${selectedBase.water} water`,
-        `${proteinName}`,
-        ...this._builderVeggies.map(v => `${v}`)
-      ],
-      instructions: [
-        `Add ${baseName.toLowerCase()} to the bottom of the Ninja Combi`,
-        `Add ${selectedBase.water} water or stock`,
-        this._builderVeggies.filter(v => ['Carrots', 'Zucchini', 'Cherry Tomatoes'].includes(v)).length > 0 
-          ? `Mix tender vegetables (${this._builderVeggies.filter(v => ['Carrots', 'Zucchini', 'Cherry Tomatoes'].includes(v)).join(', ')}) with the ${baseName.toLowerCase()}`
-          : null,
-        `Season ${proteinName.toLowerCase()} with your favorite seasonings`,
-        `Place ${proteinName.toLowerCase()} on the Crisper Tray in the top position`,
-        this._builderVeggies.filter(v => !['Carrots', 'Zucchini', 'Cherry Tomatoes'].includes(v)).length > 0
-          ? `Add crispy vegetables (${this._builderVeggies.filter(v => !['Carrots', 'Zucchini', 'Cherry Tomatoes'].includes(v)).join(', ')}) to the Crisper Tray with the protein`
-          : null,
-        `Close lid and flip SmartSwitch to COMBI COOKER position`,
-        `Select COMBI-MEAL mode`,
-        `Set temperature to ${selectedProtein.temp}`,
-        `Set time for ${selectedProtein.time} minutes`,
-        this._builderUseMeater && selectedProtein.probe !== 'N/A'
-          ? `Insert MEATER+ probe into thickest part of protein (target: ${selectedProtein.probe})`
-          : null,
-        `Press START`,
-        `Enjoy your custom meal!`
-      ].filter(Boolean), // Remove null instructions
-      phases: [
-        {
-          description: 'Steam Phase',
-          temperature_c: 100,
-          temperature_f: 212,
-          duration_minutes: Math.floor(selectedProtein.time * 0.4),
-          steam_enabled: true
-        },
-        {
-          description: 'Air Fry Phase',
-          temperature_c: parseInt(selectedProtein.temp.match(/\((\d+)/)[1]),
-          temperature_f: parseInt(selectedProtein.temp),
-          duration_minutes: Math.ceil(selectedProtein.time * 0.6),
-          steam_enabled: false
-        }
-      ],
-      tips: [
-        `This recipe serves ${4} people`,
-        `Adjust servings using the input field above`,
-        this._builderUseMeater ? `Use MEATER+ probe for precise temperature control` : null,
-        `You can modify ingredients anytime by returning to the Recipe Builder`
-      ].filter(Boolean),
-      notes: []
-    };
-    
-    // Navigate to built-in recipes to show the custom recipe
-    // Custom recipe is already added to NINJA_COMBI_RECIPES above
-    this._currentPath = 'ninja_built_in_recipes';
-    
-    // Temporarily add to recipes list so it can be displayed
-    // In production, this would be saved to backend
-    if (!NINJA_COMBI_RECIPES.find(r => r.id === 9000)) {
-      NINJA_COMBI_RECIPES.push(customRecipe);
-    } else {
-      // Update existing custom recipe
-      const idx = NINJA_COMBI_RECIPES.findIndex(r => r.id === 9000);
-      NINJA_COMBI_RECIPES[idx] = customRecipe;
-    }
-    
-    this.requestUpdate();
-  }
-
   _startMeaterCook(recipe) {
     // Find a MEATER cooking session entity
     // Look for the selected entity first, then search if not found
@@ -1605,9 +1479,10 @@ class KitchenCookingPanel extends LitElement {
     // Clear veggies (user can add them in builder)
     this._builderVeggies = [];
     
-    // Switch to builder view
+    // Switch to builder view using path-based routing
     this._selectedNinjaRecipe = null;
     this._showRecipeBuilder = true;
+    this._currentPath = 'ninja_recipe_builder';
     this.requestUpdate();
   }
 
@@ -1615,17 +1490,6 @@ class KitchenCookingPanel extends LitElement {
     if (!isoString) return '';
     const date = new Date(isoString);
     return date.toLocaleString();
-  }
-
-  _formatDuration(startIso, endIso) {
-    if (!startIso) return '';
-    const start = new Date(startIso);
-    const end = endIso ? new Date(endIso) : new Date();
-    const mins = Math.round((end - start) / 60000);
-    if (mins < 60) return `${mins} min`;
-    const hours = Math.floor(mins / 60);
-    const remainMins = mins % 60;
-    return `${hours}h ${remainMins}m`;
   }
 
   // Phase 3.3: Render appliance management view
@@ -2339,6 +2203,18 @@ class KitchenCookingPanel extends LitElement {
         return this._renderNinjaRecipeBuilderView();
       
       case 'ninja_built_in_recipes':
+        return this._renderNinjaBuiltInRecipesView();
+      
+      case 'ninja_recipe_detail':
+        if (this._selectedNinjaRecipe) {
+          const recipe = (typeof NINJA_COMBI_RECIPES !== 'undefined' && NINJA_COMBI_RECIPES)
+            ? NINJA_COMBI_RECIPES.find(r => r.id === this._selectedNinjaRecipe)
+            : null;
+          if (recipe) {
+            return this._renderNinjaRecipeDetail(recipe);
+          }
+        }
+        this._currentPath = 'ninja_built_in_recipes';
         return this._renderNinjaBuiltInRecipesView();
       
       case 'recent_ninja':
@@ -3075,62 +2951,22 @@ class KitchenCookingPanel extends LitElement {
    * Shows only meater probe cooks (type 6.1)
    */
   _renderRecentMeaterCooks() {
-    // Debug: Log all cook history to see the actual data structure
-    console.log('DEBUG: Total cook history entries:', this._cookHistory?.length || 0);
-    if (this._cookHistory && this._cookHistory.length > 0) {
-      console.log('DEBUG: First cook entry keys:', Object.keys(this._cookHistory[0]));
-      console.log('DEBUG: First cook entry FULL DATA:', this._cookHistory[0]);
-      // Log every cook to find MEATER-specific fields
-      console.log('DEBUG: Analyzing ALL cook entries for MEATER fields...');
-      this._cookHistory.forEach((cook, index) => {
-        console.log(`DEBUG: Cook #${index}:`, {
-          appliance_type: cook.appliance_type,
-          protein: cook.protein,
-          meat: cook.meat,
-          doneness: cook.doneness,
-          cooking_method: cook.cooking_method,
-          recipe_name: cook.recipe_name,
-          target_temp_c: cook.target_temp_c,
-          checks: {
-            has_appliance_meater: cook.appliance_type === 'meater' || cook.appliance_type === 'meater_probe',
-            has_protein_temp: !!(cook.protein && cook.target_temp_c),
-            has_meat_temp: !!(cook.meat && cook.target_temp_c),
-            has_doneness_temp: !!(cook.doneness && cook.target_temp_c),
-            has_method_temp_no_recipe: !!(cook.cooking_method && cook.target_temp_c && !cook.recipe_name)
-          }
-        });
-      });
-    }
-    
     // Filter history for MEATER probe cooks only
     const meaterCooks = (this._cookHistory || []).filter(cook => {
       // Check if it's a MEATER-only cook (temperature monitoring)
-      // Include cooks that have protein/meat data and target temperature
-      // Exclude cooks that are primarily recipe-based
       const isMetering = 
         // New way: explicit appliance type
         cook.appliance_type === 'meater_probe' || 
         cook.appliance_type === 'meater' ||
         
         // Backwards compatibility: Old cooks without appliance_type
-        // These cooks have MEATER-specific fields:
         (cook.protein && cook.target_temp_c) ||
         (cook.meat && cook.target_temp_c) ||
         (cook.doneness && cook.target_temp_c) ||
         (cook.cooking_method && cook.target_temp_c && !cook.recipe_name);
       
-      // Debug log result for EACH cook
-      console.log(`DEBUG: Cook filter - isMetering=${isMetering}:`, {
-        appliance_type: cook.appliance_type,
-        protein: cook.protein,
-        target_temp_c: cook.target_temp_c,
-        recipe_name: cook.recipe_name
-      });
-      
       return isMetering;
     });
-    
-    console.log('DEBUG: Filtered MEATER cooks:', meaterCooks.length);
 
     return html`
       <div class="path-header">
@@ -3622,16 +3458,14 @@ class KitchenCookingPanel extends LitElement {
       notes: []
     };
     
-    // Navigate to built-in recipes to show the custom recipe
-    // Custom recipe is already added to NINJA_COMBI_RECIPES above
-    this._currentPath = 'ninja_built_in_recipes';
+    // Navigate to recipe detail to show the custom recipe
+    this._selectedNinjaRecipe = 9000;
+    this._currentPath = 'ninja_recipe_detail';
     
-    // Temporarily add to recipes list so it can be displayed
-    // In production, this would be saved to backend
+    // Add to recipes list so it can be displayed
     if (!NINJA_COMBI_RECIPES.find(r => r.id === 9000)) {
       NINJA_COMBI_RECIPES.push(customRecipe);
     } else {
-      // Update existing custom recipe
       const idx = NINJA_COMBI_RECIPES.findIndex(r => r.id === 9000);
       NINJA_COMBI_RECIPES[idx] = customRecipe;
     }
@@ -3671,7 +3505,11 @@ class KitchenCookingPanel extends LitElement {
       ` : html`
         <div class="recipe-list">
           ${this._ninjaBuiltInRecipes.map(recipe => html`
-            <ha-card class="recipe-card clickable" @click=${() => this._selectNinjaRecipe(recipe)}>
+            <ha-card class="recipe-card clickable" @click=${() => {
+              this._selectedNinjaRecipe = recipe.id;
+              this._currentPath = 'ninja_recipe_detail';
+              this.requestUpdate();
+            }}>
               <div class="card-content">
                 <h3>${recipe.name}</h3>
                 <p class="recipe-description">${recipe.description || ''}</p>
@@ -3916,10 +3754,10 @@ class KitchenCookingPanel extends LitElement {
                     <strong>⏱️ Prep Time:</strong> ${recipe.prep_time || 'N/A'}
                   </div>
                   <div class="detail-item">
-                    <strong>🍳 Cook Time:</strong> ${recipe.cook_time || 'N/A'}
+                    <strong>🍳 Cook Time:</strong> ${recipe.cook_time_minutes || recipe.cook_time || 'N/A'}
                   </div>
                   <div class="detail-item">
-                    <strong>🍽️ Servings:</strong> ${recipe.serving_size || '4'}
+                    <strong>🍽️ Servings:</strong> ${recipe.servings || recipe.serving_size || '4'}
                   </div>
                 </div>
 
@@ -4242,7 +4080,8 @@ class KitchenCookingPanel extends LitElement {
     if (!this._recipeCookState) return;
 
     const recipe = this._recipeCookState.recipe;
-    const maxStep = recipe.instructions ? recipe.instructions.length - 1 : 0;
+    const steps = this._getRecipeSteps(recipe);
+    const maxStep = steps.length - 1;
     
     // If we're on the last step, go to finish page
     if (this._recipeCookState.currentStep >= maxStep) {
@@ -4395,17 +4234,27 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
+   * Start the recipe cook timer that updates every second
+   */
+  _startRecipeCookTimer() {
+    if (this._recipeCookTimer) {
+      clearInterval(this._recipeCookTimer);
+    }
+    this._recipeCookTimer = setInterval(() => {
+      this.requestUpdate();
+    }, 1000);
+  }
+
+  /**
    * Phase 6: Start cooking from an AI-generated recipe
    */
   _startCookingFromAIRecipe(recipe) {
-    console.log('Starting cook from AI recipe:', recipe);
-    
     // Start recipe cook flow (Phase 4)
     this._recipeCookState = {
       recipe: recipe,
       startTime: Date.now(),
       currentStep: -1, // Start with overview
-      servingSize: recipe.serving_size || 4,
+      servingSize: recipe.servings || recipe.serving_size || 4,
       easeRating: 0,
       resultRating: 0,
       notes: '',
@@ -4422,14 +4271,12 @@ class KitchenCookingPanel extends LitElement {
    * Phase 5: Select a Ninja built-in recipe and start cooking
    */
   _selectNinjaRecipe(recipe) {
-    console.log('Selected Ninja recipe:', recipe);
-    
     // Start recipe cook flow (Phase 4)
     this._recipeCookState = {
       recipe: recipe,
       startTime: Date.now(),
       currentStep: -1, // Start with overview
-      servingSize: recipe.serving_size || 4,
+      servingSize: recipe.servings || recipe.serving_size || 4,
       easeRating: 0,
       resultRating: 0,
       notes: '',
@@ -4443,6 +4290,26 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
+   * Get the recipe steps array, normalizing between recipe.steps (structured) 
+   * and recipe.instructions (flat string array from Ninja data)
+   */
+  _getRecipeSteps(recipe) {
+    // If recipe has structured steps, use them directly
+    if (recipe.steps && recipe.steps.length > 0) {
+      return recipe.steps;
+    }
+    // If recipe has instructions (flat string array), convert to step objects
+    if (recipe.instructions && recipe.instructions.length > 0) {
+      return recipe.instructions.map((instruction, idx) => ({
+        name: `Step ${idx + 1}`,
+        instructions: instruction,
+        description: instruction,
+      }));
+    }
+    return [];
+  }
+
+  /**
    * Render the Recipe Cook Flow interface
    */
   _renderRecipeCookFlow() {
@@ -4450,10 +4317,11 @@ class KitchenCookingPanel extends LitElement {
 
     const state = this._recipeCookState;
     const recipe = state.recipe;
+    const steps = this._getRecipeSteps(recipe);
     const elapsedSeconds = Math.floor((Date.now() - state.startTime) / 1000);
     const currentStepIndex = state.currentStep;
     const isOverview = currentStepIndex === -1;
-    const isFinishPage = currentStepIndex >= (recipe.steps ? recipe.steps.length : 0);
+    const isFinishPage = currentStepIndex >= steps.length;
     
     return html`
       <!-- Recipe Cook Header -->
@@ -4492,7 +4360,7 @@ class KitchenCookingPanel extends LitElement {
             </button>
           ` : html`
             <button class="primary-btn" @click=${this._nextRecipeStep}>
-              ${isOverview ? 'Start →' : currentStepIndex === recipe.steps.length - 1 ? 'Finish' : 'Next →'}
+              ${isOverview ? 'Start →' : currentStepIndex === steps.length - 1 ? 'Finish' : 'Next →'}
             </button>
           `}
         </div>
@@ -4505,6 +4373,8 @@ class KitchenCookingPanel extends LitElement {
    */
   _renderRecipeCookOverview() {
     const recipe = this._recipeCookState.recipe;
+    const steps = this._getRecipeSteps(recipe);
+    const totalTime = recipe.total_time || recipe.cook_time_minutes;
     
     return html`
       <div class="recipe-cook-overview">
@@ -4514,8 +4384,8 @@ class KitchenCookingPanel extends LitElement {
           <p class="recipe-description">${recipe.description}</p>
         ` : ''}
 
-        ${recipe.total_time ? html`
-          <p><strong>⏱️ Total Time:</strong> ${recipe.total_time} minutes</p>
+        ${totalTime ? html`
+          <p><strong>⏱️ Total Time:</strong> ${totalTime} minutes</p>
         ` : ''}
 
         <div class="recipe-cook-ingredients">
@@ -4527,11 +4397,11 @@ class KitchenCookingPanel extends LitElement {
           </ul>
         </div>
 
-        ${recipe.steps && recipe.steps.length > 0 ? html`
+        ${steps.length > 0 ? html`
           <div class="recipe-cook-step-overview">
-            <h4>📝 Steps (${recipe.steps.length})</h4>
+            <h4>📝 Steps (${steps.length})</h4>
             <ol>
-              ${recipe.steps.map((step, idx) => html`
+              ${steps.map((step, idx) => html`
                 <li>
                   ${step.name || `Step ${idx + 1}`}
                   ${step.time ? html` <span class="step-time">(~${step.time} min)</span>` : ''}
@@ -4549,7 +4419,8 @@ class KitchenCookingPanel extends LitElement {
    */
   _renderRecipeCookStep(stepIndex) {
     const recipe = this._recipeCookState.recipe;
-    const step = recipe.steps[stepIndex];
+    const steps = this._getRecipeSteps(recipe);
+    const step = steps[stepIndex];
     
     if (!step) {
       return html`<p>Step not found</p>`;
@@ -4561,7 +4432,7 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="recipe-cook-step-detail">
         <div class="step-header">
-          <h3>Step ${stepIndex + 1} of ${recipe.steps.length}</h3>
+          <h3>Step ${stepIndex + 1} of ${steps.length}</h3>
           <h4>${step.name || `Step ${stepIndex + 1}`}</h4>
           ${step.time ? html`<p class="step-time">⏱️ ~${step.time} minutes</p>` : ''}
         </div>
@@ -4597,20 +4468,16 @@ class KitchenCookingPanel extends LitElement {
             <h5>📋 All Ingredients</h5>
             <ul>
               ${recipe.ingredients.map(ing => {
-                // Improved matching: check if step ingredient words appear in full ingredient
-                // This reduces false positives like 'chicken breast' matching 'chicken stock'
                 const ingLower = ing.toLowerCase();
                 const isActive = stepIngredients.some(si => {
                   const siLower = si.toLowerCase();
-                  // Extract key words (ignore common measurements and prepositions)
                   const keyWords = siLower.split(/[\s,]+/).filter(w => 
                     w.length > 3 && !['cups', 'tbsp', 'tsp', 'ounce', 'pound', 'gram'].includes(w)
                   );
-                  // Match if any key word is found as a whole word in ingredient
                   return keyWords.some(word => {
                     const regex = new RegExp(`\\b${word}\\b`, 'i');
                     return regex.test(ingLower);
-                  }) || ingLower === siLower; // Exact match fallback
+                  }) || ingLower === siLower;
                 });
                 return html`
                   <li class="${isActive ? 'active-ingredient' : ''}">${ing}</li>
@@ -4759,7 +4626,6 @@ class KitchenCookingPanel extends LitElement {
    * Opens the existing ninja_combi_recipe_builder functionality
    */
   _startNinjaRecipeBuilder() {
-    console.log('Starting Ninja Recipe Builder...');
     this._showRecipeBuilder = true;
     this._currentPath = 'ninja_recipe_builder';
     this.requestUpdate();
@@ -4770,8 +4636,6 @@ class KitchenCookingPanel extends LitElement {
    * Loads and displays pre-configured Ninja Combi recipes
    */
   _showNinjaBuiltInRecipes() {
-    console.log('Loading Ninja built-in recipes...');
-    
     // Use embedded NINJA_COMBI_RECIPES data
     if (typeof NINJA_COMBI_RECIPES !== 'undefined' && NINJA_COMBI_RECIPES && NINJA_COMBI_RECIPES.length > 0) {
       this._ninjaBuiltInRecipes = NINJA_COMBI_RECIPES;
@@ -4790,8 +4654,6 @@ class KitchenCookingPanel extends LitElement {
    * Pre-selects Ninja Combi as main appliance and opens AI builder
    */
   async _startAIWithNinjaCombi() {
-    console.log('Starting AI Recipe Builder with Ninja Combi...');
-    
     // Load data FIRST (same pattern as _startAIRecipeCreation)
     try {
       // Load ingredients if not already loaded
@@ -4825,7 +4687,6 @@ class KitchenCookingPanel extends LitElement {
    * Displays cook history filtered for Ninja Combi recipes
    */
   _showRecentNinjaCooks() {
-    console.log('Showing recent Ninja Combi cooks...');
     this._currentPath = 'recent_ninja';
     this._loadHistory();
     this.requestUpdate();
@@ -4836,7 +4697,6 @@ class KitchenCookingPanel extends LitElement {
    * Opens ingredient selection for AI recipe generation
    */
   async _startAIRecipeCreation() {
-    console.log('Starting AI Recipe Creation...');
     this._currentPath = 'ai_recipe_builder';
     this._selectedIngredients = [];
     this._selectedCookingStyle = null;
@@ -4871,7 +4731,6 @@ class KitchenCookingPanel extends LitElement {
    * Displays cook history filtered for current appliance
    */
   _showRecentApplianceRecipes() {
-    console.log('Showing recent appliance recipes...');
     this._currentPath = 'recent_appliance';
     this._loadHistory();
     this.requestUpdate();
@@ -4883,7 +4742,6 @@ class KitchenCookingPanel extends LitElement {
    * @param {boolean} enabled - Whether appliance is enabled
    */
   _toggleSecondaryAppliance(applianceId, enabled) {
-    console.log(`Toggle secondary appliance ${applianceId}: ${enabled}`);
     if (enabled) {
       if (!this._selectedSecondaryAppliances.includes(applianceId)) {
         this._selectedSecondaryAppliances = [...this._selectedSecondaryAppliances, applianceId];

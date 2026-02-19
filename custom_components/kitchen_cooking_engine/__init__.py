@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 18 Feb 2026, 23:40 UTC
-Last Change: v0.5.0.63 - Added option to disable persistent notifications
+Last Updated: 19 Feb 2026, 00:50 UTC
+Last Change: v0.5.0.64 - Fix 7 bugs: missing methods, duplicate methods, recipe field mismatches, recipe detail view
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -69,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.63"
+__version__ = "0.5.0.64"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
