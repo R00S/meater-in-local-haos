@@ -117,3 +117,40 @@ No automated tests exist - all testing is manual on real HAOS.
 3. ❌ Forgetting to run generate_frontend_data.py after editing
 4. ❌ Forgetting to commit ALL changed files (template + generated + data)
 5. ❌ Using deprecated HA APIs (check HA 2024.1.0+ compatibility)
+
+---
+
+## Project Goals & Architecture (from SKILL.md)
+
+### Terms of Reference (ToR)
+- **Objective**: Develop a robust cooking engine that integrates seamlessly with a variety of kitchen appliances and enhances user experience.
+- **Scope**: Cover multiple culinary processes, from preparation to cooking and cleanup.
+
+### HAOS Compatibility Guidelines
+- Ensure full compliance with Home Assistant Operating System (HAOS) standards.
+- Use HAOS APIs for integration with other smart home devices.
+- Maintain backward compatibility with previous HAOS versions.
+
+### Data Separation Principles
+- Ensure clear segregation of configuration, user data, and operational logs.
+- Use designated folders for different data types within the application.
+- Implement encryption where necessary to protect sensitive user information.
+
+### Multi-appliance Support
+- Design the system architecture to support various kitchen appliances regardless of manufacturer.
+- Create abstraction layers to handle communication with different appliance protocols.
+- Support appliance discovery using HAOS standard methods for a plug-and-play experience.
+
+### Architecture
+- Modular architecture that allows for easy updates and maintenance.
+- Clear API documentation for all service interfaces.
+
+### Development Workflows
+- `main` for stable releases, feature branches for new development.
+- CI/CD pipelines to automate testing and deployment.
+
+### Best Practices
+- Follow coding standards to ensure code maintainability.
+- Conduct code reviews to improve code quality.
+- Document all APIs, workflows, and system components.
+- Regularly update dependencies to patch vulnerabilities.
