@@ -4278,7 +4278,43 @@ class KitchenCookingPanel extends LitElement {
   /**
    * Phase 6: Start cooking from an AI-generated recipe
    */
-  _startCookingFromAIRecipe(recipe) {
+  async _startCookingFromAIRecipe(recipe) {
+    // Fetch full recipe detail (instructions, ingredients, tips) from backend
+    try {
+      this._showMessage('Loading recipe details...', false);
+      const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/detail', {
+        suggestion_id: recipe.id,
+        suggestion: {
+          id: recipe.id,
+          name: recipe.name,
+          description: recipe.description,
+          cook_time_minutes: recipe.cook_time_minutes,
+          difficulty: recipe.difficulty,
+          main_ingredients: recipe.main_ingredients || recipe.ingredients || [],
+          cuisine_type: recipe.cuisine_type,
+          required_appliances: recipe.required_appliances || []
+        },
+        appliance_ids: this._selectedAppliance ? [this._selectedAppliance.id] : []
+      });
+
+      if (response && response.detail) {
+        // Merge detail into recipe object
+        const detail = response.detail;
+        recipe.instructions = detail.instructions || [];
+        recipe.ingredients = detail.ingredients || recipe.main_ingredients || [];
+        recipe.tips = detail.tips || [];
+        recipe.servings = detail.servings || recipe.servings || 4;
+        recipe.prep_time_minutes = detail.prep_time_minutes || 0;
+        recipe.phases = detail.phases || [];
+        recipe.use_probe = detail.use_probe || false;
+        recipe.target_temp_c = detail.target_temp_c;
+        recipe.target_temp_f = detail.target_temp_f;
+      }
+    } catch (error) {
+      console.error('Error fetching recipe detail:', error);
+      // Continue with whatever data we have
+    }
+
     // Start recipe cook flow (Phase 4)
     this._recipeCookState = {
       recipe: recipe,
