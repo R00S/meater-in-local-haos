@@ -4014,9 +4014,38 @@ class KitchenCookingPanel extends LitElement {
       return;
     }
 
-    // If it's a MEATER probe cook with temperature data
+    // If it's a MEATER probe cook with cut_id and doneness, restart with same parameters
+    if (cook.cut_id && cook.doneness && cook.cooking_method) {
+      // Find a MEATER entity to use
+      const entities = this._getEntities();
+      const meaterEntity = entities.find(e => e.toLowerCase().includes('meater')) || entities[0];
+      if (!meaterEntity) {
+        alert('No cooking session entity found. Please set up a MEATER probe first.');
+        return;
+      }
+
+      // Set entity and call start_cook service directly with stored parameters
+      this._selectedEntity = meaterEntity;
+      const serviceData = {
+        cut_id: cook.cut_id,
+        doneness: cook.doneness,
+        cooking_method: cook.cooking_method,
+        data_source: this._dataSource,
+      };
+      if (cook.custom_target_temp_c) {
+        serviceData.custom_target_temp_c = cook.custom_target_temp_c;
+      }
+      this._callService('start_cook', serviceData);
+
+      // Navigate to welcome so the active cook is shown
+      this._selectedCookForDetail = null;
+      this._currentPath = 'welcome';
+      this.requestUpdate();
+      return;
+    }
+
+    // Legacy fallback: if cook has target_temp but no cut_id, navigate to meater setup
     if (cook.target_temp_c && cook.protein) {
-      // Navigate to MEATER cooking path with pre-filled data
       this._currentPath = 'meater';
       this._showMeaterCooking = true;
       this.requestUpdate();

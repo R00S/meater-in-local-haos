@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 19 Feb 2026, 02:39 CET
+ * AUTO-GENERATED: 19 Feb 2026, 02:53 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 19 Feb 2026, 02:39 CET
+// Last generated: 19 Feb 2026, 02:53 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -9543,9 +9543,38 @@ class KitchenCookingPanel extends LitElement {
       return;
     }
 
-    // If it's a MEATER probe cook with temperature data
+    // If it's a MEATER probe cook with cut_id and doneness, restart with same parameters
+    if (cook.cut_id && cook.doneness && cook.cooking_method) {
+      // Find a MEATER entity to use
+      const entities = this._getEntities();
+      const meaterEntity = entities.find(e => e.toLowerCase().includes('meater')) || entities[0];
+      if (!meaterEntity) {
+        alert('No cooking session entity found. Please set up a MEATER probe first.');
+        return;
+      }
+
+      // Set entity and call start_cook service directly with stored parameters
+      this._selectedEntity = meaterEntity;
+      const serviceData = {
+        cut_id: cook.cut_id,
+        doneness: cook.doneness,
+        cooking_method: cook.cooking_method,
+        data_source: this._dataSource,
+      };
+      if (cook.custom_target_temp_c) {
+        serviceData.custom_target_temp_c = cook.custom_target_temp_c;
+      }
+      this._callService('start_cook', serviceData);
+
+      // Navigate to welcome so the active cook is shown
+      this._selectedCookForDetail = null;
+      this._currentPath = 'welcome';
+      this.requestUpdate();
+      return;
+    }
+
+    // Legacy fallback: if cook has target_temp but no cut_id, navigate to meater setup
     if (cook.target_temp_c && cook.protein) {
-      // Navigate to MEATER cooking path with pre-filled data
       this._currentPath = 'meater';
       this._showMeaterCooking = true;
       this.requestUpdate();
@@ -12580,7 +12609,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "155";
+const PANEL_VERSION = "156";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
