@@ -4403,7 +4403,7 @@ class KitchenCookingPanel extends LitElement {
             <ol>
               ${steps.map((step, idx) => html`
                 <li>
-                  ${step.name || `Step ${idx + 1}`}
+                  ${step.instructions || step.description || step.name || `Step ${idx + 1}`}
                   ${step.time ? html` <span class="step-time">(~${step.time} min)</span>` : ''}
                 </li>
               `)}
