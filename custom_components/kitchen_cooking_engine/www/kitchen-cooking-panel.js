@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 19 Feb 2026, 14:32 CET
+ * AUTO-GENERATED: 19 Feb 2026, 15:06 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 19 Feb 2026, 14:32 CET
+// Last generated: 19 Feb 2026, 15:06 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -9273,10 +9273,13 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : html`
         <div class="recipe-suggestions">
-          ${this._aiRecipeSuggestions.map(recipe => html`
+          ${this._aiRecipeSuggestions.map(recipe => {
+            // Decode HTML entities in recipe name (AI may return &amp; instead of &)
+            const displayName = recipe.name ? (() => { const t = document.createElement('textarea'); t.innerHTML = recipe.name; return t.value; })() : '';
+            return html`
             <ha-card class="recipe-suggestion-card">
               <div class="card-content">
-                <h3>${recipe.name}</h3>
+                <h3>${displayName}</h3>
                 <p class="recipe-description">${recipe.description || ''}</p>
                 
                 <div class="recipe-details">
@@ -9306,7 +9309,7 @@ class KitchenCookingPanel extends LitElement {
                 </button>
               </div>
             </ha-card>
-          `)}
+          `; })}
         </div>
 
         <div class="action-buttons">
@@ -9640,6 +9643,14 @@ class KitchenCookingPanel extends LitElement {
 
     const recipe = this._recipeCookState.recipe;
     const steps = this._getRecipeSteps(recipe);
+    
+    // Guard: if no steps at all, go straight to finish
+    if (steps.length === 0) {
+      this._recipeCookState.currentStep = 1; // Finish page (>= steps.length)
+      this.requestUpdate();
+      return;
+    }
+    
     const maxStep = steps.length - 1;
     
     // If we're on the last step, go to finish page
@@ -9658,8 +9669,12 @@ class KitchenCookingPanel extends LitElement {
   _previousRecipeStep() {
     if (!this._recipeCookState) return;
 
-    if (this._recipeCookState.currentStep > -1) {
+    if (this._recipeCookState.currentStep > 0) {
+      // Go to previous step
       this._recipeCookState.currentStep--;
+    } else if (this._recipeCookState.currentStep === 0) {
+      // From first step, go back to overview
+      this._recipeCookState.currentStep = -1;
     } else {
       // If at overview, exit cook flow
       this._stopRecipeCook();
@@ -9810,6 +9825,13 @@ class KitchenCookingPanel extends LitElement {
   async _startCookingFromAIRecipe(recipe) {
     // Work on a COPY so we don't mutate the suggestion in _aiRecipeSuggestions
     const fullRecipe = Object.assign({}, recipe);
+    
+    // Decode HTML entities in name (AI may return &amp; instead of &)
+    if (fullRecipe.name) {
+      const txt = document.createElement('textarea');
+      txt.innerHTML = fullRecipe.name;
+      fullRecipe.name = txt.value;
+    }
     
     // Fetch full recipe detail (instructions, ingredients, tips) from backend
     try {
@@ -12869,7 +12891,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "163";
+const PANEL_VERSION = "164";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

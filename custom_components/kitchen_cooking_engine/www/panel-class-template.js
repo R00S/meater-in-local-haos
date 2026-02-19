@@ -3744,10 +3744,13 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : html`
         <div class="recipe-suggestions">
-          ${this._aiRecipeSuggestions.map(recipe => html`
+          ${this._aiRecipeSuggestions.map(recipe => {
+            // Decode HTML entities in recipe name (AI may return &amp; instead of &)
+            const displayName = recipe.name ? (() => { const t = document.createElement('textarea'); t.innerHTML = recipe.name; return t.value; })() : '';
+            return html`
             <ha-card class="recipe-suggestion-card">
               <div class="card-content">
-                <h3>${recipe.name}</h3>
+                <h3>${displayName}</h3>
                 <p class="recipe-description">${recipe.description || ''}</p>
                 
                 <div class="recipe-details">
@@ -3777,7 +3780,7 @@ class KitchenCookingPanel extends LitElement {
                 </button>
               </div>
             </ha-card>
-          `)}
+          `; })}
         </div>
 
         <div class="action-buttons">
@@ -4111,6 +4114,14 @@ class KitchenCookingPanel extends LitElement {
 
     const recipe = this._recipeCookState.recipe;
     const steps = this._getRecipeSteps(recipe);
+    
+    // Guard: if no steps at all, go straight to finish
+    if (steps.length === 0) {
+      this._recipeCookState.currentStep = 1; // Finish page (>= steps.length)
+      this.requestUpdate();
+      return;
+    }
+    
     const maxStep = steps.length - 1;
     
     // If we're on the last step, go to finish page
@@ -4129,8 +4140,12 @@ class KitchenCookingPanel extends LitElement {
   _previousRecipeStep() {
     if (!this._recipeCookState) return;
 
-    if (this._recipeCookState.currentStep > -1) {
+    if (this._recipeCookState.currentStep > 0) {
+      // Go to previous step
       this._recipeCookState.currentStep--;
+    } else if (this._recipeCookState.currentStep === 0) {
+      // From first step, go back to overview
+      this._recipeCookState.currentStep = -1;
     } else {
       // If at overview, exit cook flow
       this._stopRecipeCook();
@@ -4281,6 +4296,13 @@ class KitchenCookingPanel extends LitElement {
   async _startCookingFromAIRecipe(recipe) {
     // Work on a COPY so we don't mutate the suggestion in _aiRecipeSuggestions
     const fullRecipe = Object.assign({}, recipe);
+    
+    // Decode HTML entities in name (AI may return &amp; instead of &)
+    if (fullRecipe.name) {
+      const txt = document.createElement('textarea');
+      txt.innerHTML = fullRecipe.name;
+      fullRecipe.name = txt.value;
+    }
     
     // Fetch full recipe detail (instructions, ingredients, tips) from backend
     try {
