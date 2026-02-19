@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 19 Feb 2026, 03:23 CET
+ * AUTO-GENERATED: 19 Feb 2026, 13:41 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 19 Feb 2026, 03:23 CET
+// Last generated: 19 Feb 2026, 13:41 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -9119,16 +9119,17 @@ class KitchenCookingPanel extends LitElement {
   _renderAIIngredientSelection() {
     // Data should already be loaded by _startAIRecipeCreation()
     // If not loaded, show loading state
-    if (!this._commonIngredients) {
+    if (!this._commonIngredients || this._commonIngredients.length === 0) {
       return html`<div class="loading">Loading ingredients...</div>`;
     }
 
+    // _commonIngredients is a flat array of {id, name} objects (flattened from categorized API response)
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => {
           this._showAIIngredientSelector = false;
           this._selectedIngredients = [];
-          this._currentPath = this._selectedAppliance?.type === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
+          this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
           this.requestUpdate();
         }}>
           ← Back
@@ -9145,10 +9146,10 @@ class KitchenCookingPanel extends LitElement {
               <label class="ingredient-checkbox">
                 <input 
                   type="checkbox" 
-                  ?checked=${this._selectedIngredients.includes(ingredient)}
-                  @change=${(e) => this._toggleIngredient(ingredient, e.target.checked)}
+                  ?checked=${this._selectedIngredients.includes(ingredient.name || ingredient)}
+                  @change=${(e) => this._toggleIngredient(ingredient.name || ingredient, e.target.checked)}
                 />
-                ${ingredient}
+                ${ingredient.name || ingredient}
               </label>
             `)}
           </div>
@@ -10215,13 +10216,18 @@ class KitchenCookingPanel extends LitElement {
     // Load data FIRST (same pattern as _startAIRecipeCreation)
     try {
       // Load ingredients if not already loaded
-      if (!this._commonIngredients) {
+      if (!this._commonIngredients || this._commonIngredients.length === 0) {
         const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
-        this._commonIngredients = response.ingredients || [];
+        const rawIngredients = response.ingredients || {};
+        if (Array.isArray(rawIngredients)) {
+          this._commonIngredients = rawIngredients;
+        } else {
+          this._commonIngredients = Object.values(rawIngredients).flat();
+        }
       }
       
       // Load cooking styles if not already loaded
-      if (!this._cookingStyles) {
+      if (!this._cookingStyles || this._cookingStyles.length === 0) {
         const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/cooking_styles');
         this._cookingStyles = response.cooking_styles || [];
       }
@@ -10263,13 +10269,20 @@ class KitchenCookingPanel extends LitElement {
     // Load data before showing UI to avoid "[object Promise]" display
     try {
       // Load ingredients if not already loaded
-      if (!this._commonIngredients) {
+      if (!this._commonIngredients || this._commonIngredients.length === 0) {
         const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/ingredients');
-        this._commonIngredients = response.ingredients || [];
+        // API returns {proteins: [...], vegetables: [...], ...} — flatten to single array
+        const rawIngredients = response.ingredients || {};
+        if (Array.isArray(rawIngredients)) {
+          this._commonIngredients = rawIngredients;
+        } else {
+          // Flatten categorized dict into flat array
+          this._commonIngredients = Object.values(rawIngredients).flat();
+        }
       }
       
       // Load cooking styles if not already loaded
-      if (!this._cookingStyles) {
+      if (!this._cookingStyles || this._cookingStyles.length === 0) {
         const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/cooking_styles');
         this._cookingStyles = response.cooking_styles || [];
       }
@@ -12602,6 +12615,212 @@ class KitchenCookingPanel extends LitElement {
           font-size: 28px;
         }
       }
+      /* ========================================
+         PHASE 6: AI RECIPE BUILDER STYLES
+         ======================================== */
+
+      .info-text {
+        color: var(--secondary-text-color);
+        margin-bottom: 16px;
+        font-size: 14px;
+      }
+
+      .ingredient-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .ingredient-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        background: var(--secondary-background-color);
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.2s;
+      }
+
+      .ingredient-checkbox:hover {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      .ingredient-checkbox input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
+
+      .ingredient-custom {
+        margin-bottom: 20px;
+      }
+
+      .ingredient-custom input {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1px solid var(--divider-color);
+        border-radius: 8px;
+        background: var(--secondary-background-color);
+        color: var(--primary-text-color);
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+
+      .ingredient-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+
+      .ingredient-tag button {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 0 2px;
+        margin-left: 4px;
+      }
+
+      .selected-ingredients {
+        margin-bottom: 20px;
+      }
+
+      .style-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      .style-card {
+        border: 2px solid transparent;
+        transition: border-color 0.2s, transform 0.1s;
+      }
+
+      .style-card:hover {
+        transform: translateY(-2px);
+      }
+
+      .style-card.selected {
+        border-color: var(--primary-color);
+        background: rgba(var(--rgb-primary-color), 0.05);
+      }
+
+      .style-icon {
+        font-size: 32px;
+        margin-bottom: 8px;
+      }
+
+      .recipe-suggestions {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .recipe-suggestion-card {
+        border-left: 4px solid var(--primary-color);
+      }
+
+      .recipe-description {
+        color: var(--secondary-text-color);
+        margin-bottom: 12px;
+        font-size: 14px;
+      }
+
+      .recipe-details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 16px;
+        padding: 12px;
+        background: var(--secondary-background-color);
+        border-radius: 8px;
+      }
+
+      .detail-item {
+        font-size: 14px;
+      }
+
+      .recipe-ingredients ul {
+        columns: 2;
+        padding-left: 20px;
+        margin: 8px 0 16px 0;
+      }
+
+      .recipe-ingredients li {
+        margin-bottom: 4px;
+        font-size: 14px;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 16px;
+        justify-content: center;
+      }
+
+      .secondary-btn {
+        padding: 10px 20px;
+        background: var(--secondary-background-color);
+        color: var(--primary-text-color);
+        border: 1px solid var(--divider-color);
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .secondary-btn:hover {
+        background: var(--divider-color);
+      }
+
+      .appliance-info {
+        margin-bottom: 8px;
+      }
+
+      .appliance-features {
+        color: var(--secondary-text-color);
+        font-size: 14px;
+      }
+
+      .secondary-appliances {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid var(--divider-color);
+      }
+
+      .checkbox-label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 0;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .checkbox-label input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
+
+      @media (max-width: 600px) {
+        .ingredient-grid {
+          grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        }
+        .style-grid {
+          grid-template-columns: 1fr;
+        }
+        .recipe-ingredients ul {
+          columns: 1;
+        }
+      }
     `;
   }
 }
@@ -12609,7 +12828,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "160";
+const PANEL_VERSION = "161";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

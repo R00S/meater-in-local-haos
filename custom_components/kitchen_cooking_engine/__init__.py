@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 19 Feb 2026, 11:55 UTC
-Last Change: v0.5.0.73 - Remove broken View Assist dashboard creation (keep blueprint)
+Last Updated: 19 Feb 2026, 12:24 UTC
+Last Change: v0.5.1.0 - AI Recipe Builder: fix data format, add CSS, wire up ingredient/style/generation flow
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -65,7 +65,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.73"
+__version__ = "0.5.1.0"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
