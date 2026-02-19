@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 19 Feb 2026, 03:18 CET
+ * AUTO-GENERATED: 19 Feb 2026, 03:23 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 19 Feb 2026, 03:18 CET
+// Last generated: 19 Feb 2026, 03:23 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -4470,7 +4470,7 @@ const NINJA_COMBI_RECIPES = [
       "Top with remaining 1/2 cup (1.2 dl) cheddar",
       "Place pie dish on Crisper Plate",
       "Slide pan into Level 1",
-      "Select COMBI BAKE, 350°F, 25 minutes",
+      "Select COMBI BAKE, 350°F (177°C), 25 minutes",
       "Unit will steam for 20 minutes before baking",
       "When done, eggs should be set with slight jiggle in center",
       "Let cool 10 minutes before slicing"
@@ -4566,11 +4566,11 @@ const NINJA_COMBI_RECIPES = [
       "2 tbsp olive oil",
       "",
       "# Level 2 (Bake Tray) - Protein",
-      "6 boneless pork chops (6-8 oz each)",
-      "1 lb smoked bacon",
+      "6 boneless pork chops (6-8 oz / 170-225 g each)",
+      "1 lb (455 g) smoked bacon",
       "2 tbsp Dijon mustard",
       "2 tbsp honey or maple syrup",
-      "1.5 lbs Brussels sprouts, trimmed and halved",
+      "1.5 lbs (680 g) Brussels sprouts, trimmed and halved",
       "1 tbsp olive oil",
       "1 tbsp garlic powder",
       "1 tsp kosher salt",
@@ -4583,7 +4583,7 @@ const NINJA_COMBI_RECIPES = [
       "Wrap each chop with bacon strips",
       "Place chops on Bake Tray, slide into Level 2",
       "Insert MEATER+ probe into thickest chop",
-      "Select COMBI MEALS, 350°F, 22 minutes",
+      "Select COMBI MEALS, 350°F (177°C), 22 minutes",
       "Unit will steam for 5 minutes",
       "When 10 minutes remain, toss Brussels sprouts with oil and seasonings",
       "Open door, flip chops, add Brussels sprouts around chops",
@@ -4624,7 +4624,7 @@ const NINJA_COMBI_RECIPES = [
     ],
     "use_probe": true,
     "ingredients": [
-      "3-5 lb top round roast, patted dry",
+      "3-5 lb (1.4 kg-2.3 kg) top round roast, patted dry",
       "2 tbsp canola oil, divided",
       "2 medium carrots, cut in 1.5-inch pieces",
       "1 medium onion, quartered",
@@ -4643,7 +4643,7 @@ const NINJA_COMBI_RECIPES = [
       "Place roast on Crisper Plate with vegetables around it",
       "Insert MEATER+ probe into center of roast",
       "Slide into Level 1",
-      "Select COMBI CRISP, 360°F, 65 minutes",
+      "Select COMBI CRISP, 360°F (182°C), 65 minutes",
       "Unit will steam for ~6 minutes before crisping",
       "At 45 minutes, start checking probe temperature",
       "For medium-rare: remove at 54°C/130°F",
@@ -4695,7 +4695,7 @@ const NINJA_COMBI_RECIPES = [
     "ingredients": [
       "1 cup (2.4 dl) water (for proofing)",
       "Nonstick cooking spray",
-      "1 lb store-bought pizza dough, room temperature",
+      "1 lb (455 g) store-bought pizza dough, room temperature",
       "1/4 cup (0.6 dl) extra virgin olive oil",
       "1 tbsp garlic powder",
       "2 tbsp fresh parsley, chopped",
@@ -4708,10 +4708,10 @@ const NINJA_COMBI_RECIPES = [
       "Spray 8-inch round pan with cooking spray",
       "Form dough into ball, place in pan",
       "Place pan on Crisper Plate, slide into Level 1",
-      "Select PROOF, 95°F, 40 minutes",
+      "Select PROOF, 95°F (35°C), 40 minutes",
       "While proofing, mix oil, garlic, parsley, thyme, and salt",
       "When proofing complete, dimple dough all over with fingers",
-      "Select COMBI CRISP, 350°F, 20 minutes",
+      "Select COMBI CRISP, 350°F (177°C), 20 minutes",
       "Unit will steam 3-4 minutes",
       "When 5 minutes remain, brush oil mixture on top",
       "When done, remove and serve warm",
@@ -4773,7 +4773,7 @@ const NINJA_COMBI_RECIPES = [
       "Place Crisper Plate on top",
       "Place potatoes on Crisper Plate",
       "Slide pan into Level 1",
-      "Select COMBI CRISP, 400°F, 30 minutes",
+      "Select COMBI CRISP, 400°F (204°C), 30 minutes",
       "Unit will steam for 10 minutes",
       "When done, transfer potatoes to plate, let cool 5 minutes",
       "Cut 2-3 inch opening on top of each potato",
@@ -4823,8 +4823,8 @@ const NINJA_COMBI_RECIPES = [
       "All-purpose flour (for dusting)",
       "1 large egg",
       "1 tbsp water",
-      "1 sheet (8.5 oz) frozen puff pastry, thawed",
-      "1 chocolate bar (1.5 oz), broken into pieces"
+      "1 sheet (8.5 oz / 240 g) frozen puff pastry, thawed",
+      "1 chocolate bar (1.5 oz / 45 g), broken into pieces"
     ],
     "instructions": [
       "Beat egg with 1 tbsp water, set aside",
@@ -4836,7 +4836,7 @@ const NINJA_COMBI_RECIPES = [
       "Place seam-side down on Bake Tray",
       "Brush tops with egg mixture",
       "Slide tray into Level 2",
-      "Select COMBI BAKE, 350°F, 12 minutes",
+      "Select COMBI BAKE, 350°F (177°C), 12 minutes",
       "Unit will steam for 20 minutes before baking",
       "When done, remove and serve immediately",
       "Store in airtight container up to 3 days"
@@ -4893,7 +4893,7 @@ const NINJA_COMBI_RECIPES = [
       "Sprinkle sugar on top",
       "Dot butter pieces across apples",
       "Slide pan into Level 1",
-      "Select COMBI BAKE, 350°F, 17 minutes",
+      "Select COMBI BAKE, 350°F (177°C), 17 minutes",
       "Unit will steam for 20 minutes before baking",
       "When done, let cool 10 minutes",
       "Serve with whipped cream or ice cream"
@@ -4930,9 +4930,9 @@ const NINJA_COMBI_RECIPES = [
     "ingredients": [
       "3/4 cup (1.8 dl) water (for steaming)",
       "1 prepared chocolate cookie pie crust (in aluminum foil dish)",
-      "1 bag (12 oz) semi-sweet chocolate chips",
+      "1 bag (12 oz / 340 g) semi-sweet chocolate chips",
       "1/2 cup (1.2 dl) heavy cream",
-      "1.5 blocks (12 oz) cream cheese, room temperature",
+      "1.5 blocks (12 oz / 340 g) cream cheese, room temperature",
       "1/2 cup (1.2 dl) granulated sugar",
       "1 tsp instant espresso powder",
       "1 tsp vanilla extract",
@@ -4951,7 +4951,7 @@ const NINJA_COMBI_RECIPES = [
       "Fold in melted chocolate mixture",
       "Pour mixture into pie crust (fill just below rim)",
       "Slide pan into Level 1",
-      "Select COMBI BAKE, 375°F, 15 minutes",
+      "Select COMBI BAKE, 375°F (191°C), 15 minutes",
       "Unit will steam for 20 minutes before baking",
       "When done, center should have slight jiggle",
       "Let cool in pan 20 minutes",
@@ -4989,7 +4989,7 @@ const NINJA_COMBI_RECIPES = [
     "use_probe": false,
     "ingredients": [
       "1 cup (2.4 dl) grated Parmesan cheese, divided",
-      "1.5 lbs Brussels sprouts, trimmed and halved",
+      "1.5 lbs (680 g) Brussels sprouts, trimmed and halved",
       "2 tbsp olive oil",
       "2 tsp garlic powder",
       "1 tbsp balsamic vinegar",
@@ -4998,7 +4998,7 @@ const NINJA_COMBI_RECIPES = [
     ],
     "instructions": [
       "Place Crisper Plate in Combi Cooker Pan",
-      "Select AIR FRY, 390°F, 20 minutes to preheat",
+      "Select AIR FRY, 390°F (199°C), 20 minutes to preheat",
       "Unit will preheat for 5 minutes",
       "While preheating, toss Brussels sprouts with 1/2 cup (1.2 dl) Parmesan and all other ingredients",
       "When 15 minutes remain, open door and slide pan into Level 1",
@@ -5050,11 +5050,11 @@ const NINJA_COMBI_RECIPES = [
       "2 cups (4.8 dl) frozen peas and carrots",
       "2 tbsp dried parsley",
       "1 tsp dried thyme",
-      "1 rotisserie chicken (34 oz), cut into bite-size pieces",
+      "1 rotisserie chicken (34 oz / 965 g), cut into bite-size pieces",
       "1/4 cup (0.6 dl) all-purpose flour",
       "2 cups (4.8 dl) chicken or veggie stock",
       "3/4 cup (1.8 dl) half & half",
-      "1 can (16.3 oz) refrigerated flaky biscuits",
+      "1 can (16.3 oz / 460 g) refrigerated flaky biscuits",
       "Kosher salt and black pepper"
     ],
     "instructions": [
@@ -5071,7 +5071,7 @@ const NINJA_COMBI_RECIPES = [
       "Simmer until sauce thickens (~3 minutes)",
       "Remove pan, stir in chicken, salt, pepper",
       "Return pan to Level 1, close door",
-      "Select BAKE, 350°F, 12 minutes to preheat",
+      "Select BAKE, 350°F (177°C), 12 minutes to preheat",
       "Place biscuits on Bake Tray",
       "When preheated, slide tray onto Level 2",
       "Close door and cook",
@@ -5116,12 +5116,12 @@ const NINJA_COMBI_RECIPES = [
     ],
     "use_probe": false,
     "ingredients": [
-      "8 oz American cheese (about 12 slices), broken into pieces",
+      "8 oz (225 g) American cheese (about 12 slices), broken into pieces",
       "2 cups (4.8 dl) shredded sharp cheddar cheese",
       "2 cups (4.8 dl) shredded low moisture mozzarella",
       "3.5 cups (8.4 dl) whole milk",
       "2 cups (4.8 dl) water",
-      "1 box (16 oz) macaroni elbows",
+      "1 box (16 oz / 455 g) macaroni elbows",
       "Kosher salt and black pepper",
       "",
       "# Topping",
@@ -5132,7 +5132,7 @@ const NINJA_COMBI_RECIPES = [
     "instructions": [
       "Add all cheeses, milk, water, pasta, salt, pepper to Combi Cooker Pan",
       "Stir well to combine",
-      "Select BAKE, 400°F, 20 minutes to preheat",
+      "Select BAKE, 400°F (204°C), 20 minutes to preheat",
       "Unit will preheat 3 minutes",
       "When preheated, slide pan into Level 1",
       "Close door to start cooking",
@@ -5183,14 +5183,14 @@ const NINJA_COMBI_RECIPES = [
     "ingredients": [
       "1 cup (2.4 dl) water (for proofing)",
       "Nonstick cooking spray",
-      "16 oz store-bought pizza dough, room temperature",
+      "16 oz (455 g) store-bought pizza dough, room temperature",
       "All-purpose flour for dusting",
       "Olive oil",
       "1.5 cups (3.6 dl) shredded mozzarella cheese",
       "1/2 cup (1.2 dl) pepperoni",
       "1/2 cup (1.2 dl) green bell pepper, thinly sliced",
       "1/2 cup (1.2 dl) yellow onion, thinly sliced",
-      "1 jar (14 oz) pizza sauce",
+      "1 jar (14 fl oz / 4.1 dl) pizza sauce",
       "1/2 cup (1.2 dl) grated Parmesan cheese"
     ],
     "instructions": [
@@ -5199,7 +5199,7 @@ const NINJA_COMBI_RECIPES = [
       "Spray plate with cooking spray",
       "Form dough into ball, place on plate",
       "Slide pan into Level 1",
-      "Select PROOF, 95°F, 40 minutes",
+      "Select PROOF, 95°F (35°C), 40 minutes",
       "When proofing done, remove pan",
       "Transfer dough to floured surface",
       "Roll into rectangle 15x8 inches",
@@ -5207,7 +5207,7 @@ const NINJA_COMBI_RECIPES = [
       "Brush pan with olive oil",
       "Transfer dough to pan, press into corners and up sides",
       "Layer: mozzarella, pepperoni, peppers, onions, sauce, Parmesan",
-      "Select PIZZA, 400°F, 18 minutes to preheat",
+      "Select PIZZA, 400°F (204°C), 18 minutes to preheat",
       "Unit will preheat 3 minutes",
       "When preheated, slide pan into Level 1",
       "Close door to cook",
@@ -5257,10 +5257,10 @@ const NINJA_COMBI_RECIPES = [
       "2 whole carrots, peeled and diced",
       "3 garlic cloves, minced",
       "2 tbsp tomato paste",
-      "2 lbs ground beef",
+      "2 lbs (910 g) ground beef",
       "1 tbsp Italian seasoning",
       "1 cup (2.4 dl) dry red wine",
-      "2 cans (28 oz each) whole peeled tomatoes with liquid",
+      "2 cans (28 fl oz / 8.3 dl each) whole peeled tomatoes with liquid",
       "3/4 cup (1.8 dl) whole milk",
       "Kosher salt and black pepper"
     ],
@@ -12609,7 +12609,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "159";
+const PANEL_VERSION = "160";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

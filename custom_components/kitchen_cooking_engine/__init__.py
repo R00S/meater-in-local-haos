@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 19 Feb 2026, 01:45 UTC
-Last Change: v0.5.0.69 - Use dl instead of ml for cup metric equivalents
+Last Change: v0.5.0.70 - Add metric for oz, lbs, °F; fix fluid oz vs weight oz
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -69,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.69"
+__version__ = "0.5.0.70"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
