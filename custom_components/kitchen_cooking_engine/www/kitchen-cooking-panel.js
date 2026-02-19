@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 19 Feb 2026, 02:53 CET
+ * AUTO-GENERATED: 19 Feb 2026, 03:01 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 19 Feb 2026, 02:53 CET
+// Last generated: 19 Feb 2026, 03:01 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -9546,7 +9546,7 @@ class KitchenCookingPanel extends LitElement {
     // If it's a MEATER probe cook with cut_id and doneness, restart with same parameters
     if (cook.cut_id && cook.doneness && cook.cooking_method) {
       // Find a MEATER entity to use
-      const entities = this._getEntities();
+      const entities = this._findCookingEntities();
       const meaterEntity = entities.find(e => e.toLowerCase().includes('meater')) || entities[0];
       if (!meaterEntity) {
         alert('No cooking session entity found. Please set up a MEATER probe first.');
@@ -12609,7 +12609,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "156";
+const PANEL_VERSION = "157";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

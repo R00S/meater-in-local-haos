@@ -4017,7 +4017,7 @@ class KitchenCookingPanel extends LitElement {
     // If it's a MEATER probe cook with cut_id and doneness, restart with same parameters
     if (cook.cut_id && cook.doneness && cook.cooking_method) {
       // Find a MEATER entity to use
-      const entities = this._getEntities();
+      const entities = this._findCookingEntities();
       const meaterEntity = entities.find(e => e.toLowerCase().includes('meater')) || entities[0];
       if (!meaterEntity) {
         alert('No cooking session entity found. Please set up a MEATER probe first.');

@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 19 Feb 2026, 01:45 UTC
-Last Change: v0.5.0.66 - Fix restart cook to use stored parameters instead of navigating to setup
+Last Change: v0.5.0.67 - Fix _restartCook calling nonexistent _getEntities instead of _findCookingEntities
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -69,7 +69,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.66"
+__version__ = "0.5.0.67"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
