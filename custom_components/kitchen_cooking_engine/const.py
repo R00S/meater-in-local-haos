@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 18 Feb 2026, 23:40 UTC
-Last Change: v0.5.0.63 - Added option to disable persistent notifications
+Last Updated: 19 Feb 2026, 13:12 UTC
+Last Change: v0.5.1.3 - AI Recipe Builder: fetch detail API before starting cook flow
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "153"
+PANEL_VERSION = "164"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

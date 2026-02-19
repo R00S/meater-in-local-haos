@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 18 Feb 2026, 23:40 UTC
-Last Change: v0.5.0.63 - Added option to disable persistent notifications
+Last Updated: 19 Feb 2026, 13:12 UTC
+Last Change: v0.5.1.3 - AI Recipe Builder: fetch detail API before starting cook flow
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -60,16 +60,12 @@ from .swedish_cooking_data import (
     SWEDISH_MEAT_CATEGORIES,
 )
 from .api import async_register_api
-from .view_assist_dashboard import (
-    async_create_view_assist_dashboard,
-    async_remove_view_assist_dashboard,
-)
 
 _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.0.63"
+__version__ = "0.5.1.3"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -227,16 +223,6 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
         # Regenerate frontend data from backend before registering panel
         await _async_regenerate_frontend_data(hass)
         
-        # Create View Assist dashboard for zero-config compatibility
-        # Don't let dashboard creation failure block panel registration
-        try:
-            await async_create_view_assist_dashboard(hass)
-        except Exception as dashboard_err:
-            _LOGGER.warning(
-                "Kitchen Cooking Engine: Failed to create View Assist dashboard (non-critical): %s",
-                dashboard_err
-            )
-        
         # Re-read PANEL_VERSION after regeneration (it may have been updated)
         # We need to reload the const module to get the updated value
         import importlib
@@ -362,12 +348,6 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     if manager:
         await manager.async_unload_appliance(entry.entry_id)
         _LOGGER.info("Appliance unloaded: %s", entry.title)
-    
-    # Remove View Assist dashboard if this is the last config entry
-    remaining_entries = [e for e in hass.config_entries.async_entries(DOMAIN) if e.entry_id != entry.entry_id]
-    if not remaining_entries:
-        await async_remove_view_assist_dashboard(hass)
-        _LOGGER.info("Removed View Assist dashboard (last config entry)")
     
     unload_ok = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
     if unload_ok:
