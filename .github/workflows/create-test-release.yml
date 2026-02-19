@@ -1,13 +1,9 @@
-# Updated: 2026-02-19 - Added target_branch input for branches not visible in dropdown
+# Updated: 2026-01-16 for branch copilot/create-terms-of-reference
 name: Create Test Release
 
 on:
   workflow_dispatch:
     inputs:
-      target_branch:
-        description: 'Branch to release from (type name if not in dropdown above, e.g. copilot/continue-tor-implementation)'
-        required: false
-        type: string
       release_type:
         description: 'Release type'
         required: true
@@ -30,28 +26,15 @@ jobs:
       pull-requests: read
     
     steps:
-      - name: Determine target branch
-        id: target
-        run: |
-          # Use explicit target_branch input if provided, otherwise use the branch selected in dropdown
-          if [ -n "${{ github.event.inputs.target_branch }}" ]; then
-            echo "ref=${{ github.event.inputs.target_branch }}" >> $GITHUB_OUTPUT
-            echo "Using explicitly specified branch: ${{ github.event.inputs.target_branch }}"
-          else
-            echo "ref=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
-            echo "Using dropdown-selected branch: ${GITHUB_REF#refs/heads/}"
-          fi
-
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: ${{ steps.target.outputs.ref }}
           fetch-depth: 0
       
       - name: Get current branch name
         id: branch
         run: |
-          BRANCH_NAME="${{ steps.target.outputs.ref }}"
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
           echo "name=$BRANCH_NAME" >> $GITHUB_OUTPUT
           # Sanitize branch name for use in version (replace / with -)
           SAFE_BRANCH=$(echo "$BRANCH_NAME" | sed 's/\//-/g')
@@ -159,7 +142,7 @@ jobs:
           files: kitchen-cooking-engine-${{ steps.version.outputs.test }}.zip
           draft: false
           prerelease: true
-          target_commitish: ${{ steps.target.outputs.ref }}
+          target_commitish: ${{ github.sha }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
