@@ -117,6 +117,38 @@ No automated tests exist - all testing is manual on real HAOS.
 3. ❌ Forgetting to run generate_frontend_data.py after editing
 4. ❌ Forgetting to commit ALL changed files (template + generated + data)
 5. ❌ Using deprecated HA APIs (check HA 2024.1.0+ compatibility)
+6. ❌ **FABRICATING method/property names instead of reading the source code** (see below)
+
+---
+
+## 🛑 NEVER Fabricate Code — Always Read the Source First
+
+**This is the #1 cause of failed releases.** AI agents tend to generate plausible-sounding
+method names from patterns instead of reading the actual source code. This ALWAYS fails.
+
+### The Rule
+When writing ANY new code that calls existing methods or references existing properties:
+1. **OPEN and READ the actual source file** where the method/property is defined
+2. **FIND the real method name** by reading the code, not by guessing from patterns
+3. **COPY the exact name** from the source into your new code
+
+### What NOT to Do
+- ❌ Generate method names from naming patterns (e.g. seeing 15 `_get*` methods and inventing `_getEntities()`)
+- ❌ Assume a method exists because "it should" or "it makes sense"
+- ❌ Write code that references methods you haven't verified exist in the current codebase
+
+### Why This Matters
+In v0.5.0.66, the agent wrote `this._getEntities()` — a method that **does not exist anywhere
+in the codebase**. It was fabricated from the dominant `_get*` naming pattern (15+ such methods).
+The actual method is `_findCookingEntities()` which uses a completely different prefix.
+This caused a TypeError crash and a failed release. The agent would have seen this immediately
+if it had simply opened panel-class-template.js and read the method list.
+
+### Success Rate Impact
+| Approach | Success Rate |
+|----------|-------------|
+| Code where source was READ first | 80-95% |
+| Code with FABRICATED names (guessed from patterns) | **0%** |
 
 ---
 
