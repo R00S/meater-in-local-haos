@@ -1,7 +1,7 @@
 """Config flow for Kitchen Cooking Engine integration.
 
-Last Updated: 14 Jan 2026, 01:00 CET
-Last Change: Added feature editing UI to all predefined appliance options flows
+Last Updated: 23 Feb 2026, 22:30 UTC
+Last Change: Replaced plain text entity inputs with HA entity selectors for better device detection
 """
 
 from __future__ import annotations
