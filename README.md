@@ -3,6 +3,7 @@
 [![HACS Badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2024.1.0+-blue.svg)](https://www.home-assistant.io/)
 [![Alpha](https://img.shields.io/badge/Status-ALPHA-orange.svg)](https://github.com/R00S/meater-in-local-haos)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/R00S)
 
 ⚠️ **ALPHA SOFTWARE** - AI Recipe Builder is experimental. Use for testing purposes only.
 
@@ -660,6 +661,12 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 
 - MEATER BLE protocol research: [nathanfaber/meaterble](https://github.com/nathanfaber/meaterble)
 - ESPHome BLE integration: [Home Assistant Community](https://community.home-assistant.io/)
+
+## ☕ Support
+
+If you find this project useful, consider buying me a coffee!
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/R00S)
 
 ## 📄 License
 
