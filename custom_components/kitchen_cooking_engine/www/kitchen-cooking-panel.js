@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 18 Feb 2026, 23:54 CET
+ * AUTO-GENERATED: 24 Feb 2026, 22:59 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 18 Feb 2026, 23:54 CET
+// Last generated: 24 Feb 2026, 22:59 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5644,6 +5644,9 @@ class KitchenCookingPanel extends LitElement {
       _showAIIngredientSelector: { type: Boolean },  // Show AI ingredient selection
       _showAIStyleSelector: { type: Boolean },  // Show AI cooking style selection
       _showAIRecipeSuggestions: { type: Boolean },  // Show AI recipe suggestions
+      // Custom temperature profile
+      _customProfileName: { type: String },
+      _customProfileTempC: { type: Number },
     };
   }
 
@@ -5716,6 +5719,9 @@ class KitchenCookingPanel extends LitElement {
     this._messageDialogTitle = '';
     this._messageDialogContent = '';
     this._messageDialogIsError = false;
+    // Custom temperature profile
+    this._customProfileName = '';
+    this._customProfileTempC = 75;
     // Phase 1: GUI Redesign - Navigation state
     this._currentPath = 'welcome';  // Start at welcome screen
     this._selectedAppliance = null;
@@ -6114,6 +6120,9 @@ class KitchenCookingPanel extends LitElement {
     this._selectedDoneness = null;
     this._customTargetTempC = null;
     this._showTempAdjust = false;
+    
+    // For custom profile category, skip the normal meat auto-select logic
+    if (categoryKey === '__custom__') return;
     
     // Auto-select meat if only one
     const categories = this._getDataCategories();
@@ -7988,9 +7997,69 @@ class KitchenCookingPanel extends LitElement {
                 ${cat.icon} ${cat.name}
               </button>
             `)}
+            <button
+              class="category-btn ${this._selectedCategory === '__custom__' ? 'selected' : ''}"
+              @click=${() => this._selectCategory('__custom__')}>
+              🎯 Custom
+            </button>
           </div>
         </div>
       </ha-card>
+      
+      <!-- Custom Profile Form -->
+      ${this._selectedCategory === '__custom__' ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>🎯 Custom Temperature Profile</h3>
+            <p style="color: var(--secondary-text-color); margin-bottom: 12px;">
+              Set any target temperature for foods not in the standard list — bread, pastries, vegetables, or anything else.
+            </p>
+            <div style="margin-bottom: 12px;">
+              <label style="display: block; margin-bottom: 4px; font-weight: 500;">Name (optional)</label>
+              <input
+                type="text"
+                placeholder="e.g. Rye Bread, Sourdough, Vegetable Casserole"
+                .value="${this._customProfileName || ''}"
+                @input=${(e) => { this._customProfileName = e.target.value; }}
+                style="width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; background: var(--card-background-color); color: var(--primary-text-color); font-size: 14px;"
+              />
+            </div>
+            <div style="margin-bottom: 16px;">
+              <label style="display: block; margin-bottom: 4px; font-weight: 500;">Target Temperature</label>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <input
+                  type="range"
+                  min="30"
+                  max="100"
+                  step="1"
+                  .value="${this._customProfileTempC || 75}"
+                  @input=${(e) => { this._customProfileTempC = parseInt(e.target.value, 10); }}
+                  class="temp-slider"
+                  style="flex: 1;"
+                />
+                <div style="display: flex; align-items: center; gap: 4px;">
+                  <button class="temp-btn" @click=${() => { this._customProfileTempC = Math.max(30, (this._customProfileTempC || 75) - 1); }}>-1°C</button>
+                  <input
+                    type="number"
+                    min="30"
+                    max="100"
+                    .value="${this._customProfileTempC || 75}"
+                    @change=${(e) => { this._customProfileTempC = Math.max(30, Math.min(100, parseInt(e.target.value, 10) || 75)); }}
+                    class="temp-input"
+                  />
+                  <button class="temp-btn" @click=${() => { this._customProfileTempC = Math.min(100, (this._customProfileTempC || 75) + 1); }}>+1°C</button>
+                </div>
+              </div>
+              <p style="color: var(--secondary-text-color); margin: 4px 0 0; font-size: 13px;">
+                ${this._customProfileTempC || 75}°C (${Math.round(((this._customProfileTempC || 75) * 9 / 5) + 32)}°F)
+              </p>
+            </div>
+            <ha-button unelevated @click=${this._startCustomCook}>
+              🔥 Start Cooking at ${this._customProfileTempC || 75}°C
+            </ha-button>
+          </div>
+        </ha-card>
+      ` : ''}
       
       <!-- Step 2: Select Animal/Meat (if multiple) -->
       ${this._selectedCategory && showMeatSelector ? html`
@@ -10502,6 +10571,22 @@ class KitchenCookingPanel extends LitElement {
     }
   }
 
+  _startCustomCook() {
+    const tempC = parseInt(this._customProfileTempC, 10);
+    if (isNaN(tempC) || tempC < 30 || tempC > 100) {
+      alert('Please enter a valid temperature between 30°C and 100°C.');
+      return;
+    }
+    const sessionName = (this._customProfileName || '').trim() || `Custom ${tempC}°C`;
+    this._callService('start_simple_probe_cook', {
+      target_temp_c: tempC,
+      session_name: sessionName,
+    });
+    this._showMeaterCooking = false;
+    this._currentPath = 'welcome';
+    this.requestUpdate();
+  }
+
   _startRest() {
     this._callService('start_rest');
   }
@@ -12722,7 +12807,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "153";
+const PANEL_VERSION = "155";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
