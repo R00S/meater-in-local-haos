@@ -122,6 +122,7 @@ class KitchenCookingPanel extends LitElement {
       _aiComplexity: { type: Number },
       _aiPortions: { type: Number },
       _aiSelectedCuisines: { type: Array },
+      _aiExpandedRegions: { type: Array },
       // AI generation cancellation
       _aiGeneratingAbort: { type: Object },
       _messageDialogOnCancel: { type: Object },
@@ -214,6 +215,7 @@ class KitchenCookingPanel extends LitElement {
     this._aiComplexity = 3; // 1-5 scale, 3 = medium
     this._aiPortions = 4; // Default 4 portions
     this._aiSelectedCuisines = []; // Multi-select cuisine/region list
+    this._aiExpandedRegions = []; // Which region dropdowns are open
     this._aiGeneratingAbort = null; // AbortController for cancelling generation
     this._messageDialogOnCancel = null; // Optional cancel callback for dialog
     // Data is generated from backend Python files at install/update time
@@ -3773,39 +3775,104 @@ class KitchenCookingPanel extends LitElement {
     }
 
     // Cuisine/region options for fusion cooking
-    const cuisineOptions = [
-      // Scandinavian & Nordic
-      { id: 'scandinavian', name: 'Scandinavian', icon: '🇸🇪' },
-      // Asian
-      { id: 'japanese', name: 'Japanese', icon: '🇯🇵' },
-      { id: 'thai', name: 'Thai', icon: '🇹🇭' },
-      { id: 'chinese', name: 'Chinese', icon: '🇨🇳' },
-      { id: 'korean', name: 'Korean', icon: '🇰🇷' },
-      { id: 'indian', name: 'Indian', icon: '🇮🇳' },
-      { id: 'vietnamese', name: 'Vietnamese', icon: '🇻🇳' },
-      { id: 'indonesian', name: 'Indonesian', icon: '🇮🇩' },
-      // European
-      { id: 'italian', name: 'Italian', icon: '🇮🇹' },
-      { id: 'french', name: 'French', icon: '🇫🇷' },
-      { id: 'greek', name: 'Greek', icon: '🇬🇷' },
-      { id: 'spanish', name: 'Spanish', icon: '🇪🇸' },
-      { id: 'mediterranean', name: 'Mediterranean', icon: '🫒' },
-      // Middle Eastern
-      { id: 'middle_eastern', name: 'Middle Eastern', icon: '🧆' },
-      { id: 'turkish', name: 'Turkish', icon: '🇹🇷' },
-      // Americas
-      { id: 'american', name: 'American', icon: '🇺🇸' },
-      { id: 'mexican', name: 'Mexican', icon: '🇲🇽' },
-      { id: 'brazilian', name: 'Brazilian', icon: '🇧🇷' },
-      { id: 'peruvian', name: 'Peruvian', icon: '🇵🇪' },
-      { id: 'argentinian', name: 'Argentinian', icon: '🇦🇷' },
-      { id: 'caribbean', name: 'Caribbean', icon: '🏝️' },
-      { id: 'cajun_creole', name: 'Cajun / Creole', icon: '🦞' },
-      // African
-      { id: 'ethiopian', name: 'Ethiopian', icon: '🇪🇹' },
-      { id: 'moroccan', name: 'Moroccan', icon: '🇲🇦' },
-      { id: 'west_african', name: 'West African', icon: '🌍' },
-      { id: 'south_african', name: 'South African', icon: '🇿🇦' },
+    const cuisineRegions = [
+      { id: 'nordic', name: 'Nordic & Scandinavian', icon: '❄️', cuisines: [
+        { id: 'swedish', name: 'Swedish', icon: '🇸🇪' },
+        { id: 'danish', name: 'Danish', icon: '🇩🇰' },
+        { id: 'norwegian', name: 'Norwegian', icon: '🇳🇴' },
+        { id: 'finnish', name: 'Finnish', icon: '🇫🇮' },
+        { id: 'icelandic', name: 'Icelandic', icon: '🇮🇸' },
+        { id: 'new_nordic', name: 'New Nordic', icon: '🌿' },
+      ]},
+      { id: 'east_asian', name: 'East Asian', icon: '🥢', cuisines: [
+        { id: 'japanese', name: 'Japanese', icon: '🇯🇵' },
+        { id: 'chinese', name: 'Chinese', icon: '🇨🇳' },
+        { id: 'korean', name: 'Korean', icon: '🇰🇷' },
+        { id: 'taiwanese', name: 'Taiwanese', icon: '🇹🇼' },
+      ]},
+      { id: 'southeast_asian', name: 'Southeast Asian', icon: '🌴', cuisines: [
+        { id: 'thai', name: 'Thai', icon: '🇹🇭' },
+        { id: 'vietnamese', name: 'Vietnamese', icon: '🇻🇳' },
+        { id: 'indonesian', name: 'Indonesian', icon: '🇮🇩' },
+        { id: 'malaysian', name: 'Malaysian', icon: '🇲🇾' },
+        { id: 'filipino', name: 'Filipino', icon: '🇵🇭' },
+        { id: 'singaporean', name: 'Singaporean', icon: '🇸🇬' },
+      ]},
+      { id: 'south_asian', name: 'South Asian', icon: '🍛', cuisines: [
+        { id: 'indian', name: 'Indian', icon: '🇮🇳' },
+        { id: 'sri_lankan', name: 'Sri Lankan', icon: '🇱🇰' },
+        { id: 'pakistani', name: 'Pakistani', icon: '🇵🇰' },
+        { id: 'bangladeshi', name: 'Bangladeshi', icon: '🇧🇩' },
+        { id: 'nepali', name: 'Nepali', icon: '🇳🇵' },
+      ]},
+      { id: 'middle_east', name: 'Middle Eastern', icon: '🧆', cuisines: [
+        { id: 'lebanese', name: 'Lebanese', icon: '🇱🇧' },
+        { id: 'turkish', name: 'Turkish', icon: '🇹🇷' },
+        { id: 'persian', name: 'Persian / Iranian', icon: '🇮🇷' },
+        { id: 'israeli', name: 'Israeli', icon: '🇮🇱' },
+        { id: 'syrian', name: 'Syrian', icon: '🇸🇾' },
+        { id: 'iraqi', name: 'Iraqi', icon: '🇮🇶' },
+        { id: 'yemeni', name: 'Yemeni', icon: '🇾🇪' },
+        { id: 'emirati', name: 'Emirati / Gulf', icon: '🇦🇪' },
+        { id: 'palestinian', name: 'Palestinian', icon: '🇵🇸' },
+      ]},
+      { id: 'european', name: 'European', icon: '🏰', cuisines: [
+        { id: 'italian', name: 'Italian', icon: '🇮🇹' },
+        { id: 'french', name: 'French', icon: '🇫🇷' },
+        { id: 'spanish', name: 'Spanish', icon: '🇪🇸' },
+        { id: 'greek', name: 'Greek', icon: '🇬🇷' },
+        { id: 'portuguese', name: 'Portuguese', icon: '🇵🇹' },
+        { id: 'german', name: 'German', icon: '🇩🇪' },
+        { id: 'british', name: 'British', icon: '🇬🇧' },
+        { id: 'polish', name: 'Polish', icon: '🇵🇱' },
+        { id: 'hungarian', name: 'Hungarian', icon: '🇭🇺' },
+        { id: 'mediterranean', name: 'Mediterranean', icon: '🫒' },
+        { id: 'balkan', name: 'Balkan', icon: '🏔️' },
+        { id: 'russian', name: 'Russian', icon: '🇷🇺' },
+      ]},
+      { id: 'north_american', name: 'North American', icon: '🦅', cuisines: [
+        { id: 'american', name: 'American', icon: '🇺🇸' },
+        { id: 'cajun_creole', name: 'Cajun / Creole', icon: '🦞' },
+        { id: 'tex_mex', name: 'Tex-Mex', icon: '🌮' },
+        { id: 'canadian', name: 'Canadian', icon: '🇨🇦' },
+        { id: 'southern_us', name: 'Southern US / Soul Food', icon: '🍗' },
+        { id: 'hawaiian', name: 'Hawaiian', icon: '🌺' },
+      ]},
+      { id: 'latin_american', name: 'Latin American', icon: '💃', cuisines: [
+        { id: 'mexican', name: 'Mexican', icon: '🇲🇽' },
+        { id: 'brazilian', name: 'Brazilian', icon: '🇧🇷' },
+        { id: 'peruvian', name: 'Peruvian', icon: '🇵🇪' },
+        { id: 'argentinian', name: 'Argentinian', icon: '🇦🇷' },
+        { id: 'colombian', name: 'Colombian', icon: '🇨🇴' },
+        { id: 'cuban', name: 'Cuban', icon: '🇨🇺' },
+        { id: 'venezuelan', name: 'Venezuelan', icon: '🇻🇪' },
+        { id: 'chilean', name: 'Chilean', icon: '🇨🇱' },
+      ]},
+      { id: 'caribbean_region', name: 'Caribbean', icon: '🏝️', cuisines: [
+        { id: 'jamaican', name: 'Jamaican', icon: '🇯🇲' },
+        { id: 'trinidadian', name: 'Trinidadian', icon: '🇹🇹' },
+        { id: 'haitian', name: 'Haitian', icon: '🇭🇹' },
+        { id: 'puerto_rican', name: 'Puerto Rican', icon: '🇵🇷' },
+        { id: 'caribbean', name: 'Caribbean (General)', icon: '🏝️' },
+      ]},
+      { id: 'african', name: 'African', icon: '🌍', cuisines: [
+        { id: 'ethiopian', name: 'Ethiopian', icon: '🇪🇹' },
+        { id: 'moroccan', name: 'Moroccan', icon: '🇲🇦' },
+        { id: 'nigerian', name: 'Nigerian', icon: '🇳🇬' },
+        { id: 'ghanaian', name: 'Ghanaian', icon: '🇬🇭' },
+        { id: 'senegalese', name: 'Senegalese', icon: '🇸🇳' },
+        { id: 'south_african', name: 'South African', icon: '🇿🇦' },
+        { id: 'kenyan', name: 'Kenyan', icon: '🇰🇪' },
+        { id: 'tanzanian', name: 'Tanzanian', icon: '🇹🇿' },
+        { id: 'tunisian', name: 'Tunisian', icon: '🇹🇳' },
+        { id: 'egyptian', name: 'Egyptian', icon: '🇪🇬' },
+        { id: 'east_african', name: 'East African', icon: '🌄' },
+        { id: 'west_african', name: 'West African', icon: '🥘' },
+      ]},
+      { id: 'oceanian', name: 'Oceanian', icon: '🦘', cuisines: [
+        { id: 'australian', name: 'Australian', icon: '🇦🇺' },
+        { id: 'polynesian', name: 'Polynesian', icon: '🌺' },
+      ]},
     ];
 
     // Complexity labels
@@ -3858,29 +3925,63 @@ class KitchenCookingPanel extends LitElement {
       <ha-card>
         <div class="card-content">
           <h3>🌍 Cuisine / Region (optional, select for fusion)</h3>
-          <div class="style-grid">
-            ${cuisineOptions.map(cuisine => html`
-              <ha-card 
-                class="style-card ${(this._aiSelectedCuisines || []).includes(cuisine.id) ? 'selected' : ''} clickable"
-                @click=${() => {
-                  const cuisines = [...(this._aiSelectedCuisines || [])];
-                  const idx = cuisines.indexOf(cuisine.id);
-                  if (idx >= 0) {
-                    cuisines.splice(idx, 1);
-                  } else {
-                    cuisines.push(cuisine.id);
-                  }
-                  this._aiSelectedCuisines = cuisines;
-                  this.requestUpdate();
-                }}
-              >
-                <div class="card-content">
-                  <div class="style-icon">${cuisine.icon}</div>
-                  <h3>${cuisine.name}</h3>
+          <p class="info-text" style="margin-bottom: 12px;">Click a region to expand, then select cuisines. Pick from multiple regions for fusion cooking.</p>
+          ${(this._aiSelectedCuisines || []).length > 0 ? html`
+            <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
+              ${(this._aiSelectedCuisines || []).map(c => {
+                const name = c.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                return html`<span style="background: var(--primary-color); color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.85em; display: inline-flex; align-items: center; gap: 4px;">
+                  ${name}
+                  <span style="cursor: pointer; margin-left: 2px;" @click=${() => {
+                    this._aiSelectedCuisines = (this._aiSelectedCuisines || []).filter(x => x !== c);
+                    this.requestUpdate();
+                  }}>✕</span>
+                </span>`;
+              })}
+            </div>
+          ` : ''}
+          ${cuisineRegions.map(region => {
+            const isExpanded = (this._aiExpandedRegions || []).includes(region.id);
+            const selectedInRegion = region.cuisines.filter(c => (this._aiSelectedCuisines || []).includes(c.id));
+            return html`
+              <div style="margin-bottom: 4px; border: 1px solid var(--divider-color); border-radius: 8px; overflow: hidden;">
+                <div 
+                  style="padding: 10px 14px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; background: ${selectedInRegion.length > 0 ? 'var(--primary-color)' : 'var(--card-background-color)'}; color: ${selectedInRegion.length > 0 ? 'white' : 'inherit'};"
+                  @click=${() => {
+                    const expanded = [...(this._aiExpandedRegions || [])];
+                    const idx = expanded.indexOf(region.id);
+                    if (idx >= 0) { expanded.splice(idx, 1); } else { expanded.push(region.id); }
+                    this._aiExpandedRegions = expanded;
+                    this.requestUpdate();
+                  }}
+                >
+                  <span style="font-weight: bold;">${region.icon} ${region.name} ${selectedInRegion.length > 0 ? `(${selectedInRegion.length})` : ''}</span>
+                  <span>${isExpanded ? '▼' : '▶'}</span>
                 </div>
-              </ha-card>
-            `)}
-          </div>
+                ${isExpanded ? html`
+                  <div style="padding: 8px; display: flex; flex-wrap: wrap; gap: 6px;">
+                    ${region.cuisines.map(cuisine => {
+                      const isSelected = (this._aiSelectedCuisines || []).includes(cuisine.id);
+                      return html`
+                        <button
+                          style="padding: 6px 12px; border-radius: 16px; border: 1px solid ${isSelected ? 'var(--primary-color)' : 'var(--divider-color)'}; background: ${isSelected ? 'var(--primary-color)' : 'var(--card-background-color)'}; color: ${isSelected ? 'white' : 'inherit'}; cursor: pointer; font-size: 0.9em; display: inline-flex; align-items: center; gap: 4px;"
+                          @click=${() => {
+                            const cuisines = [...(this._aiSelectedCuisines || [])];
+                            const idx = cuisines.indexOf(cuisine.id);
+                            if (idx >= 0) { cuisines.splice(idx, 1); } else { cuisines.push(cuisine.id); }
+                            this._aiSelectedCuisines = cuisines;
+                            this.requestUpdate();
+                          }}
+                        >
+                          ${cuisine.icon} ${cuisine.name}
+                        </button>
+                      `;
+                    })}
+                  </div>
+                ` : ''}
+              </div>
+            `;
+          })}
         </div>
       </ha-card>
 

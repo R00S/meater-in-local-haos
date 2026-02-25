@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 19 Feb 2026, 13:12 UTC
-Last Change: v0.5.1.5 - AI Recipe Builder: complexity/portions/cuisines, cancel dialog, save cook API
+Last Change: v0.5.1.6 - Cuisines reorganized into collapsible regions with 70+ cuisines
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "166"
+PANEL_VERSION = "167"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
