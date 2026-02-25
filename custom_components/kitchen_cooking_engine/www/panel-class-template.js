@@ -118,6 +118,13 @@ class KitchenCookingPanel extends LitElement {
       // Custom temperature profile (MEATER path)
       _customProfileName: { type: String },
       _customProfileTempC: { type: Number },
+      // AI Recipe Builder - style page enhancements
+      _aiComplexity: { type: Number },
+      _aiPortions: { type: Number },
+      _aiSelectedCuisines: { type: Array },
+      // AI generation cancellation
+      _aiGeneratingAbort: { type: Object },
+      _messageDialogOnCancel: { type: Object },
     };
   }
 
@@ -203,6 +210,12 @@ class KitchenCookingPanel extends LitElement {
     // Custom temperature profile
     this._customProfileName = '';
     this._customProfileTempC = 70;
+    // AI Recipe Builder style enhancements
+    this._aiComplexity = 3; // 1-5 scale, 3 = medium
+    this._aiPortions = 4; // Default 4 portions
+    this._aiSelectedCuisines = []; // Multi-select cuisine/region list
+    this._aiGeneratingAbort = null; // AbortController for cancelling generation
+    this._messageDialogOnCancel = null; // Optional cancel callback for dialog
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -2137,19 +2150,33 @@ class KitchenCookingPanel extends LitElement {
           
           <!-- Message Dialog (replaces alert() for copyable error messages) -->
           ${this._showMessageDialog ? html`
-            <div class="modal-overlay" @click=${this._closeMessageDialog}>
+            <div class="modal-overlay" @click=${this._messageDialogOnCancel ? () => {} : this._closeMessageDialog}>
               <div class="modal-dialog" @click=${(e) => e.stopPropagation()}>
                 <div class="modal-header">
                   <h2>${this._messageDialogIsError ? '⚠️' : '💬'} ${this._messageDialogTitle}</h2>
-                  <button class="modal-close" @click=${this._closeMessageDialog}>✕</button>
+                  ${!this._messageDialogOnCancel ? html`
+                    <button class="modal-close" @click=${this._closeMessageDialog}>✕</button>
+                  ` : ''}
                 </div>
                 <div class="modal-body">
                   <pre style="white-space: pre-wrap; word-wrap: break-word; font-family: inherit; margin: 0; user-select: text;">${this._messageDialogContent}</pre>
                 </div>
                 <div class="modal-footer">
-                  <button class="primary-btn" @click=${this._closeMessageDialog}>
-                    OK
-                  </button>
+                  ${this._messageDialogOnCancel ? html`
+                    <button class="secondary-btn" @click=${() => {
+                      const cancelFn = this._messageDialogOnCancel;
+                      this._messageDialogOnCancel = null;
+                      this._showMessageDialog = false;
+                      this.requestUpdate();
+                      if (cancelFn) cancelFn();
+                    }}>
+                      Cancel
+                    </button>
+                  ` : html`
+                    <button class="primary-btn" @click=${this._closeMessageDialog}>
+                      OK
+                    </button>
+                  `}
                 </div>
               </div>
             </div>
@@ -3745,6 +3772,45 @@ class KitchenCookingPanel extends LitElement {
       return html`<div class="loading">Loading cooking styles...</div>`;
     }
 
+    // Cuisine/region options for fusion cooking
+    const cuisineOptions = [
+      // Scandinavian & Nordic
+      { id: 'scandinavian', name: 'Scandinavian', icon: '🇸🇪' },
+      // Asian
+      { id: 'japanese', name: 'Japanese', icon: '🇯🇵' },
+      { id: 'thai', name: 'Thai', icon: '🇹🇭' },
+      { id: 'chinese', name: 'Chinese', icon: '🇨🇳' },
+      { id: 'korean', name: 'Korean', icon: '🇰🇷' },
+      { id: 'indian', name: 'Indian', icon: '🇮🇳' },
+      { id: 'vietnamese', name: 'Vietnamese', icon: '🇻🇳' },
+      { id: 'indonesian', name: 'Indonesian', icon: '🇮🇩' },
+      // European
+      { id: 'italian', name: 'Italian', icon: '🇮🇹' },
+      { id: 'french', name: 'French', icon: '🇫🇷' },
+      { id: 'greek', name: 'Greek', icon: '🇬🇷' },
+      { id: 'spanish', name: 'Spanish', icon: '🇪🇸' },
+      { id: 'mediterranean', name: 'Mediterranean', icon: '🫒' },
+      // Middle Eastern
+      { id: 'middle_eastern', name: 'Middle Eastern', icon: '🧆' },
+      { id: 'turkish', name: 'Turkish', icon: '🇹🇷' },
+      // Americas
+      { id: 'american', name: 'American', icon: '🇺🇸' },
+      { id: 'mexican', name: 'Mexican', icon: '🇲🇽' },
+      { id: 'brazilian', name: 'Brazilian', icon: '🇧🇷' },
+      { id: 'peruvian', name: 'Peruvian', icon: '🇵🇪' },
+      { id: 'argentinian', name: 'Argentinian', icon: '🇦🇷' },
+      { id: 'caribbean', name: 'Caribbean', icon: '🏝️' },
+      { id: 'cajun_creole', name: 'Cajun / Creole', icon: '🦞' },
+      // African
+      { id: 'ethiopian', name: 'Ethiopian', icon: '🇪🇹' },
+      { id: 'moroccan', name: 'Moroccan', icon: '🇲🇦' },
+      { id: 'west_african', name: 'West African', icon: '🌍' },
+      { id: 'south_african', name: 'South African', icon: '🇿🇦' },
+    ];
+
+    // Complexity labels
+    const complexityLabels = ['Very Simple', 'Simple', 'Medium', 'Complex', 'Chef Level'];
+
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => {
@@ -3767,6 +3833,14 @@ class KitchenCookingPanel extends LitElement {
                 class="style-card ${this._selectedCookingStyle === style.id ? 'selected' : ''} clickable"
                 @click=${() => {
                   this._selectedCookingStyle = style.id;
+                  // Set default complexity based on style
+                  if (['quick_and_easy', 'one_pot', 'family_friendly'].includes(style.id)) {
+                    this._aiComplexity = 2;
+                  } else if (['gourmet'].includes(style.id)) {
+                    this._aiComplexity = 4;
+                  } else {
+                    this._aiComplexity = 3;
+                  }
                   this.requestUpdate();
                 }}
               >
@@ -3778,16 +3852,81 @@ class KitchenCookingPanel extends LitElement {
               </ha-card>
             `)}
           </div>
-
-          <button 
-            class="primary-btn"
-            ?disabled=${!this._selectedCookingStyle}
-            @click=${() => this._generateAIRecipes()}
-          >
-            Generate Recipes 🤖
-          </button>
         </div>
       </ha-card>
+
+      <ha-card>
+        <div class="card-content">
+          <h3>🌍 Cuisine / Region (optional, select for fusion)</h3>
+          <div class="style-grid">
+            ${cuisineOptions.map(cuisine => html`
+              <ha-card 
+                class="style-card ${(this._aiSelectedCuisines || []).includes(cuisine.id) ? 'selected' : ''} clickable"
+                @click=${() => {
+                  const cuisines = [...(this._aiSelectedCuisines || [])];
+                  const idx = cuisines.indexOf(cuisine.id);
+                  if (idx >= 0) {
+                    cuisines.splice(idx, 1);
+                  } else {
+                    cuisines.push(cuisine.id);
+                  }
+                  this._aiSelectedCuisines = cuisines;
+                  this.requestUpdate();
+                }}
+              >
+                <div class="card-content">
+                  <div class="style-icon">${cuisine.icon}</div>
+                  <h3>${cuisine.name}</h3>
+                </div>
+              </ha-card>
+            `)}
+          </div>
+        </div>
+      </ha-card>
+
+      <ha-card>
+        <div class="card-content">
+          <h3>⚙️ Settings</h3>
+
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 8px;">
+              📊 Complexity: ${complexityLabels[this._aiComplexity - 1] || 'Medium'}
+            </label>
+            <input type="range" min="1" max="5" step="1"
+              .value=${String(this._aiComplexity)}
+              @input=${(e) => { this._aiComplexity = parseInt(e.target.value); this.requestUpdate(); }}
+              style="width: 100%;"
+            />
+            <div style="display: flex; justify-content: space-between; font-size: 0.8em; color: var(--secondary-text-color);">
+              <span>Simple</span><span>Chef Level</span>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 8px;">
+              🍽️ Portions: ${this._aiPortions}
+            </label>
+            <input type="range" min="1" max="8" step="1"
+              .value=${String(this._aiPortions)}
+              @input=${(e) => { this._aiPortions = parseInt(e.target.value); this.requestUpdate(); }}
+              style="width: 100%;"
+            />
+            <div style="display: flex; justify-content: space-between; font-size: 0.8em; color: var(--secondary-text-color);">
+              <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
+            </div>
+          </div>
+        </div>
+      </ha-card>
+
+      <div style="padding: 16px;">
+        <button 
+          class="primary-btn"
+          ?disabled=${!this._selectedCookingStyle}
+          @click=${() => this._generateAIRecipes()}
+        >
+          Generate Recipes 🤖
+        </button>
+      </div>
     `;
   }
 
@@ -4238,8 +4377,8 @@ class KitchenCookingPanel extends LitElement {
     const elapsedSeconds = Math.floor((Date.now() - state.startTime) / 1000);
 
     try {
-      // Call the save_recipe_cook service
-      await this.hass.callService('kitchen_cooking_engine', 'save_recipe_cook', {
+      // Save recipe cook via REST API (not a service - recipe cooks are saved to cook history)
+      await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/save_cook', {
         recipe_id: recipe.id || recipe.name,
         recipe_name: recipe.name,
         serving_size: state.servingSize,
@@ -4327,13 +4466,23 @@ class KitchenCookingPanel extends LitElement {
       // Get appliance IDs (main + selected secondaries)
       const applianceIds = [this._selectedAppliance.id, ...this._selectedSecondaryAppliances];
 
-      // Call AI recipe generation API
-      const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/generate', {
+      // Build request with new parameters
+      const requestBody = {
         ingredients: this._selectedIngredients,
         cooking_style: this._selectedCookingStyle,
         appliance_ids: applianceIds,
-        main_appliance_id: this._selectedAppliance.id
-      });
+        main_appliance_id: this._selectedAppliance.id,
+        servings: this._aiPortions || 4,
+        complexity: this._aiComplexity || 3,
+      };
+
+      // Add cuisines if selected
+      if (this._aiSelectedCuisines && this._aiSelectedCuisines.length > 0) {
+        requestBody.cuisines = this._aiSelectedCuisines;
+      }
+
+      // Call AI recipe generation API
+      const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/generate', requestBody);
 
       if (response && response.suggestions) {
         this._aiRecipeSuggestions = response.suggestions;
@@ -4376,10 +4525,20 @@ class KitchenCookingPanel extends LitElement {
       txt.innerHTML = fullRecipe.name;
       fullRecipe.name = txt.value;
     }
+
+    // Track if cancelled
+    let cancelled = false;
     
     // Fetch full recipe detail (instructions, ingredients, tips) from backend
     try {
-      this._showMessage('Loading Recipe', 'Please wait while we generate the full recipe details...');
+      // Show cancelable loading dialog
+      this._messageDialogTitle = '⏳ Loading Recipe';
+      this._messageDialogContent = 'Generating full recipe details with AI...\nThis usually takes 10-30 seconds.';
+      this._messageDialogIsError = false;
+      this._messageDialogOnCancel = () => { cancelled = true; };
+      this._showMessageDialog = true;
+      this.requestUpdate();
+
       const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/detail', {
         suggestion_id: fullRecipe.id,
         suggestion: {
@@ -4395,6 +4554,8 @@ class KitchenCookingPanel extends LitElement {
         appliance_ids: this._selectedAppliance ? [this._selectedAppliance.id] : []
       });
 
+      if (cancelled) return; // User cancelled while waiting
+
       if (response && response.detail) {
         const detail = response.detail;
         fullRecipe.instructions = detail.instructions || [];
@@ -4408,11 +4569,13 @@ class KitchenCookingPanel extends LitElement {
         fullRecipe.target_temp_f = detail.target_temp_f;
       }
     } catch (error) {
+      if (cancelled) return; // User cancelled
       console.error('Error fetching recipe detail:', error);
       // Continue with whatever data we have
     }
 
     // Dismiss the loading dialog
+    this._messageDialogOnCancel = null;
     this._showMessageDialog = false;
 
     // Start recipe cook flow (Phase 4)

@@ -263,6 +263,7 @@ def async_register_api(hass: HomeAssistant) -> None:
     hass.http.register_view(AIRecipeDetailView)
     hass.http.register_view(AIRecipeCheckView)
     hass.http.register_view(AISettingsView)
+    hass.http.register_view(AIRecipeSaveCookView)
     
     _LOGGER.info("Kitchen Cooking Engine: API endpoints registered")
 
@@ -702,6 +703,8 @@ class AIRecipeGenerateView(HomeAssistantView):
                 dietary_restrictions=data.get("dietary_restrictions"),
                 servings=data.get("servings", 4),
                 max_time_minutes=data.get("max_time_minutes"),
+                complexity=data.get("complexity", 3),
+                cuisines=data.get("cuisines"),
             )
             
             # Convert suggestions to dict for JSON
@@ -922,6 +925,73 @@ class AISettingsView(HomeAssistantView):
             
         except Exception as ex:
             _LOGGER.error("Error saving AI settings: %s", ex)
+            return self.json({
+                "status": "error",
+                "message": str(ex)
+            })
+
+
+class AIRecipeSaveCookView(HomeAssistantView):
+    """API endpoint to save a completed recipe cook to history."""
+
+    url = "/api/kitchen_cooking_engine/ai_recipes/save_cook"
+    name = "api:kitchen_cooking_engine:ai_recipes_save_cook"
+    requires_auth = True
+
+    async def post(self, request: web.Request) -> web.Response:
+        """Save a recipe cook to cook history.
+        
+        Request body:
+        {
+            "recipe_id": "ai_recipe_1",
+            "recipe_name": "Garlic Chicken Stir-Fry",
+            "serving_size": 4,
+            "duration_seconds": 1800,
+            "ease_rating": 4,
+            "result_rating": 5,
+            "notes": "Delicious!",
+            "ingredients": ["chicken", "garlic"],
+            "appliance_id": "ninja_combi_1"
+        }
+        """
+        from .storage import async_add_cook_to_history
+        
+        hass = request.app["hass"]
+        
+        try:
+            data = await request.json()
+            
+            cook_data = {
+                "cook_type": "ai_recipe",
+                "recipe_id": data.get("recipe_id", ""),
+                "recipe_name": data.get("recipe_name", "Unknown Recipe"),
+                "protein": "AI Recipe",
+                "cut": data.get("recipe_name", "AI Recipe"),
+                "cut_display": data.get("recipe_name", "AI Recipe"),
+                "serving_size": data.get("serving_size", 4),
+                "duration_seconds": data.get("duration_seconds", 0),
+                "ease_rating": data.get("ease_rating", 0),
+                "result_rating": data.get("result_rating", 0),
+                "notes": data.get("notes", ""),
+                "ingredients": data.get("ingredients", []),
+                "appliance_id": data.get("appliance_id"),
+            }
+            
+            success = await async_add_cook_to_history(hass, cook_data)
+            
+            if success:
+                return self.json({
+                    "status": "ok",
+                    "message": "Recipe cook saved to history"
+                })
+            else:
+                return self.json({
+                    "status": "error",
+                    "message": "Failed to save cook to history"
+                })
+            
+        except Exception as ex:
+            _LOGGER.error("Error saving recipe cook: %s", ex)
             return self.json({
                 "status": "error",
                 "message": str(ex)

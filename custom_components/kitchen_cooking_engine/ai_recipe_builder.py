@@ -207,6 +207,8 @@ class AIRecipeBuilder:
         dietary_restrictions: Optional[List[str]] = None,
         servings: int = 4,
         max_time_minutes: Optional[int] = None,
+        complexity: int = 3,
+        cuisines: Optional[List[str]] = None,
     ) -> List[AIRecipeSuggestion]:
         """Generate 4 recipe suggestions from AI.
         
@@ -217,6 +219,8 @@ class AIRecipeBuilder:
             dietary_restrictions: Optional dietary restrictions
             servings: Number of servings
             max_time_minutes: Optional maximum cooking time
+            complexity: Recipe complexity 1-5 (1=very simple, 5=chef level)
+            cuisines: Optional list of cuisine/region IDs for fusion cooking
         
         Returns:
             List of 4 recipe suggestions
@@ -232,6 +236,8 @@ class AIRecipeBuilder:
             dietary_restrictions=dietary_restrictions,
             servings=servings,
             max_time_minutes=max_time_minutes,
+            complexity=complexity,
+            cuisines=cuisines,
         )
         
         # Call OpenAI via conversation integration
@@ -404,6 +410,8 @@ class AIRecipeBuilder:
         dietary_restrictions: Optional[List[str]],
         servings: int,
         max_time_minutes: Optional[int],
+        complexity: int = 3,
+        cuisines: Optional[List[str]] = None,
     ) -> str:
         """Build prompt for recipe suggestions.
         
@@ -414,6 +422,8 @@ class AIRecipeBuilder:
             dietary_restrictions: Dietary restrictions
             servings: Number of servings
             max_time_minutes: Maximum cooking time
+            complexity: Recipe complexity 1-5
+            cuisines: Optional cuisine/region preferences
         
         Returns:
             Formatted prompt for OpenAI
@@ -434,12 +444,30 @@ class AIRecipeBuilder:
             f"\nMaximum cooking time: {max_time_minutes} minutes"
             if max_time_minutes else ""
         )
+
+        complexity_labels = {
+            1: "very simple (few steps, basic techniques, beginner-friendly)",
+            2: "simple (straightforward, minimal prep)",
+            3: "medium (moderate steps, some technique required)",
+            4: "complex (multi-step, advanced techniques)",
+            5: "chef level (restaurant-quality, advanced skills required)",
+        }
+        complexity_desc = complexity_labels.get(complexity, complexity_labels[3])
+
+        cuisine_hint = ""
+        if cuisines and len(cuisines) > 0:
+            cuisine_names = [c.replace('_', ' ').title() for c in cuisines]
+            if len(cuisine_names) == 1:
+                cuisine_hint = f"\nCuisine focus: {cuisine_names[0]}"
+            else:
+                cuisine_hint = f"\nCuisine fusion: combine elements from {', '.join(cuisine_names)}"
         
         prompt = f"""You are a professional chef creating recipes for a home kitchen.
 
 Available ingredients: {', '.join(ingredients)}
 Cooking style: {cooking_style.replace('_', ' ')}
-Servings: {servings}{restrictions}{time_constraint}
+Servings: {servings}
+Complexity level: {complexity_desc}{cuisine_hint}{restrictions}{time_constraint}
 
 Available kitchen equipment:
 {appliance_list}
