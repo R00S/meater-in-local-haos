@@ -97,6 +97,32 @@ Format: `v0.1.X.YY`
 - `X` = Agent number (increments when a new agent takes over)
 - `YY` = Release number with current agent
 
+### 🛑 MANDATORY: Version Update Checklist
+
+**Every release MUST update ALL 4 version locations.** Mismatches cause broken releases.
+
+When bumping the version (e.g. from `0.5.1.0` to `0.5.1.1`):
+
+```
+□ 1. manifest.json        → "version": "0.5.1.1"
+□ 2. __init__.py           → __version__ = "0.5.1.1"
+□ 3. __init__.py           → Last Change: v0.5.1.1 - <description>
+□ 4. const.py              → Last Change: v0.5.1.1 - <description>
+     (PANEL_VERSION is auto-incremented by generate_frontend_data.py)
+```
+
+**Quick verification command:**
+```bash
+grep '"version"' custom_components/kitchen_cooking_engine/manifest.json
+grep '__version__' custom_components/kitchen_cooking_engine/__init__.py
+grep 'PANEL_VERSION' custom_components/kitchen_cooking_engine/const.py
+```
+
+**All 3 version strings MUST match.** If they don't, fix them before committing.
+
+This has caused failed releases multiple times (v0.5.0.72, v0.5.1.0) where code
+changes were committed but version numbers were left stale or inconsistent.
+
 ---
 
 ## Testing
@@ -117,3 +143,72 @@ No automated tests exist - all testing is manual on real HAOS.
 3. ❌ Forgetting to run generate_frontend_data.py after editing
 4. ❌ Forgetting to commit ALL changed files (template + generated + data)
 5. ❌ Using deprecated HA APIs (check HA 2024.1.0+ compatibility)
+6. ❌ **FABRICATING method/property names instead of reading the source code** (see below)
+
+---
+
+## 🛑 NEVER Fabricate Code — Always Read the Source First
+
+**This is the #1 cause of failed releases.** AI agents tend to generate plausible-sounding
+method names from patterns instead of reading the actual source code. This ALWAYS fails.
+
+### The Rule
+When writing ANY new code that calls existing methods or references existing properties:
+1. **OPEN and READ the actual source file** where the method/property is defined
+2. **FIND the real method name** by reading the code, not by guessing from patterns
+3. **COPY the exact name** from the source into your new code
+
+### What NOT to Do
+- ❌ Generate method names from naming patterns (e.g. seeing 15 `_get*` methods and inventing `_getEntities()`)
+- ❌ Assume a method exists because "it should" or "it makes sense"
+- ❌ Write code that references methods you haven't verified exist in the current codebase
+
+### Why This Matters
+In v0.5.0.66, the agent wrote `this._getEntities()` — a method that **does not exist anywhere
+in the codebase**. It was fabricated from the dominant `_get*` naming pattern (15+ such methods).
+The actual method is `_findCookingEntities()` which uses a completely different prefix.
+This caused a TypeError crash and a failed release. The agent would have seen this immediately
+if it had simply opened panel-class-template.js and read the method list.
+
+### Success Rate Impact
+| Approach | Success Rate |
+|----------|-------------|
+| Code where source was READ first | 80-95% |
+| Code with FABRICATED names (guessed from patterns) | **0%** |
+
+---
+
+## Project Goals & Architecture (from SKILL.md)
+
+### Terms of Reference (ToR)
+- **Objective**: Develop a robust cooking engine that integrates seamlessly with a variety of kitchen appliances and enhances user experience.
+- **Scope**: Cover multiple culinary processes, from preparation to cooking and cleanup.
+
+### HAOS Compatibility Guidelines
+- Ensure full compliance with Home Assistant Operating System (HAOS) standards.
+- Use HAOS APIs for integration with other smart home devices.
+- Maintain backward compatibility with previous HAOS versions.
+
+### Data Separation Principles
+- Ensure clear segregation of configuration, user data, and operational logs.
+- Use designated folders for different data types within the application.
+- Implement encryption where necessary to protect sensitive user information.
+
+### Multi-appliance Support
+- Design the system architecture to support various kitchen appliances regardless of manufacturer.
+- Create abstraction layers to handle communication with different appliance protocols.
+- Support appliance discovery using HAOS standard methods for a plug-and-play experience.
+
+### Architecture
+- Modular architecture that allows for easy updates and maintenance.
+- Clear API documentation for all service interfaces.
+
+### Development Workflows
+- `main` for stable releases, feature branches for new development.
+- CI/CD pipelines to automate testing and deployment.
+
+### Best Practices
+- Follow coding standards to ensure code maintainability.
+- Conduct code reviews to improve code quality.
+- Document all APIs, workflows, and system components.
+- Regularly update dependencies to patch vulnerabilities.

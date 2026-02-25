@@ -1,91 +1,157 @@
 # Project Status - Kitchen Cooking Engine
 
-**Last Updated:** 14 January 2026
+**Last Updated:** 25 February 2026  
+**Current Version:** v0.5.1.7  
+**Status:** Semi-stable mid-development release (GUI Redesign Phase 6 complete)
 
 ## Project Direction
 
-This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen Cooking Engine** - a local-first, multi-appliance cooking system for Home Assistant.
+This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen Cooking Engine** — a local-first, multi-appliance cooking system for Home Assistant with AI-powered recipe generation, step-by-step cook flow, and temperature monitoring.
 
-## ✅ Current Status - v0.3.4.0 (Production Release)
+---
 
-### New in v0.3.4.0
-- **View Assist Integration** ✅ - Voice command "start cooking" opens panel on View Assist devices
-- **Automation Blueprint** ✅ - Ready-to-use blueprint for View Assist navigation
-- **Complete Documentation** ✅ - Setup guide for View Assist integration
-- **Blueprint Import Fixed** ✅ - Corrected YAML format for seamless import
+## 🔄 Current Status — v0.5.1.7 (Semi-Stable Development)
 
-### Phase 3, 4 & 5 Complete
-- **Multi-Appliance Infrastructure** ✅ - Support for Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom appliances
-- **Unified Configuration** ✅ - All appliances use identical backend logic
-- **Dynamic Feature Management** ✅ - Enable/disable features per appliance
-- **Feature Type System** ✅ - Standard/Modified/Special implementations with color-coded UI
-- **Architectural Unification** ✅ - Predefined appliances indistinguishable from custom once created
-- **Enhanced UI** ✅ - Expandable appliance cards with grouped features
-- **Settings on All Appliances** ✅ - Gear icon for feature editing on every appliance
+### GUI Redesign Progress (from [GUI Redesign ToR](docs/GUI_REDESIGN_TERMS_OF_REFERENCE.md))
 
-### Core Functionality
-- **MEATER+ BLE Client**: ESP32 connects to real MEATER+ probe and reads temperature data
-- **Home Assistant Integration**: Tip temp, ambient temp, battery level, RSSI exposed as sensors
-- **No Cloud Required**: All data stays local via ESPHome
-- **Cooking Panel UI**: Select protein, cut, doneness, and cooking method
-- **Swedish Temperature Data**: Full Swedish cut tree with temperatures from Livsmedelsverket
-- **Temperature Fine-Tuning**: Adjust target temperature before starting cooks
-- **Recommended Doneness**: Pre-selected recommended doneness for each cut
-- **Live Temperature Monitoring**: Real-time graphs and progress tracking
-- **Cook History**: Log completed cooks with notes and temperatures
-- **Notifications**: Mobile push, TTS announcements, persistent notifications
-- **Indicator Light Control**: RGB light changes color during cooking progress
+| Phase | Description | Status |
+|-------|-------------|--------|
+| Phase 1 | Foundation — Welcome screen, path routing, navigation | ✅ Complete |
+| Phase 2 | MEATER Path — Cooking interface, recent cooks, custom temp cook | ✅ Complete |
+| Phase 3 | Previous Cooks Path — History, detail view, restart | ✅ Complete |
+| Phase 4 | Recipe Cook Flow — Steps, timer, ratings, overview | ✅ Complete |
+| Phase 5 | Ninja Combi Path — Recipe builder, built-in recipes, AI link | ✅ Complete |
+| Phase 6 | AI Recipe Builder Path — Ingredients, styles, cuisines, generation, cook flow, save/restart | ✅ Complete |
+| Phase 7 | Multilingual & Measurement Systems | ⬜ Not started |
+| Phase 8 | Polish & Testing | ⬜ Not started |
 
-### Data Sources
-- **International (USDA)**: 185+ cuts with safe minimum temperatures
-- **Swedish (Livsmedelsverket)**: 89+ cuts with Swedish terminology
-- **Comprehensive coverage**: Beef, Pork, Poultry, Lamb, Game, Fish, Vegetables
+### What's Working (v0.5.1.7)
+
+**Navigation & Paths:**
+- ✅ Welcome screen with appliance selector (MEATER, Ninja Combi, Other Appliance, Previous Cooks)
+- ✅ Path routing with back navigation throughout
+- ✅ MEATER Path: Start cooking, recent MEATER cooks
+- ✅ Ninja Combi Path: Recipe builder, built-in recipes, AI recipes, recent cooks
+- ✅ AI Recipe Builder Path: Full 3-step flow (ingredients → style → generate)
+- ✅ Previous Cooks Path: Browse, view details, restart any cook type
+
+**MEATER Probe Cooking:**
+- ✅ Protein/cut/doneness selection with International (USDA) and Swedish data
+- ✅ Custom temperature cook (30–100°C, any target without protein selection)
+- ✅ Real-time temperature monitoring with graph
+- ✅ Dynamic ETA calculation
+- ✅ Notifications (mobile, TTS, persistent, indicator light)
+- ✅ Cook history with notes
+
+**AI Recipe Builder:**
+- ✅ Ingredient selection (30+ categorized ingredients)
+- ✅ 11 cooking styles with style-dependent complexity defaults
+- ✅ Complexity slider (1–5: Very Simple → Chef Level)
+- ✅ Portions slider (1–8 servings)
+- ✅ 70+ cuisines in 11 collapsible regions (Nordic, East Asian, Southeast Asian, South Asian, Middle Eastern, European, North American, Latin American, Caribbean, African, Oceanian)
+- ✅ Multi-cuisine selection for fusion recipes
+- ✅ AI generation with cancelable loading dialog
+- ✅ 4 diverse recipe suggestions per request
+- ✅ Full recipe detail fetch before cook flow
+- ✅ Recipe cook flow with step-by-step navigation
+- ✅ Star rating (ease + result) on completion
+- ✅ Save to cook history with full recipe data
+- ✅ Restart AI recipes from Previous Cooks
+
+**Recipe Cook Flow:**
+- ✅ Overview page with ingredients and timeline
+- ✅ Step-by-step navigation (back/next)
+- ✅ Elapsed timer since "Start Cooking"
+- ✅ Finish page with star ratings and notes
+- ✅ Save completed cook to history
+
+**Ninja Combi:**
+- ✅ 17 built-in recipes with metric conversions (US cups→dl, oz→g, lb→kg, °F→°C)
+- ✅ 12 cooking modes
+- ✅ MEATER probe integration for temperature monitoring
+- ✅ Recipe builder for custom Ninja Combi recipes
+
+### What's Not Yet Implemented
+
+- ⬜ **Multilingual support** (Phase 7) — No i18n infrastructure, English only
+- ⬜ **Measurement system selector** (Phase 7) — No user-selectable measurement system
+- ⬜ **Serving size scaling** (Phase 7) — AI recipes have portions but no automatic ingredient scaling
+- ⬜ **MEATER probe as subprocess** in recipe cook — Button exists in ToR but not implemented
+- ⬜ **Ingredient bolding** based on current cook step — Specified in ToR but not implemented
+- ⬜ **Deselectable secondary appliances** — ToR specifies checkboxes, not yet built
+- ⬜ **Mobile responsive polish** (Phase 8) — Basic layout works but not optimized
+- ⬜ **View Assist dashboard** — Attempted in v0.5.0.71–72, removed in v0.5.0.73 (was creating broken HA panels, not proper View Assist views). Blueprint kept.
+
+### Known Deviations from ToR
+
+See [GUI Redesign ToR § 15. Implementation Deviations](#) for a full list of deviations.
+
+---
 
 ## 📁 Repository Structure
 
 ```
 ├── custom_components/kitchen_cooking_engine/  # HACS Custom Integration
-│   ├── __init__.py            # Integration setup
-│   ├── config_flow.py         # Configuration UI (unified)
-│   ├── const.py               # Constants (v0.3.4.0, Panel v55)
-│   ├── cooking_data.py        # International cooking data
-│   ├── swedish_cooking_data.py # Swedish cooking data
-│   ├── ninja_combi_data.py    # Ninja Combi recipes
-│   ├── sensor.py              # Cooking session sensor
-│   ├── api.py                 # REST API endpoints
+│   ├── __init__.py            # Integration setup (v0.5.1.7)
+│   ├── config_flow.py         # Configuration UI
+│   ├── const.py               # Constants (Panel v168)
+│   ├── cooking_data.py        # International cooking data (USDA)
+│   ├── swedish_cooking_data.py # Swedish cooking data (Livsmedelsverket)
+│   ├── ninja_combi_data.py    # Ninja Combi recipes (with metric conversions)
+│   ├── ai_recipe_builder.py   # AI recipe generation engine
+│   ├── ai_recipe_data.py      # AI recipe ingredients & styles data
+│   ├── sensor.py              # Cooking session sensor entity
+│   ├── storage.py             # Cook history persistence
+│   ├── api.py                 # REST API endpoints (incl. AI recipe APIs)
 │   ├── appliance_manager.py   # Multi-appliance management
-│   ├── custom_sentences/      # Voice command definitions (NEW v0.3.3.1)
-│   ├── blueprints/            # Automation blueprints (NEW v0.3.3.1)
+│   ├── custom_sentences/      # Voice command definitions
+│   ├── blueprints/            # Automation blueprints (View Assist)
 │   ├── appliances/            # Appliance implementations
 │   ├── services.yaml          # Service definitions
-│   ├── manifest.json          # HACS manifest
+│   ├── manifest.json          # HACS manifest (v0.5.1.7)
 │   └── www/                   # Frontend panel
+│       ├── panel-class-template.js   # UI source (edit this)
+│       └── kitchen-cooking-panel.js  # Auto-generated (do not edit)
 ├── meater.yaml                 # ESPHome BLE client config
 ├── hacs.json                   # HACS repository config
 ├── docs/                       # Project documentation
 └── README.md                   # Installation & usage guide
 ```
 
-## 🚀 Next Steps (Phase 6+)
+## 🚀 Next Steps — Phase 7 & 8
 
-1. **Recipe Integration** - Connect with Mealie for recipe management
-2. **AI Meal Planning** - Natural language → recipe suggestions
-3. **Inventory Integration** - Connect with Grocy
-4. **Advanced Notifications** - Custom automation templates
-5. **Multi-probe Support** - Track multiple cooks simultaneously
+### Phase 7: Multilingual & Measurement Systems
+1. **i18n infrastructure** — Translation system for all UI text
+2. **Swedish + English** — Full translations for both languages
+3. **Measurement conversion engine** — Swedish (dl, msk, tsk), UK, US, pure metric
+4. **Serving size scaling** — Automatic ingredient scaling with intelligent rounding
+5. **Language/measurement selectors** in settings
+
+### Phase 8: Polish & Testing
+1. **Visual design refinement** — Consistent styling across all paths
+2. **Mobile responsive** — Optimize for small screens
+3. **Edge case handling** — Empty states, error recovery
+4. **MEATER probe as recipe subprocess** — Start probe monitoring from within recipe steps
+5. **Ingredient bolding** — Highlight ingredients used in current step
+6. **Performance optimization** — Large recipe rendering
+
+See [Agent Handoff Document](docs/AGENT_HANDOFF.md) for detailed guidance for the next development agent.
 
 ## 📚 Documentation
 
 | Document | Description |
 |----------|-------------|
-| [Terms of Reference](docs/TERMS_OF_REFERENCE.md) | Complete project specification |
+| [Terms of Reference](docs/TERMS_OF_REFERENCE.md) | Original project specification |
+| [GUI Redesign ToR](docs/GUI_REDESIGN_TERMS_OF_REFERENCE.md) | GUI redesign specification (Phase 1-8) |
+| [AI Recipe Builder](docs/AI_RECIPE_BUILDER.md) | AI recipe feature documentation |
 | [Feature Requirements](docs/FEATURE_REQUIREMENTS.md) | Detailed feature specs |
 | [Use Cases](docs/USE_CASES.md) | 12 real-world scenarios |
-| [Temperature Research](docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md) | Probes, temps, methods |
+| [View Assist Integration](docs/VIEW_ASSIST_INTEGRATION.md) | Voice control setup |
+| [Ninja Combi Guide](docs/NINJA_COMBI_GUIDE.md) | Ninja Combi integration guide |
+| [Agent Handoff](docs/AGENT_HANDOFF.md) | Handoff doc for next development agent |
 
 ## 🔗 Key Resources
 
-- **Grill Buddy**: https://github.com/jeroenterheerdt/grillbuddy
-- **Mealie**: https://github.com/mealie-recipes/mealie
-- **Grocy**: https://github.com/grocy/grocy
 - **MEATER BLE Protocol**: https://github.com/nathanfaber/meaterble
+- **View Assist**: https://github.com/dinki/View-Assist
+- **Grill Buddy**: https://github.com/jeroenterheerdt/grillbuddy
