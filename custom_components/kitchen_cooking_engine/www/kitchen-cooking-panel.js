@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 25 Feb 2026, 23:40 CET
+ * AUTO-GENERATED: 25 Feb 2026, 23:56 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 25 Feb 2026, 23:40 CET
+// Last generated: 25 Feb 2026, 23:56 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -10017,7 +10017,18 @@ class KitchenCookingPanel extends LitElement {
         result_rating: state.resultRating,
         notes: state.notes,
         ingredients: recipe.ingredients || [],
-        appliance_id: this._selectedAppliance?.id || null
+        appliance_id: this._selectedAppliance?.id || null,
+        recipe_data: {
+          id: recipe.id || recipe.name,
+          name: recipe.name,
+          description: recipe.description || '',
+          instructions: recipe.instructions || [],
+          ingredients: recipe.ingredients || [],
+          cook_time_minutes: recipe.cook_time_minutes || 0,
+          servings: recipe.servings || state.servingSize || 4,
+          tips: recipe.tips || [],
+          difficulty: recipe.difficulty || 'Medium'
+        }
       });
 
       // Show success message
@@ -13250,7 +13261,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "167";
+const PANEL_VERSION = "168";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

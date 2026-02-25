@@ -975,6 +975,7 @@ class AIRecipeSaveCookView(HomeAssistantView):
                 "notes": data.get("notes", ""),
                 "ingredients": data.get("ingredients", []),
                 "appliance_id": data.get("appliance_id"),
+                "recipe_data": data.get("recipe_data"),
             }
             
             success = await async_add_cook_to_history(hass, cook_data)

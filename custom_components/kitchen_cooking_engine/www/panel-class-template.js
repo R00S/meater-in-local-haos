@@ -4488,7 +4488,18 @@ class KitchenCookingPanel extends LitElement {
         result_rating: state.resultRating,
         notes: state.notes,
         ingredients: recipe.ingredients || [],
-        appliance_id: this._selectedAppliance?.id || null
+        appliance_id: this._selectedAppliance?.id || null,
+        recipe_data: {
+          id: recipe.id || recipe.name,
+          name: recipe.name,
+          description: recipe.description || '',
+          instructions: recipe.instructions || [],
+          ingredients: recipe.ingredients || [],
+          cook_time_minutes: recipe.cook_time_minutes || 0,
+          servings: recipe.servings || state.servingSize || 4,
+          tips: recipe.tips || [],
+          difficulty: recipe.difficulty || 'Medium'
+        }
       });
 
       // Show success message

@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 19 Feb 2026, 13:12 UTC
-Last Change: v0.5.1.6 - Cuisines reorganized into collapsible regions with 70+ cuisines
+Last Change: v0.5.1.7 - Fix AI recipe restart from cook history
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -65,7 +65,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.1.6"
+__version__ = "0.5.1.7"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
