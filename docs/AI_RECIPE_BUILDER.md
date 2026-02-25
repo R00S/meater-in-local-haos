@@ -1,46 +1,83 @@
 # AI Recipe Builder Documentation
 
-**Version:** v0.3.5.0  
-**Last Updated:** January 14, 2026
+**Version:** v0.5.1.7  
+**Last Updated:** 25 February 2026
 
 ## Overview
 
-The AI Recipe Builder is a feature that generates custom recipes on-the-fly using OpenAI's language models. Instead of relying on a static recipe database, it creates personalized recipes based on:
+The AI Recipe Builder generates custom recipes using AI conversation agents (OpenAI, etc.) via Home Assistant's conversation integration. It creates personalized recipes based on:
 
-- Your available ingredients
-- Your preferred cooking style
-- Your kitchen equipment (appliances)
-- Dietary preferences (optional)
-- Time constraints (optional)
+- Your selected ingredients (30+ common ingredients across 4 categories)
+- Your preferred cooking style (11 styles)
+- Cuisine preferences (70+ cuisines across 11 world regions, multi-select for fusion)
+- Complexity level (1–5: Very Simple → Chef Level)
+- Number of portions (1–8)
+- Your kitchen equipment (appliances automatically detected)
 
 ## Features
 
 ### 🤖 AI-Powered Generation
-- Generates 4 quite different recipe suggestions per request
-- Uses OpenAI GPT models via Home Assistant's conversation integration
+- Generates 4 diverse recipe suggestions per request
+- Uses any AI conversation agent via Home Assistant (OpenAI, Extended OpenAI, Nabu Casa, etc.)
 - Creates detailed recipes with full instructions, ingredients, and tips
+- Cancelable loading dialog with time estimate (10–30 seconds)
 
 ### 🥗 Intelligent Ingredient Selection
 - **30+ common ingredients** organized by category:
-  - **Proteins:** Chicken, beef, pork, fish, tofu, eggs
-  - **Vegetables:** Broccoli, carrots, peppers, tomatoes, onions, garlic, and more
-  - **Grains:** Rice, pasta, quinoa, bread
+  - **Proteins:** Chicken, beef, pork, fish, tofu, eggs, shrimp, turkey, salmon
+  - **Vegetables:** Broccoli, carrots, peppers, tomatoes, onions, garlic, spinach, mushrooms, potatoes, zucchini, corn, green beans
+  - **Grains:** Rice, pasta, quinoa, bread, noodles
   - **Dairy:** Cheese, milk, butter, cream, yogurt
-  - **Spices:** (Configurable)
+- Custom ingredient input for anything not in the list
+- Minimum 2 ingredients required
 
 ### 🍳 Cooking Style Options
 Choose from 11 different cooking styles:
-1. **Quick & Easy** - Fast meals with minimal prep
-2. **Gourmet** - Restaurant-quality dishes
-3. **Healthy** - Nutritious, balanced meals
-4. **Comfort Food** - Classic, satisfying dishes
-5. **Family Friendly** - Kid-approved recipes
-6. **Meal Prep** - Batch cooking for the week
-7. **One Pot** - Minimal cleanup recipes
-8. **Low Carb** - Keto-friendly options
-9. **High Protein** - Protein-focused meals
-10. **Vegetarian** - Plant-based recipes
-11. **Vegan** - No animal products
+1. **Quick & Easy** — Fast meals with minimal prep (complexity default: 1)
+2. **Gourmet** — Restaurant-quality dishes (complexity default: 4)
+3. **Healthy** — Nutritious, balanced meals (complexity default: 2)
+4. **Comfort Food** — Classic, satisfying dishes (complexity default: 2)
+5. **Family Friendly** — Kid-approved recipes (complexity default: 1)
+6. **Meal Prep** — Batch cooking for the week (complexity default: 2)
+7. **One Pot** — Minimal cleanup recipes (complexity default: 1)
+8. **Low Carb** — Keto-friendly options (complexity default: 2)
+9. **High Protein** — Protein-focused meals (complexity default: 2)
+10. **Vegetarian** — Plant-based recipes (complexity default: 2)
+11. **Vegan** — No animal products (complexity default: 2)
+
+### 🌍 World Cuisine Selection
+70+ cuisines in 11 collapsible regions (select multiple for fusion):
+
+| Region | Cuisines |
+|--------|----------|
+| ❄️ Nordic & Scandinavian | Swedish, Danish, Norwegian, Finnish, Icelandic, New Nordic |
+| 🥢 East Asian | Japanese, Chinese, Korean, Taiwanese |
+| 🌴 Southeast Asian | Thai, Vietnamese, Indonesian, Malaysian, Filipino, Singaporean |
+| 🍛 South Asian | Indian, Sri Lankan, Pakistani, Bangladeshi, Nepali |
+| 🧆 Middle Eastern | Lebanese, Turkish, Persian/Iranian, Israeli, Syrian, Iraqi, Yemeni, Emirati/Gulf, Palestinian |
+| 🏰 European | Italian, French, Spanish, Greek, Portuguese, German, British, Polish, Hungarian, Mediterranean, Balkan, Russian |
+| 🦅 North American | American, Cajun/Creole, Tex-Mex, Canadian, Southern US/Soul Food, Hawaiian |
+| 💃 Latin American | Mexican, Brazilian, Peruvian, Argentinian, Colombian, Cuban, Venezuelan, Chilean |
+| 🏝️ Caribbean | Jamaican, Trinidadian, Haitian, Puerto Rican, Caribbean General |
+| 🌍 African | Ethiopian, Moroccan, Nigerian, Ghanaian, Senegalese, South African, Kenyan, Tanzanian, Tunisian, Egyptian, East African, West African |
+| 🦘 Oceanian | Australian, Polynesian |
+
+### 📊 Complexity & Portions
+- **Complexity slider** (1–5): Controls recipe difficulty, auto-adjusts based on style selection
+- **Portions slider** (1–8): Sets number of servings for the generated recipe
+
+### 🍽️ Full Cook Flow
+- Step-by-step recipe navigation with elapsed timer
+- Overview page with ingredients and recipe description
+- Individual step pages with detailed instructions
+- Finish page with star ratings (ease + result) and optional notes
+- Save completed cook to history with full recipe data
+
+### 🔄 Save & Restart
+- Completed AI recipe cooks saved to cook_history.json
+- Full recipe data (instructions, ingredients, tips, servings) preserved
+- Restartable from Previous Cooks path
+- Recipe overview shown on restart for review before cooking
 
 ### 🔧 Appliance-Aware
 - Automatically detects your configured kitchen appliances
@@ -364,16 +401,18 @@ When OpenAI is not available or configured:
 
 Planned features for future releases:
 
-- [ ] **Start Cooking from AI Recipe**: Direct integration with cooking sessions
+- [x] **Start Cooking from AI Recipe**: Direct integration with cooking sessions (v0.5.1.1)
+- [x] **Servings Adjustment**: Scale recipes up or down via portions slider (v0.5.1.5)
+- [x] **Recipe History**: Browse previously generated AI recipes in Previous Cooks (v0.5.1.7)
 - [ ] **Save to Favorites**: Bookmark AI-generated recipes
 - [ ] **Recipe Sharing**: Export and share recipes with other users
-- [ ] **Servings Adjustment**: Scale recipes up or down
-- [ ] **Dietary Filters**: Vegetarian, vegan, gluten-free, keto, etc.
+- [ ] **Dietary Filters**: Vegetarian, vegan, gluten-free, keto, etc. (cooking styles partially cover this)
 - [ ] **Time Constraints**: "I have 30 minutes to cook"
-- [ ] **Recipe History**: Browse previously generated AI recipes
 - [ ] **Recipe Refinement**: "Make it spicier" or "Use less oil"
 - [ ] **Multi-Course Meals**: Generate appetizer + main + dessert
 - [ ] **Ingredient Substitutions**: Suggest alternatives for missing ingredients
+- [ ] **Multilingual**: Swedish and English translations (Phase 7)
+- [ ] **Measurement conversion**: Convert ingredient quantities between measurement systems (Phase 7)
 
 ## Support
 

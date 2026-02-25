@@ -1,8 +1,9 @@
 # Terms of Reference: Kitchen Cooking Engine GUI Redesign
 
-**Version:** 2.0  
+**Version:** 3.0  
 **Created:** 2026-01-16  
-**Status:** Planning  
+**Updated:** 2026-02-25  
+**Status:** Phases 1–6 Complete, Phases 7–8 Remaining  
 **Supersedes:** Current single-path GUI implementation
 
 ---
@@ -1023,41 +1024,41 @@ Welcome Screen
 The GUI redesign is considered successful when:
 
 ### 11.1 User Can Navigate Intuitively
-- [ ] From welcome screen, user can identify all available cooking options
-- [ ] User understands which appliance to select for desired cooking mode
-- [ ] Navigation path is clear and predictable
+- [x] From welcome screen, user can identify all available cooking options
+- [x] User understands which appliance to select for desired cooking mode
+- [x] Navigation path is clear and predictable
 
 ### 11.2 All Cook Types Are Accessible
-- [ ] Meater probe cook can be started (type 6.1)
-- [ ] Recipe cook can be started (type 6.2 - includes Ninja combi and AI recipes)
-- [ ] Ninja combi recipes (built-in and builder) can be accessed and cooked
-- [ ] AI recipe generation works for all appliances
-- [ ] Previous cooks can be browsed and restarted
+- [x] Meater probe cook can be started (type 6.1)
+- [x] Recipe cook can be started (type 6.2 - includes Ninja combi and AI recipes)
+- [x] Ninja combi recipes (built-in and builder) can be accessed and cooked
+- [x] AI recipe generation works for all appliances
+- [x] Previous cooks can be browsed and restarted
 
 ### 11.3 Recipe Cook Flow Functions Completely
-- [ ] Recipe overview displays correctly (first guide page)
-- [ ] Guide step navigation works (next/back buttons)
-- [ ] Ingredients bold correctly based on current guide step
-- [ ] Timer displays elapsed time accurately since pressing Start Cooking
-- [ ] MEATER probe can be started as subprocess (not a meater probe cook)
-- [ ] Star ratings can be entered (ease and result, 1-5 stars)
-- [ ] Pressing finish button saves cook to previous cooks with all data
+- [x] Recipe overview displays correctly (first guide page)
+- [x] Guide step navigation works (next/back buttons)
+- [ ] Ingredients bold correctly based on current guide step — **Deferred to Phase 8**
+- [x] Timer displays elapsed time accurately since pressing Start Cooking
+- [ ] MEATER probe can be started as subprocess (not a meater probe cook) — **Deferred to Phase 8**
+- [x] Star ratings can be entered (ease and result, 1-5 stars)
+- [x] Pressing finish button saves cook to previous cooks with all data
 
 ### 11.4 Previous Cooks System Works
-- [ ] All completed cooks appear in previous cook path
-- [ ] Cooks display with correct metadata (sorted by latest first)
-- [ ] Detail view shows full cook information (ingredients, ratings, notes, servings used)
-- [ ] Restart functionality works for all cook types
-- [ ] Filtered views work in path-specific recent lists (recent recipes)
+- [x] All completed cooks appear in previous cook path
+- [x] Cooks display with correct metadata (sorted by latest first)
+- [x] Detail view shows full cook information (ingredients, ratings, notes, servings used)
+- [x] Restart functionality works for all cook types
+- [x] Filtered views work in path-specific recent lists (recent recipes)
 
 ### 11.5 Visual Design Is Cohesive
-- [ ] Welcome screen is attractive and clear
-- [ ] Path screens follow consistent design language (meater path, ninja combi path, ai recipe builder path, previous cook path)
-- [ ] Recipe cook interface is clean and readable
-- [ ] Mobile responsive design works on small screens
-- [ ] Icons and visual elements are intuitive
+- [x] Welcome screen is attractive and clear
+- [x] Path screens follow consistent design language (meater path, ninja combi path, ai recipe builder path, previous cook path)
+- [x] Recipe cook interface is clean and readable
+- [ ] Mobile responsive design works on small screens — **Phase 8 polish**
+- [x] Icons and visual elements are intuitive
 
-### 11.6 Multilingual Support Works
+### 11.6 Multilingual Support Works — ⬜ Phase 7
 - [ ] Language selector in system settings
 - [ ] Swedish language fully implemented
 - [ ] English language fully implemented
@@ -1065,7 +1066,7 @@ The GUI redesign is considered successful when:
 - [ ] Language preference persists across sessions
 - [ ] System defaults to Home Assistant's configured language
 
-### 11.7 Measurement Systems Work
+### 11.7 Measurement Systems Work — ⬜ Phase 7
 - [ ] Measurement system selector in system settings
 - [ ] Swedish measurements (default) work correctly
 - [ ] UK measurements work correctly (if different from Swedish)
@@ -1075,7 +1076,7 @@ The GUI redesign is considered successful when:
 - [ ] Temperature values convert between °C and °F
 - [ ] Measurement preference persists across sessions
 
-### 11.8 Serving Size Adjustment Works
+### 11.8 Serving Size Adjustment Works — ⬜ Phase 7
 - [ ] Serving size selector appears in all recipes
 - [ ] +/- buttons or dropdown adjust servings (1-12 range)
 - [ ] All ingredient quantities scale proportionally
@@ -1083,59 +1084,66 @@ The GUI redesign is considered successful when:
 - [ ] Original serving count shown for reference
 - [ ] Adjusted serving count displayed in recipe cook flow
 - [ ] Serving size can be adjusted before starting cook
-- [ ] Serving size saved in cook history
+- [x] Serving size saved in cook history
 
 ---
 
 ## 12. Implementation Phases
 
-### Phase 1: Foundation (Weeks 1-2)
-- [ ] Implement welcome screen with appliance selector
-- [ ] Build path routing logic
-- [ ] Create basic path screens (skeleton views)
-- [ ] Set up navigation state management
+### Phase 1: Foundation (Weeks 1-2) — ✅ COMPLETE (v0.5.0.58)
+- [x] Implement welcome screen with appliance selector
+- [x] Build path routing logic
+- [x] Create basic path screens (skeleton views)
+- [x] Set up navigation state management
 
-### Phase 2: Meater Path (Week 3)
-- [ ] Integrate existing MEATER cooking interface
-- [ ] Implement filtered recent recipes for MEATER
-- [ ] Test meater only cook flow end-to-end
+### Phase 2: Meater Path (Week 3) — ✅ COMPLETE (v0.5.0.67)
+- [x] Integrate existing MEATER cooking interface
+- [x] Implement filtered recent recipes for MEATER
+- [x] Test meater only cook flow end-to-end
+- [x] **Added (not in original ToR):** Custom temperature cook (30–100°C) without protein selection (v0.5.1.4)
 
-### Phase 3: Previous Cook Path (Week 4)
-- [ ] Build cook history data model
-- [ ] Create previous cooks list component
-- [ ] Implement cook detail view
-- [ ] Add restart functionality
-- [ ] Build filtering system for path-specific views (recent recipes)
+### Phase 3: Previous Cook Path (Week 4) — ✅ COMPLETE (v0.5.0.64)
+- [x] Build cook history data model
+- [x] Create previous cooks list component
+- [x] Implement cook detail view
+- [x] Add restart functionality
+- [x] Build filtering system for path-specific views (recent recipes)
 
-### Phase 4: Recipe Cook Flow (Weeks 5-6)
-- [ ] Build recipe cook screen layout
-- [ ] Implement serving size selector with scaling
-- [ ] Implement guide step navigation
-- [ ] Add timer functionality (time since pressing Start Cooking)
-- [ ] Build ingredient list with guide step highlighting
-- [ ] Apply measurement system conversion to ingredients
-- [ ] Create overview and detail guide pages
-- [ ] Implement MEATER probe subprocess integration (not a meater probe cook)
-- [ ] Build star rating interface (ease and result)
-- [ ] Wire up finish button to save to previous cooks
+### Phase 4: Recipe Cook Flow (Weeks 5-6) — ✅ PARTIALLY COMPLETE (v0.5.0.65)
+- [x] Build recipe cook screen layout
+- [ ] Implement serving size selector with scaling — **Deferred to Phase 7**
+- [x] Implement guide step navigation
+- [x] Add timer functionality (time since pressing Start Cooking)
+- [x] Build ingredient list (without guide step highlighting — **deferred to Phase 8**)
+- [ ] Apply measurement system conversion to ingredients — **Deferred to Phase 7**
+- [x] Create overview and detail guide pages
+- [ ] Implement MEATER probe subprocess integration — **Deferred to Phase 8**
+- [x] Build star rating interface (ease and result)
+- [x] Wire up finish button to save to previous cooks
 
-### Phase 5: Ninja combi Path (Week 7)
-- [ ] Integrate existing Ninja combi recipe builder
-- [ ] Connect ninja combi recipe selector (built-in recipes)
-- [ ] Link to AI Recipe Builder path with Ninja combi preselected
-- [ ] Implement filtered recent recipes for Ninja combi
-- [ ] Test full Ninja combi recipe cook flow
+### Phase 5: Ninja combi Path (Week 7) — ✅ COMPLETE (v0.5.0.69)
+- [x] Integrate existing Ninja combi recipe builder
+- [x] Connect ninja combi recipe selector (built-in recipes)
+- [x] Link to AI Recipe Builder path with Ninja combi preselected
+- [x] Implement filtered recent recipes for Ninja combi
+- [x] Test full Ninja combi recipe cook flow
+- [x] **Added (not in original ToR):** Inline metric conversions for all Ninja recipes (cups→dl, oz→g, lb→kg, °F→°C)
 
-### Phase 6: AI Recipe Builder Path (Week 8)
-- [ ] Build AI Recipe Builder path screen
-- [ ] Display appliance features
-- [ ] Add deselectable secondary appliances (checkboxes)
-- [ ] Integrate existing AI recipe generation
-- [ ] Connect to recipe cook flow
-- [ ] Implement filtered recent recipes for selected appliance
-- [ ] Test full AI recipe cook workflow
+### Phase 6: AI Recipe Builder Path (Week 8) — ✅ COMPLETE (v0.5.1.7)
+- [x] Build AI Recipe Builder path screen
+- [x] Display appliance features
+- [ ] Add deselectable secondary appliances (checkboxes) — **Deferred to Phase 8**
+- [x] Integrate existing AI recipe generation
+- [x] Connect to recipe cook flow
+- [x] Implement filtered recent recipes for selected appliance
+- [x] Test full AI recipe cook workflow
+- [x] **Added (not in original ToR):** Complexity slider (1–5) with style-dependent defaults
+- [x] **Added (not in original ToR):** Portions slider (1–8 servings)
+- [x] **Added (not in original ToR):** 70+ world cuisines in 11 collapsible regions with multi-select for fusion
+- [x] **Added (not in original ToR):** Cancelable loading dialog with time estimate
+- [x] **Added (not in original ToR):** Full recipe data saved in cook history for restart
 
-### Phase 7: Multilingual & Measurement Systems (Week 9)
+### Phase 7: Multilingual & Measurement Systems (Week 9) — ⬜ NOT STARTED
 - [ ] Implement translation infrastructure (i18n)
 - [ ] Create Swedish translation files
 - [ ] Create English translation files
@@ -1149,7 +1157,7 @@ The GUI redesign is considered successful when:
 - [ ] Test language switching across all screens
 - [ ] Validate ingredient scaling with all measurement systems
 
-### Phase 8: Polish & Testing (Week 10)
+### Phase 8: Polish & Testing (Week 10) — ⬜ NOT STARTED
 - [ ] Visual design refinement
 - [ ] Mobile responsive testing
 - [ ] Edge case handling
@@ -1158,6 +1166,9 @@ The GUI redesign is considered successful when:
 - [ ] Test all measurement system conversions
 - [ ] Test serving size scaling edge cases
 - [ ] Documentation updates
+- [ ] **Remaining from Phase 4:** MEATER probe subprocess integration
+- [ ] **Remaining from Phase 4:** Ingredient bolding based on current guide step
+- [ ] **Remaining from Phase 6:** Deselectable secondary appliances
 
 ---
 
@@ -1210,7 +1221,60 @@ The GUI redesign is considered successful when:
 
 ---
 
-## 15. Related Documents
+## 15. Implementation Deviations
+
+This section documents deviations from the original ToR specification as of v0.5.1.7 (Phase 6 complete).
+
+### 15.1 Features Added Beyond ToR
+
+| Feature | Version | Description |
+|---------|---------|-------------|
+| Custom Temperature Cook | v0.5.1.4 | MEATER path allows setting any target temp (30–100°C) without protein/cut/doneness selection. Uses `start_simple_probe_cook` service. |
+| Complexity Slider | v0.5.1.5 | AI Recipe Builder has 1–5 complexity slider with style-dependent defaults. Included in AI prompt. |
+| Portions Slider | v0.5.1.5 | AI Recipe Builder has 1–8 portions slider. Sent to AI as `servings` parameter. |
+| 70+ World Cuisines | v0.5.1.6 | 11 collapsible cuisine regions with multi-select for fusion. Not in original ToR. |
+| Cancelable Generation | v0.5.1.5 | AI generation dialog has Cancel button instead of OK, with time estimate. |
+| AI Recipe Save/Restart | v0.5.1.7 | Full `recipe_data` saved in cook_history.json via REST API. Restartable from Previous Cooks. |
+| Inline Metric Conversions | v0.5.0.69–70 | All Ninja Combi recipes include metric equivalents (cups→dl, oz→g, lb→kg, °F→°C). This is a stop-gap until Phase 7's dynamic conversion engine. |
+
+### 15.2 Features Deferred from Original Phase
+
+| ToR Feature | Original Phase | Deferred To | Reason |
+|-------------|---------------|-------------|--------|
+| Serving size selector with scaling | Phase 4 | Phase 7 | Requires measurement conversion engine first |
+| Measurement system conversion | Phase 4 | Phase 7 | Dedicated phase for this complex feature |
+| Ingredient bolding by step | Phase 4 | Phase 8 | Polish item, not blocking core flow |
+| MEATER probe as recipe subprocess | Phase 4 | Phase 8 | Complex integration, not blocking core recipe flow |
+| Deselectable secondary appliances | Phase 6 | Phase 8 | UI enhancement, AI works without it |
+
+### 15.3 Features Attempted and Removed
+
+| Feature | Versions | Outcome |
+|---------|----------|---------|
+| View Assist Dashboard | v0.5.0.71–73 | Created broken HA sidebar panels instead of proper View Assist views. Removed entirely. Blueprint kept. Do NOT re-add without understanding View Assist's view system (they are not regular HA dashboards). |
+
+### 15.4 API Deviations
+
+| ToR Specification | Actual Implementation |
+|-------------------|----------------------|
+| `kitchen_cooking_engine.save_recipe_cook` service | REST API: `POST /api/kitchen_cooking_engine/ai_recipes/save_cook` — implemented as API endpoint instead of HA service because recipe cook saving is a panel-only action |
+| `kitchen_cooking_engine.start_recipe_cook` service | Not implemented — recipe cook is entirely frontend-driven (state machine in panel JS) |
+| `kitchen_cooking_engine.advance_guide_step` service | Not implemented — step navigation is frontend-only |
+| `kitchen_cooking_engine.complete_recipe_cook` service | Not implemented — completion handled by frontend `_saveRecipeCook()` calling REST API |
+| `kitchen_cooking_engine.restart_cook` service | Not implemented — restart handled by frontend `_restartCook()` which re-enters cook flow with saved data |
+
+### 15.5 Data Model Deviations
+
+| ToR Specification | Actual Implementation |
+|-------------------|----------------------|
+| Cook history uses `cook_type: 'meater_probe_cook' \| 'recipe_cook'` | History uses flat dict with optional fields: `recipe_data` (AI recipes), `cut_id`/`doneness` (MEATER cooks), `recipe_name` (Ninja recipes) |
+| `Recipe.title_translations` for multilingual | Not implemented — English only until Phase 7 |
+| `Ingredient.scaling_behavior` (linear/stepped/fixed) | Not implemented — no ingredient scaling yet |
+| `UserPreferences` object (language, measurement) | Not implemented — hardcoded English, no measurement selector |
+
+---
+
+## 16. Related Documents
 
 - `docs/TERMS_OF_REFERENCE.md` - Original project ToR
 - `docs/FEATURE_REQUIREMENTS.md` - Detailed feature specifications
@@ -1254,6 +1318,7 @@ The GUI redesign is considered successful when:
 | 2.2 | 2026-01-16 | Simplified cook type names: "Meater probe cook" and "Recipe cook". Changed back to "recipe cook flow". Never abbreviate "Ninja combi" to just "Ninja". | AI Agent |
 | 2.3 | 2026-01-16 | Added three major features: (a) Multilingual support (Swedish/English), (b) Measurement systems (Swedish default, UK, US, Pure Metric), (c) Serving size adjustment for all recipes. | AI Agent |
 | 2.4 | 2026-01-16 | Research-based update of Swedish measurements: Added accurate abbreviations (krm, tsk, msk, hg), conversion table, and common recipe patterns. Clarified that cups are NOT used in Swedish recipes and dl is standard for flour/sugar. | AI Agent |
+| 3.0 | 2026-02-25 | Updated phases 1-6 to COMPLETE with actual version numbers. Added § 15 Implementation Deviations documenting: features added beyond ToR (custom cook, complexity, cuisines, etc.), features deferred to later phases, removed features (View Assist dashboard), API deviations, data model deviations. | AI Agent |
 
 ---
 

@@ -2,9 +2,9 @@
 
 [![HACS Badge](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://github.com/hacs/integration)
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2024.1.0+-blue.svg)](https://www.home-assistant.io/)
-[![Alpha](https://img.shields.io/badge/Status-ALPHA-orange.svg)](https://github.com/R00S/meater-in-local-haos)
+[![Development](https://img.shields.io/badge/Status-Development-yellow.svg)](https://github.com/R00S/meater-in-local-haos)
 
-⚠️ **ALPHA SOFTWARE** - AI Recipe Builder is experimental. Use for testing purposes only.
+⚠️ **DEVELOPMENT RELEASE** — GUI Redesign Phase 6 of 8 complete. Functional but not yet production-ready. Phases 7 (Multilingual/Measurements) and 8 (Polish) remain.
 
 A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes, and temperature sensors.
 
@@ -12,80 +12,46 @@ A local-first, AI-assisted kitchen cooking system for Home Assistant that helps 
 
 Build a smart cooking engine that behaves like a highly capable kitchen assistant:
 - Understands your available ingredients and kitchen gear
-- Knows your time constraints (prep time, helper time, serving time)
-- Finds or adapts appropriate recipes
-- Creates step-by-step cooking instructions
+- Generates custom recipes with AI (OpenAI via Home Assistant conversation agents)
+- Creates step-by-step cooking instructions with timer
 - Uses temperature probes when relevant (MEATER+, etc.)
+- Supports multiple appliances (Ninja Combi, MultiFry, etc.)
 - Works entirely locally (Home Assistant + local apps)
 
 ## 📊 Current Status
 
-**Phase 6: AI-Powered Recipe Integration** 🧪 ALPHA (v0.4.2.01)
+**v0.5.1.7** — Semi-stable development release (February 2026)
 
-⚠️ **ALPHA RELEASE**: The AI Recipe Builder feature is experimental and in early testing. Expect bugs, performance issues, and potential breaking changes. Not recommended for production use.
+GUI Redesign Phases 1–6 complete. See [STATUS.md](STATUS.md) for full progress tracking.
 
-### v0.4.2.01 Features (January 2026)
-- ✅ **Copyable error dialogs** - All error messages now use custom modal dialogs instead of browser alerts, allowing text selection and copying
-- ✅ **Simple probe monitoring** - New `start_simple_probe_cook` service for temperature-only monitoring without cut/doneness requirements
-- ✅ **Ninja Combi MEATER integration fixed** - Start MEATER+ monitoring directly from Ninja Combi recipes with one click
-- ✅ **View Assist dashboard** - Automatic dashboard creation at `/cooking-va` for zero-config View Assist compatibility
-- ✅ **Entity selection improvements** - Better entity discovery for both regular and recipe-based cooking sessions
+### v0.5.1.x Features (February 2026)
+- ✅ **Complete GUI Redesign** — Welcome screen → appliance paths → cooking flows
+- ✅ **AI Recipe Builder** — Full 3-step flow: select ingredients → choose style/cuisines → generate recipes
+- ✅ **70+ world cuisines** — 11 collapsible regions (Nordic, East/SE/South Asian, Middle Eastern, European, N/S American, Caribbean, African, Oceanian) with multi-select for fusion
+- ✅ **Complexity & portions** — Adjustable complexity (1–5) and portions (1–8) per recipe
+- ✅ **Recipe cook flow** — Step-by-step navigation with elapsed timer and star ratings
+- ✅ **AI recipe save & restart** — Full recipe data saved to cook history, restartable from Previous Cooks
+- ✅ **Cancelable generation** — Loading dialog with Cancel button and time estimate
+- ✅ **Custom temperature cook** — Set any target temp (30–100°C) in MEATER path without protein selection
+- ✅ **Metric conversions** — All Ninja Combi recipes include metric equivalents (cups→dl, oz→g, lb→kg, °F→°C)
 
-### v0.4.0.0-alpha Features (EXPERIMENTAL - January 2026)
-- ✅ **AI Recipe Builder** - Generate custom recipes with OpenAI based on your ingredients and cooking style
-- ✅ **User-configurable AI agent** - Configure which conversation agent to use via settings UI (⚙️ button)
-- ✅ **Intelligent ingredient selection** - Choose from 31 common ingredients across 4 categories
-- ✅ **11 cooking styles** - Quick & Easy, Gourmet, Healthy, Comfort Food, Family Friendly, Meal Prep, One Pot, Low Carb, High Protein, Vegetarian, Vegan
-- ✅ **4 diverse recipe suggestions** - AI generates 4 quite different recipes from your selections
-- ✅ **Detailed recipe instructions** - Full ingredients, step-by-step instructions, cooking phases, and expert tips
-- ✅ **Appliance-aware generation** - AI considers your available kitchen equipment when creating recipes
-- ✅ **Flexible AI integration** - Works with Extended OpenAI Conversation, standard OpenAI Conversation, or any conversation agent
-- ✅ **Persistent settings** - Agent preferences saved across Home Assistant restarts
-- ✅ **Robust error handling** - Clear, actionable error messages for configuration issues (MAX_TOKENS, content violations)
-- ✅ **Instant loading** - Ingredient and style data embedded at build time (no API delays)
-- ✅ **Multi-appliance support** - Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom appliances
-- ✅ **Unified configuration** - All appliances use identical backend logic
-- ✅ **Dynamic feature management** - Enable/disable features per appliance
-- ✅ **Feature type system** - Standard/Modified/Special implementations with color-coded UI
-- ✅ **Architectural unification** - Predefined appliances indistinguishable from custom once created
-- ✅ **Enhanced UI** - Expandable appliance cards with grouped features
-- ✅ **Settings on all appliances** - Gear icon for feature editing on every appliance
-- ✅ MEATER+ temperature data flowing into Home Assistant via ESPHome BLE client
-- ✅ Comprehensive cooking data model (185+ international cuts, 89 Swedish cuts)
-- ✅ **Swedish data source** with proper terminology (helstekt, skiva)
-- ✅ **Temperature fine-tuning** with slider (35-100°C)
-- ✅ **Recommended doneness** per cut with ⭐ indicator
-- ✅ **Data source selector** - Switch between International (USDA) and Swedish
-- ✅ **Auto-generated frontend data** - No discrepancy between frontend/backend
-- ✅ HACS-compatible custom integration structure
-- ✅ Kitchen-focused cooking methods (oven, stovetop, air fryer, sous vide, etc.)
-- ✅ Vegetable support (root vegetables, greens, squash, mushrooms, etc.)
-- ✅ **Ambient temperature sensor** - Optional sensor for better ETA predictions
-- ✅ **Battery level sensor** - Monitor MEATER probe battery status (displayed in UI)
-- ✅ **Dynamic ETA calculation** - Time-to-target based on temperature rise rate
-- ✅ **Indicator light control** - RGB light changes color as cooking progresses (blue→red)
-- ✅ **Rest phase light transition** - Light transitions from red→white during rest
-- ✅ **Mobile push notifications** - Direct notifications via Home Assistant Companion app
-- ✅ **TTS voice announcements** - Audible alerts on any speaker
-- ✅ **Persistent notifications** - Home Assistant notification panel alerts
-- ✅ **Cooking events** - Approaching target, 5 min remaining, goal reached, rest complete
-- ✅ **Cook history** - Log completed cooks with timestamps, peak temp, final temp
-- ✅ **Remember last doneness** - Remembers your preferences per cut (including fine-tuning)
-- ✅ **Temperature graph** - Real-time graph showing tip/ambient temps from cook start
-- ✅ **Cooking notes** - Add notes during cooks, saved with history
-- ✅ **White screen fix** - Reliable tab switching without blank screens
-- ✅ **Ninja Combi support** - Full integration with recipes and cooking modes for Ninja Combi SFP700EU oven
-- ✅ **MultiFry support** - DeLonghi MultiFry with all cooking modes
-- ✅ **View Assist integration** - Voice command "start cooking" opens panel on View Assist devices
+### Core Features (all versions)
+- ✅ **MEATER+ BLE integration** — Real-time temperature monitoring via ESPHome
+- ✅ **185+ international cuts** (USDA) + **89 Swedish cuts** (Livsmedelsverket)
+- ✅ **17 built-in Ninja Combi recipes** with 12 cooking modes
+- ✅ **Multi-appliance support** — Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom
+- ✅ **Dynamic ETA** — Time-to-target based on temperature rise rate
+- ✅ **Notifications** — Mobile push, TTS voice, persistent, indicator light (blue→red→white)
+- ✅ **Cook history** — Log, review, and restart previous cooks
+- ✅ **View Assist** — Blueprint for voice navigation to cooking panel
 
-### Previous Releases
-- **v0.4.0.0-alpha** (January 2026) - AI Recipe Builder with OpenAI integration
-- **v0.3.5.10** (January 2026) - AI Recipe Builder bug fixes (error handling, JSON parsing)
-- **v0.3.5.7** (January 2026) - User-configurable AI agent with settings UI
-- **v0.3.4.0** (January 2026) - Multi-appliance infrastructure complete
-- **v0.3.3.1** (January 2026) - View Assist integration with voice commands
-- **v0.3.3.0** (January 2026) - Multi-appliance infrastructure
-- **v0.1.2.18** (December 2025) - Initial HACS integration with MEATER+ support
+### What's Next (Phase 7 & 8)
+- ⬜ Multilingual support (Swedish + English with i18n)
+- ⬜ Measurement system selector (Swedish, UK, US, pure metric)
+- ⬜ Serving size scaling with automatic ingredient conversion
+- ⬜ MEATER probe as subprocess within recipe cook steps
+- ⬜ Mobile responsive polish
+- ⬜ Edge case handling and performance optimization
 
 See [STATUS.md](STATUS.md) for detailed project status.
 
@@ -93,16 +59,21 @@ See [STATUS.md](STATUS.md) for detailed project status.
 
 ## 🤖 AI Recipe Builder
 
-The AI Recipe Builder generates custom recipes on-the-fly using OpenAI based on your ingredients, cooking style, and available kitchen equipment.
+The AI Recipe Builder generates custom recipes using AI (OpenAI or any HA conversation agent) based on your ingredients, cooking style, cuisine preferences, and available kitchen equipment.
 
 ### Features
 
-- **31 Common Ingredients** - Proteins (9), Vegetables (12), Grains (5), Dairy (5)
-- **11 Cooking Styles** - Quick & Easy, Gourmet, Healthy, Comfort Food, Family Friendly, Meal Prep, One Pot, Low Carb, High Protein, Vegetarian, Vegan
-- **4 Diverse Suggestions** - AI generates 4 quite different recipes from your selections
-- **Detailed Instructions** - Full ingredient lists with measurements, step-by-step instructions, cooking phases, expert tips
-- **Appliance-Aware** - AI considers your configured appliances (Ninja Combi, MultiFry, etc.) when generating recipes
-- **User-Configurable Agent** - Choose which AI conversation agent to use via settings (⚙️ button)
+- **30+ Common Ingredients** — Proteins (9), Vegetables (12), Grains (5), Dairy (5), plus custom ingredient input
+- **11 Cooking Styles** — Quick & Easy, Gourmet, Healthy, Comfort Food, Family Friendly, Meal Prep, One Pot, Low Carb, High Protein, Vegetarian, Vegan
+- **70+ World Cuisines** — 11 collapsible regions: Nordic & Scandinavian, East Asian, Southeast Asian, South Asian, Middle Eastern, European, North American, Latin American, Caribbean, African, Oceanian — select multiple for fusion
+- **Complexity Slider** — 1 (Very Simple) to 5 (Chef Level), with style-dependent defaults
+- **Portions Slider** — 1 to 8 servings
+- **4 Diverse Suggestions** — AI generates 4 quite different recipes from your selections
+- **Full Cook Flow** — Step-by-step instructions with elapsed timer, then star ratings on completion
+- **Save & Restart** — Completed AI recipe cooks saved to history with full recipe data; restartable from Previous Cooks
+- **Cancelable Generation** — Cancel button during AI generation with time estimate (10–30 seconds)
+- **Appliance-Aware** — AI considers your configured appliances when generating recipes
+- **User-Configurable Agent** — Choose which AI conversation agent to use via settings (⚙️ button)
 
 ### Setup Requirements
 
@@ -132,17 +103,18 @@ The AI Recipe Builder generates custom recipes on-the-fly using OpenAI based on 
 ### Using the AI Recipe Builder
 
 1. Open the Kitchen Cooking Engine panel
-2. Click the **🤖 AI Recipe Builder** button
-3. Select your **cooking style** (Quick & Easy, Gourmet, Healthy, etc.)
-4. Choose your **available ingredients** (click multiple to select)
-5. Click **Generate 4 Recipe Ideas**
-6. Browse the 4 AI-generated suggestions
-7. Click **Get Details** on your preferred recipe
-8. Follow the detailed instructions including:
-   - Complete ingredient list with measurements
-   - Step-by-step cooking instructions
-   - Cooking phases with temperatures and times
-   - Expert tips for best results
+2. Click an appliance or **🤖 AI Recipe Builder** button
+3. Select your **available ingredients** (minimum 2, click to toggle)
+4. Click **Next: Choose Cooking Style**
+5. Choose your **cooking style** (Quick & Easy, Gourmet, etc.)
+6. Adjust **complexity** (1–5) and **portions** (1–8)
+7. Optionally select **cuisines** from the region dropdowns (multi-select for fusion)
+8. Click **Generate AI Recipes**
+9. Browse the 4 AI-generated suggestions (name, description, cook time, difficulty)
+10. Click **Start Cooking This Recipe** on your preferred recipe
+11. Follow the **step-by-step cook flow** with elapsed timer
+12. **Rate** the recipe (ease + result, 1–5 stars) and add optional notes
+13. Recipe saved to **Previous Cooks** for future restart
 
 ### Troubleshooting
 
@@ -518,15 +490,13 @@ automation:
 
 ## 🎤 View Assist Integration
 
-The Kitchen Cooking Engine provides seamless integration with [View Assist](https://github.com/dinki/View-Assist) smart display devices.
+The Kitchen Cooking Engine provides integration with [View Assist](https://github.com/dinki/View-Assist) smart display devices via an automation blueprint.
 
-### Automatic Dashboard (NEW in v0.4.2.01)
+### Blueprint Setup
 
-The integration automatically creates a View Assist-compatible dashboard at `/cooking-va` during setup:
-- **Zero configuration required** - Dashboard appears automatically after installation
-- **Automatic cleanup** - Removed when integration is unloaded
-- **Full-screen interface** - Panel-mode dashboard optimized for View Assist displays
-- **Direct access** - Navigate directly via `http://your-ha-url/cooking-va`
+Import the included blueprint to navigate View Assist devices to the cooking panel with a voice command:
+- **Blueprint location:** `blueprints/view_assist_open_cooking_panel.yaml`
+- **Voice command:** "Start cooking" → opens the Kitchen Cooking Engine panel on your View Assist device
 
 To access the cooking interface on View Assist:
 1. Navigate to Settings → Dashboards
