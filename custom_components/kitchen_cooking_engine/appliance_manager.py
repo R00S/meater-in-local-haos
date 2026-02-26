@@ -407,6 +407,14 @@ class ApplianceManager:
         """
         return self.registry.get_all_appliances()
     
+    def get_appliances_with_entry_ids(self) -> List[tuple]:
+        """Get all appliances with their config entry IDs.
+        
+        Returns:
+            List of (entry_id, appliance) tuples
+        """
+        return list(self._appliances.items())
+    
     def get_appliance_by_id(self, entry_id: str) -> Optional[KitchenAppliance]:
         """Get appliance by config entry ID.
         

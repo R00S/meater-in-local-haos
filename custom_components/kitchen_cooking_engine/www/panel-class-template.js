@@ -2012,6 +2012,8 @@ class KitchenCookingPanel extends LitElement {
       }
     });
     
+    const hasNotableFeatures = modified.length > 0 || special.length > 0;
+    
     return html`
       ${standard.length > 0 ? html`
         <div class="feature-group">
@@ -2027,28 +2029,82 @@ class KitchenCookingPanel extends LitElement {
       ${modified.length > 0 ? html`
         <div class="feature-group">
           <h4>⚡ Modified Features (${modified.length})</h4>
-          <div class="feature-badges">
-            ${modified.map(feature => {
-              const note = appliance.feature_notes && appliance.feature_notes[feature];
-              return html`
-                <span class="feature-badge modified" title="${note || ''}">${this._formatFeatureName(feature)}${note ? html` <small>(${note})</small>` : ''}</span>
-              `;
-            })}
-          </div>
+          ${modified.map(feature => {
+            const note = appliance.feature_notes && appliance.feature_notes[feature] || '';
+            return html`
+              <div class="feature-note-row">
+                <span class="feature-badge modified">${this._formatFeatureName(feature)}</span>
+                <input type="text" class="feature-note-input"
+                  .value=${note}
+                  placeholder="Describe modification (e.g. 'max 230C', 'has turbo')"
+                  @change=${(e) => this._onFeatureNoteChanged(appliance, feature, e.target.value)}
+                />
+              </div>
+            `;
+          })}
         </div>
       ` : ''}
       
       ${special.length > 0 ? html`
         <div class="feature-group">
           <h4>⭐ Special Features (${special.length})</h4>
-          <div class="feature-badges">
-            ${special.map(feature => html`
-              <span class="feature-badge special">${this._formatFeatureName(feature)}</span>
-            `)}
-          </div>
+          ${special.map(feature => {
+            const note = appliance.feature_notes && appliance.feature_notes[feature] || '';
+            return html`
+              <div class="feature-note-row">
+                <span class="feature-badge special">${this._formatFeatureName(feature)}</span>
+                <input type="text" class="feature-note-input"
+                  .value=${note}
+                  placeholder="Describe this feature (e.g. 'max size 10x30cm')"
+                  @change=${(e) => this._onFeatureNoteChanged(appliance, feature, e.target.value)}
+                />
+              </div>
+            `;
+          })}
         </div>
       ` : ''}
+      
+      ${hasNotableFeatures ? html`
+        <button class="save-notes-btn" @click=${(e) => { e.stopPropagation(); this._saveFeatureNotes(appliance); }}>
+          💾 Save Notes
+        </button>
+      ` : ''}
     `;
+  }
+
+  _onFeatureNoteChanged(appliance, feature, value) {
+    // Store pending note changes on the appliance object
+    if (!appliance._pendingNotes) {
+      appliance._pendingNotes = {...(appliance.feature_notes || {})};
+    }
+    const trimmed = value.trim();
+    if (trimmed) {
+      appliance._pendingNotes[feature] = trimmed;
+    } else {
+      delete appliance._pendingNotes[feature];
+    }
+  }
+
+  async _saveFeatureNotes(appliance) {
+    const notes = appliance._pendingNotes || appliance.feature_notes || {};
+    try {
+      const response = await this.hass.callApi(
+        'POST',
+        `kitchen_cooking_engine/appliances/${appliance.entry_id}/feature_notes`,
+        { feature_notes: notes }
+      );
+      if (response && response.success) {
+        appliance.feature_notes = response.feature_notes;
+        appliance._pendingNotes = null;
+        this._showMessage('Notes Saved', 'Feature modification notes have been saved.');
+        this.requestUpdate();
+      } else {
+        this._showMessage('Error', response?.error || 'Failed to save notes.', true);
+      }
+    } catch (e) {
+      console.error('Failed to save feature notes:', e);
+      this._showMessage('Error', 'Failed to save feature notes. Please try again.', true);
+    }
   }
 
   _openApplianceConfig(applianceId) {
@@ -6271,6 +6327,47 @@ class KitchenCookingPanel extends LitElement {
       .feature-badge.more {
         background: var(--primary-color);
         color: white;
+      }
+
+      .feature-note-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 6px;
+      }
+
+      .feature-note-row .feature-badge {
+        flex-shrink: 0;
+      }
+
+      .feature-note-input {
+        flex: 1;
+        padding: 4px 8px;
+        border: 1px solid var(--divider-color);
+        border-radius: 4px;
+        font-size: 12px;
+        background: var(--card-background-color, #fff);
+        color: var(--primary-text-color);
+      }
+
+      .feature-note-input:focus {
+        border-color: var(--primary-color);
+        outline: none;
+      }
+
+      .save-notes-btn {
+        margin-top: 8px;
+        padding: 6px 16px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      .save-notes-btn:hover {
+        opacity: 0.9;
       }
 
       .appliance-recipes {
