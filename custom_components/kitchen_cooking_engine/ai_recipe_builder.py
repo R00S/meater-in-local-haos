@@ -459,7 +459,7 @@ class AIRecipeBuilder:
         if cuisines and len(cuisines) > 0:
             cuisine_names = [c.replace('_', ' ').title() for c in cuisines]
             if len(cuisine_names) == 1:
-                cuisine_hint = f"\nCuisine focus: {cuisine_names[0]} — IMPORTANT: use authentic local {cuisine_names[0]} cooking traditions as practiced in {cuisine_names[0]}-speaking countries, NOT Americanized/Westernized adaptations. Suggest dishes that locals would recognize and cook at home."
+                cuisine_hint = f"\nCuisine focus: {cuisine_names[0]} — IMPORTANT: use authentic local {cuisine_names[0]} cooking traditions as practiced in the cuisine's countries of origin, NOT Americanized/Westernized adaptations. Suggest dishes that locals would recognize and cook at home."
             else:
                 cuisine_hint = f"\nCuisine fusion: combine elements from {', '.join(cuisine_names)} — blend authentic local traditions from each cuisine. Each cuisine's contribution should reflect how it is cooked in its home country, not Westernized versions."
         
