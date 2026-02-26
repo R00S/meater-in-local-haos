@@ -792,7 +792,7 @@ class KitchenCookingPanel extends LitElement {
   async _loadAISettings() {
     try {
       const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_settings');
-      if (response.status === 'ok' && response.settings.agent_id) {
+      if (response.status === 'ok' && response.settings?.agent_id) {
         this._aiAgentId = response.settings.agent_id;
       }
     } catch (e) {
