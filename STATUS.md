@@ -1,8 +1,8 @@
 # Project Status - Kitchen Cooking Engine
 
-**Last Updated:** 25 February 2026  
-**Current Version:** v0.5.1.7  
-**Status:** Semi-stable mid-development release (GUI Redesign Phase 6 complete)
+**Last Updated:** 26 February 2026  
+**Current Version:** v0.5.2.8  
+**Status:** Semi-stable development release (GUI Redesign Phases 1–6 + v0.5.2.x appliance features complete)
 
 ## Project Direction
 
@@ -10,7 +10,7 @@ This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen 
 
 ---
 
-## 🔄 Current Status — v0.5.1.7 (Semi-Stable Development)
+## 🔄 Current Status — v0.5.2.8 (Semi-Stable Development)
 
 ### GUI Redesign Progress (from [GUI Redesign ToR](docs/GUI_REDESIGN_TERMS_OF_REFERENCE.md))
 
@@ -25,7 +25,7 @@ This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen 
 | Phase 7 | Multilingual & Measurement Systems | ⬜ Not started |
 | Phase 8 | Polish & Testing | ⬜ Not started |
 
-### What's Working (v0.5.1.7)
+### What's Working (v0.5.2.8)
 
 **Navigation & Paths:**
 - ✅ Welcome screen with appliance selector (MEATER, Ninja Combi, Other Appliance, Previous Cooks)
@@ -34,6 +34,14 @@ This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen 
 - ✅ Ninja Combi Path: Recipe builder, built-in recipes, AI recipes, recent cooks
 - ✅ AI Recipe Builder Path: Full 3-step flow (ingredients → style → generate)
 - ✅ Previous Cooks Path: Browse, view details, restart any cook type
+
+**Multi-Appliance Management (v0.5.2.x):**
+- ✅ Configure multiple kitchen appliances (Ninja Combi, MultiFry, Oven, Stovetop, Microwave, Custom)
+- ✅ Feature type classification: Standard / Modified / Special per feature per appliance
+- ✅ 30+ cooking features in centralized feature catalog
+- ✅ Feature modification notes: editable from both Appliances tab and AI Recipe Builder appliance path
+- ✅ Per-appliance feature notes saved via REST API
+- ✅ AI recipe builder considers feature types and modification notes when generating recipes
 
 **MEATER Probe Cooking:**
 - ✅ Protein/cut/doneness selection with International (USDA) and Swedish data
@@ -44,14 +52,15 @@ This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen 
 - ✅ Cook history with notes
 
 **AI Recipe Builder:**
-- ✅ Ingredient selection (30+ categorized ingredients)
+- ✅ Ingredient selection (300+ categorized ingredients: proteins, produce, grains, dairy, spices)
+- ✅ Cuisine-specific ingredient lists with region fallback
 - ✅ 11 cooking styles with style-dependent complexity defaults
 - ✅ Complexity slider (1–5: Very Simple → Chef Level)
 - ✅ Portions slider (1–8 servings)
 - ✅ 70+ cuisines in 11 collapsible regions (Nordic, East Asian, Southeast Asian, South Asian, Middle Eastern, European, North American, Latin American, Caribbean, African, Oceanian)
 - ✅ Multi-cuisine selection for fusion recipes
 - ✅ AI generation with cancelable loading dialog
-- ✅ 4 diverse recipe suggestions per request
+- ✅ 4 diverse recipe suggestions per request with 📖 Classic / 🤖 Original badges
 - ✅ Full recipe detail fetch before cook flow
 - ✅ Recipe cook flow with step-by-step navigation
 - ✅ Star rating (ease + result) on completion
@@ -92,23 +101,24 @@ See [GUI Redesign ToR § 15. Implementation Deviations](#) for a full list of de
 
 ```
 ├── custom_components/kitchen_cooking_engine/  # HACS Custom Integration
-│   ├── __init__.py            # Integration setup (v0.5.1.7)
-│   ├── config_flow.py         # Configuration UI
-│   ├── const.py               # Constants (Panel v168)
+│   ├── __init__.py            # Integration setup (v0.5.2.8)
+│   ├── config_flow.py         # Configuration UI (multi-appliance)
+│   ├── const.py               # Constants (Panel v185)
 │   ├── cooking_data.py        # International cooking data (USDA)
 │   ├── swedish_cooking_data.py # Swedish cooking data (Livsmedelsverket)
 │   ├── ninja_combi_data.py    # Ninja Combi recipes (with metric conversions)
 │   ├── ai_recipe_builder.py   # AI recipe generation engine
-│   ├── ai_recipe_data.py      # AI recipe ingredients & styles data
+│   ├── ai_recipe_data.py      # AI recipe ingredients, cuisines, styles data
 │   ├── sensor.py              # Cooking session sensor entity
 │   ├── storage.py             # Cook history persistence
-│   ├── api.py                 # REST API endpoints (incl. AI recipe APIs)
+│   ├── api.py                 # REST API endpoints (incl. AI recipe, appliance APIs)
 │   ├── appliance_manager.py   # Multi-appliance management
 │   ├── custom_sentences/      # Voice command definitions
 │   ├── blueprints/            # Automation blueprints (View Assist)
-│   ├── appliances/            # Appliance implementations
+│   ├── appliances/            # Appliance implementations & feature catalog
+│   ├── generate_frontend_data.py # Generates JS from template + data
 │   ├── services.yaml          # Service definitions
-│   ├── manifest.json          # HACS manifest (v0.5.1.7)
+│   ├── manifest.json          # HACS manifest (v0.5.2.8)
 │   └── www/                   # Frontend panel
 │       ├── panel-class-template.js   # UI source (edit this)
 │       └── kitchen-cooking-panel.js  # Auto-generated (do not edit)

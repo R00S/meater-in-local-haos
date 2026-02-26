@@ -2,15 +2,15 @@
 
 ## Project Status: Ready for Phase 7 & 8 Implementation
 
-**Current Version:** v0.5.1.7  
-**Last Updated:** 25 February 2026  
-**Previous Agent:** Completed Phases 1–6 of GUI Redesign
+**Current Version:** v0.5.2.8  
+**Last Updated:** 26 February 2026  
+**Previous Agent:** Completed Phases 1–6 of GUI Redesign + v0.5.2.x appliance features
 
 This document provides guidance for the next development agent taking over Phase 7 (Multilingual & Measurement Systems) and Phase 8 (Polish & Testing).
 
 ---
 
-## What's Working Now (v0.5.1.7)
+## What's Working Now (v0.5.2.8)
 
 ### GUI Redesign — Phases 1–6 Complete
 - ✅ Welcome screen with appliance selector (MEATER, Ninja Combi, Other Appliance, Previous Cooks)
@@ -21,6 +21,16 @@ This document provides guidance for the next development agent taking over Phase
 - ✅ Recipe Cook Flow: Overview → step-by-step → finish with star ratings + notes
 - ✅ Cook history persistence (cook_history.json via storage.py)
 - ✅ View Assist blueprint (blueprints/view_assist_open_cooking_panel.yaml)
+
+### Multi-Appliance Management (v0.5.2.x)
+- ✅ Multiple appliance configuration (Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom)
+- ✅ Feature type classification (Standard/Modified/Special) per feature per appliance
+- ✅ 30+ cooking features in centralized feature catalog with temperature ranges, oil levels, icons
+- ✅ Feature modification notes editable from Appliances tab and AI Recipe Builder appliance path (📝 button)
+- ✅ Categorized AI ingredients (300+ items: proteins, produce, grains, dairy, spices)
+- ✅ Cuisine-specific ingredient lists with region fallback for authentic recipes
+- ✅ Recipe origin badges (📖 Classic / 🤖 Original) on AI suggestion cards
+- ✅ AI considers feature types and modification notes when generating recipes
 
 ### Data Flow
 ```
