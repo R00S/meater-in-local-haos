@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 19 Feb 2026, 13:12 UTC
-Last Change: v0.5.2.1 - Authentic local cuisine ingredients and recipe generation
+Last Change: v0.5.2.2 - Ingredient categories, staple assumptions, more proteins, recipe overview fix
 """
 
 DOMAIN = "kitchen_cooking_engine"

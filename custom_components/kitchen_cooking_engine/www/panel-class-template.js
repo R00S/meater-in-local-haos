@@ -4480,9 +4480,12 @@ class KitchenCookingPanel extends LitElement {
     const recipe = this._recipeCookState.recipe;
     const steps = this._getRecipeSteps(recipe);
     
-    // Guard: if no steps at all, go straight to finish
+    // If no steps at all, go from overview (−1) → finish (0)
+    // so the user can still rate the cook after following the overview
     if (steps.length === 0) {
-      this._recipeCookState.currentStep = 1; // Finish page (>= steps.length)
+      if (this._recipeCookState.currentStep < 0) {
+        this._recipeCookState.currentStep = 0; // Finish page (>= steps.length of 0)
+      }
       this.requestUpdate();
       return;
     }
@@ -4731,11 +4734,26 @@ class KitchenCookingPanel extends LitElement {
         fullRecipe.use_probe = detail.use_probe || false;
         fullRecipe.target_temp_c = detail.target_temp_c;
         fullRecipe.target_temp_f = detail.target_temp_f;
+      } else {
+        // API returned but without detail — use main_ingredients as fallback
+        fullRecipe.ingredients = fullRecipe.main_ingredients || [];
+        fullRecipe.instructions = [];
       }
     } catch (error) {
       if (cancelled) return; // User cancelled
       console.error('Error fetching recipe detail:', error);
-      // Continue with whatever data we have
+      // Show error but let user continue with overview (main_ingredients available)
+      fullRecipe.ingredients = fullRecipe.main_ingredients || [];
+      fullRecipe.instructions = [];
+      // Brief non-blocking error notice — the overview will show fallback data
+      this._messageDialogOnCancel = null;
+      this._messageDialogTitle = '⚠️ Partial Recipe';
+      this._messageDialogContent = 'Could not load full recipe details from AI. You can still see the ingredients overview and finish the cook.';
+      this._messageDialogIsError = false;
+      this._showMessageDialog = true;
+      this.requestUpdate();
+      // Auto-dismiss after 3 seconds
+      setTimeout(() => { this._showMessageDialog = false; this.requestUpdate(); }, 3000);
     }
 
     // Dismiss the loading dialog
@@ -4853,7 +4871,7 @@ class KitchenCookingPanel extends LitElement {
             </button>
           ` : html`
             <button class="primary-btn" @click=${this._nextRecipeStep}>
-              ${isOverview ? 'Start →' : currentStepIndex === steps.length - 1 ? 'Finish' : 'Next →'}
+              ${isOverview ? (steps.length > 0 ? 'Start →' : 'Finish →') : currentStepIndex === steps.length - 1 ? 'Finish' : 'Next →'}
             </button>
           `}
         </div>
@@ -4868,6 +4886,10 @@ class KitchenCookingPanel extends LitElement {
     const recipe = this._recipeCookState.recipe;
     const steps = this._getRecipeSteps(recipe);
     const totalTime = recipe.total_time || recipe.cook_time_minutes;
+    // Fall back to main_ingredients (from suggestion) if full ingredients list is missing
+    const ingredientList = (recipe.ingredients && recipe.ingredients.length > 0)
+      ? recipe.ingredients
+      : (recipe.main_ingredients || []);
     
     return html`
       <div class="recipe-cook-overview">
@@ -4883,11 +4905,17 @@ class KitchenCookingPanel extends LitElement {
 
         <div class="recipe-cook-ingredients">
           <h4>🛒 Ingredients</h4>
-          <ul>
-            ${(recipe.ingredients || []).map(ing => html`
-              <li>${ing}</li>
-            `)}
-          </ul>
+          ${ingredientList.length > 0 ? html`
+            <ul>
+              ${ingredientList.map(ing => html`
+                <li>${ing}</li>
+              `)}
+            </ul>
+          ` : html`
+            <p style="color: var(--secondary-text-color); font-style: italic;">
+              Ingredient details not available for this recipe.
+            </p>
+          `}
         </div>
 
         ${steps.length > 0 ? html`
@@ -4902,7 +4930,11 @@ class KitchenCookingPanel extends LitElement {
               `)}
             </ol>
           </div>
-        ` : ''}
+        ` : html`
+          <p style="color: var(--secondary-text-color); font-style: italic;">
+            Step-by-step instructions not available. Use the recipe description and ingredients above as your guide.
+          </p>
+        `}
       </div>
     `;
   }

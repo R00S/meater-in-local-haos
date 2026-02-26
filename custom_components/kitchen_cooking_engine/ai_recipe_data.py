@@ -64,10 +64,153 @@ COMMON_INGREDIENTS = {
 }
 
 # ---------------------------------------------------------------------------
-# Cuisine-specific ingredients (28 per cuisine/region)
+# Assumed staples — these are assumed to be available in every kitchen.
+# They are NOT shown in the ingredient picker but are mentioned in the AI
+# prompt so the AI knows it can use them.
+# ---------------------------------------------------------------------------
+ASSUMED_STAPLES = [
+    "Cooking oil", "Butter", "Salt", "Black pepper", "Sugar", "Vinegar",
+]
+
+# ---------------------------------------------------------------------------
+# Ingredient category mapping (used by frontend to group & sort ingredients).
+#   p = Proteins   v = Produce   g = Grains & Starches
+#   d = Dairy, Oils & Sauces     s = Spices, Nuts & Seasonings
+# ---------------------------------------------------------------------------
+INGREDIENT_CATEGORIES = {
+    # Proteins
+    "ackee": "p", "anchovies": "p", "andouille": "p", "bacon": "p",
+    "beef": "p", "canned_tuna": "p", "catfish": "p", "chicken": "p",
+    "chicken_breast": "p", "chicken_thigh": "p", "chorizo": "p",
+    "chorizo_ar": "p", "cod": "p", "crab": "p", "crawfish": "p",
+    "crayfish": "p", "dried_shrimp": "p", "duck": "p", "edamame": "p",
+    "eggs": "p", "fish": "p", "goat": "p", "ground_beef": "p",
+    "ham_hocks": "p", "herring": "p", "jamon": "p", "lamb": "p",
+    "lamb_shank": "p", "lardons": "p", "meatball_mix": "p",
+    "mussels": "p", "pancetta": "p", "paneer": "p", "pork": "p",
+    "pork_belly": "p", "pork_chop": "p", "prosciutto": "p",
+    "salmon": "p", "saltfish": "p", "sausage": "p", "shrimp": "p",
+    "steak": "p", "stockfish": "p", "tempeh": "p", "tofu": "p",
+    "tuna": "p",
+    # Produce (vegetables, fruits, fresh herbs)
+    "artichokes": "v", "avocado": "v", "bamboo_shoots": "v",
+    "banana": "v", "banana_leaf": "v", "basil": "v", "basil_tw": "v",
+    "bay_leaves": "v", "bean_sprouts": "v", "beetroot": "v", "beets": "v",
+    "bell_peppers": "v", "bok_choy": "v", "breadfruit": "v",
+    "broccoli": "v", "cabbage": "v", "calamansi": "v", "callaloo": "v",
+    "carrots": "v", "cassava": "v", "cauliflower": "v", "celeriac": "v",
+    "celery": "v", "chili": "v", "chinese_cabbage": "v", "chives": "v",
+    "cilantro": "v", "collard_greens": "v", "corn": "v",
+    "cucumber": "v", "curry_leaves": "v", "daikon": "v", "dill": "v",
+    "eggplant": "v", "epazote": "v", "galangal": "v", "garlic": "v",
+    "ginger": "v", "grape_leaves": "v", "green_beans": "v",
+    "green_onions": "v", "green_papaya": "v", "herbs_mix": "v",
+    "horseradish": "v", "jalapenos": "v", "kaffir_lime": "v",
+    "korean_radish": "v", "leeks": "v", "lemon": "v", "lemongrass": "v",
+    "lettuce": "v", "lime": "v", "mango": "v", "mint": "v",
+    "morning_glory": "v", "mushrooms": "v", "napa_cabbage": "v",
+    "okra": "v", "onions": "v", "oregano": "v", "pandan": "v",
+    "papaya": "v", "parsley": "v", "parsnips": "v", "peas": "v",
+    "perilla": "v", "pineapple": "v", "plantains": "v", "poblano": "v",
+    "preserved_lemons": "v", "pumpkin": "v", "quince": "v",
+    "radish": "v", "ridge_gourd": "v", "rosemary": "v",
+    "san_marzano": "v", "scotch_bonnet": "v", "shallots": "v",
+    "shiitake": "v", "spinach": "v", "spinach_ng": "v",
+    "spring_onions": "v", "squash": "v", "sweet_potato": "v",
+    "sweet_potatoes": "v", "tarragon": "v", "thai_basil": "v",
+    "thai_chili": "v", "thyme": "v", "tomatillos": "v", "tomatoes": "v",
+    "turnip": "v", "turnips": "v", "water_chestnuts": "v", "yam": "v",
+    "yams": "v", "yuca": "v", "zucchini": "v",
+    # Grains & Starches (incl. legumes, bread, noodles)
+    "arborio_rice": "g", "baguette": "g", "barley": "g",
+    "basmati_rice": "g", "beans": "g", "biscuit_dough": "g",
+    "black_beans": "g", "black_eyed_peas": "g", "bread": "g",
+    "bulgur": "g", "cannellini": "g", "chickpeas": "g",
+    "ciabatta": "g", "corn_tortillas": "g", "cornbread": "g",
+    "cornmeal": "g", "couscous": "g", "egg_noodles": "g",
+    "empanada_dough": "g", "farofa": "g", "flat_bread": "g",
+    "flour": "g", "flour_tortillas": "g", "freekeh": "g", "grits": "g",
+    "injera_flour": "g", "japchae_noodles": "g", "jasmine_rice": "g",
+    "kidney_beans": "g", "lavash": "g", "lentils": "g", "noodles": "g",
+    "oats": "g", "panko": "g", "pasta": "g", "phyllo": "g", "pinto_beans": "g",
+    "pita": "g", "potatoes": "g", "quinoa": "g", "red_beans": "g",
+    "rice": "g", "rice_cakes": "g", "rice_noodles": "g",
+    "rice_paper": "g", "rye_bread": "g", "soba": "g", "split_peas": "g",
+    "taco_shells": "g", "tortillas": "g", "udon": "g",
+    "wonton_wrappers": "g",
+    # Dairy, Oils & Sauces
+    "balsamic": "d", "bbq_sauce": "d", "black_vinegar": "d",
+    "buttermilk": "d", "cheddar": "d", "cheese": "d", "chili_oil": "d",
+    "chili_paste": "d", "coconut": "d", "coconut_milk": "d",
+    "condensed_milk": "d", "cotija": "d", "cream": "d",
+    "cream_cheese": "d", "creme_fraiche": "d", "dijon": "d",
+    "doenjang": "d", "doubanjiang": "d", "dulce_de_leche": "d",
+    "evaporated_milk": "d", "feta": "d", "fish_sauce": "d", "ghee": "d",
+    "gochujang": "d", "green_curry_paste": "d", "gruyere": "d",
+    "heavy_cream": "d", "herb_butter": "d", "hoisin_sauce": "d",
+    "honey": "d", "hot_sauce": "d", "kecap_manis": "d", "kimchi": "d",
+    "manchego": "d", "maple_syrup": "d", "milk": "d", "mirin": "d",
+    "miso_paste": "d", "molasses": "d", "monterey_jack": "d",
+    "mozzarella": "d", "mustard": "d", "niter_kibbeh": "d",
+    "olive_oil": "d", "oyster_sauce": "d", "palm_oil": "d",
+    "parmesan": "d", "pecorino": "d", "pomegranate_molasses": "d",
+    "provolone": "d", "queso": "d", "queso_fresco": "d",
+    "red_curry_paste": "d", "red_wine": "d", "red_wine_vinegar": "d",
+    "refried_beans": "d", "rice_vinegar": "d", "rice_wine": "d",
+    "ricotta": "d", "rose_water": "d", "rum": "d", "salsa": "d",
+    "sesame_oil": "d", "sherry_vinegar": "d", "shrimp_paste": "d",
+    "sour_cream": "d", "soy_sauce": "d", "sriracha": "d",
+    "tahini": "d", "tamarind": "d", "tamarind_paste": "d",
+    "tomato_paste": "d", "white_wine": "d", "wine_white": "d",
+    "worcestershire": "d", "yogurt": "d",
+    # Spices, Nuts & Seasonings
+    "achiote": "s", "aji_amarillo": "s", "aji_panca": "s",
+    "allspice": "s", "almonds": "s", "amchur": "s", "ancho": "s",
+    "annatto": "s", "apricots": "s", "asafoetida": "s",
+    "barberries": "s", "berbere": "s", "bonito": "s", "brown_sugar": "s",
+    "cancha": "s", "candlenut": "s", "capers": "s", "cardamom": "s",
+    "cayenne": "s", "chili_powder": "s", "chimichurri": "s",
+    "chipotle": "s", "cinnamon": "s", "cloves": "s", "coriander": "s",
+    "corn_starch": "s", "cumin": "s", "curry_powder": "s", "dates": "s",
+    "dried_apricots": "s", "dried_limes": "s", "dried_mint": "s",
+    "dried_seaweed": "s", "egusi": "s", "fenugreek": "s",
+    "fermented_black_beans": "s", "file_powder": "s", "five_spice": "s",
+    "garam_masala": "s", "gochugaru": "s", "hearts_of_palm": "s",
+    "huacatay": "s", "jaggery": "s", "jollof_seasoning": "s",
+    "juniper_berries": "s", "kokum": "s", "kombu": "s",
+    "korerima": "s", "lingonberries": "s", "locust_beans": "s",
+    "macadamia": "s", "mitmita": "s", "mustard_seeds": "s",
+    "nigella_seeds": "s", "nori": "s", "nutmeg": "s", "olives": "s",
+    "palm_sugar": "s", "paprika": "s", "peanuts": "s", "pecans": "s",
+    "peppercorns": "s", "pickled_ginger": "s", "pine_nuts": "s",
+    "pistachios": "s", "pomegranate": "s", "ras_el_hanout": "s",
+    "red_pepper_flakes": "s", "rocoto": "s", "saffron": "s",
+    "seaweed": "s", "sesame_seeds": "s", "sour_cherries": "s",
+    "star_anise": "s", "sugar_cane": "s", "sumac": "s",
+    "suya_spice": "s", "szechuan_pepper": "s", "turmeric": "s",
+    "walnuts": "s", "wasabi": "s", "white_pepper": "s", "zaatar": "s",
+}
+
+# Category display labels (used by frontend for section headers)
+CATEGORY_LABELS = {
+    "p": "🥩 Proteins",
+    "v": "🥬 Produce",
+    "g": "🌾 Grains & Starches",
+    "d": "🫙 Dairy, Oils & Sauces",
+    "s": "🌶️ Spices, Nuts & Seasonings",
+}
+
+# Category display order
+CATEGORY_ORDER = ["p", "v", "g", "d", "s"]
+
+# ---------------------------------------------------------------------------
+# Cuisine-specific ingredients
 #
 # Keys can be either a region ID or an individual cuisine ID.
 # Lookup order: individual cuisine ID -> parent region ID -> COMMON_INGREDIENTS
+#
+# Staples (oil, butter, salt, pepper, sugar, vinegar) are assumed available
+# and NOT listed — freeing slots for more distinctive ingredients & proteins.
 # ---------------------------------------------------------------------------
 
 def _ing(id_str, name):
