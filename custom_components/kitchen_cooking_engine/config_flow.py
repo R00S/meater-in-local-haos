@@ -810,8 +810,8 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
             # Only keep notes for features that are still modified/special
             preserved_notes = {
                 fname: existing_notes[fname]
-                for fname in features
-                if fname in existing_notes and features[fname] in (FEATURE_TYPE_MODIFIED, FEATURE_TYPE_SPECIAL)
+                for fname in existing_notes
+                if fname in features and features[fname] in (FEATURE_TYPE_MODIFIED, FEATURE_TYPE_SPECIAL)
             }
             updated_data[CONF_FEATURE_NOTES] = preserved_notes
             

@@ -182,6 +182,10 @@ class KitchenAppliance(ABC):
         """Get modification notes for a feature on this appliance."""
         return self._feature_notes.get(feature_name)
     
+    def update_feature_notes(self, notes: Dict[str, str]) -> None:
+        """Update all feature notes for this appliance."""
+        self._feature_notes = dict(notes)
+    
     def get_features(self) -> Set[str]:
         """Get set of all feature names this appliance supports."""
         return set(self.features.keys())

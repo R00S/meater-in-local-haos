@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 26 Feb 2026, 18:34 CET
+ * AUTO-GENERATED: 26 Feb 2026, 18:36 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 26 Feb 2026, 18:34 CET
+// Last generated: 26 Feb 2026, 18:36 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -13472,7 +13472,7 @@ class KitchenCookingPanel extends LitElement {
         <div class="feature-group">
           <h4>⚡ Modified Features (${modified.length})</h4>
           ${modified.map(feature => {
-            const note = appliance.feature_notes && appliance.feature_notes[feature] || '';
+            const note = (appliance.feature_notes && appliance.feature_notes[feature]) || '';
             return html`
               <div class="feature-note-row">
                 <span class="feature-badge modified">${this._formatFeatureName(feature)}</span>
@@ -13491,7 +13491,7 @@ class KitchenCookingPanel extends LitElement {
         <div class="feature-group">
           <h4>⭐ Special Features (${special.length})</h4>
           ${special.map(feature => {
-            const note = appliance.feature_notes && appliance.feature_notes[feature] || '';
+            const note = (appliance.feature_notes && appliance.feature_notes[feature]) || '';
             return html`
               <div class="feature-note-row">
                 <span class="feature-badge special">${this._formatFeatureName(feature)}</span>
@@ -19450,7 +19450,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "182";
+const PANEL_VERSION = "183";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

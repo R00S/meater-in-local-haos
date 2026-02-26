@@ -488,7 +488,7 @@ class ApplianceFeatureNotesView(HomeAssistantView):
         if manager:
             appliance = manager.get_appliance_by_id(entry_id)
             if appliance:
-                appliance._feature_notes = validated_notes
+                appliance.update_feature_notes(validated_notes)
         
         return self.json({"success": True, "feature_notes": validated_notes})
 

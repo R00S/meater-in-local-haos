@@ -2030,7 +2030,7 @@ class KitchenCookingPanel extends LitElement {
         <div class="feature-group">
           <h4>⚡ Modified Features (${modified.length})</h4>
           ${modified.map(feature => {
-            const note = appliance.feature_notes && appliance.feature_notes[feature] || '';
+            const note = (appliance.feature_notes && appliance.feature_notes[feature]) || '';
             return html`
               <div class="feature-note-row">
                 <span class="feature-badge modified">${this._formatFeatureName(feature)}</span>
@@ -2049,7 +2049,7 @@ class KitchenCookingPanel extends LitElement {
         <div class="feature-group">
           <h4>⭐ Special Features (${special.length})</h4>
           ${special.map(feature => {
-            const note = appliance.feature_notes && appliance.feature_notes[feature] || '';
+            const note = (appliance.feature_notes && appliance.feature_notes[feature]) || '';
             return html`
               <div class="feature-note-row">
                 <span class="feature-badge special">${this._formatFeatureName(feature)}</span>
