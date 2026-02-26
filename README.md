@@ -49,7 +49,7 @@ GUI Redesign Phases 1–6 complete + v0.5.2.x appliance features. See [STATUS.md
 - ✅ **MEATER+ BLE integration** — Real-time temperature monitoring via ESPHome
 - ✅ **185+ international cuts** (USDA) + **89 Swedish cuts** (Livsmedelsverket)
 - ✅ **17 built-in Ninja Combi recipes** with 12 cooking modes
-- ✅ **Multi-appliance support** — Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom appliances with per-feature type classification
+- ✅ **Multi-appliance support** — Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom appliances
 - ✅ **Dynamic ETA** — Time-to-target based on temperature rise rate
 - ✅ **Notifications** — Mobile push, TTS voice, persistent, indicator light (blue→red→white)
 - ✅ **Cook history** — Log, review, and restart previous cooks

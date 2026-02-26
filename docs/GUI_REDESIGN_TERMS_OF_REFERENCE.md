@@ -337,7 +337,7 @@ These features apply system-wide across all paths and cook types:
    - Show selected main appliance name with 📝 button to toggle inline feature notes editor
    - Display main appliance features (collapsed: comma list; expanded: grouped by Standard/Modified/Special with editable notes)
    - List all available secondary appliances (names only, no features)
-   - **Secondary appliances are deselectable** (checkboxes to include/exclude) — ⬜ Deferred to Phase 8
+   - **Secondary appliances are deselectable** (checkboxes to include/exclude) — *Deferred to Phase 8*
 
 2. **Start AI Recipe Builder** (Button 1)
    - Launch AI Recipe Builder
@@ -366,9 +366,10 @@ These features apply system-wide across all paths and cook types:
 │   Notes button)                            │
 │                                            │
 │   Secondary Appliances Available:          │
-│   ☐ Stovetop                               │
-│   ☐ Microwave                              │
-│   ☐ MEATER+ Probe                          │
+│   • Stovetop                               │
+│   • Microwave                              │
+│   • MEATER+ Probe                          │
+│   (Deselectable checkboxes: Phase 8)       │
 │                                            │
 │   ┌──────────────────────────────────┐   │
 │   │  🤖  Create AI Recipe            │   │
