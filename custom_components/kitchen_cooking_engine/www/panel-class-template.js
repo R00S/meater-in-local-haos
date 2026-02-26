@@ -4530,11 +4530,11 @@ class KitchenCookingPanel extends LitElement {
     const recipe = this._recipeCookState.recipe;
     const steps = this._getRecipeSteps(recipe);
     
-    // If no steps at all, go from overview (−1) → finish (0)
+    // If no steps at all, go from overview (-1) to finish (0)
     // so the user can still rate the cook after following the overview
     if (steps.length === 0) {
       if (this._recipeCookState.currentStep < 0) {
-        this._recipeCookState.currentStep = 0; // Finish page (>= steps.length of 0)
+        this._recipeCookState.currentStep = 0; // finish page since steps.length is 0
       }
       this.requestUpdate();
       return;
@@ -4608,14 +4608,14 @@ class KitchenCookingPanel extends LitElement {
       });
 
       // Show success message
-      this._showMessage('Recipe cook saved successfully! 🎉');
+      this._showMessage('✅ Saved', 'Recipe cook saved successfully! 🎉');
 
       // Stop the cook flow
       this._stopRecipeCook();
 
     } catch (error) {
       console.error('Error saving recipe cook:', error);
-      this._showMessage(`Error saving recipe cook: ${error.message}`, true);
+      this._showMessage('❌ Save Error', `Error saving recipe cook: ${error.message}`, true);
     }
   }
 
@@ -4656,7 +4656,7 @@ class KitchenCookingPanel extends LitElement {
    */
   _proceedToCookingStyle() {
     if (this._selectedIngredients.length < 2) {
-      this._showMessage('Please select at least 2 ingredients', true);
+      this._showMessage('⚠️ Ingredients', 'Please select at least 2 ingredients', true);
       return;
     }
     
@@ -4670,7 +4670,7 @@ class KitchenCookingPanel extends LitElement {
    */
   async _generateAIRecipes() {
     if (!this._selectedCookingStyle || this._selectedIngredients.length < 2) {
-      this._showMessage('Please complete ingredient and style selection', true);
+      this._showMessage('⚠️ Incomplete', 'Please complete ingredient and style selection', true);
       return;
     }
 

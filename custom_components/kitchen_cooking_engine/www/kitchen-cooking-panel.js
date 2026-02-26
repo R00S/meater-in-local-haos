@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 26 Feb 2026, 15:59 CET
+ * AUTO-GENERATED: 26 Feb 2026, 16:03 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 26 Feb 2026, 15:59 CET
+// Last generated: 26 Feb 2026, 16:03 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -15972,11 +15972,11 @@ class KitchenCookingPanel extends LitElement {
     const recipe = this._recipeCookState.recipe;
     const steps = this._getRecipeSteps(recipe);
     
-    // If no steps at all, go from overview (−1) → finish (0)
+    // If no steps at all, go from overview (-1) to finish (0)
     // so the user can still rate the cook after following the overview
     if (steps.length === 0) {
       if (this._recipeCookState.currentStep < 0) {
-        this._recipeCookState.currentStep = 0; // Finish page (>= steps.length of 0)
+        this._recipeCookState.currentStep = 0; // finish page since steps.length is 0
       }
       this.requestUpdate();
       return;
@@ -16050,14 +16050,14 @@ class KitchenCookingPanel extends LitElement {
       });
 
       // Show success message
-      this._showMessage('Recipe cook saved successfully! 🎉');
+      this._showMessage('✅ Saved', 'Recipe cook saved successfully! 🎉');
 
       // Stop the cook flow
       this._stopRecipeCook();
 
     } catch (error) {
       console.error('Error saving recipe cook:', error);
-      this._showMessage(`Error saving recipe cook: ${error.message}`, true);
+      this._showMessage('❌ Save Error', `Error saving recipe cook: ${error.message}`, true);
     }
   }
 
@@ -16098,7 +16098,7 @@ class KitchenCookingPanel extends LitElement {
    */
   _proceedToCookingStyle() {
     if (this._selectedIngredients.length < 2) {
-      this._showMessage('Please select at least 2 ingredients', true);
+      this._showMessage('⚠️ Ingredients', 'Please select at least 2 ingredients', true);
       return;
     }
     
@@ -16112,7 +16112,7 @@ class KitchenCookingPanel extends LitElement {
    */
   async _generateAIRecipes() {
     if (!this._selectedCookingStyle || this._selectedIngredients.length < 2) {
-      this._showMessage('Please complete ingredient and style selection', true);
+      this._showMessage('⚠️ Incomplete', 'Please complete ingredient and style selection', true);
       return;
     }
 
@@ -19309,7 +19309,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "174";
+const PANEL_VERSION = "175";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
