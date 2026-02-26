@@ -3807,6 +3807,7 @@ class KitchenCookingPanel extends LitElement {
           this._showAIIngredientSelector = false;
           this._selectedIngredients = [];
           this._aiSelectedCuisines = [];
+          this._aiExpandedRegions = [];
           this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
           this.requestUpdate();
         }}>
