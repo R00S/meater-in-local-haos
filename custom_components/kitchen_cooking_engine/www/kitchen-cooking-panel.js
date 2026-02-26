@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 26 Feb 2026, 16:40 CET
+ * AUTO-GENERATED: 26 Feb 2026, 16:43 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 26 Feb 2026, 16:40 CET
+// Last generated: 26 Feb 2026, 16:43 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -11568,6 +11568,9 @@ class KitchenCookingPanel extends LitElement {
       // AI generation cancellation
       _aiGeneratingAbort: { type: Object },
       _messageDialogOnCancel: { type: Object },
+      // AI Settings
+      _aiAgentId: { type: String },
+      _showAISettingsModal: { type: Boolean },
     };
   }
 
@@ -11660,6 +11663,8 @@ class KitchenCookingPanel extends LitElement {
     this._aiExpandedRegions = []; // Which region dropdowns are open
     this._aiGeneratingAbort = null; // AbortController for cancelling generation
     this._messageDialogOnCancel = null; // Optional cancel callback for dialog
+    this._aiAgentId = ''; // AI agent entity ID for recipe generation
+    this._showAISettingsModal = false; // Show AI settings modal
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -11675,6 +11680,9 @@ class KitchenCookingPanel extends LitElement {
     
     // Load user preferences
     this._loadPreferences();
+    
+    // Load AI settings to determine if AI Recipe Builder should be visible
+    this._loadAISettings();
     
     // Phase 3.3: Load appliances and features
     this._loadAppliances();
@@ -12223,16 +12231,20 @@ class KitchenCookingPanel extends LitElement {
     }
   }
 
-  async _showAISettings() {
-    // Load current settings
+  async _loadAISettings() {
     try {
       const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_settings');
-      if (response.status === 'ok') {
+      if (response.status === 'ok' && response.settings.agent_id) {
         this._aiAgentId = response.settings.agent_id;
       }
     } catch (e) {
-      console.error('[AI Settings] Failed to load settings:', e);
+      console.error('[AI Settings] Failed to load settings on startup:', e);
     }
+  }
+
+  async _showAISettings() {
+    // Reload current settings before showing modal
+    await this._loadAISettings();
     
     this._showAISettingsModal = true;
     this.requestUpdate();
@@ -14421,6 +14433,16 @@ class KitchenCookingPanel extends LitElement {
             </div>
           </div>
         </ha-card>
+
+        <ha-card class="previous-cooks-card clickable" @click=${() => this._showAISettings()}>
+          <div class="card-content previous-cooks-content">
+            <div class="previous-cooks-icon">⚙️</div>
+            <div class="previous-cooks-text">
+              <h3>AI Recipe Builder Settings</h3>
+              <p>${this._aiAgentId ? `Agent: ${this._aiAgentId}` : 'Configure your AI agent to enable the Recipe Builder'}</p>
+            </div>
+          </div>
+        </ha-card>
       `}
     `;
   }
@@ -14665,13 +14687,23 @@ class KitchenCookingPanel extends LitElement {
       </ha-card>
 
       <div class="path-buttons">
-        <ha-card class="path-card clickable" @click=${() => this._startAIRecipeCreation()}>
-          <div class="card-content path-card-content">
-            <div class="path-icon">🤖</div>
-            <h3>Create AI Recipe</h3>
-            <p>Generate custom recipes using your appliances and ingredients</p>
-          </div>
-        </ha-card>
+        ${this._aiAgentId ? html`
+          <ha-card class="path-card clickable" @click=${() => this._startAIRecipeCreation()}>
+            <div class="card-content path-card-content">
+              <div class="path-icon">🤖</div>
+              <h3>Create AI Recipe</h3>
+              <p>Generate custom recipes using your appliances and ingredients</p>
+            </div>
+          </ha-card>
+        ` : html`
+          <ha-card class="path-card clickable" @click=${() => this._showAISettings()}>
+            <div class="card-content path-card-content">
+              <div class="path-icon">⚙️</div>
+              <h3>Set Up AI Recipe Builder</h3>
+              <p>Configure your AI agent to start generating recipes</p>
+            </div>
+          </ha-card>
+        `}
 
         <ha-card class="path-card clickable" @click=${() => this._showRecentApplianceRecipes()}>
           <div class="card-content path-card-content">
@@ -19318,7 +19350,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "177";
+const PANEL_VERSION = "178";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

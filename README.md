@@ -92,8 +92,7 @@ The AI Recipe Builder generates custom recipes using AI (OpenAI or any HA conver
 
 3. **Configure AI Recipe Builder:**
    - Open Kitchen Cooking Engine panel
-   - Click **🤖 AI Recipe Builder** button
-   - Click **⚙️ Settings** button in the header
+   - Click **⚙️ AI Recipe Builder Settings** card on the welcome screen
    - Enter your AI conversation agent ID
    - **To find your agent ID:** Developer Tools → States → Search for "conversation." → Copy entity ID
    - Common agent IDs:
