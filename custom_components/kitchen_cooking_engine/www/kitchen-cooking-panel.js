@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 25 Feb 2026, 23:56 CET
+ * AUTO-GENERATED: 26 Feb 2026, 14:52 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 25 Feb 2026, 23:56 CET
+// Last generated: 26 Feb 2026, 14:52 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5514,6 +5514,4763 @@ const AI_INGREDIENTS = {
   ]
 };
 
+// AI Recipe Builder - Cuisine-specific Ingredients (28 per cuisine)
+const AI_CUISINE_INGREDIENTS = {
+  "nordic": [
+    {
+      "id": "salmon",
+      "name": "Salmon"
+    },
+    {
+      "id": "cod",
+      "name": "Cod"
+    },
+    {
+      "id": "herring",
+      "name": "Herring"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "dill",
+      "name": "Dill"
+    },
+    {
+      "id": "cream",
+      "name": "Cream"
+    },
+    {
+      "id": "butter",
+      "name": "Butter"
+    },
+    {
+      "id": "rye_bread",
+      "name": "Rye Bread"
+    },
+    {
+      "id": "lingonberries",
+      "name": "Lingonberries"
+    },
+    {
+      "id": "beets",
+      "name": "Beets"
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms"
+    },
+    {
+      "id": "sour_cream",
+      "name": "Sour Cream"
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots"
+    },
+    {
+      "id": "parsnips",
+      "name": "Parsnips"
+    },
+    {
+      "id": "oats",
+      "name": "Oats"
+    },
+    {
+      "id": "barley",
+      "name": "Barley"
+    },
+    {
+      "id": "horseradish",
+      "name": "Horseradish"
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber"
+    },
+    {
+      "id": "lamb",
+      "name": "Lamb"
+    },
+    {
+      "id": "turnips",
+      "name": "Turnips"
+    },
+    {
+      "id": "chives",
+      "name": "Chives"
+    },
+    {
+      "id": "celeriac",
+      "name": "Celeriac"
+    },
+    {
+      "id": "juniper_berries",
+      "name": "Juniper Berries"
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom"
+    }
+  ],
+  "swedish": [
+    {
+      "id": "salmon",
+      "name": "Salmon"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "dill",
+      "name": "Dill"
+    },
+    {
+      "id": "cream",
+      "name": "Cream"
+    },
+    {
+      "id": "butter",
+      "name": "Butter"
+    },
+    {
+      "id": "lingonberries",
+      "name": "Lingonberries"
+    },
+    {
+      "id": "meatball_mix",
+      "name": "Ground Meat (Pork/Beef)"
+    },
+    {
+      "id": "herring",
+      "name": "Herring"
+    },
+    {
+      "id": "rye_bread",
+      "name": "Rye Bread (Knäckebröd)"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "beets",
+      "name": "Beets"
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage"
+    },
+    {
+      "id": "sour_cream",
+      "name": "Sour Cream"
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms"
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots"
+    },
+    {
+      "id": "peas",
+      "name": "Peas"
+    },
+    {
+      "id": "allspice",
+      "name": "Allspice"
+    },
+    {
+      "id": "white_pepper",
+      "name": "White Pepper"
+    },
+    {
+      "id": "sugar",
+      "name": "Sugar"
+    },
+    {
+      "id": "vinegar",
+      "name": "Vinegar"
+    },
+    {
+      "id": "cod",
+      "name": "Cod"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "oats",
+      "name": "Oats"
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley"
+    },
+    {
+      "id": "horseradish",
+      "name": "Horseradish"
+    },
+    {
+      "id": "mustard",
+      "name": "Mustard"
+    },
+    {
+      "id": "anchovies",
+      "name": "Anchovies (Ansjovis)"
+    }
+  ],
+  "east_asian": [
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy Sauce"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions"
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu"
+    },
+    {
+      "id": "sesame_oil",
+      "name": "Sesame Oil"
+    },
+    {
+      "id": "rice_vinegar",
+      "name": "Rice Vinegar"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms"
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage"
+    },
+    {
+      "id": "bean_sprouts",
+      "name": "Bean Sprouts"
+    },
+    {
+      "id": "noodles",
+      "name": "Noodles"
+    },
+    {
+      "id": "miso_paste",
+      "name": "Miso Paste"
+    },
+    {
+      "id": "chili_paste",
+      "name": "Chili Paste"
+    },
+    {
+      "id": "bok_choy",
+      "name": "Bok Choy"
+    },
+    {
+      "id": "seaweed",
+      "name": "Seaweed"
+    },
+    {
+      "id": "corn_starch",
+      "name": "Corn Starch"
+    },
+    {
+      "id": "fish_sauce",
+      "name": "Fish Sauce"
+    },
+    {
+      "id": "sugar",
+      "name": "Sugar"
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro"
+    },
+    {
+      "id": "radish",
+      "name": "Radish"
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato"
+    },
+    {
+      "id": "sesame_seeds",
+      "name": "Sesame Seeds"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    }
+  ],
+  "japanese": [
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy Sauce"
+    },
+    {
+      "id": "miso_paste",
+      "name": "Miso Paste"
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu"
+    },
+    {
+      "id": "salmon",
+      "name": "Salmon"
+    },
+    {
+      "id": "tuna",
+      "name": "Tuna"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "nori",
+      "name": "Nori (Seaweed)"
+    },
+    {
+      "id": "daikon",
+      "name": "Daikon Radish"
+    },
+    {
+      "id": "edamame",
+      "name": "Edamame"
+    },
+    {
+      "id": "shiitake",
+      "name": "Shiitake Mushrooms"
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "mirin",
+      "name": "Mirin"
+    },
+    {
+      "id": "rice_vinegar",
+      "name": "Rice Vinegar"
+    },
+    {
+      "id": "panko",
+      "name": "Panko Breadcrumbs"
+    },
+    {
+      "id": "sesame_oil",
+      "name": "Sesame Oil"
+    },
+    {
+      "id": "udon",
+      "name": "Udon Noodles"
+    },
+    {
+      "id": "soba",
+      "name": "Soba Noodles"
+    },
+    {
+      "id": "bonito",
+      "name": "Bonito Flakes"
+    },
+    {
+      "id": "kombu",
+      "name": "Kombu"
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "chicken_thigh",
+      "name": "Chicken Thighs"
+    },
+    {
+      "id": "pork_belly",
+      "name": "Pork Belly"
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato"
+    },
+    {
+      "id": "pickled_ginger",
+      "name": "Pickled Ginger"
+    },
+    {
+      "id": "wasabi",
+      "name": "Wasabi"
+    }
+  ],
+  "chinese": [
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy Sauce"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions"
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu"
+    },
+    {
+      "id": "bok_choy",
+      "name": "Bok Choy"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "egg_noodles",
+      "name": "Egg Noodles"
+    },
+    {
+      "id": "sesame_oil",
+      "name": "Sesame Oil"
+    },
+    {
+      "id": "rice_vinegar",
+      "name": "Rice Vinegar"
+    },
+    {
+      "id": "doubanjiang",
+      "name": "Chili Bean Paste (Doubanjiang)"
+    },
+    {
+      "id": "oyster_sauce",
+      "name": "Oyster Sauce"
+    },
+    {
+      "id": "hoisin_sauce",
+      "name": "Hoisin Sauce"
+    },
+    {
+      "id": "szechuan_pepper",
+      "name": "Szechuan Peppercorns"
+    },
+    {
+      "id": "star_anise",
+      "name": "Star Anise"
+    },
+    {
+      "id": "shiitake",
+      "name": "Shiitake Mushrooms"
+    },
+    {
+      "id": "chinese_cabbage",
+      "name": "Chinese Cabbage (Napa)"
+    },
+    {
+      "id": "bean_sprouts",
+      "name": "Bean Sprouts"
+    },
+    {
+      "id": "water_chestnuts",
+      "name": "Water Chestnuts"
+    },
+    {
+      "id": "bamboo_shoots",
+      "name": "Bamboo Shoots"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "duck",
+      "name": "Duck"
+    },
+    {
+      "id": "five_spice",
+      "name": "Five Spice Powder"
+    },
+    {
+      "id": "corn_starch",
+      "name": "Corn Starch"
+    },
+    {
+      "id": "wonton_wrappers",
+      "name": "Wonton Wrappers"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    }
+  ],
+  "korean": [
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "gochujang",
+      "name": "Gochujang (Chili Paste)"
+    },
+    {
+      "id": "gochugaru",
+      "name": "Gochugaru (Chili Flakes)"
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy Sauce"
+    },
+    {
+      "id": "sesame_oil",
+      "name": "Sesame Oil"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions"
+    },
+    {
+      "id": "kimchi",
+      "name": "Kimchi"
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu"
+    },
+    {
+      "id": "pork_belly",
+      "name": "Pork Belly"
+    },
+    {
+      "id": "beef",
+      "name": "Beef"
+    },
+    {
+      "id": "napa_cabbage",
+      "name": "Napa Cabbage"
+    },
+    {
+      "id": "bean_sprouts",
+      "name": "Bean Sprouts"
+    },
+    {
+      "id": "japchae_noodles",
+      "name": "Sweet Potato Noodles (Japchae)"
+    },
+    {
+      "id": "perilla",
+      "name": "Perilla Leaves"
+    },
+    {
+      "id": "dried_seaweed",
+      "name": "Dried Seaweed"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini"
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms"
+    },
+    {
+      "id": "doenjang",
+      "name": "Doenjang (Soybean Paste)"
+    },
+    {
+      "id": "sesame_seeds",
+      "name": "Sesame Seeds"
+    },
+    {
+      "id": "fish_sauce",
+      "name": "Fish Sauce"
+    },
+    {
+      "id": "rice_cakes",
+      "name": "Rice Cakes (Tteok)"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "korean_radish",
+      "name": "Korean Radish"
+    }
+  ],
+  "taiwanese": [
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy Sauce"
+    },
+    {
+      "id": "five_spice",
+      "name": "Five Spice Powder"
+    },
+    {
+      "id": "pork_belly",
+      "name": "Pork Belly"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu"
+    },
+    {
+      "id": "sesame_oil",
+      "name": "Sesame Oil"
+    },
+    {
+      "id": "rice_wine",
+      "name": "Rice Wine"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions"
+    },
+    {
+      "id": "bok_choy",
+      "name": "Bok Choy"
+    },
+    {
+      "id": "noodles",
+      "name": "Noodles"
+    },
+    {
+      "id": "basil_tw",
+      "name": "Taiwanese Basil"
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato"
+    },
+    {
+      "id": "bamboo_shoots",
+      "name": "Bamboo Shoots"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms"
+    },
+    {
+      "id": "dried_shrimp",
+      "name": "Dried Shrimp"
+    },
+    {
+      "id": "chili_oil",
+      "name": "Chili Oil"
+    },
+    {
+      "id": "star_anise",
+      "name": "Star Anise"
+    },
+    {
+      "id": "oyster_sauce",
+      "name": "Oyster Sauce"
+    },
+    {
+      "id": "sugar",
+      "name": "Rock Sugar"
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro"
+    },
+    {
+      "id": "bean_sprouts",
+      "name": "Bean Sprouts"
+    },
+    {
+      "id": "corn_starch",
+      "name": "Corn Starch"
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage"
+    },
+    {
+      "id": "turnip",
+      "name": "Daikon Radish"
+    }
+  ],
+  "southeast_asian": [
+    {
+      "id": "jasmine_rice",
+      "name": "Jasmine Rice"
+    },
+    {
+      "id": "fish_sauce",
+      "name": "Fish Sauce"
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk"
+    },
+    {
+      "id": "lemongrass",
+      "name": "Lemongrass"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "shallots",
+      "name": "Shallots"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "chili",
+      "name": "Chili"
+    },
+    {
+      "id": "lime",
+      "name": "Lime"
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu"
+    },
+    {
+      "id": "rice_noodles",
+      "name": "Rice Noodles"
+    },
+    {
+      "id": "bean_sprouts",
+      "name": "Bean Sprouts"
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts"
+    },
+    {
+      "id": "palm_sugar",
+      "name": "Palm Sugar"
+    },
+    {
+      "id": "tamarind",
+      "name": "Tamarind"
+    },
+    {
+      "id": "basil",
+      "name": "Basil"
+    },
+    {
+      "id": "mint",
+      "name": "Mint"
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant"
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans"
+    },
+    {
+      "id": "bamboo_shoots",
+      "name": "Bamboo Shoots"
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy Sauce"
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "mango",
+      "name": "Mango"
+    },
+    {
+      "id": "galangal",
+      "name": "Galangal"
+    }
+  ],
+  "thai": [
+    {
+      "id": "jasmine_rice",
+      "name": "Jasmine Rice"
+    },
+    {
+      "id": "fish_sauce",
+      "name": "Fish Sauce"
+    },
+    {
+      "id": "lemongrass",
+      "name": "Lemongrass"
+    },
+    {
+      "id": "galangal",
+      "name": "Galangal"
+    },
+    {
+      "id": "kaffir_lime",
+      "name": "Kaffir Lime Leaves"
+    },
+    {
+      "id": "thai_basil",
+      "name": "Thai Basil"
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk"
+    },
+    {
+      "id": "thai_chili",
+      "name": "Thai Chili"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu"
+    },
+    {
+      "id": "rice_noodles",
+      "name": "Rice Noodles"
+    },
+    {
+      "id": "palm_sugar",
+      "name": "Palm Sugar"
+    },
+    {
+      "id": "tamarind_paste",
+      "name": "Tamarind Paste"
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "shallots",
+      "name": "Shallots"
+    },
+    {
+      "id": "bean_sprouts",
+      "name": "Bean Sprouts"
+    },
+    {
+      "id": "green_papaya",
+      "name": "Green Papaya"
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts"
+    },
+    {
+      "id": "lime",
+      "name": "Lime"
+    },
+    {
+      "id": "eggplant",
+      "name": "Thai Eggplant"
+    },
+    {
+      "id": "morning_glory",
+      "name": "Morning Glory"
+    },
+    {
+      "id": "green_curry_paste",
+      "name": "Green Curry Paste"
+    },
+    {
+      "id": "red_curry_paste",
+      "name": "Red Curry Paste"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "bamboo_shoots",
+      "name": "Bamboo Shoots"
+    },
+    {
+      "id": "mango",
+      "name": "Mango"
+    }
+  ],
+  "vietnamese": [
+    {
+      "id": "rice_noodles",
+      "name": "Rice Noodles"
+    },
+    {
+      "id": "fish_sauce",
+      "name": "Fish Sauce"
+    },
+    {
+      "id": "rice_paper",
+      "name": "Rice Paper"
+    },
+    {
+      "id": "beef",
+      "name": "Beef"
+    },
+    {
+      "id": "lemongrass",
+      "name": "Lemongrass"
+    },
+    {
+      "id": "mint",
+      "name": "Mint"
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro"
+    },
+    {
+      "id": "thai_basil",
+      "name": "Thai Basil"
+    },
+    {
+      "id": "bean_sprouts",
+      "name": "Bean Sprouts"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "shallots",
+      "name": "Shallots"
+    },
+    {
+      "id": "lime",
+      "name": "Lime"
+    },
+    {
+      "id": "chili",
+      "name": "Chili"
+    },
+    {
+      "id": "star_anise",
+      "name": "Star Anise"
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon"
+    },
+    {
+      "id": "hoisin_sauce",
+      "name": "Hoisin Sauce"
+    },
+    {
+      "id": "sriracha",
+      "name": "Sriracha"
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots"
+    },
+    {
+      "id": "daikon",
+      "name": "Daikon Radish"
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce"
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber"
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions"
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric"
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk"
+    }
+  ],
+  "indonesian": [
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk"
+    },
+    {
+      "id": "shallots",
+      "name": "Shallots"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "galangal",
+      "name": "Galangal"
+    },
+    {
+      "id": "lemongrass",
+      "name": "Lemongrass"
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric"
+    },
+    {
+      "id": "kaffir_lime",
+      "name": "Kaffir Lime Leaves"
+    },
+    {
+      "id": "chili",
+      "name": "Chili"
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts"
+    },
+    {
+      "id": "kecap_manis",
+      "name": "Kecap Manis (Sweet Soy)"
+    },
+    {
+      "id": "tempeh",
+      "name": "Tempeh"
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "tamarind",
+      "name": "Tamarind"
+    },
+    {
+      "id": "palm_sugar",
+      "name": "Palm Sugar"
+    },
+    {
+      "id": "coriander",
+      "name": "Coriander"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "candlenut",
+      "name": "Candlenuts"
+    },
+    {
+      "id": "bean_sprouts",
+      "name": "Bean Sprouts"
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans"
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage"
+    },
+    {
+      "id": "lime",
+      "name": "Lime"
+    },
+    {
+      "id": "shrimp_paste",
+      "name": "Shrimp Paste (Terasi)"
+    },
+    {
+      "id": "noodles",
+      "name": "Egg Noodles"
+    },
+    {
+      "id": "banana_leaf",
+      "name": "Banana Leaf"
+    }
+  ],
+  "malaysian": [
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk"
+    },
+    {
+      "id": "lemongrass",
+      "name": "Lemongrass"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "shallots",
+      "name": "Shallots"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric"
+    },
+    {
+      "id": "chili",
+      "name": "Chili"
+    },
+    {
+      "id": "shrimp_paste",
+      "name": "Shrimp Paste (Belacan)"
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "rice_noodles",
+      "name": "Rice Noodles"
+    },
+    {
+      "id": "bean_sprouts",
+      "name": "Bean Sprouts"
+    },
+    {
+      "id": "tamarind",
+      "name": "Tamarind"
+    },
+    {
+      "id": "palm_sugar",
+      "name": "Palm Sugar"
+    },
+    {
+      "id": "kaffir_lime",
+      "name": "Kaffir Lime Leaves"
+    },
+    {
+      "id": "galangal",
+      "name": "Galangal"
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy Sauce"
+    },
+    {
+      "id": "star_anise",
+      "name": "Star Anise"
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon"
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom"
+    },
+    {
+      "id": "cloves",
+      "name": "Cloves"
+    },
+    {
+      "id": "coriander",
+      "name": "Coriander"
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber"
+    },
+    {
+      "id": "pandan",
+      "name": "Pandan Leaves"
+    }
+  ],
+  "filipino": [
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy Sauce"
+    },
+    {
+      "id": "vinegar",
+      "name": "Vinegar (Cane)"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "fish_sauce",
+      "name": "Fish Sauce (Patis)"
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "calamansi",
+      "name": "Calamansi (Lime)"
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves"
+    },
+    {
+      "id": "peppercorns",
+      "name": "Black Peppercorns"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "banana",
+      "name": "Banana (Saba)"
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato"
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant"
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans"
+    },
+    {
+      "id": "tamarind",
+      "name": "Tamarind"
+    },
+    {
+      "id": "annatto",
+      "name": "Annatto Seeds"
+    },
+    {
+      "id": "lemongrass",
+      "name": "Lemongrass"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "chili",
+      "name": "Chili"
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts"
+    },
+    {
+      "id": "noodles",
+      "name": "Rice Noodles"
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage"
+    },
+    {
+      "id": "spring_onions",
+      "name": "Spring Onions"
+    }
+  ],
+  "south_asian": [
+    {
+      "id": "basmati_rice",
+      "name": "Basmati Rice"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "lamb",
+      "name": "Lamb"
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils (Dal)"
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas"
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric"
+    },
+    {
+      "id": "coriander",
+      "name": "Coriander"
+    },
+    {
+      "id": "garam_masala",
+      "name": "Garam Masala"
+    },
+    {
+      "id": "chili_powder",
+      "name": "Chili Powder"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt"
+    },
+    {
+      "id": "paneer",
+      "name": "Paneer"
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk"
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower"
+    },
+    {
+      "id": "green_peas",
+      "name": "Green Peas"
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom"
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon"
+    },
+    {
+      "id": "cloves",
+      "name": "Cloves"
+    },
+    {
+      "id": "fenugreek",
+      "name": "Fenugreek"
+    },
+    {
+      "id": "mustard_seeds",
+      "name": "Mustard Seeds"
+    },
+    {
+      "id": "naan",
+      "name": "Naan Bread"
+    }
+  ],
+  "indian": [
+    {
+      "id": "basmati_rice",
+      "name": "Basmati Rice"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "lamb",
+      "name": "Lamb"
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils (Dal)"
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas"
+    },
+    {
+      "id": "ghee",
+      "name": "Ghee"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric"
+    },
+    {
+      "id": "coriander",
+      "name": "Coriander"
+    },
+    {
+      "id": "garam_masala",
+      "name": "Garam Masala"
+    },
+    {
+      "id": "chili_powder",
+      "name": "Chili Powder"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt"
+    },
+    {
+      "id": "paneer",
+      "name": "Paneer"
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk"
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower"
+    },
+    {
+      "id": "green_peas",
+      "name": "Green Peas"
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom"
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon"
+    },
+    {
+      "id": "cloves",
+      "name": "Cloves"
+    },
+    {
+      "id": "fenugreek",
+      "name": "Fenugreek"
+    },
+    {
+      "id": "mustard_seeds",
+      "name": "Mustard Seeds"
+    },
+    {
+      "id": "naan",
+      "name": "Naan Bread"
+    }
+  ],
+  "middle_east": [
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas"
+    },
+    {
+      "id": "tahini",
+      "name": "Tahini"
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil"
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "lamb",
+      "name": "Lamb"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "pita",
+      "name": "Pita Bread"
+    },
+    {
+      "id": "pomegranate",
+      "name": "Pomegranate"
+    },
+    {
+      "id": "sumac",
+      "name": "Sumac"
+    },
+    {
+      "id": "zaatar",
+      "name": "Za'atar"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "coriander",
+      "name": "Coriander"
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley"
+    },
+    {
+      "id": "mint",
+      "name": "Mint"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant"
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt"
+    },
+    {
+      "id": "bulgur",
+      "name": "Bulgur Wheat"
+    },
+    {
+      "id": "pine_nuts",
+      "name": "Pine Nuts"
+    },
+    {
+      "id": "saffron",
+      "name": "Saffron"
+    },
+    {
+      "id": "rose_water",
+      "name": "Rose Water"
+    },
+    {
+      "id": "halloumi",
+      "name": "Halloumi"
+    },
+    {
+      "id": "feta",
+      "name": "Feta Cheese"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers"
+    }
+  ],
+  "turkish": [
+    {
+      "id": "lamb",
+      "name": "Lamb"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "beef",
+      "name": "Beef"
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt"
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "peppers",
+      "name": "Peppers"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil"
+    },
+    {
+      "id": "bulgur",
+      "name": "Bulgur"
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils"
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas"
+    },
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "pita",
+      "name": "Pita Bread"
+    },
+    {
+      "id": "feta",
+      "name": "White Cheese (Feta)"
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley"
+    },
+    {
+      "id": "mint",
+      "name": "Mint"
+    },
+    {
+      "id": "dill",
+      "name": "Dill"
+    },
+    {
+      "id": "sumac",
+      "name": "Sumac"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "paprika",
+      "name": "Paprika"
+    },
+    {
+      "id": "red_pepper_flakes",
+      "name": "Red Pepper Flakes (Pul Biber)"
+    },
+    {
+      "id": "pomegranate_molasses",
+      "name": "Pomegranate Molasses"
+    },
+    {
+      "id": "walnuts",
+      "name": "Walnuts"
+    },
+    {
+      "id": "pine_nuts",
+      "name": "Pine Nuts"
+    },
+    {
+      "id": "dried_apricots",
+      "name": "Dried Apricots"
+    },
+    {
+      "id": "phyllo",
+      "name": "Phyllo Dough"
+    }
+  ],
+  "persian": [
+    {
+      "id": "basmati_rice",
+      "name": "Basmati Rice"
+    },
+    {
+      "id": "saffron",
+      "name": "Saffron"
+    },
+    {
+      "id": "lamb",
+      "name": "Lamb"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "barberries",
+      "name": "Barberries (Zereshk)"
+    },
+    {
+      "id": "pomegranate",
+      "name": "Pomegranate"
+    },
+    {
+      "id": "walnuts",
+      "name": "Walnuts"
+    },
+    {
+      "id": "pistachios",
+      "name": "Pistachios"
+    },
+    {
+      "id": "dried_limes",
+      "name": "Dried Limes (Limoo Amani)"
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric"
+    },
+    {
+      "id": "rose_water",
+      "name": "Rose Water"
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt"
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "herbs_mix",
+      "name": "Fresh Herbs (Parsley, Dill, Cilantro)"
+    },
+    {
+      "id": "fenugreek",
+      "name": "Fenugreek"
+    },
+    {
+      "id": "split_peas",
+      "name": "Split Peas"
+    },
+    {
+      "id": "kidney_beans",
+      "name": "Kidney Beans"
+    },
+    {
+      "id": "lamb_shank",
+      "name": "Lamb Shank"
+    },
+    {
+      "id": "sour_cherries",
+      "name": "Sour Cherries"
+    },
+    {
+      "id": "sumac",
+      "name": "Sumac"
+    },
+    {
+      "id": "lavash",
+      "name": "Lavash Bread"
+    },
+    {
+      "id": "butter",
+      "name": "Butter"
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon"
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom"
+    },
+    {
+      "id": "dried_apricots",
+      "name": "Dried Apricots"
+    }
+  ],
+  "lebanese": [
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas"
+    },
+    {
+      "id": "tahini",
+      "name": "Tahini"
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil"
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "lamb",
+      "name": "Lamb"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "pita",
+      "name": "Pita Bread"
+    },
+    {
+      "id": "pomegranate",
+      "name": "Pomegranate"
+    },
+    {
+      "id": "sumac",
+      "name": "Sumac"
+    },
+    {
+      "id": "zaatar",
+      "name": "Za'atar"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "parsley",
+      "name": "Flat-Leaf Parsley"
+    },
+    {
+      "id": "mint",
+      "name": "Mint"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant"
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt"
+    },
+    {
+      "id": "bulgur",
+      "name": "Bulgur Wheat (#1 Fine)"
+    },
+    {
+      "id": "pine_nuts",
+      "name": "Pine Nuts"
+    },
+    {
+      "id": "allspice",
+      "name": "Allspice"
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon"
+    },
+    {
+      "id": "feta",
+      "name": "Feta Cheese"
+    },
+    {
+      "id": "halloumi",
+      "name": "Halloumi"
+    },
+    {
+      "id": "rose_water",
+      "name": "Rose Water"
+    },
+    {
+      "id": "freekeh",
+      "name": "Freekeh"
+    }
+  ],
+  "european": [
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil"
+    },
+    {
+      "id": "butter",
+      "name": "Butter"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "beef",
+      "name": "Beef"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "cream",
+      "name": "Cream"
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese"
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers"
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots"
+    },
+    {
+      "id": "celery",
+      "name": "Celery"
+    },
+    {
+      "id": "wine_white",
+      "name": "White Wine"
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley"
+    },
+    {
+      "id": "thyme",
+      "name": "Thyme"
+    },
+    {
+      "id": "rosemary",
+      "name": "Rosemary"
+    },
+    {
+      "id": "bread",
+      "name": "Bread"
+    },
+    {
+      "id": "pasta",
+      "name": "Pasta"
+    },
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "leeks",
+      "name": "Leeks"
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach"
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini"
+    },
+    {
+      "id": "flour",
+      "name": "Flour"
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves"
+    }
+  ],
+  "italian": [
+    {
+      "id": "pasta",
+      "name": "Pasta"
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "san_marzano",
+      "name": "San Marzano Tomatoes"
+    },
+    {
+      "id": "basil",
+      "name": "Fresh Basil"
+    },
+    {
+      "id": "parmesan",
+      "name": "Parmesan Cheese"
+    },
+    {
+      "id": "mozzarella",
+      "name": "Mozzarella"
+    },
+    {
+      "id": "prosciutto",
+      "name": "Prosciutto"
+    },
+    {
+      "id": "pancetta",
+      "name": "Pancetta"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini"
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers"
+    },
+    {
+      "id": "arborio_rice",
+      "name": "Arborio Rice"
+    },
+    {
+      "id": "white_wine",
+      "name": "White Wine"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "capers",
+      "name": "Capers"
+    },
+    {
+      "id": "olives",
+      "name": "Olives"
+    },
+    {
+      "id": "pine_nuts",
+      "name": "Pine Nuts"
+    },
+    {
+      "id": "ricotta",
+      "name": "Ricotta"
+    },
+    {
+      "id": "red_pepper_flakes",
+      "name": "Crushed Red Pepper"
+    },
+    {
+      "id": "oregano",
+      "name": "Oregano"
+    },
+    {
+      "id": "rosemary",
+      "name": "Rosemary"
+    },
+    {
+      "id": "anchovies",
+      "name": "Anchovies"
+    },
+    {
+      "id": "balsamic",
+      "name": "Balsamic Vinegar"
+    },
+    {
+      "id": "ciabatta",
+      "name": "Ciabatta Bread"
+    },
+    {
+      "id": "pecorino",
+      "name": "Pecorino Romano"
+    },
+    {
+      "id": "cannellini",
+      "name": "Cannellini Beans"
+    }
+  ],
+  "french": [
+    {
+      "id": "butter",
+      "name": "Butter"
+    },
+    {
+      "id": "shallots",
+      "name": "Shallots"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "white_wine",
+      "name": "White Wine"
+    },
+    {
+      "id": "heavy_cream",
+      "name": "Heavy Cream"
+    },
+    {
+      "id": "dijon",
+      "name": "Dijon Mustard"
+    },
+    {
+      "id": "thyme",
+      "name": "Thyme"
+    },
+    {
+      "id": "tarragon",
+      "name": "Tarragon"
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "duck",
+      "name": "Duck"
+    },
+    {
+      "id": "beef",
+      "name": "Beef"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "leeks",
+      "name": "Leeks"
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms"
+    },
+    {
+      "id": "gruyere",
+      "name": "Gruyère Cheese"
+    },
+    {
+      "id": "creme_fraiche",
+      "name": "Crème Fraîche"
+    },
+    {
+      "id": "flour",
+      "name": "Flour"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "baguette",
+      "name": "Baguette"
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil"
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots"
+    },
+    {
+      "id": "celery",
+      "name": "Celery"
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves"
+    },
+    {
+      "id": "tomato_paste",
+      "name": "Tomato Paste"
+    },
+    {
+      "id": "lardons",
+      "name": "Lardons (Bacon)"
+    },
+    {
+      "id": "herb_butter",
+      "name": "Herb Butter"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    }
+  ],
+  "spanish": [
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers (Pimientos)"
+    },
+    {
+      "id": "chorizo",
+      "name": "Chorizo"
+    },
+    {
+      "id": "jamon",
+      "name": "Jamón Serrano"
+    },
+    {
+      "id": "saffron",
+      "name": "Saffron"
+    },
+    {
+      "id": "paprika",
+      "name": "Smoked Paprika (Pimentón)"
+    },
+    {
+      "id": "rice",
+      "name": "Bomba/Calasparra Rice"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "mussels",
+      "name": "Mussels"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "manchego",
+      "name": "Manchego Cheese"
+    },
+    {
+      "id": "wine_white",
+      "name": "White Wine"
+    },
+    {
+      "id": "sherry_vinegar",
+      "name": "Sherry Vinegar"
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley"
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves"
+    },
+    {
+      "id": "almonds",
+      "name": "Almonds"
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas"
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans"
+    },
+    {
+      "id": "artichokes",
+      "name": "Artichokes"
+    },
+    {
+      "id": "bread",
+      "name": "Bread"
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon"
+    },
+    {
+      "id": "canned_tuna",
+      "name": "Canned Tuna"
+    }
+  ],
+  "greek": [
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil"
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber"
+    },
+    {
+      "id": "feta",
+      "name": "Feta Cheese"
+    },
+    {
+      "id": "oregano",
+      "name": "Oregano"
+    },
+    {
+      "id": "lamb",
+      "name": "Lamb"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "yogurt",
+      "name": "Greek Yogurt"
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant"
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers"
+    },
+    {
+      "id": "olives",
+      "name": "Kalamata Olives"
+    },
+    {
+      "id": "phyllo",
+      "name": "Phyllo Dough"
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach"
+    },
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "dill",
+      "name": "Dill"
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley"
+    },
+    {
+      "id": "mint",
+      "name": "Mint"
+    },
+    {
+      "id": "honey",
+      "name": "Honey"
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon"
+    },
+    {
+      "id": "bread",
+      "name": "Pita Bread"
+    },
+    {
+      "id": "pine_nuts",
+      "name": "Pine Nuts"
+    },
+    {
+      "id": "capers",
+      "name": "Capers"
+    },
+    {
+      "id": "white_wine",
+      "name": "White Wine"
+    }
+  ],
+  "north_american": [
+    {
+      "id": "ground_beef",
+      "name": "Ground Beef"
+    },
+    {
+      "id": "chicken_breast",
+      "name": "Chicken Breast"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "cheddar",
+      "name": "Cheddar Cheese"
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon"
+    },
+    {
+      "id": "butter",
+      "name": "Butter"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "corn",
+      "name": "Corn"
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers"
+    },
+    {
+      "id": "bbq_sauce",
+      "name": "BBQ Sauce"
+    },
+    {
+      "id": "mustard",
+      "name": "Mustard"
+    },
+    {
+      "id": "flour",
+      "name": "Flour"
+    },
+    {
+      "id": "milk",
+      "name": "Milk"
+    },
+    {
+      "id": "bread",
+      "name": "Bread"
+    },
+    {
+      "id": "sausage",
+      "name": "Sausage"
+    },
+    {
+      "id": "sour_cream",
+      "name": "Sour Cream"
+    },
+    {
+      "id": "sweet_potatoes",
+      "name": "Sweet Potatoes"
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans"
+    },
+    {
+      "id": "cream_cheese",
+      "name": "Cream Cheese"
+    },
+    {
+      "id": "maple_syrup",
+      "name": "Maple Syrup"
+    },
+    {
+      "id": "pecans",
+      "name": "Pecans"
+    },
+    {
+      "id": "cornbread",
+      "name": "Cornbread"
+    },
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms"
+    }
+  ],
+  "american": [
+    {
+      "id": "ground_beef",
+      "name": "Ground Beef"
+    },
+    {
+      "id": "chicken_breast",
+      "name": "Chicken Breast"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "cheddar",
+      "name": "Cheddar Cheese"
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon"
+    },
+    {
+      "id": "butter",
+      "name": "Butter"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "corn",
+      "name": "Corn"
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers"
+    },
+    {
+      "id": "bbq_sauce",
+      "name": "BBQ Sauce"
+    },
+    {
+      "id": "mustard",
+      "name": "Mustard"
+    },
+    {
+      "id": "flour",
+      "name": "All-Purpose Flour"
+    },
+    {
+      "id": "milk",
+      "name": "Milk"
+    },
+    {
+      "id": "bread",
+      "name": "Bread"
+    },
+    {
+      "id": "sausage",
+      "name": "Sausage"
+    },
+    {
+      "id": "sour_cream",
+      "name": "Sour Cream"
+    },
+    {
+      "id": "sweet_potatoes",
+      "name": "Sweet Potatoes"
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans"
+    },
+    {
+      "id": "cream_cheese",
+      "name": "Cream Cheese"
+    },
+    {
+      "id": "maple_syrup",
+      "name": "Maple Syrup"
+    },
+    {
+      "id": "pecans",
+      "name": "Pecans"
+    },
+    {
+      "id": "cornbread",
+      "name": "Cornbread"
+    },
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms"
+    }
+  ],
+  "cajun_creole": [
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "crawfish",
+      "name": "Crawfish"
+    },
+    {
+      "id": "andouille",
+      "name": "Andouille Sausage"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "celery",
+      "name": "Celery"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers (Holy Trinity)"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "cayenne",
+      "name": "Cayenne Pepper"
+    },
+    {
+      "id": "paprika",
+      "name": "Paprika"
+    },
+    {
+      "id": "thyme",
+      "name": "Thyme"
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves"
+    },
+    {
+      "id": "okra",
+      "name": "Okra"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "file_powder",
+      "name": "Filé Powder"
+    },
+    {
+      "id": "butter",
+      "name": "Butter"
+    },
+    {
+      "id": "flour",
+      "name": "Flour"
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions"
+    },
+    {
+      "id": "hot_sauce",
+      "name": "Hot Sauce"
+    },
+    {
+      "id": "worcestershire",
+      "name": "Worcestershire Sauce"
+    },
+    {
+      "id": "crab",
+      "name": "Crab"
+    },
+    {
+      "id": "corn",
+      "name": "Corn"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "black_eyed_peas",
+      "name": "Black-Eyed Peas"
+    },
+    {
+      "id": "red_beans",
+      "name": "Red Kidney Beans"
+    },
+    {
+      "id": "catfish",
+      "name": "Catfish"
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley"
+    }
+  ],
+  "tex_mex": [
+    {
+      "id": "ground_beef",
+      "name": "Ground Beef"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "tortillas",
+      "name": "Flour Tortillas"
+    },
+    {
+      "id": "corn_tortillas",
+      "name": "Corn Tortillas"
+    },
+    {
+      "id": "cheddar",
+      "name": "Cheddar Cheese"
+    },
+    {
+      "id": "monterey_jack",
+      "name": "Monterey Jack"
+    },
+    {
+      "id": "refried_beans",
+      "name": "Refried Beans"
+    },
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "jalapenos",
+      "name": "Jalapeños"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "chili_powder",
+      "name": "Chili Powder"
+    },
+    {
+      "id": "sour_cream",
+      "name": "Sour Cream"
+    },
+    {
+      "id": "avocado",
+      "name": "Avocado"
+    },
+    {
+      "id": "lime",
+      "name": "Lime"
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro"
+    },
+    {
+      "id": "corn",
+      "name": "Corn"
+    },
+    {
+      "id": "black_beans",
+      "name": "Black Beans"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers"
+    },
+    {
+      "id": "salsa",
+      "name": "Salsa"
+    },
+    {
+      "id": "queso",
+      "name": "Queso (Nacho Cheese)"
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce"
+    },
+    {
+      "id": "hot_sauce",
+      "name": "Hot Sauce"
+    },
+    {
+      "id": "sausage",
+      "name": "Chorizo"
+    },
+    {
+      "id": "cream_cheese",
+      "name": "Cream Cheese"
+    },
+    {
+      "id": "taco_shells",
+      "name": "Taco Shells"
+    }
+  ],
+  "southern_us": [
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "bacon",
+      "name": "Bacon"
+    },
+    {
+      "id": "butter",
+      "name": "Butter"
+    },
+    {
+      "id": "buttermilk",
+      "name": "Buttermilk"
+    },
+    {
+      "id": "cornmeal",
+      "name": "Cornmeal"
+    },
+    {
+      "id": "flour",
+      "name": "All-Purpose Flour"
+    },
+    {
+      "id": "grits",
+      "name": "Grits"
+    },
+    {
+      "id": "collard_greens",
+      "name": "Collard Greens"
+    },
+    {
+      "id": "sweet_potatoes",
+      "name": "Sweet Potatoes"
+    },
+    {
+      "id": "corn",
+      "name": "Corn"
+    },
+    {
+      "id": "okra",
+      "name": "Okra"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans"
+    },
+    {
+      "id": "black_eyed_peas",
+      "name": "Black-Eyed Peas"
+    },
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "hot_sauce",
+      "name": "Hot Sauce"
+    },
+    {
+      "id": "pecans",
+      "name": "Pecans"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "biscuit_dough",
+      "name": "Biscuit Dough"
+    },
+    {
+      "id": "cheddar",
+      "name": "Cheddar Cheese"
+    },
+    {
+      "id": "cream",
+      "name": "Cream"
+    },
+    {
+      "id": "catfish",
+      "name": "Catfish"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "ham_hocks",
+      "name": "Ham Hocks"
+    },
+    {
+      "id": "molasses",
+      "name": "Molasses"
+    }
+  ],
+  "latin_american": [
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "black_beans",
+      "name": "Black Beans"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro"
+    },
+    {
+      "id": "lime",
+      "name": "Lime"
+    },
+    {
+      "id": "avocado",
+      "name": "Avocado"
+    },
+    {
+      "id": "corn",
+      "name": "Corn"
+    },
+    {
+      "id": "chili",
+      "name": "Chili Peppers"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "beef",
+      "name": "Beef"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers"
+    },
+    {
+      "id": "plantains",
+      "name": "Plantains"
+    },
+    {
+      "id": "yuca",
+      "name": "Yuca (Cassava)"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "oregano",
+      "name": "Oregano"
+    },
+    {
+      "id": "corn_tortillas",
+      "name": "Corn Tortillas"
+    },
+    {
+      "id": "queso_fresco",
+      "name": "Queso Fresco"
+    },
+    {
+      "id": "sour_cream",
+      "name": "Sour Cream"
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil"
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk"
+    },
+    {
+      "id": "achiote",
+      "name": "Achiote (Annatto)"
+    },
+    {
+      "id": "pinto_beans",
+      "name": "Pinto Beans"
+    },
+    {
+      "id": "sugar",
+      "name": "Sugar"
+    }
+  ],
+  "mexican": [
+    {
+      "id": "corn_tortillas",
+      "name": "Corn Tortillas"
+    },
+    {
+      "id": "avocado",
+      "name": "Avocado"
+    },
+    {
+      "id": "lime",
+      "name": "Lime"
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro"
+    },
+    {
+      "id": "jalapenos",
+      "name": "Jalapeños"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "chili_powder",
+      "name": "Chili Powder"
+    },
+    {
+      "id": "black_beans",
+      "name": "Black Beans"
+    },
+    {
+      "id": "pinto_beans",
+      "name": "Pinto Beans"
+    },
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "beef",
+      "name": "Beef"
+    },
+    {
+      "id": "pork",
+      "name": "Pork (Carnitas)"
+    },
+    {
+      "id": "cotija",
+      "name": "Cotija Cheese"
+    },
+    {
+      "id": "sour_cream",
+      "name": "Crema (Sour Cream)"
+    },
+    {
+      "id": "chipotle",
+      "name": "Chipotle Peppers (in Adobo)"
+    },
+    {
+      "id": "corn",
+      "name": "Corn"
+    },
+    {
+      "id": "poblano",
+      "name": "Poblano Peppers"
+    },
+    {
+      "id": "tomatillos",
+      "name": "Tomatillos"
+    },
+    {
+      "id": "oregano",
+      "name": "Mexican Oregano"
+    },
+    {
+      "id": "epazote",
+      "name": "Epazote"
+    },
+    {
+      "id": "queso_fresco",
+      "name": "Queso Fresco"
+    },
+    {
+      "id": "flour_tortillas",
+      "name": "Flour Tortillas"
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon (Canela)"
+    },
+    {
+      "id": "ancho",
+      "name": "Ancho Chili"
+    }
+  ],
+  "brazilian": [
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "black_beans",
+      "name": "Black Beans (Feijão)"
+    },
+    {
+      "id": "farofa",
+      "name": "Farofa (Toasted Cassava Flour)"
+    },
+    {
+      "id": "beef",
+      "name": "Beef"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "sausage",
+      "name": "Linguiça Sausage"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers"
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk"
+    },
+    {
+      "id": "palm_oil",
+      "name": "Dendê (Palm Oil)"
+    },
+    {
+      "id": "lime",
+      "name": "Lime"
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro"
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "cassava",
+      "name": "Cassava (Yuca)"
+    },
+    {
+      "id": "plantains",
+      "name": "Plantains"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "hearts_of_palm",
+      "name": "Hearts of Palm"
+    },
+    {
+      "id": "corn",
+      "name": "Corn"
+    },
+    {
+      "id": "cheese",
+      "name": "Queijo Minas (Cheese)"
+    },
+    {
+      "id": "condensed_milk",
+      "name": "Condensed Milk"
+    },
+    {
+      "id": "collard_greens",
+      "name": "Collard Greens (Couve)"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "okra",
+      "name": "Okra"
+    },
+    {
+      "id": "vinegar",
+      "name": "Vinegar"
+    }
+  ],
+  "peruvian": [
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "aji_amarillo",
+      "name": "Ají Amarillo (Yellow Chili)"
+    },
+    {
+      "id": "lime",
+      "name": "Lime"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "onions",
+      "name": "Red Onions"
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "beef",
+      "name": "Beef"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "fish",
+      "name": "White Fish"
+    },
+    {
+      "id": "corn",
+      "name": "Giant Corn (Choclo)"
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato"
+    },
+    {
+      "id": "quinoa",
+      "name": "Quinoa"
+    },
+    {
+      "id": "aji_panca",
+      "name": "Ají Panca"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy Sauce"
+    },
+    {
+      "id": "huacatay",
+      "name": "Huacatay (Black Mint)"
+    },
+    {
+      "id": "evaporated_milk",
+      "name": "Evaporated Milk"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "olives",
+      "name": "Black Olives"
+    },
+    {
+      "id": "lettuce",
+      "name": "Lettuce"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "avocado",
+      "name": "Avocado"
+    },
+    {
+      "id": "rocoto",
+      "name": "Rocoto Pepper"
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts"
+    },
+    {
+      "id": "cancha",
+      "name": "Cancha (Toasted Corn)"
+    },
+    {
+      "id": "oregano",
+      "name": "Oregano"
+    }
+  ],
+  "argentinian": [
+    {
+      "id": "beef",
+      "name": "Beef (Asado cuts)"
+    },
+    {
+      "id": "chimichurri",
+      "name": "Chimichurri herbs"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil"
+    },
+    {
+      "id": "red_wine_vinegar",
+      "name": "Red Wine Vinegar"
+    },
+    {
+      "id": "oregano",
+      "name": "Oregano"
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "corn",
+      "name": "Corn"
+    },
+    {
+      "id": "squash",
+      "name": "Butternut Squash"
+    },
+    {
+      "id": "empanada_dough",
+      "name": "Empanada Dough"
+    },
+    {
+      "id": "chorizo_ar",
+      "name": "Chorizo"
+    },
+    {
+      "id": "mozzarella",
+      "name": "Mozzarella"
+    },
+    {
+      "id": "provolone",
+      "name": "Provoleta Cheese"
+    },
+    {
+      "id": "flour",
+      "name": "Flour"
+    },
+    {
+      "id": "dulce_de_leche",
+      "name": "Dulce de Leche"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "red_wine",
+      "name": "Red Wine (Malbec)"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "paprika",
+      "name": "Paprika"
+    },
+    {
+      "id": "bay_leaves",
+      "name": "Bay Leaves"
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach"
+    },
+    {
+      "id": "olives",
+      "name": "Green Olives"
+    }
+  ],
+  "caribbean_region": [
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "beans",
+      "name": "Kidney Beans"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "fish",
+      "name": "Fish"
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp"
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk"
+    },
+    {
+      "id": "plantains",
+      "name": "Plantains"
+    },
+    {
+      "id": "scotch_bonnet",
+      "name": "Scotch Bonnet Pepper"
+    },
+    {
+      "id": "thyme",
+      "name": "Thyme"
+    },
+    {
+      "id": "allspice",
+      "name": "Allspice"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "lime",
+      "name": "Lime"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers"
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato"
+    },
+    {
+      "id": "yuca",
+      "name": "Yuca (Cassava)"
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "corn",
+      "name": "Corn"
+    },
+    {
+      "id": "avocado",
+      "name": "Avocado"
+    },
+    {
+      "id": "mango",
+      "name": "Mango"
+    },
+    {
+      "id": "papaya",
+      "name": "Papaya"
+    },
+    {
+      "id": "rum",
+      "name": "Rum"
+    },
+    {
+      "id": "sugar_cane",
+      "name": "Brown Sugar"
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions"
+    }
+  ],
+  "jamaican": [
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "pork",
+      "name": "Pork"
+    },
+    {
+      "id": "goat",
+      "name": "Goat"
+    },
+    {
+      "id": "scotch_bonnet",
+      "name": "Scotch Bonnet Pepper"
+    },
+    {
+      "id": "allspice",
+      "name": "Allspice (Pimento)"
+    },
+    {
+      "id": "thyme",
+      "name": "Thyme"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "green_onions",
+      "name": "Green Onions (Scallion)"
+    },
+    {
+      "id": "soy_sauce",
+      "name": "Soy Sauce"
+    },
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "kidney_beans",
+      "name": "Kidney Beans"
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk"
+    },
+    {
+      "id": "plantains",
+      "name": "Plantains"
+    },
+    {
+      "id": "ackee",
+      "name": "Ackee"
+    },
+    {
+      "id": "saltfish",
+      "name": "Salt Cod (Saltfish)"
+    },
+    {
+      "id": "yam",
+      "name": "Yam"
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato"
+    },
+    {
+      "id": "callaloo",
+      "name": "Callaloo"
+    },
+    {
+      "id": "breadfruit",
+      "name": "Breadfruit"
+    },
+    {
+      "id": "lime",
+      "name": "Lime"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers"
+    },
+    {
+      "id": "corn",
+      "name": "Corn"
+    },
+    {
+      "id": "brown_sugar",
+      "name": "Brown Sugar"
+    },
+    {
+      "id": "nutmeg",
+      "name": "Nutmeg"
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon"
+    }
+  ],
+  "african": [
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "chili",
+      "name": "Chili Peppers"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "beef",
+      "name": "Beef"
+    },
+    {
+      "id": "lamb",
+      "name": "Lamb"
+    },
+    {
+      "id": "fish",
+      "name": "Fish"
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts (Groundnuts)"
+    },
+    {
+      "id": "okra",
+      "name": "Okra"
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato"
+    },
+    {
+      "id": "yams",
+      "name": "Yams"
+    },
+    {
+      "id": "plantains",
+      "name": "Plantains"
+    },
+    {
+      "id": "cassava",
+      "name": "Cassava"
+    },
+    {
+      "id": "black_eyed_peas",
+      "name": "Black-Eyed Peas"
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils"
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk"
+    },
+    {
+      "id": "palm_oil",
+      "name": "Palm Oil"
+    },
+    {
+      "id": "coriander",
+      "name": "Coriander"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric"
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon"
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro"
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach"
+    },
+    {
+      "id": "corn",
+      "name": "Corn (Maize)"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers"
+    }
+  ],
+  "ethiopian": [
+    {
+      "id": "injera_flour",
+      "name": "Teff Flour (for Injera)"
+    },
+    {
+      "id": "berbere",
+      "name": "Berbere Spice"
+    },
+    {
+      "id": "niter_kibbeh",
+      "name": "Niter Kibbeh (Spiced Butter)"
+    },
+    {
+      "id": "onions",
+      "name": "Red Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "beef",
+      "name": "Beef"
+    },
+    {
+      "id": "lamb",
+      "name": "Lamb"
+    },
+    {
+      "id": "lentils",
+      "name": "Red Lentils (Misir)"
+    },
+    {
+      "id": "split_peas",
+      "name": "Yellow Split Peas"
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas"
+    },
+    {
+      "id": "collard_greens",
+      "name": "Collard Greens (Gomen)"
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage"
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric"
+    },
+    {
+      "id": "fenugreek",
+      "name": "Fenugreek"
+    },
+    {
+      "id": "cardamom",
+      "name": "Cardamom"
+    },
+    {
+      "id": "coriander",
+      "name": "Coriander"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "chili",
+      "name": "Chili Peppers"
+    },
+    {
+      "id": "mitmita",
+      "name": "Mitmita Spice"
+    },
+    {
+      "id": "korerima",
+      "name": "Korerima (Ethiopian Cardamom)"
+    },
+    {
+      "id": "nigella_seeds",
+      "name": "Nigella Seeds"
+    }
+  ],
+  "moroccan": [
+    {
+      "id": "lamb",
+      "name": "Lamb"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "beef",
+      "name": "Beef"
+    },
+    {
+      "id": "couscous",
+      "name": "Couscous"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "saffron",
+      "name": "Saffron"
+    },
+    {
+      "id": "cumin",
+      "name": "Cumin"
+    },
+    {
+      "id": "coriander",
+      "name": "Coriander"
+    },
+    {
+      "id": "cinnamon",
+      "name": "Cinnamon"
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric"
+    },
+    {
+      "id": "paprika",
+      "name": "Paprika"
+    },
+    {
+      "id": "ras_el_hanout",
+      "name": "Ras el Hanout"
+    },
+    {
+      "id": "preserved_lemons",
+      "name": "Preserved Lemons"
+    },
+    {
+      "id": "olives",
+      "name": "Olives"
+    },
+    {
+      "id": "almonds",
+      "name": "Almonds"
+    },
+    {
+      "id": "dates",
+      "name": "Dates"
+    },
+    {
+      "id": "apricots",
+      "name": "Dried Apricots"
+    },
+    {
+      "id": "honey",
+      "name": "Honey"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas"
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils"
+    },
+    {
+      "id": "carrots",
+      "name": "Carrots"
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini"
+    },
+    {
+      "id": "turnips",
+      "name": "Turnips"
+    },
+    {
+      "id": "cilantro",
+      "name": "Cilantro"
+    },
+    {
+      "id": "parsley",
+      "name": "Parsley"
+    }
+  ],
+  "nigerian": [
+    {
+      "id": "rice",
+      "name": "Rice"
+    },
+    {
+      "id": "yams",
+      "name": "Yams"
+    },
+    {
+      "id": "plantains",
+      "name": "Plantains"
+    },
+    {
+      "id": "cassava",
+      "name": "Cassava (Garri)"
+    },
+    {
+      "id": "palm_oil",
+      "name": "Palm Oil"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "ginger",
+      "name": "Ginger"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "scotch_bonnet",
+      "name": "Scotch Bonnet Pepper"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "beef",
+      "name": "Beef"
+    },
+    {
+      "id": "goat",
+      "name": "Goat"
+    },
+    {
+      "id": "stockfish",
+      "name": "Stockfish"
+    },
+    {
+      "id": "crayfish",
+      "name": "Crayfish (Ground)"
+    },
+    {
+      "id": "egusi",
+      "name": "Egusi (Melon Seeds)"
+    },
+    {
+      "id": "okra",
+      "name": "Okra"
+    },
+    {
+      "id": "spinach_ng",
+      "name": "Spinach (Efo/Ugu)"
+    },
+    {
+      "id": "black_eyed_peas",
+      "name": "Black-Eyed Peas"
+    },
+    {
+      "id": "peanuts",
+      "name": "Peanuts (Groundnuts)"
+    },
+    {
+      "id": "locust_beans",
+      "name": "Locust Beans (Iru/Ogiri)"
+    },
+    {
+      "id": "corn",
+      "name": "Corn"
+    },
+    {
+      "id": "beans",
+      "name": "Honey Beans"
+    },
+    {
+      "id": "bell_peppers",
+      "name": "Bell Peppers"
+    },
+    {
+      "id": "curry_powder",
+      "name": "Curry Powder"
+    },
+    {
+      "id": "thyme",
+      "name": "Thyme"
+    },
+    {
+      "id": "suya_spice",
+      "name": "Suya Spice"
+    },
+    {
+      "id": "jollof_seasoning",
+      "name": "Jollof Seasoning"
+    }
+  ],
+  "oceanian": [
+    {
+      "id": "lamb",
+      "name": "Lamb"
+    },
+    {
+      "id": "beef",
+      "name": "Beef"
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken"
+    },
+    {
+      "id": "shrimp",
+      "name": "Prawns"
+    },
+    {
+      "id": "fish",
+      "name": "Fish (Barramundi/Snapper)"
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato (Kumara)"
+    },
+    {
+      "id": "potatoes",
+      "name": "Potatoes"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
+    },
+    {
+      "id": "garlic",
+      "name": "Garlic"
+    },
+    {
+      "id": "tomatoes",
+      "name": "Tomatoes"
+    },
+    {
+      "id": "avocado",
+      "name": "Avocado"
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon"
+    },
+    {
+      "id": "lime",
+      "name": "Lime"
+    },
+    {
+      "id": "coconut_milk",
+      "name": "Coconut Milk"
+    },
+    {
+      "id": "macadamia",
+      "name": "Macadamia Nuts"
+    },
+    {
+      "id": "pumpkin",
+      "name": "Pumpkin"
+    },
+    {
+      "id": "corn",
+      "name": "Corn"
+    },
+    {
+      "id": "mushrooms",
+      "name": "Mushrooms"
+    },
+    {
+      "id": "eggs",
+      "name": "Eggs"
+    },
+    {
+      "id": "butter",
+      "name": "Butter"
+    },
+    {
+      "id": "cream",
+      "name": "Cream"
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese"
+    },
+    {
+      "id": "olive_oil",
+      "name": "Olive Oil"
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach"
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini"
+    },
+    {
+      "id": "beetroot",
+      "name": "Beetroot"
+    },
+    {
+      "id": "mango",
+      "name": "Mango"
+    },
+    {
+      "id": "pineapple",
+      "name": "Pineapple"
+    }
+  ]
+};
+
+// AI Recipe Builder - Cuisine to Region mapping
+const AI_CUISINE_TO_REGION = {
+  "swedish": "nordic",
+  "danish": "nordic",
+  "norwegian": "nordic",
+  "finnish": "nordic",
+  "icelandic": "nordic",
+  "new_nordic": "nordic",
+  "japanese": "east_asian",
+  "chinese": "east_asian",
+  "korean": "east_asian",
+  "taiwanese": "east_asian",
+  "thai": "southeast_asian",
+  "vietnamese": "southeast_asian",
+  "indonesian": "southeast_asian",
+  "malaysian": "southeast_asian",
+  "filipino": "southeast_asian",
+  "singaporean": "southeast_asian",
+  "indian": "south_asian",
+  "sri_lankan": "south_asian",
+  "pakistani": "south_asian",
+  "bangladeshi": "south_asian",
+  "nepali": "south_asian",
+  "lebanese": "middle_east",
+  "turkish": "middle_east",
+  "persian": "middle_east",
+  "israeli": "middle_east",
+  "syrian": "middle_east",
+  "iraqi": "middle_east",
+  "yemeni": "middle_east",
+  "emirati": "middle_east",
+  "palestinian": "middle_east",
+  "italian": "european",
+  "french": "european",
+  "spanish": "european",
+  "greek": "european",
+  "portuguese": "european",
+  "german": "european",
+  "british": "european",
+  "polish": "european",
+  "hungarian": "european",
+  "mediterranean": "european",
+  "balkan": "european",
+  "russian": "european",
+  "american": "north_american",
+  "cajun_creole": "north_american",
+  "tex_mex": "north_american",
+  "canadian": "north_american",
+  "southern_us": "north_american",
+  "hawaiian": "north_american",
+  "mexican": "latin_american",
+  "brazilian": "latin_american",
+  "peruvian": "latin_american",
+  "argentinian": "latin_american",
+  "colombian": "latin_american",
+  "cuban": "latin_american",
+  "venezuelan": "latin_american",
+  "chilean": "latin_american",
+  "jamaican": "caribbean_region",
+  "trinidadian": "caribbean_region",
+  "haitian": "caribbean_region",
+  "puerto_rican": "caribbean_region",
+  "caribbean": "caribbean_region",
+  "ethiopian": "african",
+  "moroccan": "african",
+  "nigerian": "african",
+  "ghanaian": "african",
+  "senegalese": "african",
+  "south_african": "african",
+  "kenyan": "african",
+  "tanzanian": "african",
+  "tunisian": "african",
+  "egyptian": "african",
+  "east_african": "african",
+  "west_african": "african",
+  "australian": "oceanian",
+  "polynesian": "oceanian"
+};
+
 // Cooking methods
 const COOKING_METHODS = [
   { value: "oven_roast", name: "Oven Roast" },
@@ -9225,85 +13982,7 @@ class KitchenCookingPanel extends LitElement {
       return html`<div class="loading">Loading ingredients...</div>`;
     }
 
-    // _commonIngredients is a flat array of {id, name} objects (flattened from categorized API response)
-    return html`
-      <div class="path-header">
-        <button class="back-btn" @click=${() => {
-          this._showAIIngredientSelector = false;
-          this._selectedIngredients = [];
-          this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
-          this.requestUpdate();
-        }}>
-          ← Back
-        </button>
-        <h2>🥘 Select Ingredients</h2>
-      </div>
-
-      <ha-card>
-        <div class="card-content">
-          <p class="info-text">Choose ingredients you have available (select at least 2):</p>
-          
-          <div class="ingredient-grid">
-            ${(this._commonIngredients || []).map(ingredient => html`
-              <label class="ingredient-checkbox">
-                <input 
-                  type="checkbox" 
-                  ?checked=${this._selectedIngredients.includes(ingredient.name || ingredient)}
-                  @change=${(e) => this._toggleIngredient(ingredient.name || ingredient, e.target.checked)}
-                />
-                ${ingredient.name || ingredient}
-              </label>
-            `)}
-          </div>
-
-          <div class="ingredient-custom">
-            <input 
-              type="text" 
-              placeholder="Add custom ingredient..." 
-              @keypress=${(e) => {
-                if (e.key === 'Enter' && e.target.value.trim()) {
-                  this._addCustomIngredient(e.target.value.trim());
-                  e.target.value = '';
-                }
-              }}
-            />
-          </div>
-
-          <div class="selected-ingredients">
-            <h4>Selected Ingredients (${this._selectedIngredients.length}):</h4>
-            <div class="ingredient-tags">
-              ${this._selectedIngredients.map(ing => html`
-                <span class="ingredient-tag">
-                  ${ing}
-                  <button @click=${() => this._removeIngredient(ing)}>×</button>
-                </span>
-              `)}
-            </div>
-          </div>
-
-          <button 
-            class="primary-btn"
-            ?disabled=${this._selectedIngredients.length < 2}
-            @click=${() => this._proceedToCookingStyle()}
-          >
-            Next: Choose Cooking Style
-          </button>
-        </div>
-      </ha-card>
-    `;
-  }
-
-  /**
-   * Phase 6: Render cooking style selection
-   */
-  _renderAICookingStyleSelection() {
-    // Data should already be loaded by _startAIRecipeCreation()
-    // If not loaded, show loading state
-    if (!this._cookingStyles) {
-      return html`<div class="loading">Loading cooking styles...</div>`;
-    }
-
-    // Cuisine/region options for fusion cooking
+    // Cuisine/region options for fusion cooking (moved from cooking style page)
     const cuisineRegions = [
       { id: 'nordic', name: 'Nordic & Scandinavian', icon: '❄️', cuisines: [
         { id: 'swedish', name: 'Swedish', icon: '🇸🇪' },
@@ -9404,57 +14083,28 @@ class KitchenCookingPanel extends LitElement {
       ]},
     ];
 
-    // Complexity labels
-    const complexityLabels = ['Very Simple', 'Simple', 'Medium', 'Complex', 'Chef Level'];
+    // Get cuisine-specific ingredients based on selection
+    const displayIngredients = this._getCuisineIngredients(cuisineRegions);
 
+    // _commonIngredients is a flat array of {id, name} objects (flattened from categorized API response)
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => {
-          this._showAIStyleSelector = false;
-          this._showAIIngredientSelector = true;
+          this._showAIIngredientSelector = false;
+          this._selectedIngredients = [];
+          this._aiSelectedCuisines = [];
+          this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
           this.requestUpdate();
         }}>
-          ← Back to Ingredients
+          ← Back
         </button>
-        <h2>🍳 Choose Cooking Style</h2>
+        <h2>🥘 Select Ingredients</h2>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <p class="info-text">Select your preferred cooking style:</p>
-          
-          <div class="style-grid">
-            ${(this._cookingStyles || []).map(style => html`
-              <ha-card 
-                class="style-card ${this._selectedCookingStyle === style.id ? 'selected' : ''} clickable"
-                @click=${() => {
-                  this._selectedCookingStyle = style.id;
-                  // Set default complexity based on style
-                  if (['quick_and_easy', 'one_pot', 'family_friendly'].includes(style.id)) {
-                    this._aiComplexity = 2;
-                  } else if (['gourmet'].includes(style.id)) {
-                    this._aiComplexity = 4;
-                  } else {
-                    this._aiComplexity = 3;
-                  }
-                  this.requestUpdate();
-                }}
-              >
-                <div class="card-content">
-                  <div class="style-icon">${style.icon || '🍳'}</div>
-                  <h3>${style.name}</h3>
-                  <p>${style.description || ''}</p>
-                </div>
-              </ha-card>
-            `)}
-          </div>
-        </div>
-      </ha-card>
-
-      <ha-card>
-        <div class="card-content">
           <h3>🌍 Cuisine / Region (optional, select for fusion)</h3>
-          <p class="info-text" style="margin-bottom: 12px;">Click a region to expand, then select cuisines. Pick from multiple regions for fusion cooking.</p>
+          <p class="info-text" style="margin-bottom: 12px;">Select a cuisine to see its typical ingredients. Pick from multiple regions for fusion cooking.</p>
           ${(this._aiSelectedCuisines || []).length > 0 ? html`
             <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
               ${(this._aiSelectedCuisines || []).map(c => {
@@ -9511,6 +14161,157 @@ class KitchenCookingPanel extends LitElement {
               </div>
             `;
           })}
+        </div>
+      </ha-card>
+
+      <ha-card>
+        <div class="card-content">
+          <p class="info-text">Choose ingredients you have available (select at least 2):</p>
+          
+          <div class="ingredient-grid">
+            ${(displayIngredients || []).map(ingredient => html`
+              <label class="ingredient-checkbox">
+                <input 
+                  type="checkbox" 
+                  ?checked=${this._selectedIngredients.includes(ingredient.name || ingredient)}
+                  @change=${(e) => this._toggleIngredient(ingredient.name || ingredient, e.target.checked)}
+                />
+                ${ingredient.name || ingredient}
+              </label>
+            `)}
+          </div>
+
+          <div class="ingredient-custom">
+            <input 
+              type="text" 
+              placeholder="Add custom ingredient..." 
+              @keypress=${(e) => {
+                if (e.key === 'Enter' && e.target.value.trim()) {
+                  this._addCustomIngredient(e.target.value.trim());
+                  e.target.value = '';
+                }
+              }}
+            />
+          </div>
+
+          <div class="selected-ingredients">
+            <h4>Selected Ingredients (${this._selectedIngredients.length}):</h4>
+            <div class="ingredient-tags">
+              ${this._selectedIngredients.map(ing => html`
+                <span class="ingredient-tag">
+                  ${ing}
+                  <button @click=${() => this._removeIngredient(ing)}>×</button>
+                </span>
+              `)}
+            </div>
+          </div>
+
+          <button 
+            class="primary-btn"
+            ?disabled=${this._selectedIngredients.length < 2}
+            @click=${() => this._proceedToCookingStyle()}
+          >
+            Next: Choose Cooking Style
+          </button>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /**
+   * Get ingredients based on selected cuisines.
+   * Falls back: individual cuisine -> parent region -> default common ingredients.
+   * For fusion (multiple cuisines), merges ingredient lists and deduplicates.
+   */
+  _getCuisineIngredients(cuisineRegions) {
+    const selectedCuisines = this._aiSelectedCuisines || [];
+    if (selectedCuisines.length === 0) {
+      return this._commonIngredients || [];
+    }
+
+    const cuisineData = (typeof AI_CUISINE_INGREDIENTS !== 'undefined') ? AI_CUISINE_INGREDIENTS : {};
+    const regionMap = (typeof AI_CUISINE_TO_REGION !== 'undefined') ? AI_CUISINE_TO_REGION : {};
+
+    // Collect ingredients from all selected cuisines
+    const seenIds = new Set();
+    const merged = [];
+
+    for (const cuisineId of selectedCuisines) {
+      // Try individual cuisine first, then fall back to region
+      let ingredients = cuisineData[cuisineId];
+      if (!ingredients) {
+        const regionId = regionMap[cuisineId];
+        if (regionId) {
+          ingredients = cuisineData[regionId];
+        }
+      }
+      if (ingredients && Array.isArray(ingredients)) {
+        for (const ing of ingredients) {
+          if (!seenIds.has(ing.id)) {
+            seenIds.add(ing.id);
+            merged.push(ing);
+          }
+        }
+      }
+    }
+
+    return merged.length > 0 ? merged : (this._commonIngredients || []);
+  }
+
+  /**
+   * Phase 6: Render cooking style selection
+   */
+  _renderAICookingStyleSelection() {
+    // Data should already be loaded by _startAIRecipeCreation()
+    // If not loaded, show loading state
+    if (!this._cookingStyles) {
+      return html`<div class="loading">Loading cooking styles...</div>`;
+    }
+
+    // Complexity labels
+    const complexityLabels = ['Very Simple', 'Simple', 'Medium', 'Complex', 'Chef Level'];
+
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => {
+          this._showAIStyleSelector = false;
+          this._showAIIngredientSelector = true;
+          this.requestUpdate();
+        }}>
+          ← Back to Ingredients
+        </button>
+        <h2>🍳 Choose Cooking Style</h2>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          <p class="info-text">Select your preferred cooking style:</p>
+          
+          <div class="style-grid">
+            ${(this._cookingStyles || []).map(style => html`
+              <ha-card 
+                class="style-card ${this._selectedCookingStyle === style.id ? 'selected' : ''} clickable"
+                @click=${() => {
+                  this._selectedCookingStyle = style.id;
+                  // Set default complexity based on style
+                  if (['quick_and_easy', 'one_pot', 'family_friendly'].includes(style.id)) {
+                    this._aiComplexity = 2;
+                  } else if (['gourmet'].includes(style.id)) {
+                    this._aiComplexity = 4;
+                  } else {
+                    this._aiComplexity = 3;
+                  }
+                  this.requestUpdate();
+                }}
+              >
+                <div class="card-content">
+                  <div class="style-icon">${style.icon || '🍳'}</div>
+                  <h3>${style.name}</h3>
+                  <p>${style.description || ''}</p>
+                </div>
+              </ha-card>
+            `)}
+          </div>
         </div>
       </ha-card>
 
@@ -9592,7 +14393,14 @@ class KitchenCookingPanel extends LitElement {
             return html`
             <ha-card class="recipe-suggestion-card">
               <div class="card-content">
-                <h3>${displayName}</h3>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+                  <h3 style="margin: 0; flex: 1;">${displayName}</h3>
+                  ${recipe.recipe_origin === 'known' ? html`
+                    <span style="background: #2e7d32; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">📖 Classic</span>
+                  ` : html`
+                    <span style="background: #1565c0; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">🤖 Original</span>
+                  `}
+                </div>
                 <p class="recipe-description">${recipe.description || ''}</p>
                 
                 <div class="recipe-details">
@@ -13261,7 +18069,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "168";
+const PANEL_VERSION = "169";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

@@ -3696,85 +3696,7 @@ class KitchenCookingPanel extends LitElement {
       return html`<div class="loading">Loading ingredients...</div>`;
     }
 
-    // _commonIngredients is a flat array of {id, name} objects (flattened from categorized API response)
-    return html`
-      <div class="path-header">
-        <button class="back-btn" @click=${() => {
-          this._showAIIngredientSelector = false;
-          this._selectedIngredients = [];
-          this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
-          this.requestUpdate();
-        }}>
-          ← Back
-        </button>
-        <h2>🥘 Select Ingredients</h2>
-      </div>
-
-      <ha-card>
-        <div class="card-content">
-          <p class="info-text">Choose ingredients you have available (select at least 2):</p>
-          
-          <div class="ingredient-grid">
-            ${(this._commonIngredients || []).map(ingredient => html`
-              <label class="ingredient-checkbox">
-                <input 
-                  type="checkbox" 
-                  ?checked=${this._selectedIngredients.includes(ingredient.name || ingredient)}
-                  @change=${(e) => this._toggleIngredient(ingredient.name || ingredient, e.target.checked)}
-                />
-                ${ingredient.name || ingredient}
-              </label>
-            `)}
-          </div>
-
-          <div class="ingredient-custom">
-            <input 
-              type="text" 
-              placeholder="Add custom ingredient..." 
-              @keypress=${(e) => {
-                if (e.key === 'Enter' && e.target.value.trim()) {
-                  this._addCustomIngredient(e.target.value.trim());
-                  e.target.value = '';
-                }
-              }}
-            />
-          </div>
-
-          <div class="selected-ingredients">
-            <h4>Selected Ingredients (${this._selectedIngredients.length}):</h4>
-            <div class="ingredient-tags">
-              ${this._selectedIngredients.map(ing => html`
-                <span class="ingredient-tag">
-                  ${ing}
-                  <button @click=${() => this._removeIngredient(ing)}>×</button>
-                </span>
-              `)}
-            </div>
-          </div>
-
-          <button 
-            class="primary-btn"
-            ?disabled=${this._selectedIngredients.length < 2}
-            @click=${() => this._proceedToCookingStyle()}
-          >
-            Next: Choose Cooking Style
-          </button>
-        </div>
-      </ha-card>
-    `;
-  }
-
-  /**
-   * Phase 6: Render cooking style selection
-   */
-  _renderAICookingStyleSelection() {
-    // Data should already be loaded by _startAIRecipeCreation()
-    // If not loaded, show loading state
-    if (!this._cookingStyles) {
-      return html`<div class="loading">Loading cooking styles...</div>`;
-    }
-
-    // Cuisine/region options for fusion cooking
+    // Cuisine/region options for fusion cooking (moved from cooking style page)
     const cuisineRegions = [
       { id: 'nordic', name: 'Nordic & Scandinavian', icon: '❄️', cuisines: [
         { id: 'swedish', name: 'Swedish', icon: '🇸🇪' },
@@ -3875,57 +3797,28 @@ class KitchenCookingPanel extends LitElement {
       ]},
     ];
 
-    // Complexity labels
-    const complexityLabels = ['Very Simple', 'Simple', 'Medium', 'Complex', 'Chef Level'];
+    // Get cuisine-specific ingredients based on selection
+    const displayIngredients = this._getCuisineIngredients(cuisineRegions);
 
+    // _commonIngredients is a flat array of {id, name} objects (flattened from categorized API response)
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => {
-          this._showAIStyleSelector = false;
-          this._showAIIngredientSelector = true;
+          this._showAIIngredientSelector = false;
+          this._selectedIngredients = [];
+          this._aiSelectedCuisines = [];
+          this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
           this.requestUpdate();
         }}>
-          ← Back to Ingredients
+          ← Back
         </button>
-        <h2>🍳 Choose Cooking Style</h2>
+        <h2>🥘 Select Ingredients</h2>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <p class="info-text">Select your preferred cooking style:</p>
-          
-          <div class="style-grid">
-            ${(this._cookingStyles || []).map(style => html`
-              <ha-card 
-                class="style-card ${this._selectedCookingStyle === style.id ? 'selected' : ''} clickable"
-                @click=${() => {
-                  this._selectedCookingStyle = style.id;
-                  // Set default complexity based on style
-                  if (['quick_and_easy', 'one_pot', 'family_friendly'].includes(style.id)) {
-                    this._aiComplexity = 2;
-                  } else if (['gourmet'].includes(style.id)) {
-                    this._aiComplexity = 4;
-                  } else {
-                    this._aiComplexity = 3;
-                  }
-                  this.requestUpdate();
-                }}
-              >
-                <div class="card-content">
-                  <div class="style-icon">${style.icon || '🍳'}</div>
-                  <h3>${style.name}</h3>
-                  <p>${style.description || ''}</p>
-                </div>
-              </ha-card>
-            `)}
-          </div>
-        </div>
-      </ha-card>
-
-      <ha-card>
-        <div class="card-content">
           <h3>🌍 Cuisine / Region (optional, select for fusion)</h3>
-          <p class="info-text" style="margin-bottom: 12px;">Click a region to expand, then select cuisines. Pick from multiple regions for fusion cooking.</p>
+          <p class="info-text" style="margin-bottom: 12px;">Select a cuisine to see its typical ingredients. Pick from multiple regions for fusion cooking.</p>
           ${(this._aiSelectedCuisines || []).length > 0 ? html`
             <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
               ${(this._aiSelectedCuisines || []).map(c => {
@@ -3982,6 +3875,157 @@ class KitchenCookingPanel extends LitElement {
               </div>
             `;
           })}
+        </div>
+      </ha-card>
+
+      <ha-card>
+        <div class="card-content">
+          <p class="info-text">Choose ingredients you have available (select at least 2):</p>
+          
+          <div class="ingredient-grid">
+            ${(displayIngredients || []).map(ingredient => html`
+              <label class="ingredient-checkbox">
+                <input 
+                  type="checkbox" 
+                  ?checked=${this._selectedIngredients.includes(ingredient.name || ingredient)}
+                  @change=${(e) => this._toggleIngredient(ingredient.name || ingredient, e.target.checked)}
+                />
+                ${ingredient.name || ingredient}
+              </label>
+            `)}
+          </div>
+
+          <div class="ingredient-custom">
+            <input 
+              type="text" 
+              placeholder="Add custom ingredient..." 
+              @keypress=${(e) => {
+                if (e.key === 'Enter' && e.target.value.trim()) {
+                  this._addCustomIngredient(e.target.value.trim());
+                  e.target.value = '';
+                }
+              }}
+            />
+          </div>
+
+          <div class="selected-ingredients">
+            <h4>Selected Ingredients (${this._selectedIngredients.length}):</h4>
+            <div class="ingredient-tags">
+              ${this._selectedIngredients.map(ing => html`
+                <span class="ingredient-tag">
+                  ${ing}
+                  <button @click=${() => this._removeIngredient(ing)}>×</button>
+                </span>
+              `)}
+            </div>
+          </div>
+
+          <button 
+            class="primary-btn"
+            ?disabled=${this._selectedIngredients.length < 2}
+            @click=${() => this._proceedToCookingStyle()}
+          >
+            Next: Choose Cooking Style
+          </button>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /**
+   * Get ingredients based on selected cuisines.
+   * Falls back: individual cuisine -> parent region -> default common ingredients.
+   * For fusion (multiple cuisines), merges ingredient lists and deduplicates.
+   */
+  _getCuisineIngredients(cuisineRegions) {
+    const selectedCuisines = this._aiSelectedCuisines || [];
+    if (selectedCuisines.length === 0) {
+      return this._commonIngredients || [];
+    }
+
+    const cuisineData = (typeof AI_CUISINE_INGREDIENTS !== 'undefined') ? AI_CUISINE_INGREDIENTS : {};
+    const regionMap = (typeof AI_CUISINE_TO_REGION !== 'undefined') ? AI_CUISINE_TO_REGION : {};
+
+    // Collect ingredients from all selected cuisines
+    const seenIds = new Set();
+    const merged = [];
+
+    for (const cuisineId of selectedCuisines) {
+      // Try individual cuisine first, then fall back to region
+      let ingredients = cuisineData[cuisineId];
+      if (!ingredients) {
+        const regionId = regionMap[cuisineId];
+        if (regionId) {
+          ingredients = cuisineData[regionId];
+        }
+      }
+      if (ingredients && Array.isArray(ingredients)) {
+        for (const ing of ingredients) {
+          if (!seenIds.has(ing.id)) {
+            seenIds.add(ing.id);
+            merged.push(ing);
+          }
+        }
+      }
+    }
+
+    return merged.length > 0 ? merged : (this._commonIngredients || []);
+  }
+
+  /**
+   * Phase 6: Render cooking style selection
+   */
+  _renderAICookingStyleSelection() {
+    // Data should already be loaded by _startAIRecipeCreation()
+    // If not loaded, show loading state
+    if (!this._cookingStyles) {
+      return html`<div class="loading">Loading cooking styles...</div>`;
+    }
+
+    // Complexity labels
+    const complexityLabels = ['Very Simple', 'Simple', 'Medium', 'Complex', 'Chef Level'];
+
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => {
+          this._showAIStyleSelector = false;
+          this._showAIIngredientSelector = true;
+          this.requestUpdate();
+        }}>
+          ← Back to Ingredients
+        </button>
+        <h2>🍳 Choose Cooking Style</h2>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          <p class="info-text">Select your preferred cooking style:</p>
+          
+          <div class="style-grid">
+            ${(this._cookingStyles || []).map(style => html`
+              <ha-card 
+                class="style-card ${this._selectedCookingStyle === style.id ? 'selected' : ''} clickable"
+                @click=${() => {
+                  this._selectedCookingStyle = style.id;
+                  // Set default complexity based on style
+                  if (['quick_and_easy', 'one_pot', 'family_friendly'].includes(style.id)) {
+                    this._aiComplexity = 2;
+                  } else if (['gourmet'].includes(style.id)) {
+                    this._aiComplexity = 4;
+                  } else {
+                    this._aiComplexity = 3;
+                  }
+                  this.requestUpdate();
+                }}
+              >
+                <div class="card-content">
+                  <div class="style-icon">${style.icon || '🍳'}</div>
+                  <h3>${style.name}</h3>
+                  <p>${style.description || ''}</p>
+                </div>
+              </ha-card>
+            `)}
+          </div>
         </div>
       </ha-card>
 
@@ -4063,7 +4107,14 @@ class KitchenCookingPanel extends LitElement {
             return html`
             <ha-card class="recipe-suggestion-card">
               <div class="card-content">
-                <h3>${displayName}</h3>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+                  <h3 style="margin: 0; flex: 1;">${displayName}</h3>
+                  ${recipe.recipe_origin === 'known' ? html`
+                    <span style="background: #2e7d32; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">📖 Classic</span>
+                  ` : html`
+                    <span style="background: #1565c0; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">🤖 Original</span>
+                  `}
+                </div>
                 <p class="recipe-description">${recipe.description || ''}</p>
                 
                 <div class="recipe-details">

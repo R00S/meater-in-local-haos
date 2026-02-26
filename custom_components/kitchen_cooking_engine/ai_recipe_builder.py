@@ -90,6 +90,7 @@ class AIRecipeSuggestion:
     main_ingredients: List[str]
     cuisine_type: Optional[str] = None
     required_appliances: List[str] = field(default_factory=list)
+    recipe_origin: str = "original"  # "known" for classic recipes, "original" for AI-created
 
 
 @dataclass
@@ -476,13 +477,19 @@ Available cooking features:
 {feature_list}
 
 Please suggest 4 quite different recipes using these ingredients. For each recipe, provide:
-1. Recipe name (creative and descriptive)
+1. Recipe name - IMPORTANT naming rules:
+   - Prefer well-known, real dish names that people can find online (e.g. "Chicken Tikka Masala", "Pad Thai", "Beef Bourguignon", "Shakshuka", "Bibimbap").
+   - Only use a creative/poetic name if the dish is a well-known classic (e.g. "Coq au Vin" is fine, but don't invent names like "Midnight Sun Grilled Salmon").
+   - For original/invented recipes, use a simple descriptive name based on the main ingredients and cooking method (e.g. "Pan-Seared Salmon with Dill Cream Sauce").
 2. Brief description (1-2 sentences)
 3. Total cooking time in minutes
 4. Difficulty level (easy, medium, or hard)
 5. Main ingredients used from the list
 6. Required appliances/equipment
 7. Cuisine type (if applicable)
+8. Whether this is a known/classic recipe or an AI-created original ("known" or "original")
+
+Try to include at least 2 well-known classic recipes that people can search for online, and mark the rest as originals.
 
 Format your response as a JSON array with exactly 4 recipes:
 [
@@ -493,7 +500,8 @@ Format your response as a JSON array with exactly 4 recipes:
     "difficulty": "medium",
     "main_ingredients": ["ingredient1", "ingredient2"],
     "required_appliances": ["oven", "probe"],
-    "cuisine_type": "italian"
+    "cuisine_type": "italian",
+    "recipe_origin": "known"
   }},
   ...
 ]
@@ -715,6 +723,7 @@ Format your response as JSON:
                     main_ingredients=item.get("main_ingredients", []),
                     cuisine_type=item.get("cuisine_type"),
                     required_appliances=item.get("required_appliances", []),
+                    recipe_origin=item.get("recipe_origin", "original"),
                 )
                 suggestions.append(suggestion)
             

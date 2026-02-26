@@ -241,6 +241,8 @@ def generate_js_data():
     # Load AI Recipe Builder data
     ai_cooking_styles = []
     ai_ingredients = {}
+    ai_cuisine_ingredients = {}
+    ai_cuisine_to_region = {}
     try:
         base_dir = os.path.dirname(os.path.abspath(__file__))
         import importlib.util
@@ -253,6 +255,8 @@ def generate_js_data():
         
         ai_cooking_styles = ai_data_module.COOKING_STYLES
         ai_ingredients = ai_data_module.COMMON_INGREDIENTS
+        ai_cuisine_ingredients = ai_data_module.CUISINE_INGREDIENTS
+        ai_cuisine_to_region = ai_data_module.CUISINE_TO_REGION
     except Exception as e:
         print(f"Warning: Could not load AI Recipe Builder data: {e}")
     
@@ -283,6 +287,12 @@ def generate_js_data():
     lines.append("")
     lines.append("// AI Recipe Builder - Common Ingredients")
     lines.append(f"const AI_INGREDIENTS = {json.dumps(ai_ingredients, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Cuisine-specific Ingredients (28 per cuisine)")
+    lines.append(f"const AI_CUISINE_INGREDIENTS = {json.dumps(ai_cuisine_ingredients, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Cuisine to Region mapping")
+    lines.append(f"const AI_CUISINE_TO_REGION = {json.dumps(ai_cuisine_to_region, indent=2, ensure_ascii=False)};")
     
     return "\n".join(lines)
 
