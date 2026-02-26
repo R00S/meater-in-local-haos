@@ -3195,7 +3195,10 @@ class KitchenCookingPanel extends LitElement {
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
           ← Back to Appliances
         </button>
-        <h2>🤖 AI Recipe Builder</h2>
+        <div class="path-header-title-row">
+          <h2>🤖 AI Recipe Builder</h2>
+          <button class="settings-icon-btn" @click=${() => this._showAISettings()} title="AI Settings">⚙️</button>
+        </div>
       </div>
 
       <ha-card>
@@ -7169,6 +7172,12 @@ class KitchenCookingPanel extends LitElement {
       /* Path Header */
       .path-header {
         margin-bottom: 24px;
+      }
+
+      .path-header-title-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
       }
 
       .path-header h2 {

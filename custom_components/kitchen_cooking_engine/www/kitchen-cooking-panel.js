@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 26 Feb 2026, 16:13 CET
+ * AUTO-GENERATED: 26 Feb 2026, 16:40 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 26 Feb 2026, 16:13 CET
+// Last generated: 26 Feb 2026, 16:40 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -14637,7 +14637,10 @@ class KitchenCookingPanel extends LitElement {
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
           ← Back to Appliances
         </button>
-        <h2>🤖 AI Recipe Builder</h2>
+        <div class="path-header-title-row">
+          <h2>🤖 AI Recipe Builder</h2>
+          <button class="settings-icon-btn" @click=${() => this._showAISettings()} title="AI Settings">⚙️</button>
+        </div>
       </div>
 
       <ha-card>
@@ -18613,6 +18616,12 @@ class KitchenCookingPanel extends LitElement {
         margin-bottom: 24px;
       }
 
+      .path-header-title-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
       .path-header h2 {
         font-size: 24px;
         margin: 16px 0 0 0;
@@ -19309,7 +19318,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "176";
+const PANEL_VERSION = "177";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
