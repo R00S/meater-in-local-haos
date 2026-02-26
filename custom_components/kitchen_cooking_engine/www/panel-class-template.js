@@ -3882,19 +3882,11 @@ class KitchenCookingPanel extends LitElement {
       <ha-card>
         <div class="card-content">
           <p class="info-text">Choose ingredients you have available (select at least 2):</p>
+          <p class="info-text" style="font-size: 0.85em; color: var(--secondary-text-color);">
+            Staples assumed available: ${(typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : []).join(', ')}
+          </p>
           
-          <div class="ingredient-grid">
-            ${(displayIngredients || []).map(ingredient => html`
-              <label class="ingredient-checkbox">
-                <input 
-                  type="checkbox" 
-                  ?checked=${this._selectedIngredients.includes(ingredient.name || ingredient)}
-                  @change=${(e) => this._toggleIngredient(ingredient.name || ingredient, e.target.checked)}
-                />
-                ${ingredient.name || ingredient}
-              </label>
-            `)}
-          </div>
+          ${this._renderCategorizedIngredients(displayIngredients)}
 
           <div class="ingredient-custom">
             <input 
@@ -3971,6 +3963,64 @@ class KitchenCookingPanel extends LitElement {
     }
 
     return merged.length > 0 ? merged : (this._commonIngredients || []);
+  }
+
+  /**
+   * Render ingredients grouped by category with alphabetic sorting within each group.
+   * If ingredients have a "cat" field, groups them; otherwise falls back to a flat grid.
+   */
+  _renderCategorizedIngredients(ingredients) {
+    const categoryLabels = (typeof AI_CATEGORY_LABELS !== 'undefined') ? AI_CATEGORY_LABELS : {};
+    const categoryOrder = (typeof AI_CATEGORY_ORDER !== 'undefined') ? AI_CATEGORY_ORDER : [];
+
+    // Check if ingredients have category info
+    const hasCats = ingredients.length > 0 && ingredients[0].cat;
+    if (!hasCats || categoryOrder.length === 0) {
+      // Fall back to flat grid sorted alphabetically
+      const sorted = [...ingredients].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+      return html`
+        <div class="ingredient-grid">
+          ${sorted.map(ingredient => this._renderIngredientCheckbox(ingredient))}
+        </div>
+      `;
+    }
+
+    // Group by category
+    const groups = {};
+    for (const ing of ingredients) {
+      const cat = ing.cat || 's';
+      if (!groups[cat]) groups[cat] = [];
+      groups[cat].push(ing);
+    }
+
+    // Sort each group alphabetically
+    for (const cat of Object.keys(groups)) {
+      groups[cat].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+    }
+
+    return html`
+      ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => html`
+        <div class="ingredient-category">
+          <h4 style="margin: 12px 0 6px 0; font-size: 0.95em; color: var(--secondary-text-color);">${categoryLabels[cat] || cat}</h4>
+          <div class="ingredient-grid">
+            ${groups[cat].map(ingredient => this._renderIngredientCheckbox(ingredient))}
+          </div>
+        </div>
+      `)}
+    `;
+  }
+
+  _renderIngredientCheckbox(ingredient) {
+    return html`
+      <label class="ingredient-checkbox">
+        <input 
+          type="checkbox" 
+          ?checked=${this._selectedIngredients.includes(ingredient.name || ingredient)}
+          @change=${(e) => this._toggleIngredient(ingredient.name || ingredient, e.target.checked)}
+        />
+        ${ingredient.name || ingredient}
+      </label>
+    `;
   }
 
   /**
@@ -4651,14 +4701,15 @@ class KitchenCookingPanel extends LitElement {
       // Call AI recipe generation API
       const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/generate', requestBody);
 
-      if (response && response.suggestions) {
+      if (response && response.suggestions && response.suggestions.length > 0) {
         this._aiRecipeSuggestions = response.suggestions;
       } else {
-        this._showMessage('No recipes generated. Please try different ingredients or styles.', false);
+        const msg = (response && response.message) ? response.message : 'No recipes generated. Please try different ingredients or styles.';
+        this._showMessage('⚠️ Recipe Generation', msg);
       }
     } catch (error) {
       console.error('Error generating AI recipes:', error);
-      this._showMessage('Error generating recipes. Please try again.', true);
+      this._showMessage('❌ Error', `Error generating recipes: ${error.message || error}. Please try again.`, true);
       // Go back to style selection
       this._showAIRecipeSuggestions = false;
       this._showAIStyleSelector = true;

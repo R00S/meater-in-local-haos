@@ -718,6 +718,7 @@ class AIRecipeGenerateView(HomeAssistantView):
                     "main_ingredients": s.main_ingredients,
                     "cuisine_type": s.cuisine_type,
                     "required_appliances": s.required_appliances,
+                    "recipe_origin": s.recipe_origin,
                 }
                 for s in suggestions
             ]

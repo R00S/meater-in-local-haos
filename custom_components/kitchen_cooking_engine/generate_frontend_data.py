@@ -257,8 +257,23 @@ def generate_js_data():
         ai_ingredients = ai_data_module.COMMON_INGREDIENTS
         ai_cuisine_ingredients = ai_data_module.CUISINE_INGREDIENTS
         ai_cuisine_to_region = ai_data_module.CUISINE_TO_REGION
+        ai_ingredient_categories = getattr(ai_data_module, 'INGREDIENT_CATEGORIES', {})
+        ai_category_labels = getattr(ai_data_module, 'CATEGORY_LABELS', {})
+        ai_category_order = getattr(ai_data_module, 'CATEGORY_ORDER', [])
+        ai_assumed_staples = getattr(ai_data_module, 'ASSUMED_STAPLES', [])
     except Exception as e:
         print(f"Warning: Could not load AI Recipe Builder data: {e}")
+    
+    # Enrich cuisine ingredients with category from INGREDIENT_CATEGORIES map
+    if ai_ingredient_categories:
+        enriched_cuisine = {}
+        for cuisine_id, ings in ai_cuisine_ingredients.items():
+            enriched = []
+            for ing in ings:
+                cat = ai_ingredient_categories.get(ing["id"], "s")  # default to spices
+                enriched.append({"id": ing["id"], "name": ing["name"], "cat": cat})
+            enriched_cuisine[cuisine_id] = enriched
+        ai_cuisine_ingredients = enriched_cuisine
     
     cet_time = get_cet_timestamp()
     
@@ -293,6 +308,13 @@ def generate_js_data():
     lines.append("")
     lines.append("// AI Recipe Builder - Cuisine to Region mapping")
     lines.append(f"const AI_CUISINE_TO_REGION = {json.dumps(ai_cuisine_to_region, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Ingredient category labels and order")
+    lines.append(f"const AI_CATEGORY_LABELS = {json.dumps(ai_category_labels, indent=2, ensure_ascii=False)};")
+    lines.append(f"const AI_CATEGORY_ORDER = {json.dumps(ai_category_order, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Assumed staples (always available, not shown in picker)")
+    lines.append(f"const AI_ASSUMED_STAPLES = {json.dumps(ai_assumed_staples, ensure_ascii=False)};")
     
     return "\n".join(lines)
 

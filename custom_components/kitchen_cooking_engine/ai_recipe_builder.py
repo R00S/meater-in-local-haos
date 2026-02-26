@@ -466,6 +466,7 @@ class AIRecipeBuilder:
         prompt = f"""You are a professional chef creating recipes for a home kitchen.
 
 Available ingredients: {', '.join(ingredients)}
+Also assume basic staples are available: cooking oil, butter, salt, black pepper, sugar, vinegar.
 Cooking style: {cooking_style.replace('_', ' ')}
 Servings: {servings}
 Complexity level: {complexity_desc}{cuisine_hint}{restrictions}{time_constraint}
