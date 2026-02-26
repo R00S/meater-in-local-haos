@@ -459,9 +459,9 @@ class AIRecipeBuilder:
         if cuisines and len(cuisines) > 0:
             cuisine_names = [c.replace('_', ' ').title() for c in cuisines]
             if len(cuisine_names) == 1:
-                cuisine_hint = f"\nCuisine focus: {cuisine_names[0]}"
+                cuisine_hint = f"\nCuisine focus: {cuisine_names[0]} — IMPORTANT: use authentic local {cuisine_names[0]} cooking traditions as practiced in {cuisine_names[0]}-speaking countries, NOT Americanized/Westernized adaptations. Suggest dishes that locals would recognize and cook at home."
             else:
-                cuisine_hint = f"\nCuisine fusion: combine elements from {', '.join(cuisine_names)}"
+                cuisine_hint = f"\nCuisine fusion: combine elements from {', '.join(cuisine_names)} — blend authentic local traditions from each cuisine. Each cuisine's contribution should reflect how it is cooked in its home country, not Westernized versions."
         
         prompt = f"""You are a professional chef creating recipes for a home kitchen.
 
@@ -476,9 +476,24 @@ Available kitchen equipment:
 Available cooking features:
 {feature_list}
 
+CRITICAL RULE — AUTHENTIC LOCAL COOKING:
+When a cuisine is specified, you MUST suggest recipes that follow the authentic local
+cooking traditions of that cuisine's home country. Do NOT suggest Americanized or
+Westernized adaptations. For example:
+- Indian: suggest dishes like Dal Makhani, Chole, Sambar, Aviyal — NOT "Chicken Tikka Masala"
+  (a British invention). Use traditional souring agents (tamarind, amchur, kokum) not tomato
+  in every dish. Tomato-based gravies are a modern/colonial addition.
+- Chinese: suggest dishes like Mapo Tofu, Kung Pao Chicken, Red-Braised Pork (Hong Shao Rou)
+  — NOT "General Tso's Chicken" or "Orange Chicken" (American-Chinese inventions).
+- Middle Eastern: suggest dishes like Musakhan, Makloubeh, Mansaf, Kousa Mahshi
+  — NOT simplified "falafel wraps" or dishes heavy on tomato sauce.
+- Thai: suggest dishes like Gaeng Som, Larb, Khao Soi — NOT just Pad Thai and Green Curry.
+If the user wants fusion (e.g., Indian + American), both cuisines will be listed above
+and you should then blend them. A single cuisine means: cook it the local way.
+
 Please suggest 4 quite different recipes using these ingredients. For each recipe, provide:
 1. Recipe name - IMPORTANT naming rules:
-   - Prefer well-known, real dish names that people can find online (e.g. "Chicken Tikka Masala", "Pad Thai", "Beef Bourguignon", "Shakshuka", "Bibimbap").
+   - Prefer well-known, real dish names that people can find online (e.g. "Dal Makhani", "Mapo Tofu", "Bibimbap", "Shakshuka", "Musakhan").
    - Only use a creative/poetic name if the dish is a well-known classic (e.g. "Coq au Vin" is fine, but don't invent names like "Midnight Sun Grilled Salmon").
    - For original/invented recipes, use a simple descriptive name based on the main ingredients and cooking method (e.g. "Pan-Seared Salmon with Dill Cream Sauce").
 2. Brief description (1-2 sentences)
@@ -541,6 +556,14 @@ Required Appliances: {', '.join(suggestion.required_appliances)}
 
 Available kitchen equipment:
 {appliance_list}
+
+IMPORTANT — AUTHENTIC COOKING:
+If this recipe belongs to a specific cuisine, follow authentic local cooking
+traditions as practiced in that cuisine's home country. Use traditional
+techniques, spice combinations, and flavor profiles — NOT Americanized or
+Westernized adaptations. For example, an Indian dal should use tamarind or
+amchur for sourness rather than defaulting to tomatoes; a Chinese dish should
+follow wok technique and traditional seasonings, not American-Chinese shortcuts.
 
 Please provide the full detailed recipe with:
 1. Complete ingredient list with precise measurements (for 4 servings)

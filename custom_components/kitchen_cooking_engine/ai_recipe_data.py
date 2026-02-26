@@ -136,22 +136,26 @@ CUISINE_INGREDIENTS = {
         _ing("sweet_potato", "Sweet Potato"), _ing("pickled_ginger", "Pickled Ginger"),
         _ing("wasabi", "Wasabi"),
     ],
+    # Chinese — authentic local Chinese pantry. Traditional techniques and
+    # ingredients, not American-Chinese adaptations.
     "chinese": [
-        _ing("rice", "Rice"), _ing("soy_sauce", "Soy Sauce"), _ing("ginger", "Ginger"),
-        _ing("garlic", "Garlic"), _ing("green_onions", "Green Onions"),
-        _ing("tofu", "Tofu"), _ing("bok_choy", "Bok Choy"), _ing("pork", "Pork"),
+        _ing("rice", "Rice"), _ing("soy_sauce", "Soy Sauce (Light & Dark)"),
+        _ing("ginger", "Ginger"), _ing("garlic", "Garlic"),
+        _ing("green_onions", "Green Onions"), _ing("tofu", "Tofu"),
+        _ing("bok_choy", "Bok Choy"), _ing("pork", "Pork"),
         _ing("chicken", "Chicken"), _ing("egg_noodles", "Egg Noodles"),
-        _ing("sesame_oil", "Sesame Oil"), _ing("rice_vinegar", "Rice Vinegar"),
+        _ing("sesame_oil", "Sesame Oil"), _ing("rice_wine", "Shaoxing Rice Wine"),
         _ing("doubanjiang", "Chili Bean Paste (Doubanjiang)"),
-        _ing("oyster_sauce", "Oyster Sauce"), _ing("hoisin_sauce", "Hoisin Sauce"),
+        _ing("oyster_sauce", "Oyster Sauce"),
         _ing("szechuan_pepper", "Szechuan Peppercorns"),
         _ing("star_anise", "Star Anise"), _ing("shiitake", "Shiitake Mushrooms"),
         _ing("chinese_cabbage", "Chinese Cabbage (Napa)"),
         _ing("bean_sprouts", "Bean Sprouts"), _ing("water_chestnuts", "Water Chestnuts"),
         _ing("bamboo_shoots", "Bamboo Shoots"), _ing("shrimp", "Shrimp"),
         _ing("duck", "Duck"), _ing("five_spice", "Five Spice Powder"),
-        _ing("corn_starch", "Corn Starch"), _ing("wonton_wrappers", "Wonton Wrappers"),
-        _ing("eggs", "Eggs"),
+        _ing("black_vinegar", "Chinkiang Black Vinegar"),
+        _ing("fermented_black_beans", "Fermented Black Beans (Douchi)"),
+        _ing("wonton_wrappers", "Wonton Wrappers"), _ing("eggs", "Eggs"),
     ],
     "korean": [
         _ing("rice", "Rice"), _ing("gochujang", "Gochujang (Chili Paste)"),
@@ -285,40 +289,54 @@ CUISINE_INGREDIENTS = {
     ],
 
     # ── South Asian (region default) ────────────────────────────────────
+    # Authentic subcontinental ingredients — no New World items (tomatoes,
+    # chili powder) that dominate Americanized "Indian" recipes.
+    # Sourness comes from tamarind, amchur, kokum — not tomato.
     "south_asian": [
         _ing("basmati_rice", "Basmati Rice"), _ing("chicken", "Chicken"),
         _ing("lamb", "Lamb"), _ing("lentils", "Lentils (Dal)"),
         _ing("chickpeas", "Chickpeas"), _ing("ghee", "Ghee"),
         _ing("cumin", "Cumin"), _ing("turmeric", "Turmeric"),
         _ing("coriander", "Coriander"), _ing("garam_masala", "Garam Masala"),
-        _ing("chili_powder", "Chili Powder"), _ing("ginger", "Ginger"),
+        _ing("tamarind", "Tamarind"), _ing("ginger", "Ginger"),
         _ing("garlic", "Garlic"), _ing("onions", "Onions"),
-        _ing("tomatoes", "Tomatoes"), _ing("yogurt", "Yogurt"),
-        _ing("paneer", "Paneer"), _ing("coconut_milk", "Coconut Milk"),
+        _ing("curry_leaves", "Curry Leaves"), _ing("yogurt", "Yogurt"),
+        _ing("paneer", "Paneer"), _ing("coconut", "Coconut (Fresh/Dried)"),
         _ing("spinach", "Spinach"), _ing("potatoes", "Potatoes"),
-        _ing("cauliflower", "Cauliflower"), _ing("green_peas", "Green Peas"),
+        _ing("cauliflower", "Cauliflower"), _ing("asafoetida", "Asafoetida (Hing)"),
         _ing("cardamom", "Cardamom"), _ing("cinnamon", "Cinnamon"),
         _ing("cloves", "Cloves"), _ing("fenugreek", "Fenugreek"),
-        _ing("mustard_seeds", "Mustard Seeds"), _ing("naan", "Naan Bread"),
+        _ing("mustard_seeds", "Mustard Seeds"), _ing("amchur", "Amchur (Dried Mango Powder)"),
     ],
+    # Indian cuisine — authentic local tradition.
+    # Traditional Indian cooking predates New World ingredients (tomatoes,
+    # potatoes, chilies arrived only after 1500s Portuguese trade).
+    # Sourness: tamarind, amchur, kokum, raw mango, yogurt.
+    # Heat: black pepper, long pepper, green chili (adopted early).
+    # Tomatoes are NOT included — they dominate Americanized Indian food
+    # but are absent from most pre-colonial and many regional dishes.
+    # Users wanting Indo-American fusion should select both cuisines.
     "indian": [
         _ing("basmati_rice", "Basmati Rice"), _ing("chicken", "Chicken"),
         _ing("lamb", "Lamb"), _ing("lentils", "Lentils (Dal)"),
         _ing("chickpeas", "Chickpeas"), _ing("ghee", "Ghee"),
         _ing("cumin", "Cumin"), _ing("turmeric", "Turmeric"),
         _ing("coriander", "Coriander"), _ing("garam_masala", "Garam Masala"),
-        _ing("chili_powder", "Chili Powder"), _ing("ginger", "Ginger"),
-        _ing("garlic", "Garlic"), _ing("onions", "Onions"),
-        _ing("tomatoes", "Tomatoes"), _ing("yogurt", "Yogurt"),
-        _ing("paneer", "Paneer"), _ing("coconut_milk", "Coconut Milk"),
-        _ing("spinach", "Spinach"), _ing("potatoes", "Potatoes"),
-        _ing("cauliflower", "Cauliflower"), _ing("green_peas", "Green Peas"),
-        _ing("cardamom", "Cardamom"), _ing("cinnamon", "Cinnamon"),
-        _ing("cloves", "Cloves"), _ing("fenugreek", "Fenugreek"),
-        _ing("mustard_seeds", "Mustard Seeds"), _ing("naan", "Naan Bread"),
+        _ing("tamarind", "Tamarind"), _ing("ginger", "Ginger"),
+        _ing("curry_leaves", "Curry Leaves"), _ing("onions", "Onions"),
+        _ing("yogurt", "Yogurt"), _ing("paneer", "Paneer"),
+        _ing("coconut", "Coconut (Fresh/Dried)"), _ing("mustard_seeds", "Mustard Seeds"),
+        _ing("asafoetida", "Asafoetida (Hing)"), _ing("amchur", "Amchur (Dried Mango Powder)"),
+        _ing("kokum", "Kokum"), _ing("jaggery", "Jaggery"),
+        _ing("fenugreek", "Fenugreek (Methi)"), _ing("cardamom", "Cardamom"),
+        _ing("cinnamon", "Cinnamon"), _ing("cloves", "Cloves"),
+        _ing("black_pepper", "Black Pepper"), _ing("ridge_gourd", "Ridge Gourd / Drumstick"),
     ],
 
     # ── Middle Eastern (region default) ─────────────────────────────────
+    # Authentic Levantine / Fertile Crescent pantry.
+    # Tomatoes and bell peppers are post-Columbian; replaced with
+    # traditional souring/flavouring: pomegranate molasses, sumac, dried limes.
     "middle_east": [
         _ing("chickpeas", "Chickpeas"), _ing("tahini", "Tahini"),
         _ing("olive_oil", "Olive Oil"), _ing("lemon", "Lemon"),
@@ -327,30 +345,33 @@ CUISINE_INGREDIENTS = {
         _ing("pomegranate", "Pomegranate"), _ing("sumac", "Sumac"),
         _ing("zaatar", "Za'atar"), _ing("cumin", "Cumin"),
         _ing("coriander", "Coriander"), _ing("parsley", "Parsley"),
-        _ing("mint", "Mint"), _ing("tomatoes", "Tomatoes"),
+        _ing("mint", "Mint"), _ing("dried_limes", "Dried Limes (Loomi)"),
         _ing("cucumber", "Cucumber"), _ing("onions", "Onions"),
         _ing("eggplant", "Eggplant"), _ing("yogurt", "Yogurt"),
         _ing("bulgur", "Bulgur Wheat"), _ing("pine_nuts", "Pine Nuts"),
         _ing("saffron", "Saffron"), _ing("rose_water", "Rose Water"),
-        _ing("halloumi", "Halloumi"), _ing("feta", "Feta Cheese"),
-        _ing("bell_peppers", "Bell Peppers"),
+        _ing("dates", "Dates"), _ing("pomegranate_molasses", "Pomegranate Molasses"),
+        _ing("flat_bread", "Flatbread (Khubz)"),
     ],
+    # Turkish — authentic Anatolian tradition; no New World tomatoes/peppers.
     "turkish": [
         _ing("lamb", "Lamb"), _ing("chicken", "Chicken"), _ing("beef", "Beef"),
         _ing("yogurt", "Yogurt"), _ing("eggplant", "Eggplant"),
-        _ing("tomatoes", "Tomatoes"), _ing("peppers", "Peppers"),
         _ing("onions", "Onions"), _ing("garlic", "Garlic"),
         _ing("olive_oil", "Olive Oil"), _ing("bulgur", "Bulgur"),
         _ing("lentils", "Lentils"), _ing("chickpeas", "Chickpeas"),
         _ing("rice", "Rice"), _ing("pita", "Pita Bread"),
-        _ing("feta", "White Cheese (Feta)"), _ing("parsley", "Parsley"),
+        _ing("feta", "White Cheese (Beyaz Peynir)"), _ing("parsley", "Parsley"),
         _ing("mint", "Mint"), _ing("dill", "Dill"), _ing("sumac", "Sumac"),
-        _ing("cumin", "Cumin"), _ing("paprika", "Paprika"),
-        _ing("red_pepper_flakes", "Red Pepper Flakes (Pul Biber)"),
+        _ing("cumin", "Cumin"), _ing("dried_mint", "Dried Mint (Nane)"),
         _ing("pomegranate_molasses", "Pomegranate Molasses"),
         _ing("walnuts", "Walnuts"), _ing("pine_nuts", "Pine Nuts"),
         _ing("dried_apricots", "Dried Apricots"), _ing("phyllo", "Phyllo Dough"),
+        _ing("butter", "Butter"), _ing("grape_leaves", "Grape Leaves"),
+        _ing("black_pepper", "Black Pepper"),
     ],
+    # Persian / Iranian — ancient culinary tradition predating New World contact.
+    # Uses dried limes, sour cherries, pomegranate, barberries for tartness.
     "persian": [
         _ing("basmati_rice", "Basmati Rice"), _ing("saffron", "Saffron"),
         _ing("lamb", "Lamb"), _ing("chicken", "Chicken"),
@@ -359,15 +380,16 @@ CUISINE_INGREDIENTS = {
         _ing("dried_limes", "Dried Limes (Limoo Amani)"),
         _ing("turmeric", "Turmeric"), _ing("rose_water", "Rose Water"),
         _ing("yogurt", "Yogurt"), _ing("eggplant", "Eggplant"),
-        _ing("tomatoes", "Tomatoes"), _ing("onions", "Onions"),
-        _ing("garlic", "Garlic"), _ing("herbs_mix", "Fresh Herbs (Parsley, Dill, Cilantro)"),
+        _ing("onions", "Onions"), _ing("garlic", "Garlic"),
+        _ing("herbs_mix", "Fresh Herbs (Parsley, Dill, Cilantro)"),
         _ing("fenugreek", "Fenugreek"), _ing("split_peas", "Split Peas"),
         _ing("kidney_beans", "Kidney Beans"), _ing("lamb_shank", "Lamb Shank"),
         _ing("sour_cherries", "Sour Cherries"), _ing("sumac", "Sumac"),
         _ing("lavash", "Lavash Bread"), _ing("butter", "Butter"),
         _ing("cinnamon", "Cinnamon"), _ing("cardamom", "Cardamom"),
-        _ing("dried_apricots", "Dried Apricots"),
+        _ing("dried_apricots", "Dried Apricots"), _ing("quince", "Quince"),
     ],
+    # Lebanese — authentic Levantine tradition.
     "lebanese": [
         _ing("chickpeas", "Chickpeas"), _ing("tahini", "Tahini"),
         _ing("olive_oil", "Olive Oil"), _ing("lemon", "Lemon"),
@@ -376,13 +398,14 @@ CUISINE_INGREDIENTS = {
         _ing("pomegranate", "Pomegranate"), _ing("sumac", "Sumac"),
         _ing("zaatar", "Za'atar"), _ing("cumin", "Cumin"),
         _ing("parsley", "Flat-Leaf Parsley"), _ing("mint", "Mint"),
-        _ing("tomatoes", "Tomatoes"), _ing("cucumber", "Cucumber"),
-        _ing("onions", "Onions"), _ing("eggplant", "Eggplant"),
-        _ing("yogurt", "Yogurt"), _ing("bulgur", "Bulgur Wheat (#1 Fine)"),
+        _ing("cucumber", "Cucumber"), _ing("eggplant", "Eggplant"),
+        _ing("onions", "Onions"), _ing("yogurt", "Yogurt"),
+        _ing("bulgur", "Bulgur Wheat (#1 Fine)"),
         _ing("pine_nuts", "Pine Nuts"), _ing("allspice", "Allspice"),
-        _ing("cinnamon", "Cinnamon"), _ing("feta", "Feta Cheese"),
-        _ing("halloumi", "Halloumi"), _ing("rose_water", "Rose Water"),
-        _ing("freekeh", "Freekeh"),
+        _ing("cinnamon", "Cinnamon"), _ing("grape_leaves", "Grape Leaves"),
+        _ing("pomegranate_molasses", "Pomegranate Molasses"),
+        _ing("rose_water", "Rose Water"), _ing("freekeh", "Freekeh"),
+        _ing("dried_limes", "Dried Limes"),
     ],
 
     # ── European (region default) ───────────────────────────────────────

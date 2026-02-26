@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 26 Feb 2026, 14:54 CET
+ * AUTO-GENERATED: 26 Feb 2026, 15:10 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 26 Feb 2026, 14:54 CET
+// Last generated: 26 Feb 2026, 15:10 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5979,7 +5979,7 @@ const AI_CUISINE_INGREDIENTS = {
     },
     {
       "id": "soy_sauce",
-      "name": "Soy Sauce"
+      "name": "Soy Sauce (Light & Dark)"
     },
     {
       "id": "ginger",
@@ -6018,8 +6018,8 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Sesame Oil"
     },
     {
-      "id": "rice_vinegar",
-      "name": "Rice Vinegar"
+      "id": "rice_wine",
+      "name": "Shaoxing Rice Wine"
     },
     {
       "id": "doubanjiang",
@@ -6028,10 +6028,6 @@ const AI_CUISINE_INGREDIENTS = {
     {
       "id": "oyster_sauce",
       "name": "Oyster Sauce"
-    },
-    {
-      "id": "hoisin_sauce",
-      "name": "Hoisin Sauce"
     },
     {
       "id": "szechuan_pepper",
@@ -6074,8 +6070,12 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Five Spice Powder"
     },
     {
-      "id": "corn_starch",
-      "name": "Corn Starch"
+      "id": "black_vinegar",
+      "name": "Chinkiang Black Vinegar"
+    },
+    {
+      "id": "fermented_black_beans",
+      "name": "Fermented Black Beans (Douchi)"
     },
     {
       "id": "wonton_wrappers",
@@ -7040,8 +7040,8 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Garam Masala"
     },
     {
-      "id": "chili_powder",
-      "name": "Chili Powder"
+      "id": "tamarind",
+      "name": "Tamarind"
     },
     {
       "id": "ginger",
@@ -7056,8 +7056,8 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Onions"
     },
     {
-      "id": "tomatoes",
-      "name": "Tomatoes"
+      "id": "curry_leaves",
+      "name": "Curry Leaves"
     },
     {
       "id": "yogurt",
@@ -7068,8 +7068,8 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Paneer"
     },
     {
-      "id": "coconut_milk",
-      "name": "Coconut Milk"
+      "id": "coconut",
+      "name": "Coconut (Fresh/Dried)"
     },
     {
       "id": "spinach",
@@ -7084,8 +7084,8 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cauliflower"
     },
     {
-      "id": "green_peas",
-      "name": "Green Peas"
+      "id": "asafoetida",
+      "name": "Asafoetida (Hing)"
     },
     {
       "id": "cardamom",
@@ -7108,8 +7108,8 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Mustard Seeds"
     },
     {
-      "id": "naan",
-      "name": "Naan Bread"
+      "id": "amchur",
+      "name": "Amchur (Dried Mango Powder)"
     }
   ],
   "indian": [
@@ -7154,24 +7154,20 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Garam Masala"
     },
     {
-      "id": "chili_powder",
-      "name": "Chili Powder"
+      "id": "tamarind",
+      "name": "Tamarind"
     },
     {
       "id": "ginger",
       "name": "Ginger"
     },
     {
-      "id": "garlic",
-      "name": "Garlic"
+      "id": "curry_leaves",
+      "name": "Curry Leaves"
     },
     {
       "id": "onions",
       "name": "Onions"
-    },
-    {
-      "id": "tomatoes",
-      "name": "Tomatoes"
     },
     {
       "id": "yogurt",
@@ -7182,24 +7178,32 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Paneer"
     },
     {
-      "id": "coconut_milk",
-      "name": "Coconut Milk"
+      "id": "coconut",
+      "name": "Coconut (Fresh/Dried)"
     },
     {
-      "id": "spinach",
-      "name": "Spinach"
+      "id": "mustard_seeds",
+      "name": "Mustard Seeds"
     },
     {
-      "id": "potatoes",
-      "name": "Potatoes"
+      "id": "asafoetida",
+      "name": "Asafoetida (Hing)"
     },
     {
-      "id": "cauliflower",
-      "name": "Cauliflower"
+      "id": "amchur",
+      "name": "Amchur (Dried Mango Powder)"
     },
     {
-      "id": "green_peas",
-      "name": "Green Peas"
+      "id": "kokum",
+      "name": "Kokum"
+    },
+    {
+      "id": "jaggery",
+      "name": "Jaggery"
+    },
+    {
+      "id": "fenugreek",
+      "name": "Fenugreek (Methi)"
     },
     {
       "id": "cardamom",
@@ -7214,16 +7218,12 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cloves"
     },
     {
-      "id": "fenugreek",
-      "name": "Fenugreek"
+      "id": "black_pepper",
+      "name": "Black Pepper"
     },
     {
-      "id": "mustard_seeds",
-      "name": "Mustard Seeds"
-    },
-    {
-      "id": "naan",
-      "name": "Naan Bread"
+      "id": "ridge_gourd",
+      "name": "Ridge Gourd / Drumstick"
     }
   ],
   "middle_east": [
@@ -7292,8 +7292,8 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Mint"
     },
     {
-      "id": "tomatoes",
-      "name": "Tomatoes"
+      "id": "dried_limes",
+      "name": "Dried Limes (Loomi)"
     },
     {
       "id": "cucumber",
@@ -7328,16 +7328,16 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Rose Water"
     },
     {
-      "id": "halloumi",
-      "name": "Halloumi"
+      "id": "dates",
+      "name": "Dates"
     },
     {
-      "id": "feta",
-      "name": "Feta Cheese"
+      "id": "pomegranate_molasses",
+      "name": "Pomegranate Molasses"
     },
     {
-      "id": "bell_peppers",
-      "name": "Bell Peppers"
+      "id": "flat_bread",
+      "name": "Flatbread (Khubz)"
     }
   ],
   "turkish": [
@@ -7360,14 +7360,6 @@ const AI_CUISINE_INGREDIENTS = {
     {
       "id": "eggplant",
       "name": "Eggplant"
-    },
-    {
-      "id": "tomatoes",
-      "name": "Tomatoes"
-    },
-    {
-      "id": "peppers",
-      "name": "Peppers"
     },
     {
       "id": "onions",
@@ -7403,7 +7395,7 @@ const AI_CUISINE_INGREDIENTS = {
     },
     {
       "id": "feta",
-      "name": "White Cheese (Feta)"
+      "name": "White Cheese (Beyaz Peynir)"
     },
     {
       "id": "parsley",
@@ -7426,12 +7418,8 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cumin"
     },
     {
-      "id": "paprika",
-      "name": "Paprika"
-    },
-    {
-      "id": "red_pepper_flakes",
-      "name": "Red Pepper Flakes (Pul Biber)"
+      "id": "dried_mint",
+      "name": "Dried Mint (Nane)"
     },
     {
       "id": "pomegranate_molasses",
@@ -7452,6 +7440,18 @@ const AI_CUISINE_INGREDIENTS = {
     {
       "id": "phyllo",
       "name": "Phyllo Dough"
+    },
+    {
+      "id": "butter",
+      "name": "Butter"
+    },
+    {
+      "id": "grape_leaves",
+      "name": "Grape Leaves"
+    },
+    {
+      "id": "black_pepper",
+      "name": "Black Pepper"
     }
   ],
   "persian": [
@@ -7508,10 +7508,6 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Eggplant"
     },
     {
-      "id": "tomatoes",
-      "name": "Tomatoes"
-    },
-    {
       "id": "onions",
       "name": "Onions"
     },
@@ -7566,6 +7562,10 @@ const AI_CUISINE_INGREDIENTS = {
     {
       "id": "dried_apricots",
       "name": "Dried Apricots"
+    },
+    {
+      "id": "quince",
+      "name": "Quince"
     }
   ],
   "lebanese": [
@@ -7630,20 +7630,16 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Mint"
     },
     {
-      "id": "tomatoes",
-      "name": "Tomatoes"
-    },
-    {
       "id": "cucumber",
       "name": "Cucumber"
     },
     {
-      "id": "onions",
-      "name": "Onions"
-    },
-    {
       "id": "eggplant",
       "name": "Eggplant"
+    },
+    {
+      "id": "onions",
+      "name": "Onions"
     },
     {
       "id": "yogurt",
@@ -7666,12 +7662,12 @@ const AI_CUISINE_INGREDIENTS = {
       "name": "Cinnamon"
     },
     {
-      "id": "feta",
-      "name": "Feta Cheese"
+      "id": "grape_leaves",
+      "name": "Grape Leaves"
     },
     {
-      "id": "halloumi",
-      "name": "Halloumi"
+      "id": "pomegranate_molasses",
+      "name": "Pomegranate Molasses"
     },
     {
       "id": "rose_water",
@@ -7680,6 +7676,10 @@ const AI_CUISINE_INGREDIENTS = {
     {
       "id": "freekeh",
       "name": "Freekeh"
+    },
+    {
+      "id": "dried_limes",
+      "name": "Dried Limes"
     }
   ],
   "european": [
@@ -18070,7 +18070,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "170";
+const PANEL_VERSION = "171";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
