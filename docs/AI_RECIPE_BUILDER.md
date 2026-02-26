@@ -1,18 +1,18 @@
 # AI Recipe Builder Documentation
 
-**Version:** v0.5.1.7  
-**Last Updated:** 25 February 2026
+**Version:** v0.5.2.8  
+**Last Updated:** 26 February 2026
 
 ## Overview
 
 The AI Recipe Builder generates custom recipes using AI conversation agents (OpenAI, etc.) via Home Assistant's conversation integration. It creates personalized recipes based on:
 
-- Your selected ingredients (30+ common ingredients across 4 categories)
+- Your selected ingredients (300+ categorized ingredients across 5 categories)
 - Your preferred cooking style (11 styles)
 - Cuisine preferences (70+ cuisines across 11 world regions, multi-select for fusion)
 - Complexity level (1–5: Very Simple → Chef Level)
 - Number of portions (1–8)
-- Your kitchen equipment (appliances automatically detected)
+- Your kitchen equipment (appliances with feature types and modification notes)
 
 ## Features
 
@@ -23,11 +23,14 @@ The AI Recipe Builder generates custom recipes using AI conversation agents (Ope
 - Cancelable loading dialog with time estimate (10–30 seconds)
 
 ### 🥗 Intelligent Ingredient Selection
-- **30+ common ingredients** organized by category:
-  - **Proteins:** Chicken, beef, pork, fish, tofu, eggs, shrimp, turkey, salmon
-  - **Vegetables:** Broccoli, carrots, peppers, tomatoes, onions, garlic, spinach, mushrooms, potatoes, zucchini, corn, green beans
-  - **Grains:** Rice, pasta, quinoa, bread, noodles
-  - **Dairy:** Cheese, milk, butter, cream, yogurt
+- **300+ categorized ingredients** organized by type:
+  - **Proteins (p):** Chicken, beef, pork, fish, tofu, eggs, shrimp, turkey, salmon, lamb, and more
+  - **Produce (v):** Broccoli, carrots, peppers, tomatoes, onions, garlic, spinach, mushrooms, potatoes, zucchini, and more
+  - **Grains (g):** Rice, pasta, quinoa, bread, noodles, couscous, and more
+  - **Dairy/Sauces (d):** Cheese, milk, butter, cream, yogurt, soy sauce, and more
+  - **Spices (s):** Cumin, paprika, turmeric, cinnamon, and more
+- **Cuisine-specific ingredient lists** — Ingredients change dynamically based on selected cuisine (e.g., Indian shows tamarind/kokum, not tomatoes)
+- **Authentic ingredients** — Pre-Columbian cuisines enforce historically accurate ingredients
 - Custom ingredient input for anything not in the list
 - Minimum 2 ingredients required
 
@@ -81,8 +84,9 @@ Choose from 11 different cooking styles:
 
 ### 🔧 Appliance-Aware
 - Automatically detects your configured kitchen appliances
-- Passes appliance information to AI for optimization
-- Suggests cooking methods compatible with your equipment
+- Passes appliance feature types (Standard/Modified/Special) and modification notes to AI
+- AI adapts recipes based on what features are modified or special on your appliances
+- 📝 Feature notes editable directly from the appliance path header
 
 ## Setup
 

@@ -126,6 +126,11 @@ class KitchenCookingPanel extends LitElement {
       // AI generation cancellation
       _aiGeneratingAbort: { type: Object },
       _messageDialogOnCancel: { type: Object },
+      // AI Settings
+      _aiAgentId: { type: String },
+      _showAISettingsModal: { type: Boolean },
+      // Feature notes editing in appliance path
+      _showFeatureNotesEditor: { type: Boolean },
     };
   }
 
@@ -218,6 +223,9 @@ class KitchenCookingPanel extends LitElement {
     this._aiExpandedRegions = []; // Which region dropdowns are open
     this._aiGeneratingAbort = null; // AbortController for cancelling generation
     this._messageDialogOnCancel = null; // Optional cancel callback for dialog
+    this._aiAgentId = ''; // AI agent entity ID for recipe generation
+    this._showAISettingsModal = false; // Show AI settings modal
+    this._showFeatureNotesEditor = false; // Show feature notes editor in appliance path
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -233,6 +241,9 @@ class KitchenCookingPanel extends LitElement {
     
     // Load user preferences
     this._loadPreferences();
+    
+    // Load AI settings to determine if AI Recipe Builder should be visible
+    this._loadAISettings();
     
     // Phase 3.3: Load appliances and features
     this._loadAppliances();
@@ -781,16 +792,20 @@ class KitchenCookingPanel extends LitElement {
     }
   }
 
-  async _showAISettings() {
-    // Load current settings
+  async _loadAISettings() {
     try {
       const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_settings');
-      if (response.status === 'ok') {
+      if (response.status === 'ok' && response.settings?.agent_id) {
         this._aiAgentId = response.settings.agent_id;
       }
     } catch (e) {
-      console.error('[AI Settings] Failed to load settings:', e);
+      console.error('[AI Settings] Failed to load settings on startup:', e);
     }
+  }
+
+  async _showAISettings() {
+    // Reload current settings before showing modal
+    await this._loadAISettings();
     
     this._showAISettingsModal = true;
     this.requestUpdate();
@@ -850,6 +865,7 @@ class KitchenCookingPanel extends LitElement {
   _navigateToWelcome() {
     this._currentPath = 'welcome';
     this._selectedAppliance = null;
+    this._showFeatureNotesEditor = false;
     // Reset old navigation flags for compatibility
     this._showHistory = false;
     this._showNinjaCombi = false;
@@ -2000,6 +2016,8 @@ class KitchenCookingPanel extends LitElement {
       }
     });
     
+    const hasNotableFeatures = modified.length > 0 || special.length > 0;
+    
     return html`
       ${standard.length > 0 ? html`
         <div class="feature-group">
@@ -2015,25 +2033,87 @@ class KitchenCookingPanel extends LitElement {
       ${modified.length > 0 ? html`
         <div class="feature-group">
           <h4>⚡ Modified Features (${modified.length})</h4>
-          <div class="feature-badges">
-            ${modified.map(feature => html`
-              <span class="feature-badge modified">${this._formatFeatureName(feature)}</span>
-            `)}
-          </div>
+          ${modified.map(feature => {
+            const note = (appliance.feature_notes && appliance.feature_notes[feature]) || '';
+            return html`
+              <div class="feature-note-row">
+                <span class="feature-badge modified">${this._formatFeatureName(feature)}</span>
+                <input type="text" class="feature-note-input"
+                  .value=${note}
+                  placeholder="Describe modification (e.g. 'max 230C', 'has turbo')"
+                  @change=${(e) => this._onFeatureNoteChanged(appliance, feature, e.target.value)}
+                />
+              </div>
+            `;
+          })}
         </div>
       ` : ''}
       
       ${special.length > 0 ? html`
         <div class="feature-group">
           <h4>⭐ Special Features (${special.length})</h4>
-          <div class="feature-badges">
-            ${special.map(feature => html`
-              <span class="feature-badge special">${this._formatFeatureName(feature)}</span>
-            `)}
-          </div>
+          ${special.map(feature => {
+            const note = (appliance.feature_notes && appliance.feature_notes[feature]) || '';
+            return html`
+              <div class="feature-note-row">
+                <span class="feature-badge special">${this._formatFeatureName(feature)}</span>
+                <input type="text" class="feature-note-input"
+                  .value=${note}
+                  placeholder="Describe this feature (e.g. 'max size 10x30cm')"
+                  @change=${(e) => this._onFeatureNoteChanged(appliance, feature, e.target.value)}
+                />
+              </div>
+            `;
+          })}
         </div>
       ` : ''}
+      
+      ${hasNotableFeatures ? html`
+        <button class="save-notes-btn" @click=${(e) => { e.stopPropagation(); this._saveFeatureNotes(appliance); }}>
+          💾 Save Notes
+        </button>
+      ` : ''}
     `;
+  }
+
+  _onFeatureNoteChanged(appliance, feature, value) {
+    // Store pending note changes on the appliance object
+    if (!appliance._pendingNotes) {
+      appliance._pendingNotes = {...(appliance.feature_notes || {})};
+    }
+    const trimmed = value.trim();
+    if (trimmed) {
+      appliance._pendingNotes[feature] = trimmed;
+    } else {
+      delete appliance._pendingNotes[feature];
+    }
+  }
+
+  _toggleFeatureNotesEditor() {
+    this._showFeatureNotesEditor = !this._showFeatureNotesEditor;
+    this.requestUpdate();
+  }
+
+  async _saveFeatureNotes(appliance) {
+    const notes = appliance._pendingNotes || appliance.feature_notes || {};
+    try {
+      const response = await this.hass.callApi(
+        'POST',
+        `kitchen_cooking_engine/appliances/${appliance.entry_id}/feature_notes`,
+        { feature_notes: notes }
+      );
+      if (response && response.success) {
+        appliance.feature_notes = response.feature_notes;
+        appliance._pendingNotes = null;
+        this._showMessage('Notes Saved', 'Feature modification notes have been saved.');
+        this.requestUpdate();
+      } else {
+        this._showMessage('Error', response?.error || 'Failed to save notes.', true);
+      }
+    } catch (e) {
+      console.error('Failed to save feature notes:', e);
+      this._showMessage('Error', 'Failed to save feature notes. Please try again.', true);
+    }
   }
 
   _openApplianceConfig(applianceId) {
@@ -2979,6 +3059,16 @@ class KitchenCookingPanel extends LitElement {
             </div>
           </div>
         </ha-card>
+
+        <ha-card class="previous-cooks-card clickable" @click=${() => this._showAISettings()}>
+          <div class="card-content previous-cooks-content">
+            <div class="previous-cooks-icon">⚙️</div>
+            <div class="previous-cooks-text">
+              <h3>AI Recipe Builder Settings</h3>
+              <p>${this._aiAgentId ? `Agent: ${this._aiAgentId}` : 'Configure your AI agent to enable the Recipe Builder'}</p>
+            </div>
+          </div>
+        </ha-card>
       `}
     `;
   }
@@ -3195,15 +3285,29 @@ class KitchenCookingPanel extends LitElement {
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
           ← Back to Appliances
         </button>
-        <h2>🤖 AI Recipe Builder</h2>
+        <div class="path-header-title-row">
+          <h2>🤖 AI Recipe Builder</h2>
+        </div>
       </div>
 
       <ha-card>
         <div class="card-content appliance-info">
-          <h3>Main Appliance: ${appliance?.name}</h3>
-          <p class="appliance-features">
-            <strong>Features:</strong> ${appliance?.features?.join(', ') || 'N/A'}
-          </p>
+          <div class="appliance-info-header">
+            <h3>Main Appliance: ${appliance?.name}</h3>
+            <button class="settings-icon-btn" @click=${() => this._toggleFeatureNotesEditor()} title="Edit Feature Notes">
+              📝
+            </button>
+          </div>
+          
+          ${this._showFeatureNotesEditor && appliance ? html`
+            <div class="feature-notes-editor">
+              ${this._renderFeaturesByType(appliance)}
+            </div>
+          ` : html`
+            <p class="appliance-features">
+              <strong>Features:</strong> ${appliance?.features?.join(', ') || 'N/A'}
+            </p>
+          `}
           
           ${this._appliances.length > 1 ? html`
             <div class="secondary-appliances">
@@ -3220,13 +3324,23 @@ class KitchenCookingPanel extends LitElement {
       </ha-card>
 
       <div class="path-buttons">
-        <ha-card class="path-card clickable" @click=${() => this._startAIRecipeCreation()}>
-          <div class="card-content path-card-content">
-            <div class="path-icon">🤖</div>
-            <h3>Create AI Recipe</h3>
-            <p>Generate custom recipes using your appliances and ingredients</p>
-          </div>
-        </ha-card>
+        ${this._aiAgentId ? html`
+          <ha-card class="path-card clickable" @click=${() => this._startAIRecipeCreation()}>
+            <div class="card-content path-card-content">
+              <div class="path-icon">🤖</div>
+              <h3>Create AI Recipe</h3>
+              <p>Generate custom recipes using your appliances and ingredients</p>
+            </div>
+          </ha-card>
+        ` : html`
+          <ha-card class="path-card clickable" @click=${() => this._showAISettings()}>
+            <div class="card-content path-card-content">
+              <div class="path-icon">⚙️</div>
+              <h3>Set Up AI Recipe Builder</h3>
+              <p>Configure your AI agent to start generating recipes</p>
+            </div>
+          </ha-card>
+        `}
 
         <ha-card class="path-card clickable" @click=${() => this._showRecentApplianceRecipes()}>
           <div class="card-content path-card-content">
@@ -3696,85 +3810,7 @@ class KitchenCookingPanel extends LitElement {
       return html`<div class="loading">Loading ingredients...</div>`;
     }
 
-    // _commonIngredients is a flat array of {id, name} objects (flattened from categorized API response)
-    return html`
-      <div class="path-header">
-        <button class="back-btn" @click=${() => {
-          this._showAIIngredientSelector = false;
-          this._selectedIngredients = [];
-          this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
-          this.requestUpdate();
-        }}>
-          ← Back
-        </button>
-        <h2>🥘 Select Ingredients</h2>
-      </div>
-
-      <ha-card>
-        <div class="card-content">
-          <p class="info-text">Choose ingredients you have available (select at least 2):</p>
-          
-          <div class="ingredient-grid">
-            ${(this._commonIngredients || []).map(ingredient => html`
-              <label class="ingredient-checkbox">
-                <input 
-                  type="checkbox" 
-                  ?checked=${this._selectedIngredients.includes(ingredient.name || ingredient)}
-                  @change=${(e) => this._toggleIngredient(ingredient.name || ingredient, e.target.checked)}
-                />
-                ${ingredient.name || ingredient}
-              </label>
-            `)}
-          </div>
-
-          <div class="ingredient-custom">
-            <input 
-              type="text" 
-              placeholder="Add custom ingredient..." 
-              @keypress=${(e) => {
-                if (e.key === 'Enter' && e.target.value.trim()) {
-                  this._addCustomIngredient(e.target.value.trim());
-                  e.target.value = '';
-                }
-              }}
-            />
-          </div>
-
-          <div class="selected-ingredients">
-            <h4>Selected Ingredients (${this._selectedIngredients.length}):</h4>
-            <div class="ingredient-tags">
-              ${this._selectedIngredients.map(ing => html`
-                <span class="ingredient-tag">
-                  ${ing}
-                  <button @click=${() => this._removeIngredient(ing)}>×</button>
-                </span>
-              `)}
-            </div>
-          </div>
-
-          <button 
-            class="primary-btn"
-            ?disabled=${this._selectedIngredients.length < 2}
-            @click=${() => this._proceedToCookingStyle()}
-          >
-            Next: Choose Cooking Style
-          </button>
-        </div>
-      </ha-card>
-    `;
-  }
-
-  /**
-   * Phase 6: Render cooking style selection
-   */
-  _renderAICookingStyleSelection() {
-    // Data should already be loaded by _startAIRecipeCreation()
-    // If not loaded, show loading state
-    if (!this._cookingStyles) {
-      return html`<div class="loading">Loading cooking styles...</div>`;
-    }
-
-    // Cuisine/region options for fusion cooking
+    // Cuisine/region options for fusion cooking (moved from cooking style page)
     const cuisineRegions = [
       { id: 'nordic', name: 'Nordic & Scandinavian', icon: '❄️', cuisines: [
         { id: 'swedish', name: 'Swedish', icon: '🇸🇪' },
@@ -3875,57 +3911,29 @@ class KitchenCookingPanel extends LitElement {
       ]},
     ];
 
-    // Complexity labels
-    const complexityLabels = ['Very Simple', 'Simple', 'Medium', 'Complex', 'Chef Level'];
+    // Get cuisine-specific ingredients based on selection
+    const displayIngredients = this._getCuisineIngredients(cuisineRegions);
 
+    // _commonIngredients is a flat array of {id, name} objects (flattened from categorized API response)
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => {
-          this._showAIStyleSelector = false;
-          this._showAIIngredientSelector = true;
+          this._showAIIngredientSelector = false;
+          this._selectedIngredients = [];
+          this._aiSelectedCuisines = [];
+          this._aiExpandedRegions = [];
+          this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
           this.requestUpdate();
         }}>
-          ← Back to Ingredients
+          ← Back
         </button>
-        <h2>🍳 Choose Cooking Style</h2>
+        <h2>🥘 Select Ingredients</h2>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <p class="info-text">Select your preferred cooking style:</p>
-          
-          <div class="style-grid">
-            ${(this._cookingStyles || []).map(style => html`
-              <ha-card 
-                class="style-card ${this._selectedCookingStyle === style.id ? 'selected' : ''} clickable"
-                @click=${() => {
-                  this._selectedCookingStyle = style.id;
-                  // Set default complexity based on style
-                  if (['quick_and_easy', 'one_pot', 'family_friendly'].includes(style.id)) {
-                    this._aiComplexity = 2;
-                  } else if (['gourmet'].includes(style.id)) {
-                    this._aiComplexity = 4;
-                  } else {
-                    this._aiComplexity = 3;
-                  }
-                  this.requestUpdate();
-                }}
-              >
-                <div class="card-content">
-                  <div class="style-icon">${style.icon || '🍳'}</div>
-                  <h3>${style.name}</h3>
-                  <p>${style.description || ''}</p>
-                </div>
-              </ha-card>
-            `)}
-          </div>
-        </div>
-      </ha-card>
-
-      <ha-card>
-        <div class="card-content">
           <h3>🌍 Cuisine / Region (optional, select for fusion)</h3>
-          <p class="info-text" style="margin-bottom: 12px;">Click a region to expand, then select cuisines. Pick from multiple regions for fusion cooking.</p>
+          <p class="info-text" style="margin-bottom: 12px;">Select a cuisine to see its typical ingredients. Pick from multiple regions for fusion cooking.</p>
           ${(this._aiSelectedCuisines || []).length > 0 ? html`
             <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
               ${(this._aiSelectedCuisines || []).map(c => {
@@ -3982,6 +3990,207 @@ class KitchenCookingPanel extends LitElement {
               </div>
             `;
           })}
+        </div>
+      </ha-card>
+
+      <ha-card>
+        <div class="card-content">
+          <p class="info-text">Choose ingredients you have available (select at least 2):</p>
+          <p class="info-text" style="font-size: 0.85em; color: var(--secondary-text-color);">
+            Staples assumed available: ${(typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : []).join(', ')}
+          </p>
+          
+          ${this._renderCategorizedIngredients(displayIngredients)}
+
+          <div class="ingredient-custom">
+            <input 
+              type="text" 
+              placeholder="Add custom ingredient..." 
+              @keypress=${(e) => {
+                if (e.key === 'Enter' && e.target.value.trim()) {
+                  this._addCustomIngredient(e.target.value.trim());
+                  e.target.value = '';
+                }
+              }}
+            />
+          </div>
+
+          <div class="selected-ingredients">
+            <h4>Selected Ingredients (${this._selectedIngredients.length}):</h4>
+            <div class="ingredient-tags">
+              ${this._selectedIngredients.map(ing => html`
+                <span class="ingredient-tag">
+                  ${ing}
+                  <button @click=${() => this._removeIngredient(ing)}>×</button>
+                </span>
+              `)}
+            </div>
+          </div>
+
+          <button 
+            class="primary-btn"
+            ?disabled=${this._selectedIngredients.length < 2}
+            @click=${() => this._proceedToCookingStyle()}
+          >
+            Next: Choose Cooking Style
+          </button>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /**
+   * Get ingredients based on selected cuisines.
+   * Falls back: individual cuisine -> parent region -> default common ingredients.
+   * For fusion (multiple cuisines), merges ingredient lists and deduplicates.
+   */
+  _getCuisineIngredients(cuisineRegions) {
+    const selectedCuisines = this._aiSelectedCuisines || [];
+    if (selectedCuisines.length === 0) {
+      return this._commonIngredients || [];
+    }
+
+    const cuisineData = (typeof AI_CUISINE_INGREDIENTS !== 'undefined') ? AI_CUISINE_INGREDIENTS : {};
+    const regionMap = (typeof AI_CUISINE_TO_REGION !== 'undefined') ? AI_CUISINE_TO_REGION : {};
+
+    // Collect ingredients from all selected cuisines
+    const seenIds = new Set();
+    const merged = [];
+
+    for (const cuisineId of selectedCuisines) {
+      // Try individual cuisine first, then fall back to region
+      let ingredients = cuisineData[cuisineId];
+      if (!ingredients) {
+        const regionId = regionMap[cuisineId];
+        if (regionId) {
+          ingredients = cuisineData[regionId];
+        }
+      }
+      if (ingredients && Array.isArray(ingredients)) {
+        for (const ing of ingredients) {
+          if (!seenIds.has(ing.id)) {
+            seenIds.add(ing.id);
+            merged.push(ing);
+          }
+        }
+      }
+    }
+
+    return merged.length > 0 ? merged : (this._commonIngredients || []);
+  }
+
+  /**
+   * Render ingredients grouped by category with alphabetic sorting within each group.
+   * If ingredients have a "cat" field, groups them; otherwise falls back to a flat grid.
+   */
+  _renderCategorizedIngredients(ingredients) {
+    const categoryLabels = (typeof AI_CATEGORY_LABELS !== 'undefined') ? AI_CATEGORY_LABELS : {};
+    const categoryOrder = (typeof AI_CATEGORY_ORDER !== 'undefined') ? AI_CATEGORY_ORDER : [];
+
+    // Check if ingredients have category info
+    const hasCats = ingredients.length > 0 && ingredients[0].cat;
+    if (!hasCats || categoryOrder.length === 0) {
+      // Fall back to flat grid sorted alphabetically
+      const sorted = [...ingredients].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+      return html`
+        <div class="ingredient-grid">
+          ${sorted.map(ingredient => this._renderIngredientCheckbox(ingredient))}
+        </div>
+      `;
+    }
+
+    // Group by category
+    const groups = {};
+    for (const ing of ingredients) {
+      const cat = ing.cat || 's';
+      if (!groups[cat]) groups[cat] = [];
+      groups[cat].push(ing);
+    }
+
+    // Sort each group alphabetically
+    for (const cat of Object.keys(groups)) {
+      groups[cat].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+    }
+
+    return html`
+      ${categoryOrder.filter(cat => groups[cat] && groups[cat].length > 0).map(cat => html`
+        <div class="ingredient-category">
+          <h4 style="margin: 12px 0 6px 0; font-size: 0.95em; color: var(--secondary-text-color);">${categoryLabels[cat] || cat}</h4>
+          <div class="ingredient-grid">
+            ${groups[cat].map(ingredient => this._renderIngredientCheckbox(ingredient))}
+          </div>
+        </div>
+      `)}
+    `;
+  }
+
+  _renderIngredientCheckbox(ingredient) {
+    return html`
+      <label class="ingredient-checkbox">
+        <input 
+          type="checkbox" 
+          ?checked=${this._selectedIngredients.includes(ingredient.name || ingredient)}
+          @change=${(e) => this._toggleIngredient(ingredient.name || ingredient, e.target.checked)}
+        />
+        ${ingredient.name || ingredient}
+      </label>
+    `;
+  }
+
+  /**
+   * Phase 6: Render cooking style selection
+   */
+  _renderAICookingStyleSelection() {
+    // Data should already be loaded by _startAIRecipeCreation()
+    // If not loaded, show loading state
+    if (!this._cookingStyles) {
+      return html`<div class="loading">Loading cooking styles...</div>`;
+    }
+
+    // Complexity labels
+    const complexityLabels = ['Very Simple', 'Simple', 'Medium', 'Complex', 'Chef Level'];
+
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => {
+          this._showAIStyleSelector = false;
+          this._showAIIngredientSelector = true;
+          this.requestUpdate();
+        }}>
+          ← Back to Ingredients
+        </button>
+        <h2>🍳 Choose Cooking Style</h2>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          <p class="info-text">Select your preferred cooking style:</p>
+          
+          <div class="style-grid">
+            ${(this._cookingStyles || []).map(style => html`
+              <ha-card 
+                class="style-card ${this._selectedCookingStyle === style.id ? 'selected' : ''} clickable"
+                @click=${() => {
+                  this._selectedCookingStyle = style.id;
+                  // Set default complexity based on style
+                  if (['quick_and_easy', 'one_pot', 'family_friendly'].includes(style.id)) {
+                    this._aiComplexity = 2;
+                  } else if (['gourmet'].includes(style.id)) {
+                    this._aiComplexity = 4;
+                  } else {
+                    this._aiComplexity = 3;
+                  }
+                  this.requestUpdate();
+                }}
+              >
+                <div class="card-content">
+                  <div class="style-icon">${style.icon || '🍳'}</div>
+                  <h3>${style.name}</h3>
+                  <p>${style.description || ''}</p>
+                </div>
+              </ha-card>
+            `)}
+          </div>
         </div>
       </ha-card>
 
@@ -4063,7 +4272,14 @@ class KitchenCookingPanel extends LitElement {
             return html`
             <ha-card class="recipe-suggestion-card">
               <div class="card-content">
-                <h3>${displayName}</h3>
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+                  <h3 style="margin: 0; flex: 1;">${displayName}</h3>
+                  ${recipe.recipe_origin === 'known' ? html`
+                    <span style="background: #2e7d32; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">📖 Classic</span>
+                  ` : html`
+                    <span style="background: #1565c0; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">🤖 Original</span>
+                  `}
+                </div>
                 <p class="recipe-description">${recipe.description || ''}</p>
                 
                 <div class="recipe-details">
@@ -4428,9 +4644,12 @@ class KitchenCookingPanel extends LitElement {
     const recipe = this._recipeCookState.recipe;
     const steps = this._getRecipeSteps(recipe);
     
-    // Guard: if no steps at all, go straight to finish
+    // If no steps at all, go from overview (-1) to finish (0)
+    // so the user can still rate the cook after following the overview
     if (steps.length === 0) {
-      this._recipeCookState.currentStep = 1; // Finish page (>= steps.length)
+      if (this._recipeCookState.currentStep < 0) {
+        this._recipeCookState.currentStep = 0; // finish page since steps.length is 0
+      }
       this.requestUpdate();
       return;
     }
@@ -4503,14 +4722,14 @@ class KitchenCookingPanel extends LitElement {
       });
 
       // Show success message
-      this._showMessage('Recipe cook saved successfully! 🎉');
+      this._showMessage('✅ Saved', 'Recipe cook saved successfully! 🎉');
 
       // Stop the cook flow
       this._stopRecipeCook();
 
     } catch (error) {
       console.error('Error saving recipe cook:', error);
-      this._showMessage(`Error saving recipe cook: ${error.message}`, true);
+      this._showMessage('❌ Save Error', `Error saving recipe cook: ${error.message}`, true);
     }
   }
 
@@ -4551,7 +4770,7 @@ class KitchenCookingPanel extends LitElement {
    */
   _proceedToCookingStyle() {
     if (this._selectedIngredients.length < 2) {
-      this._showMessage('Please select at least 2 ingredients', true);
+      this._showMessage('⚠️ Ingredients', 'Please select at least 2 ingredients', true);
       return;
     }
     
@@ -4565,7 +4784,7 @@ class KitchenCookingPanel extends LitElement {
    */
   async _generateAIRecipes() {
     if (!this._selectedCookingStyle || this._selectedIngredients.length < 2) {
-      this._showMessage('Please complete ingredient and style selection', true);
+      this._showMessage('⚠️ Incomplete', 'Please complete ingredient and style selection', true);
       return;
     }
 
@@ -4596,14 +4815,15 @@ class KitchenCookingPanel extends LitElement {
       // Call AI recipe generation API
       const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/generate', requestBody);
 
-      if (response && response.suggestions) {
+      if (response && response.suggestions && response.suggestions.length > 0) {
         this._aiRecipeSuggestions = response.suggestions;
       } else {
-        this._showMessage('No recipes generated. Please try different ingredients or styles.', false);
+        const msg = (response && response.message) ? response.message : 'No recipes generated. Please try different ingredients or styles.';
+        this._showMessage('⚠️ Recipe Generation', msg);
       }
     } catch (error) {
       console.error('Error generating AI recipes:', error);
-      this._showMessage('Error generating recipes. Please try again.', true);
+      this._showMessage('❌ Error', `Error generating recipes: ${error.message || error}. Please try again.`, true);
       // Go back to style selection
       this._showAIRecipeSuggestions = false;
       this._showAIStyleSelector = true;
@@ -4679,11 +4899,26 @@ class KitchenCookingPanel extends LitElement {
         fullRecipe.use_probe = detail.use_probe || false;
         fullRecipe.target_temp_c = detail.target_temp_c;
         fullRecipe.target_temp_f = detail.target_temp_f;
+      } else {
+        // API returned but without detail — use main_ingredients as fallback
+        fullRecipe.ingredients = fullRecipe.main_ingredients || [];
+        fullRecipe.instructions = [];
       }
     } catch (error) {
       if (cancelled) return; // User cancelled
       console.error('Error fetching recipe detail:', error);
-      // Continue with whatever data we have
+      // Show error but let user continue with overview (main_ingredients available)
+      fullRecipe.ingredients = fullRecipe.main_ingredients || [];
+      fullRecipe.instructions = [];
+      // Brief non-blocking error notice — the overview will show fallback data
+      this._messageDialogOnCancel = null;
+      this._messageDialogTitle = '⚠️ Partial Recipe';
+      this._messageDialogContent = 'Could not load full recipe details from AI. You can still see the ingredients overview and finish the cook.';
+      this._messageDialogIsError = false;
+      this._showMessageDialog = true;
+      this.requestUpdate();
+      // Auto-dismiss after 3 seconds
+      setTimeout(() => { this._showMessageDialog = false; this.requestUpdate(); }, 3000);
     }
 
     // Dismiss the loading dialog
@@ -4801,7 +5036,7 @@ class KitchenCookingPanel extends LitElement {
             </button>
           ` : html`
             <button class="primary-btn" @click=${this._nextRecipeStep}>
-              ${isOverview ? 'Start →' : currentStepIndex === steps.length - 1 ? 'Finish' : 'Next →'}
+              ${isOverview ? (steps.length > 0 ? 'Start →' : 'Finish →') : currentStepIndex === steps.length - 1 ? 'Finish' : 'Next →'}
             </button>
           `}
         </div>
@@ -4816,6 +5051,10 @@ class KitchenCookingPanel extends LitElement {
     const recipe = this._recipeCookState.recipe;
     const steps = this._getRecipeSteps(recipe);
     const totalTime = recipe.total_time || recipe.cook_time_minutes;
+    // Fall back to main_ingredients (from suggestion) if full ingredients list is missing
+    const ingredientList = (recipe.ingredients && recipe.ingredients.length > 0)
+      ? recipe.ingredients
+      : (recipe.main_ingredients || []);
     
     return html`
       <div class="recipe-cook-overview">
@@ -4831,11 +5070,17 @@ class KitchenCookingPanel extends LitElement {
 
         <div class="recipe-cook-ingredients">
           <h4>🛒 Ingredients</h4>
-          <ul>
-            ${(recipe.ingredients || []).map(ing => html`
-              <li>${ing}</li>
-            `)}
-          </ul>
+          ${ingredientList.length > 0 ? html`
+            <ul>
+              ${ingredientList.map(ing => html`
+                <li>${ing}</li>
+              `)}
+            </ul>
+          ` : html`
+            <p style="color: var(--secondary-text-color); font-style: italic;">
+              Ingredient details not available for this recipe.
+            </p>
+          `}
         </div>
 
         ${steps.length > 0 ? html`
@@ -4850,7 +5095,11 @@ class KitchenCookingPanel extends LitElement {
               `)}
             </ol>
           </div>
-        ` : ''}
+        ` : html`
+          <p style="color: var(--secondary-text-color); font-style: italic;">
+            Step-by-step instructions not available. Use the recipe description and ingredients above as your guide.
+          </p>
+        `}
       </div>
     `;
   }
@@ -6100,6 +6349,47 @@ class KitchenCookingPanel extends LitElement {
         color: white;
       }
 
+      .feature-note-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 6px;
+      }
+
+      .feature-note-row .feature-badge {
+        flex-shrink: 0;
+      }
+
+      .feature-note-input {
+        flex: 1;
+        padding: 4px 8px;
+        border: 1px solid var(--divider-color);
+        border-radius: 4px;
+        font-size: 12px;
+        background: var(--card-background-color, #fff);
+        color: var(--primary-text-color);
+      }
+
+      .feature-note-input:focus {
+        border-color: var(--primary-color);
+        outline: none;
+      }
+
+      .save-notes-btn {
+        margin-top: 8px;
+        padding: 6px 16px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      .save-notes-btn:hover {
+        opacity: 0.9;
+      }
+
       .appliance-recipes {
         margin-top: 12px;
         padding-top: 12px;
@@ -7036,6 +7326,12 @@ class KitchenCookingPanel extends LitElement {
         margin-bottom: 24px;
       }
 
+      .path-header-title-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
       .path-header h2 {
         font-size: 24px;
         margin: 16px 0 0 0;
@@ -7686,6 +7982,18 @@ class KitchenCookingPanel extends LitElement {
 
       .appliance-info {
         margin-bottom: 8px;
+      }
+
+      .appliance-info-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .feature-notes-editor {
+        margin-top: 8px;
+        padding-top: 8px;
+        border-top: 1px solid var(--divider-color);
       }
 
       .appliance-features {

@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 19 Feb 2026, 13:12 UTC
-Last Change: v0.5.1.7 - Fix AI recipe restart from cook history
+Last Updated: 26 Feb 2026, 18:00 UTC
+Last Change: v0.5.2.8 - Add feature notes editing to appliance path view (issue #61)
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -65,7 +65,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.1.7"
+__version__ = "0.5.2.8"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -244,7 +244,7 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
                 StaticPathConfig(
                     url_path="/kitchen_cooking_engine_panel",
                     path=str(www_path),
-                    cache_headers=True,
+                    cache_headers=False,
                 )
             ])
         except Exception as e:

@@ -1,9 +1,9 @@
 # Terms of Reference: Kitchen Cooking Engine GUI Redesign
 
-**Version:** 3.0  
+**Version:** 3.1  
 **Created:** 2026-01-16  
-**Updated:** 2026-02-25  
-**Status:** Phases 1–6 Complete, Phases 7–8 Remaining  
+**Updated:** 2026-02-26  
+**Status:** Phases 1–6 Complete + v0.5.2.x appliance features, Phases 7–8 Remaining  
 **Supersedes:** Current single-path GUI implementation
 
 ---
@@ -334,10 +334,10 @@ These features apply system-wide across all paths and cook types:
 
 **Components:**
 1. **Appliance Information Display**
-   - Show selected main appliance name
-   - Display main appliance features
+   - Show selected main appliance name with 📝 button to toggle inline feature notes editor
+   - Display main appliance features (collapsed: comma list; expanded: grouped by Standard/Modified/Special with editable notes)
    - List all available secondary appliances (names only, no features)
-   - **Secondary appliances are deselectable** (checkboxes to include/exclude)
+   - **Secondary appliances are deselectable** (checkboxes to include/exclude) — *Deferred to Phase 8*
 
 2. **Start AI Recipe Builder** (Button 1)
    - Launch AI Recipe Builder
@@ -354,16 +354,22 @@ These features apply system-wide across all paths and cook types:
 **Layout:**
 ```
 ┌────────────────────────────────────────────┐
-│   AI Recipe Builder                        │
+│   🤖 AI Recipe Builder                     │
 ├────────────────────────────────────────────┤
 │                                            │
-│   Main Appliance: DeLonghi MultiFry       │
+│   Main Appliance: DeLonghi MultiFry    📝 │
 │   Features: Air Fry, Grill, Bake, Roast   │
 │                                            │
+│   (When 📝 toggled, shows expandable       │
+│   feature notes editor with Standard/      │
+│   Modified/Special grouping and Save       │
+│   Notes button)                            │
+│                                            │
 │   Secondary Appliances Available:          │
-│   ☑ Stovetop                               │
-│   ☑ Microwave                              │
-│   ☑ MEATER+ Probe                          │
+│   • Stovetop                               │
+│   • Microwave                              │
+│   • MEATER+ Probe                          │
+│   (Deselectable checkboxes: Phase 8)       │
 │                                            │
 │   ┌──────────────────────────────────┐   │
 │   │  🤖  Create AI Recipe            │   │
@@ -1223,7 +1229,7 @@ The GUI redesign is considered successful when:
 
 ## 15. Implementation Deviations
 
-This section documents deviations from the original ToR specification as of v0.5.1.7 (Phase 6 complete).
+This section documents deviations from the original ToR specification as of v0.5.2.8 (Phase 6 complete + v0.5.2.x features).
 
 ### 15.1 Features Added Beyond ToR
 
@@ -1236,6 +1242,13 @@ This section documents deviations from the original ToR specification as of v0.5
 | Cancelable Generation | v0.5.1.5 | AI generation dialog has Cancel button instead of OK, with time estimate. |
 | AI Recipe Save/Restart | v0.5.1.7 | Full `recipe_data` saved in cook_history.json via REST API. Restartable from Previous Cooks. |
 | Inline Metric Conversions | v0.5.0.69–70 | All Ninja Combi recipes include metric equivalents (cups→dl, oz→g, lb→kg, °F→°C). This is a stop-gap until Phase 7's dynamic conversion engine. |
+| Multi-Appliance Management | v0.5.2.1+ | Configure multiple kitchen appliances simultaneously. Central ApplianceManager service. |
+| Feature Type Classification | v0.5.2.1+ | 3-tier feature classification (Standard/Modified/Special) per feature per appliance. 30+ features in centralized catalog. |
+| Feature Modification Notes | v0.5.2.3+ | Editable notes for modified/special features, stored per-appliance. AI builder injects notes into recipe prompts. |
+| Feature Notes in Appliance Path | v0.5.2.8 | 📝 button in AI Recipe Builder appliance path header toggles inline feature notes editor (issue #61). |
+| Categorized AI Ingredients | v0.5.2.1+ | 300+ ingredients organized by category (proteins, produce, grains, dairy, spices) with cuisine-specific lists. |
+| Cuisine-Specific Ingredients | v0.5.2.1+ | Authentic ingredient lists per cuisine/region. Enforces pre-Columbian accuracy (e.g., no tomatoes in Indian/Middle Eastern). |
+| Recipe Origin Badges | v0.5.2.1+ | AI suggestions labeled 📖 Classic (known/googleable) or 🤖 Original (AI-created). |
 
 ### 15.2 Features Deferred from Original Phase
 
@@ -1262,6 +1275,8 @@ This section documents deviations from the original ToR specification as of v0.5
 | `kitchen_cooking_engine.advance_guide_step` service | Not implemented — step navigation is frontend-only |
 | `kitchen_cooking_engine.complete_recipe_cook` service | Not implemented — completion handled by frontend `_saveRecipeCook()` calling REST API |
 | `kitchen_cooking_engine.restart_cook` service | Not implemented — restart handled by frontend `_restartCook()` which re-enters cook flow with saved data |
+| Not in ToR: Appliance APIs | Added: `GET /api/kitchen_cooking_engine/appliances` (list with feature types/notes), `POST .../appliances/{entry_id}/feature_notes` (save notes), `GET .../available_features` (aggregated), `GET .../recipes/compatible` (recipe matching) |
+| Not in ToR: AI Settings API | Added: `GET/POST /api/kitchen_cooking_engine/ai_settings` — AI agent ID stored in panel preferences, not config flow |
 
 ### 15.5 Data Model Deviations
 
@@ -1271,6 +1286,9 @@ This section documents deviations from the original ToR specification as of v0.5
 | `Recipe.title_translations` for multilingual | Not implemented — English only until Phase 7 |
 | `Ingredient.scaling_behavior` (linear/stepped/fixed) | Not implemented — no ingredient scaling yet |
 | `UserPreferences` object (language, measurement) | Not implemented — hardcoded English, no measurement selector |
+| Not in ToR: Feature types | Added: `FeatureType` enum (STANDARD/MODIFIED/SPECIAL). Per-appliance feature classification with 30+ features in `FEATURE_CATALOG`. Config flow has per-feature type editing. |
+| Not in ToR: Feature notes | Added: `feature_notes` dict per appliance. Editable from panel UI (Appliances tab + AI Recipe Builder path). Injected into AI prompts as modification context. |
+| Not in ToR: Ingredient categories | Added: `INGREDIENT_CATEGORIES` mapping 300+ ingredients to categories (p/v/g/d/s). `CUISINE_INGREDIENTS` for cuisine-specific lists. `ASSUMED_STAPLES` excluded from lists. |
 
 ---
 
@@ -1319,6 +1337,7 @@ This section documents deviations from the original ToR specification as of v0.5
 | 2.3 | 2026-01-16 | Added three major features: (a) Multilingual support (Swedish/English), (b) Measurement systems (Swedish default, UK, US, Pure Metric), (c) Serving size adjustment for all recipes. | AI Agent |
 | 2.4 | 2026-01-16 | Research-based update of Swedish measurements: Added accurate abbreviations (krm, tsk, msk, hg), conversion table, and common recipe patterns. Clarified that cups are NOT used in Swedish recipes and dl is standard for flour/sugar. | AI Agent |
 | 3.0 | 2026-02-25 | Updated phases 1-6 to COMPLETE with actual version numbers. Added § 15 Implementation Deviations documenting: features added beyond ToR (custom cook, complexity, cuisines, etc.), features deferred to later phases, removed features (View Assist dashboard), API deviations, data model deviations. | AI Agent |
+| 3.1 | 2026-02-26 | Updated for v0.5.2.8 merge preparation. Added v0.5.2.x deviations: multi-appliance management, feature type classification, feature modification notes (panel + appliance path), categorized AI ingredients (300+), cuisine-specific ingredients, recipe origin badges, appliance APIs, AI settings API. Conformed ToR to actual implementation. | AI Agent |
 
 ---
 

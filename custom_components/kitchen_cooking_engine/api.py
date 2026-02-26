@@ -252,6 +252,7 @@ def async_register_api(hass: HomeAssistant) -> None:
     
     # Phase 3.1: Multi-appliance endpoints
     hass.http.register_view(AppliancesView)
+    hass.http.register_view(ApplianceFeatureNotesView)
     hass.http.register_view(AvailableFeaturesView)
     hass.http.register_view(CompatibleRecipesView)
     hass.http.register_view(RecipeMatchView)
@@ -406,22 +407,28 @@ class AppliancesView(HomeAssistantView):
             })
         
         appliances = []
-        for appliance in manager.get_appliances():
+        for entry_id, appliance in manager.get_appliances_with_entry_ids():
             # Build feature_types dictionary: feature_name -> type string
             feature_types = {}
+            feature_notes = {}
             for feature_name in appliance.get_features():
                 ftype = appliance.get_feature_type(feature_name)
                 if ftype:
                     # Convert FeatureType enum to string
                     feature_types[feature_name] = ftype.value
+                fnote = appliance.get_feature_notes(feature_name)
+                if fnote:
+                    feature_notes[feature_name] = fnote
             
             appliances.append({
                 "id": appliance.appliance_id,
+                "entry_id": entry_id,
                 "name": appliance.name,
                 "brand": appliance.brand,
                 "model": appliance.model,
                 "features": list(appliance.get_features()),
                 "feature_types": feature_types,
+                "feature_notes": feature_notes,
                 "recipe_count": len(appliance.recipes) if hasattr(appliance, 'recipes') else 0,
             })
         
@@ -429,6 +436,61 @@ class AppliancesView(HomeAssistantView):
             "appliances": appliances,
             "count": len(appliances)
         })
+
+
+class ApplianceFeatureNotesView(HomeAssistantView):
+    """API endpoint to save feature notes for an appliance."""
+
+    url = "/api/kitchen_cooking_engine/appliances/{entry_id}/feature_notes"
+    name = "api:kitchen_cooking_engine:appliance_feature_notes"
+    requires_auth = True
+
+    async def post(self, request: web.Request, entry_id: str) -> web.Response:
+        """Save feature notes for a specific appliance."""
+        from .config_flow import CONF_FEATURE_NOTES, CONF_FEATURES, FEATURE_TYPE_MODIFIED, FEATURE_TYPE_SPECIAL
+        from .appliance_manager import get_appliance_manager
+        
+        hass = request.app["hass"]
+        
+        # Find the config entry
+        config_entry = hass.config_entries.async_get_entry(entry_id)
+        if not config_entry:
+            return self.json({"error": "Appliance not found"}, status_code=404)
+        
+        try:
+            data = await request.json()
+        except (ValueError, KeyError):
+            return self.json({"error": "Invalid JSON"}, status_code=400)
+        
+        feature_notes = data.get("feature_notes", {})
+        if not isinstance(feature_notes, dict):
+            return self.json({"error": "feature_notes must be a dictionary"}, status_code=400)
+        
+        # Validate: only allow notes for features that are modified or special
+        features = config_entry.data.get(CONF_FEATURES, {})
+        validated_notes = {}
+        for fname, note in feature_notes.items():
+            if not isinstance(note, str):
+                continue
+            note = note.strip()
+            if not note:
+                continue
+            ftype = features.get(fname)
+            if ftype in (FEATURE_TYPE_MODIFIED, FEATURE_TYPE_SPECIAL):
+                validated_notes[fname] = note
+        
+        # Update config entry data
+        updated_data = {**config_entry.data, CONF_FEATURE_NOTES: validated_notes}
+        hass.config_entries.async_update_entry(config_entry, data=updated_data)
+        
+        # Reload the appliance so in-memory state reflects the change
+        manager = get_appliance_manager(hass)
+        if manager:
+            appliance = manager.get_appliance_by_id(entry_id)
+            if appliance:
+                appliance.update_feature_notes(validated_notes)
+        
+        return self.json({"success": True, "feature_notes": validated_notes})
 
 
 class AvailableFeaturesView(HomeAssistantView):
@@ -718,6 +780,7 @@ class AIRecipeGenerateView(HomeAssistantView):
                     "main_ingredients": s.main_ingredients,
                     "cuisine_type": s.cuisine_type,
                     "required_appliances": s.required_appliances,
+                    "recipe_origin": s.recipe_origin,
                 }
                 for s in suggestions
             ]

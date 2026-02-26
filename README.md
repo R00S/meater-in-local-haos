@@ -5,7 +5,7 @@
 [![Alpha](https://img.shields.io/badge/Status-ALPHA-orange.svg)](https://github.com/R00S/meater-in-local-haos)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/R00S)
 
-⚠️ **DEVELOPMENT RELEASE** — GUI Redesign Phase 6 of 8 complete. Functional but not yet production-ready. Phases 7 (Multilingual/Measurements) and 8 (Polish) remain.
+⚠️ **DEVELOPMENT RELEASE** — GUI Redesign Phases 1–6 complete + v0.5.2.x appliance features. Functional but not yet production-ready. Phases 7 (Multilingual/Measurements) and 8 (Polish) remain.
 
 A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes, and temperature sensors.
 
@@ -21,9 +21,18 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 ## 📊 Current Status
 
-**v0.5.1.7** — Semi-stable development release (February 2026)
+**v0.5.2.8** — Semi-stable development release (February 2026)
 
-GUI Redesign Phases 1–6 complete. See [STATUS.md](STATUS.md) for full progress tracking.
+GUI Redesign Phases 1–6 complete + v0.5.2.x appliance features. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.5.2.x Features (February 2026)
+- ✅ **Multi-appliance management** — Configure multiple appliances (Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom)
+- ✅ **Feature type classification** — Standard/Modified/Special per feature per appliance, with a 30+ feature catalog
+- ✅ **Feature modification notes** — Editable notes for modified/special features, saved inline from the appliance path view
+- ✅ **Categorized AI ingredients** — 300+ ingredients organized by category (proteins, produce, grains, dairy, spices)
+- ✅ **Cuisine-specific ingredients** — Authentic ingredient lists per cuisine, with region fallback
+- ✅ **Recipe origin badges** — 📖 Classic (known/googleable) or 🤖 Original (AI-created) on suggestion cards
+- ✅ **Appliance-aware AI recipes** — AI considers feature types and modification notes when generating recipes
 
 ### v0.5.1.x Features (February 2026)
 - ✅ **Complete GUI Redesign** — Welcome screen → appliance paths → cooking flows
@@ -40,19 +49,11 @@ GUI Redesign Phases 1–6 complete. See [STATUS.md](STATUS.md) for full progress
 - ✅ **MEATER+ BLE integration** — Real-time temperature monitoring via ESPHome
 - ✅ **185+ international cuts** (USDA) + **89 Swedish cuts** (Livsmedelsverket)
 - ✅ **17 built-in Ninja Combi recipes** with 12 cooking modes
-- ✅ **Multi-appliance support** — Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom
+- ✅ **Multi-appliance support** — Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom appliances
 - ✅ **Dynamic ETA** — Time-to-target based on temperature rise rate
 - ✅ **Notifications** — Mobile push, TTS voice, persistent, indicator light (blue→red→white)
 - ✅ **Cook history** — Log, review, and restart previous cooks
 - ✅ **View Assist** — Blueprint for voice navigation to cooking panel
-
-### What's Next (Phase 7 & 8)
-- ⬜ Multilingual support (Swedish + English with i18n)
-- ⬜ Measurement system selector (Swedish, UK, US, pure metric)
-- ⬜ Serving size scaling with automatic ingredient conversion
-- ⬜ MEATER probe as subprocess within recipe cook steps
-- ⬜ Mobile responsive polish
-- ⬜ Edge case handling and performance optimization
 
 See [STATUS.md](STATUS.md) for detailed project status.
 
@@ -92,8 +93,7 @@ The AI Recipe Builder generates custom recipes using AI (OpenAI or any HA conver
 
 3. **Configure AI Recipe Builder:**
    - Open Kitchen Cooking Engine panel
-   - Click **🤖 AI Recipe Builder** button
-   - Click **⚙️ Settings** button in the header
+   - Click **⚙️ AI Recipe Builder Settings** card on the welcome screen
    - Enter your AI conversation agent ID
    - **To find your agent ID:** Developer Tools → States → Search for "conversation." → Copy entity ID
    - Common agent IDs:
@@ -544,17 +544,32 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 ├── custom_components/
 │   └── kitchen_cooking_engine/    # HACS Custom Integration
 │       ├── __init__.py            # Integration setup
-│       ├── config_flow.py         # Configuration UI
+│       ├── config_flow.py         # Configuration UI (multi-appliance)
 │       ├── const.py               # Constants
-│       ├── cooking_data.py        # Comprehensive cooking data
-│       ├── sensor.py              # Cooking session sensor
+│       ├── cooking_data.py        # International cooking data (USDA)
+│       ├── swedish_cooking_data.py # Swedish cooking data (Livsmedelsverket)
+│       ├── ninja_combi_data.py    # Ninja Combi recipes (with metric)
+│       ├── ai_recipe_builder.py   # AI recipe generation engine
+│       ├── ai_recipe_data.py      # AI ingredients, cuisines, styles data
+│       ├── sensor.py              # Cooking session sensor entity
+│       ├── storage.py             # Cook history persistence
+│       ├── api.py                 # REST API endpoints
+│       ├── appliance_manager.py   # Multi-appliance coordination
+│       ├── appliances/            # Appliance implementations & feature catalog
+│       ├── generate_frontend_data.py # Generates JS from template + data
 │       ├── services.yaml          # Service definitions
 │       ├── manifest.json          # HACS manifest
-│       └── translations/          # Localization
+│       ├── translations/          # Localization
+│       └── www/                   # Frontend panel
+│           ├── panel-class-template.js   # UI source (edit this)
+│           └── kitchen-cooking-panel.js  # Auto-generated (do not edit)
 ├── meater.yaml                    # ESPHome BLE client config
 ├── hacs.json                      # HACS repository config
 ├── docs/
-│   ├── TERMS_OF_REFERENCE.md      # Project specification
+│   ├── TERMS_OF_REFERENCE.md      # Original project specification
+│   ├── GUI_REDESIGN_TERMS_OF_REFERENCE.md # GUI redesign specification
+│   ├── AI_RECIPE_BUILDER.md       # AI recipe feature documentation
+│   ├── AGENT_HANDOFF.md           # Handoff doc for next agent
 │   ├── FEATURE_REQUIREMENTS.md    # Feature specs
 │   ├── USE_CASES.md               # Real-world scenarios
 │   └── ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md
@@ -595,21 +610,26 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 
 | Document | Description |
 |----------|-------------|
-| [Terms of Reference](docs/TERMS_OF_REFERENCE.md) | Complete project specification |
+| [Terms of Reference](docs/TERMS_OF_REFERENCE.md) | Original project specification |
+| [GUI Redesign ToR](docs/GUI_REDESIGN_TERMS_OF_REFERENCE.md) | GUI redesign specification (Phase 1–8) |
+| [AI Recipe Builder](docs/AI_RECIPE_BUILDER.md) | AI recipe feature documentation |
 | [Feature Requirements](docs/FEATURE_REQUIREMENTS.md) | Detailed feature specifications |
 | [Use Cases](docs/USE_CASES.md) | 12 real-world cooking scenarios |
 | [Temperature Research](docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md) | Alternative probes, temperature tables |
 | [View Assist Integration](docs/VIEW_ASSIST_INTEGRATION.md) | Voice control setup and troubleshooting |
 
-## 🔮 Future Features (Phase 2+)
+## 🔮 Future Features (Phase 7+)
 
+- ⬜ Multilingual support (Swedish + English with i18n)
+- ⬜ Measurement system selector (Swedish, UK, US, pure metric)
+- ⬜ Serving size scaling with automatic ingredient conversion
+- ⬜ MEATER probe as subprocess within recipe cook steps
 - 🥖 **Baking** - Bread proofing, internal doneness, oven tracking
 - 🥐 **Pastries** - Laminated dough, proofing, custard temps
 - 🧫 **Fermentation** - Yogurt, sourdough, kombucha, kefir, kimchi
 - 🍲 **Slow Cooking** - Extended cook times, overnight safety monitoring
 - 🌡️ **Combustion Inc** - Alternative probe with open BLE protocol
 - 📷 **Grocery Recognition** - Receipt + photo → inventory
-- 🤖 **AI Recipe Integration** - Natural language meal planning
 
 ## 🛠️ Related Open Source Projects
 

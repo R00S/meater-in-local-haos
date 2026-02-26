@@ -180,6 +180,18 @@ FEATURE_CATALOG: Dict[str, CookingFeature] = {
         description="Traditional frying with hot air circulation"
     ),
     
+    "deep_fry": CookingFeature(
+        name="deep_fry",
+        display_name="Deep Fry",
+        temperature_range_c=(160, 190),
+        temperature_range_f=(320, 374),
+        supports_probe=False,
+        oil_levels=[OilLevel.RICH],
+        default_oil=OilLevel.RICH,
+        icon="mdi:pot-steam",
+        description="Submerged oil frying for crispy results"
+    ),
+    
     "pan_fry": CookingFeature(
         name="pan_fry",
         display_name="Pan Fry",

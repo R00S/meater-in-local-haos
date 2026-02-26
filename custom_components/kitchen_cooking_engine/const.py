@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 19 Feb 2026, 13:12 UTC
-Last Change: v0.5.1.7 - Fix AI recipe restart from cook history
+Last Updated: 26 Feb 2026, 18:00 UTC
+Last Change: v0.5.2.8 - Add feature notes editing to appliance path view (issue #61)
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "168"
+PANEL_VERSION = "185"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

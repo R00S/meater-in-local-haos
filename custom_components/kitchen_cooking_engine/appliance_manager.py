@@ -407,6 +407,14 @@ class ApplianceManager:
         """
         return self.registry.get_all_appliances()
     
+    def get_appliances_with_entry_ids(self) -> List[tuple]:
+        """Get all appliances with their config entry IDs.
+        
+        Returns:
+            List of (entry_id, appliance) tuples
+        """
+        return list(self._appliances.items())
+    
     def get_appliance_by_id(self, entry_id: str) -> Optional[KitchenAppliance]:
         """Get appliance by config entry ID.
         
@@ -503,7 +511,7 @@ class ApplianceManager:
         """
         from .appliances.custom_appliance import CustomAppliance
         from .appliances import ApplianceDeviceControl
-        from .config_flow import CONF_FEATURES
+        from .config_flow import CONF_FEATURES, CONF_FEATURE_NOTES
         
         name = config_entry.data.get("name", "Custom Appliance")
         power_outlet = config_entry.data.get("power_outlet_entity")
@@ -530,7 +538,10 @@ class ApplianceManager:
                 "special_features": config_entry.data.get("custom_special_features", []),
             }
         
-        return CustomAppliance(name, config_features, device_control)
+        # Extract feature notes
+        feature_notes = config_entry.data.get(CONF_FEATURE_NOTES, {})
+        
+        return CustomAppliance(name, config_features, device_control, feature_notes)
 
 
 def get_appliance_manager(hass: HomeAssistant) -> Optional[ApplianceManager]:

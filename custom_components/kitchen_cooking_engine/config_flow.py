@@ -50,6 +50,7 @@ CONF_MULTIFRY_BOWL_TYPE = "bowl_type"
 
 # Custom appliance feature configuration
 CONF_FEATURES = "features"  # New: stores {"feature_name": "standard"|"modified"|"special"}
+CONF_FEATURE_NOTES = "feature_notes"  # Stores {"feature_name": "user description of modification"}
 
 # Feature type options for UI
 FEATURE_TYPE_STANDARD = "standard"
@@ -572,8 +573,6 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             
             # Scan all features from catalog
             for feature_name in FEATURE_CATALOG.keys():
-                # Get feature setting from combined dropdown
-                # Key is "feat_{name}", value is "disabled" or a type
                 feature_key = f"feat_{feature_name}"
                 feature_value = user_input.get(feature_key, "disabled")
                 if feature_value != "disabled":
@@ -584,10 +583,12 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 errors["base"] = "no_features_selected"
             else:
                 # Store in config_data
+                # Notes are managed in the panel UI, not config flow
                 self._config_data.update({
                     CONF_APPLIANCE_NAME: name,
                     CONF_POWER_OUTLET: power_outlet,
                     CONF_FEATURES: features,
+                    CONF_FEATURE_NOTES: {},
                     CONF_APPLIANCE_TYPE: APPLIANCE_TYPE_CUSTOM,
                 })
                 
@@ -612,10 +613,9 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         
         for feature_name, feature_def in sorted_features:
             # Single dropdown per feature - combines enabled/disabled with type selection
-            # Use display name for label
             readable_key = feature_def.display_name.replace("/", " or ").replace("  ", " ")
             schema_dict[vol.Required(
-                f"feat_{feature_name}",  # Shortened prefix: "feat_" instead of "feature_enabled_"
+                f"feat_{feature_name}",
                 default="disabled"
             )] = selector.SelectSelector(
                 selector.SelectSelectorConfig(
@@ -636,12 +636,11 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             description_placeholders={
                 "info": (
                     "Configure custom appliance by selecting features.\n\n"
-                    "For each feature:\n"
-                    "1. Check the box to enable it\n"
-                    "2. Select how your appliance implements it:\n"
-                    "   - Standard: Works like traditional method (no adaptation)\n"
-                    "   - Modified: Requires recipe adjustments (time/temp)\n"
-                    "   - Special: Needs appliance-specific recipes"
+                    "For each feature, select how your appliance implements it:\n"
+                    "  Standard: Works like traditional method\n"
+                    "  Modified: Has modifications\n"
+                    "  Special: Needs appliance-specific recipes\n\n"
+                    "You can add modification notes in the panel after setup."
                 )
             },
         )
@@ -775,22 +774,18 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
             
             # Get the list of features to process
             if appliance_type == APPLIANCE_TYPE_CUSTOM:
-                # Custom appliances: check ALL features from FEATURE_CATALOG
                 all_features = FEATURE_CATALOG.keys()
             else:
-                # Predefined appliances: only process features from defaults
                 default_features = APPLIANCE_DEFAULT_FEATURES.get(appliance_type, {})
                 all_features = default_features.keys()
             
             for feature_name in all_features:
-                # Get feature setting from combined dropdown
-                # Key is "feat_{name}", value is "disabled" or a type  
                 feature_key = f"feat_{feature_name}"
                 feature_value = user_input.get(feature_key, "disabled")
                 if feature_value != "disabled":
                     features[feature_name] = feature_value
             
-            # Build updated data
+            # Build updated data (without notes yet)
             updated_data = {
                 **current_data,
                 CONF_APPLIANCE_NAME: name,
@@ -810,7 +805,16 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
                 updated_data[CONF_HAS_SENSOR_COOK] = has_sensor
                 updated_data[CONF_HAS_CONVECTION] = has_convection
             
-            # Update config entry
+            # Preserve existing feature notes (notes are managed in the panel UI)
+            existing_notes = current_data.get(CONF_FEATURE_NOTES, {})
+            # Only keep notes for features that are still modified/special
+            preserved_notes = {
+                fname: existing_notes[fname]
+                for fname in existing_notes
+                if fname in features and features[fname] in (FEATURE_TYPE_MODIFIED, FEATURE_TYPE_SPECIAL)
+            }
+            updated_data[CONF_FEATURE_NOTES] = preserved_notes
+            
             self.hass.config_entries.async_update_entry(
                 self.config_entry,
                 data=updated_data,
@@ -863,13 +867,11 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
         
         # Get features to show based on appliance type
         if appliance_type == APPLIANCE_TYPE_CUSTOM:
-            # Custom appliances: show ALL features from FEATURE_CATALOG
             features_to_show = {
-                feature_name: FEATURE_TYPE_STANDARD  # Default type for custom
+                feature_name: FEATURE_TYPE_STANDARD
                 for feature_name in FEATURE_CATALOG.keys()
             }
         else:
-            # Predefined appliances: use defaults from APPLIANCE_DEFAULT_FEATURES
             default_features = APPLIANCE_DEFAULT_FEATURES.get(appliance_type, {})
             features_to_show = dict(default_features)
             
@@ -886,15 +888,12 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
                     features_to_show.pop("convection_microwave", None)
                     features_to_show.pop("bake", None)
         
-        # Sort and add feature fields
+        # Sort and add feature fields (no notes - managed in the panel UI)
         for feature_name, default_type in sorted(features_to_show.items()):
-            # Single dropdown combining enabled state and feature type
-            # Feature is enabled if it's in current_features
             current_type = current_features.get(feature_name, default_type)
             is_enabled = feature_name in current_features
             default_value = current_type if is_enabled else "disabled"
             
-            # Use shortened prefix and get display name
             feature_def = FEATURE_CATALOG.get(feature_name)
             readable_key = feature_def.display_name.replace("/", " or ") if feature_def else feature_name
             
@@ -914,19 +913,17 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
             )
 
         # Use appliance-specific step_id to avoid config flow conflicts
-        # Each appliance type needs its own step_id for Home Assistant to handle it properly
         return self.async_show_form(
-            step_id=appliance_type,  # Dynamic step_id based on appliance type
+            step_id=appliance_type,
             data_schema=vol.Schema(schema_dict),
             description_placeholders={
                 "info": (
                     f"Configure {appliance_type.replace('_', ' ').title()} features.\n\n"
-                    "For each feature:\n"
-                    "1. Check the box to enable it\n"
-                    "2. Select how your appliance implements it:\n"
-                    "   - Standard: Works like traditional method (no adaptation)\n"
-                    "   - Modified: Requires recipe adjustments (time/temp)\n"
-                    "   - Special: Needs appliance-specific recipes"
+                    "For each feature, select how your appliance implements it:\n"
+                    "  Standard: Works like traditional method\n"
+                    "  Modified: Has modifications\n"
+                    "  Special: Needs appliance-specific recipes\n\n"
+                    "You can add modification notes in the panel."
                 )
             },
         )

@@ -90,6 +90,7 @@ class AIRecipeSuggestion:
     main_ingredients: List[str]
     cuisine_type: Optional[str] = None
     required_appliances: List[str] = field(default_factory=list)
+    recipe_origin: str = "original"  # "known" for classic recipes, "original" for AI-created
 
 
 @dataclass
@@ -392,11 +393,22 @@ class AIRecipeBuilder:
         }
         
         for appliance in appliances:
+            # Build feature details including modification notes
+            feature_details = {}
+            for fname in appliance.features.keys():
+                ftype = appliance.get_feature_type(fname)
+                fnotes = appliance.get_feature_notes(fname)
+                detail = {"type": ftype.value if ftype else "standard"}
+                if fnotes:
+                    detail["notes"] = fnotes
+                feature_details[fname] = detail
+            
             info["appliances"].append({
                 "name": appliance.name,
                 "brand": appliance.brand,
                 "model": appliance.model,
                 "features": list(appliance.features.keys()),
+                "feature_details": feature_details,
             })
             info["features"].update(appliance.features.keys())
         
@@ -435,6 +447,19 @@ class AIRecipeBuilder:
         
         feature_list = ", ".join(sorted(appliance_info["features"]))
         
+        # Build modification notes section for AI context
+        mod_notes_lines = []
+        for a in appliance_info.get("appliances", []):
+            for fname, detail in a.get("feature_details", {}).items():
+                if detail.get("notes"):
+                    mod_notes_lines.append(f"- {a['name']} {fname}: {detail['notes']}")
+        modification_notes = ""
+        if mod_notes_lines:
+            modification_notes = (
+                "\n\nAppliance modification notes (adapt recipes accordingly):\n"
+                + "\n".join(mod_notes_lines)
+            )
+        
         restrictions = (
             f"\nDietary restrictions: {', '.join(dietary_restrictions)}"
             if dietary_restrictions else ""
@@ -458,13 +483,14 @@ class AIRecipeBuilder:
         if cuisines and len(cuisines) > 0:
             cuisine_names = [c.replace('_', ' ').title() for c in cuisines]
             if len(cuisine_names) == 1:
-                cuisine_hint = f"\nCuisine focus: {cuisine_names[0]}"
+                cuisine_hint = f"\nCuisine focus: {cuisine_names[0]} — IMPORTANT: use authentic local {cuisine_names[0]} cooking traditions as practiced in the cuisine's countries of origin, NOT Americanized/Westernized adaptations. Suggest dishes that locals would recognize and cook at home."
             else:
-                cuisine_hint = f"\nCuisine fusion: combine elements from {', '.join(cuisine_names)}"
+                cuisine_hint = f"\nCuisine fusion: combine elements from {', '.join(cuisine_names)} — blend authentic local traditions from each cuisine. Each cuisine's contribution should reflect how it is cooked in its home country, not Westernized versions."
         
         prompt = f"""You are a professional chef creating recipes for a home kitchen.
 
 Available ingredients: {', '.join(ingredients)}
+Also assume basic staples are available: cooking oil, butter, salt, black pepper, sugar, vinegar.
 Cooking style: {cooking_style.replace('_', ' ')}
 Servings: {servings}
 Complexity level: {complexity_desc}{cuisine_hint}{restrictions}{time_constraint}
@@ -473,16 +499,37 @@ Available kitchen equipment:
 {appliance_list}
 
 Available cooking features:
-{feature_list}
+{feature_list}{modification_notes}
+
+CRITICAL RULE — AUTHENTIC LOCAL COOKING:
+When a cuisine is specified, you MUST suggest recipes that follow the authentic local
+cooking traditions of that cuisine's home country. Do NOT suggest Americanized or
+Westernized adaptations. For example:
+- Indian: suggest dishes like Dal Makhani, Chole, Sambar, Aviyal — NOT "Chicken Tikka Masala"
+  (a British invention). Use traditional souring agents (tamarind, amchur, kokum) not tomato
+  in every dish. Tomato-based gravies are a modern/colonial addition.
+- Chinese: suggest dishes like Mapo Tofu, Kung Pao Chicken, Red-Braised Pork (Hong Shao Rou)
+  — NOT "General Tso's Chicken" or "Orange Chicken" (American-Chinese inventions).
+- Middle Eastern: suggest dishes like Musakhan, Makloubeh, Mansaf, Kousa Mahshi
+  — NOT simplified "falafel wraps" or dishes heavy on tomato sauce.
+- Thai: suggest dishes like Gaeng Som, Larb, Khao Soi — NOT just Pad Thai and Green Curry.
+If the user wants fusion (e.g., Indian + American), both cuisines will be listed above
+and you should then blend them. A single cuisine means: cook it the local way.
 
 Please suggest 4 quite different recipes using these ingredients. For each recipe, provide:
-1. Recipe name (creative and descriptive)
+1. Recipe name - IMPORTANT naming rules:
+   - Prefer well-known, real dish names that people can find online (e.g. "Dal Makhani", "Mapo Tofu", "Bibimbap", "Shakshuka", "Musakhan").
+   - Only use a creative/poetic name if the dish is a well-known classic (e.g. "Coq au Vin" is fine, but don't invent names like "Midnight Sun Grilled Salmon").
+   - For original/invented recipes, use a simple descriptive name based on the main ingredients and cooking method (e.g. "Pan-Seared Salmon with Dill Cream Sauce").
 2. Brief description (1-2 sentences)
 3. Total cooking time in minutes
 4. Difficulty level (easy, medium, or hard)
 5. Main ingredients used from the list
 6. Required appliances/equipment
 7. Cuisine type (if applicable)
+8. Whether this is a known/classic recipe or an AI-created original ("known" or "original")
+
+Try to include at least 2 well-known classic recipes that people can search for online, and mark the rest as originals.
 
 Format your response as a JSON array with exactly 4 recipes:
 [
@@ -493,7 +540,8 @@ Format your response as a JSON array with exactly 4 recipes:
     "difficulty": "medium",
     "main_ingredients": ["ingredient1", "ingredient2"],
     "required_appliances": ["oven", "probe"],
-    "cuisine_type": "italian"
+    "cuisine_type": "italian",
+    "recipe_origin": "known"
   }},
   ...
 ]
@@ -521,6 +569,19 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
             for a in appliance_info["appliances"]
         ]) if appliance_info["appliances"] else "standard kitchen equipment"
         
+        # Build modification notes section for AI context
+        mod_notes_lines = []
+        for a in appliance_info.get("appliances", []):
+            for fname, detail in a.get("feature_details", {}).items():
+                if detail.get("notes"):
+                    mod_notes_lines.append(f"- {a['name']} {fname}: {detail['notes']}")
+        modification_notes = ""
+        if mod_notes_lines:
+            modification_notes = (
+                "\n\nAppliance modification notes (adapt recipes accordingly):\n"
+                + "\n".join(mod_notes_lines)
+            )
+        
         prompt = f"""You are a professional chef. Please provide the complete, detailed recipe for:
 
 Recipe Name: {suggestion.name}
@@ -532,7 +593,15 @@ Cuisine Type: {suggestion.cuisine_type or 'Any'}
 Required Appliances: {', '.join(suggestion.required_appliances)}
 
 Available kitchen equipment:
-{appliance_list}
+{appliance_list}{modification_notes}
+
+IMPORTANT — AUTHENTIC COOKING:
+If this recipe belongs to a specific cuisine, follow authentic local cooking
+traditions as practiced in that cuisine's home country. Use traditional
+techniques, spice combinations, and flavor profiles — NOT Americanized or
+Westernized adaptations. For example, an Indian dal should use tamarind or
+amchur for sourness rather than defaulting to tomatoes; a Chinese dish should
+follow wok technique and traditional seasonings, not American-Chinese shortcuts.
 
 Please provide the full detailed recipe with:
 1. Complete ingredient list with precise measurements (for 4 servings)
@@ -715,6 +784,7 @@ Format your response as JSON:
                     main_ingredients=item.get("main_ingredients", []),
                     cuisine_type=item.get("cuisine_type"),
                     required_appliances=item.get("required_appliances", []),
+                    recipe_origin=item.get("recipe_origin", "original"),
                 )
                 suggestions.append(suggestion)
             
