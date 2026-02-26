@@ -570,36 +570,37 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             # Build features dictionary from user input
             # Format: {"feature_name": "standard"|"modified"|"special"}
             features = {}
-            feature_notes = {}
             
             # Scan all features from catalog
             for feature_name in FEATURE_CATALOG.keys():
-                # Get feature setting from combined dropdown
-                # Key is "feat_{name}", value is "disabled" or a type
                 feature_key = f"feat_{feature_name}"
                 feature_value = user_input.get(feature_key, "disabled")
                 if feature_value != "disabled":
                     features[feature_name] = feature_value
-                    # Collect modification notes if provided
-                    notes_key = f"note_{feature_name}"
-                    notes_value = user_input.get(notes_key, "").strip()
-                    if notes_value:
-                        feature_notes[feature_name] = notes_value
             
             # Validate that at least one feature is selected
             if not features:
                 errors["base"] = "no_features_selected"
             else:
-                # Store in config_data
+                # Store in config_data (notes collected in next step if needed)
                 self._config_data.update({
                     CONF_APPLIANCE_NAME: name,
                     CONF_POWER_OUTLET: power_outlet,
                     CONF_FEATURES: features,
-                    CONF_FEATURE_NOTES: feature_notes,
                     CONF_APPLIANCE_TYPE: APPLIANCE_TYPE_CUSTOM,
                 })
                 
-                # Create unique ID
+                # Check if any features are modified or special → need notes step
+                needs_notes = any(
+                    ft in (FEATURE_TYPE_MODIFIED, FEATURE_TYPE_SPECIAL)
+                    for ft in features.values()
+                )
+                if needs_notes:
+                    return await self.async_step_custom_notes()
+                
+                # No modified/special features → create entry directly
+                self._config_data[CONF_FEATURE_NOTES] = {}
+                
                 await self.async_set_unique_id(f"kce_custom_{name.lower().replace(' ', '_')}")
                 self._abort_if_unique_id_configured()
 
@@ -620,10 +621,9 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
         
         for feature_name, feature_def in sorted_features:
             # Single dropdown per feature - combines enabled/disabled with type selection
-            # Use display name for label
             readable_key = feature_def.display_name.replace("/", " or ").replace("  ", " ")
             schema_dict[vol.Required(
-                f"feat_{feature_name}",  # Shortened prefix: "feat_" instead of "feature_enabled_"
+                f"feat_{feature_name}",
                 default="disabled"
             )] = selector.SelectSelector(
                 selector.SelectSelectorConfig(
@@ -636,11 +636,6 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     mode=selector.SelectSelectorMode.DROPDOWN
                 )
             )
-            # Add modification notes text field for each feature
-            schema_dict[vol.Optional(
-                f"note_{feature_name}",
-                default=""
-            )] = str
         
         return self.async_show_form(
             step_id="custom",
@@ -649,9 +644,61 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             description_placeholders={
                 "info": (
                     "Configure custom appliance by selecting features.\n\n"
-                    "For each feature, select how your appliance implements it.\n"
-                    "If you select Modified, describe the modification in the notes field\n"
-                    "(e.g. 'max size 10x30cm', 'has turbo, 30% faster', '160-230C').\n"
+                    "For each feature, select how your appliance implements it:\n"
+                    "  Standard: Works like traditional method\n"
+                    "  Modified: Has modifications (you'll describe them next)\n"
+                    "  Special: Needs appliance-specific recipes"
+                )
+            },
+        )
+
+    async def async_step_custom_notes(
+        self, user_input: dict[str, Any] | None = None
+    ) -> config_entries.ConfigFlowResult:
+        """Collect modification notes for modified/special features (new appliance)."""
+        features = self._config_data.get(CONF_FEATURES, {})
+        name = self._config_data.get(CONF_APPLIANCE_NAME, "Custom Appliance")
+        
+        if user_input is not None:
+            # Collect notes for modified/special features
+            feature_notes = {}
+            for feature_name, feature_type in features.items():
+                if feature_type in (FEATURE_TYPE_MODIFIED, FEATURE_TYPE_SPECIAL):
+                    notes_key = f"note_{feature_name}"
+                    notes_value = user_input.get(notes_key, "").strip()
+                    if notes_value:
+                        feature_notes[feature_name] = notes_value
+            
+            self._config_data[CONF_FEATURE_NOTES] = feature_notes
+            
+            await self.async_set_unique_id(f"kce_custom_{name.lower().replace(' ', '_')}")
+            self._abort_if_unique_id_configured()
+
+            return self.async_create_entry(
+                title=name,
+                data=self._config_data,
+            )
+        
+        # Build schema with only note fields for modified/special features
+        schema_dict = {}
+        for feature_name, feature_type in sorted(features.items()):
+            if feature_type in (FEATURE_TYPE_MODIFIED, FEATURE_TYPE_SPECIAL):
+                feature_def = FEATURE_CATALOG.get(feature_name)
+                display = feature_def.display_name if feature_def else feature_name
+                type_label = "Modified" if feature_type == FEATURE_TYPE_MODIFIED else "Special"
+                schema_dict[vol.Optional(
+                    f"note_{feature_name}",
+                    default="",
+                    description={"suffix": f"({type_label})"}
+                )] = str
+        
+        return self.async_show_form(
+            step_id="custom_notes",
+            data_schema=vol.Schema(schema_dict),
+            description_placeholders={
+                "info": (
+                    "Describe how each modified/special feature works on your appliance.\n\n"
+                    "Examples: 'max size 10x30cm', 'has turbo, 30% faster', '160-230C'\n"
                     "The AI recipe builder will use these notes when creating recipes."
                 )
             },
@@ -783,36 +830,25 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
             
             # Build features dictionary
             features = {}
-            feature_notes = {}
             
             # Get the list of features to process
             if appliance_type == APPLIANCE_TYPE_CUSTOM:
-                # Custom appliances: check ALL features from FEATURE_CATALOG
                 all_features = FEATURE_CATALOG.keys()
             else:
-                # Predefined appliances: only process features from defaults
                 default_features = APPLIANCE_DEFAULT_FEATURES.get(appliance_type, {})
                 all_features = default_features.keys()
             
             for feature_name in all_features:
-                # Get feature setting from combined dropdown
-                # Key is "feat_{name}", value is "disabled" or a type  
                 feature_key = f"feat_{feature_name}"
                 feature_value = user_input.get(feature_key, "disabled")
                 if feature_value != "disabled":
                     features[feature_name] = feature_value
-                    # Collect modification notes if provided
-                    notes_key = f"note_{feature_name}"
-                    notes_value = user_input.get(notes_key, "").strip()
-                    if notes_value:
-                        feature_notes[feature_name] = notes_value
             
-            # Build updated data
+            # Build updated data (without notes yet)
             updated_data = {
                 **current_data,
                 CONF_APPLIANCE_NAME: name,
                 CONF_FEATURES: features,
-                CONF_FEATURE_NOTES: feature_notes,
             }
             
             if power_outlet:
@@ -828,7 +864,18 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
                 updated_data[CONF_HAS_SENSOR_COOK] = has_sensor
                 updated_data[CONF_HAS_CONVECTION] = has_convection
             
-            # Update config entry
+            # Check if any features are modified or special → need notes step
+            needs_notes = any(
+                ft in (FEATURE_TYPE_MODIFIED, FEATURE_TYPE_SPECIAL)
+                for ft in features.values()
+            )
+            if needs_notes:
+                # Store pending data for the notes step
+                self._pending_updated_data = updated_data
+                return await self.async_step_feature_notes()
+            
+            # No modified/special features → save directly
+            updated_data[CONF_FEATURE_NOTES] = {}
             self.hass.config_entries.async_update_entry(
                 self.config_entry,
                 data=updated_data,
@@ -878,17 +925,14 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
         
         # Add feature editing fields
         current_features = current_data.get(CONF_FEATURES, {})
-        current_notes = current_data.get(CONF_FEATURE_NOTES, {})
         
         # Get features to show based on appliance type
         if appliance_type == APPLIANCE_TYPE_CUSTOM:
-            # Custom appliances: show ALL features from FEATURE_CATALOG
             features_to_show = {
-                feature_name: FEATURE_TYPE_STANDARD  # Default type for custom
+                feature_name: FEATURE_TYPE_STANDARD
                 for feature_name in FEATURE_CATALOG.keys()
             }
         else:
-            # Predefined appliances: use defaults from APPLIANCE_DEFAULT_FEATURES
             default_features = APPLIANCE_DEFAULT_FEATURES.get(appliance_type, {})
             features_to_show = dict(default_features)
             
@@ -905,15 +949,12 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
                     features_to_show.pop("convection_microwave", None)
                     features_to_show.pop("bake", None)
         
-        # Sort and add feature fields
+        # Sort and add feature fields (no notes - those are in the next step)
         for feature_name, default_type in sorted(features_to_show.items()):
-            # Single dropdown combining enabled state and feature type
-            # Feature is enabled if it's in current_features
             current_type = current_features.get(feature_name, default_type)
             is_enabled = feature_name in current_features
             default_value = current_type if is_enabled else "disabled"
             
-            # Use shortened prefix and get display name
             feature_def = FEATURE_CATALOG.get(feature_name)
             readable_key = feature_def.display_name.replace("/", " or ") if feature_def else feature_name
             
@@ -931,23 +972,68 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
                     mode=selector.SelectSelectorMode.DROPDOWN
                 )
             )
-            # Add modification notes text field for each feature
-            schema_dict[vol.Optional(
-                f"note_{feature_name}",
-                default=current_notes.get(feature_name, "")
-            )] = str
 
         # Use appliance-specific step_id to avoid config flow conflicts
-        # Each appliance type needs its own step_id for Home Assistant to handle it properly
         return self.async_show_form(
-            step_id=appliance_type,  # Dynamic step_id based on appliance type
+            step_id=appliance_type,
             data_schema=vol.Schema(schema_dict),
             description_placeholders={
                 "info": (
                     f"Configure {appliance_type.replace('_', ' ').title()} features.\n\n"
-                    "For each feature, select how your appliance implements it.\n"
-                    "If you select Modified, describe the modification in the notes field\n"
-                    "(e.g. 'max size 10x30cm', 'has turbo, 30% faster', '160-230C').\n"
+                    "For each feature, select how your appliance implements it:\n"
+                    "  Standard: Works like traditional method\n"
+                    "  Modified: Has modifications (you'll describe them next)\n"
+                    "  Special: Needs appliance-specific recipes"
+                )
+            },
+        )
+
+    async def async_step_feature_notes(
+        self, user_input: dict[str, Any] | None = None
+    ) -> config_entries.ConfigFlowResult:
+        """Collect modification notes for modified/special features (edit appliance)."""
+        updated_data = self._pending_updated_data
+        features = updated_data.get(CONF_FEATURES, {})
+        current_notes = self.config_entry.data.get(CONF_FEATURE_NOTES, {})
+        
+        if user_input is not None:
+            # Collect notes for modified/special features
+            feature_notes = {}
+            for feature_name, feature_type in features.items():
+                if feature_type in (FEATURE_TYPE_MODIFIED, FEATURE_TYPE_SPECIAL):
+                    notes_key = f"note_{feature_name}"
+                    notes_value = user_input.get(notes_key, "").strip()
+                    if notes_value:
+                        feature_notes[feature_name] = notes_value
+            
+            updated_data[CONF_FEATURE_NOTES] = feature_notes
+            
+            self.hass.config_entries.async_update_entry(
+                self.config_entry,
+                data=updated_data,
+            )
+            return self.async_create_entry(title="", data={})
+        
+        # Build schema with only note fields for modified/special features
+        schema_dict = {}
+        for feature_name, feature_type in sorted(features.items()):
+            if feature_type in (FEATURE_TYPE_MODIFIED, FEATURE_TYPE_SPECIAL):
+                feature_def = FEATURE_CATALOG.get(feature_name)
+                display = feature_def.display_name if feature_def else feature_name
+                type_label = "Modified" if feature_type == FEATURE_TYPE_MODIFIED else "Special"
+                schema_dict[vol.Optional(
+                    f"note_{feature_name}",
+                    default=current_notes.get(feature_name, ""),
+                    description={"suffix": f"({type_label})"}
+                )] = str
+        
+        return self.async_show_form(
+            step_id="feature_notes",
+            data_schema=vol.Schema(schema_dict),
+            description_placeholders={
+                "info": (
+                    "Describe how each modified/special feature works on your appliance.\n\n"
+                    "Examples: 'max size 10x30cm', 'has turbo, 30% faster', '160-230C'\n"
                     "The AI recipe builder will use these notes when creating recipes."
                 )
             },
