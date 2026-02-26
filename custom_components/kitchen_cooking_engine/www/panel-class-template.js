@@ -129,6 +129,8 @@ class KitchenCookingPanel extends LitElement {
       // AI Settings
       _aiAgentId: { type: String },
       _showAISettingsModal: { type: Boolean },
+      // Feature notes editing in appliance path
+      _showFeatureNotesEditor: { type: Boolean },
     };
   }
 
@@ -223,6 +225,7 @@ class KitchenCookingPanel extends LitElement {
     this._messageDialogOnCancel = null; // Optional cancel callback for dialog
     this._aiAgentId = ''; // AI agent entity ID for recipe generation
     this._showAISettingsModal = false; // Show AI settings modal
+    this._showFeatureNotesEditor = false; // Show feature notes editor in appliance path
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -862,6 +865,7 @@ class KitchenCookingPanel extends LitElement {
   _navigateToWelcome() {
     this._currentPath = 'welcome';
     this._selectedAppliance = null;
+    this._showFeatureNotesEditor = false;
     // Reset old navigation flags for compatibility
     this._showHistory = false;
     this._showNinjaCombi = false;
@@ -2085,6 +2089,11 @@ class KitchenCookingPanel extends LitElement {
     }
   }
 
+  _toggleFeatureNotesEditor() {
+    this._showFeatureNotesEditor = !this._showFeatureNotesEditor;
+    this.requestUpdate();
+  }
+
   async _saveFeatureNotes(appliance) {
     const notes = appliance._pendingNotes || appliance.feature_notes || {};
     try {
@@ -3278,16 +3287,27 @@ class KitchenCookingPanel extends LitElement {
         </button>
         <div class="path-header-title-row">
           <h2>🤖 AI Recipe Builder</h2>
-          <button class="settings-icon-btn" @click=${() => this._showAISettings()} title="AI Settings">⚙️</button>
         </div>
       </div>
 
       <ha-card>
         <div class="card-content appliance-info">
-          <h3>Main Appliance: ${appliance?.name}</h3>
-          <p class="appliance-features">
-            <strong>Features:</strong> ${appliance?.features?.join(', ') || 'N/A'}
-          </p>
+          <div class="appliance-info-header">
+            <h3>Main Appliance: ${appliance?.name}</h3>
+            <button class="settings-icon-btn" @click=${() => this._toggleFeatureNotesEditor()} title="Edit Feature Notes">
+              📝
+            </button>
+          </div>
+          
+          ${this._showFeatureNotesEditor && appliance ? html`
+            <div class="feature-notes-editor">
+              ${this._renderFeaturesByType(appliance)}
+            </div>
+          ` : html`
+            <p class="appliance-features">
+              <strong>Features:</strong> ${appliance?.features?.join(', ') || 'N/A'}
+            </p>
+          `}
           
           ${this._appliances.length > 1 ? html`
             <div class="secondary-appliances">
@@ -7962,6 +7982,18 @@ class KitchenCookingPanel extends LitElement {
 
       .appliance-info {
         margin-bottom: 8px;
+      }
+
+      .appliance-info-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .feature-notes-editor {
+        margin-top: 8px;
+        padding-top: 8px;
+        border-top: 1px solid var(--divider-color);
       }
 
       .appliance-features {
