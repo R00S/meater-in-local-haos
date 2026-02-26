@@ -50,6 +50,7 @@ CONF_MULTIFRY_BOWL_TYPE = "bowl_type"
 
 # Custom appliance feature configuration
 CONF_FEATURES = "features"  # New: stores {"feature_name": "standard"|"modified"|"special"}
+CONF_FEATURE_NOTES = "feature_notes"  # Stores {"feature_name": "user description of modification"}
 
 # Feature type options for UI
 FEATURE_TYPE_STANDARD = "standard"
@@ -569,6 +570,7 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             # Build features dictionary from user input
             # Format: {"feature_name": "standard"|"modified"|"special"}
             features = {}
+            feature_notes = {}
             
             # Scan all features from catalog
             for feature_name in FEATURE_CATALOG.keys():
@@ -578,6 +580,11 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 feature_value = user_input.get(feature_key, "disabled")
                 if feature_value != "disabled":
                     features[feature_name] = feature_value
+                    # Collect modification notes if provided
+                    notes_key = f"note_{feature_name}"
+                    notes_value = user_input.get(notes_key, "").strip()
+                    if notes_value:
+                        feature_notes[feature_name] = notes_value
             
             # Validate that at least one feature is selected
             if not features:
@@ -588,6 +595,7 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     CONF_APPLIANCE_NAME: name,
                     CONF_POWER_OUTLET: power_outlet,
                     CONF_FEATURES: features,
+                    CONF_FEATURE_NOTES: feature_notes,
                     CONF_APPLIANCE_TYPE: APPLIANCE_TYPE_CUSTOM,
                 })
                 
@@ -628,6 +636,11 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                     mode=selector.SelectSelectorMode.DROPDOWN
                 )
             )
+            # Add modification notes text field for each feature
+            schema_dict[vol.Optional(
+                f"note_{feature_name}",
+                default=""
+            )] = str
         
         return self.async_show_form(
             step_id="custom",
@@ -636,12 +649,10 @@ class KitchenCookingEngineConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             description_placeholders={
                 "info": (
                     "Configure custom appliance by selecting features.\n\n"
-                    "For each feature:\n"
-                    "1. Check the box to enable it\n"
-                    "2. Select how your appliance implements it:\n"
-                    "   - Standard: Works like traditional method (no adaptation)\n"
-                    "   - Modified: Requires recipe adjustments (time/temp)\n"
-                    "   - Special: Needs appliance-specific recipes"
+                    "For each feature, select how your appliance implements it.\n"
+                    "If you select Modified, describe the modification in the notes field\n"
+                    "(e.g. 'max size 10x30cm', 'has turbo, 30% faster', '160-230C').\n"
+                    "The AI recipe builder will use these notes when creating recipes."
                 )
             },
         )
@@ -772,6 +783,7 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
             
             # Build features dictionary
             features = {}
+            feature_notes = {}
             
             # Get the list of features to process
             if appliance_type == APPLIANCE_TYPE_CUSTOM:
@@ -789,12 +801,18 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
                 feature_value = user_input.get(feature_key, "disabled")
                 if feature_value != "disabled":
                     features[feature_name] = feature_value
+                    # Collect modification notes if provided
+                    notes_key = f"note_{feature_name}"
+                    notes_value = user_input.get(notes_key, "").strip()
+                    if notes_value:
+                        feature_notes[feature_name] = notes_value
             
             # Build updated data
             updated_data = {
                 **current_data,
                 CONF_APPLIANCE_NAME: name,
                 CONF_FEATURES: features,
+                CONF_FEATURE_NOTES: feature_notes,
             }
             
             if power_outlet:
@@ -860,6 +878,7 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
         
         # Add feature editing fields
         current_features = current_data.get(CONF_FEATURES, {})
+        current_notes = current_data.get(CONF_FEATURE_NOTES, {})
         
         # Get features to show based on appliance type
         if appliance_type == APPLIANCE_TYPE_CUSTOM:
@@ -912,6 +931,11 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
                     mode=selector.SelectSelectorMode.DROPDOWN
                 )
             )
+            # Add modification notes text field for each feature
+            schema_dict[vol.Optional(
+                f"note_{feature_name}",
+                default=current_notes.get(feature_name, "")
+            )] = str
 
         # Use appliance-specific step_id to avoid config flow conflicts
         # Each appliance type needs its own step_id for Home Assistant to handle it properly
@@ -921,12 +945,10 @@ class KitchenCookingEngineOptionsFlow(config_entries.OptionsFlow):
             description_placeholders={
                 "info": (
                     f"Configure {appliance_type.replace('_', ' ').title()} features.\n\n"
-                    "For each feature:\n"
-                    "1. Check the box to enable it\n"
-                    "2. Select how your appliance implements it:\n"
-                    "   - Standard: Works like traditional method (no adaptation)\n"
-                    "   - Modified: Requires recipe adjustments (time/temp)\n"
-                    "   - Special: Needs appliance-specific recipes"
+                    "For each feature, select how your appliance implements it.\n"
+                    "If you select Modified, describe the modification in the notes field\n"
+                    "(e.g. 'max size 10x30cm', 'has turbo, 30% faster', '160-230C').\n"
+                    "The AI recipe builder will use these notes when creating recipes."
                 )
             },
         )

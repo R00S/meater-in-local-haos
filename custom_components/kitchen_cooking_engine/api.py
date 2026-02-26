@@ -409,11 +409,15 @@ class AppliancesView(HomeAssistantView):
         for appliance in manager.get_appliances():
             # Build feature_types dictionary: feature_name -> type string
             feature_types = {}
+            feature_notes = {}
             for feature_name in appliance.get_features():
                 ftype = appliance.get_feature_type(feature_name)
                 if ftype:
                     # Convert FeatureType enum to string
                     feature_types[feature_name] = ftype.value
+                fnote = appliance.get_feature_notes(feature_name)
+                if fnote:
+                    feature_notes[feature_name] = fnote
             
             appliances.append({
                 "id": appliance.appliance_id,
@@ -422,6 +426,7 @@ class AppliancesView(HomeAssistantView):
                 "model": appliance.model,
                 "features": list(appliance.get_features()),
                 "feature_types": feature_types,
+                "feature_notes": feature_notes,
                 "recipe_count": len(appliance.recipes) if hasattr(appliance, 'recipes') else 0,
             })
         

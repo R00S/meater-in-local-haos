@@ -32,7 +32,8 @@ class CustomAppliance(KitchenAppliance):
         self,
         name: str,
         config_features: Union[Dict[str, str], Dict[str, List[str]]],
-        device_control: Optional[ApplianceDeviceControl] = None
+        device_control: Optional[ApplianceDeviceControl] = None,
+        feature_notes: Optional[Dict[str, str]] = None
     ):
         """
         Initialize custom appliance.
@@ -51,6 +52,8 @@ class CustomAppliance(KitchenAppliance):
                         "special_features": ["combi_crisp"]
                     }
             device_control: Optional device control configuration
+            feature_notes: Optional modification notes per feature
+                {"feature_name": "description of modification", ...}
         """
         super().__init__()
         
@@ -63,6 +66,7 @@ class CustomAppliance(KitchenAppliance):
         # Build features dictionary and feature types from catalog
         self.features = {}
         self._feature_types = {}
+        self._feature_notes = feature_notes or {}
         
         # Detect which format we're using
         if self._is_new_format(config_features):

@@ -503,7 +503,7 @@ class ApplianceManager:
         """
         from .appliances.custom_appliance import CustomAppliance
         from .appliances import ApplianceDeviceControl
-        from .config_flow import CONF_FEATURES
+        from .config_flow import CONF_FEATURES, CONF_FEATURE_NOTES
         
         name = config_entry.data.get("name", "Custom Appliance")
         power_outlet = config_entry.data.get("power_outlet_entity")
@@ -530,7 +530,10 @@ class ApplianceManager:
                 "special_features": config_entry.data.get("custom_special_features", []),
             }
         
-        return CustomAppliance(name, config_features, device_control)
+        # Extract feature notes
+        feature_notes = config_entry.data.get(CONF_FEATURE_NOTES, {})
+        
+        return CustomAppliance(name, config_features, device_control, feature_notes)
 
 
 def get_appliance_manager(hass: HomeAssistant) -> Optional[ApplianceManager]:

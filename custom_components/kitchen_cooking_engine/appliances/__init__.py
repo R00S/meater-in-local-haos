@@ -135,6 +135,7 @@ class KitchenAppliance(ABC):
         self.adapter: Optional[RecipeAdapter] = None
         self.device_control: Optional[ApplianceDeviceControl] = None
         self._feature_types: Dict[str, FeatureType] = {}  # Maps feature_name -> FeatureType
+        self._feature_notes: Dict[str, str] = {}  # Maps feature_name -> modification notes
     
     @abstractmethod
     def get_supported_features(self) -> List[CookingFeature]:
@@ -176,6 +177,10 @@ class KitchenAppliance(ABC):
             FeatureType if this appliance supports the feature, None otherwise
         """
         return self._feature_types.get(feature_name)
+    
+    def get_feature_notes(self, feature_name: str) -> Optional[str]:
+        """Get modification notes for a feature on this appliance."""
+        return self._feature_notes.get(feature_name)
     
     def get_features(self) -> Set[str]:
         """Get set of all feature names this appliance supports."""

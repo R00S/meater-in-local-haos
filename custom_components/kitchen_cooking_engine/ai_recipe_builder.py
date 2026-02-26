@@ -393,11 +393,22 @@ class AIRecipeBuilder:
         }
         
         for appliance in appliances:
+            # Build feature details including modification notes
+            feature_details = {}
+            for fname in appliance.features.keys():
+                ftype = appliance.get_feature_type(fname)
+                fnotes = appliance.get_feature_notes(fname)
+                detail = {"type": ftype.value if ftype else "standard"}
+                if fnotes:
+                    detail["notes"] = fnotes
+                feature_details[fname] = detail
+            
             info["appliances"].append({
                 "name": appliance.name,
                 "brand": appliance.brand,
                 "model": appliance.model,
                 "features": list(appliance.features.keys()),
+                "feature_details": feature_details,
             })
             info["features"].update(appliance.features.keys())
         
@@ -435,6 +446,19 @@ class AIRecipeBuilder:
         ]) if appliance_info["appliances"] else "standard kitchen equipment"
         
         feature_list = ", ".join(sorted(appliance_info["features"]))
+        
+        # Build modification notes section for AI context
+        mod_notes_lines = []
+        for a in appliance_info.get("appliances", []):
+            for fname, detail in a.get("feature_details", {}).items():
+                if detail.get("notes"):
+                    mod_notes_lines.append(f"- {a['name']} {fname}: {detail['notes']}")
+        modification_notes = ""
+        if mod_notes_lines:
+            modification_notes = (
+                "\n\nAppliance modification notes (adapt recipes accordingly):\n"
+                + "\n".join(mod_notes_lines)
+            )
         
         restrictions = (
             f"\nDietary restrictions: {', '.join(dietary_restrictions)}"
@@ -475,7 +499,7 @@ Available kitchen equipment:
 {appliance_list}
 
 Available cooking features:
-{feature_list}
+{feature_list}{modification_notes}
 
 CRITICAL RULE — AUTHENTIC LOCAL COOKING:
 When a cuisine is specified, you MUST suggest recipes that follow the authentic local
@@ -545,6 +569,19 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
             for a in appliance_info["appliances"]
         ]) if appliance_info["appliances"] else "standard kitchen equipment"
         
+        # Build modification notes section for AI context
+        mod_notes_lines = []
+        for a in appliance_info.get("appliances", []):
+            for fname, detail in a.get("feature_details", {}).items():
+                if detail.get("notes"):
+                    mod_notes_lines.append(f"- {a['name']} {fname}: {detail['notes']}")
+        modification_notes = ""
+        if mod_notes_lines:
+            modification_notes = (
+                "\n\nAppliance modification notes (adapt recipes accordingly):\n"
+                + "\n".join(mod_notes_lines)
+            )
+        
         prompt = f"""You are a professional chef. Please provide the complete, detailed recipe for:
 
 Recipe Name: {suggestion.name}
@@ -556,7 +593,7 @@ Cuisine Type: {suggestion.cuisine_type or 'Any'}
 Required Appliances: {', '.join(suggestion.required_appliances)}
 
 Available kitchen equipment:
-{appliance_list}
+{appliance_list}{modification_notes}
 
 IMPORTANT — AUTHENTIC COOKING:
 If this recipe belongs to a specific cuisine, follow authentic local cooking

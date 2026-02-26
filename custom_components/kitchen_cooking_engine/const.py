@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 19 Feb 2026, 13:12 UTC
-Last Change: v0.5.2.5 - Add deep_fry feature to catalog
+Last Change: v0.5.2.6 - Add modification notes for modified features in appliance config
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "180"
+PANEL_VERSION = "181"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
