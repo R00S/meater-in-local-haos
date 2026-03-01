@@ -73,6 +73,8 @@ class KitchenCookingPanel extends LitElement {
       _cutPreferences: { type: Object },
       _currentNotes: { type: String },
       _showNotes: { type: Boolean },
+      _showAdjustTarget: { type: Boolean },
+      _adjustTargetTemp: { type: String },
       _showNinjaCombi: { type: Boolean },
       _selectedNinjaRecipe: { type: Number },
       _showRecipeBuilder: { type: Boolean },
@@ -151,6 +153,8 @@ class KitchenCookingPanel extends LitElement {
     this._cutPreferences = {};
     this._currentNotes = "";
     this._showNotes = false;
+    this._showAdjustTarget = false;
+    this._adjustTargetTemp = null;
     this._showNinjaCombi = false;
     this._selectedNinjaRecipe = null;
     this._showRecipeBuilder = false;
@@ -463,6 +467,23 @@ class KitchenCookingPanel extends LitElement {
   _setNotes(notes) {
     this._currentNotes = notes;
     this._callService('set_notes', { notes });
+  }
+
+  _toggleAdjustTarget(currentTargetTemp) {
+    this._showAdjustTarget = !this._showAdjustTarget;
+    if (this._showAdjustTarget) {
+      this._adjustTargetTemp = String(currentTargetTemp);
+    }
+  }
+
+  _saveTargetTemp() {
+    const temp = parseInt(this._adjustTargetTemp, 10);
+    if (isNaN(temp) || temp < 35 || temp > 100) {
+      this._showMessage('Invalid Temperature', 'Target temperature must be between 35°C and 100°C.', true);
+      return;
+    }
+    this._callService('set_target', { target_temp: temp });
+    this._showAdjustTarget = false;
   }
 
   _getStateIcon(state) {
@@ -2783,6 +2804,27 @@ class KitchenCookingPanel extends LitElement {
                 .value=${attrs.notes || this._currentNotes}
                 @change=${(e) => this._setNotes(e.target.value)}
               ></textarea>
+            ` : ''}
+          </div>
+
+          <!-- Adjust Target Temp Section -->
+          <div class="notes-section">
+            <button class="notes-toggle" @click=${() => this._toggleAdjustTarget(targetTemp)}>
+              🌡️ ${this._showAdjustTarget ? 'Hide' : 'Adjust Target Temp'}
+            </button>
+            ${this._showAdjustTarget ? html`
+              <div style="display:flex;align-items:center;gap:8px;margin-top:8px;">
+                <input
+                  type="number"
+                  min="35"
+                  max="100"
+                  style="width:80px;padding:6px;border:1px solid var(--divider-color);border-radius:4px;background:var(--card-background-color);color:var(--primary-text-color);font-size:14px;"
+                  .value=${this._adjustTargetTemp ?? String(targetTemp)}
+                  @input=${(e) => this._adjustTargetTemp = e.target.value}
+                />
+                <span style="color:var(--secondary-text-color);">°C</span>
+                <ha-button unelevated @click=${() => this._saveTargetTemp()}>Save</ha-button>
+              </div>
             ` : ''}
           </div>
           
