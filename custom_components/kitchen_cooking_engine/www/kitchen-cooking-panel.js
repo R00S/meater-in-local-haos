@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 02 Mar 2026, 11:50 CET
+ * AUTO-GENERATED: 02 Mar 2026, 12:23 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 02 Mar 2026, 11:50 CET
+// Last generated: 02 Mar 2026, 12:23 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -51,7 +51,8 @@ const DONENESS_OPTIONS = {
     "icon": "🔴",
     "description": "Cool red center",
     "temp_c": 49,
-    "temp_f": 120
+    "temp_f": 120,
+    "safety_level": "unsafe"
   },
   "medium_rare": {
     "value": "medium_rare",
@@ -59,7 +60,8 @@ const DONENESS_OPTIONS = {
     "icon": "🟠",
     "description": "Warm red center",
     "temp_c": 54,
-    "temp_f": 130
+    "temp_f": 130,
+    "safety_level": "caution"
   },
   "medium": {
     "value": "medium",
@@ -67,7 +69,8 @@ const DONENESS_OPTIONS = {
     "icon": "🟡",
     "description": "Warm pink center",
     "temp_c": 60,
-    "temp_f": 140
+    "temp_f": 140,
+    "safety_level": "caution"
   },
   "medium_well": {
     "value": "medium_well",
@@ -75,7 +78,8 @@ const DONENESS_OPTIONS = {
     "icon": "🟤",
     "description": "Slightly pink center",
     "temp_c": 66,
-    "temp_f": 150
+    "temp_f": 150,
+    "safety_level": "safe"
   },
   "well_done": {
     "value": "well_done",
@@ -83,7 +87,8 @@ const DONENESS_OPTIONS = {
     "icon": "⚪",
     "description": "No pink, fully cooked",
     "temp_c": 71,
-    "temp_f": 160
+    "temp_f": 160,
+    "safety_level": "safe"
   },
   "pulled": {
     "value": "pulled",
@@ -91,7 +96,8 @@ const DONENESS_OPTIONS = {
     "icon": "🍖",
     "description": "Shreddable, collagen broken down",
     "temp_c": 93,
-    "temp_f": 200
+    "temp_f": 200,
+    "safety_level": "safe"
   },
   "done": {
     "value": "done",
@@ -99,7 +105,8 @@ const DONENESS_OPTIONS = {
     "icon": "✓",
     "description": "Cooked through",
     "temp_c": 71,
-    "temp_f": 160
+    "temp_f": 160,
+    "safety_level": "safe"
   },
   "crispy": {
     "value": "crispy",
@@ -107,7 +114,8 @@ const DONENESS_OPTIONS = {
     "icon": "🥓",
     "description": "Crispy and rendered",
     "temp_c": 90,
-    "temp_f": 195
+    "temp_f": 195,
+    "safety_level": "safe"
   },
   "heated_through": {
     "value": "heated_through",
@@ -115,7 +123,8 @@ const DONENESS_OPTIONS = {
     "icon": "♨️",
     "description": "Heated through",
     "temp_c": 60,
-    "temp_f": 140
+    "temp_f": 140,
+    "safety_level": "safe"
   },
   "safe": {
     "value": "safe",
@@ -123,7 +132,17 @@ const DONENESS_OPTIONS = {
     "icon": "✅",
     "description": "Cooked through, safe to eat",
     "temp_c": 74,
-    "temp_f": 165
+    "temp_f": 165,
+    "safety_level": "safe"
+  },
+  "thigh_optimal": {
+    "value": "thigh_optimal",
+    "name": "Thigh Optimal",
+    "icon": "🍗",
+    "description": "Thigh at 175°F — tender, juicy dark meat (Serious Eats/ATK)",
+    "temp_c": 79,
+    "temp_f": 175,
+    "safety_level": "safe"
   },
   "dark_meat_optimal": {
     "value": "dark_meat_optimal",
@@ -131,23 +150,53 @@ const DONENESS_OPTIONS = {
     "icon": "🍗",
     "description": "Dark meat optimal texture",
     "temp_c": 77,
-    "temp_f": 170
+    "temp_f": 170,
+    "safety_level": "safe"
+  },
+  "leg_rendered": {
+    "value": "leg_rendered",
+    "name": "Leg Rendered",
+    "icon": "🦆",
+    "description": "Leg at 180°F — fat fully rendered, deeply tender",
+    "temp_c": 82,
+    "temp_f": 180,
+    "safety_level": "safe"
   },
   "confit": {
     "value": "confit",
     "name": "Confit",
-    "icon": "🔥",
+    "icon": "🦆",
     "description": "Fall-off-bone tender, traditionally confited",
     "temp_c": 88,
-    "temp_f": 190
+    "temp_f": 190,
+    "safety_level": "safe"
+  },
+  "thigh_rendered": {
+    "value": "thigh_rendered",
+    "name": "Thigh Rendered",
+    "icon": "🦢",
+    "description": "Thigh at 183°F — fat fully rendered, deeply tender (Christmas goose tradition)",
+    "temp_c": 84,
+    "temp_f": 183,
+    "safety_level": "safe"
+  },
+  "just_cooked": {
+    "value": "just_cooked",
+    "name": "Just Cooked",
+    "icon": "🦐",
+    "description": "Just opaque and curled — 120°F (ThermoWorks preferred)",
+    "temp_c": 49,
+    "temp_f": 120,
+    "safety_level": "caution"
   },
   "tender": {
     "value": "tender",
     "name": "Tender",
     "icon": "🥔",
-    "description": "Fully tender, fork-pierces easily",
-    "temp_c": 95,
-    "temp_f": 203
+    "description": "135°F — silky, tender lobster meat (chef preferred)",
+    "temp_c": 57,
+    "temp_f": 135,
+    "safety_level": "caution"
   },
   "caramelized": {
     "value": "caramelized",
@@ -155,7 +204,8 @@ const DONENESS_OPTIONS = {
     "icon": "🧅",
     "description": "Golden brown, enhanced sweetness",
     "temp_c": 160,
-    "temp_f": 320
+    "temp_f": 320,
+    "safety_level": "safe"
   },
   "crisp_tender": {
     "value": "crisp_tender",
@@ -163,7 +213,8 @@ const DONENESS_OPTIONS = {
     "icon": "🥦",
     "description": "Slightly firm with some bite",
     "temp_c": 85,
-    "temp_f": 185
+    "temp_f": 185,
+    "safety_level": "safe"
   },
   "charred": {
     "value": "charred",
@@ -171,7 +222,8 @@ const DONENESS_OPTIONS = {
     "icon": "🔥",
     "description": "Charred exterior with smoky flavor",
     "temp_c": 200,
-    "temp_f": 390
+    "temp_f": 390,
+    "safety_level": "safe"
   }
 };
 
@@ -183,7 +235,8 @@ const SWEDISH_DONENESS_OPTIONS = {
     "icon": "🔴",
     "description": "Blodig - Sval röd kärna",
     "temp_c": 50,
-    "temp_f": 122
+    "temp_f": 122,
+    "safety_level": "unsafe"
   },
   "medium_rare": {
     "value": "medium_rare",
@@ -191,7 +244,8 @@ const SWEDISH_DONENESS_OPTIONS = {
     "icon": "🟠",
     "description": "Medium Rare - Rosa kärna",
     "temp_c": 54,
-    "temp_f": 129
+    "temp_f": 129,
+    "safety_level": "caution"
   },
   "medium": {
     "value": "medium",
@@ -199,7 +253,8 @@ const SWEDISH_DONENESS_OPTIONS = {
     "icon": "🟡",
     "description": "Medium - Varm rosa kärna",
     "temp_c": 58,
-    "temp_f": 136
+    "temp_f": 136,
+    "safety_level": "caution"
   },
   "medium_well": {
     "value": "medium_well",
@@ -207,7 +262,8 @@ const SWEDISH_DONENESS_OPTIONS = {
     "icon": "🟤",
     "description": "Medium Well - Nästan genomstekt",
     "temp_c": 64,
-    "temp_f": 147
+    "temp_f": 147,
+    "safety_level": "safe"
   },
   "genomstekt": {
     "value": "genomstekt",
@@ -215,7 +271,8 @@ const SWEDISH_DONENESS_OPTIONS = {
     "icon": "⚪",
     "description": "Genomstekt - Ingen rosa färg",
     "temp_c": 70,
-    "temp_f": 158
+    "temp_f": 158,
+    "safety_level": "safe"
   },
   "långkokt": {
     "value": "långkokt",
@@ -223,7 +280,8 @@ const SWEDISH_DONENESS_OPTIONS = {
     "icon": "🍖",
     "description": "Långkokt - Strimlningsbart",
     "temp_c": 92,
-    "temp_f": 198
+    "temp_f": 198,
+    "safety_level": "safe"
   }
 };
 
@@ -882,8 +940,10 @@ const MEAT_CATEGORIES = {
                 "id": 300,
                 "name": "Whole Chicken",
                 "doneness": [
-                  "safe"
-                ]
+                  "safe",
+                  "thigh_optimal"
+                ],
+                "recommended_doneness": "thigh_optimal"
               },
               {
                 "id": 301,
@@ -996,8 +1056,10 @@ const MEAT_CATEGORIES = {
                 "id": 330,
                 "name": "Whole Turkey",
                 "doneness": [
-                  "safe"
-                ]
+                  "safe",
+                  "thigh_optimal"
+                ],
+                "recommended_doneness": "thigh_optimal"
               },
               {
                 "id": 331,
@@ -1061,8 +1123,10 @@ const MEAT_CATEGORIES = {
                 "id": 341,
                 "name": "Whole Duck",
                 "doneness": [
-                  "safe"
-                ]
+                  "safe",
+                  "leg_rendered"
+                ],
+                "recommended_doneness": "leg_rendered"
               },
               {
                 "id": 342,
@@ -1087,8 +1151,10 @@ const MEAT_CATEGORIES = {
                 "id": 345,
                 "name": "Whole Goose",
                 "doneness": [
-                  "safe"
-                ]
+                  "safe",
+                  "thigh_rendered"
+                ],
+                "recommended_doneness": "thigh_rendered"
               },
               {
                 "id": 346,
@@ -1238,6 +1304,7 @@ const MEAT_CATEGORIES = {
                 "id": 421,
                 "name": "Halibut Fillet",
                 "doneness": [
+                  "medium_rare",
                   "medium",
                   "well_done"
                 ]
@@ -1246,6 +1313,7 @@ const MEAT_CATEGORIES = {
                 "id": 422,
                 "name": "Sea Bass",
                 "doneness": [
+                  "medium_rare",
                   "medium",
                   "well_done"
                 ]
@@ -1307,6 +1375,7 @@ const MEAT_CATEGORIES = {
                 "id": 430,
                 "name": "Shrimp",
                 "doneness": [
+                  "just_cooked",
                   "well_done"
                 ]
               },
@@ -1314,6 +1383,7 @@ const MEAT_CATEGORIES = {
                 "id": 431,
                 "name": "Lobster Tail",
                 "doneness": [
+                  "tender",
                   "well_done"
                 ]
               },
@@ -12022,6 +12092,10 @@ class KitchenCookingPanel extends LitElement {
       långkokt: "🍖",
       safe: "✅",
       dark_meat_optimal: "🍗",
+      thigh_optimal: "🍗",
+      thigh_rendered: "🦢",
+      leg_rendered: "🦆",
+      confit: "🦆",
       crispy: "🥓",
       heated_through: "♨️",
       done: "✓",
@@ -12029,6 +12103,9 @@ class KitchenCookingPanel extends LitElement {
       crisp_tender: "🥦",
       caramelized: "🧅",
       charred: "🔥",
+      just_cooked: "🦐",
+      braised_tender: "🐙",
+      quick_sear: "⚡",
     };
     return icons[donenessName] || "🍖";
   }
@@ -14675,7 +14752,7 @@ class KitchenCookingPanel extends LitElement {
       ` : html`
         <div class="history-list">
           ${meaterCooks.map(cook => html`
-            <ha-card class="history-card">
+            <ha-card class="history-card clickable" @click=${() => this._restartCook(cook)}>
               <div class="history-card-header">
                 <div class="history-title-row">
                   <h3 class="history-title">
@@ -14702,10 +14779,7 @@ class KitchenCookingPanel extends LitElement {
                 </div>
               ` : ''}
               
-              <div class="history-actions">
-                <button class="history-action-btn restart" @click=${() => this._restartCook(cook)}>
-                  🔄 Restart This Cook
-                </button>
+              <div class="history-actions" @click=${(e) => e.stopPropagation()}>
                 <button class="history-action-btn edit" @click=${() => this._editCookNotes(cook)}>
                   ✏️ Edit Notes
                 </button>
@@ -17367,6 +17441,20 @@ class KitchenCookingPanel extends LitElement {
         color: rgba(255, 255, 255, 0.8);
       }
 
+      /* Safety indicator dot on doneness buttons */
+      .safety-dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: 5px;
+        vertical-align: middle;
+        flex-shrink: 0;
+      }
+      .safety-dot.safe   { background-color: #4caf50; }
+      .safety-dot.caution { background-color: #ff9800; }
+      .safety-dot.unsafe { background-color: #f44336; }
+
       /* Temperature fine-tuning styles */
       .temp-display-setup {
         display: flex;
@@ -19534,7 +19622,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "188";
+const PANEL_VERSION = "190";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

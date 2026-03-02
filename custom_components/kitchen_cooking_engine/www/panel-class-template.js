@@ -572,6 +572,10 @@ class KitchenCookingPanel extends LitElement {
       långkokt: "🍖",
       safe: "✅",
       dark_meat_optimal: "🍗",
+      thigh_optimal: "🍗",
+      thigh_rendered: "🦢",
+      leg_rendered: "🦆",
+      confit: "🦆",
       crispy: "🥓",
       heated_through: "♨️",
       done: "✓",
@@ -579,6 +583,9 @@ class KitchenCookingPanel extends LitElement {
       crisp_tender: "🥦",
       caramelized: "🧅",
       charred: "🔥",
+      just_cooked: "🦐",
+      braised_tender: "🐙",
+      quick_sear: "⚡",
     };
     return icons[donenessName] || "🍖";
   }
@@ -3225,7 +3232,7 @@ class KitchenCookingPanel extends LitElement {
       ` : html`
         <div class="history-list">
           ${meaterCooks.map(cook => html`
-            <ha-card class="history-card">
+            <ha-card class="history-card clickable" @click=${() => this._restartCook(cook)}>
               <div class="history-card-header">
                 <div class="history-title-row">
                   <h3 class="history-title">
@@ -3252,10 +3259,7 @@ class KitchenCookingPanel extends LitElement {
                 </div>
               ` : ''}
               
-              <div class="history-actions">
-                <button class="history-action-btn restart" @click=${() => this._restartCook(cook)}>
-                  🔄 Restart This Cook
-                </button>
+              <div class="history-actions" @click=${(e) => e.stopPropagation()}>
                 <button class="history-action-btn edit" @click=${() => this._editCookNotes(cook)}>
                   ✏️ Edit Notes
                 </button>
@@ -5916,6 +5920,20 @@ class KitchenCookingPanel extends LitElement {
       .doneness-btn.selected .temp-hint {
         color: rgba(255, 255, 255, 0.8);
       }
+
+      /* Safety indicator dot on doneness buttons */
+      .safety-dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: 5px;
+        vertical-align: middle;
+        flex-shrink: 0;
+      }
+      .safety-dot.safe   { background-color: #4caf50; }
+      .safety-dot.caution { background-color: #ff9800; }
+      .safety-dot.unsafe { background-color: #f44336; }
 
       /* Temperature fine-tuning styles */
       .temp-display-setup {

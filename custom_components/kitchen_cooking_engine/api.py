@@ -54,6 +54,7 @@ def _temperature_range_to_dict(tr: TemperatureRange) -> dict:
         "is_meater_recommended": tr.is_meater_recommended,
         "start_hex": tr.start_hex,
         "end_hex": tr.end_hex,
+        "safety_level": getattr(tr, "safety_level", None),
     }
 
 

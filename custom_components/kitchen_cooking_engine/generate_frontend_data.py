@@ -132,6 +132,10 @@ def get_doneness_levels(categories):
         "pulled": "🍖", "långkokt": "🍖",
         "safe": "✅",
         "dark_meat_optimal": "🍗",
+        "thigh_optimal": "🍗",
+        "thigh_rendered": "🦢",
+        "leg_rendered": "🦆",
+        "confit": "🦆",
         "crispy": "🥓",
         "heated_through": "♨️",
         "done": "✓",
@@ -139,6 +143,9 @@ def get_doneness_levels(categories):
         "crisp_tender": "🥦",
         "caramelized": "🧅",
         "charred": "🔥",
+        "just_cooked": "🦐",
+        "braised_tender": "🐙",
+        "quick_sear": "⚡",
     }
     for cat in categories:
         for meat in cat.meats:
@@ -153,6 +160,7 @@ def get_doneness_levels(categories):
                                 "description": tr.description,
                                 "temp_c": tr.target_temp_c,
                                 "temp_f": tr.target_temp_f,
+                                "safety_level": getattr(tr, "safety_level", None),
                             }
     return doneness
 

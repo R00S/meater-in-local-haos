@@ -1741,7 +1741,28 @@ CHICKEN_WHOLE = [
         rest_time_min=10,
         rest_time_max=20,
         carryover_temp_c=5,
-        temperature_ranges=[POULTRY_SAFE],
+        # Probe thigh: USDA min 74°C but Kenji/ATK recommend 79°C (175°F) for
+        # tender, juicy dark meat — connective tissue breaks down at higher temp.
+        temperature_ranges=[
+            POULTRY_SAFE,
+            TemperatureRange(
+                id=300,
+                name="thigh_optimal",
+                description="Thigh at 175°F — tender, juicy dark meat (Serious Eats/ATK)",
+                target_temp_c=79,
+                target_temp_f=175,
+                min_temp_c=77,
+                min_temp_f=170,
+                max_temp_c=85,
+                max_temp_f=185,
+                usda_safe=True,
+                is_meater_recommended=True,
+                start_hex="#DEB887",
+                end_hex="#D2B48C",
+                safety_level="safe",
+            ),
+        ],
+        recommended_doneness="thigh_optimal",
     ),
     # Additional chicken cuts from frontend merge (using frontend IDs)
     MeatCut(
@@ -1908,7 +1929,28 @@ TURKEY = [
         rest_time_min=20,
         rest_time_max=45,
         carryover_temp_c=8,
-        temperature_ranges=[POULTRY_SAFE],
+        # Probe thigh: ThermoWorks & ATK recommend 170-175°F (77-79°C) in the
+        # thigh — dark meat connective tissue needs higher temp than breast.
+        temperature_ranges=[
+            POULTRY_SAFE,
+            TemperatureRange(
+                id=330,
+                name="thigh_optimal",
+                description="Thigh at 170°F — tender dark meat (ThermoWorks/ATK)",
+                target_temp_c=77,
+                target_temp_f=170,
+                min_temp_c=74,
+                min_temp_f=165,
+                max_temp_c=82,
+                max_temp_f=180,
+                usda_safe=True,
+                is_meater_recommended=True,
+                start_hex="#DEB887",
+                end_hex="#D2B48C",
+                safety_level="safe",
+            ),
+        ],
+        recommended_doneness="thigh_optimal",
     ),
     MeatCut(
         id=331,
@@ -1991,7 +2033,30 @@ GOOSE = [
         rest_time_min=20,
         rest_time_max=30,
         carryover_temp_c=8,
-        temperature_ranges=[POULTRY_SAFE],
+        # Probe thigh: goose is far fattier than duck or chicken — the
+        # enormous fat reserves only fully render at 180-185°F (82-85°C).
+        # Traditional Christmas goose recipes (Hank Shaw, German traditions)
+        # consistently target this range for tender, non-greasy results.
+        temperature_ranges=[
+            POULTRY_SAFE,
+            TemperatureRange(
+                id=345,
+                name="thigh_rendered",
+                description="Thigh at 183°F — fat fully rendered, deeply tender (Christmas goose tradition)",
+                target_temp_c=84,
+                target_temp_f=183,
+                min_temp_c=82,
+                min_temp_f=180,
+                max_temp_c=88,
+                max_temp_f=190,
+                usda_safe=True,
+                is_meater_recommended=True,
+                start_hex="#8B6914",
+                end_hex="#6B4F12",
+                safety_level="safe",
+            ),
+        ],
+        recommended_doneness="thigh_rendered",
     ),
     MeatCut(
         id=346,
@@ -2059,7 +2124,29 @@ DUCK = [
         rest_time_min=10,
         rest_time_max=20,
         carryover_temp_c=5,
-        temperature_ranges=[POULTRY_SAFE],
+        # Probe leg/thigh: duck has far more fat than chicken; the subcutaneous
+        # fat must render properly. 175-180°F (79-82°C) in leg gives fully
+        # rendered, tender meat — confirmed by multiple whole roast duck recipes.
+        temperature_ranges=[
+            POULTRY_SAFE,
+            TemperatureRange(
+                id=341,
+                name="leg_rendered",
+                description="Leg at 180°F — fat fully rendered, deeply tender",
+                target_temp_c=82,
+                target_temp_f=180,
+                min_temp_c=79,
+                min_temp_f=175,
+                max_temp_c=88,
+                max_temp_f=190,
+                usda_safe=True,
+                is_meater_recommended=True,
+                start_hex="#CD853F",
+                end_hex="#A0522D",
+                safety_level="safe",
+            ),
+        ],
+        recommended_doneness="leg_rendered",
     ),
     MeatCut(
         id=342,
@@ -2207,7 +2294,9 @@ WHITE_FISH = [
         rest_time_min=0,
         rest_time_max=2,
         carryover_temp_c=3,
-        temperature_ranges=[FISH_MEDIUM, FISH_WELL_DONE],
+        # ThermoWorks confirms 125-130°F (52-54°C) medium-rare for halibut.
+        # Very lean fish that dries out quickly above 135°F.
+        temperature_ranges=[FISH_MEDIUM_RARE, FISH_MEDIUM, FISH_WELL_DONE],
     ),
     MeatCut(
         id=422,
@@ -2220,7 +2309,9 @@ WHITE_FISH = [
         rest_time_min=0,
         rest_time_max=2,
         carryover_temp_c=2,
-        temperature_ranges=[FISH_MEDIUM, FISH_WELL_DONE],
+        # Sea bass (branzino, Chilean) preferred at 125-135°F (52-57°C) —
+        # medium-rare gives moist, flaky, tender flesh.
+        temperature_ranges=[FISH_MEDIUM_RARE, FISH_MEDIUM, FISH_WELL_DONE],
     ),
     MeatCut(
         id=423,
@@ -2290,6 +2381,85 @@ WHITE_FISH = [
     ),
 ]
 
+# ---- Seafood-specific temperature ranges (not shared with general fish) ----
+
+# Shrimp: ThermoWorks confirms 120°F (49°C) — just opaque, curled, still juicy.
+# Above 130°F shrimp become rubbery. USDA says 145°F but that overcooks them.
+SHRIMP_JUST_COOKED = TemperatureRange(
+    id=450,
+    name="just_cooked",
+    description="Just opaque and curled — 120°F (ThermoWorks preferred)",
+    target_temp_c=49,
+    target_temp_f=120,
+    min_temp_c=46,
+    min_temp_f=115,
+    max_temp_c=52,
+    max_temp_f=126,
+    usda_safe=False,
+    is_meater_recommended=True,
+    start_hex="#FFA07A",
+    end_hex="#FF7F50",
+    safety_level="caution",
+)
+
+# Lobster: 135°F (57°C) is the professional chef target for silky, tender meat.
+# 145°F (63°C) is USDA safe but risks tough, rubbery texture.
+# Sources: multiple professional cooking guides and restaurant cookbooks.
+LOBSTER_TENDER = TemperatureRange(
+    id=451,
+    name="tender",
+    description="135°F — silky, tender lobster meat (chef preferred)",
+    target_temp_c=57,
+    target_temp_f=135,
+    min_temp_c=54,
+    min_temp_f=130,
+    max_temp_c=60,
+    max_temp_f=140,
+    usda_safe=False,
+    is_meater_recommended=True,
+    start_hex="#FF6347",
+    end_hex="#FF4500",
+    safety_level="caution",
+)
+
+# Cephalopods (octopus, squid/calamari) have a "window of tough" from ~54-80°C.
+# Either cook VERY quickly (52°C: still tender, barely cooked) OR braise long
+# until collagen breaks down (85°C+: fall-apart tender).
+# The current FISH_WELL_DONE (63°C) is the worst possible temperature for them.
+CEPHALOPOD_QUICK = TemperatureRange(
+    id=452,
+    name="quick_sear",
+    description="Quick sear — just cooked, still tender (avoid the rubber zone)",
+    target_temp_c=52,
+    target_temp_f=126,
+    min_temp_c=49,
+    min_temp_f=120,
+    max_temp_c=55,
+    max_temp_f=131,
+    usda_safe=False,
+    is_meater_recommended=False,
+    start_hex="#DDA0DD",
+    end_hex="#DA70D6",
+    safety_level="caution",
+)
+
+CEPHALOPOD_BRAISED = TemperatureRange(
+    id=453,
+    name="braised_tender",
+    description="Long-braised until collagen breaks down — fall-apart tender",
+    target_temp_c=88,
+    target_temp_f=190,
+    min_temp_c=85,
+    min_temp_f=185,
+    max_temp_c=93,
+    max_temp_f=200,
+    usda_safe=True,
+    is_meater_recommended=True,
+    start_hex="#8B008B",
+    end_hex="#6A0DAD",
+    safety_level="safe",
+)
+
 SHELLFISH = [
     MeatCut(
         id=430,
@@ -2302,7 +2472,8 @@ SHELLFISH = [
         rest_time_min=0,
         rest_time_max=0,
         carryover_temp_c=1,
-        temperature_ranges=[FISH_WELL_DONE],
+        # ThermoWorks: 120°F (49°C) — just opaque. USDA 145°F overcooks them.
+        temperature_ranges=[SHRIMP_JUST_COOKED, FISH_WELL_DONE],
     ),
     MeatCut(
         id=431,
@@ -2315,7 +2486,8 @@ SHELLFISH = [
         rest_time_min=0,
         rest_time_max=2,
         carryover_temp_c=2,
-        temperature_ranges=[FISH_WELL_DONE],
+        # 135°F (57°C) silky tender; 145°F (63°C) fully safe but risks tough.
+        temperature_ranges=[LOBSTER_TENDER, FISH_WELL_DONE],
     ),
     MeatCut(
         id=432,
@@ -2413,7 +2585,7 @@ FISH_ADDITIONAL = [
         rest_time_min=0,
         rest_time_max=2,
         carryover_temp_c=2,
-        temperature_ranges=[FISH_WELL_DONE],
+        temperature_ranges=[LOBSTER_TENDER, FISH_WELL_DONE],
     ),
     MeatCut(
         id=461,
@@ -2426,7 +2598,7 @@ FISH_ADDITIONAL = [
         rest_time_min=0,
         rest_time_max=5,
         carryover_temp_c=3,
-        temperature_ranges=[FISH_WELL_DONE],
+        temperature_ranges=[LOBSTER_TENDER, FISH_WELL_DONE],
     ),
     MeatCut(
         id=462,
@@ -2439,7 +2611,7 @@ FISH_ADDITIONAL = [
         rest_time_min=0,
         rest_time_max=2,
         carryover_temp_c=2,
-        temperature_ranges=[FISH_WELL_DONE],
+        temperature_ranges=[LOBSTER_TENDER, FISH_WELL_DONE],
     ),
     MeatCut(
         id=470,
@@ -2544,7 +2716,7 @@ FISH_ADDITIONAL = [
         rest_time_min=0,
         rest_time_max=0,
         carryover_temp_c=1,
-        temperature_ranges=[FISH_WELL_DONE],
+        temperature_ranges=[SHRIMP_JUST_COOKED, FISH_WELL_DONE],
     ),
     MeatCut(
         id=551,
@@ -2622,7 +2794,9 @@ FISH_ADDITIONAL = [
         rest_time_min=0,
         rest_time_max=0,
         carryover_temp_c=1,
-        temperature_ranges=[FISH_WELL_DONE],
+        # Cook EITHER very quickly (52°C: tender) OR long-braised (88°C: tender).
+        # 63°C is the rubber zone — the worst possible target for squid.
+        temperature_ranges=[CEPHALOPOD_QUICK, CEPHALOPOD_BRAISED],
     ),
     MeatCut(
         id=557,
@@ -2635,7 +2809,9 @@ FISH_ADDITIONAL = [
         rest_time_min=0,
         rest_time_max=5,
         carryover_temp_c=2,
-        temperature_ranges=[FISH_WELL_DONE, FISH_WELL_DONE],
+        # Same principle as squid: 52°C quick sear OR 88°C long braise.
+        # 63°C FISH_WELL_DONE turns octopus into rubber bands.
+        temperature_ranges=[CEPHALOPOD_QUICK, CEPHALOPOD_BRAISED],
     ),
 ]
 
