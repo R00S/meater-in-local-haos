@@ -536,7 +536,17 @@ class KitchenCookingPanel extends LitElement {
   _getAvailableDoneness() {
     const cut = this._getSelectedCutData();
     if (!cut) return [];
-    
+    const method = this._selectedMethod;
+    const donenessOptions = this._getDonenessOptions();
+
+    // Per-method doneness options (e.g. brisket×smoker→[pulled], brisket×pan_fry→[medium_rare,medium])
+    if (method && cut.method_doneness_options && cut.method_doneness_options[method]) {
+      return cut.method_doneness_options[method].map(d => {
+        const opt = donenessOptions[d];
+        return opt ? { ...opt, value: d } : null;
+      }).filter(Boolean);
+    }
+
     // If API data with temperature_ranges is available, use that for more detailed info
     if (cut.temperature_ranges && cut.temperature_ranges.length > 0) {
       return cut.temperature_ranges.map(tr => ({
@@ -549,10 +559,9 @@ class KitchenCookingPanel extends LitElement {
         safety_level: tr.safety_level || null,
       }));
     }
-    
+
     // Fall back to doneness array with lookup from donenessOptions
     if (!cut.doneness) return [];
-    const donenessOptions = this._getDonenessOptions();
     return cut.doneness.map(d => {
       const opt = donenessOptions[d];
       return opt ? { ...opt, value: d } : null;
@@ -593,25 +602,27 @@ class KitchenCookingPanel extends LitElement {
   _getRecommendedDoneness() {
     const cut = this._getSelectedCutData();
     if (!cut) return null;
-    // Use explicit recommended_doneness (API format) or recommendedDoneness (JS format)
+    const method = this._selectedMethod;
+
+    // Per-method recommended doneness (highest priority)
+    if (method && cut.method_doneness && cut.method_doneness[method]) {
+      return cut.method_doneness[method];
+    }
+    // Explicit cut-level recommendation
     if (cut.recommended_doneness) {
       return cut.recommended_doneness;
     }
     if (cut.recommendedDoneness) {
       return cut.recommendedDoneness;
     }
-    // Check for is_meater_recommended in temperature_ranges (API format)
+    // is_meater_recommended flag in temperature_ranges (API format)
     if (cut.temperature_ranges) {
       const recommended = cut.temperature_ranges.find(tr => tr.is_meater_recommended);
-      if (recommended) {
-        return recommended.name;
-      }
+      if (recommended) return recommended.name;
     }
-    // Fall back to first doneness option
-    if (cut.doneness && cut.doneness.length > 0) {
-      return cut.doneness[0];
-    }
-    return null;
+    // Fall back to first available option for this method
+    const available = this._getAvailableDoneness();
+    return available.length > 0 ? available[0].value : null;
   }
 
   _getTargetTempForDoneness(donenessValue) {

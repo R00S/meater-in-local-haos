@@ -269,16 +269,35 @@ class MeatCut:
     estimated_thickness_mm: Optional[int] = None
     usda_safe_c: Optional[int] = None
     usda_safe_f: Optional[int] = None
+    # Default temperature ranges (used when no method-specific override exists)
     temperature_ranges: list[TemperatureRange] = field(default_factory=list)
     # Rest time recommendations (minutes)
     rest_time_min: int = 3
     rest_time_max: int = 10
-    # Carryover cooking estimate (degrees C)
+    # Carryover cooking estimate (degrees C) — for the default/dry-heat case
     carryover_temp_c: int = 3
     # Supported cooking methods for this cut
     supported_methods: list[CookingMethod] = field(default_factory=list)
-    # Recommended doneness level for this cut (for pre-selection in UI)
+    # Default recommended doneness (used when no method-specific override exists)
     recommended_doneness: Optional[str] = None
+    # Per-method recommended doneness overrides: method.value → doneness name.
+    # Use when the same cut is optimally cooked to a DIFFERENT doneness depending
+    # on the cooking method — e.g. short ribs braised→pulled but grilled→medium.
+    method_doneness: dict[str, str] = field(default_factory=dict)
+    # Per-method temperature range overrides: method.value → [TemperatureRange, …]
+    # Use when the available doneness options AND their target temperatures are
+    # fundamentally different depending on how the cut is cooked.
+    # Classic examples:
+    #   brisket×smoker   → [pulled(93°C)]  — long cook, collagen breakdown
+    #   brisket×pan_fry  → [medium_rare(54°C), medium(60°C)]  — thin Korean-style
+    #   short_ribs×braise → [pulled(93°C)]
+    #   short_ribs×grill  → [medium_rare(54°C), medium(60°C)]  — galbi
+    #   pork_belly×braise → [pulled(88°C)]
+    #   pork_belly×oven_roast → [well_done(71°C), crispy(85°C)]  — crackling
+    # When present, these completely replace temperature_ranges for that method.
+    method_temperature_ranges: dict[str, list[TemperatureRange]] = field(
+        default_factory=dict
+    )
 
 
 @dataclass

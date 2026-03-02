@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 02 Mar 2026, 12:23 CET
+ * AUTO-GENERATED: 02 Mar 2026, 12:51 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 02 Mar 2026, 12:23 CET
+// Last generated: 02 Mar 2026, 12:51 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -12056,7 +12056,17 @@ class KitchenCookingPanel extends LitElement {
   _getAvailableDoneness() {
     const cut = this._getSelectedCutData();
     if (!cut) return [];
-    
+    const method = this._selectedMethod;
+    const donenessOptions = this._getDonenessOptions();
+
+    // Per-method doneness options (e.g. brisket×smoker→[pulled], brisket×pan_fry→[medium_rare,medium])
+    if (method && cut.method_doneness_options && cut.method_doneness_options[method]) {
+      return cut.method_doneness_options[method].map(d => {
+        const opt = donenessOptions[d];
+        return opt ? { ...opt, value: d } : null;
+      }).filter(Boolean);
+    }
+
     // If API data with temperature_ranges is available, use that for more detailed info
     if (cut.temperature_ranges && cut.temperature_ranges.length > 0) {
       return cut.temperature_ranges.map(tr => ({
@@ -12069,10 +12079,9 @@ class KitchenCookingPanel extends LitElement {
         safety_level: tr.safety_level || null,
       }));
     }
-    
+
     // Fall back to doneness array with lookup from donenessOptions
     if (!cut.doneness) return [];
-    const donenessOptions = this._getDonenessOptions();
     return cut.doneness.map(d => {
       const opt = donenessOptions[d];
       return opt ? { ...opt, value: d } : null;
@@ -12113,25 +12122,27 @@ class KitchenCookingPanel extends LitElement {
   _getRecommendedDoneness() {
     const cut = this._getSelectedCutData();
     if (!cut) return null;
-    // Use explicit recommended_doneness (API format) or recommendedDoneness (JS format)
+    const method = this._selectedMethod;
+
+    // Per-method recommended doneness (highest priority)
+    if (method && cut.method_doneness && cut.method_doneness[method]) {
+      return cut.method_doneness[method];
+    }
+    // Explicit cut-level recommendation
     if (cut.recommended_doneness) {
       return cut.recommended_doneness;
     }
     if (cut.recommendedDoneness) {
       return cut.recommendedDoneness;
     }
-    // Check for is_meater_recommended in temperature_ranges (API format)
+    // is_meater_recommended flag in temperature_ranges (API format)
     if (cut.temperature_ranges) {
       const recommended = cut.temperature_ranges.find(tr => tr.is_meater_recommended);
-      if (recommended) {
-        return recommended.name;
-      }
+      if (recommended) return recommended.name;
     }
-    // Fall back to first doneness option
-    if (cut.doneness && cut.doneness.length > 0) {
-      return cut.doneness[0];
-    }
-    return null;
+    // Fall back to first available option for this method
+    const available = this._getAvailableDoneness();
+    return available.length > 0 ? available[0].value : null;
   }
 
   _getTargetTempForDoneness(donenessValue) {
@@ -19622,7 +19633,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "190";
+const PANEL_VERSION = "191";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
