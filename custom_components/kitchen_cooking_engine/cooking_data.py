@@ -740,7 +740,15 @@ BEEF_STEAKS = [
             CookingMethod.SOUS_VIDE,
             CookingMethod.AIR_FRYER,
             CookingMethod.GRILL,
+            CookingMethod.CHARCOAL_GRILL,
         ],
+        recommended_doneness="medium_rare",
+        # Sous vide: sirloin is LEAN — stay at 54°C, do NOT go to 57°C like ribeye.
+        # 57°C dries lean sirloin without fat to compensate.
+        # Research: Kenji/Anova, The Salted Pepper, Steak University, Douglas Baldwin.
+        method_doneness={
+            "sous_vide": "medium_rare",
+        },
     ),
     MeatCut(
         id=102,
