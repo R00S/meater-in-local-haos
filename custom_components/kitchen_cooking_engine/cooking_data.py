@@ -768,6 +768,18 @@ BEEF_STEAKS = [
             DONENESS_MEDIUM_WELL,
             DONENESS_WELL_DONE,
         ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.PAN_FRY,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.SOUS_VIDE,
+            CookingMethod.AIR_FRYER,
+            CookingMethod.GRILL,
+            CookingMethod.CHARCOAL_GRILL,
+        ],
+        # Very lean — do NOT use 57°C sous vide like ribeye.
+        # 54°C medium_rare is the global consensus (Escoffier, Robuchon, Kenji).
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=103,
@@ -787,6 +799,18 @@ BEEF_STEAKS = [
             DONENESS_MEDIUM_WELL,
             DONENESS_WELL_DONE,
         ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.PAN_FRY,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.SOUS_VIDE,
+            CookingMethod.AIR_FRYER,
+            CookingMethod.GRILL,
+            CookingMethod.CHARCOAL_GRILL,
+        ],
+        # Has a fat edge cap but less internal marbling than ribeye.
+        # Sous vide at 54-55°C (like sirloin, not 57°C like ribeye).
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=104,
@@ -806,6 +830,16 @@ BEEF_STEAKS = [
             DONENESS_MEDIUM_WELL,
             DONENESS_WELL_DONE,
         ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+            CookingMethod.CHARCOAL_GRILL,
+            CookingMethod.AIR_FRYER,
+        ],
+        # Cook to the TENDERLOIN side temperature — the smaller, more delicate piece.
+        # The sirloin side will be slightly more done at 54°C but that is acceptable.
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=105,
@@ -824,6 +858,18 @@ BEEF_STEAKS = [
             DONENESS_MEDIUM,
             DONENESS_MEDIUM_WELL,
         ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.PAN_FRY,
+            CookingMethod.GRILL,
+            CookingMethod.CHARCOAL_GRILL,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.SOUS_VIDE,
+        ],
+        # Fibrous working muscle — best at medium-rare. Mexican carne asada tradition
+        # also confirms 54-57°C. Italian tagliata: medium-rare.
+        # Beyond medium this cut becomes tough very quickly.
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=106,
@@ -841,6 +887,16 @@ BEEF_STEAKS = [
             DONENESS_MEDIUM_RARE,
             DONENESS_MEDIUM,
         ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.PAN_FRY,
+            CookingMethod.GRILL,
+            CookingMethod.CHARCOAL_GRILL,
+        ],
+        # Diaphragm muscle — more fat than flank, slightly more forgiving.
+        # Mexican carne asada + fajitas tradition: medium-rare, never well-done.
+        # ThermoWorks carne asada guide confirms 54-57°C optimal.
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=107,
@@ -860,6 +916,18 @@ BEEF_STEAKS = [
             DONENESS_MEDIUM_WELL,
             DONENESS_WELL_DONE,
         ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.PAN_FRY,
+            CookingMethod.GRILL,
+            CookingMethod.CHARCOAL_GRILL,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.SOUS_VIDE,
+            CookingMethod.AIR_FRYER,
+        ],
+        # Well-marbled shoulder blade cut — good intramuscular fat.
+        # Medium-rare universally recommended; tender by nature.
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=108,
@@ -877,6 +945,17 @@ BEEF_STEAKS = [
             DONENESS_MEDIUM_RARE,
             DONENESS_MEDIUM,
         ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.PAN_FRY,
+            CookingMethod.GRILL,
+            CookingMethod.CHARCOAL_GRILL,
+        ],
+        # Diaphragm-attached muscle — intense mineral/iron flavour. French onglet.
+        # French bistro absolute ceiling: NEVER exceed 55°C. Above this the mineral
+        # flavour turns metallic/livery and texture becomes tough.
+        # Research: French Cooking Academy, Swaledale journal, Grid Iron Meat.
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=109,
@@ -896,6 +975,17 @@ BEEF_STEAKS = [
             DONENESS_MEDIUM_WELL,
             DONENESS_WELL_DONE,
         ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.GRILL,
+            CookingMethod.CHARCOAL_GRILL,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.SMOKER,
+            CookingMethod.SOUS_VIDE,
+        ],
+        # California Santa Maria BBQ tradition: grilled/smoked, medium-rare (54-57°C).
+        # Also good reverse-seared from oven. Smoker tri-tip: 54-60°C (not pulled).
+        recommended_doneness="medium_rare",
     ),
     # Additional cuts from MEATER app reference (2025)
     # NOTE: Temperature values from USDA/FDA guidelines, structure from MEATER
@@ -917,6 +1007,22 @@ BEEF_STEAKS = [
             DONENESS_MEDIUM_WELL,
             DONENESS_WELL_DONE,
         ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.GRILL,
+            CookingMethod.CHARCOAL_GRILL,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.SOUS_VIDE,
+        ],
+        # Bone-in ribeye — same fat profile. Sous vide 57°C like ribeye.
+        # The long bone conducts heat, making reverse-sear or sous vide preferred.
+        recommended_doneness="medium_rare",
+        method_temperature_ranges={
+            "sous_vide": [_SV_RARE, _SV_MEDIUM_RARE_MARBLED, _SV_MEDIUM],
+        },
+        method_doneness={
+            "sous_vide": "medium_rare",
+        },
     ),
     MeatCut(
         id=111,
@@ -936,6 +1042,18 @@ BEEF_STEAKS = [
             DONENESS_MEDIUM_WELL,
             DONENESS_WELL_DONE,
         ],
+        supported_methods=[
+            CookingMethod.CHARCOAL_GRILL,
+            CookingMethod.GRILL,
+            CookingMethod.PAN_SEAR,
+            CookingMethod.OVEN_ROAST,
+        ],
+        # DIFFERENT from other steaks: Brazilian "ao ponto" = 57-63°C (our MEDIUM range).
+        # The thick fat cap needs to render to release flavour into the lean rump meat.
+        # At 54°C (medium_rare) the fat has not fully rendered — ao ponto at 60°C is
+        # the authentic churrasco experience and enhances the cut's unique character.
+        # Research: Estadão Paladar, receitaspraticas.com.br, umchurras.com.br.
+        recommended_doneness="medium",
     ),
 ]
 
