@@ -653,7 +653,9 @@ BEEF_STEAKS = [
             CookingMethod.SOUS_VIDE,
             CookingMethod.AIR_FRYER,
             CookingMethod.GRILL,
+            CookingMethod.CHARCOAL_GRILL,
         ],
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=101,
