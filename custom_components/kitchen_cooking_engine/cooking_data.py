@@ -808,9 +808,16 @@ BEEF_STEAKS = [
             CookingMethod.GRILL,
             CookingMethod.CHARCOAL_GRILL,
         ],
-        # Has a fat edge cap but less internal marbling than ribeye.
-        # Sous vide at 54-55°C (like sirloin, not 57°C like ribeye).
+        # Fat cap on edge benefits from 57°C sous vide (renders the cap).
+        # Pan sear: render fat cap on edge first, then sear both faces.
+        # Research: Anova/Kenji confirm 57°C for fattier strips (same as ribeye logic).
         recommended_doneness="medium_rare",
+        method_temperature_ranges={
+            "sous_vide": [_SV_RARE, _SV_MEDIUM_RARE_MARBLED, _SV_MEDIUM],
+        },
+        method_doneness={
+            "sous_vide": "medium_rare",
+        },
     ),
     MeatCut(
         id=104,
