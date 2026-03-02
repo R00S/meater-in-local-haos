@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 01 Mar 2026, 13:59 CET
+ * AUTO-GENERATED: 02 Mar 2026, 11:50 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 01 Mar 2026, 13:59 CET
+// Last generated: 02 Mar 2026, 11:50 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -132,6 +132,14 @@ const DONENESS_OPTIONS = {
     "description": "Dark meat optimal texture",
     "temp_c": 77,
     "temp_f": 170
+  },
+  "confit": {
+    "value": "confit",
+    "name": "Confit",
+    "icon": "🔥",
+    "description": "Fall-off-bone tender, traditionally confited",
+    "temp_c": 88,
+    "temp_f": 190
   },
   "tender": {
     "value": "tender",
@@ -1060,7 +1068,7 @@ const MEAT_CATEGORIES = {
                 "id": 342,
                 "name": "Duck Leg Confit",
                 "doneness": [
-                  "dark_meat_optimal"
+                  "confit"
                 ]
               }
             ]
@@ -11988,6 +11996,7 @@ class KitchenCookingPanel extends LitElement {
         description: tr.description,
         temp_c: tr.target_temp_c,
         temp_f: tr.target_temp_f,
+        safety_level: tr.safety_level || null,
       }));
     }
     
@@ -14051,6 +14060,7 @@ class KitchenCookingPanel extends LitElement {
                   <span class="icon">${opt.icon}</span>
                   ${opt.name}
                   ${opt.value === recommendedDoneness ? html`<span class="star">⭐</span>` : ''}
+                  ${opt.safety_level ? html`<span class="safety-dot ${opt.safety_level}" title="${opt.safety_level === 'safe' ? '✅ Meets food safety guidelines' : opt.safety_level === 'caution' ? '⚠️ Below safety guidelines – widely practiced' : '⛔ Well below safety guidelines'}"></span>` : ''}
                   <span class="temp-hint">${opt.temp_c}°C</span>
                 </button>
               `)}
@@ -19524,7 +19534,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "187";
+const PANEL_VERSION = "188";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

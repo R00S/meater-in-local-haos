@@ -546,6 +546,7 @@ class KitchenCookingPanel extends LitElement {
         description: tr.description,
         temp_c: tr.target_temp_c,
         temp_f: tr.target_temp_f,
+        safety_level: tr.safety_level || null,
       }));
     }
     
@@ -2609,6 +2610,7 @@ class KitchenCookingPanel extends LitElement {
                   <span class="icon">${opt.icon}</span>
                   ${opt.name}
                   ${opt.value === recommendedDoneness ? html`<span class="star">⭐</span>` : ''}
+                  ${opt.safety_level ? html`<span class="safety-dot ${opt.safety_level}" title="${opt.safety_level === 'safe' ? '✅ Meets food safety guidelines' : opt.safety_level === 'caution' ? '⚠️ Below safety guidelines – widely practiced' : '⛔ Well below safety guidelines'}"></span>` : ''}
                   <span class="temp-hint">${opt.temp_c}°C</span>
                 </button>
               `)}

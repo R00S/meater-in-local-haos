@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.2.9 - Add ability to adjust target temperature during active cooks
+Last Change: v0.5.3.0 - Safety level indicators on doneness selector; preferred cooking temps for whole birds; click-to-start MEATER cook history
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -66,7 +66,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.2.9"
+__version__ = "0.5.3.0"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

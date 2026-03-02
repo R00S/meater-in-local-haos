@@ -253,6 +253,9 @@ class TemperatureRange:
     # Hex colors for gradient display (from MEATER app)
     start_hex: Optional[str] = None
     end_hex: Optional[str] = None
+    # Safety level for UI colour indicator: "safe" (green), "caution" (yellow), "unsafe" (red)
+    # Derived from usda_safe if not explicitly set.
+    safety_level: Optional[str] = None
 
 
 @dataclass
@@ -325,6 +328,7 @@ DONENESS_RARE = TemperatureRange(
     usda_safe=False,
     start_hex="#FF0000",
     end_hex="#FF3333",
+    safety_level="unsafe",
 )
 
 DONENESS_MEDIUM_RARE = TemperatureRange(
@@ -341,6 +345,7 @@ DONENESS_MEDIUM_RARE = TemperatureRange(
     is_meater_recommended=True,
     start_hex="#FF3333",
     end_hex="#FF6666",
+    safety_level="caution",
 )
 
 DONENESS_MEDIUM = TemperatureRange(
@@ -356,6 +361,7 @@ DONENESS_MEDIUM = TemperatureRange(
     usda_safe=False,
     start_hex="#FF6666",
     end_hex="#FF9999",
+    safety_level="caution",
 )
 
 DONENESS_MEDIUM_WELL = TemperatureRange(
@@ -371,6 +377,7 @@ DONENESS_MEDIUM_WELL = TemperatureRange(
     usda_safe=True,
     start_hex="#FF9999",
     end_hex="#FFCCCC",
+    safety_level="safe",
 )
 
 DONENESS_WELL_DONE = TemperatureRange(
@@ -386,6 +393,7 @@ DONENESS_WELL_DONE = TemperatureRange(
     usda_safe=True,
     start_hex="#FFCCCC",
     end_hex="#FFFFFF",
+    safety_level="safe",
 )
 
 # Pulled/Braised - for collagen breakdown
@@ -402,6 +410,7 @@ DONENESS_PULLED = TemperatureRange(
     usda_safe=True,
     start_hex="#8B4513",
     end_hex="#A0522D",
+    safety_level="safe",
 )
 
 # Pork specific - USDA minimum is 145°F with rest
@@ -419,6 +428,7 @@ PORK_MEDIUM = TemperatureRange(
     is_meater_recommended=True,
     start_hex="#FFB6C1",
     end_hex="#FFC0CB",
+    safety_level="safe",
 )
 
 PORK_WELL_DONE = TemperatureRange(
@@ -434,6 +444,7 @@ PORK_WELL_DONE = TemperatureRange(
     usda_safe=True,
     start_hex="#FFC0CB",
     end_hex="#FFFFFF",
+    safety_level="safe",
 )
 
 # Poultry - must be cooked through
@@ -451,6 +462,7 @@ POULTRY_SAFE = TemperatureRange(
     is_meater_recommended=True,
     start_hex="#FFFACD",
     end_hex="#FFFFFF",
+    safety_level="safe",
 )
 
 # Dark meat poultry - higher temp for better texture
@@ -468,6 +480,7 @@ POULTRY_DARK_MEAT = TemperatureRange(
     is_meater_recommended=True,
     start_hex="#DEB887",
     end_hex="#D2B48C",
+    safety_level="safe",
 )
 
 # Fish temperatures
@@ -484,6 +497,7 @@ FISH_MEDIUM_RARE = TemperatureRange(
     usda_safe=False,
     start_hex="#FFA07A",
     end_hex="#FA8072",
+    safety_level="caution",
 )
 
 FISH_MEDIUM = TemperatureRange(
@@ -500,6 +514,7 @@ FISH_MEDIUM = TemperatureRange(
     is_meater_recommended=True,
     start_hex="#FA8072",
     end_hex="#E9967A",
+    safety_level="caution",
 )
 
 FISH_WELL_DONE = TemperatureRange(
@@ -515,6 +530,7 @@ FISH_WELL_DONE = TemperatureRange(
     usda_safe=True,
     start_hex="#E9967A",
     end_hex="#FFFFFF",
+    safety_level="safe",
 )
 
 # Tuna specific - often served very rare
@@ -532,9 +548,10 @@ TUNA_RARE = TemperatureRange(
     is_meater_recommended=True,
     start_hex="#DC143C",
     end_hex="#FF0000",
+    safety_level="unsafe",
 )
 
-# Duck breast - often served medium-rare
+# Duck breast - often served medium-rare (duck breast behaves like red meat)
 DUCK_MEDIUM_RARE = TemperatureRange(
     id=40,
     name="medium_rare",
@@ -549,6 +566,7 @@ DUCK_MEDIUM_RARE = TemperatureRange(
     is_meater_recommended=True,
     start_hex="#8B0000",
     end_hex="#B22222",
+    safety_level="caution",
 )
 
 DUCK_MEDIUM = TemperatureRange(
@@ -564,6 +582,25 @@ DUCK_MEDIUM = TemperatureRange(
     usda_safe=False,
     start_hex="#B22222",
     end_hex="#CD5C5C",
+    safety_level="caution",
+)
+
+# Duck leg confit - slow-cooked to collagen breakdown temp (traditional French method)
+DUCK_CONFIT = TemperatureRange(
+    id=42,
+    name="confit",
+    description="Fall-off-bone tender, traditionally confited",
+    target_temp_c=88,
+    target_temp_f=190,
+    min_temp_c=85,
+    min_temp_f=185,
+    max_temp_c=93,
+    max_temp_f=200,
+    usda_safe=True,
+    is_meater_recommended=True,
+    start_hex="#CD853F",
+    end_hex="#A0522D",
+    safety_level="safe",
 )
 
 
@@ -1079,6 +1116,7 @@ BEEF_GROUND = [
                 max_temp_f=170,
                 usda_safe=True,
                 is_meater_recommended=True,
+                safety_level="safe",
             ),
         ],
     ),
@@ -1106,6 +1144,7 @@ BEEF_GROUND = [
                 max_temp_f=170,
                 usda_safe=True,
                 is_meater_recommended=True,
+                safety_level="safe",
             ),
         ],
     ),
@@ -1189,6 +1228,7 @@ BEEF_OFFAL = [
                 max_temp_c=66,
                 max_temp_f=150,
                 usda_safe=False,
+                safety_level="caution",
             ),
             DONENESS_WELL_DONE,
         ],
@@ -1359,6 +1399,7 @@ PORK_ROASTS = [
                 max_temp_c=95,
                 max_temp_f=203,
                 usda_safe=True,
+                safety_level="safe",
             ),
         ],
     ),
@@ -1400,6 +1441,7 @@ PORK_ROASTS = [
                 max_temp_f=145,
                 usda_safe=True,
                 is_meater_recommended=True,
+                safety_level="safe",
             ),
         ],
     ),
@@ -1551,6 +1593,7 @@ PORK_HAM = [
                 max_temp_f=145,
                 usda_safe=True,
                 is_meater_recommended=True,
+                safety_level="safe",
             ),
         ],
     ),
@@ -2029,7 +2072,7 @@ DUCK = [
         rest_time_min=5,
         rest_time_max=10,
         carryover_temp_c=3,
-        temperature_ranges=[POULTRY_DARK_MEAT],
+        temperature_ranges=[DUCK_CONFIT],
     ),
 ]
 
@@ -2298,6 +2341,7 @@ SHELLFISH = [
                 max_temp_f=120,
                 usda_safe=False,
                 is_meater_recommended=True,
+                safety_level="caution",
             ),
             FISH_WELL_DONE,
         ],
@@ -3479,6 +3523,7 @@ VEG_TENDER = TemperatureRange(
     is_meater_recommended=True,
     start_hex="#228B22",
     end_hex="#32CD32",
+    safety_level="safe",
 )
 
 VEG_CRISP_TENDER = TemperatureRange(
@@ -3494,6 +3539,7 @@ VEG_CRISP_TENDER = TemperatureRange(
     usda_safe=True,
     start_hex="#32CD32",
     end_hex="#90EE90",
+    safety_level="safe",
 )
 
 VEG_CARAMELIZED = TemperatureRange(
@@ -3509,6 +3555,7 @@ VEG_CARAMELIZED = TemperatureRange(
     usda_safe=True,
     start_hex="#DAA520",
     end_hex="#FFD700",
+    safety_level="safe",
 )
 
 VEG_CHARRED = TemperatureRange(
@@ -3524,6 +3571,7 @@ VEG_CHARRED = TemperatureRange(
     usda_safe=True,
     start_hex="#696969",
     end_hex="#2F4F4F",
+    safety_level="safe",
 )
 
 ROOT_VEGETABLES = [
