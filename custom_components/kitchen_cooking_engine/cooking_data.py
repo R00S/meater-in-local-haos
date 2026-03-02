@@ -627,6 +627,56 @@ DUCK_CONFIT = TemperatureRange(
 # BEEF CATEGORY
 # ============================================================================
 
+# Sous vide temperature ranges for high-marbled beef cuts (ribeye, tomahawk, etc.)
+# At 57°C the intramuscular fat renders silkier over the 1-3 hour bath than at 54°C.
+# Research: Kenji/Anova, ChefSteps, Heston Blumenthal, Douglas Baldwin.
+_SV_RARE = TemperatureRange(
+    id=1,
+    name="rare",
+    description="Cool red, maximum fat texture — ideal for A5 wagyu",
+    target_temp_c=50,
+    target_temp_f=122,
+    min_temp_c=46,
+    min_temp_f=115,
+    max_temp_c=52,
+    max_temp_f=126,
+    usda_safe=False,
+    start_hex="#FF0000",
+    end_hex="#FF3333",
+    safety_level="unsafe",
+)
+_SV_MEDIUM_RARE_MARBLED = TemperatureRange(
+    id=2,
+    name="medium_rare",
+    description="Silky rendered fat, warm pink throughout — optimal for marbled cuts",
+    target_temp_c=57,
+    target_temp_f=135,
+    min_temp_c=54,
+    min_temp_f=130,
+    max_temp_c=60,
+    max_temp_f=140,
+    usda_safe=False,
+    is_meater_recommended=True,
+    start_hex="#FF3333",
+    end_hex="#FF6666",
+    safety_level="caution",
+)
+_SV_MEDIUM = TemperatureRange(
+    id=3,
+    name="medium",
+    description="Rosy pink, fully rendered fat",
+    target_temp_c=60,
+    target_temp_f=140,
+    min_temp_c=57,
+    min_temp_f=135,
+    max_temp_c=63,
+    max_temp_f=145,
+    usda_safe=False,
+    start_hex="#FF6666",
+    end_hex="#FF9999",
+    safety_level="caution",
+)
+
 BEEF_STEAKS = [
     MeatCut(
         id=100,
@@ -656,6 +706,14 @@ BEEF_STEAKS = [
             CookingMethod.CHARCOAL_GRILL,
         ],
         recommended_doneness="medium_rare",
+        # Sous vide: marbled fat renders silkier at 57°C than 54°C over 1-3 h bath.
+        # Research: Kenji/Anova, ChefSteps, Heston Blumenthal, Douglas Baldwin.
+        method_temperature_ranges={
+            "sous_vide": [_SV_RARE, _SV_MEDIUM_RARE_MARBLED, _SV_MEDIUM],
+        },
+        method_doneness={
+            "sous_vide": "medium_rare",
+        },
     ),
     MeatCut(
         id=101,
