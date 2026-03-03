@@ -1,5 +1,12 @@
 # Pork Belly × Air Fryer — Recipe Temperature Research
 
+> ⚠️ **STATUS: SOURCE RECIPES INCOMPLETE**
+> One or more source recipes in this leaf are in summary / bullet-point format
+> rather than the full collected format required by the ToR. The Temperature
+> consensus, Data applied, and Summary sections are based on incomplete data
+> and should be treated as **provisional only**. This leaf must be rewritten
+> to full ToR standard before its conclusions can be used.
+
 ## Cut profile
 Air frying pork belly strips or slabs (boneless, skin-on, 1-2 cm thick slices or
 small blocks) is increasingly popular for producing crispy rind without the complexity

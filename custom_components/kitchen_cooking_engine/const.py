@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.3.0 - Safety level indicators on doneness selector; preferred cooking temps for whole birds; click-to-start MEATER cook history
+Last Change: v0.5.3.1 - Add 5 missing pork belly cooking methods; ToR verification protocol and method-coverage instructions
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "202"
+PANEL_VERSION = "203"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

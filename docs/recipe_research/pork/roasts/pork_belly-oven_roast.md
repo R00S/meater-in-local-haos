@@ -1,5 +1,12 @@
 # Pork Belly × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: SOURCE RECIPES INCOMPLETE**
+> One or more source recipes in this leaf are in summary / bullet-point format
+> rather than the full collected format required by the ToR. The Temperature
+> consensus, Data applied, and Summary sections are based on incomplete data
+> and should be treated as **provisional only**. This leaf must be rewritten
+> to full ToR standard before its conclusions can be used.
+
 ## Cut profile
 Pork belly is uncured fresh bacon — layers of fat and muscle from the underside of
 the pig. Roasting whole or in slabs renders the fat through prolonged heat, producing

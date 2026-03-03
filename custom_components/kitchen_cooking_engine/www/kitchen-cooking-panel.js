@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 02 Mar 2026, 13:22 CET
+ * AUTO-GENERATED: 03 Mar 2026, 16:45 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 02 Mar 2026, 13:22 CET
+// Last generated: 03 Mar 2026, 16:45 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -488,7 +488,8 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 121,
@@ -498,7 +499,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 122,
@@ -508,7 +510,8 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium"
               },
               {
                 "id": 123,
@@ -518,7 +521,8 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium"
               },
               {
                 "id": 124,
@@ -529,7 +533,8 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 125,
@@ -539,7 +544,8 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium"
               },
               {
                 "id": 126,
@@ -549,7 +555,8 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium"
               },
               {
                 "id": 127,
@@ -559,14 +566,16 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 128,
                 "name": "Chuck",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 129,
@@ -577,7 +586,8 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           },
@@ -590,28 +600,32 @@ const MEAT_CATEGORIES = {
                 "name": "Chuck Roast / Pot Roast",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 131,
                 "name": "Brisket",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 132,
                 "name": "Short Ribs",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 133,
                 "name": "Beef Shank / Osso Buco",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           },
@@ -624,28 +638,32 @@ const MEAT_CATEGORIES = {
                 "name": "Beef Burger / Ground Beef Patty",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 142,
                 "name": "Meatloaf",
                 "doneness": [
                   "done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 141,
                 "name": "Burger",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 143,
                 "name": "Meatloaf",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 144,
@@ -653,14 +671,16 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 146,
                 "name": "Tongue",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           },
@@ -674,28 +694,32 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 147,
                 "name": "Beef Tongue",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 148,
                 "name": "Beef Shin",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 149,
                 "name": "Beef Rib",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -723,7 +747,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 201,
@@ -731,7 +756,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 202,
@@ -739,7 +765,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 203,
@@ -747,7 +774,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 204,
@@ -755,7 +783,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           },
@@ -769,14 +798,16 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 211,
                 "name": "Pork Shoulder / Boston Butt",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 212,
@@ -784,7 +815,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "well_done",
                   "crispy"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 214,
@@ -792,14 +824,16 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 215,
                 "name": "Virginia Ham",
                 "doneness": [
                   "heated_through"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 213,
@@ -807,7 +841,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 216,
@@ -815,28 +850,32 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "well_done",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 217,
                 "name": "Baby Back Ribs",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 218,
                 "name": "Spare Ribs",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 219,
                 "name": "St. Louis Style Ribs",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           },
@@ -849,21 +888,24 @@ const MEAT_CATEGORIES = {
                 "name": "Baby Back Ribs",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 221,
                 "name": "Spare Ribs",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 222,
                 "name": "St. Louis Style Ribs",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           },
@@ -877,14 +919,16 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 231,
                 "name": "Cured Ham (Pre-cooked)",
                 "doneness": [
                   "heated_through"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           },
@@ -897,14 +941,16 @@ const MEAT_CATEGORIES = {
                 "name": "Pork Sausage",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 241,
                 "name": "Ground Pork",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           },
@@ -917,49 +963,56 @@ const MEAT_CATEGORIES = {
                 "name": "Pork Jowl / Guanciale",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 246,
                 "name": "Pork Cheek",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 247,
                 "name": "Pork Liver",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 248,
                 "name": "Pork Tongue",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 242,
                 "name": "Jowl",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 243,
                 "name": "Cheek",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 244,
                 "name": "Liver",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -995,7 +1048,8 @@ const MEAT_CATEGORIES = {
                 "name": "Breast",
                 "doneness": [
                   "safe"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 302,
@@ -1003,7 +1057,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 303,
@@ -1011,21 +1066,24 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 304,
                 "name": "Ground",
                 "doneness": [
                   "safe"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 305,
                 "name": "Burger",
                 "doneness": [
                   "safe"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 306,
@@ -1033,7 +1091,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           },
@@ -1046,14 +1105,16 @@ const MEAT_CATEGORIES = {
                 "name": "Chicken Breast",
                 "doneness": [
                   "safe"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 311,
                 "name": "Chicken Breast (Bone-in)",
                 "doneness": [
                   "safe"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           },
@@ -1067,7 +1128,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 321,
@@ -1075,7 +1137,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 322,
@@ -1083,7 +1146,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -1111,7 +1175,8 @@ const MEAT_CATEGORIES = {
                 "name": "Turkey Breast",
                 "doneness": [
                   "safe"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 332,
@@ -1119,7 +1184,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 333,
@@ -1127,21 +1193,24 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 334,
                 "name": "Ground",
                 "doneness": [
                   "safe"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 335,
                 "name": "Burger",
                 "doneness": [
                   "safe"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -1162,7 +1231,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "safe"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 341,
@@ -1178,7 +1248,8 @@ const MEAT_CATEGORIES = {
                 "name": "Duck Leg Confit",
                 "doneness": [
                   "confit"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -1208,7 +1279,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "safe"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 347,
@@ -1216,7 +1288,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 348,
@@ -1224,7 +1297,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -1243,28 +1317,32 @@ const MEAT_CATEGORIES = {
                 "name": "Ground Chicken",
                 "doneness": [
                   "safe"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 351,
                 "name": "Ground Turkey",
                 "doneness": [
                   "safe"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 352,
                 "name": "Chicken Burger",
                 "doneness": [
                   "safe"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 353,
                 "name": "Turkey Burger",
                 "doneness": [
                   "safe"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -1293,7 +1371,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium"
               },
               {
                 "id": 401,
@@ -1302,7 +1381,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium"
               }
             ]
           }
@@ -1323,7 +1403,8 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -1343,7 +1424,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 421,
@@ -1352,7 +1434,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 422,
@@ -1361,7 +1444,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 423,
@@ -1369,7 +1453,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 424,
@@ -1377,7 +1462,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 425,
@@ -1385,7 +1471,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 426,
@@ -1393,7 +1480,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 427,
@@ -1402,7 +1490,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium"
               }
             ]
           }
@@ -1422,7 +1511,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "just_cooked",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 431,
@@ -1430,7 +1520,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "tender",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 432,
@@ -1438,7 +1529,8 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium_rare",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -1469,7 +1561,8 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 501,
@@ -1479,14 +1572,16 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 502,
                 "name": "Lamb Shoulder",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 503,
@@ -1496,14 +1591,16 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 504,
                 "name": "Lamb Brisket",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 505,
@@ -1514,14 +1611,16 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 506,
                 "name": "Lamb Shank",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 507,
@@ -1548,7 +1647,8 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 511,
@@ -1558,7 +1658,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 512,
@@ -1568,7 +1669,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 513,
@@ -1578,7 +1680,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           },
@@ -1591,28 +1694,32 @@ const MEAT_CATEGORIES = {
                 "name": "Ground Lamb",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 521,
                 "name": "Lamb Kofta / Kebab",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 522,
                 "name": "Lamb Burger",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 514,
                 "name": "Shank",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 515,
@@ -1622,14 +1729,16 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 516,
                 "name": "Shoulder",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 517,
@@ -1639,14 +1748,16 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 523,
                 "name": "Kofta / Kebab",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -1676,7 +1787,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 601,
@@ -1685,7 +1797,8 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 602,
@@ -1694,7 +1807,8 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 603,
@@ -1703,14 +1817,16 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 604,
                 "name": "Shoulder",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -1729,14 +1845,16 @@ const MEAT_CATEGORIES = {
                 "name": "Wild Boar Chop",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 611,
                 "name": "Wild Boar Shoulder",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -1758,14 +1876,16 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 621,
                 "name": "Bison Burger",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 622,
@@ -1774,7 +1894,8 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           }
@@ -1796,7 +1917,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 631,
@@ -1805,7 +1927,8 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 612,
@@ -1814,7 +1937,8 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           }
@@ -1836,7 +1960,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 641,
@@ -1845,7 +1970,8 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           }
@@ -1867,7 +1993,8 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 651,
@@ -1876,14 +2003,16 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 632,
                 "name": "Burger",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -1904,7 +2033,8 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 661,
@@ -1913,7 +2043,8 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           }
@@ -1936,7 +2067,8 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 671,
@@ -1946,21 +2078,24 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium"
               },
               {
                 "id": 672,
                 "name": "Mutton Shoulder",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 652,
                 "name": "Shoulder",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -1981,7 +2116,8 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 681,
@@ -1990,7 +2126,8 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
-                ]
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           }
@@ -2012,7 +2149,8 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 691,
@@ -2022,21 +2160,24 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 692,
                 "name": "Goat Shoulder",
                 "doneness": [
                   "pulled"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 682,
                 "name": "Leg Roast",
                 "doneness": [
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -19678,7 +19819,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "202";
+const PANEL_VERSION = "203";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

@@ -1,5 +1,12 @@
 # Pork Belly × Braise — Recipe Temperature Research
 
+> ⚠️ **STATUS: SOURCE RECIPES INCOMPLETE**
+> One or more source recipes in this leaf are in summary / bullet-point format
+> rather than the full collected format required by the ToR. The Temperature
+> consensus, Data applied, and Summary sections are based on incomplete data
+> and should be treated as **provisional only**. This leaf must be rewritten
+> to full ToR standard before its conclusions can be used.
+
 ## Cut profile
 Braising pork belly — submerging it partially in liquid and cooking low and slow
 (120-140°C / 250-285°F oven or stovetop) — produces a different result from roasting:

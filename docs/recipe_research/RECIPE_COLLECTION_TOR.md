@@ -347,6 +347,164 @@ no hedging, explains the cut-method fit and the key reason in one breath.
 
 ---
 
+## How to research a cut
+
+Use this protocol every time you are tasked with creating leaves for a cut that
+has not yet been fully researched. Work through each step **before writing a
+single leaf file**.
+
+### Step 1 — Check what cooking_data.py currently lists
+
+Open `cooking_data.py` and locate the `MeatCut` entry for this cut. Note every
+method in `supported_methods`. These are the leaves already registered in the
+engine — but they are **not necessarily complete**.
+
+### Step 2 — Research ALL real-world cooking methods for this cut
+
+Do not stop at what `cooking_data.py` currently lists. Research the cut across
+culinary traditions to find every cooking method for which **credible,
+human-created recipes exist**. Ask:
+
+- What methods appear in named cookbooks for this cut?
+- What methods are used in Asian, European, American, and Southern-hemisphere
+  traditions for this cut?
+- What methods are used in restaurant kitchens vs. home kitchens?
+- What methods appear in respected food media (Serious Eats, ATK, ThermoWorks)?
+
+**A method missing from `supported_methods` is not proof it does not exist —
+it is a gap that requires investigation.** For a cut like pork belly, smoker,
+slow cooker, sous vide, pan fry, and grill are all well-documented in multiple
+traditions and would be discovered by honest research.
+
+### Step 3 — For every method you find real recipes for
+
+1. If the method is already in `supported_methods`: create the leaf file for it.
+2. If the method is **not** in `supported_methods`: add it to `cooking_data.py`
+   first, then create the leaf file.
+
+Do not create a leaf without the corresponding `cooking_data.py` entry, and do
+not add a `cooking_data.py` entry without the leaf.
+
+### Step 4 — Document the method inventory before writing any leaf
+
+As the first act of your research session, write down:
+- Which methods are already in `cooking_data.py`
+- Which additional methods you found during Step 2
+- Which methods (if any) produced no credible recipe after thorough search
+
+Only then begin writing leaves. This prevents the failure mode of writing three
+leaves and only later discovering five more are needed.
+
+---
+
+## How to verify an existing leaf
+
+Use this protocol every time you open an existing leaf to assess, update, or
+draw conclusions from it. Work through each step **in order**. If a step fails,
+**stop and fix the deficiency before proceeding** — conclusions drawn from a
+leaf with step failures are provisional at best and invalid at worst.
+
+### Verification Step 1 — Confirm file structure
+
+- [ ] File is named `{cut_name}-{cooking_method}.md`
+- [ ] All mandatory sections are present in the correct order:
+  Cut profile → Source recipes → Temperature consensus →
+  What makes this method special → Data applied to cooking_data.py → Summary
+- [ ] File covers exactly one cut × one method (no combined-method content)
+
+### Verification Step 2 — Confirm each source recipe is fully collected (GATE)
+
+This is the most important gate. A summary or bullet-point description is **not**
+a collected recipe. An entry that looks like this:
+
+```
+- **Method**: Score, salt, roast 150°C for 3 hours.
+- **Target**: **80°C**
+- **Note**: Low and slow is key.
+```
+
+is a temperature-only bullet point. It is explicitly forbidden by this ToR and
+cannot serve as a source recipe. Check every source recipe against **all** of
+the following:
+
+- [ ] Attribution line present: `**Source**: {URL or bibliographic reference}`
+- [ ] Header line present: `**Serves**: N · **Prep**: N min · **Cook**: N–N min · **Rest**: N min`
+- [ ] `**Ingredients**` section present with quantities for every non-trivial item
+- [ ] Numbered `**Method**` steps (not bullet points)
+- [ ] Probe insert step: states where to insert the probe, at what point in the
+  cook, and what to avoid (bone, fat pocket, etc.). **Exception for sous vide:**
+  a probe cannot be inserted during a sealed-bag cook; in that case the method
+  must state that the circulator temperature is the cook target and note when
+  post-bath temperature verification may be done.
+- [ ] Bolded pull temperature as a dedicated step: `**Pull at N°C** (N°F)`
+- [ ] Bolded final serving temperature: `Final serving temperature: **N°C / N°F**`
+- [ ] `---` horizontal rule after the recipe
+
+**If any recipe in the leaf fails these checks:**
+
+The leaf's Temperature consensus, Data applied, and Summary sections are based
+on incomplete data. Add the status notice below immediately after the file's
+title line, and do not treat the leaf's conclusions as authoritative until all
+recipes are fully collected.
+
+```markdown
+> ⚠️ **STATUS: SOURCE RECIPES INCOMPLETE**
+> One or more source recipes in this leaf are in summary / bullet-point format
+> rather than the full collected format required by the ToR. The Temperature
+> consensus, Data applied, and Summary sections are based on incomplete data
+> and should be treated as **provisional only**. This leaf must be rewritten
+> to full ToR standard before its conclusions can be used.
+```
+
+### Verification Step 3 — Confirm source diversity and quality
+
+Only proceed here if Step 2 passed for **all** recipes.
+
+- [ ] 4–6 source recipes are present (summaries that fail Step 2 do not count)
+- [ ] Every source is human-created (no AI-generated or AI-assisted content)
+- [ ] No two sources share the same national or regional culinary tradition
+- [ ] Sources were chosen to reveal temperature disagreement, not enforce consensus
+- [ ] Every source is from an acceptable type (cookbook, named chef, named food
+  media — NOT anonymous aggregator, NOT government safety chart)
+
+### Verification Step 4 — Confirm temperature consensus validity
+
+Only proceed here if Steps 2 and 3 passed.
+
+- [ ] Temperature consensus table is present and covers all source recipes
+- [ ] Text states the full observed range in °C (lowest to highest)
+- [ ] Text maps the range to `cooking_data.py` doneness options
+- [ ] Text explains what drives variation; divergence is treated as the finding,
+  not as an error to resolve
+- [ ] `recommended_doneness` key is identified with rationale
+
+### Verification Step 5 — Confirm summary and coding note
+
+- [ ] `## What makes this method special` is present (3–6 sentences, physics and
+  flavour chemistry — not preferences)
+- [ ] `## Data applied to cooking_data.py` bullet list is present and actionable
+- [ ] `## Summary` is present, ≤4 sentences, explains cut-method fit in plain language
+- [ ] Summary does not merely restate the temperature consensus numbers
+- [ ] No synthesised composite recipe exists in the file
+- [ ] No `## Full Recipe` section exists that is not attributed to a source
+
+### Verification Step 6 — Confirm method coverage for the cut
+
+- [ ] Open `cooking_data.py` and list all methods currently in `supported_methods`
+  for this cut.
+- [ ] Ask: are there well-documented culinary traditions that use this cut with a
+  method NOT on that list? Check cookbooks, named chefs, respected food media.
+- [ ] For every additional method found with credible recipes: add the method to
+  `supported_methods` in `cooking_data.py` AND create the corresponding leaf file.
+- [ ] If no additional methods are found after genuine research: note this in your
+  session log and proceed.
+
+**This step must be performed even when you are verifying an existing leaf, not
+just when creating new leaves.** Missing methods in `cooking_data.py` are a data
+quality failure, and they are only discovered by actually doing the research.
+
+---
+
 ## Leaf completion checklist
 
 Before a leaf is committed, verify:
