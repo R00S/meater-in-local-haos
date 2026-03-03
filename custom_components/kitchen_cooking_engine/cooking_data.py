@@ -1442,6 +1442,10 @@ BEEF_GROUND = [
                 safety_level="safe",
             ),
         ],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
     ),
     # Additional ground/misc beef cuts from frontend merge
     MeatCut(
@@ -1456,6 +1460,12 @@ BEEF_GROUND = [
         rest_time_max=5,
         carryover_temp_c=2,
         temperature_ranges=[DONENESS_WELL_DONE],
+        supported_methods=[
+            CookingMethod.GRILL,
+            CookingMethod.PAN_FRY,
+            CookingMethod.AIR_FRYER,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=143,
@@ -1469,6 +1479,10 @@ BEEF_GROUND = [
         rest_time_max=10,
         carryover_temp_c=3,
         temperature_ranges=[DONENESS_WELL_DONE],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=144,
@@ -1482,6 +1496,11 @@ BEEF_GROUND = [
         rest_time_max=5,
         carryover_temp_c=2,
         temperature_ranges=[DONENESS_MEDIUM, DONENESS_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.PAN_SEAR,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=146,
@@ -1495,6 +1514,11 @@ BEEF_GROUND = [
         rest_time_max=15,
         carryover_temp_c=3,
         temperature_ranges=[DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+        ],
+        recommended_doneness="well_done",
     ),
 ]
 
@@ -1563,6 +1587,11 @@ BEEF_OFFAL = [
         rest_time_max=20,
         carryover_temp_c=3,
         temperature_ranges=[DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=149,
@@ -1576,6 +1605,12 @@ BEEF_OFFAL = [
         rest_time_max=20,
         carryover_temp_c=5,
         temperature_ranges=[DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.SMOKER,
+            CookingMethod.BRAISE,
+        ],
+        recommended_doneness="well_done",
     ),
 ]
 
@@ -1804,6 +1839,10 @@ PORK_ROASTS = [
                 safety_level="safe",
             ),
         ],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
     ),
     # Additional pork roasts from frontend merge
     MeatCut(
@@ -1818,6 +1857,10 @@ PORK_ROASTS = [
         rest_time_max=30,
         carryover_temp_c=8,
         temperature_ranges=[PORK_MEDIUM, PORK_WELL_DONE],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=216,
@@ -1831,6 +1874,12 @@ PORK_ROASTS = [
         rest_time_max=20,
         carryover_temp_c=5,
         temperature_ranges=[PORK_WELL_DONE, PORK_WELL_DONE],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.BRAISE,
+            CookingMethod.AIR_FRYER,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=217,
@@ -1844,6 +1893,12 @@ PORK_ROASTS = [
         rest_time_max=10,
         carryover_temp_c=3,
         temperature_ranges=[DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+            CookingMethod.SMOKER,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=218,
@@ -1857,6 +1912,12 @@ PORK_ROASTS = [
         rest_time_max=10,
         carryover_temp_c=3,
         temperature_ranges=[DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+            CookingMethod.SMOKER,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=219,
@@ -1870,6 +1931,12 @@ PORK_ROASTS = [
         rest_time_max=10,
         carryover_temp_c=3,
         temperature_ranges=[DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+            CookingMethod.SMOKER,
+        ],
+        recommended_doneness="well_done",
     ),
 ]
 
@@ -2094,6 +2161,11 @@ PORK_OFFAL = [
         rest_time_max=20,
         carryover_temp_c=5,
         temperature_ranges=[DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+        ],
+        recommended_doneness="well_done",
     ),
     # Additional pork offal from frontend merge
     MeatCut(
@@ -2108,6 +2180,12 @@ PORK_OFFAL = [
         rest_time_max=10,
         carryover_temp_c=3,
         temperature_ranges=[DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.BRAISE,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=243,
@@ -2121,6 +2199,11 @@ PORK_OFFAL = [
         rest_time_max=15,
         carryover_temp_c=3,
         temperature_ranges=[DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=244,
@@ -2134,6 +2217,11 @@ PORK_OFFAL = [
         rest_time_max=5,
         carryover_temp_c=2,
         temperature_ranges=[PORK_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.PAN_SEAR,
+        ],
+        recommended_doneness="well_done",
     ),
 ]
 
@@ -2195,6 +2283,13 @@ CHICKEN_WHOLE = [
         rest_time_max=5,
         carryover_temp_c=3,
         temperature_ranges=[POULTRY_SAFE],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+            CookingMethod.AIR_FRYER,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=302,
@@ -2208,6 +2303,13 @@ CHICKEN_WHOLE = [
         rest_time_max=10,
         carryover_temp_c=4,
         temperature_ranges=[POULTRY_SAFE, POULTRY_DARK_MEAT],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+            CookingMethod.AIR_FRYER,
+            CookingMethod.PAN_FRY,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=303,
@@ -2221,6 +2323,12 @@ CHICKEN_WHOLE = [
         rest_time_max=10,
         carryover_temp_c=4,
         temperature_ranges=[POULTRY_SAFE, POULTRY_DARK_MEAT],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+            CookingMethod.AIR_FRYER,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=304,
@@ -2234,6 +2342,11 @@ CHICKEN_WHOLE = [
         rest_time_max=5,
         carryover_temp_c=2,
         temperature_ranges=[POULTRY_SAFE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=305,
@@ -2247,6 +2360,12 @@ CHICKEN_WHOLE = [
         rest_time_max=5,
         carryover_temp_c=2,
         temperature_ranges=[POULTRY_SAFE],
+        supported_methods=[
+            CookingMethod.GRILL,
+            CookingMethod.PAN_FRY,
+            CookingMethod.AIR_FRYER,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=306,
@@ -2260,6 +2379,12 @@ CHICKEN_WHOLE = [
         rest_time_max=5,
         carryover_temp_c=2,
         temperature_ranges=[POULTRY_SAFE, POULTRY_DARK_MEAT],
+        supported_methods=[
+            CookingMethod.AIR_FRYER,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="well_done",
     ),
 ]
 
@@ -3151,6 +3276,12 @@ FISH_ADDITIONAL = [
         rest_time_max=5,
         carryover_temp_c=2,
         temperature_ranges=[FISH_MEDIUM_RARE, FISH_MEDIUM, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="medium",
     ),
     MeatCut(
         id=440,
@@ -3164,6 +3295,12 @@ FISH_ADDITIONAL = [
         rest_time_max=2,
         carryover_temp_c=2,
         temperature_ranges=[FISH_MEDIUM, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.STEAM,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=450,
@@ -3177,6 +3314,11 @@ FISH_ADDITIONAL = [
         rest_time_max=2,
         carryover_temp_c=2,
         temperature_ranges=[TUNA_RARE, FISH_MEDIUM_RARE, FISH_MEDIUM],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=451,
@@ -3190,6 +3332,11 @@ FISH_ADDITIONAL = [
         rest_time_max=2,
         carryover_temp_c=2,
         temperature_ranges=[TUNA_RARE, FISH_MEDIUM_RARE, FISH_MEDIUM],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=460,
@@ -3203,6 +3350,11 @@ FISH_ADDITIONAL = [
         rest_time_max=2,
         carryover_temp_c=2,
         temperature_ranges=[LOBSTER_TENDER, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.GRILL,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=461,
@@ -3216,6 +3368,12 @@ FISH_ADDITIONAL = [
         rest_time_max=5,
         carryover_temp_c=3,
         temperature_ranges=[LOBSTER_TENDER, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.STEAM,
+            CookingMethod.GRILL,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=462,
@@ -3229,6 +3387,11 @@ FISH_ADDITIONAL = [
         rest_time_max=2,
         carryover_temp_c=2,
         temperature_ranges=[LOBSTER_TENDER, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.STEAM,
+            CookingMethod.BRAISE,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=470,
@@ -3242,6 +3405,11 @@ FISH_ADDITIONAL = [
         rest_time_max=5,
         carryover_temp_c=2,
         temperature_ranges=[FISH_MEDIUM, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=480,
@@ -3255,6 +3423,12 @@ FISH_ADDITIONAL = [
         rest_time_max=2,
         carryover_temp_c=2,
         temperature_ranges=[FISH_MEDIUM_RARE, FISH_MEDIUM, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="medium",
     ),
     MeatCut(
         id=481,
@@ -3268,6 +3442,11 @@ FISH_ADDITIONAL = [
         rest_time_max=5,
         carryover_temp_c=3,
         temperature_ranges=[FISH_MEDIUM_RARE, FISH_MEDIUM, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=490,
@@ -3281,6 +3460,12 @@ FISH_ADDITIONAL = [
         rest_time_max=2,
         carryover_temp_c=2,
         temperature_ranges=[FISH_MEDIUM, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.AIR_FRYER,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=491,
@@ -3294,6 +3479,11 @@ FISH_ADDITIONAL = [
         rest_time_max=5,
         carryover_temp_c=3,
         temperature_ranges=[FISH_MEDIUM, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=508,
@@ -3307,6 +3497,11 @@ FISH_ADDITIONAL = [
         rest_time_max=2,
         carryover_temp_c=2,
         temperature_ranges=[FISH_MEDIUM, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=509,
@@ -3320,6 +3515,12 @@ FISH_ADDITIONAL = [
         rest_time_max=2,
         carryover_temp_c=2,
         temperature_ranges=[FISH_MEDIUM_RARE, FISH_MEDIUM, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="medium",
     ),
     # Shellfish from frontend
     MeatCut(
@@ -3334,6 +3535,12 @@ FISH_ADDITIONAL = [
         rest_time_max=0,
         carryover_temp_c=1,
         temperature_ranges=[SHRIMP_JUST_COOKED, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.GRILL,
+            CookingMethod.AIR_FRYER,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=551,
@@ -3347,6 +3554,11 @@ FISH_ADDITIONAL = [
         rest_time_max=0,
         carryover_temp_c=2,
         temperature_ranges=[FISH_MEDIUM_RARE, FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=552,
@@ -3360,6 +3572,11 @@ FISH_ADDITIONAL = [
         rest_time_max=0,
         carryover_temp_c=2,
         temperature_ranges=[FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.STEAM,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=553,
@@ -3373,6 +3590,11 @@ FISH_ADDITIONAL = [
         rest_time_max=0,
         carryover_temp_c=1,
         temperature_ranges=[FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.STEAM,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=554,
@@ -3386,6 +3608,11 @@ FISH_ADDITIONAL = [
         rest_time_max=0,
         carryover_temp_c=1,
         temperature_ranges=[FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.STEAM,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=555,
@@ -3399,6 +3626,11 @@ FISH_ADDITIONAL = [
         rest_time_max=0,
         carryover_temp_c=1,
         temperature_ranges=[FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=556,
@@ -3414,6 +3646,11 @@ FISH_ADDITIONAL = [
         # Cook EITHER very quickly (52°C: tender) OR long-braised (88°C: tender).
         # 63°C is the rubber zone — the worst possible target for squid.
         temperature_ranges=[CEPHALOPOD_QUICK, CEPHALOPOD_BRAISED],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="well_done",
     ),
     MeatCut(
         id=557,
@@ -3429,6 +3666,11 @@ FISH_ADDITIONAL = [
         # Same principle as squid: 52°C quick sear OR 88°C long braise.
         # 63°C FISH_WELL_DONE turns octopus into rubber bands.
         temperature_ranges=[CEPHALOPOD_QUICK, CEPHALOPOD_BRAISED],
+        supported_methods=[
+            CookingMethod.BRAISE,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="well_done",
     ),
 ]
 
@@ -3801,6 +4043,11 @@ LAMB_GROUND = [
             DONENESS_MEDIUM,
             DONENESS_MEDIUM_WELL,
         ],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=516,
@@ -3838,6 +4085,10 @@ LAMB_GROUND = [
             DONENESS_MEDIUM,
             DONENESS_MEDIUM_WELL,
         ],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=523,
@@ -3951,6 +4202,11 @@ VENISON = [
             DONENESS_MEDIUM_RARE,
             DONENESS_MEDIUM,
         ],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.BRAISE,
+        ],
+        recommended_doneness="medium_rare",
     ),
     MeatCut(
         id=604,
@@ -3964,6 +4220,12 @@ VENISON = [
         rest_time_max=30,
         carryover_temp_c=5,
         temperature_ranges=[DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+        ],
+        recommended_doneness="well_done",
     ),
 ]
 
@@ -4136,6 +4398,11 @@ REINDEER = [
             DONENESS_MEDIUM_RARE,
             DONENESS_MEDIUM,
         ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="medium_rare",
     ),
 ]
 
@@ -4246,6 +4513,11 @@ BUFFALO = [
         rest_time_max=5,
         carryover_temp_c=2,
         temperature_ranges=[DONENESS_WELL_DONE],
+        supported_methods=[
+            CookingMethod.GRILL,
+            CookingMethod.PAN_FRY,
+        ],
+        recommended_doneness="well_done",
     ),
 ]
 
@@ -4375,6 +4647,12 @@ MUTTON = [
         rest_time_max=30,
         carryover_temp_c=5,
         temperature_ranges=[DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+        ],
+        recommended_doneness="well_done",
     ),
 ]
 
@@ -4505,6 +4783,12 @@ GOAT = [
         rest_time_max=30,
         carryover_temp_c=5,
         temperature_ranges=[DONENESS_WELL_DONE],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+        ],
+        recommended_doneness="well_done",
     ),
 ]
 
