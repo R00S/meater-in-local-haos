@@ -307,6 +307,27 @@ to the person (or agent) who will update `cooking_data.py` next.
 
 ---
 
+### `## Summary`
+
+2–4 sentences, readable in approximately 10 seconds. This is the reader-facing
+conclusion for the entire leaf. It must answer two questions in plain language:
+
+1. **What does this method do to this specific cut?** — describe the physical
+   result (texture, moisture, crust, rendering, etc.) in terms a non-expert can
+   picture.
+2. **Is this a good match — and why or why not?** — state clearly whether this
+   method suits this cut, what the cook gains or sacrifices, and what the key
+   takeaway is for someone choosing between methods.
+
+Write for the cook who has read nothing else in the leaf. Do not repeat
+numbers from the consensus table. Do not mention `cooking_data.py`. The
+summary stands alone.
+
+Good reference: `## Verdict` in `filet_mignon-sous_vide.md` — two sentences,
+no hedging, explains the cut-method fit and the key reason in one breath.
+
+---
+
 ## What is explicitly forbidden
 
 | Forbidden | Why |
@@ -321,6 +342,8 @@ to the person (or agent) who will update `cooking_data.py` next.
 | Fabricating or paraphrasing a recipe without a real source | Every ingredient list and method must be traceable to the cited source |
 | Omitting probe placement from the Method | Probe placement is the integration point with MEATER; it is mandatory |
 | Omitting pull temperature | Without pull temp, the leaf has no value to the temperature data model |
+| Omitting `## Summary` or making it longer than 4 sentences | The summary must exist and be readable in ~10 seconds; a wall of text defeats its purpose |
+| A `## Summary` that only restates the temperature consensus table | The summary must explain the cut-method fit in plain language, not repeat numbers |
 
 ---
 
@@ -343,6 +366,7 @@ Before a leaf is committed, verify:
 - [ ] Global sweet spot is mapped to a `cooking_data.py` doneness key
 - [ ] `## What makes this method special` is present
 - [ ] `## Data applied to cooking_data.py` bullet list is present
+- [ ] `## Summary` is present, ≤4 sentences, explains cut-method fit in plain language
 - [ ] No synthesised composite recipe exists in the file
 - [ ] No `## Full Recipe` section exists that is not attributed to a source
 - [ ] If no credible recipe was found: file contains the "no recipes found" stub, NOT an empty file or deleted file
