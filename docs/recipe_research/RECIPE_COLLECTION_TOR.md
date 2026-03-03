@@ -109,6 +109,40 @@ Do **not** create a leaf file for a combination that exists only in theory.
 A leaf exists because a real recipe for it exists, not because the method is
 theoretically possible.
 
+### Removing a leaf
+
+A leaf file **must not be deleted**. The only permissible exception is when a
+thorough search finds **no credible, human-created recipe** for that specific
+cut × cooking method combination anywhere — not in cookbooks, not in named
+chef publications, not in respected food media.
+
+If that is the case:
+
+1. **Keep the file.** Do not delete it.
+2. Replace the file body with the following stub:
+
+```markdown
+# {Cut} × {Method} — No Recipes Found
+
+> **STATUS: NO CREDIBLE RECIPES FOUND**
+>
+> A thorough search of cookbooks, named chef publications, and respected food
+> media found no credible human-created recipe for this cut × method
+> combination. This leaf is retained as a placeholder so the gap is visible
+> in the tree. If a credible recipe is found in future, replace this stub
+> with a full leaf following the ToR standard.
+
+## Search log
+
+- Searched: {date}
+- Sources checked: {list the sources and search terms used}
+- Conclusion: No credible human-created recipe found.
+```
+
+3. Do **not** remove the corresponding `supported_methods` entry from
+   `cooking_data.py` without a separate explicit decision — that is a code
+   change with wider impact and requires its own PR.
+
 ### Base tree count
 
 The base tree derived from `cooking_data.py` contains **501 leaves** across
@@ -254,6 +288,7 @@ to the person (or agent) who will update `cooking_data.py` next.
 
 | Forbidden | Why |
 |-----------|-----|
+| Deleting a leaf file because no recipe was found | Keep it; replace the body with the "no recipes found" stub instead |
 | A synthesised "composite" recipe not from any real source | The purpose is to *save* real recipes, not to generate new ones |
 | A `## Full Recipe` section that is not attributed to a source | This was the failure pattern in earlier sessions — see commit history |
 | Temperature-only bullet points as a "source recipe" | These are not recipes; they are the failure pattern this ToR replaces |
@@ -281,6 +316,7 @@ Before a leaf is committed, verify:
 - [ ] `## Data applied to cooking_data.py` bullet list is present
 - [ ] No synthesised composite recipe exists in the file
 - [ ] No `## Full Recipe` section exists that is not attributed to a source
+- [ ] If no credible recipe was found: file contains the "no recipes found" stub, NOT an empty file or deleted file
 
 ---
 
