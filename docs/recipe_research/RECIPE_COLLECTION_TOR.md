@@ -185,13 +185,25 @@ Do not include temperatures here. Do not include cooking instructions here.
 
 Each source must be:
 1. A **real, human-created recipe** — not a temperature chart, not a food-safety
-   guide, not a "how to cook" overview article.
-2. From an **authoritative origin** — published cookbook, named chef, respected
-   food media outlet (Serious Eats, America's Test Kitchen, ThermoWorks blog),
-   or a named authority from a specific culinary tradition.
-3. **Geographically diverse** where possible — aim for at least 3 different
-   countries or culinary traditions across the 4–6 sources.
-4. The source must actually use this *method* for this *cut* — not a
+   guide, not a "how to cook" overview article, and **never AI-generated**.
+2. From a **well-regarded, authoritative origin** — published cookbook, named
+   chef, respected food media outlet (Serious Eats, America's Test Kitchen,
+   ThermoWorks blog), or a named authority from a specific culinary tradition.
+   "Well-regarded" means the source is cited or recommended within its own
+   culinary tradition, not merely that it exists online.
+3. **From a different culinary tradition than every other source in the same
+   leaf.** No two sources may share the same national or regional tradition.
+   A leaf with sources from France, Japan, the American South, and Brazil meets
+   this rule. A leaf with two French sources does not, regardless of how
+   different the chefs are.
+4. **Chosen to reveal the temperature range of human disagreement, not to
+   confirm a single consensus.** Prefer sources that differ in their target
+   doneness, pull temperature, or resting approach. A well-built leaf will
+   naturally show that a Japanese chef and a Texan pitmaster disagree on what
+   "done" means for the same cut — and that both are correct within their own
+   tradition. Do not discard or suppress sources that land outside a narrow
+   consensus. The divergence is the data.
+5. The source must actually use this *method* for this *cut* — not a
    substitution or a generalisation.
 
 Acceptable source types (in order of preference):
@@ -204,7 +216,8 @@ Not acceptable:
 - Anonymous recipe aggregator entries (allrecipes.com, food.com)
 - Government food-safety temperature charts
 - Temperature-only references with no recipe
-- AI-generated content
+- AI-generated content of any kind — including AI-assisted rewrites of real
+  recipes, AI-summarised cookbooks, or AI-generated "based on" recipes
 
 ---
 
@@ -255,10 +268,15 @@ A markdown table:
 | … | … | … |
 
 Followed by 2–4 sentences that:
-1. State the global sweet spot in °C.
-2. Map it to the `cooking_data.py` doneness range and target.
-3. Explain any variation between traditions (usually pull-temp vs serving-temp
-   convention, not actual disagreement about texture).
+1. State the **full observed range** in °C — from the lowest to the highest
+   final serving temperature seen across the sources.
+2. Map the range to the `cooking_data.py` doneness options and explain which
+   traditions land in which doneness band.
+3. Explain what drives the variation (texture goal, cultural convention,
+   carryover assumptions, pull-temp vs. serving-temp convention). Do **not**
+   treat divergence as an error to be resolved — it is the finding.
+4. Identify the doneness key that best represents the broadest common use, for
+   `recommended_doneness` — but note if a strong tradition sits outside it.
 
 ---
 
@@ -294,6 +312,8 @@ to the person (or agent) who will update `cooking_data.py` next.
 | Forbidden | Why |
 |-----------|-----|
 | Combining two or more cooking methods into one leaf file | One leaf = one cut × one method; five methods = five files |
+| Two sources from the same culinary tradition in one leaf | Each source must come from a different national or regional tradition |
+| Selecting sources to minimise temperature spread | The spread is the data; cherry-picking for consensus falsifies the record |
 | Deleting a leaf file because no recipe was found | Keep it; replace the body with the "no recipes found" stub instead |
 | A synthesised "composite" recipe not from any real source | The purpose is to *save* real recipes, not to generate new ones |
 | A `## Full Recipe` section that is not attributed to a source | This was the failure pattern in earlier sessions — see commit history |
@@ -311,6 +331,9 @@ Before a leaf is committed, verify:
 - [ ] Cut profile is present and does not contain temperatures
 - [ ] 4–6 source recipes are present
 - [ ] Each source has a verifiable citation (URL or bibliographic reference)
+- [ ] Each source comes from a different culinary tradition (no two from the same)
+- [ ] Sources are human-created — no AI-generated or AI-assisted content
+- [ ] Sources were chosen to show temperature divergence, not to enforce consensus
 - [ ] Each recipe has a full ingredient list with quantities
 - [ ] Each recipe has a numbered method with probe insert step
 - [ ] Each recipe has a bolded pull temperature in °C
