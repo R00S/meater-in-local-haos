@@ -25,6 +25,98 @@ not the goal.
 
 ---
 
+## Tree structure
+
+The tree has four levels:
+
+```
+Category  →  Cut Type  →  Cut  →  Cooking Method  =  leaf
+```
+
+Each level maps directly to the folder and file structure:
+
+```
+docs/recipe_research/
+  {category}/
+    {cut_type_folder}/
+      {cut_name}-{cooking_method}.md
+```
+
+### Source of truth
+
+The authoritative tree is `custom_components/kitchen_cooking_engine/cooking_data.py`
+in the `main` branch. **Every `MeatCategory` → `CutType` → `MeatCut.supported_methods`
+combination is a required leaf.** This branch must eventually contain one fully
+populated leaf file for every such combination.
+
+- **Category** = `MeatCategory.name` (e.g. `beef`, `pork`, `poultry`, `fish`,
+  `lamb`, `game`, `vegetables`)
+- **Cut Type** = `CutType.name` mapped to a folder slug (e.g. `Steaks` → `steaks`,
+  `Braising Cuts` → `braising`, `Chops & Tenderloin` → `chops`)
+- **Cut** = `MeatCut.name` (e.g. `ribeye_steak`, `pork_tenderloin`)
+- **Cooking Method** = `CookingMethod` enum value (e.g. `pan_sear`, `oven_roast`,
+  `grill`, `charcoal_grill`, `sous_vide`, `air_fryer`, `smoker`, `braise`,
+  `slow_cooker`, `pan_fry`, `steam`, `boil`, `saute`, `oven_bake`,
+  `pressure_cooker`, `oven_broil`)
+
+### Folder slug mapping
+
+| Cut Type name in cooking_data.py | Folder in repo |
+|----------------------------------|---------------|
+| Steaks | `steaks/` |
+| Roasts | `roasts/` |
+| Braising Cuts | `braising/` |
+| Ground | `ground/` |
+| Other / Offal | `offal/` |
+| Chops & Tenderloin | `chops/` |
+| Ham | `roasts/` |
+| Ribs | `ribs/` |
+| Breast | `chicken/` |
+| Dark Meat | `chicken/` |
+| Whole (poultry) | `chicken/` |
+| Turkey | `turkey/` |
+| Duck | `duck/` |
+| Goose | `goose/` |
+| Salmon | `salmon/` |
+| Tuna | `tuna/` |
+| White Fish | `white_fish/` |
+| Shellfish | `shellfish/` |
+| Chops (lamb/game) | `chops/` |
+| venison/bison/reindeer/etc. | `{animal}/` |
+| Root Vegetables | `root_vegetables/` |
+| Green Vegetables | `green_vegetables/` |
+| Alliums | `alliums/` |
+| Squash | `squash/` |
+| Cruciferous | `cruciferous/` |
+| Peppers | `peppers/` |
+| Mushrooms | `mushrooms/` |
+| Corn | `corn/` |
+| Eggplant | `eggplant/` |
+| Tomatoes | `tomatoes/` |
+
+### Adding new leaves
+
+The base tree (501 leaves) comes from `cooking_data.py`. You may add a leaf
+that is **not** currently in the base tree if:
+
+1. You find a real recipe for a cut × method combination that has clear
+   temperature data and culinary significance.
+2. The combination does not yet have a leaf file in the repo.
+3. You add a matching entry to `cooking_data.py` (`supported_methods`) so that
+   the leaf is registered in the engine.
+
+Do **not** create a leaf file for a combination that exists only in theory.
+A leaf exists because a real recipe for it exists, not because the method is
+theoretically possible.
+
+### Base tree count
+
+The base tree derived from `cooking_data.py` contains **501 leaves** across
+7 categories. As of this writing, 262 of those leaf files exist in the repo.
+See the **Appendix** at the end of this document for the full inventory.
+
+---
+
 ## Mandatory sections, in order
 
 ### `# {Cut} × {Method} — Recipe Temperature Research`
@@ -194,6 +286,11 @@ Before a leaf is committed, verify:
 
 ## File tree covered
 
-The leaf tree is defined in `README.md`. Every combination listed there
-requires exactly one leaf file. The order of completion is not defined here;
-this ToR only defines the standard each leaf must meet when it is written.
+Every `Category → Cut Type → Cut → Cooking Method` combination present in
+`custom_components/kitchen_cooking_engine/cooking_data.py` on the `main` branch
+**requires exactly one leaf file** in this branch.  The full base tree is
+**501 leaves** (see Appendix). Completion order is not mandated; this ToR
+only defines the standard each leaf must meet when it is written.
+
+When a new leaf is added to `cooking_data.py` on main, a corresponding leaf
+file becomes required here.
