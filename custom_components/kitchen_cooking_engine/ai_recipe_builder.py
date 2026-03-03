@@ -530,6 +530,7 @@ Please suggest 4 quite different recipes using these ingredients. For each recip
 8. Whether this is a known/classic recipe or an AI-created original ("known" or "original")
 
 Try to include at least 2 well-known classic recipes that people can search for online, and mark the rest as originals.
+If you have web search tools available, use them to find and verify real recipe sources.
 
 Format your response as a JSON array with exactly 4 recipes:
 [
@@ -602,6 +603,9 @@ techniques, spice combinations, and flavor profiles — NOT Americanized or
 Westernized adaptations. For example, an Indian dal should use tamarind or
 amchur for sourness rather than defaulting to tomatoes; a Chinese dish should
 follow wok technique and traditional seasonings, not American-Chinese shortcuts.
+
+If you have web search tools available, use them to find and verify the recipe
+source, authentic techniques, and accurate cooking temperatures.
 
 Please provide the full detailed recipe with:
 1. Complete ingredient list with precise measurements (for 4 servings)

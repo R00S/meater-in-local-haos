@@ -131,41 +131,38 @@ approach to rabbit, adapted for oven-roasting legs
 
 ---
 
-### 4. Paulina Cocina — Conejo al Horno con Patatas (Spanish Rabbit Baked with Potatoes)
-**Source**: paulinacocina.net; representative of the traditional Spanish home-
-cooking *al horno* approach for rabbit legs with potatoes  
-**Serves**: 4 · **Prep**: 15 min (+1 h marinade) · **Cook**: 1 h · **Rest**: 10 min
+### 4. Adina Beck — Roasted Rabbit (Central European / German home cooking)
+**Source**: Adina Beck, *Where Is My Spoon* (whereismyspoon.co); Central European
+home-cooking approach for marinated rabbit legs roasted at high heat  
+**Serves**: 4 · **Prep**: 15 min (+2 h marinade) · **Cook**: 35–40 min · **Rest**: 10 min
 
 **Ingredients**
-- 4 rabbit legs (approximately 700 g)
-- 500 g waxy potatoes, cut into 3 cm chunks (*patatas para asar*)
-- 80 ml olive oil
-- 1 whole head of garlic, halved horizontally
-- 150 ml dry white wine (*vino blanco seco*)
-- 1 tsp sweet paprika (*pimentón dulce*)
-- 1 sprig fresh rosemary
-- 1 bay leaf
-- Salt and black pepper
+- 4 rabbit legs (approximately 1.5 kg total)
+- 3 tbsp olive oil
+- 150 ml dry white wine
+- 4 garlic cloves, grated (plus extra whole cloves for the roasting tin)
+- 2 tbsp fresh rosemary, finely chopped
+- Salt and freshly ground black pepper
+- A splash of water for the roasting tin
 
 **Method**
-1. Marinate the rabbit legs in olive oil, paprika, salt, and pepper for 1 hour at
-   room temperature or overnight refrigerated.
-2. Preheat oven to 180°C / 355°F. Place potatoes in a deep roasting pan. Lay the
-   garlic halves cut-side up on the potatoes. Arrange rabbit legs on top of the
-   potato bed so they roast rather than steam.
-3. Pour white wine over everything. Add rosemary and bay.
-4. Insert the MEATER probe into the thickest hind leg from the top, tip into the
-   thigh muscle alongside the femur, well above the bone centre.
-5. Cover with foil and roast at 180°C for 40 minutes.
-6. Uncover. Baste rabbit and potatoes with pan juices. Increase oven to 200°C /
-   390°F. Roast uncovered for 20 minutes until the rabbit is golden and the
-   potatoes are crispy at the edges.
-7. **Pull at 75–77°C** (167–171°F). The Spanish home-cooking tradition targets
-   "thoroughly golden and tender, no pink at the bone" — which, combined with a
-   10-minute rest, ensures the meat is safe, moist, and flavourful.
-8. Rest 10 minutes in the covered pan. Final serving temperature: **78–81°C /
-   172–178°F** (well done). Serve from the roasting pan with the garlic cloves
-   squeezed over as a sauce.
+1. Mix olive oil, white wine, grated garlic, rosemary, salt, and pepper. Coat
+   the rabbit legs thoroughly, cover, and marinate for at least 2 hours (or
+   overnight) in the refrigerator. Remove from the fridge 30 minutes before
+   roasting to bring to room temperature.
+2. Preheat oven to 200°C / 400°F. Arrange the legs in a single layer in a
+   roasting tin. Add the extra garlic cloves and a splash of water to the tin.
+3. Insert the MEATER probe into the thickest hind leg from the top, tip seated
+   in the thigh muscle alongside the femur, clear of the bone.
+4. Roast uncovered for 35–40 minutes, flipping the legs every 10 minutes and
+   basting with the pan juices. The legs are done when deeply golden on all
+   sides and the probe reads the target temperature.
+5. **Pull at 74–75°C** (165–167°F) — the USDA-safe threshold for rabbit (treated
+   as poultry). The Central European home-cooking tradition aims for meat that is
+   fully opaque, pulls easily from the bone, and shows no pink at the joint.
+6. Rest 10 minutes loosely covered with foil. Final serving temperature:
+   **77–79°C / 171–174°F** (well done). Serve straight from the roasting tin
+   with the golden garlic cloves and pan juices as a sauce.
 
 ---
 
@@ -176,16 +173,16 @@ cooking *al horno* approach for rabbit legs with potatoes
 | Spanish classic (Casas) | well done | 77–80°C / 171–176°F |
 | USA / Wild game (Shaw) | well done | 76–78°C / 169–172°F |
 | British home cooking (BBC Good Food) | well done | 78–80°C / 172–176°F |
-| Spanish home cooking (Paulina Cocina) | well done | 78–81°C / 172–178°F |
+| Central European / German home cooking (Beck) | well done | 77–79°C / 171–174°F |
 
-**Full observed range: 76–81°C at the oven-roasted leg.** All four traditions
-converge tightly on the "well done" band: 76–81°C. This is notably warmer than
+**Full observed range: 76–80°C at the oven-roasted leg.** All four traditions
+converge tightly on the "well done" band: 76–80°C. This is notably warmer than
 the French braised leg (75–78°C) because the dry oven environment forces more
 moisture loss from the lean muscle as temperature rises — the target is set high
 enough to tenderise the connective tissue but pulled before the muscle fibres
 become dry and stringy. No tradition oven-roasts rabbit legs below 74°C (the
 USDA-safe threshold for poultry, the nearest food-safety analogue), and no
-tradition pushes beyond 82°C in the oven-roast context (unlike braising, where
+tradition pushes beyond 81°C in the oven-roast context (unlike braising, where
 collagen conversion justifies higher temperatures). The consensus `recommended_
 doneness` of `"dark_meat_optimal"` (77°C) sits at the midpoint of the observed
 range and represents the broadest common result.
