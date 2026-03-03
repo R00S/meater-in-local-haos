@@ -69,3 +69,10 @@ in a covered Dutch oven with no special equipment.
 
 ## Data applied to cooking_data.py
 - `recommended_doneness`: `"well_done"` (85-90°C braising target)
+
+## Summary
+Braising suits pork belly exceptionally well: the fat and collagen dissolve into the
+braising liquid, producing a silky, unctuous texture that roasting cannot replicate.
+The trade-off is no crackling — the rind softens entirely and the belly becomes
+fork-tender rather than crispy. Choose braising when you want richness and a built-in
+sauce; choose oven roasting when crackling is the goal.

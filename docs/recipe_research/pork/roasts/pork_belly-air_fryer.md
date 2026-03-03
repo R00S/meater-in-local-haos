@@ -64,3 +64,10 @@ close and requires no complex setup.
 
 ## Data applied to cooking_data.py
 - `recommended_doneness`: `"well_done"` (70-75°C flesh + rendered fat required)
+
+## Summary
+Air frying delivers crispy pork belly rind in under 30 minutes — a useful shortcut
+compared to the 3–6-hour oven roast. Fat renders adequately and the rind crisps, but
+the crackle is softer and less dramatic than a full oven blast. It is the right choice
+for small portions and weeknight speed; not the right choice when crackling quality is
+the priority.

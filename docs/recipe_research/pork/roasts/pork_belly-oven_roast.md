@@ -72,3 +72,10 @@ luxuriously tender, fatty flesh — is impossible by any other means.
 ## Data applied to cooking_data.py
 - `supported_methods` gains: `oven_roast`, `braise`, `air_fryer`
 - `recommended_doneness`: `"well_done"` (74-90°C collagen/fat rendering required)
+
+## Summary
+Pork belly is ideally suited to oven roasting: the thick fat layers need extended low
+heat to render and soften, and only the oven's high-blast finish produces the
+shatteringly crisp crackling that defines this cut at its best. It requires 2–6 hours
+and careful rind preparation, but no other method delivers both the silky-tender
+interior and the crackle simultaneously.
