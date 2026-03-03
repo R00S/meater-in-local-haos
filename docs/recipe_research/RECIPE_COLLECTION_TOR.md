@@ -14,9 +14,14 @@ depth, or intent described here.
 
 ## What a leaf is
 
-A leaf covers one **cut × cooking_method** combination.  
+A leaf covers **exactly one cut × exactly one cooking_method** combination.  
 File name: `{cut_name}-{cooking_method}.md`  
 Example: `ribeye_steak-pan_sear.md`
+
+**One file = one method.** If a cut supports five cooking methods, that is five
+separate leaf files. You may not combine two or more cooking methods into a
+single leaf file under any circumstances — not to save space, not because the
+methods are similar, not because recipes for each method are scarce.
 
 A leaf is NOT a synthesis document. It is a **saved collection of primary
 source recipes** that happen to share the same cut and method. The temperature
@@ -288,6 +293,7 @@ to the person (or agent) who will update `cooking_data.py` next.
 
 | Forbidden | Why |
 |-----------|-----|
+| Combining two or more cooking methods into one leaf file | One leaf = one cut × one method; five methods = five files |
 | Deleting a leaf file because no recipe was found | Keep it; replace the body with the "no recipes found" stub instead |
 | A synthesised "composite" recipe not from any real source | The purpose is to *save* real recipes, not to generate new ones |
 | A `## Full Recipe` section that is not attributed to a source | This was the failure pattern in earlier sessions — see commit history |
