@@ -8,47 +8,116 @@ the meat. Carryover from the hot metal surface is significant (3-5°C), so pull 
 
 ## Source recipes
 
-### 1. J. Kenji López-Alt — Butter-Basted Pan-Seared Thick-Cut Steaks (Serious Eats / Food52)
-- **Source**: food52.com/recipes/67882 · seriouseats.com
-- **Method**: Frequent flipping (every 30 s) on ripping-hot cast iron; butter-baste with
-  thyme and garlic in final 90 seconds.
-- **Pull temp**: 120-125°F / **49-52°C** for medium-rare
-- **Final after rest (5-10 min)**: 130°F / **54°C**
-- **Why this method works**: Frequent flipping gives more even interior gradient and a
-  thinner, crispier crust than single-flip searing.
+### 1. J. Kenji López-Alt — Butter-Basted Pan-Seared Thick-Cut Steaks
+**Source**: food52.com/recipes/67882 · seriouseats.com  
+**Serves**: 2 · **Prep**: 5 min (+45 min tempering) · **Cook**: 8–10 min · **Rest**: 5–10 min
 
-### 2. Leila Lindholm — Helstekt / Pannstekt entrecôte (Koket.se / Leila.se)
-- **Source**: leila.se/leilas-stektemperaturer · koket.se
-- **Method**: Hot pan, butter + oil, turn once; rest minimum 10 minutes.
-- **Target** (slice / individual): Medium-rare = **55-57°C** at rest
-- **Target** (whole piece roasted): Medium-rare = **56°C**
-- **Note**: Swedish culinary tradition measures the *final resting temperature*, not pull
-  temp — so 55-57°C is the serving temperature, which matches Kenji's 54°C after rest.
+**Ingredients**
+- 2 ribeye steaks, 3–4 cm thick (approx. 300–350 g each)
+- Kosher salt and freshly ground black pepper
+- 1 tbsp vegetable oil or refined avocado oil
+- 2 tbsp unsalted butter
+- 3 garlic cloves, lightly crushed (skin on)
+- 3–4 sprigs fresh thyme
 
-### 3. Paul Bocuse / French tradition — Entrecôte à la Bordelaise (750g.com / recettenomade.com)
-- **Source**: 750g.com/comment-bien-cuire-son-entrecote-a-la-poele · recettenomade.com
-- **Method**: Very hot pan, rendered beef fat or clarified butter. "Jamais plus de 57°C
-  pour une côte de bœuf à point."
-- **Saignant** (preferred, classic bistro): **50-53°C** at heart
-- **À point**: **55-57°C** at heart
-- **Note**: French *saignant* (blood-red warm centre) sits at the top end of our "rare"
-  range or the low end of medium-rare. À point maps exactly to our medium-rare.
+**Method**
+1. Remove steaks from the fridge 45 minutes ahead. Pat completely dry with paper towels. Season heavily on all sides with salt and pepper. Leave on a wire rack.
+2. Heat a heavy cast-iron skillet over the highest heat for at least 3 minutes until visibly smoking. Add oil and swirl.
+3. Add steaks. Sear 30 seconds, then flip. Continue flipping every 30 seconds — this is the core of the method. Do not hold position.
+4. After the first flip, insert the MEATER probe into the thickest part of the steak parallel to the pan surface, avoiding fat pockets.
+5. When the internal temperature reaches 45°C, add butter, garlic, and thyme to the pan. Tilt the pan and baste continuously with the foaming butter.
+6. **Pull at 49–52°C** (120–125°F). The frequent flipping produces an even gradient — carryover is only 3–4°C.
+7. Rest on a wire rack 5–10 minutes. Final serving temperature: **54°C / 130°F** (medium-rare).
 
-### 4. Italian tradition — Costata di manzo in padella (Macelleria Sparacello / Agrodolce / Sale&Pepe)
-- **Source**: macelleriasparacello.it · agrodolce.it · salepepe.it
-- **Method**: Ghisa (cast iron) or ferro very hot; never salt before cooking; rest 5 min.
-- **Al sangue** (preferred for costata): **50-52°C** at core
-- **Media cottura** (medium): **54-56°C**
-- **Note**: Italian *al sangue* is slightly below our medium-rare target — closer to the
-  bottom of the medium-rare range (52°C) or the top of rare (49°C).
+---
 
-### 5. Juan Gaffuri (Four Seasons Buenos Aires) — Bife ancho a la parrilla / sartén
-- **Source**: foodit.lanacion.com.ar · mozzafiatoconce.cl
-- **Method**: Thick-cut bife (≥3 cm), coarse salt only, hot grill/pan, rest 10 min.
-- **Jugoso** (preferred): **55°C**
-- **Al punto** (medium): **58-60°C**
-- **Note**: Argentine tradition favours a slightly higher serving temp than French/Italian;
-  "jugoso" at 55°C is the local equivalent of medium-rare.
+### 2. Leila Lindholm — Pannstekt entrecôte
+**Source**: leila.se/leilas-stektemperaturer · koket.se  
+**Serves**: 2 · **Prep**: 5 min (+30 min tempering) · **Cook**: 6–8 min · **Rest**: 10 min minimum
+
+**Ingredients**
+- 2 entrecôte / ribeye steaks, approx. 2.5 cm thick
+- 1 tsp flaky sea salt (flingsalt)
+- Freshly ground black pepper
+- 1 tbsp neutral oil (rapsolja)
+- 2 tbsp butter
+- 2 sprigs fresh thyme or rosemary
+
+**Method**
+1. Remove steaks from the fridge 30 minutes ahead. Pat dry. Season generously.
+2. Heat a cast-iron or heavy steel pan on maximum heat. Add oil. When it begins to smoke, the pan is ready.
+3. Place the steaks in the pan. Do not move them. Sear 2.5–3 minutes on the first side until a deep, dark crust forms.
+4. Flip once. Add butter and herbs. Baste with the melted butter for the remaining 2.5–3 minutes.
+5. Insert the MEATER probe from the side. **Pull at 52–54°C** — Swedish culinary convention measures *final resting temperature*, so pull 3–4°C below your target.
+6. Rest on a warm plate, covered loosely, for **minimum 10 minutes**. Do not cut before 10 minutes.
+7. **Final serving temperature: 55–57°C** — Swedish "medium-rare" (rosa). Juices will run clear-pink.
+
+---
+
+### 3. Paul Bocuse / French bistro tradition — Entrecôte à la poêle
+**Source**: 750g.com · recettenomade.com · Bocuse *La Cuisine du Marché* (Flammarion, 1976)  
+**Serves**: 2 · **Prep**: 5 min (+60 min tempering) · **Cook**: 5–7 min · **Rest**: 5 min
+
+**Ingredients**
+- 2 entrecôtes, 2–3 cm thick (250–300 g each), well marbled
+- Coarse salt (*gros sel*), freshly ground black pepper
+- 1 tbsp clarified butter (*beurre clarifié*) or rendered beef marrow fat
+- 1 tbsp unsalted butter (added at the end)
+- Optional: 1 shallot, finely chopped; 150 ml red Bordeaux; 1 tbsp parsley
+
+**Method**
+1. Bring steak to room temperature (minimum 60 minutes). Pat extremely dry. Season with pepper only — no salt until after cooking to prevent moisture release.
+2. Heat a thick iron or steel pan until it begins to lightly smoke. Add clarified butter. It must not burn — clarified butter tolerates higher heat than whole butter.
+3. Place the entrecôte in the pan. Press lightly with the palm of the hand to ensure full surface contact. Sear 2–3 minutes without moving. A dark crust should form.
+4. Insert the probe from the side. Flip once. Sear 2–3 minutes on the second side.
+5. **For saignant (bistro preferred)**: pull at **50–53°C**. Rest 5 minutes, final temp 53–55°C. Inside: red-pink, visibly warm, juices flow freely.
+6. **For à point**: pull at **53–55°C**. Final after rest: 55–57°C. Inside: pink throughout.
+7. Remove to a hot plate. Salt with coarse salt. Add a knob of whole butter to the pan off the heat, swirl, and pour over the steak.
+8. *Optional Bordelaise finish*: deglaze the pan with red wine and shallot, reduce by half, finish with bone marrow and parsley. Pour over.
+
+---
+
+### 4. Italian tradition — Costata di manzo in padella
+**Source**: Macelleria Sparacello (macelleriasparacello.it) · Agrodolce (agrodolce.it) · Sale&Pepe  
+**Serves**: 2 · **Prep**: 5 min (+60 min tempering) · **Cook**: 6–8 min · **Rest**: 5 min
+
+**Ingredients**
+- 1–2 costata di manzo (bone-in ribeye / côte de bœuf), at least 3 cm thick
+- Coarse salt (sale grosso) — added only *after* cooking
+- Black pepper — added only *after* cooking
+- 1 tbsp extra-virgin olive oil or rendered lard (*strutto*)
+- Optional: 1 sprig rosemary; 1 clove garlic unpeeled
+
+**Method**
+1. Remove the steak from the fridge at least 1 hour ahead. The Italian rule: *mai fredda in padella* (never cold in the pan). Pat dry. Add no salt or pepper at this stage.
+2. Heat a heavy ghisa (cast iron) or ferro (carbon steel) pan to maximum heat. Add oil. Wait until a drop of water evaporates instantly on contact.
+3. Place the costata in the pan. Press down firmly. Do not move for 3 minutes. The crust must form naturally — moving the steak tears it and loses flavour.
+4. Insert the MEATER probe from the side through the thickest cross-section, avoiding the bone.
+5. Flip once. Cook 2–3 minutes on the second side.
+6. **For al sangue (preferred)**: pull at **50–52°C**. Rest 5 minutes. Final: 52–54°C. Centre: deep red, warm. This is *al sangue* as served in Milanese and Roman trattorie.
+7. Remove from pan. **Now** season generously: coarse salt and pepper directly on the crust. The salt will crackle and dissolve into the hot exterior.
+8. Rest on a wooden board. *Never on a plate* — the pooling juices make the crust soggy. Slice across the grain and serve immediately with the board juices.
+
+---
+
+### 5. Argentine tradition — Bife ancho a la plancha / sartén (Juan Gaffuri, Four Seasons Buenos Aires)
+**Source**: La Nacion Food (foodit.lanacion.com.ar) · Gaffuri interviews · Mozzafiato Conce  
+**Serves**: 2 · **Prep**: 5 min (+60 min tempering) · **Cook**: 8–12 min · **Rest**: 10 min
+
+**Ingredients**
+- 2 bifes de ancho (thick ribeye), minimum 3 cm, ideally 4 cm — Argentine tradition insists on thickness
+- Coarse salt (*sal gruesa*) only — this is the *only* permitted seasoning before and during cooking
+- 1 tbsp neutral fat (rendered beef fat preferred; sunflower oil acceptable)
+- Optional finish: chimichurri (parsley, garlic, oregano, red wine vinegar, oil, chilli)
+
+**Method**
+1. Remove the bife from the fridge 1 hour ahead. In the Argentine tradition, this is non-negotiable. Pat dry. Apply coarse salt on all faces, including the edges.
+2. Heat a plancha (flat iron plate) or heavy cast-iron pan to maximum. The surface should be dry — Argentine technique uses no oil in the pan itself; the meat's own fat renders immediately.
+3. Place the bife on the plancha. Do not press, do not move. Cook 4–5 minutes per side for a 3 cm bife.
+4. Insert the probe after the first flip, from the side.
+5. **For jugoso (juicy, the Argentine medium-rare)**: pull at **51–53°C**. Rest 10 minutes, minimum. Final: **55°C**. Inside: deep pink, very juicy.
+6. The resting period is considered as important as the cooking: *"la carne necesita descansar tanto como cocinarse"* (the meat needs to rest as long as it cooks). 10 minutes is not optional.
+7. Serve with chimichurri on the side. The chimichurri is a condiment — it is not poured over the bife before eating; each diner adds their own.
 
 ## Temperature consensus
 
@@ -71,46 +140,6 @@ Cast-iron pan sear delivers maximum Maillard crust depth in minimum time, concen
 flavour in the outer crust while the interior stays rare-to-medium-rare. Butter basting
 adds dairy sweetness and accelerates crust formation. The 3-5°C carryover from the hot
 metal means a pull temperature noticeably below the final target.
-
-## Full Recipe
-
-**Serves:** 2 · **Prep:** 30 min (+ 30–60 min to bring to room temp) · **Cook:** 8–12 min · **Rest:** 8 min
-
-### Ingredients
-
-- 2 ribeye steaks, bone-in or boneless, 2.5–3 cm thick (≈ 300–350 g each)
-- 1½ tsp flaky sea salt (Maldon or similar)
-- 1 tsp coarsely ground black pepper
-- 1 tbsp neutral oil with high smoke point (refined avocado, grapeseed, or clarified butter)
-- 2 tbsp unsalted butter
-- 3 garlic cloves, lightly crushed (skin on)
-- 3 sprigs fresh thyme
-- 1 sprig fresh rosemary (optional)
-
-### Method
-
-1. **Temper the meat.** Remove steaks from the fridge 45–60 minutes before cooking. Pat completely dry with paper towels — surface moisture is the enemy of crust formation. Season generously on all sides, including the edges, with salt and pepper. Leave uncovered on a wire rack.
-
-2. **Heat the pan.** Place a heavy cast-iron or carbon-steel skillet over the highest possible heat. Heat for 3–5 minutes until the pan is smoking. Add the oil and swirl to coat — it should shimmer and begin to smoke immediately.
-
-3. **Sear with frequent flipping.** Lay the steaks away from you into the pan. Sear for 30 seconds, then flip. Continue flipping every 30 seconds. This frequent-flip method (Kenji López-Alt, Serious Eats) equalises the interior temperature gradient and builds a thicker, more even crust than a single long-side-down sear.
-
-4. **Insert the probe.** After the first flip, insert the MEATER probe into the thickest part of the steak, parallel to the pan, avoiding fat pockets. **Target pull temperature: 49–52 °C** (rare–medium-rare boundary). The probe will alert you when to pull.
-
-5. **Add aromatics and baste.** When the internal temperature reaches 45 °C, reduce heat to medium-high. Add butter, garlic, and thyme to the pan. Tilt the pan slightly and use a large spoon to continuously baste the steaks with the foaming, golden butter for 60–90 seconds per side.
-
-6. **Pull and rest.** Remove steaks from the pan when the probe reads **49–52 °C** (before target — see Note). Transfer to a wire rack set over a plate. Tent loosely with foil. Rest for **8 minutes minimum** — the internal temperature will rise a further 3–5 °C from carryover, reaching 54–57 °C (medium-rare).
-
-7. **Slice and serve.** Slice across the grain if serving shared. Pour any resting juices over the top. Serve immediately.
-
-### Notes & Tips
-
-- **Carryover is significant in cast iron.** The pan retains enormous heat; the steak continues cooking off the heat. Pulling at 49–52 °C is intentional — the resting period finishes the cook to 54–57 °C.
-- **Bone-in vs. boneless:** Bone-in (côte de bœuf style) takes 2–3 minutes longer. The bone insulates one side — compensate by searing the bone side briefly against the pan wall.
-- **Thickness matters:** Steaks thinner than 2 cm will overshoot before the crust develops. For thin steaks, skip frequent flipping — use one flip and accept a less even interior.
-- **Salt timing:** Salting 45+ minutes ahead draws moisture out and then back in, resulting in a drier surface (better crust) and seasoned interior. Avoid salting 5–30 minutes ahead — this leaves wet surface brine.
-- **Smoke:** Pan-searing ribeye generates significant smoke. Use your range hood on maximum or open windows before you start.
-- **Resting the pan:** Let the cast iron cool before washing. Never run cold water over a screaming-hot cast-iron pan.
 
 ## Data applied to cooking_data.py
 - `supported_methods` gains: `pan_sear`, `pan_fry`, `grill`, `charcoal_grill`,
