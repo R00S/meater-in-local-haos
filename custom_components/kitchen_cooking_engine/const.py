@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.3.1 - Add 5 missing pork belly cooking methods; ToR verification protocol and method-coverage instructions
+Last Change: v0.5.3.2 - Add rabbit (and Swedish kanin) to cooking data; add ToR-format recipe leaf files for rabbit saddle and legs
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "203"
+PANEL_VERSION = "205"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

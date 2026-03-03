@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.3.1 - Add 5 missing pork belly cooking methods; ToR verification protocol and method-coverage instructions
+Last Change: v0.5.3.2 - Add rabbit (and Swedish kanin) to cooking data; add ToR-format recipe leaf files for rabbit saddle and legs
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -66,7 +66,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.3.1"
+__version__ = "0.5.3.2"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

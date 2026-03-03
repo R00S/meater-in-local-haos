@@ -4797,6 +4797,52 @@ GOAT = [
     ),
 ]
 
+RABBIT = [
+    MeatCut(
+        id=693,
+        name="rabbit_saddle",
+        name_long="Rabbit Saddle",
+        cut_order=1,
+        estimated_thickness_mm=50,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=3,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[
+            PORK_MEDIUM,
+            PORK_WELL_DONE,
+        ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
+    ),
+    MeatCut(
+        id=694,
+        name="rabbit_legs",
+        name_long="Rabbit Legs",
+        cut_order=2,
+        estimated_thickness_mm=70,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[
+            PORK_WELL_DONE,
+            POULTRY_DARK_MEAT,
+            DONENESS_PULLED,
+        ],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.BRAISE,
+        ],
+        recommended_doneness="dark_meat_optimal",
+    ),
+]
+
 
 # ============================================================================
 # VEGETABLES CATEGORY
@@ -5562,6 +5608,14 @@ MEAT_CATEGORIES = [
                 description="Goat cuts",
                 cut_types=[
                     CutType(id=690, name="Goat", cuts=GOAT),
+                ],
+            ),
+            Meat(
+                id=80,
+                name="rabbit",
+                description="Rabbit cuts",
+                cut_types=[
+                    CutType(id=695, name="Rabbit", cuts=RABBIT),
                 ],
             ),
         ],

@@ -1322,6 +1322,42 @@ SWEDISH_WILD_BOAR = [
     ),
 ]
 
+SWEDISH_RABBIT = [
+    MeatCut(
+        id=2640,
+        name="kaninsadel",
+        name_long="Kaninsadel",
+        cut_order=1,
+        estimated_thickness_mm=50,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=3,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[
+            SWEDISH_POULTRY_SAFE,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+    MeatCut(
+        id=2641,
+        name="kaninlar",
+        name_long="Kaninlår",
+        cut_order=2,
+        estimated_thickness_mm=70,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[
+            SWEDISH_POULTRY_SAFE,
+            SWEDISH_DONENESS_PULLED,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+]
+
 
 # ============================================================================
 # SWEDISH POULTRY (FÅGEL)
@@ -1883,6 +1919,14 @@ SWEDISH_MEAT_CATEGORIES = [
                 description="Vildsvinstyckningar",
                 cut_types=[
                     CutType(id=2630, name="Vildsvin", cuts=SWEDISH_WILD_BOAR),
+                ],
+            ),
+            Meat(
+                id=2064,
+                name="kanin",
+                description="Kaninstyckningar",
+                cut_types=[
+                    CutType(id=2640, name="Kanin", cuts=SWEDISH_RABBIT),
                 ],
             ),
         ],
