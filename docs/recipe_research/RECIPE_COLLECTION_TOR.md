@@ -344,6 +344,8 @@ no hedging, explains the cut-method fit and the key reason in one breath.
 | Omitting pull temperature | Without pull temp, the leaf has no value to the temperature data model |
 | Omitting `## Summary` or making it longer than 4 sentences | The summary must exist and be readable in ~10 seconds; a wall of text defeats its purpose |
 | A `## Summary` that only restates the temperature consensus table | The summary must explain the cut-method fit in plain language, not repeat numbers |
+| Appending a corrected recipe alongside an invalid bullet-point recipe | Invalid data must be completely removed and replaced — a leaf with both formats is not fixed, it is corrupted |
+| Drawing conclusions from a leaf that has any failing Step 2 recipes | The Temperature consensus, Data applied, and Summary of a leaf with invalid source recipes are invalid, not merely provisional |
 
 ---
 
@@ -443,9 +445,19 @@ the following:
 **If any recipe in the leaf fails these checks:**
 
 The leaf's Temperature consensus, Data applied, and Summary sections are based
-on incomplete data. Add the status notice below immediately after the file's
-title line, and do not treat the leaf's conclusions as authoritative until all
-recipes are fully collected.
+on incomplete data and are **invalid** — not merely provisional. Any conclusions
+drawn from a leaf with failing Step 2 recipes cannot be trusted because the
+temperature data was not derived from properly collected recipes.
+
+**When fixing a failing leaf, you MUST completely replace every failing recipe.**
+Do not append a corrected recipe alongside the invalid one. Do not add a "corrected"
+section below the bullet-point summary. The invalid data must be removed entirely and
+replaced with a fully collected recipe following the format above. A leaf that
+contains both a bullet-point summary and a full recipe for the same source is not
+fixed — it is corrupted.
+
+Add the status notice below immediately after the file's title line until **all**
+recipes in the leaf have been fully replaced:
 
 ```markdown
 > ⚠️ **STATUS: SOURCE RECIPES INCOMPLETE**
@@ -455,6 +467,9 @@ recipes are fully collected.
 > and should be treated as **provisional only**. This leaf must be rewritten
 > to full ToR standard before its conclusions can be used.
 ```
+
+Remove the status notice only after every recipe in the leaf has been fully
+replaced with a ToR-conforming recipe and all other verification steps pass.
 
 ### Verification Step 3 — Confirm source diversity and quality
 
