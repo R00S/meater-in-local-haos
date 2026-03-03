@@ -72,6 +72,46 @@ flavour in the outer crust while the interior stays rare-to-medium-rare. Butter 
 adds dairy sweetness and accelerates crust formation. The 3-5°C carryover from the hot
 metal means a pull temperature noticeably below the final target.
 
+## Full Recipe
+
+**Serves:** 2 · **Prep:** 30 min (+ 30–60 min to bring to room temp) · **Cook:** 8–12 min · **Rest:** 8 min
+
+### Ingredients
+
+- 2 ribeye steaks, bone-in or boneless, 2.5–3 cm thick (≈ 300–350 g each)
+- 1½ tsp flaky sea salt (Maldon or similar)
+- 1 tsp coarsely ground black pepper
+- 1 tbsp neutral oil with high smoke point (refined avocado, grapeseed, or clarified butter)
+- 2 tbsp unsalted butter
+- 3 garlic cloves, lightly crushed (skin on)
+- 3 sprigs fresh thyme
+- 1 sprig fresh rosemary (optional)
+
+### Method
+
+1. **Temper the meat.** Remove steaks from the fridge 45–60 minutes before cooking. Pat completely dry with paper towels — surface moisture is the enemy of crust formation. Season generously on all sides, including the edges, with salt and pepper. Leave uncovered on a wire rack.
+
+2. **Heat the pan.** Place a heavy cast-iron or carbon-steel skillet over the highest possible heat. Heat for 3–5 minutes until the pan is smoking. Add the oil and swirl to coat — it should shimmer and begin to smoke immediately.
+
+3. **Sear with frequent flipping.** Lay the steaks away from you into the pan. Sear for 30 seconds, then flip. Continue flipping every 30 seconds. This frequent-flip method (Kenji López-Alt, Serious Eats) equalises the interior temperature gradient and builds a thicker, more even crust than a single long-side-down sear.
+
+4. **Insert the probe.** After the first flip, insert the MEATER probe into the thickest part of the steak, parallel to the pan, avoiding fat pockets. **Target pull temperature: 49–52 °C** (rare–medium-rare boundary). The probe will alert you when to pull.
+
+5. **Add aromatics and baste.** When the internal temperature reaches 45 °C, reduce heat to medium-high. Add butter, garlic, and thyme to the pan. Tilt the pan slightly and use a large spoon to continuously baste the steaks with the foaming, golden butter for 60–90 seconds per side.
+
+6. **Pull and rest.** Remove steaks from the pan when the probe reads **49–52 °C** (before target — see Note). Transfer to a wire rack set over a plate. Tent loosely with foil. Rest for **8 minutes minimum** — the internal temperature will rise a further 3–5 °C from carryover, reaching 54–57 °C (medium-rare).
+
+7. **Slice and serve.** Slice across the grain if serving shared. Pour any resting juices over the top. Serve immediately.
+
+### Notes & Tips
+
+- **Carryover is significant in cast iron.** The pan retains enormous heat; the steak continues cooking off the heat. Pulling at 49–52 °C is intentional — the resting period finishes the cook to 54–57 °C.
+- **Bone-in vs. boneless:** Bone-in (côte de bœuf style) takes 2–3 minutes longer. The bone insulates one side — compensate by searing the bone side briefly against the pan wall.
+- **Thickness matters:** Steaks thinner than 2 cm will overshoot before the crust develops. For thin steaks, skip frequent flipping — use one flip and accept a less even interior.
+- **Salt timing:** Salting 45+ minutes ahead draws moisture out and then back in, resulting in a drier surface (better crust) and seasoned interior. Avoid salting 5–30 minutes ahead — this leaves wet surface brine.
+- **Smoke:** Pan-searing ribeye generates significant smoke. Use your range hood on maximum or open windows before you start.
+- **Resting the pan:** Let the cast iron cool before washing. Never run cold water over a screaming-hot cast-iron pan.
+
 ## Data applied to cooking_data.py
 - `supported_methods` gains: `pan_sear`, `pan_fry`, `grill`, `charcoal_grill`,
   `sous_vide`, `oven_roast`, `air_fryer`
