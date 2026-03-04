@@ -1,5 +1,8 @@
 # Scallops × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Sea scallops are among the most temperature-sensitive proteins in cookery: a 30-second
 difference separates silky-sweet from rubbery. The objective is a deep mahogany

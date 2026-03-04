@@ -1,5 +1,8 @@
 # Tri-Tip × Charcoal Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Santa Maria-style tri-tip over oak is one of the defining barbecue dishes of the
 American West Coast — a cut, a wood, and a technique that belong together.

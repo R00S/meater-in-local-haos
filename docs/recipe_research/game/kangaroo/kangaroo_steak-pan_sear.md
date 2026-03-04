@@ -1,5 +1,8 @@
 # Kangaroo Steak × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Kangaroo (red or grey) is Australia's most sustainable red meat — extremely lean
 (1-2% fat), high in protein, and with a rich, earthy, slightly gamey flavour

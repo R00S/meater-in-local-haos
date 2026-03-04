@@ -1,5 +1,8 @@
 # Sirloin Steak × Oven Roast (Reverse Sear) — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Reverse sear for sirloin: low oven (100-120°C) on a wire rack to 47-49°C internal,
 then a screaming-hot pan sear. The lean muscle benefits enormously from this technique —

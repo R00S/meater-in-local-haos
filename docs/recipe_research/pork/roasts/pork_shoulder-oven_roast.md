@@ -1,5 +1,8 @@
 # Pork Shoulder × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Pork shoulder (Boston butt / picnic) is a heavily worked muscle with significant
 collagen and intramuscular fat, making it the ideal braising and slow-roasting cut.

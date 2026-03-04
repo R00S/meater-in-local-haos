@@ -1,5 +1,8 @@
 # Lamb Shoulder × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Lamb shoulder is a heavily worked, collagen-rich muscle that rewards slow roasting.
 Unlike the lean leg, shoulder has abundant fat and connective tissue that convert

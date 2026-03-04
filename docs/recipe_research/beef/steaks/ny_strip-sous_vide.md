@@ -1,5 +1,8 @@
 # New York Strip × Sous Vide — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## THE FAT CAP RULE: 57°C, not 54°C for NY strip with fat cap
 
 Unlike filet mignon (lean → always 54°C) and ribeye (very marbled → always 57°C),

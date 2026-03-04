@@ -1,5 +1,8 @@
 # Skirt Steak × Grill (gas) — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Gas-grilled skirt steak is the quintessential fajita and carne asada method.
 The key question: does the gas grill — with its consistent radiant heat and inability

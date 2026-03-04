@@ -1,5 +1,8 @@
 # Filet Mignon × Grill (gas) — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Filet mignon grilled on a gas BBQ: direct high heat (232°C / 450°F) for the initial
 Maillard sear, then moved to indirect zone to finish gently. The lean cut absorbs the

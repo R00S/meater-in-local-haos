@@ -1,5 +1,8 @@
 # Mutton Shoulder × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Mutton shoulder is even more collagen-rich than lamb shoulder, and benefits greatly
 from very slow cooking (150-160°C / 300-320°F) for 4-6 hours. The long time allows

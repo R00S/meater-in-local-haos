@@ -1,5 +1,8 @@
 # Spinach × Steam — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Steamed spinach is the gentlest preparation: no fat in the pan, no direct heat contact,
 just the ambient hot steam wilting the leaves from the outside in. The result is

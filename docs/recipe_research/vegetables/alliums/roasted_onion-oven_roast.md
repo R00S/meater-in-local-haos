@@ -1,5 +1,8 @@
 # Roasted Onion × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Roasting transforms the raw onion's sharp pungency into concentrated sweetness and
 caramel depth. The sulphur compounds that make raw onions harsh break down during

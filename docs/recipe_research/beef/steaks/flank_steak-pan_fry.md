@@ -1,5 +1,8 @@
 # Flank Steak × Pan Fry — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Pan frying for flank uses more oil and may use slightly lower sustained heat than
 pure searing. The key culinary question: does pan frying — which typically involves

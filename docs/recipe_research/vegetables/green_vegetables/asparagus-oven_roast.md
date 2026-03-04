@@ -1,5 +1,8 @@
 # Asparagus × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Roasted asparagus is one of the best arguments for owning a sheet pan: in a hot oven,
 the thin spears caramelise at their tips, develop a gentle char at their thinner ends,

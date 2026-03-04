@@ -1,5 +1,8 @@
 # Tri-Tip × Smoker — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Smoking a tri-tip sits at the crossroads of California BBQ tradition and the low-and-
 slow world of Southern BBQ. The cut is not a collagen-rich braise candidate — it does

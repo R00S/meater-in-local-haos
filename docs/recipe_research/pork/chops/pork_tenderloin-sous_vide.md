@@ -1,5 +1,8 @@
 # Pork Tenderloin × Sous Vide — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Sous vide is arguably the ideal method for pork tenderloin: the lean, forgiving cut
 is sealed in a bag at an exact temperature (140°F / 60°C is the sweet spot for 1-4

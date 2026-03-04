@@ -1,5 +1,8 @@
 # Roasted Sweet Potato × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 The sweet potato has one of the highest natural sugar contents of any vegetable, and
 oven roasting is the method that most fully realises this: at 200°C the sugars caramelise

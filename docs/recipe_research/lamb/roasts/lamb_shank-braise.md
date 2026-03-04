@@ -1,5 +1,8 @@
 # Lamb Shank × Braise — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Lamb shank (the lower leg) is one of the most collagen-rich cuts on the animal —
 packed with connective tissue that must be converted to gelatin through 2.5-3.5

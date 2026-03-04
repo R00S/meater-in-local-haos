@@ -1,5 +1,8 @@
 # Duck Breast × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Duck breast oven roasting is the restaurant's primary technique — score the fat cap,
 start skin-down in a cold pan to render fat, then finish in a 375-400°F / 190-200°C

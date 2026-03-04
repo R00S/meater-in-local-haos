@@ -1,5 +1,8 @@
 # Swordfish Steak × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Swordfish is a dense, meaty fish often compared to tuna in texture. Unlike delicate
 white fish, swordfish steaks (2-3 cm thick) are almost steak-like — they sear

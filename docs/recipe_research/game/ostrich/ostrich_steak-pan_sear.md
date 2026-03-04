@@ -1,5 +1,8 @@
 # Ostrich Steak × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Ostrich is a red meat (not poultry despite being a bird) with an exceptionally lean
 profile — less fat than even venison. Ostrich fan (inner thigh) or leg steak is dark

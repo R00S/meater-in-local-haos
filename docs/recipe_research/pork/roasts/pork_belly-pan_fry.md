@@ -1,5 +1,8 @@
 # Pork Belly × Pan Fry — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Two sources from the British culinary tradition: Nigel Slater (British food writer) and Yotam Ottolenghi (British-based food writer). ToR requires every source from a different national or regional tradition
+
 ## Cut profile
 Pan-fried pork belly is almost exclusively done in thin slices (5–8 mm) rather
 than as a whole slab — the slab's thick fat layer cannot render in the short,

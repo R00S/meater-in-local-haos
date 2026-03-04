@@ -1,5 +1,8 @@
 # Spinach × Sauté — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Sautéed spinach is one of the fastest and most transformative acts in cooking: 500 g
 of fresh spinach leaves reduces to a palm-sized portion in under 3 minutes over high

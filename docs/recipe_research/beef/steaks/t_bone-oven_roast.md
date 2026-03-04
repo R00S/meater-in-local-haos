@@ -1,5 +1,8 @@
 # T-Bone / Porterhouse × Oven Roast (Reverse Sear) — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Reverse sear T-bone: low oven (107-135°C) brings BOTH muscles to near-target uniformly,
 then a 1-2 min/side sear. The bone acts as a heat bridge — the tenderloin side normally

@@ -1,5 +1,8 @@
 # Pork Belly × Sous Vide — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Three of five sources are from the American culinary tradition: J. Kenji López-Alt (Serious Eats), Thomas Keller (Under Pressure), and ChefSteps. ToR requires every source from a different national or regional tradition
+
 ## Cut profile
 Pork belly is perhaps the single best cut for sous vide because its two structural
 challenges — rendering the thick fat layers and breaking down the collagen between

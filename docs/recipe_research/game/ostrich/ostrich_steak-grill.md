@@ -1,5 +1,8 @@
 # Ostrich Steak × Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Ostrich (struts) is a ratite (flightless bird) but its meat is red, not white —
 it is physiologically more similar to beef or venison than to chicken. Ostrich

@@ -1,5 +1,8 @@
 # T-Bone / Porterhouse × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 T-bone/porterhouse has TWO muscles separated by the bone:
 1. **Strip side** (NY strip) — larger, denser, takes heat more slowly

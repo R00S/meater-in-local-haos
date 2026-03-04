@@ -1,5 +1,8 @@
 # Broccoli × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Roasting broccoli is a revelation to anyone who grew up only steaming or boiling it:
 the florets caramelise and brown at their tips, the stems become slightly nutty, and

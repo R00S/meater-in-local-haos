@@ -1,5 +1,8 @@
 # Pork Tenderloin × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Roasting pork tenderloin whole in a hot oven (400-425°F / 200-220°C) produces a
 consistent, evenly-cooked result in 20-25 minutes. The high oven temperature promotes

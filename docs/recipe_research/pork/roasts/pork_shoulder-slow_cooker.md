@@ -1,5 +1,8 @@
 # Pork Shoulder × Slow Cooker — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 The slow cooker is arguably the easiest path to pulled pork: set-and-forget at low
 (190°F / 88°C) for 8-10 hours or high (212°F / 100°C) for 4-6 hours. Unlike the

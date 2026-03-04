@@ -1,5 +1,8 @@
 # Pork Tenderloin × Air Fryer — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Cooking a whole pork tenderloin in an air fryer (375-400°F / 190-200°C) takes
 20-22 minutes and delivers an even brown exterior with a juicy interior. The air

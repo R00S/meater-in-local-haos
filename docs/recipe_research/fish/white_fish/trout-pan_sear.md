@@ -1,5 +1,8 @@
 # Trout Fillet × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Trout (rainbow, brown, sea trout) is a fatty freshwater fish in the same family as
 salmon — and cooked the same way. Skin-on fillet, skin-side down in a hot pan for

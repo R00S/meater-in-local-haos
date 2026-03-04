@@ -1,5 +1,8 @@
 # Ribeye Steak × Oven Roast (Reverse Sear) — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 "Oven roast" for a single ribeye steak means the reverse-sear technique: a low oven
 (100-135°C / 210-275°F) brings the steak to within 10°C of the target temperature with

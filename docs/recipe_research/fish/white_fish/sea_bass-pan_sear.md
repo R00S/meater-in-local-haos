@@ -1,5 +1,8 @@
 # Sea Bass × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 European sea bass (loup de mer, branzino, lubina) is prized for its delicate, sweet
 white flesh and edible, crisping skin. Skin-on fillet, pan seared skin-side down

@@ -1,5 +1,8 @@
 # Goat Chop × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Goat (kid or mature goat) chops are a staple in Caribbean, South Asian, Middle
 Eastern, and Mediterranean cuisines. The meat is leaner than lamb with a slightly

@@ -1,5 +1,8 @@
 # Rabbit Legs × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Internal inconsistency: '## What makes this method special' attributes the covered-then-uncovered technique to Paulina Cocina — a source not present in this leaf. Source 4 (Adina Beck) actually roasts uncovered the entire time, directly contradicting the claim that 'every tradition in this leaf' uses the two-phase technique
+
 ## Cut profile
 
 Rabbit legs roasted in a dry oven occupy a narrower culinary niche than braised

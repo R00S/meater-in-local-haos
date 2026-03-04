@@ -1,5 +1,7 @@
 # Rabbit Saddle × Pan Sear — Recipe Temperature Research
 
+> ✅ **STATUS: CONFORMS TO RECIPE_COLLECTION_TOR.md** — validated 2026-03-04
+
 ## Cut profile
 
 The rabbit saddle is the loin section running along the spine from the base of the

@@ -1,5 +1,8 @@
 # Caramelized Onions × Pan Fry — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Pan frying onions with slightly more fat and slightly less aggressive heat than a pure
 sauté is the method for thick-cut onion rings and wedges that need to cook through

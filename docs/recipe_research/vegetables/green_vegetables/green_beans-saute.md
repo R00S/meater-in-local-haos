@@ -1,5 +1,8 @@
 # Green Beans × Sauté — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Sautéed green beans in a hot pan develop a character unavailable to steamed beans:
 the Maillard browning on the contact surfaces, the blistered skin, and the slightly

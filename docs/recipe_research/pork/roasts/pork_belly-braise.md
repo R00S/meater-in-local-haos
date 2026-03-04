@@ -1,5 +1,8 @@
 # Pork Belly × Braise — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Two sources from the American national culinary tradition: David Chang (Momofuku, USA) and Thomas Keller (Ad Hoc at Home, USA). ToR requires every source from a different national or regional tradition
+
 ## Cut profile
 Braised pork belly is submerged partially in liquid and cooked at low, sustained
 heat (120–160°C oven or covered stovetop), producing a result entirely different

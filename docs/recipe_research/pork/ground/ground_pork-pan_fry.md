@@ -1,5 +1,8 @@
 # Ground Pork × Pan Fry — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Ground pork (minced pork) is used in dumplings, meatballs, bolognese, Asian stir-fries,
 and as a standalone protein. Like all ground meats, USDA requires 160°F / 71°C —

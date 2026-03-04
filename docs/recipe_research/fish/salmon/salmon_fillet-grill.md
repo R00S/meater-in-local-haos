@@ -1,5 +1,8 @@
 # Salmon Fillet × Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Grilling salmon presents a challenge: fish sticks to grill grates and breaks apart.
 Solutions: use a preheated, well-oiled grill at 400-450°F / 200-230°C; leave the

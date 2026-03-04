@@ -1,5 +1,8 @@
 # Tri-Tip × Sous Vide — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Sous vide unlocks a version of tri-tip that even the best charcoal and oak fire cannot
 produce: a perfectly uniform edge-to-edge medium-rare throughout the entire triangular

@@ -1,5 +1,8 @@
 # Flat Iron Steak × Pan Fry — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Pan frying a flat iron differs from pan searing mainly in the oil level and sustained
 heat management: slightly more fat in the pan, slightly more moderate heat, to cook

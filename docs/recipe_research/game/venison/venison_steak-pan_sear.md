@@ -1,5 +1,8 @@
 # Venison Steak × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Venison (deer) steak — typically from the loin or haunch (back leg) — is the leanest
 red-meat steak in common culinary use. The extreme leanness (2-4% fat vs 15-30% for

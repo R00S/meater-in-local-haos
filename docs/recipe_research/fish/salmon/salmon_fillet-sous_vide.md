@@ -1,5 +1,8 @@
 # Salmon Fillet × Sous Vide — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Sous vide salmon produces the most precisely controlled result of any cooking method:
 set the water bath to the exact desired final temperature and the fish cannot

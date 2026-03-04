@@ -1,5 +1,8 @@
 # Ribeye Steak × Charcoal Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Charcoal grilling produces radiant heat from glowing coals at 650-900°F / 340-480°C at
 grate level and convective heat under a closed lid. Hardwood charcoal (lump or briquette)

@@ -1,5 +1,8 @@
 # Chicken Leg (Whole) × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Whole chicken leg (drumstick + thigh, attached) is the most forgiving chicken cut
 for oven roasting — more fat and collagen than breast, and the skin crisps beautifully

@@ -1,5 +1,8 @@
 # Sirloin Steak × Grill (gas) — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Sirloin on a gas grill: preheat to 450-500°F / 230-260°C, direct sear 2-3 min per side
 for grill marks, then indirect zone to finish. The lean cut benefits from the moisture

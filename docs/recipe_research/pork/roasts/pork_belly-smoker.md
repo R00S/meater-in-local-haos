@@ -1,5 +1,8 @@
 # Pork Belly × Smoker — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Four of five sources are from the American culinary tradition: Steven Raichlen, Aaron Franklin, J. Kenji López-Alt (Serious Eats), and Pit Boys. ToR requires every source from a different national or regional tradition
+
 ## Cut profile
 Pork belly is the uncured, skin-on slab cut from the underside of the pig, defined
 by alternating thick layers of fat and muscle. Smoking at low temperatures (107–121°C /

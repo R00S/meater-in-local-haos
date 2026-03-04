@@ -1,5 +1,8 @@
 # Beef Brisket × Oven Roast / Low-and-Slow — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Beef brisket is one of the toughest, most collagen-rich cuts — the flat or point
 from the chest of the animal. Properly cooked to 195-210°F / 91-99°C over 8-14 hours

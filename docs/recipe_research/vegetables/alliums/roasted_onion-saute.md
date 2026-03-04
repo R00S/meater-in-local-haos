@@ -1,5 +1,8 @@
 # Roasted Onion × Sauté — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Sautéed onions represent the threshold between raw pungency and sweet softness —
 and the technique of sautéing spans a wide range from "softened and translucent" (5 min)

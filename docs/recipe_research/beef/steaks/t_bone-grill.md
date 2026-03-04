@@ -1,5 +1,8 @@
 # T-Bone / Porterhouse × Grill (gas) — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 T-bone on a gas grill at 450-500°F / 230-260°C: two-zone setup is critical.
 Tenderloin towards the cooler side to prevent overcooking the delicate muscle.

@@ -1,5 +1,8 @@
 # Pork Belly × Slow Cooker — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Two sources from the American culinary tradition: Momofuku/David Chang (USA) and American Southern tradition. ToR requires every source from a different national or regional tradition
+
 ## Cut profile
 Pork belly in the slow cooker undergoes the same collagen-to-gelatin and
 fat-rendering transformation as braising, but at a gentler, hands-off pace over

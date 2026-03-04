@@ -1,5 +1,8 @@
 # Reindeer Roast × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Reindeer roast (saddle, haunch or shoulder) is a traditional Scandinavian Christmas
 and festive dish. The haunch (lår) or saddle (rygg) at 1-2 kg / 2-4 lb roasts at

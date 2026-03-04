@@ -1,5 +1,8 @@
 # Kangaroo Steak × Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Kangaroo meat is one of the leanest red meats available — under 2% fat in most cuts.
 This makes it cook extremely fast and dry out rapidly if overcooked. The Australian

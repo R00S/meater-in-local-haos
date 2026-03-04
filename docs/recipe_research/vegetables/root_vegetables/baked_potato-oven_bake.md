@@ -1,5 +1,8 @@
 # Baked Potato × Oven Bake — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 The baked potato is one of the most studied single ingredients in food science:
 its transformation from raw, dense starch to fluffy interior with crackling skin

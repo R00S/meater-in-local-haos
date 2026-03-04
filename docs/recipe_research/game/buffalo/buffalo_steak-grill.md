@@ -1,5 +1,8 @@
 # Buffalo Steak × Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Grilled buffalo (water buffalo) steak is handled identically to lean beef — the
 slightly higher mineral content pairs well with charcoal smoke. Unlike bison,

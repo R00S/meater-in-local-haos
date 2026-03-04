@@ -1,5 +1,8 @@
 # Cod Fillet × Oven Bake — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Oven-baked cod at 400°F / 200°C for 12-15 minutes is the simplest method for
 cooking white fish to USDA safety while keeping it moist. The oven creates a

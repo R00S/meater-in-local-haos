@@ -1,5 +1,8 @@
 # Moose Steak × Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Moose (älg) is the most prized game meat in Scandinavia — älgstek is a centrepiece
 dish in Sweden, Norway, and Finland. Moose is extremely lean red meat with a deep,

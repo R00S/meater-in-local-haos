@@ -1,5 +1,8 @@
 # Venison Loin × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Venison loin (backstrap) is the finest venison cut — the equivalent of beef
 tenderloin, running along the spine. It is extremely lean, very tender, and

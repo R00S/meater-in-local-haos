@@ -1,5 +1,8 @@
 # Tomahawk Steak × Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 A tomahawk on a gas grill requires a two-zone setup that would be considered
 optional for any other steak — here it is mandatory. The 5–7 cm thickness means

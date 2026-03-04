@@ -1,5 +1,8 @@
 # Baby Back Ribs × Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Grilling baby back ribs uses indirect heat in a covered kettle or gas grill
 maintaining 225-275°F / 107-135°C inside the closed lid. Direct-heat grilling

@@ -1,5 +1,8 @@
 # Tri-Tip × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Tri-tip is a triangular muscle from the bottom sirloin, native to the Santa Maria
 Valley of California where it became a regional institution. It is a roast-sized cut

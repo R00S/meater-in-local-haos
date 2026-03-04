@@ -1,5 +1,8 @@
 # Rabbit Legs × Braise — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Two sources from the American national culinary tradition: Hank Shaw (American wild-game author, honest-food.net) and Saveur (American farmhouse). ToR requires every source from a different national or regional tradition
+
 ## Cut profile
 
 Rabbit legs — both the larger hind legs and the smaller, more delicate front legs

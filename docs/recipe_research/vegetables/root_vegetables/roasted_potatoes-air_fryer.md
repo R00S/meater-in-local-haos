@@ -1,5 +1,8 @@
 # Roasted Potatoes × Air Fryer — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Air-fried roasted potatoes achieve a crust quality that rivals or surpasses conventional
 oven roasting in half the time. The rapid circulating hot air creates a Maillard reaction

@@ -1,5 +1,8 @@
 # Pork Chop × Air Fryer — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Air fryer pork chops cook in 12-15 minutes at 375-400°F / 190-200°C circulating air,
 producing a crisped exterior without oil. The small air fryer cavity means the chop

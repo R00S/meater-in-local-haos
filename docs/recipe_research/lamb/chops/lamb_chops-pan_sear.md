@@ -1,5 +1,8 @@
 # Lamb Chops × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Lamb chops (loin chops or rib chops) are the most widely cooked lamb cut for home
 cooks — smaller than a rack, individually portioned, and cooking in 6-8 minutes total.

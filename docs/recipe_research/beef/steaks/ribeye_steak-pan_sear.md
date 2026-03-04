@@ -1,5 +1,8 @@
 # Ribeye Steak × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Missing ## Summary section; sources 3–5 embed pull temperature and final serving temperature inside method steps rather than as dedicated bolded steps
+
 ## Cut profile
 Ribeye is cut from the rib section (ribs 6-12), prized for abundant intramuscular fat
 (marbling) that bastes the meat from within during high-heat cooking. A screaming-hot

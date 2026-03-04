@@ -1,5 +1,8 @@
 # Flat Iron Steak × Charcoal Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Over live charcoal the flat iron reveals its shoulder heritage: the Maillard crust
 takes on a faintly smoky depth that a gas grill cannot fully replicate, and the

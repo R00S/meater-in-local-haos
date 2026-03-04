@@ -1,5 +1,8 @@
 # Tuna Steak × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Tuna steak (bluefin, yellowfin/ahi, bigeye) is unique among fish: it is almost always
 served rare or medium-rare — a raw, cool red centre surrounded by a seared exterior

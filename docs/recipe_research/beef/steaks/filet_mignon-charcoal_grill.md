@@ -1,5 +1,8 @@
 # Filet Mignon × Charcoal Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Charcoal grilling filet mignon uses a two-zone fire: direct high heat (204-232°C / 400-450°F)
 over the coals for the Maillard sear, then indirect heat to finish. Hardwood lump charcoal

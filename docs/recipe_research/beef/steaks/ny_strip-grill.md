@@ -1,5 +1,8 @@
 # New York Strip × Grill (gas) — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 NY strip on a gas grill at 450-550°F / 230-290°C: direct sear for crust (2-3 min/side),
 then indirect to finish. The fat cap along the edge benefits from extra time held against

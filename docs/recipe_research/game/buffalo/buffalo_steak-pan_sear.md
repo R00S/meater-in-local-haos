@@ -1,5 +1,8 @@
 # Buffalo Steak × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Buffalo (water buffalo) is a red meat that sits between beef and bison — slightly
 leaner than beef but not as lean as bison, with a richer, slightly more mineral

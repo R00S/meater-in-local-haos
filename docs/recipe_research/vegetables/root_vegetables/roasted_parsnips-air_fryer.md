@@ -1,5 +1,8 @@
 # Roasted Parsnips × Air Fryer — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Air frying concentrates the parsnip's exceptional natural sweetness in a shorter
 window than oven roasting — the circulating hot air caramelises the cut surfaces

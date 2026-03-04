@@ -1,5 +1,8 @@
 # Bison Burger × Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Bison burgers are leaner than beef burgers (typically 10-15% fat vs. 20-25% for
 beef) — they cook faster and dry out more easily if overcooked. USDA requires 160°F

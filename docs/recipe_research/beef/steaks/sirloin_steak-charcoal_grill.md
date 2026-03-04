@@ -1,5 +1,8 @@
 # Sirloin Steak × Charcoal Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Charcoal grilling sirloin uses a two-zone fire with hardwood lump charcoal at 230°C /
 450°F+. The smoky aromatics from combustion penetrate the lean muscle more noticeably than

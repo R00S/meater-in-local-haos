@@ -1,5 +1,8 @@
 # Venison Roast × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Venison roast (haunches, shoulder, or saddle) weighing 1-3 kg / 2-6 lb requires
 a two-phase approach: high-heat sear for crust (230°C / 445°F, 15 min) then

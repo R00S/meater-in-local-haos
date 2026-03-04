@@ -1,5 +1,8 @@
 # Filet Mignon × Oven Roast (Reverse Sear) — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Reverse sear is especially valuable for filet mignon because the 40-50mm thickness means
 a direct-sear-only approach creates an unacceptable gray band. Low oven (107-135°C /

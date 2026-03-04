@@ -1,5 +1,8 @@
 # Haddock Fillet × Pan Fry — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Haddock is the most popular white fish in the British Isles — the classic fish-and-chips
 fish. Skinless or skin-on fillets pan-fry in butter/oil at medium-high heat (375°F /

@@ -1,5 +1,8 @@
 # New York Strip × Charcoal Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 NY strip on charcoal: the two-zone fire (direct 205-230°C for sear, indirect for finish)
 adds combustion aromatics that complement the cut's bold beef flavour. Argentine bife de

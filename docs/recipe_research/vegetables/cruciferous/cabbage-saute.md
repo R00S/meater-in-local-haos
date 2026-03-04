@@ -1,5 +1,8 @@
 # Cabbage × Sauté — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Sautéed cabbage — shredded or cut into wedges and cooked in fat over moderate-to-high
 heat — produces a result completely different from braising: the edges char, the

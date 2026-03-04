@@ -1,5 +1,8 @@
 # Hake Fillet × Pan Fry — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Hake (merluza, merlu) is enormously popular in Spain, Portugal, Italy, and France —
 arguably the most-eaten white fish in Southern Europe. It has a mild, slightly sweet

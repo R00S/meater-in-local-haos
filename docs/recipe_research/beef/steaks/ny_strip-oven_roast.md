@@ -1,5 +1,8 @@
 # New York Strip × Oven Roast (Reverse Sear) — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 NY strip reverse sear: low oven (120-135°C) on a wire rack to 51°C internal,
 then a 1-2 min per side sear in smoking-hot cast iron. The fat cap benefits from

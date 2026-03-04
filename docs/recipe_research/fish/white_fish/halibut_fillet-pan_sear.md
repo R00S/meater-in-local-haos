@@ -1,5 +1,8 @@
 # Halibut Fillet × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Halibut is a large, very firm flatfish with pure white, dense flesh and mild flavour.
 Its firmness makes it one of the best white fish for pan searing — it holds together

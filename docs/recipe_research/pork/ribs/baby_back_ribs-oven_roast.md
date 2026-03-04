@@ -1,5 +1,8 @@
 # Baby Back Ribs × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Baby back ribs come from the top of the rib cage adjacent to the spine, shorter
 and leaner than spare ribs. Oven roasting uses the 3-2-1 method (3 hours unwrapped,

@@ -1,5 +1,8 @@
 # Ground Lamb × Pan Fry — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Ground lamb is used for Middle Eastern kofta, Greek moussaka, British shepherd's pie,
 and as a burger substitute. Like all ground meat, USDA requires 160°F / 71°C for

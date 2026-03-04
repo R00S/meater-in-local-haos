@@ -1,5 +1,8 @@
 # Filet Mignon × Air Fryer — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Air fryer filet mignon is cooked at 204°C (400°F) with the basket circulating hot air on
 all surfaces simultaneously. The lean, thick tenderloin cooks more evenly in an air fryer

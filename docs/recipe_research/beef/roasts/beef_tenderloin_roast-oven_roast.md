@@ -1,5 +1,8 @@
 # Beef Tenderloin Roast × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Whole beef tenderloin (filet de boeuf, chateaubriand) is the most expensive, most
 tender beef roast — a tapered 1.5-2 kg / 3-4 lb muscle with virtually no fat or

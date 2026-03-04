@@ -1,5 +1,8 @@
 # Ribeye Steak × Sous Vide — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Sous vide immerses the vacuum-sealed steak in a precisely controlled water bath, bringing
 the entire cut to the exact bath temperature from edge to edge with no gradient. There is

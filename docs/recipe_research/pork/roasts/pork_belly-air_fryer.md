@@ -1,5 +1,7 @@
 # Pork Belly × Air Fryer — Recipe Temperature Research
 
+> ✅ **STATUS: CONFORMS TO RECIPE_COLLECTION_TOR.md** — validated 2026-03-04
+
 ## Cut profile
 Air-fried pork belly — scored, skin-on strips or a small slab — achieves crispy
 crackling in 25–35 minutes by combining high convection heat (200–220°C) with

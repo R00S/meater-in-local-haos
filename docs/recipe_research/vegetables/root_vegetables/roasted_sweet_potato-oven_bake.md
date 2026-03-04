@@ -1,5 +1,8 @@
 # Roasted Sweet Potato × Oven Bake — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Baking a sweet potato whole — in its skin, like a jacket potato — is a different dish
 from roasted wedges. The skin remains intact, the interior steams inside its own

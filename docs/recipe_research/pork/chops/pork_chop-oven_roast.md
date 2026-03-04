@@ -1,5 +1,8 @@
 # Pork Chop × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Roasting thick pork chops in the oven (350-400°F / 175-200°C) produces even cooking
 throughout without the risk of a charred exterior before the interior reaches safe

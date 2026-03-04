@@ -1,5 +1,8 @@
 # Broccoli × Air Fryer — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Air-fried broccoli combines the caramelisation of oven roasting with the speed of a
 hot-air appliance, and the result is arguably the best broccoli the home cook can

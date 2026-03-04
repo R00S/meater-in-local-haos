@@ -1,5 +1,8 @@
 # Button Mushrooms × Air Fryer — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Air frying button mushrooms is one of the most effective applications of the air fryer
 for vegetables: the circulating hot air causes rapid moisture evaporation from all

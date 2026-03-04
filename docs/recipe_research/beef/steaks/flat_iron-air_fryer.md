@@ -1,5 +1,8 @@
 # Flat Iron Steak × Air Fryer — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Air frying a flat iron leverages the cut's most useful physical property: its uniform
 thickness. The rapid circulating hot air of an air fryer behaves like a miniature

@@ -1,5 +1,8 @@
 # Pork Belly × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Two sources from the American national culinary tradition: Thomas Keller (Ad Hoc at Home, USA) and David Chang (Momofuku, USA). ToR requires every source from a different national or regional tradition
+
 ## Cut profile
 Pork belly is the uncured, skin-on slab from the underside of the pig, made up of
 alternating thick layers of fat and lean muscle running parallel to the skin. Oven

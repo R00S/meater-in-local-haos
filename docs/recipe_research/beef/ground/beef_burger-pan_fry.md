@@ -1,5 +1,8 @@
 # Beef Burger × Pan Fry — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Pan-fried beef burgers, cooked in a cast iron or stainless skillet, produce the
 legendary smash burger crust — a deeply browned, crunchy exterior impossible to

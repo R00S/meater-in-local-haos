@@ -1,5 +1,8 @@
 # Roasted Onion × Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Grilling onions transforms them with an intensity that no oven or pan can fully
 replicate: the direct heat from the grill grate char-stripes the cut surface, the

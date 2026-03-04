@@ -1,5 +1,8 @@
 # Pork Tenderloin × Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Grilling pork tenderloin over medium-high direct heat (375-400°F / 190-205°C grill
 surface) produces a lightly charred exterior with smoky flavour in 15-18 minutes total.

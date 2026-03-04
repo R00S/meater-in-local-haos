@@ -1,5 +1,8 @@
 # Corn on the Cob × Grill — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Grilled corn on the cob is one of the most iconic summer preparations in North American
 and Nordic outdoor cooking: the kernel sugars caramelise and char against the grill grates

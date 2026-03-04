@@ -1,5 +1,8 @@
 # Secreto (Ibérico) × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Secreto is a hidden skirt muscle from the Ibérico pig, just under the shoulder
 blade — "secreto" (secret) because it is concealed and often kept by the butcher.

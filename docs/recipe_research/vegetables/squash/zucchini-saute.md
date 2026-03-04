@@ -1,5 +1,8 @@
 # Zucchini × Sauté — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Sautéed zucchini (courgette) at high heat develops a golden-brown crust on its cut
 surfaces that raw zucchini's watery interior would otherwise prevent. The trick is

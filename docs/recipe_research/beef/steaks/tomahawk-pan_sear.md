@@ -1,5 +1,8 @@
 # Tomahawk Steak × Pan Sear — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 The tomahawk is a bone-in ribeye with the entire rib bone left intact — typically
 40–60 cm — making it one of the most dramatic presentations in all of beef cookery.

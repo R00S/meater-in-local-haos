@@ -1,5 +1,8 @@
 # Turkey Breast × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Turkey breast (bone-in half breast, 1.5-3 kg) is the easiest way to serve a crowd
 without roasting a whole bird. It dries out more quickly than dark meat — the white

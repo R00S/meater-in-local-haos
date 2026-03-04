@@ -1,5 +1,8 @@
 # Filet Mignon × Pan Fry — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Pan frying filet mignon uses a moderately high heat (cast iron or stainless steel) with
 oil and typically a generous addition of butter, garlic, and herbs part-way through.

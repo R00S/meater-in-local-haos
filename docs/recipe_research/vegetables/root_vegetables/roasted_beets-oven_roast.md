@@ -1,5 +1,8 @@
 # Roasted Beets × Oven Roast — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Roasting a whole beet in foil is one of the few cooking methods where the vegetable
 genuinely improves itself by enclosure: the steam generated inside the foil packet

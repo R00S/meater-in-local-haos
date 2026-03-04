@@ -1,5 +1,8 @@
 # Flat Iron Steak × Sous Vide — Recipe Temperature Research
 
+> ⚠️ **STATUS: NEEDS TO BE RECREATED**
+> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+
 ## Cut profile
 Sous vide gives the flat iron something its shoulder heritage would not normally allow:
 a perfectly even edge-to-edge interior at a precisely chosen temperature, with none of
