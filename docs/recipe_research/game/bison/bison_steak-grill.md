@@ -1,58 +1,15 @@
 # Bison Steak × Grill — Recipe Temperature Research
 
-> ⚠️ **STATUS: NEEDS TO BE RECREATED**
-> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+> ⚠️ **STATUS: NEEDS TO BE RECREATED FROM SCRATCH**
+> All previous content has been removed because it was corrupt (bullet-point summaries, not full collected recipes). This leaf must be recreated using credible human-written sources only. Do not use any prior version of this file — treat it as blank.
 
-## Cut profile
-Grilling bison steak over maximum heat (450-500°F / 230-260°C) is the classic
-American Great Plains preparation — simple, respectful of the clean, lean protein.
-The extreme leanness demands the grill be as hot as possible and cooking time as
-brief as possible. Like venison, bison should never be cooked above medium on the
-grill — 140°F / 60°C is the absolute upper limit before the meat becomes dry and
-loses its characteristic clean, slightly sweet flavour.
+## Tree position
 
-## Source recipes
-
-### 1. Hank Shaw — Grilled Bison Steak (honest-food.net)
-- **Source**: honest-food.net/grilled-bison
-- **Method**: Oil-rubbed, 500°F+ grill, 2-3 min per side max, rest 5 min.
-- **Target**: **130-135°F / 54-57°C** at centre
-
-### 2. Ted Turner's Montana Grill — Grilled Bison Guidelines
-- **Source**: ted-turners-montana-grill.com
-- **Method**: Charcoal or gas maximum heat, 2-3 min per side.
-- **Target**: **130-135°F / 54-57°C** medium-rare
-
-### 3. Steve Raichlen — Grilled Bison with Herb Butter (Planet Barbecue)
-- **Source**: Planet Barbecue (Workman)
-- **Method**: Oil marinade, maximum grill heat, 2-3 min per side, herb butter finish.
-- **Target**: **130-140°F / 54-60°C**
-
-### 4. Weber — Wild Game Grilling Guide
-- **Source**: weber.com/grilling-inspiration/wild-game
-- **Method**: Maximum heat, brief cook, 2-3 min per side.
-- **Target**: **145°F / 63°C** (USDA standard they quote); culinary preferred 130-135°F
-
-### 5. Magnus Nilsson — Grilled Bison (Nordic Cookbook context)
-- **Source**: The Nordic Cookbook (Phaidon) — game chapter
-- **Method**: Simple seasoning, hot grill, 2-3 min per side.
-- **Target**: **54-57°C** (Nordic game steak standard)
-
-## Temperature consensus
-
-| Tradition | Target internal temp | Notes |
-|-----------|---------------------|-------|
-| USA / Hank Shaw / Raichlen | 130-140°F / 54-60°C | Medium-rare preferred |
-| Ted Turner Montana Grill | 130-135°F / 54-57°C | Industry restaurant standard |
-| USDA | 145°F / 63°C | Safe minimum |
-
-**Consensus: 130-135°F / 54-57°C medium-rare.** Maps to `medium_rare` in game doneness.
-
-## What makes this method special
-Grilled bison has a direct lineage to the original Great Plains cooking traditions.
-The open flame crust contrasts perfectly with bison's clean, sweet lean flesh —
-a combination that feels simultaneously ancient and modern. The brief cook time
-(under 6 minutes total) makes this one of the fastest premium steaks possible.
-
-## Data applied to cooking_data.py
-- `recommended_doneness`: `"medium_rare"` (54-57°C consensus)
+| Field | Value |
+|-------|-------|
+| Category | `game` |
+| Cut type folder | `bison/` |
+| Cut slug | `bison_steak` |
+| Method slug | `grill` |
+| File | `bison_steak-grill.md` |
+| Full path | `docs/recipe_research/game/bison/bison_steak-grill.md` |

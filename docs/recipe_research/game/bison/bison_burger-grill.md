@@ -1,53 +1,15 @@
 # Bison Burger × Grill — Recipe Temperature Research
 
-> ⚠️ **STATUS: NEEDS TO BE RECREATED**
-> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+> ⚠️ **STATUS: NEEDS TO BE RECREATED FROM SCRATCH**
+> All previous content has been removed because it was corrupt (bullet-point summaries, not full collected recipes). This leaf must be recreated using credible human-written sources only. Do not use any prior version of this file — treat it as blank.
 
-## Cut profile
-Bison burgers are leaner than beef burgers (typically 10-15% fat vs. 20-25% for
-beef) — they cook faster and dry out more easily if overcooked. USDA requires 160°F
-/ 71°C for all ground meat including bison. Many bison specialty producers now
-recommend 160°F and note that bison reaches this temperature 1-2 minutes faster
-than beef on the same grill. A thicker patty (3/4 inch) compensates for leanness.
+## Tree position
 
-## Source recipes
-
-### 1. J. Kenji López-Alt — Bison Burger (Serious Eats / adapted)
-- **Source**: seriouseats.com — adapted from beef burger article
-- **Method**: 80/20 fat if possible, medium-high grill, 3-4 min per side.
-- **Target**: **160°F / 71°C** (USDA ground meat) — bison cooks faster than beef
-
-### 2. Ted's Montana Grill — The Bison Burger Standard
-- **Source**: tedsmontanagrill.com / bison management guidelines
-- **Method**: Thick patty, medium grill, 4-5 min per side.
-- **Target**: **160°F / 71°C** — "fully cooked"
-
-### 3. National Bison Association — Cooking Bison
-- **Source**: bisoncentral.com
-- **Method**: Same technique as beef but watch — bison cooks 1/3 faster.
-- **Target**: **160°F / 71°C**
-
-### 4. Leila Lindholm — Bisonburgare (adapted) (leila.se)
-- **Source**: leila.se/recept
-- **Method**: Grill medium-hög, 3-4 min per sida.
-- **Target**: **70-72°C**
-
-### 5. Gordon Ramsay — Game Burger (adapted bison)
-- **Source**: gordonramsay.com
-- **Method**: Medium-high grill, season well, 3-4 min per side.
-- **Target**: **160°F / 71°C**
-
-## Temperature consensus
-
-| Tradition | Target internal temp | Notes |
-|-----------|---------------------|-------|
-| USA / USDA | 160°F / 71°C | Ground meat mandatory |
-| National Bison Association | 160°F / 71°C | Bison industry standard |
-| Sweden | 70-72°C | |
-
-**Consensus: 160°F / 71°C (USDA ground meat standard).**
-Maps to `well_done` in bison/game doneness.
-
-## Data applied to cooking_data.py
-- `supported_methods` gains: `grill`, `pan_fry`
-- `recommended_doneness`: `"well_done"` (160°F/71°C ground bison)
+| Field | Value |
+|-------|-------|
+| Category | `game` |
+| Cut type folder | `bison/` |
+| Cut slug | `bison_burger` |
+| Method slug | `grill` |
+| File | `bison_burger-grill.md` |
+| Full path | `docs/recipe_research/game/bison/bison_burger-grill.md` |

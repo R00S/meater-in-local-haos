@@ -1,51 +1,15 @@
 # Buffalo Steak × Grill — Recipe Temperature Research
 
-> ⚠️ **STATUS: NEEDS TO BE RECREATED**
-> Source recipes are in summary/bullet-point format — missing **Serves**, **Ingredients**, numbered Method steps, probe insert instruction, bolded **Pull at** temperature, and Final serving temperature. Step 2 of the ToR verification protocol fails
+> ⚠️ **STATUS: NEEDS TO BE RECREATED FROM SCRATCH**
+> All previous content has been removed because it was corrupt (bullet-point summaries, not full collected recipes). This leaf must be recreated using credible human-written sources only. Do not use any prior version of this file — treat it as blank.
 
-## Cut profile
-Grilled buffalo (water buffalo) steak is handled identically to lean beef — the
-slightly higher mineral content pairs well with charcoal smoke. Unlike bison,
-water buffalo in Europe/Asia is farmed (not wild), so USDA wild game rules
-do not apply; it is treated as domesticated bovine. Target: 130-140°F / 54-60°C
-(medium-rare to medium), 3-4 minutes per side on a 400-450°F grill.
+## Tree position
 
-## Source recipes
-
-### 1. Italian tradition — Bistecca di bufalo alla griglia
-- **Source**: Italian culinary tradition / Napoli
-- **Method**: Hot charcoal grill (brace), olive oil brush, 3-4 min per side.
-- **Target**: **54-60°C** — "al sangue" (bloody/medium-rare)
-
-### 2. Tom Parker Bowles — Grilled Buffalo (Let's Eat Meat)
-- **Source**: Let's Eat Meat (Pavilion)
-- **Method**: Hot grill, 3-4 min per side, rest 5 min.
-- **Target**: **130-140°F / 54-60°C**
-
-### 3. Hank Shaw — Grilled Buffalo Steak (honest-food.net)
-- **Source**: honest-food.net
-- **Method**: High-heat grill, 3-4 min per side.
-- **Target**: **130-140°F / 54-60°C**
-
-### 4. Leila Lindholm — Grillad buffelfilé (leila.se)
-- **Source**: leila.se/recept
-- **Method**: Het grill, 3-4 min per sida. Vila 5 min.
-- **Target**: **57-60°C**
-
-### 5. Gordon Ramsay — Grilled Exotic Beef/Buffalo
-- **Source**: gordonramsay.com
-- **Method**: Maximum grill heat, 3-4 min per side.
-- **Target**: **130-140°F / 54-60°C**
-
-## Temperature consensus
-
-| Tradition | Target internal temp | Notes |
-|-----------|---------------------|-------|
-| Italy | 54-60°C | Medium-rare tradition |
-| UK / USA | 130-140°F / 54-60°C | Medium-rare to medium |
-| Sweden | 57-60°C | "Rosa" |
-
-**Consensus: 57-60°C / 135-140°F.** Maps to `medium_rare` in game doneness.
-
-## Data applied to cooking_data.py
-- `recommended_doneness`: `"medium_rare"` (54-60°C)
+| Field | Value |
+|-------|-------|
+| Category | `game` |
+| Cut type folder | `buffalo/` |
+| Cut slug | `buffalo_steak` |
+| Method slug | `grill` |
+| File | `buffalo_steak-grill.md` |
+| Full path | `docs/recipe_research/game/buffalo/buffalo_steak-grill.md` |
