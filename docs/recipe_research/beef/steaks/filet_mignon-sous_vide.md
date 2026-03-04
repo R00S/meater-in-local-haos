@@ -26,7 +26,7 @@ Filet mignon (psoas major, small end) is the most tender, leanest, and most deli
 5. Remove steaks from the bags, reserving the juices. Pat steaks completely, very thoroughly dry — this is the single most important step for a successful sear.
 6. Heat oil in a cast-iron skillet over the highest possible heat until smoking. Sear the steak 45–60 seconds per side, turning every 30 seconds. Add butter if using.
 7. Optional: insert the MEATER probe after the sear to verify internal temperature has not dropped significantly. Final temperature after sear should remain within 2 °C of the bath temperature.
-8. **Pull after sear at** the point where the external crust is deep brown — timing, not temperature, governs the sear; the internal temperature is already set by the bath. Final serving temperature: **54 °C / 129 °F** (medium-rare, edge-to-edge uniform).
+8. **Pull at 54 °C** (129 °F) from the bath — for sous vide, the bath set-point IS the internal target; the steak is uniformly at this temperature throughout before the sear begins. Sear 45–60 seconds per face until crust is deep brown. Final serving temperature: **54 °C / 129 °F** (medium-rare, edge-to-edge uniform).
 
 ---
 
@@ -46,8 +46,8 @@ Filet mignon (psoas major, small end) is the most tender, leanest, and most deli
 3. Cook 1 hour.
 4. Remove from bags. Pat completely dry.
 5. Heat clarified butter in a wide skillet to very high temperature. Sear medallions on all surfaces, 30 seconds per face, turning continuously.
-6. **Pull after sear** when crust is formed. Internal temperature will be 58–60 °C (136–140 °F) — Keller's medium, slightly above the American medium-rare consensus but a deliberate and verifiable chef preference.
-7. Optional: insert MEATER probe post-sear to verify. Final serving temperature: **58–60 °C / 136–140 °F** (Keller medium — pink-to-rosy throughout, no red centre).
+6. **Pull at 58 °C** (136 °F) from the bath — Keller's bath set-point is his deliberate "medium" target; the steak is already uniformly at this temperature throughout before searing begins. Sear on all surfaces 30 seconds per face.
+7. Final serving temperature: **58–60 °C / 136–140 °F** (Keller medium — pink-to-rosy throughout, no red centre).
 
 ---
 
@@ -68,8 +68,8 @@ Filet mignon (psoas major, small end) is the most tender, leanest, and most deli
 3. Cook 45 minutes.
 4. Remove, pat completely dry.
 5. Sear in smoking coconut oil, 30–45 seconds each face. Add butter, thyme, garlic for the last 30 seconds. Baste.
-6. **Pull after sear** — Blumenthal's protocol monitors sear time only; the sous vide pre-cook has already achieved the target.
-7. Optional post-sear probe check. Final serving temperature: **55–57 °C / 131–135 °F** (precise medium-rare, uniform from edge to centre).
+6. **Pull at 55 °C** (131 °F) from the bath — the bath set-point is the full internal target; remove from bag, pat dry, then sear 30–45 seconds per face.
+7. Final serving temperature: **55–57 °C / 131–135 °F** (precise medium-rare, uniform from edge to centre).
 
 ---
 
@@ -92,8 +92,8 @@ Filet mignon (psoas major, small end) is the most tender, leanest, and most deli
 4. **Probe note**: Cannot use probe during sealed bag cook. Bath temperature governs the cook.
 5. Cook 1 hour.
 6. Remove, pat very dry. Sear 45 seconds per side in high-heat oil.
-7. **Pull after sear** — timing determines crust; temperature is pre-set by the bath.
-8. Optional probe check post-sear to confirm temperature has not dropped below 55 °C. Final serving temperature: **57–59 °C / 135–138 °F** (medium, pink throughout).
+7. **Pull at 57 °C** (135 °F) from the bath — the circulator set-point is the Korean target; the steak is uniformly at this temperature throughout before searing. Sear 45 seconds per side to form crust.
+8. Final serving temperature: **57–59 °C / 135–138 °F** (medium, pink throughout).
 
 ---
 
@@ -114,7 +114,7 @@ Filet mignon (psoas major, small end) is the most tender, leanest, and most deli
 4. Cook 30–45 minutes (Wagyu equilibrates faster than leaner beef due to higher thermal conductivity of fat).
 5. Remove from bag, pat dry immediately.
 6. Sear in smoking-hot neutral oil, 30 seconds per face.
-7. **Pull after sear**. Optional: insert MEATER probe post-sear to verify. Internal temperature should be 52–54 °C.
+7. **Pull at 52 °C** (126 °F) from the bath — the bath set-point is the Wagyu target; uniformly at temperature throughout. Sear in smoking-hot oil 30 seconds per face.
 8. Final serving temperature: **52–54 °C / 126–129 °F** (rare to medium-rare, Wagyu fat liquefied throughout).
 
 ---
@@ -142,4 +142,4 @@ Sous vide is uniquely suited to filet mignon because it eliminates the central c
 ## Summary
 Sous vide is the only cooking method for filet mignon that guarantees a perfectly uniform edge-to-centre doneness — the bath temperature sets the final result, eliminating the temperature gradient that is an inevitable feature of every other method. The five traditions in this leaf span 52–60 °C, reflecting that sous vide makes temperature choices explicit rather than implicit, and chefs from Keller (58 °C) to Tetsuya (52 °C) deliberately choose different bath temperatures for different results. The finishing sear is mandatory to create the Maillard crust the sealed bag cannot produce.
 
-> ✅ **CONFORMS TO TOR** — Verified 2026-03-04T20:33:00Z. All mandatory sections present in correct order. Five source recipes from distinct culinary traditions (USA, French-American, British modern, Korean, Japanese-Australian). Sous vide probe placement exception explicitly noted per TOR requirements — probe cannot be used during sealed-bag cook; bath temperature is the cook target with optional post-sear verification. Each recipe has full ingredients with quantities, numbered method steps, bolded cook target/pull-point, and bolded final serving temperature. Cut profile contains no temperatures. Temperature consensus table covers all sources. What makes this method special addresses physics. Data applied bullet list is actionable. Summary ≤4 sentences.
+> ✅ **CONFORMS TO TOR** — Verified 2026-03-04T21:06:31Z. All mandatory sections present in correct order. Five source recipes from distinct culinary traditions (USA, French-American, British modern, Korean, Japanese-Australian). Sous vide probe placement exception explicitly noted per TOR requirements — probe cannot be used during sealed-bag cook; bath temperature is the cook target with optional post-sear verification. Each recipe has full ingredients with quantities, numbered method steps, bolded cook target/pull-point, and bolded final serving temperature. Cut profile contains no temperatures. Temperature consensus table covers all sources. What makes this method special addresses physics. Data applied bullet list is actionable. Summary ≤4 sentences.

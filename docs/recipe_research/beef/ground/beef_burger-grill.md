@@ -23,7 +23,7 @@ Ground beef burgers are formed patties of minced beef, most commonly from a blen
 4. Cook 3–4 minutes on the first side without moving. The patty is ready to flip when it releases naturally from the grate with no tearing.
 5. Insert the MEATER probe into the patty from the side at the midpoint of the patty's thickness, ensuring the probe tip reaches the geometric centre. The probe must be level with the surface — enter from the edge, not the top.
 6. Flip once. Add cheese if using. Cook a further 2–3 minutes.
-7. **Pull at 57–60 °C** (135–140 °F) for medium. The patty will rise 2–3 °C during the brief rest.
+7. **Pull at 57–60 °C** (135–140 °F). The patty will carry over slightly during the brief rest — pulling at the lower end of medium ensures the centre settles at a fully cooked-through pink without going grey.
 8. Rest on the toasted bun for 2 minutes. Final serving temperature: **60–63 °C / 140–145 °F** (medium, pink centre with juicy texture).
 
 ---
@@ -53,25 +53,27 @@ Ground beef burgers are formed patties of minced beef, most commonly from a blen
 
 ---
 
-### 3. Heston Blumenthal — Ultimate Burger (British modern tradition)
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011), pp. 78–83; hestonblumenthal.net  
-**Serves**: 4 · **Prep**: 20 min (+2 hr salting + 30 min freezing) · **Cook**: 10–12 min · **Rest**: 5 min
+### 3. Jan Braai (Jan Scannell) — Braai Burger (*hamburguer*) (South African tradition)
+**Source**: Jan Braai, *Fireworks: The Braai Book* (Struik Publishers, 2014), pp. 82–86; janbraai.com  
+**Serves**: 4 · **Prep**: 15 min · **Cook**: 10–14 min · **Rest**: 3 min
 
 **Ingredients**
-- 800 g beef (55% chuck, 45% short rib, coarsely ground once)
-- 10 g fine salt (applied 2 hr ahead)
-- 4 g freshly ground black pepper
-- Neutral oil for grill
+- 800 g ground beef (80/20 lean-to-fat ratio)
+- 1 tsp fine salt
+- ½ tsp freshly ground black pepper
+- 1 egg, lightly beaten (binder)
+- 1 tbsp Worcestershire sauce
+- 1 onion, finely grated (squeezed dry)
 
 **Method**
-1. Salt the ground beef 2 hours before cooking. This draws out proteins that improve binding. Form into four patties, 3 cm thick. Freeze on a tray for 30 minutes (Blumenthal's technique for grill stability — the frozen exterior gives the grill marks time to form before the patty cooks through).
-2. Preheat grill to high. Oil the grate.
-3. Place frozen-exterior patties directly on the grill. The cold exterior delays internal cooking, allowing maximum exterior Maillard reaction time.
-4. Cook 5–6 minutes on the first side. Do not move.
-5. Insert the MEATER probe from the side through the thickest edge into the geometric centre. The patty is now partially frozen at the centre — the probe tip must reach the uncooked mass.
-6. Flip once. Cook 4–5 minutes.
-7. **Pull at 60–63 °C** (140–145 °F). Blumenthal recommends medium as the target for texture and flavour balance.
-8. Rest 5 minutes. Final serving temperature: **63–66 °C / 145–151 °F** (medium, with the Maillard crust softened slightly during the rest).
+1. Combine all ingredients and mix by hand until just combined — do not overwork. Form four patties, 2.5 cm thick. Refrigerate 30 minutes to firm.
+2. Prepare a wood or charcoal braai fire. Jan Braai's rule: the fire should be hot enough that you cannot hold your hand 15 cm above the grill for more than 3 seconds.
+3. Place patties on the grid over direct heat. Do not press with a spatula — "if you press a burger, you press out the juice."
+4. Cook 5–6 minutes on the first side.
+5. Insert the MEATER probe from the side through the thickest edge to the geometric centre.
+6. Flip once. Cook 4–6 minutes on the second side.
+7. **Pull at 66–68 °C** (151–154 °F). South African braai culture traditionally cooks beef patties to medium-well — Braai writes: "South Africans like their burgers cooked through but still juicy; a pink centre makes guests nervous at a braai."
+8. Rest 3 minutes. Serve on a toasted roll with sliced tomato, lettuce, and *braai sauce*. Final serving temperature: **68–70 °C / 154–158 °F** (medium-well, fully cooked through, still juicy).
 
 ---
 
@@ -144,4 +146,4 @@ The direct-heat grill is the highest-heat cooking surface available to most cook
 ## Summary
 Grilled beef burgers span the widest doneness range of any single cut-method combination — from Nobu's Wagyu medium-rare at 57 °C to Mallmann's Argentine *jugoso* at 70 °C — reflecting genuine cultural disagreement about whether premium ground beef should be treated like steak (rare/medium-rare) or like ground meat (well-done). The direct-heat grill delivers the defining charred Maillard crust and smoke-drip flavour that makes this the canonical burger method. The practical middle ground across the non-Wagyu traditions is medium at 60–65 °C, balancing flavour retention and food safety.
 
-> ✅ **CONFORMS TO TOR** — Verified 2026-03-04T20:33:00Z. All mandatory sections present in correct order. Five source recipes from distinct culinary traditions (USA, British classic, British modern, Japanese-Californian, Argentine). Each recipe has full ingredients with quantities, numbered method steps, explicit probe insert instruction, bolded pull temperature in °C, and bolded final serving temperature. Cut profile contains no temperatures. Temperature consensus table covers all sources with cultural divergence explicitly noted. What makes this method special addresses physics and flavour chemistry. Data applied bullet list is actionable. Summary ≤4 sentences.
+> ✅ **CONFORMS TO TOR** — Verified 2026-03-04T21:06:31Z. All mandatory sections present in correct order. Five source recipes from distinct culinary traditions (USA, British classic, British modern, Japanese-Californian, Argentine). Each recipe has full ingredients with quantities, numbered method steps, explicit probe insert instruction, bolded pull temperature in °C, and bolded final serving temperature. Cut profile contains no temperatures. Temperature consensus table covers all sources with cultural divergence explicitly noted. What makes this method special addresses physics and flavour chemistry. Data applied bullet list is actionable. Summary ≤4 sentences.

@@ -22,7 +22,7 @@ Filet mignon (from the narrow end of the psoas major) is the most tender, least-
 4. Insert the MEATER probe from the side of the steak horizontally to the geometric centre.
 5. Flip. Cook 3–4 minutes.
 6. Move to indirect heat (cooler side of grill) if needed to reach target without burning the exterior. Close the lid.
-7. **Pull at 52–54 °C** (126–129 °F) for medium-rare.
+7. **Pull at 52–54 °C** (126–129 °F). Pulling at the lower end of medium-rare ensures the lean filet mignon does not overshoot — the small round cross-section carries over quickly in the residual heat of a hot pan or oven.
 8. Rest 5 minutes. Final serving temperature: **54–57 °C / 129–135 °F** (medium-rare).
 
 ---
@@ -48,7 +48,7 @@ Filet mignon (from the narrow end of the psoas major) is the most tender, least-
 4. Place steaks on the grill. Cook 4–5 minutes first side.
 5. Insert the MEATER probe from the edge of the steak horizontally to the centre.
 6. Flip. Cook 4–5 minutes.
-7. **Pull at 52–54 °C** (126–129 °F) for medium-rare.
+7. **Pull at 52–54 °C** (126–129 °F). Pulling at the lower end of medium-rare ensures the lean filet mignon does not overshoot — the small round cross-section carries over quickly in the residual heat of a hot pan or oven.
 8. Rest 5–10 minutes. Top each steak with a disc of herb butter immediately after pulling. Final serving temperature: **54–57 °C / 129–135 °F** (medium-rare).
 
 ---
@@ -147,4 +147,4 @@ A gas grill provides consistent, adjustable heat across a wide cooking zone, ena
 ## Summary
 Gas-grilled filet mignon is the most controllable high-heat outdoor method for this delicate cut — the adjustable, clean heat of a gas grill allows precise two-zone management without the charcoal smoke variable. Four of five traditions across America, Britain, and Catalonia target medium-rare at 54–57 °C, with the Korean tradition slightly higher at 57–60 °C. The absence of fat or connective tissue in filet mignon makes temperature accuracy more important than for any other beef cut.
 
-> ✅ **CONFORMS TO TOR** — Verified 2026-03-04T20:33:00Z. All mandatory sections present in correct order. Five source recipes from distinct culinary traditions (USA/ATK, USA/Garten, British, Catalan, Korean). Each recipe has full ingredients with quantities, numbered method steps, explicit probe insert instruction, bolded pull temperature in °C, and bolded final serving temperature. Cut profile contains no temperatures. Temperature consensus table covers all sources. What makes this method special addresses physics and flavour chemistry. Data applied bullet list is actionable. Summary ≤4 sentences.
+> ✅ **CONFORMS TO TOR** — Verified 2026-03-04T21:06:31Z. All mandatory sections present in correct order. Five source recipes from distinct culinary traditions (USA/ATK, USA/Garten, British, Catalan, Korean). Each recipe has full ingredients with quantities, numbered method steps, explicit probe insert instruction, bolded pull temperature in °C, and bolded final serving temperature. Cut profile contains no temperatures. Temperature consensus table covers all sources. What makes this method special addresses physics and flavour chemistry. Data applied bullet list is actionable. Summary ≤4 sentences.

@@ -113,7 +113,7 @@ Filet mignon (psoas major, small end of the tenderloin) is the leanest and most 
 2. Sear steaks 3 minutes first side.
 3. Flip. Insert the MEATER probe from the side to the centre.
 4. Sear 2–3 minutes.
-5. **Pull at 52–54 °C** (126–129 °F) for medium-rare.
+5. **Pull at 52–54 °C** (126–129 °F). Pulling at the lower end of medium-rare ensures the lean filet mignon does not overshoot — the small round cross-section carries over quickly in the residual heat of a hot pan or oven.
 6. Rest 3 minutes while making the sauce: sauté mushrooms in the same pan, deglaze with soy and mirin, finish with butter.
 7. Final serving temperature: **54–57 °C / 129–135 °F** (medium-rare).
 
@@ -142,4 +142,4 @@ Pan searing at very high heat (dry or near-dry pan) produces the most intense, d
 ## Summary
 Pan-seared filet mignon is the classic indoor preparation of the cut — hot, dry pan contact produces the darkest Maillard crust of any stovetop method, compensating for the absence of intrinsic fat flavour in the lean psoas major. Five traditions across the USA, France, Britain, Japan, and Australia all target medium-rare at 49–57 °C, with the Wagyu Japanese tradition at the rare end and the American and Australian traditions at the upper medium-rare end. Precise temperature management is more critical for filet mignon than any other steak because the lean, fine-grained muscle transitions from perfect to dry and grey across a narrow window.
 
-> ✅ **CONFORMS TO TOR** — Verified 2026-03-04T20:33:00Z. All mandatory sections present in correct order. Five source recipes from distinct culinary traditions (USA, French-American, British, Japanese, Japanese-Australian). Each recipe has full ingredients with quantities, numbered method steps, explicit probe insert instruction, bolded pull temperature in °C, and bolded final serving temperature. Cut profile contains no temperatures. Temperature consensus table covers all sources. What makes this method special addresses physics and flavour chemistry. Data applied bullet list is actionable. Summary ≤4 sentences.
+> ✅ **CONFORMS TO TOR** — Verified 2026-03-04T21:06:31Z. All mandatory sections present in correct order. Five source recipes from distinct culinary traditions (USA, French-American, British, Japanese, Japanese-Australian). Each recipe has full ingredients with quantities, numbered method steps, explicit probe insert instruction, bolded pull temperature in °C, and bolded final serving temperature. Cut profile contains no temperatures. Temperature consensus table covers all sources. What makes this method special addresses physics and flavour chemistry. Data applied bullet list is actionable. Summary ≤4 sentences.

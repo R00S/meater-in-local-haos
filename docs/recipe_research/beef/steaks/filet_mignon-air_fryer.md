@@ -24,7 +24,7 @@ Filet mignon is cut from the narrow end (small end) of the beef tenderloin — t
 4. Place steaks in the air fryer basket, ensuring they do not overlap or touch the walls. Cook at 200 °C.
 5. After 5 minutes, insert the MEATER probe from the side of the steak horizontally to the geometric centre of the thickest cross-section, keeping the probe parallel to the basket floor.
 6. Continue cooking, checking the probe every 2 minutes. Times vary significantly with steak thickness and air fryer model.
-7. **Pull at 52–54 °C** (126–129 °F) for medium-rare.
+7. **Pull at 52–54 °C** (126–129 °F). Pulling at the lower end of medium-rare ensures the lean filet mignon does not overshoot — the small round cross-section carries over quickly in the residual heat of a hot pan or oven.
 8. Remove steaks from the air fryer. Place a tablespoon of butter on each steak. Rest 5 minutes. Final serving temperature: **54–57 °C / 129–135 °F** (medium-rare).
 
 ---
@@ -146,4 +146,4 @@ The air fryer applies convective hot air at 200–230 °C in an enclosed, low-vo
 ## Summary
 Air fryer filet mignon is a practical indoor alternative to pan searing that produces a respectable Maillard crust via hot-air convection with minimal hands-on attention. The target temperature across all five traditions is firmly medium-rare at 54–58 °C — identical to the pan sear and grill targets for this cut — because filet mignon's leanness and premium quality make higher doneness a quality loss in every culinary tradition. The only notable outlier is the Korean tradition, which deliberately targets medium to harmonise with a soy-sugar marinade.
 
-> ✅ **CONFORMS TO TOR** — Verified 2026-03-04T20:33:00Z. All mandatory sections present in correct order. Five source recipes from distinct culinary traditions (American home, American technical, British, Australian, Korean). Each recipe has full ingredients with quantities, numbered method steps, explicit probe insert instruction, bolded pull temperature in °C, and bolded final serving temperature. Cut profile contains no temperatures. Temperature consensus table covers all sources. What makes this method special addresses physics and flavour chemistry. Data applied bullet list is actionable. Summary ≤4 sentences.
+> ✅ **CONFORMS TO TOR** — Verified 2026-03-04T21:06:31Z. All mandatory sections present in correct order. Five source recipes from distinct culinary traditions (American home, American technical, British, Australian, Korean). Each recipe has full ingredients with quantities, numbered method steps, explicit probe insert instruction, bolded pull temperature in °C, and bolded final serving temperature. Cut profile contains no temperatures. Temperature consensus table covers all sources. What makes this method special addresses physics and flavour chemistry. Data applied bullet list is actionable. Summary ≤4 sentences.
