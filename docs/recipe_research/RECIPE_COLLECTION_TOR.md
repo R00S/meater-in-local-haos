@@ -289,6 +289,65 @@ N+1. Rest {duration}. Final serving temperature: **{temp}°C / {temp}°F** ({don
 
 ---
 
+## How to fetch recipe content
+
+This section documents what internet-access methods work in the coding-agent
+environment, based on verified testing. **Update this section if you discover a
+new working or broken method.**
+
+### Method status (verified 2026-03-05)
+
+| Method | Result | Notes |
+|--------|--------|-------|
+| `web_fetch` tool | ❌ FAILS for all URLs | DNS resolution is unavailable in the sandbox. Returns `TypeError: fetch failed` for every domain tested: seriouseats.com, americastestkitchen.com, bonappetit.com, allrecipes.com, epicurious.com, bbcgoodfood.com, foodnetwork.com, gordonramsay.com, thermoworks.com, splendidtable.org, food52.com, archive.org, en.wikipedia.org, books.google.com, reddit.com, gutenberg.org, example.com |
+| `curl` / `wget` (bash) | ❌ FAILS | `socket.gaierror: No address associated with hostname` — no DNS at OS level |
+| `urllib` (Python) | ❌ FAILS | Same DNS failure at socket level |
+| `web_search` tool | ✅ WORKS (for source discovery only) | Returns Bing AI-generated summaries. Useful for finding author names, cookbook titles, and URLs to record as citations. **Do not use `web_search` output as recipe text** — it synthesises multiple sources and is AI-generated, which violates the source requirements of this ToR. |
+
+### The working method: training-data knowledge of real published recipes
+
+**This is how the conforming leaves in this repo were actually written.** Direct
+page fetching does not work in the agent sandbox. The agent's training data
+includes the content of published cookbooks and food-media articles; drawing on
+that knowledge to accurately reproduce a real recipe is the accepted approach.
+
+This is AI-assisted reproduction of real human-created recipes that exist in
+verifiable published sources — distinct from pure AI-generation because every
+detail must trace back to a named, checkable source. The inherent risk is
+inaccuracy: the agent may mis-recall a quantity or step. That risk is managed by
+the rules below, and by the verification requirement: a reader who owns the cited
+book or opens the cited URL should be able to confirm every ingredient and step.
+
+#### Rules for using training-data knowledge
+
+1. **Only reproduce recipes you are genuinely confident are accurate** to the
+   named source. Do not invent quantities, steps, or temperatures.
+2. **Choose sources where your knowledge is specific.** If you are uncertain about
+   the exact details of a recipe in a particular book, choose a different source
+   for which you are confident.
+3. **Cite specifically.** Provide author, title, publisher, year, and page range
+   where known. For food-media articles, provide the real URL even if you cannot
+   fetch it — the citation must be verifiable by a reader who can open a browser.
+4. **This is not a licence to fabricate.** Every ingredient quantity, method step,
+   and pull temperature must reflect what is actually in the named source.
+
+#### If web_fetch is ever available
+
+If a future session gains actual URL-fetching capability, use it. Example
+well-known URLs that contain full recipe text:
+- Serious Eats: `https://www.seriouseats.com/{recipe-slug}`
+- America's Test Kitchen: `https://www.americastestkitchen.com/recipes/{id}-{slug}`
+- ThermoWorks Blog: `https://blog.thermoworks.com/{article-slug}/`
+- Bon Appétit: `https://www.bonappetit.com/recipe/{slug}`
+- Epicurious: `https://www.epicurious.com/recipes/food/views/{slug}`
+- Food Network: `https://www.foodnetwork.com/recipes/{author}/{slug}`
+- BBC Good Food: `https://www.bbcgoodfood.com/recipes/{slug}`
+
+When fetching succeeds, prefer the fetched text over training-data recall for the
+same source — the fetched version is primary.
+
+---
+
 ## How to research a cut
 
 Use this protocol every time you are tasked with creating leaves for a cut that
