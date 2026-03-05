@@ -953,10 +953,9 @@ BEEF_STEAKS = [
             DONENESS_MEDIUM,
         ],
         supported_methods=[
-            CookingMethod.PAN_SEAR,
-            CookingMethod.PAN_FRY,
             CookingMethod.GRILL,
             CookingMethod.CHARCOAL_GRILL,
+            CookingMethod.PAN_FRY,
         ],
         # Diaphragm-attached muscle — intense mineral/iron flavour. French onglet.
         # French bistro absolute ceiling: NEVER exceed 55°C. Above this the mineral
@@ -2903,10 +2902,10 @@ SALMON = [
         temperature_ranges=[FISH_MEDIUM_RARE, FISH_MEDIUM, FISH_WELL_DONE],
         supported_methods=[
             CookingMethod.PAN_SEAR,
-            CookingMethod.OVEN_ROAST,
             CookingMethod.GRILL,
-            CookingMethod.SOUS_VIDE,
+            CookingMethod.OVEN_BAKE,
             CookingMethod.AIR_FRYER,
+            CookingMethod.SOUS_VIDE,
         ],
         recommended_doneness="medium",
     ),
@@ -3207,8 +3206,6 @@ SHELLFISH = [
         temperature_ranges=[SHRIMP_JUST_COOKED, FISH_WELL_DONE],
         supported_methods=[
             CookingMethod.PAN_FRY,
-            CookingMethod.GRILL,
-            CookingMethod.AIR_FRYER,
         ],
         recommended_doneness="well_done",
     ),
@@ -3227,7 +3224,6 @@ SHELLFISH = [
         temperature_ranges=[LOBSTER_TENDER, FISH_WELL_DONE],
         supported_methods=[
             CookingMethod.GRILL,
-            CookingMethod.OVEN_ROAST,
         ],
         recommended_doneness="well_done",
     ),
@@ -3261,7 +3257,6 @@ SHELLFISH = [
         ],
         supported_methods=[
             CookingMethod.PAN_SEAR,
-            CookingMethod.GRILL,
         ],
         recommended_doneness="well_done",
     ),

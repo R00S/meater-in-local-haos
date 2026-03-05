@@ -109,13 +109,29 @@ populated leaf file for every such combination.
 The base tree (501 leaves) comes from `cooking_data.py`. **This is a floor,
 not a ceiling.**
 
+> ⚠️ **Every search session will find new leaves. This is expected and normal.**
+>
+> A protein does not have one cut. It has many cuts.  
+> A cut does not have one cooking method. It has many cooking methods.  
+> The entries in `cooking_data.py` are a starting point based on the most
+> obvious combinations — they are **not** a complete inventory of what real
+> recipes exist in the world. Assume that for every protein you research,
+> you will discover cut × method combinations that are not yet registered.
+> This is the rule, not the exception.
+>
+> **Example**: Beef alone has ribeye, sirloin, NY strip, T-bone, tenderloin,
+> flank, skirt, hanger, flat iron, tri-tip, picanha, chuck, brisket, short rib,
+> oxtail, and more. Each of those cuts is cooked by pan-sear, grill, charcoal
+> grill, oven roast, oven bake, sous vide, air fryer, broil, braise, or smoker
+> across different traditions. A "starting point" of 3 methods per cut does not
+> mean only 3 methods exist. **Never stop at what `cooking_data.py` currently
+> lists.**
+
 Every serious research session will discover cut × method combinations that
 real cooks actually use but that are not yet registered in `cooking_data.py`.
 A single protein can have a dozen or more distinct cuts, each of which may
 support five, eight, or more cooking methods across different culinary
-traditions. The current `supported_methods` entries are a starting point
-based on the most obvious combinations — they are not a complete inventory
-of what real recipes exist in the world.
+traditions.
 
 **When you find a real recipe for a cut × method combination that is not yet
 in the base tree, you are expected to create the leaf and add the entry to
@@ -374,21 +390,25 @@ has not yet been fully researched.
 
 Open `cooking_data.py` and locate the `MeatCut` entry for this cut. Note every
 method in `supported_methods`. These are the leaves already registered in the
-engine — but they are **not necessarily complete**.
+engine — but they are **not necessarily complete, and almost certainly not**.
+
+> ⚠️ **Treat the current `supported_methods` as a minimum starting hint, not
+> as the full picture.** The number of methods listed (even if there are 5 or
+> more) does not mean those are the only methods used by real cooks for this cut.
 
 ### Step 2 — Research ALL real-world cooking methods for this cut
 
-Do not stop at what `cooking_data.py` currently lists. The entries there are
-a starting point, not a complete inventory. For most cuts, the real number of
-cooking methods used by human cooks across culinary traditions is significantly
-higher than what is currently registered. A single lean white fish fillet, for
-example, is poached, steamed, en papillote, ceviche-cured, salt-baked, smoked,
-pan-fried, oven-baked, air-fried, and grilled in different traditions — three
-entries in `supported_methods` does not mean those are the only three methods
-that exist.
+> ⚠️ **Expect to find more methods than what `cooking_data.py` lists.** For
+> every cut you research, assume the real list is longer. A lean white fish
+> fillet is poached, steamed, en papillote, salt-baked, smoked, pan-fried,
+> oven-baked, air-fried, and grilled across different traditions. An entry with
+> 3 methods in `supported_methods` is not evidence that only 3 methods exist —
+> it is evidence that 3 were obvious enough to register without research.
+> **The whole purpose of this research work is to find the rest.**
 
-Research the cut across culinary traditions to find every cooking method for
-which **credible, human-created recipes exist**. Ask:
+Do not stop at what `cooking_data.py` currently lists. Research the cut across
+culinary traditions to find every cooking method for which **credible,
+human-created recipes exist**. Ask:
 
 - What methods appear in named cookbooks for this cut?
 - What methods are used in Asian, European, American, and Southern-hemisphere
@@ -399,6 +419,19 @@ which **credible, human-created recipes exist**. Ask:
 **A method missing from `supported_methods` is not proof it does not exist —
 it is a gap that requires investigation. Assume the gap is real until you have
 searched and found no credible recipe.**
+
+### Step 2b — Research ALL real-world cuts for this protein
+
+The protein (beef, salmon, pork, etc.) may have cuts that are not yet
+registered in `cooking_data.py` at all. A protein category does not have one
+or two cuts. It has many. Beef alone has 15+ common cuts. Salmon has fillet,
+steak, belly, collar, and whole. Shellfish includes scallops, shrimp, lobster
+tail, crab, clams, oysters, and more — each a distinct cut with its own
+supported methods.
+
+If you encounter a real recipe for a cut × method that has no entry in
+`cooking_data.py`, add both the `MeatCut` entry and the leaf file. This is
+as expected as finding a new method for an existing cut.
 
 ### Step 3 — For every method you find real recipes for
 
@@ -413,10 +446,13 @@ not add a `cooking_data.py` entry without the leaf.
 
 As the first act of your research session, write down:
 - Which methods are already in `cooking_data.py`
-- Which additional methods you found during Step 2
+- Which additional methods you found during Step 2 (expect to find some)
+- Which new cuts you found during Step 2b (expect to find some)
 - Which methods (if any) produced no credible recipe after thorough search
 
-Only then begin writing leaves.
+Only then begin writing leaves. If you found no new methods and no new cuts
+beyond what `cooking_data.py` already lists, that is a sign the research was
+not thorough enough — go back and look again before concluding.
 
 ---
 
