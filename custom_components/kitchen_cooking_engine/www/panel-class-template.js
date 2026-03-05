@@ -73,6 +73,8 @@ class KitchenCookingPanel extends LitElement {
       _cutPreferences: { type: Object },
       _currentNotes: { type: String },
       _showNotes: { type: Boolean },
+      _showAdjustTarget: { type: Boolean },
+      _adjustTargetTemp: { type: String },
       _showNinjaCombi: { type: Boolean },
       _selectedNinjaRecipe: { type: Number },
       _showRecipeBuilder: { type: Boolean },
@@ -151,6 +153,8 @@ class KitchenCookingPanel extends LitElement {
     this._cutPreferences = {};
     this._currentNotes = "";
     this._showNotes = false;
+    this._showAdjustTarget = false;
+    this._adjustTargetTemp = null;
     this._showNinjaCombi = false;
     this._selectedNinjaRecipe = null;
     this._showRecipeBuilder = false;
@@ -465,6 +469,23 @@ class KitchenCookingPanel extends LitElement {
     this._callService('set_notes', { notes });
   }
 
+  _toggleAdjustTarget(currentTargetTemp) {
+    this._showAdjustTarget = !this._showAdjustTarget;
+    if (this._showAdjustTarget) {
+      this._adjustTargetTemp = String(currentTargetTemp);
+    }
+  }
+
+  _saveTargetTemp() {
+    const temp = parseInt(this._adjustTargetTemp, 10);
+    if (isNaN(temp) || temp < 35 || temp > 100) {
+      this._showMessage('Invalid Temperature', 'Target temperature must be between 35°C and 100°C.', true);
+      return;
+    }
+    this._callService('set_target', { target_temp: temp });
+    this._showAdjustTarget = false;
+  }
+
   _getStateIcon(state) {
     const icons = {
       idle: '🥩',
@@ -515,7 +536,17 @@ class KitchenCookingPanel extends LitElement {
   _getAvailableDoneness() {
     const cut = this._getSelectedCutData();
     if (!cut) return [];
-    
+    const method = this._selectedMethod;
+    const donenessOptions = this._getDonenessOptions();
+
+    // Per-method doneness options (e.g. brisket×smoker→[pulled], brisket×pan_fry→[medium_rare,medium])
+    if (method && cut.method_doneness_options && cut.method_doneness_options[method]) {
+      return cut.method_doneness_options[method].map(d => {
+        const opt = donenessOptions[d];
+        return opt ? { ...opt, value: d } : null;
+      }).filter(Boolean);
+    }
+
     // If API data with temperature_ranges is available, use that for more detailed info
     if (cut.temperature_ranges && cut.temperature_ranges.length > 0) {
       return cut.temperature_ranges.map(tr => ({
@@ -525,12 +556,12 @@ class KitchenCookingPanel extends LitElement {
         description: tr.description,
         temp_c: tr.target_temp_c,
         temp_f: tr.target_temp_f,
+        safety_level: tr.safety_level || null,
       }));
     }
-    
+
     // Fall back to doneness array with lookup from donenessOptions
     if (!cut.doneness) return [];
-    const donenessOptions = this._getDonenessOptions();
     return cut.doneness.map(d => {
       const opt = donenessOptions[d];
       return opt ? { ...opt, value: d } : null;
@@ -550,6 +581,10 @@ class KitchenCookingPanel extends LitElement {
       långkokt: "🍖",
       safe: "✅",
       dark_meat_optimal: "🍗",
+      thigh_optimal: "🍗",
+      thigh_rendered: "🦢",
+      leg_rendered: "🦆",
+      confit: "🦆",
       crispy: "🥓",
       heated_through: "♨️",
       done: "✓",
@@ -557,6 +592,9 @@ class KitchenCookingPanel extends LitElement {
       crisp_tender: "🥦",
       caramelized: "🧅",
       charred: "🔥",
+      just_cooked: "🦐",
+      braised_tender: "🐙",
+      quick_sear: "⚡",
     };
     return icons[donenessName] || "🍖";
   }
@@ -564,25 +602,27 @@ class KitchenCookingPanel extends LitElement {
   _getRecommendedDoneness() {
     const cut = this._getSelectedCutData();
     if (!cut) return null;
-    // Use explicit recommended_doneness (API format) or recommendedDoneness (JS format)
+    const method = this._selectedMethod;
+
+    // Per-method recommended doneness (highest priority)
+    if (method && cut.method_doneness && cut.method_doneness[method]) {
+      return cut.method_doneness[method];
+    }
+    // Explicit cut-level recommendation
     if (cut.recommended_doneness) {
       return cut.recommended_doneness;
     }
     if (cut.recommendedDoneness) {
       return cut.recommendedDoneness;
     }
-    // Check for is_meater_recommended in temperature_ranges (API format)
+    // is_meater_recommended flag in temperature_ranges (API format)
     if (cut.temperature_ranges) {
       const recommended = cut.temperature_ranges.find(tr => tr.is_meater_recommended);
-      if (recommended) {
-        return recommended.name;
-      }
+      if (recommended) return recommended.name;
     }
-    // Fall back to first doneness option
-    if (cut.doneness && cut.doneness.length > 0) {
-      return cut.doneness[0];
-    }
-    return null;
+    // Fall back to first available option for this method
+    const available = this._getAvailableDoneness();
+    return available.length > 0 ? available[0].value : null;
   }
 
   _getTargetTempForDoneness(donenessValue) {
@@ -2588,6 +2628,7 @@ class KitchenCookingPanel extends LitElement {
                   <span class="icon">${opt.icon}</span>
                   ${opt.name}
                   ${opt.value === recommendedDoneness ? html`<span class="star">⭐</span>` : ''}
+                  ${opt.safety_level ? html`<span class="safety-dot ${opt.safety_level}" title="${opt.safety_level === 'safe' ? '✅ Meets food safety guidelines' : opt.safety_level === 'caution' ? '⚠️ Below safety guidelines – widely practiced' : '⛔ Well below safety guidelines'}"></span>` : ''}
                   <span class="temp-hint">${opt.temp_c}°C</span>
                 </button>
               `)}
@@ -2783,6 +2824,27 @@ class KitchenCookingPanel extends LitElement {
                 .value=${attrs.notes || this._currentNotes}
                 @change=${(e) => this._setNotes(e.target.value)}
               ></textarea>
+            ` : ''}
+          </div>
+
+          <!-- Adjust Target Temp Section -->
+          <div class="notes-section">
+            <button class="notes-toggle" @click=${() => this._toggleAdjustTarget(targetTemp)}>
+              🌡️ ${this._showAdjustTarget ? 'Hide' : 'Adjust Target Temp'}
+            </button>
+            ${this._showAdjustTarget ? html`
+              <div style="display:flex;align-items:center;gap:8px;margin-top:8px;">
+                <input
+                  type="number"
+                  min="35"
+                  max="100"
+                  style="width:80px;padding:6px;border:1px solid var(--divider-color);border-radius:4px;background:var(--card-background-color);color:var(--primary-text-color);font-size:14px;"
+                  .value=${this._adjustTargetTemp ?? String(targetTemp)}
+                  @input=${(e) => this._adjustTargetTemp = e.target.value}
+                />
+                <span style="color:var(--secondary-text-color);">°C</span>
+                <ha-button unelevated @click=${() => this._saveTargetTemp()}>Save</ha-button>
+              </div>
             ` : ''}
           </div>
           
@@ -3181,7 +3243,7 @@ class KitchenCookingPanel extends LitElement {
       ` : html`
         <div class="history-list">
           ${meaterCooks.map(cook => html`
-            <ha-card class="history-card">
+            <ha-card class="history-card clickable" @click=${() => this._restartCook(cook)}>
               <div class="history-card-header">
                 <div class="history-title-row">
                   <h3 class="history-title">
@@ -3208,10 +3270,7 @@ class KitchenCookingPanel extends LitElement {
                 </div>
               ` : ''}
               
-              <div class="history-actions">
-                <button class="history-action-btn restart" @click=${() => this._restartCook(cook)}>
-                  🔄 Restart This Cook
-                </button>
+              <div class="history-actions" @click=${(e) => e.stopPropagation()}>
                 <button class="history-action-btn edit" @click=${() => this._editCookNotes(cook)}>
                   ✏️ Edit Notes
                 </button>
@@ -5872,6 +5931,20 @@ class KitchenCookingPanel extends LitElement {
       .doneness-btn.selected .temp-hint {
         color: rgba(255, 255, 255, 0.8);
       }
+
+      /* Safety indicator dot on doneness buttons */
+      .safety-dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: 5px;
+        vertical-align: middle;
+        flex-shrink: 0;
+      }
+      .safety-dot.safe   { background-color: #4caf50; }
+      .safety-dot.caution { background-color: #ff9800; }
+      .safety-dot.unsafe { background-color: #f44336; }
 
       /* Temperature fine-tuning styles */
       .temp-display-setup {

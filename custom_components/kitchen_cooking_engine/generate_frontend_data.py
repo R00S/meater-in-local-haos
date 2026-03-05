@@ -81,7 +81,7 @@ def get_category_icon(name):
 def cut_to_js(cut):
     """Convert a MeatCut to JS object format."""
     doneness_keys = [tr.name for tr in cut.temperature_ranges]
-    
+
     result = {
         "id": cut.id,
         "name": cut.name_long or cut.name,
@@ -89,6 +89,13 @@ def cut_to_js(cut):
     }
     if cut.recommended_doneness:
         result["recommended_doneness"] = cut.recommended_doneness
+    if cut.method_doneness:
+        result["method_doneness"] = cut.method_doneness
+    if cut.method_temperature_ranges:
+        result["method_doneness_options"] = {
+            method: [tr.name for tr in ranges]
+            for method, ranges in cut.method_temperature_ranges.items()
+        }
     return result
 
 
@@ -132,6 +139,10 @@ def get_doneness_levels(categories):
         "pulled": "🍖", "långkokt": "🍖",
         "safe": "✅",
         "dark_meat_optimal": "🍗",
+        "thigh_optimal": "🍗",
+        "thigh_rendered": "🦢",
+        "leg_rendered": "🦆",
+        "confit": "🦆",
         "crispy": "🥓",
         "heated_through": "♨️",
         "done": "✓",
@@ -139,11 +150,15 @@ def get_doneness_levels(categories):
         "crisp_tender": "🥦",
         "caramelized": "🧅",
         "charred": "🔥",
+        "just_cooked": "🦐",
+        "braised_tender": "🐙",
+        "quick_sear": "⚡",
     }
     for cat in categories:
         for meat in cat.meats:
             for cut_type in meat.cut_types:
                 for cut in cut_type.cuts:
+                    # Collect from default temperature_ranges
                     for tr in cut.temperature_ranges:
                         if tr.name not in doneness:
                             doneness[tr.name] = {
@@ -153,7 +168,21 @@ def get_doneness_levels(categories):
                                 "description": tr.description,
                                 "temp_c": tr.target_temp_c,
                                 "temp_f": tr.target_temp_f,
+                                "safety_level": getattr(tr, "safety_level", None),
                             }
+                    # Also collect from per-method temperature range overrides
+                    for ranges in cut.method_temperature_ranges.values():
+                        for tr in ranges:
+                            if tr.name not in doneness:
+                                doneness[tr.name] = {
+                                    "value": tr.name,
+                                    "name": tr.name.replace("_", " ").title(),
+                                    "icon": icons.get(tr.name, "🔥"),
+                                    "description": tr.description,
+                                    "temp_c": tr.target_temp_c,
+                                    "temp_f": tr.target_temp_f,
+                                    "safety_level": getattr(tr, "safety_level", None),
+                                }
     return doneness
 
 

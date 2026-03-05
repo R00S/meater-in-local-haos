@@ -64,6 +64,7 @@ SWEDISH_DONENESS_RARE = TemperatureRange(
     is_meater_recommended=False,
     start_hex="#FF0000",
     end_hex="#FF3333",
+    safety_level="unsafe",
 )
 
 SWEDISH_DONENESS_MEDIUM_RARE = TemperatureRange(
@@ -80,6 +81,7 @@ SWEDISH_DONENESS_MEDIUM_RARE = TemperatureRange(
     is_meater_recommended=True,
     start_hex="#FF3333",
     end_hex="#FF6666",
+    safety_level="caution",
 )
 
 SWEDISH_DONENESS_MEDIUM = TemperatureRange(
@@ -95,6 +97,7 @@ SWEDISH_DONENESS_MEDIUM = TemperatureRange(
     usda_safe=False,
     start_hex="#FF6666",
     end_hex="#FF9999",
+    safety_level="caution",
 )
 
 SWEDISH_DONENESS_MEDIUM_WELL = TemperatureRange(
@@ -110,6 +113,7 @@ SWEDISH_DONENESS_MEDIUM_WELL = TemperatureRange(
     usda_safe=True,
     start_hex="#FF9999",
     end_hex="#FFCCCC",
+    safety_level="safe",
 )
 
 SWEDISH_DONENESS_WELL_DONE = TemperatureRange(
@@ -125,6 +129,7 @@ SWEDISH_DONENESS_WELL_DONE = TemperatureRange(
     usda_safe=True,
     start_hex="#FFCCCC",
     end_hex="#FFFFFF",
+    safety_level="safe",
 )
 
 # Pulled/Braised - långkokt för kollagenbrytning
@@ -141,6 +146,7 @@ SWEDISH_DONENESS_PULLED = TemperatureRange(
     usda_safe=True,
     start_hex="#8B4513",
     end_hex="#A0522D",
+    safety_level="safe",
 )
 
 # All Swedish doneness levels available for user preference
@@ -169,6 +175,7 @@ SWEDISH_PORK_MEDIUM = TemperatureRange(
     is_meater_recommended=True,
     start_hex="#FFB6C1",
     end_hex="#FFC0CB",
+    safety_level="safe",
 )
 
 SWEDISH_PORK_WELL_DONE = TemperatureRange(
@@ -184,6 +191,7 @@ SWEDISH_PORK_WELL_DONE = TemperatureRange(
     usda_safe=True,
     start_hex="#FFC0CB",
     end_hex="#FFFFFF",
+    safety_level="safe",
 )
 
 # Poultry Swedish (must be cooked through per Livsmedelsverket)
@@ -201,6 +209,7 @@ SWEDISH_POULTRY_SAFE = TemperatureRange(
     is_meater_recommended=True,
     start_hex="#FFFACD",
     end_hex="#FFFFFF",
+    safety_level="safe",
 )
 
 # Fish Swedish temperatures (per Livsmedelsverket)
@@ -218,6 +227,7 @@ SWEDISH_FISH_MEDIUM = TemperatureRange(
     is_meater_recommended=True,
     start_hex="#FA8072",
     end_hex="#E9967A",
+    safety_level="caution",
 )
 
 SWEDISH_FISH_WELL_DONE = TemperatureRange(
@@ -233,6 +243,7 @@ SWEDISH_FISH_WELL_DONE = TemperatureRange(
     usda_safe=True,
     start_hex="#E9967A",
     end_hex="#FFFFFF",
+    safety_level="safe",
 )
 
 # Game (Vilt) Swedish temperatures
@@ -249,6 +260,7 @@ SWEDISH_GAME_RARE = TemperatureRange(
     usda_safe=False,
     start_hex="#8B0000",
     end_hex="#B22222",
+    safety_level="unsafe",
 )
 
 SWEDISH_GAME_MEDIUM = TemperatureRange(
@@ -265,6 +277,7 @@ SWEDISH_GAME_MEDIUM = TemperatureRange(
     is_meater_recommended=True,
     start_hex="#B22222",
     end_hex="#CD5C5C",
+    safety_level="caution",
 )
 
 
@@ -1309,6 +1322,42 @@ SWEDISH_WILD_BOAR = [
     ),
 ]
 
+SWEDISH_RABBIT = [
+    MeatCut(
+        id=2640,
+        name="kaninsadel",
+        name_long="Kaninsadel",
+        cut_order=1,
+        estimated_thickness_mm=50,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=3,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[
+            SWEDISH_POULTRY_SAFE,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+    MeatCut(
+        id=2641,
+        name="kaninlar",
+        name_long="Kaninlår",
+        cut_order=2,
+        estimated_thickness_mm=70,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[
+            SWEDISH_POULTRY_SAFE,
+            SWEDISH_DONENESS_PULLED,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+]
+
 
 # ============================================================================
 # SWEDISH POULTRY (FÅGEL)
@@ -1870,6 +1919,14 @@ SWEDISH_MEAT_CATEGORIES = [
                 description="Vildsvinstyckningar",
                 cut_types=[
                     CutType(id=2630, name="Vildsvin", cuts=SWEDISH_WILD_BOAR),
+                ],
+            ),
+            Meat(
+                id=2064,
+                name="kanin",
+                description="Kaninstyckningar",
+                cut_types=[
+                    CutType(id=2640, name="Kanin", cuts=SWEDISH_RABBIT),
                 ],
             ),
         ],

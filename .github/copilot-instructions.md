@@ -91,23 +91,31 @@ This is a Home Assistant custom integration for kitchen temperature cooking (MEA
 
 ## Version Numbering
 
-Format: `v0.1.X.YY`
+Format: `v0.A.B.C`
 - `0` = Beta
-- `1` = First feature batch
-- `X` = Agent number (increments when a new agent takes over)
-- `YY` = Release number with current agent
+- `A` = Major feature batch
+- `B` = Branch number — **increment when a new branch is created, reset C to 0**
+- `C` = PR/release number within that branch — **increment for each new PR on the same branch**
+
+### Digit bumping rules
+
+| Situation | What to change | Example |
+|---|---|---|
+| New branch created | Bump `B`, reset `C` to `0` | `0.5.2.9` → `0.5.3.0` |
+| New PR on same branch | Bump `C` only | `0.5.3.0` → `0.5.3.1` |
+| Both never bump at once | Unless explicitly instructed | — |
 
 ### 🛑 MANDATORY: Version Update Checklist
 
 **Every release MUST update ALL 4 version locations.** Mismatches cause broken releases.
 
-When bumping the version (e.g. from `0.5.1.0` to `0.5.1.1`):
+When bumping the version (e.g. from `0.5.3.0` to `0.5.3.1`):
 
 ```
-□ 1. manifest.json        → "version": "0.5.1.1"
-□ 2. __init__.py           → __version__ = "0.5.1.1"
-□ 3. __init__.py           → Last Change: v0.5.1.1 - <description>
-□ 4. const.py              → Last Change: v0.5.1.1 - <description>
+□ 1. manifest.json        → "version": "0.5.3.1"
+□ 2. __init__.py           → __version__ = "0.5.3.1"
+□ 3. __init__.py           → Last Change: v0.5.3.1 - <description>
+□ 4. const.py              → Last Change: v0.5.3.1 - <description>
      (PANEL_VERSION is auto-incremented by generate_frontend_data.py)
 ```
 

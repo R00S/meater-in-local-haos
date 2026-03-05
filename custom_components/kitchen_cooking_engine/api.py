@@ -54,11 +54,17 @@ def _temperature_range_to_dict(tr: TemperatureRange) -> dict:
         "is_meater_recommended": tr.is_meater_recommended,
         "start_hex": tr.start_hex,
         "end_hex": tr.end_hex,
+        "safety_level": getattr(tr, "safety_level", None),
     }
 
 
 def _cut_to_dict(cut: MeatCut) -> dict:
     """Convert MeatCut to dictionary for JSON serialization."""
+    # Build per-method temperature ranges dict if present
+    method_tr = {
+        method: [_temperature_range_to_dict(tr) for tr in ranges]
+        for method, ranges in cut.method_temperature_ranges.items()
+    }
     return {
         "id": cut.id,
         "name": cut.name,
@@ -71,6 +77,8 @@ def _cut_to_dict(cut: MeatCut) -> dict:
         "rest_time_max": cut.rest_time_max,
         "carryover_temp_c": cut.carryover_temp_c,
         "recommended_doneness": cut.recommended_doneness,
+        "method_doneness": cut.method_doneness,
+        "method_temperature_ranges": method_tr,
         "temperature_ranges": [
             _temperature_range_to_dict(tr) for tr in cut.temperature_ranges
         ],
