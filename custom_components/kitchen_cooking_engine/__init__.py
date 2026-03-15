@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.4.1 - Ongoing cooks badge on welcome screen, stop auto-navigating to active MEATER cooks
+Last Change: v0.5.4.2 - Fix blank tab on return: detect WebSocket reconnection in hasChanged, force Shadow DOM repaint + data reload on visibility change
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -65,7 +65,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.4.1"
+__version__ = "0.5.4.2"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

@@ -32,6 +32,11 @@ class KitchenCookingPanel extends LitElement {
           // This is needed because HA updates hass.states but hass object reference stays the same
           if (!oldVal || !newVal) return true;
           
+          // Detect WebSocket reconnection: when the connection object changes,
+          // always re-render to avoid stale/blank panel after tab switch.
+          // (Inspired by calorie-tracker-panel & weather-big-wall-clock HACS repos)
+          if (oldVal.connection !== newVal.connection) return true;
+          
           // Check if any cooking session entity changed
           // We check ALL session entities because:
           // 1. User might switch between appliances
@@ -254,26 +259,57 @@ class KitchenCookingPanel extends LitElement {
     this._loadAppliances();
     this._loadAvailableFeatures();
     
-    // Fix for white screen when returning to browser tab
-    // Force re-render when tab becomes visible again
+    // --- Blank-tab fix (Issue #67) ---
+    // When the user returns to this browser tab after minutes away, the browser
+    // may have frozen JS execution, closed the WebSocket, and freed GPU layers.
+    // We need to: (1) reload data, (2) force Shadow DOM repaint, (3) re-render.
+    // Approach is modeled on kgstorm/home-assistant-calorie-tracker and
+    // SoulRaven/ha-weather-big-wall-clock HACS panels.
     this._visibilityHandler = () => {
       if (document.visibilityState === 'visible') {
-        // Validate and restore state
+        // Validate and restore navigation state
         if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
           this._currentPath = 'welcome';
         }
-        // Force multiple re-renders to ensure UI is properly updated
+        
+        // Reload critical data — the connection may have been re-established
+        // with fresh state objects, so our cached data (appliances etc.) can be stale.
+        this._loadAppliances();
+        this._loadAISettings();
+        
+        // Immediate re-render
         this.requestUpdate();
-        // Also trigger after a short delay for any async state
-        setTimeout(() => this.requestUpdate(), 100);
+        
+        // Force Shadow DOM repaint — browsers may skip compositor updates for
+        // hidden tabs, leaving ha-top-app-bar-fixed content area blank.
+        requestAnimationFrame(() => {
+          this.requestUpdate();
+          // Force a layout reflow on the shadow root host to recreate GPU layers
+          if (this.shadowRoot) {
+            void this.shadowRoot.host.offsetHeight;
+          }
+        });
+        
+        // Delayed re-renders for connection recovery
         setTimeout(() => this.requestUpdate(), 500);
+        setTimeout(() => this.requestUpdate(), 2000);
       }
     };
     document.addEventListener('visibilitychange', this._visibilityHandler);
     
+    // pageshow fires even when restored from bfcache (unlike visibilitychange)
+    this._pageshowHandler = (event) => {
+      if (event.persisted) {
+        // Page was restored from bfcache — force full repaint
+        this._loadAppliances();
+        this.requestUpdate();
+        requestAnimationFrame(() => this.requestUpdate());
+      }
+    };
+    window.addEventListener('pageshow', this._pageshowHandler);
+    
     // Also handle focus event for additional reliability
     this._focusHandler = () => {
-      // Validate state on focus
       if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
         this._currentPath = 'welcome';
       }
@@ -305,10 +341,14 @@ class KitchenCookingPanel extends LitElement {
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    // Clean up visibility handler
+    // Clean up all visibility/event handlers
     if (this._visibilityHandler) {
       document.removeEventListener('visibilitychange', this._visibilityHandler);
       this._visibilityHandler = null;
+    }
+    if (this._pageshowHandler) {
+      window.removeEventListener('pageshow', this._pageshowHandler);
+      this._pageshowHandler = null;
     }
     if (this._focusHandler) {
       window.removeEventListener('focus', this._focusHandler);
