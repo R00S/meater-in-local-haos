@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.4.4 - Fix MEATER restart timeout, add recipe cook Home/minimize button, cross-device cook visibility, remove history cap
+Last Change: v0.5.4.5 - Fix MEATER restart 'unknown' entity, add session dropdown to waiting screen, fix cross-device recipe cook storage
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "198"
+PANEL_VERSION = "199"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

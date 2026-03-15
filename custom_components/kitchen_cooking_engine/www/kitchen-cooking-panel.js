@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 15 Mar 2026, 20:00 CET
+ * AUTO-GENERATED: 15 Mar 2026, 20:22 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 15 Mar 2026, 20:00 CET
+// Last generated: 15 Mar 2026, 20:22 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -13834,6 +13834,7 @@ class KitchenCookingPanel extends LitElement {
       if (activeState && activeState.state !== 'idle' && activeState.state !== 'complete' &&
           activeState.state !== 'unavailable' && activeState.state !== 'unknown') {
         this._waitingForCookStart = null; // Cook is active — clear waiting flag
+        this._waitingCookServiceData = null;
         return this._renderActiveCook(activeState);
       }
       // Cook isn't active yet — show a waiting state while entity is idle.
@@ -13842,15 +13843,52 @@ class KitchenCookingPanel extends LitElement {
       if (this._waitingForCookStart) {
         const entityState = this.hass.states[this._selectedEntity];
         const entityValue = entityState?.state;
-        // If entity is idle (probe in charger / service hasn't taken effect yet), keep waiting
-        if (entityValue === 'idle' || !entityValue) {
+        // If entity is idle/unknown (probe in charger / service hasn't taken effect yet), keep waiting
+        if (entityValue === 'idle' || entityValue === 'unknown' || !entityValue) {
+          // Build sorted entity list for the session selector (MEATER entities first)
+          let waitEntities = this._findCookingEntities();
+          waitEntities = waitEntities.sort((a, b) => {
+            const aM = a.toLowerCase().includes('meater');
+            const bM = b.toLowerCase().includes('meater');
+            if (aM && !bM) return -1;
+            if (!aM && bM) return 1;
+            return 0;
+          });
+
           return html`
             <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 16px;text-align:center;">
               <div class="spinner"></div>
               <p style="margin-top:16px;font-size:1.1em;">🌡️ Starting cook…</p>
               <p style="color:var(--secondary-text-color);">Waiting for the probe to begin monitoring.<br>Take the probe out of the charger to start.</p>
+
+              ${waitEntities.length > 1 ? html`
+                <ha-card style="margin-top:20px;width:100%;max-width:400px;">
+                  <div class="card-content">
+                    <h3>Select Session</h3>
+                    <select
+                      .value=${this._selectedEntity}
+                      @change=${(e) => {
+                        this._selectedEntity = e.target.value;
+                        // Re-fire start_cook on the newly selected entity
+                        if (this._waitingCookServiceData) {
+                          this._callService('start_cook', this._waitingCookServiceData);
+                        }
+                        this.requestUpdate();
+                      }}
+                    >
+                      ${waitEntities.map(eid => html`
+                        <option value="${eid}" ?selected=${this._selectedEntity === eid}>
+                          ${this.hass.states[eid]?.attributes?.friendly_name || eid}
+                        </option>
+                      `)}
+                    </select>
+                  </div>
+                </ha-card>
+              ` : ''}
+
               <button class="secondary-btn" style="margin-top:24px;" @click=${() => {
                 this._waitingForCookStart = null;
+                this._waitingCookServiceData = null;
                 this._currentPath = 'welcome';
                 this.requestUpdate();
               }}>← Back to Home</button>
@@ -13860,6 +13898,7 @@ class KitchenCookingPanel extends LitElement {
       }
       // Cook is no longer active and we're not waiting — fall back to welcome
       this._waitingForCookStart = null;
+      this._waitingCookServiceData = null;
       this._currentPath = 'welcome';
     }
 
@@ -16274,6 +16313,7 @@ class KitchenCookingPanel extends LitElement {
       this._selectedCookForDetail = null;
       this._currentPath = 'active_cook';
       this._waitingForCookStart = Date.now(); // Flag for brief loading state
+      this._waitingCookServiceData = serviceData; // Store so dropdown can re-fire on entity switch
       this.requestUpdate();
       return;
     }
@@ -20052,7 +20092,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "198";
+const PANEL_VERSION = "199";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

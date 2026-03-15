@@ -260,10 +260,11 @@ async def async_get_cut_preference(
 # --------------------------------------------------------------------------- #
 
 
-async def async_load_active_recipe_cook(hass: HomeAssistant) -> dict | None:
-    """Load the currently active recipe cook state from storage.
+async def async_load_active_recipe_cook(hass: HomeAssistant) -> dict | list | None:
+    """Load the currently active recipe cook state(s) from storage.
 
-    Returns None if no active recipe cook exists.
+    Returns a list of active cook dicts (new array format), a single dict
+    (old single-cook format), or None if nothing is stored.
     """
     storage_path = _get_storage_path(hass, ACTIVE_RECIPE_COOK_FILE)
 
@@ -273,7 +274,15 @@ async def async_load_active_recipe_cook(hass: HomeAssistant) -> dict | None:
         try:
             with open(storage_path, "r", encoding="utf-8") as fh:
                 data = json.load(fh)
-                if data and data.get("recipe") and data.get("startTime"):
+                # New array format: list of cook dicts
+                if isinstance(data, list):
+                    valid = [
+                        c for c in data
+                        if isinstance(c, dict) and c.get("recipe") and c.get("startTime")
+                    ]
+                    return valid if valid else None
+                # Old single-cook format: dict with recipe and startTime
+                if isinstance(data, dict) and data.get("recipe") and data.get("startTime"):
                     return data
                 return None
         except (json.JSONDecodeError, IOError) as exc:
@@ -284,7 +293,7 @@ async def async_load_active_recipe_cook(hass: HomeAssistant) -> dict | None:
 
 
 async def async_save_active_recipe_cook(
-    hass: HomeAssistant, state: dict
+    hass: HomeAssistant, state: dict | list
 ) -> bool:
     """Persist the active recipe cook state so other devices can see it."""
     storage_path = _get_storage_path(hass, ACTIVE_RECIPE_COOK_FILE)
