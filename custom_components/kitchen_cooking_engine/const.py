@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 15 Mar 2026, 19:45 UTC
-Last Change: v0.5.4.10 - Show appliance deselection screen for Ninja Combi AI recipes
+Last Change: v0.5.4.11 - Fix portions slider not affecting AI recipe detail generation
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "205"
+PANEL_VERSION = "206"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

@@ -5330,7 +5330,8 @@ class KitchenCookingPanel extends LitElement {
         appliance_ids: this._selectedAppliance ? [this._selectedAppliance.id] : [],
         cooking_style: this._selectedCookingStyle || 'quick_and_easy',
         complexity: this._aiComplexity || 3,
-        user_ingredients: this._selectedIngredients || []
+        user_ingredients: this._selectedIngredients || [],
+        servings: this._aiPortions || 4
       });
 
       if (cancelled) return; // User cancelled while waiting
