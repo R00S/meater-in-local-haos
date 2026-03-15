@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.3.3 - Fix rabbit_legs-oven_roast.md ToR violation (two Spanish sources); prompt AI to use web search
+Last Change: v0.5.3.4 - AI recipe: ingredient ceiling by style+complexity, honest cooking time, slow_cook+barbeque styles
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -66,7 +66,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.3.3"
+__version__ = "0.5.3.4"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 05 Mar 2026, 13:39 CET
+ * AUTO-GENERATED: 15 Mar 2026, 13:26 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 05 Mar 2026, 13:39 CET
+// Last generated: 15 Mar 2026, 13:26 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5630,14 +5630,6 @@ const AI_COOKING_STYLES = [
     "name": "Quick And Easy"
   },
   {
-    "id": "gourmet",
-    "name": "Gourmet"
-  },
-  {
-    "id": "healthy",
-    "name": "Healthy"
-  },
-  {
     "id": "comfort_food",
     "name": "Comfort Food"
   },
@@ -5646,12 +5638,32 @@ const AI_COOKING_STYLES = [
     "name": "Family Friendly"
   },
   {
+    "id": "healthy",
+    "name": "Healthy"
+  },
+  {
+    "id": "gourmet",
+    "name": "Gourmet"
+  },
+  {
     "id": "meal_prep",
     "name": "Meal Prep"
   },
   {
     "id": "one_pot",
     "name": "One Pot"
+  },
+  {
+    "id": "slow_cook",
+    "name": "Slow Cook"
+  },
+  {
+    "id": "barbeque",
+    "name": "Barbeque"
+  },
+  {
+    "id": "baking",
+    "name": "Baking"
   },
   {
     "id": "low_carb",
@@ -11889,6 +11901,7 @@ class KitchenCookingPanel extends LitElement {
       // AI Recipe Builder - style page enhancements
       _aiComplexity: { type: Number },
       _aiPortions: { type: Number },
+      _aiMaxTime: { type: Number },
       _aiSelectedCuisines: { type: Array },
       _aiExpandedRegions: { type: Array },
       // AI generation cancellation
@@ -11989,6 +12002,7 @@ class KitchenCookingPanel extends LitElement {
     // AI Recipe Builder style enhancements
     this._aiComplexity = 3; // 1-5 scale, 3 = medium
     this._aiPortions = 4; // Default 4 portions
+    this._aiMaxTime = 0;  // 0 = no limit; otherwise max minutes (step 15, up to 240)
     this._aiSelectedCuisines = []; // Multi-select cuisine/region list
     this._aiExpandedRegions = []; // Which region dropdowns are open
     this._aiGeneratingAbort = null; // AbortController for cancelling generation
@@ -15963,6 +15977,18 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
+   * Format a max-time value (minutes) for display.
+   * 0 → 'No limit'; multiples of 60 → 'Xh'; remainder → 'Xh Ymin' or 'Ymin'.
+   */
+  _formatMaxTime(minutes) {
+    if (!minutes || minutes <= 0) return 'No limit';
+    const h = Math.floor(minutes / 60);
+    const m = minutes % 60;
+    if (h === 0) return `${m} min`;
+    return m ? `${h}h ${m}min` : `${h}h`;
+  }
+
+  /**
    * Phase 6: Render cooking style selection
    */
   _renderAICookingStyleSelection() {
@@ -16000,11 +16026,29 @@ class KitchenCookingPanel extends LitElement {
                   // Set default complexity based on style
                   if (['quick_and_easy', 'one_pot', 'family_friendly'].includes(style.id)) {
                     this._aiComplexity = 2;
-                  } else if (['gourmet'].includes(style.id)) {
+                  } else if (['gourmet', 'baking'].includes(style.id)) {
                     this._aiComplexity = 4;
                   } else {
                     this._aiComplexity = 3;
                   }
+                  // Set default max time based on style (0 = no limit)
+                  const defaultTimes = {
+                    quick_and_easy:  30,
+                    comfort_food:    60,
+                    family_friendly: 45,
+                    healthy:         30,
+                    gourmet:          0,  // no limit — elaborate dishes can take as long as needed
+                    meal_prep:       120,
+                    one_pot:          60,
+                    slow_cook:         0,  // no limit — slow cookers run for hours
+                    barbeque:          0,  // no limit — BBQ sessions vary widely
+                    baking:           90,
+                    low_carb:         30,
+                    high_protein:     45,
+                    vegetarian:       45,
+                    vegan:            45,
+                  };
+                  this._aiMaxTime = defaultTimes[style.id] !== undefined ? defaultTimes[style.id] : 0;
                   this.requestUpdate();
                 }}
               >
@@ -16048,6 +16092,20 @@ class KitchenCookingPanel extends LitElement {
             />
             <div style="display: flex; justify-content: space-between; font-size: 0.8em; color: var(--secondary-text-color);">
               <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 8px;">
+              ⏱️ Max time: ${this._formatMaxTime(this._aiMaxTime)}
+            </label>
+            <input type="range" min="0" max="240" step="15"
+              .value=${String(this._aiMaxTime)}
+              @input=${(e) => { this._aiMaxTime = parseInt(e.target.value); this.requestUpdate(); }}
+              style="width: 100%;"
+            />
+            <div style="display: flex; justify-content: space-between; font-size: 0.8em; color: var(--secondary-text-color);">
+              <span>No limit</span><span>1h</span><span>2h</span><span>3h</span><span>4h</span>
             </div>
           </div>
         </div>
@@ -16632,6 +16690,11 @@ class KitchenCookingPanel extends LitElement {
         complexity: this._aiComplexity || 3,
       };
 
+      // Add max time if set (0 = no limit)
+      if (this._aiMaxTime && this._aiMaxTime > 0) {
+        requestBody.max_time_minutes = this._aiMaxTime;
+      }
+
       // Add cuisines if selected
       if (this._aiSelectedCuisines && this._aiSelectedCuisines.length > 0) {
         requestBody.cuisines = this._aiSelectedCuisines;
@@ -16708,7 +16771,10 @@ class KitchenCookingPanel extends LitElement {
           cuisine_type: fullRecipe.cuisine_type,
           required_appliances: fullRecipe.required_appliances || []
         },
-        appliance_ids: this._selectedAppliance ? [this._selectedAppliance.id] : []
+        appliance_ids: this._selectedAppliance ? [this._selectedAppliance.id] : [],
+        cooking_style: this._selectedCookingStyle || 'quick_and_easy',
+        complexity: this._aiComplexity || 3,
+        user_ingredients: this._selectedIngredients || []
       });
 
       if (cancelled) return; // User cancelled while waiting
@@ -19879,7 +19945,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "207";
+const PANEL_VERSION = "211";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

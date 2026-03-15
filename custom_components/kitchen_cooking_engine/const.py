@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.3.3 - Fix rabbit_legs-oven_roast.md ToR violation (two Spanish sources); prompt AI to use web search
+Last Change: v0.5.3.4 - AI recipe: ingredient ceiling by style+complexity, honest cooking time, slow_cook+barbeque styles
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "207"
+PANEL_VERSION = "211"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
