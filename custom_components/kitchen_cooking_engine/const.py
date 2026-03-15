@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 15 Mar 2026, 19:45 UTC
-Last Change: v0.5.4.7 - Fix MEATER cook restart: store data_source in history, use on restart
+Last Change: v0.5.4.8 - Fix welcome screen appliance badges overflow on mobile portrait
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "201"
+PANEL_VERSION = "202"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

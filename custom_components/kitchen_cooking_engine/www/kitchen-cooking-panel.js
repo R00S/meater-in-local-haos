@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 15 Mar 2026, 21:03 CET
+ * AUTO-GENERATED: 15 Mar 2026, 21:12 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 15 Mar 2026, 21:03 CET
+// Last generated: 15 Mar 2026, 21:12 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -17614,6 +17614,8 @@ class KitchenCookingPanel extends LitElement {
         padding: 16px;
         max-width: 800px;
         margin: 0 auto;
+        box-sizing: border-box;
+        overflow-x: hidden;
       }
 
       .loading {
@@ -17624,6 +17626,8 @@ class KitchenCookingPanel extends LitElement {
 
       ha-card {
         margin-bottom: 16px;
+        max-width: 100%;
+        box-sizing: border-box;
       }
 
       .card-content {
@@ -19293,7 +19297,7 @@ class KitchenCookingPanel extends LitElement {
       /* Appliance Grid */
       .appliance-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
         gap: 16px;
         margin-bottom: 24px;
       }
@@ -20110,7 +20114,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "201";
+const PANEL_VERSION = "202";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

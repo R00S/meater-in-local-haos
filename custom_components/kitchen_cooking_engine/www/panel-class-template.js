@@ -6160,6 +6160,8 @@ class KitchenCookingPanel extends LitElement {
         padding: 16px;
         max-width: 800px;
         margin: 0 auto;
+        box-sizing: border-box;
+        overflow-x: hidden;
       }
 
       .loading {
@@ -6170,6 +6172,8 @@ class KitchenCookingPanel extends LitElement {
 
       ha-card {
         margin-bottom: 16px;
+        max-width: 100%;
+        box-sizing: border-box;
       }
 
       .card-content {
@@ -7839,7 +7843,7 @@ class KitchenCookingPanel extends LitElement {
       /* Appliance Grid */
       .appliance-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
         gap: 16px;
         margin-bottom: 24px;
       }
