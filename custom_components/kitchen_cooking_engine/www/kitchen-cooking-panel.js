@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 15 Mar 2026, 21:12 CET
+ * AUTO-GENERATED: 15 Mar 2026, 21:28 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 15 Mar 2026, 21:12 CET
+// Last generated: 15 Mar 2026, 21:28 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -17608,14 +17608,16 @@ class KitchenCookingPanel extends LitElement {
     return css`
       :host {
         display: block;
+        width: 100%;
+        overflow-x: hidden;
       }
 
       .content {
         padding: 16px;
         max-width: 800px;
+        width: 100%;
         margin: 0 auto;
         box-sizing: border-box;
-        overflow-x: hidden;
       }
 
       .loading {
@@ -17628,6 +17630,7 @@ class KitchenCookingPanel extends LitElement {
         margin-bottom: 16px;
         max-width: 100%;
         box-sizing: border-box;
+        overflow: hidden;
       }
 
       .card-content {
@@ -19286,6 +19289,8 @@ class KitchenCookingPanel extends LitElement {
         font-size: 32px;
         margin: 0 0 8px 0;
         color: var(--primary-text-color);
+        overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       .welcome-subtitle {
@@ -19326,11 +19331,15 @@ class KitchenCookingPanel extends LitElement {
         font-weight: 600;
         margin-bottom: 4px;
         color: var(--primary-text-color);
+        overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       .appliance-model {
         font-size: 14px;
         color: var(--secondary-text-color);
+        overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       /* Previous Cooks Card */
@@ -19382,6 +19391,12 @@ class KitchenCookingPanel extends LitElement {
       .previous-cooks-icon {
         font-size: 48px;
         flex-shrink: 0;
+      }
+
+      .previous-cooks-text {
+        min-width: 0;
+        overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       .previous-cooks-text h3 {
@@ -20114,7 +20129,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "202";
+const PANEL_VERSION = "204";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

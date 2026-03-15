@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 15 Mar 2026, 19:45 UTC
-Last Change: v0.5.4.8 - Fix welcome screen appliance badges overflow on mobile portrait
+Last Change: v0.5.4.9 - Fix welcome screen badges overflow + text wrapping on mobile
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -71,7 +71,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.5.4.8"
+__version__ = "0.5.4.9"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

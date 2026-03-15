@@ -6154,14 +6154,16 @@ class KitchenCookingPanel extends LitElement {
     return css`
       :host {
         display: block;
+        width: 100%;
+        overflow-x: hidden;
       }
 
       .content {
         padding: 16px;
         max-width: 800px;
+        width: 100%;
         margin: 0 auto;
         box-sizing: border-box;
-        overflow-x: hidden;
       }
 
       .loading {
@@ -6174,6 +6176,7 @@ class KitchenCookingPanel extends LitElement {
         margin-bottom: 16px;
         max-width: 100%;
         box-sizing: border-box;
+        overflow: hidden;
       }
 
       .card-content {
@@ -7832,6 +7835,8 @@ class KitchenCookingPanel extends LitElement {
         font-size: 32px;
         margin: 0 0 8px 0;
         color: var(--primary-text-color);
+        overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       .welcome-subtitle {
@@ -7872,11 +7877,15 @@ class KitchenCookingPanel extends LitElement {
         font-weight: 600;
         margin-bottom: 4px;
         color: var(--primary-text-color);
+        overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       .appliance-model {
         font-size: 14px;
         color: var(--secondary-text-color);
+        overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       /* Previous Cooks Card */
@@ -7928,6 +7937,12 @@ class KitchenCookingPanel extends LitElement {
       .previous-cooks-icon {
         font-size: 48px;
         flex-shrink: 0;
+      }
+
+      .previous-cooks-text {
+        min-width: 0;
+        overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       .previous-cooks-text h3 {
