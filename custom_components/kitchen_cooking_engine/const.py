@@ -1,6 +1,6 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 26 Feb 2026, 18:00 UTC
+Last Updated: 15 Mar 2026, 19:45 UTC
 Last Change: v0.5.4.6 - Refresh welcome screen data on navigate-back so exited cooks disappear immediately
 """
 

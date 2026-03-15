@@ -1,6 +1,6 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 26 Feb 2026, 18:00 UTC
+Last Updated: 15 Mar 2026, 19:45 UTC
 Last Change: v0.5.4.6 - Refresh welcome screen data on navigate-back so exited cooks disappear immediately
 
 A HACS-compatible integration that provides guided cooking functionality
