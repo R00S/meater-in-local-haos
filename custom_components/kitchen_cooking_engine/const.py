@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 15 Mar 2026, 21:52 UTC
-Last Change: v0.5.4.12 - Fix AI recipe builder ignoring chosen appliance
+Last Change: v0.5.5.0 - Bump version to 0.5.5.0
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "208"
+PANEL_VERSION = "209"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
