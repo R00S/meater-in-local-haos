@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 15 Mar 2026, 19:41 CET
+ * AUTO-GENERATED: 15 Mar 2026, 19:50 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 15 Mar 2026, 19:41 CET
+// Last generated: 15 Mar 2026, 19:50 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -11672,13 +11672,13 @@ class KitchenCookingPanel extends LitElement {
     this._showMeaterCooking = false;
     // Phase 3: Cook detail view state
     this._selectedCookForDetail = null;
-    // Phase 4: Recipe Cook Flow state
-    this._recipeCookState = null; // {recipe, startTime, currentStep, servingSize, easeRating, resultRating, notes, meaterSubprocess}
-    this._recipeCookTimer = null; // setInterval handle for elapsed time updates
-    this._viewingRecipeCook = false; // Whether user is currently viewing recipe cook (vs. minimized)
-    this._serverRecipeCookState = null; // Recipe cook state loaded from server (cross-device)
-    // Restore recipe cook state from sessionStorage (survives navigation away and back)
-    this._restoreRecipeCookState();
+    // Phase 4: Recipe Cook Flow state — supports multiple parallel cooks
+    this._activeRecipeCooks = []; // Array of all running recipe cook states [{id, recipe, startTime, currentStep, ...}]
+    this._recipeCookState = null; // Pointer to the currently VIEWED cook (same object in _activeRecipeCooks), or null
+    this._recipeCookTimer = null; // setInterval handle for elapsed time updates (active only when viewing)
+    this._serverActiveRecipeCooks = null; // Array of recipe cooks from server (cross-device visibility)
+    // Restore active recipe cooks from sessionStorage (survives navigation away and back)
+    this._restoreActiveRecipeCooks();
     // Custom temperature profile
     this._customProfileName = '';
     this._customProfileTempC = 70;
@@ -11718,7 +11718,7 @@ class KitchenCookingPanel extends LitElement {
     this._loadAvailableFeatures();
     
     // Load server-side recipe cook state for cross-device visibility
-    this._loadServerRecipeCookState();
+    this._loadServerActiveRecipeCooks();
     
     // --- Blank-tab fix (Issue #67) ---
     // When the user returns to this browser tab after minutes away, the browser
@@ -11737,7 +11737,7 @@ class KitchenCookingPanel extends LitElement {
         // with fresh state objects, so our cached data (appliances etc.) can be stale.
         this._loadAppliances();
         this._loadAISettings();
-        this._loadServerRecipeCookState();
+        this._loadServerActiveRecipeCooks();
         
         // Immediate re-render
         this.requestUpdate();
@@ -13823,8 +13823,8 @@ class KitchenCookingPanel extends LitElement {
       return this._renderMeaterCookRating();
     }
     
-    // Show recipe cook flow only when user is actively viewing it
-    if (this._recipeCookState && this._viewingRecipeCook) {
+    // Show recipe cook flow when actively viewing one (pointer is set)
+    if (this._recipeCookState) {
       return this._renderRecipeCookFlow();
     }
 
@@ -14586,13 +14586,13 @@ class KitchenCookingPanel extends LitElement {
   _renderWelcomeScreen(activeCooks = []) {
     // Build the ongoing cooks section:
     //  - MEATER probe entities that are actively cooking
-    //  - Local recipe cook (this device, in-memory)
-    //  - Server recipe cook (other device, fetched from API)
-    const hasLocalRecipeCook = !!this._recipeCookState;
-    // Show server-side recipe cook only if we DON'T have a local one (avoid duplicates)
-    const hasRemoteRecipeCook = !hasLocalRecipeCook && !!this._serverRecipeCookState;
-    const recipeCookCount = (hasLocalRecipeCook ? 1 : 0) + (hasRemoteRecipeCook ? 1 : 0);
-    const totalOngoingCooks = activeCooks.length + recipeCookCount;
+    //  - Local recipe cooks (this device, in-memory array)
+    //  - Server recipe cooks from other devices (fetched from API)
+    const localRecipeCooks = this._activeRecipeCooks || [];
+    // Compute IDs of local cooks to avoid showing duplicates from server
+    const localCookIds = new Set(localRecipeCooks.map(c => c.id));
+    const remoteRecipeCooks = (this._serverActiveRecipeCooks || []).filter(c => !localCookIds.has(c.id));
+    const totalOngoingCooks = activeCooks.length + localRecipeCooks.length + remoteRecipeCooks.length;
     const hasOngoingCooks = totalOngoingCooks > 0;
 
     return html`
@@ -14608,7 +14608,6 @@ class KitchenCookingPanel extends LitElement {
 
             ${activeCooks.map(entityId => {
               const st = this.hass.states[entityId];
-              const name = st?.attributes?.friendly_name || entityId;
               const protein = st?.attributes?.protein || '';
               const cut = st?.attributes?.cut_display || st?.attributes?.cut || '';
               const currentTemp = st?.attributes?.current_temp_c;
@@ -14636,37 +14635,37 @@ class KitchenCookingPanel extends LitElement {
               `;
             })}
 
-            ${hasLocalRecipeCook ? html`
-              <ha-card class="ongoing-cook-item clickable" @click=${() => { this._viewingRecipeCook = true; this.requestUpdate(); }}>
+            ${localRecipeCooks.map(cook => html`
+              <ha-card class="ongoing-cook-item clickable" @click=${() => this._viewRecipeCook(cook.id)}>
                 <div class="card-content" style="display:flex;align-items:center;gap:12px;padding:12px 16px;">
                   <div style="font-size:28px;flex-shrink:0;">📖</div>
                   <div style="flex:1;min-width:0;">
-                    <div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${this._recipeCookState.recipe?.name || 'AI Recipe Cook'}</div>
+                    <div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${cook.recipe?.name || 'Recipe Cook'}</div>
                     <div style="font-size:0.85em;color:var(--secondary-text-color);">
-                      Step ${(this._recipeCookState.currentStep ?? -1) + 2} of ${this._recipeCookState.recipe?.instructions?.length || '?'}
-                      · ${this._formatElapsedTime(Math.floor((Date.now() - this._recipeCookState.startTime) / 1000))}
+                      ${cook.currentStep < 0 ? 'Overview' : `Step ${cook.currentStep + 1} of ${cook.recipe?.instructions?.length || '?'}`}
+                      · ${this._formatElapsedTime(Math.floor((Date.now() - cook.startTime) / 1000))}
                     </div>
                   </div>
                   <div style="font-size:1.2em;">→</div>
                 </div>
               </ha-card>
-            ` : ''}
+            `)}
 
-            ${hasRemoteRecipeCook ? html`
-              <ha-card class="ongoing-cook-item clickable" @click=${() => this._adoptServerRecipeCook()}>
+            ${remoteRecipeCooks.map(cook => html`
+              <ha-card class="ongoing-cook-item clickable" @click=${() => this._adoptServerRecipeCook(cook)}>
                 <div class="card-content" style="display:flex;align-items:center;gap:12px;padding:12px 16px;">
                   <div style="font-size:28px;flex-shrink:0;">📖</div>
                   <div style="flex:1;min-width:0;">
-                    <div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${this._serverRecipeCookState.recipe?.name || 'AI Recipe Cook'}</div>
+                    <div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${cook.recipe?.name || 'Recipe Cook'}</div>
                     <div style="font-size:0.85em;color:var(--secondary-text-color);">
                       Started on another device
-                      · ${this._formatElapsedTime(Math.floor((Date.now() - this._serverRecipeCookState.startTime) / 1000))}
+                      · ${this._formatElapsedTime(Math.floor((Date.now() - cook.startTime) / 1000))}
                     </div>
                   </div>
                   <div style="font-size:1.2em;">→</div>
                 </div>
               </ha-card>
-            ` : ''}
+            `)}
 
           </div>
         </ha-card>
@@ -16292,16 +16291,12 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Start a recipe cook session
+   * Start a recipe cook session. Supports multiple parallel cooks.
    */
   _startRecipeCook(recipe, servingSize = null) {
-    // Clear any existing timer
-    if (this._recipeCookTimer) {
-      clearInterval(this._recipeCookTimer);
-    }
-
-    // Initialize cook state
-    this._recipeCookState = {
+    // Create cook state with unique ID
+    const cookState = {
+      id: 'cook_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
       recipe: recipe,
       startTime: Date.now(),
       currentStep: -1, // -1 = overview page, 0+ = step index
@@ -16312,96 +16307,115 @@ class KitchenCookingPanel extends LitElement {
       meaterSubprocess: null // Will store subprocess info if MEATER is started
     };
 
-    // Mark as actively viewing
-    this._viewingRecipeCook = true;
+    // Add to active cooks array
+    this._activeRecipeCooks.push(cookState);
 
-    // Persist to sessionStorage + server (cross-device visibility)
-    this._persistRecipeCookState();
+    // Set as the currently viewed cook (same object reference)
+    this._recipeCookState = cookState;
 
-    // Start timer that updates every second
+    // Start timer for elapsed display
+    if (this._recipeCookTimer) clearInterval(this._recipeCookTimer);
     this._recipeCookTimer = setInterval(() => {
       this.requestUpdate();
     }, 1000);
+
+    // Persist to sessionStorage + server (cross-device visibility)
+    this._persistActiveRecipeCooks();
 
     this.requestUpdate();
   }
 
   /**
-   * Stop the recipe cook and clean up
+   * Stop the currently viewed recipe cook and clean up.
+   * Removes it from the active cooks array.
    */
   _stopRecipeCook() {
-    // Clear timer
+    // Remove from array
+    if (this._recipeCookState) {
+      const cookId = this._recipeCookState.id;
+      this._activeRecipeCooks = this._activeRecipeCooks.filter(c => c.id !== cookId);
+    }
+
+    // Clear pointer and timer
+    this._recipeCookState = null;
     if (this._recipeCookTimer) {
       clearInterval(this._recipeCookTimer);
       this._recipeCookTimer = null;
     }
 
-    // Clear state and persisted copy
-    this._recipeCookState = null;
-    this._viewingRecipeCook = false;
-    this._clearPersistedRecipeCookState();
+    // Persist the updated array
+    this._persistActiveRecipeCooks();
     
     // Navigate back to welcome
     this._navigateToWelcome();
   }
 
   /**
-   * Adopt a recipe cook from the server (started on another device).
-   * Loads the state into this device so the user can continue following it.
+   * Adopt a specific recipe cook from the server (started on another device).
+   * Adds it to the local array and shows it.
    */
-  _adoptServerRecipeCook() {
-    if (!this._serverRecipeCookState) return;
-    const state = this._serverRecipeCookState;
-    if (!state.recipe || !state.startTime) return;
+  _adoptServerRecipeCook(cook) {
+    if (!cook || !cook.recipe || !cook.startTime) return;
 
-    // Clear any existing timer
-    if (this._recipeCookTimer) {
-      clearInterval(this._recipeCookTimer);
-    }
+    // Ensure it has an ID
+    const adopted = { ...cook, id: cook.id || ('cook_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6)) };
 
-    this._recipeCookState = { ...state };
-    this._viewingRecipeCook = true;
-    this._serverRecipeCookState = null;
+    // Add to local array
+    this._activeRecipeCooks.push(adopted);
 
-    // Persist locally
-    try {
-      sessionStorage.setItem('kce_recipe_cook_state', JSON.stringify(this._recipeCookState));
-    } catch (e) { /* ignore */ }
+    // View it
+    this._recipeCookState = adopted;
+    if (this._recipeCookTimer) clearInterval(this._recipeCookTimer);
+    this._recipeCookTimer = setInterval(() => this.requestUpdate(), 1000);
 
-    // Start timer
-    this._recipeCookTimer = setInterval(() => {
-      this.requestUpdate();
-    }, 1000);
-
+    // Persist
+    this._persistActiveRecipeCooks();
     this.requestUpdate();
   }
 
   /**
-   * Minimize the recipe cook: go to welcome screen while cook keeps running.
-   * The ongoing cook badge on the welcome screen lets the user return.
+   * Minimize the current recipe cook: go to welcome while cook keeps running.
+   * All active cooks remain in the array and show in the badge.
    */
   _minimizeRecipeCook() {
-    this._viewingRecipeCook = false;
+    this._recipeCookState = null;
+    if (this._recipeCookTimer) {
+      clearInterval(this._recipeCookTimer);
+      this._recipeCookTimer = null;
+    }
     this._currentPath = 'welcome';
     this.requestUpdate();
   }
 
   /**
-   * Persist the recipe cook state to sessionStorage so it survives
-   * when the user navigates to another HA panel and comes back.
-   * The component is re-created on sidebar navigation, losing in-memory state.
+   * View (maximize) a specific recipe cook from the active cooks array.
    */
-  _persistRecipeCookState() {
+  _viewRecipeCook(cookId) {
+    const cook = this._activeRecipeCooks.find(c => c.id === cookId);
+    if (!cook) return;
+
+    this._recipeCookState = cook; // Same object reference — mutations update the array
+    if (this._recipeCookTimer) clearInterval(this._recipeCookTimer);
+    this._recipeCookTimer = setInterval(() => this.requestUpdate(), 1000);
+    this.requestUpdate();
+  }
+
+  /**
+   * Persist ALL active recipe cooks to sessionStorage + server.
+   * sessionStorage survives HA sidebar navigation (component re-creation).
+   * Server sync enables cross-device visibility.
+   */
+  _persistActiveRecipeCooks() {
     try {
-      if (this._recipeCookState) {
-        const json = JSON.stringify(this._recipeCookState);
-        sessionStorage.setItem('kce_recipe_cook_state', json);
-        // Also save to server for cross-device visibility (fire-and-forget)
-        if (this.hass) {
-          this.hass.callApi('POST', 'kitchen_cooking_engine/active_recipe_cook', this._recipeCookState).catch(e => {
-            console.warn('KCE: failed to sync recipe cook to server:', e);
-          });
-        }
+      const json = JSON.stringify(this._activeRecipeCooks);
+      sessionStorage.setItem('kce_active_recipe_cooks', json);
+      // Also save to server for cross-device visibility (fire-and-forget)
+      if (this.hass) {
+        this.hass.callApi('POST', 'kitchen_cooking_engine/active_recipe_cook',
+          { cooks: this._activeRecipeCooks }
+        ).catch(e => {
+          console.warn('KCE: failed to sync recipe cooks to server:', e);
+        });
       }
     } catch (e) {
       // sessionStorage might be unavailable (private browsing, quota exceeded)
@@ -16409,61 +16423,39 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Restore the recipe cook state from sessionStorage.
+   * Restore active recipe cooks from sessionStorage.
    * Called in the constructor to recover state after component re-creation.
+   * Cooks start minimized — the user sees them in the badge on the welcome screen.
    */
-  _restoreRecipeCookState() {
+  _restoreActiveRecipeCooks() {
     try {
-      const saved = sessionStorage.getItem('kce_recipe_cook_state');
+      const saved = sessionStorage.getItem('kce_active_recipe_cooks');
       if (saved) {
-        const state = JSON.parse(saved);
-        // Verify the saved state is still valid (has a recipe and a start time)
-        if (state && state.recipe && state.startTime) {
-          this._recipeCookState = state;
-          // Don't auto-view — let user see it via the badge on welcome screen
-          this._viewingRecipeCook = false;
-          // Restart the timer for elapsed time display
-          this._recipeCookTimer = setInterval(() => {
-            this.requestUpdate();
-          }, 1000);
+        const arr = JSON.parse(saved);
+        if (Array.isArray(arr)) {
+          this._activeRecipeCooks = arr.filter(c => c && c.recipe && c.startTime);
         }
       }
     } catch (e) {
       // Corrupted or unavailable - ignore
     }
+    // Don't set _recipeCookState — start minimized, show badges on welcome screen
   }
 
   /**
-   * Clear persisted recipe cook state from sessionStorage and server.
+   * Load active recipe cooks from server (for cross-device visibility).
+   * Called during connectedCallback / visibility change.
    */
-  _clearPersistedRecipeCookState() {
-    try {
-      sessionStorage.removeItem('kce_recipe_cook_state');
-    } catch (e) {
-      // Ignore
-    }
-    // Also clear from server (fire-and-forget)
-    if (this.hass) {
-      this.hass.callApi('DELETE', 'kitchen_cooking_engine/active_recipe_cook').catch(e => {
-        console.warn('KCE: failed to clear server recipe cook:', e);
-      });
-    }
-    this._serverRecipeCookState = null;
-  }
-
-  /**
-   * Load active recipe cook state from server (for cross-device visibility).
-   * Called during connectedCallback/data reload.
-   */
-  async _loadServerRecipeCookState() {
+  async _loadServerActiveRecipeCooks() {
     if (!this.hass) return;
     try {
       const resp = await this.hass.callApi('GET', 'kitchen_cooking_engine/active_recipe_cook');
-      this._serverRecipeCookState = resp?.state || null;
+      const cooks = resp?.cooks || (resp?.state ? [resp.state] : null);
+      this._serverActiveRecipeCooks = Array.isArray(cooks) ? cooks.filter(c => c && c.recipe && c.startTime) : null;
       this.requestUpdate();
     } catch (e) {
       // Server might not have the endpoint yet (old version)
-      this._serverRecipeCookState = null;
+      this._serverActiveRecipeCooks = null;
     }
   }
 
@@ -16482,7 +16474,7 @@ class KitchenCookingPanel extends LitElement {
       if (this._recipeCookState.currentStep < 0) {
         this._recipeCookState.currentStep = 0; // finish page since steps.length is 0
       }
-      this._persistRecipeCookState();
+      this._persistActiveRecipeCooks();
       this.requestUpdate();
       return;
     }
@@ -16496,7 +16488,7 @@ class KitchenCookingPanel extends LitElement {
       this._recipeCookState.currentStep++;
     }
     
-    this._persistRecipeCookState();
+    this._persistActiveRecipeCooks();
     this.requestUpdate();
   }
 
@@ -16518,7 +16510,7 @@ class KitchenCookingPanel extends LitElement {
       return; // _stopRecipeCook already clears persisted state
     }
     
-    this._persistRecipeCookState();
+    this._persistActiveRecipeCooks();
     this.requestUpdate();
   }
 
@@ -16769,44 +16761,16 @@ class KitchenCookingPanel extends LitElement {
     this._messageDialogOnCancel = null;
     this._showMessageDialog = false;
 
-    // Start recipe cook flow (Phase 4)
-    this._recipeCookState = {
-      recipe: fullRecipe,
-      startTime: Date.now(),
-      currentStep: -1, // Start with overview
-      servingSize: fullRecipe.servings || 4,
-      easeRating: 0,
-      resultRating: 0,
-      notes: '',
-      meaterSubprocess: null
-    };
-
-    // Start the timer
-    this._startRecipeCookTimer();
-    
-    this.requestUpdate();
+    // Start recipe cook flow via central method (supports parallel cooks)
+    this._startRecipeCook(fullRecipe, fullRecipe.servings || 4);
   }
 
   /**
    * Phase 5: Select a Ninja built-in recipe and start cooking
    */
   _selectNinjaRecipe(recipe) {
-    // Start recipe cook flow (Phase 4)
-    this._recipeCookState = {
-      recipe: recipe,
-      startTime: Date.now(),
-      currentStep: -1, // Start with overview
-      servingSize: recipe.servings || recipe.serving_size || 4,
-      easeRating: 0,
-      resultRating: 0,
-      notes: '',
-      meaterSubprocess: null
-    };
-
-    // Start the timer
-    this._startRecipeCookTimer();
-    
-    this.requestUpdate();
+    // Start recipe cook flow via central method (supports parallel cooks)
+    this._startRecipeCook(recipe, recipe.servings || recipe.serving_size || 4);
   }
 
   /**
@@ -20088,7 +20052,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "196";
+const PANEL_VERSION = "197";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

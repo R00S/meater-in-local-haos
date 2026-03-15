@@ -276,11 +276,14 @@ def async_register_api(hass: HomeAssistant) -> None:
 
 
 class ActiveRecipeCookView(HomeAssistantView):
-    """API endpoint for the active recipe cook state (cross-device visibility).
+    """API endpoint for active recipe cooks (cross-device visibility).
 
-    GET  → returns the active cook state (or null)
-    POST → saves the current cook state
-    DELETE → clears the active cook state
+    Stores an array of active recipe cook states so all devices can see
+    ongoing cooks regardless of which device started them.
+
+    GET    → returns {cooks: [...]}
+    POST   → saves the array of active cooks
+    DELETE → clears all active cooks
     """
 
     url = "/api/kitchen_cooking_engine/active_recipe_cook"
@@ -288,32 +291,38 @@ class ActiveRecipeCookView(HomeAssistantView):
     requires_auth = True
 
     async def get(self, request: web.Request) -> web.Response:
-        """Return the active recipe cook state, or null if none."""
+        """Return all active recipe cooks."""
         hass = request.app["hass"]
         state = await async_load_active_recipe_cook(hass)
-        return self.json({"state": state})
+        # state may be a list (new format) or a dict (old single-cook format)
+        if isinstance(state, list):
+            return self.json({"cooks": state})
+        if isinstance(state, dict) and state:
+            return self.json({"cooks": [state]})
+        return self.json({"cooks": []})
 
     async def post(self, request: web.Request) -> web.Response:
-        """Save or update the active recipe cook state."""
+        """Save the array of active recipe cooks."""
         hass = request.app["hass"]
         try:
             data = await request.json()
-            if not data or not data.get("recipe") or not data.get("startTime"):
+            cooks = data.get("cooks") if isinstance(data, dict) else None
+            if not isinstance(cooks, list):
                 return self.json(
-                    {"status": "error", "message": "Missing recipe or startTime"}
+                    {"status": "error", "message": "Expected {cooks: [...]}"}
                 )
-            success = await async_save_active_recipe_cook(hass, data)
+            success = await async_save_active_recipe_cook(hass, cooks)
             if success:
                 return self.json({"status": "ok"})
             return self.json({"status": "error", "message": "Failed to save"})
         except Exception as exc:
-            _LOGGER.error("Error saving active recipe cook: %s", exc)
+            _LOGGER.error("Error saving active recipe cooks: %s", exc)
             return self.json(
                 {"status": "error", "message": "Failed to process request"}
             )
 
     async def delete(self, request: web.Request) -> web.Response:
-        """Clear the active recipe cook state (cook finished or stopped)."""
+        """Clear all active recipe cooks."""
         hass = request.app["hass"]
         success = await async_clear_active_recipe_cook(hass)
         if success:
