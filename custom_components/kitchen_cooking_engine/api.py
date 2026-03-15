@@ -29,6 +29,7 @@ from .storage import (
     async_load_cook_history,
     async_add_cook_to_history,
     async_update_cook_notes,
+    async_update_cook_rating,
     async_delete_cook_from_history,
     async_load_user_preferences,
     async_set_cut_preference,
@@ -314,17 +315,30 @@ class CookHistoryItemView(HomeAssistantView):
     requires_auth = True
 
     async def patch(self, request: web.Request, cook_id: str) -> web.Response:
-        """Update cook notes."""
+        """Update cook notes and/or ratings."""
         hass = request.app["hass"]
         try:
             data = await request.json()
-            notes = data.get("notes", "")
-            success = await async_update_cook_notes(hass, cook_id, notes)
+            # If only notes were supplied use the existing lightweight helper.
+            # If ratings were included, use the richer update function.
+            ease_rating = data.get("ease_rating")
+            result_rating = data.get("result_rating")
+            notes = data.get("notes")
+            if ease_rating is not None or result_rating is not None:
+                success = await async_update_cook_rating(
+                    hass,
+                    cook_id,
+                    ease_rating=ease_rating,
+                    result_rating=result_rating,
+                    notes=notes,
+                )
+            else:
+                success = await async_update_cook_notes(hass, cook_id, notes or "")
             if success:
                 return self.json({"status": "ok"})
             return self.json({"status": "error", "message": "Cook not found"})
         except Exception as e:
-            _LOGGER.error("Error updating cook notes: %s", e)
+            _LOGGER.error("Error updating cook: %s", e)
             return self.json({"status": "error", "message": "Failed to process request"})
 
     async def delete(self, request: web.Request, cook_id: str) -> web.Response:

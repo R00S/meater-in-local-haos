@@ -151,6 +151,30 @@ async def async_update_cook_notes(
     return False
 
 
+async def async_update_cook_rating(
+    hass: HomeAssistant,
+    cook_id: str,
+    ease_rating: int | None = None,
+    result_rating: int | None = None,
+    notes: str | None = None,
+) -> bool:
+    """Update ratings (and optionally notes) for a specific cook."""
+    history = await async_load_cook_history(hass)
+
+    for cook in history:
+        if cook.get("id") == cook_id:
+            if ease_rating is not None:
+                cook["ease_rating"] = ease_rating
+            if result_rating is not None:
+                cook["result_rating"] = result_rating
+            if notes is not None:
+                cook["notes"] = notes
+            return await async_save_cook_history(hass, history)
+
+    _LOGGER.warning("Cook not found for rating update: %s", cook_id)
+    return False
+
+
 async def async_delete_cook_from_history(
     hass: HomeAssistant,
     cook_id: str,

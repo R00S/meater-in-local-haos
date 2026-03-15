@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 15 Mar 2026, 13:26 CET
+ * AUTO-GENERATED: 15 Mar 2026, 16:10 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 15 Mar 2026, 13:26 CET
+// Last generated: 15 Mar 2026, 16:10 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -11912,6 +11912,11 @@ class KitchenCookingPanel extends LitElement {
       _showAISettingsModal: { type: Boolean },
       // Feature notes editing in appliance path
       _showFeatureNotesEditor: { type: Boolean },
+      // Issue #65: MEATER cook completion rating
+      _pendingMeaterRating: { type: Object },   // {entityId, attributes} of just-completed cook
+      _meaterRatingEase: { type: Number },
+      _meaterRatingResult: { type: Number },
+      _meaterRatingNotes: { type: String },
     };
   }
 
@@ -12010,11 +12015,54 @@ class KitchenCookingPanel extends LitElement {
     this._aiAgentId = ''; // AI agent entity ID for recipe generation
     this._showAISettingsModal = false; // Show AI settings modal
     this._showFeatureNotesEditor = false; // Show feature notes editor in appliance path
+    // Issue #65: MEATER cook completion rating
+    this._pendingMeaterRating = null;  // {entityId, attributes} when a MEATER cook just completed
+    this._meaterRatingEase = 0;
+    this._meaterRatingResult = 0;
+    this._meaterRatingNotes = '';
+    // Internal tracking for state transitions (not a LitElement property)
+    this._prevCookStates = {};  // entityId → previous state value
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
 
-  connectedCallback() {
+  /**
+   * LitElement lifecycle: called after every render with the changed property map.
+   * Used to detect MEATER cook state transitions (issue #65).
+   */
+  updated(changedProps) {
+    super.updated(changedProps);
+    if (!changedProps.has('hass') || !this.hass) return;
+
+    // Scan all cooking-session entities for transitions from an active state to 'complete'.
+    for (const entityId of Object.keys(this.hass.states)) {
+      if (!entityId.includes('kitchen_cooking_engine') || !entityId.includes('session')) continue;
+
+      const currentState = this.hass.states[entityId]?.state;
+      const previousState = this._prevCookStates[entityId];
+
+      // Detect active → complete transition
+      if (
+        currentState === 'complete' &&
+        previousState &&
+        previousState !== 'complete' &&
+        previousState !== 'idle'
+      ) {
+        // Only trigger once per completion (don't overwrite pending rating)
+        if (!this._pendingMeaterRating) {
+          const attrs = this.hass.states[entityId]?.attributes || {};
+          this._pendingMeaterRating = { entityId, attributes: attrs };
+          this._meaterRatingEase = 0;
+          this._meaterRatingResult = 0;
+          this._meaterRatingNotes = '';
+          this.requestUpdate();
+        }
+      }
+
+      // Always keep track of the latest state
+      this._prevCookStates[entityId] = currentState;
+    }
+  }
     super.connectedCallback();
     // Data is embedded in this file - generated from backend at build time
     
@@ -12033,19 +12081,22 @@ class KitchenCookingPanel extends LitElement {
     this._loadAppliances();
     this._loadAvailableFeatures();
     
-    // Fix for white screen when returning to browser tab
-    // Force re-render when tab becomes visible again
+    // Fix for white screen when returning to browser tab (issue #66)
+    // Re-fetch dynamic data and force re-renders when tab becomes visible again
     this._visibilityHandler = () => {
       if (document.visibilityState === 'visible') {
         // Validate and restore state
         if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
           this._currentPath = 'welcome';
         }
+        // Reload dynamic data in case it went stale while tab was hidden
+        this._loadAppliances();
+        this._loadHistory();
         // Force multiple re-renders to ensure UI is properly updated
         this.requestUpdate();
         // Also trigger after a short delay for any async state
-        setTimeout(() => this.requestUpdate(), 100);
-        setTimeout(() => this.requestUpdate(), 500);
+        setTimeout(() => this.requestUpdate(), 200);
+        setTimeout(() => this.requestUpdate(), 800);
       }
     };
     document.addEventListener('visibilitychange', this._visibilityHandler);
@@ -14097,6 +14148,11 @@ class KitchenCookingPanel extends LitElement {
       return this._renderRecipeCookFlow();
     }
 
+    // Issue #65: If a MEATER cook just completed, show the rating screen
+    if (this._pendingMeaterRating) {
+      return this._renderMeaterCompletionRating();
+    }
+
     // Find ACTUAL active entity (not relying on this._selectedEntity)
     // This ensures graph and attributes always come from the right entity
     const activeEntity = activeCooks.length > 0 ? activeCooks[0] : null;
@@ -14913,6 +14969,130 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       `}
     `;
+  }
+
+  /**
+   * Issue #65: Render MEATER cook completion rating screen.
+   * Shown automatically when a MEATER cook transitions to 'complete' state.
+   */
+  _renderMeaterCompletionRating() {
+    const rating = this._pendingMeaterRating;
+    const attrs = rating?.attributes || {};
+    const cutDisplay = attrs.cut_display || attrs.cut || 'Cook';
+    const protein = attrs.protein || '';
+    const doneness = (attrs.doneness || '').replace(/_/g, ' ');
+    const targetTemp = attrs.target_temp_c;
+    const peakTemp = attrs.peak_temp_c;
+
+    return html`
+      <div class="path-header">
+        <h2>✅ Cook Complete — Rate Your Cook</h2>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          <div style="text-align: center; margin-bottom: 16px;">
+            <h3>${cutDisplay}</h3>
+            ${protein ? html`<p style="color: var(--secondary-text-color);">${protein}${doneness ? ` · ${doneness}` : ''}</p>` : ''}
+            ${targetTemp ? html`<p style="color: var(--secondary-text-color);">Target: ${targetTemp}°C${peakTemp ? ` · Peak: ${Math.round(peakTemp)}°C` : ''}</p>` : ''}
+          </div>
+
+          <div class="recipe-cook-rating" style="margin-bottom: 24px;">
+            <h4>How easy was it?</h4>
+            <p class="rating-description">Ease of cooking this</p>
+            <div class="star-rating">
+              ${[1, 2, 3, 4, 5].map(star => html`
+                <button
+                  class="star-btn ${this._meaterRatingEase >= star ? 'active' : ''}"
+                  @click=${() => { this._meaterRatingEase = star; this.requestUpdate(); }}
+                >
+                  ${this._meaterRatingEase >= star ? '⭐' : '☆'}
+                </button>
+              `)}
+            </div>
+          </div>
+
+          <div class="recipe-cook-rating" style="margin-bottom: 24px;">
+            <h4>How did it turn out?</h4>
+            <p class="rating-description">Quality of the result</p>
+            <div class="star-rating">
+              ${[1, 2, 3, 4, 5].map(star => html`
+                <button
+                  class="star-btn ${this._meaterRatingResult >= star ? 'active' : ''}"
+                  @click=${() => { this._meaterRatingResult = star; this.requestUpdate(); }}
+                >
+                  ${this._meaterRatingResult >= star ? '⭐' : '☆'}
+                </button>
+              `)}
+            </div>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 8px;">📝 Notes (optional)</label>
+            <textarea
+              style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; min-height: 80px; font-family: inherit;"
+              placeholder="Any notes about this cook..."
+              .value=${this._meaterRatingNotes}
+              @input=${(e) => { this._meaterRatingNotes = e.target.value; }}
+            ></textarea>
+          </div>
+
+          ${!this._meaterRatingEase || !this._meaterRatingResult ? html`
+            <p class="rating-required">⚠️ Please provide both ratings to save this cook</p>
+          ` : ''}
+
+          <div style="display: flex; gap: 8px; margin-top: 16px;">
+            <button
+              class="primary-btn"
+              ?disabled=${!this._meaterRatingEase || !this._meaterRatingResult}
+              @click=${() => this._submitMeaterRating()}
+            >
+              💾 Save & Continue
+            </button>
+            <button
+              class="small-btn"
+              @click=${() => {
+                this._pendingMeaterRating = null;
+                this._currentPath = 'welcome';
+                this.requestUpdate();
+              }}
+            >
+              Skip
+            </button>
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /**
+   * Issue #65: Submit MEATER cook rating, persist via API, then clear pending state.
+   */
+  async _submitMeaterRating() {
+    if (!this._meaterRatingEase || !this._meaterRatingResult) return;
+
+    try {
+      // Reload history and find the most recent entry that matches the just-completed entity.
+      // The sensor now stores entity_id in history, so we can match precisely (issue #65).
+      await this._loadHistory();
+      const pendingEntityId = this._pendingMeaterRating?.entityId;
+      const matchedCook = pendingEntityId
+        ? (this._cookHistory || []).find(c => c.entity_id === pendingEntityId)
+        : (this._cookHistory || [])[0];  // Fallback: most recent cook
+      if (matchedCook && matchedCook.id) {
+        await this.hass.callApi('PATCH', `kitchen_cooking_engine/history/${matchedCook.id}`, {
+          ease_rating: this._meaterRatingEase,
+          result_rating: this._meaterRatingResult,
+          notes: this._meaterRatingNotes || matchedCook.notes || '',
+        });
+      }
+    } catch (e) {
+      console.warn('Could not save MEATER rating:', e);
+    }
+
+    this._pendingMeaterRating = null;
+    this._currentPath = 'welcome';
+    this.requestUpdate();
   }
 
   /**
@@ -17374,9 +17554,13 @@ class KitchenCookingPanel extends LitElement {
                 <span class="history-detail">🎯 ${(cook.doneness || '').replace('_', ' ')}</span>
                 <span class="history-detail">🍳 ${(cook.cooking_method || '').replace(/_/g, ' ')}</span>
                 <span class="history-detail">🌡️ ${cook.target_temp_c}°C target</span>
+                ${cook.duration ? html`<span class="history-detail">⏱️ ${this._formatDuration(cook.duration)}</span>` : ''}
                 ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C peak</span>` : ''}
                 ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C after rest</span>` : 
                   cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C final</span>` : ''}
+                ${(cook.ease_rating || cook.result_rating) ? html`
+                  <span class="history-detail">⭐ ${cook.ease_rating || '-'}/${cook.result_rating || '-'}</span>
+                ` : ''}
               </div>
               ${cook.notes ? html`
                 <div class="history-notes">
@@ -19945,7 +20129,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "211";
+const PANEL_VERSION = "213";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

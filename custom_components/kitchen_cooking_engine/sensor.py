@@ -981,7 +981,7 @@ class CookingSessionSensor(SensorEntity):
         self._usda_safe = usda_safe
         self._carryover_temp_c = carryover_temp_c
         self._custom_target_temp_c = custom_target_temp_c  # Store for preferences
-        self._session_start = datetime.now()
+        self._session_start = dt_util.utcnow()  # Use UTC-aware timestamp (consistent with _rest_start)
         self._rest_start = None
         self._state = STATE_COOKING
         self._progress = 0.0
@@ -1168,6 +1168,18 @@ class CookingSessionSensor(SensorEntity):
         """Save completed cook to history."""
         from .storage import async_add_cook_to_history
         
+        # Compute cook duration: from session start until resting began.
+        # This captures the actual active-cook time (tip-temp climb → rest click)
+        # as described in issue #64.
+        cook_duration_minutes: float | None = None
+        if self._session_start and self._rest_start:
+            try:
+                delta = self._rest_start - self._session_start
+                if delta.total_seconds() > 0:
+                    cook_duration_minutes = round(delta.total_seconds() / 60, 1)
+            except Exception:
+                pass
+
         cook_data = {
             "protein": self._protein,
             "cut": self._cut,
@@ -1179,6 +1191,8 @@ class CookingSessionSensor(SensorEntity):
             "target_temp_f": self._target_temp_f,
             "started_at": self._session_start.isoformat() if self._session_start else None,
             "rest_started_at": self._rest_start.isoformat() if self._rest_start else None,
+            "duration": cook_duration_minutes,  # Active cook minutes (issue #64)
+            "entity_id": self.entity_id,  # Record entity so rating lookup can match (issue #65)
             "temp_history": self._full_cook_history,
             "notes": self._cook_notes,
             "final_temp": self._current_temp,
