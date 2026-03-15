@@ -327,6 +327,7 @@ class AIRecipeBuilder:
         cooking_style: str = "quick_and_easy",
         complexity: int = 3,
         user_ingredients: Optional[List[str]] = None,
+        servings: int = 4,
     ) -> Optional[AIRecipeDetail]:
         """Get detailed recipe for a suggestion.
         
@@ -337,6 +338,7 @@ class AIRecipeBuilder:
             cooking_style: Original cooking style used for suggestions
             complexity: Recipe complexity 1-5 (used for ingredient ceiling)
             user_ingredients: Original user-selected ingredients (for ceiling)
+            servings: Number of servings requested by the user
         
         Returns:
             Detailed recipe with instructions
@@ -355,6 +357,7 @@ class AIRecipeBuilder:
             cooking_style=cooking_style,
             complexity=complexity,
             user_ingredients=user_ingredients or suggestion.main_ingredients,
+            servings=servings,
         )
         
         # Call OpenAI
@@ -659,6 +662,7 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
         cooking_style: str = "quick_and_easy",
         complexity: int = 3,
         user_ingredients: Optional[List[str]] = None,
+        servings: int = 4,
     ) -> str:
         """Build prompt for detailed recipe.
         
@@ -668,6 +672,7 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
             cooking_style: Original cooking style (for ingredient ceiling)
             complexity: Recipe complexity 1-5 (for ingredient ceiling)
             user_ingredients: Original user-selected ingredients (for ceiling)
+            servings: Number of servings requested by the user
         
         Returns:
             Formatted prompt for detailed recipe
@@ -735,7 +740,7 @@ If you have web search tools available, use them to find and verify the recipe
 source, authentic techniques, and accurate cooking temperatures.
 
 Please provide the full detailed recipe with:
-1. Complete ingredient list with precise measurements (for 4 servings)
+1. Complete ingredient list with precise measurements (for {servings} servings)
 2. Detailed step-by-step cooking instructions (numbered, including any pre-soak/marinate/dry-brine steps)
 3. Cooking phases with specific temperatures and times
 4. Helpful tips and tricks for best results
@@ -758,7 +763,8 @@ Format your response as JSON:
   "use_probe": true,
   "target_temp_c": 74,
   "target_temp_f": 165,
-  "prep_time_minutes": 15
+  "prep_time_minutes": 15,
+  "servings": {servings}
 }}
 """
         return prompt
