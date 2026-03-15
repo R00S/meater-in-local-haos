@@ -843,6 +843,7 @@ class AIRecipeGenerateView(HomeAssistantView):
                 ingredients=data["ingredients"],
                 cooking_style=data["cooking_style"],
                 appliance_ids=data.get("appliance_ids"),
+                main_appliance_id=data.get("main_appliance_id"),
                 dietary_restrictions=data.get("dietary_restrictions"),
                 servings=data.get("servings", 4),
                 max_time_minutes=data.get("max_time_minutes"),
