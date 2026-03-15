@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.4.0 - Backport AI ingredient ceilings, honest cooking time, time slider, new cooking styles (BBQ/slow cook/baking)
+Last Change: v0.5.4.1 - Ongoing cooks badge on welcome screen, stop auto-navigating to active MEATER cooks
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -65,7 +65,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.4.0"
+__version__ = "0.5.4.1"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

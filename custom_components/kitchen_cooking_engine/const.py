@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.4.0 - Backport AI ingredient ceilings, honest cooking time, time slider, new cooking styles (BBQ/slow cook/baking)
+Last Change: v0.5.4.1 - Ongoing cooks badge on welcome screen, stop auto-navigating to active MEATER cooks
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "189"
+PANEL_VERSION = "190"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
