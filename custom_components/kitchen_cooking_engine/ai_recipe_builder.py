@@ -245,6 +245,9 @@ class AIRecipeBuilder:
         - complexity 4 → 120 %
         - complexity 5 → 140 %  (chef level)
 
+        Unrecognised cooking styles fall back to ``_INGREDIENT_CEILING_DEFAULT``
+        (1.0). Complexity values outside [1, 5] are clamped silently.
+
         The returned value is always at least 1 so the AI is never forced to
         use *only* the user's ingredients.
         """
