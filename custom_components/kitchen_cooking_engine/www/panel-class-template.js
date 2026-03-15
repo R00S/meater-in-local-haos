@@ -285,6 +285,8 @@ class KitchenCookingPanel extends LitElement {
       this._prevCookStates[entityId] = currentState;
     }
   }
+
+  connectedCallback() {
     super.connectedCallback();
     // Data is embedded in this file - generated from backend at build time
     
