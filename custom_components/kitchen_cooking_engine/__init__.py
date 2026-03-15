@@ -65,6 +65,12 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
+# ⚠️ VERSION — must match in ALL 3 locations on every release:
+#   1. manifest.json        → "version": "..."
+#   2. HERE (__init__.py)    → __version__ = "..."
+#   3. __init__.py line 4    → Last Change: v...
+#   4. const.py line 4       → Last Change: v...
+#   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
 __version__ = "0.5.4.4"
 
 # Data source options

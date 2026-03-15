@@ -8,7 +8,13 @@ DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "197"
+# ⚠️ The RELEASE version must match in ALL 3 locations on every release:
+#   1. manifest.json        → "version": "..."
+#   2. __init__.py           → __version__ = "..."
+#   3. __init__.py line 4    → Last Change: v...
+#   4. const.py line 4       → Last Change: v...
+#   PANEL_VERSION below is auto-incremented — do NOT edit manually.
+PANEL_VERSION = "198"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
