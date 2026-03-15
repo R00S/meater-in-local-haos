@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.4.5 - Fix MEATER restart 'unknown' entity, add session dropdown to waiting screen, fix cross-device recipe cook storage
+Last Change: v0.5.4.6 - Refresh welcome screen data on navigate-back so exited cooks disappear immediately
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -71,7 +71,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.5.4.5"
+__version__ = "0.5.4.6"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

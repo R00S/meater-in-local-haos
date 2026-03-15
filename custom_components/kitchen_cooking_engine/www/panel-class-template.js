@@ -953,6 +953,8 @@ class KitchenCookingPanel extends LitElement {
     this._showAppliances = false;
     this._showRecipes = false;
     this._showAIRecipeBuilder = false;
+    // Refresh server data so the welcome screen shows up-to-date ongoing cooks
+    this._loadServerActiveRecipeCooks();
     this.requestUpdate();
   }
 
