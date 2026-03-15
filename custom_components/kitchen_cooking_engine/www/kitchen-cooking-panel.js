@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 15 Mar 2026, 21:28 CET
+ * AUTO-GENERATED: 15 Mar 2026, 22:14 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 15 Mar 2026, 21:28 CET
+// Last generated: 15 Mar 2026, 22:14 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -14985,8 +14985,15 @@ class KitchenCookingPanel extends LitElement {
     
     return html`
       <div class="path-header">
-        <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ← Back to Appliances
+        <button class="back-btn" @click=${() => {
+          if (this._selectedMainAppliance === 'ninja_combi') {
+            this._currentPath = 'ninja_combi';
+            this.requestUpdate();
+          } else {
+            this._navigateToWelcome();
+          }
+        }}>
+          ← Back${this._selectedMainAppliance === 'ninja_combi' ? ' to Ninja Combi' : ' to Appliances'}
         </button>
         <div class="path-header-title-row">
           <h2>🤖 AI Recipe Builder</h2>
@@ -17238,12 +17245,16 @@ class KitchenCookingPanel extends LitElement {
       this._cookingStyles = this._cookingStyles || [];
     }
     
-    // Pre-select Ninja Combi and launch AI builder with data loaded
+    // Pre-select Ninja Combi and navigate to the AI builder appliance screen
+    // (same screen as other appliances — shows secondary appliances with deselectable checkboxes)
     this._selectedMainAppliance = 'ninja_combi';
     this._currentPath = 'ai_recipe_builder';
-    this._showAIIngredientSelector = true;
+    this._showAIIngredientSelector = false;
+    this._showAIStyleSelector = false;
+    this._showAIRecipeSuggestions = false;
     this._selectedIngredients = [];
     this._selectedCookingStyle = null;
+    this._aiRecipeSuggestions = [];
     this.requestUpdate();
   }
 
@@ -20129,7 +20140,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "204";
+const PANEL_VERSION = "205";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
