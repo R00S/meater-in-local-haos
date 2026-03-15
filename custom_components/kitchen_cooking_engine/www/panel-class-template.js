@@ -286,7 +286,10 @@ class KitchenCookingPanel extends LitElement {
         // hidden tabs, leaving ha-top-app-bar-fixed content area blank.
         requestAnimationFrame(() => {
           this.requestUpdate();
-          // Force a layout reflow on the shadow root host to recreate GPU layers
+          // Reading offsetHeight forces a synchronous layout reflow, which
+          // makes the browser recalculate styles and recreate compositor layers
+          // that were discarded while the tab was hidden.  The void operator
+          // discards the return value while keeping the side-effect.
           if (this.shadowRoot) {
             void this.shadowRoot.host.offsetHeight;
           }
