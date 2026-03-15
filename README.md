@@ -5,7 +5,7 @@
 [![Alpha](https://img.shields.io/badge/Status-ALPHA-orange.svg)](https://github.com/R00S/meater-in-local-haos)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/R00S)
 
-⚠️ **DEVELOPMENT RELEASE** — GUI Redesign Phases 1–6 complete + v0.5.2.x appliance features. Functional but not yet production-ready. Phases 7 (Multilingual/Measurements) and 8 (Polish) remain.
+⚠️ **DEVELOPMENT RELEASE** — GUI Redesign Phases 1–6 complete + v0.5.4.x stability & UX features. Functional but not yet production-ready. Phases 7 (Multilingual/Measurements) and 8 (Polish) remain.
 
 A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes, and temperature sensors.
 
@@ -21,9 +21,22 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 ## 📊 Current Status
 
-**v0.5.2.8** — Semi-stable development release (February 2026)
+**v0.5.4.6** — Development release (March 2026)
 
-GUI Redesign Phases 1–6 complete + v0.5.2.x appliance features. See [STATUS.md](STATUS.md) for full progress tracking.
+GUI Redesign Phases 1–6 complete + v0.5.2.x appliance features + v0.5.4.x stability & UX. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.5.4.x Features (March 2026)
+- ✅ **Ongoing cooks badge** — Welcome screen shows active MEATER + recipe cooks with live status
+- ✅ **Parallel recipe cooks** — Multiple recipe cooks running simultaneously (one per appliance)
+- ✅ **Cross-device cook visibility** — Recipe cooks visible on all devices via server sync
+- ✅ **MEATER cook rating screen** — Rate ease & result (1–5 stars) after MEATER cook completion
+- ✅ **AI ingredient ceilings** — Style-dependent ingredient limits prevent overly complex recipes
+- ✅ **Honest cooking time** — AI includes all prep time (soaking, brining, marinating) in estimates
+- ✅ **Blank tab fix** — Detects WebSocket reconnect + forces Shadow DOM repaint on return
+- ✅ **Recipe cook persistence** — sessionStorage survives HA sidebar navigation
+- ✅ **Welcome screen auto-refresh** — Exited cooks disappear immediately without manual refresh
+- ✅ **MEATER restart improvements** — Session dropdown on waiting screen, unknown entity handling
+- ✅ **🏠 Home button** — Navigate back to welcome from any active cook view
 
 ### v0.5.2.x Features (February 2026)
 - ✅ **Multi-appliance management** — Configure multiple appliances (Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom)

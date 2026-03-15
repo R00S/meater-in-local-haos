@@ -2,7 +2,7 @@
 
 ## Kitchen Cooking Engine – Local Smart Cooking Planner
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Created:** 2025-11-30  
 **Status:** Active Development
 
@@ -521,6 +521,7 @@ To be added after Phase 1:
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2025-11-30 | Initial ToR based on project discussions |
+| 1.1 | 2026-03-15 | v0.5.4.x: Added ongoing cooks badge, parallel recipe cooks, cross-device cook visibility, MEATER cook rating, AI ingredient ceilings, honest cooking time, blank tab fix, recipe cook persistence, welcome screen auto-refresh, MEATER restart improvements, 🏠 Home button, Create Test Release "mark as latest" workflow |
 
 ---
 
