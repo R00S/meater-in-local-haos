@@ -265,6 +265,7 @@ class AIRecipeBuilder:
         ingredients: List[str],
         cooking_style: str,
         appliance_ids: Optional[List[str]] = None,
+        main_appliance_id: Optional[str] = None,
         dietary_restrictions: Optional[List[str]] = None,
         servings: int = 4,
         max_time_minutes: Optional[int] = None,
@@ -277,6 +278,7 @@ class AIRecipeBuilder:
             ingredients: List of ingredient names
             cooking_style: Cooking style preference (from CookingStyle enum)
             appliance_ids: Optional list of available appliance IDs
+            main_appliance_id: Optional ID of the primary/selected appliance
             dietary_restrictions: Optional dietary restrictions
             servings: Number of servings
             max_time_minutes: Optional maximum cooking time
@@ -294,6 +296,7 @@ class AIRecipeBuilder:
             ingredients=ingredients,
             cooking_style=cooking_style,
             appliance_info=appliance_info,
+            main_appliance_id=main_appliance_id,
             dietary_restrictions=dietary_restrictions,
             servings=servings,
             max_time_minutes=max_time_minutes,
@@ -479,6 +482,7 @@ class AIRecipeBuilder:
                 feature_details[fname] = detail
             
             info["appliances"].append({
+                "appliance_id": appliance.appliance_id,
                 "name": appliance.name,
                 "brand": appliance.brand,
                 "model": appliance.model,
@@ -499,6 +503,7 @@ class AIRecipeBuilder:
         max_time_minutes: Optional[int],
         complexity: int = 3,
         cuisines: Optional[List[str]] = None,
+        main_appliance_id: Optional[str] = None,
     ) -> str:
         """Build prompt for recipe suggestions.
         
@@ -534,6 +539,29 @@ class AIRecipeBuilder:
                 "\n\nAppliance modification notes (adapt recipes accordingly):\n"
                 + "\n".join(mod_notes_lines)
             )
+
+        # Build primary appliance directive when user has selected a specific appliance
+        primary_appliance_directive = ""
+        if main_appliance_id and appliance_info and appliance_info.get("appliances"):
+            main_appliance = next(
+                (a for a in appliance_info["appliances"] if a.get("appliance_id") == main_appliance_id),
+                None,
+            )
+            if main_appliance is None:
+                _LOGGER.warning(
+                    "main_appliance_id '%s' not found in appliance_info; "
+                    "skipping primary appliance directive",
+                    main_appliance_id,
+                )
+            else:
+                main_name = f"{main_appliance['brand']} {main_appliance['model']}"
+                primary_appliance_directive = (
+                    f"\nCRITICAL RULE — PRIMARY APPLIANCE:\n"
+                    f"The user has specifically selected the {main_name} as their primary cooking appliance. "
+                    f"ALL 4 recipes MUST be designed to be cooked primarily using this appliance. "
+                    f"Exploit its unique cooking modes and features. "
+                    f"Do NOT suggest recipes that require a different primary appliance."
+                )
         
         restrictions = (
             f"\nDietary restrictions: {', '.join(dietary_restrictions)}"
@@ -598,7 +626,7 @@ Servings: {servings}
 Complexity level: {complexity_desc}{cuisine_hint}{restrictions}{time_constraint}
 {ingredient_ceiling_rule}
 {cooking_time_honesty_rule}
-
+{primary_appliance_directive}
 Available kitchen equipment:
 {appliance_list}
 
