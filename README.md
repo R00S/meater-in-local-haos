@@ -21,7 +21,7 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 ## 📊 Current Status
 
-**v0.5.4.6** — Development release (March 2026)
+**v0.5.4.7** — Development release (March 2026)
 
 GUI Redesign Phases 1–6 complete + v0.5.2.x appliance features + v0.5.4.x stability & UX. See [STATUS.md](STATUS.md) for full progress tracking.
 

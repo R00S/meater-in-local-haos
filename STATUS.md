@@ -1,7 +1,7 @@
 # Project Status - Kitchen Cooking Engine
 
 **Last Updated:** 15 March 2026  
-**Current Version:** v0.5.4.6  
+**Current Version:** v0.5.4.7  
 **Status:** Development release (GUI Redesign Phases 1–6 + v0.5.2.x appliance features + v0.5.4.x stability & UX)
 
 ## Project Direction
@@ -10,7 +10,7 @@ This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen 
 
 ---
 
-## 🔄 Current Status — v0.5.4.6 (Development)
+## 🔄 Current Status — v0.5.4.7 (Development)
 
 ### GUI Redesign Progress (from [GUI Redesign ToR](docs/GUI_REDESIGN_TERMS_OF_REFERENCE.md))
 
@@ -25,7 +25,7 @@ This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen 
 | Phase 7 | Multilingual & Measurement Systems | ⬜ Not started |
 | Phase 8 | Polish & Testing | ⬜ Not started |
 
-### What's Working (v0.5.4.6)
+### What's Working (v0.5.4.7)
 
 **Navigation & Paths:**
 - ✅ Welcome screen with appliance selector (MEATER, Ninja Combi, Other Appliance, Previous Cooks)
@@ -116,7 +116,7 @@ See [GUI Redesign ToR § 15. Implementation Deviations](#) for a full list of de
 
 ```
 ├── custom_components/kitchen_cooking_engine/  # HACS Custom Integration
-│   ├── __init__.py            # Integration setup (v0.5.4.6)
+│   ├── __init__.py            # Integration setup (v0.5.4.7)
 │   ├── config_flow.py         # Configuration UI (multi-appliance)
 │   ├── const.py               # Constants (Panel v200)
 │   ├── cooking_data.py        # International cooking data (USDA)
@@ -133,7 +133,7 @@ See [GUI Redesign ToR § 15. Implementation Deviations](#) for a full list of de
 │   ├── appliances/            # Appliance implementations & feature catalog
 │   ├── generate_frontend_data.py # Generates JS from template + data
 │   ├── services.yaml          # Service definitions
-│   ├── manifest.json          # HACS manifest (v0.5.4.6)
+│   ├── manifest.json          # HACS manifest (v0.5.4.7)
 │   └── www/                   # Frontend panel
 │       ├── panel-class-template.js   # UI source (edit this)
 │       └── kitchen-cooking-panel.js  # Auto-generated (do not edit)
