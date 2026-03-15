@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 15 Mar 2026, 23:25 CET
+ * AUTO-GENERATED: 16 Mar 2026, 00:21 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 15 Mar 2026, 23:25 CET
+// Last generated: 16 Mar 2026, 00:21 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -11479,40 +11479,20 @@ const COOKING_METHODS = [
 class KitchenCookingPanel extends LitElement {
   static get properties() {
     return {
-      hass: { 
+      hass: {
         type: Object,
-        hasChanged(newVal, oldVal) {
-          // Force re-render when ANY cooking session entity state changes
-          // This is needed because HA updates hass.states but hass object reference stays the same
-          if (!oldVal || !newVal) return true;
-          
-          // Detect WebSocket reconnection: when the connection object changes,
-          // always re-render to avoid stale/blank panel after tab switch.
-          // (Inspired by calorie-tracker-panel & weather-big-wall-clock HACS repos)
-          if (oldVal.connection !== newVal.connection) return true;
-          
-          // Check if any cooking session entity changed
-          // We check ALL session entities because:
-          // 1. User might switch between appliances
-          // 2. Temperature updates need to trigger re-render regardless of which entity is selected
-          for (const key in newVal.states) {
-            if (key.includes('kitchen_cooking_engine') && key.includes('session')) {
-              const oldState = oldVal.states[key];
-              const newState = newVal.states[key];
-              
-              // State object reference changes when entity updates
-              if (oldState !== newState) {
-                return true;
-              }
-              
-              // Defensive: also check if attributes object changed
-              if (oldState && newState && oldState.attributes !== newState.attributes) {
-                return true;
-              }
-            }
-          }
-          return false;
-        }
+        // Always re-render when hass is set.
+        //
+        // HA reuses the SAME hass object reference and mutates it in place, so
+        // oldVal === newVal in every hasChanged call.  Any check based on object
+        // identity (connection, states[key]) therefore always returns false and
+        // the panel never re-renders after the tab returns from the background —
+        // which is the root cause of the persistent blank-screen bug.
+        //
+        // Returning true unconditionally means a render is queued on every hass
+        // assignment (batched by LitElement to at most one per microtask cycle).
+        // The performance impact is negligible for a cooking panel.
+        hasChanged() { return true; }
       },
       narrow: { type: Boolean },
       route: { type: Object },
@@ -11720,52 +11700,56 @@ class KitchenCookingPanel extends LitElement {
     // Load server-side recipe cook state for cross-device visibility
     this._loadServerActiveRecipeCooks();
     
-    // --- Blank-tab fix (Issue #67) ---
-    // When the user returns to this browser tab after minutes away, the browser
-    // may have frozen JS execution, closed the WebSocket, and freed GPU layers.
-    // We need to: (1) reload data, (2) force Shadow DOM repaint, (3) re-render.
-    // Approach is modeled on kgstorm/home-assistant-calorie-tracker and
-    // SoulRaven/ha-weather-big-wall-clock HACS panels.
+    // --- Blank-tab fix ---
+    // Root cause: HA reuses the SAME hass object reference (mutates in place), so
+    // hasChanged(hass, hass) always compared the same reference and returned false,
+    // meaning the panel never re-rendered when the tab came back from the background.
+    // hasChanged now always returns true (see properties getter), so every hass
+    // assignment from HA (including post-reconnect) triggers a render.
+    //
+    // This handler is a belt-and-suspenders fallback: it resets navigation state
+    // to 'welcome' and force-loads fresh data so the panel always shows something
+    // useful when the user returns to the tab.
     this._visibilityHandler = () => {
       if (document.visibilityState === 'visible') {
-        // Validate and restore navigation state
-        if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
-          this._currentPath = 'welcome';
-        }
+        // Always reset to welcome when returning to the tab.
+        // Stale state (e.g. _currentPath='active_cook' for a finished cook) would
+        // cause the render to attempt to show an active-cook screen for an entity
+        // that is now idle — potentially causing a blank or confusing display.
+        this._currentPath = 'welcome';
+        this._meaterCookRatingState = null; // clear stale rating overlay
         
-        // Reload critical data — the connection may have been re-established
-        // with fresh state objects, so our cached data (appliances etc.) can be stale.
+        // Reload fresh data from the backend.
         this._loadAppliances();
         this._loadAISettings();
         this._loadServerActiveRecipeCooks();
         
-        // Immediate re-render
+        // Immediate re-render (hasChanged=true guarantees HA's next hass update
+        // also triggers a render, but we need one right now too).
         this.requestUpdate();
         
-        // Force Shadow DOM repaint — browsers may skip compositor updates for
-        // hidden tabs, leaving ha-top-app-bar-fixed content area blank.
+        // Scroll to top so the welcome screen is not hidden by a stale scroll
+        // position left over from the active-cook view.
+        try {
+          window.scrollTo(0, 0);
+          this.scrollTop = 0;
+          if (this.parentElement) this.parentElement.scrollTop = 0;
+        } catch (_) { /* ignore – scroll API may not be available */ }
+        
+        // Additional re-render after the next paint, in case the browser discarded
+        // GPU compositor layers for the background tab (common on mobile).
         requestAnimationFrame(() => {
           this.requestUpdate();
-          // Reading offsetHeight forces a synchronous layout reflow, which
-          // makes the browser recalculate styles and recreate compositor layers
-          // that were discarded while the tab was hidden.  The void operator
-          // discards the return value while keeping the side-effect.
-          if (this.shadowRoot) {
-            void this.shadowRoot.host.offsetHeight;
-          }
+          if (this.shadowRoot) void this.shadowRoot.host.offsetHeight;
         });
-        
-        // Delayed re-renders for connection recovery
-        setTimeout(() => this.requestUpdate(), 500);
-        setTimeout(() => this.requestUpdate(), 2000);
       }
     };
     document.addEventListener('visibilitychange', this._visibilityHandler);
     
-    // pageshow fires even when restored from bfcache (unlike visibilitychange)
+    // pageshow fires when page is restored from bfcache (back/forward navigation).
     this._pageshowHandler = (event) => {
       if (event.persisted) {
-        // Page was restored from bfcache — force full repaint
+        this._currentPath = 'welcome';
         this._loadAppliances();
         this.requestUpdate();
         requestAnimationFrame(() => this.requestUpdate());
@@ -11773,19 +11757,17 @@ class KitchenCookingPanel extends LitElement {
     };
     window.addEventListener('pageshow', this._pageshowHandler);
     
-    // Also handle focus event for additional reliability
+    // window focus covers the case where visibilitychange didn't fire (e.g. some
+    // mobile browsers, or when switching OS windows rather than browser tabs).
     this._focusHandler = () => {
-      if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
-        this._currentPath = 'welcome';
-      }
+      this._currentPath = 'welcome';
       this.requestUpdate();
     };
     window.addEventListener('focus', this._focusHandler);
     
-    // Fix for blank screen when returning to a tab via HA sidebar navigation (Issue #66)
-    // IntersectionObserver detects when the panel element becomes visible in the viewport
-    // This handles the case where HA hides/shows the panel via CSS (display:none)
-    // which doesn't trigger visibilitychange or focus events
+    // IntersectionObserver handles the case where HA hides/shows the panel via
+    // CSS (display:none) rather than removing it from the DOM.  This does NOT
+    // fire visibilitychange or focus events.
     if (typeof IntersectionObserver !== 'undefined') {
       this._intersectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -11800,7 +11782,7 @@ class KitchenCookingPanel extends LitElement {
       this._intersectionObserver.observe(this);
     }
     
-    // Force re-render on reconnection
+    // Initial render on first connection.
     this.requestUpdate();
   }
 
@@ -13695,6 +13677,28 @@ class KitchenCookingPanel extends LitElement {
       return html`<div class="loading">Loading Home Assistant connection...</div>`;
     }
 
+    try {
+      return this._renderPanel();
+    } catch (err) {
+      // Error boundary: if anything in the render tree throws, show a recovery
+      // screen instead of leaving the panel blank.  This is most likely to happen
+      // on the first render after a long tab absence when internal state is stale.
+      console.error('KitchenCookingPanel render error — resetting to welcome screen', err);
+      // Reset to a clean state so the next render attempt succeeds.
+      this._currentPath = 'welcome';
+      this._meaterCookRatingState = null;
+      this._recipeCookState = null;
+      // Schedule a fresh render in the next microtask.
+      this.requestUpdate();
+      return html`
+        <div class="loading" style="padding:48px;text-align:center;">
+          <p>🔄 Reloading Kitchen Cooking Engine…</p>
+        </div>
+      `;
+    }
+  }
+
+  _renderPanel() {
     const entities = this._findCookingEntities();
     
     // Auto-select first entity if not selected or if selected entity no longer exists
@@ -20141,7 +20145,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "209";
+const PANEL_VERSION = "211";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

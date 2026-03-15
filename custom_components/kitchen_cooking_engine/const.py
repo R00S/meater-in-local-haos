@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 15 Mar 2026, 21:52 UTC
-Last Change: v0.5.5.0 - Bump version to 0.5.5.0
+Last Change: v0.5.5.1 - Fix blank panel on tab return: fix hasChanged, add error boundary, reset to welcome on visibility
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "209"
+PANEL_VERSION = "211"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
