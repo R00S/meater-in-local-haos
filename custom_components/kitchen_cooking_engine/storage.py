@@ -278,11 +278,15 @@ async def async_load_active_recipe_cook(hass: HomeAssistant) -> dict | list | No
                 if isinstance(data, list):
                     valid = [
                         c for c in data
-                        if isinstance(c, dict) and c.get("recipe") and c.get("startTime")
+                        if isinstance(c, dict)
+                        and isinstance(c.get("recipe"), dict)
+                        and c.get("startTime")
                     ]
                     return valid if valid else None
                 # Old single-cook format: dict with recipe and startTime
-                if isinstance(data, dict) and data.get("recipe") and data.get("startTime"):
+                if (isinstance(data, dict)
+                        and isinstance(data.get("recipe"), dict)
+                        and data.get("startTime")):
                     return data
                 return None
         except (json.JSONDecodeError, IOError) as exc:
