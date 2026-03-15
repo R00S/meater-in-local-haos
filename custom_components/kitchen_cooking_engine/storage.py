@@ -26,9 +26,7 @@ _LOGGER = logging.getLogger(__name__)
 COOK_HISTORY_FILE = "cook_history.json"
 USER_PREFERENCES_FILE = "user_preferences.json"
 AI_SETTINGS_FILE = "ai_settings.json"
-
-# Maximum history entries to keep
-MAX_HISTORY_ENTRIES = 100
+ACTIVE_RECIPE_COOK_FILE = "active_recipe_cook.json"
 
 # Default AI settings
 DEFAULT_AI_AGENT_ID = "extended_openai_conversation_2"
@@ -62,10 +60,6 @@ async def async_load_cook_history(hass: HomeAssistant) -> list[dict]:
 async def async_save_cook_history(hass: HomeAssistant, history: list[dict]) -> bool:
     """Save cook history to storage."""
     storage_path = _get_storage_path(hass, COOK_HISTORY_FILE)
-    
-    # Limit history size
-    if len(history) > MAX_HISTORY_ENTRIES:
-        history = history[-MAX_HISTORY_ENTRIES:]
     
     def save_history():
         try:
@@ -145,6 +139,27 @@ async def async_update_cook_notes(
     for cook in history:
         if cook.get("id") == cook_id:
             cook["notes"] = notes
+            return await async_save_cook_history(hass, history)
+    
+    _LOGGER.warning("Cook not found: %s", cook_id)
+    return False
+
+
+async def async_update_cook_entry(
+    hass: HomeAssistant,
+    cook_id: str,
+    updates: dict[str, Any],
+) -> bool:
+    """Update fields for a specific cook entry."""
+    # Only allow safe fields to be updated
+    allowed_fields = {"notes", "ease_rating", "result_rating"}
+    history = await async_load_cook_history(hass)
+    
+    for cook in history:
+        if cook.get("id") == cook_id:
+            for key, value in updates.items():
+                if key in allowed_fields:
+                    cook[key] = value
             return await async_save_cook_history(hass, history)
     
     _LOGGER.warning("Cook not found: %s", cook_id)
@@ -238,3 +253,78 @@ async def async_get_cut_preference(
     """Get user preference for a specific cut."""
     preferences = await async_load_user_preferences(hass)
     return preferences.get("cut_preferences", {}).get(str(cut_id))
+
+
+# --------------------------------------------------------------------------- #
+# Active recipe cook state (server-side, visible across devices)
+# --------------------------------------------------------------------------- #
+
+
+async def async_load_active_recipe_cook(hass: HomeAssistant) -> dict | list | None:
+    """Load the currently active recipe cook state(s) from storage.
+
+    Returns a list of active cook dicts (new array format), a single dict
+    (old single-cook format), or None if nothing is stored.
+    """
+    storage_path = _get_storage_path(hass, ACTIVE_RECIPE_COOK_FILE)
+
+    def _load():
+        if not storage_path.exists():
+            return None
+        try:
+            with open(storage_path, "r", encoding="utf-8") as fh:
+                data = json.load(fh)
+                # New array format: list of cook dicts
+                if isinstance(data, list):
+                    valid = [
+                        c for c in data
+                        if isinstance(c, dict)
+                        and isinstance(c.get("recipe"), dict)
+                        and c.get("startTime")
+                    ]
+                    return valid if valid else None
+                # Old single-cook format: dict with recipe and startTime
+                if (isinstance(data, dict)
+                        and isinstance(data.get("recipe"), dict)
+                        and data.get("startTime")):
+                    return data
+                return None
+        except (json.JSONDecodeError, IOError) as exc:
+            _LOGGER.warning("Failed to load active recipe cook: %s", exc)
+            return None
+
+    return await hass.async_add_executor_job(_load)
+
+
+async def async_save_active_recipe_cook(
+    hass: HomeAssistant, state: dict | list
+) -> bool:
+    """Persist the active recipe cook state so other devices can see it."""
+    storage_path = _get_storage_path(hass, ACTIVE_RECIPE_COOK_FILE)
+
+    def _save():
+        try:
+            with open(storage_path, "w", encoding="utf-8") as fh:
+                json.dump(state, fh, indent=2, default=str)
+            return True
+        except IOError as exc:
+            _LOGGER.error("Failed to save active recipe cook: %s", exc)
+            return False
+
+    return await hass.async_add_executor_job(_save)
+
+
+async def async_clear_active_recipe_cook(hass: HomeAssistant) -> bool:
+    """Remove the active recipe cook file (cook finished/stopped)."""
+    storage_path = _get_storage_path(hass, ACTIVE_RECIPE_COOK_FILE)
+
+    def _clear():
+        try:
+            if storage_path.exists():
+                storage_path.unlink()
+            return True
+        except IOError as exc:
+            _LOGGER.error("Failed to clear active recipe cook: %s", exc)
+            return False
+
+    return await hass.async_add_executor_job(_clear)

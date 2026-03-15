@@ -32,6 +32,11 @@ class KitchenCookingPanel extends LitElement {
           // This is needed because HA updates hass.states but hass object reference stays the same
           if (!oldVal || !newVal) return true;
           
+          // Detect WebSocket reconnection: when the connection object changes,
+          // always re-render to avoid stale/blank panel after tab switch.
+          // (Inspired by calorie-tracker-panel & weather-big-wall-clock HACS repos)
+          if (oldVal.connection !== newVal.connection) return true;
+          
           // Check if any cooking session entity changed
           // We check ALL session entities because:
           // 1. User might switch between appliances
@@ -121,6 +126,7 @@ class KitchenCookingPanel extends LitElement {
       // AI Recipe Builder - style page enhancements
       _aiComplexity: { type: Number },
       _aiPortions: { type: Number },
+      _aiMaxTime: { type: Number },
       _aiSelectedCuisines: { type: Array },
       _aiExpandedRegions: { type: Array },
       // AI generation cancellation
@@ -131,6 +137,8 @@ class KitchenCookingPanel extends LitElement {
       _showAISettingsModal: { type: Boolean },
       // Feature notes editing in appliance path
       _showFeatureNotesEditor: { type: Boolean },
+      // MEATER cook rating state (Issue #65)
+      _meaterCookRatingState: { type: Object },
     };
   }
 
@@ -210,15 +218,20 @@ class KitchenCookingPanel extends LitElement {
     this._showMeaterCooking = false;
     // Phase 3: Cook detail view state
     this._selectedCookForDetail = null;
-    // Phase 4: Recipe Cook Flow state
-    this._recipeCookState = null; // {recipe, startTime, currentStep, servingSize, easeRating, resultRating, notes, meaterSubprocess}
-    this._recipeCookTimer = null; // setInterval handle for elapsed time updates
+    // Phase 4: Recipe Cook Flow state — supports multiple parallel cooks
+    this._activeRecipeCooks = []; // Array of all running recipe cook states [{id, recipe, startTime, currentStep, ...}]
+    this._recipeCookState = null; // Pointer to the currently VIEWED cook (same object in _activeRecipeCooks), or null
+    this._recipeCookTimer = null; // setInterval handle for elapsed time updates (active only when viewing)
+    this._serverActiveRecipeCooks = null; // Array of recipe cooks from server (cross-device visibility)
+    // Restore active recipe cooks from sessionStorage (survives navigation away and back)
+    this._restoreActiveRecipeCooks();
     // Custom temperature profile
     this._customProfileName = '';
     this._customProfileTempC = 70;
     // AI Recipe Builder style enhancements
     this._aiComplexity = 3; // 1-5 scale, 3 = medium
     this._aiPortions = 4; // Default 4 portions
+    this._aiMaxTime = 0;  // 0 = no limit; otherwise max minutes (step 15, up to 240)
     this._aiSelectedCuisines = []; // Multi-select cuisine/region list
     this._aiExpandedRegions = []; // Which region dropdowns are open
     this._aiGeneratingAbort = null; // AbortController for cancelling generation
@@ -226,6 +239,7 @@ class KitchenCookingPanel extends LitElement {
     this._aiAgentId = ''; // AI agent entity ID for recipe generation
     this._showAISettingsModal = false; // Show AI settings modal
     this._showFeatureNotesEditor = false; // Show feature notes editor in appliance path
+    this._meaterCookRatingState = null; // MEATER cook rating state (Issue #65)
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -249,44 +263,111 @@ class KitchenCookingPanel extends LitElement {
     this._loadAppliances();
     this._loadAvailableFeatures();
     
-    // Fix for white screen when returning to browser tab
-    // Force re-render when tab becomes visible again
+    // Load server-side recipe cook state for cross-device visibility
+    this._loadServerActiveRecipeCooks();
+    
+    // --- Blank-tab fix (Issue #67) ---
+    // When the user returns to this browser tab after minutes away, the browser
+    // may have frozen JS execution, closed the WebSocket, and freed GPU layers.
+    // We need to: (1) reload data, (2) force Shadow DOM repaint, (3) re-render.
+    // Approach is modeled on kgstorm/home-assistant-calorie-tracker and
+    // SoulRaven/ha-weather-big-wall-clock HACS panels.
     this._visibilityHandler = () => {
       if (document.visibilityState === 'visible') {
-        // Validate and restore state
+        // Validate and restore navigation state
         if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
           this._currentPath = 'welcome';
         }
-        // Force multiple re-renders to ensure UI is properly updated
+        
+        // Reload critical data — the connection may have been re-established
+        // with fresh state objects, so our cached data (appliances etc.) can be stale.
+        this._loadAppliances();
+        this._loadAISettings();
+        this._loadServerActiveRecipeCooks();
+        
+        // Immediate re-render
         this.requestUpdate();
-        // Also trigger after a short delay for any async state
-        setTimeout(() => this.requestUpdate(), 100);
+        
+        // Force Shadow DOM repaint — browsers may skip compositor updates for
+        // hidden tabs, leaving ha-top-app-bar-fixed content area blank.
+        requestAnimationFrame(() => {
+          this.requestUpdate();
+          // Reading offsetHeight forces a synchronous layout reflow, which
+          // makes the browser recalculate styles and recreate compositor layers
+          // that were discarded while the tab was hidden.  The void operator
+          // discards the return value while keeping the side-effect.
+          if (this.shadowRoot) {
+            void this.shadowRoot.host.offsetHeight;
+          }
+        });
+        
+        // Delayed re-renders for connection recovery
         setTimeout(() => this.requestUpdate(), 500);
+        setTimeout(() => this.requestUpdate(), 2000);
       }
     };
     document.addEventListener('visibilitychange', this._visibilityHandler);
     
+    // pageshow fires even when restored from bfcache (unlike visibilitychange)
+    this._pageshowHandler = (event) => {
+      if (event.persisted) {
+        // Page was restored from bfcache — force full repaint
+        this._loadAppliances();
+        this.requestUpdate();
+        requestAnimationFrame(() => this.requestUpdate());
+      }
+    };
+    window.addEventListener('pageshow', this._pageshowHandler);
+    
     // Also handle focus event for additional reliability
     this._focusHandler = () => {
-      // Validate state on focus
       if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
         this._currentPath = 'welcome';
       }
       this.requestUpdate();
     };
     window.addEventListener('focus', this._focusHandler);
+    
+    // Fix for blank screen when returning to a tab via HA sidebar navigation (Issue #66)
+    // IntersectionObserver detects when the panel element becomes visible in the viewport
+    // This handles the case where HA hides/shows the panel via CSS (display:none)
+    // which doesn't trigger visibilitychange or focus events
+    if (typeof IntersectionObserver !== 'undefined') {
+      this._intersectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
+              this._currentPath = 'welcome';
+            }
+            this.requestUpdate();
+          }
+        });
+      });
+      this._intersectionObserver.observe(this);
+    }
+    
+    // Force re-render on reconnection
+    this.requestUpdate();
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    // Clean up visibility handler
+    // Clean up all visibility/event handlers
     if (this._visibilityHandler) {
       document.removeEventListener('visibilitychange', this._visibilityHandler);
       this._visibilityHandler = null;
     }
+    if (this._pageshowHandler) {
+      window.removeEventListener('pageshow', this._pageshowHandler);
+      this._pageshowHandler = null;
+    }
     if (this._focusHandler) {
       window.removeEventListener('focus', this._focusHandler);
       this._focusHandler = null;
+    }
+    if (this._intersectionObserver) {
+      this._intersectionObserver.disconnect();
+      this._intersectionObserver = null;
     }
   }
 
@@ -872,6 +953,19 @@ class KitchenCookingPanel extends LitElement {
     this._showAppliances = false;
     this._showRecipes = false;
     this._showAIRecipeBuilder = false;
+    // Refresh server data so the welcome screen shows up-to-date ongoing cooks
+    this._loadServerActiveRecipeCooks();
+    this.requestUpdate();
+  }
+
+  /**
+   * Navigate to view a specific active cook by entity ID.
+   * Used from the "Ongoing Cooks" badge on the welcome screen.
+   * @param {string} entityId - The cooking session entity to view
+   */
+  _navigateToActiveCook(entityId) {
+    this._selectedEntity = entityId;
+    this._currentPath = 'active_cook';
     this.requestUpdate();
   }
 
@@ -2272,30 +2366,96 @@ class KitchenCookingPanel extends LitElement {
    * Route content rendering based on current path
    */
   _renderContent(entities, isActive, state, activeCooks) {
-    // Phase 4: If in recipe cook flow, always show it (highest priority)
+    // MEATER cook rating screen (Issue #65) - highest priority
+    if (this._meaterCookRatingState) {
+      return this._renderMeaterCookRating();
+    }
+    
+    // Show recipe cook flow when actively viewing one (pointer is set)
     if (this._recipeCookState) {
       return this._renderRecipeCookFlow();
     }
 
-    // Find ACTUAL active entity (not relying on this._selectedEntity)
-    // This ensures graph and attributes always come from the right entity
-    const activeEntity = activeCooks.length > 0 ? activeCooks[0] : null;
-    
-    // If there's an active cook AND we're on welcome/default, show it
-    if (activeEntity && 
-        (this._currentPath === 'welcome' || !this._currentPath || this._currentPath === '')) {
-      const activeState = this.hass.states[activeEntity];
-      // Keep selected entity in sync with active entity for service calls
-      if (this._selectedEntity !== activeEntity) {
-        console.log('Syncing selected entity to active entity:', activeEntity);
-        this._selectedEntity = activeEntity;
+    // If user explicitly navigated to view a specific active cook, show it
+    if (this._currentPath === 'active_cook' && this._selectedEntity) {
+      const activeState = this.hass.states[this._selectedEntity];
+      if (activeState && activeState.state !== 'idle' && activeState.state !== 'complete' &&
+          activeState.state !== 'unavailable' && activeState.state !== 'unknown') {
+        this._waitingForCookStart = null; // Cook is active — clear waiting flag
+        this._waitingCookServiceData = null;
+        return this._renderActiveCook(activeState);
       }
-      return this._renderActiveCook(activeState);
-    }
-    
-    // If multiple active cooks but none selected, show selector on welcome screen
-    if (activeCooks.length > 1 && this._currentPath === 'welcome') {
-      return this._renderMultiCookSelector(activeCooks);
+      // Cook isn't active yet — show a waiting state while entity is idle.
+      // No hard timeout: the user may need a minute+ to prepare the probe.
+      // Only give up if entity goes unavailable or user navigates away.
+      if (this._waitingForCookStart) {
+        const entityState = this.hass.states[this._selectedEntity];
+        const entityValue = entityState?.state;
+        // If entity is idle/unknown (probe in charger / service hasn't taken effect yet), keep waiting
+        if (entityValue === 'idle' || entityValue === 'unknown' || !entityValue) {
+          // Build sorted entity list for the session selector (MEATER entities first)
+          let waitEntities = this._findCookingEntities();
+          waitEntities = waitEntities.sort((a, b) => {
+            const aM = a.toLowerCase().includes('meater');
+            const bM = b.toLowerCase().includes('meater');
+            if (aM && !bM) return -1;
+            if (!aM && bM) return 1;
+            return 0;
+          });
+
+          return html`
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 16px;text-align:center;">
+              <div class="spinner"></div>
+              <p style="margin-top:16px;font-size:1.1em;">🌡️ Starting cook…</p>
+              <p style="color:var(--secondary-text-color);">Waiting for the probe to begin monitoring.<br>Take the probe out of the charger to start.</p>
+
+              ${waitEntities.length > 1 ? html`
+                <ha-card style="margin-top:20px;width:100%;max-width:400px;">
+                  <div class="card-content">
+                    <h3>Select Session</h3>
+                    <select
+                      .value=${this._selectedEntity}
+                      @change=${(e) => {
+                        this._selectedEntity = e.target.value;
+                        // Re-fire start_cook on the newly selected entity
+                        if (this._waitingCookServiceData) {
+                          this._callService('start_cook', this._waitingCookServiceData)
+                            .catch(err => {
+                              console.error('Failed to start cook on selected entity:', err);
+                              this._waitingForCookStart = null;
+                              this._waitingCookServiceData = null;
+                              this._currentPath = 'welcome';
+                              this.requestUpdate();
+                              alert('Failed to start cook on this session. Please start a new cook manually.');
+                            });
+                        }
+                        this.requestUpdate();
+                      }}
+                    >
+                      ${waitEntities.map(eid => html`
+                        <option value="${eid}" ?selected=${this._selectedEntity === eid}>
+                          ${this.hass.states[eid]?.attributes?.friendly_name || eid}
+                        </option>
+                      `)}
+                    </select>
+                  </div>
+                </ha-card>
+              ` : ''}
+
+              <button class="secondary-btn" style="margin-top:24px;" @click=${() => {
+                this._waitingForCookStart = null;
+                this._waitingCookServiceData = null;
+                this._currentPath = 'welcome';
+                this.requestUpdate();
+              }}>← Back to Home</button>
+            </div>
+          `;
+        }
+      }
+      // Cook is no longer active and we're not waiting — fall back to welcome
+      this._waitingForCookStart = null;
+      this._waitingCookServiceData = null;
+      this._currentPath = 'welcome';
     }
 
     // Validate current path - ensure it has a valid value
@@ -2306,7 +2466,7 @@ class KitchenCookingPanel extends LitElement {
     // Otherwise, render based on current path
     switch (this._currentPath) {
       case 'welcome':
-        return this._renderWelcomeScreen();
+        return this._renderWelcomeScreen(activeCooks);
       
       case 'meater':
         return this._renderMeaterPath();
@@ -2351,7 +2511,7 @@ class KitchenCookingPanel extends LitElement {
         // Fallback to welcome screen for any unrecognized path
         console.warn('Unrecognized path:', this._currentPath, '- falling back to welcome');
         this._currentPath = 'welcome';
-        return this._renderWelcomeScreen();
+        return this._renderWelcomeScreen(activeCooks);
     }
   }
 
@@ -2715,8 +2875,16 @@ class KitchenCookingPanel extends LitElement {
 
     return html`
       <div class="status-banner ${cookState}">
-        <h2>${this._getStateIcon(cookState)} ${cookState.replace("_", " ")}</h2>
-        <p>${cut} • ${doneness}</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <button class="secondary-btn" style="padding:6px 12px;font-size:1.1em;flex-shrink:0;" @click=${() => {
+            this._currentPath = 'welcome';
+            this.requestUpdate();
+          }} title="Go to Home screen (cook keeps running)">🏠</button>
+          <div>
+            <h2 style="margin:0;">${this._getStateIcon(cookState)} ${cookState.replace("_", " ")}</h2>
+            <p style="margin:0;">${cut} • ${doneness}</p>
+          </div>
+        </div>
       </div>
       
       <ha-card>
@@ -3003,19 +3171,100 @@ class KitchenCookingPanel extends LitElement {
         </div>
       </ha-card>
 
-      ${this._renderWelcomeScreen()}
+      ${this._renderWelcomeScreen(activeCooks)}
     `;
   }
 
   /**
    * Render welcome screen with appliance selector
    */
-  _renderWelcomeScreen() {
+  _renderWelcomeScreen(activeCooks = []) {
+    // Build the ongoing cooks section:
+    //  - MEATER probe entities that are actively cooking
+    //  - Local recipe cooks (this device, in-memory array)
+    //  - Server recipe cooks from other devices (fetched from API)
+    const localRecipeCooks = this._activeRecipeCooks || [];
+    // Compute IDs of local cooks to avoid showing duplicates from server
+    const localCookIds = new Set(localRecipeCooks.map(c => c.id));
+    const remoteRecipeCooks = (this._serverActiveRecipeCooks || []).filter(c => !localCookIds.has(c.id));
+    const totalOngoingCooks = activeCooks.length + localRecipeCooks.length + remoteRecipeCooks.length;
+    const hasOngoingCooks = totalOngoingCooks > 0;
+
     return html`
       <div class="welcome-header">
         <h1>🍳 Kitchen Cooking Engine</h1>
         <p class="welcome-subtitle">Select Your Appliance</p>
       </div>
+
+      ${hasOngoingCooks ? html`
+        <ha-card class="ongoing-cooks-card">
+          <div class="card-content">
+            <h3 class="ongoing-cooks-title">🔥 Ongoing Cooks (${totalOngoingCooks})</h3>
+
+            ${activeCooks.map(entityId => {
+              const st = this.hass.states[entityId];
+              const protein = st?.attributes?.protein || '';
+              const cut = st?.attributes?.cut_display || st?.attributes?.cut || '';
+              const currentTemp = st?.attributes?.current_temp_c;
+              const targetTemp = st?.attributes?.target_temp_c;
+              const cookState = st?.state || '';
+              const progress = st?.attributes?.progress || 0;
+              const label = [protein, cut].filter(Boolean).join(' — ') || 'MEATER Cook';
+
+              return html`
+                <ha-card class="ongoing-cook-item clickable" @click=${() => this._navigateToActiveCook(entityId)}>
+                  <div class="card-content" style="display:flex;align-items:center;gap:12px;padding:12px 16px;">
+                    <div style="font-size:28px;flex-shrink:0;">🌡️</div>
+                    <div style="flex:1;min-width:0;">
+                      <div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${label}</div>
+                      <div style="font-size:0.85em;color:var(--secondary-text-color);">
+                        ${currentTemp != null && targetTemp ? html`${currentTemp}°C / ${targetTemp}°C` : cookState}
+                      </div>
+                    </div>
+                    ${progress > 0 ? html`
+                      <div style="width:48px;text-align:center;font-weight:600;color:var(--primary-color);">${Math.round(progress)}%</div>
+                    ` : ''}
+                    <div style="font-size:1.2em;">→</div>
+                  </div>
+                </ha-card>
+              `;
+            })}
+
+            ${localRecipeCooks.map(cook => html`
+              <ha-card class="ongoing-cook-item clickable" @click=${() => this._viewRecipeCook(cook.id)}>
+                <div class="card-content" style="display:flex;align-items:center;gap:12px;padding:12px 16px;">
+                  <div style="font-size:28px;flex-shrink:0;">📖</div>
+                  <div style="flex:1;min-width:0;">
+                    <div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${cook.recipe?.name || 'Recipe Cook'}</div>
+                    <div style="font-size:0.85em;color:var(--secondary-text-color);">
+                      ${cook.currentStep < 0 ? 'Overview' : `Step ${cook.currentStep + 1} of ${cook.recipe?.instructions?.length || '?'}`}
+                      · ${this._formatElapsedTime(Math.floor((Date.now() - cook.startTime) / 1000))}
+                    </div>
+                  </div>
+                  <div style="font-size:1.2em;">→</div>
+                </div>
+              </ha-card>
+            `)}
+
+            ${remoteRecipeCooks.map(cook => html`
+              <ha-card class="ongoing-cook-item clickable" @click=${() => this._adoptServerRecipeCook(cook)}>
+                <div class="card-content" style="display:flex;align-items:center;gap:12px;padding:12px 16px;">
+                  <div style="font-size:28px;flex-shrink:0;">📖</div>
+                  <div style="flex:1;min-width:0;">
+                    <div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${cook.recipe?.name || 'Recipe Cook'}</div>
+                    <div style="font-size:0.85em;color:var(--secondary-text-color);">
+                      Started on another device
+                      · ${this._formatElapsedTime(Math.floor((Date.now() - cook.startTime) / 1000))}
+                    </div>
+                  </div>
+                  <div style="font-size:1.2em;">→</div>
+                </div>
+              </ha-card>
+            `)}
+
+          </div>
+        </ha-card>
+      ` : ''}
 
       ${this._isLoadingAppliances ? html`
         <div class="loading">Loading appliances...</div>
@@ -4138,6 +4387,18 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
+   * Format a max-time value (minutes) for display.
+   * 0 → 'No limit'; multiples of 60 → 'Xh'; remainder → 'Xh Ymin' or 'Ymin'.
+   */
+  _formatMaxTime(minutes) {
+    if (!minutes || minutes <= 0) return 'No limit';
+    const h = Math.floor(minutes / 60);
+    const m = minutes % 60;
+    if (h === 0) return `${m} min`;
+    return m ? `${h}h ${m}min` : `${h}h`;
+  }
+
+  /**
    * Phase 6: Render cooking style selection
    */
   _renderAICookingStyleSelection() {
@@ -4175,11 +4436,29 @@ class KitchenCookingPanel extends LitElement {
                   // Set default complexity based on style
                   if (['quick_and_easy', 'one_pot', 'family_friendly'].includes(style.id)) {
                     this._aiComplexity = 2;
-                  } else if (['gourmet'].includes(style.id)) {
+                  } else if (['gourmet', 'baking'].includes(style.id)) {
                     this._aiComplexity = 4;
                   } else {
                     this._aiComplexity = 3;
                   }
+                  // Set default max time based on style (0 = no limit)
+                  const defaultTimes = {
+                    quick_and_easy:  30,
+                    comfort_food:    60,
+                    family_friendly: 45,
+                    healthy:         30,
+                    gourmet:          0,  // no limit — elaborate dishes can take as long as needed
+                    meal_prep:       120,
+                    one_pot:          60,
+                    slow_cook:         0,  // no limit — slow cookers run for hours
+                    barbeque:          0,  // no limit — BBQ sessions vary widely
+                    baking:           90,
+                    low_carb:         30,
+                    high_protein:     45,
+                    vegetarian:       45,
+                    vegan:            45,
+                  };
+                  this._aiMaxTime = defaultTimes[style.id] !== undefined ? defaultTimes[style.id] : 0;
                   this.requestUpdate();
                 }}
               >
@@ -4223,6 +4502,20 @@ class KitchenCookingPanel extends LitElement {
             />
             <div style="display: flex; justify-content: space-between; font-size: 0.8em; color: var(--secondary-text-color);">
               <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 8px;">
+              ⏱️ Max time: ${this._formatMaxTime(this._aiMaxTime)}
+            </label>
+            <input type="range" min="0" max="240" step="15"
+              .value=${String(this._aiMaxTime)}
+              @input=${(e) => { this._aiMaxTime = parseInt(e.target.value); this.requestUpdate(); }}
+              style="width: 100%;"
+            />
+            <div style="display: flex; justify-content: space-between; font-size: 0.8em; color: var(--secondary-text-color);">
+              <span>No limit</span><span>1h</span><span>2h</span><span>3h</span><span>4h</span>
             </div>
           </div>
         </div>
@@ -4563,16 +4856,28 @@ class KitchenCookingPanel extends LitElement {
         cut_id: cook.cut_id,
         doneness: cook.doneness,
         cooking_method: cook.cooking_method,
-        data_source: this._dataSource,
+        data_source: cook.data_source || this._dataSource,
       };
       if (cook.custom_target_temp_c) {
         serviceData.custom_target_temp_c = cook.custom_target_temp_c;
       }
-      this._callService('start_cook', serviceData);
+      this._callService('start_cook', serviceData)
+        .catch(err => {
+          console.error('Failed to restart cook:', err);
+          this._waitingForCookStart = null;
+          this._waitingCookServiceData = null;
+          this._currentPath = 'welcome';
+          this.requestUpdate();
+          alert('Failed to restart cook. The cook data may be incompatible. Please start a new cook manually.');
+        });
 
-      // Navigate to welcome so the active cook is shown
+      // Navigate to the active cook view so the user sees their cook.
+      // The service call is async, so the entity may still be 'idle' briefly.
+      // _renderContent's active_cook handler shows a "Starting…" state while waiting.
       this._selectedCookForDetail = null;
-      this._currentPath = 'welcome';
+      this._currentPath = 'active_cook';
+      this._waitingForCookStart = Date.now(); // Flag for brief loading state
+      this._waitingCookServiceData = serviceData; // Store so dropdown can re-fire on entity switch
       this.requestUpdate();
       return;
     }
@@ -4590,16 +4895,12 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Start a recipe cook session
+   * Start a recipe cook session. Supports multiple parallel cooks.
    */
   _startRecipeCook(recipe, servingSize = null) {
-    // Clear any existing timer
-    if (this._recipeCookTimer) {
-      clearInterval(this._recipeCookTimer);
-    }
-
-    // Initialize cook state
-    this._recipeCookState = {
+    // Create cook state with unique ID
+    const cookState = {
+      id: 'cook_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
       recipe: recipe,
       startTime: Date.now(),
       currentStep: -1, // -1 = overview page, 0+ = step index
@@ -4610,29 +4911,156 @@ class KitchenCookingPanel extends LitElement {
       meaterSubprocess: null // Will store subprocess info if MEATER is started
     };
 
-    // Start timer that updates every second
+    // Add to active cooks array
+    this._activeRecipeCooks.push(cookState);
+
+    // Set as the currently viewed cook (same object reference)
+    this._recipeCookState = cookState;
+
+    // Start timer for elapsed display
+    if (this._recipeCookTimer) clearInterval(this._recipeCookTimer);
     this._recipeCookTimer = setInterval(() => {
       this.requestUpdate();
     }, 1000);
+
+    // Persist to sessionStorage + server (cross-device visibility)
+    this._persistActiveRecipeCooks();
 
     this.requestUpdate();
   }
 
   /**
-   * Stop the recipe cook and clean up
+   * Stop the currently viewed recipe cook and clean up.
+   * Removes it from the active cooks array.
    */
   _stopRecipeCook() {
-    // Clear timer
+    // Remove from array
+    if (this._recipeCookState) {
+      const cookId = this._recipeCookState.id;
+      this._activeRecipeCooks = this._activeRecipeCooks.filter(c => c.id !== cookId);
+    }
+
+    // Clear pointer and timer
+    this._recipeCookState = null;
     if (this._recipeCookTimer) {
       clearInterval(this._recipeCookTimer);
       this._recipeCookTimer = null;
     }
 
-    // Clear state
-    this._recipeCookState = null;
+    // Persist the updated array
+    this._persistActiveRecipeCooks();
     
     // Navigate back to welcome
     this._navigateToWelcome();
+  }
+
+  /**
+   * Adopt a specific recipe cook from the server (started on another device).
+   * Adds it to the local array and shows it.
+   */
+  _adoptServerRecipeCook(cook) {
+    if (!cook || !cook.recipe || !cook.startTime) return;
+
+    // Ensure it has an ID
+    const adopted = { ...cook, id: cook.id || ('cook_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6)) };
+
+    // Add to local array
+    this._activeRecipeCooks.push(adopted);
+
+    // View it
+    this._recipeCookState = adopted;
+    if (this._recipeCookTimer) clearInterval(this._recipeCookTimer);
+    this._recipeCookTimer = setInterval(() => this.requestUpdate(), 1000);
+
+    // Persist
+    this._persistActiveRecipeCooks();
+    this.requestUpdate();
+  }
+
+  /**
+   * Minimize the current recipe cook: go to welcome while cook keeps running.
+   * All active cooks remain in the array and show in the badge.
+   */
+  _minimizeRecipeCook() {
+    this._recipeCookState = null;
+    if (this._recipeCookTimer) {
+      clearInterval(this._recipeCookTimer);
+      this._recipeCookTimer = null;
+    }
+    this._currentPath = 'welcome';
+    this.requestUpdate();
+  }
+
+  /**
+   * View (maximize) a specific recipe cook from the active cooks array.
+   */
+  _viewRecipeCook(cookId) {
+    const cook = this._activeRecipeCooks.find(c => c.id === cookId);
+    if (!cook) return;
+
+    this._recipeCookState = cook; // Same object reference — mutations update the array
+    if (this._recipeCookTimer) clearInterval(this._recipeCookTimer);
+    this._recipeCookTimer = setInterval(() => this.requestUpdate(), 1000);
+    this.requestUpdate();
+  }
+
+  /**
+   * Persist ALL active recipe cooks to sessionStorage + server.
+   * sessionStorage survives HA sidebar navigation (component re-creation).
+   * Server sync enables cross-device visibility.
+   */
+  _persistActiveRecipeCooks() {
+    try {
+      const json = JSON.stringify(this._activeRecipeCooks);
+      sessionStorage.setItem('kce_active_recipe_cooks', json);
+      // Also save to server for cross-device visibility (fire-and-forget)
+      if (this.hass) {
+        this.hass.callApi('POST', 'kitchen_cooking_engine/active_recipe_cook',
+          { cooks: this._activeRecipeCooks }
+        ).catch(e => {
+          console.warn('KCE: failed to sync recipe cooks to server:', e);
+        });
+      }
+    } catch (e) {
+      // sessionStorage might be unavailable (private browsing, quota exceeded)
+    }
+  }
+
+  /**
+   * Restore active recipe cooks from sessionStorage.
+   * Called in the constructor to recover state after component re-creation.
+   * Cooks start minimized — the user sees them in the badge on the welcome screen.
+   */
+  _restoreActiveRecipeCooks() {
+    try {
+      const saved = sessionStorage.getItem('kce_active_recipe_cooks');
+      if (saved) {
+        const arr = JSON.parse(saved);
+        if (Array.isArray(arr)) {
+          this._activeRecipeCooks = arr.filter(c => c && c.recipe && c.startTime);
+        }
+      }
+    } catch (e) {
+      // Corrupted or unavailable - ignore
+    }
+    // Don't set _recipeCookState — start minimized, show badges on welcome screen
+  }
+
+  /**
+   * Load active recipe cooks from server (for cross-device visibility).
+   * Called during connectedCallback / visibility change.
+   */
+  async _loadServerActiveRecipeCooks() {
+    if (!this.hass) return;
+    try {
+      const resp = await this.hass.callApi('GET', 'kitchen_cooking_engine/active_recipe_cook');
+      const cooks = resp?.cooks || (resp?.state ? [resp.state] : null);
+      this._serverActiveRecipeCooks = Array.isArray(cooks) ? cooks.filter(c => c && c.recipe && c.startTime) : null;
+      this.requestUpdate();
+    } catch (e) {
+      // Server might not have the endpoint yet (old version)
+      this._serverActiveRecipeCooks = null;
+    }
   }
 
   /**
@@ -4650,6 +5078,7 @@ class KitchenCookingPanel extends LitElement {
       if (this._recipeCookState.currentStep < 0) {
         this._recipeCookState.currentStep = 0; // finish page since steps.length is 0
       }
+      this._persistActiveRecipeCooks();
       this.requestUpdate();
       return;
     }
@@ -4663,6 +5092,7 @@ class KitchenCookingPanel extends LitElement {
       this._recipeCookState.currentStep++;
     }
     
+    this._persistActiveRecipeCooks();
     this.requestUpdate();
   }
 
@@ -4681,8 +5111,10 @@ class KitchenCookingPanel extends LitElement {
     } else {
       // If at overview, exit cook flow
       this._stopRecipeCook();
+      return; // _stopRecipeCook already clears persisted state
     }
     
+    this._persistActiveRecipeCooks();
     this.requestUpdate();
   }
 
@@ -4807,6 +5239,11 @@ class KitchenCookingPanel extends LitElement {
         complexity: this._aiComplexity || 3,
       };
 
+      // Add max time if set (0 = no limit)
+      if (this._aiMaxTime && this._aiMaxTime > 0) {
+        requestBody.max_time_minutes = this._aiMaxTime;
+      }
+
       // Add cuisines if selected
       if (this._aiSelectedCuisines && this._aiSelectedCuisines.length > 0) {
         requestBody.cuisines = this._aiSelectedCuisines;
@@ -4883,7 +5320,10 @@ class KitchenCookingPanel extends LitElement {
           cuisine_type: fullRecipe.cuisine_type,
           required_appliances: fullRecipe.required_appliances || []
         },
-        appliance_ids: this._selectedAppliance ? [this._selectedAppliance.id] : []
+        appliance_ids: this._selectedAppliance ? [this._selectedAppliance.id] : [],
+        cooking_style: this._selectedCookingStyle || 'quick_and_easy',
+        complexity: this._aiComplexity || 3,
+        user_ingredients: this._selectedIngredients || []
       });
 
       if (cancelled) return; // User cancelled while waiting
@@ -4925,44 +5365,16 @@ class KitchenCookingPanel extends LitElement {
     this._messageDialogOnCancel = null;
     this._showMessageDialog = false;
 
-    // Start recipe cook flow (Phase 4)
-    this._recipeCookState = {
-      recipe: fullRecipe,
-      startTime: Date.now(),
-      currentStep: -1, // Start with overview
-      servingSize: fullRecipe.servings || 4,
-      easeRating: 0,
-      resultRating: 0,
-      notes: '',
-      meaterSubprocess: null
-    };
-
-    // Start the timer
-    this._startRecipeCookTimer();
-    
-    this.requestUpdate();
+    // Start recipe cook flow via central method (supports parallel cooks)
+    this._startRecipeCook(fullRecipe, fullRecipe.servings || 4);
   }
 
   /**
    * Phase 5: Select a Ninja built-in recipe and start cooking
    */
   _selectNinjaRecipe(recipe) {
-    // Start recipe cook flow (Phase 4)
-    this._recipeCookState = {
-      recipe: recipe,
-      startTime: Date.now(),
-      currentStep: -1, // Start with overview
-      servingSize: recipe.servings || recipe.serving_size || 4,
-      easeRating: 0,
-      resultRating: 0,
-      notes: '',
-      meaterSubprocess: null
-    };
-
-    // Start the timer
-    this._startRecipeCookTimer();
-    
-    this.requestUpdate();
+    // Start recipe cook flow via central method (supports parallel cooks)
+    this._startRecipeCook(recipe, recipe.servings || recipe.serving_size || 4);
   }
 
   /**
@@ -5002,11 +5414,15 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <!-- Recipe Cook Header -->
       <div class="recipe-cook-header">
-        <div class="recipe-cook-title">
-          <h2>${recipe.name}</h2>
-          <p class="recipe-cook-serving">
-            Serves: ${state.servingSize} | Elapsed: ${this._formatElapsedTime(elapsedSeconds)}
-          </p>
+        <div class="recipe-cook-title" style="display:flex;align-items:center;gap:12px;">
+          <button class="secondary-btn" style="padding:6px 12px;font-size:1.1em;" @click=${() => this._minimizeRecipeCook()}
+            title="Go to Home screen (cook keeps running)">🏠</button>
+          <div>
+            <h2>${recipe.name}</h2>
+            <p class="recipe-cook-serving">
+              Serves: ${state.servingSize} | Elapsed: ${this._formatElapsedTime(elapsedSeconds)}
+            </p>
+          </div>
         </div>
       </div>
 
@@ -5560,19 +5976,194 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _complete() {
+    // Show rating screen before completing (Issue #65)
+    const state = this._getState();
+    const attrs = state?.attributes || {};
+    this._meaterCookRatingState = {
+      entityId: this._selectedEntity,
+      cut: attrs.cut_display || attrs.cut || 'Unknown',
+      protein: attrs.protein || '',
+      doneness: attrs.doneness || '',
+      notes: attrs.notes || this._currentNotes || '',
+      easeRating: 0,
+      resultRating: 0,
+    };
+    this.requestUpdate();
+  }
+
+  /**
+   * Render MEATER cook rating screen (Issue #65)
+   */
+  _renderMeaterCookRating() {
+    const state = this._meaterCookRatingState;
+    if (!state) return html``;
+
+    return html`
+      <ha-card>
+        <div class="card-content">
+          <div class="recipe-cook-finish">
+            <h3>🎉 Cook Complete!</h3>
+            <p>${state.cut} ${state.doneness ? '• ' + state.doneness.replace('_', ' ') : ''}</p>
+            <p>How did it go? Please rate your experience:</p>
+
+            <div class="recipe-cook-rating">
+              <h4>😊 Ease of Cooking</h4>
+              <p class="rating-description">How easy was this cook?</p>
+              <div class="star-selector">
+                ${[1, 2, 3, 4, 5].map(rating => html`
+                  <button 
+                    class="star-btn ${state.easeRating >= rating ? 'active' : ''}"
+                    @click=${() => {
+                      this._meaterCookRatingState = { ...this._meaterCookRatingState, easeRating: rating };
+                    }}
+                  >
+                    ${state.easeRating >= rating ? '⭐' : '☆'}
+                  </button>
+                `)}
+              </div>
+            </div>
+
+            <div class="recipe-cook-rating">
+              <h4>😋 Result Quality</h4>
+              <p class="rating-description">How did the final result turn out?</p>
+              <div class="star-selector">
+                ${[1, 2, 3, 4, 5].map(rating => html`
+                  <button 
+                    class="star-btn ${state.resultRating >= rating ? 'active' : ''}"
+                    @click=${() => {
+                      this._meaterCookRatingState = { ...this._meaterCookRatingState, resultRating: rating };
+                    }}
+                  >
+                    ${state.resultRating >= rating ? '⭐' : '☆'}
+                  </button>
+                `)}
+              </div>
+            </div>
+
+            <div class="recipe-cook-notes">
+              <h4>📝 Notes (Optional)</h4>
+              <textarea
+                placeholder="Any notes, modifications, or thoughts about this cook..."
+                .value=${state.notes || ''}
+                @input=${(e) => {
+                  this._meaterCookRatingState = { ...this._meaterCookRatingState, notes: e.target.value };
+                }}
+                rows="4"
+              ></textarea>
+            </div>
+
+            ${!state.easeRating || !state.resultRating ? html`
+              <p class="rating-required">⚠️ Please provide both ratings to save this cook</p>
+            ` : ''}
+
+            <div class="action-buttons" style="margin-top: 16px;">
+              <ha-button 
+                unelevated 
+                ?disabled=${!state.easeRating || !state.resultRating}
+                @click=${() => this._saveMeaterCookRating()}
+              >
+                💾 Save & Complete
+              </ha-button>
+              <ha-button outlined @click=${() => this._skipMeaterCookRating()}>
+                ⏭️ Skip Rating
+              </ha-button>
+            </div>
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /**
+   * Save MEATER cook rating and complete session (Issue #65)
+   */
+  async _saveMeaterCookRating() {
+    const state = this._meaterCookRatingState;
+    if (!state) return;
+
+    try {
+      // Ensure selected entity is correct for service calls
+      if (state.entityId) {
+        this._selectedEntity = state.entityId;
+      }
+      
+      // Set notes if user provided any
+      if (state.notes) {
+        await this._callService('set_notes', { notes: state.notes });
+      }
+
+      // Complete the session (saves cook to history)
+      await this._callService('complete_session');
+
+      // Update the saved cook with ratings using retry logic
+      // The cook save is async so we retry a few times
+      const updateRatings = async (retries = 3, delay = 1000) => {
+        for (let i = 0; i < retries; i++) {
+          await new Promise(resolve => setTimeout(resolve, delay));
+          try {
+            const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/history');
+            if (response && response.history && response.history.length > 0) {
+              const lastCook = response.history[0];
+              if (lastCook.id) {
+                await this.hass.callApi('PATCH', `kitchen_cooking_engine/history/${lastCook.id}`, {
+                  ease_rating: state.easeRating,
+                  result_rating: state.resultRating,
+                  notes: state.notes || lastCook.notes || '',
+                });
+                return; // Success
+              }
+            }
+          } catch (e) {
+            if (i === retries - 1) console.error('Error updating cook ratings:', e);
+          }
+          delay *= 2; // Exponential backoff
+        }
+      };
+      updateRatings();
+
+      this._meaterCookRatingState = null;
+      this.requestUpdate();
+    } catch (error) {
+      console.error('Error completing cook with rating:', error);
+      this._showMessage('❌ Error', `Error completing cook: ${error.message}`, true);
+    }
+  }
+
+  /**
+   * Skip rating and just complete the session (Issue #65)
+   */
+  async _skipMeaterCookRating() {
+    const state = this._meaterCookRatingState;
+    
+    // Ensure selected entity is correct for service calls
+    if (state && state.entityId) {
+      this._selectedEntity = state.entityId;
+    }
+    
+    // Set notes if any were provided (await to ensure notes are saved before completing)
+    if (state && state.notes) {
+      await this._callService('set_notes', { notes: state.notes });
+    }
+    
     this._callService('complete_session');
+    this._meaterCookRatingState = null;
+    this.requestUpdate();
   }
 
   static get styles() {
     return css`
       :host {
         display: block;
+        width: 100%;
+        overflow-x: hidden;
       }
 
       .content {
         padding: 16px;
         max-width: 800px;
+        width: 100%;
         margin: 0 auto;
+        box-sizing: border-box;
       }
 
       .loading {
@@ -5583,6 +6174,9 @@ class KitchenCookingPanel extends LitElement {
 
       ha-card {
         margin-bottom: 16px;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
       }
 
       .card-content {
@@ -7241,6 +7835,8 @@ class KitchenCookingPanel extends LitElement {
         font-size: 32px;
         margin: 0 0 8px 0;
         color: var(--primary-text-color);
+        overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       .welcome-subtitle {
@@ -7252,7 +7848,7 @@ class KitchenCookingPanel extends LitElement {
       /* Appliance Grid */
       .appliance-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
         gap: 16px;
         margin-bottom: 24px;
       }
@@ -7281,11 +7877,15 @@ class KitchenCookingPanel extends LitElement {
         font-weight: 600;
         margin-bottom: 4px;
         color: var(--primary-text-color);
+        overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       .appliance-model {
         font-size: 14px;
         color: var(--secondary-text-color);
+        overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       /* Previous Cooks Card */
@@ -7298,6 +7898,35 @@ class KitchenCookingPanel extends LitElement {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
 
+      /* Ongoing Cooks badge on welcome screen */
+      .ongoing-cooks-card {
+        margin-bottom: 16px;
+        border: 2px solid var(--primary-color);
+        border-radius: 12px;
+        animation: ongoing-pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes ongoing-pulse {
+        0%, 100% { border-color: var(--primary-color); }
+        50% { border-color: var(--warning-color, #ff9800); }
+      }
+
+      .ongoing-cooks-title {
+        margin: 0 0 12px 0;
+        font-size: 1.1em;
+        color: var(--primary-text-color);
+      }
+
+      .ongoing-cook-item {
+        margin-bottom: 8px;
+        transition: transform 0.15s, box-shadow 0.15s;
+      }
+
+      .ongoing-cook-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      }
+
       .previous-cooks-content {
         display: flex;
         align-items: center;
@@ -7308,6 +7937,12 @@ class KitchenCookingPanel extends LitElement {
       .previous-cooks-icon {
         font-size: 48px;
         flex-shrink: 0;
+      }
+
+      .previous-cooks-text {
+        min-width: 0;
+        overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       .previous-cooks-text h3 {

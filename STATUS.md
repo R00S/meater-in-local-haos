@@ -1,8 +1,8 @@
 # Project Status - Kitchen Cooking Engine
 
-**Last Updated:** 26 February 2026  
-**Current Version:** v0.5.2.8  
-**Status:** Semi-stable development release (GUI Redesign Phases 1–6 + v0.5.2.x appliance features complete)
+**Last Updated:** 15 March 2026  
+**Current Version:** v0.5.4.9  
+**Status:** Development release (GUI Redesign Phases 1–6 complete + v0.5.2.x appliance features + v0.5.4.x stability & UX)
 
 ## Project Direction
 
@@ -10,7 +10,7 @@ This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen 
 
 ---
 
-## 🔄 Current Status — v0.5.2.8 (Semi-Stable Development)
+## 🔄 Current Status — v0.5.4.9 (Development)
 
 ### GUI Redesign Progress (from [GUI Redesign ToR](docs/GUI_REDESIGN_TERMS_OF_REFERENCE.md))
 
@@ -25,15 +25,32 @@ This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen 
 | Phase 7 | Multilingual & Measurement Systems | ⬜ Not started |
 | Phase 8 | Polish & Testing | ⬜ Not started |
 
-### What's Working (v0.5.2.8)
+### What's Working (v0.5.4.9)
 
 **Navigation & Paths:**
 - ✅ Welcome screen with appliance selector (MEATER, Ninja Combi, Other Appliance, Previous Cooks)
+- ✅ Ongoing cooks badge on welcome screen showing active MEATER + recipe cooks with live status
 - ✅ Path routing with back navigation throughout
+- ✅ 🏠 Home button in all active cook views to return to welcome screen
 - ✅ MEATER Path: Start cooking, recent MEATER cooks
 - ✅ Ninja Combi Path: Recipe builder, built-in recipes, AI recipes, recent cooks
 - ✅ AI Recipe Builder Path: Full 3-step flow (ingredients → style → generate)
 - ✅ Previous Cooks Path: Browse, view details, restart any cook type
+
+**Stability & UX (v0.5.4.x):**
+- ✅ Welcome screen auto-refresh: exited cooks disappear immediately without manual refresh
+- ✅ Blank tab fix: detects WebSocket reconnect + forces Shadow DOM repaint on return
+- ✅ Recipe cook persistence: sessionStorage survives HA sidebar navigation
+- ✅ Parallel recipe cooks: multiple recipe cooks running simultaneously (array-based state)
+- ✅ Cross-device cook visibility: recipe cooks visible on all devices via server sync
+- ✅ MEATER restart improvements: session dropdown on waiting screen, unknown entity handling
+- ✅ MEATER cook rating screen: rate ease & result (1–5 stars) after cook completion
+- ✅ MEATER cook restart with Swedish data source: cooks with Swedish cuts now restart correctly
+- ✅ Mobile responsive: welcome screen cards fit properly in portrait and landscape on companion app
+
+**AI Enhancements (v0.5.4.x):**
+- ✅ AI ingredient ceilings: style-dependent limits (50%–200% extra) scaled by complexity
+- ✅ Honest cooking time: AI includes all prep time (soaking, brining, marinating) in estimates
 
 **Multi-Appliance Management (v0.5.2.x):**
 - ✅ Configure multiple kitchen appliances (Ninja Combi, MultiFry, Oven, Stovetop, Microwave, Custom)
@@ -101,9 +118,9 @@ See [GUI Redesign ToR § 15. Implementation Deviations](#) for a full list of de
 
 ```
 ├── custom_components/kitchen_cooking_engine/  # HACS Custom Integration
-│   ├── __init__.py            # Integration setup (v0.5.2.8)
+│   ├── __init__.py            # Integration setup (v0.5.4.9)
 │   ├── config_flow.py         # Configuration UI (multi-appliance)
-│   ├── const.py               # Constants (Panel v185)
+│   ├── const.py               # Constants (Panel v204)
 │   ├── cooking_data.py        # International cooking data (USDA)
 │   ├── swedish_cooking_data.py # Swedish cooking data (Livsmedelsverket)
 │   ├── ninja_combi_data.py    # Ninja Combi recipes (with metric conversions)
@@ -118,7 +135,7 @@ See [GUI Redesign ToR § 15. Implementation Deviations](#) for a full list of de
 │   ├── appliances/            # Appliance implementations & feature catalog
 │   ├── generate_frontend_data.py # Generates JS from template + data
 │   ├── services.yaml          # Service definitions
-│   ├── manifest.json          # HACS manifest (v0.5.2.8)
+│   ├── manifest.json          # HACS manifest (v0.5.4.9)
 │   └── www/                   # Frontend panel
 │       ├── panel-class-template.js   # UI source (edit this)
 │       └── kitchen-cooking-panel.js  # Auto-generated (do not edit)

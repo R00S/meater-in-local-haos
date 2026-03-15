@@ -5,7 +5,7 @@
 [![Alpha](https://img.shields.io/badge/Status-ALPHA-orange.svg)](https://github.com/R00S/meater-in-local-haos)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/R00S)
 
-⚠️ **DEVELOPMENT RELEASE** — GUI Redesign Phases 1–6 complete + v0.5.2.x appliance features. Functional but not yet production-ready. Phases 7 (Multilingual/Measurements) and 8 (Polish) remain.
+⚠️ **DEVELOPMENT RELEASE** — GUI Redesign Phases 1–6 complete + v0.5.4.x stability & UX features. Functional but not yet production-ready. Phase 7 (Multilingual/Measurements) and Phase 8 (Polish) are **not yet started**.
 
 A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes, and temperature sensors.
 
@@ -21,9 +21,24 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 ## 📊 Current Status
 
-**v0.5.2.8** — Semi-stable development release (February 2026)
+**v0.5.4.9** — Development release (March 2026)
 
-GUI Redesign Phases 1–6 complete + v0.5.2.x appliance features. See [STATUS.md](STATUS.md) for full progress tracking.
+GUI Redesign Phases 1–6 complete + v0.5.2.x appliance features + v0.5.4.x stability & UX. Phase 7 (Multilingual & Measurement Systems) and Phase 8 (Polish & Testing) are **not yet started**. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.5.4.x Features (March 2026)
+- ✅ **Ongoing cooks badge** — Welcome screen shows active MEATER + recipe cooks with live status
+- ✅ **Parallel recipe cooks** — Multiple recipe cooks running simultaneously (one per appliance)
+- ✅ **Cross-device cook visibility** — Recipe cooks visible on all devices via server sync
+- ✅ **MEATER cook rating screen** — Rate ease & result (1–5 stars) after MEATER cook completion
+- ✅ **AI ingredient ceilings** — Style-dependent ingredient limits prevent overly complex recipes
+- ✅ **Honest cooking time** — AI includes all prep time (soaking, brining, marinating) in estimates
+- ✅ **Blank tab fix** — Detects WebSocket reconnect + forces Shadow DOM repaint on return
+- ✅ **Recipe cook persistence** — sessionStorage survives HA sidebar navigation
+- ✅ **Welcome screen auto-refresh** — Exited cooks disappear immediately without manual refresh
+- ✅ **MEATER restart improvements** — Session dropdown on waiting screen, unknown entity handling
+- ✅ **🏠 Home button** — Navigate back to welcome from any active cook view
+- ✅ **MEATER Swedish cook restart** — Cooks with Swedish data source restart correctly from Previous Cooks
+- ✅ **Mobile responsive** — Welcome screen cards fit properly in portrait and landscape on companion app
 
 ### v0.5.2.x Features (February 2026)
 - ✅ **Multi-appliance management** — Configure multiple appliances (Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom)
@@ -618,12 +633,21 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 | [Temperature Research](docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md) | Alternative probes, temperature tables |
 | [View Assist Integration](docs/VIEW_ASSIST_INTEGRATION.md) | Voice control setup and troubleshooting |
 
-## 🔮 Future Features (Phase 7+)
+## 🔮 Future Features (Not Yet Started)
 
-- ⬜ Multilingual support (Swedish + English with i18n)
-- ⬜ Measurement system selector (Swedish, UK, US, pure metric)
+### Phase 7 — Multilingual & Measurement Systems
+- ⬜ i18n infrastructure — Translation system for all UI text
+- ⬜ Swedish + English — Full translations for both languages
+- ⬜ Measurement system selector (Swedish dl/msk/tsk, UK, US, pure metric)
 - ⬜ Serving size scaling with automatic ingredient conversion
+
+### Phase 8 — Polish & Testing
+- ⬜ Mobile responsive optimization — Fine-tuning for small screens
 - ⬜ MEATER probe as subprocess within recipe cook steps
+- ⬜ Ingredient bolding during cook steps
+- ⬜ Visual design refinement and edge case handling
+
+### Future Ideas
 - 🥖 **Baking** - Bread proofing, internal doneness, oven tracking
 - 🥐 **Pastries** - Laminated dough, proofing, custard temps
 - 🧫 **Fermentation** - Yogurt, sourdough, kombucha, kefir, kimchi

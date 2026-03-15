@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.2.8 - Add feature notes editing to appliance path view (issue #61)
+Last Updated: 15 Mar 2026, 19:45 UTC
+Last Change: v0.5.4.9 - Fix welcome screen badges overflow + text wrapping on mobile
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -65,7 +65,13 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.2.8"
+# ⚠️ VERSION — must match in ALL 3 locations on every release:
+#   1. manifest.json        → "version": "..."
+#   2. HERE (__init__.py)    → __version__ = "..."
+#   3. __init__.py line 4    → Last Change: v...
+#   4. const.py line 4       → Last Change: v...
+#   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
+__version__ = "0.5.4.9"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -496,6 +502,7 @@ async def _async_register_services(hass: HomeAssistant) -> None:
                 cut_display=cut.name_long,
                 cut_id=cut_id,
                 custom_target_temp_c=custom_target_temp_c,
+                data_source=data_source,
             )
 
     async def handle_stop_cook(call: ServiceCall) -> None:
