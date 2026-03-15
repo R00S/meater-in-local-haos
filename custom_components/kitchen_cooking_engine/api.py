@@ -33,6 +33,9 @@ from .storage import (
     async_load_user_preferences,
     async_set_cut_preference,
     async_get_cut_preference,
+    async_load_active_recipe_cook,
+    async_save_active_recipe_cook,
+    async_clear_active_recipe_cook,
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -266,7 +269,65 @@ def async_register_api(hass: HomeAssistant) -> None:
     hass.http.register_view(AISettingsView)
     hass.http.register_view(AIRecipeSaveCookView)
     
+    # Active recipe cook state (cross-device visibility)
+    hass.http.register_view(ActiveRecipeCookView)
+    
     _LOGGER.info("Kitchen Cooking Engine: API endpoints registered")
+
+
+class ActiveRecipeCookView(HomeAssistantView):
+    """API endpoint for active recipe cooks (cross-device visibility).
+
+    Stores an array of active recipe cook states so all devices can see
+    ongoing cooks regardless of which device started them.
+
+    GET    → returns {cooks: [...]}
+    POST   → saves the array of active cooks
+    DELETE → clears all active cooks
+    """
+
+    url = "/api/kitchen_cooking_engine/active_recipe_cook"
+    name = "api:kitchen_cooking_engine:active_recipe_cook"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Return all active recipe cooks."""
+        hass = request.app["hass"]
+        state = await async_load_active_recipe_cook(hass)
+        # state may be a list (new format) or a dict (old single-cook format)
+        if isinstance(state, list):
+            return self.json({"cooks": state})
+        if isinstance(state, dict) and state:
+            return self.json({"cooks": [state]})
+        return self.json({"cooks": []})
+
+    async def post(self, request: web.Request) -> web.Response:
+        """Save the array of active recipe cooks."""
+        hass = request.app["hass"]
+        try:
+            data = await request.json()
+            cooks = data.get("cooks") if isinstance(data, dict) else None
+            if not isinstance(cooks, list):
+                return self.json(
+                    {"status": "error", "message": "Expected {cooks: [...]}"}
+                )
+            success = await async_save_active_recipe_cook(hass, cooks)
+            if success:
+                return self.json({"status": "ok"})
+            return self.json({"status": "error", "message": "Failed to save"})
+        except Exception as exc:
+            _LOGGER.error("Error saving active recipe cooks: %s", exc)
+            return self.json(
+                {"status": "error", "message": "Failed to process request"}
+            )
+
+    async def delete(self, request: web.Request) -> web.Response:
+        """Clear all active recipe cooks."""
+        hass = request.app["hass"]
+        success = await async_clear_active_recipe_cook(hass)
+        if success:
+            return self.json({"status": "ok"})
+        return self.json({"status": "error", "message": "Failed to clear"})
 
 
 class CookHistoryView(HomeAssistantView):
@@ -306,17 +367,37 @@ class CookHistoryItemView(HomeAssistantView):
     requires_auth = True
 
     async def patch(self, request: web.Request, cook_id: str) -> web.Response:
-        """Update cook notes."""
+        """Update cook entry fields (notes, ratings)."""
+        from .storage import async_update_cook_entry
+        
         hass = request.app["hass"]
         try:
             data = await request.json()
-            notes = data.get("notes", "")
-            success = await async_update_cook_notes(hass, cook_id, notes)
+            # Support updating notes and/or ratings
+            updates = {}
+            if "notes" in data:
+                updates["notes"] = str(data["notes"])
+            if "ease_rating" in data:
+                rating = int(data["ease_rating"])
+                if 1 <= rating <= 5:
+                    updates["ease_rating"] = rating
+            if "result_rating" in data:
+                rating = int(data["result_rating"])
+                if 1 <= rating <= 5:
+                    updates["result_rating"] = rating
+            
+            if not updates:
+                return self.json({"status": "error", "message": "No valid fields to update"})
+            
+            success = await async_update_cook_entry(hass, cook_id, updates)
             if success:
                 return self.json({"status": "ok"})
             return self.json({"status": "error", "message": "Cook not found"})
+        except (ValueError, TypeError) as e:
+            _LOGGER.error("Invalid data for cook entry update: %s", e)
+            return self.json({"status": "error", "message": "Invalid data provided"})
         except Exception as e:
-            _LOGGER.error("Error updating cook notes: %s", e)
+            _LOGGER.error("Error updating cook entry: %s", e)
             return self.json({"status": "error", "message": "Failed to process request"})
 
     async def delete(self, request: web.Request, cook_id: str) -> web.Response:
@@ -863,6 +944,9 @@ class AIRecipeDetailView(HomeAssistantView):
                 suggestion_id=data["suggestion_id"],
                 suggestion=suggestion,
                 appliance_ids=data.get("appliance_ids"),
+                cooking_style=data.get("cooking_style", "quick_and_easy"),
+                complexity=data.get("complexity", 3),
+                user_ingredients=data.get("user_ingredients"),
             )
             
             if not detail:

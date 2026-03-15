@@ -1,9 +1,9 @@
 # Terms of Reference: Kitchen Cooking Engine GUI Redesign
 
-**Version:** 3.1  
+**Version:** 3.2  
 **Created:** 2026-01-16  
-**Updated:** 2026-02-26  
-**Status:** Phases 1–6 Complete + v0.5.2.x appliance features, Phases 7–8 Remaining  
+**Updated:** 2026-03-15  
+**Status:** Phases 1–6 Complete + v0.5.2.x appliance features + v0.5.4.x stability & UX, Phases 7–8 Remaining  
 **Supersedes:** Current single-path GUI implementation
 
 ---
@@ -1249,6 +1249,17 @@ This section documents deviations from the original ToR specification as of v0.5
 | Categorized AI Ingredients | v0.5.2.1+ | 300+ ingredients organized by category (proteins, produce, grains, dairy, spices) with cuisine-specific lists. |
 | Cuisine-Specific Ingredients | v0.5.2.1+ | Authentic ingredient lists per cuisine/region. Enforces pre-Columbian accuracy (e.g., no tomatoes in Indian/Middle Eastern). |
 | Recipe Origin Badges | v0.5.2.1+ | AI suggestions labeled 📖 Classic (known/googleable) or 🤖 Original (AI-created). |
+| Ongoing Cooks Badge | v0.5.4.1 | Welcome screen shows count and status of all active MEATER + recipe cooks. Clicking navigates to the cook. |
+| MEATER Cook Rating Screen | v0.5.4.0 | After MEATER cook completion, users rate ease & result (1–5 stars). Ratings saved to cook history via PATCH API. |
+| Blank Tab Fix | v0.5.4.2 | Detects WebSocket reconnect + forces Shadow DOM repaint on return. Prevents blank panel after navigating away. |
+| Recipe Cook Persistence | v0.5.4.3 | Recipe cook state persisted to sessionStorage, survives HA sidebar navigation. Restored on panel re-creation. |
+| Parallel Recipe Cooks | v0.5.4.4 | Multiple recipe cooks can run simultaneously (one per appliance). Array-based state management with unique IDs. |
+| Cross-Device Cook Visibility | v0.5.4.4 | Active recipe cooks synced to server, visible on all devices. Adopts remote cooks on click. |
+| 🏠 Home Button | v0.5.4.4 | Navigate back to welcome from any active cook view (MEATER or recipe). |
+| AI Ingredient Ceilings | v0.5.4.0 | Style-dependent ingredient limits (50%–200% extra) scaled by complexity (±20% per step from baseline 3). |
+| Honest Cooking Time | v0.5.4.0 | AI includes all prep time (soaking, brining, marinating) in estimates. Critical rule in both suggestion and detail prompts. |
+| MEATER Restart Improvements | v0.5.4.5 | Session dropdown on waiting screen, handles unknown entity gracefully, timeout protection. |
+| Welcome Screen Auto-Refresh | v0.5.4.6 | Exited cooks disappear immediately; `_navigateToWelcome()` refreshes server data on every navigation. |
 
 ### 15.2 Features Deferred from Original Phase
 
@@ -1277,6 +1288,8 @@ This section documents deviations from the original ToR specification as of v0.5
 | `kitchen_cooking_engine.restart_cook` service | Not implemented — restart handled by frontend `_restartCook()` which re-enters cook flow with saved data |
 | Not in ToR: Appliance APIs | Added: `GET /api/kitchen_cooking_engine/appliances` (list with feature types/notes), `POST .../appliances/{entry_id}/feature_notes` (save notes), `GET .../available_features` (aggregated), `GET .../recipes/compatible` (recipe matching) |
 | Not in ToR: AI Settings API | Added: `GET/POST /api/kitchen_cooking_engine/ai_settings` — AI agent ID stored in panel preferences, not config flow |
+| Not in ToR: Active Recipe Cook API | Added (v0.5.4.4): `GET/POST/DELETE /api/kitchen_cooking_engine/active_recipe_cook` — Cross-device visibility of active recipe cooks. Supports both list (parallel cooks) and dict (legacy single-cook) formats. |
+| Not in ToR: Cook History PATCH API | Added (v0.5.4.0): `PATCH /api/kitchen_cooking_engine/cook_history/{cook_id}` — Update individual cook entries (ease_rating, result_rating). Used by MEATER cook rating screen. |
 
 ### 15.5 Data Model Deviations
 
@@ -1289,6 +1302,9 @@ This section documents deviations from the original ToR specification as of v0.5
 | Not in ToR: Feature types | Added: `FeatureType` enum (STANDARD/MODIFIED/SPECIAL). Per-appliance feature classification with 30+ features in `FEATURE_CATALOG`. Config flow has per-feature type editing. |
 | Not in ToR: Feature notes | Added: `feature_notes` dict per appliance. Editable from panel UI (Appliances tab + AI Recipe Builder path). Injected into AI prompts as modification context. |
 | Not in ToR: Ingredient categories | Added: `INGREDIENT_CATEGORIES` mapping 300+ ingredients to categories (p/v/g/d/s). `CUISINE_INGREDIENTS` for cuisine-specific lists. `ASSUMED_STAPLES` excluded from lists. |
+| Not in ToR: Active recipe cooks array | Added (v0.5.4.4): `_activeRecipeCooks` array with unique IDs per cook. Persisted to sessionStorage + server. Supports parallel recipe cooks. |
+| Not in ToR: MEATER cook rating state | Added (v0.5.4.0): `_meaterCookRatingState` object for post-cook rating flow. `ease_rating`/`result_rating` (1–5) saved to cook history entry. |
+| Cook history entry limit removed | v0.5.4.4: `MAX_HISTORY_ENTRIES = 100` cap removed. Cook history grows unbounded. |
 
 ---
 

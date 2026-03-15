@@ -8,12 +8,15 @@ imported during frontend generation without requiring Home Assistant.
 # Cooking styles for AI recipe generation
 COOKING_STYLES = [
     {"id": "quick_and_easy", "name": "Quick And Easy"},
-    {"id": "gourmet", "name": "Gourmet"},
-    {"id": "healthy", "name": "Healthy"},
     {"id": "comfort_food", "name": "Comfort Food"},
     {"id": "family_friendly", "name": "Family Friendly"},
+    {"id": "healthy", "name": "Healthy"},
+    {"id": "gourmet", "name": "Gourmet"},
     {"id": "meal_prep", "name": "Meal Prep"},
     {"id": "one_pot", "name": "One Pot"},
+    {"id": "slow_cook", "name": "Slow Cook"},
+    {"id": "barbeque", "name": "Barbeque"},
+    {"id": "baking", "name": "Baking"},
     {"id": "low_carb", "name": "Low Carb"},
     {"id": "high_protein", "name": "High Protein"},
     {"id": "vegetarian", "name": "Vegetarian"},

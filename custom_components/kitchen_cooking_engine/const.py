@@ -1,14 +1,20 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.2.8 - Add feature notes editing to appliance path view (issue #61)
+Last Updated: 15 Mar 2026, 19:45 UTC
+Last Change: v0.5.4.8 - Fix welcome screen appliance badges overflow on mobile portrait
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "185"
+# ⚠️ The RELEASE version must match in ALL 3 locations on every release:
+#   1. manifest.json        → "version": "..."
+#   2. __init__.py           → __version__ = "..."
+#   3. __init__.py line 4    → Last Change: v...
+#   4. const.py line 4       → Last Change: v...
+#   PANEL_VERSION below is auto-incremented — do NOT edit manually.
+PANEL_VERSION = "202"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

@@ -241,6 +241,7 @@ class CookingSessionSensor(SensorEntity):
         self._five_min_alert_fired: bool = False
         self._cook_notes: str = ""  # Notes for current cook
         self._custom_target_temp_c: int | None = None  # User fine-tuned target
+        self._data_source: str | None = None  # "international" or "swedish"
         self._peak_temp_c: float | None = None  # Peak temp during cook
         self._final_temp_after_rest: float | None = None  # Temp when rest completed
         
@@ -962,6 +963,7 @@ class CookingSessionSensor(SensorEntity):
         cut_display: str | None = None,
         cut_id: int | None = None,
         custom_target_temp_c: int | None = None,
+        data_source: str | None = None,
     ) -> None:
         """Start a new cooking session."""
         self._protein = protein
@@ -981,6 +983,7 @@ class CookingSessionSensor(SensorEntity):
         self._usda_safe = usda_safe
         self._carryover_temp_c = carryover_temp_c
         self._custom_target_temp_c = custom_target_temp_c  # Store for preferences
+        self._data_source = data_source  # Store for history
         self._session_start = datetime.now()
         self._rest_start = None
         self._state = STATE_COOKING
@@ -1150,6 +1153,21 @@ class CookingSessionSensor(SensorEntity):
         """Save completed cook to history."""
         from .storage import async_add_cook_to_history
         
+        # Calculate cook duration in minutes
+        # Duration is from session start to rest start (active cooking time)
+        # If no rest was started, use current time as end
+        duration = None
+        if self._session_start:
+            end_time = self._rest_start if self._rest_start else datetime.now()
+            # Handle timezone-aware vs naive datetime mismatch
+            # _session_start uses datetime.now() (naive), _rest_start uses dt_util.utcnow() (aware)
+            if hasattr(end_time, 'tzinfo') and end_time.tzinfo is not None:
+                end_time = end_time.replace(tzinfo=None)
+            start_time = self._session_start
+            if hasattr(start_time, 'tzinfo') and start_time.tzinfo is not None:
+                start_time = start_time.replace(tzinfo=None)
+            duration = round((end_time - start_time).total_seconds() / 60, 1)
+        
         cook_data = {
             "protein": self._protein,
             "cut": self._cut,
@@ -1161,12 +1179,14 @@ class CookingSessionSensor(SensorEntity):
             "target_temp_f": self._target_temp_f,
             "started_at": self._session_start.isoformat() if self._session_start else None,
             "rest_started_at": self._rest_start.isoformat() if self._rest_start else None,
+            "duration": duration,  # Cook duration in minutes (session start to rest start)
             "temp_history": self._full_cook_history,
             "notes": self._cook_notes,
             "final_temp": self._current_temp,
             "peak_temp_c": self._peak_temp_c,  # Highest temp reached during cook
             "final_temp_after_rest": self._final_temp_after_rest,  # Temp when rest completed
             "custom_target_temp_c": self._custom_target_temp_c,  # User fine-tuned temp if any
+            "data_source": self._data_source,  # "international" or "swedish" — needed for restart
         }
         
         await async_add_cook_to_history(self._hass, cook_data)
