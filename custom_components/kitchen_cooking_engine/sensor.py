@@ -1156,7 +1156,14 @@ class CookingSessionSensor(SensorEntity):
         duration = None
         if self._session_start:
             end_time = self._rest_start if self._rest_start else datetime.now()
-            duration = round((end_time - self._session_start).total_seconds() / 60, 1)
+            # Handle timezone-aware vs naive datetime mismatch
+            # _session_start uses datetime.now() (naive), _rest_start uses dt_util.utcnow() (aware)
+            if hasattr(end_time, 'tzinfo') and end_time.tzinfo is not None:
+                end_time = end_time.replace(tzinfo=None)
+            start_time = self._session_start
+            if hasattr(start_time, 'tzinfo') and start_time.tzinfo is not None:
+                start_time = start_time.replace(tzinfo=None)
+            duration = round((end_time - start_time).total_seconds() / 60, 1)
         
         cook_data = {
             "protein": self._protein,

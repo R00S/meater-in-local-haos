@@ -5712,25 +5712,31 @@ class KitchenCookingPanel extends LitElement {
       // Complete the session (saves cook to history)
       await this._callService('complete_session');
 
-      // Wait briefly for the cook to be saved to history, then update with ratings
-      setTimeout(async () => {
-        try {
-          const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/history');
-          if (response && response.history && response.history.length > 0) {
-            // Most recent cook is first (history is returned most recent first)
-            const lastCook = response.history[0];
-            if (lastCook.id) {
-              await this.hass.callApi('PATCH', `kitchen_cooking_engine/history/${lastCook.id}`, {
-                ease_rating: state.easeRating,
-                result_rating: state.resultRating,
-                notes: state.notes || lastCook.notes || '',
-              });
+      // Update the saved cook with ratings using retry logic
+      // The cook save is async so we retry a few times
+      const updateRatings = async (retries = 3, delay = 1000) => {
+        for (let i = 0; i < retries; i++) {
+          await new Promise(resolve => setTimeout(resolve, delay));
+          try {
+            const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/history');
+            if (response && response.history && response.history.length > 0) {
+              const lastCook = response.history[0];
+              if (lastCook.id) {
+                await this.hass.callApi('PATCH', `kitchen_cooking_engine/history/${lastCook.id}`, {
+                  ease_rating: state.easeRating,
+                  result_rating: state.resultRating,
+                  notes: state.notes || lastCook.notes || '',
+                });
+                return; // Success
+              }
             }
+          } catch (e) {
+            if (i === retries - 1) console.error('Error updating cook ratings:', e);
           }
-        } catch (e) {
-          console.error('Error updating cook ratings:', e);
+          delay *= 2; // Exponential backoff
         }
-      }, 1000);
+      };
+      updateRatings();
 
       this._meaterCookRatingState = null;
       this.requestUpdate();
@@ -5743,7 +5749,7 @@ class KitchenCookingPanel extends LitElement {
   /**
    * Skip rating and just complete the session (Issue #65)
    */
-  _skipMeaterCookRating() {
+  async _skipMeaterCookRating() {
     const state = this._meaterCookRatingState;
     
     // Ensure selected entity is correct for service calls
@@ -5751,9 +5757,9 @@ class KitchenCookingPanel extends LitElement {
       this._selectedEntity = state.entityId;
     }
     
-    // Set notes if any were provided
+    // Set notes if any were provided (await to ensure notes are saved before completing)
     if (state && state.notes) {
-      this._callService('set_notes', { notes: state.notes });
+      await this._callService('set_notes', { notes: state.notes });
     }
     
     this._callService('complete_session');

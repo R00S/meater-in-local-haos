@@ -315,11 +315,15 @@ class CookHistoryItemView(HomeAssistantView):
             # Support updating notes and/or ratings
             updates = {}
             if "notes" in data:
-                updates["notes"] = data["notes"]
+                updates["notes"] = str(data["notes"])
             if "ease_rating" in data:
-                updates["ease_rating"] = int(data["ease_rating"])
+                rating = int(data["ease_rating"])
+                if 1 <= rating <= 5:
+                    updates["ease_rating"] = rating
             if "result_rating" in data:
-                updates["result_rating"] = int(data["result_rating"])
+                rating = int(data["result_rating"])
+                if 1 <= rating <= 5:
+                    updates["result_rating"] = rating
             
             if not updates:
                 return self.json({"status": "error", "message": "No valid fields to update"})
@@ -328,6 +332,9 @@ class CookHistoryItemView(HomeAssistantView):
             if success:
                 return self.json({"status": "ok"})
             return self.json({"status": "error", "message": "Cook not found"})
+        except (ValueError, TypeError) as e:
+            _LOGGER.error("Invalid data for cook entry update: %s", e)
+            return self.json({"status": "error", "message": "Invalid data provided"})
         except Exception as e:
             _LOGGER.error("Error updating cook entry: %s", e)
             return self.json({"status": "error", "message": "Failed to process request"})
