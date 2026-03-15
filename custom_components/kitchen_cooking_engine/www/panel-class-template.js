@@ -2419,7 +2419,15 @@ class KitchenCookingPanel extends LitElement {
                         this._selectedEntity = e.target.value;
                         // Re-fire start_cook on the newly selected entity
                         if (this._waitingCookServiceData) {
-                          this._callService('start_cook', this._waitingCookServiceData);
+                          this._callService('start_cook', this._waitingCookServiceData)
+                            .catch(err => {
+                              console.error('Failed to start cook on selected entity:', err);
+                              this._waitingForCookStart = null;
+                              this._waitingCookServiceData = null;
+                              this._currentPath = 'welcome';
+                              this.requestUpdate();
+                              alert('Failed to start cook on this session. Please start a new cook manually.');
+                            });
                         }
                         this.requestUpdate();
                       }}
@@ -4848,12 +4856,20 @@ class KitchenCookingPanel extends LitElement {
         cut_id: cook.cut_id,
         doneness: cook.doneness,
         cooking_method: cook.cooking_method,
-        data_source: this._dataSource,
+        data_source: cook.data_source || this._dataSource,
       };
       if (cook.custom_target_temp_c) {
         serviceData.custom_target_temp_c = cook.custom_target_temp_c;
       }
-      this._callService('start_cook', serviceData);
+      this._callService('start_cook', serviceData)
+        .catch(err => {
+          console.error('Failed to restart cook:', err);
+          this._waitingForCookStart = null;
+          this._waitingCookServiceData = null;
+          this._currentPath = 'welcome';
+          this.requestUpdate();
+          alert('Failed to restart cook. The cook data may be incompatible. Please start a new cook manually.');
+        });
 
       // Navigate to the active cook view so the user sees their cook.
       // The service call is async, so the entity may still be 'idle' briefly.

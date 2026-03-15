@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 15 Mar 2026, 20:40 CET
+ * AUTO-GENERATED: 15 Mar 2026, 21:03 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 15 Mar 2026, 20:40 CET
+// Last generated: 15 Mar 2026, 21:03 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -13873,7 +13873,15 @@ class KitchenCookingPanel extends LitElement {
                         this._selectedEntity = e.target.value;
                         // Re-fire start_cook on the newly selected entity
                         if (this._waitingCookServiceData) {
-                          this._callService('start_cook', this._waitingCookServiceData);
+                          this._callService('start_cook', this._waitingCookServiceData)
+                            .catch(err => {
+                              console.error('Failed to start cook on selected entity:', err);
+                              this._waitingForCookStart = null;
+                              this._waitingCookServiceData = null;
+                              this._currentPath = 'welcome';
+                              this.requestUpdate();
+                              alert('Failed to start cook on this session. Please start a new cook manually.');
+                            });
                         }
                         this.requestUpdate();
                       }}
@@ -16302,12 +16310,20 @@ class KitchenCookingPanel extends LitElement {
         cut_id: cook.cut_id,
         doneness: cook.doneness,
         cooking_method: cook.cooking_method,
-        data_source: this._dataSource,
+        data_source: cook.data_source || this._dataSource,
       };
       if (cook.custom_target_temp_c) {
         serviceData.custom_target_temp_c = cook.custom_target_temp_c;
       }
-      this._callService('start_cook', serviceData);
+      this._callService('start_cook', serviceData)
+        .catch(err => {
+          console.error('Failed to restart cook:', err);
+          this._waitingForCookStart = null;
+          this._waitingCookServiceData = null;
+          this._currentPath = 'welcome';
+          this.requestUpdate();
+          alert('Failed to restart cook. The cook data may be incompatible. Please start a new cook manually.');
+        });
 
       // Navigate to the active cook view so the user sees their cook.
       // The service call is async, so the entity may still be 'idle' briefly.
@@ -20094,7 +20110,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "200";
+const PANEL_VERSION = "201";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

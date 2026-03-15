@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 15 Mar 2026, 19:45 UTC
-Last Change: v0.5.4.6 - Refresh welcome screen data on navigate-back so exited cooks disappear immediately
+Last Change: v0.5.4.7 - Fix MEATER cook restart: store data_source in history, use on restart
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -71,7 +71,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.5.4.6"
+__version__ = "0.5.4.7"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -502,6 +502,7 @@ async def _async_register_services(hass: HomeAssistant) -> None:
                 cut_display=cut.name_long,
                 cut_id=cut_id,
                 custom_target_temp_c=custom_target_temp_c,
+                data_source=data_source,
             )
 
     async def handle_stop_cook(call: ServiceCall) -> None:
