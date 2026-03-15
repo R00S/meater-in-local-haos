@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.4.2 - Fix blank tab on return: detect WebSocket reconnection in hasChanged, force Shadow DOM repaint + data reload on visibility change
+Last Change: v0.5.4.3 - Fix recipe cook state lost on navigation (sessionStorage), fix MEATER restart going to welcome
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "192"
+PANEL_VERSION = "193"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

@@ -221,6 +221,8 @@ class KitchenCookingPanel extends LitElement {
     // Phase 4: Recipe Cook Flow state
     this._recipeCookState = null; // {recipe, startTime, currentStep, servingSize, easeRating, resultRating, notes, meaterSubprocess}
     this._recipeCookTimer = null; // setInterval handle for elapsed time updates
+    // Restore recipe cook state from sessionStorage (survives navigation away and back)
+    this._restoreRecipeCookState();
     // Custom temperature profile
     this._customProfileName = '';
     this._customProfileTempC = 70;
@@ -2368,9 +2370,22 @@ class KitchenCookingPanel extends LitElement {
       const activeState = this.hass.states[this._selectedEntity];
       if (activeState && activeState.state !== 'idle' && activeState.state !== 'complete' &&
           activeState.state !== 'unavailable' && activeState.state !== 'unknown') {
+        this._waitingForCookStart = null; // Cook is active — clear waiting flag
         return this._renderActiveCook(activeState);
       }
-      // Cook is no longer active — fall back to welcome
+      // Cook isn't active yet — if we just started it, show a brief loading state
+      // (the start_cook service is async and takes a moment to update the entity)
+      if (this._waitingForCookStart && (Date.now() - this._waitingForCookStart) < 10000) {
+        return html`
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 16px;text-align:center;">
+            <div class="spinner"></div>
+            <p style="margin-top:16px;font-size:1.1em;">🌡️ Starting cook…</p>
+            <p style="color:var(--secondary-text-color);">Waiting for the probe to begin monitoring.</p>
+          </div>
+        `;
+      }
+      // Cook is no longer active and we're not waiting — fall back to welcome
+      this._waitingForCookStart = null;
       this._currentPath = 'welcome';
     }
 
@@ -4749,9 +4764,12 @@ class KitchenCookingPanel extends LitElement {
       }
       this._callService('start_cook', serviceData);
 
-      // Navigate to welcome so the active cook is shown
+      // Navigate to the active cook view so the user sees their cook.
+      // The service call is async, so the entity may still be 'idle' briefly.
+      // _renderContent's active_cook handler shows a "Starting…" state while waiting.
       this._selectedCookForDetail = null;
-      this._currentPath = 'welcome';
+      this._currentPath = 'active_cook';
+      this._waitingForCookStart = Date.now(); // Flag for brief loading state
       this.requestUpdate();
       return;
     }
@@ -4789,6 +4807,9 @@ class KitchenCookingPanel extends LitElement {
       meaterSubprocess: null // Will store subprocess info if MEATER is started
     };
 
+    // Persist to sessionStorage so the cook survives navigation away and back
+    this._persistRecipeCookState();
+
     // Start timer that updates every second
     this._recipeCookTimer = setInterval(() => {
       this.requestUpdate();
@@ -4807,11 +4828,61 @@ class KitchenCookingPanel extends LitElement {
       this._recipeCookTimer = null;
     }
 
-    // Clear state
+    // Clear state and persisted copy
     this._recipeCookState = null;
+    this._clearPersistedRecipeCookState();
     
     // Navigate back to welcome
     this._navigateToWelcome();
+  }
+
+  /**
+   * Persist the recipe cook state to sessionStorage so it survives
+   * when the user navigates to another HA panel and comes back.
+   * The component is re-created on sidebar navigation, losing in-memory state.
+   */
+  _persistRecipeCookState() {
+    try {
+      if (this._recipeCookState) {
+        sessionStorage.setItem('kce_recipe_cook_state', JSON.stringify(this._recipeCookState));
+      }
+    } catch (e) {
+      // sessionStorage might be unavailable (private browsing, quota exceeded)
+    }
+  }
+
+  /**
+   * Restore the recipe cook state from sessionStorage.
+   * Called in the constructor to recover state after component re-creation.
+   */
+  _restoreRecipeCookState() {
+    try {
+      const saved = sessionStorage.getItem('kce_recipe_cook_state');
+      if (saved) {
+        const state = JSON.parse(saved);
+        // Verify the saved state is still valid (has a recipe and a start time)
+        if (state && state.recipe && state.startTime) {
+          this._recipeCookState = state;
+          // Restart the timer for elapsed time display
+          this._recipeCookTimer = setInterval(() => {
+            this.requestUpdate();
+          }, 1000);
+        }
+      }
+    } catch (e) {
+      // Corrupted or unavailable - ignore
+    }
+  }
+
+  /**
+   * Clear persisted recipe cook state from sessionStorage.
+   */
+  _clearPersistedRecipeCookState() {
+    try {
+      sessionStorage.removeItem('kce_recipe_cook_state');
+    } catch (e) {
+      // Ignore
+    }
   }
 
   /**
@@ -4829,6 +4900,7 @@ class KitchenCookingPanel extends LitElement {
       if (this._recipeCookState.currentStep < 0) {
         this._recipeCookState.currentStep = 0; // finish page since steps.length is 0
       }
+      this._persistRecipeCookState();
       this.requestUpdate();
       return;
     }
@@ -4842,6 +4914,7 @@ class KitchenCookingPanel extends LitElement {
       this._recipeCookState.currentStep++;
     }
     
+    this._persistRecipeCookState();
     this.requestUpdate();
   }
 
@@ -4860,8 +4933,10 @@ class KitchenCookingPanel extends LitElement {
     } else {
       // If at overview, exit cook flow
       this._stopRecipeCook();
+      return; // _stopRecipeCook already clears persisted state
     }
     
+    this._persistRecipeCookState();
     this.requestUpdate();
   }
 
