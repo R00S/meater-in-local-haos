@@ -55,6 +55,9 @@ class CookingStyle(Enum):
     HIGH_PROTEIN = "high_protein"
     VEGETARIAN = "vegetarian"
     VEGAN = "vegan"
+    SLOW_COOK = "slow_cook"
+    BARBEQUE = "barbeque"
+    BAKING = "baking"
 
 
 class IngredientCategory(Enum):
@@ -66,6 +69,31 @@ class IngredientCategory(Enum):
     DAIRY = "dairy"
     SPICES = "spices"
     OTHER = "other"
+
+
+# Maximum ratio of *extra* ingredients the AI may add, relative to the number
+# of user-selected ingredients, keyed by CookingStyle value.
+# A ratio of 0.50 means: if the user selected 4 ingredients, the AI may add
+# at most 2 more (= 4 × 0.50).  These are *ceilings*, not targets.
+# The complexity slider (1–5) adjusts them further via _get_ingredient_ceiling().
+_INGREDIENT_CEILING_BY_STYLE: Dict[str, float] = {
+    "quick_and_easy":   0.50,   # keep it short — at most 50% extra
+    "comfort_food":     0.50,   # familiar, simple ingredient lists
+    "family_friendly":  0.75,   # a little more variety allowed
+    "one_pot":          0.75,   # limited by the single-vessel constraint
+    "healthy":          0.75,   # focused ingredient list
+    "low_carb":         0.75,   # focused on protein/veg, not elaborate
+    "high_protein":     0.75,   # protein-first, moderate supporting cast
+    "vegetarian":       1.00,   # plant-based often needs broader pantry
+    "vegan":            1.00,   # same rationale as vegetarian
+    "slow_cook":        1.00,   # low-and-slow benefits from a full pantry
+    "barbeque":         1.25,   # rubs, brines, sauces add ingredient depth
+    "baking":           1.25,   # leavening, fats, dairy, flavourings add up
+    "meal_prep":        1.50,   # batch cooking justifies more ingredients
+    "gourmet":          2.00,   # complex dishes may need twice as many items
+}
+# Fallback when style is not recognised
+_INGREDIENT_CEILING_DEFAULT: float = 1.00
 
 
 @dataclass
@@ -199,7 +227,36 @@ class AIRecipeBuilder:
             _LOGGER.warning("OpenAI conversation check failed: %s", ex)
             # Return True anyway to let user try - they'll get error if it doesn't work
             return True
-    
+
+    @staticmethod
+    def _get_ingredient_ceiling(
+        user_ingredient_count: int,
+        cooking_style: str,
+        complexity: int,
+    ) -> int:
+        """Return the maximum number of *extra* ingredients the AI may add.
+
+        The ceiling is derived from the cooking-style base ratio (see
+        ``_INGREDIENT_CEILING_BY_STYLE``) adjusted by the complexity slider:
+
+        - complexity 1 → 60 % of the base ceiling  (very simple)
+        - complexity 2 → 80 %
+        - complexity 3 → 100 % (baseline, no adjustment)
+        - complexity 4 → 120 %
+        - complexity 5 → 140 %  (chef level)
+
+        The returned value is always at least 1 so the AI is never forced to
+        use *only* the user's ingredients.
+        """
+        base_ratio = _INGREDIENT_CEILING_BY_STYLE.get(
+            cooking_style, _INGREDIENT_CEILING_DEFAULT
+        )
+        # ±20 % per step away from complexity 3, clamped to [1, 5]
+        clamped = max(1, min(5, complexity))
+        complexity_multiplier = 1.0 + (clamped - 3) * 0.20
+        max_extra = round(user_ingredient_count * base_ratio * complexity_multiplier)
+        return max(1, max_extra)
+
     async def generate_recipe_suggestions(
         self,
         ingredients: List[str],
@@ -264,6 +321,9 @@ class AIRecipeBuilder:
         suggestion_id: str,
         suggestion: AIRecipeSuggestion,
         appliance_ids: Optional[List[str]] = None,
+        cooking_style: str = "quick_and_easy",
+        complexity: int = 3,
+        user_ingredients: Optional[List[str]] = None,
     ) -> Optional[AIRecipeDetail]:
         """Get detailed recipe for a suggestion.
         
@@ -271,6 +331,9 @@ class AIRecipeBuilder:
             suggestion_id: ID of the suggestion to expand
             suggestion: The suggestion object with recipe summary
             appliance_ids: Optional list of available appliance IDs
+            cooking_style: Original cooking style used for suggestions
+            complexity: Recipe complexity 1-5 (used for ingredient ceiling)
+            user_ingredients: Original user-selected ingredients (for ceiling)
         
         Returns:
             Detailed recipe with instructions
@@ -283,7 +346,13 @@ class AIRecipeBuilder:
         appliance_info = await self._get_appliance_info(appliance_ids)
         
         # Build prompt for detailed recipe
-        prompt = self._build_detail_prompt(suggestion, appliance_info)
+        prompt = self._build_detail_prompt(
+            suggestion,
+            appliance_info,
+            cooking_style=cooking_style,
+            complexity=complexity,
+            user_ingredients=user_ingredients or suggestion.main_ingredients,
+        )
         
         # Call OpenAI
         try:
@@ -479,39 +548,31 @@ class AIRecipeBuilder:
         }
         complexity_desc = complexity_labels.get(complexity, complexity_labels[3])
 
-        # Calculate maximum additional ingredients based on cooking style and complexity
-        # These are ceilings - the AI should not exceed them
-        style_ingredient_multipliers = {
-            "quick_and_easy": 0.50,   # max 50% extra
-            "comfort_food": 0.50,     # max 50% extra
-            "one_pot": 0.50,          # max 50% extra - minimal additions
-            "family_friendly": 0.75,  # max 75% extra
-            "healthy": 0.75,          # max 75% extra
-            "low_carb": 0.75,         # max 75% extra
-            "high_protein": 0.75,     # max 75% extra
-            "vegetarian": 1.00,       # max 100% extra
-            "vegan": 1.00,            # max 100% extra - may need substitutes
-            "gourmet": 2.00,          # max 200% extra
-            "meal_prep": 2.00,        # max 200% extra
-        }
-        base_multiplier = style_ingredient_multipliers.get(cooking_style, 1.00)
-        
-        # Complexity slider scales the limit: 1=0.5x, 2=0.75x, 3=1.0x, 4=1.25x, 5=1.5x
-        complexity_scaling = {1: 0.5, 2: 0.75, 3: 1.0, 4: 1.25, 5: 1.5}
-        complexity_factor = complexity_scaling.get(complexity, 1.0)
-        
-        effective_multiplier = base_multiplier * complexity_factor
-        user_ingredient_count = len(ingredients)
-        max_additional = max(1, round(user_ingredient_count * effective_multiplier))
-        max_total = user_ingredient_count + max_additional
-        
-        ingredient_limit_instruction = (
-            f"\n\nCRITICAL RULE — INGREDIENT LIMITS:"
-            f"\nThe user selected {user_ingredient_count} ingredients. You may add at most "
-            f"{max_additional} additional ingredients on top of those (excluding basic staples "
-            f"like salt, pepper, oil, butter, sugar, vinegar which don't count)."
-            f"\nEach recipe MUST use a total of no more than {max_total} non-staple ingredients."
-            f"\nDo NOT pad recipes with extra ingredients the user didn't select. Keep it focused."
+        # --- Ingredient ceiling rule ---
+        max_extra = self._get_ingredient_ceiling(
+            user_ingredient_count=len(ingredients),
+            cooking_style=cooking_style,
+            complexity=complexity,
+        )
+        ingredient_ceiling_rule = (
+            f"\nCRITICAL RULE — INGREDIENT LIMIT:\n"
+            f"The user selected {len(ingredients)} ingredient(s). You may add at most "
+            f"{max_extra} additional ingredient(s) beyond those listed above (excluding "
+            f"basic staples: oil, butter, salt, black pepper, sugar, vinegar). "
+            f"This is a hard ceiling — do NOT exceed it. This limit reflects the "
+            f"'{cooking_style.replace('_', ' ')}' cooking style at complexity {complexity}."
+        )
+
+        # --- Cooking-time honesty rule ---
+        cooking_time_honesty_rule = (
+            "\nCRITICAL RULE — HONEST COOKING TIME:\n"
+            "The cook_time_minutes value MUST include every minute the cook must spend "
+            "from start to finish — including pre-soaking, dry-brining, marinating, "
+            "tempering, resting, and any other prep the cook must perform. "
+            "Do NOT assume any ingredient has been pre-prepared in advance UNLESS the "
+            "user explicitly listed it in its pre-prepped form (e.g. 'pre-soaked rice "
+            "noodles' means no soaking time; 'rice noodles' means soaking time IS "
+            "included). Never hide prep time by assuming it was already done."
         )
 
         cuisine_hint = ""
@@ -529,26 +590,14 @@ Also assume basic staples are available: cooking oil, butter, salt, black pepper
 Cooking style: {cooking_style.replace('_', ' ')}
 Servings: {servings}
 Complexity level: {complexity_desc}{cuisine_hint}{restrictions}{time_constraint}
+{ingredient_ceiling_rule}
+{cooking_time_honesty_rule}
 
 Available kitchen equipment:
 {appliance_list}
 
 Available cooking features:
-{feature_list}{modification_notes}{ingredient_limit_instruction}
-
-CRITICAL RULE — HONEST COOKING TIME:
-The "cook_time_minutes" MUST include ALL time from start to finish, including any
-preparation steps that require waiting. This includes:
-- Soaking time (beans, lentils, grains, noodles)
-- Marinating or brining time
-- Dry brining or salting time
-- Dough rising or proofing time
-- Chilling, setting, or resting time
-- Any other passive waiting time that the cook must account for
-The ONLY exception: if the user explicitly provided a pre-prepared ingredient
-(e.g., "presoaked chickpeas", "overnight marinated chicken"), then that prep
-time can be excluded. Look at the user's ingredient list carefully for such hints.
-Do NOT assume anything has been prepped in advance unless the user said so.
+{feature_list}{modification_notes}
 
 CRITICAL RULE — AUTHENTIC LOCAL COOKING:
 When a cuisine is specified, you MUST suggest recipes that follow the authentic local
@@ -571,7 +620,7 @@ Please suggest 4 quite different recipes using these ingredients. For each recip
    - Only use a creative/poetic name if the dish is a well-known classic (e.g. "Coq au Vin" is fine, but don't invent names like "Midnight Sun Grilled Salmon").
    - For original/invented recipes, use a simple descriptive name based on the main ingredients and cooking method (e.g. "Pan-Seared Salmon with Dill Cream Sauce").
 2. Brief description (1-2 sentences)
-3. Total cooking time in minutes
+3. Total cooking time in minutes (MUST include all prep: soaking, marinating, dry-brining, etc.)
 4. Difficulty level (easy, medium, or hard)
 5. Main ingredients used from the list
 6. Required appliances/equipment
@@ -579,6 +628,7 @@ Please suggest 4 quite different recipes using these ingredients. For each recip
 8. Whether this is a known/classic recipe or an AI-created original ("known" or "original")
 
 Try to include at least 2 well-known classic recipes that people can search for online, and mark the rest as originals.
+If you have web search tools available, use them to find and verify real recipe sources.
 
 Format your response as a JSON array with exactly 4 recipes:
 [
@@ -603,12 +653,18 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
         self,
         suggestion: AIRecipeSuggestion,
         appliance_info: Dict[str, Any],
+        cooking_style: str = "quick_and_easy",
+        complexity: int = 3,
+        user_ingredients: Optional[List[str]] = None,
     ) -> str:
         """Build prompt for detailed recipe.
         
         Args:
             suggestion: The recipe suggestion to expand
             appliance_info: Available appliances
+            cooking_style: Original cooking style (for ingredient ceiling)
+            complexity: Recipe complexity 1-5 (for ingredient ceiling)
+            user_ingredients: Original user-selected ingredients (for ceiling)
         
         Returns:
             Formatted prompt for detailed recipe
@@ -631,6 +687,12 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
                 + "\n".join(mod_notes_lines)
             )
         
+        # Resolve user ingredients once so the same list is used throughout
+        resolved_ingredients = user_ingredients if user_ingredients else suggestion.main_ingredients
+        max_extra = self._get_ingredient_ceiling(
+            len(resolved_ingredients), cooking_style, complexity
+        )
+
         prompt = f"""You are a professional chef. Please provide the complete, detailed recipe for:
 
 Recipe Name: {suggestion.name}
@@ -640,9 +702,23 @@ Cooking Time: {suggestion.cook_time_minutes} minutes
 Difficulty: {suggestion.difficulty}
 Cuisine Type: {suggestion.cuisine_type or 'Any'}
 Required Appliances: {', '.join(suggestion.required_appliances)}
+Cooking Style: {cooking_style.replace('_', ' ')}
 
 Available kitchen equipment:
 {appliance_list}{modification_notes}
+
+CRITICAL RULE — INGREDIENT LIMIT:
+The user originally selected {len(resolved_ingredients)} ingredient(s): {', '.join(resolved_ingredients)}.
+You may add at most {max_extra} additional ingredient(s) beyond those (excluding basic staples: oil, butter, salt, black pepper, sugar, vinegar).
+This is a hard ceiling — do NOT exceed it.
+
+CRITICAL RULE — HONEST COOKING TIME:
+The total cook time already stated ({suggestion.cook_time_minutes} minutes) MUST be accurate from start to finish — including
+pre-soaking, dry-brining, marinating, tempering, resting, and any other prep the cook must perform.
+Do NOT assume any ingredient has been pre-prepared in advance UNLESS it was explicitly listed
+in its pre-prepped form by the user (e.g. 'pre-soaked rice noodles' means no soaking time needed;
+'rice noodles' means soaking time IS included). Never hide prep time by assuming it was already done.
+Reflect any such steps explicitly in the instructions and phases.
 
 IMPORTANT — AUTHENTIC COOKING:
 If this recipe belongs to a specific cuisine, follow authentic local cooking
@@ -652,27 +728,12 @@ Westernized adaptations. For example, an Indian dal should use tamarind or
 amchur for sourness rather than defaulting to tomatoes; a Chinese dish should
 follow wok technique and traditional seasonings, not American-Chinese shortcuts.
 
-IMPORTANT — INGREDIENT LIMITS:
-The recipe's main ingredients are listed above. You may add basic staples
-(salt, pepper, oil, butter, sugar, vinegar) and a small number of essential
-supporting ingredients (herbs, spices, aromatics needed for the dish), but
-do NOT add many extra ingredients beyond what was specified. Keep the ingredient
-list focused and realistic for a home cook.
-
-IMPORTANT — HONEST COOKING TIME:
-The cooking time above ({suggestion.cook_time_minutes} minutes) MUST account for ALL time
-from start to finish. In the detailed instructions, include every step with
-its actual time, including:
-- Any soaking, brining, or marinating steps
-- Dough rising or proofing time
-- Chilling, setting, or resting time
-If the total time of all steps exceeds {suggestion.cook_time_minutes} minutes, adjust the
-cook_time_minutes in the suggestion accordingly. Do NOT assume anything has been
-prepped in advance unless the ingredient list explicitly says so (e.g., "presoaked beans").
+If you have web search tools available, use them to find and verify the recipe
+source, authentic techniques, and accurate cooking temperatures.
 
 Please provide the full detailed recipe with:
 1. Complete ingredient list with precise measurements (for 4 servings)
-2. Detailed step-by-step cooking instructions (numbered)
+2. Detailed step-by-step cooking instructions (numbered, including any pre-soak/marinate/dry-brine steps)
 3. Cooking phases with specific temperatures and times
 4. Helpful tips and tricks for best results
 5. Temperature probe usage if meat/protein is involved

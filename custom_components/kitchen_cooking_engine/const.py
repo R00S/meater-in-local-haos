@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.2.9 - Save cooking time, MEATER cook rating screen, fix tab blank (issues #64, #65, #66)
+Last Change: v0.5.3.0 - Backport AI ingredient ceilings, honest cooking time, time slider, new cooking styles (BBQ/slow cook/baking)
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "188"
+PANEL_VERSION = "189"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
