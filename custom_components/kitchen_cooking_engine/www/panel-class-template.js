@@ -3531,8 +3531,15 @@ class KitchenCookingPanel extends LitElement {
     
     return html`
       <div class="path-header">
-        <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ← Back to Appliances
+        <button class="back-btn" @click=${() => {
+          if (this._selectedMainAppliance === 'ninja_combi') {
+            this._currentPath = 'ninja_combi';
+            this.requestUpdate();
+          } else {
+            this._navigateToWelcome();
+          }
+        }}>
+          ← Back${this._selectedMainAppliance === 'ninja_combi' ? ' to Ninja Combi' : ' to Appliances'}
         </button>
         <div class="path-header-title-row">
           <h2>🤖 AI Recipe Builder</h2>
@@ -5784,12 +5791,16 @@ class KitchenCookingPanel extends LitElement {
       this._cookingStyles = this._cookingStyles || [];
     }
     
-    // Pre-select Ninja Combi and launch AI builder with data loaded
+    // Pre-select Ninja Combi and navigate to the AI builder appliance screen
+    // (same screen as other appliances — shows secondary appliances with deselectable checkboxes)
     this._selectedMainAppliance = 'ninja_combi';
     this._currentPath = 'ai_recipe_builder';
-    this._showAIIngredientSelector = true;
+    this._showAIIngredientSelector = false;
+    this._showAIStyleSelector = false;
+    this._showAIRecipeSuggestions = false;
     this._selectedIngredients = [];
     this._selectedCookingStyle = null;
+    this._aiRecipeSuggestions = [];
     this.requestUpdate();
   }
 
