@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 15 Mar 2026, 18:34 CET
+ * AUTO-GENERATED: 15 Mar 2026, 18:36 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 15 Mar 2026, 18:34 CET
+// Last generated: 15 Mar 2026, 18:36 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -14503,7 +14503,8 @@ class KitchenCookingPanel extends LitElement {
   _renderWelcomeScreen(activeCooks = []) {
     // Build the ongoing cooks section (MEATER probes + in-session recipe cooks)
     const hasOngoingRecipeCook = !!this._recipeCookState;
-    const hasOngoingCooks = activeCooks.length > 0 || hasOngoingRecipeCook;
+    const totalOngoingCooks = activeCooks.length + (hasOngoingRecipeCook ? 1 : 0);
+    const hasOngoingCooks = totalOngoingCooks > 0;
 
     return html`
       <div class="welcome-header">
@@ -14514,7 +14515,7 @@ class KitchenCookingPanel extends LitElement {
       ${hasOngoingCooks ? html`
         <ha-card class="ongoing-cooks-card">
           <div class="card-content">
-            <h3 class="ongoing-cooks-title">🔥 Ongoing Cooks (${activeCooks.length + (hasOngoingRecipeCook ? 1 : 0)})</h3>
+            <h3 class="ongoing-cooks-title">🔥 Ongoing Cooks (${totalOngoingCooks})</h3>
 
             ${activeCooks.map(entityId => {
               const st = this.hass.states[entityId];
@@ -19840,7 +19841,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "190";
+const PANEL_VERSION = "191";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

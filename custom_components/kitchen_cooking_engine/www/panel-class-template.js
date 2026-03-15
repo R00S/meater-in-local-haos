@@ -3049,7 +3049,8 @@ class KitchenCookingPanel extends LitElement {
   _renderWelcomeScreen(activeCooks = []) {
     // Build the ongoing cooks section (MEATER probes + in-session recipe cooks)
     const hasOngoingRecipeCook = !!this._recipeCookState;
-    const hasOngoingCooks = activeCooks.length > 0 || hasOngoingRecipeCook;
+    const totalOngoingCooks = activeCooks.length + (hasOngoingRecipeCook ? 1 : 0);
+    const hasOngoingCooks = totalOngoingCooks > 0;
 
     return html`
       <div class="welcome-header">
@@ -3060,7 +3061,7 @@ class KitchenCookingPanel extends LitElement {
       ${hasOngoingCooks ? html`
         <ha-card class="ongoing-cooks-card">
           <div class="card-content">
-            <h3 class="ongoing-cooks-title">🔥 Ongoing Cooks (${activeCooks.length + (hasOngoingRecipeCook ? 1 : 0)})</h3>
+            <h3 class="ongoing-cooks-title">🔥 Ongoing Cooks (${totalOngoingCooks})</h3>
 
             ${activeCooks.map(entityId => {
               const st = this.hass.states[entityId];
