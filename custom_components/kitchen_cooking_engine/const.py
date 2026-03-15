@@ -1,14 +1,14 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.4.3 - Fix recipe cook state lost on navigation (sessionStorage), fix MEATER restart going to welcome
+Last Change: v0.5.4.4 - Fix MEATER restart timeout, add recipe cook Home/minimize button, cross-device cook visibility, remove history cap
 """
 
 DOMAIN = "kitchen_cooking_engine"
 
 # Panel version - This is updated automatically by generate_frontend_data.py
 # when the integration is installed/updated. Do not edit manually.
-PANEL_VERSION = "194"
+PANEL_VERSION = "195"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 26 Feb 2026, 18:00 UTC
-Last Change: v0.5.4.3 - Fix recipe cook state lost on navigation (sessionStorage), fix MEATER restart going to welcome
+Last Change: v0.5.4.4 - Fix MEATER restart timeout, add recipe cook Home/minimize button, cross-device cook visibility, remove history cap
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -65,7 +65,7 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = [Platform.SENSOR]
 
-__version__ = "0.5.4.3"
+__version__ = "0.5.4.4"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
