@@ -2462,7 +2462,7 @@ class KitchenCookingPanel extends LitElement {
         // Fallback to welcome screen for any unrecognized path
         console.warn('Unrecognized path:', this._currentPath, '- falling back to welcome');
         this._currentPath = 'welcome';
-        return this._renderWelcomeScreen();
+        return this._renderWelcomeScreen(activeCooks);
     }
   }
 
@@ -2826,8 +2826,16 @@ class KitchenCookingPanel extends LitElement {
 
     return html`
       <div class="status-banner ${cookState}">
-        <h2>${this._getStateIcon(cookState)} ${cookState.replace("_", " ")}</h2>
-        <p>${cut} • ${doneness}</p>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <button class="secondary-btn" style="padding:6px 12px;font-size:1.1em;flex-shrink:0;" @click=${() => {
+            this._currentPath = 'welcome';
+            this.requestUpdate();
+          }} title="Go to Home screen (cook keeps running)">🏠</button>
+          <div>
+            <h2 style="margin:0;">${this._getStateIcon(cookState)} ${cookState.replace("_", " ")}</h2>
+            <p style="margin:0;">${cut} • ${doneness}</p>
+          </div>
+        </div>
       </div>
       
       <ha-card>
@@ -3114,7 +3122,7 @@ class KitchenCookingPanel extends LitElement {
         </div>
       </ha-card>
 
-      ${this._renderWelcomeScreen()}
+      ${this._renderWelcomeScreen(activeCooks)}
     `;
   }
 
@@ -4936,7 +4944,9 @@ class KitchenCookingPanel extends LitElement {
         sessionStorage.setItem('kce_recipe_cook_state', json);
         // Also save to server for cross-device visibility (fire-and-forget)
         if (this.hass) {
-          this.hass.callApi('POST', 'kitchen_cooking_engine/active_recipe_cook', this._recipeCookState).catch(() => {});
+          this.hass.callApi('POST', 'kitchen_cooking_engine/active_recipe_cook', this._recipeCookState).catch(e => {
+            console.warn('KCE: failed to sync recipe cook to server:', e);
+          });
         }
       }
     } catch (e) {
@@ -4980,7 +4990,9 @@ class KitchenCookingPanel extends LitElement {
     }
     // Also clear from server (fire-and-forget)
     if (this.hass) {
-      this.hass.callApi('DELETE', 'kitchen_cooking_engine/active_recipe_cook').catch(() => {});
+      this.hass.callApi('DELETE', 'kitchen_cooking_engine/active_recipe_cook').catch(e => {
+        console.warn('KCE: failed to clear server recipe cook:', e);
+      });
     }
     this._serverRecipeCookState = null;
   }
