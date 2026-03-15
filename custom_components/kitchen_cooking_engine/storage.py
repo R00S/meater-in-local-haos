@@ -151,6 +151,27 @@ async def async_update_cook_notes(
     return False
 
 
+async def async_update_cook_entry(
+    hass: HomeAssistant,
+    cook_id: str,
+    updates: dict[str, Any],
+) -> bool:
+    """Update fields for a specific cook entry."""
+    # Only allow safe fields to be updated
+    allowed_fields = {"notes", "ease_rating", "result_rating"}
+    history = await async_load_cook_history(hass)
+    
+    for cook in history:
+        if cook.get("id") == cook_id:
+            for key, value in updates.items():
+                if key in allowed_fields:
+                    cook[key] = value
+            return await async_save_cook_history(hass, history)
+    
+    _LOGGER.warning("Cook not found: %s", cook_id)
+    return False
+
+
 async def async_delete_cook_from_history(
     hass: HomeAssistant,
     cook_id: str,

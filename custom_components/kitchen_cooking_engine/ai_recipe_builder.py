@@ -479,6 +479,41 @@ class AIRecipeBuilder:
         }
         complexity_desc = complexity_labels.get(complexity, complexity_labels[3])
 
+        # Calculate maximum additional ingredients based on cooking style and complexity
+        # These are ceilings - the AI should not exceed them
+        style_ingredient_multipliers = {
+            "quick_and_easy": 0.50,   # max 50% extra
+            "comfort_food": 0.50,     # max 50% extra
+            "one_pot": 0.50,          # max 50% extra - minimal additions
+            "family_friendly": 0.75,  # max 75% extra
+            "healthy": 0.75,          # max 75% extra
+            "low_carb": 0.75,         # max 75% extra
+            "high_protein": 0.75,     # max 75% extra
+            "vegetarian": 1.00,       # max 100% extra
+            "vegan": 1.00,            # max 100% extra - may need substitutes
+            "gourmet": 2.00,          # max 200% extra
+            "meal_prep": 2.00,        # max 200% extra
+        }
+        base_multiplier = style_ingredient_multipliers.get(cooking_style, 1.00)
+        
+        # Complexity slider scales the limit: 1=0.5x, 2=0.75x, 3=1.0x, 4=1.25x, 5=1.5x
+        complexity_scaling = {1: 0.5, 2: 0.75, 3: 1.0, 4: 1.25, 5: 1.5}
+        complexity_factor = complexity_scaling.get(complexity, 1.0)
+        
+        effective_multiplier = base_multiplier * complexity_factor
+        user_ingredient_count = len(ingredients)
+        max_additional = max(1, round(user_ingredient_count * effective_multiplier))
+        max_total = user_ingredient_count + max_additional
+        
+        ingredient_limit_instruction = (
+            f"\n\nCRITICAL RULE — INGREDIENT LIMITS:"
+            f"\nThe user selected {user_ingredient_count} ingredients. You may add at most "
+            f"{max_additional} additional ingredients on top of those (excluding basic staples "
+            f"like salt, pepper, oil, butter, sugar, vinegar which don't count)."
+            f"\nEach recipe MUST use a total of no more than {max_total} non-staple ingredients."
+            f"\nDo NOT pad recipes with extra ingredients the user didn't select. Keep it focused."
+        )
+
         cuisine_hint = ""
         if cuisines and len(cuisines) > 0:
             cuisine_names = [c.replace('_', ' ').title() for c in cuisines]
@@ -499,7 +534,21 @@ Available kitchen equipment:
 {appliance_list}
 
 Available cooking features:
-{feature_list}{modification_notes}
+{feature_list}{modification_notes}{ingredient_limit_instruction}
+
+CRITICAL RULE — HONEST COOKING TIME:
+The "cook_time_minutes" MUST include ALL time from start to finish, including any
+preparation steps that require waiting. This includes:
+- Soaking time (beans, lentils, grains, noodles)
+- Marinating or brining time
+- Dry brining or salting time
+- Dough rising or proofing time
+- Chilling, setting, or resting time
+- Any other passive waiting time that the cook must account for
+The ONLY exception: if the user explicitly provided a pre-prepared ingredient
+(e.g., "presoaked chickpeas", "overnight marinated chicken"), then that prep
+time can be excluded. Look at the user's ingredient list carefully for such hints.
+Do NOT assume anything has been prepped in advance unless the user said so.
 
 CRITICAL RULE — AUTHENTIC LOCAL COOKING:
 When a cuisine is specified, you MUST suggest recipes that follow the authentic local
@@ -602,6 +651,24 @@ techniques, spice combinations, and flavor profiles — NOT Americanized or
 Westernized adaptations. For example, an Indian dal should use tamarind or
 amchur for sourness rather than defaulting to tomatoes; a Chinese dish should
 follow wok technique and traditional seasonings, not American-Chinese shortcuts.
+
+IMPORTANT — INGREDIENT LIMITS:
+The recipe's main ingredients are listed above. You may add basic staples
+(salt, pepper, oil, butter, sugar, vinegar) and a small number of essential
+supporting ingredients (herbs, spices, aromatics needed for the dish), but
+do NOT add many extra ingredients beyond what was specified. Keep the ingredient
+list focused and realistic for a home cook.
+
+IMPORTANT — HONEST COOKING TIME:
+The cooking time above ({suggestion.cook_time_minutes} minutes) MUST account for ALL time
+from start to finish. In the detailed instructions, include every step with
+its actual time, including:
+- Any soaking, brining, or marinating steps
+- Dough rising or proofing time
+- Chilling, setting, or resting time
+If the total time of all steps exceeds {suggestion.cook_time_minutes} minutes, adjust the
+cook_time_minutes in the suggestion accordingly. Do NOT assume anything has been
+prepped in advance unless the ingredient list explicitly says so (e.g., "presoaked beans").
 
 Please provide the full detailed recipe with:
 1. Complete ingredient list with precise measurements (for 4 servings)

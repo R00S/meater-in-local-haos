@@ -306,17 +306,30 @@ class CookHistoryItemView(HomeAssistantView):
     requires_auth = True
 
     async def patch(self, request: web.Request, cook_id: str) -> web.Response:
-        """Update cook notes."""
+        """Update cook entry fields (notes, ratings)."""
+        from .storage import async_update_cook_entry
+        
         hass = request.app["hass"]
         try:
             data = await request.json()
-            notes = data.get("notes", "")
-            success = await async_update_cook_notes(hass, cook_id, notes)
+            # Support updating notes and/or ratings
+            updates = {}
+            if "notes" in data:
+                updates["notes"] = data["notes"]
+            if "ease_rating" in data:
+                updates["ease_rating"] = int(data["ease_rating"])
+            if "result_rating" in data:
+                updates["result_rating"] = int(data["result_rating"])
+            
+            if not updates:
+                return self.json({"status": "error", "message": "No valid fields to update"})
+            
+            success = await async_update_cook_entry(hass, cook_id, updates)
             if success:
                 return self.json({"status": "ok"})
             return self.json({"status": "error", "message": "Cook not found"})
         except Exception as e:
-            _LOGGER.error("Error updating cook notes: %s", e)
+            _LOGGER.error("Error updating cook entry: %s", e)
             return self.json({"status": "error", "message": "Failed to process request"})
 
     async def delete(self, request: web.Request, cook_id: str) -> web.Response:

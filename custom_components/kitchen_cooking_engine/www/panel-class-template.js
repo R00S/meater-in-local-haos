@@ -131,6 +131,8 @@ class KitchenCookingPanel extends LitElement {
       _showAISettingsModal: { type: Boolean },
       // Feature notes editing in appliance path
       _showFeatureNotesEditor: { type: Boolean },
+      // MEATER cook rating state (Issue #65)
+      _meaterCookRatingState: { type: Object },
     };
   }
 
@@ -226,6 +228,7 @@ class KitchenCookingPanel extends LitElement {
     this._aiAgentId = ''; // AI agent entity ID for recipe generation
     this._showAISettingsModal = false; // Show AI settings modal
     this._showFeatureNotesEditor = false; // Show feature notes editor in appliance path
+    this._meaterCookRatingState = null; // MEATER cook rating state (Issue #65)
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -275,6 +278,27 @@ class KitchenCookingPanel extends LitElement {
       this.requestUpdate();
     };
     window.addEventListener('focus', this._focusHandler);
+    
+    // Fix for blank screen when returning to a tab via HA sidebar navigation (Issue #66)
+    // IntersectionObserver detects when the panel element becomes visible in the viewport
+    // This handles the case where HA hides/shows the panel via CSS (display:none)
+    // which doesn't trigger visibilitychange or focus events
+    if (typeof IntersectionObserver !== 'undefined') {
+      this._intersectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
+              this._currentPath = 'welcome';
+            }
+            this.requestUpdate();
+          }
+        });
+      });
+      this._intersectionObserver.observe(this);
+    }
+    
+    // Force re-render on reconnection
+    this.requestUpdate();
   }
 
   disconnectedCallback() {
@@ -287,6 +311,10 @@ class KitchenCookingPanel extends LitElement {
     if (this._focusHandler) {
       window.removeEventListener('focus', this._focusHandler);
       this._focusHandler = null;
+    }
+    if (this._intersectionObserver) {
+      this._intersectionObserver.disconnect();
+      this._intersectionObserver = null;
     }
   }
 
@@ -2272,6 +2300,11 @@ class KitchenCookingPanel extends LitElement {
    * Route content rendering based on current path
    */
   _renderContent(entities, isActive, state, activeCooks) {
+    // MEATER cook rating screen (Issue #65) - highest priority
+    if (this._meaterCookRatingState) {
+      return this._renderMeaterCookRating();
+    }
+    
     // Phase 4: If in recipe cook flow, always show it (highest priority)
     if (this._recipeCookState) {
       return this._renderRecipeCookFlow();
@@ -5560,7 +5593,172 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _complete() {
+    // Show rating screen before completing (Issue #65)
+    const state = this._getState();
+    const attrs = state?.attributes || {};
+    this._meaterCookRatingState = {
+      entityId: this._selectedEntity,
+      cut: attrs.cut_display || attrs.cut || 'Unknown',
+      protein: attrs.protein || '',
+      doneness: attrs.doneness || '',
+      notes: attrs.notes || this._currentNotes || '',
+      easeRating: 0,
+      resultRating: 0,
+    };
+    this.requestUpdate();
+  }
+
+  /**
+   * Render MEATER cook rating screen (Issue #65)
+   */
+  _renderMeaterCookRating() {
+    const state = this._meaterCookRatingState;
+    if (!state) return html``;
+
+    return html`
+      <ha-card>
+        <div class="card-content">
+          <div class="recipe-cook-finish">
+            <h3>🎉 Cook Complete!</h3>
+            <p>${state.cut} ${state.doneness ? '• ' + state.doneness.replace('_', ' ') : ''}</p>
+            <p>How did it go? Please rate your experience:</p>
+
+            <div class="recipe-cook-rating">
+              <h4>😊 Ease of Cooking</h4>
+              <p class="rating-description">How easy was this cook?</p>
+              <div class="star-selector">
+                ${[1, 2, 3, 4, 5].map(rating => html`
+                  <button 
+                    class="star-btn ${state.easeRating >= rating ? 'active' : ''}"
+                    @click=${() => {
+                      this._meaterCookRatingState = { ...this._meaterCookRatingState, easeRating: rating };
+                    }}
+                  >
+                    ${state.easeRating >= rating ? '⭐' : '☆'}
+                  </button>
+                `)}
+              </div>
+            </div>
+
+            <div class="recipe-cook-rating">
+              <h4>😋 Result Quality</h4>
+              <p class="rating-description">How did the final result turn out?</p>
+              <div class="star-selector">
+                ${[1, 2, 3, 4, 5].map(rating => html`
+                  <button 
+                    class="star-btn ${state.resultRating >= rating ? 'active' : ''}"
+                    @click=${() => {
+                      this._meaterCookRatingState = { ...this._meaterCookRatingState, resultRating: rating };
+                    }}
+                  >
+                    ${state.resultRating >= rating ? '⭐' : '☆'}
+                  </button>
+                `)}
+              </div>
+            </div>
+
+            <div class="recipe-cook-notes">
+              <h4>📝 Notes (Optional)</h4>
+              <textarea
+                placeholder="Any notes, modifications, or thoughts about this cook..."
+                .value=${state.notes || ''}
+                @input=${(e) => {
+                  this._meaterCookRatingState = { ...this._meaterCookRatingState, notes: e.target.value };
+                }}
+                rows="4"
+              ></textarea>
+            </div>
+
+            ${!state.easeRating || !state.resultRating ? html`
+              <p class="rating-required">⚠️ Please provide both ratings to save this cook</p>
+            ` : ''}
+
+            <div class="action-buttons" style="margin-top: 16px;">
+              <ha-button 
+                unelevated 
+                ?disabled=${!state.easeRating || !state.resultRating}
+                @click=${() => this._saveMeaterCookRating()}
+              >
+                💾 Save & Complete
+              </ha-button>
+              <ha-button outlined @click=${() => this._skipMeaterCookRating()}>
+                ⏭️ Skip Rating
+              </ha-button>
+            </div>
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /**
+   * Save MEATER cook rating and complete session (Issue #65)
+   */
+  async _saveMeaterCookRating() {
+    const state = this._meaterCookRatingState;
+    if (!state) return;
+
+    try {
+      // Ensure selected entity is correct for service calls
+      if (state.entityId) {
+        this._selectedEntity = state.entityId;
+      }
+      
+      // Set notes if user provided any
+      if (state.notes) {
+        await this._callService('set_notes', { notes: state.notes });
+      }
+
+      // Complete the session (saves cook to history)
+      await this._callService('complete_session');
+
+      // Wait briefly for the cook to be saved to history, then update with ratings
+      setTimeout(async () => {
+        try {
+          const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/history');
+          if (response && response.history && response.history.length > 0) {
+            // Most recent cook is first (history is returned most recent first)
+            const lastCook = response.history[0];
+            if (lastCook.id) {
+              await this.hass.callApi('PATCH', `kitchen_cooking_engine/history/${lastCook.id}`, {
+                ease_rating: state.easeRating,
+                result_rating: state.resultRating,
+                notes: state.notes || lastCook.notes || '',
+              });
+            }
+          }
+        } catch (e) {
+          console.error('Error updating cook ratings:', e);
+        }
+      }, 1000);
+
+      this._meaterCookRatingState = null;
+      this.requestUpdate();
+    } catch (error) {
+      console.error('Error completing cook with rating:', error);
+      this._showMessage('❌ Error', `Error completing cook: ${error.message}`, true);
+    }
+  }
+
+  /**
+   * Skip rating and just complete the session (Issue #65)
+   */
+  _skipMeaterCookRating() {
+    const state = this._meaterCookRatingState;
+    
+    // Ensure selected entity is correct for service calls
+    if (state && state.entityId) {
+      this._selectedEntity = state.entityId;
+    }
+    
+    // Set notes if any were provided
+    if (state && state.notes) {
+      this._callService('set_notes', { notes: state.notes });
+    }
+    
     this._callService('complete_session');
+    this._meaterCookRatingState = null;
+    this.requestUpdate();
   }
 
   static get styles() {

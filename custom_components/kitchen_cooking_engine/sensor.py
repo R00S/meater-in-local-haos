@@ -1150,6 +1150,14 @@ class CookingSessionSensor(SensorEntity):
         """Save completed cook to history."""
         from .storage import async_add_cook_to_history
         
+        # Calculate cook duration in minutes
+        # Duration is from session start to rest start (active cooking time)
+        # If no rest was started, use current time as end
+        duration = None
+        if self._session_start:
+            end_time = self._rest_start if self._rest_start else datetime.now()
+            duration = round((end_time - self._session_start).total_seconds() / 60, 1)
+        
         cook_data = {
             "protein": self._protein,
             "cut": self._cut,
@@ -1161,6 +1169,7 @@ class CookingSessionSensor(SensorEntity):
             "target_temp_f": self._target_temp_f,
             "started_at": self._session_start.isoformat() if self._session_start else None,
             "rest_started_at": self._rest_start.isoformat() if self._rest_start else None,
+            "duration": duration,  # Cook duration in minutes (session start to rest start)
             "temp_history": self._full_cook_history,
             "notes": self._cook_notes,
             "final_temp": self._current_temp,
