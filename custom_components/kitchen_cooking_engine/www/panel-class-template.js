@@ -5431,7 +5431,12 @@ class KitchenCookingPanel extends LitElement {
           this._messageDialogContent = `Generating full recipe details with AI...\n${res.message}`;
           this.requestUpdate();
         }
-      } catch (_) { /* ignore polling errors */ }
+      } catch (pollErr) {
+        // Log unexpected errors to aid debugging, but don't crash the interval.
+        if (pollErr && pollErr.status_code && pollErr.status_code !== 503 && pollErr.status_code !== 429) {
+          console.warn('[AI Detail Status] Polling error:', pollErr);
+        }
+      }
     }, 1000);
 
     try {
@@ -5489,7 +5494,7 @@ class KitchenCookingPanel extends LitElement {
         this._messageDialogIsError = false;
         this._showMessageDialog = true;
         this.requestUpdate();
-        setTimeout(() => { this._showMessageDialog = false; this.requestUpdate(); }, 4000);
+        setTimeout(() => { this._showMessageDialog = false; this.requestUpdate(); }, 3000);
       }
     } catch (error) {
       if (cancelled) return; // User cancelled

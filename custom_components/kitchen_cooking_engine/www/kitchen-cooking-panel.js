@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Mar 2026, 15:03 CET
+ * AUTO-GENERATED: 16 Mar 2026, 15:05 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Mar 2026, 15:03 CET
+// Last generated: 16 Mar 2026, 15:05 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -16885,7 +16885,12 @@ class KitchenCookingPanel extends LitElement {
           this._messageDialogContent = `Generating full recipe details with AI...\n${res.message}`;
           this.requestUpdate();
         }
-      } catch (_) { /* ignore polling errors */ }
+      } catch (pollErr) {
+        // Log unexpected errors to aid debugging, but don't crash the interval.
+        if (pollErr && pollErr.status_code && pollErr.status_code !== 503 && pollErr.status_code !== 429) {
+          console.warn('[AI Detail Status] Polling error:', pollErr);
+        }
+      }
     }, 1000);
 
     try {
@@ -16943,7 +16948,7 @@ class KitchenCookingPanel extends LitElement {
         this._messageDialogIsError = false;
         this._showMessageDialog = true;
         this.requestUpdate();
-        setTimeout(() => { this._showMessageDialog = false; this.requestUpdate(); }, 4000);
+        setTimeout(() => { this._showMessageDialog = false; this.requestUpdate(); }, 3000);
       }
     } catch (error) {
       if (cancelled) return; // User cancelled
@@ -20323,7 +20328,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "227";
+const PANEL_VERSION = "228";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
