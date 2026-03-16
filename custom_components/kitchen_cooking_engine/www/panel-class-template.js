@@ -3125,17 +3125,17 @@ class KitchenCookingPanel extends LitElement {
           <div class="temp-display">
             <div class="temp-current">
               <div class="value">${currentTemp !== null && currentTemp !== undefined ? currentTemp + '°C' : '--'}</div>
-              <div class="label">Tip Temp</div>
+              <div class="label">${this._t('meater.tip_temp')}</div>
             </div>
             <div class="temp-target">
               <div class="value">${targetTemp}°C</div>
-              <div class="label">Target</div>
+              <div class="label">${this._t('common.target')}</div>
             </div>
           </div>
           
           ${ambientTemp !== null && ambientTemp !== undefined ? html`
             <div class="ambient-temp-display">
-              <span class="ambient-label">🌡️ Ambient:</span>
+              <span class="ambient-label">${this._t('meater.ambient_label')}</span>
               <span class="ambient-value">${ambientTemp}°C</span>
             </div>
           ` : ''}
@@ -3148,25 +3148,25 @@ class KitchenCookingPanel extends LitElement {
               <div class="progress-bar" style="width: ${Math.min(100, progress)}%"></div>
             </div>
             <div class="progress-info">
-              <span>${progress.toFixed(0)}% complete</span>
-              ${eta !== null && eta !== undefined && cookState !== 'resting' ? html`<span>ETA: ${eta} min</span>` : ''}
+              <span>${progress.toFixed(0)}% ${this._t('meater.complete_pct')}</span>
+              ${eta !== null && eta !== undefined && cookState !== 'resting' ? html`<span>${this._t('meater.eta_label')} ${eta} ${this._t('common.minutes_short')}</span>` : ''}
               ${cookState === 'resting' && restTimeRemaining !== null && restTimeRemaining !== undefined ? 
-                html`<span>Rest remaining: ${restTimeRemaining.toFixed(1)} min</span>` : ''}
+                html`<span>${this._t('meater.rest_remaining_label')} ${restTimeRemaining.toFixed(1)} ${this._t('common.minutes_short')}</span>` : ''}
             </div>
           </div>
           
           <div class="cook-info">
             <div class="cook-info-item">
-              <div class="label">Method</div>
+              <div class="label">${this._t('meater.method_label')}</div>
               <div class="value">${method}</div>
             </div>
             <div class="cook-info-item">
-              <div class="label">Rest Time</div>
+              <div class="label">${this._t('meater.rest_time_label')}</div>
               <div class="value">${attrs.rest_time_minutes || '--'} min</div>
             </div>
             ${batteryLevel !== null && batteryLevel !== undefined ? html`
               <div class="cook-info-item">
-                <div class="label">🔋 Battery</div>
+                <div class="label">${this._t('meater.battery_label')}</div>
                 <div class="value battery-${batteryLevel <= 20 ? 'low' : batteryLevel <= 50 ? 'medium' : 'high'}">${batteryLevel}%</div>
               </div>
             ` : ''}
@@ -3175,12 +3175,12 @@ class KitchenCookingPanel extends LitElement {
           <!-- Notes Section -->
           <div class="notes-section">
             <button class="notes-toggle" @click=${() => this._showNotes = !this._showNotes}>
-              📝 ${this._showNotes ? 'Hide Notes' : 'Add Notes'}
+              📝 ${this._showNotes ? this._t('meater.hide_notes') : this._t('meater.add_notes_btn')}
             </button>
             ${this._showNotes ? html`
               <textarea 
                 class="notes-input" 
-                placeholder="Add notes about this cook (adjustments, observations, etc.)"
+                placeholder="${this._t('meater.notes_placeholder')}"
                 .value=${attrs.notes || this._currentNotes}
                 @change=${(e) => this._setNotes(e.target.value)}
               ></textarea>
@@ -3189,12 +3189,12 @@ class KitchenCookingPanel extends LitElement {
           
           <div class="action-buttons">
             ${cookState === 'goal_reached' ? html`
-              <ha-button unelevated @click=${this._startRest}>⏱️ Start Rest</ha-button>
+              <ha-button unelevated @click=${this._startRest}>${this._t('meater.start_rest_btn')}</ha-button>
             ` : ''}
             ${cookState === 'resting' ? html`
-              <ha-button unelevated @click=${this._complete}>✅ Complete</ha-button>
+              <ha-button unelevated @click=${this._complete}>${this._t('meater.complete_btn')}</ha-button>
             ` : ''}
-            <ha-button outlined @click=${this._stopCook}>⏹️ Stop</ha-button>
+            <ha-button outlined @click=${this._stopCook}>${this._t('meater.stop_btn')}</ha-button>
           </div>
         </div>
       </ha-card>
@@ -3627,7 +3627,7 @@ class KitchenCookingPanel extends LitElement {
             this._showMeaterCooking = false;
             this.requestUpdate();
           }}>
-            ← Back to MEATER Path
+            ${this._t('nav.back_to_meater_path')}
           </button>
           <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
         </div>
@@ -3640,7 +3640,7 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ← Back to Appliances
+          ${this._t('nav.back_to_appliances')}
         </button>
         <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
       </div>
@@ -3649,16 +3649,16 @@ class KitchenCookingPanel extends LitElement {
         <ha-card class="path-card clickable" @click=${() => this._startMeaterCooking()}>
           <div class="card-content path-card-content">
             <div class="path-icon">🌡️</div>
-            <h3>Start MEATER Cooking</h3>
-            <p>Select protein, set target, monitor temperature</p>
+            <h3>${this._t('meater.start_meater_cooking')}</h3>
+            <p>${this._t('meater.start_meater_desc')}</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._showRecentMeaterCooks()}>
           <div class="card-content path-card-content">
             <div class="path-icon">📋</div>
-            <h3>Recent MEATER Cooks</h3>
-            <p>View and restart previous temperature-based cooks</p>
+            <h3>${this._t('meater.recent_meater_cooks')}</h3>
+            <p>${this._t('meater.recent_meater_desc')}</p>
           </div>
         </ha-card>
       </div>
@@ -3693,16 +3693,16 @@ class KitchenCookingPanel extends LitElement {
           this._currentPath = 'meater';
           this.requestUpdate();
         }}>
-          ← Back to MEATER Path
+          ${this._t('nav.back_to_meater_path')}
         </button>
-        <h2>📋 Recent MEATER Cooks</h2>
+        <h2>📋 ${this._t('meater.recent_meater_cooks')}</h2>
       </div>
 
       ${meaterCooks.length === 0 ? html`
         <ha-card>
           <div class="card-content">
-            <p class="no-history">No previous MEATER cooks found.</p>
-            <p class="no-history-hint">Temperature-based cooks you complete will appear here for easy restart.</p>
+            <p class="no-history">${this._t('meater.no_previous_cooks')}</p>
+            <p class="no-history-hint">${this._t('meater.no_previous_cooks_hint')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -3712,7 +3712,7 @@ class KitchenCookingPanel extends LitElement {
               <div class="history-card-header">
                 <div class="history-title-row">
                   <h3 class="history-title">
-                    ${cook.protein || 'Unknown Protein'}
+                    ${cook.protein || this._t('meater.unknown_protein')}
                     ${cook.cut ? html` - ${cook.cut}` : ''}
                   </h3>
                   <span class="history-date">${this._formatDateTime(cook.start_time)}</span>
@@ -3723,10 +3723,10 @@ class KitchenCookingPanel extends LitElement {
                 <span class="history-detail">🥩 ${cook.protein}</span>
                 <span class="history-detail">🎯 ${(cook.doneness || '').replace('_', ' ')}</span>
                 <span class="history-detail">🍳 ${(cook.cooking_method || '').replace(/_/g, ' ')}</span>
-                <span class="history-detail">🌡️ ${cook.target_temp_c}°C target</span>
-                ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C peak</span>` : ''}
-                ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C after rest</span>` : 
-                  cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C final</span>` : ''}
+                <span class="history-detail">🌡️ ${cook.target_temp_c}°C ${this._t('meater.target_label')}</span>
+                ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C ${this._t('meater.peak_label')}</span>` : ''}
+                ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C ${this._t('meater.after_rest_label')}</span>` : 
+                  cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C ${this._t('meater.final_label')}</span>` : ''}
               </div>
               
               ${cook.notes ? html`
@@ -3737,13 +3737,13 @@ class KitchenCookingPanel extends LitElement {
               
               <div class="history-actions">
                 <button class="history-action-btn restart" @click=${() => this._restartCook(cook)}>
-                  🔄 Restart This Cook
+                  ${this._t('meater.restart_cook')}
                 </button>
                 <button class="history-action-btn edit" @click=${() => this._editCookNotes(cook)}>
-                  ✏️ Edit Notes
+                  ${this._t('meater.edit_notes')}
                 </button>
                 <button class="history-action-btn delete" @click=${() => this._deleteCook(cook.id)}>
-                  🗑️ Delete
+                  ${this._t('meater.delete_btn')}
                 </button>
               </div>
             </ha-card>
