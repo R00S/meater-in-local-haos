@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 15 Mar 2026, 21:52 UTC
-Last Change: v0.5.5.1 - Fix blank panel on tab return: fix hasChanged, add error boundary, reset to welcome on visibility
+Last Change: v0.5.5.2 - Fix AI recipe JSON parse error: better extraction, include actual AI response in errors, JSON-only prompt
 """
 
 DOMAIN = "kitchen_cooking_engine"

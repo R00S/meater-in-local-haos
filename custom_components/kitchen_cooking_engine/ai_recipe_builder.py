@@ -679,6 +679,10 @@ Format your response as a JSON array with exactly 4 recipes:
   ...
 ]
 
+IMPORTANT: Respond ONLY with the JSON array above. Do not include any explanatory text,
+preamble, commentary, or markdown formatting outside the JSON. The very first character
+of your response must be '[' and the very last must be ']'.
+
 Make the recipes diverse in cooking methods, flavors, and cuisines.
 """
         return prompt
@@ -794,9 +798,40 @@ Format your response as JSON:
   "prep_time_minutes": 15,
   "servings": {servings}
 }}
+
+IMPORTANT: Respond ONLY with the JSON object above. Do not include any explanatory text,
+preamble, commentary, or markdown formatting outside the JSON. The very first character
+of your response must be '{{' and the very last must be '}}'.
 """
         return prompt
-    
+
+    @staticmethod
+    def _extract_json_from_text(text: str, start_char: str, end_char: str) -> str:
+        """Scan *text* for a JSON value that starts with *start_char* (``[`` or ``{``).
+
+        Returns the candidate substring if it parses as valid JSON, otherwise
+        returns *text* unchanged so that the caller's ``json.loads`` can raise the
+        real ``JSONDecodeError``.
+
+        This handles the common case where the AI prepends a conversational
+        sentence before the JSON (e.g. "Here are 4 recipes:\\n\\n[...]").
+        """
+        import json
+
+        pos = text.find(start_char)
+        if pos < 0:
+            return text  # nothing to scan
+        candidate = text[pos:]
+        last_end = candidate.rfind(end_char)
+        if last_end <= 0:
+            return text
+        candidate = candidate[: last_end + 1]
+        try:
+            json.loads(candidate)
+            return candidate
+        except json.JSONDecodeError:
+            return text  # not valid JSON; let the caller handle the error
+
     async def _call_openai(self, prompt: str) -> str:
         """Call OpenAI via Home Assistant conversation integration.
         
@@ -806,45 +841,57 @@ Format your response as JSON:
         Returns:
             AI response text
         """
+        # Load AI settings outside the try/except so errors here propagate clearly.
+        from .storage import async_load_ai_settings
+        ai_settings = await async_load_ai_settings(self.hass)
+        agent_id = ai_settings.get("agent_id", "extended_openai_conversation_2")
+
+        _LOGGER.info(f"Using configured AI agent: {agent_id}")
+        _LOGGER.info(f"Calling conversation agent with prompt length: {len(prompt)}")
+
+        # Wrap only the actual API call in try/except so we don't accidentally
+        # swallow the ValueError we intentionally raise below for empty responses.
         try:
-            # Load AI settings from storage to get user-configured agent ID
-            from .storage import async_load_ai_settings
-            
-            ai_settings = await async_load_ai_settings(self.hass)
-            agent_id = ai_settings.get("agent_id", "extended_openai_conversation_2")
-            
-            _LOGGER.info(f"Using configured AI agent: {agent_id}")
-            _LOGGER.info(f"Calling conversation agent with prompt length: {len(prompt)}")
-            
-            # Use Home Assistant's conversation component
-            # This handles the OpenAI API integration
             result = await conversation.async_converse(
                 hass=self.hass,
                 text=prompt,
                 conversation_id=None,
                 context=None,
                 language=None,
-                agent_id=agent_id,  # Use OpenAI agent if found, otherwise default
+                agent_id=agent_id,
             )
-            
-            response_text = result.response.speech.get("plain", {}).get("speech", "")
-            
-            if not response_text:
-                _LOGGER.error("Empty response from conversation agent")
-                raise ValueError("Empty response from AI - check if the agent is configured correctly")
-            
-            _LOGGER.info(f"Received response of length: {len(response_text)}")
-            return response_text
-            
         except Exception as ex:
-            _LOGGER.error("Failed to call conversation agent: %s", ex, exc_info=True)
+            _LOGGER.error("Failed to call conversation agent '%s': %s", agent_id, ex, exc_info=True)
             raise RuntimeError(
-                f"Failed to communicate with OpenAI. "
+                f"Failed to communicate with AI agent '{agent_id}'. "
                 f"Error: {str(ex)}. "
-                f"Please verify: 1) OpenAI assistant is configured in Voice Assistants, "
-                f"2) Your OpenAI API key is valid, "
+                f"Please verify: 1) AI agent is configured in Voice Assistants, "
+                f"2) Your API key is valid, "
                 f"3) Check Home Assistant logs for more details"
             )
+
+        response_text = result.response.speech.get("plain", {}).get("speech", "")
+        _LOGGER.debug(
+            "AI agent '%s' raw response (first 500 chars): %s",
+            agent_id,
+            response_text[:500] if response_text else "(empty)",
+        )
+
+        if not response_text:
+            _LOGGER.error(
+                "Empty response from AI agent '%s'. "
+                "The agent is reachable but returned no text. "
+                "Check the agent's configuration and API key.",
+                agent_id,
+            )
+            raise ValueError(
+                f"Empty response from AI agent '{agent_id}'. "
+                f"The agent is connected but returned no text. "
+                f"Check the agent configuration and ensure it can generate text responses."
+            )
+
+        _LOGGER.info(f"Received response of length: {len(response_text)}")
+        return response_text
     
     def _parse_suggestions(self, response: str) -> List[AIRecipeSuggestion]:
         """Parse AI response into recipe suggestions.
@@ -858,6 +905,10 @@ Format your response as JSON:
         import json
         import re
         
+        # Save the original response BEFORE any extraction so we can include it
+        # in error messages even after the variable is reassigned.
+        original_response = response
+
         try:
             # Log raw response for debugging
             _LOGGER.debug(f"Raw AI response (first 500 chars): {response[:500]}")
@@ -916,10 +967,13 @@ Format your response as JSON:
                 response = response[start:end].strip()
             
             # Try to find JSON array in the response
-            # Look for [ at start and ] at end
             json_match = re.search(r'\[\s*\{.*\}\s*\]', response, re.DOTALL)
             if json_match:
                 response = json_match.group(0)
+            else:
+                # Fallback: scan from the first '[' for cases where the AI
+                # prepends conversational text before the JSON array.
+                response = self._extract_json_from_text(response, '[', ']')
             
             # Check if response is empty or too short
             if not response or len(response) < 10:
@@ -961,18 +1015,22 @@ Format your response as JSON:
         except json.JSONDecodeError as ex:
             _LOGGER.error(
                 "Failed to parse JSON from AI response. "
-                f"Error: {ex}. "
-                f"Response (first 200 chars): {response[:200]}"
+                "Error: %s. "
+                "Original AI response (first 500 chars): %s",
+                ex,
+                original_response[:500],
             )
             raise ValueError(
                 f"AI returned invalid JSON format. "
-                f"This usually means the AI assistant needs better configuration or the response was cut off. "
+                f"The AI responded with: '{original_response[:500]}'. "
+                f"This usually means the AI assistant returned a conversational response "
+                f"instead of JSON. Check your AI agent configuration. "
                 f"Error: {str(ex)}"
             )
         except Exception as ex:
             _LOGGER.error("Failed to parse AI suggestions: %s", ex, exc_info=True)
             # Include part of the response in the error for debugging
-            response_preview = response[:200] if response else "(empty response)"
+            response_preview = original_response[:500] if original_response else "(empty response)"
             raise ValueError(
                 f"Could not parse AI response into recipe suggestions. "
                 f"Response preview: {response_preview}... "
@@ -997,6 +1055,9 @@ Format your response as JSON:
         import json
         import re
         
+        # Save the original response BEFORE any extraction for error reporting.
+        original_response = response
+
         try:
             # Log raw response for debugging
             _LOGGER.debug(f"Raw AI detail response (first 500 chars): {response[:500]}")
@@ -1057,6 +1118,10 @@ Format your response as JSON:
             json_match = re.search(r'\{.*\}', response, re.DOTALL)
             if json_match:
                 response = json_match.group(0)
+            else:
+                # Fallback: scan from the first '{' for cases where the AI
+                # prepends conversational text before the JSON object.
+                response = self._extract_json_from_text(response, '{', '}')
             
             # Check if response is empty or too short
             if not response or len(response) < 10:
@@ -1100,16 +1165,20 @@ Format your response as JSON:
         except json.JSONDecodeError as ex:
             _LOGGER.error(
                 "Failed to parse JSON from AI detail response. "
-                f"Error: {ex}. "
-                f"Response (first 200 chars): {response[:200]}"
+                "Error: %s. "
+                "Original AI response (first 500 chars): %s",
+                ex,
+                original_response[:500],
             )
             raise ValueError(
                 f"AI returned invalid JSON format for recipe details. "
+                f"The AI responded with: '{original_response[:500]}'. "
+                f"Check your AI agent configuration. "
                 f"Error: {str(ex)}"
             )
         except Exception as ex:
             _LOGGER.error("Failed to parse recipe detail: %s", ex, exc_info=True)
-            response_preview = response[:200] if response else "(empty response)"
+            response_preview = original_response[:500] if original_response else "(empty response)"
             raise ValueError(
                 f"Could not parse AI response into recipe details. "
                 f"Response preview: {response_preview}... "
