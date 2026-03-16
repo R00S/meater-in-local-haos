@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Mar 2026, 20:03 CET
+ * AUTO-GENERATED: 16 Mar 2026, 20:05 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Mar 2026, 20:03 CET
+// Last generated: 16 Mar 2026, 20:05 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -17145,7 +17145,11 @@ class KitchenCookingPanel extends LitElement {
     const allIngredients = recipe.ingredients && recipe.ingredients.length > 0 ? recipe.ingredients : [];
     const activeIngs = [];
     const inactiveIngs = [];
-    const measureWords = ['cups','cup','tbsp','tsp','ounce','ounces','pound','pounds','gram','grams','tablespoon','tablespoons','teaspoon','teaspoons','inch','lbs','chopped','diced','minced','sliced','finely','freshly','large','small','medium','optional','about','into','with','from','each','piece','pieces'];
+    const measureWords = new Set(['cups','cup','tbsp','tsp','ounce','ounces','pound','pounds','gram','grams','tablespoon','tablespoons','teaspoon','teaspoons','inch','lbs','chopped','diced','minced','sliced','finely','freshly','large','small','medium','optional','about','into','with','from','each','piece','pieces']);
+    const escapeRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const extractKeywords = (text) => text.split(/[\s,]+/).filter(w =>
+      w.length > 3 && !measureWords.has(w) && !/^\d/.test(w)
+    );
     const instructionLower = instructionText.toLowerCase();
     
     if (allIngredients.length > 0) {
@@ -17156,24 +17160,19 @@ class KitchenCookingPanel extends LitElement {
         // Method 1: match against per-step ingredient list (structured recipes)
         if (stepIngredients.length > 0) {
           isActive = stepIngredients.some(si => {
-            const siLower = si.toLowerCase();
-            const keyWords = siLower.split(/[\s,]+/).filter(w => 
-              w.length > 3 && !measureWords.includes(w)
-            );
+            const keyWords = extractKeywords(si.toLowerCase());
             return keyWords.some(word => {
-              const regex = new RegExp(`\\b${word}\\b`, 'i');
+              const regex = new RegExp(`\\b${escapeRegex(word)}\\b`, 'i');
               return regex.test(ingLower);
-            }) || ingLower === siLower;
+            }) || ingLower === si.toLowerCase();
           });
         }
 
         // Method 2: scan instruction text for ingredient keywords (AI/flat recipes)
         if (!isActive) {
-          const keyWords = ingLower.split(/[\s,]+/).filter(w =>
-            w.length > 3 && !measureWords.includes(w) && !/^\d/.test(w)
-          );
+          const keyWords = extractKeywords(ingLower);
           isActive = keyWords.some(word => {
-            const regex = new RegExp(`\\b${word}\\b`, 'i');
+            const regex = new RegExp(`\\b${escapeRegex(word)}\\b`, 'i');
             return regex.test(instructionLower);
           });
         }
@@ -20387,7 +20386,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "231";
+const PANEL_VERSION = "232";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
