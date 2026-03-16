@@ -51,7 +51,7 @@ from typing import Any
 class MeasurementUnit:
     """A single measurement unit."""
     id: str             # e.g. "dl", "tsp", "g"
-    abbr_se: str        # Swedish abbreviation
+    abbr_sv: str        # Swedish abbreviation
     abbr_en: str        # English abbreviation
     type: str           # "volume" or "mass"
     to_base: float      # multiplier to convert to base unit (ml or g)
@@ -101,9 +101,9 @@ class PreferenceRule:
 SE_VOLUME_PREFS: list[PreferenceRule] = [
     PreferenceRule("l",   1000.0),   # ≥ 1 L → use L
     PreferenceRule("dl",  50.0),     # ≥ 0.5 dl (50 ml) → dl preferred over cl
+    PreferenceRule("msk", 15.0),     # ≥ 1 msk (15 ml) → spoon measure
     PreferenceRule("cl",  10.0),     # ≥ 1 cl (10 ml) → cl preferred over ml
-    PreferenceRule("msk", 15.0),     # ≥ 1 msk (15 ml)
-    PreferenceRule("tsk", 5.0),      # ≥ 1 tsk (5 ml)
+    PreferenceRule("tsk", 5.0),      # ≥ 1 tsk (5 ml) → spoon measure
     PreferenceRule("krm", 0.0),      # anything smaller
 ]
 
@@ -292,7 +292,7 @@ def format_quantity(
     else:
         num_str = str(round(converted))
 
-    display_name = target_unit.abbr_se if language == "sv" else target_unit.abbr_en
+    display_name = target_unit.abbr_sv if language == "sv" else target_unit.abbr_en
     return f"{num_str} {display_name}"
 
 
@@ -338,7 +338,7 @@ def get_measurement_systems_js() -> dict[str, Any]:
         units_dict = {}
         for u in system.volume_units + system.mass_units:
             units_dict[u.id] = {
-                "abbr_sv": u.abbr_se,
+                "abbr_sv": u.abbr_sv,
                 "abbr_en": u.abbr_en,
                 "type": u.type,
                 "to_base": u.to_base,

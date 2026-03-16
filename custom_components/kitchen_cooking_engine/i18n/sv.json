@@ -38,7 +38,13 @@
     "ongoing_cooks": "Pågående tillagningar",
     "no_appliances": "Inga apparater konfigurerade ännu. Lägg till en i Inställningar → Enheter & Tjänster.",
     "language_label": "🌐 Språk / Language",
-    "data_source_label": "🌍 Temperaturdata"
+    "data_source_label": "🌍 Temperaturdata",
+    "measurement_system_label": "📏 Måttsystem",
+    "previous_cooks_description": "Visa och starta om dina tidigare tillagningar",
+    "configure_ai_agent": "Konfigurera din AI-agent för att aktivera receptbyggaren",
+    "measurement_se_description": "krm · tsk · msk · cl · dl · l · g · hg · kg — Temperatur i °C",
+    "measurement_uk_description": "tsp · tbsp · ml · dl · l · g · kg — Temperatur i °C",
+    "measurement_us_description": "tsp · tbsp · cup · fl oz · oz · lb — Temperatur i °F"
   },
   "meater": {
     "title": "🌡️ MEATER Tillagning",

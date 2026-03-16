@@ -3465,7 +3465,7 @@ class KitchenCookingPanel extends LitElement {
             <div class="previous-cooks-icon">📋</div>
             <div class="previous-cooks-text">
               <h3>${this._t('meater.previous_cooks')}</h3>
-              <p>${this._language === 'sv' ? 'Visa och starta om dina tidigare tillagningar' : 'View and restart your past cooking sessions'}</p>
+              <p>${this._t('welcome.previous_cooks_description')}</p>
             </div>
           </div>
         </ha-card>
@@ -3475,7 +3475,7 @@ class KitchenCookingPanel extends LitElement {
             <div class="previous-cooks-icon">⚙️</div>
             <div class="previous-cooks-text">
               <h3>${this._t('ai_recipe.settings')}</h3>
-              <p>${this._aiAgentId ? `Agent: ${this._aiAgentId}` : (this._language === 'sv' ? 'Konfigurera din AI-agent för att aktivera receptbyggaren' : 'Configure your AI agent to enable the Recipe Builder')}</p>
+              <p>${this._aiAgentId ? `Agent: ${this._aiAgentId}` : this._t('welcome.configure_ai_agent')}</p>
             </div>
           </div>
         </ha-card>
@@ -3501,30 +3501,26 @@ class KitchenCookingPanel extends LitElement {
 
         <ha-card>
           <div class="card-content">
-            <h3>${this._language === 'sv' ? '📏 Måttsystem' : '📏 Measurement System'}</h3>
+            <h3>${this._t('welcome.measurement_system_label')}</h3>
             <div class="button-group">
               <button
                 class="category-btn ${this._measurementSystem === 'se' ? 'selected' : ''}"
                 @click=${() => this._saveMeasurementPreference('se')}>
-                ${this._language === 'sv' ? '🇸🇪 Svenska mått' : '🇸🇪 Swedish'}
+                ${typeof MEASUREMENT_SYSTEMS !== 'undefined' && MEASUREMENT_SYSTEMS.se ? (this._language === 'sv' ? MEASUREMENT_SYSTEMS.se.name_sv : MEASUREMENT_SYSTEMS.se.name_en) : '🇸🇪 Swedish'}
               </button>
               <button
                 class="category-btn ${this._measurementSystem === 'uk' ? 'selected' : ''}"
                 @click=${() => this._saveMeasurementPreference('uk')}>
-                ${this._language === 'sv' ? '🇬🇧 Brittiska mått' : '🇬🇧 UK Metric'}
+                ${typeof MEASUREMENT_SYSTEMS !== 'undefined' && MEASUREMENT_SYSTEMS.uk ? (this._language === 'sv' ? MEASUREMENT_SYSTEMS.uk.name_sv : MEASUREMENT_SYSTEMS.uk.name_en) : '🇬🇧 UK Metric'}
               </button>
               <button
                 class="category-btn ${this._measurementSystem === 'us' ? 'selected' : ''}"
                 @click=${() => this._saveMeasurementPreference('us')}>
-                ${this._language === 'sv' ? '🇺🇸 Amerikanska mått' : '🇺🇸 US Customary'}
+                ${typeof MEASUREMENT_SYSTEMS !== 'undefined' && MEASUREMENT_SYSTEMS.us ? (this._language === 'sv' ? MEASUREMENT_SYSTEMS.us.name_sv : MEASUREMENT_SYSTEMS.us.name_en) : '🇺🇸 US Customary'}
               </button>
             </div>
             <p class="source-description" style="margin-top: 8px; font-size: 0.85em;">
-              ${this._measurementSystem === 'se'
-                ? (this._language === 'sv' ? 'krm · tsk · msk · cl · dl · l · g · hg · kg — Temperatur i °C' : 'krm · tsk · msk · cl · dl · l · g · hg · kg — Temperature in °C')
-                : this._measurementSystem === 'uk'
-                  ? (this._language === 'sv' ? 'tsp · tbsp · ml · dl · l · g · kg — Temperatur i °C' : 'tsp · tbsp · ml · dl · l · g · kg — Temperature in °C')
-                  : (this._language === 'sv' ? 'tsp · tbsp · cup · fl oz · oz · lb — Temperatur i °F' : 'tsp · tbsp · cup · fl oz · oz · lb — Temperature in °F')}
+              ${this._t('welcome.measurement_' + this._measurementSystem + '_description')}
             </p>
           </div>
         </ha-card>

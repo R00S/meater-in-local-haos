@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Mar 2026, 22:18 CET
+ * AUTO-GENERATED: 16 Mar 2026, 22:24 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 16 Mar 2026, 22:18 CET
+// Last generated: 16 Mar 2026, 22:24 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -11459,12 +11459,12 @@ const MEASUREMENT_SYSTEMS = {
         "min_ml": 50.0
       },
       {
-        "unit": "cl",
-        "min_ml": 10.0
-      },
-      {
         "unit": "msk",
         "min_ml": 15.0
+      },
+      {
+        "unit": "cl",
+        "min_ml": 10.0
       },
       {
         "unit": "tsk",
@@ -11790,7 +11790,13 @@ const I18N_STRINGS = {
       "ongoing_cooks": "Ongoing cooks",
       "no_appliances": "No appliances configured yet. Add one in Settings → Devices & Services.",
       "language_label": "🌐 Language / Språk",
-      "data_source_label": "🌍 Temperature Data Source"
+      "data_source_label": "🌍 Temperature Data Source",
+      "measurement_system_label": "📏 Measurement System",
+      "previous_cooks_description": "View and restart your past cooking sessions",
+      "configure_ai_agent": "Configure your AI agent to enable the Recipe Builder",
+      "measurement_se_description": "krm · tsk · msk · cl · dl · l · g · hg · kg — Temperature in °C",
+      "measurement_uk_description": "tsp · tbsp · ml · dl · l · g · kg — Temperature in °C",
+      "measurement_us_description": "tsp · tbsp · cup · fl oz · oz · lb — Temperature in °F"
     },
     "meater": {
       "title": "🌡️ MEATER Cooking",
@@ -11974,7 +11980,13 @@ const I18N_STRINGS = {
       "ongoing_cooks": "Pågående tillagningar",
       "no_appliances": "Inga apparater konfigurerade ännu. Lägg till en i Inställningar → Enheter & Tjänster.",
       "language_label": "🌐 Språk / Language",
-      "data_source_label": "🌍 Temperaturdata"
+      "data_source_label": "🌍 Temperaturdata",
+      "measurement_system_label": "📏 Måttsystem",
+      "previous_cooks_description": "Visa och starta om dina tidigare tillagningar",
+      "configure_ai_agent": "Konfigurera din AI-agent för att aktivera receptbyggaren",
+      "measurement_se_description": "krm · tsk · msk · cl · dl · l · g · hg · kg — Temperatur i °C",
+      "measurement_uk_description": "tsp · tbsp · ml · dl · l · g · kg — Temperatur i °C",
+      "measurement_us_description": "tsp · tbsp · cup · fl oz · oz · lb — Temperatur i °F"
     },
     "meater": {
       "title": "🌡️ MEATER Tillagning",
@@ -15598,7 +15610,7 @@ class KitchenCookingPanel extends LitElement {
             <div class="previous-cooks-icon">📋</div>
             <div class="previous-cooks-text">
               <h3>${this._t('meater.previous_cooks')}</h3>
-              <p>${this._language === 'sv' ? 'Visa och starta om dina tidigare tillagningar' : 'View and restart your past cooking sessions'}</p>
+              <p>${this._t('welcome.previous_cooks_description')}</p>
             </div>
           </div>
         </ha-card>
@@ -15608,7 +15620,7 @@ class KitchenCookingPanel extends LitElement {
             <div class="previous-cooks-icon">⚙️</div>
             <div class="previous-cooks-text">
               <h3>${this._t('ai_recipe.settings')}</h3>
-              <p>${this._aiAgentId ? `Agent: ${this._aiAgentId}` : (this._language === 'sv' ? 'Konfigurera din AI-agent för att aktivera receptbyggaren' : 'Configure your AI agent to enable the Recipe Builder')}</p>
+              <p>${this._aiAgentId ? `Agent: ${this._aiAgentId}` : this._t('welcome.configure_ai_agent')}</p>
             </div>
           </div>
         </ha-card>
@@ -15634,30 +15646,26 @@ class KitchenCookingPanel extends LitElement {
 
         <ha-card>
           <div class="card-content">
-            <h3>${this._language === 'sv' ? '📏 Måttsystem' : '📏 Measurement System'}</h3>
+            <h3>${this._t('welcome.measurement_system_label')}</h3>
             <div class="button-group">
               <button
                 class="category-btn ${this._measurementSystem === 'se' ? 'selected' : ''}"
                 @click=${() => this._saveMeasurementPreference('se')}>
-                ${this._language === 'sv' ? '🇸🇪 Svenska mått' : '🇸🇪 Swedish'}
+                ${typeof MEASUREMENT_SYSTEMS !== 'undefined' && MEASUREMENT_SYSTEMS.se ? (this._language === 'sv' ? MEASUREMENT_SYSTEMS.se.name_sv : MEASUREMENT_SYSTEMS.se.name_en) : '🇸🇪 Swedish'}
               </button>
               <button
                 class="category-btn ${this._measurementSystem === 'uk' ? 'selected' : ''}"
                 @click=${() => this._saveMeasurementPreference('uk')}>
-                ${this._language === 'sv' ? '🇬🇧 Brittiska mått' : '🇬🇧 UK Metric'}
+                ${typeof MEASUREMENT_SYSTEMS !== 'undefined' && MEASUREMENT_SYSTEMS.uk ? (this._language === 'sv' ? MEASUREMENT_SYSTEMS.uk.name_sv : MEASUREMENT_SYSTEMS.uk.name_en) : '🇬🇧 UK Metric'}
               </button>
               <button
                 class="category-btn ${this._measurementSystem === 'us' ? 'selected' : ''}"
                 @click=${() => this._saveMeasurementPreference('us')}>
-                ${this._language === 'sv' ? '🇺🇸 Amerikanska mått' : '🇺🇸 US Customary'}
+                ${typeof MEASUREMENT_SYSTEMS !== 'undefined' && MEASUREMENT_SYSTEMS.us ? (this._language === 'sv' ? MEASUREMENT_SYSTEMS.us.name_sv : MEASUREMENT_SYSTEMS.us.name_en) : '🇺🇸 US Customary'}
               </button>
             </div>
             <p class="source-description" style="margin-top: 8px; font-size: 0.85em;">
-              ${this._measurementSystem === 'se'
-                ? (this._language === 'sv' ? 'krm · tsk · msk · cl · dl · l · g · hg · kg — Temperatur i °C' : 'krm · tsk · msk · cl · dl · l · g · hg · kg — Temperature in °C')
-                : this._measurementSystem === 'uk'
-                  ? (this._language === 'sv' ? 'tsp · tbsp · ml · dl · l · g · kg — Temperatur i °C' : 'tsp · tbsp · ml · dl · l · g · kg — Temperature in °C')
-                  : (this._language === 'sv' ? 'tsp · tbsp · cup · fl oz · oz · lb — Temperatur i °F' : 'tsp · tbsp · cup · fl oz · oz · lb — Temperature in °F')}
+              ${this._t('welcome.measurement_' + this._measurementSystem + '_description')}
             </p>
           </div>
         </ha-card>
@@ -21284,7 +21292,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "236";
+const PANEL_VERSION = "238";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
