@@ -114,6 +114,7 @@ class KitchenCookingPanel extends LitElement {
       _messageDialogOnCancel: { type: Object },
       // AI Settings
       _aiAgentId: { type: String },
+      _aiBackupAgentId: { type: String },
       _showAISettingsModal: { type: Boolean },
       // Feature notes editing in appliance path
       _showFeatureNotesEditor: { type: Boolean },
@@ -217,6 +218,7 @@ class KitchenCookingPanel extends LitElement {
     this._aiGeneratingAbort = null; // AbortController for cancelling generation
     this._messageDialogOnCancel = null; // Optional cancel callback for dialog
     this._aiAgentId = ''; // AI agent entity ID for recipe generation
+    this._aiBackupAgentId = ''; // Backup AI agent (used when primary is overloaded)
     this._showAISettingsModal = false; // Show AI settings modal
     this._showFeatureNotesEditor = false; // Show feature notes editor in appliance path
     this._meaterCookRatingState = null; // MEATER cook rating state (Issue #65)
@@ -860,6 +862,7 @@ class KitchenCookingPanel extends LitElement {
       const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_settings');
       if (response.status === 'ok' && response.settings?.agent_id) {
         this._aiAgentId = response.settings.agent_id;
+        this._aiBackupAgentId = response.settings.backup_agent_id || '';
       }
     } catch (e) {
       console.error('[AI Settings] Failed to load settings on startup:', e);
@@ -882,12 +885,15 @@ class KitchenCookingPanel extends LitElement {
   async _saveAISettings() {
     try {
       const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_settings', {
-        agent_id: this._aiAgentId
+        agent_id: this._aiAgentId,
+        backup_agent_id: this._aiBackupAgentId,
       });
       
       if (response.status === 'ok') {
-        // Show success message
-        this._showMessage('AI Settings Saved', `✅ Settings saved successfully!\n\nAgent ID: ${this._aiAgentId}\n\nYour AI Recipe Builder will now use this agent.`, false);
+        const backupNote = this._aiBackupAgentId
+          ? `\n\nBackup Agent ID: ${this._aiBackupAgentId}\n\nThe backup agent will be used automatically if the primary agent is overloaded.`
+          : '';
+        this._showMessage('AI Settings Saved', `✅ Settings saved successfully!\n\nAgent ID: ${this._aiAgentId}${backupNote}`, false);
         this._closeAISettings();
       } else {
         this._showMessage('Failed to Save Settings', `❌ ${response.message}`, true);
@@ -2302,6 +2308,21 @@ class KitchenCookingPanel extends LitElement {
                     placeholder="extended_openai_conversation_2"
                     style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; font-family: monospace;"
                   />
+
+                  <label for="ai-backup-agent-id" style="display: block; margin-top: 16px; margin-bottom: 8px; font-weight: 600;">
+                    Backup Agent ID: <span style="font-weight: 400; font-size: 0.9em;">(optional — used when primary is overloaded)</span>
+                  </label>
+                  <input
+                    id="ai-backup-agent-id"
+                    type="text"
+                    .value=${this._aiBackupAgentId}
+                    @input=${(e) => { this._aiBackupAgentId = e.target.value; }}
+                    placeholder="conversation.google_generative_ai_conversation"
+                    style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; font-family: monospace;"
+                  />
+                  <p style="margin-top: 6px; font-size: 0.85em; color: var(--secondary-text-color);">
+                    If the primary agent returns a 503 / overloaded error (even after retries), the backup agent is tried automatically.
+                  </p>
                   
                   <p style="margin-top: 12px; font-size: 0.9em; color: var(--secondary-text-color);">
                     <strong>Common agent IDs:</strong>
@@ -2309,6 +2330,7 @@ class KitchenCookingPanel extends LitElement {
                   <ul style="margin: 8px 0; padding-left: 24px; font-size: 0.9em; color: var(--secondary-text-color);">
                     <li><code>extended_openai_conversation_2</code> - Extended OpenAI Conversation</li>
                     <li><code>conversation.openai_conversation</code> - OpenAI Conversation</li>
+                    <li><code>conversation.google_generative_ai_conversation</code> - Google Gemini</li>
                     <li><code>conversation.home_assistant_cloud</code> - Nabu Casa Cloud</li>
                   </ul>
                   

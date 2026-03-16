@@ -1040,7 +1040,8 @@ class AISettingsView(HomeAssistantView):
         
         Request body:
         {
-            "agent_id": "extended_openai_conversation_2"
+            "agent_id": "extended_openai_conversation_2",
+            "backup_agent_id": "conversation.google_generative_ai_conversation"
         }
         """
         from .storage import async_save_ai_settings
@@ -1057,7 +1058,8 @@ class AISettingsView(HomeAssistantView):
                 })
             
             settings = {
-                "agent_id": data["agent_id"]
+                "agent_id": data["agent_id"],
+                "backup_agent_id": data.get("backup_agent_id", ""),
             }
             
             success = await async_save_ai_settings(hass, settings)

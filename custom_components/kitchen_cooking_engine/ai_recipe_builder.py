@@ -964,7 +964,10 @@ of your response must be '{{' and the very last must be '}}'.
         """Call the AI agent via Home Assistant conversation integration.
 
         Retries automatically on transient service errors (503 / 429 / overloaded)
-        using exponential backoff with jitter (up to ``_MAX_RETRIES`` attempts).
+        using exponential backoff with jitter (up to ``_MAX_RETRIES`` attempts per
+        agent).  If the primary agent is still overloaded after all retries *and* a
+        backup agent is configured, the same retry loop is executed against the
+        backup agent before giving up entirely.
 
         Args:
             prompt: The prompt to send
@@ -977,89 +980,118 @@ of your response must be '{{' and the very last must be '}}'.
         # Load AI settings outside the retry loop so errors here propagate clearly.
         from .storage import async_load_ai_settings
         ai_settings = await async_load_ai_settings(self.hass)
-        agent_id = ai_settings.get("agent_id", "extended_openai_conversation_2")
+        primary_agent_id = ai_settings.get("agent_id", "extended_openai_conversation_2")
+        backup_agent_id = ai_settings.get("backup_agent_id", "").strip()
 
-        _LOGGER.info("Using configured AI agent: %s", agent_id)
+        _LOGGER.info("Using configured AI agent: %s", primary_agent_id)
+        if backup_agent_id:
+            _LOGGER.info("Backup AI agent configured: %s", backup_agent_id)
+
+        # Build the list of agents to try. Backup is only added when non-empty
+        # and different from the primary so we don't double-attempt the same agent.
+        agents_to_try = [primary_agent_id]
+        if backup_agent_id and backup_agent_id != primary_agent_id:
+            agents_to_try.append(backup_agent_id)
+
         _LOGGER.info("Calling conversation agent with prompt length: %d", len(prompt))
 
         last_exception: Exception | None = None
 
-        for attempt in range(_MAX_RETRIES):
-            # --- perform the API call ---
-            try:
-                result = await conversation.async_converse(
-                    hass=self.hass,
-                    text=prompt,
-                    conversation_id=None,
-                    context=None,
-                    language=None,
-                    agent_id=agent_id,
-                )
-            except Exception as ex:
-                ex_str = str(ex)
-                if self._is_transient_error(ex_str):
-                    wait = (2 ** attempt) + random.uniform(0, 2)
-                    _LOGGER.warning(
-                        "AI agent '%s' overloaded/unavailable — retrying in %.1fs "
-                        "(attempt %d/%d): %s",
-                        agent_id, wait, attempt + 1, _MAX_RETRIES, ex_str[:200],
-                    )
-                    last_exception = ex
-                    await asyncio.sleep(wait)
-                    continue
-                # Non-transient exception — fail immediately.
-                _LOGGER.error(
-                    "Failed to call conversation agent '%s': %s", agent_id, ex, exc_info=True
-                )
-                raise RuntimeError(
-                    f"Failed to communicate with AI agent '{agent_id}'. "
-                    f"Error: {ex_str}. "
-                    f"Please verify: 1) AI agent is configured in Voice Assistants, "
-                    f"2) Your API key is valid, "
-                    f"3) Check Home Assistant logs for more details"
-                )
-
-            response_text = result.response.speech.get("plain", {}).get("speech", "")
-            _LOGGER.debug(
-                "AI agent '%s' raw response (first 500 chars): %s",
-                agent_id,
-                response_text[:500] if response_text else "(empty)",
-            )
-
-            if not response_text:
-                _LOGGER.error(
-                    "Empty response from AI agent '%s'. "
-                    "The agent is reachable but returned no text. "
-                    "Check the agent's configuration and API key.",
+        for agent_id in agents_to_try:
+            is_backup = agent_id != primary_agent_id
+            if is_backup:
+                _LOGGER.warning(
+                    "Primary AI agent exhausted all retries — switching to backup agent '%s'",
                     agent_id,
                 )
-                raise ValueError(
-                    f"Empty response from AI agent '{agent_id}'. "
-                    f"The agent is connected but returned no text. "
-                    f"Check the agent configuration and ensure it can generate text responses."
+
+            for attempt in range(_MAX_RETRIES):
+                # --- perform the API call ---
+                try:
+                    result = await conversation.async_converse(
+                        hass=self.hass,
+                        text=prompt,
+                        conversation_id=None,
+                        context=None,
+                        language=None,
+                        agent_id=agent_id,
+                    )
+                except Exception as ex:
+                    ex_str = str(ex)
+                    if self._is_transient_error(ex_str):
+                        wait = (2 ** attempt) + random.uniform(0, 2)
+                        _LOGGER.warning(
+                            "AI agent '%s' overloaded/unavailable — retrying in %.1fs "
+                            "(attempt %d/%d): %s",
+                            agent_id, wait, attempt + 1, _MAX_RETRIES, ex_str[:200],
+                        )
+                        last_exception = ex
+                        await asyncio.sleep(wait)
+                        continue
+                    # Non-transient exception — fail immediately (no point retrying).
+                    _LOGGER.error(
+                        "Failed to call conversation agent '%s': %s", agent_id, ex, exc_info=True
+                    )
+                    raise RuntimeError(
+                        f"Failed to communicate with AI agent '{agent_id}'. "
+                        f"Error: {ex_str}. "
+                        f"Please verify: 1) AI agent is configured in Voice Assistants, "
+                        f"2) Your API key is valid, "
+                        f"3) Check Home Assistant logs for more details"
+                    )
+
+                response_text = result.response.speech.get("plain", {}).get("speech", "")
+                _LOGGER.debug(
+                    "AI agent '%s' raw response (first 500 chars): %s",
+                    agent_id,
+                    response_text[:500] if response_text else "(empty)",
                 )
 
-            # Check whether the response body itself signals a transient error
-            # (some providers return HTTP 200 with an error payload).
-            if self._is_transient_error(response_text):
-                wait = (2 ** attempt) + random.uniform(0, 2)
-                _LOGGER.warning(
-                    "AI agent '%s' response contains transient error indicator — "
-                    "retrying in %.1fs (attempt %d/%d): %s",
-                    agent_id, wait, attempt + 1, _MAX_RETRIES, response_text[:200],
-                )
-                last_exception = RuntimeError(
-                    f"Transient error in AI response: {response_text[:200]}"
-                )
-                await asyncio.sleep(wait)
-                continue
+                if not response_text:
+                    _LOGGER.error(
+                        "Empty response from AI agent '%s'. "
+                        "The agent is reachable but returned no text. "
+                        "Check the agent's configuration and API key.",
+                        agent_id,
+                    )
+                    raise ValueError(
+                        f"Empty response from AI agent '{agent_id}'. "
+                        f"The agent is connected but returned no text. "
+                        f"Check the agent configuration and ensure it can generate text responses."
+                    )
 
-            _LOGGER.info("Received response of length: %d", len(response_text))
-            return response_text
+                # Check whether the response body itself signals a transient error
+                # (some providers return HTTP 200 with an error payload).
+                if self._is_transient_error(response_text):
+                    wait = (2 ** attempt) + random.uniform(0, 2)
+                    _LOGGER.warning(
+                        "AI agent '%s' response contains transient error indicator — "
+                        "retrying in %.1fs (attempt %d/%d): %s",
+                        agent_id, wait, attempt + 1, _MAX_RETRIES, response_text[:200],
+                    )
+                    last_exception = RuntimeError(
+                        f"Transient error in AI response: {response_text[:200]}"
+                    )
+                    await asyncio.sleep(wait)
+                    continue
 
-        # All retries exhausted.
+                _LOGGER.info(
+                    "Received response of length %d from agent '%s'",
+                    len(response_text), agent_id,
+                )
+                return response_text
+
+            # Inner retry loop exhausted for this agent — move to backup (if any).
+            _LOGGER.warning(
+                "AI agent '%s' still overloaded after %d retries.",
+                agent_id, _MAX_RETRIES,
+            )
+
+        # Both primary (and backup, if configured) exhausted.
+        agents_tried = " → ".join(agents_to_try)
         raise RuntimeError(
-            f"AI agent '{agent_id}' is still overloaded after {_MAX_RETRIES} retries. "
+            f"All AI agents ({agents_tried}) are still overloaded after "
+            f"{_MAX_RETRIES} retries each. "
             f"Please try again later. Last error: {last_exception}"
         )
     

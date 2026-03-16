@@ -97,17 +97,20 @@ async def async_load_ai_settings(hass: HomeAssistant) -> dict[str, Any]:
     
     def load_settings():
         if not storage_path.exists():
-            return {"agent_id": DEFAULT_AI_AGENT_ID}
+            return {"agent_id": DEFAULT_AI_AGENT_ID, "backup_agent_id": ""}
         try:
             with open(storage_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 # Ensure agent_id is present
                 if "agent_id" not in data:
                     data["agent_id"] = DEFAULT_AI_AGENT_ID
+                # Ensure backup_agent_id is present (added in v0.5.5.6)
+                if "backup_agent_id" not in data:
+                    data["backup_agent_id"] = ""
                 return data
         except (json.JSONDecodeError, IOError) as e:
             _LOGGER.warning("Failed to load AI settings: %s", e)
-            return {"agent_id": DEFAULT_AI_AGENT_ID}
+            return {"agent_id": DEFAULT_AI_AGENT_ID, "backup_agent_id": ""}
     
     return await hass.async_add_executor_job(load_settings)
 
