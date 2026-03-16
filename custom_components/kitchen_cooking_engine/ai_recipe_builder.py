@@ -39,6 +39,7 @@ from .recipes.models import (
     MealType,
 )
 from .appliances.registry import get_registry
+from .const import DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -194,6 +195,17 @@ class AIRecipeBuilder:
         self.hass = hass
         self._session_recipes: Dict[str, AIRecipeDetail] = {}
         self._recipe_counter = 0
+
+    def _set_status(self, message: str) -> None:
+        """Write the current generation step message to hass.data for frontend polling.
+
+        The frontend polls ``GET /api/kitchen_cooking_engine/ai_recipes/status``
+        every second and displays whatever message is stored here.  This is the
+        ONLY source of status messages — the frontend never guesses.
+        """
+        if DOMAIN not in self.hass.data:
+            self.hass.data[DOMAIN] = {}
+        self.hass.data[DOMAIN]["ai_generation_status"] = message
     
     async def check_openai_available(self) -> bool:
         """Check if OpenAI conversation integration is available.
@@ -308,7 +320,9 @@ class AIRecipeBuilder:
         
         # Call OpenAI via conversation integration
         try:
+            self._set_status("")  # clear any stale status from a previous call
             response = await self._call_openai(prompt)
+            self._set_status("✅ Response received — parsing recipes...")
             suggestions = self._parse_suggestions(response)
             
             if not suggestions:
@@ -1006,8 +1020,19 @@ of your response must be '{{' and the very last must be '}}'.
                     "Primary AI agent exhausted all retries — switching to backup agent '%s'",
                     agent_id,
                 )
+                self._set_status(
+                    f"⚠️ Primary agent exhausted — switching to backup AI agent..."
+                )
 
             for attempt in range(_MAX_RETRIES):
+                # Emit the real step so the frontend polling sees it immediately.
+                if attempt == 0 and not is_backup:
+                    self._set_status(f"🤖 Sending request to AI agent (attempt 1/{_MAX_RETRIES})...")
+                elif attempt == 0 and is_backup:
+                    self._set_status(f"🤖 Trying backup AI agent (attempt 1/{_MAX_RETRIES})...")
+                else:
+                    self._set_status(f"🔄 Retrying AI agent (attempt {attempt + 1}/{_MAX_RETRIES})...")
+
                 # --- perform the API call ---
                 try:
                     result = await conversation.async_converse(
@@ -1025,11 +1050,15 @@ of your response must be '{{' and the very last must be '}}'.
                         # random jitter. The jitter spreads concurrent requests from
                         # multiple users so they don't all hammer the service at the
                         # same time after a rate-limit window resets.
-                        wait = (2 ** attempt) + random.uniform(0, 2)
+                        wait = min(2 ** attempt, 30) + random.uniform(0, 2)
                         _LOGGER.warning(
                             "AI agent '%s' overloaded/unavailable — retrying in %.1fs "
                             "(attempt %d/%d): %s",
                             agent_id, wait, attempt + 1, _MAX_RETRIES, ex_str[:200],
+                        )
+                        self._set_status(
+                            f"⚠️ AI overloaded — waiting {wait:.0f}s before retry "
+                            f"(attempt {attempt + 1}/{_MAX_RETRIES} failed)..."
                         )
                         last_exception = ex
                         await asyncio.sleep(wait)
@@ -1069,11 +1098,15 @@ of your response must be '{{' and the very last must be '}}'.
                 # Check whether the response body itself signals a transient error
                 # (some providers return HTTP 200 with an error payload).
                 if self._is_transient_error(response_text):
-                    wait = (2 ** attempt) + random.uniform(0, 2)  # same backoff + jitter
+                    wait = min(2 ** attempt, 30) + random.uniform(0, 2)  # capped at 30s + jitter
                     _LOGGER.warning(
                         "AI agent '%s' response contains transient error indicator — "
                         "retrying in %.1fs (attempt %d/%d): %s",
                         agent_id, wait, attempt + 1, _MAX_RETRIES, response_text[:200],
+                    )
+                    self._set_status(
+                        f"⚠️ AI overloaded — waiting {wait:.0f}s before retry "
+                        f"(attempt {attempt + 1}/{_MAX_RETRIES} failed)..."
                     )
                     last_exception = RuntimeError(
                         f"Transient error in AI response: {response_text[:200]}"

@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 15 Mar 2026, 21:52 UTC
-Last Change: v0.5.5.6 - Exponential backoff + backup AI agent for 503/overloaded errors; dynamic generation status
+Last Change: v0.5.5.7 - Real backend status polling; preserve AI builder path on tab switch
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -71,7 +71,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.5.5.6"
+__version__ = "0.5.5.7"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

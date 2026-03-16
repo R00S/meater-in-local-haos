@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Mar 2026, 12:16 CET
+ * AUTO-GENERATED: 16 Mar 2026, 12:37 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Mar 2026, 12:16 CET
+// Last generated: 16 Mar 2026, 12:37 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -11720,10 +11720,18 @@ class KitchenCookingPanel extends LitElement {
     // useful when the user returns to the tab.
     this._visibilityHandler = () => {
       if (document.visibilityState === 'visible') {
-        // Always reset to welcome when returning to the tab.
-        // Stale state (e.g. _currentPath='active_cook' for a finished cook) would
-        // cause the render to attempt to show an active-cook screen for an entity
-        // that is now idle — potentially causing a blank or confusing display.
+        // If the AI Recipe Builder is active, preserve the flow completely.
+        // The generation request is still in flight; resetting to welcome would
+        // destroy the UI and force the user to start over.
+        if (this._currentPath === 'ai_recipe_builder') {
+          this._loadAISettings();
+          this.requestUpdate();
+          return;
+        }
+
+        // For all other paths, reset to welcome — stale state (e.g.
+        // _currentPath='active_cook' for a finished cook) would cause the render
+        // to attempt to show an active-cook screen for an entity that is now idle.
         this._currentPath = 'welcome';
         this._meaterCookRatingState = null; // clear stale rating overlay
         
@@ -11757,7 +11765,10 @@ class KitchenCookingPanel extends LitElement {
     // pageshow fires when page is restored from bfcache (back/forward navigation).
     this._pageshowHandler = (event) => {
       if (event.persisted) {
-        this._currentPath = 'welcome';
+        // Preserve AI Recipe Builder flow (same reason as visibilitychange above).
+        if (this._currentPath !== 'ai_recipe_builder') {
+          this._currentPath = 'welcome';
+        }
         this._loadAppliances();
         this.requestUpdate();
         requestAnimationFrame(() => this.requestUpdate());
@@ -11768,7 +11779,10 @@ class KitchenCookingPanel extends LitElement {
     // window focus covers the case where visibilitychange didn't fire (e.g. some
     // mobile browsers, or when switching OS windows rather than browser tabs).
     this._focusHandler = () => {
-      this._currentPath = 'welcome';
+      // Preserve AI Recipe Builder flow (same reason as visibilitychange above).
+      if (this._currentPath !== 'ai_recipe_builder') {
+        this._currentPath = 'welcome';
+      }
       this.requestUpdate();
     };
     window.addEventListener('focus', this._focusHandler);
@@ -13697,7 +13711,11 @@ class KitchenCookingPanel extends LitElement {
       // on the first render after a long tab absence when internal state is stale.
       console.error('KitchenCookingPanel render error — resetting to welcome screen', err);
       // Reset to a clean state so the next render attempt succeeds.
-      this._currentPath = 'welcome';
+      // Exception: preserve the AI Recipe Builder path so in-progress generation
+      // isn't lost due to a transient render error.
+      if (this._currentPath !== 'ai_recipe_builder') {
+        this._currentPath = 'welcome';
+      }
       this._meaterCookRatingState = null;
       this._recipeCookState = null;
       // Schedule a fresh render in the next microtask.
@@ -16051,10 +16069,10 @@ class KitchenCookingPanel extends LitElement {
             ${this._aiGenerationElapsed > 0 ? html`
               <p class="ai-status-elapsed">${this._aiGenerationElapsed}s elapsed</p>
             ` : ''}
-            ${this._aiGenerationElapsed >= 35 && this._aiGenerationElapsed < 60 ? html`
-              <p class="ai-status-hint">The AI service is busy. Your request is being retried automatically with backoff.</p>
+            ${this._aiGenerationStatus && (this._aiGenerationStatus.includes('overloaded') || this._aiGenerationStatus.includes('Retrying') || this._aiGenerationStatus.includes('waiting')) ? html`
+              <p class="ai-status-hint">The AI service is busy. Your request is being retried automatically.</p>
             ` : ''}
-            ${this._aiGenerationElapsed >= 60 && this._aiBackupAgentId ? html`
+            ${this._aiGenerationStatus && this._aiGenerationStatus.includes('backup') ? html`
               <p class="ai-status-hint">Switching to backup AI agent — hang on!</p>
             ` : ''}
           </div>
@@ -16731,58 +16749,52 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Start the live status ticker shown while AI recipes are being generated.
-   * Messages are timed to match the retry/backoff phases in the backend:
-   *   0–3s   connecting
-   *   4–9s   initial generation
-   *   10–19s still generating
-   *   20–34s taking a moment
-   *   35–59s retrying (backoff active)
-   *   60–89s switching to backup agent (if configured)
-   *   90s+   final attempts
+   * Start polling the backend status endpoint once per second.
    *
-   * The thresholds are aligned with the backend's exponential backoff schedule:
-   * _MAX_RETRIES=7, wait = (2^attempt) + jitter(0–2s).
-   * Cumulative worst-case waits: ~1, ~3, ~7, ~15, ~31, ~63, ~127s.
-   * If those values change in ai_recipe_builder.py, update these thresholds too.
+   * ``GET /api/kitchen_cooking_engine/ai_recipes/status`` returns the exact
+   * message that the backend wrote at its most recent real step — no guessing.
+   * Steps emitted by the backend include:
+   *   "🤖 Sending request to AI agent (attempt 1/7)..."
+   *   "⚠️ AI overloaded — waiting 3s before retry (attempt 1/7 failed)..."
+   *   "🔄 Retrying AI agent (attempt 2/7)..."
+   *   "⚠️ Primary agent exhausted — switching to backup AI agent..."
+   *   "🤖 Trying backup AI agent (attempt 1/7)..."
+   *   "✅ Response received — parsing recipes..."
    */
-  _startAIStatusUpdater() {
-    this._stopAIStatusUpdater(); // clear any previous timer
+  _startAIStatusPolling() {
+    this._stopAIStatusPolling();
     this._aiGenerationElapsed = 0;
     this._aiGenerationStatus = '🤖 Connecting to AI agent...';
-    this._aiGenerationTimer = setInterval(() => {
-      this._aiGenerationElapsed += 1;
-      const t = this._aiGenerationElapsed;
-      let status;
-      if (t < 4) {
-        status = '🤖 Connecting to AI agent...';
-      } else if (t < 10) {
-        status = '💭 Crafting recipe ideas just for you...';
-      } else if (t < 20) {
-        status = '⏳ Generating recipe details...';
-      } else if (t < 35) {
-        status = '🧠 AI is thinking hard — almost there...';
-      } else if (t < 60) {
-        status = '⚡ AI service is busy — retrying automatically...';
-      } else if (t < 90) {
-        status = this._aiBackupAgentId
-          ? '🔁 Switching to backup AI agent...'
-          : '🔁 Still retrying — AI service under load...';
-      } else {
-        status = '⌛ Final attempts — please hold on...';
+    const startTime = Date.now();
+    this._aiGenerationTimer = setInterval(async () => {
+      this._aiGenerationElapsed = Math.floor((Date.now() - startTime) / 1000);
+      try {
+        const res = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/status');
+        if (res && res.message) {
+          this._aiGenerationStatus = res.message;
+        }
+      } catch (err) {
+        // Log unexpected errors (e.g. auth failure, endpoint missing) to aid
+        // debugging, but don't crash — the display keeps the last known status.
+        if (err && err.status_code && err.status_code !== 503 && err.status_code !== 429) {
+          console.warn('[AI Status] Polling error:', err);
+        }
       }
-      this._aiGenerationStatus = status;
       this.requestUpdate();
     }, 1000);
   }
 
-  /** Stop and reset the live status ticker. */
-  _stopAIStatusUpdater() {
+  /** Stop the status polling interval. */
+  _stopAIStatusPolling() {
     if (this._aiGenerationTimer) {
       clearInterval(this._aiGenerationTimer);
       this._aiGenerationTimer = null;
     }
   }
+
+  // Keep old name as alias so nothing else breaks if called elsewhere.
+  _startAIStatusUpdater() { this._startAIStatusPolling(); }
+  _stopAIStatusUpdater()  { this._stopAIStatusPolling();  }
 
   /**
    * Phase 6: Generate AI recipes based on selections
@@ -16796,7 +16808,7 @@ class KitchenCookingPanel extends LitElement {
     this._showAIStyleSelector = false;
     this._showAIRecipeSuggestions = true;
     this._aiRecipeSuggestions = []; // Clear previous suggestions
-    this._startAIStatusUpdater();
+    this._startAIStatusPolling();
     this.requestUpdate();
 
     try {
@@ -16839,7 +16851,7 @@ class KitchenCookingPanel extends LitElement {
       this._showAIRecipeSuggestions = false;
       this._showAIStyleSelector = true;
     } finally {
-      this._stopAIStatusUpdater();
+      this._stopAIStatusPolling();
     }
 
     this.requestUpdate();
@@ -20287,7 +20299,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "215";
+const PANEL_VERSION = "217";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

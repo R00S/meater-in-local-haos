@@ -266,6 +266,7 @@ def async_register_api(hass: HomeAssistant) -> None:
     hass.http.register_view(AIRecipeGenerateView)
     hass.http.register_view(AIRecipeDetailView)
     hass.http.register_view(AIRecipeCheckView)
+    hass.http.register_view(AIRecipeStatusView)
     hass.http.register_view(AISettingsView)
     hass.http.register_view(AIRecipeSaveCookView)
     
@@ -758,6 +759,29 @@ class AIRecipeCheckView(HomeAssistantView):
                 else "OpenAI conversation integration is not configured. Please set up the conversation integration with OpenAI."
             )
         })
+
+
+class AIRecipeStatusView(HomeAssistantView):
+    """Polling endpoint: returns the current AI generation step message.
+
+    The backend (AIRecipeBuilder._set_status) writes a plain-text message to
+    ``hass.data[DOMAIN]["ai_generation_status"]`` at every meaningful step
+    (sending request, waiting before retry, switching to backup agent, etc.).
+    The frontend polls this endpoint once per second while a generation is in
+    flight and displays exactly what it receives — no guessing.
+    """
+
+    url = "/api/kitchen_cooking_engine/ai_recipes/status"
+    name = "api:kitchen_cooking_engine:ai_recipes_status"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Return the current AI generation status message."""
+        from .const import DOMAIN
+
+        hass = request.app["hass"]
+        message = hass.data.get(DOMAIN, {}).get("ai_generation_status", "")
+        return self.json({"message": message})
 
 
 class AIRecipeIngredientsView(HomeAssistantView):
