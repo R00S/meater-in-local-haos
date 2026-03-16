@@ -945,6 +945,7 @@ class AIRecipeDetailView(HomeAssistantView):
                 suggestion_id=data["suggestion_id"],
                 suggestion=suggestion,
                 appliance_ids=data.get("appliance_ids"),
+                main_appliance_id=data.get("main_appliance_id"),
                 cooking_style=data.get("cooking_style", "quick_and_easy"),
                 complexity=data.get("complexity", 3),
                 user_ingredients=data.get("user_ingredients"),

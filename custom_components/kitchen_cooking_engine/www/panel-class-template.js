@@ -5332,6 +5332,7 @@ class KitchenCookingPanel extends LitElement {
           required_appliances: fullRecipe.required_appliances || []
         },
         appliance_ids: this._selectedAppliance ? [this._selectedAppliance.id] : [],
+        main_appliance_id: this._selectedAppliance ? this._selectedAppliance.id : null,
         cooking_style: this._selectedCookingStyle || 'quick_and_easy',
         complexity: this._aiComplexity || 3,
         user_ingredients: this._selectedIngredients || [],

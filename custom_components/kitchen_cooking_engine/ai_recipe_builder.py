@@ -327,6 +327,7 @@ class AIRecipeBuilder:
         suggestion_id: str,
         suggestion: AIRecipeSuggestion,
         appliance_ids: Optional[List[str]] = None,
+        main_appliance_id: Optional[str] = None,
         cooking_style: str = "quick_and_easy",
         complexity: int = 3,
         user_ingredients: Optional[List[str]] = None,
@@ -338,6 +339,7 @@ class AIRecipeBuilder:
             suggestion_id: ID of the suggestion to expand
             suggestion: The suggestion object with recipe summary
             appliance_ids: Optional list of available appliance IDs
+            main_appliance_id: Optional ID of the primary/selected appliance
             cooking_style: Original cooking style used for suggestions
             complexity: Recipe complexity 1-5 (used for ingredient ceiling)
             user_ingredients: Original user-selected ingredients (for ceiling)
@@ -357,6 +359,7 @@ class AIRecipeBuilder:
         prompt = self._build_detail_prompt(
             suggestion,
             appliance_info,
+            main_appliance_id=main_appliance_id,
             cooking_style=cooking_style,
             complexity=complexity,
             user_ingredients=user_ingredients or suggestion.main_ingredients,
@@ -375,6 +378,7 @@ class AIRecipeBuilder:
         except Exception as ex:
             _LOGGER.error("Failed to get recipe detail: %s", ex, exc_info=True)
             raise RuntimeError(f"Failed to get recipe detail: {str(ex)}")
+
     
     def convert_to_unified_recipe(
         self,
@@ -542,6 +546,11 @@ class AIRecipeBuilder:
 
         # Build primary appliance directive when user has selected a specific appliance
         primary_appliance_directive = ""
+        # Pseudo-ingredient injected into the "Available ingredients" line so the AI
+        # treats using that appliance's programs as a hard requirement — this mirrors
+        # the user-confirmed workaround of manually adding "use ninja combi programs"
+        # as an ingredient in the UI.
+        primary_appliance_ingredient = ""
         if main_appliance_id and appliance_info and appliance_info.get("appliances"):
             main_appliance = next(
                 (a for a in appliance_info["appliances"] if a.get("appliance_id") == main_appliance_id),
@@ -555,11 +564,14 @@ class AIRecipeBuilder:
                 )
             else:
                 main_name = f"{main_appliance['brand']} {main_appliance['model']}"
+                # Pseudo-ingredient: placed right in the ingredients line so the AI
+                # treats the appliance programs as a required item (proven effective)
+                primary_appliance_ingredient = f"use {main_name} cooking programs"
                 primary_appliance_directive = (
                     f"\nCRITICAL RULE — PRIMARY APPLIANCE:\n"
                     f"The user has specifically selected the {main_name} as their primary cooking appliance. "
                     f"ALL 4 recipes MUST be designed to be cooked primarily using this appliance. "
-                    f"Exploit its unique cooking modes and features. "
+                    f"Exploit its unique cooking modes, programs, and features. "
                     f"Do NOT suggest recipes that require a different primary appliance."
                 )
         
@@ -617,16 +629,21 @@ class AIRecipeBuilder:
             else:
                 cuisine_hint = f"\nCuisine fusion: combine elements from {', '.join(cuisine_names)} — blend authentic local traditions from each cuisine. Each cuisine's contribution should reflect how it is cooked in its home country, not Westernized versions."
         
-        prompt = f"""You are a professional chef creating recipes for a home kitchen.
+        # Build the ingredients line, injecting the primary appliance pseudo-ingredient
+        # first so the AI sees it as a hard requirement alongside the food ingredients.
+        all_ingredients = list(ingredients)
+        if primary_appliance_ingredient:
+            all_ingredients.insert(0, primary_appliance_ingredient)
 
-Available ingredients: {', '.join(ingredients)}
+        prompt = f"""You are a professional chef creating recipes for a home kitchen.
+{primary_appliance_directive}
+Available ingredients: {', '.join(all_ingredients)}
 Also assume basic staples are available: cooking oil, butter, salt, black pepper, sugar, vinegar.
 Cooking style: {cooking_style.replace('_', ' ')}
 Servings: {servings}
 Complexity level: {complexity_desc}{cuisine_hint}{restrictions}{time_constraint}
 {ingredient_ceiling_rule}
 {cooking_time_honesty_rule}
-{primary_appliance_directive}
 Available kitchen equipment:
 {appliance_list}
 
@@ -691,6 +708,7 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
         self,
         suggestion: AIRecipeSuggestion,
         appliance_info: Dict[str, Any],
+        main_appliance_id: Optional[str] = None,
         cooking_style: str = "quick_and_easy",
         complexity: int = 3,
         user_ingredients: Optional[List[str]] = None,
@@ -701,6 +719,7 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
         Args:
             suggestion: The recipe suggestion to expand
             appliance_info: Available appliances
+            main_appliance_id: Optional ID of the primary/selected appliance
             cooking_style: Original cooking style (for ingredient ceiling)
             complexity: Recipe complexity 1-5 (for ingredient ceiling)
             user_ingredients: Original user-selected ingredients (for ceiling)
@@ -733,8 +752,24 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
             len(resolved_ingredients), cooking_style, complexity
         )
 
-        prompt = f"""You are a professional chef. Please provide the complete, detailed recipe for:
+        # Build primary appliance directive (same logic as _build_suggestion_prompt)
+        primary_appliance_directive = ""
+        if main_appliance_id and appliance_info and appliance_info.get("appliances"):
+            main_appliance = next(
+                (a for a in appliance_info["appliances"] if a.get("appliance_id") == main_appliance_id),
+                None,
+            )
+            if main_appliance:
+                main_name = f"{main_appliance['brand']} {main_appliance['model']}"
+                primary_appliance_directive = (
+                    f"\nCRITICAL RULE — PRIMARY APPLIANCE:\n"
+                    f"This recipe MUST use the {main_name} as the primary cooking appliance. "
+                    f"Exploit its unique cooking modes, programs, and features in the instructions and phases. "
+                    f"Do NOT describe steps that require a different primary appliance."
+                )
 
+        prompt = f"""You are a professional chef. Please provide the complete, detailed recipe for:
+{primary_appliance_directive}
 Recipe Name: {suggestion.name}
 Description: {suggestion.description}
 Main Ingredients: {', '.join(suggestion.main_ingredients)}
@@ -921,8 +956,8 @@ of your response must be '{{' and the very last must be '}}'.
         ai_settings = await async_load_ai_settings(self.hass)
         agent_id = ai_settings.get("agent_id", "extended_openai_conversation_2")
 
-        _LOGGER.info(f"Using configured AI agent: {agent_id}")
-        _LOGGER.info(f"Calling conversation agent with prompt length: {len(prompt)}")
+        _LOGGER.info("Using configured AI agent: %s", agent_id)
+        _LOGGER.info("Calling conversation agent with prompt length: %d", len(prompt))
 
         # Wrap only the actual API call in try/except so we don't accidentally
         # swallow the ValueError we intentionally raise below for empty responses.
@@ -965,7 +1000,7 @@ of your response must be '{{' and the very last must be '}}'.
                 f"Check the agent configuration and ensure it can generate text responses."
             )
 
-        _LOGGER.info(f"Received response of length: {len(response_text)}")
+        _LOGGER.info("Received response of length: %d", len(response_text))
         return response_text
     
     def _parse_suggestions(self, response: str) -> List[AIRecipeSuggestion]:

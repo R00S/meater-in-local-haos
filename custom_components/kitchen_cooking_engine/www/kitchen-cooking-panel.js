@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Mar 2026, 00:21 CET
+ * AUTO-GENERATED: 16 Mar 2026, 11:21 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Mar 2026, 00:21 CET
+// Last generated: 16 Mar 2026, 11:21 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -16786,6 +16786,7 @@ class KitchenCookingPanel extends LitElement {
           required_appliances: fullRecipe.required_appliances || []
         },
         appliance_ids: this._selectedAppliance ? [this._selectedAppliance.id] : [],
+        main_appliance_id: this._selectedAppliance ? this._selectedAppliance.id : null,
         cooking_style: this._selectedCookingStyle || 'quick_and_easy',
         complexity: this._aiComplexity || 3,
         user_ingredients: this._selectedIngredients || [],
@@ -20145,7 +20146,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "211";
+const PANEL_VERSION = "212";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
