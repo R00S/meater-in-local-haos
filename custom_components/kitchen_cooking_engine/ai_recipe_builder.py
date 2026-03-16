@@ -333,10 +333,11 @@ class AIRecipeBuilder:
             
         except Exception as ex:
             _LOGGER.error("Failed to generate recipe suggestions: %s", ex, exc_info=True)
-            # Don't return fallback - let the error propagate so user knows something is wrong
-            raise RuntimeError(
-                f"Failed to generate recipes. Please check your OpenAI configuration. Error: {str(ex)}"
-            )
+            # Pass the original error message through unchanged — it is already
+            # user-friendly (e.g. "All AI agents overloaded…" or a communication
+            # error).  Wrapping with "check your OpenAI configuration" is both
+            # misleading for non-OpenAI backends and unhelpful for transient errors.
+            raise RuntimeError(str(ex)) from ex
     
     async def get_recipe_detail(
         self,
@@ -1128,10 +1129,14 @@ of your response must be '{{' and the very last must be '}}'.
 
         # Both primary (and backup, if configured) exhausted.
         agents_tried = " → ".join(agents_to_try)
+        _LOGGER.error(
+            "All AI agents (%s) exhausted after %d retries. Last error: %s",
+            agents_tried, _MAX_RETRIES, last_exception,
+        )
         raise RuntimeError(
             f"All AI agents ({agents_tried}) are still overloaded after "
             f"{_MAX_RETRIES} retries each. "
-            f"Please try again later. Last error: {last_exception}"
+            f"Please try again later."
         )
     
     def _parse_suggestions(self, response: str) -> List[AIRecipeSuggestion]:

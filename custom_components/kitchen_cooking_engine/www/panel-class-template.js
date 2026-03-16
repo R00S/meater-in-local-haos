@@ -5365,7 +5365,20 @@ class KitchenCookingPanel extends LitElement {
       }
     } catch (error) {
       console.error('Error generating AI recipes:', error);
-      this._showMessage('❌ Error', `Error generating recipes: ${error.message || error}. Please try again.`, true);
+      // HA's callApi throws plain objects (not Error instances) on HTTP errors,
+      // so error.message may be undefined.  Extract the best available text.
+      let errMsg;
+      try {
+        errMsg = error?.message
+          || error?.body?.message
+          || error?.body?.detail
+          || (error?.status_code ? `HTTP ${error.status_code}` : null)
+          || (error && typeof error === 'object' ? JSON.stringify(error) : String(error))
+          || 'Unknown error';
+      } catch (_) {
+        errMsg = String(error) || 'Unknown error';
+      }
+      this._showMessage('❌ Error', `Error generating recipes: ${errMsg}. Please try again.`, true);
       // Go back to style selection
       this._showAIRecipeSuggestions = false;
       this._showAIStyleSelector = true;
