@@ -3046,13 +3046,15 @@ class KitchenCookingPanel extends LitElement {
           <div class="card-content">
             <h3>${this._t('meater.select_method')}</h3>
             <div class="method-grid">
-              ${COOKING_METHODS.map(opt => html`
+              ${COOKING_METHODS.map(opt => {
+                const translated = this._t('cooking_methods.' + opt.value);
+                return html`
                 <button 
                   class="method-btn ${this._selectedMethod === opt.value ? 'selected' : ''}"
                   @click=${() => this._selectedMethod = opt.value}>
-                  ${this._t('cooking_methods.' + opt.value) !== ('cooking_methods.' + opt.value) ? this._t('cooking_methods.' + opt.value) : opt.name}
+                  ${translated !== ('cooking_methods.' + opt.value) ? translated : opt.name}
                 </button>
-              `)}
+              `; })}
             </div>
           </div>
         </ha-card>
