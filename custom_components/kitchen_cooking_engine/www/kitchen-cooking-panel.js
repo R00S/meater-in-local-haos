@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Mar 2026, 20:28 CET
+ * AUTO-GENERATED: 16 Mar 2026, 22:18 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -40,8 +40,9 @@ const DATA_SOURCE_INTERNATIONAL = "international";
 const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
-// Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Mar 2026, 20:28 CET
+// Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
+// measurements.py, and i18n/*.json
+// Last generated: 16 Mar 2026, 22:18 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -11439,6 +11440,684 @@ const AI_CATEGORY_ORDER = ["p", "v", "g", "d", "s"];
 // AI Recipe Builder - Assumed staples (always available, not shown in picker)
 const AI_ASSUMED_STAPLES = ["Cooking oil", "Butter", "Salt", "Black pepper", "Sugar", "Vinegar"];
 
+// Phase 7: Measurement systems (SE, UK, US)
+const MEASUREMENT_SYSTEMS = {
+  "se": {
+    "id": "se",
+    "name_sv": "🇸🇪 Svenska mått",
+    "name_en": "🇸🇪 Swedish",
+    "flag": "🇸🇪",
+    "temp_unit": "C",
+    "show_alt_temp": false,
+    "volume_prefs": [
+      {
+        "unit": "l",
+        "min_ml": 1000.0
+      },
+      {
+        "unit": "dl",
+        "min_ml": 50.0
+      },
+      {
+        "unit": "cl",
+        "min_ml": 10.0
+      },
+      {
+        "unit": "msk",
+        "min_ml": 15.0
+      },
+      {
+        "unit": "tsk",
+        "min_ml": 5.0
+      },
+      {
+        "unit": "krm",
+        "min_ml": 0.0
+      }
+    ],
+    "mass_prefs": [
+      {
+        "unit": "kg",
+        "min_g": 500.0
+      },
+      {
+        "unit": "hg",
+        "min_g": 100.0
+      },
+      {
+        "unit": "g",
+        "min_g": 0.0
+      }
+    ],
+    "units": {
+      "krm": {
+        "abbr_sv": "krm",
+        "abbr_en": "pinch",
+        "type": "volume",
+        "to_base": 1.0
+      },
+      "tsk": {
+        "abbr_sv": "tsk",
+        "abbr_en": "tsp",
+        "type": "volume",
+        "to_base": 5.0
+      },
+      "msk": {
+        "abbr_sv": "msk",
+        "abbr_en": "tbsp",
+        "type": "volume",
+        "to_base": 15.0
+      },
+      "cl": {
+        "abbr_sv": "cl",
+        "abbr_en": "cl",
+        "type": "volume",
+        "to_base": 10.0
+      },
+      "dl": {
+        "abbr_sv": "dl",
+        "abbr_en": "dl",
+        "type": "volume",
+        "to_base": 100.0
+      },
+      "l": {
+        "abbr_sv": "l",
+        "abbr_en": "L",
+        "type": "volume",
+        "to_base": 1000.0
+      },
+      "g": {
+        "abbr_sv": "g",
+        "abbr_en": "g",
+        "type": "mass",
+        "to_base": 1.0
+      },
+      "hg": {
+        "abbr_sv": "hg",
+        "abbr_en": "hg",
+        "type": "mass",
+        "to_base": 100.0
+      },
+      "kg": {
+        "abbr_sv": "kg",
+        "abbr_en": "kg",
+        "type": "mass",
+        "to_base": 1000.0
+      }
+    }
+  },
+  "uk": {
+    "id": "uk",
+    "name_sv": "🇬🇧 Brittiska mått",
+    "name_en": "🇬🇧 UK Metric",
+    "flag": "🇬🇧",
+    "temp_unit": "C",
+    "show_alt_temp": false,
+    "volume_prefs": [
+      {
+        "unit": "l",
+        "min_ml": 1000.0
+      },
+      {
+        "unit": "dl",
+        "min_ml": 100.0
+      },
+      {
+        "unit": "tbsp",
+        "min_ml": 15.0
+      },
+      {
+        "unit": "tsp",
+        "min_ml": 5.0
+      },
+      {
+        "unit": "ml",
+        "min_ml": 0.0
+      }
+    ],
+    "mass_prefs": [
+      {
+        "unit": "kg",
+        "min_g": 1000.0
+      },
+      {
+        "unit": "g",
+        "min_g": 0.0
+      }
+    ],
+    "units": {
+      "ml": {
+        "abbr_sv": "ml",
+        "abbr_en": "ml",
+        "type": "volume",
+        "to_base": 1.0
+      },
+      "tsp": {
+        "abbr_sv": "tsp",
+        "abbr_en": "tsp",
+        "type": "volume",
+        "to_base": 5.0
+      },
+      "tbsp": {
+        "abbr_sv": "tbsp",
+        "abbr_en": "tbsp",
+        "type": "volume",
+        "to_base": 15.0
+      },
+      "dl": {
+        "abbr_sv": "dl",
+        "abbr_en": "dl",
+        "type": "volume",
+        "to_base": 100.0
+      },
+      "l": {
+        "abbr_sv": "l",
+        "abbr_en": "L",
+        "type": "volume",
+        "to_base": 1000.0
+      },
+      "g": {
+        "abbr_sv": "g",
+        "abbr_en": "g",
+        "type": "mass",
+        "to_base": 1.0
+      },
+      "kg": {
+        "abbr_sv": "kg",
+        "abbr_en": "kg",
+        "type": "mass",
+        "to_base": 1000.0
+      }
+    }
+  },
+  "us": {
+    "id": "us",
+    "name_sv": "🇺🇸 Amerikanska mått",
+    "name_en": "🇺🇸 US Customary",
+    "flag": "🇺🇸",
+    "temp_unit": "F",
+    "show_alt_temp": true,
+    "volume_prefs": [
+      {
+        "unit": "quart",
+        "min_ml": 946.353
+      },
+      {
+        "unit": "cup",
+        "min_ml": 240.0
+      },
+      {
+        "unit": "fl_oz",
+        "min_ml": 29.57
+      },
+      {
+        "unit": "tbsp",
+        "min_ml": 15.0
+      },
+      {
+        "unit": "tsp",
+        "min_ml": 5.0
+      },
+      {
+        "unit": "ml",
+        "min_ml": 0.0
+      }
+    ],
+    "mass_prefs": [
+      {
+        "unit": "lb",
+        "min_g": 453.592
+      },
+      {
+        "unit": "oz",
+        "min_g": 28.35
+      },
+      {
+        "unit": "g",
+        "min_g": 0.0
+      }
+    ],
+    "units": {
+      "ml": {
+        "abbr_sv": "ml",
+        "abbr_en": "ml",
+        "type": "volume",
+        "to_base": 1.0
+      },
+      "tsp": {
+        "abbr_sv": "tsp",
+        "abbr_en": "tsp",
+        "type": "volume",
+        "to_base": 5.0
+      },
+      "tbsp": {
+        "abbr_sv": "tbsp",
+        "abbr_en": "tbsp",
+        "type": "volume",
+        "to_base": 15.0
+      },
+      "fl_oz": {
+        "abbr_sv": "fl oz",
+        "abbr_en": "fl oz",
+        "type": "volume",
+        "to_base": 29.5735
+      },
+      "cup": {
+        "abbr_sv": "cup",
+        "abbr_en": "cup",
+        "type": "volume",
+        "to_base": 240.0
+      },
+      "pint": {
+        "abbr_sv": "pint",
+        "abbr_en": "pint",
+        "type": "volume",
+        "to_base": 473.176
+      },
+      "quart": {
+        "abbr_sv": "quart",
+        "abbr_en": "quart",
+        "type": "volume",
+        "to_base": 946.353
+      },
+      "g": {
+        "abbr_sv": "g",
+        "abbr_en": "g",
+        "type": "mass",
+        "to_base": 1.0
+      },
+      "oz": {
+        "abbr_sv": "oz",
+        "abbr_en": "oz",
+        "type": "mass",
+        "to_base": 28.3495
+      },
+      "lb": {
+        "abbr_sv": "lb",
+        "abbr_en": "lb",
+        "type": "mass",
+        "to_base": 453.592
+      },
+      "kg": {
+        "abbr_sv": "kg",
+        "abbr_en": "kg",
+        "type": "mass",
+        "to_base": 1000.0
+      }
+    }
+  }
+};
+
+// Phase 7: Translation strings (sv, en, ...)
+const I18N_STRINGS = {
+  "en": {
+    "_meta": {
+      "language": "en",
+      "language_name": "English",
+      "flag": "🇬🇧",
+      "version": "1.0.0"
+    },
+    "common": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "delete": "Delete",
+      "back": "Back",
+      "next": "Next",
+      "previous": "Previous",
+      "start": "Start",
+      "stop": "Stop",
+      "loading": "Loading...",
+      "error": "Error",
+      "success": "Done",
+      "yes": "Yes",
+      "no": "No",
+      "ok": "OK",
+      "confirm": "Confirm",
+      "settings": "Settings",
+      "language": "Language",
+      "minutes": "minutes",
+      "hours": "hours",
+      "seconds": "seconds",
+      "temperature": "Temperature",
+      "step": "Step",
+      "of": "of",
+      "optional": "optional"
+    },
+    "welcome": {
+      "title": "🍳 Kitchen Cooking Engine",
+      "select_appliance": "Select an appliance to get started",
+      "ongoing_cooks": "Ongoing cooks",
+      "no_appliances": "No appliances configured yet. Add one in Settings → Devices & Services.",
+      "language_label": "🌐 Language / Språk",
+      "data_source_label": "🌍 Temperature Data Source"
+    },
+    "meater": {
+      "title": "🌡️ MEATER Cooking",
+      "ready_to_cook": "🍳 Ready to Cook",
+      "select_protein": "Select your protein and preferences below",
+      "select_session": "Select Session",
+      "data_source_title": "🌍 Temperature Data Source",
+      "international": "🇺🇸 International (USDA)",
+      "swedish": "🇸🇪 Svenska (Livsmedelsverket)",
+      "swedish_description": "Using Swedish temperature recommendations from Livsmedelsverket, Stekguiden.se and Gårdssällskapet.",
+      "international_description": "Using international temperature guidelines from USDA, FDA and professional culinary sources.",
+      "select_category": "1️⃣ Select Category",
+      "custom": "🎯 Custom",
+      "custom_temp_cook": "🎯 Custom Temperature Cook",
+      "custom_temp_description": "Set a target temperature and start monitoring — no protein or doneness selection needed.",
+      "session_name": "Session Name",
+      "session_name_placeholder": "e.g. My Cook",
+      "target_temperature": "Target Temperature",
+      "select_cut_type": "2️⃣ Select Cut Type",
+      "select_cut": "3️⃣ Select Cut",
+      "select_doneness": "4️⃣ Select Doneness",
+      "recommended": "Recommended",
+      "select_method": "5️⃣ Cooking Method",
+      "review_title": "✅ Review and Start",
+      "start_cooking": "🔥 Start Cooking",
+      "cooking_active": "🔥 Cooking in Progress",
+      "current_temp": "Current",
+      "target_temp": "Target",
+      "progress": "Progress",
+      "eta": "Estimated Time",
+      "approaching": "Approaching target!",
+      "goal_reached": "🎉 Goal Reached!",
+      "resting": "Resting",
+      "rest_time_remaining": "Rest time remaining",
+      "start_rest": "Start Rest",
+      "complete": "Complete Cook",
+      "stop_cook": "⏹ Stop Cook",
+      "adjust_temp": "Adjust Temperature",
+      "notes": "Notes",
+      "notes_placeholder": "Add notes about this cook...",
+      "save_notes": "Save Notes",
+      "previous_cooks": "Previous Cooks",
+      "no_history": "No cook history yet.",
+      "delete_cook_confirm": "Delete this cook from history?",
+      "choose_cut": "Choose a cut..."
+    },
+    "ninja": {
+      "title": "🥷 Ninja Combi",
+      "built_in_recipes": "📖 Built-in Recipes",
+      "recipe_builder": "🔨 Recipe Builder",
+      "recent_cooks": "📋 Recent Cooks",
+      "no_recipes": "No compatible recipes found.",
+      "servings": "Servings",
+      "prep_time": "Prep Time",
+      "cook_time": "Cook Time",
+      "difficulty": "Difficulty",
+      "ingredients": "Ingredients",
+      "instructions": "Instructions",
+      "tips": "Tips",
+      "start_recipe": "🚀 Start Recipe"
+    },
+    "ai_recipe": {
+      "title": "🤖 AI Recipe Builder",
+      "settings": "⚙️ AI Settings",
+      "settings_title": "⚙️ AI Recipe Builder Settings",
+      "settings_description": "Configure which AI conversation agent to use for recipe generation.",
+      "agent_id": "AI Agent ID:",
+      "backup_agent_id": "Backup Agent ID:",
+      "backup_agent_note": "(optional — used when primary is overloaded)",
+      "common_agent_ids": "Common agent IDs:",
+      "find_agent_tip": "Find your agent ID in Developer Tools → States — look for entities starting with \"conversation.\"",
+      "save_settings": "Save Settings",
+      "step1_ingredients": "1️⃣ Select Ingredients",
+      "step2_style": "2️⃣ Choose Cooking Style",
+      "step3_suggestions": "3️⃣ Recipe Suggestions",
+      "select_ingredients_hint": "Choose ingredients you have available (select at least 2)",
+      "select_cuisine_hint": "Select a cuisine to see its typical ingredients",
+      "selected_count": "selected",
+      "complexity": "Complexity",
+      "portions": "Portions",
+      "max_time": "Max time",
+      "no_limit": "No limit",
+      "generate": "🍳 Generate Recipes",
+      "generating": "Generating recipes...",
+      "no_suggestions": "No suggestions generated. Try different ingredients or style.",
+      "view_recipe": "View Recipe",
+      "cook_this": "Cook This"
+    },
+    "recipe_cook": {
+      "step_of": "Step {current} of {total}",
+      "time_estimate": "⏱️ ~{minutes} minutes",
+      "temperature_label": "🌡️ Temperature:",
+      "tip_label": "💡 Tip:",
+      "ingredients_label": "📋 Ingredients",
+      "finish_cook": "✅ Finish Cook",
+      "next_step": "Next Step ➡️",
+      "prev_step": "⬅️ Previous",
+      "no_instructions": "No instructions available."
+    },
+    "history": {
+      "title": "📋 Cook History",
+      "no_cooks": "No previous cooks.",
+      "ease_rating": "Ease",
+      "result_rating": "Result",
+      "cooked_on": "Cooked on",
+      "duration": "Duration"
+    },
+    "measurements": {
+      "tsp": "tsp",
+      "tbsp": "tbsp",
+      "cup": "cup",
+      "ml": "ml",
+      "cl": "cl",
+      "dl": "dl",
+      "l": "L",
+      "g": "g",
+      "kg": "kg",
+      "oz": "oz",
+      "lb": "lb",
+      "temp_c": "°C",
+      "temp_f": "°F"
+    },
+    "cooking_methods": {
+      "oven_roast": "Oven Roast",
+      "oven_bake": "Oven Bake",
+      "pan_sear": "Pan Sear",
+      "pan_fry": "Pan Fry",
+      "grill": "Grill",
+      "smoker": "Smoker",
+      "air_fryer": "Air Fryer",
+      "sous_vide": "Sous Vide",
+      "slow_cooker": "Slow Cooker"
+    },
+    "errors": {
+      "load_preferences": "Could not load preferences",
+      "save_preferences": "Could not save preferences",
+      "load_history": "Could not load history",
+      "load_appliances": "Could not load appliances",
+      "start_cook_failed": "Could not start cook",
+      "stop_cook_failed": "Could not stop cook",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "sv": {
+    "_meta": {
+      "language": "sv",
+      "language_name": "Svenska",
+      "flag": "🇸🇪",
+      "version": "1.0.0"
+    },
+    "common": {
+      "save": "Spara",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "delete": "Ta bort",
+      "back": "Tillbaka",
+      "next": "Nästa",
+      "previous": "Föregående",
+      "start": "Starta",
+      "stop": "Stoppa",
+      "loading": "Laddar...",
+      "error": "Fel",
+      "success": "Klart",
+      "yes": "Ja",
+      "no": "Nej",
+      "ok": "OK",
+      "confirm": "Bekräfta",
+      "settings": "Inställningar",
+      "language": "Språk",
+      "minutes": "minuter",
+      "hours": "timmar",
+      "seconds": "sekunder",
+      "temperature": "Temperatur",
+      "step": "Steg",
+      "of": "av",
+      "optional": "valfritt"
+    },
+    "welcome": {
+      "title": "🍳 Kitchen Cooking Engine",
+      "select_appliance": "Välj en köksapparat för att börja",
+      "ongoing_cooks": "Pågående tillagningar",
+      "no_appliances": "Inga apparater konfigurerade ännu. Lägg till en i Inställningar → Enheter & Tjänster.",
+      "language_label": "🌐 Språk / Language",
+      "data_source_label": "🌍 Temperaturdata"
+    },
+    "meater": {
+      "title": "🌡️ MEATER Tillagning",
+      "ready_to_cook": "🍳 Redo att laga",
+      "select_protein": "Välj protein och inställningar nedan",
+      "select_session": "Välj session",
+      "data_source_title": "🌍 Temperaturdata",
+      "international": "🇺🇸 Internationell (USDA)",
+      "swedish": "🇸🇪 Svenska (Livsmedelsverket)",
+      "swedish_description": "Använder svenska temperaturrekommendationer från Livsmedelsverket, Stekguiden.se och Gårdssällskapet.",
+      "international_description": "Använder internationella temperaturriktlinjer från USDA, FDA och professionella kulinariska källor.",
+      "select_category": "1️⃣ Välj kategori",
+      "custom": "🎯 Anpassad",
+      "custom_temp_cook": "🎯 Anpassad temperatur",
+      "custom_temp_description": "Ange en måltemperatur och börja övervaka — inget behov av att välja protein eller doneness.",
+      "session_name": "Sessionsnamn",
+      "session_name_placeholder": "t.ex. Min tillagning",
+      "target_temperature": "Måltemperatur",
+      "select_cut_type": "2️⃣ Välj stycke",
+      "select_cut": "3️⃣ Välj styckdel",
+      "select_doneness": "4️⃣ Välj tillagningsgrad",
+      "recommended": "Rekommenderad",
+      "select_method": "5️⃣ Tillagningsmetod",
+      "review_title": "✅ Granska och starta",
+      "start_cooking": "🔥 Starta tillagning",
+      "cooking_active": "🔥 Tillagning pågår",
+      "current_temp": "Nuvarande",
+      "target_temp": "Mål",
+      "progress": "Framsteg",
+      "eta": "Beräknad tid",
+      "approaching": "Närmar sig målet!",
+      "goal_reached": "🎉 Mål nått!",
+      "resting": "Vilar",
+      "rest_time_remaining": "Vilotid kvar",
+      "start_rest": "Starta vila",
+      "complete": "Slutför tillagning",
+      "stop_cook": "⏹ Stoppa tillagning",
+      "adjust_temp": "Justera temperatur",
+      "notes": "Anteckningar",
+      "notes_placeholder": "Lägg till anteckningar om denna tillagning...",
+      "save_notes": "Spara anteckningar",
+      "previous_cooks": "Tidigare tillagningar",
+      "no_history": "Ingen tillagningshistorik ännu.",
+      "delete_cook_confirm": "Ta bort denna tillagning från historiken?",
+      "choose_cut": "Välj en styckdel..."
+    },
+    "ninja": {
+      "title": "🥷 Ninja Combi",
+      "built_in_recipes": "📖 Inbyggda recept",
+      "recipe_builder": "🔨 Receptbyggare",
+      "recent_cooks": "📋 Senaste tillagningar",
+      "no_recipes": "Inga kompatibla recept hittades.",
+      "servings": "Portioner",
+      "prep_time": "Förberedningstid",
+      "cook_time": "Tillagningstid",
+      "difficulty": "Svårighetsgrad",
+      "ingredients": "Ingredienser",
+      "instructions": "Instruktioner",
+      "tips": "Tips",
+      "start_recipe": "🚀 Starta recept"
+    },
+    "ai_recipe": {
+      "title": "🤖 AI Receptbyggare",
+      "settings": "⚙️ AI-inställningar",
+      "settings_title": "⚙️ AI Receptbyggare-inställningar",
+      "settings_description": "Konfigurera vilken AI-konversationsagent som ska användas för receptgenerering.",
+      "agent_id": "AI Agent-ID:",
+      "backup_agent_id": "Reservagent-ID:",
+      "backup_agent_note": "(valfritt — används när primäragenten är överbelastad)",
+      "common_agent_ids": "Vanliga agent-ID:n:",
+      "find_agent_tip": "Hitta ditt agent-ID i Utvecklarverktyg → Tillstånd — sök efter entiteter som börjar med \"conversation.\"",
+      "save_settings": "Spara inställningar",
+      "step1_ingredients": "1️⃣ Välj ingredienser",
+      "step2_style": "2️⃣ Välj matlagningsstil",
+      "step3_suggestions": "3️⃣ Receptförslag",
+      "select_ingredients_hint": "Välj ingredienser du har tillgängliga (minst 2)",
+      "select_cuisine_hint": "Välj ett kök för att se dess typiska ingredienser",
+      "selected_count": "vald(a)",
+      "complexity": "Komplexitet",
+      "portions": "Portioner",
+      "max_time": "Max tid",
+      "no_limit": "Ingen gräns",
+      "generate": "🍳 Generera recept",
+      "generating": "Genererar recept...",
+      "no_suggestions": "Inga förslag genererades. Försök med andra ingredienser eller stil.",
+      "view_recipe": "Visa recept",
+      "cook_this": "Laga detta"
+    },
+    "recipe_cook": {
+      "step_of": "Steg {current} av {total}",
+      "time_estimate": "⏱️ ~{minutes} minuter",
+      "temperature_label": "🌡️ Temperatur:",
+      "tip_label": "💡 Tips:",
+      "ingredients_label": "📋 Ingredienser",
+      "finish_cook": "✅ Slutför tillagning",
+      "next_step": "Nästa steg ➡️",
+      "prev_step": "⬅️ Föregående",
+      "no_instructions": "Inga instruktioner tillgängliga."
+    },
+    "history": {
+      "title": "📋 Tillagningshistorik",
+      "no_cooks": "Inga tidigare tillagningar.",
+      "ease_rating": "Enkelhet",
+      "result_rating": "Resultat",
+      "cooked_on": "Tillagad",
+      "duration": "Varaktighet"
+    },
+    "measurements": {
+      "krm": "krm",
+      "tsk": "tsk",
+      "msk": "msk",
+      "ml": "ml",
+      "cl": "cl",
+      "dl": "dl",
+      "l": "l",
+      "g": "g",
+      "hg": "hg",
+      "kg": "kg",
+      "temp_c": "°C"
+    },
+    "cooking_methods": {
+      "oven_roast": "Ugnssteka",
+      "oven_bake": "Baka i ugn",
+      "pan_sear": "Bryning",
+      "pan_fry": "Steka i panna",
+      "grill": "Grilla",
+      "smoker": "Röka",
+      "air_fryer": "Airfryer",
+      "sous_vide": "Sous vide",
+      "slow_cooker": "Slowcooker"
+    },
+    "errors": {
+      "load_preferences": "Kunde inte ladda inställningar",
+      "save_preferences": "Kunde inte spara inställningar",
+      "load_history": "Kunde inte ladda historik",
+      "load_appliances": "Kunde inte ladda apparater",
+      "start_cook_failed": "Kunde inte starta tillagning",
+      "stop_cook_failed": "Kunde inte stoppa tillagning",
+      "generic": "Något gick fel. Försök igen."
+    }
+  }
+};
+
 // Cooking methods
 const COOKING_METHODS = [
   { value: "oven_roast", name: "Oven Roast" },
@@ -11577,6 +12256,9 @@ class KitchenCookingPanel extends LitElement {
       _showFeatureNotesEditor: { type: Boolean },
       // MEATER cook rating state (Issue #65)
       _meaterCookRatingState: { type: Object },
+      // Phase 7: Language & Measurement
+      _language: { type: String },
+      _measurementSystem: { type: String },
     };
   }
 
@@ -11682,6 +12364,9 @@ class KitchenCookingPanel extends LitElement {
     this._aiGenerationTimer = null; // Interval handle for status ticker
     this._showFeatureNotesEditor = false; // Show feature notes editor in appliance path
     this._meaterCookRatingState = null; // MEATER cook rating state (Issue #65)
+    // Phase 7: Language & Measurement system (independent selections)
+    this._language = 'en';               // UI language: 'sv' or 'en'
+    this._measurementSystem = 'se';      // Measurement: 'se', 'uk', or 'us'
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -11697,6 +12382,10 @@ class KitchenCookingPanel extends LitElement {
     
     // Load user preferences
     this._loadPreferences();
+    
+    // Phase 7: Load language & measurement preferences
+    this._loadLanguagePreference();
+    this._loadMeasurementPreference();
     
     // Load AI settings to determine if AI Recipe Builder should be visible
     this._loadAISettings();
@@ -11812,6 +12501,134 @@ class KitchenCookingPanel extends LitElement {
       }
     } catch (e) {
       console.log('Could not load preferences:', e);
+    }
+  }
+
+  // =========================================================================
+  // Phase 7: Translation (i18n) & Measurement system
+  // =========================================================================
+
+  /**
+   * Translate a key like "meater.ready_to_cook" into the current language.
+   * Falls back to English, then to the key itself.
+   */
+  _t(key) {
+    const lang = this._language || 'en';
+    const parts = key.split('.');
+    // Try requested language
+    let node = (typeof I18N_STRINGS !== 'undefined') ? I18N_STRINGS[lang] : undefined;
+    for (const p of parts) {
+      if (node && typeof node === 'object') node = node[p];
+      else { node = undefined; break; }
+    }
+    if (typeof node === 'string') return node;
+    // Fallback to English
+    if (lang !== 'en') {
+      node = (typeof I18N_STRINGS !== 'undefined') ? I18N_STRINGS['en'] : undefined;
+      for (const p of parts) {
+        if (node && typeof node === 'object') node = node[p];
+        else { node = undefined; break; }
+      }
+      if (typeof node === 'string') return node;
+    }
+    return key; // last resort: return the key
+  }
+
+  /**
+   * Convert a quantity+unit to the user's preferred measurement system.
+   * E.g. _convertMeasure(500, 'ml') → "5 dl" (SE) or "2.1 cup" (US).
+   */
+  _convertMeasure(value, fromUnit) {
+    const sysId = this._measurementSystem || 'se';
+    const sys = (typeof MEASUREMENT_SYSTEMS !== 'undefined') ? MEASUREMENT_SYSTEMS[sysId] : null;
+    if (!sys || !sys.units) return `${value} ${fromUnit}`;
+
+    // Find source unit's base multiplier from any system (they share units)
+    let toBase = null;
+    let unitType = null;
+    for (const msKey of Object.keys(MEASUREMENT_SYSTEMS)) {
+      const msUnits = MEASUREMENT_SYSTEMS[msKey].units;
+      if (msUnits[fromUnit]) {
+        toBase = msUnits[fromUnit].to_base;
+        unitType = msUnits[fromUnit].type;
+        break;
+      }
+    }
+    if (toBase === null) return `${value} ${fromUnit}`;
+
+    const baseValue = value * toBase;
+    const prefs = unitType === 'volume' ? sys.volume_prefs : sys.mass_prefs;
+
+    for (const rule of prefs) {
+      const minVal = unitType === 'volume' ? rule.min_ml : rule.min_g;
+      const targetUnit = sys.units[rule.unit];
+      if (!targetUnit) continue;
+      if (baseValue >= minVal) {
+        const converted = baseValue / targetUnit.to_base;
+        const numStr = converted === Math.floor(converted)
+          ? String(Math.floor(converted))
+          : converted < 10
+            ? converted.toFixed(1).replace(/\.?0+$/, '')
+            : String(Math.round(converted));
+        const lang = this._language || 'en';
+        const abbr = lang === 'sv' ? targetUnit.abbr_sv : targetUnit.abbr_en;
+        return `${numStr} ${abbr}`;
+      }
+    }
+    return `${value} ${fromUnit}`;
+  }
+
+  /**
+   * Convert a temperature in °C for display in the user's measurement system.
+   * SE/UK → "70°C", US → "158°F (70°C)".
+   */
+  _convertTemp(tempC) {
+    const sysId = this._measurementSystem || 'se';
+    const sys = (typeof MEASUREMENT_SYSTEMS !== 'undefined') ? MEASUREMENT_SYSTEMS[sysId] : null;
+    if (sys && sys.temp_unit === 'F') {
+      const f = Math.round(tempC * 9 / 5 + 32);
+      return `${f}°F (${Math.round(tempC)}°C)`;
+    }
+    return `${Math.round(tempC)}°C`;
+  }
+
+  async _loadLanguagePreference() {
+    try {
+      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/preferences/language');
+      if (response && response.language) {
+        this._language = response.language;
+      }
+    } catch (e) {
+      console.log('Could not load language preference:', e);
+    }
+  }
+
+  async _saveLanguagePreference(lang) {
+    this._language = lang;
+    try {
+      await this.hass.callApi('POST', 'kitchen_cooking_engine/preferences/language', { language: lang });
+    } catch (e) {
+      console.error('Could not save language preference:', e);
+    }
+  }
+
+  async _loadMeasurementPreference() {
+    try {
+      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/preferences/measurement_system');
+      if (response && response.measurement_system) {
+        this._measurementSystem = response.measurement_system;
+      }
+    } catch (e) {
+      console.log('Could not load measurement preference:', e);
+    }
+  }
+
+  async _saveMeasurementPreference(sys) {
+    this._measurementSystem = sys;
+    try {
+      await this.hass.callApi('POST', 'kitchen_cooking_engine/preferences/measurement_system', { measurement_system: sys });
+    } catch (e) {
+      console.error('Could not save measurement preference:', e);
     }
   }
 
@@ -14032,14 +14849,14 @@ class KitchenCookingPanel extends LitElement {
     
     return html`
       <div class="status-banner idle">
-        <h2>🍳 Ready to Cook</h2>
-        <p>Select your protein and preferences below</p>
+        <h2>${this._t('meater.ready_to_cook')}</h2>
+        <p>${this._t('meater.select_protein')}</p>
       </div>
       
       ${entities.length > 1 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>Select Session</h3>
+            <h3>${this._t('meater.select_session')}</h3>
             <select 
               .value=${this._selectedEntity}
               @change=${(e) => this._selectedEntity = e.target.value}
@@ -14057,23 +14874,23 @@ class KitchenCookingPanel extends LitElement {
       <!-- Data Source Selector -->
       <ha-card>
         <div class="card-content">
-          <h3>🌍 Temperature Data Source</h3>
+          <h3>${this._t('meater.data_source_title')}</h3>
           <div class="button-group">
             <button 
               class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
               @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
-              🇺🇸 International (USDA)
+              ${this._t('meater.international')}
             </button>
             <button 
               class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
               @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
-              🇸🇪 Svenska (Livsmedelsverket)
+              ${this._t('meater.swedish')}
             </button>
           </div>
           <p class="source-description">
             ${this._dataSource === DATA_SOURCE_SWEDISH 
-              ? 'Använder svenska temperaturrekommendationer från Livsmedelsverket, Stekguiden.se och Gårdssällskapet.'
-              : 'Using international temperature guidelines from USDA, FDA and professional culinary sources.'}
+              ? this._t('meater.swedish_description')
+              : this._t('meater.international_description')}
           </p>
         </div>
       </ha-card>
@@ -14081,7 +14898,7 @@ class KitchenCookingPanel extends LitElement {
       <!-- Step 1: Select Category -->
       <ha-card>
         <div class="card-content">
-          <h3>1️⃣ Select Category</h3>
+          <h3>${this._t('meater.select_category')}</h3>
           <div class="button-group">
             ${Object.entries(categories).map(([key, cat]) => html`
               <button 
@@ -14093,7 +14910,7 @@ class KitchenCookingPanel extends LitElement {
             <button 
               class="category-btn ${this._selectedCategory === 'custom' ? 'selected' : ''}" 
               @click=${() => this._selectCategory('custom')}>
-              🎯 Custom
+              ${this._t('meater.custom')}
             </button>
           </div>
         </div>
@@ -14103,14 +14920,14 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCategory === 'custom' ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🎯 Custom Temperature Cook</h3>
-            <p>Set a target temperature and start monitoring — no protein or doneness selection needed.</p>
+            <h3>${this._t('meater.custom_temp_cook')}</h3>
+            <p>${this._t('meater.custom_temp_description')}</p>
             
             <div style="margin: 16px 0;">
-              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Session Name (optional)</label>
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">${this._t('meater.session_name')} (${this._t('common.optional')})</label>
               <input 
                 type="text" 
-                placeholder="e.g. My Cook"
+                placeholder="${this._t('meater.session_name_placeholder')}"
                 .value=${this._customProfileName || ''}
                 @input=${(e) => { this._customProfileName = e.target.value; }}
                 style="width: 100%; padding: 10px; border: 2px solid var(--divider-color); border-radius: 8px; font-size: 14px; background: var(--card-background-color); color: var(--primary-text-color); box-sizing: border-box;"
@@ -14118,7 +14935,7 @@ class KitchenCookingPanel extends LitElement {
             </div>
             
             <div style="margin: 16px 0;">
-              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Target Temperature</label>
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">${this._t('meater.target_temperature')}</label>
               <div class="temp-display-setup">
                 <div class="target-temp">
                   <span class="temp-value">${this._customProfileTempC}°C</span>
@@ -14180,7 +14997,7 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedMeat && cutTypes.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} Select Cut Type</h3>
+            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} ${this._t('meater.select_cut_type')}</h3>
             <div class="button-group">
               ${cutTypes.map(ct => html`
                 <button 
@@ -14198,9 +15015,9 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCutType && cuts.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} Select Cut</h3>
+            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} ${this._t('meater.select_cut')}</h3>
             <select @change=${(e) => this._selectCut(parseInt(e.target.value) || null)}>
-              <option value="">Choose a cut...</option>
+              <option value="">${this._t('meater.choose_cut')}</option>
               ${cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
                   ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
@@ -14215,7 +15032,7 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCut ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🌡️ Doneness Level ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = recommended)</span>` : ''}</h3>
+            <h3>🌡️ ${this._t('meater.select_doneness')} ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = ${this._t('meater.recommended')})</span>` : ''}</h3>
             <div class="doneness-grid">
               ${this._getAvailableDoneness().map(opt => html`
                 <button 
@@ -14290,13 +15107,13 @@ class KitchenCookingPanel extends LitElement {
         <!-- Step 6: Cooking Method -->
         <ha-card>
           <div class="card-content">
-            <h3>🍳 Cooking Method</h3>
+            <h3>${this._t('meater.select_method')}</h3>
             <div class="method-grid">
               ${COOKING_METHODS.map(opt => html`
                 <button 
                   class="method-btn ${this._selectedMethod === opt.value ? 'selected' : ''}"
                   @click=${() => this._selectedMethod = opt.value}>
-                  ${opt.name}
+                  ${this._t('cooking_methods.' + opt.value) !== ('cooking_methods.' + opt.value) ? this._t('cooking_methods.' + opt.value) : opt.name}
                 </button>
               `)}
             </div>
@@ -14306,7 +15123,7 @@ class KitchenCookingPanel extends LitElement {
         <!-- Start Button -->
         <div class="action-container">
           <ha-button unelevated @click=${this._startCook} ?disabled=${!this._selectedDoneness}>
-            🔥 Start Cooking${this._customTargetTempC ? ` at ${this._customTargetTempC}°C` : ''}
+            ${this._t('meater.start_cooking')}${this._customTargetTempC ? ` ${this._convertTemp(this._customTargetTempC)}` : ''}
           </ha-button>
         </div>
       ` : ''}
@@ -14669,14 +15486,14 @@ class KitchenCookingPanel extends LitElement {
 
     return html`
       <div class="welcome-header">
-        <h1>🍳 Kitchen Cooking Engine</h1>
-        <p class="welcome-subtitle">Select Your Appliance</p>
+        <h1>${this._t('welcome.title')}</h1>
+        <p class="welcome-subtitle">${this._t('welcome.select_appliance')}</p>
       </div>
 
       ${hasOngoingCooks ? html`
         <ha-card class="ongoing-cooks-card">
           <div class="card-content">
-            <h3 class="ongoing-cooks-title">🔥 Ongoing Cooks (${totalOngoingCooks})</h3>
+            <h3 class="ongoing-cooks-title">🔥 ${this._t('welcome.ongoing_cooks')} (${totalOngoingCooks})</h3>
 
             ${activeCooks.map(entityId => {
               const st = this.hass.states[entityId];
@@ -14780,8 +15597,8 @@ class KitchenCookingPanel extends LitElement {
           <div class="card-content previous-cooks-content">
             <div class="previous-cooks-icon">📋</div>
             <div class="previous-cooks-text">
-              <h3>Previous Cooks</h3>
-              <p>View and restart your past cooking sessions</p>
+              <h3>${this._t('meater.previous_cooks')}</h3>
+              <p>${this._language === 'sv' ? 'Visa och starta om dina tidigare tillagningar' : 'View and restart your past cooking sessions'}</p>
             </div>
           </div>
         </ha-card>
@@ -14790,9 +15607,58 @@ class KitchenCookingPanel extends LitElement {
           <div class="card-content previous-cooks-content">
             <div class="previous-cooks-icon">⚙️</div>
             <div class="previous-cooks-text">
-              <h3>AI Recipe Builder Settings</h3>
-              <p>${this._aiAgentId ? `Agent: ${this._aiAgentId}` : 'Configure your AI agent to enable the Recipe Builder'}</p>
+              <h3>${this._t('ai_recipe.settings')}</h3>
+              <p>${this._aiAgentId ? `Agent: ${this._aiAgentId}` : (this._language === 'sv' ? 'Konfigurera din AI-agent för att aktivera receptbyggaren' : 'Configure your AI agent to enable the Recipe Builder')}</p>
             </div>
+          </div>
+        </ha-card>
+
+        <!-- Phase 7: Language & Measurement selectors -->
+        <ha-card>
+          <div class="card-content">
+            <h3>${this._t('welcome.language_label')}</h3>
+            <div class="button-group">
+              <button
+                class="category-btn ${this._language === 'sv' ? 'selected' : ''}"
+                @click=${() => this._saveLanguagePreference('sv')}>
+                🇸🇪 Svenska
+              </button>
+              <button
+                class="category-btn ${this._language === 'en' ? 'selected' : ''}"
+                @click=${() => this._saveLanguagePreference('en')}>
+                🇬🇧 English
+              </button>
+            </div>
+          </div>
+        </ha-card>
+
+        <ha-card>
+          <div class="card-content">
+            <h3>${this._language === 'sv' ? '📏 Måttsystem' : '📏 Measurement System'}</h3>
+            <div class="button-group">
+              <button
+                class="category-btn ${this._measurementSystem === 'se' ? 'selected' : ''}"
+                @click=${() => this._saveMeasurementPreference('se')}>
+                ${this._language === 'sv' ? '🇸🇪 Svenska mått' : '🇸🇪 Swedish'}
+              </button>
+              <button
+                class="category-btn ${this._measurementSystem === 'uk' ? 'selected' : ''}"
+                @click=${() => this._saveMeasurementPreference('uk')}>
+                ${this._language === 'sv' ? '🇬🇧 Brittiska mått' : '🇬🇧 UK Metric'}
+              </button>
+              <button
+                class="category-btn ${this._measurementSystem === 'us' ? 'selected' : ''}"
+                @click=${() => this._saveMeasurementPreference('us')}>
+                ${this._language === 'sv' ? '🇺🇸 Amerikanska mått' : '🇺🇸 US Customary'}
+              </button>
+            </div>
+            <p class="source-description" style="margin-top: 8px; font-size: 0.85em;">
+              ${this._measurementSystem === 'se'
+                ? (this._language === 'sv' ? 'krm · tsk · msk · cl · dl · l · g · hg · kg — Temperatur i °C' : 'krm · tsk · msk · cl · dl · l · g · hg · kg — Temperature in °C')
+                : this._measurementSystem === 'uk'
+                  ? (this._language === 'sv' ? 'tsp · tbsp · ml · dl · l · g · kg — Temperatur i °C' : 'tsp · tbsp · ml · dl · l · g · kg — Temperature in °C')
+                  : (this._language === 'sv' ? 'tsp · tbsp · cup · fl oz · oz · lb — Temperatur i °F' : 'tsp · tbsp · cup · fl oz · oz · lb — Temperature in °F')}
+            </p>
           </div>
         </ha-card>
       `}
@@ -17217,8 +18083,8 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="recipe-cook-step-detail">
         <div class="step-header">
-          <h3>Step ${stepIndex + 1} of ${steps.length}</h3>
-          ${step.time ? html`<p class="step-time">⏱️ ~${step.time} minutes</p>` : ''}
+          <h3>${this._t('common.step')} ${stepIndex + 1} ${this._t('common.of')} ${steps.length}</h3>
+          ${step.time ? html`<p class="step-time">⏱️ ~${step.time} ${this._t('common.minutes')}</p>` : ''}
         </div>
 
         <div class="step-instructions">
@@ -17227,20 +18093,20 @@ class KitchenCookingPanel extends LitElement {
 
         ${step.temperature ? html`
           <div class="step-temp">
-            <strong>🌡️ Temperature:</strong> ${step.temperature}
+            <strong>${this._t('recipe_cook.temperature_label')}</strong> ${step.temperature}
           </div>
         ` : ''}
 
         ${step.notes ? html`
           <div class="step-notes">
-            <strong>💡 Tip:</strong> ${step.notes}
+            <strong>${this._t('recipe_cook.tip_label')}</strong> ${step.notes}
           </div>
         ` : ''}
 
         <!-- Ingredients: active sorted by appearance in grey box, inactive in 2-col below -->
         ${allIngredients.length > 0 ? html`
           <div class="recipe-cook-ingredients">
-            <h5>📋 Ingredients</h5>
+            <h5>${this._t('recipe_cook.ingredients_label')}</h5>
             ${allActiveIngs.length > 0 ? html`
               <ul class="ingredients-active">
                 ${allActiveIngs.map(ing => html`
@@ -20418,7 +21284,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "234";
+const PANEL_VERSION = "236";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

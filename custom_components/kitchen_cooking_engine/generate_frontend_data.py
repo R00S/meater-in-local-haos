@@ -284,6 +284,7 @@ def generate_js_data():
             os.path.join(base_dir, "measurements.py")
         )
         meas_module = importlib.util.module_from_spec(meas_spec)
+        sys.modules["measurements"] = meas_module  # Required for dataclass resolution
         meas_spec.loader.exec_module(meas_module)
         measurement_systems = meas_module.get_measurement_systems_js()
     except Exception as e:
