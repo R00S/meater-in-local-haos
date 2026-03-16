@@ -941,6 +941,8 @@ class AIRecipeGenerateView(HomeAssistantView):
                 max_time_minutes=data.get("max_time_minutes"),
                 complexity=data.get("complexity", 3),
                 cuisines=data.get("cuisines"),
+                language=data.get("language", "en"),
+                measurement_system=data.get("measurement_system", "us"),
             )
             
             # Convert suggestions to dict for JSON
@@ -1042,6 +1044,8 @@ class AIRecipeDetailView(HomeAssistantView):
                 complexity=data.get("complexity", 3),
                 user_ingredients=data.get("user_ingredients"),
                 servings=data.get("servings", 4),
+                language=data.get("language", "en"),
+                measurement_system=data.get("measurement_system", "us"),
             )
             
             if not detail:

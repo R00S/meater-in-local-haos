@@ -25,6 +25,7 @@
     "settings": "Inställningar",
     "language": "Språk",
     "minutes": "minuter",
+    "minutes_short": "min",
     "hours": "timmar",
     "seconds": "sekunder",
     "temperature": "Temperatur",
@@ -134,6 +135,9 @@
     "cook_this": "Laga detta"
   },
   "recipe_cook": {
+    "overview_title": "📋 Receptöversikt",
+    "total_time": "Total tid",
+    "steps_label": "Steg",
     "step_of": "Steg {current} av {total}",
     "time_estimate": "⏱️ ~{minutes} minuter",
     "temperature_label": "🌡️ Temperatur:",

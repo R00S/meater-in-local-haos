@@ -285,6 +285,8 @@ class AIRecipeBuilder:
         max_time_minutes: Optional[int] = None,
         complexity: int = 3,
         cuisines: Optional[List[str]] = None,
+        language: str = "en",
+        measurement_system: str = "us",
     ) -> List[AIRecipeSuggestion]:
         """Generate 4 recipe suggestions from AI.
         
@@ -298,6 +300,8 @@ class AIRecipeBuilder:
             max_time_minutes: Optional maximum cooking time
             complexity: Recipe complexity 1-5 (1=very simple, 5=chef level)
             cuisines: Optional list of cuisine/region IDs for fusion cooking
+            language: UI language code ('sv', 'en')
+            measurement_system: Measurement system ('se', 'uk', 'us')
         
         Returns:
             List of 4 recipe suggestions
@@ -316,6 +320,8 @@ class AIRecipeBuilder:
             max_time_minutes=max_time_minutes,
             complexity=complexity,
             cuisines=cuisines,
+            language=language,
+            measurement_system=measurement_system,
         )
         
         # Call OpenAI via conversation integration
@@ -349,6 +355,8 @@ class AIRecipeBuilder:
         complexity: int = 3,
         user_ingredients: Optional[List[str]] = None,
         servings: int = 4,
+        language: str = "en",
+        measurement_system: str = "us",
     ) -> Optional[AIRecipeDetail]:
         """Get detailed recipe for a suggestion.
         
@@ -361,6 +369,8 @@ class AIRecipeBuilder:
             complexity: Recipe complexity 1-5 (used for ingredient ceiling)
             user_ingredients: Original user-selected ingredients (for ceiling)
             servings: Number of servings requested by the user
+            language: UI language code ('sv', 'en')
+            measurement_system: Measurement system ('se', 'uk', 'us')
         
         Returns:
             Detailed recipe with instructions
@@ -381,6 +391,8 @@ class AIRecipeBuilder:
             complexity=complexity,
             user_ingredients=user_ingredients or suggestion.main_ingredients,
             servings=servings,
+            language=language,
+            measurement_system=measurement_system,
         )
         
         # Call OpenAI
@@ -527,6 +539,8 @@ class AIRecipeBuilder:
         complexity: int = 3,
         cuisines: Optional[List[str]] = None,
         main_appliance_id: Optional[str] = None,
+        language: str = "en",
+        measurement_system: str = "us",
     ) -> str:
         """Build prompt for recipe suggestions.
         
@@ -539,6 +553,8 @@ class AIRecipeBuilder:
             max_time_minutes: Maximum cooking time
             complexity: Recipe complexity 1-5
             cuisines: Optional cuisine/region preferences
+            language: UI language code ('sv', 'en')
+            measurement_system: Measurement system ('se', 'uk', 'us')
         
         Returns:
             Formatted prompt for OpenAI
@@ -654,8 +670,11 @@ class AIRecipeBuilder:
         if primary_appliance_ingredient:
             all_ingredients.insert(0, primary_appliance_ingredient)
 
+        # Phase 7: Language and measurement system directives for AI
+        language_directive = self._build_language_directive(language, measurement_system)
+
         prompt = f"""You are a professional chef creating recipes for a home kitchen.
-{primary_appliance_directive}
+{primary_appliance_directive}{language_directive}
 Available ingredients: {', '.join(all_ingredients)}
 Also assume basic staples are available: cooking oil, butter, salt, black pepper, sugar, vinegar.
 Cooking style: {cooking_style.replace('_', ' ')}
@@ -732,6 +751,8 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
         complexity: int = 3,
         user_ingredients: Optional[List[str]] = None,
         servings: int = 4,
+        language: str = "en",
+        measurement_system: str = "us",
     ) -> str:
         """Build prompt for detailed recipe.
         
@@ -743,6 +764,8 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
             complexity: Recipe complexity 1-5 (for ingredient ceiling)
             user_ingredients: Original user-selected ingredients (for ceiling)
             servings: Number of servings requested by the user
+            language: UI language code ('sv', 'en')
+            measurement_system: Measurement system ('se', 'uk', 'us')
         
         Returns:
             Formatted prompt for detailed recipe
@@ -787,8 +810,11 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
                     f"Do NOT describe steps that require a different primary appliance."
                 )
 
+        # Phase 7: Language and measurement system directives for AI
+        language_directive = self._build_language_directive(language, measurement_system)
+
         prompt = f"""You are a professional chef. Please provide the complete, detailed recipe for:
-{primary_appliance_directive}
+{primary_appliance_directive}{language_directive}
 Recipe Name: {suggestion.name}
 Description: {suggestion.description}
 Main Ingredients: {', '.join(suggestion.main_ingredients)}
@@ -834,9 +860,9 @@ Please provide the full detailed recipe with:
 
 Format your response as JSON:
 {{
-  "ingredients": ["1 lb chicken breast, diced", "2 cups rice", ...],
-  "instructions": ["Step 1: Preheat oven to 400°F (200°C)", "Step 2: Season chicken with salt and pepper", ...],
-  "tips": ["Tip 1: Let meat rest 5 minutes before serving", "Tip 2: Use fresh herbs for best flavor", ...],
+  "ingredients": [{self._get_example_ingredients(measurement_system)}],
+  "instructions": [{self._get_example_instructions(language, measurement_system)}],
+  "tips": [{self._get_example_tips(language)}],
   "phases": [
     {{
       "mode": "oven",
@@ -858,6 +884,71 @@ preamble, commentary, or markdown formatting outside the JSON. The very first ch
 of your response must be '{{' and the very last must be '}}'.
 """
         return prompt
+
+    # ------------------------------------------------------------------
+    # Phase 7: Language and measurement helpers for AI prompts
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def _build_language_directive(language: str, measurement_system: str) -> str:
+        """Build the language/measurement directive to inject into AI prompts."""
+        parts = []
+        # Language directive
+        if language == "sv":
+            parts.append(
+                "\nCRITICAL RULE — LANGUAGE:\n"
+                "Write the ENTIRE recipe in Swedish (svenska). All text — recipe name, "
+                "description, ingredients, instructions, tips — MUST be in Swedish. "
+                "Use natural Swedish culinary vocabulary."
+            )
+        # else: English is the default, no directive needed
+
+        # Measurement directive
+        if measurement_system == "se":
+            parts.append(
+                "\nCRITICAL RULE — MEASUREMENTS:\n"
+                "Use Swedish measurement units ONLY. "
+                "Volume: krm (1 ml), tsk (5 ml), msk (15 ml), cl, dl, l. "
+                "Mass: g, hg (100 g), kg. "
+                "NEVER use cups, tablespoons, teaspoons, oz, lb, or fl oz. "
+                "Prefer dl over cl when ≥ 0.5 dl. Use hg for amounts ≥ 100 g. "
+                "Use kg for amounts ≥ 500 g. Temperatures in °C only."
+            )
+        elif measurement_system == "uk":
+            parts.append(
+                "\nCRITICAL RULE — MEASUREMENTS:\n"
+                "Use UK metric units. Volume: tsp, tbsp, ml, dl, l. "
+                "Mass: g, kg. NEVER use cups, oz, lb, or fl oz. "
+                "Temperatures in °C only."
+            )
+        # else: US is the default (cups, oz, lb, °F) — no directive needed
+
+        return "".join(parts)
+
+    @staticmethod
+    def _get_example_ingredients(measurement_system: str) -> str:
+        """Return example ingredient strings for the JSON format hint."""
+        if measurement_system == "se":
+            return '"5 dl ris", "400 g kycklingbröst, tärnad", "2 msk olivolja"'
+        elif measurement_system == "uk":
+            return '"300 g chicken breast, diced", "400 ml rice", "2 tbsp olive oil"'
+        return '"1 lb chicken breast, diced", "2 cups rice", "2 tbsp olive oil"'
+
+    @staticmethod
+    def _get_example_instructions(language: str, measurement_system: str) -> str:
+        """Return example instruction strings for the JSON format hint."""
+        if language == "sv":
+            return '"Steg 1: Värm ugnen till 200°C", "Steg 2: Krydda kycklingen med salt och peppar"'
+        if measurement_system == "uk":
+            return '"Step 1: Preheat oven to 200°C", "Step 2: Season chicken with salt and pepper"'
+        return '"Step 1: Preheat oven to 400°F (200°C)", "Step 2: Season chicken with salt and pepper"'
+
+    @staticmethod
+    def _get_example_tips(language: str) -> str:
+        """Return example tip strings for the JSON format hint."""
+        if language == "sv":
+            return '"Tips 1: Låt köttet vila 5 minuter innan servering", "Tips 2: Använd färska örter"'
+        return '"Tip 1: Let meat rest 5 minutes before serving", "Tip 2: Use fresh herbs for best flavor"'
 
     # Keywords that identify a transient / overload error from the AI service.
     # Checked both against exception messages and response text.

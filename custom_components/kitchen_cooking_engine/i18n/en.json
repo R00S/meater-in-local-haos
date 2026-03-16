@@ -25,6 +25,7 @@
     "settings": "Settings",
     "language": "Language",
     "minutes": "minutes",
+    "minutes_short": "min",
     "hours": "hours",
     "seconds": "seconds",
     "temperature": "Temperature",
@@ -134,6 +135,9 @@
     "cook_this": "Cook This"
   },
   "recipe_cook": {
+    "overview_title": "📋 Recipe Overview",
+    "total_time": "Total Time",
+    "steps_label": "Steps",
     "step_of": "Step {current} of {total}",
     "time_estimate": "⏱️ ~{minutes} minutes",
     "temperature_label": "🌡️ Temperature:",

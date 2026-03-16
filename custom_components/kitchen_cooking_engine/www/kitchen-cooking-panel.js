@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Mar 2026, 22:24 CET
+ * AUTO-GENERATED: 16 Mar 2026, 23:19 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 16 Mar 2026, 22:24 CET
+// Last generated: 16 Mar 2026, 23:19 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -11777,6 +11777,7 @@ const I18N_STRINGS = {
       "settings": "Settings",
       "language": "Language",
       "minutes": "minutes",
+      "minutes_short": "min",
       "hours": "hours",
       "seconds": "seconds",
       "temperature": "Temperature",
@@ -11886,6 +11887,9 @@ const I18N_STRINGS = {
       "cook_this": "Cook This"
     },
     "recipe_cook": {
+      "overview_title": "📋 Recipe Overview",
+      "total_time": "Total Time",
+      "steps_label": "Steps",
       "step_of": "Step {current} of {total}",
       "time_estimate": "⏱️ ~{minutes} minutes",
       "temperature_label": "🌡️ Temperature:",
@@ -11967,6 +11971,7 @@ const I18N_STRINGS = {
       "settings": "Inställningar",
       "language": "Språk",
       "minutes": "minuter",
+      "minutes_short": "min",
       "hours": "timmar",
       "seconds": "sekunder",
       "temperature": "Temperatur",
@@ -12076,6 +12081,9 @@ const I18N_STRINGS = {
       "cook_this": "Laga detta"
     },
     "recipe_cook": {
+      "overview_title": "📋 Receptöversikt",
+      "total_time": "Total tid",
+      "steps_label": "Steg",
       "step_of": "Steg {current} av {total}",
       "time_estimate": "⏱️ ~{minutes} minuter",
       "temperature_label": "🌡️ Temperatur:",
@@ -12602,6 +12610,76 @@ class KitchenCookingPanel extends LitElement {
       return `${f}°F (${Math.round(tempC)}°C)`;
     }
     return `${Math.round(tempC)}°C`;
+  }
+
+  /**
+   * Convert measurement patterns in a free-text ingredient or instruction string.
+   * Parses patterns like "1.5 lb", "1/2 cup", "2 tablespoons", "400°F" and converts
+   * them to the user's selected measurement system.
+   * Used as a safety-net for AI-generated text that may still contain wrong units.
+   */
+  _convertIngredientText(text) {
+    if (!text || typeof text !== 'string') return text;
+    const sysId = this._measurementSystem || 'se';
+    if (typeof MEASUREMENT_SYSTEMS === 'undefined') return text;
+    const sys = MEASUREMENT_SYSTEMS[sysId];
+    if (!sys || !sys.units) return text;
+
+    // Map of text patterns → unit ID in MEASUREMENT_SYSTEMS (source unit)
+    const unitPatterns = [
+      // Volume — long forms first to avoid partial matches
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:tablespoons?|Tablespoons?|TBSP)\b/g, unit: 'tbsp' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:teaspoons?|Teaspoons?|TSP)\b/g, unit: 'tsp' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:cups?|Cups?)\b/g, unit: 'cup' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:fl\.?\s*oz|fluid\s*ounces?)\b/gi, unit: 'fl_oz' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:tbsp)\b/g, unit: 'tbsp' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:tsp)\b/g, unit: 'tsp' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:pints?|Pints?)\b/g, unit: 'pint' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:quarts?|Quarts?)\b/g, unit: 'quart' },
+      // Mass — long forms first
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:pounds?|Pounds?|lbs?)\b/g, unit: 'lb' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:ounces?|Ounces?)\b/g, unit: 'oz' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:oz)\b/g, unit: 'oz' },
+    ];
+
+    // Parse fraction strings like "1/2" or "1 1/2"
+    const parseFrac = (s) => {
+      s = s.replace(',', '.');
+      if (s.includes('/')) {
+        const parts = s.split('/');
+        return parseFloat(parts[0]) / parseFloat(parts[1]);
+      }
+      return parseFloat(s);
+    };
+
+    let result = text;
+
+    // Handle compound fractions like "1 1/2 cups" → 1.5 cups
+    result = result.replace(/(\d+)\s+(\d+\/\d+)/g, (m, whole, frac) => {
+      return String(parseInt(whole) + parseFrac(frac));
+    });
+
+    for (const { re, unit } of unitPatterns) {
+      result = result.replace(re, (match, numStr) => {
+        const value = parseFrac(numStr);
+        if (isNaN(value) || value <= 0) return match;
+        return this._convertMeasure(value, unit);
+      });
+    }
+
+    // Temperature conversion: "400°F" or "400 °F" → localized
+    if (sys.temp_unit !== 'F') {
+      // Convert °F to °C when user wants metric
+      result = result.replace(/(\d+)\s*°\s*F\b/g, (match, fStr) => {
+        const f = parseInt(fStr);
+        const c = Math.round((f - 32) * 5 / 9);
+        return `${c}°C`;
+      });
+      // Remove redundant "(200°C)" after we already converted
+      result = result.replace(/\s*\(\d+°C\)/g, '');
+    }
+
+    return result;
   }
 
   async _loadLanguagePreference() {
@@ -17670,6 +17748,8 @@ class KitchenCookingPanel extends LitElement {
         main_appliance_id: this._selectedAppliance.id,
         servings: this._aiPortions || 4,
         complexity: this._aiComplexity || 3,
+        language: this._language || 'en',
+        measurement_system: this._measurementSystem || 'us',
       };
 
       // Add max time if set (0 = no limit)
@@ -17793,7 +17873,9 @@ class KitchenCookingPanel extends LitElement {
         cooking_style: this._selectedCookingStyle || 'quick_and_easy',
         complexity: this._aiComplexity || 3,
         user_ingredients: this._selectedIngredients || [],
-        servings: this._aiPortions || 4
+        servings: this._aiPortions || 4,
+        language: this._language || 'en',
+        measurement_system: this._measurementSystem || 'us',
       });
 
       if (cancelled) return; // User cancelled while waiting
@@ -17950,22 +18032,22 @@ class KitchenCookingPanel extends LitElement {
     
     return html`
       <div class="recipe-cook-overview">
-        <h3>📋 Recipe Overview</h3>
+        <h3>${this._t('recipe_cook.overview_title')}</h3>
         
         ${recipe.description ? html`
           <p class="recipe-description">${recipe.description}</p>
         ` : ''}
 
         ${totalTime ? html`
-          <p><strong>⏱️ Total Time:</strong> ${totalTime} minutes</p>
+          <p><strong>⏱️ ${this._t('recipe_cook.total_time')}:</strong> ${totalTime} ${this._t('common.minutes')}</p>
         ` : ''}
 
         <div class="recipe-cook-ingredients">
-          <h4>🛒 Ingredients</h4>
+          <h4>${this._t('recipe_cook.ingredients_label')}</h4>
           ${ingredientList.length > 0 ? html`
             <ul>
               ${ingredientList.map(ing => html`
-                <li>${ing}</li>
+                <li>${this._convertIngredientText(ing)}</li>
               `)}
             </ul>
           ` : html`
@@ -17977,12 +18059,12 @@ class KitchenCookingPanel extends LitElement {
 
         ${steps.length > 0 ? html`
           <div class="recipe-cook-step-overview">
-            <h4>📝 Steps (${steps.length})</h4>
+            <h4>📝 ${this._t('recipe_cook.steps_label')} (${steps.length})</h4>
             <ol>
               ${steps.map((step, idx) => html`
                 <li>
-                  ${step.instructions || step.description || step.name || `Step ${idx + 1}`}
-                  ${step.time ? html` <span class="step-time">(~${step.time} min)</span>` : ''}
+                  ${this._convertIngredientText(step.instructions || step.description || step.name || `${this._t('common.step')} ${idx + 1}`)}
+                  ${step.time ? html` <span class="step-time">(~${step.time} ${this._t('common.minutes_short')})</span>` : ''}
                 </li>
               `)}
             </ol>
@@ -18011,16 +18093,19 @@ class KitchenCookingPanel extends LitElement {
     // Get ingredients mentioned in this step (if available)
     const stepIngredients = step.ingredients || [];
 
-    // Strip "Step X:" prefix from description text
+    // Strip "Step X:" / "Steg X:" prefix from description text
     let instructionText = step.instructions || step.description || 'No instructions available.';
-    instructionText = instructionText.replace(/^Step\s+\d+\s*:\s*/i, '');
+    instructionText = instructionText.replace(/^(?:Step|Steg)\s+\d+\s*:\s*/i, '');
+    // Convert any remaining US measurements in the instruction text
+    instructionText = this._convertIngredientText(instructionText);
 
     // Build sorted ingredient list: new-active (green), repeat-active (black), inactive (2 columns)
     const allIngredients = recipe.ingredients && recipe.ingredients.length > 0 ? recipe.ingredients : [];
     const newActiveIngs = [];
     const repeatActiveIngs = [];
     const inactiveIngs = [];
-    const measureWords = new Set(['cups','cup','tbsp','tsp','ounce','ounces','pound','pounds','gram','grams','tablespoon','tablespoons','teaspoon','teaspoons','inch','lbs','chopped','diced','minced','sliced','finely','freshly','large','small','medium','optional','about','into','with','from','each','piece','pieces','water','drain','rinse','heat','place','minutes','adjust','taste','whole','clean','back','that','this','then','also','well','over','used','half','more','approx','skin','make']);
+    const measureWords = new Set(['cups','cup','tbsp','tsp','ounce','ounces','pound','pounds','gram','grams','tablespoon','tablespoons','teaspoon','teaspoons','inch','lbs','chopped','diced','minced','sliced','finely','freshly','large','small','medium','optional','about','into','with','from','each','piece','pieces','water','drain','rinse','heat','place','minutes','adjust','taste','whole','clean','back','that','this','then','also','well','over','used','half','more','approx','skin','make',
+      /* Swedish measurement/stopwords */ 'krm','tsk','msk','dl','cl','hg','kg','hackad','tärnad','skivad','finhackad','stor','liten','valfritt','ungefär','stycken','vatten','minuter','smak','hela','efter']);
     const escapeRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const extractKeywords = (text) => text.split(/[\s,()]+/).filter(w =>
       w.length > 3 && !measureWords.has(w) && !/^\d/.test(w)
@@ -21292,7 +21377,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "238";
+const PANEL_VERSION = "239";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
