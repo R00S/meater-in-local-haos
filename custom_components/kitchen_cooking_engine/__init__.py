@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 16 Mar 2026, 12:53 UTC
-Last Change: v0.5.5.94 - Condense recipe step pages: nav buttons in header, active ingredients bold/green on top, inactive in 2-col, remove redundant step title/prefix
+Last Change: v0.5.5.95 - Fix active ingredient detection for AI recipes by scanning instruction text for ingredient keywords
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -71,7 +71,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.5.5.94"
+__version__ = "0.5.5.95"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
