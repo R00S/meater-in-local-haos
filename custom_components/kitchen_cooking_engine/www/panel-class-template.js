@@ -4690,11 +4690,11 @@ class KitchenCookingPanel extends LitElement {
     // Data should already be loaded by _startAIRecipeCreation()
     // If not loaded, show loading state
     if (!this._cookingStyles) {
-      return html`<div class="loading">Loading cooking styles...</div>`;
+      return html`<div class="loading">${this._t('ai_recipe.loading_styles')}</div>`;
     }
 
     // Complexity labels
-    const complexityLabels = ['Very Simple', 'Simple', 'Medium', 'Complex', 'Chef Level'];
+    const complexityLabels = [this._t('ai_recipe.very_simple'), this._t('ai_recipe.simple'), this._t('ai_recipe.medium'), this._t('ai_recipe.complex_level'), this._t('ai_recipe.chef_level')];
 
     return html`
       <div class="path-header">
@@ -4703,14 +4703,14 @@ class KitchenCookingPanel extends LitElement {
           this._showAIIngredientSelector = true;
           this.requestUpdate();
         }}>
-          ← Back to Ingredients
+          ← ${this._t('nav.back_to_ingredients')}
         </button>
-        <h2>🍳 Choose Cooking Style</h2>
+        <h2>${this._t('ai_recipe.choose_style_title')}</h2>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <p class="info-text">Select your preferred cooking style:</p>
+          <p class="info-text">${this._t('ai_recipe.select_style_hint')}</p>
           
           <div class="style-grid">
             ${(this._cookingStyles || []).map(style => html`
@@ -4760,11 +4760,11 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>⚙️ Settings</h3>
+          <h3>${this._t('ai_recipe.settings_heading')}</h3>
 
           <div style="margin-bottom: 16px;">
             <label style="display: block; font-weight: bold; margin-bottom: 8px;">
-              📊 Complexity: ${complexityLabels[this._aiComplexity - 1] || 'Medium'}
+              ${this._t('ai_recipe.complexity_label')} ${complexityLabels[this._aiComplexity - 1] || this._t('ai_recipe.medium')}
             </label>
             <input type="range" min="1" max="5" step="1"
               .value=${String(this._aiComplexity)}
@@ -4772,13 +4772,13 @@ class KitchenCookingPanel extends LitElement {
               style="width: 100%;"
             />
             <div style="display: flex; justify-content: space-between; font-size: 0.8em; color: var(--secondary-text-color);">
-              <span>Simple</span><span>Chef Level</span>
+              <span>${this._t('ai_recipe.simple')}</span><span>${this._t('ai_recipe.chef_level')}</span>
             </div>
           </div>
 
           <div style="margin-bottom: 16px;">
             <label style="display: block; font-weight: bold; margin-bottom: 8px;">
-              🍽️ Portions: ${this._aiPortions}
+              ${this._t('ai_recipe.portions_label')} ${this._aiPortions}
             </label>
             <input type="range" min="1" max="8" step="1"
               .value=${String(this._aiPortions)}
@@ -4792,7 +4792,7 @@ class KitchenCookingPanel extends LitElement {
 
           <div style="margin-bottom: 16px;">
             <label style="display: block; font-weight: bold; margin-bottom: 8px;">
-              ⏱️ Max time: ${this._formatMaxTime(this._aiMaxTime)}
+              ${this._t('ai_recipe.max_time_label')} ${this._formatMaxTime(this._aiMaxTime)}
             </label>
             <input type="range" min="0" max="240" step="15"
               .value=${String(this._aiMaxTime)}
@@ -4800,7 +4800,7 @@ class KitchenCookingPanel extends LitElement {
               style="width: 100%;"
             />
             <div style="display: flex; justify-content: space-between; font-size: 0.8em; color: var(--secondary-text-color);">
-              <span>No limit</span><span>1h</span><span>2h</span><span>3h</span><span>4h</span>
+              <span>${this._t('ai_recipe.no_limit')}</span><span>1h</span><span>2h</span><span>3h</span><span>4h</span>
             </div>
           </div>
         </div>
@@ -4812,7 +4812,7 @@ class KitchenCookingPanel extends LitElement {
           ?disabled=${!this._selectedCookingStyle}
           @click=${() => this._generateAIRecipes()}
         >
-          Generate Recipes 🤖
+          ${this._t('ai_recipe.generate_btn')}
         </button>
       </div>
     `;
@@ -4830,24 +4830,24 @@ class KitchenCookingPanel extends LitElement {
           this._aiRecipeSuggestions = [];
           this.requestUpdate();
         }}>
-          ← Back to Cooking Style
+          ← ${this._t('nav.back_to_cooking_style')}
         </button>
-        <h2>🤖 AI Recipe Suggestions</h2>
+        <h2>${this._t('ai_recipe.suggestions_title')}</h2>
       </div>
 
       ${this._aiRecipeSuggestions.length === 0 ? html`
         <ha-card>
           <div class="card-content loading-state ai-generation-loading">
             <ha-circular-progress active></ha-circular-progress>
-            <p class="ai-status-primary">${this._aiGenerationStatus || '🤖 Connecting to AI agent...'}</p>
+            <p class="ai-status-primary">${this._aiGenerationStatus || this._t('ai_recipe.connecting')}</p>
             ${this._aiGenerationElapsed > 0 ? html`
               <p class="ai-status-elapsed">${this._aiGenerationElapsed}s elapsed</p>
             ` : ''}
             ${this._aiGenerationStatus && (this._aiGenerationStatus.includes('overloaded') || this._aiGenerationStatus.includes('Retrying') || this._aiGenerationStatus.includes('waiting')) ? html`
-              <p class="ai-status-hint">The AI service is busy. Your request is being retried automatically.</p>
+              <p class="ai-status-hint">${this._t('ai_recipe.ai_busy_hint')}</p>
             ` : ''}
             ${this._aiGenerationStatus && this._aiGenerationStatus.includes('backup') ? html`
-              <p class="ai-status-hint">Switching to backup AI agent — hang on!</p>
+              <p class="ai-status-hint">${this._t('ai_recipe.switching_backup')}</p>
             ` : ''}
           </div>
         </ha-card>
@@ -4862,27 +4862,27 @@ class KitchenCookingPanel extends LitElement {
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
                   <h3 style="margin: 0; flex: 1;">${displayName}</h3>
                   ${recipe.recipe_origin === 'known' ? html`
-                    <span style="background: #2e7d32; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">📖 Classic</span>
+                    <span style="background: #2e7d32; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">${this._t('ai_recipe.classic_badge')}</span>
                   ` : html`
-                    <span style="background: #1565c0; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">🤖 Original</span>
+                    <span style="background: #1565c0; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">${this._t('ai_recipe.original_badge')}</span>
                   `}
                 </div>
                 <p class="recipe-description">${recipe.description || ''}</p>
                 
                 <div class="recipe-details">
                   <div class="detail-item">
-                    <strong>🍳 Cook Time:</strong> ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' min' : 'N/A'}
+                    <strong>${this._t('ai_recipe.cook_time_label')}</strong> ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' ' + this._t('common.minutes_short') : this._t('common.na')}
                   </div>
                   <div class="detail-item">
-                    <strong>🍽️ Servings:</strong> ${recipe.servings || '4'}
+                    <strong>${this._t('ai_recipe.servings_label')}</strong> ${recipe.servings || '4'}
                   </div>
                   <div class="detail-item">
-                    <strong>📊 Difficulty:</strong> ${recipe.difficulty || 'N/A'}
+                    <strong>${this._t('ai_recipe.difficulty_label')}</strong> ${recipe.difficulty || this._t('common.na')}
                   </div>
                 </div>
 
                 <div class="recipe-ingredients">
-                  <h4>Key Ingredients:</h4>
+                  <h4>${this._t('ai_recipe.key_ingredients')}</h4>
                   <ul>
                     ${(recipe.main_ingredients || recipe.ingredients || []).map(ing => html`<li>${ing}</li>`)}
                   </ul>
@@ -4892,7 +4892,7 @@ class KitchenCookingPanel extends LitElement {
                   class="primary-btn"
                   @click=${() => this._startCookingFromAIRecipe(recipe)}
                 >
-                  Start Cooking This Recipe
+                  ${this._t('ai_recipe.start_cooking_recipe')}
                 </button>
               </div>
             </ha-card>
@@ -4904,7 +4904,7 @@ class KitchenCookingPanel extends LitElement {
             class="secondary-btn"
             @click=${() => this._generateAIRecipes()}
           >
-            🔄 Generate Different Recipes
+            ${this._t('ai_recipe.generate_different')}
           </button>
         </div>
       `}
