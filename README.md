@@ -5,7 +5,7 @@
 [![Alpha](https://img.shields.io/badge/Status-ALPHA-orange.svg)](https://github.com/R00S/meater-in-local-haos)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/R00S)
 
-⚠️ **DEVELOPMENT RELEASE** — GUI Redesign Phases 1–6 complete + v0.5.4.x stability & UX features. Functional but not yet production-ready. Phase 7 (Multilingual/Measurements) and Phase 8 (Polish) are **not yet started**.
+⚠️ **DEVELOPMENT RELEASE** — GUI Redesign Phases 1–6 complete + v0.5.5.x stability & UX features. Functional but not yet production-ready. Phase 7 (Multilingual/Measurements) and Phase 8 (Polish) are **not yet started**.
 
 A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes, and temperature sensors.
 
@@ -21,9 +21,15 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 ## 📊 Current Status
 
-**v0.5.4.9** — Development release (March 2026)
+**v0.5.5.90** — Development release (March 2026)
 
-GUI Redesign Phases 1–6 complete + v0.5.2.x appliance features + v0.5.4.x stability & UX. Phase 7 (Multilingual & Measurement Systems) and Phase 8 (Polish & Testing) are **not yet started**. See [STATUS.md](STATUS.md) for full progress tracking.
+GUI Redesign Phases 1–6 complete + v0.5.2.x appliance features + v0.5.4.x stability & UX + v0.5.5.x tab navigation & AI targeting. Phase 7 (Multilingual & Measurement Systems) and Phase 8 (Polish & Testing) are **not yet started**. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.5.5.x Features (March 2026)
+- ✅ **Tab navigation preserved** — Returning to the panel after switching browser tabs or OS windows no longer resets to the welcome screen; all navigation paths are preserved
+- ✅ **hasChanged fix** — Panel re-renders correctly after Home Assistant state changes (was silently skipping re-renders before)
+- ✅ **Real backend refresh on return** — Appliances, AI settings, and active recipe cooks are reloaded whenever the panel becomes visible again
+- ✅ **AI recipe appliance targeting** — Opening the AI Recipe Builder with an appliance selected auto-injects `"use <ApplianceName> programs"` as the first ingredient; the chip is removable for fully generic recipes
 
 ### v0.5.4.x Features (March 2026)
 - ✅ **Ongoing cooks badge** — Welcome screen shows active MEATER + recipe cooks with live status
@@ -121,6 +127,7 @@ The AI Recipe Builder generates custom recipes using AI (OpenAI or any HA conver
 1. Open the Kitchen Cooking Engine panel
 2. Click an appliance or **🤖 AI Recipe Builder** button
 3. Select your **available ingredients** (minimum 2, click to toggle)
+   - If you opened the builder from an appliance, `"use <ApplianceName> programs"` is pre-filled as the first ingredient so the AI targets that appliance's cooking programs. Click **×** to remove it for fully generic recipes.
 4. Click **Next: Choose Cooking Style**
 5. Choose your **cooking style** (Quick & Easy, Gourmet, etc.)
 6. Adjust **complexity** (1–5) and **portions** (1–8)
