@@ -266,38 +266,19 @@ class KitchenCookingPanel extends LitElement {
     // useful when the user returns to the tab.
     this._visibilityHandler = () => {
       if (document.visibilityState === 'visible') {
-        // If the AI Recipe Builder is active, preserve the flow completely.
-        // The generation request is still in flight; resetting to welcome would
-        // destroy the UI and force the user to start over.
-        if (this._currentPath === 'ai_recipe_builder') {
-          this._loadAISettings();
-          this.requestUpdate();
-          return;
-        }
+        // Preserve whatever screen the user was on — do NOT reset to welcome.
+        // The active_cook render path already validates the entity state and
+        // self-corrects to welcome if the cook has ended while the tab was away.
+        this._meaterCookRatingState = null; // clear any stale rating overlay
 
-        // For all other paths, reset to welcome — stale state (e.g.
-        // _currentPath='active_cook' for a finished cook) would cause the render
-        // to attempt to show an active-cook screen for an entity that is now idle.
-        this._currentPath = 'welcome';
-        this._meaterCookRatingState = null; // clear stale rating overlay
-        
         // Reload fresh data from the backend.
         this._loadAppliances();
         this._loadAISettings();
         this._loadServerActiveRecipeCooks();
-        
-        // Immediate re-render (hasChanged=true guarantees HA's next hass update
-        // also triggers a render, but we need one right now too).
+
+        // Immediate re-render so stale screens refresh their content.
         this.requestUpdate();
-        
-        // Scroll to top so the welcome screen is not hidden by a stale scroll
-        // position left over from the active-cook view.
-        try {
-          window.scrollTo(0, 0);
-          this.scrollTop = 0;
-          if (this.parentElement) this.parentElement.scrollTop = 0;
-        } catch (_) { /* ignore – scroll API may not be available */ }
-        
+
         // Additional re-render after the next paint, in case the browser discarded
         // GPU compositor layers for the background tab (common on mobile).
         requestAnimationFrame(() => {
@@ -311,24 +292,18 @@ class KitchenCookingPanel extends LitElement {
     // pageshow fires when page is restored from bfcache (back/forward navigation).
     this._pageshowHandler = (event) => {
       if (event.persisted) {
-        // Preserve AI Recipe Builder flow (same reason as visibilitychange above).
-        if (this._currentPath !== 'ai_recipe_builder') {
-          this._currentPath = 'welcome';
-        }
+        // Stay on whatever screen was active — the render logic self-corrects stale state.
         this._loadAppliances();
         this.requestUpdate();
         requestAnimationFrame(() => this.requestUpdate());
       }
     };
     window.addEventListener('pageshow', this._pageshowHandler);
-    
+
     // window focus covers the case where visibilitychange didn't fire (e.g. some
     // mobile browsers, or when switching OS windows rather than browser tabs).
     this._focusHandler = () => {
-      // Preserve AI Recipe Builder flow (same reason as visibilitychange above).
-      if (this._currentPath !== 'ai_recipe_builder') {
-        this._currentPath = 'welcome';
-      }
+      // Stay on whatever screen was active — do NOT reset to welcome.
       this.requestUpdate();
     };
     window.addEventListener('focus', this._focusHandler);
@@ -2253,12 +2228,10 @@ class KitchenCookingPanel extends LitElement {
       return this._renderPanel();
     } catch (err) {
       // Error boundary: if anything in the render tree throws, show a recovery
-      // screen instead of leaving the panel blank.  This is most likely to happen
-      // on the first render after a long tab absence when internal state is stale.
+      // screen instead of leaving the panel blank.  Reset to a clean state so
+      // the next render attempt succeeds.  This is the ONLY place that forces
+      // a path reset — tab switches never reset navigation any more.
       console.error('KitchenCookingPanel render error — resetting to welcome screen', err);
-      // Reset to a clean state so the next render attempt succeeds.
-      // Exception: preserve the AI Recipe Builder path so in-progress generation
-      // isn't lost due to a transient render error.
       if (this._currentPath !== 'ai_recipe_builder') {
         this._currentPath = 'welcome';
       }
