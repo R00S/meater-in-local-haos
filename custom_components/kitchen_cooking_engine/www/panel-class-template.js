@@ -4341,107 +4341,107 @@ class KitchenCookingPanel extends LitElement {
     // Data should already be loaded by _startAIRecipeCreation()
     // If not loaded, show loading state
     if (!this._commonIngredients || this._commonIngredients.length === 0) {
-      return html`<div class="loading">Loading ingredients...</div>`;
+      return html`<div class="loading">${this._t('ai_recipe.loading_ingredients')}</div>`;
     }
 
     // Cuisine/region options for fusion cooking (moved from cooking style page)
     const cuisineRegions = [
-      { id: 'nordic', name: 'Nordic & Scandinavian', icon: '❄️', cuisines: [
-        { id: 'swedish', name: 'Swedish', icon: '🇸🇪' },
-        { id: 'danish', name: 'Danish', icon: '🇩🇰' },
-        { id: 'norwegian', name: 'Norwegian', icon: '🇳🇴' },
-        { id: 'finnish', name: 'Finnish', icon: '🇫🇮' },
-        { id: 'icelandic', name: 'Icelandic', icon: '🇮🇸' },
-        { id: 'new_nordic', name: 'New Nordic', icon: '🌿' },
+      { id: 'nordic', name: this._t('cuisines.nordic'), icon: '❄️', cuisines: [
+        { id: 'swedish', name: this._t('cuisines.swedish'), icon: '🇸🇪' },
+        { id: 'danish', name: this._t('cuisines.danish'), icon: '🇩🇰' },
+        { id: 'norwegian', name: this._t('cuisines.norwegian'), icon: '🇳🇴' },
+        { id: 'finnish', name: this._t('cuisines.finnish'), icon: '🇫🇮' },
+        { id: 'icelandic', name: this._t('cuisines.icelandic'), icon: '🇮🇸' },
+        { id: 'new_nordic', name: this._t('cuisines.new_nordic'), icon: '🌿' },
       ]},
-      { id: 'east_asian', name: 'East Asian', icon: '🥢', cuisines: [
-        { id: 'japanese', name: 'Japanese', icon: '🇯🇵' },
-        { id: 'chinese', name: 'Chinese', icon: '🇨🇳' },
-        { id: 'korean', name: 'Korean', icon: '🇰🇷' },
-        { id: 'taiwanese', name: 'Taiwanese', icon: '🇹🇼' },
+      { id: 'east_asian', name: this._t('cuisines.east_asian'), icon: '🥢', cuisines: [
+        { id: 'japanese', name: this._t('cuisines.japanese'), icon: '🇯🇵' },
+        { id: 'chinese', name: this._t('cuisines.chinese'), icon: '🇨🇳' },
+        { id: 'korean', name: this._t('cuisines.korean'), icon: '🇰🇷' },
+        { id: 'taiwanese', name: this._t('cuisines.taiwanese'), icon: '🇹🇼' },
       ]},
-      { id: 'southeast_asian', name: 'Southeast Asian', icon: '🌴', cuisines: [
-        { id: 'thai', name: 'Thai', icon: '🇹🇭' },
-        { id: 'vietnamese', name: 'Vietnamese', icon: '🇻🇳' },
-        { id: 'indonesian', name: 'Indonesian', icon: '🇮🇩' },
-        { id: 'malaysian', name: 'Malaysian', icon: '🇲🇾' },
-        { id: 'filipino', name: 'Filipino', icon: '🇵🇭' },
-        { id: 'singaporean', name: 'Singaporean', icon: '🇸🇬' },
+      { id: 'southeast_asian', name: this._t('cuisines.southeast_asian'), icon: '🌴', cuisines: [
+        { id: 'thai', name: this._t('cuisines.thai'), icon: '🇹🇭' },
+        { id: 'vietnamese', name: this._t('cuisines.vietnamese'), icon: '🇻🇳' },
+        { id: 'indonesian', name: this._t('cuisines.indonesian'), icon: '🇮🇩' },
+        { id: 'malaysian', name: this._t('cuisines.malaysian'), icon: '🇲🇾' },
+        { id: 'filipino', name: this._t('cuisines.filipino'), icon: '🇵🇭' },
+        { id: 'singaporean', name: this._t('cuisines.singaporean'), icon: '🇸🇬' },
       ]},
-      { id: 'south_asian', name: 'South Asian', icon: '🍛', cuisines: [
-        { id: 'indian', name: 'Indian', icon: '🇮🇳' },
-        { id: 'sri_lankan', name: 'Sri Lankan', icon: '🇱🇰' },
-        { id: 'pakistani', name: 'Pakistani', icon: '🇵🇰' },
-        { id: 'bangladeshi', name: 'Bangladeshi', icon: '🇧🇩' },
-        { id: 'nepali', name: 'Nepali', icon: '🇳🇵' },
+      { id: 'south_asian', name: this._t('cuisines.south_asian'), icon: '🍛', cuisines: [
+        { id: 'indian', name: this._t('cuisines.indian'), icon: '🇮🇳' },
+        { id: 'sri_lankan', name: this._t('cuisines.sri_lankan'), icon: '🇱🇰' },
+        { id: 'pakistani', name: this._t('cuisines.pakistani'), icon: '🇵🇰' },
+        { id: 'bangladeshi', name: this._t('cuisines.bangladeshi'), icon: '🇧🇩' },
+        { id: 'nepali', name: this._t('cuisines.nepali'), icon: '🇳🇵' },
       ]},
-      { id: 'middle_east', name: 'Middle Eastern', icon: '🧆', cuisines: [
-        { id: 'lebanese', name: 'Lebanese', icon: '🇱🇧' },
-        { id: 'turkish', name: 'Turkish', icon: '🇹🇷' },
-        { id: 'persian', name: 'Persian / Iranian', icon: '🇮🇷' },
-        { id: 'israeli', name: 'Israeli', icon: '🇮🇱' },
-        { id: 'syrian', name: 'Syrian', icon: '🇸🇾' },
-        { id: 'iraqi', name: 'Iraqi', icon: '🇮🇶' },
-        { id: 'yemeni', name: 'Yemeni', icon: '🇾🇪' },
-        { id: 'emirati', name: 'Emirati / Gulf', icon: '🇦🇪' },
-        { id: 'palestinian', name: 'Palestinian', icon: '🇵🇸' },
+      { id: 'middle_east', name: this._t('cuisines.middle_east'), icon: '🧆', cuisines: [
+        { id: 'lebanese', name: this._t('cuisines.lebanese'), icon: '🇱🇧' },
+        { id: 'turkish', name: this._t('cuisines.turkish'), icon: '🇹🇷' },
+        { id: 'persian', name: this._t('cuisines.persian'), icon: '🇮🇷' },
+        { id: 'israeli', name: this._t('cuisines.israeli'), icon: '🇮🇱' },
+        { id: 'syrian', name: this._t('cuisines.syrian'), icon: '🇸🇾' },
+        { id: 'iraqi', name: this._t('cuisines.iraqi'), icon: '🇮🇶' },
+        { id: 'yemeni', name: this._t('cuisines.yemeni'), icon: '🇾🇪' },
+        { id: 'emirati', name: this._t('cuisines.emirati'), icon: '🇦🇪' },
+        { id: 'palestinian', name: this._t('cuisines.palestinian'), icon: '🇵🇸' },
       ]},
-      { id: 'european', name: 'European', icon: '🏰', cuisines: [
-        { id: 'italian', name: 'Italian', icon: '🇮🇹' },
-        { id: 'french', name: 'French', icon: '🇫🇷' },
-        { id: 'spanish', name: 'Spanish', icon: '🇪🇸' },
-        { id: 'greek', name: 'Greek', icon: '🇬🇷' },
-        { id: 'portuguese', name: 'Portuguese', icon: '🇵🇹' },
-        { id: 'german', name: 'German', icon: '🇩🇪' },
-        { id: 'british', name: 'British', icon: '🇬🇧' },
-        { id: 'polish', name: 'Polish', icon: '🇵🇱' },
-        { id: 'hungarian', name: 'Hungarian', icon: '🇭🇺' },
-        { id: 'mediterranean', name: 'Mediterranean', icon: '🫒' },
-        { id: 'balkan', name: 'Balkan', icon: '🏔️' },
-        { id: 'russian', name: 'Russian', icon: '🇷🇺' },
+      { id: 'european', name: this._t('cuisines.european'), icon: '🏰', cuisines: [
+        { id: 'italian', name: this._t('cuisines.italian'), icon: '🇮🇹' },
+        { id: 'french', name: this._t('cuisines.french'), icon: '🇫🇷' },
+        { id: 'spanish', name: this._t('cuisines.spanish'), icon: '🇪🇸' },
+        { id: 'greek', name: this._t('cuisines.greek'), icon: '🇬🇷' },
+        { id: 'portuguese', name: this._t('cuisines.portuguese'), icon: '🇵🇹' },
+        { id: 'german', name: this._t('cuisines.german'), icon: '🇩🇪' },
+        { id: 'british', name: this._t('cuisines.british'), icon: '🇬🇧' },
+        { id: 'polish', name: this._t('cuisines.polish'), icon: '🇵🇱' },
+        { id: 'hungarian', name: this._t('cuisines.hungarian'), icon: '🇭🇺' },
+        { id: 'mediterranean', name: this._t('cuisines.mediterranean'), icon: '🫒' },
+        { id: 'balkan', name: this._t('cuisines.balkan'), icon: '🏔️' },
+        { id: 'russian', name: this._t('cuisines.russian'), icon: '🇷🇺' },
       ]},
-      { id: 'north_american', name: 'North American', icon: '🦅', cuisines: [
-        { id: 'american', name: 'American', icon: '🇺🇸' },
-        { id: 'cajun_creole', name: 'Cajun / Creole', icon: '🦞' },
-        { id: 'tex_mex', name: 'Tex-Mex', icon: '🌮' },
-        { id: 'canadian', name: 'Canadian', icon: '🇨🇦' },
-        { id: 'southern_us', name: 'Southern US / Soul Food', icon: '🍗' },
-        { id: 'hawaiian', name: 'Hawaiian', icon: '🌺' },
+      { id: 'north_american', name: this._t('cuisines.north_american'), icon: '🦅', cuisines: [
+        { id: 'american', name: this._t('cuisines.american'), icon: '🇺🇸' },
+        { id: 'cajun_creole', name: this._t('cuisines.cajun_creole'), icon: '🦞' },
+        { id: 'tex_mex', name: this._t('cuisines.tex_mex'), icon: '🌮' },
+        { id: 'canadian', name: this._t('cuisines.canadian'), icon: '🇨🇦' },
+        { id: 'southern_us', name: this._t('cuisines.southern_us'), icon: '🍗' },
+        { id: 'hawaiian', name: this._t('cuisines.hawaiian'), icon: '🌺' },
       ]},
-      { id: 'latin_american', name: 'Latin American', icon: '💃', cuisines: [
-        { id: 'mexican', name: 'Mexican', icon: '🇲🇽' },
-        { id: 'brazilian', name: 'Brazilian', icon: '🇧🇷' },
-        { id: 'peruvian', name: 'Peruvian', icon: '🇵🇪' },
-        { id: 'argentinian', name: 'Argentinian', icon: '🇦🇷' },
-        { id: 'colombian', name: 'Colombian', icon: '🇨🇴' },
-        { id: 'cuban', name: 'Cuban', icon: '🇨🇺' },
-        { id: 'venezuelan', name: 'Venezuelan', icon: '🇻🇪' },
-        { id: 'chilean', name: 'Chilean', icon: '🇨🇱' },
+      { id: 'latin_american', name: this._t('cuisines.latin_american'), icon: '💃', cuisines: [
+        { id: 'mexican', name: this._t('cuisines.mexican'), icon: '🇲🇽' },
+        { id: 'brazilian', name: this._t('cuisines.brazilian'), icon: '🇧🇷' },
+        { id: 'peruvian', name: this._t('cuisines.peruvian'), icon: '🇵🇪' },
+        { id: 'argentinian', name: this._t('cuisines.argentinian'), icon: '🇦🇷' },
+        { id: 'colombian', name: this._t('cuisines.colombian'), icon: '🇨🇴' },
+        { id: 'cuban', name: this._t('cuisines.cuban'), icon: '🇨🇺' },
+        { id: 'venezuelan', name: this._t('cuisines.venezuelan'), icon: '🇻🇪' },
+        { id: 'chilean', name: this._t('cuisines.chilean'), icon: '🇨🇱' },
       ]},
-      { id: 'caribbean_region', name: 'Caribbean', icon: '🏝️', cuisines: [
-        { id: 'jamaican', name: 'Jamaican', icon: '🇯🇲' },
-        { id: 'trinidadian', name: 'Trinidadian', icon: '🇹🇹' },
-        { id: 'haitian', name: 'Haitian', icon: '🇭🇹' },
-        { id: 'puerto_rican', name: 'Puerto Rican', icon: '🇵🇷' },
-        { id: 'caribbean', name: 'Caribbean (General)', icon: '🏝️' },
+      { id: 'caribbean_region', name: this._t('cuisines.caribbean_region'), icon: '🏝️', cuisines: [
+        { id: 'jamaican', name: this._t('cuisines.jamaican'), icon: '🇯🇲' },
+        { id: 'trinidadian', name: this._t('cuisines.trinidadian'), icon: '🇹🇹' },
+        { id: 'haitian', name: this._t('cuisines.haitian'), icon: '🇭🇹' },
+        { id: 'puerto_rican', name: this._t('cuisines.puerto_rican'), icon: '🇵🇷' },
+        { id: 'caribbean', name: this._t('cuisines.caribbean'), icon: '🏝️' },
       ]},
-      { id: 'african', name: 'African', icon: '🌍', cuisines: [
-        { id: 'ethiopian', name: 'Ethiopian', icon: '🇪🇹' },
-        { id: 'moroccan', name: 'Moroccan', icon: '🇲🇦' },
-        { id: 'nigerian', name: 'Nigerian', icon: '🇳🇬' },
-        { id: 'ghanaian', name: 'Ghanaian', icon: '🇬🇭' },
-        { id: 'senegalese', name: 'Senegalese', icon: '🇸🇳' },
-        { id: 'south_african', name: 'South African', icon: '🇿🇦' },
-        { id: 'kenyan', name: 'Kenyan', icon: '🇰🇪' },
-        { id: 'tanzanian', name: 'Tanzanian', icon: '🇹🇿' },
-        { id: 'tunisian', name: 'Tunisian', icon: '🇹🇳' },
-        { id: 'egyptian', name: 'Egyptian', icon: '🇪🇬' },
-        { id: 'east_african', name: 'East African', icon: '🌄' },
-        { id: 'west_african', name: 'West African', icon: '🥘' },
+      { id: 'african', name: this._t('cuisines.african'), icon: '🌍', cuisines: [
+        { id: 'ethiopian', name: this._t('cuisines.ethiopian'), icon: '🇪🇹' },
+        { id: 'moroccan', name: this._t('cuisines.moroccan'), icon: '🇲🇦' },
+        { id: 'nigerian', name: this._t('cuisines.nigerian'), icon: '🇳🇬' },
+        { id: 'ghanaian', name: this._t('cuisines.ghanaian'), icon: '🇬🇭' },
+        { id: 'senegalese', name: this._t('cuisines.senegalese'), icon: '🇸🇳' },
+        { id: 'south_african', name: this._t('cuisines.south_african'), icon: '🇿🇦' },
+        { id: 'kenyan', name: this._t('cuisines.kenyan'), icon: '🇰🇪' },
+        { id: 'tanzanian', name: this._t('cuisines.tanzanian'), icon: '🇹🇿' },
+        { id: 'tunisian', name: this._t('cuisines.tunisian'), icon: '🇹🇳' },
+        { id: 'egyptian', name: this._t('cuisines.egyptian'), icon: '🇪🇬' },
+        { id: 'east_african', name: this._t('cuisines.east_african'), icon: '🌄' },
+        { id: 'west_african', name: this._t('cuisines.west_african'), icon: '🥘' },
       ]},
-      { id: 'oceanian', name: 'Oceanian', icon: '🦘', cuisines: [
-        { id: 'australian', name: 'Australian', icon: '🇦🇺' },
-        { id: 'polynesian', name: 'Polynesian', icon: '🌺' },
+      { id: 'oceanian', name: this._t('cuisines.oceanian'), icon: '🦘', cuisines: [
+        { id: 'australian', name: this._t('cuisines.australian'), icon: '🇦🇺' },
+        { id: 'polynesian', name: this._t('cuisines.polynesian'), icon: '🌺' },
       ]},
     ];
 
@@ -4459,15 +4459,15 @@ class KitchenCookingPanel extends LitElement {
           this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
           this.requestUpdate();
         }}>
-          ← Back
+          ${this._t('nav.back')}
         </button>
-        <h2>🥘 Select Ingredients</h2>
+        <h2>${this._t('ai_recipe.select_ingredients_title')}</h2>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <h3>🌍 Cuisine / Region (optional, select for fusion)</h3>
-          <p class="info-text" style="margin-bottom: 12px;">Select a cuisine to see its typical ingredients. Pick from multiple regions for fusion cooking.</p>
+          <h3>${this._t('ai_recipe.cuisine_region_label')}</h3>
+          <p class="info-text" style="margin-bottom: 12px;">${this._t('ai_recipe.cuisine_region_hint')}</p>
           ${(this._aiSelectedCuisines || []).length > 0 ? html`
             <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
               ${(this._aiSelectedCuisines || []).map(c => {
@@ -4529,9 +4529,9 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <p class="info-text">Choose ingredients you have available (select at least 2):</p>
+          <p class="info-text">${this._t('ai_recipe.choose_ingredients_label')}</p>
           <p class="info-text" style="font-size: 0.85em; color: var(--secondary-text-color);">
-            Staples assumed available: ${(typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : []).join(', ')}
+            ${this._t('ai_recipe.staples_available')} ${(typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : []).join(', ')}
           </p>
           
           ${this._renderCategorizedIngredients(displayIngredients)}
@@ -4539,7 +4539,7 @@ class KitchenCookingPanel extends LitElement {
           <div class="ingredient-custom">
             <input 
               type="text" 
-              placeholder="Add custom ingredient..." 
+              placeholder="${this._t('ai_recipe.add_custom_placeholder')}" 
               @keypress=${(e) => {
                 if (e.key === 'Enter' && e.target.value.trim()) {
                   this._addCustomIngredient(e.target.value.trim());
@@ -4550,7 +4550,7 @@ class KitchenCookingPanel extends LitElement {
           </div>
 
           <div class="selected-ingredients">
-            <h4>Selected Ingredients (${this._selectedIngredients.length}):</h4>
+            <h4>${this._t('ai_recipe.selected_ingredients_label')} (${this._selectedIngredients.length}):</h4>
             <div class="ingredient-tags">
               ${this._selectedIngredients.map(ing => html`
                 <span class="ingredient-tag">
@@ -4566,7 +4566,7 @@ class KitchenCookingPanel extends LitElement {
             ?disabled=${this._selectedIngredients.length < 2}
             @click=${() => this._proceedToCookingStyle()}
           >
-            Next: Choose Cooking Style
+            ${this._t('ai_recipe.next_cooking_style')}
           </button>
         </div>
       </ha-card>
