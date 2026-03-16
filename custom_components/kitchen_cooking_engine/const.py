@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 15 Mar 2026, 21:52 UTC
-Last Change: v0.5.5.2 - Fix AI recipe JSON parse error: better extraction, include actual AI response in errors, JSON-only prompt
+Last Change: v0.5.5.3 - Fix AI error patterns being swallowed by except Exception; add transient 503/rate-limit detection
 """
 
 DOMAIN = "kitchen_cooking_engine"

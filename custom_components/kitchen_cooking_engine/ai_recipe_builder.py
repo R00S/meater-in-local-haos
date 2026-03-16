@@ -806,6 +806,81 @@ of your response must be '{{' and the very last must be '}}'.
         return prompt
 
     @staticmethod
+    def _check_ai_response_for_errors(response: str) -> None:
+        """Check for known AI error patterns and raise ValueError with a helpful message.
+
+        This must be called BEFORE any ``try/except`` block that would swallow the
+        ValueError — doing so ensures the user-friendly message reaches the caller
+        without being re-wrapped by generic exception handlers.
+
+        Raises:
+            ValueError: if the response contains a known error pattern.
+        """
+        response_lower = response.lower()
+
+        # Transient service errors (503 / 429 / rate-limit / UNAVAILABLE).
+        # These are NOT configuration issues — the user should retry later.
+        transient_indicators = [
+            "503",
+            "429",
+            "unavailable",
+            "high demand",
+            "try again later",
+            "temporarily unavailable",
+            "service unavailable",
+            "rate limit",
+            "rate_limit",
+            "quota exceeded",
+            "overloaded",
+        ]
+        for indicator in transient_indicators:
+            if indicator in response_lower:
+                _LOGGER.error(
+                    "AI service returned a transient error (will not retry): %s",
+                    response[:500],
+                )
+                raise ValueError(
+                    f"The AI service is temporarily unavailable (high demand or rate limit). "
+                    f"Please try again in a few minutes. "
+                    f"AI response: {response[:500]}"
+                )
+
+        # Token-limit cut-off
+        if "max_tokens" in response_lower or "FinishReason.MAX_TOKENS" in response:
+            _LOGGER.error("AI response cut off by token limit: %s", response[:500])
+            raise ValueError(
+                "The AI response was cut off due to token limits. "
+                "Please configure your AI assistant with a higher max_tokens setting "
+                "(recommended: 2000 or more for recipe generation)."
+            )
+
+        # Content policy block
+        if "content violations" in response_lower or "got blocked" in response_lower:
+            _LOGGER.error("AI blocked response due to content policy: %s", response[:500])
+            raise ValueError(
+                "The AI blocked the response due to content policy. "
+                "This may be a false positive. Try different ingredients or cooking style. "
+                "If this persists, check your AI assistant's content filtering settings."
+            )
+
+        # Generic AI component error (must come AFTER the more specific checks above
+        # so callers get the most actionable message possible).
+        generic_error_patterns = [
+            "sorry, i had a problem",
+            "reason:",
+        ]
+        for pattern in generic_error_patterns:
+            if pattern in response_lower:
+                _LOGGER.error(
+                    "AI conversation component returned an error: %s", response[:500]
+                )
+                raise ValueError(
+                    f"The AI conversation component encountered an error. "
+                    f"AI response: {response[:500]}. "
+                    f"Please check your AI assistant configuration."
+                )
+
+    @staticmethod
     def _extract_json_from_text(text: str, start_char: str, end_char: str) -> str:
         """Scan *text* for a JSON value that starts with *start_char* (``[`` or ``{``).
 
@@ -909,45 +984,13 @@ of your response must be '{{' and the very last must be '}}'.
         # in error messages even after the variable is reassigned.
         original_response = response
 
+        # Check for AI error messages BEFORE the try/except block so the ValueError
+        # propagates cleanly to the caller without being re-wrapped by the generic
+        # except-Exception handler below.
+        _LOGGER.debug(f"Raw AI response (first 500 chars): {response[:500]}")
+        self._check_ai_response_for_errors(response)
+
         try:
-            # Log raw response for debugging
-            _LOGGER.debug(f"Raw AI response (first 500 chars): {response[:500]}")
-            
-            # Check for common error patterns from AI conversation component
-            error_patterns = [
-                "Sorry, I had a problem",
-                "FinishReason.MAX_TOKENS",
-                "content violations",
-                "got blocked",
-                "Reason:",
-            ]
-            
-            response_lower = response.lower()
-            for pattern in error_patterns:
-                if pattern.lower() in response_lower:
-                    _LOGGER.error(f"AI conversation component returned an error: {response[:500]}")
-                    
-                    # Provide specific guidance based on error type
-                    if "MAX_TOKENS" in response or "max_tokens" in response_lower:
-                        error_msg = (
-                            "The AI response was cut off due to token limits. "
-                            "Please configure your AI assistant with a higher max_tokens setting "
-                            "(recommended: 2000 or more for recipe generation)."
-                        )
-                    elif "content violations" in response_lower or "got blocked" in response_lower:
-                        error_msg = (
-                            "The AI blocked the response due to content policy. "
-                            "This may be a false positive. Try different ingredients or cooking style. "
-                            "If this persists, check your AI assistant's content filtering settings."
-                        )
-                    else:
-                        error_msg = (
-                            f"The AI conversation component encountered an error: {response[:200]}... "
-                            f"Please check your AI assistant configuration."
-                        )
-                    
-                    raise ValueError(error_msg)
-            
             # Try to extract JSON from response
             # AI might wrap it in markdown code blocks or add extra text
             response = response.strip()
@@ -1058,45 +1101,13 @@ of your response must be '{{' and the very last must be '}}'.
         # Save the original response BEFORE any extraction for error reporting.
         original_response = response
 
+        # Check for AI error messages BEFORE the try/except block so the ValueError
+        # propagates cleanly to the caller without being re-wrapped by the generic
+        # except-Exception handler below.
+        _LOGGER.debug(f"Raw AI detail response (first 500 chars): {response[:500]}")
+        self._check_ai_response_for_errors(response)
+
         try:
-            # Log raw response for debugging
-            _LOGGER.debug(f"Raw AI detail response (first 500 chars): {response[:500]}")
-            
-            # Check for common error patterns from AI conversation component
-            error_patterns = [
-                "Sorry, I had a problem",
-                "FinishReason.MAX_TOKENS",
-                "content violations",
-                "got blocked",
-                "Reason:",
-            ]
-            
-            response_lower = response.lower()
-            for pattern in error_patterns:
-                if pattern.lower() in response_lower:
-                    _LOGGER.error(f"AI conversation component returned an error: {response[:500]}")
-                    
-                    # Provide specific guidance based on error type
-                    if "MAX_TOKENS" in response or "max_tokens" in response_lower:
-                        error_msg = (
-                            "The AI response was cut off due to token limits. "
-                            "Please configure your AI assistant with a higher max_tokens setting "
-                            "(recommended: 2000 or more for recipe details)."
-                        )
-                    elif "content violations" in response_lower or "got blocked" in response_lower:
-                        error_msg = (
-                            "The AI blocked the response due to content policy. "
-                            "This may be a false positive. Try a different recipe. "
-                            "If this persists, check your AI assistant's content filtering settings."
-                        )
-                    else:
-                        error_msg = (
-                            f"The AI conversation component encountered an error: {response[:200]}... "
-                            f"Please check your AI assistant configuration."
-                        )
-                    
-                    raise ValueError(error_msg)
-            
             # Extract JSON from response
             response = response.strip()
             
