@@ -61,6 +61,8 @@
     "measurement_system_label": "📏 Measurement System",
     "previous_cooks_description": "View and restart your past cooking sessions",
     "configure_ai_agent": "Configure your AI agent to enable the Recipe Builder",
+    "started_on_other_device": "Started on another device",
+    "recipe_cook": "Recipe Cook",
     "measurement_se_description": "krm · tsk · msk · cl · dl · l · g · hg · kg — Temperature in °C",
     "measurement_uk_description": "tsp · tbsp · ml · dl · l · g · kg — Temperature in °C",
     "measurement_us_description": "tsp · tbsp · cup · fl oz · oz · lb — Temperature in °F"

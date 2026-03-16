@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 16 Mar 2026, 21:00 UTC
-Last Change: v0.5.6.98 - Phase 7: AI recipes respect language and measurement preferences
+Last Change: v0.5.6.99 - Complete i18n: translate all hardcoded English strings across all pages
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "241"
+PANEL_VERSION = "244"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

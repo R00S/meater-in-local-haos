@@ -61,6 +61,8 @@
     "measurement_system_label": "📏 Måttsystem",
     "previous_cooks_description": "Visa och starta om dina tidigare tillagningar",
     "configure_ai_agent": "Konfigurera din AI-agent för att aktivera receptbyggaren",
+    "started_on_other_device": "Startad på en annan enhet",
+    "recipe_cook": "Recepttillagning",
     "measurement_se_description": "krm · tsk · msk · cl · dl · l · g · hg · kg — Temperatur i °C",
     "measurement_uk_description": "tsp · tbsp · ml · dl · l · g · kg — Temperatur i °C",
     "measurement_us_description": "tsp · tbsp · cup · fl oz · oz · lb — Temperatur i °F"
