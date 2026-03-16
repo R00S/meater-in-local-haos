@@ -261,9 +261,9 @@ class KitchenCookingPanel extends LitElement {
     // hasChanged now always returns true (see properties getter), so every hass
     // assignment from HA (including post-reconnect) triggers a render.
     //
-    // This handler is a belt-and-suspenders fallback: it resets navigation state
-    // to 'welcome' and force-loads fresh data so the panel always shows something
-    // useful when the user returns to the tab.
+    // This handler is a belt-and-suspenders fallback: it reloads fresh data and
+    // forces a re-render so the panel is always up-to-date when the user returns.
+    // Navigation state is PRESERVED — we never reset to welcome on tab return.
     this._visibilityHandler = () => {
       if (document.visibilityState === 'visible') {
         // Preserve whatever screen the user was on — do NOT reset to welcome.
@@ -5923,6 +5923,17 @@ class KitchenCookingPanel extends LitElement {
   async _startAIRecipeCreation() {
     this._currentPath = 'ai_recipe_builder';
     this._selectedIngredients = [];
+
+    // Auto-inject the selected appliance as the first ingredient so the AI
+    // always targets the right appliance.  This mirrors what the user proved
+    // works: typing "use Ninja Combi programmes" as a manual ingredient makes
+    // the AI generate correct recipes.  It shows as a normal removable chip —
+    // click × to remove it for fully generic recipes.
+    const applianceName = this._selectedAppliance?.name;
+    if (applianceName) {
+      this._selectedIngredients = [`use ${applianceName} programmes`];
+    }
+
     this._selectedCookingStyle = null;
     this._aiRecipeSuggestions = [];
     

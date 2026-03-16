@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Mar 2026, 12:46 CET
+ * AUTO-GENERATED: 16 Mar 2026, 12:58 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Mar 2026, 12:46 CET
+// Last generated: 16 Mar 2026, 12:58 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -11715,9 +11715,9 @@ class KitchenCookingPanel extends LitElement {
     // hasChanged now always returns true (see properties getter), so every hass
     // assignment from HA (including post-reconnect) triggers a render.
     //
-    // This handler is a belt-and-suspenders fallback: it resets navigation state
-    // to 'welcome' and force-loads fresh data so the panel always shows something
-    // useful when the user returns to the tab.
+    // This handler is a belt-and-suspenders fallback: it reloads fresh data and
+    // forces a re-render so the panel is always up-to-date when the user returns.
+    // Navigation state is PRESERVED — we never reset to welcome on tab return.
     this._visibilityHandler = () => {
       if (document.visibilityState === 'visible') {
         // Preserve whatever screen the user was on — do NOT reset to welcome.
@@ -17377,6 +17377,17 @@ class KitchenCookingPanel extends LitElement {
   async _startAIRecipeCreation() {
     this._currentPath = 'ai_recipe_builder';
     this._selectedIngredients = [];
+
+    // Auto-inject the selected appliance as the first ingredient so the AI
+    // always targets the right appliance.  This mirrors what the user proved
+    // works: typing "use Ninja Combi programmes" as a manual ingredient makes
+    // the AI generate correct recipes.  It shows as a normal removable chip —
+    // click × to remove it for fully generic recipes.
+    const applianceName = this._selectedAppliance?.name;
+    if (applianceName) {
+      this._selectedIngredients = [`use ${applianceName} programmes`];
+    }
+
     this._selectedCookingStyle = null;
     this._aiRecipeSuggestions = [];
     
@@ -20272,7 +20283,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "218";
+const PANEL_VERSION = "220";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
