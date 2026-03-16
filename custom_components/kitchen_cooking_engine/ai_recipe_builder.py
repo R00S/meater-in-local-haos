@@ -995,6 +995,11 @@ of your response must be '{{' and the very last must be '}}'.
         different provider may succeed even when the first one has a permanent
         problem).
 
+        Each individual call to ``conversation.async_converse`` is wrapped with
+        ``asyncio.wait_for`` so it cannot hang indefinitely (which would cause
+        the HTTP request from the frontend to time out with a 524 before the
+        retry logic ever fires).
+
         Args:
             prompt: The prompt to send
 
@@ -1002,6 +1007,8 @@ of your response must be '{{' and the very last must be '}}'.
             AI response text
         """
         _MAX_RETRIES = 7
+        _CALL_TIMEOUT = 30          # seconds per conversation call
+        _MAX_TIMEOUTS_PER_AGENT = 2 # switch to backup after this many timeouts
 
         # Load AI settings outside the retry loop so errors here propagate clearly.
         from .storage import async_load_ai_settings
@@ -1034,6 +1041,8 @@ of your response must be '{{' and the very last must be '}}'.
                     f"⚠️ Primary agent exhausted — switching to backup AI agent..."
                 )
 
+            timeout_count = 0  # consecutive timeouts on this agent
+
             for attempt in range(_MAX_RETRIES):
                 # Emit the real step so the frontend polling sees it immediately.
                 if attempt == 0 and not is_backup:
@@ -1043,16 +1052,50 @@ of your response must be '{{' and the very last must be '}}'.
                 else:
                     self._set_status(f"🔄 Retrying AI agent (attempt {attempt + 1}/{_MAX_RETRIES})...")
 
-                # --- perform the API call ---
+                # --- perform the API call (with timeout) ---
                 try:
-                    result = await conversation.async_converse(
-                        hass=self.hass,
-                        text=prompt,
-                        conversation_id=None,
-                        context=None,
-                        language=None,
-                        agent_id=agent_id,
+                    result = await asyncio.wait_for(
+                        conversation.async_converse(
+                            hass=self.hass,
+                            text=prompt,
+                            conversation_id=None,
+                            context=None,
+                            language=None,
+                            agent_id=agent_id,
+                        ),
+                        timeout=_CALL_TIMEOUT,
                     )
+                except asyncio.TimeoutError:
+                    timeout_count += 1
+                    _LOGGER.warning(
+                        "AI agent '%s' timed out after %ds (attempt %d/%d, "
+                        "timeout %d/%d for this agent)",
+                        agent_id, _CALL_TIMEOUT, attempt + 1, _MAX_RETRIES,
+                        timeout_count, _MAX_TIMEOUTS_PER_AGENT,
+                    )
+                    last_exception = TimeoutError(
+                        f"AI agent '{agent_id}' timed out after {_CALL_TIMEOUT}s"
+                    )
+                    if timeout_count >= _MAX_TIMEOUTS_PER_AGENT:
+                        # This agent is consistently hanging — switch to backup
+                        # immediately rather than wasting the HTTP timeout budget.
+                        self._set_status(
+                            f"⏱️ AI agent timed out {timeout_count} times — "
+                            f"switching to backup agent..."
+                        )
+                        _LOGGER.warning(
+                            "AI agent '%s' timed out %d times in a row — "
+                            "breaking to backup agent.",
+                            agent_id, timeout_count,
+                        )
+                        break  # exit inner retry loop → try backup agent
+                    wait = min(2 ** attempt, 10) + random.uniform(0, 2)
+                    self._set_status(
+                        f"⏱️ AI agent timed out — waiting {wait:.0f}s before retry "
+                        f"(attempt {attempt + 1}/{_MAX_RETRIES} failed)..."
+                    )
+                    await asyncio.sleep(wait)
+                    continue
                 except Exception as ex:
                     ex_str = str(ex)
                     if self._is_transient_error(ex_str):

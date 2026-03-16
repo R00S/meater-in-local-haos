@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 16 Mar 2026, 12:53 UTC
-Last Change: v0.5.5.92 - Fix AI retry: recognize HTTP 524/522/timeout as transient, always try backup agent, check response_type for errors
+Last Change: v0.5.5.93 - Add 30s timeout to conversation.async_converse to prevent indefinite hangs; switch to backup agent after 2 consecutive timeouts
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "228"
+PANEL_VERSION = "229"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
