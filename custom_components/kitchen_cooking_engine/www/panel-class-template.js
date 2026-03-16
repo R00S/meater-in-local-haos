@@ -5120,7 +5120,24 @@ class KitchenCookingPanel extends LitElement {
       // From first step, go back to overview
       this._recipeCookState.currentStep = -1;
     } else {
-      // If at overview, exit cook flow
+      // At overview page — exit the cook flow.
+      // If the user came from AI recipe suggestions, go back there instead of welcome.
+      if (this._showAIRecipeSuggestions) {
+        // Remove from active cooks array and clean up, but don't navigate to welcome.
+        if (this._recipeCookState) {
+          const cookId = this._recipeCookState.id;
+          this._activeRecipeCooks = this._activeRecipeCooks.filter(c => c.id !== cookId);
+        }
+        this._recipeCookState = null;
+        if (this._recipeCookTimer) {
+          clearInterval(this._recipeCookTimer);
+          this._recipeCookTimer = null;
+        }
+        this._persistActiveRecipeCooks();
+        // Stay in ai_recipe_builder flow — suggestions are still in _aiRecipeSuggestions
+        this.requestUpdate();
+        return;
+      }
       this._stopRecipeCook();
       return; // _stopRecipeCook already clears persisted state
     }

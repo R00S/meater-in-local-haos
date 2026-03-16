@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 15 Mar 2026, 21:52 UTC
-Last Change: v0.5.5.4 - Strengthen primary appliance prompt: inject pseudo-ingredient + thread main_appliance_id to detail prompt
+Last Change: v0.5.5.5 - Back to AI suggestions when exiting recipe overview; primary appliance pseudo-ingredient fix
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "212"
+PANEL_VERSION = "213"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
