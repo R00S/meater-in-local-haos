@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Mar 2026, 12:58 CET
+ * AUTO-GENERATED: 16 Mar 2026, 13:13 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Mar 2026, 12:58 CET
+// Last generated: 16 Mar 2026, 13:13 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -17380,12 +17380,12 @@ class KitchenCookingPanel extends LitElement {
 
     // Auto-inject the selected appliance as the first ingredient so the AI
     // always targets the right appliance.  This mirrors what the user proved
-    // works: typing "use Ninja Combi programmes" as a manual ingredient makes
+    // works: typing "use Ninja Combi programs" as a manual ingredient makes
     // the AI generate correct recipes.  It shows as a normal removable chip —
     // click × to remove it for fully generic recipes.
     const applianceName = this._selectedAppliance?.name;
     if (applianceName) {
-      this._selectedIngredients = [`use ${applianceName} programmes`];
+      this._selectedIngredients = [`use ${applianceName} programs`];
     }
 
     this._selectedCookingStyle = null;
@@ -20283,7 +20283,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "220";
+const PANEL_VERSION = "221";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

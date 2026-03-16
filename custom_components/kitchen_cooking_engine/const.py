@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 15 Mar 2026, 21:52 UTC
-Last Change: v0.5.5.9 - Auto-inject appliance programme ingredient in AI recipe builder
+Last Change: v0.5.5.10 - Fix spelling: programmes -> programs in auto-injected appliance ingredient
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "220"
+PANEL_VERSION = "221"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

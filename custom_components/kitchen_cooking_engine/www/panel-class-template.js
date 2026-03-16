@@ -5926,12 +5926,12 @@ class KitchenCookingPanel extends LitElement {
 
     // Auto-inject the selected appliance as the first ingredient so the AI
     // always targets the right appliance.  This mirrors what the user proved
-    // works: typing "use Ninja Combi programmes" as a manual ingredient makes
+    // works: typing "use Ninja Combi programs" as a manual ingredient makes
     // the AI generate correct recipes.  It shows as a normal removable chip —
     // click × to remove it for fully generic recipes.
     const applianceName = this._selectedAppliance?.name;
     if (applianceName) {
-      this._selectedIngredients = [`use ${applianceName} programmes`];
+      this._selectedIngredients = [`use ${applianceName} programs`];
     }
 
     this._selectedCookingStyle = null;
