@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Mar 2026, 23:21 CET
+ * AUTO-GENERATED: 17 Mar 2026, 00:06 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 16 Mar 2026, 23:21 CET
+// Last generated: 17 Mar 2026, 00:06 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -11783,7 +11783,25 @@ const I18N_STRINGS = {
       "temperature": "Temperature",
       "step": "Step",
       "of": "of",
-      "optional": "optional"
+      "optional": "optional",
+      "retry": "Retry",
+      "features": "Features",
+      "more": "more",
+      "target": "Target",
+      "na": "N/A",
+      "unknown": "Unknown"
+    },
+    "nav": {
+      "back": "← Back",
+      "back_to_home": "← Back to Home",
+      "back_to_appliances": "← Back to Appliances",
+      "back_to_meater_path": "← Back to MEATER Path",
+      "back_to_ninja_combi": "← Back to Ninja Combi",
+      "back_to_recipes": "← Back to Recipes",
+      "back_to_ingredients": "← Back to Ingredients",
+      "back_to_cooking_style": "← Back to Cooking Style",
+      "back_to_ai_builder": "← Back to AI Recipe Builder",
+      "back_to_list": "← Back to List"
     },
     "welcome": {
       "title": "🍳 Kitchen Cooking Engine",
@@ -11842,7 +11860,38 @@ const I18N_STRINGS = {
       "previous_cooks": "Previous Cooks",
       "no_history": "No cook history yet.",
       "delete_cook_confirm": "Delete this cook from history?",
-      "choose_cut": "Choose a cut..."
+      "choose_cut": "Choose a cut...",
+      "start_meater_cooking": "Start MEATER Cooking",
+      "start_meater_desc": "Select protein, set target, monitor temperature",
+      "recent_meater_cooks": "Recent MEATER Cooks",
+      "recent_meater_desc": "View and restart previous temperature-based cooks",
+      "no_previous_cooks": "No previous MEATER cooks found.",
+      "no_previous_cooks_hint": "Temperature-based cooks you complete will appear here for easy restart.",
+      "restart_cook": "🔄 Restart This Cook",
+      "edit_notes": "✏️ Edit Notes",
+      "delete_btn": "🗑️ Delete",
+      "unknown_protein": "Unknown Protein",
+      "tip_temp": "Tip Temp",
+      "ambient_label": "🌡️ Ambient:",
+      "hide_notes": "Hide Notes",
+      "add_notes_btn": "Add Notes",
+      "method_label": "Method",
+      "rest_time_label": "Rest Time",
+      "battery_label": "�� Battery",
+      "complete_pct": "complete",
+      "eta_label": "ETA:",
+      "rest_remaining_label": "Rest remaining:",
+      "start_rest_btn": "⏱️ Start Rest",
+      "complete_btn": "✅ Complete",
+      "stop_btn": "⏹️ Stop",
+      "starting_cook": "🌡️ Starting cook…",
+      "waiting_probe": "Waiting for the probe to begin monitoring.\nTake the probe out of the charger to start.",
+      "no_sensor_found": "No MEATER Sensor Found",
+      "sensor_not_connected": "Please ensure your MEATER device is connected and the Kitchen Cooking Engine integration is set up.",
+      "target_label": "target",
+      "peak_label": "peak",
+      "final_label": "final",
+      "after_rest_label": "after rest"
     },
     "ninja": {
       "title": "🥷 Ninja Combi",
@@ -11857,7 +11906,52 @@ const I18N_STRINGS = {
       "ingredients": "Ingredients",
       "instructions": "Instructions",
       "tips": "Tips",
-      "start_recipe": "🚀 Start Recipe"
+      "start_recipe": "🚀 Start Recipe",
+      "recipe_builder_desc": "Create custom recipes with Ninja Combi modes",
+      "built_in_recipes_desc": "Browse pre-configured Ninja Combi recipes",
+      "ai_recipe_title": "AI Recipe with Ninja Combi",
+      "ai_recipe_desc": "Generate AI recipes using your Ninja Combi",
+      "recent_cooks_desc": "View and restart previous Ninja Combi recipes",
+      "recipe_details": "📋 Recipe Details",
+      "prep_label": "⏱️ Prep:",
+      "cook_label": "🔥 Cook:",
+      "servings_label": "🍽️ Servings:",
+      "difficulty_label": "📊 Difficulty:",
+      "meater_probe_label": "🌡️ MEATER+ Probe:",
+      "start_cooking_btn": "🍳 Start Cooking",
+      "cooking_phases": "�� Cooking Phases",
+      "phase": "Phase",
+      "ingredients_label": "🛒 Ingredients",
+      "instructions_label": "👨‍🍳 Instructions",
+      "tips_label": "💡 Tips",
+      "notes_label": "📝 Notes",
+      "modify_in_builder": "🛠️ Modify in Builder",
+      "steam_enabled": "💨 Steam enabled",
+      "builder_heading": "🛠️ Recipe Builder",
+      "builder_desc": "Build custom Combi-Meal recipes with automatic parameter adjustment",
+      "all_recipes_btn": "📖 All Recipes",
+      "select_base": "1️⃣ Select Base (Required)",
+      "select_protein_builder": "2️⃣ Select Protein (Required)",
+      "add_vegetables": "3️⃣ Add Vegetables (Optional)",
+      "veggie_hint": "💡 Tender veggies cook with base, crispy veggies cook with protein",
+      "with_base": "🥘 With base",
+      "with_protein": "🔥 With protein",
+      "meater_probe_section": "4️⃣ MEATER+ Probe",
+      "use_meater_probe": "🌡️ Use MEATER+ probe for temperature monitoring",
+      "calculated_params": "📊 Calculated Parameters",
+      "temperature_label": "🌡️ Temperature:",
+      "cook_time_label": "⏱️ Cook Time:",
+      "water_label": "💧 Water:",
+      "mode_label": "🍴 Mode:",
+      "probe_target": "🌡️ Probe Target:",
+      "build_recipe_btn": "✨ Build Custom Recipe",
+      "select_base_protein_hint": "👆 Select a base and protein to see calculated parameters",
+      "built_in_heading": "📖 Built-in Ninja Combi Recipes",
+      "no_built_in": "No built-in recipes available. Check back later!",
+      "serves": "Serves",
+      "recent_ninja_heading": "📋 Recent Ninja Combi Cooks",
+      "no_recent_ninja": "No previous Ninja Combi cooks found.",
+      "no_recent_ninja_hint": "Recipes you cook with Ninja Combi will appear here."
     },
     "ai_recipe": {
       "title": "🤖 AI Recipe Builder",
@@ -11884,7 +11978,53 @@ const I18N_STRINGS = {
       "generating": "Generating recipes...",
       "no_suggestions": "No suggestions generated. Try different ingredients or style.",
       "view_recipe": "View Recipe",
-      "cook_this": "Cook This"
+      "cook_this": "Cook This",
+      "loading_ingredients": "Loading ingredients...",
+      "loading_styles": "Loading cooking styles...",
+      "select_ingredients_title": "🥘 Select Ingredients",
+      "cuisine_region_label": "🌍 Cuisine / Region (optional, select for fusion)",
+      "cuisine_region_hint": "Select a cuisine to see its typical ingredients. Pick from multiple regions for fusion cooking.",
+      "choose_ingredients_label": "Choose ingredients you have available (select at least 2):",
+      "staples_available": "Staples assumed available:",
+      "add_custom_placeholder": "Add custom ingredient...",
+      "selected_ingredients_label": "Selected Ingredients",
+      "next_cooking_style": "Next: Choose Cooking Style",
+      "choose_style_title": "🍳 Choose Cooking Style",
+      "select_style_hint": "Select your preferred cooking style:",
+      "settings_heading": "⚙️ Settings",
+      "complexity_label": "📊 Complexity:",
+      "very_simple": "Very Simple",
+      "simple": "Simple",
+      "medium": "Medium",
+      "complex_level": "Complex",
+      "chef_level": "Chef Level",
+      "portions_label": "🍽️ Portions:",
+      "max_time_label": "⏱️ Max time:",
+      "generate_btn": "Generate Recipes 🤖",
+      "suggestions_title": "🤖 AI Recipe Suggestions",
+      "connecting": "🤖 Connecting to AI agent...",
+      "ai_busy_hint": "The AI service is busy. Your request is being retried automatically.",
+      "switching_backup": "Switching to backup AI agent — hang on!",
+      "classic_badge": "📖 Classic",
+      "original_badge": "🤖 Original",
+      "cook_time_label": "🍳 Cook Time:",
+      "servings_label": "🍽️ Servings:",
+      "difficulty_label": "📊 Difficulty:",
+      "key_ingredients": "Key Ingredients:",
+      "start_cooking_recipe": "Start Cooking This Recipe",
+      "generate_different": "🔄 Generate Different Recipes",
+      "main_appliance": "Main Appliance:",
+      "features_label": "Features:",
+      "secondary_appliances": "Secondary Appliances Available:",
+      "create_ai_recipe": "Create AI Recipe",
+      "create_desc": "Generate custom recipes using your appliances and ingredients",
+      "setup_ai_title": "Set Up AI Recipe Builder",
+      "setup_ai_desc": "Configure your AI agent to start generating recipes",
+      "recent_recipes_title": "Recent Recipes",
+      "recent_desc": "View and restart previous AI recipes for this appliance",
+      "no_history_appliance": "No cooking history for this appliance yet. Create your first AI recipe!",
+      "incomplete_warning": "⚠️ Incomplete",
+      "incomplete_message": "Please complete ingredient and style selection"
     },
     "recipe_cook": {
       "overview_title": "📋 Recipe Overview",
@@ -11900,13 +12040,53 @@ const I18N_STRINGS = {
       "prev_step": "⬅️ Previous",
       "no_instructions": "No instructions available."
     },
+    "rating": {
+      "cook_complete": "🎉 Cook Complete!",
+      "how_did_it_go": "How did it go? Please rate your experience:",
+      "ease_title": "😊 Ease of Cooking",
+      "ease_recipe_desc": "How easy was this recipe to follow?",
+      "ease_cook_desc": "How easy was this cook?",
+      "result_title": "😋 Result Quality",
+      "result_recipe_desc": "How did the final dish turn out?",
+      "result_cook_desc": "How did the final result turn out?",
+      "notes_title": "📝 Notes (Optional)",
+      "notes_placeholder": "Any notes, modifications, or thoughts about this cook...",
+      "both_required": "⚠️ Please provide both ratings to save this cook",
+      "save_complete": "💾 Save & Complete",
+      "skip": "⏭️ Skip Rating"
+    },
     "history": {
       "title": "📋 Cook History",
       "no_cooks": "No previous cooks.",
       "ease_rating": "Ease",
       "result_rating": "Result",
       "cooked_on": "Cooked on",
-      "duration": "Duration"
+      "duration": "Duration",
+      "previous_cooks_title": "📋 Previous Cooks",
+      "cook_history_title": "📜 Cook History",
+      "cook_history_subtitle": "Your past cooking sessions",
+      "no_cooks_message": "No cooks recorded yet. Complete a cooking session to see it here!",
+      "cook_details_title": "Cook Details",
+      "unknown_appliance": "Unknown Appliance",
+      "duration_label": "⏱️ Duration:",
+      "protein_label": "🥩 Protein:",
+      "doneness_colon": "Doneness:",
+      "temp_data_label": "🌡️ Temperature Data:",
+      "target_label": "Target:",
+      "peak_label": "Peak:",
+      "after_rest_label": "After Rest:",
+      "final_label": "Final:",
+      "cooking_method_label": "🍳 Cooking Method:",
+      "ingredients_label": "📝 Ingredients:",
+      "timeline_label": "📅 Cook Timeline:",
+      "ratings_label": "⭐ Ratings:",
+      "ease_label": "Ease:",
+      "result_label": "Result:",
+      "notes_label": "📝 Notes:",
+      "restart_cook": "🔄 Restart This Cook",
+      "edit_notes": "✏️ Edit Notes",
+      "delete_btn": "🗑️ Delete",
+      "update_notes_prompt": "Update notes:"
     },
     "measurements": {
       "tsp": "tsp",
@@ -11934,6 +12114,34 @@ const I18N_STRINGS = {
       "sous_vide": "Sous Vide",
       "slow_cooker": "Slow Cooker"
     },
+    "appliances": {
+      "title": "🔧 Kitchen Appliances",
+      "configured": "configured",
+      "loading": "Loading appliances...",
+      "no_appliances": "No appliances configured yet.",
+      "setup_step1": "Go to Settings → Devices & Services → Add Integration",
+      "setup_step2": "Search for Kitchen Cooking Engine and add your appliances.",
+      "features_count": "Features",
+      "recipes_available": "recipes available",
+      "recipe_available": "recipe available",
+      "tip": "Add more appliances to unlock more recipes!",
+      "tip_detail": "Each appliance brings its own features and compatible recipes.",
+      "configure_features": "Configure features",
+      "no_entities": "No cooking session entities found.",
+      "setup_integration": "Please configure the Kitchen Cooking Engine integration first."
+    },
+    "recipes": {
+      "compatible_title": "📖 Compatible Recipes",
+      "you_can_cook": "you can cook",
+      "you_need": "✅ You'll Need:",
+      "you_have": "✅ You have this",
+      "or_alternatively": "🔄 Or Alternatively:",
+      "required_features": "🔧 Required Features:",
+      "optional_features": "💡 Optional Features:",
+      "available": "Available",
+      "notes_label": "📝 Notes:",
+      "start_cooking": "🚀 Start Cooking"
+    },
     "errors": {
       "load_preferences": "Could not load preferences",
       "save_preferences": "Could not save preferences",
@@ -11942,6 +12150,94 @@ const I18N_STRINGS = {
       "start_cook_failed": "Could not start cook",
       "stop_cook_failed": "Could not stop cook",
       "generic": "Something went wrong. Please try again."
+    },
+    "cuisines": {
+      "nordic": "Nordic & Scandinavian",
+      "east_asian": "East Asian",
+      "southeast_asian": "Southeast Asian",
+      "south_asian": "South Asian",
+      "middle_east": "Middle Eastern",
+      "european": "European",
+      "north_american": "North American",
+      "latin_american": "Latin American",
+      "caribbean_region": "Caribbean",
+      "african": "African",
+      "oceanian": "Oceanian",
+      "swedish": "Swedish",
+      "danish": "Danish",
+      "norwegian": "Norwegian",
+      "finnish": "Finnish",
+      "icelandic": "Icelandic",
+      "new_nordic": "New Nordic",
+      "japanese": "Japanese",
+      "chinese": "Chinese",
+      "korean": "Korean",
+      "taiwanese": "Taiwanese",
+      "thai": "Thai",
+      "vietnamese": "Vietnamese",
+      "indonesian": "Indonesian",
+      "malaysian": "Malaysian",
+      "filipino": "Filipino",
+      "singaporean": "Singaporean",
+      "indian": "Indian",
+      "sri_lankan": "Sri Lankan",
+      "pakistani": "Pakistani",
+      "bangladeshi": "Bangladeshi",
+      "nepali": "Nepali",
+      "lebanese": "Lebanese",
+      "turkish": "Turkish",
+      "persian": "Persian / Iranian",
+      "israeli": "Israeli",
+      "syrian": "Syrian",
+      "iraqi": "Iraqi",
+      "yemeni": "Yemeni",
+      "emirati": "Emirati / Gulf",
+      "palestinian": "Palestinian",
+      "italian": "Italian",
+      "french": "French",
+      "spanish": "Spanish",
+      "greek": "Greek",
+      "portuguese": "Portuguese",
+      "german": "German",
+      "british": "British",
+      "polish": "Polish",
+      "hungarian": "Hungarian",
+      "mediterranean": "Mediterranean",
+      "balkan": "Balkan",
+      "russian": "Russian",
+      "american": "American",
+      "cajun_creole": "Cajun / Creole",
+      "tex_mex": "Tex-Mex",
+      "canadian": "Canadian",
+      "southern_us": "Southern US / Soul Food",
+      "hawaiian": "Hawaiian",
+      "mexican": "Mexican",
+      "brazilian": "Brazilian",
+      "peruvian": "Peruvian",
+      "argentinian": "Argentinian",
+      "colombian": "Colombian",
+      "cuban": "Cuban",
+      "venezuelan": "Venezuelan",
+      "chilean": "Chilean",
+      "jamaican": "Jamaican",
+      "trinidadian": "Trinidadian",
+      "haitian": "Haitian",
+      "puerto_rican": "Puerto Rican",
+      "caribbean": "Caribbean (General)",
+      "ethiopian": "Ethiopian",
+      "moroccan": "Moroccan",
+      "nigerian": "Nigerian",
+      "ghanaian": "Ghanaian",
+      "senegalese": "Senegalese",
+      "south_african": "South African",
+      "kenyan": "Kenyan",
+      "tanzanian": "Tanzanian",
+      "tunisian": "Tunisian",
+      "egyptian": "Egyptian",
+      "east_african": "East African",
+      "west_african": "West African",
+      "australian": "Australian",
+      "polynesian": "Polynesian"
     }
   },
   "sv": {
@@ -11977,7 +12273,25 @@ const I18N_STRINGS = {
       "temperature": "Temperatur",
       "step": "Steg",
       "of": "av",
-      "optional": "valfritt"
+      "optional": "valfritt",
+      "retry": "Försök igen",
+      "features": "Funktioner",
+      "more": "fler",
+      "target": "Mål",
+      "na": "N/A",
+      "unknown": "Okänd"
+    },
+    "nav": {
+      "back": "← Tillbaka",
+      "back_to_home": "← Tillbaka till start",
+      "back_to_appliances": "← Tillbaka till apparater",
+      "back_to_meater_path": "← Tillbaka till MEATER",
+      "back_to_ninja_combi": "← Tillbaka till Ninja Combi",
+      "back_to_recipes": "← Tillbaka till recept",
+      "back_to_ingredients": "← Tillbaka till ingredienser",
+      "back_to_cooking_style": "← Tillbaka till matlagningsstil",
+      "back_to_ai_builder": "← Tillbaka till AI-receptbyggare",
+      "back_to_list": "← Tillbaka till listan"
     },
     "welcome": {
       "title": "🍳 Kitchen Cooking Engine",
@@ -12036,7 +12350,38 @@ const I18N_STRINGS = {
       "previous_cooks": "Tidigare tillagningar",
       "no_history": "Ingen tillagningshistorik ännu.",
       "delete_cook_confirm": "Ta bort denna tillagning från historiken?",
-      "choose_cut": "Välj en styckdel..."
+      "choose_cut": "Välj en styckdel...",
+      "start_meater_cooking": "Starta MEATER-tillagning",
+      "start_meater_desc": "Välj protein, ange mål, övervaka temperatur",
+      "recent_meater_cooks": "Senaste MEATER-tillagningar",
+      "recent_meater_desc": "Visa och starta om tidigare temperaturbaserade tillagningar",
+      "no_previous_cooks": "Inga tidigare MEATER-tillagningar hittades.",
+      "no_previous_cooks_hint": "Temperaturbaserade tillagningar du slutför visas här för enkel omstart.",
+      "restart_cook": "🔄 Starta om tillagning",
+      "edit_notes": "✏️ Redigera anteckningar",
+      "delete_btn": "🗑️ Ta bort",
+      "unknown_protein": "Okänt protein",
+      "tip_temp": "Spetstemperatur",
+      "ambient_label": "🌡️ Omgivning:",
+      "hide_notes": "Dölj anteckningar",
+      "add_notes_btn": "Lägg till anteckningar",
+      "method_label": "Metod",
+      "rest_time_label": "Vilotid",
+      "battery_label": "🔋 Batteri",
+      "complete_pct": "klart",
+      "eta_label": "Beräknad tid:",
+      "rest_remaining_label": "Vila kvar:",
+      "start_rest_btn": "⏱️ Starta vila",
+      "complete_btn": "✅ Slutför",
+      "stop_btn": "⏹️ Stoppa",
+      "starting_cook": "🌡️ Startar tillagning…",
+      "waiting_probe": "Väntar på att proben ska börja mäta.\nTa ut proben ur laddaren för att starta.",
+      "no_sensor_found": "Ingen MEATER-sensor hittades",
+      "sensor_not_connected": "Se till att din MEATER-enhet är ansluten och att Kitchen Cooking Engine-integrationen är konfigurerad.",
+      "target_label": "mål",
+      "peak_label": "topp",
+      "final_label": "slutlig",
+      "after_rest_label": "efter vila"
     },
     "ninja": {
       "title": "🥷 Ninja Combi",
@@ -12051,7 +12396,52 @@ const I18N_STRINGS = {
       "ingredients": "Ingredienser",
       "instructions": "Instruktioner",
       "tips": "Tips",
-      "start_recipe": "🚀 Starta recept"
+      "start_recipe": "🚀 Starta recept",
+      "recipe_builder_desc": "Skapa egna recept med Ninja Combi-lägen",
+      "built_in_recipes_desc": "Bläddra bland förkonfigurerade Ninja Combi-recept",
+      "ai_recipe_title": "AI-recept med Ninja Combi",
+      "ai_recipe_desc": "Generera AI-recept med din Ninja Combi",
+      "recent_cooks_desc": "Visa och starta om tidigare Ninja Combi-recept",
+      "recipe_details": "📋 Receptdetaljer",
+      "prep_label": "⏱️ Förb.:",
+      "cook_label": "🔥 Tillagning:",
+      "servings_label": "🍽️ Portioner:",
+      "difficulty_label": "📊 Svårighetsgrad:",
+      "meater_probe_label": "🌡️ MEATER+-prob:",
+      "start_cooking_btn": "🍳 Starta tillagning",
+      "cooking_phases": "🔄 Tillagningsfaser",
+      "phase": "Fas",
+      "ingredients_label": "🛒 Ingredienser",
+      "instructions_label": "👨‍🍳 Instruktioner",
+      "tips_label": "💡 Tips",
+      "notes_label": "📝 Anteckningar",
+      "modify_in_builder": "🛠️ Ändra i byggaren",
+      "steam_enabled": "💨 Ånga aktiverad",
+      "builder_heading": "🛠️ Receptbyggare",
+      "builder_desc": "Bygg egna Combi-Meal-recept med automatisk parameterjustering",
+      "all_recipes_btn": "📖 Alla recept",
+      "select_base": "1️⃣ Välj bas (obligatorisk)",
+      "select_protein_builder": "2️⃣ Välj protein (obligatoriskt)",
+      "add_vegetables": "3️⃣ Lägg till grönsaker (valfritt)",
+      "veggie_hint": "💡 Mjuka grönsaker tillagas med basen, krispiga grönsaker med proteinet",
+      "with_base": "🥘 Med bas",
+      "with_protein": "🔥 Med protein",
+      "meater_probe_section": "4️⃣ MEATER+-prob",
+      "use_meater_probe": "🌡️ Använd MEATER+-prob för temperaturövervakning",
+      "calculated_params": "📊 Beräknade parametrar",
+      "temperature_label": "🌡️ Temperatur:",
+      "cook_time_label": "⏱️ Tillagningstid:",
+      "water_label": "💧 Vatten:",
+      "mode_label": "🍴 Läge:",
+      "probe_target": "🌡️ Probmål:",
+      "build_recipe_btn": "✨ Bygg anpassat recept",
+      "select_base_protein_hint": "👆 Välj bas och protein för att se beräknade parametrar",
+      "built_in_heading": "📖 Inbyggda Ninja Combi-recept",
+      "no_built_in": "Inga inbyggda recept tillgängliga. Kolla tillbaka senare!",
+      "serves": "Portioner",
+      "recent_ninja_heading": "📋 Senaste Ninja Combi-tillagningar",
+      "no_recent_ninja": "Inga tidigare Ninja Combi-tillagningar hittades.",
+      "no_recent_ninja_hint": "Recept du lagar med Ninja Combi visas här."
     },
     "ai_recipe": {
       "title": "🤖 AI Receptbyggare",
@@ -12078,7 +12468,53 @@ const I18N_STRINGS = {
       "generating": "Genererar recept...",
       "no_suggestions": "Inga förslag genererades. Försök med andra ingredienser eller stil.",
       "view_recipe": "Visa recept",
-      "cook_this": "Laga detta"
+      "cook_this": "Laga detta",
+      "loading_ingredients": "Laddar ingredienser...",
+      "loading_styles": "Laddar matlagningsstilar...",
+      "select_ingredients_title": "🥘 Välj ingredienser",
+      "cuisine_region_label": "🌍 Kök / Region (valfritt, välj för fusion)",
+      "cuisine_region_hint": "Välj ett kök för att se dess typiska ingredienser. Välj från flera regioner för fusionsmatlagning.",
+      "choose_ingredients_label": "Välj ingredienser du har tillgängliga (minst 2):",
+      "staples_available": "Basvaror som antas finnas:",
+      "add_custom_placeholder": "Lägg till egen ingrediens...",
+      "selected_ingredients_label": "Valda ingredienser",
+      "next_cooking_style": "Nästa: Välj matlagningsstil",
+      "choose_style_title": "🍳 Välj matlagningsstil",
+      "select_style_hint": "Välj din föredragna matlagningsstil:",
+      "settings_heading": "⚙️ Inställningar",
+      "complexity_label": "📊 Komplexitet:",
+      "very_simple": "Mycket enkel",
+      "simple": "Enkel",
+      "medium": "Medel",
+      "complex_level": "Komplex",
+      "chef_level": "Kocknivå",
+      "portions_label": "🍽️ Portioner:",
+      "max_time_label": "⏱️ Max tid:",
+      "generate_btn": "Generera recept 🤖",
+      "suggestions_title": "🤖 AI-receptförslag",
+      "connecting": "🤖 Ansluter till AI-agent...",
+      "ai_busy_hint": "AI-tjänsten är upptagen. Din förfrågan görs om automatiskt.",
+      "switching_backup": "Byter till reserv-AI-agent — vänta!",
+      "classic_badge": "📖 Klassisk",
+      "original_badge": "🤖 Original",
+      "cook_time_label": "🍳 Tillagningstid:",
+      "servings_label": "🍽️ Portioner:",
+      "difficulty_label": "📊 Svårighetsgrad:",
+      "key_ingredients": "Viktigaste ingredienser:",
+      "start_cooking_recipe": "Börja laga detta recept",
+      "generate_different": "🔄 Generera andra recept",
+      "main_appliance": "Huvudapparat:",
+      "features_label": "Funktioner:",
+      "secondary_appliances": "Tillgängliga sekundärapparater:",
+      "create_ai_recipe": "Skapa AI-recept",
+      "create_desc": "Generera egna recept med dina apparater och ingredienser",
+      "setup_ai_title": "Konfigurera AI-receptbyggare",
+      "setup_ai_desc": "Konfigurera din AI-agent för att börja generera recept",
+      "recent_recipes_title": "Senaste recept",
+      "recent_desc": "Visa och starta om tidigare AI-recept för denna apparat",
+      "no_history_appliance": "Ingen tillagningshistorik för denna apparat ännu. Skapa ditt första AI-recept!",
+      "incomplete_warning": "⚠️ Ofullständig",
+      "incomplete_message": "Slutför val av ingredienser och stil"
     },
     "recipe_cook": {
       "overview_title": "📋 Receptöversikt",
@@ -12094,26 +12530,66 @@ const I18N_STRINGS = {
       "prev_step": "⬅️ Föregående",
       "no_instructions": "Inga instruktioner tillgängliga."
     },
+    "rating": {
+      "cook_complete": "🎉 Tillagning klar!",
+      "how_did_it_go": "Hur gick det? Betygsätt din upplevelse:",
+      "ease_title": "😊 Enkelhet",
+      "ease_recipe_desc": "Hur enkelt var det att följa receptet?",
+      "ease_cook_desc": "Hur enkel var tillagningen?",
+      "result_title": "😋 Resultatkvalitet",
+      "result_recipe_desc": "Hur blev slutresultatet?",
+      "result_cook_desc": "Hur blev slutresultatet?",
+      "notes_title": "📝 Anteckningar (valfritt)",
+      "notes_placeholder": "Anteckningar, ändringar eller tankar om denna tillagning...",
+      "both_required": "⚠️ Ange båda betygen för att spara tillagningen",
+      "save_complete": "💾 Spara & slutför",
+      "skip": "⏭️ Hoppa över betyg"
+    },
     "history": {
       "title": "📋 Tillagningshistorik",
       "no_cooks": "Inga tidigare tillagningar.",
       "ease_rating": "Enkelhet",
       "result_rating": "Resultat",
       "cooked_on": "Tillagad",
-      "duration": "Varaktighet"
+      "duration": "Varaktighet",
+      "previous_cooks_title": "📋 Tidigare tillagningar",
+      "cook_history_title": "📜 Tillagningshistorik",
+      "cook_history_subtitle": "Dina tidigare tillagningar",
+      "no_cooks_message": "Inga tillagningar registrerade ännu. Slutför en tillagning för att se den här!",
+      "cook_details_title": "Tillagningsdetaljer",
+      "unknown_appliance": "Okänd apparat",
+      "duration_label": "⏱️ Varaktighet:",
+      "protein_label": "🥩 Protein:",
+      "doneness_colon": "Tillagningsgrad:",
+      "temp_data_label": "🌡️ Temperaturdata:",
+      "target_label": "Mål:",
+      "peak_label": "Topp:",
+      "after_rest_label": "Efter vila:",
+      "final_label": "Slutlig:",
+      "cooking_method_label": "🍳 Tillagningsmetod:",
+      "ingredients_label": "📝 Ingredienser:",
+      "timeline_label": "📅 Tidslinje:",
+      "ratings_label": "⭐ Betyg:",
+      "ease_label": "Enkelhet:",
+      "result_label": "Resultat:",
+      "notes_label": "📝 Anteckningar:",
+      "restart_cook": "🔄 Starta om tillagning",
+      "edit_notes": "✏️ Redigera anteckningar",
+      "delete_btn": "🗑️ Ta bort",
+      "update_notes_prompt": "Uppdatera anteckningar:"
     },
     "measurements": {
-      "krm": "krm",
-      "tsk": "tsk",
-      "msk": "msk",
       "ml": "ml",
       "cl": "cl",
       "dl": "dl",
       "l": "l",
       "g": "g",
-      "hg": "hg",
       "kg": "kg",
-      "temp_c": "°C"
+      "temp_c": "°C",
+      "krm": "krm",
+      "tsk": "tsk",
+      "msk": "msk",
+      "hg": "hg"
     },
     "cooking_methods": {
       "oven_roast": "Ugnssteka",
@@ -12126,6 +12602,34 @@ const I18N_STRINGS = {
       "sous_vide": "Sous vide",
       "slow_cooker": "Slowcooker"
     },
+    "appliances": {
+      "title": "🔧 Köksapparater",
+      "configured": "konfigurerade",
+      "loading": "Laddar apparater...",
+      "no_appliances": "Inga apparater konfigurerade ännu.",
+      "setup_step1": "Gå till Inställningar → Enheter & Tjänster → Lägg till integration",
+      "setup_step2": "Sök efter Kitchen Cooking Engine och lägg till dina apparater.",
+      "features_count": "Funktioner",
+      "recipes_available": "recept tillgängliga",
+      "recipe_available": "recept tillgängligt",
+      "tip": "Lägg till fler apparater för att låsa upp fler recept!",
+      "tip_detail": "Varje apparat ger sina egna funktioner och kompatibla recept.",
+      "configure_features": "Konfigurera funktioner",
+      "no_entities": "Inga tillagningsentiteter hittades.",
+      "setup_integration": "Konfigurera Kitchen Cooking Engine-integrationen först."
+    },
+    "recipes": {
+      "compatible_title": "📖 Kompatibla recept",
+      "you_can_cook": "du kan laga",
+      "you_need": "✅ Du behöver:",
+      "you_have": "✅ Du har detta",
+      "or_alternatively": "🔄 Eller alternativt:",
+      "required_features": "🔧 Nödvändiga funktioner:",
+      "optional_features": "💡 Valfria funktioner:",
+      "available": "Tillgänglig",
+      "notes_label": "📝 Anteckningar:",
+      "start_cooking": "🚀 Starta tillagning"
+    },
     "errors": {
       "load_preferences": "Kunde inte ladda inställningar",
       "save_preferences": "Kunde inte spara inställningar",
@@ -12134,6 +12638,94 @@ const I18N_STRINGS = {
       "start_cook_failed": "Kunde inte starta tillagning",
       "stop_cook_failed": "Kunde inte stoppa tillagning",
       "generic": "Något gick fel. Försök igen."
+    },
+    "cuisines": {
+      "nordic": "Nordisk & Skandinavisk",
+      "east_asian": "Östasiatisk",
+      "southeast_asian": "Sydostasiatisk",
+      "south_asian": "Sydasiatisk",
+      "middle_east": "Mellanöstern",
+      "european": "Europeisk",
+      "north_american": "Nordamerikansk",
+      "latin_american": "Latinamerikansk",
+      "caribbean_region": "Karibisk",
+      "african": "Afrikansk",
+      "oceanian": "Oceanisk",
+      "swedish": "Svensk",
+      "danish": "Dansk",
+      "norwegian": "Norsk",
+      "finnish": "Finsk",
+      "icelandic": "Isländsk",
+      "new_nordic": "Nynordisk",
+      "japanese": "Japansk",
+      "chinese": "Kinesisk",
+      "korean": "Koreansk",
+      "taiwanese": "Taiwanesisk",
+      "thai": "Thailändsk",
+      "vietnamese": "Vietnamesisk",
+      "indonesian": "Indonesisk",
+      "malaysian": "Malaysisk",
+      "filipino": "Filippinsk",
+      "singaporean": "Singaporiansk",
+      "indian": "Indisk",
+      "sri_lankan": "Sri Lankesisk",
+      "pakistani": "Pakistansk",
+      "bangladeshi": "Bangladeshisk",
+      "nepali": "Nepalesisk",
+      "lebanese": "Libanesisk",
+      "turkish": "Turkisk",
+      "persian": "Persisk / Iransk",
+      "israeli": "Israelisk",
+      "syrian": "Syrisk",
+      "iraqi": "Irakisk",
+      "yemeni": "Jemenitisk",
+      "emirati": "Emiratisk / Gulf",
+      "palestinian": "Palestinsk",
+      "italian": "Italiensk",
+      "french": "Fransk",
+      "spanish": "Spansk",
+      "greek": "Grekisk",
+      "portuguese": "Portugisisk",
+      "german": "Tysk",
+      "british": "Brittisk",
+      "polish": "Polsk",
+      "hungarian": "Ungersk",
+      "mediterranean": "Medelhavs",
+      "balkan": "Balkan",
+      "russian": "Rysk",
+      "american": "Amerikansk",
+      "cajun_creole": "Cajun / Kreolsk",
+      "tex_mex": "Tex-Mex",
+      "canadian": "Kanadensisk",
+      "southern_us": "Sydstatsk / Soul Food",
+      "hawaiian": "Hawaiiansk",
+      "mexican": "Mexikansk",
+      "brazilian": "Brasiliansk",
+      "peruvian": "Peruansk",
+      "argentinian": "Argentinsk",
+      "colombian": "Colombiansk",
+      "cuban": "Kubansk",
+      "venezuelan": "Venezuelansk",
+      "chilean": "Chilensk",
+      "jamaican": "Jamaicansk",
+      "trinidadian": "Trinidadisk",
+      "haitian": "Haitisk",
+      "puerto_rican": "Puertoricansk",
+      "caribbean": "Karibisk (Allmän)",
+      "ethiopian": "Etiopisk",
+      "moroccan": "Marockansk",
+      "nigerian": "Nigeriansk",
+      "ghanaian": "Ghanansk",
+      "senegalese": "Senegalesisk",
+      "south_african": "Sydafrikansk",
+      "kenyan": "Kenyansk",
+      "tanzanian": "Tanzanisk",
+      "tunisian": "Tunisisk",
+      "egyptian": "Egyptisk",
+      "east_african": "Östafrikansk",
+      "west_african": "Västafrikansk",
+      "australian": "Australisk",
+      "polynesian": "Polynesisk"
     }
   }
 };
@@ -13539,26 +14131,26 @@ class KitchenCookingPanel extends LitElement {
             this._currentPath = 'ninja_built_in_recipes';
             this.requestUpdate();
           }}>
-            ← Back to Recipes
+            ${this._t('nav.back_to_recipes')}
           </button>
           <button class="action-btn" @click=${() => this._openRecipeInBuilder(recipe)}>
-            🛠️ Modify in Builder
+            ${this._t('ninja.modify_in_builder')}
           </button>
         </div>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <h3>📋 Recipe Details</h3>
+          <h3>${this._t('ninja.recipe_details')}</h3>
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 12px 0;">
             <div>
-              <strong>⏱️ Prep:</strong> ${recipe.prep_time_minutes} min
+              <strong>${this._t('ninja.prep_label')}</strong> ${recipe.prep_time_minutes} min
             </div>
             <div>
-              <strong>🔥 Cook:</strong> ${recipe.cook_time_minutes} min
+              <strong>${this._t('ninja.cook_label')}</strong> ${recipe.cook_time_minutes} min
             </div>
             <div>
-              <strong>🍽️ Servings:</strong> 
+              <strong>${this._t('ninja.servings_label')}</strong> 
               <input 
                 type="number" 
                 min="1" 
@@ -13568,12 +14160,12 @@ class KitchenCookingPanel extends LitElement {
                 style="width: 50px; padding: 4px; border: 1px solid var(--divider-color); border-radius: 4px; background: var(--primary-background-color); color: var(--primary-text-color);">
             </div>
             <div>
-              <strong>📊 Difficulty:</strong> ${recipe.difficulty}
+              <strong>${this._t('ninja.difficulty_label')}</strong> ${recipe.difficulty}
             </div>
           </div>
           ${recipe.use_probe ? html`
             <div style="margin-top: 12px; padding: 12px; background: rgba(76, 175, 80, 0.1); border-left: 3px solid #4caf50; border-radius: 0 4px 4px 0;">
-              <strong>🌡️ MEATER+ Probe:</strong> Target ${recipe.target_temp_c}°C (${recipe.target_temp_f}°F)
+              <strong>${this._t('ninja.meater_probe_label')}</strong> ${this._t('common.target')} ${recipe.target_temp_c}°C (${recipe.target_temp_f}°F)
             </div>
           ` : ''}
 
@@ -13582,7 +14174,7 @@ class KitchenCookingPanel extends LitElement {
             class="action-btn" 
             @click=${() => this._startRecipeCook(recipe, recipe._adjustedServings || recipe.servings)}
             style="width: 100%; margin-top: 16px; padding: 16px; font-size: 16px; background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);">
-            🍳 Start Cooking
+            ${this._t('ninja.start_cooking_btn')}
           </button>
         </div>
       </ha-card>
@@ -13590,13 +14182,13 @@ class KitchenCookingPanel extends LitElement {
       ${recipe.phases && recipe.phases.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🔄 Cooking Phases</h3>
+            <h3>${this._t('ninja.cooking_phases')}</h3>
             ${recipe.phases.map((phase, idx) => html`
               <div style="margin: 12px 0; padding: 12px; background: var(--primary-background-color); border-radius: 8px;">
-                <strong>Phase ${idx + 1}:</strong> ${phase.description}<br>
+                <strong>${this._t('ninja.phase')} ${idx + 1}:</strong> ${phase.description}<br>
                 🌡️ ${phase.temperature_c}°C (${phase.temperature_f}°F)<br>
-                ⏱️ ${phase.duration_minutes} minutes<br>
-                ${phase.steam_enabled ? '💨 Steam enabled' : ''}
+                ⏱️ ${phase.duration_minutes} ${this._t('common.minutes')}<br>
+                ${phase.steam_enabled ? this._t('ninja.steam_enabled') : ''}
               </div>
             `)}
           </div>
@@ -13605,7 +14197,7 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>🛒 Ingredients</h3>
+          <h3>${this._t('ninja.ingredients_label')}</h3>
           <ul style="margin: 0; padding-left: 20px;">
             ${(recipe._adjustedIngredients || recipe.ingredients).map(ing => html`<li>${ing}</li>`)}
           </ul>
@@ -13614,7 +14206,7 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>👨‍🍳 Instructions</h3>
+          <h3>${this._t('ninja.instructions_label')}</h3>
           <ol style="margin: 0; padding-left: 20px;">
             ${recipe.instructions.map(step => html`<li style="margin-bottom: 8px;">${step}</li>`)}
           </ol>
@@ -13624,7 +14216,7 @@ class KitchenCookingPanel extends LitElement {
       ${recipe.tips && recipe.tips.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>💡 Tips</h3>
+            <h3>${this._t('ninja.tips_label')}</h3>
             <ul style="margin: 0; padding-left: 20px;">
               ${recipe.tips.map(tip => html`<li style="margin-bottom: 6px;">${tip}</li>`)}
             </ul>
@@ -13635,7 +14227,7 @@ class KitchenCookingPanel extends LitElement {
       ${recipe.notes ? html`
         <ha-card>
           <div class="card-content">
-            <h3>📝 Notes</h3>
+            <h3>${this._t('ninja.notes_label')}</h3>
             <p>${recipe.notes}</p>
           </div>
         </ha-card>
@@ -13974,8 +14566,8 @@ class KitchenCookingPanel extends LitElement {
   _renderAppliances() {
     return html`
       <div class="status-banner idle">
-        <h2>🔧 Kitchen Appliances</h2>
-        <p>${this._appliances.length} appliance${this._appliances.length !== 1 ? 's' : ''} configured</p>
+        <h2>${this._t('appliances.title')}</h2>
+        <p>${this._appliances.length} ${this._t('appliances.configured')}</p>
       </div>
 
       ${this._errorMessage ? html`
@@ -13983,7 +14575,7 @@ class KitchenCookingPanel extends LitElement {
           <div class="card-content error-message">
             <p>⚠️ ${this._errorMessage}</p>
             <button class="retry-btn" @click=${() => this._loadAppliances()}>
-              🔄 Retry
+              🔄 ${this._t('common.retry')}
             </button>
           </div>
         </ha-card>
@@ -13993,15 +14585,15 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content loading-state">
             <div class="spinner"></div>
-            <p>Loading appliances...</p>
+            <p>${this._t('appliances.loading')}</p>
           </div>
         </ha-card>
       ` : this._appliances.length === 0 ? html`
         <ha-card>
           <div class="card-content no-entities">
-            <p>No appliances configured yet.</p>
-            <p>Go to <strong>Settings</strong> → <strong>Devices & Services</strong> → <strong>Add Integration</strong></p>
-            <p>Search for <strong>Kitchen Cooking Engine</strong> and add your appliances.</p>
+            <p>${this._t('appliances.no_appliances')}</p>
+            <p>${this._t('appliances.setup_step1')}</p>
+            <p>${this._t('appliances.setup_step2')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -14030,13 +14622,13 @@ class KitchenCookingPanel extends LitElement {
                 
                 <div class="appliance-features">
                   ${appliance._expanded ? this._renderFeaturesByType(appliance) : html`
-                    <h4>Features (${appliance.features.length}):</h4>
+                    <h4>${this._t('common.features')} (${appliance.features.length}):</h4>
                     <div class="feature-badges">
                       ${appliance.features.slice(0, 6).map(feature => html`
                         <span class="feature-badge">${this._formatFeatureName(feature)}</span>
                       `)}
                       ${appliance.features.length > 6 ? html`
-                        <span class="feature-badge more">+${appliance.features.length - 6} more</span>
+                        <span class="feature-badge more">+${appliance.features.length - 6} ${this._t('common.more')}</span>
                       ` : ''}
                     </div>
                   `}
@@ -14044,7 +14636,7 @@ class KitchenCookingPanel extends LitElement {
 
                 ${appliance.recipe_count > 0 ? html`
                   <div class="appliance-recipes">
-                    📖 ${appliance.recipe_count} recipe${appliance.recipe_count !== 1 ? 's' : ''} available
+                    📖 ${appliance.recipe_count} ${this._t('appliances.recipes_available')}
                   </div>
                 ` : ''}
               </div>
@@ -14054,8 +14646,8 @@ class KitchenCookingPanel extends LitElement {
       `}
 
       <div class="help-text">
-        <p>💡 <strong>Tip:</strong> Add more appliances to unlock more recipes!</p>
-        <p>Each appliance brings its own features and compatible recipes.</p>
+        <p>💡 <strong>Tip:</strong> ${this._t('appliances.tip')}</p>
+        <p>${this._t('appliances.tip_detail')}</p>
       </div>
     `;
   }
@@ -14790,13 +15382,13 @@ class KitchenCookingPanel extends LitElement {
           return html`
             <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 16px;text-align:center;">
               <div class="spinner"></div>
-              <p style="margin-top:16px;font-size:1.1em;">🌡️ Starting cook…</p>
-              <p style="color:var(--secondary-text-color);">Waiting for the probe to begin monitoring.<br>Take the probe out of the charger to start.</p>
+              <p style="margin-top:16px;font-size:1.1em;">${this._t('meater.starting_cook')}</p>
+              <p style="color:var(--secondary-text-color);">${this._t('meater.waiting_probe').replace('\n', '<br>')}</p>
 
               ${waitEntities.length > 1 ? html`
                 <ha-card style="margin-top:20px;width:100%;max-width:400px;">
                   <div class="card-content">
-                    <h3>Select Session</h3>
+                    <h3>${this._t('meater.select_session')}</h3>
                     <select
                       .value=${this._selectedEntity}
                       @change=${(e) => {
@@ -14831,7 +15423,7 @@ class KitchenCookingPanel extends LitElement {
                 this._waitingCookServiceData = null;
                 this._currentPath = 'welcome';
                 this.requestUpdate();
-              }}>← Back to Home</button>
+              }}>${this._t('nav.back_to_home')}</button>
             </div>
           `;
         }
@@ -14903,8 +15495,8 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <ha-card>
         <div class="card-content no-entities">
-          <p>No cooking session entities found.</p>
-          <p>Please configure the Kitchen Cooking Engine integration first.</p>
+          <p>${this._t('appliances.no_entities')}</p>
+          <p>${this._t('appliances.setup_integration')}</p>
         </div>
       </ha-card>
     `;
@@ -15278,17 +15870,17 @@ class KitchenCookingPanel extends LitElement {
           <div class="temp-display">
             <div class="temp-current">
               <div class="value">${currentTemp !== null && currentTemp !== undefined ? currentTemp + '°C' : '--'}</div>
-              <div class="label">Tip Temp</div>
+              <div class="label">${this._t('meater.tip_temp')}</div>
             </div>
             <div class="temp-target">
               <div class="value">${targetTemp}°C</div>
-              <div class="label">Target</div>
+              <div class="label">${this._t('common.target')}</div>
             </div>
           </div>
           
           ${ambientTemp !== null && ambientTemp !== undefined ? html`
             <div class="ambient-temp-display">
-              <span class="ambient-label">🌡️ Ambient:</span>
+              <span class="ambient-label">${this._t('meater.ambient_label')}</span>
               <span class="ambient-value">${ambientTemp}°C</span>
             </div>
           ` : ''}
@@ -15301,25 +15893,25 @@ class KitchenCookingPanel extends LitElement {
               <div class="progress-bar" style="width: ${Math.min(100, progress)}%"></div>
             </div>
             <div class="progress-info">
-              <span>${progress.toFixed(0)}% complete</span>
-              ${eta !== null && eta !== undefined && cookState !== 'resting' ? html`<span>ETA: ${eta} min</span>` : ''}
+              <span>${progress.toFixed(0)}% ${this._t('meater.complete_pct')}</span>
+              ${eta !== null && eta !== undefined && cookState !== 'resting' ? html`<span>${this._t('meater.eta_label')} ${eta} ${this._t('common.minutes_short')}</span>` : ''}
               ${cookState === 'resting' && restTimeRemaining !== null && restTimeRemaining !== undefined ? 
-                html`<span>Rest remaining: ${restTimeRemaining.toFixed(1)} min</span>` : ''}
+                html`<span>${this._t('meater.rest_remaining_label')} ${restTimeRemaining.toFixed(1)} ${this._t('common.minutes_short')}</span>` : ''}
             </div>
           </div>
           
           <div class="cook-info">
             <div class="cook-info-item">
-              <div class="label">Method</div>
+              <div class="label">${this._t('meater.method_label')}</div>
               <div class="value">${method}</div>
             </div>
             <div class="cook-info-item">
-              <div class="label">Rest Time</div>
+              <div class="label">${this._t('meater.rest_time_label')}</div>
               <div class="value">${attrs.rest_time_minutes || '--'} min</div>
             </div>
             ${batteryLevel !== null && batteryLevel !== undefined ? html`
               <div class="cook-info-item">
-                <div class="label">🔋 Battery</div>
+                <div class="label">${this._t('meater.battery_label')}</div>
                 <div class="value battery-${batteryLevel <= 20 ? 'low' : batteryLevel <= 50 ? 'medium' : 'high'}">${batteryLevel}%</div>
               </div>
             ` : ''}
@@ -15328,12 +15920,12 @@ class KitchenCookingPanel extends LitElement {
           <!-- Notes Section -->
           <div class="notes-section">
             <button class="notes-toggle" @click=${() => this._showNotes = !this._showNotes}>
-              📝 ${this._showNotes ? 'Hide Notes' : 'Add Notes'}
+              📝 ${this._showNotes ? this._t('meater.hide_notes') : this._t('meater.add_notes_btn')}
             </button>
             ${this._showNotes ? html`
               <textarea 
                 class="notes-input" 
-                placeholder="Add notes about this cook (adjustments, observations, etc.)"
+                placeholder="${this._t('meater.notes_placeholder')}"
                 .value=${attrs.notes || this._currentNotes}
                 @change=${(e) => this._setNotes(e.target.value)}
               ></textarea>
@@ -15342,12 +15934,12 @@ class KitchenCookingPanel extends LitElement {
           
           <div class="action-buttons">
             ${cookState === 'goal_reached' ? html`
-              <ha-button unelevated @click=${this._startRest}>⏱️ Start Rest</ha-button>
+              <ha-button unelevated @click=${this._startRest}>${this._t('meater.start_rest_btn')}</ha-button>
             ` : ''}
             ${cookState === 'resting' ? html`
-              <ha-button unelevated @click=${this._complete}>✅ Complete</ha-button>
+              <ha-button unelevated @click=${this._complete}>${this._t('meater.complete_btn')}</ha-button>
             ` : ''}
-            <ha-button outlined @click=${this._stopCook}>⏹️ Stop</ha-button>
+            <ha-button outlined @click=${this._stopCook}>${this._t('meater.stop_btn')}</ha-button>
           </div>
         </div>
       </ha-card>
@@ -15780,7 +16372,7 @@ class KitchenCookingPanel extends LitElement {
             this._showMeaterCooking = false;
             this.requestUpdate();
           }}>
-            ← Back to MEATER Path
+            ${this._t('nav.back_to_meater_path')}
           </button>
           <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
         </div>
@@ -15793,7 +16385,7 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ← Back to Appliances
+          ${this._t('nav.back_to_appliances')}
         </button>
         <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
       </div>
@@ -15802,16 +16394,16 @@ class KitchenCookingPanel extends LitElement {
         <ha-card class="path-card clickable" @click=${() => this._startMeaterCooking()}>
           <div class="card-content path-card-content">
             <div class="path-icon">🌡️</div>
-            <h3>Start MEATER Cooking</h3>
-            <p>Select protein, set target, monitor temperature</p>
+            <h3>${this._t('meater.start_meater_cooking')}</h3>
+            <p>${this._t('meater.start_meater_desc')}</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._showRecentMeaterCooks()}>
           <div class="card-content path-card-content">
             <div class="path-icon">📋</div>
-            <h3>Recent MEATER Cooks</h3>
-            <p>View and restart previous temperature-based cooks</p>
+            <h3>${this._t('meater.recent_meater_cooks')}</h3>
+            <p>${this._t('meater.recent_meater_desc')}</p>
           </div>
         </ha-card>
       </div>
@@ -15846,16 +16438,16 @@ class KitchenCookingPanel extends LitElement {
           this._currentPath = 'meater';
           this.requestUpdate();
         }}>
-          ← Back to MEATER Path
+          ${this._t('nav.back_to_meater_path')}
         </button>
-        <h2>📋 Recent MEATER Cooks</h2>
+        <h2>📋 ${this._t('meater.recent_meater_cooks')}</h2>
       </div>
 
       ${meaterCooks.length === 0 ? html`
         <ha-card>
           <div class="card-content">
-            <p class="no-history">No previous MEATER cooks found.</p>
-            <p class="no-history-hint">Temperature-based cooks you complete will appear here for easy restart.</p>
+            <p class="no-history">${this._t('meater.no_previous_cooks')}</p>
+            <p class="no-history-hint">${this._t('meater.no_previous_cooks_hint')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -15865,7 +16457,7 @@ class KitchenCookingPanel extends LitElement {
               <div class="history-card-header">
                 <div class="history-title-row">
                   <h3 class="history-title">
-                    ${cook.protein || 'Unknown Protein'}
+                    ${cook.protein || this._t('meater.unknown_protein')}
                     ${cook.cut ? html` - ${cook.cut}` : ''}
                   </h3>
                   <span class="history-date">${this._formatDateTime(cook.start_time)}</span>
@@ -15876,10 +16468,10 @@ class KitchenCookingPanel extends LitElement {
                 <span class="history-detail">🥩 ${cook.protein}</span>
                 <span class="history-detail">🎯 ${(cook.doneness || '').replace('_', ' ')}</span>
                 <span class="history-detail">🍳 ${(cook.cooking_method || '').replace(/_/g, ' ')}</span>
-                <span class="history-detail">🌡️ ${cook.target_temp_c}°C target</span>
-                ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C peak</span>` : ''}
-                ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C after rest</span>` : 
-                  cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C final</span>` : ''}
+                <span class="history-detail">🌡️ ${cook.target_temp_c}°C ${this._t('meater.target_label')}</span>
+                ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C ${this._t('meater.peak_label')}</span>` : ''}
+                ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C ${this._t('meater.after_rest_label')}</span>` : 
+                  cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C ${this._t('meater.final_label')}</span>` : ''}
               </div>
               
               ${cook.notes ? html`
@@ -15890,13 +16482,13 @@ class KitchenCookingPanel extends LitElement {
               
               <div class="history-actions">
                 <button class="history-action-btn restart" @click=${() => this._restartCook(cook)}>
-                  🔄 Restart This Cook
+                  ${this._t('meater.restart_cook')}
                 </button>
                 <button class="history-action-btn edit" @click=${() => this._editCookNotes(cook)}>
-                  ✏️ Edit Notes
+                  ${this._t('meater.edit_notes')}
                 </button>
                 <button class="history-action-btn delete" @click=${() => this._deleteCook(cook.id)}>
-                  🗑️ Delete
+                  ${this._t('meater.delete_btn')}
                 </button>
               </div>
             </ha-card>
@@ -15913,7 +16505,7 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ← Back to Appliances
+          ${this._t('nav.back_to_appliances')}
         </button>
         <h2>🥘 ${this._selectedAppliance?.name || 'Ninja Combi Cooking'}</h2>
       </div>
@@ -15922,32 +16514,32 @@ class KitchenCookingPanel extends LitElement {
         <ha-card class="path-card clickable" @click=${() => this._startNinjaRecipeBuilder()}>
           <div class="card-content path-card-content">
             <div class="path-icon">🎨</div>
-            <h3>Recipe Builder</h3>
-            <p>Create custom recipes with Ninja Combi modes</p>
+            <h3>${this._t('ninja.recipe_builder')}</h3>
+            <p>${this._t('ninja.recipe_builder_desc')}</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._showNinjaBuiltInRecipes()}>
           <div class="card-content path-card-content">
             <div class="path-icon">📖</div>
-            <h3>Built-in Recipes</h3>
-            <p>Browse pre-configured Ninja Combi recipes</p>
+            <h3>${this._t('ninja.built_in_recipes')}</h3>
+            <p>${this._t('ninja.built_in_recipes_desc')}</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._startAIWithNinjaCombi()}>
           <div class="card-content path-card-content">
             <div class="path-icon">🤖</div>
-            <h3>AI Recipe with Ninja Combi</h3>
-            <p>Generate AI recipes using your Ninja Combi</p>
+            <h3>${this._t('ninja.ai_recipe_title')}</h3>
+            <p>${this._t('ninja.ai_recipe_desc')}</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._showRecentNinjaCooks()}>
           <div class="card-content path-card-content">
             <div class="path-icon">📋</div>
-            <h3>Recent Ninja Combi Cooks</h3>
-            <p>View and restart previous Ninja Combi recipes</p>
+            <h3>${this._t('ninja.recent_cooks')}</h3>
+            <p>${this._t('ninja.recent_cooks_desc')}</p>
           </div>
         </ha-card>
       </div>
@@ -15970,7 +16562,7 @@ class KitchenCookingPanel extends LitElement {
             this._navigateToWelcome();
           }
         }}>
-          ← Back${this._selectedMainAppliance === 'ninja_combi' ? ' to Ninja Combi' : ' to Appliances'}
+          ${this._selectedMainAppliance === 'ninja_combi' ? this._t('nav.back_to_ninja_combi') : this._t('nav.back_to_appliances')}
         </button>
         <div class="path-header-title-row">
           <h2>🤖 AI Recipe Builder</h2>
@@ -15980,7 +16572,7 @@ class KitchenCookingPanel extends LitElement {
       <ha-card>
         <div class="card-content appliance-info">
           <div class="appliance-info-header">
-            <h3>Main Appliance: ${appliance?.name}</h3>
+            <h3>${this._t('ai_recipe.main_appliance')} ${appliance?.name}</h3>
             <button class="settings-icon-btn" @click=${() => this._toggleFeatureNotesEditor()} title="Edit Feature Notes">
               📝
             </button>
@@ -15992,13 +16584,13 @@ class KitchenCookingPanel extends LitElement {
             </div>
           ` : html`
             <p class="appliance-features">
-              <strong>Features:</strong> ${appliance?.features?.join(', ') || 'N/A'}
+              <strong>${this._t('ai_recipe.features_label')}</strong> ${appliance?.features?.join(', ') || 'N/A'}
             </p>
           `}
           
           ${this._appliances.length > 1 ? html`
             <div class="secondary-appliances">
-              <h4>Secondary Appliances Available:</h4>
+              <h4>${this._t('ai_recipe.secondary_appliances')}</h4>
               ${this._appliances.filter(a => a.id !== appliance?.id).map(a => html`
                 <label class="checkbox-label">
                   <input type="checkbox" checked @change=${(e) => this._toggleSecondaryAppliance(a.id, e.target.checked)} />
@@ -16015,16 +16607,16 @@ class KitchenCookingPanel extends LitElement {
           <ha-card class="path-card clickable" @click=${() => this._startAIRecipeCreation()}>
             <div class="card-content path-card-content">
               <div class="path-icon">🤖</div>
-              <h3>Create AI Recipe</h3>
-              <p>Generate custom recipes using your appliances and ingredients</p>
+              <h3>${this._t('ai_recipe.create_ai_recipe')}</h3>
+              <p>${this._t('ai_recipe.create_desc')}</p>
             </div>
           </ha-card>
         ` : html`
           <ha-card class="path-card clickable" @click=${() => this._showAISettings()}>
             <div class="card-content path-card-content">
               <div class="path-icon">⚙️</div>
-              <h3>Set Up AI Recipe Builder</h3>
-              <p>Configure your AI agent to start generating recipes</p>
+              <h3>${this._t('ai_recipe.setup_ai_title')}</h3>
+              <p>${this._t('ai_recipe.setup_ai_desc')}</p>
             </div>
           </ha-card>
         `}
@@ -16032,8 +16624,8 @@ class KitchenCookingPanel extends LitElement {
         <ha-card class="path-card clickable" @click=${() => this._showRecentApplianceRecipes()}>
           <div class="card-content path-card-content">
             <div class="path-icon">📋</div>
-            <h3>Recent ${appliance?.name} Recipes</h3>
-            <p>View and restart previous AI recipes for this appliance</p>
+            <h3>${this._t('ai_recipe.recent_recipes_title')} - ${appliance?.name || ''}</h3>
+            <p>${this._t('ai_recipe.recent_desc')}</p>
           </div>
         </ha-card>
       </div>
@@ -16093,21 +16685,21 @@ class KitchenCookingPanel extends LitElement {
 
     return html`
       <div class="status-banner idle">
-        <h2>🛠️ Recipe Builder</h2>
-        <p>Build custom Combi-Meal recipes with automatic parameter adjustment</p>
+        <h2>${this._t('ninja.builder_heading')}</h2>
+        <p>${this._t('ninja.builder_desc')}</p>
         <div style="display: flex; gap: 8px; margin-top: 12px;">
           <button class="history-btn" @click=${() => { this._currentPath = 'ninja_combi'; this._resetBuilder(); }}>
-            ← Back to Ninja Combi
+            ${this._t('nav.back_to_ninja_combi')}
           </button>
           <button class="history-btn" @click=${() => { this._currentPath = 'ninja_built_in_recipes'; this.requestUpdate(); }}>
-            📖 All Recipes
+            ${this._t('ninja.all_recipes_btn')}
           </button>
         </div>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <h3>1️⃣ Select Base (Required)</h3>
+          <h3>${this._t('ninja.select_base')}</h3>
           <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px;">
             ${Object.entries(bases).map(([key, base]) => html`
               <button 
@@ -16127,7 +16719,7 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>2️⃣ Select Protein (Required)</h3>
+          <h3>${this._t('ninja.select_protein_builder')}</h3>
           <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px;">
             ${Object.entries(proteins).map(([key, protein]) => html`
               <button 
@@ -16147,9 +16739,9 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>3️⃣ Add Vegetables (Optional)</h3>
+          <h3>${this._t('ninja.add_vegetables')}</h3>
           <p style="font-size: 12px; color: var(--secondary-text-color); margin-bottom: 8px;">
-            💡 Tender veggies cook with base, crispy veggies cook with protein
+            ${this._t('ninja.veggie_hint')}
           </p>
           <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
             ${veggies.map(veggie => {
@@ -16162,7 +16754,7 @@ class KitchenCookingPanel extends LitElement {
                   <div style="font-size: 20px; margin-bottom: 4px;">${veggie.icon}</div>
                   <div style="font-size: 13px; font-weight: 500;">${veggie.name}</div>
                   <div style="font-size: 11px; color: var(--secondary-text-color); margin-top: 2px;">
-                    ${veggie.type === 'tender' ? '🥘 With base' : '🔥 With protein'}
+                    ${veggie.type === 'tender' ? this._t('ninja.with_base') : this._t('ninja.with_protein')}
                   </div>
                 </button>
               `;
@@ -16173,7 +16765,7 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>4️⃣ MEATER+ Probe</h3>
+          <h3>${this._t('ninja.meater_probe_section')}</h3>
           <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
             <input 
               type="checkbox" 
@@ -16181,7 +16773,7 @@ class KitchenCookingPanel extends LitElement {
               @change=${(e) => { this._builderUseMeater = e.target.checked; this.requestUpdate(); }}
               style="width: 18px; height: 18px; cursor: pointer;">
             <span style="font-size: 14px;">
-              🌡️ Use MEATER+ probe for temperature monitoring
+              ${this._t('ninja.use_meater_probe')}
               ${this._builderUseMeater && selectedProtein ? html`
                 <div style="font-size: 12px; color: var(--secondary-text-color); margin-top: 4px;">
                   Target: ${selectedProtein.probe}
@@ -16195,35 +16787,35 @@ class KitchenCookingPanel extends LitElement {
       ${this._builderBase && this._builderProtein ? html`
         <ha-card>
           <div class="card-content">
-            <h3>📊 Calculated Parameters</h3>
+            <h3>${this._t('ninja.calculated_params')}</h3>
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 12px 0;">
               <div>
-                <strong>🌡️ Temperature:</strong><br>
+                <strong>${this._t('ninja.temperature_label')}</strong><br>
                 ${selectedProtein.temp}
               </div>
               <div>
-                <strong>⏱️ Cook Time:</strong><br>
-                ${selectedProtein.time} minutes
+                <strong>${this._t('ninja.cook_time_label')}</strong><br>
+                ${selectedProtein.time} ${this._t('common.minutes')}
               </div>
               <div>
-                <strong>💧 Water:</strong><br>
+                <strong>${this._t('ninja.water_label')}</strong><br>
                 ${selectedBase.water}
               </div>
               <div>
-                <strong>🍴 Mode:</strong><br>
+                <strong>${this._t('ninja.mode_label')}</strong><br>
                 Combi-Meal
               </div>
             </div>
             ${this._builderUseMeater && selectedProtein.probe !== 'N/A' ? html`
               <div style="margin-top: 12px; padding: 12px; background: rgba(76, 175, 80, 0.1); border-left: 3px solid #4caf50; border-radius: 0 4px 4px 0;">
-                <strong>🌡️ Probe Target:</strong> ${selectedProtein.probe}
+                <strong>${this._t('ninja.probe_target')}</strong> ${selectedProtein.probe}
               </div>
             ` : ''}
             <button 
               class="action-btn" 
               @click=${() => this._buildRecipe()}
               style="width: 100%; margin-top: 16px; padding: 14px; font-size: 15px; font-weight: 600;">
-              ✨ Build Custom Recipe
+              ${this._t('ninja.build_recipe_btn')}
             </button>
           </div>
         </ha-card>
@@ -16231,7 +16823,7 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <p style="text-align: center; color: var(--secondary-text-color); padding: 20px 0;">
-              👆 Select a base and protein to see calculated parameters
+              ${this._t('ninja.select_base_protein_hint')}
             </p>
           </div>
         </ha-card>
@@ -16394,15 +16986,15 @@ class KitchenCookingPanel extends LitElement {
           this._currentPath = 'ninja_combi';
           this.requestUpdate();
         }}>
-          ← Back to Ninja Combi
+          ${this._t('nav.back_to_ninja_combi')}
         </button>
-        <h2>📖 Built-in Ninja Combi Recipes</h2>
+        <h2>${this._t('ninja.built_in_heading')}</h2>
       </div>
 
       ${this._ninjaBuiltInRecipes.length === 0 ? html`
         <ha-card>
           <div class="card-content">
-            <p>No built-in recipes available. Check back later!</p>
+            <p>${this._t('ninja.no_built_in')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -16417,8 +17009,8 @@ class KitchenCookingPanel extends LitElement {
                 <h3>${recipe.name}</h3>
                 <p class="recipe-description">${recipe.description || ''}</p>
                 <div class="recipe-meta">
-                  <span>⏱️ ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' min' : 'N/A'}</span>
-                  <span>🍽️ Serves ${recipe.servings || '4'}</span>
+                  <span>⏱️ ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' ' + this._t('common.minutes_short') : this._t('common.na')}</span>
+                  <span>🍽️ ${this._t('ninja.serves')} ${recipe.servings || '4'}</span>
                 </div>
               </div>
             </ha-card>
@@ -16444,15 +17036,15 @@ class KitchenCookingPanel extends LitElement {
           this._currentPath = 'ninja_combi';
           this.requestUpdate();
         }}>
-          ← Back to Ninja Combi
+          ${this._t('nav.back_to_ninja_combi')}
         </button>
-        <h2>📋 Recent Ninja Combi Cooks</h2>
+        <h2>${this._t('ninja.recent_ninja_heading')}</h2>
       </div>
 
       ${ninjaCooks.length === 0 ? html`
         <ha-card>
           <div class="card-content">
-            <p>No Ninja Combi cooking history yet. Start your first Ninja Combi cook!</p>
+            <p>${this._t('ninja.no_recent_ninja')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -16494,107 +17086,107 @@ class KitchenCookingPanel extends LitElement {
     // Data should already be loaded by _startAIRecipeCreation()
     // If not loaded, show loading state
     if (!this._commonIngredients || this._commonIngredients.length === 0) {
-      return html`<div class="loading">Loading ingredients...</div>`;
+      return html`<div class="loading">${this._t('ai_recipe.loading_ingredients')}</div>`;
     }
 
     // Cuisine/region options for fusion cooking (moved from cooking style page)
     const cuisineRegions = [
-      { id: 'nordic', name: 'Nordic & Scandinavian', icon: '❄️', cuisines: [
-        { id: 'swedish', name: 'Swedish', icon: '🇸🇪' },
-        { id: 'danish', name: 'Danish', icon: '🇩🇰' },
-        { id: 'norwegian', name: 'Norwegian', icon: '🇳🇴' },
-        { id: 'finnish', name: 'Finnish', icon: '🇫🇮' },
-        { id: 'icelandic', name: 'Icelandic', icon: '🇮🇸' },
-        { id: 'new_nordic', name: 'New Nordic', icon: '🌿' },
+      { id: 'nordic', name: this._t('cuisines.nordic'), icon: '❄️', cuisines: [
+        { id: 'swedish', name: this._t('cuisines.swedish'), icon: '🇸🇪' },
+        { id: 'danish', name: this._t('cuisines.danish'), icon: '🇩🇰' },
+        { id: 'norwegian', name: this._t('cuisines.norwegian'), icon: '🇳🇴' },
+        { id: 'finnish', name: this._t('cuisines.finnish'), icon: '🇫🇮' },
+        { id: 'icelandic', name: this._t('cuisines.icelandic'), icon: '🇮🇸' },
+        { id: 'new_nordic', name: this._t('cuisines.new_nordic'), icon: '🌿' },
       ]},
-      { id: 'east_asian', name: 'East Asian', icon: '🥢', cuisines: [
-        { id: 'japanese', name: 'Japanese', icon: '🇯🇵' },
-        { id: 'chinese', name: 'Chinese', icon: '🇨🇳' },
-        { id: 'korean', name: 'Korean', icon: '🇰🇷' },
-        { id: 'taiwanese', name: 'Taiwanese', icon: '🇹🇼' },
+      { id: 'east_asian', name: this._t('cuisines.east_asian'), icon: '🥢', cuisines: [
+        { id: 'japanese', name: this._t('cuisines.japanese'), icon: '🇯🇵' },
+        { id: 'chinese', name: this._t('cuisines.chinese'), icon: '🇨🇳' },
+        { id: 'korean', name: this._t('cuisines.korean'), icon: '🇰🇷' },
+        { id: 'taiwanese', name: this._t('cuisines.taiwanese'), icon: '🇹🇼' },
       ]},
-      { id: 'southeast_asian', name: 'Southeast Asian', icon: '🌴', cuisines: [
-        { id: 'thai', name: 'Thai', icon: '🇹🇭' },
-        { id: 'vietnamese', name: 'Vietnamese', icon: '🇻🇳' },
-        { id: 'indonesian', name: 'Indonesian', icon: '🇮🇩' },
-        { id: 'malaysian', name: 'Malaysian', icon: '🇲🇾' },
-        { id: 'filipino', name: 'Filipino', icon: '🇵🇭' },
-        { id: 'singaporean', name: 'Singaporean', icon: '🇸🇬' },
+      { id: 'southeast_asian', name: this._t('cuisines.southeast_asian'), icon: '🌴', cuisines: [
+        { id: 'thai', name: this._t('cuisines.thai'), icon: '🇹🇭' },
+        { id: 'vietnamese', name: this._t('cuisines.vietnamese'), icon: '🇻🇳' },
+        { id: 'indonesian', name: this._t('cuisines.indonesian'), icon: '🇮🇩' },
+        { id: 'malaysian', name: this._t('cuisines.malaysian'), icon: '🇲🇾' },
+        { id: 'filipino', name: this._t('cuisines.filipino'), icon: '🇵🇭' },
+        { id: 'singaporean', name: this._t('cuisines.singaporean'), icon: '🇸🇬' },
       ]},
-      { id: 'south_asian', name: 'South Asian', icon: '🍛', cuisines: [
-        { id: 'indian', name: 'Indian', icon: '🇮🇳' },
-        { id: 'sri_lankan', name: 'Sri Lankan', icon: '🇱🇰' },
-        { id: 'pakistani', name: 'Pakistani', icon: '🇵🇰' },
-        { id: 'bangladeshi', name: 'Bangladeshi', icon: '🇧🇩' },
-        { id: 'nepali', name: 'Nepali', icon: '🇳🇵' },
+      { id: 'south_asian', name: this._t('cuisines.south_asian'), icon: '🍛', cuisines: [
+        { id: 'indian', name: this._t('cuisines.indian'), icon: '🇮🇳' },
+        { id: 'sri_lankan', name: this._t('cuisines.sri_lankan'), icon: '🇱🇰' },
+        { id: 'pakistani', name: this._t('cuisines.pakistani'), icon: '🇵🇰' },
+        { id: 'bangladeshi', name: this._t('cuisines.bangladeshi'), icon: '🇧🇩' },
+        { id: 'nepali', name: this._t('cuisines.nepali'), icon: '🇳🇵' },
       ]},
-      { id: 'middle_east', name: 'Middle Eastern', icon: '🧆', cuisines: [
-        { id: 'lebanese', name: 'Lebanese', icon: '🇱🇧' },
-        { id: 'turkish', name: 'Turkish', icon: '🇹🇷' },
-        { id: 'persian', name: 'Persian / Iranian', icon: '🇮🇷' },
-        { id: 'israeli', name: 'Israeli', icon: '🇮🇱' },
-        { id: 'syrian', name: 'Syrian', icon: '🇸🇾' },
-        { id: 'iraqi', name: 'Iraqi', icon: '🇮🇶' },
-        { id: 'yemeni', name: 'Yemeni', icon: '🇾🇪' },
-        { id: 'emirati', name: 'Emirati / Gulf', icon: '🇦🇪' },
-        { id: 'palestinian', name: 'Palestinian', icon: '🇵🇸' },
+      { id: 'middle_east', name: this._t('cuisines.middle_east'), icon: '🧆', cuisines: [
+        { id: 'lebanese', name: this._t('cuisines.lebanese'), icon: '🇱🇧' },
+        { id: 'turkish', name: this._t('cuisines.turkish'), icon: '🇹🇷' },
+        { id: 'persian', name: this._t('cuisines.persian'), icon: '🇮🇷' },
+        { id: 'israeli', name: this._t('cuisines.israeli'), icon: '🇮🇱' },
+        { id: 'syrian', name: this._t('cuisines.syrian'), icon: '🇸🇾' },
+        { id: 'iraqi', name: this._t('cuisines.iraqi'), icon: '🇮🇶' },
+        { id: 'yemeni', name: this._t('cuisines.yemeni'), icon: '🇾🇪' },
+        { id: 'emirati', name: this._t('cuisines.emirati'), icon: '🇦🇪' },
+        { id: 'palestinian', name: this._t('cuisines.palestinian'), icon: '🇵🇸' },
       ]},
-      { id: 'european', name: 'European', icon: '🏰', cuisines: [
-        { id: 'italian', name: 'Italian', icon: '🇮🇹' },
-        { id: 'french', name: 'French', icon: '🇫🇷' },
-        { id: 'spanish', name: 'Spanish', icon: '🇪🇸' },
-        { id: 'greek', name: 'Greek', icon: '🇬🇷' },
-        { id: 'portuguese', name: 'Portuguese', icon: '🇵🇹' },
-        { id: 'german', name: 'German', icon: '🇩🇪' },
-        { id: 'british', name: 'British', icon: '🇬🇧' },
-        { id: 'polish', name: 'Polish', icon: '🇵🇱' },
-        { id: 'hungarian', name: 'Hungarian', icon: '🇭🇺' },
-        { id: 'mediterranean', name: 'Mediterranean', icon: '🫒' },
-        { id: 'balkan', name: 'Balkan', icon: '🏔️' },
-        { id: 'russian', name: 'Russian', icon: '🇷🇺' },
+      { id: 'european', name: this._t('cuisines.european'), icon: '🏰', cuisines: [
+        { id: 'italian', name: this._t('cuisines.italian'), icon: '🇮🇹' },
+        { id: 'french', name: this._t('cuisines.french'), icon: '🇫🇷' },
+        { id: 'spanish', name: this._t('cuisines.spanish'), icon: '🇪🇸' },
+        { id: 'greek', name: this._t('cuisines.greek'), icon: '🇬🇷' },
+        { id: 'portuguese', name: this._t('cuisines.portuguese'), icon: '🇵🇹' },
+        { id: 'german', name: this._t('cuisines.german'), icon: '🇩🇪' },
+        { id: 'british', name: this._t('cuisines.british'), icon: '🇬🇧' },
+        { id: 'polish', name: this._t('cuisines.polish'), icon: '🇵🇱' },
+        { id: 'hungarian', name: this._t('cuisines.hungarian'), icon: '🇭🇺' },
+        { id: 'mediterranean', name: this._t('cuisines.mediterranean'), icon: '🫒' },
+        { id: 'balkan', name: this._t('cuisines.balkan'), icon: '🏔️' },
+        { id: 'russian', name: this._t('cuisines.russian'), icon: '🇷🇺' },
       ]},
-      { id: 'north_american', name: 'North American', icon: '🦅', cuisines: [
-        { id: 'american', name: 'American', icon: '🇺🇸' },
-        { id: 'cajun_creole', name: 'Cajun / Creole', icon: '🦞' },
-        { id: 'tex_mex', name: 'Tex-Mex', icon: '🌮' },
-        { id: 'canadian', name: 'Canadian', icon: '🇨🇦' },
-        { id: 'southern_us', name: 'Southern US / Soul Food', icon: '🍗' },
-        { id: 'hawaiian', name: 'Hawaiian', icon: '🌺' },
+      { id: 'north_american', name: this._t('cuisines.north_american'), icon: '🦅', cuisines: [
+        { id: 'american', name: this._t('cuisines.american'), icon: '🇺🇸' },
+        { id: 'cajun_creole', name: this._t('cuisines.cajun_creole'), icon: '🦞' },
+        { id: 'tex_mex', name: this._t('cuisines.tex_mex'), icon: '🌮' },
+        { id: 'canadian', name: this._t('cuisines.canadian'), icon: '🇨🇦' },
+        { id: 'southern_us', name: this._t('cuisines.southern_us'), icon: '🍗' },
+        { id: 'hawaiian', name: this._t('cuisines.hawaiian'), icon: '🌺' },
       ]},
-      { id: 'latin_american', name: 'Latin American', icon: '💃', cuisines: [
-        { id: 'mexican', name: 'Mexican', icon: '🇲🇽' },
-        { id: 'brazilian', name: 'Brazilian', icon: '🇧🇷' },
-        { id: 'peruvian', name: 'Peruvian', icon: '🇵🇪' },
-        { id: 'argentinian', name: 'Argentinian', icon: '🇦🇷' },
-        { id: 'colombian', name: 'Colombian', icon: '🇨🇴' },
-        { id: 'cuban', name: 'Cuban', icon: '🇨🇺' },
-        { id: 'venezuelan', name: 'Venezuelan', icon: '🇻🇪' },
-        { id: 'chilean', name: 'Chilean', icon: '🇨🇱' },
+      { id: 'latin_american', name: this._t('cuisines.latin_american'), icon: '💃', cuisines: [
+        { id: 'mexican', name: this._t('cuisines.mexican'), icon: '🇲🇽' },
+        { id: 'brazilian', name: this._t('cuisines.brazilian'), icon: '🇧🇷' },
+        { id: 'peruvian', name: this._t('cuisines.peruvian'), icon: '🇵🇪' },
+        { id: 'argentinian', name: this._t('cuisines.argentinian'), icon: '🇦🇷' },
+        { id: 'colombian', name: this._t('cuisines.colombian'), icon: '🇨🇴' },
+        { id: 'cuban', name: this._t('cuisines.cuban'), icon: '🇨🇺' },
+        { id: 'venezuelan', name: this._t('cuisines.venezuelan'), icon: '🇻🇪' },
+        { id: 'chilean', name: this._t('cuisines.chilean'), icon: '🇨🇱' },
       ]},
-      { id: 'caribbean_region', name: 'Caribbean', icon: '🏝️', cuisines: [
-        { id: 'jamaican', name: 'Jamaican', icon: '🇯🇲' },
-        { id: 'trinidadian', name: 'Trinidadian', icon: '🇹🇹' },
-        { id: 'haitian', name: 'Haitian', icon: '🇭🇹' },
-        { id: 'puerto_rican', name: 'Puerto Rican', icon: '🇵🇷' },
-        { id: 'caribbean', name: 'Caribbean (General)', icon: '🏝️' },
+      { id: 'caribbean_region', name: this._t('cuisines.caribbean_region'), icon: '🏝️', cuisines: [
+        { id: 'jamaican', name: this._t('cuisines.jamaican'), icon: '🇯🇲' },
+        { id: 'trinidadian', name: this._t('cuisines.trinidadian'), icon: '🇹🇹' },
+        { id: 'haitian', name: this._t('cuisines.haitian'), icon: '🇭🇹' },
+        { id: 'puerto_rican', name: this._t('cuisines.puerto_rican'), icon: '🇵🇷' },
+        { id: 'caribbean', name: this._t('cuisines.caribbean'), icon: '🏝️' },
       ]},
-      { id: 'african', name: 'African', icon: '🌍', cuisines: [
-        { id: 'ethiopian', name: 'Ethiopian', icon: '🇪🇹' },
-        { id: 'moroccan', name: 'Moroccan', icon: '🇲🇦' },
-        { id: 'nigerian', name: 'Nigerian', icon: '🇳🇬' },
-        { id: 'ghanaian', name: 'Ghanaian', icon: '🇬🇭' },
-        { id: 'senegalese', name: 'Senegalese', icon: '🇸🇳' },
-        { id: 'south_african', name: 'South African', icon: '🇿🇦' },
-        { id: 'kenyan', name: 'Kenyan', icon: '🇰🇪' },
-        { id: 'tanzanian', name: 'Tanzanian', icon: '🇹🇿' },
-        { id: 'tunisian', name: 'Tunisian', icon: '🇹🇳' },
-        { id: 'egyptian', name: 'Egyptian', icon: '🇪🇬' },
-        { id: 'east_african', name: 'East African', icon: '🌄' },
-        { id: 'west_african', name: 'West African', icon: '🥘' },
+      { id: 'african', name: this._t('cuisines.african'), icon: '🌍', cuisines: [
+        { id: 'ethiopian', name: this._t('cuisines.ethiopian'), icon: '🇪🇹' },
+        { id: 'moroccan', name: this._t('cuisines.moroccan'), icon: '🇲🇦' },
+        { id: 'nigerian', name: this._t('cuisines.nigerian'), icon: '🇳🇬' },
+        { id: 'ghanaian', name: this._t('cuisines.ghanaian'), icon: '🇬🇭' },
+        { id: 'senegalese', name: this._t('cuisines.senegalese'), icon: '🇸🇳' },
+        { id: 'south_african', name: this._t('cuisines.south_african'), icon: '🇿🇦' },
+        { id: 'kenyan', name: this._t('cuisines.kenyan'), icon: '🇰🇪' },
+        { id: 'tanzanian', name: this._t('cuisines.tanzanian'), icon: '🇹🇿' },
+        { id: 'tunisian', name: this._t('cuisines.tunisian'), icon: '🇹🇳' },
+        { id: 'egyptian', name: this._t('cuisines.egyptian'), icon: '🇪🇬' },
+        { id: 'east_african', name: this._t('cuisines.east_african'), icon: '🌄' },
+        { id: 'west_african', name: this._t('cuisines.west_african'), icon: '🥘' },
       ]},
-      { id: 'oceanian', name: 'Oceanian', icon: '🦘', cuisines: [
-        { id: 'australian', name: 'Australian', icon: '🇦🇺' },
-        { id: 'polynesian', name: 'Polynesian', icon: '🌺' },
+      { id: 'oceanian', name: this._t('cuisines.oceanian'), icon: '🦘', cuisines: [
+        { id: 'australian', name: this._t('cuisines.australian'), icon: '🇦🇺' },
+        { id: 'polynesian', name: this._t('cuisines.polynesian'), icon: '🌺' },
       ]},
     ];
 
@@ -16612,15 +17204,15 @@ class KitchenCookingPanel extends LitElement {
           this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
           this.requestUpdate();
         }}>
-          ← Back
+          ${this._t('nav.back')}
         </button>
-        <h2>🥘 Select Ingredients</h2>
+        <h2>${this._t('ai_recipe.select_ingredients_title')}</h2>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <h3>🌍 Cuisine / Region (optional, select for fusion)</h3>
-          <p class="info-text" style="margin-bottom: 12px;">Select a cuisine to see its typical ingredients. Pick from multiple regions for fusion cooking.</p>
+          <h3>${this._t('ai_recipe.cuisine_region_label')}</h3>
+          <p class="info-text" style="margin-bottom: 12px;">${this._t('ai_recipe.cuisine_region_hint')}</p>
           ${(this._aiSelectedCuisines || []).length > 0 ? html`
             <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
               ${(this._aiSelectedCuisines || []).map(c => {
@@ -16682,9 +17274,9 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <p class="info-text">Choose ingredients you have available (select at least 2):</p>
+          <p class="info-text">${this._t('ai_recipe.choose_ingredients_label')}</p>
           <p class="info-text" style="font-size: 0.85em; color: var(--secondary-text-color);">
-            Staples assumed available: ${(typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : []).join(', ')}
+            ${this._t('ai_recipe.staples_available')} ${(typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : []).join(', ')}
           </p>
           
           ${this._renderCategorizedIngredients(displayIngredients)}
@@ -16692,7 +17284,7 @@ class KitchenCookingPanel extends LitElement {
           <div class="ingredient-custom">
             <input 
               type="text" 
-              placeholder="Add custom ingredient..." 
+              placeholder="${this._t('ai_recipe.add_custom_placeholder')}" 
               @keypress=${(e) => {
                 if (e.key === 'Enter' && e.target.value.trim()) {
                   this._addCustomIngredient(e.target.value.trim());
@@ -16703,7 +17295,7 @@ class KitchenCookingPanel extends LitElement {
           </div>
 
           <div class="selected-ingredients">
-            <h4>Selected Ingredients (${this._selectedIngredients.length}):</h4>
+            <h4>${this._t('ai_recipe.selected_ingredients_label')} (${this._selectedIngredients.length}):</h4>
             <div class="ingredient-tags">
               ${this._selectedIngredients.map(ing => html`
                 <span class="ingredient-tag">
@@ -16719,7 +17311,7 @@ class KitchenCookingPanel extends LitElement {
             ?disabled=${this._selectedIngredients.length < 2}
             @click=${() => this._proceedToCookingStyle()}
           >
-            Next: Choose Cooking Style
+            ${this._t('ai_recipe.next_cooking_style')}
           </button>
         </div>
       </ha-card>
@@ -16843,11 +17435,11 @@ class KitchenCookingPanel extends LitElement {
     // Data should already be loaded by _startAIRecipeCreation()
     // If not loaded, show loading state
     if (!this._cookingStyles) {
-      return html`<div class="loading">Loading cooking styles...</div>`;
+      return html`<div class="loading">${this._t('ai_recipe.loading_styles')}</div>`;
     }
 
     // Complexity labels
-    const complexityLabels = ['Very Simple', 'Simple', 'Medium', 'Complex', 'Chef Level'];
+    const complexityLabels = [this._t('ai_recipe.very_simple'), this._t('ai_recipe.simple'), this._t('ai_recipe.medium'), this._t('ai_recipe.complex_level'), this._t('ai_recipe.chef_level')];
 
     return html`
       <div class="path-header">
@@ -16856,14 +17448,14 @@ class KitchenCookingPanel extends LitElement {
           this._showAIIngredientSelector = true;
           this.requestUpdate();
         }}>
-          ← Back to Ingredients
+          ← ${this._t('nav.back_to_ingredients')}
         </button>
-        <h2>🍳 Choose Cooking Style</h2>
+        <h2>${this._t('ai_recipe.choose_style_title')}</h2>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <p class="info-text">Select your preferred cooking style:</p>
+          <p class="info-text">${this._t('ai_recipe.select_style_hint')}</p>
           
           <div class="style-grid">
             ${(this._cookingStyles || []).map(style => html`
@@ -16913,11 +17505,11 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>⚙️ Settings</h3>
+          <h3>${this._t('ai_recipe.settings_heading')}</h3>
 
           <div style="margin-bottom: 16px;">
             <label style="display: block; font-weight: bold; margin-bottom: 8px;">
-              📊 Complexity: ${complexityLabels[this._aiComplexity - 1] || 'Medium'}
+              ${this._t('ai_recipe.complexity_label')} ${complexityLabels[this._aiComplexity - 1] || this._t('ai_recipe.medium')}
             </label>
             <input type="range" min="1" max="5" step="1"
               .value=${String(this._aiComplexity)}
@@ -16925,13 +17517,13 @@ class KitchenCookingPanel extends LitElement {
               style="width: 100%;"
             />
             <div style="display: flex; justify-content: space-between; font-size: 0.8em; color: var(--secondary-text-color);">
-              <span>Simple</span><span>Chef Level</span>
+              <span>${this._t('ai_recipe.simple')}</span><span>${this._t('ai_recipe.chef_level')}</span>
             </div>
           </div>
 
           <div style="margin-bottom: 16px;">
             <label style="display: block; font-weight: bold; margin-bottom: 8px;">
-              🍽️ Portions: ${this._aiPortions}
+              ${this._t('ai_recipe.portions_label')} ${this._aiPortions}
             </label>
             <input type="range" min="1" max="8" step="1"
               .value=${String(this._aiPortions)}
@@ -16945,7 +17537,7 @@ class KitchenCookingPanel extends LitElement {
 
           <div style="margin-bottom: 16px;">
             <label style="display: block; font-weight: bold; margin-bottom: 8px;">
-              ⏱️ Max time: ${this._formatMaxTime(this._aiMaxTime)}
+              ${this._t('ai_recipe.max_time_label')} ${this._formatMaxTime(this._aiMaxTime)}
             </label>
             <input type="range" min="0" max="240" step="15"
               .value=${String(this._aiMaxTime)}
@@ -16953,7 +17545,7 @@ class KitchenCookingPanel extends LitElement {
               style="width: 100%;"
             />
             <div style="display: flex; justify-content: space-between; font-size: 0.8em; color: var(--secondary-text-color);">
-              <span>No limit</span><span>1h</span><span>2h</span><span>3h</span><span>4h</span>
+              <span>${this._t('ai_recipe.no_limit')}</span><span>1h</span><span>2h</span><span>3h</span><span>4h</span>
             </div>
           </div>
         </div>
@@ -16965,7 +17557,7 @@ class KitchenCookingPanel extends LitElement {
           ?disabled=${!this._selectedCookingStyle}
           @click=${() => this._generateAIRecipes()}
         >
-          Generate Recipes 🤖
+          ${this._t('ai_recipe.generate_btn')}
         </button>
       </div>
     `;
@@ -16983,24 +17575,24 @@ class KitchenCookingPanel extends LitElement {
           this._aiRecipeSuggestions = [];
           this.requestUpdate();
         }}>
-          ← Back to Cooking Style
+          ← ${this._t('nav.back_to_cooking_style')}
         </button>
-        <h2>🤖 AI Recipe Suggestions</h2>
+        <h2>${this._t('ai_recipe.suggestions_title')}</h2>
       </div>
 
       ${this._aiRecipeSuggestions.length === 0 ? html`
         <ha-card>
           <div class="card-content loading-state ai-generation-loading">
             <ha-circular-progress active></ha-circular-progress>
-            <p class="ai-status-primary">${this._aiGenerationStatus || '🤖 Connecting to AI agent...'}</p>
+            <p class="ai-status-primary">${this._aiGenerationStatus || this._t('ai_recipe.connecting')}</p>
             ${this._aiGenerationElapsed > 0 ? html`
               <p class="ai-status-elapsed">${this._aiGenerationElapsed}s elapsed</p>
             ` : ''}
             ${this._aiGenerationStatus && (this._aiGenerationStatus.includes('overloaded') || this._aiGenerationStatus.includes('Retrying') || this._aiGenerationStatus.includes('waiting')) ? html`
-              <p class="ai-status-hint">The AI service is busy. Your request is being retried automatically.</p>
+              <p class="ai-status-hint">${this._t('ai_recipe.ai_busy_hint')}</p>
             ` : ''}
             ${this._aiGenerationStatus && this._aiGenerationStatus.includes('backup') ? html`
-              <p class="ai-status-hint">Switching to backup AI agent — hang on!</p>
+              <p class="ai-status-hint">${this._t('ai_recipe.switching_backup')}</p>
             ` : ''}
           </div>
         </ha-card>
@@ -17015,27 +17607,27 @@ class KitchenCookingPanel extends LitElement {
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
                   <h3 style="margin: 0; flex: 1;">${displayName}</h3>
                   ${recipe.recipe_origin === 'known' ? html`
-                    <span style="background: #2e7d32; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">📖 Classic</span>
+                    <span style="background: #2e7d32; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">${this._t('ai_recipe.classic_badge')}</span>
                   ` : html`
-                    <span style="background: #1565c0; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">🤖 Original</span>
+                    <span style="background: #1565c0; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">${this._t('ai_recipe.original_badge')}</span>
                   `}
                 </div>
                 <p class="recipe-description">${recipe.description || ''}</p>
                 
                 <div class="recipe-details">
                   <div class="detail-item">
-                    <strong>🍳 Cook Time:</strong> ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' min' : 'N/A'}
+                    <strong>${this._t('ai_recipe.cook_time_label')}</strong> ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' ' + this._t('common.minutes_short') : this._t('common.na')}
                   </div>
                   <div class="detail-item">
-                    <strong>🍽️ Servings:</strong> ${recipe.servings || '4'}
+                    <strong>${this._t('ai_recipe.servings_label')}</strong> ${recipe.servings || '4'}
                   </div>
                   <div class="detail-item">
-                    <strong>📊 Difficulty:</strong> ${recipe.difficulty || 'N/A'}
+                    <strong>${this._t('ai_recipe.difficulty_label')}</strong> ${recipe.difficulty || this._t('common.na')}
                   </div>
                 </div>
 
                 <div class="recipe-ingredients">
-                  <h4>Key Ingredients:</h4>
+                  <h4>${this._t('ai_recipe.key_ingredients')}</h4>
                   <ul>
                     ${(recipe.main_ingredients || recipe.ingredients || []).map(ing => html`<li>${ing}</li>`)}
                   </ul>
@@ -17045,7 +17637,7 @@ class KitchenCookingPanel extends LitElement {
                   class="primary-btn"
                   @click=${() => this._startCookingFromAIRecipe(recipe)}
                 >
-                  Start Cooking This Recipe
+                  ${this._t('ai_recipe.start_cooking_recipe')}
                 </button>
               </div>
             </ha-card>
@@ -17057,7 +17649,7 @@ class KitchenCookingPanel extends LitElement {
             class="secondary-btn"
             @click=${() => this._generateAIRecipes()}
           >
-            🔄 Generate Different Recipes
+            ${this._t('ai_recipe.generate_different')}
           </button>
         </div>
       `}
@@ -17082,15 +17674,15 @@ class KitchenCookingPanel extends LitElement {
           this._currentPath = 'ai_recipe_builder';
           this.requestUpdate();
         }}>
-          ← Back to AI Recipe Builder
+          ${this._t('nav.back_to_ai_builder')}
         </button>
-        <h2>📋 Recent ${this._selectedAppliance?.name || 'Appliance'} Recipes</h2>
+        <h2>📋 ${this._t('ai_recipe.recent_recipes_title')} - ${this._selectedAppliance?.name || ''}</h2>
       </div>
 
       ${applianceCooks.length === 0 ? html`
         <ha-card>
           <div class="card-content">
-            <p>No cooking history for this appliance yet. Create your first AI recipe!</p>
+            <p>${this._t('ai_recipe.no_history_appliance')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -17113,9 +17705,9 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ← Back to Appliances
+          ${this._t('nav.back_to_appliances')}
         </button>
-        <h2>📋 Previous Cooks</h2>
+        <h2>${this._t('history.previous_cooks_title')}</h2>
       </div>
       ${this._renderHistory()}
     `;
@@ -17131,9 +17723,9 @@ class KitchenCookingPanel extends LitElement {
           this._selectedCookForDetail = null;
           this.requestUpdate();
         }}>
-          ← Back to List
+          ${this._t('nav.back_to_list')}
         </button>
-        <h2>${cook.cut_display || cook.cut || cook.recipe_name || 'Cook Details'}</h2>
+        <h2>${cook.cut_display || cook.cut || cook.recipe_name || this._t('history.cook_details_title')}</h2>
       </div>
 
       <ha-card>
@@ -17141,45 +17733,45 @@ class KitchenCookingPanel extends LitElement {
           <div class="detail-header">
             <h3>${cook.cut_display || cook.cut || cook.recipe_name}</h3>
             <p class="detail-meta">
-              ${cook.appliance_name || 'Unknown Appliance'} • 
+              ${cook.appliance_name || this._t('history.unknown_appliance')} • 
               ${this._formatDateTime(cook.completed_at)}
             </p>
           </div>
 
           ${cook.duration ? html`
             <div class="detail-section">
-              <strong>⏱️ Duration:</strong> ${this._formatDuration(cook.duration)}
+              <strong>${this._t('history.duration_label')}</strong> ${this._formatDuration(cook.duration)}
             </div>
           ` : ''}
 
           ${cook.protein ? html`
             <div class="detail-section">
-              <strong>🥩 Protein:</strong> ${cook.protein}
-              ${cook.doneness ? html` • <strong>Doneness:</strong> ${(cook.doneness || '').replace('_', ' ')}` : ''}
+              <strong>${this._t('history.protein_label')}</strong> ${cook.protein}
+              ${cook.doneness ? html` • <strong>${this._t('history.doneness_colon')}</strong> ${(cook.doneness || '').replace('_', ' ')}` : ''}
             </div>
           ` : ''}
 
           ${cook.target_temp_c || cook.peak_temp_c || cook.final_temp ? html`
             <div class="detail-section">
-              <strong>🌡️ Temperature Data:</strong>
+              <strong>${this._t('history.temp_data_label')}</strong>
               <div class="temp-data">
-                ${cook.target_temp_c ? html`<p>Target: ${cook.target_temp_c}°C</p>` : ''}
-                ${cook.peak_temp_c ? html`<p>Peak: ${Math.round(cook.peak_temp_c)}°C</p>` : ''}
-                ${cook.final_temp_after_rest ? html`<p>After Rest: ${Math.round(cook.final_temp_after_rest)}°C</p>` : 
-                  cook.final_temp ? html`<p>Final: ${cook.final_temp}°C</p>` : ''}
+                ${cook.target_temp_c ? html`<p>${this._t('history.target_label')} ${cook.target_temp_c}°C</p>` : ''}
+                ${cook.peak_temp_c ? html`<p>${this._t('history.peak_label')} ${Math.round(cook.peak_temp_c)}°C</p>` : ''}
+                ${cook.final_temp_after_rest ? html`<p>${this._t('history.after_rest_label')} ${Math.round(cook.final_temp_after_rest)}°C</p>` : 
+                  cook.final_temp ? html`<p>${this._t('history.final_label')} ${cook.final_temp}°C</p>` : ''}
               </div>
             </div>
           ` : ''}
 
           ${cook.cooking_method ? html`
             <div class="detail-section">
-              <strong>🍳 Cooking Method:</strong> ${(cook.cooking_method || '').replace(/_/g, ' ')}
+              <strong>${this._t('history.cooking_method_label')}</strong> ${(cook.cooking_method || '').replace(/_/g, ' ')}
             </div>
           ` : ''}
 
           ${cook.ingredients && cook.ingredients.length > 0 ? html`
             <div class="detail-section">
-              <strong>📝 Ingredients:</strong>
+              <strong>${this._t('history.ingredients_label')}</strong>
               <ul class="ingredients-list">
                 ${cook.ingredients.map(ing => html`<li>${ing}</li>`)}
               </ul>
@@ -17188,7 +17780,7 @@ class KitchenCookingPanel extends LitElement {
 
           ${cook.timeline && cook.timeline.length > 0 ? html`
             <div class="detail-section">
-              <strong>📅 Cook Timeline:</strong>
+              <strong>${this._t('history.timeline_label')}</strong>
               <div class="timeline">
                 ${cook.timeline.map(event => html`
                   <div class="timeline-event">
@@ -17202,36 +17794,36 @@ class KitchenCookingPanel extends LitElement {
 
           ${cook.ease_rating || cook.result_rating ? html`
             <div class="detail-section">
-              <strong>⭐ Ratings:</strong>
+              <strong>${this._t('history.ratings_label')}</strong>
               ${cook.ease_rating ? html`
-                <p>Ease: ${'⭐'.repeat(cook.ease_rating)}${'☆'.repeat(5 - cook.ease_rating)}</p>
+                <p>${this._t('history.ease_label')} ${'⭐'.repeat(cook.ease_rating)}${'☆'.repeat(5 - cook.ease_rating)}</p>
               ` : ''}
               ${cook.result_rating ? html`
-                <p>Result: ${'⭐'.repeat(cook.result_rating)}${'☆'.repeat(5 - cook.result_rating)}</p>
+                <p>${this._t('history.result_label')} ${'⭐'.repeat(cook.result_rating)}${'☆'.repeat(5 - cook.result_rating)}</p>
               ` : ''}
             </div>
           ` : ''}
 
           ${cook.notes ? html`
             <div class="detail-section">
-              <strong>📝 Notes:</strong>
+              <strong>${this._t('history.notes_label')}</strong>
               <p class="cook-notes">${cook.notes}</p>
             </div>
           ` : ''}
 
           <div class="detail-actions">
             <button class="primary-btn" @click=${() => this._restartCook(cook)}>
-              🔄 Restart This Cook
+              ${this._t('history.restart_cook')}
             </button>
             <button class="small-btn" @click=${() => {
-              const notes = prompt('Update notes:', cook.notes || '');
+              const notes = prompt(this._t('history.update_notes_prompt'), cook.notes || '');
               if (notes !== null) {
                 this._updateCookNotes(cook.id, notes);
                 // Update the displayed cook
                 cook.notes = notes;
                 this.requestUpdate();
               }
-            }}>✏️ Edit Notes</button>
+            }}>${this._t('history.edit_notes')}</button>
           </div>
         </div>
       </ha-card>
@@ -18230,12 +18822,12 @@ class KitchenCookingPanel extends LitElement {
     
     return html`
       <div class="recipe-cook-finish">
-        <h3>🎉 Cook Complete!</h3>
-        <p>How did it go? Please rate your experience:</p>
+        <h3>${this._t('rating.cook_complete')}</h3>
+        <p>${this._t('rating.how_did_it_go')}</p>
 
         <div class="recipe-cook-rating">
-          <h4>😊 Ease of Cooking</h4>
-          <p class="rating-description">How easy was this recipe to follow?</p>
+          <h4>${this._t('rating.ease_title')}</h4>
+          <p class="rating-description">${this._t('rating.ease_recipe_desc')}</p>
           <div class="star-selector">
             ${[1, 2, 3, 4, 5].map(rating => html`
               <button 
@@ -18252,8 +18844,8 @@ class KitchenCookingPanel extends LitElement {
         </div>
 
         <div class="recipe-cook-rating">
-          <h4>😋 Result Quality</h4>
-          <p class="rating-description">How did the final dish turn out?</p>
+          <h4>${this._t('rating.result_title')}</h4>
+          <p class="rating-description">${this._t('rating.result_recipe_desc')}</p>
           <div class="star-selector">
             ${[1, 2, 3, 4, 5].map(rating => html`
               <button 
@@ -18270,9 +18862,9 @@ class KitchenCookingPanel extends LitElement {
         </div>
 
         <div class="recipe-cook-notes">
-          <h4>📝 Notes (Optional)</h4>
+          <h4>${this._t('rating.notes_title')}</h4>
           <textarea
-            placeholder="Any notes, modifications, or thoughts about this cook..."
+            placeholder="${this._t('rating.notes_placeholder')}"
             .value=${state.notes || ''}
             @input=${(e) => {
               this._recipeCookState.notes = e.target.value;
@@ -18282,7 +18874,7 @@ class KitchenCookingPanel extends LitElement {
         </div>
 
         ${!state.easeRating || !state.resultRating ? html`
-          <p class="rating-required">⚠️ Please provide both ratings to save this cook</p>
+          <p class="rating-required">${this._t('rating.both_required')}</p>
         ` : ''}
       </div>
     `;
@@ -18514,14 +19106,14 @@ class KitchenCookingPanel extends LitElement {
   _renderHistory() {
     return html`
       <div class="status-banner idle">
-        <h2>📜 Cook History</h2>
-        <p>Your past cooking sessions</p>
+        <h2>${this._t('history.cook_history_title')}</h2>
+        <p>${this._t('history.cook_history_subtitle')}</p>
       </div>
       
       ${this._cookHistory.length === 0 ? html`
         <ha-card>
           <div class="card-content">
-            <p class="no-history">No cooks recorded yet. Complete a cooking session to see it here!</p>
+            <p class="no-history">${this._t('history.no_cooks_message')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -18539,10 +19131,10 @@ class KitchenCookingPanel extends LitElement {
                 <span class="history-detail">🥩 ${cook.protein}</span>
                 <span class="history-detail">🎯 ${(cook.doneness || '').replace('_', ' ')}</span>
                 <span class="history-detail">🍳 ${(cook.cooking_method || '').replace(/_/g, ' ')}</span>
-                <span class="history-detail">🌡️ ${cook.target_temp_c}°C target</span>
-                ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C peak</span>` : ''}
-                ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C after rest</span>` : 
-                  cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C final</span>` : ''}
+                <span class="history-detail">🌡️ ${cook.target_temp_c}°C ${this._t('meater.target_label')}</span>
+                ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C ${this._t('meater.peak_label')}</span>` : ''}
+                ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C ${this._t('meater.after_rest_label')}</span>` : 
+                  cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C ${this._t('meater.final_label')}</span>` : ''}
               </div>
               ${cook.notes ? html`
                 <div class="history-notes">
@@ -18551,10 +19143,10 @@ class KitchenCookingPanel extends LitElement {
               ` : ''}
               <div class="history-actions" @click=${(e) => e.stopPropagation()}>
                 <button class="small-btn" @click=${() => {
-                  const notes = prompt('Update notes:', cook.notes || '');
+                  const notes = prompt(this._t('history.update_notes_prompt'), cook.notes || '');
                   if (notes !== null) this._updateCookNotes(cook.id, notes);
-                }}>✏️ Edit Notes</button>
-                <button class="small-btn danger" @click=${() => this._deleteCook(cook.id)}>🗑️ Delete</button>
+                }}>${this._t('history.edit_notes')}</button>
+                <button class="small-btn danger" @click=${() => this._deleteCook(cook.id)}>${this._t('history.delete_btn')}</button>
               </div>
             </div>
           </ha-card>
@@ -18643,13 +19235,13 @@ class KitchenCookingPanel extends LitElement {
       <ha-card>
         <div class="card-content">
           <div class="recipe-cook-finish">
-            <h3>🎉 Cook Complete!</h3>
+            <h3>${this._t('rating.cook_complete')}</h3>
             <p>${state.cut} ${state.doneness ? '• ' + state.doneness.replace('_', ' ') : ''}</p>
-            <p>How did it go? Please rate your experience:</p>
+            <p>${this._t('rating.how_did_it_go')}</p>
 
             <div class="recipe-cook-rating">
-              <h4>😊 Ease of Cooking</h4>
-              <p class="rating-description">How easy was this cook?</p>
+              <h4>${this._t('rating.ease_title')}</h4>
+              <p class="rating-description">${this._t('rating.ease_cook_desc')}</p>
               <div class="star-selector">
                 ${[1, 2, 3, 4, 5].map(rating => html`
                   <button 
@@ -18665,8 +19257,8 @@ class KitchenCookingPanel extends LitElement {
             </div>
 
             <div class="recipe-cook-rating">
-              <h4>😋 Result Quality</h4>
-              <p class="rating-description">How did the final result turn out?</p>
+              <h4>${this._t('rating.result_title')}</h4>
+              <p class="rating-description">${this._t('rating.result_cook_desc')}</p>
               <div class="star-selector">
                 ${[1, 2, 3, 4, 5].map(rating => html`
                   <button 
@@ -18682,9 +19274,9 @@ class KitchenCookingPanel extends LitElement {
             </div>
 
             <div class="recipe-cook-notes">
-              <h4>📝 Notes (Optional)</h4>
+              <h4>${this._t('rating.notes_title')}</h4>
               <textarea
-                placeholder="Any notes, modifications, or thoughts about this cook..."
+                placeholder="${this._t('rating.notes_placeholder')}"
                 .value=${state.notes || ''}
                 @input=${(e) => {
                   this._meaterCookRatingState = { ...this._meaterCookRatingState, notes: e.target.value };
@@ -18694,7 +19286,7 @@ class KitchenCookingPanel extends LitElement {
             </div>
 
             ${!state.easeRating || !state.resultRating ? html`
-              <p class="rating-required">⚠️ Please provide both ratings to save this cook</p>
+              <p class="rating-required">${this._t('rating.both_required')}</p>
             ` : ''}
 
             <div class="action-buttons" style="margin-top: 16px;">
@@ -18703,10 +19295,10 @@ class KitchenCookingPanel extends LitElement {
                 ?disabled=${!state.easeRating || !state.resultRating}
                 @click=${() => this._saveMeaterCookRating()}
               >
-                💾 Save & Complete
+                ${this._t('rating.save_complete')}
               </ha-button>
               <ha-button outlined @click=${() => this._skipMeaterCookRating()}>
-                ⏭️ Skip Rating
+                ${this._t('rating.skip')}
               </ha-button>
             </div>
           </div>
@@ -21379,7 +21971,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "240";
+const PANEL_VERSION = "241";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
