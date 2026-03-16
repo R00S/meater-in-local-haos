@@ -1016,6 +1016,14 @@ of your response must be '{{' and the very last must be '}}'.
         primary_agent_id = ai_settings.get("agent_id", "extended_openai_conversation_2")
         backup_agent_id = ai_settings.get("backup_agent_id", "").strip()
 
+        # Pre-import intent helper for response_type checking (avoids repeated
+        # imports inside the hot retry loop).
+        try:
+            from homeassistant.helpers import intent as intent_helper
+            _IntentResponseTypeERROR = intent_helper.IntentResponseType.ERROR
+        except Exception:
+            _IntentResponseTypeERROR = None
+
         _LOGGER.info("Using configured AI agent: %s", primary_agent_id)
         if backup_agent_id:
             _LOGGER.info("Backup AI agent configured: %s", backup_agent_id)
@@ -1089,6 +1097,9 @@ of your response must be '{{' and the very last must be '}}'.
                             agent_id, timeout_count,
                         )
                         break  # exit inner retry loop → try backup agent
+                    # Backoff is capped at 10s (not 30s like other transient errors)
+                    # because we're already burning ~30s per timeout and need to
+                    # stay within the ~100s HTTP proxy timeout window.
                     wait = min(2 ** attempt, 10) + random.uniform(0, 2)
                     self._set_status(
                         f"⏱️ AI agent timed out — waiting {wait:.0f}s before retry "
@@ -1135,13 +1146,10 @@ of your response must be '{{' and the very last must be '}}'.
                 # HA's conversation component may return a result with
                 # response_type == ERROR instead of raising an exception.
                 # Detect this early so we can retry / fall back properly.
-                try:
-                    from homeassistant.helpers import intent as intent_helper
-                    is_error_response = (
-                        result.response.response_type == intent_helper.IntentResponseType.ERROR
-                    )
-                except Exception:
-                    is_error_response = False
+                is_error_response = (
+                    _IntentResponseTypeERROR is not None
+                    and result.response.response_type == _IntentResponseTypeERROR
+                )
 
                 if is_error_response:
                     error_speech = response_text or "(no details)"
