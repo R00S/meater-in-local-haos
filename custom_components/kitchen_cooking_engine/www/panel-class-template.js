@@ -5362,6 +5362,9 @@ class KitchenCookingPanel extends LitElement {
       } else {
         const msg = (response && response.message) ? response.message : 'No recipes generated. Please try different ingredients or styles.';
         this._showMessage('⚠️ Recipe Generation', msg);
+        // Go back to style selection so the user isn't stuck on a loading spinner.
+        this._showAIRecipeSuggestions = false;
+        this._showAIStyleSelector = true;
       }
     } catch (error) {
       console.error('Error generating AI recipes:', error);
@@ -5419,6 +5422,18 @@ class KitchenCookingPanel extends LitElement {
     let cancelled = false;
     
     // Fetch full recipe detail (instructions, ingredients, tips) from backend
+    // Poll the backend status endpoint so the user sees live retry progress
+    // in the loading dialog (same status messages _call_openai sets).
+    const detailStatusTimer = setInterval(async () => {
+      try {
+        const res = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/status');
+        if (res && res.message) {
+          this._messageDialogContent = `Generating full recipe details with AI...\n${res.message}`;
+          this.requestUpdate();
+        }
+      } catch (_) { /* ignore polling errors */ }
+    }, 1000);
+
     try {
       // Show cancelable loading dialog
       this._messageDialogTitle = '⏳ Loading Recipe';
@@ -5462,9 +5477,19 @@ class KitchenCookingPanel extends LitElement {
         fullRecipe.target_temp_c = detail.target_temp_c;
         fullRecipe.target_temp_f = detail.target_temp_f;
       } else {
-        // API returned but without detail — use main_ingredients as fallback
+        // API returned an error or empty detail — show the error message
+        const msg = (response && response.message) ? response.message : 'Failed to get recipe detail';
+        console.error('AI recipe detail error:', msg);
         fullRecipe.ingredients = fullRecipe.main_ingredients || [];
         fullRecipe.instructions = [];
+        // Brief non-blocking error notice
+        this._messageDialogOnCancel = null;
+        this._messageDialogTitle = '⚠️ Partial Recipe';
+        this._messageDialogContent = `Could not load full recipe details from AI.\n${msg}\nYou can still see the ingredients overview and finish the cook.`;
+        this._messageDialogIsError = false;
+        this._showMessageDialog = true;
+        this.requestUpdate();
+        setTimeout(() => { this._showMessageDialog = false; this.requestUpdate(); }, 4000);
       }
     } catch (error) {
       if (cancelled) return; // User cancelled
@@ -5481,6 +5506,8 @@ class KitchenCookingPanel extends LitElement {
       this.requestUpdate();
       // Auto-dismiss after 3 seconds
       setTimeout(() => { this._showMessageDialog = false; this.requestUpdate(); }, 3000);
+    } finally {
+      clearInterval(detailStatusTimer);
     }
 
     // Dismiss the loading dialog

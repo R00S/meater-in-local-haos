@@ -385,7 +385,9 @@ class AIRecipeBuilder:
         
         # Call OpenAI
         try:
+            self._set_status("")  # clear any stale status from a previous call
             response = await self._call_openai(prompt)
+            self._set_status("✅ Recipe details received — processing...")
             detail = self._parse_recipe_detail(response, suggestion)
             
             # Cache the detail
@@ -864,6 +866,8 @@ of your response must be '{{' and the very last must be '}}'.
     _TRANSIENT_ERROR_INDICATORS: tuple = (
         "503",
         "429",
+        "522",
+        "524",
         "unavailable",
         "high demand",
         "try again later",
@@ -876,6 +880,8 @@ of your response must be '{{' and the very last must be '}}'.
         "capacity",
         "resource_exhausted",
         "resourceexhausted",
+        "timeout",
+        "timed out",
     )
 
     @classmethod
@@ -980,11 +986,14 @@ of your response must be '{{' and the very last must be '}}'.
     async def _call_openai(self, prompt: str) -> str:
         """Call the AI agent via Home Assistant conversation integration.
 
-        Retries automatically on transient service errors (503 / 429 / overloaded)
-        using exponential backoff with jitter (up to ``_MAX_RETRIES`` attempts per
-        agent).  If the primary agent is still overloaded after all retries *and* a
-        backup agent is configured, the same retry loop is executed against the
-        backup agent before giving up entirely.
+        Retries automatically on transient service errors (503 / 429 / 524 /
+        overloaded / timeout) using exponential backoff with jitter (up to
+        ``_MAX_RETRIES`` attempts per agent).  If the primary agent fails after
+        all retries *and* a backup agent is configured, the same retry loop is
+        executed against the backup agent before giving up entirely.  Non-transient
+        errors on the primary agent also fall through to the backup agent (a
+        different provider may succeed even when the first one has a permanent
+        problem).
 
         Args:
             prompt: The prompt to send
@@ -1064,17 +1073,13 @@ of your response must be '{{' and the very last must be '}}'.
                         last_exception = ex
                         await asyncio.sleep(wait)
                         continue
-                    # Non-transient exception — fail immediately (no point retrying).
+                    # Non-transient exception — no point retrying the same agent,
+                    # but a backup agent (different provider) may still succeed.
                     _LOGGER.error(
                         "Failed to call conversation agent '%s': %s", agent_id, ex, exc_info=True
                     )
-                    raise RuntimeError(
-                        f"Failed to communicate with AI agent '{agent_id}'. "
-                        f"Error: {ex_str}. "
-                        f"Please verify: 1) AI agent is configured in Voice Assistants, "
-                        f"2) Your API key is valid, "
-                        f"3) Check Home Assistant logs for more details"
-                    )
+                    last_exception = ex
+                    break  # exit inner retry loop → try backup agent (if any)
 
                 response_text = result.response.speech.get("plain", {}).get("speech", "")
                 _LOGGER.debug(
@@ -1083,6 +1088,46 @@ of your response must be '{{' and the very last must be '}}'.
                     response_text[:500] if response_text else "(empty)",
                 )
 
+                # ── Check for intent-level errors ──────────────────────────
+                # HA's conversation component may return a result with
+                # response_type == ERROR instead of raising an exception.
+                # Detect this early so we can retry / fall back properly.
+                try:
+                    from homeassistant.helpers import intent as intent_helper
+                    is_error_response = (
+                        result.response.response_type == intent_helper.IntentResponseType.ERROR
+                    )
+                except Exception:
+                    is_error_response = False
+
+                if is_error_response:
+                    error_speech = response_text or "(no details)"
+                    if self._is_transient_error(error_speech):
+                        wait = min(2 ** attempt, 30) + random.uniform(0, 2)
+                        _LOGGER.warning(
+                            "AI agent '%s' returned ERROR response (transient) — "
+                            "retrying in %.1fs (attempt %d/%d): %s",
+                            agent_id, wait, attempt + 1, _MAX_RETRIES, error_speech[:200],
+                        )
+                        self._set_status(
+                            f"⚠️ AI agent error — waiting {wait:.0f}s before retry "
+                            f"(attempt {attempt + 1}/{_MAX_RETRIES} failed)..."
+                        )
+                        last_exception = RuntimeError(
+                            f"AI agent error response: {error_speech[:200]}"
+                        )
+                        await asyncio.sleep(wait)
+                        continue
+                    # Non-transient error response — try backup agent.
+                    _LOGGER.error(
+                        "AI agent '%s' returned ERROR response: %s",
+                        agent_id, error_speech[:500],
+                    )
+                    last_exception = RuntimeError(
+                        f"AI agent error response: {error_speech[:200]}"
+                    )
+                    break  # exit inner retry loop → try backup agent
+
                 if not response_text:
                     _LOGGER.error(
                         "Empty response from AI agent '%s'. "
@@ -1090,11 +1135,12 @@ of your response must be '{{' and the very last must be '}}'.
                         "Check the agent's configuration and API key.",
                         agent_id,
                     )
-                    raise ValueError(
+                    last_exception = ValueError(
                         f"Empty response from AI agent '{agent_id}'. "
                         f"The agent is connected but returned no text. "
                         f"Check the agent configuration and ensure it can generate text responses."
                     )
+                    break  # exit inner retry loop → try backup agent
 
                 # Check whether the response body itself signals a transient error
                 # (some providers return HTTP 200 with an error payload).
@@ -1129,13 +1175,15 @@ of your response must be '{{' and the very last must be '}}'.
 
         # Both primary (and backup, if configured) exhausted.
         agents_tried = " → ".join(agents_to_try)
+        err_detail = str(last_exception)[:200] if last_exception else "unknown"
         _LOGGER.error(
-            "All AI agents (%s) exhausted after %d retries. Last error: %s",
+            "All AI agents (%s) exhausted after %d retries each. Last error: %s",
             agents_tried, _MAX_RETRIES, last_exception,
         )
         raise RuntimeError(
-            f"All AI agents ({agents_tried}) are still overloaded after "
+            f"All AI agents ({agents_tried}) failed after "
             f"{_MAX_RETRIES} retries each. "
+            f"Last error: {err_detail}. "
             f"Please try again later."
         )
     

@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 16 Mar 2026, 12:53 UTC
-Last Change: v0.5.5.91 - Fix AI recipe error display: extract proper message from HA callApi error objects
+Last Change: v0.5.5.92 - Fix AI retry: recognize HTTP 524/522/timeout as transient, always try backup agent, check response_type for errors
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "226"
+PANEL_VERSION = "227"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
