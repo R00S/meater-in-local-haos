@@ -1386,26 +1386,26 @@ class KitchenCookingPanel extends LitElement {
             this._currentPath = 'ninja_built_in_recipes';
             this.requestUpdate();
           }}>
-            ← Back to Recipes
+            ${this._t('nav.back_to_recipes')}
           </button>
           <button class="action-btn" @click=${() => this._openRecipeInBuilder(recipe)}>
-            🛠️ Modify in Builder
+            ${this._t('ninja.modify_in_builder')}
           </button>
         </div>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <h3>📋 Recipe Details</h3>
+          <h3>${this._t('ninja.recipe_details')}</h3>
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 12px 0;">
             <div>
-              <strong>⏱️ Prep:</strong> ${recipe.prep_time_minutes} min
+              <strong>${this._t('ninja.prep_label')}</strong> ${recipe.prep_time_minutes} min
             </div>
             <div>
-              <strong>🔥 Cook:</strong> ${recipe.cook_time_minutes} min
+              <strong>${this._t('ninja.cook_label')}</strong> ${recipe.cook_time_minutes} min
             </div>
             <div>
-              <strong>🍽️ Servings:</strong> 
+              <strong>${this._t('ninja.servings_label')}</strong> 
               <input 
                 type="number" 
                 min="1" 
@@ -1415,12 +1415,12 @@ class KitchenCookingPanel extends LitElement {
                 style="width: 50px; padding: 4px; border: 1px solid var(--divider-color); border-radius: 4px; background: var(--primary-background-color); color: var(--primary-text-color);">
             </div>
             <div>
-              <strong>📊 Difficulty:</strong> ${recipe.difficulty}
+              <strong>${this._t('ninja.difficulty_label')}</strong> ${recipe.difficulty}
             </div>
           </div>
           ${recipe.use_probe ? html`
             <div style="margin-top: 12px; padding: 12px; background: rgba(76, 175, 80, 0.1); border-left: 3px solid #4caf50; border-radius: 0 4px 4px 0;">
-              <strong>🌡️ MEATER+ Probe:</strong> Target ${recipe.target_temp_c}°C (${recipe.target_temp_f}°F)
+              <strong>${this._t('ninja.meater_probe_label')}</strong> ${this._t('common.target')} ${recipe.target_temp_c}°C (${recipe.target_temp_f}°F)
             </div>
           ` : ''}
 
@@ -1429,7 +1429,7 @@ class KitchenCookingPanel extends LitElement {
             class="action-btn" 
             @click=${() => this._startRecipeCook(recipe, recipe._adjustedServings || recipe.servings)}
             style="width: 100%; margin-top: 16px; padding: 16px; font-size: 16px; background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);">
-            🍳 Start Cooking
+            ${this._t('ninja.start_cooking_btn')}
           </button>
         </div>
       </ha-card>
@@ -1437,13 +1437,13 @@ class KitchenCookingPanel extends LitElement {
       ${recipe.phases && recipe.phases.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🔄 Cooking Phases</h3>
+            <h3>${this._t('ninja.cooking_phases')}</h3>
             ${recipe.phases.map((phase, idx) => html`
               <div style="margin: 12px 0; padding: 12px; background: var(--primary-background-color); border-radius: 8px;">
-                <strong>Phase ${idx + 1}:</strong> ${phase.description}<br>
+                <strong>${this._t('ninja.phase')} ${idx + 1}:</strong> ${phase.description}<br>
                 🌡️ ${phase.temperature_c}°C (${phase.temperature_f}°F)<br>
-                ⏱️ ${phase.duration_minutes} minutes<br>
-                ${phase.steam_enabled ? '💨 Steam enabled' : ''}
+                ⏱️ ${phase.duration_minutes} ${this._t('common.minutes')}<br>
+                ${phase.steam_enabled ? this._t('ninja.steam_enabled') : ''}
               </div>
             `)}
           </div>
@@ -1452,7 +1452,7 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>🛒 Ingredients</h3>
+          <h3>${this._t('ninja.ingredients_label')}</h3>
           <ul style="margin: 0; padding-left: 20px;">
             ${(recipe._adjustedIngredients || recipe.ingredients).map(ing => html`<li>${ing}</li>`)}
           </ul>
@@ -1461,7 +1461,7 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>👨‍🍳 Instructions</h3>
+          <h3>${this._t('ninja.instructions_label')}</h3>
           <ol style="margin: 0; padding-left: 20px;">
             ${recipe.instructions.map(step => html`<li style="margin-bottom: 8px;">${step}</li>`)}
           </ol>
@@ -1471,7 +1471,7 @@ class KitchenCookingPanel extends LitElement {
       ${recipe.tips && recipe.tips.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>💡 Tips</h3>
+            <h3>${this._t('ninja.tips_label')}</h3>
             <ul style="margin: 0; padding-left: 20px;">
               ${recipe.tips.map(tip => html`<li style="margin-bottom: 6px;">${tip}</li>`)}
             </ul>
@@ -1482,7 +1482,7 @@ class KitchenCookingPanel extends LitElement {
       ${recipe.notes ? html`
         <ha-card>
           <div class="card-content">
-            <h3>📝 Notes</h3>
+            <h3>${this._t('ninja.notes_label')}</h3>
             <p>${recipe.notes}</p>
           </div>
         </ha-card>
@@ -3760,7 +3760,7 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ← Back to Appliances
+          ${this._t('nav.back_to_appliances')}
         </button>
         <h2>🥘 ${this._selectedAppliance?.name || 'Ninja Combi Cooking'}</h2>
       </div>
@@ -3769,32 +3769,32 @@ class KitchenCookingPanel extends LitElement {
         <ha-card class="path-card clickable" @click=${() => this._startNinjaRecipeBuilder()}>
           <div class="card-content path-card-content">
             <div class="path-icon">🎨</div>
-            <h3>Recipe Builder</h3>
-            <p>Create custom recipes with Ninja Combi modes</p>
+            <h3>${this._t('ninja.recipe_builder')}</h3>
+            <p>${this._t('ninja.recipe_builder_desc')}</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._showNinjaBuiltInRecipes()}>
           <div class="card-content path-card-content">
             <div class="path-icon">📖</div>
-            <h3>Built-in Recipes</h3>
-            <p>Browse pre-configured Ninja Combi recipes</p>
+            <h3>${this._t('ninja.built_in_recipes')}</h3>
+            <p>${this._t('ninja.built_in_recipes_desc')}</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._startAIWithNinjaCombi()}>
           <div class="card-content path-card-content">
             <div class="path-icon">🤖</div>
-            <h3>AI Recipe with Ninja Combi</h3>
-            <p>Generate AI recipes using your Ninja Combi</p>
+            <h3>${this._t('ninja.ai_recipe_title')}</h3>
+            <p>${this._t('ninja.ai_recipe_desc')}</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._showRecentNinjaCooks()}>
           <div class="card-content path-card-content">
             <div class="path-icon">📋</div>
-            <h3>Recent Ninja Combi Cooks</h3>
-            <p>View and restart previous Ninja Combi recipes</p>
+            <h3>${this._t('ninja.recent_cooks')}</h3>
+            <p>${this._t('ninja.recent_cooks_desc')}</p>
           </div>
         </ha-card>
       </div>
@@ -3940,21 +3940,21 @@ class KitchenCookingPanel extends LitElement {
 
     return html`
       <div class="status-banner idle">
-        <h2>🛠️ Recipe Builder</h2>
-        <p>Build custom Combi-Meal recipes with automatic parameter adjustment</p>
+        <h2>${this._t('ninja.builder_heading')}</h2>
+        <p>${this._t('ninja.builder_desc')}</p>
         <div style="display: flex; gap: 8px; margin-top: 12px;">
           <button class="history-btn" @click=${() => { this._currentPath = 'ninja_combi'; this._resetBuilder(); }}>
-            ← Back to Ninja Combi
+            ${this._t('nav.back_to_ninja_combi')}
           </button>
           <button class="history-btn" @click=${() => { this._currentPath = 'ninja_built_in_recipes'; this.requestUpdate(); }}>
-            📖 All Recipes
+            ${this._t('ninja.all_recipes_btn')}
           </button>
         </div>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <h3>1️⃣ Select Base (Required)</h3>
+          <h3>${this._t('ninja.select_base')}</h3>
           <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px;">
             ${Object.entries(bases).map(([key, base]) => html`
               <button 
@@ -3974,7 +3974,7 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>2️⃣ Select Protein (Required)</h3>
+          <h3>${this._t('ninja.select_protein_builder')}</h3>
           <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px;">
             ${Object.entries(proteins).map(([key, protein]) => html`
               <button 
@@ -3994,9 +3994,9 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>3️⃣ Add Vegetables (Optional)</h3>
+          <h3>${this._t('ninja.add_vegetables')}</h3>
           <p style="font-size: 12px; color: var(--secondary-text-color); margin-bottom: 8px;">
-            💡 Tender veggies cook with base, crispy veggies cook with protein
+            ${this._t('ninja.veggie_hint')}
           </p>
           <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
             ${veggies.map(veggie => {
@@ -4009,7 +4009,7 @@ class KitchenCookingPanel extends LitElement {
                   <div style="font-size: 20px; margin-bottom: 4px;">${veggie.icon}</div>
                   <div style="font-size: 13px; font-weight: 500;">${veggie.name}</div>
                   <div style="font-size: 11px; color: var(--secondary-text-color); margin-top: 2px;">
-                    ${veggie.type === 'tender' ? '🥘 With base' : '🔥 With protein'}
+                    ${veggie.type === 'tender' ? this._t('ninja.with_base') : this._t('ninja.with_protein')}
                   </div>
                 </button>
               `;
@@ -4020,7 +4020,7 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>4️⃣ MEATER+ Probe</h3>
+          <h3>${this._t('ninja.meater_probe_section')}</h3>
           <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
             <input 
               type="checkbox" 
@@ -4028,7 +4028,7 @@ class KitchenCookingPanel extends LitElement {
               @change=${(e) => { this._builderUseMeater = e.target.checked; this.requestUpdate(); }}
               style="width: 18px; height: 18px; cursor: pointer;">
             <span style="font-size: 14px;">
-              🌡️ Use MEATER+ probe for temperature monitoring
+              ${this._t('ninja.use_meater_probe')}
               ${this._builderUseMeater && selectedProtein ? html`
                 <div style="font-size: 12px; color: var(--secondary-text-color); margin-top: 4px;">
                   Target: ${selectedProtein.probe}
@@ -4042,35 +4042,35 @@ class KitchenCookingPanel extends LitElement {
       ${this._builderBase && this._builderProtein ? html`
         <ha-card>
           <div class="card-content">
-            <h3>📊 Calculated Parameters</h3>
+            <h3>${this._t('ninja.calculated_params')}</h3>
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 12px 0;">
               <div>
-                <strong>🌡️ Temperature:</strong><br>
+                <strong>${this._t('ninja.temperature_label')}</strong><br>
                 ${selectedProtein.temp}
               </div>
               <div>
-                <strong>⏱️ Cook Time:</strong><br>
-                ${selectedProtein.time} minutes
+                <strong>${this._t('ninja.cook_time_label')}</strong><br>
+                ${selectedProtein.time} ${this._t('common.minutes')}
               </div>
               <div>
-                <strong>💧 Water:</strong><br>
+                <strong>${this._t('ninja.water_label')}</strong><br>
                 ${selectedBase.water}
               </div>
               <div>
-                <strong>🍴 Mode:</strong><br>
+                <strong>${this._t('ninja.mode_label')}</strong><br>
                 Combi-Meal
               </div>
             </div>
             ${this._builderUseMeater && selectedProtein.probe !== 'N/A' ? html`
               <div style="margin-top: 12px; padding: 12px; background: rgba(76, 175, 80, 0.1); border-left: 3px solid #4caf50; border-radius: 0 4px 4px 0;">
-                <strong>🌡️ Probe Target:</strong> ${selectedProtein.probe}
+                <strong>${this._t('ninja.probe_target')}</strong> ${selectedProtein.probe}
               </div>
             ` : ''}
             <button 
               class="action-btn" 
               @click=${() => this._buildRecipe()}
               style="width: 100%; margin-top: 16px; padding: 14px; font-size: 15px; font-weight: 600;">
-              ✨ Build Custom Recipe
+              ${this._t('ninja.build_recipe_btn')}
             </button>
           </div>
         </ha-card>
@@ -4078,7 +4078,7 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <p style="text-align: center; color: var(--secondary-text-color); padding: 20px 0;">
-              👆 Select a base and protein to see calculated parameters
+              ${this._t('ninja.select_base_protein_hint')}
             </p>
           </div>
         </ha-card>
@@ -4241,15 +4241,15 @@ class KitchenCookingPanel extends LitElement {
           this._currentPath = 'ninja_combi';
           this.requestUpdate();
         }}>
-          ← Back to Ninja Combi
+          ${this._t('nav.back_to_ninja_combi')}
         </button>
-        <h2>📖 Built-in Ninja Combi Recipes</h2>
+        <h2>${this._t('ninja.built_in_heading')}</h2>
       </div>
 
       ${this._ninjaBuiltInRecipes.length === 0 ? html`
         <ha-card>
           <div class="card-content">
-            <p>No built-in recipes available. Check back later!</p>
+            <p>${this._t('ninja.no_built_in')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -4264,8 +4264,8 @@ class KitchenCookingPanel extends LitElement {
                 <h3>${recipe.name}</h3>
                 <p class="recipe-description">${recipe.description || ''}</p>
                 <div class="recipe-meta">
-                  <span>⏱️ ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' min' : 'N/A'}</span>
-                  <span>🍽️ Serves ${recipe.servings || '4'}</span>
+                  <span>⏱️ ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' ' + this._t('common.minutes_short') : this._t('common.na')}</span>
+                  <span>🍽️ ${this._t('ninja.serves')} ${recipe.servings || '4'}</span>
                 </div>
               </div>
             </ha-card>
@@ -4291,15 +4291,15 @@ class KitchenCookingPanel extends LitElement {
           this._currentPath = 'ninja_combi';
           this.requestUpdate();
         }}>
-          ← Back to Ninja Combi
+          ${this._t('nav.back_to_ninja_combi')}
         </button>
-        <h2>📋 Recent Ninja Combi Cooks</h2>
+        <h2>${this._t('ninja.recent_ninja_heading')}</h2>
       </div>
 
       ${ninjaCooks.length === 0 ? html`
         <ha-card>
           <div class="card-content">
-            <p>No Ninja Combi cooking history yet. Start your first Ninja Combi cook!</p>
+            <p>${this._t('ninja.no_recent_ninja')}</p>
           </div>
         </ha-card>
       ` : html`
