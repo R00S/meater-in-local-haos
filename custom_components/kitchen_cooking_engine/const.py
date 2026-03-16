@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 16 Mar 2026, 12:53 UTC
-Last Change: v0.5.5.93 - Add 30s timeout to conversation.async_converse to prevent indefinite hangs; switch to backup agent after 2 consecutive timeouts
+Last Change: v0.5.5.94 - Condense recipe step pages: nav buttons in header, active ingredients bold/green on top, inactive in 2-col, remove redundant step title/prefix
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "229"
+PANEL_VERSION = "230"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

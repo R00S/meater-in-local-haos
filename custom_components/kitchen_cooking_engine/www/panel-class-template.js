@@ -5566,11 +5566,27 @@ class KitchenCookingPanel extends LitElement {
     const isFinishPage = currentStepIndex >= steps.length;
     
     return html`
-      <!-- Recipe Cook Header -->
+      <!-- Recipe Cook Header with navigation -->
       <div class="recipe-cook-header">
         <div class="recipe-cook-title" style="display:flex;align-items:center;gap:12px;">
-          <button class="secondary-btn" style="padding:6px 12px;font-size:1.1em;" @click=${() => this._minimizeRecipeCook()}
-            title="Go to Home screen (cook keeps running)">🏠</button>
+          <div class="recipe-cook-nav-buttons">
+            <button class="recipe-nav-btn" @click=${this._previousRecipeStep}
+              title="${isOverview ? 'Exit cook' : 'Previous step'}">
+              ${isOverview ? '✕' : '←'}
+            </button>
+            <button class="recipe-nav-btn home-btn" @click=${() => this._minimizeRecipeCook()}
+              title="Go to Home screen (cook keeps running)">🏠</button>
+            ${isFinishPage ? html`
+              <button class="recipe-nav-btn save-btn" @click=${this._saveRecipeCook}
+                ?disabled=${!state.easeRating || !state.resultRating}
+                title="Save cook">✓</button>
+            ` : html`
+              <button class="recipe-nav-btn" @click=${this._nextRecipeStep}
+                title="${isOverview ? (steps.length > 0 ? 'Start cooking' : 'Finish') : currentStepIndex === steps.length - 1 ? 'Finish' : 'Next step'}">
+                ${isOverview ? (steps.length > 0 ? '→' : '✓') : currentStepIndex === steps.length - 1 ? '✓' : '→'}
+              </button>
+            `}
+          </div>
           <div>
             <h2>${recipe.name}</h2>
             <p class="recipe-cook-serving">
@@ -5588,29 +5604,7 @@ class KitchenCookingPanel extends LitElement {
         </div>
       </ha-card>
 
-      <!-- Recipe Cook Footer -->
-      <div class="recipe-cook-footer">
-        <div class="footer-left">
-          <button class="secondary-btn" @click=${this._previousRecipeStep}>
-            ${isOverview ? '✕ Exit' : '← Back'}
-          </button>
-        </div>
-        <div class="footer-middle">
-          ${this._renderMeaterProbeInfo()}
-        </div>
-        <div class="footer-right">
-          ${isFinishPage ? html`
-            <button class="primary-btn" @click=${this._saveRecipeCook}
-              ?disabled=${!state.easeRating || !state.resultRating}>
-              ✓ Save Cook
-            </button>
-          ` : html`
-            <button class="primary-btn" @click=${this._nextRecipeStep}>
-              ${isOverview ? (steps.length > 0 ? 'Start →' : 'Finish →') : currentStepIndex === steps.length - 1 ? 'Finish' : 'Next →'}
-            </button>
-          `}
-        </div>
-      </div>
+      ${this._renderMeaterProbeInfo()}
     `;
   }
 
@@ -5688,27 +5682,47 @@ class KitchenCookingPanel extends LitElement {
 
     // Get ingredients mentioned in this step (if available)
     const stepIngredients = step.ingredients || [];
+
+    // Strip "Step X:" prefix from description text
+    let instructionText = step.instructions || step.description || 'No instructions available.';
+    instructionText = instructionText.replace(/^Step\s+\d+\s*:\s*/i, '');
+
+    // Build sorted ingredient list: active first (bold green), then inactive in 2 columns
+    const allIngredients = recipe.ingredients && recipe.ingredients.length > 0 ? recipe.ingredients : [];
+    const activeIngs = [];
+    const inactiveIngs = [];
+    
+    if (allIngredients.length > 0) {
+      allIngredients.forEach(ing => {
+        const ingLower = ing.toLowerCase();
+        const isActive = stepIngredients.some(si => {
+          const siLower = si.toLowerCase();
+          const keyWords = siLower.split(/[\s,]+/).filter(w => 
+            w.length > 3 && !['cups', 'tbsp', 'tsp', 'ounce', 'pound', 'gram'].includes(w)
+          );
+          return keyWords.some(word => {
+            const regex = new RegExp(`\\b${word}\\b`, 'i');
+            return regex.test(ingLower);
+          }) || ingLower === siLower;
+        });
+        if (isActive) {
+          activeIngs.push(ing);
+        } else {
+          inactiveIngs.push(ing);
+        }
+      });
+    }
     
     return html`
       <div class="recipe-cook-step-detail">
         <div class="step-header">
           <h3>Step ${stepIndex + 1} of ${steps.length}</h3>
-          <h4>${step.name || `Step ${stepIndex + 1}`}</h4>
           ${step.time ? html`<p class="step-time">⏱️ ~${step.time} minutes</p>` : ''}
         </div>
 
         <div class="step-instructions">
-          <p>${step.instructions || step.description || 'No instructions available.'}</p>
+          <p>${instructionText}</p>
         </div>
-
-        ${stepIngredients.length > 0 ? html`
-          <div class="step-ingredients">
-            <h5>Ingredients for this step:</h5>
-            <ul>
-              ${stepIngredients.map(ing => html`<li>${ing}</li>`)}
-            </ul>
-          </div>
-        ` : ''}
 
         ${step.temperature ? html`
           <div class="step-temp">
@@ -5722,28 +5736,24 @@ class KitchenCookingPanel extends LitElement {
           </div>
         ` : ''}
 
-        <!-- Show all ingredients with current step's ingredients highlighted -->
-        ${recipe.ingredients && recipe.ingredients.length > 0 ? html`
+        <!-- Ingredients: active (bold green) on top, inactive in 2-column grid below -->
+        ${allIngredients.length > 0 ? html`
           <div class="recipe-cook-ingredients">
-            <h5>📋 All Ingredients</h5>
-            <ul>
-              ${recipe.ingredients.map(ing => {
-                const ingLower = ing.toLowerCase();
-                const isActive = stepIngredients.some(si => {
-                  const siLower = si.toLowerCase();
-                  const keyWords = siLower.split(/[\s,]+/).filter(w => 
-                    w.length > 3 && !['cups', 'tbsp', 'tsp', 'ounce', 'pound', 'gram'].includes(w)
-                  );
-                  return keyWords.some(word => {
-                    const regex = new RegExp(`\\b${word}\\b`, 'i');
-                    return regex.test(ingLower);
-                  }) || ingLower === siLower;
-                });
-                return html`
-                  <li class="${isActive ? 'active-ingredient' : ''}">${ing}</li>
-                `;
-              })}
-            </ul>
+            <h5>📋 Ingredients</h5>
+            ${activeIngs.length > 0 ? html`
+              <ul class="ingredients-active">
+                ${activeIngs.map(ing => html`
+                  <li class="active-ingredient">${ing}</li>
+                `)}
+              </ul>
+            ` : ''}
+            ${inactiveIngs.length > 0 ? html`
+              <ul class="ingredients-inactive">
+                ${inactiveIngs.map(ing => html`
+                  <li>${ing}</li>
+                `)}
+              </ul>
+            ` : ''}
           </div>
         ` : ''}
       </div>
@@ -8295,6 +8305,46 @@ class KitchenCookingPanel extends LitElement {
         font-size: 24px;
       }
 
+      .recipe-cook-nav-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex-shrink: 0;
+      }
+
+      .recipe-nav-btn {
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        border: 2px solid rgba(255,255,255,0.4);
+        background: rgba(255,255,255,0.15);
+        color: white;
+        font-size: 1.2em;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+
+      .recipe-nav-btn:hover {
+        background: rgba(255,255,255,0.3);
+      }
+
+      .recipe-nav-btn:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+
+      .recipe-nav-btn.home-btn {
+        font-size: 1.3em;
+      }
+
+      .recipe-nav-btn.save-btn {
+        background: rgba(76, 175, 80, 0.6);
+        border-color: rgba(76, 175, 80, 0.8);
+      }
+
       .recipe-cook-serving {
         margin: 0;
         opacity: 0.9;
@@ -8344,10 +8394,34 @@ class KitchenCookingPanel extends LitElement {
       }
 
       .recipe-cook-ingredients li.active-ingredient {
-        background: var(--primary-color);
-        color: white;
-        font-weight: 600;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        background: transparent;
+        color: #4caf50;
+        font-weight: 700;
+        border-left: 3px solid #4caf50;
+        padding-left: 12px;
+      }
+
+      /* Active ingredients list (single column, on top) */
+      .ingredients-active {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 12px 0;
+      }
+
+      /* Inactive ingredients list (two-column grid below) */
+      .ingredients-inactive {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px 12px;
+      }
+
+      .ingredients-inactive li {
+        padding: 6px 8px;
+        font-size: 0.9em;
+        opacity: 0.75;
       }
 
       /* Recipe Step Overview */
@@ -8555,31 +8629,9 @@ class KitchenCookingPanel extends LitElement {
         font-size: 14px;
       }
 
-      /* Recipe Cook Footer */
+      /* Recipe Cook Footer (kept for backward compatibility) */
       .recipe-cook-footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        margin-top: 16px;
-        padding: 16px;
-        background: var(--card-background-color);
-        border-radius: 8px;
-        border: 1px solid var(--divider-color);
-      }
-
-      .footer-left,
-      .footer-right {
-        flex: 1;
-      }
-
-      .footer-middle {
-        flex: 1;
-        text-align: center;
-      }
-
-      .footer-right {
-        text-align: right;
+        display: none;
       }
 
       .meater-probe-info {
@@ -8625,20 +8677,8 @@ class KitchenCookingPanel extends LitElement {
         }
 
         /* Recipe Cook Flow Mobile */
-        .recipe-cook-footer {
-          flex-direction: column;
-          gap: 12px;
-        }
-
-        .footer-left,
-        .footer-middle,
-        .footer-right {
-          width: 100%;
-          text-align: center;
-        }
-
-        .footer-right {
-          text-align: center;
+        .ingredients-inactive {
+          grid-template-columns: 1fr;
         }
 
         .star-selector {
