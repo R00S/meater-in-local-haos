@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Mar 2026, 11:29 CET
+ * AUTO-GENERATED: 16 Mar 2026, 12:16 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Mar 2026, 11:29 CET
+// Last generated: 16 Mar 2026, 12:16 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -11568,7 +11568,11 @@ class KitchenCookingPanel extends LitElement {
       _messageDialogOnCancel: { type: Object },
       // AI Settings
       _aiAgentId: { type: String },
+      _aiBackupAgentId: { type: String },
       _showAISettingsModal: { type: Boolean },
+      // AI generation live status
+      _aiGenerationStatus: { type: String },
+      _aiGenerationElapsed: { type: Number },
       // Feature notes editing in appliance path
       _showFeatureNotesEditor: { type: Boolean },
       // MEATER cook rating state (Issue #65)
@@ -11671,7 +11675,11 @@ class KitchenCookingPanel extends LitElement {
     this._aiGeneratingAbort = null; // AbortController for cancelling generation
     this._messageDialogOnCancel = null; // Optional cancel callback for dialog
     this._aiAgentId = ''; // AI agent entity ID for recipe generation
+    this._aiBackupAgentId = ''; // Backup AI agent (used when primary is overloaded)
     this._showAISettingsModal = false; // Show AI settings modal
+    this._aiGenerationStatus = ''; // Live status message during AI generation
+    this._aiGenerationElapsed = 0; // Seconds elapsed since generation started
+    this._aiGenerationTimer = null; // Interval handle for status ticker
     this._showFeatureNotesEditor = false; // Show feature notes editor in appliance path
     this._meaterCookRatingState = null; // MEATER cook rating state (Issue #65)
     // Data is generated from backend Python files at install/update time
@@ -12314,6 +12322,7 @@ class KitchenCookingPanel extends LitElement {
       const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_settings');
       if (response.status === 'ok' && response.settings?.agent_id) {
         this._aiAgentId = response.settings.agent_id;
+        this._aiBackupAgentId = response.settings.backup_agent_id || '';
       }
     } catch (e) {
       console.error('[AI Settings] Failed to load settings on startup:', e);
@@ -12336,12 +12345,15 @@ class KitchenCookingPanel extends LitElement {
   async _saveAISettings() {
     try {
       const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_settings', {
-        agent_id: this._aiAgentId
+        agent_id: this._aiAgentId,
+        backup_agent_id: this._aiBackupAgentId,
       });
       
       if (response.status === 'ok') {
-        // Show success message
-        this._showMessage('AI Settings Saved', `✅ Settings saved successfully!\n\nAgent ID: ${this._aiAgentId}\n\nYour AI Recipe Builder will now use this agent.`, false);
+        const backupNote = this._aiBackupAgentId
+          ? `\n\nBackup Agent ID: ${this._aiBackupAgentId}\n\nThe backup agent will be used automatically if the primary agent is overloaded.`
+          : '';
+        this._showMessage('AI Settings Saved', `✅ Settings saved successfully!\n\nAgent ID: ${this._aiAgentId}${backupNote}`, false);
         this._closeAISettings();
       } else {
         this._showMessage('Failed to Save Settings', `❌ ${response.message}`, true);
@@ -13756,6 +13768,21 @@ class KitchenCookingPanel extends LitElement {
                     placeholder="extended_openai_conversation_2"
                     style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; font-family: monospace;"
                   />
+
+                  <label for="ai-backup-agent-id" style="display: block; margin-top: 16px; margin-bottom: 8px; font-weight: 600;">
+                    Backup Agent ID: <span style="font-weight: 400; font-size: 0.9em;">(optional — used when primary is overloaded)</span>
+                  </label>
+                  <input
+                    id="ai-backup-agent-id"
+                    type="text"
+                    .value=${this._aiBackupAgentId}
+                    @input=${(e) => { this._aiBackupAgentId = e.target.value; }}
+                    placeholder="conversation.google_generative_ai_conversation"
+                    style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; font-family: monospace;"
+                  />
+                  <p style="margin-top: 6px; font-size: 0.85em; color: var(--secondary-text-color);">
+                    If the primary agent returns a 503 / overloaded error (even after retries), the backup agent is tried automatically.
+                  </p>
                   
                   <p style="margin-top: 12px; font-size: 0.9em; color: var(--secondary-text-color);">
                     <strong>Common agent IDs:</strong>
@@ -13763,6 +13790,7 @@ class KitchenCookingPanel extends LitElement {
                   <ul style="margin: 8px 0; padding-left: 24px; font-size: 0.9em; color: var(--secondary-text-color);">
                     <li><code>extended_openai_conversation_2</code> - Extended OpenAI Conversation</li>
                     <li><code>conversation.openai_conversation</code> - OpenAI Conversation</li>
+                    <li><code>conversation.google_generative_ai_conversation</code> - Google Gemini</li>
                     <li><code>conversation.home_assistant_cloud</code> - Nabu Casa Cloud</li>
                   </ul>
                   
@@ -16017,9 +16045,18 @@ class KitchenCookingPanel extends LitElement {
 
       ${this._aiRecipeSuggestions.length === 0 ? html`
         <ha-card>
-          <div class="card-content loading-state">
+          <div class="card-content loading-state ai-generation-loading">
             <ha-circular-progress active></ha-circular-progress>
-            <p>Generating recipes with AI...</p>
+            <p class="ai-status-primary">${this._aiGenerationStatus || '🤖 Connecting to AI agent...'}</p>
+            ${this._aiGenerationElapsed > 0 ? html`
+              <p class="ai-status-elapsed">${this._aiGenerationElapsed}s elapsed</p>
+            ` : ''}
+            ${this._aiGenerationElapsed >= 35 && this._aiGenerationElapsed < 60 ? html`
+              <p class="ai-status-hint">The AI service is busy. Your request is being retried automatically with backoff.</p>
+            ` : ''}
+            ${this._aiGenerationElapsed >= 60 && this._aiBackupAgentId ? html`
+              <p class="ai-status-hint">Switching to backup AI agent — hang on!</p>
+            ` : ''}
           </div>
         </ha-card>
       ` : html`
@@ -16694,6 +16731,60 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
+   * Start the live status ticker shown while AI recipes are being generated.
+   * Messages are timed to match the retry/backoff phases in the backend:
+   *   0–3s   connecting
+   *   4–9s   initial generation
+   *   10–19s still generating
+   *   20–34s taking a moment
+   *   35–59s retrying (backoff active)
+   *   60–89s switching to backup agent (if configured)
+   *   90s+   final attempts
+   *
+   * The thresholds are aligned with the backend's exponential backoff schedule:
+   * _MAX_RETRIES=7, wait = (2^attempt) + jitter(0–2s).
+   * Cumulative worst-case waits: ~1, ~3, ~7, ~15, ~31, ~63, ~127s.
+   * If those values change in ai_recipe_builder.py, update these thresholds too.
+   */
+  _startAIStatusUpdater() {
+    this._stopAIStatusUpdater(); // clear any previous timer
+    this._aiGenerationElapsed = 0;
+    this._aiGenerationStatus = '🤖 Connecting to AI agent...';
+    this._aiGenerationTimer = setInterval(() => {
+      this._aiGenerationElapsed += 1;
+      const t = this._aiGenerationElapsed;
+      let status;
+      if (t < 4) {
+        status = '🤖 Connecting to AI agent...';
+      } else if (t < 10) {
+        status = '💭 Crafting recipe ideas just for you...';
+      } else if (t < 20) {
+        status = '⏳ Generating recipe details...';
+      } else if (t < 35) {
+        status = '🧠 AI is thinking hard — almost there...';
+      } else if (t < 60) {
+        status = '⚡ AI service is busy — retrying automatically...';
+      } else if (t < 90) {
+        status = this._aiBackupAgentId
+          ? '🔁 Switching to backup AI agent...'
+          : '🔁 Still retrying — AI service under load...';
+      } else {
+        status = '⌛ Final attempts — please hold on...';
+      }
+      this._aiGenerationStatus = status;
+      this.requestUpdate();
+    }, 1000);
+  }
+
+  /** Stop and reset the live status ticker. */
+  _stopAIStatusUpdater() {
+    if (this._aiGenerationTimer) {
+      clearInterval(this._aiGenerationTimer);
+      this._aiGenerationTimer = null;
+    }
+  }
+
+  /**
    * Phase 6: Generate AI recipes based on selections
    */
   async _generateAIRecipes() {
@@ -16705,6 +16796,7 @@ class KitchenCookingPanel extends LitElement {
     this._showAIStyleSelector = false;
     this._showAIRecipeSuggestions = true;
     this._aiRecipeSuggestions = []; // Clear previous suggestions
+    this._startAIStatusUpdater();
     this.requestUpdate();
 
     try {
@@ -16746,6 +16838,8 @@ class KitchenCookingPanel extends LitElement {
       // Go back to style selection
       this._showAIRecipeSuggestions = false;
       this._showAIStyleSelector = true;
+    } finally {
+      this._stopAIStatusUpdater();
     }
 
     this.requestUpdate();
@@ -18888,6 +18982,36 @@ class KitchenCookingPanel extends LitElement {
         font-size: 14px;
       }
 
+      .ai-generation-loading {
+        padding: 40px 24px;
+      }
+
+      .ai-status-primary {
+        font-size: 16px !important;
+        font-weight: 600;
+        color: var(--primary-text-color) !important;
+        margin: 0 0 6px 0 !important;
+        transition: opacity 0.3s ease;
+      }
+
+      .ai-status-elapsed {
+        font-size: 12px !important;
+        color: var(--disabled-text-color, #9e9e9e) !important;
+        margin: 0 0 10px 0 !important;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .ai-status-hint {
+        margin: 8px auto 0 auto !important;
+        max-width: 320px;
+        font-size: 12px !important;
+        color: var(--secondary-text-color) !important;
+        background: var(--secondary-background-color, rgba(0,0,0,0.05));
+        border-radius: 6px;
+        padding: 8px 12px;
+        line-height: 1.4;
+      }
+
       .error-card {
         background: #ffebee;
         border-left: 4px solid #f44336;
@@ -20163,7 +20287,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "213";
+const PANEL_VERSION = "215";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

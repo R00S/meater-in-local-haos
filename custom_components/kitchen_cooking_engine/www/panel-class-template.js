@@ -116,6 +116,9 @@ class KitchenCookingPanel extends LitElement {
       _aiAgentId: { type: String },
       _aiBackupAgentId: { type: String },
       _showAISettingsModal: { type: Boolean },
+      // AI generation live status
+      _aiGenerationStatus: { type: String },
+      _aiGenerationElapsed: { type: Number },
       // Feature notes editing in appliance path
       _showFeatureNotesEditor: { type: Boolean },
       // MEATER cook rating state (Issue #65)
@@ -220,6 +223,9 @@ class KitchenCookingPanel extends LitElement {
     this._aiAgentId = ''; // AI agent entity ID for recipe generation
     this._aiBackupAgentId = ''; // Backup AI agent (used when primary is overloaded)
     this._showAISettingsModal = false; // Show AI settings modal
+    this._aiGenerationStatus = ''; // Live status message during AI generation
+    this._aiGenerationElapsed = 0; // Seconds elapsed since generation started
+    this._aiGenerationTimer = null; // Interval handle for status ticker
     this._showFeatureNotesEditor = false; // Show feature notes editor in appliance path
     this._meaterCookRatingState = null; // MEATER cook rating state (Issue #65)
     // Data is generated from backend Python files at install/update time
@@ -4585,9 +4591,18 @@ class KitchenCookingPanel extends LitElement {
 
       ${this._aiRecipeSuggestions.length === 0 ? html`
         <ha-card>
-          <div class="card-content loading-state">
+          <div class="card-content loading-state ai-generation-loading">
             <ha-circular-progress active></ha-circular-progress>
-            <p>Generating recipes with AI...</p>
+            <p class="ai-status-primary">${this._aiGenerationStatus || '🤖 Connecting to AI agent...'}</p>
+            ${this._aiGenerationElapsed > 0 ? html`
+              <p class="ai-status-elapsed">${this._aiGenerationElapsed}s elapsed</p>
+            ` : ''}
+            ${this._aiGenerationElapsed >= 35 && this._aiGenerationElapsed < 60 ? html`
+              <p class="ai-status-hint">The AI service is busy. Your request is being retried automatically with backoff.</p>
+            ` : ''}
+            ${this._aiGenerationElapsed >= 60 && this._aiBackupAgentId ? html`
+              <p class="ai-status-hint">Switching to backup AI agent — hang on!</p>
+            ` : ''}
           </div>
         </ha-card>
       ` : html`
@@ -5262,6 +5277,60 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
+   * Start the live status ticker shown while AI recipes are being generated.
+   * Messages are timed to match the retry/backoff phases in the backend:
+   *   0–3s   connecting
+   *   4–9s   initial generation
+   *   10–19s still generating
+   *   20–34s taking a moment
+   *   35–59s retrying (backoff active)
+   *   60–89s switching to backup agent (if configured)
+   *   90s+   final attempts
+   *
+   * The thresholds are aligned with the backend's exponential backoff schedule:
+   * _MAX_RETRIES=7, wait = (2^attempt) + jitter(0–2s).
+   * Cumulative worst-case waits: ~1, ~3, ~7, ~15, ~31, ~63, ~127s.
+   * If those values change in ai_recipe_builder.py, update these thresholds too.
+   */
+  _startAIStatusUpdater() {
+    this._stopAIStatusUpdater(); // clear any previous timer
+    this._aiGenerationElapsed = 0;
+    this._aiGenerationStatus = '🤖 Connecting to AI agent...';
+    this._aiGenerationTimer = setInterval(() => {
+      this._aiGenerationElapsed += 1;
+      const t = this._aiGenerationElapsed;
+      let status;
+      if (t < 4) {
+        status = '🤖 Connecting to AI agent...';
+      } else if (t < 10) {
+        status = '💭 Crafting recipe ideas just for you...';
+      } else if (t < 20) {
+        status = '⏳ Generating recipe details...';
+      } else if (t < 35) {
+        status = '🧠 AI is thinking hard — almost there...';
+      } else if (t < 60) {
+        status = '⚡ AI service is busy — retrying automatically...';
+      } else if (t < 90) {
+        status = this._aiBackupAgentId
+          ? '🔁 Switching to backup AI agent...'
+          : '🔁 Still retrying — AI service under load...';
+      } else {
+        status = '⌛ Final attempts — please hold on...';
+      }
+      this._aiGenerationStatus = status;
+      this.requestUpdate();
+    }, 1000);
+  }
+
+  /** Stop and reset the live status ticker. */
+  _stopAIStatusUpdater() {
+    if (this._aiGenerationTimer) {
+      clearInterval(this._aiGenerationTimer);
+      this._aiGenerationTimer = null;
+    }
+  }
+
+  /**
    * Phase 6: Generate AI recipes based on selections
    */
   async _generateAIRecipes() {
@@ -5273,6 +5342,7 @@ class KitchenCookingPanel extends LitElement {
     this._showAIStyleSelector = false;
     this._showAIRecipeSuggestions = true;
     this._aiRecipeSuggestions = []; // Clear previous suggestions
+    this._startAIStatusUpdater();
     this.requestUpdate();
 
     try {
@@ -5314,6 +5384,8 @@ class KitchenCookingPanel extends LitElement {
       // Go back to style selection
       this._showAIRecipeSuggestions = false;
       this._showAIStyleSelector = true;
+    } finally {
+      this._stopAIStatusUpdater();
     }
 
     this.requestUpdate();
@@ -7454,6 +7526,36 @@ class KitchenCookingPanel extends LitElement {
         margin: 0;
         color: var(--secondary-text-color);
         font-size: 14px;
+      }
+
+      .ai-generation-loading {
+        padding: 40px 24px;
+      }
+
+      .ai-status-primary {
+        font-size: 16px !important;
+        font-weight: 600;
+        color: var(--primary-text-color) !important;
+        margin: 0 0 6px 0 !important;
+        transition: opacity 0.3s ease;
+      }
+
+      .ai-status-elapsed {
+        font-size: 12px !important;
+        color: var(--disabled-text-color, #9e9e9e) !important;
+        margin: 0 0 10px 0 !important;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .ai-status-hint {
+        margin: 8px auto 0 auto !important;
+        max-width: 320px;
+        font-size: 12px !important;
+        color: var(--secondary-text-color) !important;
+        background: var(--secondary-background-color, rgba(0,0,0,0.05));
+        border-radius: 6px;
+        padding: 8px 12px;
+        line-height: 1.4;
       }
 
       .error-card {

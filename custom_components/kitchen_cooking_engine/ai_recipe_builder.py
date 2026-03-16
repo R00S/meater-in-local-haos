@@ -844,6 +844,8 @@ of your response must be '{{' and the very last must be '}}'.
 
     # Keywords that identify a transient / overload error from the AI service.
     # Checked both against exception messages and response text.
+    # Both "rate limit" and "rate_limit" are included because different providers
+    # use different formats (e.g. OpenAI uses spaces, Google uses underscores).
     _TRANSIENT_ERROR_INDICATORS: tuple = (
         "503",
         "429",
@@ -1019,6 +1021,10 @@ of your response must be '{{' and the very last must be '}}'.
                 except Exception as ex:
                     ex_str = str(ex)
                     if self._is_transient_error(ex_str):
+                        # Exponential backoff: 2^attempt seconds plus up to 2s of
+                        # random jitter. The jitter spreads concurrent requests from
+                        # multiple users so they don't all hammer the service at the
+                        # same time after a rate-limit window resets.
                         wait = (2 ** attempt) + random.uniform(0, 2)
                         _LOGGER.warning(
                             "AI agent '%s' overloaded/unavailable — retrying in %.1fs "
@@ -1063,7 +1069,7 @@ of your response must be '{{' and the very last must be '}}'.
                 # Check whether the response body itself signals a transient error
                 # (some providers return HTTP 200 with an error payload).
                 if self._is_transient_error(response_text):
-                    wait = (2 ** attempt) + random.uniform(0, 2)
+                    wait = (2 ** attempt) + random.uniform(0, 2)  # same backoff + jitter
                     _LOGGER.warning(
                         "AI agent '%s' response contains transient error indicator — "
                         "retrying in %.1fs (attempt %d/%d): %s",
