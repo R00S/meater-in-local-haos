@@ -123,6 +123,9 @@ class KitchenCookingPanel extends LitElement {
       _showFeatureNotesEditor: { type: Boolean },
       // MEATER cook rating state (Issue #65)
       _meaterCookRatingState: { type: Object },
+      // Phase 7: Language & Measurement
+      _language: { type: String },
+      _measurementSystem: { type: String },
     };
   }
 
@@ -228,6 +231,9 @@ class KitchenCookingPanel extends LitElement {
     this._aiGenerationTimer = null; // Interval handle for status ticker
     this._showFeatureNotesEditor = false; // Show feature notes editor in appliance path
     this._meaterCookRatingState = null; // MEATER cook rating state (Issue #65)
+    // Phase 7: Language & Measurement system (independent selections)
+    this._language = 'en';               // UI language: 'sv' or 'en'
+    this._measurementSystem = 'se';      // Measurement: 'se', 'uk', or 'us'
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -243,6 +249,10 @@ class KitchenCookingPanel extends LitElement {
     
     // Load user preferences
     this._loadPreferences();
+    
+    // Phase 7: Load language & measurement preferences
+    this._loadLanguagePreference();
+    this._loadMeasurementPreference();
     
     // Load AI settings to determine if AI Recipe Builder should be visible
     this._loadAISettings();
@@ -358,6 +368,134 @@ class KitchenCookingPanel extends LitElement {
       }
     } catch (e) {
       console.log('Could not load preferences:', e);
+    }
+  }
+
+  // =========================================================================
+  // Phase 7: Translation (i18n) & Measurement system
+  // =========================================================================
+
+  /**
+   * Translate a key like "meater.ready_to_cook" into the current language.
+   * Falls back to English, then to the key itself.
+   */
+  _t(key) {
+    const lang = this._language || 'en';
+    const parts = key.split('.');
+    // Try requested language
+    let node = (typeof I18N_STRINGS !== 'undefined') ? I18N_STRINGS[lang] : undefined;
+    for (const p of parts) {
+      if (node && typeof node === 'object') node = node[p];
+      else { node = undefined; break; }
+    }
+    if (typeof node === 'string') return node;
+    // Fallback to English
+    if (lang !== 'en') {
+      node = (typeof I18N_STRINGS !== 'undefined') ? I18N_STRINGS['en'] : undefined;
+      for (const p of parts) {
+        if (node && typeof node === 'object') node = node[p];
+        else { node = undefined; break; }
+      }
+      if (typeof node === 'string') return node;
+    }
+    return key; // last resort: return the key
+  }
+
+  /**
+   * Convert a quantity+unit to the user's preferred measurement system.
+   * E.g. _convertMeasure(500, 'ml') → "5 dl" (SE) or "2.1 cup" (US).
+   */
+  _convertMeasure(value, fromUnit) {
+    const sysId = this._measurementSystem || 'se';
+    const sys = (typeof MEASUREMENT_SYSTEMS !== 'undefined') ? MEASUREMENT_SYSTEMS[sysId] : null;
+    if (!sys || !sys.units) return `${value} ${fromUnit}`;
+
+    // Find source unit's base multiplier from any system (they share units)
+    let toBase = null;
+    let unitType = null;
+    for (const msKey of Object.keys(MEASUREMENT_SYSTEMS)) {
+      const msUnits = MEASUREMENT_SYSTEMS[msKey].units;
+      if (msUnits[fromUnit]) {
+        toBase = msUnits[fromUnit].to_base;
+        unitType = msUnits[fromUnit].type;
+        break;
+      }
+    }
+    if (toBase === null) return `${value} ${fromUnit}`;
+
+    const baseValue = value * toBase;
+    const prefs = unitType === 'volume' ? sys.volume_prefs : sys.mass_prefs;
+
+    for (const rule of prefs) {
+      const minVal = unitType === 'volume' ? rule.min_ml : rule.min_g;
+      const targetUnit = sys.units[rule.unit];
+      if (!targetUnit) continue;
+      if (baseValue >= minVal) {
+        const converted = baseValue / targetUnit.to_base;
+        const numStr = converted === Math.floor(converted)
+          ? String(Math.floor(converted))
+          : converted < 10
+            ? converted.toFixed(1).replace(/\.?0+$/, '')
+            : String(Math.round(converted));
+        const lang = this._language || 'en';
+        const abbr = lang === 'sv' ? targetUnit.abbr_sv : targetUnit.abbr_en;
+        return `${numStr} ${abbr}`;
+      }
+    }
+    return `${value} ${fromUnit}`;
+  }
+
+  /**
+   * Convert a temperature in °C for display in the user's measurement system.
+   * SE/UK → "70°C", US → "158°F (70°C)".
+   */
+  _convertTemp(tempC) {
+    const sysId = this._measurementSystem || 'se';
+    const sys = (typeof MEASUREMENT_SYSTEMS !== 'undefined') ? MEASUREMENT_SYSTEMS[sysId] : null;
+    if (sys && sys.temp_unit === 'F') {
+      const f = Math.round(tempC * 9 / 5 + 32);
+      return `${f}°F (${Math.round(tempC)}°C)`;
+    }
+    return `${Math.round(tempC)}°C`;
+  }
+
+  async _loadLanguagePreference() {
+    try {
+      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/preferences/language');
+      if (response && response.language) {
+        this._language = response.language;
+      }
+    } catch (e) {
+      console.log('Could not load language preference:', e);
+    }
+  }
+
+  async _saveLanguagePreference(lang) {
+    this._language = lang;
+    try {
+      await this.hass.callApi('POST', 'kitchen_cooking_engine/preferences/language', { language: lang });
+    } catch (e) {
+      console.error('Could not save language preference:', e);
+    }
+  }
+
+  async _loadMeasurementPreference() {
+    try {
+      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/preferences/measurement_system');
+      if (response && response.measurement_system) {
+        this._measurementSystem = response.measurement_system;
+      }
+    } catch (e) {
+      console.log('Could not load measurement preference:', e);
+    }
+  }
+
+  async _saveMeasurementPreference(sys) {
+    this._measurementSystem = sys;
+    try {
+      await this.hass.callApi('POST', 'kitchen_cooking_engine/preferences/measurement_system', { measurement_system: sys });
+    } catch (e) {
+      console.error('Could not save measurement preference:', e);
     }
   }
 
@@ -2578,14 +2716,14 @@ class KitchenCookingPanel extends LitElement {
     
     return html`
       <div class="status-banner idle">
-        <h2>🍳 Ready to Cook</h2>
-        <p>Select your protein and preferences below</p>
+        <h2>${this._t('meater.ready_to_cook')}</h2>
+        <p>${this._t('meater.select_protein')}</p>
       </div>
       
       ${entities.length > 1 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>Select Session</h3>
+            <h3>${this._t('meater.select_session')}</h3>
             <select 
               .value=${this._selectedEntity}
               @change=${(e) => this._selectedEntity = e.target.value}
@@ -2603,23 +2741,23 @@ class KitchenCookingPanel extends LitElement {
       <!-- Data Source Selector -->
       <ha-card>
         <div class="card-content">
-          <h3>🌍 Temperature Data Source</h3>
+          <h3>${this._t('meater.data_source_title')}</h3>
           <div class="button-group">
             <button 
               class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
               @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
-              🇺🇸 International (USDA)
+              ${this._t('meater.international')}
             </button>
             <button 
               class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
               @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
-              🇸🇪 Svenska (Livsmedelsverket)
+              ${this._t('meater.swedish')}
             </button>
           </div>
           <p class="source-description">
             ${this._dataSource === DATA_SOURCE_SWEDISH 
-              ? 'Använder svenska temperaturrekommendationer från Livsmedelsverket, Stekguiden.se och Gårdssällskapet.'
-              : 'Using international temperature guidelines from USDA, FDA and professional culinary sources.'}
+              ? this._t('meater.swedish_description')
+              : this._t('meater.international_description')}
           </p>
         </div>
       </ha-card>
@@ -2627,7 +2765,7 @@ class KitchenCookingPanel extends LitElement {
       <!-- Step 1: Select Category -->
       <ha-card>
         <div class="card-content">
-          <h3>1️⃣ Select Category</h3>
+          <h3>${this._t('meater.select_category')}</h3>
           <div class="button-group">
             ${Object.entries(categories).map(([key, cat]) => html`
               <button 
@@ -2639,7 +2777,7 @@ class KitchenCookingPanel extends LitElement {
             <button 
               class="category-btn ${this._selectedCategory === 'custom' ? 'selected' : ''}" 
               @click=${() => this._selectCategory('custom')}>
-              🎯 Custom
+              ${this._t('meater.custom')}
             </button>
           </div>
         </div>
@@ -2649,14 +2787,14 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCategory === 'custom' ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🎯 Custom Temperature Cook</h3>
-            <p>Set a target temperature and start monitoring — no protein or doneness selection needed.</p>
+            <h3>${this._t('meater.custom_temp_cook')}</h3>
+            <p>${this._t('meater.custom_temp_description')}</p>
             
             <div style="margin: 16px 0;">
-              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Session Name (optional)</label>
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">${this._t('meater.session_name')} (${this._t('common.optional')})</label>
               <input 
                 type="text" 
-                placeholder="e.g. My Cook"
+                placeholder="${this._t('meater.session_name_placeholder')}"
                 .value=${this._customProfileName || ''}
                 @input=${(e) => { this._customProfileName = e.target.value; }}
                 style="width: 100%; padding: 10px; border: 2px solid var(--divider-color); border-radius: 8px; font-size: 14px; background: var(--card-background-color); color: var(--primary-text-color); box-sizing: border-box;"
@@ -2664,7 +2802,7 @@ class KitchenCookingPanel extends LitElement {
             </div>
             
             <div style="margin: 16px 0;">
-              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Target Temperature</label>
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">${this._t('meater.target_temperature')}</label>
               <div class="temp-display-setup">
                 <div class="target-temp">
                   <span class="temp-value">${this._customProfileTempC}°C</span>
@@ -2726,7 +2864,7 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedMeat && cutTypes.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} Select Cut Type</h3>
+            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} ${this._t('meater.select_cut_type')}</h3>
             <div class="button-group">
               ${cutTypes.map(ct => html`
                 <button 
@@ -2744,9 +2882,9 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCutType && cuts.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} Select Cut</h3>
+            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} ${this._t('meater.select_cut')}</h3>
             <select @change=${(e) => this._selectCut(parseInt(e.target.value) || null)}>
-              <option value="">Choose a cut...</option>
+              <option value="">${this._t('meater.choose_cut')}</option>
               ${cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
                   ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
@@ -2761,7 +2899,7 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCut ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🌡️ Doneness Level ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = recommended)</span>` : ''}</h3>
+            <h3>🌡️ ${this._t('meater.select_doneness')} ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = ${this._t('meater.recommended')})</span>` : ''}</h3>
             <div class="doneness-grid">
               ${this._getAvailableDoneness().map(opt => html`
                 <button 
@@ -2836,13 +2974,13 @@ class KitchenCookingPanel extends LitElement {
         <!-- Step 6: Cooking Method -->
         <ha-card>
           <div class="card-content">
-            <h3>🍳 Cooking Method</h3>
+            <h3>${this._t('meater.select_method')}</h3>
             <div class="method-grid">
               ${COOKING_METHODS.map(opt => html`
                 <button 
                   class="method-btn ${this._selectedMethod === opt.value ? 'selected' : ''}"
                   @click=${() => this._selectedMethod = opt.value}>
-                  ${opt.name}
+                  ${this._t('cooking_methods.' + opt.value) !== ('cooking_methods.' + opt.value) ? this._t('cooking_methods.' + opt.value) : opt.name}
                 </button>
               `)}
             </div>
@@ -2852,7 +2990,7 @@ class KitchenCookingPanel extends LitElement {
         <!-- Start Button -->
         <div class="action-container">
           <ha-button unelevated @click=${this._startCook} ?disabled=${!this._selectedDoneness}>
-            🔥 Start Cooking${this._customTargetTempC ? ` at ${this._customTargetTempC}°C` : ''}
+            ${this._t('meater.start_cooking')}${this._customTargetTempC ? ` ${this._convertTemp(this._customTargetTempC)}` : ''}
           </ha-button>
         </div>
       ` : ''}
@@ -3215,14 +3353,14 @@ class KitchenCookingPanel extends LitElement {
 
     return html`
       <div class="welcome-header">
-        <h1>🍳 Kitchen Cooking Engine</h1>
-        <p class="welcome-subtitle">Select Your Appliance</p>
+        <h1>${this._t('welcome.title')}</h1>
+        <p class="welcome-subtitle">${this._t('welcome.select_appliance')}</p>
       </div>
 
       ${hasOngoingCooks ? html`
         <ha-card class="ongoing-cooks-card">
           <div class="card-content">
-            <h3 class="ongoing-cooks-title">🔥 Ongoing Cooks (${totalOngoingCooks})</h3>
+            <h3 class="ongoing-cooks-title">🔥 ${this._t('welcome.ongoing_cooks')} (${totalOngoingCooks})</h3>
 
             ${activeCooks.map(entityId => {
               const st = this.hass.states[entityId];
@@ -3326,8 +3464,8 @@ class KitchenCookingPanel extends LitElement {
           <div class="card-content previous-cooks-content">
             <div class="previous-cooks-icon">📋</div>
             <div class="previous-cooks-text">
-              <h3>Previous Cooks</h3>
-              <p>View and restart your past cooking sessions</p>
+              <h3>${this._t('meater.previous_cooks')}</h3>
+              <p>${this._language === 'sv' ? 'Visa och starta om dina tidigare tillagningar' : 'View and restart your past cooking sessions'}</p>
             </div>
           </div>
         </ha-card>
@@ -3336,9 +3474,58 @@ class KitchenCookingPanel extends LitElement {
           <div class="card-content previous-cooks-content">
             <div class="previous-cooks-icon">⚙️</div>
             <div class="previous-cooks-text">
-              <h3>AI Recipe Builder Settings</h3>
-              <p>${this._aiAgentId ? `Agent: ${this._aiAgentId}` : 'Configure your AI agent to enable the Recipe Builder'}</p>
+              <h3>${this._t('ai_recipe.settings')}</h3>
+              <p>${this._aiAgentId ? `Agent: ${this._aiAgentId}` : (this._language === 'sv' ? 'Konfigurera din AI-agent för att aktivera receptbyggaren' : 'Configure your AI agent to enable the Recipe Builder')}</p>
             </div>
+          </div>
+        </ha-card>
+
+        <!-- Phase 7: Language & Measurement selectors -->
+        <ha-card>
+          <div class="card-content">
+            <h3>${this._t('welcome.language_label')}</h3>
+            <div class="button-group">
+              <button
+                class="category-btn ${this._language === 'sv' ? 'selected' : ''}"
+                @click=${() => this._saveLanguagePreference('sv')}>
+                🇸🇪 Svenska
+              </button>
+              <button
+                class="category-btn ${this._language === 'en' ? 'selected' : ''}"
+                @click=${() => this._saveLanguagePreference('en')}>
+                🇬🇧 English
+              </button>
+            </div>
+          </div>
+        </ha-card>
+
+        <ha-card>
+          <div class="card-content">
+            <h3>${this._language === 'sv' ? '📏 Måttsystem' : '📏 Measurement System'}</h3>
+            <div class="button-group">
+              <button
+                class="category-btn ${this._measurementSystem === 'se' ? 'selected' : ''}"
+                @click=${() => this._saveMeasurementPreference('se')}>
+                ${this._language === 'sv' ? '🇸🇪 Svenska mått' : '🇸🇪 Swedish'}
+              </button>
+              <button
+                class="category-btn ${this._measurementSystem === 'uk' ? 'selected' : ''}"
+                @click=${() => this._saveMeasurementPreference('uk')}>
+                ${this._language === 'sv' ? '🇬🇧 Brittiska mått' : '🇬🇧 UK Metric'}
+              </button>
+              <button
+                class="category-btn ${this._measurementSystem === 'us' ? 'selected' : ''}"
+                @click=${() => this._saveMeasurementPreference('us')}>
+                ${this._language === 'sv' ? '🇺🇸 Amerikanska mått' : '🇺🇸 US Customary'}
+              </button>
+            </div>
+            <p class="source-description" style="margin-top: 8px; font-size: 0.85em;">
+              ${this._measurementSystem === 'se'
+                ? (this._language === 'sv' ? 'krm · tsk · msk · cl · dl · l · g · hg · kg — Temperatur i °C' : 'krm · tsk · msk · cl · dl · l · g · hg · kg — Temperature in °C')
+                : this._measurementSystem === 'uk'
+                  ? (this._language === 'sv' ? 'tsp · tbsp · ml · dl · l · g · kg — Temperatur i °C' : 'tsp · tbsp · ml · dl · l · g · kg — Temperature in °C')
+                  : (this._language === 'sv' ? 'tsp · tbsp · cup · fl oz · oz · lb — Temperatur i °F' : 'tsp · tbsp · cup · fl oz · oz · lb — Temperature in °F')}
+            </p>
           </div>
         </ha-card>
       `}
@@ -5763,8 +5950,8 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="recipe-cook-step-detail">
         <div class="step-header">
-          <h3>Step ${stepIndex + 1} of ${steps.length}</h3>
-          ${step.time ? html`<p class="step-time">⏱️ ~${step.time} minutes</p>` : ''}
+          <h3>${this._t('common.step')} ${stepIndex + 1} ${this._t('common.of')} ${steps.length}</h3>
+          ${step.time ? html`<p class="step-time">⏱️ ~${step.time} ${this._t('common.minutes')}</p>` : ''}
         </div>
 
         <div class="step-instructions">
@@ -5773,20 +5960,20 @@ class KitchenCookingPanel extends LitElement {
 
         ${step.temperature ? html`
           <div class="step-temp">
-            <strong>🌡️ Temperature:</strong> ${step.temperature}
+            <strong>${this._t('recipe_cook.temperature_label')}</strong> ${step.temperature}
           </div>
         ` : ''}
 
         ${step.notes ? html`
           <div class="step-notes">
-            <strong>💡 Tip:</strong> ${step.notes}
+            <strong>${this._t('recipe_cook.tip_label')}</strong> ${step.notes}
           </div>
         ` : ''}
 
         <!-- Ingredients: active sorted by appearance in grey box, inactive in 2-col below -->
         ${allIngredients.length > 0 ? html`
           <div class="recipe-cook-ingredients">
-            <h5>📋 Ingredients</h5>
+            <h5>${this._t('recipe_cook.ingredients_label')}</h5>
             ${allActiveIngs.length > 0 ? html`
               <ul class="ingredients-active">
                 ${allActiveIngs.map(ing => html`
