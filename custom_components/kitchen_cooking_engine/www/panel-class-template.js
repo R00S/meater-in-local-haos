@@ -25,40 +25,20 @@
 class KitchenCookingPanel extends LitElement {
   static get properties() {
     return {
-      hass: { 
+      hass: {
         type: Object,
-        hasChanged(newVal, oldVal) {
-          // Force re-render when ANY cooking session entity state changes
-          // This is needed because HA updates hass.states but hass object reference stays the same
-          if (!oldVal || !newVal) return true;
-          
-          // Detect WebSocket reconnection: when the connection object changes,
-          // always re-render to avoid stale/blank panel after tab switch.
-          // (Inspired by calorie-tracker-panel & weather-big-wall-clock HACS repos)
-          if (oldVal.connection !== newVal.connection) return true;
-          
-          // Check if any cooking session entity changed
-          // We check ALL session entities because:
-          // 1. User might switch between appliances
-          // 2. Temperature updates need to trigger re-render regardless of which entity is selected
-          for (const key in newVal.states) {
-            if (key.includes('kitchen_cooking_engine') && key.includes('session')) {
-              const oldState = oldVal.states[key];
-              const newState = newVal.states[key];
-              
-              // State object reference changes when entity updates
-              if (oldState !== newState) {
-                return true;
-              }
-              
-              // Defensive: also check if attributes object changed
-              if (oldState && newState && oldState.attributes !== newState.attributes) {
-                return true;
-              }
-            }
-          }
-          return false;
-        }
+        // Always re-render when hass is set.
+        //
+        // HA reuses the SAME hass object reference and mutates it in place, so
+        // oldVal === newVal in every hasChanged call.  Any check based on object
+        // identity (connection, states[key]) therefore always returns false and
+        // the panel never re-renders after the tab returns from the background —
+        // which is the root cause of the persistent blank-screen bug.
+        //
+        // Returning true unconditionally means a render is queued on every hass
+        // assignment (batched by LitElement to at most one per microtask cycle).
+        // The performance impact is negligible for a cooking panel.
+        hasChanged() { return true; }
       },
       narrow: { type: Boolean },
       route: { type: Object },
@@ -134,7 +114,11 @@ class KitchenCookingPanel extends LitElement {
       _messageDialogOnCancel: { type: Object },
       // AI Settings
       _aiAgentId: { type: String },
+      _aiBackupAgentId: { type: String },
       _showAISettingsModal: { type: Boolean },
+      // AI generation live status
+      _aiGenerationStatus: { type: String },
+      _aiGenerationElapsed: { type: Number },
       // Feature notes editing in appliance path
       _showFeatureNotesEditor: { type: Boolean },
       // MEATER cook rating state (Issue #65)
@@ -237,7 +221,11 @@ class KitchenCookingPanel extends LitElement {
     this._aiGeneratingAbort = null; // AbortController for cancelling generation
     this._messageDialogOnCancel = null; // Optional cancel callback for dialog
     this._aiAgentId = ''; // AI agent entity ID for recipe generation
+    this._aiBackupAgentId = ''; // Backup AI agent (used when primary is overloaded)
     this._showAISettingsModal = false; // Show AI settings modal
+    this._aiGenerationStatus = ''; // Live status message during AI generation
+    this._aiGenerationElapsed = 0; // Seconds elapsed since generation started
+    this._aiGenerationTimer = null; // Interval handle for status ticker
     this._showFeatureNotesEditor = false; // Show feature notes editor in appliance path
     this._meaterCookRatingState = null; // MEATER cook rating state (Issue #65)
     // Data is generated from backend Python files at install/update time
@@ -266,72 +254,63 @@ class KitchenCookingPanel extends LitElement {
     // Load server-side recipe cook state for cross-device visibility
     this._loadServerActiveRecipeCooks();
     
-    // --- Blank-tab fix (Issue #67) ---
-    // When the user returns to this browser tab after minutes away, the browser
-    // may have frozen JS execution, closed the WebSocket, and freed GPU layers.
-    // We need to: (1) reload data, (2) force Shadow DOM repaint, (3) re-render.
-    // Approach is modeled on kgstorm/home-assistant-calorie-tracker and
-    // SoulRaven/ha-weather-big-wall-clock HACS panels.
+    // --- Blank-tab fix ---
+    // Root cause: HA reuses the SAME hass object reference (mutates in place), so
+    // hasChanged(hass, hass) always compared the same reference and returned false,
+    // meaning the panel never re-rendered when the tab came back from the background.
+    // hasChanged now always returns true (see properties getter), so every hass
+    // assignment from HA (including post-reconnect) triggers a render.
+    //
+    // This handler is a belt-and-suspenders fallback: it reloads fresh data and
+    // forces a re-render so the panel is always up-to-date when the user returns.
+    // Navigation state is PRESERVED — we never reset to welcome on tab return.
     this._visibilityHandler = () => {
       if (document.visibilityState === 'visible') {
-        // Validate and restore navigation state
-        if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
-          this._currentPath = 'welcome';
-        }
-        
-        // Reload critical data — the connection may have been re-established
-        // with fresh state objects, so our cached data (appliances etc.) can be stale.
+        // Preserve whatever screen the user was on — do NOT reset to welcome.
+        // The active_cook render path already validates the entity state and
+        // self-corrects to welcome if the cook has ended while the tab was away.
+        this._meaterCookRatingState = null; // clear any stale rating overlay
+
+        // Reload fresh data from the backend.
         this._loadAppliances();
         this._loadAISettings();
         this._loadServerActiveRecipeCooks();
-        
-        // Immediate re-render
+
+        // Immediate re-render so stale screens refresh their content.
         this.requestUpdate();
-        
-        // Force Shadow DOM repaint — browsers may skip compositor updates for
-        // hidden tabs, leaving ha-top-app-bar-fixed content area blank.
+
+        // Additional re-render after the next paint, in case the browser discarded
+        // GPU compositor layers for the background tab (common on mobile).
         requestAnimationFrame(() => {
           this.requestUpdate();
-          // Reading offsetHeight forces a synchronous layout reflow, which
-          // makes the browser recalculate styles and recreate compositor layers
-          // that were discarded while the tab was hidden.  The void operator
-          // discards the return value while keeping the side-effect.
-          if (this.shadowRoot) {
-            void this.shadowRoot.host.offsetHeight;
-          }
+          if (this.shadowRoot) void this.shadowRoot.host.offsetHeight;
         });
-        
-        // Delayed re-renders for connection recovery
-        setTimeout(() => this.requestUpdate(), 500);
-        setTimeout(() => this.requestUpdate(), 2000);
       }
     };
     document.addEventListener('visibilitychange', this._visibilityHandler);
     
-    // pageshow fires even when restored from bfcache (unlike visibilitychange)
+    // pageshow fires when page is restored from bfcache (back/forward navigation).
     this._pageshowHandler = (event) => {
       if (event.persisted) {
-        // Page was restored from bfcache — force full repaint
+        // Stay on whatever screen was active — the render logic self-corrects stale state.
         this._loadAppliances();
         this.requestUpdate();
         requestAnimationFrame(() => this.requestUpdate());
       }
     };
     window.addEventListener('pageshow', this._pageshowHandler);
-    
-    // Also handle focus event for additional reliability
+
+    // window focus covers the case where visibilitychange didn't fire (e.g. some
+    // mobile browsers, or when switching OS windows rather than browser tabs).
     this._focusHandler = () => {
-      if (!this._currentPath || this._currentPath === '' || this._currentPath === 'undefined') {
-        this._currentPath = 'welcome';
-      }
+      // Stay on whatever screen was active — do NOT reset to welcome.
       this.requestUpdate();
     };
     window.addEventListener('focus', this._focusHandler);
     
-    // Fix for blank screen when returning to a tab via HA sidebar navigation (Issue #66)
-    // IntersectionObserver detects when the panel element becomes visible in the viewport
-    // This handles the case where HA hides/shows the panel via CSS (display:none)
-    // which doesn't trigger visibilitychange or focus events
+    // IntersectionObserver handles the case where HA hides/shows the panel via
+    // CSS (display:none) rather than removing it from the DOM.  This does NOT
+    // fire visibilitychange or focus events.
     if (typeof IntersectionObserver !== 'undefined') {
       this._intersectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -346,7 +325,7 @@ class KitchenCookingPanel extends LitElement {
       this._intersectionObserver.observe(this);
     }
     
-    // Force re-render on reconnection
+    // Initial render on first connection.
     this.requestUpdate();
   }
 
@@ -878,6 +857,7 @@ class KitchenCookingPanel extends LitElement {
       const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_settings');
       if (response.status === 'ok' && response.settings?.agent_id) {
         this._aiAgentId = response.settings.agent_id;
+        this._aiBackupAgentId = response.settings.backup_agent_id || '';
       }
     } catch (e) {
       console.error('[AI Settings] Failed to load settings on startup:', e);
@@ -900,12 +880,15 @@ class KitchenCookingPanel extends LitElement {
   async _saveAISettings() {
     try {
       const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_settings', {
-        agent_id: this._aiAgentId
+        agent_id: this._aiAgentId,
+        backup_agent_id: this._aiBackupAgentId,
       });
       
       if (response.status === 'ok') {
-        // Show success message
-        this._showMessage('AI Settings Saved', `✅ Settings saved successfully!\n\nAgent ID: ${this._aiAgentId}\n\nYour AI Recipe Builder will now use this agent.`, false);
+        const backupNote = this._aiBackupAgentId
+          ? `\n\nBackup Agent ID: ${this._aiBackupAgentId}\n\nThe backup agent will be used automatically if the primary agent is overloaded.`
+          : '';
+        this._showMessage('AI Settings Saved', `✅ Settings saved successfully!\n\nAgent ID: ${this._aiAgentId}${backupNote}`, false);
         this._closeAISettings();
       } else {
         this._showMessage('Failed to Save Settings', `❌ ${response.message}`, true);
@@ -2241,6 +2224,30 @@ class KitchenCookingPanel extends LitElement {
       return html`<div class="loading">Loading Home Assistant connection...</div>`;
     }
 
+    try {
+      return this._renderPanel();
+    } catch (err) {
+      // Error boundary: if anything in the render tree throws, show a recovery
+      // screen instead of leaving the panel blank.  Reset to a clean state so
+      // the next render attempt succeeds.  This is the ONLY place that forces
+      // a path reset — tab switches never reset navigation any more.
+      console.error('KitchenCookingPanel render error — resetting to welcome screen', err);
+      if (this._currentPath !== 'ai_recipe_builder') {
+        this._currentPath = 'welcome';
+      }
+      this._meaterCookRatingState = null;
+      this._recipeCookState = null;
+      // Schedule a fresh render in the next microtask.
+      this.requestUpdate();
+      return html`
+        <div class="loading" style="padding:48px;text-align:center;">
+          <p>🔄 Reloading Kitchen Cooking Engine…</p>
+        </div>
+      `;
+    }
+  }
+
+  _renderPanel() {
     const entities = this._findCookingEntities();
     
     // Auto-select first entity if not selected or if selected entity no longer exists
@@ -2298,6 +2305,21 @@ class KitchenCookingPanel extends LitElement {
                     placeholder="extended_openai_conversation_2"
                     style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; font-family: monospace;"
                   />
+
+                  <label for="ai-backup-agent-id" style="display: block; margin-top: 16px; margin-bottom: 8px; font-weight: 600;">
+                    Backup Agent ID: <span style="font-weight: 400; font-size: 0.9em;">(optional — used when primary is overloaded)</span>
+                  </label>
+                  <input
+                    id="ai-backup-agent-id"
+                    type="text"
+                    .value=${this._aiBackupAgentId}
+                    @input=${(e) => { this._aiBackupAgentId = e.target.value; }}
+                    placeholder="conversation.google_generative_ai_conversation"
+                    style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; font-family: monospace;"
+                  />
+                  <p style="margin-top: 6px; font-size: 0.85em; color: var(--secondary-text-color);">
+                    If the primary agent returns a 503 / overloaded error (even after retries), the backup agent is tried automatically.
+                  </p>
                   
                   <p style="margin-top: 12px; font-size: 0.9em; color: var(--secondary-text-color);">
                     <strong>Common agent IDs:</strong>
@@ -2305,6 +2327,7 @@ class KitchenCookingPanel extends LitElement {
                   <ul style="margin: 8px 0; padding-left: 24px; font-size: 0.9em; color: var(--secondary-text-color);">
                     <li><code>extended_openai_conversation_2</code> - Extended OpenAI Conversation</li>
                     <li><code>conversation.openai_conversation</code> - OpenAI Conversation</li>
+                    <li><code>conversation.google_generative_ai_conversation</code> - Google Gemini</li>
                     <li><code>conversation.home_assistant_cloud</code> - Nabu Casa Cloud</li>
                   </ul>
                   
@@ -4559,9 +4582,18 @@ class KitchenCookingPanel extends LitElement {
 
       ${this._aiRecipeSuggestions.length === 0 ? html`
         <ha-card>
-          <div class="card-content loading-state">
+          <div class="card-content loading-state ai-generation-loading">
             <ha-circular-progress active></ha-circular-progress>
-            <p>Generating recipes with AI...</p>
+            <p class="ai-status-primary">${this._aiGenerationStatus || '🤖 Connecting to AI agent...'}</p>
+            ${this._aiGenerationElapsed > 0 ? html`
+              <p class="ai-status-elapsed">${this._aiGenerationElapsed}s elapsed</p>
+            ` : ''}
+            ${this._aiGenerationStatus && (this._aiGenerationStatus.includes('overloaded') || this._aiGenerationStatus.includes('Retrying') || this._aiGenerationStatus.includes('waiting')) ? html`
+              <p class="ai-status-hint">The AI service is busy. Your request is being retried automatically.</p>
+            ` : ''}
+            ${this._aiGenerationStatus && this._aiGenerationStatus.includes('backup') ? html`
+              <p class="ai-status-hint">Switching to backup AI agent — hang on!</p>
+            ` : ''}
           </div>
         </ha-card>
       ` : html`
@@ -5116,7 +5148,24 @@ class KitchenCookingPanel extends LitElement {
       // From first step, go back to overview
       this._recipeCookState.currentStep = -1;
     } else {
-      // If at overview, exit cook flow
+      // At overview page — exit the cook flow.
+      // If the user came from AI recipe suggestions, go back there instead of welcome.
+      if (this._showAIRecipeSuggestions) {
+        // Remove from active cooks array and clean up, but don't navigate to welcome.
+        if (this._recipeCookState) {
+          const cookId = this._recipeCookState.id;
+          this._activeRecipeCooks = this._activeRecipeCooks.filter(c => c.id !== cookId);
+        }
+        this._recipeCookState = null;
+        if (this._recipeCookTimer) {
+          clearInterval(this._recipeCookTimer);
+          this._recipeCookTimer = null;
+        }
+        this._persistActiveRecipeCooks();
+        // Stay in ai_recipe_builder flow — suggestions are still in _aiRecipeSuggestions
+        this.requestUpdate();
+        return;
+      }
       this._stopRecipeCook();
       return; // _stopRecipeCook already clears persisted state
     }
@@ -5219,6 +5268,54 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
+   * Start polling the backend status endpoint once per second.
+   *
+   * ``GET /api/kitchen_cooking_engine/ai_recipes/status`` returns the exact
+   * message that the backend wrote at its most recent real step — no guessing.
+   * Steps emitted by the backend include:
+   *   "🤖 Sending request to AI agent (attempt 1/7)..."
+   *   "⚠️ AI overloaded — waiting 3s before retry (attempt 1/7 failed)..."
+   *   "🔄 Retrying AI agent (attempt 2/7)..."
+   *   "⚠️ Primary agent exhausted — switching to backup AI agent..."
+   *   "🤖 Trying backup AI agent (attempt 1/7)..."
+   *   "✅ Response received — parsing recipes..."
+   */
+  _startAIStatusPolling() {
+    this._stopAIStatusPolling();
+    this._aiGenerationElapsed = 0;
+    this._aiGenerationStatus = '🤖 Connecting to AI agent...';
+    const startTime = Date.now();
+    this._aiGenerationTimer = setInterval(async () => {
+      this._aiGenerationElapsed = Math.floor((Date.now() - startTime) / 1000);
+      try {
+        const res = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/status');
+        if (res && res.message) {
+          this._aiGenerationStatus = res.message;
+        }
+      } catch (err) {
+        // Log unexpected errors (e.g. auth failure, endpoint missing) to aid
+        // debugging, but don't crash — the display keeps the last known status.
+        if (err && err.status_code && err.status_code !== 503 && err.status_code !== 429) {
+          console.warn('[AI Status] Polling error:', err);
+        }
+      }
+      this.requestUpdate();
+    }, 1000);
+  }
+
+  /** Stop the status polling interval. */
+  _stopAIStatusPolling() {
+    if (this._aiGenerationTimer) {
+      clearInterval(this._aiGenerationTimer);
+      this._aiGenerationTimer = null;
+    }
+  }
+
+  // Keep old name as alias so nothing else breaks if called elsewhere.
+  _startAIStatusUpdater() { this._startAIStatusPolling(); }
+  _stopAIStatusUpdater()  { this._stopAIStatusPolling();  }
+
+  /**
    * Phase 6: Generate AI recipes based on selections
    */
   async _generateAIRecipes() {
@@ -5230,6 +5327,7 @@ class KitchenCookingPanel extends LitElement {
     this._showAIStyleSelector = false;
     this._showAIRecipeSuggestions = true;
     this._aiRecipeSuggestions = []; // Clear previous suggestions
+    this._startAIStatusPolling();
     this.requestUpdate();
 
     try {
@@ -5271,6 +5369,8 @@ class KitchenCookingPanel extends LitElement {
       // Go back to style selection
       this._showAIRecipeSuggestions = false;
       this._showAIStyleSelector = true;
+    } finally {
+      this._stopAIStatusPolling();
     }
 
     this.requestUpdate();
@@ -5328,6 +5428,7 @@ class KitchenCookingPanel extends LitElement {
           required_appliances: fullRecipe.required_appliances || []
         },
         appliance_ids: this._selectedAppliance ? [this._selectedAppliance.id] : [],
+        main_appliance_id: this._selectedAppliance ? this._selectedAppliance.id : null,
         cooking_style: this._selectedCookingStyle || 'quick_and_easy',
         complexity: this._aiComplexity || 3,
         user_ingredients: this._selectedIngredients || [],
@@ -5822,6 +5923,17 @@ class KitchenCookingPanel extends LitElement {
   async _startAIRecipeCreation() {
     this._currentPath = 'ai_recipe_builder';
     this._selectedIngredients = [];
+
+    // Auto-inject the selected appliance as the first ingredient so the AI
+    // always targets the right appliance.  This mirrors what the user proved
+    // works: typing "use Ninja Combi programs" as a manual ingredient makes
+    // the AI generate correct recipes.  It shows as a normal removable chip —
+    // click × to remove it for fully generic recipes.
+    const applianceName = this._selectedAppliance?.name;
+    if (applianceName) {
+      this._selectedIngredients = [`use ${applianceName} programs`];
+    }
+
     this._selectedCookingStyle = null;
     this._aiRecipeSuggestions = [];
     
@@ -7410,6 +7522,36 @@ class KitchenCookingPanel extends LitElement {
         margin: 0;
         color: var(--secondary-text-color);
         font-size: 14px;
+      }
+
+      .ai-generation-loading {
+        padding: 40px 24px;
+      }
+
+      .ai-status-primary {
+        font-size: 16px !important;
+        font-weight: 600;
+        color: var(--primary-text-color) !important;
+        margin: 0 0 6px 0 !important;
+        transition: opacity 0.3s ease;
+      }
+
+      .ai-status-elapsed {
+        font-size: 12px !important;
+        color: var(--disabled-text-color, #9e9e9e) !important;
+        margin: 0 0 10px 0 !important;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .ai-status-hint {
+        margin: 8px auto 0 auto !important;
+        max-width: 320px;
+        font-size: 12px !important;
+        color: var(--secondary-text-color) !important;
+        background: var(--secondary-background-color, rgba(0,0,0,0.05));
+        border-radius: 6px;
+        padding: 8px 12px;
+        line-height: 1.4;
       }
 
       .error-card {

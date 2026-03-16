@@ -19,7 +19,9 @@ Usage:
 
 from __future__ import annotations
 
+import asyncio
 import logging
+import random
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional, Set, Dict, Any
@@ -37,6 +39,7 @@ from .recipes.models import (
     MealType,
 )
 from .appliances.registry import get_registry
+from .const import DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -192,6 +195,17 @@ class AIRecipeBuilder:
         self.hass = hass
         self._session_recipes: Dict[str, AIRecipeDetail] = {}
         self._recipe_counter = 0
+
+    def _set_status(self, message: str) -> None:
+        """Write the current generation step message to hass.data for frontend polling.
+
+        The frontend polls ``GET /api/kitchen_cooking_engine/ai_recipes/status``
+        every second and displays whatever message is stored here.  This is the
+        ONLY source of status messages — the frontend never guesses.
+        """
+        if DOMAIN not in self.hass.data:
+            self.hass.data[DOMAIN] = {}
+        self.hass.data[DOMAIN]["ai_generation_status"] = message
     
     async def check_openai_available(self) -> bool:
         """Check if OpenAI conversation integration is available.
@@ -306,7 +320,9 @@ class AIRecipeBuilder:
         
         # Call OpenAI via conversation integration
         try:
+            self._set_status("")  # clear any stale status from a previous call
             response = await self._call_openai(prompt)
+            self._set_status("✅ Response received — parsing recipes...")
             suggestions = self._parse_suggestions(response)
             
             if not suggestions:
@@ -327,6 +343,7 @@ class AIRecipeBuilder:
         suggestion_id: str,
         suggestion: AIRecipeSuggestion,
         appliance_ids: Optional[List[str]] = None,
+        main_appliance_id: Optional[str] = None,
         cooking_style: str = "quick_and_easy",
         complexity: int = 3,
         user_ingredients: Optional[List[str]] = None,
@@ -338,6 +355,7 @@ class AIRecipeBuilder:
             suggestion_id: ID of the suggestion to expand
             suggestion: The suggestion object with recipe summary
             appliance_ids: Optional list of available appliance IDs
+            main_appliance_id: Optional ID of the primary/selected appliance
             cooking_style: Original cooking style used for suggestions
             complexity: Recipe complexity 1-5 (used for ingredient ceiling)
             user_ingredients: Original user-selected ingredients (for ceiling)
@@ -357,6 +375,7 @@ class AIRecipeBuilder:
         prompt = self._build_detail_prompt(
             suggestion,
             appliance_info,
+            main_appliance_id=main_appliance_id,
             cooking_style=cooking_style,
             complexity=complexity,
             user_ingredients=user_ingredients or suggestion.main_ingredients,
@@ -375,6 +394,7 @@ class AIRecipeBuilder:
         except Exception as ex:
             _LOGGER.error("Failed to get recipe detail: %s", ex, exc_info=True)
             raise RuntimeError(f"Failed to get recipe detail: {str(ex)}")
+
     
     def convert_to_unified_recipe(
         self,
@@ -542,6 +562,11 @@ class AIRecipeBuilder:
 
         # Build primary appliance directive when user has selected a specific appliance
         primary_appliance_directive = ""
+        # Pseudo-ingredient injected into the "Available ingredients" line so the AI
+        # treats using that appliance's programs as a hard requirement — this mirrors
+        # the user-confirmed workaround of manually adding "use ninja combi programs"
+        # as an ingredient in the UI.
+        primary_appliance_ingredient = ""
         if main_appliance_id and appliance_info and appliance_info.get("appliances"):
             main_appliance = next(
                 (a for a in appliance_info["appliances"] if a.get("appliance_id") == main_appliance_id),
@@ -555,11 +580,14 @@ class AIRecipeBuilder:
                 )
             else:
                 main_name = f"{main_appliance['brand']} {main_appliance['model']}"
+                # Pseudo-ingredient: placed right in the ingredients line so the AI
+                # treats the appliance programs as a required item (proven effective)
+                primary_appliance_ingredient = f"use {main_name} cooking programs"
                 primary_appliance_directive = (
                     f"\nCRITICAL RULE — PRIMARY APPLIANCE:\n"
                     f"The user has specifically selected the {main_name} as their primary cooking appliance. "
                     f"ALL 4 recipes MUST be designed to be cooked primarily using this appliance. "
-                    f"Exploit its unique cooking modes and features. "
+                    f"Exploit its unique cooking modes, programs, and features. "
                     f"Do NOT suggest recipes that require a different primary appliance."
                 )
         
@@ -617,16 +645,21 @@ class AIRecipeBuilder:
             else:
                 cuisine_hint = f"\nCuisine fusion: combine elements from {', '.join(cuisine_names)} — blend authentic local traditions from each cuisine. Each cuisine's contribution should reflect how it is cooked in its home country, not Westernized versions."
         
-        prompt = f"""You are a professional chef creating recipes for a home kitchen.
+        # Build the ingredients line, injecting the primary appliance pseudo-ingredient
+        # first so the AI sees it as a hard requirement alongside the food ingredients.
+        all_ingredients = list(ingredients)
+        if primary_appliance_ingredient:
+            all_ingredients.insert(0, primary_appliance_ingredient)
 
-Available ingredients: {', '.join(ingredients)}
+        prompt = f"""You are a professional chef creating recipes for a home kitchen.
+{primary_appliance_directive}
+Available ingredients: {', '.join(all_ingredients)}
 Also assume basic staples are available: cooking oil, butter, salt, black pepper, sugar, vinegar.
 Cooking style: {cooking_style.replace('_', ' ')}
 Servings: {servings}
 Complexity level: {complexity_desc}{cuisine_hint}{restrictions}{time_constraint}
 {ingredient_ceiling_rule}
 {cooking_time_honesty_rule}
-{primary_appliance_directive}
 Available kitchen equipment:
 {appliance_list}
 
@@ -679,6 +712,10 @@ Format your response as a JSON array with exactly 4 recipes:
   ...
 ]
 
+IMPORTANT: Respond ONLY with the JSON array above. Do not include any explanatory text,
+preamble, commentary, or markdown formatting outside the JSON. The very first character
+of your response must be '[' and the very last must be ']'.
+
 Make the recipes diverse in cooking methods, flavors, and cuisines.
 """
         return prompt
@@ -687,6 +724,7 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
         self,
         suggestion: AIRecipeSuggestion,
         appliance_info: Dict[str, Any],
+        main_appliance_id: Optional[str] = None,
         cooking_style: str = "quick_and_easy",
         complexity: int = 3,
         user_ingredients: Optional[List[str]] = None,
@@ -697,6 +735,7 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
         Args:
             suggestion: The recipe suggestion to expand
             appliance_info: Available appliances
+            main_appliance_id: Optional ID of the primary/selected appliance
             cooking_style: Original cooking style (for ingredient ceiling)
             complexity: Recipe complexity 1-5 (for ingredient ceiling)
             user_ingredients: Original user-selected ingredients (for ceiling)
@@ -729,8 +768,24 @@ Make the recipes diverse in cooking methods, flavors, and cuisines.
             len(resolved_ingredients), cooking_style, complexity
         )
 
-        prompt = f"""You are a professional chef. Please provide the complete, detailed recipe for:
+        # Build primary appliance directive (same logic as _build_suggestion_prompt)
+        primary_appliance_directive = ""
+        if main_appliance_id and appliance_info and appliance_info.get("appliances"):
+            main_appliance = next(
+                (a for a in appliance_info["appliances"] if a.get("appliance_id") == main_appliance_id),
+                None,
+            )
+            if main_appliance:
+                main_name = f"{main_appliance['brand']} {main_appliance['model']}"
+                primary_appliance_directive = (
+                    f"\nCRITICAL RULE — PRIMARY APPLIANCE:\n"
+                    f"This recipe MUST use the {main_name} as the primary cooking appliance. "
+                    f"Exploit its unique cooking modes, programs, and features in the instructions and phases. "
+                    f"Do NOT describe steps that require a different primary appliance."
+                )
 
+        prompt = f"""You are a professional chef. Please provide the complete, detailed recipe for:
+{primary_appliance_directive}
 Recipe Name: {suggestion.name}
 Description: {suggestion.description}
 Main Ingredients: {', '.join(suggestion.main_ingredients)}
@@ -794,57 +849,290 @@ Format your response as JSON:
   "prep_time_minutes": 15,
   "servings": {servings}
 }}
+
+IMPORTANT: Respond ONLY with the JSON object above. Do not include any explanatory text,
+preamble, commentary, or markdown formatting outside the JSON. The very first character
+of your response must be '{{' and the very last must be '}}'.
 """
         return prompt
-    
+
+    # Keywords that identify a transient / overload error from the AI service.
+    # Checked both against exception messages and response text.
+    # Both "rate limit" and "rate_limit" are included because different providers
+    # use different formats (e.g. OpenAI uses spaces, Google uses underscores).
+    _TRANSIENT_ERROR_INDICATORS: tuple = (
+        "503",
+        "429",
+        "unavailable",
+        "high demand",
+        "try again later",
+        "temporarily unavailable",
+        "service unavailable",
+        "rate limit",
+        "rate_limit",
+        "quota exceeded",
+        "overloaded",
+        "capacity",
+        "resource_exhausted",
+        "resourceexhausted",
+    )
+
+    @classmethod
+    def _is_transient_error(cls, text: str) -> bool:
+        """Return True when *text* contains a known transient-error indicator."""
+        lower = text.lower()
+        return any(ind in lower for ind in cls._TRANSIENT_ERROR_INDICATORS)
+
+    @staticmethod
+    def _check_ai_response_for_errors(response: str) -> None:
+        """Check for known AI error patterns and raise ValueError with a helpful message.
+
+        This must be called BEFORE any ``try/except`` block that would swallow the
+        ValueError — doing so ensures the user-friendly message reaches the caller
+        without being re-wrapped by generic exception handlers.
+
+        Note: transient service errors (503 / 429 / overloaded) are NOT raised here;
+        they are handled by the retry loop in ``_call_openai`` which calls
+        ``_is_transient_error`` directly.
+
+        Raises:
+            ValueError: if the response contains a known error pattern.
+        """
+        response_lower = response.lower()
+
+        # Transient service errors (503 / 429 / rate-limit / UNAVAILABLE).
+        # These are retried by _call_openai — raise here only when all retries
+        # are exhausted (the caller sets a flag to skip further retries).
+        if AIRecipeBuilder._is_transient_error(response):
+            _LOGGER.error(
+                "AI service returned a transient error after all retries: %s",
+                response[:500],
+            )
+            raise ValueError(
+                f"The AI service is temporarily unavailable (high demand or rate limit). "
+                f"Please try again in a few minutes. "
+                f"AI response: {response[:500]}"
+            )
+
+        # Token-limit cut-off
+        if "max_tokens" in response_lower or "FinishReason.MAX_TOKENS" in response:
+            _LOGGER.error("AI response cut off by token limit: %s", response[:500])
+            raise ValueError(
+                "The AI response was cut off due to token limits. "
+                "Please configure your AI assistant with a higher max_tokens setting "
+                "(recommended: 2000 or more for recipe generation)."
+            )
+
+        # Content policy block
+        if "content violations" in response_lower or "got blocked" in response_lower:
+            _LOGGER.error("AI blocked response due to content policy: %s", response[:500])
+            raise ValueError(
+                "The AI blocked the response due to content policy. "
+                "This may be a false positive. Try different ingredients or cooking style. "
+                "If this persists, check your AI assistant's content filtering settings."
+            )
+
+        # Generic AI component error (must come AFTER the more specific checks above
+        # so callers get the most actionable message possible).
+        generic_error_patterns = [
+            "sorry, i had a problem",
+            "reason:",
+        ]
+        for pattern in generic_error_patterns:
+            if pattern in response_lower:
+                _LOGGER.error(
+                    "AI conversation component returned an error: %s", response[:500]
+                )
+                raise ValueError(
+                    f"The AI conversation component encountered an error. "
+                    f"AI response: {response[:500]}. "
+                    f"Please check your AI assistant configuration."
+                )
+
+    @staticmethod
+    def _extract_json_from_text(text: str, start_char: str, end_char: str) -> str:
+        """Scan *text* for a JSON value that starts with *start_char* (``[`` or ``{``).
+
+        Returns the candidate substring if it parses as valid JSON, otherwise
+        returns *text* unchanged so that the caller's ``json.loads`` can raise the
+        real ``JSONDecodeError``.
+
+        This handles the common case where the AI prepends a conversational
+        sentence before the JSON (e.g. "Here are 4 recipes:\\n\\n[...]").
+        """
+        import json
+
+        pos = text.find(start_char)
+        if pos < 0:
+            return text  # nothing to scan
+        candidate = text[pos:]
+        last_end = candidate.rfind(end_char)
+        if last_end <= 0:
+            return text
+        candidate = candidate[: last_end + 1]
+        try:
+            json.loads(candidate)
+            return candidate
+        except json.JSONDecodeError:
+            return text  # not valid JSON; let the caller handle the error
+
     async def _call_openai(self, prompt: str) -> str:
-        """Call OpenAI via Home Assistant conversation integration.
-        
+        """Call the AI agent via Home Assistant conversation integration.
+
+        Retries automatically on transient service errors (503 / 429 / overloaded)
+        using exponential backoff with jitter (up to ``_MAX_RETRIES`` attempts per
+        agent).  If the primary agent is still overloaded after all retries *and* a
+        backup agent is configured, the same retry loop is executed against the
+        backup agent before giving up entirely.
+
         Args:
             prompt: The prompt to send
-        
+
         Returns:
             AI response text
         """
-        try:
-            # Load AI settings from storage to get user-configured agent ID
-            from .storage import async_load_ai_settings
-            
-            ai_settings = await async_load_ai_settings(self.hass)
-            agent_id = ai_settings.get("agent_id", "extended_openai_conversation_2")
-            
-            _LOGGER.info(f"Using configured AI agent: {agent_id}")
-            _LOGGER.info(f"Calling conversation agent with prompt length: {len(prompt)}")
-            
-            # Use Home Assistant's conversation component
-            # This handles the OpenAI API integration
-            result = await conversation.async_converse(
-                hass=self.hass,
-                text=prompt,
-                conversation_id=None,
-                context=None,
-                language=None,
-                agent_id=agent_id,  # Use OpenAI agent if found, otherwise default
+        _MAX_RETRIES = 7
+
+        # Load AI settings outside the retry loop so errors here propagate clearly.
+        from .storage import async_load_ai_settings
+        ai_settings = await async_load_ai_settings(self.hass)
+        primary_agent_id = ai_settings.get("agent_id", "extended_openai_conversation_2")
+        backup_agent_id = ai_settings.get("backup_agent_id", "").strip()
+
+        _LOGGER.info("Using configured AI agent: %s", primary_agent_id)
+        if backup_agent_id:
+            _LOGGER.info("Backup AI agent configured: %s", backup_agent_id)
+
+        # Build the list of agents to try. Backup is only added when non-empty
+        # and different from the primary so we don't double-attempt the same agent.
+        agents_to_try = [primary_agent_id]
+        if backup_agent_id and backup_agent_id != primary_agent_id:
+            agents_to_try.append(backup_agent_id)
+
+        _LOGGER.info("Calling conversation agent with prompt length: %d", len(prompt))
+
+        last_exception: Exception | None = None
+
+        for agent_id in agents_to_try:
+            is_backup = agent_id != primary_agent_id
+            if is_backup:
+                _LOGGER.warning(
+                    "Primary AI agent exhausted all retries — switching to backup agent '%s'",
+                    agent_id,
+                )
+                self._set_status(
+                    f"⚠️ Primary agent exhausted — switching to backup AI agent..."
+                )
+
+            for attempt in range(_MAX_RETRIES):
+                # Emit the real step so the frontend polling sees it immediately.
+                if attempt == 0 and not is_backup:
+                    self._set_status(f"🤖 Sending request to AI agent (attempt 1/{_MAX_RETRIES})...")
+                elif attempt == 0 and is_backup:
+                    self._set_status(f"🤖 Trying backup AI agent (attempt 1/{_MAX_RETRIES})...")
+                else:
+                    self._set_status(f"🔄 Retrying AI agent (attempt {attempt + 1}/{_MAX_RETRIES})...")
+
+                # --- perform the API call ---
+                try:
+                    result = await conversation.async_converse(
+                        hass=self.hass,
+                        text=prompt,
+                        conversation_id=None,
+                        context=None,
+                        language=None,
+                        agent_id=agent_id,
+                    )
+                except Exception as ex:
+                    ex_str = str(ex)
+                    if self._is_transient_error(ex_str):
+                        # Exponential backoff: 2^attempt seconds plus up to 2s of
+                        # random jitter. The jitter spreads concurrent requests from
+                        # multiple users so they don't all hammer the service at the
+                        # same time after a rate-limit window resets.
+                        wait = min(2 ** attempt, 30) + random.uniform(0, 2)
+                        _LOGGER.warning(
+                            "AI agent '%s' overloaded/unavailable — retrying in %.1fs "
+                            "(attempt %d/%d): %s",
+                            agent_id, wait, attempt + 1, _MAX_RETRIES, ex_str[:200],
+                        )
+                        self._set_status(
+                            f"⚠️ AI overloaded — waiting {wait:.0f}s before retry "
+                            f"(attempt {attempt + 1}/{_MAX_RETRIES} failed)..."
+                        )
+                        last_exception = ex
+                        await asyncio.sleep(wait)
+                        continue
+                    # Non-transient exception — fail immediately (no point retrying).
+                    _LOGGER.error(
+                        "Failed to call conversation agent '%s': %s", agent_id, ex, exc_info=True
+                    )
+                    raise RuntimeError(
+                        f"Failed to communicate with AI agent '{agent_id}'. "
+                        f"Error: {ex_str}. "
+                        f"Please verify: 1) AI agent is configured in Voice Assistants, "
+                        f"2) Your API key is valid, "
+                        f"3) Check Home Assistant logs for more details"
+                    )
+
+                response_text = result.response.speech.get("plain", {}).get("speech", "")
+                _LOGGER.debug(
+                    "AI agent '%s' raw response (first 500 chars): %s",
+                    agent_id,
+                    response_text[:500] if response_text else "(empty)",
+                )
+
+                if not response_text:
+                    _LOGGER.error(
+                        "Empty response from AI agent '%s'. "
+                        "The agent is reachable but returned no text. "
+                        "Check the agent's configuration and API key.",
+                        agent_id,
+                    )
+                    raise ValueError(
+                        f"Empty response from AI agent '{agent_id}'. "
+                        f"The agent is connected but returned no text. "
+                        f"Check the agent configuration and ensure it can generate text responses."
+                    )
+
+                # Check whether the response body itself signals a transient error
+                # (some providers return HTTP 200 with an error payload).
+                if self._is_transient_error(response_text):
+                    wait = min(2 ** attempt, 30) + random.uniform(0, 2)  # capped at 30s + jitter
+                    _LOGGER.warning(
+                        "AI agent '%s' response contains transient error indicator — "
+                        "retrying in %.1fs (attempt %d/%d): %s",
+                        agent_id, wait, attempt + 1, _MAX_RETRIES, response_text[:200],
+                    )
+                    self._set_status(
+                        f"⚠️ AI overloaded — waiting {wait:.0f}s before retry "
+                        f"(attempt {attempt + 1}/{_MAX_RETRIES} failed)..."
+                    )
+                    last_exception = RuntimeError(
+                        f"Transient error in AI response: {response_text[:200]}"
+                    )
+                    await asyncio.sleep(wait)
+                    continue
+
+                _LOGGER.info(
+                    "Received response of length %d from agent '%s'",
+                    len(response_text), agent_id,
+                )
+                return response_text
+
+            # Inner retry loop exhausted for this agent — move to backup (if any).
+            _LOGGER.warning(
+                "AI agent '%s' still overloaded after %d retries.",
+                agent_id, _MAX_RETRIES,
             )
-            
-            response_text = result.response.speech.get("plain", {}).get("speech", "")
-            
-            if not response_text:
-                _LOGGER.error("Empty response from conversation agent")
-                raise ValueError("Empty response from AI - check if the agent is configured correctly")
-            
-            _LOGGER.info(f"Received response of length: {len(response_text)}")
-            return response_text
-            
-        except Exception as ex:
-            _LOGGER.error("Failed to call conversation agent: %s", ex, exc_info=True)
-            raise RuntimeError(
-                f"Failed to communicate with OpenAI. "
-                f"Error: {str(ex)}. "
-                f"Please verify: 1) OpenAI assistant is configured in Voice Assistants, "
-                f"2) Your OpenAI API key is valid, "
-                f"3) Check Home Assistant logs for more details"
-            )
+
+        # Both primary (and backup, if configured) exhausted.
+        agents_tried = " → ".join(agents_to_try)
+        raise RuntimeError(
+            f"All AI agents ({agents_tried}) are still overloaded after "
+            f"{_MAX_RETRIES} retries each. "
+            f"Please try again later. Last error: {last_exception}"
+        )
     
     def _parse_suggestions(self, response: str) -> List[AIRecipeSuggestion]:
         """Parse AI response into recipe suggestions.
@@ -858,45 +1146,17 @@ Format your response as JSON:
         import json
         import re
         
+        # Save the original response BEFORE any extraction so we can include it
+        # in error messages even after the variable is reassigned.
+        original_response = response
+
+        # Check for AI error messages BEFORE the try/except block so the ValueError
+        # propagates cleanly to the caller without being re-wrapped by the generic
+        # except-Exception handler below.
+        _LOGGER.debug(f"Raw AI response (first 500 chars): {response[:500]}")
+        self._check_ai_response_for_errors(response)
+
         try:
-            # Log raw response for debugging
-            _LOGGER.debug(f"Raw AI response (first 500 chars): {response[:500]}")
-            
-            # Check for common error patterns from AI conversation component
-            error_patterns = [
-                "Sorry, I had a problem",
-                "FinishReason.MAX_TOKENS",
-                "content violations",
-                "got blocked",
-                "Reason:",
-            ]
-            
-            response_lower = response.lower()
-            for pattern in error_patterns:
-                if pattern.lower() in response_lower:
-                    _LOGGER.error(f"AI conversation component returned an error: {response[:500]}")
-                    
-                    # Provide specific guidance based on error type
-                    if "MAX_TOKENS" in response or "max_tokens" in response_lower:
-                        error_msg = (
-                            "The AI response was cut off due to token limits. "
-                            "Please configure your AI assistant with a higher max_tokens setting "
-                            "(recommended: 2000 or more for recipe generation)."
-                        )
-                    elif "content violations" in response_lower or "got blocked" in response_lower:
-                        error_msg = (
-                            "The AI blocked the response due to content policy. "
-                            "This may be a false positive. Try different ingredients or cooking style. "
-                            "If this persists, check your AI assistant's content filtering settings."
-                        )
-                    else:
-                        error_msg = (
-                            f"The AI conversation component encountered an error: {response[:200]}... "
-                            f"Please check your AI assistant configuration."
-                        )
-                    
-                    raise ValueError(error_msg)
-            
             # Try to extract JSON from response
             # AI might wrap it in markdown code blocks or add extra text
             response = response.strip()
@@ -916,10 +1176,13 @@ Format your response as JSON:
                 response = response[start:end].strip()
             
             # Try to find JSON array in the response
-            # Look for [ at start and ] at end
             json_match = re.search(r'\[\s*\{.*\}\s*\]', response, re.DOTALL)
             if json_match:
                 response = json_match.group(0)
+            else:
+                # Fallback: scan from the first '[' for cases where the AI
+                # prepends conversational text before the JSON array.
+                response = self._extract_json_from_text(response, '[', ']')
             
             # Check if response is empty or too short
             if not response or len(response) < 10:
@@ -961,18 +1224,22 @@ Format your response as JSON:
         except json.JSONDecodeError as ex:
             _LOGGER.error(
                 "Failed to parse JSON from AI response. "
-                f"Error: {ex}. "
-                f"Response (first 200 chars): {response[:200]}"
+                "Error: %s. "
+                "Original AI response (first 500 chars): %s",
+                ex,
+                original_response[:500],
             )
             raise ValueError(
                 f"AI returned invalid JSON format. "
-                f"This usually means the AI assistant needs better configuration or the response was cut off. "
+                f"The AI responded with: '{original_response[:500]}'. "
+                f"This usually means the AI assistant returned a conversational response "
+                f"instead of JSON. Check your AI agent configuration. "
                 f"Error: {str(ex)}"
             )
         except Exception as ex:
             _LOGGER.error("Failed to parse AI suggestions: %s", ex, exc_info=True)
             # Include part of the response in the error for debugging
-            response_preview = response[:200] if response else "(empty response)"
+            response_preview = original_response[:500] if original_response else "(empty response)"
             raise ValueError(
                 f"Could not parse AI response into recipe suggestions. "
                 f"Response preview: {response_preview}... "
@@ -997,45 +1264,16 @@ Format your response as JSON:
         import json
         import re
         
+        # Save the original response BEFORE any extraction for error reporting.
+        original_response = response
+
+        # Check for AI error messages BEFORE the try/except block so the ValueError
+        # propagates cleanly to the caller without being re-wrapped by the generic
+        # except-Exception handler below.
+        _LOGGER.debug(f"Raw AI detail response (first 500 chars): {response[:500]}")
+        self._check_ai_response_for_errors(response)
+
         try:
-            # Log raw response for debugging
-            _LOGGER.debug(f"Raw AI detail response (first 500 chars): {response[:500]}")
-            
-            # Check for common error patterns from AI conversation component
-            error_patterns = [
-                "Sorry, I had a problem",
-                "FinishReason.MAX_TOKENS",
-                "content violations",
-                "got blocked",
-                "Reason:",
-            ]
-            
-            response_lower = response.lower()
-            for pattern in error_patterns:
-                if pattern.lower() in response_lower:
-                    _LOGGER.error(f"AI conversation component returned an error: {response[:500]}")
-                    
-                    # Provide specific guidance based on error type
-                    if "MAX_TOKENS" in response or "max_tokens" in response_lower:
-                        error_msg = (
-                            "The AI response was cut off due to token limits. "
-                            "Please configure your AI assistant with a higher max_tokens setting "
-                            "(recommended: 2000 or more for recipe details)."
-                        )
-                    elif "content violations" in response_lower or "got blocked" in response_lower:
-                        error_msg = (
-                            "The AI blocked the response due to content policy. "
-                            "This may be a false positive. Try a different recipe. "
-                            "If this persists, check your AI assistant's content filtering settings."
-                        )
-                    else:
-                        error_msg = (
-                            f"The AI conversation component encountered an error: {response[:200]}... "
-                            f"Please check your AI assistant configuration."
-                        )
-                    
-                    raise ValueError(error_msg)
-            
             # Extract JSON from response
             response = response.strip()
             
@@ -1057,6 +1295,10 @@ Format your response as JSON:
             json_match = re.search(r'\{.*\}', response, re.DOTALL)
             if json_match:
                 response = json_match.group(0)
+            else:
+                # Fallback: scan from the first '{' for cases where the AI
+                # prepends conversational text before the JSON object.
+                response = self._extract_json_from_text(response, '{', '}')
             
             # Check if response is empty or too short
             if not response or len(response) < 10:
@@ -1100,16 +1342,20 @@ Format your response as JSON:
         except json.JSONDecodeError as ex:
             _LOGGER.error(
                 "Failed to parse JSON from AI detail response. "
-                f"Error: {ex}. "
-                f"Response (first 200 chars): {response[:200]}"
+                "Error: %s. "
+                "Original AI response (first 500 chars): %s",
+                ex,
+                original_response[:500],
             )
             raise ValueError(
                 f"AI returned invalid JSON format for recipe details. "
+                f"The AI responded with: '{original_response[:500]}'. "
+                f"Check your AI agent configuration. "
                 f"Error: {str(ex)}"
             )
         except Exception as ex:
             _LOGGER.error("Failed to parse recipe detail: %s", ex, exc_info=True)
-            response_preview = response[:200] if response else "(empty response)"
+            response_preview = original_response[:500] if original_response else "(empty response)"
             raise ValueError(
                 f"Could not parse AI response into recipe details. "
                 f"Response preview: {response_preview}... "
