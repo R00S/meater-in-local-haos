@@ -19,7 +19,9 @@ Usage:
 
 from __future__ import annotations
 
+import asyncio
 import logging
+import random
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional, Set, Dict, Any
@@ -840,6 +842,31 @@ of your response must be '{{' and the very last must be '}}'.
 """
         return prompt
 
+    # Keywords that identify a transient / overload error from the AI service.
+    # Checked both against exception messages and response text.
+    _TRANSIENT_ERROR_INDICATORS: tuple = (
+        "503",
+        "429",
+        "unavailable",
+        "high demand",
+        "try again later",
+        "temporarily unavailable",
+        "service unavailable",
+        "rate limit",
+        "rate_limit",
+        "quota exceeded",
+        "overloaded",
+        "capacity",
+        "resource_exhausted",
+        "resourceexhausted",
+    )
+
+    @classmethod
+    def _is_transient_error(cls, text: str) -> bool:
+        """Return True when *text* contains a known transient-error indicator."""
+        lower = text.lower()
+        return any(ind in lower for ind in cls._TRANSIENT_ERROR_INDICATORS)
+
     @staticmethod
     def _check_ai_response_for_errors(response: str) -> None:
         """Check for known AI error patterns and raise ValueError with a helpful message.
@@ -848,37 +875,28 @@ of your response must be '{{' and the very last must be '}}'.
         ValueError — doing so ensures the user-friendly message reaches the caller
         without being re-wrapped by generic exception handlers.
 
+        Note: transient service errors (503 / 429 / overloaded) are NOT raised here;
+        they are handled by the retry loop in ``_call_openai`` which calls
+        ``_is_transient_error`` directly.
+
         Raises:
             ValueError: if the response contains a known error pattern.
         """
         response_lower = response.lower()
 
         # Transient service errors (503 / 429 / rate-limit / UNAVAILABLE).
-        # These are NOT configuration issues — the user should retry later.
-        transient_indicators = [
-            "503",
-            "429",
-            "unavailable",
-            "high demand",
-            "try again later",
-            "temporarily unavailable",
-            "service unavailable",
-            "rate limit",
-            "rate_limit",
-            "quota exceeded",
-            "overloaded",
-        ]
-        for indicator in transient_indicators:
-            if indicator in response_lower:
-                _LOGGER.error(
-                    "AI service returned a transient error (will not retry): %s",
-                    response[:500],
-                )
-                raise ValueError(
-                    f"The AI service is temporarily unavailable (high demand or rate limit). "
-                    f"Please try again in a few minutes. "
-                    f"AI response: {response[:500]}"
-                )
+        # These are retried by _call_openai — raise here only when all retries
+        # are exhausted (the caller sets a flag to skip further retries).
+        if AIRecipeBuilder._is_transient_error(response):
+            _LOGGER.error(
+                "AI service returned a transient error after all retries: %s",
+                response[:500],
+            )
+            raise ValueError(
+                f"The AI service is temporarily unavailable (high demand or rate limit). "
+                f"Please try again in a few minutes. "
+                f"AI response: {response[:500]}"
+            )
 
         # Token-limit cut-off
         if "max_tokens" in response_lower or "FinishReason.MAX_TOKENS" in response:
@@ -943,15 +961,20 @@ of your response must be '{{' and the very last must be '}}'.
             return text  # not valid JSON; let the caller handle the error
 
     async def _call_openai(self, prompt: str) -> str:
-        """Call OpenAI via Home Assistant conversation integration.
-        
+        """Call the AI agent via Home Assistant conversation integration.
+
+        Retries automatically on transient service errors (503 / 429 / overloaded)
+        using exponential backoff with jitter (up to ``_MAX_RETRIES`` attempts).
+
         Args:
             prompt: The prompt to send
-        
+
         Returns:
             AI response text
         """
-        # Load AI settings outside the try/except so errors here propagate clearly.
+        _MAX_RETRIES = 7
+
+        # Load AI settings outside the retry loop so errors here propagate clearly.
         from .storage import async_load_ai_settings
         ai_settings = await async_load_ai_settings(self.hass)
         agent_id = ai_settings.get("agent_id", "extended_openai_conversation_2")
@@ -959,49 +982,86 @@ of your response must be '{{' and the very last must be '}}'.
         _LOGGER.info("Using configured AI agent: %s", agent_id)
         _LOGGER.info("Calling conversation agent with prompt length: %d", len(prompt))
 
-        # Wrap only the actual API call in try/except so we don't accidentally
-        # swallow the ValueError we intentionally raise below for empty responses.
-        try:
-            result = await conversation.async_converse(
-                hass=self.hass,
-                text=prompt,
-                conversation_id=None,
-                context=None,
-                language=None,
-                agent_id=agent_id,
-            )
-        except Exception as ex:
-            _LOGGER.error("Failed to call conversation agent '%s': %s", agent_id, ex, exc_info=True)
-            raise RuntimeError(
-                f"Failed to communicate with AI agent '{agent_id}'. "
-                f"Error: {str(ex)}. "
-                f"Please verify: 1) AI agent is configured in Voice Assistants, "
-                f"2) Your API key is valid, "
-                f"3) Check Home Assistant logs for more details"
-            )
+        last_exception: Exception | None = None
 
-        response_text = result.response.speech.get("plain", {}).get("speech", "")
-        _LOGGER.debug(
-            "AI agent '%s' raw response (first 500 chars): %s",
-            agent_id,
-            response_text[:500] if response_text else "(empty)",
-        )
+        for attempt in range(_MAX_RETRIES):
+            # --- perform the API call ---
+            try:
+                result = await conversation.async_converse(
+                    hass=self.hass,
+                    text=prompt,
+                    conversation_id=None,
+                    context=None,
+                    language=None,
+                    agent_id=agent_id,
+                )
+            except Exception as ex:
+                ex_str = str(ex)
+                if self._is_transient_error(ex_str):
+                    wait = (2 ** attempt) + random.uniform(0, 2)
+                    _LOGGER.warning(
+                        "AI agent '%s' overloaded/unavailable — retrying in %.1fs "
+                        "(attempt %d/%d): %s",
+                        agent_id, wait, attempt + 1, _MAX_RETRIES, ex_str[:200],
+                    )
+                    last_exception = ex
+                    await asyncio.sleep(wait)
+                    continue
+                # Non-transient exception — fail immediately.
+                _LOGGER.error(
+                    "Failed to call conversation agent '%s': %s", agent_id, ex, exc_info=True
+                )
+                raise RuntimeError(
+                    f"Failed to communicate with AI agent '{agent_id}'. "
+                    f"Error: {ex_str}. "
+                    f"Please verify: 1) AI agent is configured in Voice Assistants, "
+                    f"2) Your API key is valid, "
+                    f"3) Check Home Assistant logs for more details"
+                )
 
-        if not response_text:
-            _LOGGER.error(
-                "Empty response from AI agent '%s'. "
-                "The agent is reachable but returned no text. "
-                "Check the agent's configuration and API key.",
+            response_text = result.response.speech.get("plain", {}).get("speech", "")
+            _LOGGER.debug(
+                "AI agent '%s' raw response (first 500 chars): %s",
                 agent_id,
-            )
-            raise ValueError(
-                f"Empty response from AI agent '{agent_id}'. "
-                f"The agent is connected but returned no text. "
-                f"Check the agent configuration and ensure it can generate text responses."
+                response_text[:500] if response_text else "(empty)",
             )
 
-        _LOGGER.info("Received response of length: %d", len(response_text))
-        return response_text
+            if not response_text:
+                _LOGGER.error(
+                    "Empty response from AI agent '%s'. "
+                    "The agent is reachable but returned no text. "
+                    "Check the agent's configuration and API key.",
+                    agent_id,
+                )
+                raise ValueError(
+                    f"Empty response from AI agent '{agent_id}'. "
+                    f"The agent is connected but returned no text. "
+                    f"Check the agent configuration and ensure it can generate text responses."
+                )
+
+            # Check whether the response body itself signals a transient error
+            # (some providers return HTTP 200 with an error payload).
+            if self._is_transient_error(response_text):
+                wait = (2 ** attempt) + random.uniform(0, 2)
+                _LOGGER.warning(
+                    "AI agent '%s' response contains transient error indicator — "
+                    "retrying in %.1fs (attempt %d/%d): %s",
+                    agent_id, wait, attempt + 1, _MAX_RETRIES, response_text[:200],
+                )
+                last_exception = RuntimeError(
+                    f"Transient error in AI response: {response_text[:200]}"
+                )
+                await asyncio.sleep(wait)
+                continue
+
+            _LOGGER.info("Received response of length: %d", len(response_text))
+            return response_text
+
+        # All retries exhausted.
+        raise RuntimeError(
+            f"AI agent '{agent_id}' is still overloaded after {_MAX_RETRIES} retries. "
+            f"Please try again later. Last error: {last_exception}"
+        )
     
     def _parse_suggestions(self, response: str) -> List[AIRecipeSuggestion]:
         """Parse AI response into recipe suggestions.
