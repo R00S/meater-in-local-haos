@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 16 Mar 2026, 12:53 UTC
-Last Change: v0.5.5.95 - Fix active ingredient detection for AI recipes by scanning instruction text for ingredient keywords
+Last Change: v0.5.5.96 - Improve ingredient display: green for new, black for repeat, grey box, no borders
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "232"
+PANEL_VERSION = "234"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

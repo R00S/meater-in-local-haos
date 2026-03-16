@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 16 Mar 2026, 20:05 CET
+ * AUTO-GENERATED: 16 Mar 2026, 20:28 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -41,7 +41,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
-// Last generated: 16 Mar 2026, 20:05 CET
+// Last generated: 16 Mar 2026, 20:28 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -17141,49 +17141,78 @@ class KitchenCookingPanel extends LitElement {
     let instructionText = step.instructions || step.description || 'No instructions available.';
     instructionText = instructionText.replace(/^Step\s+\d+\s*:\s*/i, '');
 
-    // Build sorted ingredient list: active first (bold green), then inactive in 2 columns
+    // Build sorted ingredient list: new-active (green), repeat-active (black), inactive (2 columns)
     const allIngredients = recipe.ingredients && recipe.ingredients.length > 0 ? recipe.ingredients : [];
-    const activeIngs = [];
+    const newActiveIngs = [];
+    const repeatActiveIngs = [];
     const inactiveIngs = [];
-    const measureWords = new Set(['cups','cup','tbsp','tsp','ounce','ounces','pound','pounds','gram','grams','tablespoon','tablespoons','teaspoon','teaspoons','inch','lbs','chopped','diced','minced','sliced','finely','freshly','large','small','medium','optional','about','into','with','from','each','piece','pieces']);
+    const measureWords = new Set(['cups','cup','tbsp','tsp','ounce','ounces','pound','pounds','gram','grams','tablespoon','tablespoons','teaspoon','teaspoons','inch','lbs','chopped','diced','minced','sliced','finely','freshly','large','small','medium','optional','about','into','with','from','each','piece','pieces','water','drain','rinse','heat','place','minutes','adjust','taste','whole','clean','back','that','this','then','also','well','over','used','half','more','approx','skin','make']);
     const escapeRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const extractKeywords = (text) => text.split(/[\s,]+/).filter(w =>
+    const extractKeywords = (text) => text.split(/[\s,()]+/).filter(w =>
       w.length > 3 && !measureWords.has(w) && !/^\d/.test(w)
     );
+
+    // Helper: check if ingredient is mentioned in a step's instruction text
+    const isIngredientInStep = (ingLower, stepObj) => {
+      const si = stepObj.ingredients || [];
+      const txt = (stepObj.instructions || stepObj.description || '').toLowerCase();
+      // Method 1: per-step ingredient list
+      if (si.length > 0) {
+        const found = si.some(s => {
+          const kw = extractKeywords(s.toLowerCase());
+          return kw.some(w => new RegExp(`\\b${escapeRegex(w)}\\b`, 'i').test(ingLower)) || ingLower === s.toLowerCase();
+        });
+        if (found) return true;
+      }
+      // Method 2: scan instruction text
+      const kw = extractKeywords(ingLower);
+      return kw.some(w => new RegExp(`\\b${escapeRegex(w)}\\b`, 'i').test(txt));
+    };
+
+    // Determine which ingredients were active in any previous step
+    const prevActiveSet = new Set();
+    for (let i = 0; i < stepIndex; i++) {
+      allIngredients.forEach(ing => {
+        if (isIngredientInStep(ing.toLowerCase(), steps[i])) {
+          prevActiveSet.add(ing);
+        }
+      });
+    }
+
     const instructionLower = instructionText.toLowerCase();
+
+    // Helper: find earliest position of ingredient keyword in instruction text
+    const ingredientPosition = (ingLower) => {
+      const kw = extractKeywords(ingLower);
+      let earliest = instructionLower.length;
+      kw.forEach(w => {
+        const match = instructionLower.match(new RegExp(`\\b${escapeRegex(w)}\\b`));
+        if (match && match.index < earliest) earliest = match.index;
+      });
+      return earliest;
+    };
     
     if (allIngredients.length > 0) {
       allIngredients.forEach(ing => {
         const ingLower = ing.toLowerCase();
-        let isActive = false;
-
-        // Method 1: match against per-step ingredient list (structured recipes)
-        if (stepIngredients.length > 0) {
-          isActive = stepIngredients.some(si => {
-            const keyWords = extractKeywords(si.toLowerCase());
-            return keyWords.some(word => {
-              const regex = new RegExp(`\\b${escapeRegex(word)}\\b`, 'i');
-              return regex.test(ingLower);
-            }) || ingLower === si.toLowerCase();
-          });
-        }
-
-        // Method 2: scan instruction text for ingredient keywords (AI/flat recipes)
-        if (!isActive) {
-          const keyWords = extractKeywords(ingLower);
-          isActive = keyWords.some(word => {
-            const regex = new RegExp(`\\b${escapeRegex(word)}\\b`, 'i');
-            return regex.test(instructionLower);
-          });
-        }
+        const isActive = isIngredientInStep(ingLower, step);
 
         if (isActive) {
-          activeIngs.push(ing);
+          if (prevActiveSet.has(ing)) {
+            repeatActiveIngs.push(ing);
+          } else {
+            newActiveIngs.push(ing);
+          }
         } else {
           inactiveIngs.push(ing);
         }
       });
     }
+
+    // Sort active ingredients by order of appearance in instruction text
+    const sortByAppearance = (a, b) => ingredientPosition(a.toLowerCase()) - ingredientPosition(b.toLowerCase());
+    const newActiveSet = new Set(newActiveIngs);
+    const allActiveIngs = [...newActiveIngs, ...repeatActiveIngs].sort(sortByAppearance);
     
     return html`
       <div class="recipe-cook-step-detail">
@@ -17208,14 +17237,14 @@ class KitchenCookingPanel extends LitElement {
           </div>
         ` : ''}
 
-        <!-- Ingredients: active (bold green) on top, inactive in 2-column grid below -->
+        <!-- Ingredients: active sorted by appearance in grey box, inactive in 2-col below -->
         ${allIngredients.length > 0 ? html`
           <div class="recipe-cook-ingredients">
             <h5>📋 Ingredients</h5>
-            ${activeIngs.length > 0 ? html`
+            ${allActiveIngs.length > 0 ? html`
               <ul class="ingredients-active">
-                ${activeIngs.map(ing => html`
-                  <li class="active-ingredient">${ing}</li>
+                ${allActiveIngs.map(ing => html`
+                  <li class="active-ingredient ${newActiveSet.has(ing) ? 'new-ingredient' : 'repeat-ingredient'}">${ing}</li>
                 `)}
               </ul>
             ` : ''}
@@ -19860,24 +19889,27 @@ class KitchenCookingPanel extends LitElement {
       .recipe-cook-ingredients li {
         padding: 8px 12px;
         margin-bottom: 6px;
-        background: var(--divider-color);
         border-radius: 6px;
         transition: all 0.2s;
       }
 
-      .recipe-cook-ingredients li.active-ingredient {
-        background: transparent;
+      .recipe-cook-ingredients li.active-ingredient.new-ingredient {
         color: #4caf50;
         font-weight: 700;
-        border-left: 3px solid #4caf50;
-        padding-left: 12px;
       }
 
-      /* Active ingredients list (single column, on top) */
+      .recipe-cook-ingredients li.active-ingredient.repeat-ingredient {
+        color: var(--primary-text-color);
+        font-weight: 700;
+      }
+
+      /* Active ingredients list (single column, grey box on top) */
       .ingredients-active {
         list-style: none;
-        padding: 0;
+        padding: 8px;
         margin: 0 0 12px 0;
+        background: var(--divider-color);
+        border-radius: 6px;
       }
 
       /* Inactive ingredients list (two-column grid below) */
@@ -19894,6 +19926,7 @@ class KitchenCookingPanel extends LitElement {
         padding: 6px 8px;
         font-size: 0.9em;
         opacity: 0.75;
+        background: transparent;
       }
 
       /* Recipe Step Overview */
@@ -19956,7 +19989,6 @@ class KitchenCookingPanel extends LitElement {
         margin: 20px 0;
         padding: 16px;
         background: var(--card-background-color);
-        border-left: 4px solid var(--primary-color);
         border-radius: 4px;
       }
 
@@ -20386,7 +20418,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "232";
+const PANEL_VERSION = "234";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
