@@ -1068,6 +1068,7 @@ class AIRecipeDetailView(HomeAssistantView):
                 },
                 "ingredients": detail.ingredients,
                 "instructions": detail.instructions,
+                "step_ingredients": detail.step_ingredients,
                 "tips": detail.tips,
                 "phases": [
                     {

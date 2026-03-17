@@ -133,6 +133,7 @@ class AIRecipeDetail:
     instructions: List[str]
     tips: List[str]
     phases: List[CookingPhase] = field(default_factory=list)
+    step_ingredients: List[List[str]] = field(default_factory=list)
     use_probe: bool = False
     target_temp_c: Optional[int] = None
     target_temp_f: Optional[int] = None
@@ -854,14 +855,16 @@ source, authentic techniques, and accurate cooking temperatures.
 Please provide the full detailed recipe with:
 1. Complete ingredient list with precise measurements (for {servings} servings)
 2. Detailed step-by-step cooking instructions (numbered, including any pre-soak/marinate/dry-brine steps)
-3. Cooking phases with specific temperatures and times
-4. Helpful tips and tricks for best results
-5. Temperature probe usage if meat/protein is involved
+3. For EACH instruction step, list which ingredients from the full ingredient list are used in that step
+4. Cooking phases with specific temperatures and times
+5. Helpful tips and tricks for best results
+6. Temperature probe usage if meat/protein is involved
 
 Format your response as JSON:
 {{
   "ingredients": [{self._get_example_ingredients(measurement_system)}],
   "instructions": [{self._get_example_instructions(language, measurement_system)}],
+  "step_ingredients": [{self._get_example_step_ingredients(language, measurement_system)}],
   "tips": [{self._get_example_tips(language)}],
   "phases": [
     {{
@@ -882,6 +885,12 @@ Format your response as JSON:
 IMPORTANT: Respond ONLY with the JSON object above. Do not include any explanatory text,
 preamble, commentary, or markdown formatting outside the JSON. The very first character
 of your response must be '{{' and the very last must be '}}'.
+
+CRITICAL RULE — STEP INGREDIENTS:
+The "step_ingredients" array MUST have exactly the same number of elements as the "instructions" array.
+Each element is a list of the ingredient names (matching entries in the "ingredients" list) that are
+used or needed in that step. This lets the app highlight which ingredients to grab for each step.
+If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list [].
 """
         return prompt
 
@@ -964,6 +973,13 @@ of your response must be '{{' and the very last must be '}}'.
         if language == "sv":
             return '"Tips 1: Låt köttet vila 5 minuter innan servering", "Tips 2: Använd färska örter"'
         return '"Tip 1: Let meat rest 5 minutes before serving", "Tip 2: Use fresh herbs for best flavor"'
+
+    @staticmethod
+    def _get_example_step_ingredients(language: str, measurement_system: str) -> str:
+        """Return example step_ingredients arrays for the JSON format hint."""
+        if language == "sv":
+            return '["olivolja"], ["kycklingbröst, tärnad", "salt", "peppar"]'
+        return '["olive oil"], ["chicken breast, diced", "salt", "pepper"]'
 
     # Keywords that identify a transient / overload error from the AI service.
     # Checked both against exception messages and response text.
@@ -1534,12 +1550,29 @@ of your response must be '{{' and the very last must be '}}'.
                 )
                 phases.append(phase)
             
+            # Parse step_ingredients — validate it's a list of lists aligned
+            # with instructions; fall back to empty if missing or malformed.
+            raw_si = data.get("step_ingredients", [])
+            instructions_list = data.get("instructions", [])
+            step_ingredients: List[List[str]] = []
+            if isinstance(raw_si, list):
+                for entry in raw_si:
+                    if isinstance(entry, list):
+                        step_ingredients.append([str(s) for s in entry])
+                    else:
+                        step_ingredients.append([])
+            # Pad or trim to match instruction count
+            while len(step_ingredients) < len(instructions_list):
+                step_ingredients.append([])
+            step_ingredients = step_ingredients[:len(instructions_list)]
+
             detail = AIRecipeDetail(
                 suggestion=suggestion,
                 ingredients=data.get("ingredients", []),
-                instructions=data.get("instructions", []),
+                instructions=instructions_list,
                 tips=data.get("tips", []),
                 phases=phases,
+                step_ingredients=step_ingredients,
                 use_probe=data.get("use_probe", False),
                 target_temp_c=data.get("target_temp_c"),
                 target_temp_f=data.get("target_temp_f"),

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Mar 2026, 09:36 CET
+ * AUTO-GENERATED: 17 Mar 2026, 09:52 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 17 Mar 2026, 09:36 CET
+// Last generated: 17 Mar 2026, 09:52 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -18610,6 +18610,7 @@ class KitchenCookingPanel extends LitElement {
       if (response && response.detail) {
         const detail = response.detail;
         fullRecipe.instructions = detail.instructions || [];
+        fullRecipe.step_ingredients = detail.step_ingredients || [];
         fullRecipe.ingredients = detail.ingredients || fullRecipe.main_ingredients || [];
         fullRecipe.tips = detail.tips || [];
         fullRecipe.servings = detail.servings || fullRecipe.servings || 4;
@@ -18678,11 +18679,14 @@ class KitchenCookingPanel extends LitElement {
       return recipe.steps;
     }
     // If recipe has instructions (flat string array), convert to step objects
+    // Attach step_ingredients from the parallel array if available
     if (recipe.instructions && recipe.instructions.length > 0) {
+      const si = recipe.step_ingredients || [];
       return recipe.instructions.map((instruction, idx) => ({
         name: `Step ${idx + 1}`,
         instructions: instruction,
         description: instruction,
+        ingredients: si[idx] || [],
       }));
     }
     return [];
@@ -18845,15 +18849,20 @@ class KitchenCookingPanel extends LitElement {
     const isIngredientInStep = (ingLower, stepObj) => {
       const si = stepObj.ingredients || [];
       const txt = (stepObj.instructions || stepObj.description || '').toLowerCase();
-      // Method 1: per-step ingredient list
+      // Method 1: per-step ingredient list (primary — from AI JSON step_ingredients)
       if (si.length > 0) {
         const found = si.some(s => {
-          const kw = extractKeywords(s.toLowerCase());
-          return kw.some(w => new RegExp(uWordBoundary(w), 'iu').test(ingLower)) || ingLower === s.toLowerCase();
+          const sLower = s.toLowerCase();
+          // Direct match or substring containment (step_ingredients may be
+          // short names like "chicken" while the full ingredient is "400 g chicken breast, diced")
+          if (ingLower === sLower || ingLower.includes(sLower) || sLower.includes(ingLower)) return true;
+          // Keyword fallback within Method 1
+          const kw = extractKeywords(sLower);
+          return kw.some(w => new RegExp(uWordBoundary(w), 'iu').test(ingLower));
         });
         if (found) return true;
       }
-      // Method 2: scan instruction text
+      // Method 2: scan instruction text (fallback — pattern matching)
       const kw = extractKeywords(ingLower);
       return kw.some(w => new RegExp(uWordBoundary(w), 'iu').test(txt));
     };
@@ -22107,7 +22116,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "247";
+const PANEL_VERSION = "248";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

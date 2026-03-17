@@ -5735,6 +5735,7 @@ class KitchenCookingPanel extends LitElement {
       if (response && response.detail) {
         const detail = response.detail;
         fullRecipe.instructions = detail.instructions || [];
+        fullRecipe.step_ingredients = detail.step_ingredients || [];
         fullRecipe.ingredients = detail.ingredients || fullRecipe.main_ingredients || [];
         fullRecipe.tips = detail.tips || [];
         fullRecipe.servings = detail.servings || fullRecipe.servings || 4;
@@ -5803,11 +5804,14 @@ class KitchenCookingPanel extends LitElement {
       return recipe.steps;
     }
     // If recipe has instructions (flat string array), convert to step objects
+    // Attach step_ingredients from the parallel array if available
     if (recipe.instructions && recipe.instructions.length > 0) {
+      const si = recipe.step_ingredients || [];
       return recipe.instructions.map((instruction, idx) => ({
         name: `Step ${idx + 1}`,
         instructions: instruction,
         description: instruction,
+        ingredients: si[idx] || [],
       }));
     }
     return [];
@@ -5970,15 +5974,20 @@ class KitchenCookingPanel extends LitElement {
     const isIngredientInStep = (ingLower, stepObj) => {
       const si = stepObj.ingredients || [];
       const txt = (stepObj.instructions || stepObj.description || '').toLowerCase();
-      // Method 1: per-step ingredient list
+      // Method 1: per-step ingredient list (primary — from AI JSON step_ingredients)
       if (si.length > 0) {
         const found = si.some(s => {
-          const kw = extractKeywords(s.toLowerCase());
-          return kw.some(w => new RegExp(uWordBoundary(w), 'iu').test(ingLower)) || ingLower === s.toLowerCase();
+          const sLower = s.toLowerCase();
+          // Direct match or substring containment (step_ingredients may be
+          // short names like "chicken" while the full ingredient is "400 g chicken breast, diced")
+          if (ingLower === sLower || ingLower.includes(sLower) || sLower.includes(ingLower)) return true;
+          // Keyword fallback within Method 1
+          const kw = extractKeywords(sLower);
+          return kw.some(w => new RegExp(uWordBoundary(w), 'iu').test(ingLower));
         });
         if (found) return true;
       }
-      // Method 2: scan instruction text
+      // Method 2: scan instruction text (fallback — pattern matching)
       const kw = extractKeywords(ingLower);
       return kw.some(w => new RegExp(uWordBoundary(w), 'iu').test(txt));
     };
