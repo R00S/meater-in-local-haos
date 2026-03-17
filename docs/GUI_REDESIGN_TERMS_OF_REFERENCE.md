@@ -1,6 +1,6 @@
 # Terms of Reference: Kitchen Cooking Engine GUI Redesign
 
-**Version:** 3.3  
+**Version:** 3.4  
 **Created:** 2026-01-16  
 **Updated:** 2026-03-17  
 **Status:** Phases 1–6 Complete + v0.5.2.x appliance features + v0.5.4.x stability & UX + v0.6.0.x i18n/ingredient fixes, Phases 8–9 planned  
@@ -1395,6 +1395,72 @@ The GUI redesign is considered successful when:
 5. **Rating Requirement:** Are star ratings required or optional?
    - Answer: Optional but encouraged
 
+6. **Shelf/Inventory Backend:** Should we use Grocy for inventory management or implement our own shelf system?
+   - **Status: ⬜ UNDECIDED — needs project owner decision before Phase 8 starts**
+   - **Decision deadline:** Must be decided before Phase 8 implementation begins (i.e., during or before Phase 7)
+
+   The Phase 8 shelf management feature needs a backend to store what the user has available. Three options are on the table:
+
+   ---
+
+   #### Option A: Self-Implemented (local `shelf_inventory.json` + REST API)
+
+   Build a simple inventory system ourselves, stored as a local JSON file with our own REST endpoints — same pattern as `cook_history.json` and `user_preferences.json`.
+
+   | Pros | Cons |
+   |------|------|
+   | **Zero external dependencies** — works standalone, no Docker container, no add-on install needed | **We build and maintain everything** — CRUD, UI, storage, search, categories |
+   | **Simple data model** — item name + location is all we need for the AI prompt; no over-engineering | **No expiry tracking** — can't warn about items going bad (would need to be added later if wanted) |
+   | **Consistent with existing codebase** — follows the same `{feature}.json` + REST API pattern we use for cook history, preferences, AI settings | **No barcode/receipt scanning** — adding items is manual-only |
+   | **Full control** — data model shaped exactly for our use case (AI recipe generation, not warehouse management) | **No ecosystem** — no existing mobile apps, Lovelace cards, or community tools to leverage |
+   | **Fast to implement** — familiar pattern, no integration debugging, no API version compatibility issues | **Shopping list from scratch** — must build our own; can't leverage Grocy's built-in shopping lists or HA's native `todo.shopping_list` sync |
+   | **No version coupling** — Grocy updates, API changes, or HA integration breaking changes don't affect us | **Island solution** — shelf data lives only inside our component, not visible to other HA integrations or automations |
+
+   ---
+
+   #### Option B: Grocy Integration (connect to user's Grocy instance via REST API)
+
+   Use Grocy as the inventory backend. User installs Grocy as an HA add-on or Docker container; we read/write via Grocy's REST API.
+
+   | Pros | Cons |
+   |------|------|
+   | **Feature-rich out of the box** — quantities, expiry dates, locations, product groups, barcodes, shopping lists, recipe consumption all built-in | **Hard external dependency** — user MUST install and maintain Grocy (Docker container or HA add-on). Significant barrier for users who just want to cook. |
+   | **Existing HA integration** — `custom-components/grocy` provides sensors (expired items, shopping list count, stock status) and services | **Grocy HA integration is a custom component** (not official core) — can break on HA updates; maintained by community volunteers |
+   | **Shopping list syncs with HA** — Grocy shopping lists can sync bidirectionally with HA's native `todo.shopping_list` via community add-ons | **Complex data model** — Grocy tracks quantities, units, barcodes, expiry, purchase dates, locations, product groups. We only need "do you have chicken?" — most of this is overhead |
+   | **Ecosystem** — mobile apps (Grocy Android/iOS), barcode scanners, receipt import tools exist | **API complexity** — must join multiple endpoints (products + stock + locations) to get a simple "what's available" list. No single endpoint for our use case. |
+   | **Shared data** — other HA automations/dashboards can also see inventory status | **Configuration burden** — user must set up Grocy API key, URL, map product names to our ingredient list, deal with Grocy's product/quantity model |
+   | **Future-proof for advanced features** — if we ever want expiry warnings, automatic purchase logging, or receipt OCR, Grocy already has it | **Name matching problem** — Grocy product names (user-defined, possibly in any language) must somehow match our AI ingredient names. This is a significant fuzzy-matching challenge. |
+   | | **Grocy is overkill** — it's a full "kitchen ERP". Our original ToR calls inventory "a hint, not a strict truth". Grocy's philosophy is precise stock management — fundamentally different from our "good enough" approach. |
+
+   ---
+
+   #### Option C: Hybrid — Self-implemented shelf with optional Grocy import/HA todo export
+
+   Build our own simple shelf (Option A), but add optional bridges:
+   - **Import from Grocy**: If user has Grocy, offer a one-way sync button to pull current stock into our shelf list (flatten Grocy's complex model into our simple item+location list).
+   - **Export shopping list to HA todo**: When Mode C generates a shopping list, push items to HA's native `todo.shopping_list` entity (via `todo.add_item` service call) so they appear in the HA sidebar and sync to Bring/Alexa/Google if configured.
+
+   | Pros | Cons |
+   |------|------|
+   | **Works standalone** (like Option A) but **benefits from Grocy** if user has it | **More code to maintain** — the bridges add import/export logic, error handling, and UI for configuration |
+   | **Shopping list lives in HA ecosystem** — visible in sidebar, syncs to phone apps (Bring, etc.) via existing HA integrations | **Two sources of truth risk** — if user edits both Grocy and our shelf, they can drift. Need clear "import is snapshot, not live sync" UX. |
+   | **Gradual progressive adoption** — start simple, enable Grocy bridge only if needed | **Import mapping** — still need to handle Grocy product name → our ingredient name matching for the import bridge |
+   | **Best of both worlds for shopping lists** — generated by our engine, consumed by HA's todo ecosystem | |
+
+   ---
+
+   #### Decision Factors
+
+   | Factor | Option A (Self) | Option B (Grocy) | Option C (Hybrid) |
+   |--------|----------------|-----------------|-------------------|
+   | Install complexity for user | ✅ None | ❌ High (Grocy setup) | ✅ None (bridges optional) |
+   | Implementation effort (Phase 8) | ✅ Low (familiar pattern) | ❌ High (API integration + mapping) | ⚠️ Medium (A + bridges) |
+   | Data model fit for AI prompts | ✅ Perfect (built for it) | ⚠️ Needs flattening | ✅ Perfect (built for it) |
+   | Shopping list in HA ecosystem | ❌ Internal only | ✅ Via Grocy sync | ✅ Via HA `todo.add_item` |
+   | Advanced features (expiry, quantities) | ❌ Not available | ✅ Built-in | ❌ Not available (import snapshot only) |
+   | Dependency risk | ✅ None | ❌ Grocy + HA integration | ⚠️ Low (bridges are optional) |
+   | User already using Grocy | ❌ Duplicate work | ✅ Single source of truth | ⚠️ One-way import (snapshot) |
+
 ---
 
 ## 14. Future Enhancements (Post-Implementation)
@@ -1563,6 +1629,7 @@ This section documents deviations from the original ToR specification as of v0.5
 | 3.1 | 2026-02-26 | Updated for v0.5.2.8 merge preparation. Added v0.5.2.x deviations: multi-appliance management, feature type classification, feature modification notes (panel + appliance path), categorized AI ingredients (300+), cuisine-specific ingredients, recipe origin badges, appliance APIs, AI settings API. Conformed ToR to actual implementation. | AI Agent |
 | 3.2 | 2026-03-15 | Updated for v0.6.0.00 — i18n complete, per-step ingredient tagging, Swedish decimal comma, Unicode ingredient matching, AI language directive fix. | AI Agent |
 | 3.3 | 2026-03-17 | Added § 5.6 Ingredient Levels & Cooking Modes specification (3 levels: Compulsory/Normal/Available, 3 modes: Ignore Shelf/Cook Now/Cook Later). Added Phase 8 to development plan, moved Polish & Testing to Phase 9. Updated scope, glossary. | AI Agent |
+| 3.4 | 2026-03-17 | Added Open Question #6: Grocy vs self-implemented shelf backend — full pros/cons analysis for 3 options (Self, Grocy, Hybrid). Status: UNDECIDED, awaiting project owner decision before Phase 8. | AI Agent |
 
 ---
 
