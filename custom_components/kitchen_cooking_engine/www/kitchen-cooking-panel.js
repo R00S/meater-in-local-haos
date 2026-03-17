@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Mar 2026, 00:12 CET
+ * AUTO-GENERATED: 17 Mar 2026, 09:25 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 17 Mar 2026, 00:12 CET
+// Last generated: 17 Mar 2026, 09:25 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -12153,6 +12153,54 @@ const I18N_STRINGS = {
       "stop_cook_failed": "Could not stop cook",
       "generic": "Something went wrong. Please try again."
     },
+    "messages": {
+      "ai_settings_saved_title": "AI Settings Saved",
+      "ai_settings_saved": "Settings saved successfully!",
+      "ai_settings_save_failed_title": "Failed to Save Settings",
+      "ai_settings_save_error_title": "Error Saving Settings",
+      "cook_session_started_title": "Cooking Session Started",
+      "cook_session_started": "Session started successfully!",
+      "cook_session_started_detail": "The cooking session is now active.",
+      "cook_session_error_title": "Error Starting Cook",
+      "cook_session_cannot_start_title": "Cannot Start Cooking Session",
+      "no_cook_entities_title": "No Cooking Session Entities",
+      "recipe_loaded_title": "Recipe Loaded",
+      "notes_saved_title": "Notes Saved",
+      "notes_saved": "Feature modification notes have been saved.",
+      "notes_save_failed": "Failed to save notes.",
+      "notes_save_error": "Failed to save feature notes. Please try again.",
+      "recipe_cook_saved_title": "Saved",
+      "recipe_cook_saved": "Recipe cook saved successfully!",
+      "recipe_cook_save_error_title": "Save Error",
+      "recipe_cook_save_error": "Error saving recipe cook:",
+      "ingredients_min_title": "Ingredients",
+      "ingredients_min_2": "Please select at least 2 ingredients",
+      "incomplete_title": "Incomplete",
+      "incomplete_selection": "Please complete ingredient and style selection",
+      "recipe_generation_title": "Recipe Generation",
+      "recipe_generation_error_title": "Error",
+      "recipe_generation_error": "Error generating recipes:",
+      "please_try_again": "Please try again.",
+      "loading_recipe_title": "Loading Recipe",
+      "loading_recipe": "Generating full recipe details with AI...",
+      "loading_recipe_time": "This usually takes 10-30 seconds.",
+      "partial_recipe_title": "Partial Recipe",
+      "partial_recipe_error": "Could not load full recipe details from AI.",
+      "partial_recipe_fallback": "You can still see the ingredients overview and finish the cook.",
+      "invalid_temp_title": "Invalid Temperature",
+      "invalid_temp": "Please set a temperature between 30°C and 100°C.",
+      "cook_complete_error_title": "Error",
+      "cook_complete_error": "Error completing cook:",
+      "no_instructions": "Step-by-step instructions not available. Use the recipe description and ingredients above as your guide.",
+      "no_ingredients": "Ingredient details not available for this recipe.",
+      "step_not_found": "Step not found",
+      "save_settings": "Save Settings",
+      "configure_ai_agent": "Configure which AI conversation agent to use for recipe generation.",
+      "ai_agent_id": "AI Agent ID:",
+      "backup_agent_id": "Backup Agent ID:",
+      "backup_agent_hint": "(optional — used when primary is overloaded)",
+      "find_agent_hint": "Find your agent ID in Developer Tools → States - look for entities starting with \"conversation.\""
+    },
     "cuisines": {
       "nordic": "Nordic & Scandinavian",
       "east_asian": "East Asian",
@@ -12642,6 +12690,54 @@ const I18N_STRINGS = {
       "start_cook_failed": "Kunde inte starta tillagning",
       "stop_cook_failed": "Kunde inte stoppa tillagning",
       "generic": "Något gick fel. Försök igen."
+    },
+    "messages": {
+      "ai_settings_saved_title": "AI-inställningar sparade",
+      "ai_settings_saved": "Inställningarna har sparats!",
+      "ai_settings_save_failed_title": "Kunde inte spara inställningar",
+      "ai_settings_save_error_title": "Fel vid sparning av inställningar",
+      "cook_session_started_title": "Tillagningssession startad",
+      "cook_session_started": "Sessionen startade!",
+      "cook_session_started_detail": "Tillagningssessionen är nu aktiv.",
+      "cook_session_error_title": "Fel vid start av tillagning",
+      "cook_session_cannot_start_title": "Kan inte starta tillagningssession",
+      "no_cook_entities_title": "Inga tillagningsentiteter",
+      "recipe_loaded_title": "Recept laddat",
+      "notes_saved_title": "Anteckningar sparade",
+      "notes_saved": "Funktionsanteckningarna har sparats.",
+      "notes_save_failed": "Kunde inte spara anteckningar.",
+      "notes_save_error": "Kunde inte spara funktionsanteckningar. Försök igen.",
+      "recipe_cook_saved_title": "Sparat",
+      "recipe_cook_saved": "Recepttillagning sparad!",
+      "recipe_cook_save_error_title": "Sparfel",
+      "recipe_cook_save_error": "Fel vid sparning av recepttillagning:",
+      "ingredients_min_title": "Ingredienser",
+      "ingredients_min_2": "Välj minst 2 ingredienser",
+      "incomplete_title": "Ofullständig",
+      "incomplete_selection": "Slutför val av ingredienser och stil",
+      "recipe_generation_title": "Receptgenerering",
+      "recipe_generation_error_title": "Fel",
+      "recipe_generation_error": "Fel vid generering av recept:",
+      "please_try_again": "Försök igen.",
+      "loading_recipe_title": "Laddar recept",
+      "loading_recipe": "Genererar fullständiga receptdetaljer med AI...",
+      "loading_recipe_time": "Det tar vanligtvis 10–30 sekunder.",
+      "partial_recipe_title": "Ofullständigt recept",
+      "partial_recipe_error": "Kunde inte ladda fullständiga receptdetaljer från AI.",
+      "partial_recipe_fallback": "Du kan fortfarande se ingrediensöversikten och avsluta tillagningen.",
+      "invalid_temp_title": "Ogiltig temperatur",
+      "invalid_temp": "Ange en temperatur mellan 30°C och 100°C.",
+      "cook_complete_error_title": "Fel",
+      "cook_complete_error": "Fel vid slutförande av tillagning:",
+      "no_instructions": "Steg-för-steg-instruktioner saknas. Använd receptbeskrivningen och ingredienserna ovan som guide.",
+      "no_ingredients": "Ingrediensdetaljer saknas för detta recept.",
+      "step_not_found": "Steg hittades inte",
+      "save_settings": "Spara inställningar",
+      "configure_ai_agent": "Konfigurera vilken AI-konversationsagent som ska användas för receptgenerering.",
+      "ai_agent_id": "AI-agent-ID:",
+      "backup_agent_id": "Reservagent-ID:",
+      "backup_agent_hint": "(valfritt — används när primär agent är överbelastad)",
+      "find_agent_hint": "Hitta ditt agent-ID under Utvecklarverktyg → Tillstånd — sök efter entiteter som börjar med \"conversation.\""
     },
     "cuisines": {
       "nordic": "Nordisk & Skandinavisk",
@@ -13845,14 +13941,14 @@ class KitchenCookingPanel extends LitElement {
         const backupNote = this._aiBackupAgentId
           ? `\n\nBackup Agent ID: ${this._aiBackupAgentId}\n\nThe backup agent will be used automatically if the primary agent is overloaded.`
           : '';
-        this._showMessage('AI Settings Saved', `✅ Settings saved successfully!\n\nAgent ID: ${this._aiAgentId}${backupNote}`, false);
+        this._showMessage(this._t('messages.ai_settings_saved_title'), `✅ ${this._t('messages.ai_settings_saved')}\n\nAgent ID: ${this._aiAgentId}${backupNote}`, false);
         this._closeAISettings();
       } else {
-        this._showMessage('Failed to Save Settings', `❌ ${response.message}`, true);
+        this._showMessage(this._t('messages.ai_settings_save_failed_title'), `❌ ${response.message}`, true);
       }
     } catch (e) {
       console.error('[AI Settings] Failed to save settings:', e);
-      this._showMessage('Error Saving Settings', `❌ ${e.message}`, true);
+      this._showMessage(this._t('messages.ai_settings_save_error_title'), `❌ ${e.message}`, true);
     }
   }
 
@@ -14479,14 +14575,14 @@ class KitchenCookingPanel extends LitElement {
           this.requestUpdate();
           
           // Show success message
-          this._showMessage('Cooking Session Started', `✅ Session started successfully!\n\nRecipe: ${recipe.name}\n\nThe cooking session is now active.`, false);
+          this._showMessage(this._t('messages.cook_session_started_title'), `✅ ${this._t('messages.cook_session_started')}\n\n${this._t('recipe_cook.recipe_label')}: ${recipe.name}\n\n${this._t('messages.cook_session_started_detail')}`, false);
           
           // Close Ninja Combi view to return to main panel which will show active cook
           this._showNinjaCombi = false;
           this._selectedNinjaRecipe = null;
         })
         .catch(err => {
-          this._showMessage('Error Starting Cook', `❌ ${err.message}`, true);
+          this._showMessage(this._t('messages.cook_session_error_title'), `❌ ${err.message}`, true);
         });
     }
   }
@@ -14949,7 +15045,7 @@ class KitchenCookingPanel extends LitElement {
     );
     
     if (probeAppliances.length === 0) {
-      this._showMessage('Cannot Start Cooking Session', 
+      this._showMessage(this._t('messages.cook_session_cannot_start_title'), 
         `This recipe requires temperature monitoring, but no MEATER+ probe is configured.\n\n` +
         `Please add a MEATER+ appliance in:\n` +
         `Settings → Devices & Services → Add Integration → Kitchen Cooking Engine`, true);
@@ -14959,7 +15055,7 @@ class KitchenCookingPanel extends LitElement {
     // Find cooking session entities for temperature probes
     const entities = this._findCookingEntities();
     if (entities.length === 0) {
-      this._showMessage('No Cooking Session Entities', 
+      this._showMessage(this._t('messages.no_cook_entities_title'), 
         `Please ensure your MEATER+ probe is configured properly.`, true);
       return;
     }
@@ -14996,7 +15092,7 @@ class KitchenCookingPanel extends LitElement {
     
     // Show a helpful message about manual setup
     setTimeout(() => {
-      this._showMessage('Recipe Loaded', 
+      this._showMessage(this._t('messages.recipe_loaded_title'), 
         `Now configure your cook on the setup screen:\n` +
         `- Select protein and cut\n` +
         `- Choose doneness level\n` +
@@ -15139,14 +15235,14 @@ class KitchenCookingPanel extends LitElement {
       if (response && response.success) {
         appliance.feature_notes = response.feature_notes;
         appliance._pendingNotes = null;
-        this._showMessage('Notes Saved', 'Feature modification notes have been saved.');
+        this._showMessage(this._t('messages.notes_saved_title'), this._t('messages.notes_saved'));
         this.requestUpdate();
       } else {
-        this._showMessage('Error', response?.error || 'Failed to save notes.', true);
+        this._showMessage(this._t('common.error'), response?.error || this._t('messages.notes_save_failed'), true);
       }
     } catch (e) {
       console.error('Failed to save feature notes:', e);
-      this._showMessage('Error', 'Failed to save feature notes. Please try again.', true);
+      this._showMessage(this._t('common.error'), this._t('messages.notes_save_error'), true);
     }
   }
 
@@ -15243,16 +15339,16 @@ class KitchenCookingPanel extends LitElement {
             <div class="modal-overlay" @click=${this._closeAISettings}>
               <div class="modal-dialog" @click=${(e) => e.stopPropagation()}>
                 <div class="modal-header">
-                  <h2>⚙️ AI Recipe Builder Settings</h2>
+                  <h2>⚙️ ${this._t('messages.ai_settings_title')}</h2>
                   <button class="modal-close" @click=${this._closeAISettings}>✕</button>
                 </div>
                 <div class="modal-body">
                   <p style="margin-bottom: 16px;">
-                    Configure which AI conversation agent to use for recipe generation.
+                    ${this._t('messages.configure_ai_agent')}
                   </p>
                   
                   <label for="ai-agent-id" style="display: block; margin-bottom: 8px; font-weight: 600;">
-                    AI Agent ID:
+                    ${this._t('messages.ai_agent_id')}
                   </label>
                   <input
                     id="ai-agent-id"
@@ -15264,7 +15360,7 @@ class KitchenCookingPanel extends LitElement {
                   />
 
                   <label for="ai-backup-agent-id" style="display: block; margin-top: 16px; margin-bottom: 8px; font-weight: 600;">
-                    Backup Agent ID: <span style="font-weight: 400; font-size: 0.9em;">(optional — used when primary is overloaded)</span>
+                    ${this._t('messages.backup_agent_id')} <span style="font-weight: 400; font-size: 0.9em;">${this._t('messages.backup_agent_hint')}</span>
                   </label>
                   <input
                     id="ai-backup-agent-id"
@@ -15289,15 +15385,15 @@ class KitchenCookingPanel extends LitElement {
                   </ul>
                   
                   <p style="margin-top: 12px; font-size: 0.9em; color: var(--secondary-text-color);">
-                    Find your agent ID in <strong>Developer Tools → States</strong> - look for entities starting with "conversation."
+                    ${this._t('messages.find_agent_hint')}
                   </p>
                 </div>
                 <div class="modal-footer">
                   <button class="secondary-btn" @click=${this._closeAISettings}>
-                    Cancel
+                    ${this._t('common.cancel')}
                   </button>
                   <button class="primary-btn" @click=${this._saveAISettings}>
-                    Save Settings
+                    ${this._t('messages.save_settings')}
                   </button>
                 </div>
               </div>
@@ -15326,11 +15422,11 @@ class KitchenCookingPanel extends LitElement {
                       this.requestUpdate();
                       if (cancelFn) cancelFn();
                     }}>
-                      Cancel
+                      ${this._t('common.cancel')}
                     </button>
                   ` : html`
                     <button class="primary-btn" @click=${this._closeMessageDialog}>
-                      OK
+                      ${this._t('common.ok')}
                     </button>
                   `}
                 </div>
@@ -18215,14 +18311,14 @@ class KitchenCookingPanel extends LitElement {
       });
 
       // Show success message
-      this._showMessage('✅ Saved', 'Recipe cook saved successfully! 🎉');
+      this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
 
       // Stop the cook flow
       this._stopRecipeCook();
 
     } catch (error) {
       console.error('Error saving recipe cook:', error);
-      this._showMessage('❌ Save Error', `Error saving recipe cook: ${error.message}`, true);
+      this._showMessage('❌ ' + this._t('messages.recipe_cook_save_error_title'), `${this._t('messages.recipe_cook_save_error')} ${error.message}`, true);
     }
   }
 
@@ -18263,7 +18359,7 @@ class KitchenCookingPanel extends LitElement {
    */
   _proceedToCookingStyle() {
     if (this._selectedIngredients.length < 2) {
-      this._showMessage('⚠️ Ingredients', 'Please select at least 2 ingredients', true);
+      this._showMessage('⚠️ ' + this._t('messages.ingredients_min_title'), this._t('messages.ingredients_min_2'), true);
       return;
     }
     
@@ -18288,7 +18384,7 @@ class KitchenCookingPanel extends LitElement {
   _startAIStatusPolling() {
     this._stopAIStatusPolling();
     this._aiGenerationElapsed = 0;
-    this._aiGenerationStatus = '🤖 Connecting to AI agent...';
+    this._aiGenerationStatus = this._t('ai_recipe.connecting');
     const startTime = Date.now();
     this._aiGenerationTimer = setInterval(async () => {
       this._aiGenerationElapsed = Math.floor((Date.now() - startTime) / 1000);
@@ -18325,7 +18421,7 @@ class KitchenCookingPanel extends LitElement {
    */
   async _generateAIRecipes() {
     if (!this._selectedCookingStyle || this._selectedIngredients.length < 2) {
-      this._showMessage('⚠️ Incomplete', 'Please complete ingredient and style selection', true);
+      this._showMessage('⚠️ ' + this._t('messages.incomplete_title'), this._t('messages.incomplete_selection'), true);
       return;
     }
 
@@ -18368,7 +18464,7 @@ class KitchenCookingPanel extends LitElement {
         this._aiRecipeSuggestions = response.suggestions;
       } else {
         const msg = (response && response.message) ? response.message : 'No recipes generated. Please try different ingredients or styles.';
-        this._showMessage('⚠️ Recipe Generation', msg);
+        this._showMessage('⚠️ ' + this._t('messages.recipe_generation_title'), msg);
         // Go back to style selection so the user isn't stuck on a loading spinner.
         this._showAIRecipeSuggestions = false;
         this._showAIStyleSelector = true;
@@ -18388,7 +18484,7 @@ class KitchenCookingPanel extends LitElement {
       } catch (_) {
         errMsg = String(error) || 'Unknown error';
       }
-      this._showMessage('❌ Error', `Error generating recipes: ${errMsg}. Please try again.`, true);
+      this._showMessage('❌ ' + this._t('messages.recipe_generation_error_title'), `${this._t('messages.recipe_generation_error')} ${errMsg}. ${this._t('messages.please_try_again')}`, true);
       // Go back to style selection
       this._showAIRecipeSuggestions = false;
       this._showAIStyleSelector = true;
@@ -18435,7 +18531,7 @@ class KitchenCookingPanel extends LitElement {
       try {
         const res = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/status');
         if (res && res.message) {
-          this._messageDialogContent = `Generating full recipe details with AI...\n${res.message}`;
+          this._messageDialogContent = `${this._t('messages.loading_recipe')}\n${res.message}`;
           this.requestUpdate();
         }
       } catch (pollErr) {
@@ -18448,8 +18544,8 @@ class KitchenCookingPanel extends LitElement {
 
     try {
       // Show cancelable loading dialog
-      this._messageDialogTitle = '⏳ Loading Recipe';
-      this._messageDialogContent = 'Generating full recipe details with AI...\nThis usually takes 10-30 seconds.';
+      this._messageDialogTitle = '⏳ ' + this._t('messages.loading_recipe_title');
+      this._messageDialogContent = this._t('messages.loading_recipe') + '\n' + this._t('messages.loading_recipe_time');
       this._messageDialogIsError = false;
       this._messageDialogOnCancel = () => { cancelled = true; };
       this._showMessageDialog = true;
@@ -18498,8 +18594,8 @@ class KitchenCookingPanel extends LitElement {
         fullRecipe.instructions = [];
         // Brief non-blocking error notice
         this._messageDialogOnCancel = null;
-        this._messageDialogTitle = '⚠️ Partial Recipe';
-        this._messageDialogContent = `Could not load full recipe details from AI.\n${msg}\nYou can still see the ingredients overview and finish the cook.`;
+        this._messageDialogTitle = '⚠️ ' + this._t('messages.partial_recipe_title');
+        this._messageDialogContent = `${this._t('messages.partial_recipe_error')}\n${msg}\n${this._t('messages.partial_recipe_fallback')}`;
         this._messageDialogIsError = false;
         this._showMessageDialog = true;
         this.requestUpdate();
@@ -18513,8 +18609,8 @@ class KitchenCookingPanel extends LitElement {
       fullRecipe.instructions = [];
       // Brief non-blocking error notice — the overview will show fallback data
       this._messageDialogOnCancel = null;
-      this._messageDialogTitle = '⚠️ Partial Recipe';
-      this._messageDialogContent = 'Could not load full recipe details from AI. You can still see the ingredients overview and finish the cook.';
+      this._messageDialogTitle = '⚠️ ' + this._t('messages.partial_recipe_title');
+      this._messageDialogContent = this._t('messages.partial_recipe_error') + ' ' + this._t('messages.partial_recipe_fallback');
       this._messageDialogIsError = false;
       this._showMessageDialog = true;
       this.requestUpdate();
@@ -18651,7 +18747,7 @@ class KitchenCookingPanel extends LitElement {
             </ul>
           ` : html`
             <p style="color: var(--secondary-text-color); font-style: italic;">
-              Ingredient details not available for this recipe.
+              ${this._t('messages.no_ingredients')}
             </p>
           `}
         </div>
@@ -18670,7 +18766,7 @@ class KitchenCookingPanel extends LitElement {
           </div>
         ` : html`
           <p style="color: var(--secondary-text-color); font-style: italic;">
-            Step-by-step instructions not available. Use the recipe description and ingredients above as your guide.
+            ${this._t('messages.no_instructions')}
           </p>
         `}
       </div>
@@ -18686,7 +18782,7 @@ class KitchenCookingPanel extends LitElement {
     const step = steps[stepIndex];
     
     if (!step) {
-      return html`<p>Step not found</p>`;
+      return html`<p>${this._t('messages.step_not_found')}</p>`;
     }
 
     // Get ingredients mentioned in this step (if available)
@@ -19184,7 +19280,7 @@ class KitchenCookingPanel extends LitElement {
   _startCustomCook() {
     const tempC = parseInt(this._customProfileTempC);
     if (isNaN(tempC) || tempC < 30 || tempC > 100) {
-      this._showMessage('Invalid Temperature', 'Please set a temperature between 30°C and 100°C.', true);
+      this._showMessage(this._t('messages.invalid_temp_title'), this._t('messages.invalid_temp'), true);
       return;
     }
     
@@ -19363,7 +19459,7 @@ class KitchenCookingPanel extends LitElement {
       this.requestUpdate();
     } catch (error) {
       console.error('Error completing cook with rating:', error);
-      this._showMessage('❌ Error', `Error completing cook: ${error.message}`, true);
+      this._showMessage('❌ ' + this._t('messages.cook_complete_error_title'), `${this._t('messages.cook_complete_error')} ${error.message}`, true);
     }
   }
 
@@ -21976,7 +22072,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "244";
+const PANEL_VERSION = "245";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
