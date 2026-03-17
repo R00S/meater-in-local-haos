@@ -1128,7 +1128,7 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
         Returns:
             AI response text
         """
-        _MAX_RETRIES = 7
+        _MAX_RETRIES = 3             # practical max given ~30s/call + backoff + ~100s HTTP proxy timeout
         _CALL_TIMEOUT = 30          # seconds per conversation call
         _MAX_TIMEOUTS_PER_AGENT = 2 # switch to backup after this many timeouts
 
