@@ -91,6 +91,14 @@ The core system includes:
 - Allow short shopping lists if only a few items are missing
 - Allow attaching a photo of groceries on a table for a given cook session
 - (Optionally) AI can analyze photos later, but not required now
+- **Ingredient Levels** (see GUI Redesign ToR § 5.6, Phase 8):
+  - Level 1 — Compulsory: must-include ingredients in every AI suggestion
+  - Level 2 — Normal: standard selected ingredients (current default)
+  - Level 3 — Available: shelf/pantry/fridge/freezer contents (optional feature)
+- **Cooking Modes** (when shelf management is enabled):
+  - Mode A — Ignore Shelf: current behavior, no shelf awareness
+  - Mode B — Cook Now: restrict AI to selected + available ingredients only
+  - Mode C — Cook Later: generate recipe normally, auto-create shopping list for missing items
 
 #### Inventory Lifecycle Management
 

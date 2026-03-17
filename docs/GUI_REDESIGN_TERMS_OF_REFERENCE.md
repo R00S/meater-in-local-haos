@@ -1,9 +1,9 @@
 # Terms of Reference: Kitchen Cooking Engine GUI Redesign
 
-**Version:** 3.2  
+**Version:** 3.3  
 **Created:** 2026-01-16  
-**Updated:** 2026-03-15  
-**Status:** Phases 1–6 Complete + v0.5.2.x appliance features + v0.5.4.x stability & UX, Phases 7–8 Remaining  
+**Updated:** 2026-03-17  
+**Status:** Phases 1–6 Complete + v0.5.2.x appliance features + v0.5.4.x stability & UX + v0.6.0.x i18n/ingredient fixes, Phases 8–9 planned  
 **Supersedes:** Current single-path GUI implementation
 
 ---
@@ -51,14 +51,19 @@ The GUI redesign aims to:
 - **Serving size adjustment**:
   - Number of servings selectable in all recipes
   - Automatic ingredient scaling based on servings
+- **Ingredient Levels & Cooking Modes** (Phase 8):
+  - Three ingredient levels: Compulsory, Normal, Available (staples/shelf)
+  - Three cooking modes: Ignore Shelf, Cook Now, Cook Later
+  - Clickable ingredient badges to toggle compulsory status
+  - Optional shelf/pantry management with post-cook deduction
+  - Shopping list generation for Cook Later mode
 
 ### 3.2 Out of Scope
 
 - Adding new appliance types (limited to existing: MEATER, Ninja Combi, other appliances)
 - Advanced meal planning features
 - Multi-recipe coordination
-- Inventory management integration
-- Shopping list generation
+- Full inventory management integration (e.g. Grocy sync) — simplified shelf/pantry is in scope via Phase 8
 - These features remain candidates for future phases
 
 ---
@@ -337,7 +342,7 @@ These features apply system-wide across all paths and cook types:
    - Show selected main appliance name with 📝 button to toggle inline feature notes editor
    - Display main appliance features (collapsed: comma list; expanded: grouped by Standard/Modified/Special with editable notes)
    - List all available secondary appliances (names only, no features)
-   - **Secondary appliances are deselectable** (checkboxes to include/exclude) — *Deferred to Phase 8*
+   - **Secondary appliances are deselectable** (checkboxes to include/exclude) — *Deferred to Phase 9*
 
 2. **Start AI Recipe Builder** (Button 1)
    - Launch AI Recipe Builder
@@ -369,7 +374,7 @@ These features apply system-wide across all paths and cook types:
 │   • Stovetop                               │
 │   • Microwave                              │
 │   • MEATER+ Probe                          │
-│   (Deselectable checkboxes: Phase 8)       │
+│   (Deselectable checkboxes: Phase 9)       │
 │                                            │
 │   ┌──────────────────────────────────┐   │
 │   │  🤖  Create AI Recipe            │   │
@@ -461,6 +466,156 @@ These features apply system-wide across all paths and cook types:
 │   └──────────────────────────────────┘   │
 └────────────────────────────────────────────┘
 ```
+
+---
+
+### 5.6 Ingredient Levels & Cooking Modes (Phase 8)
+
+**Purpose:** Enhanced ingredient handling with priority levels and cooking mode flexibility
+
+This feature extends the AI Recipe Builder ingredient selection with three **ingredient levels** and three **cooking modes**, enabling smarter recipe generation based on what the user has available and what they want to include.
+
+#### Ingredient Levels
+
+| Level | Name | Description | Visual |
+|-------|------|-------------|--------|
+| **1** | **Compulsory** | Must appear in every AI recipe suggestion | Badge with star/pin icon, distinct background color |
+| **2** | **Normal** | Standard selected ingredients (current default behavior) | Current badge style with × remove button |
+| **3** | **Available (Staples)** | Items the user has in fridge/larder/freezer/shelf | Managed in separate Shelf Management screen |
+
+##### Level 1 — Compulsory Ingredients
+
+- Implemented by making existing ingredient badges **clickable** (tap the badge itself, not the × button)
+- When a Normal badge is clicked, it becomes Compulsory (visual change: e.g., highlighted border or star icon)
+- Clicking a Compulsory badge toggles it back to Normal
+- Compulsory ingredients are sent to the AI with an explicit directive: "The recipe MUST use these ingredients: [list]"
+- The × remove button still removes the ingredient entirely (both levels)
+
+**Badge States:**
+```
+Normal badge:      [🍗 Chicken  ×]     (default — grey/neutral background)
+Compulsory badge:  [⭐ Chicken  ×]     (highlighted — primary color border/background)
+```
+
+##### Level 2 — Normal Ingredients
+
+No changes from current behavior. These are standard selected ingredients that the AI uses as input for recipe generation.
+
+##### Level 3 — Available (Staples / Shelf)
+
+This is an **optional feature**, activated in the settings from the welcome screen.
+
+- A new **Shelf Management** screen where the user can add their:
+  - Staples (salt, pepper, oil, flour, sugar, etc.)
+  - Seasonings and spices
+  - Fridge contents
+  - Larder/pantry contents
+  - Freezer contents
+- Items can be organized by storage location (fridge/larder/freezer/shelf)
+- After a cook is completed, the user is prompted to:
+  - Remove used ingredients from the available list
+  - Optionally add missing/depleted items to a **shopping list**
+- When this feature is activated, the three Cooking Modes (A/B/C) become available on the AI Recipe Builder screen
+
+**Shelf Management Layout:**
+```
+┌────────────────────────────────────────────┐
+│   🏪 My Shelf / Pantry                     │
+├────────────────────────────────────────────┤
+│                                            │
+│   📍 Fridge                                │
+│   • Butter • Milk • Eggs • Cheese         │
+│   • Cream • Yogurt                        │
+│                                            │
+│   📍 Larder / Pantry                       │
+│   • Flour • Sugar • Rice • Pasta          │
+│   • Olive oil • Soy sauce                 │
+│                                            │
+│   📍 Freezer                               │
+│   • Chicken breasts • Minced beef         │
+│   • Frozen peas • Bread                   │
+│                                            │
+│   📍 Spices & Seasonings                   │
+│   • Salt • Pepper • Paprika • Cumin       │
+│   • Garlic powder • Oregano               │
+│                                            │
+│   [+ Add Item]  [🛒 Shopping List]         │
+│                                            │
+└────────────────────────────────────────────┘
+```
+
+#### Cooking Modes
+
+Cooking modes are only available when the **Available (Shelf)** feature is activated in settings. If not activated, the system behaves as Mode A (Ignore Shelf) by default.
+
+| Mode | Name | Description |
+|------|------|-------------|
+| **A** | **Ignore Shelf** (Default) | Current behavior — AI generates recipes from selected ingredients only, no shelf awareness |
+| **B** | **Cook Now** | Use only selected ingredients + ingredients available on the user's shelf. AI is instructed to only use what's available. |
+| **C** | **Cook Later** | Generate recipe using selected ingredients (like Mode A). Then check if all ingredients (or suitable replacements) are available on the shelf. If not, create a shopping & preparation list as Step 1 of the recipe. |
+
+##### Mode A — Ignore Shelf
+
+No changes from current behavior. The AI generates recipes based on selected (Normal + Compulsory) ingredients, assuming staples are available (as per current `AI_ASSUMED_STAPLES` behavior).
+
+##### Mode B — Cook Now
+
+- AI prompt includes: "Use ONLY the following ingredients and the user's available shelf items: [selected] + [shelf contents]. Do NOT include ingredients the user doesn't have."
+- Shelf items are passed to the AI as additional available ingredients
+- Results in recipes that can be cooked immediately with what's on hand
+- Useful for "What can I make right now?" scenarios
+
+##### Mode C — Cook Later
+
+- Recipe is generated normally using selected ingredients (like Mode A)
+- After generation, the system cross-references all recipe ingredients against:
+  - Selected ingredients
+  - Available shelf items
+  - Known suitable substitutions
+- If any ingredients are missing, a **shopping & preparations list** is automatically created as **Step 0 / Step 1** of the recipe
+- The shopping list shows what needs to be purchased before cooking
+- Useful for meal planning and preparing ahead of time
+
+**Mode Selector Layout (in AI Recipe Builder, below ingredient badges):**
+```
+┌────────────────────────────────────────────┐
+│   🍳 Cooking Mode                          │
+│                                            │
+│   ○ A: Ignore Shelf (default)             │
+│   ○ B: Cook Now — use only what I have    │
+│   ○ C: Cook Later — generate shopping list │
+│                                            │
+└────────────────────────────────────────────┘
+```
+
+**Post-Cook Ingredient Update (after cook completion):**
+```
+┌────────────────────────────────────────────┐
+│   ✅ Cook Complete!                         │
+│                                            │
+│   Update your shelf:                       │
+│                                            │
+│   ☑ Remove: 500g chicken breast            │
+│   ☑ Remove: 2 tbsp olive oil              │
+│   ☑ Remove: 200g rice                     │
+│   ☐ Remove: Salt (staple — keep)          │
+│   ☐ Remove: Pepper (staple — keep)        │
+│                                            │
+│   [Update Shelf]  [Skip]                   │
+│                                            │
+│   🛒 Need to restock?                      │
+│   [Add to Shopping List]                   │
+│                                            │
+└────────────────────────────────────────────┘
+```
+
+#### Implementation Notes
+
+- Compulsory ingredient level (Level 1) can be implemented independently of the Shelf/Modes system
+- The Shelf Management feature and Cooking Modes (B/C) are a coupled feature set — both are activated together via a settings toggle
+- Shelf data is stored locally (like cook history) via REST API
+- Shopping lists are stored locally and can optionally be shared via notifications
+- The AI prompt builder must be extended to handle compulsory ingredients and cooking mode constraints
 
 ---
 
@@ -1044,9 +1199,9 @@ The GUI redesign is considered successful when:
 ### 11.3 Recipe Cook Flow Functions Completely
 - [x] Recipe overview displays correctly (first guide page)
 - [x] Guide step navigation works (next/back buttons)
-- [ ] Ingredients bold correctly based on current guide step — **Deferred to Phase 8**
+- [ ] Ingredients bold correctly based on current guide step — **Deferred to Phase 9**
 - [x] Timer displays elapsed time accurately since pressing Start Cooking
-- [ ] MEATER probe can be started as subprocess (not a meater probe cook) — **Deferred to Phase 8**
+- [ ] MEATER probe can be started as subprocess (not a meater probe cook) — **Deferred to Phase 9**
 - [x] Star ratings can be entered (ease and result, 1-5 stars)
 - [x] Pressing finish button saves cook to previous cooks with all data
 
@@ -1061,7 +1216,7 @@ The GUI redesign is considered successful when:
 - [x] Welcome screen is attractive and clear
 - [x] Path screens follow consistent design language (meater path, ninja combi path, ai recipe builder path, previous cook path)
 - [x] Recipe cook interface is clean and readable
-- [ ] Mobile responsive design works on small screens — **Phase 8 polish**
+- [ ] Mobile responsive design works on small screens — **Phase 9 polish**
 - [x] Icons and visual elements are intuitive
 
 ### 11.6 Multilingual Support Works — ⬜ Phase 7
@@ -1120,10 +1275,10 @@ The GUI redesign is considered successful when:
 - [ ] Implement serving size selector with scaling — **Deferred to Phase 7**
 - [x] Implement guide step navigation
 - [x] Add timer functionality (time since pressing Start Cooking)
-- [x] Build ingredient list (without guide step highlighting — **deferred to Phase 8**)
+- [x] Build ingredient list (without guide step highlighting — **deferred to Phase 9**)
 - [ ] Apply measurement system conversion to ingredients — **Deferred to Phase 7**
 - [x] Create overview and detail guide pages
-- [ ] Implement MEATER probe subprocess integration — **Deferred to Phase 8**
+- [ ] Implement MEATER probe subprocess integration — **Deferred to Phase 9**
 - [x] Build star rating interface (ease and result)
 - [x] Wire up finish button to save to previous cooks
 
@@ -1138,7 +1293,7 @@ The GUI redesign is considered successful when:
 ### Phase 6: AI Recipe Builder Path (Week 8) — ✅ COMPLETE (v0.5.1.7)
 - [x] Build AI Recipe Builder path screen
 - [x] Display appliance features
-- [ ] Add deselectable secondary appliances (checkboxes) — **Deferred to Phase 8**
+- [ ] Add deselectable secondary appliances (checkboxes) — **Deferred to Phase 9**
 - [x] Integrate existing AI recipe generation
 - [x] Connect to recipe cook flow
 - [x] Implement filtered recent recipes for selected appliance
@@ -1163,7 +1318,51 @@ The GUI redesign is considered successful when:
 - [ ] Test language switching across all screens
 - [ ] Validate ingredient scaling with all measurement systems
 
-### Phase 8: Polish & Testing (Week 10) — ⬜ NOT STARTED
+### Phase 8: Ingredient Levels & Cooking Modes (Week 10–11) — ⬜ NOT STARTED
+
+#### 8a. Compulsory Ingredients (Level 1)
+- [ ] Make ingredient badges clickable to toggle Compulsory status
+- [ ] Implement visual distinction for Compulsory badges (star icon, highlighted border/color)
+- [ ] Clicking Compulsory badge toggles back to Normal
+- [ ] × button still removes ingredient entirely regardless of level
+- [ ] Store compulsory state in `_selectedIngredients` data structure
+- [ ] Pass compulsory ingredient list to AI prompt builder
+- [ ] Update `_build_ai_prompt()` to include "MUST use" directive for compulsory ingredients
+- [ ] Add i18n translations for compulsory ingredient labels (en + sv)
+- [ ] Test compulsory ingredients appear in all AI-generated suggestions
+
+#### 8b. Shelf Management (Level 3 — Available)
+- [ ] Add "Enable Shelf Management" toggle in welcome screen settings
+- [ ] Create Shelf Management screen (accessible from welcome screen settings)
+- [ ] Implement storage locations: Fridge, Larder/Pantry, Freezer, Spices & Seasonings
+- [ ] Build "Add Item" UI with category/location selector
+- [ ] REST API: `GET/POST/DELETE /api/kitchen_cooking_engine/shelf` for shelf CRUD
+- [ ] Store shelf data in `shelf_inventory.json` (local storage, like cook history)
+- [ ] Display shelf contents organized by storage location
+- [ ] Add i18n translations for shelf management labels (en + sv)
+
+#### 8c. Cooking Modes (A/B/C)
+- [ ] Add cooking mode selector to AI Recipe Builder screen (visible only when shelf is enabled)
+- [ ] **Mode A (Ignore Shelf):** No changes, current default behavior
+- [ ] **Mode B (Cook Now):** Send shelf items + selected ingredients to AI with "only available" constraint
+- [ ] **Mode C (Cook Later):** Generate recipe normally, then cross-reference ingredients against shelf; generate shopping/prep list as Step 1 if items are missing
+- [ ] Update `ai_recipe_builder.py` to accept `cooking_mode` and `shelf_items` parameters
+- [ ] Update AI prompt for Mode B: constraint to only use available ingredients
+- [ ] Update AI prompt for Mode C: include shopping list generation directive
+- [ ] Store user's preferred cooking mode in preferences
+- [ ] Add i18n translations for cooking modes (en + sv)
+
+#### 8d. Post-Cook Shelf Update
+- [ ] After cook completion (recipe cook finish screen), show "Update Shelf" prompt
+- [ ] List ingredients used in the recipe with checkboxes (pre-checked for removal)
+- [ ] Staples (salt, pepper, oil) default to unchecked (keep on shelf)
+- [ ] "Update Shelf" button removes checked items from shelf inventory
+- [ ] "Add to Shopping List" button for depleted items
+- [ ] "Skip" button to dismiss without changes
+- [ ] REST API: `POST /api/kitchen_cooking_engine/shopping_list` for shopping list CRUD
+- [ ] Shopping list view accessible from welcome screen
+
+### Phase 9: Polish & Testing (Week 12) — ⬜ NOT STARTED
 - [ ] Visual design refinement
 - [ ] Mobile responsive testing
 - [ ] Edge case handling
@@ -1171,6 +1370,7 @@ The GUI redesign is considered successful when:
 - [ ] User acceptance testing in both languages
 - [ ] Test all measurement system conversions
 - [ ] Test serving size scaling edge cases
+- [ ] Test ingredient levels & cooking modes end-to-end
 - [ ] Documentation updates
 - [ ] **Remaining from Phase 4:** MEATER probe subprocess integration
 - [ ] **Remaining from Phase 4:** Ingredient bolding based on current guide step
@@ -1267,9 +1467,9 @@ This section documents deviations from the original ToR specification as of v0.5
 |-------------|---------------|-------------|--------|
 | Serving size selector with scaling | Phase 4 | Phase 7 | Requires measurement conversion engine first |
 | Measurement system conversion | Phase 4 | Phase 7 | Dedicated phase for this complex feature |
-| Ingredient bolding by step | Phase 4 | Phase 8 | Polish item, not blocking core flow |
-| MEATER probe as recipe subprocess | Phase 4 | Phase 8 | Complex integration, not blocking core recipe flow |
-| Deselectable secondary appliances | Phase 6 | Phase 8 | UI enhancement, AI works without it |
+| Ingredient bolding by step | Phase 4 | Phase 9 | Polish item, not blocking core flow |
+| MEATER probe as recipe subprocess | Phase 4 | Phase 9 | Complex integration, not blocking core recipe flow |
+| Deselectable secondary appliances | Phase 6 | Phase 9 | UI enhancement, AI works without it |
 
 ### 15.3 Features Attempted and Removed
 
@@ -1340,6 +1540,13 @@ This section documents deviations from the original ToR specification as of v0.5
 | **Serving Size** | Number of portions a recipe makes; selectable and scales ingredient quantities |
 | **Subprocess** | MEATER probe monitoring running within a recipe cook (not a meater probe cook, just a sub process) |
 | **Welcome Screen** | Initial landing page with appliance selector |
+| **Compulsory Ingredient** | An ingredient marked as must-include in every AI recipe suggestion (Level 1) |
+| **Normal Ingredient** | Standard selected ingredient used as AI input (Level 2, current default) |
+| **Available Ingredient** | An item on the user's shelf/pantry/fridge/freezer, managed via Shelf Management (Level 3) |
+| **Ingredient Level** | Priority classification of ingredients: Compulsory (1), Normal (2), Available (3) |
+| **Cooking Mode** | How the AI uses shelf awareness: Ignore Shelf (A), Cook Now (B), Cook Later (C) |
+| **Shelf Management** | Optional feature for tracking fridge/larder/freezer/shelf contents |
+| **Shopping List** | Auto-generated list of ingredients to purchase, created by Cook Later mode or post-cook shelf update |
 
 ---
 
@@ -1354,6 +1561,8 @@ This section documents deviations from the original ToR specification as of v0.5
 | 2.4 | 2026-01-16 | Research-based update of Swedish measurements: Added accurate abbreviations (krm, tsk, msk, hg), conversion table, and common recipe patterns. Clarified that cups are NOT used in Swedish recipes and dl is standard for flour/sugar. | AI Agent |
 | 3.0 | 2026-02-25 | Updated phases 1-6 to COMPLETE with actual version numbers. Added § 15 Implementation Deviations documenting: features added beyond ToR (custom cook, complexity, cuisines, etc.), features deferred to later phases, removed features (View Assist dashboard), API deviations, data model deviations. | AI Agent |
 | 3.1 | 2026-02-26 | Updated for v0.5.2.8 merge preparation. Added v0.5.2.x deviations: multi-appliance management, feature type classification, feature modification notes (panel + appliance path), categorized AI ingredients (300+), cuisine-specific ingredients, recipe origin badges, appliance APIs, AI settings API. Conformed ToR to actual implementation. | AI Agent |
+| 3.2 | 2026-03-15 | Updated for v0.6.0.00 — i18n complete, per-step ingredient tagging, Swedish decimal comma, Unicode ingredient matching, AI language directive fix. | AI Agent |
+| 3.3 | 2026-03-17 | Added § 5.6 Ingredient Levels & Cooking Modes specification (3 levels: Compulsory/Normal/Available, 3 modes: Ignore Shelf/Cook Now/Cook Later). Added Phase 8 to development plan, moved Polish & Testing to Phase 9. Updated scope, glossary. | AI Agent |
 
 ---
 
