@@ -893,15 +893,29 @@ of your response must be '{{' and the very last must be '}}'.
     def _build_language_directive(language: str, measurement_system: str) -> str:
         """Build the language/measurement directive to inject into AI prompts."""
         parts = []
-        # Language directive
+        # Language directive — ALWAYS explicit to prevent the AI from
+        # writing in the cuisine's language instead of the user's language.
         if language == "sv":
             parts.append(
                 "\nCRITICAL RULE — LANGUAGE:\n"
                 "Write the ENTIRE recipe in Swedish (svenska). All text — recipe name, "
                 "description, ingredients, instructions, tips — MUST be in Swedish. "
-                "Use natural Swedish culinary vocabulary."
+                "Use natural Swedish culinary vocabulary. "
+                "Even if the cuisine is Danish, Finnish, French, etc., the recipe text "
+                "MUST still be written in Swedish — only use the original language for "
+                "the dish name if it is a well-known proper noun."
             )
-        # else: English is the default, no directive needed
+        else:
+            # English — still explicit to prevent the AI from writing in the
+            # cuisine's language (e.g. Danish text for Danish cuisine).
+            parts.append(
+                "\nCRITICAL RULE — LANGUAGE:\n"
+                "Write the ENTIRE recipe in English. All text — recipe name, "
+                "description, ingredients, instructions, tips — MUST be in English. "
+                "Even if the cuisine is Danish, Swedish, French, Japanese, etc., the recipe "
+                "text MUST still be written in English — only use the original language for "
+                "the dish name if it is a well-known proper noun."
+            )
 
         # Measurement directive
         if measurement_system == "se":
@@ -911,8 +925,9 @@ of your response must be '{{' and the very last must be '}}'.
                 "Volume: krm (1 ml), tsk (5 ml), msk (15 ml), cl, dl, l. "
                 "Mass: g, hg (100 g), kg. "
                 "NEVER use cups, tablespoons, teaspoons, oz, lb, or fl oz. "
-                "Prefer dl over cl when ≥ 0.5 dl. Use hg for amounts ≥ 100 g. "
-                "Use kg for amounts ≥ 500 g. Temperatures in °C only."
+                "Prefer dl over cl when ≥ 0,5 dl. Use hg for amounts ≥ 100 g. "
+                "Use kg for amounts ≥ 500 g. Temperatures in °C only. "
+                "Use comma as decimal separator (e.g. 0,5 dl NOT 0.5 dl; 1,5 hg NOT 1.5 hg)."
             )
         elif measurement_system == "uk":
             parts.append(
@@ -929,7 +944,7 @@ of your response must be '{{' and the very last must be '}}'.
     def _get_example_ingredients(measurement_system: str) -> str:
         """Return example ingredient strings for the JSON format hint."""
         if measurement_system == "se":
-            return '"5 dl ris", "400 g kycklingbröst, tärnad", "2 msk olivolja"'
+            return '"5 dl ris", "400 g kycklingbröst, tärnad", "2 msk olivolja", "0,5 dl grädde"'
         elif measurement_system == "uk":
             return '"300 g chicken breast, diced", "400 ml rice", "2 tbsp olive oil"'
         return '"1 lb chicken breast, diced", "2 cups rice", "2 tbsp olive oil"'

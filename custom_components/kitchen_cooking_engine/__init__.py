@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 16 Mar 2026, 21:00 UTC
-Last Change: v0.5.6.99 - Complete i18n: translate all hardcoded English strings across all pages
+Last Change: v0.5.7.100 - Fix mixed languages: translate messages/dialogs, fix AI language directive, Swedish decimal comma, Unicode ingredient matching
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -71,7 +71,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.5.6.99"
+__version__ = "0.5.7.100"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

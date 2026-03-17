@@ -445,7 +445,22 @@
     "ai_agent_id": "AI-agent-ID:",
     "backup_agent_id": "Reservagent-ID:",
     "backup_agent_hint": "(valfritt — används när primär agent är överbelastad)",
-    "find_agent_hint": "Hitta ditt agent-ID under Utvecklarverktyg → Tillstånd — sök efter entiteter som börjar med \"conversation.\""
+    "find_agent_hint": "Hitta ditt agent-ID under Utvecklarverktyg → Tillstånd — sök efter entiteter som börjar med \"conversation.\"",
+    "start_cook_failed": "Kunde inte starta tillagning på denna session. Starta en ny tillagning manuellt.",
+    "no_meater_entity": "Ingen tillagningsentitet hittades. Konfigurera en MEATER-sond först.",
+    "restart_cook_failed": "Kunde inte starta om tillagningen. Data kan vara inkompatibelt. Starta en ny tillagning manuellt.",
+    "restart_not_supported": "Denna tillagningstyp kan inte startas om automatiskt. Starta en ny tillagning manuellt.",
+    "load_history_failed": "Kunde inte ladda MEATER-tillagningshistorik.",
+    "load_history_check": "Kontrollera:\n1. Integrationen körs\n2. Home Assistants loggar för fel\n3. Webbläsarens konsol för detaljer",
+    "no_ninja_recipes": "Inga Ninja Combi-recept tillgängliga. Kontrollera att integrationen är uppdaterad.",
+    "load_appliances_failed": "Kunde inte ladda apparater. Kontrollera din anslutning.",
+    "load_recipes_failed": "Kunde inte ladda recept. Kontrollera din anslutning.",
+    "recipe_detail_failed": "Kunde inte hämta receptdetaljer",
+    "no_probe_for_recipe": "Detta recept kräver temperaturövervakning, men ingen MEATER+-sond är konfigurerad.",
+    "add_probe_instructions": "Lägg till en MEATER+-apparat under:\nInställningar → Enheter & tjänster → Lägg till integration → Kitchen Cooking Engine",
+    "configure_probe_hint": "Kontrollera att din MEATER+-sond är korrekt konfigurerad.",
+    "recipe_loaded_instructions": "Konfigurera nu din tillagning på inställningsskärmen:\n- Välj protein och styckningsdetalj\n- Välj tillagningsgrad\n- Välj tillagningsmetod\n- Starta tillagningen",
+    "recipe_loaded_tip": "Tips: Receptet \"{name}\" fungerar bäst med {appliances}."
   },
   "cuisines": {
     "nordic": "Nordisk & Skandinavisk",

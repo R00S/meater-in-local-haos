@@ -447,7 +447,22 @@
     "ai_agent_id": "AI Agent ID:",
     "backup_agent_id": "Backup Agent ID:",
     "backup_agent_hint": "(optional — used when primary is overloaded)",
-    "find_agent_hint": "Find your agent ID in Developer Tools → States - look for entities starting with \"conversation.\""
+    "find_agent_hint": "Find your agent ID in Developer Tools → States - look for entities starting with \"conversation.\"",
+    "start_cook_failed": "Failed to start cook on this session. Please start a new cook manually.",
+    "no_meater_entity": "No cooking session entity found. Please set up a MEATER probe first.",
+    "restart_cook_failed": "Failed to restart cook. The cook data may be incompatible. Please start a new cook manually.",
+    "restart_not_supported": "This cook type cannot be automatically restarted. Please set up a new cook manually.",
+    "load_history_failed": "Failed to load MEATER cook history.",
+    "load_history_check": "Please check:\n1. Integration is running\n2. Home Assistant logs for errors\n3. Browser console for details",
+    "no_ninja_recipes": "No Ninja Combi recipes available. Please ensure the integration is up to date.",
+    "load_appliances_failed": "Failed to load appliances. Please check your connection.",
+    "load_recipes_failed": "Failed to load recipes. Please check your connection.",
+    "recipe_detail_failed": "Failed to get recipe detail",
+    "no_probe_for_recipe": "This recipe requires temperature monitoring, but no MEATER+ probe is configured.",
+    "add_probe_instructions": "Please add a MEATER+ appliance in:\nSettings → Devices & Services → Add Integration → Kitchen Cooking Engine",
+    "configure_probe_hint": "Please ensure your MEATER+ probe is configured properly.",
+    "recipe_loaded_instructions": "Now configure your cook on the setup screen:\n- Select protein and cut\n- Choose doneness level\n- Select cooking method\n- Start your cook",
+    "recipe_loaded_tip": "Tip: The recipe \"{name}\" works best with {appliances}."
   },
   "cuisines": {
     "nordic": "Nordic & Scandinavian",

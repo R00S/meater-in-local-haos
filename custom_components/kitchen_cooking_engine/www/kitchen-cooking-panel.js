@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Mar 2026, 09:25 CET
+ * AUTO-GENERATED: 17 Mar 2026, 09:33 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 17 Mar 2026, 09:25 CET
+// Last generated: 17 Mar 2026, 09:33 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -12199,7 +12199,22 @@ const I18N_STRINGS = {
       "ai_agent_id": "AI Agent ID:",
       "backup_agent_id": "Backup Agent ID:",
       "backup_agent_hint": "(optional — used when primary is overloaded)",
-      "find_agent_hint": "Find your agent ID in Developer Tools → States - look for entities starting with \"conversation.\""
+      "find_agent_hint": "Find your agent ID in Developer Tools → States - look for entities starting with \"conversation.\"",
+      "start_cook_failed": "Failed to start cook on this session. Please start a new cook manually.",
+      "no_meater_entity": "No cooking session entity found. Please set up a MEATER probe first.",
+      "restart_cook_failed": "Failed to restart cook. The cook data may be incompatible. Please start a new cook manually.",
+      "restart_not_supported": "This cook type cannot be automatically restarted. Please set up a new cook manually.",
+      "load_history_failed": "Failed to load MEATER cook history.",
+      "load_history_check": "Please check:\n1. Integration is running\n2. Home Assistant logs for errors\n3. Browser console for details",
+      "no_ninja_recipes": "No Ninja Combi recipes available. Please ensure the integration is up to date.",
+      "load_appliances_failed": "Failed to load appliances. Please check your connection.",
+      "load_recipes_failed": "Failed to load recipes. Please check your connection.",
+      "recipe_detail_failed": "Failed to get recipe detail",
+      "no_probe_for_recipe": "This recipe requires temperature monitoring, but no MEATER+ probe is configured.",
+      "add_probe_instructions": "Please add a MEATER+ appliance in:\nSettings → Devices & Services → Add Integration → Kitchen Cooking Engine",
+      "configure_probe_hint": "Please ensure your MEATER+ probe is configured properly.",
+      "recipe_loaded_instructions": "Now configure your cook on the setup screen:\n- Select protein and cut\n- Choose doneness level\n- Select cooking method\n- Start your cook",
+      "recipe_loaded_tip": "Tip: The recipe \"{name}\" works best with {appliances}."
     },
     "cuisines": {
       "nordic": "Nordic & Scandinavian",
@@ -12737,7 +12752,22 @@ const I18N_STRINGS = {
       "ai_agent_id": "AI-agent-ID:",
       "backup_agent_id": "Reservagent-ID:",
       "backup_agent_hint": "(valfritt — används när primär agent är överbelastad)",
-      "find_agent_hint": "Hitta ditt agent-ID under Utvecklarverktyg → Tillstånd — sök efter entiteter som börjar med \"conversation.\""
+      "find_agent_hint": "Hitta ditt agent-ID under Utvecklarverktyg → Tillstånd — sök efter entiteter som börjar med \"conversation.\"",
+      "start_cook_failed": "Kunde inte starta tillagning på denna session. Starta en ny tillagning manuellt.",
+      "no_meater_entity": "Ingen tillagningsentitet hittades. Konfigurera en MEATER-sond först.",
+      "restart_cook_failed": "Kunde inte starta om tillagningen. Data kan vara inkompatibelt. Starta en ny tillagning manuellt.",
+      "restart_not_supported": "Denna tillagningstyp kan inte startas om automatiskt. Starta en ny tillagning manuellt.",
+      "load_history_failed": "Kunde inte ladda MEATER-tillagningshistorik.",
+      "load_history_check": "Kontrollera:\n1. Integrationen körs\n2. Home Assistants loggar för fel\n3. Webbläsarens konsol för detaljer",
+      "no_ninja_recipes": "Inga Ninja Combi-recept tillgängliga. Kontrollera att integrationen är uppdaterad.",
+      "load_appliances_failed": "Kunde inte ladda apparater. Kontrollera din anslutning.",
+      "load_recipes_failed": "Kunde inte ladda recept. Kontrollera din anslutning.",
+      "recipe_detail_failed": "Kunde inte hämta receptdetaljer",
+      "no_probe_for_recipe": "Detta recept kräver temperaturövervakning, men ingen MEATER+-sond är konfigurerad.",
+      "add_probe_instructions": "Lägg till en MEATER+-apparat under:\nInställningar → Enheter & tjänster → Lägg till integration → Kitchen Cooking Engine",
+      "configure_probe_hint": "Kontrollera att din MEATER+-sond är korrekt konfigurerad.",
+      "recipe_loaded_instructions": "Konfigurera nu din tillagning på inställningsskärmen:\n- Välj protein och styckningsdetalj\n- Välj tillagningsgrad\n- Välj tillagningsmetod\n- Starta tillagningen",
+      "recipe_loaded_tip": "Tips: Receptet \"{name}\" fungerar bäst med {appliances}."
     },
     "cuisines": {
       "nordic": "Nordisk & Skandinavisk",
@@ -13284,7 +13314,9 @@ class KitchenCookingPanel extends LitElement {
             : String(Math.round(converted));
         const lang = this._language || 'en';
         const abbr = lang === 'sv' ? targetUnit.abbr_sv : targetUnit.abbr_en;
-        return `${numStr} ${abbr}`;
+        // Swedish locale uses comma for decimal separator
+        const displayNum = lang === 'sv' ? numStr.replace('.', ',') : numStr;
+        return `${displayNum} ${abbr}`;
       }
     }
     return `${value} ${fromUnit}`;
@@ -13369,6 +13401,12 @@ class KitchenCookingPanel extends LitElement {
       });
       // Remove redundant "(200°C)" after we already converted
       result = result.replace(/\s*\(\d+°C\)/g, '');
+    }
+
+    // Swedish locale: convert decimal points to commas in numbers
+    // e.g. "0.5 dl" → "0,5 dl", "1.5 hg" → "1,5 hg"
+    if ((this._language || 'en') === 'sv') {
+      result = result.replace(/(\d)\.(\d)/g, '$1,$2');
     }
 
     return result;
@@ -13458,7 +13496,7 @@ class KitchenCookingPanel extends LitElement {
       }
     } catch (e) {
       console.error('Could not load appliances:', e);
-      this._errorMessage = 'Failed to load appliances. Please check your connection.';
+      this._errorMessage = this._t('messages.load_appliances_failed');
     } finally {
       this._isLoadingAppliances = false;
       this.requestUpdate();
@@ -13492,7 +13530,7 @@ class KitchenCookingPanel extends LitElement {
       }
     } catch (e) {
       console.error('Could not load recipes:', e);
-      this._errorMessage = 'Failed to load recipes. Please check your connection.';
+      this._errorMessage = this._t('messages.load_recipes_failed');
     } finally {
       this._isLoadingRecipes = false;
       this.requestUpdate();
@@ -13939,7 +13977,7 @@ class KitchenCookingPanel extends LitElement {
       
       if (response.status === 'ok') {
         const backupNote = this._aiBackupAgentId
-          ? `\n\nBackup Agent ID: ${this._aiBackupAgentId}\n\nThe backup agent will be used automatically if the primary agent is overloaded.`
+          ? `\n\n${this._t('messages.backup_agent_id')} ${this._aiBackupAgentId}\n\n${this._t('messages.backup_agent_hint')}`
           : '';
         this._showMessage(this._t('messages.ai_settings_saved_title'), `✅ ${this._t('messages.ai_settings_saved')}\n\nAgent ID: ${this._aiAgentId}${backupNote}`, false);
         this._closeAISettings();
@@ -15046,9 +15084,7 @@ class KitchenCookingPanel extends LitElement {
     
     if (probeAppliances.length === 0) {
       this._showMessage(this._t('messages.cook_session_cannot_start_title'), 
-        `This recipe requires temperature monitoring, but no MEATER+ probe is configured.\n\n` +
-        `Please add a MEATER+ appliance in:\n` +
-        `Settings → Devices & Services → Add Integration → Kitchen Cooking Engine`, true);
+        this._t('messages.no_probe_for_recipe') + '\n\n' + this._t('messages.add_probe_instructions'), true);
       return;
     }
 
@@ -15056,7 +15092,7 @@ class KitchenCookingPanel extends LitElement {
     const entities = this._findCookingEntities();
     if (entities.length === 0) {
       this._showMessage(this._t('messages.no_cook_entities_title'), 
-        `Please ensure your MEATER+ probe is configured properly.`, true);
+        this._t('messages.configure_probe_hint'), true);
       return;
     }
 
@@ -15093,12 +15129,8 @@ class KitchenCookingPanel extends LitElement {
     // Show a helpful message about manual setup
     setTimeout(() => {
       this._showMessage(this._t('messages.recipe_loaded_title'), 
-        `Now configure your cook on the setup screen:\n` +
-        `- Select protein and cut\n` +
-        `- Choose doneness level\n` +
-        `- Select cooking method\n` +
-        `- Start your cook\n\n` +
-        `Tip: The recipe "${recipe.name}" works best with ${applianceNames}.`, false);
+        this._t('messages.recipe_loaded_instructions') + '\n\n' +
+        this._t('messages.recipe_loaded_tip').replace('{name}', recipe.name).replace('{appliances}', applianceNames), false);
     }, 500);
   }
 
@@ -15502,7 +15534,7 @@ class KitchenCookingPanel extends LitElement {
                               this._waitingCookServiceData = null;
                               this._currentPath = 'welcome';
                               this.requestUpdate();
-                              alert('Failed to start cook on this session. Please start a new cook manually.');
+                              this._showMessage(this._t('common.error'), this._t('messages.start_cook_failed'), true);
                             });
                         }
                         this.requestUpdate();
@@ -17986,7 +18018,7 @@ class KitchenCookingPanel extends LitElement {
       const entities = this._findCookingEntities();
       const meaterEntity = entities.find(e => e.toLowerCase().includes('meater')) || entities[0];
       if (!meaterEntity) {
-        alert('No cooking session entity found. Please set up a MEATER probe first.');
+        this._showMessage(this._t('common.error'), this._t('messages.no_meater_entity'), true);
         return;
       }
 
@@ -18008,7 +18040,7 @@ class KitchenCookingPanel extends LitElement {
           this._waitingCookServiceData = null;
           this._currentPath = 'welcome';
           this.requestUpdate();
-          alert('Failed to restart cook. The cook data may be incompatible. Please start a new cook manually.');
+          this._showMessage(this._t('common.error'), this._t('messages.restart_cook_failed'), true);
         });
 
       // Navigate to the active cook view so the user sees their cook.
@@ -18031,7 +18063,7 @@ class KitchenCookingPanel extends LitElement {
     }
 
     // Fallback: show message that this cook type can't be restarted
-    alert('This cook type cannot be automatically restarted. Please set up a new cook manually.');
+    this._showMessage(this._t('common.error'), this._t('messages.restart_not_supported'), true);
   }
 
   /**
@@ -18588,7 +18620,7 @@ class KitchenCookingPanel extends LitElement {
         fullRecipe.target_temp_f = detail.target_temp_f;
       } else {
         // API returned an error or empty detail — show the error message
-        const msg = (response && response.message) ? response.message : 'Failed to get recipe detail';
+        const msg = (response && response.message) ? response.message : this._t('messages.recipe_detail_failed');
         console.error('AI recipe detail error:', msg);
         fullRecipe.ingredients = fullRecipe.main_ingredients || [];
         fullRecipe.instructions = [];
@@ -18802,6 +18834,9 @@ class KitchenCookingPanel extends LitElement {
     const measureWords = new Set(['cups','cup','tbsp','tsp','ounce','ounces','pound','pounds','gram','grams','tablespoon','tablespoons','teaspoon','teaspoons','inch','lbs','chopped','diced','minced','sliced','finely','freshly','large','small','medium','optional','about','into','with','from','each','piece','pieces','water','drain','rinse','heat','place','minutes','adjust','taste','whole','clean','back','that','this','then','also','well','over','used','half','more','approx','skin','make',
       /* Swedish measurement/stopwords */ 'krm','tsk','msk','dl','cl','hg','kg','hackad','tärnad','skivad','finhackad','stor','liten','valfritt','ungefär','stycken','vatten','minuter','smak','hela','efter']);
     const escapeRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Unicode-aware word boundary: \b doesn't work with ä,ö,å,é etc.
+    // Use lookbehind/lookahead for non-letter/digit or string boundary.
+    const uWordBoundary = (w) => `(?<![\\p{L}\\p{N}])${escapeRegex(w)}(?![\\p{L}\\p{N}])`;
     const extractKeywords = (text) => text.split(/[\s,()]+/).filter(w =>
       w.length > 3 && !measureWords.has(w) && !/^\d/.test(w)
     );
@@ -18814,13 +18849,13 @@ class KitchenCookingPanel extends LitElement {
       if (si.length > 0) {
         const found = si.some(s => {
           const kw = extractKeywords(s.toLowerCase());
-          return kw.some(w => new RegExp(`\\b${escapeRegex(w)}\\b`, 'i').test(ingLower)) || ingLower === s.toLowerCase();
+          return kw.some(w => new RegExp(uWordBoundary(w), 'iu').test(ingLower)) || ingLower === s.toLowerCase();
         });
         if (found) return true;
       }
       // Method 2: scan instruction text
       const kw = extractKeywords(ingLower);
-      return kw.some(w => new RegExp(`\\b${escapeRegex(w)}\\b`, 'i').test(txt));
+      return kw.some(w => new RegExp(uWordBoundary(w), 'iu').test(txt));
     };
 
     // Determine which ingredients were active in any previous step
@@ -18840,7 +18875,7 @@ class KitchenCookingPanel extends LitElement {
       const kw = extractKeywords(ingLower);
       let earliest = instructionLower.length;
       kw.forEach(w => {
-        const match = instructionLower.match(new RegExp(`\\b${escapeRegex(w)}\\b`));
+        const match = instructionLower.match(new RegExp(uWordBoundary(w), 'u'));
         if (match && match.index < earliest) earliest = match.index;
       });
       return earliest;
@@ -19042,7 +19077,7 @@ class KitchenCookingPanel extends LitElement {
       this.requestUpdate();
     } catch (error) {
       console.error('Failed to show recent MEATER cooks:', error);
-      alert('Failed to load MEATER cook history.\n\nPlease check:\n1. Integration is running\n2. Home Assistant logs for errors\n3. Browser console for details');
+      this._showMessage(this._t('common.error'), this._t('messages.load_history_failed') + '\n\n' + this._t('messages.load_history_check'), true);
     }
   }
 
@@ -19068,7 +19103,7 @@ class KitchenCookingPanel extends LitElement {
       this._currentPath = 'ninja_built_in_recipes';
       this.requestUpdate();
     } else {
-      alert('No Ninja Combi recipes available. Please ensure the integration is up to date.');
+      this._showMessage(this._t('common.error'), this._t('messages.no_ninja_recipes'), true);
       this._currentPath = 'ninja_combi';
       this.requestUpdate();
     }
@@ -22072,7 +22107,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "245";
+const PANEL_VERSION = "246";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
