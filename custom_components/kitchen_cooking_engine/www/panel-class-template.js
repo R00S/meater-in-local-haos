@@ -6009,7 +6009,7 @@ class KitchenCookingPanel extends LitElement {
       const kw = extractKeywords(ingLower);
       let earliest = instructionLower.length;
       kw.forEach(w => {
-        const match = instructionLower.match(new RegExp(uWordBoundary(w), 'u'));
+        const match = instructionLower.match(new RegExp(uWordBoundary(w), 'iu'));
         if (match && match.index < earliest) earliest = match.index;
       });
       return earliest;

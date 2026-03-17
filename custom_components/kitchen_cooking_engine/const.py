@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 17 Mar 2026, 08:45 UTC
-Last Change: v0.5.7.101 - Add per-step ingredient tagging in AI recipe JSON; improve ingredient-to-step matching
+Last Change: v0.6.0.00 - Full i18n, per-step ingredient tagging, Swedish decimal comma, Unicode ingredient matching, AI language directive fix
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "248"
+PANEL_VERSION = "249"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
