@@ -258,6 +258,37 @@ async def async_get_cut_preference(
     return preferences.get("cut_preferences", {}).get(str(cut_id))
 
 
+# Language & measurement preferences
+
+DEFAULT_LANGUAGE = "en"
+DEFAULT_MEASUREMENT_SYSTEM = "se"
+
+async def async_get_language(hass: HomeAssistant) -> str:
+    """Get the user's selected UI language (e.g. 'sv', 'en')."""
+    preferences = await async_load_user_preferences(hass)
+    return preferences.get("language", DEFAULT_LANGUAGE)
+
+
+async def async_set_language(hass: HomeAssistant, language: str) -> bool:
+    """Set the user's selected UI language."""
+    preferences = await async_load_user_preferences(hass)
+    preferences["language"] = language
+    return await async_save_user_preferences(hass, preferences)
+
+
+async def async_get_measurement_system(hass: HomeAssistant) -> str:
+    """Get the user's selected measurement system (e.g. 'se', 'uk', 'us')."""
+    preferences = await async_load_user_preferences(hass)
+    return preferences.get("measurement_system", DEFAULT_MEASUREMENT_SYSTEM)
+
+
+async def async_set_measurement_system(hass: HomeAssistant, system: str) -> bool:
+    """Set the user's selected measurement system."""
+    preferences = await async_load_user_preferences(hass)
+    preferences["measurement_system"] = system
+    return await async_save_user_preferences(hass, preferences)
+
+
 # --------------------------------------------------------------------------- #
 # Active recipe cook state (server-side, visible across devices)
 # --------------------------------------------------------------------------- #

@@ -23,7 +23,8 @@ This project has evolved from a MEATER BLE proxy into a comprehensive **Kitchen 
 | Phase 5 | Ninja Combi Path — Recipe builder, built-in recipes, AI link | ✅ Complete |
 | Phase 6 | AI Recipe Builder Path — Ingredients, styles, cuisines, generation, cook flow, save/restart | ✅ Complete |
 | Phase 7 | Multilingual & Measurement Systems | ⬜ Not started |
-| Phase 8 | Polish & Testing | ⬜ Not started |
+| Phase 8 | Ingredient Levels & Cooking Modes | ⬜ Not started |
+| Phase 9 | Polish & Testing | ⬜ Not started |
 
 ### What's Working (v0.5.4.9)
 
@@ -145,7 +146,7 @@ See [GUI Redesign ToR § 15. Implementation Deviations](#) for a full list of de
 └── README.md                   # Installation & usage guide
 ```
 
-## 🚀 Next Steps — Phase 7 & 8
+## 🚀 Next Steps — Phase 7, 8 & 9
 
 ### Phase 7: Multilingual & Measurement Systems
 1. **i18n infrastructure** — Translation system for all UI text
@@ -154,7 +155,13 @@ See [GUI Redesign ToR § 15. Implementation Deviations](#) for a full list of de
 4. **Serving size scaling** — Automatic ingredient scaling with intelligent rounding
 5. **Language/measurement selectors** in settings
 
-### Phase 8: Polish & Testing
+### Phase 8: Ingredient Levels & Cooking Modes
+1. **Compulsory Ingredients** — Clickable badges to mark must-include ingredients
+2. **Shelf Management** — Optional fridge/larder/freezer/shelf tracking
+3. **Cooking Modes** — Ignore Shelf (A), Cook Now (B), Cook Later (C)
+4. **Post-Cook Shelf Update** — Deduct used ingredients, generate shopping list
+
+### Phase 9: Polish & Testing
 1. **Visual design refinement** — Consistent styling across all paths
 2. **Mobile responsive** — Optimize for small screens
 3. **Edge case handling** — Empty states, error recovery

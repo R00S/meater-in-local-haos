@@ -36,6 +36,10 @@ from .storage import (
     async_load_active_recipe_cook,
     async_save_active_recipe_cook,
     async_clear_active_recipe_cook,
+    async_get_language,
+    async_set_language,
+    async_get_measurement_system,
+    async_set_measurement_system,
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -253,6 +257,10 @@ def async_register_api(hass: HomeAssistant) -> None:
     hass.http.register_view(UserPreferencesView)
     hass.http.register_view(CutPreferenceView)
     
+    # Phase 7: Language & measurement preferences
+    hass.http.register_view(LanguagePreferenceView)
+    hass.http.register_view(MeasurementSystemPreferenceView)
+    
     # Phase 3.1: Multi-appliance endpoints
     hass.http.register_view(AppliancesView)
     hass.http.register_view(ApplianceFeatureNotesView)
@@ -459,6 +467,66 @@ class CutPreferenceView(HomeAssistantView):
             return self.json({"status": "error", "message": "Failed to save"})
         except Exception as e:
             _LOGGER.error("Error setting cut preference: %s", e)
+            return self.json({"status": "error", "message": "Failed to process request"})
+
+
+class LanguagePreferenceView(HomeAssistantView):
+    """API endpoint for language preference (GET/POST)."""
+
+    url = "/api/kitchen_cooking_engine/preferences/language"
+    name = "api:kitchen_cooking_engine:language_preference"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Get current language preference."""
+        hass = request.app["hass"]
+        language = await async_get_language(hass)
+        return self.json({"language": language})
+
+    async def post(self, request: web.Request) -> web.Response:
+        """Set language preference."""
+        hass = request.app["hass"]
+        try:
+            data = await request.json()
+            language = data.get("language", "en")
+            if language not in ("sv", "en"):
+                return self.json({"status": "error", "message": f"Unsupported language: {language}"})
+            success = await async_set_language(hass, language)
+            if success:
+                return self.json({"status": "ok", "language": language})
+            return self.json({"status": "error", "message": "Failed to save"})
+        except Exception as e:
+            _LOGGER.error("Error setting language: %s", e)
+            return self.json({"status": "error", "message": "Failed to process request"})
+
+
+class MeasurementSystemPreferenceView(HomeAssistantView):
+    """API endpoint for measurement system preference (GET/POST)."""
+
+    url = "/api/kitchen_cooking_engine/preferences/measurement_system"
+    name = "api:kitchen_cooking_engine:measurement_system_preference"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Get current measurement system preference."""
+        hass = request.app["hass"]
+        system = await async_get_measurement_system(hass)
+        return self.json({"measurement_system": system})
+
+    async def post(self, request: web.Request) -> web.Response:
+        """Set measurement system preference."""
+        hass = request.app["hass"]
+        try:
+            data = await request.json()
+            system = data.get("measurement_system", "se")
+            if system not in ("se", "uk", "us"):
+                return self.json({"status": "error", "message": f"Unsupported measurement system: {system}"})
+            success = await async_set_measurement_system(hass, system)
+            if success:
+                return self.json({"status": "ok", "measurement_system": system})
+            return self.json({"status": "error", "message": "Failed to save"})
+        except Exception as e:
+            _LOGGER.error("Error setting measurement system: %s", e)
             return self.json({"status": "error", "message": "Failed to process request"})
 
 
@@ -873,6 +941,8 @@ class AIRecipeGenerateView(HomeAssistantView):
                 max_time_minutes=data.get("max_time_minutes"),
                 complexity=data.get("complexity", 3),
                 cuisines=data.get("cuisines"),
+                language=data.get("language", "en"),
+                measurement_system=data.get("measurement_system", "us"),
             )
             
             # Convert suggestions to dict for JSON
@@ -974,6 +1044,8 @@ class AIRecipeDetailView(HomeAssistantView):
                 complexity=data.get("complexity", 3),
                 user_ingredients=data.get("user_ingredients"),
                 servings=data.get("servings", 4),
+                language=data.get("language", "en"),
+                measurement_system=data.get("measurement_system", "us"),
             )
             
             if not detail:
@@ -996,6 +1068,7 @@ class AIRecipeDetailView(HomeAssistantView):
                 },
                 "ingredients": detail.ingredients,
                 "instructions": detail.instructions,
+                "step_ingredients": detail.step_ingredients,
                 "tips": detail.tips,
                 "phases": [
                     {

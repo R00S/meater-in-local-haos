@@ -123,6 +123,9 @@ class KitchenCookingPanel extends LitElement {
       _showFeatureNotesEditor: { type: Boolean },
       // MEATER cook rating state (Issue #65)
       _meaterCookRatingState: { type: Object },
+      // Phase 7: Language & Measurement
+      _language: { type: String },
+      _measurementSystem: { type: String },
     };
   }
 
@@ -228,6 +231,9 @@ class KitchenCookingPanel extends LitElement {
     this._aiGenerationTimer = null; // Interval handle for status ticker
     this._showFeatureNotesEditor = false; // Show feature notes editor in appliance path
     this._meaterCookRatingState = null; // MEATER cook rating state (Issue #65)
+    // Phase 7: Language & Measurement system (independent selections)
+    this._language = 'en';               // UI language: 'sv' or 'en'
+    this._measurementSystem = 'se';      // Measurement: 'se', 'uk', or 'us'
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -243,6 +249,10 @@ class KitchenCookingPanel extends LitElement {
     
     // Load user preferences
     this._loadPreferences();
+    
+    // Phase 7: Load language & measurement preferences
+    this._loadLanguagePreference();
+    this._loadMeasurementPreference();
     
     // Load AI settings to determine if AI Recipe Builder should be visible
     this._loadAISettings();
@@ -361,6 +371,212 @@ class KitchenCookingPanel extends LitElement {
     }
   }
 
+  // =========================================================================
+  // Phase 7: Translation (i18n) & Measurement system
+  // =========================================================================
+
+  /**
+   * Translate a key like "meater.ready_to_cook" into the current language.
+   * Falls back to English, then to the key itself.
+   */
+  _t(key) {
+    const lang = this._language || 'en';
+    const parts = key.split('.');
+    // Try requested language
+    let node = (typeof I18N_STRINGS !== 'undefined') ? I18N_STRINGS[lang] : undefined;
+    for (const p of parts) {
+      if (node && typeof node === 'object') node = node[p];
+      else { node = undefined; break; }
+    }
+    if (typeof node === 'string') return node;
+    // Fallback to English
+    if (lang !== 'en') {
+      node = (typeof I18N_STRINGS !== 'undefined') ? I18N_STRINGS['en'] : undefined;
+      for (const p of parts) {
+        if (node && typeof node === 'object') node = node[p];
+        else { node = undefined; break; }
+      }
+      if (typeof node === 'string') return node;
+    }
+    return key; // last resort: return the key
+  }
+
+  /**
+   * Convert a quantity+unit to the user's preferred measurement system.
+   * E.g. _convertMeasure(500, 'ml') → "5 dl" (SE) or "2.1 cup" (US).
+   */
+  _convertMeasure(value, fromUnit) {
+    const sysId = this._measurementSystem || 'se';
+    const sys = (typeof MEASUREMENT_SYSTEMS !== 'undefined') ? MEASUREMENT_SYSTEMS[sysId] : null;
+    if (!sys || !sys.units) return `${value} ${fromUnit}`;
+
+    // Find source unit's base multiplier from any system (they share units)
+    let toBase = null;
+    let unitType = null;
+    for (const msKey of Object.keys(MEASUREMENT_SYSTEMS)) {
+      const msUnits = MEASUREMENT_SYSTEMS[msKey].units;
+      if (msUnits[fromUnit]) {
+        toBase = msUnits[fromUnit].to_base;
+        unitType = msUnits[fromUnit].type;
+        break;
+      }
+    }
+    if (toBase === null) return `${value} ${fromUnit}`;
+
+    const baseValue = value * toBase;
+    const prefs = unitType === 'volume' ? sys.volume_prefs : sys.mass_prefs;
+
+    for (const rule of prefs) {
+      const minVal = unitType === 'volume' ? rule.min_ml : rule.min_g;
+      const targetUnit = sys.units[rule.unit];
+      if (!targetUnit) continue;
+      if (baseValue >= minVal) {
+        const converted = baseValue / targetUnit.to_base;
+        const numStr = converted === Math.floor(converted)
+          ? String(Math.floor(converted))
+          : converted < 10
+            ? converted.toFixed(1).replace(/\.?0+$/, '')
+            : String(Math.round(converted));
+        const lang = this._language || 'en';
+        const abbr = lang === 'sv' ? targetUnit.abbr_sv : targetUnit.abbr_en;
+        // Swedish locale uses comma for decimal separator
+        const displayNum = lang === 'sv' ? numStr.replace('.', ',') : numStr;
+        return `${displayNum} ${abbr}`;
+      }
+    }
+    return `${value} ${fromUnit}`;
+  }
+
+  /**
+   * Convert a temperature in °C for display in the user's measurement system.
+   * SE/UK → "70°C", US → "158°F (70°C)".
+   */
+  _convertTemp(tempC) {
+    const sysId = this._measurementSystem || 'se';
+    const sys = (typeof MEASUREMENT_SYSTEMS !== 'undefined') ? MEASUREMENT_SYSTEMS[sysId] : null;
+    if (sys && sys.temp_unit === 'F') {
+      const f = Math.round(tempC * 9 / 5 + 32);
+      return `${f}°F (${Math.round(tempC)}°C)`;
+    }
+    return `${Math.round(tempC)}°C`;
+  }
+
+  /**
+   * Convert measurement patterns in a free-text ingredient or instruction string.
+   * Parses patterns like "1.5 lb", "1/2 cup", "2 tablespoons", "400°F" and converts
+   * them to the user's selected measurement system.
+   * Used as a safety-net for AI-generated text that may still contain wrong units.
+   */
+  _convertIngredientText(text) {
+    if (!text || typeof text !== 'string') return text;
+    const sysId = this._measurementSystem || 'se';
+    if (typeof MEASUREMENT_SYSTEMS === 'undefined') return text;
+    const sys = MEASUREMENT_SYSTEMS[sysId];
+    if (!sys || !sys.units) return text;
+
+    // Map of text patterns → unit ID in MEASUREMENT_SYSTEMS (source unit)
+    const unitPatterns = [
+      // Volume — long forms first to avoid partial matches
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:tablespoons?|Tablespoons?|TBSP)\b/g, unit: 'tbsp' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:teaspoons?|Teaspoons?|TSP)\b/g, unit: 'tsp' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:cups?|Cups?)\b/g, unit: 'cup' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:fl\.?\s*oz|fluid\s*ounces?)\b/gi, unit: 'fl_oz' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:tbsp)\b/g, unit: 'tbsp' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:tsp)\b/g, unit: 'tsp' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:pints?|Pints?)\b/g, unit: 'pint' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:quarts?|Quarts?)\b/g, unit: 'quart' },
+      // Mass — long forms first
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:pounds?|Pounds?|lbs?)\b/g, unit: 'lb' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:ounces?|Ounces?)\b/g, unit: 'oz' },
+      { re: /\b(\d+(?:[.,\/]\d+)?)\s*(?:oz)\b/g, unit: 'oz' },
+    ];
+
+    // Parse fraction strings like "1/2" or "1 1/2"
+    const parseFrac = (s) => {
+      s = s.replace(',', '.');
+      if (s.includes('/')) {
+        const parts = s.split('/');
+        return parseFloat(parts[0]) / parseFloat(parts[1]);
+      }
+      return parseFloat(s);
+    };
+
+    let result = text;
+
+    // Handle compound fractions like "1 1/2 cups" → 1.5 cups
+    result = result.replace(/(\d+)\s+(\d+\/\d+)/g, (m, whole, frac) => {
+      return String(parseInt(whole) + parseFrac(frac));
+    });
+
+    for (const { re, unit } of unitPatterns) {
+      result = result.replace(re, (match, numStr) => {
+        const value = parseFrac(numStr);
+        if (isNaN(value) || value <= 0) return match;
+        return this._convertMeasure(value, unit);
+      });
+    }
+
+    // Temperature conversion: "400°F" or "400 °F" → localized
+    if (sys.temp_unit !== 'F') {
+      // Convert °F to °C when user wants metric
+      result = result.replace(/(\d+)\s*°\s*F\b/g, (match, fStr) => {
+        const f = parseInt(fStr);
+        const c = Math.round((f - 32) * 5 / 9);
+        return `${c}°C`;
+      });
+      // Remove redundant "(200°C)" after we already converted
+      result = result.replace(/\s*\(\d+°C\)/g, '');
+    }
+
+    // Swedish locale: convert decimal points to commas in numbers
+    // e.g. "0.5 dl" → "0,5 dl", "1.5 hg" → "1,5 hg"
+    if ((this._language || 'en') === 'sv') {
+      result = result.replace(/(\d)\.(\d)/g, '$1,$2');
+    }
+
+    return result;
+  }
+
+  async _loadLanguagePreference() {
+    try {
+      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/preferences/language');
+      if (response && response.language) {
+        this._language = response.language;
+      }
+    } catch (e) {
+      console.log('Could not load language preference:', e);
+    }
+  }
+
+  async _saveLanguagePreference(lang) {
+    this._language = lang;
+    try {
+      await this.hass.callApi('POST', 'kitchen_cooking_engine/preferences/language', { language: lang });
+    } catch (e) {
+      console.error('Could not save language preference:', e);
+    }
+  }
+
+  async _loadMeasurementPreference() {
+    try {
+      const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/preferences/measurement_system');
+      if (response && response.measurement_system) {
+        this._measurementSystem = response.measurement_system;
+      }
+    } catch (e) {
+      console.log('Could not load measurement preference:', e);
+    }
+  }
+
+  async _saveMeasurementPreference(sys) {
+    this._measurementSystem = sys;
+    try {
+      await this.hass.callApi('POST', 'kitchen_cooking_engine/preferences/measurement_system', { measurement_system: sys });
+    } catch (e) {
+      console.error('Could not save measurement preference:', e);
+    }
+  }
+
   async _loadHistory() {
     try {
       // Call REST API endpoint at /api/kitchen_cooking_engine/history
@@ -405,7 +621,7 @@ class KitchenCookingPanel extends LitElement {
       }
     } catch (e) {
       console.error('Could not load appliances:', e);
-      this._errorMessage = 'Failed to load appliances. Please check your connection.';
+      this._errorMessage = this._t('messages.load_appliances_failed');
     } finally {
       this._isLoadingAppliances = false;
       this.requestUpdate();
@@ -439,7 +655,7 @@ class KitchenCookingPanel extends LitElement {
       }
     } catch (e) {
       console.error('Could not load recipes:', e);
-      this._errorMessage = 'Failed to load recipes. Please check your connection.';
+      this._errorMessage = this._t('messages.load_recipes_failed');
     } finally {
       this._isLoadingRecipes = false;
       this.requestUpdate();
@@ -886,16 +1102,16 @@ class KitchenCookingPanel extends LitElement {
       
       if (response.status === 'ok') {
         const backupNote = this._aiBackupAgentId
-          ? `\n\nBackup Agent ID: ${this._aiBackupAgentId}\n\nThe backup agent will be used automatically if the primary agent is overloaded.`
+          ? `\n\n${this._t('messages.backup_agent_id')} ${this._aiBackupAgentId}\n\n${this._t('messages.backup_agent_hint')}`
           : '';
-        this._showMessage('AI Settings Saved', `✅ Settings saved successfully!\n\nAgent ID: ${this._aiAgentId}${backupNote}`, false);
+        this._showMessage(this._t('messages.ai_settings_saved_title'), `✅ ${this._t('messages.ai_settings_saved')}\n\nAgent ID: ${this._aiAgentId}${backupNote}`, false);
         this._closeAISettings();
       } else {
-        this._showMessage('Failed to Save Settings', `❌ ${response.message}`, true);
+        this._showMessage(this._t('messages.ai_settings_save_failed_title'), `❌ ${response.message}`, true);
       }
     } catch (e) {
       console.error('[AI Settings] Failed to save settings:', e);
-      this._showMessage('Error Saving Settings', `❌ ${e.message}`, true);
+      this._showMessage(this._t('messages.ai_settings_save_error_title'), `❌ ${e.message}`, true);
     }
   }
 
@@ -1178,26 +1394,26 @@ class KitchenCookingPanel extends LitElement {
             this._currentPath = 'ninja_built_in_recipes';
             this.requestUpdate();
           }}>
-            ← Back to Recipes
+            ${this._t('nav.back_to_recipes')}
           </button>
           <button class="action-btn" @click=${() => this._openRecipeInBuilder(recipe)}>
-            🛠️ Modify in Builder
+            ${this._t('ninja.modify_in_builder')}
           </button>
         </div>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <h3>📋 Recipe Details</h3>
+          <h3>${this._t('ninja.recipe_details')}</h3>
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 12px 0;">
             <div>
-              <strong>⏱️ Prep:</strong> ${recipe.prep_time_minutes} min
+              <strong>${this._t('ninja.prep_label')}</strong> ${recipe.prep_time_minutes} min
             </div>
             <div>
-              <strong>🔥 Cook:</strong> ${recipe.cook_time_minutes} min
+              <strong>${this._t('ninja.cook_label')}</strong> ${recipe.cook_time_minutes} min
             </div>
             <div>
-              <strong>🍽️ Servings:</strong> 
+              <strong>${this._t('ninja.servings_label')}</strong> 
               <input 
                 type="number" 
                 min="1" 
@@ -1207,12 +1423,12 @@ class KitchenCookingPanel extends LitElement {
                 style="width: 50px; padding: 4px; border: 1px solid var(--divider-color); border-radius: 4px; background: var(--primary-background-color); color: var(--primary-text-color);">
             </div>
             <div>
-              <strong>📊 Difficulty:</strong> ${recipe.difficulty}
+              <strong>${this._t('ninja.difficulty_label')}</strong> ${recipe.difficulty}
             </div>
           </div>
           ${recipe.use_probe ? html`
             <div style="margin-top: 12px; padding: 12px; background: rgba(76, 175, 80, 0.1); border-left: 3px solid #4caf50; border-radius: 0 4px 4px 0;">
-              <strong>🌡️ MEATER+ Probe:</strong> Target ${recipe.target_temp_c}°C (${recipe.target_temp_f}°F)
+              <strong>${this._t('ninja.meater_probe_label')}</strong> ${this._t('common.target')} ${recipe.target_temp_c}°C (${recipe.target_temp_f}°F)
             </div>
           ` : ''}
 
@@ -1221,7 +1437,7 @@ class KitchenCookingPanel extends LitElement {
             class="action-btn" 
             @click=${() => this._startRecipeCook(recipe, recipe._adjustedServings || recipe.servings)}
             style="width: 100%; margin-top: 16px; padding: 16px; font-size: 16px; background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);">
-            🍳 Start Cooking
+            ${this._t('ninja.start_cooking_btn')}
           </button>
         </div>
       </ha-card>
@@ -1229,13 +1445,13 @@ class KitchenCookingPanel extends LitElement {
       ${recipe.phases && recipe.phases.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🔄 Cooking Phases</h3>
+            <h3>${this._t('ninja.cooking_phases')}</h3>
             ${recipe.phases.map((phase, idx) => html`
               <div style="margin: 12px 0; padding: 12px; background: var(--primary-background-color); border-radius: 8px;">
-                <strong>Phase ${idx + 1}:</strong> ${phase.description}<br>
+                <strong>${this._t('ninja.phase')} ${idx + 1}:</strong> ${phase.description}<br>
                 🌡️ ${phase.temperature_c}°C (${phase.temperature_f}°F)<br>
-                ⏱️ ${phase.duration_minutes} minutes<br>
-                ${phase.steam_enabled ? '💨 Steam enabled' : ''}
+                ⏱️ ${phase.duration_minutes} ${this._t('common.minutes')}<br>
+                ${phase.steam_enabled ? this._t('ninja.steam_enabled') : ''}
               </div>
             `)}
           </div>
@@ -1244,7 +1460,7 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>🛒 Ingredients</h3>
+          <h3>${this._t('ninja.ingredients_label')}</h3>
           <ul style="margin: 0; padding-left: 20px;">
             ${(recipe._adjustedIngredients || recipe.ingredients).map(ing => html`<li>${ing}</li>`)}
           </ul>
@@ -1253,7 +1469,7 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>👨‍🍳 Instructions</h3>
+          <h3>${this._t('ninja.instructions_label')}</h3>
           <ol style="margin: 0; padding-left: 20px;">
             ${recipe.instructions.map(step => html`<li style="margin-bottom: 8px;">${step}</li>`)}
           </ol>
@@ -1263,7 +1479,7 @@ class KitchenCookingPanel extends LitElement {
       ${recipe.tips && recipe.tips.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>💡 Tips</h3>
+            <h3>${this._t('ninja.tips_label')}</h3>
             <ul style="margin: 0; padding-left: 20px;">
               ${recipe.tips.map(tip => html`<li style="margin-bottom: 6px;">${tip}</li>`)}
             </ul>
@@ -1274,7 +1490,7 @@ class KitchenCookingPanel extends LitElement {
       ${recipe.notes ? html`
         <ha-card>
           <div class="card-content">
-            <h3>📝 Notes</h3>
+            <h3>${this._t('ninja.notes_label')}</h3>
             <p>${recipe.notes}</p>
           </div>
         </ha-card>
@@ -1331,21 +1547,21 @@ class KitchenCookingPanel extends LitElement {
 
     return html`
       <div class="status-banner idle">
-        <h2>🛠️ Recipe Builder</h2>
-        <p>Build custom Combi-Meal recipes with automatic parameter adjustment</p>
+        <h2>${this._t('ninja.builder_heading')}</h2>
+        <p>${this._t('ninja.builder_desc')}</p>
         <div style="display: flex; gap: 8px; margin-top: 12px;">
           <button class="history-btn" @click=${() => { this._showRecipeBuilder = false; this._resetBuilder(); }}>
-            ← Back to Ninja Combi
+            ${this._t('nav.back_to_ninja_combi')}
           </button>
           <button class="history-btn" @click=${() => { this._currentPath = 'ninja_built_in_recipes'; this.requestUpdate(); }}>
-            📖 All Recipes
+            ${this._t('ninja.all_recipes_btn')}
           </button>
         </div>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <h3>1️⃣ Select Base (Required)</h3>
+          <h3>${this._t('ninja.select_base')}</h3>
           <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px;">
             ${Object.entries(bases).map(([key, base]) => html`
               <button 
@@ -1365,7 +1581,7 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>2️⃣ Select Protein (Required)</h3>
+          <h3>${this._t('ninja.select_protein_builder')}</h3>
           <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px;">
             ${Object.entries(proteins).map(([key, protein]) => html`
               <button 
@@ -1385,9 +1601,9 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>3️⃣ Add Vegetables (Optional)</h3>
+          <h3>${this._t('ninja.add_vegetables')}</h3>
           <p style="font-size: 12px; color: var(--secondary-text-color); margin-bottom: 8px;">
-            💡 Tender veggies cook with base, crispy veggies cook with protein
+            ${this._t('ninja.veggie_hint')}
           </p>
           <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
             ${veggies.map(veggie => {
@@ -1400,7 +1616,7 @@ class KitchenCookingPanel extends LitElement {
                   <div style="font-size: 20px; margin-bottom: 4px;">${veggie.icon}</div>
                   <div style="font-size: 13px; font-weight: 500;">${veggie.name}</div>
                   <div style="font-size: 11px; color: var(--secondary-text-color); margin-top: 2px;">
-                    ${veggie.type === 'tender' ? '🥘 With base' : '🔥 With protein'}
+                    ${veggie.type === 'tender' ? this._t('ninja.with_base') : this._t('ninja.with_protein')}
                   </div>
                 </button>
               `;
@@ -1411,7 +1627,7 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>4️⃣ MEATER+ Probe</h3>
+          <h3>${this._t('ninja.meater_probe_section')}</h3>
           <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
             <input 
               type="checkbox" 
@@ -1419,7 +1635,7 @@ class KitchenCookingPanel extends LitElement {
               @change=${(e) => { this._builderUseMeater = e.target.checked; this.requestUpdate(); }}
               style="width: 18px; height: 18px; cursor: pointer;">
             <span style="font-size: 14px;">
-              🌡️ Use MEATER+ probe for temperature monitoring
+              🌡️ ${this._t('ninja.use_meater_probe')}
               ${this._builderUseMeater && selectedProtein ? html`
                 <div style="font-size: 12px; color: var(--secondary-text-color); margin-top: 4px;">
                   Target: ${selectedProtein.probe}
@@ -1433,35 +1649,35 @@ class KitchenCookingPanel extends LitElement {
       ${this._builderBase && this._builderProtein ? html`
         <ha-card>
           <div class="card-content">
-            <h3>📊 Calculated Parameters</h3>
+            <h3>${this._t('ninja.calculated_params')}</h3>
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 12px 0;">
               <div>
-                <strong>🌡️ Temperature:</strong><br>
+                <strong>${this._t('ninja.temperature_label')}</strong><br>
                 ${selectedProtein.temp}
               </div>
               <div>
-                <strong>⏱️ Cook Time:</strong><br>
-                ${selectedProtein.time} minutes
+                <strong>${this._t('ninja.cook_time_label')}</strong><br>
+                ${selectedProtein.time} ${this._t('common.minutes')}
               </div>
               <div>
-                <strong>💧 Water:</strong><br>
+                <strong>${this._t('ninja.water_label')}</strong><br>
                 ${selectedBase.water}
               </div>
               <div>
-                <strong>🍴 Mode:</strong><br>
+                <strong>${this._t('ninja.mode_label')}</strong><br>
                 Combi-Meal
               </div>
             </div>
             ${this._builderUseMeater && selectedProtein.probe !== 'N/A' ? html`
               <div style="margin-top: 12px; padding: 12px; background: rgba(76, 175, 80, 0.1); border-left: 3px solid #4caf50; border-radius: 0 4px 4px 0;">
-                <strong>🌡️ Probe Target:</strong> ${selectedProtein.probe}
+                <strong>${this._t('ninja.probe_target')}</strong> ${selectedProtein.probe}
               </div>
             ` : ''}
             <button 
               class="action-btn" 
               @click=${() => this._buildRecipe()}
               style="width: 100%; margin-top: 16px; padding: 14px; font-size: 15px; font-weight: 600;">
-              ✨ Build Custom Recipe
+              ${this._t('ninja.build_recipe_btn')}
             </button>
           </div>
         </ha-card>
@@ -1469,7 +1685,7 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <p style="text-align: center; color: var(--secondary-text-color); padding: 20px 0;">
-              👆 Select a base and protein to see calculated parameters
+              ${this._t('ninja.select_base_protein_hint')}
             </p>
           </div>
         </ha-card>
@@ -1491,7 +1707,7 @@ class KitchenCookingPanel extends LitElement {
     }
 
     if (!meaterEntity) {
-      this._showMessage('No MEATER Sensor Found', '⚠️ Please ensure your MEATER device is connected and the Kitchen Cooking Engine integration is set up.', true);
+      this._showMessage(this._t('meater.no_sensor_found'), '⚠️ ' + this._t('meater.sensor_not_connected'), true);
       return;
     }
 
@@ -1522,14 +1738,14 @@ class KitchenCookingPanel extends LitElement {
           this.requestUpdate();
           
           // Show success message
-          this._showMessage('Cooking Session Started', `✅ Session started successfully!\n\nRecipe: ${recipe.name}\n\nThe cooking session is now active.`, false);
+          this._showMessage(this._t('messages.cook_session_started_title'), `✅ ${this._t('messages.cook_session_started')}\n\n${this._t('recipe_cook.recipe_label')}: ${recipe.name}\n\n${this._t('messages.cook_session_started_detail')}`, false);
           
           // Close Ninja Combi view to return to main panel which will show active cook
           this._showNinjaCombi = false;
           this._selectedNinjaRecipe = null;
         })
         .catch(err => {
-          this._showMessage('Error Starting Cook', `❌ ${err.message}`, true);
+          this._showMessage(this._t('messages.cook_session_error_title'), `❌ ${err.message}`, true);
         });
     }
   }
@@ -1613,8 +1829,8 @@ class KitchenCookingPanel extends LitElement {
   _renderAppliances() {
     return html`
       <div class="status-banner idle">
-        <h2>🔧 Kitchen Appliances</h2>
-        <p>${this._appliances.length} appliance${this._appliances.length !== 1 ? 's' : ''} configured</p>
+        <h2>${this._t('appliances.title')}</h2>
+        <p>${this._appliances.length} ${this._t('appliances.configured')}</p>
       </div>
 
       ${this._errorMessage ? html`
@@ -1622,7 +1838,7 @@ class KitchenCookingPanel extends LitElement {
           <div class="card-content error-message">
             <p>⚠️ ${this._errorMessage}</p>
             <button class="retry-btn" @click=${() => this._loadAppliances()}>
-              🔄 Retry
+              🔄 ${this._t('common.retry')}
             </button>
           </div>
         </ha-card>
@@ -1632,15 +1848,15 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content loading-state">
             <div class="spinner"></div>
-            <p>Loading appliances...</p>
+            <p>${this._t('appliances.loading')}</p>
           </div>
         </ha-card>
       ` : this._appliances.length === 0 ? html`
         <ha-card>
           <div class="card-content no-entities">
-            <p>No appliances configured yet.</p>
-            <p>Go to <strong>Settings</strong> → <strong>Devices & Services</strong> → <strong>Add Integration</strong></p>
-            <p>Search for <strong>Kitchen Cooking Engine</strong> and add your appliances.</p>
+            <p>${this._t('appliances.no_appliances')}</p>
+            <p>${this._t('appliances.setup_step1')}</p>
+            <p>${this._t('appliances.setup_step2')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -1669,13 +1885,13 @@ class KitchenCookingPanel extends LitElement {
                 
                 <div class="appliance-features">
                   ${appliance._expanded ? this._renderFeaturesByType(appliance) : html`
-                    <h4>Features (${appliance.features.length}):</h4>
+                    <h4>${this._t('common.features')} (${appliance.features.length}):</h4>
                     <div class="feature-badges">
                       ${appliance.features.slice(0, 6).map(feature => html`
                         <span class="feature-badge">${this._formatFeatureName(feature)}</span>
                       `)}
                       ${appliance.features.length > 6 ? html`
-                        <span class="feature-badge more">+${appliance.features.length - 6} more</span>
+                        <span class="feature-badge more">+${appliance.features.length - 6} ${this._t('common.more')}</span>
                       ` : ''}
                     </div>
                   `}
@@ -1683,7 +1899,7 @@ class KitchenCookingPanel extends LitElement {
 
                 ${appliance.recipe_count > 0 ? html`
                   <div class="appliance-recipes">
-                    📖 ${appliance.recipe_count} recipe${appliance.recipe_count !== 1 ? 's' : ''} available
+                    📖 ${appliance.recipe_count} ${this._t('appliances.recipes_available')}
                   </div>
                 ` : ''}
               </div>
@@ -1693,8 +1909,8 @@ class KitchenCookingPanel extends LitElement {
       `}
 
       <div class="help-text">
-        <p>💡 <strong>Tip:</strong> Add more appliances to unlock more recipes!</p>
-        <p>Each appliance brings its own features and compatible recipes.</p>
+        <p>💡 <strong>Tip:</strong> ${this._t('appliances.tip')}</p>
+        <p>${this._t('appliances.tip_detail')}</p>
       </div>
     `;
   }
@@ -1708,8 +1924,8 @@ class KitchenCookingPanel extends LitElement {
 
     return html`
       <div class="status-banner idle">
-        <h2>📖 Compatible Recipes</h2>
-        <p>${this._compatibleRecipes.length} recipe${this._compatibleRecipes.length !== 1 ? 's' : ''} you can cook</p>
+        <h2>${this._t('recipes.compatible_title')}</h2>
+        <p>${this._compatibleRecipes.length} ${this._t('recipes.you_can_cook')}</p>
       </div>
 
       <ha-card>
@@ -1763,13 +1979,13 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content loading-state">
             <div class="spinner"></div>
-            <p>Loading recipes...</p>
+            <p>${this._t('common.loading')}</p>
           </div>
         </ha-card>
       ` : this._compatibleRecipes.length === 0 ? html`
         <ha-card>
           <div class="card-content no-entities">
-            <p>No compatible recipes found with current filter.</p>
+            <p>${this._t('ninja.no_recipes')}</p>
             <p>Try adjusting the quality filter or adding more appliances.</p>
           </div>
         </ha-card>
@@ -1839,9 +2055,9 @@ class KitchenCookingPanel extends LitElement {
 
     return html`
       <div class="status-banner idle">
-        <h2>📖 Recipe Details</h2>
+        <h2>📖 ${this._t('ninja.recipe_details')}</h2>
         <button class="back-btn" @click=${() => this._selectedRecipeDetail = null}>
-          ← Back to Recipes
+          ${this._t('nav.back_to_recipes')}
         </button>
       </div>
 
@@ -1869,7 +2085,7 @@ class KitchenCookingPanel extends LitElement {
 
           ${match.suggested_appliances && match.suggested_appliances.length > 0 ? html`
             <div class="appliances-section">
-              <h3>✅ You'll Need:</h3>
+              <h3>${this._t('recipes.you_need')}</h3>
               <div class="appliance-list-detail">
                 ${match.suggested_appliances.map(appId => {
                   const appliance = this._appliances.find(a => a.id === appId);
@@ -1878,7 +2094,7 @@ class KitchenCookingPanel extends LitElement {
                     <div class="appliance-item">
                       <span class="appliance-icon">${this._getApplianceIcon(appliance.name)}</span>
                       <span class="appliance-name">${appliance.name}</span>
-                      <span class="status-check">✅ You have this</span>
+                      <span class="status-check">${this._t('recipes.you_have')}</span>
                     </div>
                   `;
                 })}
@@ -1888,7 +2104,7 @@ class KitchenCookingPanel extends LitElement {
 
           ${match.alternative_appliances && match.alternative_appliances.length > 0 ? html`
             <div class="alternatives-section">
-              <h3>🔄 Or Alternatively:</h3>
+              <h3>${this._t('recipes.or_alternatively')}</h3>
               <div class="alternative-combos">
                 ${match.alternative_appliances.map((combo, idx) => html`
                   <button class="combo-btn" @click=${() => this._selectApplianceCombo(combo)}>
@@ -1903,7 +2119,7 @@ class KitchenCookingPanel extends LitElement {
           ` : ''}
 
           <div class="features-section">
-            <h3>🔧 Required Features:</h3>
+            <h3>${this._t('recipes.required_features')}</h3>
             <div class="feature-list-detail">
               ${recipe.required_features.map(f => html`
                 <div class="feature-item">
@@ -1916,13 +2132,13 @@ class KitchenCookingPanel extends LitElement {
 
           ${recipe.optional_features && recipe.optional_features.length > 0 ? html`
             <div class="features-section optional">
-              <h3>💡 Optional Features:</h3>
+              <h3>${this._t('recipes.optional_features')}</h3>
               <div class="feature-list-detail">
                 ${recipe.optional_features.map(f => html`
                   <div class="feature-item optional">
                     <span class="feature-icon">+</span>
                     <span class="feature-name">${this._formatFeatureName(f)}</span>
-                    ${this._hasFeature(f) ? html`<span class="status-badge">Available</span>` : ''}
+                    ${this._hasFeature(f) ? html`<span class="status-badge">${this._t('recipes.available')}</span>` : ''}
                   </div>
                 `)}
               </div>
@@ -1931,17 +2147,17 @@ class KitchenCookingPanel extends LitElement {
 
           ${match.notes ? html`
             <div class="notes-section">
-              <h3>📝 Notes:</h3>
+              <h3>${this._t('recipes.notes_label')}</h3>
               <p class="recipe-notes-detail">${match.notes}</p>
             </div>
           ` : ''}
 
           <div class="recipe-actions">
             <button class="primary-btn" @click=${() => this._startCookFromRecipe(recipe, match)}>
-              🚀 Start Cooking
+              ${this._t('recipes.start_cooking')}
             </button>
             <button class="secondary-btn" @click=${() => this._selectedRecipeDetail = null}>
-              Cancel
+              ${this._t('common.cancel')}
             </button>
           </div>
         </div>
@@ -1992,18 +2208,16 @@ class KitchenCookingPanel extends LitElement {
     );
     
     if (probeAppliances.length === 0) {
-      this._showMessage('Cannot Start Cooking Session', 
-        `This recipe requires temperature monitoring, but no MEATER+ probe is configured.\n\n` +
-        `Please add a MEATER+ appliance in:\n` +
-        `Settings → Devices & Services → Add Integration → Kitchen Cooking Engine`, true);
+      this._showMessage(this._t('messages.cook_session_cannot_start_title'), 
+        this._t('messages.no_probe_for_recipe') + '\n\n' + this._t('messages.add_probe_instructions'), true);
       return;
     }
 
     // Find cooking session entities for temperature probes
     const entities = this._findCookingEntities();
     if (entities.length === 0) {
-      this._showMessage('No Cooking Session Entities', 
-        `Please ensure your MEATER+ probe is configured properly.`, true);
+      this._showMessage(this._t('messages.no_cook_entities_title'), 
+        this._t('messages.configure_probe_hint'), true);
       return;
     }
 
@@ -2039,13 +2253,9 @@ class KitchenCookingPanel extends LitElement {
     
     // Show a helpful message about manual setup
     setTimeout(() => {
-      this._showMessage('Recipe Loaded', 
-        `Now configure your cook on the setup screen:\n` +
-        `- Select protein and cut\n` +
-        `- Choose doneness level\n` +
-        `- Select cooking method\n` +
-        `- Start your cook\n\n` +
-        `Tip: The recipe "${recipe.name}" works best with ${applianceNames}.`, false);
+      this._showMessage(this._t('messages.recipe_loaded_title'), 
+        this._t('messages.recipe_loaded_instructions') + '\n\n' +
+        this._t('messages.recipe_loaded_tip').replace('{name}', recipe.name).replace('{appliances}', applianceNames), false);
     }, 500);
   }
 
@@ -2182,14 +2392,14 @@ class KitchenCookingPanel extends LitElement {
       if (response && response.success) {
         appliance.feature_notes = response.feature_notes;
         appliance._pendingNotes = null;
-        this._showMessage('Notes Saved', 'Feature modification notes have been saved.');
+        this._showMessage(this._t('messages.notes_saved_title'), this._t('messages.notes_saved'));
         this.requestUpdate();
       } else {
-        this._showMessage('Error', response?.error || 'Failed to save notes.', true);
+        this._showMessage(this._t('common.error'), response?.error || this._t('messages.notes_save_failed'), true);
       }
     } catch (e) {
       console.error('Failed to save feature notes:', e);
-      this._showMessage('Error', 'Failed to save feature notes. Please try again.', true);
+      this._showMessage(this._t('common.error'), this._t('messages.notes_save_error'), true);
     }
   }
 
@@ -2221,7 +2431,7 @@ class KitchenCookingPanel extends LitElement {
 
   render() {
     if (!this.hass) {
-      return html`<div class="loading">Loading Home Assistant connection...</div>`;
+      return html`<div class="loading">${this._t('common.loading')}</div>`;
     }
 
     try {
@@ -2286,16 +2496,16 @@ class KitchenCookingPanel extends LitElement {
             <div class="modal-overlay" @click=${this._closeAISettings}>
               <div class="modal-dialog" @click=${(e) => e.stopPropagation()}>
                 <div class="modal-header">
-                  <h2>⚙️ AI Recipe Builder Settings</h2>
+                  <h2>⚙️ ${this._t('messages.ai_settings_title')}</h2>
                   <button class="modal-close" @click=${this._closeAISettings}>✕</button>
                 </div>
                 <div class="modal-body">
                   <p style="margin-bottom: 16px;">
-                    Configure which AI conversation agent to use for recipe generation.
+                    ${this._t('messages.configure_ai_agent')}
                   </p>
                   
                   <label for="ai-agent-id" style="display: block; margin-bottom: 8px; font-weight: 600;">
-                    AI Agent ID:
+                    ${this._t('messages.ai_agent_id')}
                   </label>
                   <input
                     id="ai-agent-id"
@@ -2307,7 +2517,7 @@ class KitchenCookingPanel extends LitElement {
                   />
 
                   <label for="ai-backup-agent-id" style="display: block; margin-top: 16px; margin-bottom: 8px; font-weight: 600;">
-                    Backup Agent ID: <span style="font-weight: 400; font-size: 0.9em;">(optional — used when primary is overloaded)</span>
+                    ${this._t('messages.backup_agent_id')} <span style="font-weight: 400; font-size: 0.9em;">${this._t('messages.backup_agent_hint')}</span>
                   </label>
                   <input
                     id="ai-backup-agent-id"
@@ -2332,15 +2542,15 @@ class KitchenCookingPanel extends LitElement {
                   </ul>
                   
                   <p style="margin-top: 12px; font-size: 0.9em; color: var(--secondary-text-color);">
-                    Find your agent ID in <strong>Developer Tools → States</strong> - look for entities starting with "conversation."
+                    ${this._t('messages.find_agent_hint')}
                   </p>
                 </div>
                 <div class="modal-footer">
                   <button class="secondary-btn" @click=${this._closeAISettings}>
-                    Cancel
+                    ${this._t('common.cancel')}
                   </button>
                   <button class="primary-btn" @click=${this._saveAISettings}>
-                    Save Settings
+                    ${this._t('messages.save_settings')}
                   </button>
                 </div>
               </div>
@@ -2369,11 +2579,11 @@ class KitchenCookingPanel extends LitElement {
                       this.requestUpdate();
                       if (cancelFn) cancelFn();
                     }}>
-                      Cancel
+                      ${this._t('common.cancel')}
                     </button>
                   ` : html`
                     <button class="primary-btn" @click=${this._closeMessageDialog}>
-                      OK
+                      ${this._t('common.ok')}
                     </button>
                   `}
                 </div>
@@ -2429,13 +2639,13 @@ class KitchenCookingPanel extends LitElement {
           return html`
             <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 16px;text-align:center;">
               <div class="spinner"></div>
-              <p style="margin-top:16px;font-size:1.1em;">🌡️ Starting cook…</p>
-              <p style="color:var(--secondary-text-color);">Waiting for the probe to begin monitoring.<br>Take the probe out of the charger to start.</p>
+              <p style="margin-top:16px;font-size:1.1em;">${this._t('meater.starting_cook')}</p>
+              <p style="color:var(--secondary-text-color);">${this._t('meater.waiting_probe').replace('\n', '<br>')}</p>
 
               ${waitEntities.length > 1 ? html`
                 <ha-card style="margin-top:20px;width:100%;max-width:400px;">
                   <div class="card-content">
-                    <h3>Select Session</h3>
+                    <h3>${this._t('meater.select_session')}</h3>
                     <select
                       .value=${this._selectedEntity}
                       @change=${(e) => {
@@ -2449,7 +2659,7 @@ class KitchenCookingPanel extends LitElement {
                               this._waitingCookServiceData = null;
                               this._currentPath = 'welcome';
                               this.requestUpdate();
-                              alert('Failed to start cook on this session. Please start a new cook manually.');
+                              this._showMessage(this._t('common.error'), this._t('messages.start_cook_failed'), true);
                             });
                         }
                         this.requestUpdate();
@@ -2470,7 +2680,7 @@ class KitchenCookingPanel extends LitElement {
                 this._waitingCookServiceData = null;
                 this._currentPath = 'welcome';
                 this.requestUpdate();
-              }}>← Back to Home</button>
+              }}>${this._t('nav.back_to_home')}</button>
             </div>
           `;
         }
@@ -2542,8 +2752,8 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <ha-card>
         <div class="card-content no-entities">
-          <p>No cooking session entities found.</p>
-          <p>Please configure the Kitchen Cooking Engine integration first.</p>
+          <p>${this._t('appliances.no_entities')}</p>
+          <p>${this._t('appliances.setup_integration')}</p>
         </div>
       </ha-card>
     `;
@@ -2578,14 +2788,14 @@ class KitchenCookingPanel extends LitElement {
     
     return html`
       <div class="status-banner idle">
-        <h2>🍳 Ready to Cook</h2>
-        <p>Select your protein and preferences below</p>
+        <h2>${this._t('meater.ready_to_cook')}</h2>
+        <p>${this._t('meater.select_protein')}</p>
       </div>
       
       ${entities.length > 1 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>Select Session</h3>
+            <h3>${this._t('meater.select_session')}</h3>
             <select 
               .value=${this._selectedEntity}
               @change=${(e) => this._selectedEntity = e.target.value}
@@ -2603,23 +2813,23 @@ class KitchenCookingPanel extends LitElement {
       <!-- Data Source Selector -->
       <ha-card>
         <div class="card-content">
-          <h3>🌍 Temperature Data Source</h3>
+          <h3>${this._t('meater.data_source_title')}</h3>
           <div class="button-group">
             <button 
               class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
               @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
-              🇺🇸 International (USDA)
+              ${this._t('meater.international')}
             </button>
             <button 
               class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
               @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
-              🇸🇪 Svenska (Livsmedelsverket)
+              ${this._t('meater.swedish')}
             </button>
           </div>
           <p class="source-description">
             ${this._dataSource === DATA_SOURCE_SWEDISH 
-              ? 'Använder svenska temperaturrekommendationer från Livsmedelsverket, Stekguiden.se och Gårdssällskapet.'
-              : 'Using international temperature guidelines from USDA, FDA and professional culinary sources.'}
+              ? this._t('meater.swedish_description')
+              : this._t('meater.international_description')}
           </p>
         </div>
       </ha-card>
@@ -2627,7 +2837,7 @@ class KitchenCookingPanel extends LitElement {
       <!-- Step 1: Select Category -->
       <ha-card>
         <div class="card-content">
-          <h3>1️⃣ Select Category</h3>
+          <h3>${this._t('meater.select_category')}</h3>
           <div class="button-group">
             ${Object.entries(categories).map(([key, cat]) => html`
               <button 
@@ -2639,7 +2849,7 @@ class KitchenCookingPanel extends LitElement {
             <button 
               class="category-btn ${this._selectedCategory === 'custom' ? 'selected' : ''}" 
               @click=${() => this._selectCategory('custom')}>
-              🎯 Custom
+              ${this._t('meater.custom')}
             </button>
           </div>
         </div>
@@ -2649,14 +2859,14 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCategory === 'custom' ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🎯 Custom Temperature Cook</h3>
-            <p>Set a target temperature and start monitoring — no protein or doneness selection needed.</p>
+            <h3>${this._t('meater.custom_temp_cook')}</h3>
+            <p>${this._t('meater.custom_temp_description')}</p>
             
             <div style="margin: 16px 0;">
-              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Session Name (optional)</label>
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">${this._t('meater.session_name')} (${this._t('common.optional')})</label>
               <input 
                 type="text" 
-                placeholder="e.g. My Cook"
+                placeholder="${this._t('meater.session_name_placeholder')}"
                 .value=${this._customProfileName || ''}
                 @input=${(e) => { this._customProfileName = e.target.value; }}
                 style="width: 100%; padding: 10px; border: 2px solid var(--divider-color); border-radius: 8px; font-size: 14px; background: var(--card-background-color); color: var(--primary-text-color); box-sizing: border-box;"
@@ -2664,7 +2874,7 @@ class KitchenCookingPanel extends LitElement {
             </div>
             
             <div style="margin: 16px 0;">
-              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Target Temperature</label>
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">${this._t('meater.target_temperature')}</label>
               <div class="temp-display-setup">
                 <div class="target-temp">
                   <span class="temp-value">${this._customProfileTempC}°C</span>
@@ -2726,7 +2936,7 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedMeat && cutTypes.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} Select Cut Type</h3>
+            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} ${this._t('meater.select_cut_type')}</h3>
             <div class="button-group">
               ${cutTypes.map(ct => html`
                 <button 
@@ -2744,9 +2954,9 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCutType && cuts.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} Select Cut</h3>
+            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} ${this._t('meater.select_cut')}</h3>
             <select @change=${(e) => this._selectCut(parseInt(e.target.value) || null)}>
-              <option value="">Choose a cut...</option>
+              <option value="">${this._t('meater.choose_cut')}</option>
               ${cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
                   ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
@@ -2761,7 +2971,7 @@ class KitchenCookingPanel extends LitElement {
       ${this._selectedCut ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🌡️ Doneness Level ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = recommended)</span>` : ''}</h3>
+            <h3>🌡️ ${this._t('meater.select_doneness')} ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = ${this._t('meater.recommended')})</span>` : ''}</h3>
             <div class="doneness-grid">
               ${this._getAvailableDoneness().map(opt => html`
                 <button 
@@ -2836,15 +3046,17 @@ class KitchenCookingPanel extends LitElement {
         <!-- Step 6: Cooking Method -->
         <ha-card>
           <div class="card-content">
-            <h3>🍳 Cooking Method</h3>
+            <h3>${this._t('meater.select_method')}</h3>
             <div class="method-grid">
-              ${COOKING_METHODS.map(opt => html`
+              ${COOKING_METHODS.map(opt => {
+                const translated = this._t('cooking_methods.' + opt.value);
+                return html`
                 <button 
                   class="method-btn ${this._selectedMethod === opt.value ? 'selected' : ''}"
                   @click=${() => this._selectedMethod = opt.value}>
-                  ${opt.name}
+                  ${translated !== ('cooking_methods.' + opt.value) ? translated : opt.name}
                 </button>
-              `)}
+              `; })}
             </div>
           </div>
         </ha-card>
@@ -2852,7 +3064,7 @@ class KitchenCookingPanel extends LitElement {
         <!-- Start Button -->
         <div class="action-container">
           <ha-button unelevated @click=${this._startCook} ?disabled=${!this._selectedDoneness}>
-            🔥 Start Cooking${this._customTargetTempC ? ` at ${this._customTargetTempC}°C` : ''}
+            ${this._t('meater.start_cooking')}${this._customTargetTempC ? ` ${this._convertTemp(this._customTargetTempC)}` : ''}
           </ha-button>
         </div>
       ` : ''}
@@ -2915,17 +3127,17 @@ class KitchenCookingPanel extends LitElement {
           <div class="temp-display">
             <div class="temp-current">
               <div class="value">${currentTemp !== null && currentTemp !== undefined ? currentTemp + '°C' : '--'}</div>
-              <div class="label">Tip Temp</div>
+              <div class="label">${this._t('meater.tip_temp')}</div>
             </div>
             <div class="temp-target">
               <div class="value">${targetTemp}°C</div>
-              <div class="label">Target</div>
+              <div class="label">${this._t('common.target')}</div>
             </div>
           </div>
           
           ${ambientTemp !== null && ambientTemp !== undefined ? html`
             <div class="ambient-temp-display">
-              <span class="ambient-label">🌡️ Ambient:</span>
+              <span class="ambient-label">${this._t('meater.ambient_label')}</span>
               <span class="ambient-value">${ambientTemp}°C</span>
             </div>
           ` : ''}
@@ -2938,25 +3150,25 @@ class KitchenCookingPanel extends LitElement {
               <div class="progress-bar" style="width: ${Math.min(100, progress)}%"></div>
             </div>
             <div class="progress-info">
-              <span>${progress.toFixed(0)}% complete</span>
-              ${eta !== null && eta !== undefined && cookState !== 'resting' ? html`<span>ETA: ${eta} min</span>` : ''}
+              <span>${progress.toFixed(0)}% ${this._t('meater.complete_pct')}</span>
+              ${eta !== null && eta !== undefined && cookState !== 'resting' ? html`<span>${this._t('meater.eta_label')} ${eta} ${this._t('common.minutes_short')}</span>` : ''}
               ${cookState === 'resting' && restTimeRemaining !== null && restTimeRemaining !== undefined ? 
-                html`<span>Rest remaining: ${restTimeRemaining.toFixed(1)} min</span>` : ''}
+                html`<span>${this._t('meater.rest_remaining_label')} ${restTimeRemaining.toFixed(1)} ${this._t('common.minutes_short')}</span>` : ''}
             </div>
           </div>
           
           <div class="cook-info">
             <div class="cook-info-item">
-              <div class="label">Method</div>
+              <div class="label">${this._t('meater.method_label')}</div>
               <div class="value">${method}</div>
             </div>
             <div class="cook-info-item">
-              <div class="label">Rest Time</div>
+              <div class="label">${this._t('meater.rest_time_label')}</div>
               <div class="value">${attrs.rest_time_minutes || '--'} min</div>
             </div>
             ${batteryLevel !== null && batteryLevel !== undefined ? html`
               <div class="cook-info-item">
-                <div class="label">🔋 Battery</div>
+                <div class="label">${this._t('meater.battery_label')}</div>
                 <div class="value battery-${batteryLevel <= 20 ? 'low' : batteryLevel <= 50 ? 'medium' : 'high'}">${batteryLevel}%</div>
               </div>
             ` : ''}
@@ -2965,12 +3177,12 @@ class KitchenCookingPanel extends LitElement {
           <!-- Notes Section -->
           <div class="notes-section">
             <button class="notes-toggle" @click=${() => this._showNotes = !this._showNotes}>
-              📝 ${this._showNotes ? 'Hide Notes' : 'Add Notes'}
+              📝 ${this._showNotes ? this._t('meater.hide_notes') : this._t('meater.add_notes_btn')}
             </button>
             ${this._showNotes ? html`
               <textarea 
                 class="notes-input" 
-                placeholder="Add notes about this cook (adjustments, observations, etc.)"
+                placeholder="${this._t('meater.notes_placeholder')}"
                 .value=${attrs.notes || this._currentNotes}
                 @change=${(e) => this._setNotes(e.target.value)}
               ></textarea>
@@ -2979,12 +3191,12 @@ class KitchenCookingPanel extends LitElement {
           
           <div class="action-buttons">
             ${cookState === 'goal_reached' ? html`
-              <ha-button unelevated @click=${this._startRest}>⏱️ Start Rest</ha-button>
+              <ha-button unelevated @click=${this._startRest}>${this._t('meater.start_rest_btn')}</ha-button>
             ` : ''}
             ${cookState === 'resting' ? html`
-              <ha-button unelevated @click=${this._complete}>✅ Complete</ha-button>
+              <ha-button unelevated @click=${this._complete}>${this._t('meater.complete_btn')}</ha-button>
             ` : ''}
-            <ha-button outlined @click=${this._stopCook}>⏹️ Stop</ha-button>
+            <ha-button outlined @click=${this._stopCook}>${this._t('meater.stop_btn')}</ha-button>
           </div>
         </div>
       </ha-card>
@@ -3215,14 +3427,14 @@ class KitchenCookingPanel extends LitElement {
 
     return html`
       <div class="welcome-header">
-        <h1>🍳 Kitchen Cooking Engine</h1>
-        <p class="welcome-subtitle">Select Your Appliance</p>
+        <h1>${this._t('welcome.title')}</h1>
+        <p class="welcome-subtitle">${this._t('welcome.select_appliance')}</p>
       </div>
 
       ${hasOngoingCooks ? html`
         <ha-card class="ongoing-cooks-card">
           <div class="card-content">
-            <h3 class="ongoing-cooks-title">🔥 Ongoing Cooks (${totalOngoingCooks})</h3>
+            <h3 class="ongoing-cooks-title">🔥 ${this._t('welcome.ongoing_cooks')} (${totalOngoingCooks})</h3>
 
             ${activeCooks.map(entityId => {
               const st = this.hass.states[entityId];
@@ -3274,9 +3486,9 @@ class KitchenCookingPanel extends LitElement {
                 <div class="card-content" style="display:flex;align-items:center;gap:12px;padding:12px 16px;">
                   <div style="font-size:28px;flex-shrink:0;">📖</div>
                   <div style="flex:1;min-width:0;">
-                    <div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${cook.recipe?.name || 'Recipe Cook'}</div>
+                    <div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${cook.recipe?.name || this._t('welcome.recipe_cook')}</div>
                     <div style="font-size:0.85em;color:var(--secondary-text-color);">
-                      Started on another device
+                      ${this._t('welcome.started_on_other_device')}
                       · ${this._formatElapsedTime(Math.floor((Date.now() - cook.startTime) / 1000))}
                     </div>
                   </div>
@@ -3290,21 +3502,22 @@ class KitchenCookingPanel extends LitElement {
       ` : ''}
 
       ${this._isLoadingAppliances ? html`
-        <div class="loading">Loading appliances...</div>
+        <div class="loading">${this._t('appliances.loading')}</div>
       ` : this._errorMessage ? html`
         <ha-card>
           <div class="card-content error-message">
             <p>⚠️ ${this._errorMessage}</p>
             <button class="primary-btn" @click=${() => this._loadAppliances()}>
-              🔄 Retry
+              🔄 ${this._t('common.retry')}
             </button>
           </div>
         </ha-card>
       ` : this._appliances.length === 0 ? html`
         <ha-card>
           <div class="card-content no-entities">
-            <p>No appliances configured.</p>
-            <p>Please add appliances in the Kitchen Cooking Engine integration settings.</p>
+            <p>${this._t('appliances.no_appliances')}</p>
+            <p>${this._t('appliances.setup_step1')}</p>
+            <p>${this._t('appliances.setup_step2')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -3326,8 +3539,8 @@ class KitchenCookingPanel extends LitElement {
           <div class="card-content previous-cooks-content">
             <div class="previous-cooks-icon">📋</div>
             <div class="previous-cooks-text">
-              <h3>Previous Cooks</h3>
-              <p>View and restart your past cooking sessions</p>
+              <h3>${this._t('meater.previous_cooks')}</h3>
+              <p>${this._t('welcome.previous_cooks_description')}</p>
             </div>
           </div>
         </ha-card>
@@ -3336,9 +3549,54 @@ class KitchenCookingPanel extends LitElement {
           <div class="card-content previous-cooks-content">
             <div class="previous-cooks-icon">⚙️</div>
             <div class="previous-cooks-text">
-              <h3>AI Recipe Builder Settings</h3>
-              <p>${this._aiAgentId ? `Agent: ${this._aiAgentId}` : 'Configure your AI agent to enable the Recipe Builder'}</p>
+              <h3>${this._t('ai_recipe.settings')}</h3>
+              <p>${this._aiAgentId ? `Agent: ${this._aiAgentId}` : this._t('welcome.configure_ai_agent')}</p>
             </div>
+          </div>
+        </ha-card>
+
+        <!-- Phase 7: Language & Measurement selectors -->
+        <ha-card>
+          <div class="card-content">
+            <h3>${this._t('welcome.language_label')}</h3>
+            <div class="button-group">
+              <button
+                class="category-btn ${this._language === 'sv' ? 'selected' : ''}"
+                @click=${() => this._saveLanguagePreference('sv')}>
+                🇸🇪 Svenska
+              </button>
+              <button
+                class="category-btn ${this._language === 'en' ? 'selected' : ''}"
+                @click=${() => this._saveLanguagePreference('en')}>
+                🇬🇧 English
+              </button>
+            </div>
+          </div>
+        </ha-card>
+
+        <ha-card>
+          <div class="card-content">
+            <h3>${this._t('welcome.measurement_system_label')}</h3>
+            <div class="button-group">
+              <button
+                class="category-btn ${this._measurementSystem === 'se' ? 'selected' : ''}"
+                @click=${() => this._saveMeasurementPreference('se')}>
+                ${typeof MEASUREMENT_SYSTEMS !== 'undefined' && MEASUREMENT_SYSTEMS.se ? (this._language === 'sv' ? MEASUREMENT_SYSTEMS.se.name_sv : MEASUREMENT_SYSTEMS.se.name_en) : '🇸🇪 Swedish'}
+              </button>
+              <button
+                class="category-btn ${this._measurementSystem === 'uk' ? 'selected' : ''}"
+                @click=${() => this._saveMeasurementPreference('uk')}>
+                ${typeof MEASUREMENT_SYSTEMS !== 'undefined' && MEASUREMENT_SYSTEMS.uk ? (this._language === 'sv' ? MEASUREMENT_SYSTEMS.uk.name_sv : MEASUREMENT_SYSTEMS.uk.name_en) : '🇬🇧 UK Metric'}
+              </button>
+              <button
+                class="category-btn ${this._measurementSystem === 'us' ? 'selected' : ''}"
+                @click=${() => this._saveMeasurementPreference('us')}>
+                ${typeof MEASUREMENT_SYSTEMS !== 'undefined' && MEASUREMENT_SYSTEMS.us ? (this._language === 'sv' ? MEASUREMENT_SYSTEMS.us.name_sv : MEASUREMENT_SYSTEMS.us.name_en) : '🇺🇸 US Customary'}
+              </button>
+            </div>
+            <p class="source-description" style="margin-top: 8px; font-size: 0.85em;">
+              ${this._t('welcome.measurement_' + this._measurementSystem + '_description')}
+            </p>
           </div>
         </ha-card>
       `}
@@ -3372,7 +3630,7 @@ class KitchenCookingPanel extends LitElement {
             this._showMeaterCooking = false;
             this.requestUpdate();
           }}>
-            ← Back to MEATER Path
+            ${this._t('nav.back_to_meater_path')}
           </button>
           <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
         </div>
@@ -3385,7 +3643,7 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ← Back to Appliances
+          ${this._t('nav.back_to_appliances')}
         </button>
         <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
       </div>
@@ -3394,16 +3652,16 @@ class KitchenCookingPanel extends LitElement {
         <ha-card class="path-card clickable" @click=${() => this._startMeaterCooking()}>
           <div class="card-content path-card-content">
             <div class="path-icon">🌡️</div>
-            <h3>Start MEATER Cooking</h3>
-            <p>Select protein, set target, monitor temperature</p>
+            <h3>${this._t('meater.start_meater_cooking')}</h3>
+            <p>${this._t('meater.start_meater_desc')}</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._showRecentMeaterCooks()}>
           <div class="card-content path-card-content">
             <div class="path-icon">📋</div>
-            <h3>Recent MEATER Cooks</h3>
-            <p>View and restart previous temperature-based cooks</p>
+            <h3>${this._t('meater.recent_meater_cooks')}</h3>
+            <p>${this._t('meater.recent_meater_desc')}</p>
           </div>
         </ha-card>
       </div>
@@ -3438,16 +3696,16 @@ class KitchenCookingPanel extends LitElement {
           this._currentPath = 'meater';
           this.requestUpdate();
         }}>
-          ← Back to MEATER Path
+          ${this._t('nav.back_to_meater_path')}
         </button>
-        <h2>📋 Recent MEATER Cooks</h2>
+        <h2>📋 ${this._t('meater.recent_meater_cooks')}</h2>
       </div>
 
       ${meaterCooks.length === 0 ? html`
         <ha-card>
           <div class="card-content">
-            <p class="no-history">No previous MEATER cooks found.</p>
-            <p class="no-history-hint">Temperature-based cooks you complete will appear here for easy restart.</p>
+            <p class="no-history">${this._t('meater.no_previous_cooks')}</p>
+            <p class="no-history-hint">${this._t('meater.no_previous_cooks_hint')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -3457,7 +3715,7 @@ class KitchenCookingPanel extends LitElement {
               <div class="history-card-header">
                 <div class="history-title-row">
                   <h3 class="history-title">
-                    ${cook.protein || 'Unknown Protein'}
+                    ${cook.protein || this._t('meater.unknown_protein')}
                     ${cook.cut ? html` - ${cook.cut}` : ''}
                   </h3>
                   <span class="history-date">${this._formatDateTime(cook.start_time)}</span>
@@ -3468,10 +3726,10 @@ class KitchenCookingPanel extends LitElement {
                 <span class="history-detail">🥩 ${cook.protein}</span>
                 <span class="history-detail">🎯 ${(cook.doneness || '').replace('_', ' ')}</span>
                 <span class="history-detail">🍳 ${(cook.cooking_method || '').replace(/_/g, ' ')}</span>
-                <span class="history-detail">🌡️ ${cook.target_temp_c}°C target</span>
-                ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C peak</span>` : ''}
-                ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C after rest</span>` : 
-                  cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C final</span>` : ''}
+                <span class="history-detail">🌡️ ${cook.target_temp_c}°C ${this._t('meater.target_label')}</span>
+                ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C ${this._t('meater.peak_label')}</span>` : ''}
+                ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C ${this._t('meater.after_rest_label')}</span>` : 
+                  cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C ${this._t('meater.final_label')}</span>` : ''}
               </div>
               
               ${cook.notes ? html`
@@ -3482,13 +3740,13 @@ class KitchenCookingPanel extends LitElement {
               
               <div class="history-actions">
                 <button class="history-action-btn restart" @click=${() => this._restartCook(cook)}>
-                  🔄 Restart This Cook
+                  ${this._t('meater.restart_cook')}
                 </button>
                 <button class="history-action-btn edit" @click=${() => this._editCookNotes(cook)}>
-                  ✏️ Edit Notes
+                  ${this._t('meater.edit_notes')}
                 </button>
                 <button class="history-action-btn delete" @click=${() => this._deleteCook(cook.id)}>
-                  🗑️ Delete
+                  ${this._t('meater.delete_btn')}
                 </button>
               </div>
             </ha-card>
@@ -3505,7 +3763,7 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ← Back to Appliances
+          ${this._t('nav.back_to_appliances')}
         </button>
         <h2>🥘 ${this._selectedAppliance?.name || 'Ninja Combi Cooking'}</h2>
       </div>
@@ -3514,32 +3772,32 @@ class KitchenCookingPanel extends LitElement {
         <ha-card class="path-card clickable" @click=${() => this._startNinjaRecipeBuilder()}>
           <div class="card-content path-card-content">
             <div class="path-icon">🎨</div>
-            <h3>Recipe Builder</h3>
-            <p>Create custom recipes with Ninja Combi modes</p>
+            <h3>${this._t('ninja.recipe_builder')}</h3>
+            <p>${this._t('ninja.recipe_builder_desc')}</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._showNinjaBuiltInRecipes()}>
           <div class="card-content path-card-content">
             <div class="path-icon">📖</div>
-            <h3>Built-in Recipes</h3>
-            <p>Browse pre-configured Ninja Combi recipes</p>
+            <h3>${this._t('ninja.built_in_recipes')}</h3>
+            <p>${this._t('ninja.built_in_recipes_desc')}</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._startAIWithNinjaCombi()}>
           <div class="card-content path-card-content">
             <div class="path-icon">🤖</div>
-            <h3>AI Recipe with Ninja Combi</h3>
-            <p>Generate AI recipes using your Ninja Combi</p>
+            <h3>${this._t('ninja.ai_recipe_title')}</h3>
+            <p>${this._t('ninja.ai_recipe_desc')}</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._showRecentNinjaCooks()}>
           <div class="card-content path-card-content">
             <div class="path-icon">📋</div>
-            <h3>Recent Ninja Combi Cooks</h3>
-            <p>View and restart previous Ninja Combi recipes</p>
+            <h3>${this._t('ninja.recent_cooks')}</h3>
+            <p>${this._t('ninja.recent_cooks_desc')}</p>
           </div>
         </ha-card>
       </div>
@@ -3562,7 +3820,7 @@ class KitchenCookingPanel extends LitElement {
             this._navigateToWelcome();
           }
         }}>
-          ← Back${this._selectedMainAppliance === 'ninja_combi' ? ' to Ninja Combi' : ' to Appliances'}
+          ${this._selectedMainAppliance === 'ninja_combi' ? this._t('nav.back_to_ninja_combi') : this._t('nav.back_to_appliances')}
         </button>
         <div class="path-header-title-row">
           <h2>🤖 AI Recipe Builder</h2>
@@ -3572,7 +3830,7 @@ class KitchenCookingPanel extends LitElement {
       <ha-card>
         <div class="card-content appliance-info">
           <div class="appliance-info-header">
-            <h3>Main Appliance: ${appliance?.name}</h3>
+            <h3>${this._t('ai_recipe.main_appliance')} ${appliance?.name}</h3>
             <button class="settings-icon-btn" @click=${() => this._toggleFeatureNotesEditor()} title="Edit Feature Notes">
               📝
             </button>
@@ -3584,13 +3842,13 @@ class KitchenCookingPanel extends LitElement {
             </div>
           ` : html`
             <p class="appliance-features">
-              <strong>Features:</strong> ${appliance?.features?.join(', ') || 'N/A'}
+              <strong>${this._t('ai_recipe.features_label')}</strong> ${appliance?.features?.join(', ') || 'N/A'}
             </p>
           `}
           
           ${this._appliances.length > 1 ? html`
             <div class="secondary-appliances">
-              <h4>Secondary Appliances Available:</h4>
+              <h4>${this._t('ai_recipe.secondary_appliances')}</h4>
               ${this._appliances.filter(a => a.id !== appliance?.id).map(a => html`
                 <label class="checkbox-label">
                   <input type="checkbox" checked @change=${(e) => this._toggleSecondaryAppliance(a.id, e.target.checked)} />
@@ -3607,16 +3865,16 @@ class KitchenCookingPanel extends LitElement {
           <ha-card class="path-card clickable" @click=${() => this._startAIRecipeCreation()}>
             <div class="card-content path-card-content">
               <div class="path-icon">🤖</div>
-              <h3>Create AI Recipe</h3>
-              <p>Generate custom recipes using your appliances and ingredients</p>
+              <h3>${this._t('ai_recipe.create_ai_recipe')}</h3>
+              <p>${this._t('ai_recipe.create_desc')}</p>
             </div>
           </ha-card>
         ` : html`
           <ha-card class="path-card clickable" @click=${() => this._showAISettings()}>
             <div class="card-content path-card-content">
               <div class="path-icon">⚙️</div>
-              <h3>Set Up AI Recipe Builder</h3>
-              <p>Configure your AI agent to start generating recipes</p>
+              <h3>${this._t('ai_recipe.setup_ai_title')}</h3>
+              <p>${this._t('ai_recipe.setup_ai_desc')}</p>
             </div>
           </ha-card>
         `}
@@ -3624,8 +3882,8 @@ class KitchenCookingPanel extends LitElement {
         <ha-card class="path-card clickable" @click=${() => this._showRecentApplianceRecipes()}>
           <div class="card-content path-card-content">
             <div class="path-icon">📋</div>
-            <h3>Recent ${appliance?.name} Recipes</h3>
-            <p>View and restart previous AI recipes for this appliance</p>
+            <h3>${this._t('ai_recipe.recent_recipes_title')} - ${appliance?.name || ''}</h3>
+            <p>${this._t('ai_recipe.recent_desc')}</p>
           </div>
         </ha-card>
       </div>
@@ -3685,21 +3943,21 @@ class KitchenCookingPanel extends LitElement {
 
     return html`
       <div class="status-banner idle">
-        <h2>🛠️ Recipe Builder</h2>
-        <p>Build custom Combi-Meal recipes with automatic parameter adjustment</p>
+        <h2>${this._t('ninja.builder_heading')}</h2>
+        <p>${this._t('ninja.builder_desc')}</p>
         <div style="display: flex; gap: 8px; margin-top: 12px;">
           <button class="history-btn" @click=${() => { this._currentPath = 'ninja_combi'; this._resetBuilder(); }}>
-            ← Back to Ninja Combi
+            ${this._t('nav.back_to_ninja_combi')}
           </button>
           <button class="history-btn" @click=${() => { this._currentPath = 'ninja_built_in_recipes'; this.requestUpdate(); }}>
-            📖 All Recipes
+            ${this._t('ninja.all_recipes_btn')}
           </button>
         </div>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <h3>1️⃣ Select Base (Required)</h3>
+          <h3>${this._t('ninja.select_base')}</h3>
           <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px;">
             ${Object.entries(bases).map(([key, base]) => html`
               <button 
@@ -3719,7 +3977,7 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>2️⃣ Select Protein (Required)</h3>
+          <h3>${this._t('ninja.select_protein_builder')}</h3>
           <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 8px;">
             ${Object.entries(proteins).map(([key, protein]) => html`
               <button 
@@ -3739,9 +3997,9 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>3️⃣ Add Vegetables (Optional)</h3>
+          <h3>${this._t('ninja.add_vegetables')}</h3>
           <p style="font-size: 12px; color: var(--secondary-text-color); margin-bottom: 8px;">
-            💡 Tender veggies cook with base, crispy veggies cook with protein
+            ${this._t('ninja.veggie_hint')}
           </p>
           <div class="button-group" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
             ${veggies.map(veggie => {
@@ -3754,7 +4012,7 @@ class KitchenCookingPanel extends LitElement {
                   <div style="font-size: 20px; margin-bottom: 4px;">${veggie.icon}</div>
                   <div style="font-size: 13px; font-weight: 500;">${veggie.name}</div>
                   <div style="font-size: 11px; color: var(--secondary-text-color); margin-top: 2px;">
-                    ${veggie.type === 'tender' ? '🥘 With base' : '🔥 With protein'}
+                    ${veggie.type === 'tender' ? this._t('ninja.with_base') : this._t('ninja.with_protein')}
                   </div>
                 </button>
               `;
@@ -3765,7 +4023,7 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>4️⃣ MEATER+ Probe</h3>
+          <h3>${this._t('ninja.meater_probe_section')}</h3>
           <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
             <input 
               type="checkbox" 
@@ -3773,7 +4031,7 @@ class KitchenCookingPanel extends LitElement {
               @change=${(e) => { this._builderUseMeater = e.target.checked; this.requestUpdate(); }}
               style="width: 18px; height: 18px; cursor: pointer;">
             <span style="font-size: 14px;">
-              🌡️ Use MEATER+ probe for temperature monitoring
+              ${this._t('ninja.use_meater_probe')}
               ${this._builderUseMeater && selectedProtein ? html`
                 <div style="font-size: 12px; color: var(--secondary-text-color); margin-top: 4px;">
                   Target: ${selectedProtein.probe}
@@ -3787,35 +4045,35 @@ class KitchenCookingPanel extends LitElement {
       ${this._builderBase && this._builderProtein ? html`
         <ha-card>
           <div class="card-content">
-            <h3>📊 Calculated Parameters</h3>
+            <h3>${this._t('ninja.calculated_params')}</h3>
             <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 12px 0;">
               <div>
-                <strong>🌡️ Temperature:</strong><br>
+                <strong>${this._t('ninja.temperature_label')}</strong><br>
                 ${selectedProtein.temp}
               </div>
               <div>
-                <strong>⏱️ Cook Time:</strong><br>
-                ${selectedProtein.time} minutes
+                <strong>${this._t('ninja.cook_time_label')}</strong><br>
+                ${selectedProtein.time} ${this._t('common.minutes')}
               </div>
               <div>
-                <strong>💧 Water:</strong><br>
+                <strong>${this._t('ninja.water_label')}</strong><br>
                 ${selectedBase.water}
               </div>
               <div>
-                <strong>🍴 Mode:</strong><br>
+                <strong>${this._t('ninja.mode_label')}</strong><br>
                 Combi-Meal
               </div>
             </div>
             ${this._builderUseMeater && selectedProtein.probe !== 'N/A' ? html`
               <div style="margin-top: 12px; padding: 12px; background: rgba(76, 175, 80, 0.1); border-left: 3px solid #4caf50; border-radius: 0 4px 4px 0;">
-                <strong>🌡️ Probe Target:</strong> ${selectedProtein.probe}
+                <strong>${this._t('ninja.probe_target')}</strong> ${selectedProtein.probe}
               </div>
             ` : ''}
             <button 
               class="action-btn" 
               @click=${() => this._buildRecipe()}
               style="width: 100%; margin-top: 16px; padding: 14px; font-size: 15px; font-weight: 600;">
-              ✨ Build Custom Recipe
+              ${this._t('ninja.build_recipe_btn')}
             </button>
           </div>
         </ha-card>
@@ -3823,7 +4081,7 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <p style="text-align: center; color: var(--secondary-text-color); padding: 20px 0;">
-              👆 Select a base and protein to see calculated parameters
+              ${this._t('ninja.select_base_protein_hint')}
             </p>
           </div>
         </ha-card>
@@ -3986,15 +4244,15 @@ class KitchenCookingPanel extends LitElement {
           this._currentPath = 'ninja_combi';
           this.requestUpdate();
         }}>
-          ← Back to Ninja Combi
+          ${this._t('nav.back_to_ninja_combi')}
         </button>
-        <h2>📖 Built-in Ninja Combi Recipes</h2>
+        <h2>${this._t('ninja.built_in_heading')}</h2>
       </div>
 
       ${this._ninjaBuiltInRecipes.length === 0 ? html`
         <ha-card>
           <div class="card-content">
-            <p>No built-in recipes available. Check back later!</p>
+            <p>${this._t('ninja.no_built_in')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -4009,8 +4267,8 @@ class KitchenCookingPanel extends LitElement {
                 <h3>${recipe.name}</h3>
                 <p class="recipe-description">${recipe.description || ''}</p>
                 <div class="recipe-meta">
-                  <span>⏱️ ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' min' : 'N/A'}</span>
-                  <span>🍽️ Serves ${recipe.servings || '4'}</span>
+                  <span>⏱️ ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' ' + this._t('common.minutes_short') : this._t('common.na')}</span>
+                  <span>🍽️ ${this._t('ninja.serves')} ${recipe.servings || '4'}</span>
                 </div>
               </div>
             </ha-card>
@@ -4036,15 +4294,15 @@ class KitchenCookingPanel extends LitElement {
           this._currentPath = 'ninja_combi';
           this.requestUpdate();
         }}>
-          ← Back to Ninja Combi
+          ${this._t('nav.back_to_ninja_combi')}
         </button>
-        <h2>📋 Recent Ninja Combi Cooks</h2>
+        <h2>${this._t('ninja.recent_ninja_heading')}</h2>
       </div>
 
       ${ninjaCooks.length === 0 ? html`
         <ha-card>
           <div class="card-content">
-            <p>No Ninja Combi cooking history yet. Start your first Ninja Combi cook!</p>
+            <p>${this._t('ninja.no_recent_ninja')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -4086,107 +4344,107 @@ class KitchenCookingPanel extends LitElement {
     // Data should already be loaded by _startAIRecipeCreation()
     // If not loaded, show loading state
     if (!this._commonIngredients || this._commonIngredients.length === 0) {
-      return html`<div class="loading">Loading ingredients...</div>`;
+      return html`<div class="loading">${this._t('ai_recipe.loading_ingredients')}</div>`;
     }
 
     // Cuisine/region options for fusion cooking (moved from cooking style page)
     const cuisineRegions = [
-      { id: 'nordic', name: 'Nordic & Scandinavian', icon: '❄️', cuisines: [
-        { id: 'swedish', name: 'Swedish', icon: '🇸🇪' },
-        { id: 'danish', name: 'Danish', icon: '🇩🇰' },
-        { id: 'norwegian', name: 'Norwegian', icon: '🇳🇴' },
-        { id: 'finnish', name: 'Finnish', icon: '🇫🇮' },
-        { id: 'icelandic', name: 'Icelandic', icon: '🇮🇸' },
-        { id: 'new_nordic', name: 'New Nordic', icon: '🌿' },
+      { id: 'nordic', name: this._t('cuisines.nordic'), icon: '❄️', cuisines: [
+        { id: 'swedish', name: this._t('cuisines.swedish'), icon: '🇸🇪' },
+        { id: 'danish', name: this._t('cuisines.danish'), icon: '🇩🇰' },
+        { id: 'norwegian', name: this._t('cuisines.norwegian'), icon: '🇳🇴' },
+        { id: 'finnish', name: this._t('cuisines.finnish'), icon: '🇫🇮' },
+        { id: 'icelandic', name: this._t('cuisines.icelandic'), icon: '🇮🇸' },
+        { id: 'new_nordic', name: this._t('cuisines.new_nordic'), icon: '🌿' },
       ]},
-      { id: 'east_asian', name: 'East Asian', icon: '🥢', cuisines: [
-        { id: 'japanese', name: 'Japanese', icon: '🇯🇵' },
-        { id: 'chinese', name: 'Chinese', icon: '🇨🇳' },
-        { id: 'korean', name: 'Korean', icon: '🇰🇷' },
-        { id: 'taiwanese', name: 'Taiwanese', icon: '🇹🇼' },
+      { id: 'east_asian', name: this._t('cuisines.east_asian'), icon: '🥢', cuisines: [
+        { id: 'japanese', name: this._t('cuisines.japanese'), icon: '🇯🇵' },
+        { id: 'chinese', name: this._t('cuisines.chinese'), icon: '🇨🇳' },
+        { id: 'korean', name: this._t('cuisines.korean'), icon: '🇰🇷' },
+        { id: 'taiwanese', name: this._t('cuisines.taiwanese'), icon: '🇹🇼' },
       ]},
-      { id: 'southeast_asian', name: 'Southeast Asian', icon: '🌴', cuisines: [
-        { id: 'thai', name: 'Thai', icon: '🇹🇭' },
-        { id: 'vietnamese', name: 'Vietnamese', icon: '🇻🇳' },
-        { id: 'indonesian', name: 'Indonesian', icon: '🇮🇩' },
-        { id: 'malaysian', name: 'Malaysian', icon: '🇲🇾' },
-        { id: 'filipino', name: 'Filipino', icon: '🇵🇭' },
-        { id: 'singaporean', name: 'Singaporean', icon: '🇸🇬' },
+      { id: 'southeast_asian', name: this._t('cuisines.southeast_asian'), icon: '🌴', cuisines: [
+        { id: 'thai', name: this._t('cuisines.thai'), icon: '🇹🇭' },
+        { id: 'vietnamese', name: this._t('cuisines.vietnamese'), icon: '🇻🇳' },
+        { id: 'indonesian', name: this._t('cuisines.indonesian'), icon: '🇮🇩' },
+        { id: 'malaysian', name: this._t('cuisines.malaysian'), icon: '🇲🇾' },
+        { id: 'filipino', name: this._t('cuisines.filipino'), icon: '🇵🇭' },
+        { id: 'singaporean', name: this._t('cuisines.singaporean'), icon: '🇸🇬' },
       ]},
-      { id: 'south_asian', name: 'South Asian', icon: '🍛', cuisines: [
-        { id: 'indian', name: 'Indian', icon: '🇮🇳' },
-        { id: 'sri_lankan', name: 'Sri Lankan', icon: '🇱🇰' },
-        { id: 'pakistani', name: 'Pakistani', icon: '🇵🇰' },
-        { id: 'bangladeshi', name: 'Bangladeshi', icon: '🇧🇩' },
-        { id: 'nepali', name: 'Nepali', icon: '🇳🇵' },
+      { id: 'south_asian', name: this._t('cuisines.south_asian'), icon: '🍛', cuisines: [
+        { id: 'indian', name: this._t('cuisines.indian'), icon: '🇮🇳' },
+        { id: 'sri_lankan', name: this._t('cuisines.sri_lankan'), icon: '🇱🇰' },
+        { id: 'pakistani', name: this._t('cuisines.pakistani'), icon: '🇵🇰' },
+        { id: 'bangladeshi', name: this._t('cuisines.bangladeshi'), icon: '🇧🇩' },
+        { id: 'nepali', name: this._t('cuisines.nepali'), icon: '🇳🇵' },
       ]},
-      { id: 'middle_east', name: 'Middle Eastern', icon: '🧆', cuisines: [
-        { id: 'lebanese', name: 'Lebanese', icon: '🇱🇧' },
-        { id: 'turkish', name: 'Turkish', icon: '🇹🇷' },
-        { id: 'persian', name: 'Persian / Iranian', icon: '🇮🇷' },
-        { id: 'israeli', name: 'Israeli', icon: '🇮🇱' },
-        { id: 'syrian', name: 'Syrian', icon: '🇸🇾' },
-        { id: 'iraqi', name: 'Iraqi', icon: '🇮🇶' },
-        { id: 'yemeni', name: 'Yemeni', icon: '🇾🇪' },
-        { id: 'emirati', name: 'Emirati / Gulf', icon: '🇦🇪' },
-        { id: 'palestinian', name: 'Palestinian', icon: '🇵🇸' },
+      { id: 'middle_east', name: this._t('cuisines.middle_east'), icon: '🧆', cuisines: [
+        { id: 'lebanese', name: this._t('cuisines.lebanese'), icon: '🇱🇧' },
+        { id: 'turkish', name: this._t('cuisines.turkish'), icon: '🇹🇷' },
+        { id: 'persian', name: this._t('cuisines.persian'), icon: '🇮🇷' },
+        { id: 'israeli', name: this._t('cuisines.israeli'), icon: '🇮🇱' },
+        { id: 'syrian', name: this._t('cuisines.syrian'), icon: '🇸🇾' },
+        { id: 'iraqi', name: this._t('cuisines.iraqi'), icon: '🇮🇶' },
+        { id: 'yemeni', name: this._t('cuisines.yemeni'), icon: '🇾🇪' },
+        { id: 'emirati', name: this._t('cuisines.emirati'), icon: '🇦🇪' },
+        { id: 'palestinian', name: this._t('cuisines.palestinian'), icon: '🇵🇸' },
       ]},
-      { id: 'european', name: 'European', icon: '🏰', cuisines: [
-        { id: 'italian', name: 'Italian', icon: '🇮🇹' },
-        { id: 'french', name: 'French', icon: '🇫🇷' },
-        { id: 'spanish', name: 'Spanish', icon: '🇪🇸' },
-        { id: 'greek', name: 'Greek', icon: '🇬🇷' },
-        { id: 'portuguese', name: 'Portuguese', icon: '🇵🇹' },
-        { id: 'german', name: 'German', icon: '🇩🇪' },
-        { id: 'british', name: 'British', icon: '🇬🇧' },
-        { id: 'polish', name: 'Polish', icon: '🇵🇱' },
-        { id: 'hungarian', name: 'Hungarian', icon: '🇭🇺' },
-        { id: 'mediterranean', name: 'Mediterranean', icon: '🫒' },
-        { id: 'balkan', name: 'Balkan', icon: '🏔️' },
-        { id: 'russian', name: 'Russian', icon: '🇷🇺' },
+      { id: 'european', name: this._t('cuisines.european'), icon: '🏰', cuisines: [
+        { id: 'italian', name: this._t('cuisines.italian'), icon: '🇮🇹' },
+        { id: 'french', name: this._t('cuisines.french'), icon: '🇫🇷' },
+        { id: 'spanish', name: this._t('cuisines.spanish'), icon: '🇪🇸' },
+        { id: 'greek', name: this._t('cuisines.greek'), icon: '🇬🇷' },
+        { id: 'portuguese', name: this._t('cuisines.portuguese'), icon: '🇵🇹' },
+        { id: 'german', name: this._t('cuisines.german'), icon: '🇩🇪' },
+        { id: 'british', name: this._t('cuisines.british'), icon: '🇬🇧' },
+        { id: 'polish', name: this._t('cuisines.polish'), icon: '🇵🇱' },
+        { id: 'hungarian', name: this._t('cuisines.hungarian'), icon: '🇭🇺' },
+        { id: 'mediterranean', name: this._t('cuisines.mediterranean'), icon: '🫒' },
+        { id: 'balkan', name: this._t('cuisines.balkan'), icon: '🏔️' },
+        { id: 'russian', name: this._t('cuisines.russian'), icon: '🇷🇺' },
       ]},
-      { id: 'north_american', name: 'North American', icon: '🦅', cuisines: [
-        { id: 'american', name: 'American', icon: '🇺🇸' },
-        { id: 'cajun_creole', name: 'Cajun / Creole', icon: '🦞' },
-        { id: 'tex_mex', name: 'Tex-Mex', icon: '🌮' },
-        { id: 'canadian', name: 'Canadian', icon: '🇨🇦' },
-        { id: 'southern_us', name: 'Southern US / Soul Food', icon: '🍗' },
-        { id: 'hawaiian', name: 'Hawaiian', icon: '🌺' },
+      { id: 'north_american', name: this._t('cuisines.north_american'), icon: '🦅', cuisines: [
+        { id: 'american', name: this._t('cuisines.american'), icon: '🇺🇸' },
+        { id: 'cajun_creole', name: this._t('cuisines.cajun_creole'), icon: '🦞' },
+        { id: 'tex_mex', name: this._t('cuisines.tex_mex'), icon: '🌮' },
+        { id: 'canadian', name: this._t('cuisines.canadian'), icon: '🇨🇦' },
+        { id: 'southern_us', name: this._t('cuisines.southern_us'), icon: '🍗' },
+        { id: 'hawaiian', name: this._t('cuisines.hawaiian'), icon: '🌺' },
       ]},
-      { id: 'latin_american', name: 'Latin American', icon: '💃', cuisines: [
-        { id: 'mexican', name: 'Mexican', icon: '🇲🇽' },
-        { id: 'brazilian', name: 'Brazilian', icon: '🇧🇷' },
-        { id: 'peruvian', name: 'Peruvian', icon: '🇵🇪' },
-        { id: 'argentinian', name: 'Argentinian', icon: '🇦🇷' },
-        { id: 'colombian', name: 'Colombian', icon: '🇨🇴' },
-        { id: 'cuban', name: 'Cuban', icon: '🇨🇺' },
-        { id: 'venezuelan', name: 'Venezuelan', icon: '🇻🇪' },
-        { id: 'chilean', name: 'Chilean', icon: '🇨🇱' },
+      { id: 'latin_american', name: this._t('cuisines.latin_american'), icon: '💃', cuisines: [
+        { id: 'mexican', name: this._t('cuisines.mexican'), icon: '🇲🇽' },
+        { id: 'brazilian', name: this._t('cuisines.brazilian'), icon: '🇧🇷' },
+        { id: 'peruvian', name: this._t('cuisines.peruvian'), icon: '🇵🇪' },
+        { id: 'argentinian', name: this._t('cuisines.argentinian'), icon: '🇦🇷' },
+        { id: 'colombian', name: this._t('cuisines.colombian'), icon: '🇨🇴' },
+        { id: 'cuban', name: this._t('cuisines.cuban'), icon: '🇨🇺' },
+        { id: 'venezuelan', name: this._t('cuisines.venezuelan'), icon: '🇻🇪' },
+        { id: 'chilean', name: this._t('cuisines.chilean'), icon: '🇨🇱' },
       ]},
-      { id: 'caribbean_region', name: 'Caribbean', icon: '🏝️', cuisines: [
-        { id: 'jamaican', name: 'Jamaican', icon: '🇯🇲' },
-        { id: 'trinidadian', name: 'Trinidadian', icon: '🇹🇹' },
-        { id: 'haitian', name: 'Haitian', icon: '🇭🇹' },
-        { id: 'puerto_rican', name: 'Puerto Rican', icon: '🇵🇷' },
-        { id: 'caribbean', name: 'Caribbean (General)', icon: '🏝️' },
+      { id: 'caribbean_region', name: this._t('cuisines.caribbean_region'), icon: '🏝️', cuisines: [
+        { id: 'jamaican', name: this._t('cuisines.jamaican'), icon: '🇯🇲' },
+        { id: 'trinidadian', name: this._t('cuisines.trinidadian'), icon: '🇹🇹' },
+        { id: 'haitian', name: this._t('cuisines.haitian'), icon: '🇭🇹' },
+        { id: 'puerto_rican', name: this._t('cuisines.puerto_rican'), icon: '🇵🇷' },
+        { id: 'caribbean', name: this._t('cuisines.caribbean'), icon: '🏝️' },
       ]},
-      { id: 'african', name: 'African', icon: '🌍', cuisines: [
-        { id: 'ethiopian', name: 'Ethiopian', icon: '🇪🇹' },
-        { id: 'moroccan', name: 'Moroccan', icon: '🇲🇦' },
-        { id: 'nigerian', name: 'Nigerian', icon: '🇳🇬' },
-        { id: 'ghanaian', name: 'Ghanaian', icon: '🇬🇭' },
-        { id: 'senegalese', name: 'Senegalese', icon: '🇸🇳' },
-        { id: 'south_african', name: 'South African', icon: '🇿🇦' },
-        { id: 'kenyan', name: 'Kenyan', icon: '🇰🇪' },
-        { id: 'tanzanian', name: 'Tanzanian', icon: '🇹🇿' },
-        { id: 'tunisian', name: 'Tunisian', icon: '🇹🇳' },
-        { id: 'egyptian', name: 'Egyptian', icon: '🇪🇬' },
-        { id: 'east_african', name: 'East African', icon: '🌄' },
-        { id: 'west_african', name: 'West African', icon: '🥘' },
+      { id: 'african', name: this._t('cuisines.african'), icon: '🌍', cuisines: [
+        { id: 'ethiopian', name: this._t('cuisines.ethiopian'), icon: '🇪🇹' },
+        { id: 'moroccan', name: this._t('cuisines.moroccan'), icon: '🇲🇦' },
+        { id: 'nigerian', name: this._t('cuisines.nigerian'), icon: '🇳🇬' },
+        { id: 'ghanaian', name: this._t('cuisines.ghanaian'), icon: '🇬🇭' },
+        { id: 'senegalese', name: this._t('cuisines.senegalese'), icon: '🇸🇳' },
+        { id: 'south_african', name: this._t('cuisines.south_african'), icon: '🇿🇦' },
+        { id: 'kenyan', name: this._t('cuisines.kenyan'), icon: '🇰🇪' },
+        { id: 'tanzanian', name: this._t('cuisines.tanzanian'), icon: '🇹🇿' },
+        { id: 'tunisian', name: this._t('cuisines.tunisian'), icon: '🇹🇳' },
+        { id: 'egyptian', name: this._t('cuisines.egyptian'), icon: '🇪🇬' },
+        { id: 'east_african', name: this._t('cuisines.east_african'), icon: '🌄' },
+        { id: 'west_african', name: this._t('cuisines.west_african'), icon: '🥘' },
       ]},
-      { id: 'oceanian', name: 'Oceanian', icon: '🦘', cuisines: [
-        { id: 'australian', name: 'Australian', icon: '🇦🇺' },
-        { id: 'polynesian', name: 'Polynesian', icon: '🌺' },
+      { id: 'oceanian', name: this._t('cuisines.oceanian'), icon: '🦘', cuisines: [
+        { id: 'australian', name: this._t('cuisines.australian'), icon: '🇦🇺' },
+        { id: 'polynesian', name: this._t('cuisines.polynesian'), icon: '🌺' },
       ]},
     ];
 
@@ -4204,15 +4462,15 @@ class KitchenCookingPanel extends LitElement {
           this._currentPath = this._selectedMainAppliance === 'ninja_combi' ? 'ninja_combi' : 'ai_recipe_builder';
           this.requestUpdate();
         }}>
-          ← Back
+          ${this._t('nav.back')}
         </button>
-        <h2>🥘 Select Ingredients</h2>
+        <h2>${this._t('ai_recipe.select_ingredients_title')}</h2>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <h3>🌍 Cuisine / Region (optional, select for fusion)</h3>
-          <p class="info-text" style="margin-bottom: 12px;">Select a cuisine to see its typical ingredients. Pick from multiple regions for fusion cooking.</p>
+          <h3>${this._t('ai_recipe.cuisine_region_label')}</h3>
+          <p class="info-text" style="margin-bottom: 12px;">${this._t('ai_recipe.cuisine_region_hint')}</p>
           ${(this._aiSelectedCuisines || []).length > 0 ? html`
             <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
               ${(this._aiSelectedCuisines || []).map(c => {
@@ -4274,9 +4532,9 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <p class="info-text">Choose ingredients you have available (select at least 2):</p>
+          <p class="info-text">${this._t('ai_recipe.choose_ingredients_label')}</p>
           <p class="info-text" style="font-size: 0.85em; color: var(--secondary-text-color);">
-            Staples assumed available: ${(typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : []).join(', ')}
+            ${this._t('ai_recipe.staples_available')} ${(typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : []).join(', ')}
           </p>
           
           ${this._renderCategorizedIngredients(displayIngredients)}
@@ -4284,7 +4542,7 @@ class KitchenCookingPanel extends LitElement {
           <div class="ingredient-custom">
             <input 
               type="text" 
-              placeholder="Add custom ingredient..." 
+              placeholder="${this._t('ai_recipe.add_custom_placeholder')}" 
               @keypress=${(e) => {
                 if (e.key === 'Enter' && e.target.value.trim()) {
                   this._addCustomIngredient(e.target.value.trim());
@@ -4295,7 +4553,7 @@ class KitchenCookingPanel extends LitElement {
           </div>
 
           <div class="selected-ingredients">
-            <h4>Selected Ingredients (${this._selectedIngredients.length}):</h4>
+            <h4>${this._t('ai_recipe.selected_ingredients_label')} (${this._selectedIngredients.length}):</h4>
             <div class="ingredient-tags">
               ${this._selectedIngredients.map(ing => html`
                 <span class="ingredient-tag">
@@ -4311,7 +4569,7 @@ class KitchenCookingPanel extends LitElement {
             ?disabled=${this._selectedIngredients.length < 2}
             @click=${() => this._proceedToCookingStyle()}
           >
-            Next: Choose Cooking Style
+            ${this._t('ai_recipe.next_cooking_style')}
           </button>
         </div>
       </ha-card>
@@ -4421,7 +4679,7 @@ class KitchenCookingPanel extends LitElement {
    * 0 → 'No limit'; multiples of 60 → 'Xh'; remainder → 'Xh Ymin' or 'Ymin'.
    */
   _formatMaxTime(minutes) {
-    if (!minutes || minutes <= 0) return 'No limit';
+    if (!minutes || minutes <= 0) return this._t('ai_recipe.no_limit');
     const h = Math.floor(minutes / 60);
     const m = minutes % 60;
     if (h === 0) return `${m} min`;
@@ -4435,11 +4693,11 @@ class KitchenCookingPanel extends LitElement {
     // Data should already be loaded by _startAIRecipeCreation()
     // If not loaded, show loading state
     if (!this._cookingStyles) {
-      return html`<div class="loading">Loading cooking styles...</div>`;
+      return html`<div class="loading">${this._t('ai_recipe.loading_styles')}</div>`;
     }
 
     // Complexity labels
-    const complexityLabels = ['Very Simple', 'Simple', 'Medium', 'Complex', 'Chef Level'];
+    const complexityLabels = [this._t('ai_recipe.very_simple'), this._t('ai_recipe.simple'), this._t('ai_recipe.medium'), this._t('ai_recipe.complex_level'), this._t('ai_recipe.chef_level')];
 
     return html`
       <div class="path-header">
@@ -4448,14 +4706,14 @@ class KitchenCookingPanel extends LitElement {
           this._showAIIngredientSelector = true;
           this.requestUpdate();
         }}>
-          ← Back to Ingredients
+          ← ${this._t('nav.back_to_ingredients')}
         </button>
-        <h2>🍳 Choose Cooking Style</h2>
+        <h2>${this._t('ai_recipe.choose_style_title')}</h2>
       </div>
 
       <ha-card>
         <div class="card-content">
-          <p class="info-text">Select your preferred cooking style:</p>
+          <p class="info-text">${this._t('ai_recipe.select_style_hint')}</p>
           
           <div class="style-grid">
             ${(this._cookingStyles || []).map(style => html`
@@ -4505,11 +4763,11 @@ class KitchenCookingPanel extends LitElement {
 
       <ha-card>
         <div class="card-content">
-          <h3>⚙️ Settings</h3>
+          <h3>${this._t('ai_recipe.settings_heading')}</h3>
 
           <div style="margin-bottom: 16px;">
             <label style="display: block; font-weight: bold; margin-bottom: 8px;">
-              📊 Complexity: ${complexityLabels[this._aiComplexity - 1] || 'Medium'}
+              ${this._t('ai_recipe.complexity_label')} ${complexityLabels[this._aiComplexity - 1] || this._t('ai_recipe.medium')}
             </label>
             <input type="range" min="1" max="5" step="1"
               .value=${String(this._aiComplexity)}
@@ -4517,13 +4775,13 @@ class KitchenCookingPanel extends LitElement {
               style="width: 100%;"
             />
             <div style="display: flex; justify-content: space-between; font-size: 0.8em; color: var(--secondary-text-color);">
-              <span>Simple</span><span>Chef Level</span>
+              <span>${this._t('ai_recipe.simple')}</span><span>${this._t('ai_recipe.chef_level')}</span>
             </div>
           </div>
 
           <div style="margin-bottom: 16px;">
             <label style="display: block; font-weight: bold; margin-bottom: 8px;">
-              🍽️ Portions: ${this._aiPortions}
+              ${this._t('ai_recipe.portions_label')} ${this._aiPortions}
             </label>
             <input type="range" min="1" max="8" step="1"
               .value=${String(this._aiPortions)}
@@ -4537,7 +4795,7 @@ class KitchenCookingPanel extends LitElement {
 
           <div style="margin-bottom: 16px;">
             <label style="display: block; font-weight: bold; margin-bottom: 8px;">
-              ⏱️ Max time: ${this._formatMaxTime(this._aiMaxTime)}
+              ${this._t('ai_recipe.max_time_label')} ${this._formatMaxTime(this._aiMaxTime)}
             </label>
             <input type="range" min="0" max="240" step="15"
               .value=${String(this._aiMaxTime)}
@@ -4545,7 +4803,7 @@ class KitchenCookingPanel extends LitElement {
               style="width: 100%;"
             />
             <div style="display: flex; justify-content: space-between; font-size: 0.8em; color: var(--secondary-text-color);">
-              <span>No limit</span><span>1h</span><span>2h</span><span>3h</span><span>4h</span>
+              <span>${this._t('ai_recipe.no_limit')}</span><span>1h</span><span>2h</span><span>3h</span><span>4h</span>
             </div>
           </div>
         </div>
@@ -4557,7 +4815,7 @@ class KitchenCookingPanel extends LitElement {
           ?disabled=${!this._selectedCookingStyle}
           @click=${() => this._generateAIRecipes()}
         >
-          Generate Recipes 🤖
+          ${this._t('ai_recipe.generate_btn')}
         </button>
       </div>
     `;
@@ -4575,24 +4833,24 @@ class KitchenCookingPanel extends LitElement {
           this._aiRecipeSuggestions = [];
           this.requestUpdate();
         }}>
-          ← Back to Cooking Style
+          ← ${this._t('nav.back_to_cooking_style')}
         </button>
-        <h2>🤖 AI Recipe Suggestions</h2>
+        <h2>${this._t('ai_recipe.suggestions_title')}</h2>
       </div>
 
       ${this._aiRecipeSuggestions.length === 0 ? html`
         <ha-card>
           <div class="card-content loading-state ai-generation-loading">
             <ha-circular-progress active></ha-circular-progress>
-            <p class="ai-status-primary">${this._aiGenerationStatus || '🤖 Connecting to AI agent...'}</p>
+            <p class="ai-status-primary">${this._aiGenerationStatus || this._t('ai_recipe.connecting')}</p>
             ${this._aiGenerationElapsed > 0 ? html`
               <p class="ai-status-elapsed">${this._aiGenerationElapsed}s elapsed</p>
             ` : ''}
             ${this._aiGenerationStatus && (this._aiGenerationStatus.includes('overloaded') || this._aiGenerationStatus.includes('Retrying') || this._aiGenerationStatus.includes('waiting')) ? html`
-              <p class="ai-status-hint">The AI service is busy. Your request is being retried automatically.</p>
+              <p class="ai-status-hint">${this._t('ai_recipe.ai_busy_hint')}</p>
             ` : ''}
             ${this._aiGenerationStatus && this._aiGenerationStatus.includes('backup') ? html`
-              <p class="ai-status-hint">Switching to backup AI agent — hang on!</p>
+              <p class="ai-status-hint">${this._t('ai_recipe.switching_backup')}</p>
             ` : ''}
           </div>
         </ha-card>
@@ -4607,27 +4865,27 @@ class KitchenCookingPanel extends LitElement {
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
                   <h3 style="margin: 0; flex: 1;">${displayName}</h3>
                   ${recipe.recipe_origin === 'known' ? html`
-                    <span style="background: #2e7d32; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">📖 Classic</span>
+                    <span style="background: #2e7d32; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">${this._t('ai_recipe.classic_badge')}</span>
                   ` : html`
-                    <span style="background: #1565c0; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">🤖 Original</span>
+                    <span style="background: #1565c0; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.75em; white-space: nowrap; flex-shrink: 0;">${this._t('ai_recipe.original_badge')}</span>
                   `}
                 </div>
                 <p class="recipe-description">${recipe.description || ''}</p>
                 
                 <div class="recipe-details">
                   <div class="detail-item">
-                    <strong>🍳 Cook Time:</strong> ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' min' : 'N/A'}
+                    <strong>${this._t('ai_recipe.cook_time_label')}</strong> ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' ' + this._t('common.minutes_short') : this._t('common.na')}
                   </div>
                   <div class="detail-item">
-                    <strong>🍽️ Servings:</strong> ${recipe.servings || '4'}
+                    <strong>${this._t('ai_recipe.servings_label')}</strong> ${recipe.servings || '4'}
                   </div>
                   <div class="detail-item">
-                    <strong>📊 Difficulty:</strong> ${recipe.difficulty || 'N/A'}
+                    <strong>${this._t('ai_recipe.difficulty_label')}</strong> ${recipe.difficulty || this._t('common.na')}
                   </div>
                 </div>
 
                 <div class="recipe-ingredients">
-                  <h4>Key Ingredients:</h4>
+                  <h4>${this._t('ai_recipe.key_ingredients')}</h4>
                   <ul>
                     ${(recipe.main_ingredients || recipe.ingredients || []).map(ing => html`<li>${ing}</li>`)}
                   </ul>
@@ -4637,7 +4895,7 @@ class KitchenCookingPanel extends LitElement {
                   class="primary-btn"
                   @click=${() => this._startCookingFromAIRecipe(recipe)}
                 >
-                  Start Cooking This Recipe
+                  ${this._t('ai_recipe.start_cooking_recipe')}
                 </button>
               </div>
             </ha-card>
@@ -4649,7 +4907,7 @@ class KitchenCookingPanel extends LitElement {
             class="secondary-btn"
             @click=${() => this._generateAIRecipes()}
           >
-            🔄 Generate Different Recipes
+            ${this._t('ai_recipe.generate_different')}
           </button>
         </div>
       `}
@@ -4674,15 +4932,15 @@ class KitchenCookingPanel extends LitElement {
           this._currentPath = 'ai_recipe_builder';
           this.requestUpdate();
         }}>
-          ← Back to AI Recipe Builder
+          ${this._t('nav.back_to_ai_builder')}
         </button>
-        <h2>📋 Recent ${this._selectedAppliance?.name || 'Appliance'} Recipes</h2>
+        <h2>📋 ${this._t('ai_recipe.recent_recipes_title')} - ${this._selectedAppliance?.name || ''}</h2>
       </div>
 
       ${applianceCooks.length === 0 ? html`
         <ha-card>
           <div class="card-content">
-            <p>No cooking history for this appliance yet. Create your first AI recipe!</p>
+            <p>${this._t('ai_recipe.no_history_appliance')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -4705,9 +4963,9 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ← Back to Appliances
+          ${this._t('nav.back_to_appliances')}
         </button>
-        <h2>📋 Previous Cooks</h2>
+        <h2>${this._t('history.previous_cooks_title')}</h2>
       </div>
       ${this._renderHistory()}
     `;
@@ -4723,9 +4981,9 @@ class KitchenCookingPanel extends LitElement {
           this._selectedCookForDetail = null;
           this.requestUpdate();
         }}>
-          ← Back to List
+          ${this._t('nav.back_to_list')}
         </button>
-        <h2>${cook.cut_display || cook.cut || cook.recipe_name || 'Cook Details'}</h2>
+        <h2>${cook.cut_display || cook.cut || cook.recipe_name || this._t('history.cook_details_title')}</h2>
       </div>
 
       <ha-card>
@@ -4733,45 +4991,45 @@ class KitchenCookingPanel extends LitElement {
           <div class="detail-header">
             <h3>${cook.cut_display || cook.cut || cook.recipe_name}</h3>
             <p class="detail-meta">
-              ${cook.appliance_name || 'Unknown Appliance'} • 
+              ${cook.appliance_name || this._t('history.unknown_appliance')} • 
               ${this._formatDateTime(cook.completed_at)}
             </p>
           </div>
 
           ${cook.duration ? html`
             <div class="detail-section">
-              <strong>⏱️ Duration:</strong> ${this._formatDuration(cook.duration)}
+              <strong>${this._t('history.duration_label')}</strong> ${this._formatDuration(cook.duration)}
             </div>
           ` : ''}
 
           ${cook.protein ? html`
             <div class="detail-section">
-              <strong>🥩 Protein:</strong> ${cook.protein}
-              ${cook.doneness ? html` • <strong>Doneness:</strong> ${(cook.doneness || '').replace('_', ' ')}` : ''}
+              <strong>${this._t('history.protein_label')}</strong> ${cook.protein}
+              ${cook.doneness ? html` • <strong>${this._t('history.doneness_colon')}</strong> ${(cook.doneness || '').replace('_', ' ')}` : ''}
             </div>
           ` : ''}
 
           ${cook.target_temp_c || cook.peak_temp_c || cook.final_temp ? html`
             <div class="detail-section">
-              <strong>🌡️ Temperature Data:</strong>
+              <strong>${this._t('history.temp_data_label')}</strong>
               <div class="temp-data">
-                ${cook.target_temp_c ? html`<p>Target: ${cook.target_temp_c}°C</p>` : ''}
-                ${cook.peak_temp_c ? html`<p>Peak: ${Math.round(cook.peak_temp_c)}°C</p>` : ''}
-                ${cook.final_temp_after_rest ? html`<p>After Rest: ${Math.round(cook.final_temp_after_rest)}°C</p>` : 
-                  cook.final_temp ? html`<p>Final: ${cook.final_temp}°C</p>` : ''}
+                ${cook.target_temp_c ? html`<p>${this._t('history.target_label')} ${cook.target_temp_c}°C</p>` : ''}
+                ${cook.peak_temp_c ? html`<p>${this._t('history.peak_label')} ${Math.round(cook.peak_temp_c)}°C</p>` : ''}
+                ${cook.final_temp_after_rest ? html`<p>${this._t('history.after_rest_label')} ${Math.round(cook.final_temp_after_rest)}°C</p>` : 
+                  cook.final_temp ? html`<p>${this._t('history.final_label')} ${cook.final_temp}°C</p>` : ''}
               </div>
             </div>
           ` : ''}
 
           ${cook.cooking_method ? html`
             <div class="detail-section">
-              <strong>🍳 Cooking Method:</strong> ${(cook.cooking_method || '').replace(/_/g, ' ')}
+              <strong>${this._t('history.cooking_method_label')}</strong> ${(cook.cooking_method || '').replace(/_/g, ' ')}
             </div>
           ` : ''}
 
           ${cook.ingredients && cook.ingredients.length > 0 ? html`
             <div class="detail-section">
-              <strong>📝 Ingredients:</strong>
+              <strong>${this._t('history.ingredients_label')}</strong>
               <ul class="ingredients-list">
                 ${cook.ingredients.map(ing => html`<li>${ing}</li>`)}
               </ul>
@@ -4780,7 +5038,7 @@ class KitchenCookingPanel extends LitElement {
 
           ${cook.timeline && cook.timeline.length > 0 ? html`
             <div class="detail-section">
-              <strong>📅 Cook Timeline:</strong>
+              <strong>${this._t('history.timeline_label')}</strong>
               <div class="timeline">
                 ${cook.timeline.map(event => html`
                   <div class="timeline-event">
@@ -4794,36 +5052,36 @@ class KitchenCookingPanel extends LitElement {
 
           ${cook.ease_rating || cook.result_rating ? html`
             <div class="detail-section">
-              <strong>⭐ Ratings:</strong>
+              <strong>${this._t('history.ratings_label')}</strong>
               ${cook.ease_rating ? html`
-                <p>Ease: ${'⭐'.repeat(cook.ease_rating)}${'☆'.repeat(5 - cook.ease_rating)}</p>
+                <p>${this._t('history.ease_label')} ${'⭐'.repeat(cook.ease_rating)}${'☆'.repeat(5 - cook.ease_rating)}</p>
               ` : ''}
               ${cook.result_rating ? html`
-                <p>Result: ${'⭐'.repeat(cook.result_rating)}${'☆'.repeat(5 - cook.result_rating)}</p>
+                <p>${this._t('history.result_label')} ${'⭐'.repeat(cook.result_rating)}${'☆'.repeat(5 - cook.result_rating)}</p>
               ` : ''}
             </div>
           ` : ''}
 
           ${cook.notes ? html`
             <div class="detail-section">
-              <strong>📝 Notes:</strong>
+              <strong>${this._t('history.notes_label')}</strong>
               <p class="cook-notes">${cook.notes}</p>
             </div>
           ` : ''}
 
           <div class="detail-actions">
             <button class="primary-btn" @click=${() => this._restartCook(cook)}>
-              🔄 Restart This Cook
+              ${this._t('history.restart_cook')}
             </button>
             <button class="small-btn" @click=${() => {
-              const notes = prompt('Update notes:', cook.notes || '');
+              const notes = prompt(this._t('history.update_notes_prompt'), cook.notes || '');
               if (notes !== null) {
                 this._updateCookNotes(cook.id, notes);
                 // Update the displayed cook
                 cook.notes = notes;
                 this.requestUpdate();
               }
-            }}>✏️ Edit Notes</button>
+            }}>${this._t('history.edit_notes')}</button>
           </div>
         </div>
       </ha-card>
@@ -4885,7 +5143,7 @@ class KitchenCookingPanel extends LitElement {
       const entities = this._findCookingEntities();
       const meaterEntity = entities.find(e => e.toLowerCase().includes('meater')) || entities[0];
       if (!meaterEntity) {
-        alert('No cooking session entity found. Please set up a MEATER probe first.');
+        this._showMessage(this._t('common.error'), this._t('messages.no_meater_entity'), true);
         return;
       }
 
@@ -4907,7 +5165,7 @@ class KitchenCookingPanel extends LitElement {
           this._waitingCookServiceData = null;
           this._currentPath = 'welcome';
           this.requestUpdate();
-          alert('Failed to restart cook. The cook data may be incompatible. Please start a new cook manually.');
+          this._showMessage(this._t('common.error'), this._t('messages.restart_cook_failed'), true);
         });
 
       // Navigate to the active cook view so the user sees their cook.
@@ -4930,7 +5188,7 @@ class KitchenCookingPanel extends LitElement {
     }
 
     // Fallback: show message that this cook type can't be restarted
-    alert('This cook type cannot be automatically restarted. Please set up a new cook manually.');
+    this._showMessage(this._t('common.error'), this._t('messages.restart_not_supported'), true);
   }
 
   /**
@@ -5210,14 +5468,14 @@ class KitchenCookingPanel extends LitElement {
       });
 
       // Show success message
-      this._showMessage('✅ Saved', 'Recipe cook saved successfully! 🎉');
+      this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
 
       // Stop the cook flow
       this._stopRecipeCook();
 
     } catch (error) {
       console.error('Error saving recipe cook:', error);
-      this._showMessage('❌ Save Error', `Error saving recipe cook: ${error.message}`, true);
+      this._showMessage('❌ ' + this._t('messages.recipe_cook_save_error_title'), `${this._t('messages.recipe_cook_save_error')} ${error.message}`, true);
     }
   }
 
@@ -5258,7 +5516,7 @@ class KitchenCookingPanel extends LitElement {
    */
   _proceedToCookingStyle() {
     if (this._selectedIngredients.length < 2) {
-      this._showMessage('⚠️ Ingredients', 'Please select at least 2 ingredients', true);
+      this._showMessage('⚠️ ' + this._t('messages.ingredients_min_title'), this._t('messages.ingredients_min_2'), true);
       return;
     }
     
@@ -5283,7 +5541,7 @@ class KitchenCookingPanel extends LitElement {
   _startAIStatusPolling() {
     this._stopAIStatusPolling();
     this._aiGenerationElapsed = 0;
-    this._aiGenerationStatus = '🤖 Connecting to AI agent...';
+    this._aiGenerationStatus = this._t('ai_recipe.connecting');
     const startTime = Date.now();
     this._aiGenerationTimer = setInterval(async () => {
       this._aiGenerationElapsed = Math.floor((Date.now() - startTime) / 1000);
@@ -5320,7 +5578,7 @@ class KitchenCookingPanel extends LitElement {
    */
   async _generateAIRecipes() {
     if (!this._selectedCookingStyle || this._selectedIngredients.length < 2) {
-      this._showMessage('⚠️ Incomplete', 'Please complete ingredient and style selection', true);
+      this._showMessage('⚠️ ' + this._t('messages.incomplete_title'), this._t('messages.incomplete_selection'), true);
       return;
     }
 
@@ -5342,6 +5600,8 @@ class KitchenCookingPanel extends LitElement {
         main_appliance_id: this._selectedAppliance.id,
         servings: this._aiPortions || 4,
         complexity: this._aiComplexity || 3,
+        language: this._language || 'en',
+        measurement_system: this._measurementSystem || 'us',
       };
 
       // Add max time if set (0 = no limit)
@@ -5361,7 +5621,7 @@ class KitchenCookingPanel extends LitElement {
         this._aiRecipeSuggestions = response.suggestions;
       } else {
         const msg = (response && response.message) ? response.message : 'No recipes generated. Please try different ingredients or styles.';
-        this._showMessage('⚠️ Recipe Generation', msg);
+        this._showMessage('⚠️ ' + this._t('messages.recipe_generation_title'), msg);
         // Go back to style selection so the user isn't stuck on a loading spinner.
         this._showAIRecipeSuggestions = false;
         this._showAIStyleSelector = true;
@@ -5381,7 +5641,7 @@ class KitchenCookingPanel extends LitElement {
       } catch (_) {
         errMsg = String(error) || 'Unknown error';
       }
-      this._showMessage('❌ Error', `Error generating recipes: ${errMsg}. Please try again.`, true);
+      this._showMessage('❌ ' + this._t('messages.recipe_generation_error_title'), `${this._t('messages.recipe_generation_error')} ${errMsg}. ${this._t('messages.please_try_again')}`, true);
       // Go back to style selection
       this._showAIRecipeSuggestions = false;
       this._showAIStyleSelector = true;
@@ -5428,7 +5688,7 @@ class KitchenCookingPanel extends LitElement {
       try {
         const res = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/status');
         if (res && res.message) {
-          this._messageDialogContent = `Generating full recipe details with AI...\n${res.message}`;
+          this._messageDialogContent = `${this._t('messages.loading_recipe')}\n${res.message}`;
           this.requestUpdate();
         }
       } catch (pollErr) {
@@ -5441,8 +5701,8 @@ class KitchenCookingPanel extends LitElement {
 
     try {
       // Show cancelable loading dialog
-      this._messageDialogTitle = '⏳ Loading Recipe';
-      this._messageDialogContent = 'Generating full recipe details with AI...\nThis usually takes 10-30 seconds.';
+      this._messageDialogTitle = '⏳ ' + this._t('messages.loading_recipe_title');
+      this._messageDialogContent = this._t('messages.loading_recipe') + '\n' + this._t('messages.loading_recipe_time');
       this._messageDialogIsError = false;
       this._messageDialogOnCancel = () => { cancelled = true; };
       this._showMessageDialog = true;
@@ -5465,7 +5725,9 @@ class KitchenCookingPanel extends LitElement {
         cooking_style: this._selectedCookingStyle || 'quick_and_easy',
         complexity: this._aiComplexity || 3,
         user_ingredients: this._selectedIngredients || [],
-        servings: this._aiPortions || 4
+        servings: this._aiPortions || 4,
+        language: this._language || 'en',
+        measurement_system: this._measurementSystem || 'us',
       });
 
       if (cancelled) return; // User cancelled while waiting
@@ -5473,6 +5735,7 @@ class KitchenCookingPanel extends LitElement {
       if (response && response.detail) {
         const detail = response.detail;
         fullRecipe.instructions = detail.instructions || [];
+        fullRecipe.step_ingredients = detail.step_ingredients || [];
         fullRecipe.ingredients = detail.ingredients || fullRecipe.main_ingredients || [];
         fullRecipe.tips = detail.tips || [];
         fullRecipe.servings = detail.servings || fullRecipe.servings || 4;
@@ -5483,14 +5746,14 @@ class KitchenCookingPanel extends LitElement {
         fullRecipe.target_temp_f = detail.target_temp_f;
       } else {
         // API returned an error or empty detail — show the error message
-        const msg = (response && response.message) ? response.message : 'Failed to get recipe detail';
+        const msg = (response && response.message) ? response.message : this._t('messages.recipe_detail_failed');
         console.error('AI recipe detail error:', msg);
         fullRecipe.ingredients = fullRecipe.main_ingredients || [];
         fullRecipe.instructions = [];
         // Brief non-blocking error notice
         this._messageDialogOnCancel = null;
-        this._messageDialogTitle = '⚠️ Partial Recipe';
-        this._messageDialogContent = `Could not load full recipe details from AI.\n${msg}\nYou can still see the ingredients overview and finish the cook.`;
+        this._messageDialogTitle = '⚠️ ' + this._t('messages.partial_recipe_title');
+        this._messageDialogContent = `${this._t('messages.partial_recipe_error')}\n${msg}\n${this._t('messages.partial_recipe_fallback')}`;
         this._messageDialogIsError = false;
         this._showMessageDialog = true;
         this.requestUpdate();
@@ -5504,8 +5767,8 @@ class KitchenCookingPanel extends LitElement {
       fullRecipe.instructions = [];
       // Brief non-blocking error notice — the overview will show fallback data
       this._messageDialogOnCancel = null;
-      this._messageDialogTitle = '⚠️ Partial Recipe';
-      this._messageDialogContent = 'Could not load full recipe details from AI. You can still see the ingredients overview and finish the cook.';
+      this._messageDialogTitle = '⚠️ ' + this._t('messages.partial_recipe_title');
+      this._messageDialogContent = this._t('messages.partial_recipe_error') + ' ' + this._t('messages.partial_recipe_fallback');
       this._messageDialogIsError = false;
       this._showMessageDialog = true;
       this.requestUpdate();
@@ -5541,11 +5804,14 @@ class KitchenCookingPanel extends LitElement {
       return recipe.steps;
     }
     // If recipe has instructions (flat string array), convert to step objects
+    // Attach step_ingredients from the parallel array if available
     if (recipe.instructions && recipe.instructions.length > 0) {
+      const si = recipe.step_ingredients || [];
       return recipe.instructions.map((instruction, idx) => ({
         name: `Step ${idx + 1}`,
         instructions: instruction,
         description: instruction,
+        ingredients: si[idx] || [],
       }));
     }
     return [];
@@ -5622,50 +5888,143 @@ class KitchenCookingPanel extends LitElement {
     
     return html`
       <div class="recipe-cook-overview">
-        <h3>📋 Recipe Overview</h3>
+        <h3>${this._t('recipe_cook.overview_title')}</h3>
         
         ${recipe.description ? html`
           <p class="recipe-description">${recipe.description}</p>
         ` : ''}
 
         ${totalTime ? html`
-          <p><strong>⏱️ Total Time:</strong> ${totalTime} minutes</p>
+          <p><strong>⏱️ ${this._t('recipe_cook.total_time')}:</strong> ${totalTime} ${this._t('common.minutes')}</p>
         ` : ''}
 
         <div class="recipe-cook-ingredients">
-          <h4>🛒 Ingredients</h4>
+          <h4>${this._t('recipe_cook.ingredients_label')}</h4>
           ${ingredientList.length > 0 ? html`
             <ul>
               ${ingredientList.map(ing => html`
-                <li>${ing}</li>
+                <li>${this._convertIngredientText(ing)}</li>
               `)}
             </ul>
           ` : html`
             <p style="color: var(--secondary-text-color); font-style: italic;">
-              Ingredient details not available for this recipe.
+              ${this._t('messages.no_ingredients')}
             </p>
           `}
         </div>
 
         ${steps.length > 0 ? html`
           <div class="recipe-cook-step-overview">
-            <h4>📝 Steps (${steps.length})</h4>
+            <h4>📝 ${this._t('recipe_cook.steps_label')} (${steps.length})</h4>
             <ol>
               ${steps.map((step, idx) => html`
                 <li>
-                  ${step.instructions || step.description || step.name || `Step ${idx + 1}`}
-                  ${step.time ? html` <span class="step-time">(~${step.time} min)</span>` : ''}
+                  ${this._convertIngredientText(step.instructions || step.description || step.name || `${this._t('common.step')} ${idx + 1}`)}
+                  ${step.time ? html` <span class="step-time">(~${step.time} ${this._t('common.minutes_short')})</span>` : ''}
                 </li>
               `)}
             </ol>
           </div>
         ` : html`
           <p style="color: var(--secondary-text-color); font-style: italic;">
-            Step-by-step instructions not available. Use the recipe description and ingredients above as your guide.
+            ${this._t('messages.no_instructions')}
           </p>
+          <button
+            class="primary-btn"
+            style="margin-top: 12px;"
+            @click=${() => this._retryRecipeDetail()}
+          >
+            🔄 ${this._t('ai_recipe.retry_generation') || 'Retry Recipe Generation'}
+          </button>
         `}
       </div>
     `;
+  }
+
+  /**
+   * Retry fetching recipe detail (instructions) when generation failed
+   */
+  async _retryRecipeDetail() {
+    if (!this._recipeCookState) return;
+    const recipe = this._recipeCookState.recipe;
+
+    // Show loading dialog
+    this._messageDialogTitle = '⏳ ' + this._t('messages.loading_recipe_title');
+    this._messageDialogContent = this._t('messages.loading_recipe') + '\n' + this._t('messages.loading_recipe_time');
+    this._messageDialogIsError = false;
+    let cancelled = false;
+    this._messageDialogOnCancel = () => { cancelled = true; };
+    this._showMessageDialog = true;
+    this.requestUpdate();
+
+    // Poll the backend status endpoint for live retry progress
+    const detailStatusTimer = setInterval(async () => {
+      try {
+        const res = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/status');
+        if (res && res.message) {
+          this._messageDialogContent = `${this._t('messages.loading_recipe')}\n${res.message}`;
+          this.requestUpdate();
+        }
+      } catch (pollErr) {
+        if (pollErr && pollErr.status_code && pollErr.status_code !== 503 && pollErr.status_code !== 429) {
+          console.warn('[AI Detail Status] Polling error:', pollErr);
+        }
+      }
+    }, 1000);
+
+    try {
+      const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/detail', {
+        suggestion_id: recipe.id,
+        suggestion: {
+          id: recipe.id,
+          name: recipe.name,
+          description: recipe.description,
+          cook_time_minutes: recipe.cook_time_minutes,
+          difficulty: recipe.difficulty,
+          main_ingredients: recipe.main_ingredients || recipe.ingredients || [],
+          cuisine_type: recipe.cuisine_type,
+          required_appliances: recipe.required_appliances || []
+        },
+        appliance_ids: this._selectedAppliance ? [this._selectedAppliance.id] : [],
+        main_appliance_id: this._selectedAppliance ? this._selectedAppliance.id : null,
+        cooking_style: this._selectedCookingStyle || 'quick_and_easy',
+        complexity: this._aiComplexity || 3,
+        user_ingredients: this._selectedIngredients || [],
+        servings: this._aiPortions || 4,
+        language: this._language || 'en',
+        measurement_system: this._measurementSystem || 'us',
+      });
+
+      if (cancelled) return;
+
+      if (response && response.detail) {
+        const detail = response.detail;
+        recipe.instructions = detail.instructions || [];
+        recipe.step_ingredients = detail.step_ingredients || [];
+        recipe.ingredients = detail.ingredients || recipe.main_ingredients || [];
+        recipe.tips = detail.tips || [];
+        recipe.servings = detail.servings || recipe.servings || 4;
+        recipe.prep_time_minutes = detail.prep_time_minutes || 0;
+        recipe.phases = detail.phases || [];
+        recipe.use_probe = detail.use_probe || false;
+        recipe.target_temp_c = detail.target_temp_c;
+        recipe.target_temp_f = detail.target_temp_f;
+      } else {
+        const msg = (response && response.message) ? response.message : this._t('messages.recipe_detail_failed');
+        this._showMessage('⚠️ ' + this._t('messages.partial_recipe_title'), msg, false);
+      }
+    } catch (error) {
+      if (cancelled) return;
+      console.error('Error retrying recipe detail:', error);
+      this._showMessage('⚠️ ' + this._t('messages.partial_recipe_title'),
+        this._t('messages.partial_recipe_error') + ' ' + this._t('messages.partial_recipe_fallback'), false);
+    } finally {
+      clearInterval(detailStatusTimer);
+    }
+
+    this._messageDialogOnCancel = null;
+    this._showMessageDialog = false;
+    this.requestUpdate();
   }
 
   /**
@@ -5677,23 +6036,29 @@ class KitchenCookingPanel extends LitElement {
     const step = steps[stepIndex];
     
     if (!step) {
-      return html`<p>Step not found</p>`;
+      return html`<p>${this._t('messages.step_not_found')}</p>`;
     }
 
     // Get ingredients mentioned in this step (if available)
     const stepIngredients = step.ingredients || [];
 
-    // Strip "Step X:" prefix from description text
-    let instructionText = step.instructions || step.description || 'No instructions available.';
-    instructionText = instructionText.replace(/^Step\s+\d+\s*:\s*/i, '');
+    // Strip "Step X:" / "Steg X:" prefix from description text
+    let instructionText = step.instructions || step.description || this._t('messages.no_instructions');
+    instructionText = instructionText.replace(/^(?:Step|Steg)\s+\d+\s*:\s*/i, '');
+    // Convert any remaining US measurements in the instruction text
+    instructionText = this._convertIngredientText(instructionText);
 
     // Build sorted ingredient list: new-active (green), repeat-active (black), inactive (2 columns)
     const allIngredients = recipe.ingredients && recipe.ingredients.length > 0 ? recipe.ingredients : [];
     const newActiveIngs = [];
     const repeatActiveIngs = [];
     const inactiveIngs = [];
-    const measureWords = new Set(['cups','cup','tbsp','tsp','ounce','ounces','pound','pounds','gram','grams','tablespoon','tablespoons','teaspoon','teaspoons','inch','lbs','chopped','diced','minced','sliced','finely','freshly','large','small','medium','optional','about','into','with','from','each','piece','pieces','water','drain','rinse','heat','place','minutes','adjust','taste','whole','clean','back','that','this','then','also','well','over','used','half','more','approx','skin','make']);
+    const measureWords = new Set(['cups','cup','tbsp','tsp','ounce','ounces','pound','pounds','gram','grams','tablespoon','tablespoons','teaspoon','teaspoons','inch','lbs','chopped','diced','minced','sliced','finely','freshly','large','small','medium','optional','about','into','with','from','each','piece','pieces','water','drain','rinse','heat','place','minutes','adjust','taste','whole','clean','back','that','this','then','also','well','over','used','half','more','approx','skin','make',
+      /* Swedish measurement/stopwords */ 'krm','tsk','msk','dl','cl','hg','kg','hackad','tärnad','skivad','finhackad','stor','liten','valfritt','ungefär','stycken','vatten','minuter','smak','hela','efter']);
     const escapeRegex = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // Unicode-aware word boundary: \b doesn't work with ä,ö,å,é etc.
+    // Use lookbehind/lookahead for non-letter/digit or string boundary.
+    const uWordBoundary = (w) => `(?<![\\p{L}\\p{N}])${escapeRegex(w)}(?![\\p{L}\\p{N}])`;
     const extractKeywords = (text) => text.split(/[\s,()]+/).filter(w =>
       w.length > 3 && !measureWords.has(w) && !/^\d/.test(w)
     );
@@ -5702,17 +6067,22 @@ class KitchenCookingPanel extends LitElement {
     const isIngredientInStep = (ingLower, stepObj) => {
       const si = stepObj.ingredients || [];
       const txt = (stepObj.instructions || stepObj.description || '').toLowerCase();
-      // Method 1: per-step ingredient list
+      // Method 1: per-step ingredient list (primary — from AI JSON step_ingredients)
       if (si.length > 0) {
-        const found = si.some(s => {
-          const kw = extractKeywords(s.toLowerCase());
-          return kw.some(w => new RegExp(`\\b${escapeRegex(w)}\\b`, 'i').test(ingLower)) || ingLower === s.toLowerCase();
+        return si.some(s => {
+          const sLower = s.toLowerCase();
+          // Direct match or substring containment (step_ingredients may be
+          // short names like "chicken" while the full ingredient is "400 g chicken breast, diced")
+          if (ingLower === sLower || ingLower.includes(sLower) || sLower.includes(ingLower)) return true;
+          // Keyword fallback within Method 1
+          const kw = extractKeywords(sLower);
+          return kw.some(w => new RegExp(uWordBoundary(w), 'iu').test(ingLower));
         });
-        if (found) return true;
+        // Do NOT fall through to Method 2 when step_ingredients are available
       }
-      // Method 2: scan instruction text
+      // Method 2: scan instruction text (fallback — only when step_ingredients is empty/missing)
       const kw = extractKeywords(ingLower);
-      return kw.some(w => new RegExp(`\\b${escapeRegex(w)}\\b`, 'i').test(txt));
+      return kw.some(w => new RegExp(uWordBoundary(w), 'iu').test(txt));
     };
 
     // Determine which ingredients were active in any previous step
@@ -5732,7 +6102,7 @@ class KitchenCookingPanel extends LitElement {
       const kw = extractKeywords(ingLower);
       let earliest = instructionLower.length;
       kw.forEach(w => {
-        const match = instructionLower.match(new RegExp(`\\b${escapeRegex(w)}\\b`));
+        const match = instructionLower.match(new RegExp(uWordBoundary(w), 'iu'));
         if (match && match.index < earliest) earliest = match.index;
       });
       return earliest;
@@ -5763,8 +6133,8 @@ class KitchenCookingPanel extends LitElement {
     return html`
       <div class="recipe-cook-step-detail">
         <div class="step-header">
-          <h3>Step ${stepIndex + 1} of ${steps.length}</h3>
-          ${step.time ? html`<p class="step-time">⏱️ ~${step.time} minutes</p>` : ''}
+          <h3>${this._t('common.step')} ${stepIndex + 1} ${this._t('common.of')} ${steps.length}</h3>
+          ${step.time ? html`<p class="step-time">⏱️ ~${step.time} ${this._t('common.minutes')}</p>` : ''}
         </div>
 
         <div class="step-instructions">
@@ -5773,20 +6143,20 @@ class KitchenCookingPanel extends LitElement {
 
         ${step.temperature ? html`
           <div class="step-temp">
-            <strong>🌡️ Temperature:</strong> ${step.temperature}
+            <strong>${this._t('recipe_cook.temperature_label')}</strong> ${step.temperature}
           </div>
         ` : ''}
 
         ${step.notes ? html`
           <div class="step-notes">
-            <strong>💡 Tip:</strong> ${step.notes}
+            <strong>${this._t('recipe_cook.tip_label')}</strong> ${step.notes}
           </div>
         ` : ''}
 
         <!-- Ingredients: active sorted by appearance in grey box, inactive in 2-col below -->
         ${allIngredients.length > 0 ? html`
           <div class="recipe-cook-ingredients">
-            <h5>📋 Ingredients</h5>
+            <h5>${this._t('recipe_cook.ingredients_label')}</h5>
             ${allActiveIngs.length > 0 ? html`
               <ul class="ingredients-active">
                 ${allActiveIngs.map(ing => html`
@@ -5815,12 +6185,12 @@ class KitchenCookingPanel extends LitElement {
     
     return html`
       <div class="recipe-cook-finish">
-        <h3>🎉 Cook Complete!</h3>
-        <p>How did it go? Please rate your experience:</p>
+        <h3>${this._t('rating.cook_complete')}</h3>
+        <p>${this._t('rating.how_did_it_go')}</p>
 
         <div class="recipe-cook-rating">
-          <h4>😊 Ease of Cooking</h4>
-          <p class="rating-description">How easy was this recipe to follow?</p>
+          <h4>${this._t('rating.ease_title')}</h4>
+          <p class="rating-description">${this._t('rating.ease_recipe_desc')}</p>
           <div class="star-selector">
             ${[1, 2, 3, 4, 5].map(rating => html`
               <button 
@@ -5837,8 +6207,8 @@ class KitchenCookingPanel extends LitElement {
         </div>
 
         <div class="recipe-cook-rating">
-          <h4>😋 Result Quality</h4>
-          <p class="rating-description">How did the final dish turn out?</p>
+          <h4>${this._t('rating.result_title')}</h4>
+          <p class="rating-description">${this._t('rating.result_recipe_desc')}</p>
           <div class="star-selector">
             ${[1, 2, 3, 4, 5].map(rating => html`
               <button 
@@ -5855,9 +6225,9 @@ class KitchenCookingPanel extends LitElement {
         </div>
 
         <div class="recipe-cook-notes">
-          <h4>📝 Notes (Optional)</h4>
+          <h4>${this._t('rating.notes_title')}</h4>
           <textarea
-            placeholder="Any notes, modifications, or thoughts about this cook..."
+            placeholder="${this._t('rating.notes_placeholder')}"
             .value=${state.notes || ''}
             @input=${(e) => {
               this._recipeCookState.notes = e.target.value;
@@ -5867,7 +6237,7 @@ class KitchenCookingPanel extends LitElement {
         </div>
 
         ${!state.easeRating || !state.resultRating ? html`
-          <p class="rating-required">⚠️ Please provide both ratings to save this cook</p>
+          <p class="rating-required">${this._t('rating.both_required')}</p>
         ` : ''}
       </div>
     `;
@@ -5934,7 +6304,7 @@ class KitchenCookingPanel extends LitElement {
       this.requestUpdate();
     } catch (error) {
       console.error('Failed to show recent MEATER cooks:', error);
-      alert('Failed to load MEATER cook history.\n\nPlease check:\n1. Integration is running\n2. Home Assistant logs for errors\n3. Browser console for details');
+      this._showMessage(this._t('common.error'), this._t('messages.load_history_failed') + '\n\n' + this._t('messages.load_history_check'), true);
     }
   }
 
@@ -5960,7 +6330,7 @@ class KitchenCookingPanel extends LitElement {
       this._currentPath = 'ninja_built_in_recipes';
       this.requestUpdate();
     } else {
-      alert('No Ninja Combi recipes available. Please ensure the integration is up to date.');
+      this._showMessage(this._t('common.error'), this._t('messages.no_ninja_recipes'), true);
       this._currentPath = 'ninja_combi';
       this.requestUpdate();
     }
@@ -6099,14 +6469,14 @@ class KitchenCookingPanel extends LitElement {
   _renderHistory() {
     return html`
       <div class="status-banner idle">
-        <h2>📜 Cook History</h2>
-        <p>Your past cooking sessions</p>
+        <h2>${this._t('history.cook_history_title')}</h2>
+        <p>${this._t('history.cook_history_subtitle')}</p>
       </div>
       
       ${this._cookHistory.length === 0 ? html`
         <ha-card>
           <div class="card-content">
-            <p class="no-history">No cooks recorded yet. Complete a cooking session to see it here!</p>
+            <p class="no-history">${this._t('history.no_cooks_message')}</p>
           </div>
         </ha-card>
       ` : html`
@@ -6124,10 +6494,10 @@ class KitchenCookingPanel extends LitElement {
                 <span class="history-detail">🥩 ${cook.protein}</span>
                 <span class="history-detail">🎯 ${(cook.doneness || '').replace('_', ' ')}</span>
                 <span class="history-detail">🍳 ${(cook.cooking_method || '').replace(/_/g, ' ')}</span>
-                <span class="history-detail">🌡️ ${cook.target_temp_c}°C target</span>
-                ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C peak</span>` : ''}
-                ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C after rest</span>` : 
-                  cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C final</span>` : ''}
+                <span class="history-detail">🌡️ ${cook.target_temp_c}°C ${this._t('meater.target_label')}</span>
+                ${cook.peak_temp_c ? html`<span class="history-detail">📈 ${Math.round(cook.peak_temp_c)}°C ${this._t('meater.peak_label')}</span>` : ''}
+                ${cook.final_temp_after_rest ? html`<span class="history-detail">✅ ${Math.round(cook.final_temp_after_rest)}°C ${this._t('meater.after_rest_label')}</span>` : 
+                  cook.final_temp ? html`<span class="history-detail">✅ ${cook.final_temp}°C ${this._t('meater.final_label')}</span>` : ''}
               </div>
               ${cook.notes ? html`
                 <div class="history-notes">
@@ -6136,10 +6506,10 @@ class KitchenCookingPanel extends LitElement {
               ` : ''}
               <div class="history-actions" @click=${(e) => e.stopPropagation()}>
                 <button class="small-btn" @click=${() => {
-                  const notes = prompt('Update notes:', cook.notes || '');
+                  const notes = prompt(this._t('history.update_notes_prompt'), cook.notes || '');
                   if (notes !== null) this._updateCookNotes(cook.id, notes);
-                }}>✏️ Edit Notes</button>
-                <button class="small-btn danger" @click=${() => this._deleteCook(cook.id)}>🗑️ Delete</button>
+                }}>${this._t('history.edit_notes')}</button>
+                <button class="small-btn danger" @click=${() => this._deleteCook(cook.id)}>${this._t('history.delete_btn')}</button>
               </div>
             </div>
           </ha-card>
@@ -6172,7 +6542,7 @@ class KitchenCookingPanel extends LitElement {
   _startCustomCook() {
     const tempC = parseInt(this._customProfileTempC);
     if (isNaN(tempC) || tempC < 30 || tempC > 100) {
-      this._showMessage('Invalid Temperature', 'Please set a temperature between 30°C and 100°C.', true);
+      this._showMessage(this._t('messages.invalid_temp_title'), this._t('messages.invalid_temp'), true);
       return;
     }
     
@@ -6228,13 +6598,13 @@ class KitchenCookingPanel extends LitElement {
       <ha-card>
         <div class="card-content">
           <div class="recipe-cook-finish">
-            <h3>🎉 Cook Complete!</h3>
+            <h3>${this._t('rating.cook_complete')}</h3>
             <p>${state.cut} ${state.doneness ? '• ' + state.doneness.replace('_', ' ') : ''}</p>
-            <p>How did it go? Please rate your experience:</p>
+            <p>${this._t('rating.how_did_it_go')}</p>
 
             <div class="recipe-cook-rating">
-              <h4>😊 Ease of Cooking</h4>
-              <p class="rating-description">How easy was this cook?</p>
+              <h4>${this._t('rating.ease_title')}</h4>
+              <p class="rating-description">${this._t('rating.ease_cook_desc')}</p>
               <div class="star-selector">
                 ${[1, 2, 3, 4, 5].map(rating => html`
                   <button 
@@ -6250,8 +6620,8 @@ class KitchenCookingPanel extends LitElement {
             </div>
 
             <div class="recipe-cook-rating">
-              <h4>😋 Result Quality</h4>
-              <p class="rating-description">How did the final result turn out?</p>
+              <h4>${this._t('rating.result_title')}</h4>
+              <p class="rating-description">${this._t('rating.result_cook_desc')}</p>
               <div class="star-selector">
                 ${[1, 2, 3, 4, 5].map(rating => html`
                   <button 
@@ -6267,9 +6637,9 @@ class KitchenCookingPanel extends LitElement {
             </div>
 
             <div class="recipe-cook-notes">
-              <h4>📝 Notes (Optional)</h4>
+              <h4>${this._t('rating.notes_title')}</h4>
               <textarea
-                placeholder="Any notes, modifications, or thoughts about this cook..."
+                placeholder="${this._t('rating.notes_placeholder')}"
                 .value=${state.notes || ''}
                 @input=${(e) => {
                   this._meaterCookRatingState = { ...this._meaterCookRatingState, notes: e.target.value };
@@ -6279,7 +6649,7 @@ class KitchenCookingPanel extends LitElement {
             </div>
 
             ${!state.easeRating || !state.resultRating ? html`
-              <p class="rating-required">⚠️ Please provide both ratings to save this cook</p>
+              <p class="rating-required">${this._t('rating.both_required')}</p>
             ` : ''}
 
             <div class="action-buttons" style="margin-top: 16px;">
@@ -6288,10 +6658,10 @@ class KitchenCookingPanel extends LitElement {
                 ?disabled=${!state.easeRating || !state.resultRating}
                 @click=${() => this._saveMeaterCookRating()}
               >
-                💾 Save & Complete
+                ${this._t('rating.save_complete')}
               </ha-button>
               <ha-button outlined @click=${() => this._skipMeaterCookRating()}>
-                ⏭️ Skip Rating
+                ${this._t('rating.skip')}
               </ha-button>
             </div>
           </div>
@@ -6351,7 +6721,7 @@ class KitchenCookingPanel extends LitElement {
       this.requestUpdate();
     } catch (error) {
       console.error('Error completing cook with rating:', error);
-      this._showMessage('❌ Error', `Error completing cook: ${error.message}`, true);
+      this._showMessage('❌ ' + this._t('messages.cook_complete_error_title'), `${this._t('messages.cook_complete_error')} ${error.message}`, true);
     }
   }
 
@@ -8440,12 +8810,12 @@ class KitchenCookingPanel extends LitElement {
       }
 
       .recipe-cook-ingredients li.active-ingredient.new-ingredient {
-        color: #4caf50;
+        color: var(--primary-text-color);
         font-weight: 700;
       }
 
       .recipe-cook-ingredients li.active-ingredient.repeat-ingredient {
-        color: var(--primary-text-color);
+        color: #4caf50;
         font-weight: 700;
       }
 
