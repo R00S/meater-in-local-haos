@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Mar 2026, 09:33 CET
+ * AUTO-GENERATED: 17 Mar 2026, 09:36 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 17 Mar 2026, 09:33 CET
+// Last generated: 17 Mar 2026, 09:36 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -11879,7 +11879,7 @@ const I18N_STRINGS = {
       "add_notes_btn": "Add Notes",
       "method_label": "Method",
       "rest_time_label": "Rest Time",
-      "battery_label": "�� Battery",
+      "battery_label": "🔋 Battery",
       "complete_pct": "complete",
       "eta_label": "ETA:",
       "rest_remaining_label": "Rest remaining:",
@@ -18821,7 +18821,7 @@ class KitchenCookingPanel extends LitElement {
     const stepIngredients = step.ingredients || [];
 
     // Strip "Step X:" / "Steg X:" prefix from description text
-    let instructionText = step.instructions || step.description || 'No instructions available.';
+    let instructionText = step.instructions || step.description || this._t('messages.no_instructions');
     instructionText = instructionText.replace(/^(?:Step|Steg)\s+\d+\s*:\s*/i, '');
     // Convert any remaining US measurements in the instruction text
     instructionText = this._convertIngredientText(instructionText);
@@ -22107,7 +22107,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "246";
+const PANEL_VERSION = "247";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

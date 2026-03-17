@@ -5946,7 +5946,7 @@ class KitchenCookingPanel extends LitElement {
     const stepIngredients = step.ingredients || [];
 
     // Strip "Step X:" / "Steg X:" prefix from description text
-    let instructionText = step.instructions || step.description || 'No instructions available.';
+    let instructionText = step.instructions || step.description || this._t('messages.no_instructions');
     instructionText = instructionText.replace(/^(?:Step|Steg)\s+\d+\s*:\s*/i, '');
     // Convert any remaining US measurements in the instruction text
     instructionText = this._convertIngredientText(instructionText);
