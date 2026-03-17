@@ -1128,9 +1128,9 @@ If a step uses no ingredients (e.g. "Let rest for 5 minutes"), use an empty list
         Returns:
             AI response text
         """
-        _MAX_RETRIES = 3             # practical max given ~30s/call + backoff + ~100s HTTP proxy timeout
-        _CALL_TIMEOUT = 30          # seconds per conversation call
-        _MAX_TIMEOUTS_PER_AGENT = 2 # switch to backup after this many timeouts
+        _MAX_RETRIES = 3             # each agent gets 3 attempts
+        _CALL_TIMEOUT = 45          # seconds per conversation call (longer to avoid premature timeouts)
+        _MAX_TIMEOUTS_PER_AGENT = 3 # let each agent use all its retries even on timeouts
 
         # Load AI settings outside the retry loop so errors here propagate clearly.
         from .storage import async_load_ai_settings

@@ -263,6 +263,7 @@
     "key_ingredients": "Key Ingredients:",
     "start_cooking_recipe": "Start Cooking This Recipe",
     "generate_different": "🔄 Generate Different Recipes",
+    "retry_generation": "Retry Recipe Generation",
     "main_appliance": "Main Appliance:",
     "features_label": "Features:",
     "secondary_appliances": "Secondary Appliances Available:",

@@ -5929,9 +5929,102 @@ class KitchenCookingPanel extends LitElement {
           <p style="color: var(--secondary-text-color); font-style: italic;">
             ${this._t('messages.no_instructions')}
           </p>
+          <button
+            class="primary-btn"
+            style="margin-top: 12px;"
+            @click=${() => this._retryRecipeDetail()}
+          >
+            🔄 ${this._t('ai_recipe.retry_generation') || 'Retry Recipe Generation'}
+          </button>
         `}
       </div>
     `;
+  }
+
+  /**
+   * Retry fetching recipe detail (instructions) when generation failed
+   */
+  async _retryRecipeDetail() {
+    if (!this._recipeCookState) return;
+    const recipe = this._recipeCookState.recipe;
+
+    // Show loading dialog
+    this._messageDialogTitle = '⏳ ' + this._t('messages.loading_recipe_title');
+    this._messageDialogContent = this._t('messages.loading_recipe') + '\n' + this._t('messages.loading_recipe_time');
+    this._messageDialogIsError = false;
+    let cancelled = false;
+    this._messageDialogOnCancel = () => { cancelled = true; };
+    this._showMessageDialog = true;
+    this.requestUpdate();
+
+    // Poll the backend status endpoint for live retry progress
+    const detailStatusTimer = setInterval(async () => {
+      try {
+        const res = await this.hass.callApi('GET', 'kitchen_cooking_engine/ai_recipes/status');
+        if (res && res.message) {
+          this._messageDialogContent = `${this._t('messages.loading_recipe')}\n${res.message}`;
+          this.requestUpdate();
+        }
+      } catch (pollErr) {
+        if (pollErr && pollErr.status_code && pollErr.status_code !== 503 && pollErr.status_code !== 429) {
+          console.warn('[AI Detail Status] Polling error:', pollErr);
+        }
+      }
+    }, 1000);
+
+    try {
+      const response = await this.hass.callApi('POST', 'kitchen_cooking_engine/ai_recipes/detail', {
+        suggestion_id: recipe.id,
+        suggestion: {
+          id: recipe.id,
+          name: recipe.name,
+          description: recipe.description,
+          cook_time_minutes: recipe.cook_time_minutes,
+          difficulty: recipe.difficulty,
+          main_ingredients: recipe.main_ingredients || recipe.ingredients || [],
+          cuisine_type: recipe.cuisine_type,
+          required_appliances: recipe.required_appliances || []
+        },
+        appliance_ids: this._selectedAppliance ? [this._selectedAppliance.id] : [],
+        main_appliance_id: this._selectedAppliance ? this._selectedAppliance.id : null,
+        cooking_style: this._selectedCookingStyle || 'quick_and_easy',
+        complexity: this._aiComplexity || 3,
+        user_ingredients: this._selectedIngredients || [],
+        servings: this._aiPortions || 4,
+        language: this._language || 'en',
+        measurement_system: this._measurementSystem || 'us',
+      });
+
+      if (cancelled) return;
+
+      if (response && response.detail) {
+        const detail = response.detail;
+        recipe.instructions = detail.instructions || [];
+        recipe.step_ingredients = detail.step_ingredients || [];
+        recipe.ingredients = detail.ingredients || recipe.main_ingredients || [];
+        recipe.tips = detail.tips || [];
+        recipe.servings = detail.servings || recipe.servings || 4;
+        recipe.prep_time_minutes = detail.prep_time_minutes || 0;
+        recipe.phases = detail.phases || [];
+        recipe.use_probe = detail.use_probe || false;
+        recipe.target_temp_c = detail.target_temp_c;
+        recipe.target_temp_f = detail.target_temp_f;
+      } else {
+        const msg = (response && response.message) ? response.message : this._t('messages.recipe_detail_failed');
+        this._showMessage('⚠️ ' + this._t('messages.partial_recipe_title'), msg, false);
+      }
+    } catch (error) {
+      if (cancelled) return;
+      console.error('Error retrying recipe detail:', error);
+      this._showMessage('⚠️ ' + this._t('messages.partial_recipe_title'),
+        this._t('messages.partial_recipe_error') + ' ' + this._t('messages.partial_recipe_fallback'), false);
+    } finally {
+      clearInterval(detailStatusTimer);
+    }
+
+    this._messageDialogOnCancel = null;
+    this._showMessageDialog = false;
+    this.requestUpdate();
   }
 
   /**
@@ -5976,7 +6069,7 @@ class KitchenCookingPanel extends LitElement {
       const txt = (stepObj.instructions || stepObj.description || '').toLowerCase();
       // Method 1: per-step ingredient list (primary — from AI JSON step_ingredients)
       if (si.length > 0) {
-        const found = si.some(s => {
+        return si.some(s => {
           const sLower = s.toLowerCase();
           // Direct match or substring containment (step_ingredients may be
           // short names like "chicken" while the full ingredient is "400 g chicken breast, diced")
@@ -5985,9 +6078,9 @@ class KitchenCookingPanel extends LitElement {
           const kw = extractKeywords(sLower);
           return kw.some(w => new RegExp(uWordBoundary(w), 'iu').test(ingLower));
         });
-        if (found) return true;
+        // Do NOT fall through to Method 2 when step_ingredients are available
       }
-      // Method 2: scan instruction text (fallback — pattern matching)
+      // Method 2: scan instruction text (fallback — only when step_ingredients is empty/missing)
       const kw = extractKeywords(ingLower);
       return kw.some(w => new RegExp(uWordBoundary(w), 'iu').test(txt));
     };
@@ -8717,12 +8810,12 @@ class KitchenCookingPanel extends LitElement {
       }
 
       .recipe-cook-ingredients li.active-ingredient.new-ingredient {
-        color: #4caf50;
+        color: var(--primary-text-color);
         font-weight: 700;
       }
 
       .recipe-cook-ingredients li.active-ingredient.repeat-ingredient {
-        color: var(--primary-text-color);
+        color: #4caf50;
         font-weight: 700;
       }
 
