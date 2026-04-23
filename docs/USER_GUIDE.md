@@ -286,8 +286,10 @@ Switch the data source in the welcome screen settings card:
 Both trees are available simultaneously. You can hide the entire Temperature Data Source
 selection card during cooking by checking **"Dölj det andra språkets träd" / "Hide other
 language tree"** in the Language settings card on the welcome screen. When checked, the
-data-source card is hidden from the MEATER cook start screen; your selected source is
-remembered across page reloads (stored in browser localStorage).
+data-source card is hidden from the MEATER cook start screen and the active data source
+automatically follows your UI language (Swedish language → Swedish temperature tree;
+English language → International tree). Your language choice is remembered across page
+reloads and new browsers.
 
 ### 5.4 Custom Temperature Cook
 

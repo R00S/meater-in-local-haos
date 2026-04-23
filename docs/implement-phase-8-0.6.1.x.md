@@ -141,7 +141,27 @@ Modes A/B/C), 8d (Post-Cook Shelf Update), 8e (External Bridges — deferred).
 - PANEL_VERSION bumped 263 → 264 (auto by generator).
 - CHORES.md items ticked: versions updated, branch timeline updated, user guide updated.
 
-### v0.6.1.06 — 2026-04-23
+### v0.6.1.07 — 2026-04-23
+**Bugfix: Swedish category names not shown when hide-other-tree is active (fresh browser)**
+
+- Root cause of v0.6.1.06 fix being incomplete: `_loadLanguagePreference()` is **async**
+  (API call). `_loadHideOtherDataSourcePreference()` runs synchronously before the API
+  resolves, so `_language` is still `'en'` when the data source check runs. In a fresh
+  browser with no `kce_data_source` in localStorage, `_dataSource` stayed `international`
+  regardless of the persisted language preference.
+- Fix: `_loadLanguagePreference()` — after the API resolves and `_language` is set, if
+  `_hideOtherDataSource` is true, immediately set `_dataSource` to match
+  (`'sv'` → `DATA_SOURCE_SWEDISH`, else `DATA_SOURCE_INTERNATIONAL`).
+- Fix: `_saveLanguagePreference()` — when the user switches language on the welcome screen,
+  if `_hideOtherDataSource` is true, also update `_dataSource` to match the new language.
+- Fix: `_toggleHideOtherDataSource()` — when the checkbox is toggled **on**, set
+  `_dataSource` to match the current `_language` immediately.
+- Combined effect: the data source is always kept in sync with the UI language whenever
+  the hide-selector flag is active, regardless of localStorage state or browser freshness.
+- PANEL_VERSION bumped 265 → 266 (auto by generator).
+- CHORES: versions updated, branch timeline updated, user guide §5.3 updated.
+
+
 **Bugfix: Swedish data source not persisted — reloads showed International tree**
 
 - Root cause: `_dataSource` was never saved to localStorage. On reload, it reset to

@@ -572,6 +572,9 @@ class KitchenCookingPanel extends LitElement {
       const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/preferences/language');
       if (response && response.language) {
         this._language = response.language;
+        if (this._hideOtherDataSource) {
+          this._dataSource = (response.language === 'sv') ? DATA_SOURCE_SWEDISH : DATA_SOURCE_INTERNATIONAL;
+        }
       }
     } catch (e) {
       console.log('Could not load language preference:', e);
@@ -580,6 +583,9 @@ class KitchenCookingPanel extends LitElement {
 
   async _saveLanguagePreference(lang) {
     this._language = lang;
+    if (this._hideOtherDataSource) {
+      this._dataSource = (lang === 'sv') ? DATA_SOURCE_SWEDISH : DATA_SOURCE_INTERNATIONAL;
+    }
     try {
       await this.hass.callApi('POST', 'kitchen_cooking_engine/preferences/language', { language: lang });
     } catch (e) {
@@ -620,6 +626,9 @@ class KitchenCookingPanel extends LitElement {
 
   _toggleHideOtherDataSource() {
     this._hideOtherDataSource = !this._hideOtherDataSource;
+    if (this._hideOtherDataSource) {
+      this._dataSource = (this._language === 'sv') ? DATA_SOURCE_SWEDISH : DATA_SOURCE_INTERNATIONAL;
+    }
     try {
       localStorage.setItem('kce_hide_other_data_source', String(this._hideOtherDataSource));
     } catch (e) {

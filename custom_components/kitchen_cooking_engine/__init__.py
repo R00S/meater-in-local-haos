@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.1.06 - Bugfix: persist selected data source to localStorage so Swedish tree survives page reload when hide-other-source is active
+Last Change: v0.6.1.07 - Bugfix: sync data source to UI language when hide-other-tree is active
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -72,7 +72,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.6.1.06"
+__version__ = "0.6.1.07"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
