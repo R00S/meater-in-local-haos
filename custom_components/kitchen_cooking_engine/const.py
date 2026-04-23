@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.1.09 - Fix MEATER+ experimental path to faithfully port v0.5.3.5 (safety indicators) instead of invented method-first flow
+Last Change: v0.6.1.10 - Align experimental MEATER path with source-reference v0.5.3.5 regular path
 """
 
 DOMAIN = "kitchen_cooking_engine"

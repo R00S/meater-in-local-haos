@@ -270,3 +270,22 @@ with the following key additions over the then-current main branch:
 - `_renderMeaterPath()` and `_renderSetupForm()` are untouched (verified with git diff).
 - PANEL_VERSION bumped 267 → 268 (auto by generator).
 - CHORES: versions updated to 0.6.1.09, branch timeline updated, USER_GUIDE.md §5.8 revised.
+
+### v0.6.1.10 — 2026-04-23
+**Chore: Align experimental MEATER path with source-reference v0.5.3.5 regular path**
+
+- `_renderMeaterExperimental()` body replaced with source-reference's `_renderMeaterPath()` body:
+  - Header title: `🧪🌡️ … (experimental)` → `🌡️ …`
+  - Back button: `← Back to MEATER+ (experimental)` / i18n → `← Back to MEATER Path` / `← Back to Appliances`
+  - Removed the safety-indicator info card (was not present in source-reference)
+  - Path card labels: `this._t(…)` keys → hardcoded English matching reference
+- `_renderExpSetupForm()` body replaced with source-reference's `_renderSetupForm()` body:
+  - Restored missing data-source description paragraph
+  - Step labels: `this._t(…)` → hardcoded English matching reference
+  - Cooking method buttons: translation-fallback closure → inline `html\`` matching reference
+  - Start button: `this._t('meater.start_cooking') + _convertTemp()` → `🔥 Start Cooking at X°C`
+  - Safety dot tooltip wording aligned ("widely practiced" spelling)
+- Welcome screen card and `_navigateToMeaterExperimentalPath()` untouched.
+- `_renderMeaterPath()` and `_renderSetupForm()` untouched.
+- PANEL_VERSION bumped 268 → 269 (auto by generator).
+- CHORES: versions updated to 0.6.1.10, branch timeline updated.
