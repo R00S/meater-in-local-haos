@@ -1,6 +1,6 @@
 # Terms of Reference: Kitchen Cooking Engine GUI Redesign
 
-**Version:** 3.6  
+**Version:** 3.7  
 **Created:** 2026-01-16  
 **Updated:** 2026-03-17  
 **Status:** Phases 1–6 Complete + v0.5.2.x appliance features + v0.5.4.x stability & UX + v0.6.0.x i18n/ingredient fixes, Phases 8–9 planned  
@@ -1403,13 +1403,97 @@ The GUI redesign is considered successful when:
    - Answer: Optional but encouraged
 
 6. **Shelf/Inventory Backend:** Should we use Grocy for inventory management or implement our own shelf system?
+
    - **Status: ✅ RESOLVED — Option C (Hybrid) selected by project owner (2026-03-17)**
-   - **Decision:** Build a self-implemented shelf (`shelf_inventory.json` + REST API) as the core backend (Phase 8a), then add optional thin bridges:
-     - **HA Shopping List:** Export missing ingredients via `todo.add_item` service call (Tier 1 — critical, ~350,000 HA users)
-     - **Grocy read bridge:** One-way `GET /api/stock` snapshot import to populate shelf (Tier 2 — optional, ~2,000–4,000 HA users)
-     - **Mealie recipe import:** Pull recipe ingredients from Mealie to pre-populate AI builder (Tier 2 — optional, ~2,000 HA users)
-     - **KitchenOwl:** Watch for future stock read bridge (Tier 3 — growing community, AGPL-3.0 license — API calls only)
-   - **Rationale:** Option C is the only path that works standalone on day 1 (zero install friction), respects existing Grocy users' investment (read bridge), and outputs shopping lists to the HA ecosystem where ~350,000 users already are (`todo.add_item`). Full analysis in [External Integrations Research](EXTERNAL_INTEGRATIONS_RESEARCH.md).
+   - **Full analysis:** [External Integrations Research](EXTERNAL_INTEGRATIONS_RESEARCH.md) (Grocy, Cooklang, Mealie, KitchenOwl)
+
+   ---
+
+   #### HA Ecosystem Context (from analytics.home-assistant.io, ~483,000 opt-in users)
+
+   | System | HA installs (est.) | Notes |
+   |--------|-------------------|-------|
+   | **HA Shopping List / Todo** | **~350,000** | Native HA integration — the obvious output target for "Add missing ingredients" |
+   | **Grocy** | **~2,000–4,000** | Full-featured kitchen ERP; one-click HA app install |
+   | **Mealie** | **~2,000** | Self-hosted recipe manager; structured ingredients API |
+   | **KitchenOwl** | Growing | Newer inventory + recipes + shopping; AGPL-3.0 |
+
+   **Key insight:** The HA Shopping List has ~100× more users than any food-specific system. This shifts Option B's "external system" question from "Grocy vs nothing" to "which of several competing systems?"
+
+   ---
+
+   #### Option A: Self-Implemented (`shelf_inventory.json` + REST API)
+
+   Build a simple inventory system ourselves — same JSON + REST pattern as `cook_history.json` and `user_preferences.json`.
+
+   | Pros | Cons |
+   |------|------|
+   | **Zero external dependencies** — works standalone, no external app install needed | **We build and maintain everything** — CRUD, UI, storage, search, categories |
+   | **Simple data model** — item name + location is all we need for the AI prompt; no over-engineering | **No expiry tracking** — can't warn about items going bad |
+   | **Consistent with existing codebase** — follows the `{feature}.json` + REST API pattern | **No barcode/receipt scanning** — manual-only input |
+   | **Full control** — data model shaped exactly for our use case (AI recipe generation, not ERP) | **Shopping list island** — missing ingredients list stays internal, not visible to HA ecosystem |
+   | **Fast to implement** — familiar pattern, no integration debugging | **No ecosystem leverage** — ignores the 350,000 users already using HA Shopping List |
+
+   ---
+
+   #### Option B: External System as Backend (Grocy / Mealie / KitchenOwl)
+
+   Use an external system as the inventory backend. The user installs the system (one-click HA app for Grocy; Docker for others); we read/write via their REST API.
+
+   > **Note:** Grocy was the original candidate, but research revealed Mealie (~2,000 users) and KitchenOwl (growing) are viable alternatives for similar user counts. All three share the same core problem: we would be tightly coupled to whichever one we pick.
+
+   | Pros | Cons |
+   |------|------|
+   | **Feature-rich out of the box** — quantities, expiry, barcodes, shopping lists, product groups all built-in | **Full CRUD coupling** — every read and write goes through their multi-endpoint API; data model must map bidirectionally |
+   | **Existing HA integrations** — `custom-components/grocy` etc. provide sensors and services | **Custom component dependency** — not official HA core; can break on HA updates |
+   | **Ecosystem** — mobile apps, barcode scanners, receipt import tools (if Grocy) | **Name matching problem** — their product names (user-defined, any language) must fuzzy-match our AI ingredient names |
+   | **Shared data** — other automations can see inventory status | **Overkill data model** — quantities, barcodes, expiry, purchase dates, product groups. We only need "do you have chicken?" |
+   | **Future-proof for advanced features** — expiry warnings, purchase logging if ever wanted | **Fragmentation problem** — Grocy, Mealie, and KitchenOwl have incompatible APIs; we can't support all three as a backend |
+   | | **Install friction** — user must set up API key, URL, and populate the system before our feature works at all |
+   | | **Only ~2,000–4,000 users** — less than 1% of HA users; massive implementation effort for a small audience |
+
+   ---
+
+   #### Option C: Hybrid — Self-implemented shelf with optional thin bridges ✅ **SELECTED**
+
+   Build our own simple shelf (identical to Option A as the core), then add optional one-directional bridges to the HA ecosystem and external systems.
+
+   > **⚠️ C does NOT require B.** Option B means an external system IS the backend — all reads and writes go through their API. Option C uses our own local JSON as the backend, and only adds thin outbound bridges: one `todo.add_item` service call, and optional read-only snapshot imports. The Grocy bridge in C is a single `GET /api/stock` call to flatten their stock list into ours — fundamentally different from B's full CRUD integration.
+
+   **Bridge architecture (from research):**
+
+   | Tier | Integration | Reach | Effort | Notes |
+   |------|------------|-------|--------|-------|
+   | **1 — Build first** | HA `todo.add_item` — export missing ingredients to HA Shopping List | **~350,000 users** | Trivial — one service call | Native HA, no config needed |
+   | **2 — Optional** | Grocy `GET /api/stock` — one-way "Import from Grocy" snapshot | ~2,000–4,000 users | Low — one API call + settings UI | MIT license; rewards Grocy users' barcode scanning work |
+   | **2 — Optional** | Mealie `GET /api/recipes` — import recipe ingredients into AI builder | ~2,000 users | Low — one API call | MIT license |
+   | **3 — Watch** | KitchenOwl stock read bridge (same pattern as Grocy) | Growing | Low | AGPL-3.0 — API calls only, no code reuse |
+
+   | Pros | Cons |
+   |------|------|
+   | **Works standalone day 1** — zero install friction for any user | **More code than A alone** — bridges add import/export logic, error handling, settings UI |
+   | **HA Shopping List integration reaches 350,000 users** — not 2,000–4,000 | **Two sources of truth** — if user edits both Grocy and our shelf, they can drift; need clear "snapshot, not live sync" UX |
+   | **Respects existing Grocy investment** — one-way import rewards users who already scan groceries | **Import mapping** — Grocy/Mealie product names may not exactly match our AI ingredient names |
+   | **Correct prioritization** — Tier 1 reaches 100× more users than any Tier 2 target | **Tier 2/3 bridges are optional** — users who don't have Grocy/Mealie get no benefit from them |
+   | **No fragmentation** — Grocy, Mealie, KitchenOwl all work as read sources; none is the master | |
+   | **Gradual adoption** — start with A core, add Tier 1 bridge, add Tier 2 bridges later | |
+
+   ---
+
+   #### Decision Factors
+
+   | Factor | Option A (Self only) | Option B (External backend) | Option C (Hybrid) ✅ |
+   |--------|---------------------|---------------------------|---------------------|
+   | Works with zero external dependencies | ✅ Yes | ❌ No — external system required | ✅ Yes (bridges optional) |
+   | HA Shopping List reach (~350,000 users) | ❌ Internal only | ⚠️ Via external system's own list | ✅ Native `todo.add_item` |
+   | Grocy users (~2,000–4,000) | ❌ Must duplicate effort | ✅ Seamless | ✅ One-way import rewarded |
+   | Implementation effort (Phase 8) | ✅ Low (familiar JSON+API) | ❌ High — bidirectional API + name mapping + fragmentation (3 incompatible APIs) | ⚠️ Medium — A core + thin outbound bridges |
+   | Data model fit for AI prompts | ✅ Perfect (built for it) | ⚠️ Needs flattening/mapping | ✅ Perfect (built for it) |
+   | External system install burden | ✅ None | ✅ Low (one-click HA app for Grocy) | ✅ None |
+   | Dependency risk | ✅ None | ❌ External system + HA integration can break | ⚠️ Low — bridges are optional, degrade gracefully |
+   | Future-proofing as ecosystem grows | ❌ Island | ❌ Locked to chosen system | ✅ Add new bridges as systems grow |
+
+   **Rationale for Option C:** Option C is the only path that works standalone on day 1 (zero install friction), reaches ~350,000 HA users with the shopping list output (100× more than any alternative), respects existing Grocy users' investment without coupling our core to their system, and stays extensible as Mealie and KitchenOwl grow.
 
 ---
 
@@ -1583,6 +1667,7 @@ This section documents deviations from the original ToR specification as of v0.5
 | 3.4 | 2026-03-17 | Added Open Question #6: Grocy vs self-implemented shelf backend — full pros/cons analysis for 3 options (Self, Grocy, Hybrid). Status: UNDECIDED, awaiting project owner decision before Phase 8. | AI Agent |
 | 3.5 | 2026-03-17 | Revised Open Question #6 per owner feedback: corrected Grocy install burden (low, not high — it's a one-click HA app), corrected terminology (app, not add-on), clarified that Option C does NOT require Option B (C = A + thin bridges, not A + B). | AI Agent |
 | 3.6 | 2026-03-17 | Resolved Open Question #6: Option C (Hybrid) selected by project owner. Updated Out of Scope to reflect thin bridges. Added Phase 8e (optional external bridges: HA todo export, Grocy read bridge, Mealie recipe import, KitchenOwl watch). Added reference to External Integrations Research document. Incorporated Mealie and KitchenOwl as future integration targets. | Project Owner + AI Agent |
+| 3.7 | 2026-04-23 | Rebuilt Open Question #6 A/B/C comparison using merged research data from EXTERNAL_INTEGRATIONS_RESEARCH.md: added real HA user counts (350k HA todo, 2-4k Grocy, ~2k Mealie), widened Option B to cover Mealie/KitchenOwl alternatives, added Tier 1/2/3 bridge table to Option C, updated Decision Factors matrix with research-backed data. | AI Agent |
 
 ---
 
