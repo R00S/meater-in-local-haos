@@ -1,0 +1,77 @@
+blueprint:
+  name: View Assist - Open Cooking Panel
+  description: >
+    Automatically opens the Kitchen Cooking Engine panel on a View Assist device
+    when the "start cooking" voice command is detected.
+    
+    This blueprint works with View Assist Companion App to provide visual feedback 
+    for voice commands using the conversation platform.
+    
+    Voice commands supported:
+    - "start cooking"
+    - "open cooking"
+    - "show cooking panel"
+    
+    Requires:
+    - Kitchen Cooking Engine integration installed
+    - View Assist Companion App installed on your device
+    - View Assist integration configured in Home Assistant
+  domain: automation
+  source_url: https://github.com/R00S/meater-in-local-haos/blob/main/custom_components/kitchen_cooking_engine/blueprints/view_assist_open_cooking_panel.yaml
+  
+  input:
+    command_prompt1:
+      name: Command Text 1
+      description: The first phrase to trigger opening the cooking panel
+      default: "start cooking"
+    command_prompt2:
+      name: Command Text 2
+      description: The second phrase to trigger the automation (optional)
+      default: "open cooking"
+    command_prompt3:
+      name: Command Text 3
+      description: The third phrase to trigger the automation (optional)
+      default: "show cooking panel"
+    
+    dashboard_path:
+      name: Dashboard Path
+      description: The path to the Kitchen Cooking Engine panel
+      default: "/kitchen-cooking"
+    
+    response_text:
+      name: Response Text
+      description: What should be spoken when opening the cooking panel?
+      default: "Opening the cooking panel"
+
+alias: Kitchen Cooking Engine - Open Cooking Panel
+description: ""
+mode: single
+max_exceeded: silent
+
+trigger:
+  - platform: conversation
+    command:
+      - !input command_prompt1
+      - !input command_prompt2
+      - !input command_prompt3
+
+condition: []
+
+action:
+  - variables:
+      target_satellite_device: "{{ view_assist_entity(trigger.device_id) }}"
+      dashboard_path: !input dashboard_path
+      response: !input response_text
+  
+  - action: view_assist.navigate
+    data:
+      device: "{{ target_satellite_device }}"
+      path: "{{ dashboard_path }}"
+  
+  - set_conversation_response: "{{ response }}"
+  
+  - action: view_assist.set_state
+    target:
+      entity_id: "{{ target_satellite_device }}"
+    data:
+      last_said: "{{ response }}"

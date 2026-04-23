@@ -1,0 +1,170 @@
+{
+  "uuids": {
+    "BLECharacteristicConfigUUID": "00002902-0000-1000-8000-00805f9b34fb",
+    "BLESoftwareRevisionCharacteristicUUID": "00002a28-0000-1000-8000-00805f9b34fb",
+    "DeviceInformationServiceUUID": "0000180a-0000-1000-8000-00805f9b34fb",
+    "FirmwareRevisionCharacteristicUUID": "00002a26-0000-1000-8000-00805f9b34fb",
+    "MEATERBLETemperatureServiceUUID": "a75cc7fc-c956-488f-ac2a-2dbc08b63a04",
+    "MEATERBatteryBLECharacteristicUUID": "2adb4877-68d8-4884-bd3c-d83853bf27b8",
+    "MEATERBlockAvailableSSIDsUUID": "B904156A-5B64-44AD-8349-CE7912F34008",
+    "MEATERBlockChosenWiFiSSIDUUID": "53475F12-D6D2-45DC-A046-53C65BB0D814",
+    "MEATERBlockConnectionStateSSIDUUID": "E03C6CCC-2AA7-40A4-8A66-C98B599B737A",
+    "MEATERBlockKeepAliveUUID": "24B299D9-61F7-48BA-86E0-F459DAD3FC87",
+    "MEATERBlockSecondGenerationServiceUUID": "B7107BBE-DA2A-4124-B2CC-AAFD624B61CE",
+    "MEATERBlockSerialNumberUUID": "D6FEDC54-C9F8-4FC9-9CF0-0ABCF9E68F13",
+    "MEATERBlockServiceUUID": "097F9DB4-BE9B-43C0-931D-51A6599FF70D",
+    "MEATERBlockWiFiMACUUID": "9B08C95C-A1EF-477B-AFD4-3B3BE98DAA07",
+    "MEATERBlockWiFiScanRequestUUID": "B4663775-9045-479E-B496-D4CA549CFDDA",
+    "MEATERCookSetupBLECharacteristicUUID": "caf28e64-3b17-4cb4-bb0a-2eaa33c47af7",
+    "MEATERPlusBatteryLevelUUID": "22DB81C4-D125-4E8F-99A4-3609E4C9A017",
+    "MEATERPlusChipTemperatureUUID": "BB9B2404-FCFB-4B73-8ACD-B1B08DA3749D",
+    "MEATERPlusProbeConnectionStateUUID": "E03C6CCC-2AA7-40A4-8A66-C98B599B737A",
+    "MEATERPlusProbeInfoUUID": "1CBFF55E-9A06-4721-A178-1E2D84246DD1",
+    "MEATERPlusProbeRSSIUUID": "370AABE7-4837-4BEE-AADC-CD1836DBCE53",
+    "MEATERPlusSETemperatureServiceUUID": "49141A23-307F-4E25-AD82-0A3F00D8B90B",
+    "MEATERPlusV2TemperatureServiceUUID": "C9E2746C-59F1-4E54-A0DD-E1E54555CF8B",
+    "MEATERSimulatedDISUUID": "1E5A67E5-63D8-4242-9882-95D9A7F4E114",
+    "MEATERTemperatureBLECharacteristicUUID": "7edda774-045e-4bbf-909b-45d1991a2876",
+    "MEATERTemperatureLogBLECharactertisticUUID": "b3e02c20-85be-4d1e-8da8-30cd88aaf0d4",
+    "MEATERTemperatureLogModeBLECharacteristicUUID": "575d3bf1-2757-45ad-94d9-875c2f6120d3",
+    "SimulatedFirmwareRevisionCharacteristicUUID": "BFDBCCAD-224B-4CB6-8B89-0473131A970A",
+    "V2TemperatureServiceUUID": "DCBB67CA-64FB-41A3-99D1-5D9FD8CF33CA"
+  },
+  "constants": {
+    "BLECharacteristicConfigUUID": "\"00002902-0000-1000-8000-00805f9b34fb\"",
+    "BLECompanyIDApptionLabs": "891",
+    "BLESoftwareRevisionCharacteristicUUID": "\"00002a28-0000-1000-8000-00805f9b34fb\"",
+    "BLE_WAIT_FOR_MEATER_BLOCK_INTERVAL": "30.0d",
+    "BLE_WAIT_FOR_MEATER_PLUS_INTERVAL": "5.0d",
+    "MAX_BLE_CONNECTIONS": "6",
+    "MAX_STABLE_BLE_CONNECTIONS": "5",
+    "MEATERBLETemperatureServiceUUID": "\"a75cc7fc-c956-488f-ac2a-2dbc08b63a04\"",
+    "MEATERBatteryBLECharacteristicUUID": "\"2adb4877-68d8-4884-bd3c-d83853bf27b8\"",
+    "MEATERBlockAvailableSSIDsUUID": "\"B904156A-5B64-44AD-8349-CE7912F34008\"",
+    "MEATERBlockChosenWiFiSSIDUUID": "\"53475F12-D6D2-45DC-A046-53C65BB0D814\"",
+    "MEATERBlockConnectionStateSSIDUUID": "\"E03C6CCC-2AA7-40A4-8A66-C98B599B737A\"",
+    "MEATERBlockKeepAliveUUID": "\"24B299D9-61F7-48BA-86E0-F459DAD3FC87\"",
+    "MEATERBlockSecondGenerationCommandCharacteristicID": "\"B4663775-9045-479E-B496-D4CA549CFDDA\"",
+    "MEATERBlockSecondGenerationServiceUUID": "\"B7107BBE-DA2A-4124-B2CC-AAFD624B61CE\"",
+    "MEATERBlockSerialNumberUUID": "\"D6FEDC54-C9F8-4FC9-9CF0-0ABCF9E68F13\"",
+    "MEATERBlockServiceUUID": "\"097F9DB4-BE9B-43C0-931D-51A6599FF70D\"",
+    "MEATERBlockWiFiMACUUID": "\"9B08C95C-A1EF-477B-AFD4-3B3BE98DAA07\"",
+    "MEATERBlockWiFiScanRequestUUID": "\"B4663775-9045-479E-B496-D4CA549CFDDA\"",
+    "MEATERCookSetupBLECharacteristicUUID": "\"caf28e64-3b17-4cb4-bb0a-2eaa33c47af7\"",
+    "MEATERPlusBatteryLevelUUID": "\"22DB81C4-D125-4E8F-99A4-3609E4C9A017\"",
+    "MEATERPlusChipTemperatureUUID": "\"BB9B2404-FCFB-4B73-8ACD-B1B08DA3749D\"",
+    "MEATERPlusProbeConnectionStateUUID": "\"E03C6CCC-2AA7-40A4-8A66-C98B599B737A\"",
+    "MEATERPlusProbeInfoUUID": "\"1CBFF55E-9A06-4721-A178-1E2D84246DD1\"",
+    "MEATERPlusProbeRSSIUUID": "\"370AABE7-4837-4BEE-AADC-CD1836DBCE53\"",
+    "MEATERPlusSETemperatureServiceUUID": "\"49141A23-307F-4E25-AD82-0A3F00D8B90B\"",
+    "MEATERPlusV2TemperatureServiceUUID": "\"C9E2746C-59F1-4E54-A0DD-E1E54555CF8B\"",
+    "MEATERSimulatedDISUUID": "\"1E5A67E5-63D8-4242-9882-95D9A7F4E114\"",
+    "MEATERTemperatureBLECharacteristicUUID": "\"7edda774-045e-4bbf-909b-45d1991a2876\"",
+    "MEATERTemperatureLogBLECharactertisticUUID": "\"b3e02c20-85be-4d1e-8da8-30cd88aaf0d4\"",
+    "MEATERTemperatureLogModeBLECharacteristicUUID": "\"575d3bf1-2757-45ad-94d9-875c2f6120d3\"",
+    "NEED_HELP_MEATER_PLUS_TOTAL_DISCONNECTIONS_THRESHOLD": "40"
+  },
+  "characteristic_properties": {},
+  "data_structures": [
+    {
+      "name": "MEATERDeviceTemperatureRecording",
+      "file": "MEATERDeviceTemperatureRecording.java"
+    },
+    {
+      "name": "ProbeReadCookSetupEvent",
+      "file": "ProbeReadCookSetupEvent.java"
+    },
+    {
+      "name": "BLEProbeConnectionEvent",
+      "file": "BLEProbeConnectionEvent.java"
+    },
+    {
+      "name": "ProbeCharacteristicValueWriteStatusMessage",
+      "file": "ProbeCharacteristicValueWriteStatusMessage.java"
+    },
+    {
+      "name": "DiscoverProbeServicesRequestMessage",
+      "file": "DiscoverProbeServicesRequestMessage.java"
+    },
+    {
+      "name": "BLERadioStateChange",
+      "file": "BLERadioStateChange.java"
+    },
+    {
+      "name": "ProbeTestMessage",
+      "file": "ProbeTestMessage.java"
+    },
+    {
+      "name": "ProbeBatteryLevelChange",
+      "file": "ProbeBatteryLevelChange.java"
+    },
+    {
+      "name": "ProbeCharacteristicValueUpdatedMessage",
+      "file": "ProbeCharacteristicValueUpdatedMessage.java"
+    },
+    {
+      "name": "MEATERBlockBLERSSIChange",
+      "file": "MEATERBlockBLERSSIChange.java"
+    },
+    {
+      "name": "MEATERDeviceReset",
+      "file": "MEATERDeviceReset.java"
+    },
+    {
+      "name": "SimulatedProbeMessage",
+      "file": "SimulatedProbeMessage.java"
+    },
+    {
+      "name": "ProbeReadTempLogEvent",
+      "file": "ProbeReadTempLogEvent.java"
+    },
+    {
+      "name": "ProbeSimulatorHeader",
+      "file": "ProbeSimulatorHeader.java"
+    },
+    {
+      "name": "DiscoverProbeServicesResponseMessage",
+      "file": "DiscoverProbeServicesResponseMessage.java"
+    },
+    {
+      "name": "ProbeConnectionRequestMessage",
+      "file": "ProbeConnectionRequestMessage.java"
+    },
+    {
+      "name": "ProbeWriteCookSetupEvent",
+      "file": "ProbeWriteCookSetupEvent.java"
+    },
+    {
+      "name": "ProbeRSSIChange",
+      "file": "ProbeRSSIChange.java"
+    },
+    {
+      "name": "ProbeDisconnectedMessage",
+      "file": "ProbeDisconnectedMessage.java"
+    },
+    {
+      "name": "MLChildDevice",
+      "file": "MLChildDevice.java"
+    },
+    {
+      "name": "MLDevice",
+      "file": "MLDevice.java"
+    },
+    {
+      "name": "ProbeAdvertisingMessage",
+      "file": "ProbeAdvertisingMessage.java"
+    },
+    {
+      "name": "MEATERPlusProbeConnectionEvent",
+      "file": "MEATERPlusProbeConnectionEvent.java"
+    },
+    {
+      "name": "MLProbe",
+      "file": "MLProbe.java"
+    },
+    {
+      "name": "ProbeConnectedMessage",
+      "file": "ProbeConnectedMessage.java"
+    }
+  ]
+}

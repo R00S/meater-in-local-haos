@@ -1,0 +1,111 @@
+name: Cleanup Prerelease Versions
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (list releases without deleting)'
+        required: false
+        default: 'true'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install PyGithub
+
+      - name: Cleanup prerelease versions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
+        run: |
+          python3 << 'EOF'
+          import os
+          from github import Github
+          
+          # Initialize GitHub client
+          g = Github(os.environ['GITHUB_TOKEN'])
+          repo = g.get_repo(os.environ['GITHUB_REPOSITORY'])
+          dry_run = os.environ.get('DRY_RUN', 'true').lower() == 'true'
+          
+          print(f"{'='*80}")
+          print(f"Cleanup Prerelease Versions - {'DRY RUN' if dry_run else 'EXECUTING'}")
+          print(f"{'='*80}\n")
+          
+          # Fetch all releases
+          releases = list(repo.get_releases())
+          print(f"Total releases found: {len(releases)}\n")
+          
+          # Categorize releases
+          to_keep = []
+          to_delete = []
+          
+          for release in releases:
+              if not release.prerelease and not release.draft:
+                  to_keep.append(release)
+              elif release.prerelease:
+                  to_delete.append(release)
+          
+          print(f"Releases to KEEP (prerelease=false): {len(to_keep)}")
+          print(f"Releases to DELETE (prerelease=true): {len(to_delete)}\n")
+          
+          print(f"{'='*80}")
+          print("RELEASES TO KEEP:")
+          print(f"{'='*80}")
+          for r in sorted(to_keep, key=lambda x: x.tag_name):
+              print(f"  ✓ {r.tag_name}")
+          
+          print(f"\n{'='*80}")
+          print(f"RELEASES TO DELETE ({len(to_delete)} total):")
+          print(f"{'='*80}")
+          
+          deleted_count = 0
+          errors = []
+          
+          for release in sorted(to_delete, key=lambda x: x.tag_name):
+              print(f"  {'[DRY RUN] Would delete' if dry_run else 'Deleting'}: {release.tag_name} (ID: {release.id})")
+              
+              if not dry_run:
+                  try:
+                      release.delete_release()
+                      deleted_count += 1
+                  except Exception as e:
+                      error_msg = f"Failed to delete {release.tag_name}: {str(e)}"
+                      print(f"    ERROR: {error_msg}")
+                      errors.append(error_msg)
+          
+          print(f"\n{'='*80}")
+          print("SUMMARY")
+          print(f"{'='*80}")
+          if dry_run:
+              print(f"DRY RUN: Would delete {len(to_delete)} prerelease versions")
+              print(f"Would keep {len(to_keep)} latest releases")
+          else:
+              print(f"Successfully deleted: {deleted_count} releases")
+              print(f"Kept: {len(to_keep)} latest releases")
+              if errors:
+                  print(f"Errors: {len(errors)}")
+                  for err in errors:
+                      print(f"  - {err}")
+          print(f"{'='*80}")
+          
+          if not dry_run and errors:
+              exit(1)
+          EOF

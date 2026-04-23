@@ -1,0 +1,21 @@
+# ESPHome build artifacts
+/.esphome/
+/build/
+*.pyc
+__pycache__/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets (if using secrets.yaml)
+secrets.yaml
+meater_app/
+*.backup
