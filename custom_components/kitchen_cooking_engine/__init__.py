@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.1.01 - Fix blank screen crash on Create AI Recipe (string vs object in _selectedIngredients)
+Last Change: v0.6.1.02 - MEATER probe subprocess, HA todo.add_item bridge, AI recipe serving scaling
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -72,7 +72,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.6.1.01"
+__version__ = "0.6.1.02"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

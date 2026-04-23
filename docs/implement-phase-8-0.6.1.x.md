@@ -37,7 +37,7 @@ Modes A/B/C), 8d (Post-Cook Shelf Update), 8e (External Bridges — deferred).
   `_renderIngredientCheckbox`) to prevent the same crash from any stale plain string.
 - PANEL_VERSION bumped 259 → 260 (auto by generator).
 
-### v0.6.1.00 — (in progress)
+### v0.6.1.00 — 2026-04-23 (Phase 8 features)
 - 8a: `_selectedIngredients` changed to `Array<{name, compulsory}>`.
 - 8a: Compulsory badge toggle UI (click body to toggle ⭐, × to remove).
 - 8a: `ai_recipe_builder.py` accepts `compulsory_ingredients`, injects MUST-use directive.
@@ -58,9 +58,50 @@ Modes A/B/C), 8d (Post-Cook Shelf Update), 8e (External Bridges — deferred).
 - 8d: i18n keys for post-cook and shopping list.
 - Regenerated `kitchen-cooking-panel.js`.
 
----
+### v0.6.1.02 — 2026-04-23
+**Features: MEATER probe subprocess, HA todo bridge, AI serving scaling**
 
-## Notes / Discoveries
+#### MEATER Probe as Recipe Subprocess
+- `_startMeaterSubprocess()`: finds a cooking session entity, calls `start_simple_probe_cook`
+  service, stores `{entityId, targetTempC}` in `state.meaterSubprocess`.
+- `_stopMeaterSubprocess()`: detaches probe from recipe (probe session keeps running).
+- `_renderMeaterProbeInfo()`: now reads `hass.states[entityId].attributes.current_temp`
+  for live temperature display; replaced hardcoded 45°C stub.
+- `_renderRecipeCookStep()`: adds a "🌡️ Start MEATER Probe" card when `recipe.use_probe`
+  is true, `recipe.target_temp_c` is set, and no subprocess is active yet.
+- i18n keys added: `recipe_cook.start_meater_btn`, `recipe_cook.meater_detach_hint` (en + sv).
+
+#### HA `todo.add_item` Bridge
+- `_findHATodoEntity()`: returns `todo.shopping_list` (or first `todo.*` entity) from
+  `hass.states`, or null if none found.
+- `_pushToHATodo(names)`: calls `todo.add_item` service for each name; warns to console on
+  failure; returns number of successfully pushed items.
+- Shopping list view: "📤 Export to HA Shopping List" button added; only shown when unchecked
+  items exist; displays success/error feedback toast.
+- Post-cook shelf update: "Add to Shopping List" button now also calls `_pushToHATodo`
+  (fire-and-forget after KCE internal list write).
+- i18n keys added: `shopping_list.export_to_ha`, `shopping_list.exported_to_ha`,
+  `shopping_list.ha_todo_not_found` (en + sv).
+
+#### AI Recipe In-Cook Serving Scaling
+- AI recipe suggestion cards now have a live serving size `<input>` spinner (same as Ninja
+  Combi detail view), wired to `_updateRecipeServings()`.
+- `_startCookingFromAIRecipe()` now passes `fullRecipe._adjustedServings` to `_startRecipeCook`.
+- `_renderRecipeCookOverview()` uses `recipe._adjustedIngredients` (falls back to `recipe.ingredients`).
+- `_renderRecipeCookStep()` uses `recipe._adjustedIngredients` for the active/inactive
+  ingredient colour-coding lists.
+- `_updateRecipeServings()` refactored to call new `_smartRound(value)` helper.
+- `_smartRound(value)`: rounds to nearest 5 (≥50), integer (≥10), 0.5 (≥2),
+  or 0.25 (<2); avoids impractical outputs like 1.333.
+- Fraction strings like "1/2" in ingredient text are now parsed correctly before scaling.
+- Handles Swedish commas in numbers and Swedish/English unit abbreviations (tsk, msk, dl, kg, etc.).
+
+#### ToR Cleanup
+- Removed language auto-detect from HA config from ToR §9.1 and this plans file.
+  Language defaults to English; user selects from welcome screen settings.
+- PANEL_VERSION bumped 260 → 261 (auto by generator).
+
+
 
 - `_selectedIngredients` was a flat `string[]`; changed to `{name, compulsory}[]`.
   All callers updated: `_toggleIngredient`, `_addCustomIngredient`, `_removeIngredient`,

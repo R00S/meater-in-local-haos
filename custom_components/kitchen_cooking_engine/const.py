@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.1.01 - Fix blank screen crash on Create AI Recipe (string vs object in _selectedIngredients)
+Last Change: v0.6.1.02 - MEATER probe subprocess, HA todo.add_item bridge, AI recipe serving scaling
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "260"
+PANEL_VERSION = "262"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

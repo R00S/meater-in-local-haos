@@ -294,7 +294,9 @@
     "finish_cook": "✅ Slutför tillagning",
     "next_step": "Nästa steg ➡️",
     "prev_step": "⬅️ Föregående",
-    "no_instructions": "Inga instruktioner tillgängliga."
+    "no_instructions": "Inga instruktioner tillgängliga.",
+    "start_meater_btn": "🌡️ Starta MEATER-sond",
+    "meater_detach_hint": "Koppla loss sonden från receptet (sondsessionen fortsätter)"
   },
   "rating": {
     "cook_complete": "🎉 Tillagning klar!",
@@ -600,6 +602,9 @@
     "clear_checked": "Ta bort ikryssade",
     "back": "← Tillbaka",
     "item_checked": "Har det",
-    "item_unchecked": "Behöver det"
+    "item_unchecked": "Behöver det",
+    "export_to_ha": "Exportera till HA Inköpslista",
+    "exported_to_ha": "Exporterade {count} artiklar till HA Inköpslista",
+    "ha_todo_not_found": "Ingen HA Inköpslista hittades. Artiklar sparade i KCE-listan."
   }
 }

@@ -753,6 +753,35 @@ class KitchenCookingPanel extends LitElement {
     }
   }
 
+  /**
+   * Find the first HA todo entity (preferring todo.shopping_list).
+   * Returns entity_id string or null if none found.
+   */
+  _findHATodoEntity() {
+    if (!this.hass) return null;
+    if (this.hass.states['todo.shopping_list']) return 'todo.shopping_list';
+    return Object.keys(this.hass.states).find(id => id.startsWith('todo.')) || null;
+  }
+
+  /**
+   * Push an array of name strings to the HA todo entity via todo.add_item.
+   * Returns the number of items successfully pushed.
+   */
+  async _pushToHATodo(names) {
+    const entityId = this._findHATodoEntity();
+    if (!entityId || !names || names.length === 0) return 0;
+    let count = 0;
+    for (const name of names) {
+      try {
+        await this.hass.callService('todo', 'add_item', { entity_id: entityId, item: name });
+        count++;
+      } catch (e) {
+        console.warn('KCE: could not push item to HA todo:', name, e);
+      }
+    }
+    return count;
+  }
+
   _navigateToShelfManagement() {
     this._showAddShelfItem = false;
     this._currentPath = 'shelf_management';
@@ -1949,21 +1978,59 @@ class KitchenCookingPanel extends LitElement {
     if (isNaN(newServings) || newServings < 1) return;
     
     const originalServings = recipe.servings;
+    if (!originalServings || originalServings <= 0) {
+      console.warn('KCE: cannot scale recipe — recipe.servings is missing or zero');
+      return;
+    }
     const multiplier = newServings / originalServings;
     
     // Store adjusted servings
     recipe._adjustedServings = newServings;
     
-    // Scale ingredients
-    recipe._adjustedIngredients = recipe.ingredients.map(ing => {
-      // Try to find numbers in the ingredient string and scale them
-      return ing.replace(/(\d+(?:\.\d+)?)\s*([a-zA-Z]*)/g, (match, num, unit) => {
-        const scaledNum = (parseFloat(num) * multiplier).toFixed(1).replace(/\.0$/, '');
-        return `${scaledNum} ${unit}`;
+    // Scale ingredients with intelligent rounding
+    const ingredients = recipe.ingredients || [];
+    recipe._adjustedIngredients = ingredients.map(ing => {
+      return ing.replace(/(\d+(?:[.,\/]\d+)?)\s*([a-zA-ZÅÄÖåäö%]*)/g, (match, numStr, unit) => {
+        // Parse simple fractions like "1/2"
+        let rawValue;
+        if (numStr.includes('/')) {
+          const parts = numStr.split('/');
+          rawValue = parseFloat(parts[0]) / parseFloat(parts[1]);
+        } else {
+          rawValue = parseFloat(numStr.replace(',', '.'));
+        }
+        if (isNaN(rawValue) || rawValue <= 0) return match;
+        const scaled = rawValue * multiplier;
+        const rounded = this._smartRound(scaled);
+        return unit ? `${rounded}\u00a0${unit}` : `${rounded}`;
       });
     });
     
     this.requestUpdate();
+  }
+
+  /**
+   * Round a scaled ingredient amount to a practical value.
+   * - >= 50: round to nearest 5
+   * - >= 10: round to nearest integer
+   * - >= 2: round to nearest 0.5
+   * - < 2:  round to nearest quarter (0.25)
+   */
+  _smartRound(value) {
+    if (value <= 0) return value;
+    let result;
+    if (value >= 50) {
+      result = Math.round(value / 5) * 5;
+    } else if (value >= 10) {
+      result = Math.round(value);
+    } else if (value >= 2) {
+      result = Math.round(value * 2) / 2;
+    } else {
+      result = Math.round(value * 4) / 4;
+    }
+    // Format: drop unnecessary .0 / .00 but keep meaningful decimals
+    const str = result % 1 === 0 ? String(result) : String(parseFloat(result.toFixed(2)));
+    return str;
   }
 
   _openRecipeInBuilder(recipe) {
@@ -4024,6 +4091,19 @@ class KitchenCookingPanel extends LitElement {
                 ${this._t('shopping_list.clear_checked')}
               </button>
             ` : ''}
+            ${items.some(i => !i.checked) ? html`
+              <button class="secondary-btn" style="margin-top: 8px;" @click=${async () => {
+                const names = items.filter(i => !i.checked).map(i => i.name);
+                const count = await this._pushToHATodo(names);
+                if (count > 0) {
+                  this._showMessage('✅', this._t('shopping_list.exported_to_ha').replace('{count}', count), false);
+                } else {
+                  this._showMessage('⚠️', this._t('shopping_list.ha_todo_not_found'), false);
+                }
+              }}>
+                📤 ${this._t('shopping_list.export_to_ha')}
+              </button>
+            ` : ''}
           `}
         </div>
       </ha-card>
@@ -4095,6 +4175,8 @@ class KitchenCookingPanel extends LitElement {
                 } catch (e) {
                   console.error('Could not add to shopping list:', e);
                 }
+                // Also push to HA native todo list (fire-and-forget)
+                await this._pushToHATodo(unchecked.map(c => c.name));
               }
               this._pendingShelfUpdate = null;
               this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
@@ -5441,7 +5523,14 @@ class KitchenCookingPanel extends LitElement {
                     <strong>${this._t('ai_recipe.cook_time_label')}</strong> ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' ' + this._t('common.minutes_short') : this._t('common.na')}
                   </div>
                   <div class="detail-item">
-                    <strong>${this._t('ai_recipe.servings_label')}</strong> ${recipe.servings || '4'}
+                    <strong>${this._t('ai_recipe.servings_label')}</strong>
+                    <input
+                      type="number"
+                      min="1"
+                      max="12"
+                      .value=${recipe._adjustedServings || recipe.servings || 4}
+                      @input=${(e) => this._updateRecipeServings(recipe, parseInt(e.target.value))}
+                      style="width:50px;padding:4px;border:1px solid var(--divider-color);border-radius:4px;background:var(--primary-background-color);color:var(--primary-text-color);">
                   </div>
                   <div class="detail-item">
                     <strong>${this._t('ai_recipe.difficulty_label')}</strong> ${recipe.difficulty || this._t('common.na')}
@@ -6386,7 +6475,7 @@ class KitchenCookingPanel extends LitElement {
     this._showMessageDialog = false;
 
     // Start recipe cook flow via central method (supports parallel cooks)
-    this._startRecipeCook(fullRecipe, fullRecipe.servings || 4);
+    this._startRecipeCook(fullRecipe, fullRecipe._adjustedServings || fullRecipe.servings || 4);
   }
 
   /**
@@ -6485,9 +6574,8 @@ class KitchenCookingPanel extends LitElement {
     const steps = this._getRecipeSteps(recipe);
     const totalTime = recipe.total_time || recipe.cook_time_minutes;
     // Fall back to main_ingredients (from suggestion) if full ingredients list is missing
-    const ingredientList = (recipe.ingredients && recipe.ingredients.length > 0)
-      ? recipe.ingredients
-      : (recipe.main_ingredients || []);
+    const ingredientList = recipe._adjustedIngredients
+      || (recipe.ingredients && recipe.ingredients.length > 0 ? recipe.ingredients : (recipe.main_ingredients || []));
     
     return html`
       <div class="recipe-cook-overview">
@@ -6652,7 +6740,8 @@ class KitchenCookingPanel extends LitElement {
     instructionText = this._convertIngredientText(instructionText);
 
     // Build sorted ingredient list: new-active (green), repeat-active (black), inactive (2 columns)
-    const allIngredients = recipe.ingredients && recipe.ingredients.length > 0 ? recipe.ingredients : [];
+    // Use scaled ingredients if a serving adjustment was applied, otherwise fall back to originals.
+    const allIngredients = (recipe._adjustedIngredients || recipe.ingredients || []);
     const newActiveIngs = [];
     const repeatActiveIngs = [];
     const inactiveIngs = [];
@@ -6756,6 +6845,22 @@ class KitchenCookingPanel extends LitElement {
           </div>
         ` : ''}
 
+        <!-- MEATER probe subprocess button — shown when recipe uses probe and subprocess not yet started -->
+        ${recipe.use_probe && recipe.target_temp_c && !this._recipeCookState.meaterSubprocess ? html`
+          <div class="meater-probe-card" style="margin: 12px 0; padding: 12px; background: rgba(76,175,80,0.1); border: 1px solid #4caf50; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
+            <div style="flex: 1;">
+              <strong>🌡️ ${this._t('recipe_cook.start_meater_btn')}</strong>
+              <div style="font-size: 0.85em; color: var(--secondary-text-color); margin-top: 2px;">
+                ${this._t('common.target')}: ${recipe.target_temp_c}°C
+                ${recipe.target_temp_f ? ` (${recipe.target_temp_f}°F)` : ''}
+              </div>
+            </div>
+            <button class="primary-btn" style="white-space:nowrap;" @click=${() => this._startMeaterSubprocess()}>
+              ${this._t('recipe_cook.start_meater_btn')}
+            </button>
+          </div>
+        ` : ''}
+
         <!-- Ingredients: active sorted by appearance in grey box, inactive in 2-col below -->
         ${allIngredients.length > 0 ? html`
           <div class="recipe-cook-ingredients">
@@ -6847,20 +6952,67 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Render MEATER probe info in footer middle section
+   * Start MEATER probe as a subprocess within the current recipe cook.
+   * Calls start_simple_probe_cook and stores entity reference in meaterSubprocess.
+   */
+  async _startMeaterSubprocess() {
+    const state = this._recipeCookState;
+    if (!state) return;
+    const recipe = state.recipe;
+    const targetTempC = recipe.target_temp_c;
+    if (!targetTempC) return;
+
+    // Find a MEATER cooking session entity
+    const entities = this._findCookingEntities();
+    const meaterEntity = entities.find(e => e.toLowerCase().includes('meater')) || entities[0];
+    if (!meaterEntity) {
+      this._showMessage(this._t('meater.no_sensor_found'), '⚠️ ' + this._t('meater.sensor_not_connected'), true);
+      return;
+    }
+
+    try {
+      await this.hass.callService('kitchen_cooking_engine', 'start_simple_probe_cook', {
+        entity_id: meaterEntity,
+        target_temp_c: targetTempC,
+        session_name: recipe.name || 'Recipe Probe',
+      });
+      state.meaterSubprocess = { entityId: meaterEntity, targetTempC };
+      this._persistActiveRecipeCooks();
+      this.requestUpdate();
+    } catch (e) {
+      this._showMessage('❌ ' + this._t('messages.cook_session_error_title'), e.message || String(e), true);
+    }
+  }
+
+  /**
+   * Detach the MEATER subprocess from the recipe cook (probe session keeps running).
+   */
+  _stopMeaterSubprocess() {
+    const state = this._recipeCookState;
+    if (!state) return;
+    state.meaterSubprocess = null;
+    this._persistActiveRecipeCooks();
+    this.requestUpdate();
+  }
+
+  /**
+   * Render MEATER probe info in footer middle section — shows live temp when subprocess active.
    */
   _renderMeaterProbeInfo() {
-    // TODO: Integrate with MEATER subprocess if active
-    // For now, just show placeholder
-    if (this._recipeCookState?.meaterSubprocess) {
-      return html`
-        <div class="meater-probe-info">
-          <span class="probe-temp">🌡️ 45°C</span>
-          <span class="probe-status">Cooking</span>
-        </div>
-      `;
-    }
-    return html``;
+    const sub = this._recipeCookState?.meaterSubprocess;
+    if (!sub) return html``;
+
+    const entityState = this.hass?.states?.[sub.entityId];
+    const currentTemp = entityState?.attributes?.current_temp;
+    const tempDisplay = (currentTemp !== null && currentTemp !== undefined) ? `${currentTemp}°C` : '--';
+
+    return html`
+      <div class="meater-probe-info">
+        <span class="probe-temp">🌡️ ${tempDisplay}</span>
+        <span class="probe-status">${sub.targetTempC}°C ${this._t('common.target')}</span>
+        <button class="secondary-btn" style="padding:4px 10px;font-size:0.8em;" @click=${() => this._stopMeaterSubprocess()} title="${this._t('recipe_cook.meater_detach_hint')}">✕</button>
+      </div>
+    `;
   }
 
   // ============================================================================

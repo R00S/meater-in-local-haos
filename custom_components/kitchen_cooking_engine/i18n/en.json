@@ -294,7 +294,9 @@
     "finish_cook": "✅ Finish Cook",
     "next_step": "Next Step ➡️",
     "prev_step": "⬅️ Previous",
-    "no_instructions": "No instructions available."
+    "no_instructions": "No instructions available.",
+    "start_meater_btn": "🌡️ Start MEATER Probe",
+    "meater_detach_hint": "Detach probe from this recipe (probe session keeps running)"
   },
   "rating": {
     "cook_complete": "🎉 Cook Complete!",
@@ -602,6 +604,9 @@
     "clear_checked": "Clear Checked",
     "back": "← Back",
     "item_checked": "Got it",
-    "item_unchecked": "Need it"
+    "item_unchecked": "Need it",
+    "export_to_ha": "Export to HA Shopping List",
+    "exported_to_ha": "Exported {count} items to HA Shopping List",
+    "ha_todo_not_found": "No HA Shopping List found. Items saved to KCE list only."
   }
 }
