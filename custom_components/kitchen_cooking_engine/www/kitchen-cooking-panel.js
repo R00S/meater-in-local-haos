@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 23 Apr 2026, 19:38 CET
+ * AUTO-GENERATED: 23 Apr 2026, 19:51 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 23 Apr 2026, 19:38 CET
+// Last generated: 23 Apr 2026, 19:51 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -18593,7 +18593,7 @@ class KitchenCookingPanel extends LitElement {
       <label class="ingredient-checkbox">
         <input 
           type="checkbox" 
-          ?checked=${!!this._selectedIngredients.find(i => i.name.toLowerCase() === valueName.toLowerCase())}
+          ?checked=${!!this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === valueName.toLowerCase())}
           @change=${(e) => this._toggleIngredient(valueName, e.target.checked)}
         />
         ${displayName}
@@ -19429,11 +19429,11 @@ class KitchenCookingPanel extends LitElement {
    */
   _toggleIngredient(ingredient, enabled) {
     if (enabled) {
-      if (!this._selectedIngredients.find(i => i.name.toLowerCase() === ingredient.toLowerCase())) {
+      if (!this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === ingredient.toLowerCase())) {
         this._selectedIngredients = [...this._selectedIngredients, { name: ingredient, compulsory: false }];
       }
     } else {
-      this._selectedIngredients = this._selectedIngredients.filter(i => i.name.toLowerCase() !== ingredient.toLowerCase());
+      this._selectedIngredients = this._selectedIngredients.filter(i => !i.name || i.name.toLowerCase() !== ingredient.toLowerCase());
     }
     this.requestUpdate();
   }
@@ -19442,7 +19442,7 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Add custom ingredient
    */
   _addCustomIngredient(ingredient) {
-    if (ingredient && !this._selectedIngredients.find(i => i.name.toLowerCase() === ingredient.toLowerCase())) {
+    if (ingredient && !this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === ingredient.toLowerCase())) {
       this._selectedIngredients = [...this._selectedIngredients, { name: ingredient, compulsory: false }];
       this.requestUpdate();
     }
@@ -19452,7 +19452,7 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Remove ingredient from selection
    */
   _removeIngredient(ingredient) {
-    this._selectedIngredients = this._selectedIngredients.filter(i => i.name.toLowerCase() !== ingredient.toLowerCase());
+    this._selectedIngredients = this._selectedIngredients.filter(i => !i.name || i.name.toLowerCase() !== ingredient.toLowerCase());
     this.requestUpdate();
   }
 
@@ -19690,7 +19690,7 @@ class KitchenCookingPanel extends LitElement {
         main_appliance_id: this._selectedAppliance ? this._selectedAppliance.id : null,
         cooking_style: this._selectedCookingStyle || 'quick_and_easy',
         complexity: this._aiComplexity || 3,
-        user_ingredients: this._selectedIngredients || [],
+        user_ingredients: (this._selectedIngredients || []).map(i => (typeof i === 'string' ? i : i.name)),
         servings: this._aiPortions || 4,
         language: this._language || 'en',
         measurement_system: this._measurementSystem || 'us',
@@ -19955,7 +19955,7 @@ class KitchenCookingPanel extends LitElement {
         main_appliance_id: this._selectedAppliance ? this._selectedAppliance.id : null,
         cooking_style: this._selectedCookingStyle || 'quick_and_easy',
         complexity: this._aiComplexity || 3,
-        user_ingredients: this._selectedIngredients || [],
+        user_ingredients: (this._selectedIngredients || []).map(i => (typeof i === 'string' ? i : i.name)),
         servings: this._aiPortions || 4,
         language: this._language || 'en',
         measurement_system: this._measurementSystem || 'us',
@@ -20369,7 +20369,7 @@ class KitchenCookingPanel extends LitElement {
     // click × to remove it for fully generic recipes.
     const applianceName = this._selectedAppliance?.name;
     if (applianceName) {
-      this._selectedIngredients = [`use ${applianceName} programs`];
+      this._selectedIngredients = [{ name: `use ${applianceName} programs`, compulsory: false }];
     }
 
     this._selectedCookingStyle = null;
@@ -23329,7 +23329,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "259";
+const PANEL_VERSION = "260";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

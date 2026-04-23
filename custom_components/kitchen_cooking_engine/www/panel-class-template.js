@@ -5230,7 +5230,7 @@ class KitchenCookingPanel extends LitElement {
       <label class="ingredient-checkbox">
         <input 
           type="checkbox" 
-          ?checked=${!!this._selectedIngredients.find(i => i.name.toLowerCase() === valueName.toLowerCase())}
+          ?checked=${!!this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === valueName.toLowerCase())}
           @change=${(e) => this._toggleIngredient(valueName, e.target.checked)}
         />
         ${displayName}
@@ -6066,11 +6066,11 @@ class KitchenCookingPanel extends LitElement {
    */
   _toggleIngredient(ingredient, enabled) {
     if (enabled) {
-      if (!this._selectedIngredients.find(i => i.name.toLowerCase() === ingredient.toLowerCase())) {
+      if (!this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === ingredient.toLowerCase())) {
         this._selectedIngredients = [...this._selectedIngredients, { name: ingredient, compulsory: false }];
       }
     } else {
-      this._selectedIngredients = this._selectedIngredients.filter(i => i.name.toLowerCase() !== ingredient.toLowerCase());
+      this._selectedIngredients = this._selectedIngredients.filter(i => !i.name || i.name.toLowerCase() !== ingredient.toLowerCase());
     }
     this.requestUpdate();
   }
@@ -6079,7 +6079,7 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Add custom ingredient
    */
   _addCustomIngredient(ingredient) {
-    if (ingredient && !this._selectedIngredients.find(i => i.name.toLowerCase() === ingredient.toLowerCase())) {
+    if (ingredient && !this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === ingredient.toLowerCase())) {
       this._selectedIngredients = [...this._selectedIngredients, { name: ingredient, compulsory: false }];
       this.requestUpdate();
     }
@@ -6089,7 +6089,7 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Remove ingredient from selection
    */
   _removeIngredient(ingredient) {
-    this._selectedIngredients = this._selectedIngredients.filter(i => i.name.toLowerCase() !== ingredient.toLowerCase());
+    this._selectedIngredients = this._selectedIngredients.filter(i => !i.name || i.name.toLowerCase() !== ingredient.toLowerCase());
     this.requestUpdate();
   }
 
@@ -6327,7 +6327,7 @@ class KitchenCookingPanel extends LitElement {
         main_appliance_id: this._selectedAppliance ? this._selectedAppliance.id : null,
         cooking_style: this._selectedCookingStyle || 'quick_and_easy',
         complexity: this._aiComplexity || 3,
-        user_ingredients: this._selectedIngredients || [],
+        user_ingredients: (this._selectedIngredients || []).map(i => (typeof i === 'string' ? i : i.name)),
         servings: this._aiPortions || 4,
         language: this._language || 'en',
         measurement_system: this._measurementSystem || 'us',
@@ -6592,7 +6592,7 @@ class KitchenCookingPanel extends LitElement {
         main_appliance_id: this._selectedAppliance ? this._selectedAppliance.id : null,
         cooking_style: this._selectedCookingStyle || 'quick_and_easy',
         complexity: this._aiComplexity || 3,
-        user_ingredients: this._selectedIngredients || [],
+        user_ingredients: (this._selectedIngredients || []).map(i => (typeof i === 'string' ? i : i.name)),
         servings: this._aiPortions || 4,
         language: this._language || 'en',
         measurement_system: this._measurementSystem || 'us',
@@ -7006,7 +7006,7 @@ class KitchenCookingPanel extends LitElement {
     // click × to remove it for fully generic recipes.
     const applianceName = this._selectedAppliance?.name;
     if (applianceName) {
-      this._selectedIngredients = [`use ${applianceName} programs`];
+      this._selectedIngredients = [{ name: `use ${applianceName} programs`, compulsory: false }];
     }
 
     this._selectedCookingStyle = null;
