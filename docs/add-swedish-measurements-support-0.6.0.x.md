@@ -175,7 +175,41 @@ Follow-up doc work (no code, no version bump) merging info from PR #81
 - Updated Decision Factors matrix with research-backed data.
 - **Decision is unchanged — Option C confirmed by project owner on 2026-03-17.**
 
-### v0.6.0.02 — Fix untranslated strings in AI recipe wizard (2026-04-23)
+### v0.6.0.03 — Fix Swedish ingredient translation (Chiliflingor) (2026-04-23)
+
+| Step | Commit summary |
+|------|----------------|
+| Fix  | `ai_recipe_data.py`: correct `red_pepper_flakes` → `"Chiliflingor"` (was `"Röda pepparflingor"`) + add 7 missing Swedish ingredient entries (`horseradish`, `balsamic`, `beans`, `ciabatta`, `flat_bread`, `flour_tortillas`, `taco_shells`) |
+| Gen  | Regenerate `kitchen-cooking-panel.js` (PANEL_VERSION 253→254) |
+| Ver  | Bump to v0.6.0.03 |
+
+**Root cause:** `red_pepper_flakes` was translated literally as "red pepper flakes" — but
+in Swedish cooking the ingredient is always called *Chiliflingor* (chili flakes). Seven
+other ingredient IDs were entirely absent from `INGREDIENT_NAMES_SV`, causing raw English
+keys to appear in the Swedish UI.
+
+---
+
+### v0.6.0.04 — Add hide-other-language-tree checkbox in Temperaturdata (2026-04-23)
+
+| Step | Commit summary |
+|------|----------------|
+| i18n | `i18n/en.json` + `sv.json`: add `meater.hide_other_tree` key |
+| Code | `panel-class-template.js`: new `_hideOtherDataSource` reactive property (Boolean) |
+| Code | `panel-class-template.js`: `_loadHideOtherDataSourcePreference()` reads from `localStorage` (`kce_hide_other_data_source`); `_toggleHideOtherDataSource()` writes it |
+| Code | `panel-class-template.js`: Data Source Selector card renders each button conditionally — when checkbox is checked, only the active source button is shown; checkbox appears below description text |
+| Code | `connectedCallback`: call `_loadHideOtherDataSourcePreference()` on startup |
+| Gen  | Regenerate `kitchen-cooking-panel.js` (PANEL_VERSION 254→255) |
+| Ver  | Bump to v0.6.0.04 |
+
+**Behaviour:** Unchecked (default) — both Internationell and Svenska buttons visible,
+no change from before. Checked — only the currently selected source button renders,
+hiding the other to reduce clutter for users committed to one temperature tree.
+Preference is persisted to `localStorage` and survives page reloads.
+
+---
+
+
 
 | Step | Commit summary |
 |------|----------------|
@@ -215,6 +249,8 @@ Follow-up doc work (no code, no version bump) merging info from PR #81
 | AI recipe wizard: staples, categories, cooking styles | ✅ Swedish via `ASSUMED_STAPLES_SV`, `CATEGORY_LABELS_SV`, `name_sv` (v0.6.0.02) |
 | AI recipes in correct language/units | ✅ Prompts + conversion safety net |
 | Per-step ingredient tagging | ✅ AI JSON + frontend highlighting |
+| Chiliflingor / Swedish ingredient names | ✅ Corrected + 7 missing entries added (v0.6.0.03) |
+| Hide-other-language-tree checkbox | ✅ Temperaturdata card, localStorage-persisted (v0.6.0.04) |
 | GUI ToR updated to v3.7 | ✅ Phase 8 scope defined, Open Question #6 resolved, A/B/C rebuilt with research data |
 | Branch ready to merge to parent | ✅ No open issues; doc-only child branch pending merge |
 
