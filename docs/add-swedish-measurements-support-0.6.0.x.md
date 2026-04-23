@@ -153,6 +153,30 @@ install dependency.
 
 ---
 
+### Post-v0.6.0.01 — A/B/C comparison rebuilt (2026-04-23)
+
+Follow-up doc work (no code, no version bump) merging info from PR #81
+(`copilot/implement-branch-history-system`) and the now-present
+`EXTERNAL_INTEGRATIONS_RESEARCH.md` into the ToR comparison.
+
+| Step | Commit summary |
+|------|----------------|
+| Docs | ToR v3.7: rebuild A/B/C comparison with merged research data |
+
+**What changed (ToR v3.7):**
+- Added HA ecosystem context table with real install counts from
+  `analytics.home-assistant.io`: HA Shopping List ~350,000 users, Grocy
+  ~2,000–4,000, Mealie ~2,000, KitchenOwl growing.
+- Widened Option B to cover Mealie and KitchenOwl as named alternatives (not
+  just Grocy); added **fragmentation** as a con — three incompatible APIs.
+- Added Tier 1/2/3 bridge architecture table to Option C (Tier 1 = HA
+  `todo.add_item`, 350k users, trivial; Tier 2 = Grocy + Mealie read bridges,
+  optional; Tier 3 = KitchenOwl watch).
+- Updated Decision Factors matrix with research-backed data.
+- **Decision is unchanged — Option C confirmed by project owner on 2026-03-17.**
+
+---
+
 ## Known issues / root causes discovered
 
 | # | Issue | Root cause | Fix applied |
@@ -174,7 +198,7 @@ install dependency.
 | Full `_t()` i18n coverage | ✅ All user-facing strings translated |
 | AI recipes in correct language/units | ✅ Prompts + conversion safety net |
 | Per-step ingredient tagging | ✅ AI JSON + frontend highlighting |
-| GUI ToR updated to v3.6 | ✅ Phase 8 scope defined, Open Question #6 resolved |
+| GUI ToR updated to v3.7 | ✅ Phase 8 scope defined, Open Question #6 resolved, A/B/C rebuilt with research data |
 | Branch ready to merge to parent | ✅ No open issues; doc-only child branch pending merge |
 
 ---
