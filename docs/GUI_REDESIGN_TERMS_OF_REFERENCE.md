@@ -1,6 +1,6 @@
 # Terms of Reference: Kitchen Cooking Engine GUI Redesign
 
-**Version:** 3.5  
+**Version:** 3.6  
 **Created:** 2026-01-16  
 **Updated:** 2026-03-17  
 **Status:** Phases 1–6 Complete + v0.5.2.x appliance features + v0.5.4.x stability & UX + v0.6.0.x i18n/ingredient fixes, Phases 8–9 planned  
@@ -63,7 +63,7 @@ The GUI redesign aims to:
 - Adding new appliance types (limited to existing: MEATER, Ninja Combi, other appliances)
 - Advanced meal planning features
 - Multi-recipe coordination
-- Full inventory management integration (e.g. Grocy sync) — simplified shelf/pantry is in scope via Phase 8
+- Full bidirectional inventory management integration (e.g. Grocy as backend) — Phase 8 uses self-implemented shelf with optional thin read-only bridges to Grocy, Mealie, and KitchenOwl (see [External Integrations Research](EXTERNAL_INTEGRATIONS_RESEARCH.md))
 - These features remain candidates for future phases
 
 ---
@@ -1362,6 +1362,13 @@ The GUI redesign is considered successful when:
 - [ ] REST API: `POST /api/kitchen_cooking_engine/shopping_list` for shopping list CRUD
 - [ ] Shopping list view accessible from welcome screen
 
+#### 8e. Optional External Bridges (Tier 2/3 — can be deferred)
+- [ ] **HA Shopping List export:** When Mode C generates a shopping list or post-cook "Add to Shopping List" is clicked, push items to HA's `todo.shopping_list` entity via `todo.add_item` service call
+- [ ] **Grocy read bridge (optional):** Settings UI for Grocy URL + API key; "Import from Grocy" button on Shelf Management screen; `GET /api/stock` → flatten to shelf items; clear "snapshot, not live sync" UX
+- [ ] **Mealie recipe import (optional):** Settings UI for Mealie URL + API key; "Import from Mealie" option in AI Recipe Builder; `GET /api/recipes` → pre-populate ingredient selection
+- [ ] **KitchenOwl (future):** Monitor adoption; same read bridge pattern as Grocy when user base justifies (AGPL-3.0 — API calls only, no code reuse)
+- [ ] Add i18n translations for bridge settings labels (en + sv)
+
 ### Phase 9: Polish & Testing (Week 12) — ⬜ NOT STARTED
 - [ ] Visual design refinement
 - [ ] Mobile responsive testing
@@ -1396,72 +1403,13 @@ The GUI redesign is considered successful when:
    - Answer: Optional but encouraged
 
 6. **Shelf/Inventory Backend:** Should we use Grocy for inventory management or implement our own shelf system?
-   - **Status: ⬜ UNDECIDED — needs project owner decision before Phase 8 starts**
-   - **Decision deadline:** Must be decided before Phase 8 implementation begins (i.e., during or before Phase 7)
-
-   The Phase 8 shelf management feature needs a backend to store what the user has available. Three options are on the table:
-
-   ---
-
-   #### Option A: Self-Implemented (local `shelf_inventory.json` + REST API)
-
-   Build a simple inventory system ourselves, stored as a local JSON file with our own REST endpoints — same pattern as `cook_history.json` and `user_preferences.json`.
-
-   | Pros | Cons |
-   |------|------|
-   | **Zero external dependencies** — works standalone, no Grocy app install needed | **We build and maintain everything** — CRUD, UI, storage, search, categories |
-   | **Simple data model** — item name + location is all we need for the AI prompt; no over-engineering | **No expiry tracking** — can't warn about items going bad (would need to be added later if wanted) |
-   | **Consistent with existing codebase** — follows the same `{feature}.json` + REST API pattern we use for cook history, preferences, AI settings | **No barcode/receipt scanning** — adding items is manual-only |
-   | **Full control** — data model shaped exactly for our use case (AI recipe generation, not warehouse management) | **No ecosystem** — no existing mobile apps, Lovelace cards, or community tools to leverage |
-   | **Fast to implement** — familiar pattern, no integration debugging, no API version compatibility issues | **Shopping list from scratch** — must build our own; can't leverage Grocy's built-in shopping lists or HA's native `todo.shopping_list` sync |
-   | **No version coupling** — Grocy updates, API changes, or HA integration breaking changes don't affect us | **Island solution** — shelf data lives only inside our component, not visible to other HA integrations or automations |
-
-   ---
-
-   #### Option B: Grocy Integration (connect to user's Grocy instance via REST API)
-
-   Use Grocy as the inventory backend. User installs Grocy as an HA app (one-click install, low barrier); we read/write via Grocy's REST API.
-
-   | Pros | Cons |
-   |------|------|
-   | **Feature-rich out of the box** — quantities, expiry dates, locations, product groups, barcodes, shopping lists, recipe consumption all built-in | **External dependency** — user must install and maintain Grocy (HA app install is easy, but Grocy itself needs initial product setup and ongoing maintenance) |
-   | **Existing HA integration** — `custom-components/grocy` provides sensors (expired items, shopping list count, stock status) and services | **Grocy HA integration is a custom component** (not official core) — can break on HA updates; maintained by community volunteers |
-   | **Shopping list syncs with HA** — Grocy shopping lists can sync bidirectionally with HA's native `todo.shopping_list` via community integrations | **Complex data model** — Grocy tracks quantities, units, barcodes, expiry, purchase dates, locations, product groups. We only need "do you have chicken?" — most of this is overhead |
-   | **Ecosystem** — mobile apps (Grocy Android/iOS), barcode scanners, receipt import tools exist | **API complexity** — must join multiple endpoints (products + stock + locations) to get a simple "what's available" list. No single endpoint for our use case. |
-   | **Shared data** — other HA automations/dashboards can also see inventory status | **Configuration burden** — user must set up Grocy API key, URL, map product names to our ingredient list, deal with Grocy's product/quantity model |
-   | **Future-proof for advanced features** — if we ever want expiry warnings, automatic purchase logging, or receipt OCR, Grocy already has it | **Name matching problem** — Grocy product names (user-defined, possibly in any language) must somehow match our AI ingredient names. This is a significant fuzzy-matching challenge. |
-   | | **Grocy is overkill** — it's a full "kitchen ERP". Our original ToR calls inventory "a hint, not a strict truth". Grocy's philosophy is precise stock management — fundamentally different from our "good enough" approach. |
-
-   ---
-
-   #### Option C: Hybrid — Self-implemented shelf with optional Grocy import/HA todo export
-
-   Build our own simple shelf (Option A), but add optional bridges:
-   - **Import from Grocy**: If user has Grocy, offer a one-way sync button to pull current stock into our shelf list (flatten Grocy's complex model into our simple item+location list).
-   - **Export shopping list to HA todo**: When Mode C generates a shopping list, push items to HA's native `todo.shopping_list` entity (via `todo.add_item` service call) so they appear in the HA sidebar and sync to Bring/Alexa/Google if configured.
-
-   > **⚠️ Important: C does NOT require B.** Option B means Grocy IS the backend — all reads and writes go through Grocy's multi-endpoint API, and our data model must map bidirectionally to Grocy's product/stock/location model. Option C uses our own local JSON as the backend (identical to A), and only adds a thin one-way "pull snapshot" from Grocy plus a simple `todo.add_item` call for shopping lists. The Grocy bridge in C is a single read-only API call to flatten stock into our list — fundamentally simpler than B's full CRUD integration.
-
-   | Pros | Cons |
-   |------|------|
-   | **Works standalone** (like Option A) but **benefits from Grocy** if user has it | **More code to maintain** — the bridges add import/export logic, error handling, and UI for configuration |
-   | **Shopping list lives in HA ecosystem** — visible in sidebar, syncs to phone apps (Bring, etc.) via existing HA integrations | **Two sources of truth risk** — if user edits both Grocy and our shelf, they can drift. Need clear "import is snapshot, not live sync" UX. |
-   | **Gradual progressive adoption** — start simple, enable Grocy bridge only if needed | **Import mapping** — still need to handle Grocy product name → our ingredient name matching for the import bridge |
-   | **Best of both worlds for shopping lists** — generated by our engine, consumed by HA's todo ecosystem | |
-
-   ---
-
-   #### Decision Factors
-
-   | Factor | Option A (Self) | Option B (Grocy) | Option C (Hybrid) |
-   |--------|----------------|-----------------|-------------------|
-   | Install complexity for user | ✅ None | ✅ Low (Grocy is a one-click HA app) | ✅ None (bridges optional) |
-   | Implementation effort (Phase 8) | ✅ Low (familiar JSON+API pattern) | ❌ High (full bidirectional Grocy API integration + name mapping across all CRUD) | ⚠️ Medium (= A + thin read-only Grocy snapshot bridge + HA todo.add_item call) |
-   | Data model fit for AI prompts | ✅ Perfect (built for it) | ⚠️ Needs flattening | ✅ Perfect (built for it) |
-   | Shopping list in HA ecosystem | ❌ Internal only | ✅ Via Grocy sync | ✅ Via HA `todo.add_item` |
-   | Advanced features (expiry, quantities) | ❌ Not available | ✅ Built-in | ❌ Not available (import snapshot only) |
-   | Dependency risk | ✅ None | ❌ Grocy + HA integration | ⚠️ Low (bridges are optional) |
-   | User already using Grocy | ❌ Duplicate work | ✅ Single source of truth | ⚠️ One-way import (snapshot) |
+   - **Status: ✅ RESOLVED — Option C (Hybrid) selected by project owner (2026-03-17)**
+   - **Decision:** Build a self-implemented shelf (`shelf_inventory.json` + REST API) as the core backend (Phase 8a), then add optional thin bridges:
+     - **HA Shopping List:** Export missing ingredients via `todo.add_item` service call (Tier 1 — critical, ~350,000 HA users)
+     - **Grocy read bridge:** One-way `GET /api/stock` snapshot import to populate shelf (Tier 2 — optional, ~2,000–4,000 HA users)
+     - **Mealie recipe import:** Pull recipe ingredients from Mealie to pre-populate AI builder (Tier 2 — optional, ~2,000 HA users)
+     - **KitchenOwl:** Watch for future stock read bridge (Tier 3 — growing community, AGPL-3.0 license — API calls only)
+   - **Rationale:** Option C is the only path that works standalone on day 1 (zero install friction), respects existing Grocy users' investment (read bridge), and outputs shopping lists to the HA ecosystem where ~350,000 users already are (`todo.add_item`). Full analysis in [External Integrations Research](EXTERNAL_INTEGRATIONS_RESEARCH.md).
 
 ---
 
@@ -1583,6 +1531,7 @@ This section documents deviations from the original ToR specification as of v0.5
 - `docs/NINJA_COMBI_GUIDE.md` - Ninja Combi integration details
 - `docs/NINJA_MEAL_BUILDER_UI_SPEC.md` - UI design inspiration
 - `docs/USE_CASES.md` - Real-world cooking scenarios
+- `docs/EXTERNAL_INTEGRATIONS_RESEARCH.md` - External integrations research (Grocy, Cooklang, Mealie, KitchenOwl)
 - `STATUS.md` - Current project status
 - `README.md` - Project overview
 
@@ -1633,6 +1582,7 @@ This section documents deviations from the original ToR specification as of v0.5
 | 3.3 | 2026-03-17 | Added § 5.6 Ingredient Levels & Cooking Modes specification (3 levels: Compulsory/Normal/Available, 3 modes: Ignore Shelf/Cook Now/Cook Later). Added Phase 8 to development plan, moved Polish & Testing to Phase 9. Updated scope, glossary. | AI Agent |
 | 3.4 | 2026-03-17 | Added Open Question #6: Grocy vs self-implemented shelf backend — full pros/cons analysis for 3 options (Self, Grocy, Hybrid). Status: UNDECIDED, awaiting project owner decision before Phase 8. | AI Agent |
 | 3.5 | 2026-03-17 | Revised Open Question #6 per owner feedback: corrected Grocy install burden (low, not high — it's a one-click HA app), corrected terminology (app, not add-on), clarified that Option C does NOT require Option B (C = A + thin bridges, not A + B). | AI Agent |
+| 3.6 | 2026-03-17 | Resolved Open Question #6: Option C (Hybrid) selected by project owner. Updated Out of Scope to reflect thin bridges. Added Phase 8e (optional external bridges: HA todo export, Grocy read bridge, Mealie recipe import, KitchenOwl watch). Added reference to External Integrations Research document. Incorporated Mealie and KitchenOwl as future integration targets. | Project Owner + AI Agent |
 
 ---
 
