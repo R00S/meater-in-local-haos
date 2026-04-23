@@ -278,7 +278,9 @@
     "recent_desc": "View and restart previous AI recipes for this appliance",
     "no_history_appliance": "No cooking history for this appliance yet. Create your first AI recipe!",
     "incomplete_warning": "⚠️ Incomplete",
-    "incomplete_message": "Please complete ingredient and style selection"
+    "incomplete_message": "Please complete ingredient and style selection",
+    "compulsory_toggle_hint": "Click to mark as compulsory (⭐ must use)",
+    "compulsory_badge_label": "Compulsory"
   },
   "recipe_cook": {
     "overview_title": "📋 Recipe Overview",
@@ -307,7 +309,8 @@
     "notes_placeholder": "Any notes, modifications, or thoughts about this cook...",
     "both_required": "⚠️ Please provide both ratings to save this cook",
     "save_complete": "💾 Save & Complete",
-    "skip": "⏭️ Skip Rating"
+    "skip": "⏭️ Skip Rating",
+    "skip_shelf_update": "Skip shelf update"
   },
   "history": {
     "title": "📋 Cook History",
@@ -555,5 +558,50 @@
     "west_african": "West African",
     "australian": "Australian",
     "polynesian": "Polynesian"
+  },
+  "shelf": {
+    "title": "🗄️ Shelf Management",
+    "enable_label": "Enable Shelf Management",
+    "enable_desc": "Track what you have on your shelf and fridge",
+    "location_fridge": "🧊 Fridge",
+    "location_larder": "🏺 Larder / Pantry",
+    "location_freezer": "❄️ Freezer",
+    "location_spices": "🧂 Spices & Seasonings",
+    "add_item": "＋ Add Item",
+    "item_name_placeholder": "Item name",
+    "item_quantity_placeholder": "Quantity (optional)",
+    "item_location_label": "Location",
+    "save_item": "Save",
+    "cancel": "Cancel",
+    "remove_item": "Remove",
+    "empty": "Nothing here yet.",
+    "shopping_list_btn": "🛒 Shopping List",
+    "back": "← Back",
+    "no_items": "Your shelf is empty. Add items to get started."
+  },
+  "cooking_mode": {
+    "selector_title": "🍳 Cooking Mode",
+    "selector_hint": "How should the AI use your shelf inventory?",
+    "mode_a_label": "A — Ignore Shelf",
+    "mode_a_desc": "Generate recipes freely from selected ingredients",
+    "mode_b_label": "B — Cook Now",
+    "mode_b_desc": "Use ONLY what you currently have (shelf + selected)",
+    "mode_c_label": "C — Cook Later",
+    "mode_c_desc": "Generate recipe; add missing items to shopping list"
+  },
+  "post_cook": {
+    "update_shelf_title": "📦 Update Your Shelf?",
+    "update_shelf_desc": "Which ingredients did you use up from your shelf?",
+    "update_shelf_btn": "Update Shelf",
+    "add_to_list_btn": "🛒 Add Depleted to Shopping List",
+    "skip_btn": "Skip"
+  },
+  "shopping_list": {
+    "title": "🛒 Shopping List",
+    "empty": "Your shopping list is empty.",
+    "clear_checked": "Clear Checked",
+    "back": "← Back",
+    "item_checked": "Got it",
+    "item_unchecked": "Need it"
   }
 }

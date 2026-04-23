@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 23 Apr 2026, 17:59 CET
+ * AUTO-GENERATED: 23 Apr 2026, 19:34 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 23 Apr 2026, 17:59 CET
+// Last generated: 23 Apr 2026, 19:34 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -12414,7 +12414,9 @@ const I18N_STRINGS = {
       "recent_desc": "View and restart previous AI recipes for this appliance",
       "no_history_appliance": "No cooking history for this appliance yet. Create your first AI recipe!",
       "incomplete_warning": "⚠️ Incomplete",
-      "incomplete_message": "Please complete ingredient and style selection"
+      "incomplete_message": "Please complete ingredient and style selection",
+      "compulsory_toggle_hint": "Click to mark as compulsory (⭐ must use)",
+      "compulsory_badge_label": "Compulsory"
     },
     "recipe_cook": {
       "overview_title": "📋 Recipe Overview",
@@ -12443,7 +12445,8 @@ const I18N_STRINGS = {
       "notes_placeholder": "Any notes, modifications, or thoughts about this cook...",
       "both_required": "⚠️ Please provide both ratings to save this cook",
       "save_complete": "💾 Save & Complete",
-      "skip": "⏭️ Skip Rating"
+      "skip": "⏭️ Skip Rating",
+      "skip_shelf_update": "Skip shelf update"
     },
     "history": {
       "title": "📋 Cook History",
@@ -12691,6 +12694,51 @@ const I18N_STRINGS = {
       "west_african": "West African",
       "australian": "Australian",
       "polynesian": "Polynesian"
+    },
+    "shelf": {
+      "title": "🗄️ Shelf Management",
+      "enable_label": "Enable Shelf Management",
+      "enable_desc": "Track what you have on your shelf and fridge",
+      "location_fridge": "🧊 Fridge",
+      "location_larder": "🏺 Larder / Pantry",
+      "location_freezer": "❄️ Freezer",
+      "location_spices": "🧂 Spices & Seasonings",
+      "add_item": "＋ Add Item",
+      "item_name_placeholder": "Item name",
+      "item_quantity_placeholder": "Quantity (optional)",
+      "item_location_label": "Location",
+      "save_item": "Save",
+      "cancel": "Cancel",
+      "remove_item": "Remove",
+      "empty": "Nothing here yet.",
+      "shopping_list_btn": "🛒 Shopping List",
+      "back": "← Back",
+      "no_items": "Your shelf is empty. Add items to get started."
+    },
+    "cooking_mode": {
+      "selector_title": "🍳 Cooking Mode",
+      "selector_hint": "How should the AI use your shelf inventory?",
+      "mode_a_label": "A — Ignore Shelf",
+      "mode_a_desc": "Generate recipes freely from selected ingredients",
+      "mode_b_label": "B — Cook Now",
+      "mode_b_desc": "Use ONLY what you currently have (shelf + selected)",
+      "mode_c_label": "C — Cook Later",
+      "mode_c_desc": "Generate recipe; add missing items to shopping list"
+    },
+    "post_cook": {
+      "update_shelf_title": "📦 Update Your Shelf?",
+      "update_shelf_desc": "Which ingredients did you use up from your shelf?",
+      "update_shelf_btn": "Update Shelf",
+      "add_to_list_btn": "🛒 Add Depleted to Shopping List",
+      "skip_btn": "Skip"
+    },
+    "shopping_list": {
+      "title": "🛒 Shopping List",
+      "empty": "Your shopping list is empty.",
+      "clear_checked": "Clear Checked",
+      "back": "← Back",
+      "item_checked": "Got it",
+      "item_unchecked": "Need it"
     }
   },
   "sv": {
@@ -12973,7 +13021,9 @@ const I18N_STRINGS = {
       "recent_desc": "Visa och starta om tidigare AI-recept för denna apparat",
       "no_history_appliance": "Ingen tillagningshistorik för denna apparat ännu. Skapa ditt första AI-recept!",
       "incomplete_warning": "⚠️ Ofullständig",
-      "incomplete_message": "Slutför val av ingredienser och stil"
+      "incomplete_message": "Slutför val av ingredienser och stil",
+      "compulsory_toggle_hint": "Klicka för att markera som obligatorisk (⭐ måste användas)",
+      "compulsory_badge_label": "Obligatorisk"
     },
     "recipe_cook": {
       "overview_title": "📋 Receptöversikt",
@@ -13002,7 +13052,8 @@ const I18N_STRINGS = {
       "notes_placeholder": "Anteckningar, ändringar eller tankar om denna tillagning...",
       "both_required": "⚠️ Ange båda betygen för att spara tillagningen",
       "save_complete": "💾 Spara & slutför",
-      "skip": "⏭️ Hoppa över betyg"
+      "skip": "⏭️ Hoppa över betyg",
+      "skip_shelf_update": "Hoppa över hylluppdatering"
     },
     "history": {
       "title": "📋 Tillagningshistorik",
@@ -13248,6 +13299,51 @@ const I18N_STRINGS = {
       "west_african": "Västafrikansk",
       "australian": "Australisk",
       "polynesian": "Polynesisk"
+    },
+    "shelf": {
+      "title": "🗄️ Hyllhantering",
+      "enable_label": "Aktivera hyllhantering",
+      "enable_desc": "Spåra vad du har i kylskåpet och skafferiet",
+      "location_fridge": "🧊 Kylskåp",
+      "location_larder": "🏺 Skafferi",
+      "location_freezer": "❄️ Frys",
+      "location_spices": "🧂 Kryddor & Smaksättare",
+      "add_item": "＋ Lägg till vara",
+      "item_name_placeholder": "Varunamn",
+      "item_quantity_placeholder": "Mängd (valfritt)",
+      "item_location_label": "Plats",
+      "save_item": "Spara",
+      "cancel": "Avbryt",
+      "remove_item": "Ta bort",
+      "empty": "Inget här ännu.",
+      "shopping_list_btn": "🛒 Inköpslista",
+      "back": "← Tillbaka",
+      "no_items": "Din hylla är tom. Lägg till varor för att komma igång."
+    },
+    "cooking_mode": {
+      "selector_title": "🍳 Tillagningsläge",
+      "selector_hint": "Hur ska AI:n använda din hyllinventering?",
+      "mode_a_label": "A — Ignorera hylla",
+      "mode_a_desc": "Generera recept fritt från valda ingredienser",
+      "mode_b_label": "B — Laga nu",
+      "mode_b_desc": "Använd BARA vad du har (hylla + valda)",
+      "mode_c_label": "C — Laga senare",
+      "mode_c_desc": "Generera recept; lägg saknade varor på inköpslistan"
+    },
+    "post_cook": {
+      "update_shelf_title": "📦 Uppdatera din hylla?",
+      "update_shelf_desc": "Vilka ingredienser använde du upp från din hylla?",
+      "update_shelf_btn": "Uppdatera hylla",
+      "add_to_list_btn": "🛒 Lägg uppbrukade på inköpslistan",
+      "skip_btn": "Hoppa över"
+    },
+    "shopping_list": {
+      "title": "🛒 Inköpslista",
+      "empty": "Din inköpslista är tom.",
+      "clear_checked": "Ta bort ikryssade",
+      "back": "← Tillbaka",
+      "item_checked": "Har det",
+      "item_unchecked": "Behöver det"
     }
   }
 };
@@ -13396,6 +13492,16 @@ class KitchenCookingPanel extends LitElement {
       _language: { type: String },
       _measurementSystem: { type: String },
       _hideOtherDataSource: { type: Boolean },
+      // Phase 8: Ingredient levels, shelf management, cooking modes
+      _shelfEnabled: { type: Boolean },
+      _cookingMode: { type: String },
+      _shelfInventory: { type: Array },
+      _showAddShelfItem: { type: Boolean },
+      _shelfAddName: { type: String },
+      _shelfAddLocation: { type: String },
+      _shelfAddQuantity: { type: String },
+      _shoppingList: { type: Array },
+      _pendingShelfUpdate: { type: Object },
     };
   }
 
@@ -13507,6 +13613,16 @@ class KitchenCookingPanel extends LitElement {
     this._language = 'en';               // UI language: 'sv' or 'en'
     this._measurementSystem = 'se';      // Measurement: 'se', 'uk', or 'us'
     this._hideOtherDataSource = false;   // Hide inactive data source button
+    // Phase 8: Ingredient levels, shelf management, cooking modes
+    this._shelfEnabled = false;
+    this._cookingMode = 'A';
+    this._shelfInventory = [];
+    this._showAddShelfItem = false;
+    this._shelfAddName = '';
+    this._shelfAddLocation = 'larder';
+    this._shelfAddQuantity = '';
+    this._shoppingList = [];
+    this._pendingShelfUpdate = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -13527,6 +13643,9 @@ class KitchenCookingPanel extends LitElement {
     this._loadLanguagePreference();
     this._loadMeasurementPreference();
     this._loadHideOtherDataSourcePreference();
+    
+    // Phase 8: Load shelf preference + inventory
+    this._loadShelfPreference();
     
     // Load AI settings to determine if AI Recipe Builder should be visible
     this._loadAISettings();
@@ -13867,6 +13986,146 @@ class KitchenCookingPanel extends LitElement {
     } catch (e) {
       // localStorage unavailable
     }
+  }
+
+  // ---- Phase 8: Shelf preference ----
+
+  async _loadShelfPreference() {
+    try {
+      const prefs = await this.hass.callApi('GET', 'kitchen_cooking_engine/preferences');
+      if (prefs) {
+        if (typeof prefs.shelf_enabled === 'boolean') {
+          this._shelfEnabled = prefs.shelf_enabled;
+        }
+        if (prefs.cooking_mode && ['A','B','C'].includes(prefs.cooking_mode)) {
+          this._cookingMode = prefs.cooking_mode;
+        }
+      }
+      if (this._shelfEnabled) {
+        await this._loadShelfInventory();
+      }
+    } catch (e) {
+      console.log('Could not load shelf preference:', e);
+    }
+  }
+
+  async _saveShelfEnabled(enabled) {
+    this._shelfEnabled = enabled;
+    try {
+      await this.hass.callApi('PATCH', 'kitchen_cooking_engine/preferences', { shelf_enabled: enabled });
+      if (enabled) {
+        await this._loadShelfInventory();
+      }
+    } catch (e) {
+      console.error('Could not save shelf_enabled:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _saveCookingMode(mode) {
+    this._cookingMode = mode;
+    try {
+      await this.hass.callApi('PATCH', 'kitchen_cooking_engine/preferences', { cooking_mode: mode });
+    } catch (e) {
+      console.error('Could not save cooking_mode:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _loadShelfInventory() {
+    try {
+      const resp = await this.hass.callApi('GET', 'kitchen_cooking_engine/shelf');
+      this._shelfInventory = resp && resp.items ? resp.items : [];
+    } catch (e) {
+      console.error('Could not load shelf inventory:', e);
+      this._shelfInventory = [];
+    }
+    this.requestUpdate();
+  }
+
+  async _addShelfItem() {
+    const name = (this._shelfAddName || '').trim();
+    if (!name) return;
+    try {
+      const resp = await this.hass.callApi('POST', 'kitchen_cooking_engine/shelf', {
+        name,
+        location: this._shelfAddLocation || 'larder',
+        quantity: this._shelfAddQuantity || '',
+      });
+      if (resp && resp.item) {
+        this._shelfInventory = [...this._shelfInventory, resp.item];
+      }
+      this._shelfAddName = '';
+      this._shelfAddQuantity = '';
+      this._showAddShelfItem = false;
+    } catch (e) {
+      console.error('Could not add shelf item:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _removeShelfItem(id) {
+    try {
+      await this.hass.callApi('DELETE', `kitchen_cooking_engine/shelf?id=${encodeURIComponent(id)}`);
+      this._shelfInventory = this._shelfInventory.filter(i => i.id !== id);
+    } catch (e) {
+      console.error('Could not remove shelf item:', e);
+    }
+    this.requestUpdate();
+  }
+
+  // ---- Phase 8d: Shopping list ----
+
+  async _loadShoppingList() {
+    try {
+      const resp = await this.hass.callApi('GET', 'kitchen_cooking_engine/shopping_list');
+      this._shoppingList = resp && resp.items ? resp.items : [];
+    } catch (e) {
+      console.error('Could not load shopping list:', e);
+      this._shoppingList = [];
+    }
+    this.requestUpdate();
+  }
+
+  async _toggleShoppingListItem(id) {
+    try {
+      await this.hass.callApi('PATCH', 'kitchen_cooking_engine/shopping_list', { id });
+      this._shoppingList = this._shoppingList.map(i =>
+        i.id === id ? { ...i, checked: !i.checked } : i
+      );
+    } catch (e) {
+      console.error('Could not toggle shopping list item:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _deleteShoppingListItem(id) {
+    try {
+      await this.hass.callApi('DELETE', `kitchen_cooking_engine/shopping_list?id=${encodeURIComponent(id)}`);
+      this._shoppingList = this._shoppingList.filter(i => i.id !== id);
+    } catch (e) {
+      console.error('Could not delete shopping list item:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _clearCheckedShoppingItems() {
+    const checked = (this._shoppingList || []).filter(i => i.checked);
+    for (const item of checked) {
+      await this._deleteShoppingListItem(item.id);
+    }
+  }
+
+  _navigateToShelfManagement() {
+    this._showAddShelfItem = false;
+    this._currentPath = 'shelf_management';
+    this.requestUpdate();
+  }
+
+  _navigateToShoppingList() {
+    this._loadShoppingList();
+    this._currentPath = 'shopping_list';
+    this.requestUpdate();
   }
 
   async _loadHistory() {
@@ -15903,6 +16162,11 @@ class KitchenCookingPanel extends LitElement {
       return this._renderMeaterCookRating();
     }
     
+    // Phase 8d: Post-cook shelf update prompt
+    if (this._pendingShelfUpdate) {
+      return this._renderPostCookShelfUpdate();
+    }
+
     // Show recipe cook flow when actively viewing one (pointer is set)
     if (this._recipeCookState) {
       return this._renderRecipeCookFlow();
@@ -16038,6 +16302,12 @@ class KitchenCookingPanel extends LitElement {
       
       case 'previous_cooks':
         return this._renderPreviousCooksPath();
+      
+      case 'shelf_management':
+        return this._renderShelfManagement();
+
+      case 'shopping_list':
+        return this._renderShoppingList();
       
       default:
         // Fallback to welcome screen for any unrecognized path
@@ -16950,7 +17220,258 @@ class KitchenCookingPanel extends LitElement {
             </p>
           </div>
         </ha-card>
+
+        <!-- Phase 8b: Shelf Management toggle -->
+        <ha-card>
+          <div class="card-content">
+            <h3>${this._t('shelf.enable_label')}</h3>
+            <p class="info-text" style="margin-bottom: 10px;">${this._t('shelf.enable_desc')}</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <label class="checkbox-label">
+                <input
+                  type="checkbox"
+                  ?checked=${this._shelfEnabled}
+                  @change=${(e) => this._saveShelfEnabled(e.target.checked)}
+                />
+                ${this._shelfEnabled ? '✅ ' + this._t('shelf.enable_label') : this._t('shelf.enable_label')}
+              </label>
+            </div>
+            ${this._shelfEnabled ? html`
+              <button class="primary-btn" style="margin-top: 12px;" @click=${() => this._navigateToShelfManagement()}>
+                ${this._t('shelf.title')}
+              </button>
+            ` : ''}
+          </div>
+        </ha-card>
       `}
+    `;
+  }
+
+  // ============================================================================
+  // PHASE 8b: SHELF MANAGEMENT SCREEN
+  // ============================================================================
+
+  _renderShelfManagement() {
+    const locations = ['fridge', 'larder', 'freezer', 'spices'];
+    const locationKeys = {
+      fridge: 'shelf.location_fridge',
+      larder: 'shelf.location_larder',
+      freezer: 'shelf.location_freezer',
+      spices: 'shelf.location_spices',
+    };
+    const grouped = {};
+    for (const loc of locations) grouped[loc] = [];
+    for (const item of (this._shelfInventory || [])) {
+      const loc = item.location || 'larder';
+      if (!grouped[loc]) grouped[loc] = [];
+      grouped[loc].push(item);
+    }
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => { this._currentPath = 'welcome'; this.requestUpdate(); }}>
+          ${this._t('shelf.back')}
+        </button>
+        <h2>${this._t('shelf.title')}</h2>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <button class="secondary-btn" @click=${() => this._navigateToShoppingList()}>
+              ${this._t('shelf.shopping_list_btn')}
+            </button>
+            <button class="primary-btn" @click=${() => { this._showAddShelfItem = !this._showAddShelfItem; this.requestUpdate(); }}>
+              ${this._t('shelf.add_item')}
+            </button>
+          </div>
+
+          ${this._showAddShelfItem ? html`
+            <div style="background: var(--secondary-background-color); padding: 12px; border-radius: 8px; margin-bottom: 16px;">
+              <input
+                type="text"
+                placeholder="${this._t('shelf.item_name_placeholder')}"
+                .value=${this._shelfAddName}
+                @input=${(e) => { this._shelfAddName = e.target.value; }}
+                style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; margin-bottom: 8px; box-sizing: border-box;"
+              />
+              <select
+                .value=${this._shelfAddLocation}
+                @change=${(e) => { this._shelfAddLocation = e.target.value; }}
+                style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; margin-bottom: 8px; box-sizing: border-box;"
+              >
+                ${locations.map(loc => html`
+                  <option value=${loc} ?selected=${this._shelfAddLocation === loc}>
+                    ${this._t(locationKeys[loc])}
+                  </option>
+                `)}
+              </select>
+              <input
+                type="text"
+                placeholder="${this._t('shelf.item_quantity_placeholder')}"
+                .value=${this._shelfAddQuantity}
+                @input=${(e) => { this._shelfAddQuantity = e.target.value; }}
+                style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; margin-bottom: 8px; box-sizing: border-box;"
+              />
+              <div style="display: flex; gap: 8px;">
+                <button class="primary-btn" @click=${() => this._addShelfItem()}>${this._t('shelf.save_item')}</button>
+                <button class="secondary-btn" @click=${() => { this._showAddShelfItem = false; this.requestUpdate(); }}>${this._t('shelf.cancel')}</button>
+              </div>
+            </div>
+          ` : ''}
+
+          ${locations.map(loc => {
+            const items = grouped[loc] || [];
+            return html`
+              <div style="margin-bottom: 16px;">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">${this._t(locationKeys[loc])}</h4>
+                ${items.length === 0 ? html`
+                  <p style="font-size: 0.85em; color: var(--secondary-text-color);">${this._t('shelf.empty')}</p>
+                ` : html`
+                  <div style="display: flex; flex-direction: column; gap: 4px;">
+                    ${items.map(item => html`
+                      <div style="display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: var(--secondary-background-color); border-radius: 6px;">
+                        <div>
+                          <span style="font-weight: 500;">${item.name}</span>
+                          ${item.quantity ? html`<span style="font-size: 0.85em; color: var(--secondary-text-color); margin-left: 8px;">${item.quantity}</span>` : ''}
+                        </div>
+                        <button class="secondary-btn" style="padding: 4px 10px; font-size: 0.8em;" @click=${() => this._removeShelfItem(item.id)}>
+                          ${this._t('shelf.remove_item')}
+                        </button>
+                      </div>
+                    `)}
+                  </div>
+                `}
+              </div>
+            `;
+          })}
+        </div>
+      </ha-card>
+    `;
+  }
+
+  // ============================================================================
+  // PHASE 8d: SHOPPING LIST SCREEN
+  // ============================================================================
+
+  _renderShoppingList() {
+    const items = this._shoppingList || [];
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => { this._currentPath = 'shelf_management'; this.requestUpdate(); }}>
+          ${this._t('shopping_list.back')}
+        </button>
+        <h2>${this._t('shopping_list.title')}</h2>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          ${items.length === 0 ? html`
+            <p style="color: var(--secondary-text-color);">${this._t('shopping_list.empty')}</p>
+          ` : html`
+            <div style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px;">
+              ${items.map(item => html`
+                <div style="display: flex; align-items: center; gap: 10px; padding: 8px; background: var(--secondary-background-color); border-radius: 6px; ${item.checked ? 'opacity:0.5;text-decoration:line-through;' : ''}">
+                  <input
+                    type="checkbox"
+                    ?checked=${item.checked}
+                    @change=${() => this._toggleShoppingListItem(item.id)}
+                    style="width: 18px; height: 18px; cursor: pointer; flex-shrink: 0;"
+                  />
+                  <span style="flex: 1;">${item.name}${item.quantity ? html` <span style="font-size:0.85em;color:var(--secondary-text-color);">${item.quantity}</span>` : ''}</span>
+                  <button class="secondary-btn" style="padding: 4px 10px; font-size: 0.8em;" @click=${() => this._deleteShoppingListItem(item.id)}>✕</button>
+                </div>
+              `)}
+            </div>
+            ${items.some(i => i.checked) ? html`
+              <button class="secondary-btn" @click=${() => this._clearCheckedShoppingItems()}>
+                ${this._t('shopping_list.clear_checked')}
+              </button>
+            ` : ''}
+          `}
+        </div>
+      </ha-card>
+    `;
+  }
+
+  // ============================================================================
+  // PHASE 8d: POST-COOK SHELF UPDATE PROMPT
+  // ============================================================================
+
+  _renderPostCookShelfUpdate() {
+    const update = this._pendingShelfUpdate;
+    if (!update) return html``;
+    const checkboxes = update.checkboxes || [];
+    return html`
+      <ha-card>
+        <div class="card-content">
+          <h3>${this._t('post_cook.update_shelf_title')}</h3>
+          <p class="info-text">${this._t('post_cook.update_shelf_desc')}</p>
+
+          <div style="display: flex; flex-direction: column; gap: 6px; margin: 12px 0;">
+            ${checkboxes.map((cb, idx) => html`
+              <label class="checkbox-label">
+                <input
+                  type="checkbox"
+                  ?checked=${cb.checked}
+                  @change=${(e) => {
+                    this._pendingShelfUpdate = {
+                      ...update,
+                      checkboxes: checkboxes.map((c, i) => i === idx ? { ...c, checked: e.target.checked } : c),
+                    };
+                    this.requestUpdate();
+                  }}
+                />
+                ${cb.name}
+              </label>
+            `)}
+          </div>
+
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px;">
+            <button class="primary-btn" @click=${async () => {
+              const checked = checkboxes.filter(c => c.checked);
+              for (const item of checked) {
+                const shelfItem = (this._shelfInventory || []).find(
+                  s => s.name.toLowerCase() === item.name.toLowerCase()
+                );
+                if (shelfItem) {
+                  await this._removeShelfItem(shelfItem.id);
+                }
+              }
+              this._pendingShelfUpdate = null;
+              this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
+              this.requestUpdate();
+            }}>
+              ${this._t('post_cook.update_shelf_btn')}
+            </button>
+
+            <button class="secondary-btn" @click=${async () => {
+              const unchecked = checkboxes.filter(c => !c.checked);
+              if (unchecked.length > 0) {
+                try {
+                  await this.hass.callApi('POST', 'kitchen_cooking_engine/shopping_list', {
+                    items: unchecked.map(c => ({ name: c.name })),
+                  });
+                } catch (e) {
+                  console.error('Could not add to shopping list:', e);
+                }
+              }
+              this._pendingShelfUpdate = null;
+              this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
+              this.requestUpdate();
+            }}>
+              ${this._t('post_cook.add_to_list_btn')}
+            </button>
+
+            <button class="secondary-btn" @click=${() => {
+              this._pendingShelfUpdate = null;
+              this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
+              this.requestUpdate();
+            }}>
+              ${this._t('post_cook.skip_btn')}
+            </button>
+          </div>
+        </div>
+      </ha-card>
     `;
   }
 
@@ -17907,13 +18428,50 @@ class KitchenCookingPanel extends LitElement {
             <h4>${this._t('ai_recipe.selected_ingredients_label')} (${this._selectedIngredients.length}):</h4>
             <div class="ingredient-tags">
               ${this._selectedIngredients.map(ing => html`
-                <span class="ingredient-tag">
-                  ${ing}
-                  <button @click=${() => this._removeIngredient(ing)}>×</button>
+                <span
+                  class="ingredient-tag ${ing.compulsory ? 'ingredient-tag--compulsory' : ''}"
+                  title="${this._t('ai_recipe.compulsory_toggle_hint')}"
+                  @click=${(e) => {
+                    // Only toggle if click was NOT on the × button
+                    if (!e.target.classList.contains('ingredient-remove-btn')) {
+                      this._toggleIngredientCompulsory(ing.name);
+                    }
+                  }}
+                  style="cursor:pointer;"
+                >
+                  ${ing.compulsory ? html`<span class="compulsory-star">⭐</span>` : ''}
+                  ${ing.name}
+                  <button
+                    class="ingredient-remove-btn"
+                    @click=${(e) => { e.stopPropagation(); this._removeIngredient(ing.name); }}
+                  >×</button>
                 </span>
               `)}
             </div>
           </div>
+
+          ${this._shelfEnabled ? html`
+            <div style="margin-top: 16px; padding: 12px; background: var(--secondary-background-color); border-radius: 8px;">
+              <h4 style="margin: 0 0 8px 0;">${this._t('cooking_mode.selector_title')}</h4>
+              <p style="margin: 0 0 10px 0; font-size: 0.85em; color: var(--secondary-text-color);">${this._t('cooking_mode.selector_hint')}</p>
+              ${['A','B','C'].map(mode => html`
+                <label style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; cursor: pointer;">
+                  <input
+                    type="radio"
+                    name="cooking_mode"
+                    .value=${mode}
+                    ?checked=${this._cookingMode === mode}
+                    @change=${() => this._saveCookingMode(mode)}
+                    style="margin-top: 3px; flex-shrink: 0;"
+                  />
+                  <div>
+                    <div style="font-weight: 600; font-size: 0.9em;">${this._t('cooking_mode.mode_' + mode.toLowerCase() + '_label')}</div>
+                    <div style="font-size: 0.8em; color: var(--secondary-text-color);">${this._t('cooking_mode.mode_' + mode.toLowerCase() + '_desc')}</div>
+                  </div>
+                </label>
+              `)}
+            </div>
+          ` : ''}
 
           <button 
             class="primary-btn"
@@ -18031,7 +18589,7 @@ class KitchenCookingPanel extends LitElement {
       <label class="ingredient-checkbox">
         <input 
           type="checkbox" 
-          ?checked=${this._selectedIngredients.includes(valueName)}
+          ?checked=${!!this._selectedIngredients.find(i => i.name === valueName)}
           @change=${(e) => this._toggleIngredient(valueName, e.target.checked)}
         />
         ${displayName}
@@ -18832,6 +19390,19 @@ class KitchenCookingPanel extends LitElement {
         }
       });
 
+      // Phase 8d: Show shelf update prompt if shelf is enabled
+      if (this._shelfEnabled && recipe.ingredients && recipe.ingredients.length > 0) {
+        const staples = (typeof AI_ASSUMED_STAPLES !== 'undefined') ? AI_ASSUMED_STAPLES.map(s => s.toLowerCase()) : [];
+        const checkboxes = recipe.ingredients.map(ing => ({
+          name: ing,
+          checked: !staples.some(s => ing.toLowerCase().includes(s)),
+        }));
+        this._pendingShelfUpdate = { checkboxes };
+        this._stopRecipeCook();
+        this.requestUpdate();
+        return;
+      }
+
       // Show success message
       this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
 
@@ -18849,11 +19420,11 @@ class KitchenCookingPanel extends LitElement {
    */
   _toggleIngredient(ingredient, enabled) {
     if (enabled) {
-      if (!this._selectedIngredients.includes(ingredient)) {
-        this._selectedIngredients = [...this._selectedIngredients, ingredient];
+      if (!this._selectedIngredients.find(i => i.name === ingredient)) {
+        this._selectedIngredients = [...this._selectedIngredients, { name: ingredient, compulsory: false }];
       }
     } else {
-      this._selectedIngredients = this._selectedIngredients.filter(i => i !== ingredient);
+      this._selectedIngredients = this._selectedIngredients.filter(i => i.name !== ingredient);
     }
     this.requestUpdate();
   }
@@ -18862,8 +19433,8 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Add custom ingredient
    */
   _addCustomIngredient(ingredient) {
-    if (ingredient && !this._selectedIngredients.includes(ingredient)) {
-      this._selectedIngredients = [...this._selectedIngredients, ingredient];
+    if (ingredient && !this._selectedIngredients.find(i => i.name === ingredient)) {
+      this._selectedIngredients = [...this._selectedIngredients, { name: ingredient, compulsory: false }];
       this.requestUpdate();
     }
   }
@@ -18872,7 +19443,17 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Remove ingredient from selection
    */
   _removeIngredient(ingredient) {
-    this._selectedIngredients = this._selectedIngredients.filter(i => i !== ingredient);
+    this._selectedIngredients = this._selectedIngredients.filter(i => i.name !== ingredient);
+    this.requestUpdate();
+  }
+
+  /**
+   * Phase 8a: Toggle compulsory flag on an ingredient
+   */
+  _toggleIngredientCompulsory(name) {
+    this._selectedIngredients = this._selectedIngredients.map(i =>
+      i.name === name ? { ...i, compulsory: !i.compulsory } : i
+    );
     this.requestUpdate();
   }
 
@@ -18957,9 +19538,13 @@ class KitchenCookingPanel extends LitElement {
       // Get appliance IDs (main + selected secondaries)
       const applianceIds = [this._selectedAppliance.id, ...this._selectedSecondaryAppliances];
 
+      // Phase 8a: extract ingredient names + compulsory list
+      const ingredientNames = this._selectedIngredients.map(i => i.name);
+      const compulsoryIngredients = this._selectedIngredients.filter(i => i.compulsory).map(i => i.name);
+
       // Build request with new parameters
       const requestBody = {
-        ingredients: this._selectedIngredients,
+        ingredients: ingredientNames,
         cooking_style: this._selectedCookingStyle,
         appliance_ids: applianceIds,
         main_appliance_id: this._selectedAppliance.id,
@@ -18967,7 +19552,14 @@ class KitchenCookingPanel extends LitElement {
         complexity: this._aiComplexity || 3,
         language: this._language || 'en',
         measurement_system: this._measurementSystem || 'us',
+        compulsory_ingredients: compulsoryIngredients,
+        cooking_mode: this._cookingMode || 'A',
       };
+
+      // Phase 8c: If shelf enabled & mode B or C, include shelf items
+      if (this._shelfEnabled && (this._cookingMode === 'B' || this._cookingMode === 'C')) {
+        requestBody.shelf_items = (this._shelfInventory || []).map(i => i.name);
+      }
 
       // Add max time if set (0 = no limit)
       if (this._aiMaxTime && this._aiMaxTime > 0) {
@@ -21601,12 +22193,20 @@ class KitchenCookingPanel extends LitElement {
       }
 
       .ingredient-tag {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
         padding: 4px 10px;
         background: var(--secondary-background-color);
+        border: 1px solid transparent;
         color: var(--secondary-text-color);
         border-radius: 12px;
-        font-size: 11px;
+        font-size: 13px;
+        user-select: none;
+        transition: background 0.15s, border-color 0.15s;
+      }
+
+      .ingredient-tag:hover {
+        background: var(--divider-color);
       }
 
       .view-recipe-btn {
@@ -22546,6 +23146,27 @@ class KitchenCookingPanel extends LitElement {
         margin-left: 4px;
       }
 
+      .ingredient-tag--compulsory {
+        background: rgba(var(--rgb-primary-color, 3, 169, 244), 0.15);
+        border: 1px solid var(--primary-color);
+        color: var(--primary-text-color);
+      }
+
+      .ingredient-tag .compulsory-star {
+        font-size: 11px;
+        margin-right: 3px;
+      }
+
+      .ingredient-remove-btn {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 0 2px;
+        margin-left: 4px;
+      }
+
       .selected-ingredients {
         margin-bottom: 20px;
       }
@@ -22699,7 +23320,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "257";
+const PANEL_VERSION = "258";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
