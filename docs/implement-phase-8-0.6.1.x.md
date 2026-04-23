@@ -103,6 +103,22 @@ Modes A/B/C), 8d (Post-Cook Shelf Update), 8e (External Bridges — deferred).
 
 
 
+### v0.6.1.03 — 2026-04-23
+**Docs: Comprehensive user guide**
+
+- Created `docs/USER_GUIDE.md` — 14 sections covering installation, all 7 appliance
+  types (MEATER+, Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom),
+  every cooking path (MEATER probe flow, Ninja built-in/builder, AI Recipe Builder),
+  recipe cook flow (overview, serving scaling, step-by-step, probe subprocess, ratings,
+  parallel cooks), shelf management (locations, cooking modes A/B/C, post-cook update),
+  shopping list (add/check/export to HA todo), cook history, language & measurement
+  settings, full developer services reference (all 7 HA services with field tables),
+  and troubleshooting (8 common issues).
+- README: Added `## 📖 User Guide` section linking to `docs/USER_GUIDE.md`.
+- No code changes; PANEL_VERSION unchanged at 262.
+
+---
+
 - `_selectedIngredients` was a flat `string[]`; changed to `{name, compulsory}[]`.
   All callers updated: `_toggleIngredient`, `_addCustomIngredient`, `_removeIngredient`,
   `_proceedToCookingStyle` guard, `_generateAIRecipes` request body,

@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.1.02 - MEATER probe subprocess, HA todo.add_item bridge, AI recipe serving scaling
+Last Change: v0.6.1.03 - Comprehensive user guide
 """
 
 DOMAIN = "kitchen_cooking_engine"
