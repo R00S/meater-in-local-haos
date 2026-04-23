@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 17 Mar 2026, 10:50 CET
+ * AUTO-GENERATED: 23 Apr 2026, 16:37 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 17 Mar 2026, 10:50 CET
+// Last generated: 23 Apr 2026, 16:37 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -5304,59 +5304,73 @@ const NINJA_COMBI_RECIPES = [
 const AI_COOKING_STYLES = [
   {
     "id": "quick_and_easy",
-    "name": "Quick And Easy"
+    "name": "Quick And Easy",
+    "name_sv": "Snabbt och enkelt"
   },
   {
     "id": "comfort_food",
-    "name": "Comfort Food"
+    "name": "Comfort Food",
+    "name_sv": "Husmanskost"
   },
   {
     "id": "family_friendly",
-    "name": "Family Friendly"
+    "name": "Family Friendly",
+    "name_sv": "Familjevänligt"
   },
   {
     "id": "healthy",
-    "name": "Healthy"
+    "name": "Healthy",
+    "name_sv": "Hälsosamt"
   },
   {
     "id": "gourmet",
-    "name": "Gourmet"
+    "name": "Gourmet",
+    "name_sv": "Gourmet"
   },
   {
     "id": "meal_prep",
-    "name": "Meal Prep"
+    "name": "Meal Prep",
+    "name_sv": "Förberedd mat"
   },
   {
     "id": "one_pot",
-    "name": "One Pot"
+    "name": "One Pot",
+    "name_sv": "Engrytarätt"
   },
   {
     "id": "slow_cook",
-    "name": "Slow Cook"
+    "name": "Slow Cook",
+    "name_sv": "Långkok"
   },
   {
     "id": "barbeque",
-    "name": "Barbeque"
+    "name": "Barbeque",
+    "name_sv": "Grillat"
   },
   {
     "id": "baking",
-    "name": "Baking"
+    "name": "Baking",
+    "name_sv": "Bakning"
   },
   {
     "id": "low_carb",
-    "name": "Low Carb"
+    "name": "Low Carb",
+    "name_sv": "Lågkolhydrat"
   },
   {
     "id": "high_protein",
-    "name": "High Protein"
+    "name": "High Protein",
+    "name_sv": "Proteinrikt"
   },
   {
     "id": "vegetarian",
-    "name": "Vegetarian"
+    "name": "Vegetarian",
+    "name_sv": "Vegetariskt"
   },
   {
     "id": "vegan",
-    "name": "Vegan"
+    "name": "Vegan",
+    "name_sv": "Veganskt"
   }
 ];
 
@@ -11435,10 +11449,372 @@ const AI_CATEGORY_LABELS = {
   "d": "🫙 Dairy, Oils & Sauces",
   "s": "🌶️ Spices, Nuts & Seasonings"
 };
+const AI_CATEGORY_LABELS_SV = {
+  "p": "🥩 Proteiner",
+  "v": "🥬 Grönsaker & Frukt",
+  "g": "🌾 Spannmål & Stärkelse",
+  "d": "🫙 Mejeriprodukter, Oljor & Såser",
+  "s": "🌶️ Kryddor, Nötter & Smaksättare"
+};
 const AI_CATEGORY_ORDER = ["p", "v", "g", "d", "s"];
 
 // AI Recipe Builder - Assumed staples (always available, not shown in picker)
 const AI_ASSUMED_STAPLES = ["Cooking oil", "Butter", "Salt", "Black pepper", "Sugar", "Vinegar"];
+const AI_ASSUMED_STAPLES_SV = ["Matolja", "Smör", "Salt", "Svartpeppar", "Socker", "Vinäger"];
+
+// AI Recipe Builder - Swedish ingredient display names (id → Swedish)
+const AI_INGREDIENT_NAMES_SV = {
+  "chicken_breast": "Kycklingfilé",
+  "chicken_thigh": "Kycklinglår",
+  "chicken": "Kyckling",
+  "ground_beef": "Nötfärs",
+  "steak": "Biff",
+  "beef": "Nötkött",
+  "pork_chop": "Fläskkotlett",
+  "pork": "Fläskkött",
+  "pork_belly": "Sidfläsk",
+  "salmon": "Lax",
+  "shrimp": "Räkor",
+  "tofu": "Tofu",
+  "eggs": "Ägg",
+  "lamb": "Lammkött",
+  "lamb_shank": "Lammlägg",
+  "duck": "Anka",
+  "turkey": "Kalkon",
+  "goat": "Getkött",
+  "fish": "Fisk",
+  "cod": "Torsk",
+  "herring": "Sill",
+  "tuna": "Tonfisk",
+  "canned_tuna": "Konserverad tonfisk",
+  "crab": "Krabba",
+  "mussels": "Musslor",
+  "bacon": "Bacon",
+  "pancetta": "Pancetta",
+  "prosciutto": "Prosciutto",
+  "jamon": "Serranoskinka",
+  "chorizo": "Chorizo",
+  "chorizo_ar": "Chorizo",
+  "sausage": "Korv",
+  "andouille": "Andouille-korv",
+  "lardons": "Fläskbitar",
+  "ham_hocks": "Fläsklägg",
+  "meatball_mix": "Köttfärs (Fläsk/Nöt)",
+  "tempeh": "Tempeh",
+  "paneer": "Paneer",
+  "catfish": "Havskatt",
+  "kangaroo": "Kängurukött",
+  "anchovies": "Ansjovis",
+  "dried_shrimp": "Torkad räka",
+  "edamame": "Edamame",
+  "stockfish": "Torrfisk",
+  "saltfish": "Saltfisk",
+  "crawfish": "Kräftor",
+  "crayfish": "Torkad räka (mald)",
+  "broccoli": "Broccoli",
+  "carrots": "Morötter",
+  "bell_peppers": "Paprika",
+  "onions": "Lök",
+  "garlic": "Vitlök",
+  "tomatoes": "Tomater",
+  "spinach": "Spenat",
+  "spinach_ng": "Spenat",
+  "potatoes": "Potatis",
+  "sweet_potatoes": "Sötpotatis",
+  "sweet_potato": "Sötpotatis",
+  "zucchini": "Zucchini",
+  "cauliflower": "Blomkål",
+  "green_beans": "Haricots verts",
+  "mushrooms": "Svamp",
+  "shiitake": "Shiitakesvamp",
+  "eggplant": "Aubergine",
+  "cucumber": "Gurka",
+  "celery": "Selleri",
+  "leeks": "Purjolök",
+  "shallots": "Schalottenlök",
+  "green_onions": "Salladslök",
+  "spring_onions": "Vårlök",
+  "chives": "Gräslök",
+  "lettuce": "Sallad",
+  "cabbage": "Kål",
+  "chinese_cabbage": "Napakål",
+  "napa_cabbage": "Napakål",
+  "bok_choy": "Pak choi",
+  "beets": "Rödbetor",
+  "beetroot": "Rödbeta",
+  "parsnips": "Palsternacka",
+  "turnips": "Rovor",
+  "turnip": "Rova",
+  "artichokes": "Kronärtskocka",
+  "avocado": "Avokado",
+  "mango": "Mango",
+  "pineapple": "Ananas",
+  "banana": "Banan",
+  "banana_leaf": "Bananblad",
+  "papaya": "Papaya",
+  "green_papaya": "Grön papaya",
+  "pumpkin": "Pumpa",
+  "squash": "Butternutpumpa",
+  "okra": "Okra",
+  "corn": "Majs",
+  "plantains": "Plantain",
+  "yam": "Jams",
+  "yams": "Jams",
+  "cassava": "Kassava",
+  "yuca": "Kassava",
+  "breadfruit": "Brödfrukter",
+  "tomatillos": "Tomatillos",
+  "jalapenos": "Jalapeños",
+  "poblano": "Poblano-peppar",
+  "ancho": "Anchochili",
+  "chipotle": "Chipotle",
+  "scotch_bonnet": "Scotch Bonnet-peppar",
+  "thai_chili": "Thaichili",
+  "lemongrass": "Citrongräs",
+  "kaffir_lime": "Kaffirlimeblad",
+  "galangal": "Galangal",
+  "ginger": "Ingefära",
+  "daikon": "Daikon-rättika",
+  "korean_radish": "Koreansk rättika",
+  "radish": "Rättika",
+  "bamboo_shoots": "Bambusskott",
+  "bean_sprouts": "Böngroddar",
+  "water_chestnuts": "Vattenkastanjer",
+  "morning_glory": "Vattenspenat",
+  "hearts_of_palm": "Palmhjärtan",
+  "callaloo": "Callaloo",
+  "ackee": "Ackee",
+  "lingonberries": "Lingon",
+  "celeriac": "Rotselleri",
+  "juniper_berries": "Enbär",
+  "dill": "Dill",
+  "parsley": "Persilja",
+  "basil": "Basilika",
+  "basil_tw": "Thaibasilika",
+  "thai_basil": "Thaibasilika",
+  "mint": "Mynta",
+  "cilantro": "Koriander",
+  "oregano": "Oregano",
+  "rosemary": "Rosmarin",
+  "thyme": "Timjan",
+  "tarragon": "Dragon",
+  "bay_leaves": "Lagerblad",
+  "perilla": "Perillablad",
+  "pandan": "Pandanblad",
+  "herbs_mix": "Färska örter (persilja, dill, koriander)",
+  "grape_leaves": "Vinblad",
+  "ridge_gourd": "Trumpetpumpa",
+  "collard_greens": "Collardkål",
+  "rice": "Ris",
+  "pasta": "Pasta",
+  "quinoa": "Quinoa",
+  "bread": "Bröd",
+  "tortillas": "Tortillas",
+  "corn_tortillas": "Majstortillas",
+  "rye_bread": "Rågbröd",
+  "baguette": "Baguette",
+  "pita": "Pitabröd",
+  "lavash": "Lavashbröd",
+  "basmati_rice": "Basmatiris",
+  "jasmine_rice": "Jasminris",
+  "arborio_rice": "Arborioris",
+  "bulgur": "Bulgur",
+  "couscous": "Couscous",
+  "barley": "Korn",
+  "oats": "Havregryn",
+  "flour": "Mjöl",
+  "cornmeal": "Majsmjöl",
+  "cornbread": "Majsbröd",
+  "noodles": "Nudlar",
+  "egg_noodles": "Äggnooodles",
+  "rice_noodles": "Risnudlar",
+  "rice_paper": "Rispapper",
+  "udon": "Udonnudlar",
+  "soba": "Sobanudlar",
+  "japchae_noodles": "Sötpotatisnudlar",
+  "rice_cakes": "Riskakor",
+  "panko": "Pankoströbröd",
+  "phyllo": "Filodeg",
+  "empanada_dough": "Empanadedeg",
+  "biscuit_dough": "Biskedeg",
+  "freekeh": "Freekeh",
+  "wonton_wrappers": "Wonton-deg",
+  "grits": "Majsgröt",
+  "cheese": "Ost",
+  "milk": "Mjölk",
+  "butter": "Smör",
+  "cream": "Grädde",
+  "heavy_cream": "Vispgrädde",
+  "yogurt": "Yoghurt",
+  "sour_cream": "Gräddfil",
+  "cream_cheese": "Färskost",
+  "creme_fraiche": "Crème fraîche",
+  "buttermilk": "Kärnmjölk",
+  "condensed_milk": "Kondenserad mjölk",
+  "evaporated_milk": "Kondenserad mjölk (osötad)",
+  "feta": "Fetaost",
+  "mozzarella": "Mozzarella",
+  "parmesan": "Parmesanost",
+  "cheddar": "Cheddarsost",
+  "gruyere": "Gruyère-ost",
+  "ricotta": "Ricotta",
+  "manchego": "Manchego-ost",
+  "pecorino": "Pecorinoos",
+  "monterey_jack": "Monterey Jack-ost",
+  "provolone": "Provolone-ost",
+  "cotija": "Cotija-ost",
+  "queso_fresco": "Queso Fresco",
+  "queso": "Quesoost",
+  "olive_oil": "Olivolja",
+  "sesame_oil": "Sesamolja",
+  "ghee": "Ghee",
+  "palm_oil": "Palmolja",
+  "niter_kibbeh": "Niter Kibbeh (kryddsmör)",
+  "herb_butter": "Örtssmör",
+  "dulce_de_leche": "Dulce de Leche",
+  "coconut_milk": "Kokosmjölk",
+  "tomato_paste": "Tomatpuré",
+  "soy_sauce": "Soja",
+  "fish_sauce": "Fisksås",
+  "oyster_sauce": "Ostronsås",
+  "hoisin_sauce": "Hoisinsås",
+  "miso_paste": "Misopaste",
+  "gochujang": "Gochujang (chilipaste)",
+  "doenjang": "Doenjang (sojabönspaste)",
+  "doubanjiang": "Doubanjiangsås",
+  "kecap_manis": "Kecap Manis (söt soja)",
+  "shrimp_paste": "Räkpaste",
+  "tamarind": "Tamarind",
+  "tamarind_paste": "Tamarindpaste",
+  "chili_paste": "Chilipaste",
+  "chili_oil": "Chiliolja",
+  "sriracha": "Sriracha",
+  "hot_sauce": "Chilisås",
+  "bbq_sauce": "BBQ-sås",
+  "salsa": "Salsa",
+  "dijon": "Dijonsenap",
+  "mustard": "Senap",
+  "worcestershire": "Worcestershiresås",
+  "tahini": "Tahini",
+  "pomegranate_molasses": "Granatäppelsirap",
+  "red_wine": "Rödvin",
+  "white_wine": "Vitt vin",
+  "wine_white": "Vitt vin",
+  "rice_wine": "Risvin",
+  "rice_vinegar": "Risvinäger",
+  "red_wine_vinegar": "Rödvinsvinäger",
+  "sherry_vinegar": "Sherryvinäger",
+  "mirin": "Mirin",
+  "black_vinegar": "Svart vinäger",
+  "maple_syrup": "Lönnsirap",
+  "molasses": "Melass",
+  "honey": "Honung",
+  "jaggery": "Jaggery",
+  "palm_sugar": "Palmsocker",
+  "brown_sugar": "Råsocker",
+  "sugar_cane": "Råsocker",
+  "preserved_lemons": "Inlagd citron",
+  "capers": "Kapris",
+  "lemon": "Citron",
+  "lime": "Lime",
+  "calamansi": "Kalamansi (lime)",
+  "san_marzano": "San Marzano-tomater",
+  "cannellini": "Cannellinibönor",
+  "kidney_beans": "Kidney-bönor",
+  "red_beans": "Röda bönor",
+  "black_beans": "Svarta bönor",
+  "pinto_beans": "Pintobönor",
+  "chickpeas": "Kikärtor",
+  "lentils": "Linser",
+  "split_peas": "Delade ärtor",
+  "black_eyed_peas": "Svartögade bönor",
+  "refried_beans": "Stekta bönor",
+  "peas": "Ärtor",
+  "olives": "Oliver",
+  "dried_apricots": "Torkade aprikoser",
+  "apricots": "Torkade aprikoser",
+  "dates": "Dadlar",
+  "barberries": "Berberisbär",
+  "sour_cherries": "Surkörsbär",
+  "pomegranate": "Granatäpple",
+  "quince": "Kvitten",
+  "nori": "Nori (tång)",
+  "seaweed": "Tång",
+  "dried_seaweed": "Torkad tång",
+  "kombu": "Kombu",
+  "bonito": "Bonitoflingor",
+  "kimchi": "Kimchi",
+  "pickled_ginger": "Inlagd ingefära",
+  "coconut": "Kokosnöt",
+  "paprika": "Paprikapulver",
+  "cumin": "Spiskummin",
+  "coriander": "Koriander (malen)",
+  "turmeric": "Gurkmeja",
+  "garam_masala": "Garam masala",
+  "curry_powder": "Karrypulver",
+  "curry_leaves": "Curryblad",
+  "cardamom": "Kardemumma",
+  "cinnamon": "Kanel",
+  "cloves": "Kryddnejlika",
+  "nutmeg": "Muskot",
+  "allspice": "Kryddpeppar",
+  "star_anise": "Stjärnanis",
+  "five_spice": "Fem-kryddpulver",
+  "szechuan_pepper": "Szechuanpeppar",
+  "white_pepper": "Vitpeppar",
+  "cayenne": "Cayennepeppar",
+  "chili_powder": "Chilipulver",
+  "chili": "Chili",
+  "gochugaru": "Gochugaru (chiliflingor)",
+  "berbere": "Berbere-krydda",
+  "ras_el_hanout": "Ras el Hanout",
+  "sumac": "Sumak",
+  "zaatar": "Za'atar",
+  "saffron": "Saffran",
+  "fenugreek": "Bockhornsklöver",
+  "mustard_seeds": "Senapsfrön",
+  "asafoetida": "Asafoetida",
+  "amchur": "Mangopulver",
+  "mitmita": "Mitmita-krydda",
+  "korerima": "Etiopisk kardemumma",
+  "suya_spice": "Suya-krydda",
+  "jollof_seasoning": "Jollof-krydda",
+  "nigella_seeds": "Svartkummin",
+  "peppercorns": "Svartpepparkorn",
+  "annatto": "Annatto",
+  "achiote": "Achiote",
+  "epazote": "Epazote",
+  "huacatay": "Huacatay (svart mynta)",
+  "dried_mint": "Torkad mynta",
+  "dried_limes": "Torkade limefrukter",
+  "green_curry_paste": "Grön currypaste",
+  "red_curry_paste": "Röd currypaste",
+  "rose_water": "Rosenvatten",
+  "candlenut": "Ljusnöt",
+  "almonds": "Mandlar",
+  "walnuts": "Valnötter",
+  "pine_nuts": "Pinjenötter",
+  "peanuts": "Jordnötter",
+  "pecans": "Pekannötter",
+  "pistachios": "Pistaschnötter",
+  "macadamia": "Macadamianötter",
+  "sesame_seeds": "Sesamfrön",
+  "corn_starch": "Majsstärkelse",
+  "rum": "Rom",
+  "chimichurri": "Chimichurri-örter",
+  "farofa": "Farofa",
+  "cancha": "Rostad majs",
+  "injera_flour": "Teffmjöl",
+  "egusi": "Egusi (melonfrön)",
+  "locust_beans": "Locust-bönor",
+  "aji_amarillo": "Gul chilipeppar",
+  "aji_panca": "Ají Panca",
+  "rocoto": "Rocoto-peppar",
+  "fermented_black_beans": "Fermenterade svarta bönor",
+  "wasabi": "Wasabi",
+  "kokum": "Kokum",
+  "file_powder": "Filépulver"
+};
 
 // Phase 7: Measurement systems (SE, UK, US)
 const MEASUREMENT_SYSTEMS = {
@@ -17411,7 +17787,7 @@ class KitchenCookingPanel extends LitElement {
         <div class="card-content">
           <p class="info-text">${this._t('ai_recipe.choose_ingredients_label')}</p>
           <p class="info-text" style="font-size: 0.85em; color: var(--secondary-text-color);">
-            ${this._t('ai_recipe.staples_available')} ${(typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : []).join(', ')}
+            ${this._t('ai_recipe.staples_available')} ${(this._language === 'sv' && typeof AI_ASSUMED_STAPLES_SV !== 'undefined' ? AI_ASSUMED_STAPLES_SV : (typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : [])).join(', ')}
           </p>
           
           ${this._renderCategorizedIngredients(displayIngredients)}
@@ -17498,14 +17874,16 @@ class KitchenCookingPanel extends LitElement {
    * If ingredients have a "cat" field, groups them; otherwise falls back to a flat grid.
    */
   _renderCategorizedIngredients(ingredients) {
-    const categoryLabels = (typeof AI_CATEGORY_LABELS !== 'undefined') ? AI_CATEGORY_LABELS : {};
+    const categoryLabels = (this._language === 'sv' && typeof AI_CATEGORY_LABELS_SV !== 'undefined')
+      ? AI_CATEGORY_LABELS_SV
+      : (typeof AI_CATEGORY_LABELS !== 'undefined' ? AI_CATEGORY_LABELS : {});
     const categoryOrder = (typeof AI_CATEGORY_ORDER !== 'undefined') ? AI_CATEGORY_ORDER : [];
 
     // Check if ingredients have category info
     const hasCats = ingredients.length > 0 && ingredients[0].cat;
     if (!hasCats || categoryOrder.length === 0) {
-      // Fall back to flat grid sorted alphabetically
-      const sorted = [...ingredients].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+      // Fall back to flat grid sorted alphabetically by display name
+      const sorted = [...ingredients].sort((a, b) => (this._ingDisplayName(a) || '').localeCompare(this._ingDisplayName(b) || ''));
       return html`
         <div class="ingredient-grid">
           ${sorted.map(ingredient => this._renderIngredientCheckbox(ingredient))}
@@ -17521,9 +17899,9 @@ class KitchenCookingPanel extends LitElement {
       groups[cat].push(ing);
     }
 
-    // Sort each group alphabetically
+    // Sort each group alphabetically by display name
     for (const cat of Object.keys(groups)) {
-      groups[cat].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+      groups[cat].sort((a, b) => (this._ingDisplayName(a) || '').localeCompare(this._ingDisplayName(b) || ''));
     }
 
     return html`
@@ -17538,15 +17916,27 @@ class KitchenCookingPanel extends LitElement {
     `;
   }
 
+  /** Return the display name for an ingredient respecting the active language. */
+  _ingDisplayName(ingredient) {
+    if (!ingredient || typeof ingredient === 'string') return ingredient || '';
+    if (this._language === 'sv' && ingredient.id && typeof AI_INGREDIENT_NAMES_SV !== 'undefined') {
+      const sv = AI_INGREDIENT_NAMES_SV[ingredient.id];
+      if (sv) return sv;
+    }
+    return ingredient.name || '';
+  }
+
   _renderIngredientCheckbox(ingredient) {
+    const displayName = this._ingDisplayName(ingredient);
+    const valueName = (typeof ingredient === 'string') ? ingredient : (ingredient.name || ingredient);
     return html`
       <label class="ingredient-checkbox">
         <input 
           type="checkbox" 
-          ?checked=${this._selectedIngredients.includes(ingredient.name || ingredient)}
-          @change=${(e) => this._toggleIngredient(ingredient.name || ingredient, e.target.checked)}
+          ?checked=${this._selectedIngredients.includes(valueName)}
+          @change=${(e) => this._toggleIngredient(valueName, e.target.checked)}
         />
-        ${ingredient.name || ingredient}
+        ${displayName}
       </label>
     `;
   }
@@ -17629,7 +18019,7 @@ class KitchenCookingPanel extends LitElement {
               >
                 <div class="card-content">
                   <div class="style-icon">${style.icon || '🍳'}</div>
-                  <h3>${style.name}</h3>
+                  <h3>${(this._language === 'sv' && style.name_sv) ? style.name_sv : style.name}</h3>
                   <p>${style.description || ''}</p>
                 </div>
               </ha-card>
@@ -22211,7 +22601,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "251";
+const PANEL_VERSION = "252";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

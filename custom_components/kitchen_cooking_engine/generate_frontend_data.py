@@ -259,8 +259,11 @@ def generate_js_data():
         ai_cuisine_to_region = ai_data_module.CUISINE_TO_REGION
         ai_ingredient_categories = getattr(ai_data_module, 'INGREDIENT_CATEGORIES', {})
         ai_category_labels = getattr(ai_data_module, 'CATEGORY_LABELS', {})
+        ai_category_labels_sv = getattr(ai_data_module, 'CATEGORY_LABELS_SV', {})
         ai_category_order = getattr(ai_data_module, 'CATEGORY_ORDER', [])
         ai_assumed_staples = getattr(ai_data_module, 'ASSUMED_STAPLES', [])
+        ai_assumed_staples_sv = getattr(ai_data_module, 'ASSUMED_STAPLES_SV', [])
+        ai_ingredient_names_sv = getattr(ai_data_module, 'INGREDIENT_NAMES_SV', {})
     except Exception as e:
         print(f"Warning: Could not load AI Recipe Builder data: {e}")
     
@@ -341,10 +344,15 @@ def generate_js_data():
     lines.append("")
     lines.append("// AI Recipe Builder - Ingredient category labels and order")
     lines.append(f"const AI_CATEGORY_LABELS = {json.dumps(ai_category_labels, indent=2, ensure_ascii=False)};")
+    lines.append(f"const AI_CATEGORY_LABELS_SV = {json.dumps(ai_category_labels_sv, indent=2, ensure_ascii=False)};")
     lines.append(f"const AI_CATEGORY_ORDER = {json.dumps(ai_category_order, ensure_ascii=False)};")
     lines.append("")
     lines.append("// AI Recipe Builder - Assumed staples (always available, not shown in picker)")
     lines.append(f"const AI_ASSUMED_STAPLES = {json.dumps(ai_assumed_staples, ensure_ascii=False)};")
+    lines.append(f"const AI_ASSUMED_STAPLES_SV = {json.dumps(ai_assumed_staples_sv, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// AI Recipe Builder - Swedish ingredient display names (id → Swedish)")
+    lines.append(f"const AI_INGREDIENT_NAMES_SV = {json.dumps(ai_ingredient_names_sv, indent=2, ensure_ascii=False)};")
     lines.append("")
     lines.append("// Phase 7: Measurement systems (SE, UK, US)")
     lines.append(f"const MEASUREMENT_SYSTEMS = {json.dumps(measurement_systems, indent=2, ensure_ascii=False)};")

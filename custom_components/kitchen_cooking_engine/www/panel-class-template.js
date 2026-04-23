@@ -4534,7 +4534,7 @@ class KitchenCookingPanel extends LitElement {
         <div class="card-content">
           <p class="info-text">${this._t('ai_recipe.choose_ingredients_label')}</p>
           <p class="info-text" style="font-size: 0.85em; color: var(--secondary-text-color);">
-            ${this._t('ai_recipe.staples_available')} ${(typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : []).join(', ')}
+            ${this._t('ai_recipe.staples_available')} ${(this._language === 'sv' && typeof AI_ASSUMED_STAPLES_SV !== 'undefined' ? AI_ASSUMED_STAPLES_SV : (typeof AI_ASSUMED_STAPLES !== 'undefined' ? AI_ASSUMED_STAPLES : [])).join(', ')}
           </p>
           
           ${this._renderCategorizedIngredients(displayIngredients)}
@@ -4621,14 +4621,16 @@ class KitchenCookingPanel extends LitElement {
    * If ingredients have a "cat" field, groups them; otherwise falls back to a flat grid.
    */
   _renderCategorizedIngredients(ingredients) {
-    const categoryLabels = (typeof AI_CATEGORY_LABELS !== 'undefined') ? AI_CATEGORY_LABELS : {};
+    const categoryLabels = (this._language === 'sv' && typeof AI_CATEGORY_LABELS_SV !== 'undefined')
+      ? AI_CATEGORY_LABELS_SV
+      : (typeof AI_CATEGORY_LABELS !== 'undefined' ? AI_CATEGORY_LABELS : {});
     const categoryOrder = (typeof AI_CATEGORY_ORDER !== 'undefined') ? AI_CATEGORY_ORDER : [];
 
     // Check if ingredients have category info
     const hasCats = ingredients.length > 0 && ingredients[0].cat;
     if (!hasCats || categoryOrder.length === 0) {
-      // Fall back to flat grid sorted alphabetically
-      const sorted = [...ingredients].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+      // Fall back to flat grid sorted alphabetically by display name
+      const sorted = [...ingredients].sort((a, b) => (this._ingDisplayName(a) || '').localeCompare(this._ingDisplayName(b) || ''));
       return html`
         <div class="ingredient-grid">
           ${sorted.map(ingredient => this._renderIngredientCheckbox(ingredient))}
@@ -4644,9 +4646,9 @@ class KitchenCookingPanel extends LitElement {
       groups[cat].push(ing);
     }
 
-    // Sort each group alphabetically
+    // Sort each group alphabetically by display name
     for (const cat of Object.keys(groups)) {
-      groups[cat].sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+      groups[cat].sort((a, b) => (this._ingDisplayName(a) || '').localeCompare(this._ingDisplayName(b) || ''));
     }
 
     return html`
@@ -4661,15 +4663,27 @@ class KitchenCookingPanel extends LitElement {
     `;
   }
 
+  /** Return the display name for an ingredient respecting the active language. */
+  _ingDisplayName(ingredient) {
+    if (!ingredient || typeof ingredient === 'string') return ingredient || '';
+    if (this._language === 'sv' && ingredient.id && typeof AI_INGREDIENT_NAMES_SV !== 'undefined') {
+      const sv = AI_INGREDIENT_NAMES_SV[ingredient.id];
+      if (sv) return sv;
+    }
+    return ingredient.name || '';
+  }
+
   _renderIngredientCheckbox(ingredient) {
+    const displayName = this._ingDisplayName(ingredient);
+    const valueName = (typeof ingredient === 'string') ? ingredient : (ingredient.name || ingredient);
     return html`
       <label class="ingredient-checkbox">
         <input 
           type="checkbox" 
-          ?checked=${this._selectedIngredients.includes(ingredient.name || ingredient)}
-          @change=${(e) => this._toggleIngredient(ingredient.name || ingredient, e.target.checked)}
+          ?checked=${this._selectedIngredients.includes(valueName)}
+          @change=${(e) => this._toggleIngredient(valueName, e.target.checked)}
         />
-        ${ingredient.name || ingredient}
+        ${displayName}
       </label>
     `;
   }
@@ -4752,7 +4766,7 @@ class KitchenCookingPanel extends LitElement {
               >
                 <div class="card-content">
                   <div class="style-icon">${style.icon || '🍳'}</div>
-                  <h3>${style.name}</h3>
+                  <h3>${(this._language === 'sv' && style.name_sv) ? style.name_sv : style.name}</h3>
                   <p>${style.description || ''}</p>
                 </div>
               </ha-card>

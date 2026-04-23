@@ -175,9 +175,24 @@ Follow-up doc work (no code, no version bump) merging info from PR #81
 - Updated Decision Factors matrix with research-backed data.
 - **Decision is unchanged — Option C confirmed by project owner on 2026-03-17.**
 
+### v0.6.0.02 — Fix untranslated strings in AI recipe wizard (2026-04-23)
+
+| Step | Commit summary |
+|------|----------------|
+| Plan | Identify four classes of untranslated English text visible in Swedish mode |
+| Fix  | `ai_recipe_data.py`: add `name_sv` to all `COOKING_STYLES`, `ASSUMED_STAPLES_SV`, `CATEGORY_LABELS_SV`, `INGREDIENT_NAMES_SV` (id→Swedish for every ingredient) |
+| Fix  | `generate_frontend_data.py`: inject `AI_ASSUMED_STAPLES_SV`, `AI_CATEGORY_LABELS_SV`, `AI_INGREDIENT_NAMES_SV` |
+| Fix  | `panel-class-template.js`: new `_ingDisplayName()` helper; `_renderIngredientCheckbox`, `_renderCategorizedIngredients`, staples line, cooking-style card all use Swedish strings when `_language === 'sv'` |
+| Gen  | Regenerate `kitchen-cooking-panel.js` (PANEL_VERSION 251→252) |
+| Ver  | Bump to v0.6.0.02 |
+
+**Root cause:** `_renderIngredientCheckbox` rendered `ingredient.name` (always English) directly without any language lookup. `AI_ASSUMED_STAPLES`, `AI_CATEGORY_LABELS`, and `COOKING_STYLES.name` had no Swedish equivalents.
+
+**Design:** English `ingredient.name` is still used as the value stored in `_selectedIngredients` and sent to the AI prompt (so the AI receives stable English terms). The new `_ingDisplayName()` helper is display-only.
+
 ---
 
-## Known issues / root causes discovered
+
 
 | # | Issue | Root cause | Fix applied |
 |---|-------|-----------|-------------|
@@ -186,7 +201,7 @@ Follow-up doc work (no code, no version bump) merging info from PR #81
 | 3 | Unicode ingredient names not highlighted | `str.find()` on NFC vs NFD strings | Normalise both sides with `unicodedata.normalize('NFC', ...)` |
 | 4 | Ingredient highlight colours inverted | Copy-paste error in conditional class names | Fixed class assignment |
 | 5 | Retry loop running 7 times | `_MAX_RETRIES = 7` set too high during debugging | Reduced to 3 |
-| 6 | `abbr` used for both languages | First design oversight | Added `abbr_sv` key to all measurement entries |
+| 7 | Ingredient names / staples / categories / cooking styles shown in English in Swedish mode | No Swedish equivalents existed; `ingredient.name` used directly for display | Added `INGREDIENT_NAMES_SV`, `ASSUMED_STAPLES_SV`, `CATEGORY_LABELS_SV`, `name_sv` on cooking styles; `_ingDisplayName()` helper in template |
 
 ---
 
@@ -196,6 +211,8 @@ Follow-up doc work (no code, no version bump) merging info from PR #81
 |------|--------|
 | Swedish measurement system | ✅ Implemented (`measurements.py` + API) |
 | Full `_t()` i18n coverage | ✅ All user-facing strings translated |
+| AI recipe wizard: ingredient names | ✅ Swedish via `INGREDIENT_NAMES_SV` + `_ingDisplayName()` (v0.6.0.02) |
+| AI recipe wizard: staples, categories, cooking styles | ✅ Swedish via `ASSUMED_STAPLES_SV`, `CATEGORY_LABELS_SV`, `name_sv` (v0.6.0.02) |
 | AI recipes in correct language/units | ✅ Prompts + conversion safety net |
 | Per-step ingredient tagging | ✅ AI JSON + frontend highlighting |
 | GUI ToR updated to v3.7 | ✅ Phase 8 scope defined, Open Question #6 resolved, A/B/C rebuilt with research data |

@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 17 Mar 2026, 08:45 UTC
-Last Change: v0.6.0.01 - Fix ingredient colors, ingredient matching fallback, retry persistence, retry button on failed generation
+Last Updated: 23 Apr 2026, 15:28 UTC
+Last Change: v0.6.0.02 - Translate AI recipe wizard ingredient names, staples, category labels and cooking styles to Swedish
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "251"
+PANEL_VERSION = "252"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
