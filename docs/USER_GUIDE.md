@@ -30,6 +30,7 @@
    - 5.5 [Monitoring an Active Cook](#55-monitoring-an-active-cook)
    - 5.6 [Resting and Completing a Cook](#56-resting-and-completing-a-cook)
    - 5.7 [Recent MEATER Cooks](#57-recent-meater-cooks)
+   - 5.8 [MEATER+ (experimental) — Method-First Cooking](#58-meater-experimental--method-first-cooking)
 6. [Ninja Combi Cooking](#6-ninja-combi-cooking)
    - 6.1 [Built-in Recipes](#61-built-in-recipes)
    - 6.2 [Recipe Builder](#62-recipe-builder)
@@ -364,6 +365,75 @@ Tap **Recent MEATER Cooks** on the MEATER path to browse past sessions. Each car
 Tap **🔄 Restart This Cook** to pre-fill the setup form with the same settings and start a
 new session. Tap **✏️ Edit Notes** to add or change notes. Tap **🗑️ Delete** to remove the
 record.
+
+### 5.8 MEATER+ (experimental) — Method-First Cooking
+
+The **🧪🌡️ MEATER+ (experimental)** card appears on the welcome screen alongside your regular
+MEATER+ card. It uses the same hardware but offers a different, method-first approach that
+takes advantage of the research-backed `supported_methods` data built into every cut.
+
+> **Safe to use.** It calls the same `start_cook` and `start_simple_probe_cook` services as
+> the standard MEATER path. The active cook display is identical.
+
+#### How it works (4 steps)
+
+**Step 1 — Choose a cooking method**
+
+Methods are grouped into five families:
+
+| Group | Methods |
+|-------|---------|
+| 🔥 Searing & Frying | Pan Sear, Pan Fry, Sauté, Wok |
+| 🍖 Grilling & Smoking | Grill, Charcoal Grill, Smoker, Rotisserie |
+| 🫕 Oven & Air | Oven Roast, Oven Bake, Broil, Air Fryer |
+| 🫙 Low & Slow | Sous Vide, Braise, Slow Cooker, Pressure Cooker |
+| 🍜 Wet Heat | Poach, Simmer, Steam, Deep Fry |
+
+Tap any method to continue, or tap **🌡️ Set Custom Target** to skip the tree and go
+straight to a manual temperature.
+
+**Step 2 — Choose a protein category**
+
+Only categories that contain at least one cut known to work with your chosen method are
+shown. This keeps the list short and relevant.
+
+**Step 3 — Choose a cut**
+
+A flat list of cuts from the selected category, filtered to those that support the chosen
+method. The recommended doneness for that method is pre-selected for you.
+
+**Step 4 — Choose doneness and start**
+
+The doneness options shown are:
+- **Method-specific overrides** (e.g. sous vide ribeye defaults to 57 °C for marbled-fat
+  rendering rather than the standard 54 °C) when research data exists for this combination.
+- **Standard doneness list** for the cut otherwise.
+
+Each option shows the target temperature and a safety indicator:
+
+| Indicator | Meaning |
+|-----------|---------|
+| **SAFE** (green) | Meets USDA / food-safety authority minimums |
+| **CAUTION** (orange) | Below the minimum but widely accepted for this cut with proper sourcing |
+| **UNSAFE** (red) | Not recommended; shown for informational purposes only |
+
+Tap the doneness, then tap **🌡️ Start Cook at X°C** to launch the session.
+
+#### Custom Temperature mode
+
+Tap **🌡️ Set Custom Target** on the method screen to enter any temperature between 30 °C
+and 100 °C with an optional session name. This calls `start_simple_probe_cook` — identical
+to the **Custom Temperature Cook** option in the standard MEATER path (§ 5.4).
+
+#### Differences from the standard MEATER path
+
+| | Standard MEATER path | MEATER+ (experimental) |
+|-|----------------------|------------------------|
+| Starting point | Protein → cut → doneness | **Method** → protein → cut → doneness |
+| Doneness options | Full list for the cut | Filtered & reordered to match the method |
+| Temperature source | Same data | Same data, with method-specific overrides where available |
+| Safety indicators | Not shown | Shown per doneness option |
+| Result | Identical active-cook screen | Identical active-cook screen |
 
 ---
 

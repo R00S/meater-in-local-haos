@@ -224,6 +224,7 @@ Modes A/B/C), 8d (Post-Cook Shelf Update), 8e (External Bridges — deferred).
   `_meaterExpDoneness`, `_meaterExpCustomMode`, `_meaterExpCustomName`,
   `_meaterExpCustomTempC`.
 - PANEL_VERSION bumped 266 → 267 (auto by generator).
+- CHORES: versions updated, branch timeline updated, user guide §5.8 added.
 
 ---
   All callers updated: `_toggleIngredient`, `_addCustomIngredient`, `_removeIngredient`,
