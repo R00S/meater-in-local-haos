@@ -103,6 +103,17 @@ Modes A/B/C), 8d (Post-Cook Shelf Update), 8e (External Bridges — deferred).
 
 
 
+### v0.6.1.04 — 2026-04-23
+**Bugfix: "Hide other language tree" checkbox placed in wrong screen**
+
+- Checkbox was rendered inside the MEATER cook-start screen, inside the
+  "Temperature Data Source" card (after the Swedish description text).
+- Moved to the welcome screen Language card, directly below the 🇸🇪/🇬🇧 buttons.
+- This is the correct UX location: it's a language/data-source preference, not a
+  per-cook choice, so it belongs with the other persistent settings on the welcome screen.
+- No i18n changes needed (`meater.hide_other_tree` key already existed in both en/sv).
+- PANEL_VERSION bumped 262 → 263 (auto by generator).
+
 ### v0.6.1.03 — 2026-04-23
 **Docs: Comprehensive user guide**
 

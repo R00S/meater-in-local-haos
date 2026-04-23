@@ -3108,12 +3108,6 @@ class KitchenCookingPanel extends LitElement {
               ? this._t('meater.swedish_description')
               : this._t('meater.international_description')}
           </p>
-          <label style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:0.85em;cursor:pointer;">
-            <input type="checkbox"
-              .checked=${this._hideOtherDataSource}
-              @change=${() => this._toggleHideOtherDataSource()}>
-            ${this._t('meater.hide_other_tree')}
-          </label>
         </div>
       </ha-card>
       
@@ -3896,6 +3890,12 @@ class KitchenCookingPanel extends LitElement {
                 🇬🇧 English
               </button>
             </div>
+            <label style="display:flex;align-items:center;gap:8px;margin-top:10px;font-size:0.85em;cursor:pointer;">
+              <input type="checkbox"
+                .checked=${this._hideOtherDataSource}
+                @change=${() => this._toggleHideOtherDataSource()}>
+              ${this._t('meater.hide_other_tree')}
+            </label>
           </div>
         </ha-card>
 

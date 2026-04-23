@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 23 Apr 2026, 20:37 CET
+ * AUTO-GENERATED: 23 Apr 2026, 21:13 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 23 Apr 2026, 20:37 CET
+// Last generated: 23 Apr 2026, 21:13 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -16481,12 +16481,6 @@ class KitchenCookingPanel extends LitElement {
               ? this._t('meater.swedish_description')
               : this._t('meater.international_description')}
           </p>
-          <label style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:0.85em;cursor:pointer;">
-            <input type="checkbox"
-              .checked=${this._hideOtherDataSource}
-              @change=${() => this._toggleHideOtherDataSource()}>
-            ${this._t('meater.hide_other_tree')}
-          </label>
         </div>
       </ha-card>
       
@@ -17269,6 +17263,12 @@ class KitchenCookingPanel extends LitElement {
                 🇬🇧 English
               </button>
             </div>
+            <label style="display:flex;align-items:center;gap:8px;margin-top:10px;font-size:0.85em;cursor:pointer;">
+              <input type="checkbox"
+                .checked=${this._hideOtherDataSource}
+                @change=${() => this._toggleHideOtherDataSource()}>
+              ${this._t('meater.hide_other_tree')}
+            </label>
           </div>
         </ha-card>
 
@@ -23491,7 +23491,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "262";
+const PANEL_VERSION = "263";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
