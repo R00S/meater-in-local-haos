@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.0.05 - Restore on-the-fly target temp adjustment during active MEATER cook
+Last Change: v0.6.1.00 - Phase 8: Ingredient Levels & Cooking Modes
 """
 
 DOMAIN = "kitchen_cooking_engine"
