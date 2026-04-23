@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.1.08 - Recover PR63 recipe research, method data; add MEATER+ (experimental) path
+Last Change: v0.6.1.09 - Fix MEATER+ experimental path to faithfully port v0.5.3.5 (safety indicators) instead of invented method-first flow
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "267"
+PANEL_VERSION = "268"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

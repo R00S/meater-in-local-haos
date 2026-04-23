@@ -239,3 +239,34 @@ Modes A/B/C), 8d (Post-Cook Shelf Update), 8e (External Bridges — deferred).
 - Cooking Mode C uses a second `_call_openai` call in `ai_recipe_builder.py` to
   cross-reference recipe ingredients against the combined set, then prepends a
   "Step 0 — Shopping & Preparation List" when items are missing.
+
+---
+
+### v0.6.1.09 — 2026-04-23
+**Fix: MEATER+ experimental path — port v0.5.3.5 faithfully, remove invented method-first flow**
+
+**Problem (user-reported):**
+- Previous agent invented a "method-first" 4-step flow as the experimental MEATER+ path
+  instead of porting the actual `copilot/add-adjustable-target-temp` (v0.5.3.5) MEATER path.
+- The invented flow had nothing to do with what was in the original branch.
+
+**What the original branch (v0.5.3.5) actually had:**
+The MEATER path in `copilot/add-adjustable-target-temp` was the standard category →
+meat → cut type → cut → doneness → fine-tune temperature → method → start flow,
+with the following key additions over the then-current main branch:
+1. **Safety-level indicators** on every doneness button (🟢 safe / 🟠 caution / 🔴 unsafe)
+2. Adjustable target temperature during active cook (`set_target` service, already in impl-phase-8)
+
+**What was changed:**
+- Removed all 11 `_meaterExp*` state properties + constructor initializations.
+- Replaced `_navigateToMeaterExperimentalPath` with a simple version (just sets path + appliance).
+- Replaced 7 invented `_renderMeaterExpStep*` + `_renderMeaterExpCustomCook` + helper
+  methods (~500 lines) with:
+  - `_renderMeaterExperimental()` — mirrors `_renderMeaterPath()` but calls `_renderExpSetupForm()`
+  - `_renderExpSetupForm(entities)` — faithful port of v0.5.3.5's `_renderSetupForm` with
+    safety dots added to doneness buttons (the one key UI difference).
+- Added safety dot CSS (`.safety-dot`, `.safety-dot.safe`, `.caution`, `.unsafe`).
+- Updated welcome screen experimental card subtitle: "Method-first cooking" → "Safety indicators · per-cut temps".
+- `_renderMeaterPath()` and `_renderSetupForm()` are untouched (verified with git diff).
+- PANEL_VERSION bumped 267 → 268 (auto by generator).
+- CHORES: versions updated to 0.6.1.09, branch timeline updated, USER_GUIDE.md §5.8 revised.
