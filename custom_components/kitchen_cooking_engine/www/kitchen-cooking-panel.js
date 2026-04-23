@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 23 Apr 2026, 16:37 CET
+ * AUTO-GENERATED: 23 Apr 2026, 17:27 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 23 Apr 2026, 16:37 CET
+// Last generated: 23 Apr 2026, 17:27 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -11584,6 +11584,7 @@ const AI_INGREDIENT_NAMES_SV = {
   "hearts_of_palm": "Palmhjärtan",
   "callaloo": "Callaloo",
   "ackee": "Ackee",
+  "horseradish": "Pepparrot",
   "lingonberries": "Lingon",
   "celeriac": "Rotselleri",
   "juniper_berries": "Enbär",
@@ -11611,6 +11612,11 @@ const AI_INGREDIENT_NAMES_SV = {
   "bread": "Bröd",
   "tortillas": "Tortillas",
   "corn_tortillas": "Majstortillas",
+  "flour_tortillas": "Mjöltortillas",
+  "taco_shells": "Tacoskal",
+  "ciabatta": "Ciabatta",
+  "flat_bread": "Flatbröd",
+  "beans": "Bönor",
   "rye_bread": "Rågbröd",
   "baguette": "Baguette",
   "pita": "Pitabröd",
@@ -11704,6 +11710,7 @@ const AI_INGREDIENT_NAMES_SV = {
   "rice_vinegar": "Risvinäger",
   "red_wine_vinegar": "Rödvinsvinäger",
   "sherry_vinegar": "Sherryvinäger",
+  "balsamic": "Balsamvinäger",
   "mirin": "Mirin",
   "black_vinegar": "Svart vinäger",
   "maple_syrup": "Lönnsirap",
@@ -11764,6 +11771,7 @@ const AI_INGREDIENT_NAMES_SV = {
   "white_pepper": "Vitpeppar",
   "cayenne": "Cayennepeppar",
   "chili_powder": "Chilipulver",
+  "red_pepper_flakes": "Chiliflingor",
   "chili": "Chili",
   "gochugaru": "Gochugaru (chiliflingor)",
   "berbere": "Berbere-krydda",
@@ -22601,7 +22609,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "252";
+const PANEL_VERSION = "254";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
