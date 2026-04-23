@@ -139,6 +139,22 @@ The AI Recipe Builder generates custom recipes using AI (OpenAI or any HA conver
 12. **Rate** the recipe (ease + result, 1–5 stars) and add optional notes
 13. Recipe saved to **Previous Cooks** for future restart
 
+### ✅ Tested With
+
+The following AI agents have been verified to work well with the AI Recipe Builder:
+
+| Provider | Model | HA Integration | Recommended settings |
+|----------|-------|----------------|----------------------|
+| Google Gemini | `gemini-2.5-pro` | [Google Generative AI Conversation](https://www.home-assistant.io/integrations/google_generative_ai_conversation/) | Temperature 1, Top P 0.95, Top K 129, Max tokens 20000, all safety filters: Block none |
+| Google Gemini | `gemini-flash-latest` | [Google Generative AI Conversation](https://www.home-assistant.io/integrations/google_generative_ai_conversation/) | Temperature 1, Top P 0.95, Top K 128, Max tokens 18000, all safety filters: Block none |
+
+**System prompt (Instructions field):**
+```
+You are a master chef providing the user with recipes and cooking ideas.
+```
+
+> ⚠️ Safety filters must be set to **Block none** for all four categories, otherwise common cooking ingredients and techniques can trigger false positives that abort recipe generation.
+
 ### Troubleshooting
 
 **"Failed to generate recipes" errors:**
