@@ -22,7 +22,22 @@ Modes A/B/C), 8d (Post-Cook Shelf Update), 8e (External Bridges — deferred).
 - Version bumped from 0.6.0.05 to 0.6.1.00 across all 4 locations.
 - Branch timeline file created.
 
-### v0.6.1.01 — (in progress)
+### v0.6.1.01 — 2026-04-23
+**Bugfix: Blank screen crash on "Create AI Recipe"**
+
+- Root cause: `_startAIRecipeBuilder` seeded `_selectedIngredients` with a plain
+  string (`["use Ninja Combi programs"]`), but all Phase 8 render/filter callbacks
+  call `i.name.toLowerCase()`. `i.name` is `undefined` on a plain string → TypeError
+  crashed the LitElement render → "Reloading Kitchen Cooking Engine…" loop.
+- Fix: Changed initialisation to `[{name: "use ...", compulsory: false}]`.
+- Fix: `user_ingredients` in both `get_recipe_detail` API calls now uses
+  `.map(i => i.name)` to extract strings before sending to backend.
+- Fix: Defensive `i.name &&` guards added to all `.find()` / `.filter()` callbacks
+  (`_toggleIngredient`, `_addCustomIngredient`, `_removeIngredient`,
+  `_renderIngredientCheckbox`) to prevent the same crash from any stale plain string.
+- PANEL_VERSION bumped 259 → 260 (auto by generator).
+
+### v0.6.1.00 — (in progress)
 - 8a: `_selectedIngredients` changed to `Array<{name, compulsory}>`.
 - 8a: Compulsory badge toggle UI (click body to toggle ⭐, × to remove).
 - 8a: `ai_recipe_builder.py` accepts `compulsory_ingredients`, injects MUST-use directive.

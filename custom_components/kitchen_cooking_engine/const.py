@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.1.00 - Phase 8: Ingredient Levels & Cooking Modes
+Last Change: v0.6.1.01 - Fix blank screen crash on Create AI Recipe (string vs object in _selectedIngredients)
 """
 
 DOMAIN = "kitchen_cooking_engine"
