@@ -1071,7 +1071,32 @@ class CookingSessionSensor(SensorEntity):
         """Set notes for the current cook."""
         self._cook_notes = notes
         self.async_write_ha_state()
-    
+
+    def set_target(self, target_temp_c: int) -> None:
+        """Update the target temperature during an active cook."""
+        if self._state == STATE_IDLE:
+            _LOGGER.warning("set_target called but no cook is active")
+            return
+        _LOGGER.info(
+            "Updating target temperature from %s°C to %d°C",
+            self._target_temp_c,
+            target_temp_c,
+        )
+        self._target_temp_c = target_temp_c
+        self._target_temp_f = round(target_temp_c * 9 / 5 + 32)
+        self._custom_target_temp_c = target_temp_c
+        # If the new target is higher and we were already in approaching/goal_reached,
+        # step the state back so the cook continues normally.
+        if self._state in (STATE_APPROACHING, STATE_GOAL_REACHED):
+            if self._current_temp is not None:
+                current_c = self._to_celsius(self._current_temp)
+                if current_c < target_temp_c - APPROACHING_THRESHOLD_C:
+                    self._state = STATE_COOKING
+                    _LOGGER.info("State rolled back to cooking after target increase")
+        # Reset the 5-min alert so it fires again relative to the new target.
+        self._five_min_alert_fired = False
+        self.async_write_ha_state()
+
     async def appliance_power_off(self) -> None:
         """Turn off the appliance power outlet."""
         if not self._power_outlet:

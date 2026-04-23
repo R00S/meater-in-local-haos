@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 16 Mar 2026, 12:53 UTC
-Last Change: v0.5.5.96 - Improve ingredient display: green for new, black for repeat, grey box, no borders
+Last Updated: 23 Apr 2026, 15:28 UTC
+Last Change: v0.6.0.05 - Restore on-the-fly target temp adjustment during active MEATER cook
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -45,6 +45,7 @@ from .const import (
     SERVICE_START_REST,
     SERVICE_COMPLETE,
     SERVICE_SET_NOTES,
+    SERVICE_SET_TARGET,
     SERVICE_START_MULTI_APPLIANCE_COOK,
     SERVICE_START_SIMPLE_PROBE_COOK,
 )
@@ -71,7 +72,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.5.5.96"
+__version__ = "0.6.0.05"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -114,6 +115,14 @@ SERVICE_SET_NOTES_SCHEMA = vol.Schema(
     {
         vol.Required(ATTR_ENTITY_ID): cv.entity_ids,
         vol.Required("notes"): cv.string,
+    }
+)
+
+# Service schema for set_target (adjust target temp during active cook)
+SERVICE_SET_TARGET_SCHEMA = vol.Schema(
+    {
+        vol.Required(ATTR_ENTITY_ID): cv.entity_ids,
+        vol.Required("target_temp"): vol.All(vol.Coerce(int), vol.Range(min=30, max=100)),
     }
 )
 
@@ -571,6 +580,24 @@ async def _async_register_services(hass: HomeAssistant) -> None:
         for entity in entities:
             entity.set_notes(notes)
 
+    async def handle_set_target(call: ServiceCall) -> None:
+        """Handle set_target service call — adjust target temp during an active cook."""
+        _LOGGER.info("Kitchen Cooking Engine: Set target temperature service called")
+
+        entity_ids = call.data.get(ATTR_ENTITY_ID)
+        target_temp = call.data.get("target_temp")
+
+        if entity_ids is None:
+            _LOGGER.error("No entity_id specified for set_target service")
+            return
+
+        if isinstance(entity_ids, str):
+            entity_ids = [entity_ids]
+
+        entities = _get_cooking_session_entities(hass, entity_ids)
+        for entity in entities:
+            entity.set_target(target_temp)
+
     async def handle_start_multi_appliance_cook(call: ServiceCall) -> None:
         """Handle start multi-appliance cook service call.
         
@@ -774,6 +801,13 @@ async def _async_register_services(hass: HomeAssistant) -> None:
             SERVICE_SET_NOTES,
             handle_set_notes,
             schema=SERVICE_SET_NOTES_SCHEMA,
+        )
+    if not hass.services.has_service(DOMAIN, SERVICE_SET_TARGET):
+        hass.services.async_register(
+            DOMAIN,
+            SERVICE_SET_TARGET,
+            handle_set_target,
+            schema=SERVICE_SET_TARGET_SCHEMA,
         )
     # Phase 4: Register multi-appliance cook service
     if not hass.services.has_service(DOMAIN, SERVICE_START_MULTI_APPLIANCE_COOK):
