@@ -5,7 +5,7 @@
 [![Alpha](https://img.shields.io/badge/Status-ALPHA-orange.svg)](https://github.com/R00S/meater-in-local-haos)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/R00S)
 
-⚠️ **DEVELOPMENT RELEASE** — GUI Redesign Phases 1–6 complete + v0.5.5.x stability & UX features. Functional but not yet production-ready. Phase 7 (Multilingual/Measurements) and Phase 8 (Polish) are **not yet started**.
+⚠️ **DEVELOPMENT RELEASE** — GUI Redesign Phases 1–7 complete. Functional but not yet production-ready. Phase 8 (Ingredient Levels & Cooking Modes) is next.
 
 A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes, and temperature sensors.
 
@@ -21,9 +21,21 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 
 ## 📊 Current Status
 
-**v0.5.5.90** — Development release (March 2026)
+**v0.6.0.05** — Development release (April 2026)
 
-GUI Redesign Phases 1–6 complete + v0.5.2.x appliance features + v0.5.4.x stability & UX + v0.5.5.x tab navigation & AI targeting. Phase 7 (Multilingual & Measurement Systems) and Phase 8 (Polish & Testing) are **not yet started**. See [STATUS.md](STATUS.md) for full progress tracking.
+GUI Redesign Phases 1–7 complete. Phase 7 (Multilingual & Measurement Systems) shipped in v0.6.0.x. Phase 8 (Ingredient Levels & Cooking Modes) is next. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.6.0.x Features — Phase 7: Multilingual & Measurement Systems (April 2026)
+- ✅ **Swedish measurement system** — Metric, Imperial, and Swedish (dl/msk/tsk) unit catalogs with an API endpoint; persisted per user
+- ✅ **Full i18n (`_t()`) coverage** — Every user-facing string in the panel template is now translated; zero hardcoded English
+- ✅ **AI recipes in the right language** — AI prompt includes a language directive so recipes come back in English or Swedish (no Danish bleed-through)
+- ✅ **AI recipes in the right units** — Frontend sends `measurement_system` with every AI request; ingredient text is converted as a safety net
+- ✅ **Swedish ingredient display** — `_ingDisplayName()` helper returns Swedish name when language is `sv`; staples, categories, and cooking styles are also translated
+- ✅ **Per-step ingredient tagging** — AI recipe JSON carries an `ingredients` array per step so active ingredients are highlighted during the cook flow
+- ✅ **Swedish ingredient corrections** — `Chiliflingor` (was "Röda pepparflingor"), plus 7 missing Swedish ingredient entries added
+- ✅ **Swedish decimal comma** — Numbers formatted as `2,4 dl` when language is Swedish
+- ✅ **Hide-other-language-tree checkbox** — Temperaturdata card: when checked, only the active data-source button is shown; preference persisted to `localStorage`
+- ✅ **On-the-fly target temperature adjustment** — Slider, ±1°C buttons, and confirm button in the active MEATER cook view; `set_target` HA service registered and wired end-to-end
 
 ### v0.5.5.x Features (March 2026)
 - ✅ **Tab navigation preserved** — Returning to the panel after switching browser tabs or OS windows no longer resets to the welcome screen; all navigation paths are preserved
@@ -586,6 +598,7 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 │       ├── const.py               # Constants
 │       ├── cooking_data.py        # International cooking data (USDA)
 │       ├── swedish_cooking_data.py # Swedish cooking data (Livsmedelsverket)
+│       ├── measurements.py        # Measurement unit catalog (metric/imperial/Swedish)
 │       ├── ninja_combi_data.py    # Ninja Combi recipes (with metric)
 │       ├── ai_recipe_builder.py   # AI recipe generation engine
 │       ├── ai_recipe_data.py      # AI ingredients, cuisines, styles data
@@ -597,7 +610,7 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 │       ├── generate_frontend_data.py # Generates JS from template + data
 │       ├── services.yaml          # Service definitions
 │       ├── manifest.json          # HACS manifest
-│       ├── translations/          # Localization
+│       ├── i18n/                  # Translation files (en.json, sv.json)
 │       └── www/                   # Frontend panel
 │           ├── panel-class-template.js   # UI source (edit this)
 │           └── kitchen-cooking-panel.js  # Auto-generated (do not edit)
@@ -656,19 +669,14 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 | [Temperature Research](docs/ALTERNATIVE_TEMPERATURE_PROBES_RESEARCH.md) | Alternative probes, temperature tables |
 | [View Assist Integration](docs/VIEW_ASSIST_INTEGRATION.md) | Voice control setup and troubleshooting |
 
-## 🔮 Future Features (Not Yet Started)
+## 🔮 Future Features
 
-### Phase 7 — Multilingual & Measurement Systems
-- ⬜ i18n infrastructure — Translation system for all UI text
-- ⬜ Swedish + English — Full translations for both languages
-- ⬜ Measurement system selector (Swedish dl/msk/tsk, UK, US, pure metric)
-- ⬜ Serving size scaling with automatic ingredient conversion
-
-### Phase 8 — Polish & Testing
-- ⬜ Mobile responsive optimization — Fine-tuning for small screens
-- ⬜ MEATER probe as subprocess within recipe cook steps
-- ⬜ Ingredient bolding during cook steps
-- ⬜ Visual design refinement and edge case handling
+### Phase 8 — Ingredient Levels & Cooking Modes
+- ⬜ **Compulsory Ingredients** — Clickable badges to mark must-include ingredients
+- ⬜ **Shelf Management** — Optional fridge/larder/freezer/shelf tracking
+- ⬜ **Cooking Modes** — Ignore Shelf (A), Cook Now (B), Cook Later (C)
+- ⬜ **Post-Cook Shelf Update** — Deduct used ingredients, generate shopping list
+- ⬜ **Self-implemented ingredient database** — HA-native pantry state (Option C decided over Grocy/Mealie integration)
 
 ### Future Ideas
 - 🥖 **Baking** - Bread proofing, internal doneness, oven tracking
