@@ -611,6 +611,8 @@ class KitchenCookingPanel extends LitElement {
     try {
       const val = localStorage.getItem('kce_hide_other_data_source');
       if (val !== null) this._hideOtherDataSource = val === 'true';
+      const src = localStorage.getItem('kce_data_source');
+      if (src === 'swedish' || src === 'international') this._dataSource = src;
     } catch (e) {
       // localStorage unavailable, keep default
     }
@@ -1104,6 +1106,11 @@ class KitchenCookingPanel extends LitElement {
 
   _switchDataSource(source) {
     this._dataSource = source;
+    try {
+      localStorage.setItem('kce_data_source', source);
+    } catch (e) {
+      // localStorage unavailable
+    }
     // Reset all selections when switching data source
     this._selectedCategory = null;
     this._selectedMeat = null;

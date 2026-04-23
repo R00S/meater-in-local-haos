@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 23 Apr 2026, 21:24 CET
+ * AUTO-GENERATED: 23 Apr 2026, 21:34 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 23 Apr 2026, 21:24 CET
+// Last generated: 23 Apr 2026, 21:34 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -13984,6 +13984,8 @@ class KitchenCookingPanel extends LitElement {
     try {
       const val = localStorage.getItem('kce_hide_other_data_source');
       if (val !== null) this._hideOtherDataSource = val === 'true';
+      const src = localStorage.getItem('kce_data_source');
+      if (src === 'swedish' || src === 'international') this._dataSource = src;
     } catch (e) {
       // localStorage unavailable, keep default
     }
@@ -14477,6 +14479,11 @@ class KitchenCookingPanel extends LitElement {
 
   _switchDataSource(source) {
     this._dataSource = source;
+    try {
+      localStorage.setItem('kce_data_source', source);
+    } catch (e) {
+      // localStorage unavailable
+    }
     // Reset all selections when switching data source
     this._selectedCategory = null;
     this._selectedMeat = null;
@@ -23489,7 +23496,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "264";
+const PANEL_VERSION = "265";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

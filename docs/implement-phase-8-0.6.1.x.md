@@ -141,6 +141,20 @@ Modes A/B/C), 8d (Post-Cook Shelf Update), 8e (External Bridges — deferred).
 - PANEL_VERSION bumped 263 → 264 (auto by generator).
 - CHORES.md items ticked: versions updated, branch timeline updated, user guide updated.
 
+### v0.6.1.06 — 2026-04-23
+**Bugfix: Swedish data source not persisted — reloads showed International tree**
+
+- Root cause: `_dataSource` was never saved to localStorage. On reload, it reset to
+  `DATA_SOURCE_INTERNATIONAL`. With `_hideOtherDataSource = true` the selector card
+  is hidden, so users who had selected Swedish were silently switched to International
+  with no way to change it back.
+- Fix: `_switchDataSource()` now calls
+  `localStorage.setItem('kce_data_source', source)` after updating the reactive property.
+- Fix: `_loadHideOtherDataSourcePreference()` now also reads `kce_data_source` from
+  localStorage and restores `_dataSource` (validated to `'swedish'` or `'international'`).
+- PANEL_VERSION bumped 264 → 265 (auto by generator).
+- CHORES: versions updated, branch timeline updated, user guide §5.3 updated.
+
 ---
   All callers updated: `_toggleIngredient`, `_addCustomIngredient`, `_removeIngredient`,
   `_proceedToCookingStyle` guard, `_generateAIRecipes` request body,

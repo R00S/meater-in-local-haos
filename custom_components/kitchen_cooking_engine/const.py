@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.1.05 - Hide entire Temperaturdata card when hide_other_data_source is checked
+Last Change: v0.6.1.06 - Bugfix: persist selected data source to localStorage so Swedish tree survives page reload when hide-other-source is active
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "264"
+PANEL_VERSION = "265"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
