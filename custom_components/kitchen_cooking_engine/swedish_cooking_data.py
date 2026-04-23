@@ -35,6 +35,15 @@ from .cooking_data import (
     Meat,
     MeatCategory,
     CookingMethod,
+    DUCK_MEDIUM_RARE,
+    DUCK_MEDIUM,
+    DUCK_CONFIT,
+    SHRIMP_JUST_COOKED,
+    LOBSTER_TENDER,
+    VEG_TENDER,
+    VEG_CRISP_TENDER,
+    VEG_CARAMELIZED,
+    VEG_CHARRED,
 )
 
 
@@ -277,6 +286,7 @@ SWEDISH_GAME_MEDIUM = TemperatureRange(
     is_meater_recommended=True,
     start_hex="#B22222",
     end_hex="#CD5C5C",
+    safety_level="caution",
 )
 
 
@@ -1321,6 +1331,42 @@ SWEDISH_WILD_BOAR = [
     ),
 ]
 
+SWEDISH_RABBIT = [
+    MeatCut(
+        id=2640,
+        name="kaninsadel",
+        name_long="Kaninsadel",
+        cut_order=1,
+        estimated_thickness_mm=50,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=3,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[
+            SWEDISH_POULTRY_SAFE,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+    MeatCut(
+        id=2641,
+        name="kaninlar",
+        name_long="Kaninlår",
+        cut_order=2,
+        estimated_thickness_mm=70,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[
+            SWEDISH_POULTRY_SAFE,
+            SWEDISH_DONENESS_PULLED,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+]
+
 
 # ============================================================================
 # SWEDISH POULTRY (FÅGEL)
@@ -1706,6 +1752,1243 @@ SWEDISH_OTHER_FISH = [
 
 
 # ============================================================================
+# BEEF — GROUND & OFFAL (not in v0.5.3.5 reference)
+# ============================================================================
+
+SWEDISH_BEEF_GROUND = [
+    MeatCut(
+        id=2730,
+        name="hamburgare",
+        name_long="Hamburgare / Nötburgare",
+        cut_order=1,
+        estimated_thickness_mm=20,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=2,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[SWEDISH_DONENESS_WELL_DONE],
+        supported_methods=[
+            CookingMethod.GRILL,
+            CookingMethod.PAN_FRY,
+            CookingMethod.AIR_FRYER,
+        ],
+        recommended_doneness="well_done",
+    ),
+    MeatCut(
+        id=2731,
+        name="köttfärs",
+        name_long="Köttfärs",
+        cut_order=2,
+        estimated_thickness_mm=20,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=2,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[SWEDISH_DONENESS_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.BRAISE,
+        ],
+        recommended_doneness="well_done",
+    ),
+    MeatCut(
+        id=2732,
+        name="köttfärslimpa",
+        name_long="Köttfärslimpa",
+        cut_order=3,
+        estimated_thickness_mm=80,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=10,
+        rest_time_max=15,
+        carryover_temp_c=5,
+        temperature_ranges=[SWEDISH_DONENESS_WELL_DONE],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
+    ),
+]
+
+SWEDISH_BEEF_OFFAL = [
+    MeatCut(
+        id=2740,
+        name="nötlever",
+        name_long="Nötlever",
+        cut_order=1,
+        estimated_thickness_mm=15,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=2,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[SWEDISH_DONENESS_MEDIUM, SWEDISH_DONENESS_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.PAN_SEAR,
+        ],
+        recommended_doneness="well_done",
+    ),
+    MeatCut(
+        id=2741,
+        name="oxtunga",
+        name_long="Oxtunga",
+        cut_order=2,
+        estimated_thickness_mm=80,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=15,
+        rest_time_max=30,
+        carryover_temp_c=5,
+        temperature_ranges=[SWEDISH_DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+        ],
+        recommended_doneness="well_done",
+    ),
+    MeatCut(
+        id=2742,
+        name="oxlägg",
+        name_long="Oxlägg",
+        cut_order=3,
+        estimated_thickness_mm=60,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=10,
+        rest_time_max=20,
+        carryover_temp_c=3,
+        temperature_ranges=[SWEDISH_DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+        ],
+        recommended_doneness="well_done",
+    ),
+]
+
+
+# ============================================================================
+# PORK — HAM, GROUND & OFFAL (not in v0.5.3.5 reference)
+# ============================================================================
+
+SWEDISH_PORK_HAM = [
+    MeatCut(
+        id=2750,
+        name="färsk_skinka",
+        name_long="Färsk skinka",
+        cut_order=1,
+        estimated_thickness_mm=100,
+        usda_safe_c=70,
+        usda_safe_f=158,
+        rest_time_min=15,
+        rest_time_max=30,
+        carryover_temp_c=5,
+        temperature_ranges=[SWEDISH_PORK_MEDIUM, SWEDISH_PORK_WELL_DONE],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
+    ),
+    MeatCut(
+        id=2751,
+        name="rökt_skinka",
+        name_long="Rökt/rimmat skinka",
+        cut_order=2,
+        estimated_thickness_mm=100,
+        usda_safe_c=65,
+        usda_safe_f=149,
+        rest_time_min=10,
+        rest_time_max=20,
+        carryover_temp_c=5,
+        temperature_ranges=[SWEDISH_PORK_MEDIUM, SWEDISH_PORK_WELL_DONE],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
+    ),
+]
+
+SWEDISH_PORK_GROUND = [
+    MeatCut(
+        id=2760,
+        name="fläskkorv",
+        name_long="Fläskkorv",
+        cut_order=1,
+        estimated_thickness_mm=30,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=2,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[SWEDISH_PORK_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="well_done",
+    ),
+    MeatCut(
+        id=2761,
+        name="fläskfärs",
+        name_long="Fläskfärs",
+        cut_order=2,
+        estimated_thickness_mm=20,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=2,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[SWEDISH_PORK_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.BRAISE,
+        ],
+        recommended_doneness="well_done",
+    ),
+]
+
+SWEDISH_PORK_OFFAL = [
+    MeatCut(
+        id=2770,
+        name="griskind",
+        name_long="Griskind / Kindkött",
+        cut_order=1,
+        estimated_thickness_mm=30,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[SWEDISH_DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.BRAISE,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
+    ),
+    MeatCut(
+        id=2771,
+        name="fläsklever",
+        name_long="Fläsklever",
+        cut_order=2,
+        estimated_thickness_mm=15,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=2,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[SWEDISH_PORK_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.PAN_SEAR,
+        ],
+        recommended_doneness="well_done",
+    ),
+    MeatCut(
+        id=2772,
+        name="gristunga",
+        name_long="Gristunga",
+        cut_order=3,
+        estimated_thickness_mm=60,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=10,
+        rest_time_max=20,
+        carryover_temp_c=5,
+        temperature_ranges=[SWEDISH_DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+        ],
+        recommended_doneness="well_done",
+    ),
+]
+
+
+# ============================================================================
+# POULTRY — GOOSE & GROUND (not in v0.5.3.5 reference)
+# ============================================================================
+
+SWEDISH_GOOSE = [
+    MeatCut(
+        id=2780,
+        name="hel_gås",
+        name_long="Hel gås",
+        cut_order=1,
+        estimated_thickness_mm=120,
+        usda_safe_c=74,
+        usda_safe_f=165,
+        rest_time_min=20,
+        rest_time_max=30,
+        carryover_temp_c=8,
+        temperature_ranges=[SWEDISH_POULTRY_SAFE],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+    MeatCut(
+        id=2781,
+        name="gåsbröst",
+        name_long="Gåsbröst",
+        cut_order=2,
+        estimated_thickness_mm=30,
+        usda_safe_c=74,
+        usda_safe_f=165,
+        rest_time_min=10,
+        rest_time_max=15,
+        carryover_temp_c=5,
+        temperature_ranges=[DUCK_MEDIUM_RARE, DUCK_MEDIUM, SWEDISH_POULTRY_SAFE],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="medium_rare",
+    ),
+    MeatCut(
+        id=2782,
+        name="gåslår",
+        name_long="Gåslår",
+        cut_order=3,
+        estimated_thickness_mm=60,
+        usda_safe_c=74,
+        usda_safe_f=165,
+        rest_time_min=10,
+        rest_time_max=15,
+        carryover_temp_c=4,
+        temperature_ranges=[SWEDISH_POULTRY_SAFE],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.BRAISE,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+]
+
+SWEDISH_GROUND_POULTRY = [
+    MeatCut(
+        id=2790,
+        name="kycklingfärs",
+        name_long="Kycklingfärs",
+        cut_order=1,
+        estimated_thickness_mm=20,
+        usda_safe_c=74,
+        usda_safe_f=165,
+        rest_time_min=2,
+        rest_time_max=3,
+        carryover_temp_c=2,
+        temperature_ranges=[SWEDISH_POULTRY_SAFE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+    MeatCut(
+        id=2791,
+        name="kalkonfärs",
+        name_long="Kalkonfärs",
+        cut_order=2,
+        estimated_thickness_mm=20,
+        usda_safe_c=74,
+        usda_safe_f=165,
+        rest_time_min=2,
+        rest_time_max=3,
+        carryover_temp_c=2,
+        temperature_ranges=[SWEDISH_POULTRY_SAFE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+    MeatCut(
+        id=2792,
+        name="kycklingburgare",
+        name_long="Kycklingburgare",
+        cut_order=3,
+        estimated_thickness_mm=20,
+        usda_safe_c=74,
+        usda_safe_f=165,
+        rest_time_min=2,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[SWEDISH_POULTRY_SAFE],
+        supported_methods=[
+            CookingMethod.GRILL,
+            CookingMethod.PAN_FRY,
+            CookingMethod.AIR_FRYER,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+]
+
+
+# ============================================================================
+# FISH — SHELLFISH (not in v0.5.3.5 reference)
+# ============================================================================
+
+SWEDISH_SHELLFISH = [
+    MeatCut(
+        id=2800,
+        name="räkor",
+        name_long="Räkor",
+        cut_order=1,
+        estimated_thickness_mm=15,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=0,
+        rest_time_max=0,
+        carryover_temp_c=1,
+        temperature_ranges=[SHRIMP_JUST_COOKED, SWEDISH_FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+    MeatCut(
+        id=2801,
+        name="hummersvans",
+        name_long="Hummersvans",
+        cut_order=2,
+        estimated_thickness_mm=40,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=0,
+        rest_time_max=2,
+        carryover_temp_c=2,
+        temperature_ranges=[LOBSTER_TENDER, SWEDISH_FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.GRILL,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+    MeatCut(
+        id=2802,
+        name="pilgrimsmussla",
+        name_long="Pilgrimsmussla / Kammusslor",
+        cut_order=3,
+        estimated_thickness_mm=30,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=0,
+        rest_time_max=0,
+        carryover_temp_c=2,
+        temperature_ranges=[SWEDISH_FISH_MEDIUM, SWEDISH_FISH_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+]
+
+
+# ============================================================================
+# GAME — EXTRA ANIMALS (not in v0.5.3.5 reference; rabbit already there)
+# ============================================================================
+
+SWEDISH_BISON = [
+    MeatCut(
+        id=2810,
+        name="bisonstek",
+        name_long="Bisonstek",
+        cut_order=1,
+        estimated_thickness_mm=25,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[
+            SWEDISH_DONENESS_RARE,
+            SWEDISH_DONENESS_MEDIUM_RARE,
+            SWEDISH_DONENESS_MEDIUM,
+        ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="medium_rare",
+    ),
+    MeatCut(
+        id=2811,
+        name="bisonburgare",
+        name_long="Bisonburgare",
+        cut_order=2,
+        estimated_thickness_mm=20,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=2,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[SWEDISH_DONENESS_WELL_DONE],
+        supported_methods=[
+            CookingMethod.GRILL,
+            CookingMethod.PAN_FRY,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+    MeatCut(
+        id=2812,
+        name="bisontek_helstekt",
+        name_long="Bisontek helstekt",
+        cut_order=3,
+        estimated_thickness_mm=80,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=10,
+        rest_time_max=20,
+        carryover_temp_c=5,
+        temperature_ranges=[
+            SWEDISH_DONENESS_RARE,
+            SWEDISH_DONENESS_MEDIUM_RARE,
+            SWEDISH_DONENESS_MEDIUM,
+        ],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="medium_rare",
+    ),
+]
+
+SWEDISH_BUFFALO = [
+    MeatCut(
+        id=2820,
+        name="buffelstek",
+        name_long="Buffelstek",
+        cut_order=1,
+        estimated_thickness_mm=25,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[
+            SWEDISH_DONENESS_RARE,
+            SWEDISH_DONENESS_MEDIUM_RARE,
+            SWEDISH_DONENESS_MEDIUM,
+        ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="medium_rare",
+    ),
+    MeatCut(
+        id=2821,
+        name="buffelburgare",
+        name_long="Buffelburgare",
+        cut_order=2,
+        estimated_thickness_mm=20,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=2,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[SWEDISH_DONENESS_WELL_DONE],
+        supported_methods=[
+            CookingMethod.GRILL,
+            CookingMethod.PAN_FRY,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+]
+
+SWEDISH_OSTRICH = [
+    MeatCut(
+        id=2830,
+        name="strutsstek",
+        name_long="Strutsstek",
+        cut_order=1,
+        estimated_thickness_mm=20,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=3,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[
+            SWEDISH_DONENESS_RARE,
+            SWEDISH_DONENESS_MEDIUM_RARE,
+            SWEDISH_DONENESS_MEDIUM,
+        ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="medium_rare",
+    ),
+    MeatCut(
+        id=2831,
+        name="strutsfilé",
+        name_long="Strutsfilé",
+        cut_order=2,
+        estimated_thickness_mm=30,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[
+            SWEDISH_DONENESS_RARE,
+            SWEDISH_DONENESS_MEDIUM_RARE,
+            SWEDISH_DONENESS_MEDIUM,
+        ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="medium_rare",
+    ),
+]
+
+SWEDISH_MUTTON = [
+    MeatCut(
+        id=2840,
+        name="fårkotlett",
+        name_long="Fårkotlett",
+        cut_order=1,
+        estimated_thickness_mm=30,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[
+            SWEDISH_DONENESS_RARE,
+            SWEDISH_DONENESS_MEDIUM_RARE,
+            SWEDISH_DONENESS_MEDIUM,
+            SWEDISH_DONENESS_WELL_DONE,
+        ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="medium",
+    ),
+    MeatCut(
+        id=2841,
+        name="fårlägg",
+        name_long="Fårlägg (helstekt)",
+        cut_order=2,
+        estimated_thickness_mm=100,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=15,
+        rest_time_max=30,
+        carryover_temp_c=8,
+        temperature_ranges=[
+            SWEDISH_DONENESS_MEDIUM_RARE,
+            SWEDISH_DONENESS_MEDIUM,
+            SWEDISH_DONENESS_WELL_DONE,
+        ],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="medium",
+    ),
+    MeatCut(
+        id=2842,
+        name="fårskuldra",
+        name_long="Fårskuldra",
+        cut_order=3,
+        estimated_thickness_mm=100,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=15,
+        rest_time_max=30,
+        carryover_temp_c=5,
+        temperature_ranges=[SWEDISH_DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+]
+
+SWEDISH_KANGAROO = [
+    MeatCut(
+        id=2850,
+        name="kängurusteak",
+        name_long="Kängurusteak",
+        cut_order=1,
+        estimated_thickness_mm=20,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=3,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[
+            SWEDISH_DONENESS_RARE,
+            SWEDISH_DONENESS_MEDIUM_RARE,
+            SWEDISH_DONENESS_MEDIUM,
+        ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="medium_rare",
+    ),
+    MeatCut(
+        id=2851,
+        name="kängurufilé",
+        name_long="Kängurufilé",
+        cut_order=2,
+        estimated_thickness_mm=40,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[
+            SWEDISH_DONENESS_RARE,
+            SWEDISH_DONENESS_MEDIUM_RARE,
+            SWEDISH_DONENESS_MEDIUM,
+        ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="medium_rare",
+    ),
+]
+
+SWEDISH_GOAT = [
+    MeatCut(
+        id=2860,
+        name="getkotlett",
+        name_long="Getkotlett",
+        cut_order=1,
+        estimated_thickness_mm=25,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[
+            SWEDISH_DONENESS_MEDIUM_RARE,
+            SWEDISH_DONENESS_MEDIUM,
+            SWEDISH_DONENESS_WELL_DONE,
+        ],
+        supported_methods=[
+            CookingMethod.PAN_SEAR,
+            CookingMethod.GRILL,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+    MeatCut(
+        id=2861,
+        name="getlägg",
+        name_long="Getlägg (helstekt)",
+        cut_order=2,
+        estimated_thickness_mm=100,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=15,
+        rest_time_max=30,
+        carryover_temp_c=8,
+        temperature_ranges=[
+            SWEDISH_DONENESS_MEDIUM,
+            SWEDISH_DONENESS_WELL_DONE,
+        ],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.BRAISE,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+    MeatCut(
+        id=2862,
+        name="getskuldra",
+        name_long="Getskuldra",
+        cut_order=3,
+        estimated_thickness_mm=100,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=15,
+        rest_time_max=30,
+        carryover_temp_c=5,
+        temperature_ranges=[SWEDISH_DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+        ],
+        recommended_doneness="genomstekt",
+    ),
+]
+
+
+# ============================================================================
+# GRÖNSAKER (VEGETABLES) — full category, not in v0.5.3.5 reference
+# ============================================================================
+
+SWEDISH_ROOT_VEGETABLES = [
+    MeatCut(
+        id=2900,
+        name="bakad_potatis",
+        name_long="Bakad potatis",
+        cut_order=1,
+        estimated_thickness_mm=80,
+        rest_time_min=0,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[VEG_TENDER],
+        supported_methods=[
+            CookingMethod.OVEN_BAKE,
+            CookingMethod.AIR_FRYER,
+        ],
+    ),
+    MeatCut(
+        id=2901,
+        name="rostade_potatisar",
+        name_long="Rostade potatisar",
+        cut_order=2,
+        estimated_thickness_mm=30,
+        rest_time_min=0,
+        rest_time_max=2,
+        carryover_temp_c=2,
+        temperature_ranges=[VEG_CARAMELIZED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.AIR_FRYER,
+        ],
+    ),
+    MeatCut(
+        id=2902,
+        name="rostade_morötter",
+        name_long="Rostade morötter",
+        cut_order=3,
+        estimated_thickness_mm=20,
+        rest_time_min=0,
+        rest_time_max=2,
+        carryover_temp_c=1,
+        temperature_ranges=[VEG_TENDER, VEG_CARAMELIZED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.AIR_FRYER,
+            CookingMethod.SAUTE,
+        ],
+    ),
+    MeatCut(
+        id=2903,
+        name="rostade_palsternacka",
+        name_long="Rostade palsternacka",
+        cut_order=4,
+        estimated_thickness_mm=20,
+        rest_time_min=0,
+        rest_time_max=2,
+        carryover_temp_c=1,
+        temperature_ranges=[VEG_TENDER, VEG_CARAMELIZED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.AIR_FRYER,
+        ],
+    ),
+    MeatCut(
+        id=2904,
+        name="rödbetor",
+        name_long="Rödbetor",
+        cut_order=5,
+        estimated_thickness_mm=60,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[VEG_TENDER],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+        ],
+    ),
+    MeatCut(
+        id=2905,
+        name="rostade_sötpotatis",
+        name_long="Rostade sötpotatis",
+        cut_order=6,
+        estimated_thickness_mm=60,
+        rest_time_min=0,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[VEG_TENDER, VEG_CARAMELIZED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.OVEN_BAKE,
+            CookingMethod.AIR_FRYER,
+        ],
+    ),
+]
+
+SWEDISH_GREEN_VEGETABLES = [
+    MeatCut(
+        id=2910,
+        name="broccoli",
+        name_long="Broccoli",
+        cut_order=1,
+        estimated_thickness_mm=40,
+        rest_time_min=0,
+        rest_time_max=1,
+        carryover_temp_c=1,
+        temperature_ranges=[VEG_CRISP_TENDER, VEG_TENDER],
+        supported_methods=[
+            CookingMethod.STEAM,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.AIR_FRYER,
+            CookingMethod.SAUTE,
+        ],
+    ),
+    MeatCut(
+        id=2911,
+        name="brysselkål",
+        name_long="Brysselkål",
+        cut_order=2,
+        estimated_thickness_mm=30,
+        rest_time_min=0,
+        rest_time_max=2,
+        carryover_temp_c=1,
+        temperature_ranges=[VEG_TENDER, VEG_CARAMELIZED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.AIR_FRYER,
+            CookingMethod.SAUTE,
+            CookingMethod.PAN_FRY,
+        ],
+    ),
+    MeatCut(
+        id=2912,
+        name="sparris",
+        name_long="Sparris",
+        cut_order=3,
+        estimated_thickness_mm=12,
+        rest_time_min=0,
+        rest_time_max=1,
+        carryover_temp_c=1,
+        temperature_ranges=[VEG_CRISP_TENDER, VEG_TENDER],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.SAUTE,
+            CookingMethod.STEAM,
+            CookingMethod.GRILL,
+        ],
+    ),
+    MeatCut(
+        id=2913,
+        name="haricots_verts",
+        name_long="Haricots verts / Gröna bönor",
+        cut_order=4,
+        estimated_thickness_mm=8,
+        rest_time_min=0,
+        rest_time_max=1,
+        carryover_temp_c=1,
+        temperature_ranges=[VEG_CRISP_TENDER, VEG_TENDER],
+        supported_methods=[
+            CookingMethod.STEAM,
+            CookingMethod.SAUTE,
+            CookingMethod.BOIL,
+            CookingMethod.OVEN_ROAST,
+        ],
+    ),
+    MeatCut(
+        id=2914,
+        name="spenat",
+        name_long="Spenat",
+        cut_order=5,
+        estimated_thickness_mm=5,
+        rest_time_min=0,
+        rest_time_max=0,
+        carryover_temp_c=0,
+        temperature_ranges=[VEG_TENDER],
+        supported_methods=[
+            CookingMethod.SAUTE,
+            CookingMethod.STEAM,
+        ],
+    ),
+]
+
+SWEDISH_ALLIUM_VEGETABLES = [
+    MeatCut(
+        id=2920,
+        name="rostad_lök",
+        name_long="Rostad lök",
+        cut_order=1,
+        estimated_thickness_mm=50,
+        rest_time_min=0,
+        rest_time_max=2,
+        carryover_temp_c=2,
+        temperature_ranges=[VEG_TENDER, VEG_CARAMELIZED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.SAUTE,
+            CookingMethod.GRILL,
+        ],
+    ),
+    MeatCut(
+        id=2921,
+        name="karamelliserad_lök",
+        name_long="Karamelliserad lök",
+        cut_order=2,
+        estimated_thickness_mm=5,
+        rest_time_min=0,
+        rest_time_max=0,
+        carryover_temp_c=0,
+        temperature_ranges=[VEG_CARAMELIZED],
+        supported_methods=[
+            CookingMethod.SAUTE,
+            CookingMethod.PAN_FRY,
+        ],
+    ),
+    MeatCut(
+        id=2922,
+        name="rostad_vitlök",
+        name_long="Rostad vitlök",
+        cut_order=3,
+        estimated_thickness_mm=30,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=2,
+        temperature_ranges=[VEG_TENDER, VEG_CARAMELIZED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+        ],
+    ),
+    MeatCut(
+        id=2923,
+        name="purjolök",
+        name_long="Purjolök",
+        cut_order=4,
+        estimated_thickness_mm=20,
+        rest_time_min=0,
+        rest_time_max=2,
+        carryover_temp_c=1,
+        temperature_ranges=[VEG_TENDER, VEG_CARAMELIZED],
+        supported_methods=[
+            CookingMethod.BRAISE,
+            CookingMethod.SAUTE,
+            CookingMethod.OVEN_ROAST,
+        ],
+    ),
+]
+
+SWEDISH_SQUASH_VEGETABLES = [
+    MeatCut(
+        id=2930,
+        name="zucchini",
+        name_long="Zucchini",
+        cut_order=1,
+        estimated_thickness_mm=25,
+        rest_time_min=0,
+        rest_time_max=1,
+        carryover_temp_c=1,
+        temperature_ranges=[VEG_CRISP_TENDER, VEG_TENDER],
+        supported_methods=[
+            CookingMethod.SAUTE,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.AIR_FRYER,
+            CookingMethod.GRILL,
+        ],
+    ),
+    MeatCut(
+        id=2931,
+        name="butternutsquash",
+        name_long="Butternutsquash",
+        cut_order=2,
+        estimated_thickness_mm=40,
+        rest_time_min=0,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[VEG_TENDER, VEG_CARAMELIZED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.STEAM,
+        ],
+    ),
+    MeatCut(
+        id=2932,
+        name="ekornsquash",
+        name_long="Ekornsquash",
+        cut_order=3,
+        estimated_thickness_mm=50,
+        rest_time_min=0,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[VEG_TENDER],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.OVEN_BAKE,
+        ],
+    ),
+    MeatCut(
+        id=2933,
+        name="spagettisquash",
+        name_long="Spagettisquash",
+        cut_order=4,
+        estimated_thickness_mm=100,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[VEG_TENDER],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.OVEN_BAKE,
+        ],
+    ),
+]
+
+SWEDISH_CRUCIFEROUS_VEGETABLES = [
+    MeatCut(
+        id=2940,
+        name="blomkål",
+        name_long="Blomkål",
+        cut_order=1,
+        estimated_thickness_mm=50,
+        rest_time_min=0,
+        rest_time_max=2,
+        carryover_temp_c=1,
+        temperature_ranges=[VEG_TENDER, VEG_CARAMELIZED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.AIR_FRYER,
+            CookingMethod.STEAM,
+            CookingMethod.SAUTE,
+        ],
+    ),
+    MeatCut(
+        id=2941,
+        name="kål",
+        name_long="Kål",
+        cut_order=2,
+        estimated_thickness_mm=30,
+        rest_time_min=0,
+        rest_time_max=2,
+        carryover_temp_c=1,
+        temperature_ranges=[VEG_CRISP_TENDER, VEG_TENDER],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.BRAISE,
+            CookingMethod.SAUTE,
+        ],
+    ),
+]
+
+SWEDISH_PEPPER_VEGETABLES = [
+    MeatCut(
+        id=2950,
+        name="paprika",
+        name_long="Paprika",
+        cut_order=1,
+        estimated_thickness_mm=8,
+        rest_time_min=0,
+        rest_time_max=1,
+        carryover_temp_c=1,
+        temperature_ranges=[VEG_CRISP_TENDER, VEG_CHARRED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.SAUTE,
+            CookingMethod.GRILL,
+            CookingMethod.AIR_FRYER,
+        ],
+    ),
+]
+
+SWEDISH_MUSHROOMS = [
+    MeatCut(
+        id=2960,
+        name="champinjoner",
+        name_long="Champinjoner",
+        cut_order=1,
+        estimated_thickness_mm=20,
+        rest_time_min=0,
+        rest_time_max=1,
+        carryover_temp_c=1,
+        temperature_ranges=[VEG_CARAMELIZED],
+        supported_methods=[
+            CookingMethod.SAUTE,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+        ],
+    ),
+    MeatCut(
+        id=2961,
+        name="portobellosvamp",
+        name_long="Portobellosvamp",
+        cut_order=2,
+        estimated_thickness_mm=40,
+        rest_time_min=0,
+        rest_time_max=2,
+        carryover_temp_c=2,
+        temperature_ranges=[VEG_TENDER, VEG_CARAMELIZED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+            CookingMethod.SAUTE,
+            CookingMethod.AIR_FRYER,
+        ],
+    ),
+]
+
+SWEDISH_CORN = [
+    MeatCut(
+        id=2970,
+        name="majskolv",
+        name_long="Majskolv",
+        cut_order=1,
+        estimated_thickness_mm=50,
+        rest_time_min=0,
+        rest_time_max=2,
+        carryover_temp_c=1,
+        temperature_ranges=[VEG_TENDER, VEG_CHARRED],
+        supported_methods=[
+            CookingMethod.BOIL,
+            CookingMethod.STEAM,
+            CookingMethod.GRILL,
+            CookingMethod.OVEN_ROAST,
+        ],
+    ),
+]
+
+SWEDISH_EGGPLANT = [
+    MeatCut(
+        id=2980,
+        name="aubergine",
+        name_long="Aubergine",
+        cut_order=1,
+        estimated_thickness_mm=30,
+        rest_time_min=0,
+        rest_time_max=2,
+        carryover_temp_c=2,
+        temperature_ranges=[VEG_TENDER, VEG_CHARRED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.GRILL,
+            CookingMethod.AIR_FRYER,
+            CookingMethod.PAN_FRY,
+        ],
+    ),
+]
+
+SWEDISH_TOMATOES = [
+    MeatCut(
+        id=2990,
+        name="rostade_tomater",
+        name_long="Rostade tomater",
+        cut_order=1,
+        estimated_thickness_mm=40,
+        rest_time_min=0,
+        rest_time_max=2,
+        carryover_temp_c=1,
+        temperature_ranges=[VEG_TENDER, VEG_CARAMELIZED],
+        supported_methods=[
+            CookingMethod.OVEN_ROAST,
+        ],
+    ),
+]
+
+
+# ============================================================================
 # ASSEMBLE SWEDISH DATA STRUCTURE
 # ============================================================================
 
@@ -1723,6 +3006,8 @@ SWEDISH_MEAT_CATEGORIES = [
                     CutType(id=2100, name="Skiva", cuts=SWEDISH_BEEF_STEAKS),
                     CutType(id=2101, name="Helstekt", cuts=SWEDISH_BEEF_ROASTS),
                     CutType(id=2102, name="Grytbitar/Långkok", cuts=SWEDISH_BEEF_BRAISING),
+                    CutType(id=2103, name="Köttfärs", cuts=SWEDISH_BEEF_GROUND),
+                    CutType(id=2104, name="Inälvor", cuts=SWEDISH_BEEF_OFFAL),
                 ],
             ),
         ],
@@ -1740,6 +3025,9 @@ SWEDISH_MEAT_CATEGORIES = [
                     CutType(id=2200, name="Skiva/Kotlett", cuts=SWEDISH_PORK_STEAKS),
                     CutType(id=2201, name="Helstekt", cuts=SWEDISH_PORK_ROASTS),
                     CutType(id=2202, name="Revben", cuts=SWEDISH_PORK_RIBS),
+                    CutType(id=2203, name="Skinka", cuts=SWEDISH_PORK_HAM),
+                    CutType(id=2204, name="Fläskfärs", cuts=SWEDISH_PORK_GROUND),
+                    CutType(id=2205, name="Inälvor", cuts=SWEDISH_PORK_OFFAL),
                 ],
             ),
         ],
@@ -1771,6 +3059,22 @@ SWEDISH_MEAT_CATEGORIES = [
                 description="Ankstyckningar",
                 cut_types=[
                     CutType(id=2320, name="Anka", cuts=SWEDISH_DUCK),
+                ],
+            ),
+            Meat(
+                id=2033,
+                name="gås",
+                description="Gåsstyckningar",
+                cut_types=[
+                    CutType(id=2330, name="Gås", cuts=SWEDISH_GOOSE),
+                ],
+            ),
+            Meat(
+                id=2034,
+                name="fjäderfäfärs",
+                description="Malet fjäderfä",
+                cut_types=[
+                    CutType(id=2340, name="Fjäderfäfärs", cuts=SWEDISH_GROUND_POULTRY),
                 ],
             ),
         ],
@@ -1810,6 +3114,14 @@ SWEDISH_MEAT_CATEGORIES = [
                 description="Övriga fiskar",
                 cut_types=[
                     CutType(id=2420, name="Övrig fisk", cuts=SWEDISH_OTHER_FISH),
+                ],
+            ),
+            Meat(
+                id=2044,
+                name="skaldjur",
+                description="Skaldjur",
+                cut_types=[
+                    CutType(id=2440, name="Skaldjur", cuts=SWEDISH_SHELLFISH),
                 ],
             ),
         ],
@@ -1882,6 +3194,149 @@ SWEDISH_MEAT_CATEGORIES = [
                 description="Vildsvinstyckningar",
                 cut_types=[
                     CutType(id=2630, name="Vildsvin", cuts=SWEDISH_WILD_BOAR),
+                ],
+            ),
+            Meat(
+                id=2064,
+                name="kanin",
+                description="Kaninstyckningar",
+                cut_types=[
+                    CutType(id=2640, name="Kanin", cuts=SWEDISH_RABBIT),
+                ],
+            ),
+            Meat(
+                id=2065,
+                name="bison",
+                description="Bisonstyckningar",
+                cut_types=[
+                    CutType(id=2650, name="Bison", cuts=SWEDISH_BISON),
+                ],
+            ),
+            Meat(
+                id=2066,
+                name="buffel",
+                description="Buffelstyckningar",
+                cut_types=[
+                    CutType(id=2660, name="Buffel", cuts=SWEDISH_BUFFALO),
+                ],
+            ),
+            Meat(
+                id=2067,
+                name="struts",
+                description="Strutsstyckningar",
+                cut_types=[
+                    CutType(id=2670, name="Struts", cuts=SWEDISH_OSTRICH),
+                ],
+            ),
+            Meat(
+                id=2068,
+                name="fårkött",
+                description="Fårköttstyckningar",
+                cut_types=[
+                    CutType(id=2680, name="Fårkött", cuts=SWEDISH_MUTTON),
+                ],
+            ),
+            Meat(
+                id=2069,
+                name="känguru",
+                description="Kängurustyckar",
+                cut_types=[
+                    CutType(id=2690, name="Känguru", cuts=SWEDISH_KANGAROO),
+                ],
+            ),
+            Meat(
+                id=2071,
+                name="getkött",
+                description="Getköttstyckningar",
+                cut_types=[
+                    CutType(id=2691, name="Getkött", cuts=SWEDISH_GOAT),
+                ],
+            ),
+        ],
+    ),
+    MeatCategory(
+        id=2008,
+        name="grönsaker",
+        color_hex="#228B22",
+        meats=[
+            Meat(
+                id=2080,
+                name="rotfrukter",
+                description="Rotfrukter",
+                cut_types=[
+                    CutType(id=2800, name="Rotfrukter", cuts=SWEDISH_ROOT_VEGETABLES),
+                ],
+            ),
+            Meat(
+                id=2081,
+                name="gröna_grönsaker",
+                description="Gröna grönsaker",
+                cut_types=[
+                    CutType(id=2810, name="Gröna grönsaker", cuts=SWEDISH_GREEN_VEGETABLES),
+                ],
+            ),
+            Meat(
+                id=2082,
+                name="lökgrönsaker",
+                description="Lök och lökgrönsaker",
+                cut_types=[
+                    CutType(id=2820, name="Lökgrönsaker", cuts=SWEDISH_ALLIUM_VEGETABLES),
+                ],
+            ),
+            Meat(
+                id=2083,
+                name="squash",
+                description="Squash och pumpa",
+                cut_types=[
+                    CutType(id=2830, name="Squash", cuts=SWEDISH_SQUASH_VEGETABLES),
+                ],
+            ),
+            Meat(
+                id=2084,
+                name="kålsläktet",
+                description="Kål och blomkål",
+                cut_types=[
+                    CutType(id=2840, name="Kålsläktet", cuts=SWEDISH_CRUCIFEROUS_VEGETABLES),
+                ],
+            ),
+            Meat(
+                id=2085,
+                name="paprika",
+                description="Paprika",
+                cut_types=[
+                    CutType(id=2850, name="Paprika", cuts=SWEDISH_PEPPER_VEGETABLES),
+                ],
+            ),
+            Meat(
+                id=2086,
+                name="svamp",
+                description="Matsvamp",
+                cut_types=[
+                    CutType(id=2860, name="Svamp", cuts=SWEDISH_MUSHROOMS),
+                ],
+            ),
+            Meat(
+                id=2087,
+                name="majs",
+                description="Majs",
+                cut_types=[
+                    CutType(id=2870, name="Majs", cuts=SWEDISH_CORN),
+                ],
+            ),
+            Meat(
+                id=2088,
+                name="aubergine",
+                description="Aubergine",
+                cut_types=[
+                    CutType(id=2880, name="Aubergine", cuts=SWEDISH_EGGPLANT),
+                ],
+            ),
+            Meat(
+                id=2089,
+                name="tomater",
+                description="Tomater",
+                cut_types=[
+                    CutType(id=2890, name="Tomater", cuts=SWEDISH_TOMATOES),
                 ],
             ),
         ],

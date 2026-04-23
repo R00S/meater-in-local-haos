@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 24 Apr 2026, 00:28 CET
+ * AUTO-GENERATED: 24 Apr 2026, 00:51 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 24 Apr 2026, 00:28 CET
+// Last generated: 24 Apr 2026, 00:51 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -282,6 +282,51 @@ const SWEDISH_DONENESS_OPTIONS = {
     "description": "Långkokt - Strimlningsbart",
     "temp_c": 92,
     "temp_f": 198,
+    "safety_level": "safe"
+  },
+  "just_cooked": {
+    "value": "just_cooked",
+    "name": "Just Cooked",
+    "icon": "🦐",
+    "description": "Just opaque and curled — 120°F (ThermoWorks preferred)",
+    "temp_c": 49,
+    "temp_f": 120,
+    "safety_level": "caution"
+  },
+  "tender": {
+    "value": "tender",
+    "name": "Tender",
+    "icon": "🥔",
+    "description": "135°F — silky, tender lobster meat (chef preferred)",
+    "temp_c": 57,
+    "temp_f": 135,
+    "safety_level": "caution"
+  },
+  "caramelized": {
+    "value": "caramelized",
+    "name": "Caramelized",
+    "icon": "🧅",
+    "description": "Golden brown, enhanced sweetness",
+    "temp_c": 160,
+    "temp_f": 320,
+    "safety_level": "safe"
+  },
+  "crisp_tender": {
+    "value": "crisp_tender",
+    "name": "Crisp Tender",
+    "icon": "🥦",
+    "description": "Slightly firm with some bite",
+    "temp_c": 85,
+    "temp_f": 185,
+    "safety_level": "safe"
+  },
+  "charred": {
+    "value": "charred",
+    "name": "Charred",
+    "icon": "🔥",
+    "description": "Charred exterior with smoky flavor",
+    "temp_c": 200,
+    "temp_f": 390,
     "safety_level": "safe"
   }
 };
@@ -3670,6 +3715,91 @@ const SWEDISH_MEAT_CATEGORIES = {
                 ]
               }
             ]
+          },
+          {
+            "id": 2103,
+            "name": "Köttfärs",
+            "cuts": [
+              {
+                "id": 2730,
+                "name": "Hamburgare / Nötburgare",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry",
+                  "air_fryer"
+                ]
+              },
+              {
+                "id": 2731,
+                "name": "Köttfärs",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "braise"
+                ]
+              },
+              {
+                "id": 2732,
+                "name": "Köttfärslimpa",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 2104,
+            "name": "Inälvor",
+            "cuts": [
+              {
+                "id": 2740,
+                "name": "Nötlever",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": 2741,
+                "name": "Oxtunga",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": 2742,
+                "name": "Oxlägg",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
+                ]
+              }
+            ]
           }
         ]
       }
@@ -3881,6 +4011,109 @@ const SWEDISH_MEAT_CATEGORIES = {
                 ]
               }
             ]
+          },
+          {
+            "id": 2203,
+            "name": "Skinka",
+            "cuts": [
+              {
+                "id": 2750,
+                "name": "Färsk skinka",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2751,
+                "name": "Rökt/rimmat skinka",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 2204,
+            "name": "Fläskfärs",
+            "cuts": [
+              {
+                "id": 2760,
+                "name": "Fläskkorv",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2761,
+                "name": "Fläskfärs",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "braise"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 2205,
+            "name": "Inälvor",
+            "cuts": [
+              {
+                "id": 2770,
+                "name": "Griskind / Kindkött",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "braise",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2771,
+                "name": "Fläsklever",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": 2772,
+                "name": "Gristunga",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
+                ]
+              }
+            ]
           }
         ]
       }
@@ -4006,6 +4239,104 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "genomstekt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2033,
+        "name": "gås",
+        "cutTypes": [
+          {
+            "id": 2330,
+            "name": "Gås",
+            "cuts": [
+              {
+                "id": 2780,
+                "name": "Hel gås",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2781,
+                "name": "Gåsbröst",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2782,
+                "name": "Gåslår",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2034,
+        "name": "fjäderfäfärs",
+        "cutTypes": [
+          {
+            "id": 2340,
+            "name": "Fjäderfäfärs",
+            "cuts": [
+              {
+                "id": 2790,
+                "name": "Kycklingfärs",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2791,
+                "name": "Kalkonfärs",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2792,
+                "name": "Kycklingburgare",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry",
+                  "air_fryer"
+                ]
               }
             ]
           }
@@ -4238,6 +4569,55 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt"
                 ],
                 "recommended_doneness": "medium"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2044,
+        "name": "skaldjur",
+        "cutTypes": [
+          {
+            "id": 2440,
+            "name": "Skaldjur",
+            "cuts": [
+              {
+                "id": 2800,
+                "name": "Räkor",
+                "doneness": [
+                  "just_cooked",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": 2801,
+                "name": "Hummersvans",
+                "doneness": [
+                  "tender",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2802,
+                "name": "Pilgrimsmussla / Kammusslor",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "pan_sear"
+                ]
               }
             ]
           }
@@ -4703,6 +5083,776 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "långkokt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2064,
+        "name": "kanin",
+        "cutTypes": [
+          {
+            "id": 2640,
+            "name": "Kanin",
+            "cuts": [
+              {
+                "id": 2640,
+                "name": "Kaninsadel",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 2641,
+                "name": "Kaninlår",
+                "doneness": [
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2065,
+        "name": "bison",
+        "cutTypes": [
+          {
+            "id": 2650,
+            "name": "Bison",
+            "cuts": [
+              {
+                "id": 2810,
+                "name": "Bisonstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2811,
+                "name": "Bisonburgare",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": 2812,
+                "name": "Bisontek helstekt",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2066,
+        "name": "buffel",
+        "cutTypes": [
+          {
+            "id": 2660,
+            "name": "Buffel",
+            "cuts": [
+              {
+                "id": 2820,
+                "name": "Buffelstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2821,
+                "name": "Buffelburgare",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2067,
+        "name": "struts",
+        "cutTypes": [
+          {
+            "id": 2670,
+            "name": "Struts",
+            "cuts": [
+              {
+                "id": 2830,
+                "name": "Strutsstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2831,
+                "name": "Strutsfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2068,
+        "name": "fårkött",
+        "cutTypes": [
+          {
+            "id": 2680,
+            "name": "Fårkött",
+            "cuts": [
+              {
+                "id": 2840,
+                "name": "Fårkotlett",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2841,
+                "name": "Fårlägg (helstekt)",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2842,
+                "name": "Fårskuldra",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2069,
+        "name": "känguru",
+        "cutTypes": [
+          {
+            "id": 2690,
+            "name": "Känguru",
+            "cuts": [
+              {
+                "id": 2850,
+                "name": "Kängurusteak",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2851,
+                "name": "Kängurufilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2071,
+        "name": "getkött",
+        "cutTypes": [
+          {
+            "id": 2691,
+            "name": "Getkött",
+            "cuts": [
+              {
+                "id": 2860,
+                "name": "Getkotlett",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2861,
+                "name": "Getlägg (helstekt)",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise"
+                ]
+              },
+              {
+                "id": 2862,
+                "name": "Getskuldra",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "grönsaker": {
+    "id": 2008,
+    "name": "Grönsaker",
+    "icon": "🍖",
+    "color": "#228B22",
+    "meats": [
+      {
+        "id": 2080,
+        "name": "rotfrukter",
+        "cutTypes": [
+          {
+            "id": 2800,
+            "name": "Rotfrukter",
+            "cuts": [
+              {
+                "id": 2900,
+                "name": "Bakad potatis",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_bake",
+                  "air_fryer"
+                ]
+              },
+              {
+                "id": 2901,
+                "name": "Rostade potatisar",
+                "doneness": [
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer"
+                ]
+              },
+              {
+                "id": 2902,
+                "name": "Rostade morötter",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer",
+                  "saute"
+                ]
+              },
+              {
+                "id": 2903,
+                "name": "Rostade palsternacka",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer"
+                ]
+              },
+              {
+                "id": 2904,
+                "name": "Rödbetor",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2905,
+                "name": "Rostade sötpotatis",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "oven_bake",
+                  "air_fryer"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2081,
+        "name": "gröna_grönsaker",
+        "cutTypes": [
+          {
+            "id": 2810,
+            "name": "Gröna grönsaker",
+            "cuts": [
+              {
+                "id": 2910,
+                "name": "Broccoli",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "steam",
+                  "oven_roast",
+                  "air_fryer",
+                  "saute"
+                ]
+              },
+              {
+                "id": 2911,
+                "name": "Brysselkål",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer",
+                  "saute",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": 2912,
+                "name": "Sparris",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "saute",
+                  "steam",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2913,
+                "name": "Haricots verts / Gröna bönor",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "steam",
+                  "saute",
+                  "boil",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2914,
+                "name": "Spenat",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "saute",
+                  "steam"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2082,
+        "name": "lökgrönsaker",
+        "cutTypes": [
+          {
+            "id": 2820,
+            "name": "Lökgrönsaker",
+            "cuts": [
+              {
+                "id": 2920,
+                "name": "Rostad lök",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "saute",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2921,
+                "name": "Karamelliserad lök",
+                "doneness": [
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "saute",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": 2922,
+                "name": "Rostad vitlök",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2923,
+                "name": "Purjolök",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "braise",
+                  "saute",
+                  "oven_roast"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2083,
+        "name": "squash",
+        "cutTypes": [
+          {
+            "id": 2830,
+            "name": "Squash",
+            "cuts": [
+              {
+                "id": 2930,
+                "name": "Zucchini",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "saute",
+                  "oven_roast",
+                  "air_fryer",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2931,
+                "name": "Butternutsquash",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "steam"
+                ]
+              },
+              {
+                "id": 2932,
+                "name": "Ekornsquash",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "oven_bake"
+                ]
+              },
+              {
+                "id": 2933,
+                "name": "Spagettisquash",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "oven_bake"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2084,
+        "name": "kålsläktet",
+        "cutTypes": [
+          {
+            "id": 2840,
+            "name": "Kålsläktet",
+            "cuts": [
+              {
+                "id": 2940,
+                "name": "Blomkål",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer",
+                  "steam",
+                  "saute"
+                ]
+              },
+              {
+                "id": 2941,
+                "name": "Kål",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "saute"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2085,
+        "name": "paprika",
+        "cutTypes": [
+          {
+            "id": 2850,
+            "name": "Paprika",
+            "cuts": [
+              {
+                "id": 2950,
+                "name": "Paprika",
+                "doneness": [
+                  "crisp_tender",
+                  "charred"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "saute",
+                  "grill",
+                  "air_fryer"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2086,
+        "name": "svamp",
+        "cutTypes": [
+          {
+            "id": 2860,
+            "name": "Svamp",
+            "cuts": [
+              {
+                "id": 2960,
+                "name": "Champinjoner",
+                "doneness": [
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "saute",
+                  "oven_roast",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2961,
+                "name": "Portobellosvamp",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "saute",
+                  "air_fryer"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2087,
+        "name": "majs",
+        "cutTypes": [
+          {
+            "id": 2870,
+            "name": "Majs",
+            "cuts": [
+              {
+                "id": 2970,
+                "name": "Majskolv",
+                "doneness": [
+                  "tender",
+                  "charred"
+                ],
+                "supported_methods": [
+                  "boil",
+                  "steam",
+                  "grill",
+                  "oven_roast"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2088,
+        "name": "aubergine",
+        "cutTypes": [
+          {
+            "id": 2880,
+            "name": "Aubergine",
+            "cuts": [
+              {
+                "id": 2980,
+                "name": "Aubergine",
+                "doneness": [
+                  "tender",
+                  "charred"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "air_fryer",
+                  "pan_fry"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2089,
+        "name": "tomater",
+        "cutTypes": [
+          {
+            "id": 2890,
+            "name": "Tomater",
+            "cuts": [
+              {
+                "id": 2990,
+                "name": "Rostade tomater",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast"
+                ]
               }
             ]
           }
@@ -25108,7 +26258,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "269";
+const PANEL_VERSION = "270";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
