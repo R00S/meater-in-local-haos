@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 23 Apr 2026, 17:27 CET
+ * AUTO-GENERATED: 23 Apr 2026, 17:37 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 23 Apr 2026, 17:27 CET
+// Last generated: 23 Apr 2026, 17:37 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -12213,6 +12213,7 @@ const I18N_STRINGS = {
       "swedish": "🇸🇪 Svenska (Livsmedelsverket)",
       "swedish_description": "Using Swedish temperature recommendations from Livsmedelsverket, Stekguiden.se and Gårdssällskapet.",
       "international_description": "Using international temperature guidelines from USDA, FDA and professional culinary sources.",
+      "hide_other_tree": "Hide other language tree",
       "select_category": "1️⃣ Select Category",
       "custom": "🎯 Custom",
       "custom_temp_cook": "🎯 Custom Temperature Cook",
@@ -12769,6 +12770,7 @@ const I18N_STRINGS = {
       "swedish": "🇸🇪 Svenska (Livsmedelsverket)",
       "swedish_description": "Använder svenska temperaturrekommendationer från Livsmedelsverket, Stekguiden.se och Gårdssällskapet.",
       "international_description": "Använder internationella temperaturriktlinjer från USDA, FDA och professionella kulinariska källor.",
+      "hide_other_tree": "Dölj det andra språkets träd",
       "select_category": "1️⃣ Välj kategori",
       "custom": "🎯 Anpassad",
       "custom_temp_cook": "🎯 Anpassad temperatur",
@@ -13387,6 +13389,7 @@ class KitchenCookingPanel extends LitElement {
       // Phase 7: Language & Measurement
       _language: { type: String },
       _measurementSystem: { type: String },
+      _hideOtherDataSource: { type: Boolean },
     };
   }
 
@@ -13495,6 +13498,7 @@ class KitchenCookingPanel extends LitElement {
     // Phase 7: Language & Measurement system (independent selections)
     this._language = 'en';               // UI language: 'sv' or 'en'
     this._measurementSystem = 'se';      // Measurement: 'se', 'uk', or 'us'
+    this._hideOtherDataSource = false;   // Hide inactive data source button
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -13514,6 +13518,7 @@ class KitchenCookingPanel extends LitElement {
     // Phase 7: Load language & measurement preferences
     this._loadLanguagePreference();
     this._loadMeasurementPreference();
+    this._loadHideOtherDataSourcePreference();
     
     // Load AI settings to determine if AI Recipe Builder should be visible
     this._loadAISettings();
@@ -13835,6 +13840,24 @@ class KitchenCookingPanel extends LitElement {
       await this.hass.callApi('POST', 'kitchen_cooking_engine/preferences/measurement_system', { measurement_system: sys });
     } catch (e) {
       console.error('Could not save measurement preference:', e);
+    }
+  }
+
+  _loadHideOtherDataSourcePreference() {
+    try {
+      const val = localStorage.getItem('kce_hide_other_data_source');
+      if (val !== null) this._hideOtherDataSource = val === 'true';
+    } catch (e) {
+      // localStorage unavailable, keep default
+    }
+  }
+
+  _toggleHideOtherDataSource() {
+    this._hideOtherDataSource = !this._hideOtherDataSource;
+    try {
+      localStorage.setItem('kce_hide_other_data_source', String(this._hideOtherDataSource));
+    } catch (e) {
+      // localStorage unavailable
     }
   }
 
@@ -16076,22 +16099,32 @@ class KitchenCookingPanel extends LitElement {
         <div class="card-content">
           <h3>${this._t('meater.data_source_title')}</h3>
           <div class="button-group">
-            <button 
-              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
-              @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
-              ${this._t('meater.international')}
-            </button>
-            <button 
-              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
-              @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
-              ${this._t('meater.swedish')}
-            </button>
+            ${!this._hideOtherDataSource || this._dataSource === DATA_SOURCE_INTERNATIONAL ? html`
+              <button 
+                class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
+                @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
+                ${this._t('meater.international')}
+              </button>
+            ` : ''}
+            ${!this._hideOtherDataSource || this._dataSource === DATA_SOURCE_SWEDISH ? html`
+              <button 
+                class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
+                @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
+                ${this._t('meater.swedish')}
+              </button>
+            ` : ''}
           </div>
           <p class="source-description">
             ${this._dataSource === DATA_SOURCE_SWEDISH 
               ? this._t('meater.swedish_description')
               : this._t('meater.international_description')}
           </p>
+          <label style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:0.85em;cursor:pointer;">
+            <input type="checkbox"
+              .checked=${this._hideOtherDataSource}
+              @change=${() => this._toggleHideOtherDataSource()}>
+            ${this._t('meater.hide_other_tree')}
+          </label>
         </div>
       </ha-card>
       
@@ -22609,7 +22642,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "254";
+const PANEL_VERSION = "255";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

@@ -77,6 +77,7 @@
     "swedish": "🇸🇪 Svenska (Livsmedelsverket)",
     "swedish_description": "Använder svenska temperaturrekommendationer från Livsmedelsverket, Stekguiden.se och Gårdssällskapet.",
     "international_description": "Använder internationella temperaturriktlinjer från USDA, FDA och professionella kulinariska källor.",
+    "hide_other_tree": "Dölj det andra språkets träd",
     "select_category": "1️⃣ Välj kategori",
     "custom": "🎯 Anpassad",
     "custom_temp_cook": "🎯 Anpassad temperatur",

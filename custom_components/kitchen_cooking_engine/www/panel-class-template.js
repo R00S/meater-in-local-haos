@@ -126,6 +126,7 @@ class KitchenCookingPanel extends LitElement {
       // Phase 7: Language & Measurement
       _language: { type: String },
       _measurementSystem: { type: String },
+      _hideOtherDataSource: { type: Boolean },
     };
   }
 
@@ -234,6 +235,7 @@ class KitchenCookingPanel extends LitElement {
     // Phase 7: Language & Measurement system (independent selections)
     this._language = 'en';               // UI language: 'sv' or 'en'
     this._measurementSystem = 'se';      // Measurement: 'se', 'uk', or 'us'
+    this._hideOtherDataSource = false;   // Hide inactive data source button
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -253,6 +255,7 @@ class KitchenCookingPanel extends LitElement {
     // Phase 7: Load language & measurement preferences
     this._loadLanguagePreference();
     this._loadMeasurementPreference();
+    this._loadHideOtherDataSourcePreference();
     
     // Load AI settings to determine if AI Recipe Builder should be visible
     this._loadAISettings();
@@ -574,6 +577,24 @@ class KitchenCookingPanel extends LitElement {
       await this.hass.callApi('POST', 'kitchen_cooking_engine/preferences/measurement_system', { measurement_system: sys });
     } catch (e) {
       console.error('Could not save measurement preference:', e);
+    }
+  }
+
+  _loadHideOtherDataSourcePreference() {
+    try {
+      const val = localStorage.getItem('kce_hide_other_data_source');
+      if (val !== null) this._hideOtherDataSource = val === 'true';
+    } catch (e) {
+      // localStorage unavailable, keep default
+    }
+  }
+
+  _toggleHideOtherDataSource() {
+    this._hideOtherDataSource = !this._hideOtherDataSource;
+    try {
+      localStorage.setItem('kce_hide_other_data_source', String(this._hideOtherDataSource));
+    } catch (e) {
+      // localStorage unavailable
     }
   }
 
@@ -2815,22 +2836,32 @@ class KitchenCookingPanel extends LitElement {
         <div class="card-content">
           <h3>${this._t('meater.data_source_title')}</h3>
           <div class="button-group">
-            <button 
-              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
-              @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
-              ${this._t('meater.international')}
-            </button>
-            <button 
-              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
-              @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
-              ${this._t('meater.swedish')}
-            </button>
+            ${!this._hideOtherDataSource || this._dataSource === DATA_SOURCE_INTERNATIONAL ? html`
+              <button 
+                class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
+                @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
+                ${this._t('meater.international')}
+              </button>
+            ` : ''}
+            ${!this._hideOtherDataSource || this._dataSource === DATA_SOURCE_SWEDISH ? html`
+              <button 
+                class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
+                @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
+                ${this._t('meater.swedish')}
+              </button>
+            ` : ''}
           </div>
           <p class="source-description">
             ${this._dataSource === DATA_SOURCE_SWEDISH 
               ? this._t('meater.swedish_description')
               : this._t('meater.international_description')}
           </p>
+          <label style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:0.85em;cursor:pointer;">
+            <input type="checkbox"
+              .checked=${this._hideOtherDataSource}
+              @change=${() => this._toggleHideOtherDataSource()}>
+            ${this._t('meater.hide_other_tree')}
+          </label>
         </div>
       </ha-card>
       
