@@ -105,6 +105,8 @@
     "complete": "Slutför tillagning",
     "stop_cook": "⏹ Stoppa tillagning",
     "adjust_temp": "Justera temperatur",
+    "done_adjusting": "Klar med justering",
+    "set_target_btn": "Sätt mål till",
     "notes": "Anteckningar",
     "notes_placeholder": "Lägg till anteckningar om denna tillagning...",
     "save_notes": "Spara anteckningar",

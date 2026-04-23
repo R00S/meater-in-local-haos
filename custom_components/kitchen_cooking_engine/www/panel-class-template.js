@@ -58,6 +58,8 @@ class KitchenCookingPanel extends LitElement {
       _cutPreferences: { type: Object },
       _currentNotes: { type: String },
       _showNotes: { type: Boolean },
+      _showActiveTempAdjust: { type: Boolean },
+      _activeTempAdjustC: { type: Number },
       _showNinjaCombi: { type: Boolean },
       _selectedNinjaRecipe: { type: Number },
       _showRecipeBuilder: { type: Boolean },
@@ -147,6 +149,8 @@ class KitchenCookingPanel extends LitElement {
     this._cutPreferences = {};
     this._currentNotes = "";
     this._showNotes = false;
+    this._showActiveTempAdjust = false;
+    this._activeTempAdjustC = null;
     this._showNinjaCombi = false;
     this._selectedNinjaRecipe = null;
     this._showRecipeBuilder = false;
@@ -760,6 +764,13 @@ class KitchenCookingPanel extends LitElement {
   _setNotes(notes) {
     this._currentNotes = notes;
     this._callService('set_notes', { notes });
+  }
+
+  _applyActiveTempAdjust() {
+    const temp = parseInt(this._activeTempAdjustC);
+    if (isNaN(temp) || temp < 30 || temp > 100) return;
+    this._callService('set_target', { target_temp: temp });
+    this._showActiveTempAdjust = false;
   }
 
   _getStateIcon(state) {
@@ -3165,6 +3176,48 @@ class KitchenCookingPanel extends LitElement {
               <div class="label">${this._t('common.target')}</div>
             </div>
           </div>
+          
+          <!-- Adjust target temp on the fly -->
+          ${cookState !== 'resting' && cookState !== 'goal_reached' ? html`
+            <div style="text-align:center;margin:8px 0 4px;">
+              <button
+                class="adjust-btn ${this._showActiveTempAdjust ? 'active' : ''}"
+                @click=${() => {
+                  this._showActiveTempAdjust = !this._showActiveTempAdjust;
+                  if (this._showActiveTempAdjust) this._activeTempAdjustC = targetTemp;
+                }}>
+                ${this._showActiveTempAdjust ? '✓ ' + this._t('meater.done_adjusting') : '⚙️ ' + this._t('meater.adjust_temp')}
+              </button>
+            </div>
+            ${this._showActiveTempAdjust ? html`
+              <div class="temp-adjust-section">
+                <input
+                  type="range"
+                  min="30"
+                  max="100"
+                  step="1"
+                  .value="${this._activeTempAdjustC ?? targetTemp}"
+                  @input=${(e) => { this._activeTempAdjustC = parseInt(e.target.value); }}
+                  class="temp-slider"
+                />
+                <div class="temp-adjust-controls">
+                  <button class="temp-btn" @click=${() => { this._activeTempAdjustC = Math.max(30, (this._activeTempAdjustC ?? targetTemp) - 1); }}>-1°C</button>
+                  <input
+                    type="number"
+                    min="30"
+                    max="100"
+                    .value="${this._activeTempAdjustC ?? targetTemp}"
+                    @change=${(e) => { const v = parseInt(e.target.value); if (v >= 30 && v <= 100) this._activeTempAdjustC = v; }}
+                    class="temp-input"
+                  />
+                  <button class="temp-btn" @click=${() => { this._activeTempAdjustC = Math.min(100, (this._activeTempAdjustC ?? targetTemp) + 1); }}>+1°C</button>
+                </div>
+                <button class="secondary-btn" style="margin-top:8px;" @click=${() => this._applyActiveTempAdjust()}>
+                  ${this._t('meater.set_target_btn')} ${this._activeTempAdjustC ?? targetTemp}°C
+                </button>
+              </div>
+            ` : ''}
+          ` : ''}
           
           ${ambientTemp !== null && ambientTemp !== undefined ? html`
             <div class="ambient-temp-display">

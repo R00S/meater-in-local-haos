@@ -105,6 +105,8 @@
     "complete": "Complete Cook",
     "stop_cook": "⏹ Stop Cook",
     "adjust_temp": "Adjust Temperature",
+    "done_adjusting": "Done Adjusting",
+    "set_target_btn": "Set Target to",
     "notes": "Notes",
     "notes_placeholder": "Add notes about this cook...",
     "save_notes": "Save Notes",

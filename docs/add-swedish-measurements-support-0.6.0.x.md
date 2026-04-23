@@ -236,6 +236,21 @@ Preference is persisted to `localStorage` and survives page reloads.
 | 4 | Ingredient highlight colours inverted | Copy-paste error in conditional class names | Fixed class assignment |
 | 5 | Retry loop running 7 times | `_MAX_RETRIES = 7` set too high during debugging | Reduced to 3 |
 | 7 | Ingredient names / staples / categories / cooking styles shown in English in Swedish mode | No Swedish equivalents existed; `ingredient.name` used directly for display | Added `INGREDIENT_NAMES_SV`, `ASSUMED_STAPLES_SV`, `CATEGORY_LABELS_SV`, `name_sv` on cooking styles; `_ingDisplayName()` helper in template |
+| 8 | On-the-fly target temp change lost during active cook | `SERVICE_SET_TARGET` defined in `const.py` and `services.yaml` but never imported/registered in `__init__.py`; no UI in `_renderActiveCook` | Added `set_target()` on sensor, registered service with schema in `__init__.py`, added slider+buttons UI in active cook view (v0.6.0.05) |
+
+---
+
+### v0.6.0.05 — Restore on-the-fly target temperature adjustment during active cook (2026-04-23)
+
+| Step | Commit summary |
+|------|----------------|
+| Root cause | `SERVICE_SET_TARGET` existed in `const.py` and `services.yaml` but was never imported, had no handler, and was never registered in `__init__.py`. `_renderActiveCook` had no temp adjustment UI at all. |
+| Fix backend | `sensor.py`: new `set_target(target_temp_c)` method — updates `_target_temp_c`/`_target_temp_f`, sets `_custom_target_temp_c`, resets `_five_min_alert_fired`, and rolls back state from `approaching` → `cooking` if the new target is sufficiently higher than current temp |
+| Fix service | `__init__.py`: import `SERVICE_SET_TARGET`, add `SERVICE_SET_TARGET_SCHEMA` (`target_temp`: 30–100°C), add `handle_set_target` handler, register service |
+| Fix UI | `panel-class-template.js`: new `_showActiveTempAdjust` + `_activeTempAdjustC` reactive properties; `_applyActiveTempAdjust()` helper calls `set_target` service; slider + ±1 buttons + numeric input + "Set Target to X°C" confirm button inserted into `_renderActiveCook` (only shown when state is not resting/goal_reached) |
+| i18n | `en.json` + `sv.json`: add `done_adjusting` and `set_target_btn` keys |
+| Gen  | Regenerate `kitchen-cooking-panel.js` (PANEL_VERSION 255→256) |
+| Ver  | Bump to v0.6.0.05 |
 
 ---
 
@@ -251,6 +266,7 @@ Preference is persisted to `localStorage` and survives page reloads.
 | Per-step ingredient tagging | ✅ AI JSON + frontend highlighting |
 | Chiliflingor / Swedish ingredient names | ✅ Corrected + 7 missing entries added (v0.6.0.03) |
 | Hide-other-language-tree checkbox | ✅ Temperaturdata card, localStorage-persisted (v0.6.0.04) |
+| On-the-fly target temp adjustment during active cook | ✅ Slider/buttons UI in active cook view, `set_target` service registered (v0.6.0.05) |
 | GUI ToR updated to v3.7 | ✅ Phase 8 scope defined, Open Question #6 resolved, A/B/C rebuilt with research data |
 | Branch ready to merge to parent | ✅ No open issues; doc-only child branch pending merge |
 
