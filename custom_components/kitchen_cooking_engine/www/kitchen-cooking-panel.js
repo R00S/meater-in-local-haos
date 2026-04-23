@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 23 Apr 2026, 23:43 CET
+ * AUTO-GENERATED: 24 Apr 2026, 00:28 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 23 Apr 2026, 23:43 CET
+// Last generated: 24 Apr 2026, 00:28 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -237,7 +237,7 @@ const SWEDISH_DONENESS_OPTIONS = {
     "description": "Blodig - Sval röd kärna",
     "temp_c": 50,
     "temp_f": 122,
-    "safety_level": null
+    "safety_level": "unsafe"
   },
   "medium_rare": {
     "value": "medium_rare",
@@ -246,7 +246,7 @@ const SWEDISH_DONENESS_OPTIONS = {
     "description": "Medium Rare - Rosa kärna",
     "temp_c": 54,
     "temp_f": 129,
-    "safety_level": null
+    "safety_level": "caution"
   },
   "medium": {
     "value": "medium",
@@ -255,7 +255,7 @@ const SWEDISH_DONENESS_OPTIONS = {
     "description": "Medium - Varm rosa kärna",
     "temp_c": 58,
     "temp_f": 136,
-    "safety_level": null
+    "safety_level": "caution"
   },
   "medium_well": {
     "value": "medium_well",
@@ -264,7 +264,7 @@ const SWEDISH_DONENESS_OPTIONS = {
     "description": "Medium Well - Nästan genomstekt",
     "temp_c": 64,
     "temp_f": 147,
-    "safety_level": null
+    "safety_level": "safe"
   },
   "genomstekt": {
     "value": "genomstekt",
@@ -273,7 +273,7 @@ const SWEDISH_DONENESS_OPTIONS = {
     "description": "Genomstekt - Ingen rosa färg",
     "temp_c": 70,
     "temp_f": 158,
-    "safety_level": null
+    "safety_level": "safe"
   },
   "långkokt": {
     "value": "långkokt",
@@ -282,7 +282,7 @@ const SWEDISH_DONENESS_OPTIONS = {
     "description": "Långkokt - Strimlningsbart",
     "temp_c": 92,
     "temp_f": 198,
-    "safety_level": null
+    "safety_level": "safe"
   }
 };
 
@@ -18797,70 +18797,63 @@ class KitchenCookingPanel extends LitElement {
   }
 
   // ─── MEATER+ (experimental) path ─────────────────────────────────────────────
-  // Faithful port of the copilot/add-adjustable-target-temp (v0.5.3.5) MEATER path.
-  // Identical flow to the standard MEATER path; the key addition is safety-level
-  // indicators on doneness options so users can see which temperatures meet food-
-  // safety guidelines for the chosen cut.
-  // The existing _renderMeaterPath / _renderSetupForm is untouched.
 
   _renderMeaterExperimental() {
+    // If in cooking mode, show the setup form
     if (this._showMeaterCooking) {
       let entities = this._findCookingEntities();
+      
+      // v0.5.0.51: Sort entities by entity ID pattern (more reliable than attributes)
+      // Entity IDs like "kitchen_cooking_engine_bt_proxy_meater_tip_temperature_cooking_session"
+      // contain "meater" - use this to identify and sort MEATER entities first
       entities = entities.sort((a, b) => {
         const aIsMeater = a.toLowerCase().includes('meater');
         const bIsMeater = b.toLowerCase().includes('meater');
+        
+        // MEATER entities first, others after
         if (aIsMeater && !bIsMeater) return -1;
         if (!aIsMeater && bIsMeater) return 1;
-        return 0;
+        return 0;  // Preserve original order for same type
       });
-
+      
       return html`
         <div class="path-header">
-          <button class="back-btn" @click=${() => {
+          <button class="back-btn" @click=${() => { 
             this._showMeaterCooking = false;
             this.requestUpdate();
           }}>
-            ← Back to MEATER+ (experimental)
+            ← Back to MEATER Path
           </button>
-          <h2>🧪🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'} <span style="font-size:0.7em;color:var(--secondary-text-color);">(experimental)</span></h2>
+          <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
         </div>
-
+        
         ${this._renderExpSetupForm(entities)}
       `;
     }
-
+    
+    // Otherwise show the path buttons
     return html`
       <div class="path-header">
         <button class="back-btn" @click=${() => this._navigateToWelcome()}>
-          ${this._t('nav.back_to_appliances')}
+          ← Back to Appliances
         </button>
-        <h2>🧪🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'} <span style="font-size:0.7em;color:var(--secondary-text-color);">(experimental)</span></h2>
+        <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
       </div>
-
-      <ha-card>
-        <div class="card-content">
-          <p style="color:var(--secondary-text-color);margin:0 0 8px;">
-            This path uses the same cook flow as the standard MEATER path but adds
-            <strong>food-safety indicators</strong> 🟢🟠🔴 to every doneness option so you can see
-            at a glance whether a temperature meets USDA / Livsmedelsverket guidelines.
-          </p>
-        </div>
-      </ha-card>
 
       <div class="path-buttons">
         <ha-card class="path-card clickable" @click=${() => this._startMeaterCooking()}>
           <div class="card-content path-card-content">
-            <div class="path-icon">🧪🌡️</div>
-            <h3>${this._t('meater.start_meater_cooking')}</h3>
-            <p>Select protein, set target, monitor temperature — with safety indicators</p>
+            <div class="path-icon">🌡️</div>
+            <h3>Start MEATER Cooking</h3>
+            <p>Select protein, set target, monitor temperature</p>
           </div>
         </ha-card>
 
         <ha-card class="path-card clickable" @click=${() => this._showRecentMeaterCooks()}>
           <div class="card-content path-card-content">
             <div class="path-icon">📋</div>
-            <h3>${this._t('meater.recent_meater_cooks')}</h3>
-            <p>${this._t('meater.recent_meater_desc')}</p>
+            <h3>Recent MEATER Cooks</h3>
+            <p>View and restart previous temperature-based cooks</p>
           </div>
         </ha-card>
       </div>
@@ -18868,10 +18861,7 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Setup form for the experimental MEATER path.
-   * Identical to _renderSetupForm except that doneness buttons show a colour-coded
-   * safety-level dot (safe = green, caution = orange, unsafe = red).
-   * Source: copilot/add-adjustable-target-temp @ v0.5.3.5.
+   * Setup form for the experimental MEATER path (matches source-reference v0.5.3.5 _renderSetupForm).
    */
   _renderExpSetupForm(entities) {
     const categories = this._getDataCategories();
@@ -18885,26 +18875,32 @@ class KitchenCookingPanel extends LitElement {
     const donenessTemps = this._selectedDoneness ? this._getTargetTempForDoneness(this._selectedDoneness) : null;
     const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
     const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
-
+    
+    // v0.5.0.57: Check if selected entity is specifically a MEATER entity
+    // Diagnostic data revealed: entities.includes() returns TRUE for non-MEATER entities
+    // because all cooking_session entities are in the list. We need to check if the
+    // selected entity IS a MEATER entity, not just if it's in the list.
     if (entities.length > 0) {
-      const isMeaterEntity = this._selectedEntity &&
+      // Check if selected entity contains "meater" in its ID (same pattern as sorting)
+      const isMeaterEntity = this._selectedEntity && 
                              this._selectedEntity.toLowerCase().includes('meater');
+      
       if (!this._selectedEntity || !isMeaterEntity) {
-        this._selectedEntity = entities[0];
+        this._selectedEntity = entities[0];  // First entity (MEATER after sorting in _renderMeaterPath)
       }
     }
-
+    
     return html`
       <div class="status-banner idle">
         <h2>🍳 Ready to Cook</h2>
         <p>Select your protein and preferences below</p>
       </div>
-
+      
       ${entities.length > 1 ? html`
         <ha-card>
           <div class="card-content">
             <h3>Select Session</h3>
-            <select
+            <select 
               .value=${this._selectedEntity}
               @change=${(e) => this._selectedEntity = e.target.value}
             >
@@ -18917,77 +18913,82 @@ class KitchenCookingPanel extends LitElement {
           </div>
         </ha-card>
       ` : ''}
-
+      
       <!-- Data Source Selector -->
       <ha-card>
         <div class="card-content">
-          <h3>🌍 ${this._t('settings.temperature_source')}</h3>
+          <h3>🌍 Temperature Data Source</h3>
           <div class="button-group">
-            <button
-              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}"
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
               @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
               🇺🇸 International (USDA)
             </button>
-            <button
-              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}"
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
               @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
               🇸🇪 Svenska (Livsmedelsverket)
             </button>
           </div>
+          <p class="source-description">
+            ${this._dataSource === DATA_SOURCE_SWEDISH 
+              ? 'Använder svenska temperaturrekommendationer från Livsmedelsverket, Stekguiden.se och Gårdssällskapet.'
+              : 'Using international temperature guidelines from USDA, FDA and professional culinary sources.'}
+          </p>
         </div>
       </ha-card>
-
+      
       <!-- Step 1: Select Category -->
       <ha-card>
         <div class="card-content">
-          <h3>1️⃣ ${this._t('meater.select_category')}</h3>
+          <h3>1️⃣ Select Category</h3>
           <div class="button-group">
             ${Object.entries(categories).map(([key, cat]) => html`
-              <button
-                class="category-btn ${this._selectedCategory === key ? 'selected' : ''}"
+              <button 
+                class="category-btn ${this._selectedCategory === key ? 'selected' : ''}" 
                 @click=${() => this._selectCategory(key)}>
                 ${cat.icon} ${cat.name}
               </button>
             `)}
-            <button
-              class="category-btn ${this._selectedCategory === 'custom' ? 'selected' : ''}"
+            <button 
+              class="category-btn ${this._selectedCategory === 'custom' ? 'selected' : ''}" 
               @click=${() => this._selectCategory('custom')}>
               🎯 Custom
             </button>
           </div>
         </div>
       </ha-card>
-
-      <!-- Custom Temperature Cook -->
+      
+      <!-- Custom Temperature Cook (no meat/cut/doneness needed) -->
       ${this._selectedCategory === 'custom' ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🎯 ${this._t('meater.custom_temp_cook')}</h3>
+            <h3>🎯 Custom Temperature Cook</h3>
             <p>Set a target temperature and start monitoring — no protein or doneness selection needed.</p>
-
+            
             <div style="margin: 16px 0;">
-              <label style="display: block; margin-bottom: 8px; font-weight: 500;">${this._t('meater.session_name_optional')}</label>
-              <input
-                type="text"
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Session Name (optional)</label>
+              <input 
+                type="text" 
                 placeholder="e.g. My Cook"
                 .value=${this._customProfileName || ''}
                 @input=${(e) => { this._customProfileName = e.target.value; }}
                 style="width: 100%; padding: 10px; border: 2px solid var(--divider-color); border-radius: 8px; font-size: 14px; background: var(--card-background-color); color: var(--primary-text-color); box-sizing: border-box;"
               />
             </div>
-
+            
             <div style="margin: 16px 0;">
-              <label style="display: block; margin-bottom: 8px; font-weight: 500;">${this._t('meater.target_temperature')}</label>
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Target Temperature</label>
               <div class="temp-display-setup">
                 <div class="target-temp">
                   <span class="temp-value">${this._customProfileTempC}°C</span>
                   <span class="temp-fahrenheit">(${Math.round(this._customProfileTempC * 9 / 5 + 32)}°F)</span>
                 </div>
               </div>
-              <input
-                type="range"
-                min="30"
-                max="100"
+              <input 
+                type="range" 
+                min="30" 
+                max="100" 
                 step="1"
                 .value="${this._customProfileTempC}"
                 @input=${(e) => { this._customProfileTempC = parseInt(e.target.value); }}
@@ -18996,10 +18997,10 @@ class KitchenCookingPanel extends LitElement {
               />
               <div class="temp-adjust-controls">
                 <button class="temp-btn" @click=${() => { this._customProfileTempC = Math.max(30, this._customProfileTempC - 1); }}>-1°C</button>
-                <input
-                  type="number"
-                  min="30"
-                  max="100"
+                <input 
+                  type="number" 
+                  min="30" 
+                  max="100" 
                   .value="${this._customProfileTempC}"
                   @change=${(e) => { const v = parseInt(e.target.value); if (v >= 30 && v <= 100) this._customProfileTempC = v; }}
                   class="temp-input"
@@ -19009,23 +19010,23 @@ class KitchenCookingPanel extends LitElement {
             </div>
           </div>
         </ha-card>
-
+        
         <div class="action-container">
           <ha-button unelevated @click=${() => this._startCustomCook()}>
             🔥 Start Cooking at ${this._customProfileTempC}°C
           </ha-button>
         </div>
       ` : ''}
-
+      
       <!-- Step 2: Select Animal/Meat (if multiple) -->
       ${this._selectedCategory && showMeatSelector ? html`
         <ha-card>
           <div class="card-content">
-            <h3>2️⃣ ${this._t('meater.select_type')}</h3>
+            <h3>2️⃣ Select Type</h3>
             <div class="button-group">
               ${meats.map(meat => html`
-                <button
-                  class="category-btn ${this._selectedMeat === meat.id ? 'selected' : ''}"
+                <button 
+                  class="category-btn ${this._selectedMeat === meat.id ? 'selected' : ''}" 
                   @click=${() => this._selectMeat(meat.id)}>
                   ${meat.name}
                 </button>
@@ -19034,16 +19035,16 @@ class KitchenCookingPanel extends LitElement {
           </div>
         </ha-card>
       ` : ''}
-
-      <!-- Step 3: Select Cut Type -->
+      
+      <!-- Step 3: Select Cut Type (Steaks, Roasts, etc.) -->
       ${this._selectedMeat && cutTypes.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} ${this._t('meater.select_cut_type')}</h3>
+            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} Select Cut Type</h3>
             <div class="button-group">
               ${cutTypes.map(ct => html`
-                <button
-                  class="category-btn ${this._selectedCutType === ct.id ? 'selected' : ''}"
+                <button 
+                  class="category-btn ${this._selectedCutType === ct.id ? 'selected' : ''}" 
                   @click=${() => this._selectCutType(ct.id)}>
                   ${ct.name}
                 </button>
@@ -19052,14 +19053,14 @@ class KitchenCookingPanel extends LitElement {
           </div>
         </ha-card>
       ` : ''}
-
+      
       <!-- Step 4: Select Specific Cut -->
       ${this._selectedCutType && cuts.length > 0 ? html`
         <ha-card>
           <div class="card-content">
-            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} ${this._t('meater.select_cut')}</h3>
+            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} Select Cut</h3>
             <select @change=${(e) => this._selectCut(parseInt(e.target.value) || null)}>
-              <option value="">${this._t('meater.choose_cut')}</option>
+              <option value="">Choose a cut...</option>
               ${cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
                   ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
@@ -19069,32 +19070,29 @@ class KitchenCookingPanel extends LitElement {
           </div>
         </ha-card>
       ` : ''}
-
-      <!-- Step 5: Doneness Level — with safety indicators (key experimental feature) -->
+      
+      <!-- Step 5: Doneness Level -->
       ${this._selectedCut ? html`
         <ha-card>
           <div class="card-content">
-            <h3>🌡️ ${this._t('meater.select_doneness')} ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = ${this._t('meater.recommended')})</span>` : ''}</h3>
-            <p style="font-size:12px;color:var(--secondary-text-color);margin:0 0 10px;">
-              🟢 safe &nbsp;🟠 caution (widely practised) &nbsp;🔴 not recommended
-            </p>
+            <h3>🌡️ Doneness Level ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = recommended)</span>` : ''}</h3>
             <div class="doneness-grid">
               ${this._getAvailableDoneness().map(opt => html`
-                <button
+                <button 
                   class="doneness-btn ${this._selectedDoneness === opt.value ? 'selected' : ''} ${opt.value === recommendedDoneness ? 'recommended' : ''}"
                   @click=${() => this._selectDoneness(opt.value)}
                   title="${opt.description || ''}">
                   <span class="icon">${opt.icon}</span>
                   ${opt.name}
                   ${opt.value === recommendedDoneness ? html`<span class="star">⭐</span>` : ''}
-                  ${opt.safety_level ? html`<span class="safety-dot ${opt.safety_level}" title="${opt.safety_level === 'safe' ? '✅ Meets food safety guidelines' : opt.safety_level === 'caution' ? '⚠️ Below guidelines – widely practised' : '⛔ Well below safety guidelines'}"></span>` : ''}
+                  ${opt.safety_level ? html`<span class="safety-dot ${opt.safety_level}" title="${opt.safety_level === 'safe' ? '✅ Meets food safety guidelines' : opt.safety_level === 'caution' ? '⚠️ Below safety guidelines – widely practiced' : '⛔ Well below safety guidelines'}"></span>` : ''}
                   <span class="temp-hint">${opt.temp_c}°C</span>
                 </button>
               `)}
             </div>
           </div>
         </ha-card>
-
+        
         <!-- Temperature Fine-Tuning -->
         ${this._selectedDoneness ? html`
           <ha-card>
@@ -19109,19 +19107,19 @@ class KitchenCookingPanel extends LitElement {
                   <span class="custom-indicator">Custom</span>
                 ` : ''}
               </div>
-
-              <button
+              
+              <button 
                 class="adjust-btn ${this._showTempAdjust ? 'active' : ''}"
                 @click=${() => this._toggleTempAdjust()}>
                 ${this._showTempAdjust ? '✓ Done Adjusting' : '⚙️ Fine-tune Temperature'}
               </button>
-
+              
               ${this._showTempAdjust ? html`
                 <div class="temp-adjust-section">
-                  <input
-                    type="range"
-                    min="35"
-                    max="100"
+                  <input 
+                    type="range" 
+                    min="35" 
+                    max="100" 
                     step="1"
                     .value="${displayTemp}"
                     @input=${(e) => this._updateCustomTemp(e.target.value)}
@@ -19129,17 +19127,17 @@ class KitchenCookingPanel extends LitElement {
                   />
                   <div class="temp-adjust-controls">
                     <button class="temp-btn" @click=${() => this._updateCustomTemp(displayTemp - 1)}>-1°C</button>
-                    <input
-                      type="number"
-                      min="35"
-                      max="100"
+                    <input 
+                      type="number" 
+                      min="35" 
+                      max="100" 
                       .value="${displayTemp}"
                       @change=${(e) => this._updateCustomTemp(e.target.value)}
                       class="temp-input"
                     />
                     <button class="temp-btn" @click=${() => this._updateCustomTemp(displayTemp + 1)}>+1°C</button>
                   </div>
-                  <button
+                  <button 
                     class="reset-btn"
                     @click=${() => { this._customTargetTempC = null; }}>
                     Reset to ${donenessTemps?.c}°C (${this._selectedDoneness ? this._selectedDoneness.replace('_', ' ') : ''})
@@ -19149,29 +19147,27 @@ class KitchenCookingPanel extends LitElement {
             </div>
           </ha-card>
         ` : ''}
-
+        
         <!-- Step 6: Cooking Method -->
         <ha-card>
           <div class="card-content">
-            <h3>${this._t('meater.select_method')}</h3>
+            <h3>🍳 Cooking Method</h3>
             <div class="method-grid">
-              ${COOKING_METHODS.map(opt => {
-                const translated = this._t('cooking_methods.' + opt.value);
-                return html`
-                <button
+              ${COOKING_METHODS.map(opt => html`
+                <button 
                   class="method-btn ${this._selectedMethod === opt.value ? 'selected' : ''}"
                   @click=${() => this._selectedMethod = opt.value}>
-                  ${translated !== ('cooking_methods.' + opt.value) ? translated : opt.name}
+                  ${opt.name}
                 </button>
-              `; })}
+              `)}
             </div>
           </div>
         </ha-card>
-
+        
         <!-- Start Button -->
         <div class="action-container">
           <ha-button unelevated @click=${this._startCook} ?disabled=${!this._selectedDoneness}>
-            ${this._t('meater.start_cooking')}${this._customTargetTempC ? ` ${this._convertTemp(this._customTargetTempC)}` : ''}
+            🔥 Start Cooking${this._customTargetTempC ? ` at ${this._customTargetTempC}°C` : ''}
           </ha-button>
         </div>
       ` : ''}
@@ -25112,7 +25108,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "268";
+const PANEL_VERSION = "269";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
