@@ -19,6 +19,11 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 - Supports multiple appliances (Ninja Combi, MultiFry, etc.)
 - Works entirely locally (Home Assistant + local apps)
 
+## 📖 User Guide
+
+Full installation, configuration, and feature documentation:
+**[→ docs/USER_GUIDE.md](docs/USER_GUIDE.md)**
+
 ## 📊 Current Status
 
 **v0.6.1.02** — Development release (April 2026)
