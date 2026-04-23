@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 23 Apr 2026, 19:34 CET
+ * AUTO-GENERATED: 23 Apr 2026, 19:38 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 23 Apr 2026, 19:34 CET
+// Last generated: 23 Apr 2026, 19:38 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -17430,9 +17430,13 @@ class KitchenCookingPanel extends LitElement {
             <button class="primary-btn" @click=${async () => {
               const checked = checkboxes.filter(c => c.checked);
               for (const item of checked) {
-                const shelfItem = (this._shelfInventory || []).find(
-                  s => s.name.toLowerCase() === item.name.toLowerCase()
-                );
+                const normItem = item.name.toLowerCase().replace(/s$/, '');
+                const shelfItem = (this._shelfInventory || []).find(s => {
+                  const normShelf = s.name.toLowerCase().replace(/s$/, '');
+                  return normShelf === normItem
+                    || s.name.toLowerCase().includes(item.name.toLowerCase())
+                    || item.name.toLowerCase().includes(s.name.toLowerCase());
+                });
                 if (shelfItem) {
                   await this._removeShelfItem(shelfItem.id);
                 }
@@ -18432,8 +18436,8 @@ class KitchenCookingPanel extends LitElement {
                   class="ingredient-tag ${ing.compulsory ? 'ingredient-tag--compulsory' : ''}"
                   title="${this._t('ai_recipe.compulsory_toggle_hint')}"
                   @click=${(e) => {
-                    // Only toggle if click was NOT on the × button
-                    if (!e.target.classList.contains('ingredient-remove-btn')) {
+                    // Only toggle if click was NOT on the × button (use .closest to handle child nodes)
+                    if (!e.target.closest('.ingredient-remove-btn')) {
                       this._toggleIngredientCompulsory(ing.name);
                     }
                   }}
@@ -18589,7 +18593,7 @@ class KitchenCookingPanel extends LitElement {
       <label class="ingredient-checkbox">
         <input 
           type="checkbox" 
-          ?checked=${!!this._selectedIngredients.find(i => i.name === valueName)}
+          ?checked=${!!this._selectedIngredients.find(i => i.name.toLowerCase() === valueName.toLowerCase())}
           @change=${(e) => this._toggleIngredient(valueName, e.target.checked)}
         />
         ${displayName}
@@ -19393,10 +19397,15 @@ class KitchenCookingPanel extends LitElement {
       // Phase 8d: Show shelf update prompt if shelf is enabled
       if (this._shelfEnabled && recipe.ingredients && recipe.ingredients.length > 0) {
         const staples = (typeof AI_ASSUMED_STAPLES !== 'undefined') ? AI_ASSUMED_STAPLES.map(s => s.toLowerCase()) : [];
-        const checkboxes = recipe.ingredients.map(ing => ({
-          name: ing,
-          checked: !staples.some(s => ing.toLowerCase().includes(s)),
-        }));
+        const checkboxes = recipe.ingredients.map(ing => {
+          const ingLower = ing.toLowerCase().replace(/[^a-z0-9\s]/g, '').trim();
+          const isStaple = staples.some(s => {
+            // Exact word match to avoid false positives like 'oat' matching 'toast'
+            const pattern = new RegExp(`\\b${s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`);
+            return pattern.test(ingLower);
+          });
+          return { name: ing, checked: !isStaple };
+        });
         this._pendingShelfUpdate = { checkboxes };
         this._stopRecipeCook();
         this.requestUpdate();
@@ -19420,11 +19429,11 @@ class KitchenCookingPanel extends LitElement {
    */
   _toggleIngredient(ingredient, enabled) {
     if (enabled) {
-      if (!this._selectedIngredients.find(i => i.name === ingredient)) {
+      if (!this._selectedIngredients.find(i => i.name.toLowerCase() === ingredient.toLowerCase())) {
         this._selectedIngredients = [...this._selectedIngredients, { name: ingredient, compulsory: false }];
       }
     } else {
-      this._selectedIngredients = this._selectedIngredients.filter(i => i.name !== ingredient);
+      this._selectedIngredients = this._selectedIngredients.filter(i => i.name.toLowerCase() !== ingredient.toLowerCase());
     }
     this.requestUpdate();
   }
@@ -19433,7 +19442,7 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Add custom ingredient
    */
   _addCustomIngredient(ingredient) {
-    if (ingredient && !this._selectedIngredients.find(i => i.name === ingredient)) {
+    if (ingredient && !this._selectedIngredients.find(i => i.name.toLowerCase() === ingredient.toLowerCase())) {
       this._selectedIngredients = [...this._selectedIngredients, { name: ingredient, compulsory: false }];
       this.requestUpdate();
     }
@@ -19443,7 +19452,7 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Remove ingredient from selection
    */
   _removeIngredient(ingredient) {
-    this._selectedIngredients = this._selectedIngredients.filter(i => i.name !== ingredient);
+    this._selectedIngredients = this._selectedIngredients.filter(i => i.name.toLowerCase() !== ingredient.toLowerCase());
     this.requestUpdate();
   }
 
@@ -23320,7 +23329,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "258";
+const PANEL_VERSION = "259";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

@@ -693,7 +693,14 @@ class AIRecipeBuilder:
         mode_directive = ""
         effective_shelf = list(shelf_items or [])
         if cooking_mode == "B" and effective_shelf:
-            combined = list(dict.fromkeys(list(ingredients) + effective_shelf))
+            # Case-insensitive deduplication for the combined pool
+            seen_lower: Set[str] = set()
+            combined: List[str] = []
+            for ing in list(ingredients) + effective_shelf:
+                key = ing.lower()
+                if key not in seen_lower:
+                    seen_lower.add(key)
+                    combined.append(ing)
             mode_directive = (
                 f"\nCRITICAL RULE — COOK NOW (Mode B):\n"
                 f"Use ONLY the following ingredients and the user's available shelf items. "
