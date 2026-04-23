@@ -139,6 +139,18 @@ class KitchenCookingPanel extends LitElement {
       _shelfAddQuantity: { type: String },
       _shoppingList: { type: Array },
       _pendingShelfUpdate: { type: Object },
+      // MEATER+ (experimental) path — method-first cook selection
+      _meaterExpAppliance: { type: Object },
+      _meaterExpStep: { type: Number },
+      _meaterExpMethod: { type: String },
+      _meaterExpCategory: { type: Object },
+      _meaterExpMeat: { type: Object },
+      _meaterExpCutType: { type: Object },
+      _meaterExpCut: { type: Object },
+      _meaterExpDoneness: { type: String },
+      _meaterExpCustomMode: { type: Boolean },
+      _meaterExpCustomName: { type: String },
+      _meaterExpCustomTempC: { type: Number },
     };
   }
 
@@ -260,6 +272,18 @@ class KitchenCookingPanel extends LitElement {
     this._shelfAddQuantity = '';
     this._shoppingList = [];
     this._pendingShelfUpdate = null;
+    // MEATER+ (experimental) path — method-first cook selection
+    this._meaterExpAppliance = null;
+    this._meaterExpStep = 1;
+    this._meaterExpMethod = null;
+    this._meaterExpCategory = null;
+    this._meaterExpMeat = null;
+    this._meaterExpCutType = null;
+    this._meaterExpCut = null;
+    this._meaterExpDoneness = null;
+    this._meaterExpCustomMode = false;
+    this._meaterExpCustomName = '';
+    this._meaterExpCustomTempC = 63;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -1423,6 +1447,26 @@ class KitchenCookingPanel extends LitElement {
     this._showAppliances = false;
     this._showRecipes = false;
     this._showAIRecipeBuilder = false;
+    this.requestUpdate();
+  }
+
+  /**
+   * Navigate to MEATER+ (experimental) path — method-first cook selection.
+   * @param {Object} appliance - Selected MEATER appliance
+   */
+  _navigateToMeaterExperimentalPath(appliance) {
+    this._currentPath = 'meater_experimental';
+    this._meaterExpAppliance = appliance;
+    this._meaterExpStep = 1;
+    this._meaterExpMethod = null;
+    this._meaterExpCategory = null;
+    this._meaterExpMeat = null;
+    this._meaterExpCutType = null;
+    this._meaterExpCut = null;
+    this._meaterExpDoneness = null;
+    this._meaterExpCustomMode = false;
+    this._meaterExpCustomName = '';
+    this._meaterExpCustomTempC = 63;
     this.requestUpdate();
   }
 
@@ -2983,6 +3027,9 @@ class KitchenCookingPanel extends LitElement {
     switch (this._currentPath) {
       case 'welcome':
         return this._renderWelcomeScreen(activeCooks);
+
+      case 'meater_experimental':
+        return this._renderMeaterExperimental();
       
       case 'meater':
         return this._renderMeaterPath();
@@ -3855,17 +3902,35 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : html`
         <div class="appliance-grid">
-          ${this._appliances.map(appliance => html`
-            <ha-card class="appliance-card clickable" @click=${() => this._routeToAppliancePath(appliance)}>
-              <div class="card-content appliance-card-content">
-                <div class="appliance-icon">
-                  ${this._getApplianceIcon(appliance)}
+          ${this._appliances.flatMap(appliance => {
+            const brand = (appliance.brand || '').toLowerCase();
+            const model = (appliance.model || '').toLowerCase();
+            const name = (appliance.name || '').toLowerCase();
+            const isMeater = brand.includes('meater') || model.includes('meater') || name.includes('meater');
+            const cards = [html`
+              <ha-card class="appliance-card clickable" @click=${() => this._routeToAppliancePath(appliance)}>
+                <div class="card-content appliance-card-content">
+                  <div class="appliance-icon">
+                    ${this._getApplianceIcon(appliance)}
+                  </div>
+                  <div class="appliance-name">${appliance.name}</div>
+                  <div class="appliance-model">${appliance.brand} ${appliance.model}</div>
                 </div>
-                <div class="appliance-name">${appliance.name}</div>
-                <div class="appliance-model">${appliance.brand} ${appliance.model}</div>
-              </div>
-            </ha-card>
-          `)}
+              </ha-card>
+            `];
+            if (isMeater) {
+              cards.push(html`
+                <ha-card class="appliance-card clickable meater-exp-card" @click=${() => this._navigateToMeaterExperimentalPath(appliance)}>
+                  <div class="card-content appliance-card-content">
+                    <div class="appliance-icon" style="font-size: 2em;">🧪🌡️</div>
+                    <div class="appliance-name">MEATER+ <span style="font-size:0.75em;color:var(--secondary-text-color);">(experimental)</span></div>
+                    <div class="appliance-model" style="color:var(--accent-color);">Method-first cooking</div>
+                  </div>
+                </ha-card>
+              `);
+            }
+            return cards;
+          })}
         </div>
 
         <ha-card class="previous-cooks-card clickable" @click=${() => this._navigateToPreviousCooks()}>
@@ -4215,6 +4280,501 @@ class KitchenCookingPanel extends LitElement {
   /**
    * Render MEATER path (cook type 6.1)
    */
+  // ─── MEATER+ (experimental) path ────────────────────────────────────────────
+  // Method-first flow: choose cooking method → browse cuts → pick doneness → cook.
+  // Uses supported_methods / method_doneness_options data from cooking_data.py.
+  // The existing MEATER path is untouched; this is an additive parallel path.
+
+  _renderMeaterExperimental() {
+    if (this._meaterExpCustomMode) {
+      return this._renderMeaterExpCustomCook();
+    }
+    switch (this._meaterExpStep) {
+      case 1: return this._renderMeaterExpStep1();
+      case 2: return this._renderMeaterExpStep2();
+      case 3: return this._renderMeaterExpStep3();
+      case 4: return this._renderMeaterExpStep4();
+      default: return this._renderMeaterExpStep1();
+    }
+  }
+
+  /** Step 1: Pick cooking method (or switch to custom mode). */
+  _renderMeaterExpStep1() {
+    const methodGroups = [
+      {
+        label: '🔥 Searing & Frying',
+        methods: [
+          { value: 'pan_sear', label: 'Pan Sear', icon: '🍳' },
+          { value: 'pan_fry',  label: 'Pan Fry',  icon: '🍳' },
+          { value: 'saute',    label: 'Sauté',     icon: '🥘' },
+          { value: 'wok',      label: 'Wok',       icon: '🥢' },
+        ],
+      },
+      {
+        label: '🍖 Grilling & Smoking',
+        methods: [
+          { value: 'grill',           label: 'Grill',          icon: '🔥' },
+          { value: 'charcoal_grill',  label: 'Charcoal Grill', icon: '🪨' },
+          { value: 'smoker',          label: 'Smoker',         icon: '💨' },
+          { value: 'rotisserie',      label: 'Rotisserie',     icon: '🍗' },
+        ],
+      },
+      {
+        label: '🫕 Oven & Air',
+        methods: [
+          { value: 'oven_roast', label: 'Oven Roast', icon: '🏠' },
+          { value: 'oven_bake',  label: 'Oven Bake',  icon: '🥖' },
+          { value: 'oven_broil', label: 'Broil',      icon: '⬆️' },
+          { value: 'air_fryer',  label: 'Air Fryer',  icon: '🌪️' },
+        ],
+      },
+      {
+        label: '🫙 Low & Slow',
+        methods: [
+          { value: 'sous_vide',        label: 'Sous Vide',       icon: '🌡️' },
+          { value: 'braise',           label: 'Braise',          icon: '🥩' },
+          { value: 'slow_cooker',      label: 'Slow Cooker',     icon: '🍲' },
+          { value: 'pressure_cooker',  label: 'Pressure Cooker', icon: '🫕' },
+        ],
+      },
+      {
+        label: '🍜 Wet Heat',
+        methods: [
+          { value: 'poach',  label: 'Poach',  icon: '🥚' },
+          { value: 'simmer', label: 'Simmer', icon: '♨️' },
+          { value: 'steam',  label: 'Steam',  icon: '💧' },
+          { value: 'deep_fry', label: 'Deep Fry', icon: '🛁' },
+        ],
+      },
+    ];
+
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => { this._currentPath = 'welcome'; this.requestUpdate(); }}>
+          ← ${this._t('nav.back_to_home')}
+        </button>
+        <h2>🧪🌡️ MEATER+ (experimental)</h2>
+        <p style="color:var(--secondary-text-color);margin:0 0 16px;">Step 1 of 4 — Choose a cooking method</p>
+      </div>
+
+      ${methodGroups.map(group => html`
+        <ha-card style="margin-bottom:12px;">
+          <div class="card-content">
+            <h4 style="margin:0 0 10px;">${group.label}</h4>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+              ${group.methods.map(m => html`
+                <button
+                  class="category-btn ${this._meaterExpMethod === m.value ? 'selected' : ''}"
+                  style="min-width:100px;padding:10px 14px;font-size:0.9em;"
+                  @click=${() => {
+                    this._meaterExpMethod = m.value;
+                    this._meaterExpStep = 2;
+                    this._meaterExpCategory = null;
+                    this._meaterExpMeat = null;
+                    this._meaterExpCutType = null;
+                    this._meaterExpCut = null;
+                    this._meaterExpDoneness = null;
+                    this.requestUpdate();
+                  }}
+                >
+                  ${m.icon} ${m.label}
+                </button>
+              `)}
+            </div>
+          </div>
+        </ha-card>
+      `)}
+
+      <ha-card style="margin-bottom:12px;border:2px dashed var(--divider-color);">
+        <div class="card-content" style="text-align:center;">
+          <p style="margin:0 0 8px;font-weight:600;">🎯 Custom Temperature</p>
+          <p style="margin:0 0 12px;color:var(--secondary-text-color);font-size:0.9em;">
+            Skip method selection — enter any target temperature directly.
+          </p>
+          <button class="primary-btn" @click=${() => {
+            this._meaterExpCustomMode = true;
+            this._meaterExpCustomName = '';
+            this._meaterExpCustomTempC = 63;
+            this.requestUpdate();
+          }}>
+            🌡️ Set Custom Target
+          </button>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /** Step 2: Pick protein category — filtered to categories that have ≥1 cut supporting the chosen method. */
+  _renderMeaterExpStep2() {
+    const categories = (typeof MEAT_CATEGORIES !== 'undefined' && MEAT_CATEGORIES) ? MEAT_CATEGORIES : [];
+    const method = this._meaterExpMethod;
+
+    // Filter: keep categories that contain at least one cut supporting the method
+    const filtered = categories.filter(cat =>
+      cat.meats && cat.meats.some(m =>
+        m.cutTypes && m.cutTypes.some(ct =>
+          ct.cuts && ct.cuts.some(cut =>
+            cut.supported_methods && cut.supported_methods.includes(method)
+          )
+        )
+      )
+    );
+
+    const methodLabel = this._meaterExpMethodLabel(method);
+
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => { this._meaterExpStep = 1; this.requestUpdate(); }}>
+          ← ${methodLabel}
+        </button>
+        <h2>🧪🌡️ MEATER+ (experimental)</h2>
+        <p style="color:var(--secondary-text-color);margin:0 0 16px;">
+          Step 2 of 4 — Choose protein · <strong>${methodLabel}</strong>
+        </p>
+      </div>
+
+      <div class="appliance-grid">
+        ${filtered.map(cat => html`
+          <ha-card class="appliance-card clickable" @click=${() => {
+            this._meaterExpCategory = cat;
+            this._meaterExpMeat = null;
+            this._meaterExpCutType = null;
+            this._meaterExpCut = null;
+            this._meaterExpDoneness = null;
+            this._meaterExpStep = 3;
+            this.requestUpdate();
+          }}>
+            <div class="card-content appliance-card-content">
+              <div class="appliance-icon" style="font-size:2em;">${cat.icon || '🥩'}</div>
+              <div class="appliance-name">${cat.name}</div>
+            </div>
+          </ha-card>
+        `)}
+      </div>
+    `;
+  }
+
+  /** Step 3: Browse cuts within the chosen category, filtered by method. */
+  _renderMeaterExpStep3() {
+    const cat = this._meaterExpCategory;
+    if (!cat) { this._meaterExpStep = 2; return this._renderMeaterExpStep2(); }
+
+    const method = this._meaterExpMethod;
+
+    // If no meat is selected yet, show meat selector (or skip if only 1)
+    if (!this._meaterExpMeat) {
+      const meats = (cat.meats || []).filter(m =>
+        m.cutTypes && m.cutTypes.some(ct =>
+          ct.cuts && ct.cuts.some(cut =>
+            cut.supported_methods && cut.supported_methods.includes(method)
+          )
+        )
+      );
+      if (meats.length === 0) { this._meaterExpStep = 2; return this._renderMeaterExpStep2(); }
+      if (meats.length === 1) {
+        this._meaterExpMeat = meats[0];
+        return this._renderMeaterExpStep3(); // re-render with meat set
+      }
+
+      return html`
+        <div class="path-header">
+          <button class="back-btn" @click=${() => { this._meaterExpStep = 2; this._meaterExpMeat = null; this.requestUpdate(); }}>
+            ← ${cat.name}
+          </button>
+          <h2>🧪🌡️ MEATER+ (experimental)</h2>
+          <p style="color:var(--secondary-text-color);margin:0 0 16px;">Step 3 of 4 — Choose type</p>
+        </div>
+        <div class="appliance-grid">
+          ${meats.map(m => html`
+            <ha-card class="appliance-card clickable" @click=${() => {
+              this._meaterExpMeat = m;
+              this.requestUpdate();
+            }}>
+              <div class="card-content appliance-card-content">
+                <div class="appliance-name">${m.name}</div>
+              </div>
+            </ha-card>
+          `)}
+        </div>
+      `;
+    }
+
+    // Meat chosen — flat list of all cuts in this meat that support the method
+    const cuts = (this._meaterExpMeat.cutTypes || []).flatMap(ct =>
+      (ct.cuts || []).filter(cut =>
+        cut.supported_methods && cut.supported_methods.includes(method)
+      ).map(cut => ({ ...cut, _cutTypeName: ct.name }))
+    );
+
+    if (cuts.length === 0) {
+      this._meaterExpMeat = null;
+      return this._renderMeaterExpStep3();
+    }
+
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => { this._meaterExpMeat = null; this.requestUpdate(); }}>
+          ← ${cat.name}
+        </button>
+        <h2>🧪🌡️ MEATER+ (experimental)</h2>
+        <p style="color:var(--secondary-text-color);margin:0 0 16px;">
+          Step 3 of 4 — Choose cut · <strong>${this._meaterExpMeat.name}</strong>
+        </p>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            ${cuts.map(cut => html`
+              <button
+                class="category-btn"
+                style="text-align:left;padding:12px 16px;border-radius:8px;"
+                @click=${() => {
+                  this._meaterExpCut = cut;
+                  // Pre-select doneness: method-specific override first, then recommended
+                  const methodDoneness = cut.method_doneness && cut.method_doneness[method];
+                  this._meaterExpDoneness = methodDoneness || cut.recommended_doneness || null;
+                  this._meaterExpStep = 4;
+                  this.requestUpdate();
+                }}
+              >
+                <span style="font-weight:600;">${cut.name}</span>
+                ${cut._cutTypeName ? html`<span style="font-size:0.8em;color:var(--secondary-text-color);margin-left:6px;">${cut._cutTypeName}</span>` : ''}
+              </button>
+            `)}
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /** Step 4: Pick doneness, see target temp, then start cook. */
+  _renderMeaterExpStep4() {
+    const cut = this._meaterExpCut;
+    if (!cut) { this._meaterExpStep = 3; return this._renderMeaterExpStep3(); }
+
+    const method = this._meaterExpMethod;
+    const donessOptions = (cut.method_doneness_options && cut.method_doneness_options[method])
+      ? cut.method_doneness_options[method]
+      : (cut.doneness || []);
+
+    const donessLevels = (typeof DONENESS_OPTIONS !== 'undefined' && DONENESS_OPTIONS) ? DONENESS_OPTIONS : {};
+    const safetyColors = { safe: '#4caf50', caution: '#ff9800', unsafe: '#f44336' };
+
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => {
+          this._meaterExpStep = 3;
+          this._meaterExpCut = null;
+          this._meaterExpDoneness = null;
+          this.requestUpdate();
+        }}>
+          ← ${cut.name}
+        </button>
+        <h2>🧪🌡️ MEATER+ (experimental)</h2>
+        <p style="color:var(--secondary-text-color);margin:0 0 4px;">
+          Step 4 of 4 — Choose doneness · <strong>${this._meaterExpMethodLabel(method)}</strong>
+        </p>
+        <p style="margin:0 0 16px;font-weight:600;">${cut.name}</p>
+      </div>
+
+      ${cut.method_doneness_options && cut.method_doneness_options[method] ? html`
+        <ha-card style="margin-bottom:12px;border-left:4px solid var(--accent-color);">
+          <div class="card-content" style="padding:10px 16px;">
+            <p style="margin:0;font-size:0.85em;color:var(--accent-color);">
+              🔬 Method-optimised temperatures for ${this._meaterExpMethodLabel(method)}
+            </p>
+          </div>
+        </ha-card>
+      ` : ''}
+
+      <ha-card>
+        <div class="card-content">
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            ${donessOptions.map(d => {
+              const info = donessLevels[d];
+              const isSelected = this._meaterExpDoneness === d;
+              const safety = info?.safety_level;
+              const safeColor = safety ? safetyColors[safety] || 'inherit' : 'inherit';
+              return html`
+                <button
+                  class="category-btn ${isSelected ? 'selected' : ''}"
+                  style="text-align:left;padding:12px 16px;border-radius:8px;display:flex;align-items:center;gap:12px;"
+                  @click=${() => { this._meaterExpDoneness = d; this.requestUpdate(); }}
+                >
+                  <span style="font-size:1.4em;">${info?.icon || '🌡️'}</span>
+                  <div style="flex:1;">
+                    <div style="font-weight:${isSelected ? 700 : 500};">${info?.name || d.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}</div>
+                    ${info ? html`<div style="font-size:0.82em;color:var(--secondary-text-color);">${info.temp_c}°C / ${info.temp_f}°F</div>` : ''}
+                    ${info?.description ? html`<div style="font-size:0.78em;color:var(--secondary-text-color);">${info.description}</div>` : ''}
+                  </div>
+                  ${safety ? html`<span style="font-size:0.75em;color:${safeColor};font-weight:600;">${safety.toUpperCase()}</span>` : ''}
+                </button>
+              `;
+            })}
+          </div>
+        </div>
+      </ha-card>
+
+      ${this._meaterExpDoneness ? html`
+        <ha-card style="margin-top:12px;">
+          <div class="card-content" style="text-align:center;">
+            ${(() => {
+              const info = donessLevels[this._meaterExpDoneness];
+              return html`
+                <p style="margin:0 0 4px;font-size:1.1em;font-weight:600;">
+                  ${info?.icon || '🌡️'} ${info?.name || this._meaterExpDoneness.replace(/_/g, ' ')}
+                </p>
+                ${info ? html`<p style="margin:0 0 12px;font-size:1.3em;color:var(--primary-color);">${info.temp_c}°C (${info.temp_f}°F)</p>` : ''}
+                <button class="primary-btn" @click=${() => this._startMeaterExpCook()}>
+                  🌡️ Start Cook at ${info?.temp_c ?? '?'}°C
+                </button>
+              `;
+            })()}
+          </div>
+        </ha-card>
+      ` : ''}
+    `;
+  }
+
+  /** Custom mode: arbitrary target temperature. */
+  _renderMeaterExpCustomCook() {
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => {
+          this._meaterExpCustomMode = false;
+          this._meaterExpStep = 1;
+          this.requestUpdate();
+        }}>
+          ← Method selection
+        </button>
+        <h2>🧪🌡️ MEATER+ (experimental)</h2>
+        <p style="color:var(--secondary-text-color);margin:0 0 16px;">Custom target temperature</p>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          <label style="display:block;font-weight:600;margin-bottom:8px;">Session name (optional)</label>
+          <input
+            type="text"
+            .value=${this._meaterExpCustomName}
+            @input=${(e) => { this._meaterExpCustomName = e.target.value; }}
+            placeholder="e.g. Sunday Roast"
+            style="width:100%;padding:8px;border:1px solid var(--divider-color);border-radius:4px;font-family:inherit;box-sizing:border-box;"
+          />
+
+          <label style="display:block;font-weight:600;margin:16px 0 8px;">Target temperature</label>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+            <button class="temp-btn" @click=${() => { this._meaterExpCustomTempC = Math.max(30, this._meaterExpCustomTempC - 1); this.requestUpdate(); }}>-1°C</button>
+            <span style="font-size:1.8em;font-weight:700;min-width:80px;text-align:center;">${this._meaterExpCustomTempC}°C</span>
+            <button class="temp-btn" @click=${() => { this._meaterExpCustomTempC = Math.min(100, this._meaterExpCustomTempC + 1); this.requestUpdate(); }}>+1°C</button>
+          </div>
+          <input
+            type="range"
+            min="30" max="100" step="1"
+            .value="${this._meaterExpCustomTempC}"
+            @input=${(e) => { this._meaterExpCustomTempC = parseInt(e.target.value); this.requestUpdate(); }}
+            style="width:100%;"
+          />
+          <p style="text-align:center;color:var(--secondary-text-color);margin:4px 0 0;font-size:0.85em;">
+            ${Math.round(this._meaterExpCustomTempC * 9 / 5 + 32)}°F
+          </p>
+
+          <div style="margin-top:20px;text-align:center;">
+            <button class="primary-btn" @click=${() => this._startMeaterExpCustomCook()}>
+              🔥 Start Cooking at ${this._meaterExpCustomTempC}°C
+            </button>
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /** Returns a human-readable label for a cooking method value. */
+  _meaterExpMethodLabel(methodValue) {
+    const labels = {
+      pan_sear: 'Pan Sear', pan_fry: 'Pan Fry', saute: 'Sauté', wok: 'Wok',
+      grill: 'Grill', charcoal_grill: 'Charcoal Grill', smoker: 'Smoker', rotisserie: 'Rotisserie',
+      oven_roast: 'Oven Roast', oven_bake: 'Oven Bake', oven_broil: 'Broil', air_fryer: 'Air Fryer',
+      sous_vide: 'Sous Vide', braise: 'Braise', slow_cooker: 'Slow Cooker', pressure_cooker: 'Pressure Cooker',
+      poach: 'Poach', simmer: 'Simmer', steam: 'Steam', deep_fry: 'Deep Fry',
+    };
+    return labels[methodValue] || (methodValue || '').replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  /** Start a MEATER experimental cook using the selected cut + doneness. */
+  _startMeaterExpCook() {
+    const cut = this._meaterExpCut;
+    if (!cut || !this._meaterExpDoneness) return;
+
+    const donessLevels = (typeof DONENESS_OPTIONS !== 'undefined' && DONENESS_OPTIONS) ? DONENESS_OPTIONS : {};
+    const info = donessLevels[this._meaterExpDoneness];
+    if (!info?.temp_c) {
+      this._showMessage('Missing temperature', 'No temperature data for selected doneness.', true);
+      return;
+    }
+
+    const method = this._meaterExpMethodLabel(this._meaterExpMethod);
+    const sessionName = `${cut.name} — ${method}`;
+    const entities = this._findCookingEntities();
+    if (!this._selectedEntity || !entities.includes(this._selectedEntity)) {
+      this._selectedEntity = entities[0] || null;
+    }
+    if (!this._selectedEntity) {
+      this._showMessage('No MEATER entity', 'No active MEATER cooking session entity found.', true);
+      return;
+    }
+
+    this._currentPath = 'active_cook';
+    this._waitingForCookStart = true;
+    this._waitingCookServiceData = {
+      entity_id: this._selectedEntity,
+      session_name: sessionName,
+      target_temp_c: info.temp_c,
+      doneness: this._meaterExpDoneness,
+    };
+    this._callService('start_cook', this._waitingCookServiceData).catch(err => {
+      console.error('Failed to start experimental MEATER cook:', err);
+      this._waitingForCookStart = null;
+      this._waitingCookServiceData = null;
+      this._currentPath = 'meater_experimental';
+      this.requestUpdate();
+      this._showMessage(this._t('common.error'), this._t('messages.start_cook_failed'), true);
+    });
+    this.requestUpdate();
+  }
+
+  /** Start a custom-temp MEATER experimental cook. */
+  _startMeaterExpCustomCook() {
+    const tempC = parseInt(this._meaterExpCustomTempC);
+    if (isNaN(tempC) || tempC < 30 || tempC > 100) {
+      this._showMessage('Invalid temperature', 'Temperature must be between 30°C and 100°C.', true);
+      return;
+    }
+    const entities = this._findCookingEntities();
+    if (!this._selectedEntity || !entities.includes(this._selectedEntity)) {
+      this._selectedEntity = entities[0] || null;
+    }
+    if (!this._selectedEntity) {
+      this._showMessage('No MEATER entity', 'No active MEATER cooking session entity found.', true);
+      return;
+    }
+    const sessionName = this._meaterExpCustomName?.trim() || 'Custom Cook';
+    this._callService('start_simple_probe_cook', {
+      entity_id: this._selectedEntity,
+      target_temp_c: tempC,
+      session_name: sessionName,
+    }).catch(err => {
+      console.error('Failed to start custom experimental MEATER cook:', err);
+      this._showMessage(this._t('common.error'), this._t('messages.start_cook_failed'), true);
+    });
+    this._currentPath = 'active_cook';
+    this._waitingForCookStart = true;
+    this.requestUpdate();
+  }
+
+  // ─── End MEATER+ (experimental) path ────────────────────────────────────────
+
   _renderMeaterPath() {
     // If in cooking mode, show the setup form
     if (this._showMeaterCooking) {

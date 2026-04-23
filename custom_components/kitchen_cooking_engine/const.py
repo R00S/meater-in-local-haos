@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.1.07 - Bugfix: sync data source to UI language when hide-other-tree is active
+Last Change: v0.6.1.08 - Recover PR63 recipe research, method data; add MEATER+ (experimental) path
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "266"
+PANEL_VERSION = "267"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

@@ -175,6 +175,56 @@ Modes A/B/C), 8d (Post-Cook Shelf Update), 8e (External Bridges — deferred).
 - PANEL_VERSION bumped 264 → 265 (auto by generator).
 - CHORES: versions updated, branch timeline updated, user guide §5.3 updated.
 
+### v0.6.1.08 — 2026-04-23
+**Recovery: PR63 recipe research data + MEATER+ (experimental) path**
+
+#### Data Recovery (from `copilot/add-adjustable-target-temp` / PR #63)
+- `docs/recipe_research/` — 274 files restored:
+  - 270 leaf files (beef/steaks, pork, poultry, fish, game, vegetables) — 5 full recipes
+    each from named culinary sources, with MEATER probe placement and pull temperatures.
+  - `RECIPE_COLLECTION_TOR.md`, `RECIPE_ANALYSIS_TOR.md` — governance docs for leaf format
+    and source selection rules.
+- `cooking_data.py` replaced with PR63 version (5788 lines, was 4397):
+  - New `safety_level: Optional[str]` field on `TemperatureRange` — values: `safe`,
+    `caution`, `unsafe`; applied to all existing doneness constants.
+  - New `method_doneness: dict[str, str]` field on `MeatCut` — recommended doneness
+    per cooking method (e.g. sous vide ribeye → `medium_rare`).
+  - New `method_temperature_ranges: dict[str, list[TemperatureRange]]` field on `MeatCut`
+    — method-specific temperature overrides for 3 cuts (e.g. sous vide ribeye at 57°C
+    vs standard 54°C for marbled fat rendering).
+  - `supported_methods` now populated for all 208 cuts (was 29).
+  - Two new rabbit cuts added: id 693 (Rabbit Saddle), 694 (Rabbit Legs).
+
+#### Generator Updates
+- `generate_frontend_data.py` — `cut_to_js()` now exports `supported_methods`,
+  `method_doneness`, and `method_doneness_options` per cut.
+- `get_doneness_levels()` now exports `safety_level` on each doneness entry.
+- Added PR63's expanded icon map (thigh_optimal, thigh_rendered, leg_rendered, confit,
+  just_cooked, braised_tender, quick_sear).
+
+#### MEATER+ (experimental) path
+- New 🧪🌡️ **MEATER+ (experimental)** card added to the welcome screen appliance grid
+  alongside each existing MEATER+ card. Uses the same device; does not touch the
+  existing working path.
+- **Method-first flow** (4 steps):
+  1. Pick cooking method from grouped list (Searing & Frying, Grilling & Smoking,
+     Oven & Air, Low & Slow, Wet Heat) — or switch to Custom Temperature.
+  2. Pick protein category — filtered to show only categories that have ≥1 cut
+     supporting the chosen method.
+  3. Pick cut — flat list within category, filtered by method; pre-selects
+     `method_doneness[method]` or `recommended_doneness`.
+  4. Pick doneness — uses `method_doneness_options[method]` if available (sous vide
+     overrides), else standard list; shows temp + safety indicator; one-tap start.
+- **Custom Temperature mode** — skip method selection; enter any target (30–100°C)
+  with name, calls `start_simple_probe_cook` service.
+- Calls existing `start_cook` / `start_simple_probe_cook` services; active cook display
+  is the existing `_renderActiveCook()` (unchanged).
+- New state properties: `_meaterExpAppliance`, `_meaterExpStep`, `_meaterExpMethod`,
+  `_meaterExpCategory`, `_meaterExpMeat`, `_meaterExpCutType`, `_meaterExpCut`,
+  `_meaterExpDoneness`, `_meaterExpCustomMode`, `_meaterExpCustomName`,
+  `_meaterExpCustomTempC`.
+- PANEL_VERSION bumped 266 → 267 (auto by generator).
+
 ---
   All callers updated: `_toggleIngredient`, `_addCustomIngredient`, `_removeIngredient`,
   `_proceedToCookingStyle` guard, `_generateAIRecipes` request body,
