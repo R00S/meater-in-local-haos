@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 23 Apr 2026, 21:13 CET
+ * AUTO-GENERATED: 23 Apr 2026, 21:24 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 23 Apr 2026, 21:13 CET
+// Last generated: 23 Apr 2026, 21:24 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -16456,25 +16456,22 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : ''}
       
-      <!-- Data Source Selector -->
+      <!-- Data Source Selector (hidden when user has opted to hide inactive source) -->
+      ${!this._hideOtherDataSource ? html`
       <ha-card>
         <div class="card-content">
           <h3>${this._t('meater.data_source_title')}</h3>
           <div class="button-group">
-            ${!this._hideOtherDataSource || this._dataSource === DATA_SOURCE_INTERNATIONAL ? html`
-              <button 
-                class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
-                @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
-                ${this._t('meater.international')}
-              </button>
-            ` : ''}
-            ${!this._hideOtherDataSource || this._dataSource === DATA_SOURCE_SWEDISH ? html`
-              <button 
-                class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
-                @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
-                ${this._t('meater.swedish')}
-              </button>
-            ` : ''}
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
+              ${this._t('meater.international')}
+            </button>
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
+              ${this._t('meater.swedish')}
+            </button>
           </div>
           <p class="source-description">
             ${this._dataSource === DATA_SOURCE_SWEDISH 
@@ -16483,6 +16480,7 @@ class KitchenCookingPanel extends LitElement {
           </p>
         </div>
       </ha-card>
+      ` : ''}
       
       <!-- Step 1: Select Category -->
       <ha-card>
@@ -23491,7 +23489,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "263";
+const PANEL_VERSION = "264";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

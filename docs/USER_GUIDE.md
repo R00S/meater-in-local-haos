@@ -283,7 +283,11 @@ Switch the data source in the welcome screen settings card:
 - **🇸🇪 Svenska (Livsmedelsverket)** — Swedish food safety authority recommendations,
   Stekguiden.se, and Gårdssällskapet. Doneness names appear in Swedish.
 
-Both trees are available simultaneously; you can hide the other-language tree in the UI.
+Both trees are available simultaneously. You can hide the entire Temperature Data Source
+selection card during cooking by checking **"Dölj det andra språkets träd" / "Hide other
+language tree"** in the Language settings card on the welcome screen. When checked, the
+data-source card is hidden from the MEATER cook start screen; your previously selected
+source stays active.
 
 ### 5.4 Custom Temperature Cook
 

@@ -3083,25 +3083,22 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : ''}
       
-      <!-- Data Source Selector -->
+      <!-- Data Source Selector (hidden when user has opted to hide inactive source) -->
+      ${!this._hideOtherDataSource ? html`
       <ha-card>
         <div class="card-content">
           <h3>${this._t('meater.data_source_title')}</h3>
           <div class="button-group">
-            ${!this._hideOtherDataSource || this._dataSource === DATA_SOURCE_INTERNATIONAL ? html`
-              <button 
-                class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
-                @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
-                ${this._t('meater.international')}
-              </button>
-            ` : ''}
-            ${!this._hideOtherDataSource || this._dataSource === DATA_SOURCE_SWEDISH ? html`
-              <button 
-                class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
-                @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
-                ${this._t('meater.swedish')}
-              </button>
-            ` : ''}
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
+              ${this._t('meater.international')}
+            </button>
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
+              ${this._t('meater.swedish')}
+            </button>
           </div>
           <p class="source-description">
             ${this._dataSource === DATA_SOURCE_SWEDISH 
@@ -3110,6 +3107,7 @@ class KitchenCookingPanel extends LitElement {
           </p>
         </div>
       </ha-card>
+      ` : ''}
       
       <!-- Step 1: Select Category -->
       <ha-card>

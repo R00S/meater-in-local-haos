@@ -128,9 +128,20 @@ Modes A/B/C), 8d (Post-Cook Shelf Update), 8e (External Bridges — deferred).
 - README: Added `## 📖 User Guide` section linking to `docs/USER_GUIDE.md`.
 - No code changes; PANEL_VERSION unchanged at 262.
 
----
+### v0.6.1.05 — 2026-04-23
+**Feature: Hide entire Temperaturdata card when "Hide other language tree" is checked**
 
-- `_selectedIngredients` was a flat `string[]`; changed to `{name, compulsory}[]`.
+- When `_hideOtherDataSource` is true the entire "🌍 Temperaturdata" `<ha-card>` (Data
+  Source Selector) is now hidden from the MEATER cook-start screen.
+- Previously only the inactive language button was hidden; the card itself remained
+  visible. Now the whole card disappears, giving a cleaner cook-start flow for users
+  who have committed to one data source.
+- The previously active source stays selected; it is still changeable from the
+  welcome screen by unchecking the box and switching source.
+- PANEL_VERSION bumped 263 → 264 (auto by generator).
+- CHORES.md items ticked: versions updated, branch timeline updated, user guide updated.
+
+---
   All callers updated: `_toggleIngredient`, `_addCustomIngredient`, `_removeIngredient`,
   `_proceedToCookingStyle` guard, `_generateAIRecipes` request body,
   `_renderIngredientCheckbox` (`.includes` → `.find`), badge render in selected-ingredients section.
