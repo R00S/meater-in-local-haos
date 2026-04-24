@@ -6,7 +6,7 @@ Flank steak, from the abdominal wall, is a wide, flat, and relatively thin cut w
 ## Source recipes
 
 ### 1. America's Test Kitchen — London Broil (Oven-Roasted Flank Steak)
-**Source**: America's Test Kitchen, *The Complete Cooking for Two Cookbook* (America's Test Kitchen, 2014), pp. 192–194; americastestkitchen.com  
+**Source**: America's Test Kitchen, *The Complete Cooking for Two Cookbook* (America's Test Kitchen, 2014); americastestkitchen.com  
 **Serves**: 4 · **Prep**: 15 min (+1 hr marinate) · **Cook**: 20–25 min · **Rest**: 5–8 min
 
 **Ingredients**
@@ -30,7 +30,7 @@ Flank steak, from the abdominal wall, is a wide, flat, and relatively thin cut w
 ---
 
 ### 2. Alton Brown — London Broil Method
-**Source**: Alton Brown, *I'm Just Here for the Food* (Stewart, Tabori & Chang, 2002), pp. 140–144; foodnetwork.com/recipes/alton-brown/  
+**Source**: Alton Brown, *I'm Just Here for the Food* (Stewart, Tabori & Chang, 2002); foodnetwork.com/recipes/alton-brown/  
 **Serves**: 4 · **Prep**: 20 min (+4 hr marinate) · **Cook**: 15–20 min broiler/oven · **Rest**: 5 min
 
 **Ingredients**
@@ -55,7 +55,7 @@ Flank steak, from the abdominal wall, is a wide, flat, and relatively thin cut w
 ---
 
 ### 3. Yotam Ottolenghi — Slow-Roasted Middle Eastern Flank Steak
-**Source**: Yotam Ottolenghi, *SIMPLE* (Ebury Press, 2018), pp. 192–194; ottolenghi.co.uk/recipes  
+**Source**: Yotam Ottolenghi, *SIMPLE* (Ebury Press, 2018); ottolenghi.co.uk/recipes  
 **Serves**: 4 · **Prep**: 20 min (+overnight marinate) · **Cook**: 30–40 min · **Rest**: 10 min
 
 **Ingredients**
@@ -83,7 +83,7 @@ Flank steak, from the abdominal wall, is a wide, flat, and relatively thin cut w
 ---
 
 ### 4. Julia Child — Bœuf au Four / Flank Oven Method (French tradition)
-**Source**: Julia Child, *The Way to Cook* (Alfred A. Knopf, 1989), pp. 188–190  
+**Source**: Julia Child, *The Way to Cook* (Alfred A. Knopf, 1989)  
 **Serves**: 4 · **Prep**: 15 min (+2 hr marinate) · **Cook**: 15–20 min · **Rest**: 5 min
 
 **Ingredients**
@@ -107,7 +107,7 @@ Flank steak, from the abdominal wall, is a wide, flat, and relatively thin cut w
 ---
 
 ### 5. Maangchi — Korean Oven-Roasted Marinated Flank (*Sogogi Bokkeum* Variation)
-**Source**: Maangchi, *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019), pp. 224–226; maangchi.com  
+**Source**: Maangchi, *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); maangchi.com  
 **Serves**: 4 · **Prep**: 15 min (+2 hr marinate) · **Cook**: 20–25 min · **Rest**: 5 min
 
 **Ingredients**

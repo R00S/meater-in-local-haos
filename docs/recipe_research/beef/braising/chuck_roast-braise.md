@@ -40,7 +40,7 @@ Chuck roast is cut from the shoulder region of the animal (the chuck primal, rou
 ---
 
 ### 2. Julia Child — Bœuf Bourguignon (French tradition)
-**Source**: Julia Child, *Mastering the Art of French Cooking* (Alfred A. Knopf, 1961), pp. 315–319  
+**Source**: Julia Child, *Mastering the Art of French Cooking* (Alfred A. Knopf, 1961)  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 3–4 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -74,7 +74,7 @@ Chuck roast is cut from the shoulder region of the animal (the chuck primal, rou
 ---
 
 ### 3. Nigella Lawson — Italian-Style Pot Roast (*Stracotto di manzo*)
-**Source**: Nigella Lawson, *Nigella Christmas* (Chatto & Windus, 2008), pp. 202–204; nigella.com/recipes/  
+**Source**: Nigella Lawson, *Nigella Christmas* (Chatto & Windus, 2008); nigella.com/recipes/  
 **Serves**: 8 · **Prep**: 20 min · **Cook**: 4–5 hr · **Rest**: 30 min
 
 **Ingredients**
@@ -106,7 +106,7 @@ Chuck roast is cut from the shoulder region of the animal (the chuck primal, rou
 ---
 
 ### 4. Maangchi — Korean Braised Beef (*Jangjorim*)
-**Source**: Maangchi, *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019), pp. 190–192; maangchi.com/recipe/jangjorim  
+**Source**: Maangchi, *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019); maangchi.com/recipe/jangjorim  
 **Serves**: 6 · **Prep**: 15 min (+30 min soaking) · **Cook**: 2–3 hr · **Rest**: 10 min
 
 **Ingredients**
@@ -134,7 +134,7 @@ Chuck roast is cut from the shoulder region of the animal (the chuck primal, rou
 ---
 
 ### 5. Judith Jones / Craig Claiborne — Daube de Bœuf Provençale (Provençal tradition)
-**Source**: Craig Claiborne, *The New York Times Cookbook* (Harper & Row, 1961), pp. 204–205; adapted in Judith Jones, *The Pleasures of Cooking for One* (Knopf, 2009)  
+**Source**: Craig Claiborne, *The New York Times Cookbook* (Harper & Row, 1961); adapted in Judith Jones, *The Pleasures of Cooking for One* (Knopf, 2009)  
 **Serves**: 6–8 · **Prep**: 30 min (+overnight marinating) · **Cook**: 3–4 hr · **Rest**: 20 min
 
 **Ingredients**

@@ -6,7 +6,7 @@ A grilled chicken burger is a 150–180 g shaped patty made from coarsely-ground
 ## Source recipes
 
 ### 1. America's Test Kitchen — Grilled Chicken Burgers (American tradition)
-**Source**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011), pp. 376–378; cooksillustrated.com  
+**Source**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011); cooksillustrated.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**
@@ -32,7 +32,7 @@ A grilled chicken burger is a 150–180 g shaped patty made from coarsely-ground
 ---
 
 ### 2. Tina Nordström — Grillad Kycklingburgare (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 96–98; köket.se — chicken-burger section  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se — chicken-burger section  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**
@@ -86,7 +86,7 @@ A grilled chicken burger is a 150–180 g shaped patty made from coarsely-ground
 ---
 
 ### 4. Diana Henry — Lemon & Sage Grilled Chicken Burgers (British modern tradition)
-**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015), pp. 178–180; telegraph.co.uk/food-and-drink  
+**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015); telegraph.co.uk/food-and-drink  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**

@@ -6,7 +6,7 @@ Pork tongue is the smaller, more delicate sibling of beef tongue — typically 2
 ## Source recipes
 
 ### 1. Fergus Henderson — Pig's Tongue Salad with Mustard & Capers (British nose-to-tail tradition)
-**Source**: Fergus Henderson, *Beyond Nose to Tail* (Bloomsbury, 2007), pp. 122–124; stjohnrestaurant.com  
+**Source**: Fergus Henderson, *Beyond Nose to Tail* (Bloomsbury, 2007); stjohnrestaurant.com  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 90 min · **Rest**: 10 min
 
 **Ingredients**
@@ -33,7 +33,7 @@ Pork tongue is the smaller, more delicate sibling of beef tongue — typically 2
 ---
 
 ### 2. Diana Kennedy — Lengua de Cerdo en Salsa de Chile Pasilla (Mexican tradition)
-**Source**: Diana Kennedy, *Mexican Regional Cooking* (Harper & Row, 1990), pp. 248–250  
+**Source**: Diana Kennedy, *Mexican Regional Cooking* (Harper & Row, 1990)  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 90 min (tongue) + 20 min (sauce) · **Rest**: 10 min
 
 **Ingredients**
@@ -58,7 +58,7 @@ Pork tongue is the smaller, more delicate sibling of beef tongue — typically 2
 ---
 
 ### 3. Anthony Bourdain — Langue de Porc Sauce Ravigote (French bistro tradition)
-**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004), pp. 192–194 (the pork-tongue variant of his beef tongue piquante)  
+**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004) (the pork-tongue variant of his beef tongue piquante)  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 90 min · **Rest**: 10 min
 
 **Ingredients**
@@ -84,7 +84,7 @@ Pork tongue is the smaller, more delicate sibling of beef tongue — typically 2
 ---
 
 ### 4. Magnus Nilsson — Inkokt Grisetunga med Pepparrotssås (Swedish/Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 390–391 — the pork-tongue variant of his salt-cured beef tongue  
+**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) — the pork-tongue variant of his salt-cured beef tongue  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 90 min · **Rest**: 15 min
 
 **Ingredients**

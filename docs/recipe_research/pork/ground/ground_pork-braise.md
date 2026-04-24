@@ -6,7 +6,7 @@ Braised ground pork is the long-simmered ragù-style preparation — coarsely-gr
 ## Source recipes
 
 ### 1. Marcella Hazan — Ragù Bianco di Maiale (Italian tradition)
-**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997), pp. 156–158  
+**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 90 min · **Rest**: 5 min
 
 **Ingredients**
@@ -39,7 +39,7 @@ Braised ground pork is the long-simmered ragù-style preparation — coarsely-gr
 ---
 
 ### 2. Andrea Nguyen — Thịt Băm Kho (Vietnamese caramelised braised pork)
-**Source**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019), pp. 132–134; vietworldkitchen.com  
+**Source**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019); vietworldkitchen.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 45 min · **Rest**: 5 min
 
 **Ingredients**
@@ -99,7 +99,7 @@ Braised ground pork is the long-simmered ragù-style preparation — coarsely-gr
 ---
 
 ### 4. Tina Nordström — Köttfärssås på Fläsk (Swedish ragù tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 86–88; köket.se  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 75 min · **Rest**: 10 min
 
 **Ingredients**

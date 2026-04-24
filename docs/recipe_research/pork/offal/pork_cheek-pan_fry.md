@@ -6,7 +6,7 @@ Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the sma
 ## Source recipes
 
 ### 1. José Pizarro — Carrillera Salteada (Spanish pintxo tradition)
-**Source**: José Pizarro, *Spanish Flavours* (Kyle Books, 2012), pp. 132–134; josepizarro.com  
+**Source**: José Pizarro, *Spanish Flavours* (Kyle Books, 2012); josepizarro.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -88,7 +88,7 @@ Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the sma
 ---
 
 ### 4. Magnus Nilsson — Pan-Seared Griskind with Brown Butter & Capers (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 386–387 — pork cheek section  
+**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) — pork cheek section  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min · **Rest**: 2 min
 
 **Ingredients**

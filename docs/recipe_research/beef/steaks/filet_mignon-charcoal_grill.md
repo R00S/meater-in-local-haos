@@ -6,7 +6,7 @@ Filet mignon is cut from the narrow end of the beef tenderloin (psoas major), th
 ## Source recipes
 
 ### 1. Aaron Franklin — Charcoal-Grilled Filet (Texas tradition)
-**Source**: Aaron Franklin & Jordan Mackay, *Franklin Steak* (Ten Speed Press, 2019), pp. 154–158  
+**Source**: Aaron Franklin & Jordan Mackay, *Franklin Steak* (Ten Speed Press, 2019)  
 **Serves**: 2 · **Prep**: 5 min (+45 min tempering) · **Cook**: 10–14 min · **Rest**: 5 min
 
 **Ingredients**
@@ -29,7 +29,7 @@ Filet mignon is cut from the narrow end of the beef tenderloin (psoas major), th
 ---
 
 ### 2. Adam Perry Lang — Two-Stage Charcoal Filet
-**Source**: Adam Perry Lang, *BBQ 25* (Hyperion, 2010), pp. 62–66; adamperry lang.com  
+**Source**: Adam Perry Lang, *BBQ 25* (Hyperion, 2010); adamperry lang.com  
 **Serves**: 2 · **Prep**: 10 min (+1 hr dry rub) · **Cook**: 12–16 min · **Rest**: 8 min
 
 **Ingredients**
@@ -55,7 +55,7 @@ Filet mignon is cut from the narrow end of the beef tenderloin (psoas major), th
 ---
 
 ### 3. Francis Mallmann — Filet on Charcoal Embers (*gaucho* tradition, Argentine)
-**Source**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009), pp. 98–104  
+**Source**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 8–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -76,7 +76,7 @@ Filet mignon is cut from the narrow end of the beef tenderloin (psoas major), th
 ---
 
 ### 4. Nobu Matsuhisa — Charcoal-Grilled Beef Fillet with Soy (Japanese tradition)
-**Source**: Nobu Matsuhisa, *Nobu the Cookbook* (Kodansha, 2001), pp. 138–142  
+**Source**: Nobu Matsuhisa, *Nobu the Cookbook* (Kodansha, 2001)  
 **Serves**: 2 · **Prep**: 10 min (+15 min marinade) · **Cook**: 8–10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -101,7 +101,7 @@ Filet mignon is cut from the narrow end of the beef tenderloin (psoas major), th
 ---
 
 ### 5. Yotam Ottolenghi — Middle Eastern Charcoal-Grilled Fillet
-**Source**: Yotam Ottolenghi & Ramael Scully, *NOPI: The Cookbook* (Ebury Press, 2015), pp. 188–190  
+**Source**: Yotam Ottolenghi & Ramael Scully, *NOPI: The Cookbook* (Ebury Press, 2015)  
 **Serves**: 2 · **Prep**: 20 min (+2 hr marinating) · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**

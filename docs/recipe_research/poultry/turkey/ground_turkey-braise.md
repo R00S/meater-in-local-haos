@@ -6,7 +6,7 @@ Braised ground turkey is the long-simmered ragù-style preparation — coarsely-
 ## Source recipes
 
 ### 1. Marcella Hazan — Ragù di Tacchino (Italian tradition)
-**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997), pp. 160–162 — turkey variant of her *ragù bianco* technique  
+**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997) — turkey variant of her *ragù bianco* technique  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 75 min · **Rest**: 5 min
 
 **Ingredients**
@@ -37,7 +37,7 @@ Braised ground turkey is the long-simmered ragù-style preparation — coarsely-
 ---
 
 ### 2. Hugh Acheson — Slow-Cooker Turkey Mince Bolognese (American Southern tradition)
-**Source**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017), pp. 80–82; hughacheson.com  
+**Source**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017); hughacheson.com  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 75 min · **Rest**: 10 min
 
 **Ingredients**
@@ -97,7 +97,7 @@ Braised ground turkey is the long-simmered ragù-style preparation — coarsely-
 ---
 
 ### 4. Tina Nordström — Kalkonfärssås (Swedish ragù tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 92–94 — turkey variant of her *köttfärssås*; köket.se  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — turkey variant of her *köttfärssås*; köket.se  
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 70 min · **Rest**: 10 min
 
 **Ingredients**

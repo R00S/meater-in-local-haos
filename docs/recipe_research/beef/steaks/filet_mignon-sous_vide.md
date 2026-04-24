@@ -6,7 +6,7 @@ Filet mignon (psoas major, small end) is the most tender, leanest, and most deli
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Sous Vide Filet Mignon
-**Source**: J. Kenji López-Alt, seriouseats.com/sous-vide-filet-mignon; *The Food Lab* (W. W. Norton, 2015), pp. 408–414  
+**Source**: J. Kenji López-Alt, seriouseats.com/sous-vide-filet-mignon; *The Food Lab* (W. W. Norton, 2015)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 45 min–4 hr (sous vide) + 1–2 min (sear) · **Rest**: 2 min
 
 **Ingredients**
@@ -31,7 +31,7 @@ Filet mignon (psoas major, small end) is the most tender, leanest, and most deli
 ---
 
 ### 2. Thomas Keller — Sous Vide Beef Tenderloin Medallion (*Ad Hoc* tradition)
-**Source**: Thomas Keller, *Under Pressure: Cooking Sous Vide* (Artisan, 2008), pp. 148–154; thomaskeller.com  
+**Source**: Thomas Keller, *Under Pressure: Cooking Sous Vide* (Artisan, 2008); thomaskeller.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 1 hr sous vide + 90 sec sear · **Rest**: none required
 
 **Ingredients**
@@ -52,7 +52,7 @@ Filet mignon (psoas major, small end) is the most tender, leanest, and most deli
 ---
 
 ### 3. Heston Blumenthal — Sous Vide Beef Fillet (British modern tradition)
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011), pp. 172–176  
+**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 45 min sous vide + 60 sec sear · **Rest**: 2 min
 
 **Ingredients**
@@ -74,7 +74,7 @@ Filet mignon (psoas major, small end) is the most tender, leanest, and most deli
 ---
 
 ### 4. Maangchi — Korean-Style Sous Vide Beef Fillet (*Ansim*)
-**Source**: Maangchi, maangchi.com/recipe/sous-vide; cross-referenced with *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019), pp. 218–220  
+**Source**: Maangchi, maangchi.com/recipe/sous-vide; cross-referenced with *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019)  
 **Serves**: 2 · **Prep**: 15 min (+30 min marinating) · **Cook**: 1 hr sous vide + 90 sec sear · **Rest**: 2 min
 
 **Ingredients**
@@ -98,7 +98,7 @@ Filet mignon (psoas major, small end) is the most tender, leanest, and most deli
 ---
 
 ### 5. Tetsuya Wakuda — Sous Vide Wagyu Fillet (Japanese-Australian tradition)
-**Source**: Tetsuya Wakuda, *Tetsuya* (Ten Speed Press, 2000), pp. 160–164; tetsuyas.com  
+**Source**: Tetsuya Wakuda, *Tetsuya* (Ten Speed Press, 2000); tetsuyas.com  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 30–45 min sous vide + 60 sec sear · **Rest**: 2 min
 
 **Ingredients**

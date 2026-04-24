@@ -6,7 +6,7 @@ Eggplant (*Solanum melongena*; UK aubergine) is a sponge-textured fruit of the n
 ## Source recipes
 
 ### 1. Marcella Hazan — Melanzane Saltate (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992), pp. 466–468  
+**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
 **Serves**: 4 · **Prep**: 15 min (+ 30 min salting) · **Cook**: 12–15 min · **Rest**: 2 min
 
 **Ingredients**
@@ -30,7 +30,7 @@ Eggplant (*Solanum melongena*; UK aubergine) is a sponge-textured fruit of the n
 ---
 
 ### 2. Yotam Ottolenghi — Pan-Fried Aubergine with Buttermilk (Middle Eastern tradition)
-**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010), pp. 38–40  
+**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)  
 **Serves**: 4 · **Prep**: 15 min (+ 20 min salting) · **Cook**: 15 min · **Rest**: 2 min
 
 **Ingredients**
@@ -56,7 +56,7 @@ Eggplant (*Solanum melongena*; UK aubergine) is a sponge-textured fruit of the n
 ---
 
 ### 3. Madhur Jaffrey — Begun Bhaja (Bengali tradition)
-**Source**: Madhur Jaffrey, *A Taste of India* (Pavilion Books, 1985), pp. 142–144  
+**Source**: Madhur Jaffrey, *A Taste of India* (Pavilion Books, 1985)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 1 min
 
 **Ingredients**

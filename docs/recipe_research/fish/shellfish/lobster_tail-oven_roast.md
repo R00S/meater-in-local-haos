@@ -6,7 +6,7 @@ Oven-roasted lobster tail (typically 150–200 g per tail, often the cold-water 
 ## Source recipes
 
 ### 1. Thomas Keller — Oven-Roasted Lobster Tails with Beurre Monté (American haute cuisine)
-**Source**: Thomas Keller, *The French Laundry Cookbook* (Artisan, 1999), pp. 134–138 (the oven-roast variant of his butter-poached technique); thomaskeller.com  
+**Source**: Thomas Keller, *The French Laundry Cookbook* (Artisan, 1999) (the oven-roast variant of his butter-poached technique); thomaskeller.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 2 min
 
 **Ingredients**
@@ -33,7 +33,7 @@ Oven-roasted lobster tail (typically 150–200 g per tail, often the cold-water 
 ---
 
 ### 2. Tina Nordström — Ugnsbakade Hummerstjärtar med Dillsmör (Swedish/Nordic tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 152–154; köket.se — hummer chapter  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se — hummer chapter  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 2 min
 
 **Ingredients**
@@ -60,7 +60,7 @@ Oven-roasted lobster tail (typically 150–200 g per tail, often the cold-water 
 ---
 
 ### 3. Rick Stein — Oven-Roasted Lobster Tails with Garlic & Parsley (British seafood tradition)
-**Source**: Rick Stein, *Rick Stein's Seafood* (BBC Books, 2001), pp. 224–226; rickstein.com  
+**Source**: Rick Stein, *Rick Stein's Seafood* (BBC Books, 2001); rickstein.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 2 min
 
 **Ingredients**
@@ -86,7 +86,7 @@ Oven-roasted lobster tail (typically 150–200 g per tail, often the cold-water 
 ---
 
 ### 4. Eric Ripert — Roasted Lobster Tails with Vanilla Beurre Blanc (French haute cuisine)
-**Source**: Eric Ripert, *Avec Eric* (Wiley, 2010), pp. 186–188 (and recurring at Le Bernardin tasting menus); le-bernardin.com  
+**Source**: Eric Ripert, *Avec Eric* (Wiley, 2010) (and recurring at Le Bernardin tasting menus); le-bernardin.com  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 9 min · **Rest**: 2 min
 
 **Ingredients**

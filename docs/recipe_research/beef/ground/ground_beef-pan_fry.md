@@ -28,7 +28,7 @@ Loose ground beef pan-fried (rather than formed into burger patties) is the foun
 ---
 
 ### 2. Marcella Hazan — Soffritto-Browned Beef for Ragù alla Bolognese (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992), pp. 203–205  
+**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 25 min (browning portion) · **Rest**: n/a
 
 **Ingredients**
@@ -53,7 +53,7 @@ Loose ground beef pan-fried (rather than formed into burger patties) is the foun
 ---
 
 ### 3. Madhur Jaffrey — Kheema (Indian-style minced beef)
-**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982), pp. 134–136  
+**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 25 min · **Rest**: 5 min
 
 **Ingredients**

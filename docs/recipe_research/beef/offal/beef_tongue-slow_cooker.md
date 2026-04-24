@@ -6,7 +6,7 @@ Beef tongue cooked in an electric slow cooker is the same long-collagen-conversi
 ## Source recipes
 
 ### 1. Hugh Acheson — Slow-Cooker Pot-au-Feu Tongue (American Southern tradition)
-**Source**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017), pp. 168–171; hughacheson.com  
+**Source**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017); hughacheson.com  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 8 hr (low) · **Rest**: 15 min
 
 **Ingredients**
@@ -63,7 +63,7 @@ Beef tongue cooked in an electric slow cooker is the same long-collagen-conversi
 ---
 
 ### 3. Andrea Nguyen — Lưỡi Bò Hầm in the Slow Cooker (Vietnamese tradition)
-**Source**: Andrea Nguyen, *The Pho Cookbook* (Ten Speed Press, 2017), pp. 72–74 (technique transferred from her braise to slow cooker); vietworldkitchen.com  
+**Source**: Andrea Nguyen, *The Pho Cookbook* (Ten Speed Press, 2017) (technique transferred from her braise to slow cooker); vietworldkitchen.com  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 8 hr (low) · **Rest**: 15 min
 
 **Ingredients**
@@ -92,7 +92,7 @@ Beef tongue cooked in an electric slow cooker is the same long-collagen-conversi
 ---
 
 ### 4. Magnus Nilsson — Pickled-Beef-Tongue Method, Slow-Cooker Adaptation (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 388–390 (cure-and-braise method, adapted to the slow cooker)  
+**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) (cure-and-braise method, adapted to the slow cooker)  
 **Serves**: 8 · **Prep**: 20 min (+ 5 d cure if curing) · **Cook**: 8 hr (low) · **Rest**: 20 min
 
 **Ingredients**

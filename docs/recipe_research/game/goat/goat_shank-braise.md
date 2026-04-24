@@ -6,7 +6,7 @@ A goat shank (Swedish *getlägg*) is the lower portion of the animal's leg — h
 ## Source recipes
 
 ### 1. Yotam Ottolenghi & Sami Tamimi — Slow-Braised Goat Shanks with Pomegranate & Cumin (Levantine tradition)
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012), pp. 192–194; ottolenghi.co.uk  
+**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 3.5 hours · **Rest**: 15 min
 
 **Ingredients**
@@ -38,7 +38,7 @@ A goat shank (Swedish *getlägg*) is the lower portion of the animal's leg — h
 ---
 
 ### 2. Tina Nordström — Långbräserade Getlägg med Rödvin & Rotfrukter (Swedish/Nordic tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 160–162 — getlägg adaptation; köket.se — viltsektionen  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — getlägg adaptation; köket.se — viltsektionen  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 3.5 hours · **Rest**: 15 min
 
 **Ingredients**
@@ -70,7 +70,7 @@ A goat shank (Swedish *getlägg*) is the lower portion of the animal's leg — h
 ---
 
 ### 3. Diana Henry — Slow-Braised Goat Shanks with Red Wine & Rosemary (British/Mediterranean tradition)
-**Source**: Diana Henry, *A Bird in the Hand* — companion *Roast Figs, Sugar Snow* technique adapted in *How to Eat a Peach* (Mitchell Beazley, 2018), pp. 168–170; telegraph.co.uk/food-and-drink  
+**Source**: Diana Henry, *A Bird in the Hand* — companion *Roast Figs, Sugar Snow* technique adapted in *How to Eat a Peach* (Mitchell Beazley, 2018); telegraph.co.uk/food-and-drink  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 3.5 hours · **Rest**: 15 min
 
 **Ingredients**
@@ -99,7 +99,7 @@ A goat shank (Swedish *getlägg*) is the lower portion of the animal's leg — h
 ---
 
 ### 4. Maricel Presilla — Cabrito Estofado / Slow-Braised Goat Shanks (Latin American tradition)
-**Source**: Maricel E. Presilla, *Gran Cocina Latina: The Food of Latin America* (W. W. Norton, 2012), pp. 612–614; mariselpresilla.com  
+**Source**: Maricel E. Presilla, *Gran Cocina Latina: The Food of Latin America* (W. W. Norton, 2012); mariselpresilla.com  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 3.5 hours · **Rest**: 15 min
 
 **Ingredients**

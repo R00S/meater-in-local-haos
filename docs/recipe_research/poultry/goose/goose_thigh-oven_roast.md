@@ -6,7 +6,7 @@ Oven-roasted goose thigh (without the drumstick attached, cooked dry rather than
 ## Source recipes
 
 ### 1. Hugh Fearnley-Whittingstall — Slow-Roast Goose Thighs with Garlic & Thyme (British River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004), pp. 398–400 — the thigh-only variant of his goose-leg roast; rivercottage.net  
+**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004) — the thigh-only variant of his goose-leg roast; rivercottage.net  
 **Serves**: 4 · **Prep**: 15 min (+ overnight dry brine) · **Cook**: 2 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -30,7 +30,7 @@ Oven-roasted goose thigh (without the drumstick attached, cooked dry rather than
 ---
 
 ### 2. Magnus Nilsson — Långstekta Gåslår (Swedish/Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 300–302  
+**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
 **Serves**: 4 · **Prep**: 15 min (+ overnight dry brine) · **Cook**: 2–2.5 hr · **Rest**: 15 min
 
 **Ingredients**

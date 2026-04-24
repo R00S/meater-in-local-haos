@@ -6,7 +6,7 @@ Beef liver is one of the densest, most nutrient-rich offal cuts in the carcass �
 ## Source recipes
 
 ### 1. Marcella Hazan — Fegato di Manzo alla Veneziana (Venetian Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992), pp. 412–413  
+**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
 **Serves**: 4 · **Prep**: 10 min (+ 1 hr milk soak) · **Cook**: 8–10 min · **Rest**: 1 min
 
 **Ingredients**
@@ -61,7 +61,7 @@ Beef liver is one of the densest, most nutrient-rich offal cuts in the carcass �
 ---
 
 ### 3. Madhur Jaffrey — Kaleji Masala (North Indian tradition)
-**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982), pp. 160–162  
+**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min · **Rest**: 1 min
 
 **Ingredients**
@@ -93,7 +93,7 @@ Beef liver is one of the densest, most nutrient-rich offal cuts in the carcass �
 ---
 
 ### 4. Tina Nordström — Stekt Lever med Lök (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 102–104; köket.se  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 4 · **Prep**: 10 min (+ 30 min milk soak) · **Cook**: 7 min · **Rest**: 1 min
 
 **Ingredients**

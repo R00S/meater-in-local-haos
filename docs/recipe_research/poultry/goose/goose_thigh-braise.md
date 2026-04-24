@@ -6,7 +6,7 @@ Goose thigh (the upper portion of the leg, separated from the drumstick) is a si
 ## Source recipes
 
 ### 1. Hugh Fearnley-Whittingstall — Braised Goose Thighs with Cider, Apples & Sage (British River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004), pp. 396–398 (the thigh-only variant of his goose-leg braise); rivercottage.net  
+**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004) (the thigh-only variant of his goose-leg braise); rivercottage.net  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 2 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -37,7 +37,7 @@ Goose thigh (the upper portion of the leg, separated from the drumstick) is a si
 ---
 
 ### 2. Magnus Nilsson — Bräserade Gåslår (Swedish/Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 298–300 (thigh-only variant of his goose-leg braise)  
+**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) (thigh-only variant of his goose-leg braise)  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 2 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -69,7 +69,7 @@ Goose thigh (the upper portion of the leg, separated from the drumstick) is a si
 ---
 
 ### 3. Anthony Bourdain — Cuisses d'Oie au Vin Rouge (French bistro tradition)
-**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004), pp. 200–202 (the thigh-only variant of his goose-leg *coq au vin* technique)  
+**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004) (the thigh-only variant of his goose-leg *coq au vin* technique)  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 2 hr · **Rest**: 15 min
 
 **Ingredients**

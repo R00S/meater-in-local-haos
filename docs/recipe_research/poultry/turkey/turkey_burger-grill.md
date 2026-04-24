@@ -6,7 +6,7 @@ A grilled turkey burger is a 150–180 g shaped patty made from coarsely-ground 
 ## Source recipes
 
 ### 1. America's Test Kitchen — Grilled Turkey Burgers (American tradition)
-**Source**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011), pp. 380–382; cooksillustrated.com  
+**Source**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011); cooksillustrated.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**
@@ -33,7 +33,7 @@ A grilled turkey burger is a 150–180 g shaped patty made from coarsely-ground 
 ---
 
 ### 2. Tina Nordström — Grillad Kalkonburgare (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 100–102; köket.se — turkey-burger section  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se — turkey-burger section  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**
@@ -83,7 +83,7 @@ A grilled turkey burger is a 150–180 g shaped patty made from coarsely-ground 
 ---
 
 ### 4. Diana Henry — Grilled Turkey Burgers with Sage & Cranberry (British modern Thanksgiving tradition)
-**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015), pp. 180–182; telegraph.co.uk/food-and-drink — turkey-burger section  
+**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015); telegraph.co.uk/food-and-drink — turkey-burger section  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**

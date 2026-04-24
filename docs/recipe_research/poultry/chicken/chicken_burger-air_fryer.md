@@ -6,7 +6,7 @@ An air-fried chicken burger is the same 150–180 g ground-thigh patty as the gr
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air-Fryer Chicken Burgers (American tradition)
-**Source**: America's Test Kitchen, *The Air Fryer Bible* (America's Test Kitchen, 2019), pp. 88–90; cooksillustrated.com  
+**Source**: America's Test Kitchen, *The Air Fryer Bible* (America's Test Kitchen, 2019); cooksillustrated.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -32,7 +32,7 @@ An air-fried chicken burger is the same 150–180 g ground-thigh patty as the gr
 ---
 
 ### 2. Hugh Acheson — Air-Fryer Chicken Burgers with Sage & Lemon (American Southern tradition)
-**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011), pp. 144–146 — air-fryer adaptation in his subsequent slow-cooker book and online recipes; hughacheson.com  
+**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011) — air-fryer adaptation in his subsequent slow-cooker book and online recipes; hughacheson.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -58,7 +58,7 @@ An air-fried chicken burger is the same 150–180 g ground-thigh patty as the gr
 ---
 
 ### 3. Tina Nordström — Kycklingburgare i Airfryer (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 98–100 — air-fryer adaptation on köket.se  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — air-fryer adaptation on köket.se  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -83,7 +83,7 @@ An air-fried chicken burger is the same 150–180 g ground-thigh patty as the gr
 ---
 
 ### 4. Diana Henry — Air-Fryer Chicken Burgers with Tarragon & Lemon (British modern tradition)
-**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015), pp. 178–180; telegraph.co.uk/food-and-drink — air-fryer adaptation  
+**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015); telegraph.co.uk/food-and-drink — air-fryer adaptation  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 3 min
 
 **Ingredients**

@@ -6,7 +6,7 @@ Ground beef burgers are formed patties of minced beef, most commonly from a blen
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Smash Burger / Classic Grilled Burger
-**Source**: https://www.seriouseats.com/the-burger-lab-how-to-make-perfect-thin-and-crispy-fast-food-style-burgers; also *The Food Lab* (W. W. Norton, 2015), pp. 382–395  
+**Source**: https://www.seriouseats.com/the-burger-lab-how-to-make-perfect-thin-and-crispy-fast-food-style-burgers; also *The Food Lab* (W. W. Norton, 2015)  
 **Serves**: 4 · **Prep**: 10 min (+30 min resting after forming) · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -29,7 +29,7 @@ Ground beef burgers are formed patties of minced beef, most commonly from a blen
 ---
 
 ### 2. Fergus Henderson — Classic Grilled Beef Patty (British tradition)
-**Source**: Fergus Henderson & Trevor Gulliver, *The Whole Beast: Nose to Tail Eating* (Ecco, 2004), pp. 47–49; stjohnrestaurant.com  
+**Source**: Fergus Henderson & Trevor Gulliver, *The Whole Beast: Nose to Tail Eating* (Ecco, 2004); stjohnrestaurant.com  
 **Serves**: 4 · **Prep**: 15 min (+1 hr chilling) · **Cook**: 8–10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -54,7 +54,7 @@ Ground beef burgers are formed patties of minced beef, most commonly from a blen
 ---
 
 ### 3. Jan Braai (Jan Scannell) — Braai Burger (*hamburguer*) (South African tradition)
-**Source**: Jan Braai, *Fireworks: The Braai Book* (Struik Publishers, 2014), pp. 82–86; janbraai.com  
+**Source**: Jan Braai, *Fireworks: The Braai Book* (Struik Publishers, 2014); janbraai.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10–14 min · **Rest**: 3 min
 
 **Ingredients**
@@ -78,7 +78,7 @@ Ground beef burgers are formed patties of minced beef, most commonly from a blen
 ---
 
 ### 4. Nobu Matsuhisa — Wagyu Burger on Charcoal (Japanese-Californian tradition)
-**Source**: Nobu Matsuhisa, *Nobu the Cookbook* (Kodansha, 2001), pp. 134–136; noburestaurants.com  
+**Source**: Nobu Matsuhisa, *Nobu the Cookbook* (Kodansha, 2001); noburestaurants.com  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -102,7 +102,7 @@ Ground beef burgers are formed patties of minced beef, most commonly from a blen
 ---
 
 ### 5. Francis Mallmann — Gaucho-Style Grilled Burger (*hambúrguer gaucho*)
-**Source**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009), pp. 186–188  
+**Source**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 10–12 min over wood embers · **Rest**: 3 min
 
 **Ingredients**

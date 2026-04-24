@@ -36,7 +36,7 @@ Beef brisket is taken from the breast and lower chest of the animal, comprising 
 ---
 
 ### 2. Joan Nathan — Ashkenazi Passover Brisket
-**Source**: Joan Nathan, *Jewish Cooking in America* (Knopf, 1994), pp. 148–149; also published at nytimes.com/recipes  
+**Source**: Joan Nathan, *Jewish Cooking in America* (Knopf, 1994); also published at nytimes.com/recipes  
 **Serves**: 8 · **Prep**: 30 min · **Cook**: 3–4 hr · **Rest**: 20 min
 
 **Ingredients**
@@ -97,7 +97,7 @@ Beef brisket is taken from the breast and lower chest of the animal, comprising 
 ---
 
 ### 4. Maangchi — *Kkori-gomtang* Inspired Oven-Braised Brisket (Korean tradition)
-**Source**: Maangchi, *Maangchi's Real Korean Cooking* (Houghton Mifflin Harcourt, 2015), pp. 280–282; maangchi.com/recipe/  
+**Source**: Maangchi, *Maangchi's Real Korean Cooking* (Houghton Mifflin Harcourt, 2015); maangchi.com/recipe/  
 **Serves**: 6 · **Prep**: 20 min (+1 hr soaking) · **Cook**: 3.5–4 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -126,7 +126,7 @@ Beef brisket is taken from the breast and lower chest of the animal, comprising 
 ---
 
 ### 5. Yotam Ottolenghi — Middle Eastern Oven-Braised Brisket
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012), pp. 192–194; ottolenghi.co.uk  
+**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk  
 **Serves**: 6–8 · **Prep**: 25 min (+2 hr marinating) · **Cook**: 4–5 hr · **Rest**: 20 min
 
 **Ingredients**

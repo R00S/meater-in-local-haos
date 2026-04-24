@@ -6,7 +6,7 @@ Braised pork cheeks are the canonical preparation for the cut — small, fist-si
 ## Source recipes
 
 ### 1. José Pizarro — Carrillera de Cerdo al Vino Tinto (Spanish tradition)
-**Source**: José Pizarro, *Spanish Flavours* (Kyle Books, 2012), pp. 134–137; josepizarro.com  
+**Source**: José Pizarro, *Spanish Flavours* (Kyle Books, 2012); josepizarro.com  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 2.5 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -41,7 +41,7 @@ Braised pork cheeks are the canonical preparation for the cut — small, fist-si
 ---
 
 ### 2. Marcella Hazan — Guancia di Maiale Brasata al Marsala (Italian tradition)
-**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997), pp. 196–198  
+**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997)  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 2.5 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -110,7 +110,7 @@ Braised pork cheeks are the canonical preparation for the cut — small, fist-si
 ---
 
 ### 4. Magnus Nilsson — Långbräserade Griskindar i Mörkt Öl (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 384–387  
+**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 3 hr · **Rest**: 15 min
 
 **Ingredients**

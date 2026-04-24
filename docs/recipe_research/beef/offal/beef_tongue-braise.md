@@ -6,7 +6,7 @@ Beef tongue (*Bos taurus* lingual muscle) is a single dense cylindrical muscle w
 ## Source recipes
 
 ### 1. Fergus Henderson — Salt Ox Tongue with Green Sauce (British nose-to-tail tradition)
-**Source**: Fergus Henderson, *The Whole Beast: Nose to Tail Eating* (Macmillan, 1999/2004), pp. 134–137; stjohnrestaurant.com  
+**Source**: Fergus Henderson, *The Whole Beast: Nose to Tail Eating* (Macmillan, 1999/2004); stjohnrestaurant.com  
 **Serves**: 8 · **Prep**: 20 min (+ 5 d salt cure if curing) · **Cook**: 3–4 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -33,7 +33,7 @@ Beef tongue (*Bos taurus* lingual muscle) is a single dense cylindrical muscle w
 ---
 
 ### 2. Anthony Bourdain — Langue de Bœuf Sauce Piquante (French bistro tradition)
-**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004), pp. 188–190  
+**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004)  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 3.5 hr · **Rest**: 20 min
 
 **Ingredients**
@@ -60,7 +60,7 @@ Beef tongue (*Bos taurus* lingual muscle) is a single dense cylindrical muscle w
 ---
 
 ### 3. Diana Kennedy — Lengua en Salsa Verde (Mexican tradition)
-**Source**: Diana Kennedy, *The Cuisines of Mexico* (Harper & Row, 1972; expanded *The Essential Cuisines of Mexico*, Clarkson Potter, 2000), pp. 290–292  
+**Source**: Diana Kennedy, *The Cuisines of Mexico* (Harper & Row, 1972; expanded *The Essential Cuisines of Mexico*, Clarkson Potter, 2000)  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 3.5 hr (tongue) + 20 min (salsa) · **Rest**: 15 min
 
 **Ingredients**
@@ -84,7 +84,7 @@ Beef tongue (*Bos taurus* lingual muscle) is a single dense cylindrical muscle w
 ---
 
 ### 4. Yotam Ottolenghi & Sami Tamimi — Slow-Cooked Beef Tongue with Tehina (Israeli/Levantine tradition)
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012), pp. 210–212; ottolenghi.co.uk  
+**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 3.5 hr · **Rest**: 15 min
 
 **Ingredients**

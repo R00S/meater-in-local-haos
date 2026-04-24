@@ -6,7 +6,7 @@ Braised ground chicken is the long-simmered ragù-style preparation — coarsely
 ## Source recipes
 
 ### 1. Marcella Hazan — Ragù di Pollo (Italian tradition)
-**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997), pp. 158–160 (the chicken variant of her *ragù bianco* technique)  
+**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997) (the chicken variant of her *ragù bianco* technique)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 75 min · **Rest**: 5 min
 
 **Ingredients**
@@ -39,7 +39,7 @@ Braised ground chicken is the long-simmered ragù-style preparation — coarsely
 ---
 
 ### 2. Andrea Nguyen — Gà Kho with Ground Chicken (Vietnamese caramelised braise)
-**Source**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019), pp. 134–136 — the ground-chicken variant of her *gà kho* technique; vietworldkitchen.com  
+**Source**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019) — the ground-chicken variant of her *gà kho* technique; vietworldkitchen.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 40 min · **Rest**: 5 min
 
 **Ingredients**
@@ -96,7 +96,7 @@ Braised ground chicken is the long-simmered ragù-style preparation — coarsely
 ---
 
 ### 4. Tina Nordström — Kycklingfärssås (Swedish ragù tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 90–92 — the chicken variant of her *köttfärssås*; köket.se  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — the chicken variant of her *köttfärssås*; köket.se  
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 70 min · **Rest**: 10 min
 
 **Ingredients**

@@ -6,7 +6,7 @@ Ground beef burger patties pan-fried in a skillet are the indoor standard for do
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Pan-Fried Smash Burger
-**Source**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015), pp. 386–391; https://www.seriouseats.com/smash-burger-recipe  
+**Source**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015); https://www.seriouseats.com/smash-burger-recipe  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 4–6 min · **Rest**: 1 min
 
 **Ingredients**
@@ -31,7 +31,7 @@ Ground beef burger patties pan-fried in a skillet are the indoor standard for do
 ---
 
 ### 2. Nigel Slater — Beef Burger in Cast Iron (British tradition)
-**Source**: Nigel Slater, *The Kitchen Diaries II* (Fourth Estate, 2012), pp. 310–312; theguardian.com/food  
+**Source**: Nigel Slater, *The Kitchen Diaries II* (Fourth Estate, 2012); theguardian.com/food  
 **Serves**: 2 · **Prep**: 15 min (+30 min chilling) · **Cook**: 8–10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -56,7 +56,7 @@ Ground beef burger patties pan-fried in a skillet are the indoor standard for do
 ---
 
 ### 3. Fergus Henderson — Short Rib Burger in Pan (Nose-to-Tail tradition)
-**Source**: Fergus Henderson & Justin Piers Gellatly, *Beyond Nose to Tail* (Bloomsbury, 2007), pp. 54–56; stjohnrestaurant.com  
+**Source**: Fergus Henderson & Justin Piers Gellatly, *Beyond Nose to Tail* (Bloomsbury, 2007); stjohnrestaurant.com  
 **Serves**: 4 · **Prep**: 20 min (+1 hr resting) · **Cook**: 8–10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -79,7 +79,7 @@ Ground beef burger patties pan-fried in a skillet are the indoor standard for do
 ---
 
 ### 4. Momofuku / David Chang — Korean-Influenced Crispy Skillet Burger
-**Source**: David Chang & Peter Meehan, *Momofuku* (Clarkson Potter, 2009), pp. 234–236; momofuku.com  
+**Source**: David Chang & Peter Meehan, *Momofuku* (Clarkson Potter, 2009); momofuku.com  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -104,7 +104,7 @@ Ground beef burger patties pan-fried in a skillet are the indoor standard for do
 ---
 
 ### 5. Diana Yen / The Jewels of New York — Taiwanese Beef Burger in Wok/Pan
-**Source**: Diana Yen, *The Jewels of New York Cookbook* (Rizzoli, 2015), pp. 148–150; thejewelsofnewyork.com  
+**Source**: Diana Yen, *The Jewels of New York Cookbook* (Rizzoli, 2015); thejewelsofnewyork.com  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**

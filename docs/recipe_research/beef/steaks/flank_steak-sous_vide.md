@@ -6,7 +6,7 @@ Flank steak is a lean, flat, long-fibred abdominal muscle with almost no intramu
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Sous Vide Flank Steak (Serious Eats / ChefSteps)
-**Source**: J. Kenji López-Alt, seriouseats.com/sous-vide-flank-steak-recipe; *The Food Lab* (W. W. Norton, 2015), pp. 245–248  
+**Source**: J. Kenji López-Alt, seriouseats.com/sous-vide-flank-steak-recipe; *The Food Lab* (W. W. Norton, 2015)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 54 °C / 2–3 hr bath + 1–2 min sear · **Rest**: 3 min
 
 **Ingredients**
@@ -29,7 +29,7 @@ Flank steak is a lean, flat, long-fibred abdominal muscle with almost no intramu
 ---
 
 ### 2. Thomas Keller — Sous Vide Flank Steak (French Laundry / Bouchon tradition)
-**Source**: Thomas Keller, Corey Lee & Jonathan Benno, *Under Pressure: Cooking Sous Vide* (Artisan, 2008), pp. 116–119  
+**Source**: Thomas Keller, Corey Lee & Jonathan Benno, *Under Pressure: Cooking Sous Vide* (Artisan, 2008)  
 **Serves**: 4 · **Prep**: 15 min (+overnight dry-brine) · **Cook**: 57 °C / 1 hr bath + 1 min sear · **Rest**: 2 min
 
 **Ingredients**
@@ -54,7 +54,7 @@ Flank steak is a lean, flat, long-fibred abdominal muscle with almost no intramu
 ---
 
 ### 3. Heston Blumenthal — Precision-Temperature Flank (British modernist tradition)
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011), pp. 112–115; hestonfromhome.com  
+**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011); hestonfromhome.com  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 55 °C / 2 hr bath + 1 min sear · **Rest**: 3 min
 
 **Ingredients**
@@ -76,7 +76,7 @@ Flank steak is a lean, flat, long-fibred abdominal muscle with almost no intramu
 ---
 
 ### 4. David Chang — Sous Vide Flank for Korean BBQ (Korean-American tradition)
-**Source**: David Chang & Peter Meehan, *Momofuku* (Clarkson Potter, 2009), pp. 156–159  
+**Source**: David Chang & Peter Meehan, *Momofuku* (Clarkson Potter, 2009)  
 **Serves**: 6 · **Prep**: 25 min (+2 hr marinate) · **Cook**: 57 °C / 1.5 hr bath + 1 min sear · **Rest**: 3 min
 
 **Ingredients**
@@ -106,7 +106,7 @@ Flank steak is a lean, flat, long-fibred abdominal muscle with almost no intramu
 ---
 
 ### 5. Enrique Olvera — Matambre Sous Vide (Mexican tradition)
-**Source**: Enrique Olvera, *Tu Casa Mi Casa: Mexican Recipes for the Home Cook* (Phaidon, 2019), pp. 128–131  
+**Source**: Enrique Olvera, *Tu Casa Mi Casa: Mexican Recipes for the Home Cook* (Phaidon, 2019)  
 **Serves**: 6 · **Prep**: 20 min (+overnight marinate) · **Cook**: 55 °C / 2.5 hr bath + 1 min sear · **Rest**: 5 min
 
 **Ingredients**

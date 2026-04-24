@@ -6,7 +6,7 @@ Oven-roasted goose leg (whole, bone-in) cooked dry rather than braised is the al
 ## Source recipes
 
 ### 1. Hugh Fearnley-Whittingstall — Slow-Roast Goose Legs with Garlic & Thyme (British River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004), pp. 398–400; rivercottage.net  
+**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004); rivercottage.net  
 **Serves**: 4 · **Prep**: 15 min (+ overnight dry brine) · **Cook**: 2.5 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -30,7 +30,7 @@ Oven-roasted goose leg (whole, bone-in) cooked dry rather than braised is the al
 ---
 
 ### 2. Magnus Nilsson — Långstekta Gåsklubbor (Swedish/Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 300–302  
+**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
 **Serves**: 4 · **Prep**: 15 min (+ overnight dry brine) · **Cook**: 2.5–3 hr · **Rest**: 15 min
 
 **Ingredients**

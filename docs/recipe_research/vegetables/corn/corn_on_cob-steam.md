@@ -6,7 +6,7 @@ Sweet corn on the cob (*Zea mays saccharata*, husked or husk-on) is a dense rack
 ## Source recipes
 
 ### 1. Deborah Madison — Steamed Sweet Corn (American vegetarian tradition)
-**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013), pp. 156–157  
+**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 6–8 min · **Rest**: 1 min
 
 **Ingredients**
@@ -28,7 +28,7 @@ Sweet corn on the cob (*Zea mays saccharata*, husked or husk-on) is a dense rack
 ---
 
 ### 2. Diana Kennedy — Elotes al Vapor (Mexican tradition)
-**Source**: Diana Kennedy, *The Cuisines of Mexico* (Harper & Row, 1972; expanded edition *The Essential Cuisines of Mexico*, Clarkson Potter, 2000), pp. 232–233  
+**Source**: Diana Kennedy, *The Cuisines of Mexico* (Harper & Row, 1972; expanded edition *The Essential Cuisines of Mexico*, Clarkson Potter, 2000)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–14 min · **Rest**: 1 min
 
 **Ingredients**

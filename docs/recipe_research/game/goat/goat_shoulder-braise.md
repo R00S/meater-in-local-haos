@@ -6,7 +6,7 @@ Goat shoulder (Swedish *getskuldra* / *getbog*) is the upper foreleg — heavily
 ## Source recipes
 
 ### 1. Yotam Ottolenghi & Sami Tamimi — Slow-Braised Goat Shoulder with Pomegranate, Cumin & Walnuts (Levantine tradition)
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012), pp. 196–198; ottolenghi.co.uk  
+**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 5 hours · **Rest**: 20 min
 
 **Ingredients**
@@ -36,7 +36,7 @@ Goat shoulder (Swedish *getskuldra* / *getbog*) is the upper foreleg — heavily
 ---
 
 ### 2. Tina Nordström — Långbräserad Getskuldra med Rödvin (Swedish/Nordic tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 164–166; köket.se — viltsektionen  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se — viltsektionen  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 5 hours · **Rest**: 20 min
 
 **Ingredients**
@@ -65,7 +65,7 @@ Goat shoulder (Swedish *getskuldra* / *getbog*) is the upper foreleg — heavily
 ---
 
 ### 3. Hugh Fearnley-Whittingstall — Slow-Braised Goat Shoulder with Cider (British River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004), pp. 356–358; rivercottage.net  
+**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004); rivercottage.net  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 5 hours · **Rest**: 20 min
 
 **Ingredients**
@@ -92,7 +92,7 @@ Goat shoulder (Swedish *getskuldra* / *getbog*) is the upper foreleg — heavily
 ---
 
 ### 4. Maricel Presilla — Cabrito en Salsa Verde / Slow-Braised Goat Shoulder (Latin American tradition)
-**Source**: Maricel E. Presilla, *Gran Cocina Latina: The Food of Latin America* (W. W. Norton, 2012), pp. 614–616  
+**Source**: Maricel E. Presilla, *Gran Cocina Latina: The Food of Latin America* (W. W. Norton, 2012)  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 5 hours · **Rest**: 20 min
 
 **Ingredients**

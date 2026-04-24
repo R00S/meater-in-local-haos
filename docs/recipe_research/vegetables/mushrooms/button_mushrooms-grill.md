@@ -6,7 +6,7 @@ Button mushrooms (*Agaricus bisporus*, immature white form) are roughly 92 % wat
 ## Source recipes
 
 ### 1. Mark Bittman — Grilled Button Mushrooms with Garlic & Lemon (American tradition)
-**Source**: Mark Bittman, *How to Grill Everything* (Houghton Mifflin Harcourt, 2018), pp. 332–334  
+**Source**: Mark Bittman, *How to Grill Everything* (Houghton Mifflin Harcourt, 2018)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -60,7 +60,7 @@ Button mushrooms (*Agaricus bisporus*, immature white form) are roughly 92 % wat
 ---
 
 ### 3. Francis Mallmann — Champiñones a la Parrilla (Argentine/Patagonian tradition)
-**Source**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009), pp. 196–197  
+**Source**: Francis Mallmann, *Seven Fires: Grilling the Argentine Way* (Artisan, 2009)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**
@@ -85,7 +85,7 @@ Button mushrooms (*Agaricus bisporus*, immature white form) are roughly 92 % wat
 ---
 
 ### 4. Anna Jones — Grilled Marinated Mushrooms (British vegetarian tradition)
-**Source**: Anna Jones, *A Modern Way to Cook* (Fourth Estate, 2015), pp. 178–179  
+**Source**: Anna Jones, *A Modern Way to Cook* (Fourth Estate, 2015)  
 **Serves**: 4 · **Prep**: 15 min (+ 20 min marinade) · **Cook**: 8 min · **Rest**: 2 min
 
 **Ingredients**

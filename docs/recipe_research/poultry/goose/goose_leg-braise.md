@@ -6,7 +6,7 @@ Goose leg (the entire drumstick-and-thigh complex, often a single 350–500 g pi
 ## Source recipes
 
 ### 1. Hugh Fearnley-Whittingstall — Slow-Braised Goose Legs with Cider & Apples (British River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004), pp. 396–398; rivercottage.net  
+**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004); rivercottage.net  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 2.5 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -36,7 +36,7 @@ Goose leg (the entire drumstick-and-thigh complex, often a single 350–500 g pi
 ---
 
 ### 2. Magnus Nilsson — Långbräserade Gåsklubbor i Mörkt Öl (Swedish/Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 298–300  
+**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
 **Serves**: 4 · **Prep**: 20 min · **Cook**: 2.5 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -72,7 +72,7 @@ Goose leg (the entire drumstick-and-thigh complex, often a single 350–500 g pi
 ---
 
 ### 3. Anthony Bourdain — Cuisses d'Oie Braisées au Vin Rouge (French bistro tradition)
-**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004), pp. 200–202 — the goose-leg variant of his classic *coq au vin* technique  
+**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004) — the goose-leg variant of his classic *coq au vin* technique  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 2.5 hr · **Rest**: 15 min
 
 **Ingredients**

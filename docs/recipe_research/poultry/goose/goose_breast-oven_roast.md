@@ -6,7 +6,7 @@ Oven-roasted goose breast (cooked separately from the whole bird, often the *sup
 ## Source recipes
 
 ### 1. Hugh Fearnley-Whittingstall — Roast Goose Breast with Sage & Onion (British River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004), pp. 392–395; rivercottage.net  
+**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004); rivercottage.net  
 **Serves**: 6–8 · **Prep**: 20 min · **Cook**: 22 min (10 min stove + 12 min oven) · **Rest**: 10 min
 
 **Ingredients**
@@ -34,7 +34,7 @@ Oven-roasted goose breast (cooked separately from the whole bird, often the *sup
 ---
 
 ### 2. Magnus Nilsson — Ugnstekt Gåsbröst med Äppelmust (Swedish/Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 298–300  
+**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 22 min · **Rest**: 10 min
 
 **Ingredients**

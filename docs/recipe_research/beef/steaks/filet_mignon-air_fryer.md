@@ -30,7 +30,7 @@ Filet mignon is cut from the narrow end (small end) of the beef tenderloin — t
 ---
 
 ### 2. Serious Eats / Kenji — Air-Fryer Steak Technique Applied to Filet Mignon
-**Source**: J. Kenji López-Alt, seriouseats.com/air-fryer-steak; cross-referenced with *The Food Lab* (W. W. Norton, 2015), pp. 386–395  
+**Source**: J. Kenji López-Alt, seriouseats.com/air-fryer-steak; cross-referenced with *The Food Lab* (W. W. Norton, 2015)  
 **Serves**: 2 · **Prep**: 5 min (+overnight dry-brine) · **Cook**: 8–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -97,7 +97,7 @@ Filet mignon is cut from the narrow end (small end) of the beef tenderloin — t
 ---
 
 ### 5. Maangchi — Korean-Inspired Air Fryer Beef Fillet (*Sogogi gui*)
-**Source**: Maangchi, maangchi.com — Air Fryer Korean Beef variation; cross-referenced with *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019), pp. 220–222  
+**Source**: Maangchi, maangchi.com — Air Fryer Korean Beef variation; cross-referenced with *Maangchi's Big Book of Korean Cooking* (Houghton Mifflin Harcourt, 2019)  
 **Serves**: 2 · **Prep**: 10 min (+30 min marinating) · **Cook**: 10–12 min · **Rest**: 3 min
 
 **Ingredients**

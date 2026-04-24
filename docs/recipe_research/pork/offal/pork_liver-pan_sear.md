@@ -6,7 +6,7 @@ Pan-seared pork liver, like its beef counterpart, is a high-heat technique appli
 ## Source recipes
 
 ### 1. Fergus Henderson — Pig's Liver, Bacon and Onions (British nose-to-tail tradition)
-**Source**: Fergus Henderson, *Beyond Nose to Tail* (Bloomsbury, 2007), pp. 116–118; stjohnrestaurant.com  
+**Source**: Fergus Henderson, *Beyond Nose to Tail* (Bloomsbury, 2007); stjohnrestaurant.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 12 min · **Rest**: 2 min
 
 **Ingredients**
@@ -33,7 +33,7 @@ Pan-seared pork liver, like its beef counterpart, is a high-heat technique appli
 ---
 
 ### 2. José Pizarro — Hígado de Cerdo a la Plancha (Spanish tradition)
-**Source**: José Pizarro, *Spanish Flavours* (Kyle Books, 2012), pp. 180–182; josepizarro.com  
+**Source**: José Pizarro, *Spanish Flavours* (Kyle Books, 2012); josepizarro.com  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 9 min · **Rest**: 1 min
 
 **Ingredients**
@@ -58,7 +58,7 @@ Pan-seared pork liver, like its beef counterpart, is a high-heat technique appli
 ---
 
 ### 3. Magnus Nilsson — Seared Fläsklever with Brown Butter & Capers (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 388–389 (the pork-liver variant of his calf's liver method)  
+**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) (the pork-liver variant of his calf's liver method)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8 min · **Rest**: 2 min
 
 **Ingredients**

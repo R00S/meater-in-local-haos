@@ -6,7 +6,7 @@ The beef burger patty cooked in an air fryer is a relatively recent home-kitchen
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air-Fryer Diner-Style Burgers (American tradition)
-**Source**: America's Test Kitchen, *Air Fryer Perfection* (America's Test Kitchen, 2019), pp. 50–52; americastestkitchen.com  
+**Source**: America's Test Kitchen, *Air Fryer Perfection* (America's Test Kitchen, 2019); americastestkitchen.com  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
 
 **Ingredients**

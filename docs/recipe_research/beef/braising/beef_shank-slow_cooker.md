@@ -6,7 +6,7 @@ Beef shank cooked in an electric slow cooker is the same long-collagen-conversio
 ## Source recipes
 
 ### 1. Hugh Acheson — Slow-Cooker Osso Buco (American Southern adaptation of Italian classic)
-**Source**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017), pp. 142–145; hughacheson.com  
+**Source**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017); hughacheson.com  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 8 hr (low) · **Rest**: 20 min
 
 **Ingredients**
@@ -40,7 +40,7 @@ Beef shank cooked in an electric slow cooker is the same long-collagen-conversio
 ---
 
 ### 2. Tina Nordström — Oxlägg i Slow Cooker (Swedish home tradition)
-**Source**: Tina Nordström — slow-cooker adaptation of *Långkokt Oxlägg* in *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 132–134; köket.se  
+**Source**: Tina Nordström — slow-cooker adaptation of *Långkokt Oxlägg* in *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 8–9 hr (low) · **Rest**: 20 min
 
 **Ingredients**
@@ -102,7 +102,7 @@ Beef shank cooked in an electric slow cooker is the same long-collagen-conversio
 ---
 
 ### 4. Andrea Nguyen — Slow-Cooker Bò Kho (Vietnamese tradition)
-**Source**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019), pp. 168–171 — slow-cooker variation; vietworldkitchen.com  
+**Source**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019) — slow-cooker variation; vietworldkitchen.com  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 8 hr (low) · **Rest**: 10 min
 
 **Ingredients**

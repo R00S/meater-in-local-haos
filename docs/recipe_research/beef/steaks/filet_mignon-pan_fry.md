@@ -6,7 +6,7 @@ Filet mignon (psoas major, narrow end) is the most tender, leanest steak in any 
 ## Source recipes
 
 ### 1. Julia Child — Pan-Fried Filet de Bœuf (French bistro tradition)
-**Source**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking* (Alfred A. Knopf, 1961), pp. 296–300  
+**Source**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking* (Alfred A. Knopf, 1961)  
 **Serves**: 2 · **Prep**: 5 min (+1 hr tempering) · **Cook**: 6–8 min · **Rest**: 3 min
 
 **Ingredients**
@@ -31,7 +31,7 @@ Filet mignon (psoas major, narrow end) is the most tender, leanest steak in any 
 ---
 
 ### 2. J. Kenji López-Alt — Pan-Fried Filet Mignon with Butter Baste
-**Source**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015), pp. 398–402; seriouseats.com/filet-mignon  
+**Source**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015); seriouseats.com/filet-mignon  
 **Serves**: 2 · **Prep**: 5 min (+overnight dry-brine optional) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -54,7 +54,7 @@ Filet mignon (psoas major, narrow end) is the most tender, leanest steak in any 
 ---
 
 ### 3. Marco Pierre White — Fillet Steak in the Pan (British tradition)
-**Source**: Marco Pierre White, *White Heat* (Mitchell Beazley, 1990), pp. 88–92; originally demonstrated at Harveys  
+**Source**: Marco Pierre White, *White Heat* (Mitchell Beazley, 1990); originally demonstrated at Harveys  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 5–7 min · **Rest**: 5 min
 
 **Ingredients**
@@ -77,7 +77,7 @@ Filet mignon (psoas major, narrow end) is the most tender, leanest steak in any 
 ---
 
 ### 4. Masaharu Morimoto — Iron Chef–Style Pan-Fried Beef Fillet (Japanese-American tradition)
-**Source**: Masaharu Morimoto, *Mastering the Art of Japanese Home Cooking* (Ecco, 2016), pp. 188–190; morimotorestaurants.com  
+**Source**: Masaharu Morimoto, *Mastering the Art of Japanese Home Cooking* (Ecco, 2016); morimotorestaurants.com  
 **Serves**: 2 · **Prep**: 15 min (+30 min marinate) · **Cook**: 6–8 min · **Rest**: 3 min
 
 **Ingredients**
@@ -101,7 +101,7 @@ Filet mignon (psoas major, narrow end) is the most tender, leanest steak in any 
 ---
 
 ### 5. Nagi Maehashi (RecipeTin Eats) — Pan-Fried Eye Fillet Steak (Australian tradition)
-**Source**: Nagi Maehashi, *RecipeTin Eats: Dinner* (Macmillan Australia, 2022), pp. 224–226; recipetineats.com/eye-fillet-steak  
+**Source**: Nagi Maehashi, *RecipeTin Eats: Dinner* (Macmillan Australia, 2022); recipetineats.com/eye-fillet-steak  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 6–8 min · **Rest**: 3–5 min
 
 **Ingredients**

@@ -6,7 +6,7 @@ Flank steak is a wide, flat cut from the abdominal muscles with visible long fib
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Pan-Fried Flank Steak (Serious Eats)
-**Source**: J. Kenji López-Alt, seriouseats.com/flank-steak-pan-fry; *The Food Lab* (W. W. Norton, 2015), pp. 420–426  
+**Source**: J. Kenji López-Alt, seriouseats.com/flank-steak-pan-fry; *The Food Lab* (W. W. Norton, 2015)  
 **Serves**: 4 · **Prep**: 5 min (+1 hr dry-brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -28,7 +28,7 @@ Flank steak is a wide, flat cut from the abdominal muscles with visible long fib
 ---
 
 ### 2. Nigel Slater — Pan-Fried Bavette (British tradition)
-**Source**: Nigel Slater, *Tender, Volume 1* (Fourth Estate, 2009), pp. 356–358; theguardian.com/food  
+**Source**: Nigel Slater, *Tender, Volume 1* (Fourth Estate, 2009); theguardian.com/food  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 3 min
 
 **Ingredients**
@@ -50,7 +50,7 @@ Flank steak is a wide, flat cut from the abdominal muscles with visible long fib
 ---
 
 ### 3. Jacques Pépin — Bavette de Bœuf à la Lyonnaise (French tradition)
-**Source**: Jacques Pépin, *La Technique* (Times Books, 1976), pp. 260–264  
+**Source**: Jacques Pépin, *La Technique* (Times Books, 1976)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -76,7 +76,7 @@ Flank steak is a wide, flat cut from the abdominal muscles with visible long fib
 ---
 
 ### 4. Nobu Matsuhisa — Pan-Fried Beef Flank with Miso Glaze (Japanese-American tradition)
-**Source**: Nobu Matsuhisa, *Nobu Now* (Clarkson Potter, 2004), pp. 146–150  
+**Source**: Nobu Matsuhisa, *Nobu Now* (Clarkson Potter, 2004)  
 **Serves**: 4 · **Prep**: 15 min (+1 hr marinate) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -100,7 +100,7 @@ Flank steak is a wide, flat cut from the abdominal muscles with visible long fib
 ---
 
 ### 5. Adam Perry Lang — Pan-Fried Flank with Herb Baste (American BBQ tradition applied to pan)
-**Source**: Adam Perry Lang, *Serious Barbecue* (Hyperion, 2009), pp. 172–176  
+**Source**: Adam Perry Lang, *Serious Barbecue* (Hyperion, 2009)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**

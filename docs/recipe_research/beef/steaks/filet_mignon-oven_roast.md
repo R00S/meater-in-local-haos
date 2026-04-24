@@ -6,7 +6,7 @@ Filet mignon is the small, round, lean medallion cut from the narrow end of the 
 ## Source recipes
 
 ### 1. Ina Garten — Pan-Seared Oven-Finished Filet Mignon
-**Source**: Ina Garten, *Make It Ahead* (Clarkson Potter, 2014), pp. 166–168; foodnetwork.com/recipes/ina-garten  
+**Source**: Ina Garten, *Make It Ahead* (Clarkson Potter, 2014); foodnetwork.com/recipes/ina-garten  
 **Serves**: 4 · **Prep**: 10 min (+45 min tempering) · **Cook**: 5 min sear + 8–12 min oven · **Rest**: 10 min
 
 **Ingredients**
@@ -31,7 +31,7 @@ Filet mignon is the small, round, lean medallion cut from the narrow end of the 
 ---
 
 ### 2. Gordon Ramsay — Filet Mignon with Roasted Garlic Butter (British tradition)
-**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012), pp. 204–206; gordonramsay.com/recipes  
+**Source**: Gordon Ramsay, *Gordon Ramsay's Ultimate Cookery Course* (Hodder & Stoughton, 2012); gordonramsay.com/recipes  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 4 min sear + 6–10 min oven · **Rest**: 5 min
 
 **Ingredients**
@@ -55,7 +55,7 @@ Filet mignon is the small, round, lean medallion cut from the narrow end of the 
 ---
 
 ### 3. Jacques Pépin — Filet Mignon au Four (French tradition)
-**Source**: Jacques Pépin, *Jacques Pépin: New Complete Techniques* (Black Dog & Leventhal, 2012), pp. 436–438  
+**Source**: Jacques Pépin, *Jacques Pépin: New Complete Techniques* (Black Dog & Leventhal, 2012)  
 **Serves**: 2 · **Prep**: 10 min (+1 hr tempering) · **Cook**: 3 min sear + 8–12 min oven · **Rest**: 5 min
 
 **Ingredients**
@@ -78,7 +78,7 @@ Filet mignon is the small, round, lean medallion cut from the narrow end of the 
 ---
 
 ### 4. Heston Blumenthal — Reverse-Sear Filet Mignon
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011), pp. 156–160  
+**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011)  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 20–35 min low oven + 2 min sear · **Rest**: 5 min
 
 **Ingredients**
@@ -101,7 +101,7 @@ Filet mignon is the small, round, lean medallion cut from the narrow end of the 
 ---
 
 ### 5. Tetsuya Wakuda — Oven-Roasted Wagyu Fillet (Japanese-Australian tradition)
-**Source**: Tetsuya Wakuda, *Tetsuya* (Ten Speed Press, 2000), pp. 158–162; tetsuyas.com  
+**Source**: Tetsuya Wakuda, *Tetsuya* (Ten Speed Press, 2000); tetsuyas.com  
 **Serves**: 2 · **Prep**: 10 min (+overnight marinating) · **Cook**: 3 min sear + 8–10 min oven · **Rest**: 5 min
 
 **Ingredients**

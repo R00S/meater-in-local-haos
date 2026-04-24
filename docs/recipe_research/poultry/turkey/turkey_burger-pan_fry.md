@@ -6,7 +6,7 @@ A pan-fried turkey burger is the same 150–180 g shaped patty as the grilled ve
 ## Source recipes
 
 ### 1. America's Test Kitchen — Pan-Seared Turkey Burgers (American tradition)
-**Source**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011), pp. 380–382 (the pan-sear variant of their grilled turkey-burger technique); cooksillustrated.com  
+**Source**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011) (the pan-sear variant of their grilled turkey-burger technique); cooksillustrated.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**
@@ -32,7 +32,7 @@ A pan-fried turkey burger is the same 150–180 g shaped patty as the grilled ve
 ---
 
 ### 2. Hugh Acheson — Pan-Fried Turkey Burgers with Sage & Lemon (American Southern tradition)
-**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011), pp. 144–146 — turkey-burger variant; hughacheson.com  
+**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011) — turkey-burger variant; hughacheson.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**
@@ -58,7 +58,7 @@ A pan-fried turkey burger is the same 150–180 g shaped patty as the grilled ve
 ---
 
 ### 3. Tina Nordström — Pannstekt Kalkonburgare (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 100–102; köket.se  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**

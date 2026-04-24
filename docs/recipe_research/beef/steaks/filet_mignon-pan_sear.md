@@ -6,7 +6,7 @@ Filet mignon (psoas major, small end of the tenderloin) is the leanest and most 
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Rapid-Flip Pan Sear (Serious Eats method)
-**Source**: J. Kenji López-Alt, seriouseats.com/filet-mignon; *The Food Lab* (W. W. Norton, 2015), pp. 395–403  
+**Source**: J. Kenji López-Alt, seriouseats.com/filet-mignon; *The Food Lab* (W. W. Norton, 2015)  
 **Serves**: 2 · **Prep**: 5 min (+overnight dry-brine) · **Cook**: 6–8 min · **Rest**: 5 min
 
 **Ingredients**
@@ -28,7 +28,7 @@ Filet mignon (psoas major, small end of the tenderloin) is the leanest and most 
 ---
 
 ### 2. Thomas Keller — Pan-Seared Filet with Brown Butter (French American tradition)
-**Source**: Thomas Keller, *Bouchon* (Artisan, 2004), pp. 212–216; thomaskeller.com  
+**Source**: Thomas Keller, *Bouchon* (Artisan, 2004); thomaskeller.com  
 **Serves**: 2 · **Prep**: 10 min (+1 hr tempering) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -53,7 +53,7 @@ Filet mignon (psoas major, small end of the tenderloin) is the leanest and most 
 ---
 
 ### 3. Fergus Henderson — Seared Fillet Steak (British tradition)
-**Source**: Fergus Henderson, *The Whole Beast: Nose to Tail Eating* (Ecco, 2004), pp. 42–44  
+**Source**: Fergus Henderson, *The Whole Beast: Nose to Tail Eating* (Ecco, 2004)  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 5–7 min · **Rest**: 3 min
 
 **Ingredients**
@@ -74,7 +74,7 @@ Filet mignon (psoas major, small end of the tenderloin) is the leanest and most 
 ---
 
 ### 4. Nobu Matsuhisa — Pan-Seared Wagyu Fillet with Ponzu (Japanese tradition)
-**Source**: Nobu Matsuhisa, *Nobu Now* (Clarkson Potter, 2004), pp. 142–146; noburestaurants.com  
+**Source**: Nobu Matsuhisa, *Nobu Now* (Clarkson Potter, 2004); noburestaurants.com  
 **Serves**: 2 · **Prep**: 5 min · **Cook**: 4–6 min · **Rest**: 2 min
 
 **Ingredients**
@@ -95,7 +95,7 @@ Filet mignon (psoas major, small end of the tenderloin) is the leanest and most 
 ---
 
 ### 5. Adam Liaw — Pan-Seared Beef Fillet with Shiitake Sauce (Japanese-Australian tradition)
-**Source**: Adam Liaw, *Adam's Big Pot* (Hachette Australia, 2018), pp. 134–136; adamliaw.com/recipe  
+**Source**: Adam Liaw, *Adam's Big Pot* (Hachette Australia, 2018); adamliaw.com/recipe  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 3 min
 
 **Ingredients**

@@ -6,7 +6,7 @@ A pan-fried chicken burger is the same 150–180 g shaped patty as the grilled v
 ## Source recipes
 
 ### 1. America's Test Kitchen — Pan-Seared Chicken Burgers (American tradition)
-**Source**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011), pp. 376–378 (the pan-sear variant of their grilled chicken-burger technique); cooksillustrated.com  
+**Source**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011) (the pan-sear variant of their grilled chicken-burger technique); cooksillustrated.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**
@@ -32,7 +32,7 @@ A pan-fried chicken burger is the same 150–180 g shaped patty as the grilled v
 ---
 
 ### 2. Hugh Acheson — Pan-Fried Chicken Burgers with Pickled Onions (American Southern tradition)
-**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011), pp. 144–146; hughacheson.com  
+**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011); hughacheson.com  
 **Serves**: 4 · **Prep**: 15 min (+ 30 min pickle) · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**
@@ -58,7 +58,7 @@ A pan-fried chicken burger is the same 150–180 g shaped patty as the grilled v
 ---
 
 ### 3. Tina Nordström — Pannstekt Kycklingburgare (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 98–100; köket.se  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 
 **Ingredients**

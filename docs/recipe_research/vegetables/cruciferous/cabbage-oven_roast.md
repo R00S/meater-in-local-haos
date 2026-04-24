@@ -31,7 +31,7 @@ Cabbage (*Brassica oleracea* var. *capitata*) is a dense, layered head of overla
 ---
 
 ### 2. Magnus Nilsson — Pressed Roast Cabbage (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 304–305  
+**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 35–45 min · **Rest**: 5 min
 
 **Ingredients**
@@ -58,7 +58,7 @@ Cabbage (*Brassica oleracea* var. *capitata*) is a dense, layered head of overla
 ---
 
 ### 3. Yotam Ottolenghi — Whole Roasted Cabbage with Brown Butter & Caraway (Middle Eastern–European fusion)
-**Source**: Yotam Ottolenghi & Helen Goh, *Sweet* concept extended in Ottolenghi's *Flavour* (Ebury Press, 2020), pp. 82–84; ottolenghi.co.uk  
+**Source**: Yotam Ottolenghi & Helen Goh, *Sweet* concept extended in Ottolenghi's *Flavour* (Ebury Press, 2020); ottolenghi.co.uk  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 45–55 min · **Rest**: 5 min
 
 **Ingredients**
@@ -84,7 +84,7 @@ Cabbage (*Brassica oleracea* var. *capitata*) is a dense, layered head of overla
 ---
 
 ### 4. Hugh Fearnley-Whittingstall — Wedge of Cabbage with Anchovy Butter (British / River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *River Cottage Veg Every Day!* (Bloomsbury, 2011), pp. 254–256  
+**Source**: Hugh Fearnley-Whittingstall, *River Cottage Veg Every Day!* (Bloomsbury, 2011)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 30–35 min · **Rest**: 3 min
 
 **Ingredients**

@@ -6,7 +6,7 @@ Braised ground beef — the long-simmered ragù-style preparation rather than th
 ## Source recipes
 
 ### 1. Marcella Hazan — Ragù alla Bolognese (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992), pp. 203–205  
+**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 3.5–4 hr · **Rest**: 10 min
 
 **Ingredients**
@@ -36,7 +36,7 @@ Braised ground beef — the long-simmered ragù-style preparation rather than th
 ---
 
 ### 2. Tina Nordström — Köttfärsgryta med rotsaker (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 64–65; köket.se  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 6 · **Prep**: 15 min · **Cook**: 1.5 hr · **Rest**: 10 min
 
 **Ingredients**
@@ -67,7 +67,7 @@ Braised ground beef — the long-simmered ragù-style preparation rather than th
 ---
 
 ### 3. Madhur Jaffrey — Aloo Keema (Pakistani / North Indian tradition)
-**Source**: Madhur Jaffrey, *A Taste of India* (Pavilion Books, 1985), pp. 156–158  
+**Source**: Madhur Jaffrey, *A Taste of India* (Pavilion Books, 1985)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 1 hr · **Rest**: 5 min
 
 **Ingredients**

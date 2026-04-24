@@ -6,7 +6,7 @@ Oven-roasted pork cheeks (without the heavy braising liquid of the standard prep
 ## Source recipes
 
 ### 1. José Pizarro — Carrillera al Horno con Pimentón (Spanish tradition)
-**Source**: José Pizarro, *Andalusia* (Hardie Grant, 2019), pp. 188–190; josepizarro.com  
+**Source**: José Pizarro, *Andalusia* (Hardie Grant, 2019); josepizarro.com  
 **Serves**: 6 · **Prep**: 20 min (+ overnight marinade) · **Cook**: 90 min · **Rest**: 10 min
 
 **Ingredients**
@@ -35,7 +35,7 @@ Oven-roasted pork cheeks (without the heavy braising liquid of the standard prep
 ---
 
 ### 2. Marcella Hazan — Guancia di Maiale Arrosto (Italian tradition)
-**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997), pp. 199–200 (the *al forno* variant of her braise)  
+**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997) (the *al forno* variant of her braise)  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 80 min · **Rest**: 10 min
 
 **Ingredients**
@@ -93,7 +93,7 @@ Oven-roasted pork cheeks (without the heavy braising liquid of the standard prep
 ---
 
 ### 4. Magnus Nilsson — Ugnsbakade Griskindar med Senap (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 386–387 — oven variant of the cheek braise  
+**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) — oven variant of the cheek braise  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 75 min · **Rest**: 10 min
 
 **Ingredients**

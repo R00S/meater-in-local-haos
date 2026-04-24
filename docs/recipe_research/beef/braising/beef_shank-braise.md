@@ -6,7 +6,7 @@ Beef shank is the lower portion of the front (foreshank) or hind (hindshank) leg
 ## Source recipes
 
 ### 1. Marcella Hazan — Osso Buco alla Milanese (Italian / Lombard tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992), pp. 462–465  
+**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 2 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -41,7 +41,7 @@ Beef shank is the lower portion of the front (foreshank) or hind (hindshank) leg
 ---
 
 ### 2. Tina Nordström — Långkokt Oxlägg (Swedish home tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 132–134; köket.se  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 3.5 hr · **Rest**: 20 min
 
 **Ingredients**
@@ -75,7 +75,7 @@ Beef shank is the lower portion of the front (foreshank) or hind (hindshank) leg
 ---
 
 ### 3. Yotam Ottolenghi & Sami Tamimi — Beef Shank Tagine with Saffron and Almonds (Levantine / North-African tradition)
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012), pp. 200–203; ottolenghi.co.uk  
+**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012); ottolenghi.co.uk  
 **Serves**: 6 · **Prep**: 30 min · **Cook**: 3 hr · **Rest**: 15 min
 
 **Ingredients**
@@ -112,7 +112,7 @@ Beef shank is the lower portion of the front (foreshank) or hind (hindshank) leg
 ---
 
 ### 4. Andrea Nguyen — Bò Kho with Beef Shank (Vietnamese tradition)
-**Source**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019), pp. 168–171; vietworldkitchen.com  
+**Source**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019); vietworldkitchen.com  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 2.5 hr · **Rest**: 10 min
 
 **Ingredients**

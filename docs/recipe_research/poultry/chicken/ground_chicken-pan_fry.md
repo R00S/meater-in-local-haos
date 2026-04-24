@@ -6,7 +6,7 @@ Pan-fried ground chicken — the loose-mince preparation rather than patties —
 ## Source recipes
 
 ### 1. Andrea Nguyen — Larb Gai with Ground Chicken (Lao / Northern Thai tradition)
-**Source**: Andrea Nguyen, *Asian Dumplings* (Ten Speed Press, 2009), p. 230 (filling); technique extended in her *Vietnamese Food Any Day* (2019), pp. 110–112; vietworldkitchen.com  
+**Source**: Andrea Nguyen, *Asian Dumplings* (Ten Speed Press, 2009), p. 230 (filling); technique extended in her *Vietnamese Food Any Day* (2019); vietworldkitchen.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -33,7 +33,7 @@ Pan-fried ground chicken — the loose-mince preparation rather than patties —
 ---
 
 ### 2. Hugh Acheson — Pan-Fried Chicken Mince with Sage & Lemon (American Southern tradition)
-**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011), pp. 142–144; hughacheson.com  
+**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011); hughacheson.com  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 9 min · **Rest**: 2 min
 
 **Ingredients**
@@ -88,7 +88,7 @@ Pan-fried ground chicken — the loose-mince preparation rather than patties —
 ---
 
 ### 4. Tina Nordström — Stekt Kycklingfärs på Lök (Swedish home tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 90–92; köket.se  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 9 min · **Rest**: 2 min
 
 **Ingredients**

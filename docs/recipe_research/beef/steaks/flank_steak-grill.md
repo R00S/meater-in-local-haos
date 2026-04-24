@@ -6,7 +6,7 @@ Flank steak is a flat, boneless cut from the abdominal wall, with prominent, lon
 ## Source recipes
 
 ### 1. America's Test Kitchen — Gas-Grilled Flank Steak
-**Source**: America's Test Kitchen, *The Complete Cookbook for Two* (America's Test Kitchen, 2014), pp. 188–190; americastestkitchen.com  
+**Source**: America's Test Kitchen, *The Complete Cookbook for Two* (America's Test Kitchen, 2014); americastestkitchen.com  
 **Serves**: 4 · **Prep**: 10 min (+1 hr dry-brine) · **Cook**: 8–10 min · **Rest**: 5 min
 
 **Ingredients**
@@ -27,7 +27,7 @@ Flank steak is a flat, boneless cut from the abdominal wall, with prominent, lon
 ---
 
 ### 2. Bobby Flay — Marinated Grilled Flank Steak (American SW tradition)
-**Source**: Bobby Flay, *Bobby Flay's Bold American Food* (Warner Books, 1994), pp. 92–94; bobbyflay.com  
+**Source**: Bobby Flay, *Bobby Flay's Bold American Food* (Warner Books, 1994); bobbyflay.com  
 **Serves**: 4–6 · **Prep**: 20 min (+4–8 hr marinate) · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**
@@ -55,7 +55,7 @@ Flank steak is a flat, boneless cut from the abdominal wall, with prominent, lon
 ---
 
 ### 3. Rick Bayless — Mexican Carne Asada (Mexican tradition)
-**Source**: Rick Bayless, *Mexico: One Plate at a Time* (Scribner, 2000), pp. 208–212; rickbayless.com/recipe  
+**Source**: Rick Bayless, *Mexico: One Plate at a Time* (Scribner, 2000); rickbayless.com/recipe  
 **Serves**: 6 · **Prep**: 20 min (+2 hr marinate) · **Cook**: 8–10 min · **Rest**: 3 min
 
 **Ingredients**
@@ -81,7 +81,7 @@ Flank steak is a flat, boneless cut from the abdominal wall, with prominent, lon
 ---
 
 ### 4. Heston Blumenthal — Reverse-Sear Grilled Flank Steak (British modern)
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011), pp. 188–192  
+**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury, 2011)  
 **Serves**: 2 · **Prep**: 10 min (+overnight dry-brine) · **Cook**: 6–8 min grill · **Rest**: 5 min
 
 **Ingredients**
@@ -103,7 +103,7 @@ Flank steak is a flat, boneless cut from the abdominal wall, with prominent, lon
 ---
 
 ### 5. Maangchi — Korean Galbi-Style Flank (*Bulgogi* Variation)
-**Source**: Maangchi, *Maangchi's Real Korean Cooking* (Houghton Mifflin Harcourt, 2015), pp. 230–234; maangchi.com/recipe/bulgogi  
+**Source**: Maangchi, *Maangchi's Real Korean Cooking* (Houghton Mifflin Harcourt, 2015); maangchi.com/recipe/bulgogi  
 **Serves**: 4 · **Prep**: 20 min (+2 hr marinate) · **Cook**: 6–8 min · **Rest**: 3 min
 
 **Ingredients**

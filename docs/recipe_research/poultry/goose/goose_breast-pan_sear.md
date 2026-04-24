@@ -6,7 +6,7 @@ Goose breast (*Anser anser domesticus*) is a large, dense, deeply-coloured red-m
 ## Source recipes
 
 ### 1. Hugh Fearnley-Whittingstall — Pan-Roasted Wild Goose Breast (British River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004), pp. 388–390; rivercottage.net  
+**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004); rivercottage.net  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 14 min · **Rest**: 8 min
 
 **Ingredients**
@@ -32,7 +32,7 @@ Goose breast (*Anser anser domesticus*) is a large, dense, deeply-coloured red-m
 ---
 
 ### 2. Magnus Nilsson — Stekt Gåsbröst med Lingon (Nordic / Swedish tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 296–298  
+**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 14 min · **Rest**: 10 min
 
 **Ingredients**
@@ -59,7 +59,7 @@ Goose breast (*Anser anser domesticus*) is a large, dense, deeply-coloured red-m
 ---
 
 ### 3. Anthony Bourdain — Magret d'Oie au Poivre (French bistro tradition)
-**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004), pp. 196–198 — the goose variant of his canonical *magret de canard au poivre*  
+**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004) — the goose variant of his canonical *magret de canard au poivre*  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 14 min · **Rest**: 8 min
 
 **Ingredients**

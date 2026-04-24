@@ -6,7 +6,7 @@ Pork tongue cooked in an electric slow cooker is the same long-braise preparatio
 ## Source recipes
 
 ### 1. Hugh Acheson — Slow-Cooker Pork Tongue Confit (American Southern tradition)
-**Source**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017), pp. 172–174; hughacheson.com  
+**Source**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017); hughacheson.com  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 6 hr (low) · **Rest**: 15 min
 
 **Ingredients**
@@ -62,7 +62,7 @@ Pork tongue cooked in an electric slow cooker is the same long-braise preparatio
 ---
 
 ### 3. Andrea Nguyen — Lưỡi Heo Hầm in the Slow Cooker (Vietnamese tradition)
-**Source**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019), pp. 178–180 — pork tongue variation; vietworldkitchen.com  
+**Source**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019) — pork tongue variation; vietworldkitchen.com  
 **Serves**: 6 · **Prep**: 25 min · **Cook**: 6 hr (low) · **Rest**: 10 min
 
 **Ingredients**
@@ -89,7 +89,7 @@ Pork tongue cooked in an electric slow cooker is the same long-braise preparatio
 ---
 
 ### 4. Magnus Nilsson — Slow-Cooker Saltkokt Grisetunga (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 390–391 — slow-cooker adaptation of his salt-cured tongue  
+**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) — slow-cooker adaptation of his salt-cured tongue  
 **Serves**: 6 · **Prep**: 20 min (+ 24 hr cure if curing) · **Cook**: 6 hr (low) · **Rest**: 15 min
 
 **Ingredients**

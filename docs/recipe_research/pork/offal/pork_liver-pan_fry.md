@@ -6,7 +6,7 @@ Pork liver is milder, slightly sweeter and more delicate in texture than beef li
 ## Source recipes
 
 ### 1. Marcella Hazan — Fegato di Maiale alla Salvia (Italian tradition)
-**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997), pp. 200–202  
+**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997)  
 **Serves**: 4 · **Prep**: 10 min (+ 30 min milk soak) · **Cook**: 8 min · **Rest**: 1 min
 
 **Ingredients**
@@ -34,7 +34,7 @@ Pork liver is milder, slightly sweeter and more delicate in texture than beef li
 ---
 
 ### 2. Anthony Bourdain — Foie de Porc à la Lyonnaise (French bistro tradition)
-**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004), pp. 156–158 (the *foie de porc* variant of his calf's liver Lyonnaise)  
+**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004) (the *foie de porc* variant of his calf's liver Lyonnaise)  
 **Serves**: 4 · **Prep**: 15 min (+ 30 min milk soak) · **Cook**: 12 min · **Rest**: 1 min
 
 **Ingredients**
@@ -62,7 +62,7 @@ Pork liver is milder, slightly sweeter and more delicate in texture than beef li
 ---
 
 ### 3. Madhur Jaffrey — Suar ka Kaleji (North Indian / Goan tradition)
-**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982), pp. 162–164 (pork variation noted in the Goan section)  
+**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982) (pork variation noted in the Goan section)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min · **Rest**: 1 min
 
 **Ingredients**
@@ -95,7 +95,7 @@ Pork liver is milder, slightly sweeter and more delicate in texture than beef li
 ---
 
 ### 4. Tina Nordström — Stekt Fläsklever med Lingon (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 108–110; köket.se  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
 **Serves**: 4 · **Prep**: 10 min (+ 30 min milk soak) · **Cook**: 7 min · **Rest**: 1 min
 
 **Ingredients**

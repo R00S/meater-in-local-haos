@@ -34,7 +34,7 @@ Cauliflower (*Brassica oleracea* var. *botrytis*) is a tightly clustered head of
 ---
 
 ### 2. Marcella Hazan — Cavolfiore Saltato all'Aglio (Italian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992), pp. 545–546  
+**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Knopf, 1992)  
 **Serves**: 4 · **Prep**: 10 min (+ 5 min blanching) · **Cook**: 6–8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -59,7 +59,7 @@ Cauliflower (*Brassica oleracea* var. *botrytis*) is a tightly clustered head of
 ---
 
 ### 3. Madhur Jaffrey — Phulgobi ki Bhaji (North Indian sautéed cauliflower)
-**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982), pp. 92–93  
+**Source**: Madhur Jaffrey, *Madhur Jaffrey's Indian Cookery* (BBC Books, 1982)  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 12–15 min · **Rest**: 2 min
 
 **Ingredients**
@@ -87,7 +87,7 @@ Cauliflower (*Brassica oleracea* var. *botrytis*) is a tightly clustered head of
 ---
 
 ### 4. Julia Child — Chou-Fleur Étuvé au Beurre (French tradition)
-**Source**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Knopf, 1961), pp. 459–460  
+**Source**: Julia Child, Louisette Bertholle & Simone Beck, *Mastering the Art of French Cooking, Vol. I* (Knopf, 1961)  
 **Serves**: 4 · **Prep**: 10 min (+ 5 min blanching) · **Cook**: 7–9 min · **Rest**: 2 min
 
 **Ingredients**

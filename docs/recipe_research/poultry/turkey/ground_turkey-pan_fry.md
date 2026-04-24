@@ -6,7 +6,7 @@ Pan-fried ground turkey is the loose-mince technique applied to the leaner, slig
 ## Source recipes
 
 ### 1. Diana Henry — Pan-Fried Turkey Mince with Sage, Apple & Cider (British modern tradition)
-**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015), pp. 178–180; telegraph.co.uk/food-and-drink  
+**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015); telegraph.co.uk/food-and-drink  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 9 min · **Rest**: 2 min
 
 **Ingredients**
@@ -33,7 +33,7 @@ Pan-fried ground turkey is the loose-mince technique applied to the leaner, slig
 ---
 
 ### 2. Hugh Acheson — Pan-Fried Turkey Mince with Sweet-Onion Gravy (American Southern tradition)
-**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011), pp. 144–146 — turkey variant of his chicken-mince technique; hughacheson.com  
+**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011) — turkey variant of his chicken-mince technique; hughacheson.com  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 9 min · **Rest**: 2 min
 
 **Ingredients**
@@ -58,7 +58,7 @@ Pan-fried ground turkey is the loose-mince technique applied to the leaner, slig
 ---
 
 ### 3. Andrea Nguyen — Larb Gai Tay with Ground Turkey (Lao / Northern Thai tradition adaptation)
-**Source**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019), pp. 110–112 — turkey adaptation of her Larb technique; vietworldkitchen.com  
+**Source**: Andrea Nguyen, *Vietnamese Food Any Day* (Ten Speed Press, 2019) — turkey adaptation of her Larb technique; vietworldkitchen.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min · **Rest**: 2 min
 
 **Ingredients**
@@ -85,7 +85,7 @@ Pan-fried ground turkey is the loose-mince technique applied to the leaner, slig
 ---
 
 ### 4. Tina Nordström — Stekt Kalkonfärs på Lök (Swedish home tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 92–94 — turkey variant of her *kycklingfärs* technique; köket.se  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — turkey variant of her *kycklingfärs* technique; köket.se  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 9 min · **Rest**: 2 min
 
 **Ingredients**

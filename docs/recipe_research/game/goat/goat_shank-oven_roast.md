@@ -6,7 +6,7 @@ Oven-roasted goat shank (Swedish *getlägg*) is an alternative to the wet-braise
 ## Source recipes
 
 ### 1. Yotam Ottolenghi & Sami Tamimi — Oven-Roasted Goat Shanks with Pomegranate (Levantine tradition)
-**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012), pp. 192–194 — covered-roast variant; ottolenghi.co.uk  
+**Source**: Yotam Ottolenghi & Sami Tamimi, *Jerusalem* (Ebury Press, 2012) — covered-roast variant; ottolenghi.co.uk  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 3.5 hours · **Rest**: 15 min
 
 **Ingredients**
@@ -35,7 +35,7 @@ Oven-roasted goat shank (Swedish *getlägg*) is an alternative to the wet-braise
 ---
 
 ### 2. Tina Nordström — Ugnsbakade Getlägg med Rödvin (Swedish/Nordic tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 162–164 — covered-roast variant; köket.se  
+**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — covered-roast variant; köket.se  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 3.5 hours · **Rest**: 15 min
 
 **Ingredients**
@@ -62,7 +62,7 @@ Oven-roasted goat shank (Swedish *getlägg*) is an alternative to the wet-braise
 ---
 
 ### 3. Diana Henry — Slow-Roasted Goat Shanks with Anchovy & Rosemary (British/Mediterranean tradition)
-**Source**: Diana Henry, *Roast Figs, Sugar Snow* (Mitchell Beazley, 2005), pp. 178–180 — slow-roast game-shank technique adapted to goat; telegraph.co.uk/food-and-drink  
+**Source**: Diana Henry, *Roast Figs, Sugar Snow* (Mitchell Beazley, 2005) — slow-roast game-shank technique adapted to goat; telegraph.co.uk/food-and-drink  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 3.5 hours · **Rest**: 15 min
 
 **Ingredients**
@@ -89,7 +89,7 @@ Oven-roasted goat shank (Swedish *getlägg*) is an alternative to the wet-braise
 ---
 
 ### 4. Hugh Fearnley-Whittingstall — Slow-Roast Goat Shanks (British River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004), pp. 354–356 — goat-shank slow-roast technique; rivercottage.net  
+**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004) — goat-shank slow-roast technique; rivercottage.net  
 **Serves**: 4 · **Prep**: 25 min · **Cook**: 3.5 hours · **Rest**: 15 min
 
 **Ingredients**
