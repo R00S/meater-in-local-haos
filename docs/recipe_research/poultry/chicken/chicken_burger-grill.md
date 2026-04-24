@@ -79,7 +79,36 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 
 ---
 
-### 3. TODO: add third source — grilled chicken burger specific URLs returned 404
+### 3. BBC Good Food — Cajun Chicken Burgers
+
+**Source**: Barney Desmazery, BBC Good Food magazine (February 2009); https://www.bbcgoodfood.com/recipes/fully-loaded-cajun-chicken-burgers (archived: https://web.archive.org/web/20240916023446/https://www.bbcgoodfood.com/recipes/fully-loaded-cajun-chicken-burgers, fetched 2026-04-24).
+**Serves**: 4 · **Prep**: 20 min · **Cook**: 15 min
+
+**Temperature guidance**:
+- Cook on griddle/grill: heat grill to high; pan-fry chicken 5 min each side
+- Internal target: 165 °F (74 °C) — cooked through / firm to touch
+- Buns toasted on grill until cheese melted
+
+**Ingredients**
+- 4 skinless chicken breasts
+- 2 tbsp olive oil
+- 4 rashers smoked bacon
+- 2 avocados
+- 4 ciabatta rolls, split
+- 4 thin slices cheese
+- 4 small handfuls baby spinach leaves
+- Mayonnaise, to serve (optional)
+
+*For the Cajun seasoning:*
+- 1 tbsp ground cumin
+- 1 tbsp ground coriander
+- 1 tbsp paprika
+- Salt and black pepper
+
+**Method**
+1. Mix the seasoning ingredients together with a good grinding of black pepper and a sprinkling of salt, then set aside in a large dish. Heat grill to high. On a board, flatten out the chicken slightly, then drizzle half the oil over and toss in the seasoning until completely coated. Heat the remaining oil in a large frying pan, sizzle the chicken for 5 mins on each side until firm, push to one side of the pan, then fry the bacon for a few mins until cooked.
+2. While the chicken is cooking, halve, stone, peel and slice the avocados, and toast the cut sides of the buns. Cover the tops of the buns with cheese, then grill until melted.
+3. To assemble the burgers, spread the buns with mayonnaise if you want, top with a handful of spinach, then a rasher of bacon. Slice the chicken, then alternate between a slice of chicken and avocado. Top with the bun, press down lightly and serve.
 
 ---
 
@@ -89,6 +118,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 |--------|---------|-------------|-----------------|------|-----------------|
 | Skinnytaste | USA | Medium grill | ~1/2 in stuffed patty | 12 min total | 165 °F (74 °C) |
 | Natasha's Kitchen | USA | Low grill (after preheat) | ~1/2–3/4 in patty | 24–30 min total | 165 °F (74 °C) |
+| BBC Good Food | UK | High grill/griddle pan | Standard breast | ~10 min total | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **160 °F (71 °C)** → pull and rest

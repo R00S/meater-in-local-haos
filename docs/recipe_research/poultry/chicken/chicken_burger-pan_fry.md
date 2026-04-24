@@ -89,7 +89,34 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 
 ---
 
-### 3. TODO: add third source — jessicagavin.com/chicken-burgers/ returned 404
+### 3. BBC Good Food — Fully Loaded Cajun Chicken Burgers
+**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/fully-loaded-cajun-chicken-burgers (archived: https://web.archive.org/web/20240916023446/https://www.bbcgoodfood.com/recipes/fully-loaded-cajun-chicken-burgers, fetched 2026-04-24).
+**Serves**: 4 · **Prep**: 20 min · **Cook**: 15 min
+
+**Temperature guidance**:
+- Pan temp: medium-high (olive oil, large frying pan)
+- Internal target: 165 °F (74 °C) — cook 5 min per side until firm and cooked through
+- Time: 10 min (5 min per side) for flattened breast in pan; plus bacon in same pan
+
+**Ingredients**
+- 4 skinless chicken breasts
+- 2 tbsp olive oil
+- 4 rashers smoked bacon
+- 2 avocados
+- 4 ciabatta rolls, split
+- 4 thin slices cheese
+- 4 small handfuls baby spinach
+- Mayonnaise (optional)
+
+*Cajun seasoning:*
+- 1 tbsp ground cumin
+- 1 tbsp ground coriander
+- 1 tbsp paprika
+
+**Method**
+1. Mix the Cajun seasoning together. Heat grill to high. Flatten the chicken breasts to an even thickness by placing between two sheets of cling film and bashing with a rolling pin. Coat in the olive oil and the seasoning. Heat the remaining oil in a large frying pan and cook the chicken for 5 mins each side until firm and cooked through, then fry the bacon in the same pan until crispy.
+2. Halve and slice the avocados. Toast the cut sides of the bun. Cover the bun tops with the cheese slices, then grill until melted.
+3. Assemble each burger by spreading mayo on the bun base, then layering with spinach, bacon, sliced chicken and avocado, alternating the layers to hold the burger together.
 
 ---
 
@@ -99,6 +126,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 |--------|---------|-------------|-----------------|------|-----------------|
 | Jessica Gavin | USA | Medium skillet | 1/2-in patty, ~4 oz | 10–12 min total | 160–165 °F (71–74 °C) |
 | Natasha's Kitchen | USA | Medium skillet (covered flip) | 1/2-in patty / 1.25-in ball | 7 min total | 165 °F (74 °C) |
+| BBC Good Food | UK | Medium-high frying pan | Flattened breast | 10 min (5 min/side) | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **160 °F (71 °C)** → pull and rest

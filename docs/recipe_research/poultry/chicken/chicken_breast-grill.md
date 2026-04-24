@@ -83,7 +83,28 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 
 ---
 
-### 3. TODO: add third source — natashaskitchen.com/grilled-chicken-breast/ returned 404
+### 3. BBC Good Food — Cajun Chicken
+
+**Source**: Good Food team, BBC Good Food magazine (September 2007); https://www.bbcgoodfood.com/recipes/cajun-chicken (archived: https://web.archive.org/web/20241010111210/https://www.bbcgoodfood.com/recipes/cajun-chicken, fetched 2026-04-24).
+**Serves**: 4 · **Prep**: 10 min · **Cook**: 12 min
+
+**Temperature guidance**:
+- Grill/barbecue or griddle pan
+- Internal target: 165 °F (74 °C) — cooked through
+- Time: 5–6 minutes per side (total 10–12 min)
+
+**Ingredients**
+- 4 skinless boneless chicken breast fillets
+- 1 tbsp paprika
+- 1 tsp dried onion flakes
+- ¼ tsp cayenne pepper
+- 2 tsp dried thyme
+- 1 tbsp sunflower oil
+- 200g guacamole, to serve
+
+**Method**
+1. Dry chicken with kitchen paper, then cut diagonal slashes over the smooth side. Mix spices with seasoning, then tip onto a plate.
+2. Brush the chicken on both sides with the oil, then coat all over with the spice mix. Heat a barbecue, griddle pan or grill, then cook the chicken for 5–6 mins on each side until cooked through. Serve each portion with a dollop of guacamole.
 
 ---
 
@@ -94,6 +115,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 | Skinnytaste | USA | Medium-high | Thin cutlets | 4–6 min total | 165 °F (74 °C) |
 | Skinnytaste | USA | Medium-high | Whole thick breast | 10–14 min total | 165 °F (74 °C) |
 | Natasha's Kitchen | USA | 400 °F preheat → med-low | Large whole breast | ~20 min total | 165 °F (74 °C) |
+| BBC Good Food | UK | Barbecue/griddle/grill | Standard breast | 10–12 min total | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **160 °F (71 °C)** → pull and rest

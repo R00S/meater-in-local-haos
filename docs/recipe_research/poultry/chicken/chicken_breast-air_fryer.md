@@ -87,7 +87,28 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 
 ---
 
-### 3. TODO: add third source — allrecipes.com returned 402
+### 3. BBC Good Food — Air Fryer Chicken Breasts
+**Source**: Samuel Goldsmith, BBC Good Food; https://www.bbcgoodfood.com/recipes/air-fryer-chicken-breasts (archived: https://web.archive.org/web/20241007181927/https://www.bbcgoodfood.com/recipes/air-fryer-chicken-breasts, fetched 2026-04-24).
+**Serves**: 4 · **Prep**: 5 min · **Cook**: 18–20 min
+
+**Temperature guidance**:
+- Air fryer temp: 180 °C (356 °F)
+- Internal target: 70 °C (158 °F) — pierce thickest part to check juices run clear
+- Time: 18–20 min total, turning after 10 min
+
+**Ingredients**
+- 4 chicken breasts
+- ½ tbsp rapeseed oil
+- 1 tsp salt
+- 1½ tsp garlic granules
+- 1 tsp smoked sweet paprika
+- 2 tsp mixed herbs
+- ½ tsp pepper
+- Steamed rice and greens or salad, to serve (optional)
+
+**Method**
+1. Coat the chicken in the oil and set aside. In a bowl, combine the salt, garlic, paprika and mixed herbs with a good grinding of black pepper, then scatter onto a plate.
+2. Roll each oiled chicken breast in the seasoning and put in your air fryer basket. Cook at 180 °C for 18–20 mins, turning after 10 mins. To check it is cooked, pierce the chicken with a knife at the thickest part to see if the juices run clear. Or insert a temperature thermometer and it should read 70 °C. Serve with rice and greens or a salad.
 
 ---
 
@@ -100,6 +121,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 | Skinnytaste | USA | 380 °F (193 °C) | 9+ oz (large) | 12–14 min | 165 °F (74 °C) |
 | Natasha's Kitchen | USA | 375 °F (191 °C) | Bone-in thigh | 18–22 min | 165–175 °F (74–79 °C) |
 | Natasha's Kitchen | USA | 375 °F (191 °C) | Boneless thigh | 12–15 min | 165 °F (74 °C) |
+| BBC Good Food | UK | 180 °C (356 °F) | Standard breast (×4) | 18–20 min | 70 °C (158 °F) |
 
 **Recommended MEATER settings**:
 - Set alert at **160 °F (71 °C)** → pull and rest

@@ -93,7 +93,25 @@ Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)
 
 ---
 
-### 3. TODO: add third source — jessicagavin.com/air-fryer-chicken-thighs/ returned 404, allrecipes returned 402
+### 3. BBC Good Food — Air Fryer Chicken Thighs
+**Source**: Samuel Goldsmith, BBC Good Food; https://www.bbcgoodfood.com/recipes/air-fryer-chicken-thighs (archived: https://web.archive.org/web/20241013144726/https://www.bbcgoodfood.com/recipes/air-fryer-chicken-thighs, fetched 2026-04-24).
+**Serves**: 4 · **Prep**: 2 min · **Cook**: 20–25 min
+
+**Temperature guidance**:
+- Air fryer temp: 180 °C (356 °F)
+- Internal target: juices run clear when thickest part is pierced — equivalent to ≥74 °C (165 °F)
+- Time: 10 min skin-side down + 10–15 min turned = 20–25 min total
+
+**Ingredients**
+- 1 tsp paprika
+- ½ tsp mixed herbs
+- ½ tsp garlic granules (optional)
+- 4 chicken thighs, bone in
+- 1 tsp olive oil
+
+**Method**
+1. Combine the paprika in a bowl with the herbs and garlic granules, if using, together with ½ tsp salt and ½ tsp ground black pepper. Scatter onto a plate. Rub the chicken thighs with the oil, then coat in the spice mix.
+2. Put in the basket of your air fryer and cook, skin-side down, for 10 mins at 180 °C. Turn over and cook for a further 10–15 mins until cooked through and the skin is crispy. To check they are cooked, pierce the thickest part of the thigh with a knife to see if the juices run clear. Remove from the air fryer immediately to stop the skin from softening.
 
 ---
 
@@ -104,6 +122,7 @@ Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)
 | Natasha's Kitchen | USA | 375 °F (191 °C) | Bone-in skin-on | 18–22 min | 165–175 °F (74–79 °C) |
 | Natasha's Kitchen | USA | 375 °F (191 °C) | Boneless | 12–15 min | 165–175 °F (74–79 °C) |
 | Skinnytaste | USA | 400 °F (204 °C) | Bone-in skin-on | 24 min | 165 °F (74 °C) |
+| BBC Good Food | UK | 180 °C (356 °F) | Bone-in skin-on (×4) | 20–25 min | Juices run clear (≥74 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **170 °F (77 °C)** → pull and rest

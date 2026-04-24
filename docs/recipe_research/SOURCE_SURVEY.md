@@ -35,7 +35,7 @@ then verify with web_fetch before citing.
 
 | Site | Language | Country | Notes |
 |------|----------|---------|-------|
-| **bbcgoodfood.com** | English | UK | ✅ Full recipe content. Use `/recipes/{slug}` format. Search `site:bbcgoodfood.com {recipe}` to find slugs. |
+| **bbcgoodfood.com** | English | UK | ✅ Full recipe content. Use `/recipes/{slug}` format. Navigate collection pages to find real slugs: `/recipes/collection/{collection-name}`. **IA retrieval method**: fetch raw HTML via `web_fetch(raw=True)` on `https://web.archive.org/web/20241010111210/https://www.bbcgoodfood.com/recipes/{slug}` — ingredients and method are in the `__POST_CONTENT__` JSON script block, NOT in the markdown-converted content. Use timestamp `20241010111210` or `20240901093429`. |
 | **recipetineats.com** | English | AU | ✅ Full recipe content. Title-slug URLs work reliably. e.g. `/lamb-shanks/`. |
 | **themediterraneandish.com** | English | US/Mediterranean | ✅ Full recipe content incl. Persian, Moroccan, Greek-influenced recipes. e.g. `/braised-lamb-shanks/`, `/persian-braised-lamb-shanks-mahiche/` |
 | **nigella.com** | English | UK | ✅ Full recipe content. e.g. `/recipes/aromatic-lamb-shank-stew`. Check books cited for bibliographic references. |
@@ -45,8 +45,8 @@ then verify with web_fetch before citing.
 | **africanbites.com** | English | US (West African / Caribbean) | ✅ Full recipe content. West African, Nigerian, Jamaican, Cameroonian traditions. e.g. `/jamaican-curry-goat/`, `/asun-spicy-roast-goat/`, `/grilled-lamb-chops/`. Always search `site:africanbites.com {recipe}` — guessed slugs often 404. |
 | **vahrehvah.com** | English | IN (South Indian) | ✅ Full recipe content. Andhra, Telugu, pan-Indian. e.g. `/spicy-lamb-chops`, `/lamb-fry`, `/mutton-fry-indian-recipe`. Use slug format `/recipe-name` (no trailing slash). |
 | **chefkoch.de** | German | DE | ✅ Full recipe content. Use numeric ID URLs: `/rezepte/{ID}/{slug}.html`. Find IDs via web_search `site:chefkoch.de {recipe}`. |
-| **ichkoche.at** | German | AT (Austrian) | ✅ Full recipe content in German, Austrian traditions. Use `/rezept-{slug}-{ID}` format. e.g. `/steirisches-wurzelfleisch-rezept-192562`. Search `site:ichkoche.at {Gericht}`. |
-| **madensverden.dk** | Danish | DK | ✅ Full recipe content in Danish. e.g. `/lammeskank-roedvin-langtidsstegt/` |
+| **ichkoche.at** | German | AT (Austrian) | ✅ Full recipe content in German, Austrian traditions. Use `/{slug}-rezept-{ID}` format (slug first, then `-rezept-{ID}` at end). e.g. `/rezept-fuer-eingelegte-zitronen-rezept-54882`, `/kraeuterbutter-nach-grossmutter-art-rezept-106276`. Find IDs via IA CDX: `https://web.archive.org/cdx/search/cdx?url=www.ichkoche.at/rezept*&output=json&filter=statuscode:200&limit=10`. **⚠️ Previous survey had wrong format `/rezept-{slug}-{ID}` — corrected 2026-04-24.** |
+| **madensverden.dk** | Danish | DK | ✅ Full recipe content in Danish. Use `https://madensverden.dk/{slug}/` — **no `www.` prefix**. Danish characters URL-encoded: ø→oe, æ→ae, å→aa. e.g. `/hvidloegsflutes-hjemmelavede-nemme-sproede/`, `/langtidsstegt-oksefilet-ovn/`, `/varm-boennesalat-med-groenne-boenner-tomater-og-hvidloeg/`. Navigate via IA: `https://web.archive.org/web/20170603212251/https://madensverden.dk/` shows recipe links on homepage. Confirmed 2026-04-24 via IA page fetch. |
 | **directoalpaladar.com** | Spanish | ES | ✅ Full recipe content in Spanish. e.g. `/recetas-de-carnes-y-aves/jarrete-ternasco-asado-...` |
 | **nefisyemektarifleri.com** | Turkish | TR | ✅ Full recipe content in Turkish. e.g. `/kuzu-incik/`, `/levrek-bugulama/`. Use `/` slug format. |
 | **yemek.com** | Turkish | TR | ✅ Full recipe content in Turkish (second Turkish source). Chef-attributed recipes. e.g. `/tarif/kuzu-pirzola/`. Search `site:yemek.com {yemek}`. |

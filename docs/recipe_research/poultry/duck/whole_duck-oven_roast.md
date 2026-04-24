@@ -90,13 +90,27 @@ Target internal temperature: **165 °F (74 °C) in the thigh** — USDA minimum 
 
 ---
 
-### 3. TODO: add third source — searches returned 404
-> natashaskitchen.com/roasted-duck/ returned 404 (fetched 2025-07-15).
-> natashaskitchen.com/whole-roasted-duck/ returned 404 (fetched 2025-07-15).
-> bbcgoodfood.com/recipes/roast-duck returned 404 (fetched 2025-07-15).
->
-> Candidate sources to retry: seriouseats.com/whole-roast-duck,
-> simplyrecipes.com/roast-duck-recipe, bonappetit.com/roast-duck
+### 3. BBC Good Food — Crispy Roast Duck
+**Source**: Ruth Watson, BBC Good Food; https://www.bbcgoodfood.com/recipes/crispy-roast-duck (fetched 2026-04-24).
+**Serves**: 6 · **Prep**: 60 min · **Cook**: 90 min · **Rest**: 10–15 min
+
+**Temperature guidance**:
+- Oven: 230 °C / Gas 8 / fan oven 210 °C (high heat throughout — contrast with the low-and-slow method in source 1)
+- Total cook time: 1¼–1½ hours (75–90 min) for butterflied duck halves on a rack
+- Doneness: skin crisp and dark golden; juices run clear; drain accumulated fat once or twice
+- Internal temperature: not stated explicitly — traditional visual check; USDA minimum still applies (165 °F / 74 °C in thigh)
+
+**Ingredients**
+- 3 medium-sized ducks (each approx. 2.25 kg / 5 lb), with giblets
+- Fine sea salt
+
+**Method**
+1. Remove the giblets and wash. Cut off any greenish liver parts and discard, then roughly chop the rest. Quarter the crops (gullet), slicing red flesh from white sinew; discard the sinew. Put all giblet pieces into a large roasting tin to be used for gravy or stock.
+2. Cut off the parson's nose from each duck and add to the tin. Remove the wings: pull back the skin to expose the shoulder joint, cut between the bones to release each wing, then cut around the skin to free it. Add wings to the tin.
+3. Turn each duck breast-side down. Cut down each side of the backbone with a sharp knife or game scissors and remove the backbone. Flip and cut down each side of the breastbone to produce two duck halves. Add all bones to the tin. Repeat with the remaining ducks.
+4. Remove large lumps of fat from inside each half and set aside. Trim off any loose, flappy bits of skin. Wash the duck halves and pat very dry. Prick the skin all over — especially the thick, fatty areas. Sprinkle generously with fine sea salt.
+5. Preheat the oven to 230 °C / Gas 8 / fan 210 °C. Arrange the duck halves skin-side up on a wire rack set inside a large roasting tin. Roast for 1¼–1½ hours until the skin is crisp and dark golden. Drain accumulated fat from the tin once or twice — pour into a heatproof bowl or directly onto roast potatoes if making them simultaneously.
+6. Rest the duck halves for 10–15 min before serving. Serve with gravy made from the tin drippings and vegetables.
 
 ---
 
@@ -106,7 +120,7 @@ Target internal temperature: **165 °F (74 °C) in the thigh** — USDA minimum 
 |--------|---------|-------------|-----------------|------|-----------------|
 | BBC Good Food slow-roast | UK / Czech | 90 °C then 120 °C (194–248 °F) | ~2 kg (4.4 lb) | 13 hr | 165 °F (74 °C) thigh |
 | Classic high-heat roast | International | 425 °F then 350 °F (218→177 °C) | 4–6 lb (1.8–2.7 kg) | 2–2.5 hr | 165 °F (74 °C) thigh |
-| USDA minimum | USA | Any | Any | Any | 165 °F (74 °C) |
+| BBC Good Food (crispy high-heat) | UK | 230 °C / fan 210 °C (446 °F / 410 °F fan) | ~2.25 kg (5 lb) per duck, halved | 1¼–1½ hr | Skin crisp and golden; juices clear |
 
 **Recommended MEATER settings**:
 - Insert probe into thigh, away from bone (not the breast)

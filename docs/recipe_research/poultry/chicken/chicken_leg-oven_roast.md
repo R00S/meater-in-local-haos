@@ -85,7 +85,25 @@ Target internal temperature: **170–175 °F (77–79 °C)** — recommended for
 
 ---
 
-### 3. TODO: add third source — natashaskitchen.com/crispy-baked-chicken-legs/ and skinnytaste.com/baked-chicken-legs/ returned 404
+### 3. BBC Good Food — Sticky Chicken Drumsticks
+**Source**: Good Food team, BBC Good Food (Good Food magazine, November 2007); https://www.bbcgoodfood.com/recipes/sticky-chicken-drumsticks (archived: https://web.archive.org/web/20241001021310/https://www.bbcgoodfood.com/recipes/sticky-chicken-drumsticks, fetched 2026-04-24).
+**Serves**: 4 · **Prep**: 10 min + marinating time · **Cook**: 25 min
+
+**Temperature guidance**:
+- Oven temp: 190 °C / fan 170 °C / gas 5 (374 °F / 338 °F fan)
+- Time: 20 min, then pour over remaining marinade and cook 5 min more (25 min total)
+- No explicit internal target given; dark meat drumsticks are fully cooked when juices run clear at ≥74 °C (165 °F)
+
+**Ingredients**
+- 4 tbsp sweet chilli sauce
+- 1 tsp finely-grated fresh root ginger
+- 2 tsp soy sauce
+- Zest of 1 lime
+- 8 chicken drumsticks
+
+**Method**
+1. Mix together the chilli sauce, ginger, soy sauce and lime zest. Pour over the chicken drumsticks and leave to marinate for as long as you can (put them in the fridge if marinating for any longer than 30 mins).
+2. Heat oven to 190 °C/fan 170 °C/gas 5. Place the drumsticks in a shallow baking tray, shaking off any excess marinade. Roast for 20 mins, then pour over the leftover marinade and cook for 5 mins more until sticky and browned.
 
 ---
 
@@ -95,6 +113,7 @@ Target internal temperature: **170–175 °F (77–79 °C)** — recommended for
 |--------|---------|-------------|-----------------|------|-----------------|
 | Jessica Gavin | USA | 425 °F (218 °C) | ~2 lbs (8 drumsticks) | 35 min | 170–175 °F (77–79 °C) |
 | Natasha's Kitchen | USA | 400 °F (204 °C) | 4.5–5 lbs drumsticks | 60 min | 170–175 °F (77–79 °C) |
+| BBC Good Food | UK | 190 °C / 374 °F (fan 170 °C) | 8 drumsticks | 25 min | Juices run clear (≥74 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **168 °F (76 °C)** → pull and rest

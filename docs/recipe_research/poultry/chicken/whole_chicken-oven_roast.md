@@ -116,7 +116,27 @@ Target internal temperatures: **Breast 160–165 °F (71–74 °C)** · **Thigh 
 
 ---
 
-### 3. TODO: add third source — natashaskitchen.com/whole-roasted-chicken/ returned 404; skinnytaste.com/roast-chicken/ not yet tried — recommend fetching https://www.skinnytaste.com/roast-chicken/
+### 3. BBC Good Food — Simple Roast Chicken
+**Source**: Good Food team, BBC Good Food; https://www.bbcgoodfood.com/recipes/simple-roast-chicken (fetched 2026-04-24). Published: Good Food magazine, October 2011.
+**Serves**: 4 · **Prep**: 10 min · **Cook**: 70 min · **Rest**: 15 min
+
+**Temperature guidance**:
+- Phase 1: 220 °C / 200 °C fan / gas 7 for 20 min (initial blast to brown and begin rendering)
+- Phase 2: 190 °C / 170 °C fan / gas 5 for a further 45 min
+- Doneness: juices run clear when the thigh is pierced with a knife
+- Rest 15 min before carving
+
+**Ingredients**
+- 1.8–2 kg / 4–4½ lb chicken
+- 2 garlic cloves, bashed
+- 2 bay leaves
+- 50 g / 2 oz butter, softened
+- Juice of 1 lemon, plus the squeezed halves for the cavity
+- Salt and pepper
+
+**Method**
+1. Heat oven to 220 °C / 200 °C fan / gas 7. Put the chicken in a large roasting tin, then stuff the garlic and bay leaves into the cavity. Rub the outside of the chicken with butter, then squeeze over the lemon juice and add the lemon halves to the inside of the chicken. Season inside and out, then cook for 20 min.
+2. Turn the oven down to 190 °C / 170 °C fan / gas 5 and cook for a further 45 min, or until the chicken juices run clear when you pierce the thigh with a knife. Leave to rest for 15 min before carving.
 
 ---
 
@@ -126,6 +146,7 @@ Target internal temperatures: **Breast 160–165 °F (71–74 °C)** · **Thigh 
 |--------|---------|-------------|------------|------|---------------|-------------|
 | Jessica Gavin | USA | 475 °F (246 °C) | 3.5–4 lbs | ~60 min | 160–165 °F (71–74 °C) | 165–170 °F (74–77 °C) |
 | Natasha's Kitchen | USA | 325–350 °F (163–177 °C) | 4–5 lbs | ~80–100 min | 160–165 °F (71–74 °C) | 165–170 °F (74–77 °C) |
+| BBC Good Food | UK | 220 °C fan 200 °C → 190 °C fan 170 °C | 1.8–2 kg (4–4½ lb) | 70 min total | Juices run clear | Juices run clear |
 
 **Recommended MEATER settings**:
 - Probe placement: thigh (thickest part, away from bone) — thigh is the last to finish
