@@ -1435,7 +1435,7 @@ class KitchenCookingPanel extends LitElement {
   _navigateToMeaterExperimentalPath(appliance) {
     this._currentPath = 'meater_experimental';
     this._selectedAppliance = appliance;
-    this._showMeaterCooking = false;
+    this._showMeaterCooking = true;   // skip landing page — go straight to setup form
     this.requestUpdate();
   }
 

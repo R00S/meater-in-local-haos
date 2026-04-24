@@ -237,9 +237,12 @@ def cut_to_js(cut):
             method: [tr.name for tr in ranges]
             for method, ranges in cut.method_temperature_ranges.items()
         }
-    # recipe_slug overrides slug for recipe file lookup (e.g. Swedish → English)
-    if getattr(cut, "recipe_slug", None):
-        result["recipe_slug"] = cut.recipe_slug
+    # recipe_slug: use explicit field first, then fall back to _RECIPE_SLUG_MAP
+    explicit = getattr(cut, "recipe_slug", None)
+    mapped = _RECIPE_SLUG_MAP.get(cut.name)
+    recipe_slug = explicit or mapped
+    if recipe_slug and recipe_slug != cut.name:
+        result["recipe_slug"] = recipe_slug
     return result
 
 
