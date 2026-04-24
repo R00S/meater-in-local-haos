@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.1.12 - Add 6 missing recipe_research cuts to Swedish experimental data (190 → 196)
+Last Change: v0.6.1.13 - Chores: version bump, fill pork ribs/roasts recipe stubs, remove unverifiable page numbers from cookbook citations
 """
 
 DOMAIN = "kitchen_cooking_engine"

@@ -349,3 +349,32 @@ with the following key additions over the then-current main branch:
 - Swedish cuts: 190 → 196. No duplicate IDs.
 - PANEL_VERSION bumped 271 → 272 (auto by generator).
 - CHORES: versions updated to 0.6.1.12, branch timeline updated.
+
+---
+
+### v0.6.1.13 — 2026-04-24
+**Chores: version bump, recipe stub fills, citation cleanup**
+
+- Bumped version 0.6.1.12 → 0.6.1.13 in manifest.json, __init__.py, const.py.
+- Updated USER_GUIDE.md version header to 0.6.1.13.
+- **Cookbook citation cleanup**: Removed unverifiable page numbers from ~65 recipe research
+  files across all categories (beef, pork, poultry, game, fish, vegetables). Rule: page
+  numbers only kept when verifiable via web_fetch; removed otherwise as they came from
+  agent training data rather than confirmed sources.
+- **Pork ribs stubs filled** (4 files, all web-fetched sources):
+  - baby_back_ribs-air_fryer.md (5 sources: DK, NO, AT, IT, ES)
+  - baby_back_ribs-oven_roast.md (4 sources: DK×2, AT, DE)
+  - baby_back_ribs-smoker.md (3 sources: DE×2, AT)
+  - spare_ribs-oven_roast.md (4 sources: DK×2, AT, DE)
+- **Pork roasts stubs filled** (8 files, all web-fetched sources):
+  - cured_ham-oven_roast.md (3 sources: DK, DE×2)
+  - pork_belly-braise.md (3 sources: DE, AT, UK)
+  - pork_belly-oven_roast.md (4 sources: DK, DE×3)
+  - pork_belly-pan_fry.md (3 sources: DK, AT×2)
+  - pork_loin_roast-oven_roast.md (3 sources: DK×2, DE)
+  - pork_shoulder-oven_roast.md (3 sources: DK×2, DE)
+  - pork_shoulder-slow_cooker.md (3 sources: DK, NO, DE)
+  - pork_shoulder-smoker.md (3 sources: DE×2, DK)
+- **Created docs/recipe_log.txt** — documents source priority rules and session progress.
+- Remaining pork roast stubs: pork_belly-slow_cooker, pork_belly-smoker, pork_belly-sous_vide (3).
+- Remaining overall stubs: ~poultry/16, vegetables/~62 + 3 pork.
