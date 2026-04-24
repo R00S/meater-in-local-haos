@@ -506,6 +506,43 @@ SWEDISH_BEEF_STEAKS = [
         ],
         recommended_doneness="medium_rare",
     ),
+    MeatCut(
+        id=3140,
+        name="skirt_steak",
+        name_long="Skirt Steak / Kjolstek",
+        cut_order=12,
+        estimated_thickness_mm=15,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=4,
+        temperature_ranges=[
+            SWEDISH_DONENESS_RARE,
+            SWEDISH_DONENESS_MEDIUM_RARE,
+            SWEDISH_DONENESS_MEDIUM,
+        ],
+        recommended_doneness="medium_rare",
+    ),
+    MeatCut(
+        id=3141,
+        name="tri_tip",
+        name_long="Tri-tip",
+        cut_order=13,
+        estimated_thickness_mm=35,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=4,
+        temperature_ranges=[
+            SWEDISH_DONENESS_RARE,
+            SWEDISH_DONENESS_MEDIUM_RARE,
+            SWEDISH_DONENESS_MEDIUM,
+            SWEDISH_DONENESS_MEDIUM_WELL,
+        ],
+        recommended_doneness="medium_rare",
+    ),
 ]
 
 SWEDISH_BEEF_ROASTS = [
@@ -824,6 +861,24 @@ SWEDISH_PORK_STEAKS = [
         carryover_temp_c=3,
         temperature_ranges=SWEDISH_FULL_DONENESS,
         recommended_doneness="medium",
+    ),
+    MeatCut(
+        id=3142,
+        name="flaskbogskiva",
+        name_long="Fläskbogskiva",
+        cut_order=6,
+        estimated_thickness_mm=20,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=3,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[
+            SWEDISH_DONENESS_MEDIUM,
+            SWEDISH_DONENESS_MEDIUM_WELL,
+            SWEDISH_DONENESS_WELL_DONE,
+        ],
+        recommended_doneness="well_done",
     ),
 ]
 
@@ -1512,6 +1567,24 @@ SWEDISH_VENISON = [
         temperature_ranges=[SWEDISH_DONENESS_PULLED],
         recommended_doneness="well_done",
     ),
+    MeatCut(
+        id=3144,
+        name="hjortkarre",
+        name_long="Hjortkarré (Loin)",
+        cut_order=7,
+        estimated_thickness_mm=40,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[
+            SWEDISH_DONENESS_RARE,
+            SWEDISH_DONENESS_MEDIUM_RARE,
+            SWEDISH_DONENESS_MEDIUM,
+        ],
+        recommended_doneness="medium_rare",
+    ),
 ]
 
 SWEDISH_MOOSE = [
@@ -1651,6 +1724,23 @@ SWEDISH_WILD_BOAR = [
         temperature_ranges=[SWEDISH_DONENESS_PULLED],
         recommended_doneness="well_done",
     ),
+    MeatCut(
+        id=3145,
+        name="vildsvinskoteletter",
+        name_long="Vildsvinskotlett",
+        cut_order=4,
+        estimated_thickness_mm=25,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=5,
+        rest_time_max=10,
+        carryover_temp_c=3,
+        temperature_ranges=[
+            SWEDISH_DONENESS_MEDIUM_WELL,
+            SWEDISH_DONENESS_WELL_DONE,
+        ],
+        recommended_doneness="well_done",
+    ),
 ]
 
 SWEDISH_RABBIT = [
@@ -1782,6 +1872,20 @@ SWEDISH_CHICKEN = [
         usda_safe_f=162,
         rest_time_min=3,
         rest_time_max=5,
+        carryover_temp_c=3,
+        temperature_ranges=SWEDISH_POULTRY_FULL,
+        recommended_doneness="genomstekt",
+    ),
+    MeatCut(
+        id=3143,
+        name="kyckling_overlår",
+        name_long="Kycklingöverlår",
+        cut_order=7,
+        estimated_thickness_mm=35,
+        usda_safe_c=72,
+        usda_safe_f=162,
+        rest_time_min=5,
+        rest_time_max=10,
         carryover_temp_c=3,
         temperature_ranges=SWEDISH_POULTRY_FULL,
         recommended_doneness="genomstekt",

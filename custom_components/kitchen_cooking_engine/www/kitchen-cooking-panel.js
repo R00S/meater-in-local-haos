@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 24 Apr 2026, 01:04 CET
+ * AUTO-GENERATED: 24 Apr 2026, 05:47 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 24 Apr 2026, 01:04 CET
+// Last generated: 24 Apr 2026, 05:47 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -3623,6 +3623,27 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt"
                 ],
                 "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3140,
+                "name": "Skirt Steak / Kjolstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3141,
+                "name": "Tri-tip",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           },
@@ -3943,6 +3964,16 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "medium"
+              },
+              {
+                "id": 3142,
+                "name": "Fläskbogskiva",
+                "doneness": [
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           },
@@ -4270,6 +4301,16 @@ const SWEDISH_MEAT_CATEGORIES = {
               {
                 "id": 3021,
                 "name": "Kycklingtrumma (Drumstick)",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3143,
+                "name": "Kycklingöverlår",
                 "doneness": [
                   "medium",
                   "genomstekt",
@@ -5280,6 +5321,16 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3144,
+                "name": "Hjortkarré (Loin)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           }
@@ -5423,6 +5474,15 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "name": "Vildsvinsbog",
                 "doneness": [
                   "långkokt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3145,
+                "name": "Vildsvinskotlett",
+                "doneness": [
+                  "medium_well",
+                  "genomstekt"
                 ],
                 "recommended_doneness": "well_done"
               }
@@ -26610,7 +26670,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "271";
+const PANEL_VERSION = "272";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

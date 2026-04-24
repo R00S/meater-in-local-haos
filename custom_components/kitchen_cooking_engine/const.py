@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.1.11 - Add all missing international cuts to experimental Swedish data (190 cuts, up from 155)
+Last Change: v0.6.1.12 - Add 6 missing recipe_research cuts to Swedish experimental data (190 → 196)
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "271"
+PANEL_VERSION = "272"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

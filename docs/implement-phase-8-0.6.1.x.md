@@ -319,3 +319,18 @@ with the following key additions over the then-current main branch:
 - Swedish cuts: 155 → 190. No duplicate IDs.
 - PANEL_VERSION bumped 270 → 271 (auto by generator).
 - CHORES: versions updated to 0.6.1.11, branch timeline updated.
+
+### v0.6.1.12 — 2026-04-24
+**Add all missing cuts from docs/recipe_research to experimental Swedish data**
+
+- Compared all cut slugs in docs/recipe_research (103 unique cuts across 274 files) against
+  the Swedish experimental data; identified 6 additional missing cuts not covered by v0.6.1.11.
+- Added to SWEDISH_BEEF_STEAKS: Skirt Steak / Kjolstek (ID 3140), Tri-tip (ID 3141).
+- Added to SWEDISH_PORK_STEAKS: Fläskbogskiva / Pork Shoulder Steak (ID 3142).
+- Added to SWEDISH_CHICKEN: Kycklingöverlår / Chicken Thigh boneless (ID 3143).
+- Added to SWEDISH_VENISON: Hjortkarré / Venison Loin (ID 3144).
+- Added to SWEDISH_WILD_BOAR: Vildsvinskotlett / Wild Boar Chop (ID 3145).
+- All other recipe_research cuts were already covered by Swedish equivalents.
+- Swedish cuts: 190 → 196. No duplicate IDs.
+- PANEL_VERSION bumped 271 → 272 (auto by generator).
+- CHORES: versions updated to 0.6.1.12, branch timeline updated.
