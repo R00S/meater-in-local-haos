@@ -289,3 +289,33 @@ with the following key additions over the then-current main branch:
 - `_renderMeaterPath()` and `_renderSetupForm()` untouched.
 - PANEL_VERSION bumped 268 → 269 (auto by generator).
 - CHORES: versions updated to 0.6.1.10, branch timeline updated.
+
+### v0.6.1.11 — 2026-04-23
+**Add all missing international cuts to experimental Swedish data**
+
+- Compared international cooking_data.py (187 cuts) against swedish_cooking_data.py
+  (was 155 cuts); identified 35 structurally missing cuts across all categories.
+- Added to SWEDISH_BEEF_STEAKS: T-Bone / Porterhouse (ID 3000).
+- Added to SWEDISH_BEEF_ROASTS: Revbensstek/Prime Rib (ID 3001), Hel Oxfilé/Tenderloin Roast (ID 3002).
+- Added to SWEDISH_BEEF_BRAISING: Nötrevben/Short Ribs (ID 3003).
+- Added to SWEDISH_BEEF_OFFAL: Oxrev/Beef Rib (ID 3004).
+- Added to SWEDISH_PORK_RIBS: Tunna revbensspjäll/Baby Back (ID 3010), Tjocka revbensspjäll/Spare Ribs (ID 3011), St. Louis-revben (ID 3012).
+- Added to SWEDISH_CHICKEN: Kycklingbröst med ben (ID 3020), Kycklingtrumma/Drumstick (ID 3021).
+- Added to SWEDISH_TURKEY: Kalkonlår/Turkey Leg (ID 3030), Kalkon Överlår/Turkey Thigh (ID 3031).
+- Added to SWEDISH_DUCK: Ankconfit/Duck Leg Confit (ID 3040).
+- Added to SWEDISH_GOOSE: Gås Överlår/Goose Thigh (ID 3050).
+- Added to SWEDISH_GROUND_POULTRY: Kalkanburgare/Turkey Burger (ID 3060).
+- Added to SWEDISH_OTHER_FISH: Havsabborre/Sea Bass (ID 3070), Svärdfisk (ID 3071),
+  Mahi-mahi (ID 3072), Kolja/Haddock (ID 3073), Kummel/Hake (ID 3074), Forell/Trout (ID 3075).
+- Added to SWEDISH_LAMB_ROASTS: Lammbringa/Brisket (ID 3080), Lammlåg/Rump (ID 3081),
+  Lammlägg/Shank (ID 3082), Lammrev/Rib (ID 3083).
+- Added to SWEDISH_LAMB_CHOPS: Lammlånskotletter/Loin Chops (ID 3090), Lammkotlett/Cutlet (ID 3091).
+- NEW SWEDISH_LAMB_GROUND CutType: Lammfärs (ID 3092), Lammkebab/Kofta (ID 3093),
+  Lammburgare (ID 3094); wired into SWEDISH_MEAT_CATEGORIES as "Lammfärs" CutType.
+- Added to SWEDISH_VENISON: Hjortlår/Venison Leg (ID 3100), Hjortbog/Venison Shoulder (ID 3101).
+- Added to SWEDISH_REINDEER: Renkarré/Reindeer Loin (ID 3120).
+- Added to SWEDISH_WILD_BOAR: Vildsvinsbog/Wild Boar Shoulder (ID 3110).
+- Added to SWEDISH_BUFFALO: Buffelkarré/Buffalo Roast (ID 3130).
+- Swedish cuts: 155 → 190. No duplicate IDs.
+- PANEL_VERSION bumped 270 → 271 (auto by generator).
+- CHORES: versions updated to 0.6.1.11, branch timeline updated.

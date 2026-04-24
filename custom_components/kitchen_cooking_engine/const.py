@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.1.10 - Align experimental MEATER path with source-reference v0.5.3.5 regular path
+Last Change: v0.6.1.11 - Add all missing international cuts to experimental Swedish data (190 cuts, up from 155)
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "270"
+PANEL_VERSION = "271"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

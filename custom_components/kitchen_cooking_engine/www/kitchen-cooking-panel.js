@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 24 Apr 2026, 00:51 CET
+ * AUTO-GENERATED: 24 Apr 2026, 01:04 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 24 Apr 2026, 00:51 CET
+// Last generated: 24 Apr 2026, 01:04 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -282,6 +282,15 @@ const SWEDISH_DONENESS_OPTIONS = {
     "description": "Långkokt - Strimlningsbart",
     "temp_c": 92,
     "temp_f": 198,
+    "safety_level": "safe"
+  },
+  "confit": {
+    "value": "confit",
+    "name": "Confit",
+    "icon": "🦆",
+    "description": "Fall-off-bone tender, traditionally confited",
+    "temp_c": 88,
+    "temp_f": 190,
     "safety_level": "safe"
   },
   "just_cooked": {
@@ -3602,6 +3611,18 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium"
                 ]
+              },
+              {
+                "id": 3000,
+                "name": "T-Bone / Porterhouse",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           },
@@ -3658,6 +3679,29 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_well",
                   "genomstekt"
                 ]
+              },
+              {
+                "id": 3001,
+                "name": "Revbensstek (Prime Rib)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3002,
+                "name": "Hel Oxfilé (Tenderloin Roast)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           },
@@ -3713,6 +3757,14 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "långkokt"
                 ]
+              },
+              {
+                "id": 3003,
+                "name": "Nötrevben (Short Ribs)",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           },
@@ -3798,6 +3850,14 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "braise",
                   "slow_cooker"
                 ]
+              },
+              {
+                "id": 3004,
+                "name": "Oxrev (Beef Rib)",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -4009,6 +4069,30 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "långkokt"
                 ]
+              },
+              {
+                "id": 3010,
+                "name": "Tunna revbensspjäll (Baby Back Ribs)",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3011,
+                "name": "Tjocka revbensspjäll (Spare Ribs)",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3012,
+                "name": "St. Louis-revben",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           },
@@ -4172,6 +4256,26 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3020,
+                "name": "Kycklingbröst med ben",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3021,
+                "name": "Kycklingtrumma (Drumstick)",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
               }
             ]
           }
@@ -4198,6 +4302,26 @@ const SWEDISH_MEAT_CATEGORIES = {
               {
                 "id": 2311,
                 "name": "Kalkonbröst",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3030,
+                "name": "Kalkonlår",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3031,
+                "name": "Kalkon Överlår (Thigh)",
                 "doneness": [
                   "medium",
                   "genomstekt",
@@ -4239,6 +4363,14 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3040,
+                "name": "Ankconfit (Duck Leg Confit)",
+                "doneness": [
+                  "confit"
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -4288,6 +4420,18 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "oven_roast",
                   "braise"
                 ]
+              },
+              {
+                "id": 3050,
+                "name": "Gås Överlår (Thigh)",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise"
+                ]
               }
             ]
           }
@@ -4328,6 +4472,19 @@ const SWEDISH_MEAT_CATEGORIES = {
               {
                 "id": 2792,
                 "name": "Kycklingburgare",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry",
+                  "air_fryer"
+                ]
+              },
+              {
+                "id": 3060,
+                "name": "Kalkanburgare",
                 "doneness": [
                   "genomstekt"
                 ],
@@ -4562,6 +4719,64 @@ const SWEDISH_MEAT_CATEGORIES = {
               {
                 "id": 2424,
                 "name": "Hälleflundra",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 3070,
+                "name": "Havsabborre (Sea Bass)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 3071,
+                "name": "Svärdfisk",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3072,
+                "name": "Mahi-mahi",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3073,
+                "name": "Kolja (Haddock)",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3074,
+                "name": "Kummel (Hake)",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3075,
+                "name": "Forell",
                 "doneness": [
                   "blodig",
                   "medium_rare",
@@ -4852,6 +5067,45 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3080,
+                "name": "Lammbringa",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3081,
+                "name": "Lammlåg (Rump)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3082,
+                "name": "Lammlägg (Shank)",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3083,
+                "name": "Lammrev (Rib)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
               }
             ]
           },
@@ -4884,6 +5138,58 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3090,
+                "name": "Lammlånskotletter",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3091,
+                "name": "Lammkotlett (Cutlet)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare"
+              }
+            ]
+          },
+          {
+            "id": 2520,
+            "name": "Lammfärs",
+            "cuts": [
+              {
+                "id": 3092,
+                "name": "Lammfärs",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3093,
+                "name": "Lammkebab / Kofta",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3094,
+                "name": "Lammburgare",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -4956,6 +5262,24 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "medium"
+              },
+              {
+                "id": 3100,
+                "name": "Hjortlår",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3101,
+                "name": "Hjortbog",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -5045,6 +5369,16 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "medium"
+              },
+              {
+                "id": 3120,
+                "name": "Renkarré",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           }
@@ -5083,6 +5417,14 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "långkokt"
+              },
+              {
+                "id": 3110,
+                "name": "Vildsvinsbog",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -5201,6 +5543,16 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "grill",
                   "pan_fry"
                 ]
+              },
+              {
+                "id": 3130,
+                "name": "Buffelkarré (Roast)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           }
@@ -26258,7 +26610,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "270";
+const PANEL_VERSION = "271";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
