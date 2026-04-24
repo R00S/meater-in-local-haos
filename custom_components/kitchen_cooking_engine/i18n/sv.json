@@ -278,7 +278,9 @@
     "recent_desc": "Visa och starta om tidigare AI-recept för denna apparat",
     "no_history_appliance": "Ingen tillagningshistorik för denna apparat ännu. Skapa ditt första AI-recept!",
     "incomplete_warning": "⚠️ Ofullständig",
-    "incomplete_message": "Slutför val av ingredienser och stil"
+    "incomplete_message": "Slutför val av ingredienser och stil",
+    "compulsory_toggle_hint": "Klicka för att markera som obligatorisk (⭐ måste användas)",
+    "compulsory_badge_label": "Obligatorisk"
   },
   "recipe_cook": {
     "overview_title": "📋 Receptöversikt",
@@ -292,7 +294,9 @@
     "finish_cook": "✅ Slutför tillagning",
     "next_step": "Nästa steg ➡️",
     "prev_step": "⬅️ Föregående",
-    "no_instructions": "Inga instruktioner tillgängliga."
+    "no_instructions": "Inga instruktioner tillgängliga.",
+    "start_meater_btn": "🌡️ Starta MEATER-sond",
+    "meater_detach_hint": "Koppla loss sonden från receptet (sondsessionen fortsätter)"
   },
   "rating": {
     "cook_complete": "🎉 Tillagning klar!",
@@ -307,7 +311,8 @@
     "notes_placeholder": "Anteckningar, ändringar eller tankar om denna tillagning...",
     "both_required": "⚠️ Ange båda betygen för att spara tillagningen",
     "save_complete": "💾 Spara & slutför",
-    "skip": "⏭️ Hoppa över betyg"
+    "skip": "⏭️ Hoppa över betyg",
+    "skip_shelf_update": "Hoppa över hylluppdatering"
   },
   "history": {
     "title": "📋 Tillagningshistorik",
@@ -553,5 +558,53 @@
     "west_african": "Västafrikansk",
     "australian": "Australisk",
     "polynesian": "Polynesisk"
+  },
+  "shelf": {
+    "title": "🗄️ Hyllhantering",
+    "enable_label": "Aktivera hyllhantering",
+    "enable_desc": "Spåra vad du har i kylskåpet och skafferiet",
+    "location_fridge": "🧊 Kylskåp",
+    "location_larder": "🏺 Skafferi",
+    "location_freezer": "❄️ Frys",
+    "location_spices": "🧂 Kryddor & Smaksättare",
+    "add_item": "＋ Lägg till vara",
+    "item_name_placeholder": "Varunamn",
+    "item_quantity_placeholder": "Mängd (valfritt)",
+    "item_location_label": "Plats",
+    "save_item": "Spara",
+    "cancel": "Avbryt",
+    "remove_item": "Ta bort",
+    "empty": "Inget här ännu.",
+    "shopping_list_btn": "🛒 Inköpslista",
+    "back": "← Tillbaka",
+    "no_items": "Din hylla är tom. Lägg till varor för att komma igång."
+  },
+  "cooking_mode": {
+    "selector_title": "🍳 Tillagningsläge",
+    "selector_hint": "Hur ska AI:n använda din hyllinventering?",
+    "mode_a_label": "A — Ignorera hylla",
+    "mode_a_desc": "Generera recept fritt från valda ingredienser",
+    "mode_b_label": "B — Laga nu",
+    "mode_b_desc": "Använd BARA vad du har (hylla + valda)",
+    "mode_c_label": "C — Laga senare",
+    "mode_c_desc": "Generera recept; lägg saknade varor på inköpslistan"
+  },
+  "post_cook": {
+    "update_shelf_title": "📦 Uppdatera din hylla?",
+    "update_shelf_desc": "Vilka ingredienser använde du upp från din hylla?",
+    "update_shelf_btn": "Uppdatera hylla",
+    "add_to_list_btn": "🛒 Lägg uppbrukade på inköpslistan",
+    "skip_btn": "Hoppa över"
+  },
+  "shopping_list": {
+    "title": "🛒 Inköpslista",
+    "empty": "Din inköpslista är tom.",
+    "clear_checked": "Ta bort ikryssade",
+    "back": "← Tillbaka",
+    "item_checked": "Har det",
+    "item_unchecked": "Behöver det",
+    "export_to_ha": "Exportera till HA Inköpslista",
+    "exported_to_ha": "Exporterade {count} artiklar till HA Inköpslista",
+    "ha_todo_not_found": "Ingen HA Inköpslista hittades. Artiklar sparade i KCE-listan."
   }
 }

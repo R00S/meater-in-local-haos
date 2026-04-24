@@ -5,7 +5,7 @@
 [![Alpha](https://img.shields.io/badge/Status-ALPHA-orange.svg)](https://github.com/R00S/meater-in-local-haos)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-yellow?style=flat&logo=buy-me-a-coffee)](https://buymeacoffee.com/R00S)
 
-⚠️ **DEVELOPMENT RELEASE** — GUI Redesign Phases 1–7 complete. Functional but not yet production-ready. Phase 8 (Ingredient Levels & Cooking Modes) is next.
+⚠️ **DEVELOPMENT RELEASE** — GUI Redesign Phases 1–8 complete. Functional but not yet production-ready.
 
 A local-first, AI-assisted kitchen cooking system for Home Assistant that helps you plan, prepare, and execute meals using your ingredients, equipment, time constraints, recipes, and temperature sensors.
 
@@ -19,11 +19,23 @@ Build a smart cooking engine that behaves like a highly capable kitchen assistan
 - Supports multiple appliances (Ninja Combi, MultiFry, etc.)
 - Works entirely locally (Home Assistant + local apps)
 
+## 📖 User Guide
+
+Full installation, configuration, and feature documentation:
+**[→ docs/USER_GUIDE.md](docs/USER_GUIDE.md)**
+
 ## 📊 Current Status
 
-**v0.6.0.05** — Development release (April 2026)
+**v0.6.1.02** — Development release (April 2026)
 
-GUI Redesign Phases 1–7 complete. Phase 7 (Multilingual & Measurement Systems) shipped in v0.6.0.x. Phase 8 (Ingredient Levels & Cooking Modes) is next. See [STATUS.md](STATUS.md) for full progress tracking.
+GUI Redesign Phases 1–8 complete. Phase 8 (Ingredient Levels & Cooking Modes) shipped in v0.6.1.x. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.6.1.x Features — Phase 8: Ingredient Levels & Cooking Modes (April 2026)
+- ✅ **Compulsory Ingredients** — Click an ingredient badge to mark it ⭐ must-include; AI is instructed it MUST appear in every suggested recipe
+- ✅ **Shelf Management** — Optional fridge/larder/freezer/cupboard inventory; items grouped by location; add/remove items inline; toggle on/off in settings
+- ✅ **Cooking Modes A / B / C** — Shown when shelf is enabled: Mode A (ignore shelf), Mode B (restrict AI to shelf items only), Mode C (AI generates recipes and prepends a shopping list for missing ingredients)
+- ✅ **Post-Cook Shelf Update** — After rating screen prompts to deduct used ingredients from shelf inventory
+- ✅ **Shopping List** — Standalone screen to view, check off, and delete shopping items; items carried over from Mode C
 
 ### v0.6.0.x Features — Phase 7: Multilingual & Measurement Systems (April 2026)
 - ✅ **Swedish measurement system** — Metric, Imperial, and Swedish (dl/msk/tsk) unit catalogs with an API endpoint; persisted per user
@@ -671,12 +683,9 @@ The data structure is informed by the MEATER app's organization (for comprehensi
 
 ## 🔮 Future Features
 
-### Phase 8 — Ingredient Levels & Cooking Modes
-- ⬜ **Compulsory Ingredients** — Clickable badges to mark must-include ingredients
-- ⬜ **Shelf Management** — Optional fridge/larder/freezer/shelf tracking
-- ⬜ **Cooking Modes** — Ignore Shelf (A), Cook Now (B), Cook Later (C)
-- ⬜ **Post-Cook Shelf Update** — Deduct used ingredients, generate shopping list
-- ⬜ **Self-implemented ingredient database** — HA-native pantry state (Option C decided over Grocy/Mealie integration)
+### Phase 9 — External Bridges & Integrations (planned)
+- ⬜ **Grocy / Mealie bridge** — Sync shelf inventory with external systems
+- ⬜ **Grocery Recognition** — Receipt + photo → inventory
 
 ### Future Ideas
 - 🥖 **Baking** - Bread proofing, internal doneness, oven tracking

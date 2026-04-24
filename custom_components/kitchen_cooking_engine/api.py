@@ -31,6 +31,7 @@ from .storage import (
     async_update_cook_notes,
     async_delete_cook_from_history,
     async_load_user_preferences,
+    async_save_user_preferences,
     async_set_cut_preference,
     async_get_cut_preference,
     async_load_active_recipe_cook,
@@ -40,6 +41,10 @@ from .storage import (
     async_set_language,
     async_get_measurement_system,
     async_set_measurement_system,
+    async_load_shelf_inventory,
+    async_save_shelf_inventory,
+    async_load_shopping_list,
+    async_save_shopping_list,
 )
 
 _LOGGER = logging.getLogger(__name__)
@@ -261,6 +266,12 @@ def async_register_api(hass: HomeAssistant) -> None:
     hass.http.register_view(LanguagePreferenceView)
     hass.http.register_view(MeasurementSystemPreferenceView)
     
+    # Phase 8b: Shelf inventory
+    hass.http.register_view(ShelfInventoryView)
+
+    # Phase 8d: Shopping list
+    hass.http.register_view(ShoppingListView)
+
     # Phase 3.1: Multi-appliance endpoints
     hass.http.register_view(AppliancesView)
     hass.http.register_view(ApplianceFeatureNotesView)
@@ -430,6 +441,31 @@ class UserPreferencesView(HomeAssistantView):
         hass = request.app["hass"]
         preferences = await async_load_user_preferences(hass)
         return self.json(preferences)
+
+    async def patch(self, request: web.Request) -> web.Response:
+        """Update specific preference keys (shelf_enabled, cooking_mode, …)."""
+        hass = request.app["hass"]
+        try:
+            data = await request.json()
+            preferences = await async_load_user_preferences(hass)
+
+            allowed = {"shelf_enabled", "cooking_mode"}
+            updated = False
+            for key in allowed:
+                if key in data:
+                    preferences[key] = data[key]
+                    updated = True
+
+            if not updated:
+                return self.json({"status": "error", "message": "No valid fields to update"})
+
+            success = await async_save_user_preferences(hass, preferences)
+            if success:
+                return self.json({"status": "ok"})
+            return self.json({"status": "error", "message": "Failed to save"})
+        except Exception as e:
+            _LOGGER.error("Error patching preferences: %s", e)
+            return self.json({"status": "error", "message": "Failed to process request"})
 
 
 class CutPreferenceView(HomeAssistantView):
@@ -943,6 +979,9 @@ class AIRecipeGenerateView(HomeAssistantView):
                 cuisines=data.get("cuisines"),
                 language=data.get("language", "en"),
                 measurement_system=data.get("measurement_system", "us"),
+                compulsory_ingredients=data.get("compulsory_ingredients", []),
+                cooking_mode=data.get("cooking_mode", "A"),
+                shelf_items=data.get("shelf_items", []),
             )
             
             # Convert suggestions to dict for JSON
@@ -1246,3 +1285,203 @@ class AIRecipeSaveCookView(HomeAssistantView):
                 "status": "error",
                 "message": str(ex)
             })
+
+
+# =============================================================================
+# PHASE 8b: SHELF INVENTORY
+# =============================================================================
+
+import uuid as _uuid_mod
+
+
+class ShelfInventoryView(HomeAssistantView):
+    """API endpoint for shelf inventory (Phase 8b).
+
+    GET    → return full inventory list
+    POST   → add item (auto-generate id), return new item
+    DELETE → remove item by ?id=<uuid> or body { "id": "<uuid>" }
+    """
+
+    url = "/api/kitchen_cooking_engine/shelf"
+    name = "api:kitchen_cooking_engine:shelf"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Return the full shelf inventory."""
+        hass = request.app["hass"]
+        inventory = await async_load_shelf_inventory(hass)
+        return self.json({"items": inventory, "count": len(inventory)})
+
+    async def post(self, request: web.Request) -> web.Response:
+        """Add an item to the shelf inventory."""
+        hass = request.app["hass"]
+        try:
+            data = await request.json()
+            name = (data.get("name") or "").strip()
+            location = data.get("location", "larder")
+            if not name:
+                return self.json({"status": "error", "message": "name is required"})
+            if location not in ("fridge", "larder", "freezer", "spices"):
+                location = "larder"
+
+            item = {
+                "id": str(_uuid_mod.uuid4()),
+                "name": name,
+                "location": location,
+                "quantity": data.get("quantity", ""),
+            }
+            inventory = await async_load_shelf_inventory(hass)
+            inventory.append(item)
+            success = await async_save_shelf_inventory(hass, inventory)
+            if success:
+                return self.json({"status": "ok", "item": item})
+            return self.json({"status": "error", "message": "Failed to save"})
+        except Exception as e:
+            _LOGGER.error("Error adding shelf item: %s", e)
+            return self.json({"status": "error", "message": "Failed to process request"})
+
+    async def delete(self, request: web.Request) -> web.Response:
+        """Remove an item from the shelf inventory by id."""
+        hass = request.app["hass"]
+        try:
+            # Accept id from query param or request body
+            item_id = request.rel_url.query.get("id")
+            if not item_id:
+                try:
+                    body = await request.json()
+                    item_id = body.get("id")
+                except Exception:
+                    pass
+            if not item_id:
+                return self.json({"status": "error", "message": "id is required"})
+
+            inventory = await async_load_shelf_inventory(hass)
+            new_inventory = [i for i in inventory if i.get("id") != item_id]
+            if len(new_inventory) == len(inventory):
+                return self.json({"status": "error", "message": "Item not found"})
+
+            success = await async_save_shelf_inventory(hass, new_inventory)
+            if success:
+                return self.json({"status": "ok"})
+            return self.json({"status": "error", "message": "Failed to save"})
+        except Exception as e:
+            _LOGGER.error("Error deleting shelf item: %s", e)
+            return self.json({"status": "error", "message": "Failed to process request"})
+
+
+# =============================================================================
+# PHASE 8d: SHOPPING LIST
+# =============================================================================
+
+
+class ShoppingListView(HomeAssistantView):
+    """API endpoint for shopping list (Phase 8d).
+
+    GET   → full list
+    POST  → add one or more items { items: [...] } or a single { name, quantity? }
+    PATCH → toggle checked for an item { id, checked }
+    DELETE → remove item by ?id=<uuid> or body { "id": "<uuid>" }
+    """
+
+    url = "/api/kitchen_cooking_engine/shopping_list"
+    name = "api:kitchen_cooking_engine:shopping_list"
+    requires_auth = True
+
+    async def get(self, request: web.Request) -> web.Response:
+        """Return the full shopping list."""
+        hass = request.app["hass"]
+        items = await async_load_shopping_list(hass)
+        return self.json({"items": items, "count": len(items)})
+
+    async def post(self, request: web.Request) -> web.Response:
+        """Add one or more items to the shopping list."""
+        hass = request.app["hass"]
+        try:
+            data = await request.json()
+            existing = await async_load_shopping_list(hass)
+
+            # Accept either { items: [...] } or a single item dict
+            raw_items = data.get("items") if "items" in data else [data]
+            added = []
+            for raw in raw_items:
+                name = (raw.get("name") or "").strip()
+                if not name:
+                    continue
+                item = {
+                    "id": str(_uuid_mod.uuid4()),
+                    "name": name,
+                    "quantity": raw.get("quantity", ""),
+                    "checked": False,
+                }
+                existing.append(item)
+                added.append(item)
+
+            if not added:
+                return self.json({"status": "error", "message": "No valid items provided"})
+
+            success = await async_save_shopping_list(hass, existing)
+            if success:
+                return self.json({"status": "ok", "added": added})
+            return self.json({"status": "error", "message": "Failed to save"})
+        except Exception as e:
+            _LOGGER.error("Error adding shopping list items: %s", e)
+            return self.json({"status": "error", "message": "Failed to process request"})
+
+    async def patch(self, request: web.Request) -> web.Response:
+        """Toggle checked state for a shopping list item."""
+        hass = request.app["hass"]
+        try:
+            data = await request.json()
+            item_id = data.get("id")
+            if not item_id:
+                return self.json({"status": "error", "message": "id is required"})
+
+            items = await async_load_shopping_list(hass)
+            found = False
+            for item in items:
+                if item.get("id") == item_id:
+                    # Use explicit checked value if provided, otherwise toggle
+                    if "checked" in data:
+                        item["checked"] = bool(data["checked"])
+                    else:
+                        item["checked"] = not item.get("checked", False)
+                    found = True
+                    break
+
+            if not found:
+                return self.json({"status": "error", "message": "Item not found"})
+
+            success = await async_save_shopping_list(hass, items)
+            if success:
+                return self.json({"status": "ok"})
+            return self.json({"status": "error", "message": "Failed to save"})
+        except Exception as e:
+            _LOGGER.error("Error patching shopping list item: %s", e)
+            return self.json({"status": "error", "message": "Failed to process request"})
+
+    async def delete(self, request: web.Request) -> web.Response:
+        """Remove an item from the shopping list by id."""
+        hass = request.app["hass"]
+        try:
+            item_id = request.rel_url.query.get("id")
+            if not item_id:
+                try:
+                    body = await request.json()
+                    item_id = body.get("id")
+                except Exception:
+                    pass
+            if not item_id:
+                return self.json({"status": "error", "message": "id is required"})
+
+            items = await async_load_shopping_list(hass)
+            new_items = [i for i in items if i.get("id") != item_id]
+            if len(new_items) == len(items):
+                return self.json({"status": "error", "message": "Item not found"})
+
+            success = await async_save_shopping_list(hass, new_items)
+            if success:
+                return self.json({"status": "ok"})
+            return self.json({"status": "error", "message": "Failed to save"})
+        except Exception as e:
+            _LOGGER.error("Error deleting shopping list item: %s", e)
+            return self.json({"status": "error", "message": "Failed to process request"})

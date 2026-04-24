@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.0.05 - Restore on-the-fly target temp adjustment during active MEATER cook
+Last Change: v0.6.1.13 - Chores: version bump, fill pork ribs/roasts recipe stubs, remove unverifiable page numbers from cookbook citations
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "257"
+PANEL_VERSION = "272"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

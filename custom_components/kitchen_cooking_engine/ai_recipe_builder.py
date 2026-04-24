@@ -288,6 +288,9 @@ class AIRecipeBuilder:
         cuisines: Optional[List[str]] = None,
         language: str = "en",
         measurement_system: str = "us",
+        compulsory_ingredients: Optional[List[str]] = None,
+        cooking_mode: str = "A",
+        shelf_items: Optional[List[str]] = None,
     ) -> List[AIRecipeSuggestion]:
         """Generate 4 recipe suggestions from AI.
         
@@ -303,6 +306,10 @@ class AIRecipeBuilder:
             cuisines: Optional list of cuisine/region IDs for fusion cooking
             language: UI language code ('sv', 'en')
             measurement_system: Measurement system ('se', 'uk', 'us')
+            compulsory_ingredients: Ingredients that MUST appear in every recipe
+            cooking_mode: 'A' (ignore shelf), 'B' (cook now — shelf only),
+                          'C' (cook later — add shopping list step)
+            shelf_items: Items currently on the user's shelf (used for modes B & C)
         
         Returns:
             List of 4 recipe suggestions
@@ -323,6 +330,9 @@ class AIRecipeBuilder:
             cuisines=cuisines,
             language=language,
             measurement_system=measurement_system,
+            compulsory_ingredients=compulsory_ingredients or [],
+            cooking_mode=cooking_mode,
+            shelf_items=shelf_items or [],
         )
         
         # Call OpenAI via conversation integration
@@ -542,6 +552,9 @@ class AIRecipeBuilder:
         main_appliance_id: Optional[str] = None,
         language: str = "en",
         measurement_system: str = "us",
+        compulsory_ingredients: Optional[List[str]] = None,
+        cooking_mode: str = "A",
+        shelf_items: Optional[List[str]] = None,
     ) -> str:
         """Build prompt for recipe suggestions.
         
@@ -665,6 +678,44 @@ class AIRecipeBuilder:
             else:
                 cuisine_hint = f"\nCuisine fusion: combine elements from {', '.join(cuisine_names)} — blend authentic local traditions from each cuisine. Each cuisine's contribution should reflect how it is cooked in its home country, not Westernized versions."
         
+        # --- Phase 8a: Compulsory ingredients directive ---
+        compulsory_directive = ""
+        if compulsory_ingredients:
+            compulsory_directive = (
+                f"\nCRITICAL RULE — COMPULSORY INGREDIENTS:\n"
+                f"The recipe MUST use ALL of the following ingredients: "
+                f"{', '.join(compulsory_ingredients)}. "
+                f"Every single one of these ingredients MUST appear in every suggested recipe. "
+                f"This is a hard requirement — do NOT omit any of them."
+            )
+
+        # --- Phase 8c: Cooking mode directives ---
+        mode_directive = ""
+        effective_shelf = list(shelf_items or [])
+        if cooking_mode == "B" and effective_shelf:
+            # Case-insensitive deduplication for the combined pool
+            seen_lower: Set[str] = set()
+            combined: List[str] = []
+            for ing in list(ingredients) + effective_shelf:
+                key = ing.lower()
+                if key not in seen_lower:
+                    seen_lower.add(key)
+                    combined.append(ing)
+            mode_directive = (
+                f"\nCRITICAL RULE — COOK NOW (Mode B):\n"
+                f"Use ONLY the following ingredients and the user's available shelf items. "
+                f"Do NOT include any ingredient the user doesn't have. "
+                f"Combined available ingredient pool: {', '.join(combined)}."
+            )
+        elif cooking_mode == "C" and effective_shelf:
+            mode_directive = (
+                f"\nCOOK LATER (Mode C):\n"
+                f"The user has these items on their shelf: {', '.join(effective_shelf)}. "
+                f"You MAY suggest recipes that need additional ingredients. "
+                f"For each recipe, note which of the main_ingredients are NOT currently "
+                f"available on the shelf — the app will generate a shopping list automatically."
+            )
+
         # Build the ingredients line, injecting the primary appliance pseudo-ingredient
         # first so the AI sees it as a hard requirement alongside the food ingredients.
         all_ingredients = list(ingredients)
@@ -675,7 +726,7 @@ class AIRecipeBuilder:
         language_directive = self._build_language_directive(language, measurement_system)
 
         prompt = f"""You are a professional chef creating recipes for a home kitchen.
-{primary_appliance_directive}{language_directive}
+{primary_appliance_directive}{language_directive}{compulsory_directive}{mode_directive}
 Available ingredients: {', '.join(all_ingredients)}
 Also assume basic staples are available: cooking oil, butter, salt, black pepper, sugar, vinegar.
 Cooking style: {cooking_style.replace('_', ' ')}

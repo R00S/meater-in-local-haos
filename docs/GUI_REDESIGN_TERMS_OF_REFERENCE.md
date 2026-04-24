@@ -111,7 +111,7 @@ These features apply system-wide across all paths and cook types:
 **Implementation:**
 - All UI text, labels, buttons, and messages must be translatable
 - Language selector in system settings
-- **Default language:** Based on Home Assistant's configured language
+- **Default language:** Defaults to English; user selects language from the welcome screen settings
 - **Implemented languages:** Swedish (sv), English (en)
 - **Future extensibility:** Architecture supports adding additional languages through translation files
 

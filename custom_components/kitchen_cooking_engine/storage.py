@@ -27,6 +27,8 @@ COOK_HISTORY_FILE = "cook_history.json"
 USER_PREFERENCES_FILE = "user_preferences.json"
 AI_SETTINGS_FILE = "ai_settings.json"
 ACTIVE_RECIPE_COOK_FILE = "active_recipe_cook.json"
+SHELF_INVENTORY_FILE = "shelf_inventory.json"
+SHOPPING_LIST_FILE = "shopping_list.json"
 
 # Default AI settings
 DEFAULT_AI_AGENT_ID = "extended_openai_conversation_2"
@@ -362,3 +364,85 @@ async def async_clear_active_recipe_cook(hass: HomeAssistant) -> bool:
             return False
 
     return await hass.async_add_executor_job(_clear)
+
+
+# --------------------------------------------------------------------------- #
+# Phase 8b: Shelf Inventory
+# --------------------------------------------------------------------------- #
+
+async def async_load_shelf_inventory(hass: HomeAssistant) -> list[dict]:
+    """Load shelf inventory from storage.
+
+    Each item: { id, name, location (fridge|larder|freezer|spices), quantity? }
+    """
+    storage_path = _get_storage_path(hass, SHELF_INVENTORY_FILE)
+
+    def _load():
+        if not storage_path.exists():
+            return []
+        try:
+            with open(storage_path, "r", encoding="utf-8") as fh:
+                data = json.load(fh)
+                return data if isinstance(data, list) else []
+        except (json.JSONDecodeError, IOError) as exc:
+            _LOGGER.warning("Failed to load shelf inventory: %s", exc)
+            return []
+
+    return await hass.async_add_executor_job(_load)
+
+
+async def async_save_shelf_inventory(hass: HomeAssistant, inventory: list[dict]) -> bool:
+    """Overwrite shelf inventory in storage."""
+    storage_path = _get_storage_path(hass, SHELF_INVENTORY_FILE)
+
+    def _save():
+        try:
+            with open(storage_path, "w", encoding="utf-8") as fh:
+                json.dump(inventory, fh, indent=2, default=str)
+            return True
+        except IOError as exc:
+            _LOGGER.error("Failed to save shelf inventory: %s", exc)
+            return False
+
+    return await hass.async_add_executor_job(_save)
+
+
+# --------------------------------------------------------------------------- #
+# Phase 8d: Shopping List
+# --------------------------------------------------------------------------- #
+
+async def async_load_shopping_list(hass: HomeAssistant) -> list[dict]:
+    """Load shopping list from storage.
+
+    Each item: { id, name, quantity?, checked }
+    """
+    storage_path = _get_storage_path(hass, SHOPPING_LIST_FILE)
+
+    def _load():
+        if not storage_path.exists():
+            return []
+        try:
+            with open(storage_path, "r", encoding="utf-8") as fh:
+                data = json.load(fh)
+                return data if isinstance(data, list) else []
+        except (json.JSONDecodeError, IOError) as exc:
+            _LOGGER.warning("Failed to load shopping list: %s", exc)
+            return []
+
+    return await hass.async_add_executor_job(_load)
+
+
+async def async_save_shopping_list(hass: HomeAssistant, items: list[dict]) -> bool:
+    """Overwrite shopping list in storage."""
+    storage_path = _get_storage_path(hass, SHOPPING_LIST_FILE)
+
+    def _save():
+        try:
+            with open(storage_path, "w", encoding="utf-8") as fh:
+                json.dump(items, fh, indent=2, default=str)
+            return True
+        except IOError as exc:
+            _LOGGER.error("Failed to save shopping list: %s", exc)
+            return False
+
+    return await hass.async_add_executor_job(_save)

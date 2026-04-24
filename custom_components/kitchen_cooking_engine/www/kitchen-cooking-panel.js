@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 23 Apr 2026, 17:59 CET
+ * AUTO-GENERATED: 24 Apr 2026, 05:47 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 23 Apr 2026, 17:59 CET
+// Last generated: 24 Apr 2026, 05:47 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -52,7 +52,8 @@ const DONENESS_OPTIONS = {
     "icon": "🔴",
     "description": "Cool red center",
     "temp_c": 49,
-    "temp_f": 120
+    "temp_f": 120,
+    "safety_level": "unsafe"
   },
   "medium_rare": {
     "value": "medium_rare",
@@ -60,7 +61,8 @@ const DONENESS_OPTIONS = {
     "icon": "🟠",
     "description": "Warm red center",
     "temp_c": 54,
-    "temp_f": 130
+    "temp_f": 130,
+    "safety_level": "caution"
   },
   "medium": {
     "value": "medium",
@@ -68,7 +70,8 @@ const DONENESS_OPTIONS = {
     "icon": "🟡",
     "description": "Warm pink center",
     "temp_c": 60,
-    "temp_f": 140
+    "temp_f": 140,
+    "safety_level": "caution"
   },
   "medium_well": {
     "value": "medium_well",
@@ -76,7 +79,8 @@ const DONENESS_OPTIONS = {
     "icon": "🟤",
     "description": "Slightly pink center",
     "temp_c": 66,
-    "temp_f": 150
+    "temp_f": 150,
+    "safety_level": "safe"
   },
   "well_done": {
     "value": "well_done",
@@ -84,7 +88,8 @@ const DONENESS_OPTIONS = {
     "icon": "⚪",
     "description": "No pink, fully cooked",
     "temp_c": 71,
-    "temp_f": 160
+    "temp_f": 160,
+    "safety_level": "safe"
   },
   "pulled": {
     "value": "pulled",
@@ -92,7 +97,8 @@ const DONENESS_OPTIONS = {
     "icon": "🍖",
     "description": "Shreddable, collagen broken down",
     "temp_c": 93,
-    "temp_f": 200
+    "temp_f": 200,
+    "safety_level": "safe"
   },
   "done": {
     "value": "done",
@@ -100,7 +106,8 @@ const DONENESS_OPTIONS = {
     "icon": "✓",
     "description": "Cooked through",
     "temp_c": 71,
-    "temp_f": 160
+    "temp_f": 160,
+    "safety_level": "safe"
   },
   "crispy": {
     "value": "crispy",
@@ -108,7 +115,8 @@ const DONENESS_OPTIONS = {
     "icon": "🥓",
     "description": "Crispy and rendered",
     "temp_c": 90,
-    "temp_f": 195
+    "temp_f": 195,
+    "safety_level": "safe"
   },
   "heated_through": {
     "value": "heated_through",
@@ -116,7 +124,8 @@ const DONENESS_OPTIONS = {
     "icon": "♨️",
     "description": "Heated through",
     "temp_c": 60,
-    "temp_f": 140
+    "temp_f": 140,
+    "safety_level": "safe"
   },
   "safe": {
     "value": "safe",
@@ -124,7 +133,17 @@ const DONENESS_OPTIONS = {
     "icon": "✅",
     "description": "Cooked through, safe to eat",
     "temp_c": 74,
-    "temp_f": 165
+    "temp_f": 165,
+    "safety_level": "safe"
+  },
+  "thigh_optimal": {
+    "value": "thigh_optimal",
+    "name": "Thigh Optimal",
+    "icon": "🍗",
+    "description": "Thigh at 175°F — tender, juicy dark meat (Serious Eats/ATK)",
+    "temp_c": 79,
+    "temp_f": 175,
+    "safety_level": "safe"
   },
   "dark_meat_optimal": {
     "value": "dark_meat_optimal",
@@ -132,15 +151,53 @@ const DONENESS_OPTIONS = {
     "icon": "🍗",
     "description": "Dark meat optimal texture",
     "temp_c": 77,
-    "temp_f": 170
+    "temp_f": 170,
+    "safety_level": "safe"
+  },
+  "leg_rendered": {
+    "value": "leg_rendered",
+    "name": "Leg Rendered",
+    "icon": "🦆",
+    "description": "Leg at 180°F — fat fully rendered, deeply tender",
+    "temp_c": 82,
+    "temp_f": 180,
+    "safety_level": "safe"
+  },
+  "confit": {
+    "value": "confit",
+    "name": "Confit",
+    "icon": "🦆",
+    "description": "Fall-off-bone tender, traditionally confited",
+    "temp_c": 88,
+    "temp_f": 190,
+    "safety_level": "safe"
+  },
+  "thigh_rendered": {
+    "value": "thigh_rendered",
+    "name": "Thigh Rendered",
+    "icon": "🦢",
+    "description": "Thigh at 183°F — fat fully rendered, deeply tender (Christmas goose tradition)",
+    "temp_c": 84,
+    "temp_f": 183,
+    "safety_level": "safe"
+  },
+  "just_cooked": {
+    "value": "just_cooked",
+    "name": "Just Cooked",
+    "icon": "🦐",
+    "description": "Just opaque and curled — 120°F (ThermoWorks preferred)",
+    "temp_c": 49,
+    "temp_f": 120,
+    "safety_level": "caution"
   },
   "tender": {
     "value": "tender",
     "name": "Tender",
     "icon": "🥔",
-    "description": "Fully tender, fork-pierces easily",
-    "temp_c": 95,
-    "temp_f": 203
+    "description": "135°F — silky, tender lobster meat (chef preferred)",
+    "temp_c": 57,
+    "temp_f": 135,
+    "safety_level": "caution"
   },
   "caramelized": {
     "value": "caramelized",
@@ -148,7 +205,8 @@ const DONENESS_OPTIONS = {
     "icon": "🧅",
     "description": "Golden brown, enhanced sweetness",
     "temp_c": 160,
-    "temp_f": 320
+    "temp_f": 320,
+    "safety_level": "safe"
   },
   "crisp_tender": {
     "value": "crisp_tender",
@@ -156,7 +214,8 @@ const DONENESS_OPTIONS = {
     "icon": "🥦",
     "description": "Slightly firm with some bite",
     "temp_c": 85,
-    "temp_f": 185
+    "temp_f": 185,
+    "safety_level": "safe"
   },
   "charred": {
     "value": "charred",
@@ -164,7 +223,8 @@ const DONENESS_OPTIONS = {
     "icon": "🔥",
     "description": "Charred exterior with smoky flavor",
     "temp_c": 200,
-    "temp_f": 390
+    "temp_f": 390,
+    "safety_level": "safe"
   }
 };
 
@@ -176,7 +236,8 @@ const SWEDISH_DONENESS_OPTIONS = {
     "icon": "🔴",
     "description": "Blodig - Sval röd kärna",
     "temp_c": 50,
-    "temp_f": 122
+    "temp_f": 122,
+    "safety_level": "unsafe"
   },
   "medium_rare": {
     "value": "medium_rare",
@@ -184,7 +245,8 @@ const SWEDISH_DONENESS_OPTIONS = {
     "icon": "🟠",
     "description": "Medium Rare - Rosa kärna",
     "temp_c": 54,
-    "temp_f": 129
+    "temp_f": 129,
+    "safety_level": "caution"
   },
   "medium": {
     "value": "medium",
@@ -192,7 +254,8 @@ const SWEDISH_DONENESS_OPTIONS = {
     "icon": "🟡",
     "description": "Medium - Varm rosa kärna",
     "temp_c": 58,
-    "temp_f": 136
+    "temp_f": 136,
+    "safety_level": "caution"
   },
   "medium_well": {
     "value": "medium_well",
@@ -200,7 +263,8 @@ const SWEDISH_DONENESS_OPTIONS = {
     "icon": "🟤",
     "description": "Medium Well - Nästan genomstekt",
     "temp_c": 64,
-    "temp_f": 147
+    "temp_f": 147,
+    "safety_level": "safe"
   },
   "genomstekt": {
     "value": "genomstekt",
@@ -208,7 +272,8 @@ const SWEDISH_DONENESS_OPTIONS = {
     "icon": "⚪",
     "description": "Genomstekt - Ingen rosa färg",
     "temp_c": 70,
-    "temp_f": 158
+    "temp_f": 158,
+    "safety_level": "safe"
   },
   "långkokt": {
     "value": "långkokt",
@@ -216,7 +281,62 @@ const SWEDISH_DONENESS_OPTIONS = {
     "icon": "🍖",
     "description": "Långkokt - Strimlningsbart",
     "temp_c": 92,
-    "temp_f": 198
+    "temp_f": 198,
+    "safety_level": "safe"
+  },
+  "confit": {
+    "value": "confit",
+    "name": "Confit",
+    "icon": "🦆",
+    "description": "Fall-off-bone tender, traditionally confited",
+    "temp_c": 88,
+    "temp_f": 190,
+    "safety_level": "safe"
+  },
+  "just_cooked": {
+    "value": "just_cooked",
+    "name": "Just Cooked",
+    "icon": "🦐",
+    "description": "Just opaque and curled — 120°F (ThermoWorks preferred)",
+    "temp_c": 49,
+    "temp_f": 120,
+    "safety_level": "caution"
+  },
+  "tender": {
+    "value": "tender",
+    "name": "Tender",
+    "icon": "🥔",
+    "description": "135°F — silky, tender lobster meat (chef preferred)",
+    "temp_c": 57,
+    "temp_f": 135,
+    "safety_level": "caution"
+  },
+  "caramelized": {
+    "value": "caramelized",
+    "name": "Caramelized",
+    "icon": "🧅",
+    "description": "Golden brown, enhanced sweetness",
+    "temp_c": 160,
+    "temp_f": 320,
+    "safety_level": "safe"
+  },
+  "crisp_tender": {
+    "value": "crisp_tender",
+    "name": "Crisp Tender",
+    "icon": "🥦",
+    "description": "Slightly firm with some bite",
+    "temp_c": 85,
+    "temp_f": 185,
+    "safety_level": "safe"
+  },
+  "charred": {
+    "value": "charred",
+    "name": "Charred",
+    "icon": "🔥",
+    "description": "Charred exterior with smoky flavor",
+    "temp_c": 200,
+    "temp_f": 390,
+    "safety_level": "safe"
   }
 };
 
@@ -245,7 +365,27 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "pan_fry",
+                  "oven_roast",
+                  "sous_vide",
+                  "air_fryer",
+                  "grill",
+                  "charcoal_grill"
+                ],
+                "method_doneness": {
+                  "sous_vide": "medium_rare"
+                },
+                "method_doneness_options": {
+                  "sous_vide": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ]
+                }
               },
               {
                 "id": 101,
@@ -256,7 +396,20 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "pan_fry",
+                  "oven_roast",
+                  "sous_vide",
+                  "air_fryer",
+                  "grill",
+                  "charcoal_grill"
+                ],
+                "method_doneness": {
+                  "sous_vide": "medium_rare"
+                }
               },
               {
                 "id": 102,
@@ -267,6 +420,16 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "pan_fry",
+                  "oven_roast",
+                  "sous_vide",
+                  "air_fryer",
+                  "grill",
+                  "charcoal_grill"
                 ]
               },
               {
@@ -278,7 +441,27 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "pan_fry",
+                  "oven_roast",
+                  "sous_vide",
+                  "air_fryer",
+                  "grill",
+                  "charcoal_grill"
+                ],
+                "method_doneness": {
+                  "sous_vide": "medium_rare"
+                },
+                "method_doneness_options": {
+                  "sous_vide": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ]
+                }
               },
               {
                 "id": 104,
@@ -289,6 +472,14 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast",
+                  "grill",
+                  "charcoal_grill",
+                  "air_fryer"
                 ]
               },
               {
@@ -299,6 +490,15 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "pan_fry",
+                  "grill",
+                  "charcoal_grill",
+                  "oven_roast",
+                  "sous_vide"
                 ]
               },
               {
@@ -308,6 +508,13 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "pan_fry",
+                  "grill",
+                  "charcoal_grill"
                 ]
               },
               {
@@ -319,6 +526,16 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "pan_fry",
+                  "grill",
+                  "charcoal_grill",
+                  "oven_roast",
+                  "sous_vide",
+                  "air_fryer"
                 ]
               },
               {
@@ -328,6 +545,12 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "charcoal_grill",
+                  "pan_fry"
                 ]
               },
               {
@@ -339,6 +562,15 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill",
+                  "charcoal_grill",
+                  "oven_roast",
+                  "smoker",
+                  "sous_vide"
                 ]
               },
               {
@@ -350,7 +582,25 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
-                ]
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill",
+                  "charcoal_grill",
+                  "oven_roast",
+                  "sous_vide"
+                ],
+                "method_doneness": {
+                  "sous_vide": "medium_rare"
+                },
+                "method_doneness_options": {
+                  "sous_vide": [
+                    "rare",
+                    "medium_rare",
+                    "medium"
+                  ]
+                }
               },
               {
                 "id": 111,
@@ -361,6 +611,13 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "charcoal_grill",
+                  "grill",
+                  "pan_sear",
+                  "oven_roast"
                 ]
               }
             ]
@@ -378,6 +635,10 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -388,6 +649,10 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -398,6 +663,12 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -408,6 +679,11 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise"
                 ]
               },
               {
@@ -419,6 +695,10 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -429,6 +709,12 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -439,6 +725,12 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -449,6 +741,12 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast",
+                  "pan_sear",
+                  "grill"
                 ]
               },
               {
@@ -456,6 +754,12 @@ const MEAT_CATEGORIES = {
                 "name": "Chuck",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker",
+                  "oven_roast"
                 ]
               },
               {
@@ -467,6 +771,10 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               }
             ]
@@ -480,6 +788,12 @@ const MEAT_CATEGORIES = {
                 "name": "Chuck Roast / Pot Roast",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker",
+                  "oven_roast"
                 ]
               },
               {
@@ -487,6 +801,13 @@ const MEAT_CATEGORIES = {
                 "name": "Brisket",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "smoker",
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -494,6 +815,13 @@ const MEAT_CATEGORIES = {
                 "name": "Short Ribs",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker",
+                  "oven_roast",
+                  "smoker"
                 ]
               },
               {
@@ -501,6 +829,11 @@ const MEAT_CATEGORIES = {
                 "name": "Beef Shank / Osso Buco",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
                 ]
               }
             ]
@@ -514,6 +847,13 @@ const MEAT_CATEGORIES = {
                 "name": "Beef Burger / Ground Beef Patty",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry",
+                  "charcoal_grill",
+                  "air_fryer"
                 ]
               },
               {
@@ -521,6 +861,10 @@ const MEAT_CATEGORIES = {
                 "name": "Meatloaf",
                 "doneness": [
                   "done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -528,6 +872,12 @@ const MEAT_CATEGORIES = {
                 "name": "Burger",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry",
+                  "air_fryer"
                 ]
               },
               {
@@ -535,6 +885,10 @@ const MEAT_CATEGORIES = {
                 "name": "Meatloaf",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -543,6 +897,11 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "pan_sear"
                 ]
               },
               {
@@ -550,6 +909,11 @@ const MEAT_CATEGORIES = {
                 "name": "Tongue",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
                 ]
               }
             ]
@@ -564,6 +928,11 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "pan_sear"
                 ]
               },
               {
@@ -571,6 +940,11 @@ const MEAT_CATEGORIES = {
                 "name": "Beef Tongue",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -578,6 +952,11 @@ const MEAT_CATEGORIES = {
                 "name": "Beef Shin",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -585,6 +964,12 @@ const MEAT_CATEGORIES = {
                 "name": "Beef Rib",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "smoker",
+                  "braise"
                 ]
               }
             ]
@@ -613,6 +998,14 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "pan_sear",
+                  "grill",
+                  "oven_roast",
+                  "air_fryer"
                 ]
               },
               {
@@ -621,6 +1014,14 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast",
+                  "grill",
+                  "sous_vide",
+                  "air_fryer"
                 ]
               },
               {
@@ -629,6 +1030,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill",
+                  "air_fryer"
                 ]
               },
               {
@@ -637,6 +1044,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill",
+                  "braise"
                 ]
               },
               {
@@ -645,6 +1058,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill",
+                  "charcoal_grill"
                 ]
               }
             ]
@@ -659,6 +1078,11 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "slow_cooker"
                 ]
               },
               {
@@ -666,6 +1090,12 @@ const MEAT_CATEGORIES = {
                 "name": "Pork Shoulder / Boston Butt",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "slow_cooker",
+                  "smoker"
                 ]
               },
               {
@@ -674,6 +1104,17 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "well_done",
                   "crispy"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "air_fryer",
+                  "smoker",
+                  "slow_cooker",
+                  "sous_vide",
+                  "pan_fry",
+                  "grill"
                 ]
               },
               {
@@ -682,6 +1123,10 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -689,6 +1134,10 @@ const MEAT_CATEGORIES = {
                 "name": "Virginia Ham",
                 "doneness": [
                   "heated_through"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -697,6 +1146,10 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -705,6 +1158,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "well_done",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "air_fryer"
                 ]
               },
               {
@@ -712,6 +1171,12 @@ const MEAT_CATEGORIES = {
                 "name": "Baby Back Ribs",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "smoker"
                 ]
               },
               {
@@ -719,6 +1184,12 @@ const MEAT_CATEGORIES = {
                 "name": "Spare Ribs",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "smoker"
                 ]
               },
               {
@@ -726,6 +1197,12 @@ const MEAT_CATEGORIES = {
                 "name": "St. Louis Style Ribs",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "smoker"
                 ]
               }
             ]
@@ -739,6 +1216,13 @@ const MEAT_CATEGORIES = {
                 "name": "Baby Back Ribs",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "smoker",
+                  "air_fryer"
                 ]
               },
               {
@@ -746,6 +1230,12 @@ const MEAT_CATEGORIES = {
                 "name": "Spare Ribs",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "smoker"
                 ]
               },
               {
@@ -753,6 +1243,12 @@ const MEAT_CATEGORIES = {
                 "name": "St. Louis Style Ribs",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "smoker"
                 ]
               }
             ]
@@ -767,6 +1263,10 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -774,6 +1274,10 @@ const MEAT_CATEGORIES = {
                 "name": "Cured Ham (Pre-cooked)",
                 "doneness": [
                   "heated_through"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               }
             ]
@@ -787,6 +1291,11 @@ const MEAT_CATEGORIES = {
                 "name": "Pork Sausage",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill"
                 ]
               },
               {
@@ -794,6 +1303,11 @@ const MEAT_CATEGORIES = {
                 "name": "Ground Pork",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "braise"
                 ]
               }
             ]
@@ -807,6 +1321,12 @@ const MEAT_CATEGORIES = {
                 "name": "Pork Jowl / Guanciale",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "braise",
+                  "oven_roast"
                 ]
               },
               {
@@ -814,6 +1334,11 @@ const MEAT_CATEGORIES = {
                 "name": "Pork Cheek",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -821,6 +1346,11 @@ const MEAT_CATEGORIES = {
                 "name": "Pork Liver",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "pan_sear"
                 ]
               },
               {
@@ -828,6 +1358,11 @@ const MEAT_CATEGORIES = {
                 "name": "Pork Tongue",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -835,6 +1370,12 @@ const MEAT_CATEGORIES = {
                 "name": "Jowl",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "braise",
+                  "oven_roast"
                 ]
               },
               {
@@ -842,6 +1383,11 @@ const MEAT_CATEGORIES = {
                 "name": "Cheek",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -849,6 +1395,11 @@ const MEAT_CATEGORIES = {
                 "name": "Liver",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "pan_sear"
                 ]
               }
             ]
@@ -875,7 +1426,14 @@ const MEAT_CATEGORIES = {
                 "id": 300,
                 "name": "Whole Chicken",
                 "doneness": [
-                  "safe"
+                  "safe",
+                  "thigh_optimal"
+                ],
+                "recommended_doneness": "thigh_optimal",
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer",
+                  "grill"
                 ]
               },
               {
@@ -883,6 +1441,13 @@ const MEAT_CATEGORIES = {
                 "name": "Breast",
                 "doneness": [
                   "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast",
+                  "grill",
+                  "air_fryer"
                 ]
               },
               {
@@ -891,6 +1456,13 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "air_fryer",
+                  "pan_fry"
                 ]
               },
               {
@@ -899,6 +1471,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "air_fryer"
                 ]
               },
               {
@@ -906,6 +1484,11 @@ const MEAT_CATEGORIES = {
                 "name": "Ground",
                 "doneness": [
                   "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill"
                 ]
               },
               {
@@ -913,6 +1496,12 @@ const MEAT_CATEGORIES = {
                 "name": "Burger",
                 "doneness": [
                   "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry",
+                  "air_fryer"
                 ]
               },
               {
@@ -921,6 +1510,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "oven_roast",
+                  "grill"
                 ]
               }
             ]
@@ -934,6 +1529,14 @@ const MEAT_CATEGORIES = {
                 "name": "Chicken Breast",
                 "doneness": [
                   "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast",
+                  "grill",
+                  "air_fryer",
+                  "sous_vide"
                 ]
               },
               {
@@ -941,6 +1544,12 @@ const MEAT_CATEGORIES = {
                 "name": "Chicken Breast (Bone-in)",
                 "doneness": [
                   "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "air_fryer"
                 ]
               }
             ]
@@ -955,6 +1564,14 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "air_fryer",
+                  "pan_fry",
+                  "braise"
                 ]
               },
               {
@@ -963,6 +1580,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "air_fryer"
                 ]
               },
               {
@@ -971,6 +1594,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "oven_roast",
+                  "grill"
                 ]
               }
             ]
@@ -989,7 +1618,13 @@ const MEAT_CATEGORIES = {
                 "id": 330,
                 "name": "Whole Turkey",
                 "doneness": [
-                  "safe"
+                  "safe",
+                  "thigh_optimal"
+                ],
+                "recommended_doneness": "thigh_optimal",
+                "supported_methods": [
+                  "oven_roast",
+                  "smoker"
                 ]
               },
               {
@@ -997,6 +1632,11 @@ const MEAT_CATEGORIES = {
                 "name": "Turkey Breast",
                 "doneness": [
                   "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "smoker"
                 ]
               },
               {
@@ -1005,6 +1645,11 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "smoker"
                 ]
               },
               {
@@ -1013,6 +1658,10 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -1020,6 +1669,11 @@ const MEAT_CATEGORIES = {
                 "name": "Ground",
                 "doneness": [
                   "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill"
                 ]
               },
               {
@@ -1027,6 +1681,12 @@ const MEAT_CATEGORIES = {
                 "name": "Burger",
                 "doneness": [
                   "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry",
+                  "air_fryer"
                 ]
               }
             ]
@@ -1048,20 +1708,35 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "safe"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast",
+                  "sous_vide"
                 ]
               },
               {
                 "id": 341,
                 "name": "Whole Duck",
                 "doneness": [
-                  "safe"
+                  "safe",
+                  "leg_rendered"
+                ],
+                "recommended_doneness": "leg_rendered",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
                 "id": 342,
                 "name": "Duck Leg Confit",
                 "doneness": [
-                  "dark_meat_optimal"
+                  "confit"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               }
             ]
@@ -1080,7 +1755,12 @@ const MEAT_CATEGORIES = {
                 "id": 345,
                 "name": "Whole Goose",
                 "doneness": [
-                  "safe"
+                  "safe",
+                  "thigh_rendered"
+                ],
+                "recommended_doneness": "thigh_rendered",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -1090,6 +1770,11 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "safe"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast"
                 ]
               },
               {
@@ -1098,6 +1783,11 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise"
                 ]
               },
               {
@@ -1106,6 +1796,11 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "safe",
                   "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise"
                 ]
               }
             ]
@@ -1125,6 +1820,11 @@ const MEAT_CATEGORIES = {
                 "name": "Ground Chicken",
                 "doneness": [
                   "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill"
                 ]
               },
               {
@@ -1132,6 +1832,11 @@ const MEAT_CATEGORIES = {
                 "name": "Ground Turkey",
                 "doneness": [
                   "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill"
                 ]
               },
               {
@@ -1139,6 +1844,12 @@ const MEAT_CATEGORIES = {
                 "name": "Chicken Burger",
                 "doneness": [
                   "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry",
+                  "air_fryer"
                 ]
               },
               {
@@ -1146,6 +1857,12 @@ const MEAT_CATEGORIES = {
                 "name": "Turkey Burger",
                 "doneness": [
                   "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry",
+                  "air_fryer"
                 ]
               }
             ]
@@ -1175,6 +1892,14 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill",
+                  "oven_bake",
+                  "air_fryer",
+                  "sous_vide"
                 ]
               },
               {
@@ -1184,6 +1909,12 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast",
+                  "grill"
                 ]
               }
             ]
@@ -1205,6 +1936,11 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
                 ]
               }
             ]
@@ -1225,22 +1961,42 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "oven_roast",
+                  "air_fryer"
                 ]
               },
               {
                 "id": 421,
                 "name": "Halibut Fillet",
                 "doneness": [
+                  "medium_rare",
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast",
+                  "grill"
                 ]
               },
               {
                 "id": 422,
                 "name": "Sea Bass",
                 "doneness": [
+                  "medium_rare",
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast",
+                  "grill"
                 ]
               },
               {
@@ -1249,6 +2005,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill",
+                  "charcoal_grill"
                 ]
               },
               {
@@ -1257,6 +2019,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill",
+                  "air_fryer"
                 ]
               },
               {
@@ -1265,6 +2033,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "oven_roast",
+                  "air_fryer"
                 ]
               },
               {
@@ -1273,6 +2047,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "oven_roast",
+                  "steam"
                 ]
               },
               {
@@ -1282,6 +2062,12 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast",
+                  "grill"
                 ]
               }
             ]
@@ -1300,14 +2086,24 @@ const MEAT_CATEGORIES = {
                 "id": 430,
                 "name": "Shrimp",
                 "doneness": [
+                  "just_cooked",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry"
                 ]
               },
               {
                 "id": 431,
                 "name": "Lobster Tail",
                 "doneness": [
+                  "tender",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill"
                 ]
               },
               {
@@ -1316,6 +2112,10 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "medium_rare",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear"
                 ]
               }
             ]
@@ -1347,6 +2147,11 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill"
                 ]
               },
               {
@@ -1357,6 +2162,11 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill"
                 ]
               },
               {
@@ -1364,6 +2174,12 @@ const MEAT_CATEGORIES = {
                 "name": "Lamb Shoulder",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -1374,6 +2190,10 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -1381,6 +2201,11 @@ const MEAT_CATEGORIES = {
                 "name": "Lamb Brisket",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -1392,6 +2217,12 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "pan_sear"
                 ]
               },
               {
@@ -1399,6 +2230,11 @@ const MEAT_CATEGORIES = {
                 "name": "Lamb Shank",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -1426,6 +2262,11 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
                 ]
               },
               {
@@ -1436,6 +2277,11 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
                 ]
               },
               {
@@ -1446,6 +2292,12 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear",
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -1456,6 +2308,11 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill"
                 ]
               }
             ]
@@ -1469,6 +2326,11 @@ const MEAT_CATEGORIES = {
                 "name": "Ground Lamb",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill"
                 ]
               },
               {
@@ -1476,6 +2338,11 @@ const MEAT_CATEGORIES = {
                 "name": "Lamb Kofta / Kebab",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast"
                 ]
               },
               {
@@ -1483,6 +2350,11 @@ const MEAT_CATEGORIES = {
                 "name": "Lamb Burger",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
                 ]
               },
               {
@@ -1490,6 +2362,11 @@ const MEAT_CATEGORIES = {
                 "name": "Shank",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -1500,6 +2377,11 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast",
+                  "grill"
                 ]
               },
               {
@@ -1507,6 +2389,12 @@ const MEAT_CATEGORIES = {
                 "name": "Shoulder",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -1517,6 +2405,10 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -1524,6 +2416,11 @@ const MEAT_CATEGORIES = {
                 "name": "Kofta / Kebab",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast"
                 ]
               }
             ]
@@ -1554,6 +2451,12 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill",
+                  "charcoal_grill"
                 ]
               },
               {
@@ -1563,6 +2466,11 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise"
                 ]
               },
               {
@@ -1572,6 +2480,12 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast",
+                  "sous_vide"
                 ]
               },
               {
@@ -1581,6 +2495,11 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise"
                 ]
               },
               {
@@ -1588,6 +2507,12 @@ const MEAT_CATEGORIES = {
                 "name": "Shoulder",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
                 ]
               }
             ]
@@ -1607,6 +2532,11 @@ const MEAT_CATEGORIES = {
                 "name": "Wild Boar Chop",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
                 ]
               },
               {
@@ -1614,6 +2544,12 @@ const MEAT_CATEGORIES = {
                 "name": "Wild Boar Shoulder",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
                 ]
               }
             ]
@@ -1636,6 +2572,12 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill",
+                  "charcoal_grill"
                 ]
               },
               {
@@ -1643,6 +2585,11 @@ const MEAT_CATEGORIES = {
                 "name": "Bison Burger",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
                 ]
               },
               {
@@ -1652,6 +2599,10 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               }
             ]
@@ -1674,6 +2625,11 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
                 ]
               },
               {
@@ -1683,6 +2639,10 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -1692,6 +2652,11 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast"
                 ]
               }
             ]
@@ -1714,6 +2679,11 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
                 ]
               },
               {
@@ -1723,6 +2693,11 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise"
                 ]
               }
             ]
@@ -1745,6 +2720,12 @@ const MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill",
+                  "charcoal_grill"
                 ]
               },
               {
@@ -1754,6 +2735,10 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -1761,6 +2746,11 @@ const MEAT_CATEGORIES = {
                 "name": "Burger",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
                 ]
               }
             ]
@@ -1782,6 +2772,11 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
                 ]
               },
               {
@@ -1791,6 +2786,11 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
                 ]
               }
             ]
@@ -1814,6 +2814,11 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
                 ]
               },
               {
@@ -1824,6 +2829,10 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -1831,6 +2840,12 @@ const MEAT_CATEGORIES = {
                 "name": "Mutton Shoulder",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -1838,6 +2853,12 @@ const MEAT_CATEGORIES = {
                 "name": "Shoulder",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
                 ]
               }
             ]
@@ -1859,6 +2880,11 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
                 ]
               },
               {
@@ -1868,6 +2894,11 @@ const MEAT_CATEGORIES = {
                   "rare",
                   "medium_rare",
                   "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
                 ]
               }
             ]
@@ -1890,6 +2921,11 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
                 ]
               },
               {
@@ -1900,6 +2936,12 @@ const MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -1907,6 +2949,12 @@ const MEAT_CATEGORIES = {
                 "name": "Goat Shoulder",
                 "doneness": [
                   "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
                 ]
               },
               {
@@ -1914,6 +2962,51 @@ const MEAT_CATEGORIES = {
                 "name": "Leg Roast",
                 "doneness": [
                   "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "name": "rabbit",
+        "cutTypes": [
+          {
+            "id": 695,
+            "name": "Rabbit",
+            "cuts": [
+              {
+                "id": 693,
+                "name": "Rabbit Saddle",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 694,
+                "name": "Rabbit Legs",
+                "doneness": [
+                  "well_done",
+                  "dark_meat_optimal",
+                  "pulled"
+                ],
+                "recommended_doneness": "dark_meat_optimal",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise"
                 ]
               }
             ]
@@ -1941,6 +3034,10 @@ const MEAT_CATEGORIES = {
                 "name": "Baked Potato",
                 "doneness": [
                   "tender"
+                ],
+                "supported_methods": [
+                  "oven_bake",
+                  "air_fryer"
                 ]
               },
               {
@@ -1948,6 +3045,10 @@ const MEAT_CATEGORIES = {
                 "name": "Roasted Potatoes",
                 "doneness": [
                   "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer"
                 ]
               },
               {
@@ -1956,6 +3057,11 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "tender",
                   "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer",
+                  "saute"
                 ]
               },
               {
@@ -1964,6 +3070,10 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "tender",
                   "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer"
                 ]
               },
               {
@@ -1971,6 +3081,9 @@ const MEAT_CATEGORIES = {
                 "name": "Roasted Beets",
                 "doneness": [
                   "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -1979,6 +3092,11 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "tender",
                   "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "oven_bake",
+                  "air_fryer"
                 ]
               }
             ]
@@ -1999,6 +3117,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "crisp_tender",
                   "tender"
+                ],
+                "supported_methods": [
+                  "steam",
+                  "oven_roast",
+                  "air_fryer",
+                  "saute"
                 ]
               },
               {
@@ -2007,6 +3131,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "tender",
                   "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer",
+                  "saute",
+                  "pan_fry"
                 ]
               },
               {
@@ -2015,6 +3145,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "crisp_tender",
                   "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "saute",
+                  "steam",
+                  "grill"
                 ]
               },
               {
@@ -2023,6 +3159,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "crisp_tender",
                   "tender"
+                ],
+                "supported_methods": [
+                  "steam",
+                  "saute",
+                  "boil",
+                  "oven_roast"
                 ]
               },
               {
@@ -2030,6 +3172,10 @@ const MEAT_CATEGORIES = {
                 "name": "Spinach",
                 "doneness": [
                   "tender"
+                ],
+                "supported_methods": [
+                  "saute",
+                  "steam"
                 ]
               }
             ]
@@ -2050,6 +3196,11 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "tender",
                   "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "saute",
+                  "grill"
                 ]
               },
               {
@@ -2057,6 +3208,10 @@ const MEAT_CATEGORIES = {
                 "name": "Caramelized Onions",
                 "doneness": [
                   "caramelized"
+                ],
+                "supported_methods": [
+                  "saute",
+                  "pan_fry"
                 ]
               },
               {
@@ -2065,6 +3220,9 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "tender",
                   "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast"
                 ]
               },
               {
@@ -2073,6 +3231,11 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "tender",
                   "caramelized"
+                ],
+                "supported_methods": [
+                  "braise",
+                  "saute",
+                  "oven_roast"
                 ]
               }
             ]
@@ -2093,6 +3256,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "crisp_tender",
                   "tender"
+                ],
+                "supported_methods": [
+                  "saute",
+                  "oven_roast",
+                  "air_fryer",
+                  "grill"
                 ]
               },
               {
@@ -2101,6 +3270,11 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "tender",
                   "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "steam",
+                  "pressure_cooker"
                 ]
               },
               {
@@ -2108,6 +3282,10 @@ const MEAT_CATEGORIES = {
                 "name": "Acorn Squash",
                 "doneness": [
                   "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "oven_bake"
                 ]
               },
               {
@@ -2115,6 +3293,10 @@ const MEAT_CATEGORIES = {
                 "name": "Spaghetti Squash",
                 "doneness": [
                   "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "oven_bake"
                 ]
               }
             ]
@@ -2135,6 +3317,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "tender",
                   "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer",
+                  "steam",
+                  "saute"
                 ]
               },
               {
@@ -2143,6 +3331,11 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "crisp_tender",
                   "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "saute"
                 ]
               }
             ]
@@ -2163,6 +3356,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "crisp_tender",
                   "charred"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "saute",
+                  "grill",
+                  "air_fryer"
                 ]
               }
             ]
@@ -2182,6 +3381,11 @@ const MEAT_CATEGORIES = {
                 "name": "Button/Cremini Mushrooms",
                 "doneness": [
                   "caramelized"
+                ],
+                "supported_methods": [
+                  "saute",
+                  "oven_roast",
+                  "grill"
                 ]
               },
               {
@@ -2190,6 +3394,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "tender",
                   "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "saute",
+                  "air_fryer"
                 ]
               }
             ]
@@ -2210,6 +3420,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "tender",
                   "charred"
+                ],
+                "supported_methods": [
+                  "boil",
+                  "steam",
+                  "grill",
+                  "oven_roast"
                 ]
               }
             ]
@@ -2230,6 +3446,12 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "tender",
                   "charred"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "air_fryer",
+                  "pan_fry"
                 ]
               }
             ]
@@ -2250,6 +3472,10 @@ const MEAT_CATEGORIES = {
                 "doneness": [
                   "tender",
                   "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "oven_broil"
                 ]
               }
             ]
@@ -2285,6 +3511,11 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "genomstekt"
+                ],
+                "supported_methods": [
+                  "pan_sear",
+                  "pan_fry",
+                  "grill"
                 ]
               },
               {
@@ -2380,6 +3611,39 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium"
                 ]
+              },
+              {
+                "id": 3000,
+                "name": "T-Bone / Porterhouse",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3140,
+                "name": "Skirt Steak / Kjolstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3141,
+                "name": "Tri-tip",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           },
@@ -2436,6 +3700,29 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_well",
                   "genomstekt"
                 ]
+              },
+              {
+                "id": 3001,
+                "name": "Revbensstek (Prime Rib)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3002,
+                "name": "Hel Oxfilé (Tenderloin Roast)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           },
@@ -2491,6 +3778,107 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "långkokt"
                 ]
+              },
+              {
+                "id": 3003,
+                "name": "Nötrevben (Short Ribs)",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
+              }
+            ]
+          },
+          {
+            "id": 2103,
+            "name": "Köttfärs",
+            "cuts": [
+              {
+                "id": 2730,
+                "name": "Hamburgare / Nötburgare",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry",
+                  "air_fryer"
+                ]
+              },
+              {
+                "id": 2731,
+                "name": "Köttfärs",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "braise"
+                ]
+              },
+              {
+                "id": 2732,
+                "name": "Köttfärslimpa",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 2104,
+            "name": "Inälvor",
+            "cuts": [
+              {
+                "id": 2740,
+                "name": "Nötlever",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": 2741,
+                "name": "Oxtunga",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": 2742,
+                "name": "Oxlägg",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": 3004,
+                "name": "Oxrev (Beef Rib)",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -2576,6 +3964,16 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "medium"
+              },
+              {
+                "id": 3142,
+                "name": "Fläskbogskiva",
+                "doneness": [
+                  "medium",
+                  "medium_well",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           },
@@ -2702,6 +4100,133 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "långkokt"
                 ]
+              },
+              {
+                "id": 3010,
+                "name": "Tunna revbensspjäll (Baby Back Ribs)",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3011,
+                "name": "Tjocka revbensspjäll (Spare Ribs)",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3012,
+                "name": "St. Louis-revben",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
+              }
+            ]
+          },
+          {
+            "id": 2203,
+            "name": "Skinka",
+            "cuts": [
+              {
+                "id": 2750,
+                "name": "Färsk skinka",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2751,
+                "name": "Rökt/rimmat skinka",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 2204,
+            "name": "Fläskfärs",
+            "cuts": [
+              {
+                "id": 2760,
+                "name": "Fläskkorv",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2761,
+                "name": "Fläskfärs",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "braise"
+                ]
+              }
+            ]
+          },
+          {
+            "id": 2205,
+            "name": "Inälvor",
+            "cuts": [
+              {
+                "id": 2770,
+                "name": "Griskind / Kindkött",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "braise",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2771,
+                "name": "Fläsklever",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": 2772,
+                "name": "Gristunga",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
+                ]
               }
             ]
           }
@@ -2762,6 +4287,36 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3020,
+                "name": "Kycklingbröst med ben",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3021,
+                "name": "Kycklingtrumma (Drumstick)",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3143,
+                "name": "Kycklingöverlår",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
               }
             ]
           }
@@ -2788,6 +4343,26 @@ const SWEDISH_MEAT_CATEGORIES = {
               {
                 "id": 2311,
                 "name": "Kalkonbröst",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3030,
+                "name": "Kalkonlår",
+                "doneness": [
+                  "medium",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3031,
+                "name": "Kalkon Överlår (Thigh)",
                 "doneness": [
                   "medium",
                   "genomstekt",
@@ -2829,6 +4404,137 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3040,
+                "name": "Ankconfit (Duck Leg Confit)",
+                "doneness": [
+                  "confit"
+                ],
+                "recommended_doneness": "well_done"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2033,
+        "name": "gås",
+        "cutTypes": [
+          {
+            "id": 2330,
+            "name": "Gås",
+            "cuts": [
+              {
+                "id": 2780,
+                "name": "Hel gås",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2781,
+                "name": "Gåsbröst",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2782,
+                "name": "Gåslår",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise"
+                ]
+              },
+              {
+                "id": 3050,
+                "name": "Gås Överlår (Thigh)",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2034,
+        "name": "fjäderfäfärs",
+        "cutTypes": [
+          {
+            "id": 2340,
+            "name": "Fjäderfäfärs",
+            "cuts": [
+              {
+                "id": 2790,
+                "name": "Kycklingfärs",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2791,
+                "name": "Kalkonfärs",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "pan_fry",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2792,
+                "name": "Kycklingburgare",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry",
+                  "air_fryer"
+                ]
+              },
+              {
+                "id": 3060,
+                "name": "Kalkanburgare",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry",
+                  "air_fryer"
+                ]
               }
             ]
           }
@@ -3061,6 +4767,113 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt"
                 ],
                 "recommended_doneness": "medium"
+              },
+              {
+                "id": 3070,
+                "name": "Havsabborre (Sea Bass)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              },
+              {
+                "id": 3071,
+                "name": "Svärdfisk",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3072,
+                "name": "Mahi-mahi",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3073,
+                "name": "Kolja (Haddock)",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3074,
+                "name": "Kummel (Hake)",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 3075,
+                "name": "Forell",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2044,
+        "name": "skaldjur",
+        "cutTypes": [
+          {
+            "id": 2440,
+            "name": "Skaldjur",
+            "cuts": [
+              {
+                "id": 2800,
+                "name": "Räkor",
+                "doneness": [
+                  "just_cooked",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": 2801,
+                "name": "Hummersvans",
+                "doneness": [
+                  "tender",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2802,
+                "name": "Pilgrimsmussla / Kammusslor",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "pan_sear"
+                ]
               }
             ]
           }
@@ -3295,6 +5108,45 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3080,
+                "name": "Lammbringa",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3081,
+                "name": "Lammlåg (Rump)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3082,
+                "name": "Lammlägg (Shank)",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3083,
+                "name": "Lammrev (Rib)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ]
               }
             ]
           },
@@ -3327,6 +5179,58 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3090,
+                "name": "Lammlånskotletter",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3091,
+                "name": "Lammkotlett (Cutlet)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare"
+              }
+            ]
+          },
+          {
+            "id": 2520,
+            "name": "Lammfärs",
+            "cuts": [
+              {
+                "id": 3092,
+                "name": "Lammfärs",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3093,
+                "name": "Lammkebab / Kofta",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3094,
+                "name": "Lammburgare",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -3399,6 +5303,34 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "medium"
+              },
+              {
+                "id": 3100,
+                "name": "Hjortlår",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare"
+              },
+              {
+                "id": 3101,
+                "name": "Hjortbog",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3144,
+                "name": "Hjortkarré (Loin)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           }
@@ -3488,6 +5420,16 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "medium"
+              },
+              {
+                "id": 3120,
+                "name": "Renkarré",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare"
               }
             ]
           }
@@ -3526,6 +5468,803 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "långkokt"
                 ],
                 "recommended_doneness": "långkokt"
+              },
+              {
+                "id": 3110,
+                "name": "Vildsvinsbog",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "well_done"
+              },
+              {
+                "id": 3145,
+                "name": "Vildsvinskotlett",
+                "doneness": [
+                  "medium_well",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "well_done"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2064,
+        "name": "kanin",
+        "cutTypes": [
+          {
+            "id": 2640,
+            "name": "Kanin",
+            "cuts": [
+              {
+                "id": 2640,
+                "name": "Kaninsadel",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt"
+              },
+              {
+                "id": 2641,
+                "name": "Kaninlår",
+                "doneness": [
+                  "genomstekt",
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2065,
+        "name": "bison",
+        "cutTypes": [
+          {
+            "id": 2650,
+            "name": "Bison",
+            "cuts": [
+              {
+                "id": 2810,
+                "name": "Bisonstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2811,
+                "name": "Bisonburgare",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": 2812,
+                "name": "Bisontek helstekt",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2066,
+        "name": "buffel",
+        "cutTypes": [
+          {
+            "id": 2660,
+            "name": "Buffel",
+            "cuts": [
+              {
+                "id": 2820,
+                "name": "Buffelstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2821,
+                "name": "Buffelburgare",
+                "doneness": [
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": 3130,
+                "name": "Buffelkarré (Roast)",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2067,
+        "name": "struts",
+        "cutTypes": [
+          {
+            "id": 2670,
+            "name": "Struts",
+            "cuts": [
+              {
+                "id": 2830,
+                "name": "Strutsstek",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2831,
+                "name": "Strutsfilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2068,
+        "name": "fårkött",
+        "cutTypes": [
+          {
+            "id": 2680,
+            "name": "Fårkött",
+            "cuts": [
+              {
+                "id": 2840,
+                "name": "Fårkotlett",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2841,
+                "name": "Fårlägg (helstekt)",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2842,
+                "name": "Fårskuldra",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2069,
+        "name": "känguru",
+        "cutTypes": [
+          {
+            "id": 2690,
+            "name": "Känguru",
+            "cuts": [
+              {
+                "id": 2850,
+                "name": "Kängurusteak",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2851,
+                "name": "Kängurufilé",
+                "doneness": [
+                  "blodig",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2071,
+        "name": "getkött",
+        "cutTypes": [
+          {
+            "id": 2691,
+            "name": "Getkött",
+            "cuts": [
+              {
+                "id": 2860,
+                "name": "Getkotlett",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "pan_sear",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2861,
+                "name": "Getlägg (helstekt)",
+                "doneness": [
+                  "medium",
+                  "genomstekt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise"
+                ]
+              },
+              {
+                "id": 2862,
+                "name": "Getskuldra",
+                "doneness": [
+                  "långkokt"
+                ],
+                "recommended_doneness": "genomstekt",
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "slow_cooker"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "grönsaker": {
+    "id": 2008,
+    "name": "Grönsaker",
+    "icon": "🍖",
+    "color": "#228B22",
+    "meats": [
+      {
+        "id": 2080,
+        "name": "rotfrukter",
+        "cutTypes": [
+          {
+            "id": 2800,
+            "name": "Rotfrukter",
+            "cuts": [
+              {
+                "id": 2900,
+                "name": "Bakad potatis",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_bake",
+                  "air_fryer"
+                ]
+              },
+              {
+                "id": 2901,
+                "name": "Rostade potatisar",
+                "doneness": [
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer"
+                ]
+              },
+              {
+                "id": 2902,
+                "name": "Rostade morötter",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer",
+                  "saute"
+                ]
+              },
+              {
+                "id": 2903,
+                "name": "Rostade palsternacka",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer"
+                ]
+              },
+              {
+                "id": 2904,
+                "name": "Rödbetor",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2905,
+                "name": "Rostade sötpotatis",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "oven_bake",
+                  "air_fryer"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2081,
+        "name": "gröna_grönsaker",
+        "cutTypes": [
+          {
+            "id": 2810,
+            "name": "Gröna grönsaker",
+            "cuts": [
+              {
+                "id": 2910,
+                "name": "Broccoli",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "steam",
+                  "oven_roast",
+                  "air_fryer",
+                  "saute"
+                ]
+              },
+              {
+                "id": 2911,
+                "name": "Brysselkål",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer",
+                  "saute",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": 2912,
+                "name": "Sparris",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "saute",
+                  "steam",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2913,
+                "name": "Haricots verts / Gröna bönor",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "steam",
+                  "saute",
+                  "boil",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2914,
+                "name": "Spenat",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "saute",
+                  "steam"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2082,
+        "name": "lökgrönsaker",
+        "cutTypes": [
+          {
+            "id": 2820,
+            "name": "Lökgrönsaker",
+            "cuts": [
+              {
+                "id": 2920,
+                "name": "Rostad lök",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "saute",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2921,
+                "name": "Karamelliserad lök",
+                "doneness": [
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "saute",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": 2922,
+                "name": "Rostad vitlök",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": 2923,
+                "name": "Purjolök",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "braise",
+                  "saute",
+                  "oven_roast"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2083,
+        "name": "squash",
+        "cutTypes": [
+          {
+            "id": 2830,
+            "name": "Squash",
+            "cuts": [
+              {
+                "id": 2930,
+                "name": "Zucchini",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "saute",
+                  "oven_roast",
+                  "air_fryer",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2931,
+                "name": "Butternutsquash",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "steam"
+                ]
+              },
+              {
+                "id": 2932,
+                "name": "Ekornsquash",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "oven_bake"
+                ]
+              },
+              {
+                "id": 2933,
+                "name": "Spagettisquash",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "oven_bake"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2084,
+        "name": "kålsläktet",
+        "cutTypes": [
+          {
+            "id": 2840,
+            "name": "Kålsläktet",
+            "cuts": [
+              {
+                "id": 2940,
+                "name": "Blomkål",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "air_fryer",
+                  "steam",
+                  "saute"
+                ]
+              },
+              {
+                "id": 2941,
+                "name": "Kål",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "braise",
+                  "saute"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2085,
+        "name": "paprika",
+        "cutTypes": [
+          {
+            "id": 2850,
+            "name": "Paprika",
+            "cuts": [
+              {
+                "id": 2950,
+                "name": "Paprika",
+                "doneness": [
+                  "crisp_tender",
+                  "charred"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "saute",
+                  "grill",
+                  "air_fryer"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2086,
+        "name": "svamp",
+        "cutTypes": [
+          {
+            "id": 2860,
+            "name": "Svamp",
+            "cuts": [
+              {
+                "id": 2960,
+                "name": "Champinjoner",
+                "doneness": [
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "saute",
+                  "oven_roast",
+                  "grill"
+                ]
+              },
+              {
+                "id": 2961,
+                "name": "Portobellosvamp",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "saute",
+                  "air_fryer"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2087,
+        "name": "majs",
+        "cutTypes": [
+          {
+            "id": 2870,
+            "name": "Majs",
+            "cuts": [
+              {
+                "id": 2970,
+                "name": "Majskolv",
+                "doneness": [
+                  "tender",
+                  "charred"
+                ],
+                "supported_methods": [
+                  "boil",
+                  "steam",
+                  "grill",
+                  "oven_roast"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2088,
+        "name": "aubergine",
+        "cutTypes": [
+          {
+            "id": 2880,
+            "name": "Aubergine",
+            "cuts": [
+              {
+                "id": 2980,
+                "name": "Aubergine",
+                "doneness": [
+                  "tender",
+                  "charred"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "grill",
+                  "air_fryer",
+                  "pan_fry"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2089,
+        "name": "tomater",
+        "cutTypes": [
+          {
+            "id": 2890,
+            "name": "Tomater",
+            "cuts": [
+              {
+                "id": 2990,
+                "name": "Rostade tomater",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast"
+                ]
               }
             ]
           }
@@ -12414,7 +15153,9 @@ const I18N_STRINGS = {
       "recent_desc": "View and restart previous AI recipes for this appliance",
       "no_history_appliance": "No cooking history for this appliance yet. Create your first AI recipe!",
       "incomplete_warning": "⚠️ Incomplete",
-      "incomplete_message": "Please complete ingredient and style selection"
+      "incomplete_message": "Please complete ingredient and style selection",
+      "compulsory_toggle_hint": "Click to mark as compulsory (⭐ must use)",
+      "compulsory_badge_label": "Compulsory"
     },
     "recipe_cook": {
       "overview_title": "📋 Recipe Overview",
@@ -12428,7 +15169,9 @@ const I18N_STRINGS = {
       "finish_cook": "✅ Finish Cook",
       "next_step": "Next Step ➡️",
       "prev_step": "⬅️ Previous",
-      "no_instructions": "No instructions available."
+      "no_instructions": "No instructions available.",
+      "start_meater_btn": "🌡️ Start MEATER Probe",
+      "meater_detach_hint": "Detach probe from this recipe (probe session keeps running)"
     },
     "rating": {
       "cook_complete": "🎉 Cook Complete!",
@@ -12443,7 +15186,8 @@ const I18N_STRINGS = {
       "notes_placeholder": "Any notes, modifications, or thoughts about this cook...",
       "both_required": "⚠️ Please provide both ratings to save this cook",
       "save_complete": "💾 Save & Complete",
-      "skip": "⏭️ Skip Rating"
+      "skip": "⏭️ Skip Rating",
+      "skip_shelf_update": "Skip shelf update"
     },
     "history": {
       "title": "📋 Cook History",
@@ -12691,6 +15435,54 @@ const I18N_STRINGS = {
       "west_african": "West African",
       "australian": "Australian",
       "polynesian": "Polynesian"
+    },
+    "shelf": {
+      "title": "🗄️ Shelf Management",
+      "enable_label": "Enable Shelf Management",
+      "enable_desc": "Track what you have on your shelf and fridge",
+      "location_fridge": "🧊 Fridge",
+      "location_larder": "🏺 Larder / Pantry",
+      "location_freezer": "❄️ Freezer",
+      "location_spices": "🧂 Spices & Seasonings",
+      "add_item": "＋ Add Item",
+      "item_name_placeholder": "Item name",
+      "item_quantity_placeholder": "Quantity (optional)",
+      "item_location_label": "Location",
+      "save_item": "Save",
+      "cancel": "Cancel",
+      "remove_item": "Remove",
+      "empty": "Nothing here yet.",
+      "shopping_list_btn": "🛒 Shopping List",
+      "back": "← Back",
+      "no_items": "Your shelf is empty. Add items to get started."
+    },
+    "cooking_mode": {
+      "selector_title": "🍳 Cooking Mode",
+      "selector_hint": "How should the AI use your shelf inventory?",
+      "mode_a_label": "A — Ignore Shelf",
+      "mode_a_desc": "Generate recipes freely from selected ingredients",
+      "mode_b_label": "B — Cook Now",
+      "mode_b_desc": "Use ONLY what you currently have (shelf + selected)",
+      "mode_c_label": "C — Cook Later",
+      "mode_c_desc": "Generate recipe; add missing items to shopping list"
+    },
+    "post_cook": {
+      "update_shelf_title": "📦 Update Your Shelf?",
+      "update_shelf_desc": "Which ingredients did you use up from your shelf?",
+      "update_shelf_btn": "Update Shelf",
+      "add_to_list_btn": "🛒 Add Depleted to Shopping List",
+      "skip_btn": "Skip"
+    },
+    "shopping_list": {
+      "title": "🛒 Shopping List",
+      "empty": "Your shopping list is empty.",
+      "clear_checked": "Clear Checked",
+      "back": "← Back",
+      "item_checked": "Got it",
+      "item_unchecked": "Need it",
+      "export_to_ha": "Export to HA Shopping List",
+      "exported_to_ha": "Exported {count} items to HA Shopping List",
+      "ha_todo_not_found": "No HA Shopping List found. Items saved to KCE list only."
     }
   },
   "sv": {
@@ -12973,7 +15765,9 @@ const I18N_STRINGS = {
       "recent_desc": "Visa och starta om tidigare AI-recept för denna apparat",
       "no_history_appliance": "Ingen tillagningshistorik för denna apparat ännu. Skapa ditt första AI-recept!",
       "incomplete_warning": "⚠️ Ofullständig",
-      "incomplete_message": "Slutför val av ingredienser och stil"
+      "incomplete_message": "Slutför val av ingredienser och stil",
+      "compulsory_toggle_hint": "Klicka för att markera som obligatorisk (⭐ måste användas)",
+      "compulsory_badge_label": "Obligatorisk"
     },
     "recipe_cook": {
       "overview_title": "📋 Receptöversikt",
@@ -12987,7 +15781,9 @@ const I18N_STRINGS = {
       "finish_cook": "✅ Slutför tillagning",
       "next_step": "Nästa steg ➡️",
       "prev_step": "⬅️ Föregående",
-      "no_instructions": "Inga instruktioner tillgängliga."
+      "no_instructions": "Inga instruktioner tillgängliga.",
+      "start_meater_btn": "🌡️ Starta MEATER-sond",
+      "meater_detach_hint": "Koppla loss sonden från receptet (sondsessionen fortsätter)"
     },
     "rating": {
       "cook_complete": "🎉 Tillagning klar!",
@@ -13002,7 +15798,8 @@ const I18N_STRINGS = {
       "notes_placeholder": "Anteckningar, ändringar eller tankar om denna tillagning...",
       "both_required": "⚠️ Ange båda betygen för att spara tillagningen",
       "save_complete": "💾 Spara & slutför",
-      "skip": "⏭️ Hoppa över betyg"
+      "skip": "⏭️ Hoppa över betyg",
+      "skip_shelf_update": "Hoppa över hylluppdatering"
     },
     "history": {
       "title": "📋 Tillagningshistorik",
@@ -13248,6 +16045,54 @@ const I18N_STRINGS = {
       "west_african": "Västafrikansk",
       "australian": "Australisk",
       "polynesian": "Polynesisk"
+    },
+    "shelf": {
+      "title": "🗄️ Hyllhantering",
+      "enable_label": "Aktivera hyllhantering",
+      "enable_desc": "Spåra vad du har i kylskåpet och skafferiet",
+      "location_fridge": "🧊 Kylskåp",
+      "location_larder": "🏺 Skafferi",
+      "location_freezer": "❄️ Frys",
+      "location_spices": "🧂 Kryddor & Smaksättare",
+      "add_item": "＋ Lägg till vara",
+      "item_name_placeholder": "Varunamn",
+      "item_quantity_placeholder": "Mängd (valfritt)",
+      "item_location_label": "Plats",
+      "save_item": "Spara",
+      "cancel": "Avbryt",
+      "remove_item": "Ta bort",
+      "empty": "Inget här ännu.",
+      "shopping_list_btn": "🛒 Inköpslista",
+      "back": "← Tillbaka",
+      "no_items": "Din hylla är tom. Lägg till varor för att komma igång."
+    },
+    "cooking_mode": {
+      "selector_title": "🍳 Tillagningsläge",
+      "selector_hint": "Hur ska AI:n använda din hyllinventering?",
+      "mode_a_label": "A — Ignorera hylla",
+      "mode_a_desc": "Generera recept fritt från valda ingredienser",
+      "mode_b_label": "B — Laga nu",
+      "mode_b_desc": "Använd BARA vad du har (hylla + valda)",
+      "mode_c_label": "C — Laga senare",
+      "mode_c_desc": "Generera recept; lägg saknade varor på inköpslistan"
+    },
+    "post_cook": {
+      "update_shelf_title": "📦 Uppdatera din hylla?",
+      "update_shelf_desc": "Vilka ingredienser använde du upp från din hylla?",
+      "update_shelf_btn": "Uppdatera hylla",
+      "add_to_list_btn": "🛒 Lägg uppbrukade på inköpslistan",
+      "skip_btn": "Hoppa över"
+    },
+    "shopping_list": {
+      "title": "🛒 Inköpslista",
+      "empty": "Din inköpslista är tom.",
+      "clear_checked": "Ta bort ikryssade",
+      "back": "← Tillbaka",
+      "item_checked": "Har det",
+      "item_unchecked": "Behöver det",
+      "export_to_ha": "Exportera till HA Inköpslista",
+      "exported_to_ha": "Exporterade {count} artiklar till HA Inköpslista",
+      "ha_todo_not_found": "Ingen HA Inköpslista hittades. Artiklar sparade i KCE-listan."
     }
   }
 };
@@ -13396,6 +16241,17 @@ class KitchenCookingPanel extends LitElement {
       _language: { type: String },
       _measurementSystem: { type: String },
       _hideOtherDataSource: { type: Boolean },
+      // Phase 8: Ingredient levels, shelf management, cooking modes
+      _shelfEnabled: { type: Boolean },
+      _cookingMode: { type: String },
+      _shelfInventory: { type: Array },
+      _showAddShelfItem: { type: Boolean },
+      _shelfAddName: { type: String },
+      _shelfAddLocation: { type: String },
+      _shelfAddQuantity: { type: String },
+      _shoppingList: { type: Array },
+      _pendingShelfUpdate: { type: Object },
+
     };
   }
 
@@ -13507,6 +16363,16 @@ class KitchenCookingPanel extends LitElement {
     this._language = 'en';               // UI language: 'sv' or 'en'
     this._measurementSystem = 'se';      // Measurement: 'se', 'uk', or 'us'
     this._hideOtherDataSource = false;   // Hide inactive data source button
+    // Phase 8: Ingredient levels, shelf management, cooking modes
+    this._shelfEnabled = false;
+    this._cookingMode = 'A';
+    this._shelfInventory = [];
+    this._showAddShelfItem = false;
+    this._shelfAddName = '';
+    this._shelfAddLocation = 'larder';
+    this._shelfAddQuantity = '';
+    this._shoppingList = [];
+    this._pendingShelfUpdate = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -13527,6 +16393,9 @@ class KitchenCookingPanel extends LitElement {
     this._loadLanguagePreference();
     this._loadMeasurementPreference();
     this._loadHideOtherDataSourcePreference();
+    
+    // Phase 8: Load shelf preference + inventory
+    this._loadShelfPreference();
     
     // Load AI settings to determine if AI Recipe Builder should be visible
     this._loadAISettings();
@@ -13816,6 +16685,9 @@ class KitchenCookingPanel extends LitElement {
       const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/preferences/language');
       if (response && response.language) {
         this._language = response.language;
+        if (this._hideOtherDataSource) {
+          this._dataSource = (response.language === 'sv') ? DATA_SOURCE_SWEDISH : DATA_SOURCE_INTERNATIONAL;
+        }
       }
     } catch (e) {
       console.log('Could not load language preference:', e);
@@ -13824,6 +16696,9 @@ class KitchenCookingPanel extends LitElement {
 
   async _saveLanguagePreference(lang) {
     this._language = lang;
+    if (this._hideOtherDataSource) {
+      this._dataSource = (lang === 'sv') ? DATA_SOURCE_SWEDISH : DATA_SOURCE_INTERNATIONAL;
+    }
     try {
       await this.hass.callApi('POST', 'kitchen_cooking_engine/preferences/language', { language: lang });
     } catch (e) {
@@ -13855,6 +16730,8 @@ class KitchenCookingPanel extends LitElement {
     try {
       const val = localStorage.getItem('kce_hide_other_data_source');
       if (val !== null) this._hideOtherDataSource = val === 'true';
+      const src = localStorage.getItem('kce_data_source');
+      if (src === 'swedish' || src === 'international') this._dataSource = src;
     } catch (e) {
       // localStorage unavailable, keep default
     }
@@ -13862,11 +16739,183 @@ class KitchenCookingPanel extends LitElement {
 
   _toggleHideOtherDataSource() {
     this._hideOtherDataSource = !this._hideOtherDataSource;
+    if (this._hideOtherDataSource) {
+      this._dataSource = (this._language === 'sv') ? DATA_SOURCE_SWEDISH : DATA_SOURCE_INTERNATIONAL;
+    }
     try {
       localStorage.setItem('kce_hide_other_data_source', String(this._hideOtherDataSource));
     } catch (e) {
       // localStorage unavailable
     }
+  }
+
+  // ---- Phase 8: Shelf preference ----
+
+  async _loadShelfPreference() {
+    try {
+      const prefs = await this.hass.callApi('GET', 'kitchen_cooking_engine/preferences');
+      if (prefs) {
+        if (typeof prefs.shelf_enabled === 'boolean') {
+          this._shelfEnabled = prefs.shelf_enabled;
+        }
+        if (prefs.cooking_mode && ['A','B','C'].includes(prefs.cooking_mode)) {
+          this._cookingMode = prefs.cooking_mode;
+        }
+      }
+      if (this._shelfEnabled) {
+        await this._loadShelfInventory();
+      }
+    } catch (e) {
+      console.log('Could not load shelf preference:', e);
+    }
+  }
+
+  async _saveShelfEnabled(enabled) {
+    this._shelfEnabled = enabled;
+    try {
+      await this.hass.callApi('PATCH', 'kitchen_cooking_engine/preferences', { shelf_enabled: enabled });
+      if (enabled) {
+        await this._loadShelfInventory();
+      }
+    } catch (e) {
+      console.error('Could not save shelf_enabled:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _saveCookingMode(mode) {
+    this._cookingMode = mode;
+    try {
+      await this.hass.callApi('PATCH', 'kitchen_cooking_engine/preferences', { cooking_mode: mode });
+    } catch (e) {
+      console.error('Could not save cooking_mode:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _loadShelfInventory() {
+    try {
+      const resp = await this.hass.callApi('GET', 'kitchen_cooking_engine/shelf');
+      this._shelfInventory = resp && resp.items ? resp.items : [];
+    } catch (e) {
+      console.error('Could not load shelf inventory:', e);
+      this._shelfInventory = [];
+    }
+    this.requestUpdate();
+  }
+
+  async _addShelfItem() {
+    const name = (this._shelfAddName || '').trim();
+    if (!name) return;
+    try {
+      const resp = await this.hass.callApi('POST', 'kitchen_cooking_engine/shelf', {
+        name,
+        location: this._shelfAddLocation || 'larder',
+        quantity: this._shelfAddQuantity || '',
+      });
+      if (resp && resp.item) {
+        this._shelfInventory = [...this._shelfInventory, resp.item];
+      }
+      this._shelfAddName = '';
+      this._shelfAddQuantity = '';
+      this._showAddShelfItem = false;
+    } catch (e) {
+      console.error('Could not add shelf item:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _removeShelfItem(id) {
+    try {
+      await this.hass.callApi('DELETE', `kitchen_cooking_engine/shelf?id=${encodeURIComponent(id)}`);
+      this._shelfInventory = this._shelfInventory.filter(i => i.id !== id);
+    } catch (e) {
+      console.error('Could not remove shelf item:', e);
+    }
+    this.requestUpdate();
+  }
+
+  // ---- Phase 8d: Shopping list ----
+
+  async _loadShoppingList() {
+    try {
+      const resp = await this.hass.callApi('GET', 'kitchen_cooking_engine/shopping_list');
+      this._shoppingList = resp && resp.items ? resp.items : [];
+    } catch (e) {
+      console.error('Could not load shopping list:', e);
+      this._shoppingList = [];
+    }
+    this.requestUpdate();
+  }
+
+  async _toggleShoppingListItem(id) {
+    try {
+      await this.hass.callApi('PATCH', 'kitchen_cooking_engine/shopping_list', { id });
+      this._shoppingList = this._shoppingList.map(i =>
+        i.id === id ? { ...i, checked: !i.checked } : i
+      );
+    } catch (e) {
+      console.error('Could not toggle shopping list item:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _deleteShoppingListItem(id) {
+    try {
+      await this.hass.callApi('DELETE', `kitchen_cooking_engine/shopping_list?id=${encodeURIComponent(id)}`);
+      this._shoppingList = this._shoppingList.filter(i => i.id !== id);
+    } catch (e) {
+      console.error('Could not delete shopping list item:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _clearCheckedShoppingItems() {
+    const checked = (this._shoppingList || []).filter(i => i.checked);
+    for (const item of checked) {
+      await this._deleteShoppingListItem(item.id);
+    }
+  }
+
+  /**
+   * Find the first HA todo entity (preferring todo.shopping_list).
+   * Returns entity_id string or null if none found.
+   */
+  _findHATodoEntity() {
+    if (!this.hass) return null;
+    if (this.hass.states['todo.shopping_list']) return 'todo.shopping_list';
+    return Object.keys(this.hass.states).find(id => id.startsWith('todo.')) || null;
+  }
+
+  /**
+   * Push an array of name strings to the HA todo entity via todo.add_item.
+   * Returns the number of items successfully pushed.
+   */
+  async _pushToHATodo(names) {
+    const entityId = this._findHATodoEntity();
+    if (!entityId || !names || names.length === 0) return 0;
+    let count = 0;
+    for (const name of names) {
+      try {
+        await this.hass.callService('todo', 'add_item', { entity_id: entityId, item: name });
+        count++;
+      } catch (e) {
+        console.warn('KCE: could not push item to HA todo:', name, e);
+      }
+    }
+    return count;
+  }
+
+  _navigateToShelfManagement() {
+    this._showAddShelfItem = false;
+    this._currentPath = 'shelf_management';
+    this.requestUpdate();
+  }
+
+  _navigateToShoppingList() {
+    this._loadShoppingList();
+    this._currentPath = 'shopping_list';
+    this.requestUpdate();
   }
 
   async _loadHistory() {
@@ -14179,6 +17228,11 @@ class KitchenCookingPanel extends LitElement {
 
   _switchDataSource(source) {
     this._dataSource = source;
+    try {
+      localStorage.setItem('kce_data_source', source);
+    } catch (e) {
+      // localStorage unavailable
+    }
     // Reset all selections when switching data source
     this._selectedCategory = null;
     this._selectedMeat = null;
@@ -14482,6 +17536,18 @@ class KitchenCookingPanel extends LitElement {
     this._showAppliances = false;
     this._showRecipes = false;
     this._showAIRecipeBuilder = false;
+    this.requestUpdate();
+  }
+
+  /**
+   * Navigate to MEATER+ (experimental) path — same flow as the standard MEATER path
+   * but with safety indicators on doneness options.
+   * @param {Object} appliance - Selected MEATER appliance
+   */
+  _navigateToMeaterExperimentalPath(appliance) {
+    this._currentPath = 'meater_experimental';
+    this._selectedAppliance = appliance;
+    this._showMeaterCooking = false;
     this.requestUpdate();
   }
 
@@ -15053,21 +18119,59 @@ class KitchenCookingPanel extends LitElement {
     if (isNaN(newServings) || newServings < 1) return;
     
     const originalServings = recipe.servings;
+    if (!originalServings || originalServings <= 0) {
+      console.warn('KCE: cannot scale recipe — recipe.servings is missing or zero');
+      return;
+    }
     const multiplier = newServings / originalServings;
     
     // Store adjusted servings
     recipe._adjustedServings = newServings;
     
-    // Scale ingredients
-    recipe._adjustedIngredients = recipe.ingredients.map(ing => {
-      // Try to find numbers in the ingredient string and scale them
-      return ing.replace(/(\d+(?:\.\d+)?)\s*([a-zA-Z]*)/g, (match, num, unit) => {
-        const scaledNum = (parseFloat(num) * multiplier).toFixed(1).replace(/\.0$/, '');
-        return `${scaledNum} ${unit}`;
+    // Scale ingredients with intelligent rounding
+    const ingredients = recipe.ingredients || [];
+    recipe._adjustedIngredients = ingredients.map(ing => {
+      return ing.replace(/(\d+(?:[.,\/]\d+)?)\s*([a-zA-ZÅÄÖåäö%]*)/g, (match, numStr, unit) => {
+        // Parse simple fractions like "1/2"
+        let rawValue;
+        if (numStr.includes('/')) {
+          const parts = numStr.split('/');
+          rawValue = parseFloat(parts[0]) / parseFloat(parts[1]);
+        } else {
+          rawValue = parseFloat(numStr.replace(',', '.'));
+        }
+        if (isNaN(rawValue) || rawValue <= 0) return match;
+        const scaled = rawValue * multiplier;
+        const rounded = this._smartRound(scaled);
+        return unit ? `${rounded}\u00a0${unit}` : `${rounded}`;
       });
     });
     
     this.requestUpdate();
+  }
+
+  /**
+   * Round a scaled ingredient amount to a practical value.
+   * - >= 50: round to nearest 5
+   * - >= 10: round to nearest integer
+   * - >= 2: round to nearest 0.5
+   * - < 2:  round to nearest quarter (0.25)
+   */
+  _smartRound(value) {
+    if (value <= 0) return value;
+    let result;
+    if (value >= 50) {
+      result = Math.round(value / 5) * 5;
+    } else if (value >= 10) {
+      result = Math.round(value);
+    } else if (value >= 2) {
+      result = Math.round(value * 2) / 2;
+    } else {
+      result = Math.round(value * 4) / 4;
+    }
+    // Format: drop unnecessary .0 / .00 but keep meaningful decimals
+    const str = result % 1 === 0 ? String(result) : String(parseFloat(result.toFixed(2)));
+    return str;
   }
 
   _openRecipeInBuilder(recipe) {
@@ -15903,6 +19007,11 @@ class KitchenCookingPanel extends LitElement {
       return this._renderMeaterCookRating();
     }
     
+    // Phase 8d: Post-cook shelf update prompt
+    if (this._pendingShelfUpdate) {
+      return this._renderPostCookShelfUpdate();
+    }
+
     // Show recipe cook flow when actively viewing one (pointer is set)
     if (this._recipeCookState) {
       return this._renderRecipeCookFlow();
@@ -15999,6 +19108,9 @@ class KitchenCookingPanel extends LitElement {
     switch (this._currentPath) {
       case 'welcome':
         return this._renderWelcomeScreen(activeCooks);
+
+      case 'meater_experimental':
+        return this._renderMeaterExperimental();
       
       case 'meater':
         return this._renderMeaterPath();
@@ -16038,6 +19150,12 @@ class KitchenCookingPanel extends LitElement {
       
       case 'previous_cooks':
         return this._renderPreviousCooksPath();
+      
+      case 'shelf_management':
+        return this._renderShelfManagement();
+
+      case 'shopping_list':
+        return this._renderShoppingList();
       
       default:
         // Fallback to welcome screen for any unrecognized path
@@ -16109,39 +19227,31 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : ''}
       
-      <!-- Data Source Selector -->
+      <!-- Data Source Selector (hidden when user has opted to hide inactive source) -->
+      ${!this._hideOtherDataSource ? html`
       <ha-card>
         <div class="card-content">
           <h3>${this._t('meater.data_source_title')}</h3>
           <div class="button-group">
-            ${!this._hideOtherDataSource || this._dataSource === DATA_SOURCE_INTERNATIONAL ? html`
-              <button 
-                class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
-                @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
-                ${this._t('meater.international')}
-              </button>
-            ` : ''}
-            ${!this._hideOtherDataSource || this._dataSource === DATA_SOURCE_SWEDISH ? html`
-              <button 
-                class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
-                @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
-                ${this._t('meater.swedish')}
-              </button>
-            ` : ''}
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
+              ${this._t('meater.international')}
+            </button>
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
+              ${this._t('meater.swedish')}
+            </button>
           </div>
           <p class="source-description">
             ${this._dataSource === DATA_SOURCE_SWEDISH 
               ? this._t('meater.swedish_description')
               : this._t('meater.international_description')}
           </p>
-          <label style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:0.85em;cursor:pointer;">
-            <input type="checkbox"
-              .checked=${this._hideOtherDataSource}
-              @change=${() => this._toggleHideOtherDataSource()}>
-            ${this._t('meater.hide_other_tree')}
-          </label>
         </div>
       </ha-card>
+      ` : ''}
       
       <!-- Step 1: Select Category -->
       <ha-card>
@@ -16873,17 +19983,35 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : html`
         <div class="appliance-grid">
-          ${this._appliances.map(appliance => html`
-            <ha-card class="appliance-card clickable" @click=${() => this._routeToAppliancePath(appliance)}>
-              <div class="card-content appliance-card-content">
-                <div class="appliance-icon">
-                  ${this._getApplianceIcon(appliance)}
+          ${this._appliances.flatMap(appliance => {
+            const brand = (appliance.brand || '').toLowerCase();
+            const model = (appliance.model || '').toLowerCase();
+            const name = (appliance.name || '').toLowerCase();
+            const isMeater = brand.includes('meater') || model.includes('meater') || name.includes('meater');
+            const cards = [html`
+              <ha-card class="appliance-card clickable" @click=${() => this._routeToAppliancePath(appliance)}>
+                <div class="card-content appliance-card-content">
+                  <div class="appliance-icon">
+                    ${this._getApplianceIcon(appliance)}
+                  </div>
+                  <div class="appliance-name">${appliance.name}</div>
+                  <div class="appliance-model">${appliance.brand} ${appliance.model}</div>
                 </div>
-                <div class="appliance-name">${appliance.name}</div>
-                <div class="appliance-model">${appliance.brand} ${appliance.model}</div>
-              </div>
-            </ha-card>
-          `)}
+              </ha-card>
+            `];
+            if (isMeater) {
+              cards.push(html`
+                <ha-card class="appliance-card clickable meater-exp-card" @click=${() => this._navigateToMeaterExperimentalPath(appliance)}>
+                  <div class="card-content appliance-card-content">
+                    <div class="appliance-icon" style="font-size: 2em;">🧪🌡️</div>
+                    <div class="appliance-name">MEATER+ <span style="font-size:0.75em;color:var(--secondary-text-color);">(experimental)</span></div>
+                    <div class="appliance-model" style="color:var(--accent-color);">Safety indicators · per-cut temps</div>
+                  </div>
+                </ha-card>
+              `);
+            }
+            return cards;
+          })}
         </div>
 
         <ha-card class="previous-cooks-card clickable" @click=${() => this._navigateToPreviousCooks()}>
@@ -16922,6 +20050,12 @@ class KitchenCookingPanel extends LitElement {
                 🇬🇧 English
               </button>
             </div>
+            <label style="display:flex;align-items:center;gap:8px;margin-top:10px;font-size:0.85em;cursor:pointer;">
+              <input type="checkbox"
+                .checked=${this._hideOtherDataSource}
+                @change=${() => this._toggleHideOtherDataSource()}>
+              ${this._t('meater.hide_other_tree')}
+            </label>
           </div>
         </ha-card>
 
@@ -16950,13 +20084,661 @@ class KitchenCookingPanel extends LitElement {
             </p>
           </div>
         </ha-card>
+
+        <!-- Phase 8b: Shelf Management toggle -->
+        <ha-card>
+          <div class="card-content">
+            <h3>${this._t('shelf.enable_label')}</h3>
+            <p class="info-text" style="margin-bottom: 10px;">${this._t('shelf.enable_desc')}</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <label class="checkbox-label">
+                <input
+                  type="checkbox"
+                  ?checked=${this._shelfEnabled}
+                  @change=${(e) => this._saveShelfEnabled(e.target.checked)}
+                />
+                ${this._shelfEnabled ? '✅ ' + this._t('shelf.enable_label') : this._t('shelf.enable_label')}
+              </label>
+            </div>
+            ${this._shelfEnabled ? html`
+              <button class="primary-btn" style="margin-top: 12px;" @click=${() => this._navigateToShelfManagement()}>
+                ${this._t('shelf.title')}
+              </button>
+            ` : ''}
+          </div>
+        </ha-card>
       `}
     `;
   }
 
+  // ============================================================================
+  // PHASE 8b: SHELF MANAGEMENT SCREEN
+  // ============================================================================
+
+  _renderShelfManagement() {
+    const locations = ['fridge', 'larder', 'freezer', 'spices'];
+    const locationKeys = {
+      fridge: 'shelf.location_fridge',
+      larder: 'shelf.location_larder',
+      freezer: 'shelf.location_freezer',
+      spices: 'shelf.location_spices',
+    };
+    const grouped = {};
+    for (const loc of locations) grouped[loc] = [];
+    for (const item of (this._shelfInventory || [])) {
+      const loc = item.location || 'larder';
+      if (!grouped[loc]) grouped[loc] = [];
+      grouped[loc].push(item);
+    }
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => { this._currentPath = 'welcome'; this.requestUpdate(); }}>
+          ${this._t('shelf.back')}
+        </button>
+        <h2>${this._t('shelf.title')}</h2>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <button class="secondary-btn" @click=${() => this._navigateToShoppingList()}>
+              ${this._t('shelf.shopping_list_btn')}
+            </button>
+            <button class="primary-btn" @click=${() => { this._showAddShelfItem = !this._showAddShelfItem; this.requestUpdate(); }}>
+              ${this._t('shelf.add_item')}
+            </button>
+          </div>
+
+          ${this._showAddShelfItem ? html`
+            <div style="background: var(--secondary-background-color); padding: 12px; border-radius: 8px; margin-bottom: 16px;">
+              <input
+                type="text"
+                placeholder="${this._t('shelf.item_name_placeholder')}"
+                .value=${this._shelfAddName}
+                @input=${(e) => { this._shelfAddName = e.target.value; }}
+                style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; margin-bottom: 8px; box-sizing: border-box;"
+              />
+              <select
+                .value=${this._shelfAddLocation}
+                @change=${(e) => { this._shelfAddLocation = e.target.value; }}
+                style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; margin-bottom: 8px; box-sizing: border-box;"
+              >
+                ${locations.map(loc => html`
+                  <option value=${loc} ?selected=${this._shelfAddLocation === loc}>
+                    ${this._t(locationKeys[loc])}
+                  </option>
+                `)}
+              </select>
+              <input
+                type="text"
+                placeholder="${this._t('shelf.item_quantity_placeholder')}"
+                .value=${this._shelfAddQuantity}
+                @input=${(e) => { this._shelfAddQuantity = e.target.value; }}
+                style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; margin-bottom: 8px; box-sizing: border-box;"
+              />
+              <div style="display: flex; gap: 8px;">
+                <button class="primary-btn" @click=${() => this._addShelfItem()}>${this._t('shelf.save_item')}</button>
+                <button class="secondary-btn" @click=${() => { this._showAddShelfItem = false; this.requestUpdate(); }}>${this._t('shelf.cancel')}</button>
+              </div>
+            </div>
+          ` : ''}
+
+          ${locations.map(loc => {
+            const items = grouped[loc] || [];
+            return html`
+              <div style="margin-bottom: 16px;">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">${this._t(locationKeys[loc])}</h4>
+                ${items.length === 0 ? html`
+                  <p style="font-size: 0.85em; color: var(--secondary-text-color);">${this._t('shelf.empty')}</p>
+                ` : html`
+                  <div style="display: flex; flex-direction: column; gap: 4px;">
+                    ${items.map(item => html`
+                      <div style="display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: var(--secondary-background-color); border-radius: 6px;">
+                        <div>
+                          <span style="font-weight: 500;">${item.name}</span>
+                          ${item.quantity ? html`<span style="font-size: 0.85em; color: var(--secondary-text-color); margin-left: 8px;">${item.quantity}</span>` : ''}
+                        </div>
+                        <button class="secondary-btn" style="padding: 4px 10px; font-size: 0.8em;" @click=${() => this._removeShelfItem(item.id)}>
+                          ${this._t('shelf.remove_item')}
+                        </button>
+                      </div>
+                    `)}
+                  </div>
+                `}
+              </div>
+            `;
+          })}
+        </div>
+      </ha-card>
+    `;
+  }
+
+  // ============================================================================
+  // PHASE 8d: SHOPPING LIST SCREEN
+  // ============================================================================
+
+  _renderShoppingList() {
+    const items = this._shoppingList || [];
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => { this._currentPath = 'shelf_management'; this.requestUpdate(); }}>
+          ${this._t('shopping_list.back')}
+        </button>
+        <h2>${this._t('shopping_list.title')}</h2>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          ${items.length === 0 ? html`
+            <p style="color: var(--secondary-text-color);">${this._t('shopping_list.empty')}</p>
+          ` : html`
+            <div style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px;">
+              ${items.map(item => html`
+                <div style="display: flex; align-items: center; gap: 10px; padding: 8px; background: var(--secondary-background-color); border-radius: 6px; ${item.checked ? 'opacity:0.5;text-decoration:line-through;' : ''}">
+                  <input
+                    type="checkbox"
+                    ?checked=${item.checked}
+                    @change=${() => this._toggleShoppingListItem(item.id)}
+                    style="width: 18px; height: 18px; cursor: pointer; flex-shrink: 0;"
+                  />
+                  <span style="flex: 1;">${item.name}${item.quantity ? html` <span style="font-size:0.85em;color:var(--secondary-text-color);">${item.quantity}</span>` : ''}</span>
+                  <button class="secondary-btn" style="padding: 4px 10px; font-size: 0.8em;" @click=${() => this._deleteShoppingListItem(item.id)}>✕</button>
+                </div>
+              `)}
+            </div>
+            ${items.some(i => i.checked) ? html`
+              <button class="secondary-btn" @click=${() => this._clearCheckedShoppingItems()}>
+                ${this._t('shopping_list.clear_checked')}
+              </button>
+            ` : ''}
+            ${items.some(i => !i.checked) ? html`
+              <button class="secondary-btn" style="margin-top: 8px;" @click=${async () => {
+                const names = items.filter(i => !i.checked).map(i => i.name);
+                const count = await this._pushToHATodo(names);
+                if (count > 0) {
+                  this._showMessage('✅', this._t('shopping_list.exported_to_ha').replace('{count}', count), false);
+                } else {
+                  this._showMessage('⚠️', this._t('shopping_list.ha_todo_not_found'), false);
+                }
+              }}>
+                📤 ${this._t('shopping_list.export_to_ha')}
+              </button>
+            ` : ''}
+          `}
+        </div>
+      </ha-card>
+    `;
+  }
+
+  // ============================================================================
+  // PHASE 8d: POST-COOK SHELF UPDATE PROMPT
+  // ============================================================================
+
+  _renderPostCookShelfUpdate() {
+    const update = this._pendingShelfUpdate;
+    if (!update) return html``;
+    const checkboxes = update.checkboxes || [];
+    return html`
+      <ha-card>
+        <div class="card-content">
+          <h3>${this._t('post_cook.update_shelf_title')}</h3>
+          <p class="info-text">${this._t('post_cook.update_shelf_desc')}</p>
+
+          <div style="display: flex; flex-direction: column; gap: 6px; margin: 12px 0;">
+            ${checkboxes.map((cb, idx) => html`
+              <label class="checkbox-label">
+                <input
+                  type="checkbox"
+                  ?checked=${cb.checked}
+                  @change=${(e) => {
+                    this._pendingShelfUpdate = {
+                      ...update,
+                      checkboxes: checkboxes.map((c, i) => i === idx ? { ...c, checked: e.target.checked } : c),
+                    };
+                    this.requestUpdate();
+                  }}
+                />
+                ${cb.name}
+              </label>
+            `)}
+          </div>
+
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px;">
+            <button class="primary-btn" @click=${async () => {
+              const checked = checkboxes.filter(c => c.checked);
+              for (const item of checked) {
+                const normItem = item.name.toLowerCase().replace(/s$/, '');
+                const shelfItem = (this._shelfInventory || []).find(s => {
+                  const normShelf = s.name.toLowerCase().replace(/s$/, '');
+                  return normShelf === normItem
+                    || s.name.toLowerCase().includes(item.name.toLowerCase())
+                    || item.name.toLowerCase().includes(s.name.toLowerCase());
+                });
+                if (shelfItem) {
+                  await this._removeShelfItem(shelfItem.id);
+                }
+              }
+              this._pendingShelfUpdate = null;
+              this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
+              this.requestUpdate();
+            }}>
+              ${this._t('post_cook.update_shelf_btn')}
+            </button>
+
+            <button class="secondary-btn" @click=${async () => {
+              const unchecked = checkboxes.filter(c => !c.checked);
+              if (unchecked.length > 0) {
+                try {
+                  await this.hass.callApi('POST', 'kitchen_cooking_engine/shopping_list', {
+                    items: unchecked.map(c => ({ name: c.name })),
+                  });
+                } catch (e) {
+                  console.error('Could not add to shopping list:', e);
+                }
+                // Also push to HA native todo list (fire-and-forget)
+                await this._pushToHATodo(unchecked.map(c => c.name));
+              }
+              this._pendingShelfUpdate = null;
+              this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
+              this.requestUpdate();
+            }}>
+              ${this._t('post_cook.add_to_list_btn')}
+            </button>
+
+            <button class="secondary-btn" @click=${() => {
+              this._pendingShelfUpdate = null;
+              this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
+              this.requestUpdate();
+            }}>
+              ${this._t('post_cook.skip_btn')}
+            </button>
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  // ─── MEATER+ (experimental) path ─────────────────────────────────────────────
+
+  _renderMeaterExperimental() {
+    // If in cooking mode, show the setup form
+    if (this._showMeaterCooking) {
+      let entities = this._findCookingEntities();
+      
+      // v0.5.0.51: Sort entities by entity ID pattern (more reliable than attributes)
+      // Entity IDs like "kitchen_cooking_engine_bt_proxy_meater_tip_temperature_cooking_session"
+      // contain "meater" - use this to identify and sort MEATER entities first
+      entities = entities.sort((a, b) => {
+        const aIsMeater = a.toLowerCase().includes('meater');
+        const bIsMeater = b.toLowerCase().includes('meater');
+        
+        // MEATER entities first, others after
+        if (aIsMeater && !bIsMeater) return -1;
+        if (!aIsMeater && bIsMeater) return 1;
+        return 0;  // Preserve original order for same type
+      });
+      
+      return html`
+        <div class="path-header">
+          <button class="back-btn" @click=${() => { 
+            this._showMeaterCooking = false;
+            this.requestUpdate();
+          }}>
+            ← Back to MEATER Path
+          </button>
+          <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
+        </div>
+        
+        ${this._renderExpSetupForm(entities)}
+      `;
+    }
+    
+    // Otherwise show the path buttons
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => this._navigateToWelcome()}>
+          ← Back to Appliances
+        </button>
+        <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
+      </div>
+
+      <div class="path-buttons">
+        <ha-card class="path-card clickable" @click=${() => this._startMeaterCooking()}>
+          <div class="card-content path-card-content">
+            <div class="path-icon">🌡️</div>
+            <h3>Start MEATER Cooking</h3>
+            <p>Select protein, set target, monitor temperature</p>
+          </div>
+        </ha-card>
+
+        <ha-card class="path-card clickable" @click=${() => this._showRecentMeaterCooks()}>
+          <div class="card-content path-card-content">
+            <div class="path-icon">📋</div>
+            <h3>Recent MEATER Cooks</h3>
+            <p>View and restart previous temperature-based cooks</p>
+          </div>
+        </ha-card>
+      </div>
+    `;
+  }
+
   /**
-   * Render MEATER path (cook type 6.1)
+   * Setup form for the experimental MEATER path (matches source-reference v0.5.3.5 _renderSetupForm).
    */
+  _renderExpSetupForm(entities) {
+    const categories = this._getDataCategories();
+    const category = this._getCategory();
+    const meats = this._getMeats();
+    const cutTypes = this._getCutTypes();
+    const cuts = this._getCuts();
+    const showMeatSelector = meats.length > 1;
+    const showCutTypeSelector = cutTypes.length > 1 || (cutTypes.length === 1 && this._selectedMeat);
+    const recommendedDoneness = this._getRecommendedDoneness();
+    const donenessTemps = this._selectedDoneness ? this._getTargetTempForDoneness(this._selectedDoneness) : null;
+    const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
+    const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
+    
+    // v0.5.0.57: Check if selected entity is specifically a MEATER entity
+    // Diagnostic data revealed: entities.includes() returns TRUE for non-MEATER entities
+    // because all cooking_session entities are in the list. We need to check if the
+    // selected entity IS a MEATER entity, not just if it's in the list.
+    if (entities.length > 0) {
+      // Check if selected entity contains "meater" in its ID (same pattern as sorting)
+      const isMeaterEntity = this._selectedEntity && 
+                             this._selectedEntity.toLowerCase().includes('meater');
+      
+      if (!this._selectedEntity || !isMeaterEntity) {
+        this._selectedEntity = entities[0];  // First entity (MEATER after sorting in _renderMeaterPath)
+      }
+    }
+    
+    return html`
+      <div class="status-banner idle">
+        <h2>🍳 Ready to Cook</h2>
+        <p>Select your protein and preferences below</p>
+      </div>
+      
+      ${entities.length > 1 ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>Select Session</h3>
+            <select 
+              .value=${this._selectedEntity}
+              @change=${(e) => this._selectedEntity = e.target.value}
+            >
+              ${entities.map(e => html`
+                <option value="${e}" ?selected=${this._selectedEntity === e}>
+                  ${this.hass.states[e]?.attributes?.friendly_name || e}
+                </option>
+              `)}
+            </select>
+          </div>
+        </ha-card>
+      ` : ''}
+      
+      <!-- Data Source Selector -->
+      <ha-card>
+        <div class="card-content">
+          <h3>🌍 Temperature Data Source</h3>
+          <div class="button-group">
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
+              🇺🇸 International (USDA)
+            </button>
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
+              🇸🇪 Svenska (Livsmedelsverket)
+            </button>
+          </div>
+          <p class="source-description">
+            ${this._dataSource === DATA_SOURCE_SWEDISH 
+              ? 'Använder svenska temperaturrekommendationer från Livsmedelsverket, Stekguiden.se och Gårdssällskapet.'
+              : 'Using international temperature guidelines from USDA, FDA and professional culinary sources.'}
+          </p>
+        </div>
+      </ha-card>
+      
+      <!-- Step 1: Select Category -->
+      <ha-card>
+        <div class="card-content">
+          <h3>1️⃣ Select Category</h3>
+          <div class="button-group">
+            ${Object.entries(categories).map(([key, cat]) => html`
+              <button 
+                class="category-btn ${this._selectedCategory === key ? 'selected' : ''}" 
+                @click=${() => this._selectCategory(key)}>
+                ${cat.icon} ${cat.name}
+              </button>
+            `)}
+            <button 
+              class="category-btn ${this._selectedCategory === 'custom' ? 'selected' : ''}" 
+              @click=${() => this._selectCategory('custom')}>
+              🎯 Custom
+            </button>
+          </div>
+        </div>
+      </ha-card>
+      
+      <!-- Custom Temperature Cook (no meat/cut/doneness needed) -->
+      ${this._selectedCategory === 'custom' ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>🎯 Custom Temperature Cook</h3>
+            <p>Set a target temperature and start monitoring — no protein or doneness selection needed.</p>
+            
+            <div style="margin: 16px 0;">
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Session Name (optional)</label>
+              <input 
+                type="text" 
+                placeholder="e.g. My Cook"
+                .value=${this._customProfileName || ''}
+                @input=${(e) => { this._customProfileName = e.target.value; }}
+                style="width: 100%; padding: 10px; border: 2px solid var(--divider-color); border-radius: 8px; font-size: 14px; background: var(--card-background-color); color: var(--primary-text-color); box-sizing: border-box;"
+              />
+            </div>
+            
+            <div style="margin: 16px 0;">
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Target Temperature</label>
+              <div class="temp-display-setup">
+                <div class="target-temp">
+                  <span class="temp-value">${this._customProfileTempC}°C</span>
+                  <span class="temp-fahrenheit">(${Math.round(this._customProfileTempC * 9 / 5 + 32)}°F)</span>
+                </div>
+              </div>
+              <input 
+                type="range" 
+                min="30" 
+                max="100" 
+                step="1"
+                .value="${this._customProfileTempC}"
+                @input=${(e) => { this._customProfileTempC = parseInt(e.target.value); }}
+                class="temp-slider"
+                style="width: 100%; margin: 12px 0;"
+              />
+              <div class="temp-adjust-controls">
+                <button class="temp-btn" @click=${() => { this._customProfileTempC = Math.max(30, this._customProfileTempC - 1); }}>-1°C</button>
+                <input 
+                  type="number" 
+                  min="30" 
+                  max="100" 
+                  .value="${this._customProfileTempC}"
+                  @change=${(e) => { const v = parseInt(e.target.value); if (v >= 30 && v <= 100) this._customProfileTempC = v; }}
+                  class="temp-input"
+                />
+                <button class="temp-btn" @click=${() => { this._customProfileTempC = Math.min(100, this._customProfileTempC + 1); }}>+1°C</button>
+              </div>
+            </div>
+          </div>
+        </ha-card>
+        
+        <div class="action-container">
+          <ha-button unelevated @click=${() => this._startCustomCook()}>
+            🔥 Start Cooking at ${this._customProfileTempC}°C
+          </ha-button>
+        </div>
+      ` : ''}
+      
+      <!-- Step 2: Select Animal/Meat (if multiple) -->
+      ${this._selectedCategory && showMeatSelector ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>2️⃣ Select Type</h3>
+            <div class="button-group">
+              ${meats.map(meat => html`
+                <button 
+                  class="category-btn ${this._selectedMeat === meat.id ? 'selected' : ''}" 
+                  @click=${() => this._selectMeat(meat.id)}>
+                  ${meat.name}
+                </button>
+              `)}
+            </div>
+          </div>
+        </ha-card>
+      ` : ''}
+      
+      <!-- Step 3: Select Cut Type (Steaks, Roasts, etc.) -->
+      ${this._selectedMeat && cutTypes.length > 0 ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} Select Cut Type</h3>
+            <div class="button-group">
+              ${cutTypes.map(ct => html`
+                <button 
+                  class="category-btn ${this._selectedCutType === ct.id ? 'selected' : ''}" 
+                  @click=${() => this._selectCutType(ct.id)}>
+                  ${ct.name}
+                </button>
+              `)}
+            </div>
+          </div>
+        </ha-card>
+      ` : ''}
+      
+      <!-- Step 4: Select Specific Cut -->
+      ${this._selectedCutType && cuts.length > 0 ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} Select Cut</h3>
+            <select @change=${(e) => this._selectCut(parseInt(e.target.value) || null)}>
+              <option value="">Choose a cut...</option>
+              ${cuts.map(cut => html`
+                <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
+                  ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
+                </option>
+              `)}
+            </select>
+          </div>
+        </ha-card>
+      ` : ''}
+      
+      <!-- Step 5: Doneness Level -->
+      ${this._selectedCut ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>🌡️ Doneness Level ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = recommended)</span>` : ''}</h3>
+            <div class="doneness-grid">
+              ${this._getAvailableDoneness().map(opt => html`
+                <button 
+                  class="doneness-btn ${this._selectedDoneness === opt.value ? 'selected' : ''} ${opt.value === recommendedDoneness ? 'recommended' : ''}"
+                  @click=${() => this._selectDoneness(opt.value)}
+                  title="${opt.description || ''}">
+                  <span class="icon">${opt.icon}</span>
+                  ${opt.name}
+                  ${opt.value === recommendedDoneness ? html`<span class="star">⭐</span>` : ''}
+                  ${opt.safety_level ? html`<span class="safety-dot ${opt.safety_level}" title="${opt.safety_level === 'safe' ? '✅ Meets food safety guidelines' : opt.safety_level === 'caution' ? '⚠️ Below safety guidelines – widely practiced' : '⛔ Well below safety guidelines'}"></span>` : ''}
+                  <span class="temp-hint">${opt.temp_c}°C</span>
+                </button>
+              `)}
+            </div>
+          </div>
+        </ha-card>
+        
+        <!-- Temperature Fine-Tuning -->
+        ${this._selectedDoneness ? html`
+          <ha-card>
+            <div class="card-content">
+              <h3>🎯 Target Temperature</h3>
+              <div class="temp-display-setup">
+                <div class="target-temp">
+                  <span class="temp-value">${displayTemp}°C</span>
+                  <span class="temp-fahrenheit">(${displayTempF}°F)</span>
+                </div>
+                ${this._customTargetTempC ? html`
+                  <span class="custom-indicator">Custom</span>
+                ` : ''}
+              </div>
+              
+              <button 
+                class="adjust-btn ${this._showTempAdjust ? 'active' : ''}"
+                @click=${() => this._toggleTempAdjust()}>
+                ${this._showTempAdjust ? '✓ Done Adjusting' : '⚙️ Fine-tune Temperature'}
+              </button>
+              
+              ${this._showTempAdjust ? html`
+                <div class="temp-adjust-section">
+                  <input 
+                    type="range" 
+                    min="35" 
+                    max="100" 
+                    step="1"
+                    .value="${displayTemp}"
+                    @input=${(e) => this._updateCustomTemp(e.target.value)}
+                    class="temp-slider"
+                  />
+                  <div class="temp-adjust-controls">
+                    <button class="temp-btn" @click=${() => this._updateCustomTemp(displayTemp - 1)}>-1°C</button>
+                    <input 
+                      type="number" 
+                      min="35" 
+                      max="100" 
+                      .value="${displayTemp}"
+                      @change=${(e) => this._updateCustomTemp(e.target.value)}
+                      class="temp-input"
+                    />
+                    <button class="temp-btn" @click=${() => this._updateCustomTemp(displayTemp + 1)}>+1°C</button>
+                  </div>
+                  <button 
+                    class="reset-btn"
+                    @click=${() => { this._customTargetTempC = null; }}>
+                    Reset to ${donenessTemps?.c}°C (${this._selectedDoneness ? this._selectedDoneness.replace('_', ' ') : ''})
+                  </button>
+                </div>
+              ` : ''}
+            </div>
+          </ha-card>
+        ` : ''}
+        
+        <!-- Step 6: Cooking Method -->
+        <ha-card>
+          <div class="card-content">
+            <h3>🍳 Cooking Method</h3>
+            <div class="method-grid">
+              ${COOKING_METHODS.map(opt => html`
+                <button 
+                  class="method-btn ${this._selectedMethod === opt.value ? 'selected' : ''}"
+                  @click=${() => this._selectedMethod = opt.value}>
+                  ${opt.name}
+                </button>
+              `)}
+            </div>
+          </div>
+        </ha-card>
+        
+        <!-- Start Button -->
+        <div class="action-container">
+          <ha-button unelevated @click=${this._startCook} ?disabled=${!this._selectedDoneness}>
+            🔥 Start Cooking${this._customTargetTempC ? ` at ${this._customTargetTempC}°C` : ''}
+          </ha-button>
+        </div>
+      ` : ''}
+    `;
+  }
+
+  // ─── End MEATER+ (experimental) path ─────────────────────────────────────────
+
+
   _renderMeaterPath() {
     // If in cooking mode, show the setup form
     if (this._showMeaterCooking) {
@@ -17907,13 +21689,50 @@ class KitchenCookingPanel extends LitElement {
             <h4>${this._t('ai_recipe.selected_ingredients_label')} (${this._selectedIngredients.length}):</h4>
             <div class="ingredient-tags">
               ${this._selectedIngredients.map(ing => html`
-                <span class="ingredient-tag">
-                  ${ing}
-                  <button @click=${() => this._removeIngredient(ing)}>×</button>
+                <span
+                  class="ingredient-tag ${ing.compulsory ? 'ingredient-tag--compulsory' : ''}"
+                  title="${this._t('ai_recipe.compulsory_toggle_hint')}"
+                  @click=${(e) => {
+                    // Only toggle if click was NOT on the × button (use .closest to handle child nodes)
+                    if (!e.target.closest('.ingredient-remove-btn')) {
+                      this._toggleIngredientCompulsory(ing.name);
+                    }
+                  }}
+                  style="cursor:pointer;"
+                >
+                  ${ing.compulsory ? html`<span class="compulsory-star">⭐</span>` : ''}
+                  ${ing.name}
+                  <button
+                    class="ingredient-remove-btn"
+                    @click=${(e) => { e.stopPropagation(); this._removeIngredient(ing.name); }}
+                  >×</button>
                 </span>
               `)}
             </div>
           </div>
+
+          ${this._shelfEnabled ? html`
+            <div style="margin-top: 16px; padding: 12px; background: var(--secondary-background-color); border-radius: 8px;">
+              <h4 style="margin: 0 0 8px 0;">${this._t('cooking_mode.selector_title')}</h4>
+              <p style="margin: 0 0 10px 0; font-size: 0.85em; color: var(--secondary-text-color);">${this._t('cooking_mode.selector_hint')}</p>
+              ${['A','B','C'].map(mode => html`
+                <label style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; cursor: pointer;">
+                  <input
+                    type="radio"
+                    name="cooking_mode"
+                    .value=${mode}
+                    ?checked=${this._cookingMode === mode}
+                    @change=${() => this._saveCookingMode(mode)}
+                    style="margin-top: 3px; flex-shrink: 0;"
+                  />
+                  <div>
+                    <div style="font-weight: 600; font-size: 0.9em;">${this._t('cooking_mode.mode_' + mode.toLowerCase() + '_label')}</div>
+                    <div style="font-size: 0.8em; color: var(--secondary-text-color);">${this._t('cooking_mode.mode_' + mode.toLowerCase() + '_desc')}</div>
+                  </div>
+                </label>
+              `)}
+            </div>
+          ` : ''}
 
           <button 
             class="primary-btn"
@@ -18031,7 +21850,7 @@ class KitchenCookingPanel extends LitElement {
       <label class="ingredient-checkbox">
         <input 
           type="checkbox" 
-          ?checked=${this._selectedIngredients.includes(valueName)}
+          ?checked=${!!this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === valueName.toLowerCase())}
           @change=${(e) => this._toggleIngredient(valueName, e.target.checked)}
         />
         ${displayName}
@@ -18242,7 +22061,14 @@ class KitchenCookingPanel extends LitElement {
                     <strong>${this._t('ai_recipe.cook_time_label')}</strong> ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' ' + this._t('common.minutes_short') : this._t('common.na')}
                   </div>
                   <div class="detail-item">
-                    <strong>${this._t('ai_recipe.servings_label')}</strong> ${recipe.servings || '4'}
+                    <strong>${this._t('ai_recipe.servings_label')}</strong>
+                    <input
+                      type="number"
+                      min="1"
+                      max="12"
+                      .value=${recipe._adjustedServings || recipe.servings || 4}
+                      @input=${(e) => this._updateRecipeServings(recipe, parseInt(e.target.value))}
+                      style="width:50px;padding:4px;border:1px solid var(--divider-color);border-radius:4px;background:var(--primary-background-color);color:var(--primary-text-color);">
                   </div>
                   <div class="detail-item">
                     <strong>${this._t('ai_recipe.difficulty_label')}</strong> ${recipe.difficulty || this._t('common.na')}
@@ -18832,6 +22658,24 @@ class KitchenCookingPanel extends LitElement {
         }
       });
 
+      // Phase 8d: Show shelf update prompt if shelf is enabled
+      if (this._shelfEnabled && recipe.ingredients && recipe.ingredients.length > 0) {
+        const staples = (typeof AI_ASSUMED_STAPLES !== 'undefined') ? AI_ASSUMED_STAPLES.map(s => s.toLowerCase()) : [];
+        const checkboxes = recipe.ingredients.map(ing => {
+          const ingLower = ing.toLowerCase().replace(/[^a-z0-9\s]/g, '').trim();
+          const isStaple = staples.some(s => {
+            // Exact word match to avoid false positives like 'oat' matching 'toast'
+            const pattern = new RegExp(`\\b${s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`);
+            return pattern.test(ingLower);
+          });
+          return { name: ing, checked: !isStaple };
+        });
+        this._pendingShelfUpdate = { checkboxes };
+        this._stopRecipeCook();
+        this.requestUpdate();
+        return;
+      }
+
       // Show success message
       this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
 
@@ -18849,11 +22693,11 @@ class KitchenCookingPanel extends LitElement {
    */
   _toggleIngredient(ingredient, enabled) {
     if (enabled) {
-      if (!this._selectedIngredients.includes(ingredient)) {
-        this._selectedIngredients = [...this._selectedIngredients, ingredient];
+      if (!this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === ingredient.toLowerCase())) {
+        this._selectedIngredients = [...this._selectedIngredients, { name: ingredient, compulsory: false }];
       }
     } else {
-      this._selectedIngredients = this._selectedIngredients.filter(i => i !== ingredient);
+      this._selectedIngredients = this._selectedIngredients.filter(i => !i.name || i.name.toLowerCase() !== ingredient.toLowerCase());
     }
     this.requestUpdate();
   }
@@ -18862,8 +22706,8 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Add custom ingredient
    */
   _addCustomIngredient(ingredient) {
-    if (ingredient && !this._selectedIngredients.includes(ingredient)) {
-      this._selectedIngredients = [...this._selectedIngredients, ingredient];
+    if (ingredient && !this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === ingredient.toLowerCase())) {
+      this._selectedIngredients = [...this._selectedIngredients, { name: ingredient, compulsory: false }];
       this.requestUpdate();
     }
   }
@@ -18872,7 +22716,17 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Remove ingredient from selection
    */
   _removeIngredient(ingredient) {
-    this._selectedIngredients = this._selectedIngredients.filter(i => i !== ingredient);
+    this._selectedIngredients = this._selectedIngredients.filter(i => !i.name || i.name.toLowerCase() !== ingredient.toLowerCase());
+    this.requestUpdate();
+  }
+
+  /**
+   * Phase 8a: Toggle compulsory flag on an ingredient
+   */
+  _toggleIngredientCompulsory(name) {
+    this._selectedIngredients = this._selectedIngredients.map(i =>
+      i.name === name ? { ...i, compulsory: !i.compulsory } : i
+    );
     this.requestUpdate();
   }
 
@@ -18957,9 +22811,13 @@ class KitchenCookingPanel extends LitElement {
       // Get appliance IDs (main + selected secondaries)
       const applianceIds = [this._selectedAppliance.id, ...this._selectedSecondaryAppliances];
 
+      // Phase 8a: extract ingredient names + compulsory list
+      const ingredientNames = this._selectedIngredients.map(i => i.name);
+      const compulsoryIngredients = this._selectedIngredients.filter(i => i.compulsory).map(i => i.name);
+
       // Build request with new parameters
       const requestBody = {
-        ingredients: this._selectedIngredients,
+        ingredients: ingredientNames,
         cooking_style: this._selectedCookingStyle,
         appliance_ids: applianceIds,
         main_appliance_id: this._selectedAppliance.id,
@@ -18967,7 +22825,14 @@ class KitchenCookingPanel extends LitElement {
         complexity: this._aiComplexity || 3,
         language: this._language || 'en',
         measurement_system: this._measurementSystem || 'us',
+        compulsory_ingredients: compulsoryIngredients,
+        cooking_mode: this._cookingMode || 'A',
       };
+
+      // Phase 8c: If shelf enabled & mode B or C, include shelf items
+      if (this._shelfEnabled && (this._cookingMode === 'B' || this._cookingMode === 'C')) {
+        requestBody.shelf_items = (this._shelfInventory || []).map(i => i.name);
+      }
 
       // Add max time if set (0 = no limit)
       if (this._aiMaxTime && this._aiMaxTime > 0) {
@@ -19089,7 +22954,7 @@ class KitchenCookingPanel extends LitElement {
         main_appliance_id: this._selectedAppliance ? this._selectedAppliance.id : null,
         cooking_style: this._selectedCookingStyle || 'quick_and_easy',
         complexity: this._aiComplexity || 3,
-        user_ingredients: this._selectedIngredients || [],
+        user_ingredients: (this._selectedIngredients || []).map(i => (typeof i === 'string' ? i : i.name)),
         servings: this._aiPortions || 4,
         language: this._language || 'en',
         measurement_system: this._measurementSystem || 'us',
@@ -19148,7 +23013,7 @@ class KitchenCookingPanel extends LitElement {
     this._showMessageDialog = false;
 
     // Start recipe cook flow via central method (supports parallel cooks)
-    this._startRecipeCook(fullRecipe, fullRecipe.servings || 4);
+    this._startRecipeCook(fullRecipe, fullRecipe._adjustedServings || fullRecipe.servings || 4);
   }
 
   /**
@@ -19247,9 +23112,8 @@ class KitchenCookingPanel extends LitElement {
     const steps = this._getRecipeSteps(recipe);
     const totalTime = recipe.total_time || recipe.cook_time_minutes;
     // Fall back to main_ingredients (from suggestion) if full ingredients list is missing
-    const ingredientList = (recipe.ingredients && recipe.ingredients.length > 0)
-      ? recipe.ingredients
-      : (recipe.main_ingredients || []);
+    const ingredientList = recipe._adjustedIngredients
+      || (recipe.ingredients && recipe.ingredients.length > 0 ? recipe.ingredients : (recipe.main_ingredients || []));
     
     return html`
       <div class="recipe-cook-overview">
@@ -19354,7 +23218,7 @@ class KitchenCookingPanel extends LitElement {
         main_appliance_id: this._selectedAppliance ? this._selectedAppliance.id : null,
         cooking_style: this._selectedCookingStyle || 'quick_and_easy',
         complexity: this._aiComplexity || 3,
-        user_ingredients: this._selectedIngredients || [],
+        user_ingredients: (this._selectedIngredients || []).map(i => (typeof i === 'string' ? i : i.name)),
         servings: this._aiPortions || 4,
         language: this._language || 'en',
         measurement_system: this._measurementSystem || 'us',
@@ -19414,7 +23278,8 @@ class KitchenCookingPanel extends LitElement {
     instructionText = this._convertIngredientText(instructionText);
 
     // Build sorted ingredient list: new-active (green), repeat-active (black), inactive (2 columns)
-    const allIngredients = recipe.ingredients && recipe.ingredients.length > 0 ? recipe.ingredients : [];
+    // Use scaled ingredients if a serving adjustment was applied, otherwise fall back to originals.
+    const allIngredients = (recipe._adjustedIngredients || recipe.ingredients || []);
     const newActiveIngs = [];
     const repeatActiveIngs = [];
     const inactiveIngs = [];
@@ -19518,6 +23383,22 @@ class KitchenCookingPanel extends LitElement {
           </div>
         ` : ''}
 
+        <!-- MEATER probe subprocess button — shown when recipe uses probe and subprocess not yet started -->
+        ${recipe.use_probe && recipe.target_temp_c && !this._recipeCookState.meaterSubprocess ? html`
+          <div class="meater-probe-card" style="margin: 12px 0; padding: 12px; background: rgba(76,175,80,0.1); border: 1px solid #4caf50; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
+            <div style="flex: 1;">
+              <strong>🌡️ ${this._t('recipe_cook.start_meater_btn')}</strong>
+              <div style="font-size: 0.85em; color: var(--secondary-text-color); margin-top: 2px;">
+                ${this._t('common.target')}: ${recipe.target_temp_c}°C
+                ${recipe.target_temp_f ? ` (${recipe.target_temp_f}°F)` : ''}
+              </div>
+            </div>
+            <button class="primary-btn" style="white-space:nowrap;" @click=${() => this._startMeaterSubprocess()}>
+              ${this._t('recipe_cook.start_meater_btn')}
+            </button>
+          </div>
+        ` : ''}
+
         <!-- Ingredients: active sorted by appearance in grey box, inactive in 2-col below -->
         ${allIngredients.length > 0 ? html`
           <div class="recipe-cook-ingredients">
@@ -19609,20 +23490,67 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Render MEATER probe info in footer middle section
+   * Start MEATER probe as a subprocess within the current recipe cook.
+   * Calls start_simple_probe_cook and stores entity reference in meaterSubprocess.
+   */
+  async _startMeaterSubprocess() {
+    const state = this._recipeCookState;
+    if (!state) return;
+    const recipe = state.recipe;
+    const targetTempC = recipe.target_temp_c;
+    if (!targetTempC) return;
+
+    // Find a MEATER cooking session entity
+    const entities = this._findCookingEntities();
+    const meaterEntity = entities.find(e => e.toLowerCase().includes('meater')) || entities[0];
+    if (!meaterEntity) {
+      this._showMessage(this._t('meater.no_sensor_found'), '⚠️ ' + this._t('meater.sensor_not_connected'), true);
+      return;
+    }
+
+    try {
+      await this.hass.callService('kitchen_cooking_engine', 'start_simple_probe_cook', {
+        entity_id: meaterEntity,
+        target_temp_c: targetTempC,
+        session_name: recipe.name || 'Recipe Probe',
+      });
+      state.meaterSubprocess = { entityId: meaterEntity, targetTempC };
+      this._persistActiveRecipeCooks();
+      this.requestUpdate();
+    } catch (e) {
+      this._showMessage('❌ ' + this._t('messages.cook_session_error_title'), e.message || String(e), true);
+    }
+  }
+
+  /**
+   * Detach the MEATER subprocess from the recipe cook (probe session keeps running).
+   */
+  _stopMeaterSubprocess() {
+    const state = this._recipeCookState;
+    if (!state) return;
+    state.meaterSubprocess = null;
+    this._persistActiveRecipeCooks();
+    this.requestUpdate();
+  }
+
+  /**
+   * Render MEATER probe info in footer middle section — shows live temp when subprocess active.
    */
   _renderMeaterProbeInfo() {
-    // TODO: Integrate with MEATER subprocess if active
-    // For now, just show placeholder
-    if (this._recipeCookState?.meaterSubprocess) {
-      return html`
-        <div class="meater-probe-info">
-          <span class="probe-temp">🌡️ 45°C</span>
-          <span class="probe-status">Cooking</span>
-        </div>
-      `;
-    }
-    return html``;
+    const sub = this._recipeCookState?.meaterSubprocess;
+    if (!sub) return html``;
+
+    const entityState = this.hass?.states?.[sub.entityId];
+    const currentTemp = entityState?.attributes?.current_temp;
+    const tempDisplay = (currentTemp !== null && currentTemp !== undefined) ? `${currentTemp}°C` : '--';
+
+    return html`
+      <div class="meater-probe-info">
+        <span class="probe-temp">🌡️ ${tempDisplay}</span>
+        <span class="probe-status">${sub.targetTempC}°C ${this._t('common.target')}</span>
+        <button class="secondary-btn" style="padding:4px 10px;font-size:0.8em;" @click=${() => this._stopMeaterSubprocess()} title="${this._t('recipe_cook.meater_detach_hint')}">✕</button>
+      </div>
+    `;
   }
 
   // ============================================================================
@@ -19768,7 +23696,7 @@ class KitchenCookingPanel extends LitElement {
     // click × to remove it for fully generic recipes.
     const applianceName = this._selectedAppliance?.name;
     if (applianceName) {
-      this._selectedIngredients = [`use ${applianceName} programs`];
+      this._selectedIngredients = [{ name: `use ${applianceName} programs`, compulsory: false }];
     }
 
     this._selectedCookingStyle = null;
@@ -20411,6 +24339,20 @@ class KitchenCookingPanel extends LitElement {
       .doneness-btn.recommended {
         border-color: #ffd700;
       }
+
+      /* Safety indicator dot on doneness buttons (experimental MEATER path) */
+      .safety-dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: 5px;
+        vertical-align: middle;
+        flex-shrink: 0;
+      }
+      .safety-dot.safe    { background-color: #4caf50; }
+      .safety-dot.caution { background-color: #ff9800; }
+      .safety-dot.unsafe  { background-color: #f44336; }
 
       .doneness-btn .star {
         font-size: 10px;
@@ -21601,12 +25543,20 @@ class KitchenCookingPanel extends LitElement {
       }
 
       .ingredient-tag {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
         padding: 4px 10px;
         background: var(--secondary-background-color);
+        border: 1px solid transparent;
         color: var(--secondary-text-color);
         border-radius: 12px;
-        font-size: 11px;
+        font-size: 13px;
+        user-select: none;
+        transition: background 0.15s, border-color 0.15s;
+      }
+
+      .ingredient-tag:hover {
+        background: var(--divider-color);
       }
 
       .view-recipe-btn {
@@ -22546,6 +26496,27 @@ class KitchenCookingPanel extends LitElement {
         margin-left: 4px;
       }
 
+      .ingredient-tag--compulsory {
+        background: rgba(var(--rgb-primary-color, 3, 169, 244), 0.15);
+        border: 1px solid var(--primary-color);
+        color: var(--primary-text-color);
+      }
+
+      .ingredient-tag .compulsory-star {
+        font-size: 11px;
+        margin-right: 3px;
+      }
+
+      .ingredient-remove-btn {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 0 2px;
+        margin-left: 4px;
+      }
+
       .selected-ingredients {
         margin-bottom: 20px;
       }
@@ -22699,7 +26670,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "257";
+const PANEL_VERSION = "272";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

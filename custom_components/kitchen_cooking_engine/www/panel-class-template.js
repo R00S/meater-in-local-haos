@@ -129,6 +129,17 @@ class KitchenCookingPanel extends LitElement {
       _language: { type: String },
       _measurementSystem: { type: String },
       _hideOtherDataSource: { type: Boolean },
+      // Phase 8: Ingredient levels, shelf management, cooking modes
+      _shelfEnabled: { type: Boolean },
+      _cookingMode: { type: String },
+      _shelfInventory: { type: Array },
+      _showAddShelfItem: { type: Boolean },
+      _shelfAddName: { type: String },
+      _shelfAddLocation: { type: String },
+      _shelfAddQuantity: { type: String },
+      _shoppingList: { type: Array },
+      _pendingShelfUpdate: { type: Object },
+
     };
   }
 
@@ -240,6 +251,16 @@ class KitchenCookingPanel extends LitElement {
     this._language = 'en';               // UI language: 'sv' or 'en'
     this._measurementSystem = 'se';      // Measurement: 'se', 'uk', or 'us'
     this._hideOtherDataSource = false;   // Hide inactive data source button
+    // Phase 8: Ingredient levels, shelf management, cooking modes
+    this._shelfEnabled = false;
+    this._cookingMode = 'A';
+    this._shelfInventory = [];
+    this._showAddShelfItem = false;
+    this._shelfAddName = '';
+    this._shelfAddLocation = 'larder';
+    this._shelfAddQuantity = '';
+    this._shoppingList = [];
+    this._pendingShelfUpdate = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -260,6 +281,9 @@ class KitchenCookingPanel extends LitElement {
     this._loadLanguagePreference();
     this._loadMeasurementPreference();
     this._loadHideOtherDataSourcePreference();
+    
+    // Phase 8: Load shelf preference + inventory
+    this._loadShelfPreference();
     
     // Load AI settings to determine if AI Recipe Builder should be visible
     this._loadAISettings();
@@ -549,6 +573,9 @@ class KitchenCookingPanel extends LitElement {
       const response = await this.hass.callApi('GET', 'kitchen_cooking_engine/preferences/language');
       if (response && response.language) {
         this._language = response.language;
+        if (this._hideOtherDataSource) {
+          this._dataSource = (response.language === 'sv') ? DATA_SOURCE_SWEDISH : DATA_SOURCE_INTERNATIONAL;
+        }
       }
     } catch (e) {
       console.log('Could not load language preference:', e);
@@ -557,6 +584,9 @@ class KitchenCookingPanel extends LitElement {
 
   async _saveLanguagePreference(lang) {
     this._language = lang;
+    if (this._hideOtherDataSource) {
+      this._dataSource = (lang === 'sv') ? DATA_SOURCE_SWEDISH : DATA_SOURCE_INTERNATIONAL;
+    }
     try {
       await this.hass.callApi('POST', 'kitchen_cooking_engine/preferences/language', { language: lang });
     } catch (e) {
@@ -588,6 +618,8 @@ class KitchenCookingPanel extends LitElement {
     try {
       const val = localStorage.getItem('kce_hide_other_data_source');
       if (val !== null) this._hideOtherDataSource = val === 'true';
+      const src = localStorage.getItem('kce_data_source');
+      if (src === 'swedish' || src === 'international') this._dataSource = src;
     } catch (e) {
       // localStorage unavailable, keep default
     }
@@ -595,11 +627,183 @@ class KitchenCookingPanel extends LitElement {
 
   _toggleHideOtherDataSource() {
     this._hideOtherDataSource = !this._hideOtherDataSource;
+    if (this._hideOtherDataSource) {
+      this._dataSource = (this._language === 'sv') ? DATA_SOURCE_SWEDISH : DATA_SOURCE_INTERNATIONAL;
+    }
     try {
       localStorage.setItem('kce_hide_other_data_source', String(this._hideOtherDataSource));
     } catch (e) {
       // localStorage unavailable
     }
+  }
+
+  // ---- Phase 8: Shelf preference ----
+
+  async _loadShelfPreference() {
+    try {
+      const prefs = await this.hass.callApi('GET', 'kitchen_cooking_engine/preferences');
+      if (prefs) {
+        if (typeof prefs.shelf_enabled === 'boolean') {
+          this._shelfEnabled = prefs.shelf_enabled;
+        }
+        if (prefs.cooking_mode && ['A','B','C'].includes(prefs.cooking_mode)) {
+          this._cookingMode = prefs.cooking_mode;
+        }
+      }
+      if (this._shelfEnabled) {
+        await this._loadShelfInventory();
+      }
+    } catch (e) {
+      console.log('Could not load shelf preference:', e);
+    }
+  }
+
+  async _saveShelfEnabled(enabled) {
+    this._shelfEnabled = enabled;
+    try {
+      await this.hass.callApi('PATCH', 'kitchen_cooking_engine/preferences', { shelf_enabled: enabled });
+      if (enabled) {
+        await this._loadShelfInventory();
+      }
+    } catch (e) {
+      console.error('Could not save shelf_enabled:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _saveCookingMode(mode) {
+    this._cookingMode = mode;
+    try {
+      await this.hass.callApi('PATCH', 'kitchen_cooking_engine/preferences', { cooking_mode: mode });
+    } catch (e) {
+      console.error('Could not save cooking_mode:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _loadShelfInventory() {
+    try {
+      const resp = await this.hass.callApi('GET', 'kitchen_cooking_engine/shelf');
+      this._shelfInventory = resp && resp.items ? resp.items : [];
+    } catch (e) {
+      console.error('Could not load shelf inventory:', e);
+      this._shelfInventory = [];
+    }
+    this.requestUpdate();
+  }
+
+  async _addShelfItem() {
+    const name = (this._shelfAddName || '').trim();
+    if (!name) return;
+    try {
+      const resp = await this.hass.callApi('POST', 'kitchen_cooking_engine/shelf', {
+        name,
+        location: this._shelfAddLocation || 'larder',
+        quantity: this._shelfAddQuantity || '',
+      });
+      if (resp && resp.item) {
+        this._shelfInventory = [...this._shelfInventory, resp.item];
+      }
+      this._shelfAddName = '';
+      this._shelfAddQuantity = '';
+      this._showAddShelfItem = false;
+    } catch (e) {
+      console.error('Could not add shelf item:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _removeShelfItem(id) {
+    try {
+      await this.hass.callApi('DELETE', `kitchen_cooking_engine/shelf?id=${encodeURIComponent(id)}`);
+      this._shelfInventory = this._shelfInventory.filter(i => i.id !== id);
+    } catch (e) {
+      console.error('Could not remove shelf item:', e);
+    }
+    this.requestUpdate();
+  }
+
+  // ---- Phase 8d: Shopping list ----
+
+  async _loadShoppingList() {
+    try {
+      const resp = await this.hass.callApi('GET', 'kitchen_cooking_engine/shopping_list');
+      this._shoppingList = resp && resp.items ? resp.items : [];
+    } catch (e) {
+      console.error('Could not load shopping list:', e);
+      this._shoppingList = [];
+    }
+    this.requestUpdate();
+  }
+
+  async _toggleShoppingListItem(id) {
+    try {
+      await this.hass.callApi('PATCH', 'kitchen_cooking_engine/shopping_list', { id });
+      this._shoppingList = this._shoppingList.map(i =>
+        i.id === id ? { ...i, checked: !i.checked } : i
+      );
+    } catch (e) {
+      console.error('Could not toggle shopping list item:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _deleteShoppingListItem(id) {
+    try {
+      await this.hass.callApi('DELETE', `kitchen_cooking_engine/shopping_list?id=${encodeURIComponent(id)}`);
+      this._shoppingList = this._shoppingList.filter(i => i.id !== id);
+    } catch (e) {
+      console.error('Could not delete shopping list item:', e);
+    }
+    this.requestUpdate();
+  }
+
+  async _clearCheckedShoppingItems() {
+    const checked = (this._shoppingList || []).filter(i => i.checked);
+    for (const item of checked) {
+      await this._deleteShoppingListItem(item.id);
+    }
+  }
+
+  /**
+   * Find the first HA todo entity (preferring todo.shopping_list).
+   * Returns entity_id string or null if none found.
+   */
+  _findHATodoEntity() {
+    if (!this.hass) return null;
+    if (this.hass.states['todo.shopping_list']) return 'todo.shopping_list';
+    return Object.keys(this.hass.states).find(id => id.startsWith('todo.')) || null;
+  }
+
+  /**
+   * Push an array of name strings to the HA todo entity via todo.add_item.
+   * Returns the number of items successfully pushed.
+   */
+  async _pushToHATodo(names) {
+    const entityId = this._findHATodoEntity();
+    if (!entityId || !names || names.length === 0) return 0;
+    let count = 0;
+    for (const name of names) {
+      try {
+        await this.hass.callService('todo', 'add_item', { entity_id: entityId, item: name });
+        count++;
+      } catch (e) {
+        console.warn('KCE: could not push item to HA todo:', name, e);
+      }
+    }
+    return count;
+  }
+
+  _navigateToShelfManagement() {
+    this._showAddShelfItem = false;
+    this._currentPath = 'shelf_management';
+    this.requestUpdate();
+  }
+
+  _navigateToShoppingList() {
+    this._loadShoppingList();
+    this._currentPath = 'shopping_list';
+    this.requestUpdate();
   }
 
   async _loadHistory() {
@@ -912,6 +1116,11 @@ class KitchenCookingPanel extends LitElement {
 
   _switchDataSource(source) {
     this._dataSource = source;
+    try {
+      localStorage.setItem('kce_data_source', source);
+    } catch (e) {
+      // localStorage unavailable
+    }
     // Reset all selections when switching data source
     this._selectedCategory = null;
     this._selectedMeat = null;
@@ -1215,6 +1424,18 @@ class KitchenCookingPanel extends LitElement {
     this._showAppliances = false;
     this._showRecipes = false;
     this._showAIRecipeBuilder = false;
+    this.requestUpdate();
+  }
+
+  /**
+   * Navigate to MEATER+ (experimental) path — same flow as the standard MEATER path
+   * but with safety indicators on doneness options.
+   * @param {Object} appliance - Selected MEATER appliance
+   */
+  _navigateToMeaterExperimentalPath(appliance) {
+    this._currentPath = 'meater_experimental';
+    this._selectedAppliance = appliance;
+    this._showMeaterCooking = false;
     this.requestUpdate();
   }
 
@@ -1786,21 +2007,59 @@ class KitchenCookingPanel extends LitElement {
     if (isNaN(newServings) || newServings < 1) return;
     
     const originalServings = recipe.servings;
+    if (!originalServings || originalServings <= 0) {
+      console.warn('KCE: cannot scale recipe — recipe.servings is missing or zero');
+      return;
+    }
     const multiplier = newServings / originalServings;
     
     // Store adjusted servings
     recipe._adjustedServings = newServings;
     
-    // Scale ingredients
-    recipe._adjustedIngredients = recipe.ingredients.map(ing => {
-      // Try to find numbers in the ingredient string and scale them
-      return ing.replace(/(\d+(?:\.\d+)?)\s*([a-zA-Z]*)/g, (match, num, unit) => {
-        const scaledNum = (parseFloat(num) * multiplier).toFixed(1).replace(/\.0$/, '');
-        return `${scaledNum} ${unit}`;
+    // Scale ingredients with intelligent rounding
+    const ingredients = recipe.ingredients || [];
+    recipe._adjustedIngredients = ingredients.map(ing => {
+      return ing.replace(/(\d+(?:[.,\/]\d+)?)\s*([a-zA-ZÅÄÖåäö%]*)/g, (match, numStr, unit) => {
+        // Parse simple fractions like "1/2"
+        let rawValue;
+        if (numStr.includes('/')) {
+          const parts = numStr.split('/');
+          rawValue = parseFloat(parts[0]) / parseFloat(parts[1]);
+        } else {
+          rawValue = parseFloat(numStr.replace(',', '.'));
+        }
+        if (isNaN(rawValue) || rawValue <= 0) return match;
+        const scaled = rawValue * multiplier;
+        const rounded = this._smartRound(scaled);
+        return unit ? `${rounded}\u00a0${unit}` : `${rounded}`;
       });
     });
     
     this.requestUpdate();
+  }
+
+  /**
+   * Round a scaled ingredient amount to a practical value.
+   * - >= 50: round to nearest 5
+   * - >= 10: round to nearest integer
+   * - >= 2: round to nearest 0.5
+   * - < 2:  round to nearest quarter (0.25)
+   */
+  _smartRound(value) {
+    if (value <= 0) return value;
+    let result;
+    if (value >= 50) {
+      result = Math.round(value / 5) * 5;
+    } else if (value >= 10) {
+      result = Math.round(value);
+    } else if (value >= 2) {
+      result = Math.round(value * 2) / 2;
+    } else {
+      result = Math.round(value * 4) / 4;
+    }
+    // Format: drop unnecessary .0 / .00 but keep meaningful decimals
+    const str = result % 1 === 0 ? String(result) : String(parseFloat(result.toFixed(2)));
+    return str;
   }
 
   _openRecipeInBuilder(recipe) {
@@ -2636,6 +2895,11 @@ class KitchenCookingPanel extends LitElement {
       return this._renderMeaterCookRating();
     }
     
+    // Phase 8d: Post-cook shelf update prompt
+    if (this._pendingShelfUpdate) {
+      return this._renderPostCookShelfUpdate();
+    }
+
     // Show recipe cook flow when actively viewing one (pointer is set)
     if (this._recipeCookState) {
       return this._renderRecipeCookFlow();
@@ -2732,6 +2996,9 @@ class KitchenCookingPanel extends LitElement {
     switch (this._currentPath) {
       case 'welcome':
         return this._renderWelcomeScreen(activeCooks);
+
+      case 'meater_experimental':
+        return this._renderMeaterExperimental();
       
       case 'meater':
         return this._renderMeaterPath();
@@ -2771,6 +3038,12 @@ class KitchenCookingPanel extends LitElement {
       
       case 'previous_cooks':
         return this._renderPreviousCooksPath();
+      
+      case 'shelf_management':
+        return this._renderShelfManagement();
+
+      case 'shopping_list':
+        return this._renderShoppingList();
       
       default:
         // Fallback to welcome screen for any unrecognized path
@@ -2842,39 +3115,31 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : ''}
       
-      <!-- Data Source Selector -->
+      <!-- Data Source Selector (hidden when user has opted to hide inactive source) -->
+      ${!this._hideOtherDataSource ? html`
       <ha-card>
         <div class="card-content">
           <h3>${this._t('meater.data_source_title')}</h3>
           <div class="button-group">
-            ${!this._hideOtherDataSource || this._dataSource === DATA_SOURCE_INTERNATIONAL ? html`
-              <button 
-                class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
-                @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
-                ${this._t('meater.international')}
-              </button>
-            ` : ''}
-            ${!this._hideOtherDataSource || this._dataSource === DATA_SOURCE_SWEDISH ? html`
-              <button 
-                class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
-                @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
-                ${this._t('meater.swedish')}
-              </button>
-            ` : ''}
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
+              ${this._t('meater.international')}
+            </button>
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
+              ${this._t('meater.swedish')}
+            </button>
           </div>
           <p class="source-description">
             ${this._dataSource === DATA_SOURCE_SWEDISH 
               ? this._t('meater.swedish_description')
               : this._t('meater.international_description')}
           </p>
-          <label style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:0.85em;cursor:pointer;">
-            <input type="checkbox"
-              .checked=${this._hideOtherDataSource}
-              @change=${() => this._toggleHideOtherDataSource()}>
-            ${this._t('meater.hide_other_tree')}
-          </label>
         </div>
       </ha-card>
+      ` : ''}
       
       <!-- Step 1: Select Category -->
       <ha-card>
@@ -3606,17 +3871,35 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : html`
         <div class="appliance-grid">
-          ${this._appliances.map(appliance => html`
-            <ha-card class="appliance-card clickable" @click=${() => this._routeToAppliancePath(appliance)}>
-              <div class="card-content appliance-card-content">
-                <div class="appliance-icon">
-                  ${this._getApplianceIcon(appliance)}
+          ${this._appliances.flatMap(appliance => {
+            const brand = (appliance.brand || '').toLowerCase();
+            const model = (appliance.model || '').toLowerCase();
+            const name = (appliance.name || '').toLowerCase();
+            const isMeater = brand.includes('meater') || model.includes('meater') || name.includes('meater');
+            const cards = [html`
+              <ha-card class="appliance-card clickable" @click=${() => this._routeToAppliancePath(appliance)}>
+                <div class="card-content appliance-card-content">
+                  <div class="appliance-icon">
+                    ${this._getApplianceIcon(appliance)}
+                  </div>
+                  <div class="appliance-name">${appliance.name}</div>
+                  <div class="appliance-model">${appliance.brand} ${appliance.model}</div>
                 </div>
-                <div class="appliance-name">${appliance.name}</div>
-                <div class="appliance-model">${appliance.brand} ${appliance.model}</div>
-              </div>
-            </ha-card>
-          `)}
+              </ha-card>
+            `];
+            if (isMeater) {
+              cards.push(html`
+                <ha-card class="appliance-card clickable meater-exp-card" @click=${() => this._navigateToMeaterExperimentalPath(appliance)}>
+                  <div class="card-content appliance-card-content">
+                    <div class="appliance-icon" style="font-size: 2em;">🧪🌡️</div>
+                    <div class="appliance-name">MEATER+ <span style="font-size:0.75em;color:var(--secondary-text-color);">(experimental)</span></div>
+                    <div class="appliance-model" style="color:var(--accent-color);">Safety indicators · per-cut temps</div>
+                  </div>
+                </ha-card>
+              `);
+            }
+            return cards;
+          })}
         </div>
 
         <ha-card class="previous-cooks-card clickable" @click=${() => this._navigateToPreviousCooks()}>
@@ -3655,6 +3938,12 @@ class KitchenCookingPanel extends LitElement {
                 🇬🇧 English
               </button>
             </div>
+            <label style="display:flex;align-items:center;gap:8px;margin-top:10px;font-size:0.85em;cursor:pointer;">
+              <input type="checkbox"
+                .checked=${this._hideOtherDataSource}
+                @change=${() => this._toggleHideOtherDataSource()}>
+              ${this._t('meater.hide_other_tree')}
+            </label>
           </div>
         </ha-card>
 
@@ -3683,13 +3972,661 @@ class KitchenCookingPanel extends LitElement {
             </p>
           </div>
         </ha-card>
+
+        <!-- Phase 8b: Shelf Management toggle -->
+        <ha-card>
+          <div class="card-content">
+            <h3>${this._t('shelf.enable_label')}</h3>
+            <p class="info-text" style="margin-bottom: 10px;">${this._t('shelf.enable_desc')}</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <label class="checkbox-label">
+                <input
+                  type="checkbox"
+                  ?checked=${this._shelfEnabled}
+                  @change=${(e) => this._saveShelfEnabled(e.target.checked)}
+                />
+                ${this._shelfEnabled ? '✅ ' + this._t('shelf.enable_label') : this._t('shelf.enable_label')}
+              </label>
+            </div>
+            ${this._shelfEnabled ? html`
+              <button class="primary-btn" style="margin-top: 12px;" @click=${() => this._navigateToShelfManagement()}>
+                ${this._t('shelf.title')}
+              </button>
+            ` : ''}
+          </div>
+        </ha-card>
       `}
     `;
   }
 
+  // ============================================================================
+  // PHASE 8b: SHELF MANAGEMENT SCREEN
+  // ============================================================================
+
+  _renderShelfManagement() {
+    const locations = ['fridge', 'larder', 'freezer', 'spices'];
+    const locationKeys = {
+      fridge: 'shelf.location_fridge',
+      larder: 'shelf.location_larder',
+      freezer: 'shelf.location_freezer',
+      spices: 'shelf.location_spices',
+    };
+    const grouped = {};
+    for (const loc of locations) grouped[loc] = [];
+    for (const item of (this._shelfInventory || [])) {
+      const loc = item.location || 'larder';
+      if (!grouped[loc]) grouped[loc] = [];
+      grouped[loc].push(item);
+    }
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => { this._currentPath = 'welcome'; this.requestUpdate(); }}>
+          ${this._t('shelf.back')}
+        </button>
+        <h2>${this._t('shelf.title')}</h2>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <button class="secondary-btn" @click=${() => this._navigateToShoppingList()}>
+              ${this._t('shelf.shopping_list_btn')}
+            </button>
+            <button class="primary-btn" @click=${() => { this._showAddShelfItem = !this._showAddShelfItem; this.requestUpdate(); }}>
+              ${this._t('shelf.add_item')}
+            </button>
+          </div>
+
+          ${this._showAddShelfItem ? html`
+            <div style="background: var(--secondary-background-color); padding: 12px; border-radius: 8px; margin-bottom: 16px;">
+              <input
+                type="text"
+                placeholder="${this._t('shelf.item_name_placeholder')}"
+                .value=${this._shelfAddName}
+                @input=${(e) => { this._shelfAddName = e.target.value; }}
+                style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; margin-bottom: 8px; box-sizing: border-box;"
+              />
+              <select
+                .value=${this._shelfAddLocation}
+                @change=${(e) => { this._shelfAddLocation = e.target.value; }}
+                style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; margin-bottom: 8px; box-sizing: border-box;"
+              >
+                ${locations.map(loc => html`
+                  <option value=${loc} ?selected=${this._shelfAddLocation === loc}>
+                    ${this._t(locationKeys[loc])}
+                  </option>
+                `)}
+              </select>
+              <input
+                type="text"
+                placeholder="${this._t('shelf.item_quantity_placeholder')}"
+                .value=${this._shelfAddQuantity}
+                @input=${(e) => { this._shelfAddQuantity = e.target.value; }}
+                style="width: 100%; padding: 8px; border: 1px solid var(--divider-color); border-radius: 4px; margin-bottom: 8px; box-sizing: border-box;"
+              />
+              <div style="display: flex; gap: 8px;">
+                <button class="primary-btn" @click=${() => this._addShelfItem()}>${this._t('shelf.save_item')}</button>
+                <button class="secondary-btn" @click=${() => { this._showAddShelfItem = false; this.requestUpdate(); }}>${this._t('shelf.cancel')}</button>
+              </div>
+            </div>
+          ` : ''}
+
+          ${locations.map(loc => {
+            const items = grouped[loc] || [];
+            return html`
+              <div style="margin-bottom: 16px;">
+                <h4 style="margin: 0 0 6px 0; color: var(--primary-color);">${this._t(locationKeys[loc])}</h4>
+                ${items.length === 0 ? html`
+                  <p style="font-size: 0.85em; color: var(--secondary-text-color);">${this._t('shelf.empty')}</p>
+                ` : html`
+                  <div style="display: flex; flex-direction: column; gap: 4px;">
+                    ${items.map(item => html`
+                      <div style="display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: var(--secondary-background-color); border-radius: 6px;">
+                        <div>
+                          <span style="font-weight: 500;">${item.name}</span>
+                          ${item.quantity ? html`<span style="font-size: 0.85em; color: var(--secondary-text-color); margin-left: 8px;">${item.quantity}</span>` : ''}
+                        </div>
+                        <button class="secondary-btn" style="padding: 4px 10px; font-size: 0.8em;" @click=${() => this._removeShelfItem(item.id)}>
+                          ${this._t('shelf.remove_item')}
+                        </button>
+                      </div>
+                    `)}
+                  </div>
+                `}
+              </div>
+            `;
+          })}
+        </div>
+      </ha-card>
+    `;
+  }
+
+  // ============================================================================
+  // PHASE 8d: SHOPPING LIST SCREEN
+  // ============================================================================
+
+  _renderShoppingList() {
+    const items = this._shoppingList || [];
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => { this._currentPath = 'shelf_management'; this.requestUpdate(); }}>
+          ${this._t('shopping_list.back')}
+        </button>
+        <h2>${this._t('shopping_list.title')}</h2>
+      </div>
+
+      <ha-card>
+        <div class="card-content">
+          ${items.length === 0 ? html`
+            <p style="color: var(--secondary-text-color);">${this._t('shopping_list.empty')}</p>
+          ` : html`
+            <div style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px;">
+              ${items.map(item => html`
+                <div style="display: flex; align-items: center; gap: 10px; padding: 8px; background: var(--secondary-background-color); border-radius: 6px; ${item.checked ? 'opacity:0.5;text-decoration:line-through;' : ''}">
+                  <input
+                    type="checkbox"
+                    ?checked=${item.checked}
+                    @change=${() => this._toggleShoppingListItem(item.id)}
+                    style="width: 18px; height: 18px; cursor: pointer; flex-shrink: 0;"
+                  />
+                  <span style="flex: 1;">${item.name}${item.quantity ? html` <span style="font-size:0.85em;color:var(--secondary-text-color);">${item.quantity}</span>` : ''}</span>
+                  <button class="secondary-btn" style="padding: 4px 10px; font-size: 0.8em;" @click=${() => this._deleteShoppingListItem(item.id)}>✕</button>
+                </div>
+              `)}
+            </div>
+            ${items.some(i => i.checked) ? html`
+              <button class="secondary-btn" @click=${() => this._clearCheckedShoppingItems()}>
+                ${this._t('shopping_list.clear_checked')}
+              </button>
+            ` : ''}
+            ${items.some(i => !i.checked) ? html`
+              <button class="secondary-btn" style="margin-top: 8px;" @click=${async () => {
+                const names = items.filter(i => !i.checked).map(i => i.name);
+                const count = await this._pushToHATodo(names);
+                if (count > 0) {
+                  this._showMessage('✅', this._t('shopping_list.exported_to_ha').replace('{count}', count), false);
+                } else {
+                  this._showMessage('⚠️', this._t('shopping_list.ha_todo_not_found'), false);
+                }
+              }}>
+                📤 ${this._t('shopping_list.export_to_ha')}
+              </button>
+            ` : ''}
+          `}
+        </div>
+      </ha-card>
+    `;
+  }
+
+  // ============================================================================
+  // PHASE 8d: POST-COOK SHELF UPDATE PROMPT
+  // ============================================================================
+
+  _renderPostCookShelfUpdate() {
+    const update = this._pendingShelfUpdate;
+    if (!update) return html``;
+    const checkboxes = update.checkboxes || [];
+    return html`
+      <ha-card>
+        <div class="card-content">
+          <h3>${this._t('post_cook.update_shelf_title')}</h3>
+          <p class="info-text">${this._t('post_cook.update_shelf_desc')}</p>
+
+          <div style="display: flex; flex-direction: column; gap: 6px; margin: 12px 0;">
+            ${checkboxes.map((cb, idx) => html`
+              <label class="checkbox-label">
+                <input
+                  type="checkbox"
+                  ?checked=${cb.checked}
+                  @change=${(e) => {
+                    this._pendingShelfUpdate = {
+                      ...update,
+                      checkboxes: checkboxes.map((c, i) => i === idx ? { ...c, checked: e.target.checked } : c),
+                    };
+                    this.requestUpdate();
+                  }}
+                />
+                ${cb.name}
+              </label>
+            `)}
+          </div>
+
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px;">
+            <button class="primary-btn" @click=${async () => {
+              const checked = checkboxes.filter(c => c.checked);
+              for (const item of checked) {
+                const normItem = item.name.toLowerCase().replace(/s$/, '');
+                const shelfItem = (this._shelfInventory || []).find(s => {
+                  const normShelf = s.name.toLowerCase().replace(/s$/, '');
+                  return normShelf === normItem
+                    || s.name.toLowerCase().includes(item.name.toLowerCase())
+                    || item.name.toLowerCase().includes(s.name.toLowerCase());
+                });
+                if (shelfItem) {
+                  await this._removeShelfItem(shelfItem.id);
+                }
+              }
+              this._pendingShelfUpdate = null;
+              this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
+              this.requestUpdate();
+            }}>
+              ${this._t('post_cook.update_shelf_btn')}
+            </button>
+
+            <button class="secondary-btn" @click=${async () => {
+              const unchecked = checkboxes.filter(c => !c.checked);
+              if (unchecked.length > 0) {
+                try {
+                  await this.hass.callApi('POST', 'kitchen_cooking_engine/shopping_list', {
+                    items: unchecked.map(c => ({ name: c.name })),
+                  });
+                } catch (e) {
+                  console.error('Could not add to shopping list:', e);
+                }
+                // Also push to HA native todo list (fire-and-forget)
+                await this._pushToHATodo(unchecked.map(c => c.name));
+              }
+              this._pendingShelfUpdate = null;
+              this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
+              this.requestUpdate();
+            }}>
+              ${this._t('post_cook.add_to_list_btn')}
+            </button>
+
+            <button class="secondary-btn" @click=${() => {
+              this._pendingShelfUpdate = null;
+              this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
+              this.requestUpdate();
+            }}>
+              ${this._t('post_cook.skip_btn')}
+            </button>
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  // ─── MEATER+ (experimental) path ─────────────────────────────────────────────
+
+  _renderMeaterExperimental() {
+    // If in cooking mode, show the setup form
+    if (this._showMeaterCooking) {
+      let entities = this._findCookingEntities();
+      
+      // v0.5.0.51: Sort entities by entity ID pattern (more reliable than attributes)
+      // Entity IDs like "kitchen_cooking_engine_bt_proxy_meater_tip_temperature_cooking_session"
+      // contain "meater" - use this to identify and sort MEATER entities first
+      entities = entities.sort((a, b) => {
+        const aIsMeater = a.toLowerCase().includes('meater');
+        const bIsMeater = b.toLowerCase().includes('meater');
+        
+        // MEATER entities first, others after
+        if (aIsMeater && !bIsMeater) return -1;
+        if (!aIsMeater && bIsMeater) return 1;
+        return 0;  // Preserve original order for same type
+      });
+      
+      return html`
+        <div class="path-header">
+          <button class="back-btn" @click=${() => { 
+            this._showMeaterCooking = false;
+            this.requestUpdate();
+          }}>
+            ← Back to MEATER Path
+          </button>
+          <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
+        </div>
+        
+        ${this._renderExpSetupForm(entities)}
+      `;
+    }
+    
+    // Otherwise show the path buttons
+    return html`
+      <div class="path-header">
+        <button class="back-btn" @click=${() => this._navigateToWelcome()}>
+          ← Back to Appliances
+        </button>
+        <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
+      </div>
+
+      <div class="path-buttons">
+        <ha-card class="path-card clickable" @click=${() => this._startMeaterCooking()}>
+          <div class="card-content path-card-content">
+            <div class="path-icon">🌡️</div>
+            <h3>Start MEATER Cooking</h3>
+            <p>Select protein, set target, monitor temperature</p>
+          </div>
+        </ha-card>
+
+        <ha-card class="path-card clickable" @click=${() => this._showRecentMeaterCooks()}>
+          <div class="card-content path-card-content">
+            <div class="path-icon">📋</div>
+            <h3>Recent MEATER Cooks</h3>
+            <p>View and restart previous temperature-based cooks</p>
+          </div>
+        </ha-card>
+      </div>
+    `;
+  }
+
   /**
-   * Render MEATER path (cook type 6.1)
+   * Setup form for the experimental MEATER path (matches source-reference v0.5.3.5 _renderSetupForm).
    */
+  _renderExpSetupForm(entities) {
+    const categories = this._getDataCategories();
+    const category = this._getCategory();
+    const meats = this._getMeats();
+    const cutTypes = this._getCutTypes();
+    const cuts = this._getCuts();
+    const showMeatSelector = meats.length > 1;
+    const showCutTypeSelector = cutTypes.length > 1 || (cutTypes.length === 1 && this._selectedMeat);
+    const recommendedDoneness = this._getRecommendedDoneness();
+    const donenessTemps = this._selectedDoneness ? this._getTargetTempForDoneness(this._selectedDoneness) : null;
+    const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
+    const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
+    
+    // v0.5.0.57: Check if selected entity is specifically a MEATER entity
+    // Diagnostic data revealed: entities.includes() returns TRUE for non-MEATER entities
+    // because all cooking_session entities are in the list. We need to check if the
+    // selected entity IS a MEATER entity, not just if it's in the list.
+    if (entities.length > 0) {
+      // Check if selected entity contains "meater" in its ID (same pattern as sorting)
+      const isMeaterEntity = this._selectedEntity && 
+                             this._selectedEntity.toLowerCase().includes('meater');
+      
+      if (!this._selectedEntity || !isMeaterEntity) {
+        this._selectedEntity = entities[0];  // First entity (MEATER after sorting in _renderMeaterPath)
+      }
+    }
+    
+    return html`
+      <div class="status-banner idle">
+        <h2>🍳 Ready to Cook</h2>
+        <p>Select your protein and preferences below</p>
+      </div>
+      
+      ${entities.length > 1 ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>Select Session</h3>
+            <select 
+              .value=${this._selectedEntity}
+              @change=${(e) => this._selectedEntity = e.target.value}
+            >
+              ${entities.map(e => html`
+                <option value="${e}" ?selected=${this._selectedEntity === e}>
+                  ${this.hass.states[e]?.attributes?.friendly_name || e}
+                </option>
+              `)}
+            </select>
+          </div>
+        </ha-card>
+      ` : ''}
+      
+      <!-- Data Source Selector -->
+      <ha-card>
+        <div class="card-content">
+          <h3>🌍 Temperature Data Source</h3>
+          <div class="button-group">
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
+              🇺🇸 International (USDA)
+            </button>
+            <button 
+              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
+              @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
+              🇸🇪 Svenska (Livsmedelsverket)
+            </button>
+          </div>
+          <p class="source-description">
+            ${this._dataSource === DATA_SOURCE_SWEDISH 
+              ? 'Använder svenska temperaturrekommendationer från Livsmedelsverket, Stekguiden.se och Gårdssällskapet.'
+              : 'Using international temperature guidelines from USDA, FDA and professional culinary sources.'}
+          </p>
+        </div>
+      </ha-card>
+      
+      <!-- Step 1: Select Category -->
+      <ha-card>
+        <div class="card-content">
+          <h3>1️⃣ Select Category</h3>
+          <div class="button-group">
+            ${Object.entries(categories).map(([key, cat]) => html`
+              <button 
+                class="category-btn ${this._selectedCategory === key ? 'selected' : ''}" 
+                @click=${() => this._selectCategory(key)}>
+                ${cat.icon} ${cat.name}
+              </button>
+            `)}
+            <button 
+              class="category-btn ${this._selectedCategory === 'custom' ? 'selected' : ''}" 
+              @click=${() => this._selectCategory('custom')}>
+              🎯 Custom
+            </button>
+          </div>
+        </div>
+      </ha-card>
+      
+      <!-- Custom Temperature Cook (no meat/cut/doneness needed) -->
+      ${this._selectedCategory === 'custom' ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>🎯 Custom Temperature Cook</h3>
+            <p>Set a target temperature and start monitoring — no protein or doneness selection needed.</p>
+            
+            <div style="margin: 16px 0;">
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Session Name (optional)</label>
+              <input 
+                type="text" 
+                placeholder="e.g. My Cook"
+                .value=${this._customProfileName || ''}
+                @input=${(e) => { this._customProfileName = e.target.value; }}
+                style="width: 100%; padding: 10px; border: 2px solid var(--divider-color); border-radius: 8px; font-size: 14px; background: var(--card-background-color); color: var(--primary-text-color); box-sizing: border-box;"
+              />
+            </div>
+            
+            <div style="margin: 16px 0;">
+              <label style="display: block; margin-bottom: 8px; font-weight: 500;">Target Temperature</label>
+              <div class="temp-display-setup">
+                <div class="target-temp">
+                  <span class="temp-value">${this._customProfileTempC}°C</span>
+                  <span class="temp-fahrenheit">(${Math.round(this._customProfileTempC * 9 / 5 + 32)}°F)</span>
+                </div>
+              </div>
+              <input 
+                type="range" 
+                min="30" 
+                max="100" 
+                step="1"
+                .value="${this._customProfileTempC}"
+                @input=${(e) => { this._customProfileTempC = parseInt(e.target.value); }}
+                class="temp-slider"
+                style="width: 100%; margin: 12px 0;"
+              />
+              <div class="temp-adjust-controls">
+                <button class="temp-btn" @click=${() => { this._customProfileTempC = Math.max(30, this._customProfileTempC - 1); }}>-1°C</button>
+                <input 
+                  type="number" 
+                  min="30" 
+                  max="100" 
+                  .value="${this._customProfileTempC}"
+                  @change=${(e) => { const v = parseInt(e.target.value); if (v >= 30 && v <= 100) this._customProfileTempC = v; }}
+                  class="temp-input"
+                />
+                <button class="temp-btn" @click=${() => { this._customProfileTempC = Math.min(100, this._customProfileTempC + 1); }}>+1°C</button>
+              </div>
+            </div>
+          </div>
+        </ha-card>
+        
+        <div class="action-container">
+          <ha-button unelevated @click=${() => this._startCustomCook()}>
+            🔥 Start Cooking at ${this._customProfileTempC}°C
+          </ha-button>
+        </div>
+      ` : ''}
+      
+      <!-- Step 2: Select Animal/Meat (if multiple) -->
+      ${this._selectedCategory && showMeatSelector ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>2️⃣ Select Type</h3>
+            <div class="button-group">
+              ${meats.map(meat => html`
+                <button 
+                  class="category-btn ${this._selectedMeat === meat.id ? 'selected' : ''}" 
+                  @click=${() => this._selectMeat(meat.id)}>
+                  ${meat.name}
+                </button>
+              `)}
+            </div>
+          </div>
+        </ha-card>
+      ` : ''}
+      
+      <!-- Step 3: Select Cut Type (Steaks, Roasts, etc.) -->
+      ${this._selectedMeat && cutTypes.length > 0 ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>${showMeatSelector ? '3️⃣' : '2️⃣'} Select Cut Type</h3>
+            <div class="button-group">
+              ${cutTypes.map(ct => html`
+                <button 
+                  class="category-btn ${this._selectedCutType === ct.id ? 'selected' : ''}" 
+                  @click=${() => this._selectCutType(ct.id)}>
+                  ${ct.name}
+                </button>
+              `)}
+            </div>
+          </div>
+        </ha-card>
+      ` : ''}
+      
+      <!-- Step 4: Select Specific Cut -->
+      ${this._selectedCutType && cuts.length > 0 ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} Select Cut</h3>
+            <select @change=${(e) => this._selectCut(parseInt(e.target.value) || null)}>
+              <option value="">Choose a cut...</option>
+              ${cuts.map(cut => html`
+                <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
+                  ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
+                </option>
+              `)}
+            </select>
+          </div>
+        </ha-card>
+      ` : ''}
+      
+      <!-- Step 5: Doneness Level -->
+      ${this._selectedCut ? html`
+        <ha-card>
+          <div class="card-content">
+            <h3>🌡️ Doneness Level ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = recommended)</span>` : ''}</h3>
+            <div class="doneness-grid">
+              ${this._getAvailableDoneness().map(opt => html`
+                <button 
+                  class="doneness-btn ${this._selectedDoneness === opt.value ? 'selected' : ''} ${opt.value === recommendedDoneness ? 'recommended' : ''}"
+                  @click=${() => this._selectDoneness(opt.value)}
+                  title="${opt.description || ''}">
+                  <span class="icon">${opt.icon}</span>
+                  ${opt.name}
+                  ${opt.value === recommendedDoneness ? html`<span class="star">⭐</span>` : ''}
+                  ${opt.safety_level ? html`<span class="safety-dot ${opt.safety_level}" title="${opt.safety_level === 'safe' ? '✅ Meets food safety guidelines' : opt.safety_level === 'caution' ? '⚠️ Below safety guidelines – widely practiced' : '⛔ Well below safety guidelines'}"></span>` : ''}
+                  <span class="temp-hint">${opt.temp_c}°C</span>
+                </button>
+              `)}
+            </div>
+          </div>
+        </ha-card>
+        
+        <!-- Temperature Fine-Tuning -->
+        ${this._selectedDoneness ? html`
+          <ha-card>
+            <div class="card-content">
+              <h3>🎯 Target Temperature</h3>
+              <div class="temp-display-setup">
+                <div class="target-temp">
+                  <span class="temp-value">${displayTemp}°C</span>
+                  <span class="temp-fahrenheit">(${displayTempF}°F)</span>
+                </div>
+                ${this._customTargetTempC ? html`
+                  <span class="custom-indicator">Custom</span>
+                ` : ''}
+              </div>
+              
+              <button 
+                class="adjust-btn ${this._showTempAdjust ? 'active' : ''}"
+                @click=${() => this._toggleTempAdjust()}>
+                ${this._showTempAdjust ? '✓ Done Adjusting' : '⚙️ Fine-tune Temperature'}
+              </button>
+              
+              ${this._showTempAdjust ? html`
+                <div class="temp-adjust-section">
+                  <input 
+                    type="range" 
+                    min="35" 
+                    max="100" 
+                    step="1"
+                    .value="${displayTemp}"
+                    @input=${(e) => this._updateCustomTemp(e.target.value)}
+                    class="temp-slider"
+                  />
+                  <div class="temp-adjust-controls">
+                    <button class="temp-btn" @click=${() => this._updateCustomTemp(displayTemp - 1)}>-1°C</button>
+                    <input 
+                      type="number" 
+                      min="35" 
+                      max="100" 
+                      .value="${displayTemp}"
+                      @change=${(e) => this._updateCustomTemp(e.target.value)}
+                      class="temp-input"
+                    />
+                    <button class="temp-btn" @click=${() => this._updateCustomTemp(displayTemp + 1)}>+1°C</button>
+                  </div>
+                  <button 
+                    class="reset-btn"
+                    @click=${() => { this._customTargetTempC = null; }}>
+                    Reset to ${donenessTemps?.c}°C (${this._selectedDoneness ? this._selectedDoneness.replace('_', ' ') : ''})
+                  </button>
+                </div>
+              ` : ''}
+            </div>
+          </ha-card>
+        ` : ''}
+        
+        <!-- Step 6: Cooking Method -->
+        <ha-card>
+          <div class="card-content">
+            <h3>🍳 Cooking Method</h3>
+            <div class="method-grid">
+              ${COOKING_METHODS.map(opt => html`
+                <button 
+                  class="method-btn ${this._selectedMethod === opt.value ? 'selected' : ''}"
+                  @click=${() => this._selectedMethod = opt.value}>
+                  ${opt.name}
+                </button>
+              `)}
+            </div>
+          </div>
+        </ha-card>
+        
+        <!-- Start Button -->
+        <div class="action-container">
+          <ha-button unelevated @click=${this._startCook} ?disabled=${!this._selectedDoneness}>
+            🔥 Start Cooking${this._customTargetTempC ? ` at ${this._customTargetTempC}°C` : ''}
+          </ha-button>
+        </div>
+      ` : ''}
+    `;
+  }
+
+  // ─── End MEATER+ (experimental) path ─────────────────────────────────────────
+
+
   _renderMeaterPath() {
     // If in cooking mode, show the setup form
     if (this._showMeaterCooking) {
@@ -4640,13 +5577,50 @@ class KitchenCookingPanel extends LitElement {
             <h4>${this._t('ai_recipe.selected_ingredients_label')} (${this._selectedIngredients.length}):</h4>
             <div class="ingredient-tags">
               ${this._selectedIngredients.map(ing => html`
-                <span class="ingredient-tag">
-                  ${ing}
-                  <button @click=${() => this._removeIngredient(ing)}>×</button>
+                <span
+                  class="ingredient-tag ${ing.compulsory ? 'ingredient-tag--compulsory' : ''}"
+                  title="${this._t('ai_recipe.compulsory_toggle_hint')}"
+                  @click=${(e) => {
+                    // Only toggle if click was NOT on the × button (use .closest to handle child nodes)
+                    if (!e.target.closest('.ingredient-remove-btn')) {
+                      this._toggleIngredientCompulsory(ing.name);
+                    }
+                  }}
+                  style="cursor:pointer;"
+                >
+                  ${ing.compulsory ? html`<span class="compulsory-star">⭐</span>` : ''}
+                  ${ing.name}
+                  <button
+                    class="ingredient-remove-btn"
+                    @click=${(e) => { e.stopPropagation(); this._removeIngredient(ing.name); }}
+                  >×</button>
                 </span>
               `)}
             </div>
           </div>
+
+          ${this._shelfEnabled ? html`
+            <div style="margin-top: 16px; padding: 12px; background: var(--secondary-background-color); border-radius: 8px;">
+              <h4 style="margin: 0 0 8px 0;">${this._t('cooking_mode.selector_title')}</h4>
+              <p style="margin: 0 0 10px 0; font-size: 0.85em; color: var(--secondary-text-color);">${this._t('cooking_mode.selector_hint')}</p>
+              ${['A','B','C'].map(mode => html`
+                <label style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; cursor: pointer;">
+                  <input
+                    type="radio"
+                    name="cooking_mode"
+                    .value=${mode}
+                    ?checked=${this._cookingMode === mode}
+                    @change=${() => this._saveCookingMode(mode)}
+                    style="margin-top: 3px; flex-shrink: 0;"
+                  />
+                  <div>
+                    <div style="font-weight: 600; font-size: 0.9em;">${this._t('cooking_mode.mode_' + mode.toLowerCase() + '_label')}</div>
+                    <div style="font-size: 0.8em; color: var(--secondary-text-color);">${this._t('cooking_mode.mode_' + mode.toLowerCase() + '_desc')}</div>
+                  </div>
+                </label>
+              `)}
+            </div>
+          ` : ''}
 
           <button 
             class="primary-btn"
@@ -4764,7 +5738,7 @@ class KitchenCookingPanel extends LitElement {
       <label class="ingredient-checkbox">
         <input 
           type="checkbox" 
-          ?checked=${this._selectedIngredients.includes(valueName)}
+          ?checked=${!!this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === valueName.toLowerCase())}
           @change=${(e) => this._toggleIngredient(valueName, e.target.checked)}
         />
         ${displayName}
@@ -4975,7 +5949,14 @@ class KitchenCookingPanel extends LitElement {
                     <strong>${this._t('ai_recipe.cook_time_label')}</strong> ${recipe.cook_time_minutes ? recipe.cook_time_minutes + ' ' + this._t('common.minutes_short') : this._t('common.na')}
                   </div>
                   <div class="detail-item">
-                    <strong>${this._t('ai_recipe.servings_label')}</strong> ${recipe.servings || '4'}
+                    <strong>${this._t('ai_recipe.servings_label')}</strong>
+                    <input
+                      type="number"
+                      min="1"
+                      max="12"
+                      .value=${recipe._adjustedServings || recipe.servings || 4}
+                      @input=${(e) => this._updateRecipeServings(recipe, parseInt(e.target.value))}
+                      style="width:50px;padding:4px;border:1px solid var(--divider-color);border-radius:4px;background:var(--primary-background-color);color:var(--primary-text-color);">
                   </div>
                   <div class="detail-item">
                     <strong>${this._t('ai_recipe.difficulty_label')}</strong> ${recipe.difficulty || this._t('common.na')}
@@ -5565,6 +6546,24 @@ class KitchenCookingPanel extends LitElement {
         }
       });
 
+      // Phase 8d: Show shelf update prompt if shelf is enabled
+      if (this._shelfEnabled && recipe.ingredients && recipe.ingredients.length > 0) {
+        const staples = (typeof AI_ASSUMED_STAPLES !== 'undefined') ? AI_ASSUMED_STAPLES.map(s => s.toLowerCase()) : [];
+        const checkboxes = recipe.ingredients.map(ing => {
+          const ingLower = ing.toLowerCase().replace(/[^a-z0-9\s]/g, '').trim();
+          const isStaple = staples.some(s => {
+            // Exact word match to avoid false positives like 'oat' matching 'toast'
+            const pattern = new RegExp(`\\b${s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`);
+            return pattern.test(ingLower);
+          });
+          return { name: ing, checked: !isStaple };
+        });
+        this._pendingShelfUpdate = { checkboxes };
+        this._stopRecipeCook();
+        this.requestUpdate();
+        return;
+      }
+
       // Show success message
       this._showMessage('✅ ' + this._t('messages.recipe_cook_saved_title'), this._t('messages.recipe_cook_saved') + ' 🎉');
 
@@ -5582,11 +6581,11 @@ class KitchenCookingPanel extends LitElement {
    */
   _toggleIngredient(ingredient, enabled) {
     if (enabled) {
-      if (!this._selectedIngredients.includes(ingredient)) {
-        this._selectedIngredients = [...this._selectedIngredients, ingredient];
+      if (!this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === ingredient.toLowerCase())) {
+        this._selectedIngredients = [...this._selectedIngredients, { name: ingredient, compulsory: false }];
       }
     } else {
-      this._selectedIngredients = this._selectedIngredients.filter(i => i !== ingredient);
+      this._selectedIngredients = this._selectedIngredients.filter(i => !i.name || i.name.toLowerCase() !== ingredient.toLowerCase());
     }
     this.requestUpdate();
   }
@@ -5595,8 +6594,8 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Add custom ingredient
    */
   _addCustomIngredient(ingredient) {
-    if (ingredient && !this._selectedIngredients.includes(ingredient)) {
-      this._selectedIngredients = [...this._selectedIngredients, ingredient];
+    if (ingredient && !this._selectedIngredients.find(i => i.name && i.name.toLowerCase() === ingredient.toLowerCase())) {
+      this._selectedIngredients = [...this._selectedIngredients, { name: ingredient, compulsory: false }];
       this.requestUpdate();
     }
   }
@@ -5605,7 +6604,17 @@ class KitchenCookingPanel extends LitElement {
    * Phase 6: Remove ingredient from selection
    */
   _removeIngredient(ingredient) {
-    this._selectedIngredients = this._selectedIngredients.filter(i => i !== ingredient);
+    this._selectedIngredients = this._selectedIngredients.filter(i => !i.name || i.name.toLowerCase() !== ingredient.toLowerCase());
+    this.requestUpdate();
+  }
+
+  /**
+   * Phase 8a: Toggle compulsory flag on an ingredient
+   */
+  _toggleIngredientCompulsory(name) {
+    this._selectedIngredients = this._selectedIngredients.map(i =>
+      i.name === name ? { ...i, compulsory: !i.compulsory } : i
+    );
     this.requestUpdate();
   }
 
@@ -5690,9 +6699,13 @@ class KitchenCookingPanel extends LitElement {
       // Get appliance IDs (main + selected secondaries)
       const applianceIds = [this._selectedAppliance.id, ...this._selectedSecondaryAppliances];
 
+      // Phase 8a: extract ingredient names + compulsory list
+      const ingredientNames = this._selectedIngredients.map(i => i.name);
+      const compulsoryIngredients = this._selectedIngredients.filter(i => i.compulsory).map(i => i.name);
+
       // Build request with new parameters
       const requestBody = {
-        ingredients: this._selectedIngredients,
+        ingredients: ingredientNames,
         cooking_style: this._selectedCookingStyle,
         appliance_ids: applianceIds,
         main_appliance_id: this._selectedAppliance.id,
@@ -5700,7 +6713,14 @@ class KitchenCookingPanel extends LitElement {
         complexity: this._aiComplexity || 3,
         language: this._language || 'en',
         measurement_system: this._measurementSystem || 'us',
+        compulsory_ingredients: compulsoryIngredients,
+        cooking_mode: this._cookingMode || 'A',
       };
+
+      // Phase 8c: If shelf enabled & mode B or C, include shelf items
+      if (this._shelfEnabled && (this._cookingMode === 'B' || this._cookingMode === 'C')) {
+        requestBody.shelf_items = (this._shelfInventory || []).map(i => i.name);
+      }
 
       // Add max time if set (0 = no limit)
       if (this._aiMaxTime && this._aiMaxTime > 0) {
@@ -5822,7 +6842,7 @@ class KitchenCookingPanel extends LitElement {
         main_appliance_id: this._selectedAppliance ? this._selectedAppliance.id : null,
         cooking_style: this._selectedCookingStyle || 'quick_and_easy',
         complexity: this._aiComplexity || 3,
-        user_ingredients: this._selectedIngredients || [],
+        user_ingredients: (this._selectedIngredients || []).map(i => (typeof i === 'string' ? i : i.name)),
         servings: this._aiPortions || 4,
         language: this._language || 'en',
         measurement_system: this._measurementSystem || 'us',
@@ -5881,7 +6901,7 @@ class KitchenCookingPanel extends LitElement {
     this._showMessageDialog = false;
 
     // Start recipe cook flow via central method (supports parallel cooks)
-    this._startRecipeCook(fullRecipe, fullRecipe.servings || 4);
+    this._startRecipeCook(fullRecipe, fullRecipe._adjustedServings || fullRecipe.servings || 4);
   }
 
   /**
@@ -5980,9 +7000,8 @@ class KitchenCookingPanel extends LitElement {
     const steps = this._getRecipeSteps(recipe);
     const totalTime = recipe.total_time || recipe.cook_time_minutes;
     // Fall back to main_ingredients (from suggestion) if full ingredients list is missing
-    const ingredientList = (recipe.ingredients && recipe.ingredients.length > 0)
-      ? recipe.ingredients
-      : (recipe.main_ingredients || []);
+    const ingredientList = recipe._adjustedIngredients
+      || (recipe.ingredients && recipe.ingredients.length > 0 ? recipe.ingredients : (recipe.main_ingredients || []));
     
     return html`
       <div class="recipe-cook-overview">
@@ -6087,7 +7106,7 @@ class KitchenCookingPanel extends LitElement {
         main_appliance_id: this._selectedAppliance ? this._selectedAppliance.id : null,
         cooking_style: this._selectedCookingStyle || 'quick_and_easy',
         complexity: this._aiComplexity || 3,
-        user_ingredients: this._selectedIngredients || [],
+        user_ingredients: (this._selectedIngredients || []).map(i => (typeof i === 'string' ? i : i.name)),
         servings: this._aiPortions || 4,
         language: this._language || 'en',
         measurement_system: this._measurementSystem || 'us',
@@ -6147,7 +7166,8 @@ class KitchenCookingPanel extends LitElement {
     instructionText = this._convertIngredientText(instructionText);
 
     // Build sorted ingredient list: new-active (green), repeat-active (black), inactive (2 columns)
-    const allIngredients = recipe.ingredients && recipe.ingredients.length > 0 ? recipe.ingredients : [];
+    // Use scaled ingredients if a serving adjustment was applied, otherwise fall back to originals.
+    const allIngredients = (recipe._adjustedIngredients || recipe.ingredients || []);
     const newActiveIngs = [];
     const repeatActiveIngs = [];
     const inactiveIngs = [];
@@ -6251,6 +7271,22 @@ class KitchenCookingPanel extends LitElement {
           </div>
         ` : ''}
 
+        <!-- MEATER probe subprocess button — shown when recipe uses probe and subprocess not yet started -->
+        ${recipe.use_probe && recipe.target_temp_c && !this._recipeCookState.meaterSubprocess ? html`
+          <div class="meater-probe-card" style="margin: 12px 0; padding: 12px; background: rgba(76,175,80,0.1); border: 1px solid #4caf50; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
+            <div style="flex: 1;">
+              <strong>🌡️ ${this._t('recipe_cook.start_meater_btn')}</strong>
+              <div style="font-size: 0.85em; color: var(--secondary-text-color); margin-top: 2px;">
+                ${this._t('common.target')}: ${recipe.target_temp_c}°C
+                ${recipe.target_temp_f ? ` (${recipe.target_temp_f}°F)` : ''}
+              </div>
+            </div>
+            <button class="primary-btn" style="white-space:nowrap;" @click=${() => this._startMeaterSubprocess()}>
+              ${this._t('recipe_cook.start_meater_btn')}
+            </button>
+          </div>
+        ` : ''}
+
         <!-- Ingredients: active sorted by appearance in grey box, inactive in 2-col below -->
         ${allIngredients.length > 0 ? html`
           <div class="recipe-cook-ingredients">
@@ -6342,20 +7378,67 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Render MEATER probe info in footer middle section
+   * Start MEATER probe as a subprocess within the current recipe cook.
+   * Calls start_simple_probe_cook and stores entity reference in meaterSubprocess.
+   */
+  async _startMeaterSubprocess() {
+    const state = this._recipeCookState;
+    if (!state) return;
+    const recipe = state.recipe;
+    const targetTempC = recipe.target_temp_c;
+    if (!targetTempC) return;
+
+    // Find a MEATER cooking session entity
+    const entities = this._findCookingEntities();
+    const meaterEntity = entities.find(e => e.toLowerCase().includes('meater')) || entities[0];
+    if (!meaterEntity) {
+      this._showMessage(this._t('meater.no_sensor_found'), '⚠️ ' + this._t('meater.sensor_not_connected'), true);
+      return;
+    }
+
+    try {
+      await this.hass.callService('kitchen_cooking_engine', 'start_simple_probe_cook', {
+        entity_id: meaterEntity,
+        target_temp_c: targetTempC,
+        session_name: recipe.name || 'Recipe Probe',
+      });
+      state.meaterSubprocess = { entityId: meaterEntity, targetTempC };
+      this._persistActiveRecipeCooks();
+      this.requestUpdate();
+    } catch (e) {
+      this._showMessage('❌ ' + this._t('messages.cook_session_error_title'), e.message || String(e), true);
+    }
+  }
+
+  /**
+   * Detach the MEATER subprocess from the recipe cook (probe session keeps running).
+   */
+  _stopMeaterSubprocess() {
+    const state = this._recipeCookState;
+    if (!state) return;
+    state.meaterSubprocess = null;
+    this._persistActiveRecipeCooks();
+    this.requestUpdate();
+  }
+
+  /**
+   * Render MEATER probe info in footer middle section — shows live temp when subprocess active.
    */
   _renderMeaterProbeInfo() {
-    // TODO: Integrate with MEATER subprocess if active
-    // For now, just show placeholder
-    if (this._recipeCookState?.meaterSubprocess) {
-      return html`
-        <div class="meater-probe-info">
-          <span class="probe-temp">🌡️ 45°C</span>
-          <span class="probe-status">Cooking</span>
-        </div>
-      `;
-    }
-    return html``;
+    const sub = this._recipeCookState?.meaterSubprocess;
+    if (!sub) return html``;
+
+    const entityState = this.hass?.states?.[sub.entityId];
+    const currentTemp = entityState?.attributes?.current_temp;
+    const tempDisplay = (currentTemp !== null && currentTemp !== undefined) ? `${currentTemp}°C` : '--';
+
+    return html`
+      <div class="meater-probe-info">
+        <span class="probe-temp">🌡️ ${tempDisplay}</span>
+        <span class="probe-status">${sub.targetTempC}°C ${this._t('common.target')}</span>
+        <button class="secondary-btn" style="padding:4px 10px;font-size:0.8em;" @click=${() => this._stopMeaterSubprocess()} title="${this._t('recipe_cook.meater_detach_hint')}">✕</button>
+      </div>
+    `;
   }
 
   // ============================================================================
@@ -6501,7 +7584,7 @@ class KitchenCookingPanel extends LitElement {
     // click × to remove it for fully generic recipes.
     const applianceName = this._selectedAppliance?.name;
     if (applianceName) {
-      this._selectedIngredients = [`use ${applianceName} programs`];
+      this._selectedIngredients = [{ name: `use ${applianceName} programs`, compulsory: false }];
     }
 
     this._selectedCookingStyle = null;
@@ -7144,6 +8227,20 @@ class KitchenCookingPanel extends LitElement {
       .doneness-btn.recommended {
         border-color: #ffd700;
       }
+
+      /* Safety indicator dot on doneness buttons (experimental MEATER path) */
+      .safety-dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: 5px;
+        vertical-align: middle;
+        flex-shrink: 0;
+      }
+      .safety-dot.safe    { background-color: #4caf50; }
+      .safety-dot.caution { background-color: #ff9800; }
+      .safety-dot.unsafe  { background-color: #f44336; }
 
       .doneness-btn .star {
         font-size: 10px;
@@ -8334,12 +9431,20 @@ class KitchenCookingPanel extends LitElement {
       }
 
       .ingredient-tag {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
         padding: 4px 10px;
         background: var(--secondary-background-color);
+        border: 1px solid transparent;
         color: var(--secondary-text-color);
         border-radius: 12px;
-        font-size: 11px;
+        font-size: 13px;
+        user-select: none;
+        transition: background 0.15s, border-color 0.15s;
+      }
+
+      .ingredient-tag:hover {
+        background: var(--divider-color);
       }
 
       .view-recipe-btn {
@@ -9270,6 +10375,27 @@ class KitchenCookingPanel extends LitElement {
       }
 
       .ingredient-tag button {
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 0 2px;
+        margin-left: 4px;
+      }
+
+      .ingredient-tag--compulsory {
+        background: rgba(var(--rgb-primary-color, 3, 169, 244), 0.15);
+        border: 1px solid var(--primary-color);
+        color: var(--primary-text-color);
+      }
+
+      .ingredient-tag .compulsory-star {
+        font-size: 11px;
+        margin-right: 3px;
+      }
+
+      .ingredient-remove-btn {
         background: none;
         border: none;
         color: inherit;
