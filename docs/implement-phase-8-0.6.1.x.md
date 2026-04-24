@@ -320,6 +320,21 @@ with the following key additions over the then-current main branch:
 - PANEL_VERSION bumped 270 → 271 (auto by generator).
 - CHORES: versions updated to 0.6.1.11, branch timeline updated.
 
+### Recipe stub fill sessions — 2026-04-24 (separate agent sessions)
+
+**Work done:**
+- Filled all 28 game stubs (bison, buffalo, goat, kangaroo, moose, mutton, ostrich, rabbit, reindeer, venison, wild_boar) — committed as "Fill game stubs…"
+- Filled all 12 lamb stubs (chops×4, ground×3, roasts×5) — committed as "Fill lamb stubs…"
+- recipe_logs.txt (uploaded by user, CI runner log from previous agent session) used to recover SOURCE_SURVEY.md confirmed working sites list.
+
+**Remaining stubs after above commits:** 144 total — beef/17, pork/32, poultry/16, vegetables/79.
+
+**Source priority rule (user-confirmed):**
+- **First priority**: local/non-English sites (nefisyemektarifleri.com, giallozafferano.it, madensverden.dk, argiro.gr, edimdoma.ru, cookpad.com/jp, xiachufang.com, cookpad.com/id, indianhealthyrecipes.com, vahrehvah.com, directoalpaladar.com, africanbites.com, ichkoche.at, hot-thai-kitchen.com, yemek.com, thewoksoflife.com, etc.)
+- **Fallback only**: bbcgoodfood.com, recipetineats.com, chefkoch.de — use when non-English sources cannot cover a needed slot.
+
+---
+
 ### v0.6.1.12 — 2026-04-24
 **Add all missing cuts from docs/recipe_research to experimental Swedish data**
 

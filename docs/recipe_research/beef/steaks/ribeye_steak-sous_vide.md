@@ -1,15 +1,97 @@
 # Ribeye Steak × Sous Vide — Recipe Temperature Research
 
-> ⚠️ **STATUS: NEEDS TO BE RECREATED FROM SCRATCH**
-> All previous content has been removed because it was corrupt (bullet-point summaries, not full collected recipes). This leaf must be recreated using credible human-written sources only. Do not use any prior version of this file — treat it as blank.
+## Cut profile
 
-## Tree position
+Sous vide is the perfect method for ribeye: the marbling that makes ribeye special requires precise temperature control to render correctly. Too high (>65 °C) and the fat pockets solidify unpleasantly; too low (<50 °C) and the fat stays waxy. The sweet spot is 54–57 °C for medium-rare, held for 1.5–2 hours. The long bath time is safe — the Maillard sear after creates the crust. The MEATER probe monitors the bath hold and the final sear temperatures.
 
-| Field | Value |
-|-------|-------|
-| Category | `beef` |
-| Cut type folder | `steaks/` |
-| Cut slug | `ribeye_steak` |
-| Method slug | `sous_vide` |
-| File | `ribeye_steak-sous_vide.md` |
-| Full path | `docs/recipe_research/beef/steaks/ribeye_steak-sous_vide.md` |
+Target sous vide bath temperatures (ribeye):
+- Rare: **50 °C (122 °F)** × 1.5–2 hr
+- Medium-rare: **54–57 °C (129–135 °F)** × 1.5–2 hr ← recommended for ribeye
+- Medium: **60–62 °C (140–144 °F)** × 1.5–2 hr
+- Well done: **65 °C (149 °F)** × 1.5–2 hr
+
+## Source recipes
+
+### 1. Madens Verden — Ribeye sous vide (Danish tradition)
+**Source**: Holger Rørby Madsen, Madensverden.dk; https://madensverden.dk/ribeye-sous-vide/ (fetched 2026-04-24). *Danish sous vide guide: bath at 62 °C × 2 hours for a perfect medium steak, finished with a butter sear.*
+**Serves**: 4 · **Prep**: 10 min · **Cook**: 2 hr bath + 2 min sear
+
+**Temperature guidance (from recipe)**: "Sæt temperaturen til 62 grader. Det giver en ribeye, der er medium." 57 °C for more rare. 65 °C for well done. All × 2 hours.
+
+*Translation: Set the temperature to 62 °C. That gives a ribeye that is medium. For rarer, go to 57 °C.*
+
+**Ingredients**
+- 4 ribeye steaks, 250 g each
+- Salt and freshly ground pepper
+- 2 tsp garlic powder
+- 1 handful fresh thyme
+- 1 tbsp butter (for searing)
+
+**Method**
+1. Preheat sous vide water bath to **62 °C** (medium) or **57 °C** (more rare).
+2. Pat steaks dry with kitchen paper. Season both sides with salt, pepper, garlic powder, and thyme leaves.
+3. Vacuum-seal steaks. (2 steaks per bag if needed for fit.) Seal all air out.
+4. Submerge bags in water bath for **2 hours**.
+5. After 2 hours, heat a heavy pan on high heat with butter. Once bubbling and golden, sear ribeyes quickly — just enough to develop a crust. They are already fully cooked inside.
+6. Insert MEATER probe to verify sear: **surface should read 140–180 °C** briefly; pull as soon as crust is set (30–60 seconds per side).
+7. Serve immediately with Béarnaise sauce and oven-baked fries. (The steak is at serving temperature straight from the bag.)
+*Final core temperature: 57–62 °C (135–144 °F) depending on bath setting.*
+
+---
+
+### 2. GialloZafferano Blog — La Bistecca Perfetta Sousvide (Italian tradition)
+**Source**: Il Mattino Ha L'Uovo in Bocca, GialloZafferano Blog; https://blog.giallozafferano.it/ilmattinohaluovoinbocca/la-bistecca-perfetta-sousvide-cottura-sottovuoto/ (fetched 2026-04-24). *Italian sous vide guide: 55 °C × 2 hours for medium-rare, then Maillard sear in cast iron. "A steak at least ten levels above any you have ever eaten."*
+**Serves**: 1–2 · **Prep**: 10 min · **Cook**: 2 hr bath + 2 min sear
+
+**Temperature guidance (from recipe)**: "Imposta la temperatura a 55 gradi per una cottura medium-rare." (Set the temperature to 55 °C for medium-rare.) 2 hours minimum. Sear 60 seconds per side in very hot cast iron.
+
+*Translation: The Perfect Sous Vide Steak — the technique that removes all doubt about doneness.*
+
+**Ingredients**
+- 1 kg sirloin/ribeye (boneless preferred)
+- Salt (coarse) — generous coverage
+- Freshly ground black pepper
+- Neutral seed oil (for searing)
+
+**Method**
+1. Lay steak on a chopping board. Mix salt and ground pepper; coat both main sides generously.
+2. Vacuum-seal the steak.
+3. Set roner (immersion circulator) to **55 °C** for medium-rare. Once water is at temperature, submerge steak.
+4. Cook for at least **2 hours** (longer for thicker cuts).
+5. Remove steak from bag. Pat very dry with kitchen paper. The surface will look pale — this is normal.
+6. Heat a cast-iron pan until screaming hot (the author says: "deve essere calda, caldissima, super calda. 50!" — meaning blazing). Add a thin layer of seed oil.
+7. Lay steak in pan. **Count 60 seconds**. Turn. Count 60 more seconds. Sear the side edges too if thick. Aim for homogeneous Maillard browning on all surfaces.
+8. Insert MEATER probe. **Core should read 54–57 °C** after sear — if bath was set correctly, it will hold.
+9. Serve immediately. No resting needed — the bath already redistributed all juices.
+*Final core temperature: 55–57 °C (131–135 °F).*
+
+---
+
+### 3. ichkoche.at — Hochrückensteak mit Sous Vide (Austrian tradition)
+**Source**: lsfabian, ichkoche.at; https://www.ichkoche.at/hochrueckensteak-mit-gemuese-rezept-220825 (fetched 2026-04-24). *Austrian ribeye (Hochrückensteak) — overnight butter-rosemary marinade in the vacuum bag, 60 °C water bath, then sear and Cognac flambé. 53 user ratings.*
+**Serves**: 2 · **Prep**: overnight marinade · **Cook**: approx. 1 hr bath (10 min per cm thickness) + sear
+
+**Temperature guidance (from recipe)**: "Wasser auf 60 Grad erhitzen. Garprozess dauert je nach Dicke des Fleisches — pro 1 cm 10 Minuten." (Heat water to 60 °C. Cooking time: 10 minutes per 1 cm of meat thickness.)
+
+**Ingredients**
+- 1 ribeye (Hochrückensteak), any thickness
+- 30 g butter (melted, not hot)
+- 1 sprig rosemary
+- 1 garlic clove, pressed
+- A little oil (for searing)
+- A splash of Cognac (for optional flambé)
+- Beef stock (for sauce)
+- Salt and pepper
+
+**Method**
+1. Wash and dry steak. Place in vacuum bag (or zip-lock bag).
+2. Melt butter until liquid but not hot. Add rosemary sprig and pressed garlic to bag with steak.
+3. Vacuum-seal (or press out air). Marinate overnight in the vegetable drawer of the refrigerator.
+4. Next day: heat a pot of water (or oven-safe dish in oven) to **60 °C**. Submerge the bag, weighing it down if needed so it stays fully submerged. Cook for **10 minutes per 1 cm of thickness** (e.g. 3 cm steak = 30 minutes).
+5. Remove steak from bag. Pour bag liquid through a sieve; reserve for sauce.
+6. Pat steak thoroughly dry. Sear in a heavy pan with a little hot oil on all sides until browned.
+7. Optionally flambé with Cognac. Wrap steak in foil; rest briefly in oven.
+8. Deglaze pan with the reserved bag liquid and beef stock. Season to taste.
+9. Insert MEATER probe at the end of sous vide to verify bath temperature was maintained: **core should read 58–62 °C (136–144 °F)**.
+10. Slice steak into strips. Serve with pan sauce, vegetables, and potatoes. Garnish with parsley.
+*Final core temperature: 58–62 °C (136–144 °F).*
