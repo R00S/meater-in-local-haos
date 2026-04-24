@@ -82,7 +82,42 @@ Target internal temperature: **145–155 °F (63–68 °C)** — medium; pull at
 
 ---
 
-### 3. TODO: add third source — BBC Good Food goose URLs returned 404
+### 3. Xiachufang (下厨房) — 烤鹅 Roast Goose (Chinese whole-bird roast technique)
+**Source**: User recipe adapted from Le Creuset UK, published on Xiachufang.com; https://m.xiachufang.com/recipe/107284834/ (fetched 2026-04-24, language: Chinese — ingredients and method translated below). *Whole-bird recipe; method and temperatures apply directly to breast portions — reduce time proportionally.*
+**Serves**: 4–6 (whole bird) · **Prep**: 20 min · **Cook**: 15 min + 20 min/kg · **Rest**: 15 min
+
+**Temperature guidance**:
+- Oven initial: 190 °C (374 °F) for 15 minutes (high heat to set skin)
+- Oven main: reduce to 170 °C (338 °F); cook ~20 min per kg of bird weight
+- Glaze: honey + mead (or honey + rice wine mixture) applied every 20 minutes during roasting
+- Internal target: **72–74 °C (162–165 °F)** — confirmed in recipe tip; "clear juices when pierced"
+- Rest: 15 minutes before carving; retains moisture
+
+**Ingredients** *(translated from Chinese)*
+- 1 whole goose (~3–4 kg), or goose breast portions
+- 1 carrot, halved lengthways
+- 1 onion, halved
+- ½ fennel bulb, halved crossways
+- 1 head garlic, halved crossways
+- 2 tbsp canola (rapeseed) oil
+- 1 lemon, halved
+- Small handful fresh coriander (cilantro)
+- 3 tbsp honey
+- 3 tbsp mead or dry rice wine (Shaoxing)
+
+**Method** *(translated from Chinese)*
+1. Preheat oven to 190 °C (374 °F).
+2. Untie the goose legs so they spread open — ensures even heat distribution.
+3. Peel and halve carrot, onion, fennel, and garlic; place in roasting tray, drizzle with oil but do not season yet.
+4. Place goose on top of the vegetables. Squeeze lemon halves over the bird; tuck squeezed lemon halves and coriander inside the cavity.
+5. Mix honey and mead/wine; reserve for glazing.
+6. Roast at 190 °C for 15 minutes; then reduce oven to 170 °C.
+7. Continue roasting ~20 min per kg of bird weight; apply honey glaze every 20 minutes during this phase, turning bird golden all over.
+8. Test doneness by piercing the thickest part of the thigh/breast: **juices should run clear** and internal temperature should read **72–74 °C (162–165 °F)**.
+9. Rest 15 minutes before carving.
+10. *For breast portions only*: use same temperatures; cook ~25–35 min per 400–600 g breast portion from room temperature.
+
+---
 > bbcgoodfood.com/recipes/roast-goose-breast returned 404 (fetched 2025-07-15).
 > Candidate sources to retry: seriouseats.com/goose-breast, greatbritishchefs.com/goose-breast
 
@@ -94,6 +129,7 @@ Target internal temperature: **145–155 °F (63–68 °C)** — medium; pull at
 |--------|---------|-------------|-----------------|------|-----------------|
 | BBC adaptation | UK | 350 °F oven after render | 8–12 oz | 22–30 min total | 140 °F pull → 145–150 °F rested |
 | Classic culinary technique | International | 375 °F oven after render | 8–12 oz | 25–30 min total | 140–160 °F pull → 145–165 °F rested |
+| Xiachufang (下厨房) | China | 190 °C then 170 °C (374→338 °F) | ~400–600 g breast portion | 25–35 min | 72–74 °C (162–165 °F) |
 | USDA minimum | USA | Any | Any | Any | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:

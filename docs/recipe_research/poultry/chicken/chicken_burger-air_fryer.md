@@ -78,7 +78,40 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 
 ---
 
-### 3. TODO: add third source — skinnytaste.com/air-fryer-chicken-burgers/ and natashaskitchen.com/chicken-burger-recipe/ both returned 404
+### 3. Immaculate Bites — Jamaican Chicken Patties (Caribbean Spiced Ground Chicken Patties)
+**Source**: Imma Adamu, Africanbites.com (Cameroonian-born food blogger, based in USA); https://www.africanbites.com/jamaican-chicken-patties/ (fetched 2026-04-24).
+**Serves**: 8–10 patties · **Prep**: 30 min · **Cook**: 30 min (oven) / 12 min (air fryer)
+
+**Temperature guidance**:
+- Air fryer adaptation: 375 °F (191 °C), ~12 min flipping halfway; internal 165 °F (74 °C)
+- Original recipe: oven 375 °F (191 °C) until golden and cooked through
+- Internal target: **165 °F (74 °C)** for all ground poultry patties regardless of cooking method
+
+**Ingredients** *(ground chicken filling only — omit pastry for burger patty use)*
+- 500 g ground chicken
+- 3 stalks scallion (green onion), finely chopped
+- 3 sprigs fresh thyme (or ½ tsp dried)
+- 1 scotch bonnet or habanero pepper, seeded and minced
+- 3 cloves garlic, minced
+- 1 tsp ground allspice
+- 1 tsp mild curry powder
+- ½ tsp turmeric (also gives distinctive yellow colour)
+- ½ tsp salt
+- ½ tsp black pepper
+- 1 tbsp oil
+
+**Method** *(filling; form as burger patties for air fryer use)*
+1. Heat oil in a skillet over medium heat; sauté scallion, thyme, and scotch bonnet 2 minutes.
+2. Add garlic; cook 1 minute until fragrant.
+3. Add ground chicken; break up well with a wooden spoon.
+4. Sprinkle in allspice, curry powder, turmeric, salt, and pepper; stir to combine thoroughly.
+5. Cook, stirring occasionally, until chicken is completely cooked through (~10–12 min), no pink remaining.
+6. Remove from heat and allow to cool before forming into patties.
+7. **For air fryer burger**: shape cooled filling into ½-inch-thick patties. Brush lightly with oil.
+8. Air fry at 375 °F (191 °C) for 10–12 min, flipping halfway, until internal temperature reaches 165 °F (74 °C).
+9. Serve in burger buns with lettuce, tomato, sliced pickles, and a drizzle of hot sauce.
+
+---
 
 ---
 
@@ -88,6 +121,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 |--------|---------|-------------|-----------------|------|-----------------|
 | Skinnytaste | USA | 375–400 °F (191–204 °C) | Stuffed patty (~3/4 in) | 12 min total | 165 °F (74 °C) |
 | Natasha's Kitchen | USA | 375 °F (191 °C) adaptation | ~1/2 in patty / 1.25 in ball | 12–15 min | 165 °F (74 °C) |
+| Immaculate Bites | Cameroon/USA | 375 °F (191 °C) air fryer | ~1/2 in patty | 10–12 min | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **160 °F (71 °C)** → pull and rest

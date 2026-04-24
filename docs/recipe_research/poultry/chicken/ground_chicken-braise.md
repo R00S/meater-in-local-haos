@@ -103,7 +103,41 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 
 ---
 
-### 3. TODO: add third source — natashaskitchen.com/ground-chicken-recipe/ returned 404, jessicagavin.com/how-to-cook-ground-chicken/ returned 404
+### 3. Swasthi Shreekanth — Chicken Keema (Indian Spiced Ground Chicken Curry)
+**Source**: Swasthi Shreekanth, IndianHealthyRecipes.com; https://www.indianhealthyrecipes.com/chicken-keema/ (fetched 2026-04-24).
+**Serves**: 3–4 · **Prep**: 10 min · **Cook**: 20 min
+
+**Temperature guidance**:
+- Pan heat: medium-high for initial sauté; reduce to medium for simmering
+- Internal target: **165 °F (74 °C)** — all ground poultry fully cooked with no pink
+- Time: ~20 min total; keema (minced meat) cooks faster than whole cuts due to small particle size
+
+**Ingredients**
+- 500 g ground chicken (keema)
+- 1 medium onion, finely chopped
+- 2 medium tomatoes, finely chopped
+- 1½ tsp oil or ghee
+- 1 tsp ginger-garlic paste
+- 1–2 green chillies, slit
+- ¾ tsp garam masala
+- ½ tsp ground coriander (dhania powder)
+- ½ tsp chilli powder (or to taste)
+- ¼ tsp turmeric
+- ¾ tsp salt (or to taste)
+- 2 tbsp fresh coriander (cilantro), chopped
+
+**Method**
+1. Heat oil or ghee in a skillet or heavy-bottomed pan over medium-high heat.
+2. Add onion; sauté 5–6 minutes until golden brown (this builds the base flavour).
+3. Add ginger-garlic paste and green chillies; cook 1–2 minutes until raw smell disappears.
+4. Add tomatoes, salt, chilli powder, ground coriander, and turmeric; cook over medium heat until tomatoes become mushy and the oil separates from the masala, ~5 minutes.
+5. Add ground chicken; break up any lumps thoroughly with a wooden spoon.
+6. Stir well to combine chicken with masala; cook over medium heat 8–10 minutes, stirring regularly, until no pink remains — internal temperature in the largest clump should read **165 °F (74 °C)**.
+7. Reduce heat; add garam masala and fresh coriander. Stir and cook a further 1–2 minutes.
+8. Taste and adjust salt. Serve with naan, paratha, roti, or steamed basmati rice.
+9. *For a curry version*: add 120 ml coconut milk or cashew cream in step 7 and simmer 3 minutes.
+
+---
 
 ---
 
@@ -113,6 +147,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 |--------|---------|-------------|-----------------|------|-----------------|
 | Natasha's Kitchen | USA | Medium skillet + low simmer | 1–1.25 lb meatballs | 7 min sauté + 10 min braise | 165 °F (74 °C) |
 | Skinnytaste | USA | High skillet + low covered simmer | 1 lb crumbled | 5 min sauté + 12–14 min braise | 165 °F (74 °C) |
+| Swasthi's Recipes | India | Med-high skillet + med simmer | 500 g keema | ~20 min total | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:
 - Ground chicken is difficult to probe directly; use visual cues (no pink, juices clear) + spot-check with instant-read thermometer

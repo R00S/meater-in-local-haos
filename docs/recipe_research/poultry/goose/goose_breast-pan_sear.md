@@ -87,7 +87,33 @@ Target internal temperature: **145–155 °F (63–68 °C)** — medium; pull at
 
 ---
 
-### 3. TODO: add third source — BBC Good Food goose URLs returned 404
+### 3. Vasilevg — Грудка гуся на гриле (Russian Pan-Grilled Goose Breast)
+**Source**: Home cook "vasilevg", Povarenok.ru (Russia's largest recipe-sharing community); https://www.povarenok.ru/recipes/show/168647/ (fetched 2026-04-24, language: Russian — ingredients and method translated below).
+**Serves**: 2 · **Prep**: 35 min (incl. marinating) · **Cook**: 6 min
+
+**Temperature guidance**:
+- Pan heat: grill pan (ribbed cast-iron) preheated well over medium-high heat
+- Internal target: fully cooked through — no pink at centre; **80 °C (176 °F)** for safety with goose
+- Time: 3 minutes per side for 5 mm slices; adjust for thicker cuts
+
+**Ingredients** *(translated from Russian)*
+- 1 goose breast (skin on or removed according to preference), ~300–400 g
+- 2 tbsp olive oil
+- Salt and freshly ground black pepper, to taste
+
+**Method** *(translated from Russian)*
+1. Slice goose breast crosswise (against the grain) into slices approximately 5 mm thick.
+2. Season slices with salt and freshly ground black pepper; drizzle with olive oil and turn to coat.
+3. Leave to marinate at room temperature for 30 minutes.
+4. Heat a ribbed grill pan (or heavy cast-iron skillet) over medium-high heat until very hot.
+5. Lay slices flat on the grill pan without overlapping; cook 3 minutes on the first side without moving (for grill marks and a crust).
+6. Flip; cook a further 3 minutes until cooked through and juices run clear.
+7. Internal temperature should reach **80 °C (176 °F)** in the centre of each slice.
+8. Serve immediately with fresh herbs or a simple salad.
+
+*Note*: Goose breast is denser and leaner than duck breast and benefits from thin-slicing for quick pan-searing. Thicker portions (bone-in) require longer oven finishing — see oven-roast file.
+
+---
 > bbcgoodfood.com/recipes/pan-fried-goose-breast returned 404 (fetched 2025-07-15).
 > Candidate sources to retry: greatbritishchefs.com/goose-breast, seriouseats.com/goose
 
@@ -99,6 +125,7 @@ Target internal temperature: **145–155 °F (63–68 °C)** — medium; pull at
 |--------|---------|-------------|-----------------|------|-----------------|
 | BBC adaptation | UK | Medium-low stovetop | 10–14 oz | 14–18 min skin + 3–5 min flesh | 138 °F pull → 145–150 °F rested |
 | Classic culinary technique | International | Medium-low stovetop (+optional 400 °F oven) | 10–14 oz | 18–25 min total | 138–140 °F pull → 145–150 °F rested |
+| Povarenok.ru | Russia | Med-high grill pan | 5 mm slices (~300–400 g) | 6 min total | 80 °C (176 °F) |
 | USDA minimum | USA | Any | Any | Any | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:

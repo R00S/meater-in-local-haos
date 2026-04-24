@@ -96,7 +96,41 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 
 ---
 
-### 3. TODO: add third source — skinnytaste.com/chicken-meatballs/ returned 404
+### 3. Swasthi Shreekanth — Chicken Tikki (Indian Pan-Fried Ground Chicken Patties)
+**Source**: Swasthi Shreekanth, IndianHealthyRecipes.com; https://www.indianhealthyrecipes.com/chicken-patties/ (fetched 2026-04-24).
+**Serves**: 8 patties · **Prep**: 20 min + 2 hr optional brine · **Cook**: 10–15 min
+
+**Temperature guidance**:
+- Pan heat: medium; enough oil to coat the base (~2 tbsp)
+- Internal target: **165 °F (74 °C)** — confirmed in recipe; no pink should remain in centre
+- Time: ~5–6 min per side; thicker patties take longer; probe the thickest patty
+
+**Ingredients**
+- 450 g chicken breast, poached or braised (then ground/minced); *or 450 g ready ground chicken*
+- 1 tsp garam masala
+- ½ tsp chilli powder (or paprika for mild)
+- ¼ tsp turmeric
+- 1 tsp fresh ginger, finely grated
+- 1–2 green chillies, finely chopped (optional)
+- 2 tbsp fresh coriander (cilantro), chopped
+- ½ medium onion, finely grated (squeeze out excess moisture)
+- ½ tsp salt
+- 1 egg, beaten (for crumb-coating)
+- 60 g fine breadcrumbs (for crumb-coating)
+- 2–3 tbsp oil for frying
+- *Optional brine*: ¼ cup yogurt mixed with ½ cup water; soak chicken 2 hr before grinding
+
+**Method**
+1. *If using whole chicken breast*: simmer in broth or water until just cooked; drain and cool, then mince finely.
+2. Combine ground chicken, garam masala, chilli powder, turmeric, ginger, green chilli, coriander, onion, and salt in a bowl; mix well until evenly seasoned.
+3. Divide into 8 equal portions; press each into a round patty ~1 cm (½ in) thick.
+4. Dip each patty in beaten egg, then press firmly into breadcrumbs on both sides.
+5. Heat oil in a heavy-bottomed skillet over medium heat until shimmering.
+6. Add patties in a single layer; cook 5–6 minutes undisturbed on the first side until golden-brown crust forms.
+7. Flip carefully; cook a further 5–6 minutes until the second side is golden and the internal temperature reaches **165 °F (74 °C)**.
+8. Drain briefly on paper towels; serve immediately with mint-coriander chutney or inside burger buns.
+
+---
 
 ---
 
@@ -107,6 +141,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 | Jessica Gavin | USA | Medium skillet | 1/2-in patty (~4 oz) | 10–12 min | 160–165 °F (71–74 °C) |
 | Jessica Gavin | USA | Medium-high skillet | Crumbled 1 lb | 7–8 min | 165 °F (74 °C) |
 | Natasha's Kitchen | USA | Medium skillet (covered flip) | 1.25-in meatball | 7 min | 165 °F (74 °C) |
+| Swasthi's Recipes | India | Medium skillet | ~1/2 in tikki patty | 10–12 min | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:
 - For formed patties: Set alert at **160 °F (71 °C)** → pull and rest 3 minutes

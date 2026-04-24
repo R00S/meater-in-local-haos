@@ -88,7 +88,36 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 
 ---
 
-### 3. TODO: add third source — jessicagavin.com/pan-seared-chicken-breast/ returned 404 and natashaskitchen.com/pan-seared-chicken-breast/ returned 404
+### 3. Sevcan Kayabaş — Tavuk Göğüs Sote (Turkish Pan-Sautéed Chicken Breast with Vegetables)
+**Source**: Sevcan Kayabaş, Nefis Yemek Tarifleri (Turkey's largest user-recipe platform); https://www.nefisyemektarifleri.com/tavuk-gogus-sote/ (fetched 2026-04-24, language: Turkish — ingredients and method translated below).
+**Serves**: 2–4 · **Prep**: 10 min · **Cook**: 20 min
+
+**Temperature guidance**:
+- Pan heat: medium-high in a wide skillet with olive oil
+- Internal target: 75 °C (167 °F) — Turkish food-safety standard for poultry
+- Time: ~20 min total; diced breast pieces cook faster than whole breasts; check thickest cube
+
+**Ingredients** *(translated from Turkish)*
+- 3 chicken breasts, cut into bite-sized cubes
+- 500 g ripe tomatoes, roughly chopped
+- 2 red bell peppers, sliced
+- 4 green mild peppers (sivri biber), sliced
+- 1 large onion, sliced into half-rings
+- 1 cup (240 ml) olive oil
+- 2 tsp salt
+- 2 tsp chilli flakes (pul biber)
+- 1 tsp ground black pepper
+
+**Method** *(translated from Turkish)*
+1. Heat olive oil in a wide skillet over medium-high heat.
+2. Add onion and cook until softened, about 4 minutes.
+3. Add the chicken breast cubes; sauté, turning occasionally, until sealed on all sides — about 5 minutes.
+4. Add red and green peppers; stir-fry 3 minutes.
+5. Add chopped tomatoes, salt, chilli flakes, and black pepper.
+6. Stir, reduce heat to medium, cover and cook a further 8–10 minutes until the chicken is fully cooked through (no pink remaining; internal probe reads 75 °C / 167 °F in the thickest cube) and the tomatoes have broken down into a sauce.
+7. Serve immediately with bread or rice.
+
+---
 
 ---
 
@@ -99,6 +128,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 | Jessica Gavin | USA | Med-high → med | 1/2–3/4 inch | 12–16 min total | 160–165 °F (71–74 °C) |
 | Skinnytaste | USA | Med-high | Thin cutlet (~1/2 in) | 4–6 min total | 165 °F (74 °C) |
 | Skinnytaste | USA | Med-high | Thick breast | 10–14 min total | 165 °F (74 °C) |
+| Nefis Yemek Tarifleri | Turkey | Med-high skillet | Cubed breast | 20 min total | 75 °C (167 °F) |
 
 **Recommended MEATER settings**:
 - Set alert at **160 °F (71 °C)** → pull and rest

@@ -89,7 +89,39 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 
 ---
 
-### 3. TODO: add third source — jessicagavin.com/air-fryer-chicken-wings/ returned 404, allrecipes returned 402
+### 3. Immaculate Bites — Crispy Grilled Chicken Wings
+**Source**: Imma Adamu, Africanbites.com (Cameroonian-born food blogger, based in USA); https://www.africanbites.com/grilled-chicken-wings/ (fetched 2026-04-24).
+**Serves**: 4–6 · **Prep**: 10 min (+ overnight dry-brine option) · **Cook**: 30 min
+
+**Temperature guidance**:
+- Grill heat: 450 °F / 230 °C (high); clean hot grates + lightly oiled
+- Internal target: **165 °F (75 °C)** — confirmed in recipe text
+- Time: 30 minutes total, flipping every 5 minutes; adjust if grill runs hot
+- Air fryer adaptation (from same recipe): 400 °F (204 °C), 20–25 min, flip once at 12 min
+
+**Ingredients**
+- 1 kg chicken wing pieces (flats and drumettes, separated)
+- 2 tsp garlic powder
+- 2 tsp smoked paprika
+- 1 tsp onion powder
+- 1 tsp dried thyme
+- 1 tsp salt
+- ½ tsp black pepper
+- 1 tsp baking powder *(key for crispiness — coat wings in spice mix + baking powder and refrigerate on a wire rack uncovered overnight for extra-crispy skin)*
+- Light oil spray
+
+**Method**
+1. Pat wings thoroughly dry with paper towels — dry skin = crispy skin.
+2. Combine spices, salt, pepper, and baking powder in a small bowl.
+3. Toss wings in spice mix until fully coated. Add a light drizzle of oil to help prevent sticking on the grill.
+4. **For best results**: lay seasoned wings on a wire rack uncovered in the refrigerator overnight; this dries the skin further.
+5. Remove from fridge 30 minutes before cooking.
+6. Clean grill grates; preheat to high (450 °F / 230 °C). Oil the grates.
+7. Place wings directly on grate; grill 30 minutes, flipping every 5 minutes, until golden brown and crispy. Watch for flare-ups; move wings if needed.
+8. Internal temperature in the thickest part of the drumette should read **165 °F (75 °C)**.
+9. **Air fryer method**: preheat to 400 °F (204 °C); cook 20–25 min, flip at 12 min; check internal temperature.
+
+---
 
 ---
 
@@ -99,6 +131,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 |--------|---------|-------------|-----------------|------|-----------------|
 | Natasha's Kitchen | USA | 400 °F (204 °C) | ~2 lbs wing pieces | 16 min | 165 °F (74 °C) |
 | Skinnytaste | USA | 400 °F (204 °C) | ~2 lbs wing pieces | 16–22 min | 165 °F (74 °C) |
+| Immaculate Bites | Cameroon/USA | 450 °F (230 °C) grill / 400 °F AF | ~2 lbs wings | 30 min grill / 20–25 min AF | 165 °F (75 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **160 °F (71 °C)** → pull and rest (or simply check visually for golden crispiness + 165 °F reading)

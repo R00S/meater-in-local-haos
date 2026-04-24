@@ -77,7 +77,38 @@ Target internal temperature: **175–185 °F (79–85 °C)** — best texture; U
 
 ---
 
-### 3. TODO: add third source — BBC Good Food goose URLs returned 404
+### 3. 阿笑 (Axiao) — 烤鹅腿 (Chinese Crispy-Skin Roasted Goose Leg)
+**Source**: Home cook "阿笑" (Axiao), Xiachufang.com (China's largest recipe platform); https://m.xiachufang.com/recipe/118199/ (fetched 2026-04-24, language: Chinese — ingredients and method translated below).
+**Serves**: 2 · **Prep**: 30 min + drying time (ideally overnight) · **Cook**: 35 min
+
+**Temperature guidance**:
+- Oven phase 1: 200 °C (392 °F) for 20 minutes (sets the skin)
+- Oven phase 2: 180 °C (356 °F) for 15 minutes (completes cooking of joint)
+- Internal target: **80–85 °C (176–185 °F)** — goose legs are a tough working muscle; high temperature needed for tenderness
+- Time: 35 minutes total in oven; does not require marinating in liquid — dry-spice rub + air-drying makes the skin extremely crisp
+
+**Ingredients** *(translated from Chinese)*
+- 1 whole goose leg (~500–700 g)
+- Five-spice powder (五香粉), to taste
+- Salt, to taste
+- 2 tbsp honey
+- 1 tbsp white rice vinegar
+- 1 tbsp Shaoxing cooking wine
+- 3 tbsp water
+- *Optional accompaniments*: corn on the cob, oyster mushrooms
+
+**Method** *(translated from Chinese; the "crispy water" technique is a hallmark of Cantonese roast birds)*
+1. Rinse goose leg under cold water; pat completely dry with paper towels.
+2. Apply five-spice powder and salt to the *meat side only* (not the skin); leave to marinate 20 minutes.
+3. Mix crispy water: combine honey, white vinegar, cooking wine, and water in a 3:1:1:3 ratio (approximately 2 tbsp honey : 1 tbsp vinegar : 1 tbsp wine : 3 tbsp water).
+4. Bring a kettle of water to the boil; pour the boiling water repeatedly over the goose skin to tighten it.
+5. Brush the skin generously with crispy water; hang or prop the leg in a well-ventilated area to air-dry completely. Repeat the brush + air-dry cycle 2–3 times until the skin is dry and tacky. (Overnight drying gives the best crispiness.)
+6. Preheat oven to 200 °C (392 °F).
+7. Roast leg at 200 °C for 20 minutes; then add optional corn cobs and mushrooms to the tray and reduce temperature to 180 °C (356 °F); roast a further 15 minutes.
+8. Internal temperature in the deepest part of the leg joint should reach **80–85 °C (176–185 °F)**.
+9. Rest 5 minutes; serve with the roasted corn and mushrooms.
+
+---
 > bbcgoodfood.com/recipes/roast-goose-legs returned 404 (fetched 2025-07-15).
 > Candidate sources: greatbritishchefs.com, seriouseats.com/roasted-goose-legs
 
@@ -89,6 +120,7 @@ Target internal temperature: **175–185 °F (79–85 °C)** — best texture; U
 |--------|---------|-------------|-----------------|------|-----------------|
 | BBC adaptation | UK | 325 °F then 400 °F | 12–16 oz | 2–2.5 hr | 175–185 °F (79–85 °C) |
 | Classic culinary technique | International | 350 °F then 425 °F | 12–16 oz | 2–2.5 hr | 175–185 °F (79–85 °C) |
+| Xiachufang (下厨房) | China | 200 °C then 180 °C (392→356 °F) | ~500–700 g leg | 35 min | 80–85 °C (176–185 °F) |
 | USDA minimum | USA | Any | Any | Any | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:

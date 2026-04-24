@@ -82,7 +82,34 @@ Target internal temperature: **175–185 °F (79–85 °C)** — optimal for col
 
 ---
 
-### 3. TODO: add third source — BBC Good Food goose URLs returned 404
+### 3. Vorobyshek — Тушёнка из гуся в мультиварке (Russian Slow-Braised Goose in a Multicooker)
+**Source**: Home cook "vorobyshek", Povarenok.ru (Russia's largest recipe-sharing community); https://www.povarenok.ru/recipes/show/97189/ (fetched 2026-04-24, language: Russian — ingredients and method translated below). *Original uses a multicooker slow-cook function; the same technique works in any covered heavy pot over very low heat.*
+**Serves**: 4–6 · **Prep**: 15 min · **Cook**: 3 hours (180 min)
+
+**Temperature guidance**:
+- Multicooker: "slow cook" or "stew" setting at ~80 °C (176 °F) for 3 hours
+- Stovetop equivalent: very gentle simmer (water surface barely trembles), covered, for 3 hours
+- Internal target: **80–85 °C (176–185 °F)** — necessary to break down collagen in goose thighs and legs; meat should pull from bone easily
+- Time: 3 hours; larger or older birds may need up to 3.5 hours
+
+**Ingredients** *(translated from Russian)*
+- 1 whole goose or goose thighs/legs (~1.5–2 kg portions)
+- Salt, to taste
+- 150 ml (⅔ cup) water
+
+**Method** *(translated from Russian)*
+1. Rinse goose portions; pat dry with paper towels.
+2. If using a multicooker: place goose pieces in the bowl in a single layer; pour in water; season with salt.
+3. If using a stovetop pot: lightly oil a heavy Dutch oven; sear goose thighs/legs over medium-high heat 5 minutes per side until golden (optional but adds flavour); drain excess fat.
+4. Add water to the pot, cover tightly, and bring to a gentle simmer.
+5. Reduce heat to the lowest setting; cook covered for **3 hours** (180 minutes), turning the pieces once at the halfway point.
+6. After 2 hours, add salt to taste; continue braising until meat is very tender and probe reads **80–85 °C (176–185 °F)** in the thickest part.
+7. The braising liquid can be degreased (refrigerate until fat solidifies and skim) and used as a sauce or stock.
+8. Serve with boiled buckwheat (grechka), barley kasha, or mashed potatoes.
+
+*Tip*: Goose is a high-fat bird; the long slow braise renders much of the fat. You can add root vegetables (carrot, parsnip, onion) and herbs (bay leaf, peppercorns) for a richer flavour.
+
+---
 > bbcgoodfood.com/recipes/braised-goose-thigh returned 404 (fetched 2025-07-15).
 > Candidate sources: greatbritishchefs.com, seriouseats.com/braised-goose-thighs
 
@@ -94,6 +121,7 @@ Target internal temperature: **175–185 °F (79–85 °C)** — optimal for col
 |--------|---------|-------------|-----------------|------|-----------------|
 | BBC adaptation | UK | 325 °F (163 °C) covered | 10–14 oz | 2.5–3 hr | 175–185 °F (79–85 °C) |
 | Classic culinary technique | International | 325 °F (163 °C) covered | 10–14 oz | 2.5–3 hr | 175–185 °F (79–85 °C) |
+| Povarenok.ru | Russia | Low covered simmer / 80 °C slow-cook | 1.5–2 kg portions | 3 hr | 80–85 °C (176–185 °F) |
 | USDA minimum | USA | Any | Any | Any | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:

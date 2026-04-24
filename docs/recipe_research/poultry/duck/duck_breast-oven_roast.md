@@ -91,7 +91,38 @@ Target internal temperature: **135–145 °F (57–63 °C)** — medium-rare, pu
 
 ---
 
-### 3. TODO: add third source — searches returned 404
+### 3. Xiachufang (下厨房) — 低温慢烤法式鸭胸肉 (Chinese Low-Temperature Slow-Roasted French Duck Breast)
+**Source**: User recipe on Xiachufang.com (China's largest recipe-sharing platform, comparable to Allrecipes); https://www.xiachufang.com/recipe/102126154/ (fetched 2026-04-24, language: Chinese — ingredients and method translated below).
+**Serves**: 2–3 · **Prep**: 30 min · **Cook**: 10 min oven after sear · **Rest**: 5 min
+
+**Temperature guidance**:
+- Sear (cold pan start): medium-low; skin side down until fat fully renders and skin is golden
+- Oven: 160 °C (320 °F) after sear — low temperature preserves moisture
+- Internal target: pink centre (6成熟 = ~60% done = medium) ~62 °C (144 °F); serve with balsamic/black vinegar
+- Time: 10 min oven; rest 5 min before slicing
+
+**Ingredients** *(translated from Chinese)*
+- 500 g French duck breast (skin on), e.g. Moulard or Barbary
+- 2 sprigs fresh rosemary
+- Himalayan pink salt, to taste
+- Ground black pepper, to taste
+- Black vinegar (镇江香醋) for dipping
+- *Side vegetables (optional)*: 50 g oyster mushrooms, 50 g cherry tomatoes, 50 g asparagus tips, small radish, lettuce
+
+**Method** *(translated from Chinese)*
+1. Score the duck skin in a crosshatch pattern; pat breast dry with paper towels.
+2. Grind a small amount of black pepper onto the flesh side; press rosemary sprigs onto the breast and massage in. Let sit 10 minutes.
+3. Add salt; massage again and rest a further 20 minutes at room temperature.
+4. Heat a dry (no added fat) skillet over medium-low; place breast skin-side down. The duck will release its own fat.
+5. Cook skin-side down, rendering fat slowly, until skin is deep golden-brown and crisp; then flip and cook flesh side to about 60% done (surface turns opaque).
+6. Transfer breast and vegetables (mushrooms, tomatoes, asparagus) to a foil-lined roasting tray; drizzle the rendered duck fat over everything. Add a rosemary sprig on top.
+7. Roast at 160 °C (320 °F) top-and-bottom heat for 10 minutes.
+8. Rest on a board 5 minutes; slice against the grain. Interior should be rosy pink.
+9. Plate over green leaves; serve with black vinegar as dipping sauce.
+
+*Tip*: Always apply other seasonings before salt — they penetrate better. The fat layer on duck breast is thick; the crosshatch scoring and cold-pan start allow it to render fully without burning the skin.
+
+---
 > jessicagavin.com/duck-breast/ returned 404 (fetched 2025-07-15).
 > bbcgoodfood.com/recipes/roast-duck-breast returned 404 (fetched 2025-07-15).
 > natashaskitchen.com/roasted-duck/ returned 404 (fetched 2025-07-15).
@@ -107,6 +138,7 @@ Target internal temperature: **135–145 °F (57–63 °C)** — medium-rare, pu
 |--------|---------|-------------|-----------------|------|-----------------|
 | BBC Good Food (whole, adapted) | UK | 350 °F (177 °C) oven after render | 6–8 oz breast | 8–12 min oven | 135–145 °F (57–63 °C) |
 | Classic culinary technique | International | 375 °F (190 °C) oven after render | 6–9 oz breast | 8–10 min oven | 130 °F pull → 135–142 °F rested |
+| Xiachufang (下厨房) | China | 160 °C (320 °F) oven after render | ~500 g breast | 10 min oven | ~62 °C (144 °F) — pink |
 | USDA (safe minimum) | USA | Any | Any | Any | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:

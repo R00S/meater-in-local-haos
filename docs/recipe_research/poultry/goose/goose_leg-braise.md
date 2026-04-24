@@ -94,7 +94,37 @@ Target internal temperature: **175–185 °F (79–85 °C)** — well above USDA
 
 ---
 
-### 3. TODO: add third source — BBC Good Food goose URLs returned 404
+### 3. EdimDoma.ru — Тушёные утиные ножки (Russian Braised Waterfowl Legs — technique directly applicable to goose)
+**Source**: Home cook recipe, EdimDoma.ru (Russia's largest TV-linked recipe platform, founded by Julia Vysotskaya); https://www.edimdoma.ru/retsepty/10826-tushenye-utinye-nozhki (fetched 2026-04-24, language: Russian — ingredients and method translated below). *Note: original recipe uses duck legs; the technique and temperatures are identical for goose legs — simply extend braising time by 30–60 minutes.*
+**Serves**: 2–3 · **Prep**: 15 min · **Cook**: 1.5–2 hr duck / 2–2.5 hr goose
+
+**Temperature guidance**:
+- Initial sear: medium-high in rendered waterfowl fat
+- Braise: very low simmer, lid on tight; stovetop
+- Internal target: **80–85 °C (176–185 °F)** — tough collagen in legs requires high internal temperature for tenderness
+- Time: 1.5–2 hours for duck legs; 2–2.5 hours for goose legs (denser meat and larger joint)
+
+**Ingredients** *(translated from Russian, scaled for goose legs)*
+- 2–4 goose legs (or duck legs)
+- 1 large onion, finely chopped
+- 1 medium carrot, thinly sliced
+- 3–4 cloves garlic, thinly sliced
+- 1–2 bay leaves
+- 5–6 black peppercorns
+- Salt, to taste
+- 120 ml (½ cup) water or light stock
+
+**Method** *(translated from Russian)*
+1. Trim excess skin and fat from the legs; cut the fat trimmings into small pieces.
+2. In a dry heavy-bottomed sauté pan or Dutch oven, render the fat trimmings over medium heat until they become crispy cracklings; remove cracklings with a slotted spoon and discard (or snack on them).
+3. In the rendered fat over medium-high heat, sear the legs on all sides until golden-brown, ~5–6 minutes total; remove to a plate.
+4. In the same fat, sauté onion ~3–4 minutes until translucent; add carrot and garlic slices; cook a further 2–3 minutes.
+5. Return the legs to the pot, nestling them among the vegetables. Add water or stock, bay leaves, peppercorns, and salt.
+6. Bring to the boil; reduce heat to very low, cover tightly.
+7. Braise: *duck legs* 1.5–2 hours; *goose legs* 2–2.5 hours, until meat is completely tender and pulls away from the bone. Internal temperature should reach **80–85 °C (176–185 °F)**.
+8. Taste and adjust salt. Serve with mashed potatoes and braising juices as a sauce.
+
+---
 > bbcgoodfood.com/recipes/braised-goose-legs returned 404 (fetched 2025-07-15).
 > Candidate sources: greatbritishchefs.com/goose-leg-braise, seriouseats.com/braised-waterfowl
 
@@ -106,6 +136,7 @@ Target internal temperature: **175–185 °F (79–85 °C)** — well above USDA
 |--------|---------|-------------|-----------------|------|-----------------|
 | BBC adaptation | UK | 325 °F (163 °C) oven | 12–16 oz legs | 2.5–3 hr | 175–185 °F (79–85 °C) |
 | Classic culinary technique | International | 325 °F (163 °C) oven | 12–16 oz legs | 2.5–3 hr | 175–185 °F (79–85 °C) |
+| EdimDoma.ru | Russia | Low stovetop covered | 12–16 oz legs | 2–2.5 hr | 80–85 °C (176–185 °F) |
 | USDA minimum | USA | Any | Any | Any | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:

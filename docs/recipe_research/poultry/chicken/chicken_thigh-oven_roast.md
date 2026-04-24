@@ -87,7 +87,36 @@ Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)
 
 ---
 
-### 3. TODO: add third source — natashaskitchen.com/baked-chicken-thighs/ returned 404, jessicagavin.com/baked-chicken-thighs/ returned 404
+### 3. Argiro Barbarigou — Μπουτάκια Κοτόπουλο στο Φούρνο (Greek Yogurt-Crusted Oven Chicken Thighs)
+**Source**: Argiro Barbarigou (one of Greece's most recognized television chefs), Argiro.gr; https://www.argiro.gr/recipe/mpoutakia-kotopoulo-sto-fourno/ (fetched 2026-04-24, language: Greek — ingredients and method translated below).
+**Serves**: 6 · **Prep**: 15 min + 4–24 hr marinating · **Cook**: 45 min
+
+**Temperature guidance**:
+- Oven: 180 °C (356 °F) static heat (top and bottom), conventional oven
+- Internal target: **75 °C (167 °F)** — Greek/EU food-safety minimum for poultry
+- Time: 45 minutes; thighs should be nicely golden and well-browned
+
+**Ingredients** *(translated from Greek)*
+- 12 bone-in skin-on chicken thigh pieces (drumettes / small thighs)
+- 200 g Greek yogurt (full-fat)
+- 2 cups (180 g) dried breadcrumbs
+- 1 cup (90 g) grated Parmesan (or Kefalotiri/Pecorino)
+- 1 tbsp sweet paprika
+- 2 pinches freshly grated nutmeg
+- Salt and freshly ground pepper, to taste
+- 2 tbsp unsalted butter, cut into small knobs
+
+**Method** *(translated from Greek)*
+1. Place chicken thighs in a baking dish; pour yogurt over them and turn to coat all surfaces thoroughly.
+2. Cover with cling film; refrigerate at least 4 hours (overnight for best results).
+3. In a wide bowl, combine breadcrumbs, Parmesan, paprika, nutmeg, salt, and pepper; mix well.
+4. Remove chicken thighs from yogurt one at a time; press each piece into the breadcrumb mixture on all sides, ensuring a thorough, even coating.
+5. Arrange coated thighs in a single layer on a baking tray lined with parchment paper.
+6. Place a small knob of butter on top of each thigh.
+7. If preparing the day before, cover and refrigerate until ready to bake; remove from fridge 30 minutes before baking to come to room temperature.
+8. Bake in a well-preheated oven at 180 °C (356 °F) for 45 minutes until golden brown and cooked through to 75 °C (167 °F) internal.
+
+---
 
 ---
 
@@ -97,6 +126,7 @@ Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)
 |--------|---------|-------------|-----------------|------|-----------------|
 | Natasha's Kitchen | USA | 400 → 450 °F (204 → 232 °C) | Boneless 3 lbs | 35 min | 175 °F (79 °C) |
 | Skinnytaste | USA | 425 °F (218 °C) | Bone-in skin-on | 55–60 min | 165–175 °F (74–79 °C) |
+| Argiro Barbarigou | Greece | 180 °C (356 °F) static | Bone-in skin-on | 45 min | 75 °C (167 °F) |
 
 **Recommended MEATER settings**:
 - Set alert at **170 °F (77 °C)** → pull and rest

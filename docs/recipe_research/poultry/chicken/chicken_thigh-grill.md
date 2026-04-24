@@ -97,7 +97,43 @@ Target internal temperature: **165 °F (74 °C)** minimum — **170 °F (77 °C)
 
 ---
 
-### 3. TODO: add third source — skinnytaste.com/grilled-chicken-thighs/ returned 404, natashaskitchen.com alternate URLs 404
+### 3. Immaculate Bites — Hawaiian Grilled Chicken Thighs
+**Source**: Imma Adamu, Africanbites.com (Cameroonian-born food blogger, based in USA); https://www.africanbites.com/hawaiian-grilled-chicken-thighs/ (fetched 2026-04-24).
+**Serves**: 4–6 · **Prep**: 15 min + 3 hr–overnight marinating · **Cook**: 25–30 min · **Rest**: 5 min
+
+**Temperature guidance**:
+- Grill heat: preheat to medium-high; clean and oil grates
+- Internal target: **165 °F (74 °C)** — probe in thickest part of thigh, away from bone
+- Time: 4–5 min first side (until grill marks form), then flip and continue flipping every 3–4 min, ~25–30 min total
+- Baste with reduced marinade in the final 5 minutes
+
+**Ingredients**
+- 1 kg bone-in skin-on chicken thighs
+- Salt and black pepper to taste (use sparingly — soy sauce is salty)
+- 120 ml pineapple juice (or passion fruit juice)
+- 60 ml soy sauce
+- 60 g brown sugar
+- 2 tbsp sriracha (or sambal oelek)
+- 2 tbsp ketchup
+- 1 tbsp fresh ginger, grated
+- 1 tsp ground cumin
+- Juice of ½ lemon
+- 3 cloves garlic, minced
+
+**Method**
+1. Season chicken thighs lightly with salt and pepper; set aside.
+2. Whisk together pineapple juice, soy sauce, brown sugar, sriracha, ketchup, ginger, cumin, lemon juice, and garlic in a medium bowl.
+3. Pour marinade over chicken in a zip-lock bag or covered bowl; massage to coat all surfaces.
+4. Refrigerate at least 3 hours, preferably overnight for maximum flavour penetration.
+5. Remove chicken from fridge 30 minutes before grilling; drain and reserve the marinade.
+6. In a small saucepan, bring the reserved marinade to a boil; simmer 5 minutes. Set aside for basting.
+7. Clean grill grates; brush lightly with oil. Preheat grill to medium-high.
+8. Place chicken skin-side down; cook 4–5 minutes until grill marks form.
+9. Flip and continue cooking, flipping every 3–4 minutes to avoid burning, until internal temperature reaches **165 °F (74 °C)** — total approximately 25–30 minutes.
+10. Baste with cooked marinade during the final 5 minutes of grilling.
+11. Rest 5 minutes; garnish with sliced green onions. Serve with steamed white rice.
+
+---
 
 ---
 
@@ -108,6 +144,7 @@ Target internal temperature: **165 °F (74 °C)** minimum — **170 °F (77 °C)
 | Jessica Gavin | USA | 375–400 °F (191–204 °C) grill | Bone-in | 25–30 min | 165–170 °F (74–77 °C) |
 | Jessica Gavin | USA | 375–400 °F (191–204 °C) grill | Boneless | 10–15 min | 165–170 °F (74–77 °C) |
 | Natasha's Kitchen | USA | Low (after med-high preheat) | Boneless 3 lbs | 24–30 min | 165–170 °F (74–77 °C) |
+| Immaculate Bites | Cameroon/USA | Med-high grill | Bone-in skin-on | 25–30 min | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **163 °F (73 °C)** → pull and rest
