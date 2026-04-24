@@ -5,7 +5,7 @@ recipe websites from the Copilot cloud agent sandbox. Each site was probed direc
 a relevant recipe URL to determine whether real recipe content (ingredients + method steps)
 is accessible. This prevents agents wasting time on blocked or misdirecting sites.
 
-**Last updated:** 2026-04-24
+**Last updated:** 2026-04-24 (expanded non-western survey)
 **Agent session:** v0.6.1.x — implement-phase-8
 
 ---
@@ -35,25 +35,33 @@ then verify with web_fetch before citing.
 
 | Site | Language | Country | Notes |
 |------|----------|---------|-------|
-| **bbcgoodfood.com** | English | UK | ✅ Full recipe content. Use `/recipes/{slug}` format. Use collection pages (`/recipes/collection/{topic}`) to discover slugs. |
-| **recipetineats.com** | English | AU | ✅ Full recipe content. Title-slug URLs work reliably. |
+| **bbcgoodfood.com** | English | UK | ✅ Full recipe content. Use `/recipes/{slug}` format. Search `site:bbcgoodfood.com {recipe}` to find slugs. |
+| **recipetineats.com** | English | AU | ✅ Full recipe content. Title-slug URLs work reliably. e.g. `/lamb-shanks/`. |
 | **themediterraneandish.com** | English | US/Mediterranean | ✅ Full recipe content incl. Persian, Moroccan, Greek-influenced recipes. e.g. `/braised-lamb-shanks/`, `/persian-braised-lamb-shanks-mahiche/` |
-| **nigella.com** | English | UK | ✅ Full recipe content. e.g. `/recipes/aromatic-lamb-shank-stew`. Check books cited (Nigella Bites 2001 etc.) for bibliographic references. |
-| **thewoksoflife.com** | English | US (Chinese tradition) | ✅ Full recipe content. Chinese, Cantonese, Shanghainese, Xinjiang traditions. e.g. `/cumin-lamb/`, `/chinese-braised-lamb-casserole/` |
-| **gourmettraveller.com.au** | English | AU | ✅ Full recipe content with chef attribution. e.g. `/recipes/browse-all/braised-lamb-shanks` |
+| **nigella.com** | English | UK | ✅ Full recipe content. e.g. `/recipes/aromatic-lamb-shank-stew`. Check books cited for bibliographic references. |
+| **thewoksoflife.com** | English | US (Chinese tradition) | ✅ Full recipe content. Chinese, Cantonese, Shanghainese, Xinjiang traditions. e.g. `/cumin-lamb/` |
+| **gourmettraveller.com.au** | English | AU | ✅ Full recipe content with chef attribution. Use web_search to find slugs. |
+| **hot-thai-kitchen.com** | English | CA (Thai tradition) | ✅ Full recipe content, Thai cuisine. e.g. `/grilled-pork-jowl/`. Use web_search `site:hot-thai-kitchen.com {dish}` for slugs. |
+| **africanbites.com** | English | US (West African / Caribbean) | ✅ Full recipe content. West African, Nigerian, Jamaican, Cameroonian traditions. e.g. `/jamaican-curry-goat/`, `/asun-spicy-roast-goat/`, `/grilled-lamb-chops/`. Always search `site:africanbites.com {recipe}` — guessed slugs often 404. |
+| **vahrehvah.com** | English | IN (South Indian) | ✅ Full recipe content. Andhra, Telugu, pan-Indian. e.g. `/spicy-lamb-chops`, `/lamb-fry`, `/mutton-fry-indian-recipe`. Use slug format `/recipe-name` (no trailing slash). |
 | **chefkoch.de** | German | DE | ✅ Full recipe content. Use numeric ID URLs: `/rezepte/{ID}/{slug}.html`. Find IDs via web_search `site:chefkoch.de {recipe}`. |
-| **lecker.de** | German | DE | ⚠️ Connects but often returns wrong recipe for a given numeric ID. Verify content before citing. |
-| **tasteline.com** | Swedish | SE | ✅ Full recipe content in Swedish. e.g. `/recept/ugnsstekt-lammlagg/`. Use web_search `site:tasteline.com {recept}` to find slugs. |
-| **matprat.no** | Norwegian | NO | ✅ Full recipe content in Norwegian. e.g. `/oppskrifter/gjester/lammeskanker-med-ovnsbakte-gronnsaker/` |
-| **madensverden.dk** | Danish | DK | ✅ Full recipe content in Danish. e.g. `madensverden.dk/lammeskank-roedvin-langtidsstegt/` |
-| **directoalpaladar.com** | Spanish | ES | ✅ Full recipe content in Spanish. e.g. `/recetas-de-carnes-y-aves/jarrete-ternasco-asado-receta-aragonesa-que-conquista-a-todo-que-prueba` |
-| **nefisyemektarifleri.com** | Turkish | TR | ✅ Full recipe content in Turkish. e.g. `/kuzu-incik/` (lamb shank), `/levrek-bugulama/` (sea bass). Use `/` slug format. |
-| **giallozafferano.it** | Italian | IT | ✅ Full recipe content in Italian. Use `ricette.giallozafferano.it/{Capitalized-Slug}.html` format. Browse search page first to find correct slugs. |
-| **cookpad.com/jp** | Japanese | JP | ✅ Full recipe content in Japanese. Use `/jp/recipes/{numeric-id}`. Search via `/jp/search/{encoded-query}` to find IDs. |
-| **indianhealthyrecipes.com** | English | IN | ✅ Full recipe content. Indian, Kashmiri, South Indian traditions. e.g. `/rogan-josh/`, `/mutton-recipes/` |
+| **ichkoche.at** | German | AT (Austrian) | ✅ Full recipe content in German, Austrian traditions. Use `/rezept-{slug}-{ID}` format. e.g. `/steirisches-wurzelfleisch-rezept-192562`. Search `site:ichkoche.at {Gericht}`. |
+| **madensverden.dk** | Danish | DK | ✅ Full recipe content in Danish. e.g. `/lammeskank-roedvin-langtidsstegt/` |
+| **directoalpaladar.com** | Spanish | ES | ✅ Full recipe content in Spanish. e.g. `/recetas-de-carnes-y-aves/jarrete-ternasco-asado-...` |
+| **nefisyemektarifleri.com** | Turkish | TR | ✅ Full recipe content in Turkish. e.g. `/kuzu-incik/`, `/levrek-bugulama/`. Use `/` slug format. |
+| **yemek.com** | Turkish | TR | ✅ Full recipe content in Turkish (second Turkish source). Chef-attributed recipes. e.g. `/tarif/kuzu-pirzola/`. Search `site:yemek.com {yemek}`. |
+| **giallozafferano.it** | Italian | IT | ✅ Full recipe content in Italian. Use `ricette.giallozafferano.it/{Capitalized-Slug}.html`. e.g. `/Cinghiale-in-umido.html`. Search `site:giallozafferano.it {ricetta}` to find slugs. |
+| **indianhealthyrecipes.com** | English | IN | ✅ Full recipe content. Indian, Kashmiri, South Indian traditions. e.g. `/rogan-josh/`, `/mutton-chops/` |
 | **argiro.gr** | Greek | GR | ✅ Full recipe content in Greek. Use `/recipe/{slug}/` format. e.g. `/recipe/arni-kotsi-me-polychroma-karota/` |
-| **sbs.com.au** | English | AU | ✅ Homepage accessible. Use `/food/topic/recipes` to browse. Individual recipe URLs may need slug discovery. |
-| **donnahay.com.au** | English | AU | ⚠️ Site accessible but specific recipe pages return listing/grid instead of single recipe. Not reliable for direct citation. |
+| **cookpad.com/jp** | Japanese | JP | ✅ Full recipe content in Japanese. Use `/jp/recipes/{numeric-id}`. Search `site:cookpad.com/jp {食材}` to find IDs. e.g. `/jp/recipes/19032918` (Xinjiang lamb stir-fry). |
+| **xiachufang.com** | Chinese (Mandarin) | CN | ✅ Full recipe content in Chinese. Use `/recipe/{numeric-id}/` format. e.g. `/recipe/102228983/` (oven lamb ribs). Search `site:xiachufang.com {菜名}` to find IDs. |
+| **edimdoma.ru** | Russian | RU | ✅ Full recipe content in Russian. Use `/retsepty/{ID}-{slug}` format. e.g. `/retsepty/13146-shashlyk-iz-baraniny`. Search `site:edimdoma.ru {рецепт}`. |
+| **cookpad.com/id** | Indonesian (Bahasa) | ID | ✅ Full recipe content in Indonesian. Use `/id/resep/{numeric-id}` format. e.g. `/id/resep/24806655` (gulai kambing). Search `site:cookpad.com/id {masakan}`. |
+| **lecker.de** | German | DE | ⚠️ Connects but often returns wrong recipe for a given numeric ID. Verify content before citing. |
+| **donnahay.com.au** | English | AU | ⚠️ Site accessible but specific recipe pages return listing/grid. Not reliable for direct citation. |
+| **sbs.com.au** | English | AU | ⚠️ Homepage accessible; individual recipe slugs often 404. Search before using. |
+| **tasteline.com** | Swedish | SE | ⚠️ **NOW UNRELIABLE** — was working in v0.6.1.x but most recipe URLs now return 404. Search before every use; fallback to chefkoch.de + madensverden.dk for Scandinavian recipes. |
+| **matprat.no** | Norwegian | NO | ⚠️ **NOW UNRELIABLE** — was working in earlier sessions but most URLs now return 404. Search `site:matprat.no {oppskrift}` to find any currently valid slugs. |
 
 ---
 
@@ -63,6 +71,8 @@ Sites that connect but return homepage, profile, GDPR gate, or a different recip
 
 | Site | Status | Problem |
 |------|--------|---------|
+| **tasteline.com** | ⚠️ UNRELIABLE (2026-04-24) | Was working in previous sessions; most recipe slugs now return 404. Always search first. |
+| **matprat.no** | ⚠️ UNRELIABLE (2026-04-24) | Was working in previous sessions; now returns 404 for most tested URLs. |
 | **lecker.de** | ⚠️ WRONG CONTENT | Returns different recipe than URL implies (ID mismatch). Verify every fetch before citing. |
 | **nytimes.com/cooking** | ⚠️ WRONG CONTENT | Connects but returns wrong recipe (different dish entirely). Paywall may redirect. Do not use. |
 | **food.com** | ⚠️ WRONG CONTENT | Returns user profile/bio, not recipe content. Do not use for recipe citations. |
@@ -74,6 +84,9 @@ Sites that connect but return homepage, profile, GDPR gate, or a different recip
 | **kotikokki.net** | ⚠️ LOGIN WALL | Finnish site returns only a contact/email form. No recipe content. |
 | **kwestiasmaku.com** | ⚠️ EMPTY PAGE | Polish site returns only footer/copyright text. No recipe content. |
 | **jamilacuisine.ro** | ⚠️ EMPTY PAGE | Romanian site returns only copyright notice. No recipe content. |
+| **kiwilimon.com** | ⚠️ EMPTY CONTENT | Returns only "También te puede interesar" (recommendation links). No recipe text. |
+| **rasa.my** | ⚠️ WRONG CONTENT | Returns restaurant reviews, not step-by-step recipes. |
+| **krua.co** | ⚠️ BLOCKED | HTTP 403. Thai language site, not accessible. |
 
 ---
 
@@ -87,11 +100,12 @@ Sites that connect but return homepage, profile, GDPR gate, or a different recip
 | foodandwine.com | ❌ BLOCKED | HTTP 402 |
 | thespruceeats.com | ❌ BLOCKED | HTTP 402 |
 | food52.com | ❌ BLOCKED | HTTP 429 (rate limit) |
-| maangchi.com | ❌ BLOCKED | HTTP 403 |
+| maangchi.com | ❌ BLOCKED | HTTP 403 (Korean) |
 | mexicoinmykitchen.com | ❌ BLOCKED | HTTP 403 |
 | greatcurryrecipes.net | ❌ BLOCKED | HTTP 403 |
 | food24.com | ❌ BLOCKED | HTTP 403 (South African) |
 | taste.com.au | ❌ BLOCKED | HTTP 403 |
+| 196flavors.com | ❌ BLOCKED | HTTP 522 (connection timeout) |
 | koket.se | ❌ NOT FOUND | HTTP 404 (Swedish TV kitchen) |
 | coop.se | ❌ NOT FOUND | HTTP 404 |
 | arla.se | ❌ NOT FOUND | HTTP 404 |
@@ -102,6 +116,7 @@ Sites that connect but return homepage, profile, GDPR gate, or a different recip
 | tasteofhome.com | ❌ NOT FOUND | HTTP 404 |
 | bonappetit.com | ❌ NOT FOUND | HTTP 404 |
 | jamieoliver.com | ❌ NOT FOUND | HTTP 404 |
+| africanbites.com (guessed slugs) | ⚠️ NOTE | Many slug guesses return 404. Always search `site:africanbites.com {dish}` first. |
 | nigella.com (404 test) | ✅ NOTE | Some slug variants return 404; search first |
 | cybercook.com.br | ❌ DEAD | Site permanently closed |
 | nzlamb.co.nz | ❌ TIMEOUT | DNS/network unreachable |
@@ -112,7 +127,13 @@ Sites that connect but return homepage, profile, GDPR gate, or a different recip
 | tudo-gostoso.com.br | ❌ TIMEOUT | DNS/network unreachable |
 | receitas.com.br | ❌ TIMEOUT | DNS/network unreachable |
 | recepten.nl | ❌ TIMEOUT | DNS/network unreachable |
+| hot-thai-kitchen.com (guessed slugs) | ⚠️ NOTE | Many guessed slug paths return 404. Always search `site:hot-thai-kitchen.com {dish}` first. |
+| chinasichuanfood.com | ❌ NOT FOUND | HTTP 404 for all tested recipe URLs |
+| laylita.com | ❌ WRONG FORMAT | Returns JPEG image, not HTML recipe page |
+| recetasgratis.net | ❌ WRONG CONTENT | Returns category listing page, not individual recipe |
 | 10000recipe.com | ❌ JS ERROR | Korean site returns null JS error |
+| caribbeanpot.com | ❌ NOT FOUND | HTTP 404 for all tested recipe URLs |
+| yummly.com | ❌ BLOCKED | HTTP 403 |
 
 ---
 
@@ -126,23 +147,30 @@ Use this matrix to select culturally diverse sources for each leaf file.
 | American | themediterraneandish.com, thewoksoflife.com |
 | Australian | recipetineats.com, gourmettraveller.com.au |
 | Mediterranean (Greek, Turkish, Moroccan, Persian) | themediterraneandish.com, argiro.gr, nefisyemektarifleri.com |
-| Italian | giallozafferano.it |
+| Italian | ricette.giallozafferano.it |
 | Spanish | directoalpaladar.com |
 | German | chefkoch.de (verify fetched content!) |
-| Swedish | tasteline.com |
-| Norwegian | matprat.no |
+| Austrian | ichkoche.at |
+| Swedish | tasteline.com ⚠️ (unreliable) — fallback: madensverden.dk or chefkoch.de |
+| Norwegian | matprat.no ⚠️ (unreliable) — fallback: madensverden.dk |
 | Danish | madensverden.dk |
-| Chinese / East Asian | thewoksoflife.com, cookpad.com/jp |
+| Thai | hot-thai-kitchen.com (search for exact slug first) |
+| Chinese | xiachufang.com, thewoksoflife.com |
 | Japanese | cookpad.com/jp |
-| Indian / South Asian | indianhealthyrecipes.com, bbcgoodfood.com (Indian recipes exist) |
-| Turkish | nefisyemektarifleri.com |
+| Indonesian | cookpad.com/id |
+| Indian / South Asian | indianhealthyrecipes.com, vahrehvah.com, bbcgoodfood.com (Indian recipes) |
+| Turkish | nefisyemektarifleri.com, yemek.com |
 | Greek | argiro.gr |
-| French | web_search for site:marmiton.org or 750g.com (GDPR gated — may need alternate) |
+| West African / Nigerian | africanbites.com (search for exact slug first) |
+| Caribbean | africanbites.com (Jamaican curry goat, etc.) |
+| Russian | edimdoma.ru |
+| French | web_search for marmiton.org or 750g.com (GDPR gated — may need alternate) |
 | Polish | kwestiasmaku.com — ❌ not usable from sandbox |
 | Finnish | kotikokki.net — ❌ login wall |
-| Korean | maangchi.com — ❌ blocked; use web_search to extract content |
+| Korean | maangchi.com — ❌ blocked; no usable Korean source found |
 | Brazilian / Portuguese | cybercook.com.br — ❌ dead; use web_search |
 | South African | food24.com — ❌ blocked |
+| Latin American (Mexican, Ecuadorian) | laylita.com ❌ (returns image), kiwilimon.com ❌ (empty); fallback: directoalpaladar.com or themediterraneandish.com |
 
 ---
 
