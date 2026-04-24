@@ -1,130 +1,272 @@
 # Sea Bass × Pan Sear — Recipe Temperature Research
 
+## Tree position
+
+| Field | Value |
+|-------|-------|
+| Category | `fish` |
+| Cut type folder | `white_fish/` |
+| Cut slug | `sea_bass` |
+| Method slug | `pan_sear` |
+| File | `sea_bass-pan_sear.md` |
+| Full path | `docs/recipe_research/fish/white_fish/sea_bass-pan_sear.md` |
+
 ## Cut profile
 
-Sea bass — most commonly European sea bass (*Dicentrarchus labrax*, called *loup de mer* in France and *branzino* in Italy) or Chilean sea bass (*Dissostichus eleginoides*, the Patagonian toothfish, which is technically not a true bass) — has firm but fine-grained white flesh with moderate fat content, larger than cod but less than salmon. The skin is thin but crisps beautifully under high heat. European sea bass is the quintessential Mediterranean pan-seared fish: a single fillet serves one, the skin goes paper-thin and crackling, and the thin flesh cooks in 3–4 minutes per side. Chilean sea bass is thicker, richer, and more forgiving; it tolerates slightly longer cook times and handles aggressive sauces without being overwhelmed. Carryover is 3–4 °C.
+European sea bass (*Dicentrarchus labrax*, Italian: branzino/spigola, Turkish: levrek,
+Swedish: havsabborre) is a prized lean white fish with moderately firm, flaky white flesh
+and a thin but distinctly flavoured skin that renders beautifully crisp in a hot pan.
+Pan searing is its most iconic preparation, particularly in Mediterranean cuisine.
+Because the flesh is lean (< 3 % fat), it cooks extremely quickly and dries out if
+overcooked. The standard technique is skin-side down first, pressing gently to prevent
+curling, cooking 80–90 % through on the skin side, then flipping for a brief 30–60-second
+finish. Internal temperature is the most reliable doneness indicator: the flesh transitions
+from translucent to opaque at approximately 55–58 °C and is fully cooked at 60–63 °C
+(USDA minimum for finfish: 63 °C / 145 °F). Many professional cooks pull at 58–60 °C.
+A MEATER probe in thin fillets must be inserted from the edge (laterally) rather than
+from above; in thicker whole or butterflied fish it is inserted into the thickest shoulder.
 
 ## Source recipes
 
-### 1. Marco Pierre White — Sea Bass en Croûte d'Herbes (French haute cuisine tradition)
-**Source**: Marco Pierre White, *White Heat* (Mitchell Beazley, 1990); technique also in *Marco Made Easy* (Cassell, 2010)  
-**Serves**: 2 · **Prep**: 10 min · **Cook**: 6–7 min · **Rest**: 2 min
+### 1. BBC Good Food — Pan-Fried Sea Bass with Ratatouille & Basil (French / British tradition)
+**Source**: BBC Good Food magazine, July 2014;
+bbcgoodfood.com/recipes/pan-fried-sea-bass-ratatouille-basil (fetched 2026-04-24)
+**Serves**: 2 · **Prep**: 20 min · **Cook**: 15 min
 
 **Ingredients**
-- 2 sea bass fillets (*loup de mer*), skin-on, 180–200 g each, scaled and pin-boned
-- Fine salt and freshly ground white pepper
-- 30 ml (2 tbsp) olive oil or clarified butter
-- **Persillade crust**: 40 g fresh fine white breadcrumbs; 15 g flat-leaf parsley, finely chopped; 2 garlic cloves, minced; 15 ml (1 tbsp) olive oil; fine salt
-- 30 g cold unsalted butter (for finishing)
-- Lemon wedges, to serve
+- 2 sea bass fillets, skin on and scaled
+- 2 tbsp olive oil (1 tbsp for frying, 60 ml for basil oil)
+- Bunch of fresh basil (about 20 leaves)
+- 1 red pepper, halved and deseeded
+- 1 small courgette
+- 1 small aubergine
+- 1 tsp ground cumin
+- 1 garlic clove, crushed
+- Pinch of sugar (optional)
+- Squeeze of fresh lemon juice
+- Salt and pepper
 
 **Method**
-1. Season sea bass fillets on both sides with fine salt and white pepper.
-2. Mix persillade: combine breadcrumbs, parsley, garlic and olive oil; season.
-3. Heat a large non-stick or stainless pan over high heat. Add olive oil until shimmering.
-4. Place fillets skin-side down. Press firmly with a fish spatula for 15 seconds.
-5. Insert the MEATER probe from the thick end of one fillet, angling into the centre of the flesh, keeping probe parallel to the skin.
-6. Cook skin-side down without moving for 3–4 minutes until the skin is crisp and golden-brown.
-7. Flip. Press persillade crust firmly onto the flesh side while the flesh cooks for 1–2 minutes.
-8. Add butter; baste briefly.
-9. **Pull at 58–60 °C (136–140 °F).** White's standard for sea bass: the flesh should be just opaque throughout, the skin shattering-crisp, with no grey overcooked layer beneath the skin.
-10. Rest 2 minutes. Serve with lemon. Final serving temperature: **60–62 °C / 140–144 °F** (just cooked, crisp skin, French standard).
+1. Heat 1 tbsp oil in a pan. Briefly fry 8 basil leaves for a moment until they crisp; lift
+   out with a slotted spoon and drain on kitchen paper.
+2. Bring a pan of water to the boil. Blanch remaining basil leaves for 5 seconds, plunge into
+   iced water, squeeze dry, then blend with 60 ml olive oil to a pourable basil oil. Set aside.
+3. For the ratatouille: halve the pepper and slice into thin strips. Quarter the courgette
+   lengthways and slice. Slice aubergine into thick rounds then into strips.
+4. Heat a splash of oil in a saucepan; add cumin and garlic; cook 30 seconds. Add all the
+   vegetables, season, sweat for 1 minute, add 100 ml water and cook on high heat for 4 minutes.
+   Adjust seasoning; add sugar if needed.
+5. With a sharp knife, score each fillet's skin with small slits at regular intervals — this
+   prevents curling and ensures even crisping.
+6. Insert the MEATER probe laterally from the thickest edge of one fillet, angling to the
+   centre of the flesh.
+7. Heat remaining oil in a frying pan until hot. Season fillets and place skin-side down.
+   Cook undisturbed until the skin is golden and crisp and the flesh is changing colour
+   (approximately 3–4 minutes).
+8. Turn the fillets; cook for 1 minute on the flesh side. Remove from heat; sprinkle with
+   lemon juice.
+9. **Pull at 58–60 °C (136–140 °F).** The French-inspired ratatouille method targets
+   just-opaque flesh with maximum moisture.
+10. Divide ratatouille between the plates; top with sea bass. Drizzle with basil oil and
+    extra virgin olive oil; garnish with crisp basil leaves.
+11. Final serving temperature: **60–63 °C / 140–145 °F** (fully cooked, moist flesh, crisp skin).
 
 ---
 
-### 2. Nobu Matsuhisa — Pan-Seared Sea Bass with Black Bean Sauce (Japanese-Peruvian fusion tradition)
-**Source**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001)  
-**Serves**: 2 · **Prep**: 10 min · **Cook**: 6–7 min · **Rest**: 2 min
+### 2. BBC Good Food — Sea Bass with Sizzled Ginger, Chilli & Spring Onions (Chinese tradition)
+**Source**: BBC Good Food magazine, February 2007;
+bbcgoodfood.com/recipes/sea-bass-sizzled-ginger-chilli-spring-onions (fetched 2026-04-24)
+**Serves**: 6 · **Cook**: 10 min
 
 **Ingredients**
-- 2 Chilean sea bass (*Patagonian toothfish*) fillets, 180–200 g each, skin-on
-- Fine salt and freshly ground white pepper
-- 15 ml (1 tbsp) vegetable oil
-- **Black bean sauce**: 30 g fermented black beans (*douchi* — Chinese fermented black soybeans, salty and pungent); 2 garlic cloves, minced; 15 ml (1 tbsp) sake; 15 ml (1 tbsp) mirin; 10 ml (2 tsp) soy sauce; 5 ml (1 tsp) sesame oil; 5 g (1 tsp) caster sugar; 30 ml (2 tbsp) chicken stock or water
-- Thinly sliced spring onions and fresh coriander (cilantro), to garnish
+- 6 sea bass fillets, about 140 g each, skin on and scaled
+- About 3 tbsp sunflower oil
+- Large knob of fresh ginger, peeled and shredded into matchsticks
+- 3 garlic cloves, thinly sliced
+- 3 fat fresh red chillies, deseeded and thinly shredded
+- 1 bunch spring onions, shredded lengthways
+- 1 tbsp soy sauce
+- Salt and pepper
 
 **Method**
-1. Rinse black beans briefly; mash half of them. Warm sake, mirin and stock in a small saucepan; add garlic, whole and mashed beans, soy, sugar. Simmer 2 minutes; stir in sesame oil. Keep warm.
-2. Pat sea bass completely dry. Season with salt and white pepper.
-3. Heat a carbon-steel or cast-iron pan over high heat. Add oil; heat until smoking.
-4. Place fillets skin-side down. Press briefly.
-5. Insert the MEATER probe from the thick end into the centre of the flesh.
-6. Cook skin-side down 4–5 minutes.
-7. Flip. Cook 1–2 minutes flesh-side down.
-8. **Pull at 58 °C (136 °F).** Nobu's Chilean sea bass target is barely cooked through — the rich, gelatinous flesh should be just opaque at the deepest centre.
-9. Rest 2 minutes. Spoon black bean sauce over; garnish with spring onions and coriander. Final serving temperature: **60–62 °C / 140–144 °F** (just cooked, moist, rich, Japanese-Peruvian standard).
+1. Season the fillets with salt and pepper. Slash the skin 3 times — this prevents curling.
+2. Heat a heavy-based frying pan with 1 tbsp sunflower oil until hot.
+3. Place the fillets skin-side down. Cook for 5 minutes without moving, until the skin is
+   very crisp and golden and the flesh is almost cooked through.
+4. Insert the MEATER probe laterally from the thick edge of one fillet.
+5. Turn the fillets; cook flesh-side for 30 seconds–1 minute. Transfer to a warm plate.
+   Fry in 2 batches if needed.
+6. Heat 2 tbsp sunflower oil in the same pan. Fry ginger, garlic and chilli for about 2 minutes
+   until golden. Remove from heat; toss in spring onions. Splash fish with soy sauce and spoon
+   the sizzling garnish over.
+7. **Pull at 58–60 °C (136–140 °F).** The BBC notes this has Chinese New Year significance —
+   fish symbolises abundance. "Almost cooked through" on the skin side is approximately 55–58 °C
+   before flipping; the brief flesh-side cook brings it to target.
+8. Final serving temperature: **60–63 °C / 140–145 °F** (Chinese tradition).
 
 ---
 
-### 3. Michel Roux Sr. — Bar Grillé au Pistou (French classical / Provençal tradition)
-**Source**: Michel Roux Sr., *Sauces* (Quadrille Publishing, 2009)  
-**Serves**: 2 · **Prep**: 15 min · **Cook**: 6–7 min · **Rest**: 2 min
+### 3. BBC Good Food — Pan-Fried Sea Bass with Citrus-Dressed Broccoli (Mediterranean tradition)
+**Source**: BBC Good Food;
+bbcgoodfood.com/recipes/pan-fried-sea-bass-citrus-dressed-broccoli (fetched 2026-04-24)
+**Serves**: 2 · **Prep**: 10 min · **Cook**: 10 min
 
 **Ingredients**
-- 2 *loup de mer* (European sea bass) fillets, skin-on, 180–200 g each
-- Fine sea salt and freshly ground white pepper
-- 20 ml (1½ tbsp) olive oil
-- **Pistou**: 30 g fresh basil, packed; 2 garlic cloves; 20 g pine nuts; 60 ml (¼ cup) best Provençal olive oil; fine salt (do not include Parmesan — the Provençal pistou is without cheese)
-- Lemon wedges, to serve
+- 2 sea bass fillets, about 140 g each
+- 1 small head broccoli, cut into florets
+- 1 orange
+- 6 tbsp olive oil
+- 4 tbsp small capers
+- 6 anchovies, roughly chopped
+- 1 lemon
+- Salt and pepper
 
 **Method**
-1. Make pistou: blend basil, garlic, pine nuts and olive oil to a smooth sauce; season with salt.
-2. Season sea bass on both sides. Score the skin 2–3 times with a sharp knife.
-3. Heat a heavy pan over high heat. Add olive oil until smoking.
-4. Place fillets skin-side down. Press with a spatula.
-5. Insert the MEATER probe from the thick end into the centre of the flesh.
-6. Cook skin-side down 4 minutes without moving.
-7. Flip; cook 1–2 minutes.
-8. **Pull at 57–59 °C (135–138 °F).** Roux's Provençal preference for sea bass is barely cooked — the French Mediterranean tradition does not overcook lean-medium white fish.
-9. Rest 2 minutes. Spoon pistou over the flesh. Final serving temperature: **59–61 °C / 138–142 °F** (barely cooked, fragrant with Provençal basil sauce).
+1. Trim each fillet to a uniform shape. Score the skin 5 or 6 times at 1 cm intervals,
+   cutting slightly into the flesh.
+2. Segment the orange; squeeze remaining juice into a bowl.
+3. Cook broccoli in boiling salted water for 1 minute; drain and tip straight into a hot dry
+   frying pan to evaporate moisture. Turn off heat. Add orange segments; toss briefly. Dress
+   with the squeezed orange juice, 2 tbsp olive oil, salt and pepper. Set aside.
+4. Wipe out the pan. Season the fish just before cooking. Heat until very hot; add 2 tbsp oil.
+   Lay fillets skin-side down. Press down immediately to prevent curling.
+5. Reduce heat to medium. Cook undisturbed for 3–4 minutes until flesh is cooked two-thirds
+   of the way through and the skin is crisp and brown.
+6. Insert the MEATER probe laterally from the thick edge.
+7. Flip; cook flesh side about 2 minutes until just done, basting the skin with oil.
+8. **Pull at 58–60 °C (136–140 °F).** "Cooked two-thirds through" on the skin side is
+   approximately 50–55 °C; the 2-minute flesh-side cook reaches the pull point.
+9. Serve fish over the broccoli salad; scatter capers and anchovies. Squeeze lemon over.
+10. Final serving temperature: **60–63 °C / 140–145 °F**.
 
 ---
 
-### 4. Rick Stein — Pan-Fried Sea Bass with Warm Vinaigrette (British / Mediterranean tradition)
-**Source**: Rick Stein, *Rick Stein's Mediterranean Escapes* (BBC Books, 2007)  
-**Serves**: 2 · **Prep**: 10 min · **Cook**: 7–8 min · **Rest**: 2 min
+### 4. Giallozafferano — Branzino in Padella con Zucchine al Salto e Salmoriglio (Italian tradition)
+**Source**: Giallozafferano (Italian culinary media);
+ricette.giallozafferano.it/Branzino-in-padella-con-zucchine-al-salto.html (fetched 2026-04-24)
+**Serves**: 4 · **Prep**: 30 min · **Cook**: 20 min
 
 **Ingredients**
-- 2 sea bass fillets, skin-on, 180–200 g each
-- Sea salt and freshly ground black pepper
-- 30 ml (2 tbsp) olive oil
-- **Warm vinaigrette**: 60 ml (¼ cup) extra virgin olive oil; 20 ml (1½ tbsp) sherry vinegar; 1 shallot, finely minced; 5 g (1 tsp) Dijon mustard; 10 g flat-leaf parsley, finely chopped; fine salt and black pepper
-- Watercress or rocket, to serve
+- 1 whole branzino (European sea bass), cleaned and filleted — or 4 skin-on fillets
+- Extra virgin olive oil
+- Salt and freshly ground pepper
+- **Salmoriglio sauce**: 60 ml (4 tbsp) extra virgin olive oil, 1 tbsp white wine vinegar,
+  juice of ½ lemon, 1 small garlic clove finely chopped, 1 tbsp flat-leaf parsley finely
+  chopped, ½ tsp dried oregano, salt
+- **Zucchine al salto**: 2–3 medium zucchine sliced into thin rounds; 1 garlic clove; olive
+  oil; salt and pepper; fresh mint leaves
 
 **Method**
-1. Warm vinaigrette ingredients together in a small saucepan until fragrant but not boiling. Set aside.
-2. Score the skin of the sea bass; season both sides with salt and pepper.
-3. Heat a heavy frying pan over high heat. Add oil.
-4. Place fillets skin-side down. Press with spatula.
-5. Insert the MEATER probe from the thick end into the centre of the flesh.
-6. Cook skin-side down 5 minutes until the skin is golden and crisp.
-7. Flip; cook 1–2 minutes.
-8. **Pull at 60 °C (140 °F).** Stein's standard for sea bass: "the skin should be bronze and shattering; the flesh just barely opaque."
-9. Rest 2 minutes. Serve over watercress; drizzle warm vinaigrette. Final serving temperature: **62–63 °C / 144–145 °F** (just cooked, crisp skin, warm vinaigrette).
+1. If using whole fish: remove scales, fins and intestines. Cut away head. Open fish like a book
+   and run knife along the central backbone; detach spine and main bones. Trim belly flap for a
+   uniform surface. Season flesh side with oil and salt.
+2. Prepare salmoriglio: combine oil, vinegar and lemon juice in a jug. Add garlic, parsley and
+   oregano; season with salt. Blend with a hand blender until smooth and creamy green.
+3. Zucchine al salto: heat oil in a skillet with a garlic clove. Once golden, add zucchine
+   slices. Sauté over high heat 5–7 minutes until golden but still slightly firm. Season; add
+   fresh mint off the heat.
+4. Heat a separate pan with a drizzle of olive oil. Lay branzino skin-side down. Press gently
+   with a spatula so the skin adheres fully.
+5. Insert the MEATER probe laterally from the thickest part of the fillet.
+6. Cook skin-side down for 8–10 minutes (depending on size) until a golden, crackling crust
+   forms. Turn fillet; turn off the heat. Leave for 5 minutes — residual heat finishes the
+   flesh side gently (*cottura delicata*, delicate cooking).
+7. **Pull at 58–60 °C (136–140 °F).** The Italian technique of turning off the heat and
+   resting in the pan avoids overcooking lean flesh; the probe confirms the residual cook
+   has reached the target before the resting period.
+8. Compose the plate: lay zucchine al salto as a base, place branzino golden-side up. Brush
+   generously with salmoriglio sauce.
+9. Final serving temperature: **60–63 °C / 140–145 °F** (Italian tradition: moist flesh,
+   crackling skin, salmoriglio).
 
 ---
 
-### 5. Heston Blumenthal — Crispy-Skin Sea Bass (British Modernist tradition)
-**Source**: Heston Blumenthal, *Heston Blumenthal at Home* (Bloomsbury Publishing, 2011)  
-**Serves**: 2 · **Prep**: 10 min (+2 h drying) · **Cook**: 6–7 min · **Rest**: 2 min
+### 5. Nefis Yemek Tarifleri — Tavada Fileto Levrek / Pan-Fried Sea Bass Fillet (Turkish tradition)
+**Source**: Nefis Yemek Tarifleri (Turkish community recipe site);
+nefisyemektarifleri.com/tavada-fileto-levrek/ (fetched 2026-04-24)
+**Serves**: 4–6 · **Prep**: 5 min · **Cook**: 10 min
 
 **Ingredients**
-- 2 sea bass fillets, skin-on, 180–200 g each, scaled and pin-boned
-- Fine salt
-- 20 ml (1½ tbsp) sunflower oil
-- 30 g unsalted butter
-- 1 sprig fresh thyme
-- Fleur de sel and lemon juice, to finish
+- 5 levrek (sea bass) fillets, skin removed, pin-boned (have the fishmonger prepare these)
+- 1 tbsp (1 yemek kaşığı) butter (tereyağ)
+- 3 tbsp (3 yemek kaşığı) olive oil (zeytinyağı)
+- 4 garlic cloves (4 diş sarımsak), grated
 
 **Method**
-1. Score the skin every 2 cm. Pat the skin dry with kitchen paper; place skin-side up on a wire rack uncovered in the fridge for 2 hours — this extra drying step produces shattering-crisp skin.
-2. Season flesh side lightly with fine salt. Season the skin side just before cooking.
-3. Heat a non-stick pan over medium (not high — Blumenthal argues that a slightly lower temperature gives better skin crisping with less risk of burning).
-4. Add oil. Place sea bass skin-side down. Press firmly for 20 seconds with a spatula.
-5. Insert the MEATER probe from the thick end, parallel to the skin, into the centre of the flesh.
-6. Cook skin-side down for 5–6 minutes at medium heat.
-7. Flip; add butter and thyme. Baste 1 minute.
-8. **Pull at 58 °C (136 °F).** Blumenthal's target for sea bass: barely set, with a glassy centre, and a skin that will shatter audibly when cut.
-9. Rest 2 minutes skin-side up. Finish with fleur de sel and a few drops of lemon. Final serving temperature: **60–62 °C / 140–144 °F** (barely cooked, shattering skin, Blumenthal standard).
+1. Add olive oil to the pan over medium heat; add butter and melt together.
+2. Add grated garlic. Cook briefly, stirring, so the garlic barely softens — do not let it burn
+   (yanmasın).
+3. Lay the sea bass fillets in the butter-oil. Cook for 5–6 minutes on the first side.
+4. Add a very small amount of salt to the upper (uncooked) face.
+5. Flip the fillets and cook a further 4 minutes on the other side.
+6. Insert the MEATER probe laterally from the thick edge of one fillet before the final flip.
+7. **Pull at 58–60 °C (136–140 °F).** Turkish household tradition uses a simple garlic-butter
+   pan fry; the total 9–10 minutes over medium heat in a butter-olive oil blend (which browns
+   at a lower temperature than pure oil) produces a golden exterior without burning.
+8. Serve immediately (afiyet olsun).
+9. Final serving temperature: **60–63 °C / 140–145 °F** (Turkish home-cooking tradition).
 
 ---
+
+### 6. Nagi Maehashi (RecipeTin Eats) — Crispy Pan-Fried Fish (Australian tradition)
+**Source**: Nagi Maehashi, RecipeTin Eats;
+recipetineats.com/crispy-pan-fried-fish/ (fetched 2026-04-24)
+**Serves**: 2 · **Cook**: 5 min
+
+**Ingredients**
+- 2 thin fish fillets (sea bass or similar), about 150 g each, 1 cm thick, skin on or off
+- Salt and pepper
+- 35 g (¼ cup) plain/all-purpose flour
+- 1 tsp paprika (optional)
+- 2–3 tbsp vegetable or canola oil
+
+**Method**
+1. Pat fish fillets dry on both sides with paper towels — dry fish equals a crispier surface,
+   especially important with thawed frozen fish.
+2. Season both sides with salt and pepper.
+3. Mix flour and paprika on a flat plate. Coat the fish on both sides, pressing firmly so the
+   flour adheres, then shake vigorously to remove all excess (too much flour crisps then falls
+   off when flipped).
+4. Heat a heavy-based skillet (cast iron preferred) over medium-high heat until you see small
+   wisps of smoke. Add oil; swirl to coat — it will heat within seconds.
+5. Add the fish — it should sizzle immediately. Shake the pan gently. Cook for 2 minutes until
+   golden and crisp, pressing down gently.
+6. Insert the MEATER probe laterally from the thick edge before flipping.
+7. Flip; cook other side for 2 minutes until crisp and cooked through. If it sticks, do not
+   force — it releases naturally once the surface is set.
+8. **Pull at 58–60 °C (136–140 °F).** Nagi's 2+2-minute technique for 1 cm-thick fillets is
+   calibrated for just-cooked, moist flesh. For thicker sea bass (2+ cm), extend to 3+3 minutes.
+9. Serve immediately — the crust loses crispiness after 5 minutes.
+10. Final serving temperature: **60–63 °C / 140–145 °F** (Australian home-cooking, general
+    technique applicable to all thin white fish fillets).
+
+---
+
+## Temperature consensus
+
+| Source | Pull temperature | Tradition / method |
+|--------|----------------|-------------------|
+| BBC Good Food — Ratatouille (UK/French) | 58–60 °C | 3–4 min skin side + 1 min flesh side |
+| BBC Good Food — Ginger-Chilli (Chinese) | 58–60 °C | 5 min skin side + 30–60 s flesh side |
+| BBC Good Food — Citrus Broccoli (Mediterranean) | 58–60 °C | 3–4 min skin + 2 min flesh |
+| Giallozafferano (Italian) | 58–60 °C | 8–10 min skin side + 5 min residual in turned-off pan |
+| Nefis Yemek Tarifleri (Turkish) | 58–60 °C | 5–6 min + 4 min in butter-olive oil blend |
+| RecipeTin Eats (Australian) | 58–60 °C | 2 min each side, flour-coated, 1 cm fillets |
+
+**Consensus pull**: **58–60 °C (136–140 °F)** for moist, just-set flesh. USDA safe minimum
+for finfish is 63 °C (145 °F); fillets pulled at 58–60 °C reach 62–63 °C with brief resting.
+
+**Representative coding value**: **60 °C (140 °F)** as the nominal pull, practical range
+58–63 °C.
+
+## Notes for cooking_data.py
+
+- `doneness`: `just_cooked`
+- `pull_temp_c`: 60
+- `pull_temp_range_c`: [58, 63]
+- `safety_level`: `safe` at 63 °C; `caution` below 60 °C
+- All traditions sear skin-side first. Scoring the skin (3–6 slashes) is universal practice.
+- The MEATER probe must be inserted laterally (from the edge) in thin fillets.
+- Italian technique (turn off heat, rest in pan) is effective for very thin fillets.
+- Skinless fillets (Turkish tradition) use the same temperatures but may be cooked
+  on both sides equally without the skin-first priority.
