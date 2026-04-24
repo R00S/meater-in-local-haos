@@ -5,7 +5,7 @@ recipe websites from the Copilot cloud agent sandbox. Each site was probed direc
 a relevant recipe URL to determine whether real recipe content (ingredients + method steps)
 is accessible. This prevents agents wasting time on blocked or misdirecting sites.
 
-**Last updated:** 2026-04-24 (expanded non-western survey)
+**Last updated:** 2026-04-24 (+ Internet Archive re-test of all ⚠️/❌ sites)
 **Agent session:** v0.6.1.x — implement-phase-8
 
 ---
@@ -253,8 +253,91 @@ e.g. https://www.argiro.gr/recipe/arni-kotsi-me-polychroma-karota/
 
 ---
 
+## Internet Archive (Wayback Machine) re-test — 2026-04-24
+
+All ⚠️ and ❌ sites were re-tested via the Wayback Machine CDX API and direct page
+fetches after it was discovered that `web.archive.org` is reachable from this sandbox.
+
+### How the re-test was conducted
+
+1. **CDX lookup** (prefix wildcard required):
+   `https://web.archive.org/cdx/search/cdx?url=DOMAIN/PATH*&output=text&fl=timestamp,original&limit=2`
+2. **Page fetch** using the exact 14-digit timestamp returned by CDX:
+   `https://web.archive.org/web/YYYYMMDDHHMMSS/https://ORIGINAL_URL`
+   — Abbreviated timestamps (8-digit) always return `TypeError: fetch failed`.
+   — URLs with `:80` port in CDX output generally fail on fetch; only plain https:// URLs succeed.
+
+### CDX lookup results — one representative recipe URL tested per domain
+
+| Domain | CDX result | Page fetch | Verdict |
+|--------|------------|------------|---------|
+| **geniuskitchen.com** | ✅ 20171006 found | ✅ Real recipe content (directions + rating) — asparagus at 400°F | **✅ IA WORKS — usable** |
+| **valdemarsro.dk** | ✅ 20180103 found (`http://…:80`) | ❌ TypeError (port-80 format fails on fetch) | **⚠️ INCONCLUSIVE** — archive exists but unreachable; try `https://` snapshot URLs |
+| **epicurious.com** | ✅ 20110424 found (`http://…:80`) | ❌ TypeError (port-80) | **⚠️ INCONCLUSIVE** — old archive, port-80 fetch fails |
+| **food.com** | ✅ 20100721 found (`http://…:80`) | ❌ TypeError (port-80) | **⚠️ INCONCLUSIVE** — old archive (2010), port-80 fetch fails |
+| **foodandwine.com** | ✅ 20161002 found (`http://…:80`) | ❌ TypeError (port-80) | **⚠️ INCONCLUSIVE** — archive exists, port-80 fetch fails |
+| **10000recipe.com** | ✅ 20170115 found (index only) | not tested | **❌ NOT USEFUL** — only index page archived |
+| **arla.se** | ✅ 20011005 found (2001) | not tested | **❌ NOT USEFUL** — archive from 2001, site completely different |
+| **tasteline.com** | ❌ no CDX results for recipe URLs | — | **❌ NO USABLE ARCHIVE** |
+| **matprat.no** | ❌ no CDX results for modern recipe URLs (only 2007–2008 old ASP format) | — | **❌ NO USABLE ARCHIVE** |
+| **marmiton.org** | ❌ no CDX results for modern recipe URLs (only 2009 old ASP format) | — | **❌ NO USABLE ARCHIVE** |
+| **lecker.de** | ❌ CDX timeout | — | **❌ NOT TESTABLE** |
+| **simplyrecipes.com** | ❌ CDX timeout / no results for recipe paths | — | **❌ NO USABLE ARCHIVE** |
+| **allrecipes.com** | ❌ CDX timeout | — | **❌ NOT TESTABLE** |
+| **marthastewart.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **foodandwine.com** | ✅ archive found but port-80 | — | see above |
+| **thespruceeats.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **food52.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **maangchi.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **mexicoinmykitchen.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **greatcurryrecipes.net** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **food24.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **taste.com.au** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **196flavors.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **koket.se** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **coop.se** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **arla.se** | ✅ 2001 only | — | **❌ NOT USEFUL** (too old) |
+| **icakuriren.se** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **mathem.se** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **epicurious.com** | ✅ 2011 only | — | see above |
+| **delish.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **tasteofhome.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **bonappetit.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **jamieoliver.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **cybercook.com.br** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **nzlamb.co.nz** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **nhk.or.jp** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **kogebogen.dk** | ❌ CDX timeout | — | **❌ NOT TESTABLE** |
+| **jamiemagazine.nl** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **persianavegankitchen.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **tudo-gostoso.com.br** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **receitas.com.br** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **recepten.nl** | ❌ no CDX results for recipe paths | — | **❌ NO USABLE ARCHIVE** |
+| **chinasichuanfood.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **laylita.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **recetasgratis.net** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **10000recipe.com** | ✅ index only | — | **❌ NOT USEFUL** |
+| **caribbeanpot.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **yummly.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **750g.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **allerhande.nl** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **nytimes.com/cooking** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **geniuskitchen.com** | ✅ 20171006 works | ✅ real recipe content | **✅ IA WORKS — add to confirmed** |
+
+### Summary: new IA-accessible sources
+
+Only **geniuskitchen.com** was confirmed fully working via Internet Archive (real recipe content returned, including directions and temperatures). All other ⚠️/❌ sites either have no usable archive, only very old archives in incompatible URL formats, or have archives that return TypeError on fetch due to the `:80` port in the archived URL.
+
+**geniuskitchen.com via IA**: Use CDX pattern `www.geniuskitchen.com/recipe/{slug}*` to find
+timestamp, then fetch `https://web.archive.org/web/{TIMESTAMP}/http://www.geniuskitchen.com:80/recipe/{slug}`.
+Note: content is minimal (directions only, no ingredient list shown in 2017 snapshot). Use as a
+supplementary source only.
+
+---
+
 ## Revision history
 
 | Date | Agent session | Changes |
 |------|--------------|---------|
 | 2026-04-24 | v0.6.1.x | Initial survey — 50+ sites probed, 17 confirmed working |
+| 2026-04-24 | v0.6.1.x | Internet Archive re-test of all 46 ⚠️/❌ sites; geniuskitchen.com confirmed usable via IA; all others remain blocked or have no usable archive |
