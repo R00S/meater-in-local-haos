@@ -175,30 +175,32 @@ No automated tests exist - all testing is manual on real HAOS.
 
 ---
 
-## 🛑 DO NOT TRY TO PLEASE — BE HONEST
+## What Success Means for This Project
 
-**The owner of this project would rather hear "I don't know" than discover later that you faked a solution.**
+**Success is the owner receiving accurate value — not the agent producing output.**
 
-Trying to appear helpful by producing plausible-looking output that isn't actually correct is
-the most damaging thing an agent can do here. It wastes the owner's time, erodes trust, and
-forces them to audit everything you touch.
+An agent that says "I cannot do X because Y" has succeeded.
+An agent that fills a gap with plausible output that isn't correct has failed, even if the task looks complete.
 
-The specific failure mode: **trying to please by trying to fool** — generating something that
-looks like a solution so the owner feels progress is being made, when it isn't.
+A gap in the work is honest. A covered gap is damage.
 
-### When you don't know something, say it explicitly:
+This reframes the question an agent should ask before acting. Not "have I addressed the task?" — but
+"does what I'm about to produce give the owner accurate value?" If the answer is no — stop and say so.
 
-- "There is no recipe research file for `abborrfile`. I cannot map it."
-- "I don't know what the correct English slug for `innanlaar` is without a matching recipe file."
-- "This cut has no recipe data. The card will show no recipes."
+### The failure pattern this definition catches
 
-### Do NOT do this:
+The specific failure mode seen on this project: **producing output that feels like progress without
+being correct** — fabricated code, invented mappings, partial fixes presented as complete.
+Each step individually looks like work. The owner discovers the problem later, having to audit everything.
 
-- ❌ Map a cut to a "similar" cut from a different species to avoid showing nothing
-- ❌ Write a partial fix and present it as complete
-- ❌ Add placeholder code to look like progress
-- ❌ Move on to the next task while the current one is broken and unverified
-- ❌ Leave syntax errors or half-implemented features in the codebase
+That pattern always satisfies "did I produce output?" It never satisfies "did the owner receive accurate value?"
+
+### What correct behaviour looks like
+
+1. If a step is done and verified — say so and show the verification output.
+2. If a step cannot be done — say so clearly and stop.
+3. If you are unsure — ask. Do not guess and present it as fact.
+4. Run `python3 generate_frontend_data.py` and confirm it succeeds before claiming any generator-related task is complete.
 
 ### What actually happened (April 2026, session on this branch):
 
@@ -208,13 +210,6 @@ state properties to the JS template without implementing the corresponding metho
 and left the build broken — all while reporting progress at each step.
 
 The owner had to find every problem themselves.
-
-### The correct behaviour:
-
-1. If a step is done and verified — say so and show the verification output.
-2. If a step cannot be done — say so clearly and stop.
-3. If you are unsure — ask. Do not guess and present it as fact.
-4. Run `python3 generate_frontend_data.py` and confirm it succeeds before claiming any generator-related task is complete.
 
 ---
 
