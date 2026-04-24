@@ -5,8 +5,8 @@ recipe websites from the Copilot cloud agent sandbox. Each site was probed direc
 a relevant recipe URL to determine whether real recipe content (ingredients + method steps)
 is accessible. This prevents agents wasting time on blocked or misdirecting sites.
 
-**Last updated:** 2026-04-24 (+ Internet Archive re-test of all ⚠️/❌ sites)
-**Agent session:** v0.6.1.x — implement-phase-8
+**Last updated:** 2026-04-24 (+ global diversity survey — 60+ new sites probed)
+**Agent session:** v0.6.1.x — continue-061-x-experimental-recipes
 
 ---
 
@@ -56,7 +56,15 @@ then verify with web_fetch before citing.
 | **cookpad.com/jp** | Japanese | JP | ✅ Full recipe content in Japanese. Use `/jp/recipes/{numeric-id}`. Search `site:cookpad.com/jp {食材}` to find IDs. e.g. `/jp/recipes/19032918` (Xinjiang lamb stir-fry). |
 | **xiachufang.com** | Chinese (Mandarin) | CN | ✅ Full recipe content in Chinese. Use `/recipe/{numeric-id}/` format. e.g. `/recipe/102228983/` (oven lamb ribs). Search `site:xiachufang.com {菜名}` to find IDs. |
 | **edimdoma.ru** | Russian | RU | ✅ Full recipe content in Russian. Use `/retsepty/{ID}-{slug}` format. e.g. `/retsepty/13146-shashlyk-iz-baraniny`. Search `site:edimdoma.ru {рецепт}`. |
-| **cookpad.com/id** | Indonesian (Bahasa) | ID | ✅ Full recipe content in Indonesian. Use `/id/resep/{numeric-id}` format. e.g. `/id/resep/24806655` (gulai kambing). Search `site:cookpad.com/id {masakan}`. |
+| **teleculinaria.pt** | Portuguese | PT | ✅ Full recipe with ingredients and numbered method steps in Portuguese. Use `/receitas/{category}/` listing pages to find dish names, then `/receitas/{name}/` for individual recipes. e.g. `/receitas/frango/` shows a frango à alhinho recipe with full ingredients + steps. |
+| **taste.co.za** | English | ZA | ✅ Full recipe with ingredients, method, and named-author attribution (South African food writers, e.g. Phillippa Cheifitz). Use `/recipes/{slug}/` format. e.g. `/recipes/grilled-chicken-thighs/`. Content includes per-serving nutrition. |
+| **196flavors.com** | English (multilingual recipes) | US / Global | ✅ Full recipes from 196 countries — ingredients + numbered method steps. Each recipe documents the national tradition. URL format: `/{country-dish-slug}/`. e.g. `/ethiopia-doro-wat/`, `/thailand-pad-kra-pao/`. Note: recipe section is below a long cultural intro — scroll past first 2000–3000 chars. |
+| **coolinarika.com** | Croatian | HR | ✅ Full recipe with numbered preparation steps in Croatian. Use `/recept/{slug}/` format. e.g. `/recept/piletina-na-zaru/`. Includes serving notes ("Savjet") and serving suggestions. No explicit temperatures — doneness described in text. |
+| **gustos.ro** | Romanian | RO | ✅ Recipe with ingredient list and preparation paragraph in Romanian. Use `/retete/{dish}-{prep}.html` format. e.g. `/retete/piept-de-pui-la-gratar.html`. Minimal format (no numbered steps) but ingredients and method are clear. |
+| **hungryhuy.com** | English | US (Vietnamese tradition) | ✅ Full recipe with ingredients and method. Vietnamese-American recipes with cultural context. URL format: `/{dish-slug}/`. e.g. `/vietnamese-lemongrass-chicken/`. |
+| **toriavey.com** | English | US (Israeli / Levantine tradition) | ✅ Full recipe with ingredients, method, and temperature notes (e.g. "165°F for chicken"). Israeli, Middle Eastern, Mediterranean recipes. URL: `/{dish-slug}/`. e.g. `/chicken-shawarma/`, `/joojeh-kabab/`. |
+| **valdemarsro.dk** | Danish | DK | ✅ **Via Internet Archive only** — direct fetch shows only author bio (JS-rendered). CDX lookup: `https://web.archive.org/cdx/search/cdx?url=www.valdemarsro.dk/{slug}*&output=text&fl=timestamp,original&limit=5`. Then fetch archived page. Confirmed working: `/kylling-cremet-sennepssauce/` (TS 20241004000438) — full Danish recipe with ingredients + method. |
+| **povarenok.ru** | Russian | RU | ✅ Full recipe accessible. Encoding may show garbled Cyrillic on some renderers but content is present. Use `/recipes/show/{ID}/` format. e.g. `/recipes/show/159830/`. Find IDs via web_search `site:povarenok.ru {recipe}`. Complements edimdoma.ru for Russian sources. |
 | **lecker.de** | German | DE | ⚠️ Connects but often returns wrong recipe for a given numeric ID. Verify content before citing. |
 | **donnahay.com.au** | English | AU | ⚠️ Site accessible but specific recipe pages return listing/grid. Not reliable for direct citation. |
 | **sbs.com.au** | English | AU | ⚠️ Homepage accessible; individual recipe slugs often 404. Search before using. |
@@ -116,9 +124,68 @@ Sites that connect but return homepage, profile, GDPR gate, or a different recip
 | tasteofhome.com | ❌ NOT FOUND | HTTP 404 |
 | bonappetit.com | ❌ NOT FOUND | HTTP 404 |
 | jamieoliver.com | ❌ NOT FOUND | HTTP 404 |
-| africanbites.com (guessed slugs) | ⚠️ NOTE | Many slug guesses return 404. Always search `site:africanbites.com {dish}` first. |
-| nigella.com (404 test) | ✅ NOTE | Some slug variants return 404; search first |
-| cybercook.com.br | ❌ DEAD | Site permanently closed |
+| **196flavors.com** | ✅ DIRECT ACCESS (corrected) | Was incorrectly listed as HTTP 522. Direct fetch confirmed working 2026-04-24. |
+| kawaling-pinoy.com | ❌ TIMEOUT | TypeError: fetch failed — network blocked |
+| rasamalaysia.com | ❌ WRONG FORMAT | Returns PDF binary, not HTML |
+| panlasangpinoy.com | ❌ WRONG FORMAT | Returns JPEG image binary, not HTML |
+| cuisine-actuelle.fr | ❌ TIMEOUT | TypeError: fetch failed — network blocked |
+| tudo-gostoso.com.br | ❌ TIMEOUT | TypeError: fetch failed — network blocked |
+| sabores.club | ❌ TIMEOUT | TypeError: fetch failed — network blocked |
+| sofreh.com | ❌ TIMEOUT | TypeError: fetch failed — network blocked |
+| wasfety.com | ❌ TIMEOUT | TypeError: fetch failed — network blocked (Arabic recipe site) |
+| borioli.ru | ❌ TIMEOUT | TypeError: fetch failed — network blocked |
+| godmat.no | ❌ TIMEOUT | TypeError: fetch failed — network blocked (Norwegian) |
+| kokkentips.dk | ❌ TIMEOUT | TypeError: fetch failed — network blocked (Danish) |
+| kuharica.hr | ❌ TIMEOUT | TypeError: fetch failed — network blocked (Croatian) |
+| gasztroangyal.hu | ❌ TIMEOUT | TypeError: fetch failed — network blocked (Hungarian) |
+| receptneked.hu | ❌ TIMEOUT | TypeError: fetch failed — network blocked (Hungarian) |
+| hungryforgoodies.com | ❌ TIMEOUT | TypeError: fetch failed — network blocked |
+| mat.se | ❌ TIMEOUT | TypeError: fetch failed — network blocked (Swedish) |
+| varecha.pravda.sk | ❌ TIMEOUT | TypeError: fetch failed — network blocked (Slovak) |
+| kuchynalidky.sk | ❌ TIMEOUT | TypeError: fetch failed — network blocked (Slovak) |
+| allrecipes.co.id | ❌ TIMEOUT | TypeError: fetch failed — network blocked |
+| mexicoenmicocina.com | ❌ BLOCKED | HTTP 403 |
+| yummy.ph | ❌ BLOCKED | HTTP 403 (Filipino recipe site) |
+| akispetretzikis.com | ❌ BLOCKED | HTTP 403 (Greek chef site) |
+| allrecipes.co.kr | ❌ BLOCKED | TypeError: fetch failed (Korean) |
+| przepisy.pl | ❌ BLOCKED | HTTP 403 (Polish) |
+| tasteofbeirut.com | ❌ COOKIE WALL | Returns only cookie-consent screen, no recipe content |
+| cybercook.com.br | ❌ DEAD | Site permanently closed (Brazilian) |
+| toprecepti.com | ❌ DEAD | Domain for sale |
+| receptek.hu | ❌ DEAD | Domain for sale (Hungarian) |
+| nosalty.hu | ❌ NOT FOUND | HTTP 404 for all tested recipe slugs (Hungarian) |
+| recepty.cz | ❌ NOT FOUND | HTTP 404 for all tested slugs (Czech) |
+| vareni.cz | ❌ SERVER ERROR | HTTP 500 (Czech) |
+| ptitchef.com | ❌ NOT FOUND | HTTP 404 (French) |
+| runawayrice.com | ❌ NOT FOUND | HTTP 404 (Vietnamese-American) |
+| kannammacooks.com | ❌ NOT FOUND | HTTP 404 (Indian) |
+| kuchnia-domowa.pl | ❌ NOT FOUND | HTTP 404 (Polish) |
+| arla.se | ❌ NOT FOUND | HTTP 404 for recipe URLs (Swedish dairy brand) |
+| opskrifter.dk | ❌ NOT FOUND | HTTP 404 (Danish) |
+| gotujmy.pl | ❌ NOT FOUND | HTTP 404 (Polish) |
+| polki.pl | ❌ NOT FOUND | HTTP 404 (Polish women's magazine) |
+| haemuk.com | ❌ NOT FOUND | HTTP 404 (Korean) |
+| larecetadelaabuela.com | ❌ NOT FOUND | HTTP 404 (Spanish) |
+| recetasargentinas.net | ❌ NOT FOUND | HTTP 404 (Argentine) |
+| lavanguardia.com | ❌ NOT FOUND | HTTP 404 for recipe URLs (Spanish newspaper) |
+| jow.fr | ❌ NOT FOUND | HTTP 404 (French meal-kit) |
+| 196flavors.com/mexico-pollo-asado/ | ⚠️ NOTE | This specific URL returns 404 but other 196flavors.com URLs work. Use site search. |
+| chef-in.co.il | ❌ NOT FOUND | HTTP 404 (Hebrew/Israeli) |
+| cookpad.com/sa | ❌ NOT FOUND | HTTP 404 (Arabic Saudi) |
+| cookpad.com/tr | ❌ NOT FOUND | HTTP 404 (Turkish) |
+| vegrecipesofindia.com | ❌ NOT FOUND | HTTP 404 for tested slugs |
+| mindmegette.hu | ❌ NOT FOUND | HTTP 404 for tested slugs (Hungarian) |
+| aniagotuje.pl | ❌ NOT FOUND | HTTP 404 (Polish) |
+| retete-culinare.ro | ❌ NOT FOUND | HTTP 404 (Romanian; use gustos.ro instead) |
+| likecook.ru | ❌ NOT FOUND | HTTP 404 (Russian) |
+| ricardocuisine.com | ❌ NOT FOUND | HTTP 404 (French-Canadian) |
+| panelinha.com.br | ❌ NOT FOUND | HTTP 404 (Brazilian) |
+| clorofila.com.br | ❌ NOT FOUND | HTTP 404 (Brazilian) |
+| recetasgratis.net | ❌ WRONG CONTENT | Returns completely different recipe for given URL (confirmed 2026-04-24) |
+| cuisineaz.com | ❌ WRONG CONTENT | Returns wrong recipe — ID mismatch (French site) |
+| kurzy.cz | ❌ NOT A RECIPE SITE | Czech finance/business info site |
+| kulinarne.pl | ❌ NOT A RECIPE SITE | Domain-registrar page, not recipes |
+| sidechef.com | ⚠️ LISTING ONLY | Returns category listing, no individual recipe content at base URLs |
 | nzlamb.co.nz | ❌ TIMEOUT | DNS/network unreachable |
 | nhk.or.jp | ❌ TIMEOUT | DNS/network unreachable |
 | kogebogen.dk | ❌ TIMEOUT | DNS/network unreachable |
@@ -143,34 +210,41 @@ Use this matrix to select culturally diverse sources for each leaf file.
 
 | Tradition | Best source(s) |
 |-----------|---------------|
-| British / English | bbcgoodfood.com, nigella.com |
-| American | themediterraneandish.com, thewoksoflife.com |
+| British / English | bbcgoodfood.com (via IA), nigella.com |
+| American / General English | themediterraneandish.com, thewoksoflife.com, recipetineats.com |
 | Australian | recipetineats.com, gourmettraveller.com.au |
-| Mediterranean (Greek, Turkish, Moroccan, Persian) | themediterraneandish.com, argiro.gr, nefisyemektarifleri.com |
-| Italian | ricette.giallozafferano.it |
+| Portuguese | teleculinaria.pt |
 | Spanish | directoalpaladar.com |
-| German | chefkoch.de (verify fetched content!) |
+| Italian | ricette.giallozafferano.it |
+| French | marmiton.org ⚠️ (GDPR gate — no usable content) — no confirmed French source yet |
+| German | chefkoch.de |
 | Austrian | ichkoche.at |
-| Swedish | tasteline.com ⚠️ (unreliable) — fallback: madensverden.dk or chefkoch.de |
+| Danish | madensverden.dk (direct, no www), valdemarsro.dk (via IA) |
 | Norwegian | matprat.no ⚠️ (unreliable) — fallback: madensverden.dk |
-| Danish | madensverden.dk |
+| Swedish | tasteline.com ⚠️ (unreliable) — no confirmed Swedish source yet |
+| Croatian / Balkan | coolinarika.com |
+| Romanian | gustos.ro |
+| Greek | argiro.gr |
+| Turkish | nefisyemektarifleri.com, yemek.com |
+| Russian | edimdoma.ru, povarenok.ru |
+| Israeli / Levantine / Middle Eastern | toriavey.com |
+| Vietnamese | hungryhuy.com |
 | Thai | hot-thai-kitchen.com (search for exact slug first) |
 | Chinese | xiachufang.com, thewoksoflife.com |
 | Japanese | cookpad.com/jp |
 | Indonesian | cookpad.com/id |
-| Indian / South Asian | indianhealthyrecipes.com, vahrehvah.com, bbcgoodfood.com (Indian recipes) |
-| Turkish | nefisyemektarifleri.com, yemek.com |
-| Greek | argiro.gr |
+| Indian / South Asian | indianhealthyrecipes.com, vahrehvah.com |
 | West African / Nigerian | africanbites.com (search for exact slug first) |
-| Caribbean | africanbites.com (Jamaican curry goat, etc.) |
-| Russian | edimdoma.ru |
-| French | web_search for marmiton.org or 750g.com (GDPR gated — may need alternate) |
-| Polish | kwestiasmaku.com — ❌ not usable from sandbox |
-| Finnish | kotikokki.net — ❌ login wall |
-| Korean | maangchi.com — ❌ blocked; no usable Korean source found |
-| Brazilian / Portuguese | cybercook.com.br — ❌ dead; use web_search |
-| South African | food24.com — ❌ blocked |
-| Latin American (Mexican, Ecuadorian) | laylita.com ❌ (returns image), kiwilimon.com ❌ (empty); fallback: directoalpaladar.com or themediterraneandish.com |
+| Caribbean | africanbites.com (Jamaican recipes) |
+| South African | taste.co.za |
+| Global / Multi-country | 196flavors.com (recipes from 196 countries) |
+| Korean | maangchi.com ❌ (blocked); 10000recipe.com ❌ (JS error); no confirmed Korean source |
+| Brazilian / Portuguese-BR | cybercook.com.br ❌ (dead); tudo-gostoso.com.br ❌ (timeout); no confirmed BR source |
+| Mexican / Latin American | mexicoenmicocina.com ❌ (403); directoalpaladar.com (ES) as closest fallback |
+| Polish | kwestiasmaku.com ⚠️ (empty page); gotujmy.pl ❌ (404); no confirmed Polish source |
+| Finnish | kotikokki.net ⚠️ (login wall); no confirmed Finnish source |
+| Czech | vareni.cz ❌ (500); recepty.cz ❌ (404); no confirmed Czech source |
+| Hungarian | nosalty.hu ❌ (404); receptek.hu ❌ (domain sold); no confirmed Hungarian source |
 
 ---
 
@@ -272,7 +346,7 @@ fetches after it was discovered that `web.archive.org` is reachable from this sa
 | Domain | CDX result | Page fetch | Verdict |
 |--------|------------|------------|---------|
 | **geniuskitchen.com** | ✅ 20171006 found | ✅ Real recipe content (directions + rating) — asparagus at 400°F | **✅ IA WORKS — usable** |
-| **valdemarsro.dk** | ✅ 20180103 found (`http://…:80`) | ❌ TypeError (port-80 format fails on fetch) | **⚠️ INCONCLUSIVE** — archive exists but unreachable; try `https://` snapshot URLs |
+| **valdemarsro.dk** | ✅ 20241004000438 found (https://) | ✅ Full Danish recipe content returned | **✅ IA WORKS** — use CDX `url=www.valdemarsro.dk/{slug}*` then fetch archived URL. Corrects previous "INCONCLUSIVE" result. |
 | **epicurious.com** | ✅ 20110424 found (`http://…:80`) | ❌ TypeError (port-80) | **⚠️ INCONCLUSIVE** — old archive, port-80 fetch fails |
 | **food.com** | ✅ 20100721 found (`http://…:80`) | ❌ TypeError (port-80) | **⚠️ INCONCLUSIVE** — old archive (2010), port-80 fetch fails |
 | **foodandwine.com** | ✅ 20161002 found (`http://…:80`) | ❌ TypeError (port-80) | **⚠️ INCONCLUSIVE** — archive exists, port-80 fetch fails |
@@ -326,7 +400,7 @@ fetches after it was discovered that `web.archive.org` is reachable from this sa
 
 ### Summary: new IA-accessible sources
 
-Only **geniuskitchen.com** was confirmed fully working via Internet Archive (real recipe content returned, including directions and temperatures). All other ⚠️/❌ sites either have no usable archive, only very old archives in incompatible URL formats, or have archives that return TypeError on fetch due to the `:80` port in the archived URL.
+Only **geniuskitchen.com** was confirmed fully working via Internet Archive (real recipe content returned, including directions and temperatures). **valdemarsro.dk** was re-confirmed working via IA in 2026-04-24 global survey (see below). All other ⚠️/❌ sites either have no usable archive, only very old archives in incompatible URL formats, or have archives that return TypeError on fetch due to the `:80` port in the archived URL.
 
 **geniuskitchen.com via IA**: Use CDX pattern `www.geniuskitchen.com/recipe/{slug}*` to find
 timestamp, then fetch `https://web.archive.org/web/{TIMESTAMP}/http://www.geniuskitchen.com:80/recipe/{slug}`.
@@ -341,3 +415,4 @@ supplementary source only.
 |------|--------------|---------|
 | 2026-04-24 | v0.6.1.x | Initial survey — 50+ sites probed, 17 confirmed working |
 | 2026-04-24 | v0.6.1.x | Internet Archive re-test of all 46 ⚠️/❌ sites; geniuskitchen.com confirmed usable via IA; all others remain blocked or have no usable archive |
+| 2026-04-24 | v0.6.1.x (continue-061-x) | Global diversity survey — 60+ additional sites probed across Portuguese, South African, Croatian, Romanian, Vietnamese, Israeli, Hungarian, Czech, Polish, Norwegian, Swedish, Danish, Filipino, Malaysian, Korean, Brazilian, Argentine, Mexican, French, Russian, Arabic, Thai, Indonesian traditions. 8 new confirmed working sites added. 50+ new blocked/dead sites documented. Recommended source matrix expanded. valdemarsro.dk confirmed via IA. |
