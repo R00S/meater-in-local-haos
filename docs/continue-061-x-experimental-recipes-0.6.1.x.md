@@ -81,3 +81,48 @@ MEATER probe placement instructions, and a tree-position table.
 **Version bumped:** 0.6.1.13 → 0.6.1.14
 
 ---
+
+## 2026-04-25 — 12 missing meat recipe research files created
+
+All 12 previously missing recipe research files were created, completing the pork/roasts,
+lamb/roasts, poultry/chicken, poultry/turkey, and game/mutton collections.
+
+**Files created:**
+
+| File | Sources | Traditions covered |
+|------|---------|-------------------|
+| pork/roasts/pork_leg-braise.md | 4 | German, Chinese, Italian, Danish |
+| pork/roasts/pork_leg-slow_cooker.md | 4 | German, Chinese, Danish, Italian |
+| pork/roasts/pork_leg-oven_roast.md | 4 | German, Italian, Austrian, Danish |
+| lamb/roasts/lamb_shank-slow_cooker.md | 5 | Turkish, German, Greek, Italian, Danish |
+| lamb/roasts/lamb_shank-oven_roast.md | 4 | Turkish, Greek, Italian, Danish |
+| lamb/roasts/lamb_neck-braise.md | 4 | Turkish, Italian, German, Danish |
+| lamb/roasts/lamb_neck-slow_cooker.md | 4 | Turkish, German, Italian, Greek |
+| lamb/roasts/lamb_neck-oven_roast.md | 4 | Turkish, Greek, Italian, German |
+| poultry/chicken/ground_chicken-grill.md | 4 | Turkish, Israeli/Levantine, Jamaican, South African |
+| poultry/turkey/ground_turkey-grill.md | 4 | Turkish, Israeli/Levantine, German, South African |
+| game/mutton/mutton_shoulder-braise.md | 4 | Indian, Turkish, Italian, German |
+| game/mutton/mutton_shoulder-slow_cooker.md | 4 | Indian, Turkish, German, Greek |
+
+**Sources fetched and used:**
+- nefisyemektarifleri.com — Turkish lamb shank, neck, shoulder, chicken köfte, turkey köfte
+- chefkoch.de — German pork hock (braise, crockpot, oven), lamb neck, lamb shanks slow cooker, turkey burger
+- thewoksoflife.com — Chinese red-braised Ti Pang (pork shank)
+- giallozafferano.it — Italian stinco (pork shank oven/braise), agnello al forno, spalla d'agnello
+- blog.giallozafferano.it — Italian collo di agnello stufato nel coccio (clay-pot lamb neck)
+- madensverden.dk — Danish pork hank, lamb shank red wine, svineskank ovnbagt
+- valdemarsro.dk — Danish braised pork neck
+- ichkoche.at — Austrian crispy roasted Schweinsstelze
+- argiro.gr — Greek lamb shank gastra, Greek lamb tray-bake
+- toriavey.com — Israeli/Levantine Mediterranean turkey/chicken burgers (165°F explicit)
+- africanbites.com — Jamaican chicken patties
+- taste.co.za — South African chicken patties with preserved lemon
+- indianhealthyrecipes.com — Indian Mutton Korma
+
+**Temperature benchmarks established:**
+- Pork hock (braise/slow cooker): 75–80 °C sliceable; 85–90 °C pull-apart
+- Pork hock (oven roast): 75–85 °C (Giallo Zafferano explicitly stated)
+- Lamb/mutton shank and neck: 85–90 °C fall-off-the-bone
+- Mutton shoulder: 88–95 °C (older animal, denser tissue)
+- Ground poultry (grill): 74 °C / 165 °F USDA minimum (Tori Avey explicitly stated)
+
