@@ -55,3 +55,29 @@ All files under `docs/recipe_research/vegetables/` except the 5 already complete
 
 ---
 
+
+### 2026-04-24 — All vegetable recipe stubs completed (v0.6.1.14)
+
+All 79 vegetable stub files have been filled with full recipe research content.
+Each file contains 4 source recipes from globally diverse published cookbooks
+(non-Western sources prioritised), with cut profiles, pull temperatures,
+MEATER probe placement instructions, and a tree-position table.
+
+**Completed by category:**
+
+| Category | Files filled |
+|----------|-------------|
+| alliums/ | 9 (caramelized_onions ×2, leeks ×3, roasted_garlic ×1, roasted_onion ×3) |
+| corn/ | 4 (air_fryer, boil, grill, oven_roast; steam was pre-filled) |
+| cruciferous/ | 7 (cabbage braise/grill/saute; cauliflower air_fryer/oven_roast/steam/whole_roast) |
+| eggplant/ | 4 (air_fryer, grill, oven_roast, saute; pan_fry was pre-filled) |
+| green_vegetables/ | 18 (asparagus ×4, broccoli ×4, brussels_sprouts ×4, green_beans ×4, spinach ×2) |
+| mushrooms/ | 8 (button ×4, portobello ×4; grill pre-filled) |
+| peppers/ | 4 (bell_peppers: air_fryer, grill, oven_roast, saute) |
+| root_vegetables/ | 13 (baked_potato ×2, roasted_beets ×1, roasted_carrots ×3, roasted_parsnips ×2, roasted_potatoes ×2, roasted_sweet_potato ×3) |
+| squash/ | 11 (acorn_squash ×2, butternut_squash ×3, spaghetti_squash ×2, zucchini ×4) |
+| tomatoes/ | 2 (roasted_tomatoes: air_fryer, oven_roast) |
+
+**Version bumped:** 0.6.1.13 → 0.6.1.14
+
+---

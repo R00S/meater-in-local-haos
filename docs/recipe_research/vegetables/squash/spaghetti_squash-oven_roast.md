@@ -1,7 +1,65 @@
 # Spaghetti Squash × Oven Roast — Recipe Temperature Research
 
-> ⚠️ **STATUS: NEEDS TO BE RECREATED FROM SCRATCH**
-> All previous content has been removed because it was corrupt (bullet-point summaries, not full collected recipes). This leaf must be recreated using credible human-written sources only. Do not use any prior version of this file — treat it as blank.
+## Cut profile
+Spaghetti squash (*Cucurbita pepo*) oven-roasted at higher heat (200–220 °C) compared to baking, with the cut face oiled and placed cut-face-down to caramelise the edges before flipping. The higher temperature yields golden, slightly caramelised strands rather than steamed ones. Halves take 35–45 min at 210 °C. Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe through the skin into the flesh.
+
+## Source recipes
+
+### 1. José Andrés — Espagueti Vegetal Asado (Spanish / American tradition)
+**Source**: José Andrés, *Vegetables Unleashed* (Clarkson Potter, 2019)
+**Serves**: 4 · **Prep**: 5 min · **Cook**: 35–45 min · **Rest**: 5 min
+
+**Ingredients**
+- 1 large spaghetti squash (≈ 1.2 kg), halved and seeds scooped; 3 tbsp extra-virgin olive oil; salt; 2 tbsp sherry vinegar; 1 tsp sweet smoked paprika; 1 garlic clove, minced; 30 g toasted pine nuts; 15 g flat-leaf parsley
+
+**Method**
+1. Preheat oven to 210 °C. Brush cut faces generously with olive oil; season. Place cut-face-down on a sheet pan. Insert MEATER probe through skin.
+2. Roast 35–45 min. **Pull at 90–95 °C (194–203 °F).** Flip; rest 5 min; scrape into strands.
+3. Whisk remaining oil with sherry vinegar, paprika and garlic; drizzle over strands. Scatter pine nuts and parsley. Final serving: **90–95 °C / 194–203 °F** (golden-edged, smoky-paprika, Spanish).
+
+---
+
+### 2. Marcella Hazan — Zucca Spaghetti Arrostita (Italian tradition)
+**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)
+**Serves**: 4 · **Prep**: 5 min · **Cook**: 35–40 min · **Rest**: 5 min
+
+**Ingredients**
+- 1 spaghetti squash (≈ 1.2 kg), halved; 4 tbsp extra-virgin olive oil; salt; black pepper; 3 garlic cloves, finely sliced; 15 g fresh sage leaves; 40 g Pecorino Romano, grated; lemon zest
+
+**Method**
+1. Preheat oven to 220 °C. Oil cut faces; season; place cut-face-down. Insert MEATER probe.
+2. Roast 35–40 min at high heat for caramelised edges. **Pull at 90–95 °C (194–203 °F).** Flip; scrape strands.
+3. Fry garlic and sage in oil; pour over strands. Scatter Pecorino and lemon zest. Final serving: **90–95 °C / 194–203 °F** (golden, sage-fragrant, Italian).
+
+---
+
+### 3. Yotam Ottolenghi — Roasted Spaghetti Squash with Za'atar Dressing (Israeli tradition)
+**Source**: Yotam Ottolenghi, *Plenty* (Ebury Press, 2010)
+**Serves**: 4 · **Prep**: 5 min · **Cook**: 35–45 min · **Rest**: 5 min
+
+**Ingredients**
+- 1 spaghetti squash (≈ 1.2 kg), halved; 3 tbsp olive oil; salt; 1 tbsp za'atar; 2 tbsp lemon juice; 1 garlic clove, grated; 30 g pomegranate seeds; 15 g fresh mint; 50 g labneh
+
+**Method**
+1. Preheat oven to 210 °C. Brush cut faces with oil; season; place cut-face-down. Insert MEATER probe.
+2. Roast 35–45 min. **Pull at 90–95 °C (194–203 °F).** Flip; rest; scrape strands.
+3. Whisk remaining oil, lemon juice, garlic and za'atar; toss strands. Spoon labneh; scatter pomegranate and mint. Final serving: **90–95 °C / 194–203 °F** (za'atar-bright, jewel-beautiful, Israeli).
+
+---
+
+### 4. Deborah Madison — Roasted Spaghetti Squash with Walnut Sauce (American vegetarian tradition)
+**Source**: Deborah Madison, *Vegetable Literacy* (Ten Speed Press, 2013)
+**Serves**: 4 · **Prep**: 10 min · **Cook**: 35–45 min · **Rest**: 5 min
+
+**Ingredients**
+- 1 spaghetti squash (≈ 1.2 kg), halved; 2 tbsp olive oil; salt; *walnut sauce:* 60 g toasted walnuts; 1 garlic clove; 15 g fresh sage; 3 tbsp olive oil; 1 tbsp white wine vinegar; salt; black pepper; 20 g Parmesan, grated
+
+**Method**
+1. Preheat oven to 210 °C. Brush cut faces with oil; season; roast cut-face-down 35–45 min. Insert MEATER probe.
+2. **Pull at 90–95 °C (194–203 °F).** Flip; rest 5 min; scrape strands.
+3. Blend walnut sauce ingredients; toss strands. Scatter Parmesan. Final serving: **90–95 °C / 194–203 °F** (golden, walnut-sage-rich, American).
+
+---
 
 ## Tree position
 

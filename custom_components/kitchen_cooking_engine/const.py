@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 23 Apr 2026, 15:28 UTC
-Last Change: v0.6.1.13 - Chores: version bump, fill pork ribs/roasts recipe stubs, remove unverifiable page numbers from cookbook citations
+Last Change: v0.6.1.14 - Complete all vegetable recipe stubs (79 files across all categories)
 """
 
 DOMAIN = "kitchen_cooking_engine"
