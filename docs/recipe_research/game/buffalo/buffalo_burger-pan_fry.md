@@ -1,94 +1,95 @@
 # Buffalo Burger × Pan Fry — Recipe Temperature Research
 
+## Tree position
+
+| Field | Value |
+|-------|-------|
+| Category | `game` |
+| Cut type folder | `buffalo/` |
+| Cut slug | `buffalo_burger` |
+| Method slug | `pan_fry` |
+| File | `buffalo_burger-pan_fry.md` |
+| Full path | `docs/recipe_research/game/buffalo/buffalo_burger-pan_fry.md` |
+
 ## Cut profile
-A pan-fried buffalo burger is the same 150–180 g lean-game patty as the grilled version, cooked in a heavy pan over medium-high heat with butter and oil. Buffalo (American *Bison bison*; or true Old World *Bubalus bubalis*, leaner still) carries 8–14 % fat — much less than ground beef — so it overcooks readily. Probe the geometric centre of the largest patty horizontally. USDA safety for ground game is 71 °C; most chefs target medium (62–65 °C) for best texture, accepting that surface searing past 71 °C for sufficient time delivers safety on the seared faces.
+
+Pan-fried buffalo/bison burgers follow the same principles as grilled, but the skillet environment allows for basting with butter and herbs. The lean buffalo meat can also be prepared in a cast-iron pan on the hob for a classic American smash-burger technique or a more European bistro-style preparation.
+
+Target internal temperature: **70–74 °C (158–165 °F)** for food-safe ground meat.
 
 ## Source recipes
 
-### 1. Hank Shaw — Pan-Seared Buffalo Burgers (American hunter tradition)
-**Source**: Hank Shaw, *Buck, Buck, Moose: Recipes and Techniques for Cooking Deer, Elk, Moose, Antelope and Other Antlered Things* (Rader Books, 2014), pp. 180–182; honest-food.net  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 4 min
+### 1. Chefkoch.de — Der Bisonburger (German tradition, pan-fry adaptation)
+**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/3007371453624664/Der-Bisonburger.html (fetched 2026-04-24)
+**Serves**: 4 · **Prep**: 20 min · **Cook**: 15 min
 
 **Ingredients**
-- 700 g coarsely-ground buffalo (about 10 % fat)
-- 5 g (1 tsp) kosher salt; 2 g (½ tsp) freshly ground black pepper
-- 30 ml beef tallow + 15 g unsalted butter
-- 4 brioche burger buns, toasted
-- **To serve**: butter lettuce, sliced tomato, sharp Cheddar, sliced red onion, smoked paprika aioli
+- 400 g ground bison
+- 100 g ground beef (for fat)
+- 1 egg yolk
+- 1 tbsp Worcestershire sauce
+- Salt, pepper, smoked paprika
+- 1 tbsp oil or butter for the pan
+- 4 burger buns, toppings as desired
 
 **Method**
-1. Form buffalo gently into 4 patties, 2 cm thick, slightly wider than the bun. Season just before cooking. Dimple centre.
-2. Heat tallow and butter in a heavy cast-iron pan over medium-high heat (slightly cooler than for beef) until shimmering.
-3. Lay patties well spaced. Insert MEATER probe horizontally into the largest patty.
-4. Cook 4 minutes undisturbed until a deep crust forms. Flip; cook 3 minutes more.
-5. **Pull at 60–62 °C (140–144 °F)** for medium (Shaw's standard for buffalo); pull at 69–71 °C (157–160 °F) for fully-cooked USDA standard. Carryover takes the centre 2–3 °C higher.
-6. Rest 4 minutes. Build with all toppings. Final serving temperature: **62–65 °C / 144–149 °F** (juicy, deeply crusted, lean-savoury).
+1. Mix bison, beef, egg yolk, and seasoning gently. Form 4 patties.
+2. Heat a cast-iron or heavy pan with oil over high heat.
+3. Sear patties 4–5 minutes per side on high heat for a good crust.
+4. Insert probe. **Pull at 70–72 °C (158–162 °F)**.
+5. Rest 2 minutes. Serve in toasted bun.
+*Final temperature: 72–74 °C (162–165 °F).*
 
 ---
 
-### 2. Tina Nordström — Pannstekt Buffelburgare (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 112–114; köket.se  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 4 min
+### 2. Madensverden.dk — Bøffer (Danish burger patties — buffalo/bison adaptation)
+**Source**: Madensverden.dk; https://madensverden.dk/saftige-burgerboeffer/ (fetched 2026-04-24). *Juicy Danish burger patties technique — direct applicable to bison/buffalo mince.*
+**Serves**: 4 · **Prep**: 15 min · **Cook**: 12 min
 
 **Ingredients**
-- 700 g coarsely-ground buffalo
-- 5 g (1 tsp) salt; 2 g (½ tsp) white pepper; 1 g (¼ tsp) ground kryddpeppar
-- 30 g smör + 15 ml rapsolja
-- 4 brioche buns, toasted
-- **To serve**: lingon-aioli, salladsblad, picklad rödlök, västerbottenost slices
+- 500 g ground bison or buffalo (or beef)
+- ½ tsp salt
+- ½ tsp black pepper
+- 1 egg
+- 2 tbsp breadcrumbs (optional, for binding)
+- 1 tbsp butter for the pan
 
 **Method**
-1. Form buffalo gently into 4 patties, 2 cm thick. Season just before cooking. Dimple centre.
-2. Heat butter and oil in a heavy pan over medium-high heat until the foam subsides.
-3. Lay patties well spaced. Insert MEATER probe horizontally into the largest patty.
-4. Cook 4 minutes undisturbed. Flip; cook 3 minutes more.
-5. **Pull at 60–62 °C (140–144 °F)** for medium (Nordström's standard for buffelburgare).
-6. Rest 4 minutes. Build with toppings. Final serving temperature: **62–65 °C / 144–149 °F** (sweet-tart lingon, juicy, deeply savoury).
+1. Combine mince, salt, pepper, egg, and breadcrumbs gently. Shape into 4 patties.
+2. Heat butter in a heavy frying pan over high heat. Cook patties 4–5 minutes per side.
+3. Reduce heat for final 2 minutes to ensure even cooking through.
+4. Insert probe. **Pull at 70–72 °C (158–162 °F)**.
+5. Rest briefly. Serve with Danish ryebread, pickled cucumber, and remoulade.
+*Final temperature: 72–74 °C (162–165 °F).*
 
 ---
 
-### 3. America's Test Kitchen — Pan-Seared Buffalo Burgers (American test-kitchen tradition)
-**Source**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011), pp. 384–388; cooksillustrated.com  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 4 min
+### 3. RecipeTinEats.com — Hamburger Recipe (technique applicable to buffalo)
+**Source**: RecipeTinEats.com (Nagi Maehashi); https://www.recipetineats.com/hamburger-recipe/ (fetched 2026-04-24). *Award-winning hamburger technique from an Australian food blogger — lean mince principles applicable to buffalo.*
+**Serves**: 4 · **Prep**: 10 min · **Cook**: 10 min
 
 **Ingredients**
-- 700 g coarsely-ground buffalo
-- 30 g (2 tbsp) Worcestershire sauce
-- 15 g (1 tbsp) Dijon mustard
-- 5 g (1 tsp) kosher salt; 2 g (½ tsp) freshly ground black pepper
-- 30 ml sunflower oil + 15 g unsalted butter
-- 4 brioche burger buns, toasted
-- **To serve**: butter lettuce, sliced tomato, red onion, garlic mayo
+- 500 g ground buffalo or bison (85% lean — add 2 tbsp of fat/oil if very lean)
+- ½ tsp salt
+- ¼ tsp black pepper
+- 1 tbsp olive oil
+- 4 cheddar slices
 
 **Method**
-1. Mix buffalo, Worcestershire, mustard, salt and pepper gently. Form 4 patties, 2 cm thick. Dimple centre.
-2. Heat oil and butter in a heavy stainless or cast-iron pan over medium-high heat until shimmering.
-3. Lay patties well spaced. Insert MEATER probe horizontally into the largest patty.
-4. Cook 4 minutes undisturbed. Flip; cook 3 minutes more.
-5. **Pull at 60–62 °C (140–144 °F)** for medium (ATK's standard).
-6. Rest 4 minutes. Build with toppings. Final serving temperature: **62–65 °C / 144–149 °F** (deep-crusted, juicy).
+1. Season mince with salt and pepper. Form 4 patties (indent centre slightly — prevents doming).
+2. Heat oil in a heavy pan over high heat until smoking.
+3. Cook patties 3 min first side without pressing. Flip, top with cheese immediately.
+4. Cook 2–3 more minutes until cheese melts and burger reaches target temp.
+5. Insert probe. **Pull at 70–72 °C (158–162 °F)** for food-safe ground meat.
+6. Rest in bun 1 minute. Serve with all your favourite toppings.
+*Final temperature: 72–74 °C (162–165 °F).*
 
 ---
 
-### 4. Magnus Nilsson — Pannstekt Buffelburgare med Enbär (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 360–362  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 4 min
+## Temperature summary
 
-**Ingredients**
-- 700 g coarsely-ground buffalo
-- 5 g (1 tsp) flaked sea salt; 2 g (½ tsp) freshly ground black pepper
-- 1 g (¼ tsp) ground kryddpeppar
-- 1 g (¼ tsp) freshly ground enbär
-- 30 g cultured butter + 15 ml cold-pressed rapsolja
-- 4 brioche buns, toasted
-- **To serve**: juniper mayonnaise, salladsblad, picklad rödlök, sliced gravad rödbeta
-
-**Method**
-1. Form buffalo into 4 patties, 2 cm thick. Season with salt, pepper, allspice and juniper just before cooking. Dimple centre.
-2. Heat butter and oil in a heavy pan over medium-high heat until the foam subsides.
-3. Lay patties well spaced. Insert MEATER probe horizontally into the largest patty.
-4. Cook 4 minutes undisturbed. Flip; cook 3 minutes more.
-5. **Pull at 60–62 °C (140–144 °F)** for medium (Nilsson's standard).
-6. Rest 4 minutes. Build with toppings. Final serving temperature: **62–65 °C / 144–149 °F** (juniper-perfumed, beetroot-bright, savoury).
-
----
+| Doneness | Pull temp | Notes |
+|----------|-----------|-------|
+| Medium (restaurant, not food-safe) | 63 °C (145 °F) | Not recommended for home |
+| Safe minimum (ground meat) | 70–72 °C (158–162 °F) | Standard recommendation |
+| Well-done | 76–77 °C (169–171 °F) | Too dry for lean buffalo |

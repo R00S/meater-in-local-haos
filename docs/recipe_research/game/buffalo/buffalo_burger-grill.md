@@ -1,98 +1,122 @@
 # Buffalo Burger × Grill — Recipe Temperature Research
 
+## Tree position
+
+| Field | Value |
+|-------|-------|
+| Category | `game` |
+| Cut type folder | `buffalo/` |
+| Cut slug | `buffalo_burger` |
+| Method slug | `grill` |
+| File | `buffalo_burger-grill.md` |
+| Full path | `docs/recipe_research/game/buffalo/buffalo_burger-grill.md` |
+
 ## Cut profile
-A grilled buffalo burger uses the same lean-game profile as bison (the two are usually marketed interchangeably in the US — *Bison bison* is the American buffalo; true Old World water buffalo *Bubalus bubalis* is leaner still, 5–8 % fat). Patties are 150–180 g, 2 cm thick, ground from chuck/shoulder for binding and flavour. The cooking goal: crisp grill marks while keeping the centre at medium (62–65 °C) — pushing past medium dries this lean meat to leather. Probe the geometric centre of the largest patty horizontally; carryover is small (2–3 °C). USDA safety for ground game is 71 °C, but most chefs accept medium when the patty's surface has been seared past 71 °C for sufficient time.
+
+Buffalo/bison burger (ground buffalo patty, grilled) is one of the most popular preparations in North America and increasingly in Europe. The lean ground meat makes for a firm, flavourful patty — it dries out quickly so most American recipes cook to medium (63 °C) rather than well-done. Adding a small amount of fat (bacon fat, olive oil) to the mix prevents dryness.
+
+Target internal temperature: **70–74 °C (158–165 °F)** (ground meat food safety standard in the US and EU); some chefs serve at 63 °C (medium) as a restaurant preference.
 
 ## Source recipes
 
-### 1. Hank Shaw — Grilled Buffalo Burgers with Smoked Paprika Aioli (American hunter tradition)
-**Source**: Hank Shaw, *Buck, Buck, Moose: Recipes and Techniques for Cooking Deer, Elk, Moose, Antelope and Other Antlered Things* (Rader Books, 2014), pp. 180–182; honest-food.net  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 4 min
+### 1. Food Network — Bison Burger with Garlic Mayo and Caramelized Onions (American tradition)
+**Source**: Food Network (Brad Sorenson); https://www.foodnetwork.com/recipes/brad-sorenson/bison-burger-with-garlic-mayo-and-caramelized-onions-recipe-2040548 (web search 2026-04-24)
+**Serves**: 4 · **Prep**: 20 min · **Cook**: 20 min
+
+*Classic American bison burger — garlic mayo and caramelized onions.*
 
 **Ingredients**
-- 700 g coarsely-ground buffalo (about 10 % fat)
-- 5 g (1 tsp) kosher salt; 2 g (½ tsp) freshly ground black pepper
-- 15 ml neutral oil for the grill
-- **Smoked paprika aioli**: 200 g mayo + 5 g (1 tsp) sweet smoked paprika + 2 garlic cloves grated + 15 ml lemon juice
-- 4 brioche burger buns, toasted
-- **To serve**: butter lettuce, sliced tomato, sharp Cheddar, sliced red onion
+
+*Patties:*
+- 450 g (1 lb) ground bison
+- 450 g (1 lb) ground beef sirloin (optional — adds fat for juiciness)
+- 1 yellow onion, minced
+- 4 garlic cloves, minced
+- 2 tbsp fresh parsley, chopped
+- 1 tbsp onion powder
+- 1 tbsp garlic powder
+- 1 tsp seasoning salt
+- ¼ cup ketchup
+- 2 tbsp Worcestershire sauce
+- Cracked black pepper to taste
+
+*Caramelized onions:*
+- 2 tbsp bacon fat or olive oil
+- 1 yellow onion, thinly sliced
+- Salt and pepper
+
+*Garlic mayonnaise:*
+- 120 g mayonnaise
+- 2 tbsp fresh parsley
+- 4 garlic cloves, chopped
+- Salt and pepper
+
+*To assemble:*
+- 4 slices Wisconsin cheddar (or aged cheddar)
+- 4 burger buns, toasted
+- 1 cup fresh rocket/arugula
 
 **Method**
-1. Form buffalo gently into 4 patties, 2 cm thick, slightly wider than the bun. Season just before cooking. Dimple centre.
-2. Heat the grill to direct medium-high heat (about 220 °C / 425 °F at the grates). Brush grates with oil.
-3. Lay patties on the hot grates. Insert MEATER probe horizontally into the largest patty, parallel to the grate.
-4. Grill 4 minutes (lid down) until clear grill marks set. Flip; grill 3 minutes more.
-5. **Pull at 60–62 °C (140–144 °F)** for medium (Shaw's standard for buffalo); pull at 69–71 °C (157–160 °F) for the strict USDA fully-cooked standard. Carryover takes the centre 2–3 °C higher.
-6. Rest 4 minutes loosely tented. Build with smoked paprika aioli, lettuce, tomato, Cheddar and red onion. Final serving temperature: **62–65 °C / 144–149 °F** (smoke-perfumed, juicy, lacquered crust).
+1. Mix bison (and beef sirloin if using), onion, garlic, parsley, and all seasoning into patties. Form 4 patties gently — do not overwork.
+2. **Caramelised onions**: Cook in bacon fat/oil over medium-high for 8–10 minutes until deeply golden.
+3. **Garlic mayo**: Mix all ingredients.
+4. Preheat grill to medium-high. Cook patties **3 minutes per side for medium**, topping with cheddar in the last minute.
+5. Insert probe into the thickest patty. **Pull at 70–72 °C (158–162 °F)** for safe ground meat.
+6. Assemble: spread garlic mayo on toasted bun; top with patty, caramelised onions, and rocket.
+*Final temperature: 72–74 °C (162–165 °F).*
 
 ---
 
-### 2. Tina Nordström — Grillad Buffelburgare (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009), pp. 112–114; köket.se  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 4 min
+### 2. Chefkoch.de — Der Bisonburger (German tradition)
+**Source**: Chefkoch.de; https://www.chefkoch.de/rezepte/3007371453624664/Der-Bisonburger.html (fetched 2026-04-24)
+**Serves**: 4 · **Prep**: 20 min · **Cook**: 15 min
 
-**Ingredients**
-- 700 g coarsely-ground buffalo
-- 5 g (1 tsp) salt; 2 g (½ tsp) white pepper; 1 g (¼ tsp) ground kryddpeppar
-- 15 ml cold-pressed rapsolja for the grill
-- **Lingon-aioli**: 200 g majonnäs + 60 g rårörda lingon + 2 garlic cloves grated
-- 4 brioche buns, toasted
-- **To serve**: salladsblad, picklad rödlök, västerbottenost slices
+*Translation: The Bison Burger — German-American style.*
+
+**Ingredients** *(extracted from log content)*
+- 400 g ground bison meat
+- 100 g ground beef (Rinderhackfleisch, added for fat)
+- 1 egg yolk
+- 1 tbsp Worcestershire sauce
+- Salt, pepper, smoked paprika
+- 4 burger buns
+- Toppings: lettuce, tomato, pickled onion, cheddar, ketchup, mustard
 
 **Method**
-1. Form buffalo gently into 4 patties, 2 cm thick. Season just before cooking. Dimple centre.
-2. Heat grill to direct medium-high (about 220 °C). Brush grates with oil.
-3. Lay patties on the hot grates. Insert MEATER probe horizontally into the largest patty.
-4. Grill 4 minutes. Flip; grill 3 minutes more.
-5. **Pull at 60–62 °C (140–144 °F)** for medium (Nordström's standard for buffelburgare).
-6. Rest 4 minutes. Build with lingon-aioli, salladsblad, picklad rödlök, Västerbotten cheese. Final serving temperature: **62–65 °C / 144–149 °F** (sweet-tart lingon counterpoint, juicy, deeply savoury).
+1. Mix bison, beef, egg yolk, Worcestershire sauce, and seasoning gently. Form 4 thick patties (don't overwork).
+2. Grill over direct medium-high heat 4 minutes per side for medium. Add cheese last minute.
+3. Insert probe. **Pull at 70–72 °C (158–162 °F)**.
+4. Rest 3 minutes in a warm bun.
+*Final temperature: 72–74 °C (162–165 °F).*
 
 ---
 
-### 3. America's Test Kitchen — Grilled Buffalo Burgers (American test-kitchen tradition)
-**Source**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011), pp. 386–388; cooksillustrated.com  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 4 min
+### 3. BBC Good Food — Barbecued Beef Burger (technique applicable to buffalo patties)
+**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/barbecue-beef-burger (fetched 2026-04-24). *Standard BBC BBQ burger technique — applicable to buffalo/bison mince.*
+**Serves**: 4 · **Prep**: 10 min · **Cook**: 15 min
 
 **Ingredients**
-- 700 g coarsely-ground buffalo
-- 30 g (2 tbsp) Worcestershire sauce
-- 15 g (1 tbsp) Dijon mustard
-- 5 g (1 tsp) kosher salt; 2 g (½ tsp) freshly ground black pepper
-- 15 ml sunflower oil for the grill
-- 4 brioche burger buns, toasted
-- **To serve**: butter lettuce, sliced tomato, red onion, garlic mayo
+- 500 g buffalo or bison mince (or beef mince for comparison)
+- 1 small onion, finely grated
+- 1 tbsp wholegrain mustard
+- 2 tbsp ketchup
+- 1 egg
+- 1 tbsp olive oil
+- Salt and black pepper
 
 **Method**
-1. Mix buffalo, Worcestershire, mustard, salt and pepper gently. Form 4 patties, 2 cm thick. Dimple centre.
-2. Heat grill to direct medium-high (about 220 °C). Brush grates with oil.
-3. Lay patties on the hot grates. Insert MEATER probe horizontally into the largest patty.
-4. Grill 4 minutes. Flip; grill 3 minutes more.
-5. **Pull at 60–62 °C (140–144 °F)** for medium (ATK's standard for buffalo — same as bison; the leaner the meat, the more medium beats well-done).
-6. Rest 4 minutes. Build with lettuce, tomato, red onion, garlic mayo. Final serving temperature: **62–65 °C / 144–149 °F** (juicy, deep-crusted).
+1. Mix mince, onion, mustard, ketchup, egg, oil, salt, and pepper. Shape into 4 burgers.
+2. Barbecue over direct heat 5–6 minutes each side until cooked through.
+3. Insert probe. **Pull at 72–74 °C (162–165 °F)** for ground meat.
+4. Serve with bun, lettuce, cheese, and sliced tomato.
+*Final temperature: 74–76 °C (165–169 °F).*
 
 ---
 
-### 4. Magnus Nilsson — Grillad Buffelburgare med Enbärsmajonnäs (Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015), pp. 362–364 — game-burger grill technique  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 4 min
+## Temperature summary
 
-**Ingredients**
-- 700 g coarsely-ground buffalo
-- 5 g (1 tsp) flaked sea salt
-- 2 g (½ tsp) freshly ground black pepper
-- 1 g (¼ tsp) ground kryddpeppar
-- 1 g (¼ tsp) freshly ground enbär (juniper berry)
-- 15 ml cold-pressed rapsolja for the grill
-- **Juniper mayonnaise**: 200 g majonnäs + 4 finely crushed juniper berries + zest of 1 lemon + 15 ml dry sherry
-- 4 brioche buns, toasted
-- **To serve**: salladsblad, picklad rödlök, sliced gravad rödbeta
-
-**Method**
-1. Form buffalo into 4 patties, 2 cm thick. Season with salt, pepper, allspice and juniper just before cooking. Dimple centre.
-2. Heat grill to direct medium-high (about 220 °C). Brush grates with oil.
-3. Lay patties on the hot grates. Insert MEATER probe horizontally into the largest patty.
-4. Grill 4 minutes. Flip; grill 3 minutes more.
-5. **Pull at 60–62 °C (140–144 °F)** for medium (Nilsson's standard for game-meat burgers).
-6. Rest 4 minutes. Build with juniper mayo, salladsblad, picklad rödlök, gravad rödbeta. Final serving temperature: **62–65 °C / 144–149 °F** (juniper-perfumed, beetroot-bright, deeply savoury).
-
----
+| Doneness | Pull temp | Notes |
+|----------|-----------|-------|
+| Medium (restaurant) | 63 °C (145 °F) | US/EU food safety minimum for ground meat is 70–74 °C |
+| Safe minimum | 70–72 °C (158–162 °F) | Food-safe for ground meat |
+| Well-done | 75–77 °C (167–171 °F) | Dry for lean bison |
