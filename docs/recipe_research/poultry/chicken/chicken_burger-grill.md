@@ -1,112 +1,150 @@
 # Chicken Burger × Grill — Recipe Temperature Research
 
+## Tree position
+
+| Field | Value |
+|-------|-------|
+| Category | `poultry` |
+| Cut type folder | `chicken/` |
+| Cut slug | `chicken_burger` |
+| Method slug | `grill` |
+| File | `chicken_burger-grill.md` |
+| Full path | `docs/recipe_research/poultry/chicken/chicken_burger-grill.md` |
+
 ## Cut profile
-A grilled chicken burger is a 150–180 g shaped patty made from coarsely-ground chicken thigh — the standard for moisture and flavour because chicken breast (1–4 % fat) dries out on the high heat of a grill before reaching the food-safety threshold for ground poultry. Ground thigh carries 12–18 % fat, plus the gelatinous connective tissue that holds patties together without binders and bastes the patty as it cooks. The cooking goal: drive the centre of the patty past 74 °C (165 °F) — the FDA/USDA threshold for ground poultry — while developing crisp, lacquered grill marks. Probe the geometric centre of the largest patty horizontally; carryover is small (1–2 °C) given the relatively thin patty, so pull no more than 1 °C below target.
+
+Grilled ground chicken burgers are formed patties cooked over direct flame or charcoal. Ground chicken is stickier and more delicate than beef, so chilling patties before grilling and generously oiling the grates prevents sticking and falling apart. Because ground poultry must reach a safe internal temperature throughout, grill temp and timing require careful attention.
+
+Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry
 
 ## Source recipes
 
-### 1. America's Test Kitchen — Grilled Chicken Burgers (American tradition)
-**Source**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011); cooksillustrated.com  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
+### 1. Skinnytaste — Grilled Turkey / Chicken Cheeseburger (Juicy Lucy)
+**Source**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/turkey-burgers/ (fetched 2025-07-15).
+**Serves**: 4 · **Prep**: 10 min + 30 min chill · **Cook**: 12 min · **Rest**: 3 min
+
+**Temperature guidance**:
+- Grill temp: medium heat
+- Internal target: 165 °F (74 °C)
+- Time: 6 min per side = 12 min total
 
 **Ingredients**
-- 700 g coarsely-ground chicken thigh (about 12 % fat)
-- 30 g (2 tbsp) Dijon mustard
-- 15 ml (1 tbsp) Worcestershire sauce
-- 30 g panko breadcrumbs
-- 5 g (1 tsp) kosher salt
-- 2 g (½ tsp) freshly ground black pepper
-- 2 spring onions, finely chopped
-- 15 ml (1 tbsp) neutral oil for the grill
-- 4 brioche burger buns, toasted
-- **To serve**: butter lettuce, sliced tomato, sliced red onion, mayonnaise, sriracha
+- 1 lb ground chicken (or turkey)
+- Kosher salt and black pepper to taste
+- 2 oz cheese (cheddar or provolone), cut into 4 small portions
+- 4 burger buns
+- Preferred toppings (lettuce, tomato, onion, condiments)
 
 **Method**
-1. Mix chicken, mustard, Worcestershire, panko, salt, pepper and spring onions gently in a bowl. Form into 4 patties, each 2 cm thick and slightly wider than the bun. Press a shallow dimple into the centre of each.
-2. Heat the grill to direct medium-high heat (about 220 °C / 425 °F at the grates). Brush the grates with oil.
-3. Lay patties on the hot grates. Insert the MEATER probe horizontally into the largest patty, parallel to the grate, with the tip at the geometric centre.
-4. Grill 4 minutes (lid down) until clear grill marks set. Flip; grill 4–5 minutes more (lid down).
-5. **Pull at 73–75 °C (163–167 °F).** ATK's standard for grilled chicken burgers — fully cooked, juice runs clear, carryover takes the centre to 74–76 °C in the rest.
-6. Rest 3 minutes loosely tented. Build with lettuce, tomato, red onion and condiments. Final serving temperature: **74–76 °C / 165–169 °F** (juicy through, lacquered crust).
+1. Divide ground chicken into 8 thin patties of equal size.
+2. Season both sides of each patty generously with salt and pepper.
+3. Place a small portion of cheese in the centre of 4 patties.
+4. Place a second patty on top of each and press edges firmly together to seal — cheese must be fully enclosed.
+5. Refrigerate stuffed patties 30 minutes to firm them up before grilling (prevents falling apart on grates).
+6. Preheat grill to medium heat. Oil grates generously.
+7. Place patties on grill. Do not press down with a spatula (squeezes out juices and cheese).
+8. Cook undisturbed for 6 minutes on the first side.
+9. Carefully flip once. Cook another 6 minutes.
+10. Use an instant-read thermometer — check the centre of the patty for 165 °F (74 °C).
+11. Rest 3 minutes off the grill before serving on buns with toppings.
 
 ---
 
-### 2. Tina Nordström — Grillad Kycklingburgare (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se — chicken-burger section  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
+### 2. Natasha's Kitchen — BBQ Chicken Thighs Technique (adapted for burgers)
+**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/juicy-barbecued-chicken-thighs-recipe/ (fetched 2025-07-15).
+**Serves**: 4 · **Prep**: 10 min · **Cook**: ~24–30 min · **Rest**: 5–10 min
+
+**Temperature guidance**:
+- Grill temp: preheat generously, reduce to low when food goes on
+- Internal target: juices run clear and centre is cooked through; use thermometer to confirm 165 °F (74 °C)
+- Time: 12–15 min per side on low heat
 
 **Ingredients**
-- 700 g kycklinglårfärs (ground chicken thigh)
-- 30 g (2 tbsp) senap (Swedish mustard)
-- 30 g panko or fine ströbröd
-- 1 small yellow onion, very finely grated
-- 5 g (1 tsp) salt
-- 2 g (½ tsp) white pepper
-- 1 g (¼ tsp) ground kryddpeppar (allspice)
-- 15 g chopped fresh dill
-- 15 ml (1 tbsp) cold-pressed rapsolja for the grill
-- 4 brioche buns, toasted
-- **To serve**: rödbetsmajonnäs (beetroot mayo), salladsblad, tomato, picklad rödlök, rårörda lingon
+- 1 lb ground chicken, formed into 4 patties
+- Sea salt and black pepper
+- Seasoning blend of choice (garlic powder, paprika, onion powder)
+- 1 tbsp mayonnaise (mixed into meat to add moisture)
+- BBQ sauce for basting
 
 **Method**
-1. Mix kycklinglårfärs, senap, panko, grated onion, salt, white pepper, allspice and dill gently. Form into 4 patties, 2 cm thick. Dimple the centre.
-2. Heat grill to direct medium-high (about 220 °C). Brush grates with oil.
-3. Lay patties on the hot grates. Insert MEATER probe horizontally into the largest patty.
-4. Grill 4 minutes (lid down). Flip; grill 4–5 minutes more.
-5. **Pull at 73–75 °C (163–167 °F).** Nordström's standard: fully cooked through, allspice-perfumed; carryover takes it to 74–76 °C.
-6. Rest 3 minutes. Build with the toppings. Final serving temperature: **74–76 °C / 165–169 °F** (allspice-perfumed, dill-flecked, lingon-bright).
+1. Combine ground chicken, mayonnaise, seasoning blend, salt, and pepper.
+2. Form into 4 patties about 1/2–3/4 inch thick. Chill 30 minutes.
+3. Oil grill grates thoroughly. Preheat to medium-high, then reduce to low before adding patties.
+4. Place patties on the cooler side of grate.
+5. Cook 12–15 minutes on first side without moving.
+6. Brush top with BBQ sauce, then flip.
+7. Brush the cooked side with additional BBQ sauce.
+8. Cook another 12–15 minutes on low until internal temp reaches 165 °F (74 °C).
+9. Rest 5–10 minutes before serving — residual heat continues cooking slightly.
 
 ---
 
-### 3. Yotam Ottolenghi — Spiced Chicken Burgers with Tahini & Pomegranate (Levantine tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014) and ottolenghi.co.uk — chicken-burger adaptation  
-**Serves**: 4 · **Prep**: 20 min · **Cook**: 9 min · **Rest**: 3 min
-
-**Ingredients**
-- 700 g coarsely-ground chicken thigh
-- 1 small onion, very finely grated
-- 4 garlic cloves, finely grated
-- 5 g (1 tsp) ground cumin + 5 g (1 tsp) ground coriander + 2 g (½ tsp) ground cinnamon + 2 g (½ tsp) sweet smoked paprika
-- 5 g (1 tsp) salt
-- 2 g (½ tsp) freshly ground black pepper
-- 30 g chopped fresh flat-leaf parsley
-- 30 g chopped fresh mint
-- 15 ml olive oil for the grill
-- 4 flatbreads, warmed on the grill
-- **To serve**: 100 g tahini sauce (60 g tahini + 30 ml lemon juice + 30 ml water + salt), seeds of 1 pomegranate, sliced cucumber, pickled chillies
-
-**Method**
-1. Mix chicken, onion, garlic, all spices, salt, pepper, parsley and mint gently. Form into 4 patties, 2 cm thick. Dimple the centre.
-2. Heat grill to direct medium-high (about 220 °C). Brush grates with oil.
-3. Lay patties on the hot grates. Insert MEATER probe horizontally into the largest patty.
-4. Grill 4 minutes. Flip; grill 4–5 minutes more.
-5. **Pull at 73–75 °C (163–167 °F).** Ottolenghi: fully cooked, deeply spiced, lacquered crust.
-6. Rest 3 minutes. Wrap in flatbreads with tahini, pomegranate seeds, cucumber and pickled chillies. Final serving temperature: **74–76 °C / 165–169 °F** (spice-rich, herb-fragrant, sweet-tart).
+### 3. TODO: add third source — grilled chicken burger specific URLs returned 404
 
 ---
 
-### 4. Diana Henry — Lemon & Sage Grilled Chicken Burgers (British modern tradition)
-**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015); telegraph.co.uk/food-and-drink  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
+## Temperature summary
 
-**Ingredients**
-- 700 g coarsely-ground chicken thigh
-- Zest of 2 lemons
-- 8 fresh sage leaves, finely chopped
-- 4 garlic cloves, finely grated
-- 30 g panko breadcrumbs
-- 5 g (1 tsp) flaked sea salt
-- 2 g (½ tsp) freshly ground black pepper
-- 30 ml extra-virgin olive oil for the grill
-- 4 ciabatta buns, toasted
-- **To serve**: rocket, sliced lemon-roasted tomato, mayonnaise, Parmesan curls
+| Source | Country | Method temp | Thickness/Weight | Time | Target internal |
+|--------|---------|-------------|-----------------|------|-----------------|
+| Skinnytaste | USA | Medium grill | ~1/2 in stuffed patty | 12 min total | 165 °F (74 °C) |
+| Natasha's Kitchen | USA | Low grill (after preheat) | ~1/2–3/4 in patty | 24–30 min total | 165 °F (74 °C) |
 
-**Method**
-1. Mix chicken, lemon zest, sage, garlic, panko, salt and pepper gently. Form into 4 patties, 2 cm thick. Dimple the centre.
-2. Heat grill to direct medium-high (about 220 °C). Brush grates with oil.
-3. Lay patties on the hot grates. Insert MEATER probe horizontally into the largest patty.
-4. Grill 4 minutes. Flip; grill 4–5 minutes more.
-5. **Pull at 73–75 °C (163–167 °F).** Henry: fully cooked, deeply herbal, with sharply lacquered grill marks.
-6. Rest 3 minutes. Build with rocket, tomato, mayo and Parmesan. Final serving temperature: **74–76 °C / 165–169 °F** (lemon-bright, sage-perfumed, juicy).
+**Recommended MEATER settings**:
+- Set alert at **160 °F (71 °C)** → pull and rest
+- Rest 5 minutes
 
 ---
+
+## Practical tips
+
+### Preventing ground chicken from sticking to grill grates
+- Ground chicken contains less fat than beef and will stick aggressively to poorly oiled grates.
+- Oil grates generously with a paper towel soaked in vegetable oil using long-handled tongs just before adding patties.
+- Do not attempt to flip a patty before 6 minutes — it will stick and tear. A ready patty releases itself from the grate when the crust has formed.
+
+### Chilling patties before grilling
+- Form patties, place on a plate, cover with plastic wrap, refrigerate 30 minutes minimum.
+- Cold patties hold together better during the first 2–3 minutes on the grate before the crust sets.
+- Do not freeze — frozen patties take too long to cook through and the exterior burns before the centre is safe.
+
+### Handling delicate ground chicken patties on the grill
+- Use a wide, thin metal spatula rather than tongs.
+- Flip once only — repeated flipping breaks apart ground chicken patties.
+- Do not press down — pressing squeezes out moisture and can cause the patty to crumble.
+
+### Safe internal temperature for grilled ground poultry
+- Unlike whole-muscle beef burgers that may be served medium-rare, ground poultry must always reach **165 °F (74 °C)** throughout.
+- Use an instant-read thermometer through the side of the patty to reach the geometric centre.
+- Visual cues (no pink, juices run clear) are secondary indicators — always confirm with thermometer.
+
+### Common mix-in flavour profiles
+| Style | Key additions to ground chicken |
+|-------|---------------------------------|
+| Classic diner | Salt, pepper, mayo (for moisture), cheddar |
+| Smoky BBQ | Smoked paprika, Worcestershire, BBQ sauce baste |
+| Mediterranean | Sun-dried tomato, feta, oregano |
+| Spicy | Jalapeño, chipotle powder, pepper jack stuffed |
+
+### Storage and reheating
+- Cooked grilled patties: refrigerate up to 3 days in an airtight container.
+- Reheat on a covered skillet over medium-low with 1 tbsp water, or in a 350 °F oven for 8–10 min.
+- Avoid microwaving — it makes ground chicken rubbery and unappealing.
+
+### MEATER note
+- Ground chicken patties on the grill are typically thin (1/2 inch) — difficult to probe reliably.
+- Use MEATER for thicker stuffed burgers (3/4 inch or more). Insert probe horizontally through the side into the geometric centre.
+- For standard thin patties, a quick-read thermometer is faster and more accurate.
+
+### MEATER probe guidance for burgers
+- Only suitable for patties 3/4 inch or thicker; insert through the side to reach the geometric centre.
+- For thinner patties (1/2 inch or less) use an instant-read thermometer instead.
+- Target: **160 °F (71 °C)** pull temperature — rest 3–5 min for carryover to 165 °F.
+
+### Scaling and batch grilling
+- For 8+ patties, use a two-zone setup: sear over direct heat, finish over indirect heat.
+- Keep finished patties warm on the indirect side, tent loosely with foil.
+- Do not stack cooked patties — stacking creates steam that softens the exterior.
+
+> **Summary**: Oil grates; medium heat; 6 min per side (12 min total); flip once only.
+> Centre must reach 165 °F (74 °C). Rest 3–5 min before serving.

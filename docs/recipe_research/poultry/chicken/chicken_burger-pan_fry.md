@@ -1,108 +1,152 @@
 # Chicken Burger × Pan Fry — Recipe Temperature Research
 
+## Tree position
+
+| Field | Value |
+|-------|-------|
+| Category | `poultry` |
+| Cut type folder | `chicken/` |
+| Cut slug | `chicken_burger` |
+| Method slug | `pan_fry` |
+| File | `chicken_burger-pan_fry.md` |
+| Full path | `docs/recipe_research/poultry/chicken/chicken_burger-pan_fry.md` |
+
 ## Cut profile
-A pan-fried chicken burger is the same 150–180 g shaped patty as the grilled version, cooked in a heavy pan over medium-high heat with a film of oil and butter. The key difference from grilling is the all-over surface contact with the pan, which gives a more even crust than the linear marks of a grate but does not benefit from the smoke flavour of fire. Ground thigh (12–18 % fat) is the standard. The cooking goal is identical: drive the centre past 74 °C while developing a deep, even Maillard surface. Probe the geometric centre of the largest patty horizontally; carryover is small (1–2 °C) given the relatively thin patty.
+
+Ground chicken pan-fried burgers cook on the stovetop in a skillet. Ground chicken is leaner and stickier than beef, so binders like egg and panko breadcrumbs (panade method) are essential to hold the patty together and retain moisture during cooking. Chilling formed patties for 30 minutes before cooking prevents them from falling apart in the pan.
+
+Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry
 
 ## Source recipes
 
-### 1. America's Test Kitchen — Pan-Seared Chicken Burgers (American tradition)
-**Source**: America's Test Kitchen, *Cook's Illustrated Cookbook* (America's Test Kitchen, 2011) (the pan-sear variant of their grilled chicken-burger technique); cooksillustrated.com  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
+### 1. Jessica Gavin — Turkey Burgers (adapted for ground chicken pan-fry)
+**Source**: Jessica Gavin, jessicagavin.com; https://www.jessicagavin.com/turkey-burgers/ (fetched 2025-07-15).
+**Serves**: 4 · **Prep**: 15 min + 30 min chill · **Cook**: 10–12 min · **Rest**: 3 min
+
+**Temperature guidance**:
+- Pan heat: medium
+- Internal target: 160–165 °F (71–74 °C)
+- Time: ~5 min per side for 1/2-inch thick patties
 
 **Ingredients**
-- 700 g coarsely-ground chicken thigh (about 12 % fat)
-- 30 g (2 tbsp) Dijon mustard
-- 15 ml (1 tbsp) Worcestershire sauce
-- 30 g panko breadcrumbs
-- 5 g (1 tsp) kosher salt
-- 2 g (½ tsp) freshly ground black pepper
-- 2 spring onions, finely chopped
-- 30 ml (2 tbsp) sunflower oil + 15 g unsalted butter
-- 4 brioche burger buns, toasted
-- **To serve**: butter lettuce, sliced tomato, red onion, mayonnaise, sriracha
+- 1 lb ground chicken (85–93% lean)
+- 1 large egg
+- 3 tbsp panko breadcrumbs
+- 1 tsp soy sauce (adds umami and moisture)
+- 1/2 tsp smoked paprika
+- 2 cloves garlic, minced
+- 1/2 tsp onion powder
+- 1/2 tsp kosher salt
+- 1/4 tsp black pepper
+- 1 tbsp fresh parsley, chopped (optional)
+- 1 tbsp neutral oil (canola or vegetable) for frying
 
 **Method**
-1. Mix chicken, mustard, Worcestershire, panko, salt, pepper and spring onions gently. Form into 4 patties, 2 cm thick, slightly wider than the bun. Dimple the centre.
-2. Heat oil and butter in a heavy stainless or cast-iron pan over medium-high heat until shimmering.
-3. Lay patties in the pan well spaced. Insert the MEATER probe horizontally into the largest patty.
-4. Cook 4 minutes undisturbed until a deep crust forms. Flip; cook 4–5 minutes more.
-5. **Pull at 73–75 °C (163–167 °F).** ATK's standard for pan-seared chicken burgers — fully cooked, juice runs clear; carryover takes the centre to 74–76 °C.
-6. Rest 3 minutes loosely tented. Build with lettuce, tomato, red onion and condiments. Final serving temperature: **74–76 °C / 165–169 °F** (juicy, deep-crusted).
+1. Combine ground chicken, egg, panko breadcrumbs, soy sauce, smoked paprika, garlic, onion powder, salt, pepper, and parsley in a bowl.
+2. Mix gently until just combined — overworking makes patties dense and tough.
+3. Divide mixture into 4 equal portions. Wet hands slightly to prevent sticking.
+4. Form each portion into a patty about 4 inches wide and 1/2 inch thick. Press the centre slightly thinner than the edges to compensate for the puffing that occurs during cooking.
+5. Place patties on a plate, cover with plastic wrap, and refrigerate 30 minutes to firm up.
+6. Heat a cast-iron or non-stick skillet over medium heat. Add oil and heat until shimmering.
+7. Add patties — do not overcrowd the pan. Cook in batches if needed.
+8. Cook undisturbed 5 minutes on the first side until a golden-brown crust forms.
+9. Carefully flip once. Cook another 5 minutes.
+10. Check internal temperature at the centre: target 160–165 °F (71–74 °C).
+11. Rest 3 minutes before serving on buns.
 
 ---
 
-### 2. Hugh Acheson — Pan-Fried Chicken Burgers with Pickled Onions (American Southern tradition)
-**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011); hughacheson.com  
-**Serves**: 4 · **Prep**: 15 min (+ 30 min pickle) · **Cook**: 9 min · **Rest**: 3 min
+### 2. Natasha's Kitchen — Chicken Meatballs (ground chicken pan technique reference)
+**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/chicken-meatballs/ (fetched 2025-07-15).
+**Serves**: 4–6 · **Prep**: 20 min · **Cook**: 7 min · **Rest**: 2 min
+
+**Temperature guidance**:
+- Pan heat: medium
+- Internal target: fully cooked through, no pink — 165 °F (74 °C)
+- Time: 4 min first side + 3 min covered after flip
 
 **Ingredients**
-- 700 g coarsely-ground chicken thigh
-- 1 small onion, very finely grated
-- 4 garlic cloves, finely grated
-- 8 fresh sage leaves, finely chopped
-- 30 g panko breadcrumbs
-- 5 g (1 tsp) salt; 2 g (½ tsp) freshly ground black pepper
-- 30 ml peanut oil + 15 g unsalted butter
-- 4 brioche buns, toasted
-- **Quick pickled onions**: 1 small red onion (thinly sliced), 60 ml cider vinegar, 60 ml water, 15 g sugar, 5 g salt — combine and let sit 30 minutes
-- **To serve**: butter lettuce, garlic mayo, hot sauce
+- 1–1.25 lb ground chicken (thigh meat recommended for moisture)
+- 1 cup cooked white rice, cooled (acts as binder and moisture-retainer)
+- 1 large egg
+- 1 small onion, grated
+- 1 garlic clove, pressed
+- 1/2 tsp kosher salt
+- 1/4 tsp black pepper
+- 2 tbsp neutral oil for frying
 
 **Method**
-1. Mix chicken, grated onion, garlic, sage, panko, salt and pepper gently. Form into 4 patties, 2 cm thick. Dimple the centre.
-2. Heat oil and butter in a heavy pan over medium-high heat until shimmering.
-3. Lay patties in the pan well spaced. Insert MEATER probe horizontally into the largest patty.
-4. Cook 4 minutes undisturbed. Flip; cook 4–5 minutes more.
-5. **Pull at 73–75 °C (163–167 °F).** Acheson's standard: fully cooked through, deeply browned both sides.
-6. Rest 3 minutes loosely tented. Build with lettuce, mayo, pickled onions and hot sauce. Final serving temperature: **74–76 °C / 165–169 °F** (sage-perfumed, vinegar-bright, juicy).
+1. Combine ground chicken, cooled cooked rice, egg, grated onion, pressed garlic, salt, and pepper.
+2. Mix gently. Do not overwork.
+3. For pan-fry burgers: form into patties 1/2 inch thick or into 1.25-inch meatballs.
+4. Heat oil in a large skillet over medium heat.
+5. Add patties or balls, leaving space between each.
+6. Cook first side undisturbed for 4 minutes until golden brown.
+7. Flip with tongs or a thin spatula. Cover pan with a lid.
+8. Cook covered 3 more minutes — the trapped steam finishes the interior without drying the outside.
+9. Check that internal temperature reads 165 °F (74 °C) and there is no pink inside.
+10. Rest 2 minutes before serving.
 
 ---
 
-### 3. Tina Nordström — Pannstekt Kycklingburgare (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009); köket.se  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
-
-**Ingredients**
-- 700 g kycklinglårfärs (ground chicken thigh)
-- 30 g (2 tbsp) senap
-- 30 g panko or fine ströbröd
-- 1 small yellow onion, very finely grated
-- 5 g (1 tsp) salt; 2 g (½ tsp) white pepper; 1 g (¼ tsp) ground kryddpeppar
-- 15 g chopped fresh dill
-- 30 g smör (butter) + 15 ml rapsolja (rapeseed oil)
-- 4 brioche buns, toasted
-- **To serve**: rödbetsmajonnäs, salladsblad, tomato, picklad rödlök, rårörda lingon
-
-**Method**
-1. Mix kycklinglårfärs, senap, panko, onion, salt, white pepper, allspice and dill gently. Form 4 patties, 2 cm thick. Dimple centre.
-2. Heat butter and oil in a heavy pan over medium-high heat until the butter foam subsides.
-3. Lay patties well spaced. Insert MEATER probe horizontally into the largest patty.
-4. Cook 4 minutes undisturbed. Flip; cook 4–5 minutes more.
-5. **Pull at 73–75 °C (163–167 °F).** Nordström: fully cooked through, allspice-perfumed.
-6. Rest 3 minutes. Build with toppings. Final serving temperature: **74–76 °C / 165–169 °F** (allspice-perfumed, dill-flecked, lingon-bright).
+### 3. TODO: add third source — jessicagavin.com/chicken-burgers/ returned 404
 
 ---
 
-### 4. Yotam Ottolenghi — Spiced Chicken Burgers in the Pan with Tahini (Levantine tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014); ottolenghi.co.uk  
-**Serves**: 4 · **Prep**: 20 min · **Cook**: 9 min · **Rest**: 3 min
+## Temperature summary
 
-**Ingredients**
-- 700 g coarsely-ground chicken thigh
-- 1 small onion, very finely grated
-- 4 garlic cloves, finely grated
-- 5 g (1 tsp) ground cumin + 5 g (1 tsp) ground coriander + 2 g (½ tsp) ground cinnamon + 2 g (½ tsp) sweet smoked paprika
-- 5 g (1 tsp) salt; 2 g (½ tsp) black pepper
-- 30 g chopped fresh parsley + 30 g chopped fresh mint
-- 30 ml olive oil
-- 4 flatbreads, warmed
-- **To serve**: 100 g tahini sauce, seeds of 1 pomegranate, sliced cucumber, pickled chillies
+| Source | Country | Method temp | Thickness/Weight | Time | Target internal |
+|--------|---------|-------------|-----------------|------|-----------------|
+| Jessica Gavin | USA | Medium skillet | 1/2-in patty, ~4 oz | 10–12 min total | 160–165 °F (71–74 °C) |
+| Natasha's Kitchen | USA | Medium skillet (covered flip) | 1/2-in patty / 1.25-in ball | 7 min total | 165 °F (74 °C) |
 
-**Method**
-1. Mix chicken, onion, garlic, all spices, salt, pepper, parsley and mint gently. Form 4 patties, 2 cm thick. Dimple centre.
-2. Heat olive oil in a heavy pan over medium-high heat until shimmering.
-3. Lay patties well spaced. Insert MEATER probe horizontally into the largest patty.
-4. Cook 4 minutes. Flip; cook 4–5 minutes more.
-5. **Pull at 73–75 °C (163–167 °F).** Ottolenghi: fully cooked, deeply spiced, deep-crusted.
-6. Rest 3 minutes. Wrap in flatbreads with tahini, pomegranate seeds, cucumber and pickled chillies. Final serving temperature: **74–76 °C / 165–169 °F** (spice-rich, herb-fragrant, sweet-tart).
+**Recommended MEATER settings**:
+- Set alert at **160 °F (71 °C)** → pull and rest
+- Rest 3–5 minutes
 
 ---
+
+## Practical tips
+
+### Covered-flip technique
+- Covering the pan after flipping traps steam, which gently cooks the interior by convection while the direct pan contact continues browning the bottom.
+- This is particularly useful for thick patties or meatballs where the inside needs more time than the crust.
+- Remove the lid for the last minute if there is excess moisture and you want a drier exterior.
+
+### Managing ground chicken stickiness
+- Ground chicken is stickier than beef. Wet hands while forming patties help significantly.
+- A light coating of cooking spray on the spatula prevents the patty from sticking to it when flipping.
+- If the patty sticks to the pan during the first side, it is not ready to flip — wait 30–60 seconds more.
+
+### Flavour additions for ground chicken patties
+- Soy sauce: adds salt and umami and helps browning (Maillard reaction)
+- Grated onion: releases moisture as it cooks, keeping the patty juicy
+- Fresh herbs (parsley, basil, cilantro): add brightness without changing cooking properties
+- Worcestershire sauce: 1 tsp adds savoury depth
+
+### Health notes
+- 93% lean ground chicken patties have significantly less fat than 80/20 beef patties.
+- The lower fat content means they dry out faster — binders and moisture-adding ingredients are more important here than with beef.
+
+### Serving and topping ideas
+| Style | Toppings |
+|-------|---------|
+| Classic | Lettuce, tomato, onion, mayo, American cheese |
+| Gourmet | Arugula, avocado, sriracha aioli, Swiss cheese |
+| Asian | Pickled daikon, slaw, hoisin-mayo, fried egg |
+| Mediterranean | Tzatziki, roasted red pepper, feta, cucumber |
+
+### Storage
+- Cooked patties: refrigerate up to 3 days, airtight.
+- Freeze raw patties (parchment between layers) up to 2 months.
+- Reheat in non-stick pan over medium-low with lid for 4–5 min per side, or 350 °F oven for 10–12 min.
+
+### MEATER probe guidance for burgers
+- Only suitable for patties 3/4 inch or thicker; insert through the side to reach the geometric centre.
+- For thinner patties (1/2 inch or less) use an instant-read thermometer instead.
+- Target: **160 °F (71 °C)** pull temperature — rest 3–5 min for carryover to 165 °F.
+
+### Scaling and batch pan-frying
+- 4-6 patties at a time is the practical limit for a 12-inch skillet.
+- Crowding the pan drops the pan temperature and causes steaming rather than searing.
+- Hold finished batches in a 200 °F oven on a wire rack while cooking remaining patties.

@@ -1,108 +1,151 @@
 # Chicken Burger × Air Fryer — Recipe Temperature Research
 
+## Tree position
+
+| Field | Value |
+|-------|-------|
+| Category | `poultry` |
+| Cut type folder | `chicken/` |
+| Cut slug | `chicken_burger` |
+| Method slug | `air_fryer` |
+| File | `chicken_burger-air_fryer.md` |
+| Full path | `docs/recipe_research/poultry/chicken/chicken_burger-air_fryer.md` |
+
 ## Cut profile
-An air-fried chicken burger is the same 150–180 g ground-thigh patty as the grill or pan-sear preparation, cooked in the convection-fan environment of an air fryer (a small countertop convection oven). The high air velocity at 190–200 °C produces an even Maillard crust on both faces simultaneously, and the cook is faster than a conventional oven (8–10 minutes vs 14–18). The patty must be at least 150 g and 2 cm thick to avoid drying out at the edges before the centre reaches 74 °C. Probe the geometric centre of the largest patty; carryover is small (1–2 °C) given the rapid surface cooling once removed.
+
+Ground chicken burgers are formed patties made from minced chicken, typically 85–93% lean. Because ground poultry must be cooked to a higher internal temperature than whole muscle, and because the meat is lean and prone to drying out, adding binders (egg, breadcrumbs, or cooked rice) helps retain moisture. The air fryer circulates hot air to brown the exterior without deep frying.
+
+Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry
 
 ## Source recipes
 
-### 1. America's Test Kitchen — Air-Fryer Chicken Burgers (American tradition)
-**Source**: America's Test Kitchen, *The Air Fryer Bible* (America's Test Kitchen, 2019); cooksillustrated.com  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 3 min
+### 1. Skinnytaste — Juicy Lucy Style Turkey / Chicken Burger
+**Source**: Gina Homolka, Skinnytaste; https://www.skinnytaste.com/turkey-burgers/ (fetched 2025-07-15).
+**Serves**: 4 · **Prep**: 10 min · **Cook**: 12 min · **Rest**: 3 min
+
+**Temperature guidance**:
+- Air fryer temp: 375–400 °F (191–204 °C)
+- Internal target: 165 °F (74 °C)
+- Time: ~6 min per side (12 min total) for stuffed patties; thinner plain patties may finish in 8–10 min
 
 **Ingredients**
-- 700 g coarsely-ground chicken thigh (about 12 % fat)
-- 30 g (2 tbsp) Dijon mustard
-- 15 ml (1 tbsp) Worcestershire sauce
-- 30 g panko breadcrumbs
-- 5 g (1 tsp) kosher salt
-- 2 g (½ tsp) freshly ground black pepper
-- 2 spring onions, finely chopped
-- 15 ml olive oil spray for the basket
-- 4 brioche burger buns, toasted
-- **To serve**: butter lettuce, sliced tomato, red onion, mayonnaise, sriracha
+- 1 lb ground chicken (or turkey)
+- Kosher salt and black pepper to taste
+- 2 oz cheese of choice (cheddar, provolone, or pepper jack), divided into 4 portions
 
 **Method**
-1. Mix chicken, mustard, Worcestershire, panko, salt, pepper and spring onions gently. Form into 4 patties, 2 cm thick. Dimple the centre.
-2. Preheat air fryer to 195 °C (385 °F) for 3 minutes. Spray basket lightly.
-3. Place 2 patties in the basket, well spaced. Insert MEATER probe horizontally into the largest patty.
-4. Cook 5 minutes; flip; cook 4–5 minutes more.
-5. **Pull at 73–75 °C (163–167 °F).** ATK's standard for air-fried chicken burgers — fully cooked, juice runs clear; carryover takes the centre to 74–76 °C.
-6. Repeat with second batch. Rest 3 minutes loosely tented. Build with lettuce, tomato, red onion and condiments. Final serving temperature: **74–76 °C / 165–169 °F** (juicy, deep-crusted).
+1. Divide ground chicken into 8 equal thin patties (about 1/4 inch thick each).
+2. Season both sides with salt and pepper.
+3. Place a portion of cheese in the centre of 4 patties.
+4. Top each with a second patty, pressing edges firmly to seal (Juicy Lucy style) — make sure cheese is fully enclosed.
+5. Preheat air fryer to 375–400 °F (191–204 °C) for 3 minutes.
+6. Lightly spray basket with cooking spray.
+7. Place patties in basket in a single layer without touching.
+8. Cook 6 minutes on first side, then carefully flip.
+9. Cook 6 more minutes until internal temperature at the centre reads 165 °F (74 °C).
+10. Rest 3 minutes before serving to allow melted cheese to settle.
+11. Serve on buns with preferred toppings.
 
 ---
 
-### 2. Hugh Acheson — Air-Fryer Chicken Burgers with Sage & Lemon (American Southern tradition)
-**Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011) — air-fryer adaptation in his subsequent slow-cooker book and online recipes; hughacheson.com  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 3 min
+### 2. Natasha's Kitchen — Chicken Meatballs (ground chicken method reference)
+**Source**: Natasha Kravchuk, Natasha's Kitchen; https://natashaskitchen.com/chicken-meatballs/ (fetched 2025-07-15).
+**Serves**: 4–6 · **Prep**: 20 min · **Cook**: 7 min · **Rest**: 2 min
+
+**Temperature guidance**:
+- Pan sauté reference: medium heat, 4 min first side + 3 min covered after flip
+- Internal target: fully cooked through, no pink — 165 °F (74 °C)
+- Air fryer adaptation: 375 °F (191 °C) for 12–15 min, shaking halfway
 
 **Ingredients**
-- 700 g coarsely-ground chicken thigh
-- 1 small onion, very finely grated
-- 4 garlic cloves, finely grated
-- 8 fresh sage leaves, finely chopped
-- Zest of 1 lemon
-- 30 g panko breadcrumbs
-- 5 g (1 tsp) salt; 2 g (½ tsp) freshly ground black pepper
-- 15 ml olive oil spray for the basket
-- 4 brioche buns, toasted
-- **To serve**: butter lettuce, garlic mayo, sliced lemon-roasted tomato, hot sauce
+- 1–1.25 lb ground chicken (thigh meat preferred for moisture)
+- 1 cup cooked white rice, cooled
+- 1 large egg
+- 1 small onion, grated on box grater
+- 1 garlic clove, pressed
+- 1/2 tsp kosher salt
+- 1/4 tsp black pepper
+- 1/2 cup all-purpose flour (for dredging, if pan-frying)
 
-**Method**
-1. Mix chicken, onion, garlic, sage, lemon zest, panko, salt and pepper gently. Form 4 patties, 2 cm thick. Dimple centre.
-2. Preheat air fryer to 195 °C (385 °F). Spray basket lightly.
-3. Place 2 patties; insert MEATER probe horizontally into the largest.
-4. Cook 5 minutes; flip; cook 4–5 minutes more.
-5. **Pull at 73–75 °C (163–167 °F).** Acheson's standard: fully cooked through, deeply browned.
-6. Repeat with second batch. Rest 3 minutes. Build with lettuce, mayo, tomato, hot sauce. Final serving temperature: **74–76 °C / 165–169 °F** (sage-perfumed, lemon-bright, juicy).
+**Method (pan — reference for air fryer adaptation)**
+1. Combine ground chicken, cooled cooked rice, egg, grated onion, garlic, salt, and pepper in a bowl.
+2. Mix gently until just combined — do not overwork or patties become tough.
+3. Form mixture into 1–1.25 inch balls or 1/2-inch thick patties about 3 inches wide.
+4. For air fryer: preheat to 375 °F (191 °C). Lightly spray basket.
+5. Cook 6–8 min per side, flipping once at halfway, until internal temp is 165 °F (74 °C).
+6. The rice acts as a binder and adds moisture, preventing the lean ground chicken from drying out.
+7. Rest 2 minutes before serving.
 
 ---
 
-### 3. Tina Nordström — Kycklingburgare i Airfryer (Swedish tradition)
-**Source**: Tina Nordström, *Tina lagar svenskt* (Bonniers Förlag, 2009) — air-fryer adaptation on köket.se  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 3 min
-
-**Ingredients**
-- 700 g kycklinglårfärs
-- 30 g (2 tbsp) senap
-- 30 g panko or fine ströbröd
-- 1 small yellow onion, very finely grated
-- 5 g (1 tsp) salt; 2 g (½ tsp) white pepper; 1 g (¼ tsp) ground kryddpeppar
-- 15 g chopped fresh dill
-- 15 ml rapsolja spray for the basket
-- 4 brioche buns, toasted
-- **To serve**: rödbetsmajonnäs, salladsblad, tomato, picklad rödlök, rårörda lingon
-
-**Method**
-1. Mix kycklinglårfärs, senap, panko, onion, salt, white pepper, allspice and dill gently. Form 4 patties, 2 cm thick. Dimple centre.
-2. Preheat air fryer to 195 °C (385 °F). Spray basket lightly.
-3. Place 2 patties; insert MEATER probe horizontally into the largest.
-4. Cook 5 minutes; flip; cook 4–5 minutes more.
-5. **Pull at 73–75 °C (163–167 °F).** Nordström's standard: fully cooked through, allspice-perfumed.
-6. Repeat with second batch. Rest 3 minutes. Build with toppings. Final serving temperature: **74–76 °C / 165–169 °F** (allspice-perfumed, dill-flecked, lingon-bright).
+### 3. TODO: add third source — skinnytaste.com/air-fryer-chicken-burgers/ and natashaskitchen.com/chicken-burger-recipe/ both returned 404
 
 ---
 
-### 4. Diana Henry — Air-Fryer Chicken Burgers with Tarragon & Lemon (British modern tradition)
-**Source**: Diana Henry, *A Bird in the Hand* (Mitchell Beazley, 2015); telegraph.co.uk/food-and-drink — air-fryer adaptation  
-**Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min · **Rest**: 3 min
+## Temperature summary
 
-**Ingredients**
-- 700 g coarsely-ground chicken thigh
-- Zest of 2 lemons
-- 30 g chopped fresh tarragon
-- 4 garlic cloves, finely grated
-- 30 g panko breadcrumbs
-- 5 g (1 tsp) flaked sea salt; 2 g (½ tsp) freshly ground black pepper
-- 30 ml olive oil spray for the basket
-- 4 ciabatta buns, toasted
-- **To serve**: rocket, sliced lemon-roasted tomato, mayonnaise, Parmesan curls
+| Source | Country | Method temp | Thickness/Weight | Time | Target internal |
+|--------|---------|-------------|-----------------|------|-----------------|
+| Skinnytaste | USA | 375–400 °F (191–204 °C) | Stuffed patty (~3/4 in) | 12 min total | 165 °F (74 °C) |
+| Natasha's Kitchen | USA | 375 °F (191 °C) adaptation | ~1/2 in patty / 1.25 in ball | 12–15 min | 165 °F (74 °C) |
 
-**Method**
-1. Mix chicken, lemon zest, tarragon, garlic, panko, salt and pepper gently. Form 4 patties, 2 cm thick. Dimple centre.
-2. Preheat air fryer to 195 °C (385 °F). Spray basket lightly.
-3. Place 2 patties; insert MEATER probe horizontally into the largest.
-4. Cook 5 minutes; flip; cook 4–5 minutes more.
-5. **Pull at 73–75 °C (163–167 °F).** Henry: fully cooked, deeply herbal, with a lacquered crust.
-6. Repeat with second batch. Rest 3 minutes. Build with rocket, tomato, mayo and Parmesan. Final serving temperature: **74–76 °C / 165–169 °F** (lemon-bright, tarragon-perfumed, juicy).
+**Recommended MEATER settings**:
+- Set alert at **160 °F (71 °C)** → pull and rest
+- Rest 3–5 minutes
 
 ---
+
+## Practical tips
+
+### Keeping ground chicken burgers intact in the air fryer
+- Ground chicken is very wet and loose — always chill patties at least 30 minutes before air frying.
+- If patties are sticking to the basket, lightly spray with cooking spray before placing.
+- Do not use parchment rounds with holes larger than the patty — small patties can droop.
+
+### Moisture management
+- Ground chicken thighs (darker meat) produce juicier burgers than breast-only ground chicken.
+- Adding 1 tbsp grated onion or 1 tsp mayonnaise directly to the mixture adds fat and moisture without changing flavour significantly.
+- Panko breadcrumbs absorb excess moisture during mixing, helping the patty hold its shape.
+
+### Internal temperature in air-fried burgers
+- Because ground poultry is mixed throughout (bacteria distributed), the centre must reach 165 °F (74 °C) — not just the surface.
+- Probe the exact centre of the thickest part of the patty for an accurate reading.
+- With stuffed Juicy Lucy patties, the cheese pocket in the centre can be hot liquid — let it cool 2–3 minutes before biting.
+
+### Flavour variations
+- Buffalo: brush with hot sauce + butter after cooking
+- Mediterranean: add 1 tsp oregano + 1/4 cup crumbled feta to mixture
+- Asian: replace soy sauce with ginger + sesame oil in mixture
+
+### Seasoning and topping ideas
+| Style | Mix-ins / Toppings |
+|-------|--------------------|
+| Classic | Salt, pepper; lettuce, tomato, cheddar, mayo |
+| Juicy Lucy | Provolone or blue cheese stuffed inside |
+| Greek | Feta + spinach stuffed; tzatziki topping |
+| Tex-Mex | Jalapeño + pepper jack stuffed; guacamole topping |
+| Asian | Ginger + sesame oil in mix; hoisin + slaw topping |
+
+### Storage
+- Cooked patties refrigerate up to 3 days.
+- Reheat in air fryer at 350 °F for 3–4 min to restore texture — avoid microwave which makes ground chicken rubbery.
+- Raw formed patties freeze well for up to 2 months; cook from frozen at 375 °F adding 5–6 extra minutes.
+
+### MEATER note
+- Ground chicken patties are thin and the probe can be difficult to position centrally.
+- Use an instant-read thermometer rather than the MEATER probe for patties under 1 inch thick.
+- For stuffed Juicy Lucy patties (thicker), a MEATER probe inserted through the side can work — target centre cheese pocket area at 165 °F (74 °C).
+
+### MEATER probe guidance for burgers
+- Only suitable for patties 3/4 inch or thicker; insert through the side to reach the geometric centre.
+- For thinner patties (1/2 inch or less) use an instant-read thermometer instead.
+- Target: **160 °F (71 °C)** pull temperature — rest 3–5 min for carryover to 165 °F.
+
+### Serving temperature and food safety
+- Serve immediately after resting — ground poultry patties held below 140 °F for more than 2 hours enter the danger zone.
+- For buffet / party service: keep warm in a 200 °F oven on a wire rack.
+
+> **Summary**: Air fry ground chicken patties at 375–400 °F; 12 min total (flip at 6 min).
+> Always confirm centre reaches 165 °F (74 °C) with instant-read thermometer.
+
+**Quick reference**: 375–400 °F, 12 min total, flip at 6 min. Chill patties 30 min before cooking. Centre must read 165 °F (74 °C).
