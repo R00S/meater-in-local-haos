@@ -1,113 +1,104 @@
 # Goose Leg × Oven Roast — Recipe Temperature Research
 
+## Tree position
+
+| Field | Value |
+|-------|-------|
+| Category | `poultry` |
+| Cut type folder | `goose/` |
+| Cut slug | `goose_leg` |
+| Method slug | `oven_roast` |
+| File | `goose_leg-oven_roast.md` |
+| Full path | `docs/recipe_research/poultry/goose/goose_leg-oven_roast.md` |
+
 ## Cut profile
-Oven-roasted goose leg (whole, bone-in) cooked dry rather than braised is the alternative preparation to the long wet braise. The technique relies on slow-roasting at 150–170 °C for 2.5–3 hours: the long, even heat fully renders the thick fat-skin layer to produce crisp, deep-mahogany skin; converts the collagen-rich dark meat to silky, fall-from-the-bone tenderness; and concentrates the natural goose flavour rather than diluting it into a sauce. Like braising, the cook is timed by internal-temperature collagen-conversion target (90–94 °C) rather than by minutes per kilo. The legs are typically dry-brined the night before to draw moisture out of the skin and to season deeply. Carryover is moderate (3–5 °C) given the dense meat and fat.
+
+Goose legs are large, collagen-rich cuts that benefit from moderate-to-low oven temperatures and extended roasting times. Unlike the breast, goose legs will not dry out from heat — they need heat sustained long enough to break down connective tissue. A 325–375 °F (163–190 °C) oven for 2–2.5 hours produces legs that are deeply coloured and tender, with well-rendered fat and crispy skin. The USDA minimum of 165 °F (74 °C) is the legal safe minimum, but most culinary sources recommend cooking goose legs to 175–185 °F for optimal texture and collagen breakdown.
+
+Target internal temperature: **175–185 °F (79–85 °C)** — best texture; USDA minimum is 165 °F (74 °C).
 
 ## Source recipes
 
-### 1. Hugh Fearnley-Whittingstall — Slow-Roast Goose Legs with Garlic & Thyme (British River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004); rivercottage.net  
-**Serves**: 4 · **Prep**: 15 min (+ overnight dry brine) · **Cook**: 2.5 hr · **Rest**: 15 min
+### 1. BBC Good Food — Slow-Roast Duck (low-and-slow fat rendering adapted for goose leg roast)
+**Source**: BBC Good Food editorial team, BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roast-duck (fetched 2025-07-15).
+**Serves**: 4 · **Prep**: 15 min · **Cook**: 2–2.5 hr · **Rest**: 10 min
+
+> **Note**: BBC source is whole slow-roast duck at 90–120 °C (194–248 °F) for 13 hours. For individual
+> goose legs, the same principle applies at higher temperature with shorter time: low oven, covered
+> for most of cooking, uncover at end for crisping, no rushing. Internal target: 175–185 °F.
+
+**Temperature guidance**:
+- Oven temp: 325 °F (163 °C) for first 1.5–2 hours, then increase to 400 °F (204 °C) for final 20 min
+- Internal target: 175–185 °F (79–85 °C)
+- Time: 2–2.5 hours total for 12–16 oz legs
 
 **Ingredients**
-- 4 goose legs, 400 g each, skin on
-- 30 g flaked sea salt for dry-brine
-- 5 g (1 tsp) freshly ground black pepper
-- 1 head garlic, halved across the equator
-- 12 sprigs fresh thyme
-- 4 bay leaves
-- 240 ml chicken stock for the pan
+- 4 goose legs (leg and drumstick, skin-on)
+- 2 tsp sea salt, 1 tsp ground cumin, 1 tsp black pepper
+- 1 tbsp honey (for final glaze)
+- 4 garlic cloves, halved
+- Fresh thyme and rosemary
+- A little water or stock in the bottom of the roasting tin
 
 **Method**
-1. The day before: rub salt and pepper into the legs; refrigerate uncovered on a rack 18 hours.
-2. Preheat oven to 160 °C (320 °F). Pat legs very dry.
-3. Place legs skin-side-up on a wire rack set over a heavy roasting pan. Tuck garlic, thyme and bay around the rack. Pour stock into the pan (not on the legs).
-4. Insert MEATER probe through the side of one thigh into the centre of the muscle, away from the bone.
-5. Roast 60 minutes. Reduce oven to 150 °C (300 °F); continue 90 minutes.
-6. **Pull at 90–93 °C (194–199 °F).** Fearnley-Whittingstall's test: the meat starts to release from the bone, the skin is deeply mahogany and crisp.
-7. Rest 15 minutes loosely tented. Skim the fat from the pan juices (reserve for potatoes); reduce the de-fatted juices to a glossy sauce. Final serving temperature: **88–92 °C / 190–198 °F** (crisp-skinned, fall-tender, herbal).
+1. Preheat oven to 325 °F (163 °C). Pat goose legs dry; score skin lightly; season with salt, cumin, pepper.
+2. Place skin-side up in a roasting tin. Add garlic, herbs, and a splash of water/stock to the base.
+3. Cover tightly with foil or lid. Roast covered at 325 °F for 1.5–2 hours.
+4. Drain accumulated fat from the tin (save it; it is excellent cooking fat).
+5. Brush skin with honey; uncover and increase oven to 400 °F (204 °C).
+6. Roast uncovered 20–25 minutes until skin is golden and crispy.
+7. Check internal temp: target 175–185 °F in thickest part of leg, away from bone.
+8. Rest 10 minutes before serving.
 
 ---
 
-### 2. Magnus Nilsson — Långstekta Gåsklubbor (Swedish/Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
-**Serves**: 4 · **Prep**: 15 min (+ overnight dry brine) · **Cook**: 2.5–3 hr · **Rest**: 15 min
+### 2. Classic Culinary Technique — Oven-Roasted Goose Legs
+**Source**: Standard technique for roasting game bird legs; general knowledge synthesis.
+**Serves**: 4 · **Prep**: 15 min · **Cook**: 2–2.5 hr · **Rest**: 10 min
+
+**Temperature guidance**:
+- Oven: 350 °F (177 °C) main roast; 425 °F (218 °C) final 15 min for crispness
+- Internal target: 175–185 °F (79–85 °C)
+- Time: 2–2.5 hr for legs, 12–16 oz
 
 **Ingredients**
-- 4 goose legs, 400 g each, skin on
-- 30 g flaked sea salt for dry brine (Falksalt)
-- 5 g (1 tsp) freshly ground white pepper
-- 2 g (½ tsp) ground kryddpeppar (allspice)
-- 1 head garlic, halved
-- 8 sprigs fresh thyme
-- 4 bay leaves
-- 1 tbsp whole kryddpeppar (allspice berries), bruised
-- 240 ml ljus öl (light lager) or chicken stock for the pan
-- **To finish**: 80 g rårörda lingon, 15 g chopped fresh dill
+- 4 goose legs, scored and seasoned
+- Kosher salt, black pepper, smoked paprika
+- 2 tbsp duck or goose fat (or neutral oil)
+- 1 orange, sliced; 1 bulb garlic, halved; fresh bay leaves
 
 **Method**
-1. The day before: rub salt, white pepper and ground allspice into the legs; refrigerate uncovered on a rack 18 hours.
-2. Preheat oven to 160 °C (320 °F). Pat legs very dry.
-3. Place legs skin-side-up on a wire rack set over a heavy roasting pan. Tuck garlic, thyme, bay and allspice berries around. Pour beer/stock into the pan (not on the legs).
-4. Insert MEATER probe through the side of one thigh.
-5. Roast 60 minutes. Reduce oven to 150 °C (300 °F); continue 90–110 minutes.
-6. **Pull at 90–93 °C (194–199 °F).** Nilsson's test: skin deeply crisp and mahogany; meat releases from the bone.
-7. Rest 15 minutes loosely tented. Skim fat; reduce de-fatted juices to a glossy sauce. Top each plate with a spoon of lingonberries and dill. Final serving temperature: **88–92 °C / 190–198 °F** (crisp-skinned, allspice-perfumed, sweet-tart counterpoint).
+1. Preheat oven 350 °F (177 °C). Rub legs with fat, salt, pepper, paprika.
+2. Place skin-side up on a rack in roasting tin; add orange slices and garlic.
+3. Roast uncovered 1.5 hours; drain fat.
+4. Continue at 350 °F until internal temp reaches 165 °F (~30–45 min more).
+5. Increase to 425 °F for final 15 min to crisp skin.
+6. Target: 175–185 °F internal. Rest 10 min.
 
 ---
 
-### 3. Diana Henry — Slow-Roast Goose Legs with Honey, Lemon & Sumac (Persian-inspired British tradition)
-**Source**: Diana Henry, *Crazy Water, Pickled Lemons* (Mitchell Beazley, 2002) and her *Telegraph* column at telegraph.co.uk/food-and-drink — autumn-game section  
-**Serves**: 4 · **Prep**: 20 min (+ overnight dry brine) · **Cook**: 2.5 hr · **Rest**: 15 min
-
-**Ingredients**
-- 4 goose legs, 400 g each, skin on
-- 30 g flaked sea salt for dry brine
-- 5 g (1 tsp) freshly ground black pepper
-- 5 g (1 tsp) ground cumin
-- 5 g (1 tsp) ground sumac
-- 60 ml extra-virgin olive oil
-- Zest and juice of 2 lemons
-- 30 g acacia honey
-- 1 head garlic, halved
-- 240 ml chicken stock for the pan
-- **To finish**: 5 g (1 tsp) sumac, 30 g chopped fresh mint and parsley, lemon wedges
-
-**Method**
-1. The day before: rub salt, pepper, cumin and sumac into the legs; refrigerate uncovered on a rack 18 hours.
-2. Preheat oven to 160 °C (320 °F). Pat legs very dry. Whisk olive oil, lemon zest, juice and honey; brush onto the skin.
-3. Place legs skin-side-up on a wire rack over a heavy roasting pan. Tuck garlic around. Pour stock into the pan (not on the legs).
-4. Insert MEATER probe through the side of one thigh.
-5. Roast 60 minutes. Reduce oven to 150 °C (300 °F); continue 90 minutes, brushing with the lemon-honey mixture every 30 minutes.
-6. **Pull at 90–93 °C (194–199 °F).** Henry's test: skin lacquered and crisp, meat fall-tender.
-7. Rest 15 minutes loosely tented. Skim fat; reduce de-fatted juices. Sprinkle each leg with sumac, mint, parsley and a lemon wedge. Final serving temperature: **88–92 °C / 190–198 °F** (lacquered, citrus-bright, fall-tender).
+### 3. TODO: add third source — BBC Good Food goose URLs returned 404
+> bbcgoodfood.com/recipes/roast-goose-legs returned 404 (fetched 2025-07-15).
+> Candidate sources: greatbritishchefs.com, seriouseats.com/roasted-goose-legs
 
 ---
 
-### 4. Yotam Ottolenghi — Roast Goose Legs with Pomegranate Molasses & Walnut Crust (Levantine fusion tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014) technique extended; ottolenghi.co.uk recipes — winter-game section  
-**Serves**: 4 · **Prep**: 20 min (+ overnight dry brine) · **Cook**: 2.5 hr · **Rest**: 15 min
+## Temperature summary
 
-**Ingredients**
-- 4 goose legs, 400 g each, skin on
-- 30 g flaked sea salt for dry brine
-- 5 g (1 tsp) freshly ground black pepper
-- 5 g (1 tsp) ground cumin
-- 5 g (1 tsp) ground coriander
-- 2 g (½ tsp) ground cinnamon
-- 60 ml pomegranate molasses
-- 30 ml extra-virgin olive oil
-- 4 garlic cloves, finely grated
-- 240 ml chicken stock for the pan
-- **To finish**: seeds of 1 pomegranate, 80 g toasted finely-chopped walnuts, 30 g chopped fresh mint, drizzle of pomegranate molasses
+| Source | Country | Method temp | Weight/Thickness | Time | Target internal |
+|--------|---------|-------------|-----------------|------|-----------------|
+| BBC adaptation | UK | 325 °F then 400 °F | 12–16 oz | 2–2.5 hr | 175–185 °F (79–85 °C) |
+| Classic culinary technique | International | 350 °F then 425 °F | 12–16 oz | 2–2.5 hr | 175–185 °F (79–85 °C) |
+| USDA minimum | USA | Any | Any | Any | 165 °F (74 °C) |
 
-**Method**
-1. The day before: rub salt and pepper into the legs; refrigerate uncovered on a rack 18 hours.
-2. Mix pomegranate molasses, olive oil, garlic, cumin, coriander and cinnamon into a paste. Smear over the legs.
-3. Preheat oven to 165 °C (330 °F). Place legs skin-side-up on a wire rack over a heavy roasting pan. Pour stock into the pan.
-4. Insert MEATER probe through the side of one thigh.
-5. Roast 60 minutes. Reduce oven to 150 °C (300 °F); continue 90 minutes, brushing with the molasses paste every 30 minutes.
-6. **Pull at 90–93 °C (194–199 °F).** Ottolenghi: skin lacquered crisp, meat fork-no-resistance.
-7. Rest 15 minutes loosely tented. Skim fat; reduce de-fatted juices. Strew each leg with pomegranate seeds, walnuts and mint; drizzle with extra molasses. Final serving temperature: **88–92 °C / 190–198 °F** (sweet-savoury, fruit-and-nut crowned).
+**Recommended MEATER settings**:
+- Set alert at **175 °F (79 °C)** → check for tenderness; may continue to 185 °F
+- Rest 10 minutes
+- Note: goose legs can stall around 160–165 °F as collagen converts; be patient
 
----
+## Notes
+
+- Goose legs can withstand extended high-temperature cooking without drying out, unlike breast.
+- Draining the rendered fat mid-cook is important to prevent the legs from steaming in pooled fat.
+- Scoring the skin before roasting (light diagonal cuts) aids fat drainage and crispness.
+- Rendered goose fat from the tin is a prized cooking ingredient — refrigerate in a sealed jar up to 3 months.

@@ -1,132 +1,110 @@
 # Goose Thigh × Braise — Recipe Temperature Research
 
+## Tree position
+
+| Field | Value |
+|-------|-------|
+| Category | `poultry` |
+| Cut type folder | `goose/` |
+| Cut slug | `goose_thigh` |
+| Method slug | `braise` |
+| File | `goose_thigh-braise.md` |
+| Full path | `docs/recipe_research/poultry/goose/goose_thigh-braise.md` |
+
 ## Cut profile
-Goose thigh (the upper portion of the leg, separated from the drumstick) is a single dense dark-meat muscle group with abundant intramuscular fat and a thick fat-skin layer covering one face. Anatomically very similar to duck thigh but considerably larger (250–350 g per thigh). The collagen content is high — like duck thigh and goose leg — so the appropriate cooking treatments are long, gentle, moist methods that fully render the fat-and-skin layer and convert collagen to gelatin. Because the thigh is just one muscle (not the drumstick-and-thigh complex of the whole leg), the cook is slightly shorter (90 min – 2 hr rather than 2.5–3 hr) and the meat is uniformly tender throughout. Pull at 90–94 °C measured by probe; carryover is irrelevant in a braise.
+
+Goose thigh is perhaps the most flavourful part of the goose — richer than the leg and with a higher ratio of intramuscular fat and connective tissue. Braising is ideal: the moist-heat environment keeps the thigh succulent while sustained heat above 160 °F converts collagen to gelatin. Target 175–185 °F (79–85 °C) for the most tender, silky texture. The braising liquid, enriched by rendered goose fat and gelatin, reduces to an intensely flavourful sauce. Goose thighs are widely used in European traditional cooking, similar to duck confit but with a braise instead of a fat immersion.
+
+Target internal temperature: **175–185 °F (79–85 °C)** — optimal for collagen breakdown; USDA minimum: 165 °F (74 °C).
 
 ## Source recipes
 
-### 1. Hugh Fearnley-Whittingstall — Braised Goose Thighs with Cider, Apples & Sage (British River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004) (the thigh-only variant of his goose-leg braise); rivercottage.net  
-**Serves**: 4 · **Prep**: 20 min · **Cook**: 2 hr · **Rest**: 15 min
+### 1. BBC Good Food — Slow-Roast Duck (low-and-slow principle adapted for goose thigh braise)
+**Source**: BBC Good Food editorial team, BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roast-duck (fetched 2025-07-15).
+**Serves**: 4 · **Prep**: 20 min · **Cook**: 2.5–3 hr · **Rest**: 10 min
+
+> **Note**: BBC recipe for whole duck uses 13 hours at 90–120 °C. The philosophy — low sustained heat,
+> covered, to break down connective tissue and render fat — is directly applicable to goose thigh
+> braising. Adapted here as a braised preparation with stock and aromatics at 325 °F.
+
+**Temperature guidance**:
+- Browning: high stovetop heat
+- Braise oven: 325 °F (163 °C) covered
+- Internal target: 175–185 °F (79–85 °C)
+- Time: 2.5–3 hours
 
 **Ingredients**
-- 6 goose thighs (about 1.6 kg total), skin on
-- 30 g flaked sea salt for dry brine (overnight)
-- 5 g (1 tsp) freshly ground black pepper
-- 30 ml goose fat or sunflower oil
-- 2 large onions, sliced
-- 4 garlic cloves, smashed
-- 8 fresh sage leaves
-- 4 sprigs fresh thyme
-- 2 bay leaves
-- 600 ml dry cider
-- 360 ml chicken stock
-- 2 medium Bramley apples, peeled and cut into 8 wedges (added in last 25 minutes)
+- 4 bone-in goose thighs (skin-on, approximately 10–14 oz each)
+- 2 tsp sea salt, 1 tsp black pepper, ½ tsp cumin
+- 2 tbsp goose fat or oil for browning
+- 1 large onion, diced; 2 carrots, diced; 1 leek, sliced; 3 garlic cloves
+- 200 ml dry white wine; 500 ml chicken or duck stock
+- 2 bay leaves, 4 sprigs thyme, 1 sprig rosemary
+- 1 tbsp honey (for optional glaze at end)
+- Zest of 1 orange
 
 **Method**
-1. The day before: rub salt and pepper into the thighs; refrigerate uncovered on a rack 18 hours.
-2. Preheat oven to 150 °C (300 °F). Pat thighs dry. Heat goose fat in a heavy oven-proof Dutch oven over medium-high. Sear thighs skin-side-down 6 minutes; flip 2 minutes; remove.
-3. Add onions; sauté 8 minutes. Add garlic; 1 minute. Add sage, thyme and bay.
-4. Pour in cider; reduce by half (8 minutes). Add stock.
-5. Return thighs skin-side-up; nestle three-quarters submerged.
-6. Insert MEATER probe through the side of one thigh into the centre of the muscle, away from the bone.
-7. Cover; transfer to oven. Braise 90 minutes; add apples; continue 25 minutes more.
-8. **Pull at 91–94 °C (196–201 °F).** Fearnley-Whittingstall's test: meat starts to release from the bone, fork meets no resistance.
-9. Rest 15 minutes loosely covered. Lift thighs; reduce strained liquid to a glossy sauce. Final serving temperature: **88–92 °C / 190–198 °F** (cider-deep, apple-warmed, falling-tender).
+1. Preheat oven to 325 °F (163 °C). Pat thighs dry; season with salt, pepper, cumin.
+2. Brown thighs skin-side down in hot fat 4–5 min until deep golden. Flip; brown 2 min. Remove; set aside.
+3. Sauté onion, carrot, leek in same pot 5 min. Add garlic, orange zest; 1 min. Deglaze with wine; reduce 2 min.
+4. Add stock, bay, thyme, rosemary. Bring to simmer.
+5. Nestle thighs skin-side up; liquid should reach ¾ up the sides.
+6. Cover tightly; braise in oven 2.5–3 hours until internal temp 175–185 °F.
+7. Uncover last 20 min; brush with honey; allow skin to crisp.
+8. Remove thighs; strain and reduce liquid by half for sauce.
+9. Rest 10 min; serve with sauce and seasonal vegetables.
 
 ---
 
-### 2. Magnus Nilsson — Bräserade Gåslår (Swedish/Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015) (thigh-only variant of his goose-leg braise)  
-**Serves**: 4 · **Prep**: 20 min · **Cook**: 2 hr · **Rest**: 15 min
+### 2. Classic Culinary Technique — Braised Goose Thighs with Wine and Aromatics
+**Source**: Standard culinary braising technique for dark poultry; general knowledge synthesis.
+**Serves**: 4 · **Prep**: 20 min · **Cook**: 2.5–3 hr · **Rest**: 10 min
+
+**Temperature guidance**:
+- Braise oven: 325 °F (163 °C)
+- Internal target: 175–185 °F (79–85 °C)
+- Time: 2.5–3 hours
 
 **Ingredients**
-- 6 goose thighs (gåslår), 1.6 kg total, skin on
-- 30 g flaked sea salt for dry brine (Falksalt)
-- 5 g (1 tsp) freshly ground white pepper
-- 2 g (½ tsp) ground kryddpeppar (allspice)
-- 30 g cultured butter + 30 ml cold-pressed rapeseed oil
-- 2 large yellow onions, sliced
-- 2 carrots, chunked
-- 4 garlic cloves, smashed
-- 400 ml mörkt öl (dark Nordic ale)
-- 240 ml beef or chicken stock
-- 30 g brown sugar, 30 ml soya sauce
-- 4 bay leaves, 1 tbsp whole kryddpeppar (allspice berries), 6 sprigs fresh thyme
-- **To finish**: 30 g cold cultured butter, 80 g rårörda lingon, 15 g chopped fresh dill
+- 4 goose thighs, bone-in, skin-on
+- Salt, pepper, smoked paprika, thyme
+- 2 tbsp duck fat; 1 onion; 1 head garlic, halved
+- 300 ml red wine; 400 ml game stock; 2 bay leaves
+- 200 g (7 oz) mushrooms; 150 g (5 oz) pancetta or lardons
 
 **Method**
-1. The day before: rub salt, white pepper and ground allspice into the thighs; refrigerate uncovered on a rack 18 hours.
-2. Preheat oven to 150 °C (300 °F). Pat dry. Heat butter and oil in a heavy oven-proof gryta. Sear thighs skin-side-down 6 minutes; flip 2 minutes; remove.
-3. Add onions and carrots; sauté 10 minutes. Add garlic; 1 minute.
-4. Pour in dark beer; reduce by one-third (5 minutes). Add stock, brown sugar, soya, bay, allspice and thyme.
-5. Return thighs skin-side-up; nestle three-quarters submerged.
-6. Insert MEATER probe through the side of one thigh.
-7. Cover; transfer to oven. Braise 2 hours.
-8. **Pull at 92–94 °C (198–201 °F).** Nilsson: meat slides off the bone with chopstick pressure.
-9. Rest 15 minutes loosely covered. Reduce strained liquid; off heat swirl in cold butter. Spoon sauce; top with lingonberries and dill. Final serving temperature: **88–92 °C / 190–198 °F** (beer-deep, allspice-perfumed, falling-tender).
+1. Season thighs; sear skin-side down in hot fat 5 min; flip 2 min; set aside.
+2. Brown pancetta in same pot; add onion, garlic, mushrooms; sauté 5 min.
+3. Deglaze with red wine; reduce by half. Add stock, bay, thyme.
+4. Return thighs skin-side up. Cover; braise at 325 °F for 2.5–3 hours.
+5. Internal temp 175–185 °F; uncover last 20 min for skin crispness.
+6. Rest 10 min; strain and reduce sauce; serve with egg noodles or crusty bread.
 
 ---
 
-### 3. Anthony Bourdain — Cuisses d'Oie au Vin Rouge (French bistro tradition)
-**Source**: Anthony Bourdain & José de Meirelles, *Les Halles Cookbook* (Bloomsbury, 2004) (the thigh-only variant of his goose-leg *coq au vin* technique)  
-**Serves**: 4 · **Prep**: 25 min · **Cook**: 2 hr · **Rest**: 15 min
-
-**Ingredients**
-- 6 goose thighs, 1.6 kg total, skin on
-- 5 g (1 tsp) salt; 2 g (½ tsp) freshly ground black pepper
-- 30 g unsalted butter + 30 ml peanut oil
-- 200 g lardons (smoked bacon, diced)
-- 1 large onion, finely chopped
-- 2 carrots, finely chopped
-- 6 garlic cloves, smashed
-- 30 ml tomato paste
-- 600 ml full-bodied red wine (Burgundy)
-- 360 ml chicken stock
-- 4 sprigs fresh thyme + 2 bay leaves + 6 parsley stalks (bouquet garni)
-- 250 g button mushrooms (added in last 25 minutes)
-- 12 baby onions, peeled and braised separately, added at the end
-
-**Method**
-1. Pat thighs dry; season.
-2. Heat butter and oil in a heavy oven-proof Dutch oven over medium-high. Render lardons until crisp; remove. Sear thighs skin-side-down 6 minutes; flip 2 minutes; remove.
-3. Add onion and carrots; sauté 8 minutes. Add garlic; 1 minute. Stir in tomato paste; 2 minutes.
-4. Pour in wine; reduce by half (10 minutes). Add stock and bouquet garni.
-5. Return thighs and lardons; nestle three-quarters submerged.
-6. Insert MEATER probe through the side of one thigh.
-7. Cover; oven 165 °C (325 °F). Braise 90 minutes; add mushrooms; continue 25 minutes more.
-8. **Pull at 91–94 °C (196–201 °F).** Bourdain: meat falling off the bone, fork-no-resistance.
-9. Add baby onions in the last 5 minutes. Rest 15 minutes loosely covered. Reduce strained liquid to a glossy sauce. Final serving temperature: **88–92 °C / 190–198 °F** (Burgundy-deep, lardon-savoury, falling-tender).
+### 3. TODO: add third source — BBC Good Food goose URLs returned 404
+> bbcgoodfood.com/recipes/braised-goose-thigh returned 404 (fetched 2025-07-15).
+> Candidate sources: greatbritishchefs.com, seriouseats.com/braised-goose-thighs
 
 ---
 
-### 4. Diana Henry — Goose Thighs Braised with Pomegranate, Walnuts & Saffron (Persian-inspired British tradition)
-**Source**: Diana Henry, *Crazy Water, Pickled Lemons* (Mitchell Beazley, 2002) and her *Telegraph* column at telegraph.co.uk/food-and-drink — *fesenjan*-style chapter  
-**Serves**: 4 · **Prep**: 25 min · **Cook**: 2 hr · **Rest**: 15 min
+## Temperature summary
 
-**Ingredients**
-- 6 goose thighs, 1.6 kg total, skin on
-- 5 g (1 tsp) flaked sea salt; 2 g (½ tsp) freshly ground black pepper
-- 30 ml olive oil
-- 2 large onions, finely chopped
-- 4 garlic cloves, finely grated
-- 5 cm fresh ginger, finely grated
-- 5 g (1 tsp) ground cumin + 5 g (1 tsp) ground coriander + 1 g (¼ tsp) ground cardamom
-- A generous pinch saffron threads, soaked in 60 ml warm water
-- 200 g shelled walnuts, finely ground
-- 60 ml pomegranate molasses
-- 480 ml chicken stock + 30 g honey
-- **To finish**: seeds of 1 pomegranate, 30 g chopped flat-leaf parsley, 60 g toasted whole walnuts
+| Source | Country | Method temp | Weight/Thickness | Time | Target internal |
+|--------|---------|-------------|-----------------|------|-----------------|
+| BBC adaptation | UK | 325 °F (163 °C) covered | 10–14 oz | 2.5–3 hr | 175–185 °F (79–85 °C) |
+| Classic culinary technique | International | 325 °F (163 °C) covered | 10–14 oz | 2.5–3 hr | 175–185 °F (79–85 °C) |
+| USDA minimum | USA | Any | Any | Any | 165 °F (74 °C) |
 
-**Method**
-1. Pat thighs dry; season.
-2. Heat olive oil in a heavy oven-proof Dutch oven over medium-high. Sear thighs skin-side-down 6 minutes; flip 2 minutes; remove.
-3. Add onions; sauté 12 minutes until deeply softened. Add garlic and ginger; 2 minutes. Bloom cumin, coriander and cardamom 30 seconds.
-4. Add saffron-water, ground walnuts, pomegranate molasses, stock and honey; whisk to combine.
-5. Return thighs skin-side-up; nestle three-quarters submerged.
-6. Insert MEATER probe through the side of one thigh.
-7. Cover; oven 160 °C (320 °F). Braise 2 hours.
-8. **Pull at 91–94 °C (196–201 °F).** Henry: meat starts to release from the bone, sauce coats the back of a spoon and turns chocolate-walnut brown.
-9. Rest 15 minutes loosely covered. Spoon sauce; strew with pomegranate seeds, parsley and toasted walnuts. Serve with rice. Final serving temperature: **88–92 °C / 190–198 °F** (sweet-tart, walnut-rich, saffron-perfumed).
+**Recommended MEATER settings**:
+- Set alert at **175 °F (79 °C)** → check tenderness; may benefit from reaching 185 °F
+- Rest 10 minutes
+- Note: steady rise expected; no rapid carryover in braising environment
 
----
+## Notes
+
+- Goose thigh is the most flavourful part of the bird; do not rush the braise.
+- Cooking to 165 °F is safe but produces a noticeably chewier result; 175–185 °F is strongly recommended.
+- The braising liquid, once strained and reduced, is an exceptional sauce — the collagen makes it naturally glossy.
+- Goose thighs pair exceptionally well with dried fruit (prunes, apricots), root vegetables, and bold red wine or game stock.
+- Leftovers: shred braised goose thigh meat into the reduced braising liquid and serve over pasta, polenta, or toast.

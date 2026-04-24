@@ -1,119 +1,109 @@
 # Goose Breast × Oven Roast — Recipe Temperature Research
 
+## Tree position
+
+| Field | Value |
+|-------|-------|
+| Category | `poultry` |
+| Cut type folder | `goose/` |
+| Cut slug | `goose_breast` |
+| Method slug | `oven_roast` |
+| File | `goose_breast-oven_roast.md` |
+| Full path | `docs/recipe_research/poultry/goose/goose_breast-oven_roast.md` |
+
 ## Cut profile
-Oven-roasted goose breast (cooked separately from the whole bird, often the *suprême*-style preparation) takes the same anatomical magret as the pan-sear but applies dry, even oven heat at 180–200 °C to the rendered breasts after a stove-top skin-rendering start. The combination produces an evenly-cooked centre through the entire thickness, with the same crisp deep-mahogany skin as the pan-sear but slightly more relaxed muscle fibres because the heat penetrates from all sides rather than driving in from the bottom. The two-stage method (cold-pan render then oven-finish) is the standard for serving 4–8 people because the oven-finish handles the quantity that wouldn't fit in a single pan. Carryover is significant — 4–6 °C — given the dense meat and the residual heat in the breast and surrounding fat.
+
+Goose breast is a rich, deeply flavoured dark meat with a substantial fat layer, similar in character to duck breast but larger and more assertively flavoured. Like duck breast, it is often served medium-rare to medium (145–155 °F / 63–68 °C) by many European chefs, though USDA guidelines require 165 °F (74 °C). The oven-roast method for goose breast mirrors duck breast technique: stovetop fat rendering followed by oven finishing. Goose breast dries out at high oven temperatures, so a moderate 350–375 °F oven with careful temperature monitoring is essential.
+
+Target internal temperature: **145–155 °F (63–68 °C)** — medium; pull at 140 °F and rest. USDA safe minimum: 165 °F (74 °C) — pull at 160 °F and rest.
 
 ## Source recipes
 
-### 1. Hugh Fearnley-Whittingstall — Roast Goose Breast with Sage & Onion (British River Cottage tradition)
-**Source**: Hugh Fearnley-Whittingstall, *The River Cottage Meat Book* (Hodder & Stoughton, 2004); rivercottage.net  
-**Serves**: 6–8 · **Prep**: 20 min · **Cook**: 22 min (10 min stove + 12 min oven) · **Rest**: 10 min
+### 1. BBC Good Food — Slow-Roast Duck (fat-rendering principles adapted for goose breast)
+**Source**: BBC Good Food editorial team, BBC Good Food; https://www.bbcgoodfood.com/recipes/slow-roast-duck (fetched 2025-07-15).
+**Serves**: 2–3 · **Prep**: 15 min · **Cook**: 20–25 min · **Rest**: 8–10 min
+
+> **Note**: BBC source is whole slow-roast duck. The low-and-slow fat rendering philosophy applies
+> directly to goose breast. Goose has even more fat than duck; the cold-pan stovetop render followed
+> by moderate oven finish is the correct approach. Internal target adapted for goose breast.
+
+**Temperature guidance**:
+- Stovetop render: medium-low, 12–15 min skin-side
+- Oven finish: 350 °F (177 °C), 10–15 min
+- Internal target medium: 140 °F pull → 145–150 °F rested
+- Internal target well-done: 160 °F pull → 165 °F rested
+- Time: 22–30 min total
 
 **Ingredients**
-- 4 large goose-breast fillets, 250 g each, skin on, scored
-- 30 g flaked sea salt
-- 5 g (1 tsp) freshly ground black pepper
-- 2 large onions, sliced
-- 8 fresh sage leaves
-- 6 garlic cloves, lightly crushed
-- 30 g unsalted butter
-- 240 ml dry cider
-- 240 ml chicken stock
-- **Sage & onion sauce**: 30 g butter + the cooked onions + 30 ml double cream + extra chopped sage, salt and pepper
+- 2 skin-on, boneless goose breasts (8–12 oz / 225–340 g each)
+- Generous sea salt and freshly ground black pepper
+- ½ tsp ground cumin or juniper berries, crushed
+- 1 tbsp honey (for glaze, optional)
+- Fresh thyme or rosemary
 
 **Method**
-1. The day before: rub salt and pepper into the breasts; refrigerate uncovered on a rack 18 hours (dry-brine) for the crispest skin.
-2. Preheat oven to 200 °C (390 °F). Place breasts skin-side-down in a cold heavy oven-proof pan; set over low-medium heat.
-3. Render the fat 8–10 minutes until skin is deep mahogany. Pour off accumulated fat (reserve for potatoes).
-4. Flip breasts. Tuck onions, sage and garlic around. Add butter; pour in cider and stock around (not over) the breasts.
-5. Insert the MEATER probe horizontally into the centre of the largest breast.
-6. Transfer the pan to the oven. Roast 10–12 minutes.
-7. **Pull at 54–57 °C (130–135 °F).** Fearnley-Whittingstall: rosé through the slice; carryover takes the centre to 58–61 °C.
-8. Lift the breasts; rest skin-side-up 10 minutes loosely tented. Strain the pan juices; reduce; off heat swirl in cream and chopped sage. Slice 5 mm thick on the diagonal. Final serving temperature: **58–61 °C / 136–142 °F** (rosé, herbal, cream-sauced).
+1. Pat goose breasts completely dry. Score skin in diagonal cross-hatch ¼ inch deep; do not pierce meat.
+2. Season generously all over with salt, pepper, and cumin/juniper.
+3. Place skin-side down in a cold, heavy oven-safe skillet. Do not preheat.
+4. Set heat to medium-low. Render fat 12–15 minutes, pouring off excess every 4–5 minutes.
+5. Preheat oven to 350 °F (177 °C) during stovetop render.
+6. When skin is golden and fat rendered, flip to flesh side for 2 minutes.
+7. Transfer skillet to oven. Roast skin-side up 10–15 min until internal temp reaches pull point.
+8. Optional: brush honey over skin in last 2 minutes.
+9. Rest 8–10 minutes on a rack. Slice against the grain and serve.
 
 ---
 
-### 2. Magnus Nilsson — Ugnstekt Gåsbröst med Äppelmust (Swedish/Nordic tradition)
-**Source**: Magnus Nilsson, *The Nordic Cookbook* (Phaidon, 2015)  
-**Serves**: 6 · **Prep**: 15 min · **Cook**: 22 min · **Rest**: 10 min
+### 2. Classic Culinary Technique — Goose Breast Oven Roast
+**Source**: Documented culinary technique for goose breast; general knowledge synthesis.
+**Serves**: 2–3 · **Prep**: 10 min · **Cook**: 25–30 min · **Rest**: 8–10 min
+
+**Temperature guidance**:
+- Stovetop render: medium-low 12–15 min
+- Oven: 375 °F (190 °C), 10–15 min
+- Internal medium: 145–150 °F (63–65 °C)
+- Internal well-done: 165 °F (74 °C)
 
 **Ingredients**
-- 4 goose-breast fillets, 250 g each, skin on, scored
-- 30 g flaked sea salt (Falksalt)
-- 5 g (1 tsp) freshly ground white pepper
-- 2 g (½ tsp) ground kryddpeppar (allspice)
-- 30 g cultured butter
-- 6 sprigs fresh thyme
-- 240 ml äppelmust (apple juice)
-- 240 ml chicken stock
-- 4 bay leaves
-- **To finish**: 80 g rårörda lingon, 15 g chopped fresh dill
+- 2 goose breasts, skin-on, boneless
+- Kosher salt, black pepper
+- 1 tbsp butter, 2 sprigs thyme, 1 garlic clove
+- 60 ml port or red wine for pan sauce
 
 **Method**
-1. The day before: rub salt, white pepper and allspice into the breasts; refrigerate uncovered on a rack 18 hours.
-2. Preheat oven to 190 °C (375 °F). Place breasts skin-side-down in a cold heavy oven-proof pan; set over low-medium heat.
-3. Render fat 8–10 minutes until skin is deep mahogany. Pour off fat.
-4. Flip breasts. Add butter, thyme, äppelmust, stock and bay leaves around (not over).
-5. Insert MEATER probe horizontally into the largest breast.
-6. Transfer to oven. Roast 10–12 minutes.
-7. **Pull at 54–56 °C (130–133 °F).** Nilsson: cool-rosé "blank rosa" centre.
-8. Rest breasts skin-side-up 10 minutes loosely tented. Reduce strained pan juices to a glossy sauce. Slice 5 mm thick on the diagonal. Top with lingonberries and dill. Final serving temperature: **58–61 °C / 136–142 °F** (cool-rosé, apple-bright, allspice-perfumed).
+1. Dry-brine goose breasts with salt 2–24 hours refrigerated (recommended for goose — helps render fat and season deeply).
+2. Score skin; season with pepper.
+3. Cold-pan skin-side down, medium-low heat; render 12–15 min; drain fat.
+4. Flip, baste with butter, thyme, garlic for 2 min.
+5. Transfer to 375 °F oven skin-side up; roast 10–14 min.
+6. Pull at 140 °F (medium) or 160 °F (well-done); rest 8–10 min.
+7. Deglaze pan with port, reduce by half, mount with cold butter for sauce.
+8. Slice thin against the grain; serve skin-side up.
 
 ---
 
-### 3. Yotam Ottolenghi — Roast Goose Breast with Pomegranate Molasses & Walnuts (Levantine fusion tradition)
-**Source**: Yotam Ottolenghi, *Plenty More* (Ebury Press, 2014) technique extended; ottolenghi.co.uk recipes — the goose breast adaptation  
-**Serves**: 6 · **Prep**: 20 min · **Cook**: 22 min · **Rest**: 10 min
-
-**Ingredients**
-- 4 goose-breast fillets, 250 g each, skin on, scored
-- 30 g flaked sea salt
-- 5 g (1 tsp) freshly ground black pepper
-- 5 g (1 tsp) ground cumin
-- 2 g (½ tsp) ground cinnamon
-- 2 g (½ tsp) sweet smoked paprika
-- 60 ml pomegranate molasses
-- 30 ml olive oil
-- 240 ml chicken stock for the pan
-- **To finish**: seeds of 1 pomegranate, 80 g toasted chopped walnuts, 30 g chopped fresh mint, drizzle of pomegranate molasses
-
-**Method**
-1. The day before: mix salt, pepper, cumin, cinnamon, paprika, pomegranate molasses and olive oil; rub all over the breasts. Refrigerate uncovered on a rack 18 hours.
-2. Preheat oven to 195 °C (380 °F). Place breasts skin-side-down in a cold heavy oven-proof pan; set over low-medium heat.
-3. Render fat 8–10 minutes until deep mahogany. Pour off fat.
-4. Flip breasts. Pour in stock around (not over).
-5. Insert MEATER probe horizontally into the largest breast.
-6. Transfer to oven. Roast 10–12 minutes.
-7. **Pull at 54–57 °C (130–135 °F).** Ottolenghi: rose-pink through.
-8. Rest breasts skin-side-up 10 minutes loosely tented. Slice 5 mm thick on the diagonal. Strew with pomegranate seeds, walnuts and mint; drizzle with extra molasses. Final serving temperature: **58–61 °C / 136–142 °F** (sweet-savoury, fruit-and-nut crowned).
+### 3. TODO: add third source — BBC Good Food goose URLs returned 404
+> bbcgoodfood.com/recipes/roast-goose-breast returned 404 (fetched 2025-07-15).
+> Candidate sources to retry: seriouseats.com/goose-breast, greatbritishchefs.com/goose-breast
 
 ---
 
-### 4. Diana Henry — Roast Goose Breast with Quince, Star Anise & Cardamom (British modern tradition)
-**Source**: Diana Henry, *Crazy Water, Pickled Lemons* (Mitchell Beazley, 2002) and her *Telegraph* column at telegraph.co.uk/food-and-drink — autumn-game section  
-**Serves**: 6 · **Prep**: 20 min · **Cook**: 22 min · **Rest**: 10 min
+## Temperature summary
 
-**Ingredients**
-- 4 goose-breast fillets, 250 g each, skin on, scored
-- 30 g flaked sea salt
-- 5 g (1 tsp) freshly ground black pepper
-- 2 ripe quinces, peeled, cored and cut into 8 wedges each
-- 30 g unsalted butter
-- 4 cardamom pods, bashed
-- 2 star anise pods
-- 1 cinnamon stick
-- 60 ml Pedro Ximénez sherry
-- 240 ml chicken stock
-- 5 g chopped fresh flat-leaf parsley, to finish
+| Source | Country | Method temp | Weight/Thickness | Time | Target internal |
+|--------|---------|-------------|-----------------|------|-----------------|
+| BBC adaptation | UK | 350 °F oven after render | 8–12 oz | 22–30 min total | 140 °F pull → 145–150 °F rested |
+| Classic culinary technique | International | 375 °F oven after render | 8–12 oz | 25–30 min total | 140–160 °F pull → 145–165 °F rested |
+| USDA minimum | USA | Any | Any | Any | 165 °F (74 °C) |
 
-**Method**
-1. The day before: rub salt and pepper into the breasts; refrigerate uncovered on a rack 18 hours.
-2. Preheat oven to 200 °C (390 °F). Place breasts skin-side-down in a cold heavy oven-proof pan; set over low-medium heat.
-3. Render fat 8–10 minutes until deep mahogany. Pour off fat.
-4. Flip breasts. Add butter, quince wedges, cardamom, star anise and cinnamon. Pour sherry and stock around.
-5. Insert MEATER probe horizontally into the largest breast.
-6. Transfer to oven. Roast 10–12 minutes.
-7. **Pull at 54–57 °C (130–135 °F).** Henry: rose-pink through.
-8. Rest breasts skin-side-up 10 minutes loosely tented. Discard whole spices; reduce pan juices. Slice 5 mm thick on the diagonal. Spoon sauce and quince wedges; sprinkle parsley. Final serving temperature: **58–61 °C / 136–142 °F** (sweet-spiced, fruit-warmed, rosé centre).
+**Recommended MEATER settings**:
+- **Medium** (chef-preferred): Set alert at **140 °F (60 °C)** → pull, rest 8–10 min → carryover to ~148 °F (64 °C)
+- **Well-done** (USDA safe): Set alert at **160 °F (71 °C)** → pull, rest → carryover to 165 °F (74 °C)
+- Rest 8–10 minutes minimum
 
----
+## Notes
+
+- Goose breast fat cap is often thicker than duck; allow extra rendering time.
+- Do not cook at high heat — goose breast protein is dense and dries out rapidly above 160 °F.
+- Save rendered goose fat: superb for roasting potatoes, confit, and sautéing.
+- Goose breast pairs well with fruit sauces (cherry, lingonberry, plum) and earthy spices (juniper, allspice).
