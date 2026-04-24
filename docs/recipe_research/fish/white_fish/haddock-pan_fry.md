@@ -1,130 +1,210 @@
 # Haddock × Pan Fry — Recipe Temperature Research
 
+## Tree position
+
+| Field | Value |
+|-------|-------|
+| Category | `fish` |
+| Cut type folder | `white_fish/` |
+| Cut slug | `haddock` |
+| Method slug | `pan_fry` |
+| File | `haddock-pan_fry.md` |
+| Full path | `docs/recipe_research/fish/white_fish/haddock-pan_fry.md` |
+
 ## Cut profile
 
-Haddock (*Melanogrammus aeglefinus*) is a North Atlantic white fish closely related to cod; it is distinguished from cod by slightly smaller, more tender flakes, a slightly sweeter and more delicate flavour, and a thinner skin. In the British Isles it is the fish of choice for fish and chips in many northern regions (especially Scotland and Yorkshire); in New England it is a staple chowder and pan-fry fish. Haddock is lean, with almost no intramuscular fat, and cooks to large, moist white flakes between 58–65 °C. Pan frying — in butter, seasoned flour, or breadcrumb coating — produces a golden exterior crust that contrasts with the delicate interior. Carryover is minimal (2–3 °C) given the lean, thin flesh.
+Haddock (*Melanogrammus aeglefinus*, Norwegian: hyse/kolje, German: Schellfisch, Swedish:
+kolja) is a lean white-fleshed cold-water fish closely related to cod. It has a mild,
+slightly sweet flavour and firm but fine-grained flesh that flakes beautifully when cooked.
+Haddock is central to British cuisine (fish & chips), Norwegian everyday cooking, and the
+German North Sea fishing tradition. The fillets are typically 1–2 cm thick, making them
+fast-cooking pan fish: 2–4 minutes per side at medium to medium-high heat in butter or
+oil is sufficient for a fillet of normal thickness. The internal flesh reaches safe serving
+temperature (63 °C / 145 °F USDA minimum for finfish) quickly; overcooking past 65 °C
+produces dry, rubbery fish. The MEATER probe must be inserted laterally (from the thick
+edge) in thin fillets. Flouring the fillets before frying (as in the German and British
+traditions) creates a protective crust that helps moisture retention and even browning.
 
 ## Source recipes
 
-### 1. Rick Stein — Pan-Fried Haddock with Parsley Sauce (British tradition)
-**Source**: Rick Stein, *Rick Stein's Seafood* (BBC Books, 2001)  
-**Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
+### 1. BBC Good Food — Zesty Haddock with Crushed Potatoes & Peas (British tradition)
+**Source**: BBC Good Food magazine, February 2011;
+bbcgoodfood.com/recipes/zesty-haddock-crushed-potatoes-peas (fetched 2026-04-24)
+**Serves**: 4 · **Cook**: 15 min
 
 **Ingredients**
-- 2 skin-on haddock fillets, 180–220 g each, pin-boned
-- Sea salt and freshly ground black pepper
-- 50 g plain flour
-- 30 ml (2 tbsp) vegetable or sunflower oil
-- 30 g unsalted butter
-- **Parsley sauce**: 30 g unsalted butter; 30 g plain flour; 400 ml full-fat milk; 30 g fresh flat-leaf parsley, finely chopped; sea salt; white pepper; 5 ml (1 tsp) fresh lemon juice
+- 600 g floury potatoes, unpeeled, cut into chunks
+- 140 g frozen peas
+- 2½ tbsp extra-virgin olive oil
+- Juice and zest of ½ lemon
+- 1 tbsp capers, roughly chopped
+- 2 tbsp snipped chives
+- 4 haddock fillets, about 120 g each (or other chunky white fish)
+- 2 tbsp plain flour
+- Broccoli, to serve
+- Salt and pepper
 
 **Method**
-1. Make parsley sauce: melt butter in a small saucepan; stir in flour. Cook 1 minute. Gradually whisk in milk; simmer until thick and smooth, 5–6 minutes. Stir in parsley; season; add lemon. Keep warm.
-2. Pat haddock dry; season on both sides.
-3. Dredge lightly in flour; shake off excess.
-4. Heat a large frying pan over high heat. Add oil and butter; when foam subsides, add fillets skin-side down.
-5. Insert the MEATER probe from the thick end of one fillet into the centre of the flesh.
-6. Cook skin-side down 4–5 minutes until skin is golden and crisp.
-7. Flip; cook 2–3 minutes flesh-side down.
-8. **Pull at 62–64 °C (144–147 °F).** Stein's standard: "haddock should be just cooked through — the large flakes should separate cleanly."
-9. Rest 2 minutes. Serve with parsley sauce alongside. Final serving temperature: **64–66 °C / 147–151 °F** (fully cooked, large moist flakes, British standard).
+1. Cover the potatoes in cold water, bring to the boil, then turn to a simmer. Cook for
+   10 minutes until tender, adding peas for the final minute. Drain and roughly crush
+   together with plenty of seasoning and 1 tbsp olive oil. Keep warm.
+2. For the dressing: mix 1 tbsp olive oil, the lemon juice and zest, capers and chives
+   with some seasoning.
+3. Dust the haddock fillets in the flour, tapping off any excess. Season.
+4. Heat the remaining ½ tbsp oil in a non-stick frying pan over medium-high heat.
+5. Insert the MEATER probe laterally from the thick edge of one fillet.
+6. Fry the fish for 2–3 minutes on each side until cooked through and lightly golden.
+7. Add the lemon-caper dressing to the pan and warm through briefly.
+8. **Pull at 58–60 °C (136–140 °F).** The brief 2–3-minute-per-side fry in a hot non-stick
+   pan with flour dusting is calibrated for 120 g fillets; the flour crust insulates the
+   surface and allows the interior to reach temperature without burning.
+9. Serve with the crushed potato-pea mash and broccoli.
+10. Final serving temperature: **60–63 °C / 140–145 °F** (British tradition, lean fish).
 
 ---
 
-### 2. Julia Child — Filets de Haddock Meunière (French classical tradition)
-**Source**: Julia Child, *Mastering the Art of French Cooking, Volume 1* (Alfred A. Knopf, 1961); Child's fish meunière technique is explicitly applied to any firm white fillet  
-**Serves**: 2 · **Prep**: 8 min · **Cook**: 7–8 min · **Rest**: 2 min
+### 2. Matprat.no — Hyse med Byggrisotto / Haddock with Barley Risotto (Norwegian tradition)
+**Source**: Matprat.no (Norwegian Meat and Poultry Research Centre);
+matprat.no/oppskrifter/familien/hyse-med-byggrisotto/ (fetched 2026-04-24)
+**Serves**: 4 · **Cook**: 30 min
 
 **Ingredients**
-- 2 skinless haddock fillets, 180–200 g each
-- Fine salt and freshly ground white pepper
-- 50 g plain flour
-- 40 ml (3 tbsp) clarified butter or sunflower oil (for the pan)
-- 60 g whole unsalted butter (for *meunière* sauce)
-- 20 g fresh flat-leaf parsley, finely chopped
-- Juice of ½ lemon
+- 800 g hyse-/koljefilet (haddock fillet)
+- 1 tbsp (1 ss) olive oil
+- 1 tbsp (1 ss) fresh chives (gressløk), finely cut
+- Margarine or butter, for frying
+- **Barley risotto (byggrisotto)**:
+  - 1 onion, finely chopped
+  - 200 ml (2 dl) apple juice (eplemost)
+  - 1 L (10 dl) chicken stock, diluted
+  - 300 ml (3 dl) pearl barley (byggryn)
+  - 2 spring onions (vårløk)
+  - 150 ml (1.5 dl) crème fraîche 35 %
+  - 100 g Parmesan or Gruyère, grated
+  - 2 tbsp (2 ss) lemon juice
+  - Salt and pepper
 
 **Method**
-1. Pat haddock dry; season immediately before cooking.
-2. Dredge in flour; shake off excess.
-3. Heat a wide sauté pan over medium-high heat. Add clarified butter; heat until foam subsides.
-4. Add haddock. Insert the MEATER probe from the thick end into the centre of the flesh.
-5. Cook 3–4 minutes per side without moving, turning once carefully with a fish spatula.
-6. **Pull at 60–62 °C (140–144 °F).** Julia's target for *meunière*: "when done, the fish will separate into large opaque flakes at the thickest point."
-7. Transfer to plates. Wipe pan; add whole butter; cook to *beurre noisette*. Add lemon and parsley; pour immediately over fish. Final serving temperature: **62–65 °C / 144–149 °F** (fully cooked, French classical meunière).
+1. Finely chop the onion and sauté in oil in a saucepan until soft.
+2. Add the barley and pour in the apple juice and 100 ml (1 dl) stock. Simmer, stirring,
+   until the liquid is absorbed. Add the remaining stock in four additions, stirring between
+   each, until absorbed. Total cooking time approximately 20 minutes; the grains should be
+   soft and the risotto creamy.
+3. Stir in the spring onions, crème fraîche and cheese. Season with lemon juice, salt and
+   pepper. If the risotto thickens while the fish fries, add a little water.
+4. Sprinkle salt and pepper on the haddock fillets.
+5. Heat a frying pan with a good knob of margarine or butter.
+6. Insert the MEATER probe laterally from the thick edge of one fillet.
+7. Fry the fish for 2 minutes on each side. Reduce heat to low, cover with a lid, and
+   finish cooking for 5 minutes on very low heat.
+8. **Pull at 58–60 °C (136–140 °F).** Matprat's method (2 min + 2 min + 5 min covered on
+   low) is the Norwegian standard for pan-fried white fish fillets; the covered low-heat
+   finish ensures even cooking through thick fillets without browning the exterior.
+9. Finely cut the chives and sprinkle over the fish just before serving. Serve with the
+   barley risotto.
+10. Final serving temperature: **60–63 °C / 140–145 °F** (Norwegian tradition, hyse/kolje,
+    covered low-heat finish).
 
 ---
 
-### 3. Steven Raichlen — New England Pan-Fried Haddock (American tradition)
-**Source**: Steven Raichlen, *BBQ USA* (Workman Publishing, 2003); the New England pan-fry preparation is documented in the regional chapter  
-**Serves**: 4 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
+### 3. Chefkoch.de / Pelikan — Schellfisch in Senfsauce / Haddock in Mustard Sauce (German tradition)
+**Source**: Pelikan, Chefkoch.de community recipe (4/5 stars, 9 ratings);
+chefkoch.de/rezepte/338981117674439/Schellfisch-in-Senfsauce.html (fetched 2026-04-24)
+**Serves**: 4 · **Total**: 20 min
 
 **Ingredients**
-- 4 haddock fillets, 170–200 g each, skinless
-- 5 g (1 tsp) kosher salt
-- 3 g (½ tsp) freshly ground black pepper
-- 60 g fine yellow cornmeal (or plain flour)
-- 45 ml (3 tbsp) vegetable oil
-- 60 g unsalted butter
-- 30 g fresh flat-leaf parsley, chopped
+- 800 g haddock fillet (Schellfischfilet)
+- 150 g butter, divided
+- 100 g Dijon mustard (Senf Dijon)
+- 2 egg yolks (Eigelb)
+- 150 g yoghurt
+- Pinch of sugar
+- 1 lemon, juice only
+- Salt and pepper
+
+**Method**
+1. Melt half the butter in a small saucepan. Stir in the Dijon mustard and egg yolks. Allow
+   to thicken on very low heat without letting the eggs scramble. Stir in the yoghurt.
+   Season with sugar, salt and pepper. Keep warm.
+2. Cut the haddock fillet into approximately 5 cm pieces. Season with lemon juice, salt and
+   pepper.
+3. Melt the remaining butter in a frying pan.
+4. Insert the MEATER probe laterally from the thick edge of one piece.
+5. Fry the fish pieces for 2 minutes on each side in the melted butter.
+6. **Pull at 58–60 °C (136–140 °F).** The 2+2-minute fry in butter gives a gentle, golden
+   exterior on the 5 cm pieces; the mustard sauce adds acidity and richness typical of the
+   German North Sea coastal tradition.
+7. Pour the warm mustard sauce onto warmed plates; arrange the fried haddock pieces on top.
+8. Serve with buttered spinach or braised leek and sautéed potatoes (Schwenkkartoffeln).
+9. Final serving temperature: **60–63 °C / 140–145 °F** (German coastal tradition).
+
+---
+
+### 4. Suzy Karadsheh (The Mediterranean Dish) — Mediterranean Lemon-Garlic Haddock with Artichoke Hearts (Egyptian-American / Mediterranean tradition)
+**Source**: Suzy Karadsheh, The Mediterranean Dish;
+themediterraneandish.com/haddock-recipe/ (fetched 2026-04-24)
+**Serves**: 4 · **Cook**: 20 min
+
+**Ingredients**
+- 4 haddock fillets, thawed completely if frozen
+- ½ tsp dried oregano
+- ½ tsp Aleppo pepper (or pinch of red pepper flakes)
+- ½ tsp ground coriander
+- ½ tsp paprika
+- Pinch of black pepper
+- Extra virgin olive oil
+- 1 tbsp unsalted butter (optional)
+- 4 garlic cloves, minced
+- 2 shallots, thinly sliced
+- Splash of dry white wine (chardonnay, pinot gris or sauvignon blanc)
 - Juice of 1 lemon
-- Malt vinegar (the New England condiment choice), to serve
+- 1 can (400 g) artichoke hearts, drained and halved
+- 2 fresh tomatoes, chopped
+- Handful of green olives
+- Fresh herbs (parsley or dill), chopped
 
 **Method**
-1. Season haddock fillets on both sides with salt and pepper.
-2. Dredge in cornmeal; shake off excess (cornmeal gives a coarser, crunchier crust than flour).
-3. Heat a large cast-iron skillet over medium-high heat. Add oil and half the butter.
-4. Add haddock. Insert the MEATER probe from the thick end of one fillet into the centre of the flesh.
-5. Cook 4–5 minutes per side, turning once.
-6. **Pull at 63–65 °C (145–149 °F).** New England standard: fully cooked, large moist flakes, the cornmeal crust golden and crunchy.
-7. Rest 2 minutes. Add remaining butter; melt; add lemon and parsley. Pour over fish. Serve with malt vinegar. Final serving temperature: **65–68 °C / 149–154 °F** (fully cooked, American New England standard).
+1. Mix together the oregano, Aleppo pepper, coriander, paprika and black pepper to make
+   the spice rub. Apply to both sides of the haddock fillets.
+2. Heat a drizzle of extra virgin olive oil and the butter in a wide skillet over medium-high
+   heat. Add garlic and shallots and sauté briefly — about 2 minutes — until fragrant and
+   starting to soften.
+3. Add a splash of white wine and the lemon juice; let reduce briefly.
+4. Add the artichoke hearts; season with a pinch of salt.
+5. Lay the seasoned haddock fillets in the pan over the artichoke mixture.
+6. Insert the MEATER probe laterally from the thick edge of one fillet.
+7. Poach/cook the fish in the sauce for 4–5 minutes until just cooked through, spooning
+   the sauce over the fillets as they cook.
+8. **Pull at 58–60 °C (136–140 °F).** The Mediterranean Dish's one-skillet poaching method
+   gently cooks the haddock from below without direct high heat; the sauce keeps the lean
+   flesh moist throughout. "Just cooked through" corresponds to 58–60 °C internal.
+9. Add chopped tomatoes, green olives and fresh herbs; warm through briefly.
+10. Serve directly from the skillet. Final serving temperature: **60–63 °C / 140–145 °F**
+    (Mediterranean tradition, lemony sauce with artichokes and olives).
 
 ---
 
-### 4. Feargus Henderson — Smoked Haddock with Soft-Boiled Eggs (British / Scottish tradition)
-**Source**: Fergus Henderson, *The Complete Nose to Tail* (Bloomsbury Publishing, 2012)  
-**Serves**: 2 · **Prep**: 10 min · **Cook**: 8–10 min · **Rest**: 2 min
+## Temperature consensus
 
-**Ingredients**
-- 2 natural smoked haddock fillets (*Finnan haddie* — cold-smoked Scottish haddock with pale gold flesh; do not use bright yellow artificially dyed smoked haddock), 180–200 g each
-- 30 ml (2 tbsp) full-fat milk
-- 2 eggs (for soft-boiling)
-- 30 g unsalted butter
-- Freshly ground black pepper (smoked haddock is already salty — do not add more salt)
-- Flat-leaf parsley, roughly chopped
+| Source | Pull temperature | Tradition / method |
+|--------|----------------|-------------------|
+| BBC Good Food (British) | 58–60 °C | 2–3 min each side, flour-dusted, non-stick pan |
+| Matprat.no (Norwegian) | 58–60 °C | 2 min each side + 5 min covered on low heat |
+| Chefkoch.de (German) | 58–60 °C | 2 min each side in butter, 5 cm pieces |
+| The Mediterranean Dish (Egyptian-American) | 58–60 °C | 4–5 min poached in lemon-artichoke sauce |
 
-**Method**
-1. Soft-boil eggs in simmering water for 6 minutes; refresh in cold water; peel carefully.
-2. Pour milk into a wide, shallow pan. Add smoked haddock fillets skin-side down. The milk poaching step begins before the sear: bring milk to a gentle simmer over medium heat; poach 3–4 minutes. Remove fillets; pat dry.
-3. Heat a separate dry non-stick pan over medium heat. Add butter. When foaming, add poached haddock skin-side down.
-4. Insert the MEATER probe from the thick end into the centre of the flesh.
-5. Pan-fry 2–3 minutes per side to lightly colour the surface.
-6. **Pull at 65 °C (149 °F).** Henderson's smoked haddock (which is pre-cured and has already been partially preserved) benefits from full internal heat — the flesh should be opaque throughout and separate cleanly into large moist flakes.
-7. Rest 2 minutes. Serve with halved soft-boiled egg; scatter parsley; black pepper. Final serving temperature: **67–68 °C / 153–154 °F** (fully heated through, Scottish smoked standard).
+**Consensus pull**: **58–60 °C (136–140 °F)** across all four traditions. USDA minimum
+for finfish is 63 °C (145 °F); fillets at 58–60 °C reach 62–63 °C with brief resting.
 
----
+**Representative coding value**: **60 °C (140 °F)** nominal pull, practical range 58–63 °C.
 
-### 5. Nigella Lawson — Pan-Fried Haddock with Salted Capers (British home-cooking tradition)
-**Source**: Nigella Lawson, *Nigella Bites* (Chatto & Windus, 2001)  
-**Serves**: 2 · **Prep**: 5 min · **Cook**: 7–8 min · **Rest**: 2 min
+## Notes for cooking_data.py
 
-**Ingredients**
-- 2 haddock fillets, skin-on, 180–200 g each
-- Sea salt and freshly ground black pepper
-- 30 ml (2 tbsp) olive oil
-- 20 g (1½ tbsp) unsalted butter
-- 30 g small salted capers, rinsed (not in brine)
-- Juice of ½ lemon
-- 15 g flat-leaf parsley, roughly torn
-
-**Method**
-1. Pat haddock dry; season both sides with salt and pepper.
-2. Heat a non-stick frying pan over high heat. Add olive oil.
-3. Place fillets skin-side down; press briefly.
-4. Insert the MEATER probe from the thick end into the centre of the flesh.
-5. Cook skin-side down 4–5 minutes; the skin should be golden and pulling away from the flesh slightly.
-6. Flip; add butter and capers; cook 2–3 minutes, basting.
-7. **Pull at 62–64 °C (144–147 °F).** Nigella's standard: "barely cooked through — still yielding, the flakes large and glistening."
-8. Squeeze lemon over; scatter parsley. Rest 2 minutes. Final serving temperature: **64–66 °C / 147–151 °F** (fully cooked, caper-bright, British home-cooking standard).
-
----
+- `doneness`: `just_cooked`
+- `pull_temp_c`: 60
+- `pull_temp_range_c`: [58, 63]
+- `safety_level`: `safe` at 63 °C; `caution` below 60 °C
+- Flour dusting (British, German traditions) creates a protective crust and improves evenness.
+- The Norwegian covered low-heat finishing method (2+2+5 min covered) is effective for
+  ensuring even cooking through thicker fillets without burning.
+- The MEATER probe must be inserted laterally in fillets thinner than 2 cm.

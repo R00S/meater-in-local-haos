@@ -1,116 +1,175 @@
 # Swordfish × Pan Sear — Recipe Temperature Research
 
+## Tree position
+
+| Field | Value |
+|-------|-------|
+| Category | `fish` |
+| Cut type folder | `white_fish/` |
+| Cut slug | `swordfish` |
+| Method slug | `pan_sear` |
+| File | `swordfish-pan_sear.md` |
+| Full path | `docs/recipe_research/fish/white_fish/swordfish-pan_sear.md` |
+
 ## Cut profile
 
-Swordfish (*Xiphias gladius*) steak is cut transversely through the trunk of the fish, producing a meaty, dense, almost steak-like cut with a characteristic cartilaginous bone at the centre. The flesh is ivory-white to pale pink when raw, cooking to a firm, opaque texture; it is moderately fat (more than cod, less than tuna) with a mild, slightly sweet flavour and a meaty texture that makes it the most "steak-like" of common fish. Pan searing is a primary preparation — the firm flesh holds its shape on a hot pan without flaking, produces a good Maillard crust, and benefits from the same butter-basting techniques used on meat. Overcooked swordfish becomes dry and rubbery rapidly above 65 °C; the optimal range is 58–62 °C for a moist interior. Carryover is 3–4 °C.
+Swordfish (*Xiphias gladius*, Italian: pesce spada, Turkish: kılıçbalığı, Swedish: svärdfisk,
+Spanish: pez espada) is a large, meaty, open-ocean fish with compact, dense, steak-like flesh
+and a mild, slightly sweet flavour. Unlike most white fish, swordfish has very firm, non-flaky
+flesh similar in texture to tuna or veal — it can be cooked like a beefsteak. This makes it
+particularly well suited to pan-searing, griddling and grilling at high heat.
+
+Swordfish steaks are typically 2–3 cm thick and contain a moderate amount of fat distributed
+throughout the flesh, making them more forgiving than leaner white fish. They sear in a very
+hot pan for 1–3 minutes per side — overcooking is the primary risk, as the flesh dries and
+becomes chalky above 65 °C. The BBC Good Food tradition specifically warns against cooking
+for more than 1 minute per side on a very hot griddle, watching for the flesh to transition
+from translucent to pale cream (*cuisson*). Italian and Mediterranean cooks favour a
+slightly more moderate approach: 3–4 minutes per side over medium-high heat with olive oil.
+
+The MEATER probe should be inserted from the side of the steak into the centre of the flesh.
+Internal temperature targets: pull at 52–57 °C (125–135 °F) for medium-rare (still slightly
+translucent at the very centre, preferred by Italian and Mediterranean cooks); 57–60 °C
+(135–140 °F) for medium (just opaque throughout). USDA minimum for finfish is 63 °C (145 °F).
 
 ## Source recipes
 
-### 1. Rick Stein — Swordfish with Gremolata (Mediterranean / Italian tradition)
-**Source**: Rick Stein, *Rick Stein's Mediterranean Escapes* (BBC Books, 2007)  
-**Serves**: 2 · **Prep**: 10 min · **Cook**: 6–8 min · **Rest**: 2 min
+### 1. BBC Good Food — Griddled Swordfish with Pineapple & Chilli Salsa (British/Tropical fusion tradition)
+**Source**: BBC Good Food;
+bbcgoodfood.com/recipes/griddled-swordfish-pineapple-chilli-salsa (fetched 2026-04-24)
+**Serves**: 4 · **Prep**: 30 min + 1 h marinating · **Cook**: 2–3 min
 
 **Ingredients**
-- 2 swordfish steaks, 200–250 g each, 2.5–3 cm thick
-- Sea salt and freshly ground black pepper
-- 30 ml (2 tbsp) olive oil
-- **Gremolata**: finely grated zest of 2 lemons; 30 g flat-leaf parsley, finely chopped; 2 garlic cloves, finely minced
+- 800 g loin of swordfish (or 4 steaks, about 180 g each, 2 cm thick)
+- 120 ml olive oil, plus 3 tbsp for salsa
+- 2 tbsp sesame oil
+- Juice of 2 limes
+- 2 large garlic cloves, lightly crushed
+- 1 sprig fresh rosemary
+- **Pineapple & chilli salsa**: 1 medium fresh pineapple; 1 small shallot; 2 tbsp olive oil;
+  remaining sesame oil; 2 large red chillies, deseeded and chopped; 1 stick lemongrass,
+  peeled and diced; 1 garlic clove; lime juice; 4 spring onions, roughly chopped; 20 g
+  fresh ginger, peeled and diced; 10 large coriander leaves; 8 large basil leaves
 
 **Method**
-1. Mix gremolata ingredients; set aside.
-2. Season swordfish steaks on both sides with salt and pepper.
-3. Heat a heavy pan (cast iron or stainless) over high heat until smoking. Add olive oil.
-4. Place swordfish in the pan. Insert the MEATER probe from the side of one steak through the cross-section into the centre, clear of the cartilaginous bone in the centre.
-5. Sear undisturbed 3–4 minutes; the surface should be golden-brown.
-6. Flip. Cook 3–4 minutes on the second side.
-7. **Pull at 58–60 °C (136–140 °F).** Stein's Mediterranean target: "still just a little pink at the centre, not dry — swordfish dries out catastrophically if overcooked."
-8. Rest 2 minutes. Scatter gremolata generously over the top. Final serving temperature: **60–63 °C / 140–145 °F** (just cooked, Italian-Mediterranean standard).
+1. Trim the swordfish of any fatty layers and cut out any bloodstained flesh (or ask your
+   fishmonger). Cut into 4 chunky steaks, about 2 cm thick — even thickness is essential
+   for a perfect *cuisson* (doneness).
+2. In a shallow dish, mix 120 ml olive oil, 1 tbsp sesame oil, juice of 1 lime, 1 lightly
+   crushed garlic clove, 2 good pinches of salt and the rosemary. Place the steaks in the
+   marinade; cover and chill for 1 hour up to 1 day, turning once or twice.
+3. For the salsa: peel and dice the pineapple; blend two-thirds with 1 tsp salt, shallot,
+   2 tbsp olive oil and remaining sesame oil until smooth. Crush chillies, lemongrass,
+   1 garlic clove and lime juice in a mortar; work in spring onions and ginger to form a
+   paste. Fold in the coriander, basil, pineapple purée and diced pineapple. Chill.
+4. To cook: heat a griddle or frying pan until really hot.
+5. Drain the steaks from the marinade; pat lightly.
+6. Insert the MEATER probe from the side of one steak into the centre of the flesh.
+7. Place steaks on the hot griddle/pan. Watch the flesh change from translucent to pale
+   cream (*cuisson*). Cook for 1 minute, then turn and cook for 1 minute more — no more!
+8. **Pull at 52–57 °C (125–135 °F).** The BBC explicitly cautions against any further
+   cooking once the flesh transitions to pale cream. This rapid 1+1-minute technique on a
+   very hot pan means the internal temperature peaks quickly around 52–57 °C (medium-rare
+   to medium). Swordfish cooked beyond 60 °C becomes dry and chalky.
+9. Arrange cherry tomatoes, cucumber pappardelle and any leaves on plates; top with swordfish
+   and drizzle over the salsa.
+10. Final serving temperature: **55–60 °C / 131–140 °F** (British/tropical fusion, quick
+    very-hot-pan technique).
 
 ---
 
-### 2. Nobu Matsuhisa — Pan-Seared Swordfish with Ponzu (Japanese tradition)
-**Source**: Nobu Matsuhisa and Mark Edwards, *Nobu: The Cookbook* (Kodansha International, 2001)  
-**Serves**: 2 · **Prep**: 10 min · **Cook**: 6–7 min · **Rest**: 2 min
+### 2. BBC Good Food — Seared Swordfish with Mango Salsa (British/Caribbean tradition)
+**Source**: BBC Good Food magazine, June 2007;
+bbcgoodfood.com/recipes/seared-swordfish-mango-salsa (fetched 2026-04-24)
+**Serves**: 2 · **Cook**: 6 min
 
 **Ingredients**
-- 2 swordfish steaks (*me-kajiki* — Japanese broadbill swordfish), 200–230 g each, 2.5 cm thick
-- Fine salt and freshly ground white pepper
-- 15 ml (1 tbsp) vegetable oil
-- **Ponzu**: 60 ml (¼ cup) fresh yuzu or lemon juice; 45 ml (3 tbsp) soy sauce; 15 ml (1 tbsp) mirin; 10 ml (2 tsp) rice wine vinegar
-- Grated daikon and sliced spring onion, to serve
+- 1 tbsp olive oil
+- 2 swordfish steaks, about 100 g each (buy from sustainable stocks)
+- ½ mango, peeled and chopped
+- 2 spring onions, thinly sliced
+- 1 red chilli, deseeded and finely chopped
+- Zest and juice of ½ lime
+- Handful of coriander leaves, chopped
+- Salad leaves, to serve
 
 **Method**
-1. Mix ponzu ingredients; set aside.
-2. Pat swordfish dry. Season with fine salt and white pepper.
-3. Heat a carbon-steel or cast-iron pan over the highest heat until smoking. Add oil.
-4. Place swordfish in the pan. Insert the MEATER probe from the side into the centre of the steak, clear of the central bone.
-5. Sear 3 minutes undisturbed.
-6. Flip. Cook 2–3 minutes.
-7. **Pull at 58 °C (136 °F).** Nobu's standard for swordfish is barely cooked — the Japanese tradition values the moist, almost-tuna-like interior of just-set swordfish.
-8. Rest 2 minutes. Serve with ponzu, grated daikon and spring onion. Final serving temperature: **60–62 °C / 140–144 °F** (just cooked, Japanese standard).
+1. Rub the olive oil all over the fish and season with salt and pepper.
+2. Heat a griddle pan or BBQ until very hot.
+3. Insert the MEATER probe from the side of one steak into the centre.
+4. Cook the fish for 3 minutes, then turn over and cook for 3 minutes on the other side
+   until charred and just cooked through.
+5. For the salsa: toss together the mango, spring onions, chilli, lime zest and juice and
+   coriander.
+6. **Pull at 57–60 °C (135–140 °F).** The 3+3-minute cook is appropriate for 100 g thin
+   steaks; "just cooked through" for swordfish means still moist and only just set —
+   corresponding to approximately 57–60 °C.
+7. Serve with the mango salsa and salad leaves.
+8. Final serving temperature: **60–63 °C / 140–145 °F** (British/Caribbean tradition).
 
 ---
 
-### 3. Julia Child — Espadon Sauté (French classical tradition)
-**Source**: Julia Child, *Julia and Jacques Cooking at Home* (Alfred A. Knopf, 1999); Child addresses swordfish as one of the "meaty fish" suitable for sauté  
-**Serves**: 2 · **Prep**: 5 min · **Cook**: 7–8 min · **Rest**: 2 min
+### 3. Giallozafferano — Pesce Spada in Padella con Capperi e Olive / Pan-Seared Swordfish with Capers and Olives (Italian/Sicilian tradition)
+**Source**: Giallozafferano (Italian culinary media);
+ricette.giallozafferano.it/Pesce-spada-in-padella.html (fetched 2026-04-24)
+**Serves**: 4 · **Prep**: 15 min · **Cook**: 10 min
 
 **Ingredients**
-- 2 swordfish steaks, 200–250 g each, 3 cm thick
-- Fine salt and freshly ground white pepper
-- 50 g plain flour
-- 40 ml (3 tbsp) olive oil or clarified butter
-- 30 g whole unsalted butter
-- 20 g flat-leaf parsley, chopped
+- 4 swordfish steaks (pesce spada), about 200 g each, 2–3 cm thick
+- Extra virgin olive oil
+- Salt and freshly ground pepper
+- 2 garlic cloves, minced
+- 100 g cherry tomatoes (pomodorini), halved
+- 50 g pitted black olives (olive nere denocciolate)
+- 30 g salted capers, rinsed
+- Fresh parsley (prezzemolo), chopped
 - Juice of ½ lemon
 
 **Method**
-1. Season swordfish on both sides. Dredge lightly in flour; shake off excess.
-2. Heat a wide sauté pan over medium-high heat. Add oil; heat until shimmering.
-3. Add swordfish. Insert the MEATER probe from the side into the centre, clear of the central bone.
-4. Cook 3–4 minutes per side without moving.
-5. **Pull at 60–62 °C (140–144 °F).** Julia's target: fully cooked, moist, with the flour crust golden.
-6. Transfer to warm plates. Add butter to pan; cook to *beurre noisette*. Add lemon and parsley. Pour over. Final serving temperature: **62–65 °C / 144–149 °F** (fully cooked, French classical).
+1. Pat the swordfish steaks dry and season with salt and pepper on both sides.
+2. Heat extra virgin olive oil in a large non-stick skillet over medium-high heat.
+3. Add the garlic; sauté briefly until fragrant (do not brown).
+4. Add the swordfish steaks to the pan.
+5. Insert the MEATER probe from the side of one steak into the centre.
+6. Cook for 3–4 minutes on the first side without moving, until a golden crust forms.
+7. Flip; cook the other side for a further 2–3 minutes. The Sicilian/Italian technique for
+   swordfish is a moderate-heat sear — longer than the British griddle approach, but the
+   flesh is kept moist by the aromatics and short cooking time.
+8. Add the cherry tomatoes, olives and capers to the pan around the fish; sauté briefly
+   for 2 minutes to warm through.
+9. **Pull at 55–58 °C (131–136 °F).** Italian Sicilian tradition for pesce spada prefers
+   the flesh barely set, still moist and white throughout, not chalky. The probe should
+   confirm the flesh has just lost its translucency at the centre.
+10. Finish with a squeeze of lemon and a scattering of parsley.
+11. Final serving temperature: **57–60 °C / 135–140 °F** (Italian/Sicilian tradition,
+    capers-olives-tomatoes *alla Siciliana*).
 
 ---
 
-### 4. Marcella Hazan — Pesce Spada in Padella (Italian / Sicilian tradition)
-**Source**: Marcella Hazan, *Essentials of Classic Italian Cooking* (Alfred A. Knopf, 1992)  
-**Serves**: 4 · **Prep**: 10 min (+1 h marinade) · **Cook**: 8–10 min · **Rest**: 2 min
+## Temperature consensus
 
-**Ingredients**
-- 4 swordfish steaks (*pesce spada*), 180–200 g each, 2–2.5 cm thick
-- 60 ml (¼ cup) fresh lemon juice
-- 30 ml (2 tbsp) olive oil
-- 2 garlic cloves, lightly crushed
-- Fine salt and freshly ground black pepper
-- 20 g fresh flat-leaf parsley, finely chopped
-- Lemon wedges, to serve
+| Source | Pull temperature | Tradition / method |
+|--------|----------------|-------------------|
+| BBC Good Food — Pineapple Salsa (British/Tropical) | 52–57 °C | 1 min each side on very hot griddle |
+| BBC Good Food — Mango Salsa (British/Caribbean) | 57–60 °C | 3 min each side on hot griddle |
+| Giallozafferano (Italian/Sicilian) | 55–58 °C | 3–4 min + 2–3 min on medium-high heat |
 
-**Method**
-1. Marinate swordfish in lemon juice, olive oil and crushed garlic for 1 hour. Remove garlic; pat surface dry (the lemon and oil would burn on a very hot pan).
-2. Heat a heavy frying pan over medium-high heat with a small amount of fresh oil.
-3. Season swordfish; place in the pan. Insert the MEATER probe from the side into the centre, clear of bone.
-4. Cook 4–5 minutes per side.
-5. **Pull at 60–62 °C (140–144 °F).** Hazan's Sicilian standard: fully cooked, moist, with the lemon marinade flavour having penetrated the flesh.
-6. Rest 2 minutes. Scatter parsley; serve with lemon wedges. Final serving temperature: **62–65 °C / 144–149 °F** (fully cooked, Italian Sicilian standard).
+**Consensus pull**: **55–58 °C (131–136 °F)** for swordfish — this fish is best served
+medium-rare to medium, not fully cooked. The USDA minimum of 63 °C (145 °F) produces dry,
+chalky flesh in swordfish; the accepted culinary standard is lower, similar to tuna. All
+three traditions agree that the flesh should be just set, no longer translucent, still moist.
 
----
+**Representative coding value**: **57 °C (135 °F)** as the nominal pull, practical range
+52–60 °C. Use MEATER "just cooked" target of 57°C; note USDA recommends 63°C.
 
-### 5. Paula Wolfert — Swordfish Chermoula (Moroccan tradition)
-**Source**: Paula Wolfert, *The Food of Morocco* (Ecco/HarperCollins, 2011)  
-**Serves**: 4 · **Prep**: 20 min (+2 h marinade) · **Cook**: 8–10 min · **Rest**: 2 min
+## Notes for cooking_data.py
 
-**Ingredients**
-- 4 swordfish steaks, 180–200 g each
-- **Chermoula**: 40 g fresh coriander; 20 g flat-leaf parsley; 4 garlic cloves; 10 g ground cumin; 5 g sweet paprika; 3 g turmeric; 60 ml (¼ cup) olive oil; 30 ml (2 tbsp) lemon juice; 5 g fine salt; pinch cayenne
-
-**Method**
-1. Blend chermoula to a rough paste. Coat swordfish generously; marinate 2 hours refrigerated.
-2. Scrape excess marinade; heat a heavy pan over medium-high heat with a little oil.
-3. Place swordfish in the pan. Insert the MEATER probe from the side into the centre, clear of the central bone.
-4. Cook 4–5 minutes per side.
-5. **Pull at 60–62 °C (140–144 °F).** Wolfert's Moroccan standard: fully cooked, with the chermoula flavour penetrating the flesh deeply.
-6. Rest 2 minutes. Serve with lemon and flatbread. Final serving temperature: **62–65 °C / 144–149 °F** (fully cooked, Moroccan standard).
-
----
+- `doneness`: `just_cooked` (medium, just barely set, still very moist)
+- `pull_temp_c`: 57
+- `pull_temp_range_c`: [52, 60]
+- `safety_level`: note that USDA minimum is 63 °C; 57 °C is accepted culinary practice
+- Swordfish is treated like a steak — medium-rare (52°C) to medium (57°C) is normal.
+- The MEATER probe must be inserted from the side/edge into the centre of the steak.
+- Very high heat / short time (BBC approach) vs medium-high / slightly longer (Italian
+  approach) both result in the same target range.
+- Trim and discard any bloodline (dark red/brown flesh) before cooking.
