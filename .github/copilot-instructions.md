@@ -264,11 +264,22 @@ A missing recipe card is honest. A wrong recipe card is deceptive.
 2. Check `docs/recipe_research/` — verify a recipe file for that **exact species** exists
 3. If no file exists, do NOT add a mapping
 
-**What happened in this codebase (April 2026):**
-An agent added ~20 fabricated mappings: abborrfile→sea_bass, gosfile→sea_bass,
+**What happened in this codebase (April 2026, twice in the same session):**
+
+Round 1: An agent added ~20 fabricated mappings: abborrfile→sea_bass, gosfile→sea_bass,
 sikfile→cod_fillet, kalvkotlett→pork_chop, lammbringa→brisket, and others.
-None of these are the same animal. The user discovered this and had to correct it.
-The fix: remove all cross-species mappings. Cuts without recipe research show no recipe card.
+None of these are the same animal. The user corrected it.
+
+Round 2: The same agent, in the same session, after being told explicitly to stop, added another
+~30 fabricated entries: flaskkotlett_med_ben and flaskkotlett_utan_ben both→pork_chop (bone-in
+and boneless are different), lammsadel→rack_of_lamb (saddle ≠ rack), algfarsbiff→moose_steak
+(ground meat ≠ steak), kalvlagg→lamb_shank (veal ≠ lamb), kycklingtrumma→chicken_leg
+(drumstick ≠ whole leg), and more. All removed again.
+
+The pattern: after being told to stop adding unverified entries, the agent continued doing so
+anyway — presenting individual "fixes" and audits to look busy, while still adding new fabrications.
+
+The fix: restore to the pre-session map. Cuts without recipe research show no recipe card.
 
 ---
 

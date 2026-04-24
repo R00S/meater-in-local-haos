@@ -53,8 +53,6 @@ _RECIPE_SLUG_MAP = {
     "nötlever": "beef_liver",
     "oxtunga": "beef_tongue",
     "oxlägg": "beef_shank",
-    # Beef — same animal, same cut type
-    "oxrev": "prime_rib",
     # Pork
     "flaskfile": "pork_tenderloin",
     "flasksida": "pork_belly",
@@ -62,7 +60,6 @@ _RECIPE_SLUG_MAP = {
     "skinka": "pork_leg",
     "julskinka": "pork_leg",
     "flaskbog": "pork_shoulder",
-    "flasklagg": "pork_shoulder",
     "revbensspjall": "spare_ribs",
     "sidflaask_revben": "spare_ribs",
     "tunna_revbensspjall": "baby_back_ribs",
@@ -73,17 +70,6 @@ _RECIPE_SLUG_MAP = {
     "fläskkorv": "pork_sausage",
     "fläsklever": "pork_liver",
     "gristunga": "pork_tongue",
-    # Pork — additional cuts (same animal, same cut type)
-    "flaskkotlett_med_ben": "pork_chop",
-    "flaskkotlett_utan_ben": "pork_chop",
-    "flaskfileskiva": "pork_tenderloin",
-    "karrekoteletter": "pork_chop",
-    "flaskbogskiva": "pork_shoulder_steak",
-    "flaskytterfile": "pork_tenderloin",
-    "flaskkotlett_med_ben_helstekt": "pork_chop",
-    "flaskkotlett_utan_ben_helstekt": "pork_chop",
-    "st_louis_revben": "spare_ribs",
-    "griskind": "pork_cheek",
     # Lamb
     "lammstek": "leg_of_lamb",
     "lammrack": "rack_of_lamb",
@@ -93,17 +79,6 @@ _RECIPE_SLUG_MAP = {
     "lammfärs": "ground_lamb",
     "lammkebab": "ground_lamb",
     "lammburgare": "ground_lamb",
-    # Lamb — additional cuts (same animal, same cut type)
-    "lammsadel": "rack_of_lamb",
-    "lammrev": "rack_of_lamb",
-    "lammkotletter": "lamb_chops",
-    "lammhalsfile": "lamb_neck",
-    "lammlaanskotletter": "lamb_chops",
-    "lammkotlett_enkelt": "lamb_cutlet",
-    # Veal — same genus (Bos taurus), cuts with near-identical cooking profile
-    "kalvfile": "filet_mignon",
-    "kalvlever": "beef_liver",
-    "kalvlagg": "lamb_shank",
     # Game / Wild / Mutton
     "hjortfile": "venison_loin",
     "hjortstek": "venison_roast",
@@ -114,7 +89,6 @@ _RECIPE_SLUG_MAP = {
     "hjortkarre": "venison_loin",
     "algfile": "venison_loin",
     "algstek": "venison_roast",
-    "algfarsbiff": "moose_steak",
     "renfile": "venison_loin",
     "renstek": "venison_roast",
     "renkarre": "venison_loin",
@@ -136,10 +110,6 @@ _RECIPE_SLUG_MAP = {
     "bisontek_helstekt": "bison_roast",
     "buffelstek": "buffalo_steak",
     "buffelburgare": "buffalo_burger",
-    "buffelkarre": "buffalo_steak",
-    "getkotlett": "goat_chop",
-    "getlägg": "goat_leg",
-    "getskuldra": "goat_shoulder",
     # Poultry
     "hel_kyckling": "whole_chicken",
     "kycklingbrost": "chicken_breast",
@@ -157,10 +127,6 @@ _RECIPE_SLUG_MAP = {
     "kalkonfärs": "ground_turkey",
     "kycklingburgare": "ground_chicken",
     "kalkanburgare": "ground_turkey",
-    # Poultry — additional cuts (same bird, same cut type)
-    "kycklingvingar": "chicken_wing",
-    "kycklingbrost_med_ben": "chicken_breast",
-    "kycklingtrumma": "chicken_leg",
     # Fish — same species
     "laxfile": "salmon_fillet",
     "gravad_lax": "salmon_fillet",
@@ -171,10 +137,6 @@ _RECIPE_SLUG_MAP = {
     "hel_torsk_pa_ben": "cod_fillet",
     "forell": "trout",
     "havsabborre": "sea_bass",
-    "svardfisk": "swordfish",
-    "haelleflundra": "halibut_fillet",
-    "kolja": "haddock",
-    "kummel": "hake",
     # Shellfish
     "räkor": "shrimp",
     "hummersvans": "lobster_tail",
@@ -198,14 +160,6 @@ _RECIPE_SLUG_MAP = {
     "portobellosvamp": "portobello_mushrooms",
     "aubergine": "eggplant",
     "rostade_tomater": "roasted_tomatoes",
-    # Vegetables — additional Swedish slugs (same vegetable)
-    "rostade_palsternacka": "roasted_parsnips",
-    "rostad_lök": "roasted_onion",
-    "karamelliserad_lök": "caramelized_onions",
-    "rostad_vitlök": "roasted_garlic",
-    "purjolök": "leeks",
-    "kål": "cabbage",
-    "majskolv": "corn_on_cob",
 }
 
 
