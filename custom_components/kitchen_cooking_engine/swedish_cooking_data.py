@@ -1007,6 +1007,25 @@ SWEDISH_PORK_ROASTS = [
         carryover_temp_c=5,
         temperature_ranges=[SWEDISH_DONENESS_PULLED],
     ),
+    MeatCut(
+        id=2218,
+        name="flasklagg",
+        name_long="Fläsklägg (Pork Shank/Hock)",
+        cut_order=8,
+        estimated_thickness_mm=80,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=15,
+        rest_time_max=30,
+        carryover_temp_c=5,
+        temperature_ranges=[SWEDISH_DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
+    ),
 ]
 
 SWEDISH_PORK_RIBS = [
@@ -1337,6 +1356,30 @@ SWEDISH_LAMB_ROASTS = [
         rest_time_max=20,
         carryover_temp_c=5,
         temperature_ranges=[SWEDISH_DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
+    ),
+    MeatCut(
+        id=3084,
+        name="lammnacke",
+        name_long="Lammnacke (Lamb Neck)",
+        cut_order=7,
+        estimated_thickness_mm=70,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=15,
+        rest_time_max=25,
+        carryover_temp_c=5,
+        temperature_ranges=[SWEDISH_DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.BRAISE,
+            CookingMethod.SLOW_COOKER,
+            CookingMethod.OVEN_ROAST,
+        ],
         recommended_doneness="well_done",
     ),
     MeatCut(
