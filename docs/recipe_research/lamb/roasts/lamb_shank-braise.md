@@ -13,32 +13,55 @@
 
 ## Cut profile
 
-The lamb shank is the lower portion of the leg — the section below the knee joint on either
-the fore (front) or hind (back) leg. It contains a central bone surrounded by a dense network
-of collagen-rich connective tissue, which transforms into gelatin during prolonged moist-heat
-cooking and gives braised lamb shank its characteristic sticky, unctuous sauce and
-fall-off-the-bone texture. The shank has relatively little intramuscular fat compared with
-the shoulder but abundant surface and inter-muscular fat that melts into the braising liquid.
-Because of the high collagen content, the shank is uniquely unsuited to dry-heat methods
-— it must reach 85–95 °C internal temperature and be held there for 2–4 hours for collagen
-conversion to complete. Any reading below 80 °C will leave the meat tough regardless of cooking
-time. This makes the MEATER probe essential for monitoring approach to the braising window;
-the pull temperature is the **minimum** at which the meat has rendered sufficiently, not a
-precision target. The shank is universal across Mediterranean, Middle Eastern, Northern European,
-Central Asian, and Indian culinary traditions. Braising liquid varies from red or white wine
-(European), beer (Belgian/Scandinavian), cider (Norman/Swedish), saffron-tomato (Persian/Moroccan),
-to spiced yoghurt or lentil-thickened broth (Indian/Turkish).
+Lamb shank (the lower leg, hind or fore) is one of the most prized braising cuts in the world. The dense connective tissue, bone marrow, and rich muscle fibres transform through 2–3 hours of moist heat into fall-off-the-bone, gelatinous, deeply flavoured meat. It is the flagship dish of Mediterranean cooking (Italy, Greece, Turkey, France), the Middle East (Persian mahiche), and Australia. The target is **pull-apart tender** at 82–88 °C internal — not medium-pink as with steaks. A MEATER probe is inserted into the thickest part of the shank meat (above the bone) to verify doneness.
+
+Target internal temperature: **82–88 °C (180–190 °F)** for fall-off-the-bone tender. USDA minimum for lamb is 63 °C, but for braised shanks this is far too early — braising is not complete until collagen has dissolved.
 
 ## Source recipes
 
-### 1. BBC Good Food — Braised Lamb Shanks (British tradition)
-**Source**: BBC Good Food, *bbcgoodfood.com/recipes/braised-lamb-shanks*
-(fetched 2026-04-24, author: Good Food magazine)
-**Serves**: 8 · **Prep**: 20 min · **Cook**: 2 hrs · **Rest**: 5 min
+### 1. The Mediterranean Dish — Red Wine Braised Lamb Shanks (Mediterranean tradition)
+**Source**: The Mediterranean Dish (Suzy Karadsheh); https://www.themediterraneandish.com/braised-lamb-shanks/ (fetched 2026-04-24). *"One of the most popular and requested recipes on the site."*
+**Serves**: 6 · **Prep**: 20 min · **Cook**: 2 h 30 min (oven at 350°F / 175°C)
 
 **Ingredients**
-- 8 lamb shanks
+- 6 lamb shanks
+- 2¼ tsp garlic powder
+- 1 tsp sweet Spanish paprika
+- 1 tsp kosher salt + 1 tsp black pepper
+- ¾ tsp ground nutmeg
+- 2 tbsp olive oil (for searing)
+
+*Braising liquid:*
+- 1 medium yellow onion, roughly chopped
+- 2 celery ribs, roughly chopped
+- 3 large carrots, peeled and cut large
+- 450 g (1 lb) baby potatoes
+- 500 ml (2 cups) dry red wine (Merlot or Cabernet Sauvignon)
+- 720 ml (3 cups) beef broth
+- 800 g (28 oz) can whole peeled tomatoes (San Marzano preferred)
+- 2 cinnamon sticks
+- 4 sprigs fresh thyme
+- 2 sprigs fresh rosemary
+
+**Method**
+1. Preheat oven to 175 °C (350 °F). Mix garlic powder, paprika, salt, pepper, and nutmeg. Pat shanks dry and coat with spice mix.
+2. In a large Dutch oven over medium-high, heat olive oil. Working in batches, brown shanks on all sides (about 8 minutes per batch). Transfer to a tray.
+3. Pour off excess fat. Return pot to heat. Sauté onions, celery, carrots, and potatoes 5–7 minutes until gaining colour.
+4. Add wine; scrape up browned bits. Reduce briefly. Add broth, tomatoes, cinnamon, thyme, and rosemary. Season with a little salt and pepper. Return shanks; press to submerge. Boil 10 minutes, then turn off heat.
+5. Cover and transfer to oven. Braise 2½ hours — check periodically and add liquid if needed. The liquid will reduce to about ⅓ of starting volume.
+6. Insert MEATER probe into the thickest part of the largest shank. **Pull at 85–88 °C (185–190 °F)** when meat is falling off the bone.
+7. Serve on Lebanese rice, polenta, or orzo with braising vegetables and sauce.
+*Final temperature: 88–92 °C (190–198 °F).*
+
+---
+
+### 2. BBC Good Food — Braised Lamb Shanks (British tradition)
+**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/braised-lamb-shanks (fetched 2026-04-24). *Recipe from Good Food magazine.*
+**Serves**: 4 (2 shanks each) · **Prep**: 20 min · **Cook**: 2 hrs
+
+**Ingredients**
 - 2 tbsp olive oil
+- 8 lamb shanks
 - 1 onion, roughly chopped
 - 2 carrots, roughly chopped
 - Few sprigs fresh rosemary
@@ -50,271 +73,91 @@ to spiced yoghurt or lentil-thickened broth (Indian/Turkish).
 - 500 ml lamb or chicken stock
 
 **Method**
-1. Heat oven to 200 °C / fan 180 °C / gas 6. Pour the oil into a casserole dish or roasting
-   tray large enough to fit all the shanks. Over high heat on the hob, spend a good 10 minutes
-   browning the lamb all over.
-2. Remove the lamb, add the onion and carrot and cook for 10 minutes until starting to brown.
-   Stir in the herbs and garlic and cook for a few minutes more. Stir in the flour and tomato
-   purée, season well, then pour over the wine and stock.
-3. Return the lamb shanks to the pan. Bring to a simmer.
-4. Insert the MEATER probe lengthways into the thickest part of the shank, keeping the tip
-   away from the central bone.
-5. Cover with a lid or tightly with foil and cook in the oven, undisturbed, for 1½–2 hrs until
-   lamb is tender.
-6. Remove the lamb from the sauce and set aside. Put the pan back on the hob and bubble the
-   sauce for a few minutes until thickened to a gravy consistency.
-7. **Pull at 88–92 °C (190–198 °F)** — at this temperature the collagen has converted to
-   gelatin and the meat separates easily from the bone. The window is wide; holding at 90 °C
-   for 30 minutes produces more tender results than hitting 90 °C and immediately pulling.
-8. Final serving temperature: **88–92 °C / 190–198 °F** (braised — collagen fully rendered,
-   meat falling from bone).
+1. Heat oven to 200 °C (fan 180 °C). Heat oil in a large casserole dish. Brown all shanks well on all sides over high heat (about 10 minutes total). Remove shanks.
+2. Add onion and carrots; cook 10 minutes until starting to brown. Add herbs and garlic; cook 2 minutes. Stir in flour and tomato purée. Season well. Add wine and stock.
+3. Return shanks to the pan. Bring to a simmer. Cover tightly and cook in oven, undisturbed, for 1½–2 hours until lamb is tender.
+4. Remove lamb; set aside. Bubble sauce on the hob for 15 minutes until rich and glossy. Strain into a jug.
+5. Insert probe. **Verify 82–85 °C (180–185 °F)** when tender.
+6. Can be prepared 2 days ahead or frozen.
+*Final temperature: 85–88 °C (185–190 °F).*
 
 ---
 
-### 2. Nigella Lawson — Aromatic Lamb Shank Stew (British / Middle Eastern fusion)
-**Source**: Nigella Lawson, *Nigella Bites* (Chatto & Windus / Hyperion, 2001);
-nigella.com/recipes/aromatic-lamb-shank-stew (fetched 2026-04-24)
-**Serves**: 6 · **Prep**: 20 min · **Cook**: 1½–2 hrs
+### 3. Madensverden.dk — Lammeskank i rødvin, langtidsstegt (Danish tradition)
+**Source**: Madensverden.dk (Holger Rørby Madsen); https://madensverden.dk/lammeskank-roedvin-langtidsstegt/ (fetched 2026-04-24). *"A great simple recipe for lamb shank in red wine — incredibly tender meat."*
+**Serves**: 4 · **Prep**: 15 min · **Cook**: 2 h 30 min
+
+*Translation: Lamb shank in red wine, slow-cooked — Danish home cooking.*
 
 **Ingredients**
-- 8 lamb shanks
-- 2 onions
-- 4 cloves garlic
-- 1 sprinkling of salt
-- 1 tbsp turmeric
-- 1 tsp ground ginger
-- ¼ tsp dried chilli flakes
-- 2 tsp ground cinnamon
-- ¼ tsp freshly grated nutmeg
-- Black pepper
-- 3 tbsp honey
-- 1 tbsp soy sauce
-- 3 tbsp Marsala
-- 6 tbsp (⅓ cup) red lentils
-- 6 tbsp vegetable or groundnut oil
-- 3 tbsp chopped pistachios or blanched almonds, to serve
 
-**Method**
-1. Put 3 tablespoons of the oil into a very large, wide, heavy-bottomed pan and warm over medium
-   heat. Brown the lamb shanks in batches and then remove to a roasting tin to rest temporarily.
-2. Peel the onions and garlic and process in a food processor or chop finely by hand. Add the
-   remaining oil to the pan, and fry the onion-garlic mush until soft, sprinkling salt over to
-   stop it catching. Stir in the turmeric, ground ginger, chilli, cinnamon and nutmeg, and
-   season with freshly ground pepper.
-3. Stir again, adding the honey, soy sauce and Marsala.
-4. Put the shanks back in the pan. Insert the MEATER probe lengthways into the thickest part
-   of the largest shank, tip clear of the bone.
-5. Add cold water almost to cover. Bring to the boil, then put a lid on the pan, lower the heat
-   and simmer very gently for 1–1½ hours or until the meat is tender.
-6. Add the red lentils and cook for about 20 minutes longer without the lid, until the lentils
-   have softened into the sauce and the juices have reduced and thickened slightly.
-7. **Pull at 90–95 °C (194–203 °F).** The lentil-thickened sauce signals doneness as much as
-   the temperature; at 90 °C the meat should pull freely from the bone.
-8. Toast the nuts in a dry frying pan; sprinkle onto the lamb as you serve it.
-9. Final serving temperature: **90–95 °C / 194–203 °F** (fully braised, fall-off-bone).
-
----
-
-### 3. Suzy Karadsheh — Mediterranean Braised Lamb Shanks (Mediterranean / Egyptian tradition)
-**Source**: Suzy Karadsheh, *The Mediterranean Dish*;
-themediterraneandish.com/braised-lamb-shanks/ (fetched 2026-04-24)
-**Serves**: 6 · **Prep**: 20 min · **Cook**: 2½ hrs · **Oven**: 175 °C (350 °F)
-
-**Ingredients**
-- 6 lamb shanks
-- 2¼ tsp garlic powder
-- 1 tsp sweet Spanish paprika
-- 1 tsp kosher salt
-- 1 tsp freshly ground black pepper
-- ¾ tsp ground nutmeg
-- 2 tbsp extra virgin olive oil
-- 1 medium yellow onion, roughly chopped
-- 2 celery ribs, roughly chopped
-- 3 large carrots, peeled and cut into large pieces
-- 450 g (1 lb) baby potatoes
-- 2 cups red wine
-- 3 cups beef broth
-- 1 can (800 g / 28 oz) peeled tomatoes
-- 2 cinnamon sticks
-- 4 sprigs fresh thyme
-- 2 sprigs fresh rosemary
-
-**Method**
-1. Preheat oven to 175 °C (350 °F). Mix garlic powder, paprika, salt, pepper and nutmeg. Pat
-   the lamb shanks dry and season all over with the spice mix.
-2. In a large Dutch oven over medium-high, heat 2 tbsp olive oil. Working in batches, brown
-   the shanks until golden on all sides (about 8 minutes). Transfer to a large tray.
-3. Pour off excess fat and return pot to medium-high heat. Add onions, celery, carrots and
-   potatoes. Sauté until the vegetables gain some colour, 5–7 minutes.
-4. Add red wine and scrape up the brown bits from the bottom. Cook briefly until wine reduces
-   slightly, then add beef broth, peeled tomatoes, cinnamon sticks, thyme and rosemary.
-   Sprinkle salt and pepper. Return lamb shanks to the pot; press down to submerge. Boil
-   10 minutes, then turn off the heat.
-5. Insert the MEATER probe lengthways into the thickest shank, keeping the tip away from the
-   central bone.
-6. Cover the pot and transfer to the hot oven for 2½ hours. Check periodically; add more liquid
-   if needed.
-7. **Pull at 88–93 °C (190–200 °F).** The cooking liquid will have reduced to about one-third
-   of the original volume. The meat should pull away from the bone with light tong pressure.
-8. Serve on Lebanese rice, polenta or orzo with the vegetables and braising sauce.
-9. Final serving temperature: **88–93 °C / 190–200 °F** (Mediterranean braise, fall-off-bone).
-
----
-
-### 4. Matprat.no — Hvitvinbraiserte lammeskanker / White-Wine Braised Lamb Shanks (Norwegian tradition)
-**Source**: Matprat.no (Norwegian Meat and Poultry Research Centre / Opplysningskontoret for egg og kjøtt);
-matprat.no/oppskrifter/gjester/hvitvinsbraiserte-lammeskanker/ (fetched 2026-04-24)
-**Serves**: 4 · **Cook**: 3½–4 hrs · **Oven**: 150 °C
-
-**Ingredients**
+*Lammeskank:*
 - 4 lamb shanks
-- 1 tsp salt
-- ½ tsp pepper
-- 2 cloves garlic
-- 1 red or yellow capsicum (paprika), cut into sticks
-- 3 green chillies
-- 2 sprigs fresh rosemary
-- 2 tbsp rosé-pepper / pink peppercorns
-- 750 ml (7.5 dl) white wine
-- Salt and pepper (additional, to taste)
-- 8 green asparagus spears (to serve)
-- 4 sprigs fresh basil (to garnish)
+- 1 bottle red wine
+- 200 ml veal stock (kalvefond)
+- 2 shallots (skalotteløg)
+- 8 garlic cloves
+- 1 large handful fresh thyme
+- 1 large handful fresh rosemary
+- A little fresh lemon juice
+
+*Sauce:*
+- 400 ml cooking juices (sky)
+- 1 beurre manié (smørbolle — equal butter/flour mixed)
+- 1 tbsp gastrik (caramelised vinegar reduction)
+- 100 ml single cream (piskefløde)
+- Salt and freshly ground pepper
 
 **Method**
-1. Rub the lamb shanks with salt and pepper. Place in an ovenproof form.
-2. Peel the garlic and cut the capsicum into sticks. Add the garlic, capsicum, chilli and
-   rosemary to the form alongside the shanks. Sprinkle with rosé pepper and pour over the
-   white wine.
-3. Cover tightly with aluminium foil and cook in the oven at 150 °C for 3½–4 hours, or until
-   the meat loosens from the bones.
-4. Insert the MEATER probe lengthways into the thickest shank, tip away from bone.
-5. Optional: remove the foil for the last few minutes and raise oven to high grill (overvarme)
-   to add colour to the shanks.
-6. Remove the capsicum and chilli pieces from the cooking juices. Strain the juices; return
-   capsicum and chilli. Use a hand blender to create a full-bodied sauce. Season to taste.
-7. Peel the asparagus; cook in lightly salted water for 3 minutes, until just tender.
-8. **Pull at 88–92 °C (190–198 °F).** Norwegian culinary tradition cooks lamb shanks until
-   they fall from the bone; the low oven temperature (150 °C) extends the collagen-conversion
-   window and produces an exceptionally silky sauce.
-9. Pour sauce into deep plates; place one lamb shank per plate. Garnish with basil and the
-   lightly cooked green asparagus.
-10. Final serving temperature: **88–92 °C / 190–198 °F** (fully braised, Scandinavian style).
+1. Melt a good knob of butter in a large heavy pot over high heat. Brown the lamb shanks thoroughly on all sides. Season with salt and pepper.
+2. Roughly chop shallots; peel and lightly crush garlic cloves. Add to the pot with the shanks.
+3. Pour in the wine. Add thyme and rosemary. Squeeze a little lemon juice over. Seal with the stock.
+4. Place the lid on, reduce heat to very low and simmer for **2 hours 30 minutes** until the shanks are completely fall-off-the-bone tender.
+5. Carefully remove shanks (the meat will slide off easily). Strain the cooking juices.
+6. **Sauce**: Reduce 400 ml of the strained juices. Thicken with beurre manié. Add gastrik and cream. Season with salt and pepper.
+7. Insert probe. **Verify 85 °C (185 °F)** when fully tender.
+8. Serve with boiled potatoes or mashed potato.
+*Final temperature: 87–90 °C (189–194 °F).*
 
 ---
 
-### 5. Kasimir (Chefkoch.de) — Geschmorte Lammhaxen / Red-Wine Braised Lamb Shanks (German tradition)
-**Source**: Kasimir, Chefkoch.de community recipe;
-chefkoch.de/rezepte/566811155129665/Geschmorte-Lammhaxen.html (fetched 2026-04-24;
-4.8/5 stars from 55 ratings)
-**Serves**: 4 · **Prep**: 45 min (+overnight marination) · **Cook**: 2½ hrs
+### 4. The Mediterranean Dish — Persian Braised Lamb Shanks (Mahiche) (Iranian tradition)
+**Source**: The Mediterranean Dish (Suzy Karadsheh); https://www.themediterraneandish.com/persian-braised-lamb-shanks-mahiche/ (fetched 2026-04-24). *"Mahiche means 'lamb shank' in Persian. This dish is slow-cooked with saffron, turmeric, and cinnamon."*
+**Serves**: 4 · **Prep**: 30 min · **Cook**: 2 h 30 min
 
 **Ingredients**
-- 4 lamb shanks (Lammhaxen)
-- 2 carrots (Möhren)
-- 1 large onion (Gemüsezwiebel)
-- 1 garlic clove (Knoblauchzehe)
-- Tomato paste (Tomatenmark), a little
-- 1 glass lamb stock (Lammfond)
-- 200 g sieved tomatoes (passierte Tomaten)
-- 250 ml red wine (Rotwein)
-- Olive oil
-- A splash balsamic vinegar (Balsamico)
-- 1 bunch flat-leaf parsley (glatte Petersilie)
-- Salt and pepper
-- Thyme, dried or fresh
-- Rosemary, dried or fresh
-- Cayenne pepper or Pul Biber (Turkish chilli flakes)
-- 1 knife-tip ground cinnamon (Zimt)
-- 1 knife-tip ground cumin (Kreuzkümmel)
+- ⅛ tsp ground saffron, bloomed in 1 tbsp water
+- 2 tbsp olive oil
+- Salt and black pepper
+- 4 bone-in lamb shanks
+- 3 onions, finely sliced
+- 4 garlic cloves, sliced
+- 2 carrots, diced
+- 1 red bell pepper, diced
+- 2 celery stalks, diced
+- 2 tsp ground turmeric
+- 1 tsp ground cinnamon
+- 1 tbsp tomato paste
+- 2 bay leaves
+- 720 ml (3 cups) vegetable broth
 
 **Method**
-1. The day before: trim the shanks of excess fat and sinews. Rub all over with thyme, rosemary,
-   olive oil, salt and pepper. Refrigerate overnight — the dry-rub penetrates the meat and
-   improves both flavour and crust formation.
-2. The next day: brown the shanks all over in olive oil in a heavy braising pot. Remove and
-   set aside. Dice the onion, garlic and carrots; sauté in the same pot until beginning to
-   colour. Stir in the tomato paste and cook briefly.
-3. Deglaze with red wine and reduce slightly. Add the sieved tomatoes and half the lamb stock.
-   Season with a knife-tip each of cumin and cinnamon — these must be barely perceptible; if
-   they taste of spice the sauce is over-spiced.
-4. Return the shanks to the pot, add a lid and braise over low heat for approximately 2½ hours.
-   Add more lamb stock if needed during cooking.
-5. Insert the MEATER probe lengthways into the thickest shank, tip away from the central bone.
-6. After cooking, remove the shanks and rest on a plate. Taste the sauce; adjust with cayenne
-   or Pul Biber for heat, and a splash of balsamic vinegar to round. No additional thickening
-   is needed — the reduced braising liquid is naturally concentrated.
-7. Stir in freshly chopped flat-leaf parsley before serving.
-8. **Pull at 88–93 °C (190–200 °F).** The German tradition uses no additional binding — the
-   collagen in the shanks provides sufficient body. The author notes that serving with couscous
-   and salad is traditional in his household.
-9. Final serving temperature: **88–93 °C / 190–200 °F** (fully braised, German style).
+1. Bloom saffron in 1 tbsp water. Season shanks with salt and pepper.
+2. Brown shanks in olive oil in a Dutch oven over medium-high, 8–10 minutes. Remove.
+3. Cook sliced onions until golden (~5 min). Add garlic, carrots, bell pepper, and celery; cook 5 more minutes.
+4. Add turmeric, cinnamon, tomato paste, and bay leaves; stir 1 minute.
+5. Pour in broth and saffron water. Return shanks. Bring to boil, reduce to medium-low.
+6. Cover; simmer **2 hours 30 minutes** until fall-off-the-bone tender.
+7. Insert probe. **Verify 85 °C (185 °F)**.
+8. Serve with Persian dill and fava bean rice (Baghali Polo) and Mast o'Khiar (cucumber yoghurt).
+*Final temperature: 87–90 °C (189–194 °F).*
 
 ---
 
-### 6. Tasteline.com — Ugnsstekt lammlägg / Oven-braised Lamb Shank (Swedish tradition)
-**Source**: *Det moderna köket* (The Modern Kitchen), recipe published on Tasteline.com;
-tasteline.com/recept/ugnsstekt-lammlagg/ (fetched 2026-04-24; 3.3/5 stars, 300 votes)
-**Serves**: 7 · **Prep**: 15 min · **Cook**: 2 hrs · **Oven**: 150 °C
+## Temperature summary
 
-**Ingredients**
-- 7 lamb shanks (lammlägg)
-- 750 ml (7.5 dl) meat stock (köttbuljong)
-- 250 ml (2.5 dl) red wine (rött vin)
-- 6 bay leaves (lagerblad)
-- 4 garlic cloves (vitlöksklyftor)
-- 8 small onions (smålökar)
-- 2 sprigs rosemary (rosmarin)
-- 3 sprigs marjoram (mejram)
-- 1 tbsp peppercorns (pepparkorn)
-
-**Method**
-1. Set a frying pan on high heat. Add the lamb shanks and sear for approximately 2 minutes per
-   side, or until well browned. No oil is specified — the shanks render their own fat in a hot
-   dry pan.
-2. Transfer the browned shanks to a roasting tin. Add the stock, wine, bay leaves, garlic,
-   small whole onions, rosemary, marjoram and peppercorns to the tin.
-3. Insert the MEATER probe lengthways into the largest shank, tip away from the central bone.
-4. Cover the tin tightly with foil and oven-braise at 150 °C for approximately 2 hours, or
-   until the meat is very tender (mycket mört).
-5. **Pull at 88–90 °C (190–194 °F).** Swedish home-cooking tradition aims for complete
-   tenderness rather than a specific pull temperature; the 2-hour window at 150 °C is designed
-   to achieve this reliably.
-6. Serve the shanks in deep bowls with polenta or potato-and-garlic mash (potatis- och
-   vitlöksmos).
-7. Final serving temperature: **88–90 °C / 190–194 °F** (fully braised, Scandinavian home
-   cooking style, from *Det moderna köket*).
-
----
-
-## Temperature consensus
-
-| Source | Pull temperature | Method |
-|--------|----------------|--------|
-| BBC Good Food (UK) | 88–92 °C | Oven braise, white wine, 1½–2 hrs at 200 °C |
-| Nigella Lawson (UK) | 90–95 °C | Stovetop simmer, aromatic broth |
-| The Mediterranean Dish (Egypt/US) | 88–93 °C | Dutch oven, 2½ hrs at 175 °C |
-| Matprat.no (Norway) | 88–92 °C | Foil-covered form, white wine, 3½–4 hrs at 150 °C |
-| Chefkoch.de / Kasimir (Germany) | 88–93 °C | Covered braise, red wine, 2½ hrs |
-| Tasteline.com / Det moderna köket (Sweden) | 88–90 °C | Covered roasting tin, red wine + stock, 2 hrs at 150 °C |
-
-**Consensus pull**: **88–95 °C (190–203 °F)**. The braise window is wide — collagen begins
-converting to gelatin at around 72–74 °C but full texture transformation requires sustained
-time above 80 °C. All six traditions agree on a minimum of approximately 88 °C. Higher
-temperatures (up to 95 °C) are acceptable and produce softer, more yielding meat. Overshooting
-to 100 °C risks drying out the outer muscle fibres in longer braises.
-
-**Representative coding value**: **90 °C (194 °F)** as the nominal pull, with a practical
-range of 88–95 °C.
-
-## Notes for cooking_data.py
-
-- `doneness`: `braised_tender`
-- `pull_temp_c`: 90
-- `pull_temp_range_c`: [88, 95]
-- `safety_level`: `safe` (well above all pathogen destruction thresholds)
-- Collagen conversion is time-dependent as well as temperature-dependent. The MEATER probe
-  temperature reading marks entry into the braising window; actual tenderness depends on
-  the duration at that temperature. Recommend a minimum hold time of 30–45 minutes after
-  reaching 88 °C.
-- All six traditions sear the shanks before braising for Maillard flavour development.
-- All six use covered cooking vessels (lid, foil) to maintain steam and prevent evaporation.
+| Stage | Target temp | Notes |
+|-------|-------------|-------|
+| USDA lamb minimum | 63 °C (145 °F) | Not relevant for braising — too early |
+| Fork-tender braised | 82–85 °C (180–185 °F) | Collagen converting to gelatin |
+| Fall-off-the-bone | 85–90 °C (185–194 °F) | Optimal for braised shanks |
