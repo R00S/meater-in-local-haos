@@ -4635,7 +4635,7 @@ class KitchenCookingPanel extends LitElement {
   _renderCutProfileCard() {
     const cut = this._getCuts().find(c => c.id === this._selectedCut);
     if (!cut) return html``;
-    const slug = cut.slug;
+    const slug = cut.recipe_slug || cut.slug;
     if (!slug) return html``;
 
     const profile = CUT_PROFILES[slug];

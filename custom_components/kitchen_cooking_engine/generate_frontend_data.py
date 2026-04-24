@@ -26,6 +26,142 @@ from datetime import datetime, timezone, timedelta
 _INT_CATEGORIES = None
 _SWE_CATEGORIES = None
 
+# Mapping from Swedish/localised cut slugs to the English recipe-file slug.
+# Used by cut_to_js() to populate recipe_slug on cut objects so _renderCutProfileCard
+# can look up the right RECIPE_INDEX and CUT_PROFILES entry.
+_RECIPE_SLUG_MAP = {
+    # Beef
+    "entrecote": "ribeye_steak",
+    "ryggbiff": "sirloin_steak",
+    "oxfile": "filet_mignon",
+    "flankstek": "flank_steak",
+    "flatiron": "flat_iron",
+    "flapsteak": "skirt_steak",
+    "njurtapp": "hanger_steak",
+    "revbensstek": "prime_rib",
+    "hel_oxfile": "beef_tenderloin_roast",
+    "hogrev": "chuck_roast",
+    "bringa": "brisket",
+    "bog": "chuck_roast",
+    "oxsvans": "beef_shank",
+    "lagg": "beef_shank",
+    "oxkind": "beef_shank",
+    "margpipa": "beef_shank",
+    "hamburgare": "beef_burger",
+    "köttfärs": "beef_burger",
+    "köttfärslimpa": "meatloaf",
+    "nötlever": "beef_liver",
+    "oxtunga": "beef_tongue",
+    "oxlägg": "beef_shank",
+    # Pork
+    "flaskfile": "pork_tenderloin",
+    "flasksida": "pork_belly",
+    "flaskkarre": "pork_shoulder",
+    "skinka": "pork_leg",
+    "julskinka": "pork_leg",
+    "flaskbog": "pork_shoulder",
+    "flasklagg": "pork_shank",
+    "revbensspjall": "spare_ribs",
+    "sidflaask_revben": "spare_ribs",
+    "tunna_revbensspjall": "baby_back_ribs",
+    "tjocka_revbensspjall": "spare_ribs",
+    "fläskfärs": "ground_pork",
+    "färsk_skinka": "pork_leg",
+    "rökt_skinka": "pork_leg",
+    "fläskkorv": "pork_sausage",
+    "fläsklever": "pork_liver",
+    "gristunga": "pork_tongue",
+    # Lamb
+    "lammstek": "leg_of_lamb",
+    "lammrack": "rack_of_lamb",
+    "lammbog": "lamb_shoulder",
+    "lammlagg": "lamb_shank",
+    "lammnacke": "lamb_neck",
+    "lammfärs": "ground_lamb",
+    "lammkebab": "ground_lamb",
+    "lammburgare": "ground_lamb",
+    # Game / Wild / Mutton
+    "hjortfile": "venison_loin",
+    "hjortstek": "venison_roast",
+    "radjursfile": "venison_loin",
+    "radjursstek": "venison_roast",
+    "hjortlar": "venison_roast",
+    "hjortbog": "venison_roast",
+    "hjortkarre": "venison_loin",
+    "algfile": "venison_loin",
+    "algstek": "venison_roast",
+    "renfile": "venison_loin",
+    "renstek": "venison_roast",
+    "renkarre": "venison_loin",
+    "vildsvinsfile": "wild_boar_chop",
+    "vildsvinsstek": "wild_boar_shoulder",
+    "vildsvinsbog": "wild_boar_shoulder",
+    "vildsvinskoteletter": "wild_boar_chop",
+    "kaninsadel": "rabbit_saddle",
+    "kaninlar": "rabbit_legs",
+    "fårkotlett": "mutton_chop",
+    "fårlägg": "mutton_leg",
+    "fårskuldra": "mutton_shoulder",
+    "strutsstek": "ostrich_steak",
+    "strutsfilé": "ostrich_steak",
+    "kängurusteak": "kangaroo_steak",
+    "kängurufilé": "kangaroo_steak",
+    "bisonstek": "bison_steak",
+    "bisonburgare": "bison_burger",
+    "bisontek_helstekt": "bison_roast",
+    "buffelstek": "buffalo_steak",
+    "buffelburgare": "buffalo_burger",
+    # Poultry
+    "hel_kyckling": "whole_chicken",
+    "kycklingbrost": "chicken_breast",
+    "kycklinglar": "chicken_leg",
+    "kyckling_overlår": "chicken_thigh",
+    "kalkon_hel": "whole_turkey",
+    "kalkonbrost": "turkey_breast",
+    "ankbrost": "duck_breast",
+    "hel_anka": "whole_duck",
+    "ankconfit": "duck_confit",
+    "hel_gås": "goose_breast",
+    "gåsbröst": "goose_breast",
+    "gåslår": "goose_leg",
+    "gåslår_overlår": "goose_thigh",
+    "kycklingfärs": "ground_chicken",
+    "kalkonfärs": "ground_turkey",
+    "kycklingburgare": "ground_chicken",
+    "kalkanburgare": "ground_turkey",
+    # Fish
+    "laxfile": "salmon_fillet",
+    "gravad_lax": "salmon_fillet",
+    "tonfiskskiva": "tuna_steak",
+    "torskfile": "cod_fillet",
+    "torskrygg": "cod_fillet",
+    "forell": "trout_fillet",
+    "havsabborre": "sea_bass_fillet",
+    # Shellfish
+    "räkor": "shrimp",
+    "hummersvans": "lobster_tail",
+    "pilgrimsmussla": "scallops",
+    # Vegetables
+    "bakad_potatis": "baked_potato",
+    "rostade_potatisar": "roasted_potatoes",
+    "rostade_morötter": "roasted_carrots",
+    "rödbetor": "roasted_beets",
+    "rostade_sötpotatis": "roasted_sweet_potato",
+    "brysselkål": "brussels_sprouts",
+    "sparris": "asparagus",
+    "haricots_verts": "green_beans",
+    "spenat": "spinach",
+    "butternutsquash": "butternut_squash",
+    "ekornsquash": "acorn_squash",
+    "spagettisquash": "spaghetti_squash",
+    "blomkål": "cauliflower",
+    "paprika": "bell_peppers",
+    "champinjoner": "button_mushrooms",
+    "portobellosvamp": "portobello_mushrooms",
+    "aubergine": "eggplant",
+    "rostade_tomater": "roasted_tomatoes",
+}
+
 
 def _load_cooking_data():
     """Load cooking data modules on demand to avoid blocking at import time."""
@@ -101,6 +237,9 @@ def cut_to_js(cut):
             method: [tr.name for tr in ranges]
             for method, ranges in cut.method_temperature_ranges.items()
         }
+    # recipe_slug overrides slug for recipe file lookup (e.g. Swedish → English)
+    if getattr(cut, "recipe_slug", None):
+        result["recipe_slug"] = cut.recipe_slug
     return result
 
 
@@ -239,15 +378,25 @@ def recipe_to_js(recipe):
 
 
 def build_recipe_index(base_dir):
-    """Scan docs/recipe_research/ and build index + cut profiles.
+    """Scan recipe files and build index + cut profiles.
+
+    Looks first in docs/recipe_research/ (developer environment), then falls
+    back to www/recipes/ (pre-populated in HACS releases on real HA installs).
 
     Returns:
         recipe_index: {cut_slug: {method_slug: url_path}}
         cut_profiles: {cut_slug: "profile text"}
     """
     repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
-    recipe_dir = os.path.join(repo_root, "docs", "recipe_research")
-    if not os.path.isdir(recipe_dir):
+    docs_recipe_dir = os.path.join(repo_root, "docs", "recipe_research")
+    www_recipe_dir = os.path.join(base_dir, "www", "recipes")
+
+    if os.path.isdir(docs_recipe_dir):
+        recipe_dir = docs_recipe_dir
+    elif os.path.isdir(www_recipe_dir):
+        recipe_dir = www_recipe_dir
+        print("  (using www/recipes/ as recipe source — docs/recipe_research/ not found)")
+    else:
         return {}, {}
 
     _excluded = {
@@ -298,15 +447,17 @@ def build_recipe_index(base_dir):
 def copy_recipe_files_to_www(base_dir):
     """Copy recipe markdown files from docs/recipe_research/ to www/recipes/.
 
-    Called during panel regeneration so the files are served by HA at
-    /kitchen_cooking_engine_panel/recipes/...
+    Only runs in the developer environment (when docs/recipe_research/ exists).
+    On real HA installs, www/recipes/ is pre-populated by the HACS package and
+    must NOT be wiped — so this function is a no-op when the source is absent.
     """
     repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
     recipe_dir = os.path.join(repo_root, "docs", "recipe_research")
     www_recipes_dir = os.path.join(base_dir, "www", "recipes")
 
     if not os.path.isdir(recipe_dir):
-        print("Warning: docs/recipe_research/ not found — skipping recipe copy")
+        # On HA installs www/recipes/ is already in place from the HACS package.
+        # Do NOT delete it; just leave it as-is.
         return
 
     _excluded = {

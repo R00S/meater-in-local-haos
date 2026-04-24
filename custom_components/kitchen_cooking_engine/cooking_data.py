@@ -298,6 +298,11 @@ class MeatCut:
     method_temperature_ranges: dict[str, list[TemperatureRange]] = field(
         default_factory=dict
     )
+    # Optional override for recipe file lookup.
+    # Swedish and other localised cuts use a local slug (e.g. "ankbrost") that
+    # does not match the English recipe-research file names (e.g. "duck_breast").
+    # Set this to the English slug when a recipe file exists under a different name.
+    recipe_slug: Optional[str] = None
 
 
 @dataclass
