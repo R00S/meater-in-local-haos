@@ -31,6 +31,7 @@
    - 5.6 [Resting and Completing a Cook](#56-resting-and-completing-a-cook)
    - 5.7 [Recent MEATER Cooks](#57-recent-meater-cooks)
    - 5.8 [MEATER+ (experimental) — Safety Indicators](#58-meater-experimental--safety-indicators)
+   - 5.9 [MEATER+ (experimental) — Cut Profile & Recipe Links](#59-meater-experimental--cut-profile--recipe-links)
 6. [Ninja Combi Cooking](#6-ninja-combi-cooking)
    - 6.1 [Built-in Recipes](#61-built-in-recipes)
    - 6.2 [Recipe Builder](#62-recipe-builder)
@@ -408,9 +409,51 @@ standard MEATER path (§ 5.4).
 | Cook flow | Category → meat → cut → doneness | Identical |
 | Doneness options | Full list for the cut | Full list for the cut |
 | Safety indicators | Not shown | **Shown per doneness option** (🟢 / 🟠 / 🔴) |
+| Cut profile text | Not shown | **Shown after cut selection** |
+| Recipe research links | Not shown | **Shown after cut selection** |
 | Temperature fine-tuning | Available | Available |
 | Custom temperature | Available | Available |
 | Active cook screen | Standard | Identical |
+
+---
+
+### 5.9 MEATER+ (experimental) — Cut Profile & Recipe Links
+
+When you select a cut in the **MEATER+ (experimental)** path, a **📖 Cut Profile** card
+appears immediately below the cut selector — before you choose a doneness level.
+
+#### What it shows
+
+**Cut Profile text** — a brief description of the cut: where on the animal it comes from,
+its connective-tissue and fat content, why the selected cooking method suits it, and what
+internal temperature behaviour to expect.
+
+**📚 Recipe Research Files** — a set of pill-shaped links, one per available cooking method
+that has an associated research file. Each link opens the corresponding Markdown recipe
+research document (served locally by Home Assistant — no internet connection required).
+
+The research files contain 4–6 source recipes drawn from globally diverse published
+cookbooks and food websites, with non-Western sources prioritised. Each file lists:
+- Ingredients with quantities
+- Step-by-step method
+- MEATER probe placement instructions
+- Pull temperature guidance
+
+#### Example
+
+After selecting **Lamb Shank** in the Lamb → Roasts category, the Cut Profile card shows
+a short description of the shank (collagen content, typical fall-off-the-bone target
+85–90 °C) and three recipe links:
+
+| Link | Opens |
+|------|-------|
+| Braise | `lamb_shank-braise.md` — 4 source recipes (Mediterranean, Turkish, German, Danish) |
+| Slow Cooker | `lamb_shank-slow_cooker.md` — 5 source recipes (Turkish, German, Greek, Italian, Danish) |
+| Oven Roast | `lamb_shank-oven_roast.md` — 4 source recipes (Turkish, Greek, Italian, Danish) |
+
+> **Prototype note.** Recipe files are served as plain Markdown (no rendering). Translations
+> and unit conversions are not yet applied — the files are in the language of the original
+> source. This feature will be expanded in future releases.
 
 ---
 

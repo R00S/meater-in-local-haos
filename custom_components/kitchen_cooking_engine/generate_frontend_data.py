@@ -16,6 +16,8 @@ This will regenerate www/kitchen-cooking-panel.js with data from the backend.
 """
 
 import json
+import re
+import shutil
 import sys
 import os
 from datetime import datetime, timezone, timedelta
@@ -85,6 +87,7 @@ def cut_to_js(cut):
     result = {
         "id": cut.id,
         "name": cut.name_long or cut.name,
+        "slug": cut.name,
         "doneness": doneness_keys,
     }
     if cut.recommended_doneness:
@@ -235,6 +238,103 @@ def recipe_to_js(recipe):
     return result
 
 
+def build_recipe_index(base_dir):
+    """Scan docs/recipe_research/ and build index + cut profiles.
+
+    Returns:
+        recipe_index: {cut_slug: {method_slug: url_path}}
+        cut_profiles: {cut_slug: "profile text"}
+    """
+    repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
+    recipe_dir = os.path.join(repo_root, "docs", "recipe_research")
+    if not os.path.isdir(recipe_dir):
+        return {}, {}
+
+    _excluded = {
+        "README.md", "RECIPE_COLLECTION_TOR.md",
+        "RECIPE_ANALYSIS_TOR.md", "SOURCE_SURVEY.md",
+    }
+
+    recipe_index = {}
+    cut_profiles = {}
+
+    for root, _dirs, files in os.walk(recipe_dir):
+        for filename in sorted(files):
+            if not filename.endswith(".md") or filename in _excluded:
+                continue
+            stem = filename[:-3]
+            if "-" not in stem:
+                continue
+            hyphen = stem.index("-")
+            cut_slug = stem[:hyphen]
+            method_slug = stem[hyphen + 1:]
+
+            rel = os.path.relpath(
+                os.path.join(root, filename), recipe_dir
+            ).replace(os.sep, "/")
+            url_path = f"/kitchen_cooking_engine_panel/recipes/{rel}"
+
+            recipe_index.setdefault(cut_slug, {})[method_slug] = url_path
+
+            # Extract the ## Cut profile section from the first file we find
+            if cut_slug not in cut_profiles:
+                try:
+                    content = open(
+                        os.path.join(root, filename), encoding="utf-8"
+                    ).read()
+                    m = re.search(
+                        r"## Cut profile\n\n(.*?)(?=\n\n##|\Z)",
+                        content,
+                        re.DOTALL,
+                    )
+                    if m:
+                        cut_profiles[cut_slug] = m.group(1).strip()
+                except Exception:
+                    pass
+
+    return recipe_index, cut_profiles
+
+
+def copy_recipe_files_to_www(base_dir):
+    """Copy recipe markdown files from docs/recipe_research/ to www/recipes/.
+
+    Called during panel regeneration so the files are served by HA at
+    /kitchen_cooking_engine_panel/recipes/...
+    """
+    repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
+    recipe_dir = os.path.join(repo_root, "docs", "recipe_research")
+    www_recipes_dir = os.path.join(base_dir, "www", "recipes")
+
+    if not os.path.isdir(recipe_dir):
+        print("Warning: docs/recipe_research/ not found — skipping recipe copy")
+        return
+
+    _excluded = {
+        "README.md", "RECIPE_COLLECTION_TOR.md",
+        "RECIPE_ANALYSIS_TOR.md", "SOURCE_SURVEY.md",
+    }
+
+    # Remove and recreate target directory for a clean copy
+    if os.path.exists(www_recipes_dir):
+        shutil.rmtree(www_recipes_dir)
+
+    for root, _dirs, files in os.walk(recipe_dir):
+        for filename in files:
+            if not filename.endswith(".md") or filename in _excluded:
+                continue
+            src = os.path.join(root, filename)
+            rel = os.path.relpath(src, recipe_dir)
+            dst = os.path.join(www_recipes_dir, rel)
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+            shutil.copy2(src, dst)
+
+    count = sum(
+        len([f for f in files if f.endswith(".md")])
+        for _, _, files in os.walk(www_recipes_dir)
+    )
+    print(f"  Copied {count} recipe files → www/recipes/")
+
+
 def generate_js_data():
     """Generate the JavaScript data section."""
     _load_cooking_data()
@@ -337,6 +437,10 @@ def generate_js_data():
                         translations[lang_code] = json.load(f)
                 except Exception as e:
                     print(f"Warning: Could not load translation {filename}: {e}")
+
+    # Build recipe index from docs/recipe_research/
+    recipe_index, cut_profiles = build_recipe_index(base_dir)
+    print(f"  Recipe index: {sum(len(v) for v in recipe_index.values())} files across {len(recipe_index)} cuts")
     
     cet_time = get_cet_timestamp()
     
@@ -390,7 +494,13 @@ def generate_js_data():
     lines.append("")
     lines.append("// Phase 7: Translation strings (sv, en, ...)")
     lines.append(f"const I18N_STRINGS = {json.dumps(translations, indent=2, ensure_ascii=False)};")
-    
+    lines.append("")
+    lines.append("// Recipe research index: cut_slug → { method_slug: url_path }")
+    lines.append(f"const RECIPE_INDEX = {json.dumps(recipe_index, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// Cut profile texts extracted from recipe research files")
+    lines.append(f"const CUT_PROFILES = {json.dumps(cut_profiles, indent=2, ensure_ascii=False)};")
+
     return "\n".join(lines)
 
 
@@ -485,6 +595,9 @@ import {{
 
 """
     new_content += class_code
+
+    # Copy recipe files to www/recipes/ so they can be served by HA
+    copy_recipe_files_to_www(base_dir)
     
     # Update panel version in JS - increment from const.py version
     # Read current version from const.py first

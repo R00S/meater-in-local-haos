@@ -126,3 +126,50 @@ lamb/roasts, poultry/chicken, poultry/turkey, and game/mutton collections.
 - Mutton shoulder: 88–95 °C (older animal, denser tissue)
 - Ground poultry (grill): 74 °C / 165 °F USDA minimum (Tori Avey explicitly stated)
 
+
+---
+
+### 2026-04-24 — Recipe files integrated into experimental MEATER GUI (v0.6.1.15)
+
+**Task:** "Incorporate the recipe files into the GUI in the experimental MEATER cooking path. When clicking a cut, the cut profile text should show plus links to the (local:: not URLs) recipes."
+
+#### What was changed
+
+**`generate_frontend_data.py`**
+- Added `import re, shutil`
+- Added `build_recipe_index(base_dir)` — scans `docs/recipe_research/**/*.md`, extracts the `## Cut profile` section from each file, and builds:
+  - `RECIPE_INDEX`: `{ cut_slug: { method_slug: "/kitchen_cooking_engine_panel/recipes/..." } }`
+  - `CUT_PROFILES`: `{ cut_slug: "profile paragraph text" }`
+- Added `copy_recipe_files_to_www(base_dir)` — copies all 331 recipe `.md` files from `docs/recipe_research/` into `www/recipes/` (clean copy on every regeneration), making them accessible at `/kitchen_cooking_engine_panel/recipes/...` via HA's static file server
+- Added `"slug": cut.name` to `cut_to_js()` output so the panel JS can look up the recipe index by slug
+- Injected `RECIPE_INDEX` and `CUT_PROFILES` as new JS constants in the generated panel
+- Called `copy_recipe_files_to_www()` at the end of `regenerate_panel()`
+
+**`www/panel-class-template.js`**
+- Added `_renderCutProfileCard()` helper method — looks up `CUT_PROFILES[slug]` and `RECIPE_INDEX[slug]`, renders a `<ha-card>` with the profile paragraph and pill-link buttons per method
+- Wired into `_renderExpSetupForm()`: inserted `${this._selectedCut ? this._renderCutProfileCard() : ''}` between Step 4 (cut selector) and Step 5 (doneness selector)
+
+**`www/recipes/`** (new directory)
+- 331 Markdown files copied from `docs/recipe_research/` preserving subfolder structure; served at `/kitchen_cooking_engine_panel/recipes/`
+
+#### Generator output after regeneration
+```
+Recipe index: 331 files across 133 cuts
+Copied 331 recipe files → www/recipes/
+Updated PANEL_VERSION in JS: 117 -> 273
+```
+
+#### Version bump
+- `0.6.1.14` → `0.6.1.15`
+
+#### User guide updated
+- Added section 5.9 "MEATER+ (experimental) — Cut Profile & Recipe Links"
+- Updated the feature comparison table in 5.8 to show the two new rows
+
+---
+
+### 2026-04-24 — CHORES (v0.6.1.15)
+
+- Version bumped: 0.6.1.14 → 0.6.1.15 in manifest.json, __init__.py, const.py
+- Branch timeline updated with entries for recipe GUI integration and CHORES
+- USER_GUIDE.md updated: new section 5.9, updated 5.8 comparison table

@@ -4521,6 +4521,9 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : ''}
       
+      <!-- Cut Profile + Recipe Links -->
+      ${this._selectedCut ? this._renderCutProfileCard() : ''}
+      
       <!-- Step 5: Doneness Level -->
       ${this._selectedCut ? html`
         <ha-card>
@@ -4621,6 +4624,64 @@ class KitchenCookingPanel extends LitElement {
           </ha-button>
         </div>
       ` : ''}
+    `;
+  }
+
+  /**
+   * Render a cut-profile card with a brief description and links to local
+   * recipe research files. Called from _renderExpSetupForm when a cut is
+   * selected. No translation or unit conversion — prototype only.
+   */
+  _renderCutProfileCard() {
+    const cut = this._getCuts().find(c => c.id === this._selectedCut);
+    if (!cut) return html``;
+    const slug = cut.slug;
+    if (!slug) return html``;
+
+    const profile = CUT_PROFILES[slug];
+    const recipes = RECIPE_INDEX[slug];
+    if (!profile && !recipes) return html``;
+
+    // Method display names for pretty labels
+    const METHOD_LABELS = {
+      oven_roast: 'Oven Roast', oven_bake: 'Oven Bake',
+      pan_sear: 'Pan Sear', pan_fry: 'Pan Fry',
+      grill: 'Grill', smoker: 'Smoker',
+      air_fryer: 'Air Fryer', sous_vide: 'Sous Vide',
+      slow_cooker: 'Slow Cooker', braise: 'Braise',
+      boil: 'Boil', steam: 'Steam', poach: 'Poach',
+      saute: 'Sauté', simmer: 'Simmer',
+    };
+
+    return html`
+      <ha-card>
+        <div class="card-content">
+          <h3>📖 Cut Profile</h3>
+          ${profile ? html`
+            <p style="font-size:0.88em;line-height:1.55;color:var(--secondary-text-color);margin:0 0 12px 0;">
+              ${profile}
+            </p>
+          ` : ''}
+          ${recipes ? html`
+            <div>
+              <span style="font-size:0.82em;font-weight:600;color:var(--secondary-text-color);">
+                📚 Recipe Research Files:
+              </span>
+              <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">
+                ${Object.entries(recipes).map(([method, path]) => html`
+                  <a
+                    href="${path}"
+                    target="_blank"
+                    rel="noopener"
+                    style="font-size:0.78em;padding:4px 11px;background:var(--primary-color);color:var(--text-primary-color);border-radius:14px;text-decoration:none;opacity:0.92;">
+                    ${METHOD_LABELS[method] || method.replace(/_/g, ' ')}
+                  </a>
+                `)}
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      </ha-card>
     `;
   }
 
