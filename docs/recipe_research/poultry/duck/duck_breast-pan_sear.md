@@ -95,12 +95,33 @@ Target internal temperature: **135–145 °F (57–63 °C)** — medium-rare; pu
 
 ---
 
-### 3. TODO: add third source — searches returned 404
-> bbcgoodfood.com/recipes/crispy-pan-fried-duck-breast returned 404 (fetched 2025-07-15).
-> seriouseats.com/pan-seared-duck-breast returned 404 (fetched 2025-07-15).
->
-> Candidate sources to retry: simplyrecipes.com/duck-breast-recipe,
-> foodnetwork.com/pan-seared-duck-breast, epicurious.com/recipes/duck-breast
+### 3. BBC Good Food — One-Pan Duck with Savoy Cabbage
+
+**Source**: Barney Desmazery, BBC Good Food magazine (July 2008); https://www.bbcgoodfood.com/recipes/one-pan-duck-savoy-cabbage (archived: https://web.archive.org/web/20241110020656/https://www.bbcgoodfood.com/recipes/one-pan-duck-savoy-cabbage, fetched 2026-04-24).
+**Serves**: 4 · **Prep**: 10 min · **Cook**: 30 min
+
+**Temperature guidance**:
+- Skin-side down in non-stick sauté pan on LOW heat for 15 min (renders fat, browns skin)
+- Flip to flesh side for 5 min
+- Internal target: medium 140–145 °F (60–63 °C) pink; well done 165 °F (74 °C)
+- Rest before carving and slicing
+
+**Ingredients**
+- 2 duck breasts
+- 1 tsp black peppercorns, crushed
+- Salt
+- 600g cooked new potato, thickly sliced
+- 1 bunch flat-leaf parsley, roughly chopped
+- 1 garlic clove, finely chopped
+- 6 rashers smoked streaky bacon, chopped
+- 1 Savoy cabbage, trimmed, quartered, cored and finely sliced
+- 1 tbsp balsamic vinegar
+- 2 tbsp olive oil
+
+**Method**
+1. Lightly score the skin of the duck breasts, then generously season with the peppercorns and a sprinkling of salt. Lay the duck breasts, skin-side down, in a non-stick sauté pan, then place over a low heat. Leave the duck for 15 mins to brown and release its fat, then flip over onto the flesh side for 5 mins.
+2. Remove the duck from the pan, then turn up the heat. Add the potatoes to the pan, fry until brown and crisp, then scatter over the parsley and garlic. Scoop out with a slotted spoon onto a plate, then season with salt.
+3. Keep the pan on the heat. Fry the bacon until crisp, then add the cabbage. Cook for 1 min, add a splash of water, then fry for 2 mins, just until the cabbage is wilted. While the cabbage is cooking, whisk any juices from the duck with the vinegar and olive oil. To serve, carve the duck breast into slices, fan out on large dinner plates, spoon a neat bundle of cabbage on one side, then pile a serving of potatoes on the other. Drizzle over the dressing and serve.
 
 ---
 
@@ -110,6 +131,7 @@ Target internal temperature: **135–145 °F (57–63 °C)** — medium-rare; pu
 |--------|---------|-------------|-----------------|------|-----------------|
 | BBC Good Food (adapted) | UK | Medium-low stovetop | 6–9 oz breast | 12–15 min skin + 3–5 min flesh | 135–145 °F (57–63 °C) |
 | Classic culinary technique | International | Medium-low → medium stovetop | 6–9 oz breast | 12–15 min skin + 3–5 min flesh | 130 °F pull → 135–140 °F rested |
+| BBC Good Food (Desmazery) | UK | Low heat skin-side 15 min, flip 5 min | Standard breast | 20 min total | 140–165 °F (60–74 °C) |
 | USDA safe minimum | USA | Any | Any | Any | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:

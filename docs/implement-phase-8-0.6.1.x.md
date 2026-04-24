@@ -428,3 +428,48 @@ Per recipe_log.txt and source priority rules:
   verified temp targets); needs web-fetch verification on next pass.
 - turkey_breast-oven_roast.md — same.
 - whole_turkey-oven_roast.md — same.
+
+---
+
+### Recipe stub fill session — 2026-04-24 (Internet Archive navigation for real sources)
+
+**Problem addressed**: Previous agents invented URLs without verifying they work on the
+actual sites. This session fixes that by navigating real IA snapshots step by step.
+
+**IA navigation method confirmed for bbcgoodfood.com**:
+- Navigate collection pages first to discover real recipe slugs
+  e.g. `https://web.archive.org/web/20241010111210/https://www.bbcgoodfood.com/recipes/collection/grilled-chicken-recipes`
+- Then fetch raw HTML of each recipe: `web_fetch(url=IA_URL, raw=True)`
+- Full recipe JSON is in `__POST_CONTENT__` script block: `ingredients[]`, `methodSteps[]`
+- Works reliably with timestamps 20241010111210, 20240916023446, 20241015042230,
+  20241110020656, 20241128003914, 20250123191422
+- CDX wildcard URL format (`url=DOMAIN/PATH*`) returns TypeError in this sandbox
+
+**SOURCE_SURVEY.md corrections made**:
+- `ichkoche.at`: corrected URL format to `/{slug}-rezept-{ID}` (was wrongly `/rezept-{slug}-{ID}`)
+- `madensverden.dk`: confirmed no `www.` prefix, documented Danish char encoding
+- `bbcgoodfood.com`: added IA retrieval method (raw=True needed to see recipe JSON)
+
+**Poultry 3rd sources filled (real BBC GoodFood IA sources)**:
+- `chicken_breast-grill.md` → BBC GF "Cajun chicken" (Good Food team, Sep 2007)
+  IA: web.archive.org/web/20241010111210/.../cajun-chicken
+- `chicken_burger-grill.md` → BBC GF "Cajun chicken burgers" (Barney Desmazery, Feb 2009)
+  IA: web.archive.org/web/20240916023446/.../fully-loaded-cajun-chicken-burgers
+- `chicken_burger-pan_fry.md` → same Cajun chicken burgers (pan-fry method)
+- `chicken_breast-air_fryer.md` → BBC GF air fryer chicken (filled by sub-agent)
+- `chicken_thigh-air_fryer.md` → BBC GF air fryer chicken thighs (sub-agent)
+- `chicken_leg-oven_roast.md` → BBC GF sticky chicken drumsticks (sub-agent)
+- `whole_chicken-oven_roast.md` → BBC GF simple roast chicken (sub-agent)
+- `whole_duck-oven_roast.md` → BBC GF crispy roast duck (sub-agent)
+- `duck_breast-pan_sear.md` → BBC GF "One-Pan Duck with Savoy Cabbage" (Desmazery, Jul 2008)
+  IA: web.archive.org/web/20241110020656/.../one-pan-duck-savoy-cabbage
+
+**Still TODO (BBC GF search failed; need CDX lookup on next session)**:
+- `chicken_breast-pan_sear.md` — pan-seared chicken breast BBC GF slug not found
+- `chicken_burger-air_fryer.md` — air fryer chicken burger BBC GF slug not found
+- `chicken_thigh-grill.md` — grilled chicken thigh BBC GF slug not found
+- `chicken_thigh-oven_roast.md` — lemon-oregano-chicken-traybake IA timestamp not cached
+- `chicken_wing-air_fryer.md` — air fryer wings: baked-buffalo-chicken-wings is oven not AF
+- `ground_chicken-braise.md` and `ground_chicken-pan_fry.md` — no suitable GF slug found
+- `duck_breast-oven_roast.md` — roast-spiced-duck-plums is WHOLE duck not breast
+- All ~62 vegetable stubs — not started this session
