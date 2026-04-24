@@ -36,7 +36,7 @@ Beef tongue cooked in an electric slow cooker is the same long-collagen-conversi
 ---
 
 ### 2. Diana Kennedy — Lengua de Res al Crock-Pot, estilo casero (Mexican home tradition adaptation)
-**Source**: Diana Kennedy, *Mexican Regional Cooking* (Harper & Row, 1990), p. 246, with the slow-cooker note in *From My Mexican Kitchen* (Clarkson Potter, 2003)  
+**Source**: Diana Kennedy, *Mexican Regional Cooking* (Harper & Row, 1990), with the slow-cooker note in *From My Mexican Kitchen* (Clarkson Potter, 2003)  
 **Serves**: 8 · **Prep**: 20 min · **Cook**: 8 hr (low) · **Rest**: 15 min
 
 **Ingredients**

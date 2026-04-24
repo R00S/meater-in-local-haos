@@ -6,7 +6,7 @@ Pan-fried ground chicken — the loose-mince preparation rather than patties —
 ## Source recipes
 
 ### 1. Andrea Nguyen — Larb Gai with Ground Chicken (Lao / Northern Thai tradition)
-**Source**: Andrea Nguyen, *Asian Dumplings* (Ten Speed Press, 2009), p. 230 (filling); technique extended in her *Vietnamese Food Any Day* (2019); vietworldkitchen.com  
+**Source**: Andrea Nguyen, *Asian Dumplings* (Ten Speed Press, 2009) (filling); technique extended in her *Vietnamese Food Any Day* (2019); vietworldkitchen.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 8 min · **Rest**: 2 min
 
 **Ingredients**

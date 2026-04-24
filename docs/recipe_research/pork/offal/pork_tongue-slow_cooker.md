@@ -36,7 +36,7 @@ Pork tongue cooked in an electric slow cooker is the same long-braise preparatio
 ---
 
 ### 2. Diana Kennedy — Lengua de Cerdo en el Crock-Pot (Mexican tradition adaptation)
-**Source**: Diana Kennedy, *Mexican Regional Cooking* (Harper & Row, 1990), p. 250 — slow-cooker note in *From My Mexican Kitchen* (Clarkson Potter, 2003)  
+**Source**: Diana Kennedy, *Mexican Regional Cooking* (Harper & Row, 1990) — slow-cooker note in *From My Mexican Kitchen* (Clarkson Potter, 2003)  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 6 hr (low) · **Rest**: 10 min
 
 **Ingredients**

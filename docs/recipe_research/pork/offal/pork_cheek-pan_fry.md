@@ -32,7 +32,7 @@ Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the sma
 ---
 
 ### 2. Marcella Hazan — Guancia di Maiale Saltata in Padella (Italian tradition)
-**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997), p. 198 (cheek preparation extended from the cured *guanciale* notes)  
+**Source**: Marcella Hazan, *Marcella Cucina* (HarperCollins, 1997) (cheek preparation extended from the cured *guanciale* notes)  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 2 min
 
 **Ingredients**

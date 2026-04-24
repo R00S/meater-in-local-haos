@@ -6,7 +6,7 @@ Loose ground beef pan-fried (rather than formed into burger patties) is the foun
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Pan-Fried Browned Ground Beef (American food-science tradition)
-**Source**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015), p. 408; seriouseats.com/the-best-way-to-brown-ground-beef  
+**Source**: J. Kenji López-Alt, *The Food Lab* (W. W. Norton, 2015); seriouseats.com/the-best-way-to-brown-ground-beef  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: n/a
 
 **Ingredients**
@@ -85,7 +85,7 @@ Loose ground beef pan-fried (rather than formed into burger patties) is the foun
 ---
 
 ### 4. Tina Nordström — Köttfärs på Stekpannan (Swedish home tradition)
-**Source**: Tina Nordström, *Tina i köket* (Bonniers Förlag, 2007), p. 74; köket.se  
+**Source**: Tina Nordström, *Tina i köket* (Bonniers Förlag, 2007); köket.se  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 10–12 min · **Rest**: 2 min
 
 **Ingredients**
