@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Pan-fried pork sausage is the simplest method: low to medium heat, roll every few minutes, cover for part of the time to steam through, uncover at the end for crisp skin. The Danish approach (from the gas station method) uses low heat and patience. Austrian approach: moderate heat with butter for colour. Core temperature must reach 71 °C minimum.
+Pork sausage is a processed meat product made from finely minced or coarsely ground pork, seasoned with salt, pepper, herbs and spices, and encased in natural pig intestine or synthetic collagen casing. Fat content is typically 20–30%, essential for juiciness and flavour development. Fresh sausages require cooking to a minimum internal temperature of 71°C (160°F); pre-cooked or smoked sausages require only reheating to serving temperature (60–65°C). The casing is the critical monitoring challenge: if it ruptures early, moisture and fat escape and the sausage dries out. Probing from one end into the centre avoids puncturing the casing mid-body. Carryover is 2–3°C.
 
 Target internal temperatures (pan fry):
 - Fully cooked/safe: **71–75 °C (160–167 °F)**

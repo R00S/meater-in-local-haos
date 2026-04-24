@@ -1,7 +1,7 @@
 # Roasted Potatoes × Air Fryer — Recipe Temperature Research
 
 ## Cut profile
-Roast potatoes (*Solanum tuberosum*, cut into chunks) in the air fryer achieve golden-crispy outsides and fluffy interiors in 22–28 minutes at 190–200 °C — faster than the conventional oven (35–45 minutes) and with excellent crunch due to the rapid circulating air. Pre-parboiling (5–7 minutes) before air frying creates a roughened, starchy outer surface that crisps maximally. Without parboiling, the potatoes still roast but with a less dramatically crispy crust. Pull temperature: 90–96 °C (194–205 °F) at the thickest chunk interior. MEATER probe inserted into the thickest chunk.
+Roasting potatoes (*Solanum tuberosum*) converts the raw starch to a crisp, caramelised exterior and fluffy interior. High-starch varieties (Maris Piper, Russet, King Edward) are preferred because their floury texture creates better fluffiness inside and absorbs fat more effectively for crispness. Waxy varieties (Charlotte, Jersey Royal) hold their shape but produce less crisp results. Fat coating (duck fat, goose fat, olive oil, lard) is essential — it conducts heat, enables Maillard browning, and adds flavour. Pre-boiling until edges are rough (chuffed) dramatically increases crispness by maximising surface area. Target internal temperature is 95–100°C for full starch gelatinisation and a fluffy interior.
 
 ## Source recipes
 

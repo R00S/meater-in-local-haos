@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Ground pork pan fry is the backbone of many European dishes: frikadeller (Danish meatballs), hakkebøffer (Danish hamburger patties), hackbraten, albóndigas. For raw ground pork cooked as a patty or meatball, food safety requires 71 °C minimum internal temperature (fully cooked through — no pink centre). A meat thermometer is essential for ground pork. Pan temperature: medium-high for initial crust; medium for cooking through.
+Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend of primal trimmings. Standard ground pork is typically 70–80% lean with 20–30% fat; the higher fat content gives it a juicy, cohesive texture when cooked and makes it more forgiving than ground beef or turkey. Ground pork is the basis of countless preparations worldwide — from Italian ragù and Swedish köttbullar to Chinese dumplings and Mexican chorizo. Because grinding distributes any surface bacteria throughout the mass, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is negligible.
 
 Target internal temperatures (pan fry):
 - Safe/cooked through: **71–75 °C (160–167 °F)**

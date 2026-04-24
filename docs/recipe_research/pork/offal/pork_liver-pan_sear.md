@@ -1,7 +1,7 @@
 # Pork Liver × Pan Sear — Recipe Temperature Research
 
 ## Cut profile
-Pan-seared pork liver, like its beef counterpart, is a high-heat technique applied to a thicker slice (8–12 mm rather than 5–6 mm) intended to produce an aggressively crusted exterior with a deliberately rare-to-medium-rare centre. Pork liver's milder, slightly sweeter flavour profile makes it more forgiving than beef or calf's liver at slightly cooler internal temperatures — the classic restaurant target is 58–60 °C, on the cooler side of *rosé*. Carryover is moderate (2–3 °C) given the thicker slice; pulling 2 °C below the desired serving temperature is essential because the slice will continue rising on a warm plate.
+Pork liver is milder, slightly sweeter and more delicate in texture than beef liver — a paler chestnut-brown rather than the deep mahogany of beef, with a finer-grained hepatocyte structure and a thinner capsule. The same mineral-iron flavour profile is present but at lower intensity. The standard preparation across European traditions is identical to the beef-liver pan-fry: brief soak in milk to mellow the iron, dust in flour, sear hard in fat, and pull while the centre is still faintly pink. The narrower flavour also means pork liver tolerates assertive aromatics — onions, sage, juniper, allspice, capers — better than the more bold-tasting calf's or beef liver. Carryover is small (1–2 °C); slices continue cooking on the plate, so serve immediately.
 
 ## Source recipes
 

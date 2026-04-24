@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Braised pork belly (Schweinebauch geschmort; langtidsstegt svinebryst) involves cooking the belly in liquid at low to medium oven temperatures for several hours, producing meltingly tender meat. The classic European approach uses beer, stock and root vegetables; the Japanese-influenced Chashu uses soy sauce, sake, mirin and sugar for an umami-rich result. Both converge on very similar principles: low temperature, long time, liquid medium. Target internal: **80–90 °C** — collagen in pork belly renders at ~80°C, producing gelatin and tenderness; at 90°C the texture is almost pull-apart.
+Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.
 
 Target internal temperatures (braise):
 - Tender, sliceable: **75–80 °C (167–176 °F)**

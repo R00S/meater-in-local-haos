@@ -170,38 +170,114 @@ No automated tests exist - all testing is manual on real HAOS.
 3. ❌ Forgetting to run generate_frontend_data.py after editing
 4. ❌ Forgetting to commit ALL changed files (template + generated + data)
 5. ❌ Using deprecated HA APIs (check HA 2024.1.0+ compatibility)
-6. ❌ **FABRICATING method/property names instead of reading the source code** (see below)
+6. ❌ **FABRICATING method/property names instead of reading the source code** (see Rule 1 below)
+7. ❌ **FABRICATING data mappings — mapping cuts to wrong species/cuts** (see Rule 2 below)
 
 ---
 
-## 🛑 NEVER Fabricate Code — Always Read the Source First
+## 🛑 DO NOT TRY TO PLEASE — BE HONEST
 
-**This is the #1 cause of failed releases.** AI agents tend to generate plausible-sounding
-method names from patterns instead of reading the actual source code. This ALWAYS fails.
+**The owner of this project would rather hear "I don't know" than discover later that you faked a solution.**
 
-### The Rule
+Trying to appear helpful by producing plausible-looking output that isn't actually correct is
+the most damaging thing an agent can do here. It wastes the owner's time, erodes trust, and
+forces them to audit everything you touch.
+
+The specific failure mode: **trying to please by trying to fool** — generating something that
+looks like a solution so the owner feels progress is being made, when it isn't.
+
+### When you don't know something, say it explicitly:
+
+- "There is no recipe research file for `abborrfile`. I cannot map it."
+- "I don't know what the correct English slug for `innanlaar` is without a matching recipe file."
+- "This cut has no recipe data. The card will show no recipes."
+
+### Do NOT do this:
+
+- ❌ Map a cut to a "similar" cut from a different species to avoid showing nothing
+- ❌ Write a partial fix and present it as complete
+- ❌ Add placeholder code to look like progress
+- ❌ Move on to the next task while the current one is broken and unverified
+- ❌ Leave syntax errors or half-implemented features in the codebase
+
+### What actually happened (April 2026, session on this branch):
+
+An agent added ~20 fabricated slug mappings (abborre→sea_bass, gös→sea_bass, sik→cod,
+veal→pork, lamb→beef, etc.), broke the generator with a syntax error, added incomplete
+state properties to the JS template without implementing the corresponding methods,
+and left the build broken — all while reporting progress at each step.
+
+The owner had to find every problem themselves.
+
+### The correct behaviour:
+
+1. If a step is done and verified — say so and show the verification output.
+2. If a step cannot be done — say so clearly and stop.
+3. If you are unsure — ask. Do not guess and present it as fact.
+4. Run `python3 generate_frontend_data.py` and confirm it succeeds before claiming any generator-related task is complete.
+
+---
+
+### Rule 1 — Code: Always Read the Source First
+
 When writing ANY new code that calls existing methods or references existing properties:
 1. **OPEN and READ the actual source file** where the method/property is defined
-2. **FIND the real method name** by reading the code, not by guessing from patterns
+2. **FIND the real name** by reading the code, not by guessing from patterns
 3. **COPY the exact name** from the source into your new code
 
-### What NOT to Do
+**What NOT to Do**
 - ❌ Generate method names from naming patterns (e.g. seeing 15 `_get*` methods and inventing `_getEntities()`)
 - ❌ Assume a method exists because "it should" or "it makes sense"
 - ❌ Write code that references methods you haven't verified exist in the current codebase
 
-### Why This Matters
+**Why This Matters**
 In v0.5.0.66, the agent wrote `this._getEntities()` — a method that **does not exist anywhere
 in the codebase**. It was fabricated from the dominant `_get*` naming pattern (15+ such methods).
 The actual method is `_findCookingEntities()` which uses a completely different prefix.
-This caused a TypeError crash and a failed release. The agent would have seen this immediately
-if it had simply opened panel-class-template.js and read the method list.
+This caused a TypeError crash and a failed release.
+
+---
+
+### Rule 2 — Data Mappings: Only Map What You Can Verify
+
+`_RECIPE_SLUG_MAP` in `generate_frontend_data.py` maps Swedish cut names → English recipe slugs.
+**Every entry must be verifiable. No approximate or "close enough" mappings.**
+
+**The only acceptable reasons to add an entry:**
+
+| Reason | Example | Acceptable? |
+|--------|---------|-------------|
+| Same species, same cut | `torskfile` → `cod_fillet` (torsk = cod) | ✅ Yes |
+| Same species, whole fish → fillet of same fish | `hel_torsk_pa_ben` → `cod_fillet` | ✅ Yes |
+| Same genus, effectively identical cut | `kalvfile` → `filet_mignon` (veal/beef tenderloin) | ✅ Yes |
+| "Similar cooking profile" across different species | `abborrfile` → `sea_bass` (perch ≠ sea bass) | ❌ **No** |
+| "Closest available" across different species | `sikfile` → `cod_fillet` (whitefish ≠ cod) | ❌ **No** |
+| Different species, same cut type | `kalvkotlett` → `pork_chop` (veal ≠ pork) | ❌ **No** |
+| Different animal, similar cooking | `lammbringa` → `brisket` (lamb ≠ beef) | ❌ **No** |
+| Ground meat → whole-muscle steak | `algfarsbiff` → `venison_steak` (burger ≠ steak) | ❌ **No** |
+
+**If there is no matching recipe file for a cut, the correct answer is: no mapping.**
+A missing recipe card is honest. A wrong recipe card is deceptive.
+
+**Before adding ANY entry:**
+1. Read `swedish_cooking_data.py` — find the exact `name=` field for the cut
+2. Check `docs/recipe_research/` — verify a recipe file for that **exact species** exists
+3. If no file exists, do NOT add a mapping
+
+**What happened in this codebase (April 2026):**
+An agent added ~20 fabricated mappings: abborrfile→sea_bass, gosfile→sea_bass,
+sikfile→cod_fillet, kalvkotlett→pork_chop, lammbringa→brisket, and others.
+None of these are the same animal. The user discovered this and had to correct it.
+The fix: remove all cross-species mappings. Cuts without recipe research show no recipe card.
+
+---
 
 ### Success Rate Impact
+
 | Approach | Success Rate |
 |----------|-------------|
-| Code where source was READ first | 80-95% |
-| Code with FABRICATED names (guessed from patterns) | **0%** |
+| Code/data where source was READ and VERIFIED first | 80–95% |
+| Fabricated names or "close enough" mappings | **0%** |
 
 ---
 

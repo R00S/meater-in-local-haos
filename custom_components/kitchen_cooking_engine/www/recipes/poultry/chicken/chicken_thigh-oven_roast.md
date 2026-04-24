@@ -13,7 +13,7 @@
 
 ## Cut profile
 
-Oven-roasted chicken thighs are one of the most reliable weeknight cuts — dark-meat fat keeps them moist even when slightly overcooked, and the oven environment renders skin beautifully crisp. Both bone-in and boneless versions work well; bone-in thighs take longer but develop deeper flavour. The USDA minimum of 165 °F (74 °C) is safe, but pulling at 175 °F (79 °C) produces the best texture as collagen breaks down into gelatin.
+Chicken thigh (the biceps femoris and related muscles of the upper leg) is a dark-meat cut with significantly higher fat and connective tissue than the breast. Higher fat (6–10% vs 1–2% for breast) means thighs stay moist across a much wider temperature range and resist drying even when overcooked. Connective tissue collagen converts to gelatin above 70°C, improving mouthfeel. Bone-in thighs are more flavourful and forgiving; boneless thighs cook faster and more evenly. USDA minimum safe temperature is 74°C (165°F); experienced cooks often cook to 80–85°C for better texture once collagen has fully converted. Carryover is 3–5°C.
 
 Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat
 

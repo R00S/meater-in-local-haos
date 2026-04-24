@@ -13,7 +13,7 @@
 
 ## Cut profile
 
-Oven-roasted rabbit legs are popular throughout the UK, Germany, Italy, France, and Spain. The legs are rubbed in oil and herbs, then roasted at moderate heat (180–200 °C) for 35–50 minutes until cooked through and golden. Unlike braising, oven-roasting gives a dry, slightly caramelised exterior. Covering with foil for the first half of cooking and uncovering for the second half is a common technique.
+Rabbit (*Oryctolagus cuniculus*) legs (front and hind) are the most commonly braised cut. The hind legs carry more meat and are the prime braising cut; the front legs are often included for flavour. Rabbit is lean, low in fat, and prone to drying if overcooked — braising in wine, stock, or cream keeps the meat moist while allowing the connective tissue to break down.
 
 Target internal temperature: **74–77 °C (165–175 °F)** — cooked through, juicy, not dry.
 

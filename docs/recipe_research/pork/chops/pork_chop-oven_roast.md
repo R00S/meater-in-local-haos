@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Oven-roasted pork chops are ideal for a one-tray meal — the chops are either pan-seared first then finished in the oven (to get both crust and control), or simply roasted on a baking sheet at moderate temperature. The Austrian tray-bake (ichkoche.at) is a good example: sear chops 2 min per side, then roast on a vegetable bed at 160 °C for 10 more minutes. This gives gentle, even heat without drying. Target core: 63–65 °C.
+A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.
 
 Target internal temperatures (oven roast):
 - Juicy/pink: **63–65 °C (145–149 °F)**

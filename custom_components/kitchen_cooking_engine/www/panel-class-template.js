@@ -139,6 +139,10 @@ class KitchenCookingPanel extends LitElement {
       _shelfAddQuantity: { type: String },
       _shoppingList: { type: Array },
       _pendingShelfUpdate: { type: Object },
+      // Experimental recipe viewer (cut profile card)
+      _recipeViewerMethod: { type: String },
+      _recipeViewerRecipes: { type: Array },
+      _recipeViewerLoading: { type: Boolean },
 
     };
   }
@@ -261,6 +265,9 @@ class KitchenCookingPanel extends LitElement {
     this._shelfAddQuantity = '';
     this._shoppingList = [];
     this._pendingShelfUpdate = null;
+    this._recipeViewerMethod = null;
+    this._recipeViewerRecipes = [];
+    this._recipeViewerLoading = false;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }

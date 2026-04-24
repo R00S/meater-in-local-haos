@@ -1,7 +1,7 @@
 # Ground Beef × Braise — Recipe Temperature Research
 
 ## Cut profile
-Braised ground beef — the long-simmered ragù-style preparation rather than the quick brown-and-go — relies on the same coarse-ground chuck base as pan-fried mince, but treats the meat more like a tough braising cut: an initial fast brown for Maillard flavour, then hours of slow gentle simmer in a wet medium to break down what tough connective tissue remains in coarsely ground muscle. The long cook also dissolves the residual collagen in any sinew the grinder didn't fully chop, transforming the texture from crumbly to plush. Carryover is irrelevant in a braise — the meat sits at simmer temperature until removed. Pull temperature is therefore measured by the surrounding sauce, with the beef behaving as an immersion food.
+Ground beef (minced beef) is made by grinding beef, most commonly from the chuck primal or a blend of trimmings. The fat-to-lean ratio is the primary quality variable: 80/20 is standard for most preparations; 85/15 is leaner; 70/30 is richer and juicier. Because grinding ruptures muscle cells and distributes surface bacteria throughout the mass, the USDA and equivalent international food-safety authorities require a minimum internal temperature of 71°C (160°F) — there is no medium-rare option for ground beef the way there is for whole steaks. Carryover is minimal (1–2°C) given the fine grind and rapid heat transfer.
 
 ## Source recipes
 

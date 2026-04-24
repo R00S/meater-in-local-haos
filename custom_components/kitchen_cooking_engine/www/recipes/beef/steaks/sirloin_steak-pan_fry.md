@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Pan-fried top sirloin steak is the everyday workhorse preparation for a versatile lean-to-moderate cut. In home kitchens worldwide, "sirloin steak" means a pan-fried steak in moderate oil — less intense than a restaurant pan sear but fully capable of producing a golden-brown crust when the pan is properly heated. The lean top sirloin benefits from the additional fat in the pan (versus a dry pan sear) as partial compensation for its low intramuscular fat; the basting action of oil in the pan helps keep the surface moist. Pan frying allows more control than grilling and more accessibility than a screaming-hot carbon-steel sear. Carryover is 4–5 °C.
+The sirloin steak is cut from the sirloin primal, which sits between the short loin (where the NY strip originates) and the round. Top sirloin is the most common steak cut from this primal — it is a firm, relatively lean steak with a bold beefy flavour from the greater muscle activity of this region of the carcass. Compared to the NY strip, top sirloin has less marbling and a slightly coarser grain, making it less forgiving of overcooking; compared to the round, it is noticeably more tender. Pan searing suits sirloin well because the high heat compensates for the reduced marbling by creating a flavourful crust — the Maillard reaction is the primary flavour contribution to a seared top sirloin. The cap muscle (*picanha* region of the sirloin cap) is sometimes separated and considered a distinct cut; this leaf concerns the main top sirloin steak. Carryover is 4–5 °C.
 
 ## Source recipes
 

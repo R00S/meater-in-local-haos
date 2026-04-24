@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Pork sausage on the grill rewards patience and moderate heat. Too much heat makes them burst (casing splits at ~80 °C internal). The Danish rule: prick with a meat needle to prevent splitting; medium direct heat; turn often. The best result comes from a controlled temperature approach — not screaming hot. Internal target: 70–75 °C (fully cooked through). For pork sausages food safety requires reaching 71 °C minimum internal temperature.
+Pork sausage is a processed meat product made from finely minced or coarsely ground pork, seasoned with salt, pepper, herbs and spices, and encased in natural pig intestine or synthetic collagen casing. Fat content is typically 20–30%, essential for juiciness and flavour development. Fresh sausages require cooking to a minimum internal temperature of 71°C (160°F); pre-cooked or smoked sausages require only reheating to serving temperature (60–65°C). The casing is the critical monitoring challenge: if it ruptures early, moisture and fat escape and the sausage dries out. Probing from one end into the centre avoids puncturing the casing mid-body. Carryover is 2–3°C.
 
 Target internal temperatures (grill):
 - Fully cooked/safe: **71–75 °C (160–167 °F)**

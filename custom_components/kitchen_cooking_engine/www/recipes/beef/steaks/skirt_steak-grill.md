@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Grilled skirt steak is the centrepiece of Tex-Mex and Mexican *arrachera* preparations, where the thin, coarsely-grained diaphragm muscle cooks in minutes over intense heat. Outside skirt steak (the true diaphragm) is the superior choice — it is thicker, more uniform and more intensely flavoured than inside skirt. On a grill, the thin profile (1.5–2 cm) means it cooks from cold to done in 3–4 minutes per side over maximum heat. The intense marbling in the loose grain bastes the steak as it cooks; flare-ups are common and actually contribute desirable char flavour. Skirt steak must be sliced thin across the grain before serving to be edible; the grain runs across the width of the steak, so slices should be 5 mm thin cut on a bias. Carryover is 4–5 °C.
+Skirt steak is cut from the plate section (the diaphragm muscles) of the beef — there are two muscles: the outside skirt (*diaphragm proper*, thicker, more uniform, more flavourful) and the inside skirt (thinner, more variable in thickness). Both are intensely flavoured and very coarsely grained, making them ideal for marinades and quick, very high-heat cooking. Skirt steak is central to Mexican *fajitas*, Brazilian *fraldinha*, and American steakhouse menus. Pan searing skirt steak requires the very highest heat possible: the steak is thin (1–1.5 cm) and must develop a deep brown crust in the 2–3 minutes before the interior exceeds 57 °C. The MEATER probe is challenging in a thin cut — insert from the end, angling towards the thickest part, or monitor the time-based cues in the recipe. Carryover from a screaming-hot cast-iron pan is 3–5 °C.
 
 ## Source recipes
 

@@ -13,7 +13,7 @@
 
 ## Cut profile
 
-Pan-seared chicken breast delivers a golden crust through direct contact with a hot pan while keeping the interior juicy. The key techniques are pounding to even thickness so the whole breast finishes simultaneously, drying the surface for maximum Maillard browning, and finishing with a butter baste. A cast-iron or stainless-steel skillet retains heat better than non-stick.
+Boneless, skinless chicken breast is the pectoralis major muscle — the largest muscle of the bird. Because domesticated chickens rarely flap vigorously, this muscle has almost no connective tissue or intramuscular fat, making it the leanest cut of the bird. The lack of fat means it dries out quickly above 74°C (165°F). Typical weight is 170–280 g uncooked; thicker single-piece breasts benefit from butterflying or pounding to even thickness. USDA minimum safe temperature is 74°C (165°F); modern sous vide guidance allows 63°C (145°F) with adequate pasteurisation hold time. Carryover is 2–4°C.
 
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 

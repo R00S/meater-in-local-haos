@@ -3,13 +3,7 @@
 > ✅ **STATUS: CONFORMS TO RECIPE_COLLECTION_TOR.md** — validated 2026-03-04
 
 ## Cut profile
-Air-fried pork belly — scored, skin-on strips or a small slab — achieves crispy
-crackling in 25–35 minutes by combining high convection heat (200–220°C) with
-rapid air circulation that strips surface moisture from the rind faster than a
-conventional oven at the same temperature. The method favours thin slices and small
-slabs; large whole bellies benefit more from conventional oven roasting. Carryover
-is minimal given the dry, high-velocity environment; pull promptly when the probe
-target is reached, then rest briefly skin-side up to preserve rind crispness.
+Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.
 
 ## Source recipes
 

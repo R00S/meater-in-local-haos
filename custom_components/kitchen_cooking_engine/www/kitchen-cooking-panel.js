@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 24 Apr 2026, 22:25 CET
+ * AUTO-GENERATED: 24 Apr 2026, 23:05 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 24 Apr 2026, 22:25 CET
+// Last generated: 24 Apr 2026, 23:05 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -4122,7 +4122,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "långkokt"
                 ],
-                "recommended_doneness": "well_done"
+                "recommended_doneness": "well_done",
+                "recipe_slug": "prime_rib"
               }
             ]
           }
@@ -4156,7 +4157,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium"
+                "recommended_doneness": "medium",
+                "recipe_slug": "pork_chop"
               },
               {
                 "id": 2204,
@@ -4170,7 +4172,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium"
+                "recommended_doneness": "medium",
+                "recipe_slug": "pork_chop"
               },
               {
                 "id": 2205,
@@ -4184,7 +4187,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium"
+                "recommended_doneness": "medium",
+                "recipe_slug": "pork_tenderloin"
               },
               {
                 "id": 2202,
@@ -4198,7 +4202,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium"
+                "recommended_doneness": "medium",
+                "recipe_slug": "pork_chop"
               },
               {
                 "id": 2203,
@@ -4223,7 +4228,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_well",
                   "genomstekt"
                 ],
-                "recommended_doneness": "well_done"
+                "recommended_doneness": "well_done",
+                "recipe_slug": "pork_shoulder_steak"
               }
             ]
           },
@@ -4258,7 +4264,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium"
+                "recommended_doneness": "medium",
+                "recipe_slug": "pork_tenderloin"
               },
               {
                 "id": 2216,
@@ -4272,7 +4279,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium"
+                "recommended_doneness": "medium",
+                "recipe_slug": "pork_chop"
               },
               {
                 "id": 2217,
@@ -4286,7 +4294,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium"
+                "recommended_doneness": "medium",
+                "recipe_slug": "pork_chop"
               },
               {
                 "id": 2210,
@@ -4359,7 +4368,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "slow_cooker",
                   "oven_roast"
                 ],
-                "recipe_slug": "pork_shank"
+                "recipe_slug": "pork_shoulder"
               }
             ]
           },
@@ -4412,7 +4421,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "långkokt"
                 ],
-                "recommended_doneness": "well_done"
+                "recommended_doneness": "well_done",
+                "recipe_slug": "spare_ribs"
               }
             ]
           },
@@ -4500,7 +4510,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "pan_fry",
                   "braise",
                   "oven_roast"
-                ]
+                ],
+                "recipe_slug": "pork_cheek"
               },
               {
                 "id": 2771,
@@ -4595,7 +4606,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "genomstekt"
+                "recommended_doneness": "genomstekt",
+                "recipe_slug": "chicken_wing"
               },
               {
                 "id": 3020,
@@ -4606,7 +4618,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "genomstekt"
+                "recommended_doneness": "genomstekt",
+                "recipe_slug": "chicken_breast"
               },
               {
                 "id": 3021,
@@ -4617,7 +4630,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "genomstekt"
+                "recommended_doneness": "genomstekt",
+                "recipe_slug": "chicken_leg"
               },
               {
                 "id": 3143,
@@ -4735,8 +4749,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "confit"
                 ],
-                "recommended_doneness": "well_done",
-                "recipe_slug": "duck_confit"
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -4761,7 +4774,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "oven_roast"
                 ],
-                "recipe_slug": "goose_breast"
+                "recipe_slug": "whole_goose"
               },
               {
                 "id": 2781,
@@ -4933,7 +4946,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "medium"
+                "recommended_doneness": "medium",
+                "recipe_slug": "salmon_fillet"
               }
             ]
           }
@@ -4983,7 +4997,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "medium"
+                "recommended_doneness": "medium",
+                "recipe_slug": "cod_fillet"
               }
             ]
           }
@@ -5128,7 +5143,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "medium"
+                "recommended_doneness": "medium",
+                "recipe_slug": "halibut_fillet"
               },
               {
                 "id": 3070,
@@ -5141,7 +5157,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt"
                 ],
                 "recommended_doneness": "medium",
-                "recipe_slug": "sea_bass_fillet"
+                "recipe_slug": "sea_bass"
               },
               {
                 "id": 3071,
@@ -5151,7 +5167,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "genomstekt"
+                "recommended_doneness": "genomstekt",
+                "recipe_slug": "swordfish"
               },
               {
                 "id": 3072,
@@ -5171,7 +5188,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "genomstekt"
+                "recommended_doneness": "genomstekt",
+                "recipe_slug": "haddock"
               },
               {
                 "id": 3074,
@@ -5181,7 +5199,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "genomstekt"
+                "recommended_doneness": "genomstekt",
+                "recipe_slug": "hake"
               },
               {
                 "id": 3075,
@@ -5194,7 +5213,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt"
                 ],
                 "recommended_doneness": "medium",
-                "recipe_slug": "trout_fillet"
+                "recipe_slug": "trout"
               }
             ]
           }
@@ -5297,7 +5316,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium_rare"
+                "recommended_doneness": "medium_rare",
+                "recipe_slug": "filet_mignon"
               },
               {
                 "id": 2702,
@@ -5373,7 +5393,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium"
+                "recommended_doneness": "medium",
+                "recipe_slug": "beef_liver"
               }
             ]
           },
@@ -5407,7 +5428,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "långkokt"
+                "recommended_doneness": "långkokt",
+                "recipe_slug": "lamb_shank"
               },
               {
                 "id": 2722,
@@ -5500,7 +5522,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium_rare"
+                "recommended_doneness": "medium_rare",
+                "recipe_slug": "rack_of_lamb"
               },
               {
                 "id": 3080,
@@ -5564,7 +5587,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ]
+                ],
+                "recipe_slug": "rack_of_lamb"
               }
             ]
           },
@@ -5584,7 +5608,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium_rare"
+                "recommended_doneness": "medium_rare",
+                "recipe_slug": "lamb_chops"
               },
               {
                 "id": 2511,
@@ -5598,7 +5623,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium_rare"
+                "recommended_doneness": "medium_rare",
+                "recipe_slug": "lamb_neck"
               },
               {
                 "id": 3090,
@@ -5610,7 +5636,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "medium_well"
                 ],
-                "recommended_doneness": "medium_rare"
+                "recommended_doneness": "medium_rare",
+                "recipe_slug": "lamb_chops"
               },
               {
                 "id": 3091,
@@ -5622,7 +5649,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "medium_well"
                 ],
-                "recommended_doneness": "medium_rare"
+                "recommended_doneness": "medium_rare",
+                "recipe_slug": "lamb_cutlet"
               }
             ]
           },
@@ -5828,7 +5856,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "genomstekt"
+                "recommended_doneness": "genomstekt",
+                "recipe_slug": "moose_steak"
               }
             ]
           }
@@ -6088,7 +6117,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium"
                 ],
-                "recommended_doneness": "medium_rare"
+                "recommended_doneness": "medium_rare",
+                "recipe_slug": "buffalo_steak"
               }
             ]
           }
@@ -6262,7 +6292,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_sear",
                   "grill"
-                ]
+                ],
+                "recipe_slug": "goat_chop"
               },
               {
                 "id": 2861,
@@ -6276,7 +6307,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "oven_roast",
                   "braise"
-                ]
+                ],
+                "recipe_slug": "goat_leg"
               },
               {
                 "id": 2862,
@@ -6290,7 +6322,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "oven_roast",
                   "braise",
                   "slow_cooker"
-                ]
+                ],
+                "recipe_slug": "goat_shoulder"
               }
             ]
           }
@@ -6364,7 +6397,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "oven_roast",
                   "air_fryer"
-                ]
+                ],
+                "recipe_slug": "roasted_parsnips"
               },
               {
                 "id": 2904,
@@ -6505,7 +6539,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "oven_roast",
                   "saute",
                   "grill"
-                ]
+                ],
+                "recipe_slug": "roasted_onion"
               },
               {
                 "id": 2921,
@@ -6517,7 +6552,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "saute",
                   "pan_fry"
-                ]
+                ],
+                "recipe_slug": "caramelized_onions"
               },
               {
                 "id": 2922,
@@ -6529,7 +6565,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                 ],
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "recipe_slug": "roasted_garlic"
               },
               {
                 "id": 2923,
@@ -6543,7 +6580,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "braise",
                   "saute",
                   "oven_roast"
-                ]
+                ],
+                "recipe_slug": "leeks"
               }
             ]
           }
@@ -6652,7 +6690,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "oven_roast",
                   "braise",
                   "saute"
-                ]
+                ],
+                "recipe_slug": "cabbage"
               }
             ]
           }
@@ -6749,7 +6788,8 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "steam",
                   "grill",
                   "oven_roast"
-                ]
+                ],
+                "recipe_slug": "corn_on_cob"
               }
             ]
           }
@@ -17238,23 +17278,24 @@ const RECIPE_INDEX = {
 
 // Cut profile texts extracted from recipe research files
 const CUT_PROFILES = {
-  "ostrich_steak": "Grilling ostrich steak is the classic South African braai preparation, also popular in Namibia, Kenya, and increasingly in European specialty restaurants. The fan fillet or outer loin is pressed flat (sometimes butterflied) and grilled 2–3 minutes per side over high direct heat. Like pan searing, medium-rare is strongly preferred — the lean meat dries and toughens rapidly above 60 °C.\n\nTarget internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pull at 52 °C and rest.",
+  "ostrich_steak": "Ostrich (*Struthio camelus*) steak is produced primarily in South Africa, Namibia, and increasingly in France, Belgium, and Germany. Despite being a bird, ostrich meat is red, very low in fat, and treated culinarily exactly like beef or venison. Fan fillet (outerfilé) and top loin are the main steak cuts. The meat is extremely lean and must not be overcooked: medium-rare (54–57 °C) is the South African standard. Above 70 °C the meat becomes tough and liver-like.\n\nTarget internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pull at 52 °C and rest.",
   "venison_loin": "Venison loin (also: backstrap, saddle, or haunch steak — depending on country) from roe deer (*Capreolus capreolus*) or red deer (*Cervus elaphus*) is the premium pan-searing cut. The meat is very lean, deep red-brown, and has a rich, gamey flavour prized throughout European cooking. Pan-searing 2–3 minutes per side over high heat is the standard technique; the meat is universally pulled at medium-rare to medium to avoid dryness.\n\nKöket.se temperature guide (Sweden):\n- Rådjur/hjort ytterfilé & filé: rare 52 °C, medium 57 °C, well done 65 °C\n- Stekdetaljer: 55/62/68 °C",
   "venison_roast": "Venison haunch or saddle roast is a classic British, German, French, and Scandinavian festive dish. The typical method: dry-age if possible, then sear all over in a hot pan and finish in the oven (180–200 °C for medium/well, or low 120–140 °C for precision doneness with a probe). The saddle in particular is a show-piece roast in Michelin-star British cooking.\n\nTarget internal temperature: **55–60 °C (131–140 °F)** for a pink, moist result. Some German recipes use the \"Niedergarmethode\" (low-temperature method) at 80–90 °C to hit exactly 58 °C core.",
   "venison_steak": "Venison backstrap, loin or haunch steaks are excellent on the grill. The lean, dense muscle benefits from high-heat direct grilling — it sears quickly, developing a smoky, caramelised crust while the centre stays pink and juicy. Because there is little intramuscular fat, venison goes from perfect to overcooked in moments; the grill lid should remain open to avoid trapped steam speeding up cooking.\n\nThe backstrap (outer loin) is the preferred cut for grilling: it is uniform in thickness, tender, and holds together on the grate. Haunch steaks (from the hindleg) benefit from a simple marinade to tenderise muscle fibres. Medallions cut from the loin are harder to grill successfully as they curl; a whole piece grills better and is then sliced.\n\nTemperature precision is essential. Pull at **54–57°C (130–135°F)** for medium-rare; carry-over will bring it to 57–60°C after a 5-minute rest. Never take venison above 65°C (149°F) — it rapidly becomes grey, dry and livery. A MEATER probe inserted into the thickest part before grilling allows wireless monitoring without opening the grill.",
   "rabbit_legs": "Rabbit (*Oryctolagus cuniculus*) legs (front and hind) are the most commonly braised cut. The hind legs carry more meat and are the prime braising cut; the front legs are often included for flavour. Rabbit is lean, low in fat, and prone to drying if overcooked — braising in wine, stock, or cream keeps the meat moist while allowing the connective tissue to break down.\n\nThe French tradition (lapin aux pruneaux, lapin à la moutarde) is the most internationally recognised; German, Italian, and British traditions also have strong recipes. Braising time: 45–75 minutes. The meat should be fork-tender and pulling away from the bone.\n\nTarget internal temperature: **74–77 °C (165–175 °F)** — rabbit, like chicken, should be cooked through. Fork-tender braised rabbit reads 74–80 °C.",
   "rabbit_saddle": "The rabbit saddle is the backbone section of the rabbit bearing two boneless loins\nand, when left bone-in, thin belly flaps that protect the loins during roasting.\nOven roasting suits the saddle particularly when it is stuffed, tied, or cooked\nbone-in as a whole piece: the oven's dry, even heat browns the exterior more gently\nand uniformly than a stovetop pan, and the belly flaps — which would burn in a pan\n— insulate the loins and add a thin layer of fat that bastes the meat from the\ninside. The saddle is lean enough that it needs a hot oven (190–200°C) to brown\nbefore the interior overcooks; conversely, finishing times are short (10–15 minutes)\nand carryover is 2–3°C, so the cut demands close monitoring. Stuffed or rolled\nsaddle (farce or ballotine style) can tolerate a slightly lower oven and longer\ntime because the stuffing moderates heat transfer into the loin.",
-  "wild_boar_chop": "Grilling wild boar chops is a common summer practice in Germany, Austria, France, and Italy. The chops are typically marinated overnight in oil, herbs, and wine to tenderise and remove strong game odours, then grilled over medium-indirect heat (not blazing hot) to avoid burning the outside before the dense dark meat is cooked through. A two-zone fire — sear direct, then finish indirect — is the recommended technique.\n\nTarget internal temperature: **70–72 °C (158–162 °F)** for safe consumption of wild-caught pork. Some grillmasters pull at 65 °C for a pink interior.",
+  "wild_boar_chop": "Wild boar (*Sus scrofa*) loin chops (Wildschwein-Koteletts / côtelettes de sanglier) are taken from the back of the animal and include a rib bone, similar to pork chops but with darker, denser meat and a pronounced game aroma. Fat content varies by season — boars shot in autumn carry more fat than those taken in spring. The meat benefits from brief marinades in oil, herbs, and acidic components to tenderise.\n\nTarget internal temperature: **70–72 °C (158–162 °F)** for safe consumption of wild-caught pork. Some grillmasters pull at 65 °C for a pink interior.",
   "wild_boar_shoulder": "Wild boar shoulder is a large, heavily worked muscle containing significant connective tissue. It benefits from long, slow roasting (3–4 hours) at moderate temperature (160–200 °C) in a braising liquid to achieve pull-apart tenderness. The German tradition uses wine, game stock, juniper, and root vegetables; the Italian and French traditions add tomato and herbs.\n\nTarget internal temperature: **80–90 °C (176–194 °F)** for fall-apart texture. Food-safety minimum is 70 °C (158 °F) for safe serving, but the collagen conversion to gelatin that makes the shoulder delicious requires 80+ °C.",
-  "mutton_chop": "Grilled mutton chops are popular throughout the Middle East, Pakistan, India, North Africa, and the UK (particularly as part of a traditional English grill). The strong flavour pairs well with spice marinades, char, and aromatic smoke. Common marinade bases: yoghurt (South Asian), harissa (North African), olive oil with herbs (Mediterranean), or dry rubs with cumin and paprika.\n\nTarget internal temperature: **70–74 °C (158–165 °F)**.",
+  "mutton_chop": "Mutton refers to the meat of a sheep older than one year (typically 2–4 years), with a stronger, more pronounced flavour than lamb. Mutton chops (loin or shoulder chops) are popular in Germany, the UK, the Middle East, and South Asia. The stronger flavour benefits from aromatic seasoning (garlic, onion, thyme, cumin) and the meat is typically cooked through — medium to well-done — rather than pink.\n\nTarget internal temperature: **70–74 °C (158–165 °F)**.",
   "mutton_leg": "A whole mutton leg (bone-in, 2–3 kg) is a festive cut in the Middle East, Pakistan, Afghanistan, UK, and parts of Europe. Its strong, mature flavour benefits from marinating and long, slow oven roasting. Most traditions roast at 160–180 °C for 2.5–4 hours, covered for the majority of the time to prevent drying.\n\nTarget internal temperature: **75–80 °C (167–176 °F)** for fully cooked, still juicy. Some Pakistani and Indian recipes cook to 85 °C for fall-apart texture.",
   "mutton_shoulder": "Mutton shoulder is a heavily worked, intensely flavoured cut from an older animal (12 months or more). The extra age means deeper flavour but also denser connective tissue, requiring longer braising times than lamb — typically 2.5–3.5 hours on the stovetop or 3–4 hours in the oven. When braised low and slow, the shoulder yields incredibly rich, yielding meat that is the centrepiece of Indian korma, Turkish tandır, and Italian stuffed shoulder (spalla) traditions. Mutton benefits from full-bodied braising liquids — wine, yoghurt, spiced stocks — that can stand up to its assertive flavour. The MEATER probe is inserted through the thickest muscle of the shoulder, well away from the shoulder blade bone.\n\nTarget internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bone; mutton shoulder may need 90–95 °C due to the older animal's denser tissue.",
   "kangaroo_steak": "Kangaroo rump steak and loin fillet are the preferred cuts for grilling. The extreme leanness (under 2% fat) means the grill must be preheated to very high temperature and cooking time must be short — typically 2–3 minutes per side over direct high heat. Any longer and the meat dries and hardens. Marinating in oil before grilling is widely recommended to prevent sticking and to add a surface barrier against moisture loss.\n\nTarget internal temperature: **52–55 °C (126–131 °F)** for medium-rare. Pull at 50 °C to account for carry-over on the grill.",
   "reindeer_roast": "Reindeer roast (renstek) is a traditional Sami and Scandinavian festive dish. The round/topside (innanlår) or saddle is the most common cut. The Scandinavian method: sear in a hot pan, then finish in a very low oven (100–125 °C) with the probe inserted to achieve precise doneness without risk of overcooking the lean meat. The traditional accompaniment is cream sauce with lingonberries.\n\nTarget internal temperature: **57–62 °C (135–144 °F)** for medium. Pull at 55 °C and rest.",
-  "reindeer_steak": "Grilling reindeer steak is a traditional summer practice in northern Scandinavia, Finland, and Russia (Karelia and Siberia). The lean, delicate meat is best over a brief, hot fire — typically 2–3 minutes per side — with minimal seasoning to preserve the natural flavour. Reindeer steak from backstrap (sadel/rensadel) or loin is the preferred cut for grilling. Some Sami traditional recipes use juniper-wood smoke.\n\nTarget internal temperature: **55–57 °C (131–135 °F)** for medium (Nordic preference). Pull at 52 °C.",
-  "goat_chop": "Grilled goat chops are central to the food cultures of West Africa, the Caribbean, South Asia, the Middle East, and the Mediterranean. The Nigerian asun tradition, Jamaican jerk goat, Indian tandoor-style, and Middle Eastern kabab all involve direct high-heat cooking of goat. Marinades are almost always used.\n\nTarget internal temperature: **70–74 °C (158–165 °F)**.",
+  "reindeer_steak": "Reindeer (*Rangifer tarandus*) is the traditional game meat of Sápmi (Lapland), northern Finland, Norway, and Sweden. The fillet (renfilé) and backstrap (sadel) are the premium cuts for pan searing. Reindeer meat is very lean, deep red, and has a delicate sweet-earthy flavour milder than moose. Because of its leanness it must be treated like venison: high heat, short cooking time, pulled well below well-done. Medium-rare (57 °C) is the Nordic standard.\n\nTarget internal temperature: **55–57 °C (131–135 °F)** for medium (Nordic preference). Pull at 52 °C.",
+  "goat_chop": "Goat loin or rib chops are popular throughout West Africa, the Caribbean, South Asia, the Middle East, and the Mediterranean. The meat is leaner than lamb with a slightly stronger, more aromatic flavour. Pan searing is typically done at high heat with marinades containing aromatic spices (cumin, coriander, ginger, garlic). Like lamb, goat chops are served medium to well-done.\n\nTarget internal temperature: **70–74 °C (158–165 °F)**.",
   "goat_leg": "Whole roasted goat leg is a festive preparation in Germany (Ziegenkeule), Greece (katsiki sto fourno), the Caribbean, South and West Africa, and across the Middle East. The meat has moderate fat and benefits from marinating (especially in buttermilk, yoghurt, or wine) to reduce gaminess. Slow oven roasting at 160–200 °C for 2–3 hours gives the best result.\n\nTarget internal temperature: **75–82 °C (167–180 °F)** for fully cooked, moist goat.",
-  "goat_shoulder": "Goat shoulder contains more connective tissue than the leg and rewards longer, slower cooking. It is the traditional cut for Jamaican curry goat, Indian roganjosh-style preparations, Caribbean slow-roasts, and Moroccan mechoui. The shoulder is cooked until pull-apart tender at 85–90 °C internal, or to a still-sliceable 75–78 °C.\n\nTarget internal temperature: **82–88 °C (180–190 °F)** for pull-apart.",
+  "goat_shank": "A goat shank (Swedish *getlägg*) is the lower portion of the animal's leg — heavily worked, dense with collagen, intramuscular fat (limited; goat is leaner than lamb) and bone marrow. Like the lamb shank, it is a quintessentially braising cut: tough beyond chewing if cooked to medium-rare, but transformed by long, slow cooking in liquid into fork-tender, gelatin-rich meat that falls off the bone. Internal temperature is the wrong metric: the cut needs time at 88–93 °C internal (the collagen-melting band) for 1.5–2 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, parallel to the bone (avoid touching bone).",
+  "goat_shoulder": "Goat shoulder (Swedish *getskuldra* / *getbog*) is the upper foreleg — heavily worked, dense with collagen and intramuscular fat. Like the lamb shoulder, it is a quintessentially low-and-slow cut: tough beyond chewing if cooked to medium-rare, but transformed by long, wet cooking into fork-tender, gelatin-rich meat that pulls in long strands. Internal temperature is necessary but insufficient: the cut needs time at 88–93 °C internal for 2–3 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, away from bone or large connective sheets.",
   "moose_roast": "Moose (*Alces alces*) — called älg in Swedish, elg in Norwegian, and Elch in German — is the largest deer species in the Northern Hemisphere. The hindquarter roast (haunch/shoulder) has deep, dark red meat with minimal fat and a distinctive game flavour. Moose roast is best cooked slowly: high initial heat to develop a crust, then low, slow oven roasting (125–160 °C) with basting, aiming for a core temperature that gives a pink but safe result. The Swedish tradition uses cream and lingonberry as accompaniments.\n\nTarget internal temperature: **60–65 °C (140–149 °F)** for medium (pink centre); **70 °C (158 °F)** for fully cooked. The Swedish national tradition prefers 60–65 °C.",
   "moose_steak": "Moose steak (Elchsteak / älgbiff) is cut from the loin or haunch. It is very lean with a rich, earthy flavour. Grilling over high heat for a short time is the traditional Nordic approach; the meat should be seared quickly and pulled at medium-rare to prevent dryness. Marinating in oil and acidic components (wine, vinegar, lemon) before grilling is standard practice.\n\nTarget internal temperature: **57–62 °C (135–144 °F)** for medium-rare to medium.",
   "buffalo_burger": "Buffalo/bison burger (ground buffalo patty, grilled) is one of the most popular preparations in North America and increasingly in Europe. The lean ground meat makes for a firm, flavourful patty — it dries out quickly so most American recipes cook to medium (63 °C) rather than well-done. Adding a small amount of fat (bacon fat, olive oil) to the mix prevents dryness.\n\nTarget internal temperature: **70–74 °C (158–165 °F)** (ground meat food safety standard in the US and EU); some chefs serve at 63 °C (medium) as a restaurant preference.",
@@ -17262,24 +17303,37 @@ const CUT_PROFILES = {
   "bison_burger": "Bison burger patties are made from ground bison meat, typically sourced from the shoulder, chuck, or round — the same primal cuts used for beef hamburgers. Bison is notably leaner than beef, often containing only 2–7% fat depending on the grind, compared to 15–20% in a typical beef burger blend. This leanness is both the appeal and the challenge: bison has a clean, slightly sweet, mineral-forward flavour but is prone to drying out if overcooked or if insufficient fat is present.\n\nBecause ground bison is so lean, fat management is critical. Many cooks either blend pure ground bison with a fattier cut (e.g., bison back fat or beef suet) to reach roughly 10–15% total fat, or they compensate with binding ingredients such as egg, mustard, and ketchup that add moisture and help hold the patty together. Cooking over high direct heat — whether on charcoal, a gas grill, or a cast-iron pan — is the preferred method, as it quickly builds a crust that seals in juices before the lean meat has time to dry out.\n\nFood safety regulations in most countries classify ground meat as a high-risk product requiring thorough cooking: the USDA standard for ground meat is 71 °C / 160 °F internal temperature. BBC Good Food echoes this at 70 °C. However, gourmet and restaurant preparations for trusted-source ground bison sometimes target 63–65 °C for a medium result with a pink centre. The appropriate pull temperature depends on the intended doneness, the diners' preferences, and local food safety guidelines.\n\nA MEATER probe inserted sideways into a patty gives reliable internal readings even for thin cuts, provided it is placed horizontally through the thickest part of the patty, keeping the tip and ambient sensor both clear of the grill grates.",
   "bison_roast": "Bison roast cuts are drawn from the same primals as beef roasting joints — most commonly the\nshoulder (chuck/Schulter), topside (Oberschale), silverside (Unterschale), or loin (Rücken).\nThe fillet roast (whole tenderloin) is also used in high-end German preparations. Like bison\nsteak, bison roast is substantially leaner than equivalent beef cuts: the marbling is sparse\nand the outer fat layer thin, which has two important consequences. First, a bison roast dries\nout faster in a hot oven than a comparably sized beef joint, making temperature monitoring with\na probe essential. Second, without intramuscular fat to buffer heat and provide moisture, the\noff-flavour threshold at which overcooked meat tastes \"liver-like\" is reached earlier — roughly\n65–68 °C for a roast compared to around 63 °C for a steak.\n\nThe two dominant German cooking traditions for bison roast diverge sharply in oven temperature\nbut agree on a pull temperature of approximately 60–63 °C (medium). The high-heat tradition\n(200 °C, 45–60 minutes for a 1 kg joint) produces a crisper exterior but requires careful\nattention because the meat approaches the pull temperature quickly. The low-heat tradition\n(80–90 °C, 90–120 minutes) relies on the oven temperature being close to the desired internal\ntemperature, preventing overshoot and producing an evenly pink interior across the full\ncross-section. Both traditions use an initial sharp sear to develop a Maillard crust before\nthe oven phase, since at low oven temperatures browning will not occur.\n\nUnlike bison steak, a large roast does carry some collagen from the connective tissue that\nsurrounds muscle groups — particularly in shoulder or topside cuts. However, bison roast is\nnot a braise candidate: the collagen content is insufficient to benefit from the 85–95 °C\nsustained-hold window required for full collagen conversion, and the lean muscle would be\nruined at those temperatures. The correct window is medium (60–65 °C), where the muscle is\nstill moist and pink throughout. Resting is critical for roasts: a minimum of 10 minutes\nallows the thermal gradient within the joint to equalise and the muscle fibres to reabsorb\njuices. A mozzarella-mustard herb crust, applied before the oven phase, is a distinctive\nGerman preparation that acts as an insulating layer and baste, partially compensating for\nthe low fat content.",
   "bison_steak": "Bison (American buffalo, *Bison bison*) is a large North American bovine raised primarily on\nopen pasture. Its steaks — most commonly cut from the loin (fillet/tenderloin), rib (entrecôte/\nribeye), or striploin (sirloin) — are structurally similar to beef cuts from the same primal\npositions but differ decisively in fat content and flavour chemistry. Bison carries significantly\nless intramuscular fat than commercial beef: its marbling score is typically very low, and the\nexternal fat cap is thin. This leanness means there is very little insulating fat to slow heat\npenetration, so bison steaks cook faster than their beef equivalents and have a narrower\nwindow between perfectly cooked and overdone.\n\nThe critical temperature rule for bison steak is the most frequently repeated piece of culinary\nconsensus in all traditions: bison must always be served rare to medium-rare and must never be\ntaken past medium. The lean muscle fibres of bison, deprived of intramuscular fat that would\nlubricate the texture, become dry, chalky, and develop a distinctly unpleasant liver-like\noff-flavour when cooked beyond 65 °C. This off-note — noted explicitly in German, American,\nand French bison cooking literature — is caused by the oxidation of the comparatively high\niron content in the lean, myoglobin-rich muscle at elevated temperatures. The pull temperature\nfor a grilled bison steak is therefore 57–60 °C (medium-rare), and never above 63 °C.\n\nOn the grill, bison steak performs best over direct, high heat — charcoal (Holzkohlegrill) is\nfrequently recommended in German and North American traditions because the intense radiant\nheat of charcoal sears the exterior rapidly, creating Maillard crust without the interior\novercooking. Gas grill or cast-iron griddle are also acceptable. Because of the leanness,\nmarinating overnight is common in German tradition: the marinade provides moisture and\nflavour compounds that compensate for the lack of intramuscular fat. Resting is universally\nrecommended (5 minutes minimum) to allow the muscle fibres to relax and reabsorb juices.\nSlow low-temperature cooking (Niedrigtemperatur) is explicitly warned against for bison steak\nby German sources — while it works for collagen-rich beef cuts, for lean bison steak it\nconcentrates the liver-like off-note and dries the meat. The pan-sear + brief oven finish\nat 80 °C (as described in two German sources below) is the one acceptable exception, because\nthe sear provides Maillard flavour and the short oven time (25 min at 80 °C) simply holds\nthe meat at medium without further cooking.",
+  "beef_burger": "The beef burger patty cooked in an air fryer is a relatively recent home-kitchen variant of the same fundamental cut — coarsely ground beef of around 80/20 fat/lean ratio, formed into a patty 1.5–2.5 cm thick. The air fryer is essentially a small high-velocity convection oven; it concentrates radiant heat from a top element while a fan circulates 175–205 °C air across the patty surface. That circulation produces evenly browned faces without flipping in some models, although a single mid-cook flip improves uniformity. The trade-off versus pan-frying is no rendered-fat puddle to baste in, and versus grilling no smoke — but the convection allows surface browning at lower equipment temperatures than direct radiant heat would require. Carryover is small (2–3 °C) because the patty is thin and the cook short.",
+  "ground_beef": "Ground beef (minced beef) is made by grinding beef, most commonly from the chuck primal or a blend of trimmings. The fat-to-lean ratio is the primary quality variable: 80/20 is standard for most preparations; 85/15 is leaner; 70/30 is richer and juicier. Because grinding ruptures muscle cells and distributes surface bacteria throughout the mass, the USDA and equivalent international food-safety authorities require a minimum internal temperature of 71°C (160°F) — there is no medium-rare option for ground beef the way there is for whole steaks. Carryover is minimal (1–2°C) given the fine grind and rapid heat transfer.",
+  "meatloaf": "Meatloaf is a free-formed loaf of seasoned, bound ground meat (typically beef alone or a beef-pork-veal blend) baked in a moderate oven until cooked through. Structurally it is a colloid of ground muscle held by a panade (bread or breadcrumbs soaked in milk or stock) and bound with egg; the panade is critical because it absorbs and re-releases moisture during the bake, preventing the dry, dense loaf that pure meat-plus-egg produces. Oven temperatures of 175–190 °C give enough time for the centre to reach safe temperature without over-rendering the surface. Carryover is significant — 5–8 °C in a typical 1 kg loaf — because the loaf shape stores heat well; a 5–10 minute rest is mandatory both for carryover and for the proteins to re-absorb expressed liquid.",
+  "filet_mignon": "Filet mignon is cut from the narrow end (small end) of the beef tenderloin — the psoas major muscle, which runs alongside the spine and does virtually no work during the animal's life. It is the most tender cut in the carcass, with almost no intramuscular fat (marbling) or connective tissue, making it both delicate and vulnerable to drying out. The air fryer circulates very hot air around the steak at high velocity, creating convection browning on the exterior while cooking the interior — the result is a decent Maillard crust without the smoke of a grill or the fat-pooling effect of a skillet. Because filet mignon is exceptionally lean, the air fryer's hot-air convection is forgiving compared to direct-contact methods. Carryover is minimal but present — the small, round geometry of a filet mignon dissipates heat quickly after removal from the enclosed air fryer basket.",
+  "flank_steak": "Flank steak is a flat, thin muscle cut from the abdominal wall of the animal (the flank primal), with long, coarse muscle fibres running visibly along its length. The cut is lean, relatively tough, and has minimal intramuscular fat — it lacks the marbling of a ribeye but compensates with bold, beefy flavour. Charcoal grilling is the quintessential method for flank steak: the high, direct radiant heat from glowing embers creates a rapid, intense Maillard crust across the wide flat surface before the interior has time to overcook. Flank steak must be cooked quickly over very high heat and sliced thinly across the grain for tenderness — cooking it slowly defeats the purpose. Carryover is minimal in a thin flank steak, but because it is typically cooked over extremely high heat, the brief internal temperature rise after removal from the grill can bring the steak from medium-rare to medium if not watched carefully.",
   "flat_iron": "The flat iron steak is taken from the infraspinatus muscle of the beef shoulder blade, separated from the central band of tough gristle that runs through the full top blade. Because the infraspinatus performs relatively little work, it retains outstanding intramuscular fat for a non-loin cut, producing deeply beefy, slightly buttery flavour comparable to ribeye at a fraction of the cost. Individual steaks are typically 200–350 g and 2–3 cm thick — a dimension that fits the air fryer's compact hot-air cabinet well. The air fryer's high-velocity convection at 200–205 °C dries the surface rapidly and drives the Maillard reaction without a dedicated grill or stovetop. Carryover is moderate, typically 2–3 °C after leaving the basket, so pulling 3 °C below the intended serving temperature is standard practice.",
   "hanger_steak": "Hanger steak over live charcoal adds an important dimension to this already intensely flavoured cut. The fat-and-flavour drippings from the hanging muscle hit the hot coals and combust into brief flare-ups, depositing charred aromatic compounds onto the steak surface. This combination of deep beef flavour + charcoal smoke + char edge makes the hanger steak over charcoal one of the most intensely flavoured steak preparations achievable. The sinew-containing version (some butchers leave the central connective tissue) is convenient to cook whole and split post-resting; the sinew-removed version cooks as two thin separate muscles. Carryover from a very hot charcoal fire is 5–7 °C.",
   "ny_strip": "New York strip steak cooked in an air fryer is exposed to intense circulated hot air in a compact basket — the result approximates oven roasting but faster, with the hot air producing a slightly crisped exterior. For a steak, the air fryer is not a substitute for a screaming-hot cast-iron sear; it produces a dryer crust than a pan sear but is convenient for a one-appliance preparation. The strip's firm, moderate-marbling muscle responds well to air fryer temperatures — typically 200–220 °C for 8–12 minutes. Many recipes recommend a brief stovetop or broiler finish after the air fryer step to develop a true Maillard crust. Carryover from the air fryer basket is 3–5 °C. The technique is most common in home-cooking publications from the 2020s.",
   "picanha": "Picanha over live charcoal is the definitive Brazilian *churrasco* preparation — in Brazil, the whole *rump cap* is threaded onto long metal skewers in a horseshoe shape (fat cap outside) and rotated continuously above the charcoal fire of the *churrascaria*, the fat dripping and basting the meat as it cooks. At home on a kettle or kamado grill, the rotisserie method can be replicated or a simplified two-zone direct-then-indirect approach is used. The charcoal smoke compounds penetrate the fat cap and impart a distinctive aroma that is a signature of Brazilian *churrasco*. Carryover from a hot charcoal fire is 5–7 °C.",
   "ribeye_steak": "The air fryer cooks a ribeye using rapid hot-air circulation — effectively a compact convection oven running 20–30 °C hotter than a standard oven. For a ribeye steak (2 cm thick), 190–200 °C × 10 minutes produces a result between medium-rare and medium, with a modest exterior crust. For steak-quality crust, some cooks sear on a very hot pan for 1 minute before or after the air fryer. The method is convenient and produces consistent results without the smoke of a pan sear.\n\nTarget internal temperatures (air fryer ribeye):\n- Medium-rare: **54–57 °C (129–135 °F)** — pull around 8–9 min at 200 °C\n- Medium: **60–63 °C (140–145 °F)** — pull at 10–12 min",
-  "sirloin_steak": "Air-fried sirloin steak cooks in intense, rapidly circulating hot air in a compact basket — the result approximates oven roasting at high speed. For a lean cut like top sirloin, the air fryer's quick cook time (8–12 minutes) produces a slightly crisped exterior with minimal fat loss, a reasonable approximation of pan frying without the stovetop mess. Thin sirloin steaks (2–2.5 cm) produce the best results in an air fryer; very thick cuts benefit from a two-step approach (air fry to temperature, then a brief stovetop sear for crust). Carryover is 3–5 °C.",
+  "sirloin_steak": "The sirloin steak is cut from the sirloin primal, which sits between the short loin (where the NY strip originates) and the round. Top sirloin is the most common steak cut from this primal — it is a firm, relatively lean steak with a bold beefy flavour from the greater muscle activity of this region of the carcass. Compared to the NY strip, top sirloin has less marbling and a slightly coarser grain, making it less forgiving of overcooking; compared to the round, it is noticeably more tender. Pan searing suits sirloin well because the high heat compensates for the reduced marbling by creating a flavourful crust — the Maillard reaction is the primary flavour contribution to a seared top sirloin. The cap muscle (*picanha* region of the sirloin cap) is sometimes separated and considered a distinct cut; this leaf concerns the main top sirloin steak. Carryover is 4–5 °C.",
   "skirt_steak": "Skirt steak over live charcoal is arguably its highest form — in taquero tradition, *arrachera asada* (literally \"grilled skirt steak\") means skirt steak cooked over mesquite or hardwood charcoal, where the fat drippings ignite the coals into brief, flavour-depositing flare-ups. The smoky charcoal notes complement the intense beefy flavour of the diaphragm muscle. Mexican *taquero* tradition uses very hot mesquite charcoal; Argentine *parrilla* tradition uses quebracho wood embers. The probe challenge is the same as on a gas grill: thin steak, end insertion required. Carryover from very hot charcoal is 5–7 °C.",
   "t_bone": "Air-frying a T-bone steak is practical for steaks up to 3 cm thick and 700 g — the bone makes the T-bone bulkier than simple steak cuts, so it must fit in the air fryer basket. Air fryers circulate extremely hot air at 200–220 °C and produce a crisped surface resembling oven-roasted rather than pan-seared beef, without the mess of oil splatter. The two-muscle T-bone geometry (striploin + fillet) requires monitoring the striploin temperature — the MEATER probe goes in the striploin side, away from the bone. The result is less dramatic in crust quality than a cast-iron sear, but significantly more convenient for weeknight cooking. Carryover from the air fryer basket is 3–5 °C.",
   "tomahawk": "The tomahawk over charcoal is the premier outdoor cooking experience — the enormous bone handle allows it to stand upright beside the coals for resting. Charcoal-grilled tomahawk requires the same reverse-sear principle as gas grill: indirect heat to bring the core up safely, then direct high heat for the crust. The Maillard reaction on the fat-cap over charcoal produces flavour compounds unavailable from gas. Use hardwood charcoal (oak, holm oak, beech) for best flavour.\n\nTarget internal temperatures (charcoal grill):\n- Medium-rare: **core 55–57 °C (131–135 °F)** · pull at **52–54 °C (126–129 °F)**\n- Medium: **core 60–63 °C (140–145 °F)**",
   "tri_tip": "Tri-tip on charcoal benefits from the classic Santa Maria barbecue tradition — the original Californian preparation. The key is a 2-zone charcoal setup: sear directly over the coals first for a crust, then finish on the indirect side to bring the interior to temperature safely. The tapered shape means the thin end will always be more done; probe the thickest section. Red oak is the traditional Santa Maria wood; hickory and mesquite are alternatives.\n\nTarget internal temperatures (charcoal grill):\n- Medium-rare: **pull at 54–57 °C (129–135 °F)**",
+  "beef_liver": "Beef liver is one of the densest, most nutrient-rich offal cuts in the carcass — a chocolate-coloured, finely-textured mass of hepatocyte tissue with very little connective tissue and a thin filmy capsule. Its iron-and-mineral profile gives a pronounced metallic flavour that mellows dramatically with brief soaking in milk before cooking — a step common to most European traditions. Pan frying is the classic method: 6–8 mm slices flashed in hot fat, browned hard on both sides, and pulled before the centre passes about 65 °C. Above that temperature the proteins seize and the slice turns chalky and grey-brown; the visual cue for correctly-pulled liver is a faint pink line through the centre. Carryover is short and small (1–2 °C) given the thin slices, but the slices continue cooking on the plate — serving immediately is essential.",
+  "beef_tongue": "Beef tongue (*Bos taurus* lingual muscle) is a single dense cylindrical muscle wrapped in a thick, papillae-covered skin. The muscle itself is rich in collagen and intramuscular fat; the skin is inedible and must be peeled after cooking — the standard method is to braise the whole tongue at 85–95 °C until the collagen converts to gelatin, then peel the skin while the tongue is still warm. Cooking times of 3–4 hours for a 1.5–2 kg tongue are standard. Carryover is essentially zero (the surrounding liquid buffers the temperature) but the tongue retains heat well after removal — the skin must be peeled within 5 minutes of lifting from the braise or it cools and tightens. Pull is timed by the texture of the muscle: a paring knife should slide in with no resistance.",
+  "beef_shank": "Beef shank is the lower portion of the front (foreshank) or hind (hindshank) leg, structurally one of the most aggressively-worked muscles in the carcass: the constant motion of walking and standing builds dense bundles of muscle fibre wrapped in thick sheets of connective tissue, with a substantial central marrow bone running through cross-cut steaks (the *osso buco* preparation). Raw shank is among the toughest cuts in the animal; braised slowly for 3–4 hours at 85–95 °C, the connective tissue dissolves into rich gelatin, the marrow renders into the sauce, and the muscle becomes pull-apart tender. The bone-in cross-cut section holds shape because the connective-tissue ring around the muscle keeps it bound during the cook. Carryover is negligible — the surrounding liquid buffers temperature swings.",
+  "brisket": "Beef brisket is taken from the breast and lower chest of the animal, comprising two muscles — the flat (*pectoralis profundus*) and the point (*pectoralis superficialis*) — that support much of the animal's weight. The cut is dense with collagen-rich connective tissue and interspersed fat, making it exceptionally tough when cooked quickly but extraordinarily silky and tender once held at the collagen-conversion threshold long enough for connective tissue to dissolve into gelatin. Oven roasting at low temperature replicates the gentle, prolonged dry heat that the cut demands — the enclosed oven environment retains moisture driven off from the meat, preventing the surface from desiccating during the long cook. Carryover is negligible for brisket because the high moisture content and dense mass absorb and retain heat slowly; the internal temperature barely moves after the brisket is removed from the oven.",
+  "chuck_roast": "Chuck roast is cut from the shoulder region of the animal (the chuck primal, roughly ribs 1–5 and the neck), and is one of the most collagen-dense roasting cuts in the carcass. The shoulder muscles endure constant movement throughout the animal's life, producing densely bundled muscle fibres interlaced with thick seams of connective tissue and fat — a structure that is aggressively tough at low internal temperatures but transforms into richly flavoured, pull-apart tenderness when braised gently over several hours. Braising is particularly suited to chuck because the submerging or partial immersion in liquid accelerates the hydrolysis of collagen into gelatin, producing a self-thickening braising sauce and a meltingly tender interior simultaneously. Carryover is negligible for chuck in a braise because the surrounding liquid buffers against temperature swings; the meat stays at cooking temperature until removed.",
+  "beef_tenderloin_roast": "The beef tenderloin (psoas major) runs along the interior of the spine and does almost no work during the animal's life, making it the most tender, least collagen-dense muscle in the carcass. A whole tenderloin roast (the \"châteaubriand\" section or full fillet) weighs approximately 1–2 kg and tapers from the thick butt end to a thin tail. It is exceptionally lean, with minimal intramuscular fat, making it vulnerable to drying out if overcooked — the window between perfectly rosy and dry, grey meat is narrow. Oven roasting suits the tenderloin because gentle, even heat preserves the moisture in the lean fibres; high-heat searing before or after the oven creates the Maillard crust that the lean exterior cannot produce on its own. Carryover is significant in a whole tenderloin — the concentrated lean mass retains heat for several minutes after leaving the oven, enough to raise the internal temperature noticeably — making the pull temperature meaningfully lower than the target serving temperature.",
+  "prime_rib": "Prime rib (also called standing rib roast) is cut from the rib primal (ribs 6–12), comprising the longissimus dorsi and surrounding muscles, with a generous fat cap and the rib bones attached. It is one of the most marbled subprimal sections of the animal — the rib muscles do relatively little work, and the high intramuscular fat content self-bastes during roasting, keeping the interior moist across a wide temperature range. Oven roasting is the canonical method for prime rib because the sustained, even heat of an enclosed oven allows the large mass (typically 2.5–5 kg) to heat evenly from edge to centre while the exterior fat cap renders and browns. Carryover is substantial for a prime rib — the large, dense mass retains heat efficiently, and internal temperature continues to rise for 15–30 minutes after removal; this must be accounted for in the pull temperature.",
   "goose_breast": "Goose breast is a rich, deeply flavoured dark meat with a substantial fat layer, similar in character to duck breast but larger and more assertively flavoured. Like duck breast, it is often served medium-rare to medium (145–155 °F / 63–68 °C) by many European chefs, though USDA guidelines require 165 °F (74 °C). The oven-roast method for goose breast mirrors duck breast technique: stovetop fat rendering followed by oven finishing. Goose breast dries out at high oven temperatures, so a moderate 350–375 °F oven with careful temperature monitoring is essential.\n\nTarget internal temperature: **145–155 °F (63–68 °C)** — medium; pull at 140 °F and rest. USDA safe minimum: 165 °F (74 °C) — pull at 160 °F and rest.",
   "goose_leg": "Goose legs are large, tough, highly flavoured cuts rich in connective tissue and intramuscular fat. Braising — browning the legs in fat, then cooking them submerged or partially submerged in aromatic liquid at low heat for 2–3 hours — is the optimal method for transforming this tough cut into fork-tender, fall-off-the-bone meat. The collagen-rich connective tissue converts to gelatin above 160 °F, but the most tender, succulent results come at 175–185 °F (79–85 °C) after extended braising. USDA minimum for poultry is 165 °F. Unlike duck confit, braising adds moisture; the braising liquid becomes a rich, gelatin-laden sauce.\n\nTarget internal temperature: **175–185 °F (79–85 °C)** — well above USDA minimum; extended time at this temperature melts collagen and produces best texture. Minimum safe: 165 °F (74 °C).",
   "goose_thigh": "Goose thigh is perhaps the most flavourful part of the goose — richer than the leg and with a higher ratio of intramuscular fat and connective tissue. Braising is ideal: the moist-heat environment keeps the thigh succulent while sustained heat above 160 °F converts collagen to gelatin. Target 175–185 °F (79–85 °C) for the most tender, silky texture. The braising liquid, enriched by rendered goose fat and gelatin, reduces to an intensely flavourful sauce. Goose thighs are widely used in European traditional cooking, similar to duck confit but with a braise instead of a fat immersion.\n\nTarget internal temperature: **175–185 °F (79–85 °C)** — optimal for collagen breakdown; USDA minimum: 165 °F (74 °C).",
   "whole_goose": "A whole goose (typically 4–6 kg / 9–13 lb) is by far the fattiest of the common roasting birds — a significant proportion of its body weight is subcutaneous fat that must be rendered away during cooking. This sets it apart from chicken and turkey: the cook's main task is not to avoid dryness but to efficiently remove vast quantities of fat while keeping the dark, richly flavoured meat from toughening. Goose legs and thighs need 165–175 °F (74–79 °C) to become tender; the breast is best at a lower temperature but in whole-bird cookery inevitably finishes higher. The USDA minimum for whole goose (like all whole poultry) is **165 °F (74 °C)** measured deep in the thigh without touching bone. Many European recipes roast to 175–185 °F (80–85 °C) in the thigh to ensure the dark meat is fully tender and the fat rendered. Carryover adds 3–5 °C after resting.\n\nA medium goose (4.5 kg / 10 lb) typically takes 2.5–3 hours at 190 °C (375 °F) when started breast-side-up. Fat must be drained from the roasting tin every 30–45 minutes or it will smoke aggressively.",
   "duck_breast": "Duck breast is a dark, rich cut with a thick layer of subcutaneous fat beneath a scored skin. Unlike chicken breast, duck breast is best cooked to medium-rare (135–145 °F / 57–63 °C), where the meat remains pink, juicy, and tender. The oven-roast method typically follows a stovetop fat-rendering sear: the breast starts skin-side down in a cold or lightly warmed oven-safe pan to slowly render the fat cap, then transfers to a moderate oven to finish gently and evenly without overshooting the internal temperature.\n\nTarget internal temperature: **135–145 °F (57–63 °C)** — medium-rare, pull at 130 °F and rest; carryover brings it to target. For well-done (USDA), pull at 160 °F for a final resting temp of 165 °F.",
   "whole_duck": "A whole duck presents a significant cooking challenge: the breast meat is best at medium-rare (135–145 °F) while the legs and thighs need higher temperatures (165–175 °F) to break down their tougher connective tissue. This conflict is resolved either by accepting slightly overcooked breast in exchange for properly done legs, or by using a low-and-slow approach that slowly renders the abundant subcutaneous fat while keeping the breast moist. The USDA minimum for whole poultry is 165 °F measured in the thigh. Whole ducks weigh 4–6 lb (1.8–2.7 kg) on average and carry far more fat than chicken — that fat must be rendered out to achieve crackling skin.\n\nTarget internal temperature: **165 °F (74 °C) in the thigh** — USDA minimum for whole poultry. Breast will be well-done at this point; accept this or use the low-and-slow method which keeps breast juicier.",
-  "ground_turkey": "Ground turkey (hindi kıyması / Putenhackfleisch / tacchino macinato) is a lean alternative to beef in grilled patties and köfte. Turkey mince dries out more easily than beef or even chicken, so moisture-binding additions — grated onion, soaked bread, applesauce, or egg — are essential. Turkey's mild, slightly sweet flavour takes well to bold spice blends: Mediterranean (paprika, cumin, garlic), Turkish (thyme, cumin, kırmızı biber), and German (salt, pepper, Röstzwiebeln). Ground turkey must reach a safe internal temperature throughout without becoming dry. The MEATER probe is inserted horizontally into the thickest patty or köfte from the side, positioned centrally.\n\nTarget internal temperature: **74 °C (165 °F)** — the USDA minimum for all ground poultry; explicitly confirmed by multiple sources.",
+  "ground_turkey": "Ground turkey (minced turkey) is made by grinding dark meat (thigh and leg), white meat (breast), or a blend. A dark-meat-inclusive blend (typically 93/7 lean/fat) has noticeably better flavour and moisture retention than pure breast-meat grinds. Because turkey is poultry, the USDA minimum safe internal temperature is 74°C (165°F) with no reduction for resting. Ground turkey cooks faster than beef or pork at the same mass due to its lower fat content and should be monitored closely to avoid dryness. Carryover is 1–2°C.",
   "turkey_breast": "Turkey breast can be purchased bone-in (half breast on the rib rack, 1.5–2.5 kg / 3–5.5 lb) or boneless (rolled and tied, 1–2 kg / 2–4.5 lb). Both have dramatically less fat than dark turkey meat and will dry out rapidly if taken past 165 °F (74 °C); the sweet spot for juicy, food-safe turkey breast is **160–165 °F (71–74 °C)** at the thickest point (the USDA minimum is 165 °F; pulling at 160 °F and resting 10–15 minutes under foil achieves safe temperatures via carryover). Bone-in breasts conduct heat more slowly near the bone and need accurate probe placement to the geometric centre of the thickest part. Boneless rolled breasts cook more evenly. At 190–200 °C oven temperature, a 1.5 kg bone-in breast takes approximately 60–75 minutes.",
+  "turkey_burger": "An air-fried turkey burger is the same 150–180 g ground-thigh patty as the grill or pan-sear preparation, cooked in the convection-fan environment of an air fryer at 190–200 °C. The high air velocity produces an even Maillard crust on both faces simultaneously, and the cook is faster than a conventional oven (8–10 minutes vs 14–18). The patty must be at least 150 g and 2 cm thick to avoid drying out at the edges before the centre reaches 74 °C. Probe the geometric centre of the largest patty; carryover is small (1–2 °C).",
   "whole_turkey": "A whole turkey presents the same fundamental challenge as a whole chicken but at larger scale and with more extreme differences between breast and leg/thigh: the breast meat is lean and prone to drying above 160–165 °F (71–74 °C), while the legs and thighs are dark, collagen-rich and benefit from 165–175 °F (74–79 °C) to become properly tender. A 4.5 kg / 10 lb turkey feeds 6–8 people; a 7 kg / 15 lb turkey feeds 10–12. The USDA minimum for whole turkey is **165 °F (74 °C)** measured in the thigh at its thickest point, well away from bone. Probe placement in the thigh (not the breast) is the authoritative food-safety measurement. Modern approaches — brining, spatchcocking, basting — all aim to let the thigh reach 165 °F without pushing the breast past 165 °F.\n\nTypical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) unstuffed. A 4.5 kg (10 lb) bird takes approximately 2.5–3 hours; a 7 kg (15 lb) bird takes approximately 3.5–4 hours.",
   "chicken_breast": "Chicken breast is a lean, boneless cut that dries out quickly when overcooked. Pounding to even thickness and brining are the two most effective techniques for retaining moisture. Because there is minimal fat to buffer heat, precise temperature monitoring is critical.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry",
   "chicken_burger": "Ground chicken burgers are formed patties made from minced chicken, typically 85–93% lean. Because ground poultry must be cooked to a higher internal temperature than whole muscle, and because the meat is lean and prone to drying out, adding binders (egg, breadcrumbs, or cooked rice) helps retain moisture. The air fryer circulates hot air to brown the exterior without deep frying.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry",
@@ -17288,12 +17342,39 @@ const CUT_PROFILES = {
   "chicken_wing": "Chicken wings (wingettes and drumettes) are small, high-surface-area dark-meat pieces that become irresistibly crispy in the air fryer without deep frying. The single most effective technique for extra-crispy skin is tossing wings with a small amount of baking powder before cooking — it raises the skin's pH, causing it to blister and brown faster. Patting wings dry is equally critical.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry",
   "ground_chicken": "Ground chicken braised in liquid is a moist-heat method that keeps the lean meat from drying out and develops a flavourful sauce simultaneously. Because ground poultry is mixed throughout with bacteria (unlike whole muscle), every part of the meat must reach safe temperature. Braising is forgiving — the surrounding liquid prevents the meat from going above 212 °F (100 °C), but interior temp still easily exceeds 165 °F (74 °C) with adequate cooking time.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry; visual: no pink inside",
   "whole_chicken": "A whole roasted chicken presents a fundamental challenge: the breast and thigh finish at different temperatures, so technique matters. Starting breast-side down lets the thigh meat begin rendering while protecting the breast. High initial heat (475 °F / 246 °C) produces crackling golden skin. The breast should reach 160–165 °F (71–74 °C) while the thigh reaches 165–170 °F (74–77 °C); a well-rested bird allows both to equalise. Average 3–4 lb bird takes 55–70 minutes total.\n\nTarget internal temperatures: **Breast 160–165 °F (71–74 °C)** · **Thigh 165–170 °F (74–77 °C)**",
-  "tuna_steak": "Grilled tuna steak is a cornerstone preparation across multiple Mediterranean, American, and Pacific culinary traditions. The dry, intense radiant heat of a grill produces the sought-after char and crosshatch grill marks on the lean, firm flesh, while the short cook time — 2–3 minutes per side for a medium-rare finish — preserves the vivid red interior colour and moist texture. Tuna's low fat content means it does not produce significant flare-up on a charcoal grill, which makes it easier to manage than fatty fish; however, the same leanness means it sticks to poorly oiled or inadequately preheated grates. The structural challenge on the grill is the same as in the pan: overcooking turns the dense muscle fibres from a silky, tuna-steak texture into a dry, mealy one very rapidly above 60 °C. Carryover is 2–3 °C from grill contact.",
+  "asparagus": "Asparagus (*Asparagus officinalis*) on the grill develops an ideal contrast between the charred, slightly bitter tips and the tender, sweet stems. The spears should be thick enough (≥ 1 cm at the base) to survive direct grill heat without falling through the grates; if thinner, use a grill basket or skewer the spears in bundles. Grill time: 6–10 minutes, depending on thickness, at medium-high to high heat, turning once or twice. Pull temperature: 82–88 °C (180–190 °F) at the thickest part of the stem for tender-crisp asparagus with char-marked tips. A MEATER probe is inserted along the long axis of the largest, thickest spear from the cut base end, with the tip at the mid-point of the spear.",
+  "broccoli": "Broccoli (*Brassica oleracea* var. *italica*) in the air fryer becomes golden-crisp at the floret tips and tender at the stems in 10–14 minutes at 190–200 °C — faster and crispier than a conventional oven. The air fryer's rapid convection dehydrates the floret surface quickly, enabling Maillard browning before the interior overcooks. Florets should be 3–5 cm, similar in size for even cooking, and patted completely dry. Pull temperature: 80–85 °C (176–185 °F) for crispy-golden, tender-stemmed florets. MEATER probe inserted through the stem of the largest floret.",
+  "brussels_sprouts": "Brussels sprouts (*Brassica oleracea* var. *gemmifera*) in the air fryer become intensely caramelised and golden-charred on the cut faces in 12–16 minutes at 190–200 °C — faster than a conventional oven, with crispier outer leaves. They should be halved through the core (the flat face caramelises maximally), very dry, and generously oiled. Pull temperature: 82–88 °C (180–190 °F) for charred-golden outer leaves with a tender, sweet interior. MEATER probe inserted through the outer leaves of the largest sprout into its core.",
+  "green_beans": "Green beans (*Phaseolus vulgaris* and *Vigna unguiculata* — runner beans, French haricots verts, yard-long beans) boiled is the classic preparation in French haute cuisine, American home cooking, and the base technique in almost every global kitchen that uses fresh green beans. The target for boiled green beans is bright-green and tender-crisp: 78–82 °C (172–180 °F) inside the bean. Overcooked beans turn army-green, drab and mushy at 88+ °C. The classic French technique is to boil rapidly in a large quantity of salted water (blanching) for 3–5 minutes, then shock in ice water (*refresh*) to stop cooking and fix the bright green. MEATER probe: insert horizontally through the side of the longest/thickest bean at the mid-point; the probe must be in the water and not reading ambient air.",
+  "spinach": "Spinach (*Spinacia oleracea*) sautéed wilts dramatically in 1–3 minutes in a hot pan with a small amount of oil or butter — fresh spinach loses approximately 90 % of its volume on cooking as moisture is expelled. The target: bright-green, just-wilted leaves with no excess water pooled in the pan. If a pool of water accumulates, the spinach is steaming not sautéing. Internal temperature at just-wilted doneness: 68–75 °C (154–167 °F) — above 75 °C the chlorophyll degrades and the colour turns army-drab. MEATER probe placed horizontally into the densest centre of the spinach pile in the pan.",
+  "roasted_tomatoes": "Tomatoes (*Solanum lycopersicum*) in the air fryer roast in 8–15 minutes depending on size and target: cherry tomatoes burst and caramelise in 8–10 minutes at 200 °C; halved plum tomatoes take 12–15 minutes to collapse and blister. The circulating air dehydrates the surface faster than a conventional oven, producing crisper, slightly wrinkled edges with concentrated sweetness. Air-fried tomatoes are particularly useful as fast toppings for pasta, pizza, bruschetta, or eggs. Pull temperature for burst cherry tomatoes (serving as-is) is 82–88 °C (180–190 °F); for halved plum tomatoes intended as a sauce base, 88–95 °C (190–203 °F). A MEATER probe is most practical in a larger tomato; for cherry tomatoes, rely on appearance (bursting, blistered) and time, or insert in the largest specimen. Carryover is negligible.",
+  "cabbage": "Cabbage (*Brassica oleracea* var. *capitata*) braised is one of the most globally distributed vegetable preparations: German Rotkohl, French *chou braisé*, Polish *kapusta duszona*, Indian dum-cooked cabbage, and Chinese red-braised cabbage all transform the pungent, crunchy raw leaves through long, moist cooking into a tender, sweet, and deeply flavourful result. The technique involves long gentle simmering in a small amount of liquid (wine, vinegar, stock, or a combination) with a lid on, allowing the cabbage to stew in its own juices. Pull temperature for a fully braised cabbage wedge or shred: 88–95 °C (190–203 °F) — at this point the cell walls have fully collapsed, the harsh glucosinolates have converted to gentler compounds, and the texture is yielding and silky. A MEATER probe is inserted through the outer layers of a wedge into the thickest part of the core, or into the densest part of the shred pile.",
+  "cauliflower": "Cauliflower (*Brassica oleracea* var. *botrytis*) in the air fryer achieves crispy, golden-brown florets in 12–16 minutes — faster than a conventional oven and with less oil required. The rapid convection is particularly effective at evaporating the cauliflower's surface moisture (florets are ≈ 92 % water) before Maillard browning begins. Air-fried cauliflower is a globally popular preparation: from Indian gobi tikka (marinated in spiced yoghurt) to Korean spicy *gobi*, Israeli za'atar cauliflower, and plain roasted Western versions. Pull temperature: 80–86 °C (176–187 °F) for golden, fully tender florets. A MEATER probe is inserted through the stem of the largest floret into its centre before the cook begins.",
+  "button_mushrooms": "Button mushrooms (*Agaricus bisporus*) in the air fryer roast in 8–12 minutes at 200 °C — significantly faster than an oven — with the circulating hot air dehydrating the surface moisture that would otherwise cause steaming and prevent browning. The main enemy of mushroom browning is moisture: the caps contain ≈ 92 % water, and this must be driven off before Maillard browning can occur. The air fryer's rapid convection achieves this faster than any conventional oven method. Internal pull temperature for fully roasted button mushrooms in the air fryer: 80–86 °C (176–187 °F) — at this point the exterior is golden-brown and the interior is silky, juicy and fully cooked. A MEATER probe is inserted through the side of the largest cap into its geometric centre before the cook begins.",
+  "portobello_mushrooms": "Portobello mushrooms (*Agaricus bisporus* — the same species as button mushrooms, grown to maturity) in the air fryer cook in 12–16 minutes at 190–200 °C. Their large caps (8–15 cm diameter) and dense flesh benefit from the air fryer's rapid convection, which dehydrates the exposed surfaces and concentrates flavour faster than an oven. Portobello caps are typically cooked gill-side-up (to retain their juices) or gill-side-down (to achieve a drier, crisper result). A MEATER probe is inserted through the cap skin (the convex top side) into the thickest central point of the flesh, with the tip just above the gills. Pull temperature: 82–88 °C (180–190 °F) for a juicy, fully cooked result.",
+  "eggplant": "Eggplant (*Solanum melongena*) in the air fryer follows the same principle as oven roasting but in a smaller, faster environment: the convective heat at 200–210 °C dehydrates the surface rapidly, browning it in 15–20 minutes rather than 25–30. The air fryer is particularly effective for slices, cubes, and halves because the circulating air reaches all surfaces simultaneously, reducing the need to flip. Crowding is the main enemy — pieces must have air space between them or they steam rather than roast. The internal target is 82–88 °C (180–190 °F) for cubes and slices (creamy-tender, slightly collapsed at edges), and 88–92 °C (190–198 °F) for halves intended for mashing. Carryover in the air fryer is small (1–2 °C) but the pieces dry out if left in the basket after the cook. MEATER Plus is compatible with most air fryer baskets; insert the probe before the cook begins.",
+  "bell_peppers": "Bell peppers (*Capsicum annuum*) in the air fryer roast beautifully in 12–18 minutes without the need for high-heat oven preheating. The circulating air blisters the skin and caramelises the sugars of sliced strips faster than a conventional oven. Whole peppers can be air-fried for peel-and-serve preparations (same result as oven or grill, just faster). Halves or strips aimed for eating without peeling are done at 200 °C (390 °F) in 12–15 minutes, reaching an internal temperature of 82–90 °C (180–194 °F) where the flesh is tender and juicy with slightly blistered skin. A MEATER probe is inserted through the side wall of a whole pepper or horizontally into a thick strip before starting the cook. The air fryer is particularly popular for Asian-spiced pepper dishes since the intense dry heat replicates the wok-scorched texture without a wok.",
+  "corn_on_cob": "Corn on the cob (*Zea mays*) in the air fryer achieves results similar to oven-roasting but in 12–16 minutes rather than 25–30, with the circulating hot air crisping the outer kernel rows quickly while the inner cob heats through. The corn must fit in the air fryer basket — a standard cob is too long and should be cut in half. The air fryer is particularly effective at caramelising the outer kernel rows to give a satisfying char without live fire. Pull temperature: 86–92 °C (187–198 °F). A MEATER probe is inserted through the kernel rows into the cob core at the mid-point of the half-ear. Husked halved corn ears are the standard preparation.",
+  "acorn_squash": "Acorn squash (*Cucurbita pepo* var. *turbinata*) oven-baked whole or halved at 180–200 °C is a classic American autumn preparation. Halved and seed-scooped, then baked cut-face-down (30–40 min) or cut-face-up with a filling (35–50 min). Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe inserted through the skin into the thickest part of the flesh wall.",
+  "butternut_squash": "Butternut squash (*Cucurbita moschata*) oven-roasted in halves or chunks at 190–220 °C is one of the most widely used autumn/winter vegetable preparations globally. Halves roasted cut-face-down for 40–50 min; chunks in 25–35 min. Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe through the skin into the thickest flesh.",
+  "spaghetti_squash": "Spaghetti squash (*Cucurbita pepo*) is baked whole or halved at 180–200 °C until the flesh separates into noodle-like strands when scraped with a fork. Halved baked cut-face-down (35–45 min); whole baked (50–65 min with fork pricks). Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe inserted through the skin into the flesh for whole baking, or through the skin of a half. The defining visual cue — flesh pulling into strands — coincides with 90–95 °C.",
+  "zucchini": "Zucchini (*Cucurbita pepo* var. *cylindrica*) cut into 1–2 cm rounds, half-moons or spears air-fried at 190–200 °C for 8–12 minutes produces golden, slightly crisp exteriors with tender centres. Because zucchini is mostly water, the air fryer's forced hot air quickly drives off surface moisture to give browning that is difficult to achieve in an oven. Pull temperature: 82–85 °C (180–185 °F) at the thickest piece — at this temperature the flesh is fully tender while still holding its shape. MEATER probe inserted lengthwise into the thickest spear or along the flat face of the largest round.",
+  "caramelized_onions": "Caramelised onions via pan-frying refers to the style in which sliced or halved onions are cooked in generous hot fat over medium-to-high heat, with deliberate browning as the primary goal, contrasted with the slow-sauté method. At 170–190 °C pan temperature, the natural sugars (roughly 5 % of the onion's weight) undergo both caramelisation and Maillard reactions with the amino acids, producing deeply browned, almost crispy-edged onions with intense sweetness and bitterness in balance. This technique appears in South Asian birista (fried garnish), Alsatian Zwiebelkuchen bases, French *soubise* shortcuts, and Japanese-style glazed onion sides. A MEATER probe inserted horizontally into a thick half-onion near the centre reads the internal transition from crisp-dense (~60 °C) to fully soft (85–92 °C). Carryover is small but the browned rings crisp up further as they cool on a wire rack.",
+  "leeks": "Leeks (*Allium ampeloprasum* var. *porrum*) braised are one of the most refined of all vegetable preparations. The long white shafts soften over 20–40 minutes of gentle simmering in stock, wine, or butter-enriched liquid, their sharp raw flavour mellowing to a delicate sweetness. The technique — covering with a cartouche (buttered paper) or lid and cooking barely at simmer — is classical French *étuvée*, used also in British and Flemish cuisines. Leeks are cut in half lengthwise, or left whole and halved after cooking. The internal temperature of a fully braised leek is 82–88 °C (180–190 °F), where the cell walls have fully softened and the shaft is yielding to a paring knife but not collapsed. A MEATER probe is inserted along the axis of the leek into the thickest part of the white base, as far from the cut ends as possible to get a representative reading.",
+  "roasted_garlic": "Whole garlic heads (*Allium sativum*) oven-roasted are entirely transformed: the sharp, pungent raw allicin flavour mellows over 35–50 minutes at 180–200 °C into a sweet, nutty, spreadable paste. The papery outer skin chars slightly; the cloves themselves absorb their own concentrated sugars and caramelise within their individual sheaths. The classic preparation exposes the cloves by slicing the top off a whole head, drizzling with olive oil, and wrapping in foil or placing cut-side-up in a small dish. Internal clove temperature at full softness is 90–96 °C (194–205 °F). A MEATER probe is inserted from the top of the head, between two central cloves, to the geometric centre of the head.",
+  "roasted_onion": "Whole onions (*Allium cepa*) on the grill are a traditional technique in cultures as distant as Argentina (Mallmann's *cebollas enteras a las brasas*), Mexico (grilled cambray onions for *salsa tatemada*), India (whole onion over tandoor coals), and Turkey (*közlenmiş soğan*). The outer layers char and blacken; the inner layers steam in their own moisture and transform to a silky, jam-sweet texture. Grilled whole onions — especially with their skins left on as insulation — require 30–50 minutes of moderate grill heat. Halved onions, placed cut-side-down on the grill grates, develop a deeply caramelised cut face in 15–20 minutes. Pull temperature for a whole grilled onion (fully soft throughout): 88–95 °C (190–203 °F). A MEATER probe is inserted through the side, between outer layers, into the centre of the onion.",
+  "baked_potato": "Whole baked potato (*Solanum tuberosum*) in the air fryer achieves a crispy, salty skin and fluffy interior in 35–45 minutes at 200 °C — significantly faster than the conventional oven (60–90 minutes) and with superior skin crispness due to the circulating hot air. A medium-to-large potato (200–250 g) takes 35–40 minutes; a very large potato (350+ g) takes 45–50 minutes. Pull temperature: 96–98 °C (205–208 °F) at the thickest centre. A MEATER probe is inserted along the long axis into the thickest central point of the potato before air frying begins. At 96–98 °C the starch granules are fully gelatinised and the interior is completely fluffy.",
+  "roasted_beets": "Whole beetroot (*Beta vulgaris*) oven-roasted, still in the skin, at 190–200 °C is the most flavour-preserving technique for beets: the skin protects the flesh from direct heat, preventing the water-soluble betalain pigments (which give beets their vibrant red-purple colour) from leaching out, as they would during boiling. Small-to-medium beets (7–10 cm diameter) take 50–70 minutes; large beets (>10 cm) take 70–90 minutes. Individual foil-wrapped beets cook slightly faster. Pull temperature: 92–96 °C (198–205 °F) at the thickest centre — at this point a skewer inserts with no resistance. MEATER probe inserted through the root end into the geometric centre.",
+  "roasted_carrots": "Carrots (*Daucus carota*) in the air fryer become caramelised, golden, and sweet in 15–20 minutes at 190–200 °C — faster than oven-roasting. Cut into coins, batons or long halves, they concentrate their natural sugars through evaporation and develop Maillard browning on the flat cut faces. Pull temperature: 86–92 °C (187–198 °F) for tender, caramelised carrots. MEATER probe inserted along the long axis of the thickest batons.",
+  "roasted_parsnips": "Parsnips (*Pastinaca sativa*) in the air fryer become golden, caramelised and crispy at the tips in 16–20 minutes at 190–200 °C — faster than oven roasting (25–30 minutes). Parsnips have a high natural sugar content (≈ 12 g/100 g — significantly higher than carrots) and caramelise readily. They should be cut into batons or long wedges, oil-coated and placed in a single layer. Pull temperature: 86–90 °C (187–194 °F) for caramelised, fluffy-interior parsnips. MEATER probe inserted along the long axis of the thickest baton.",
+  "roasted_potatoes": "Roasting potatoes (*Solanum tuberosum*) converts the raw starch to a crisp, caramelised exterior and fluffy interior. High-starch varieties (Maris Piper, Russet, King Edward) are preferred because their floury texture creates better fluffiness inside and absorbs fat more effectively for crispness. Waxy varieties (Charlotte, Jersey Royal) hold their shape but produce less crisp results. Fat coating (duck fat, goose fat, olive oil, lard) is essential — it conducts heat, enables Maillard browning, and adds flavour. Pre-boiling until edges are rough (chuffed) dramatically increases crispness by maximising surface area. Target internal temperature is 95–100°C for full starch gelatinisation and a fluffy interior.",
+  "roasted_sweet_potato": "Sweet potato (*Ipomoea batatas*) in the air fryer achieves crispy, caramelised skin and a soft, sweet interior in 35–45 minutes (whole) or 20–25 minutes (halved or cubed). Sweet potato contains much higher natural sugars (6–8 g/100 g cooked) than white potato, which means it caramelises more readily. In Japan, *yakiimo* (焼き芋 — stone-roasted sweet potato) is a beloved street food. In Korea, *goguma* (고구마) is roasted and enjoyed as a snack. Pull temperature: 96–98 °C (205–208 °F) at the thickest centre for whole sweet potato. MEATER probe along the long axis into the geometric centre.",
+  "tuna_steak": "Tuna steak — most commonly bluefin (*hon maguro*), yellowfin (*ahi*), or bigeye (*mebachi*) — is cut transversely from the loin muscles of a large pelagic fish. Tuna flesh is deep crimson (from high myoglobin content), very lean, and densely muscled compared to most fish; it has almost no connective tissue between muscle segments, which means it behaves more like a red meat steak than a typical white-flake fish. Pan searing suits tuna precisely because the high heat drives rapid Maillard browning on the lean surface, while the brief cook time leaves the interior at the desired rare state. Overcooking is the defining risk: above 60 °C the proteins tighten dramatically, and the lean flesh becomes dry and crumbly. The conventional sushi-bar preference for *tataki* (briefly seared, cold-raw centre) means the entire temperature spectrum from raw to fully cooked is culinarily acknowledged. Carryover in a seared tuna steak is 2–3 °C and dissipates quickly.",
   "salmon_fillet": "Salmon fillet in the air fryer is cooked by rapid convective circulation of superheated air around the fish in a compact enclosed basket; this simulates roasting at intensified speed, producing a surface that browns faster than a conventional oven bake while the interior remains moist. The skin crisps well if the surface is dried thoroughly before cooking. The compact geometry of most air fryer baskets means portions must be sized to fit without overlapping; single fillets of 150–200 g are ideal. Carryover from an air fryer is 3–5 °C, similar to a hot convection oven, and residual heat from the basket continues to cook the fish briefly after extraction. The rapid cook time — typically 8–12 minutes — means that soy, honey or sugar-based glazes caramelise well without burning if applied mid-cook or just before the final 2 minutes.",
   "lobster_tail": "Lobster tail is the large tail segment of a lobster (*Homarus americanus*, the American/Maine lobster, or *Homarus gammarus*, the European/Breton lobster) separated from the body and claws; frozen and fresh spiny lobster tails (*Panulirus argus*) from the Caribbean and Pacific are also widely used. The edible flesh is the tail muscle — firm, white-to-pale-pink, sweet and rich in natural glutamates. Grilling is one of the most popular preparations for lobster tail because the direct radiant heat produces char and caramelisation on the cut flesh surface while the shell acts as a natural heat shield and flavour-retaining vessel. Butterflying the tail (cutting through the shell dorsally and splaying the flesh upward) is the dominant grill preparation because it exposes more flesh surface to direct heat and allows basting to penetrate the meat. Overcooking tightens the fibres sharply; the pull window is 58–62 °C before the meat becomes dry and rubbery. Carryover is 3–4 °C.",
   "scallops": "Sea scallops (*Pecten maximus* in Europe; *Placopecten magellanicus*, the Atlantic sea scallop, in North America) are the large adductor muscle that opens and closes the bivalve shell. The flesh is cream-white, sweet, and extremely tender with almost no connective tissue; it is composed mainly of striated muscle fibres held in a dense but delicate matrix. Pan searing is the defining method for large sea scallops because extreme heat produces rapid caramelisation of the natural sugars on the flat cut surfaces — the golden-brown crust contrasts dramatically with the cool, almost raw centre that is the mark of a well-executed scallop. Overcooking tightens the fibres sharply and produces a rubbery, squeaky texture. The critical requirements are: completely dry exterior, a blazing pan, and a very short cook time. Carryover is significant relative to the small mass — 3–5 °C — so pull early.",
   "shrimp": "Shrimp (called prawns in British, Australian, and much of Asian-English usage) are the most widely consumed shellfish globally; the species most commonly used for pan frying include tiger prawns (*Penaeus monodon*), white leg shrimp (*Litopenaeus vannamei*), spot prawns (*Pandalus platyceros*), and Gulf shrimp (*Farfantepenaeus aztecus*). The edible flesh is the tail muscle, which contracts rapidly under heat and curls the tail from the characteristic C-shape of a live shrimp to a tighter O-shape when overcooked. Pan frying over high heat produces a caramelised exterior on the natural sugars in the shell or flesh, and in shell-on preparations the shell acts as a protective layer. The protein in shrimp begins to denature around 50 °C and is fully set at 60 °C; the culinary window for moist, tender shrimp is extremely narrow, typically 3–4 minutes total cook time for medium prawns in a very hot pan. Carryover is 2–3 °C.",
-  "cod_fillet": "Air-fried cod fillet is cooked in a compact, rapidly circulating convective hot-air environment that mimics deep frying or high-heat oven roasting but with much less oil. The short cook time (10–14 minutes) and intense circulating air produce a lightly crisped exterior on coated fillets, or a slightly caramelised surface on uncoated ones, while the interior cooks through with minimal moisture loss. Cod's lean flesh responds well to the air fryer because it does not require the self-basting effect of fat-rich fish — the rapid air circulation is sufficient to cook the fillet evenly. Crumb- or batter-coated versions (a lighter version of fish and chips) are the most popular air-fryer cod preparation. The major practical challenge is that very thin tail-end portions of cod cook faster than thick loin portions; probing the thickest part is essential. Carryover is 3–4 °C.",
+  "cod_fillet": "Atlantic cod (*Gadus morhua*) fillet is cut from the sides of the fish; the flesh is firm, bright white when raw and milky white when cooked, with large moist flakes separated by thin layers of connective tissue. Cod is lean (less than 1% fat), which means it has no internal fat to provide self-basting protection during high-heat cooking; the natural moisture and gelatin in the connective tissue are the primary sources of perceived juiciness. Pan frying is a very common preparation — the high heat of the pan produces a golden-brown crust on the thin, flour- or breadcrumb-coated exterior while the interior cooks gently. Battered cod (fish and chips) uses the batter as insulation; simple pan-fried cod relies on a light coating of seasoned flour or the naked flesh. Carryover is minimal (2–3 °C) given the lean composition; the flesh transitions from moist-and-flaky to dry-and-crumbly rapidly above 65 °C.",
   "haddock": "Haddock (*Melanogrammus aeglefinus*, Norwegian: hyse/kolje, German: Schellfisch, Swedish:\nkolja) is a lean white-fleshed cold-water fish closely related to cod. It has a mild,\nslightly sweet flavour and firm but fine-grained flesh that flakes beautifully when cooked.\nHaddock is central to British cuisine (fish & chips), Norwegian everyday cooking, and the\nGerman North Sea fishing tradition. The fillets are typically 1–2 cm thick, making them\nfast-cooking pan fish: 2–4 minutes per side at medium to medium-high heat in butter or\noil is sufficient for a fillet of normal thickness. The internal flesh reaches safe serving\ntemperature (63 °C / 145 °F USDA minimum for finfish) quickly; overcooking past 65 °C\nproduces dry, rubbery fish. The MEATER probe must be inserted laterally (from the thick\nedge) in thin fillets. Flouring the fillets before frying (as in the German and British\ntraditions) creates a protective crust that helps moisture retention and even browning.",
   "hake": "Hake (*Merluccius merluccius*, European hake; *Merluccius capensis/paradoxus*, Cape hake; *Merluccius productus*, Pacific hake) is a lean white fish with firm, dense, large-flaked flesh and a mild, slightly sweet flavour. It occupies a central position in Iberian and Basque cuisine — in Spain (*merluza*) and Portugal (*pescada*) it is arguably the most important food fish — and is also important in Moroccan and West African seafood traditions. The flesh is slightly softer than cod when raw but firms up well under heat to produce the characteristic large, clean flakes. Pan frying is one of the dominant preparations: simply floured and pan-fried in olive oil (*merluza a la plancha*) is a Spanish staple; batter-fried (*pescada frita*) is a Portuguese and Moroccan tradition. Carryover is minimal (2–3 °C); pull at 60–63 °C for moist flakes.",
   "halibut_fillet": "Pacific halibut (*Hippoglossus stenolepis*) and Atlantic halibut (*Hippoglossus hippoglossus*) are the largest flatfish; the fillet — cut from the meaty upper or lower side of the fish — is thick, firm, brilliant white, and lean with large, tight muscle flakes. The flesh has little connective tissue relative to its density, which gives a satisfying firm bite when properly cooked but transitions quickly to a dry, chalky texture above 60 °C. Pan searing is one of the most technically demanding preparations for halibut because the thick, lean flesh must be cooked through to approximately 58–62 °C without surface scorching; a common technique is to sear in a screaming-hot pan to set the crust, then finish in a moderate oven or with basting, treating it more like a thick beef steak than most fish. Carryover is significant — 4–5 °C for a thick fillet — so pulling early is essential.",
@@ -17314,14 +17395,18 @@ const CUT_PROFILES = {
   "lamb_loin_chops": "Lamb loin chops are the T-bone of lamb — cut from the saddle, containing both the loin and the small section of tenderloin. They are larger and meatier than rib chops, with a characteristic T-shaped bone. In the UK they are sold as \"lamb chump chops\" (slightly different cut, from the rump). They are pan-seared 4–5 minutes per side to medium.\n\nTarget: **57–62 °C (135–144 °F)** for medium (slightly pink). Africanbites.com: 135–140°F (57–60°C).",
   "baby_back_ribs": "Baby back ribs (also called loin ribs or kamben in Danish; Rippchen in German) are the upper ribs from the pork loin area — leaner, more curved, and smaller than spare ribs. In an air fryer the high-velocity hot air circulates around each section, cooking them much faster than a conventional oven (60–90 min vs. 2.5–3 hrs) while still achieving tender, fall-off-the-bone results. Most air-fryer methods either pre-boil the ribs (to accelerate internal tenderness) or rely on a long low-temperature cook phase followed by a short high-temperature crisping phase. The silver skin on the bone side must always be removed. Target internal: 88–95 °C for tender, collagen-rendered ribs; at 63 °C they are technically safe but not yet fall-off-bone.\n\nTarget internal temperatures (air fryer):\n- Fall-off-bone tender: **88–95 °C (190–203 °F)**\n- ⚠️ Below 80 °C ribs are food-safe but still tough",
   "spare_ribs": "Spare ribs (revelsben/kamben in Danish; Spareribs in German/Austrian) are the lower belly ribs, larger and flatter than baby back ribs with more fat and connective tissue. They benefit particularly from low-and-slow oven cooking: either pre-boiled then finished high, or foil-wrapped at low heat then glazed. The higher fat content makes them more forgiving than baby backs. Target internal: 88–95 °C, the same range as baby back ribs — collagen renders at these temperatures giving the characteristic tender, pull-off-bone texture and glossy glaze.\n\nTarget internal temperatures (oven roast):\n- Fall-off-bone tender: **88–95 °C (190–203 °F)**\n- ⚠️ Below 80 °C spare ribs are food-safe but still tough",
-  "ground_pork": "Ground pork pan fry is the backbone of many European dishes: frikadeller (Danish meatballs), hakkebøffer (Danish hamburger patties), hackbraten, albóndigas. For raw ground pork cooked as a patty or meatball, food safety requires 71 °C minimum internal temperature (fully cooked through — no pink centre). A meat thermometer is essential for ground pork. Pan temperature: medium-high for initial crust; medium for cooking through.\n\nTarget internal temperatures (pan fry):\n- Safe/cooked through: **71–75 °C (160–167 °F)**\n- ⚠️ Ground pork MUST reach 71 °C — no pink allowed",
-  "pork_sausage": "Pork sausage on the grill rewards patience and moderate heat. Too much heat makes them burst (casing splits at ~80 °C internal). The Danish rule: prick with a meat needle to prevent splitting; medium direct heat; turn often. The best result comes from a controlled temperature approach — not screaming hot. Internal target: 70–75 °C (fully cooked through). For pork sausages food safety requires reaching 71 °C minimum internal temperature.\n\nTarget internal temperatures (grill):\n- Fully cooked/safe: **71–75 °C (160–167 °F)**\n- ⚠️ Do not pull before 71 °C — pork sausage must be fully cooked",
+  "ground_pork": "Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend of primal trimmings. Standard ground pork is typically 70–80% lean with 20–30% fat; the higher fat content gives it a juicy, cohesive texture when cooked and makes it more forgiving than ground beef or turkey. Ground pork is the basis of countless preparations worldwide — from Italian ragù and Swedish köttbullar to Chinese dumplings and Mexican chorizo. Because grinding distributes any surface bacteria throughout the mass, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is negligible.",
+  "pork_sausage": "Pork sausage is a processed meat product made from finely minced or coarsely ground pork, seasoned with salt, pepper, herbs and spices, and encased in natural pig intestine or synthetic collagen casing. Fat content is typically 20–30%, essential for juiciness and flavour development. Fresh sausages require cooking to a minimum internal temperature of 71°C (160°F); pre-cooked or smoked sausages require only reheating to serving temperature (60–65°C). The casing is the critical monitoring challenge: if it ruptures early, moisture and fat escape and the sausage dries out. Probing from one end into the centre avoids puncturing the casing mid-body. Carryover is 2–3°C.\n\nTarget internal temperatures (grill):\n- Fully cooked/safe: **71–75 °C (160–167 °F)**\n- ⚠️ Do not pull before 71 °C — pork sausage must be fully cooked",
+  "fresh_ham": "A fresh (uncured, unsmoked) ham is the entire hind leg of a pig — bone-in, skin-on, with the femur and aitchbone running through the centre and a thick layer of subcutaneous fat under the rind. Anatomically distinct from cured (julskinka) or smoked ham preparations: the muscle has its full natural moisture, the rind is supple rather than salted-firm, and the fat has not been altered by brine. Roasting requires a long, moderate-temperature cook (140–160 °C) that drives the centre to safe temperature without overcooking the surface meat under the fat. Carryover is significant — 4–6 °C in a 4–6 kg leg — because the bone, fat and dense muscle store heat well. Rest 30–45 minutes loosely tented before carving.",
+  "pork_cheek": "Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the small dense muscle of the jaw — roughly 80–120 g per cheek, marbled with thin sheets of intramuscular fat and rich in collagen from the constant chewing motion the muscle performs in life. For pan frying (rather than the more common braise), the cheeks are typically butterflied to expose the interior, dusted lightly, and seared at high heat — the goal is to crust the surface while keeping the centre at a tender medium-rare. This works because the cheek's collagen network, while extensive, is fine-grained enough that a brief flash sear (rather than a long braise) leaves the muscle bouncy rather than rubbery. The carryover is small (2–3 °C) given the thin butterflied cuts.",
+  "pork_liver": "Pork liver is milder, slightly sweeter and more delicate in texture than beef liver — a paler chestnut-brown rather than the deep mahogany of beef, with a finer-grained hepatocyte structure and a thinner capsule. The same mineral-iron flavour profile is present but at lower intensity. The standard preparation across European traditions is identical to the beef-liver pan-fry: brief soak in milk to mellow the iron, dust in flour, sear hard in fat, and pull while the centre is still faintly pink. The narrower flavour also means pork liver tolerates assertive aromatics — onions, sage, juniper, allspice, capers — better than the more bold-tasting calf's or beef liver. Carryover is small (1–2 °C); slices continue cooking on the plate, so serve immediately.",
+  "pork_tongue": "Pork tongue is the smaller, more delicate sibling of beef tongue — typically 250–400 g per tongue versus 1.5–2 kg for beef. The structure is identical: a single dense lingual muscle wrapped in a thick, papillae-covered skin that must be peeled after cooking. The smaller mass means a shorter braise (60–90 minutes rather than 3–4 hours) and a milder, sweeter flavour. Pork tongue is fundamental to many traditions — Mexican *lengua de cerdo*, Chinese cha-shu pig tongue, French *langue de porc sauce ravigote*, Polish *ozór wieprzowy*. The peel-while-warm rule still applies, and the tongue is best sliced thin and either dressed with a sharp vinaigrette or warmed in a piquant sauce. Carryover is essentially zero (the surrounding liquid buffers temperature).",
   "cured_ham": "Cured ham (skinke in Danish; Schinken in German/Austrian) for the oven roast method encompasses both pre-boiled glazed ham and straight-to-oven versions. The classic approach is to boil a mild-cured or smoked ham first (removing excess salt and pre-cooking the meat), then score the rind and glaze it in a hot oven until caramelised. Low-and-slow oven variants skip the boiling and use very low temperatures (80°C oven) to achieve even, juicy results. Target internal temperature for safe, juicy cured ham: **70–75 °C** — the curing keeps the meat safe at slightly lower temps than fresh pork, but 75 °C is the standard target for glazed results.\n\nTarget internal temperatures (oven roast):\n- Juicy, glazed: **70–75 °C (158–167 °F)**\n- Very low-and-slow: **75 °C** (when oven is held at 80 °C)",
-  "pork_belly": "Braised pork belly (Schweinebauch geschmort; langtidsstegt svinebryst) involves cooking the belly in liquid at low to medium oven temperatures for several hours, producing meltingly tender meat. The classic European approach uses beer, stock and root vegetables; the Japanese-influenced Chashu uses soy sauce, sake, mirin and sugar for an umami-rich result. Both converge on very similar principles: low temperature, long time, liquid medium. Target internal: **80–90 °C** — collagen in pork belly renders at ~80°C, producing gelatin and tenderness; at 90°C the texture is almost pull-apart.\n\nTarget internal temperatures (braise):\n- Tender, sliceable: **75–80 °C (167–176 °F)**\n- Very tender, fall-apart: **85–90 °C (185–194 °F)**",
+  "pork_belly": "Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.",
   "pork_leg": "Pork leg and hock (Schweinshaxe / stinco di maiale / kuzu incik) is a collagen-rich cut with thick connective tissue, bone marrow, and heavily worked muscle. Braising unlocks the cut's full potential: 2–3 hours of moist heat at low temperature converts collagen to gelatin, creating sticky, unctuous, fall-off-the-bone meat surrounded by a richly reduced sauce. Popular braised in beer across Bavaria, Central Europe, and the British Isles; in soy and spices across East Asia; and in wine with herbs across Mediterranean Europe. The MEATER probe is placed deep into the thickest muscle mass of the leg or hock, away from the bone, to track internal temperature accurately.\n\nTarget internal temperature: **75–80 °C (167–176 °F)** for sliceable, tender; **85–90 °C (185–194 °F)** for pull-apart.",
   "pork_loin_roast": "Pork loin roast (svinekam in Danish; Schweinerücken / Kotelettstrang in German/Austrian) with rind (svær / Schwarte) is the quintessential Scandinavian and German Sunday dinner. The loin is leaner than the belly so it needs more careful temperature management — pull too early and it's under-safe; pull too late and it dries out. The Danish approach targets **65°C** for a juicy, slightly rosy result; German recipes often go to 72–75°C for a firmer texture. For a MEATER probe, 65°C is an excellent target with a high-heat crackling finish.\n\nTarget internal temperatures (oven roast):\n- Juicy, slightly rosy (Danish-style): **60–65 °C (140–149 °F)**\n- Traditional firm, fully white (German-style): **70–75 °C (158–167 °F)**",
   "pork_shoulder": "Pork shoulder / neck (nakkefilet / nakkekam / svinekølle in Danish; Schweinenacken / Schweineschulter in German/Austrian) is one of the most forgiving cuts for the oven — its fat marbling prevents drying out and it develops deep flavour at virtually any oven temperature. The Danish approach covers with foil at 200°C for 105 minutes (firm but juicy); the Norwegian approach targets 75°C core at 175°C oven; the German approach uses the Krustenbraten method at 180°C × 2 hrs. Unlike the leaner loin, shoulder can be taken higher without losing juiciness.\n\nTarget internal temperatures (oven roast):\n- Juicy, sliceable: **72–75 °C (162–167 °F)**\n- Very tender (approaching pulled): **80–85 °C (176–185 °F)**",
-  "pork_chop": "Air fryer pork chops are fast, produce a crispy exterior, and stay juicy if not over-cooked. The air fryer's circulating hot air cooks the chop from all sides simultaneously, similar to a convection oven but hotter. Standard settings: 200 °C × 10 minutes per side. Bone-in shank chops (herregårdskotelet) are especially suited — they have enough thickness to withstand the heat without drying. Apply oil before cooking; salt after. Target core temperature: 63–65 °C.\n\nTarget internal temperatures (air fryer):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
+  "pork_chop": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\nTarget internal temperatures (air fryer):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
   "pork_loin_steak": "Pork loin steak (koteletsteg, Lendensteak vom Schwein) is a boneless steak cut from the loin (between chop and tenderloin area). It is lean and uniform in thickness, making it ideal for pan frying with the same technique as pork chop: hot pan, butter baste, 3–4 min per side. It is slightly more forgiving than tenderloin but dries out faster than a shoulder steak. Target core: 63–65 °C.\n\nTarget internal temperatures (pan fry):\n- Juicy/pink: **63–65 °C (145–149 °F)**",
   "pork_shoulder_steak": "Pork shoulder steak (nakkesteak, Schweinenackensteak / Schopfsteak) is from the neck/collar area — more marbled than loin steak, more forgiving, and ideal for pan frying. The fat renders during cooking, basting the meat from the inside. 3–4 minutes per side on medium-high heat is the standard, and it can withstand a slightly higher final temperature (68–70 °C) without drying out. The Austrian Schopfsteak is an iconic example of this cut.\n\nTarget internal temperatures (pan fry):\n- Juicy: **65–68 °C (149–154 °F)**\n- Well done: **70–72 °C (158–162 °F)**",
   "pork_tenderloin": "Pork tenderloin in the air fryer is fast (20 minutes total) and delivers juicy results because the circulating hot air seals the outside quickly. The Spanish method (directoalpaladar.com) uses a bacon wrap which adds flavour and fat to the lean meat. A whole tenderloin (300–400 g) is cut in half to fit the basket. 200 °C × 10 min per side + 5 min rest. Core target: 63–65 °C.\n\nTarget internal temperatures (air fryer):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
@@ -17482,6 +17567,10 @@ class KitchenCookingPanel extends LitElement {
       _shelfAddQuantity: { type: String },
       _shoppingList: { type: Array },
       _pendingShelfUpdate: { type: Object },
+      // Experimental recipe viewer (cut profile card)
+      _recipeViewerMethod: { type: String },
+      _recipeViewerRecipes: { type: Array },
+      _recipeViewerLoading: { type: Boolean },
 
     };
   }
@@ -17604,6 +17693,9 @@ class KitchenCookingPanel extends LitElement {
     this._shelfAddQuantity = '';
     this._shoppingList = [];
     this._pendingShelfUpdate = null;
+    this._recipeViewerMethod = null;
+    this._recipeViewerRecipes = [];
+    this._recipeViewerLoading = false;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -27962,7 +28054,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "275";
+const PANEL_VERSION = "276";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

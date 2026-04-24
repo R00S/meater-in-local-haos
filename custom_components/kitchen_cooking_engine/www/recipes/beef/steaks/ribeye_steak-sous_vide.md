@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Sous vide is the perfect method for ribeye: the marbling that makes ribeye special requires precise temperature control to render correctly. Too high (>65 °C) and the fat pockets solidify unpleasantly; too low (<50 °C) and the fat stays waxy. The sweet spot is 54–57 °C for medium-rare, held for 1.5–2 hours. The long bath time is safe — the Maillard sear after creates the crust. The MEATER probe monitors the bath hold and the final sear temperatures.
+The ribeye steak is cut from the longissimus dorsi muscle of the rib primal (ribs 6–12), a muscle that does minimal work and therefore develops exceptional intramuscular fat (marbling) throughout its grain. That marbling is the defining feature: the fat pockets liquefy under heat and baste the muscle from within, producing a richness and self-basting character that no other common steak cut matches. Pan searing is a natural partner for the ribeye because the very high conductive heat of a cast-iron or carbon-steel pan drives rapid Maillard browning of the fat-rich exterior, producing a deeply caramelised crust while the marbling keeps the interior moist even if the cook overshoots slightly. The bone-in version (côte de bœuf / cowboy ribeye) retains more flavour through the cook but requires more precise probe placement to read the eye of the steak rather than the area near the bone. Carryover in a pan-seared ribeye is moderate — typically 3–5 °C — because the metal pan delivers intense surface heat that dissipates once the steak is removed, but the fat content slows core temperature equalisation.
 
 Target sous vide bath temperatures (ribeye):
 - Rare: **50 °C (122 °F)** × 1.5–2 hr

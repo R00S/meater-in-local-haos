@@ -1,7 +1,7 @@
 # Goose Thigh × Oven Roast — Recipe Temperature Research
 
 ## Cut profile
-Oven-roasted goose thigh (without the drumstick attached, cooked dry rather than braised) is the dry-heat sibling of the goose-leg or goose-thigh braise. Slow-roasting at 150–170 °C for 90 min – 2.5 hr fully renders the thick fat-skin layer to deep crispness, converts the collagen-rich dark meat to silky tenderness, and concentrates the natural goose flavour rather than diluting it into a sauce. The thigh-only cut is more uniform than the leg-and-thigh complex, so the timing is slightly shorter and the meat cooks more evenly. Like the goose-leg roast, the legs are typically dry-brined the night before to draw moisture from the skin. Carryover is moderate (3–5 °C) given the dense meat and fat.
+Goose thigh is perhaps the most flavourful part of the goose — richer than the leg and with a higher ratio of intramuscular fat and connective tissue. Braising is ideal: the moist-heat environment keeps the thigh succulent while sustained heat above 160 °F converts collagen to gelatin. Target 175–185 °F (79–85 °C) for the most tender, silky texture. The braising liquid, enriched by rendered goose fat and gelatin, reduces to an intensely flavourful sauce. Goose thighs are widely used in European traditional cooking, similar to duck confit but with a braise instead of a fat immersion.
 
 ## Source recipes
 

@@ -1,7 +1,7 @@
 # Ground Turkey × Braise — Recipe Temperature Research
 
 ## Cut profile
-Braised ground turkey is the long-simmered ragù-style preparation — coarsely-ground turkey thigh (the standard for flavour and moisture) is browned hard for Maillard depth, then simmered in liquid until the texture turns plush and the crumble has fully bound to the sauce. Like ground chicken, ground turkey thigh produces a richer, juicier braise than ground breast because of the higher fat and connective-tissue content. The cooking goal is twofold: hold the meat well above the food-safety threshold for ground poultry (74 °C / 165 °F) for long enough to develop deep flavour, and reduce the sauce to a clinging, glossy texture. Carryover is irrelevant in a braise.
+Ground turkey (minced turkey) is made by grinding dark meat (thigh and leg), white meat (breast), or a blend. A dark-meat-inclusive blend (typically 93/7 lean/fat) has noticeably better flavour and moisture retention than pure breast-meat grinds. Because turkey is poultry, the USDA minimum safe internal temperature is 74°C (165°F) with no reduction for resting. Ground turkey cooks faster than beef or pork at the same mass due to its lower fat content and should be monitored closely to avoid dryness. Carryover is 1–2°C.
 
 ## Source recipes
 

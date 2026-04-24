@@ -13,7 +13,7 @@
 
 ## Cut profile
 
-Grilled ground chicken burgers are formed patties cooked over direct flame or charcoal. Ground chicken is stickier and more delicate than beef, so chilling patties before grilling and generously oiling the grates prevents sticking and falling apart. Because ground poultry must reach a safe internal temperature throughout, grill temp and timing require careful attention.
+A chicken burger patty is made from ground chicken — typically a blend of dark meat (thigh and leg) for flavour and fat content, or white meat (breast) for a leaner product. Ground chicken is leaner than beef and more prone to drying out. Commercial chicken patties are typically 100–150 g; homemade patties often include a binder (egg, breadcrumbs) because the lower fat content makes the patty fragile. As a poultry product, the USDA minimum safe internal temperature is 74°C (165°F). Carryover is 2–3°C.
 
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry
 

@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Pan frying a New York strip steak differs from pan searing in that pan frying typically involves a moderate amount of oil or fat in the pan, cooking at slightly lower temperatures than a dry sear, and often flipping more frequently. In many home-kitchen traditions, "pan frying" a steak means cooking it in a well-oiled pan over medium-high heat with regular attention — a more accessible technique than the screaming-hot pan of restaurant searing. The strip's firm, moderately marbled muscle is very well-suited to pan frying because it does not require the intense heat of a cast-iron sear to produce a good crust; a heavy non-stick or stainless pan works well. Fat-cap rendering against the pan edge and basting with the rendered fat are hallmarks of a well-executed pan-fried strip. Carryover is 3–5 °C.
+The New York strip steak (also called strip loin, sirloin strip, Kansas City strip, or *contre-filet* in French) is cut from the short loin of the beef carcass — the longissimus dorsi muscle on the posterior side of the backbone, behind the ribeye primal and ahead of the sirloin. It is a single-muscle steak with moderate marbling, firmer texture than a ribeye (the muscle does slightly more work), and a pronounced beefy flavour. The fat cap along one edge is a defining characteristic and flavour source. Pan searing is a primary preparation — the strip's firm, uniform cross-section sears evenly, and the fat cap can be rendered against the pan edge by standing the steak on its side. Carryover is 3–5 °C for a thick strip steak; the lean-to-moderate marbling means less self-basting than a ribeye.
 
 ## Source recipes
 

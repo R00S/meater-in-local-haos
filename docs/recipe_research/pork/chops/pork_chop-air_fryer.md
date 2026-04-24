@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Air fryer pork chops are fast, produce a crispy exterior, and stay juicy if not over-cooked. The air fryer's circulating hot air cooks the chop from all sides simultaneously, similar to a convection oven but hotter. Standard settings: 200 °C × 10 minutes per side. Bone-in shank chops (herregårdskotelet) are especially suited — they have enough thickness to withstand the heat without drying. Apply oil before cooking; salt after. Target core temperature: 63–65 °C.
+A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.
 
 Target internal temperatures (air fryer):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)**

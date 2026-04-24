@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Oven-roasted sirloin steak most commonly means one of two approaches: a reverse-sear for very thick-cut steaks (4+ cm), or a sear-then-oven-finish for steaks 3–4 cm thick. For a large whole top sirloin roast (rather than individual steaks), the oven roast is the primary method — the sirloin primal roasts well at 180–200 °C, developing a flavoured crust while the interior reaches a precise pull temperature. The lean composition of top sirloin means carryover is significant — 5–7 °C from a hot oven — requiring a pull temperature well below the final serving target. A loose foil tent or resting on a rack allows the temperature to equilibrate without continuing to cook.
+The sirloin steak is cut from the sirloin primal, which sits between the short loin (where the NY strip originates) and the round. Top sirloin is the most common steak cut from this primal — it is a firm, relatively lean steak with a bold beefy flavour from the greater muscle activity of this region of the carcass. Compared to the NY strip, top sirloin has less marbling and a slightly coarser grain, making it less forgiving of overcooking; compared to the round, it is noticeably more tender. Pan searing suits sirloin well because the high heat compensates for the reduced marbling by creating a flavourful crust — the Maillard reaction is the primary flavour contribution to a seared top sirloin. The cap muscle (*picanha* region of the sirloin cap) is sometimes separated and considered a distinct cut; this leaf concerns the main top sirloin steak. Carryover is 4–5 °C.
 
 ## Source recipes
 

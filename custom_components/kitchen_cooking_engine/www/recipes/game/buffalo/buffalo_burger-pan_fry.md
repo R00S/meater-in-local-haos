@@ -13,7 +13,7 @@
 
 ## Cut profile
 
-Pan-fried buffalo/bison burgers follow the same principles as grilled, but the skillet environment allows for basting with butter and herbs. The lean buffalo meat can also be prepared in a cast-iron pan on the hob for a classic American smash-burger technique or a more European bistro-style preparation.
+Buffalo/bison burger patties are made from ground buffalo or bison meat, typically sourced from the chuck, round, or a blend of trimmings. Ground buffalo/bison is leaner than standard beef (typically 90/10 to 93/7 lean/fat), which means it cooks faster and can dry out more easily than an 80/20 beef patty. A typical patty is 150–180 g. Because grinding distributes surface bacteria throughout, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is minimal (1–2°C).
 
 Target internal temperature: **70–74 °C (158–165 °F)** for food-safe ground meat.
 

@@ -13,7 +13,7 @@
 
 ## Cut profile
 
-Oven-roasted lamb shank is a cornerstone of Turkish, Greek, Italian, and Middle Eastern festive cooking. The shank goes into the oven wrapped in parchment and foil (the traditional tandır method), or uncovered in a clay pot sealed with dough (the Greek gastra technique), or simply nestled in a tray with wine and root vegetables. Long, slow oven heat — 160–200 °C for 2–3 hours — converts the dense connective tissue to gelatin while the surface colours and crisps. The MEATER probe is inserted through the wrapping before sealing, placed deep into the thickest muscle above the knuckle, well clear of the bone.
+Lamb shank (the lower leg, hind or fore) is one of the most prized braising cuts in the world. The dense connective tissue, bone marrow, and rich muscle fibres transform through 2–3 hours of moist heat into fall-off-the-bone, gelatinous, deeply flavoured meat. It is the flagship dish of Mediterranean cooking (Italy, Greece, Turkey, France), the Middle East (Persian mahiche), and Australia. The target is **pull-apart tender** at 82–88 °C internal — not medium-pink as with steaks. A MEATER probe is inserted into the thickest part of the shank meat (above the bone) to verify doneness.
 
 Target internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bone tenderness across all traditions.
 

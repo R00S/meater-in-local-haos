@@ -1,7 +1,7 @@
 # Pork Cheek × Braise — Recipe Temperature Research
 
 ## Cut profile
-Braised pork cheeks are the canonical preparation for the cut — small, fist-sized lozenges of dense jaw muscle that are too collagen-rich to enjoy quickly cooked, but transform under 2–3 hours of gentle wet heat into the most plush, gelatinous bites in the carcass. The cheeks are typically left whole, browned hard, then submerged in red wine, sherry, cider or stock and simmered at 85–92 °C until the connective tissue dissolves and the muscles can be cut with a spoon. The classic Spanish *carrillera al vino tinto* and Italian *guancia brasata* are both built on this technique. Carryover is irrelevant in a braise — the meat sits at simmer temperature until removed.
+Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the small dense muscle of the jaw — roughly 80–120 g per cheek, marbled with thin sheets of intramuscular fat and rich in collagen from the constant chewing motion the muscle performs in life. For pan frying (rather than the more common braise), the cheeks are typically butterflied to expose the interior, dusted lightly, and seared at high heat — the goal is to crust the surface while keeping the centre at a tender medium-rare. This works because the cheek's collagen network, while extensive, is fine-grained enough that a brief flash sear (rather than a long braise) leaves the muscle bouncy rather than rubbery. The carryover is small (2–3 °C) given the thin butterflied cuts.
 
 ## Source recipes
 

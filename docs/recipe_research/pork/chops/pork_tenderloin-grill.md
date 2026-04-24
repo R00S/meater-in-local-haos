@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Grilling pork tenderloin whole over direct then indirect heat is ideal: sear all sides at high heat first (1 min per side), then finish at medium on direct or indirect heat, turning and basting with sauce. The thin shape means it cooks fast: ~12 minutes total. Core 63–65 °C. The German method uses an overnight herb marinade and 25–30 min indirect grill at 180 °C for a deeper flavour.
+Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo) is the leanest cut of pork and the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.
 
 Target internal temperatures (grill):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)**

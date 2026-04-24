@@ -3,17 +3,7 @@
 > ✅ **STATUS: CONFORMS TO RECIPE_COLLECTION_TOR.md** — validated 2026-03-04
 
 ## Cut profile
-Grilled pork belly is almost universally done in thin slices (5–8 mm) placed
-directly over heat — the same physical logic as pan frying, but on a grill grate
-over live fire, charcoal, or gas. The direct heat renders the fat rapidly and
-creates char lines across the slices, adding smoke and bitterness that a pan cannot
-provide. Korean *samgyeopsal* at a restaurant charcoal or gas table grill is the
-most iconic form, but grilled pork belly appears in Filipino *lechon kawali* prep,
-Australian backyard BBQ, and various South-East Asian street-food traditions. Whole
-slabs are occasionally grilled (Australian and American style) but the slab method
-requires indirect heat and effectively merges with smoker technique; the true
-grill method for pork belly is the thin slice. Carryover is minimal given the thin
-cut and fast cook; pull promptly.
+Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.
 
 ## Source recipes
 

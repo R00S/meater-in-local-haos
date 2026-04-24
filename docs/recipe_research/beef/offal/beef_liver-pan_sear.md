@@ -1,7 +1,7 @@
 # Beef Liver × Pan Sear — Recipe Temperature Research
 
 ## Cut profile
-Pan-seared beef liver differs from pan-fried beef liver in technique rather than cut: the *sear* is a short, very-high-heat treatment of a thicker slice (8–12 mm) intended to produce an aggressively crusted exterior with a deliberately rare-to-medium-rare centre. Restaurant-style preparations often use calf's liver for this approach because the milder, more delicate liver responds better to under-cooking; beef liver from older animals can be pan-seared the same way provided it is fresh and well trimmed of membrane and ducts. The very thin window between "perfect rosé" and "grainy and grey" is even narrower here than with a thinner pan-fry slice; reading internal temperature with a probe is the only reliable way to hit it consistently. Carryover is moderate (2–3 °C) — measurable because the slice is thicker.
+Beef liver is one of the densest, most nutrient-rich offal cuts in the carcass — a chocolate-coloured, finely-textured mass of hepatocyte tissue with very little connective tissue and a thin filmy capsule. Its iron-and-mineral profile gives a pronounced metallic flavour that mellows dramatically with brief soaking in milk before cooking — a step common to most European traditions. Pan frying is the classic method: 6–8 mm slices flashed in hot fat, browned hard on both sides, and pulled before the centre passes about 65 °C. Above that temperature the proteins seize and the slice turns chalky and grey-brown; the visual cue for correctly-pulled liver is a faint pink line through the centre. Carryover is short and small (1–2 °C) given the thin slices, but the slices continue cooking on the plate — serving immediately is essential.
 
 ## Source recipes
 

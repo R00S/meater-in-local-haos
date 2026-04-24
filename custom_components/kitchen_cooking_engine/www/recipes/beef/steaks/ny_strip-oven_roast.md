@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Oven roasting a New York strip steak typically means one of two approaches: a reverse-sear (low oven to near target temperature, then sear) or a high-heat oven roast (400–450 °C, sear first then finish in oven). For thick-cut strip steaks (3.5–6 cm), the oven is an essential partner to the pan because it allows the interior to reach temperature without burning the exterior. The strip's moderate marbling and firm single-muscle structure handle oven heat well; unlike the ribeye, it has no large fat pockets that render unevenly. The reverse-sear method, popularised by Kenji López-Alt, has become one of the most reliable methods for thick steaks: the low oven dries the surface (improving subsequent sear), and carryover after the low oven is minimal, allowing a very precise pull. Carryover from a hot oven finishing step is 5–7 °C.
+The New York strip steak (also called strip loin, sirloin strip, Kansas City strip, or *contre-filet* in French) is cut from the short loin of the beef carcass — the longissimus dorsi muscle on the posterior side of the backbone, behind the ribeye primal and ahead of the sirloin. It is a single-muscle steak with moderate marbling, firmer texture than a ribeye (the muscle does slightly more work), and a pronounced beefy flavour. The fat cap along one edge is a defining characteristic and flavour source. Pan searing is a primary preparation — the strip's firm, uniform cross-section sears evenly, and the fat cap can be rendered against the pan edge by standing the steak on its side. Carryover is 3–5 °C for a thick strip steak; the lean-to-moderate marbling means less self-basting than a ribeye.
 
 ## Source recipes
 

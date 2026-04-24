@@ -13,7 +13,7 @@
 
 ## Cut profile
 
-Oven-roasted lamb neck is a festive cut in Turkish, Italian, and German home cooking. When cooked whole or in thick cross-sections, the neck benefits from a covered oven braise at moderate-to-high temperature (170–250 °C) for 1–2 hours, often finishing uncovered to brown. The bone marrow enriches the braising liquid, and the meat becomes deeply tender with a slightly sticky, rich texture from dissolved connective tissue. Turkish cooks stuff vegetables around the neck in a sealed tray; Italian cooks use clay pots; German cooks braise uncovered in wine. The MEATER probe is inserted into the thickest muscle of the neck piece, away from the vertebrae.
+Lamb neck (Lammhals / collo di agnello / kuzu gerdan / lammehals) is one of the most underappreciated braising cuts. It is richly marbled, heavily worked, and packed with connective tissue and deep flavour. Cut into cross-sections or braised as a whole neck, it softens magnificently over 1.5–2.5 hours of moist heat, yielding deeply tender, self-basting meat in a rich, unctuous braising liquid. The neck is used in braises throughout Turkish, Italian, German, Greek, and Scandinavian traditions. A MEATER probe is inserted into the thickest cross-section of neck meat, away from the vertebrae, to track internal temperature.
 
 Target internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bone oven tenderness.
 

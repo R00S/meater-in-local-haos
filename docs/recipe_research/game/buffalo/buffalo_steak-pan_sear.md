@@ -13,7 +13,7 @@
 
 ## Cut profile
 
-Pan-seared water buffalo (carabeef) steak is traditional across South and Southeast Asia. In the Philippines the classic *bistek* preparation uses soy sauce and citrus; in India it is marinated in yoghurt and spices; in Vietnam it is seasoned with lemongrass and fish sauce. The meat is leaner than beef and cooks slightly faster; high heat and brief searing is standard.
+**Context note**: In this project, *buffalo* refers to **water buffalo** (*Bubalus bubalis* — carabao in the Philippines, bhaisa in India) rather than American bison (which is in the `bison/` category). Water buffalo is the most widely eaten large ruminant in Asia, with large production in India, China, Pakistan, and Southeast Asia. The lean, slightly sweeter, darker-red meat is typically treated like beef in most culinary traditions.
 
 Target internal temperature: **60–65 °C (140–149 °F)** for medium.
 

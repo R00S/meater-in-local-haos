@@ -1,7 +1,7 @@
 # Goat Shank × Oven Roast — Recipe Temperature Research
 
 ## Cut profile
-Oven-roasted goat shank (Swedish *getlägg*) is an alternative to the wet-braise approach: the shanks are seared, then slow-roasted at low oven temperature (140–160 °C) on a bed of aromatics with a small amount of liquid in a covered roasting tin (essentially a dry braise) until the collagen melts and the meat falls from the bone. The yield is similar to a braise but the surface stays drier and more deeply caramelised. Internal target is the same collagen-melt band: 88–93 °C, sustained for 1.5–2 hours. Probe horizontally through the thickest part of the muscle, parallel to the bone (avoid touching bone).
+A goat shank (Swedish *getlägg*) is the lower portion of the animal's leg — heavily worked, dense with collagen, intramuscular fat (limited; goat is leaner than lamb) and bone marrow. Like the lamb shank, it is a quintessentially braising cut: tough beyond chewing if cooked to medium-rare, but transformed by long, slow cooking in liquid into fork-tender, gelatin-rich meat that falls off the bone. Internal temperature is the wrong metric: the cut needs time at 88–93 °C internal (the collagen-melting band) for 1.5–2 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, parallel to the bone (avoid touching bone).
 
 ## Source recipes
 

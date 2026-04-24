@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Sous vide is especially well-suited to tomahawk steaks because of their extreme thickness (5–8 cm): conventional cooking risks a thick grey-band around a raw centre, while sous vide brings the entire cross-section to a uniform temperature. Bath time is 3–4 hours for a 1.2–1.5 kg tomahawk (longer than a ribeye). After the bath the steak is seared over maximum heat for the crust — either on a BBQ, under a broiler, or in a cast-iron pan. The MEATER probe is used to confirm the sear end-point.
+The tomahawk is a bone-in ribeye cut from the rib primal (ribs 6–12) with the entire rib bone left intact — typically 30–45 cm long. The long bone is for visual presentation; the meat and flavour characteristics are identical to a standard bone-in ribeye. A typical tomahawk weighs 900 g–1.5 kg with the bone, or 500–800 g of actual beef. The thick profile (5–8 cm) means that high-heat-only methods produce uneven results; the reverse-sear or sous vide approach is strongly preferred for even interior cooking. Carryover is 3–5°C for a thick tomahawk.
 
 Target sous vide bath temperatures (tomahawk):
 - Medium-rare: **54–57 °C (129–135 °F)** × 3–4 hr

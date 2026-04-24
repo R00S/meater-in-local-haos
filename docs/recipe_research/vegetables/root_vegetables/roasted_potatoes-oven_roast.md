@@ -1,7 +1,7 @@
 # Roasted Potatoes × Oven Roast — Recipe Temperature Research
 
 ## Cut profile
-Oven-roasted potatoes (*Solanum tuberosum*, cut into chunks and par-boiled) are a cornerstone of Sunday roasts, tapas menus, and home cooking across global cuisines. Pre-parboiling (8–12 minutes) is the key technique: it creates a roughened, starchy outer surface that crisps maximally in a 200–220 °C oven. Total cook: 35–50 minutes. Pull temperature: 92–96 °C (198–205 °F) at the thickest interior. MEATER probe inserted into the thickest chunk.
+Roasting potatoes (*Solanum tuberosum*) converts the raw starch to a crisp, caramelised exterior and fluffy interior. High-starch varieties (Maris Piper, Russet, King Edward) are preferred because their floury texture creates better fluffiness inside and absorbs fat more effectively for crispness. Waxy varieties (Charlotte, Jersey Royal) hold their shape but produce less crisp results. Fat coating (duck fat, goose fat, olive oil, lard) is essential — it conducts heat, enables Maillard browning, and adds flavour. Pre-boiling until edges are rough (chuffed) dramatically increases crispness by maximising surface area. Target internal temperature is 95–100°C for full starch gelatinisation and a fluffy interior.
 
 ## Source recipes
 

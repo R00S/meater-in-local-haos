@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Sous vide is excellent for tri-tip: the lean cut benefits enormously from precise temperature control because it has less intramuscular fat as a buffer. Overcooking by even 3–4 °C causes the lean sections to dry noticeably. At 56–57 °C for 3 hours, the meat is uniformly medium-rare throughout — no grey band, no dry edges. The bath time for a whole tri-tip roast (700 g–1.2 kg) should be 3 hours; for individual 2 cm steaks, 1.5–2 hours is sufficient.
+Tri-tip (also known as triangle steak, Santa Maria steak, or *culotte de bœuf* in French) is a triangular muscle taken from the bottom sirloin primal — specifically the tensor fasciae latae. It weighs 400–900 g and the grain runs in two directions, which is critical for correct slicing. Tri-tip is lean, with a beefier flavour than tenderloin but less richness than ribeye. It is the centrepiece of California's Santa Maria-style barbecue. Carryover is 3–5°C.
 
 Target sous vide bath temperatures (tri-tip):
 - Medium-rare: **56–57 °C (133–135 °F)** × 1.5–3 hr

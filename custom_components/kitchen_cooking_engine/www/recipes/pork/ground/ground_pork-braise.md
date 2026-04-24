@@ -1,7 +1,7 @@
 # Ground Pork × Braise — Recipe Temperature Research
 
 ## Cut profile
-Braised ground pork is the long-simmered ragù-style preparation — coarsely-ground 70/30 or 80/20 pork (typically from shoulder), browned hard for Maillard depth and then simmered in liquid until the residual connective tissue dissolves and the texture turns plush. Pork ground from shoulder produces a richer, juicier braise than ground from leg or loin because of the higher fat and connective-tissue content; the long cook turns those structural elements into glossy mouthfeel. Carryover is irrelevant in a braise — the meat sits at simmer temperature until removed. The probe's job is to confirm steady-state simmer at the target.
+Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend of primal trimmings. Standard ground pork is typically 70–80% lean with 20–30% fat; the higher fat content gives it a juicy, cohesive texture when cooked and makes it more forgiving than ground beef or turkey. Ground pork is the basis of countless preparations worldwide — from Italian ragù and Swedish köttbullar to Chinese dumplings and Mexican chorizo. Because grinding distributes any surface bacteria throughout the mass, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is negligible.
 
 ## Source recipes
 

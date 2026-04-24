@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Oven-roasted pork tenderloin delivers a juicy, evenly cooked result with minimal effort. The Spanish method (sear then oven at 220 °C) and the Austrian bacon-wrapped approach are both excellent. Key: the tenderloin is lean, so brief oven exposure (15–20 min) at moderate-high heat with a short rest is enough. Core: 63–65 °C.
+Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo) is the leanest cut of pork and the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.
 
 Target internal temperatures (oven roast):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)**

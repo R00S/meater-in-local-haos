@@ -13,7 +13,7 @@
 
 ## Cut profile
 
-Grilled mutton chops are popular throughout the Middle East, Pakistan, India, North Africa, and the UK (particularly as part of a traditional English grill). The strong flavour pairs well with spice marinades, char, and aromatic smoke. Common marinade bases: yoghurt (South Asian), harissa (North African), olive oil with herbs (Mediterranean), or dry rubs with cumin and paprika.
+Mutton refers to the meat of a sheep older than one year (typically 2–4 years), with a stronger, more pronounced flavour than lamb. Mutton chops (loin or shoulder chops) are popular in Germany, the UK, the Middle East, and South Asia. The stronger flavour benefits from aromatic seasoning (garlic, onion, thyme, cumin) and the meat is typically cooked through — medium to well-done — rather than pink.
 
 Target internal temperature: **70–74 °C (158–165 °F)**.
 

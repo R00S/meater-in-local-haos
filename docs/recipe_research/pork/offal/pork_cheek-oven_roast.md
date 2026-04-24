@@ -1,7 +1,7 @@
 # Pork Cheek × Oven Roast — Recipe Temperature Research
 
 ## Cut profile
-Oven-roasted pork cheeks (without the heavy braising liquid of the standard preparation) are an unconventional but established technique — the cheeks are arranged in an oven-safe pan with just enough fat or stock to baste, and roasted at moderate temperature (160–180 °C) for 60–90 minutes. The cooking environment is drier than a braise, which produces a deeper Maillard crust and a slightly firmer (but still spoon-tender) centre. The technique works because pork cheeks are small enough to roast through evenly without drying — a 90-minute roast at 170 °C with some basting hits the same collagen-conversion temperature as a 2.5-hour braise but with a more concentrated flavour and crusted exterior. Carryover is moderate (3–5 °C); the cheeks should rest tented for 10 minutes.
+Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the small dense muscle of the jaw — roughly 80–120 g per cheek, marbled with thin sheets of intramuscular fat and rich in collagen from the constant chewing motion the muscle performs in life. For pan frying (rather than the more common braise), the cheeks are typically butterflied to expose the interior, dusted lightly, and seared at high heat — the goal is to crust the surface while keeping the centre at a tender medium-rare. This works because the cheek's collagen network, while extensive, is fine-grained enough that a brief flash sear (rather than a long braise) leaves the muscle bouncy rather than rubbery. The carryover is small (2–3 °C) given the thin butterflied cuts.
 
 ## Source recipes
 

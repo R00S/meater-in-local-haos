@@ -13,7 +13,7 @@
 
 ## Cut profile
 
-Grilled goat chops are central to the food cultures of West Africa, the Caribbean, South Asia, the Middle East, and the Mediterranean. The Nigerian asun tradition, Jamaican jerk goat, Indian tandoor-style, and Middle Eastern kabab all involve direct high-heat cooking of goat. Marinades are almost always used.
+Goat loin or rib chops are popular throughout West Africa, the Caribbean, South Asia, the Middle East, and the Mediterranean. The meat is leaner than lamb with a slightly stronger, more aromatic flavour. Pan searing is typically done at high heat with marinades containing aromatic spices (cumin, coriander, ginger, garlic). Like lamb, goat chops are served medium to well-done.
 
 Target internal temperature: **70–74 °C (158–165 °F)**.
 

@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Smoked pork belly is the foundation of bacon — a deeply fatty, layered cut that takes smoke beautifully. Low-and-slow smoking (107 °C / 225 °F) allows the fat to render progressively over 4–6 hours, building bark and smoke ring. A two-phase cook — uncovered until 74–75 °C, then foil-wrapped until 93–95 °C — is the standard method for sliceable belly; cubed "burnt ends" follow the same two-phase logic. The MEATER probe tracks internal temperature precisely so you can execute both phases without opening the smoker.
+Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.
 
 Target internal temperatures (smoker method):
 - **Safe minimum**: **65 °C (149 °F)** — USDA safe but fat is still firm

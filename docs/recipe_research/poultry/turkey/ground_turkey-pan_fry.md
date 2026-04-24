@@ -1,7 +1,7 @@
 # Ground Turkey × Pan Fry — Recipe Temperature Research
 
 ## Cut profile
-Pan-fried ground turkey is the loose-mince technique applied to the leaner, slightly more delicate American/UK Thanksgiving bird. Ground turkey thigh (the standard for flavour and moisture, 8–14 % fat) yields a juicier, more browned crumble than ground breast (1–4 % fat, prone to dryness). The cooking goal is identical to ground chicken: drive every part of the meat past the food-safety threshold for ground poultry (74 °C / 165 °F) and develop deep Maillard browning. Probe the largest meat clump rather than the pan to confirm the centre passes 74 °C. Carryover is irrelevant — the meat sits at pan temperature until removed. Aromatic-heavy preparations work best because turkey's mild flavour leans on its companions.
+Ground turkey (minced turkey) is made by grinding dark meat (thigh and leg), white meat (breast), or a blend. A dark-meat-inclusive blend (typically 93/7 lean/fat) has noticeably better flavour and moisture retention than pure breast-meat grinds. Because turkey is poultry, the USDA minimum safe internal temperature is 74°C (165°F) with no reduction for resting. Ground turkey cooks faster than beef or pork at the same mass due to its lower fat content and should be monitored closely to avoid dryness. Carryover is 1–2°C.
 
 ## Source recipes
 

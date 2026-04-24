@@ -1,7 +1,7 @@
 # Ground Beef × Pan Fry — Recipe Temperature Research
 
 ## Cut profile
-Loose ground beef pan-fried (rather than formed into burger patties) is the foundational base for global home cooking — Bolognese, taco filling, *kheema*, cottage pie, *picadillo*, *köttfärs*-pan. The structure is randomised muscle protein with surrounding fat globules; in a hot pan the fat renders quickly and the proteins denature, releasing water that must boil off before any browning starts. Crowding the pan is the single biggest mistake — too much beef in the pan steams rather than browns. The Maillard reaction begins around 140 °C surface temperature; patient cooks let the water go off before stirring. Carryover is essentially zero given the small particle size and constant turning.
+Ground beef (minced beef) is made by grinding beef, most commonly from the chuck primal or a blend of trimmings. The fat-to-lean ratio is the primary quality variable: 80/20 is standard for most preparations; 85/15 is leaner; 70/30 is richer and juicier. Because grinding ruptures muscle cells and distributes surface bacteria throughout the mass, the USDA and equivalent international food-safety authorities require a minimum internal temperature of 71°C (160°F) — there is no medium-rare option for ground beef the way there is for whole steaks. Carryover is minimal (1–2°C) given the fine grind and rapid heat transfer.
 
 ## Source recipes
 

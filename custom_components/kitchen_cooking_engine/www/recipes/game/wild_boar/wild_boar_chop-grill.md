@@ -13,7 +13,7 @@
 
 ## Cut profile
 
-Grilling wild boar chops is a common summer practice in Germany, Austria, France, and Italy. The chops are typically marinated overnight in oil, herbs, and wine to tenderise and remove strong game odours, then grilled over medium-indirect heat (not blazing hot) to avoid burning the outside before the dense dark meat is cooked through. A two-zone fire — sear direct, then finish indirect — is the recommended technique.
+Wild boar (*Sus scrofa*) loin chops (Wildschwein-Koteletts / côtelettes de sanglier) are taken from the back of the animal and include a rib bone, similar to pork chops but with darker, denser meat and a pronounced game aroma. Fat content varies by season — boars shot in autumn carry more fat than those taken in spring. The meat benefits from brief marinades in oil, herbs, and acidic components to tenderise.
 
 Target internal temperature: **70–72 °C (158–162 °F)** for safe consumption of wild-caught pork. Some grillmasters pull at 65 °C for a pink interior.
 

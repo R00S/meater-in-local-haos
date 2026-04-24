@@ -13,7 +13,7 @@
 
 ## Cut profile
 
-Oven-roasted pork hock (Schweinshaxe / Stelze / stinco di maiale) is one of the most iconic dishes in Central European and Italian cooking. The whole hock goes into the oven at moderate temperature — typically 160–200 °C — for 1.5–3 hours, producing deeply tender, gelatinous meat beneath a crackling, blistered skin. The key is managing two competing goals: rendering the thick subcutaneous fat and crisping the skin (rind/Schwarte) while driving the interior past the collagen-conversion threshold. Many recipes par-boil the hock first to reduce oven time and ensure juicy interiors. The MEATER probe is inserted into the thickest muscle of the hock, positioned away from the bone.
+Pork leg and hock (Schweinshaxe / stinco di maiale / kuzu incik) is a collagen-rich cut with thick connective tissue, bone marrow, and heavily worked muscle. Braising unlocks the cut's full potential: 2–3 hours of moist heat at low temperature converts collagen to gelatin, creating sticky, unctuous, fall-off-the-bone meat surrounded by a richly reduced sauce. Popular braised in beer across Bavaria, Central Europe, and the British Isles; in soy and spices across East Asia; and in wine with herbs across Mediterranean Europe. The MEATER probe is placed deep into the thickest muscle mass of the leg or hock, away from the bone, to track internal temperature accurately.
 
 Target internal temperature: **75–85 °C (167–185 °F)** as explicitly stated by Giallo Zafferano. Pull-apart fall-off-the-bone is achieved closer to 88–90 °C.
 

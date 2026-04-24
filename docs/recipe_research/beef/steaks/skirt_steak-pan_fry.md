@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Pan-fried skirt steak is closely related to pan searing but typically uses more oil in the pan and is associated with everyday home cooking in Latin American and Asian traditions, where a lightly-oiled shallow fry produces a uniformly browned crust rather than the deeply seared crust of a restaurant sear. In Chinese-American wok cooking, skirt steak (*beef flap*) is fried in very hot oil as part of stir-fry dishes; in Mexican home cooking, the comal-fried *arrachera* is a daily preparation. The MEATER probe should be inserted from the thin end, angling toward the thickest part. Carryover is 3–4 °C.
+Skirt steak is cut from the plate section (the diaphragm muscles) of the beef — there are two muscles: the outside skirt (*diaphragm proper*, thicker, more uniform, more flavourful) and the inside skirt (thinner, more variable in thickness). Both are intensely flavoured and very coarsely grained, making them ideal for marinades and quick, very high-heat cooking. Skirt steak is central to Mexican *fajitas*, Brazilian *fraldinha*, and American steakhouse menus. Pan searing skirt steak requires the very highest heat possible: the steak is thin (1–1.5 cm) and must develop a deep brown crust in the 2–3 minutes before the interior exceeds 57 °C. The MEATER probe is challenging in a thin cut — insert from the end, angling towards the thickest part, or monitor the time-based cues in the recipe. Carryover from a screaming-hot cast-iron pan is 3–5 °C.
 
 ## Source recipes
 

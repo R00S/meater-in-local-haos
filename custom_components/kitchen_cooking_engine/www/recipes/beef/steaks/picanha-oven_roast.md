@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Oven-roasted picanha is the method used most widely when a grill is unavailable. The whole *rump cap* sits fat-cap-up in a very hot oven (200–220 °C), the fat cap basting the lean meat below as it renders and drips. For thick pieces, a reverse-sear variant — low oven (120 °C) to temperature followed by a high-heat stovetop sear — produces the most evenly cooked interior. The fat cap must be scored in a crosshatch to allow even rendering and to prevent it contracting and warping the steak. The whole roasted picanha with fat cap is a dramatic centrepiece roast suitable for larger groups; individual thick steaks can also be oven-roasted with excellent results. Carryover from a 200 °C oven is 5–7 °C.
+Picanha (*alcatra de capa* in Portuguese; *coulotte* in French; sirloin cap or rump cap in English) is cut from the top of the rump, comprising the *biceps femoris* muscle capped by a thick layer of subcutaneous fat. It is the most prized cut in Brazilian *churrasco* culture. The fat cap is extremely important — it renders during cooking and bastes the meat from above. Picanha has medium-to-high marbling for a rump-region cut and a bold, beefy flavour. Pan searing is less traditional than grilling for picanha, but produces excellent results: the fat cap renders in a hot pan to baste the lean meat below, the muscle crust Maillard-browns well, and the thin cut cooks quickly. Carryover is 4–5 °C.
 
 ## Source recipes
 

@@ -13,7 +13,7 @@
 
 ## Cut profile
 
-Grilling ostrich steak is the classic South African braai preparation, also popular in Namibia, Kenya, and increasingly in European specialty restaurants. The fan fillet or outer loin is pressed flat (sometimes butterflied) and grilled 2–3 minutes per side over high direct heat. Like pan searing, medium-rare is strongly preferred — the lean meat dries and toughens rapidly above 60 °C.
+Ostrich (*Struthio camelus*) steak is produced primarily in South Africa, Namibia, and increasingly in France, Belgium, and Germany. Despite being a bird, ostrich meat is red, very low in fat, and treated culinarily exactly like beef or venison. Fan fillet (outerfilé) and top loin are the main steak cuts. The meat is extremely lean and must not be overcooked: medium-rare (54–57 °C) is the South African standard. Above 70 °C the meat becomes tough and liver-like.
 
 Target internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pull at 52 °C and rest.
 

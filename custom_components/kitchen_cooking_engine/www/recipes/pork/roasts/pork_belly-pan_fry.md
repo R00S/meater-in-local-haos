@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Pan-fried pork belly is best known in Scandinavia as **stegt flæsk** — voted Denmark's national dish. Thin slices of pork belly (flæsk) are fried slowly in a dry pan until the fat renders and the meat becomes gloriously crispy. In Austria and Germany, pork belly (Schweinebauch / Bauchfleisch) is either oven-roasted first and finished in the pan, or fried directly from raw in slices or strips. The goal is rendered fat and crispy texture throughout. Internal temperature for food safety: **72–80°C** — the thin slice format means the probe isn't practical; cook visually by color and crispiness.
+Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.
 
 Target internal temperatures (pan fry):
 - Cooked through, still juicy: **72–75 °C (162–167 °F)**

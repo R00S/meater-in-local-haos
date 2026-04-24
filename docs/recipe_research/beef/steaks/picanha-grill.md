@@ -2,7 +2,7 @@
 
 ## Cut profile
 
-Grilled picanha is the centrepiece of Brazilian *churrasco* culture, where the whole *rump cap* is skewered into a horseshoe shape and rotated above charcoal on a vertical spit, the fat cap rendered continuously over the fire. On a standard grill (gas or indirect charcoal), picanha is typically cooked in thick-sliced individual steaks or as a whole piece with a two-zone setup. The defining feature is the thick fat cap — it must be scored and rendered first over direct heat before the meat side is seared, or the fat will contract and curl the steak. Grilling picanha whole on indirect heat then searing is the most reliable approach for home grills. Carryover from a hot grill is 4–6 °C.
+Picanha (*alcatra de capa* in Portuguese; *coulotte* in French; sirloin cap or rump cap in English) is cut from the top of the rump, comprising the *biceps femoris* muscle capped by a thick layer of subcutaneous fat. It is the most prized cut in Brazilian *churrasco* culture. The fat cap is extremely important — it renders during cooking and bastes the meat from above. Picanha has medium-to-high marbling for a rump-region cut and a bold, beefy flavour. Pan searing is less traditional than grilling for picanha, but produces excellent results: the fat cap renders in a hot pan to baste the lean meat below, the muscle crust Maillard-browns well, and the thin cut cooks quickly. Carryover is 4–5 °C.
 
 ## Source recipes
 
