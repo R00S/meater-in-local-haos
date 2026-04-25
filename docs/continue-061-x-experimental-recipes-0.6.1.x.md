@@ -445,5 +445,29 @@ Recipe index: 516 files across 185 cuts
 Updated PANEL_VERSION in JS: 117 -> 284
 ```
 
+---
+
+### 2026-04-25 — CI: release workflow auto-runs generator (v0.6.1.23)
+
+**Task (from problem statement):** "The developer (human) should not have to do anything to create that [the baked EXP_TREE in the JS], it should be automated by release action."
+
+Previously the developer had to manually run `generate_frontend_data.py` before creating a release and commit the result. This was required because `EXP_TREE` (the experimental cut tree built from recipe `.md` files) is compiled into `kitchen-cooking-panel.js` at generator time.
+
+#### What was changed
+
+**`.github/workflows/create-test-release.yml`**:
+- Added a `Set up Python` step (`actions/setup-python@v5`, Python 3.11)
+- Added a `Regenerate panel JS from cut files` step that runs `python3 generate_frontend_data.py` from `custom_components/kitchen_cooking_engine/` before the ZIP is assembled
+- The generator runs on the CI runner, so:
+  - The baked `EXP_TREE`, `RECIPE_INDEX`, `CUT_PROFILES`, and current `PANEL_VERSION` are always correct at release time
+  - Developer workflow: push code + `.md` files, trigger the release action — no local generator run required
+
+#### No-merge test note
+
+This workflow change can be tested without merging: `workflow_dispatch` runs from the triggering branch, so selecting this branch in the Actions UI will use the updated workflow.
+
 #### Version bump
-- `0.6.1.21` → `0.6.1.22`
+- `0.6.1.22` → `0.6.1.23`
+- PANEL_VERSION: `289` → `290`
+
+---

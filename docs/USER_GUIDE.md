@@ -455,6 +455,24 @@ a short description of the shank (collagen content, typical fall-off-the-bone ta
 > and unit conversions are not yet applied — the files are in the language of the original
 > source. This feature will be expanded in future releases.
 
+#### How the cut tree and recipe links are built
+
+The experimental MEATER path is driven entirely by the recipe `.md` files under
+`docs/recipe_research/`. Each file carries a `<!-- KCE:CUT … -->` or
+`<!-- KCE:CUT_METHOD … -->` tag that describes its position in the meat hierarchy,
+cooking temperatures, and supported methods.
+
+At release time the **create-test-release** GitHub Actions workflow automatically runs
+`generate_frontend_data.py`, which scans those files and bakes `EXP_TREE`, `RECIPE_INDEX`,
+and `CUT_PROFILES` into `kitchen-cooking-panel.js`. This happens on the CI runner —
+the developer does not need to run the generator locally before creating a release.
+
+To add a new cut to the experimental path:
+
+1. Create `docs/recipe_research/<category>/<cut>/{slug}.md` with a `<!-- KCE:CUT … -->` tag.
+2. Optionally add `{slug}-{method}.md` files for each cooking method.
+3. Push the files and trigger a test release — the generator runs automatically.
+
 ---
 
 ## 6. Ninja Combi Cooking
