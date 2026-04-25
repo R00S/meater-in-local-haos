@@ -4635,7 +4635,10 @@ class KitchenCookingPanel extends LitElement {
         
         <!-- Step 6: Cooking Method — driven by the cut file's methods: list.
              Display names are derived from the slug so new methods (e.g. curing)
-             appear automatically without any other configuration. -->
+             appear automatically without any other configuration.
+             Selecting a method shows its cut description, recipe titles, and an
+             inline recipe viewer — all from pre-extracted JS constants, no
+             runtime file parsing until the user opens a specific recipe. -->
         <ha-card>
           <div class="card-content">
             <h3>🍳 Cooking Method</h3>
@@ -4645,18 +4648,68 @@ class KitchenCookingPanel extends LitElement {
                 const methods = (cutData && cutData.supported_methods && cutData.supported_methods.length > 0)
                   ? cutData.supported_methods
                   : COOKING_METHODS.map(m => m.value);
-                return methods.map(slug => {
-                  const name = slug.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+                return methods.map(methodSlug => {
+                  const name = methodSlug.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
                   return html`
                     <button
-                      class="method-btn ${this._selectedMethod === slug ? 'selected' : ''}"
-                      @click=${() => this._selectedMethod = slug}>
+                      class="method-btn ${this._selectedMethod === methodSlug ? 'selected' : ''}"
+                      @click=${() => {
+                        if (this._selectedMethod !== methodSlug) {
+                          this._selectedMethod = methodSlug;
+                          this._selectedFileRecipe = null;
+                          this._recipeFileContent = null;
+                          this._recipeFileUrl = null;
+                        }
+                      }}>
                       ${name}
                     </button>
                   `;
                 });
               })()}
             </div>
+
+            ${/* Inline method description + recipe links for the selected method. */ ''}
+            ${this._selectedMethod ? (() => {
+              const cutData = this._getSelectedCutData();
+              const slug = cutData && (cutData.recipe_slug || cutData.slug);
+              if (!slug) return '';
+              const desc   = CUT_METHOD_PROFILES[slug] && CUT_METHOD_PROFILES[slug][this._selectedMethod];
+              const titles = RECIPE_TITLES_INDEX[slug] && RECIPE_TITLES_INDEX[slug][this._selectedMethod];
+              const url    = RECIPE_INDEX[slug] && RECIPE_INDEX[slug][this._selectedMethod];
+              if (!desc && (!titles || titles.length === 0)) return '';
+              const isOpen = url && this._recipeFileUrl === url;
+              const closeBtnStyle  = 'font-size:0.78em;padding:3px 10px;background:transparent;border:1px solid var(--divider-color);border-radius:10px;cursor:pointer;color:var(--secondary-text-color);';
+              const recipeBtnStyle = 'text-align:left;width:100%;cursor:pointer;border:1px solid var(--divider-color);border-radius:8px;padding:8px 12px;background:var(--secondary-background-color);font-size:0.87em;color:var(--primary-text-color);';
+              return html`
+                <div style="margin-top:14px;border-top:1px solid var(--divider-color);padding-top:12px;">
+                  ${desc ? html`
+                    <p style="font-size:0.87em;line-height:1.55;color:var(--secondary-text-color);margin:0 0 12px 0;">${desc}</p>
+                  ` : ''}
+                  ${titles && titles.length > 0 && (!isOpen || this._selectedFileRecipe === null) ? html`
+                    <div style="display:flex;flex-direction:column;gap:6px;">
+                      ${titles.map((title, i) => html`
+                        <button @click=${() => this._openRecipeFile(url, i)} style="${recipeBtnStyle}">
+                          📄 ${title}
+                        </button>
+                      `)}
+                    </div>
+                  ` : ''}
+                  ${this._recipeFileLoading && isOpen ? html`
+                    <div style="text-align:center;padding:12px;color:var(--secondary-text-color);">⏳ Loading…</div>
+                  ` : ''}
+                  ${isOpen && this._selectedFileRecipe !== null && this._recipeFileContent && !this._recipeFileLoading ? html`
+                    <div style="display:flex;align-items:center;margin-bottom:10px;">
+                      <button @click=${() => { this._selectedFileRecipe = null; this.requestUpdate(); }} style="${closeBtnStyle}">
+                        ← Back to recipes
+                      </button>
+                    </div>
+                    <div class="recipe-md-content"
+                         .innerHTML=${this._mdToHtml(this._getRecipeContent(this._selectedFileRecipe))}>
+                    </div>
+                  ` : ''}
+                </div>
+              `;
+            })() : ''}
           </div>
         </ha-card>
         

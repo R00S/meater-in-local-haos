@@ -743,3 +743,27 @@ Added new section `docs/USER_GUIDE.md` §5.10 **Contributing Recipe Files**:
 
 Version bump: `0.6.1.28` → `0.6.1.29` (manifest.json, __init__.py, const.py).
 
+
+---
+
+### 2026-04-25 — Fix: Cooking Method section now shows description + recipe links (v0.6.1.30)
+
+**Bug reported**: User confirmed they are in the experimental path. Clicking a cooking method button (Air Fryer, Grill, etc.) in the "🍳 Cooking Method" section did nothing visible — no cut description and no recipe links appeared. Also reported no "direct recipe links" in the Cut Profile section.
+
+**Root cause**: The Cooking Method section (Step 6 of `_renderExpSetupForm()`) only set `this._selectedMethod = slug` on click. There was **zero rendering code** for method description or recipe links in that section. The description + recipe titles had been wired up in the "Method Research" pills of the Cut Profile card but **never** in the Cooking Method section itself.
+
+The user had also tested clicking Method Research pills in the Cut Profile card but reported "nothing changes." This is because the expanded card **does** appear (above the doneness section), but the user was looking at the bottom of the screen (the Cooking Method area) and didn't see it expand higher up. Additionally, the user correctly identified the Method Research section as a "debugging help" area — the primary place for recipes should be the Cooking Method section.
+
+**Fix** (`panel-class-template.js` → `kitchen-cooking-panel.js`):
+
+Inside the Cooking Method `<ha-card>`, immediately after the method-grid div, added an IIFE block that:
+1. Looks up `CUT_METHOD_PROFILES[slug][selectedMethod]` for the inline description.
+2. Looks up `RECIPE_TITLES_INDEX[slug][selectedMethod]` for individual recipe title buttons.
+3. Looks up `RECIPE_INDEX[slug][selectedMethod]` for the recipe file URL.
+4. Renders a bordered section with the description paragraph and clickable recipe title buttons (📄).
+5. Uses `isOpen = this._recipeFileUrl === url` to scope the file-loading state to this method only — avoids conflict with the Method Research card above.
+6. Renders the inline recipe viewer (← Back, `.recipe-md-content`) when a recipe title is clicked.
+7. Updated the method button `@click` to clear `_selectedFileRecipe`, `_recipeFileContent`, `_recipeFileUrl` when switching methods.
+
+PANEL_VERSION: `300` → `301`
+Version bump: `0.6.1.29` → `0.6.1.30`
