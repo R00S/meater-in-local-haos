@@ -149,13 +149,55 @@ Target internal temperatures: **Breast 160–165 °F (71–74 °C)** · **Thigh 
 
 ---
 
+### 4. Suzy Karadsheh — Easy Oven Roasted Chicken (Egyptian / Mediterranean tradition)
+**Source**: Suzy Karadsheh (Egyptian-American food writer), The Mediterranean Dish; https://www.themediterraneandish.com/easy-oven-roasted-whole-chicken/ (fetched 2026-04-25). *Egyptian-inspired whole roast chicken: a garlic-lemon-herb paste (fresh garlic, lemon zest, olive oil, dried herbs) is rubbed under the skin, on the skin, and inside the cavity; optionally air-dried 24 hours for extra-crispy skin; roasted at 375 °F (190 °C) for 80 minutes. The garlic-lemon-olive oil base reflects the flavour profile common across Egyptian, Lebanese, and Levantine roasted poultry.*
+**Serves**: 6 · **Prep**: 15 min (+ optional 24 hr dry brine) · **Cook**: 80 min
+
+**Temperature guidance (from recipe)**: Oven at **375 °F (190 °C)**; roast for **1 hour and 20 minutes**, or until an instant-read thermometer in the thickest part of the breast reads **165 °F (74 °C)**. (Note: thigh should also read ≥165 °F — probe placement in the thigh gives a more conservative safety reading for whole birds.)
+
+**Ingredients**
+- 1 whole chicken (~1.8 kg / 4 lb)
+
+**Rub**
+- 2 cloves garlic, minced
+- 2 tsp kosher salt
+- Zest of 1 lemon + juice of ¼ lemon
+- 1 Tbsp extra-virgin olive oil
+- 1½ Tbsp Italian seasoning (or: 1 tsp each dried thyme, oregano, basil + ½ tsp rosemary)
+- 1 tsp freshly ground black pepper
+
+**Final season before baking**
+- 1 Tbsp extra-virgin olive oil
+- ½ tsp kosher salt
+- ½ tsp Italian seasoning (or herb blend as above)
+
+**Cavity stuffing**
+- 1 small onion, peeled and quartered
+- Remaining quartered lemon pieces
+
+**Method**
+1. Mash the minced garlic and salt together on a cutting board to form a paste. Transfer to a small bowl; stir in lemon juice, lemon zest, olive oil, herb seasoning, and black pepper.
+2. Pat the chicken dry inside and out with paper towels — remove as much surface moisture as possible for golden skin.
+3. Loosen the skin from the breast and legs by inserting fingers gently between skin and flesh. Rub one-third of the herb paste on the flesh under the skin, one-third on the exterior, and one-third inside the cavity.
+4. *Optional (recommended)*: Truss the chicken by crossing kitchen twine over the breast and tying the legs together. Tuck wings under the back.
+5. *Optional 24-hour air dry*: Place the chicken uncovered on a rack in the refrigerator for up to 24 hours. This concentrates flavour and gives crispier skin.
+6. Preheat oven to **375 °F (190 °C)**.
+7. Rub the exterior with 1 Tbsp olive oil; sprinkle with ½ tsp salt and remaining herb seasoning. Stuff the cavity with the quartered onion and lemon.
+8. Place in a cast-iron skillet or ovenproof dish. Insert MEATER probe into the thickest part of the thigh, away from the bone.
+9. Roast for approximately **80 minutes** until probe reads **165 °F (74 °C)** in the breast. If the thigh probe hasn't reached 165 °F, continue roasting.
+10. Rest **15 minutes** before carving. Skim excess fat from pan juices; serve as a jus.
+*Final resting temperature: 165 °F (74 °C) breast, 165–170 °F (74–77 °C) thigh.*
+
+---
+
 ## Temperature summary
 
-| Source | Country | Method temp | Bird weight | Time | Breast target | Thigh target |
-|--------|---------|-------------|------------|------|---------------|-------------|
-| Jessica Gavin | USA | 475 °F (246 °C) | 3.5–4 lbs | ~60 min | 160–165 °F (71–74 °C) | 165–170 °F (74–77 °C) |
-| Natasha's Kitchen | USA | 325–350 °F (163–177 °C) | 4–5 lbs | ~80–100 min | 160–165 °F (71–74 °C) | 165–170 °F (74–77 °C) |
-| BBC Good Food | UK | 220 °C fan 200 °C → 190 °C fan 170 °C | 1.8–2 kg (4–4½ lb) | 70 min total | Juices run clear | Juices run clear |
+| Source | Country | Bird weight | Oven temp | Time | Breast target | Thigh target |
+|--------|---------|------------|-----------|------|---------------|-------------|
+| Jessica Gavin | USA | 3.5–4 lbs | 475 °F (246 °C) | ~60 min | 160–165 °F (71–74 °C) | 165–170 °F (74–77 °C) |
+| Natasha's Kitchen | USA | 4–5 lbs | 325–350 °F (163–177 °C) | ~80–100 min | 160–165 °F (71–74 °C) | 165–170 °F (74–77 °C) |
+| BBC Good Food | UK | 1.8–2 kg (4–4½ lb) | 220 °C fan 200 °C → 190 °C fan 170 °C | 70 min total | Juices run clear | Juices run clear |
+| Suzy Karadsheh | Egypt/USA | ~1.8 kg (4 lb) | 375 °F (190 °C) | ~80 min | 165 °F (74 °C) | 165–170 °F (74–77 °C) |
 
 **Recommended MEATER settings**:
 - Probe placement: thigh (thickest part, away from bone) — thigh is the last to finish

@@ -124,6 +124,37 @@ Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)
 
 ---
 
+### 4. Imma Adamu — Air Fryer Chicken (West African / Caribbean tradition)
+**Source**: Imma Adamu (Cameroon-born food writer, USA), Immaculate Bites; https://www.africanbites.com/air-fryer-chicken/ (fetched 2026-04-25). *West African–spiced bone-in chicken legs/thighs air-fried until crispy: garlic powder, onion powder, smoked paprika, white pepper, cayenne, and bouillon powder; dry-brined overnight for extra-crispy skin; air fried at 380 °F (195 °C) for 18–20 minutes. The same Creole-influenced seasoning blend used across the Nigerian–Cameroonian–Caribbean diaspora. Note: recipe uses drumsticks; bone-in thighs apply the same method — add 2–5 minutes for larger thighs.*
+**Serves**: 5 · **Prep**: 10 min + 1 hr air-dry optional · **Cook**: 20 min air fryer
+
+**Temperature guidance (from recipe)**: Air fry at **380 °F (195 °C)** for **18–20 minutes**, flipping halfway through. Chicken is done when browned and cooked through. Target internal temperature **165 °F (74 °C)** in thickest part; for thighs add 2–5 minutes over the drumstick time.
+
+**Ingredients**
+- 900 g (2 lbs) bone-in chicken legs or thighs
+- ¾ tsp salt
+- ½ Tbsp dried Italian herb blend (or: ¼ tsp each dried thyme, basil, oregano)
+- 2 tsp onion powder
+- 2 tsp garlic powder
+- ½ tsp smoked paprika
+- ½ tsp white pepper
+- ½ tsp cayenne pepper (optional)
+- ½ tsp bouillon powder (or replace with extra salt)
+- Cooking spray, for the basket
+
+**Method**
+1. *Optional but recommended for extra-crispy skin*: Wash and thoroughly dry the chicken. Place on a baking sheet in a single layer, uncovered in the fridge for **at least 1 hour** or overnight to air-dry the surface.
+2. Combine all spice ingredients in a bowl. Add chicken and toss to coat all surfaces thoroughly.
+3. Preheat the air fryer at **400 °F (205 °C)** for 5 minutes.
+4. Insert MEATER probe into the thickest piece (for thighs: probe from the side, away from bone).
+5. Set air fryer to **380 °F (195 °C)**. Spray the basket with cooking spray. Place chicken in a single layer — do not overcrowd; cook in batches if needed.
+6. Cook approximately **18–20 minutes** (drumsticks); **20–25 minutes** (bone-in thighs). Flip halfway through.
+7. Chicken should be deep brown and thoroughly cooked to **165 °F (74 °C)** before serving.
+8. Serve with ranch dressing, hot sauce, or Jollof rice.
+*Final internal temperature: 165–170 °F (74–77 °C).*
+
+---
+
 ## Temperature summary
 
 | Source | Country | Method temp | Thickness/Weight | Time | Target internal |
@@ -132,6 +163,7 @@ Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)
 | Natasha's Kitchen | USA | 375 °F (191 °C) | Boneless | 12–15 min | 165–175 °F (74–79 °C) |
 | Skinnytaste | USA | 400 °F (204 °C) | Bone-in skin-on | 24 min | 165 °F (74 °C) |
 | BBC Good Food | UK | 180 °C (356 °F) | Bone-in skin-on (×4) | 20–25 min | Juices run clear (≥74 °C) |
+| Imma Adamu | Cameroon/USA | 380 °F (195 °C) | Bone-in legs/thighs | 18–25 min | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **170 °F (77 °C)** → pull and rest
