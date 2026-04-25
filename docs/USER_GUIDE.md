@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.6.1.14 · Home Assistant 2024.1.0+
+> **Version:** 0.6.1.32 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -393,7 +393,20 @@ The cook flow is identical to the standard MEATER path (§ 5.1 – 5.4):
 | 🟠 Orange (caution) | Below the official minimum but widely practised for this cut with proper sourcing |
 | 🔴 Red (unsafe) | Not recommended; displayed for informational purposes only |
 
-5. **Fine-tune temperature** (optional) — same slider as the standard path
+A legend line — **🟢 safe · 🟠 caution (widely practised) · 🔴 below guidelines** — is shown
+directly below the Doneness Level heading so you can read it without hovering over any dot.
+
+5. **Fine-tune temperature** (optional) — same slider as the standard path. When your selected
+doneness temperature is below the USDA safe minimum for that cut, a highlighted note appears
+automatically:
+
+> ⚠️ **Culinary preferred:** 54°C (130°F)  
+> 🛡️ **USDA safe minimum for this cut:** 63°C (145°F)  
+> Consuming undercooked meat carries food safety risk.
+
+This note only appears when there is a genuine discrepancy between the culinary pull temp and
+the cut's official safe minimum — it is absent for vegetables and for any doneness that already
+meets the safe minimum.
 6. **Choose cooking method** — only the methods supported by the selected cut are shown (derived from the cut's recipe file). On the standard MEATER path all methods are listed; here only the relevant subset appears.
 7. **Start** — same `start_cook` service call
 
@@ -410,6 +423,8 @@ standard MEATER path (§ 5.4).
 | Cook flow | Category → meat → cut → doneness | Identical |
 | Doneness options | Full list for the cut | Full list for the cut |
 | Safety indicators | Not shown | **Shown per doneness option** (🟢 / 🟠 / 🔴) |
+| Safety legend | Not shown | **Shown below Doneness Level header** |
+| USDA minimum note | Not shown | **Shown in Target Temperature card when below safe temp** |
 | Cut profile text | Not shown | **Shown after cut selection** |
 | Recipe research links | Not shown | **Shown after cut selection** |
 | Temperature data source | International or Swedish | **International (USDA) only** |

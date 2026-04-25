@@ -25,3 +25,29 @@ Bug fixes: remove placeholder meatloaf recipe, address issues #83, #84, #85.
 - [x] Add i18n keys `history.serving_size_label` (EN + SV)
 - [x] Version bump to 0.6.1.31, PANEL_VERSION auto-incremented to 302
 - [x] Generator run successful (515 recipe files, 0 meatloaf_alt)
+
+## v0.6.1.32 — Restore safety/culinary duality in experimental MEATER path
+
+### Task
+The experimental MEATER path had lost its core differentiator: safety-level dots were silently `null`
+for `rare`, `medium_rare`, and `medium` (the exact temps that need warnings), and the per-cut USDA
+minimum safe temperature was parsed from KCE:CUT tags but never forwarded to the frontend.
+
+### Changes
+- **Generator** (`generate_frontend_data.py`): replaced binary `"safe" if usda_safe else None` with
+  three-tier logic — `usda_safe: true` → `"safe"`, `usda_safe: false` + `target_c < 52` → `"unsafe"`,
+  otherwise → `"caution"`. Matches the tiers in `cooking_data.py`.
+- **Generator**: read `usda_safe_c` / `usda_safe_f` from KCE:CUT tag and include in EXP_TREE cut objects.
+- **Template**: safety legend `🟢 safe · 🟠 caution (widely practised) · 🔴 below guidelines` added
+  below the Doneness Level header.
+- **Template**: USDA safe minimum warning note added in the Target Temperature card, shown only when
+  the culinary pull temp is below `cutUsdaSafeC`.
+- Generator run: 515 recipe files, PANEL_VERSION 302 → 303.
+
+### Status
+- [x] Generator three-tier safety mapping fixed
+- [x] `usda_safe_c`/`usda_safe_f` forwarded to EXP_TREE cut objects
+- [x] Safety legend restored in Doneness card
+- [x] USDA minimum warning note added in Target Temperature card
+- [x] Version bump to 0.6.1.32, PANEL_VERSION auto-incremented to 303
+- [x] Generator run successful
