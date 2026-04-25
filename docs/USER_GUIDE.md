@@ -32,6 +32,7 @@
    - 5.7 [Recent MEATER Cooks](#57-recent-meater-cooks)
    - 5.8 [MEATER+ (experimental) — Safety Indicators](#58-meater-experimental--safety-indicators)
    - 5.9 [MEATER+ (experimental) — Cut Profile & Recipe Links](#59-meater-experimental--cut-profile--recipe-links)
+   - 5.10 [Contributing Recipe Files](#510-contributing-recipe-files)
 6. [Ninja Combi Cooking](#6-ninja-combi-cooking)
    - 6.1 [Built-in Recipes](#61-built-in-recipes)
    - 6.2 [Recipe Builder](#62-recipe-builder)
@@ -488,6 +489,157 @@ known to the system):
 1. Add the method slug to the cut's `<!-- KCE:CUT … -->` `methods:` list.
 2. Optionally create `{slug}-{method}.md` research file for that method.
 3. No changes to `cooking_data.py` or any other file are required.
+
+---
+
+### 5.10 Contributing Recipe Files
+
+Anyone can contribute cut profiles and recipe research files — no Python knowledge required.
+All you need is a text editor and a GitHub account.
+
+#### Suggesting a cut or recipe via a GitHub issue
+
+If you don't want to write the files yourself, open a GitHub issue at
+[github.com/R00S/meater-in-local-haos/issues](https://github.com/R00S/meater-in-local-haos/issues)
+with the label **recipe-request** and include:
+
+- The protein and cut name (e.g. *Pork — Secreto*)
+- Which cooking methods you'd like covered
+- Any trusted sources or cookbooks you recommend
+
+A maintainer will pick it up.
+
+#### Writing a cut overview file (`{slug}.md`)
+
+Place the file at:
+```
+docs/recipe_research/<category>/<animal>/{slug}.md
+```
+
+The file must start with a `<!-- KCE:CUT … -->` YAML block. Example for a new cut:
+
+```markdown
+<!-- KCE:CUT
+type: cut
+slug: my_cut_slug
+name: My Cut Name
+category: beef
+meat: beef
+cut_type: Steaks
+usda_safe_c: 63
+usda_safe_f: 145
+recommended_doneness: medium_rare
+methods:
+- pan_sear
+- grill
+doneness:
+- name: medium_rare
+  target_c: 57
+  target_f: 135
+  min_c: 54
+  min_f: 130
+  max_c: 60
+  max_f: 140
+  usda_safe: false
+  recommended: true
+- name: medium
+  target_c: 63
+  target_f: 145
+  min_c: 60
+  min_f: 140
+  max_c: 68
+  max_f: 155
+  usda_safe: true
+-->
+# My Cut Name — Cut Overview
+
+## Cut profile
+
+A short paragraph describing the cut: where on the animal it comes from, fat and
+connective-tissue content, flavour characteristics, and the ideal internal temperature
+range. Mention the pull temperature and expected rise after resting.
+
+## Research files by cooking method
+
+- [Pan Sear](./my_cut_slug-pan_sear.md)
+- [Grill](./my_cut_slug-grill.md)
+```
+
+**Required `KCE:CUT` fields**
+
+| Field | Description |
+|-------|-------------|
+| `slug` | Lowercase, underscores, unique within the category. |
+| `name` | Human-readable name shown in the GUI. |
+| `category` | One of: `beef`, `pork`, `poultry`, `fish`, `lamb`, `game`, `vegetables`. |
+| `meat` | Animal name in lowercase (e.g. `beef`, `salmon`, `chicken`). |
+| `cut_type` | Sub-category label shown in the GUI (e.g. `Steaks`, `Roasts`). |
+| `usda_safe_c` / `usda_safe_f` | USDA minimum safe temperature (°C and °F). |
+| `recommended_doneness` | The `name` value of the preferred doneness level. |
+| `methods` | List of cooking method slugs supported by this cut. |
+| `doneness` | At least one doneness entry (see below). |
+
+Each `doneness` entry needs: `name`, `target_c`, `target_f`, `min_c`, `min_f`, `max_c`, `max_f`, `usda_safe` (true/false). Add `recommended: true` to exactly one entry.
+
+#### Writing a cooking method research file (`{slug}-{method}.md`)
+
+Place the file at:
+```
+docs/recipe_research/<category>/<animal>/{slug}-{method}.md
+```
+
+The file must start with a `<!-- KCE:CUT_METHOD … -->` YAML block:
+
+```markdown
+<!-- KCE:CUT_METHOD
+type: cut_method
+slug: my_cut_slug
+method: pan_sear
+name: My Cut Name × Pan Sear
+category: beef
+meat: beef
+cut_type: Steaks
+-->
+# My Cut Name × Pan Sear — Recipe Temperature Research
+
+## Cut profile
+
+Repeat or adapt the cut description from the overview file. Include the recommended
+pull temperature and expected rise after resting.
+
+## Source recipes
+
+### 1. Author / Publication — Recipe title
+**Source**: Publication name; URL (fetched YYYY-MM-DD)
+**Serves**: 2 · **Prep**: 10 min · **Cook**: 20 min
+
+**Ingredients**
+- ...
+
+**Method**
+1. ...
+2. Insert MEATER probe. Pull at **XX °C (XX °F)**.
+3. Rest Y minutes.
+*Final resting temperature: XX–XX °C (XX–XX °F).*
+
+---
+
+### 2. ...
+
+## Temperature summary
+
+| Doneness | Pull temp | Final (after rest) |
+|----------|-----------|-------------------|
+| Medium-rare | 52–54 °C (126–129 °F) | 55–57 °C (131–135 °F) |
+```
+
+**Recipe sourcing rules — please read before contributing**
+
+- **Cite real, verifiable sources.** Every recipe entry must include the publication name, a URL, and the date you accessed it (or the book title, author, and page number for print sources).
+- **Do not fabricate.** Do not invent recipes, temperatures, or sources. If you cannot find a real source for a method, omit that entry.
+- **Diversity is valued.** Aim for 3–5 recipes per file. Prioritise sources from different countries and culinary traditions, not just English-language sites.
+- **Temperature data must come from the source.** Record the pull temperature and resting target as stated in the recipe, not what you think is correct.
+- **MEATER placement note.** Each recipe should end with a brief note on where to insert the probe in that specific cut.
 
 ---
 

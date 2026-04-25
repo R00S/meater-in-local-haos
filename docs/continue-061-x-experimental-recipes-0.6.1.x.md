@@ -730,3 +730,16 @@ Updated PANEL_VERSION in const.py: 299 -> 300
 - Updated `docs/USER_GUIDE.md` §5.8 and §5.9 to document that the experimental path cooking method selector is cut-driven (shows only methods declared in the cut file, not the global list).
 - Version bump: `0.6.1.27` → `0.6.1.28` (manifest.json, __init__.py, const.py).
 
+---
+
+### 2026-04-25 — User guide: §5.10 Contributing Recipe Files (v0.6.1.29)
+
+Added new section `docs/USER_GUIDE.md` §5.10 **Contributing Recipe Files**:
+
+- How to open a GitHub issue to suggest a new cut or recipe (label `recipe-request`).
+- Full template and field-by-field reference for the cut overview file (`KCE:CUT` tag).
+- Full template and field-by-field reference for the cooking method research file (`KCE:CUT_METHOD` tag).
+- Recipe sourcing rules: cite real verifiable sources, no fabrication, diversity, MEATER probe placement note required per recipe.
+
+Version bump: `0.6.1.28` → `0.6.1.29` (manifest.json, __init__.py, const.py).
+
