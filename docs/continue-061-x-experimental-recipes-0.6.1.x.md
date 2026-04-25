@@ -724,11 +724,9 @@ Updated PANEL_VERSION in const.py: 299 -> 300
 
 ---
 
-### Pending consideration: Convert recipe files to structured markup
+### 2026-04-25 — Chores: version bump, user guide update, timeline cleanup (v0.6.1.28)
 
-**Raised by project owner 2026-04-25:** "maybe the recipe files should simply be converted to a proper markup, json sgml or anything"
-
-This would replace the current freeform Markdown files (with embedded `<!-- KCE:... -->` YAML comment headers) with a fully structured format (JSON, YAML front-matter only, or a lightweight XML dialect). Benefits: unambiguous machine parsing, no regex needed, clearer schema validation.
-
-**Status:** Under consideration. Not yet designed or implemented.
+- Removed "Pending consideration: Convert recipe files to structured markup" from timeline (decision deferred; not pending action).
+- Updated `docs/USER_GUIDE.md` §5.8 and §5.9 to document that the experimental path cooking method selector is cut-driven (shows only methods declared in the cut file, not the global list).
+- Version bump: `0.6.1.27` → `0.6.1.28` (manifest.json, __init__.py, const.py).
 

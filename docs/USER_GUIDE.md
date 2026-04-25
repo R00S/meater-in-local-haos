@@ -393,7 +393,7 @@ The cook flow is identical to the standard MEATER path (§ 5.1 – 5.4):
 | 🔴 Red (unsafe) | Not recommended; displayed for informational purposes only |
 
 5. **Fine-tune temperature** (optional) — same slider as the standard path
-6. **Choose cooking method** — same selector as the standard path
+6. **Choose cooking method** — only the methods supported by the selected cut are shown (derived from the cut's recipe file). On the standard MEATER path all methods are listed; here only the relevant subset appears.
 7. **Start** — same `start_cook` service call
 
 #### Custom Temperature mode
@@ -413,6 +413,7 @@ standard MEATER path (§ 5.4).
 | Recipe research links | Not shown | **Shown after cut selection** |
 | Temperature data source | International or Swedish | **International (USDA) only** |
 | Temperature fine-tuning | Available | Available |
+| Cooking method selector | All methods shown | **Only methods declared in the cut file** |
 | Custom temperature | Available | Available |
 | Active cook screen | Standard | Identical |
 
@@ -480,6 +481,13 @@ To add a new cut to the experimental path:
 1. Create `docs/recipe_research/<category>/<cut>/{slug}.md` with a `<!-- KCE:CUT … -->` tag.
 2. Optionally add `{slug}-{method}.md` files for each cooking method.
 3. Push the files and trigger a test release — the generator runs automatically.
+
+To add a new cooking method to an **existing** cut (including entirely new methods not yet
+known to the system):
+
+1. Add the method slug to the cut's `<!-- KCE:CUT … -->` `methods:` list.
+2. Optionally create `{slug}-{method}.md` research file for that method.
+3. No changes to `cooking_data.py` or any other file are required.
 
 ---
 

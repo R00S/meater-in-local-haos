@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 24 Apr 2026, 20:56 UTC
-Last Change: v0.6.1.27 - Exp path cooking method selector driven by cut file methods list
+Last Change: v0.6.1.28 - Chores: bump version, update user guide, clean up timeline
 """
 
 DOMAIN = "kitchen_cooking_engine"
