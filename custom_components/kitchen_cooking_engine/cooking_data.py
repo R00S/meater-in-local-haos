@@ -1524,6 +1524,27 @@ BEEF_GROUND = [
         ],
         recommended_doneness="well_done",
     ),
+    # Loose ground beef (not formed into a patty) — recipe-backed via
+    # docs/recipe_research/beef/ground/ground_beef-{braise,pan_fry}.md.
+    # Same USDA 71°C/160°F safety target as beef_burger; well-done only.
+    MeatCut(
+        id=150,
+        name="ground_beef",
+        name_long="Ground Beef",
+        cut_order=7,
+        estimated_thickness_mm=15,
+        usda_safe_c=71,
+        usda_safe_f=160,
+        rest_time_min=2,
+        rest_time_max=5,
+        carryover_temp_c=2,
+        temperature_ranges=[DONENESS_WELL_DONE],
+        supported_methods=[
+            CookingMethod.PAN_FRY,
+            CookingMethod.BRAISE,
+        ],
+        recommended_doneness="well_done",
+    ),
 ]
 
 # Additional beef cuts from MEATER app reference (2025) - Offal/Other
@@ -3751,6 +3772,27 @@ LAMB_ROASTS = [
         ],
         recommended_doneness="well_done",
     ),
+    # Whole lamb neck — collagen-rich, cooked low-and-slow until pulled.
+    # Recipe-backed via docs/recipe_research/lamb/roasts/lamb_neck-{braise,oven_roast,slow_cooker}.md.
+    MeatCut(
+        id=508,
+        name="lamb_neck",
+        name_long="Lamb Neck",
+        cut_order=4,
+        estimated_thickness_mm=80,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=15,
+        rest_time_max=30,
+        carryover_temp_c=5,
+        temperature_ranges=[DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.BRAISE,
+            CookingMethod.OVEN_ROAST,
+            CookingMethod.SLOW_COOKER,
+        ],
+        recommended_doneness="well_done",
+    ),
 ]
 
 LAMB_CHOPS = [
@@ -4775,12 +4817,32 @@ GOAT = [
         ],
         recommended_doneness="well_done",
     ),
+    # Goat shank — collagen-rich, braised or roasted low-and-slow until pulled.
+    # Recipe-backed via docs/recipe_research/game/goat/goat_shank-{braise,oven_roast}.md.
+    MeatCut(
+        id=695,
+        name="goat_shank",
+        name_long="Goat Shank",
+        cut_order=4,
+        estimated_thickness_mm=70,
+        usda_safe_c=63,
+        usda_safe_f=145,
+        rest_time_min=10,
+        rest_time_max=20,
+        carryover_temp_c=5,
+        temperature_ranges=[DONENESS_PULLED],
+        supported_methods=[
+            CookingMethod.BRAISE,
+            CookingMethod.OVEN_ROAST,
+        ],
+        recommended_doneness="well_done",
+    ),
     # Additional goat cut from frontend merge
     MeatCut(
         id=682,
         name="goat_leg_roast",
         name_long="Leg Roast",
-        cut_order=4,
+        cut_order=5,
         estimated_thickness_mm=100,
         usda_safe_c=71,
         usda_safe_f=160,

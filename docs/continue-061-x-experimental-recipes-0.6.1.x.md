@@ -216,3 +216,40 @@ International cut → recipe coverage: 134 matched, 53 unmatched
 Updated PANEL_VERSION in JS: 117 -> 278
 Updated PANEL_VERSION in const.py: 277 -> 278
 ```
+
+---
+
+### 2026-04-25 — Add missing recipe-backed cuts to experimental MEATER tree (v0.6.1.18)
+
+**Task:** The v0.6.1.17 coverage report showed `134 matched, 53 unmatched`. Investigating the *other* direction — recipe files that have no corresponding cut in `MEAT_CATEGORIES` — surfaced 3 cuts whose recipes were on disk but unreachable through the experimental MEATER UI:
+
+| Recipe slug | Recipe folder | Methods on disk |
+|-------------|---------------|-----------------|
+| `ground_beef` | `beef/ground/` | `braise`, `pan_fry` |
+| `goat_shank` | `game/goat/` | `braise`, `oven_roast` |
+| `lamb_neck` | `lamb/roasts/` | `braise`, `oven_roast`, `slow_cooker` |
+
+#### What was changed
+
+**`cooking_data.py`** — added three `MeatCut` entries with verified id-range, slug = recipe filename stem, and `supported_methods` matching exactly the methods present on disk:
+
+- `BEEF_GROUND` += `ground_beef` (id=150, USDA 71°C / 160°F well-done only — same safety target as `beef_burger`).
+- `LAMB_ROASTS` += `lamb_neck` (id=508, pulled — collagen-rich, low-and-slow profile mirroring `lamb_shoulder`).
+- `GOAT` += `goat_shank` (id=695, pulled — collagen-rich shank profile).
+
+No `recipe_slug` override needed for any of them: each cut's `name` already equals the recipe filename stem, so the existing `cut.recipe_slug || cut.slug` lookup in `_renderCutProfileCard()` resolves directly.
+
+**Files NOT changed** — the JS template, the generator, the recipe files, the `MeatCut` dataclass, Swedish data, and the standard MEATER path are all untouched. This is a pure data addition.
+
+#### Version bump
+- `0.6.1.17` → `0.6.1.18` (manifest.json, __init__.py `__version__` + Last Change, const.py Last Change)
+- PANEL_VERSION auto-bumped: `279` → `280`
+
+#### Generator output
+```
+Recipe index: 331 files across 133 cuts
+  International cut → recipe coverage: 137 matched, 53 unmatched
+International cuts: 190 (was 187)
+```
+
+Verification: every `cut_slug` produced by `build_recipe_index()` now has a corresponding `MeatCut.name` in `MEAT_CATEGORIES`.
