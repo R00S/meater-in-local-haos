@@ -5966,7 +5966,7 @@ class KitchenCookingPanel extends LitElement {
                   style="cursor:pointer;"
                 >
                   ${ing.compulsory ? html`<span class="compulsory-star">⭐</span>` : ''}
-                  ${ing.name}
+                  ${this._lookupIngDisplayName(ing.name)}
                   <button
                     class="ingredient-remove-btn"
                     @click=${(e) => { e.stopPropagation(); this._removeIngredient(ing.name); }}
@@ -6106,6 +6106,22 @@ class KitchenCookingPanel extends LitElement {
       if (sv) return sv;
     }
     return ingredient.name || '';
+  }
+
+  /**
+   * Return the translated display name for a chip ingredient stored by English name.
+   * Searches all categories in _aiIngredients for the matching object, then calls
+   * _ingDisplayName.  Falls back to the raw name for custom (non-predefined) ingredients.
+   */
+  _lookupIngDisplayName(name) {
+    if (!name) return '';
+    const ingredients = this._aiIngredients || (typeof AI_INGREDIENTS !== 'undefined' ? AI_INGREDIENTS : {});
+    for (const category of Object.values(ingredients)) {
+      if (!Array.isArray(category)) continue;
+      const found = category.find(i => i && i.name && i.name.toLowerCase() === name.toLowerCase());
+      if (found) return this._ingDisplayName(found);
+    }
+    return name;
   }
 
   _renderIngredientCheckbox(ingredient) {
@@ -6331,7 +6347,7 @@ class KitchenCookingPanel extends LitElement {
                       type="number"
                       min="1"
                       max="12"
-                      .value=${recipe._adjustedServings || recipe.servings || 4}
+                      .value=${recipe._adjustedServings || recipe.servings || this._aiPortions || 4}
                       @input=${(e) => this._updateRecipeServings(recipe, parseInt(e.target.value))}
                       style="width:50px;padding:4px;border:1px solid var(--divider-color);border-radius:4px;background:var(--primary-background-color);color:var(--primary-text-color);">
                   </div>
@@ -6408,6 +6424,43 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
+   * Render a single cook history card for recipe cooks (used in ninja and appliance history lists).
+   * Clicking the card opens the detail view; a Restart button re-launches the cook.
+   */
+  _renderHistoryCard(cook) {
+    const displayName = cook.recipe_name || cook.cut_display || cook.cut || this._t('history.cook_details_title');
+    return html`
+      <ha-card class="history-card clickable" @click=${() => {
+        this._selectedCookForDetail = cook;
+        this.requestUpdate();
+      }}>
+        <div class="card-content">
+          <div class="history-header">
+            <h3>${displayName}</h3>
+            <span class="history-date">${this._formatDateTime(cook.completed_at)}</span>
+          </div>
+          <div class="history-details">
+            ${cook.appliance_name ? html`<span class="history-detail">🍳 ${cook.appliance_name}</span>` : ''}
+            ${cook.serving_size ? html`<span class="history-detail">🍽️ ${cook.serving_size} ${this._t('history.serving_size_label')}</span>` : ''}
+            ${cook.duration_seconds ? html`<span class="history-detail">⏱️ ${this._formatDuration(cook.duration_seconds)}</span>` : ''}
+            ${cook.ease_rating ? html`<span class="history-detail">👨‍🍳 ${'⭐'.repeat(cook.ease_rating)}</span>` : ''}
+          </div>
+          ${cook.notes ? html`
+            <div class="history-notes">
+              <strong>📝</strong> ${cook.notes}
+            </div>
+          ` : ''}
+          <div class="history-actions" @click=${(e) => e.stopPropagation()}>
+            <button class="small-btn" @click=${() => this._restartCook(cook)}>
+              ${this._t('history.restart_cook')}
+            </button>
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /**
    * Render Previous Cooks path (uses existing _renderHistory)
    */
   _renderPreviousCooksPath() {
@@ -6462,6 +6515,12 @@ class KitchenCookingPanel extends LitElement {
             <div class="detail-section">
               <strong>${this._t('history.protein_label')}</strong> ${cook.protein}
               ${cook.doneness ? html` • <strong>${this._t('history.doneness_colon')}</strong> ${(cook.doneness || '').replace('_', ' ')}` : ''}
+            </div>
+          ` : ''}
+
+          ${cook.serving_size ? html`
+            <div class="detail-section">
+              <strong>${this._t('history.serving_size_label')}</strong> ${cook.serving_size}
             </div>
           ` : ''}
 

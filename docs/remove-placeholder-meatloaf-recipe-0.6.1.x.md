@@ -18,8 +18,10 @@ Bug fixes: remove placeholder meatloaf recipe, address issues #83, #84, #85.
 
 ## Status
 - [x] Timeline created
-- [ ] Delete meatloaf_alt.md
-- [ ] Fix #85: add _renderHistoryCard
-- [ ] Fix #83: portions fallback + history serving size display
-- [ ] Fix #84: ingredient chip translation
-- [ ] Version bump + generator run
+- [x] Delete meatloaf_alt.md from docs and www/recipes
+- [x] Fix #85: add `_renderHistoryCard(cook)` — resolves TypeError causing blank-screen flash
+- [x] Fix #83: use `_aiPortions` as fallback on suggestions page + show serving_size in cook detail
+- [x] Fix #84: add `_lookupIngDisplayName(name)` helper; ingredient chips now translated
+- [x] Add i18n keys `history.serving_size_label` (EN + SV)
+- [x] Version bump to 0.6.1.31, PANEL_VERSION auto-incremented to 302
+- [x] Generator run successful (515 recipe files, 0 meatloaf_alt)

@@ -345,7 +345,8 @@
     "restart_cook": "🔄 Restart This Cook",
     "edit_notes": "✏️ Edit Notes",
     "delete_btn": "🗑️ Delete",
-    "update_notes_prompt": "Update notes:"
+    "update_notes_prompt": "Update notes:",
+    "serving_size_label": "Portions"
   },
   "measurements": {
     "tsp": "tsp",

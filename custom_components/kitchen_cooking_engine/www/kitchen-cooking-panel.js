@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 25 Apr 2026, 15:53 CET
+ * AUTO-GENERATED: 25 Apr 2026, 22:59 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 25 Apr 2026, 15:53 CET
+// Last generated: 25 Apr 2026, 22:59 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -15664,7 +15664,8 @@ const I18N_STRINGS = {
       "restart_cook": "🔄 Restart This Cook",
       "edit_notes": "✏️ Edit Notes",
       "delete_btn": "🗑️ Delete",
-      "update_notes_prompt": "Update notes:"
+      "update_notes_prompt": "Update notes:",
+      "serving_size_label": "Portions"
     },
     "measurements": {
       "tsp": "tsp",
@@ -16276,7 +16277,8 @@ const I18N_STRINGS = {
       "restart_cook": "🔄 Starta om tillagning",
       "edit_notes": "✏️ Redigera anteckningar",
       "delete_btn": "🗑️ Ta bort",
-      "update_notes_prompt": "Uppdatera anteckningar:"
+      "update_notes_prompt": "Uppdatera anteckningar:",
+      "serving_size_label": "Portioner"
     },
     "measurements": {
       "ml": "ml",
@@ -16706,9 +16708,6 @@ const RECIPE_INDEX = {
   "meatloaf": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/beef/ground/meatloaf-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/ground/meatloaf.md"
-  },
-  "meatloaf_alt": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/beef/ground/meatloaf_alt.md"
   },
   "tongue": {
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/ground/tongue.md"
@@ -17471,7 +17470,6 @@ const CUT_PROFILES = {
   "ground_beef": "Ground beef (minced beef) is made by grinding beef, most commonly from the chuck primal or a blend of trimmings. The fat-to-lean ratio is the primary quality variable: 80/20 is standard for most preparations; 85/15 is leaner; 70/30 is richer and juicier. Because grinding ruptures muscle cells and distributes surface bacteria throughout the mass, the USDA and equivalent international food-safety authorities require a minimum internal temperature of 71°C (160°F) — there is no medium-rare option for ground beef the way there is for whole steaks. Carryover is minimal (1–2°C) given the fine grind and rapid heat transfer.",
   "liver": "*Placeholder — cut profile research not yet completed.*",
   "meatloaf": "Meatloaf is a free-formed loaf of seasoned, bound ground meat (typically beef alone or a beef-pork-veal blend) baked in a moderate oven until cooked through. Structurally it is a colloid of ground muscle held by a panade (bread or breadcrumbs soaked in milk or stock) and bound with egg; the panade is critical because it absorbs and re-releases moisture during the bake, preventing the dry, dense loaf that pure meat-plus-egg produces. Oven temperatures of 175–190 °C give enough time for the centre to reach safe temperature without over-rendering the surface. Carryover is significant — 5–8 °C in a typical 1 kg loaf — because the loaf shape stores heat well; a 5–10 minute rest is mandatory both for carryover and for the proteins to re-absorb expressed liquid.",
-  "meatloaf_alt": "*Placeholder — cut profile research not yet completed.*",
   "tongue": "*Placeholder — cut profile research not yet completed.*",
   "filet_mignon": "Filet mignon is cut from the narrow end (small end) of the beef tenderloin — the psoas major muscle, which runs alongside the spine and does virtually no work during the animal's life. It is the most tender cut in the carcass, with almost no intramuscular fat (marbling) or connective tissue, making it both delicate and vulnerable to drying out. The air fryer circulates very hot air around the steak at high velocity, creating convection browning on the exterior while cooking the interior — the result is a decent Maillard crust without the smoke of a grill or the fat-pooling effect of a skillet. Because filet mignon is exceptionally lean, the air fryer's hot-air convection is forgiving compared to direct-contact methods. Carryover is minimal but present — the small, round geometry of a filet mignon dissipates heat quickly after removal from the enclosed air fryer basket.",
   "flank_steak": "Flank steak is a flat, thin muscle cut from the abdominal wall of the animal (the flank primal), with long, coarse muscle fibres running visibly along its length. The cut is lean, relatively tough, and has minimal intramuscular fat — it lacks the marbling of a ribeye but compensates with bold, beefy flavour. Charcoal grilling is the quintessential method for flank steak: the high, direct radiant heat from glowing embers creates a rapid, intense Maillard crust across the wide flat surface before the interior has time to overcook. Flank steak must be cooked quickly over very high heat and sliced thinly across the grain for tenderness — cooking it slowly defeats the purpose. Carryover is minimal in a thin flank steak, but because it is typically cooked over extremely high heat, the brief internal temperature rise after removal from the grill can bring the steak from medium-rare to medium if not watched carefully.",
@@ -21251,18 +21249,6 @@ const EXP_TREE = {
                 "slug": "meatloaf",
                 "doneness": [
                   "done"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "oven_roast"
-                ]
-              },
-              {
-                "id": "meatloaf_alt",
-                "name": "Meatloaf",
-                "slug": "meatloaf_alt",
-                "doneness": [
-                  "well_done"
                 ],
                 "recommended_doneness": "well_done",
                 "supported_methods": [
@@ -30012,7 +29998,7 @@ class KitchenCookingPanel extends LitElement {
                   style="cursor:pointer;"
                 >
                   ${ing.compulsory ? html`<span class="compulsory-star">⭐</span>` : ''}
-                  ${ing.name}
+                  ${this._lookupIngDisplayName(ing.name)}
                   <button
                     class="ingredient-remove-btn"
                     @click=${(e) => { e.stopPropagation(); this._removeIngredient(ing.name); }}
@@ -30152,6 +30138,22 @@ class KitchenCookingPanel extends LitElement {
       if (sv) return sv;
     }
     return ingredient.name || '';
+  }
+
+  /**
+   * Return the translated display name for a chip ingredient stored by English name.
+   * Searches all categories in _aiIngredients for the matching object, then calls
+   * _ingDisplayName.  Falls back to the raw name for custom (non-predefined) ingredients.
+   */
+  _lookupIngDisplayName(name) {
+    if (!name) return '';
+    const ingredients = this._aiIngredients || (typeof AI_INGREDIENTS !== 'undefined' ? AI_INGREDIENTS : {});
+    for (const category of Object.values(ingredients)) {
+      if (!Array.isArray(category)) continue;
+      const found = category.find(i => i && i.name && i.name.toLowerCase() === name.toLowerCase());
+      if (found) return this._ingDisplayName(found);
+    }
+    return name;
   }
 
   _renderIngredientCheckbox(ingredient) {
@@ -30377,7 +30379,7 @@ class KitchenCookingPanel extends LitElement {
                       type="number"
                       min="1"
                       max="12"
-                      .value=${recipe._adjustedServings || recipe.servings || 4}
+                      .value=${recipe._adjustedServings || recipe.servings || this._aiPortions || 4}
                       @input=${(e) => this._updateRecipeServings(recipe, parseInt(e.target.value))}
                       style="width:50px;padding:4px;border:1px solid var(--divider-color);border-radius:4px;background:var(--primary-background-color);color:var(--primary-text-color);">
                   </div>
@@ -30454,6 +30456,43 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
+   * Render a single cook history card for recipe cooks (used in ninja and appliance history lists).
+   * Clicking the card opens the detail view; a Restart button re-launches the cook.
+   */
+  _renderHistoryCard(cook) {
+    const displayName = cook.recipe_name || cook.cut_display || cook.cut || this._t('history.cook_details_title');
+    return html`
+      <ha-card class="history-card clickable" @click=${() => {
+        this._selectedCookForDetail = cook;
+        this.requestUpdate();
+      }}>
+        <div class="card-content">
+          <div class="history-header">
+            <h3>${displayName}</h3>
+            <span class="history-date">${this._formatDateTime(cook.completed_at)}</span>
+          </div>
+          <div class="history-details">
+            ${cook.appliance_name ? html`<span class="history-detail">🍳 ${cook.appliance_name}</span>` : ''}
+            ${cook.serving_size ? html`<span class="history-detail">🍽️ ${cook.serving_size} ${this._t('history.serving_size_label')}</span>` : ''}
+            ${cook.duration_seconds ? html`<span class="history-detail">⏱️ ${this._formatDuration(cook.duration_seconds)}</span>` : ''}
+            ${cook.ease_rating ? html`<span class="history-detail">👨‍🍳 ${'⭐'.repeat(cook.ease_rating)}</span>` : ''}
+          </div>
+          ${cook.notes ? html`
+            <div class="history-notes">
+              <strong>📝</strong> ${cook.notes}
+            </div>
+          ` : ''}
+          <div class="history-actions" @click=${(e) => e.stopPropagation()}>
+            <button class="small-btn" @click=${() => this._restartCook(cook)}>
+              ${this._t('history.restart_cook')}
+            </button>
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /**
    * Render Previous Cooks path (uses existing _renderHistory)
    */
   _renderPreviousCooksPath() {
@@ -30508,6 +30547,12 @@ class KitchenCookingPanel extends LitElement {
             <div class="detail-section">
               <strong>${this._t('history.protein_label')}</strong> ${cook.protein}
               ${cook.doneness ? html` • <strong>${this._t('history.doneness_colon')}</strong> ${(cook.doneness || '').replace('_', ' ')}` : ''}
+            </div>
+          ` : ''}
+
+          ${cook.serving_size ? html`
+            <div class="detail-section">
+              <strong>${this._t('history.serving_size_label')}</strong> ${cook.serving_size}
             </div>
           ` : ''}
 
@@ -34981,7 +35026,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "301";
+const PANEL_VERSION = "302";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
