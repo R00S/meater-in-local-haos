@@ -83,6 +83,9 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install generator dependencies
+        run: pip install pyyaml
+
       - name: Regenerate panel JS from cut files
         run: |
           cd custom_components/kitchen_cooking_engine
