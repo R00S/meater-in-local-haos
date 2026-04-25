@@ -24,6 +24,8 @@ cut_type: Breast
 
 Boneless skinless chicken breast is one of the most popular grilling cuts. Because it is very lean, it benefits enormously from a marinade that adds moisture and flavour before the high, dry heat of the grill. Slicing into thin cutlets dramatically reduces cook time and edge-to-edge doneness problems.
 
+Grilled chicken breast spans every grilling culture on earth. In Thailand, **Gai Yang** marinates bone-in breast halves in lemongrass, coriander seed, garlic, fish sauce, and black soy sauce before grilling low-and-slow for characteristic smoky char and juicy flesh. In India, **Chicken Tikka** uses spiced yogurt-marinated boneless breast cubes on skewers, cooked over charcoal or a gas grill. In the Levant, boneless breast strips are marinated in spices and lemon (shish tawook) and grilled on skewers. Across West Africa and the Caribbean, spiced, marinated breast halves are grilled over charcoal or wood fire as part of festive meals.
+
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 
 ## Source recipes
@@ -167,6 +169,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 | Skinnytaste | USA | Medium-high | Whole thick breast | 10–14 min total | 165 °F (74 °C) |
 | Natasha's Kitchen | USA | 400 °F preheat → med-low | Large whole breast | ~20 min total | 165 °F (74 °C) |
 | BBC Good Food | UK | Barbecue/griddle/grill | Standard breast | 10–12 min total | 165 °F (74 °C) |
+| Pailin Chongchitnant | Thailand/Canada | Med-low 275–300 °F (135–150 °C) | Bone-in split breast | 18–25 min | **160 °F (72 °C)** |
 
 **Recommended MEATER settings**:
 - Set alert at **160 °F (71 °C)** → pull and rest

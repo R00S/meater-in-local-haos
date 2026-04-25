@@ -121,6 +121,46 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 
 ---
 
+### 4. Swasthi Shreekanth — Chicken Tikka in Air Fryer (Indian tradition)
+**Source**: Swasthi Shreekanth, Indian Healthy Recipes; https://www.indianhealthyrecipes.com/chicken-tikka/ (fetched 2026-04-25). *Classic North Indian Chicken Tikka — boneless chicken breast (or thigh) cubes marinated in spiced yogurt with ginger-garlic paste, Kashmiri red chili, garam masala, chaat masala, and kasuri methi; air fried at 200 °C (400 °F) for 14 minutes. Brushed with butter and served with mint chutney. The air fryer method is one of three cooking options explicitly given in the recipe (alongside oven and grill pan).*
+**Serves**: 4 · **Prep**: 15 min + 8 hr marinate · **Cook**: 14 min air fryer
+
+**Temperature guidance (from recipe)**: Air fry at **200 °C / 400 °F** — 6 min first side, flip, 6 min second side, brush with butter/marinade, 2 more minutes. Internal temperature must reach **165 °F (74 °C)** at the thickest piece.
+
+**Ingredients — Marinade**
+- 450 g (1 lb) boneless chicken breast, cut into 3–4 cm (1½ inch) cubes
+- 1 tsp salt (adjust to taste)
+- ½–2 tsp Kashmiri red chili powder (adjust to heat preference)
+- ¼ tsp turmeric
+- ¾ tsp roasted cumin powder
+- 2 tsp coriander powder
+- 1–1¼ tsp garam masala
+- 1 tsp chaat masala (or ⅓ tsp amchur / dried mango powder)
+- ½ tsp black pepper, crushed
+- 1 Tbsp kasuri methi (dried fenugreek leaves)
+- 1 Tbsp lemon juice
+- 1½ Tbsp ginger-garlic paste
+- 1 Tbsp oil (mustard oil preferred; otherwise neutral)
+- ½ cup Greek yogurt (hung curd)
+- 200 g bell peppers, diced (optional)
+- 1 medium onion, diced and layers separated (optional)
+- 1–2 Tbsp butter (for brushing mid-cook and after)
+
+**Method**
+1. Cut chicken into 3–4 cm (1½ inch) cubes; pat dry.
+2. Add all spice powders, lemon juice, and kasuri methi to chicken; mix well. Rest 10–15 minutes so spices penetrate.
+3. Add ginger-garlic paste, oil, and yogurt; mix thoroughly. Cover and marinate in the refrigerator **8 hours minimum**, up to 48 hours. If pressed for time, 20 minutes is acceptable.
+4. If using bell peppers and onions, add to marinade and mix.
+5. If using bamboo skewers, soak for 30 minutes, then pat dry.
+6. Thread chicken (and peppers/onions if using) onto skewers, alternating pieces.
+7. Place skewers in the air fryer basket or on a rack that fits the basket. Insert MEATER probe into the thickest piece.
+8. Air fry at **200 °C / 400 °F** for **6 minutes**; flip skewers; air fry for another **6 minutes**.
+9. Brush with butter or leftover marinade; air fry **2 more minutes** until probe reads **165 °F (74 °C)**.
+10. Brush once more with butter before serving. Serve with mint chutney, onion rings, and lemon wedges.
+*Final serving temperature: 165–170 °F (74–77 °C).*
+
+---
+
 ## Temperature summary
 
 | Source | Country | Method temp | Thickness/Weight | Time | Target internal |
@@ -131,6 +171,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 | Natasha's Kitchen | USA | 375 °F (191 °C) | Bone-in thigh | 18–22 min | 165–175 °F (74–79 °C) |
 | Natasha's Kitchen | USA | 375 °F (191 °C) | Boneless thigh | 12–15 min | 165 °F (74 °C) |
 | BBC Good Food | UK | 180 °C (356 °F) | Standard breast (×4) | 18–20 min | 70 °C (158 °F) |
+| Swasthi Shreekanth | India | 200 °C / 400 °F | Cubed breast (tikka) | 14 min total | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **160 °F (71 °C)** → pull and rest
