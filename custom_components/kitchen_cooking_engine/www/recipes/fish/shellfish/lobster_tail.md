@@ -8,6 +8,9 @@ cut_type: Shellfish
 usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
+methods:
+  - grill
+  - oven_roast
 doneness:
   - name: tender
     target_c: 57
@@ -25,8 +28,7 @@ doneness:
     min_f: 140
     max_c: 66
     max_f: 150
-    usda_safe: true
----
+    usda_safe: true---
 # Lobster Tail — Cut Overview
 
 ## Cut profile

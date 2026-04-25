@@ -5,6 +5,9 @@ name: Caramelized Onions
 category: vegetables
 meat: alliums
 cut_type: Alliums
+methods:
+  - pan_fry
+  - saute
 doneness:
   - name: caramelized
     target_c: 160
@@ -13,8 +16,7 @@ doneness:
     min_f: 300
     max_c: 175
     max_f: 350
-    usda_safe: true
----
+    usda_safe: true---
 # Caramelized Onions — Cut Overview
 
 ## Cut profile

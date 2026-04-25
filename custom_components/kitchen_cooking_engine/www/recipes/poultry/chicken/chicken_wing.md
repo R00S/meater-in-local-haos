@@ -9,6 +9,7 @@ usda_safe_c: 74
 usda_safe_f: 165
 recommended_doneness: well_done
 methods:
+  - air_fryer
   - grill
   - oven_roast
 doneness:
@@ -29,8 +30,7 @@ doneness:
     max_c: 82
     max_f: 180
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Chicken Wing — Cut Overview
 
 ## Cut profile

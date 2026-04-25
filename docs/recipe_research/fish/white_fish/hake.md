@@ -10,6 +10,7 @@ usda_safe_f: 145
 recommended_doneness: well_done
 methods:
   - oven_roast
+  - pan_fry
   - steam
 doneness:
   - name: medium
@@ -28,8 +29,7 @@ doneness:
     min_f: 140
     max_c: 66
     max_f: 150
-    usda_safe: true
----
+    usda_safe: true---
 # Hake Fillet — Cut Overview
 
 ## Cut profile

@@ -10,6 +10,7 @@ usda_safe_f: 160
 recommended_doneness: well_done
 methods:
   - grill
+  - pan_fry
 doneness:
   - name: well_done
     target_c: 71
@@ -18,8 +19,7 @@ doneness:
     min_f: 155
     max_c: 77
     max_f: 170
-    usda_safe: true
----
+    usda_safe: true---
 # Ground Lamb — Cut Overview
 
 ## Cut profile

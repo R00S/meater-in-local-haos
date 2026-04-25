@@ -8,6 +8,10 @@ cut_type: Ground
 usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
+methods:
+  - braise
+  - oven_roast
+  - slow_cooker
 doneness:
   - name: pulled
     target_c: 93
@@ -16,8 +20,7 @@ doneness:
     min_f: 190
     max_c: 96
     max_f: 205
-    usda_safe: true
----
+    usda_safe: true---
 # Shank — Cut Overview
 
 ## Cut profile

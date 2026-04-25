@@ -5,6 +5,12 @@ name: Cauliflower
 category: vegetables
 meat: cruciferous
 cut_type: Cruciferous
+methods:
+  - air_fryer
+  - oven_roast
+  - saute
+  - steam
+  - whole_roast
 doneness:
   - name: tender
     target_c: 95
@@ -22,8 +28,7 @@ doneness:
     min_f: 300
     max_c: 175
     max_f: 350
-    usda_safe: true
----
+    usda_safe: true---
 # Cauliflower — Cut Overview
 
 ## Cut profile

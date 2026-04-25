@@ -10,6 +10,7 @@ usda_safe_f: 145
 recommended_doneness: medium_rare
 methods:
   - braise
+  - oven_roast
 doneness:
   - name: rare
     target_c: 49
@@ -35,8 +36,7 @@ doneness:
     min_f: 135
     max_c: 63
     max_f: 145
-    usda_safe: false
----
+    usda_safe: false---
 # Moose Roast — Cut Overview
 
 ## Cut profile

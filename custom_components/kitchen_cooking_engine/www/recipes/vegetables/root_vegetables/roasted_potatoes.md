@@ -5,6 +5,9 @@ name: Roasted Potatoes
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables
+methods:
+  - air_fryer
+  - oven_roast
 doneness:
   - name: caramelized
     target_c: 160
@@ -13,8 +16,7 @@ doneness:
     min_f: 300
     max_c: 175
     max_f: 350
-    usda_safe: true
----
+    usda_safe: true---
 # Roasted Potatoes — Cut Overview
 
 ## Cut profile

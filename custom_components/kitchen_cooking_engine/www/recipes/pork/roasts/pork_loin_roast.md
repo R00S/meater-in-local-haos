@@ -9,6 +9,7 @@ usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
 methods:
+  - oven_roast
   - slow_cooker
 doneness:
   - name: medium
@@ -27,8 +28,7 @@ doneness:
     min_f: 155
     max_c: 77
     max_f: 170
-    usda_safe: true
----
+    usda_safe: true---
 # Pork Loin Roast — Cut Overview
 
 ## Cut profile

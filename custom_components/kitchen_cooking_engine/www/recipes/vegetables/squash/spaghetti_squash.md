@@ -5,6 +5,9 @@ name: Spaghetti Squash
 category: vegetables
 meat: squash
 cut_type: Squash
+methods:
+  - oven_bake
+  - oven_roast
 doneness:
   - name: tender
     target_c: 95
@@ -14,8 +17,7 @@ doneness:
     max_c: 100
     max_f: 212
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Spaghetti Squash — Cut Overview
 
 ## Cut profile

@@ -11,6 +11,7 @@ recommended_doneness: well_done
 methods:
   - charcoal_grill
   - grill
+  - pan_sear
 doneness:
   - name: medium
     target_c: 54
@@ -28,8 +29,7 @@ doneness:
     min_f: 140
     max_c: 66
     max_f: 150
-    usda_safe: true
----
+    usda_safe: true---
 # Swordfish Steak — Cut Overview
 
 ## Cut profile

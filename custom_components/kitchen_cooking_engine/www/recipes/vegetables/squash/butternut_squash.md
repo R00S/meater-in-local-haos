@@ -5,6 +5,10 @@ name: Butternut Squash
 category: vegetables
 meat: squash
 cut_type: Squash
+methods:
+  - oven_roast
+  - pressure_cooker
+  - steam
 doneness:
   - name: tender
     target_c: 95
@@ -22,8 +26,7 @@ doneness:
     min_f: 300
     max_c: 175
     max_f: 350
-    usda_safe: true
----
+    usda_safe: true---
 # Butternut Squash — Cut Overview
 
 ## Cut profile

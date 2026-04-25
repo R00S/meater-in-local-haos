@@ -5,6 +5,11 @@ name: Bell Peppers
 category: vegetables
 meat: peppers
 cut_type: Peppers
+methods:
+  - air_fryer
+  - grill
+  - oven_roast
+  - saute
 doneness:
   - name: crisp_tender
     target_c: 85
@@ -21,8 +26,7 @@ doneness:
     min_f: 350
     max_c: 230
     max_f: 450
-    usda_safe: true
----
+    usda_safe: true---
 # Bell Peppers — Cut Overview
 
 ## Cut profile

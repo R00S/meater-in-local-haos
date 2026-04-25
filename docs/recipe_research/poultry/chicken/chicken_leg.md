@@ -11,6 +11,7 @@ recommended_doneness: well_done
 methods:
   - air_fryer
   - grill
+  - oven_roast
 doneness:
   - name: safe
     target_c: 74
@@ -29,8 +30,7 @@ doneness:
     max_c: 82
     max_f: 180
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Chicken Leg / Drumstick — Cut Overview
 
 ## Cut profile

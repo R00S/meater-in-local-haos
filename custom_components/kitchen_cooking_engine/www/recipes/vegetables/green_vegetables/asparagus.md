@@ -5,6 +5,11 @@ name: Asparagus
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
+methods:
+  - grill
+  - oven_roast
+  - saute
+  - steam
 doneness:
   - name: crisp_tender
     target_c: 85
@@ -22,8 +27,7 @@ doneness:
     max_c: 100
     max_f: 212
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Asparagus — Cut Overview
 
 ## Cut profile

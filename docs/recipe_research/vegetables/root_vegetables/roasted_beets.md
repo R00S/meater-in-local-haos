@@ -5,6 +5,8 @@ name: Roasted Beets
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables
+methods:
+  - oven_roast
 doneness:
   - name: tender
     target_c: 95
@@ -14,8 +16,7 @@ doneness:
     max_c: 100
     max_f: 212
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Roasted Beets — Cut Overview
 
 ## Cut profile

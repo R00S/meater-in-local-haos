@@ -5,6 +5,11 @@ name: Portobello Mushrooms
 category: vegetables
 meat: mushrooms
 cut_type: Mushrooms
+methods:
+  - air_fryer
+  - grill
+  - oven_roast
+  - saute
 doneness:
   - name: tender
     target_c: 95
@@ -22,8 +27,7 @@ doneness:
     min_f: 300
     max_c: 175
     max_f: 350
-    usda_safe: true
----
+    usda_safe: true---
 # Portobello Mushrooms — Cut Overview
 
 ## Cut profile

@@ -10,6 +10,7 @@ usda_safe_f: 145
 recommended_doneness: medium_rare
 methods:
   - oven_roast
+  - pan_sear
   - sous_vide
 doneness:
   - name: rare
@@ -36,8 +37,7 @@ doneness:
     min_f: 135
     max_c: 63
     max_f: 145
-    usda_safe: false
----
+    usda_safe: false---
 # Venison Loin — Cut Overview
 
 ## Cut profile

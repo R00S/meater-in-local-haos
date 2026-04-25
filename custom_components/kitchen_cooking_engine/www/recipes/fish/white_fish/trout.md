@@ -11,6 +11,7 @@ recommended_doneness: medium
 methods:
   - grill
   - oven_roast
+  - pan_sear
 doneness:
   - name: medium_rare
     target_c: 49
@@ -36,8 +37,7 @@ doneness:
     min_f: 140
     max_c: 66
     max_f: 150
-    usda_safe: true
----
+    usda_safe: true---
 # Trout Fillet — Cut Overview
 
 ## Cut profile

@@ -8,6 +8,9 @@ cut_type: Goose
 usda_safe_c: 74
 usda_safe_f: 165
 recommended_doneness: medium_rare
+methods:
+  - oven_roast
+  - pan_sear
 doneness:
   - name: medium_rare
     target_c: 54
@@ -34,8 +37,7 @@ doneness:
     max_c: 77
     max_f: 170
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Goose Breast — Cut Overview
 
 ## Cut profile

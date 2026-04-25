@@ -9,6 +9,7 @@ usda_safe_c: 74
 usda_safe_f: 165
 recommended_doneness: well_done
 methods:
+  - oven_roast
   - smoker
 doneness:
   - name: safe
@@ -19,8 +20,7 @@ doneness:
     max_c: 77
     max_f: 170
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Turkey Breast — Cut Overview
 
 ## Cut profile

@@ -8,6 +8,13 @@ cut_type: Steaks
 usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: medium_rare
+methods:
+  - charcoal_grill
+  - grill
+  - oven_roast
+  - pan_sear
+  - smoker
+  - sous_vide
 doneness:
   - name: rare
     target_c: 49
@@ -49,8 +56,7 @@ doneness:
     min_f: 155
     max_c: 77
     max_f: 170
-    usda_safe: true
----
+    usda_safe: true---
 # Tri-Tip — Cut Overview
 
 ## Cut profile

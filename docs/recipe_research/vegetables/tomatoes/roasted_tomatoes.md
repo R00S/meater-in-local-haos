@@ -6,7 +6,9 @@ category: vegetables
 meat: tomatoes
 cut_type: Tomatoes
 methods:
+  - air_fryer
   - oven_broil
+  - oven_roast
 doneness:
   - name: tender
     target_c: 95
@@ -24,8 +26,7 @@ doneness:
     min_f: 300
     max_c: 175
     max_f: 350
-    usda_safe: true
----
+    usda_safe: true---
 # Roasted Tomatoes — Cut Overview
 
 ## Cut profile

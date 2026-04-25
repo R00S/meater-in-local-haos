@@ -8,6 +8,8 @@ cut_type: Shellfish
 usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
+methods:
+  - pan_fry
 doneness:
   - name: just_cooked
     target_c: 49
@@ -25,8 +27,7 @@ doneness:
     min_f: 140
     max_c: 66
     max_f: 150
-    usda_safe: true
----
+    usda_safe: true---
 # Shrimp — Cut Overview
 
 ## Cut profile

@@ -8,6 +8,9 @@ cut_type: Goat
 usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
+methods:
+  - grill
+  - pan_sear
 doneness:
   - name: medium_rare
     target_c: 54
@@ -41,8 +44,7 @@ doneness:
     min_f: 155
     max_c: 77
     max_f: 170
-    usda_safe: true
----
+    usda_safe: true---
 # Goat Chop — Cut Overview
 
 ## Cut profile

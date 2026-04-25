@@ -8,6 +8,10 @@ cut_type: Ground
 usda_safe_c: 74
 usda_safe_f: 165
 recommended_doneness: well_done
+methods:
+  - braise
+  - grill
+  - pan_fry
 doneness:
   - name: safe
     target_c: 74
@@ -17,8 +21,7 @@ doneness:
     max_c: 77
     max_f: 170
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Ground Chicken — Cut Overview
 
 ## Cut profile

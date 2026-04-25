@@ -5,6 +5,11 @@ name: Brussels Sprouts
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
+methods:
+  - air_fryer
+  - oven_roast
+  - pan_fry
+  - saute
 doneness:
   - name: tender
     target_c: 95
@@ -22,8 +27,7 @@ doneness:
     min_f: 300
     max_c: 175
     max_f: 350
-    usda_safe: true
----
+    usda_safe: true---
 # Brussels Sprouts — Cut Overview
 
 ## Cut profile

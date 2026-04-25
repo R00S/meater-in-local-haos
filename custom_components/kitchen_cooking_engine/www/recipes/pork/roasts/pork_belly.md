@@ -8,6 +8,15 @@ cut_type: Roasts
 usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: well_done
+methods:
+  - air_fryer
+  - braise
+  - grill
+  - oven_roast
+  - pan_fry
+  - slow_cooker
+  - smoker
+  - sous_vide
 doneness:
   - name: well_done
     target_c: 71
@@ -24,8 +33,7 @@ doneness:
     min_f: 185
     max_c: 95
     max_f: 203
-    usda_safe: true
----
+    usda_safe: true---
 # Pork Belly — Cut Overview
 
 ## Cut profile

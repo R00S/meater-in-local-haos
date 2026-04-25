@@ -8,6 +8,9 @@ cut_type: Rabbit
 usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: dark_meat_optimal
+methods:
+  - braise
+  - oven_roast
 doneness:
   - name: well_done
     target_c: 71
@@ -33,8 +36,7 @@ doneness:
     min_f: 190
     max_c: 96
     max_f: 205
-    usda_safe: true
----
+    usda_safe: true---
 # Rabbit Legs — Cut Overview
 
 ## Cut profile

@@ -10,6 +10,7 @@ usda_safe_f: 145
 recommended_doneness: well_done
 methods:
   - braise
+  - oven_roast
   - slow_cooker
   - smoker
 doneness:
@@ -20,8 +21,7 @@ doneness:
     min_f: 190
     max_c: 96
     max_f: 205
-    usda_safe: true
----
+    usda_safe: true---
 # Brisket — Cut Overview
 
 ## Cut profile

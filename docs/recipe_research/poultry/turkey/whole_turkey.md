@@ -9,6 +9,7 @@ usda_safe_c: 74
 usda_safe_f: 165
 recommended_doneness: thigh_optimal
 methods:
+  - oven_roast
   - smoker
 doneness:
   - name: safe
@@ -28,8 +29,7 @@ doneness:
     max_c: 82
     max_f: 180
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Whole Turkey — Cut Overview
 
 ## Cut profile

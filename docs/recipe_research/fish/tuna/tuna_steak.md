@@ -8,6 +8,9 @@ cut_type: Tuna
 usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
+methods:
+  - grill
+  - pan_sear
 doneness:
   - name: rare
     target_c: 43
@@ -34,8 +37,7 @@ doneness:
     max_c: 57
     max_f: 135
     usda_safe: false
-    recommended: true
----
+    recommended: true---
 # Tuna Steak — Cut Overview
 
 ## Cut profile

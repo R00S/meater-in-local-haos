@@ -8,6 +8,8 @@ cut_type: Duck
 usda_safe_c: 74
 usda_safe_f: 165
 recommended_doneness: leg_rendered
+methods:
+  - oven_roast
 doneness:
   - name: safe
     target_c: 74
@@ -26,8 +28,7 @@ doneness:
     max_c: 88
     max_f: 190
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Whole Duck — Cut Overview
 
 ## Cut profile

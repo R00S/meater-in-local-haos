@@ -8,6 +8,9 @@ cut_type: Kangaroo
 usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: medium_rare
+methods:
+  - grill
+  - pan_sear
 doneness:
   - name: rare
     target_c: 49
@@ -33,8 +36,7 @@ doneness:
     min_f: 135
     max_c: 63
     max_f: 145
-    usda_safe: false
----
+    usda_safe: false---
 # Kangaroo Steak — Cut Overview
 
 ## Cut profile

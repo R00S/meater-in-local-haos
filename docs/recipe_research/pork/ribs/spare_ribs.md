@@ -10,6 +10,7 @@ usda_safe_f: 145
 recommended_doneness: well_done
 methods:
   - grill
+  - oven_roast
   - smoker
 doneness:
   - name: pulled
@@ -19,8 +20,7 @@ doneness:
     min_f: 190
     max_c: 96
     max_f: 205
-    usda_safe: true
----
+    usda_safe: true---
 # Spare Ribs — Cut Overview
 
 ## Cut profile

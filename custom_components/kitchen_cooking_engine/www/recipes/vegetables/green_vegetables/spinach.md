@@ -5,6 +5,9 @@ name: Spinach
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
+methods:
+  - saute
+  - steam
 doneness:
   - name: tender
     target_c: 95
@@ -14,8 +17,7 @@ doneness:
     max_c: 100
     max_f: 212
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Spinach — Cut Overview
 
 ## Cut profile

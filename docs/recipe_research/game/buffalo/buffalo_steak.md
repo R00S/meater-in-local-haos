@@ -10,6 +10,8 @@ usda_safe_f: 145
 recommended_doneness: medium_rare
 methods:
   - charcoal_grill
+  - grill
+  - pan_sear
 doneness:
   - name: rare
     target_c: 49
@@ -43,8 +45,7 @@ doneness:
     min_f: 145
     max_c: 68
     max_f: 155
-    usda_safe: true
----
+    usda_safe: true---
 # Buffalo Steak — Cut Overview
 
 ## Cut profile

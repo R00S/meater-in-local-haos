@@ -8,6 +8,9 @@ cut_type: Other / Offal
 usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: well_done
+methods:
+  - braise
+  - slow_cooker
 doneness:
   - name: pulled
     target_c: 93
@@ -16,8 +19,7 @@ doneness:
     min_f: 190
     max_c: 96
     max_f: 205
-    usda_safe: true
----
+    usda_safe: true---
 # Pork Tongue — Cut Overview
 
 ## Cut profile

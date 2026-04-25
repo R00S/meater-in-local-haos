@@ -8,6 +8,12 @@ cut_type: Salmon
 usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: medium
+methods:
+  - air_fryer
+  - grill
+  - oven_bake
+  - pan_sear
+  - sous_vide
 doneness:
   - name: medium_rare
     target_c: 49
@@ -33,8 +39,7 @@ doneness:
     min_f: 140
     max_c: 66
     max_f: 150
-    usda_safe: true
----
+    usda_safe: true---
 # Salmon Fillet — Cut Overview
 
 ## Cut profile

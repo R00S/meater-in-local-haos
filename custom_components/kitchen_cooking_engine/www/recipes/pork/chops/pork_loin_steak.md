@@ -11,6 +11,7 @@ recommended_doneness: well_done
 methods:
   - air_fryer
   - grill
+  - pan_fry
 doneness:
   - name: medium
     target_c: 63
@@ -28,8 +29,7 @@ doneness:
     min_f: 155
     max_c: 77
     max_f: 170
-    usda_safe: true
----
+    usda_safe: true---
 # Pork Loin Steak — Cut Overview
 
 ## Cut profile

@@ -11,6 +11,7 @@ recommended_doneness: thigh_optimal
 methods:
   - air_fryer
   - grill
+  - oven_roast
 doneness:
   - name: safe
     target_c: 74
@@ -29,8 +30,7 @@ doneness:
     max_c: 85
     max_f: 185
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Whole Chicken — Cut Overview
 
 ## Cut profile

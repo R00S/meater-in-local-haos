@@ -8,6 +8,8 @@ cut_type: Ham
 usda_safe_c: 60
 usda_safe_f: 140
 recommended_doneness: well_done
+methods:
+  - oven_roast
 doneness:
   - name: heated_through
     target_c: 60
@@ -17,8 +19,7 @@ doneness:
     max_c: 63
     max_f: 145
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Cured Ham (Pre-cooked) — Cut Overview
 
 ## Cut profile

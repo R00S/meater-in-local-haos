@@ -8,6 +8,9 @@ cut_type: Other / Offal
 usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: well_done
+methods:
+  - pan_fry
+  - pan_sear
 doneness:
   - name: well_done
     target_c: 71
@@ -16,8 +19,7 @@ doneness:
     min_f: 155
     max_c: 77
     max_f: 170
-    usda_safe: true
----
+    usda_safe: true---
 # Pork Liver — Cut Overview
 
 ## Cut profile

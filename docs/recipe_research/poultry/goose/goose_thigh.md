@@ -8,6 +8,9 @@ cut_type: Goose
 usda_safe_c: 74
 usda_safe_f: 165
 recommended_doneness: well_done
+methods:
+  - braise
+  - oven_roast
 doneness:
   - name: safe
     target_c: 74
@@ -26,8 +29,7 @@ doneness:
     max_c: 82
     max_f: 180
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Goose Thigh — Cut Overview
 
 ## Cut profile

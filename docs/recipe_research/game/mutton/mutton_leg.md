@@ -8,6 +8,8 @@ cut_type: Mutton
 usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: medium
+methods:
+  - oven_roast
 doneness:
   - name: medium_rare
     target_c: 54
@@ -41,8 +43,7 @@ doneness:
     min_f: 155
     max_c: 77
     max_f: 170
-    usda_safe: true
----
+    usda_safe: true---
 # Mutton Leg Roast — Cut Overview
 
 ## Cut profile

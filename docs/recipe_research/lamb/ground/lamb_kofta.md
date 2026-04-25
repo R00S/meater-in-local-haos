@@ -9,6 +9,7 @@ usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: well_done
 methods:
+  - grill
   - oven_roast
 doneness:
   - name: well_done
@@ -18,8 +19,7 @@ doneness:
     min_f: 155
     max_c: 77
     max_f: 170
-    usda_safe: true
----
+    usda_safe: true---
 # Kofta / Kebab — Cut Overview
 
 ## Cut profile

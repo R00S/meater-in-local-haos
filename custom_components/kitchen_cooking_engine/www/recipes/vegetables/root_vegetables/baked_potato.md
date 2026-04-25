@@ -5,6 +5,9 @@ name: Baked Potato
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables
+methods:
+  - air_fryer
+  - oven_bake
 doneness:
   - name: tender
     target_c: 95
@@ -14,8 +17,7 @@ doneness:
     max_c: 100
     max_f: 212
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Baked Potato — Cut Overview
 
 ## Cut profile

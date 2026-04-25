@@ -8,6 +8,11 @@ cut_type: Ribs
 usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
+methods:
+  - air_fryer
+  - grill
+  - oven_roast
+  - smoker
 doneness:
   - name: pulled
     target_c: 93
@@ -16,8 +21,7 @@ doneness:
     min_f: 190
     max_c: 96
     max_f: 205
-    usda_safe: true
----
+    usda_safe: true---
 # Baby Back Ribs — Cut Overview
 
 ## Cut profile

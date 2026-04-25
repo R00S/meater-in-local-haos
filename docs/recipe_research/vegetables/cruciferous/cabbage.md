@@ -5,6 +5,11 @@ name: Cabbage
 category: vegetables
 meat: cruciferous
 cut_type: Cruciferous
+methods:
+  - braise
+  - grill
+  - oven_roast
+  - saute
 doneness:
   - name: crisp_tender
     target_c: 85
@@ -22,8 +27,7 @@ doneness:
     max_c: 100
     max_f: 212
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Cabbage — Cut Overview
 
 ## Cut profile

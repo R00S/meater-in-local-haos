@@ -9,7 +9,10 @@ usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
 methods:
+  - air_fryer
+  - oven_bake
   - oven_roast
+  - pan_fry
 doneness:
   - name: medium
     target_c: 54
@@ -27,8 +30,7 @@ doneness:
     min_f: 140
     max_c: 66
     max_f: 150
-    usda_safe: true
----
+    usda_safe: true---
 # Cod Fillet — Cut Overview
 
 ## Cut profile

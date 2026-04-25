@@ -8,6 +8,8 @@ cut_type: Ground
 usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: well_done
+methods:
+  - oven_roast
 doneness:
   - name: done
     target_c: 71
@@ -17,8 +19,7 @@ doneness:
     max_c: 77
     max_f: 170
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Meatloaf — Cut Overview
 
 ## Cut profile

@@ -9,6 +9,9 @@ usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: well_done
 methods:
+  - braise
+  - oven_roast
+  - pan_fry
   - slow_cooker
 doneness:
   - name: pulled
@@ -18,8 +21,7 @@ doneness:
     min_f: 190
     max_c: 96
     max_f: 205
-    usda_safe: true
----
+    usda_safe: true---
 # Pork Cheek — Cut Overview
 
 ## Cut profile

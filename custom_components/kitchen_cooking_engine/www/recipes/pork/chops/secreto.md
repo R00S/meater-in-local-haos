@@ -11,6 +11,7 @@ recommended_doneness: well_done
 methods:
   - charcoal_grill
   - grill
+  - pan_sear
 doneness:
   - name: medium
     target_c: 63
@@ -28,8 +29,7 @@ doneness:
     min_f: 155
     max_c: 77
     max_f: 170
-    usda_safe: true
----
+    usda_safe: true---
 # Secreto (Ibérico Pork) — Cut Overview
 
 ## Cut profile

@@ -5,6 +5,12 @@ name: Eggplant / Aubergine
 category: vegetables
 meat: eggplant
 cut_type: Eggplant
+methods:
+  - air_fryer
+  - grill
+  - oven_roast
+  - pan_fry
+  - saute
 doneness:
   - name: tender
     target_c: 95
@@ -22,8 +28,7 @@ doneness:
     min_f: 350
     max_c: 230
     max_f: 450
-    usda_safe: true
----
+    usda_safe: true---
 # Eggplant / Aubergine — Cut Overview
 
 ## Cut profile

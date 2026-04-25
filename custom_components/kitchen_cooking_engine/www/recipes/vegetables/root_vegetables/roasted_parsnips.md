@@ -5,6 +5,9 @@ name: Roasted Parsnips
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables
+methods:
+  - air_fryer
+  - oven_roast
 doneness:
   - name: tender
     target_c: 95
@@ -22,8 +25,7 @@ doneness:
     min_f: 300
     max_c: 175
     max_f: 350
-    usda_safe: true
----
+    usda_safe: true---
 # Roasted Parsnips — Cut Overview
 
 ## Cut profile

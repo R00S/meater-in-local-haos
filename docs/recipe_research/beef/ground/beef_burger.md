@@ -9,7 +9,10 @@ usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: well_done
 methods:
+  - air_fryer
   - charcoal_grill
+  - grill
+  - pan_fry
 doneness:
   - name: well_done
     target_c: 71
@@ -19,8 +22,7 @@ doneness:
     max_c: 77
     max_f: 170
     usda_safe: true
-    recommended: true
----
+    recommended: true---
 # Beef Burger / Ground Beef Patty — Cut Overview
 
 ## Cut profile
