@@ -4659,12 +4659,17 @@ class KitchenCookingPanel extends LitElement {
     const METHOD_LABELS = {
       oven_roast: 'Oven Roast', oven_bake: 'Oven Bake',
       pan_sear: 'Pan Sear', pan_fry: 'Pan Fry',
-      grill: 'Grill', smoker: 'Smoker',
+      grill: 'Grill', smoker: 'Smoker', charcoal_grill: 'Charcoal Grill',
       air_fryer: 'Air Fryer', sous_vide: 'Sous Vide',
       slow_cooker: 'Slow Cooker', braise: 'Braise',
       boil: 'Boil', steam: 'Steam', poach: 'Poach',
       saute: 'Sauté', simmer: 'Simmer',
     };
+
+    const overviewPath = recipes && recipes['overview'];
+    const methodRecipes = recipes
+      ? Object.entries(recipes).filter(([m]) => m !== 'overview')
+      : [];
 
     return html`
       <ha-card>
@@ -4675,13 +4680,24 @@ class KitchenCookingPanel extends LitElement {
               ${profile}
             </p>
           ` : ''}
-          ${recipes ? html`
+          ${overviewPath ? html`
+            <div style="margin-bottom:10px;">
+              <a
+                href="${overviewPath}"
+                target="_blank"
+                rel="noopener"
+                style="font-size:0.82em;padding:5px 14px;background:var(--secondary-background-color);color:var(--primary-color);border:1px solid var(--primary-color);border-radius:14px;text-decoration:none;font-weight:600;">
+                📄 Cut Overview
+              </a>
+            </div>
+          ` : ''}
+          ${methodRecipes.length > 0 ? html`
             <div>
               <span style="font-size:0.82em;font-weight:600;color:var(--secondary-text-color);">
                 📚 Recipe Research Files:
               </span>
               <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">
-                ${Object.entries(recipes).map(([method, path]) => html`
+                ${methodRecipes.map(([method, path]) => html`
                   <a
                     href="${path}"
                     target="_blank"

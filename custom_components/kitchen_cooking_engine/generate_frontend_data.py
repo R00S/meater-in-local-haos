@@ -297,8 +297,34 @@ def build_recipe_index(base_dir):
             if not filename.endswith(".md") or filename in _excluded:
                 continue
             stem = filename[:-3]
+
             if "-" not in stem:
+                # Plain cut overview file: {slug}.md
+                # Use it as the authoritative cut profile source and add an
+                # "overview" entry to the recipe index so the GUI can link to it.
+                cut_slug = stem
+                rel = os.path.relpath(
+                    os.path.join(root, filename), recipe_dir
+                ).replace(os.sep, "/")
+                url_path = f"/kitchen_cooking_engine_panel/recipes/{rel}"
+                recipe_index.setdefault(cut_slug, {})["overview"] = url_path
+
+                # Plain cut file takes priority over extraction from method files
+                try:
+                    content = open(
+                        os.path.join(root, filename), encoding="utf-8"
+                    ).read()
+                    m = re.search(
+                        r"## Cut profile\n+(.*?)(?=\n\n##|\Z)",
+                        content,
+                        re.DOTALL,
+                    )
+                    if m:
+                        cut_profiles[cut_slug] = m.group(1).strip()
+                except Exception:
+                    pass
                 continue
+
             hyphen = stem.index("-")
             cut_slug = stem[:hyphen]
             method_slug = stem[hyphen + 1:]
@@ -310,7 +336,8 @@ def build_recipe_index(base_dir):
 
             recipe_index.setdefault(cut_slug, {})[method_slug] = url_path
 
-            # Extract the ## Cut profile section from the first file we find
+            # Extract the ## Cut profile section from the first method file we
+            # find, but only if the plain cut file has not already set a profile.
             if cut_slug not in cut_profiles:
                 try:
                     content = open(

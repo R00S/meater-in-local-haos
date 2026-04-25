@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 24 Apr 2026, 20:56 UTC
-Last Change: v0.6.1.18 - Add ground_beef, goat_shank, lamb_neck cuts (recipe-backed) to experimental MEATER tree
+Last Change: v0.6.1.19 - Create 133 plain cut overview files; add Cut Overview button to recipe card; update generator to read plain cut files
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.

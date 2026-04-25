@@ -1,0 +1,16 @@
+# Pork Sausage — Cut Overview
+
+## Cut profile
+
+Pork sausage is a processed meat product made from finely minced or coarsely ground pork, seasoned with salt, pepper, herbs and spices, and encased in natural pig intestine or synthetic collagen casing. Fat content is typically 20–30%, essential for juiciness and flavour development. Fresh sausages require cooking to a minimum internal temperature of 71°C (160°F); pre-cooked or smoked sausages require only reheating to serving temperature (60–65°C). The casing is the critical monitoring challenge: if it ruptures early, moisture and fat escape and the sausage dries out. Probing from one end into the centre avoids puncturing the casing mid-body. Carryover is 2–3°C.
+
+
+Target internal temperatures (grill):
+- Fully cooked/safe: **71–75 °C (160–167 °F)**
+- ⚠️ Do not pull before 71 °C — pork sausage must be fully cooked
+
+
+## Research files by cooking method
+
+- [Grill](./pork_sausage-grill.md)
+- [Pan Fry](./pork_sausage-pan_fry.md)
