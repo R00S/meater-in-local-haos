@@ -429,12 +429,19 @@ appears immediately below the cut selector — before you choose a doneness leve
 its connective-tissue and fat content, why the selected cooking method suits it, and what
 internal temperature behaviour to expect.
 
-**📚 Recipe Research Files** — a set of pill-shaped links, one per available cooking method
-that has an associated research file. Each link opens the corresponding Markdown recipe
-research document (served locally by Home Assistant — no internet connection required).
+**📄 Cut Overview** — a toggle button that opens the cut's overview research file. After
+opening, the file's **description paragraph** is shown, followed by a list of **individual
+recipe titles** as clickable buttons. Tapping a recipe title opens just that recipe in a
+readable card with ingredients, method steps, and pull-temperature guidance. A **← Back to
+recipes** button returns to the list, and **✕ Close** closes the viewer.
+
+**📚 Method Research** — a row of pill-shaped buttons, one per cooking method that has an
+associated research file. Tapping a method pill opens that file the same way: description
+paragraph first, then individual recipe title buttons, then a single-recipe view on tap.
 
 The research files contain 4–6 source recipes drawn from globally diverse published
 cookbooks and food websites, with non-Western sources prioritised. Each file lists:
+- The cut-method description (from `## Cut profile`)
 - Ingredients with quantities
 - Step-by-step method
 - MEATER probe placement instructions
@@ -444,17 +451,17 @@ cookbooks and food websites, with non-Western sources prioritised. Each file lis
 
 After selecting **Lamb Shank** in the Lamb → Roasts category, the Cut Profile card shows
 a short description of the shank (collagen content, typical fall-off-the-bone target
-85–90 °C) and three recipe links:
+85–90 °C) and three method research buttons:
 
-| Link | Opens |
-|------|-------|
-| Braise | `lamb_shank-braise.md` — 4 source recipes (Mediterranean, Turkish, German, Danish) |
-| Slow Cooker | `lamb_shank-slow_cooker.md` — 5 source recipes (Turkish, German, Greek, Italian, Danish) |
-| Oven Roast | `lamb_shank-oven_roast.md` — 4 source recipes (Turkish, Greek, Italian, Danish) |
+| Button | Opens |
+|--------|-------|
+| Braise | `lamb_shank-braise.md` — description + 4 individual recipes (Mediterranean, Turkish, German, Danish) |
+| Slow Cooker | `lamb_shank-slow_cooker.md` — description + 5 recipes (Turkish, German, Greek, Italian, Danish) |
+| Oven Roast | `lamb_shank-oven_roast.md` — description + 4 recipes (Turkish, Greek, Italian, Danish) |
 
-> **Prototype note.** Recipe files are served as plain Markdown (no rendering). Translations
-> and unit conversions are not yet applied — the files are in the language of the original
-> source. This feature will be expanded in future releases.
+Tapping **Braise** shows the cut-method description and a list of four recipe names. Tapping
+any name opens just that recipe, showing ingredients and method steps. The ← Back button
+returns to the recipe list; ✕ Close dismisses the viewer entirely.
 
 #### How the cut tree and recipe links are built
 

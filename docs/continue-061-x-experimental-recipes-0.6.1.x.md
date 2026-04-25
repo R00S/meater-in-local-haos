@@ -560,3 +560,50 @@ Updated PANEL_VERSION in const.py: 292 -> 293
 - PANEL_VERSION: `292` → `293`
 
 ---
+
+### 2026-04-25 — Fix recipe file viewer: individual recipes + cut-method description (v0.6.1.25)
+
+**Task:** "The cut-method description doesn't show up when clicking the cut (method pill) — fix it. Recipes are not clickable; they should be shown as individual clickable items, formatted like AI recipes. Recipe links should be visible in cut area for cut files and method area for cut-method files."
+
+#### Root cause
+
+1. `_stripFileFrontmatter()` only stripped YAML `---` blocks. KCE files use `<!-- KCE:... -->` HTML comment headers, which were passed through unchanged. `_mdToHtml()` escaped them as visible text (appearing before the description), and the HTML comment was displayed as garbled text rather than being hidden.
+
+2. `_openRecipeFile()` loaded and rendered the entire file as one markdown blob. Individual recipes (each `### N.` block) were not separated into clickable items.
+
+#### What was changed
+
+**`www/panel-class-template.js`**
+
+- **`_stripFileFrontmatter()`** — extended to also strip leading `<!-- KCE:... -->` HTML comment blocks, in addition to the existing YAML `---` frontmatter stripping.
+
+- **`_parseRecipeFile(text)`** — new method. Extracts:
+  - `description`: the body of the `## Cut profile` section (the cut-method description paragraph)
+  - `recipes`: array of `{title, content}` objects, one per `### N.` block in `## Source recipes`
+
+- **`_openRecipeFile(url)`** — after loading, now also calls `_parseRecipeFile()` and stores results in `_fileDescription`, `_fileRecipes`; clears `_selectedFileRecipe`.
+
+- **New reactive properties**: `_fileDescription`, `_fileRecipes`, `_selectedFileRecipe`
+
+- **`_renderCutProfileCard()`** — refactored inline content display:
+  - **Recipe list view** (when file loaded, no recipe selected): shows `_fileDescription` paragraph + each recipe title as a clickable button.
+  - **Single recipe view** (when a recipe title is clicked): shows only that recipe using `_mdToHtml()`, with a "← Back to recipes" button and a "✕ Close" button.
+  - Falls back to raw `_mdToHtml()` display if no recipes were parsed (error files, plain text).
+
+- `_selectCut()` — now also clears `_fileDescription`, `_fileRecipes`, `_selectedFileRecipe` on cut change.
+
+#### Generator output
+```
+Recipe index: 516 files across 185 cuts
+  International cut → recipe coverage: 190 matched, 0 unmatched
+  EXP_TREE: 186 cuts across 7 categories from KCE:CUT tags
+  Copied 517 recipe files → www/recipes/
+Updated PANEL_VERSION in JS: 293 -> 294
+Updated PANEL_VERSION in const.py: 293 -> 294
+```
+
+#### Version bump
+- `0.6.1.24` → `0.6.1.25` (manifest.json, __init__.py `__version__` + Last Change, const.py Last Change)
+- PANEL_VERSION: `293` → `294`
+
+---

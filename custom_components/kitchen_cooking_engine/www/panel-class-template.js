@@ -147,6 +147,10 @@ class KitchenCookingPanel extends LitElement {
       _recipeFileContent: { type: String },
       _recipeFileUrl: { type: String },
       _recipeFileLoading: { type: Boolean },
+      // Parsed recipe state from loaded file
+      _fileDescription: { type: String },
+      _fileRecipes: { type: Array },
+      _selectedFileRecipe: { type: Number },
 
     };
   }
@@ -275,6 +279,9 @@ class KitchenCookingPanel extends LitElement {
     this._recipeFileContent = null;
     this._recipeFileUrl = null;
     this._recipeFileLoading = false;
+    this._fileDescription = null;
+    this._fileRecipes = null;
+    this._selectedFileRecipe = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -1202,6 +1209,9 @@ class KitchenCookingPanel extends LitElement {
     // Clear recipe file viewer when cut changes
     this._recipeFileContent = null;
     this._recipeFileUrl = null;
+    this._fileDescription = null;
+    this._fileRecipes = null;
+    this._selectedFileRecipe = null;
     
     // Check if user has a saved preference for this cut
     const savedPref = this._cutPreferences[String(cutId)];
@@ -4646,12 +4656,10 @@ class KitchenCookingPanel extends LitElement {
   /**
    * Render a cut-profile card with a brief description and inline-viewable links
    * to local recipe research files. Clicking "Cut Overview" or a method button
-   * fetches and renders that file's content inline within the panel.
+   * fetches, parses, and renders individual recipes as clickable cards.
    *
-   * File types (marked via YAML frontmatter in every recipe file):
-   *   type: cut        — general cut profile; one per cut slug; carries full
-   *                      cooking spec (doneness temps, methods) so the tree can
-   *                      eventually be built from the files alone.
+   * File types (marked via KCE HTML comment in every recipe file):
+   *   type: cut        — general cut profile; one per cut slug.
    *   type: cut_method — method-specific research; one per cut×method pair.
    */
   _renderCutProfileCard() {
@@ -4684,6 +4692,16 @@ class KitchenCookingPanel extends LitElement {
     const methodStyle  = btnBase + 'font-size:0.78em;padding:4px 11px;background:var(--primary-color);color:var(--text-primary-color);opacity:0.92;';
     const overviewActiveStyle  = 'font-size:0.82em;padding:5px 14px;background:var(--accent-color,#ff9800);color:#fff;' + btnBase + 'font-weight:700;';
     const overviewInactiveStyle = 'font-size:0.82em;padding:5px 14px;background:var(--secondary-background-color);color:var(--primary-color);border:1px solid var(--primary-color);' + btnBase + 'font-weight:600;';
+    const closeBtnStyle = 'font-size:0.78em;padding:3px 10px;background:transparent;border:1px solid var(--divider-color);border-radius:10px;cursor:pointer;color:var(--secondary-text-color);';
+
+    const closeAll = () => {
+      this._recipeFileContent = null;
+      this._recipeFileUrl = null;
+      this._fileDescription = null;
+      this._fileRecipes = null;
+      this._selectedFileRecipe = null;
+      this.requestUpdate();
+    };
 
     return html`
       <ha-card>
@@ -4732,17 +4750,49 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : ''}
 
-      ${this._recipeFileContent && !this._recipeFileLoading ? html`
+      ${this._recipeFileContent && !this._recipeFileLoading && this._selectedFileRecipe === null ? html`
         <ha-card style="margin-top:4px;">
           <div class="card-content">
-            <div style="text-align:right;margin-bottom:4px;">
-              <button
-                @click=${() => { this._recipeFileContent = null; this._recipeFileUrl = null; this.requestUpdate(); }}
-                style="font-size:0.78em;padding:3px 10px;background:transparent;border:1px solid var(--divider-color);border-radius:10px;cursor:pointer;color:var(--secondary-text-color);">
-                ✕ Close
-              </button>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+              <span style="font-size:0.88em;font-weight:600;color:var(--secondary-text-color);">📖 Recipes</span>
+              <button @click=${closeAll} style="${closeBtnStyle}">✕ Close</button>
             </div>
-            <div class="recipe-md-content" .innerHTML=${this._mdToHtml(this._recipeFileContent)}></div>
+            ${this._fileDescription ? html`
+              <p style="font-size:0.87em;line-height:1.55;color:var(--secondary-text-color);margin:0 0 12px 0;">
+                ${this._fileDescription}
+              </p>
+            ` : ''}
+            ${this._fileRecipes && this._fileRecipes.length > 0 ? html`
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                ${this._fileRecipes.map((r, i) => html`
+                  <button
+                    @click=${() => { this._selectedFileRecipe = i; this.requestUpdate(); }}
+                    style="text-align:left;cursor:pointer;border:1px solid var(--divider-color);border-radius:8px;padding:8px 12px;background:var(--secondary-background-color);font-size:0.87em;color:var(--primary-text-color);">
+                    📄 ${r.title}
+                  </button>
+                `)}
+              </div>
+            ` : html`
+              <div class="recipe-md-content" .innerHTML=${this._mdToHtml(this._recipeFileContent)}></div>
+            `}
+          </div>
+        </ha-card>
+      ` : ''}
+
+      ${this._recipeFileContent && !this._recipeFileLoading && this._selectedFileRecipe !== null ? html`
+        <ha-card style="margin-top:4px;">
+          <div class="card-content">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+              <button
+                @click=${() => { this._selectedFileRecipe = null; this.requestUpdate(); }}
+                style="${closeBtnStyle}">
+                ← Back to recipes
+              </button>
+              <button @click=${closeAll} style="${closeBtnStyle}">✕ Close</button>
+            </div>
+            <div class="recipe-md-content"
+                 .innerHTML=${this._mdToHtml(this._fileRecipes[this._selectedFileRecipe].content)}>
+            </div>
           </div>
         </ha-card>
       ` : ''}
@@ -4750,38 +4800,84 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Fetch a recipe file by URL and display its content inline.
+   * Fetch a recipe file by URL, parse into description + recipe list, and display inline.
    * Clicking the same button again toggles the viewer closed.
    */
   async _openRecipeFile(url) {
     if (this._recipeFileUrl === url) {
       this._recipeFileContent = null;
       this._recipeFileUrl = null;
+      this._fileDescription = null;
+      this._fileRecipes = null;
+      this._selectedFileRecipe = null;
       this.requestUpdate();
       return;
     }
     this._recipeFileUrl = url;
     this._recipeFileLoading = true;
     this._recipeFileContent = null;
+    this._fileDescription = null;
+    this._fileRecipes = null;
+    this._selectedFileRecipe = null;
     this.requestUpdate();
     try {
       const resp = await fetch(url);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       const text = await resp.text();
       this._recipeFileContent = this._stripFileFrontmatter(text);
+      const parsed = this._parseRecipeFile(this._recipeFileContent);
+      this._fileDescription = parsed.description;
+      this._fileRecipes = parsed.recipes;
     } catch (e) {
       this._recipeFileContent = `_Could not load file: ${e.message}_`;
+      this._fileRecipes = [];
     }
     this._recipeFileLoading = false;
     this.requestUpdate();
   }
 
-  /** Strip YAML frontmatter (--- … ---) from the start of a markdown file. */
+  /** Strip YAML frontmatter (--- … ---) or KCE HTML comment tag from the start of a file. */
   _stripFileFrontmatter(text) {
-    if (!text.startsWith('---\n')) return text;
-    const end = text.indexOf('\n---\n', 4);
-    if (end < 0) return text;
-    return text.slice(end + 5).trimStart();
+    // Strip YAML frontmatter
+    if (text.startsWith('---\n')) {
+      const end = text.indexOf('\n---\n', 4);
+      if (end >= 0) return text.slice(end + 5).trimStart();
+    }
+    // Strip KCE HTML comment header (<!-- KCE:... -->)
+    if (text.startsWith('<!--')) {
+      const end = text.indexOf('-->');
+      if (end >= 0) return text.slice(end + 3).trimStart();
+    }
+    return text;
+  }
+
+  /**
+   * Parse a stripped recipe file into a description and individual recipes.
+   * Returns { description: string, recipes: [{title, content}] }
+   *
+   * Description = the paragraph body under "## Cut profile".
+   * Recipes     = each "### N." block under "## Source recipes".
+   */
+  _parseRecipeFile(text) {
+    // Extract ## Cut profile description paragraph
+    const profileMatch = text.match(/## Cut profile\n+([\s\S]*?)(?=\n## |\n# |$)/);
+    const description = profileMatch ? profileMatch[1].trim() : '';
+
+    // Extract ## Source recipes section and split into individual recipes
+    const recipes = [];
+    const sourcesMatch = text.match(/## Source recipes\n+([\s\S]*)$/);
+    if (sourcesMatch) {
+      const blocks = sourcesMatch[1].split(/(?=^### )/m).filter(b => b.trim());
+      for (const block of blocks) {
+        const titleMatch = block.match(/^### (?:\d+\.\s+)?(.+?)(?:\n|$)/);
+        if (titleMatch) {
+          // Remove leading/trailing hr separators from the content
+          const content = block.replace(/^---+\s*\n?/m, '').replace(/\n?---+\s*$/m, '').trim();
+          recipes.push({ title: titleMatch[1].trim(), content });
+        }
+      }
+    }
+    return { description, recipes };
   }
 
   /**

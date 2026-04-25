@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 24 Apr 2026, 20:56 UTC
-Last Change: v0.6.1.24 - Hide Swedish in experimental MEATER path, fix parseInt bug for cut profile rendering
+Last Change: v0.6.1.25 - Fix recipe file viewer: strip KCE headers, parse recipes as clickable list, single recipe view
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "293"
+PANEL_VERSION = "294"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
