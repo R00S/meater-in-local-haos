@@ -37,7 +37,33 @@ Work done under wrong version `0.6.1.32` (should have been `0.6.2.01`):
 - [x] Safety legend restored in Doneness card (🟢 safe · 🟠 caution · 🔴 below guidelines)
 - [x] USDA minimum warning note added in Target Temperature card
 
-## v0.6.2.00 — Correct version bump (agent number 1→2, release counter reset)
+## v0.6.2.01 — Lovelace custom card (Option A)
+
+### Changes
+- `panel-class-template.js`: Added `setConfig()` and `getCardSize()` (Lovelace card interface)
+- `panel-class-template.js`: Registered stable `kitchen-cooking-card` element alias
+- `__init__.py`: Added `_async_register_lovelace_resource()` — auto-registers panel JS as a Lovelace module resource on startup, removes stale entries from previous versions; graceful fallback with log warning if Lovelace is in YAML mode
+- `manifest.json`, `__init__.py`, `const.py`: `0.6.2.00` → `0.6.2.01`
+- Generator run: PANEL_VERSION 304 → 305
+
+### Usage
+```yaml
+type: custom:kitchen-cooking-card
+```
+Drop into any dashboard view. Sidebar panel continues to work unchanged.
+The resource is auto-registered on HA startup — no manual Lovelace resource configuration needed.
+
+### Compatibility
+- Targets HA 2026.4.x (`hass.data["lovelace"].resources` API, stable since 2023.x)
+- Falls back gracefully if Lovelace is in YAML mode
+
+### Status
+- [x] `setConfig()` + `getCardSize()` added to template
+- [x] `kitchen-cooking-card` stable alias added to template
+- [x] `_async_register_lovelace_resource()` added to `__init__.py`
+- [x] Version bumped to 0.6.2.01 in all 4 locations
+- [x] Generator run successful (515 recipe files, PANEL_VERSION 305)
+
 
 ### Changes
 - `manifest.json`, `__init__.py`, `const.py`: `0.6.1.32` → `0.6.2.00`

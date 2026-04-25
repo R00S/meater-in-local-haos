@@ -8379,6 +8379,21 @@ class KitchenCookingPanel extends LitElement {
     this.requestUpdate();
   }
 
+  // ── Lovelace card interface ─────────────────────────────────────────────────
+  // These two methods make KitchenCookingPanel a valid Lovelace custom card
+  // so it can be used as:  type: custom:kitchen-cooking-card
+
+  setConfig(config) {
+    // No configuration keys required; accept anything.
+    this._config = config || {};
+  }
+
+  getCardSize() {
+    // Height hint for the Lovelace layout engine (1 unit ≈ 50 px).
+    return 10;
+  }
+  // ────────────────────────────────────────────────────────────────────────────
+
   static get styles() {
     return css`
       :host {
@@ -11016,4 +11031,11 @@ const PANEL_VERSION = "117";
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
 if (!customElements.get(VERSIONED_NAME)) {
   customElements.define(VERSIONED_NAME, KitchenCookingPanel);
+}
+
+// Also register as a stable (non-versioned) Lovelace card element.
+// This allows users to embed the panel in any dashboard view with:
+//   type: custom:kitchen-cooking-card
+if (!customElements.get('kitchen-cooking-card')) {
+  customElements.define('kitchen-cooking-card', KitchenCookingPanel);
 }

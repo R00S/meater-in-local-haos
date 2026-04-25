@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 25 Apr 2026, 23:27 CET
+ * AUTO-GENERATED: 25 Apr 2026, 23:40 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 25 Apr 2026, 23:27 CET
+// Last generated: 25 Apr 2026, 23:40 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -32727,6 +32727,21 @@ class KitchenCookingPanel extends LitElement {
     this.requestUpdate();
   }
 
+  // ── Lovelace card interface ─────────────────────────────────────────────────
+  // These two methods make KitchenCookingPanel a valid Lovelace custom card
+  // so it can be used as:  type: custom:kitchen-cooking-card
+
+  setConfig(config) {
+    // No configuration keys required; accept anything.
+    this._config = config || {};
+  }
+
+  getCardSize() {
+    // Height hint for the Lovelace layout engine (1 unit ≈ 50 px).
+    return 10;
+  }
+  // ────────────────────────────────────────────────────────────────────────────
+
   static get styles() {
     return css`
       :host {
@@ -35358,10 +35373,17 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "304";
+const PANEL_VERSION = "305";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
 if (!customElements.get(VERSIONED_NAME)) {
   customElements.define(VERSIONED_NAME, KitchenCookingPanel);
+}
+
+// Also register as a stable (non-versioned) Lovelace card element.
+// This allows users to embed the panel in any dashboard view with:
+//   type: custom:kitchen-cooking-card
+if (!customElements.get('kitchen-cooking-card')) {
+  customElements.define('kitchen-cooking-card', KitchenCookingPanel);
 }
