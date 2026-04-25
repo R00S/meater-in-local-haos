@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: haddock
+method: pan_fry
+name: Haddock Fillet × Pan Fry
+category: fish
+meat: white_fish
+cut_type: White Fish
+---
 # Haddock × Pan Fry — Recipe Temperature Research
 
 ## Tree position

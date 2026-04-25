@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ostrich_steak
+method: pan_sear
+name: Ostrich Steak × Pan Sear
+category: game
+meat: ostrich
+cut_type: Ostrich
+---
 # Ostrich Steak × Pan Sear — Recipe Temperature Research
 
 ## Tree position

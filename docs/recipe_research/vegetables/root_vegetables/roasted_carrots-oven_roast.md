@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: roasted_carrots
+method: oven_roast
+name: Roasted Carrots × Oven Roast
+category: vegetables
+meat: root_vegetables
+cut_type: Root Vegetables
+---
 # Roasted Carrots × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

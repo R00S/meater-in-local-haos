@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_cheek
+method: pan_fry
+name: Pork Cheek × Pan Fry
+category: pork
+meat: pig
+cut_type: Other / Offal
+---
 # Pork Cheek × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

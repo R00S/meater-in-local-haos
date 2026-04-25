@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ny_strip
+method: oven_roast
+name: New York Strip × Oven Roast
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Ny Strip × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: salmon_fillet
+method: air_fryer
+name: Salmon Fillet × Air Fryer
+category: fish
+meat: salmon
+cut_type: Salmon
+---
 # Salmon Fillet × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

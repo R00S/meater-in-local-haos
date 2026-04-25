@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: filet_mignon
+method: grill
+name: Filet Mignon / Tenderloin Steak × Grill
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Filet Mignon × Grill — Recipe Temperature Research
 
 ## Cut profile

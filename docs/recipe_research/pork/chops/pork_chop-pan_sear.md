@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_chop
+method: pan_sear
+name: Pork Chop × Pan Sear
+category: pork
+meat: pig
+cut_type: Chops & Tenderloin
+---
 # Pork Chop × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

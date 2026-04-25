@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: corn_on_cob
+method: air_fryer
+name: Corn on the Cob × Air Fryer
+category: vegetables
+meat: corn
+cut_type: Corn
+---
 # Corn On Cob × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

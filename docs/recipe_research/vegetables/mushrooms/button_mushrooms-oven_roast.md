@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: button_mushrooms
+method: oven_roast
+name: Button/Cremini Mushrooms × Oven Roast
+category: vegetables
+meat: mushrooms
+cut_type: Mushrooms
+---
 # Button Mushrooms × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

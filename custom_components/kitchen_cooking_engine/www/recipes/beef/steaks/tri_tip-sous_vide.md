@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: tri_tip
+method: sous_vide
+name: Tri-Tip × Sous Vide
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Tri Tip × Sous Vide — Recipe Temperature Research
 
 ## Cut profile

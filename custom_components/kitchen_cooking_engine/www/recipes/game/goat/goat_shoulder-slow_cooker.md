@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: goat_shoulder
+method: slow_cooker
+name: Goat Shoulder × Slow Cooker
+category: game
+meat: goat
+cut_type: Goat
+---
 # Goat Shoulder × Slow Cooker — Recipe Temperature Research
 
 ## Cut profile

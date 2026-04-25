@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: lamb_kofta
+method: grill
+name: Kofta / Kebab × Grill
+category: lamb
+meat: lamb
+cut_type: Ground
+---
 # Lamb Kofta × Grill — Recipe Temperature Research
 
 ## Tree position

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ground_turkey
+method: pan_fry
+name: Ground Turkey × Pan Fry
+category: poultry
+meat: ground_poultry
+cut_type: Ground
+---
 # Ground Turkey × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

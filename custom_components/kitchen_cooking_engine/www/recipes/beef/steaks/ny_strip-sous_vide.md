@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ny_strip
+method: sous_vide
+name: New York Strip × Sous Vide
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Ny Strip × Sous Vide — Recipe Temperature Research
 
 ## Cut profile

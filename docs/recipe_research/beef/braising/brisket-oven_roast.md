@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: brisket
+method: oven_roast
+name: Brisket × Oven Roast
+category: beef
+meat: cow
+cut_type: Braising Cuts
+---
 # Beef Brisket × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ground_chicken
+method: pan_fry
+name: Ground Chicken × Pan Fry
+category: poultry
+meat: ground_poultry
+cut_type: Ground
+---
 # Ground Chicken × Pan Fry — Recipe Temperature Research
 
 ## Tree position

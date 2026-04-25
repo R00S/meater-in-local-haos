@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: spaghetti_squash
+method: oven_roast
+name: Spaghetti Squash × Oven Roast
+category: vegetables
+meat: squash
+cut_type: Squash
+---
 # Spaghetti Squash × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

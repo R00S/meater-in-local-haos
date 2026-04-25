@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_shoulder
+method: slow_cooker
+name: Pork Shoulder / Boston Butt × Slow Cooker
+category: pork
+meat: pig
+cut_type: Roasts
+---
 # Pork Shoulder × Slow Cooker — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: chicken_thigh
+method: grill
+name: Chicken Thigh × Grill
+category: poultry
+meat: chicken
+cut_type: Dark Meat
+---
 # Chicken Thigh × Grill — Recipe Temperature Research
 
 ## Tree position

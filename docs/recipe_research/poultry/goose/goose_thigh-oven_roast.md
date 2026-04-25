@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: goose_thigh
+method: oven_roast
+name: Goose Thigh × Oven Roast
+category: poultry
+meat: goose
+cut_type: Goose
+---
 # Goose Thigh × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

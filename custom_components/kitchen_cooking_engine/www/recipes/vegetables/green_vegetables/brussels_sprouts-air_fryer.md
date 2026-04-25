@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: brussels_sprouts
+method: air_fryer
+name: Brussels Sprouts × Air Fryer
+category: vegetables
+meat: green_vegetables
+cut_type: Green Vegetables
+---
 # Brussels Sprouts × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

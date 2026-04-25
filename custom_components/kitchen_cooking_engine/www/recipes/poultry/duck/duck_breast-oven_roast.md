@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: duck_breast
+method: oven_roast
+name: Duck Breast × Oven Roast
+category: poultry
+meat: duck
+cut_type: Duck
+---
 # Duck Breast × Oven Roast — Recipe Temperature Research
 
 ## Tree position

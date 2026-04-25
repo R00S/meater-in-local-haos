@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: chicken_thigh
+method: air_fryer
+name: Chicken Thigh × Air Fryer
+category: poultry
+meat: chicken
+cut_type: Dark Meat
+---
 # Chicken Thigh × Air Fryer — Recipe Temperature Research
 
 ## Tree position

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: zucchini
+method: grill
+name: Zucchini × Grill
+category: vegetables
+meat: squash
+cut_type: Squash
+---
 # Zucchini × Grill — Recipe Temperature Research
 
 ## Cut profile

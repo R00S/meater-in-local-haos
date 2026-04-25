@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: goose_leg
+method: oven_roast
+name: Goose Leg × Oven Roast
+category: poultry
+meat: goose
+cut_type: Goose
+---
 # Goose Leg × Oven Roast — Recipe Temperature Research
 
 ## Tree position

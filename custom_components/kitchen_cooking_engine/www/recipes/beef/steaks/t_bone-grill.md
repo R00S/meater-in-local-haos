@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: t_bone
+method: grill
+name: T-Bone / Porterhouse × Grill
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # T-Bone Steak × Grill — Recipe Temperature Research
 
 ## Cut profile

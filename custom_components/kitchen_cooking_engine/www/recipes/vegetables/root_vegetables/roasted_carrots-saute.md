@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: roasted_carrots
+method: saute
+name: Roasted Carrots × Sauté
+category: vegetables
+meat: root_vegetables
+cut_type: Root Vegetables
+---
 # Roasted Carrots × Saute — Recipe Temperature Research
 
 ## Cut profile

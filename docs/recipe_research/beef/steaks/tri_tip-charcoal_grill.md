@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: tri_tip
+method: charcoal_grill
+name: Tri-Tip × Charcoal Grill
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Tri Tip × Charcoal Grill — Recipe Temperature Research
 
 ## Cut profile

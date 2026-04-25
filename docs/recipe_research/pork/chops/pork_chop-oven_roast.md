@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_chop
+method: oven_roast
+name: Pork Chop × Oven Roast
+category: pork
+meat: pig
+cut_type: Chops & Tenderloin
+---
 # Pork Chop × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: hanger_steak
+method: pan_fry
+name: Hanger Steak × Pan Fry
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Hanger Steak × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: mahi_mahi
+method: pan_sear
+name: Mahi-Mahi × Pan Sear
+category: fish
+meat: white_fish
+cut_type: White Fish
+---
 # Mahi-Mahi × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

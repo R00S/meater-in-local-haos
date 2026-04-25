@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: mutton_chop
+method: grill
+name: Mutton Chop × Grill
+category: game
+meat: mutton
+cut_type: Mutton
+---
 # Mutton Chop × Grill — Recipe Temperature Research
 
 ## Tree position

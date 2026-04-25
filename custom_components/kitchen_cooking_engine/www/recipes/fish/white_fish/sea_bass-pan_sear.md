@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: sea_bass
+method: pan_sear
+name: Sea Bass × Pan Sear
+category: fish
+meat: white_fish
+cut_type: White Fish
+---
 # Sea Bass × Pan Sear — Recipe Temperature Research
 
 ## Tree position

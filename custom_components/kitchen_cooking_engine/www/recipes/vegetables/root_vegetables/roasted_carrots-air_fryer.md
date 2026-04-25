@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: roasted_carrots
+method: air_fryer
+name: Roasted Carrots × Air Fryer
+category: vegetables
+meat: root_vegetables
+cut_type: Root Vegetables
+---
 # Roasted Carrots × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

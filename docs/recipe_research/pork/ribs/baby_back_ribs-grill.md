@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: baby_back_ribs
+method: grill
+name: Baby Back Ribs × Grill
+category: pork
+meat: pig
+cut_type: Ribs
+---
 # Baby Back Ribs × Grill — Recipe Temperature Research
 
 ## Cut profile

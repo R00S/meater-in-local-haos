@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: salmon_fillet
+method: grill
+name: Salmon Fillet × Grill
+category: fish
+meat: salmon
+cut_type: Salmon
+---
 # Salmon Fillet × Grill — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: eggplant
+method: air_fryer
+name: Eggplant / Aubergine × Air Fryer
+category: vegetables
+meat: eggplant
+cut_type: Eggplant
+---
 # Eggplant × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

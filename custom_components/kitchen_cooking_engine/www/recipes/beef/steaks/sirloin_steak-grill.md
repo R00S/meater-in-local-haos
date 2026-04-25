@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: sirloin_steak
+method: grill
+name: Sirloin Steak × Grill
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Sirloin Steak × Grill — Recipe Temperature Research
 
 ## Cut profile

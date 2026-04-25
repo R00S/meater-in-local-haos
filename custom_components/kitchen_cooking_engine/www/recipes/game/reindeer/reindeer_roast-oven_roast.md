@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: reindeer_roast
+method: oven_roast
+name: Reindeer Roast × Oven Roast
+category: game
+meat: reindeer
+cut_type: Reindeer
+---
 # Reindeer Roast × Oven Roast — Recipe Temperature Research
 
 ## Tree position

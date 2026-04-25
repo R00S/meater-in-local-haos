@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: beef_burger
+method: grill
+name: Beef Burger / Ground Beef Patty × Grill
+category: beef
+meat: cow
+cut_type: Ground
+---
 # Beef Burger × Grill — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_tenderloin
+method: air_fryer
+name: Pork Tenderloin × Air Fryer
+category: pork
+meat: pig
+cut_type: Chops & Tenderloin
+---
 # Pork Tenderloin × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

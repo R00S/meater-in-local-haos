@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: cod_fillet
+method: pan_fry
+name: Cod Fillet × Pan Fry
+category: fish
+meat: white_fish
+cut_type: White Fish
+---
 # Cod Fillet × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

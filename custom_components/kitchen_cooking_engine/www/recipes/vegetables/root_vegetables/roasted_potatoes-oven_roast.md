@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: roasted_potatoes
+method: oven_roast
+name: Roasted Potatoes × Oven Roast
+category: vegetables
+meat: root_vegetables
+cut_type: Root Vegetables
+---
 # Roasted Potatoes × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

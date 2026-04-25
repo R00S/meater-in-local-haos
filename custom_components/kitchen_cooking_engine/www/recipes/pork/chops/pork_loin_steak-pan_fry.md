@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_loin_steak
+method: pan_fry
+name: Pork Loin Steak × Pan Fry
+category: pork
+meat: pig
+cut_type: Chops & Tenderloin
+---
 # Pork Loin Steak × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

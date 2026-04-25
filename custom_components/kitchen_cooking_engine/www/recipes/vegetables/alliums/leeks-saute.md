@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: leeks
+method: saute
+name: Leeks × Sauté
+category: vegetables
+meat: alliums
+cut_type: Alliums
+---
 # Leeks × Saute — Recipe Temperature Research
 
 ## Cut profile

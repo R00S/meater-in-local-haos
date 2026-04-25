@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: roasted_onion
+method: oven_roast
+name: Roasted Onion × Oven Roast
+category: vegetables
+meat: alliums
+cut_type: Alliums
+---
 # Roasted Onion × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

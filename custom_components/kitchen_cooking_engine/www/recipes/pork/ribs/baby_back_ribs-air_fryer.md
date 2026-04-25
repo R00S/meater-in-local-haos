@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: baby_back_ribs
+method: air_fryer
+name: Baby Back Ribs × Air Fryer
+category: pork
+meat: pig
+cut_type: Ribs
+---
 # Baby Back Ribs × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

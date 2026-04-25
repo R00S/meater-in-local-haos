@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: venison_steak
+method: pan_sear
+name: Venison Steak × Pan Sear
+category: game
+meat: venison
+cut_type: Venison
+---
 # Venison Steak × Pan Sear — Recipe Temperature Research
 
 ## Tree position

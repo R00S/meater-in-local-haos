@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: portobello_mushrooms
+method: oven_roast
+name: Portobello Mushrooms × Oven Roast
+category: vegetables
+meat: mushrooms
+cut_type: Mushrooms
+---
 # Portobello Mushrooms × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

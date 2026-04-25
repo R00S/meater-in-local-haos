@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: picanha
+method: grill
+name: Picanha × Grill
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Picanha × Grill — Recipe Temperature Research
 
 ## Cut profile

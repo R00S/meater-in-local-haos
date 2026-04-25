@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_belly
+method: sous_vide
+name: Pork Belly × Sous Vide
+category: pork
+meat: pig
+cut_type: Roasts
+---
 # Pork Belly × Sous Vide — Recipe Temperature Research
 
 ## Tree position

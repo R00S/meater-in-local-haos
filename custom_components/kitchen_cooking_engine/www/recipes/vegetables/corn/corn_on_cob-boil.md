@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: corn_on_cob
+method: boil
+name: Corn on the Cob × Boil
+category: vegetables
+meat: corn
+cut_type: Corn
+---
 # Corn On Cob × Boil — Recipe Temperature Research
 
 ## Cut profile

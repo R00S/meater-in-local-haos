@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: beef_shank
+method: slow_cooker
+name: Beef Shank / Osso Buco × Slow Cooker
+category: beef
+meat: cow
+cut_type: Braising Cuts
+---
 # Beef Shank × Slow Cooker — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: roasted_parsnips
+method: oven_roast
+name: Roasted Parsnips × Oven Roast
+category: vegetables
+meat: root_vegetables
+cut_type: Root Vegetables
+---
 # Roasted Parsnips × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: caramelized_onions
+method: saute
+name: Caramelized Onions × Sauté
+category: vegetables
+meat: alliums
+cut_type: Alliums
+---
 # Caramelized Onions × Saute — Recipe Temperature Research
 
 ## Cut profile

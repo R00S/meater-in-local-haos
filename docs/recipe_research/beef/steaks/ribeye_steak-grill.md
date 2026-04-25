@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ribeye_steak
+method: grill
+name: Ribeye Steak × Grill
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Ribeye Steak × Grill — Recipe Temperature Research
 
 ## Cut profile

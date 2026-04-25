@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: eggplant
+method: oven_roast
+name: Eggplant / Aubergine × Oven Roast
+category: vegetables
+meat: eggplant
+cut_type: Eggplant
+---
 # Eggplant × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

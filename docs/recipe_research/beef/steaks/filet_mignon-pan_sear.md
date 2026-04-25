@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: filet_mignon
+method: pan_sear
+name: Filet Mignon / Tenderloin Steak × Pan Sear
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Filet Mignon × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: flat_iron
+method: oven_roast
+name: Flat Iron Steak × Oven Roast
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Flat Iron Steak × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

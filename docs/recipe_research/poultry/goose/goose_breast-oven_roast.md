@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: goose_breast
+method: oven_roast
+name: Goose Breast × Oven Roast
+category: poultry
+meat: goose
+cut_type: Goose
+---
 # Goose Breast × Oven Roast — Recipe Temperature Research
 
 ## Tree position

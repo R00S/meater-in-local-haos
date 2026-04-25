@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: eggplant
+method: grill
+name: Eggplant / Aubergine × Grill
+category: vegetables
+meat: eggplant
+cut_type: Eggplant
+---
 # Eggplant × Grill — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: flat_iron
+method: charcoal_grill
+name: Flat Iron Steak × Charcoal Grill
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Flat Iron Steak × Charcoal Grill — Recipe Temperature Research
 
 ## Cut profile

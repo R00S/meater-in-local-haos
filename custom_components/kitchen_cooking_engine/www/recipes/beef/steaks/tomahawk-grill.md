@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: tomahawk
+method: grill
+name: Tomahawk Steak × Grill
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Tomahawk × Grill — Recipe Temperature Research
 
 ## Cut profile

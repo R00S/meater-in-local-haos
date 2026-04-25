@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: baked_potato
+method: oven_bake
+name: Baked Potato × Oven Bake
+category: vegetables
+meat: root_vegetables
+cut_type: Root Vegetables
+---
 # Baked Potato × Oven Bake — Recipe Temperature Research
 
 ## Cut profile

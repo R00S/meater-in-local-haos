@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: asparagus
+method: steam
+name: Asparagus × Steam
+category: vegetables
+meat: green_vegetables
+cut_type: Green Vegetables
+---
 # Asparagus × Steam — Recipe Temperature Research
 
 ## Cut profile

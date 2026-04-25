@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: cauliflower
+method: saute
+name: Cauliflower × Sauté
+category: vegetables
+meat: cruciferous
+cut_type: Cruciferous
+---
 # Cauliflower × Saute — Recipe Temperature Research
 
 ## Cut profile

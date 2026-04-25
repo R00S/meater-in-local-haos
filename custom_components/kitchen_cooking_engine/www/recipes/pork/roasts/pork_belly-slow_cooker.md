@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_belly
+method: slow_cooker
+name: Pork Belly × Slow Cooker
+category: pork
+meat: pig
+cut_type: Roasts
+---
 # Pork Belly × Slow Cooker — Recipe Temperature Research
 
 ## Cut profile

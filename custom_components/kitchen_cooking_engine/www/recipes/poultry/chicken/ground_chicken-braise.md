@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ground_chicken
+method: braise
+name: Ground Chicken × Braise
+category: poultry
+meat: ground_poultry
+cut_type: Ground
+---
 # Ground Chicken × Braise — Recipe Temperature Research
 
 ## Tree position

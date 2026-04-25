@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: mutton_shoulder
+method: oven_roast
+name: Mutton Shoulder × Oven Roast
+category: game
+meat: mutton
+cut_type: Mutton
+---
 # Mutton Shoulder × Oven Roast — Recipe Temperature Research
 
 ## Tree position

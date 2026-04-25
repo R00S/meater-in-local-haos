@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: spaghetti_squash
+method: oven_bake
+name: Spaghetti Squash × Oven Bake
+category: vegetables
+meat: squash
+cut_type: Squash
+---
 # Spaghetti Squash × Oven Bake — Recipe Temperature Research
 
 ## Cut profile

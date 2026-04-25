@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_belly
+method: pan_fry
+name: Pork Belly × Pan Fry
+category: pork
+meat: pig
+cut_type: Roasts
+---
 # Pork Belly × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

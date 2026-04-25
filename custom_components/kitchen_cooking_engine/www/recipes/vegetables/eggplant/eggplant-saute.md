@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: eggplant
+method: saute
+name: Eggplant / Aubergine × Sauté
+category: vegetables
+meat: eggplant
+cut_type: Eggplant
+---
 # Eggplant × Saute — Recipe Temperature Research
 
 ## Cut profile

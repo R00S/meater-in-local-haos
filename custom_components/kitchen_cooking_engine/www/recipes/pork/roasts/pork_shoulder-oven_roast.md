@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_shoulder
+method: oven_roast
+name: Pork Shoulder / Boston Butt × Oven Roast
+category: pork
+meat: pig
+cut_type: Roasts
+---
 # Pork Shoulder × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

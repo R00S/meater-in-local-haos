@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: bell_peppers
+method: oven_roast
+name: Bell Peppers × Oven Roast
+category: vegetables
+meat: peppers
+cut_type: Peppers
+---
 # Bell Peppers × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: asparagus
+method: oven_roast
+name: Asparagus × Oven Roast
+category: vegetables
+meat: green_vegetables
+cut_type: Green Vegetables
+---
 # Asparagus × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

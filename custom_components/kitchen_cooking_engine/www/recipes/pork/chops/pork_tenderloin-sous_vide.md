@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_tenderloin
+method: sous_vide
+name: Pork Tenderloin × Sous Vide
+category: pork
+meat: pig
+cut_type: Chops & Tenderloin
+---
 # Pork Tenderloin × Sous Vide — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: sirloin_steak
+method: air_fryer
+name: Sirloin Steak × Air Fryer
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Sirloin Steak × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: broccoli
+method: oven_roast
+name: Broccoli × Oven Roast
+category: vegetables
+meat: green_vegetables
+cut_type: Green Vegetables
+---
 # Broccoli × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ground_pork
+method: braise
+name: Ground Pork × Braise
+category: pork
+meat: pig
+cut_type: Ground
+---
 # Ground Pork × Braise — Recipe Temperature Research
 
 ## Cut profile

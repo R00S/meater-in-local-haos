@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: secreto
+method: pan_sear
+name: Secreto (Ibérico Pork) × Pan Sear
+category: pork
+meat: pig
+cut_type: Chops & Tenderloin
+---
 # Secreto × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

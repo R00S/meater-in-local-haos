@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: bison_burger
+method: grill
+name: Bison Burger × Grill
+category: game
+meat: bison
+cut_type: Bison
+---
 # Bison Burger × Grill — Recipe Temperature Research
 
 ## Tree position

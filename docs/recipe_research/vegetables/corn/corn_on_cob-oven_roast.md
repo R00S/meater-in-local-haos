@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: corn_on_cob
+method: oven_roast
+name: Corn on the Cob × Oven Roast
+category: vegetables
+meat: corn
+cut_type: Corn
+---
 # Corn On Cob × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

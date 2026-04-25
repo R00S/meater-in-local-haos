@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: roasted_sweet_potato
+method: oven_roast
+name: Roasted Sweet Potato × Oven Roast
+category: vegetables
+meat: root_vegetables
+cut_type: Root Vegetables
+---
 # Roasted Sweet Potato × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

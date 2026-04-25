@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: filet_mignon
+method: sous_vide
+name: Filet Mignon / Tenderloin Steak × Sous Vide
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Filet Mignon × Sous Vide — Recipe Temperature Research
 
 ## Cut profile

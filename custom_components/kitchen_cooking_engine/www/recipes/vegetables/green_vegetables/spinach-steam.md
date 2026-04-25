@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: spinach
+method: steam
+name: Spinach × Steam
+category: vegetables
+meat: green_vegetables
+cut_type: Green Vegetables
+---
 # Spinach × Steam — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ribeye_steak
+method: oven_roast
+name: Ribeye Steak × Oven Roast
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Ribeye Steak × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ny_strip
+method: grill
+name: New York Strip × Grill
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Ny Strip × Grill — Recipe Temperature Research
 
 ## Cut profile

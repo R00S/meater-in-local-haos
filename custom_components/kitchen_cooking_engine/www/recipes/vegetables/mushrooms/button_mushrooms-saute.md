@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: button_mushrooms
+method: saute
+name: Button/Cremini Mushrooms × Sauté
+category: vegetables
+meat: mushrooms
+cut_type: Mushrooms
+---
 # Button Mushrooms × Saute — Recipe Temperature Research
 
 ## Cut profile

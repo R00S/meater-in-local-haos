@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: button_mushrooms
+method: air_fryer
+name: Button/Cremini Mushrooms × Air Fryer
+category: vegetables
+meat: mushrooms
+cut_type: Mushrooms
+---
 # Button Mushrooms × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

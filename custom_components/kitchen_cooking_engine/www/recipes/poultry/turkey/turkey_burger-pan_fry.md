@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: turkey_burger
+method: pan_fry
+name: Turkey Burger × Pan Fry
+category: poultry
+meat: ground_poultry
+cut_type: Ground
+---
 # Turkey Burger × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

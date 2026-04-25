@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: sirloin_steak
+method: oven_roast
+name: Sirloin Steak × Oven Roast
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Sirloin Steak × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

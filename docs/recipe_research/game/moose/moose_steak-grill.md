@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: moose_steak
+method: grill
+name: Moose Steak × Grill
+category: game
+meat: moose
+cut_type: Moose
+---
 # Moose Steak × Grill — Recipe Temperature Research
 
 ## Tree position

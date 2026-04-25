@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ny_strip
+method: charcoal_grill
+name: New York Strip × Charcoal Grill
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Ny Strip × Charcoal Grill — Recipe Temperature Research
 
 ## Cut profile

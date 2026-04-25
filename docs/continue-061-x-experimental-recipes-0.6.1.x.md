@@ -253,3 +253,103 @@ International cuts: 190 (was 187)
 ```
 
 Verification: every `cut_slug` produced by `build_recipe_index()` now has a corresponding `MeatCut.name` in `MEAT_CATEGORIES`.
+
+---
+
+### 2026-04-25 — Two-tier recipe files: full frontmatter + inline viewer (v0.6.1.19)
+
+**Task (new requirement):** Formalise the two-tier recipe file structure and make
+all 464 files self-contained, with every file marked by type and tree position in
+YAML frontmatter. Update the GUI to display cut/method files inline within the
+panel (no new-tab links). Lay groundwork for a future dynamic tree built from
+files alone.
+
+#### Two file types
+
+| Type | Filename | Purpose | Shown in GUI |
+|------|----------|---------|--------------|
+| `cut` | `{slug}.md` | General cut profile; carries full cooking spec | When user selects a cut |
+| `cut_method` | `{slug}-{method}.md` | Method-specific research | When user clicks a method button |
+
+#### Cut file frontmatter (full spec — future-proof)
+
+Every `{slug}.md` now carries:
+```yaml
+---
+type: cut
+slug: ribeye_steak
+name: Ribeye Steak
+category: beef
+meat: cow
+cut_type: Steaks
+usda_safe_c: 63
+usda_safe_f: 145
+recommended_doneness: medium_rare
+methods:
+  - pan_sear
+  - grill
+  - …
+doneness:
+  - {name: rare,        target_c: 49, target_f: 120, min_c: 46, max_c: 52, usda_safe: false}
+  - {name: medium_rare, target_c: 54, …, recommended: true}
+  - …
+---
+```
+This makes the file self-contained: a future tree builder reads only the cut files
+and cooking_data.py is no longer required to add a new cut to the GUI.
+
+#### Cut-method file frontmatter (minimal — tree position only)
+
+Every `{slug}-{method}.md` carries:
+```yaml
+---
+type: cut_method
+slug: ribeye_steak
+method: grill
+name: Ribeye Steak × Grill
+category: beef
+meat: cow
+cut_type: Steaks
+---
+```
+
+#### Future dynamic tree (NOT implemented now)
+
+When the time comes: scan `docs/recipe_research/**/{slug}.md` → read frontmatter
+→ build MEAT_CATEGORIES in memory → render GUI tree. Adding a new cut requires
+only: (a) a new `{slug}.md` with complete frontmatter, and (b) optionally one or
+more `{slug}-{method}.md` files. No changes to `cooking_data.py` needed.
+
+#### GUI changes
+
+**`www/panel-class-template.js`**
+- `_renderCutProfileCard()` — "Cut Overview" and method buttons now toggle an
+  inline markdown viewer instead of opening new browser tabs.
+- `_openRecipeFile(url)` — fetches the file via `fetch()` and stores content in
+  `_recipeFileContent`. Clicking the active button closes the viewer.
+- `_stripFileFrontmatter(text)` — strips `--- … ---` block before rendering.
+- `_mdToHtml(md)` — markdown-to-HTML converter (headings, bold, italic, code,
+  links, lists, hr, paragraphs). Renders inline via `.innerHTML` property binding.
+- Three new reactive properties: `_recipeFileContent`, `_recipeFileUrl`,
+  `_recipeFileLoading`.
+- `_selectCut()` now clears the recipe viewer when the cut changes.
+
+**`generate_frontend_data.py`** — `build_recipe_index()` now handles plain cut
+files (no hyphen in stem): adds `"overview"` key to RECIPE_INDEX and reads the
+cut file as the authoritative profile source (preferred over method-file fallback).
+
+#### Files changed
+
+- 133 cut files: frontmatter updated with full cooking spec
+- 331 method files: minimal frontmatter unchanged (type, slug, method, tree pos)
+- `www/panel-class-template.js`: inline viewer + helper methods
+- `generate_frontend_data.py`: handle cut files in build_recipe_index()
+- `manifest.json`, `__init__.py`, `const.py`: 0.6.1.18 → 0.6.1.19
+
+#### Generator output
+```
+Recipe index: 464 files across 133 cuts
+  International cut → recipe coverage: 137 matched, 53 unmatched
+  Copied 464 recipe files → www/recipes/
+Updated PANEL_VERSION in JS: 117 -> 281
+```

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: flat_iron
+method: sous_vide
+name: Flat Iron Steak × Sous Vide
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Flat Iron Steak × Sous Vide — Recipe Temperature Research
 
 ## Cut profile

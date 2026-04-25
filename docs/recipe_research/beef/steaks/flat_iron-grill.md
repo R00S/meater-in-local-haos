@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: flat_iron
+method: grill
+name: Flat Iron Steak × Grill
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Flat Iron Steak × Grill (Gas/Electric) — Recipe Temperature Research
 
 ## Cut profile

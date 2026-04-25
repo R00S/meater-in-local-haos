@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: cauliflower
+method: whole_roast
+name: Cauliflower × Whole Roast
+category: vegetables
+meat: cruciferous
+cut_type: Cruciferous
+---
 # Cauliflower × Whole Roast — Recipe Temperature Research
 
 ## Cut profile

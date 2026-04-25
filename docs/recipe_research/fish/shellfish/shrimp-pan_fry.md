@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: shrimp
+method: pan_fry
+name: Shrimp × Pan Fry
+category: fish
+meat: shellfish
+cut_type: Shellfish
+---
 # Shrimp × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

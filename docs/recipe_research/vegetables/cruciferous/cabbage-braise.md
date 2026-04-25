@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: cabbage
+method: braise
+name: Cabbage × Braise
+category: vegetables
+meat: cruciferous
+cut_type: Cruciferous
+---
 # Cabbage × Braise — Recipe Temperature Research
 
 ## Cut profile

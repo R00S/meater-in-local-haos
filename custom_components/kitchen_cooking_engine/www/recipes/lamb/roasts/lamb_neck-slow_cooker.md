@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: lamb_neck
+method: slow_cooker
+name: Lamb Neck × Slow Cooker
+category: lamb
+meat: lamb
+cut_type: Roasts
+---
 # Lamb Neck × Slow Cooker — Recipe Temperature Research
 
 ## Tree position

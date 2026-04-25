@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_liver
+method: pan_fry
+name: Pork Liver × Pan Fry
+category: pork
+meat: pig
+cut_type: Other / Offal
+---
 # Pork Liver × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

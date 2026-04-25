@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: tomahawk
+method: sous_vide
+name: Tomahawk Steak × Sous Vide
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Tomahawk × Sous Vide — Recipe Temperature Research
 
 ## Cut profile

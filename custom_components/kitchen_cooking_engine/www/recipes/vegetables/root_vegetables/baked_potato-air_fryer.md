@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: baked_potato
+method: air_fryer
+name: Baked Potato × Air Fryer
+category: vegetables
+meat: root_vegetables
+cut_type: Root Vegetables
+---
 # Baked Potato × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

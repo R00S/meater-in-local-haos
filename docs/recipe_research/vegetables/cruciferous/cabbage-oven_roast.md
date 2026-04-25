@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: cabbage
+method: oven_roast
+name: Cabbage × Oven Roast
+category: vegetables
+meat: cruciferous
+cut_type: Cruciferous
+---
 # Cabbage × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

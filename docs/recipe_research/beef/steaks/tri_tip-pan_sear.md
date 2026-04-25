@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: tri_tip
+method: pan_sear
+name: Tri-Tip × Pan Sear
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Tri Tip × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

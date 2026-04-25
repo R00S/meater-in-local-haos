@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: buffalo_burger
+method: grill
+name: Burger × Grill
+category: game
+meat: buffalo
+cut_type: Buffalo
+---
 # Buffalo Burger × Grill — Recipe Temperature Research
 
 ## Tree position

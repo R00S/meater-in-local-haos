@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: broccoli
+method: steam
+name: Broccoli × Steam
+category: vegetables
+meat: green_vegetables
+cut_type: Green Vegetables
+---
 # Broccoli × Steam — Recipe Temperature Research
 
 ## Cut profile

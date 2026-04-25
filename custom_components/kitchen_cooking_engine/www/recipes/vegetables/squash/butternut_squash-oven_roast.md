@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: butternut_squash
+method: oven_roast
+name: Butternut Squash × Oven Roast
+category: vegetables
+meat: squash
+cut_type: Squash
+---
 # Butternut Squash × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

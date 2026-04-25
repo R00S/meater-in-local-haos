@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: t_bone
+method: air_fryer
+name: T-Bone / Porterhouse × Air Fryer
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # T-Bone Steak × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

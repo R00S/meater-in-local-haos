@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: bison_burger
+method: pan_fry
+name: Bison Burger × Pan Fry
+category: game
+meat: bison
+cut_type: Bison
+---
 # Bison Burger × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

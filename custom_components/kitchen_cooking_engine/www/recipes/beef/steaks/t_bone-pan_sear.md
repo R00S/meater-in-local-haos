@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: t_bone
+method: pan_sear
+name: T-Bone / Porterhouse × Pan Sear
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # T-Bone Steak × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

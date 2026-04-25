@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: chicken_burger
+method: pan_fry
+name: Chicken Burger × Pan Fry
+category: poultry
+meat: ground_poultry
+cut_type: Ground
+---
 # Chicken Burger × Pan Fry — Recipe Temperature Research
 
 ## Tree position

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: turkey_burger
+method: grill
+name: Turkey Burger × Grill
+category: poultry
+meat: ground_poultry
+cut_type: Ground
+---
 # Turkey Burger × Grill — Recipe Temperature Research
 
 ## Cut profile

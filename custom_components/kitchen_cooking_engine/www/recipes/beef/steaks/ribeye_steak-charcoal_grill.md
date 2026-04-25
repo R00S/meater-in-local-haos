@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ribeye_steak
+method: charcoal_grill
+name: Ribeye Steak × Charcoal Grill
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Ribeye Steak × Charcoal Grill — Recipe Temperature Research
 
 ## Cut profile

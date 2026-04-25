@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ground_beef
+method: pan_fry
+name: Ground Beef × Pan Fry
+category: beef
+meat: cow
+cut_type: Ground
+---
 # Ground Beef × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

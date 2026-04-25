@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: roasted_sweet_potato
+method: air_fryer
+name: Roasted Sweet Potato × Air Fryer
+category: vegetables
+meat: root_vegetables
+cut_type: Root Vegetables
+---
 # Roasted Sweet Potato × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

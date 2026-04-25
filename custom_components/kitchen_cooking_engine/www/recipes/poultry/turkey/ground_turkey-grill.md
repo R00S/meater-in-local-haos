@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ground_turkey
+method: grill
+name: Ground Turkey × Grill
+category: poultry
+meat: ground_poultry
+cut_type: Ground
+---
 # Ground Turkey × Grill — Recipe Temperature Research
 
 ## Tree position

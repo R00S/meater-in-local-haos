@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: skirt_steak
+method: pan_fry
+name: Skirt Steak × Pan Fry
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Skirt Steak × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: tuna_steak
+method: pan_sear
+name: Tuna Steak × Pan Sear
+category: fish
+meat: tuna
+cut_type: Tuna
+---
 # Tuna Steak × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

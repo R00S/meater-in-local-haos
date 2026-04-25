@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: halibut_fillet
+method: pan_sear
+name: Halibut Fillet × Pan Sear
+category: fish
+meat: white_fish
+cut_type: White Fish
+---
 # Halibut Fillet × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

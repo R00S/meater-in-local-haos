@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: buffalo_steak
+method: grill
+name: Buffalo Steak × Grill
+category: game
+meat: buffalo
+cut_type: Buffalo
+---
 # Buffalo Steak × Grill — Recipe Temperature Research
 
 ## Tree position

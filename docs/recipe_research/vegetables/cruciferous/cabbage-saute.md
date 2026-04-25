@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: cabbage
+method: saute
+name: Cabbage × Sauté
+category: vegetables
+meat: cruciferous
+cut_type: Cruciferous
+---
 # Cabbage × Saute — Recipe Temperature Research
 
 ## Cut profile

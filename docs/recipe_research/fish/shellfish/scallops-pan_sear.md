@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: scallops
+method: pan_sear
+name: Scallops × Pan Sear
+category: fish
+meat: shellfish
+cut_type: Shellfish
+---
 # Scallops × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_chop
+method: pan_fry
+name: Pork Chop × Pan Fry
+category: pork
+meat: pig
+cut_type: Chops & Tenderloin
+---
 # Pork Chop × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

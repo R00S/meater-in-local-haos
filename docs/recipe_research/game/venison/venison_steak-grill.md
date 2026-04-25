@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: venison_steak
+method: grill
+name: Venison Steak × Grill
+category: game
+meat: venison
+cut_type: Venison
+---
 # Venison Steak × Grill — Recipe Temperature Research
 
 ## Tree position

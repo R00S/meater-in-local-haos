@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ribeye_steak
+method: air_fryer
+name: Ribeye Steak × Air Fryer
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Ribeye Steak × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

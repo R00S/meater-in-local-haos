@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: acorn_squash
+method: oven_roast
+name: Acorn Squash × Oven Roast
+category: vegetables
+meat: squash
+cut_type: Squash
+---
 # Acorn Squash × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

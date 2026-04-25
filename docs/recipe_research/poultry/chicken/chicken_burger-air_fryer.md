@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: chicken_burger
+method: air_fryer
+name: Chicken Burger × Air Fryer
+category: poultry
+meat: ground_poultry
+cut_type: Ground
+---
 # Chicken Burger × Air Fryer — Recipe Temperature Research
 
 ## Tree position

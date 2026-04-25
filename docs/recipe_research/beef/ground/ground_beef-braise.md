@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ground_beef
+method: braise
+name: Ground Beef × Braise
+category: beef
+meat: cow
+cut_type: Ground
+---
 # Ground Beef × Braise — Recipe Temperature Research
 
 ## Cut profile

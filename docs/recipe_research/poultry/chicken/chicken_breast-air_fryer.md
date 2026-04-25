@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: chicken_breast
+method: air_fryer
+name: Chicken Breast × Air Fryer
+category: poultry
+meat: chicken
+cut_type: Breast
+---
 # Chicken Breast × Air Fryer — Recipe Temperature Research
 
 ## Tree position

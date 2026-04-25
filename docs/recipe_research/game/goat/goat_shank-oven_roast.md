@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: goat_shank
+method: oven_roast
+name: Goat Shank × Oven Roast
+category: game
+meat: goat
+cut_type: Goat
+---
 # Goat Shank × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

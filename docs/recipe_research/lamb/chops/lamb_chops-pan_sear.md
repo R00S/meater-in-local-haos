@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: lamb_chops
+method: pan_sear
+name: Lamb Chops × Pan Sear
+category: lamb
+meat: lamb
+cut_type: Chops
+---
 # Lamb Chops × Pan Sear — Recipe Temperature Research
 
 ## Tree position

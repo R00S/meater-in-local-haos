@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: flank_steak
+method: sous_vide
+name: Flank Steak × Sous Vide
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Flank Steak × Sous Vide — Recipe Temperature Research
 
 ## Cut profile

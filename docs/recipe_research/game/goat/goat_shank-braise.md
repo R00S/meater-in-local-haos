@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: goat_shank
+method: braise
+name: Goat Shank × Braise
+category: game
+meat: goat
+cut_type: Goat
+---
 # Goat Shank × Braise — Recipe Temperature Research
 
 ## Cut profile

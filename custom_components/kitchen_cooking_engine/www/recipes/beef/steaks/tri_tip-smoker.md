@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: tri_tip
+method: smoker
+name: Tri-Tip × Smoker
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Tri Tip × Smoker — Recipe Temperature Research
 
 ## Cut profile

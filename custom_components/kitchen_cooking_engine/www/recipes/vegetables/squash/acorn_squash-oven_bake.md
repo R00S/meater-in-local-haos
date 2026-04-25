@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: acorn_squash
+method: oven_bake
+name: Acorn Squash × Oven Bake
+category: vegetables
+meat: squash
+cut_type: Squash
+---
 # Acorn Squash × Oven Bake — Recipe Temperature Research
 
 ## Cut profile

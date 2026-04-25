@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: chuck_roast
+method: braise
+name: Chuck Roast / Pot Roast × Braise
+category: beef
+meat: cow
+cut_type: Braising Cuts
+---
 # Chuck Roast × Braise — Recipe Temperature Research
 
 ## Cut profile

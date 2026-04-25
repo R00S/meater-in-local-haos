@@ -143,6 +143,10 @@ class KitchenCookingPanel extends LitElement {
       _recipeViewerMethod: { type: String },
       _recipeViewerRecipes: { type: Array },
       _recipeViewerLoading: { type: Boolean },
+      // Recipe file inline viewer (cut file and method files)
+      _recipeFileContent: { type: String },
+      _recipeFileUrl: { type: String },
+      _recipeFileLoading: { type: Boolean },
 
     };
   }
@@ -268,6 +272,9 @@ class KitchenCookingPanel extends LitElement {
     this._recipeViewerMethod = null;
     this._recipeViewerRecipes = [];
     this._recipeViewerLoading = false;
+    this._recipeFileContent = null;
+    this._recipeFileUrl = null;
+    this._recipeFileLoading = false;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -1192,6 +1199,9 @@ class KitchenCookingPanel extends LitElement {
     this._selectedCut = cutId;
     this._customTargetTempC = null;
     this._showTempAdjust = false;
+    // Clear recipe file viewer when cut changes
+    this._recipeFileContent = null;
+    this._recipeFileUrl = null;
     
     // Check if user has a saved preference for this cut
     const savedPref = this._cutPreferences[String(cutId)];
@@ -4641,9 +4651,15 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
-   * Render a cut-profile card with a brief description and links to local
-   * recipe research files. Called from _renderExpSetupForm when a cut is
-   * selected. No translation or unit conversion — prototype only.
+   * Render a cut-profile card with a brief description and inline-viewable links
+   * to local recipe research files. Clicking "Cut Overview" or a method button
+   * fetches and renders that file's content inline within the panel.
+   *
+   * File types (marked via YAML frontmatter in every recipe file):
+   *   type: cut        — general cut profile; one per cut slug; carries full
+   *                      cooking spec (doneness temps, methods) so the tree can
+   *                      eventually be built from the files alone.
+   *   type: cut_method — method-specific research; one per cut×method pair.
    */
   _renderCutProfileCard() {
     const cut = this._getCuts().find(c => c.id === this._selectedCut);
@@ -4655,7 +4671,6 @@ class KitchenCookingPanel extends LitElement {
     const recipes = RECIPE_INDEX[slug];
     if (!profile && !recipes) return html``;
 
-    // Method display names for pretty labels
     const METHOD_LABELS = {
       oven_roast: 'Oven Roast', oven_bake: 'Oven Bake',
       pan_sear: 'Pan Sear', pan_fry: 'Pan Fry',
@@ -4671,6 +4686,12 @@ class KitchenCookingPanel extends LitElement {
       ? Object.entries(recipes).filter(([m]) => m !== 'overview')
       : [];
 
+    const btnBase = 'cursor:pointer;border:none;border-radius:14px;';
+    const activeStyle  = btnBase + 'font-size:0.78em;padding:4px 11px;background:var(--accent-color,#ff9800);color:#fff;font-weight:700;';
+    const methodStyle  = btnBase + 'font-size:0.78em;padding:4px 11px;background:var(--primary-color);color:var(--text-primary-color);opacity:0.92;';
+    const overviewActiveStyle  = 'font-size:0.82em;padding:5px 14px;background:var(--accent-color,#ff9800);color:#fff;' + btnBase + 'font-weight:700;';
+    const overviewInactiveStyle = 'font-size:0.82em;padding:5px 14px;background:var(--secondary-background-color);color:var(--primary-color);border:1px solid var(--primary-color);' + btnBase + 'font-weight:600;';
+
     return html`
       <ha-card>
         <div class="card-content">
@@ -4680,38 +4701,177 @@ class KitchenCookingPanel extends LitElement {
               ${profile}
             </p>
           ` : ''}
+
           ${overviewPath ? html`
             <div style="margin-bottom:10px;">
-              <a
-                href="${overviewPath}"
-                target="_blank"
-                rel="noopener"
-                style="font-size:0.82em;padding:5px 14px;background:var(--secondary-background-color);color:var(--primary-color);border:1px solid var(--primary-color);border-radius:14px;text-decoration:none;font-weight:600;">
-                📄 Cut Overview
-              </a>
+              <button
+                @click=${() => this._openRecipeFile(overviewPath)}
+                style="${this._recipeFileUrl === overviewPath ? overviewActiveStyle : overviewInactiveStyle}">
+                📄 Cut Overview${this._recipeFileUrl === overviewPath ? ' ▲' : ' ▼'}
+              </button>
             </div>
           ` : ''}
+
           ${methodRecipes.length > 0 ? html`
             <div>
               <span style="font-size:0.82em;font-weight:600;color:var(--secondary-text-color);">
-                📚 Recipe Research Files:
+                📚 Method Research:
               </span>
               <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">
                 ${methodRecipes.map(([method, path]) => html`
-                  <a
-                    href="${path}"
-                    target="_blank"
-                    rel="noopener"
-                    style="font-size:0.78em;padding:4px 11px;background:var(--primary-color);color:var(--text-primary-color);border-radius:14px;text-decoration:none;opacity:0.92;">
-                    ${METHOD_LABELS[method] || method.replace(/_/g, ' ')}
-                  </a>
+                  <button
+                    @click=${() => this._openRecipeFile(path)}
+                    style="${this._recipeFileUrl === path ? activeStyle : methodStyle}">
+                    ${METHOD_LABELS[method] || method.replace(/_/g, ' ')}${this._recipeFileUrl === path ? ' ▲' : ''}
+                  </button>
                 `)}
               </div>
             </div>
           ` : ''}
         </div>
       </ha-card>
+
+      ${this._recipeFileLoading ? html`
+        <ha-card style="margin-top:4px;">
+          <div class="card-content" style="text-align:center;padding:16px;color:var(--secondary-text-color);">
+            ⏳ Loading…
+          </div>
+        </ha-card>
+      ` : ''}
+
+      ${this._recipeFileContent && !this._recipeFileLoading ? html`
+        <ha-card style="margin-top:4px;">
+          <div class="card-content">
+            <div style="text-align:right;margin-bottom:4px;">
+              <button
+                @click=${() => { this._recipeFileContent = null; this._recipeFileUrl = null; this.requestUpdate(); }}
+                style="font-size:0.78em;padding:3px 10px;background:transparent;border:1px solid var(--divider-color);border-radius:10px;cursor:pointer;color:var(--secondary-text-color);">
+                ✕ Close
+              </button>
+            </div>
+            <div class="recipe-md-content" .innerHTML=${this._mdToHtml(this._recipeFileContent)}></div>
+          </div>
+        </ha-card>
+      ` : ''}
     `;
+  }
+
+  /**
+   * Fetch a recipe file by URL and display its content inline.
+   * Clicking the same button again toggles the viewer closed.
+   */
+  async _openRecipeFile(url) {
+    if (this._recipeFileUrl === url) {
+      this._recipeFileContent = null;
+      this._recipeFileUrl = null;
+      this.requestUpdate();
+      return;
+    }
+    this._recipeFileUrl = url;
+    this._recipeFileLoading = true;
+    this._recipeFileContent = null;
+    this.requestUpdate();
+    try {
+      const resp = await fetch(url);
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const text = await resp.text();
+      this._recipeFileContent = this._stripFileFrontmatter(text);
+    } catch (e) {
+      this._recipeFileContent = `_Could not load file: ${e.message}_`;
+    }
+    this._recipeFileLoading = false;
+    this.requestUpdate();
+  }
+
+  /** Strip YAML frontmatter (--- … ---) from the start of a markdown file. */
+  _stripFileFrontmatter(text) {
+    if (!text.startsWith('---\n')) return text;
+    const end = text.indexOf('\n---\n', 4);
+    if (end < 0) return text;
+    return text.slice(end + 5).trimStart();
+  }
+
+  /**
+   * Convert a markdown string to an HTML string for use with .innerHTML.
+   * Handles headings, bold, italic, inline code, links, unordered lists,
+   * horizontal rules, and paragraphs. All leaf text is HTML-escaped.
+   */
+  _mdToHtml(md) {
+    if (!md) return '';
+
+    const esc = s => String(s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+    const inline = raw => {
+      const out = [];
+      let i = 0;
+      while (i < raw.length) {
+        if (raw[i] === '`') {
+          const end = raw.indexOf('`', i + 1);
+          if (end > i) { out.push(`<code>${esc(raw.slice(i + 1, end))}</code>`); i = end + 1; continue; }
+        }
+        if (raw[i] === '[') {
+          const close = raw.indexOf(']', i + 1);
+          if (close > i && raw[close + 1] === '(') {
+            const urlEnd = raw.indexOf(')', close + 2);
+            if (urlEnd > close) {
+              out.push(`<a href="${esc(raw.slice(close + 2, urlEnd))}" target="_blank" rel="noopener">${esc(raw.slice(i + 1, close))}</a>`);
+              i = urlEnd + 1; continue;
+            }
+          }
+        }
+        if (raw.slice(i, i + 2) === '**') {
+          const end = raw.indexOf('**', i + 2);
+          if (end > i) { out.push(`<strong>${esc(raw.slice(i + 2, end))}</strong>`); i = end + 2; continue; }
+        }
+        if (raw[i] === '*' && raw[i - 1] !== '*' && raw[i + 1] !== '*') {
+          const end = raw.indexOf('*', i + 1);
+          if (end > i && raw[end + 1] !== '*') { out.push(`<em>${esc(raw.slice(i + 1, end))}</em>`); i = end + 1; continue; }
+        }
+        out.push(esc(raw[i]));
+        i++;
+      }
+      return out.join('');
+    };
+
+    const parts = [];
+    let inList = false, inPara = false;
+    const closePara = () => { if (inPara)  { parts.push('</p>');  inPara  = false; } };
+    const closeList = () => { if (inList)  { parts.push('</ul>'); inList  = false; } };
+
+    for (const line of md.split('\n')) {
+      const t = line.trim();
+      if (/^---+$/.test(t)) {
+        closePara(); closeList();
+        parts.push('<hr style="border:none;border-top:1px solid var(--divider-color);margin:12px 0;">');
+        continue;
+      }
+      const hm = t.match(/^(#{1,4})\s+(.+)$/);
+      if (hm) {
+        closePara(); closeList();
+        const sizes = ['1.3em', '1.1em', '0.95em', '0.88em'];
+        parts.push(`<div style="font-size:${sizes[hm[1].length-1]};font-weight:700;margin:12px 0 4px;">${inline(hm[2])}</div>`);
+        continue;
+      }
+      if (/^[-*]\s/.test(t)) {
+        closePara();
+        if (!inList) { parts.push('<ul style="margin:4px 0 4px 16px;padding:0;">'); inList = true; }
+        parts.push(`<li style="margin:2px 0;">${inline(t.slice(2))}</li>`);
+        continue;
+      }
+      if (t === '') { closePara(); closeList(); continue; }
+      closeList();
+      if (!inPara) {
+        parts.push('<p style="margin:0 0 8px 0;font-size:0.87em;line-height:1.55;color:var(--secondary-text-color);">');
+        inPara = true;
+      } else {
+        parts.push('<br>');
+      }
+      parts.push(inline(t));
+    }
+    closePara(); closeList();
+    return parts.join('');
   }
 
   // ─── End MEATER+ (experimental) path ─────────────────────────────────────────

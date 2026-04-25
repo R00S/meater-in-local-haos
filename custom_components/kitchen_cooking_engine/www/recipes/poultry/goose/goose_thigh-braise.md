@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: goose_thigh
+method: braise
+name: Goose Thigh × Braise
+category: poultry
+meat: goose
+cut_type: Goose
+---
 # Goose Thigh × Braise — Recipe Temperature Research
 
 ## Tree position

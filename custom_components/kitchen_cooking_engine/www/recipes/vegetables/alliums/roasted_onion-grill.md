@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: roasted_onion
+method: grill
+name: Roasted Onion × Grill
+category: vegetables
+meat: alliums
+cut_type: Alliums
+---
 # Roasted Onion × Grill — Recipe Temperature Research
 
 ## Cut profile

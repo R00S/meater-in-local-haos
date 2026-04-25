@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: portobello_mushrooms
+method: saute
+name: Portobello Mushrooms × Sauté
+category: vegetables
+meat: mushrooms
+cut_type: Mushrooms
+---
 # Portobello Mushrooms × Saute — Recipe Temperature Research
 
 ## Cut profile

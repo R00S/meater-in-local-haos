@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: bison_steak
+method: pan_sear
+name: Bison Steak × Pan Sear
+category: game
+meat: bison
+cut_type: Bison
+---
 # Bison Steak × Pan Sear — Recipe Temperature Research
 
 ## Tree position

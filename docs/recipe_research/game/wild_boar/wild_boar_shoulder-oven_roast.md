@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: wild_boar_shoulder
+method: oven_roast
+name: Wild Boar Shoulder × Oven Roast
+category: game
+meat: wild_boar
+cut_type: Wild Boar
+---
 # Wild Boar Shoulder × Oven Roast — Recipe Temperature Research
 
 ## Tree position

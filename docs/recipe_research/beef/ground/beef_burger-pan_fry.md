@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: beef_burger
+method: pan_fry
+name: Beef Burger / Ground Beef Patty × Pan Fry
+category: beef
+meat: cow
+cut_type: Ground
+---
 # Beef Burger × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

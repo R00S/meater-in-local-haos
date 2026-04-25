@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ostrich_steak
+method: grill
+name: Ostrich Steak × Grill
+category: game
+meat: ostrich
+cut_type: Ostrich
+---
 # Ostrich Steak × Grill — Recipe Temperature Research
 
 ## Tree position

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_belly
+method: oven_roast
+name: Pork Belly × Oven Roast
+category: pork
+meat: pig
+cut_type: Roasts
+---
 # Pork Belly × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

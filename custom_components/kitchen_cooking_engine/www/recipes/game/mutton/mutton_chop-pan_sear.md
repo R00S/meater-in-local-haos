@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: mutton_chop
+method: pan_sear
+name: Mutton Chop × Pan Sear
+category: game
+meat: mutton
+cut_type: Mutton
+---
 # Mutton Chop × Pan Sear — Recipe Temperature Research
 
 ## Tree position

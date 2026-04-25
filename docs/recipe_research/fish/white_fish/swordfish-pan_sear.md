@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: swordfish
+method: pan_sear
+name: Swordfish Steak × Pan Sear
+category: fish
+meat: white_fish
+cut_type: White Fish
+---
 # Swordfish × Pan Sear — Recipe Temperature Research
 
 ## Tree position

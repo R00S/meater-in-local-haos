@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: pork_shoulder
+method: smoker
+name: Pork Shoulder / Boston Butt × Smoker
+category: pork
+meat: pig
+cut_type: Roasts
+---
 # Pork Shoulder × Smoker — Recipe Temperature Research
 
 ## Cut profile

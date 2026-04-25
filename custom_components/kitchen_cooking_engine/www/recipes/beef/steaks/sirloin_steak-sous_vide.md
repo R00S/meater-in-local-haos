@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: sirloin_steak
+method: sous_vide
+name: Sirloin Steak × Sous Vide
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Sirloin Steak × Sous Vide — Recipe Temperature Research
 
 ## Cut profile

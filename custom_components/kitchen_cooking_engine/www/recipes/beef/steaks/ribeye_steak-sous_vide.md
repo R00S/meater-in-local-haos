@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ribeye_steak
+method: sous_vide
+name: Ribeye Steak × Sous Vide
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Ribeye Steak × Sous Vide — Recipe Temperature Research
 
 ## Cut profile

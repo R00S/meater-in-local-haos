@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: brussels_sprouts
+method: pan_fry
+name: Brussels Sprouts × Pan Fry
+category: vegetables
+meat: green_vegetables
+cut_type: Green Vegetables
+---
 # Brussels Sprouts × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

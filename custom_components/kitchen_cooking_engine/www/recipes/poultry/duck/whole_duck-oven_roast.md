@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: whole_duck
+method: oven_roast
+name: Whole Duck × Oven Roast
+category: poultry
+meat: duck
+cut_type: Duck
+---
 # Whole Duck × Oven Roast — Recipe Temperature Research
 
 ## Tree position

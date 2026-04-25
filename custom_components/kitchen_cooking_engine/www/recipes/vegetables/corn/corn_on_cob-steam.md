@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: corn_on_cob
+method: steam
+name: Corn on the Cob × Steam
+category: vegetables
+meat: corn
+cut_type: Corn
+---
 # Corn on the Cob × Steam — Recipe Temperature Research
 
 ## Cut profile

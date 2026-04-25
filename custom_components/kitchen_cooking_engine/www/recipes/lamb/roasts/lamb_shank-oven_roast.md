@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: lamb_shank
+method: oven_roast
+name: Shank × Oven Roast
+category: lamb
+meat: lamb
+cut_type: Ground
+---
 # Lamb Shank × Oven Roast — Recipe Temperature Research
 
 ## Tree position

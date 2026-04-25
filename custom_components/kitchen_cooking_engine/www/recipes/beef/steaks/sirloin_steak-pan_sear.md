@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: sirloin_steak
+method: pan_sear
+name: Sirloin Steak × Pan Sear
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Sirloin Steak × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

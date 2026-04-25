@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: picanha
+method: pan_sear
+name: Picanha × Pan Sear
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Picanha × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

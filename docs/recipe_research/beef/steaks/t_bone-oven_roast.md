@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: t_bone
+method: oven_roast
+name: T-Bone / Porterhouse × Oven Roast
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # T-Bone Steak × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

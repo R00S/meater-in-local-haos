@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: skirt_steak
+method: grill
+name: Skirt Steak × Grill
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Skirt Steak × Grill — Recipe Temperature Research
 
 ## Cut profile

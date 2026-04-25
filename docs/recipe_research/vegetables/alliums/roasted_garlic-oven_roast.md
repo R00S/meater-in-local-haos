@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: roasted_garlic
+method: oven_roast
+name: Roasted Garlic × Oven Roast
+category: vegetables
+meat: alliums
+cut_type: Alliums
+---
 # Roasted Garlic × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: goat_shoulder
+method: oven_roast
+name: Goat Shoulder × Oven Roast
+category: game
+meat: goat
+cut_type: Goat
+---
 # Goat Shoulder × Oven Roast — Recipe Temperature Research
 
 ## Tree position

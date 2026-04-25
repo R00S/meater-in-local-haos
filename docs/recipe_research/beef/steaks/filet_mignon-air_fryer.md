@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: filet_mignon
+method: air_fryer
+name: Filet Mignon / Tenderloin Steak × Air Fryer
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Filet Mignon × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

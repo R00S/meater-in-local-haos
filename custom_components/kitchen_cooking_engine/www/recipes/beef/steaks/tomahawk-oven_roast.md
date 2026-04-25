@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: tomahawk
+method: oven_roast
+name: Tomahawk Steak × Oven Roast
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Tomahawk × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: ny_strip
+method: pan_fry
+name: New York Strip × Pan Fry
+category: beef
+meat: cow
+cut_type: Steaks
+---
 # Ny Strip × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

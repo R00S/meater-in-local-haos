@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: lamb_shank
+method: braise
+name: Shank × Braise
+category: lamb
+meat: lamb
+cut_type: Ground
+---
 # Lamb Shank × Braise — Recipe Temperature Research
 
 ## Tree position

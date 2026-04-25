@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: kangaroo_steak
+method: grill
+name: Kangaroo Steak × Grill
+category: game
+meat: kangaroo
+cut_type: Kangaroo
+---
 # Kangaroo Steak × Grill — Recipe Temperature Research
 
 ## Tree position

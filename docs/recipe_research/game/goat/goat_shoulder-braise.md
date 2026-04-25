@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: goat_shoulder
+method: braise
+name: Goat Shoulder × Braise
+category: game
+meat: goat
+cut_type: Goat
+---
 # Goat Shoulder × Braise — Recipe Temperature Research
 
 ## Cut profile

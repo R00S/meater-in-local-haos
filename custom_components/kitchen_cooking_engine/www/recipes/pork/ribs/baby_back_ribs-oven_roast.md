@@ -1,3 +1,12 @@
+---
+type: cut_method
+slug: baby_back_ribs
+method: oven_roast
+name: Baby Back Ribs × Oven Roast
+category: pork
+meat: pig
+cut_type: Ribs
+---
 # Baby Back Ribs × Oven Roast — Recipe Temperature Research
 
 ## Cut profile
