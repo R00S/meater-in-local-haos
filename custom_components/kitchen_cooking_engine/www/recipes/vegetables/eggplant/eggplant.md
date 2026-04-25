@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: eggplant
 name: Eggplant / Aubergine
@@ -6,29 +6,30 @@ category: vegetables
 meat: eggplant
 cut_type: Eggplant
 methods:
-  - air_fryer
-  - grill
-  - oven_roast
-  - pan_fry
-  - saute
+- air_fryer
+- grill
+- oven_roast
+- pan_fry
+- saute
 doneness:
-  - name: tender
-    target_c: 95
-    target_f: 203
-    min_c: 90
-    min_f: 195
-    max_c: 100
-    max_f: 212
-    usda_safe: true
-    recommended: true
-  - name: charred
-    target_c: 200
-    target_f: 390
-    min_c: 175
-    min_f: 350
-    max_c: 230
-    max_f: 450
-    usda_safe: true---
+- name: tender
+  target_c: 95
+  target_f: 203
+  min_c: 90
+  min_f: 195
+  max_c: 100
+  max_f: 212
+  usda_safe: true
+  recommended: true
+- name: charred
+  target_c: 200
+  target_f: 390
+  min_c: 175
+  min_f: 350
+  max_c: 230
+  max_f: 450
+  usda_safe: true
+-->
 # Eggplant / Aubergine — Cut Overview
 
 ## Cut profile

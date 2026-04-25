@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: tomahawk
 method: charcoal_grill
@@ -6,7 +6,7 @@ name: Tomahawk Steak × Charcoal Grill
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Tomahawk × Charcoal Grill — Recipe Temperature Research
 
 ## Cut profile

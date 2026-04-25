@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: zucchini
 method: oven_roast
@@ -6,7 +6,7 @@ name: Zucchini × Oven Roast
 category: vegetables
 meat: squash
 cut_type: Squash
----
+-->
 # Zucchini × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

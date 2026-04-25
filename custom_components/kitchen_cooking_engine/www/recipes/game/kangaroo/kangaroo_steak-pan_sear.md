@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: kangaroo_steak
 method: pan_sear
@@ -6,7 +6,7 @@ name: Kangaroo Steak × Pan Sear
 category: game
 meat: kangaroo
 cut_type: Kangaroo
----
+-->
 # Kangaroo Steak × Pan Sear — Recipe Temperature Research
 
 ## Tree position

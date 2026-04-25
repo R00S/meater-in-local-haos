@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: moose_steak
 method: pan_sear
@@ -6,7 +6,7 @@ name: Moose Steak × Pan Sear
 category: game
 meat: moose
 cut_type: Moose
----
+-->
 # Moose Steak × Pan Sear — Recipe Temperature Research
 
 ## Tree position

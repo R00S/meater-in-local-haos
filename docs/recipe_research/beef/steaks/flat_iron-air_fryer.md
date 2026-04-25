@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: flat_iron
 method: air_fryer
@@ -6,7 +6,7 @@ name: Flat Iron Steak × Air Fryer
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Flat Iron Steak × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

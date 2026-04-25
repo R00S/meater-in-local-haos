@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: lamb_shoulder
 method: oven_roast
@@ -6,7 +6,7 @@ name: Shoulder × Oven Roast
 category: lamb
 meat: lamb
 cut_type: Ground
----
+-->
 # Lamb Shoulder × Oven Roast — Recipe Temperature Research
 
 ## Tree position

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: rabbit_legs
 method: braise
@@ -6,7 +6,7 @@ name: Rabbit Legs × Braise
 category: game
 meat: rabbit
 cut_type: Rabbit
----
+-->
 # Rabbit Legs × Braise — Recipe Temperature Research
 
 ## Tree position

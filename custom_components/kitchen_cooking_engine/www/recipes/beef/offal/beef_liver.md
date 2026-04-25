@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: beef_liver
 name: Beef Liver
@@ -9,25 +9,26 @@ usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: well_done
 methods:
-  - pan_fry
-  - pan_sear
+- pan_fry
+- pan_sear
 doneness:
-  - name: medium
-    target_c: 63
-    target_f: 145
-    min_c: 60
-    min_f: 140
-    max_c: 66
-    max_f: 150
-    usda_safe: false
-  - name: well_done
-    target_c: 71
-    target_f: 160
-    min_c: 68
-    min_f: 155
-    max_c: 77
-    max_f: 170
-    usda_safe: true---
+- name: medium
+  target_c: 63
+  target_f: 145
+  min_c: 60
+  min_f: 140
+  max_c: 66
+  max_f: 150
+  usda_safe: false
+- name: well_done
+  target_c: 71
+  target_f: 160
+  min_c: 68
+  min_f: 155
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+-->
 # Beef Liver — Cut Overview
 
 ## Cut profile

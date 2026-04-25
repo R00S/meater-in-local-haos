@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: whole_turkey
 method: oven_roast
@@ -6,7 +6,7 @@ name: Whole Turkey × Oven Roast
 category: poultry
 meat: turkey
 cut_type: Turkey
----
+-->
 # Whole Turkey × Oven Roast — Recipe Temperature Research
 
 ## Tree position

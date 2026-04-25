@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 24 Apr 2026, 20:56 UTC
-Last Change: v0.6.1.21 - Add 53 placeholder cut files with full method and temperature frontmatter
+Last Change: v0.6.1.22 - KCE tags in all recipe files; EXP_TREE built from cut files
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "283"
+PANEL_VERSION = "285"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

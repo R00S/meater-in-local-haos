@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: flank_steak
 method: pan_fry
@@ -6,7 +6,7 @@ name: Flank Steak × Pan Fry
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Flank Steak × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

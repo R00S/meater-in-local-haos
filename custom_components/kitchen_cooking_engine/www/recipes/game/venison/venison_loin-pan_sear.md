@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: venison_loin
 method: pan_sear
@@ -6,7 +6,7 @@ name: Venison Loin × Pan Sear
 category: game
 meat: venison
 cut_type: Venison
----
+-->
 # Venison Loin × Pan Sear — Recipe Temperature Research
 
 ## Tree position

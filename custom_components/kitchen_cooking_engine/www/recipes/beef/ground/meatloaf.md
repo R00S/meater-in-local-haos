@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: meatloaf
 name: Meatloaf
@@ -9,17 +9,18 @@ usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: well_done
 methods:
-  - oven_roast
+- oven_roast
 doneness:
-  - name: done
-    target_c: 71
-    target_f: 160
-    min_c: 71
-    min_f: 160
-    max_c: 77
-    max_f: 170
-    usda_safe: true
-    recommended: true---
+- name: done
+  target_c: 71
+  target_f: 160
+  min_c: 71
+  min_f: 160
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+  recommended: true
+-->
 # Meatloaf — Cut Overview
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: caramelized_onions
 method: pan_fry
@@ -6,7 +6,7 @@ name: Caramelized Onions × Pan Fry
 category: vegetables
 meat: alliums
 cut_type: Alliums
----
+-->
 # Caramelized Onions × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_liver
 method: pan_sear
@@ -6,7 +6,7 @@ name: Pork Liver × Pan Sear
 category: pork
 meat: pig
 cut_type: Other / Offal
----
+-->
 # Pork Liver × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

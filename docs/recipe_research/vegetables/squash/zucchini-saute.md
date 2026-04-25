@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: zucchini
 method: saute
@@ -6,7 +6,7 @@ name: Zucchini × Sauté
 category: vegetables
 meat: squash
 cut_type: Squash
----
+-->
 # Zucchini × Saute — Recipe Temperature Research
 
 ## Cut profile

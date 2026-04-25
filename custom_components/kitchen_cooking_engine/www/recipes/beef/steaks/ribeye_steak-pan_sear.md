@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: ribeye_steak
 method: pan_sear
@@ -6,7 +6,7 @@ name: Ribeye Steak × Pan Sear
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Ribeye Steak × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

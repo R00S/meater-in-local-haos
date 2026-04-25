@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: filet_mignon
 method: oven_roast
@@ -6,7 +6,7 @@ name: Filet Mignon / Tenderloin Steak × Oven Roast
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Filet Mignon × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

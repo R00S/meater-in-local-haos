@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: whole_goose
 name: Whole Goose
@@ -9,26 +9,27 @@ usda_safe_c: 74
 usda_safe_f: 165
 recommended_doneness: thigh_rendered
 methods:
-  - oven_roast
+- oven_roast
 doneness:
-  - name: safe
-    target_c: 74
-    target_f: 165
-    min_c: 74
-    min_f: 165
-    max_c: 77
-    max_f: 170
-    usda_safe: true
-    recommended: true
-  - name: thigh_rendered
-    target_c: 84
-    target_f: 183
-    min_c: 82
-    min_f: 180
-    max_c: 88
-    max_f: 190
-    usda_safe: true
-    recommended: true---
+- name: safe
+  target_c: 74
+  target_f: 165
+  min_c: 74
+  min_f: 165
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+  recommended: true
+- name: thigh_rendered
+  target_c: 84
+  target_f: 183
+  min_c: 82
+  min_f: 180
+  max_c: 88
+  max_f: 190
+  usda_safe: true
+  recommended: true
+-->
 # Whole Goose — Cut Overview
 
 ## Cut profile

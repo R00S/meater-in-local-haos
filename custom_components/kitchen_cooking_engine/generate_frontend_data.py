@@ -20,6 +20,7 @@ import re
 import shutil
 import sys
 import os
+import yaml
 from datetime import datetime, timezone, timedelta
 
 # Lazy-loaded module references
@@ -262,11 +263,44 @@ def recipe_to_js(recipe):
     return result
 
 
+def _parse_kce_tag(content, tag_name):
+    """Extract and parse the YAML body from a KCE HTML-comment tag.
+
+    Files are tagged with explicit named markers so regexp has an unambiguous
+    anchor point:
+
+        <!-- KCE:CUT
+        type: cut
+        slug: ribeye_steak
+        ...
+        -->
+
+    Pattern: ``<!-- KCE:{tag_name}\\n(.*?)\\n-->`` anchored to file start.
+    Returns a dict or None.
+    """
+    opening = f"<!-- KCE:{tag_name}\n"
+    closing = "\n-->"
+    if not content.startswith(opening):
+        return None
+    end_idx = content.find(closing, len(opening))
+    if end_idx == -1:
+        return None
+    yaml_text = content[len(opening):end_idx]
+    try:
+        return yaml.safe_load(yaml_text)
+    except yaml.YAMLError:
+        return None
+
+
 def build_recipe_index(base_dir):
     """Scan recipe files and build index + cut profiles.
 
     Looks first in docs/recipe_research/ (developer environment), then falls
     back to www/recipes/ (pre-populated in HACS releases on real HA installs).
+
+    File types are identified via KCE tags:
+      <!-- KCE:CUT ...        -->  cut overview files ({slug}.md)
+      <!-- KCE:CUT_METHOD ... -->  method research files ({slug}-{method}.md)
 
     Returns:
         recipe_index: {cut_slug: {method_slug: url_path}}
@@ -296,53 +330,43 @@ def build_recipe_index(base_dir):
         for filename in sorted(files):
             if not filename.endswith(".md") or filename in _excluded:
                 continue
-            stem = filename[:-3]
 
-            if "-" not in stem:
-                # Plain cut overview file: {slug}.md
-                # Use it as the authoritative cut profile source and add an
-                # "overview" entry to the recipe index so the GUI can link to it.
-                cut_slug = stem
-                rel = os.path.relpath(
-                    os.path.join(root, filename), recipe_dir
-                ).replace(os.sep, "/")
-                url_path = f"/kitchen_cooking_engine_panel/recipes/{rel}"
-                recipe_index.setdefault(cut_slug, {})["overview"] = url_path
-
-                # Plain cut file takes priority over extraction from method files
-                try:
-                    content = open(
-                        os.path.join(root, filename), encoding="utf-8"
-                    ).read()
-                    m = re.search(
-                        r"## Cut profile\n+(.*?)(?=\n\n##|\Z)",
-                        content,
-                        re.DOTALL,
-                    )
-                    if m:
-                        cut_profiles[cut_slug] = m.group(1).strip()
-                except Exception:
-                    pass
-                continue
-
-            hyphen = stem.index("-")
-            cut_slug = stem[:hyphen]
-            method_slug = stem[hyphen + 1:]
-
-            rel = os.path.relpath(
-                os.path.join(root, filename), recipe_dir
-            ).replace(os.sep, "/")
+            path = os.path.join(root, filename)
+            rel = os.path.relpath(path, recipe_dir).replace(os.sep, "/")
             url_path = f"/kitchen_cooking_engine_panel/recipes/{rel}"
 
-            recipe_index.setdefault(cut_slug, {})[method_slug] = url_path
+            try:
+                content = open(path, encoding="utf-8").read()
+            except Exception:
+                continue
 
-            # Extract the ## Cut profile section from the first method file we
-            # find, but only if the plain cut file has not already set a profile.
-            if cut_slug not in cut_profiles:
-                try:
-                    content = open(
-                        os.path.join(root, filename), encoding="utf-8"
-                    ).read()
+            stem = filename[:-3]
+
+            # --- Cut overview file ---
+            data = _parse_kce_tag(content, "CUT")
+            if data is not None:
+                cut_slug = data.get("slug") or stem
+                recipe_index.setdefault(cut_slug, {})["overview"] = url_path
+
+                # Extract ## Cut profile body text (after the KCE tag block)
+                m = re.search(
+                    r"## Cut profile\n+(.*?)(?=\n\n##|\Z)",
+                    content,
+                    re.DOTALL,
+                )
+                if m:
+                    cut_profiles[cut_slug] = m.group(1).strip()
+                continue
+
+            # --- Cut-method file ---
+            data = _parse_kce_tag(content, "CUT_METHOD")
+            if data is not None:
+                cut_slug = data.get("slug") or stem.split("-")[0]
+                method_slug = data.get("method") or (stem.split("-", 1)[1] if "-" in stem else stem)
+                recipe_index.setdefault(cut_slug, {})[method_slug] = url_path
+
+                # Extract ## Cut profile from method file as fallback if no cut file yet
+                if cut_slug not in cut_profiles:
                     m = re.search(
                         r"## Cut profile\n+(.*?)(?=\n\n##|\Z)",
                         content,
@@ -350,10 +374,214 @@ def build_recipe_index(base_dir):
                     )
                     if m:
                         cut_profiles[cut_slug] = m.group(1).strip()
-                except Exception:
-                    pass
+                continue
+
+            # File has no KCE tag — fall back to filename-based detection for
+            # backwards compatibility with any files not yet migrated.
+            if "-" not in stem:
+                cut_slug = stem
+                recipe_index.setdefault(cut_slug, {})["overview"] = url_path
+            else:
+                hyphen = stem.index("-")
+                cut_slug = stem[:hyphen]
+                method_slug = stem[hyphen + 1:]
+                recipe_index.setdefault(cut_slug, {})[method_slug] = url_path
+                if cut_slug not in cut_profiles:
+                    m = re.search(
+                        r"## Cut profile\n+(.*?)(?=\n\n##|\Z)",
+                        content,
+                        re.DOTALL,
+                    )
+                    if m:
+                        cut_profiles[cut_slug] = m.group(1).strip()
 
     return recipe_index, cut_profiles
+
+
+# Category display data (mirrors cooking_data.py MeatCategory definitions)
+_CATEGORY_META = {
+    "beef":       {"icon": "🥩", "color": "#8B0000"},
+    "pork":       {"icon": "🐷", "color": "#FFB6C1"},
+    "poultry":    {"icon": "🍗", "color": "#FFD700"},
+    "fish":       {"icon": "🐟", "color": "#4682B4"},
+    "lamb":       {"icon": "🐑", "color": "#800020"},
+    "game":       {"icon": "🦌", "color": "#2F4F4F"},
+    "vegetables": {"icon": "🥬", "color": "#228B22"},
+}
+
+_DONENESS_ICONS = {
+    "rare": "🔴", "blodig": "🔴",
+    "medium_rare": "🟠",
+    "medium": "🟡",
+    "medium_well": "🟤",
+    "well_done": "⚪", "genomstekt": "⚪",
+    "pulled": "🍖", "långkokt": "🍖",
+    "safe": "✅",
+    "dark_meat_optimal": "🍗",
+    "thigh_optimal": "🍗",
+    "thigh_rendered": "🦢",
+    "leg_rendered": "🦆",
+    "confit": "🦆",
+    "crispy": "🥓",
+    "heated_through": "♨️",
+    "done": "✓",
+    "tender": "🥔",
+    "crisp_tender": "🥦",
+    "caramelized": "🧅",
+    "charred": "🔥",
+    "just_cooked": "🦐",
+    "braised_tender": "🐙",
+    "quick_sear": "⚡",
+}
+
+
+def build_experimental_tree(base_dir):
+    """Build the EXP_TREE and EXP_DONENESS_OPTIONS from KCE:CUT tags.
+
+    Reads every ``<!-- KCE:CUT ... -->`` tagged cut overview file and assembles
+    the same JSON structure that MEAT_CATEGORIES uses, so the experimental
+    MEATER path can be driven entirely by the cut files — no cooking_data.py
+    import needed.
+
+    Returns:
+        exp_tree: {category_id: {id, name, icon, color, meats: [...]}}
+        exp_doneness: {doneness_name: {value, name, icon, temp_c, temp_f, ...}}
+    """
+    repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
+    docs_recipe_dir = os.path.join(repo_root, "docs", "recipe_research")
+    www_recipe_dir = os.path.join(base_dir, "www", "recipes")
+
+    if os.path.isdir(docs_recipe_dir):
+        recipe_dir = docs_recipe_dir
+    elif os.path.isdir(www_recipe_dir):
+        recipe_dir = www_recipe_dir
+    else:
+        return {}, {}
+
+    _excluded = {
+        "README.md", "RECIPE_COLLECTION_TOR.md",
+        "RECIPE_ANALYSIS_TOR.md", "SOURCE_SURVEY.md",
+    }
+
+    # category_key → {meta, _meats: {meat_key → {meta, _cut_types: {ct_key → {meta, cuts: []}}}}}
+    cats = {}
+    exp_doneness = {}
+
+    for root, _dirs, files in os.walk(recipe_dir):
+        for filename in sorted(files):
+            if not filename.endswith(".md") or filename in _excluded:
+                continue
+            # Only cut overview files (no hyphen in stem)
+            stem = filename[:-3]
+            if "-" in stem:
+                continue
+
+            try:
+                content = open(os.path.join(root, filename), encoding="utf-8").read()
+            except Exception:
+                continue
+
+            data = _parse_kce_tag(content, "CUT")
+            if data is None:
+                continue
+
+            category = data.get("category")
+            meat = data.get("meat")
+            cut_type_name = data.get("cut_type")
+            slug = data.get("slug") or stem
+            name = data.get("name") or slug.replace("_", " ").title()
+            rec_doneness = data.get("recommended_doneness")
+            methods = data.get("methods") or []
+            doneness_list = data.get("doneness") or []
+
+            if not (category and meat and cut_type_name):
+                continue
+
+            # Collect doneness option definitions
+            doneness_keys = []
+            for d in doneness_list:
+                if not isinstance(d, dict):
+                    continue
+                d_name = d.get("name")
+                if not d_name:
+                    continue
+                doneness_keys.append(d_name)
+                if d_name not in exp_doneness:
+                    exp_doneness[d_name] = {
+                        "value": d_name,
+                        "name": d_name.replace("_", " ").title(),
+                        "icon": _DONENESS_ICONS.get(d_name, "🔥"),
+                        "description": None,
+                        "temp_c": d.get("target_c"),
+                        "temp_f": d.get("target_f"),
+                        "safety_level": "safe" if d.get("usda_safe") else None,
+                    }
+
+            # Build hierarchy
+            if category not in cats:
+                meta = _CATEGORY_META.get(category, {"icon": "🍖", "color": "#888888"})
+                cats[category] = {
+                    "id": category,
+                    "name": category.title(),
+                    "icon": meta["icon"],
+                    "color": meta["color"],
+                    "_meats": {},
+                }
+
+            cat = cats[category]
+            if meat not in cat["_meats"]:
+                cat["_meats"][meat] = {
+                    "id": meat,
+                    "name": meat.replace("_", " ").title(),
+                    "_cut_types": {},
+                }
+
+            meat_obj = cat["_meats"][meat]
+            # Normalise cut_type to a safe id: lowercase, spaces/slashes → underscore
+            ct_id = re.sub(r"[^a-z0-9]+", "_", cut_type_name.lower()).strip("_")
+            if ct_id not in meat_obj["_cut_types"]:
+                meat_obj["_cut_types"][ct_id] = {
+                    "id": ct_id,
+                    "name": cut_type_name,
+                    "cuts": [],
+                }
+
+            cut_obj = {
+                "id": slug,
+                "name": name,
+                "slug": slug,
+                "doneness": doneness_keys,
+            }
+            if rec_doneness:
+                cut_obj["recommended_doneness"] = rec_doneness
+            if methods:
+                cut_obj["supported_methods"] = methods
+
+            meat_obj["_cut_types"][ct_id]["cuts"].append(cut_obj)
+
+    # Flatten private _meats/_cut_types dicts to lists (matching MEAT_CATEGORIES shape)
+    exp_tree = {}
+    for cat_key, cat in cats.items():
+        meats_list = []
+        for meat_obj in cat["_meats"].values():
+            cut_types_list = list(meat_obj["_cut_types"].values())
+            # Remove the private key
+            for ct in cut_types_list:
+                ct.pop("_cut_types", None)
+            meats_list.append({
+                "id": meat_obj["id"],
+                "name": meat_obj["name"],
+                "cutTypes": cut_types_list,
+            })
+        exp_tree[cat_key] = {
+            "id": cat["id"],
+            "name": cat["name"],
+            "icon": cat["icon"],
+            "color": cat["color"],
+            "meats": meats_list,
+        }
+
+    return exp_tree, exp_doneness
 
 
 def copy_recipe_files_to_www(base_dir):
@@ -529,6 +757,19 @@ def generate_js_data():
         f"(unmatched cuts simply show no recipe card)"
     )
 
+    # Build the experimental tree from KCE:CUT tagged cut files
+    exp_tree, exp_doneness = build_experimental_tree(base_dir)
+    exp_cut_count = sum(
+        len(ct["cuts"])
+        for cat in exp_tree.values()
+        for meat in cat["meats"]
+        for ct in meat["cutTypes"]
+    )
+    print(
+        f"  EXP_TREE: {exp_cut_count} cuts across "
+        f"{len(exp_tree)} categories from KCE:CUT tags"
+    )
+
     
     cet_time = get_cet_timestamp()
     
@@ -588,6 +829,12 @@ def generate_js_data():
     lines.append("")
     lines.append("// Cut profile texts extracted from recipe research files")
     lines.append(f"const CUT_PROFILES = {json.dumps(cut_profiles, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// Experimental MEATER tree — built from KCE:CUT tagged cut files")
+    lines.append(f"const EXP_TREE = {json.dumps(exp_tree, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// Experimental MEATER doneness options — collected from KCE:CUT doneness blocks")
+    lines.append(f"const EXP_DONENESS_OPTIONS = {json.dumps(exp_doneness, indent=2, ensure_ascii=False)};")
 
     return "\n".join(lines)
 

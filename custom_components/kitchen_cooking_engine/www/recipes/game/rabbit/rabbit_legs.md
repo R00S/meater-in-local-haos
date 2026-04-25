@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: rabbit_legs
 name: Rabbit Legs
@@ -9,34 +9,35 @@ usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: dark_meat_optimal
 methods:
-  - braise
-  - oven_roast
+- braise
+- oven_roast
 doneness:
-  - name: well_done
-    target_c: 71
-    target_f: 160
-    min_c: 68
-    min_f: 155
-    max_c: 77
-    max_f: 170
-    usda_safe: true
-  - name: dark_meat_optimal
-    target_c: 77
-    target_f: 170
-    min_c: 74
-    min_f: 165
-    max_c: 82
-    max_f: 180
-    usda_safe: true
-    recommended: true
-  - name: pulled
-    target_c: 93
-    target_f: 200
-    min_c: 88
-    min_f: 190
-    max_c: 96
-    max_f: 205
-    usda_safe: true---
+- name: well_done
+  target_c: 71
+  target_f: 160
+  min_c: 68
+  min_f: 155
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+- name: dark_meat_optimal
+  target_c: 77
+  target_f: 170
+  min_c: 74
+  min_f: 165
+  max_c: 82
+  max_f: 180
+  usda_safe: true
+  recommended: true
+- name: pulled
+  target_c: 93
+  target_f: 200
+  min_c: 88
+  min_f: 190
+  max_c: 96
+  max_f: 205
+  usda_safe: true
+-->
 # Rabbit Legs — Cut Overview
 
 ## Cut profile

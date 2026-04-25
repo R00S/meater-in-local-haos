@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: tri_tip
 method: grill
@@ -6,7 +6,7 @@ name: Tri-Tip × Grill
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Tri Tip × Grill — Recipe Temperature Research
 
 ## Cut profile

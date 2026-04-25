@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: sirloin_steak
 method: pan_fry
@@ -6,7 +6,7 @@ name: Sirloin Steak × Pan Fry
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Sirloin Steak × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: portobello_mushrooms
 method: air_fryer
@@ -6,7 +6,7 @@ name: Portobello Mushrooms × Air Fryer
 category: vegetables
 meat: mushrooms
 cut_type: Mushrooms
----
+-->
 # Portobello Mushrooms × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

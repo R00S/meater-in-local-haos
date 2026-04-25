@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: turkey_breast
 method: oven_roast
@@ -6,7 +6,7 @@ name: Turkey Breast × Oven Roast
 category: poultry
 meat: turkey
 cut_type: Turkey
----
+-->
 # Turkey Breast × Oven Roast — Recipe Temperature Research
 
 ## Tree position

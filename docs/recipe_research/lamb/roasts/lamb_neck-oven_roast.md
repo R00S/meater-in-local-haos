@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: lamb_neck
 method: oven_roast
@@ -6,7 +6,7 @@ name: Lamb Neck × Oven Roast
 category: lamb
 meat: lamb
 cut_type: Roasts
----
+-->
 # Lamb Neck × Oven Roast — Recipe Temperature Research
 
 ## Tree position

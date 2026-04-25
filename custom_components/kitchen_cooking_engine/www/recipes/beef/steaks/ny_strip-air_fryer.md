@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: ny_strip
 method: air_fryer
@@ -6,7 +6,7 @@ name: New York Strip × Air Fryer
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Ny Strip × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

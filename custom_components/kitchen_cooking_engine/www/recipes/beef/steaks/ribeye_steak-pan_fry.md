@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: ribeye_steak
 method: pan_fry
@@ -6,7 +6,7 @@ name: Ribeye Steak × Pan Fry
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Ribeye Steak × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

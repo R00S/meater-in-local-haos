@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: wild_boar_chop
 method: pan_sear
@@ -6,7 +6,7 @@ name: Wild Boar Chop × Pan Sear
 category: game
 meat: wild_boar
 cut_type: Wild Boar
----
+-->
 # Wild Boar Chop × Pan Sear — Recipe Temperature Research
 
 ## Tree position

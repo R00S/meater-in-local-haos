@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: ground_turkey
 method: braise
@@ -6,7 +6,7 @@ name: Ground Turkey × Braise
 category: poultry
 meat: ground_poultry
 cut_type: Ground
----
+-->
 # Ground Turkey × Braise — Recipe Temperature Research
 
 ## Cut profile

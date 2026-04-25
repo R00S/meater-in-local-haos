@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: roasted_onion
 method: saute
@@ -6,7 +6,7 @@ name: Roasted Onion × Sauté
 category: vegetables
 meat: alliums
 cut_type: Alliums
----
+-->
 # Roasted Onion × Saute — Recipe Temperature Research
 
 ## Cut profile

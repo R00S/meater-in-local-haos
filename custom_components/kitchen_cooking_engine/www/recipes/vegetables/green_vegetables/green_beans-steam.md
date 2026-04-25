@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: green_beans
 method: steam
@@ -6,7 +6,7 @@ name: Green Beans × Steam
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
----
+-->
 # Green Beans × Steam — Recipe Temperature Research
 
 ## Cut profile

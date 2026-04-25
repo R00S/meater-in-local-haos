@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: lamb_burger
 method: grill
@@ -6,7 +6,7 @@ name: Lamb Burger × Grill
 category: lamb
 meat: lamb
 cut_type: Ground
----
+-->
 # Lamb Burger × Grill — Recipe Temperature Research
 
 ## Tree position

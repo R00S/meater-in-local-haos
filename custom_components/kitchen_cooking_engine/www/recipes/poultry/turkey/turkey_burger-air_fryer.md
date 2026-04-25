@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: turkey_burger
 method: air_fryer
@@ -6,7 +6,7 @@ name: Turkey Burger × Air Fryer
 category: poultry
 meat: ground_poultry
 cut_type: Ground
----
+-->
 # Turkey Burger × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

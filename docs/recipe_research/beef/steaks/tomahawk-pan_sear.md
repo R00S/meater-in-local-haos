@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: tomahawk
 method: pan_sear
@@ -6,7 +6,7 @@ name: Tomahawk Steak × Pan Sear
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Tomahawk × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

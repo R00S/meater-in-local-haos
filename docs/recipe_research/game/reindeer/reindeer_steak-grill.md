@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: reindeer_steak
 method: grill
@@ -6,7 +6,7 @@ name: Reindeer Steak × Grill
 category: game
 meat: reindeer
 cut_type: Reindeer
----
+-->
 # Reindeer Steak × Grill — Recipe Temperature Research
 
 ## Tree position

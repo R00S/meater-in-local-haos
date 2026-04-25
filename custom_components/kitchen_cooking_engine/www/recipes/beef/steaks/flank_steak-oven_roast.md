@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: flank_steak
 method: oven_roast
@@ -6,7 +6,7 @@ name: Flank Steak × Oven Roast
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Flank Steak × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

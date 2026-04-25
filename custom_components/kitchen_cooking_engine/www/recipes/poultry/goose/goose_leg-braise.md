@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: goose_leg
 method: braise
@@ -6,7 +6,7 @@ name: Goose Leg × Braise
 category: poultry
 meat: goose
 cut_type: Goose
----
+-->
 # Goose Leg × Braise — Recipe Temperature Research
 
 ## Tree position

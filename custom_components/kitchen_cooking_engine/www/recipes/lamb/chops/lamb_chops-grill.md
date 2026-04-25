@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: lamb_chops
 method: grill
@@ -6,7 +6,7 @@ name: Lamb Chops × Grill
 category: lamb
 meat: lamb
 cut_type: Chops
----
+-->
 # Lamb Chops × Grill — Recipe Temperature Research
 
 ## Tree position

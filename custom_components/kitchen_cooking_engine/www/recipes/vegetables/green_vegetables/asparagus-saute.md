@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: asparagus
 method: saute
@@ -6,7 +6,7 @@ name: Asparagus × Sauté
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
----
+-->
 # Asparagus × Saute — Recipe Temperature Research
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: roasted_beets
 method: oven_roast
@@ -6,7 +6,7 @@ name: Roasted Beets × Oven Roast
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables
----
+-->
 # Roasted Beets × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

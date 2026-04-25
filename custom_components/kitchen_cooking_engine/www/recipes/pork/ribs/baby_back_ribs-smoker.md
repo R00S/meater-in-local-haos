@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: baby_back_ribs
 method: smoker
@@ -6,7 +6,7 @@ name: Baby Back Ribs × Smoker
 category: pork
 meat: pig
 cut_type: Ribs
----
+-->
 # Baby Back Ribs × Smoker — Recipe Temperature Research
 
 ## Cut profile

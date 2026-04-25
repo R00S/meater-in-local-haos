@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: bell_peppers
 method: saute
@@ -6,7 +6,7 @@ name: Bell Peppers × Sauté
 category: vegetables
 meat: peppers
 cut_type: Peppers
----
+-->
 # Bell Peppers × Saute — Recipe Temperature Research
 
 ## Cut profile

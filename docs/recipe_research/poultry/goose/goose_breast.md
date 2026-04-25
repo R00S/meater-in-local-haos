@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: goose_breast
 name: Goose Breast
@@ -9,35 +9,36 @@ usda_safe_c: 74
 usda_safe_f: 165
 recommended_doneness: medium_rare
 methods:
-  - oven_roast
-  - pan_sear
+- oven_roast
+- pan_sear
 doneness:
-  - name: medium_rare
-    target_c: 54
-    target_f: 130
-    min_c: 52
-    min_f: 125
-    max_c: 57
-    max_f: 135
-    usda_safe: false
-    recommended: true
-  - name: medium
-    target_c: 60
-    target_f: 140
-    min_c: 57
-    min_f: 135
-    max_c: 63
-    max_f: 145
-    usda_safe: false
-  - name: safe
-    target_c: 74
-    target_f: 165
-    min_c: 74
-    min_f: 165
-    max_c: 77
-    max_f: 170
-    usda_safe: true
-    recommended: true---
+- name: medium_rare
+  target_c: 54
+  target_f: 130
+  min_c: 52
+  min_f: 125
+  max_c: 57
+  max_f: 135
+  usda_safe: false
+  recommended: true
+- name: medium
+  target_c: 60
+  target_f: 140
+  min_c: 57
+  min_f: 135
+  max_c: 63
+  max_f: 145
+  usda_safe: false
+- name: safe
+  target_c: 74
+  target_f: 165
+  min_c: 74
+  min_f: 165
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+  recommended: true
+-->
 # Goose Breast — Cut Overview
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: roasted_tomatoes
 method: air_fryer
@@ -6,7 +6,7 @@ name: Roasted Tomatoes × Air Fryer
 category: vegetables
 meat: tomatoes
 cut_type: Tomatoes
----
+-->
 # Roasted Tomatoes × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

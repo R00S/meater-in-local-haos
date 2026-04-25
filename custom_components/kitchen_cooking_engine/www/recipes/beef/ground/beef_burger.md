@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: beef_burger
 name: Beef Burger / Ground Beef Patty
@@ -9,20 +9,21 @@ usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: well_done
 methods:
-  - air_fryer
-  - charcoal_grill
-  - grill
-  - pan_fry
+- air_fryer
+- charcoal_grill
+- grill
+- pan_fry
 doneness:
-  - name: well_done
-    target_c: 71
-    target_f: 160
-    min_c: 71
-    min_f: 160
-    max_c: 77
-    max_f: 170
-    usda_safe: true
-    recommended: true---
+- name: well_done
+  target_c: 71
+  target_f: 160
+  min_c: 71
+  min_f: 160
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+  recommended: true
+-->
 # Beef Burger / Ground Beef Patty — Cut Overview
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: flank_steak
 method: grill
@@ -6,7 +6,7 @@ name: Flank Steak × Grill
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Flank Steak × Grill — Recipe Temperature Research
 
 ## Cut profile

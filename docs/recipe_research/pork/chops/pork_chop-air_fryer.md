@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_chop
 method: air_fryer
@@ -6,7 +6,7 @@ name: Pork Chop × Air Fryer
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin
----
+-->
 # Pork Chop × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

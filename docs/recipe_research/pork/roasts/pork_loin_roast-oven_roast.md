@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_loin_roast
 method: oven_roast
@@ -6,7 +6,7 @@ name: Pork Loin Roast × Oven Roast
 category: pork
 meat: pig
 cut_type: Roasts
----
+-->
 # Pork Loin Roast × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

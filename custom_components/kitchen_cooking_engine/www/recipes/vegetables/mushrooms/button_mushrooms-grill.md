@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: button_mushrooms
 method: grill
@@ -6,7 +6,7 @@ name: Button/Cremini Mushrooms × Grill
 category: vegetables
 meat: mushrooms
 cut_type: Mushrooms
----
+-->
 # Button Mushrooms × Grill — Recipe Temperature Research
 
 ## Cut profile

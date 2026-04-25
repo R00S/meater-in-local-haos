@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: asparagus
 method: grill
@@ -6,7 +6,7 @@ name: Asparagus × Grill
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
----
+-->
 # Asparagus × Grill — Recipe Temperature Research
 
 ## Cut profile

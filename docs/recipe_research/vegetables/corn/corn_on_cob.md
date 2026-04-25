@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: corn_on_cob
 name: Corn on the Cob
@@ -6,29 +6,30 @@ category: vegetables
 meat: corn
 cut_type: Corn
 methods:
-  - air_fryer
-  - boil
-  - grill
-  - oven_roast
-  - steam
+- air_fryer
+- boil
+- grill
+- oven_roast
+- steam
 doneness:
-  - name: tender
-    target_c: 95
-    target_f: 203
-    min_c: 90
-    min_f: 195
-    max_c: 100
-    max_f: 212
-    usda_safe: true
-    recommended: true
-  - name: charred
-    target_c: 200
-    target_f: 390
-    min_c: 175
-    min_f: 350
-    max_c: 230
-    max_f: 450
-    usda_safe: true---
+- name: tender
+  target_c: 95
+  target_f: 203
+  min_c: 90
+  min_f: 195
+  max_c: 100
+  max_f: 212
+  usda_safe: true
+  recommended: true
+- name: charred
+  target_c: 200
+  target_f: 390
+  min_c: 175
+  min_f: 350
+  max_c: 230
+  max_f: 450
+  usda_safe: true
+-->
 # Corn on the Cob — Cut Overview
 
 ## Cut profile

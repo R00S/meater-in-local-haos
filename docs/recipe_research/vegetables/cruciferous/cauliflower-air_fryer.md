@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: cauliflower
 method: air_fryer
@@ -6,7 +6,7 @@ name: Cauliflower × Air Fryer
 category: vegetables
 meat: cruciferous
 cut_type: Cruciferous
----
+-->
 # Cauliflower × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

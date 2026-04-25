@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: bell_peppers
 method: grill
@@ -6,7 +6,7 @@ name: Bell Peppers × Grill
 category: vegetables
 meat: peppers
 cut_type: Peppers
----
+-->
 # Bell Peppers × Grill — Recipe Temperature Research
 
 ## Cut profile

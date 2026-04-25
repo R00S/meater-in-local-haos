@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: goose_breast
 method: pan_sear
@@ -6,7 +6,7 @@ name: Goose Breast × Pan Sear
 category: poultry
 meat: goose
 cut_type: Goose
----
+-->
 # Goose Breast × Pan Sear — Recipe Temperature Research
 
 ## Tree position

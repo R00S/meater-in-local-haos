@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: roasted_beets
 name: Roasted Beets
@@ -6,17 +6,18 @@ category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables
 methods:
-  - oven_roast
+- oven_roast
 doneness:
-  - name: tender
-    target_c: 95
-    target_f: 203
-    min_c: 90
-    min_f: 195
-    max_c: 100
-    max_f: 212
-    usda_safe: true
-    recommended: true---
+- name: tender
+  target_c: 95
+  target_f: 203
+  min_c: 90
+  min_f: 195
+  max_c: 100
+  max_f: 212
+  usda_safe: true
+  recommended: true
+-->
 # Roasted Beets — Cut Overview
 
 ## Cut profile

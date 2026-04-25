@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: cabbage
 name: Cabbage
@@ -6,28 +6,29 @@ category: vegetables
 meat: cruciferous
 cut_type: Cruciferous
 methods:
-  - braise
-  - grill
-  - oven_roast
-  - saute
+- braise
+- grill
+- oven_roast
+- saute
 doneness:
-  - name: crisp_tender
-    target_c: 85
-    target_f: 185
-    min_c: 80
-    min_f: 175
-    max_c: 90
-    max_f: 195
-    usda_safe: true
-  - name: tender
-    target_c: 95
-    target_f: 203
-    min_c: 90
-    min_f: 195
-    max_c: 100
-    max_f: 212
-    usda_safe: true
-    recommended: true---
+- name: crisp_tender
+  target_c: 85
+  target_f: 185
+  min_c: 80
+  min_f: 175
+  max_c: 90
+  max_f: 195
+  usda_safe: true
+- name: tender
+  target_c: 95
+  target_f: 203
+  min_c: 90
+  min_f: 195
+  max_c: 100
+  max_f: 212
+  usda_safe: true
+  recommended: true
+-->
 # Cabbage — Cut Overview
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: butternut_squash
 method: pressure_cooker
@@ -6,7 +6,7 @@ name: Butternut Squash × Pressure Cooker
 category: vegetables
 meat: squash
 cut_type: Squash
----
+-->
 # Butternut Squash × Pressure Cooker — Recipe Temperature Research
 
 ## Cut profile

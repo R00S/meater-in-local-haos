@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_shoulder_steak
 method: pan_fry
@@ -6,7 +6,7 @@ name: Pork Shoulder Steak × Pan Fry
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin
----
+-->
 # Pork Shoulder Steak × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

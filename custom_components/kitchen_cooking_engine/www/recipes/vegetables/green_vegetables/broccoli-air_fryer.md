@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: broccoli
 method: air_fryer
@@ -6,7 +6,7 @@ name: Broccoli × Air Fryer
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
----
+-->
 # Broccoli × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

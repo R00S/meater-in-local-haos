@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_cheek
 method: braise
@@ -6,7 +6,7 @@ name: Pork Cheek × Braise
 category: pork
 meat: pig
 cut_type: Other / Offal
----
+-->
 # Pork Cheek × Braise — Recipe Temperature Research
 
 ## Cut profile

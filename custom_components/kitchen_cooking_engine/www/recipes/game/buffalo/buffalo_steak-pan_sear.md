@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: buffalo_steak
 method: pan_sear
@@ -6,7 +6,7 @@ name: Buffalo Steak × Pan Sear
 category: game
 meat: buffalo
 cut_type: Buffalo
----
+-->
 # Buffalo Steak × Pan Sear — Recipe Temperature Research
 
 ## Tree position

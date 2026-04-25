@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: hake
 method: pan_fry
@@ -6,7 +6,7 @@ name: Hake Fillet × Pan Fry
 category: fish
 meat: white_fish
 cut_type: White Fish
----
+-->
 # Hake × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

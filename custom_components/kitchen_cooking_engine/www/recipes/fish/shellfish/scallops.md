@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: scallops
 name: Scallops
@@ -9,25 +9,26 @@ usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
 methods:
-  - pan_sear
+- pan_sear
 doneness:
-  - name: medium_rare
-    target_c: 46
-    target_f: 115
-    min_c: 43
-    min_f: 110
-    max_c: 49
-    max_f: 120
-    usda_safe: false
-    recommended: true
-  - name: well_done
-    target_c: 63
-    target_f: 145
-    min_c: 60
-    min_f: 140
-    max_c: 66
-    max_f: 150
-    usda_safe: true---
+- name: medium_rare
+  target_c: 46
+  target_f: 115
+  min_c: 43
+  min_f: 110
+  max_c: 49
+  max_f: 120
+  usda_safe: false
+  recommended: true
+- name: well_done
+  target_c: 63
+  target_f: 145
+  min_c: 60
+  min_f: 140
+  max_c: 66
+  max_f: 150
+  usda_safe: true
+-->
 # Scallops — Cut Overview
 
 ## Cut profile

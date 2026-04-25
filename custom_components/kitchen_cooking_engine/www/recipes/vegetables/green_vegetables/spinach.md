@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: spinach
 name: Spinach
@@ -6,18 +6,19 @@ category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
 methods:
-  - saute
-  - steam
+- saute
+- steam
 doneness:
-  - name: tender
-    target_c: 95
-    target_f: 203
-    min_c: 90
-    min_f: 195
-    max_c: 100
-    max_f: 212
-    usda_safe: true
-    recommended: true---
+- name: tender
+  target_c: 95
+  target_f: 203
+  min_c: 90
+  min_f: 195
+  max_c: 100
+  max_f: 212
+  usda_safe: true
+  recommended: true
+-->
 # Spinach — Cut Overview
 
 ## Cut profile

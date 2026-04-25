@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: leg_of_lamb
 method: grill
@@ -6,7 +6,7 @@ name: Leg of Lamb × Grill
 category: lamb
 meat: lamb
 cut_type: Roasts
----
+-->
 # Leg of Lamb × Grill — Recipe Temperature Research
 
 ## Tree position

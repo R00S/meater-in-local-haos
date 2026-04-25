@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_leg
 method: braise
@@ -6,7 +6,7 @@ name: Pork Leg Roast × Braise
 category: pork
 meat: pig
 cut_type: Roasts
----
+-->
 # Pork Leg / Hock × Braise — Recipe Temperature Research
 
 ## Tree position

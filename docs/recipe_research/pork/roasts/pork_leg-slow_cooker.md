@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_leg
 method: slow_cooker
@@ -6,7 +6,7 @@ name: Pork Leg Roast × Slow Cooker
 category: pork
 meat: pig
 cut_type: Roasts
----
+-->
 # Pork Leg / Hock × Slow Cooker — Recipe Temperature Research
 
 ## Tree position

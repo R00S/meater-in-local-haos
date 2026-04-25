@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_belly
 method: braise
@@ -6,7 +6,7 @@ name: Pork Belly × Braise
 category: pork
 meat: pig
 cut_type: Roasts
----
+-->
 # Pork Belly × Braise — Recipe Temperature Research
 
 ## Cut profile

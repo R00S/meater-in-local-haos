@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: cabbage
 method: grill
@@ -6,7 +6,7 @@ name: Cabbage × Grill
 category: vegetables
 meat: cruciferous
 cut_type: Cruciferous
----
+-->
 # Cabbage × Grill — Recipe Temperature Research
 
 ## Cut profile

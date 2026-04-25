@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: butternut_squash
 method: steam
@@ -6,7 +6,7 @@ name: Butternut Squash × Steam
 category: vegetables
 meat: squash
 cut_type: Squash
----
+-->
 # Butternut Squash × Steam — Recipe Temperature Research
 
 ## Cut profile

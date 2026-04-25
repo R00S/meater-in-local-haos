@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: buffalo_burger
 method: pan_fry
@@ -6,7 +6,7 @@ name: Burger × Pan Fry
 category: game
 meat: buffalo
 cut_type: Buffalo
----
+-->
 # Buffalo Burger × Pan Fry — Recipe Temperature Research
 
 ## Tree position

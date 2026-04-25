@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: ny_strip
 method: pan_sear
@@ -6,7 +6,7 @@ name: New York Strip × Pan Sear
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Ny Strip × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

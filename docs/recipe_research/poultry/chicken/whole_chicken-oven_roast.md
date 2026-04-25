@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: whole_chicken
 method: oven_roast
@@ -6,7 +6,7 @@ name: Whole Chicken × Oven Roast
 category: poultry
 meat: chicken
 cut_type: Whole
----
+-->
 # Whole Chicken × Oven Roast — Recipe Temperature Research
 
 ## Tree position

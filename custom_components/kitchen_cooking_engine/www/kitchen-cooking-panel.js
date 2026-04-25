@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 25 Apr 2026, 09:20 CET
+ * AUTO-GENERATED: 25 Apr 2026, 09:57 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 25 Apr 2026, 09:20 CET
+// Last generated: 25 Apr 2026, 09:57 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -16555,10 +16555,16 @@ const I18N_STRINGS = {
 
 // Recipe research index: cut_slug → { method_slug: url_path }
 const RECIPE_INDEX = {
+  "ostrich_fillet": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/game/ostrich/ostrich_fillet.md"
+  },
   "ostrich_steak": {
     "grill": "/kitchen_cooking_engine_panel/recipes/game/ostrich/ostrich_steak-grill.md",
     "pan_sear": "/kitchen_cooking_engine_panel/recipes/game/ostrich/ostrich_steak-pan_sear.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/game/ostrich/ostrich_steak.md"
+  },
+  "venison_leg": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/game/venison/venison_leg.md"
   },
   "venison_loin": {
     "pan_sear": "/kitchen_cooking_engine_panel/recipes/game/venison/venison_loin-pan_sear.md",
@@ -16567,6 +16573,9 @@ const RECIPE_INDEX = {
   "venison_roast": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/game/venison/venison_roast-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/game/venison/venison_roast.md"
+  },
+  "venison_shoulder": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/game/venison/venison_shoulder.md"
   },
   "venison_steak": {
     "grill": "/kitchen_cooking_engine_panel/recipes/game/venison/venison_steak-grill.md",
@@ -16607,10 +16616,19 @@ const RECIPE_INDEX = {
     "slow_cooker": "/kitchen_cooking_engine_panel/recipes/game/mutton/mutton_shoulder-slow_cooker.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/game/mutton/mutton_shoulder.md"
   },
+  "mutton_shoulder_alt": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/game/mutton/mutton_shoulder_alt.md"
+  },
+  "kangaroo_fillet": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/game/kangaroo/kangaroo_fillet.md"
+  },
   "kangaroo_steak": {
     "grill": "/kitchen_cooking_engine_panel/recipes/game/kangaroo/kangaroo_steak-grill.md",
     "pan_sear": "/kitchen_cooking_engine_panel/recipes/game/kangaroo/kangaroo_steak-pan_sear.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/game/kangaroo/kangaroo_steak.md"
+  },
+  "reindeer_loin": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/game/reindeer/reindeer_loin.md"
   },
   "reindeer_roast": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/game/reindeer/reindeer_roast-oven_roast.md",
@@ -16629,6 +16647,9 @@ const RECIPE_INDEX = {
   "goat_leg": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_leg-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_leg.md"
+  },
+  "goat_leg_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_leg_roast.md"
   },
   "goat_shank": {
     "braise": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_shank-braise.md",
@@ -16655,6 +16676,9 @@ const RECIPE_INDEX = {
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/game/buffalo/buffalo_burger-pan_fry.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/game/buffalo/buffalo_burger.md"
   },
+  "buffalo_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/game/buffalo/buffalo_roast.md"
+  },
   "buffalo_steak": {
     "grill": "/kitchen_cooking_engine_panel/recipes/game/buffalo/buffalo_steak-grill.md",
     "pan_sear": "/kitchen_cooking_engine_panel/recipes/game/buffalo/buffalo_steak-pan_sear.md",
@@ -16680,14 +16704,26 @@ const RECIPE_INDEX = {
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/beef/ground/beef_burger-pan_fry.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/ground/beef_burger.md"
   },
+  "burger": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/burger.md"
+  },
   "ground_beef": {
     "braise": "/kitchen_cooking_engine_panel/recipes/beef/ground/ground_beef-braise.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/beef/ground/ground_beef-pan_fry.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/ground/ground_beef.md"
   },
+  "liver": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/beef/ground/liver.md"
+  },
   "meatloaf": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/beef/ground/meatloaf-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/ground/meatloaf.md"
+  },
+  "meatloaf_alt": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/beef/ground/meatloaf_alt.md"
+  },
+  "tongue": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/beef/ground/tongue.md"
   },
   "filet_mignon": {
     "air_fryer": "/kitchen_cooking_engine_panel/recipes/beef/steaks/filet_mignon-air_fryer.md",
@@ -16799,6 +16835,12 @@ const RECIPE_INDEX = {
     "pan_sear": "/kitchen_cooking_engine_panel/recipes/beef/offal/beef_liver-pan_sear.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/offal/beef_liver.md"
   },
+  "beef_rib": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/beef/offal/beef_rib.md"
+  },
+  "beef_shin": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/beef/offal/beef_shin.md"
+  },
   "beef_tongue": {
     "braise": "/kitchen_cooking_engine_panel/recipes/beef/offal/beef_tongue-braise.md",
     "slow_cooker": "/kitchen_cooking_engine_panel/recipes/beef/offal/beef_tongue-slow_cooker.md",
@@ -16817,13 +16859,40 @@ const RECIPE_INDEX = {
     "braise": "/kitchen_cooking_engine_panel/recipes/beef/braising/chuck_roast-braise.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/braising/chuck_roast.md"
   },
+  "short_ribs": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/beef/braising/short_ribs.md"
+  },
   "beef_tenderloin_roast": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/beef/roasts/beef_tenderloin_roast-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/beef_tenderloin_roast.md"
   },
+  "chuck": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/chuck.md"
+  },
   "prime_rib": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/beef/roasts/prime_rib-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/prime_rib.md"
+  },
+  "roasting_joint": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/roasting_joint.md"
+  },
+  "round_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/round_roast.md"
+  },
+  "rump": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/rump.md"
+  },
+  "rump_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/rump_roast.md"
+  },
+  "sirloin_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/sirloin_roast.md"
+  },
+  "sirloin_tip_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/sirloin_tip_roast.md"
+  },
+  "top_round_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/top_round_roast.md"
   },
   "goose_breast": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/poultry/goose/goose_breast-oven_roast.md",
@@ -16849,6 +16918,9 @@ const RECIPE_INDEX = {
     "pan_sear": "/kitchen_cooking_engine_panel/recipes/poultry/duck/duck_breast-pan_sear.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/duck/duck_breast.md"
   },
+  "duck_leg_confit": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/duck/duck_leg_confit.md"
+  },
   "whole_duck": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/poultry/duck/whole_duck-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/duck/whole_duck.md"
@@ -16869,9 +16941,21 @@ const RECIPE_INDEX = {
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/poultry/turkey/turkey_burger-pan_fry.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/turkey/turkey_burger.md"
   },
+  "turkey_ground": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/turkey/turkey_ground.md"
+  },
+  "turkey_leg": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/turkey/turkey_leg.md"
+  },
+  "turkey_thigh": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/turkey/turkey_thigh.md"
+  },
   "whole_turkey": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/poultry/turkey/whole_turkey-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/turkey/whole_turkey.md"
+  },
+  "breast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/breast.md"
   },
   "chicken_breast": {
     "air_fryer": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_breast-air_fryer.md",
@@ -16879,6 +16963,9 @@ const RECIPE_INDEX = {
     "oven_bake": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_breast-oven_bake.md",
     "pan_sear": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_breast-pan_sear.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_breast.md"
+  },
+  "chicken_breast_bone_in": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_breast_bone_in.md"
   },
   "chicken_burger": {
     "air_fryer": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_burger-air_fryer.md",
@@ -16900,15 +16987,27 @@ const RECIPE_INDEX = {
     "air_fryer": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_wing-air_fryer.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_wing.md"
   },
+  "ground": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/ground.md"
+  },
   "ground_chicken": {
     "braise": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/ground_chicken-braise.md",
     "grill": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/ground_chicken-grill.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/ground_chicken-pan_fry.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/ground_chicken.md"
   },
+  "leg": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/leg.md"
+  },
+  "thigh": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/thigh.md"
+  },
   "whole_chicken": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/whole_chicken-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/whole_chicken.md"
+  },
+  "wing": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/wing.md"
   },
   "asparagus": {
     "grill": "/kitchen_cooking_engine_panel/recipes/vegetables/green_vegetables/asparagus-grill.md",
@@ -17088,6 +17187,9 @@ const RECIPE_INDEX = {
     "sous_vide": "/kitchen_cooking_engine_panel/recipes/fish/salmon/salmon_fillet-sous_vide.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/salmon/salmon_fillet.md"
   },
+  "salmon_steak": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/fish/salmon/salmon_steak.md"
+  },
   "lobster_tail": {
     "grill": "/kitchen_cooking_engine_panel/recipes/fish/shellfish/lobster_tail-grill.md",
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/fish/shellfish/lobster_tail-oven_roast.md",
@@ -17143,15 +17245,33 @@ const RECIPE_INDEX = {
     "grill": "/kitchen_cooking_engine_panel/recipes/lamb/ground/lamb_burger-grill.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/lamb/ground/lamb_burger.md"
   },
+  "lamb_crown_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/lamb/ground/lamb_crown_roast.md"
+  },
   "lamb_kofta": {
     "grill": "/kitchen_cooking_engine_panel/recipes/lamb/ground/lamb_kofta-grill.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/lamb/ground/lamb_kofta.md"
+  },
+  "lamb_rib_rack": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/lamb/ground/lamb_rib_rack.md"
+  },
+  "lamb_brisket": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/lamb_brisket.md"
+  },
+  "lamb_loin_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/lamb_loin_roast.md"
   },
   "lamb_neck": {
     "braise": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/lamb_neck-braise.md",
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/lamb_neck-oven_roast.md",
     "slow_cooker": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/lamb_neck-slow_cooker.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/lamb_neck.md"
+  },
+  "lamb_rib": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/lamb_rib.md"
+  },
+  "lamb_rump": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/lamb_rump.md"
   },
   "lamb_shank": {
     "braise": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/lamb_shank-braise.md",
@@ -17185,6 +17305,9 @@ const RECIPE_INDEX = {
     "pan_sear": "/kitchen_cooking_engine_panel/recipes/lamb/chops/lamb_loin_chops-pan_sear.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/lamb/chops/lamb_loin_chops.md"
   },
+  "lamb_neck_filet": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/lamb/chops/lamb_neck_filet.md"
+  },
   "baby_back_ribs": {
     "air_fryer": "/kitchen_cooking_engine_panel/recipes/pork/ribs/baby_back_ribs-air_fryer.md",
     "grill": "/kitchen_cooking_engine_panel/recipes/pork/ribs/baby_back_ribs-grill.md",
@@ -17195,6 +17318,9 @@ const RECIPE_INDEX = {
   "spare_ribs": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/pork/ribs/spare_ribs-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/ribs/spare_ribs.md"
+  },
+  "st_louis_ribs": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/pork/ribs/st_louis_ribs.md"
   },
   "ground_pork": {
     "braise": "/kitchen_cooking_engine_panel/recipes/pork/ground/ground_pork-braise.md",
@@ -17210,11 +17336,23 @@ const RECIPE_INDEX = {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/pork/ham/fresh_ham-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/ham/fresh_ham.md"
   },
+  "cheek": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/pork/offal/cheek.md"
+  },
+  "jowl": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/pork/offal/jowl.md"
+  },
+  "liver_pork": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/pork/offal/liver_pork.md"
+  },
   "pork_cheek": {
     "braise": "/kitchen_cooking_engine_panel/recipes/pork/offal/pork_cheek-braise.md",
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/pork/offal/pork_cheek-oven_roast.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/pork/offal/pork_cheek-pan_fry.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/offal/pork_cheek.md"
+  },
+  "pork_jowl": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/pork/offal/pork_jowl.md"
   },
   "pork_liver": {
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/pork/offal/pork_liver-pan_fry.md",
@@ -17226,9 +17364,18 @@ const RECIPE_INDEX = {
     "slow_cooker": "/kitchen_cooking_engine_panel/recipes/pork/offal/pork_tongue-slow_cooker.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/offal/pork_tongue.md"
   },
+  "baby_back_ribs_alt": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/baby_back_ribs_alt.md"
+  },
+  "belly": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/belly.md"
+  },
   "cured_ham": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/pork/roasts/cured_ham-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/cured_ham.md"
+  },
+  "ham": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/ham.md"
   },
   "pork_belly": {
     "air_fryer": "/kitchen_cooking_engine_panel/recipes/pork/roasts/pork_belly-air_fryer.md",
@@ -17256,6 +17403,15 @@ const RECIPE_INDEX = {
     "slow_cooker": "/kitchen_cooking_engine_panel/recipes/pork/roasts/pork_shoulder-slow_cooker.md",
     "smoker": "/kitchen_cooking_engine_panel/recipes/pork/roasts/pork_shoulder-smoker.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/pork_shoulder.md"
+  },
+  "spare_ribs_alt": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/spare_ribs_alt.md"
+  },
+  "st_louis_ribs_alt": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/st_louis_ribs_alt.md"
+  },
+  "virginia_ham": {
+    "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/virginia_ham.md"
   },
   "pork_chop": {
     "air_fryer": "/kitchen_cooking_engine_panel/recipes/pork/chops/pork_chop-air_fryer.md",
@@ -17289,9 +17445,12 @@ const RECIPE_INDEX = {
 
 // Cut profile texts extracted from recipe research files
 const CUT_PROFILES = {
+  "ostrich_fillet": "*Placeholder — cut profile research not yet completed.*",
   "ostrich_steak": "Ostrich (*Struthio camelus*) steak is produced primarily in South Africa, Namibia, and increasingly in France, Belgium, and Germany. Despite being a bird, ostrich meat is red, very low in fat, and treated culinarily exactly like beef or venison. Fan fillet (outerfilé) and top loin are the main steak cuts. The meat is extremely lean and must not be overcooked: medium-rare (54–57 °C) is the South African standard. Above 70 °C the meat becomes tough and liver-like.\n\n\nTarget internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pull at 52 °C and rest.",
+  "venison_leg": "*Placeholder — cut profile research not yet completed.*",
   "venison_loin": "Venison loin (also: backstrap, saddle, or haunch steak — depending on country) from roe deer (*Capreolus capreolus*) or red deer (*Cervus elaphus*) is the premium pan-searing cut. The meat is very lean, deep red-brown, and has a rich, gamey flavour prized throughout European cooking. Pan-searing 2–3 minutes per side over high heat is the standard technique; the meat is universally pulled at medium-rare to medium to avoid dryness.\n\nKöket.se temperature guide (Sweden):\n- Rådjur/hjort ytterfilé & filé: rare 52 °C, medium 57 °C, well done 65 °C\n- Stekdetaljer: 55/62/68 °C\n\n\nVenison loin (also: backstrap, saddle, or haunch steak — depending on country) from roe deer (*Capreolus capreolus*) or red deer (*Cervus elaphus*) is the premium pan-searing cut. The meat is very lean, deep red-brown, and has a rich, gamey flavour prized throughout European cooking. Pan-searing 2–3 minutes per side over high heat is the standard technique; the meat is universally pulled at medium-rare to medium to avoid dryness.\n- Rådjur/hjort ytterfilé & filé: rare 52 °C, medium 57 °C, well done 65 °C\n- Stekdetaljer: 55/62/68 °C",
   "venison_roast": "Venison haunch or saddle roast is a classic British, German, French, and Scandinavian festive dish. The typical method: dry-age if possible, then sear all over in a hot pan and finish in the oven (180–200 °C for medium/well, or low 120–140 °C for precision doneness with a probe). The saddle in particular is a show-piece roast in Michelin-star British cooking.\n\n\nTarget internal temperature: **55–60 °C (131–140 °F)** for a pink, moist result. Some German recipes use the \"Niedergarmethode\" (low-temperature method) at 80–90 °C to hit exactly 58 °C core.",
+  "venison_shoulder": "*Placeholder — cut profile research not yet completed.*",
   "venison_steak": "Venison steak most commonly refers to cuts from the haunch (hindleg), loin, or backstrap of deer — typically roe deer (*Capreolus capreolus*), red deer (*Cervus elaphus*), or fallow deer (*Dama dama*). The backstrap and loin medallions are prized for pan searing: they are fine-grained, lean, and quick-cooking. The meat is deep-red and intensely flavoured, with very little intramuscular fat.\n\nBecause venison is so lean, it must be cooked hot and fast to prevent drying. Pan searing in butter or oil over high heat for 2–5 minutes per side achieves a caramelised crust while keeping the centre rare to medium-rare. Resting is critical — at least 5 minutes — to allow juice redistribution.\n\nThe European tradition across the UK, Germany, Scandinavia and Italy pairs venison with acidic or fruity sauces (blackberry, lingonberry, cloudberry, redcurrant, balsamic) that cut the richness of the meat. Nordic cooks often finish fillets in the oven at low heat (125°C) after searing, using a thermometer to hit exactly 60°C. UK and North American cooks tend to pan-fry direct.\n\n\nTarget internal temperature: pull at **54–57°C (130–135°F)** for medium-rare. Venison dries out rapidly above 65°C and should never be cooked to well-done.",
   "rabbit_legs": "Rabbit (*Oryctolagus cuniculus*) legs (front and hind) are the most commonly braised cut. The hind legs carry more meat and are the prime braising cut; the front legs are often included for flavour. Rabbit is lean, low in fat, and prone to drying if overcooked — braising in wine, stock, or cream keeps the meat moist while allowing the connective tissue to break down.\n\nThe French tradition (lapin aux pruneaux, lapin à la moutarde) is the most internationally recognised; German, Italian, and British traditions also have strong recipes. Braising time: 45–75 minutes. The meat should be fork-tender and pulling away from the bone.\n\n\nTarget internal temperature: **74–77 °C (165–175 °F)** — rabbit, like chicken, should be cooked through. Fork-tender braised rabbit reads 74–80 °C.",
   "rabbit_saddle": "The rabbit saddle is the backbone section of the rabbit bearing two boneless loins\nand, when left bone-in, thin belly flaps that protect the loins during roasting.\nOven roasting suits the saddle particularly when it is stuffed, tied, or cooked\nbone-in as a whole piece: the oven's dry, even heat browns the exterior more gently\nand uniformly than a stovetop pan, and the belly flaps — which would burn in a pan\n— insulate the loins and add a thin layer of fat that bastes the meat from the\ninside. The saddle is lean enough that it needs a hot oven (190–200°C) to brown\nbefore the interior overcooks; conversely, finishing times are short (10–15 minutes)\nand carryover is 2–3°C, so the cut demands close monitoring. Stuffed or rolled\nsaddle (farce or ballotine style) can tolerate a slightly lower oven and longer\ntime because the stuffing moderates heat transfer into the loin.\n\n\ninside. The saddle is lean enough that it needs a hot oven (190–200°C) to brown\nand carryover is 2–3°C, so the cut demands close monitoring. Stuffed or rolled",
@@ -17300,23 +17459,32 @@ const CUT_PROFILES = {
   "mutton_chop": "Mutton refers to the meat of a sheep older than one year (typically 2–4 years), with a stronger, more pronounced flavour than lamb. Mutton chops (loin or shoulder chops) are popular in Germany, the UK, the Middle East, and South Asia. The stronger flavour benefits from aromatic seasoning (garlic, onion, thyme, cumin) and the meat is typically cooked through — medium to well-done — rather than pink.\n\n\nTarget internal temperature: **70–74 °C (158–165 °F)**.",
   "mutton_leg": "A whole mutton leg (bone-in, 2–3 kg) is a festive cut in the Middle East, Pakistan, Afghanistan, UK, and parts of Europe. Its strong, mature flavour benefits from marinating and long, slow oven roasting. Most traditions roast at 160–180 °C for 2.5–4 hours, covered for the majority of the time to prevent drying.\n\n\nTarget internal temperature: **75–80 °C (167–176 °F)** for fully cooked, still juicy. Some Pakistani and Indian recipes cook to 85 °C for fall-apart texture.",
   "mutton_shoulder": "Mutton shoulder is a heavily worked, intensely flavoured cut from an older animal (12 months or more). The extra age means deeper flavour but also denser connective tissue, requiring longer braising times than lamb — typically 2.5–3.5 hours on the stovetop or 3–4 hours in the oven. When braised low and slow, the shoulder yields incredibly rich, yielding meat that is the centrepiece of Indian korma, Turkish tandır, and Italian stuffed shoulder (spalla) traditions. Mutton benefits from full-bodied braising liquids — wine, yoghurt, spiced stocks — that can stand up to its assertive flavour. The MEATER probe is inserted through the thickest muscle of the shoulder, well away from the shoulder blade bone.\n\n\nTarget internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bone; mutton shoulder may need 90–95 °C due to the older animal's denser tissue.",
+  "mutton_shoulder_alt": "*Placeholder — cut profile research not yet completed.*",
+  "kangaroo_fillet": "*Placeholder — cut profile research not yet completed.*",
   "kangaroo_steak": "Kangaroo (*Macropus* spp.) steak, most commonly from the hindquarter/rump or loin fillet, is one of the leanest red meats available — typically less than 2% fat. The meat is deep crimson, with a slightly gamy, iron-rich flavour. Because of its extreme leanness, kangaroo must be cooked hot and fast to prevent drying: pan-searing for 2–3 minutes per side over high heat achieves a seared crust while keeping the interior rare to medium-rare. Cooking beyond medium results in a dry, liver-textured product.\n\n\nTarget internal temperature: **54–57 °C (130–135 °F)** for medium-rare. Many Australian cooks pull at 50–52 °C for a warm-red centre. Well-done is strongly discouraged.",
+  "reindeer_loin": "*Placeholder — cut profile research not yet completed.*",
   "reindeer_roast": "Reindeer roast (renstek) is a traditional Sami and Scandinavian festive dish. The round/topside (innanlår) or saddle is the most common cut. The Scandinavian method: sear in a hot pan, then finish in a very low oven (100–125 °C) with the probe inserted to achieve precise doneness without risk of overcooking the lean meat. The traditional accompaniment is cream sauce with lingonberries.\n\n\nTarget internal temperature: **57–62 °C (135–144 °F)** for medium. Pull at 55 °C and rest.",
   "reindeer_steak": "Reindeer (*Rangifer tarandus*) is the traditional game meat of Sápmi (Lapland), northern Finland, Norway, and Sweden. The fillet (renfilé) and backstrap (sadel) are the premium cuts for pan searing. Reindeer meat is very lean, deep red, and has a delicate sweet-earthy flavour milder than moose. Because of its leanness it must be treated like venison: high heat, short cooking time, pulled well below well-done. Medium-rare (57 °C) is the Nordic standard.\n\n\nTarget internal temperature: **55–57 °C (131–135 °F)** for medium (Nordic preference). Pull at 52 °C.",
   "goat_chop": "Goat loin or rib chops are popular throughout West Africa, the Caribbean, South Asia, the Middle East, and the Mediterranean. The meat is leaner than lamb with a slightly stronger, more aromatic flavour. Pan searing is typically done at high heat with marinades containing aromatic spices (cumin, coriander, ginger, garlic). Like lamb, goat chops are served medium to well-done.\n\n\nTarget internal temperature: **70–74 °C (158–165 °F)**.",
   "goat_leg": "Whole roasted goat leg is a festive preparation in Germany (Ziegenkeule), Greece (katsiki sto fourno), the Caribbean, South and West Africa, and across the Middle East. The meat has moderate fat and benefits from marinating (especially in buttermilk, yoghurt, or wine) to reduce gaminess. Slow oven roasting at 160–200 °C for 2–3 hours gives the best result.\n\n\nTarget internal temperature: **75–82 °C (167–180 °F)** for fully cooked, moist goat.",
+  "goat_leg_roast": "*Placeholder — cut profile research not yet completed.*",
   "goat_shank": "A goat shank (Swedish *getlägg*) is the lower portion of the animal's leg — heavily worked, dense with collagen, intramuscular fat (limited; goat is leaner than lamb) and bone marrow. Like the lamb shank, it is a quintessentially braising cut: tough beyond chewing if cooked to medium-rare, but transformed by long, slow cooking in liquid into fork-tender, gelatin-rich meat that falls off the bone. Internal temperature is the wrong metric: the cut needs time at 88–93 °C internal (the collagen-melting band) for 1.5–2 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, parallel to the bone (avoid touching bone).",
   "goat_shoulder": "Goat shoulder (Swedish *getskuldra* / *getbog*) is the upper foreleg — heavily worked, dense with collagen and intramuscular fat. Like the lamb shoulder, it is a quintessentially low-and-slow cut: tough beyond chewing if cooked to medium-rare, but transformed by long, wet cooking into fork-tender, gelatin-rich meat that pulls in long strands. Internal temperature is necessary but insufficient: the cut needs time at 88–93 °C internal for 2–3 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, away from bone or large connective sheets.",
   "moose_roast": "Moose (*Alces alces*) — called älg in Swedish, elg in Norwegian, and Elch in German — is the largest deer species in the Northern Hemisphere. The hindquarter roast (haunch/shoulder) has deep, dark red meat with minimal fat and a distinctive game flavour. Moose roast is best cooked slowly: high initial heat to develop a crust, then low, slow oven roasting (125–160 °C) with basting, aiming for a core temperature that gives a pink but safe result. The Swedish tradition uses cream and lingonberry as accompaniments.\n\n\nTarget internal temperature: **60–65 °C (140–149 °F)** for medium (pink centre); **70 °C (158 °F)** for fully cooked. The Swedish national tradition prefers 60–65 °C.",
   "moose_steak": "Moose steak (Elchsteak / älgbiff) is cut from the loin or haunch. It is very lean with a rich, earthy flavour. Grilling over high heat for a short time is the traditional Nordic approach; the meat should be seared quickly and pulled at medium-rare to prevent dryness. Marinating in oil and acidic components (wine, vinegar, lemon) before grilling is standard practice.\n\n\nTarget internal temperature: **57–62 °C (135–144 °F)** for medium-rare to medium.",
   "buffalo_burger": "Buffalo/bison burger (ground buffalo patty, grilled) is one of the most popular preparations in North America and increasingly in Europe. The lean ground meat makes for a firm, flavourful patty — it dries out quickly so most American recipes cook to medium (63 °C) rather than well-done. Adding a small amount of fat (bacon fat, olive oil) to the mix prevents dryness.\n\n\nTarget internal temperature: **70–74 °C (158–165 °F)** (ground meat food safety standard in the US and EU); some chefs serve at 63 °C (medium) as a restaurant preference.",
+  "buffalo_roast": "*Placeholder — cut profile research not yet completed.*",
   "buffalo_steak": "**Context note**: In this project, *buffalo* refers to **water buffalo** (*Bubalus bubalis* — carabao in the Philippines, bhaisa in India) rather than American bison (which is in the `bison/` category). Water buffalo is the most widely eaten large ruminant in Asia, with large production in India, China, Pakistan, and Southeast Asia. The lean, slightly sweeter, darker-red meat is typically treated like beef in most culinary traditions.\n\nGrilling water buffalo steak (carabeef) is common in India, Vietnam, and the Philippines. The meat is slightly tougher than beef and benefits from marinating.\n\n\nTarget internal temperature: **57–63 °C (135–145 °F)** for medium-rare to medium. The meat is leaner than beef and becomes tough above 70 °C.",
   "bison_burger": "Bison burger patties are made from ground bison meat, typically sourced from the shoulder, chuck, or round — the same primal cuts used for beef hamburgers. Bison is notably leaner than beef, often containing only 2–7% fat depending on the grind, compared to 15–20% in a typical beef burger blend. This leanness is both the appeal and the challenge: bison has a clean, slightly sweet, mineral-forward flavour but is prone to drying out if overcooked or if insufficient fat is present.\n\nBecause ground bison is so lean, fat management is critical. Many cooks either blend pure ground bison with a fattier cut (e.g., bison back fat or beef suet) to reach roughly 10–15% total fat, or they compensate with binding ingredients such as egg, mustard, and ketchup that add moisture and help hold the patty together. Cooking over high direct heat — whether on charcoal, a gas grill, or a cast-iron pan — is the preferred method, as it quickly builds a crust that seals in juices before the lean meat has time to dry out.\n\nFood safety regulations in most countries classify ground meat as a high-risk product requiring thorough cooking: the USDA standard for ground meat is 71 °C / 160 °F internal temperature. BBC Good Food echoes this at 70 °C. However, gourmet and restaurant preparations for trusted-source ground bison sometimes target 63–65 °C for a medium result with a pink centre. The appropriate pull temperature depends on the intended doneness, the diners' preferences, and local food safety guidelines.\n\nA MEATER probe inserted sideways into a patty gives reliable internal readings even for thin cuts, provided it is placed horizontally through the thickest part of the patty, keeping the tip and ambient sensor both clear of the grill grates.",
   "bison_roast": "Bison roast cuts are drawn from the same primals as beef roasting joints — most commonly the\nshoulder (chuck/Schulter), topside (Oberschale), silverside (Unterschale), or loin (Rücken).\nThe fillet roast (whole tenderloin) is also used in high-end German preparations. Like bison\nsteak, bison roast is substantially leaner than equivalent beef cuts: the marbling is sparse\nand the outer fat layer thin, which has two important consequences. First, a bison roast dries\nout faster in a hot oven than a comparably sized beef joint, making temperature monitoring with\na probe essential. Second, without intramuscular fat to buffer heat and provide moisture, the\noff-flavour threshold at which overcooked meat tastes \"liver-like\" is reached earlier — roughly\n65–68 °C for a roast compared to around 63 °C for a steak.\n\nThe two dominant German cooking traditions for bison roast diverge sharply in oven temperature\nbut agree on a pull temperature of approximately 60–63 °C (medium). The high-heat tradition\n(200 °C, 45–60 minutes for a 1 kg joint) produces a crisper exterior but requires careful\nattention because the meat approaches the pull temperature quickly. The low-heat tradition\n(80–90 °C, 90–120 minutes) relies on the oven temperature being close to the desired internal\ntemperature, preventing overshoot and producing an evenly pink interior across the full\ncross-section. Both traditions use an initial sharp sear to develop a Maillard crust before\nthe oven phase, since at low oven temperatures browning will not occur.\n\nUnlike bison steak, a large roast does carry some collagen from the connective tissue that\nsurrounds muscle groups — particularly in shoulder or topside cuts. However, bison roast is\nnot a braise candidate: the collagen content is insufficient to benefit from the 85–95 °C\nsustained-hold window required for full collagen conversion, and the lean muscle would be\nruined at those temperatures. The correct window is medium (60–65 °C), where the muscle is\nstill moist and pink throughout. Resting is critical for roasts: a minimum of 10 minutes\nallows the thermal gradient within the joint to equalise and the muscle fibres to reabsorb\njuices. A mozzarella-mustard herb crust, applied before the oven phase, is a distinctive\nGerman preparation that acts as an insulating layer and baste, partially compensating for\nthe low fat content.\n\n\n65–68 °C for a roast compared to around 63 °C for a steak.\nbut agree on a pull temperature of approximately 60–63 °C (medium). The high-heat tradition\n(200 °C, 45–60 minutes for a 1 kg joint) produces a crisper exterior but requires careful\nattention because the meat approaches the pull temperature quickly. The low-heat tradition\n(80–90 °C, 90–120 minutes) relies on the oven temperature being close to the desired internal\nnot a braise candidate: the collagen content is insufficient to benefit from the 85–95 °C\nruined at those temperatures. The correct window is medium (60–65 °C), where the muscle is",
   "bison_steak": "Bison (American buffalo, *Bison bison*) is a large North American bovine raised primarily on\nopen pasture. Its steaks — most commonly cut from the loin (fillet/tenderloin), rib (entrecôte/\nribeye), or striploin (sirloin) — are structurally similar to beef cuts from the same primal\npositions but differ decisively in fat content and flavour chemistry. Bison carries significantly\nless intramuscular fat than commercial beef: its marbling score is typically very low, and the\nexternal fat cap is thin. This leanness means there is very little insulating fat to slow heat\npenetration, so bison steaks cook faster than their beef equivalents and have a narrower\nwindow between perfectly cooked and overdone.\n\nThe critical temperature rule for bison steak is the most frequently repeated piece of culinary\nconsensus in all traditions: bison must always be served rare to medium-rare and must never be\ntaken past medium. The lean muscle fibres of bison, deprived of intramuscular fat that would\nlubricate the texture, become dry, chalky, and develop a distinctly unpleasant liver-like\noff-flavour when cooked beyond 65 °C. This off-note — noted explicitly in German, American,\nand French bison cooking literature — is caused by the oxidation of the comparatively high\niron content in the lean, myoglobin-rich muscle at elevated temperatures. The pull temperature\nfor a grilled bison steak is therefore 57–60 °C (medium-rare), and never above 63 °C.\n\nOn the grill, bison steak performs best over direct, high heat — charcoal (Holzkohlegrill) is\nfrequently recommended in German and North American traditions because the intense radiant\nheat of charcoal sears the exterior rapidly, creating Maillard crust without the interior\novercooking. Gas grill or cast-iron griddle are also acceptable. Because of the leanness,\nmarinating overnight is common in German tradition: the marinade provides moisture and\nflavour compounds that compensate for the lack of intramuscular fat. Resting is universally\nrecommended (5 minutes minimum) to allow the muscle fibres to relax and reabsorb juices.\nSlow low-temperature cooking (Niedrigtemperatur) is explicitly warned against for bison steak\nby German sources — while it works for collagen-rich beef cuts, for lean bison steak it\nconcentrates the liver-like off-note and dries the meat. The pan-sear + brief oven finish\nat 80 °C (as described in two German sources below) is the one acceptable exception, because\nthe sear provides Maillard flavour and the short oven time (25 min at 80 °C) simply holds\nthe meat at medium without further cooking.\n\n\noff-flavour when cooked beyond 65 °C. This off-note — noted explicitly in German, American,\niron content in the lean, myoglobin-rich muscle at elevated temperatures. The pull temperature\nfor a grilled bison steak is therefore 57–60 °C (medium-rare), and never above 63 °C.\nat 80 °C (as described in two German sources below) is the one acceptable exception, because\nthe sear provides Maillard flavour and the short oven time (25 min at 80 °C) simply holds",
   "beef_burger": "Ground beef burgers are formed patties of minced beef, most commonly from a blend of chuck (for flavour) and sirloin or brisket (for binding), with fat content typically 15–25 % by weight. Unlike whole-muscle cuts, a burger patty has no internal connective tissue structure — the grind has already disrupted muscle fibres — so the cooking challenge is heat penetration through the patty's cross-section rather than collagen conversion. The direct-heat grill creates a fierce Maillard crust on both flat faces, which is the primary flavour mechanism; the fat content keeps the interior moist even at higher internal temperatures. Carryover in a burger patty is minimal — the thin geometry dissipates heat quickly once removed from the grill — but genuine carryover occurs in thicker restaurant-style patties, making the pull-from-grill moment slightly earlier than the final target.",
+  "burger": "*Placeholder — cut profile research not yet completed.*",
   "ground_beef": "Ground beef (minced beef) is made by grinding beef, most commonly from the chuck primal or a blend of trimmings. The fat-to-lean ratio is the primary quality variable: 80/20 is standard for most preparations; 85/15 is leaner; 70/30 is richer and juicier. Because grinding ruptures muscle cells and distributes surface bacteria throughout the mass, the USDA and equivalent international food-safety authorities require a minimum internal temperature of 71°C (160°F) — there is no medium-rare option for ground beef the way there is for whole steaks. Carryover is minimal (1–2°C) given the fine grind and rapid heat transfer.",
+  "liver": "*Placeholder — cut profile research not yet completed.*",
   "meatloaf": "Meatloaf is a free-formed loaf of seasoned, bound ground meat (typically beef alone or a beef-pork-veal blend) baked in a moderate oven until cooked through. Structurally it is a colloid of ground muscle held by a panade (bread or breadcrumbs soaked in milk or stock) and bound with egg; the panade is critical because it absorbs and re-releases moisture during the bake, preventing the dry, dense loaf that pure meat-plus-egg produces. Oven temperatures of 175–190 °C give enough time for the centre to reach safe temperature without over-rendering the surface. Carryover is significant — 5–8 °C in a typical 1 kg loaf — because the loaf shape stores heat well; a 5–10 minute rest is mandatory both for carryover and for the proteins to re-absorb expressed liquid.",
+  "meatloaf_alt": "*Placeholder — cut profile research not yet completed.*",
+  "tongue": "*Placeholder — cut profile research not yet completed.*",
   "filet_mignon": "Filet mignon is cut from the narrow end (small end) of the beef tenderloin — the psoas major muscle, which runs alongside the spine and does virtually no work during the animal's life. It is the most tender cut in the carcass, with almost no intramuscular fat (marbling) or connective tissue, making it both delicate and vulnerable to drying out. The air fryer circulates very hot air around the steak at high velocity, creating convection browning on the exterior while cooking the interior — the result is a decent Maillard crust without the smoke of a grill or the fat-pooling effect of a skillet. Because filet mignon is exceptionally lean, the air fryer's hot-air convection is forgiving compared to direct-contact methods. Carryover is minimal but present — the small, round geometry of a filet mignon dissipates heat quickly after removal from the enclosed air fryer basket.",
   "flank_steak": "Flank steak is a flat, thin muscle cut from the abdominal wall of the animal (the flank primal), with long, coarse muscle fibres running visibly along its length. The cut is lean, relatively tough, and has minimal intramuscular fat — it lacks the marbling of a ribeye but compensates with bold, beefy flavour. Charcoal grilling is the quintessential method for flank steak: the high, direct radiant heat from glowing embers creates a rapid, intense Maillard crust across the wide flat surface before the interior has time to overcook. Flank steak must be cooked quickly over very high heat and sliced thinly across the grain for tenderness — cooking it slowly defeats the purpose. Carryover is minimal in a thin flank steak, but because it is typically cooked over extremely high heat, the brief internal temperature rise after removal from the grill can bring the steak from medium-rare to medium if not watched carefully.",
   "flat_iron": "The flat iron steak is taken from the infraspinatus muscle of the beef shoulder blade, separated from the central band of tough gristle that runs through the full top blade. Because the infraspinatus performs relatively little work, it retains outstanding intramuscular fat for a non-loin cut, producing deeply beefy, slightly buttery flavour comparable to ribeye at a fraction of the cost. Individual steaks are typically 200–350 g and 2–3 cm thick — a dimension that fits the air fryer's compact hot-air cabinet well. The air fryer's high-velocity convection at 200–205 °C dries the surface rapidly and drives the Maillard reaction without a dedicated grill or stovetop. Carryover is moderate, typically 2–3 °C after leaving the basket, so pulling 3 °C below the intended serving temperature is standard practice.",
@@ -17330,29 +17498,50 @@ const CUT_PROFILES = {
   "tomahawk": "The tomahawk over charcoal is the premier outdoor cooking experience — the enormous bone handle allows it to stand upright beside the coals for resting. Charcoal-grilled tomahawk requires the same reverse-sear principle as gas grill: indirect heat to bring the core up safely, then direct high heat for the crust. The Maillard reaction on the fat-cap over charcoal produces flavour compounds unavailable from gas. Use hardwood charcoal (oak, holm oak, beech) for best flavour.\n\n\nTarget internal temperatures (charcoal grill):\n- Medium-rare: **core 55–57 °C (131–135 °F)** · pull at **52–54 °C (126–129 °F)**\n- Medium: **core 60–63 °C (140–145 °F)**",
   "tri_tip": "Tri-tip on charcoal benefits from the classic Santa Maria barbecue tradition — the original Californian preparation. The key is a 2-zone charcoal setup: sear directly over the coals first for a crust, then finish on the indirect side to bring the interior to temperature safely. The tapered shape means the thin end will always be more done; probe the thickest section. Red oak is the traditional Santa Maria wood; hickory and mesquite are alternatives.\n\n\nTarget internal temperatures (charcoal grill):\n- Medium-rare: **pull at 54–57 °C (129–135 °F)**",
   "beef_liver": "Beef liver is one of the densest, most nutrient-rich offal cuts in the carcass — a chocolate-coloured, finely-textured mass of hepatocyte tissue with very little connective tissue and a thin filmy capsule. Its iron-and-mineral profile gives a pronounced metallic flavour that mellows dramatically with brief soaking in milk before cooking — a step common to most European traditions. Pan frying is the classic method: 6–8 mm slices flashed in hot fat, browned hard on both sides, and pulled before the centre passes about 65 °C. Above that temperature the proteins seize and the slice turns chalky and grey-brown; the visual cue for correctly-pulled liver is a faint pink line through the centre. Carryover is short and small (1–2 °C) given the thin slices, but the slices continue cooking on the plate — serving immediately is essential.",
+  "beef_rib": "*Placeholder — cut profile research not yet completed.*",
+  "beef_shin": "*Placeholder — cut profile research not yet completed.*",
   "beef_tongue": "Beef tongue (*Bos taurus* lingual muscle) is a single dense cylindrical muscle wrapped in a thick, papillae-covered skin. The muscle itself is rich in collagen and intramuscular fat; the skin is inedible and must be peeled after cooking — the standard method is to braise the whole tongue at 85–95 °C until the collagen converts to gelatin, then peel the skin while the tongue is still warm. Cooking times of 3–4 hours for a 1.5–2 kg tongue are standard. Carryover is essentially zero (the surrounding liquid buffers the temperature) but the tongue retains heat well after removal — the skin must be peeled within 5 minutes of lifting from the braise or it cools and tightens. Pull is timed by the texture of the muscle: a paring knife should slide in with no resistance.",
   "beef_shank": "Beef shank is the lower portion of the front (foreshank) or hind (hindshank) leg, structurally one of the most aggressively-worked muscles in the carcass: the constant motion of walking and standing builds dense bundles of muscle fibre wrapped in thick sheets of connective tissue, with a substantial central marrow bone running through cross-cut steaks (the *osso buco* preparation). Raw shank is among the toughest cuts in the animal; braised slowly for 3–4 hours at 85–95 °C, the connective tissue dissolves into rich gelatin, the marrow renders into the sauce, and the muscle becomes pull-apart tender. The bone-in cross-cut section holds shape because the connective-tissue ring around the muscle keeps it bound during the cook. Carryover is negligible — the surrounding liquid buffers temperature swings.",
   "brisket": "Beef brisket is taken from the breast and lower chest of the animal, comprising two muscles — the flat (*pectoralis profundus*) and the point (*pectoralis superficialis*) — that support much of the animal's weight. The cut is dense with collagen-rich connective tissue and interspersed fat, making it exceptionally tough when cooked quickly but extraordinarily silky and tender once held at the collagen-conversion threshold long enough for connective tissue to dissolve into gelatin. Oven roasting at low temperature replicates the gentle, prolonged dry heat that the cut demands — the enclosed oven environment retains moisture driven off from the meat, preventing the surface from desiccating during the long cook. Carryover is negligible for brisket because the high moisture content and dense mass absorb and retain heat slowly; the internal temperature barely moves after the brisket is removed from the oven.",
   "chuck_roast": "Chuck roast is cut from the shoulder region of the animal (the chuck primal, roughly ribs 1–5 and the neck), and is one of the most collagen-dense roasting cuts in the carcass. The shoulder muscles endure constant movement throughout the animal's life, producing densely bundled muscle fibres interlaced with thick seams of connective tissue and fat — a structure that is aggressively tough at low internal temperatures but transforms into richly flavoured, pull-apart tenderness when braised gently over several hours. Braising is particularly suited to chuck because the submerging or partial immersion in liquid accelerates the hydrolysis of collagen into gelatin, producing a self-thickening braising sauce and a meltingly tender interior simultaneously. Carryover is negligible for chuck in a braise because the surrounding liquid buffers against temperature swings; the meat stays at cooking temperature until removed.",
+  "short_ribs": "*Placeholder — cut profile research not yet completed.*",
   "beef_tenderloin_roast": "The beef tenderloin (psoas major) runs along the interior of the spine and does almost no work during the animal's life, making it the most tender, least collagen-dense muscle in the carcass. A whole tenderloin roast (the \"châteaubriand\" section or full fillet) weighs approximately 1–2 kg and tapers from the thick butt end to a thin tail. It is exceptionally lean, with minimal intramuscular fat, making it vulnerable to drying out if overcooked — the window between perfectly rosy and dry, grey meat is narrow. Oven roasting suits the tenderloin because gentle, even heat preserves the moisture in the lean fibres; high-heat searing before or after the oven creates the Maillard crust that the lean exterior cannot produce on its own. Carryover is significant in a whole tenderloin — the concentrated lean mass retains heat for several minutes after leaving the oven, enough to raise the internal temperature noticeably — making the pull temperature meaningfully lower than the target serving temperature.",
+  "chuck": "*Placeholder — cut profile research not yet completed.*",
   "prime_rib": "Prime rib (also called standing rib roast) is cut from the rib primal (ribs 6–12), comprising the longissimus dorsi and surrounding muscles, with a generous fat cap and the rib bones attached. It is one of the most marbled subprimal sections of the animal — the rib muscles do relatively little work, and the high intramuscular fat content self-bastes during roasting, keeping the interior moist across a wide temperature range. Oven roasting is the canonical method for prime rib because the sustained, even heat of an enclosed oven allows the large mass (typically 2.5–5 kg) to heat evenly from edge to centre while the exterior fat cap renders and browns. Carryover is substantial for a prime rib — the large, dense mass retains heat efficiently, and internal temperature continues to rise for 15–30 minutes after removal; this must be accounted for in the pull temperature.",
+  "roasting_joint": "*Placeholder — cut profile research not yet completed.*",
+  "round_roast": "*Placeholder — cut profile research not yet completed.*",
+  "rump": "*Placeholder — cut profile research not yet completed.*",
+  "rump_roast": "*Placeholder — cut profile research not yet completed.*",
+  "sirloin_roast": "*Placeholder — cut profile research not yet completed.*",
+  "sirloin_tip_roast": "*Placeholder — cut profile research not yet completed.*",
+  "top_round_roast": "*Placeholder — cut profile research not yet completed.*",
   "goose_breast": "Goose breast is a rich, deeply flavoured dark meat with a substantial fat layer, similar in character to duck breast but larger and more assertively flavoured. Like duck breast, it is often served medium-rare to medium (145–155 °F / 63–68 °C) by many European chefs, though USDA guidelines require 165 °F (74 °C). The oven-roast method for goose breast mirrors duck breast technique: stovetop fat rendering followed by oven finishing. Goose breast dries out at high oven temperatures, so a moderate 350–375 °F oven with careful temperature monitoring is essential.\n\n\nTarget internal temperature: **145–155 °F (63–68 °C)** — medium; pull at 140 °F and rest. USDA safe minimum: 165 °F (74 °C) — pull at 160 °F and rest.",
   "goose_leg": "Goose legs are large, tough, highly flavoured cuts rich in connective tissue and intramuscular fat. Braising — browning the legs in fat, then cooking them submerged or partially submerged in aromatic liquid at low heat for 2–3 hours — is the optimal method for transforming this tough cut into fork-tender, fall-off-the-bone meat. The collagen-rich connective tissue converts to gelatin above 160 °F, but the most tender, succulent results come at 175–185 °F (79–85 °C) after extended braising. USDA minimum for poultry is 165 °F. Unlike duck confit, braising adds moisture; the braising liquid becomes a rich, gelatin-laden sauce.\n\n\nTarget internal temperature: **175–185 °F (79–85 °C)** — well above USDA minimum; extended time at this temperature melts collagen and produces best texture. Minimum safe: 165 °F (74 °C).",
   "goose_thigh": "Goose thigh is perhaps the most flavourful part of the goose — richer than the leg and with a higher ratio of intramuscular fat and connective tissue. Braising is ideal: the moist-heat environment keeps the thigh succulent while sustained heat above 160 °F converts collagen to gelatin. Target 175–185 °F (79–85 °C) for the most tender, silky texture. The braising liquid, enriched by rendered goose fat and gelatin, reduces to an intensely flavourful sauce. Goose thighs are widely used in European traditional cooking, similar to duck confit but with a braise instead of a fat immersion.\n\n\nTarget internal temperature: **175–185 °F (79–85 °C)** — optimal for collagen breakdown; USDA minimum: 165 °F (74 °C).",
   "whole_goose": "A whole goose (typically 4–6 kg / 9–13 lb) is by far the fattiest of the common roasting birds — a significant proportion of its body weight is subcutaneous fat that must be rendered away during cooking. This sets it apart from chicken and turkey: the cook's main task is not to avoid dryness but to efficiently remove vast quantities of fat while keeping the dark, richly flavoured meat from toughening. Goose legs and thighs need 165–175 °F (74–79 °C) to become tender; the breast is best at a lower temperature but in whole-bird cookery inevitably finishes higher. The USDA minimum for whole goose (like all whole poultry) is **165 °F (74 °C)** measured deep in the thigh without touching bone. Many European recipes roast to 175–185 °F (80–85 °C) in the thigh to ensure the dark meat is fully tender and the fat rendered. Carryover adds 3–5 °C after resting.\n\nA medium goose (4.5 kg / 10 lb) typically takes 2.5–3 hours at 190 °C (375 °F) when started breast-side-up. Fat must be drained from the roasting tin every 30–45 minutes or it will smoke aggressively.\n\n\nA whole goose (typically 4–6 kg / 9–13 lb) is by far the fattiest of the common roasting birds — a significant proportion of its body weight is subcutaneous fat that must be rendered away during cooking. This sets it apart from chicken and turkey: the cook's main task is not to avoid dryness but to efficiently remove vast quantities of fat while keeping the dark, richly flavoured meat from toughening. Goose legs and thighs need 165–175 °F (74–79 °C) to become tender; the breast is best at a lower temperature but in whole-bird cookery inevitably finishes higher. The USDA minimum for whole goose (like all whole poultry) is **165 °F (74 °C)** measured deep in the thigh without touching bone. Many European recipes roast to 175–185 °F (80–85 °C) in the thigh to ensure the dark meat is fully tender and the fat rendered. Carryover adds 3–5 °C after resting.\nA medium goose (4.5 kg / 10 lb) typically takes 2.5–3 hours at 190 °C (375 °F) when started breast-side-up. Fat must be drained from the roasting tin every 30–45 minutes or it will smoke aggressively.",
   "duck_breast": "Duck breast is a dark, rich cut with a thick layer of subcutaneous fat beneath a scored skin. Unlike chicken breast, duck breast is best cooked to medium-rare (135–145 °F / 57–63 °C), where the meat remains pink, juicy, and tender. The oven-roast method typically follows a stovetop fat-rendering sear: the breast starts skin-side down in a cold or lightly warmed oven-safe pan to slowly render the fat cap, then transfers to a moderate oven to finish gently and evenly without overshooting the internal temperature.\n\n\nTarget internal temperature: **135–145 °F (57–63 °C)** — medium-rare, pull at 130 °F and rest; carryover brings it to target. For well-done (USDA), pull at 160 °F for a final resting temp of 165 °F.",
+  "duck_leg_confit": "*Placeholder — cut profile research not yet completed.*",
   "whole_duck": "A whole duck presents a significant cooking challenge: the breast meat is best at medium-rare (135–145 °F) while the legs and thighs need higher temperatures (165–175 °F) to break down their tougher connective tissue. This conflict is resolved either by accepting slightly overcooked breast in exchange for properly done legs, or by using a low-and-slow approach that slowly renders the abundant subcutaneous fat while keeping the breast moist. The USDA minimum for whole poultry is 165 °F measured in the thigh. Whole ducks weigh 4–6 lb (1.8–2.7 kg) on average and carry far more fat than chicken — that fat must be rendered out to achieve crackling skin.\n\n\nTarget internal temperature: **165 °F (74 °C) in the thigh** — USDA minimum for whole poultry. Breast will be well-done at this point; accept this or use the low-and-slow method which keeps breast juicier.",
   "ground_turkey": "Ground turkey (minced turkey) is made by grinding dark meat (thigh and leg), white meat (breast), or a blend. A dark-meat-inclusive blend (typically 93/7 lean/fat) has noticeably better flavour and moisture retention than pure breast-meat grinds. Because turkey is poultry, the USDA minimum safe internal temperature is 74°C (165°F) with no reduction for resting. Ground turkey cooks faster than beef or pork at the same mass due to its lower fat content and should be monitored closely to avoid dryness. Carryover is 1–2°C.",
   "turkey_breast": "Turkey breast can be purchased bone-in (half breast on the rib rack, 1.5–2.5 kg / 3–5.5 lb) or boneless (rolled and tied, 1–2 kg / 2–4.5 lb). Both have dramatically less fat than dark turkey meat and will dry out rapidly if taken past 165 °F (74 °C); the sweet spot for juicy, food-safe turkey breast is **160–165 °F (71–74 °C)** at the thickest point (the USDA minimum is 165 °F; pulling at 160 °F and resting 10–15 minutes under foil achieves safe temperatures via carryover). Bone-in breasts conduct heat more slowly near the bone and need accurate probe placement to the geometric centre of the thickest part. Boneless rolled breasts cook more evenly. At 190–200 °C oven temperature, a 1.5 kg bone-in breast takes approximately 60–75 minutes.",
   "turkey_burger": "A grilled turkey burger is a 150–180 g shaped patty made from coarsely-ground turkey thigh — the standard for moisture and flavour because turkey breast (1–4 % fat) dries out on the high heat of a grill before reaching the food-safety threshold for ground poultry. Ground thigh carries 8–14 % fat plus the gelatinous connective tissue that holds patties together without binders. The cooking goal: drive the centre past 74 °C (165 °F) — the FDA/USDA threshold for ground poultry — while developing crisp, lacquered grill marks. Turkey patties tolerate slightly more aggressive aromatics than chicken because the meat is somewhat blander; sage, rosemary, mustard, paprika and lemon all carry well. Probe the geometric centre of the largest patty horizontally; carryover is small (1–2 °C).",
+  "turkey_ground": "*Placeholder — cut profile research not yet completed.*",
+  "turkey_leg": "*Placeholder — cut profile research not yet completed.*",
+  "turkey_thigh": "*Placeholder — cut profile research not yet completed.*",
   "whole_turkey": "A whole turkey presents the same fundamental challenge as a whole chicken but at larger scale and with more extreme differences between breast and leg/thigh: the breast meat is lean and prone to drying above 160–165 °F (71–74 °C), while the legs and thighs are dark, collagen-rich and benefit from 165–175 °F (74–79 °C) to become properly tender. A 4.5 kg / 10 lb turkey feeds 6–8 people; a 7 kg / 15 lb turkey feeds 10–12. The USDA minimum for whole turkey is **165 °F (74 °C)** measured in the thigh at its thickest point, well away from bone. Probe placement in the thigh (not the breast) is the authoritative food-safety measurement. Modern approaches — brining, spatchcocking, basting — all aim to let the thigh reach 165 °F without pushing the breast past 165 °F.\n\nTypical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) unstuffed. A 4.5 kg (10 lb) bird takes approximately 2.5–3 hours; a 7 kg (15 lb) bird takes approximately 3.5–4 hours.\n\n\nA whole turkey presents the same fundamental challenge as a whole chicken but at larger scale and with more extreme differences between breast and leg/thigh: the breast meat is lean and prone to drying above 160–165 °F (71–74 °C), while the legs and thighs are dark, collagen-rich and benefit from 165–175 °F (74–79 °C) to become properly tender. A 4.5 kg / 10 lb turkey feeds 6–8 people; a 7 kg / 15 lb turkey feeds 10–12. The USDA minimum for whole turkey is **165 °F (74 °C)** measured in the thigh at its thickest point, well away from bone. Probe placement in the thigh (not the breast) is the authoritative food-safety measurement. Modern approaches — brining, spatchcocking, basting — all aim to let the thigh reach 165 °F without pushing the breast past 165 °F.\nTypical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) unstuffed. A 4.5 kg (10 lb) bird takes approximately 2.5–3 hours; a 7 kg (15 lb) bird takes approximately 3.5–4 hours.",
+  "breast": "*Placeholder — cut profile research not yet completed.*",
   "chicken_breast": "Chicken breast is a lean, boneless cut that dries out quickly when overcooked. Pounding to even thickness and brining are the two most effective techniques for retaining moisture. Because there is minimal fat to buffer heat, precise temperature monitoring is critical.\n\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry",
+  "chicken_breast_bone_in": "*Placeholder — cut profile research not yet completed.*",
   "chicken_burger": "Ground chicken burgers are formed patties made from minced chicken, typically 85–93% lean. Because ground poultry must be cooked to a higher internal temperature than whole muscle, and because the meat is lean and prone to drying out, adding binders (egg, breadcrumbs, or cooked rice) helps retain moisture. The air fryer circulates hot air to brown the exterior without deep frying.\n\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry",
   "chicken_leg": "Chicken drumsticks (the lower portion of the leg) are dark-meat cuts with more fat and connective tissue than breast, making them forgiving and flavourful. High-heat oven roasting renders the fat, crisps the skin, and breaks down collagen for juicy, tender meat. USDA minimum is 165 °F (74 °C), but dark meat is best at 170–175 °F (77–79 °C) where collagen converts to gelatin.\n\n\nTarget internal temperature: **170–175 °F (77–79 °C)** — recommended for dark meat drumsticks",
   "chicken_thigh": "Chicken thighs are a forgiving, flavourful dark-meat cut. Their higher fat content makes them well-suited to the air fryer's rapid circulating heat, which renders the fat and crisps the skin beautifully without drying the meat out. Bone-in skin-on thighs take longer than boneless but deliver the crispiest skin. Dark meat benefits from cooking above the USDA minimum to 175 °F (79 °C), where collagen fully converts to gelatin.\n\n\nTarget internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat",
   "chicken_wing": "Chicken wings (wingettes and drumettes) are small, high-surface-area dark-meat pieces that become irresistibly crispy in the air fryer without deep frying. The single most effective technique for extra-crispy skin is tossing wings with a small amount of baking powder before cooking — it raises the skin's pH, causing it to blister and brown faster. Patting wings dry is equally critical.\n\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry",
+  "ground": "*Placeholder — cut profile research not yet completed.*",
   "ground_chicken": "Ground chicken braised in liquid is a moist-heat method that keeps the lean meat from drying out and develops a flavourful sauce simultaneously. Because ground poultry is mixed throughout with bacteria (unlike whole muscle), every part of the meat must reach safe temperature. Braising is forgiving — the surrounding liquid prevents the meat from going above 212 °F (100 °C), but interior temp still easily exceeds 165 °F (74 °C) with adequate cooking time.\n\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry; visual: no pink inside",
+  "leg": "*Placeholder — cut profile research not yet completed.*",
+  "thigh": "*Placeholder — cut profile research not yet completed.*",
   "whole_chicken": "A whole roasted chicken presents a fundamental challenge: the breast and thigh finish at different temperatures, so technique matters. Starting breast-side down lets the thigh meat begin rendering while protecting the breast. High initial heat (475 °F / 246 °C) produces crackling golden skin. The breast should reach 160–165 °F (71–74 °C) while the thigh reaches 165–170 °F (74–77 °C); a well-rested bird allows both to equalise. Average 3–4 lb bird takes 55–70 minutes total.\n\n\nTarget internal temperatures: **Breast 160–165 °F (71–74 °C)** · **Thigh 165–170 °F (74–77 °C)**",
+  "wing": "*Placeholder — cut profile research not yet completed.*",
   "asparagus": "Asparagus (*Asparagus officinalis*) sautéed in a hot pan is the fastest preparation: 4–6 minutes over medium-high to high heat, producing tender-crisp spears with a lightly browned stem and vivid green colour. The pan must be large enough to hold all spears in a single layer, and the oil or butter must be hot before the asparagus goes in — otherwise the spears will steam rather than sauté. Pull temperature: 78–83 °C (172–181 °F) for tender-crisp asparagus, still with some bite. MEATER probe inserted along the long axis of the thickest spear.",
   "broccoli": "Broccoli (*Brassica oleracea* var. *italica*) sautéed in a hot pan — or stir-fried in a wok — produces golden-blistered florets with a caramelised stem and bright-green colour. The pan must be very hot; broccoli must be completely dry; it should not be crowded. Cooking time: 6–8 minutes. Pull temperature: 78–83 °C (172–181 °F) for tender-crisp, golden broccoli. MEATER probe through the stem of the largest floret.",
   "brussels_sprouts": "Brussels sprouts (*Brassica oleracea* var. *gemmifera*) pan-fried (halved, cut-face-down in a hot pan) is the fastest technique for intensely caramelised results: 8–12 minutes in a cast-iron or heavy pan achieves charred cut faces and a tender interior. Unlike sautéing (which involves frequent tossing), pan-frying holds the cut face in contact with the hot surface for an extended sear. Pull temperature: 82–88 °C (180–190 °F). MEATER probe through outer leaves of the largest sprout into the core.",
@@ -17382,6 +17571,7 @@ const CUT_PROFILES = {
   "roasted_sweet_potato": "Whole baked sweet potato (*Ipomoea batatas*) in the conventional oven at 190–200 °C achieves a deeply caramelised, slightly wrinkled skin and a soft, jammy interior in 50–70 minutes depending on size. The low-and-slow heat allows the amylase enzymes in the sweet potato to convert starches to sugars, producing an intensely sweet result (particularly with Japanese *satsuma-imo* varieties). Pull temperature: 96–98 °C (205–208 °F) at the thickest centre. MEATER probe along long axis into the geometric centre.",
   "tuna_steak": "Tuna steak — most commonly bluefin (*hon maguro*), yellowfin (*ahi*), or bigeye (*mebachi*) — is cut transversely from the loin muscles of a large pelagic fish. Tuna flesh is deep crimson (from high myoglobin content), very lean, and densely muscled compared to most fish; it has almost no connective tissue between muscle segments, which means it behaves more like a red meat steak than a typical white-flake fish. Pan searing suits tuna precisely because the high heat drives rapid Maillard browning on the lean surface, while the brief cook time leaves the interior at the desired rare state. Overcooking is the defining risk: above 60 °C the proteins tighten dramatically, and the lean flesh becomes dry and crumbly. The conventional sushi-bar preference for *tataki* (briefly seared, cold-raw centre) means the entire temperature spectrum from raw to fully cooked is culinarily acknowledged. Carryover in a seared tuna steak is 2–3 °C and dissipates quickly.",
   "salmon_fillet": "Salmon fillet comes from the side of the fish, running the full length of the body from behind the head to the tail, with the pin bones removed. The flesh is divided into distinct fat-layered muscle segments (myotomes) separated by connective tissue (myocommata); that connective tissue softens and gives the characteristic flaking texture when the protein reaches its set point. Atlantic and Pacific salmon differ in fat distribution — farmed Atlantic salmon is uniformly rich, while wild sockeye and king salmon have denser, more mineral flesh. Pan searing suits salmon because the high conductive heat of a stainless or cast-iron pan rapidly crisps the skin (if skin-on) and caramelises the exposed flesh, producing textural contrast between crust and interior. Carryover in a seared salmon fillet is modest — 2–3 °C — because the thin geometry dissipates heat quickly, so accurate pull timing is essential to avoid overcooking.",
+  "salmon_steak": "*Placeholder — cut profile research not yet completed.*",
   "lobster_tail": "Lobster tail is the large tail segment of a lobster (*Homarus americanus*, the American/Maine lobster, or *Homarus gammarus*, the European/Breton lobster) separated from the body and claws; frozen and fresh spiny lobster tails (*Panulirus argus*) from the Caribbean and Pacific are also widely used. The edible flesh is the tail muscle — firm, white-to-pale-pink, sweet and rich in natural glutamates. Grilling is one of the most popular preparations for lobster tail because the direct radiant heat produces char and caramelisation on the cut flesh surface while the shell acts as a natural heat shield and flavour-retaining vessel. Butterflying the tail (cutting through the shell dorsally and splaying the flesh upward) is the dominant grill preparation because it exposes more flesh surface to direct heat and allows basting to penetrate the meat. Overcooking tightens the fibres sharply; the pull window is 58–62 °C before the meat becomes dry and rubbery. Carryover is 3–4 °C.",
   "scallops": "Sea scallops (*Pecten maximus* in Europe; *Placopecten magellanicus*, the Atlantic sea scallop, in North America) are the large adductor muscle that opens and closes the bivalve shell. The flesh is cream-white, sweet, and extremely tender with almost no connective tissue; it is composed mainly of striated muscle fibres held in a dense but delicate matrix. Pan searing is the defining method for large sea scallops because extreme heat produces rapid caramelisation of the natural sugars on the flat cut surfaces — the golden-brown crust contrasts dramatically with the cool, almost raw centre that is the mark of a well-executed scallop. Overcooking tightens the fibres sharply and produces a rubbery, squeaky texture. The critical requirements are: completely dry exterior, a blazing pan, and a very short cook time. Carryover is significant relative to the small mass — 3–5 °C — so pull early.",
   "shrimp": "Shrimp (called prawns in British, Australian, and much of Asian-English usage) are the most widely consumed shellfish globally; the species most commonly used for pan frying include tiger prawns (*Penaeus monodon*), white leg shrimp (*Litopenaeus vannamei*), spot prawns (*Pandalus platyceros*), and Gulf shrimp (*Farfantepenaeus aztecus*). The edible flesh is the tail muscle, which contracts rapidly under heat and curls the tail from the characteristic C-shape of a live shrimp to a tighter O-shape when overcooked. Pan frying over high heat produces a caramelised exterior on the natural sugars in the shell or flesh, and in shell-on preparations the shell acts as a protective layer. The protein in shrimp begins to denature around 50 °C and is fully set at 60 °C; the culinary window for moist, tender shrimp is extremely narrow, typically 3–4 minutes total cook time for medium prawns in a very hot pan. Carryover is 2–3 °C.",
@@ -17395,8 +17585,14 @@ const CUT_PROFILES = {
   "trout": "Rainbow trout (*Oncorhynchus mykiss*) and brown trout (*Salmo trutta*, Swedish: forell,\nNorwegian: ørret, German: Forelle, Italian: trota) are among the most widely cooked fresh-\nwater fish in Northern Europe and North America. The flesh is delicate, flaky, and mildly\nflavoured with a slightly nutty quality; colour ranges from white to orange-pink depending\non diet. Trout fillets are typically thin (1–2 cm), which means they cook very quickly in a\npan — 3–5 minutes per side at medium-high heat. The skin crisps beautifully in butter or\nolive oil. The key risk is overcooking: lean, thin trout flesh dries out rapidly past 65 °C.\nInternal doneness is the same as for other finfish: 60–63 °C (140–145 °F, USDA minimum)\nfor fully cooked flesh that is just opaque. The MEATER probe must be inserted from the\nthickest edge (lateral insertion) in thin fillets, or through the shoulder of a whole fish.",
   "ground_lamb": "Ground (minced) lamb is used in countless traditions — from Middle Eastern kibbeh and North African merguez to Greek moussaka, Indian keema, and Turkish Akçaabat köfte. Pan-frying ground lamb requires thorough cooking (ground meat has higher bacterial contamination risk than whole cuts). The aromatics sautéed with the mince are as important as the meat itself.\n\n\nTarget internal temperature: **74 °C (165 °F)** for food-safe ground lamb.",
   "lamb_burger": "Lamb burgers are popular throughout the UK, Australia, New Zealand, the Middle East, and South Asia. Ground lamb's higher fat content means the patties are juicy but can flare on a grill — medium-high indirect heat is recommended. Common additions: garlic, cumin, harissa, feta (stuffed or mixed in), fresh herbs.\n\n\nTarget internal temperature: **74 °C (165 °F)** for safe ground meat.",
+  "lamb_crown_roast": "*Placeholder — cut profile research not yet completed.*",
   "lamb_kofta": "Lamb kofta (köfte, kefta, kafta, kufta — many spelling variations) is one of the most widespread grilled preparations in the world, found from Morocco to Turkey, Iran, Pakistan, Afghanistan, India, and across the Levant. The ground lamb is mixed with onion, spices, and fresh herbs, shaped onto flat metal skewers, and grilled over high heat. It cooks very quickly (3–4 minutes per side) and must be cooked through. Inserting a MEATER probe into the thickest kofta is the recommended technique.\n\n\nTarget internal temperature: **74 °C (165 °F)** for food-safe ground meat.",
+  "lamb_rib_rack": "*Placeholder — cut profile research not yet completed.*",
+  "lamb_brisket": "*Placeholder — cut profile research not yet completed.*",
+  "lamb_loin_roast": "*Placeholder — cut profile research not yet completed.*",
   "lamb_neck": "Lamb neck (Lammhals / collo di agnello / kuzu gerdan / lammehals) is one of the most underappreciated braising cuts. It is richly marbled, heavily worked, and packed with connective tissue and deep flavour. Cut into cross-sections or braised as a whole neck, it softens magnificently over 1.5–2.5 hours of moist heat, yielding deeply tender, self-basting meat in a rich, unctuous braising liquid. The neck is used in braises throughout Turkish, Italian, German, Greek, and Scandinavian traditions. A MEATER probe is inserted into the thickest cross-section of neck meat, away from the vertebrae, to track internal temperature.\n\n\nTarget internal temperature: **85–90 °C (185–194 °F)** for full braised tenderness.",
+  "lamb_rib": "*Placeholder — cut profile research not yet completed.*",
+  "lamb_rump": "*Placeholder — cut profile research not yet completed.*",
   "lamb_shank": "Lamb shank (the lower leg, hind or fore) is one of the most prized braising cuts in the world. The dense connective tissue, bone marrow, and rich muscle fibres transform through 2–3 hours of moist heat into fall-off-the-bone, gelatinous, deeply flavoured meat. It is the flagship dish of Mediterranean cooking (Italy, Greece, Turkey, France), the Middle East (Persian mahiche), and Australia. The target is **pull-apart tender** at 82–88 °C internal — not medium-pink as with steaks. A MEATER probe is inserted into the thickest part of the shank meat (above the bone) to verify doneness.\n\n\nTarget internal temperature: **82–88 °C (180–190 °F)** for fall-off-the-bone tender. USDA minimum for lamb is 63 °C, but for braised shanks this is far too early — braising is not complete until collagen has dissolved.",
   "lamb_shoulder": "Lamb shoulder is fattier and more flavourful than leg, with more connective tissue that melts into gelatin during long, slow roasting. It is the cut for slow-roasted lamb dishes — 4–6 hours at 150–160 °C (or 7–8 hours at 130 °C). The result is pull-apart meat that falls off the bone with a fork. The MEATER probe target is **85–90 °C (185–194 °F)** for pull-apart.",
   "leg_of_lamb": "Leg of lamb is the quintessential festive roast throughout the Mediterranean, Middle East, British Isles, Australia, and New Zealand. A bone-in leg typically weighs 2–3 kg and is roasted at 160–175 °C with a garlic-herb rub, either to medium-pink (internal 54–60 °C) or slow-roasted to fall-apart (80–90 °C). The choice between these two approaches is the fundamental split in leg of lamb cooking.\n\n**Temperature guide** (from The Mediterranean Dish, fetched 2026-04-24):\n- Rare: 52 °C (125 °F) — 15 min/lb\n- Medium-rare: 54–57 °C (130–135 °F) — 20 min/lb\n- Medium: 57–63 °C (135–145 °F) — 25 min/lb\n- Well-done: 68–74 °C (155–165 °F) — 30 min/lb\n- Falling apart: 80 °C (175 °F) — 40 min/lb (slow 6 hours+)\n\n\nLeg of lamb is the quintessential festive roast throughout the Mediterranean, Middle East, British Isles, Australia, and New Zealand. A bone-in leg typically weighs 2–3 kg and is roasted at 160–175 °C with a garlic-herb rub, either to medium-pink (internal 54–60 °C) or slow-roasted to fall-apart (80–90 °C). The choice between these two approaches is the fundamental split in leg of lamb cooking.\n- Rare: 52 °C (125 °F) — 15 min/lb\n- Medium-rare: 54–57 °C (130–135 °F) — 20 min/lb\n- Medium: 57–63 °C (135–145 °F) — 25 min/lb\n- Well-done: 68–74 °C (155–165 °F) — 30 min/lb\n- Falling apart: 80 °C (175 °F) — 40 min/lb (slow 6 hours+)",
@@ -17404,24 +17600,3524 @@ const CUT_PROFILES = {
   "lamb_chops": "Lamb rib chops and loin chops are the classic cuts for grilling, popular worldwide from Australia and New Zealand (the world's largest lamb exporters) to the UK, Mediterranean, Middle East, and West Africa. Rib chops are smaller, leaner, and more delicate; loin chops are larger and fattier. Both benefit from high direct heat on a barbecue or grill pan. The rib or 'rack' end is typically served slightly pink (medium-rare to medium).\n\n\nTarget internal temperatures (from Africanbites.com):\n- Rib chops: **55 °C (131 °F)** for medium-rare\n- Loin chops: **57–60 °C (135–140 °F)** for medium",
   "lamb_cutlet": "Lamb cutlets (thin, Frenched rib chops) are the most refined lamb cut — a single rib bone with the meat formed into a small medallion. They are a bistro classic in France and the UK, a restaurant staple in Australia and New Zealand, and are popular as party food throughout the Middle East and South Asia. Cooking time is very brief — 2–3 minutes per side — making them ideal for a pan with butter basting.\n\nTarget: **52–57 °C (126–135 °F)** for medium-rare. They overcook rapidly given their thin cross-section.",
   "lamb_loin_chops": "Lamb loin chops are the T-bone of lamb — cut from the saddle, containing both the loin and the small section of tenderloin. They are larger and meatier than rib chops, with a characteristic T-shaped bone. In the UK they are sold as \"lamb chump chops\" (slightly different cut, from the rump). They are pan-seared 4–5 minutes per side to medium.\n\nTarget: **57–62 °C (135–144 °F)** for medium (slightly pink). Africanbites.com: 135–140°F (57–60°C).",
+  "lamb_neck_filet": "*Placeholder — cut profile research not yet completed.*",
   "baby_back_ribs": "Baby back ribs (also called loin ribs or kamben in Danish; Rippchen in German) are the upper ribs from the pork loin area — leaner, more curved, and smaller than spare ribs. In an air fryer the high-velocity hot air circulates around each section, cooking them much faster than a conventional oven (60–90 min vs. 2.5–3 hrs) while still achieving tender, fall-off-the-bone results. Most air-fryer methods either pre-boil the ribs (to accelerate internal tenderness) or rely on a long low-temperature cook phase followed by a short high-temperature crisping phase. The silver skin on the bone side must always be removed. Target internal: 88–95 °C for tender, collagen-rendered ribs; at 63 °C they are technically safe but not yet fall-off-bone.\n\n\nTarget internal temperatures (air fryer):\n- Fall-off-bone tender: **88–95 °C (190–203 °F)**\n- ⚠️ Below 80 °C ribs are food-safe but still tough",
   "spare_ribs": "Spare ribs (revelsben/kamben in Danish; Spareribs in German/Austrian) are the lower belly ribs, larger and flatter than baby back ribs with more fat and connective tissue. They benefit particularly from low-and-slow oven cooking: either pre-boiled then finished high, or foil-wrapped at low heat then glazed. The higher fat content makes them more forgiving than baby backs. Target internal: 88–95 °C, the same range as baby back ribs — collagen renders at these temperatures giving the characteristic tender, pull-off-bone texture and glossy glaze.\n\n\nTarget internal temperatures (oven roast):\n- Fall-off-bone tender: **88–95 °C (190–203 °F)**\n- ⚠️ Below 80 °C spare ribs are food-safe but still tough",
+  "st_louis_ribs": "*Placeholder — cut profile research not yet completed.*",
   "ground_pork": "Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend of primal trimmings. Standard ground pork is typically 70–80% lean with 20–30% fat; the higher fat content gives it a juicy, cohesive texture when cooked and makes it more forgiving than ground beef or turkey. Ground pork is the basis of countless preparations worldwide — from Italian ragù and Swedish köttbullar to Chinese dumplings and Mexican chorizo. Because grinding distributes any surface bacteria throughout the mass, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is negligible.",
   "pork_sausage": "Pork sausage is a processed meat product made from finely minced or coarsely ground pork, seasoned with salt, pepper, herbs and spices, and encased in natural pig intestine or synthetic collagen casing. Fat content is typically 20–30%, essential for juiciness and flavour development. Fresh sausages require cooking to a minimum internal temperature of 71°C (160°F); pre-cooked or smoked sausages require only reheating to serving temperature (60–65°C). The casing is the critical monitoring challenge: if it ruptures early, moisture and fat escape and the sausage dries out. Probing from one end into the centre avoids puncturing the casing mid-body. Carryover is 2–3°C.\n\n\nTarget internal temperatures (grill):\n- Fully cooked/safe: **71–75 °C (160–167 °F)**\n- ⚠️ Do not pull before 71 °C — pork sausage must be fully cooked",
   "fresh_ham": "A fresh (uncured, unsmoked) ham is the entire hind leg of a pig — bone-in, skin-on, with the femur and aitchbone running through the centre and a thick layer of subcutaneous fat under the rind. Anatomically distinct from cured (julskinka) or smoked ham preparations: the muscle has its full natural moisture, the rind is supple rather than salted-firm, and the fat has not been altered by brine. Roasting requires a long, moderate-temperature cook (140–160 °C) that drives the centre to safe temperature without overcooking the surface meat under the fat. Carryover is significant — 4–6 °C in a 4–6 kg leg — because the bone, fat and dense muscle store heat well. Rest 30–45 minutes loosely tented before carving.",
+  "cheek": "*Placeholder — cut profile research not yet completed.*",
+  "jowl": "*Placeholder — cut profile research not yet completed.*",
+  "liver_pork": "*Placeholder — cut profile research not yet completed.*",
   "pork_cheek": "Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the small dense muscle of the jaw — roughly 80–120 g per cheek, marbled with thin sheets of intramuscular fat and rich in collagen from the constant chewing motion the muscle performs in life. For pan frying (rather than the more common braise), the cheeks are typically butterflied to expose the interior, dusted lightly, and seared at high heat — the goal is to crust the surface while keeping the centre at a tender medium-rare. This works because the cheek's collagen network, while extensive, is fine-grained enough that a brief flash sear (rather than a long braise) leaves the muscle bouncy rather than rubbery. The carryover is small (2–3 °C) given the thin butterflied cuts.",
+  "pork_jowl": "*Placeholder — cut profile research not yet completed.*",
   "pork_liver": "Pork liver is milder, slightly sweeter and more delicate in texture than beef liver — a paler chestnut-brown rather than the deep mahogany of beef, with a finer-grained hepatocyte structure and a thinner capsule. The same mineral-iron flavour profile is present but at lower intensity. The standard preparation across European traditions is identical to the beef-liver pan-fry: brief soak in milk to mellow the iron, dust in flour, sear hard in fat, and pull while the centre is still faintly pink. The narrower flavour also means pork liver tolerates assertive aromatics — onions, sage, juniper, allspice, capers — better than the more bold-tasting calf's or beef liver. Carryover is small (1–2 °C); slices continue cooking on the plate, so serve immediately.",
   "pork_tongue": "Pork tongue is the smaller, more delicate sibling of beef tongue — typically 250–400 g per tongue versus 1.5–2 kg for beef. The structure is identical: a single dense lingual muscle wrapped in a thick, papillae-covered skin that must be peeled after cooking. The smaller mass means a shorter braise (60–90 minutes rather than 3–4 hours) and a milder, sweeter flavour. Pork tongue is fundamental to many traditions — Mexican *lengua de cerdo*, Chinese cha-shu pig tongue, French *langue de porc sauce ravigote*, Polish *ozór wieprzowy*. The peel-while-warm rule still applies, and the tongue is best sliced thin and either dressed with a sharp vinaigrette or warmed in a piquant sauce. Carryover is essentially zero (the surrounding liquid buffers temperature).",
+  "baby_back_ribs_alt": "*Placeholder — cut profile research not yet completed.*",
+  "belly": "*Placeholder — cut profile research not yet completed.*",
   "cured_ham": "Cured ham (skinke in Danish; Schinken in German/Austrian) for the oven roast method encompasses both pre-boiled glazed ham and straight-to-oven versions. The classic approach is to boil a mild-cured or smoked ham first (removing excess salt and pre-cooking the meat), then score the rind and glaze it in a hot oven until caramelised. Low-and-slow oven variants skip the boiling and use very low temperatures (80°C oven) to achieve even, juicy results.\n\n\nTarget internal temperature for safe, juicy cured ham: **70–75 °C** — the curing keeps the meat safe at slightly lower temps than fresh pork, but 75 °C is the standard target for glazed results.\n\nTarget internal temperatures (oven roast):\n- Juicy, glazed: **70–75 °C (158–167 °F)**\n- Very low-and-slow: **75 °C** (when oven is held at 80 °C)",
+  "ham": "*Placeholder — cut profile research not yet completed.*",
   "pork_belly": "Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.",
   "pork_leg": "Pork leg and hock (Schweinshaxe / stinco di maiale / kuzu incik) is a collagen-rich cut with thick connective tissue, bone marrow, and heavily worked muscle. Braising unlocks the cut's full potential: 2–3 hours of moist heat at low temperature converts collagen to gelatin, creating sticky, unctuous, fall-off-the-bone meat surrounded by a richly reduced sauce. Popular braised in beer across Bavaria, Central Europe, and the British Isles; in soy and spices across East Asia; and in wine with herbs across Mediterranean Europe. The MEATER probe is placed deep into the thickest muscle mass of the leg or hock, away from the bone, to track internal temperature accurately.\n\n\nTarget internal temperature: **75–80 °C (167–176 °F)** for sliceable, tender; **85–90 °C (185–194 °F)** for pull-apart.",
   "pork_loin_roast": "Pork loin roast (svinekam in Danish; Schweinerücken / Kotelettstrang in German/Austrian) with rind (svær / Schwarte) is the quintessential Scandinavian and German Sunday dinner. The loin is leaner than the belly so it needs more careful temperature management — pull too early and it's under-safe; pull too late and it dries out. The Danish approach targets **65°C** for a juicy, slightly rosy result; German recipes often go to 72–75°C for a firmer texture. For a MEATER probe, 65°C is an excellent target with a high-heat crackling finish.\n\n\nTarget internal temperatures (oven roast):\n- Juicy, slightly rosy (Danish-style): **60–65 °C (140–149 °F)**\n- Traditional firm, fully white (German-style): **70–75 °C (158–167 °F)**",
   "pork_shoulder": "Pork shoulder / neck (nakkefilet / nakkekam / svinekølle in Danish; Schweinenacken / Schweineschulter in German/Austrian) is one of the most forgiving cuts for the oven — its fat marbling prevents drying out and it develops deep flavour at virtually any oven temperature. The Danish approach covers with foil at 200°C for 105 minutes (firm but juicy); the Norwegian approach targets 75°C core at 175°C oven; the German approach uses the Krustenbraten method at 180°C × 2 hrs. Unlike the leaner loin, shoulder can be taken higher without losing juiciness.\n\n\nTarget internal temperatures (oven roast):\n- Juicy, sliceable: **72–75 °C (162–167 °F)**\n- Very tender (approaching pulled): **80–85 °C (176–185 °F)**",
+  "spare_ribs_alt": "*Placeholder — cut profile research not yet completed.*",
+  "st_louis_ribs_alt": "*Placeholder — cut profile research not yet completed.*",
+  "virginia_ham": "*Placeholder — cut profile research not yet completed.*",
   "pork_chop": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\n\nTarget internal temperatures (air fryer):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
   "pork_loin_steak": "Pork loin steak (koteletsteg, Lendensteak vom Schwein) is a boneless steak cut from the loin (between chop and tenderloin area). It is lean and uniform in thickness, making it ideal for pan frying with the same technique as pork chop: hot pan, butter baste, 3–4 min per side. It is slightly more forgiving than tenderloin but dries out faster than a shoulder steak. Target core: 63–65 °C.\n\n\nTarget internal temperatures (pan fry):\n- Juicy/pink: **63–65 °C (145–149 °F)**",
   "pork_shoulder_steak": "Pork shoulder steak (nakkesteak, Schweinenackensteak / Schopfsteak) is from the neck/collar area — more marbled than loin steak, more forgiving, and ideal for pan frying. The fat renders during cooking, basting the meat from the inside. 3–4 minutes per side on medium-high heat is the standard, and it can withstand a slightly higher final temperature (68–70 °C) without drying out. The Austrian Schopfsteak is an iconic example of this cut.\n\n\nTarget internal temperatures (pan fry):\n- Juicy: **65–68 °C (149–154 °F)**\n- Well done: **70–72 °C (158–162 °F)**",
   "pork_tenderloin": "Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo) is the leanest cut of pork and the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.\n\n\nTarget internal temperatures (grill):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
   "secreto": "The secreto (Spanish: \"secret\") is a hidden fat-marbled cut from the shoulder/neck area of the Iberian pig (or any pork). It is thin, uneven, and highly marbled, making it one of the most flavourful pork cuts for the griddle or grill. Because it is thin and irregular, it is cut into 3–4 uniform pieces before cooking. Key rules: de-chill 2 hours; dry sear without oil; no salt before; one flip only; rest 1–2 min then season. Target: 65–70 °C (pink to fully done) — internal temperature rises fast due to the thin cross-section.\n\n\nTarget internal temperatures (pan sear):\n- Pink inside: **63–65 °C (145–149 °F)**\n- Well done (recommended for high-fat secreto): **68–72 °C (154–162 °F)**"
+};
+
+// Experimental MEATER tree — built from KCE:CUT tagged cut files
+const EXP_TREE = {
+  "game": {
+    "id": "game",
+    "name": "Game",
+    "icon": "🦌",
+    "color": "#2F4F4F",
+    "meats": [
+      {
+        "id": "ostrich",
+        "name": "Ostrich",
+        "cutTypes": [
+          {
+            "id": "ostrich",
+            "name": "Ostrich",
+            "cuts": [
+              {
+                "id": "ostrich_fillet",
+                "name": "Ostrich Fillet",
+                "slug": "ostrich_fillet",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "ostrich_steak",
+                "name": "Ostrich Steak",
+                "slug": "ostrich_steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "pan_sear"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "venison",
+        "name": "Venison",
+        "cutTypes": [
+          {
+            "id": "venison",
+            "name": "Venison",
+            "cuts": [
+              {
+                "id": "venison_leg",
+                "name": "Leg",
+                "slug": "venison_leg",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "venison_loin",
+                "name": "Venison Loin",
+                "slug": "venison_loin",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast",
+                  "pan_sear",
+                  "sous_vide"
+                ]
+              },
+              {
+                "id": "venison_roast",
+                "name": "Venison Roast",
+                "slug": "venison_roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "venison_shoulder",
+                "name": "Shoulder",
+                "slug": "venison_shoulder",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "venison_steak",
+                "name": "Venison Steak",
+                "slug": "venison_steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "charcoal_grill",
+                  "grill",
+                  "pan_sear"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "rabbit",
+        "name": "Rabbit",
+        "cutTypes": [
+          {
+            "id": "rabbit",
+            "name": "Rabbit",
+            "cuts": [
+              {
+                "id": "rabbit_legs",
+                "name": "Rabbit Legs",
+                "slug": "rabbit_legs",
+                "doneness": [
+                  "well_done",
+                  "dark_meat_optimal",
+                  "pulled"
+                ],
+                "recommended_doneness": "dark_meat_optimal",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "rabbit_saddle",
+                "name": "Rabbit Saddle",
+                "slug": "rabbit_saddle",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "pan_sear"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "wild_boar",
+        "name": "Wild Boar",
+        "cutTypes": [
+          {
+            "id": "wild_boar",
+            "name": "Wild Boar",
+            "cuts": [
+              {
+                "id": "wild_boar_chop",
+                "name": "Wild Boar Chop",
+                "slug": "wild_boar_chop",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "wild_boar_shoulder",
+                "name": "Wild Boar Shoulder",
+                "slug": "wild_boar_shoulder",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mutton",
+        "name": "Mutton",
+        "cutTypes": [
+          {
+            "id": "mutton",
+            "name": "Mutton",
+            "cuts": [
+              {
+                "id": "mutton_chop",
+                "name": "Mutton Chop",
+                "slug": "mutton_chop",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "mutton_leg",
+                "name": "Mutton Leg Roast",
+                "slug": "mutton_leg",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "mutton_shoulder",
+                "name": "Mutton Shoulder",
+                "slug": "mutton_shoulder",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "mutton_shoulder_alt",
+                "name": "Shoulder",
+                "slug": "mutton_shoulder_alt",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "kangaroo",
+        "name": "Kangaroo",
+        "cutTypes": [
+          {
+            "id": "kangaroo",
+            "name": "Kangaroo",
+            "cuts": [
+              {
+                "id": "kangaroo_fillet",
+                "name": "Kangaroo Fillet",
+                "slug": "kangaroo_fillet",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "kangaroo_steak",
+                "name": "Kangaroo Steak",
+                "slug": "kangaroo_steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "pan_sear"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "reindeer",
+        "name": "Reindeer",
+        "cutTypes": [
+          {
+            "id": "reindeer",
+            "name": "Reindeer",
+            "cuts": [
+              {
+                "id": "reindeer_loin",
+                "name": "Loin",
+                "slug": "reindeer_loin",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "reindeer_roast",
+                "name": "Reindeer Roast",
+                "slug": "reindeer_roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "reindeer_steak",
+                "name": "Reindeer Steak",
+                "slug": "reindeer_steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "pan_sear"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "goat",
+        "name": "Goat",
+        "cutTypes": [
+          {
+            "id": "goat",
+            "name": "Goat",
+            "cuts": [
+              {
+                "id": "goat_chop",
+                "name": "Goat Chop",
+                "slug": "goat_chop",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "goat_leg",
+                "name": "Goat Leg Roast",
+                "slug": "goat_leg",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "goat_leg_roast",
+                "name": "Leg Roast",
+                "slug": "goat_leg_roast",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "goat_shank",
+                "name": "Goat Shank",
+                "slug": "goat_shank",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "goat_shoulder",
+                "name": "Goat Shoulder",
+                "slug": "goat_shoulder",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "moose",
+        "name": "Moose",
+        "cutTypes": [
+          {
+            "id": "moose",
+            "name": "Moose",
+            "cuts": [
+              {
+                "id": "moose_roast",
+                "name": "Moose Roast",
+                "slug": "moose_roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "moose_steak",
+                "name": "Moose Steak",
+                "slug": "moose_steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "pan_sear"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "buffalo",
+        "name": "Buffalo",
+        "cutTypes": [
+          {
+            "id": "buffalo",
+            "name": "Buffalo",
+            "cuts": [
+              {
+                "id": "buffalo_burger",
+                "name": "Burger",
+                "slug": "buffalo_burger",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "buffalo_roast",
+                "name": "Buffalo Roast",
+                "slug": "buffalo_roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "buffalo_steak",
+                "name": "Buffalo Steak",
+                "slug": "buffalo_steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "charcoal_grill",
+                  "grill",
+                  "pan_sear"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "bison",
+        "name": "Bison",
+        "cutTypes": [
+          {
+            "id": "bison",
+            "name": "Bison",
+            "cuts": [
+              {
+                "id": "bison_burger",
+                "name": "Bison Burger",
+                "slug": "bison_burger",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "bison_roast",
+                "name": "Bison Roast",
+                "slug": "bison_roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "bison_steak",
+                "name": "Bison Steak",
+                "slug": "bison_steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "charcoal_grill",
+                  "grill",
+                  "pan_sear"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "beef": {
+    "id": "beef",
+    "name": "Beef",
+    "icon": "🥩",
+    "color": "#8B0000",
+    "meats": [
+      {
+        "id": "cow",
+        "name": "Cow",
+        "cutTypes": [
+          {
+            "id": "ground",
+            "name": "Ground",
+            "cuts": [
+              {
+                "id": "beef_burger",
+                "name": "Beef Burger / Ground Beef Patty",
+                "slug": "beef_burger",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "charcoal_grill",
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "burger",
+                "name": "Burger",
+                "slug": "burger",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "ground_beef",
+                "name": "Ground Beef",
+                "slug": "ground_beef",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "liver",
+                "name": "Liver",
+                "slug": "liver",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "meatloaf",
+                "name": "Meatloaf",
+                "slug": "meatloaf",
+                "doneness": [
+                  "done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "meatloaf_alt",
+                "name": "Meatloaf",
+                "slug": "meatloaf_alt",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "tongue",
+                "name": "Tongue",
+                "slug": "tongue",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "steaks",
+            "name": "Steaks",
+            "cuts": [
+              {
+                "id": "filet_mignon",
+                "name": "Filet Mignon / Tenderloin Steak",
+                "slug": "filet_mignon",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "air_fryer",
+                  "charcoal_grill",
+                  "grill",
+                  "oven_roast",
+                  "pan_fry",
+                  "pan_sear",
+                  "sous_vide"
+                ]
+              },
+              {
+                "id": "flank_steak",
+                "name": "Flank Steak",
+                "slug": "flank_steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "charcoal_grill",
+                  "grill",
+                  "oven_roast",
+                  "pan_fry",
+                  "pan_sear",
+                  "sous_vide"
+                ]
+              },
+              {
+                "id": "flat_iron",
+                "name": "Flat Iron Steak",
+                "slug": "flat_iron",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "air_fryer",
+                  "charcoal_grill",
+                  "grill",
+                  "oven_roast",
+                  "pan_fry",
+                  "pan_sear",
+                  "sous_vide"
+                ]
+              },
+              {
+                "id": "hanger_steak",
+                "name": "Hanger Steak",
+                "slug": "hanger_steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "charcoal_grill",
+                  "grill",
+                  "pan_fry",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "ny_strip",
+                "name": "New York Strip",
+                "slug": "ny_strip",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "air_fryer",
+                  "charcoal_grill",
+                  "grill",
+                  "oven_roast",
+                  "pan_fry",
+                  "pan_sear",
+                  "sous_vide"
+                ]
+              },
+              {
+                "id": "picanha",
+                "name": "Picanha",
+                "slug": "picanha",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "charcoal_grill",
+                  "grill",
+                  "oven_roast",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "ribeye_steak",
+                "name": "Ribeye Steak",
+                "slug": "ribeye_steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "air_fryer",
+                  "charcoal_grill",
+                  "grill",
+                  "oven_roast",
+                  "pan_fry",
+                  "pan_sear",
+                  "sous_vide"
+                ]
+              },
+              {
+                "id": "sirloin_steak",
+                "name": "Sirloin Steak",
+                "slug": "sirloin_steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "air_fryer",
+                  "charcoal_grill",
+                  "grill",
+                  "oven_roast",
+                  "pan_fry",
+                  "pan_sear",
+                  "sous_vide"
+                ]
+              },
+              {
+                "id": "skirt_steak",
+                "name": "Skirt Steak",
+                "slug": "skirt_steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "charcoal_grill",
+                  "grill",
+                  "pan_fry",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "t_bone",
+                "name": "T-Bone / Porterhouse",
+                "slug": "t_bone",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "air_fryer",
+                  "charcoal_grill",
+                  "grill",
+                  "oven_roast",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "tomahawk",
+                "name": "Tomahawk Steak",
+                "slug": "tomahawk",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "charcoal_grill",
+                  "grill",
+                  "oven_roast",
+                  "pan_sear",
+                  "sous_vide"
+                ]
+              },
+              {
+                "id": "tri_tip",
+                "name": "Tri-Tip",
+                "slug": "tri_tip",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "charcoal_grill",
+                  "grill",
+                  "oven_roast",
+                  "pan_sear",
+                  "smoker",
+                  "sous_vide"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "other_offal",
+            "name": "Other / Offal",
+            "cuts": [
+              {
+                "id": "beef_liver",
+                "name": "Beef Liver",
+                "slug": "beef_liver",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "beef_rib",
+                "name": "Beef Rib",
+                "slug": "beef_rib",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "smoker"
+                ]
+              },
+              {
+                "id": "beef_shin",
+                "name": "Beef Shin",
+                "slug": "beef_shin",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "beef_tongue",
+                "name": "Beef Tongue",
+                "slug": "beef_tongue",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "braising_cuts",
+            "name": "Braising Cuts",
+            "cuts": [
+              {
+                "id": "beef_shank",
+                "name": "Beef Shank / Osso Buco",
+                "slug": "beef_shank",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "brisket",
+                "name": "Brisket",
+                "slug": "brisket",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker",
+                  "smoker"
+                ]
+              },
+              {
+                "id": "chuck_roast",
+                "name": "Chuck Roast / Pot Roast",
+                "slug": "chuck_roast",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "short_ribs",
+                "name": "Short Ribs",
+                "slug": "short_ribs",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker",
+                  "smoker"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "roasts",
+            "name": "Roasts",
+            "cuts": [
+              {
+                "id": "beef_tenderloin_roast",
+                "name": "Beef Tenderloin Roast",
+                "slug": "beef_tenderloin_roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "chuck",
+                "name": "Chuck",
+                "slug": "chuck",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "prime_rib",
+                "name": "Prime Rib / Standing Rib Roast",
+                "slug": "prime_rib",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "roasting_joint",
+                "name": "Roasting Joint",
+                "slug": "roasting_joint",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "round_roast",
+                "name": "Round Roast",
+                "slug": "round_roast",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "rump",
+                "name": "Rump",
+                "slug": "rump",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "rump_roast",
+                "name": "Rump Roast",
+                "slug": "rump_roast",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "sirloin_roast",
+                "name": "Sirloin Roast",
+                "slug": "sirloin_roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "sirloin_tip_roast",
+                "name": "Sirloin Tip Roast",
+                "slug": "sirloin_tip_roast",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "top_round_roast",
+                "name": "Top Round Roast",
+                "slug": "top_round_roast",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "poultry": {
+    "id": "poultry",
+    "name": "Poultry",
+    "icon": "🍗",
+    "color": "#FFD700",
+    "meats": [
+      {
+        "id": "goose",
+        "name": "Goose",
+        "cutTypes": [
+          {
+            "id": "goose",
+            "name": "Goose",
+            "cuts": [
+              {
+                "id": "goose_breast",
+                "name": "Goose Breast",
+                "slug": "goose_breast",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "safe"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "goose_leg",
+                "name": "Goose Leg",
+                "slug": "goose_leg",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "goose_thigh",
+                "name": "Goose Thigh",
+                "slug": "goose_thigh",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "whole_goose",
+                "name": "Whole Goose",
+                "slug": "whole_goose",
+                "doneness": [
+                  "safe",
+                  "thigh_rendered"
+                ],
+                "recommended_doneness": "thigh_rendered",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "duck",
+        "name": "Duck",
+        "cutTypes": [
+          {
+            "id": "duck",
+            "name": "Duck",
+            "cuts": [
+              {
+                "id": "duck_breast",
+                "name": "Duck Breast",
+                "slug": "duck_breast",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "safe"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast",
+                  "pan_sear",
+                  "sous_vide"
+                ]
+              },
+              {
+                "id": "duck_leg_confit",
+                "name": "Duck Leg Confit",
+                "slug": "duck_leg_confit",
+                "doneness": [
+                  "confit"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "whole_duck",
+                "name": "Whole Duck",
+                "slug": "whole_duck",
+                "doneness": [
+                  "safe",
+                  "leg_rendered"
+                ],
+                "recommended_doneness": "leg_rendered",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ground_poultry",
+        "name": "Ground Poultry",
+        "cutTypes": [
+          {
+            "id": "ground",
+            "name": "Ground",
+            "cuts": [
+              {
+                "id": "ground_turkey",
+                "name": "Ground Turkey",
+                "slug": "ground_turkey",
+                "doneness": [
+                  "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "turkey_burger",
+                "name": "Turkey Burger",
+                "slug": "turkey_burger",
+                "doneness": [
+                  "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "chicken_burger",
+                "name": "Chicken Burger",
+                "slug": "chicken_burger",
+                "doneness": [
+                  "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "ground_chicken",
+                "name": "Ground Chicken",
+                "slug": "ground_chicken",
+                "doneness": [
+                  "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "grill",
+                  "pan_fry"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "turkey",
+        "name": "Turkey",
+        "cutTypes": [
+          {
+            "id": "turkey",
+            "name": "Turkey",
+            "cuts": [
+              {
+                "id": "turkey_breast",
+                "name": "Turkey Breast",
+                "slug": "turkey_breast",
+                "doneness": [
+                  "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "smoker"
+                ]
+              },
+              {
+                "id": "turkey_ground",
+                "name": "Ground",
+                "slug": "turkey_ground",
+                "doneness": [
+                  "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "turkey_leg",
+                "name": "Turkey Leg",
+                "slug": "turkey_leg",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "smoker"
+                ]
+              },
+              {
+                "id": "turkey_thigh",
+                "name": "Turkey Thigh",
+                "slug": "turkey_thigh",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "whole_turkey",
+                "name": "Whole Turkey",
+                "slug": "whole_turkey",
+                "doneness": [
+                  "safe",
+                  "thigh_optimal"
+                ],
+                "recommended_doneness": "thigh_optimal",
+                "supported_methods": [
+                  "oven_roast",
+                  "smoker"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "chicken",
+        "name": "Chicken",
+        "cutTypes": [
+          {
+            "id": "whole",
+            "name": "Whole",
+            "cuts": [
+              {
+                "id": "breast",
+                "name": "Breast",
+                "slug": "breast",
+                "doneness": [
+                  "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "burger",
+                "name": "Burger",
+                "slug": "burger",
+                "doneness": [
+                  "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "ground",
+                "name": "Ground",
+                "slug": "ground",
+                "doneness": [
+                  "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "leg",
+                "name": "Leg",
+                "slug": "leg",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "thigh",
+                "name": "Thigh",
+                "slug": "thigh",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "whole_chicken",
+                "name": "Whole Chicken",
+                "slug": "whole_chicken",
+                "doneness": [
+                  "safe",
+                  "thigh_optimal"
+                ],
+                "recommended_doneness": "thigh_optimal",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "wing",
+                "name": "Wing",
+                "slug": "wing",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "breast",
+            "name": "Breast",
+            "cuts": [
+              {
+                "id": "chicken_breast",
+                "name": "Chicken Breast",
+                "slug": "chicken_breast",
+                "doneness": [
+                  "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_bake",
+                  "oven_roast",
+                  "pan_sear",
+                  "sous_vide"
+                ]
+              },
+              {
+                "id": "chicken_breast_bone_in",
+                "name": "Chicken Breast (Bone-in)",
+                "slug": "chicken_breast_bone_in",
+                "doneness": [
+                  "safe"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "dark_meat",
+            "name": "Dark Meat",
+            "cuts": [
+              {
+                "id": "chicken_leg",
+                "name": "Chicken Leg / Drumstick",
+                "slug": "chicken_leg",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "chicken_thigh",
+                "name": "Chicken Thigh",
+                "slug": "chicken_thigh",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "braise",
+                  "grill",
+                  "oven_roast",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "chicken_wing",
+                "name": "Chicken Wing",
+                "slug": "chicken_wing",
+                "doneness": [
+                  "safe",
+                  "dark_meat_optimal"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "vegetables": {
+    "id": "vegetables",
+    "name": "Vegetables",
+    "icon": "🥬",
+    "color": "#228B22",
+    "meats": [
+      {
+        "id": "green_vegetables",
+        "name": "Green Vegetables",
+        "cutTypes": [
+          {
+            "id": "green_vegetables",
+            "name": "Green Vegetables",
+            "cuts": [
+              {
+                "id": "asparagus",
+                "name": "Asparagus",
+                "slug": "asparagus",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "grill",
+                  "oven_roast",
+                  "saute",
+                  "steam"
+                ]
+              },
+              {
+                "id": "broccoli",
+                "name": "Broccoli",
+                "slug": "broccoli",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "oven_roast",
+                  "saute",
+                  "steam"
+                ]
+              },
+              {
+                "id": "brussels_sprouts",
+                "name": "Brussels Sprouts",
+                "slug": "brussels_sprouts",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "oven_roast",
+                  "pan_fry",
+                  "saute"
+                ]
+              },
+              {
+                "id": "green_beans",
+                "name": "Green Beans",
+                "slug": "green_beans",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "boil",
+                  "oven_roast",
+                  "saute",
+                  "steam"
+                ]
+              },
+              {
+                "id": "spinach",
+                "name": "Spinach",
+                "slug": "spinach",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "saute",
+                  "steam"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "tomatoes",
+        "name": "Tomatoes",
+        "cutTypes": [
+          {
+            "id": "tomatoes",
+            "name": "Tomatoes",
+            "cuts": [
+              {
+                "id": "roasted_tomatoes",
+                "name": "Roasted Tomatoes",
+                "slug": "roasted_tomatoes",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "oven_broil",
+                  "oven_roast"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cruciferous",
+        "name": "Cruciferous",
+        "cutTypes": [
+          {
+            "id": "cruciferous",
+            "name": "Cruciferous",
+            "cuts": [
+              {
+                "id": "cabbage",
+                "name": "Cabbage",
+                "slug": "cabbage",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "braise",
+                  "grill",
+                  "oven_roast",
+                  "saute"
+                ]
+              },
+              {
+                "id": "cauliflower",
+                "name": "Cauliflower",
+                "slug": "cauliflower",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "oven_roast",
+                  "saute",
+                  "steam",
+                  "whole_roast"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mushrooms",
+        "name": "Mushrooms",
+        "cutTypes": [
+          {
+            "id": "mushrooms",
+            "name": "Mushrooms",
+            "cuts": [
+              {
+                "id": "button_mushrooms",
+                "name": "Button/Cremini Mushrooms",
+                "slug": "button_mushrooms",
+                "doneness": [
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast",
+                  "saute"
+                ]
+              },
+              {
+                "id": "portobello_mushrooms",
+                "name": "Portobello Mushrooms",
+                "slug": "portobello_mushrooms",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast",
+                  "saute"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "eggplant",
+        "name": "Eggplant",
+        "cutTypes": [
+          {
+            "id": "eggplant",
+            "name": "Eggplant",
+            "cuts": [
+              {
+                "id": "eggplant",
+                "name": "Eggplant / Aubergine",
+                "slug": "eggplant",
+                "doneness": [
+                  "tender",
+                  "charred"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast",
+                  "pan_fry",
+                  "saute"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "peppers",
+        "name": "Peppers",
+        "cutTypes": [
+          {
+            "id": "peppers",
+            "name": "Peppers",
+            "cuts": [
+              {
+                "id": "bell_peppers",
+                "name": "Bell Peppers",
+                "slug": "bell_peppers",
+                "doneness": [
+                  "crisp_tender",
+                  "charred"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast",
+                  "saute"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "corn",
+        "name": "Corn",
+        "cutTypes": [
+          {
+            "id": "corn",
+            "name": "Corn",
+            "cuts": [
+              {
+                "id": "corn_on_cob",
+                "name": "Corn on the Cob",
+                "slug": "corn_on_cob",
+                "doneness": [
+                  "tender",
+                  "charred"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "boil",
+                  "grill",
+                  "oven_roast",
+                  "steam"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "squash",
+        "name": "Squash",
+        "cutTypes": [
+          {
+            "id": "squash",
+            "name": "Squash",
+            "cuts": [
+              {
+                "id": "acorn_squash",
+                "name": "Acorn Squash",
+                "slug": "acorn_squash",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_bake",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "butternut_squash",
+                "name": "Butternut Squash",
+                "slug": "butternut_squash",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast",
+                  "pressure_cooker",
+                  "steam"
+                ]
+              },
+              {
+                "id": "spaghetti_squash",
+                "name": "Spaghetti Squash",
+                "slug": "spaghetti_squash",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_bake",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "zucchini",
+                "name": "Zucchini",
+                "slug": "zucchini",
+                "doneness": [
+                  "crisp_tender",
+                  "tender"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast",
+                  "saute"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "alliums",
+        "name": "Alliums",
+        "cutTypes": [
+          {
+            "id": "alliums",
+            "name": "Alliums",
+            "cuts": [
+              {
+                "id": "caramelized_onions",
+                "name": "Caramelized Onions",
+                "slug": "caramelized_onions",
+                "doneness": [
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "pan_fry",
+                  "saute"
+                ]
+              },
+              {
+                "id": "leeks",
+                "name": "Leeks",
+                "slug": "leeks",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "saute"
+                ]
+              },
+              {
+                "id": "roasted_garlic",
+                "name": "Roasted Garlic",
+                "slug": "roasted_garlic",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "roasted_onion",
+                "name": "Roasted Onion",
+                "slug": "roasted_onion",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "grill",
+                  "oven_roast",
+                  "saute"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "root_vegetables",
+        "name": "Root Vegetables",
+        "cutTypes": [
+          {
+            "id": "root_vegetables",
+            "name": "Root Vegetables",
+            "cuts": [
+              {
+                "id": "baked_potato",
+                "name": "Baked Potato",
+                "slug": "baked_potato",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "oven_bake"
+                ]
+              },
+              {
+                "id": "roasted_beets",
+                "name": "Roasted Beets",
+                "slug": "roasted_beets",
+                "doneness": [
+                  "tender"
+                ],
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "roasted_carrots",
+                "name": "Roasted Carrots",
+                "slug": "roasted_carrots",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "oven_roast",
+                  "saute"
+                ]
+              },
+              {
+                "id": "roasted_parsnips",
+                "name": "Roasted Parsnips",
+                "slug": "roasted_parsnips",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "roasted_potatoes",
+                "name": "Roasted Potatoes",
+                "slug": "roasted_potatoes",
+                "doneness": [
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "roasted_sweet_potato",
+                "name": "Roasted Sweet Potato",
+                "slug": "roasted_sweet_potato",
+                "doneness": [
+                  "tender",
+                  "caramelized"
+                ],
+                "supported_methods": [
+                  "air_fryer",
+                  "oven_bake",
+                  "oven_roast"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "fish": {
+    "id": "fish",
+    "name": "Fish",
+    "icon": "🐟",
+    "color": "#4682B4",
+    "meats": [
+      {
+        "id": "tuna",
+        "name": "Tuna",
+        "cutTypes": [
+          {
+            "id": "tuna",
+            "name": "Tuna",
+            "cuts": [
+              {
+                "id": "tuna_steak",
+                "name": "Tuna Steak",
+                "slug": "tuna_steak",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_sear"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "salmon",
+        "name": "Salmon",
+        "cutTypes": [
+          {
+            "id": "salmon",
+            "name": "Salmon",
+            "cuts": [
+              {
+                "id": "salmon_fillet",
+                "name": "Salmon Fillet",
+                "slug": "salmon_fillet",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_bake",
+                  "pan_sear",
+                  "sous_vide"
+                ]
+              },
+              {
+                "id": "salmon_steak",
+                "name": "Salmon Steak",
+                "slug": "salmon_steak",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast",
+                  "pan_sear"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "shellfish",
+        "name": "Shellfish",
+        "cutTypes": [
+          {
+            "id": "shellfish",
+            "name": "Shellfish",
+            "cuts": [
+              {
+                "id": "lobster_tail",
+                "name": "Lobster Tail",
+                "slug": "lobster_tail",
+                "doneness": [
+                  "tender",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "scallops",
+                "name": "Scallops",
+                "slug": "scallops",
+                "doneness": [
+                  "medium_rare",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "shrimp",
+                "name": "Shrimp",
+                "slug": "shrimp",
+                "doneness": [
+                  "just_cooked",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "white_fish",
+        "name": "White Fish",
+        "cutTypes": [
+          {
+            "id": "white_fish",
+            "name": "White Fish",
+            "cuts": [
+              {
+                "id": "cod_fillet",
+                "name": "Cod Fillet",
+                "slug": "cod_fillet",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "oven_bake",
+                  "oven_roast",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "haddock",
+                "name": "Haddock Fillet",
+                "slug": "haddock",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "oven_roast",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "hake",
+                "name": "Hake Fillet",
+                "slug": "hake",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "pan_fry",
+                  "steam"
+                ]
+              },
+              {
+                "id": "halibut_fillet",
+                "name": "Halibut Fillet",
+                "slug": "halibut_fillet",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "mahi_mahi",
+                "name": "Mahi-Mahi",
+                "slug": "mahi_mahi",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "sea_bass",
+                "name": "Sea Bass",
+                "slug": "sea_bass",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "swordfish",
+                "name": "Swordfish Steak",
+                "slug": "swordfish",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "charcoal_grill",
+                  "grill",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "trout",
+                "name": "Trout Fillet",
+                "slug": "trout",
+                "doneness": [
+                  "medium_rare",
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast",
+                  "pan_sear"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "lamb": {
+    "id": "lamb",
+    "name": "Lamb",
+    "icon": "🐑",
+    "color": "#800020",
+    "meats": [
+      {
+        "id": "lamb",
+        "name": "Lamb",
+        "cutTypes": [
+          {
+            "id": "ground",
+            "name": "Ground",
+            "cuts": [
+              {
+                "id": "ground_lamb",
+                "name": "Ground Lamb",
+                "slug": "ground_lamb",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "lamb_burger",
+                "name": "Lamb Burger",
+                "slug": "lamb_burger",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "lamb_crown_roast",
+                "name": "Crown Roast",
+                "slug": "lamb_crown_roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "lamb_kofta",
+                "name": "Kofta / Kebab",
+                "slug": "lamb_kofta",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "lamb_rib_rack",
+                "name": "Rib Rack",
+                "slug": "lamb_rib_rack",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "lamb_shank",
+                "name": "Shank",
+                "slug": "lamb_shank",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "lamb_shoulder",
+                "name": "Shoulder",
+                "slug": "lamb_shoulder",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "roasts",
+            "name": "Roasts",
+            "cuts": [
+              {
+                "id": "lamb_brisket",
+                "name": "Lamb Brisket",
+                "slug": "lamb_brisket",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "lamb_loin_roast",
+                "name": "Lamb Loin Roast",
+                "slug": "lamb_loin_roast",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "lamb_neck",
+                "name": "Lamb Neck",
+                "slug": "lamb_neck",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "lamb_rib",
+                "name": "Lamb Rib",
+                "slug": "lamb_rib",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "None"
+              },
+              {
+                "id": "lamb_rump",
+                "name": "Lamb Rump",
+                "slug": "lamb_rump",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "leg_of_lamb",
+                "name": "Leg of Lamb",
+                "slug": "leg_of_lamb",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "rack_of_lamb",
+                "name": "Rack of Lamb",
+                "slug": "rack_of_lamb",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "chops",
+            "name": "Chops",
+            "cuts": [
+              {
+                "id": "lamb_chops",
+                "name": "Lamb Chops",
+                "slug": "lamb_chops",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well",
+                  "well_done"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "lamb_cutlet",
+                "name": "Lamb Cutlet",
+                "slug": "lamb_cutlet",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "lamb_loin_chops",
+                "name": "Lamb Loin Chops",
+                "slug": "lamb_loin_chops",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "medium_rare",
+                "supported_methods": [
+                  "grill",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "lamb_neck_filet",
+                "name": "Lamb Neck Filet",
+                "slug": "lamb_neck_filet",
+                "doneness": [
+                  "rare",
+                  "medium_rare",
+                  "medium",
+                  "medium_well"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "pan_sear",
+                  "slow_cooker"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "pork": {
+    "id": "pork",
+    "name": "Pork",
+    "icon": "🐷",
+    "color": "#FFB6C1",
+    "meats": [
+      {
+        "id": "pig",
+        "name": "Pig",
+        "cutTypes": [
+          {
+            "id": "ribs",
+            "name": "Ribs",
+            "cuts": [
+              {
+                "id": "baby_back_ribs",
+                "name": "Baby Back Ribs",
+                "slug": "baby_back_ribs",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast",
+                  "smoker"
+                ]
+              },
+              {
+                "id": "spare_ribs",
+                "name": "Spare Ribs",
+                "slug": "spare_ribs",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast",
+                  "smoker"
+                ]
+              },
+              {
+                "id": "st_louis_ribs",
+                "name": "St. Louis Style Ribs",
+                "slug": "st_louis_ribs",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast",
+                  "smoker"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ground",
+            "name": "Ground",
+            "cuts": [
+              {
+                "id": "ground_pork",
+                "name": "Ground Pork",
+                "slug": "ground_pork",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "pork_sausage",
+                "name": "Pork Sausage",
+                "slug": "pork_sausage",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "pan_fry"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ham",
+            "name": "Ham",
+            "cuts": [
+              {
+                "id": "fresh_ham",
+                "name": "Fresh Ham",
+                "slug": "fresh_ham",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "cured_ham",
+                "name": "Cured Ham (Pre-cooked)",
+                "slug": "cured_ham",
+                "doneness": [
+                  "heated_through"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "other_offal",
+            "name": "Other / Offal",
+            "cuts": [
+              {
+                "id": "cheek",
+                "name": "Cheek",
+                "slug": "cheek",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "jowl",
+                "name": "Jowl",
+                "slug": "jowl",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "liver_pork",
+                "name": "Liver",
+                "slug": "liver_pork",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "pork_cheek",
+                "name": "Pork Cheek",
+                "slug": "pork_cheek",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "pan_fry",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "pork_jowl",
+                "name": "Pork Jowl / Guanciale",
+                "slug": "pork_jowl",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "pork_liver",
+                "name": "Pork Liver",
+                "slug": "pork_liver",
+                "doneness": [
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "pan_fry",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "pork_tongue",
+                "name": "Pork Tongue",
+                "slug": "pork_tongue",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "slow_cooker"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "roasts",
+            "name": "Roasts",
+            "cuts": [
+              {
+                "id": "baby_back_ribs_alt",
+                "name": "Baby Back Ribs",
+                "slug": "baby_back_ribs_alt",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast",
+                  "smoker"
+                ]
+              },
+              {
+                "id": "belly",
+                "name": "Belly",
+                "slug": "belly",
+                "doneness": [
+                  "well_done",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "braise",
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "ham",
+                "name": "Ham",
+                "slug": "ham",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              },
+              {
+                "id": "pork_belly",
+                "name": "Pork Belly",
+                "slug": "pork_belly",
+                "doneness": [
+                  "well_done",
+                  "crispy"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "braise",
+                  "grill",
+                  "oven_roast",
+                  "pan_fry",
+                  "slow_cooker",
+                  "smoker",
+                  "sous_vide"
+                ]
+              },
+              {
+                "id": "pork_leg",
+                "name": "Pork Leg Roast",
+                "slug": "pork_leg",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "pork_loin_roast",
+                "name": "Pork Loin Roast",
+                "slug": "pork_loin_roast",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "slow_cooker"
+                ]
+              },
+              {
+                "id": "pork_shoulder",
+                "name": "Pork Shoulder / Boston Butt",
+                "slug": "pork_shoulder",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast",
+                  "slow_cooker",
+                  "smoker"
+                ]
+              },
+              {
+                "id": "spare_ribs_alt",
+                "name": "Spare Ribs",
+                "slug": "spare_ribs_alt",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast",
+                  "smoker"
+                ]
+              },
+              {
+                "id": "st_louis_ribs_alt",
+                "name": "St. Louis Style Ribs",
+                "slug": "st_louis_ribs_alt",
+                "doneness": [
+                  "pulled"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "grill",
+                  "oven_roast",
+                  "smoker"
+                ]
+              },
+              {
+                "id": "virginia_ham",
+                "name": "Virginia Ham",
+                "slug": "virginia_ham",
+                "doneness": [
+                  "heated_through"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "oven_roast"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "chops_tenderloin",
+            "name": "Chops & Tenderloin",
+            "cuts": [
+              {
+                "id": "pork_chop",
+                "name": "Pork Chop",
+                "slug": "pork_chop",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast",
+                  "pan_fry",
+                  "pan_sear"
+                ]
+              },
+              {
+                "id": "pork_loin_steak",
+                "name": "Pork Loin Steak",
+                "slug": "pork_loin_steak",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "pork_shoulder_steak",
+                "name": "Pork Shoulder Steak",
+                "slug": "pork_shoulder_steak",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "braise",
+                  "grill",
+                  "pan_fry"
+                ]
+              },
+              {
+                "id": "pork_tenderloin",
+                "name": "Pork Tenderloin",
+                "slug": "pork_tenderloin",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast",
+                  "pan_sear",
+                  "sous_vide"
+                ]
+              },
+              {
+                "id": "secreto",
+                "name": "Secreto (Ibérico Pork)",
+                "slug": "secreto",
+                "doneness": [
+                  "medium",
+                  "well_done"
+                ],
+                "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "charcoal_grill",
+                  "grill",
+                  "pan_sear"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+};
+
+// Experimental MEATER doneness options — collected from KCE:CUT doneness blocks
+const EXP_DONENESS_OPTIONS = {
+  "rare": {
+    "value": "rare",
+    "name": "Rare",
+    "icon": "🔴",
+    "description": null,
+    "temp_c": 49,
+    "temp_f": 120,
+    "safety_level": null
+  },
+  "medium_rare": {
+    "value": "medium_rare",
+    "name": "Medium Rare",
+    "icon": "🟠",
+    "description": null,
+    "temp_c": 54,
+    "temp_f": 130,
+    "safety_level": null
+  },
+  "medium": {
+    "value": "medium",
+    "name": "Medium",
+    "icon": "🟡",
+    "description": null,
+    "temp_c": 60,
+    "temp_f": 140,
+    "safety_level": null
+  },
+  "pulled": {
+    "value": "pulled",
+    "name": "Pulled",
+    "icon": "🍖",
+    "description": null,
+    "temp_c": 93,
+    "temp_f": 200,
+    "safety_level": "safe"
+  },
+  "medium_well": {
+    "value": "medium_well",
+    "name": "Medium Well",
+    "icon": "🟤",
+    "description": null,
+    "temp_c": 66,
+    "temp_f": 150,
+    "safety_level": "safe"
+  },
+  "well_done": {
+    "value": "well_done",
+    "name": "Well Done",
+    "icon": "⚪",
+    "description": null,
+    "temp_c": 71,
+    "temp_f": 160,
+    "safety_level": "safe"
+  },
+  "dark_meat_optimal": {
+    "value": "dark_meat_optimal",
+    "name": "Dark Meat Optimal",
+    "icon": "🍗",
+    "description": null,
+    "temp_c": 77,
+    "temp_f": 170,
+    "safety_level": "safe"
+  },
+  "done": {
+    "value": "done",
+    "name": "Done",
+    "icon": "✓",
+    "description": null,
+    "temp_c": 71,
+    "temp_f": 160,
+    "safety_level": "safe"
+  },
+  "safe": {
+    "value": "safe",
+    "name": "Safe",
+    "icon": "✅",
+    "description": null,
+    "temp_c": 74,
+    "temp_f": 165,
+    "safety_level": "safe"
+  },
+  "thigh_rendered": {
+    "value": "thigh_rendered",
+    "name": "Thigh Rendered",
+    "icon": "🦢",
+    "description": null,
+    "temp_c": 84,
+    "temp_f": 183,
+    "safety_level": "safe"
+  },
+  "confit": {
+    "value": "confit",
+    "name": "Confit",
+    "icon": "🦆",
+    "description": null,
+    "temp_c": 88,
+    "temp_f": 190,
+    "safety_level": "safe"
+  },
+  "leg_rendered": {
+    "value": "leg_rendered",
+    "name": "Leg Rendered",
+    "icon": "🦆",
+    "description": null,
+    "temp_c": 82,
+    "temp_f": 180,
+    "safety_level": "safe"
+  },
+  "thigh_optimal": {
+    "value": "thigh_optimal",
+    "name": "Thigh Optimal",
+    "icon": "🍗",
+    "description": null,
+    "temp_c": 77,
+    "temp_f": 170,
+    "safety_level": "safe"
+  },
+  "crisp_tender": {
+    "value": "crisp_tender",
+    "name": "Crisp Tender",
+    "icon": "🥦",
+    "description": null,
+    "temp_c": 85,
+    "temp_f": 185,
+    "safety_level": "safe"
+  },
+  "tender": {
+    "value": "tender",
+    "name": "Tender",
+    "icon": "🥔",
+    "description": null,
+    "temp_c": 95,
+    "temp_f": 203,
+    "safety_level": "safe"
+  },
+  "caramelized": {
+    "value": "caramelized",
+    "name": "Caramelized",
+    "icon": "🧅",
+    "description": null,
+    "temp_c": 160,
+    "temp_f": 320,
+    "safety_level": "safe"
+  },
+  "charred": {
+    "value": "charred",
+    "name": "Charred",
+    "icon": "🔥",
+    "description": null,
+    "temp_c": 200,
+    "temp_f": 390,
+    "safety_level": "safe"
+  },
+  "just_cooked": {
+    "value": "just_cooked",
+    "name": "Just Cooked",
+    "icon": "🦐",
+    "description": null,
+    "temp_c": 49,
+    "temp_f": 120,
+    "safety_level": null
+  },
+  "heated_through": {
+    "value": "heated_through",
+    "name": "Heated Through",
+    "icon": "♨️",
+    "description": null,
+    "temp_c": 60,
+    "temp_f": 140,
+    "safety_level": "safe"
+  },
+  "crispy": {
+    "value": "crispy",
+    "name": "Crispy",
+    "icon": "🥓",
+    "description": null,
+    "temp_c": 90,
+    "temp_f": 195,
+    "safety_level": "safe"
+  }
 };
 
 // Cooking methods
@@ -18390,18 +22086,18 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _getDataCategories() {
-    // The experimental MEATER path is locked to international data: recipe
-    // filenames under docs/recipe_research/ use English cut slugs, and there
-    // is no verified Swedish→English cut-slug mapping yet. Swedish cuts on
-    // this path would either show no recipe card or a wrong one. Swedish
-    // support for the experimental path will be added in a later branch.
-    if (this._currentPath === 'meater_experimental') return MEAT_CATEGORIES;
+    // The experimental MEATER path is driven by EXP_TREE — built at generation
+    // time from the KCE:CUT tagged cut files under docs/recipe_research/.
+    // Adding a new cut requires only a new {slug}.md with a KCE:CUT tag;
+    // cooking_data.py does not need to be touched.
+    // Swedish support on this path is postponed (no verified slug mapping yet).
+    if (this._currentPath === 'meater_experimental') return EXP_TREE;
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_MEAT_CATEGORIES : MEAT_CATEGORIES;
   }
 
   _getDonenessOptions() {
-    // See _getDataCategories: experimental MEATER path is locked to international.
-    if (this._currentPath === 'meater_experimental') return DONENESS_OPTIONS;
+    // See _getDataCategories: experimental MEATER path uses EXP_DONENESS_OPTIONS.
+    if (this._currentPath === 'meater_experimental') return EXP_DONENESS_OPTIONS;
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
   }
 
@@ -28247,7 +31943,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "283";
+const PANEL_VERSION = "285";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

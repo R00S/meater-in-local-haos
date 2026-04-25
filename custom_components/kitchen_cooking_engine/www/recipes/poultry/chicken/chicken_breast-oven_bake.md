@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: chicken_breast
 method: oven_bake
@@ -6,7 +6,7 @@ name: Chicken Breast × Oven Bake
 category: poultry
 meat: chicken
 cut_type: Breast
----
+-->
 # Chicken Breast × Oven Bake — Recipe Temperature Research
 
 ## Tree position

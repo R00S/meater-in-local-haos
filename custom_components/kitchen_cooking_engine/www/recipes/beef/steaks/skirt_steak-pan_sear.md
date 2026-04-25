@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: skirt_steak
 method: pan_sear
@@ -6,7 +6,7 @@ name: Skirt Steak × Pan Sear
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Skirt Steak × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

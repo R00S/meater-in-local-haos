@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: shrimp
 name: Shrimp
@@ -9,25 +9,26 @@ usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
 methods:
-  - pan_fry
+- pan_fry
 doneness:
-  - name: just_cooked
-    target_c: 49
-    target_f: 120
-    min_c: 46
-    min_f: 115
-    max_c: 52
-    max_f: 126
-    usda_safe: false
-    recommended: true
-  - name: well_done
-    target_c: 63
-    target_f: 145
-    min_c: 60
-    min_f: 140
-    max_c: 66
-    max_f: 150
-    usda_safe: true---
+- name: just_cooked
+  target_c: 49
+  target_f: 120
+  min_c: 46
+  min_f: 115
+  max_c: 52
+  max_f: 126
+  usda_safe: false
+  recommended: true
+- name: well_done
+  target_c: 63
+  target_f: 145
+  min_c: 60
+  min_f: 140
+  max_c: 66
+  max_f: 150
+  usda_safe: true
+-->
 # Shrimp — Cut Overview
 
 ## Cut profile

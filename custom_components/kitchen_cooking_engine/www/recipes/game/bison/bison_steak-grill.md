@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: bison_steak
 method: grill
@@ -6,7 +6,7 @@ name: Bison Steak × Grill
 category: game
 meat: bison
 cut_type: Bison
----
+-->
 # Bison Steak × Grill — Recipe Temperature Research
 
 ## Tree position

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: lobster_tail
 method: oven_roast
@@ -6,7 +6,7 @@ name: Lobster Tail × Oven Roast
 category: fish
 meat: shellfish
 cut_type: Shellfish
----
+-->
 # Lobster Tail × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

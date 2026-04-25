@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: beef_shank
 method: braise
@@ -6,7 +6,7 @@ name: Beef Shank / Osso Buco × Braise
 category: beef
 meat: cow
 cut_type: Braising Cuts
----
+-->
 # Beef Shank × Braise — Recipe Temperature Research
 
 ## Cut profile

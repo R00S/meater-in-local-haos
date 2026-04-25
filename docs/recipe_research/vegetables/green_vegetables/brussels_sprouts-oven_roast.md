@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: brussels_sprouts
 method: oven_roast
@@ -6,7 +6,7 @@ name: Brussels Sprouts × Oven Roast
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
----
+-->
 # Brussels Sprouts × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

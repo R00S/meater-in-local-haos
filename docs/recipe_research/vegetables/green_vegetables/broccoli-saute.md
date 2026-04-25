@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: broccoli
 method: saute
@@ -6,7 +6,7 @@ name: Broccoli × Sauté
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
----
+-->
 # Broccoli × Saute — Recipe Temperature Research
 
 ## Cut profile

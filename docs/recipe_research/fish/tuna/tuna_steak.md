@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: tuna_steak
 name: Tuna Steak
@@ -9,35 +9,36 @@ usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
 methods:
-  - grill
-  - pan_sear
+- grill
+- pan_sear
 doneness:
-  - name: rare
-    target_c: 43
-    target_f: 110
-    min_c: 40
-    min_f: 105
-    max_c: 46
-    max_f: 115
-    usda_safe: false
-    recommended: true
-  - name: medium_rare
-    target_c: 49
-    target_f: 120
-    min_c: 46
-    min_f: 115
-    max_c: 52
-    max_f: 125
-    usda_safe: false
-  - name: medium
-    target_c: 54
-    target_f: 130
-    min_c: 52
-    min_f: 125
-    max_c: 57
-    max_f: 135
-    usda_safe: false
-    recommended: true---
+- name: rare
+  target_c: 43
+  target_f: 110
+  min_c: 40
+  min_f: 105
+  max_c: 46
+  max_f: 115
+  usda_safe: false
+  recommended: true
+- name: medium_rare
+  target_c: 49
+  target_f: 120
+  min_c: 46
+  min_f: 115
+  max_c: 52
+  max_f: 125
+  usda_safe: false
+- name: medium
+  target_c: 54
+  target_f: 130
+  min_c: 52
+  min_f: 125
+  max_c: 57
+  max_f: 135
+  usda_safe: false
+  recommended: true
+-->
 # Tuna Steak — Cut Overview
 
 ## Cut profile

@@ -951,18 +951,18 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _getDataCategories() {
-    // The experimental MEATER path is locked to international data: recipe
-    // filenames under docs/recipe_research/ use English cut slugs, and there
-    // is no verified Swedish→English cut-slug mapping yet. Swedish cuts on
-    // this path would either show no recipe card or a wrong one. Swedish
-    // support for the experimental path will be added in a later branch.
-    if (this._currentPath === 'meater_experimental') return MEAT_CATEGORIES;
+    // The experimental MEATER path is driven by EXP_TREE — built at generation
+    // time from the KCE:CUT tagged cut files under docs/recipe_research/.
+    // Adding a new cut requires only a new {slug}.md with a KCE:CUT tag;
+    // cooking_data.py does not need to be touched.
+    // Swedish support on this path is postponed (no verified slug mapping yet).
+    if (this._currentPath === 'meater_experimental') return EXP_TREE;
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_MEAT_CATEGORIES : MEAT_CATEGORIES;
   }
 
   _getDonenessOptions() {
-    // See _getDataCategories: experimental MEATER path is locked to international.
-    if (this._currentPath === 'meater_experimental') return DONENESS_OPTIONS;
+    // See _getDataCategories: experimental MEATER path uses EXP_DONENESS_OPTIONS.
+    if (this._currentPath === 'meater_experimental') return EXP_DONENESS_OPTIONS;
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
   }
 

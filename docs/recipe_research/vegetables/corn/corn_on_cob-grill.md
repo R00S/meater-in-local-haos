@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: corn_on_cob
 method: grill
@@ -6,7 +6,7 @@ name: Corn on the Cob × Grill
 category: vegetables
 meat: corn
 cut_type: Corn
----
+-->
 # Corn On Cob × Grill — Recipe Temperature Research
 
 ## Cut profile

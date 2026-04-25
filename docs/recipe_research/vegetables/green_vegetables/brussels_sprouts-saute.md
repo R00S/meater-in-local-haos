@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: brussels_sprouts
 method: saute
@@ -6,7 +6,7 @@ name: Brussels Sprouts × Sauté
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
----
+-->
 # Brussels Sprouts × Saute — Recipe Temperature Research
 
 ## Cut profile

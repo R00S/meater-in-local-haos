@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: haddock
 name: Haddock Fillet
@@ -9,27 +9,28 @@ usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
 methods:
-  - air_fryer
-  - oven_roast
-  - pan_fry
+- air_fryer
+- oven_roast
+- pan_fry
 doneness:
-  - name: medium
-    target_c: 54
-    target_f: 130
-    min_c: 52
-    min_f: 125
-    max_c: 57
-    max_f: 135
-    usda_safe: false
-    recommended: true
-  - name: well_done
-    target_c: 63
-    target_f: 145
-    min_c: 60
-    min_f: 140
-    max_c: 66
-    max_f: 150
-    usda_safe: true---
+- name: medium
+  target_c: 54
+  target_f: 130
+  min_c: 52
+  min_f: 125
+  max_c: 57
+  max_f: 135
+  usda_safe: false
+  recommended: true
+- name: well_done
+  target_c: 63
+  target_f: 145
+  min_c: 60
+  min_f: 140
+  max_c: 66
+  max_f: 150
+  usda_safe: true
+-->
 # Haddock Fillet — Cut Overview
 
 ## Cut profile

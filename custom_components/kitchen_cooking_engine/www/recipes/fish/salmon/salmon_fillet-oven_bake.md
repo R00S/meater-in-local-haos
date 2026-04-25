@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: salmon_fillet
 method: oven_bake
@@ -6,7 +6,7 @@ name: Salmon Fillet × Oven Bake
 category: fish
 meat: salmon
 cut_type: Salmon
----
+-->
 # Salmon Fillet × Oven Bake — Recipe Temperature Research
 
 ## Cut profile

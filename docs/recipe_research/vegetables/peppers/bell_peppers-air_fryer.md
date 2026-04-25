@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: bell_peppers
 method: air_fryer
@@ -6,7 +6,7 @@ name: Bell Peppers × Air Fryer
 category: vegetables
 meat: peppers
 cut_type: Peppers
----
+-->
 # Bell Peppers × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

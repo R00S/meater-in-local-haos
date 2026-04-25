@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: roasted_tomatoes
 method: oven_roast
@@ -6,7 +6,7 @@ name: Roasted Tomatoes × Oven Roast
 category: vegetables
 meat: tomatoes
 cut_type: Tomatoes
----
+-->
 # Roasted Tomatoes × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

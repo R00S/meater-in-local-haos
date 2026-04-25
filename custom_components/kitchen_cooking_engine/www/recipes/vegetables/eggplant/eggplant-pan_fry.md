@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: eggplant
 method: pan_fry
@@ -6,7 +6,7 @@ name: Eggplant / Aubergine × Pan Fry
 category: vegetables
 meat: eggplant
 cut_type: Eggplant
----
+-->
 # Eggplant × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

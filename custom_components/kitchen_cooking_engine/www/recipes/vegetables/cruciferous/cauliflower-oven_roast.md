@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: cauliflower
 method: oven_roast
@@ -6,7 +6,7 @@ name: Cauliflower × Oven Roast
 category: vegetables
 meat: cruciferous
 cut_type: Cruciferous
----
+-->
 # Cauliflower × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: cured_ham
 name: Cured Ham (Pre-cooked)
@@ -9,17 +9,18 @@ usda_safe_c: 60
 usda_safe_f: 140
 recommended_doneness: well_done
 methods:
-  - oven_roast
+- oven_roast
 doneness:
-  - name: heated_through
-    target_c: 60
-    target_f: 140
-    min_c: 57
-    min_f: 135
-    max_c: 63
-    max_f: 145
-    usda_safe: true
-    recommended: true---
+- name: heated_through
+  target_c: 60
+  target_f: 140
+  min_c: 57
+  min_f: 135
+  max_c: 63
+  max_f: 145
+  usda_safe: true
+  recommended: true
+-->
 # Cured Ham (Pre-cooked) — Cut Overview
 
 ## Cut profile

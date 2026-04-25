@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_sausage
 method: pan_fry
@@ -6,7 +6,7 @@ name: Pork Sausage × Pan Fry
 category: pork
 meat: pig
 cut_type: Ground
----
+-->
 # Pork Sausage × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: roasted_potatoes
 method: air_fryer
@@ -6,7 +6,7 @@ name: Roasted Potatoes × Air Fryer
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables
----
+-->
 # Roasted Potatoes × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

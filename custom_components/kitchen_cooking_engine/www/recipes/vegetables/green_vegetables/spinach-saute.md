@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: spinach
 method: saute
@@ -6,7 +6,7 @@ name: Spinach × Sauté
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
----
+-->
 # Spinach × Saute — Recipe Temperature Research
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: leeks
 method: braise
@@ -6,7 +6,7 @@ name: Leeks × Braise
 category: vegetables
 meat: alliums
 cut_type: Alliums
----
+-->
 # Leeks × Braise — Recipe Temperature Research
 
 ## Cut profile

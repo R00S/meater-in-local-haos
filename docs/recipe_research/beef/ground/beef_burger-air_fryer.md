@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: beef_burger
 method: air_fryer
@@ -6,7 +6,7 @@ name: Beef Burger / Ground Beef Patty × Air Fryer
 category: beef
 meat: cow
 cut_type: Ground
----
+-->
 # Beef Burger × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

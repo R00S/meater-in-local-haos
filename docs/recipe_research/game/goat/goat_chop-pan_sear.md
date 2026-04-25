@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: goat_chop
 method: pan_sear
@@ -6,7 +6,7 @@ name: Goat Chop × Pan Sear
 category: game
 meat: goat
 cut_type: Goat
----
+-->
 # Goat Chop × Pan Sear — Recipe Temperature Research
 
 ## Tree position

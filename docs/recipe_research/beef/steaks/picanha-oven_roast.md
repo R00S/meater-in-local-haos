@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: picanha
 method: oven_roast
@@ -6,7 +6,7 @@ name: Picanha × Oven Roast
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Picanha × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

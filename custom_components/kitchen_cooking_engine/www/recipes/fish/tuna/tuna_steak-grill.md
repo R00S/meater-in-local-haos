@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: tuna_steak
 method: grill
@@ -6,7 +6,7 @@ name: Tuna Steak × Grill
 category: fish
 meat: tuna
 cut_type: Tuna
----
+-->
 # Tuna Steak × Grill — Recipe Temperature Research
 
 ## Cut profile

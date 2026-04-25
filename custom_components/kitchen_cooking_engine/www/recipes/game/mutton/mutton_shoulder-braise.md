@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: mutton_shoulder
 method: braise
@@ -6,7 +6,7 @@ name: Mutton Shoulder × Braise
 category: game
 meat: mutton
 cut_type: Mutton
----
+-->
 # Mutton Shoulder × Braise — Recipe Temperature Research
 
 ## Tree position

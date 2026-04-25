@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: lobster_tail
 name: Lobster Tail
@@ -9,26 +9,27 @@ usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
 methods:
-  - grill
-  - oven_roast
+- grill
+- oven_roast
 doneness:
-  - name: tender
-    target_c: 57
-    target_f: 135
-    min_c: 54
-    min_f: 130
-    max_c: 60
-    max_f: 140
-    usda_safe: false
-    recommended: true
-  - name: well_done
-    target_c: 63
-    target_f: 145
-    min_c: 60
-    min_f: 140
-    max_c: 66
-    max_f: 150
-    usda_safe: true---
+- name: tender
+  target_c: 57
+  target_f: 135
+  min_c: 54
+  min_f: 130
+  max_c: 60
+  max_f: 140
+  usda_safe: false
+  recommended: true
+- name: well_done
+  target_c: 63
+  target_f: 145
+  min_c: 60
+  min_f: 140
+  max_c: 66
+  max_f: 150
+  usda_safe: true
+-->
 # Lobster Tail — Cut Overview
 
 ## Cut profile

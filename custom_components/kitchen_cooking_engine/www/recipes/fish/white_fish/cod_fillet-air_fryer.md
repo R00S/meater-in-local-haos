@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: cod_fillet
 method: air_fryer
@@ -6,7 +6,7 @@ name: Cod Fillet × Air Fryer
 category: fish
 meat: white_fish
 cut_type: White Fish
----
+-->
 # Cod Fillet × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

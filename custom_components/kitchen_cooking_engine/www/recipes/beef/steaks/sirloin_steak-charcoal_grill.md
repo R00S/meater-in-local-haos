@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: sirloin_steak
 method: charcoal_grill
@@ -6,7 +6,7 @@ name: Sirloin Steak × Charcoal Grill
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Sirloin Steak × Charcoal Grill — Recipe Temperature Research
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: cauliflower
 method: steam
@@ -6,7 +6,7 @@ name: Cauliflower × Steam
 category: vegetables
 meat: cruciferous
 cut_type: Cruciferous
----
+-->
 # Cauliflower × Steam — Recipe Temperature Research
 
 ## Cut profile

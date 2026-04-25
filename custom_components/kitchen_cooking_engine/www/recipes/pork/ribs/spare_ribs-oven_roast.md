@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: spare_ribs
 method: oven_roast
@@ -6,7 +6,7 @@ name: Spare Ribs × Oven Roast
 category: pork
 meat: pig
 cut_type: Ribs
----
+-->
 # Spare Ribs × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

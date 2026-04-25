@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: whole_duck
 name: Whole Duck
@@ -9,26 +9,27 @@ usda_safe_c: 74
 usda_safe_f: 165
 recommended_doneness: leg_rendered
 methods:
-  - oven_roast
+- oven_roast
 doneness:
-  - name: safe
-    target_c: 74
-    target_f: 165
-    min_c: 74
-    min_f: 165
-    max_c: 77
-    max_f: 170
-    usda_safe: true
-    recommended: true
-  - name: leg_rendered
-    target_c: 82
-    target_f: 180
-    min_c: 79
-    min_f: 175
-    max_c: 88
-    max_f: 190
-    usda_safe: true
-    recommended: true---
+- name: safe
+  target_c: 74
+  target_f: 165
+  min_c: 74
+  min_f: 165
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+  recommended: true
+- name: leg_rendered
+  target_c: 82
+  target_f: 180
+  min_c: 79
+  min_f: 175
+  max_c: 88
+  max_f: 190
+  usda_safe: true
+  recommended: true
+-->
 # Whole Duck — Cut Overview
 
 ## Cut profile

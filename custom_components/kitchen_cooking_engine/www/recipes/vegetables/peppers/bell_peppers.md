@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: bell_peppers
 name: Bell Peppers
@@ -6,27 +6,28 @@ category: vegetables
 meat: peppers
 cut_type: Peppers
 methods:
-  - air_fryer
-  - grill
-  - oven_roast
-  - saute
+- air_fryer
+- grill
+- oven_roast
+- saute
 doneness:
-  - name: crisp_tender
-    target_c: 85
-    target_f: 185
-    min_c: 80
-    min_f: 175
-    max_c: 90
-    max_f: 195
-    usda_safe: true
-  - name: charred
-    target_c: 200
-    target_f: 390
-    min_c: 175
-    min_f: 350
-    max_c: 230
-    max_f: 450
-    usda_safe: true---
+- name: crisp_tender
+  target_c: 85
+  target_f: 185
+  min_c: 80
+  min_f: 175
+  max_c: 90
+  max_f: 195
+  usda_safe: true
+- name: charred
+  target_c: 200
+  target_f: 390
+  min_c: 175
+  min_f: 350
+  max_c: 230
+  max_f: 450
+  usda_safe: true
+-->
 # Bell Peppers — Cut Overview
 
 ## Cut profile

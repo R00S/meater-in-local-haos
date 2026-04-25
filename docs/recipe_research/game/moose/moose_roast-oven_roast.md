@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: moose_roast
 method: oven_roast
@@ -6,7 +6,7 @@ name: Moose Roast × Oven Roast
 category: game
 meat: moose
 cut_type: Moose
----
+-->
 # Moose Roast × Oven Roast — Recipe Temperature Research
 
 ## Tree position

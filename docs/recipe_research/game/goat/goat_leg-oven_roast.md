@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: goat_leg
 method: oven_roast
@@ -6,7 +6,7 @@ name: Goat Leg Roast × Oven Roast
 category: game
 meat: goat
 cut_type: Goat
----
+-->
 # Goat Leg × Oven Roast — Recipe Temperature Research
 
 ## Tree position

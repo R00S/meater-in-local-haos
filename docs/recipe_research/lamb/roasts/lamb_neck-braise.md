@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: lamb_neck
 method: braise
@@ -6,7 +6,7 @@ name: Lamb Neck × Braise
 category: lamb
 meat: lamb
 cut_type: Roasts
----
+-->
 # Lamb Neck × Braise — Recipe Temperature Research
 
 ## Tree position

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: ground_lamb
 method: pan_fry
@@ -6,7 +6,7 @@ name: Ground Lamb × Pan Fry
 category: lamb
 meat: lamb
 cut_type: Ground
----
+-->
 # Ground Lamb × Pan Fry — Recipe Temperature Research
 
 ## Tree position

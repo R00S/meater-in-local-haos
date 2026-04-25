@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: goat_chop
 method: grill
@@ -6,7 +6,7 @@ name: Goat Chop × Grill
 category: game
 meat: goat
 cut_type: Goat
----
+-->
 # Goat Chop × Grill — Recipe Temperature Research
 
 ## Tree position

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: beef_tongue
 method: slow_cooker
@@ -6,7 +6,7 @@ name: Beef Tongue × Slow Cooker
 category: beef
 meat: cow
 cut_type: Other / Offal
----
+-->
 # Beef Tongue × Slow Cooker — Recipe Temperature Research
 
 ## Cut profile

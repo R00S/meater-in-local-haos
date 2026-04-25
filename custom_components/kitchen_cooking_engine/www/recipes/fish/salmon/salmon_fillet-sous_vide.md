@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: salmon_fillet
 method: sous_vide
@@ -6,7 +6,7 @@ name: Salmon Fillet × Sous Vide
 category: fish
 meat: salmon
 cut_type: Salmon
----
+-->
 # Salmon Fillet × Sous Vide — Recipe Temperature Research
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: leeks
 method: oven_roast
@@ -6,7 +6,7 @@ name: Leeks × Oven Roast
 category: vegetables
 meat: alliums
 cut_type: Alliums
----
+-->
 # Leeks × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

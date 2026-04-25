@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: zucchini
 method: air_fryer
@@ -6,7 +6,7 @@ name: Zucchini × Air Fryer
 category: vegetables
 meat: squash
 cut_type: Squash
----
+-->
 # Zucchini × Air Fryer — Recipe Temperature Research
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: lamb_burger
 name: Lamb Burger
@@ -9,17 +9,18 @@ usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: well_done
 methods:
-  - grill
-  - pan_fry
+- grill
+- pan_fry
 doneness:
-  - name: well_done
-    target_c: 71
-    target_f: 160
-    min_c: 68
-    min_f: 155
-    max_c: 77
-    max_f: 170
-    usda_safe: true---
+- name: well_done
+  target_c: 71
+  target_f: 160
+  min_c: 68
+  min_f: 155
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+-->
 # Lamb Burger — Cut Overview
 
 ## Cut profile

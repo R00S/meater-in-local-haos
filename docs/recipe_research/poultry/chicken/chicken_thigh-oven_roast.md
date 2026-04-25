@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: chicken_thigh
 method: oven_roast
@@ -6,7 +6,7 @@ name: Chicken Thigh × Oven Roast
 category: poultry
 meat: chicken
 cut_type: Dark Meat
----
+-->
 # Chicken Thigh × Oven Roast — Recipe Temperature Research
 
 ## Tree position

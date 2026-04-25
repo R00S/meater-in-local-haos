@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: trout
 method: pan_sear
@@ -6,7 +6,7 @@ name: Trout Fillet × Pan Sear
 category: fish
 meat: white_fish
 cut_type: White Fish
----
+-->
 # Trout × Pan Sear — Recipe Temperature Research
 
 ## Tree position

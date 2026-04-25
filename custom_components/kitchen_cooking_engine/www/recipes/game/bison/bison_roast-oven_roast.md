@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: bison_roast
 method: oven_roast
@@ -6,7 +6,7 @@ name: Bison Roast × Oven Roast
 category: game
 meat: bison
 cut_type: Bison
----
+-->
 # Bison Roast × Oven Roast — Recipe Temperature Research
 
 ## Tree position

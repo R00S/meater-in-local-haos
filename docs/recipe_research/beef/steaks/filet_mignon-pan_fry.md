@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: filet_mignon
 method: pan_fry
@@ -6,7 +6,7 @@ name: Filet Mignon / Tenderloin Steak × Pan Fry
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Filet Mignon × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

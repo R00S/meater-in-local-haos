@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_tenderloin
 method: grill
@@ -6,7 +6,7 @@ name: Pork Tenderloin × Grill
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin
----
+-->
 # Pork Tenderloin × Grill — Recipe Temperature Research
 
 ## Cut profile

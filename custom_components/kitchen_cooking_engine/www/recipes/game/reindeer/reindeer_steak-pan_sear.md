@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: reindeer_steak
 method: pan_sear
@@ -6,7 +6,7 @@ name: Reindeer Steak × Pan Sear
 category: game
 meat: reindeer
 cut_type: Reindeer
----
+-->
 # Reindeer Steak × Pan Sear — Recipe Temperature Research
 
 ## Tree position

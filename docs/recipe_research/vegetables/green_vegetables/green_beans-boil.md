@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: green_beans
 method: boil
@@ -6,7 +6,7 @@ name: Green Beans × Boil
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
----
+-->
 # Green Beans × Boil — Recipe Temperature Research
 
 ## Cut profile

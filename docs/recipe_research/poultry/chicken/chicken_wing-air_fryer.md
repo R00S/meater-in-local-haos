@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: chicken_wing
 method: air_fryer
@@ -6,7 +6,7 @@ name: Chicken Wing × Air Fryer
 category: poultry
 meat: chicken
 cut_type: Dark Meat
----
+-->
 # Chicken Wing × Air Fryer — Recipe Temperature Research
 
 ## Tree position

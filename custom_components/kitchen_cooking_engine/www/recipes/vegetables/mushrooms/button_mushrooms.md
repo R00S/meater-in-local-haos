@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: button_mushrooms
 name: Button/Cremini Mushrooms
@@ -6,19 +6,20 @@ category: vegetables
 meat: mushrooms
 cut_type: Mushrooms
 methods:
-  - air_fryer
-  - grill
-  - oven_roast
-  - saute
+- air_fryer
+- grill
+- oven_roast
+- saute
 doneness:
-  - name: caramelized
-    target_c: 160
-    target_f: 320
-    min_c: 150
-    min_f: 300
-    max_c: 175
-    max_f: 350
-    usda_safe: true---
+- name: caramelized
+  target_c: 160
+  target_f: 320
+  min_c: 150
+  min_f: 300
+  max_c: 175
+  max_f: 350
+  usda_safe: true
+-->
 # Button/Cremini Mushrooms — Cut Overview
 
 ## Cut profile

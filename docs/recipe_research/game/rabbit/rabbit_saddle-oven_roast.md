@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: rabbit_saddle
 method: oven_roast
@@ -6,7 +6,7 @@ name: Rabbit Saddle × Oven Roast
 category: game
 meat: rabbit
 cut_type: Rabbit
----
+-->
 # Rabbit Saddle × Oven Roast — Recipe Temperature Research
 
 > ✅ **STATUS: CONFORMS TO RECIPE_COLLECTION_TOR.md** — validated 2026-03-04

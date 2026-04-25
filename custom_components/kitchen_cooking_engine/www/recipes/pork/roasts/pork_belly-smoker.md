@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_belly
 method: smoker
@@ -6,7 +6,7 @@ name: Pork Belly × Smoker
 category: pork
 meat: pig
 cut_type: Roasts
----
+-->
 # Pork Belly × Smoker — Recipe Temperature Research
 
 ## Cut profile

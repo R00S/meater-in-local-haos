@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_cheek
 method: oven_roast
@@ -6,7 +6,7 @@ name: Pork Cheek × Oven Roast
 category: pork
 meat: pig
 cut_type: Other / Offal
----
+-->
 # Pork Cheek × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: prime_rib
 method: oven_roast
@@ -6,7 +6,7 @@ name: Prime Rib / Standing Rib Roast × Oven Roast
 category: beef
 meat: cow
 cut_type: Roasts
----
+-->
 # Prime Rib × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

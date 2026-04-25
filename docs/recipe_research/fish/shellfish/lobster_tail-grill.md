@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: lobster_tail
 method: grill
@@ -6,7 +6,7 @@ name: Lobster Tail × Grill
 category: fish
 meat: shellfish
 cut_type: Shellfish
----
+-->
 # Lobster Tail × Grill — Recipe Temperature Research
 
 ## Cut profile

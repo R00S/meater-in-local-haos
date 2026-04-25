@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: salmon_fillet
 method: pan_sear
@@ -6,7 +6,7 @@ name: Salmon Fillet × Pan Sear
 category: fish
 meat: salmon
 cut_type: Salmon
----
+-->
 # Salmon Fillet × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: pork_shoulder
 name: Pork Shoulder / Boston Butt
@@ -9,18 +9,19 @@ usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
 methods:
-  - oven_roast
-  - slow_cooker
-  - smoker
+- oven_roast
+- slow_cooker
+- smoker
 doneness:
-  - name: pulled
-    target_c: 93
-    target_f: 200
-    min_c: 88
-    min_f: 190
-    max_c: 96
-    max_f: 205
-    usda_safe: true---
+- name: pulled
+  target_c: 93
+  target_f: 200
+  min_c: 88
+  min_f: 190
+  max_c: 96
+  max_f: 205
+  usda_safe: true
+-->
 # Pork Shoulder / Boston Butt — Cut Overview
 
 ## Cut profile

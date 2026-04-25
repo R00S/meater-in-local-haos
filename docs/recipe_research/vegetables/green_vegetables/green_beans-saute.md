@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: green_beans
 method: saute
@@ -6,7 +6,7 @@ name: Green Beans × Sauté
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
----
+-->
 # Green Beans × Saute — Recipe Temperature Research
 
 ## Cut profile

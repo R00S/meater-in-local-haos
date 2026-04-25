@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: duck_breast
 method: pan_sear
@@ -6,7 +6,7 @@ name: Duck Breast × Pan Sear
 category: poultry
 meat: duck
 cut_type: Duck
----
+-->
 # Duck Breast × Pan Sear — Recipe Temperature Research
 
 ## Tree position

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: whole_goose
 method: oven_roast
@@ -6,7 +6,7 @@ name: Whole Goose × Oven Roast
 category: poultry
 meat: goose
 cut_type: Goose
----
+-->
 # Whole Goose × Oven Roast — Recipe Temperature Research
 
 ## Tree position

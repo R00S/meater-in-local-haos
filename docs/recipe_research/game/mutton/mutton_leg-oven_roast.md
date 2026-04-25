@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: mutton_leg
 method: oven_roast
@@ -6,7 +6,7 @@ name: Mutton Leg Roast × Oven Roast
 category: game
 meat: mutton
 cut_type: Mutton
----
+-->
 # Mutton Leg × Oven Roast — Recipe Temperature Research
 
 ## Tree position

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: ground_pork
 name: Ground Pork
@@ -9,17 +9,18 @@ usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: well_done
 methods:
-  - braise
-  - pan_fry
+- braise
+- pan_fry
 doneness:
-  - name: well_done
-    target_c: 71
-    target_f: 160
-    min_c: 68
-    min_f: 155
-    max_c: 77
-    max_f: 170
-    usda_safe: true---
+- name: well_done
+  target_c: 71
+  target_f: 160
+  min_c: 68
+  min_f: 155
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+-->
 # Ground Pork — Cut Overview
 
 ## Cut profile

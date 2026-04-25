@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: beef_tenderloin_roast
 method: oven_roast
@@ -6,7 +6,7 @@ name: Beef Tenderloin Roast × Oven Roast
 category: beef
 meat: cow
 cut_type: Roasts
----
+-->
 # Beef Tenderloin Roast × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

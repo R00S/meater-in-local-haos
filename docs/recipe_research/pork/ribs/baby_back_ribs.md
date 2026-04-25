@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: baby_back_ribs
 name: Baby Back Ribs
@@ -9,19 +9,20 @@ usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
 methods:
-  - air_fryer
-  - grill
-  - oven_roast
-  - smoker
+- air_fryer
+- grill
+- oven_roast
+- smoker
 doneness:
-  - name: pulled
-    target_c: 93
-    target_f: 200
-    min_c: 88
-    min_f: 190
-    max_c: 96
-    max_f: 205
-    usda_safe: true---
+- name: pulled
+  target_c: 93
+  target_f: 200
+  min_c: 88
+  min_f: 190
+  max_c: 96
+  max_f: 205
+  usda_safe: true
+-->
 # Baby Back Ribs — Cut Overview
 
 ## Cut profile

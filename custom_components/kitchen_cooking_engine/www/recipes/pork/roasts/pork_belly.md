@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: pork_belly
 name: Pork Belly
@@ -9,31 +9,32 @@ usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: well_done
 methods:
-  - air_fryer
-  - braise
-  - grill
-  - oven_roast
-  - pan_fry
-  - slow_cooker
-  - smoker
-  - sous_vide
+- air_fryer
+- braise
+- grill
+- oven_roast
+- pan_fry
+- slow_cooker
+- smoker
+- sous_vide
 doneness:
-  - name: well_done
-    target_c: 71
-    target_f: 160
-    min_c: 68
-    min_f: 155
-    max_c: 77
-    max_f: 170
-    usda_safe: true
-  - name: crispy
-    target_c: 90
-    target_f: 195
-    min_c: 85
-    min_f: 185
-    max_c: 95
-    max_f: 203
-    usda_safe: true---
+- name: well_done
+  target_c: 71
+  target_f: 160
+  min_c: 68
+  min_f: 155
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+- name: crispy
+  target_c: 90
+  target_f: 195
+  min_c: 85
+  min_f: 185
+  max_c: 95
+  max_f: 203
+  usda_safe: true
+-->
 # Pork Belly — Cut Overview
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: meatloaf
 method: oven_roast
@@ -6,7 +6,7 @@ name: Meatloaf × Oven Roast
 category: beef
 meat: cow
 cut_type: Ground
----
+-->
 # Meatloaf × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

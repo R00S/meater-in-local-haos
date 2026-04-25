@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_tongue
 method: braise
@@ -6,7 +6,7 @@ name: Pork Tongue × Braise
 category: pork
 meat: pig
 cut_type: Other / Offal
----
+-->
 # Pork Tongue × Braise — Recipe Temperature Research
 
 ## Cut profile

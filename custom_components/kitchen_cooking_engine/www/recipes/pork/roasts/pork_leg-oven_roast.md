@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_leg
 method: oven_roast
@@ -6,7 +6,7 @@ name: Pork Leg Roast × Oven Roast
 category: pork
 meat: pig
 cut_type: Roasts
----
+-->
 # Pork Leg / Hock × Oven Roast — Recipe Temperature Research
 
 ## Tree position

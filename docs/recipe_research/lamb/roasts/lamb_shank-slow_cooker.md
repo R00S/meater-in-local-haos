@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: lamb_shank
 method: slow_cooker
@@ -6,7 +6,7 @@ name: Shank × Slow Cooker
 category: lamb
 meat: lamb
 cut_type: Ground
----
+-->
 # Lamb Shank × Slow Cooker — Recipe Temperature Research
 
 ## Tree position

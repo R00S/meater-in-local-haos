@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: spaghetti_squash
 name: Spaghetti Squash
@@ -6,18 +6,19 @@ category: vegetables
 meat: squash
 cut_type: Squash
 methods:
-  - oven_bake
-  - oven_roast
+- oven_bake
+- oven_roast
 doneness:
-  - name: tender
-    target_c: 95
-    target_f: 203
-    min_c: 90
-    min_f: 195
-    max_c: 100
-    max_f: 212
-    usda_safe: true
-    recommended: true---
+- name: tender
+  target_c: 95
+  target_f: 203
+  min_c: 90
+  min_f: 195
+  max_c: 100
+  max_f: 212
+  usda_safe: true
+  recommended: true
+-->
 # Spaghetti Squash — Cut Overview
 
 ## Cut profile

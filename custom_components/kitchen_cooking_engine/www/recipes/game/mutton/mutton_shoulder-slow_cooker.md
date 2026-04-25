@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: mutton_shoulder
 method: slow_cooker
@@ -6,7 +6,7 @@ name: Mutton Shoulder × Slow Cooker
 category: game
 meat: mutton
 cut_type: Mutton
----
+-->
 # Mutton Shoulder × Slow Cooker — Recipe Temperature Research
 
 ## Tree position

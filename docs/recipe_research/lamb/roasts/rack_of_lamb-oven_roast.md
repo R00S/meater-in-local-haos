@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: rack_of_lamb
 method: oven_roast
@@ -6,7 +6,7 @@ name: Rack of Lamb × Oven Roast
 category: lamb
 meat: lamb
 cut_type: Roasts
----
+-->
 # Rack of Lamb × Oven Roast — Recipe Temperature Research
 
 ## Tree position

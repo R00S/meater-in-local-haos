@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: whole_turkey
 name: Whole Turkey
@@ -9,27 +9,28 @@ usda_safe_c: 74
 usda_safe_f: 165
 recommended_doneness: thigh_optimal
 methods:
-  - oven_roast
-  - smoker
+- oven_roast
+- smoker
 doneness:
-  - name: safe
-    target_c: 74
-    target_f: 165
-    min_c: 74
-    min_f: 165
-    max_c: 77
-    max_f: 170
-    usda_safe: true
-    recommended: true
-  - name: thigh_optimal
-    target_c: 77
-    target_f: 170
-    min_c: 74
-    min_f: 165
-    max_c: 82
-    max_f: 180
-    usda_safe: true
-    recommended: true---
+- name: safe
+  target_c: 74
+  target_f: 165
+  min_c: 74
+  min_f: 165
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+  recommended: true
+- name: thigh_optimal
+  target_c: 77
+  target_f: 170
+  min_c: 74
+  min_f: 165
+  max_c: 82
+  max_f: 180
+  usda_safe: true
+  recommended: true
+-->
 # Whole Turkey — Cut Overview
 
 ## Cut profile

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_belly
 method: air_fryer
@@ -6,7 +6,7 @@ name: Pork Belly × Air Fryer
 category: pork
 meat: pig
 cut_type: Roasts
----
+-->
 # Pork Belly × Air Fryer — Recipe Temperature Research
 
 > ✅ **STATUS: CONFORMS TO RECIPE_COLLECTION_TOR.md** — validated 2026-03-04

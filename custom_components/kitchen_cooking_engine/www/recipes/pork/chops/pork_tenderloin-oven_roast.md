@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_tenderloin
 method: oven_roast
@@ -6,7 +6,7 @@ name: Pork Tenderloin × Oven Roast
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin
----
+-->
 # Pork Tenderloin × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

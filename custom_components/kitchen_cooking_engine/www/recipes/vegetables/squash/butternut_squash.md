@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: butternut_squash
 name: Butternut Squash
@@ -6,27 +6,28 @@ category: vegetables
 meat: squash
 cut_type: Squash
 methods:
-  - oven_roast
-  - pressure_cooker
-  - steam
+- oven_roast
+- pressure_cooker
+- steam
 doneness:
-  - name: tender
-    target_c: 95
-    target_f: 203
-    min_c: 90
-    min_f: 195
-    max_c: 100
-    max_f: 212
-    usda_safe: true
-    recommended: true
-  - name: caramelized
-    target_c: 160
-    target_f: 320
-    min_c: 150
-    min_f: 300
-    max_c: 175
-    max_f: 350
-    usda_safe: true---
+- name: tender
+  target_c: 95
+  target_f: 203
+  min_c: 90
+  min_f: 195
+  max_c: 100
+  max_f: 212
+  usda_safe: true
+  recommended: true
+- name: caramelized
+  target_c: 160
+  target_f: 320
+  min_c: 150
+  min_f: 300
+  max_c: 175
+  max_f: 350
+  usda_safe: true
+-->
 # Butternut Squash — Cut Overview
 
 ## Cut profile

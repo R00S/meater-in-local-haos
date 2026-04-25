@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: flat_iron
 method: pan_fry
@@ -6,7 +6,7 @@ name: Flat Iron Steak × Pan Fry
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Flat Iron Steak × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

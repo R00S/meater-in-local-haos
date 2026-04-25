@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: baked_potato
 name: Baked Potato
@@ -6,18 +6,19 @@ category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables
 methods:
-  - air_fryer
-  - oven_bake
+- air_fryer
+- oven_bake
 doneness:
-  - name: tender
-    target_c: 95
-    target_f: 203
-    min_c: 90
-    min_f: 195
-    max_c: 100
-    max_f: 212
-    usda_safe: true
-    recommended: true---
+- name: tender
+  target_c: 95
+  target_f: 203
+  min_c: 90
+  min_f: 195
+  max_c: 100
+  max_f: 212
+  usda_safe: true
+  recommended: true
+-->
 # Baked Potato — Cut Overview
 
 ## Cut profile

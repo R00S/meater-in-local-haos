@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: pork_cheek
 name: Pork Cheek
@@ -9,19 +9,20 @@ usda_safe_c: 71
 usda_safe_f: 160
 recommended_doneness: well_done
 methods:
-  - braise
-  - oven_roast
-  - pan_fry
-  - slow_cooker
+- braise
+- oven_roast
+- pan_fry
+- slow_cooker
 doneness:
-  - name: pulled
-    target_c: 93
-    target_f: 200
-    min_c: 88
-    min_f: 190
-    max_c: 96
-    max_f: 205
-    usda_safe: true---
+- name: pulled
+  target_c: 93
+  target_f: 200
+  min_c: 88
+  min_f: 190
+  max_c: 96
+  max_f: 205
+  usda_safe: true
+-->
 # Pork Cheek — Cut Overview
 
 ## Cut profile

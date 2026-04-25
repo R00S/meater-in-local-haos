@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_sausage
 method: grill
@@ -6,7 +6,7 @@ name: Pork Sausage × Grill
 category: pork
 meat: pig
 cut_type: Ground
----
+-->
 # Pork Sausage × Grill — Recipe Temperature Research
 
 ## Cut profile

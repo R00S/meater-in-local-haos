@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: chicken_breast
 method: pan_sear
@@ -6,7 +6,7 @@ name: Chicken Breast × Pan Sear
 category: poultry
 meat: chicken
 cut_type: Breast
----
+-->
 # Chicken Breast × Pan Sear — Recipe Temperature Research
 
 ## Tree position

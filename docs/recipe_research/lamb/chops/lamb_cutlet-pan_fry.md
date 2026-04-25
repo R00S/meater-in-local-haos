@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: lamb_cutlet
 method: pan_fry
@@ -6,7 +6,7 @@ name: Lamb Cutlet × Pan Fry
 category: lamb
 meat: lamb
 cut_type: Chops
----
+-->
 # Lamb Cutlet × Pan Fry — Recipe Temperature Research
 
 ## Tree position

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: hanger_steak
 method: grill
@@ -6,7 +6,7 @@ name: Hanger Steak × Grill
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Hanger Steak × Grill — Recipe Temperature Research
 
 ## Cut profile

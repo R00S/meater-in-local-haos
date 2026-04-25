@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: portobello_mushrooms
 method: grill
@@ -6,7 +6,7 @@ name: Portobello Mushrooms × Grill
 category: vegetables
 meat: mushrooms
 cut_type: Mushrooms
----
+-->
 # Portobello Mushrooms × Grill — Recipe Temperature Research
 
 ## Cut profile

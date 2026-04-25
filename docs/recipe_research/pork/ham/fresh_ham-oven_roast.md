@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: fresh_ham
 method: oven_roast
@@ -6,7 +6,7 @@ name: Fresh Ham × Oven Roast
 category: pork
 meat: pig
 cut_type: Ham
----
+-->
 # Fresh Ham × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

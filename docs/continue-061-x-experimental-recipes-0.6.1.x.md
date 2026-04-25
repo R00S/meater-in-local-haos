@@ -353,3 +353,97 @@ Recipe index: 464 files across 133 cuts
   Copied 464 recipe files → www/recipes/
 Updated PANEL_VERSION in JS: 117 -> 281
 ```
+
+---
+
+### 2026-04-25 — KCE tags added to all recipe files; EXP_TREE built from cut files (v0.6.1.22)
+
+**Task:** "Remove the static data in the tree and use the cut and cut-method files to generate the gui."
+
+**Root problem diagnosed:** 133 older cut files (`{slug}.md`) had broken YAML frontmatter — the closing `---` was jammed directly onto the last value without a newline (e.g. `usda_safe: true---\n`), making every frontmatter regexp fail silently. The 53 new placeholder files were clean; all 331 cut-method files were clean.
+
+**Fix chosen:** Add explicit named HTML-comment tags (`<!-- KCE:CUT … -->` and `<!-- KCE:CUT_METHOD … -->`) to every file. The regexp anchors on the unambiguous opening `<!-- KCE:CUT\n` — no `---` delimiter ambiguity possible.
+
+#### Tag format
+
+Cut overview files (`{slug}.md`):
+```
+<!-- KCE:CUT
+type: cut
+slug: ribeye_steak
+name: Ribeye Steak
+category: beef
+meat: cow
+cut_type: Steaks
+usda_safe_c: 63
+usda_safe_f: 145
+recommended_doneness: medium_rare
+methods:
+  - grill
+  - pan_sear
+doneness:
+  - {name: medium_rare, target_c: 54, target_f: 130, …, recommended: true}
+  …
+-->
+# Ribeye Steak — Cut Overview
+…
+```
+
+Cut-method files (`{slug}-{method}.md`):
+```
+<!-- KCE:CUT_METHOD
+type: cut_method
+slug: ribeye_steak
+method: pan_sear
+name: Ribeye Steak × Pan Sear
+category: beef
+meat: cow
+cut_type: Steaks
+-->
+# Ribeye Steak × Pan Sear …
+```
+
+#### Parser (in `generate_frontend_data.py`)
+
+```python
+opening = f"<!-- KCE:{tag_name}\n"
+closing = "\n-->"
+end_idx = content.find(closing, len(opening))
+yaml_text = content[len(opening):end_idx]
+data = yaml.safe_load(yaml_text)
+```
+
+No regexp needed for the delimiters — plain string `find()`. Regexp is used only for the `## Cut profile` body section (which is well-structured body text, not frontmatter).
+
+#### What was changed
+
+**`/tmp/add_kce_tags.py`** (run once, not committed):
+- Extracted YAML from broken+clean frontmatter for all 186 cut files
+- Extracted YAML from all 331 cut-method files
+- Wrote `<!-- KCE:CUT … -->` / `<!-- KCE:CUT_METHOD … -->` replacing old `---…---` blocks
+- **186 cut files updated, 331 cut-method files updated, 0 skipped**
+
+**`generate_frontend_data.py`**:
+- Added `import yaml`
+- Added `_parse_kce_tag(content, tag_name)` — unambiguous KCE tag parser
+- Rewrote `build_recipe_index()` to use KCE tags as primary file-type detection (with filename-based fallback for untagged files)
+- Added `_CATEGORY_META` and `_DONENESS_ICONS` dicts (mirrors cooking_data.py display data)
+- Added `build_experimental_tree(base_dir)` — scans all `<!-- KCE:CUT … -->` tagged files and builds `EXP_TREE` + `EXP_DONENESS_OPTIONS`
+- Emits `EXP_TREE` and `EXP_DONENESS_OPTIONS` as new JS constants
+
+**`www/panel-class-template.js`**:
+- `_getDataCategories()`: returns `EXP_TREE` for experimental path (was `MEAT_CATEGORIES`)
+- `_getDonenessOptions()`: returns `EXP_DONENESS_OPTIONS` for experimental path (was `DONENESS_OPTIONS`)
+- Updated comments to describe the file-driven architecture
+
+#### Generator output
+```
+Recipe index: 516 files across 185 cuts
+  International cut → recipe coverage: 190 matched, 0 unmatched
+  EXP_TREE: 186 cuts across 7 categories from KCE:CUT tags
+  Copied 517 recipe files → www/recipes/
+Updated PANEL_VERSION in JS: 117 -> 284
+```
+
+#### Version bump
+- `0.6.1.21` → `0.6.1.22`

@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: green_beans
 method: oven_roast
@@ -6,7 +6,7 @@ name: Green Beans × Oven Roast
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
----
+-->
 # Green Beans × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

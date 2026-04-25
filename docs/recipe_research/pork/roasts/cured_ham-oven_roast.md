@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: cured_ham
 method: oven_roast
@@ -6,7 +6,7 @@ name: Cured Ham (Pre-cooked) × Oven Roast
 category: pork
 meat: pig
 cut_type: Ham
----
+-->
 # Cured Ham × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

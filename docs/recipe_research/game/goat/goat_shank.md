@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: goat_shank
 name: Goat Shank
@@ -9,17 +9,18 @@ usda_safe_c: 63
 usda_safe_f: 145
 recommended_doneness: well_done
 methods:
-  - braise
-  - oven_roast
+- braise
+- oven_roast
 doneness:
-  - name: pulled
-    target_c: 93
-    target_f: 200
-    min_c: 88
-    min_f: 190
-    max_c: 96
-    max_f: 205
-    usda_safe: true---
+- name: pulled
+  target_c: 93
+  target_f: 200
+  min_c: 88
+  min_f: 190
+  max_c: 96
+  max_f: 205
+  usda_safe: true
+-->
 # Goat Shank — Cut Overview
 
 ## Cut profile

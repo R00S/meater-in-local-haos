@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: whole_chicken
 name: Whole Chicken
@@ -9,28 +9,29 @@ usda_safe_c: 74
 usda_safe_f: 165
 recommended_doneness: thigh_optimal
 methods:
-  - air_fryer
-  - grill
-  - oven_roast
+- air_fryer
+- grill
+- oven_roast
 doneness:
-  - name: safe
-    target_c: 74
-    target_f: 165
-    min_c: 74
-    min_f: 165
-    max_c: 77
-    max_f: 170
-    usda_safe: true
-    recommended: true
-  - name: thigh_optimal
-    target_c: 79
-    target_f: 175
-    min_c: 77
-    min_f: 170
-    max_c: 85
-    max_f: 185
-    usda_safe: true
-    recommended: true---
+- name: safe
+  target_c: 74
+  target_f: 165
+  min_c: 74
+  min_f: 165
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+  recommended: true
+- name: thigh_optimal
+  target_c: 79
+  target_f: 175
+  min_c: 77
+  min_f: 170
+  max_c: 85
+  max_f: 185
+  usda_safe: true
+  recommended: true
+-->
 # Whole Chicken — Cut Overview
 
 ## Cut profile

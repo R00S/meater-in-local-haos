@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: pork_tongue
 method: slow_cooker
@@ -6,7 +6,7 @@ name: Pork Tongue × Slow Cooker
 category: pork
 meat: pig
 cut_type: Other / Offal
----
+-->
 # Pork Tongue × Slow Cooker — Recipe Temperature Research
 
 ## Cut profile

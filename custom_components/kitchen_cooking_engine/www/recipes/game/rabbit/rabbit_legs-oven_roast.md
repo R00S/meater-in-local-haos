@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: rabbit_legs
 method: oven_roast
@@ -6,7 +6,7 @@ name: Rabbit Legs × Oven Roast
 category: game
 meat: rabbit
 cut_type: Rabbit
----
+-->
 # Rabbit Legs × Oven Roast — Recipe Temperature Research
 
 ## Tree position

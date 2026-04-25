@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: rabbit_saddle
 method: pan_sear
@@ -6,7 +6,7 @@ name: Rabbit Saddle × Pan Sear
 category: game
 meat: rabbit
 cut_type: Rabbit
----
+-->
 # Rabbit Saddle × Pan Sear — Recipe Temperature Research
 
 > ✅ **STATUS: CONFORMS TO RECIPE_COLLECTION_TOR.md** — validated 2026-03-04

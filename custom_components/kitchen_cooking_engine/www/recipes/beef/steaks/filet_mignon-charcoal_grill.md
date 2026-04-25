@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: filet_mignon
 method: charcoal_grill
@@ -6,7 +6,7 @@ name: Filet Mignon / Tenderloin Steak × Charcoal Grill
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Filet Mignon × Charcoal Grill — Recipe Temperature Research
 
 ## Cut profile

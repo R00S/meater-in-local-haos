@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: flat_iron
 method: pan_sear
@@ -6,7 +6,7 @@ name: Flat Iron Steak × Pan Sear
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Flat Iron Steak × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

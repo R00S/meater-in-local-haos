@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: venison_roast
 method: oven_roast
@@ -6,7 +6,7 @@ name: Venison Roast × Oven Roast
 category: game
 meat: venison
 cut_type: Venison
----
+-->
 # Venison Roast × Oven Roast — Recipe Temperature Research
 
 ## Tree position

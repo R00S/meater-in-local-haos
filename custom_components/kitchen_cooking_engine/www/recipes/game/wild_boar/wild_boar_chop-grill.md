@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: wild_boar_chop
 method: grill
@@ -6,7 +6,7 @@ name: Wild Boar Chop × Grill
 category: game
 meat: wild_boar
 cut_type: Wild Boar
----
+-->
 # Wild Boar Chop × Grill — Recipe Temperature Research
 
 ## Tree position

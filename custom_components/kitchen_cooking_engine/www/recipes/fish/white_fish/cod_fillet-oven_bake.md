@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: cod_fillet
 method: oven_bake
@@ -6,7 +6,7 @@ name: Cod Fillet × Oven Bake
 category: fish
 meat: white_fish
 cut_type: White Fish
----
+-->
 # Cod Fillet × Oven Bake — Recipe Temperature Research
 
 ## Cut profile

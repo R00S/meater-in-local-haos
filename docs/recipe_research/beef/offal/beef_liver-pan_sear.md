@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: beef_liver
 method: pan_sear
@@ -6,7 +6,7 @@ name: Beef Liver × Pan Sear
 category: beef
 meat: cow
 cut_type: Other / Offal
----
+-->
 # Beef Liver × Pan Sear — Recipe Temperature Research
 
 ## Cut profile

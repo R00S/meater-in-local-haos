@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: beef_tongue
 method: braise
@@ -6,7 +6,7 @@ name: Beef Tongue × Braise
 category: beef
 meat: cow
 cut_type: Other / Offal
----
+-->
 # Beef Tongue × Braise — Recipe Temperature Research
 
 ## Cut profile

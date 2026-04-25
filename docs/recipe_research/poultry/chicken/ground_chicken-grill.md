@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: ground_chicken
 method: grill
@@ -6,7 +6,7 @@ name: Ground Chicken × Grill
 category: poultry
 meat: ground_poultry
 cut_type: Ground
----
+-->
 # Ground Chicken × Grill — Recipe Temperature Research
 
 ## Tree position

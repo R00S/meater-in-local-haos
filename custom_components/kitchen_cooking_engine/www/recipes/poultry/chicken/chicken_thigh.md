@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: chicken_thigh
 name: Chicken Thigh
@@ -9,30 +9,31 @@ usda_safe_c: 74
 usda_safe_f: 165
 recommended_doneness: well_done
 methods:
-  - air_fryer
-  - braise
-  - grill
-  - oven_roast
-  - pan_fry
+- air_fryer
+- braise
+- grill
+- oven_roast
+- pan_fry
 doneness:
-  - name: safe
-    target_c: 74
-    target_f: 165
-    min_c: 74
-    min_f: 165
-    max_c: 77
-    max_f: 170
-    usda_safe: true
-    recommended: true
-  - name: dark_meat_optimal
-    target_c: 77
-    target_f: 170
-    min_c: 74
-    min_f: 165
-    max_c: 82
-    max_f: 180
-    usda_safe: true
-    recommended: true---
+- name: safe
+  target_c: 74
+  target_f: 165
+  min_c: 74
+  min_f: 165
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+  recommended: true
+- name: dark_meat_optimal
+  target_c: 77
+  target_f: 170
+  min_c: 74
+  min_f: 165
+  max_c: 82
+  max_f: 180
+  usda_safe: true
+  recommended: true
+-->
 # Chicken Thigh — Cut Overview
 
 ## Cut profile

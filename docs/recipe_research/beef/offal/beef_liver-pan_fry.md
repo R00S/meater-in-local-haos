@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: beef_liver
 method: pan_fry
@@ -6,7 +6,7 @@ name: Beef Liver × Pan Fry
 category: beef
 meat: cow
 cut_type: Other / Offal
----
+-->
 # Beef Liver × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

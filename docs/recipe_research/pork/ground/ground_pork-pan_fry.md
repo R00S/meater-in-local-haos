@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: ground_pork
 method: pan_fry
@@ -6,7 +6,7 @@ name: Ground Pork × Pan Fry
 category: pork
 meat: pig
 cut_type: Ground
----
+-->
 # Ground Pork × Pan Fry — Recipe Temperature Research
 
 ## Cut profile

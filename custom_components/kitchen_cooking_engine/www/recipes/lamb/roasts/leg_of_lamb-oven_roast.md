@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: leg_of_lamb
 method: oven_roast
@@ -6,7 +6,7 @@ name: Leg of Lamb × Oven Roast
 category: lamb
 meat: lamb
 cut_type: Roasts
----
+-->
 # Leg of Lamb × Oven Roast — Recipe Temperature Research
 
 ## Tree position

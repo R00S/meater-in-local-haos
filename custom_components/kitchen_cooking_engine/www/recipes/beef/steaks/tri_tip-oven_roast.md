@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT_METHOD
 type: cut_method
 slug: tri_tip
 method: oven_roast
@@ -6,7 +6,7 @@ name: Tri-Tip × Oven Roast
 category: beef
 meat: cow
 cut_type: Steaks
----
+-->
 # Tri Tip × Oven Roast — Recipe Temperature Research
 
 ## Cut profile

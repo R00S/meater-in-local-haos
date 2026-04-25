@@ -1,4 +1,4 @@
----
+<!-- KCE:CUT
 type: cut
 slug: roasted_sweet_potato
 name: Roasted Sweet Potato
@@ -6,27 +6,28 @@ category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables
 methods:
-  - air_fryer
-  - oven_bake
-  - oven_roast
+- air_fryer
+- oven_bake
+- oven_roast
 doneness:
-  - name: tender
-    target_c: 95
-    target_f: 203
-    min_c: 90
-    min_f: 195
-    max_c: 100
-    max_f: 212
-    usda_safe: true
-    recommended: true
-  - name: caramelized
-    target_c: 160
-    target_f: 320
-    min_c: 150
-    min_f: 300
-    max_c: 175
-    max_f: 350
-    usda_safe: true---
+- name: tender
+  target_c: 95
+  target_f: 203
+  min_c: 90
+  min_f: 195
+  max_c: 100
+  max_f: 212
+  usda_safe: true
+  recommended: true
+- name: caramelized
+  target_c: 160
+  target_f: 320
+  min_c: 150
+  min_f: 300
+  max_c: 175
+  max_f: 350
+  usda_safe: true
+-->
 # Roasted Sweet Potato — Cut Overview
 
 ## Cut profile
