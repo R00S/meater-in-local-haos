@@ -78,6 +78,17 @@ jobs:
           echo "test=$TEST_VERSION" >> $GITHUB_OUTPUT
           echo "tag=v${TEST_VERSION}" >> $GITHUB_OUTPUT
       
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Regenerate panel JS from cut files
+        run: |
+          cd custom_components/kitchen_cooking_engine
+          python3 generate_frontend_data.py
+          echo "Generator finished — EXP_TREE baked into kitchen-cooking-panel.js"
+
       - name: Update manifest.json with test version
         run: |
           sed -i 's/"version": "[^"]*"/"version": "${{ steps.version.outputs.test }}"/' custom_components/kitchen_cooking_engine/manifest.json
