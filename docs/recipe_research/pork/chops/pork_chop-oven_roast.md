@@ -13,6 +13,8 @@ cut_type: Chops & Tenderloin
 
 A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.
 
+Oven-roasting pork chops is practised across every continent where pork features in the cuisine. In West Africa and the Caribbean, bone-in chops are rubbed with Creole spice blends, brown sugar, and garlic, then roasted at high heat to achieve a caramelised exterior. In China, char siu (叉燒) roasts pork in a honey-soy-five-spice glaze. In India (Goa and Malabar), pork is marinated in vinegar and spices before oven-roasting. In the Philippines, pork is central to lechon (whole roast) and sinigang traditions. The oven method — high heat bake with a resting period — is universal.
+
 Target internal temperatures (oven roast):
 - Juicy/pink: **63–65 °C (145–149 °F)**
 - Well done: **70–72 °C (158–162 °F)**
@@ -104,3 +106,37 @@ Target internal temperatures (oven roast):
 8. Cover with foil; rest **5 minutes**.
 9. Serve chops with the potato and white wine juices.
 *Final temperature: 65–68 °C (149–154 °F).*
+
+---
+
+### 4. Imma Adamu — Oven Baked Pork Chops (West African / Caribbean tradition)
+**Source**: Imma Adamu (Cameroon-born food writer, USA), Immaculate Bites; https://www.africanbites.com/oven-baked-pork-chops/ (fetched 2026-04-25). *West African–Caribbean seasoned bone-in pork chops roasted at 205 °C: Creole spice blend, garlic, brown sugar glaze, Dijon, Worcestershire; sheet-pan with potatoes; broil at the end for caramelisation. Pull at 145 °F (63 °C).*
+**Serves**: 4 · **Prep**: 10 min + 30 min marinate · **Cook**: 20–22 min oven
+
+**Temperature guidance (from recipe)**: Roast at **400 °F (205 °C)** for 18–22 minutes until instant-read thermometer in thickest part reads **145 °F (63 °C)**. Broil 2–3 minutes for caramelised finish.
+
+**Ingredients**
+- 4 bone-in pork chops, 1–2 cm thick
+- Salt and black pepper, to taste
+- 2 Tbsp canola oil
+- 1 Tbsp Creole seasoning (or: ½ tsp each garlic powder, onion powder, smoked paprika, dried thyme, cayenne)
+- 1½ tsp minced fresh thyme
+- 1 Tbsp minced garlic
+- ½ Tbsp Dijon mustard
+- 1 tsp Worcestershire sauce
+- 2–3 Tbsp brown sugar
+- 2 Tbsp fresh parsley, chopped (to garnish)
+- 450 g (1 lb) potatoes, cut into 2.5 cm cubes (optional sheet-pan side)
+- 450 g (1 lb) asparagus, green beans, or carrots (optional sheet-pan side)
+
+**Method**
+1. Position a rack in the centre of the oven; preheat to **400 °F / 205 °C**. Line a baking sheet with foil; lightly oil.
+2. Pat pork chops thoroughly dry; season with salt and black pepper. Set aside.
+3. In a small bowl, combine Creole seasoning, thyme, garlic, Dijon mustard, Worcestershire sauce, brown sugar, and oil. Pour over chops; coat all surfaces. Marinate 30 minutes at room temperature.
+4. If using potatoes, toss in a separate bowl with salt, oil, and a pinch of Creole seasoning; arrange on one side of the baking sheet.
+5. Place marinated chops on the prepared baking sheet.
+6. Insert MEATER probe into the thickest part of one chop, away from the bone.
+7. Roast until probe reads **63 °C (145 °F)** — approximately **18–22 minutes** depending on thickness.
+8. If desired, switch to broil and broil **2–3 minutes** to caramelise the glaze. Watch closely.
+9. Rest **5 minutes**. Garnish with chopped parsley. Serve with the roasted potatoes and vegetables.
+*Final resting temperature: 65–68 °C (149–154 °F).*
