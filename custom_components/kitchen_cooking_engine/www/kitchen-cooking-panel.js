@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 25 Apr 2026, 14:58 CET
+ * AUTO-GENERATED: 25 Apr 2026, 15:08 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 25 Apr 2026, 14:58 CET
+// Last generated: 25 Apr 2026, 15:08 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -25286,6 +25286,14 @@ class KitchenCookingPanel extends LitElement {
       } else {
         this._selectedDoneness = null;
       }
+
+      // On experimental path: if the previously selected method is not listed
+      // for this cut, reset it so the user picks one from the cut's own list.
+      if (this._currentPath === 'meater_experimental' && cut.supported_methods && cut.supported_methods.length > 0) {
+        if (!cut.supported_methods.includes(this._selectedMethod)) {
+          this._selectedMethod = cut.supported_methods[0];
+        }
+      }
     } else {
       this._selectedDoneness = null;
     }
@@ -28671,18 +28679,29 @@ class KitchenCookingPanel extends LitElement {
           </ha-card>
         ` : ''}
         
-        <!-- Step 6: Cooking Method -->
+        <!-- Step 6: Cooking Method — driven by the cut file's methods: list.
+             Display names are derived from the slug so new methods (e.g. curing)
+             appear automatically without any other configuration. -->
         <ha-card>
           <div class="card-content">
             <h3>🍳 Cooking Method</h3>
             <div class="method-grid">
-              ${COOKING_METHODS.map(opt => html`
-                <button 
-                  class="method-btn ${this._selectedMethod === opt.value ? 'selected' : ''}"
-                  @click=${() => this._selectedMethod = opt.value}>
-                  ${opt.name}
-                </button>
-              `)}
+              ${(() => {
+                const cutData = this._getSelectedCutData();
+                const methods = (cutData && cutData.supported_methods && cutData.supported_methods.length > 0)
+                  ? cutData.supported_methods
+                  : COOKING_METHODS.map(m => m.value);
+                return methods.map(slug => {
+                  const name = slug.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+                  return html`
+                    <button
+                      class="method-btn ${this._selectedMethod === slug ? 'selected' : ''}"
+                      @click=${() => this._selectedMethod = slug}>
+                      ${name}
+                    </button>
+                  `;
+                });
+              })()}
             </div>
           </div>
         </ha-card>
@@ -34909,7 +34928,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "298";
+const PANEL_VERSION = "300";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

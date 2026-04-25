@@ -1240,6 +1240,14 @@ class KitchenCookingPanel extends LitElement {
       } else {
         this._selectedDoneness = null;
       }
+
+      // On experimental path: if the previously selected method is not listed
+      // for this cut, reset it so the user picks one from the cut's own list.
+      if (this._currentPath === 'meater_experimental' && cut.supported_methods && cut.supported_methods.length > 0) {
+        if (!cut.supported_methods.includes(this._selectedMethod)) {
+          this._selectedMethod = cut.supported_methods[0];
+        }
+      }
     } else {
       this._selectedDoneness = null;
     }
@@ -4625,18 +4633,29 @@ class KitchenCookingPanel extends LitElement {
           </ha-card>
         ` : ''}
         
-        <!-- Step 6: Cooking Method -->
+        <!-- Step 6: Cooking Method — driven by the cut file's methods: list.
+             Display names are derived from the slug so new methods (e.g. curing)
+             appear automatically without any other configuration. -->
         <ha-card>
           <div class="card-content">
             <h3>🍳 Cooking Method</h3>
             <div class="method-grid">
-              ${COOKING_METHODS.map(opt => html`
-                <button 
-                  class="method-btn ${this._selectedMethod === opt.value ? 'selected' : ''}"
-                  @click=${() => this._selectedMethod = opt.value}>
-                  ${opt.name}
-                </button>
-              `)}
+              ${(() => {
+                const cutData = this._getSelectedCutData();
+                const methods = (cutData && cutData.supported_methods && cutData.supported_methods.length > 0)
+                  ? cutData.supported_methods
+                  : COOKING_METHODS.map(m => m.value);
+                return methods.map(slug => {
+                  const name = slug.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+                  return html`
+                    <button
+                      class="method-btn ${this._selectedMethod === slug ? 'selected' : ''}"
+                      @click=${() => this._selectedMethod = slug}>
+                      ${name}
+                    </button>
+                  `;
+                });
+              })()}
             </div>
           </div>
         </ha-card>

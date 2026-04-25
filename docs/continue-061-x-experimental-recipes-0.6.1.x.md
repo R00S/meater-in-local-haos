@@ -670,6 +670,60 @@ With generator on-the-fly, if the generator logic needs a bug fix, every one of 
 
 ---
 
+### 2026-04-25 — Exp path: cooking method selector driven by cut file (v0.6.1.27)
+
+**Task:** "If a cut file has braise in it it should show braise, that's how putting all the ground truth in the recipe files work. If we want to add curing (or any other not yet present method) as a cooking method, we should be able to do that in the salmon filet cut file, not have to do it somewhere else as well before it shows up in the GUI."
+
+#### Root cause / context
+
+The experimental MEATER path's Step 6 "Cooking Method" grid was rendering
+`COOKING_METHODS.map(...)` — iterating the hardcoded global list. Every cut showed
+all 10 methods regardless of what the cut's recipe file listed. A new method like
+`curing` could never appear even if the cut file declared it.
+
+`EXP_TREE` already stores `supported_methods` per cut (read from the `<!-- KCE:CUT -->`
+tag's `methods:` list since v0.6.1.22). The fix uses that data.
+
+#### What was changed
+
+**`www/panel-class-template.js`**
+
+- **Step 6 method grid** in `_renderExpSetupForm()`: replaced `COOKING_METHODS.map()`
+  with an IIFE that reads `this._getSelectedCutData().supported_methods` from the cut's
+  recipe file data. Method display names are derived from the slug
+  (`pan_sear` → "Pan Sear") — no pre-registration needed. Falls back to the full
+  `COOKING_METHODS` list only if the cut has no `supported_methods` array.
+
+- **`_selectCut()`**: on the experimental path, if the previously selected cooking
+  method is not in the new cut's `supported_methods`, it resets `_selectedMethod` to
+  the first method in the cut's list. Prevents stale method selection carrying over.
+
+#### Design consequence
+
+To add any new cooking method to a cut (including entirely new methods not yet known
+to the system), the only required change is:
+1. Add the method slug to the cut's `<!-- KCE:CUT -->` `methods:` list.
+2. Optionally create a `{slug}-{method}.md` research file.
+
+No changes to `cooking_data.py`, `COOKING_METHODS`, or any other file are needed.
+The standard MEATER path is unchanged — it still uses the global `COOKING_METHODS`.
+
+#### Generator output
+```
+Recipe index: 516 files across 185 cuts
+  International cut → recipe coverage: 189 matched, 0 unmatched
+  EXP_TREE: 186 cuts across 7 categories from KCE:CUT tags
+  Copied 517 recipe files → www/recipes/
+Updated PANEL_VERSION in JS: 117 -> 300
+Updated PANEL_VERSION in const.py: 299 -> 300
+```
+
+#### Version bump
+- `0.6.1.26` → `0.6.1.27` (manifest.json, __init__.py `__version__` + Last Change, const.py Last Change)
+- PANEL_VERSION: `299` → `300`
+
+---
+
 ### Pending consideration: Convert recipe files to structured markup
 
 **Raised by project owner 2026-04-25:** "maybe the recipe files should simply be converted to a proper markup, json sgml or anything"
