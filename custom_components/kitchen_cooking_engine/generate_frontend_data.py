@@ -292,8 +292,24 @@ def _parse_kce_tag(content, tag_name):
         return None
 
 
+def _extract_recipe_titles(content):
+    """Return a list of recipe titles from a file's ## Source recipes section.
+
+    Uses the existing ``### N.`` heading convention already present in every
+    recipe file.  Called only from the Python generator — regex is intentional
+    here so the JavaScript panel never needs to parse file content at runtime.
+    """
+    src_m = re.search(r"## Source recipes\n+([\s\S]*)$", content, re.DOTALL)
+    if not src_m:
+        return []
+    titles = []
+    for m in re.finditer(r"^### (?:\d+\.\s+)?(.+?)$", src_m.group(1), re.MULTILINE):
+        titles.append(m.group(1).strip())
+    return titles
+
+
 def build_recipe_index(base_dir):
-    """Scan recipe files and build index + cut profiles.
+    """Scan recipe files and build index, cut profiles, method profiles and recipe titles.
 
     Looks first in docs/recipe_research/ (developer environment), then falls
     back to www/recipes/ (pre-populated in HACS releases on real HA installs).
@@ -303,8 +319,10 @@ def build_recipe_index(base_dir):
       <!-- KCE:CUT_METHOD ... -->  method research files ({slug}-{method}.md)
 
     Returns:
-        recipe_index: {cut_slug: {method_slug: url_path}}
-        cut_profiles: {cut_slug: "profile text"}
+        recipe_index:        {cut_slug: {method_slug: url_path}}
+        cut_profiles:        {cut_slug: "profile text"}
+        cut_method_profiles: {cut_slug: {method_slug: "profile text"}}
+        recipe_titles:       {cut_slug: {method_slug: ["title", ...]}}
     """
     repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
     docs_recipe_dir = os.path.join(repo_root, "docs", "recipe_research")
@@ -316,7 +334,7 @@ def build_recipe_index(base_dir):
         recipe_dir = www_recipe_dir
         print("  (using www/recipes/ as recipe source — docs/recipe_research/ not found)")
     else:
-        return {}, {}
+        return {}, {}, {}, {}
 
     _excluded = {
         "README.md", "RECIPE_COLLECTION_TOR.md",
@@ -325,6 +343,10 @@ def build_recipe_index(base_dir):
 
     recipe_index = {}
     cut_profiles = {}
+    cut_method_profiles = {}
+    recipe_titles = {}
+
+    _profile_re = re.compile(r"## Cut profile\n+(.*?)(?=\n\n##|\Z)", re.DOTALL)
 
     for root, _dirs, files in os.walk(recipe_dir):
         for filename in sorted(files):
@@ -348,12 +370,7 @@ def build_recipe_index(base_dir):
                 cut_slug = data.get("slug") or stem
                 recipe_index.setdefault(cut_slug, {})["overview"] = url_path
 
-                # Extract ## Cut profile body text (after the KCE tag block)
-                m = re.search(
-                    r"## Cut profile\n+(.*?)(?=\n\n##|\Z)",
-                    content,
-                    re.DOTALL,
-                )
+                m = _profile_re.search(content)
                 if m:
                     cut_profiles[cut_slug] = m.group(1).strip()
                 continue
@@ -365,15 +382,17 @@ def build_recipe_index(base_dir):
                 method_slug = data.get("method") or (stem.split("-", 1)[1] if "-" in stem else stem)
                 recipe_index.setdefault(cut_slug, {})[method_slug] = url_path
 
-                # Extract ## Cut profile from method file as fallback if no cut file yet
-                if cut_slug not in cut_profiles:
-                    m = re.search(
-                        r"## Cut profile\n+(.*?)(?=\n\n##|\Z)",
-                        content,
-                        re.DOTALL,
-                    )
-                    if m:
-                        cut_profiles[cut_slug] = m.group(1).strip()
+                m = _profile_re.search(content)
+                if m:
+                    desc = m.group(1).strip()
+                    cut_method_profiles.setdefault(cut_slug, {})[method_slug] = desc
+                    # Fallback: populate cut overview description if no dedicated overview file
+                    if cut_slug not in cut_profiles:
+                        cut_profiles[cut_slug] = desc
+
+                titles = _extract_recipe_titles(content)
+                if titles:
+                    recipe_titles.setdefault(cut_slug, {})[method_slug] = titles
                 continue
 
             # File has no KCE tag — fall back to filename-based detection for
@@ -386,16 +405,16 @@ def build_recipe_index(base_dir):
                 cut_slug = stem[:hyphen]
                 method_slug = stem[hyphen + 1:]
                 recipe_index.setdefault(cut_slug, {})[method_slug] = url_path
-                if cut_slug not in cut_profiles:
-                    m = re.search(
-                        r"## Cut profile\n+(.*?)(?=\n\n##|\Z)",
-                        content,
-                        re.DOTALL,
-                    )
-                    if m:
+                m = _profile_re.search(content)
+                if m:
+                    cut_method_profiles.setdefault(cut_slug, {})[method_slug] = m.group(1).strip()
+                    if cut_slug not in cut_profiles:
                         cut_profiles[cut_slug] = m.group(1).strip()
+                titles = _extract_recipe_titles(content)
+                if titles:
+                    recipe_titles.setdefault(cut_slug, {})[method_slug] = titles
 
-    return recipe_index, cut_profiles
+    return recipe_index, cut_profiles, cut_method_profiles, recipe_titles
 
 
 # Category display data (mirrors cooking_data.py MeatCategory definitions)
@@ -730,7 +749,7 @@ def generate_js_data():
                     print(f"Warning: Could not load translation {filename}: {e}")
 
     # Build recipe index from docs/recipe_research/
-    recipe_index, cut_profiles = build_recipe_index(base_dir)
+    recipe_index, cut_profiles, cut_method_profiles, recipe_titles = build_recipe_index(base_dir)
     print(f"  Recipe index: {sum(len(v) for v in recipe_index.values())} files across {len(recipe_index)} cuts")
 
     # Report international cut → recipe coverage. The experimental MEATER path
@@ -830,6 +849,12 @@ def generate_js_data():
     lines.append("// Cut profile texts extracted from recipe research files")
     lines.append(f"const CUT_PROFILES = {json.dumps(cut_profiles, indent=2, ensure_ascii=False)};")
     lines.append("")
+    lines.append("// Cut × method profile texts: {cut_slug: {method_slug: description}}")
+    lines.append(f"const CUT_METHOD_PROFILES = {json.dumps(cut_method_profiles, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// Recipe titles per cut × method: {cut_slug: {method_slug: [title, ...]}}")
+    lines.append(f"const RECIPE_TITLES_INDEX = {json.dumps(recipe_titles, indent=2, ensure_ascii=False)};")
+    lines.append("")
     lines.append("// Experimental MEATER tree — built from KCE:CUT tagged cut files")
     lines.append(f"const EXP_TREE = {json.dumps(exp_tree, indent=2, ensure_ascii=False)};")
     lines.append("")
@@ -923,6 +948,7 @@ import {{
   { value: "pan_fry", name: "Pan Fry" },
   { value: "grill", name: "Grill" },
   { value: "smoker", name: "Smoker" },
+  { value: "braise", name: "Braise" },
   { value: "air_fryer", name: "Air Fryer" },
   { value: "sous_vide", name: "Sous Vide" },
   { value: "slow_cooker", name: "Slow Cooker" },

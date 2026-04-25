@@ -1472,23 +1472,6 @@ BEEF_GROUND = [
         recommended_doneness="well_done",
     ),
     MeatCut(
-        id=143,
-        name="meatloaf_alt",
-        name_long="Meatloaf",
-        cut_order=4,
-        estimated_thickness_mm=80,
-        usda_safe_c=71,
-        usda_safe_f=160,
-        rest_time_min=5,
-        rest_time_max=10,
-        carryover_temp_c=3,
-        temperature_ranges=[DONENESS_WELL_DONE],
-        supported_methods=[
-            CookingMethod.OVEN_ROAST,
-        ],
-        recommended_doneness="well_done",
-    ),
-    MeatCut(
         id=144,
         name="liver",
         name_long="Liver",
