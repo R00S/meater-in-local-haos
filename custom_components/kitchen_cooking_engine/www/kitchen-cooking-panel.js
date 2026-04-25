@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 25 Apr 2026, 22:59 CET
+ * AUTO-GENERATED: 25 Apr 2026, 23:19 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 25 Apr 2026, 22:59 CET
+// Last generated: 25 Apr 2026, 23:19 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -20569,7 +20569,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "ostrich_steak",
@@ -20584,7 +20586,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -20611,7 +20615,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "venison_loin",
@@ -20627,7 +20633,9 @@ const EXP_TREE = {
                   "oven_roast",
                   "pan_sear",
                   "sous_vide"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "venison_roast",
@@ -20642,7 +20650,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "venison_shoulder",
@@ -20656,7 +20666,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "venison_steak",
@@ -20673,7 +20685,9 @@ const EXP_TREE = {
                   "charcoal_grill",
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -20700,7 +20714,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "rabbit_saddle",
@@ -20714,7 +20730,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "oven_roast",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               }
             ]
           }
@@ -20739,7 +20757,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "wild_boar_shoulder",
@@ -20753,7 +20773,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               }
             ]
           }
@@ -20782,7 +20804,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "mutton_leg",
@@ -20797,7 +20821,9 @@ const EXP_TREE = {
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "mutton_shoulder",
@@ -20811,7 +20837,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "mutton_shoulder_alt",
@@ -20825,7 +20853,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -20852,7 +20882,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "kangaroo_steak",
@@ -20867,7 +20899,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -20894,7 +20928,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "oven_roast",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "reindeer_roast",
@@ -20908,7 +20944,9 @@ const EXP_TREE = {
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "reindeer_steak",
@@ -20924,7 +20962,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -20952,7 +20992,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "goat_leg",
@@ -20969,7 +21011,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "goat_leg_roast",
@@ -20983,7 +21027,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "goat_shank",
@@ -20996,7 +21042,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "goat_shoulder",
@@ -21010,7 +21058,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -21037,7 +21087,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "moose_steak",
@@ -21053,7 +21105,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -21078,7 +21132,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "buffalo_roast",
@@ -21092,7 +21148,9 @@ const EXP_TREE = {
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "buffalo_steak",
@@ -21109,7 +21167,9 @@ const EXP_TREE = {
                   "charcoal_grill",
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -21134,7 +21194,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "bison_roast",
@@ -21148,7 +21210,9 @@ const EXP_TREE = {
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "bison_steak",
@@ -21165,7 +21229,9 @@ const EXP_TREE = {
                   "charcoal_grill",
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -21200,7 +21266,9 @@ const EXP_TREE = {
                   "charcoal_grill",
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "burger",
@@ -21214,7 +21282,9 @@ const EXP_TREE = {
                   "air_fryer",
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "ground_beef",
@@ -21227,7 +21297,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "liver",
@@ -21241,7 +21313,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "pan_fry",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "meatloaf",
@@ -21253,7 +21327,9 @@ const EXP_TREE = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "tongue",
@@ -21266,7 +21342,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               }
             ]
           },
@@ -21294,7 +21372,9 @@ const EXP_TREE = {
                   "pan_fry",
                   "pan_sear",
                   "sous_vide"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "flank_steak",
@@ -21314,7 +21394,9 @@ const EXP_TREE = {
                   "pan_fry",
                   "pan_sear",
                   "sous_vide"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "flat_iron",
@@ -21336,7 +21418,9 @@ const EXP_TREE = {
                   "pan_fry",
                   "pan_sear",
                   "sous_vide"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "hanger_steak",
@@ -21353,7 +21437,9 @@ const EXP_TREE = {
                   "grill",
                   "pan_fry",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "ny_strip",
@@ -21375,7 +21461,9 @@ const EXP_TREE = {
                   "pan_fry",
                   "pan_sear",
                   "sous_vide"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "picanha",
@@ -21394,7 +21482,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "ribeye_steak",
@@ -21416,7 +21506,9 @@ const EXP_TREE = {
                   "pan_fry",
                   "pan_sear",
                   "sous_vide"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "sirloin_steak",
@@ -21438,7 +21530,9 @@ const EXP_TREE = {
                   "pan_fry",
                   "pan_sear",
                   "sous_vide"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "skirt_steak",
@@ -21455,7 +21549,9 @@ const EXP_TREE = {
                   "grill",
                   "pan_fry",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "t_bone",
@@ -21475,7 +21571,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "tomahawk",
@@ -21495,7 +21593,9 @@ const EXP_TREE = {
                   "oven_roast",
                   "pan_sear",
                   "sous_vide"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "tri_tip",
@@ -21516,7 +21616,9 @@ const EXP_TREE = {
                   "pan_sear",
                   "smoker",
                   "sous_vide"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           },
@@ -21536,7 +21638,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "pan_fry",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "beef_rib",
@@ -21550,7 +21654,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "smoker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "beef_shin",
@@ -21563,7 +21669,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "beef_tongue",
@@ -21576,7 +21684,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               }
             ]
           },
@@ -21595,7 +21705,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "brisket",
@@ -21610,7 +21722,9 @@ const EXP_TREE = {
                   "oven_roast",
                   "slow_cooker",
                   "smoker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "chuck_roast",
@@ -21624,7 +21738,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "short_ribs",
@@ -21639,7 +21755,9 @@ const EXP_TREE = {
                   "oven_roast",
                   "slow_cooker",
                   "smoker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           },
@@ -21660,7 +21778,9 @@ const EXP_TREE = {
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "chuck",
@@ -21674,7 +21794,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "prime_rib",
@@ -21690,7 +21812,9 @@ const EXP_TREE = {
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "roasting_joint",
@@ -21706,7 +21830,9 @@ const EXP_TREE = {
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "round_roast",
@@ -21723,7 +21849,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "rump",
@@ -21740,7 +21868,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "rump_roast",
@@ -21757,7 +21887,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "sirloin_roast",
@@ -21773,7 +21905,9 @@ const EXP_TREE = {
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "sirloin_tip_roast",
@@ -21789,7 +21923,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "top_round_roast",
@@ -21806,7 +21942,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -21841,7 +21979,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "oven_roast",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "goose_leg",
@@ -21855,7 +21995,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "goose_thigh",
@@ -21869,7 +22011,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "whole_goose",
@@ -21882,7 +22026,9 @@ const EXP_TREE = {
                 "recommended_doneness": "thigh_rendered",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               }
             ]
           }
@@ -21910,7 +22056,9 @@ const EXP_TREE = {
                   "oven_roast",
                   "pan_sear",
                   "sous_vide"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "duck_leg_confit",
@@ -21922,7 +22070,9 @@ const EXP_TREE = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "whole_duck",
@@ -21935,7 +22085,9 @@ const EXP_TREE = {
                 "recommended_doneness": "leg_rendered",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               }
             ]
           }
@@ -21961,7 +22113,9 @@ const EXP_TREE = {
                   "braise",
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "turkey_burger",
@@ -21975,7 +22129,9 @@ const EXP_TREE = {
                   "air_fryer",
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "chicken_burger",
@@ -21989,7 +22145,9 @@ const EXP_TREE = {
                   "air_fryer",
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "ground_chicken",
@@ -22003,7 +22161,9 @@ const EXP_TREE = {
                   "braise",
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               }
             ]
           }
@@ -22028,7 +22188,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "oven_roast",
                   "smoker"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "turkey_ground",
@@ -22041,7 +22203,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "turkey_leg",
@@ -22055,7 +22219,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "oven_roast",
                   "smoker"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "turkey_thigh",
@@ -22068,7 +22234,9 @@ const EXP_TREE = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "whole_turkey",
@@ -22082,7 +22250,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "oven_roast",
                   "smoker"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               }
             ]
           }
@@ -22109,7 +22279,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "burger",
@@ -22123,7 +22295,9 @@ const EXP_TREE = {
                   "air_fryer",
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "ground",
@@ -22136,7 +22310,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "leg",
@@ -22151,7 +22327,9 @@ const EXP_TREE = {
                   "air_fryer",
                   "grill",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "thigh",
@@ -22167,7 +22345,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "whole_chicken",
@@ -22182,7 +22362,9 @@ const EXP_TREE = {
                   "air_fryer",
                   "grill",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "wing",
@@ -22197,7 +22379,9 @@ const EXP_TREE = {
                   "air_fryer",
                   "grill",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               }
             ]
           },
@@ -22220,7 +22404,9 @@ const EXP_TREE = {
                   "oven_roast",
                   "pan_sear",
                   "sous_vide"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "chicken_breast_bone_in",
@@ -22234,7 +22420,9 @@ const EXP_TREE = {
                   "air_fryer",
                   "grill",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               }
             ]
           },
@@ -22255,7 +22443,9 @@ const EXP_TREE = {
                   "air_fryer",
                   "grill",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "chicken_thigh",
@@ -22272,7 +22462,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               },
               {
                 "id": "chicken_wing",
@@ -22287,7 +22479,9 @@ const EXP_TREE = {
                   "air_fryer",
                   "grill",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
               }
             ]
           }
@@ -22824,7 +23018,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -22854,7 +23050,9 @@ const EXP_TREE = {
                   "oven_bake",
                   "pan_sear",
                   "sous_vide"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "salmon_steak",
@@ -22870,7 +23068,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -22896,7 +23096,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "scallops",
@@ -22909,7 +23111,9 @@ const EXP_TREE = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "shrimp",
@@ -22922,7 +23126,9 @@ const EXP_TREE = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -22950,7 +23156,9 @@ const EXP_TREE = {
                   "oven_bake",
                   "oven_roast",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "haddock",
@@ -22965,7 +23173,9 @@ const EXP_TREE = {
                   "air_fryer",
                   "oven_roast",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "hake",
@@ -22980,7 +23190,9 @@ const EXP_TREE = {
                   "oven_roast",
                   "pan_fry",
                   "steam"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "halibut_fillet",
@@ -22996,7 +23208,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "mahi_mahi",
@@ -23011,7 +23225,9 @@ const EXP_TREE = {
                   "air_fryer",
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "sea_bass",
@@ -23027,7 +23243,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "swordfish",
@@ -23042,7 +23260,9 @@ const EXP_TREE = {
                   "charcoal_grill",
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "trout",
@@ -23058,7 +23278,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -23091,7 +23313,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "lamb_burger",
@@ -23104,7 +23328,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "lamb_crown_roast",
@@ -23119,7 +23345,9 @@ const EXP_TREE = {
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "lamb_kofta",
@@ -23132,7 +23360,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "lamb_rib_rack",
@@ -23148,7 +23378,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "lamb_shank",
@@ -23162,7 +23394,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "lamb_shoulder",
@@ -23176,7 +23410,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           },
@@ -23195,7 +23431,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "lamb_loin_roast",
@@ -23210,7 +23448,9 @@ const EXP_TREE = {
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "lamb_neck",
@@ -23224,7 +23464,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "lamb_rib",
@@ -23236,7 +23478,9 @@ const EXP_TREE = {
                   "medium",
                   "medium_well"
                 ],
-                "recommended_doneness": "None"
+                "recommended_doneness": "None",
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "lamb_rump",
@@ -23254,7 +23498,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "leg_of_lamb",
@@ -23271,7 +23517,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "rack_of_lamb",
@@ -23287,7 +23535,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           },
@@ -23310,7 +23560,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "lamb_cutlet",
@@ -23326,7 +23578,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "lamb_loin_chops",
@@ -23342,7 +23596,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "lamb_neck_filet",
@@ -23359,7 +23615,9 @@ const EXP_TREE = {
                   "braise",
                   "pan_sear",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -23394,7 +23652,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "smoker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "spare_ribs",
@@ -23408,7 +23668,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "smoker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "st_louis_ribs",
@@ -23422,7 +23684,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "smoker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           },
@@ -23441,7 +23705,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "pork_sausage",
@@ -23454,7 +23720,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               }
             ]
           },
@@ -23473,7 +23741,9 @@ const EXP_TREE = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "cured_ham",
@@ -23485,7 +23755,9 @@ const EXP_TREE = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 60,
+                "usda_safe_f": 140
               }
             ]
           },
@@ -23504,7 +23776,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "jowl",
@@ -23518,7 +23792,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "liver_pork",
@@ -23531,7 +23807,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "pan_fry",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "pork_cheek",
@@ -23546,7 +23824,9 @@ const EXP_TREE = {
                   "oven_roast",
                   "pan_fry",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "pork_jowl",
@@ -23560,7 +23840,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "pork_liver",
@@ -23573,7 +23855,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "pan_fry",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "pork_tongue",
@@ -23586,7 +23870,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "braise",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               }
             ]
           },
@@ -23606,7 +23892,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "smoker"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "belly",
@@ -23621,7 +23909,9 @@ const EXP_TREE = {
                   "air_fryer",
                   "braise",
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "ham",
@@ -23634,7 +23924,9 @@ const EXP_TREE = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "pork_belly",
@@ -23654,7 +23946,9 @@ const EXP_TREE = {
                   "slow_cooker",
                   "smoker",
                   "sous_vide"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "pork_leg",
@@ -23669,7 +23963,9 @@ const EXP_TREE = {
                   "braise",
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "pork_loin_roast",
@@ -23683,7 +23979,9 @@ const EXP_TREE = {
                 "supported_methods": [
                   "oven_roast",
                   "slow_cooker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "pork_shoulder",
@@ -23697,7 +23995,9 @@ const EXP_TREE = {
                   "oven_roast",
                   "slow_cooker",
                   "smoker"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "spare_ribs_alt",
@@ -23711,7 +24011,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "smoker"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "st_louis_ribs_alt",
@@ -23725,7 +24027,9 @@ const EXP_TREE = {
                   "grill",
                   "oven_roast",
                   "smoker"
-                ]
+                ],
+                "usda_safe_c": 71,
+                "usda_safe_f": 160
               },
               {
                 "id": "virginia_ham",
@@ -23737,7 +24041,9 @@ const EXP_TREE = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
-                ]
+                ],
+                "usda_safe_c": 60,
+                "usda_safe_f": 140
               }
             ]
           },
@@ -23760,7 +24066,9 @@ const EXP_TREE = {
                   "oven_roast",
                   "pan_fry",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "pork_loin_steak",
@@ -23775,7 +24083,9 @@ const EXP_TREE = {
                   "air_fryer",
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "pork_shoulder_steak",
@@ -23790,7 +24100,9 @@ const EXP_TREE = {
                   "braise",
                   "grill",
                   "pan_fry"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "pork_tenderloin",
@@ -23807,7 +24119,9 @@ const EXP_TREE = {
                   "oven_roast",
                   "pan_sear",
                   "sous_vide"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               },
               {
                 "id": "secreto",
@@ -23822,7 +24136,9 @@ const EXP_TREE = {
                   "charcoal_grill",
                   "grill",
                   "pan_sear"
-                ]
+                ],
+                "usda_safe_c": 63,
+                "usda_safe_f": 145
               }
             ]
           }
@@ -23841,7 +24157,7 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 49,
     "temp_f": 120,
-    "safety_level": null
+    "safety_level": "unsafe"
   },
   "medium_rare": {
     "value": "medium_rare",
@@ -23850,7 +24166,7 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 54,
     "temp_f": 130,
-    "safety_level": null
+    "safety_level": "caution"
   },
   "medium": {
     "value": "medium",
@@ -23859,7 +24175,7 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 60,
     "temp_f": 140,
-    "safety_level": null
+    "safety_level": "caution"
   },
   "pulled": {
     "value": "pulled",
@@ -23994,7 +24310,7 @@ const EXP_DONENESS_OPTIONS = {
     "description": null,
     "temp_c": 49,
     "temp_f": 120,
-    "safety_level": null
+    "safety_level": "unsafe"
   },
   "heated_through": {
     "value": "heated_through",
@@ -28396,6 +28712,11 @@ class KitchenCookingPanel extends LitElement {
     const donenessTemps = this._selectedDoneness ? this._getTargetTempForDoneness(this._selectedDoneness) : null;
     const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
     const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
+    const cutData = this._getSelectedCutData();
+    const cutUsdaSafeC = cutData && cutData.usda_safe_c ? cutData.usda_safe_c : null;
+    const cutUsdaSafeF = cutData && cutData.usda_safe_f ? cutData.usda_safe_f : null;
+    // True when the culinary target temp is below the USDA safe minimum for this cut
+    const showSafetyWarning = cutUsdaSafeC !== null && displayTemp !== null && displayTemp < cutUsdaSafeC;
     
     // v0.5.0.57: Check if selected entity is specifically a MEATER entity
     // Diagnostic data revealed: entities.includes() returns TRUE for non-MEATER entities
@@ -28593,6 +28914,9 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <h3>🌡️ Doneness Level ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = recommended)</span>` : ''}</h3>
+            <p style="font-size:0.8em;margin:0 0 10px;color:var(--secondary-text-color);">
+              🟢 safe &nbsp;·&nbsp; 🟠 caution (widely practised) &nbsp;·&nbsp; 🔴 below guidelines
+            </p>
             <div class="doneness-grid">
               ${this._getAvailableDoneness().map(opt => html`
                 <button 
@@ -28624,6 +28948,14 @@ class KitchenCookingPanel extends LitElement {
                   <span class="custom-indicator">Custom</span>
                 ` : ''}
               </div>
+              
+              ${showSafetyWarning ? html`
+                <div style="margin:10px 0;padding:10px 12px;background:rgba(244,67,54,0.08);border-left:3px solid #f44336;border-radius:4px;font-size:0.84em;line-height:1.5;">
+                  <div>⚠️ <strong>Culinary preferred:</strong> ${displayTemp}°C (${displayTempF}°F)</div>
+                  <div>🛡️ <strong>USDA safe minimum for this cut:</strong> ${cutUsdaSafeC}°C (${cutUsdaSafeF}°F)</div>
+                  <div style="color:var(--secondary-text-color);margin-top:4px;">Consuming undercooked meat carries food safety risk.</div>
+                </div>
+              ` : ''}
               
               <button 
                 class="adjust-btn ${this._showTempAdjust ? 'active' : ''}"
@@ -35026,7 +35358,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "302";
+const PANEL_VERSION = "303";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

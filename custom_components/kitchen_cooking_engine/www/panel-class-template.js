@@ -4364,6 +4364,11 @@ class KitchenCookingPanel extends LitElement {
     const donenessTemps = this._selectedDoneness ? this._getTargetTempForDoneness(this._selectedDoneness) : null;
     const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
     const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
+    const cutData = this._getSelectedCutData();
+    const cutUsdaSafeC = cutData && cutData.usda_safe_c ? cutData.usda_safe_c : null;
+    const cutUsdaSafeF = cutData && cutData.usda_safe_f ? cutData.usda_safe_f : null;
+    // True when the culinary target temp is below the USDA safe minimum for this cut
+    const showSafetyWarning = cutUsdaSafeC !== null && displayTemp !== null && displayTemp < cutUsdaSafeC;
     
     // v0.5.0.57: Check if selected entity is specifically a MEATER entity
     // Diagnostic data revealed: entities.includes() returns TRUE for non-MEATER entities
@@ -4561,6 +4566,9 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <h3>🌡️ Doneness Level ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = recommended)</span>` : ''}</h3>
+            <p style="font-size:0.8em;margin:0 0 10px;color:var(--secondary-text-color);">
+              🟢 safe &nbsp;·&nbsp; 🟠 caution (widely practised) &nbsp;·&nbsp; 🔴 below guidelines
+            </p>
             <div class="doneness-grid">
               ${this._getAvailableDoneness().map(opt => html`
                 <button 
@@ -4592,6 +4600,14 @@ class KitchenCookingPanel extends LitElement {
                   <span class="custom-indicator">Custom</span>
                 ` : ''}
               </div>
+              
+              ${showSafetyWarning ? html`
+                <div style="margin:10px 0;padding:10px 12px;background:rgba(244,67,54,0.08);border-left:3px solid #f44336;border-radius:4px;font-size:0.84em;line-height:1.5;">
+                  <div>⚠️ <strong>Culinary preferred:</strong> ${displayTemp}°C (${displayTempF}°F)</div>
+                  <div>🛡️ <strong>USDA safe minimum for this cut:</strong> ${cutUsdaSafeC}°C (${cutUsdaSafeF}°F)</div>
+                  <div style="color:var(--secondary-text-color);margin-top:4px;">Consuming undercooked meat carries food safety risk.</div>
+                </div>
+              ` : ''}
               
               <button 
                 class="adjust-btn ${this._showTempAdjust ? 'active' : ''}"

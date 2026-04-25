@@ -512,6 +512,8 @@ def build_experimental_tree(base_dir):
             rec_doneness = data.get("recommended_doneness")
             methods = data.get("methods") or []
             doneness_list = data.get("doneness") or []
+            usda_safe_c = data.get("usda_safe_c")
+            usda_safe_f = data.get("usda_safe_f")
 
             if not (category and meat and cut_type_name):
                 continue
@@ -526,14 +528,23 @@ def build_experimental_tree(base_dir):
                     continue
                 doneness_keys.append(d_name)
                 if d_name not in exp_doneness:
+                    target_c = d.get("target_c")
+                    if d.get("usda_safe"):
+                        safety_level = "safe"
+                    elif target_c is not None and target_c < 52:
+                        safety_level = "unsafe"
+                    elif not d.get("usda_safe") and target_c is not None:
+                        safety_level = "caution"
+                    else:
+                        safety_level = None
                     exp_doneness[d_name] = {
                         "value": d_name,
                         "name": d_name.replace("_", " ").title(),
                         "icon": _DONENESS_ICONS.get(d_name, "🔥"),
                         "description": None,
-                        "temp_c": d.get("target_c"),
+                        "temp_c": target_c,
                         "temp_f": d.get("target_f"),
-                        "safety_level": "safe" if d.get("usda_safe") else None,
+                        "safety_level": safety_level,
                     }
 
             # Build hierarchy
@@ -575,6 +586,10 @@ def build_experimental_tree(base_dir):
                 cut_obj["recommended_doneness"] = rec_doneness
             if methods:
                 cut_obj["supported_methods"] = methods
+            if usda_safe_c is not None:
+                cut_obj["usda_safe_c"] = usda_safe_c
+            if usda_safe_f is not None:
+                cut_obj["usda_safe_f"] = usda_safe_f
 
             meat_obj["_cut_types"][ct_id]["cuts"].append(cut_obj)
 

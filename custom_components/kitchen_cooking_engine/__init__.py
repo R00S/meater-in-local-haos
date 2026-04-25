@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 25 Apr 2026, 14:03 UTC
-Last Change: v0.6.1.31 - Fix: remove meatloaf_alt placeholder; #83 portions propagation + history serving size; #84 ingredient chips translated; #85 add _renderHistoryCard to fix blank screen
+Last Change: v0.6.1.32 - Restore safe/culinary temp duality in experimental MEATER path: three-tier safety dots, USDA safe minimum note, safety legend
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -72,7 +72,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.6.1.31"
+__version__ = "0.6.1.32"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
