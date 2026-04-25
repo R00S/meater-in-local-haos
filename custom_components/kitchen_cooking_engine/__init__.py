@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 24 Apr 2026, 20:56 UTC
-Last Change: v0.6.1.23 - CI: release workflow auto-runs generate_frontend_data.py
+Last Change: v0.6.1.24 - Hide Swedish in experimental MEATER path, fix parseInt bug for cut profile rendering
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -72,7 +72,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.6.1.23"
+__version__ = "0.6.1.24"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

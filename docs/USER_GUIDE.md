@@ -411,6 +411,7 @@ standard MEATER path (§ 5.4).
 | Safety indicators | Not shown | **Shown per doneness option** (🟢 / 🟠 / 🔴) |
 | Cut profile text | Not shown | **Shown after cut selection** |
 | Recipe research links | Not shown | **Shown after cut selection** |
+| Temperature data source | International or Swedish | **International (USDA) only** |
 | Temperature fine-tuning | Available | Available |
 | Custom temperature | Available | Available |
 | Active cook screen | Standard | Identical |

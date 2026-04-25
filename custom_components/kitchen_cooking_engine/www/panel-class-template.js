@@ -4387,26 +4387,19 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : ''}
       
-      <!-- Data Source Selector -->
+      <!-- Data Source Selector (Swedish hidden in experimental path — no verified slug mapping) -->
       <ha-card>
         <div class="card-content">
           <h3>🌍 Temperature Data Source</h3>
           <div class="button-group">
             <button 
-              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
-              @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
+              class="category-btn selected" 
+              disabled>
               🇺🇸 International (USDA)
-            </button>
-            <button 
-              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
-              @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
-              🇸🇪 Svenska (Livsmedelsverket)
             </button>
           </div>
           <p class="source-description">
-            ${this._dataSource === DATA_SOURCE_SWEDISH 
-              ? 'Använder svenska temperaturrekommendationer från Livsmedelsverket, Stekguiden.se och Gårdssällskapet.'
-              : 'Using international temperature guidelines from USDA, FDA and professional culinary sources.'}
+            Using international temperature guidelines from USDA, FDA and professional culinary sources.
           </p>
         </div>
       </ha-card>

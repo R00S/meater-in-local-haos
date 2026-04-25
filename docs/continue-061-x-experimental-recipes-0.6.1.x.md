@@ -525,3 +525,38 @@ Run #184 failed with `ModuleNotFoundError: No module named 'yaml'`. Run #185 suc
 - PANEL_VERSION: 291 → 292
 
 ---
+
+### 2026-04-25 — Hide Swedish in experimental MEATER path + CHORES (v0.6.1.24)
+
+**Task:** "the swedish path is still shown in the experimental path, hide it for now"  
+**Also:** CHORES.md — bump version, update timeline, update user guide.
+
+#### Root cause / context
+
+The experimental `_renderExpSetupForm()` rendered a full two-button data source selector
+(`🇺🇸 International` + `🇸🇪 Svenska`). Clicking Svenska switched `this._dataSource`, but
+`_getDataCategories()` ignores `_dataSource` on the experimental path (always returns `EXP_TREE`
+which uses English slugs only). The Swedish button was therefore non-functional and misleading.
+
+#### What was changed
+
+**`www/panel-class-template.js`** — `_renderExpSetupForm()`:
+- Replaced the two-button data source card with a single static "🇺🇸 International (USDA)"
+  button (rendered `disabled`, always selected).
+- Removed the Swedish description string and dynamic description logic.
+- Added an HTML comment explaining the reason.
+
+#### Generator output
+```
+Recipe index: 516 files across 185 cuts
+  International cut → recipe coverage: 190 matched, 0 unmatched
+  EXP_TREE: 186 cuts across 7 categories from KCE:CUT tags
+Updated PANEL_VERSION in JS: 117 -> 293
+Updated PANEL_VERSION in const.py: 292 -> 293
+```
+
+#### Version bump
+- `0.6.1.23` → `0.6.1.24` (manifest.json, __init__.py `__version__` + Last Change, const.py Last Change)
+- PANEL_VERSION: `292` → `293`
+
+---
