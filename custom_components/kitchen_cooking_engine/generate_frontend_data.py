@@ -26,141 +26,24 @@ from datetime import datetime, timezone, timedelta
 _INT_CATEGORIES = None
 _SWE_CATEGORIES = None
 
-# Mapping from Swedish/localised cut slugs to the English recipe-file slug.
-# Used by cut_to_js() to populate recipe_slug on cut objects so _renderCutProfileCard
-# can look up the right RECIPE_INDEX and CUT_PROFILES entry.
-_RECIPE_SLUG_MAP = {
-    # Beef
-    "entrecote": "ribeye_steak",
-    "ryggbiff": "sirloin_steak",
-    "oxfile": "filet_mignon",
-    "flankstek": "flank_steak",
-    "flatiron": "flat_iron",
-    "flapsteak": "skirt_steak",
-    "njurtapp": "hanger_steak",
-    "revbensstek": "prime_rib",
-    "hel_oxfile": "beef_tenderloin_roast",
-    "hogrev": "chuck_roast",
-    "bringa": "brisket",
-    "bog": "chuck_roast",
-    "oxsvans": "beef_shank",
-    "lagg": "beef_shank",
-    "oxkind": "beef_shank",
-    "margpipa": "beef_shank",
-    "hamburgare": "beef_burger",
-    "köttfärs": "beef_burger",
-    "köttfärslimpa": "meatloaf",
-    "nötlever": "beef_liver",
-    "oxtunga": "beef_tongue",
-    "oxlägg": "beef_shank",
-    # Pork
-    "flaskfile": "pork_tenderloin",
-    "flasksida": "pork_belly",
-    "flaskkarre": "pork_shoulder",
-    "skinka": "pork_leg",
-    "julskinka": "pork_leg",
-    "flaskbog": "pork_shoulder",
-    "revbensspjall": "spare_ribs",
-    "sidflaask_revben": "spare_ribs",
-    "tunna_revbensspjall": "baby_back_ribs",
-    "tjocka_revbensspjall": "spare_ribs",
-    "fläskfärs": "ground_pork",
-    "färsk_skinka": "pork_leg",
-    "rökt_skinka": "pork_leg",
-    "fläskkorv": "pork_sausage",
-    "fläsklever": "pork_liver",
-    "gristunga": "pork_tongue",
-    # Lamb
-    "lammstek": "leg_of_lamb",
-    "lammrack": "rack_of_lamb",
-    "lammbog": "lamb_shoulder",
-    "lammlagg": "lamb_shank",
-    "lammnacke": "lamb_neck",
-    "lammfärs": "ground_lamb",
-    "lammkebab": "ground_lamb",
-    "lammburgare": "ground_lamb",
-    # Game / Wild / Mutton
-    "hjortfile": "venison_loin",
-    "hjortstek": "venison_roast",
-    "radjursfile": "venison_loin",
-    "radjursstek": "venison_roast",
-    "hjortlar": "venison_roast",
-    "hjortbog": "venison_roast",
-    "hjortkarre": "venison_loin",
-    "algfile": "venison_loin",
-    "algstek": "venison_roast",
-    "renfile": "venison_loin",
-    "renstek": "venison_roast",
-    "renkarre": "venison_loin",
-    "vildsvinsfile": "wild_boar_chop",
-    "vildsvinsstek": "wild_boar_shoulder",
-    "vildsvinsbog": "wild_boar_shoulder",
-    "vildsvinskoteletter": "wild_boar_chop",
-    "kaninsadel": "rabbit_saddle",
-    "kaninlar": "rabbit_legs",
-    "fårkotlett": "mutton_chop",
-    "fårlägg": "mutton_leg",
-    "fårskuldra": "mutton_shoulder",
-    "strutsstek": "ostrich_steak",
-    "strutsfilé": "ostrich_steak",
-    "kängurusteak": "kangaroo_steak",
-    "kängurufilé": "kangaroo_steak",
-    "bisonstek": "bison_steak",
-    "bisonburgare": "bison_burger",
-    "bisontek_helstekt": "bison_roast",
-    "buffelstek": "buffalo_steak",
-    "buffelburgare": "buffalo_burger",
-    # Poultry
-    "hel_kyckling": "whole_chicken",
-    "kycklingbrost": "chicken_breast",
-    "kycklinglar": "chicken_leg",
-    "kyckling_overlår": "chicken_thigh",
-    "kalkon_hel": "whole_turkey",
-    "kalkonbrost": "turkey_breast",
-    "ankbrost": "duck_breast",
-    "hel_anka": "whole_duck",
-    "hel_gås": "whole_goose",
-    "gåsbröst": "goose_breast",
-    "gåslår": "goose_leg",
-    "gåslår_overlår": "goose_thigh",
-    "kycklingfärs": "ground_chicken",
-    "kalkonfärs": "ground_turkey",
-    "kycklingburgare": "ground_chicken",
-    "kalkanburgare": "ground_turkey",
-    # Fish — same species
-    "laxfile": "salmon_fillet",
-    "gravad_lax": "salmon_fillet",
-    "hel_lax_pa_ben": "salmon_fillet",
-    "tonfiskskiva": "tuna_steak",
-    "torskfile": "cod_fillet",
-    "torskrygg": "cod_fillet",
-    "hel_torsk_pa_ben": "cod_fillet",
-    "forell": "trout",
-    "havsabborre": "sea_bass",
-    # Shellfish
-    "räkor": "shrimp",
-    "hummersvans": "lobster_tail",
-    "pilgrimsmussla": "scallops",
-    # Vegetables
-    "bakad_potatis": "baked_potato",
-    "rostade_potatisar": "roasted_potatoes",
-    "rostade_morötter": "roasted_carrots",
-    "rödbetor": "roasted_beets",
-    "rostade_sötpotatis": "roasted_sweet_potato",
-    "brysselkål": "brussels_sprouts",
-    "sparris": "asparagus",
-    "haricots_verts": "green_beans",
-    "spenat": "spinach",
-    "butternutsquash": "butternut_squash",
-    "ekornsquash": "acorn_squash",
-    "spagettisquash": "spaghetti_squash",
-    "blomkål": "cauliflower",
-    "paprika": "bell_peppers",
-    "champinjoner": "button_mushrooms",
-    "portobellosvamp": "portobello_mushrooms",
-    "aubergine": "eggplant",
-    "rostade_tomater": "roasted_tomatoes",
-}
+# NOTE on Swedish→English recipe slug mapping
+#
+# A previous version of this file maintained a hand-written `_RECIPE_SLUG_MAP`
+# dict that translated Swedish cut slugs to the English recipe-filename slugs
+# under `docs/recipe_research/`. That map accumulated unverified, fabricated
+# cross-species translations (e.g. abborrfile→sea_bass, lammbringa→brisket)
+# and was producing wrong recipe cards in the experimental MEATER path.
+#
+# The map has been removed. The experimental MEATER path is now locked to
+# international (`MEAT_CATEGORIES`) data on the frontend, where every
+# `MeatCut.name` already matches the recipe-filename slug directly, so no
+# translation layer is needed. Swedish support on the experimental path is
+# postponed; when it returns, every entry MUST be backed by a real recipe
+# file for the same species and cut (see `.github/copilot-instructions.md`
+# Rule 2 — "Data Mappings: Only Map What You Can Verify").
+#
+# `MeatCut.recipe_slug` is still honoured below for explicit per-cut overrides
+# defined in cooking_data.py / swedish_cooking_data.py.
 
 
 def _load_cooking_data():
@@ -237,12 +120,11 @@ def cut_to_js(cut):
             method: [tr.name for tr in ranges]
             for method, ranges in cut.method_temperature_ranges.items()
         }
-    # recipe_slug: use explicit field first, then fall back to _RECIPE_SLUG_MAP
+    # recipe_slug: only emit when the cut explicitly defines one (see note at
+    # the top of this file about the removed Swedish slug map).
     explicit = getattr(cut, "recipe_slug", None)
-    mapped = _RECIPE_SLUG_MAP.get(cut.name)
-    recipe_slug = explicit or mapped
-    if recipe_slug and recipe_slug != cut.name:
-        result["recipe_slug"] = recipe_slug
+    if explicit and explicit != cut.name:
+        result["recipe_slug"] = explicit
     return result
 
 
@@ -595,6 +477,31 @@ def generate_js_data():
     # Build recipe index from docs/recipe_research/
     recipe_index, cut_profiles = build_recipe_index(base_dir)
     print(f"  Recipe index: {sum(len(v) for v in recipe_index.values())} files across {len(recipe_index)} cuts")
+
+    # Report international cut → recipe coverage. The experimental MEATER path
+    # is locked to international data (see panel-class-template.js
+    # _getDataCategories), and every international MeatCut.name is expected to
+    # match a recipe filename slug under docs/recipe_research/. Cuts with no
+    # match simply show no recipe card — that is correct behaviour, not an
+    # error. We surface the breakdown so coverage can be tracked over time.
+    int_matched = []
+    int_unmatched = []
+    for cat in _INT_CATEGORIES:
+        for meat in cat.meats:
+            for cut_type in meat.cut_types:
+                for cut in cut_type.cuts:
+                    explicit = getattr(cut, "recipe_slug", None)
+                    key = explicit or cut.name
+                    if key in recipe_index:
+                        int_matched.append(cut.name)
+                    else:
+                        int_unmatched.append(cut.name)
+    print(
+        f"  International cut → recipe coverage: "
+        f"{len(int_matched)} matched, {len(int_unmatched)} unmatched "
+        f"(unmatched cuts simply show no recipe card)"
+    )
+
     
     cet_time = get_cet_timestamp()
     

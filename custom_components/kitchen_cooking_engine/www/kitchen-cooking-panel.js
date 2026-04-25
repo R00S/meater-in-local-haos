@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 24 Apr 2026, 23:10 CET
+ * AUTO-GENERATED: 25 Apr 2026, 08:12 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 24 Apr 2026, 23:10 CET
+// Last generated: 25 Apr 2026, 08:12 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -3704,8 +3704,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "pan_sear",
                   "pan_fry",
                   "grill"
-                ],
-                "recipe_slug": "ribeye_steak"
+                ]
               },
               {
                 "id": 2101,
@@ -3717,8 +3716,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "genomstekt"
-                ],
-                "recipe_slug": "sirloin_steak"
+                ]
               },
               {
                 "id": 2102,
@@ -3730,8 +3728,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "genomstekt"
-                ],
-                "recipe_slug": "filet_mignon"
+                ]
               },
               {
                 "id": 2103,
@@ -3742,8 +3739,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ],
-                "recipe_slug": "flank_steak"
+                ]
               },
               {
                 "id": 2104,
@@ -3755,8 +3751,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "medium_well",
                   "genomstekt"
-                ],
-                "recipe_slug": "flat_iron"
+                ]
               },
               {
                 "id": 2105,
@@ -3767,8 +3762,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ],
-                "recipe_slug": "skirt_steak"
+                ]
               },
               {
                 "id": 2106,
@@ -3803,8 +3797,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium",
                   "medium_well"
-                ],
-                "recipe_slug": "hanger_steak"
+                ]
               },
               {
                 "id": 2109,
@@ -3924,8 +3917,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_well",
                   "genomstekt"
                 ],
-                "recommended_doneness": "medium_rare",
-                "recipe_slug": "prime_rib"
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 3002,
@@ -3937,8 +3929,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "medium_well"
                 ],
-                "recommended_doneness": "medium_rare",
-                "recipe_slug": "beef_tenderloin_roast"
+                "recommended_doneness": "medium_rare"
               }
             ]
           },
@@ -3952,8 +3943,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "slug": "hogrev",
                 "doneness": [
                   "långkokt"
-                ],
-                "recipe_slug": "chuck_roast"
+                ]
               },
               {
                 "id": 2131,
@@ -3961,8 +3951,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "slug": "bringa",
                 "doneness": [
                   "långkokt"
-                ],
-                "recipe_slug": "brisket"
+                ]
               },
               {
                 "id": 2132,
@@ -3970,8 +3959,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "slug": "bog",
                 "doneness": [
                   "långkokt"
-                ],
-                "recipe_slug": "chuck_roast"
+                ]
               },
               {
                 "id": 2133,
@@ -3979,8 +3967,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "slug": "oxsvans",
                 "doneness": [
                   "långkokt"
-                ],
-                "recipe_slug": "beef_shank"
+                ]
               },
               {
                 "id": 2134,
@@ -3988,8 +3975,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "slug": "lagg",
                 "doneness": [
                   "långkokt"
-                ],
-                "recipe_slug": "beef_shank"
+                ]
               },
               {
                 "id": 2135,
@@ -3997,8 +3983,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "slug": "oxkind",
                 "doneness": [
                   "långkokt"
-                ],
-                "recipe_slug": "beef_shank"
+                ]
               },
               {
                 "id": 2136,
@@ -4006,8 +3991,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "slug": "margpipa",
                 "doneness": [
                   "långkokt"
-                ],
-                "recipe_slug": "beef_shank"
+                ]
               },
               {
                 "id": 3003,
@@ -4036,8 +4020,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "grill",
                   "pan_fry",
                   "air_fryer"
-                ],
-                "recipe_slug": "beef_burger"
+                ]
               },
               {
                 "id": 2731,
@@ -4050,8 +4033,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_fry",
                   "braise"
-                ],
-                "recipe_slug": "beef_burger"
+                ]
               },
               {
                 "id": 2732,
@@ -4063,8 +4045,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
-                ],
-                "recipe_slug": "meatloaf"
+                ]
               }
             ]
           },
@@ -4084,8 +4065,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_fry",
                   "pan_sear"
-                ],
-                "recipe_slug": "beef_liver"
+                ]
               },
               {
                 "id": 2741,
@@ -4098,8 +4078,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "braise",
                   "slow_cooker"
-                ],
-                "recipe_slug": "beef_tongue"
+                ]
               },
               {
                 "id": 2742,
@@ -4112,8 +4091,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "braise",
                   "slow_cooker"
-                ],
-                "recipe_slug": "beef_shank"
+                ]
               },
               {
                 "id": 3004,
@@ -4243,8 +4221,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "pork_tenderloin"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 2215,
@@ -4300,8 +4277,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "genomstekt",
-                "recipe_slug": "pork_belly"
+                "recommended_doneness": "genomstekt"
               },
               {
                 "id": 2211,
@@ -4315,8 +4291,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "pork_shoulder"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 2212,
@@ -4325,8 +4300,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "medium",
                   "genomstekt"
-                ],
-                "recipe_slug": "pork_leg"
+                ]
               },
               {
                 "id": 2213,
@@ -4334,8 +4308,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "slug": "julskinka",
                 "doneness": [
                   "genomstekt"
-                ],
-                "recipe_slug": "pork_leg"
+                ]
               },
               {
                 "id": 2214,
@@ -4343,8 +4316,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "slug": "flaskbog",
                 "doneness": [
                   "långkokt"
-                ],
-                "recipe_slug": "pork_shoulder"
+                ]
               },
               {
                 "id": 2218,
@@ -4372,8 +4344,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "slug": "revbensspjall",
                 "doneness": [
                   "långkokt"
-                ],
-                "recipe_slug": "spare_ribs"
+                ]
               },
               {
                 "id": 2221,
@@ -4381,8 +4352,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "slug": "sidflaask_revben",
                 "doneness": [
                   "långkokt"
-                ],
-                "recipe_slug": "spare_ribs"
+                ]
               },
               {
                 "id": 3010,
@@ -4391,8 +4361,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "långkokt"
                 ],
-                "recommended_doneness": "well_done",
-                "recipe_slug": "baby_back_ribs"
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 3011,
@@ -4401,8 +4370,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "långkokt"
                 ],
-                "recommended_doneness": "well_done",
-                "recipe_slug": "spare_ribs"
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 3012,
@@ -4430,8 +4398,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
-                ],
-                "recipe_slug": "pork_leg"
+                ]
               },
               {
                 "id": 2751,
@@ -4444,8 +4411,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
-                ],
-                "recipe_slug": "pork_leg"
+                ]
               }
             ]
           },
@@ -4464,8 +4430,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_fry",
                   "grill"
-                ],
-                "recipe_slug": "pork_sausage"
+                ]
               },
               {
                 "id": 2761,
@@ -4478,8 +4443,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_fry",
                   "braise"
-                ],
-                "recipe_slug": "ground_pork"
+                ]
               }
             ]
           },
@@ -4512,8 +4476,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_fry",
                   "pan_sear"
-                ],
-                "recipe_slug": "pork_liver"
+                ]
               },
               {
                 "id": 2772,
@@ -4526,8 +4489,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "braise",
                   "slow_cooker"
-                ],
-                "recipe_slug": "pork_tongue"
+                ]
               }
             ]
           }
@@ -4558,8 +4520,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "genomstekt",
-                "recipe_slug": "whole_chicken"
+                "recommended_doneness": "genomstekt"
               },
               {
                 "id": 2301,
@@ -4570,8 +4531,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "genomstekt",
-                "recipe_slug": "chicken_breast"
+                "recommended_doneness": "genomstekt"
               },
               {
                 "id": 2302,
@@ -4582,8 +4542,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "genomstekt",
-                "recipe_slug": "chicken_leg"
+                "recommended_doneness": "genomstekt"
               },
               {
                 "id": 2303,
@@ -4627,8 +4586,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "genomstekt",
-                "recipe_slug": "chicken_thigh"
+                "recommended_doneness": "genomstekt"
               }
             ]
           }
@@ -4651,8 +4609,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "genomstekt",
-                "recipe_slug": "whole_turkey"
+                "recommended_doneness": "genomstekt"
               },
               {
                 "id": 2311,
@@ -4663,8 +4620,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "genomstekt",
-                "recipe_slug": "turkey_breast"
+                "recommended_doneness": "genomstekt"
               },
               {
                 "id": 3030,
@@ -4712,8 +4668,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium_rare",
-                "recipe_slug": "duck_breast"
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 2321,
@@ -4724,8 +4679,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "genomstekt",
-                "recipe_slug": "whole_duck"
+                "recommended_doneness": "genomstekt"
               },
               {
                 "id": 3040,
@@ -4758,8 +4712,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "recommended_doneness": "genomstekt",
                 "supported_methods": [
                   "oven_roast"
-                ],
-                "recipe_slug": "whole_goose"
+                ]
               },
               {
                 "id": 2781,
@@ -4774,8 +4727,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_sear",
                   "oven_roast"
-                ],
-                "recipe_slug": "goose_breast"
+                ]
               },
               {
                 "id": 2782,
@@ -4788,8 +4740,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "oven_roast",
                   "braise"
-                ],
-                "recipe_slug": "goose_leg"
+                ]
               },
               {
                 "id": 3050,
@@ -4802,8 +4753,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "oven_roast",
                   "braise"
-                ],
-                "recipe_slug": "goose_thigh"
+                ]
               }
             ]
           }
@@ -4828,8 +4778,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_fry",
                   "grill"
-                ],
-                "recipe_slug": "ground_chicken"
+                ]
               },
               {
                 "id": 2791,
@@ -4842,8 +4791,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_fry",
                   "grill"
-                ],
-                "recipe_slug": "ground_turkey"
+                ]
               },
               {
                 "id": 2792,
@@ -4857,8 +4805,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "grill",
                   "pan_fry",
                   "air_fryer"
-                ],
-                "recipe_slug": "ground_chicken"
+                ]
               },
               {
                 "id": 3060,
@@ -4872,8 +4819,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "grill",
                   "pan_fry",
                   "air_fryer"
-                ],
-                "recipe_slug": "ground_turkey"
+                ]
               }
             ]
           }
@@ -4905,8 +4851,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "salmon_fillet"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 2401,
@@ -4918,8 +4863,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "salmon_fillet"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 2402,
@@ -4931,8 +4875,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "salmon_fillet"
+                "recommended_doneness": "medium"
               }
             ]
           }
@@ -4956,8 +4899,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "cod_fillet"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 2411,
@@ -4969,8 +4911,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "cod_fillet"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 2412,
@@ -4982,8 +4923,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "cod_fillet"
+                "recommended_doneness": "medium"
               }
             ]
           }
@@ -5007,8 +4947,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "blodig",
-                "recipe_slug": "tuna_steak"
+                "recommended_doneness": "blodig"
               }
             ]
           }
@@ -5140,8 +5079,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "sea_bass"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 3071,
@@ -5193,8 +5131,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium",
                   "genomstekt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "trout"
+                "recommended_doneness": "medium"
               }
             ]
           }
@@ -5219,8 +5156,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "recommended_doneness": "genomstekt",
                 "supported_methods": [
                   "pan_fry"
-                ],
-                "recipe_slug": "shrimp"
+                ]
               },
               {
                 "id": 2801,
@@ -5234,8 +5170,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "grill",
                   "oven_roast"
-                ],
-                "recipe_slug": "lobster_tail"
+                ]
               },
               {
                 "id": 2802,
@@ -5248,8 +5183,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "recommended_doneness": "genomstekt",
                 "supported_methods": [
                   "pan_sear"
-                ],
-                "recipe_slug": "scallops"
+                ]
               }
             ]
           }
@@ -5455,8 +5389,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium_rare",
-                "recipe_slug": "leg_of_lamb"
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 2501,
@@ -5470,8 +5403,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium_rare",
-                "recipe_slug": "rack_of_lamb"
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 2502,
@@ -5485,8 +5417,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "långkokt",
-                "recipe_slug": "lamb_shoulder"
+                "recommended_doneness": "långkokt"
               },
               {
                 "id": 2503,
@@ -5537,8 +5468,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "braise",
                   "slow_cooker",
                   "oven_roast"
-                ],
-                "recipe_slug": "lamb_shank"
+                ]
               },
               {
                 "id": 3084,
@@ -5552,8 +5482,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "braise",
                   "slow_cooker",
                   "oven_roast"
-                ],
-                "recipe_slug": "lamb_neck"
+                ]
               },
               {
                 "id": 3083,
@@ -5637,8 +5566,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "genomstekt"
                 ],
-                "recommended_doneness": "well_done",
-                "recipe_slug": "ground_lamb"
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 3093,
@@ -5647,8 +5575,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "genomstekt"
                 ],
-                "recommended_doneness": "well_done",
-                "recipe_slug": "ground_lamb"
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 3094,
@@ -5657,8 +5584,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "genomstekt"
                 ],
-                "recommended_doneness": "well_done",
-                "recipe_slug": "ground_lamb"
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -5692,8 +5618,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "venison_loin"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 2601,
@@ -5707,8 +5632,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "venison_roast"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 2602,
@@ -5722,8 +5646,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "venison_loin"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 2603,
@@ -5737,8 +5660,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "venison_roast"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 3100,
@@ -5749,8 +5671,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium"
                 ],
-                "recommended_doneness": "medium_rare",
-                "recipe_slug": "venison_roast"
+                "recommended_doneness": "medium_rare"
               },
               {
                 "id": 3101,
@@ -5759,8 +5680,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "långkokt"
                 ],
-                "recommended_doneness": "well_done",
-                "recipe_slug": "venison_roast"
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 3144,
@@ -5771,8 +5691,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium"
                 ],
-                "recommended_doneness": "medium_rare",
-                "recipe_slug": "venison_loin"
+                "recommended_doneness": "medium_rare"
               }
             ]
           }
@@ -5798,8 +5717,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "venison_loin"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 2611,
@@ -5813,8 +5731,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "venison_roast"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 2612,
@@ -5854,8 +5771,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "venison_loin"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 2621,
@@ -5869,8 +5785,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "medium",
-                "recipe_slug": "venison_roast"
+                "recommended_doneness": "medium"
               },
               {
                 "id": 3120,
@@ -5881,8 +5796,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_rare",
                   "medium"
                 ],
-                "recommended_doneness": "medium_rare",
-                "recipe_slug": "venison_loin"
+                "recommended_doneness": "medium_rare"
               }
             ]
           }
@@ -5908,8 +5822,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "genomstekt",
-                "recipe_slug": "wild_boar_chop"
+                "recommended_doneness": "genomstekt"
               },
               {
                 "id": 2631,
@@ -5923,8 +5836,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "långkokt",
-                "recipe_slug": "wild_boar_shoulder"
+                "recommended_doneness": "långkokt"
               },
               {
                 "id": 3110,
@@ -5933,8 +5845,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "långkokt"
                 ],
-                "recommended_doneness": "well_done",
-                "recipe_slug": "wild_boar_shoulder"
+                "recommended_doneness": "well_done"
               },
               {
                 "id": 3145,
@@ -5944,8 +5855,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "medium_well",
                   "genomstekt"
                 ],
-                "recommended_doneness": "well_done",
-                "recipe_slug": "wild_boar_chop"
+                "recommended_doneness": "well_done"
               }
             ]
           }
@@ -5966,8 +5876,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "doneness": [
                   "genomstekt"
                 ],
-                "recommended_doneness": "genomstekt",
-                "recipe_slug": "rabbit_saddle"
+                "recommended_doneness": "genomstekt"
               },
               {
                 "id": 2641,
@@ -5977,8 +5886,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "genomstekt",
                   "långkokt"
                 ],
-                "recommended_doneness": "genomstekt",
-                "recipe_slug": "rabbit_legs"
+                "recommended_doneness": "genomstekt"
               }
             ]
           }
@@ -6005,8 +5913,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_sear",
                   "grill"
-                ],
-                "recipe_slug": "bison_steak"
+                ]
               },
               {
                 "id": 2811,
@@ -6019,8 +5926,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "grill",
                   "pan_fry"
-                ],
-                "recipe_slug": "bison_burger"
+                ]
               },
               {
                 "id": 2812,
@@ -6034,8 +5940,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
-                ],
-                "recipe_slug": "bison_roast"
+                ]
               }
             ]
           }
@@ -6062,8 +5967,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_sear",
                   "grill"
-                ],
-                "recipe_slug": "buffalo_steak"
+                ]
               },
               {
                 "id": 2821,
@@ -6076,8 +5980,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "grill",
                   "pan_fry"
-                ],
-                "recipe_slug": "buffalo_burger"
+                ]
               },
               {
                 "id": 3130,
@@ -6115,8 +6018,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_sear",
                   "grill"
-                ],
-                "recipe_slug": "ostrich_steak"
+                ]
               },
               {
                 "id": 2831,
@@ -6131,8 +6033,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_sear",
                   "grill"
-                ],
-                "recipe_slug": "ostrich_steak"
+                ]
               }
             ]
           }
@@ -6160,8 +6061,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_sear",
                   "grill"
-                ],
-                "recipe_slug": "mutton_chop"
+                ]
               },
               {
                 "id": 2841,
@@ -6175,8 +6075,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "oven_roast"
-                ],
-                "recipe_slug": "mutton_leg"
+                ]
               },
               {
                 "id": 2842,
@@ -6190,8 +6089,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "oven_roast",
                   "braise",
                   "slow_cooker"
-                ],
-                "recipe_slug": "mutton_shoulder"
+                ]
               }
             ]
           }
@@ -6218,8 +6116,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_sear",
                   "grill"
-                ],
-                "recipe_slug": "kangaroo_steak"
+                ]
               },
               {
                 "id": 2851,
@@ -6234,8 +6131,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "pan_sear",
                   "grill"
-                ],
-                "recipe_slug": "kangaroo_steak"
+                ]
               }
             ]
           }
@@ -6322,8 +6218,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "oven_bake",
                   "air_fryer"
-                ],
-                "recipe_slug": "baked_potato"
+                ]
               },
               {
                 "id": 2901,
@@ -6335,8 +6230,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "oven_roast",
                   "air_fryer"
-                ],
-                "recipe_slug": "roasted_potatoes"
+                ]
               },
               {
                 "id": 2902,
@@ -6350,8 +6244,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "oven_roast",
                   "air_fryer",
                   "saute"
-                ],
-                "recipe_slug": "roasted_carrots"
+                ]
               },
               {
                 "id": 2903,
@@ -6375,8 +6268,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 ],
                 "supported_methods": [
                   "oven_roast"
-                ],
-                "recipe_slug": "roasted_beets"
+                ]
               },
               {
                 "id": 2905,
@@ -6390,8 +6282,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "oven_roast",
                   "oven_bake",
                   "air_fryer"
-                ],
-                "recipe_slug": "roasted_sweet_potato"
+                ]
               }
             ]
           }
@@ -6433,8 +6324,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "air_fryer",
                   "saute",
                   "pan_fry"
-                ],
-                "recipe_slug": "brussels_sprouts"
+                ]
               },
               {
                 "id": 2912,
@@ -6449,8 +6339,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "saute",
                   "steam",
                   "grill"
-                ],
-                "recipe_slug": "asparagus"
+                ]
               },
               {
                 "id": 2913,
@@ -6465,8 +6354,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "saute",
                   "boil",
                   "oven_roast"
-                ],
-                "recipe_slug": "green_beans"
+                ]
               },
               {
                 "id": 2914,
@@ -6478,8 +6366,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "saute",
                   "steam"
-                ],
-                "recipe_slug": "spinach"
+                ]
               }
             ]
           }
@@ -6583,8 +6470,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "oven_roast",
                   "steam"
-                ],
-                "recipe_slug": "butternut_squash"
+                ]
               },
               {
                 "id": 2932,
@@ -6596,8 +6482,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "oven_roast",
                   "oven_bake"
-                ],
-                "recipe_slug": "acorn_squash"
+                ]
               },
               {
                 "id": 2933,
@@ -6609,8 +6494,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 "supported_methods": [
                   "oven_roast",
                   "oven_bake"
-                ],
-                "recipe_slug": "spaghetti_squash"
+                ]
               }
             ]
           }
@@ -6637,8 +6521,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "air_fryer",
                   "steam",
                   "saute"
-                ],
-                "recipe_slug": "cauliflower"
+                ]
               },
               {
                 "id": 2941,
@@ -6679,8 +6562,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "saute",
                   "grill",
                   "air_fryer"
-                ],
-                "recipe_slug": "bell_peppers"
+                ]
               }
             ]
           }
@@ -6705,8 +6587,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "saute",
                   "oven_roast",
                   "grill"
-                ],
-                "recipe_slug": "button_mushrooms"
+                ]
               },
               {
                 "id": 2961,
@@ -6721,8 +6602,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "grill",
                   "saute",
                   "air_fryer"
-                ],
-                "recipe_slug": "portobello_mushrooms"
+                ]
               }
             ]
           }
@@ -6776,8 +6656,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                   "grill",
                   "air_fryer",
                   "pan_fry"
-                ],
-                "recipe_slug": "eggplant"
+                ]
               }
             ]
           }
@@ -6801,8 +6680,7 @@ const SWEDISH_MEAT_CATEGORIES = {
                 ],
                 "supported_methods": [
                   "oven_roast"
-                ],
-                "recipe_slug": "roasted_tomatoes"
+                ]
               }
             ]
           }
@@ -18332,12 +18210,18 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _getDataCategories() {
-    // Return generated data based on selected source
+    // The experimental MEATER path is locked to international data: recipe
+    // filenames under docs/recipe_research/ use English cut slugs, and there
+    // is no verified Swedish→English cut-slug mapping yet. Swedish cuts on
+    // this path would either show no recipe card or a wrong one. Swedish
+    // support for the experimental path will be added in a later branch.
+    if (this._currentPath === 'meater_experimental') return MEAT_CATEGORIES;
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_MEAT_CATEGORIES : MEAT_CATEGORIES;
   }
 
   _getDonenessOptions() {
-    // Return generated data based on selected source
+    // See _getDataCategories: experimental MEATER path is locked to international.
+    if (this._currentPath === 'meater_experimental') return DONENESS_OPTIONS;
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
   }
 
@@ -28014,7 +27898,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "277";
+const PANEL_VERSION = "278";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

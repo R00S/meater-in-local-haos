@@ -944,12 +944,18 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _getDataCategories() {
-    // Return generated data based on selected source
+    // The experimental MEATER path is locked to international data: recipe
+    // filenames under docs/recipe_research/ use English cut slugs, and there
+    // is no verified Swedish→English cut-slug mapping yet. Swedish cuts on
+    // this path would either show no recipe card or a wrong one. Swedish
+    // support for the experimental path will be added in a later branch.
+    if (this._currentPath === 'meater_experimental') return MEAT_CATEGORIES;
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_MEAT_CATEGORIES : MEAT_CATEGORIES;
   }
 
   _getDonenessOptions() {
-    // Return generated data based on selected source
+    // See _getDataCategories: experimental MEATER path is locked to international.
+    if (this._currentPath === 'meater_experimental') return DONENESS_OPTIONS;
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
   }
 

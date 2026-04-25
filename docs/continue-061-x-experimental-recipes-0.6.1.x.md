@@ -173,3 +173,46 @@ Updated PANEL_VERSION in JS: 117 -> 273
 - Version bumped: 0.6.1.14 → 0.6.1.15 in manifest.json, __init__.py, const.py
 - Branch timeline updated with entries for recipe GUI integration and CHORES
 - USER_GUIDE.md updated: new section 5.9, updated 5.8 comparison table
+
+---
+
+### 2026-04-25 — Lock experimental MEATER path to international data (v0.6.1.17)
+
+**Task (revised plan):**
+- POSTPONED: "Give every cookable cut an explicit recipe reference"
+- IN SCOPE: "Remove Swedish from the experimental MEATER path for now"
+
+#### Background
+
+The experimental MEATER path was honouring `this._dataSource` (Swedish vs international). When Swedish was selected, cut slugs (e.g. `entrecote`, `lammbringa`) did not match the recipe filenames under `docs/recipe_research/`, which use English slugs (e.g. `ribeye_steak`, `brisket`). A hand-written `_RECIPE_SLUG_MAP` in `generate_frontend_data.py` tried to bridge this, but accumulated unverified, fabricated cross-species translations (e.g. `abborrfile→sea_bass`, `lammbringa→brisket`) that produced wrong recipe cards. See Rule 2 in `.github/copilot-instructions.md` ("Data Mappings: Only Map What You Can Verify").
+
+#### What was changed
+
+**`www/panel-class-template.js`** — `_getDataCategories()` and `_getDonenessOptions()` now return `MEAT_CATEGORIES` / `DONENESS_OPTIONS` unconditionally when `this._currentPath === 'meater_experimental'`, regardless of `_dataSource`. The standard MEATER path and all other paths are unchanged.
+
+**`generate_frontend_data.py`**
+- Removed `_RECIPE_SLUG_MAP` (~80 entries, all unverified or fabricated). Replaced with an explanatory note pointing at Rule 2.
+- `cut_to_js()` now only emits `recipe_slug` when a cut explicitly defines `MeatCut.recipe_slug` (none currently do). Swedish cuts no longer carry a fabricated `recipe_slug`.
+- Added a coverage report after `build_recipe_index()`:
+  ```
+  International cut → recipe coverage: 134 matched, 53 unmatched
+  (unmatched cuts simply show no recipe card)
+  ```
+
+**Files NOT changed:**
+- `cooking_data.py`, `swedish_cooking_data.py`, `MeatCut` dataclass — `recipe_slug` field kept for future explicit per-cut overrides
+- Standard MEATER path — still honours `_dataSource`
+- Swedish data structures — still generated, still used everywhere except the experimental path
+- Recipe files themselves
+
+#### Version bump
+- `0.6.1.16` → `0.6.1.17` (manifest.json, __init__.py `__version__` + Last Change, const.py Last Change)
+- PANEL_VERSION auto-bumped: `277` → `278`
+
+#### Generator output
+```
+Recipe index: 331 files across 133 cuts
+International cut → recipe coverage: 134 matched, 53 unmatched
+Updated PANEL_VERSION in JS: 117 -> 278
+Updated PANEL_VERSION in const.py: 277 -> 278
+```
