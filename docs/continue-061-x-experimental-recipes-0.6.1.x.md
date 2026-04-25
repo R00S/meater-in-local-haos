@@ -471,3 +471,57 @@ This workflow change can be tested without merging: `workflow_dispatch` runs fro
 - PANEL_VERSION: `289` → `290`
 
 ---
+
+### 2026-04-25 — Fix cut profile card not rendering in experimental MEATER path (v0.6.1.24)
+
+**Bug reported:** "cuts info doesn't render in the gui — it's systematic, no cuts render, neither their cut profile text nor methods nor recipe links"
+
+#### Root cause
+
+The cut dropdown `@change` handler used `parseInt(e.target.value) || null`:
+
+```javascript
+// BROKEN:
+@change=${(e) => this._selectCut(parseInt(e.target.value) || null)}
+```
+
+`EXP_TREE` uses **string IDs** (e.g. `"pork_loin_steak"`, `"chops_tenderloin"`).  
+`parseInt("pork_loin_steak")` → `NaN`, and `NaN || null` → `null`.  
+So `this._selectedCut` was **always null** after user selection — making every downstream  
+`${this._selectedCut ? html`...`}` block invisible, including:
+- The cut profile card (`_renderCutProfileCard()`)
+- The doneness selector
+- The temperature fine-tuning section
+- The cooking method selector
+
+This affected only the experimental MEATER path (the one with `← Back to MEATER Path`).  
+The standard MEATER path uses integer IDs from `MEAT_CATEGORIES` so `parseInt` worked there.
+
+#### What was changed
+
+**`www/panel-class-template.js`** — both cut dropdown `@change` handlers (regular and experimental path):
+
+```javascript
+// FIXED:
+@change=${(e) => { const v = e.target.value; this._selectCut(v === '' ? null : (isNaN(v) ? v : parseInt(v))); }}
+```
+
+Logic: empty string → null; numeric string (e.g. "202") → integer (for MEAT_CATEGORIES compatibility); non-numeric string (e.g. "pork_loin_steak") → passed through as-is.
+
+#### Generator output
+```
+Recipe index: 516 files across 185 cuts
+  International cut → recipe coverage: 190 matched, 0 unmatched
+  EXP_TREE: 186 cuts across 7 categories from KCE:CUT tags
+Updated PANEL_VERSION in JS: 117 -> 292
+Updated PANEL_VERSION in const.py: 291 -> 292
+```
+
+#### Also investigated: CI failure
+Run #184 failed with `ModuleNotFoundError: No module named 'yaml'`. Run #185 succeeded — the workflow already has `pip install pyyaml` in the "Install generator dependencies" step. No code change needed for this.
+
+#### Version bump
+- No version change (template + panel-only bug fix)
+- PANEL_VERSION: 291 → 292
+
+---

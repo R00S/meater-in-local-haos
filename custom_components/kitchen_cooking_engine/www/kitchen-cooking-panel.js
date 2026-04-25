@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 25 Apr 2026, 10:23 CET
+ * AUTO-GENERATED: 25 Apr 2026, 10:37 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 25 Apr 2026, 10:23 CET
+// Last generated: 25 Apr 2026, 10:37 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -24420,7 +24420,7 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} ${this._t('meater.select_cut')}</h3>
-            <select @change=${(e) => this._selectCut(parseInt(e.target.value) || null)}>
+            <select @change=${(e) => { const v = e.target.value; this._selectCut(v === '' ? null : (isNaN(v) ? v : parseInt(v))); }}>
               <option value="">${this._t('meater.choose_cut')}</option>
               ${cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
@@ -25667,7 +25667,7 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} Select Cut</h3>
-            <select @change=${(e) => this._selectCut(parseInt(e.target.value) || null)}>
+            <select @change=${(e) => { const v = e.target.value; this._selectCut(v === '' ? null : (isNaN(v) ? v : parseInt(v))); }}>
               <option value="">Choose a cut...</option>
               ${cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
@@ -31943,7 +31943,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "291";
+const PANEL_VERSION = "292";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

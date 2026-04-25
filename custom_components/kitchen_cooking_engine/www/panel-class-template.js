@@ -3285,7 +3285,7 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} ${this._t('meater.select_cut')}</h3>
-            <select @change=${(e) => this._selectCut(parseInt(e.target.value) || null)}>
+            <select @change=${(e) => { const v = e.target.value; this._selectCut(v === '' ? null : (isNaN(v) ? v : parseInt(v))); }}>
               <option value="">${this._t('meater.choose_cut')}</option>
               ${cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
@@ -4532,7 +4532,7 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} Select Cut</h3>
-            <select @change=${(e) => this._selectCut(parseInt(e.target.value) || null)}>
+            <select @change=${(e) => { const v = e.target.value; this._selectCut(v === '' ? null : (isNaN(v) ? v : parseInt(v))); }}>
               <option value="">Choose a cut...</option>
               ${cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
