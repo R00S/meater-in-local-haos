@@ -607,3 +607,74 @@ Updated PANEL_VERSION in const.py: 293 -> 294
 - PANEL_VERSION: `293` → `294`
 
 ---
+
+---
+
+### 2026-04-25 — Fix cut-method description, recipe buttons, Braise in methods, duplicate Meatloaf (v0.6.1.26)
+
+**Bugs fixed (all four from the 0.6.1.25 release):**
+
+1. **Cut-method description not showing** — clicking a method research pill showed no description text
+2. **No direct recipe buttons** — individual recipes were not rendered as clickable items
+3. **Braise missing from cooking method selector** — Braise appeared as a Method Research button but was absent from the Cooking Method grid
+4. **Meatloaf appeared twice in Beef → Ground** — a duplicate `meatloaf_alt` entry existed in `BEEF_GROUND`
+
+#### Root causes
+
+**Bugs 1 & 2:** The JS constants `CUT_METHOD_PROFILES` and `RECIPE_TITLES_INDEX` were not being generated. `build_recipe_index()` only returned `(recipe_index, cut_profiles)` — two values. The template referenced `CUT_METHOD_PROFILES[slug][method]` for the description and `RECIPE_TITLES_INDEX[slug][method]` for the recipe title list, but both were undefined at runtime.
+
+**Bug 3:** `COOKING_METHODS` in `generate_frontend_data.py` was missing the `braise` entry. The regular and experimental paths both map `COOKING_METHODS` directly to buttons without filtering, so the omission meant no Braise button appeared even for cuts that list `braise` in `supported_methods`.
+
+**Bug 4:** `BEEF_GROUND` in `cooking_data.py` contained both `id=142 meatloaf` and `id=143 meatloaf_alt` (same display name "Meatloaf", different IDs). The alt entry was a stale duplicate.
+
+#### What was changed
+
+**`generate_frontend_data.py`**:
+- Added `_extract_recipe_titles(content)` — extracts `### N.` headings from `## Source recipes` section (regex intentional here; runs only in Python generator, never in JS)
+- Extended `build_recipe_index()` to also build `cut_method_profiles: {cut_slug: {method_slug: "text"}}` and `recipe_titles: {cut_slug: {method_slug: ["title", ...]}}` from `CUT_METHOD` tagged files
+- Added `const CUT_METHOD_PROFILES = {...}` and `const RECIPE_TITLES_INDEX = {...}` to generated JS
+- Added `{ value: "braise", name: "Braise" }` to `COOKING_METHODS`
+
+**`cooking_data.py`**:
+- Removed duplicate `meatloaf_alt` entry (id=143) from `BEEF_GROUND`
+
+#### Generator output
+```
+Recipe index: 516 files across 185 cuts
+  International cut → recipe coverage: 189 matched, 0 unmatched
+  EXP_TREE: 186 cuts across 7 categories from KCE:CUT tags
+  Copied 517 recipe files → www/recipes/
+Updated PANEL_VERSION in JS: 117 -> 298
+Updated PANEL_VERSION in const.py: 297 -> 298
+```
+
+#### Version bump
+- `0.6.1.25` → `0.6.1.26` (manifest.json, __init__.py `__version__` + Last Change, const.py Last Change)
+- PANEL_VERSION: `297` → `298`
+
+---
+
+### Design decision (deferred): KCE section markers in source files
+
+**Context:** Recipe file content is currently parsed in the JS by `_getRecipeContent()` using a plain `split('\n### ')` to isolate individual recipe blocks. The JS also uses `_openRecipeFile()` which strips the leading `<!-- KCE:... -->` header comment with a simple `indexOf('-->')` — no regex.
+
+A previous session proposed two approaches for ensuring robust section extraction:
+- **Generator on-the-fly**: let the Python generator derive section content during `build_recipe_index()` and bake it into JS constants (bypassing JS file parsing entirely)
+- **KCE tags in source files**: add explicit `<!-- KCE:SECTION ... -->` or similar markers directly into every `docs/recipe_research/` file, then parse by those tags in the generator
+
+**Decision:** **Tags in source files** was confirmed as the correct approach by the project owner, for the following reason:
+
+With generator on-the-fly, if the generator logic needs a bug fix, every one of the 517 recipe instances must be re-verified. With tags in source files, verification is done once when the tags are added — a subsequent generator bug fix changes only the Python parsing, not the tags themselves, so no re-verification of all 517 files is needed.
+
+**Status:** Not yet implemented. The current `split('\n### ')` approach works for all existing files. Implementation of source-file tags is deferred to a future session.
+
+---
+
+### Pending consideration: Convert recipe files to structured markup
+
+**Raised by project owner 2026-04-25:** "maybe the recipe files should simply be converted to a proper markup, json sgml or anything"
+
+This would replace the current freeform Markdown files (with embedded `<!-- KCE:... -->` YAML comment headers) with a fully structured format (JSON, YAML front-matter only, or a lightweight XML dialect). Benefits: unambiguous machine parsing, no regex needed, clearer schema validation.
+
+**Status:** Under consideration. Not yet designed or implemented.
+
