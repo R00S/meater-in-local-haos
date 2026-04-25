@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.6.2.00 · Home Assistant 2024.1.0+
+> **Version:** 0.6.2.01 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -115,8 +115,15 @@ generation, which uses whichever conversation agent you have configured in Home 
 After restarting, go to **Settings → Devices & Services → Add Integration** and search for
 **Kitchen Cooking Engine**. Add at least one appliance (see [Section 3](#3-adding-appliances-first-time-setup)).
 
-The panel is automatically registered at `/kitchen-cooking-engine`. Add a **Panel** or
-**Webpage** card pointing to that URL to embed it in a dashboard view.
+The panel is automatically registered in the HA sidebar as **Kitchen Cooking Engine**.
+The JS resource is also auto-registered as a Lovelace module, so you can embed the panel
+in any dashboard view with a single card:
+
+```yaml
+type: custom:kitchen-cooking-card
+```
+
+No manual resource configuration is required.
 
 ---
 

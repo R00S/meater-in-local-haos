@@ -37,6 +37,21 @@ Work done under wrong version `0.6.1.32` (should have been `0.6.2.01`):
 - [x] Safety legend restored in Doneness card (🟢 safe · 🟠 caution · 🔴 below guidelines)
 - [x] USDA minimum warning note added in Target Temperature card
 
+## v0.6.2.00 — Correct version bump (agent number 1→2, release counter reset)
+
+### Changes
+- `manifest.json`, `__init__.py`, `const.py`: `0.6.1.32` → `0.6.2.00`
+- Generator run: PANEL_VERSION 303 → 304
+- Timeline file renamed from `remove-placeholder-meatloaf-recipe-0.6.1.x.md` to `remove-placeholder-meatloaf-recipe-0.6.2.x.md`
+- `docs/USER_GUIDE.md` version header updated to `0.6.2.00`
+
+### Status
+- [x] All 4 version locations updated to 0.6.2.00
+- [x] Generator run successful (516 recipe files, PANEL_VERSION 304)
+- [x] Correct timeline file created
+- [x] Wrong timeline file deleted
+- [x] User guide version header updated
+
 ## v0.6.2.01 — Lovelace custom card (Option A)
 
 ### Changes
@@ -63,17 +78,3 @@ The resource is auto-registered on HA startup — no manual Lovelace resource co
 - [x] `_async_register_lovelace_resource()` added to `__init__.py`
 - [x] Version bumped to 0.6.2.01 in all 4 locations
 - [x] Generator run successful (515 recipe files, PANEL_VERSION 305)
-
-
-### Changes
-- `manifest.json`, `__init__.py`, `const.py`: `0.6.1.32` → `0.6.2.00`
-- Generator run: PANEL_VERSION 303 → 304
-- Timeline file renamed from `remove-placeholder-meatloaf-recipe-0.6.1.x.md` to `remove-placeholder-meatloaf-recipe-0.6.2.x.md`
-- `docs/USER_GUIDE.md` version header updated to `0.6.2.00`
-
-### Status
-- [x] All 4 version locations updated to 0.6.2.00
-- [x] Generator run successful (516 recipe files, PANEL_VERSION 304)
-- [x] Correct timeline file created
-- [x] Wrong timeline file deleted
-- [x] User guide version header updated
