@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 24 Apr 2026, 20:56 UTC
-Last Change: v0.6.1.20 - Fix methods: in cut files to list ALL methods; cut-method file overrides at runtime
+Last Change: v0.6.1.21 - Add 53 placeholder cut files with full method and temperature frontmatter
 """
 
 DOMAIN = "kitchen_cooking_engine"
