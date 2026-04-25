@@ -19,6 +19,7 @@ Creates test releases from any branch without merging to main.
 
 - **Trigger:** Manual (workflow_dispatch)
 - **Purpose:** Allows testing integration changes via HACS before merging to main
+- **Automated:** Runs `generate_frontend_data.py` before packaging, so `EXP_TREE` and all baked constants are always up-to-date in every release — no local generator run required
 
 ## How to Create a Test Release
 

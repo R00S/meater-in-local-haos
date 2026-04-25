@@ -1,0 +1,40 @@
+<!-- KCE:CUT
+type: cut
+slug: bison_burger
+name: Bison Burger
+category: game
+meat: bison
+cut_type: Bison
+usda_safe_c: 71
+usda_safe_f: 160
+recommended_doneness: well_done
+methods:
+- grill
+- pan_fry
+doneness:
+- name: well_done
+  target_c: 71
+  target_f: 160
+  min_c: 68
+  min_f: 155
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+-->
+# Bison Burger — Cut Overview
+
+## Cut profile
+
+Bison burger patties are made from ground bison meat, typically sourced from the shoulder, chuck, or round — the same primal cuts used for beef hamburgers. Bison is notably leaner than beef, often containing only 2–7% fat depending on the grind, compared to 15–20% in a typical beef burger blend. This leanness is both the appeal and the challenge: bison has a clean, slightly sweet, mineral-forward flavour but is prone to drying out if overcooked or if insufficient fat is present.
+
+Because ground bison is so lean, fat management is critical. Many cooks either blend pure ground bison with a fattier cut (e.g., bison back fat or beef suet) to reach roughly 10–15% total fat, or they compensate with binding ingredients such as egg, mustard, and ketchup that add moisture and help hold the patty together. Cooking over high direct heat — whether on charcoal, a gas grill, or a cast-iron pan — is the preferred method, as it quickly builds a crust that seals in juices before the lean meat has time to dry out.
+
+Food safety regulations in most countries classify ground meat as a high-risk product requiring thorough cooking: the USDA standard for ground meat is 71 °C / 160 °F internal temperature. BBC Good Food echoes this at 70 °C. However, gourmet and restaurant preparations for trusted-source ground bison sometimes target 63–65 °C for a medium result with a pink centre. The appropriate pull temperature depends on the intended doneness, the diners' preferences, and local food safety guidelines.
+
+A MEATER probe inserted sideways into a patty gives reliable internal readings even for thin cuts, provided it is placed horizontally through the thickest part of the patty, keeping the tip and ambient sensor both clear of the grill grates.
+
+
+## Research files by cooking method
+
+- [Grill](./bison_burger-grill.md)
+- [Pan Fry](./bison_burger-pan_fry.md)

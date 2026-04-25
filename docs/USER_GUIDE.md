@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.6.1.13 · Home Assistant 2024.1.0+
+> **Version:** 0.6.1.14 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -31,6 +31,8 @@
    - 5.6 [Resting and Completing a Cook](#56-resting-and-completing-a-cook)
    - 5.7 [Recent MEATER Cooks](#57-recent-meater-cooks)
    - 5.8 [MEATER+ (experimental) — Safety Indicators](#58-meater-experimental--safety-indicators)
+   - 5.9 [MEATER+ (experimental) — Cut Profile & Recipe Links](#59-meater-experimental--cut-profile--recipe-links)
+   - 5.10 [Contributing Recipe Files](#510-contributing-recipe-files)
 6. [Ninja Combi Cooking](#6-ninja-combi-cooking)
    - 6.1 [Built-in Recipes](#61-built-in-recipes)
    - 6.2 [Recipe Builder](#62-recipe-builder)
@@ -392,7 +394,7 @@ The cook flow is identical to the standard MEATER path (§ 5.1 – 5.4):
 | 🔴 Red (unsafe) | Not recommended; displayed for informational purposes only |
 
 5. **Fine-tune temperature** (optional) — same slider as the standard path
-6. **Choose cooking method** — same selector as the standard path
+6. **Choose cooking method** — only the methods supported by the selected cut are shown (derived from the cut's recipe file). On the standard MEATER path all methods are listed; here only the relevant subset appears.
 7. **Start** — same `start_cook` service call
 
 #### Custom Temperature mode
@@ -408,9 +410,236 @@ standard MEATER path (§ 5.4).
 | Cook flow | Category → meat → cut → doneness | Identical |
 | Doneness options | Full list for the cut | Full list for the cut |
 | Safety indicators | Not shown | **Shown per doneness option** (🟢 / 🟠 / 🔴) |
+| Cut profile text | Not shown | **Shown after cut selection** |
+| Recipe research links | Not shown | **Shown after cut selection** |
+| Temperature data source | International or Swedish | **International (USDA) only** |
 | Temperature fine-tuning | Available | Available |
+| Cooking method selector | All methods shown | **Only methods declared in the cut file** |
 | Custom temperature | Available | Available |
 | Active cook screen | Standard | Identical |
+
+---
+
+### 5.9 MEATER+ (experimental) — Cut Profile & Recipe Links
+
+When you select a cut in the **MEATER+ (experimental)** path, a **📖 Cut Profile** card
+appears immediately below the cut selector — before you choose a doneness level.
+
+#### What it shows
+
+**Cut Profile text** — a brief description of the cut: where on the animal it comes from,
+its connective-tissue and fat content, why the selected cooking method suits it, and what
+internal temperature behaviour to expect.
+
+**📄 Cut Overview** — a toggle button that opens the cut's overview research file. After
+opening, the file's **description paragraph** is shown, followed by a list of **individual
+recipe titles** as clickable buttons. Tapping a recipe title opens just that recipe in a
+readable card with ingredients, method steps, and pull-temperature guidance. A **← Back to
+recipes** button returns to the list, and **✕ Close** closes the viewer.
+
+**📚 Method Research** — a row of pill-shaped buttons, one per cooking method that has an
+associated research file. Tapping a method pill opens that file the same way: description
+paragraph first, then individual recipe title buttons, then a single-recipe view on tap.
+
+The research files contain 4–6 source recipes drawn from globally diverse published
+cookbooks and food websites, with non-Western sources prioritised. Each file lists:
+- The cut-method description (from `## Cut profile`)
+- Ingredients with quantities
+- Step-by-step method
+- MEATER probe placement instructions
+- Pull temperature guidance
+
+#### Example
+
+After selecting **Lamb Shank** in the Lamb → Roasts category, the Cut Profile card shows
+a short description of the shank (collagen content, typical fall-off-the-bone target
+85–90 °C) and three method research buttons:
+
+| Button | Opens |
+|--------|-------|
+| Braise | `lamb_shank-braise.md` — description + 4 individual recipes (Mediterranean, Turkish, German, Danish) |
+| Slow Cooker | `lamb_shank-slow_cooker.md` — description + 5 recipes (Turkish, German, Greek, Italian, Danish) |
+| Oven Roast | `lamb_shank-oven_roast.md` — description + 4 recipes (Turkish, Greek, Italian, Danish) |
+
+Tapping **Braise** shows the cut-method description and a list of four recipe names. Tapping
+any name opens just that recipe, showing ingredients and method steps. The ← Back button
+returns to the recipe list; ✕ Close dismisses the viewer entirely.
+
+#### How the cut tree and recipe links are built
+
+The experimental MEATER path is driven entirely by the recipe `.md` files under
+`docs/recipe_research/`. Each file carries a `<!-- KCE:CUT … -->` or
+`<!-- KCE:CUT_METHOD … -->` tag that describes its position in the meat hierarchy,
+cooking temperatures, and supported methods.
+
+At release time the **create-test-release** GitHub Actions workflow automatically runs
+`generate_frontend_data.py`, which scans those files and bakes `EXP_TREE`, `RECIPE_INDEX`,
+and `CUT_PROFILES` into `kitchen-cooking-panel.js`. This happens on the CI runner —
+the developer does not need to run the generator locally before creating a release.
+
+To add a new cut to the experimental path:
+
+1. Create `docs/recipe_research/<category>/<cut>/{slug}.md` with a `<!-- KCE:CUT … -->` tag.
+2. Optionally add `{slug}-{method}.md` files for each cooking method.
+3. Push the files and trigger a test release — the generator runs automatically.
+
+To add a new cooking method to an **existing** cut (including entirely new methods not yet
+known to the system):
+
+1. Add the method slug to the cut's `<!-- KCE:CUT … -->` `methods:` list.
+2. Optionally create `{slug}-{method}.md` research file for that method.
+3. No changes to `cooking_data.py` or any other file are required.
+
+---
+
+### 5.10 Contributing Recipe Files
+
+Anyone can contribute cut profiles and recipe research files — no Python knowledge required.
+All you need is a text editor and a GitHub account.
+
+#### Suggesting a cut or recipe via a GitHub issue
+
+If you don't want to write the files yourself, open a GitHub issue at
+[github.com/R00S/meater-in-local-haos/issues](https://github.com/R00S/meater-in-local-haos/issues)
+with the label **recipe-request** and include:
+
+- The protein and cut name (e.g. *Pork — Secreto*)
+- Which cooking methods you'd like covered
+- Any trusted sources or cookbooks you recommend
+
+A maintainer will pick it up.
+
+#### Writing a cut overview file (`{slug}.md`)
+
+Place the file at:
+```
+docs/recipe_research/<category>/<animal>/{slug}.md
+```
+
+The file must start with a `<!-- KCE:CUT … -->` YAML block. Example for a new cut:
+
+```markdown
+<!-- KCE:CUT
+type: cut
+slug: my_cut_slug
+name: My Cut Name
+category: beef
+meat: beef
+cut_type: Steaks
+usda_safe_c: 63
+usda_safe_f: 145
+recommended_doneness: medium_rare
+methods:
+- pan_sear
+- grill
+doneness:
+- name: medium_rare
+  target_c: 57
+  target_f: 135
+  min_c: 54
+  min_f: 130
+  max_c: 60
+  max_f: 140
+  usda_safe: false
+  recommended: true
+- name: medium
+  target_c: 63
+  target_f: 145
+  min_c: 60
+  min_f: 140
+  max_c: 68
+  max_f: 155
+  usda_safe: true
+-->
+# My Cut Name — Cut Overview
+
+## Cut profile
+
+A short paragraph describing the cut: where on the animal it comes from, fat and
+connective-tissue content, flavour characteristics, and the ideal internal temperature
+range. Mention the pull temperature and expected rise after resting.
+
+## Research files by cooking method
+
+- [Pan Sear](./my_cut_slug-pan_sear.md)
+- [Grill](./my_cut_slug-grill.md)
+```
+
+**Required `KCE:CUT` fields**
+
+| Field | Description |
+|-------|-------------|
+| `slug` | Lowercase, underscores, unique within the category. |
+| `name` | Human-readable name shown in the GUI. |
+| `category` | One of: `beef`, `pork`, `poultry`, `fish`, `lamb`, `game`, `vegetables`. |
+| `meat` | Animal name in lowercase (e.g. `beef`, `salmon`, `chicken`). |
+| `cut_type` | Sub-category label shown in the GUI (e.g. `Steaks`, `Roasts`). |
+| `usda_safe_c` / `usda_safe_f` | USDA minimum safe temperature (°C and °F). |
+| `recommended_doneness` | The `name` value of the preferred doneness level. |
+| `methods` | List of cooking method slugs supported by this cut. |
+| `doneness` | At least one doneness entry (see below). |
+
+Each `doneness` entry needs: `name`, `target_c`, `target_f`, `min_c`, `min_f`, `max_c`, `max_f`, `usda_safe` (true/false). Add `recommended: true` to exactly one entry.
+
+#### Writing a cooking method research file (`{slug}-{method}.md`)
+
+Place the file at:
+```
+docs/recipe_research/<category>/<animal>/{slug}-{method}.md
+```
+
+The file must start with a `<!-- KCE:CUT_METHOD … -->` YAML block:
+
+```markdown
+<!-- KCE:CUT_METHOD
+type: cut_method
+slug: my_cut_slug
+method: pan_sear
+name: My Cut Name × Pan Sear
+category: beef
+meat: beef
+cut_type: Steaks
+-->
+# My Cut Name × Pan Sear — Recipe Temperature Research
+
+## Cut profile
+
+Repeat or adapt the cut description from the overview file. Include the recommended
+pull temperature and expected rise after resting.
+
+## Source recipes
+
+### 1. Author / Publication — Recipe title
+**Source**: Publication name; URL (fetched YYYY-MM-DD)
+**Serves**: 2 · **Prep**: 10 min · **Cook**: 20 min
+
+**Ingredients**
+- ...
+
+**Method**
+1. ...
+2. Insert MEATER probe. Pull at **XX °C (XX °F)**.
+3. Rest Y minutes.
+*Final resting temperature: XX–XX °C (XX–XX °F).*
+
+---
+
+### 2. ...
+
+## Temperature summary
+
+| Doneness | Pull temp | Final (after rest) |
+|----------|-----------|-------------------|
+| Medium-rare | 52–54 °C (126–129 °F) | 55–57 °C (131–135 °F) |
+```
+
+**Recipe sourcing rules — please read before contributing**
+
+- **Cite real, verifiable sources.** Every recipe entry must include the publication name, a URL, and the date you accessed it (or the book title, author, and page number for print sources).
+- **Do not fabricate.** Do not invent recipes, temperatures, or sources. If you cannot find a real source for a method, omit that entry.
+- **Diversity is valued.** Aim for 3–5 recipes per file. Prioritise sources from different countries and culinary traditions, not just English-language sites.
+- **Temperature data must come from the source.** Record the pull temperature and resting target as stated in the recipe, not what you think is correct.
+- **MEATER placement note.** Each recipe should end with a brief note on where to insert the probe in that specific cut.
 
 ---
 

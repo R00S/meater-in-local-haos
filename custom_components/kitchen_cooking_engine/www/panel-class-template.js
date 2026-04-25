@@ -139,6 +139,18 @@ class KitchenCookingPanel extends LitElement {
       _shelfAddQuantity: { type: String },
       _shoppingList: { type: Array },
       _pendingShelfUpdate: { type: Object },
+      // Experimental recipe viewer (cut profile card)
+      _recipeViewerMethod: { type: String },
+      _recipeViewerRecipes: { type: Array },
+      _recipeViewerLoading: { type: Boolean },
+      // Recipe file inline viewer (cut profile card)
+      _recipeFileContent: { type: String },
+      _recipeFileUrl: { type: String },
+      _recipeFileLoading: { type: Boolean },
+      // Which method research pill is expanded (shows description + recipe list)
+      _selectedResearchMethod: { type: String },
+      // Which recipe index is open in the single-recipe view
+      _selectedFileRecipe: { type: Number },
 
     };
   }
@@ -261,6 +273,14 @@ class KitchenCookingPanel extends LitElement {
     this._shelfAddQuantity = '';
     this._shoppingList = [];
     this._pendingShelfUpdate = null;
+    this._recipeViewerMethod = null;
+    this._recipeViewerRecipes = [];
+    this._recipeViewerLoading = false;
+    this._recipeFileContent = null;
+    this._recipeFileUrl = null;
+    this._recipeFileLoading = false;
+    this._selectedResearchMethod = null;
+    this._selectedFileRecipe = null;
     // Data is generated from backend Python files at install/update time
     // Run generate_frontend_data.py after modifying cooking_data.py or swedish_cooking_data.py
   }
@@ -937,12 +957,18 @@ class KitchenCookingPanel extends LitElement {
   }
 
   _getDataCategories() {
-    // Return generated data based on selected source
+    // The experimental MEATER path is driven by EXP_TREE — built at generation
+    // time from the KCE:CUT tagged cut files under docs/recipe_research/.
+    // Adding a new cut requires only a new {slug}.md with a KCE:CUT tag;
+    // cooking_data.py does not need to be touched.
+    // Swedish support on this path is postponed (no verified slug mapping yet).
+    if (this._currentPath === 'meater_experimental') return EXP_TREE;
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_MEAT_CATEGORIES : MEAT_CATEGORIES;
   }
 
   _getDonenessOptions() {
-    // Return generated data based on selected source
+    // See _getDataCategories: experimental MEATER path uses EXP_DONENESS_OPTIONS.
+    if (this._currentPath === 'meater_experimental') return EXP_DONENESS_OPTIONS;
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
   }
 
@@ -1179,6 +1205,11 @@ class KitchenCookingPanel extends LitElement {
     this._selectedCut = cutId;
     this._customTargetTempC = null;
     this._showTempAdjust = false;
+    // Clear recipe viewer when cut changes
+    this._recipeFileContent = null;
+    this._recipeFileUrl = null;
+    this._selectedResearchMethod = null;
+    this._selectedFileRecipe = null;
     
     // Check if user has a saved preference for this cut
     const savedPref = this._cutPreferences[String(cutId)];
@@ -1208,6 +1239,14 @@ class KitchenCookingPanel extends LitElement {
         this._selectedDoneness = cut.doneness[0];
       } else {
         this._selectedDoneness = null;
+      }
+
+      // On experimental path: if the previously selected method is not listed
+      // for this cut, reset it so the user picks one from the cut's own list.
+      if (this._currentPath === 'meater_experimental' && cut.supported_methods && cut.supported_methods.length > 0) {
+        if (!cut.supported_methods.includes(this._selectedMethod)) {
+          this._selectedMethod = cut.supported_methods[0];
+        }
       }
     } else {
       this._selectedDoneness = null;
@@ -1435,7 +1474,7 @@ class KitchenCookingPanel extends LitElement {
   _navigateToMeaterExperimentalPath(appliance) {
     this._currentPath = 'meater_experimental';
     this._selectedAppliance = appliance;
-    this._showMeaterCooking = false;
+    this._showMeaterCooking = true;   // skip landing page — go straight to setup form
     this.requestUpdate();
   }
 
@@ -3262,7 +3301,7 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} ${this._t('meater.select_cut')}</h3>
-            <select @change=${(e) => this._selectCut(parseInt(e.target.value) || null)}>
+            <select @change=${(e) => { const v = e.target.value; this._selectCut(v === '' ? null : (isNaN(v) ? v : parseInt(v))); }}>
               <option value="">${this._t('meater.choose_cut')}</option>
               ${cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
@@ -4364,26 +4403,19 @@ class KitchenCookingPanel extends LitElement {
         </ha-card>
       ` : ''}
       
-      <!-- Data Source Selector -->
+      <!-- Data Source Selector (Swedish hidden in experimental path — no verified slug mapping) -->
       <ha-card>
         <div class="card-content">
           <h3>🌍 Temperature Data Source</h3>
           <div class="button-group">
             <button 
-              class="category-btn ${this._dataSource === DATA_SOURCE_INTERNATIONAL ? 'selected' : ''}" 
-              @click=${() => this._switchDataSource(DATA_SOURCE_INTERNATIONAL)}>
+              class="category-btn selected" 
+              disabled>
               🇺🇸 International (USDA)
-            </button>
-            <button 
-              class="category-btn ${this._dataSource === DATA_SOURCE_SWEDISH ? 'selected' : ''}" 
-              @click=${() => this._switchDataSource(DATA_SOURCE_SWEDISH)}>
-              🇸🇪 Svenska (Livsmedelsverket)
             </button>
           </div>
           <p class="source-description">
-            ${this._dataSource === DATA_SOURCE_SWEDISH 
-              ? 'Använder svenska temperaturrekommendationer från Livsmedelsverket, Stekguiden.se och Gårdssällskapet.'
-              : 'Using international temperature guidelines from USDA, FDA and professional culinary sources.'}
+            Using international temperature guidelines from USDA, FDA and professional culinary sources.
           </p>
         </div>
       </ha-card>
@@ -4509,7 +4541,7 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} Select Cut</h3>
-            <select @change=${(e) => this._selectCut(parseInt(e.target.value) || null)}>
+            <select @change=${(e) => { const v = e.target.value; this._selectCut(v === '' ? null : (isNaN(v) ? v : parseInt(v))); }}>
               <option value="">Choose a cut...</option>
               ${cuts.map(cut => html`
                 <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
@@ -4520,6 +4552,9 @@ class KitchenCookingPanel extends LitElement {
           </div>
         </ha-card>
       ` : ''}
+      
+      <!-- Cut Profile + Recipe Links -->
+      ${this._selectedCut ? this._renderCutProfileCard() : ''}
       
       <!-- Step 5: Doneness Level -->
       ${this._selectedCut ? html`
@@ -4598,19 +4633,83 @@ class KitchenCookingPanel extends LitElement {
           </ha-card>
         ` : ''}
         
-        <!-- Step 6: Cooking Method -->
+        <!-- Step 6: Cooking Method — driven by the cut file's methods: list.
+             Display names are derived from the slug so new methods (e.g. curing)
+             appear automatically without any other configuration.
+             Selecting a method shows its cut description, recipe titles, and an
+             inline recipe viewer — all from pre-extracted JS constants, no
+             runtime file parsing until the user opens a specific recipe. -->
         <ha-card>
           <div class="card-content">
             <h3>🍳 Cooking Method</h3>
             <div class="method-grid">
-              ${COOKING_METHODS.map(opt => html`
-                <button 
-                  class="method-btn ${this._selectedMethod === opt.value ? 'selected' : ''}"
-                  @click=${() => this._selectedMethod = opt.value}>
-                  ${opt.name}
-                </button>
-              `)}
+              ${(() => {
+                const cutData = this._getSelectedCutData();
+                const methods = (cutData && cutData.supported_methods && cutData.supported_methods.length > 0)
+                  ? cutData.supported_methods
+                  : COOKING_METHODS.map(m => m.value);
+                return methods.map(methodSlug => {
+                  const name = methodSlug.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+                  return html`
+                    <button
+                      class="method-btn ${this._selectedMethod === methodSlug ? 'selected' : ''}"
+                      @click=${() => {
+                        if (this._selectedMethod !== methodSlug) {
+                          this._selectedMethod = methodSlug;
+                          this._selectedFileRecipe = null;
+                          this._recipeFileContent = null;
+                          this._recipeFileUrl = null;
+                        }
+                      }}>
+                      ${name}
+                    </button>
+                  `;
+                });
+              })()}
             </div>
+
+            ${/* Inline method description + recipe links for the selected method. */ ''}
+            ${this._selectedMethod ? (() => {
+              const cutData = this._getSelectedCutData();
+              const slug = cutData && (cutData.recipe_slug || cutData.slug);
+              if (!slug) return '';
+              const desc   = CUT_METHOD_PROFILES[slug] && CUT_METHOD_PROFILES[slug][this._selectedMethod];
+              const titles = RECIPE_TITLES_INDEX[slug] && RECIPE_TITLES_INDEX[slug][this._selectedMethod];
+              const url    = RECIPE_INDEX[slug] && RECIPE_INDEX[slug][this._selectedMethod];
+              if (!desc && (!titles || titles.length === 0)) return '';
+              const isOpen = url && this._recipeFileUrl === url;
+              const closeBtnStyle  = 'font-size:0.78em;padding:3px 10px;background:transparent;border:1px solid var(--divider-color);border-radius:10px;cursor:pointer;color:var(--secondary-text-color);';
+              const recipeBtnStyle = 'text-align:left;width:100%;cursor:pointer;border:1px solid var(--divider-color);border-radius:8px;padding:8px 12px;background:var(--secondary-background-color);font-size:0.87em;color:var(--primary-text-color);';
+              return html`
+                <div style="margin-top:14px;border-top:1px solid var(--divider-color);padding-top:12px;">
+                  ${desc ? html`
+                    <p style="font-size:0.87em;line-height:1.55;color:var(--secondary-text-color);margin:0 0 12px 0;">${desc}</p>
+                  ` : ''}
+                  ${titles && titles.length > 0 && (!isOpen || this._selectedFileRecipe === null) ? html`
+                    <div style="display:flex;flex-direction:column;gap:6px;">
+                      ${titles.map((title, i) => html`
+                        <button @click=${() => this._openRecipeFile(url, i)} style="${recipeBtnStyle}">
+                          📄 ${title}
+                        </button>
+                      `)}
+                    </div>
+                  ` : ''}
+                  ${this._recipeFileLoading && isOpen ? html`
+                    <div style="text-align:center;padding:12px;color:var(--secondary-text-color);">⏳ Loading…</div>
+                  ` : ''}
+                  ${isOpen && this._selectedFileRecipe !== null && this._recipeFileContent && !this._recipeFileLoading ? html`
+                    <div style="display:flex;align-items:center;margin-bottom:10px;">
+                      <button @click=${() => { this._selectedFileRecipe = null; this.requestUpdate(); }} style="${closeBtnStyle}">
+                        ← Back to recipes
+                      </button>
+                    </div>
+                    <div class="recipe-md-content"
+                         .innerHTML=${this._mdToHtml(this._getRecipeContent(this._selectedFileRecipe))}>
+                    </div>
+                  ` : ''}
+                </div>
+              `;
+            })() : ''}
           </div>
         </ha-card>
         
@@ -4622,6 +4721,284 @@ class KitchenCookingPanel extends LitElement {
         </div>
       ` : ''}
     `;
+  }
+
+  /**
+   * Render a cut-profile card.
+   *
+   * Descriptions and recipe titles come from JS constants (CUT_METHOD_PROFILES,
+   * RECIPE_TITLES_INDEX) extracted at generator time — no runtime file parsing.
+   * A file is only fetched when the user opens a specific recipe, and the recipe
+   * block is isolated with a plain split('\n### '), no regex.
+   */
+  _renderCutProfileCard() {
+    const cut = this._getCuts().find(c => c.id === this._selectedCut);
+    if (!cut) return html``;
+    const slug = cut.recipe_slug || cut.slug;
+    if (!slug) return html``;
+
+    const profile = CUT_PROFILES[slug];
+    const recipes = RECIPE_INDEX[slug];
+    if (!profile && !recipes) return html``;
+
+    const METHOD_LABELS = {
+      oven_roast: 'Oven Roast', oven_bake: 'Oven Bake',
+      pan_sear: 'Pan Sear', pan_fry: 'Pan Fry',
+      grill: 'Grill', smoker: 'Smoker', charcoal_grill: 'Charcoal Grill',
+      air_fryer: 'Air Fryer', sous_vide: 'Sous Vide',
+      slow_cooker: 'Slow Cooker', braise: 'Braise',
+      boil: 'Boil', steam: 'Steam', poach: 'Poach',
+      saute: 'Sauté', simmer: 'Simmer',
+    };
+
+    const methodEntries = recipes
+      ? Object.entries(recipes).filter(([m]) => m !== 'overview')
+      : [];
+
+    const btnBase = 'cursor:pointer;border:none;border-radius:14px;';
+    const activeStyle  = btnBase + 'font-size:0.78em;padding:4px 11px;background:var(--accent-color,#0088cc);color:#fff;font-weight:700;';
+    const methodStyle  = btnBase + 'font-size:0.78em;padding:4px 11px;background:var(--primary-color);color:var(--text-primary-color);opacity:0.92;';
+    const closeBtnStyle = 'font-size:0.78em;padding:3px 10px;background:transparent;border:1px solid var(--divider-color);border-radius:10px;cursor:pointer;color:var(--secondary-text-color);';
+    const recipeBtnStyle = 'text-align:left;width:100%;cursor:pointer;border:1px solid var(--divider-color);border-radius:8px;padding:8px 12px;background:var(--secondary-background-color);font-size:0.87em;color:var(--primary-text-color);';
+
+    const sel = this._selectedResearchMethod;
+    const selDesc = sel && CUT_METHOD_PROFILES[slug] && CUT_METHOD_PROFILES[slug][sel];
+    const selTitles = sel && RECIPE_TITLES_INDEX[slug] && RECIPE_TITLES_INDEX[slug][sel];
+    const selUrl = sel && recipes && recipes[sel];
+
+    const closeResearch = () => {
+      this._selectedResearchMethod = null;
+      this._selectedFileRecipe = null;
+      this._recipeFileContent = null;
+      this._recipeFileUrl = null;
+      this.requestUpdate();
+    };
+
+    return html`
+      <ha-card>
+        <div class="card-content">
+          <h3>📖 Cut Profile</h3>
+          ${profile ? html`
+            <p style="font-size:0.88em;line-height:1.55;color:var(--secondary-text-color);margin:0 0 12px 0;">
+              ${profile}
+            </p>
+          ` : ''}
+
+          ${methodEntries.length > 0 ? html`
+            <div>
+              <span style="font-size:0.82em;font-weight:600;color:var(--secondary-text-color);">
+                📚 Method Research:
+              </span>
+              <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">
+                ${methodEntries.map(([method]) => html`
+                  <button
+                    @click=${() => {
+                      if (this._selectedResearchMethod === method) {
+                        closeResearch();
+                      } else {
+                        this._selectedResearchMethod = method;
+                        this._selectedFileRecipe = null;
+                        this._recipeFileContent = null;
+                        this._recipeFileUrl = null;
+                        this.requestUpdate();
+                      }
+                    }}
+                    style="${sel === method ? activeStyle : methodStyle}">
+                    ${METHOD_LABELS[method] || method.replace(/_/g, ' ')}${sel === method ? ' ▲' : ''}
+                  </button>
+                `)}
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      </ha-card>
+
+      ${sel ? html`
+        <ha-card style="margin-top:4px;">
+          <div class="card-content">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+              <span style="font-size:0.88em;font-weight:600;color:var(--secondary-text-color);">
+                📚 ${METHOD_LABELS[sel] || sel.replace(/_/g, ' ')} — Research
+              </span>
+              <button @click=${closeResearch} style="${closeBtnStyle}">✕ Close</button>
+            </div>
+
+            ${selDesc ? html`
+              <p style="font-size:0.87em;line-height:1.55;color:var(--secondary-text-color);margin:0 0 12px 0;">
+                ${selDesc}
+              </p>
+            ` : ''}
+
+            ${selTitles && selTitles.length > 0 && this._selectedFileRecipe === null ? html`
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                ${selTitles.map((title, i) => html`
+                  <button
+                    @click=${() => this._openRecipeFile(selUrl, i)}
+                    style="${recipeBtnStyle}">
+                    📄 ${title}
+                  </button>
+                `)}
+              </div>
+            ` : ''}
+
+            ${this._recipeFileLoading ? html`
+              <div style="text-align:center;padding:12px;color:var(--secondary-text-color);">⏳ Loading…</div>
+            ` : ''}
+
+            ${this._selectedFileRecipe !== null && this._recipeFileContent && !this._recipeFileLoading ? html`
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+                <button
+                  @click=${() => { this._selectedFileRecipe = null; this.requestUpdate(); }}
+                  style="${closeBtnStyle}">
+                  ← Back to recipes
+                </button>
+              </div>
+              <div class="recipe-md-content"
+                   .innerHTML=${this._mdToHtml(this._getRecipeContent(this._selectedFileRecipe))}>
+              </div>
+            ` : ''}
+          </div>
+        </ha-card>
+      ` : ''}
+    `;
+  }
+
+  /**
+   * Fetch a recipe file and cache it. Only called when the user opens a specific
+   * recipe. Clicking the same recipe again closes it.
+   * recipeIndex is 0-based into RECIPE_TITLES_INDEX[slug][method].
+   */
+  async _openRecipeFile(url, recipeIndex) {
+    if (this._recipeFileUrl === url && this._selectedFileRecipe === recipeIndex) {
+      this._selectedFileRecipe = null;
+      this.requestUpdate();
+      return;
+    }
+    this._selectedFileRecipe = recipeIndex;
+    if (this._recipeFileUrl === url && this._recipeFileContent) {
+      this.requestUpdate();
+      return;
+    }
+    this._recipeFileUrl = url;
+    this._recipeFileLoading = true;
+    this._recipeFileContent = null;
+    this.requestUpdate();
+    try {
+      const resp = await fetch(url);
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const text = await resp.text();
+      // Strip the leading KCE header comment using indexOf only — no regex
+      const headerEnd = text.indexOf('-->');
+      this._recipeFileContent = headerEnd >= 0 ? text.slice(headerEnd + 3).trimStart() : text;
+    } catch (e) {
+      this._recipeFileContent = `_Could not load file: ${e.message}_`;
+    }
+    this._recipeFileLoading = false;
+    this.requestUpdate();
+  }
+
+  /**
+   * Extract recipe block at recipeIndex (0-based) from the cached file content.
+   * Files use '### N.' headings for individual recipes; a plain split on '\n### '
+   * isolates each block without any regex.
+   */
+  _getRecipeContent(recipeIndex) {
+    if (!this._recipeFileContent) return '';
+    // parts[0] = everything before the first ###, parts[1..n] = recipe blocks
+    const parts = this._recipeFileContent.split('\n### ');
+    const block = parts[recipeIndex + 1];
+    if (!block) return '';
+    // Restore the heading marker removed by split and strip leading/trailing hr lines
+    let content = '### ' + block;
+    // Remove opening/closing --- separators (simple indexOf, not regex)
+    const hrOpen = content.indexOf('\n---\n');
+    if (hrOpen === content.indexOf('\n') ) content = content.slice(content.indexOf('\n') + 5);
+    const hrClose = content.lastIndexOf('\n---');
+    if (hrClose > 0 && hrClose === content.length - 4) content = content.slice(0, hrClose);
+    return content.trim();
+  }
+
+  /**
+   * Convert a markdown string to an HTML string for use with .innerHTML.
+   * Handles headings, bold, italic, inline code, links, unordered lists,
+   * horizontal rules, and paragraphs. All leaf text is HTML-escaped.
+   */
+  _mdToHtml(md) {
+    if (!md) return '';
+
+    const esc = s => String(s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+    const inline = raw => {
+      const out = [];
+      let i = 0;
+      while (i < raw.length) {
+        if (raw[i] === '`') {
+          const end = raw.indexOf('`', i + 1);
+          if (end > i) { out.push(`<code>${esc(raw.slice(i + 1, end))}</code>`); i = end + 1; continue; }
+        }
+        if (raw[i] === '[') {
+          const close = raw.indexOf(']', i + 1);
+          if (close > i && raw[close + 1] === '(') {
+            const urlEnd = raw.indexOf(')', close + 2);
+            if (urlEnd > close) {
+              out.push(`<a href="${esc(raw.slice(close + 2, urlEnd))}" target="_blank" rel="noopener">${esc(raw.slice(i + 1, close))}</a>`);
+              i = urlEnd + 1; continue;
+            }
+          }
+        }
+        if (raw.slice(i, i + 2) === '**') {
+          const end = raw.indexOf('**', i + 2);
+          if (end > i) { out.push(`<strong>${esc(raw.slice(i + 2, end))}</strong>`); i = end + 2; continue; }
+        }
+        if (raw[i] === '*' && raw[i - 1] !== '*' && raw[i + 1] !== '*') {
+          const end = raw.indexOf('*', i + 1);
+          if (end > i && raw[end + 1] !== '*') { out.push(`<em>${esc(raw.slice(i + 1, end))}</em>`); i = end + 1; continue; }
+        }
+        out.push(esc(raw[i]));
+        i++;
+      }
+      return out.join('');
+    };
+
+    const parts = [];
+    let inList = false, inPara = false;
+    const closePara = () => { if (inPara)  { parts.push('</p>');  inPara  = false; } };
+    const closeList = () => { if (inList)  { parts.push('</ul>'); inList  = false; } };
+
+    for (const line of md.split('\n')) {
+      const t = line.trim();
+      if (/^---+$/.test(t)) {
+        closePara(); closeList();
+        parts.push('<hr style="border:none;border-top:1px solid var(--divider-color);margin:12px 0;">');
+        continue;
+      }
+      const hm = t.match(/^(#{1,4})\s+(.+)$/);
+      if (hm) {
+        closePara(); closeList();
+        const sizes = ['1.3em', '1.1em', '0.95em', '0.88em'];
+        parts.push(`<div style="font-size:${sizes[hm[1].length-1]};font-weight:700;margin:12px 0 4px;">${inline(hm[2])}</div>`);
+        continue;
+      }
+      if (/^[-*]\s/.test(t)) {
+        closePara();
+        if (!inList) { parts.push('<ul style="margin:4px 0 4px 16px;padding:0;">'); inList = true; }
+        parts.push(`<li style="margin:2px 0;">${inline(t.slice(2))}</li>`);
+        continue;
+      }
+      if (t === '') { closePara(); closeList(); continue; }
+      closeList();
+      if (!inPara) {
+        parts.push('<p style="margin:0 0 8px 0;font-size:0.87em;line-height:1.55;color:var(--secondary-text-color);">');
+        inPara = true;
+      } else {
+        parts.push('<br>');
+      }
+      parts.push(inline(t));
+    }
+    closePara(); closeList();
+    return parts.join('');
   }
 
   // ─── End MEATER+ (experimental) path ─────────────────────────────────────────

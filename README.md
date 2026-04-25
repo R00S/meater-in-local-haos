@@ -26,11 +26,15 @@ Full installation, configuration, and feature documentation:
 
 ## 📊 Current Status
 
-**v0.6.1.02** — Development release (April 2026)
+**v0.6.1.23** — Development release (April 2026)
 
-GUI Redesign Phases 1–8 complete. Phase 8 (Ingredient Levels & Cooking Modes) shipped in v0.6.1.x. See [STATUS.md](STATUS.md) for full progress tracking.
+GUI Redesign Phases 1–8 complete. Experimental MEATER path now file-driven (EXP_TREE built from recipe `.md` files). Release workflow auto-runs generator. See [STATUS.md](STATUS.md) for full progress tracking.
 
-### v0.6.1.x Features — Phase 8: Ingredient Levels & Cooking Modes (April 2026)
+### v0.6.1.x Features — Experimental MEATER path & CI (April 2026)
+- ✅ **File-driven experimental cut tree** — `EXP_TREE` is built from `<!-- KCE:CUT … -->` tags in recipe `.md` files; no `cooking_data.py` edit needed to add a cut to the experimental MEATER path
+- ✅ **Inline recipe viewer** — selecting a cut shows a cut profile card; clicking a method button opens the recipe Markdown inline inside the panel
+- ✅ **186 cuts, 517 recipe files** — full recipe research coverage across beef, pork, lamb, poultry, game, fish, and vegetables
+- ✅ **Automated generator in CI** — the release workflow (`create-test-release.yml`) runs `generate_frontend_data.py` automatically, so developers never need to regenerate the panel JS locally before releasing
 - ✅ **Compulsory Ingredients** — Click an ingredient badge to mark it ⭐ must-include; AI is instructed it MUST appear in every suggested recipe
 - ✅ **Shelf Management** — Optional fridge/larder/freezer/cupboard inventory; items grouped by location; add/remove items inline; toggle on/off in settings
 - ✅ **Cooking Modes A / B / C** — Shown when shelf is enabled: Mode A (ignore shelf), Mode B (restrict AI to shelf items only), Mode C (AI generates recipes and prepends a shopping list for missing ingredients)

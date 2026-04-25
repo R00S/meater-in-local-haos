@@ -1,0 +1,54 @@
+<!-- KCE:CUT
+type: cut
+slug: pork_belly
+name: Pork Belly
+category: pork
+meat: pig
+cut_type: Roasts
+usda_safe_c: 71
+usda_safe_f: 160
+recommended_doneness: well_done
+methods:
+- air_fryer
+- braise
+- grill
+- oven_roast
+- pan_fry
+- slow_cooker
+- smoker
+- sous_vide
+doneness:
+- name: well_done
+  target_c: 71
+  target_f: 160
+  min_c: 68
+  min_f: 155
+  max_c: 77
+  max_f: 170
+  usda_safe: true
+- name: crispy
+  target_c: 90
+  target_f: 195
+  min_c: 85
+  min_f: 185
+  max_c: 95
+  max_f: 203
+  usda_safe: true
+-->
+# Pork Belly — Cut Overview
+
+## Cut profile
+
+Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.
+
+
+## Research files by cooking method
+
+- [Air Fryer](./pork_belly-air_fryer.md)
+- [Braise](./pork_belly-braise.md)
+- [Grill](./pork_belly-grill.md)
+- [Oven Roast](./pork_belly-oven_roast.md)
+- [Pan Fry](./pork_belly-pan_fry.md)
+- [Slow Cooker](./pork_belly-slow_cooker.md)
+- [Smoker](./pork_belly-smoker.md)
+- [Sous Vide](./pork_belly-sous_vide.md)
