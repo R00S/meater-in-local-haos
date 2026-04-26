@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 25 Apr 2026, 22:34 UTC
-Last Change: v0.6.2.02 - Improve global recipe diversity across pork, chicken, beef, lamb, and fish files
+Last Change: v0.6.2.03 - Extend global recipe diversity to all remaining Western-only cut-method files
 """
 
 DOMAIN = "kitchen_cooking_engine"
