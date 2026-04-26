@@ -73,6 +73,33 @@ Target internal temperatures (grill, pull temps):
 
 ---
 
+### 4. The Woks of Life — Grilled Ribeye with Soy Butter Glaze (Chinese-American tradition)
+**Source**: Bill, Judy, Sarah, and Kaitlin Leung, The Woks of Life; https://thewoksoflife.com/grilled-ribeye-soy-butter-glaze/ (fetched 2026-04-26). *A Chinese-American family staple: thick bone-in ribeye grilled over maximum gas heat, brushed continuously with a soy-butter basting glaze that delivers an umami-rich caramelised crust. The glaze is applied only once the exterior is seared, so the raw-meat contact is eliminated before basting.*
+**Serves**: 1–2 · **Prep**: 10 min · **Cook**: 10 min
+
+*Context: Growing up, the Leung family ate steak with soy sauce over white rice — "steak and soy sauce, in spite of its stereotypical connotations, is still one of the best flavour combinations out there." This recipe formalises that tradition in a grill-ready soy-butter glaze.*
+
+**Temperature guidance (from recipe)**: Medium-rare: 3–5 additional minutes after initial sear. Medium: 5–7 minutes. Medium-well: 8–10 minutes (thickness-dependent). Doneness test: poke gently with tongs — squishier = rarer. Rest 10–15 minutes before serving.
+
+**Ingredients**
+- 1 thick-cut bone-in ribeye steak
+- Salt and freshly ground black pepper to taste
+- 3 tablespoons butter, melted
+- ¼ cup (60 ml) low-sodium soy sauce
+
+**Method**
+1. If frozen, thaw completely. Rinse steak under cold water and pat dry with paper towels. Sprinkle on all sides with salt and pepper.
+2. Heat gas grill to maximum — at least three burners on full blast high, lid closed for a good 5–10 minutes.
+3. Mix melted butter and soy sauce together in a small bowl.
+4. Lay steak on grill. Brown for 1–2 minutes. Close lid to let heat build and get caramelisation on the edges. After 1–2 minutes, rotate the steak 45 degrees for grill marks; cook another 1–2 minutes. Flip and repeat for the other side.
+5. When both sides are well-browned, use tongs to stand the steak on its edge and brown all edges too.
+6. Liberally brush steak with the soy-butter glaze using a heat-proof basting brush. Flip and brush the other side. **Keep an oven mitt handy** — butter causes strong flare-ups. The glaze caramelises beautifully against the charred grill marks.
+7. Continue glazing and flipping until cooked to desired doneness (see timing above). Insert MEATER probe through the edge to the centre. **Pull at 52–54 °C (126–129 °F)** for medium-rare.
+8. Remove from heat. Rest for **10–15 minutes** before cutting. Serve with extra soy-butter glaze on the side.
+*Final resting temperature: 55–57 °C (131–135 °F).*
+
+---
+
 ### 3. GialloZafferano — Bistecca alla fiorentina (Italian tradition)
 **Source**: GialloZafferano (Dario Cecchini, master butcher); https://ricette.giallozafferano.it/Bistecca-alla-fiorentina.html (fetched 2026-04-24). *The definitive Italian grilled ribeye/T-bone: thick-cut Chianina beef, charcoal/brace, served rare as tradition demands.*
 **Serves**: 4 · **Prep**: 2 hr tempering · **Cook**: 20 min

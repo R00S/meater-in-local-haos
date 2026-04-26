@@ -122,3 +122,37 @@ Leg of lamb is the quintessential festive roast throughout the Mediterranean, Mi
 | Medium | 58 °C (136 °F) | 63 °C (145 °F) | 25 min/lb |
 | Well-done | 65 °C (149 °F) | 71 °C (160 °F) | 30 min/lb |
 | Falling apart | 78 °C (172 °F) | 82 °C (180 °F) | 40 min/lb |
+
+---
+
+### 4. The Mediterranean Dish — Perfect Roasted Leg of Lamb with Potatoes (Mediterranean / Egyptian tradition)
+**Source**: Suzy Karadsheh, The Mediterranean Dish; https://www.themediterraneandish.com/mediterranean-style-leg-of-lamb-recipe-with-potatoes/ (fetched 2026-04-26). *The author's Egyptian family's celebratory Easter roast: a bone-in leg seasoned with a bold Mediterranean garlic-herb rub (garlic, rosemary, oregano, lemon, EVOO), roasted over gold potatoes in one pan. "Where I come from, nothing beats a tender, oven-roasted leg of lamb for all occasions, but particularly for Easter." The lamb can be roasted to blush-pink medium-rare or cooked long and slow until falling apart.*
+**Serves**: 6–8 · **Prep**: 30 min–overnight marinate · **Cook**: 1.5–2 hr (medium-rare) or 5–6 hr (falling apart)
+
+*Context: Suzy Karadsheh grew up in Egypt. Roast leg of lamb is the definitive festive roast across Egypt, the Levant, and the wider Mediterranean. The recipe notes: "Nothing beats a tender, oven-roasted leg of lamb for all occasions, but particularly for Easter."*
+
+**Temperature guidance (from recipe)**: "For a medium cooked lamb (perfectly pink inside), budget about 25 minutes per pound or until internal temp registers around 130 °F (about 1.5–2 hours at 325 °F). For falling-apart lamb, budget about 40–45 minutes per pound or until internal temp registers 175 °F." Always rest 15–20 minutes. Insert MEATER probe into the thickest part of the leg, away from bone: **pull at 54 °C (130 °F)** for medium-rare (pink); **79 °C (175 °F)** for falling-apart.
+
+**Ingredients**
+- 1 bone-in leg of lamb (4–5 lb / 1.8–2.3 kg), fat trimmed
+- Kosher salt and freshly ground black pepper
+- 4–5 garlic cloves, peeled and thinly sliced
+- Extra-virgin olive oil
+- 1 tsp dried rosemary (or 2 sprigs fresh)
+- 1 tsp dried oregano
+- 1 tsp paprika
+- ½ tsp cumin
+- Juice of 1 lemon
+- 1.5 lb (680 g) gold potatoes, peeled and cut into wedges
+- 1 large yellow onion, cut into wedges
+
+**Method**
+1. Season leg of lamb generously all over with salt and pepper. Make slits in the meat with a paring knife; insert garlic slices into each slit.
+2. Combine olive oil, rosemary, oregano, paprika, cumin, and lemon juice. Rub all over the leg, massaging it in. Leave at room temperature 30 minutes, or refrigerate overnight (bring to room temperature before roasting).
+3. Heat oven to **325 °F / 165 °C**. Arrange potato and onion wedges in a large roasting pan; season with salt, pepper, and olive oil.
+4. Place lamb leg over the vegetables, fat side up.
+5. Insert MEATER probe into the thickest section of leg meat, away from bone.
+6. Roast **uncovered** until desired doneness: about **1.5–2 hours** for pink medium-rare (pull at **54 °C / 130 °F**); or **5–6 hours** for falling-apart (pull at **79 °C / 175 °F**).
+7. Tent with foil; rest **15–20 minutes** before carving.
+8. Serve the lamb sliced over the roasted potatoes, with the pan drippings as a sauce, a side of tzatziki, and a big Greek salad.
+*Final resting temperature (medium-rare): 57–60 °C (135–140 °F). Falling-apart: 79–85 °C.*

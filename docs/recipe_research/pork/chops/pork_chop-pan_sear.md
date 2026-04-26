@@ -90,3 +90,37 @@ Target internal temperatures:
 6. Season with pepper. Rest 5 min uncovered.
 7. Insert MEATER probe. **Pull at 62–63 °C (144–145 °F)**.
 *Final resting temperature: 63–65 °C (145–149 °F).*
+
+---
+
+### 4. African Bites / Immaculate Bites — Smothered Pork Chops (Southern US / Creole tradition)
+**Source**: Imma Africanbites, Africanbites.com; https://africanbites.com/smothered-pork-chops/ (fetched 2026-04-26). *Classic Southern comfort food: pork chops seasoned with Creole spice, pan-seared until golden, then simmered in a rich onion-garlic gravy until fork-tender. Method relies on a proper sear to lock in flavour before building the gravy from the drippings.*
+**Serves**: 4 · **Prep**: 10 min · **Cook**: 45 min
+
+*Context: Smothered pork chops are a cornerstone of Southern US and Creole cooking — the "smother" technique dates to African-American and Cajun/Creole traditions where a flavour-rich pan gravy is built from the drippings of a well-seared protein.*
+
+**Temperature guidance (from recipe)**: Sear 5–7 minutes per side; then simmer in gravy 30–40 min (boneless: 20–30 min). Finished pork is fork-tender; internal temp after simmering exceeds 75 °C (165 °F). For sear-only finish: **pull at 63–65 °C (145–149 °F)**, rest 3 min.
+
+**Ingredients**
+- 4 bone-in pork chops (about 2 cm thick)
+- 1½ tsp Creole seasoning
+- Salt and freshly ground black pepper
+- 2 tbsp vegetable oil
+- 1 large onion, thinly sliced
+- 2 scallions, chopped (whites and greens separated)
+- 2 tbsp butter
+- 2 tbsp plain flour
+- 1 cup (240 ml) chicken stock
+- Fresh thyme to taste
+
+**Method**
+1. Season chops on both sides with Creole seasoning, salt, and pepper.
+2. Heat oil in a heavy skillet over medium-high heat until shimmering.
+3. Add chops. Sear **5–7 minutes per side** without moving for a deep golden crust. Remove to a plate.
+4. In the same pan, reduce to medium. Add butter. Sauté onion and scallion whites until golden.
+5. Sprinkle flour over the onions; stir to coat and cook 1 minute.
+6. Add stock, scraping up browned bits. Whisk until smooth. Cook until gravy thickens.
+7. Return chops to the pan. Spoon gravy over them. Cover and simmer on low 30–40 min until fork-tender.
+8. Insert MEATER probe. **Core: 75 °C (165 °F)** after simmering, or **63–65 °C (145–149 °F)** for sear-only.
+9. Garnish with scallion greens. Serve over mashed potatoes or rice with the onion gravy.
+*Final temperature (smothered): above 75 °C (165 °F). Sear-only: 63–65 °C (145–149 °F).*

@@ -112,6 +112,43 @@ Target internal temperatures (oven roast):
 
 **Consensus pull range**: **72–82 °C (162–180 °F)** — the shoulder's fat marbling means there is wide safe latitude. 75°C is the sweet spot for juicy, fully-cooked shoulder.
 
+---
+
+### 4. African Bites / Immaculate Bites — Pernil (Puerto Rican Roast Pork Shoulder) (Caribbean tradition)
+**Source**: Imma Africanbites, Africanbites.com; https://africanbites.com/pernil-puerto-rican-roast-pork/ (fetched 2026-04-26). *Pernil is a slow-roasted pork shoulder (or leg) marinated in savory herbs, spices, and citrus — the showpiece roast of Puerto Rico, traditionally served at Christmas with arroz con gandules and tostones. The marinade of garlic, cumin, oregano, sazón, and sour orange penetrates deep into the meat; the shoulder is roasted low-and-slow at 275 °F before a high blast to 500 °F to form the crispy, puffed skin (cuerito).*
+**Serves**: 8–10 · **Prep**: 4 hr–2 days marinade · **Cook**: 3–4 hr low + 20 min high
+
+*Context: Caribbeans — especially in Puerto Rico and Cuba — traditionally serve pernil at Christmas alongside rice and peas. The key ingredient is sour orange (naranja agria); if unavailable, regular orange juice with lemon wedges and a dash of vinegar gives a close approximation.*
+
+**Temperature guidance (from recipe)**: "The internal temperature should be 180–185 °F (82–85 °C). But no worries if you don't have a thermometer, because it's fork-tender when done." Oven: 275 °F (135 °C) for 3+ hours, then 500 °F (260 °C) for 15–20 minutes. Insert MEATER probe into the thickest part away from bone: **pull at 80–85 °C (176–185 °F)** for pull-apart tenderness.
+
+**Ingredients**
+- 1 pork shoulder (bone-in, skin-on), 4–5 lb (1.8–2.3 kg)
+- Salt and pepper (½–¾ tsp per pound)
+- ¼ cup chopped onion
+- 6–8 garlic cloves
+- 1 tsp dried oregano
+- 2 tbsp fresh parsley
+- 3 tbsp neutral oil
+- 1 tsp cumin
+- 1 tsp chili powder
+- 1 tsp sazón (Latin spice blend)
+- 1 tsp smoked paprika
+- ½ cup (120 ml) orange juice
+- ½ cup (120 ml) chicken stock or water
+- 1 large onion, sliced
+- 1 orange, sliced
+
+**Method**
+1. Blend ¼ cup onion, garlic, oregano, and parsley in a food processor, drizzling in the oil, until pasty. Mix in cumin, chili powder, sazón, and paprika. Set marinade aside.
+2. Rinse and dry pork shoulder. Salt and pepper all over (½–¾ tsp per pound). Make deep slits through the skin and fat into the meat.
+3. Rub marinade all over — and into every slit and crevice. Refrigerate 4 hours to 2 days. Remove from fridge 30 min before roasting.
+4. Line a roasting pan with sliced onion and orange. Pour orange juice and stock over base.
+5. Place pork skin-side up in pan, uncovered. Roast at **275 °F / 135 °C** for **3 hours or more** until tender (leg/shoulder size dependent).
+6. Remove from oven. Increase temperature to **500 °F / 260 °C**. Return pork. Roast 15–20 minutes, rotating the pan every 5 minutes, until skin is crisp and puffed (*cuerito*). Insert MEATER probe: **pull at 80–85 °C (176–185 °F)**.
+7. Rest 10–15 minutes before carving. Serve with arroz con gandules, tostones, and lime wedges, drizzled with pan drippings.
+*Final temperature: 80–85 °C (176–185 °F).*
+
 ## `cooking_data.py` note
 
 Use `DONENESS_MEDIUM_WELL` target 75 °C, range 72–85 °C for `pork_shoulder` × `oven_roast`.

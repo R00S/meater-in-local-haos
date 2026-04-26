@@ -98,6 +98,35 @@ Target internal temperatures (pan fry):
 | ichkoche strips (AT) | Direct pan, medium-high | 72–75°C (visual) |
 | ichkoche oven-to-pan (AT) | 180°C oven + pan finish | 72–75°C |
 
+---
+
+### 4. The Woks of Life — Korean Crispy Pork Belly Kimchi Bowls (Korean tradition)
+**Source**: Bill Leung, The Woks of Life; https://thewoksoflife.com/pork-belly-kimchi-bowls/ (fetched 2026-04-26). *Inspired by *dubu kimchi* from New York Koreatown, this 10-minute pan-fried pork belly recipe uses thinly sliced belly, a screaming-hot wok, and gochujang (Korean red pepper paste) to produce caramelised, slightly crisp slices in under 10 minutes. The belly is pan-fried (not deep-fried) in a wok — the fat renders quickly and crisps the exterior while the interior stays tender.*
+**Serves**: 2 · **Prep**: 3 min · **Cook**: 7 min
+
+*Context: Pan-fried pork belly over rice or alongside tofu (dubu kimchi) is a staple in Korean home cooking and restaurant menus. The combination of rendered, caramelised belly fat, sour kimchi, and gochujang creates an intensely savoury bowl.*
+
+**Temperature guidance (from recipe)**: High heat, 1 minute to caramelise. The thinly sliced belly is cooked through rapidly. No internal temperature target is given for thin slices; for a whole belly slab: internal temperature should reach **72–75 °C (162–167 °F)**.
+
+**Ingredients**
+- 225 g (8 oz) pork belly, thinly sliced
+- 2 tbsp neutral oil
+- 1 large onion, thinly sliced
+- 2 cups kimchi
+- 1½ tsp sugar
+- 1 tbsp gochujang (Korean red pepper paste)
+- 2 cups cooked medium grain rice (for serving)
+- 1 scallion, chopped (for garnish)
+
+**Method**
+1. Heat a wok or heavy skillet over **high heat** until smoking.
+2. Add oil, then pork belly slices. Stir-fry for **1 minute** or until slightly caramelised and beginning to crisp at the edges.
+3. Add sliced onion, kimchi, and sugar. Cook a further **3 minutes**, stirring.
+4. Add gochujang. Cook **1 more minute**, stirring well to coat everything.
+5. Serve over steamed rice. Garnish with chopped scallion.
+6. For a whole belly slab (not slices): insert MEATER probe and **pull at 72–75 °C (162–167 °F)**.
+*Final temperature (sliced): visual — caramelised and cooked through. Whole slab: 72–75 °C.*
+
 **Consensus pull range**: 72–80 °C (162–176 °F) for food safety; crispy visual appearance is the practical doneness indicator for sliced pork belly pan fry.
 
 ## `cooking_data.py` note

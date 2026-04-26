@@ -120,3 +120,34 @@ Target internal temperature: **52–57 °C (126–135 °F)** for medium-rare (th
 | Medium-rare | 52–54 °C (126–129 °F) | 55–57 °C (131–135 °F) |
 | Medium | 57–60 °C (135–140 °F) | 60–63 °C (140–145 °F) |
 | Well-done | **Not recommended** | — |
+
+---
+
+### 4. The Mediterranean Dish — Mediterranean Garlic and Herb Rack of Lamb (Mediterranean / Egyptian tradition)
+**Source**: Suzy Karadsheh, The Mediterranean Dish; https://www.themediterraneandish.com/roast-lamb-rack-recipe/ (fetched 2026-04-26). *The author's Egyptian-Mediterranean family tradition: two frenched racks of lamb covered in a quickly blended garlic, rosemary, parsley, and EVOO marinade, then roasted in a very high oven (450 °F) for just 15–20 minutes for a perfectly pink result. "Rack is the finest part of the lamb. It is to lamb what prime rib or tenderloin is to beef." The marinade forms a beautiful herb crust as the lamb roasts.*
+**Serves**: 6 · **Prep**: 30 min marinate · **Cook**: 15–20 min
+
+*Context: Suzy Karadsheh grew up in Egypt and the Mediterranean Dish is rooted in North African and Levantine food traditions. Her family's lamb roast celebrates the Eastern Mediterranean love of garlic-herb seasoned slow-grown lamb.*
+
+**Temperature guidance (from recipe)**: 450 °F (230 °C) oven, 15 minutes (fat side up), then flip and 5 more minutes. Internal temperatures: rare 52 °C (125 °F); medium-rare 57 °C (135 °F). "To avoid overcooking, roast to 5 degrees below the final temperature you want." Rest tented with foil 10 minutes before slicing. Insert MEATER probe into the loin meat between the bones: **pull at 52 °C (125 °F)** for rare; **pull at 50–52 °C (122–126 °F)** for medium-rare finish after rest.
+
+**Ingredients**
+- 2 frenched racks of lamb (about 8 chops each, serves 6)
+- Kosher salt and freshly ground black pepper
+- 10–12 garlic cloves, peeled
+- 3 sprigs fresh rosemary, leaves stripped
+- Small bunch fresh flat-leaf parsley
+- Pinch of red pepper flakes
+- Extra-virgin olive oil (enough to blend into a loose paste)
+
+**Method**
+1. Season racks generously with kosher salt and black pepper on all sides.
+2. In a small food processor, combine garlic, rosemary, parsley, red pepper flakes, and enough EVOO to blend into a paste. Blitz until smooth.
+3. Spread the herb marinade all over both racks — top, underside, and between the bones. Rest at room temperature **30 minutes** (or marinate overnight in fridge; bring to room temperature before roasting).
+4. Heat oven to **450 °F / 230 °C**. Place racks fat-side up on a sheet pan.
+5. Roast on the top rack (top third of oven) for **15 minutes**.
+6. Turn racks to the other side; roast a further **5 minutes** (or more for medium rather than rare).
+7. Insert MEATER probe into the loin between the bones, away from bone. **Pull at 52 °C (125 °F)** for rare; **50 °C (122 °F)** for medium-rare (the rack will rise ~5 °C while resting).
+8. Tent with foil and rest **10 minutes** before slicing into individual chops.
+9. Serve with tzatziki, roasted Greek potatoes, and a Mediterranean lentil salad.
+*Final resting temperature: 55–57 °C (131–135 °F) for medium-rare.*

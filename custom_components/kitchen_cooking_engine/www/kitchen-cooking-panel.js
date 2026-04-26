@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 26 Apr 2026, 07:46 CET
+ * AUTO-GENERATED: 26 Apr 2026, 07:56 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 26 Apr 2026, 07:46 CET
+// Last generated: 26 Apr 2026, 07:56 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -18822,6 +18822,7 @@ const RECIPE_TITLES_INDEX = {
     "grill": [
       "Madens Verden — Ribeye på gasgrill (Danish tradition)",
       "Directo al Paladar — Chuletón con salsa de vino y fresas (Spanish tradition)",
+      "The Woks of Life — Grilled Ribeye with Soy Butter Glaze (Chinese-American tradition)",
       "GialloZafferano — Bistecca alla fiorentina (Italian tradition)"
     ],
     "oven_roast": [
@@ -20226,14 +20227,16 @@ const RECIPE_TITLES_INDEX = {
     "oven_roast": [
       "The Mediterranean Dish — Mediterranean Leg of Lamb with Potatoes (Mediterranean/American tradition)",
       "Madensverden.dk — Lammekølle i ovnen (Danish oven-roasted leg of lamb)",
-      "Matprat.no — Lammestek i ovn (Norwegian Easter leg of lamb)"
+      "Matprat.no — Lammestek i ovn (Norwegian Easter leg of lamb)",
+      "The Mediterranean Dish — Perfect Roasted Leg of Lamb with Potatoes (Mediterranean / Egyptian tradition)"
     ]
   },
   "rack_of_lamb": {
     "oven_roast": [
       "BBC Good Food — Herb-Crusted Rack of Lamb (British/French tradition)",
       "Great British Chefs — Classic Rack of Lamb with Red Wine Sauce (British/French tradition)",
-      "RecipeTinEats.com — Rack of Lamb with Herb Crust (Australian/international tradition)"
+      "RecipeTinEats.com — Rack of Lamb with Herb Crust (Australian/international tradition)",
+      "The Mediterranean Dish — Mediterranean Garlic and Herb Rack of Lamb (Mediterranean / Egyptian tradition)"
     ]
   },
   "lamb_chops": {
@@ -20412,7 +20415,8 @@ const RECIPE_TITLES_INDEX = {
     "pan_fry": [
       "Madens Verden — Stegt Flæsk med Persillesovs (Danish national dish)",
       "ichkoche.at — Gebratene Bauchfleischstreifen (Austrian tradition — pan-fried strips)",
-      "ichkoche.at — Gebratenes Bauchfleisch (Austrian tradition — oven-to-pan)"
+      "ichkoche.at — Gebratenes Bauchfleisch (Austrian tradition — oven-to-pan)",
+      "The Woks of Life — Korean Crispy Pork Belly Kimchi Bowls (Korean tradition)"
     ],
     "slow_cooker": [
       "BBC Good Food — Slow Cooker Pork Belly (UK, crockpot method)",
@@ -20460,7 +20464,8 @@ const RECIPE_TITLES_INDEX = {
     "oven_roast": [
       "Madens Verden — Nakkekam i Ovn, Langtidsstegt i Bradepande (Danish tradition)",
       "Madens Verden — Nakkesteg i Ovn med Hvidløg og Kartofler i Fad (Danish tradition)",
-      "Chefkoch — Krustenbraten (German tradition — shoulder variant)"
+      "Chefkoch — Krustenbraten (German tradition — shoulder variant)",
+      "African Bites / Immaculate Bites — Pernil (Puerto Rican Roast Pork Shoulder) (Caribbean tradition)"
     ],
     "slow_cooker": [
       "Madens Verden — Pulled Pork (Danish tradition)",
@@ -20501,7 +20506,8 @@ const RECIPE_TITLES_INDEX = {
     "pan_sear": [
       "Directo al Paladar — Chuleta de cerdo a la plancha (Spanish tradition)",
       "ichkoche.at — Schweinskotelett Grundrezept (Austrian tradition)",
-      "Madens Verden — Pandestegning af koteletter (Danish tradition)"
+      "Madens Verden — Pandestegning af koteletter (Danish tradition)",
+      "African Bites / Immaculate Bites — Smothered Pork Chops (Southern US / Creole tradition)"
     ]
   },
   "pork_loin_steak": {
@@ -20522,12 +20528,15 @@ const RECIPE_TITLES_INDEX = {
     "air_fryer": [
       "Directo al Paladar — Solomillo de cerdo en airfryer (Spanish tradition)",
       "ichkoche.at — Schopfsteak aus dem Airfryer (adapted for tenderloin) (Austrian tradition)",
-      "Madens Verden — Herregårdskotelet i airfryer method (adapted for tenderloin) (Danish tradition)"
+      "Madens Verden — Herregårdskotelet i airfryer method (adapted for tenderloin) (Danish tradition)",
+      "African Bites / Immaculate Bites — Creole Air Fryer Pork Tenderloin (Southern US / West African Creole tradition)"
     ],
     "grill": [
       "Madens Verden — Svinemørbrad på grill (Danish tradition)",
       "Chefkoch.de — Mariniertes ganzes Schweinefilet vom Grill (German tradition)",
-      "Directo al Paladar — Solomillo de cerdo a la plancha (adapted for grill) (Spanish tradition)"
+      "Directo al Paladar — Solomillo de cerdo a la plancha (adapted for grill) (Spanish tradition)",
+      "Hot Thai Kitchen — Moo Ping หมูปิ้ง (Thai street food tradition)",
+      "The Woks of Life — BBQ Char Siu Grilled Pork (Chinese tradition)"
     ],
     "oven_roast": [
       "Directo al Paladar — Solomillo de cerdo al horno con patatas (Spanish tradition)",
@@ -20538,7 +20547,8 @@ const RECIPE_TITLES_INDEX = {
     "pan_sear": [
       "Directo al Paladar — Solomillo de cerdo a la plancha (Spanish tradition)",
       "ichkoche.at — Schweinefilet im Speckmantel (Austrian tradition)",
-      "Madens Verden — Svinemørbrad i ovn / pande finish (Danish tradition)"
+      "Madens Verden — Svinemørbrad i ovn / pande finish (Danish tradition)",
+      "The Woks of Life — 辣椒小炒肉 Pork and Pepper Stir-fry (Chinese tradition)"
     ],
     "sous_vide": [
       "Madens Verden — Svinemørbrad sous vide (Danish tradition)",
@@ -35388,7 +35398,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "306";
+const PANEL_VERSION = "307";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

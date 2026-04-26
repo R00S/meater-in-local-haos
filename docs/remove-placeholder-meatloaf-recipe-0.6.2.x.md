@@ -123,8 +123,15 @@ sources that represent authentic traditions rather than Western adaptations.
 - [x] Cut profile text preserved (anatomy descriptions retained per user requirement)
 - [x] Version bumped in all 4 locations
 - [x] Generator run successful (PANEL_VERSION 306)
-- [ ] pork_tenderloin grill/pan_sear/air_fryer/sous_vide — still all-European (ongoing)
-- [ ] ribeye_steak-grill — still all-European (ongoing)
-- [ ] ny_strip-pan_sear — still all-western (ongoing)
-- [ ] pork_belly-pan_fry, pork_shoulder-oven_roast — still all-European (ongoing)
-- [ ] rack_of_lamb-oven_roast, leg_of_lamb-oven_roast — still limited diversity (ongoing)
+- [x] pork_tenderloin-grill → Thai Moo Ping (hot-thai-kitchen.com/bbq-pork-skewers/) + Chinese Char Siu BBQ (thewoksoflife.com/bbq-char-siu-grill/)
+- [x] pork_tenderloin-pan_sear → Chinese Pork & Pepper Stir-fry 辣椒小炒肉 (thewoksoflife.com/pork-pepper-stir-fry/)
+- [x] pork_tenderloin-air_fryer → Creole Air Fryer Pork Tenderloin/Southern Creole/West African (africanbites.com/air-fryer-pork-chops/)
+- [x] pork_chop-pan_sear → Southern US Creole Smothered Pork Chops (africanbites.com/smothered-pork-chops/)
+- [x] pork_belly-pan_fry → Korean Crispy Pork Belly Kimchi Bowls (thewoksoflife.com/pork-belly-kimchi-bowls/)
+- [x] pork_shoulder-oven_roast → Puerto Rican Pernil/Caribbean (africanbites.com/pernil-puerto-rican-roast-pork/)
+- [x] ribeye_steak-grill → Chinese-American Soy Butter Glaze (thewoksoflife.com/grilled-ribeye-soy-butter-glaze/)
+- [x] rack_of_lamb-oven_roast → Mediterranean/Egyptian Garlic Herb Rack (themediterraneandish.com/roast-lamb-rack-recipe/)
+- [x] leg_of_lamb-oven_roast → Mediterranean/Egyptian leg of lamb with potatoes (themediterraneandish.com/mediterranean-style-leg-of-lamb-recipe-with-potatoes/)
+- [x] Generator run successful (PANEL_VERSION 307, 516 recipe files)
+- [ ] pork_tenderloin-sous_vide — still all-European (Danish, Austrian, Italian); no verified Asian sous vide pork tenderloin source found on reachable sites
+- [ ] ny_strip-pan_sear — still all-Western (5 recipes: American, British, French, British Modernist, Australian); no verified non-Western strip steak pan-sear source found on reachable sites
