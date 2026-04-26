@@ -32,6 +32,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 20
+quality_assessed: 2026-04-26
 -->
 # Pork Tenderloin — Cut Overview
 
@@ -51,3 +53,10 @@ Target internal temperatures (grill):
 - [Oven Roast](./pork_tenderloin-oven_roast.md)
 - [Pan Sear](./pork_tenderloin-pan_sear.md)
 - [Sous Vide](./pork_tenderloin-sous_vide.md)
+## Quality score
+
+**Score: 20 / 20** — assessed 2026-04-26
+
+All criteria met.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

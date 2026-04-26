@@ -34,6 +34,8 @@ doneness:
   max_c: 95
   max_f: 203
   usda_safe: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Pork Belly — Cut Overview
 
@@ -52,3 +54,12 @@ Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is
 - [Slow Cooker](./pork_belly-slow_cooker.md)
 - [Smoker](./pork_belly-smoker.md)
 - [Sous Vide](./pork_belly-sous_vide.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Southern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

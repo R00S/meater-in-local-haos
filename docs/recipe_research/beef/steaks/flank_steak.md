@@ -49,6 +49,8 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Flank Steak — Cut Overview
 
@@ -65,3 +67,12 @@ Flank steak is a flat, thin muscle cut from the abdominal wall of the animal (th
 - [Pan Fry](./flank_steak-pan_fry.md)
 - [Pan Sear](./flank_steak-pan_sear.md)
 - [Sous Vide](./flank_steak-sous_vide.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -46,6 +46,8 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
+quality_score: 17
+quality_assessed: 2026-04-26
 -->
 # Buffalo Steak — Cut Overview
 
@@ -63,3 +65,14 @@ Target internal temperature: **57–63 °C (135–145 °F)** for medium-rare to 
 
 - [Grill](./buffalo_steak-grill.md)
 - [Pan Sear](./buffalo_steak-pan_sear.md)
+## Quality score
+
+**Score: 17 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Southern tradition | −1 |
+| Missing Northern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

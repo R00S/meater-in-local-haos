@@ -20,6 +20,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 17
+quality_assessed: 2026-04-26
 -->
 # Wild Boar Chop — Cut Overview
 
@@ -35,3 +37,14 @@ Target internal temperature: **70–72 °C (158–162 °F)** for safe consumptio
 
 - [Grill](./wild_boar_chop-grill.md)
 - [Pan Sear](./wild_boar_chop-pan_sear.md)
+## Quality score
+
+**Score: 17 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -22,6 +22,8 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Brisket — Cut Overview
 
@@ -33,3 +35,12 @@ Beef brisket is taken from the breast and lower chest of the animal, comprising 
 ## Research files by cooking method
 
 - [Oven Roast](./brisket-oven_roast.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

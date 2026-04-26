@@ -28,6 +28,8 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
+quality_score: 18
+quality_assessed: 2026-04-26
 -->
 # Scallops — Cut Overview
 
@@ -39,3 +41,13 @@ Sea scallops (*Pecten maximus* in Europe; *Placopecten magellanicus*, the Atlant
 ## Research files by cooking method
 
 - [Pan Sear](./scallops-pan_sear.md)
+## Quality score
+
+**Score: 18 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Southern tradition | −1 |
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

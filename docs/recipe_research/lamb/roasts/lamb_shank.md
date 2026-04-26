@@ -21,6 +21,8 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Shank — Cut Overview
 
@@ -37,3 +39,12 @@ Target internal temperature: **82–88 °C (180–190 °F)** for fall-off-the-bo
 - [Braise](./lamb_shank-braise.md)
 - [Oven Roast](./lamb_shank-oven_roast.md)
 - [Slow Cooker](./lamb_shank-slow_cooker.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -30,6 +30,8 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
+quality_score: 17
+quality_assessed: 2026-04-26
 -->
 # Swordfish Steak — Cut Overview
 
@@ -64,3 +66,14 @@ translucent at the very centre, preferred by Italian and Mediterranean cooks); 5
 ## Research files by cooking method
 
 - [Pan Sear](./swordfish-pan_sear.md)
+## Quality score
+
+**Score: 17 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Northern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

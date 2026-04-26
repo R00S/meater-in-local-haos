@@ -37,6 +37,8 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
+quality_score: 18
+quality_assessed: 2026-04-26
 -->
 # Ostrich Steak — Cut Overview
 
@@ -52,3 +54,13 @@ Target internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pu
 
 - [Grill](./ostrich_steak-grill.md)
 - [Pan Sear](./ostrich_steak-pan_sear.md)
+## Quality score
+
+**Score: 18 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -491,3 +491,112 @@ standard each leaf must meet when it is written.
 
 When a new leaf is added to `cooking_data.py` on main, a corresponding leaf
 file becomes required here.
+
+---
+
+## Cut file quality scoring
+
+Every **cut file** (the `{cut_name}.md` without a method suffix) carries a
+`quality_score` field in its `<!-- KCE:CUT` front-matter block and a
+`## Quality score` section at the end of the document.
+
+### Scale
+
+**Base: 20 points.** Deductions are subtracted from 20. Scores below 20 reflect
+specific gaps that must be addressed to raise the quality of the whole dataset.
+
+### Directional tradition coverage (assessed across *all* method leaf files for the cut)
+
+Recipes must represent all four directional traditions.  Definitions:
+
+| Direction | Includes |
+|-----------|---------|
+| **Eastern** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
+| **Western** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Southern** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Northern** | Scandinavian, Baltic, Slavic, Caucasus region, the Stans, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+**Deduction: −1 per missing direction** (maximum −4).
+
+### Cut profile quality
+
+- **−3** if `## Cut profile` section is missing entirely.
+- **−1** if `## Cut profile` exists but lacks anatomical placement — where on
+  the animal the cut comes from, what muscle or structure it is, what defines it
+  (marbling, connective tissue, leanness, typical use). Anatomy is always
+  applicable; this deduction applies universally.
+
+### Method sub-files
+
+- **−3** if no `{cut_name}-{method}.md` leaf files exist at all for the cut.
+
+### Temperature data
+
+- **−3** if USDA safe internal temperature is not present (in the front-matter
+  `usda_safe_c` field or stated explicitly in the cut profile or analysis
+  sections).
+- **−4** if culinary preferred temperatures (doneness targets) are absent — i.e.
+  no `target_c` / `recommended_doneness` in the front-matter and no pull
+  temperatures stated in the body.
+- **−2** if culinary preferred temperatures are not researched per method
+  independently (i.e. the cut file body states a single global target with no
+  per-method nuance, and the method leaf files also lack per-method temperature
+  ranges). No deduction if either the cut file or the method leaf files already
+  carry per-method data.
+
+### Description uniqueness across method files
+
+- **−1** per method leaf file whose `## Cut profile` or opening description is
+  a copy-paste or near-identical reuse of another method leaf file for the same
+  cut (maximum −2). Each method must explain what that *specific method* does to
+  this *specific cut* — not repeat generic cut prose.
+
+### Scoring summary table
+
+| Criterion | Possible deduction |
+|-----------|--------------------|
+| Missing Eastern tradition | −1 |
+| Missing Western tradition | −1 |
+| Missing Southern tradition | −1 |
+| Missing Northern tradition | −1 |
+| No `## Cut profile` section | −3 |
+| Cut profile lacks anatomy | −1 |
+| No method leaf files exist | −3 |
+| No safe temperature data | −3 |
+| No culinary preferred temps | −4 |
+| Per-method temp data missing (cut + method files both) | −2 |
+| Duplicate description across method files (per file, max 2) | −1 each |
+| **Maximum total deduction** | **−18** |
+| **Minimum score** | **2/20** |
+
+### How the score is written into the cut file
+
+Add to the `<!-- KCE:CUT` block:
+```yaml
+quality_score: 17
+quality_assessed: 2026-04-26
+```
+
+And append this section at the end of the cut file:
+
+```markdown
+## Quality score
+
+**Score: 17 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|-----------|
+| Missing Northern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+| Per-method temp data missing | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut
+profile is updated.*
+```
+
+### Recurring task
+
+Grading cut files is a **recurring improvement task**. Whenever a new method
+leaf is added or an existing leaf's tradition coverage is improved, the cut
+file score must be recalculated and updated. The set quality is measured by its
+lowest-scoring file — raise the floor, not just the ceiling.

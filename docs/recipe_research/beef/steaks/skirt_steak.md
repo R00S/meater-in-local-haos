@@ -39,6 +39,8 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Skirt Steak — Cut Overview
 
@@ -53,3 +55,12 @@ Skirt steak over live charcoal is arguably its highest form — in taquero tradi
 - [Grill](./skirt_steak-grill.md)
 - [Pan Fry](./skirt_steak-pan_fry.md)
 - [Pan Sear](./skirt_steak-pan_sear.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

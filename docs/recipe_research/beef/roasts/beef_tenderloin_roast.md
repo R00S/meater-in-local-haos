@@ -44,6 +44,8 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Beef Tenderloin Roast — Cut Overview
 
@@ -55,3 +57,12 @@ The beef tenderloin (psoas major) runs along the interior of the spine and does 
 ## Research files by cooking method
 
 - [Oven Roast](./beef_tenderloin_roast-oven_roast.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

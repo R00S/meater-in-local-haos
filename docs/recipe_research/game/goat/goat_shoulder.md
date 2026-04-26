@@ -21,6 +21,8 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
+quality_score: 20
+quality_assessed: 2026-04-26
 -->
 # Goat Shoulder — Cut Overview
 
@@ -34,3 +36,10 @@ Goat shoulder (Swedish *getskuldra* / *getbog*) is the upper foreleg — heavily
 - [Braise](./goat_shoulder-braise.md)
 - [Oven Roast](./goat_shoulder-oven_roast.md)
 - [Slow Cooker](./goat_shoulder-slow_cooker.md)
+## Quality score
+
+**Score: 20 / 20** — assessed 2026-04-26
+
+All criteria met.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -40,6 +40,8 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
+quality_score: 20
+quality_assessed: 2026-04-26
 -->
 # Salmon Fillet — Cut Overview
 
@@ -55,3 +57,10 @@ Salmon fillet comes from the side of the fish, running the full length of the bo
 - [Oven Bake](./salmon_fillet-oven_bake.md)
 - [Pan Sear](./salmon_fillet-pan_sear.md)
 - [Sous Vide](./salmon_fillet-sous_vide.md)
+## Quality score
+
+**Score: 20 / 20** — assessed 2026-04-26
+
+All criteria met.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

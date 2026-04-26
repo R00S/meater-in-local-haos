@@ -28,6 +28,8 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
+quality_score: 16
+quality_assessed: 2026-04-26
 -->
 # Brussels Sprouts — Cut Overview
 
@@ -42,3 +44,13 @@ Brussels sprouts (*Brassica oleracea* var. *gemmifera*) pan-fried (halved, cut-f
 - [Oven Roast](./brussels_sprouts-oven_roast.md)
 - [Pan Fry](./brussels_sprouts-pan_fry.md)
 - [Sauté](./brussels_sprouts-saute.md)
+## Quality score
+
+**Score: 16 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cut profile lacks anatomy | −1 |
+| No safe temperature data | −3 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

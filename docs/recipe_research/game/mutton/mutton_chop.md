@@ -53,6 +53,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 20
+quality_assessed: 2026-04-26
 -->
 # Mutton Chop — Cut Overview
 
@@ -68,3 +70,10 @@ Target internal temperature: **70–74 °C (158–165 °F)**.
 
 - [Grill](./mutton_chop-grill.md)
 - [Pan Sear](./mutton_chop-pan_sear.md)
+## Quality score
+
+**Score: 20 / 20** — assessed 2026-04-26
+
+All criteria met.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

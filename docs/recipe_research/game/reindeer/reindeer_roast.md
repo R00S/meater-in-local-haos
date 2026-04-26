@@ -36,6 +36,8 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
+quality_score: 16
+quality_assessed: 2026-04-26
 -->
 # Reindeer Roast — Cut Overview
 
@@ -50,3 +52,15 @@ Target internal temperature: **57–62 °C (135–144 °F)** for medium. Pull at
 ## Research files by cooking method
 
 - [Oven Roast](./reindeer_roast-oven_roast.md)
+## Quality score
+
+**Score: 16 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Western tradition | −1 |
+| Missing Southern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

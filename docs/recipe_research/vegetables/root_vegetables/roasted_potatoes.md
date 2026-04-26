@@ -17,6 +17,8 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
+quality_score: 14
+quality_assessed: 2026-04-26
 -->
 # Roasted Potatoes — Cut Overview
 
@@ -32,3 +34,15 @@ Target internal temperature is 95–100°C for full starch gelatinisation and a 
 
 - [Air Fryer](./roasted_potatoes-air_fryer.md)
 - [Oven Roast](./roasted_potatoes-oven_roast.md)
+## Quality score
+
+**Score: 14 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Southern tradition | −1 |
+| Missing Northern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+| No safe temperature data | −3 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

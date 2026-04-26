@@ -38,6 +38,8 @@ doneness:
   max_f: 135
   usda_safe: false
   recommended: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Tuna Steak — Cut Overview
 
@@ -50,3 +52,12 @@ Tuna steak — most commonly bluefin (*hon maguro*), yellowfin (*ahi*), or bigey
 
 - [Grill](./tuna_steak-grill.md)
 - [Pan Sear](./tuna_steak-pan_sear.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -27,6 +27,8 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
+quality_score: 15
+quality_assessed: 2026-04-26
 -->
 # Roasted Sweet Potato — Cut Overview
 
@@ -40,3 +42,14 @@ Whole baked sweet potato (*Ipomoea batatas*) in the conventional oven at 190–2
 - [Air Fryer](./roasted_sweet_potato-air_fryer.md)
 - [Oven Bake](./roasted_sweet_potato-oven_bake.md)
 - [Oven Roast](./roasted_sweet_potato-oven_roast.md)
+## Quality score
+
+**Score: 15 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Western tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+| No safe temperature data | −3 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

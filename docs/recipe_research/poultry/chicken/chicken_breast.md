@@ -25,6 +25,8 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
+quality_score: 18
+quality_assessed: 2026-04-26
 -->
 # Chicken Breast — Cut Overview
 
@@ -42,3 +44,13 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 - [Grill](./chicken_breast-grill.md)
 - [Oven Bake](./chicken_breast-oven_bake.md)
 - [Pan Sear](./chicken_breast-pan_sear.md)
+## Quality score
+
+**Score: 18 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Western tradition | −1 |
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

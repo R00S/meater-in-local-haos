@@ -45,6 +45,8 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
+quality_score: 18
+quality_assessed: 2026-04-26
 -->
 # Lamb Cutlet — Cut Overview
 
@@ -58,3 +60,13 @@ Target: **52–57 °C (126–135 °F)** for medium-rare. They overcook rapidly g
 ## Research files by cooking method
 
 - [Pan Fry](./lamb_cutlet-pan_fry.md)
+## Quality score
+
+**Score: 18 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

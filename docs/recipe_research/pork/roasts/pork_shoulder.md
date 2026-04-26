@@ -21,6 +21,8 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Pork Shoulder / Boston Butt — Cut Overview
 
@@ -39,3 +41,12 @@ Target internal temperatures (oven roast):
 - [Oven Roast](./pork_shoulder-oven_roast.md)
 - [Slow Cooker](./pork_shoulder-slow_cooker.md)
 - [Smoker](./pork_shoulder-smoker.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

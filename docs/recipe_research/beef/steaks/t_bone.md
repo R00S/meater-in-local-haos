@@ -56,6 +56,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 17
+quality_assessed: 2026-04-26
 -->
 # T-Bone / Porterhouse — Cut Overview
 
@@ -71,3 +73,14 @@ Air-frying a T-bone steak is practical for steaks up to 3 cm thick and 700 g —
 - [Grill](./t_bone-grill.md)
 - [Oven Roast](./t_bone-oven_roast.md)
 - [Pan Sear](./t_bone-pan_sear.md)
+## Quality score
+
+**Score: 17 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

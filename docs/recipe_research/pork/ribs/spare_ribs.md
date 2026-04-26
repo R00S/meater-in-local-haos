@@ -21,6 +21,8 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
+quality_score: 18
+quality_assessed: 2026-04-26
 -->
 # Spare Ribs — Cut Overview
 
@@ -37,3 +39,13 @@ Target internal temperatures (oven roast):
 ## Research files by cooking method
 
 - [Oven Roast](./spare_ribs-oven_roast.md)
+## Quality score
+
+**Score: 18 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

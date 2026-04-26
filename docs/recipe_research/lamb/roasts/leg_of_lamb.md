@@ -53,6 +53,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Leg of Lamb — Cut Overview
 
@@ -80,3 +82,12 @@ Leg of lamb is the quintessential festive roast throughout the Mediterranean, Mi
 
 - [Grill](./leg_of_lamb-grill.md)
 - [Oven Roast](./leg_of_lamb-oven_roast.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

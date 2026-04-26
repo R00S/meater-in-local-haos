@@ -20,6 +20,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 18
+quality_assessed: 2026-04-26
 -->
 # Pork Liver — Cut Overview
 
@@ -32,3 +34,13 @@ Pork liver is milder, slightly sweeter and more delicate in texture than beef li
 
 - [Pan Fry](./pork_liver-pan_fry.md)
 - [Pan Sear](./pork_liver-pan_sear.md)
+## Quality score
+
+**Score: 18 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Southern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

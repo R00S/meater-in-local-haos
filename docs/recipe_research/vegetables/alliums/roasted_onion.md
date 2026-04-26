@@ -27,6 +27,8 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
+quality_score: 15
+quality_assessed: 2026-04-26
 -->
 # Roasted Onion — Cut Overview
 
@@ -40,3 +42,14 @@ Onions (*Allium cepa*) sautéed as a roasted-style preparation — thick wedges,
 - [Grill](./roasted_onion-grill.md)
 - [Oven Roast](./roasted_onion-oven_roast.md)
 - [Sauté](./roasted_onion-saute.md)
+## Quality score
+
+**Score: 15 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Northern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+| No safe temperature data | −3 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

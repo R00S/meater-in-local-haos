@@ -36,6 +36,8 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
+quality_score: 17
+quality_assessed: 2026-04-26
 -->
 # Bison Roast — Cut Overview
 
@@ -84,3 +86,14 @@ ruined at those temperatures. The correct window is medium (60–65 °C), where 
 ## Research files by cooking method
 
 - [Oven Roast](./bison_roast-oven_roast.md)
+## Quality score
+
+**Score: 17 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

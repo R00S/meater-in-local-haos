@@ -37,6 +37,8 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
+quality_score: 18
+quality_assessed: 2026-04-26
 -->
 # Venison Roast — Cut Overview
 
@@ -51,3 +53,13 @@ Target internal temperature: **55–60 °C (131–140 °F)** for a pink, moist r
 ## Research files by cooking method
 
 - [Oven Roast](./venison_roast-oven_roast.md)
+## Quality score
+
+**Score: 18 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

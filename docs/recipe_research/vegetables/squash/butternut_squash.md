@@ -27,6 +27,8 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
+quality_score: 15
+quality_assessed: 2026-04-26
 -->
 # Butternut Squash — Cut Overview
 
@@ -40,3 +42,14 @@ Butternut squash (*Cucurbita moschata*) in a pressure cooker cooks in 8–12 min
 - [Oven Roast](./butternut_squash-oven_roast.md)
 - [Pressure Cooker](./butternut_squash-pressure_cooker.md)
 - [Steam](./butternut_squash-steam.md)
+## Quality score
+
+**Score: 15 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Northern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+| No safe temperature data | −3 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -58,6 +58,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Ribeye Steak — Cut Overview
 
@@ -80,3 +82,12 @@ Target internal temperatures (oven roast ribeye):
 - [Pan Fry](./ribeye_steak-pan_fry.md)
 - [Pan Sear](./ribeye_steak-pan_sear.md)
 - [Sous Vide](./ribeye_steak-sous_vide.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Southern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

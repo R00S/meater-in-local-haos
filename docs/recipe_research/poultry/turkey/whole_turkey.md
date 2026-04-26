@@ -30,6 +30,8 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
+quality_score: 17
+quality_assessed: 2026-04-26
 -->
 # Whole Turkey — Cut Overview
 
@@ -47,3 +49,14 @@ Typical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) un
 ## Research files by cooking method
 
 - [Oven Roast](./whole_turkey-oven_roast.md)
+## Quality score
+
+**Score: 17 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

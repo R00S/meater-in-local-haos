@@ -22,6 +22,8 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
+quality_score: 18
+quality_assessed: 2026-04-26
 -->
 # Baby Back Ribs — Cut Overview
 
@@ -41,3 +43,13 @@ Target internal temperatures (air fryer):
 - [Grill](./baby_back_ribs-grill.md)
 - [Oven Roast](./baby_back_ribs-oven_roast.md)
 - [Smoker](./baby_back_ribs-smoker.md)
+## Quality score
+
+**Score: 18 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

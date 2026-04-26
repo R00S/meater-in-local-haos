@@ -37,6 +37,8 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
+quality_score: 18
+quality_assessed: 2026-04-26
 -->
 # Moose Roast — Cut Overview
 
@@ -51,3 +53,13 @@ Target internal temperature: **60–65 °C (140–149 °F)** for medium (pink ce
 ## Research files by cooking method
 
 - [Oven Roast](./moose_roast-oven_roast.md)
+## Quality score
+
+**Score: 18 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

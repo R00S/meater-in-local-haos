@@ -29,6 +29,8 @@ doneness:
   max_f: 190
   usda_safe: true
   recommended: true
+quality_score: 17
+quality_assessed: 2026-04-26
 -->
 # Whole Duck — Cut Overview
 
@@ -43,3 +45,14 @@ Target internal temperature: **165 °F (74 °C) in the thigh** — USDA minimum 
 ## Research files by cooking method
 
 - [Oven Roast](./whole_duck-oven_roast.md)
+## Quality score
+
+**Score: 17 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Western tradition | −1 |
+| Missing Southern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

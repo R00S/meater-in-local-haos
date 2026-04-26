@@ -20,6 +20,8 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
+quality_score: 18
+quality_assessed: 2026-04-26
 -->
 # Meatloaf — Cut Overview
 
@@ -31,3 +33,13 @@ Meatloaf is a free-formed loaf of seasoned, bound ground meat (typically beef al
 ## Research files by cooking method
 
 - [Oven Roast](./meatloaf-oven_roast.md)
+## Quality score
+
+**Score: 18 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

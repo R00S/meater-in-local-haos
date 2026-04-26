@@ -31,6 +31,8 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
+quality_score: 16
+quality_assessed: 2026-04-26
 -->
 # Chicken Wing — Cut Overview
 
@@ -45,3 +47,15 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 ## Research files by cooking method
 
 - [Air Fryer](./chicken_wing-air_fryer.md)
+## Quality score
+
+**Score: 16 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Western tradition | −1 |
+| Missing Southern tradition | −1 |
+| Missing Northern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

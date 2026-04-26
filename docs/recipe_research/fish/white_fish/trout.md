@@ -38,6 +38,8 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Trout Fillet — Cut Overview
 
@@ -58,3 +60,12 @@ thickest edge (lateral insertion) in thin fillets, or through the shoulder of a 
 ## Research files by cooking method
 
 - [Pan Sear](./trout-pan_sear.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

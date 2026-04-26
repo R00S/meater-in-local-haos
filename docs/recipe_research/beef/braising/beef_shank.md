@@ -20,6 +20,8 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
+quality_score: 20
+quality_assessed: 2026-04-26
 -->
 # Beef Shank / Osso Buco — Cut Overview
 
@@ -32,3 +34,10 @@ Beef shank is the lower portion of the front (foreshank) or hind (hindshank) leg
 
 - [Braise](./beef_shank-braise.md)
 - [Slow Cooker](./beef_shank-slow_cooker.md)
+## Quality score
+
+**Score: 20 / 20** — assessed 2026-04-26
+
+All criteria met.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

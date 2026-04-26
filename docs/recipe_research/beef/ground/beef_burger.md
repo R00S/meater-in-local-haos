@@ -23,6 +23,8 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Beef Burger / Ground Beef Patty — Cut Overview
 
@@ -36,3 +38,12 @@ Ground beef burgers are formed patties of minced beef, most commonly from a blen
 - [Air Fryer](./beef_burger-air_fryer.md)
 - [Grill](./beef_burger-grill.md)
 - [Pan Fry](./beef_burger-pan_fry.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

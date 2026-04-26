@@ -44,6 +44,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Mutton Leg Roast — Cut Overview
 
@@ -58,3 +60,12 @@ Target internal temperature: **75–80 °C (167–176 °F)** for fully cooked, s
 ## Research files by cooking method
 
 - [Oven Roast](./mutton_leg-oven_roast.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Southern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

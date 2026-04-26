@@ -45,6 +45,8 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
+quality_score: 16
+quality_assessed: 2026-04-26
 -->
 # Reindeer Steak — Cut Overview
 
@@ -60,3 +62,15 @@ Target internal temperature: **55–57 °C (131–135 °F)** for medium (Nordic 
 
 - [Grill](./reindeer_steak-grill.md)
 - [Pan Sear](./reindeer_steak-pan_sear.md)
+## Quality score
+
+**Score: 16 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Western tradition | −1 |
+| Missing Southern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

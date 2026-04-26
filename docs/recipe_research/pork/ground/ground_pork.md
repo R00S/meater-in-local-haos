@@ -20,6 +20,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 20
+quality_assessed: 2026-04-26
 -->
 # Ground Pork — Cut Overview
 
@@ -32,3 +34,10 @@ Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend o
 
 - [Braise](./ground_pork-braise.md)
 - [Pan Fry](./ground_pork-pan_fry.md)
+## Quality score
+
+**Score: 20 / 20** — assessed 2026-04-26
+
+All criteria met.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

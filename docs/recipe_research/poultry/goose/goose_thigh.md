@@ -30,6 +30,8 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Goose Thigh — Cut Overview
 
@@ -45,3 +47,12 @@ Target internal temperature: **175–185 °F (79–85 °C)** — optimal for col
 
 - [Braise](./goose_thigh-braise.md)
 - [Oven Roast](./goose_thigh-oven_roast.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

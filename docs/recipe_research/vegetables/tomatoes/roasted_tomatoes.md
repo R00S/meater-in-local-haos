@@ -27,6 +27,8 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
+quality_score: 15
+quality_assessed: 2026-04-26
 -->
 # Roasted Tomatoes — Cut Overview
 
@@ -39,3 +41,14 @@ Tomatoes (*Solanum lycopersicum*) in the air fryer roast in 8–15 minutes depen
 
 - [Air Fryer](./roasted_tomatoes-air_fryer.md)
 - [Oven Roast](./roasted_tomatoes-oven_roast.md)
+## Quality score
+
+**Score: 15 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Northern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+| No safe temperature data | −3 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

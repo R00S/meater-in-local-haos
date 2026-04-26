@@ -30,6 +30,8 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
+quality_score: 18
+quality_assessed: 2026-04-26
 -->
 # Haddock Fillet — Cut Overview
 
@@ -51,3 +53,13 @@ traditions) creates a protective crust that helps moisture retention and even br
 ## Research files by cooking method
 
 - [Pan Fry](./haddock-pan_fry.md)
+## Quality score
+
+**Score: 18 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

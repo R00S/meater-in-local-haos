@@ -29,6 +29,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 17
+quality_assessed: 2026-04-26
 -->
 # Rabbit Saddle — Cut Overview
 
@@ -55,3 +57,14 @@ and carryover is 2–3°C, so the cut demands close monitoring. Stuffed or rolle
 
 - [Oven Roast](./rabbit_saddle-oven_roast.md)
 - [Pan Sear](./rabbit_saddle-pan_sear.md)
+## Quality score
+
+**Score: 17 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

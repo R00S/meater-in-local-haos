@@ -17,6 +17,8 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
+quality_score: 15
+quality_assessed: 2026-04-26
 -->
 # Caramelized Onions — Cut Overview
 
@@ -29,3 +31,14 @@ Caramelised onions via pan-frying refers to the style in which sliced or halved 
 
 - [Pan Fry](./caramelized_onions-pan_fry.md)
 - [Sauté](./caramelized_onions-saute.md)
+## Quality score
+
+**Score: 15 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Northern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+| No safe temperature data | −3 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

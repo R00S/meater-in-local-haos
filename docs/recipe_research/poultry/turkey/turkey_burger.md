@@ -22,6 +22,8 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Turkey Burger — Cut Overview
 
@@ -35,3 +37,12 @@ A grilled turkey burger is a 150–180 g shaped patty made from coarsely-ground 
 - [Air Fryer](./turkey_burger-air_fryer.md)
 - [Grill](./turkey_burger-grill.md)
 - [Pan Fry](./turkey_burger-pan_fry.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

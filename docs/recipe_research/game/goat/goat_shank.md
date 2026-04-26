@@ -20,6 +20,8 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Goat Shank — Cut Overview
 
@@ -32,3 +34,12 @@ A goat shank (Swedish *getlägg*) is the lower portion of the animal's leg — h
 
 - [Braise](./goat_shank-braise.md)
 - [Oven Roast](./goat_shank-oven_roast.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Eastern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

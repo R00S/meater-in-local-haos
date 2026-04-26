@@ -58,6 +58,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 20
+quality_assessed: 2026-04-26
 -->
 # Flat Iron Steak — Cut Overview
 
@@ -75,3 +77,10 @@ The flat iron steak is taken from the infraspinatus muscle of the beef shoulder 
 - [Pan Fry](./flat_iron-pan_fry.md)
 - [Pan Sear](./flat_iron-pan_sear.md)
 - [Sous Vide](./flat_iron-sous_vide.md)
+## Quality score
+
+**Score: 20 / 20** — assessed 2026-04-26
+
+All criteria met.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -39,6 +39,8 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
+quality_score: 20
+quality_assessed: 2026-04-26
 -->
 # Hanger Steak — Cut Overview
 
@@ -53,3 +55,10 @@ Hanger steak over live charcoal adds an important dimension to this already inte
 - [Grill](./hanger_steak-grill.md)
 - [Pan Fry](./hanger_steak-pan_fry.md)
 - [Pan Sear](./hanger_steak-pan_sear.md)
+## Quality score
+
+**Score: 20 / 20** — assessed 2026-04-26
+
+All criteria met.
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

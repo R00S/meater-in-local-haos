@@ -58,6 +58,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 19
+quality_assessed: 2026-04-26
 -->
 # Filet Mignon / Tenderloin Steak — Cut Overview
 
@@ -75,3 +77,12 @@ Filet mignon is cut from the narrow end (small end) of the beef tenderloin — t
 - [Pan Fry](./filet_mignon-pan_fry.md)
 - [Pan Sear](./filet_mignon-pan_sear.md)
 - [Sous Vide](./filet_mignon-sous_vide.md)
+## Quality score
+
+**Score: 19 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Northern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

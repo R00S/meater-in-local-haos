@@ -30,6 +30,8 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
+quality_score: 18
+quality_assessed: 2026-04-26
 -->
 # Goose Leg — Cut Overview
 
@@ -45,3 +47,13 @@ Target internal temperature: **175–185 °F (79–85 °C)** — well above USDA
 
 - [Braise](./goose_leg-braise.md)
 - [Oven Roast](./goose_leg-oven_roast.md)
+## Quality score
+
+**Score: 18 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Missing Western tradition | −1 |
+| Missing Southern tradition | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
