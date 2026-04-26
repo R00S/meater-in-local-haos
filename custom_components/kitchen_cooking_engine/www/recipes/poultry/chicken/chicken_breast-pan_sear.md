@@ -128,6 +128,42 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 
 ---
 
+### 4. Huy Vu — Gà Xào Sả Ớt (Vietnamese Spicy Lemongrass Chicken Sauté) (Vietnamese tradition)
+**Source**: Huy Vu, Hungry Huy; https://hungryhuy.com/vietnamese-lemongrass-chicken/ (fetched 2026-04-25). *Vietnamese home-cooking classic: boneless chicken pieces marinated in salt, sugar, and fish sauce, then pan-sautéed over medium-high heat in shallots, garlic, and minced lemongrass, with a chilli sauce of fish sauce, sambal, and coconut juice. Ready in 25 minutes. Gà Xào Sả Ớt is a staple weeknight dish across Vietnam.*
+**Serves**: 2 · **Prep**: 10 min + 15 min marinate · **Cook**: 15 min
+
+**Temperature guidance (from recipe)**: Sauté over medium-high heat; cover and cook approximately 5 minutes per side, stirring and retasting. Pull when probe reads **165 °F (74 °C)** in the thickest piece, or until the centre of the chicken is no longer pink.
+
+**Ingredients**
+- 450 g (1 lb) boneless chicken breast, cut into bite-sized pieces
+- 1 tsp salt
+- 2 tsp sugar
+- ⅓ tsp MSG or chicken bouillon (optional)
+- 4 Tbsp neutral cooking oil
+- 3 Tbsp shallots, minced
+- 1 Tbsp garlic, minced
+- 4–5 Tbsp lemongrass, finely minced (from yellow inner leaves; use food processor)
+- 2 Tbsp fish sauce
+- 1 Tbsp sambal oelek (or fresh chilli paste)
+- ½ cup (120 ml) coconut juice (or lemon-lime soda, or water)
+- ½ medium onion, sliced into slivers (optional)
+- 1 stalk green onion, cut into 5 cm pieces (optional)
+- Steamed jasmine rice, to serve
+
+**Method**
+1. Combine chicken pieces with salt, sugar, and MSG (if using). Toss to coat; let marinate **15 minutes**.
+2. Trim lemongrass, discard outer rough layers, expose the yellow inner leaves; slice thinly, then finely mince in a food processor. Mince garlic and shallots separately.
+3. Mix fish sauce, sambal, and coconut juice in a small bowl to make the chilli sauce.
+4. Pat the marinated chicken dry.
+5. Heat oil in a wide pan or wok over **medium-high** heat. Add shallots; sauté until light brown. Add garlic; sauté until light brown. Add lemongrass; stir until fragrant (~1 min).
+6. Add chicken; stir and sear on all sides until lightly browned, about 2–3 minutes.
+7. Insert MEATER probe into the thickest piece.
+8. Reduce to **medium** heat; pour in the chilli sauce. Stir to mix; cover with lid.
+9. Cook approximately **5 minutes**; stir, taste, adjust seasoning if needed. Continue cooking until probe reads **165 °F (74 °C)**.
+10. Add sliced onion slivers and green onion 1–2 minutes before done; stir briefly to soften.
+11. Serve immediately with steamed jasmine rice.
+*Final internal temperature: 165–170 °F (74–77 °C).*
+
 ---
 
 ## Temperature summary
@@ -138,6 +174,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 | Skinnytaste | USA | Med-high | Thin cutlet (~1/2 in) | 4–6 min total | 165 °F (74 °C) |
 | Skinnytaste | USA | Med-high | Thick breast | 10–14 min total | 165 °F (74 °C) |
 | Nefis Yemek Tarifleri | Turkey | Med-high skillet | Cubed breast | 20 min total | 75 °C (167 °F) |
+| Huy Vu | Vietnam | Med-high → med wok/pan | Bite-sized pieces | ~15 min total | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **160 °F (71 °C)** → pull and rest

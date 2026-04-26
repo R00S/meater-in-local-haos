@@ -24,6 +24,8 @@ cut_type: Dark Meat
 
 Chicken thigh (the biceps femoris and related muscles of the upper leg) is a dark-meat cut with significantly higher fat and connective tissue than the breast. Higher fat (6–10% vs 1–2% for breast) means thighs stay moist across a much wider temperature range and resist drying even when overcooked. Connective tissue collagen converts to gelatin above 70°C, improving mouthfeel. Bone-in thighs are more flavourful and forgiving; boneless thighs cook faster and more evenly. USDA minimum safe temperature is 74°C (165°F); experienced cooks often cook to 80–85°C for better texture once collagen has fully converted. Carryover is 3–5°C.
 
+Oven-roasted chicken thighs are a centrepiece dish across global cuisines. In Egypt and the broader Levant, thighs are rubbed with cumin, paprika, lemon, and tomato paste and roasted over a bed of onions. In India, **Tandoori Murgh** marinates thighs (and drumsticks) overnight in spiced yogurt before roasting at high heat in a tandoor or conventional oven to achieve charred edges and a juicy interior. In Greece, yogurt and breadcrumb coatings create crispy oven-baked thighs. In West Africa, thighs roasted with dried thyme, garlic powder, and cayenne are a festive staple. The oven roast method — high dry heat, basting or spiced crust, rest and serve — is universal.
+
 Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat
 
 ## Source recipes
@@ -127,6 +129,41 @@ Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)
 
 ---
 
+### 4. Suzy Karadsheh — Baked Chicken Thighs with Mediterranean Spiced Tomato Rub (Egyptian / Middle Eastern tradition)
+**Source**: Suzy Karadsheh (Egyptian-American food writer), The Mediterranean Dish; https://www.themediterraneandish.com/baked-chicken-thighs/ (fetched 2026-04-25). *Egyptian-inspired oven-roasted bone-in chicken thighs coated in a spiced tomato paste–olive oil–lemon–cumin–paprika wet rub; layered over sliced onions and tomato in a baking dish; roasted at 425 °F (218 °C) for 40 minutes then briefly broiled.*
+**Serves**: 8 · **Prep**: 20 min · **Cook**: 40 min oven + 1–3 min broil
+
+**Temperature guidance (from recipe)**: Bake at **425 °F (218 °C)** for approximately **40 minutes** until cooked through (165 °F / 74 °C). Broil 1–3 minutes to brown the skin. Rest 5–10 minutes.
+
+**Ingredients**
+- 8 bone-in, skin-on chicken thighs (excess fat trimmed)
+- Kosher salt
+- Extra-virgin olive oil
+- 3 medium yellow onions, halved and thinly sliced
+- 1 vine-ripe tomato, halved and sliced
+- ¼ cup (60 ml) water
+- 5 Tbsp tomato paste
+- ⅓ cup (80 ml) extra-virgin olive oil (for the rub)
+- Juice of 1 lemon
+- 4 cloves garlic, minced
+- 1 tsp dried oregano
+- 1 tsp smoked paprika
+- 1 tsp ground cumin
+- 1 tsp ground black pepper
+- Fresh parsley, chopped (to garnish)
+
+**Method**
+1. Arrange one oven rack in the centre and another about 15 cm from the broiler. Preheat oven to **425 °F (218 °C)**.
+2. Sprinkle chicken thighs with kosher salt on both sides and underneath the skin.
+3. Whisk together tomato paste, olive oil, lemon juice, minced garlic, oregano, smoked paprika, cumin, and black pepper to form a wet rub.
+4. Coat chicken thoroughly on all surfaces, including underneath the skin.
+5. Brush the base of a 23 × 33 cm baking dish with olive oil. Arrange three-quarters of the sliced onions on the bottom. Place chicken on top of the onions. Tuck remaining onions and tomato slices into the spaces around the chicken. Pour water into the corners of the dish.
+6. Insert MEATER probe into the thickest part of one thigh, avoiding the bone.
+7. Bake until probe reads **165 °F (74 °C)** — approximately **40 minutes**.
+8. Move dish to top rack; switch oven to broil (high). Broil **1–3 minutes** until the top browns. Watch closely to avoid burning.
+9. Rest **5–10 minutes**. Garnish with fresh parsley. Serve with couscous, warm flatbread, or rice.
+*Final resting temperature: 165–170 °F (74–77 °C).*
+
 ---
 
 ## Temperature summary
@@ -136,6 +173,7 @@ Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)
 | Natasha's Kitchen | USA | 400 → 450 °F (204 → 232 °C) | Boneless 3 lbs | 35 min | 175 °F (79 °C) |
 | Skinnytaste | USA | 425 °F (218 °C) | Bone-in skin-on | 55–60 min | 165–175 °F (74–79 °C) |
 | Argiro Barbarigou | Greece | 180 °C (356 °F) static | Bone-in skin-on | 45 min | 75 °C (167 °F) |
+| Suzy Karadsheh | Egypt/USA | 425 °F (218 °C) + broil | Bone-in skin-on | ~40 min + 1–3 min broil | 165 °F (74 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **170 °F (77 °C)** → pull and rest

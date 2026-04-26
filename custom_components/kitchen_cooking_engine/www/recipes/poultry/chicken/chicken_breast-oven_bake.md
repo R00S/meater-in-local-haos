@@ -24,6 +24,8 @@ cut_type: Breast
 
 Boneless, skinless chicken breast is an extremely lean cut that cooks quickly and can dry out easily. The key techniques are: pound to even thickness so the whole piece cooks at the same rate; use a hot oven (400–425 °F / 200–218 °C); pull at exactly 165 °F (74 °C) internal; and rest 5–10 minutes. Some recipes brine first (30 min to 2 h in salted water) for extra moisture insurance.
 
+Oven-baked chicken breast reaches nearly every culture's kitchen. In India, the classical approach is **Tandoori Chicken** — yogurt-spiced, charred in a clay tandoor or replicated in a very hot conventional oven (240 °C / 460 °F) on a rack. In the Levant, chicken breast is oven-baked as **Shawarma** on a skewer rack with cumin, turmeric, and cinnamon. In North Africa, harissa paste is rubbed on breast before oven-baking. In China, chicken breast is glazed with hoisin and char siu sauce and oven-roasted at high heat. The principle — hot oven, spiced coating or marinade, rest — is universal; only the spice palettes differ.
+
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry, fully safe; higher leads to dryness.
 
 ## Source recipes
@@ -106,6 +108,46 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry, 
 
 ---
 
+### 4. Swasthi Shreekanth — Tandoori Chicken (Indian tradition)
+**Source**: Swasthi Shreekanth, Indian Healthy Recipes; https://www.indianhealthyrecipes.com/tandoori-chicken-recipe/ (fetched 2026-04-25). *Smoky restaurant-style tandoori chicken: skinless thighs or breast marinated overnight in spiced Greek yogurt with ginger-garlic paste, Kashmiri red chili, garam masala, kasuri methi, and lemon juice; roasted on a wire rack at 240 °C (460 °F) for 25–30 minutes, basted midway, then briefly broiled for charred spots. A classic of North Indian tandoor cooking.*
+**Serves**: 4 · **Prep**: 15 min + overnight marinate · **Cook**: 40–45 min total (oven + broil)
+
+**Temperature guidance (from recipe)**: Oven at **240 °C / 460 °F** for **25–30 minutes** (baste at 12–15 min mark), then broil **3–4 minutes**. Pull when MEATER probe reads **165–170 °F (75 °C)**. Rest briefly; brush with melted butter.
+
+**Ingredients — Marinade**
+- ¾ kg (1.5 lbs) boneless chicken breast or skinless thighs
+- ½ cup Greek yogurt (hung curd)
+- 1 Tbsp ginger-garlic paste
+- 1–2 tsp Kashmiri red chili powder (or paprika; adjust to heat preference)
+- 1 tsp garam masala
+- 1½ tsp ground coriander
+- ½ tsp cumin powder
+- ¼ tsp black pepper, crushed
+- ¼ tsp turmeric
+- 1 tsp kasuri methi (dried fenugreek leaves)
+- 1 Tbsp lemon juice
+- 1½ Tbsp oil (mustard oil if available, otherwise neutral)
+- ½ tsp sea salt (adjust to taste)
+
+**Finishing**
+- 1 tsp Kashmiri red chili powder mixed with 1–2 Tbsp oil (for basting)
+- Melted butter (to brush after baking)
+- Cilantro leaves, lemon wedges, sliced onion (to serve)
+
+**Method**
+1. In a large bowl, stir together yogurt, ginger-garlic paste, garam masala, red chili powder, salt, turmeric, kasuri methi, pepper, coriander powder, cumin, oil, and lemon juice. Taste and adjust seasoning.
+2. Pat chicken dry with paper towels; make deep slits (3–4 on larger pieces). Add to marinade and coat well.
+3. Cover and refrigerate at least **6 hours**, ideally overnight.
+4. Preheat oven to **240 °C / 460 °F** (smaller OTG ovens: 220 °C / 430 °F). Place a wire rack over a foil-lined baking tray; spray the rack with oil.
+5. Arrange marinated chicken on the rack, spacing apart. Insert MEATER probe into the thickest piece.
+6. Roast for **12–15 minutes**; baste with the chili-oil mixture. Flip and roast another **12–15 minutes**.
+7. Move tray to the top rack; broil **3–4 minutes** to develop charred spots. Check probe — target **165 °F / 75 °C**.
+8. Remove from oven. Brush drippings or melted butter over chicken to keep moist.
+9. Garnish with cilantro; serve with mint chutney, sliced onion, and lemon wedges.
+*Final serving temperature: 165–170 °F (74–77 °C).*
+
+---
+
 ## Temperature summary
 
 | Source | Country | Oven temp | Thickness | Time | Target internal |
@@ -113,6 +155,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry, 
 | Skinnytaste | US | 425 °F (218 °C) | even, pounded | ~25 min | 165 °F (74 °C) |
 | Natasha's Kitchen | US | 400 °F (204 °C) | ½–1" | 16–26 min | 165 °F (74 °C) |
 | Jessica Gavin | US | 425 °F (218 °C) | ¾" | 14–17 min | 160–165 °F (71–74 °C) |
+| Swasthi Shreekanth | India | 240 °C / 460 °F + broil | Bone-in pieces | 25–30 min + 3–4 min broil | 165–170 °F (75 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **160 °F (71 °C)** → start checking; pull at **165 °F (74 °C)**

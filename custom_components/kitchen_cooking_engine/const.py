@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 25 Apr 2026, 22:34 UTC
-Last Change: v0.6.2.01 - Add Lovelace custom card support (kitchen-cooking-card)
+Last Change: v0.6.2.02 - Improve global recipe diversity across pork, chicken, beef, lamb, and fish files
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "305"
+PANEL_VERSION = "306"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

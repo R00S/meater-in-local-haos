@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.6.2.01 · Home Assistant 2024.1.0+
+> **Version:** 0.6.2.02 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -464,7 +464,10 @@ associated research file. Tapping a method pill opens that file the same way: de
 paragraph first, then individual recipe title buttons, then a single-recipe view on tap.
 
 The research files contain 4–6 source recipes drawn from globally diverse published
-cookbooks and food websites, with non-Western sources prioritised. Each file lists:
+cookbooks and food websites, with non-Western sources actively prioritised. Traditions
+represented include Thai, Vietnamese, Indian, West African, Nigerian/Caribbean, Egyptian,
+Turkish, Greek, Japanese, Chinese, Persian, Middle Eastern, Korean, and Australian
+alongside European traditions. Each file lists:
 - The cut-method description (from `## Cut profile`)
 - Ingredients with quantities
 - Step-by-step method

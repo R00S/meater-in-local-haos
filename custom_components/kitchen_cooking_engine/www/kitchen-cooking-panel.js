@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 25 Apr 2026, 23:40 CET
+ * AUTO-GENERATED: 26 Apr 2026, 07:46 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 25 Apr 2026, 23:40 CET
+// Last generated: 26 Apr 2026, 07:46 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -17883,8 +17883,8 @@ const CUT_METHOD_PROFILES = {
   },
   "chicken_breast": {
     "air_fryer": "Chicken breast is a lean, boneless cut that dries out quickly when overcooked. Pounding to even thickness and brining are the two most effective techniques for retaining moisture. Because there is minimal fat to buffer heat, precise temperature monitoring is critical.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry",
-    "grill": "Boneless skinless chicken breast is one of the most popular grilling cuts. Because it is very lean, it benefits enormously from a marinade that adds moisture and flavour before the high, dry heat of the grill. Slicing into thin cutlets dramatically reduces cook time and edge-to-edge doneness problems.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry",
-    "oven_bake": "Boneless, skinless chicken breast is an extremely lean cut that cooks quickly and can dry out easily. The key techniques are: pound to even thickness so the whole piece cooks at the same rate; use a hot oven (400–425 °F / 200–218 °C); pull at exactly 165 °F (74 °C) internal; and rest 5–10 minutes. Some recipes brine first (30 min to 2 h in salted water) for extra moisture insurance.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry, fully safe; higher leads to dryness.",
+    "grill": "Boneless skinless chicken breast is one of the most popular grilling cuts. Because it is very lean, it benefits enormously from a marinade that adds moisture and flavour before the high, dry heat of the grill. Slicing into thin cutlets dramatically reduces cook time and edge-to-edge doneness problems.\n\nGrilled chicken breast spans every grilling culture on earth. In Thailand, **Gai Yang** marinates bone-in breast halves in lemongrass, coriander seed, garlic, fish sauce, and black soy sauce before grilling low-and-slow for characteristic smoky char and juicy flesh. In India, **Chicken Tikka** uses spiced yogurt-marinated boneless breast cubes on skewers, cooked over charcoal or a gas grill. In the Levant, boneless breast strips are marinated in spices and lemon (shish tawook) and grilled on skewers. Across West Africa and the Caribbean, spiced, marinated breast halves are grilled over charcoal or wood fire as part of festive meals.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry",
+    "oven_bake": "Boneless, skinless chicken breast is an extremely lean cut that cooks quickly and can dry out easily. The key techniques are: pound to even thickness so the whole piece cooks at the same rate; use a hot oven (400–425 °F / 200–218 °C); pull at exactly 165 °F (74 °C) internal; and rest 5–10 minutes. Some recipes brine first (30 min to 2 h in salted water) for extra moisture insurance.\n\nOven-baked chicken breast reaches nearly every culture's kitchen. In India, the classical approach is **Tandoori Chicken** — yogurt-spiced, charred in a clay tandoor or replicated in a very hot conventional oven (240 °C / 460 °F) on a rack. In the Levant, chicken breast is oven-baked as **Shawarma** on a skewer rack with cumin, turmeric, and cinnamon. In North Africa, harissa paste is rubbed on breast before oven-baking. In China, chicken breast is glazed with hoisin and char siu sauce and oven-roasted at high heat. The principle — hot oven, spiced coating or marinade, rest — is universal; only the spice palettes differ.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry, fully safe; higher leads to dryness.",
     "pan_sear": "Boneless, skinless chicken breast is the pectoralis major muscle — the largest muscle of the bird. Because domesticated chickens rarely flap vigorously, this muscle has almost no connective tissue or intramuscular fat, making it the leanest cut of the bird. The lack of fat means it dries out quickly above 74°C (165°F). Typical weight is 170–280 g uncooked; thicker single-piece breasts benefit from butterflying or pounding to even thickness. USDA minimum safe temperature is 74°C (165°F); modern sous vide guidance allows 63°C (145°F) with adequate pasteurisation hold time. Carryover is 2–4°C.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry"
   },
   "chicken_burger": {
@@ -17897,8 +17897,8 @@ const CUT_METHOD_PROFILES = {
   },
   "chicken_thigh": {
     "air_fryer": "Chicken thighs are a forgiving, flavourful dark-meat cut. Their higher fat content makes them well-suited to the air fryer's rapid circulating heat, which renders the fat and crisps the skin beautifully without drying the meat out. Bone-in skin-on thighs take longer than boneless but deliver the crispiest skin. Dark meat benefits from cooking above the USDA minimum to 175 °F (79 °C), where collagen fully converts to gelatin.\n\nTarget internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat",
-    "grill": "Chicken thighs are the ideal grilling cut: their higher fat content means they stay moist even over high, direct heat and they are far more forgiving than breast if slightly overcooked. Bone-in skin-on thighs take 25–30 minutes; boneless thighs are quicker at 10–15 minutes. A good marinade and BBQ baste add deep flavour and help char the exterior while keeping the interior juicy.\n\nTarget internal temperature: **165 °F (74 °C)** minimum — **170 °F (77 °C)** preferred for dark meat",
-    "oven_roast": "Chicken thigh (the biceps femoris and related muscles of the upper leg) is a dark-meat cut with significantly higher fat and connective tissue than the breast. Higher fat (6–10% vs 1–2% for breast) means thighs stay moist across a much wider temperature range and resist drying even when overcooked. Connective tissue collagen converts to gelatin above 70°C, improving mouthfeel. Bone-in thighs are more flavourful and forgiving; boneless thighs cook faster and more evenly. USDA minimum safe temperature is 74°C (165°F); experienced cooks often cook to 80–85°C for better texture once collagen has fully converted. Carryover is 3–5°C.\n\nTarget internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat"
+    "grill": "Chicken thighs are the ideal grilling cut: their higher fat content means they stay moist even over high, direct heat and they are far more forgiving than breast if slightly overcooked. Bone-in skin-on thighs take 25–30 minutes; boneless thighs are quicker at 10–15 minutes. A good marinade and BBQ baste add deep flavour and help char the exterior while keeping the interior juicy.\n\nGrilled chicken thighs appear in culinary traditions across the globe. In Thailand, **Gai Yang** (ไก่ย่าง) — marinated in lemongrass, coriander seed, garlic, and fish sauce — is the definitive street-food grill, sold from roadside stalls to temple fairs across the country. In India, **Tandoori Chicken** (thighs and legs on the bone) is marinated in spiced yogurt and cooked in a tandoor or grill. In West Africa, chicken grilled over charcoal with aromatic spice rubs is central to festive cooking. In the Levant and Persia, chicken thighs on skewers (joojeh kabab, shish tawook) are a cornerstone of summer grilling.\n\nTarget internal temperature: **165 °F (74 °C)** minimum — **170 °F (77 °C)** preferred for dark meat",
+    "oven_roast": "Chicken thigh (the biceps femoris and related muscles of the upper leg) is a dark-meat cut with significantly higher fat and connective tissue than the breast. Higher fat (6–10% vs 1–2% for breast) means thighs stay moist across a much wider temperature range and resist drying even when overcooked. Connective tissue collagen converts to gelatin above 70°C, improving mouthfeel. Bone-in thighs are more flavourful and forgiving; boneless thighs cook faster and more evenly. USDA minimum safe temperature is 74°C (165°F); experienced cooks often cook to 80–85°C for better texture once collagen has fully converted. Carryover is 3–5°C.\n\nOven-roasted chicken thighs are a centrepiece dish across global cuisines. In Egypt and the broader Levant, thighs are rubbed with cumin, paprika, lemon, and tomato paste and roasted over a bed of onions. In India, **Tandoori Murgh** marinates thighs (and drumsticks) overnight in spiced yogurt before roasting at high heat in a tandoor or conventional oven to achieve charred edges and a juicy interior. In Greece, yogurt and breadcrumb coatings create crispy oven-baked thighs. In West Africa, thighs roasted with dried thyme, garlic powder, and cayenne are a festive staple. The oven roast method — high dry heat, basting or spiced crust, rest and serve — is universal.\n\nTarget internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat"
   },
   "chicken_wing": {
     "air_fryer": "Chicken wings (wingettes and drumettes) are small, high-surface-area dark-meat pieces that become irresistibly crispy in the air fryer without deep frying. The single most effective technique for extra-crispy skin is tossing wings with a small amount of baking powder before cooking — it raises the skin's pH, causing it to blister and brown faster. Patting wings dry is equally critical.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry"
@@ -18195,10 +18195,10 @@ const CUT_METHOD_PROFILES = {
     "smoker": "Pork shoulder / neck (Schweinenacken / Schweineschulter in German/Austrian; nakkefilet / svinekam in Danish/Norwegian) is the most popular cut for smoked pulled pork. Its high fat content and generous marbling makes it extremely forgiving over the 10–18 hours of low-and-slow smoking required to convert collagen to gelatin. The plateau phase (Stall) at 65–82°C is normal and does not mean something is wrong. The smoke ring (Rauchring) develops in the first 2–3 hours. Target internal: **90–95 °C** for pull-apart texture. Boston Butt (bone-in shoulder) = more flavour and longer cook; Schweinenacken (boneless neck) = faster and more even.\n\nTarget internal temperatures (smoker):\n- Sliceable (not pulled): **82–88 °C (180–190 °F)**\n- Classic pulled pork: **90–95 °C (194–203 °F)**"
   },
   "pork_chop": {
-    "air_fryer": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\nTarget internal temperatures (air fryer):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
-    "grill": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\nTarget internal temperatures (grill):\n- Juicy/pink: **62–65 °C (144–149 °F)**",
-    "oven_roast": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\nTarget internal temperatures (oven roast):\n- Juicy/pink: **63–65 °C (145–149 °F)**\n- Well done: **70–72 °C (158–162 °F)**",
-    "pan_fry": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\nTarget internal temperatures (pan fry):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)** (safe and recommended)\n- Well done: **70–72 °C (158–162 °F)**",
+    "air_fryer": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\nAir-frying is one of the fastest and most consistent methods for pork chops — hot dry air circulates at 375–400 °F (190–205 °C), producing a crispy exterior while the interior stays juicy at 145 °F (63 °C). Seasoning styles vary widely by tradition: in West African and Caribbean Creole cooking, chops are rubbed with Creole spice blend (paprika, cayenne, thyme, garlic, onion) and a touch of brown sugar; in Italy, olive oil, garlic, and dried oregano; in Denmark, simple salt, pepper, and thyme. The common thread is the method — high convection heat, flip once, short cook time.\n\nTarget internal temperatures (air fryer):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
+    "grill": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\nGrilled pork chops are central to culinary traditions far beyond Europe. In Vietnam, **Sườn Nướng** (lemongrass–fish-sauce marinated grilled chops) is an everyday rice-plate dish sold at roadside stalls across the country. In Thailand, thin marinated pork slices grilled on skewers (Moo Ping) are quintessential street food. In Korea, pork is the dominant grilling meat. In West Africa and the Caribbean, bone-in pork chops are marinated in aromatic spice blends and charred over open flame. The core technique — direct high heat, char on the exterior, juicy interior — is universal.\n\nTarget internal temperatures (grill):\n- Juicy/pink: **62–65 °C (144–149 °F)**",
+    "oven_roast": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\nOven-roasting pork chops is practised across every continent where pork features in the cuisine. In West Africa and the Caribbean, bone-in chops are rubbed with Creole spice blends, brown sugar, and garlic, then roasted at high heat to achieve a caramelised exterior. In China, char siu (叉燒) roasts pork in a honey-soy-five-spice glaze. In India (Goa and Malabar), pork is marinated in vinegar and spices before oven-roasting. In the Philippines, pork is central to lechon (whole roast) and sinigang traditions. The oven method — high heat bake with a resting period — is universal.\n\nTarget internal temperatures (oven roast):\n- Juicy/pink: **63–65 °C (145–149 °F)**\n- Well done: **70–72 °C (158–162 °F)**",
+    "pan_fry": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\nPan-frying pork is a cornerstone technique across Asia. In Thailand, **Moo Tod Gratiem Prik Thai** (หมูทอดกระเทียมพริกไทย — garlic-pepper pork) is one of the most ordered street-food dishes: thin chops or pork slices marinated in garlic, cilantro root, and white pepper, then shallow-fried in a wok until golden and crispy. In China, 锅贴排骨 (pan-fried pork ribs) uses soy-based marinades and shallow-frying. In Vietnam, Sườn Chiên pan-fried chops are a popular home-cooking dish. In Japan, tonkatsu uses a breaded shallow-fry on pork cutlets. The thin-cut, high-heat, oil-fry approach yields caramelised exteriors impossible to achieve in a dry pan.\n\nTarget internal temperatures (pan fry):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)** (safe and recommended)\n- Well done: **70–72 °C (158–162 °F)**",
     "pan_sear": "Pan-searing a pork chop emphasises the crust rather than the flip. A screaming hot dry pan (or minimal oil), long uninterrupted contact on one side to build a Maillard crust before turning — then finish the second side. The same three traditions apply as for pan_fry but the emphasis differs: this file captures the high-heat sear + finish approach, including the constant-turning crust technique and the oven-finish option for thick chops.\n\nTarget internal temperatures:\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**"
   },
   "pork_loin_steak": {
@@ -18210,7 +18210,7 @@ const CUT_METHOD_PROFILES = {
   "pork_tenderloin": {
     "air_fryer": "Pork tenderloin in the air fryer is fast (20 minutes total) and delivers juicy results because the circulating hot air seals the outside quickly. The Spanish method (directoalpaladar.com) uses a bacon wrap which adds flavour and fat to the lean meat. A whole tenderloin (300–400 g) is cut in half to fit the basket. 200 °C × 10 min per side + 5 min rest. Core target: 63–65 °C.\n\nTarget internal temperatures (air fryer):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
     "grill": "Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo) is the leanest cut of pork and the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.\n\nTarget internal temperatures (grill):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
-    "oven_roast": "Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo) is the leanest cut of pork and the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.\n\nTarget internal temperatures (oven roast):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
+    "oven_roast": "Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo / 猪里脊) is the leanest cut of pork — a long, narrow muscle that runs along the lumbar spine, removed from the loin. It is found inside the loin section, between the rib cage and the hip. Because it does so little work, it is the most tender muscle on the pig. It is also the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.\n\nOven-roasted whole pork tenderloin is a technique used across global cuisines. In West African and Caribbean-influenced Creole cooking, the tenderloin is rubbed with paprika, thyme, garlic, and cayenne, seared in cast iron, then roasted on a rack. In Denmark, a pan-seared whole tenderloin finished in the oven is a classic everyday dish. In Spain, the solomillo is oven-roasted with olive oil and herbs. In China, the 里脊 (lǐ jǐ / tenderloin) is marinated in soy-ginger and roasted as a loose cousin of Char Siu. The high heat oven roast is the most universal cooking method for this cut.\n\nTarget internal temperatures (oven roast):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
     "pan_sear": "Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo) is the leanest cut of pork and the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.\n\nTarget internal temperatures (pan sear):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
     "sous_vide": "Pork tenderloin is an ideal candidate for sous vide: lean meat has no fat buffer so even slight overcooking in a conventional pan is noticeable, whereas a 58 °C bath delivers uniform, perfectly pink results wall-to-wall. Bath time for a whole tenderloin (300–400 g): 1–1.5 hours. After the bath, dry completely and sear 1–2 minutes total for a crust. The Danish method uses BBQ sauce as a finish layer during searing.\n\nTarget sous vide bath temperatures (pork tenderloin):\n- Pink/juicy: **58–60 °C (136–140 °F)** × 1–1.5 hr\n- More done: **63–65 °C (145–149 °F)** × 1–1.5 hr"
   },
@@ -19224,6 +19224,7 @@ const RECIPE_TITLES_INDEX = {
       "Skinnytaste — Air Fryer Chicken Breast",
       "Natasha's Kitchen — Air Fryer Chicken Thighs (temperature reference for dark-meat context)",
       "BBC Good Food — Air Fryer Chicken Breasts",
+      "Swasthi Shreekanth — Chicken Tikka in Air Fryer (Indian tradition)",
       "Brining guidance",
       "Air fryer model differences",
       "Carry-over cooking",
@@ -19236,6 +19237,7 @@ const RECIPE_TITLES_INDEX = {
       "Skinnytaste — Grilled Chicken Breast",
       "Natasha's Kitchen — Juicy Grilled BBQ Chicken Breast",
       "BBC Good Food — Cajun Chicken",
+      "Pailin Chongchitnant — Gai Yang ไก่ย่าง — Thai BBQ Chicken Breast (Thai tradition)",
       "Preventing drying on the grill",
       "Grill temperature management",
       "Grill marks",
@@ -19248,12 +19250,14 @@ const RECIPE_TITLES_INDEX = {
     "oven_bake": [
       "Skinnytaste / Gina Homolka — Baked Chicken Breast (mayo + panko crust)",
       "Natasha's Kitchen / Natasha Kravchuk — Baked Chicken Breast",
-      "Jessica Gavin — Baked Chicken Breast (high-heat method)"
+      "Jessica Gavin — Baked Chicken Breast (high-heat method)",
+      "Swasthi Shreekanth — Tandoori Chicken (Indian tradition)"
     ],
     "pan_sear": [
       "Jessica Gavin — How to Cook Chicken on the Stove",
       "Skinnytaste — Pan-Seared Chicken Breast (adapted from grilled cutlets method)",
       "Sevcan Kayabaş — Tavuk Göğüs Sote (Turkish Pan-Sautéed Chicken Breast with Vegetables)",
+      "Huy Vu — Gà Xào Sả Ớt (Vietnamese Spicy Lemongrass Chicken Sauté) (Vietnamese tradition)",
       "Pan selection matters",
       "Avoiding the rubbery breast problem",
       "Butter basting",
@@ -19311,6 +19315,7 @@ const RECIPE_TITLES_INDEX = {
       "Jessica Gavin — Baked Chicken Legs",
       "Natasha's Kitchen — Baked Chicken Drumsticks",
       "BBC Good Food — Sticky Chicken Drumsticks",
+      "Swasthi Shreekanth — Tandoori Chicken Legs (Indian tradition)",
       "High heat vs. lower-and-slower",
       "Crispy skin guidelines",
       "Temperature probe placement for drumsticks",
@@ -19325,6 +19330,7 @@ const RECIPE_TITLES_INDEX = {
       "Natasha's Kitchen — Air Fryer Chicken Thighs",
       "Skinnytaste — Air Fryer Chicken Thighs",
       "BBC Good Food — Air Fryer Chicken Thighs",
+      "Imma Adamu — Air Fryer Chicken (West African / Caribbean tradition)",
       "Bone-in vs. boneless in the air fryer",
       "The 175 °F sweet spot for dark meat",
       "Air fryer basket management",
@@ -19336,6 +19342,7 @@ const RECIPE_TITLES_INDEX = {
       "Jessica Gavin — Grilled Chicken Thighs",
       "Natasha's Kitchen — Juicy BBQ Chicken Thighs",
       "Immaculate Bites — Hawaiian Grilled Chicken Thighs",
+      "Pailin Chongchitnant — Gai Yang ไก่ย่าง (Ultimate Thai BBQ Chicken) (Thai tradition)",
       "Bone-in vs. boneless on the grill",
       "Two-zone grilling for bone-in thighs",
       "BBQ sauce timing",
@@ -19347,6 +19354,7 @@ const RECIPE_TITLES_INDEX = {
       "Natasha's Kitchen — BBQ Oven-Baked Chicken Thighs",
       "Skinnytaste — Baked Chicken Thighs with Vegetables",
       "Argiro Barbarigou — Μπουτάκια Κοτόπουλο στο Φούρνο (Greek Yogurt-Crusted Oven Chicken Thighs)",
+      "Suzy Karadsheh — Baked Chicken Thighs with Mediterranean Spiced Tomato Rub (Egyptian / Middle Eastern tradition)",
       "Skin crispiness in the oven",
       "Bone-in vs. boneless in the oven",
       "Temperature probe placement (oven roast)",
@@ -19361,6 +19369,7 @@ const RECIPE_TITLES_INDEX = {
       "Natasha's Kitchen — Air Fryer Chicken Wings",
       "Skinnytaste — Air Fryer Chicken Wings",
       "Immaculate Bites — Crispy Grilled Chicken Wings",
+      "Pailin Chongchitnant — Crispy Thai Fish Sauce Wings (Thai tradition)",
       "The baking powder secret",
       "Drying wings before cooking",
       "Sauce application for air fryer wings",
@@ -19404,6 +19413,7 @@ const RECIPE_TITLES_INDEX = {
       "Jessica Gavin — Whole Roasted Chicken",
       "Natasha's Kitchen — Juicy Whole Roast Chicken (adapted from roast turkey method)",
       "BBC Good Food — Simple Roast Chicken",
+      "Suzy Karadsheh — Easy Oven Roasted Chicken (Egyptian / Mediterranean tradition)",
       "Breast-down vs. breast-up starting position",
       "Resting is non-negotiable",
       "Trussing benefits",
@@ -20467,22 +20477,26 @@ const RECIPE_TITLES_INDEX = {
     "air_fryer": [
       "Madens Verden — Herregårdskotelet i airfryer (Danish tradition)",
       "ichkoche.at — Schopfsteak aus dem Airfryer (adapted for pork chop) (Austrian tradition)",
-      "GialloZafferano — Braciole di maiale in friggitrice ad aria (Italian tradition)"
+      "GialloZafferano — Braciole di maiale in friggitrice ad aria (Italian tradition)",
+      "Imma Adamu — Air-Fryer Pork Chops with Creole Seasoning (West African / Caribbean tradition)"
     ],
     "grill": [
       "Madens Verden — Svinekoteletter på grill (Danish tradition)",
       "ichkoche.at — Grillkotelett (Austrian tradition)",
-      "Directo al Paladar — Chuleta de cerdo a la plancha (adapted for grill) (Spanish tradition)"
+      "Directo al Paladar — Chuleta de cerdo a la plancha (adapted for grill) (Spanish tradition)",
+      "Huy Vu — Sườn Nướng (Vietnamese Grilled Pork Chops) (Vietnamese tradition)"
     ],
     "oven_roast": [
       "ichkoche.at — Schweinskotelett mit Apfelgemüse vom Blech (Austrian tradition)",
       "Madens Verden — Svinekotelet med skaft i ovn (adapted) (Danish tradition)",
-      "Directo al Paladar — Solomillo de cerdo al horno (adapted for chops) (Spanish tradition)"
+      "Directo al Paladar — Solomillo de cerdo al horno (adapted for chops) (Spanish tradition)",
+      "Imma Adamu — Oven Baked Pork Chops (West African / Caribbean tradition)"
     ],
     "pan_fry": [
       "Madens Verden — Pandestegning af koteletter (Danish tradition)",
       "ichkoche.at — Schweinskotelett (Austrian tradition)",
-      "Directo al Paladar — Chuleta de cerdo a la plancha (Spanish tradition)"
+      "Directo al Paladar — Chuleta de cerdo a la plancha (Spanish tradition)",
+      "Pailin Chongchitnant — Moo Tod Gratiem Prik Thai หมูทอดกระเทียมพริกไทย (Thai tradition)"
     ],
     "pan_sear": [
       "Directo al Paladar — Chuleta de cerdo a la plancha (Spanish tradition)",
@@ -20518,7 +20532,8 @@ const RECIPE_TITLES_INDEX = {
     "oven_roast": [
       "Directo al Paladar — Solomillo de cerdo al horno con patatas (Spanish tradition)",
       "ichkoche.at — Schweinefilet im Speckmantel (Austrian tradition)",
-      "Madens Verden — Helstegt svinemørbrad i ovn (Danish tradition)"
+      "Madens Verden — Helstegt svinemørbrad i ovn (Danish tradition)",
+      "Imma Adamu — Creole-Spiced Pork Tenderloin Roast (West African / Caribbean tradition)"
     ],
     "pan_sear": [
       "Directo al Paladar — Solomillo de cerdo a la plancha (Spanish tradition)",
@@ -35373,7 +35388,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "305";
+const PANEL_VERSION = "306";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

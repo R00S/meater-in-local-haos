@@ -116,6 +116,45 @@ Target internal temperature: **170–175 °F (77–79 °C)** — recommended for
 
 ---
 
+### 4. Swasthi Shreekanth — Tandoori Chicken Legs (Indian tradition)
+**Source**: Swasthi Shreekanth, Indian Healthy Recipes; https://www.indianhealthyrecipes.com/tandoori-chicken-recipe/ (fetched 2026-04-25). *North Indian tandoori — bone-in chicken legs and drumsticks deeply slashed, marinated overnight in spiced Greek yogurt (Kashmiri chili, garam masala, ginger-garlic paste, kasuri methi, lemon juice), roasted on a wire rack at 240 °C (460 °F) for 25–30 minutes, basted midway, then briefly broiled for charred spots. The dark-meat version of the iconic Indian oven-roast.*
+**Serves**: 4 · **Prep**: 15 min + overnight marinate · **Cook**: 40–45 min total (oven + broil)
+
+**Temperature guidance (from recipe)**: Oven at **240 °C / 460 °F** for **25–30 minutes** (baste and flip at 12–15 min mark), then broil **3–4 minutes**. Target probe reads **165–170 °F (75 °C)** in the thickest part of the thigh or drumstick, away from bone.
+
+**Ingredients — Marinade**
+- ¾ kg (1.5 lbs) bone-in chicken legs and/or drumsticks, skinless
+- ½ cup Greek yogurt (hung curd)
+- 1 Tbsp ginger-garlic paste
+- 1–2 tsp Kashmiri red chili powder (or paprika; adjust to taste)
+- 1 tsp garam masala
+- 1½ tsp ground coriander
+- ½ tsp cumin powder
+- ¼ tsp turmeric
+- ¼ tsp black pepper, crushed
+- 1 tsp kasuri methi (dried fenugreek leaves)
+- 1 Tbsp lemon juice
+- 1½ Tbsp oil (mustard oil preferred)
+- ½ tsp sea salt
+
+**Finishing**
+- 1 tsp Kashmiri red chili powder mixed with 1–2 Tbsp oil (for basting)
+- Melted butter (to brush after baking)
+- Cilantro leaves, lemon wedges, sliced onion (to serve)
+
+**Method**
+1. Make deep slits in the chicken legs (3–4 cuts per piece). This helps marinade penetrate to the bone.
+2. Mix all marinade ingredients in a bowl; taste and adjust salt and heat. Coat chicken thoroughly; push marinade into the slits.
+3. Cover and refrigerate at least **6 hours**, ideally overnight.
+4. Preheat oven to **240 °C / 460 °F**. Place a wire rack over a foil-lined baking tray; spray rack with oil.
+5. Arrange legs on rack; insert MEATER probe into the thickest part of the largest piece, away from bone.
+6. Roast **12–15 minutes**; baste with chili-oil mixture. Flip; roast another **12–15 minutes**.
+7. Move tray to top rack; broil **3–4 minutes** to develop charred spots. Pull at **165–170 °F (75 °C)**.
+8. Brush with melted butter; rest **5 minutes**. Garnish with cilantro, lemon wedges, and sliced onion.
+*Final resting temperature: 170–175 °F (77–79 °C).*
+
+---
+
 ## Temperature summary
 
 | Source | Country | Method temp | Thickness/Weight | Time | Target internal |
@@ -123,6 +162,7 @@ Target internal temperature: **170–175 °F (77–79 °C)** — recommended for
 | Jessica Gavin | USA | 425 °F (218 °C) | ~2 lbs (8 drumsticks) | 35 min | 170–175 °F (77–79 °C) |
 | Natasha's Kitchen | USA | 400 °F (204 °C) | 4.5–5 lbs drumsticks | 60 min | 170–175 °F (77–79 °C) |
 | BBC Good Food | UK | 190 °C / 374 °F (fan 170 °C) | 8 drumsticks | 25 min | Juices run clear (≥74 °C) |
+| Swasthi Shreekanth | India | 240 °C / 460 °F + broil | Bone-in legs/drumsticks | 25–30 min + 3–4 min broil | 165–170 °F (75 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **168 °F (76 °C)** → pull and rest

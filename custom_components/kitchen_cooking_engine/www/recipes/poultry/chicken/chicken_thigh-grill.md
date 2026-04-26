@@ -24,6 +24,8 @@ cut_type: Dark Meat
 
 Chicken thighs are the ideal grilling cut: their higher fat content means they stay moist even over high, direct heat and they are far more forgiving than breast if slightly overcooked. Bone-in skin-on thighs take 25–30 minutes; boneless thighs are quicker at 10–15 minutes. A good marinade and BBQ baste add deep flavour and help char the exterior while keeping the interior juicy.
 
+Grilled chicken thighs appear in culinary traditions across the globe. In Thailand, **Gai Yang** (ไก่ย่าง) — marinated in lemongrass, coriander seed, garlic, and fish sauce — is the definitive street-food grill, sold from roadside stalls to temple fairs across the country. In India, **Tandoori Chicken** (thighs and legs on the bone) is marinated in spiced yogurt and cooked in a tandoor or grill. In West Africa, chicken grilled over charcoal with aromatic spice rubs is central to festive cooking. In the Levant and Persia, chicken thighs on skewers (joojeh kabab, shish tawook) are a cornerstone of summer grilling.
+
 Target internal temperature: **165 °F (74 °C)** minimum — **170 °F (77 °C)** preferred for dark meat
 
 ## Source recipes
@@ -144,6 +146,53 @@ Target internal temperature: **165 °F (74 °C)** minimum — **170 °F (77 °C)
 
 ---
 
+### 4. Pailin Chongchitnant — Gai Yang ไก่ย่าง (Ultimate Thai BBQ Chicken) (Thai tradition)
+**Source**: Pailin Chongchitnant, Hot Thai Kitchen; https://hot-thai-kitchen.com/ultimate-bbq-chicken/ (fetched 2026-04-25). *Authentic Thai gai yang: bone-in skin-on thighs and hindquarters marinated overnight in pounded lemongrass, garlic, coriander seed, white pepper, soy sauce, fish sauce, and black soy sauce; grilled over medium-low heat with lid closed, flipping every 5 minutes. Served with Jaew dipping sauce (tamarind-palm sugar-fish sauce-lime). Taught at Hot Thai Kitchen cooking school, Vancouver.*
+**Serves**: 4 · **Prep**: 2 hr 20 min (includes 2 hr minimum marinate) · **Cook**: 18–30 min grill
+
+**Temperature guidance (from recipe)**: Grill at medium-low (275–300 °F / 135–150 °C) with lid closed; flip every 5 minutes. **Thighs and hindquarters: pull at 175 °F (80 °C)**; breasts at 160 °F (72 °C). Large pieces take 25–30 min; smaller pieces 18–20 min.
+
+**Ingredients — Marinade**
+- 1½ tsp white peppercorns
+- 2 tsp toasted coriander seeds
+- 1 stalk lemongrass (bottom half only, thinly sliced)
+- 5 cloves garlic
+- 3 Tbsp soy sauce
+- 3 Tbsp fish sauce
+- 1 Tbsp black soy sauce (or other dark soy sauce)
+- 1 Tbsp sugar
+- ½ cup (120 ml) water
+- 2 Tbsp neutral oil
+
+**Chicken**
+- 2 chicken hindquarters (thigh + drumstick, bone-in skin-on) — equivalent of 2 thighs + 2 drumsticks
+
+**Jaew Dipping Sauce**
+- 2 Tbsp Thai tamarind paste
+- 1 Tbsp palm sugar, finely chopped (or light brown sugar)
+- 1 Tbsp fish sauce
+- 1 Tbsp lime juice
+- Chili flakes, to taste
+- 1 Tbsp shallots, finely chopped
+- 1 Tbsp green onion, chopped
+- 3 sprigs cilantro, chopped
+- 1 Tbsp toasted rice powder
+
+**Method**
+1. Grind white peppercorns and coriander seeds to a powder (mortar or coffee grinder). Add lemongrass and garlic; pound to a fine paste.
+2. Transfer to a bowl. Add remaining marinade ingredients; stir to dissolve sugar.
+3. Separate thighs from drumsticks if needed; trim excess skin. Add to a zip-top bag or casserole dish; pour marinade over and coat all pieces well.
+4. Press out air; refrigerate at least **2 hours**, ideally overnight. Flip or stir halfway through.
+5. Make toasted rice powder: toast raw jasmine rice in a dry skillet over high heat, stirring constantly, until dark brown. Cool; grind to a powder.
+6. Combine tamarind, fish sauce, lime juice, and palm sugar; stir to dissolve. Add chili flakes and shallots. Just before serving, stir in green onion, cilantro, and toasted rice powder.
+7. Pull chicken from the fridge **45 minutes** before cooking to take the chill off.
+8. Insert MEATER probe into the thickest part of one thigh, away from the bone.
+9. Preheat grill to medium heat, then place chicken **skin-side up** (bone-side down). If grill has hot spots, start on the cooler zones.
+10. Turn heat to **medium-low** (275–300 °F / 135–150 °C); cook with lid closed, flipping every **5 minutes**.
+11. **Pull thighs and hindquarters at 175 °F (80 °C)** — total 18–30 minutes depending on size. Large pieces may need full 30 minutes.
+12. Rest 5 minutes. Serve with sticky rice and Jaew dipping sauce.
+*Final resting temperature: 175–180 °F (80–82 °C).*
+
 ---
 
 ## Temperature summary
@@ -154,6 +203,7 @@ Target internal temperature: **165 °F (74 °C)** minimum — **170 °F (77 °C)
 | Jessica Gavin | USA | 375–400 °F (191–204 °C) grill | Boneless | 10–15 min | 165–170 °F (74–77 °C) |
 | Natasha's Kitchen | USA | Low (after med-high preheat) | Boneless 3 lbs | 24–30 min | 165–170 °F (74–77 °C) |
 | Immaculate Bites | Cameroon/USA | Med-high grill | Bone-in skin-on | 25–30 min | 165 °F (74 °C) |
+| Pailin Chongchitnant | Thailand/Canada | Med-low 275–300 °F (135–150 °C) grill | Bone-in skin-on | 18–30 min | **175 °F (80 °C)** |
 
 **Recommended MEATER settings**:
 - Set alert at **163 °F (73 °C)** → pull and rest

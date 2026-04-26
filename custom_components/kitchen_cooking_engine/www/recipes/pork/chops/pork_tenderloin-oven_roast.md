@@ -11,7 +11,9 @@ cut_type: Chops & Tenderloin
 
 ## Cut profile
 
-Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo) is the leanest cut of pork and the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.
+Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo / 猪里脊) is the leanest cut of pork — a long, narrow muscle that runs along the lumbar spine, removed from the loin. It is found inside the loin section, between the rib cage and the hip. Because it does so little work, it is the most tender muscle on the pig. It is also the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.
+
+Oven-roasted whole pork tenderloin is a technique used across global cuisines. In West African and Caribbean-influenced Creole cooking, the tenderloin is rubbed with paprika, thyme, garlic, and cayenne, seared in cast iron, then roasted on a rack. In Denmark, a pan-seared whole tenderloin finished in the oven is a classic everyday dish. In Spain, the solomillo is oven-roasted with olive oil and herbs. In China, the 里脊 (lǐ jǐ / tenderloin) is marinated in soy-ginger and roasted as a loose cousin of Char Siu. The high heat oven roast is the most universal cooking method for this cut.
 
 Target internal temperatures (oven roast):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)**
@@ -94,3 +96,45 @@ Target internal temperatures (oven roast):
 6. Rest **5 minutes** uncovered.
 7. Slice on the diagonal. Serve with grilled potatoes or coleslaw.
 *Final resting temperature: 65–68 °C (149–154 °F).*
+
+---
+
+### 4. Imma Adamu — Creole-Spiced Pork Tenderloin Roast (West African / Caribbean tradition)
+**Source**: Imma Adamu (Cameroon-born food writer, USA), Immaculate Bites; https://www.africanbites.com/pork-loin-roast/ (fetched 2026-04-25). *West African–Caribbean Creole-spiced pork tenderloin: rubbed with Creole seasoning, thyme, oregano, and garlic; seared on all sides in a cast-iron skillet, then roasted at 400 °F (205 °C) for 13–15 minutes on a rack. The Creole spice blend reflects the West African–French Louisiana–Caribbean Diaspora fusion that is central to the Immaculate Bites culinary tradition.*
+**Serves**: 6 · **Prep**: 5 min · **Cook**: 25 min total (sear + roast)
+
+**Temperature guidance (from recipe)**: Sear on all sides over medium heat in cast-iron (5–6 min total). Transfer to a roasting rack; oven at **400 °F (205 °C)** for **13–15 minutes**, turning halfway. **Pull at 145 °F (63 °C)**. Rest 5–10 minutes before slicing.
+
+**Ingredients**
+- 1–1½ lb (450–700 g) pork tenderloin (silverskin removed)
+- ½–1 tsp salt (per pound)
+- 1 tsp white pepper
+- 1 tsp Creole seasoning (store-bought or homemade: paprika, garlic powder, onion powder, oregano, thyme, cayenne, black pepper)
+- 1 tsp dried thyme
+- 1 tsp dried oregano
+- 1 tsp granulated garlic
+- 2 Tbsp neutral cooking oil (canola, avocado, or peanut)
+
+**Method**
+1. Preheat oven to **400 °F (205 °C)**. Set a roasting rack over a foil-lined baking tray.
+2. Season tenderloin with salt and white pepper. Combine Creole seasoning, thyme, oregano, and garlic; rub evenly over all surfaces of the tenderloin.
+3. Heat oil in a large cast-iron skillet (or any heavy skillet) over **medium heat** until hot but not smoking.
+4. Sear tenderloin, rotating it 2–3 times to brown all sides, approximately **5–6 minutes** total.
+5. Transfer seared tenderloin to the roasting rack. Insert MEATER probe into the thickest part.
+6. Roast at **400 °F (205 °C)** for **13–15 minutes**, turning it over halfway through to ensure even cooking.
+7. Cook until probe reads **145 °F (63 °C)** in the thickest part. Transfer to a cutting board.
+8. Rest **5–10 minutes** before slicing. Serve with roasted potatoes, steamed vegetables, or salad.
+*Final resting temperature: 150–155 °F (65–68 °C).*
+
+---
+
+## Temperature summary
+
+| Source | Country | Method | Weight | Sear temp | Oven/Cook temp | Time | Target internal |
+|--------|---------|--------|--------|-----------|----------------|------|-----------------|
+| Directo al Paladar | Spain | Oven + baste | Whole tenderloin | — | 200 °C (392 °F) | 20–25 min | 63–65 °C (145–149 °F) |
+| ichkoche.at | Austria | Bacon-wrapped oven roast | Whole tenderloin | — | 180 °C (356 °F) | 25–30 min | 63–65 °C (145–149 °F) |
+| Madens Verden | Denmark | Sear + oven | Whole tenderloin | Med-high | 200 °C (392 °F) | 5 min sear + 15–20 min | 63–65 °C (145–149 °F) |
+| Imma Adamu | Cameroon/USA | Sear + roast rack | 1–1½ lb tenderloin | Medium | 400 °F (205 °C) | 5–6 min sear + 13–15 min | **145 °F (63 °C)** |
+
+**Recommended MEATER settings**: Set alert at **140 °F (60 °C)** → pull and rest; carryover brings to 145 °F (63 °C).

@@ -78,3 +78,53 @@ The resource is auto-registered on HA startup — no manual Lovelace resource co
 - [x] `_async_register_lovelace_resource()` added to `__init__.py`
 - [x] Version bumped to 0.6.2.01 in all 4 locations
 - [x] Generator run successful (515 recipe files, PANEL_VERSION 305)
+
+---
+
+## v0.6.2.02 — Global recipe diversity expansion
+
+### Problem
+Recipe research files across many cut-method combinations were dominated by European
+(especially Danish, German, Austrian, Spanish) sources, lacking representation from
+Asian, African, South American, and Middle Eastern culinary traditions. This is not
+in line with the Recipe Collection Terms of Reference, which calls for globally diverse
+sources that represent authentic traditions rather than Western adaptations.
+
+### Scope
+- Confirmed which sites are reachable from the Copilot sandbox (SOURCE_SURVEY.md)
+- Audited all existing cut-method files for geographic diversity
+- Added authentic non-Western recipes to files where the tradition gap was greatest
+
+### Changes
+**Chicken files (9 files updated):**
+- `chicken_thigh-grill.md`: Added Thai Gai Yang ไก่ย่าง (hot-thai-kitchen.com)
+- `chicken_thigh-oven_roast.md`: Added Egyptian-spiced Baked Chicken (themediterraneandish.com)
+- `chicken_thigh-air_fryer.md`: Added West African Creole Chicken (africanbites.com)
+- `chicken_breast-grill.md`: Added Thai Gai Yang breast variant (hot-thai-kitchen.com)
+- `chicken_breast-oven_bake.md`: Added Indian Tandoori Chicken (indianhealthyrecipes.com)
+- `chicken_breast-air_fryer.md`: Added Indian Chicken Tikka (indianhealthyrecipes.com)
+- `chicken_breast-pan_sear.md`: Added Vietnamese Gà Xào Sả Ớt lemongrass sauté (hungryhuy.com)
+- `chicken_leg-oven_roast.md`: Added Indian Tandoori drumsticks (indianhealthyrecipes.com)
+- `chicken_wing-air_fryer.md`: Added Thai Fish Sauce Wings (hot-thai-kitchen.com)
+- `whole_chicken-oven_roast.md`: Added Egyptian/Mediterranean roasted chicken (themediterraneandish.com)
+
+**Pork files (5 files updated):**
+- `pork_chop-grill.md`: Added Vietnamese Sườn Nướng (hungryhuy.com)
+- `pork_chop-oven_roast.md`: Added West African/Caribbean oven pork (africanbites.com)
+- `pork_chop-pan_fry.md`: Added Thai Garlic Pepper Pork หมูทอดกระเทียมพริกไทย (hot-thai-kitchen.com)
+- `pork_chop-air_fryer.md`: Added West African Creole air-fryer pork chops (africanbites.com)
+- `pork_tenderloin-oven_roast.md`: Added West African Creole pork tenderloin (africanbites.com)
+
+**Version bump:** `0.6.2.01` → `0.6.2.02` · PANEL_VERSION `305` → `306`
+
+### Status
+- [x] All chicken cut-method files updated with Asian/African/ME tradition recipes
+- [x] High-priority all-European pork files updated
+- [x] Cut profile text preserved (anatomy descriptions retained per user requirement)
+- [x] Version bumped in all 4 locations
+- [x] Generator run successful (PANEL_VERSION 306)
+- [ ] pork_tenderloin grill/pan_sear/air_fryer/sous_vide — still all-European (ongoing)
+- [ ] ribeye_steak-grill — still all-European (ongoing)
+- [ ] ny_strip-pan_sear — still all-western (ongoing)
+- [ ] pork_belly-pan_fry, pork_shoulder-oven_roast — still all-European (ongoing)
+- [ ] rack_of_lamb-oven_roast, leg_of_lamb-oven_roast — still limited diversity (ongoing)

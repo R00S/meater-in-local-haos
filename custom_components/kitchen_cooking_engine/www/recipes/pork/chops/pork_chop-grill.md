@@ -13,6 +13,8 @@ cut_type: Chops & Tenderloin
 
 A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.
 
+Grilled pork chops are central to culinary traditions far beyond Europe. In Vietnam, **Sườn Nướng** (lemongrass–fish-sauce marinated grilled chops) is an everyday rice-plate dish sold at roadside stalls across the country. In Thailand, thin marinated pork slices grilled on skewers (Moo Ping) are quintessential street food. In Korea, pork is the dominant grilling meat. In West Africa and the Caribbean, bone-in pork chops are marinated in aromatic spice blends and charred over open flame. The core technique — direct high heat, char on the exterior, juicy interior — is universal.
+
 Target internal temperatures (grill):
 - Juicy/pink: **62–65 °C (144–149 °F)**
 
@@ -97,3 +99,41 @@ Target internal temperatures (grill):
 5. Insert MEATER probe. **Core: 63–65 °C (145–149 °F)**.
 6. Rest 2–3 minutes uncovered. Serve.
 *Final temperature: 65–68 °C (149–154 °F).*
+
+---
+
+### 4. Huy Vu — Sườn Nướng (Vietnamese Grilled Pork Chops) (Vietnamese tradition)
+**Source**: Huy Vu, Hungry Huy; https://hungryhuy.com/vietnamese-pork-chops/ (fetched 2026-04-25). *Classic Vietnamese street-food and rice-plate dish: bone-in pork chops marinated in lemongrass, garlic, shallots, fish sauce, and soy sauce; grilled over high heat for grill marks then medium heat to finish. Served with steamed rice, scallion oil, and nước chấm dipping sauce.*
+**Serves**: 6 · **Prep**: 3 hr marinade · **Cook**: 15 min grill
+
+**Temperature guidance (from recipe)**: Sear on high heat for grill marks (a few minutes), then lower to medium and cook both sides, flipping often, until cooked through. Internal temperature at least **145 °F (63 °C)**.
+
+**Ingredients**
+- 900 g (2 lb) pork chops (about 6 chops)
+- Kosher salt (for scrubbing)
+- 3 Tbsp sugar
+- 2 Tbsp soy sauce
+- 2 Tbsp fish sauce
+- ½ tsp MSG (optional)
+- 4 Tbsp neutral cooking oil
+- 6 Tbsp minced lemongrass
+- 2 Tbsp minced garlic (about 6 cloves)
+- 2 Tbsp minced shallots
+- Steamed white rice, to serve
+- 1 tomato, sliced; 1 cucumber, sliced; 6 lettuce leaves (for garnish)
+- 3 Tbsp scallion oil (mỡ hành), to top
+- 3 Tbsp nước chấm dipping sauce, to serve
+
+**Method**
+1. Rinse pork chops under running water; scrub lightly with kosher salt to clean. Pat dry with paper towels. Make 3–5 shallow cuts around the edges of each chop to prevent curling on the grill.
+2. In a medium bowl, combine sugar, soy sauce, fish sauce, MSG (if using), and oil. Stir until sugar dissolves.
+3. Add minced lemongrass, garlic, and shallots to the marinade. Mix well.
+4. Add chops; coat all surfaces thoroughly. Refrigerate at least **3 hours**, ideally overnight, flipping halfway through.
+5. Remove chops from the fridge **1 hour** before grilling to take the chill off.
+6. Remove from marinade; discard excess liquid but allow aromatics clinging to the surface to remain.
+7. Insert MEATER probe into the thickest part of the largest chop.
+8. Grill over high heat; sear **3–4 minutes** per side until grill marks form and exterior is well caramelised.
+9. Lower to medium heat; continue cooking, flipping every 2–3 minutes, until cooked through — total grill time approx. 12–15 minutes.
+10. **Pull at 63 °C (145 °F)**.
+11. Rest **5 minutes**. Top with scallion oil. Serve with steamed rice, fresh tomato, cucumber, lettuce, and nước chấm on the side.
+*Final resting temperature: 65–68 °C (149–154 °F).*
