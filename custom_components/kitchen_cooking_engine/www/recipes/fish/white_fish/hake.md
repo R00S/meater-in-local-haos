@@ -30,6 +30,9 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
+quality_score: 5
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Hake Fillet — Cut Overview
 
@@ -41,3 +44,26 @@ Hake (*Merluccius merluccius*, European hake; *Merluccius capensis/paradoxus*, C
 ## Research files by cooking method
 
 - [Pan Fry](./hake-pan_fry.md)
+## Quality score
+
+**Score: 5 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | −8 |
+| Missing method leaf files (2 of 3 declared) | −2 |
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+| Missing Northern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+| Method file `hake-pan_fry.md` copies parent cut profile | −1 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `hake-oven_roast.md`, `hake-steam.md`
+3. **−3** · Missing Eastern, Southern and Northern tradition(s) — add Eastern, Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+4. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+5. **−1** · Method file `hake-pan_fry.md` copies parent cut profile — rewrite `hake-pan_fry.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

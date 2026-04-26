@@ -32,6 +32,9 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 12
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Pork Chop — Cut Overview
 
@@ -51,3 +54,16 @@ Target internal temperatures (air fryer):
 - [Oven Roast](./pork_chop-oven_roast.md)
 - [Pan Fry](./pork_chop-pan_fry.md)
 - [Pan Sear](./pork_chop-pan_sear.md)
+## Quality score
+
+**Score: 12 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|-----------|
+| Cooking methods not researched | −8 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

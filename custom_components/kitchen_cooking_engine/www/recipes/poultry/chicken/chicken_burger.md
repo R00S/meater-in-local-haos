@@ -22,6 +22,9 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
+quality_score: 8
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Chicken Burger — Cut Overview
 
@@ -38,3 +41,22 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 - [Air Fryer](./chicken_burger-air_fryer.md)
 - [Grill](./chicken_burger-grill.md)
 - [Pan Fry](./chicken_burger-pan_fry.md)
+## Quality score
+
+**Score: 8 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | −8 |
+| Missing Eastern tradition | −1 |
+| Missing Western tradition | −1 |
+| Missing Northern tradition | −1 |
+| Method file `chicken_burger-air_fryer.md` copies parent cut profile | −1 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−3** · Missing Eastern, Western and Northern tradition(s) — add Eastern, Western and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. **−1** · Method file `chicken_burger-air_fryer.md` copies parent cut profile — rewrite `chicken_burger-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

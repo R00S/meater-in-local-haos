@@ -38,6 +38,9 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
+quality_score: 7
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Venison Loin — Cut Overview
 
@@ -58,3 +61,22 @@ Venison loin (also: backstrap, saddle, or haunch steak — depending on country)
 ## Research files by cooking method
 
 - [Pan Sear](./venison_loin-pan_sear.md)
+## Quality score
+
+**Score: 7 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | −8 |
+| Missing method leaf files (2 of 3 declared) | −2 |
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+| Missing Northern tradition | −1 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `venison_loin-oven_roast.md`, `venison_loin-sous_vide.md`
+3. **−3** · Missing Eastern, Southern and Northern tradition(s) — add Eastern, Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

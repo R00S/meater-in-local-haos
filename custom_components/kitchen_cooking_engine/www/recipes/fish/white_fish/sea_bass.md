@@ -38,6 +38,9 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
+quality_score: 8
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Sea Bass — Cut Overview
 
@@ -60,3 +63,22 @@ from above; in thicker whole or butterflied fish it is inserted into the thickes
 ## Research files by cooking method
 
 - [Pan Sear](./sea_bass-pan_sear.md)
+## Quality score
+
+**Score: 8 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | −8 |
+| Missing method leaf files (2 of 3 declared) | −2 |
+| Missing Northern tradition | −1 |
+| Method file `sea_bass-pan_sear.md` copies parent cut profile | −1 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `sea_bass-grill.md`, `sea_bass-oven_roast.md`
+3. **−1** · Method file `sea_bass-pan_sear.md` copies parent cut profile — rewrite `sea_bass-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

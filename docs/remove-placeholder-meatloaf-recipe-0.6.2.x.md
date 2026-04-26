@@ -180,3 +180,55 @@ once research is complete and the list has been reviewed.
 - [x] `RECIPE_COLLECTION_TOR.md` updated with new criterion + scoring table
 - [x] Version bumped to 0.6.2.04 in all 4 locations
 - [x] USER_GUIDE.md version header updated to 0.6.2.04
+
+---
+
+## v0.6.2.05 — Contextual help buttons on every GUI screen
+
+### Changes
+
+Added a **"?" help button** to every navigable screen in the Kitchen Cooking Engine panel.
+Each button opens the relevant section of `USER_GUIDE.md` on GitHub in a new tab.
+
+**Implementation:**
+
+- New `_openHelp(anchor)` method added to `KitchenCookingPanel` class — opens
+  `https://github.com/R00S/meater-in-local-haos/blob/main/docs/USER_GUIDE.md{anchor}`.
+- New `.help-btn` CSS class — small circular `?` button, `position: absolute; top: 0; right: 0`
+  relative to the containing header.
+- `.path-header` and `.welcome-header` updated to `position: relative` so the button anchors correctly.
+- `.recipe-cook-help-btn` modifier class makes the button white/semi-transparent on the
+  colour-filled recipe cook header background.
+
+**Screens wired up:**
+
+| Screen | Anchor |
+|--------|--------|
+| Welcome | `#41-welcome-screen` |
+| MEATER probe path (path buttons) | `#5-meater-probe-cooking` |
+| MEATER probe path (setup form) | `#51-starting-a-cook` |
+| MEATER+ experimental (path buttons) | `#59-meater-experimental--cut-profile--recipe-links` |
+| MEATER+ experimental (setup form) | `#51-starting-a-cook` |
+| Recent MEATER cooks | `#57-recent-meater-cooks` |
+| Ninja Combi path | `#6-ninja-combi-cooking` |
+| Ninja built-in recipes | `#61-built-in-recipes` |
+| Recent Ninja cooks | `#64-recent-ninja-cooks` |
+| AI Recipe Builder path | `#7-ai-recipe-builder` |
+| AI ingredient selection | `#72-selecting-ingredients` |
+| AI cooking style selection | `#73-choosing-a-cooking-style` |
+| Previous cooks / history | `#11-cook-history` |
+| Shelf management | `#9-shelf-management` |
+| Shopping list | `#10-shopping-list` |
+| Recipe cook flow | `#8-recipe-cook-flow` |
+
+**CHORES.md updated:** The "Update the user guide" chore now includes the requirement to also
+update the GUI help link anchors when user guide section headings change.
+
+### Status
+- [x] `_openHelp()` method added
+- [x] `.help-btn` CSS added; `.path-header` and `.welcome-header` made `position: relative`
+- [x] Help button added to all 16 screen variants listed above
+- [x] `generate_frontend_data.py` run successfully — PANEL_VERSION 308
+- [x] Version bumped to 0.6.2.05 in all 4 locations
+- [x] USER_GUIDE.md version header updated to 0.6.2.05
+- [x] CHORES.md expanded with help-link update requirement

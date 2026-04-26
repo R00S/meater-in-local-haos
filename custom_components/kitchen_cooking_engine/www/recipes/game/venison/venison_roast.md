@@ -37,6 +37,9 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
+quality_score: 7
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Venison Roast — Cut Overview
 
@@ -51,3 +54,25 @@ Target internal temperature: **55–60 °C (131–140 °F)** for a pink, moist r
 ## Research files by cooking method
 
 - [Oven Roast](./venison_roast-oven_roast.md)
+## Quality score
+
+**Score: 7 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | −8 |
+| Missing method leaf file `venison_roast-braise.md` | −1 |
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+| Method file `venison_roast-oven_roast.md` copies parent cut profile | −1 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−1** · Missing method leaf file — create `venison_roast-braise.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
+3. **−2** · Missing Eastern and Southern tradition(s) — add Eastern and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+4. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+5. **−1** · Method file `venison_roast-oven_roast.md` copies parent cut profile — rewrite `venison_roast-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -2,4 +2,4 @@
 
 - Bump version according to version bumping scheme
 - Update the branch history file with missing information about what has been done in this branch
-- Update the user guide with changes made in this branch
+- Update the user guide with changes made in this branch, AND update any GUI help button anchors in `panel-class-template.js` that link to sections whose headings have changed (anchors are in `_openHelp(...)` calls)

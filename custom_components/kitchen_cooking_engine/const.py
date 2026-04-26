@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 25 Apr 2026, 22:34 UTC
-Last Change: v0.6.2.04 - Add cooking_methods_researched field to all 185 cut index files (−8 quality score if 0)
+Last Change: v0.6.2.05 - Add contextual help buttons on every GUI screen linking to USER_GUIDE.md sections
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "307"
+PANEL_VERSION = "308"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

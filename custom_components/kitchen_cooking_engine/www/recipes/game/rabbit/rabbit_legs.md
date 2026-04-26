@@ -37,6 +37,9 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
+quality_score: 9
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Rabbit Legs — Cut Overview
 
@@ -54,3 +57,21 @@ Target internal temperature: **74–77 °C (165–175 °F)** — rabbit, like ch
 
 - [Braise](./rabbit_legs-braise.md)
 - [Oven Roast](./rabbit_legs-oven_roast.md)
+## Quality score
+
+**Score: 9 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | −8 |
+| Missing Eastern tradition | −1 |
+| Missing Southern tradition | −1 |
+| Method file `rabbit_legs-braise.md` copies parent cut profile | −1 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−2** · Missing Eastern and Southern tradition(s) — add Eastern and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. **−1** · Method file `rabbit_legs-braise.md` copies parent cut profile — rewrite `rabbit_legs-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
