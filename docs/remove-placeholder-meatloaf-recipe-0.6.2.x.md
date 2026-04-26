@@ -135,3 +135,48 @@ sources that represent authentic traditions rather than Western adaptations.
 - [x] Generator run successful (PANEL_VERSION 307, 516 recipe files)
 - [ ] pork_tenderloin-sous_vide — still all-European (Danish, Austrian, Italian); no verified Asian sous vide pork tenderloin source found on reachable sites
 - [ ] ny_strip-pan_sear — still all-Western (5 recipes: American, British, French, British Modernist, Australian); no verified non-Western strip steak pan-sear source found on reachable sites
+
+---
+
+## v0.6.2.04 — cooking_methods_researched quality field
+
+### Changes
+
+Added `cooking_methods_researched: 0` to all 185 cut index files in `docs/recipe_research/`.
+
+This new frontmatter field tracks whether the `methods:` list for a cut has been deliberately
+researched and verified across culinary sources, as opposed to being auto-populated from
+`cooking_data.py` with no verification. The field defaults to `0` on every file. Set it to `1`
+once research is complete and the list has been reviewed.
+
+**Scoring impact:**
+- `RECIPE_COLLECTION_TOR.md`: New `### Appropriate cooking method research` criterion section added.
+  Deduction: **−8** if `cooking_methods_researched: 0`.
+- Scoring summary table updated; maximum total deduction updated from −19 to −27 (+ method files).
+- All 185 cut files: `quality_score` reduced by 8, `| Cooking methods not researched | −8 |` row
+  added to each file's `## Quality score` table, deduction added as #1 improvement priority.
+
+**Score distribution after this change:**
+
+| Score | Count |
+|-------|-------|
+| 0 | 52 |
+| 4 | 1 |
+| 5 | 4 |
+| 6 | 5 |
+| 7 | 25 |
+| 8 | 36 |
+| 9 | 31 |
+| 10 | 21 |
+| 11 | 9 |
+| 12 | 1 |
+
+52 files at 0 are the highest-priority improvement targets.
+
+### Status
+- [x] `cooking_methods_researched: 0` added to all 185 cut index files
+- [x] `quality_score` reduced by 8 on all files
+- [x] Deduction row and improvement priority added to each file's Quality score section
+- [x] `RECIPE_COLLECTION_TOR.md` updated with new criterion + scoring table
+- [x] Version bumped to 0.6.2.04 in all 4 locations
+- [x] USER_GUIDE.md version header updated to 0.6.2.04

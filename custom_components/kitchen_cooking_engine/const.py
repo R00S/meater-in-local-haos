@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 25 Apr 2026, 22:34 UTC
-Last Change: v0.6.2.03 - Extend global recipe diversity to all remaining Western-only cut-method files
+Last Change: v0.6.2.04 - Add cooking_methods_researched field to all 185 cut index files (−8 quality score if 0)
 """
 
 DOMAIN = "kitchen_cooking_engine"
