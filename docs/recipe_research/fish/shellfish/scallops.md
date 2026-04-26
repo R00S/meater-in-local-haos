@@ -28,7 +28,8 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 17
+quality_score: 9
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Scallops — Cut Overview
@@ -43,17 +44,19 @@ Sea scallops (*Pecten maximus* in Europe; *Placopecten magellanicus*, the Atlant
 - [Pan Sear](./scallops-pan_sear.md)
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-26
+**Score: 9 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing Southern tradition | −1 |
 | Missing Northern tradition | −1 |
 | Method file `scallops-pan_sear.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
 
-1. **−2** · Missing Southern and Northern tradition(s) — add Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
-2. **−1** · Method file `scallops-pan_sear.md` copies parent cut profile — rewrite `scallops-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−2** · Missing Southern and Northern tradition(s) — add Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. **−1** · Method file `scallops-pan_sear.md` copies parent cut profile — rewrite `scallops-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

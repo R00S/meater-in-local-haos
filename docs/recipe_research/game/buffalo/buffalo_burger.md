@@ -20,7 +20,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 16
+quality_score: 8
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Burger — Cut Overview
@@ -39,10 +40,11 @@ Target internal temperature: **70–74 °C (158–165 °F)** (ground meat food s
 - [Pan Fry](./buffalo_burger-pan_fry.md)
 ## Quality score
 
-**Score: 16 / 20** — assessed 2026-04-26
+**Score: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
 | Cut profile lacks anatomy | −1 |
@@ -50,8 +52,9 @@ Target internal temperature: **70–74 °C (158–165 °F)** (ground meat food s
 
 ### Improvement priorities
 
-1. **−2** · Missing Eastern and Southern tradition(s) — add Eastern and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
-2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-3. **−1** · Method file `buffalo_burger-grill.md` copies parent cut profile — rewrite `buffalo_burger-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−2** · Missing Eastern and Southern tradition(s) — add Eastern and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+4. **−1** · Method file `buffalo_burger-grill.md` copies parent cut profile — rewrite `buffalo_burger-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

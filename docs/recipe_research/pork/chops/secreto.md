@@ -30,7 +30,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 15
+quality_score: 7
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Secreto (Ibérico Pork) — Cut Overview
@@ -50,10 +51,11 @@ Target internal temperatures (pan sear):
 - [Pan Sear](./secreto-pan_sear.md)
 ## Quality score
 
-**Score: 15 / 20** — assessed 2026-04-26
+**Score: 7 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing method leaf files (2 of 3 declared) | −2 |
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
@@ -61,8 +63,9 @@ Target internal temperatures (pan sear):
 
 ### Improvement priorities
 
-1. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `secreto-charcoal_grill.md`, `secreto-grill.md`
-2. **−2** · Missing Eastern and Southern tradition(s) — add Eastern and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Method file `secreto-pan_sear.md` copies parent cut profile — rewrite `secreto-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `secreto-charcoal_grill.md`, `secreto-grill.md`
+3. **−2** · Missing Eastern and Southern tradition(s) — add Eastern and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+4. **−1** · Method file `secreto-pan_sear.md` copies parent cut profile — rewrite `secreto-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

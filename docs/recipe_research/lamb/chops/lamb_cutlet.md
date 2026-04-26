@@ -45,7 +45,8 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 16
+quality_score: 8
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Lamb Cutlet — Cut Overview
@@ -62,10 +63,11 @@ Target: **52–57 °C (126–135 °F)** for medium-rare. They overcook rapidly g
 - [Pan Fry](./lamb_cutlet-pan_fry.md)
 ## Quality score
 
-**Score: 16 / 20** — assessed 2026-04-26
+**Score: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing method leaf file `lamb_cutlet-grill.md` | −1 |
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
@@ -73,8 +75,9 @@ Target: **52–57 °C (126–135 °F)** for medium-rare. They overcook rapidly g
 
 ### Improvement priorities
 
-1. **−1** · Missing method leaf file — create `lamb_cutlet-grill.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
-2. **−2** · Missing Eastern and Southern tradition(s) — add Eastern and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Method file `lamb_cutlet-pan_fry.md` copies parent cut profile — rewrite `lamb_cutlet-pan_fry.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−1** · Missing method leaf file — create `lamb_cutlet-grill.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
+3. **−2** · Missing Eastern and Southern tradition(s) — add Eastern and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+4. **−1** · Method file `lamb_cutlet-pan_fry.md` copies parent cut profile — rewrite `lamb_cutlet-pan_fry.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

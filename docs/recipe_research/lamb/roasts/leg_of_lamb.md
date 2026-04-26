@@ -53,7 +53,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 19
+quality_score: 11
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Leg of Lamb — Cut Overview
@@ -84,14 +85,16 @@ Leg of lamb is the quintessential festive roast throughout the Mediterranean, Mi
 - [Oven Roast](./leg_of_lamb-oven_roast.md)
 ## Quality score
 
-**Score: 19 / 20** — assessed 2026-04-26
+**Score: 11 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing Eastern tradition | −1 |
 
 ### Improvement priorities
 
-1. **−1** · Missing Eastern tradition(s) — add Eastern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−1** · Missing Eastern tradition(s) — add Eastern source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

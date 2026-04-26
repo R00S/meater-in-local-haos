@@ -19,7 +19,8 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-quality_score: 17
+quality_score: 9
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Button/Cremini Mushrooms — Cut Overview
@@ -37,18 +38,20 @@ Button mushrooms (*Agaricus bisporus*, immature white form) are roughly 92 % wat
 - [Sauté](./button_mushrooms-saute.md)
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-26
+**Score: 9 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing Northern tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | Method file `button_mushrooms-grill.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
 
-1. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-2. **−1** · Method file `button_mushrooms-grill.md` copies parent cut profile — rewrite `button_mushrooms-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-3. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+3. **−1** · Method file `button_mushrooms-grill.md` copies parent cut profile — rewrite `button_mushrooms-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

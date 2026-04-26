@@ -29,7 +29,8 @@ doneness:
   max_f: 190
   usda_safe: true
   recommended: true
-quality_score: 18
+quality_score: 10
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Whole Goose — Cut Overview
@@ -50,15 +51,17 @@ A medium goose (4.5 kg / 10 lb) typically takes 2.5–3 hours at 190 °C (375 °
 - [Oven Roast](./whole_goose-oven_roast.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-26
+**Score: 10 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
 
 ### Improvement priorities
 
-1. **−2** · Missing Eastern and Southern tradition(s) — add Eastern and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−2** · Missing Eastern and Southern tradition(s) — add Eastern and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

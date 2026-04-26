@@ -39,7 +39,8 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 18
+quality_score: 10
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Hanger Steak — Cut Overview
@@ -57,16 +58,18 @@ Hanger steak over live charcoal adds an important dimension to this already inte
 - [Pan Sear](./hanger_steak-pan_sear.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-26
+**Score: 10 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Method file `hanger_steak-charcoal_grill.md` copies parent cut profile | −1 |
 | Method file `hanger_steak-pan_fry.md` copies `hanger_steak-pan_sear.md` | −1 |
 
 ### Improvement priorities
 
-1. **−1** · Method file `hanger_steak-charcoal_grill.md` copies parent cut profile — rewrite `hanger_steak-charcoal_grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-2. **−1** · Method file `hanger_steak-pan_fry.md` copies `hanger_steak-pan_sear.md` — rewrite `hanger_steak-pan_fry.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−1** · Method file `hanger_steak-charcoal_grill.md` copies parent cut profile — rewrite `hanger_steak-charcoal_grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+3. **−1** · Method file `hanger_steak-pan_fry.md` copies `hanger_steak-pan_sear.md` — rewrite `hanger_steak-pan_fry.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

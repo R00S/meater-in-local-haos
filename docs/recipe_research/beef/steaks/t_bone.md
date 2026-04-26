@@ -56,7 +56,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 14
+quality_score: 6
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # T-Bone / Porterhouse — Cut Overview
@@ -75,10 +76,11 @@ Air-frying a T-bone steak is practical for steaks up to 3 cm thick and 700 g —
 - [Pan Sear](./t_bone-pan_sear.md)
 ## Quality score
 
-**Score: 14 / 20** — assessed 2026-04-26
+**Score: 6 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
 | Missing Northern tradition | −1 |
@@ -88,9 +90,10 @@ Air-frying a T-bone steak is practical for steaks up to 3 cm thick and 700 g —
 
 ### Improvement priorities
 
-1. **−3** · Missing Eastern, Southern and Northern tradition(s) — add Eastern, Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
-2. **−1** · Method file `t_bone-air_fryer.md` copies parent cut profile — rewrite `t_bone-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-3. **−1** · Method file `t_bone-grill.md` copies `t_bone-oven_roast.md` — rewrite `t_bone-grill.md`'s cut profile — it must describe what the oven roast method does to this cut, not repeat another method's prose
-4. **−1** · Method file `t_bone-grill.md` copies `t_bone-pan_sear.md` — rewrite `t_bone-grill.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−3** · Missing Eastern, Southern and Northern tradition(s) — add Eastern, Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. **−1** · Method file `t_bone-air_fryer.md` copies parent cut profile — rewrite `t_bone-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. **−1** · Method file `t_bone-grill.md` copies `t_bone-oven_roast.md` — rewrite `t_bone-grill.md`'s cut profile — it must describe what the oven roast method does to this cut, not repeat another method's prose
+5. **−1** · Method file `t_bone-grill.md` copies `t_bone-pan_sear.md` — rewrite `t_bone-grill.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

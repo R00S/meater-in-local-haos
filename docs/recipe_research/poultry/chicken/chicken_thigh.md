@@ -33,7 +33,8 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 16
+quality_score: 8
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Chicken Thigh — Cut Overview
@@ -53,18 +54,20 @@ Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)
 - [Oven Roast](./chicken_thigh-oven_roast.md)
 ## Quality score
 
-**Score: 16 / 20** — assessed 2026-04-26
+**Score: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing method leaf files (2 of 5 declared) | −2 |
 | Missing Northern tradition | −1 |
 | Method file `chicken_thigh-air_fryer.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
 
-1. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `chicken_thigh-braise.md`, `chicken_thigh-pan_fry.md`
-2. **−1** · Method file `chicken_thigh-air_fryer.md` copies parent cut profile — rewrite `chicken_thigh-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-3. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `chicken_thigh-braise.md`, `chicken_thigh-pan_fry.md`
+3. **−1** · Method file `chicken_thigh-air_fryer.md` copies parent cut profile — rewrite `chicken_thigh-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -31,7 +31,8 @@ doneness:
   max_f: 185
   usda_safe: true
   recommended: true
-quality_score: 14
+quality_score: 6
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Whole Chicken — Cut Overview
@@ -49,10 +50,11 @@ Target internal temperatures: **Breast 160–165 °F (71–74 °C)** · **Thigh 
 - [Oven Roast](./whole_chicken-oven_roast.md)
 ## Quality score
 
-**Score: 14 / 20** — assessed 2026-04-26
+**Score: 6 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing method leaf files (2 of 3 declared) | −2 |
 | Missing Eastern tradition | −1 |
 | Missing Western tradition | −1 |
@@ -61,8 +63,9 @@ Target internal temperatures: **Breast 160–165 °F (71–74 °C)** · **Thigh 
 
 ### Improvement priorities
 
-1. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `whole_chicken-air_fryer.md`, `whole_chicken-grill.md`
-2. **−3** · Missing Eastern, Western and Northern tradition(s) — add Eastern, Western and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Method file `whole_chicken-oven_roast.md` copies parent cut profile — rewrite `whole_chicken-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `whole_chicken-air_fryer.md`, `whole_chicken-grill.md`
+3. **−3** · Missing Eastern, Western and Northern tradition(s) — add Eastern, Western and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+4. **−1** · Method file `whole_chicken-oven_roast.md` copies parent cut profile — rewrite `whole_chicken-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

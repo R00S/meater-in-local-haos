@@ -38,7 +38,8 @@ doneness:
   max_f: 135
   usda_safe: false
   recommended: true
-quality_score: 16
+quality_score: 8
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Tuna Steak — Cut Overview
@@ -54,10 +55,11 @@ Tuna steak — most commonly bluefin (*hon maguro*), yellowfin (*ahi*), or bigey
 - [Pan Sear](./tuna_steak-pan_sear.md)
 ## Quality score
 
-**Score: 16 / 20** — assessed 2026-04-26
+**Score: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing Northern tradition | −1 |
 | Method file `tuna_steak-grill.md` copies parent cut profile | −1 |
 | Method file `tuna_steak-pan_sear.md` copies parent cut profile | −1 |
@@ -65,9 +67,10 @@ Tuna steak — most commonly bluefin (*hon maguro*), yellowfin (*ahi*), or bigey
 
 ### Improvement priorities
 
-1. **−1** · Method file `tuna_steak-grill.md` copies `tuna_steak-pan_sear.md` — rewrite `tuna_steak-grill.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
-2. **−1** · Method file `tuna_steak-grill.md` copies parent cut profile — rewrite `tuna_steak-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-3. **−1** · Method file `tuna_steak-pan_sear.md` copies parent cut profile — rewrite `tuna_steak-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−1** · Method file `tuna_steak-grill.md` copies `tuna_steak-pan_sear.md` — rewrite `tuna_steak-grill.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
+3. **−1** · Method file `tuna_steak-grill.md` copies parent cut profile — rewrite `tuna_steak-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. **−1** · Method file `tuna_steak-pan_sear.md` copies parent cut profile — rewrite `tuna_steak-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+5. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

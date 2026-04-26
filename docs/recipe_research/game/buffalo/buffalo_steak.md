@@ -46,7 +46,8 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 15
+quality_score: 7
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Buffalo Steak — Cut Overview
@@ -67,10 +68,11 @@ Target internal temperature: **57–63 °C (135–145 °F)** for medium-rare to 
 - [Pan Sear](./buffalo_steak-pan_sear.md)
 ## Quality score
 
-**Score: 15 / 20** — assessed 2026-04-26
+**Score: 7 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing method leaf file `buffalo_steak-charcoal_grill.md` | −1 |
 | Missing Southern tradition | −1 |
 | Missing Northern tradition | −1 |
@@ -79,9 +81,10 @@ Target internal temperature: **57–63 °C (135–145 °F)** for medium-rare to 
 
 ### Improvement priorities
 
-1. **−1** · Missing method leaf file — create `buffalo_steak-charcoal_grill.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
-2. **−2** · Missing Southern and Northern tradition(s) — add Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-4. **−1** · Method file `buffalo_steak-grill.md` copies parent cut profile — rewrite `buffalo_steak-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−1** · Missing method leaf file — create `buffalo_steak-charcoal_grill.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
+3. **−2** · Missing Southern and Northern tradition(s) — add Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+4. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+5. **−1** · Method file `buffalo_steak-grill.md` copies parent cut profile — rewrite `buffalo_steak-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

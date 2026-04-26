@@ -20,7 +20,8 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 18
+quality_score: 10
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Pork Tongue — Cut Overview
@@ -36,16 +37,18 @@ Pork tongue is the smaller, more delicate sibling of beef tongue — typically 2
 - [Slow Cooker](./pork_tongue-slow_cooker.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-26
+**Score: 10 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing Southern tradition | −1 |
 | Method file `pork_tongue-braise.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
 
-1. **−1** · Method file `pork_tongue-braise.md` copies parent cut profile — rewrite `pork_tongue-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-2. **−1** · Missing Southern tradition(s) — add Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−1** · Method file `pork_tongue-braise.md` copies parent cut profile — rewrite `pork_tongue-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+3. **−1** · Missing Southern tradition(s) — add Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

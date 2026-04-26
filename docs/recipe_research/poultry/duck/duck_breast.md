@@ -39,7 +39,8 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 16
+quality_score: 8
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Duck Breast — Cut Overview
@@ -58,10 +59,11 @@ Target internal temperature: **135–145 °F (57–63 °C)** — medium-rare, pu
 - [Pan Sear](./duck_breast-pan_sear.md)
 ## Quality score
 
-**Score: 16 / 20** — assessed 2026-04-26
+**Score: 8 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing method leaf file `duck_breast-sous_vide.md` | −1 |
 | Missing Southern tradition | −1 |
 | Missing Northern tradition | −1 |
@@ -69,8 +71,9 @@ Target internal temperature: **135–145 °F (57–63 °C)** — medium-rare, pu
 
 ### Improvement priorities
 
-1. **−1** · Missing method leaf file — create `duck_breast-sous_vide.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
-2. **−2** · Missing Southern and Northern tradition(s) — add Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−1** · Method file `duck_breast-oven_roast.md` copies parent cut profile — rewrite `duck_breast-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−1** · Missing method leaf file — create `duck_breast-sous_vide.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
+3. **−2** · Missing Southern and Northern tradition(s) — add Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+4. **−1** · Method file `duck_breast-oven_roast.md` copies parent cut profile — rewrite `duck_breast-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

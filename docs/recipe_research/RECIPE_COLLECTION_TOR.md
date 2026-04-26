@@ -557,6 +557,19 @@ Recipes must represent all four directional traditions.  Definitions:
   Anatomy is always applicable; this deduction applies universally to profiles
   with real content.
 
+### Appropriate cooking method research
+
+- **−8** if `cooking_methods_researched: 0` in the cut frontmatter.
+
+This field tracks whether someone has deliberately researched what cooking methods are
+appropriate for this cut across culinary traditions — not just accepted whatever list was
+auto-populated from `cooking_data.py`.  Research means: checking multiple culinary sources
+to confirm which methods suit the cut's connective-tissue content, fat distribution, and
+thickness, and verifying that the `methods:` list reflects that investigation.
+
+Set `cooking_methods_researched: 1` once that research is complete and the `methods:` list
+has been reviewed and corrected.
+
 ### Method sub-files
 
 - **−3** if no `{cut_name}-{method}.md` leaf files exist at all for the cut.
@@ -601,6 +614,7 @@ Two separate deductions apply:
 
 | Criterion | Possible deduction |
 |-----------|--------------------|
+| Cooking methods not researched (`cooking_methods_researched: 0`) | −8 |
 | Missing Eastern tradition | −1 |
 | Missing Western tradition | −1 |
 | Missing Southern tradition | −1 |
@@ -614,7 +628,7 @@ Two separate deductions apply:
 | Per-method temp data missing (cut + method files both) | −2 |
 | Method file copies sibling method description (per file, max 2) | −1 each |
 | Method file copies parent cut profile (per file, no limit) | −1 each |
-| **Maximum total deduction** | **−19 + number of method files** |
+| **Maximum total deduction** | **−27 + number of method files** |
 | **Minimum score** | **varies** |
 
 ### How the score is written into the cut file
@@ -622,6 +636,7 @@ Two separate deductions apply:
 Add to the `<!-- KCE:CUT` block:
 ```yaml
 quality_score: 17
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 ```
 

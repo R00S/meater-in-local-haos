@@ -58,7 +58,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 15
+quality_score: 7
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Ribeye Steak — Cut Overview
@@ -84,10 +85,11 @@ Target internal temperatures (oven roast ribeye):
 - [Sous Vide](./ribeye_steak-sous_vide.md)
 ## Quality score
 
-**Score: 15 / 20** — assessed 2026-04-26
+**Score: 7 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Cooking methods not researched | −8 |
 | Missing Southern tradition | −1 |
 | Method file `ribeye_steak-oven_roast.md` copies parent cut profile | −1 |
 | Method file `ribeye_steak-pan_sear.md` copies parent cut profile | −1 |
@@ -96,10 +98,11 @@ Target internal temperatures (oven roast ribeye):
 
 ### Improvement priorities
 
-1. **−1** · Method file `ribeye_steak-oven_roast.md` copies `ribeye_steak-pan_sear.md` — rewrite `ribeye_steak-oven_roast.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
-2. **−1** · Method file `ribeye_steak-oven_roast.md` copies `ribeye_steak-sous_vide.md` — rewrite `ribeye_steak-oven_roast.md`'s cut profile — it must describe what the sous vide method does to this cut, not repeat another method's prose
-3. **−1** · Method file `ribeye_steak-oven_roast.md` copies parent cut profile — rewrite `ribeye_steak-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Method file `ribeye_steak-pan_sear.md` copies parent cut profile — rewrite `ribeye_steak-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-5. **−1** · Missing Southern tradition(s) — add Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−1** · Method file `ribeye_steak-oven_roast.md` copies `ribeye_steak-pan_sear.md` — rewrite `ribeye_steak-oven_roast.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
+3. **−1** · Method file `ribeye_steak-oven_roast.md` copies `ribeye_steak-sous_vide.md` — rewrite `ribeye_steak-oven_roast.md`'s cut profile — it must describe what the sous vide method does to this cut, not repeat another method's prose
+4. **−1** · Method file `ribeye_steak-oven_roast.md` copies parent cut profile — rewrite `ribeye_steak-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+5. **−1** · Method file `ribeye_steak-pan_sear.md` copies parent cut profile — rewrite `ribeye_steak-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+6. **−1** · Missing Southern tradition(s) — add Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
