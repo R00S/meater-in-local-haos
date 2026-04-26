@@ -972,6 +972,36 @@ class KitchenCookingPanel extends LitElement {
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
   }
 
+  // ---------------------------------------------------------------------------
+  // Recipe library helpers
+  //
+  // The experimental MEATER path reads the actively developed recipe library
+  // (RECIPE_INDEX / CUT_PROFILES / CUT_METHOD_PROFILES / RECIPE_TITLES_INDEX).
+  // Every other path (classic MEATER) reads the frozen snapshot
+  // (CLASSIC_RECIPE_INDEX / CLASSIC_CUT_PROFILES / …).
+  //
+  // Cutover instructions (when experimental is declared stable):
+  //   1. Remove the CLASSIC_* branches below so all paths return the live set.
+  //   2. Remove CLASSIC_* constant declarations from generate_frontend_data.py.
+  //   3. Delete docs/recipe_research_classic/ and www/recipes_classic/.
+  // ---------------------------------------------------------------------------
+
+  _getRecipeIndex() {
+    return this._currentPath === 'meater_experimental' ? RECIPE_INDEX : CLASSIC_RECIPE_INDEX;
+  }
+
+  _getCutProfiles() {
+    return this._currentPath === 'meater_experimental' ? CUT_PROFILES : CLASSIC_CUT_PROFILES;
+  }
+
+  _getCutMethodProfiles() {
+    return this._currentPath === 'meater_experimental' ? CUT_METHOD_PROFILES : CLASSIC_CUT_METHOD_PROFILES;
+  }
+
+  _getRecipeTitles() {
+    return this._currentPath === 'meater_experimental' ? RECIPE_TITLES_INDEX : CLASSIC_RECIPE_TITLES_INDEX;
+  }
+
   _findCookingEntities() {
     if (!this.hass) return [];
     
@@ -4703,9 +4733,9 @@ class KitchenCookingPanel extends LitElement {
               const cutData = this._getSelectedCutData();
               const slug = cutData && (cutData.recipe_slug || cutData.slug);
               if (!slug) return '';
-              const desc   = CUT_METHOD_PROFILES[slug] && CUT_METHOD_PROFILES[slug][this._selectedMethod];
-              const titles = RECIPE_TITLES_INDEX[slug] && RECIPE_TITLES_INDEX[slug][this._selectedMethod];
-              const url    = RECIPE_INDEX[slug] && RECIPE_INDEX[slug][this._selectedMethod];
+              const desc   = this._getCutMethodProfiles()[slug] && this._getCutMethodProfiles()[slug][this._selectedMethod];
+              const titles = this._getRecipeTitles()[slug] && this._getRecipeTitles()[slug][this._selectedMethod];
+              const url    = this._getRecipeIndex()[slug] && this._getRecipeIndex()[slug][this._selectedMethod];
               if (!desc && (!titles || titles.length === 0)) return '';
               const isOpen = url && this._recipeFileUrl === url;
               const closeBtnStyle  = 'font-size:0.78em;padding:3px 10px;background:transparent;border:1px solid var(--divider-color);border-radius:10px;cursor:pointer;color:var(--secondary-text-color);';
@@ -4767,8 +4797,8 @@ class KitchenCookingPanel extends LitElement {
     const slug = cut.recipe_slug || cut.slug;
     if (!slug) return html``;
 
-    const profile = CUT_PROFILES[slug];
-    const recipes = RECIPE_INDEX[slug];
+    const profile = this._getCutProfiles()[slug];
+    const recipes = this._getRecipeIndex()[slug];
     if (!profile && !recipes) return html``;
 
     const METHOD_LABELS = {
@@ -4792,8 +4822,8 @@ class KitchenCookingPanel extends LitElement {
     const recipeBtnStyle = 'text-align:left;width:100%;cursor:pointer;border:1px solid var(--divider-color);border-radius:8px;padding:8px 12px;background:var(--secondary-background-color);font-size:0.87em;color:var(--primary-text-color);';
 
     const sel = this._selectedResearchMethod;
-    const selDesc = sel && CUT_METHOD_PROFILES[slug] && CUT_METHOD_PROFILES[slug][sel];
-    const selTitles = sel && RECIPE_TITLES_INDEX[slug] && RECIPE_TITLES_INDEX[slug][sel];
+    const selDesc = sel && this._getCutMethodProfiles()[slug] && this._getCutMethodProfiles()[slug][sel];
+    const selTitles = sel && this._getRecipeTitles()[slug] && this._getRecipeTitles()[slug][sel];
     const selUrl = sel && recipes && recipes[sel];
 
     const closeResearch = () => {

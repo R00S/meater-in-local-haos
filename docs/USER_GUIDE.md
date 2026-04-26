@@ -492,15 +492,25 @@ returns to the recipe list; ✕ Close dismisses the viewer entirely.
 
 #### How the cut tree and recipe links are built
 
-The experimental MEATER path is driven entirely by the recipe `.md` files under
-`docs/recipe_research/`. Each file carries a `<!-- KCE:CUT … -->` or
-`<!-- KCE:CUT_METHOD … -->` tag that describes its position in the meat hierarchy,
-cooking temperatures, and supported methods.
+The recipe library is split into two forks:
+
+| Fork | Directory | Used by |
+|------|-----------|---------|
+| **Classic** (frozen) | `docs/recipe_research_classic/` | Standard MEATER path |
+| **Experimental** (active) | `docs/recipe_research/` | MEATER+ (experimental) path |
+
+The classic fork is a one-time snapshot that never changes. The experimental fork is where
+all new cut files, method research, and stub upgrades happen. When the experimental path is
+declared stable the classic fork is deleted and experimental becomes the default.
+
+Each file carries a `<!-- KCE:CUT … -->` or `<!-- KCE:CUT_METHOD … -->` tag that describes
+its position in the meat hierarchy, cooking temperatures, and supported methods.
 
 At release time the **create-test-release** GitHub Actions workflow automatically runs
-`generate_frontend_data.py`, which scans those files and bakes `EXP_TREE`, `RECIPE_INDEX`,
-and `CUT_PROFILES` into `kitchen-cooking-panel.js`. This happens on the CI runner —
-the developer does not need to run the generator locally before creating a release.
+`generate_frontend_data.py`, which scans both forks and bakes `RECIPE_INDEX` /
+`CLASSIC_RECIPE_INDEX`, `EXP_TREE`, and `CUT_PROFILES` / `CLASSIC_CUT_PROFILES` into
+`kitchen-cooking-panel.js`. This happens on the CI runner — the developer does not need
+to run the generator locally before creating a release.
 
 To add a new cut to the experimental path:
 
@@ -514,6 +524,9 @@ known to the system):
 1. Add the method slug to the cut's `<!-- KCE:CUT … -->` `methods:` list.
 2. Optionally create `{slug}-{method}.md` research file for that method.
 3. No changes to `cooking_data.py` or any other file are required.
+
+> **Note:** Only edit files under `docs/recipe_research/` (the experimental fork).
+> Never edit `docs/recipe_research_classic/` — it is a frozen snapshot.
 
 ---
 
