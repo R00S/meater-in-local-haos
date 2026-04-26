@@ -22,7 +22,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 18
+quality_score: 13
 quality_assessed: 2026-04-26
 -->
 # Pork Cheek — Cut Overview
@@ -39,11 +39,16 @@ Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the sma
 - [Pan Fry](./pork_cheek-pan_fry.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-26
+**Score: 13 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
+| Method file `pork_cheek-braise.md` copies parent cut profile | −1 |
+| Method file `pork_cheek-oven_roast.md` copies parent cut profile | −1 |
+| Method file `pork_cheek-pan_fry.md` copies parent cut profile | −1 |
+| Method file `pork_cheek-braise.md` copies `pork_cheek-oven_roast.md` | −1 |
+| Method file `pork_cheek-braise.md` copies `pork_cheek-pan_fry.md` | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

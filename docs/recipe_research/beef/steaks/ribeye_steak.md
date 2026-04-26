@@ -58,7 +58,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 19
+quality_score: 15
 quality_assessed: 2026-04-26
 -->
 # Ribeye Steak — Cut Overview
@@ -84,10 +84,14 @@ Target internal temperatures (oven roast ribeye):
 - [Sous Vide](./ribeye_steak-sous_vide.md)
 ## Quality score
 
-**Score: 19 / 20** — assessed 2026-04-26
+**Score: 15 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Southern tradition | −1 |
+| Method file `ribeye_steak-oven_roast.md` copies parent cut profile | −1 |
+| Method file `ribeye_steak-pan_sear.md` copies parent cut profile | −1 |
+| Method file `ribeye_steak-oven_roast.md` copies `ribeye_steak-pan_sear.md` | −1 |
+| Method file `ribeye_steak-oven_roast.md` copies `ribeye_steak-sous_vide.md` | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

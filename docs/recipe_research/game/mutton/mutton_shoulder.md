@@ -21,7 +21,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 20
+quality_score: 19
 quality_assessed: 2026-04-26
 -->
 # Mutton Shoulder — Cut Overview
@@ -41,8 +41,10 @@ Target internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bo
 - [Slow Cooker](./mutton_shoulder-slow_cooker.md)
 ## Quality score
 
-**Score: 20 / 20** — assessed 2026-04-26
+**Score: 19 / 20** — assessed 2026-04-26
 
-All criteria met.
+| Criterion | Deduction |
+|-----------|----------|
+| Method file `mutton_shoulder-braise.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

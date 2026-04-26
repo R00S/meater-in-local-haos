@@ -19,7 +19,7 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-quality_score: 15
+quality_score: 14
 quality_assessed: 2026-04-26
 -->
 # Button/Cremini Mushrooms — Cut Overview
@@ -37,12 +37,13 @@ Button mushrooms (*Agaricus bisporus*, immature white form) are roughly 92 % wat
 - [Sauté](./button_mushrooms-saute.md)
 ## Quality score
 
-**Score: 15 / 20** — assessed 2026-04-26
+**Score: 14 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Northern tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | No safe temperature data | −3 |
+| Method file `button_mushrooms-grill.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

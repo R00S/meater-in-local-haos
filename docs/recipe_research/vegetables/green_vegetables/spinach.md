@@ -18,7 +18,7 @@ doneness:
   max_f: 212
   usda_safe: true
   recommended: true
-quality_score: 14
+quality_score: 13
 quality_assessed: 2026-04-26
 -->
 # Spinach — Cut Overview
@@ -34,7 +34,7 @@ Spinach (*Spinacia oleracea*) sautéed wilts dramatically in 1–3 minutes in a 
 - [Steam](./spinach-steam.md)
 ## Quality score
 
-**Score: 14 / 20** — assessed 2026-04-26
+**Score: 13 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -42,5 +42,6 @@ Spinach (*Spinacia oleracea*) sautéed wilts dramatically in 1–3 minutes in a 
 | Missing Northern tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | No safe temperature data | −3 |
+| Method file `spinach-saute.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

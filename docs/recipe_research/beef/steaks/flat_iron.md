@@ -58,7 +58,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 20
+quality_score: 19
 quality_assessed: 2026-04-26
 -->
 # Flat Iron Steak — Cut Overview
@@ -79,8 +79,10 @@ The flat iron steak is taken from the infraspinatus muscle of the beef shoulder 
 - [Sous Vide](./flat_iron-sous_vide.md)
 ## Quality score
 
-**Score: 20 / 20** — assessed 2026-04-26
+**Score: 19 / 20** — assessed 2026-04-26
 
-All criteria met.
+| Criterion | Deduction |
+|-----------|----------|
+| Method file `flat_iron-air_fryer.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -37,7 +37,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 17
+quality_score: 16
 quality_assessed: 2026-04-26
 -->
 # Kangaroo Steak — Cut Overview
@@ -56,12 +56,13 @@ Target internal temperature: **54–57 °C (130–135 °F)** for medium-rare. Ma
 - [Pan Sear](./kangaroo_steak-pan_sear.md)
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-26
+**Score: 16 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
 | Missing Northern tradition | −1 |
+| Method file `kangaroo_steak-pan_sear.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -21,7 +21,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 18
+quality_score: 17
 quality_assessed: 2026-04-26
 -->
 # Shoulder — Cut Overview
@@ -36,11 +36,12 @@ Lamb shoulder is fattier and more flavourful than leg, with more connective tiss
 - [Oven Roast](./lamb_shoulder-oven_roast.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-26
+**Score: 17 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Eastern tradition | −1 |
 | Missing Northern tradition | −1 |
+| Method file `lamb_shoulder-oven_roast.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

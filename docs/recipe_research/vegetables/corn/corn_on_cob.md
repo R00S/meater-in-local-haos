@@ -29,7 +29,7 @@ doneness:
   max_c: 230
   max_f: 450
   usda_safe: true
-quality_score: 16
+quality_score: 15
 quality_assessed: 2026-04-26
 -->
 # Corn on the Cob — Cut Overview
@@ -48,11 +48,12 @@ Corn on the cob (*Zea mays*) boiled is the simplest and most globally common coo
 - [Steam](./corn_on_cob-steam.md)
 ## Quality score
 
-**Score: 16 / 20** — assessed 2026-04-26
+**Score: 15 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cut profile lacks anatomy | −1 |
 | No safe temperature data | −3 |
+| Method file `corn_on_cob-boil.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

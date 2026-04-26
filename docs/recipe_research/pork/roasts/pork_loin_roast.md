@@ -29,7 +29,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 18
+quality_score: 17
 quality_assessed: 2026-04-26
 -->
 # Pork Loin Roast — Cut Overview
@@ -49,11 +49,12 @@ Target internal temperatures (oven roast):
 - [Oven Roast](./pork_loin_roast-oven_roast.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-26
+**Score: 17 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
+| Method file `pork_loin_roast-oven_roast.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

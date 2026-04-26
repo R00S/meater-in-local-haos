@@ -21,7 +21,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 18
+quality_score: 17
 quality_assessed: 2026-04-26
 -->
 # Turkey Breast — Cut Overview
@@ -36,11 +36,12 @@ Turkey breast can be purchased bone-in (half breast on the rib rack, 1.5–2.5 k
 - [Oven Roast](./turkey_breast-oven_roast.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-26
+**Score: 17 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Eastern tradition | −1 |
 | Missing Northern tradition | −1 |
+| Method file `turkey_breast-oven_roast.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

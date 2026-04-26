@@ -45,7 +45,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 19
+quality_score: 16
 quality_assessed: 2026-04-26
 -->
 # Goat Chop — Cut Overview
@@ -64,10 +64,13 @@ Target internal temperature: **70–74 °C (158–165 °F)**.
 - [Pan Sear](./goat_chop-pan_sear.md)
 ## Quality score
 
-**Score: 19 / 20** — assessed 2026-04-26
+**Score: 16 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Northern tradition | −1 |
+| Method file `goat_chop-grill.md` copies parent cut profile | −1 |
+| Method file `goat_chop-pan_sear.md` copies parent cut profile | −1 |
+| Method file `goat_chop-grill.md` copies `goat_chop-pan_sear.md` | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

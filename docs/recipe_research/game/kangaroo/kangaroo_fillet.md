@@ -37,7 +37,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 12
+quality_score: 10
 quality_assessed: 2026-04-26
 -->
 # Kangaroo Fillet — Cut Overview
@@ -51,7 +51,7 @@ quality_assessed: 2026-04-26
 *No research files yet.*
 ## Quality score
 
-**Score: 12 / 20** — assessed 2026-04-26
+**Score: 10 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -59,7 +59,8 @@ quality_assessed: 2026-04-26
 | Missing Western tradition | −1 |
 | Missing Southern tradition | −1 |
 | Missing Northern tradition | −1 |
-| Cut profile lacks anatomy | −1 |
+| Cut profile is a placeholder | −1 |
 | No method leaf files | −3 |
+| No per-method temp research | −2 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

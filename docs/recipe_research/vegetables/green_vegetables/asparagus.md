@@ -28,7 +28,7 @@ doneness:
   max_f: 212
   usda_safe: true
   recommended: true
-quality_score: 15
+quality_score: 14
 quality_assessed: 2026-04-26
 -->
 # Asparagus — Cut Overview
@@ -46,12 +46,13 @@ Asparagus (*Asparagus officinalis*) sautéed in a hot pan is the fastest prepara
 - [Steam](./asparagus-steam.md)
 ## Quality score
 
-**Score: 15 / 20** — assessed 2026-04-26
+**Score: 14 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Northern tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | No safe temperature data | −3 |
+| Method file `asparagus-saute.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -21,7 +21,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 18
+quality_score: 16
 quality_assessed: 2026-04-26
 -->
 # Lamb Neck — Cut Overview
@@ -41,11 +41,13 @@ Target internal temperature: **85–90 °C (185–194 °F)** for full braised te
 - [Slow Cooker](./lamb_neck-slow_cooker.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-26
+**Score: 16 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Eastern tradition | −1 |
-| Cut profile lacks anatomy | −1 |
+| Method file `lamb_neck-braise.md` copies parent cut profile | −1 |
+| Method file `lamb_neck-oven_roast.md` copies parent cut profile | −1 |
+| Method file `lamb_neck-braise.md` copies `lamb_neck-oven_roast.md` | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

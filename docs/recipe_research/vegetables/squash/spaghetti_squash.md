@@ -18,7 +18,7 @@ doneness:
   max_f: 212
   usda_safe: true
   recommended: true
-quality_score: 14
+quality_score: 13
 quality_assessed: 2026-04-26
 -->
 # Spaghetti Squash — Cut Overview
@@ -34,7 +34,7 @@ Spaghetti squash (*Cucurbita pepo*) is baked whole or halved at 180–200 °C un
 - [Oven Roast](./spaghetti_squash-oven_roast.md)
 ## Quality score
 
-**Score: 14 / 20** — assessed 2026-04-26
+**Score: 13 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -42,5 +42,6 @@ Spaghetti squash (*Cucurbita pepo*) is baked whole or halved at 180–200 °C un
 | Missing Northern tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | No safe temperature data | −3 |
+| Method file `spaghetti_squash-oven_bake.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

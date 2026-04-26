@@ -20,7 +20,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 20
+quality_score: 19
 quality_assessed: 2026-04-26
 -->
 # Beef Tongue — Cut Overview
@@ -36,8 +36,10 @@ Beef tongue (*Bos taurus* lingual muscle) is a single dense cylindrical muscle w
 - [Slow Cooker](./beef_tongue-slow_cooker.md)
 ## Quality score
 
-**Score: 20 / 20** — assessed 2026-04-26
+**Score: 19 / 20** — assessed 2026-04-26
 
-All criteria met.
+| Criterion | Deduction |
+|-----------|----------|
+| Method file `beef_tongue-braise.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

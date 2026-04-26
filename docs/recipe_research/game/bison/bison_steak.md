@@ -46,7 +46,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 17
+quality_score: 16
 quality_assessed: 2026-04-26
 -->
 # Bison Steak — Cut Overview
@@ -99,12 +99,13 @@ the sear provides Maillard flavour and the short oven time (25 min at 80 °C) si
 - [Pan Sear](./bison_steak-pan_sear.md)
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-26
+**Score: 16 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
 | Missing Northern tradition | −1 |
+| Method file `bison_steak-grill.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

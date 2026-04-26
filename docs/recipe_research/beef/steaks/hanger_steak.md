@@ -39,7 +39,7 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 20
+quality_score: 18
 quality_assessed: 2026-04-26
 -->
 # Hanger Steak — Cut Overview
@@ -57,8 +57,11 @@ Hanger steak over live charcoal adds an important dimension to this already inte
 - [Pan Sear](./hanger_steak-pan_sear.md)
 ## Quality score
 
-**Score: 20 / 20** — assessed 2026-04-26
+**Score: 18 / 20** — assessed 2026-04-26
 
-All criteria met.
+| Criterion | Deduction |
+|-----------|----------|
+| Method file `hanger_steak-charcoal_grill.md` copies parent cut profile | −1 |
+| Method file `hanger_steak-pan_fry.md` copies `hanger_steak-pan_sear.md` | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

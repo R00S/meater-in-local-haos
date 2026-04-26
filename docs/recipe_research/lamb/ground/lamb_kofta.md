@@ -20,7 +20,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 17
+quality_score: 16
 quality_assessed: 2026-04-26
 -->
 # Kofta / Kebab — Cut Overview
@@ -38,12 +38,13 @@ Target internal temperature: **74 °C (165 °F)** for food-safe ground meat.
 - [Grill](./lamb_kofta-grill.md)
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-26
+**Score: 16 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Western tradition | −1 |
 | Missing Northern tradition | −1 |
 | Cut profile lacks anatomy | −1 |
+| Method file `lamb_kofta-grill.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

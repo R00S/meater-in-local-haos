@@ -25,7 +25,7 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-quality_score: 15
+quality_score: 14
 quality_assessed: 2026-04-26
 -->
 # Roasted Garlic — Cut Overview
@@ -40,12 +40,13 @@ Whole garlic heads (*Allium sativum*) oven-roasted are entirely transformed: the
 - [Oven Roast](./roasted_garlic-oven_roast.md)
 ## Quality score
 
-**Score: 15 / 20** — assessed 2026-04-26
+**Score: 14 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Northern tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | No safe temperature data | −3 |
+| Method file `roasted_garlic-oven_roast.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

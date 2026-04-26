@@ -61,6 +61,6 @@ Target internal temperature: **57–62 °C (135–144 °F)** for medium. Pull at
 | Missing Eastern tradition | −1 |
 | Missing Western tradition | −1 |
 | Missing Southern tradition | −1 |
-| Cut profile lacks anatomy | −1 |
+| Method file `reindeer_roast-oven_roast.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

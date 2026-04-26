@@ -20,7 +20,7 @@ doneness:
   max_f: 145
   usda_safe: true
   recommended: true
-quality_score: 17
+quality_score: 16
 quality_assessed: 2026-04-26
 -->
 # Cured Ham (Pre-cooked) — Cut Overview
@@ -42,12 +42,13 @@ Target internal temperatures (oven roast):
 - [Oven Roast](./cured_ham-oven_roast.md)
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-26
+**Score: 16 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
 | Cut profile lacks anatomy | −1 |
+| Method file `cured_ham-oven_roast.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

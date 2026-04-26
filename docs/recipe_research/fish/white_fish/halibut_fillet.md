@@ -38,7 +38,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 19
+quality_score: 18
 quality_assessed: 2026-04-26
 -->
 # Halibut Fillet — Cut Overview
@@ -53,10 +53,11 @@ Pacific halibut (*Hippoglossus stenolepis*) and Atlantic halibut (*Hippoglossus 
 - [Pan Sear](./halibut_fillet-pan_sear.md)
 ## Quality score
 
-**Score: 19 / 20** — assessed 2026-04-26
+**Score: 18 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Southern tradition | −1 |
+| Method file `halibut_fillet-pan_sear.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

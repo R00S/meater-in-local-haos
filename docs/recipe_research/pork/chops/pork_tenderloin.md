@@ -32,7 +32,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 20
+quality_score: 16
 quality_assessed: 2026-04-26
 -->
 # Pork Tenderloin — Cut Overview
@@ -55,8 +55,13 @@ Target internal temperatures (grill):
 - [Sous Vide](./pork_tenderloin-sous_vide.md)
 ## Quality score
 
-**Score: 20 / 20** — assessed 2026-04-26
+**Score: 16 / 20** — assessed 2026-04-26
 
-All criteria met.
+| Criterion | Deduction |
+|-----------|----------|
+| Cut profile lacks anatomy | −1 |
+| Method file `pork_tenderloin-grill.md` copies parent cut profile | −1 |
+| Method file `pork_tenderloin-pan_sear.md` copies parent cut profile | −1 |
+| Method file `pork_tenderloin-grill.md` copies `pork_tenderloin-pan_sear.md` | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -45,7 +45,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 19
+quality_score: 18
 quality_assessed: 2026-04-26
 -->
 # Lamb Loin Chops — Cut Overview
@@ -62,10 +62,11 @@ Target: **57–62 °C (135–144 °F)** for medium (slightly pink). Africanbites
 - [Pan Sear](./lamb_loin_chops-pan_sear.md)
 ## Quality score
 
-**Score: 19 / 20** — assessed 2026-04-26
+**Score: 18 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Eastern tradition | −1 |
+| Method file `lamb_loin_chops-pan_sear.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

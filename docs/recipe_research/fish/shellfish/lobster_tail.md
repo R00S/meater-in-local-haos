@@ -29,7 +29,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 19
+quality_score: 16
 quality_assessed: 2026-04-26
 -->
 # Lobster Tail — Cut Overview
@@ -45,10 +45,13 @@ Lobster tail is the large tail segment of a lobster (*Homarus americanus*, the A
 - [Oven Roast](./lobster_tail-oven_roast.md)
 ## Quality score
 
-**Score: 19 / 20** — assessed 2026-04-26
+**Score: 16 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Southern tradition | −1 |
+| Method file `lobster_tail-grill.md` copies parent cut profile | −1 |
+| Method file `lobster_tail-oven_roast.md` copies parent cut profile | −1 |
+| Method file `lobster_tail-grill.md` copies `lobster_tail-oven_roast.md` | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

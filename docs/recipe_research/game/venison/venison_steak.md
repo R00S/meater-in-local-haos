@@ -46,7 +46,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 18
+quality_score: 17
 quality_assessed: 2026-04-26
 -->
 # Venison Steak — Cut Overview
@@ -69,11 +69,12 @@ Target internal temperature: pull at **54–57°C (130–135°F)** for medium-ra
 - [Pan Sear](./venison_steak-pan_sear.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-26
+**Score: 17 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
+| Method file `venison_steak-pan_sear.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

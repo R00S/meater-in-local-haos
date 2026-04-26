@@ -27,7 +27,7 @@ doneness:
   max_c: 230
   max_f: 450
   usda_safe: true
-quality_score: 15
+quality_score: 14
 quality_assessed: 2026-04-26
 -->
 # Bell Peppers — Cut Overview
@@ -45,12 +45,13 @@ Bell peppers (*Capsicum annuum*) sautéed in strips or rings are one of the most
 - [Sauté](./bell_peppers-saute.md)
 ## Quality score
 
-**Score: 15 / 20** — assessed 2026-04-26
+**Score: 14 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Northern tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | No safe temperature data | −3 |
+| Method file `bell_peppers-saute.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

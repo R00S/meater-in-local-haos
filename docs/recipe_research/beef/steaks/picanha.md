@@ -55,7 +55,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 17
+quality_score: 14
 quality_assessed: 2026-04-26
 -->
 # Picanha — Cut Overview
@@ -73,12 +73,15 @@ Picanha over live charcoal is the definitive Brazilian *churrasco* preparation �
 - [Pan Sear](./picanha-pan_sear.md)
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-26
+**Score: 14 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Southern tradition | −1 |
 | Missing Northern tradition | −1 |
 | Cut profile lacks anatomy | −1 |
+| Method file `picanha-charcoal_grill.md` copies parent cut profile | −1 |
+| Method file `picanha-grill.md` copies `picanha-oven_roast.md` | −1 |
+| Method file `picanha-grill.md` copies `picanha-pan_sear.md` | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

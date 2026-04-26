@@ -31,7 +31,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 19
+quality_score: 14
 quality_assessed: 2026-04-26
 -->
 # Cod Fillet — Cut Overview
@@ -48,10 +48,15 @@ Atlantic cod (*Gadus morhua*) fillet is cut from the sides of the fish; the fles
 - [Pan Fry](./cod_fillet-pan_fry.md)
 ## Quality score
 
-**Score: 19 / 20** — assessed 2026-04-26
+**Score: 14 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Northern tradition | −1 |
+| Method file `cod_fillet-air_fryer.md` copies parent cut profile | −1 |
+| Method file `cod_fillet-oven_bake.md` copies parent cut profile | −1 |
+| Method file `cod_fillet-pan_fry.md` copies parent cut profile | −1 |
+| Method file `cod_fillet-air_fryer.md` copies `cod_fillet-oven_bake.md` | −1 |
+| Method file `cod_fillet-air_fryer.md` copies `cod_fillet-pan_fry.md` | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -29,7 +29,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 17
+quality_score: 16
 quality_assessed: 2026-04-26
 -->
 # Rabbit Saddle — Cut Overview
@@ -59,12 +59,13 @@ and carryover is 2–3°C, so the cut demands close monitoring. Stuffed or rolle
 - [Pan Sear](./rabbit_saddle-pan_sear.md)
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-26
+**Score: 16 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
 | Missing Northern tradition | −1 |
+| Method file `rabbit_saddle-oven_roast.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -26,7 +26,7 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-quality_score: 16
+quality_score: 15
 quality_assessed: 2026-04-26
 -->
 # Roasted Parsnips — Cut Overview
@@ -42,11 +42,12 @@ Parsnips (*Pastinaca sativa*) in the air fryer become golden, caramelised and cr
 - [Oven Roast](./roasted_parsnips-oven_roast.md)
 ## Quality score
 
-**Score: 16 / 20** — assessed 2026-04-26
+**Score: 15 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cut profile lacks anatomy | −1 |
 | No safe temperature data | −3 |
+| Method file `roasted_parsnips-air_fryer.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

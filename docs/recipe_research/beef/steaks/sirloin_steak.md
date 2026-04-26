@@ -58,7 +58,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 19
+quality_score: 13
 quality_assessed: 2026-04-26
 -->
 # Sirloin Steak — Cut Overview
@@ -79,10 +79,16 @@ The sirloin steak is cut from the sirloin primal, which sits between the short l
 - [Sous Vide](./sirloin_steak-sous_vide.md)
 ## Quality score
 
-**Score: 19 / 20** — assessed 2026-04-26
+**Score: 13 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Northern tradition | −1 |
+| Method file `sirloin_steak-air_fryer.md` copies parent cut profile | −1 |
+| Method file `sirloin_steak-oven_roast.md` copies parent cut profile | −1 |
+| Method file `sirloin_steak-pan_fry.md` copies parent cut profile | −1 |
+| Method file `sirloin_steak-pan_sear.md` copies parent cut profile | −1 |
+| Method file `sirloin_steak-air_fryer.md` copies `sirloin_steak-oven_roast.md` | −1 |
+| Method file `sirloin_steak-air_fryer.md` copies `sirloin_steak-pan_fry.md` | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

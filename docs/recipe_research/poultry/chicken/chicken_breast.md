@@ -25,7 +25,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 18
+quality_score: 17
 quality_assessed: 2026-04-26
 -->
 # Chicken Breast — Cut Overview
@@ -46,11 +46,12 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 - [Pan Sear](./chicken_breast-pan_sear.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-26
+**Score: 17 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Western tradition | −1 |
 | Missing Northern tradition | −1 |
+| Method file `chicken_breast-air_fryer.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -520,11 +520,16 @@ Recipes must represent all four directional traditions.  Definitions:
 
 ### Cut profile quality
 
-- **−3** if `## Cut profile` section is missing entirely.
-- **−1** if `## Cut profile` exists but lacks anatomical placement — where on
-  the animal the cut comes from, what muscle or structure it is, what defines it
-  (marbling, connective tissue, leanness, typical use). Anatomy is always
-  applicable; this deduction applies universally.
+- **−3** if `## Cut profile` section is missing entirely (no heading at all).
+- **−1** if `## Cut profile` section exists but is a placeholder (content is a
+  stub note such as "Placeholder — research not yet completed" with no real
+  text). Placeholders are a special case: the gap is acknowledged, so the
+  deduction is lighter than for a completely absent section.
+- **−1** if `## Cut profile` exists with real content but lacks anatomical
+  placement — where on the animal the cut comes from, what muscle or structure
+  it is, what defines it (marbling, connective tissue, leanness, typical use).
+  Anatomy is always applicable; this deduction applies universally to profiles
+  with real content.
 
 ### Method sub-files
 
@@ -544,12 +549,20 @@ Recipes must represent all four directional traditions.  Definitions:
   ranges). No deduction if either the cut file or the method leaf files already
   carry per-method data.
 
-### Description uniqueness across method files
+### Description uniqueness
+
+Two separate deductions apply:
 
 - **−1** per method leaf file whose `## Cut profile` or opening description is
-  a copy-paste or near-identical reuse of another method leaf file for the same
-  cut (maximum −2). Each method must explain what that *specific method* does to
-  this *specific cut* — not repeat generic cut prose.
+  a copy-paste or near-identical reuse of **another method leaf file** for the
+  same cut (maximum −2 across this sub-criterion). Each method must explain what
+  that *specific method* does to this *specific cut*.
+
+- **−1** per method leaf file whose `## Cut profile` text is a copy-paste or
+  near-identical reuse of the **parent cut file's** `## Cut profile` text (no
+  upper limit). Using the generic cut overview as a method description is worse
+  than copying a sibling method file — it means the method file contains no
+  method-specific analysis at all.
 
 ### Scoring summary table
 
@@ -560,14 +573,16 @@ Recipes must represent all four directional traditions.  Definitions:
 | Missing Southern tradition | −1 |
 | Missing Northern tradition | −1 |
 | No `## Cut profile` section | −3 |
+| Cut profile is a placeholder | −1 |
 | Cut profile lacks anatomy | −1 |
 | No method leaf files exist | −3 |
 | No safe temperature data | −3 |
 | No culinary preferred temps | −4 |
 | Per-method temp data missing (cut + method files both) | −2 |
-| Duplicate description across method files (per file, max 2) | −1 each |
-| **Maximum total deduction** | **−18** |
-| **Minimum score** | **2/20** |
+| Method file copies sibling method description (per file, max 2) | −1 each |
+| Method file copies parent cut profile (per file, no limit) | −1 each |
+| **Maximum total deduction** | **−19 + number of method files** |
+| **Minimum score** | **varies** |
 
 ### How the score is written into the cut file
 

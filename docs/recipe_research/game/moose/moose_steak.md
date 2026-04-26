@@ -45,7 +45,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 18
+quality_score: 17
 quality_assessed: 2026-04-26
 -->
 # Moose Steak — Cut Overview
@@ -64,11 +64,12 @@ Target internal temperature: **57–62 °C (135–144 °F)** for medium-rare to 
 - [Pan Sear](./moose_steak-pan_sear.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-26
+**Score: 17 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
+| Method file `moose_steak-grill.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -51,7 +51,7 @@ Zucchini (*Cucurbita pepo* var. *cylindrica*) cut into 1–2 cm rounds, half-moo
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Northern tradition | −1 |
-| Cut profile lacks anatomy | −1 |
 | No safe temperature data | −3 |
+| Method file `zucchini-air_fryer.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

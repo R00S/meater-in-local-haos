@@ -20,7 +20,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 17
+quality_score: 16
 quality_assessed: 2026-04-26
 -->
 # Burger — Cut Overview
@@ -39,12 +39,13 @@ Target internal temperature: **70–74 °C (158–165 °F)** (ground meat food s
 - [Pan Fry](./buffalo_burger-pan_fry.md)
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-26
+**Score: 16 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
 | Cut profile lacks anatomy | −1 |
+| Method file `buffalo_burger-grill.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -33,7 +33,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 19
+quality_score: 18
 quality_assessed: 2026-04-26
 -->
 # Chicken Thigh — Cut Overview
@@ -53,10 +53,11 @@ Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)
 - [Oven Roast](./chicken_thigh-oven_roast.md)
 ## Quality score
 
-**Score: 19 / 20** — assessed 2026-04-26
+**Score: 18 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Northern tradition | −1 |
+| Method file `chicken_thigh-air_fryer.md` copies parent cut profile | −1 |
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
