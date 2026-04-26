@@ -30,7 +30,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 17
+quality_score: 16
 quality_assessed: 2026-04-26
 -->
 # Whole Turkey — Cut Overview
@@ -51,16 +51,18 @@ Typical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) un
 - [Oven Roast](./whole_turkey-oven_roast.md)
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-26
+**Score: 16 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Missing method leaf file `whole_turkey-smoker.md` | −1 |
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
 | Missing Northern tradition | −1 |
 
 ### Improvement priorities
 
-1. **−3** · Missing Eastern, Southern and Northern tradition(s) — add Eastern, Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−1** · Missing method leaf file — create `whole_turkey-smoker.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
+2. **−3** · Missing Eastern, Southern and Northern tradition(s) — add Eastern, Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

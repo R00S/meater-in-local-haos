@@ -22,7 +22,7 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 18
+quality_score: 15
 quality_assessed: 2026-04-26
 -->
 # Brisket — Cut Overview
@@ -37,16 +37,18 @@ Beef brisket is taken from the breast and lower chest of the animal, comprising 
 - [Oven Roast](./brisket-oven_roast.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-26
+**Score: 15 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Missing method leaf files (3 of 4 declared) | −3 |
 | Missing Northern tradition | −1 |
 | Method file `brisket-oven_roast.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
 
-1. **−1** · Method file `brisket-oven_roast.md` copies parent cut profile — rewrite `brisket-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-2. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−3** · Missing method leaf files — create the following 3 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `brisket-braise.md`, `brisket-slow_cooker.md`, `brisket-smoker.md`
+2. **−1** · Method file `brisket-oven_roast.md` copies parent cut profile — rewrite `brisket-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+3. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

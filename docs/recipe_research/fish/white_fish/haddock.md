@@ -30,7 +30,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 17
+quality_score: 15
 quality_assessed: 2026-04-26
 -->
 # Haddock Fillet — Cut Overview
@@ -55,18 +55,20 @@ traditions) creates a protective crust that helps moisture retention and even br
 - [Pan Fry](./haddock-pan_fry.md)
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-26
+**Score: 15 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Missing method leaf files (2 of 3 declared) | −2 |
 | Missing Eastern tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | Method file `haddock-pan_fry.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
 
-1. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
-2. **−1** · Method file `haddock-pan_fry.md` copies parent cut profile — rewrite `haddock-pan_fry.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-3. **−1** · Missing Eastern tradition(s) — add Eastern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `haddock-air_fryer.md`, `haddock-oven_roast.md`
+2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+3. **−1** · Method file `haddock-pan_fry.md` copies parent cut profile — rewrite `haddock-pan_fry.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. **−1** · Missing Eastern tradition(s) — add Eastern source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

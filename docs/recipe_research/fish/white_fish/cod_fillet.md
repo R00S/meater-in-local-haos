@@ -31,7 +31,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 14
+quality_score: 13
 quality_assessed: 2026-04-26
 -->
 # Cod Fillet — Cut Overview
@@ -48,10 +48,11 @@ Atlantic cod (*Gadus morhua*) fillet is cut from the sides of the fish; the fles
 - [Pan Fry](./cod_fillet-pan_fry.md)
 ## Quality score
 
-**Score: 14 / 20** — assessed 2026-04-26
+**Score: 13 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Missing method leaf file `cod_fillet-oven_roast.md` | −1 |
 | Missing Northern tradition | −1 |
 | Method file `cod_fillet-air_fryer.md` copies parent cut profile | −1 |
 | Method file `cod_fillet-oven_bake.md` copies parent cut profile | −1 |
@@ -61,11 +62,12 @@ Atlantic cod (*Gadus morhua*) fillet is cut from the sides of the fish; the fles
 
 ### Improvement priorities
 
-1. **−1** · Method file `cod_fillet-air_fryer.md` copies `cod_fillet-oven_bake.md` — rewrite `cod_fillet-air_fryer.md`'s cut profile — it must describe what the oven bake method does to this cut, not repeat another method's prose
-2. **−1** · Method file `cod_fillet-air_fryer.md` copies `cod_fillet-pan_fry.md` — rewrite `cod_fillet-air_fryer.md`'s cut profile — it must describe what the pan fry method does to this cut, not repeat another method's prose
-3. **−1** · Method file `cod_fillet-air_fryer.md` copies parent cut profile — rewrite `cod_fillet-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Method file `cod_fillet-oven_bake.md` copies parent cut profile — rewrite `cod_fillet-oven_bake.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-5. **−1** · Method file `cod_fillet-pan_fry.md` copies parent cut profile — rewrite `cod_fillet-pan_fry.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-6. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−1** · Missing method leaf file — create `cod_fillet-oven_roast.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
+2. **−1** · Method file `cod_fillet-air_fryer.md` copies `cod_fillet-oven_bake.md` — rewrite `cod_fillet-air_fryer.md`'s cut profile — it must describe what the oven bake method does to this cut, not repeat another method's prose
+3. **−1** · Method file `cod_fillet-air_fryer.md` copies `cod_fillet-pan_fry.md` — rewrite `cod_fillet-air_fryer.md`'s cut profile — it must describe what the pan fry method does to this cut, not repeat another method's prose
+4. **−1** · Method file `cod_fillet-air_fryer.md` copies parent cut profile — rewrite `cod_fillet-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+5. **−1** · Method file `cod_fillet-oven_bake.md` copies parent cut profile — rewrite `cod_fillet-oven_bake.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+6. **−1** · Method file `cod_fillet-pan_fry.md` copies parent cut profile — rewrite `cod_fillet-pan_fry.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+7. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -38,7 +38,7 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 18
+quality_score: 16
 quality_assessed: 2026-04-26
 -->
 # Trout Fillet — Cut Overview
@@ -62,16 +62,18 @@ thickest edge (lateral insertion) in thin fillets, or through the shoulder of a 
 - [Pan Sear](./trout-pan_sear.md)
 ## Quality score
 
-**Score: 18 / 20** — assessed 2026-04-26
+**Score: 16 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Missing method leaf files (2 of 3 declared) | −2 |
 | Missing Eastern tradition | −1 |
 | Method file `trout-pan_sear.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
 
-1. **−1** · Method file `trout-pan_sear.md` copies parent cut profile — rewrite `trout-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-2. **−1** · Missing Eastern tradition(s) — add Eastern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+1. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `trout-grill.md`, `trout-oven_roast.md`
+2. **−1** · Method file `trout-pan_sear.md` copies parent cut profile — rewrite `trout-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+3. **−1** · Missing Eastern tradition(s) — add Eastern source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

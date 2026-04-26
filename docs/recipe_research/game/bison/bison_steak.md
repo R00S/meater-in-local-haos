@@ -46,7 +46,7 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 16
+quality_score: 15
 quality_assessed: 2026-04-26
 -->
 # Bison Steak — Cut Overview
@@ -99,10 +99,11 @@ the sear provides Maillard flavour and the short oven time (25 min at 80 °C) si
 - [Pan Sear](./bison_steak-pan_sear.md)
 ## Quality score
 
-**Score: 16 / 20** — assessed 2026-04-26
+**Score: 15 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Missing method leaf file `bison_steak-charcoal_grill.md` | −1 |
 | Missing Eastern tradition | −1 |
 | Missing Southern tradition | −1 |
 | Missing Northern tradition | −1 |
@@ -110,7 +111,8 @@ the sear provides Maillard flavour and the short oven time (25 min at 80 °C) si
 
 ### Improvement priorities
 
-1. **−3** · Missing Eastern, Southern and Northern tradition(s) — add Eastern, Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
-2. **−1** · Method file `bison_steak-grill.md` copies parent cut profile — rewrite `bison_steak-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−1** · Missing method leaf file — create `bison_steak-charcoal_grill.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
+2. **−3** · Missing Eastern, Southern and Northern tradition(s) — add Eastern, Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. **−1** · Method file `bison_steak-grill.md` copies parent cut profile — rewrite `bison_steak-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

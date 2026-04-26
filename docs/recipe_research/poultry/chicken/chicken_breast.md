@@ -25,7 +25,7 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 17
+quality_score: 15
 quality_assessed: 2026-04-26
 -->
 # Chicken Breast — Cut Overview
@@ -46,17 +46,19 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 - [Pan Sear](./chicken_breast-pan_sear.md)
 ## Quality score
 
-**Score: 17 / 20** — assessed 2026-04-26
+**Score: 15 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
+| Missing method leaf files (2 of 6 declared) | −2 |
 | Missing Western tradition | −1 |
 | Missing Northern tradition | −1 |
 | Method file `chicken_breast-air_fryer.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
 
-1. **−2** · Missing Western and Northern tradition(s) — add Western and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
-2. **−1** · Method file `chicken_breast-air_fryer.md` copies parent cut profile — rewrite `chicken_breast-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `chicken_breast-oven_roast.md`, `chicken_breast-sous_vide.md`
+2. **−2** · Missing Western and Northern tradition(s) — add Western and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. **−1** · Method file `chicken_breast-air_fryer.md` copies parent cut profile — rewrite `chicken_breast-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
