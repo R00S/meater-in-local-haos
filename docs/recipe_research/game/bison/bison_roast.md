@@ -96,4 +96,8 @@ ruined at those temperatures. The correct window is medium (60–65 °C), where 
 | Missing Southern tradition | −1 |
 | Missing Northern tradition | −1 |
 
+### Improvement priorities
+
+1. **−3** · Missing Eastern, Southern and Northern tradition(s) — add Eastern, Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

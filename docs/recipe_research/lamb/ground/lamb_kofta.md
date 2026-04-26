@@ -47,4 +47,10 @@ Target internal temperature: **74 °C (165 °F)** for food-safe ground meat.
 | Cut profile lacks anatomy | −1 |
 | Method file `lamb_kofta-grill.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−2** · Missing Western and Northern tradition(s) — add Western and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+3. **−1** · Method file `lamb_kofta-grill.md` copies parent cut profile — rewrite `lamb_kofta-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

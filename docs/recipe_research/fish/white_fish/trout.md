@@ -69,4 +69,9 @@ thickest edge (lateral insertion) in thin fillets, or through the shoulder of a 
 | Missing Eastern tradition | −1 |
 | Method file `trout-pan_sear.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `trout-pan_sear.md` copies parent cut profile — rewrite `trout-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+2. **−1** · Missing Eastern tradition(s) — add Eastern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

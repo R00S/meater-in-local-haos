@@ -85,4 +85,8 @@ The flat iron steak is taken from the infraspinatus muscle of the beef shoulder 
 |-----------|----------|
 | Method file `flat_iron-air_fryer.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `flat_iron-air_fryer.md` copies parent cut profile — rewrite `flat_iron-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

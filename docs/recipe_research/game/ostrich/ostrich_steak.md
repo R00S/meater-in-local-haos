@@ -66,4 +66,11 @@ Target internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pu
 | Method file `ostrich_steak-pan_sear.md` copies parent cut profile | −1 |
 | Method file `ostrich_steak-grill.md` copies `ostrich_steak-pan_sear.md` | −1 |
 
+### Improvement priorities
+
+1. **−2** · Missing Eastern and Northern tradition(s) — add Eastern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−1** · Method file `ostrich_steak-grill.md` copies `ostrich_steak-pan_sear.md` — rewrite `ostrich_steak-grill.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
+3. **−1** · Method file `ostrich_steak-grill.md` copies parent cut profile — rewrite `ostrich_steak-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. **−1** · Method file `ostrich_steak-pan_sear.md` copies parent cut profile — rewrite `ostrich_steak-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

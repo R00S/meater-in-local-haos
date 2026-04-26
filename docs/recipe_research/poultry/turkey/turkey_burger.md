@@ -46,4 +46,9 @@ A grilled turkey burger is a 150–180 g shaped patty made from coarsely-ground 
 | Missing Eastern tradition | −1 |
 | Method file `turkey_burger-grill.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `turkey_burger-grill.md` copies parent cut profile — rewrite `turkey_burger-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+2. **−1** · Missing Eastern tradition(s) — add Eastern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

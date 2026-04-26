@@ -64,4 +64,9 @@ Hanger steak over live charcoal adds an important dimension to this already inte
 | Method file `hanger_steak-charcoal_grill.md` copies parent cut profile | −1 |
 | Method file `hanger_steak-pan_fry.md` copies `hanger_steak-pan_sear.md` | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `hanger_steak-charcoal_grill.md` copies parent cut profile — rewrite `hanger_steak-charcoal_grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+2. **−1** · Method file `hanger_steak-pan_fry.md` copies `hanger_steak-pan_sear.md` — rewrite `hanger_steak-pan_fry.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

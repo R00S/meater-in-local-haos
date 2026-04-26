@@ -63,4 +63,9 @@ Target internal temperature: **57–62 °C (135–144 °F)** for medium. Pull at
 | Missing Southern tradition | −1 |
 | Method file `reindeer_roast-oven_roast.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−3** · Missing Eastern, Western and Southern tradition(s) — add Eastern, Western and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−1** · Method file `reindeer_roast-oven_roast.md` copies parent cut profile — rewrite `reindeer_roast-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -28,7 +28,7 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-quality_score: 15
+quality_score: 18
 quality_assessed: 2026-04-26
 -->
 # Portobello Mushrooms — Cut Overview
@@ -46,12 +46,16 @@ Portobello mushrooms (*Agaricus bisporus* — the same species as button mushroo
 - [Sauté](./portobello_mushrooms-saute.md)
 ## Quality score
 
-**Score: 15 / 20** — assessed 2026-04-26
+**Score: 18 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cut profile lacks anatomy | −1 |
-| No safe temperature data | −3 |
 | Method file `portobello_mushrooms-air_fryer.md` copies parent cut profile | −1 |
+
+### Improvement priorities
+
+1. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+2. **−1** · Method file `portobello_mushrooms-air_fryer.md` copies parent cut profile — rewrite `portobello_mushrooms-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

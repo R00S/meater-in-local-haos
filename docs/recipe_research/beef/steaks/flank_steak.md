@@ -76,4 +76,9 @@ Flank steak is a flat, thin muscle cut from the abdominal wall of the animal (th
 | Missing Northern tradition | −1 |
 | Method file `flank_steak-charcoal_grill.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `flank_steak-charcoal_grill.md` copies parent cut profile — rewrite `flank_steak-charcoal_grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+2. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

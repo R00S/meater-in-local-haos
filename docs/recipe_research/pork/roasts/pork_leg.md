@@ -59,4 +59,11 @@ Target internal temperature: **75–80 °C (167–176 °F)** for sliceable, tend
 | Method file `pork_leg-oven_roast.md` copies parent cut profile | −1 |
 | Method file `pork_leg-braise.md` copies `pork_leg-oven_roast.md` | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `pork_leg-braise.md` copies `pork_leg-oven_roast.md` — rewrite `pork_leg-braise.md`'s cut profile — it must describe what the oven roast method does to this cut, not repeat another method's prose
+2. **−1** · Method file `pork_leg-braise.md` copies parent cut profile — rewrite `pork_leg-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+3. **−1** · Method file `pork_leg-oven_roast.md` copies parent cut profile — rewrite `pork_leg-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. **−1** · Missing Southern tradition(s) — add Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

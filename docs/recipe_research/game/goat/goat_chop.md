@@ -73,4 +73,11 @@ Target internal temperature: **70–74 °C (158–165 °F)**.
 | Method file `goat_chop-pan_sear.md` copies parent cut profile | −1 |
 | Method file `goat_chop-grill.md` copies `goat_chop-pan_sear.md` | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `goat_chop-grill.md` copies `goat_chop-pan_sear.md` — rewrite `goat_chop-grill.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
+2. **−1** · Method file `goat_chop-grill.md` copies parent cut profile — rewrite `goat_chop-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+3. **−1** · Method file `goat_chop-pan_sear.md` copies parent cut profile — rewrite `goat_chop-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

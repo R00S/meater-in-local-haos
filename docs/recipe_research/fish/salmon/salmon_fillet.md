@@ -65,4 +65,8 @@ Salmon fillet comes from the side of the fish, running the full length of the bo
 |-----------|----------|
 | Method file `salmon_fillet-pan_sear.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `salmon_fillet-pan_sear.md` copies parent cut profile — rewrite `salmon_fillet-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -47,4 +47,9 @@ Ground beef burgers are formed patties of minced beef, most commonly from a blen
 | Missing Northern tradition | −1 |
 | Method file `beef_burger-grill.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `beef_burger-grill.md` copies parent cut profile — rewrite `beef_burger-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+2. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

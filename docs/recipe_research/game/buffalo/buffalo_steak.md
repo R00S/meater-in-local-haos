@@ -76,4 +76,10 @@ Target internal temperature: **57–63 °C (135–145 °F)** for medium-rare to 
 | Cut profile lacks anatomy | −1 |
 | Method file `buffalo_steak-grill.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−2** · Missing Southern and Northern tradition(s) — add Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+3. **−1** · Method file `buffalo_steak-grill.md` copies parent cut profile — rewrite `buffalo_steak-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

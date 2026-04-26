@@ -50,4 +50,9 @@ Shrimp (called prawns in British, Australian, and much of Asian-English usage) a
 | Missing Northern tradition | −1 |
 | Method file `shrimp-pan_fry.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `shrimp-pan_fry.md` copies parent cut profile — rewrite `shrimp-pan_fry.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+2. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

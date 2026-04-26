@@ -89,4 +89,10 @@ Target internal temperatures (charcoal grill):
 | Cut profile lacks anatomy | −1 |
 | Method file `tri_tip-charcoal_grill.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+2. **−1** · Method file `tri_tip-charcoal_grill.md` copies parent cut profile — rewrite `tri_tip-charcoal_grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+3. **−1** · Missing Eastern tradition(s) — add Eastern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -76,4 +76,9 @@ translucent at the very centre, preferred by Italian and Mediterranean cooks); 5
 | Missing Northern tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 
+### Improvement priorities
+
+1. **−2** · Missing Eastern and Northern tradition(s) — add Eastern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -27,7 +27,7 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
-quality_score: 14
+quality_score: 17
 quality_assessed: 2026-04-26
 -->
 # Roasted Sweet Potato — Cut Overview
@@ -44,13 +44,18 @@ Whole baked sweet potato (*Ipomoea batatas*) in the conventional oven at 190–2
 - [Oven Roast](./roasted_sweet_potato-oven_roast.md)
 ## Quality score
 
-**Score: 14 / 20** — assessed 2026-04-26
+**Score: 17 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Western tradition | −1 |
 | Cut profile lacks anatomy | −1 |
-| No safe temperature data | −3 |
 | Method file `roasted_sweet_potato-oven_bake.md` copies parent cut profile | −1 |
+
+### Improvement priorities
+
+1. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+2. **−1** · Method file `roasted_sweet_potato-oven_bake.md` copies parent cut profile — rewrite `roasted_sweet_potato-oven_bake.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+3. **−1** · Missing Western tradition(s) — add Western source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -42,4 +42,8 @@ Beef tongue (*Bos taurus* lingual muscle) is a single dense cylindrical muscle w
 |-----------|----------|
 | Method file `beef_tongue-braise.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `beef_tongue-braise.md` copies parent cut profile — rewrite `beef_tongue-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

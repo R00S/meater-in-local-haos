@@ -80,4 +80,8 @@ Target internal temperatures (from Africanbites.com):
 |-----------|----------|
 | Method file `lamb_chops-grill.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `lamb_chops-grill.md` copies parent cut profile — rewrite `lamb_chops-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -60,4 +60,9 @@ Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)
 | Missing Northern tradition | −1 |
 | Method file `chicken_thigh-air_fryer.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `chicken_thigh-air_fryer.md` copies parent cut profile — rewrite `chicken_thigh-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+2. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

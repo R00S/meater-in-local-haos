@@ -90,4 +90,8 @@ Leg of lamb is the quintessential festive roast throughout the Mediterranean, Mi
 |-----------|----------|
 | Missing Eastern tradition | −1 |
 
+### Improvement priorities
+
+1. **−1** · Missing Eastern tradition(s) — add Eastern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

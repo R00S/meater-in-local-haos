@@ -50,4 +50,9 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 | Missing Northern tradition | −1 |
 | Method file `ground_chicken-braise.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−2** · Missing Western and Northern tradition(s) — add Western and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−1** · Method file `ground_chicken-braise.md` copies parent cut profile — rewrite `ground_chicken-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

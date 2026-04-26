@@ -46,7 +46,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 10
+quality_score: 3
 quality_assessed: 2026-04-26
 -->
 # Rump — Cut Overview
@@ -60,7 +60,7 @@ quality_assessed: 2026-04-26
 *No research files yet.*
 ## Quality score
 
-**Score: 10 / 20** — assessed 2026-04-26
+**Score: 3 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -70,6 +70,17 @@ quality_assessed: 2026-04-26
 | Missing Northern tradition | −1 |
 | Cut profile is a placeholder | −1 |
 | No method leaf files | −3 |
+| No temperature research (safe temps) | −3 |
+| No temperature research (culinary preferred) | −4 |
 | No per-method temp research | −2 |
+
+### Improvement priorities
+
+1. **−4** · Missing all four traditions tradition(s) — add all four traditions source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−4** · No temperature research (culinary preferred) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
+3. **−3** · No method leaf files — create `rump-{method}.md` leaf files for each supported cooking method, each with 4–6 diverse source recipes
+4. **−3** · No temperature research (safe temps) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
+5. **−2** · No per-method temp research — ensure each method leaf file includes explicit pull temperatures from source recipes
+6. **−1** · Cut profile is a placeholder — replace the placeholder with a full cut profile — anatomy, structure, connective tissue, and cooking behaviour
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

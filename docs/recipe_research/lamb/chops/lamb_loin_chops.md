@@ -69,4 +69,9 @@ Target: **57–62 °C (135–144 °F)** for medium (slightly pink). Africanbites
 | Missing Eastern tradition | −1 |
 | Method file `lamb_loin_chops-pan_sear.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `lamb_loin_chops-pan_sear.md` copies parent cut profile — rewrite `lamb_loin_chops-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+2. **−1** · Missing Eastern tradition(s) — add Eastern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

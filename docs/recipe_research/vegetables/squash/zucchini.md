@@ -28,7 +28,7 @@ doneness:
   max_f: 212
   usda_safe: true
   recommended: true
-quality_score: 15
+quality_score: 18
 quality_assessed: 2026-04-26
 -->
 # Zucchini — Cut Overview
@@ -46,12 +46,16 @@ Zucchini (*Cucurbita pepo* var. *cylindrica*) cut into 1–2 cm rounds, half-moo
 - [Sauté](./zucchini-saute.md)
 ## Quality score
 
-**Score: 15 / 20** — assessed 2026-04-26
+**Score: 18 / 20** — assessed 2026-04-26
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Northern tradition | −1 |
-| No safe temperature data | −3 |
 | Method file `zucchini-air_fryer.md` copies parent cut profile | −1 |
+
+### Improvement priorities
+
+1. **−1** · Method file `zucchini-air_fryer.md` copies parent cut profile — rewrite `zucchini-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+2. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

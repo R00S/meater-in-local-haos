@@ -47,4 +47,8 @@ Target internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bo
 |-----------|----------|
 | Method file `mutton_shoulder-braise.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `mutton_shoulder-braise.md` copies parent cut profile — rewrite `mutton_shoulder-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

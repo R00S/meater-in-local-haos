@@ -43,4 +43,9 @@ Pork tongue is the smaller, more delicate sibling of beef tongue — typically 2
 | Missing Southern tradition | −1 |
 | Method file `pork_tongue-braise.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `pork_tongue-braise.md` copies parent cut profile — rewrite `pork_tongue-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+2. **−1** · Missing Southern tradition(s) — add Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

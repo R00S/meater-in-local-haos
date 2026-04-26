@@ -55,4 +55,10 @@ Hake (*Merluccius merluccius*, European hake; *Merluccius capensis/paradoxus*, C
 | Cut profile lacks anatomy | −1 |
 | Method file `hake-pan_fry.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−3** · Missing Eastern, Southern and Northern tradition(s) — add Eastern, Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+3. **−1** · Method file `hake-pan_fry.md` copies parent cut profile — rewrite `hake-pan_fry.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

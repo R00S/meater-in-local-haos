@@ -46,4 +46,12 @@ Pork liver is milder, slightly sweeter and more delicate in texture than beef li
 | Method file `pork_liver-pan_sear.md` copies parent cut profile | −1 |
 | Method file `pork_liver-pan_fry.md` copies `pork_liver-pan_sear.md` | −1 |
 
+### Improvement priorities
+
+1. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+2. **−1** · Method file `pork_liver-pan_fry.md` copies `pork_liver-pan_sear.md` — rewrite `pork_liver-pan_fry.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
+3. **−1** · Method file `pork_liver-pan_fry.md` copies parent cut profile — rewrite `pork_liver-pan_fry.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. **−1** · Method file `pork_liver-pan_sear.md` copies parent cut profile — rewrite `pork_liver-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+5. **−1** · Missing Southern tradition(s) — add Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

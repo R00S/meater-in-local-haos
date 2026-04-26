@@ -500,10 +500,36 @@ Every **cut file** (the `{cut_name}.md` without a method suffix) carries a
 `quality_score` field in its `<!-- KCE:CUT` front-matter block and a
 `## Quality score` section at the end of the document.
 
+### Purpose — flaw detection, not achievement
+
+> **The score is a diagnostic tool, not a target.**
+
+The purpose of this scoring system is to **identify flaws** so that the worst
+files can be found and improved first.  A low score is the point — it means the
+scoring is working correctly.
+
+**What this means in practice:**
+
+- Do **not** soften or remove a criterion because files score lower as a result.
+  Accurate detection of a real gap is more valuable than a higher number.
+- Do **not** add credit for data that has not been genuinely researched.
+  Frontmatter values auto-populated from `cooking_data.py` are not research.
+- Do **not** treat 20/20 as the goal.  Reaching 20/20 on every file is neither
+  required nor expected.  Many cuts may never reach it.
+- **Do** use the `### Improvement priorities` list in each file to find the
+  highest-value action for that specific cut.
+- **Do** focus improvement work on the lowest-scoring files first — the floor
+  matters more than the ceiling.
+
+Future agents: if you find yourself adjusting criteria to make scores look
+better, you are working against the purpose of this system.  Harsh, accurate
+scoring is correct behaviour.
+
 ### Scale
 
-**Base: 20 points.** Deductions are subtracted from 20. Scores below 20 reflect
-specific gaps that must be addressed to raise the quality of the whole dataset.
+**Base: 20 points.** Deductions are subtracted from 20.  A stub file with no
+research content will score around 3/20.  That is not a bug — it is an accurate
+reflection of the file's state.
 
 ### Directional tradition coverage (assessed across *all* method leaf files for the cut)
 
@@ -537,12 +563,19 @@ Recipes must represent all four directional traditions.  Definitions:
 
 ### Temperature data
 
-- **−3** if USDA safe internal temperature is not present (in the front-matter
-  `usda_safe_c` field or stated explicitly in the cut profile or analysis
-  sections).
-- **−4** if culinary preferred temperatures (doneness targets) are absent — i.e.
-  no `target_c` / `recommended_doneness` in the front-matter and no pull
-  temperatures stated in the body.
+Temperature criteria require **research evidence** — the presence of values in
+the `<!-- KCE:CUT` frontmatter block alone does **not** satisfy these criteria.
+Those values are auto-populated from `cooking_data.py` and may be present even
+in a file with zero research content.  Research evidence means: at least one
+method leaf file that contains source recipes with explicit pull temperatures
+(the "Pull at X°C" step in the recipe format), OR the cut profile body
+explicitly discusses specific pull or safe temperatures (not just a passing °C
+mention).
+
+- **−3** if USDA safe internal temperature is not supported by research evidence
+  as defined above.
+- **−4** if culinary preferred temperatures (doneness targets) are not supported
+  by research evidence as defined above.
 - **−2** if culinary preferred temperatures are not researched per method
   independently (i.e. the cut file body states a single global target with no
   per-method nuance, and the method leaf files also lack per-method temperature
@@ -613,5 +646,9 @@ profile is updated.*
 
 Grading cut files is a **recurring improvement task**. Whenever a new method
 leaf is added or an existing leaf's tradition coverage is improved, the cut
-file score must be recalculated and updated. The set quality is measured by its
-lowest-scoring file — raise the floor, not just the ceiling.
+file score must be recalculated and updated.
+
+**Use low scores as a work queue.** Sort all cut files by `quality_score`
+ascending — the files at the bottom of the list are the ones that need
+attention.  Improve the lowest-scoring files first.  Do not adjust criteria
+or add leniency exceptions to raise scores artificially.

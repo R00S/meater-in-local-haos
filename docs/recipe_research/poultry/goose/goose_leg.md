@@ -57,4 +57,9 @@ Target internal temperature: **175–185 °F (79–85 °C)** — well above USDA
 | Missing Southern tradition | −1 |
 | Method file `goose_leg-braise.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−2** · Missing Western and Southern tradition(s) — add Western and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−1** · Method file `goose_leg-braise.md` copies parent cut profile — rewrite `goose_leg-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

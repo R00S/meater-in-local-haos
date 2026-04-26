@@ -65,4 +65,9 @@ Target internal temperature: **54–57 °C (130–135 °F)** for medium-rare. Ma
 | Missing Northern tradition | −1 |
 | Method file `kangaroo_steak-pan_sear.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−3** · Missing Eastern, Southern and Northern tradition(s) — add Eastern, Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−1** · Method file `kangaroo_steak-pan_sear.md` copies parent cut profile — rewrite `kangaroo_steak-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

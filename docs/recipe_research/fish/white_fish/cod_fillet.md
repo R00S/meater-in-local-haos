@@ -59,4 +59,13 @@ Atlantic cod (*Gadus morhua*) fillet is cut from the sides of the fish; the fles
 | Method file `cod_fillet-air_fryer.md` copies `cod_fillet-oven_bake.md` | −1 |
 | Method file `cod_fillet-air_fryer.md` copies `cod_fillet-pan_fry.md` | −1 |
 
+### Improvement priorities
+
+1. **−1** · Method file `cod_fillet-air_fryer.md` copies `cod_fillet-oven_bake.md` — rewrite `cod_fillet-air_fryer.md`'s cut profile — it must describe what the oven bake method does to this cut, not repeat another method's prose
+2. **−1** · Method file `cod_fillet-air_fryer.md` copies `cod_fillet-pan_fry.md` — rewrite `cod_fillet-air_fryer.md`'s cut profile — it must describe what the pan fry method does to this cut, not repeat another method's prose
+3. **−1** · Method file `cod_fillet-air_fryer.md` copies parent cut profile — rewrite `cod_fillet-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+4. **−1** · Method file `cod_fillet-oven_bake.md` copies parent cut profile — rewrite `cod_fillet-oven_bake.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+5. **−1** · Method file `cod_fillet-pan_fry.md` copies parent cut profile — rewrite `cod_fillet-pan_fry.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+6. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -108,4 +108,9 @@ the sear provides Maillard flavour and the short oven time (25 min at 80 °C) si
 | Missing Northern tradition | −1 |
 | Method file `bison_steak-grill.md` copies parent cut profile | −1 |
 
+### Improvement priorities
+
+1. **−3** · Missing Eastern, Southern and Northern tradition(s) — add Eastern, Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−1** · Method file `bison_steak-grill.md` copies parent cut profile — rewrite `bison_steak-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
