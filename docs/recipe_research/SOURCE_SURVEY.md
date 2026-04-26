@@ -70,6 +70,7 @@ then verify with web_fetch before citing.
 | **sbs.com.au** | English | AU | ⚠️ Homepage accessible; individual recipe slugs often 404. Search before using. |
 | **tasteline.com** | Swedish | SE | ⚠️ **NOW UNRELIABLE** — was working in v0.6.1.x but most recipe URLs now return 404. Search before every use; fallback to chefkoch.de + madensverden.dk for Scandinavian recipes. |
 | **matprat.no** | Norwegian | NO | ⚠️ **NOW UNRELIABLE** — was working in earlier sessions but most URLs now return 404. Search `site:matprat.no {oppskrift}` to find any currently valid slugs. |
+| **koket.se** | Swedish | SE | ✅ Full recipe content. Use short slug format directly under the root: `https://www.koket.se/{slug}` — e.g. `/shortribs-erik-videgards-recept`, `/shortribs-braserade-i-applemust`. Use `web_search site:koket.se {recipe}` first — guessed slugs almost always 404. Previously incorrectly listed as blocked (the URL format was wrong, not the network). |
 
 ---
 
@@ -114,7 +115,6 @@ Sites that connect but return homepage, profile, GDPR gate, or a different recip
 | food24.com | ❌ BLOCKED | HTTP 403 (South African) |
 | taste.com.au | ❌ BLOCKED | HTTP 403 |
 | 196flavors.com | ❌ BLOCKED | HTTP 522 (connection timeout) |
-| koket.se | ❌ NOT FOUND | HTTP 404 (Swedish TV kitchen) |
 | coop.se | ❌ NOT FOUND | HTTP 404 |
 | arla.se | ❌ NOT FOUND | HTTP 404 |
 | icakuriren.se | ❌ NOT FOUND | HTTP 404 |
@@ -304,8 +304,11 @@ e.g. https://www.argiro.gr/recipe/arni-kotsi-me-polychroma-karota/
 
 ## Notes for future agents
 
-1. **The sandbox network is NOT the same as a public browser.** Many sites that
-   appear accessible from a normal browser are blocked in this environment.
+1. **Outbound network access IS available in this sandbox (confirmed 2026-04-26).**
+   web_fetch and curl both work. en.wikipedia.org, koket.se, themediterraneandish.com,
+   recipetineats.com, and many others return real content. What blocks fetching is
+   site-level decisions (paywall: 402, bot-block: 403, wrong slug: 404) — not the
+   sandbox network itself. Always probe a URL before concluding it is inaccessible.
 
 2. **web_search returns AI-synthesized text.** The text from web_search is NOT
    the same as fetched recipe content and CANNOT be used as a recipe source.
@@ -368,7 +371,7 @@ fetches after it was discovered that `web.archive.org` is reachable from this sa
 | **food24.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
 | **taste.com.au** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
 | **196flavors.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
-| **koket.se** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **koket.se** | N/A | — | **✅ DIRECT ACCESS WORKS** — no archive needed; use web_search for slugs then web_fetch directly |
 | **coop.se** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
 | **arla.se** | ✅ 2001 only | — | **❌ NOT USEFUL** (too old) |
 | **icakuriren.se** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
@@ -413,6 +416,7 @@ supplementary source only.
 
 | Date | Agent session | Changes |
 |------|--------------|---------|
+| 2026-04-26 | v0.6.2.x | Network retest: confirmed outbound DNS and web_fetch work. koket.se moved to confirmed-working. Note 1 rewritten. RECIPE_COLLECTION_TOR.md method-status table updated. |
 | 2026-04-24 | v0.6.1.x | Initial survey — 50+ sites probed, 17 confirmed working |
 | 2026-04-24 | v0.6.1.x | Internet Archive re-test of all 46 ⚠️/❌ sites; geniuskitchen.com confirmed usable via IA; all others remain blocked or have no usable archive |
 | 2026-04-24 | v0.6.1.x (continue-061-x) | Global diversity survey — 60+ additional sites probed across Portuguese, South African, Croatian, Romanian, Vietnamese, Israeli, Hungarian, Czech, Polish, Norwegian, Swedish, Danish, Filipino, Malaysian, Korean, Brazilian, Argentine, Mexican, French, Russian, Arabic, Thai, Indonesian traditions. 8 new confirmed working sites added. 50+ new blocked/dead sites documented. Recommended source matrix expanded. valdemarsro.dk confirmed via IA. |

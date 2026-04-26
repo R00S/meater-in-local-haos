@@ -328,56 +328,43 @@ This section documents what internet-access methods work in the coding-agent
 environment, based on verified testing. **Update this section if you discover a
 new working or broken method.**
 
-### Method status (verified 2026-03-05)
+### Method status (verified 2026-04-26 — supersedes 2026-03-05 entry)
 
 | Method | Result | Notes |
 |--------|--------|-------|
-| `web_fetch` tool | ❌ FAILS for all URLs | DNS resolution is unavailable in the sandbox. Returns `TypeError: fetch failed` for every domain tested: seriouseats.com, americastestkitchen.com, bonappetit.com, allrecipes.com, epicurious.com, bbcgoodfood.com, foodnetwork.com, gordonramsay.com, thermoworks.com, splendidtable.org, food52.com, archive.org, en.wikipedia.org, books.google.com, reddit.com, gutenberg.org, example.com |
-| `curl` / `wget` (bash) | ❌ FAILS | `socket.gaierror: No address associated with hostname` — no DNS at OS level |
-| `urllib` (Python) | ❌ FAILS | Same DNS failure at socket level |
-| `web_search` tool | ✅ WORKS (for source discovery only) | Returns Bing AI-generated summaries. Useful for finding author names, cookbook titles, and URLs to record as citations. **Do not use `web_search` output as recipe text** — it synthesises multiple sources and is AI-generated, which violates the source requirements of this ToR. |
+| `web_fetch` tool | ✅ WORKS for many sites | DNS and outbound HTTP are available. Confirmed working: en.wikipedia.org, koket.se, themediterraneandish.com, nigella.com, recipetineats.com, thewoksoflife.com, giallozafferano.it, argiro.gr, and many others. See `SOURCE_SURVEY.md` for the full tested list. Not all sites are accessible — some return 402 (paywall), 403 (geo/bot block), 404 (wrong URL slug), or GDPR gate. **Always test with a real URL before building a leaf around a source.** |
+| `curl` / `wget` (bash) | ✅ WORKS | DNS resolution is available at OS level. Use to probe HTTP status codes quickly. |
+| `web_search` tool | ✅ WORKS (for source discovery only) | Returns Bing AI-generated summaries. Useful for finding correct URL slugs and author names. **Do not use `web_search` output as recipe text** — it synthesises multiple sources and is AI-generated, which violates the source requirements of this ToR. Always follow up with `web_fetch` on the real URL. |
 
-### The working method: training-data knowledge of real published recipes
+> ⚠️ **Note:** Before 2026-04-26 the sandbox had no outbound network access. Leaves written
+> before that date using "training-data knowledge" (see old method below) are still valid
+> if the source is cited to a real, verifiable URL or published book — but new leaves must
+> use `web_fetch` to retrieve actual content.
 
-**This is how the conforming leaves in this repo were actually written.** Direct
-page fetching does not work in the agent sandbox. The agent's training data
-includes the content of published cookbooks and food-media articles; drawing on
-that knowledge to accurately reproduce a real recipe is the accepted approach.
+### Preferred method: web_fetch on confirmed working sites
 
-This is AI-assisted reproduction of real human-created recipes that exist in
-verifiable published sources — distinct from pure AI-generation because every
-detail must trace back to a named, checkable source. The inherent risk is
-inaccuracy: the agent may mis-recall a quantity or step. That risk is managed by
-the rules below, and by the verification requirement: a reader who owns the cited
-book or opens the cited URL should be able to confirm every ingredient and step.
+**This is now the primary method.** For every new source recipe:
 
-#### Rules for using training-data knowledge
+1. Use `web_search` to find a valid URL slug for the recipe on a confirmed-working site.
+2. Use `web_fetch` on the exact URL to retrieve the actual recipe text.
+3. Verify the returned content contains ingredients + numbered method steps before citing.
+4. Cite the real URL in the `**Source**:` line.
 
-1. **Only reproduce recipes you are genuinely confident are accurate** to the
-   named source. Do not invent quantities, steps, or temperatures.
-2. **Choose sources where your knowledge is specific.** If you are uncertain about
-   the exact details of a recipe in a particular book, choose a different source
-   for which you are confident.
-3. **Cite specifically.** Provide author, title, publisher, year, and page range
-   where known. For food-media articles, provide the real URL even if you cannot
-   fetch it — the citation must be verifiable by a reader who can open a browser.
-4. **This is not a licence to fabricate.** Every ingredient quantity, method step,
-   and pull temperature must reflect what is actually in the named source.
+See `SOURCE_SURVEY.md` for the list of confirmed-working recipe sites and their URL formats.
 
-#### If web_fetch is ever available
+### Fallback method: book citations
 
-If a future session gains actual URL-fetching capability, use it. Example
-well-known URLs that contain full recipe text:
-- Serious Eats: `https://www.seriouseats.com/{recipe-slug}`
-- America's Test Kitchen: `https://www.americastestkitchen.com/recipes/{id}-{slug}`
-- ThermoWorks Blog: `https://blog.thermoworks.com/{article-slug}/`
-- Bon Appétit: `https://www.bonappetit.com/recipe/{slug}`
-- Epicurious: `https://www.epicurious.com/recipes/food/views/{slug}`
-- Food Network: `https://www.foodnetwork.com/recipes/{author}/{slug}`
-- BBC Good Food: `https://www.bbcgoodfood.com/recipes/{slug}`
+Cookbooks do not require web_fetch. Cite author, title, publisher, year, and page where
+known. The reader must be able to verify the citation in a physical copy of the book.
+Every ingredient quantity, method step, and pull temperature must accurately reflect what
+is in the named source — do not reconstruct from memory if you are uncertain.
 
-When fetching succeeds, prefer the fetched text over training-data recall for the
-same source — the fetched version is primary.
+### Obsolete method (pre-2026-04-26): training-data knowledge
+
+Before outbound network access became available, agents reproduced published recipes from
+training-data memory. These leaves are still valid if the source is cited to a real URL or
+book. **New leaves must not use this method** — use `web_fetch` instead. Training-data
+recall of "what a recipe roughly contains" is not an acceptable source for new work.
 
 ---
 
