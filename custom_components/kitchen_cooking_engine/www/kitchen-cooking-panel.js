@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 26 Apr 2026, 09:57 CET
+ * AUTO-GENERATED: 26 Apr 2026, 10:43 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 26 Apr 2026, 09:57 CET
+// Last generated: 26 Apr 2026, 10:43 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -20565,6 +20565,4028 @@ const RECIPE_TITLES_INDEX = {
   }
 };
 
+// Classic (frozen) recipe index — snapshot of docs/recipe_research_classic/
+const CLASSIC_RECIPE_INDEX = {
+  "ostrich_fillet": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/ostrich/ostrich_fillet.md"
+  },
+  "ostrich_steak": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/game/ostrich/ostrich_steak-grill.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/game/ostrich/ostrich_steak-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/ostrich/ostrich_steak.md"
+  },
+  "venison_leg": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/venison/venison_leg.md"
+  },
+  "venison_loin": {
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/game/venison/venison_loin-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/venison/venison_loin.md"
+  },
+  "venison_roast": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/game/venison/venison_roast-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/venison/venison_roast.md"
+  },
+  "venison_shoulder": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/venison/venison_shoulder.md"
+  },
+  "venison_steak": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/game/venison/venison_steak-grill.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/game/venison/venison_steak-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/venison/venison_steak.md"
+  },
+  "rabbit_legs": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/game/rabbit/rabbit_legs-braise.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/game/rabbit/rabbit_legs-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/rabbit/rabbit_legs.md"
+  },
+  "rabbit_saddle": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/game/rabbit/rabbit_saddle-oven_roast.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/game/rabbit/rabbit_saddle-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/rabbit/rabbit_saddle.md"
+  },
+  "wild_boar_chop": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/game/wild_boar/wild_boar_chop-grill.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/game/wild_boar/wild_boar_chop-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/wild_boar/wild_boar_chop.md"
+  },
+  "wild_boar_shoulder": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/game/wild_boar/wild_boar_shoulder-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/wild_boar/wild_boar_shoulder.md"
+  },
+  "mutton_chop": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/game/mutton/mutton_chop-grill.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/game/mutton/mutton_chop-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/mutton/mutton_chop.md"
+  },
+  "mutton_leg": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/game/mutton/mutton_leg-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/mutton/mutton_leg.md"
+  },
+  "mutton_shoulder": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/game/mutton/mutton_shoulder-braise.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/game/mutton/mutton_shoulder-oven_roast.md",
+    "slow_cooker": "/kitchen_cooking_engine_panel/recipes_classic/game/mutton/mutton_shoulder-slow_cooker.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/mutton/mutton_shoulder.md"
+  },
+  "mutton_shoulder_alt": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/mutton/mutton_shoulder_alt.md"
+  },
+  "kangaroo_fillet": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/kangaroo/kangaroo_fillet.md"
+  },
+  "kangaroo_steak": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/game/kangaroo/kangaroo_steak-grill.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/game/kangaroo/kangaroo_steak-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/kangaroo/kangaroo_steak.md"
+  },
+  "reindeer_loin": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/reindeer/reindeer_loin.md"
+  },
+  "reindeer_roast": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/game/reindeer/reindeer_roast-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/reindeer/reindeer_roast.md"
+  },
+  "reindeer_steak": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/game/reindeer/reindeer_steak-grill.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/game/reindeer/reindeer_steak-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/reindeer/reindeer_steak.md"
+  },
+  "goat_chop": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/game/goat/goat_chop-grill.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/game/goat/goat_chop-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/goat/goat_chop.md"
+  },
+  "goat_leg": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/game/goat/goat_leg-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/goat/goat_leg.md"
+  },
+  "goat_leg_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/goat/goat_leg_roast.md"
+  },
+  "goat_shank": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/game/goat/goat_shank-braise.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/game/goat/goat_shank-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/goat/goat_shank.md"
+  },
+  "goat_shoulder": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/game/goat/goat_shoulder-braise.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/game/goat/goat_shoulder-oven_roast.md",
+    "slow_cooker": "/kitchen_cooking_engine_panel/recipes_classic/game/goat/goat_shoulder-slow_cooker.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/goat/goat_shoulder.md"
+  },
+  "moose_roast": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/game/moose/moose_roast-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/moose/moose_roast.md"
+  },
+  "moose_steak": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/game/moose/moose_steak-grill.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/game/moose/moose_steak-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/moose/moose_steak.md"
+  },
+  "buffalo_burger": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/game/buffalo/buffalo_burger-grill.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/game/buffalo/buffalo_burger-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/buffalo/buffalo_burger.md"
+  },
+  "buffalo_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/buffalo/buffalo_roast.md"
+  },
+  "buffalo_steak": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/game/buffalo/buffalo_steak-grill.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/game/buffalo/buffalo_steak-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/buffalo/buffalo_steak.md"
+  },
+  "bison_burger": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/game/bison/bison_burger-grill.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/game/bison/bison_burger-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/bison/bison_burger.md"
+  },
+  "bison_roast": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/game/bison/bison_roast-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/bison/bison_roast.md"
+  },
+  "bison_steak": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/game/bison/bison_steak-grill.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/game/bison/bison_steak-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/game/bison/bison_steak.md"
+  },
+  "beef_burger": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/beef/ground/beef_burger-air_fryer.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/ground/beef_burger-grill.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/beef/ground/beef_burger-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/ground/beef_burger.md"
+  },
+  "burger": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/burger.md"
+  },
+  "ground_beef": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/beef/ground/ground_beef-braise.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/beef/ground/ground_beef-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/ground/ground_beef.md"
+  },
+  "liver": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/ground/liver.md"
+  },
+  "meatloaf": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/beef/ground/meatloaf-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/ground/meatloaf.md"
+  },
+  "tongue": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/ground/tongue.md"
+  },
+  "filet_mignon": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/filet_mignon-air_fryer.md",
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/filet_mignon-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/filet_mignon-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/filet_mignon-oven_roast.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/filet_mignon-pan_fry.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/filet_mignon-pan_sear.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/filet_mignon-sous_vide.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/filet_mignon.md"
+  },
+  "flank_steak": {
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flank_steak-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flank_steak-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flank_steak-oven_roast.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flank_steak-pan_fry.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flank_steak-pan_sear.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flank_steak-sous_vide.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flank_steak.md"
+  },
+  "flat_iron": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flat_iron-air_fryer.md",
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flat_iron-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flat_iron-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flat_iron-oven_roast.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flat_iron-pan_fry.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flat_iron-pan_sear.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flat_iron-sous_vide.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/flat_iron.md"
+  },
+  "hanger_steak": {
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/hanger_steak-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/hanger_steak-grill.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/hanger_steak-pan_fry.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/hanger_steak-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/hanger_steak.md"
+  },
+  "ny_strip": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ny_strip-air_fryer.md",
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ny_strip-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ny_strip-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ny_strip-oven_roast.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ny_strip-pan_fry.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ny_strip-pan_sear.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ny_strip-sous_vide.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ny_strip.md"
+  },
+  "picanha": {
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/picanha-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/picanha-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/picanha-oven_roast.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/picanha-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/picanha.md"
+  },
+  "ribeye_steak": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ribeye_steak-air_fryer.md",
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ribeye_steak-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ribeye_steak-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ribeye_steak-oven_roast.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ribeye_steak-pan_fry.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ribeye_steak-pan_sear.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ribeye_steak-sous_vide.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/ribeye_steak.md"
+  },
+  "sirloin_steak": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/sirloin_steak-air_fryer.md",
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/sirloin_steak-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/sirloin_steak-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/sirloin_steak-oven_roast.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/sirloin_steak-pan_fry.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/sirloin_steak-pan_sear.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/sirloin_steak-sous_vide.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/sirloin_steak.md"
+  },
+  "skirt_steak": {
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/skirt_steak-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/skirt_steak-grill.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/skirt_steak-pan_fry.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/skirt_steak-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/skirt_steak.md"
+  },
+  "t_bone": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/t_bone-air_fryer.md",
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/t_bone-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/t_bone-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/t_bone-oven_roast.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/t_bone-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/t_bone.md"
+  },
+  "tomahawk": {
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/tomahawk-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/tomahawk-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/tomahawk-oven_roast.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/tomahawk-pan_sear.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/tomahawk-sous_vide.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/tomahawk.md"
+  },
+  "tri_tip": {
+    "charcoal_grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/tri_tip-charcoal_grill.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/tri_tip-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/tri_tip-oven_roast.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/tri_tip-pan_sear.md",
+    "smoker": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/tri_tip-smoker.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/tri_tip-sous_vide.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/steaks/tri_tip.md"
+  },
+  "beef_liver": {
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/beef/offal/beef_liver-pan_fry.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/beef/offal/beef_liver-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/offal/beef_liver.md"
+  },
+  "beef_rib": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/offal/beef_rib.md"
+  },
+  "beef_shin": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/offal/beef_shin.md"
+  },
+  "beef_tongue": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/beef/offal/beef_tongue-braise.md",
+    "slow_cooker": "/kitchen_cooking_engine_panel/recipes_classic/beef/offal/beef_tongue-slow_cooker.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/offal/beef_tongue.md"
+  },
+  "beef_shank": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/beef/braising/beef_shank-braise.md",
+    "slow_cooker": "/kitchen_cooking_engine_panel/recipes_classic/beef/braising/beef_shank-slow_cooker.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/braising/beef_shank.md"
+  },
+  "brisket": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/beef/braising/brisket-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/braising/brisket.md"
+  },
+  "chuck_roast": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/beef/braising/chuck_roast-braise.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/braising/chuck_roast.md"
+  },
+  "short_ribs": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/braising/short_ribs.md"
+  },
+  "beef_tenderloin_roast": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/beef/roasts/beef_tenderloin_roast-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/roasts/beef_tenderloin_roast.md"
+  },
+  "chuck": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/roasts/chuck.md"
+  },
+  "prime_rib": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/beef/roasts/prime_rib-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/roasts/prime_rib.md"
+  },
+  "roasting_joint": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/roasts/roasting_joint.md"
+  },
+  "round_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/roasts/round_roast.md"
+  },
+  "rump": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/roasts/rump.md"
+  },
+  "rump_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/roasts/rump_roast.md"
+  },
+  "sirloin_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/roasts/sirloin_roast.md"
+  },
+  "sirloin_tip_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/roasts/sirloin_tip_roast.md"
+  },
+  "top_round_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/beef/roasts/top_round_roast.md"
+  },
+  "goose_breast": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/poultry/goose/goose_breast-oven_roast.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/poultry/goose/goose_breast-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/goose/goose_breast.md"
+  },
+  "goose_leg": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/poultry/goose/goose_leg-braise.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/poultry/goose/goose_leg-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/goose/goose_leg.md"
+  },
+  "goose_thigh": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/poultry/goose/goose_thigh-braise.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/poultry/goose/goose_thigh-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/goose/goose_thigh.md"
+  },
+  "whole_goose": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/poultry/goose/whole_goose-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/goose/whole_goose.md"
+  },
+  "duck_breast": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/poultry/duck/duck_breast-oven_roast.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/poultry/duck/duck_breast-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/duck/duck_breast.md"
+  },
+  "duck_leg_confit": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/duck/duck_leg_confit.md"
+  },
+  "whole_duck": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/poultry/duck/whole_duck-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/duck/whole_duck.md"
+  },
+  "ground_turkey": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/ground_turkey-braise.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/ground_turkey-grill.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/ground_turkey-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/ground_turkey.md"
+  },
+  "turkey_breast": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/turkey_breast-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/turkey_breast.md"
+  },
+  "turkey_burger": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/turkey_burger-air_fryer.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/turkey_burger-grill.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/turkey_burger-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/turkey_burger.md"
+  },
+  "turkey_ground": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/turkey_ground.md"
+  },
+  "turkey_leg": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/turkey_leg.md"
+  },
+  "turkey_thigh": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/turkey_thigh.md"
+  },
+  "whole_turkey": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/whole_turkey-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/turkey/whole_turkey.md"
+  },
+  "breast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/breast.md"
+  },
+  "chicken_breast": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_breast-air_fryer.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_breast-grill.md",
+    "oven_bake": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_breast-oven_bake.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_breast-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_breast.md"
+  },
+  "chicken_breast_bone_in": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_breast_bone_in.md"
+  },
+  "chicken_burger": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_burger-air_fryer.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_burger-grill.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_burger-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_burger.md"
+  },
+  "chicken_leg": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_leg-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_leg.md"
+  },
+  "chicken_thigh": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_thigh-air_fryer.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_thigh-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_thigh-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_thigh.md"
+  },
+  "chicken_wing": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_wing-air_fryer.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/chicken_wing.md"
+  },
+  "ground": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/ground.md"
+  },
+  "ground_chicken": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/ground_chicken-braise.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/ground_chicken-grill.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/ground_chicken-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/ground_chicken.md"
+  },
+  "leg": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/leg.md"
+  },
+  "thigh": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/thigh.md"
+  },
+  "whole_chicken": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/whole_chicken-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/whole_chicken.md"
+  },
+  "wing": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/poultry/chicken/wing.md"
+  },
+  "asparagus": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/asparagus-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/asparagus-oven_roast.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/asparagus-saute.md",
+    "steam": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/asparagus-steam.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/asparagus.md"
+  },
+  "broccoli": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/broccoli-air_fryer.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/broccoli-oven_roast.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/broccoli-saute.md",
+    "steam": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/broccoli-steam.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/broccoli.md"
+  },
+  "brussels_sprouts": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/brussels_sprouts-air_fryer.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/brussels_sprouts-oven_roast.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/brussels_sprouts-pan_fry.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/brussels_sprouts-saute.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/brussels_sprouts.md"
+  },
+  "green_beans": {
+    "boil": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/green_beans-boil.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/green_beans-oven_roast.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/green_beans-saute.md",
+    "steam": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/green_beans-steam.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/green_beans.md"
+  },
+  "spinach": {
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/spinach-saute.md",
+    "steam": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/spinach-steam.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/green_vegetables/spinach.md"
+  },
+  "roasted_tomatoes": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/tomatoes/roasted_tomatoes-air_fryer.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/tomatoes/roasted_tomatoes-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/tomatoes/roasted_tomatoes.md"
+  },
+  "cabbage": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/cruciferous/cabbage-braise.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/cruciferous/cabbage-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/cruciferous/cabbage-oven_roast.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/cruciferous/cabbage-saute.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/cruciferous/cabbage.md"
+  },
+  "cauliflower": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/cruciferous/cauliflower-air_fryer.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/cruciferous/cauliflower-oven_roast.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/cruciferous/cauliflower-saute.md",
+    "steam": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/cruciferous/cauliflower-steam.md",
+    "whole_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/cruciferous/cauliflower-whole_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/cruciferous/cauliflower.md"
+  },
+  "button_mushrooms": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/mushrooms/button_mushrooms-air_fryer.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/mushrooms/button_mushrooms-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/mushrooms/button_mushrooms-oven_roast.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/mushrooms/button_mushrooms-saute.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/mushrooms/button_mushrooms.md"
+  },
+  "portobello_mushrooms": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/mushrooms/portobello_mushrooms-air_fryer.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/mushrooms/portobello_mushrooms-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/mushrooms/portobello_mushrooms-oven_roast.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/mushrooms/portobello_mushrooms-saute.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/mushrooms/portobello_mushrooms.md"
+  },
+  "eggplant": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/eggplant/eggplant-air_fryer.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/eggplant/eggplant-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/eggplant/eggplant-oven_roast.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/eggplant/eggplant-pan_fry.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/eggplant/eggplant-saute.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/eggplant/eggplant.md"
+  },
+  "bell_peppers": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/peppers/bell_peppers-air_fryer.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/peppers/bell_peppers-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/peppers/bell_peppers-oven_roast.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/peppers/bell_peppers-saute.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/peppers/bell_peppers.md"
+  },
+  "corn_on_cob": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/corn/corn_on_cob-air_fryer.md",
+    "boil": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/corn/corn_on_cob-boil.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/corn/corn_on_cob-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/corn/corn_on_cob-oven_roast.md",
+    "steam": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/corn/corn_on_cob-steam.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/corn/corn_on_cob.md"
+  },
+  "acorn_squash": {
+    "oven_bake": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/acorn_squash-oven_bake.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/acorn_squash-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/acorn_squash.md"
+  },
+  "butternut_squash": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/butternut_squash-oven_roast.md",
+    "pressure_cooker": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/butternut_squash-pressure_cooker.md",
+    "steam": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/butternut_squash-steam.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/butternut_squash.md"
+  },
+  "spaghetti_squash": {
+    "oven_bake": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/spaghetti_squash-oven_bake.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/spaghetti_squash-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/spaghetti_squash.md"
+  },
+  "zucchini": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/zucchini-air_fryer.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/zucchini-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/zucchini-oven_roast.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/zucchini-saute.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/squash/zucchini.md"
+  },
+  "caramelized_onions": {
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/alliums/caramelized_onions-pan_fry.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/alliums/caramelized_onions-saute.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/alliums/caramelized_onions.md"
+  },
+  "leeks": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/alliums/leeks-braise.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/alliums/leeks-oven_roast.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/alliums/leeks-saute.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/alliums/leeks.md"
+  },
+  "roasted_garlic": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/alliums/roasted_garlic-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/alliums/roasted_garlic.md"
+  },
+  "roasted_onion": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/alliums/roasted_onion-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/alliums/roasted_onion-oven_roast.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/alliums/roasted_onion-saute.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/alliums/roasted_onion.md"
+  },
+  "baked_potato": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/baked_potato-air_fryer.md",
+    "oven_bake": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/baked_potato-oven_bake.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/baked_potato.md"
+  },
+  "roasted_beets": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_beets-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_beets.md"
+  },
+  "roasted_carrots": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_carrots-air_fryer.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_carrots-oven_roast.md",
+    "saute": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_carrots-saute.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_carrots.md"
+  },
+  "roasted_parsnips": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_parsnips-air_fryer.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_parsnips-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_parsnips.md"
+  },
+  "roasted_potatoes": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_potatoes-air_fryer.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_potatoes-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_potatoes.md"
+  },
+  "roasted_sweet_potato": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_sweet_potato-air_fryer.md",
+    "oven_bake": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_sweet_potato-oven_bake.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_sweet_potato-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/vegetables/root_vegetables/roasted_sweet_potato.md"
+  },
+  "tuna_steak": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/fish/tuna/tuna_steak-grill.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/fish/tuna/tuna_steak-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/fish/tuna/tuna_steak.md"
+  },
+  "salmon_fillet": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/fish/salmon/salmon_fillet-air_fryer.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/fish/salmon/salmon_fillet-grill.md",
+    "oven_bake": "/kitchen_cooking_engine_panel/recipes_classic/fish/salmon/salmon_fillet-oven_bake.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/fish/salmon/salmon_fillet-pan_sear.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes_classic/fish/salmon/salmon_fillet-sous_vide.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/fish/salmon/salmon_fillet.md"
+  },
+  "salmon_steak": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/fish/salmon/salmon_steak.md"
+  },
+  "lobster_tail": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/fish/shellfish/lobster_tail-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/fish/shellfish/lobster_tail-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/fish/shellfish/lobster_tail.md"
+  },
+  "scallops": {
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/fish/shellfish/scallops-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/fish/shellfish/scallops.md"
+  },
+  "shrimp": {
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/fish/shellfish/shrimp-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/fish/shellfish/shrimp.md"
+  },
+  "cod_fillet": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/cod_fillet-air_fryer.md",
+    "oven_bake": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/cod_fillet-oven_bake.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/cod_fillet-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/cod_fillet.md"
+  },
+  "haddock": {
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/haddock-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/haddock.md"
+  },
+  "hake": {
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/hake-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/hake.md"
+  },
+  "halibut_fillet": {
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/halibut_fillet-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/halibut_fillet.md"
+  },
+  "mahi_mahi": {
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/mahi_mahi-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/mahi_mahi.md"
+  },
+  "sea_bass": {
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/sea_bass-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/sea_bass.md"
+  },
+  "swordfish": {
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/swordfish-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/swordfish.md"
+  },
+  "trout": {
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/trout-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/fish/white_fish/trout.md"
+  },
+  "ground_lamb": {
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/lamb/ground/ground_lamb-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/ground/ground_lamb.md"
+  },
+  "lamb_burger": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/lamb/ground/lamb_burger-grill.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/ground/lamb_burger.md"
+  },
+  "lamb_crown_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/ground/lamb_crown_roast.md"
+  },
+  "lamb_kofta": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/lamb/ground/lamb_kofta-grill.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/ground/lamb_kofta.md"
+  },
+  "lamb_rib_rack": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/ground/lamb_rib_rack.md"
+  },
+  "lamb_brisket": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/lamb_brisket.md"
+  },
+  "lamb_loin_roast": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/lamb_loin_roast.md"
+  },
+  "lamb_neck": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/lamb_neck-braise.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/lamb_neck-oven_roast.md",
+    "slow_cooker": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/lamb_neck-slow_cooker.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/lamb_neck.md"
+  },
+  "lamb_rib": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/lamb_rib.md"
+  },
+  "lamb_rump": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/lamb_rump.md"
+  },
+  "lamb_shank": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/lamb_shank-braise.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/lamb_shank-oven_roast.md",
+    "slow_cooker": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/lamb_shank-slow_cooker.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/lamb_shank.md"
+  },
+  "lamb_shoulder": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/lamb_shoulder-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/lamb_shoulder.md"
+  },
+  "leg_of_lamb": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/leg_of_lamb-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/leg_of_lamb-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/leg_of_lamb.md"
+  },
+  "rack_of_lamb": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/rack_of_lamb-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/roasts/rack_of_lamb.md"
+  },
+  "lamb_chops": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/lamb/chops/lamb_chops-grill.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/lamb/chops/lamb_chops-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/chops/lamb_chops.md"
+  },
+  "lamb_cutlet": {
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/lamb/chops/lamb_cutlet-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/chops/lamb_cutlet.md"
+  },
+  "lamb_loin_chops": {
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/lamb/chops/lamb_loin_chops-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/chops/lamb_loin_chops.md"
+  },
+  "lamb_neck_filet": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/lamb/chops/lamb_neck_filet.md"
+  },
+  "baby_back_ribs": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/pork/ribs/baby_back_ribs-air_fryer.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/pork/ribs/baby_back_ribs-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/pork/ribs/baby_back_ribs-oven_roast.md",
+    "smoker": "/kitchen_cooking_engine_panel/recipes_classic/pork/ribs/baby_back_ribs-smoker.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/ribs/baby_back_ribs.md"
+  },
+  "spare_ribs": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/pork/ribs/spare_ribs-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/ribs/spare_ribs.md"
+  },
+  "st_louis_ribs": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/ribs/st_louis_ribs.md"
+  },
+  "ground_pork": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/pork/ground/ground_pork-braise.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/pork/ground/ground_pork-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/ground/ground_pork.md"
+  },
+  "pork_sausage": {
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/pork/ground/pork_sausage-grill.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/pork/ground/pork_sausage-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/ground/pork_sausage.md"
+  },
+  "fresh_ham": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/pork/ham/fresh_ham-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/ham/fresh_ham.md"
+  },
+  "cheek": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/offal/cheek.md"
+  },
+  "jowl": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/offal/jowl.md"
+  },
+  "liver_pork": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/offal/liver_pork.md"
+  },
+  "pork_cheek": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/pork/offal/pork_cheek-braise.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/pork/offal/pork_cheek-oven_roast.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/pork/offal/pork_cheek-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/offal/pork_cheek.md"
+  },
+  "pork_jowl": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/offal/pork_jowl.md"
+  },
+  "pork_liver": {
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/pork/offal/pork_liver-pan_fry.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/pork/offal/pork_liver-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/offal/pork_liver.md"
+  },
+  "pork_tongue": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/pork/offal/pork_tongue-braise.md",
+    "slow_cooker": "/kitchen_cooking_engine_panel/recipes_classic/pork/offal/pork_tongue-slow_cooker.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/offal/pork_tongue.md"
+  },
+  "baby_back_ribs_alt": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/baby_back_ribs_alt.md"
+  },
+  "belly": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/belly.md"
+  },
+  "cured_ham": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/cured_ham-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/cured_ham.md"
+  },
+  "ham": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/ham.md"
+  },
+  "pork_belly": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_belly-air_fryer.md",
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_belly-braise.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_belly-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_belly-oven_roast.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_belly-pan_fry.md",
+    "slow_cooker": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_belly-slow_cooker.md",
+    "smoker": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_belly-smoker.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_belly-sous_vide.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_belly.md"
+  },
+  "pork_leg": {
+    "braise": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_leg-braise.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_leg-oven_roast.md",
+    "slow_cooker": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_leg-slow_cooker.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_leg.md"
+  },
+  "pork_loin_roast": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_loin_roast-oven_roast.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_loin_roast.md"
+  },
+  "pork_shoulder": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_shoulder-oven_roast.md",
+    "slow_cooker": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_shoulder-slow_cooker.md",
+    "smoker": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_shoulder-smoker.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/pork_shoulder.md"
+  },
+  "spare_ribs_alt": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/spare_ribs_alt.md"
+  },
+  "st_louis_ribs_alt": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/st_louis_ribs_alt.md"
+  },
+  "virginia_ham": {
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/roasts/virginia_ham.md"
+  },
+  "pork_chop": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_chop-air_fryer.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_chop-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_chop-oven_roast.md",
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_chop-pan_fry.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_chop-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_chop.md"
+  },
+  "pork_loin_steak": {
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_loin_steak-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_loin_steak.md"
+  },
+  "pork_shoulder_steak": {
+    "pan_fry": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_shoulder_steak-pan_fry.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_shoulder_steak.md"
+  },
+  "pork_tenderloin": {
+    "air_fryer": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_tenderloin-air_fryer.md",
+    "grill": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_tenderloin-grill.md",
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_tenderloin-oven_roast.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_tenderloin-pan_sear.md",
+    "sous_vide": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_tenderloin-sous_vide.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/pork_tenderloin.md"
+  },
+  "secreto": {
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/secreto-pan_sear.md",
+    "overview": "/kitchen_cooking_engine_panel/recipes_classic/pork/chops/secreto.md"
+  }
+};
+
+// Classic cut profile texts
+const CLASSIC_CUT_PROFILES = {
+  "ostrich_fillet": "*Placeholder — cut profile research not yet completed.*",
+  "ostrich_steak": "Ostrich (*Struthio camelus*) steak is produced primarily in South Africa, Namibia, and increasingly in France, Belgium, and Germany. Despite being a bird, ostrich meat is red, very low in fat, and treated culinarily exactly like beef or venison. Fan fillet (outerfilé) and top loin are the main steak cuts. The meat is extremely lean and must not be overcooked: medium-rare (54–57 °C) is the South African standard. Above 70 °C the meat becomes tough and liver-like.\n\n\nTarget internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pull at 52 °C and rest.",
+  "venison_leg": "*Placeholder — cut profile research not yet completed.*",
+  "venison_loin": "Venison loin (also: backstrap, saddle, or haunch steak — depending on country) from roe deer (*Capreolus capreolus*) or red deer (*Cervus elaphus*) is the premium pan-searing cut. The meat is very lean, deep red-brown, and has a rich, gamey flavour prized throughout European cooking. Pan-searing 2–3 minutes per side over high heat is the standard technique; the meat is universally pulled at medium-rare to medium to avoid dryness.\n\nKöket.se temperature guide (Sweden):\n- Rådjur/hjort ytterfilé & filé: rare 52 °C, medium 57 °C, well done 65 °C\n- Stekdetaljer: 55/62/68 °C\n\n\nVenison loin (also: backstrap, saddle, or haunch steak — depending on country) from roe deer (*Capreolus capreolus*) or red deer (*Cervus elaphus*) is the premium pan-searing cut. The meat is very lean, deep red-brown, and has a rich, gamey flavour prized throughout European cooking. Pan-searing 2–3 minutes per side over high heat is the standard technique; the meat is universally pulled at medium-rare to medium to avoid dryness.\n- Rådjur/hjort ytterfilé & filé: rare 52 °C, medium 57 °C, well done 65 °C\n- Stekdetaljer: 55/62/68 °C",
+  "venison_roast": "Venison haunch or saddle roast is a classic British, German, French, and Scandinavian festive dish. The typical method: dry-age if possible, then sear all over in a hot pan and finish in the oven (180–200 °C for medium/well, or low 120–140 °C for precision doneness with a probe). The saddle in particular is a show-piece roast in Michelin-star British cooking.\n\n\nTarget internal temperature: **55–60 °C (131–140 °F)** for a pink, moist result. Some German recipes use the \"Niedergarmethode\" (low-temperature method) at 80–90 °C to hit exactly 58 °C core.",
+  "venison_shoulder": "*Placeholder — cut profile research not yet completed.*",
+  "venison_steak": "Venison steak most commonly refers to cuts from the haunch (hindleg), loin, or backstrap of deer — typically roe deer (*Capreolus capreolus*), red deer (*Cervus elaphus*), or fallow deer (*Dama dama*). The backstrap and loin medallions are prized for pan searing: they are fine-grained, lean, and quick-cooking. The meat is deep-red and intensely flavoured, with very little intramuscular fat.\n\nBecause venison is so lean, it must be cooked hot and fast to prevent drying. Pan searing in butter or oil over high heat for 2–5 minutes per side achieves a caramelised crust while keeping the centre rare to medium-rare. Resting is critical — at least 5 minutes — to allow juice redistribution.\n\nThe European tradition across the UK, Germany, Scandinavia and Italy pairs venison with acidic or fruity sauces (blackberry, lingonberry, cloudberry, redcurrant, balsamic) that cut the richness of the meat. Nordic cooks often finish fillets in the oven at low heat (125°C) after searing, using a thermometer to hit exactly 60°C. UK and North American cooks tend to pan-fry direct.\n\n\nTarget internal temperature: pull at **54–57°C (130–135°F)** for medium-rare. Venison dries out rapidly above 65°C and should never be cooked to well-done.",
+  "rabbit_legs": "Rabbit (*Oryctolagus cuniculus*) legs (front and hind) are the most commonly braised cut. The hind legs carry more meat and are the prime braising cut; the front legs are often included for flavour. Rabbit is lean, low in fat, and prone to drying if overcooked — braising in wine, stock, or cream keeps the meat moist while allowing the connective tissue to break down.\n\nThe French tradition (lapin aux pruneaux, lapin à la moutarde) is the most internationally recognised; German, Italian, and British traditions also have strong recipes. Braising time: 45–75 minutes. The meat should be fork-tender and pulling away from the bone.\n\n\nTarget internal temperature: **74–77 °C (165–175 °F)** — rabbit, like chicken, should be cooked through. Fork-tender braised rabbit reads 74–80 °C.",
+  "rabbit_saddle": "The rabbit saddle is the backbone section of the rabbit bearing two boneless loins\nand, when left bone-in, thin belly flaps that protect the loins during roasting.\nOven roasting suits the saddle particularly when it is stuffed, tied, or cooked\nbone-in as a whole piece: the oven's dry, even heat browns the exterior more gently\nand uniformly than a stovetop pan, and the belly flaps — which would burn in a pan\n— insulate the loins and add a thin layer of fat that bastes the meat from the\ninside. The saddle is lean enough that it needs a hot oven (190–200°C) to brown\nbefore the interior overcooks; conversely, finishing times are short (10–15 minutes)\nand carryover is 2–3°C, so the cut demands close monitoring. Stuffed or rolled\nsaddle (farce or ballotine style) can tolerate a slightly lower oven and longer\ntime because the stuffing moderates heat transfer into the loin.\n\n\ninside. The saddle is lean enough that it needs a hot oven (190–200°C) to brown\nand carryover is 2–3°C, so the cut demands close monitoring. Stuffed or rolled",
+  "wild_boar_chop": "Wild boar (*Sus scrofa*) loin chops (Wildschwein-Koteletts / côtelettes de sanglier) are taken from the back of the animal and include a rib bone, similar to pork chops but with darker, denser meat and a pronounced game aroma. Fat content varies by season — boars shot in autumn carry more fat than those taken in spring. The meat benefits from brief marinades in oil, herbs, and acidic components to tenderise.\n\n\nTarget internal temperature: **70–72 °C (158–162 °F)** for safe consumption of wild-caught pork. Some grillmasters pull at 65 °C for a pink interior.",
+  "wild_boar_shoulder": "Wild boar shoulder is a large, heavily worked muscle containing significant connective tissue. It benefits from long, slow roasting (3–4 hours) at moderate temperature (160–200 °C) in a braising liquid to achieve pull-apart tenderness. The German tradition uses wine, game stock, juniper, and root vegetables; the Italian and French traditions add tomato and herbs.\n\n\nTarget internal temperature: **80–90 °C (176–194 °F)** for fall-apart texture. Food-safety minimum is 70 °C (158 °F) for safe serving, but the collagen conversion to gelatin that makes the shoulder delicious requires 80+ °C.",
+  "mutton_chop": "Mutton refers to the meat of a sheep older than one year (typically 2–4 years), with a stronger, more pronounced flavour than lamb. Mutton chops (loin or shoulder chops) are popular in Germany, the UK, the Middle East, and South Asia. The stronger flavour benefits from aromatic seasoning (garlic, onion, thyme, cumin) and the meat is typically cooked through — medium to well-done — rather than pink.\n\n\nTarget internal temperature: **70–74 °C (158–165 °F)**.",
+  "mutton_leg": "A whole mutton leg (bone-in, 2–3 kg) is a festive cut in the Middle East, Pakistan, Afghanistan, UK, and parts of Europe. Its strong, mature flavour benefits from marinating and long, slow oven roasting. Most traditions roast at 160–180 °C for 2.5–4 hours, covered for the majority of the time to prevent drying.\n\n\nTarget internal temperature: **75–80 °C (167–176 °F)** for fully cooked, still juicy. Some Pakistani and Indian recipes cook to 85 °C for fall-apart texture.",
+  "mutton_shoulder": "Mutton shoulder is a heavily worked, intensely flavoured cut from an older animal (12 months or more). The extra age means deeper flavour but also denser connective tissue, requiring longer braising times than lamb — typically 2.5–3.5 hours on the stovetop or 3–4 hours in the oven. When braised low and slow, the shoulder yields incredibly rich, yielding meat that is the centrepiece of Indian korma, Turkish tandır, and Italian stuffed shoulder (spalla) traditions. Mutton benefits from full-bodied braising liquids — wine, yoghurt, spiced stocks — that can stand up to its assertive flavour. The MEATER probe is inserted through the thickest muscle of the shoulder, well away from the shoulder blade bone.\n\n\nTarget internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bone; mutton shoulder may need 90–95 °C due to the older animal's denser tissue.",
+  "mutton_shoulder_alt": "*Placeholder — cut profile research not yet completed.*",
+  "kangaroo_fillet": "*Placeholder — cut profile research not yet completed.*",
+  "kangaroo_steak": "Kangaroo (*Macropus* spp.) steak, most commonly from the hindquarter/rump or loin fillet, is one of the leanest red meats available — typically less than 2% fat. The meat is deep crimson, with a slightly gamy, iron-rich flavour. Because of its extreme leanness, kangaroo must be cooked hot and fast to prevent drying: pan-searing for 2–3 minutes per side over high heat achieves a seared crust while keeping the interior rare to medium-rare. Cooking beyond medium results in a dry, liver-textured product.\n\n\nTarget internal temperature: **54–57 °C (130–135 °F)** for medium-rare. Many Australian cooks pull at 50–52 °C for a warm-red centre. Well-done is strongly discouraged.",
+  "reindeer_loin": "*Placeholder — cut profile research not yet completed.*",
+  "reindeer_roast": "Reindeer roast (renstek) is a traditional Sami and Scandinavian festive dish. The round/topside (innanlår) or saddle is the most common cut. The Scandinavian method: sear in a hot pan, then finish in a very low oven (100–125 °C) with the probe inserted to achieve precise doneness without risk of overcooking the lean meat. The traditional accompaniment is cream sauce with lingonberries.\n\n\nTarget internal temperature: **57–62 °C (135–144 °F)** for medium. Pull at 55 °C and rest.",
+  "reindeer_steak": "Reindeer (*Rangifer tarandus*) is the traditional game meat of Sápmi (Lapland), northern Finland, Norway, and Sweden. The fillet (renfilé) and backstrap (sadel) are the premium cuts for pan searing. Reindeer meat is very lean, deep red, and has a delicate sweet-earthy flavour milder than moose. Because of its leanness it must be treated like venison: high heat, short cooking time, pulled well below well-done. Medium-rare (57 °C) is the Nordic standard.\n\n\nTarget internal temperature: **55–57 °C (131–135 °F)** for medium (Nordic preference). Pull at 52 °C.",
+  "goat_chop": "Goat loin or rib chops are popular throughout West Africa, the Caribbean, South Asia, the Middle East, and the Mediterranean. The meat is leaner than lamb with a slightly stronger, more aromatic flavour. Pan searing is typically done at high heat with marinades containing aromatic spices (cumin, coriander, ginger, garlic). Like lamb, goat chops are served medium to well-done.\n\n\nTarget internal temperature: **70–74 °C (158–165 °F)**.",
+  "goat_leg": "Whole roasted goat leg is a festive preparation in Germany (Ziegenkeule), Greece (katsiki sto fourno), the Caribbean, South and West Africa, and across the Middle East. The meat has moderate fat and benefits from marinating (especially in buttermilk, yoghurt, or wine) to reduce gaminess. Slow oven roasting at 160–200 °C for 2–3 hours gives the best result.\n\n\nTarget internal temperature: **75–82 °C (167–180 °F)** for fully cooked, moist goat.",
+  "goat_leg_roast": "*Placeholder — cut profile research not yet completed.*",
+  "goat_shank": "A goat shank (Swedish *getlägg*) is the lower portion of the animal's leg — heavily worked, dense with collagen, intramuscular fat (limited; goat is leaner than lamb) and bone marrow. Like the lamb shank, it is a quintessentially braising cut: tough beyond chewing if cooked to medium-rare, but transformed by long, slow cooking in liquid into fork-tender, gelatin-rich meat that falls off the bone. Internal temperature is the wrong metric: the cut needs time at 88–93 °C internal (the collagen-melting band) for 1.5–2 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, parallel to the bone (avoid touching bone).",
+  "goat_shoulder": "Goat shoulder (Swedish *getskuldra* / *getbog*) is the upper foreleg — heavily worked, dense with collagen and intramuscular fat. Like the lamb shoulder, it is a quintessentially low-and-slow cut: tough beyond chewing if cooked to medium-rare, but transformed by long, wet cooking into fork-tender, gelatin-rich meat that pulls in long strands. Internal temperature is necessary but insufficient: the cut needs time at 88–93 °C internal for 2–3 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, away from bone or large connective sheets.",
+  "moose_roast": "Moose (*Alces alces*) — called älg in Swedish, elg in Norwegian, and Elch in German — is the largest deer species in the Northern Hemisphere. The hindquarter roast (haunch/shoulder) has deep, dark red meat with minimal fat and a distinctive game flavour. Moose roast is best cooked slowly: high initial heat to develop a crust, then low, slow oven roasting (125–160 °C) with basting, aiming for a core temperature that gives a pink but safe result. The Swedish tradition uses cream and lingonberry as accompaniments.\n\n\nTarget internal temperature: **60–65 °C (140–149 °F)** for medium (pink centre); **70 °C (158 °F)** for fully cooked. The Swedish national tradition prefers 60–65 °C.",
+  "moose_steak": "Moose steak (Elchsteak / älgbiff) is cut from the loin or haunch. It is very lean with a rich, earthy flavour. Grilling over high heat for a short time is the traditional Nordic approach; the meat should be seared quickly and pulled at medium-rare to prevent dryness. Marinating in oil and acidic components (wine, vinegar, lemon) before grilling is standard practice.\n\n\nTarget internal temperature: **57–62 °C (135–144 °F)** for medium-rare to medium.",
+  "buffalo_burger": "Buffalo/bison burger (ground buffalo patty, grilled) is one of the most popular preparations in North America and increasingly in Europe. The lean ground meat makes for a firm, flavourful patty — it dries out quickly so most American recipes cook to medium (63 °C) rather than well-done. Adding a small amount of fat (bacon fat, olive oil) to the mix prevents dryness.\n\n\nTarget internal temperature: **70–74 °C (158–165 °F)** (ground meat food safety standard in the US and EU); some chefs serve at 63 °C (medium) as a restaurant preference.",
+  "buffalo_roast": "*Placeholder — cut profile research not yet completed.*",
+  "buffalo_steak": "**Context note**: In this project, *buffalo* refers to **water buffalo** (*Bubalus bubalis* — carabao in the Philippines, bhaisa in India) rather than American bison (which is in the `bison/` category). Water buffalo is the most widely eaten large ruminant in Asia, with large production in India, China, Pakistan, and Southeast Asia. The lean, slightly sweeter, darker-red meat is typically treated like beef in most culinary traditions.\n\nGrilling water buffalo steak (carabeef) is common in India, Vietnam, and the Philippines. The meat is slightly tougher than beef and benefits from marinating.\n\n\nTarget internal temperature: **57–63 °C (135–145 °F)** for medium-rare to medium. The meat is leaner than beef and becomes tough above 70 °C.",
+  "bison_burger": "Bison burger patties are made from ground bison meat, typically sourced from the shoulder, chuck, or round — the same primal cuts used for beef hamburgers. Bison is notably leaner than beef, often containing only 2–7% fat depending on the grind, compared to 15–20% in a typical beef burger blend. This leanness is both the appeal and the challenge: bison has a clean, slightly sweet, mineral-forward flavour but is prone to drying out if overcooked or if insufficient fat is present.\n\nBecause ground bison is so lean, fat management is critical. Many cooks either blend pure ground bison with a fattier cut (e.g., bison back fat or beef suet) to reach roughly 10–15% total fat, or they compensate with binding ingredients such as egg, mustard, and ketchup that add moisture and help hold the patty together. Cooking over high direct heat — whether on charcoal, a gas grill, or a cast-iron pan — is the preferred method, as it quickly builds a crust that seals in juices before the lean meat has time to dry out.\n\nFood safety regulations in most countries classify ground meat as a high-risk product requiring thorough cooking: the USDA standard for ground meat is 71 °C / 160 °F internal temperature. BBC Good Food echoes this at 70 °C. However, gourmet and restaurant preparations for trusted-source ground bison sometimes target 63–65 °C for a medium result with a pink centre. The appropriate pull temperature depends on the intended doneness, the diners' preferences, and local food safety guidelines.\n\nA MEATER probe inserted sideways into a patty gives reliable internal readings even for thin cuts, provided it is placed horizontally through the thickest part of the patty, keeping the tip and ambient sensor both clear of the grill grates.",
+  "bison_roast": "Bison roast cuts are drawn from the same primals as beef roasting joints — most commonly the\nshoulder (chuck/Schulter), topside (Oberschale), silverside (Unterschale), or loin (Rücken).\nThe fillet roast (whole tenderloin) is also used in high-end German preparations. Like bison\nsteak, bison roast is substantially leaner than equivalent beef cuts: the marbling is sparse\nand the outer fat layer thin, which has two important consequences. First, a bison roast dries\nout faster in a hot oven than a comparably sized beef joint, making temperature monitoring with\na probe essential. Second, without intramuscular fat to buffer heat and provide moisture, the\noff-flavour threshold at which overcooked meat tastes \"liver-like\" is reached earlier — roughly\n65–68 °C for a roast compared to around 63 °C for a steak.\n\nThe two dominant German cooking traditions for bison roast diverge sharply in oven temperature\nbut agree on a pull temperature of approximately 60–63 °C (medium). The high-heat tradition\n(200 °C, 45–60 minutes for a 1 kg joint) produces a crisper exterior but requires careful\nattention because the meat approaches the pull temperature quickly. The low-heat tradition\n(80–90 °C, 90–120 minutes) relies on the oven temperature being close to the desired internal\ntemperature, preventing overshoot and producing an evenly pink interior across the full\ncross-section. Both traditions use an initial sharp sear to develop a Maillard crust before\nthe oven phase, since at low oven temperatures browning will not occur.\n\nUnlike bison steak, a large roast does carry some collagen from the connective tissue that\nsurrounds muscle groups — particularly in shoulder or topside cuts. However, bison roast is\nnot a braise candidate: the collagen content is insufficient to benefit from the 85–95 °C\nsustained-hold window required for full collagen conversion, and the lean muscle would be\nruined at those temperatures. The correct window is medium (60–65 °C), where the muscle is\nstill moist and pink throughout. Resting is critical for roasts: a minimum of 10 minutes\nallows the thermal gradient within the joint to equalise and the muscle fibres to reabsorb\njuices. A mozzarella-mustard herb crust, applied before the oven phase, is a distinctive\nGerman preparation that acts as an insulating layer and baste, partially compensating for\nthe low fat content.\n\n\n65–68 °C for a roast compared to around 63 °C for a steak.\nbut agree on a pull temperature of approximately 60–63 °C (medium). The high-heat tradition\n(200 °C, 45–60 minutes for a 1 kg joint) produces a crisper exterior but requires careful\nattention because the meat approaches the pull temperature quickly. The low-heat tradition\n(80–90 °C, 90–120 minutes) relies on the oven temperature being close to the desired internal\nnot a braise candidate: the collagen content is insufficient to benefit from the 85–95 °C\nruined at those temperatures. The correct window is medium (60–65 °C), where the muscle is",
+  "bison_steak": "Bison (American buffalo, *Bison bison*) is a large North American bovine raised primarily on\nopen pasture. Its steaks — most commonly cut from the loin (fillet/tenderloin), rib (entrecôte/\nribeye), or striploin (sirloin) — are structurally similar to beef cuts from the same primal\npositions but differ decisively in fat content and flavour chemistry. Bison carries significantly\nless intramuscular fat than commercial beef: its marbling score is typically very low, and the\nexternal fat cap is thin. This leanness means there is very little insulating fat to slow heat\npenetration, so bison steaks cook faster than their beef equivalents and have a narrower\nwindow between perfectly cooked and overdone.\n\nThe critical temperature rule for bison steak is the most frequently repeated piece of culinary\nconsensus in all traditions: bison must always be served rare to medium-rare and must never be\ntaken past medium. The lean muscle fibres of bison, deprived of intramuscular fat that would\nlubricate the texture, become dry, chalky, and develop a distinctly unpleasant liver-like\noff-flavour when cooked beyond 65 °C. This off-note — noted explicitly in German, American,\nand French bison cooking literature — is caused by the oxidation of the comparatively high\niron content in the lean, myoglobin-rich muscle at elevated temperatures. The pull temperature\nfor a grilled bison steak is therefore 57–60 °C (medium-rare), and never above 63 °C.\n\nOn the grill, bison steak performs best over direct, high heat — charcoal (Holzkohlegrill) is\nfrequently recommended in German and North American traditions because the intense radiant\nheat of charcoal sears the exterior rapidly, creating Maillard crust without the interior\novercooking. Gas grill or cast-iron griddle are also acceptable. Because of the leanness,\nmarinating overnight is common in German tradition: the marinade provides moisture and\nflavour compounds that compensate for the lack of intramuscular fat. Resting is universally\nrecommended (5 minutes minimum) to allow the muscle fibres to relax and reabsorb juices.\nSlow low-temperature cooking (Niedrigtemperatur) is explicitly warned against for bison steak\nby German sources — while it works for collagen-rich beef cuts, for lean bison steak it\nconcentrates the liver-like off-note and dries the meat. The pan-sear + brief oven finish\nat 80 °C (as described in two German sources below) is the one acceptable exception, because\nthe sear provides Maillard flavour and the short oven time (25 min at 80 °C) simply holds\nthe meat at medium without further cooking.\n\n\noff-flavour when cooked beyond 65 °C. This off-note — noted explicitly in German, American,\niron content in the lean, myoglobin-rich muscle at elevated temperatures. The pull temperature\nfor a grilled bison steak is therefore 57–60 °C (medium-rare), and never above 63 °C.\nat 80 °C (as described in two German sources below) is the one acceptable exception, because\nthe sear provides Maillard flavour and the short oven time (25 min at 80 °C) simply holds",
+  "beef_burger": "Ground beef burgers are formed patties of minced beef, most commonly from a blend of chuck (for flavour) and sirloin or brisket (for binding), with fat content typically 15–25 % by weight. Unlike whole-muscle cuts, a burger patty has no internal connective tissue structure — the grind has already disrupted muscle fibres — so the cooking challenge is heat penetration through the patty's cross-section rather than collagen conversion. The direct-heat grill creates a fierce Maillard crust on both flat faces, which is the primary flavour mechanism; the fat content keeps the interior moist even at higher internal temperatures. Carryover in a burger patty is minimal — the thin geometry dissipates heat quickly once removed from the grill — but genuine carryover occurs in thicker restaurant-style patties, making the pull-from-grill moment slightly earlier than the final target.",
+  "burger": "*Placeholder — cut profile research not yet completed.*",
+  "ground_beef": "Ground beef (minced beef) is made by grinding beef, most commonly from the chuck primal or a blend of trimmings. The fat-to-lean ratio is the primary quality variable: 80/20 is standard for most preparations; 85/15 is leaner; 70/30 is richer and juicier. Because grinding ruptures muscle cells and distributes surface bacteria throughout the mass, the USDA and equivalent international food-safety authorities require a minimum internal temperature of 71°C (160°F) — there is no medium-rare option for ground beef the way there is for whole steaks. Carryover is minimal (1–2°C) given the fine grind and rapid heat transfer.",
+  "liver": "*Placeholder — cut profile research not yet completed.*",
+  "meatloaf": "Meatloaf is a free-formed loaf of seasoned, bound ground meat (typically beef alone or a beef-pork-veal blend) baked in a moderate oven until cooked through. Structurally it is a colloid of ground muscle held by a panade (bread or breadcrumbs soaked in milk or stock) and bound with egg; the panade is critical because it absorbs and re-releases moisture during the bake, preventing the dry, dense loaf that pure meat-plus-egg produces. Oven temperatures of 175–190 °C give enough time for the centre to reach safe temperature without over-rendering the surface. Carryover is significant — 5–8 °C in a typical 1 kg loaf — because the loaf shape stores heat well; a 5–10 minute rest is mandatory both for carryover and for the proteins to re-absorb expressed liquid.",
+  "tongue": "*Placeholder — cut profile research not yet completed.*",
+  "filet_mignon": "Filet mignon is cut from the narrow end (small end) of the beef tenderloin — the psoas major muscle, which runs alongside the spine and does virtually no work during the animal's life. It is the most tender cut in the carcass, with almost no intramuscular fat (marbling) or connective tissue, making it both delicate and vulnerable to drying out. The air fryer circulates very hot air around the steak at high velocity, creating convection browning on the exterior while cooking the interior — the result is a decent Maillard crust without the smoke of a grill or the fat-pooling effect of a skillet. Because filet mignon is exceptionally lean, the air fryer's hot-air convection is forgiving compared to direct-contact methods. Carryover is minimal but present — the small, round geometry of a filet mignon dissipates heat quickly after removal from the enclosed air fryer basket.",
+  "flank_steak": "Flank steak is a flat, thin muscle cut from the abdominal wall of the animal (the flank primal), with long, coarse muscle fibres running visibly along its length. The cut is lean, relatively tough, and has minimal intramuscular fat — it lacks the marbling of a ribeye but compensates with bold, beefy flavour. Charcoal grilling is the quintessential method for flank steak: the high, direct radiant heat from glowing embers creates a rapid, intense Maillard crust across the wide flat surface before the interior has time to overcook. Flank steak must be cooked quickly over very high heat and sliced thinly across the grain for tenderness — cooking it slowly defeats the purpose. Carryover is minimal in a thin flank steak, but because it is typically cooked over extremely high heat, the brief internal temperature rise after removal from the grill can bring the steak from medium-rare to medium if not watched carefully.",
+  "flat_iron": "The flat iron steak is taken from the infraspinatus muscle of the beef shoulder blade, separated from the central band of tough gristle that runs through the full top blade. Because the infraspinatus performs relatively little work, it retains outstanding intramuscular fat for a non-loin cut, producing deeply beefy, slightly buttery flavour comparable to ribeye at a fraction of the cost. Individual steaks are typically 200–350 g and 2–3 cm thick — a dimension that fits the air fryer's compact hot-air cabinet well. The air fryer's high-velocity convection at 200–205 °C dries the surface rapidly and drives the Maillard reaction without a dedicated grill or stovetop. Carryover is moderate, typically 2–3 °C after leaving the basket, so pulling 3 °C below the intended serving temperature is standard practice.",
+  "hanger_steak": "Hanger steak over live charcoal adds an important dimension to this already intensely flavoured cut. The fat-and-flavour drippings from the hanging muscle hit the hot coals and combust into brief flare-ups, depositing charred aromatic compounds onto the steak surface. This combination of deep beef flavour + charcoal smoke + char edge makes the hanger steak over charcoal one of the most intensely flavoured steak preparations achievable. The sinew-containing version (some butchers leave the central connective tissue) is convenient to cook whole and split post-resting; the sinew-removed version cooks as two thin separate muscles. Carryover from a very hot charcoal fire is 5–7 °C.",
+  "ny_strip": "The New York strip over live hardwood charcoal benefits from the distinctive smoke compounds — guaiacol, syringol, and related phenolics — that gas grilling cannot replicate. The intense radiant heat from a well-managed charcoal fire sears the strip's firm muscle rapidly, rendering the fat cap and producing a deeply flavoured crust. The charcoal method also permits the cook to modulate the fire by adjusting air vents and coal arrangement; a two-zone fire (direct coals on one side, indirect on the other) allows initial searing then gentle finishing by indirect heat for thick-cut strips. Carryover from a very hot charcoal fire is 5–6 °C for a thick steak; this must be factored into the pull temperature.",
+  "picanha": "Picanha over live charcoal is the definitive Brazilian *churrasco* preparation — in Brazil, the whole *rump cap* is threaded onto long metal skewers in a horseshoe shape (fat cap outside) and rotated continuously above the charcoal fire of the *churrascaria*, the fat dripping and basting the meat as it cooks. At home on a kettle or kamado grill, the rotisserie method can be replicated or a simplified two-zone direct-then-indirect approach is used. The charcoal smoke compounds penetrate the fat cap and impart a distinctive aroma that is a signature of Brazilian *churrasco*. Carryover from a hot charcoal fire is 5–7 °C.",
+  "ribeye_steak": "The ribeye steak is cut from the longissimus dorsi muscle of the rib primal (ribs 6–12), a muscle that does minimal work and therefore develops exceptional intramuscular fat (marbling) throughout its grain. That marbling is the defining feature: the fat pockets liquefy under heat and baste the muscle from within, producing a richness and self-basting character that no other common steak cut matches. Pan searing is a natural partner for the ribeye because the very high conductive heat of a cast-iron or carbon-steel pan drives rapid Maillard browning of the fat-rich exterior, producing a deeply caramelised crust while the marbling keeps the interior moist even if the cook overshoots slightly. The bone-in version (côte de bœuf / cowboy ribeye) retains more flavour through the cook but requires more precise probe placement to read the eye of the steak rather than the area near the bone. Carryover in a pan-seared ribeye is moderate — typically 3–5 °C — because the metal pan delivers intense surface heat that dissipates once the steak is removed, but the fat content slows core temperature equalisation.\n\n\nTarget internal temperatures (oven roast ribeye):\n- Medium-rare: **pull from oven at 52–54 °C (126–129 °F)**, rest to **57 °C (135 °F)**\n- Medium: **pull at 57–59 °C (135–138 °F)**",
+  "sirloin_steak": "The sirloin steak is cut from the sirloin primal, which sits between the short loin (where the NY strip originates) and the round. Top sirloin is the most common steak cut from this primal — it is a firm, relatively lean steak with a bold beefy flavour from the greater muscle activity of this region of the carcass. Compared to the NY strip, top sirloin has less marbling and a slightly coarser grain, making it less forgiving of overcooking; compared to the round, it is noticeably more tender. Pan searing suits sirloin well because the high heat compensates for the reduced marbling by creating a flavourful crust — the Maillard reaction is the primary flavour contribution to a seared top sirloin. The cap muscle (*picanha* region of the sirloin cap) is sometimes separated and considered a distinct cut; this leaf concerns the main top sirloin steak. Carryover is 4–5 °C.",
+  "skirt_steak": "Skirt steak over live charcoal is arguably its highest form — in taquero tradition, *arrachera asada* (literally \"grilled skirt steak\") means skirt steak cooked over mesquite or hardwood charcoal, where the fat drippings ignite the coals into brief, flavour-depositing flare-ups. The smoky charcoal notes complement the intense beefy flavour of the diaphragm muscle. Mexican *taquero* tradition uses very hot mesquite charcoal; Argentine *parrilla* tradition uses quebracho wood embers. The probe challenge is the same as on a gas grill: thin steak, end insertion required. Carryover from very hot charcoal is 5–7 °C.",
+  "t_bone": "Air-frying a T-bone steak is practical for steaks up to 3 cm thick and 700 g — the bone makes the T-bone bulkier than simple steak cuts, so it must fit in the air fryer basket. Air fryers circulate extremely hot air at 200–220 °C and produce a crisped surface resembling oven-roasted rather than pan-seared beef, without the mess of oil splatter. The two-muscle T-bone geometry (striploin + fillet) requires monitoring the striploin temperature — the MEATER probe goes in the striploin side, away from the bone. The result is less dramatic in crust quality than a cast-iron sear, but significantly more convenient for weeknight cooking. Carryover from the air fryer basket is 3–5 °C.",
+  "tomahawk": "The tomahawk over charcoal is the premier outdoor cooking experience — the enormous bone handle allows it to stand upright beside the coals for resting. Charcoal-grilled tomahawk requires the same reverse-sear principle as gas grill: indirect heat to bring the core up safely, then direct high heat for the crust. The Maillard reaction on the fat-cap over charcoal produces flavour compounds unavailable from gas. Use hardwood charcoal (oak, holm oak, beech) for best flavour.\n\n\nTarget internal temperatures (charcoal grill):\n- Medium-rare: **core 55–57 °C (131–135 °F)** · pull at **52–54 °C (126–129 °F)**\n- Medium: **core 60–63 °C (140–145 °F)**",
+  "tri_tip": "Tri-tip on charcoal benefits from the classic Santa Maria barbecue tradition — the original Californian preparation. The key is a 2-zone charcoal setup: sear directly over the coals first for a crust, then finish on the indirect side to bring the interior to temperature safely. The tapered shape means the thin end will always be more done; probe the thickest section. Red oak is the traditional Santa Maria wood; hickory and mesquite are alternatives.\n\n\nTarget internal temperatures (charcoal grill):\n- Medium-rare: **pull at 54–57 °C (129–135 °F)**",
+  "beef_liver": "Beef liver is one of the densest, most nutrient-rich offal cuts in the carcass — a chocolate-coloured, finely-textured mass of hepatocyte tissue with very little connective tissue and a thin filmy capsule. Its iron-and-mineral profile gives a pronounced metallic flavour that mellows dramatically with brief soaking in milk before cooking — a step common to most European traditions. Pan frying is the classic method: 6–8 mm slices flashed in hot fat, browned hard on both sides, and pulled before the centre passes about 65 °C. Above that temperature the proteins seize and the slice turns chalky and grey-brown; the visual cue for correctly-pulled liver is a faint pink line through the centre. Carryover is short and small (1–2 °C) given the thin slices, but the slices continue cooking on the plate — serving immediately is essential.",
+  "beef_rib": "*Placeholder — cut profile research not yet completed.*",
+  "beef_shin": "*Placeholder — cut profile research not yet completed.*",
+  "beef_tongue": "Beef tongue (*Bos taurus* lingual muscle) is a single dense cylindrical muscle wrapped in a thick, papillae-covered skin. The muscle itself is rich in collagen and intramuscular fat; the skin is inedible and must be peeled after cooking — the standard method is to braise the whole tongue at 85–95 °C until the collagen converts to gelatin, then peel the skin while the tongue is still warm. Cooking times of 3–4 hours for a 1.5–2 kg tongue are standard. Carryover is essentially zero (the surrounding liquid buffers the temperature) but the tongue retains heat well after removal — the skin must be peeled within 5 minutes of lifting from the braise or it cools and tightens. Pull is timed by the texture of the muscle: a paring knife should slide in with no resistance.",
+  "beef_shank": "Beef shank is the lower portion of the front (foreshank) or hind (hindshank) leg, structurally one of the most aggressively-worked muscles in the carcass: the constant motion of walking and standing builds dense bundles of muscle fibre wrapped in thick sheets of connective tissue, with a substantial central marrow bone running through cross-cut steaks (the *osso buco* preparation). Raw shank is among the toughest cuts in the animal; braised slowly for 3–4 hours at 85–95 °C, the connective tissue dissolves into rich gelatin, the marrow renders into the sauce, and the muscle becomes pull-apart tender. The bone-in cross-cut section holds shape because the connective-tissue ring around the muscle keeps it bound during the cook. Carryover is negligible — the surrounding liquid buffers temperature swings.",
+  "brisket": "Beef brisket is taken from the breast and lower chest of the animal, comprising two muscles — the flat (*pectoralis profundus*) and the point (*pectoralis superficialis*) — that support much of the animal's weight. The cut is dense with collagen-rich connective tissue and interspersed fat, making it exceptionally tough when cooked quickly but extraordinarily silky and tender once held at the collagen-conversion threshold long enough for connective tissue to dissolve into gelatin. Oven roasting at low temperature replicates the gentle, prolonged dry heat that the cut demands — the enclosed oven environment retains moisture driven off from the meat, preventing the surface from desiccating during the long cook. Carryover is negligible for brisket because the high moisture content and dense mass absorb and retain heat slowly; the internal temperature barely moves after the brisket is removed from the oven.",
+  "chuck_roast": "Chuck roast is cut from the shoulder region of the animal (the chuck primal, roughly ribs 1–5 and the neck), and is one of the most collagen-dense roasting cuts in the carcass. The shoulder muscles endure constant movement throughout the animal's life, producing densely bundled muscle fibres interlaced with thick seams of connective tissue and fat — a structure that is aggressively tough at low internal temperatures but transforms into richly flavoured, pull-apart tenderness when braised gently over several hours. Braising is particularly suited to chuck because the submerging or partial immersion in liquid accelerates the hydrolysis of collagen into gelatin, producing a self-thickening braising sauce and a meltingly tender interior simultaneously. Carryover is negligible for chuck in a braise because the surrounding liquid buffers against temperature swings; the meat stays at cooking temperature until removed.",
+  "short_ribs": "*Placeholder — cut profile research not yet completed.*",
+  "beef_tenderloin_roast": "The beef tenderloin (psoas major) runs along the interior of the spine and does almost no work during the animal's life, making it the most tender, least collagen-dense muscle in the carcass. A whole tenderloin roast (the \"châteaubriand\" section or full fillet) weighs approximately 1–2 kg and tapers from the thick butt end to a thin tail. It is exceptionally lean, with minimal intramuscular fat, making it vulnerable to drying out if overcooked — the window between perfectly rosy and dry, grey meat is narrow. Oven roasting suits the tenderloin because gentle, even heat preserves the moisture in the lean fibres; high-heat searing before or after the oven creates the Maillard crust that the lean exterior cannot produce on its own. Carryover is significant in a whole tenderloin — the concentrated lean mass retains heat for several minutes after leaving the oven, enough to raise the internal temperature noticeably — making the pull temperature meaningfully lower than the target serving temperature.",
+  "chuck": "*Placeholder — cut profile research not yet completed.*",
+  "prime_rib": "Prime rib (also called standing rib roast) is cut from the rib primal (ribs 6–12), comprising the longissimus dorsi and surrounding muscles, with a generous fat cap and the rib bones attached. It is one of the most marbled subprimal sections of the animal — the rib muscles do relatively little work, and the high intramuscular fat content self-bastes during roasting, keeping the interior moist across a wide temperature range. Oven roasting is the canonical method for prime rib because the sustained, even heat of an enclosed oven allows the large mass (typically 2.5–5 kg) to heat evenly from edge to centre while the exterior fat cap renders and browns. Carryover is substantial for a prime rib — the large, dense mass retains heat efficiently, and internal temperature continues to rise for 15–30 minutes after removal; this must be accounted for in the pull temperature.",
+  "roasting_joint": "*Placeholder — cut profile research not yet completed.*",
+  "round_roast": "*Placeholder — cut profile research not yet completed.*",
+  "rump": "*Placeholder — cut profile research not yet completed.*",
+  "rump_roast": "*Placeholder — cut profile research not yet completed.*",
+  "sirloin_roast": "*Placeholder — cut profile research not yet completed.*",
+  "sirloin_tip_roast": "*Placeholder — cut profile research not yet completed.*",
+  "top_round_roast": "*Placeholder — cut profile research not yet completed.*",
+  "goose_breast": "Goose breast is a rich, deeply flavoured dark meat with a substantial fat layer, similar in character to duck breast but larger and more assertively flavoured. Like duck breast, it is often served medium-rare to medium (145–155 °F / 63–68 °C) by many European chefs, though USDA guidelines require 165 °F (74 °C). The oven-roast method for goose breast mirrors duck breast technique: stovetop fat rendering followed by oven finishing. Goose breast dries out at high oven temperatures, so a moderate 350–375 °F oven with careful temperature monitoring is essential.\n\n\nTarget internal temperature: **145–155 °F (63–68 °C)** — medium; pull at 140 °F and rest. USDA safe minimum: 165 °F (74 °C) — pull at 160 °F and rest.",
+  "goose_leg": "Goose legs are large, tough, highly flavoured cuts rich in connective tissue and intramuscular fat. Braising — browning the legs in fat, then cooking them submerged or partially submerged in aromatic liquid at low heat for 2–3 hours — is the optimal method for transforming this tough cut into fork-tender, fall-off-the-bone meat. The collagen-rich connective tissue converts to gelatin above 160 °F, but the most tender, succulent results come at 175–185 °F (79–85 °C) after extended braising. USDA minimum for poultry is 165 °F. Unlike duck confit, braising adds moisture; the braising liquid becomes a rich, gelatin-laden sauce.\n\n\nTarget internal temperature: **175–185 °F (79–85 °C)** — well above USDA minimum; extended time at this temperature melts collagen and produces best texture. Minimum safe: 165 °F (74 °C).",
+  "goose_thigh": "Goose thigh is perhaps the most flavourful part of the goose — richer than the leg and with a higher ratio of intramuscular fat and connective tissue. Braising is ideal: the moist-heat environment keeps the thigh succulent while sustained heat above 160 °F converts collagen to gelatin. Target 175–185 °F (79–85 °C) for the most tender, silky texture. The braising liquid, enriched by rendered goose fat and gelatin, reduces to an intensely flavourful sauce. Goose thighs are widely used in European traditional cooking, similar to duck confit but with a braise instead of a fat immersion.\n\n\nTarget internal temperature: **175–185 °F (79–85 °C)** — optimal for collagen breakdown; USDA minimum: 165 °F (74 °C).",
+  "whole_goose": "A whole goose (typically 4–6 kg / 9–13 lb) is by far the fattiest of the common roasting birds — a significant proportion of its body weight is subcutaneous fat that must be rendered away during cooking. This sets it apart from chicken and turkey: the cook's main task is not to avoid dryness but to efficiently remove vast quantities of fat while keeping the dark, richly flavoured meat from toughening. Goose legs and thighs need 165–175 °F (74–79 °C) to become tender; the breast is best at a lower temperature but in whole-bird cookery inevitably finishes higher. The USDA minimum for whole goose (like all whole poultry) is **165 °F (74 °C)** measured deep in the thigh without touching bone. Many European recipes roast to 175–185 °F (80–85 °C) in the thigh to ensure the dark meat is fully tender and the fat rendered. Carryover adds 3–5 °C after resting.\n\nA medium goose (4.5 kg / 10 lb) typically takes 2.5–3 hours at 190 °C (375 °F) when started breast-side-up. Fat must be drained from the roasting tin every 30–45 minutes or it will smoke aggressively.\n\n\nA whole goose (typically 4–6 kg / 9–13 lb) is by far the fattiest of the common roasting birds — a significant proportion of its body weight is subcutaneous fat that must be rendered away during cooking. This sets it apart from chicken and turkey: the cook's main task is not to avoid dryness but to efficiently remove vast quantities of fat while keeping the dark, richly flavoured meat from toughening. Goose legs and thighs need 165–175 °F (74–79 °C) to become tender; the breast is best at a lower temperature but in whole-bird cookery inevitably finishes higher. The USDA minimum for whole goose (like all whole poultry) is **165 °F (74 °C)** measured deep in the thigh without touching bone. Many European recipes roast to 175–185 °F (80–85 °C) in the thigh to ensure the dark meat is fully tender and the fat rendered. Carryover adds 3–5 °C after resting.\nA medium goose (4.5 kg / 10 lb) typically takes 2.5–3 hours at 190 °C (375 °F) when started breast-side-up. Fat must be drained from the roasting tin every 30–45 minutes or it will smoke aggressively.",
+  "duck_breast": "Duck breast is a dark, rich cut with a thick layer of subcutaneous fat beneath a scored skin. Unlike chicken breast, duck breast is best cooked to medium-rare (135–145 °F / 57–63 °C), where the meat remains pink, juicy, and tender. The oven-roast method typically follows a stovetop fat-rendering sear: the breast starts skin-side down in a cold or lightly warmed oven-safe pan to slowly render the fat cap, then transfers to a moderate oven to finish gently and evenly without overshooting the internal temperature.\n\n\nTarget internal temperature: **135–145 °F (57–63 °C)** — medium-rare, pull at 130 °F and rest; carryover brings it to target. For well-done (USDA), pull at 160 °F for a final resting temp of 165 °F.",
+  "duck_leg_confit": "*Placeholder — cut profile research not yet completed.*",
+  "whole_duck": "A whole duck presents a significant cooking challenge: the breast meat is best at medium-rare (135–145 °F) while the legs and thighs need higher temperatures (165–175 °F) to break down their tougher connective tissue. This conflict is resolved either by accepting slightly overcooked breast in exchange for properly done legs, or by using a low-and-slow approach that slowly renders the abundant subcutaneous fat while keeping the breast moist. The USDA minimum for whole poultry is 165 °F measured in the thigh. Whole ducks weigh 4–6 lb (1.8–2.7 kg) on average and carry far more fat than chicken — that fat must be rendered out to achieve crackling skin.\n\n\nTarget internal temperature: **165 °F (74 °C) in the thigh** — USDA minimum for whole poultry. Breast will be well-done at this point; accept this or use the low-and-slow method which keeps breast juicier.",
+  "ground_turkey": "Ground turkey (minced turkey) is made by grinding dark meat (thigh and leg), white meat (breast), or a blend. A dark-meat-inclusive blend (typically 93/7 lean/fat) has noticeably better flavour and moisture retention than pure breast-meat grinds. Because turkey is poultry, the USDA minimum safe internal temperature is 74°C (165°F) with no reduction for resting. Ground turkey cooks faster than beef or pork at the same mass due to its lower fat content and should be monitored closely to avoid dryness. Carryover is 1–2°C.",
+  "turkey_breast": "Turkey breast can be purchased bone-in (half breast on the rib rack, 1.5–2.5 kg / 3–5.5 lb) or boneless (rolled and tied, 1–2 kg / 2–4.5 lb). Both have dramatically less fat than dark turkey meat and will dry out rapidly if taken past 165 °F (74 °C); the sweet spot for juicy, food-safe turkey breast is **160–165 °F (71–74 °C)** at the thickest point (the USDA minimum is 165 °F; pulling at 160 °F and resting 10–15 minutes under foil achieves safe temperatures via carryover). Bone-in breasts conduct heat more slowly near the bone and need accurate probe placement to the geometric centre of the thickest part. Boneless rolled breasts cook more evenly. At 190–200 °C oven temperature, a 1.5 kg bone-in breast takes approximately 60–75 minutes.",
+  "turkey_burger": "A grilled turkey burger is a 150–180 g shaped patty made from coarsely-ground turkey thigh — the standard for moisture and flavour because turkey breast (1–4 % fat) dries out on the high heat of a grill before reaching the food-safety threshold for ground poultry. Ground thigh carries 8–14 % fat plus the gelatinous connective tissue that holds patties together without binders. The cooking goal: drive the centre past 74 °C (165 °F) — the FDA/USDA threshold for ground poultry — while developing crisp, lacquered grill marks. Turkey patties tolerate slightly more aggressive aromatics than chicken because the meat is somewhat blander; sage, rosemary, mustard, paprika and lemon all carry well. Probe the geometric centre of the largest patty horizontally; carryover is small (1–2 °C).",
+  "turkey_ground": "*Placeholder — cut profile research not yet completed.*",
+  "turkey_leg": "*Placeholder — cut profile research not yet completed.*",
+  "turkey_thigh": "*Placeholder — cut profile research not yet completed.*",
+  "whole_turkey": "A whole turkey presents the same fundamental challenge as a whole chicken but at larger scale and with more extreme differences between breast and leg/thigh: the breast meat is lean and prone to drying above 160–165 °F (71–74 °C), while the legs and thighs are dark, collagen-rich and benefit from 165–175 °F (74–79 °C) to become properly tender. A 4.5 kg / 10 lb turkey feeds 6–8 people; a 7 kg / 15 lb turkey feeds 10–12. The USDA minimum for whole turkey is **165 °F (74 °C)** measured in the thigh at its thickest point, well away from bone. Probe placement in the thigh (not the breast) is the authoritative food-safety measurement. Modern approaches — brining, spatchcocking, basting — all aim to let the thigh reach 165 °F without pushing the breast past 165 °F.\n\nTypical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) unstuffed. A 4.5 kg (10 lb) bird takes approximately 2.5–3 hours; a 7 kg (15 lb) bird takes approximately 3.5–4 hours.\n\n\nA whole turkey presents the same fundamental challenge as a whole chicken but at larger scale and with more extreme differences between breast and leg/thigh: the breast meat is lean and prone to drying above 160–165 °F (71–74 °C), while the legs and thighs are dark, collagen-rich and benefit from 165–175 °F (74–79 °C) to become properly tender. A 4.5 kg / 10 lb turkey feeds 6–8 people; a 7 kg / 15 lb turkey feeds 10–12. The USDA minimum for whole turkey is **165 °F (74 °C)** measured in the thigh at its thickest point, well away from bone. Probe placement in the thigh (not the breast) is the authoritative food-safety measurement. Modern approaches — brining, spatchcocking, basting — all aim to let the thigh reach 165 °F without pushing the breast past 165 °F.\nTypical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) unstuffed. A 4.5 kg (10 lb) bird takes approximately 2.5–3 hours; a 7 kg (15 lb) bird takes approximately 3.5–4 hours.",
+  "breast": "*Placeholder — cut profile research not yet completed.*",
+  "chicken_breast": "Chicken breast is a lean, boneless cut that dries out quickly when overcooked. Pounding to even thickness and brining are the two most effective techniques for retaining moisture. Because there is minimal fat to buffer heat, precise temperature monitoring is critical.\n\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry",
+  "chicken_breast_bone_in": "*Placeholder — cut profile research not yet completed.*",
+  "chicken_burger": "Ground chicken burgers are formed patties made from minced chicken, typically 85–93% lean. Because ground poultry must be cooked to a higher internal temperature than whole muscle, and because the meat is lean and prone to drying out, adding binders (egg, breadcrumbs, or cooked rice) helps retain moisture. The air fryer circulates hot air to brown the exterior without deep frying.\n\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry",
+  "chicken_leg": "Chicken drumsticks (the lower portion of the leg) are dark-meat cuts with more fat and connective tissue than breast, making them forgiving and flavourful. High-heat oven roasting renders the fat, crisps the skin, and breaks down collagen for juicy, tender meat. USDA minimum is 165 °F (74 °C), but dark meat is best at 170–175 °F (77–79 °C) where collagen converts to gelatin.\n\n\nTarget internal temperature: **170–175 °F (77–79 °C)** — recommended for dark meat drumsticks",
+  "chicken_thigh": "Chicken thighs are a forgiving, flavourful dark-meat cut. Their higher fat content makes them well-suited to the air fryer's rapid circulating heat, which renders the fat and crisps the skin beautifully without drying the meat out. Bone-in skin-on thighs take longer than boneless but deliver the crispiest skin. Dark meat benefits from cooking above the USDA minimum to 175 °F (79 °C), where collagen fully converts to gelatin.\n\n\nTarget internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat",
+  "chicken_wing": "Chicken wings (wingettes and drumettes) are small, high-surface-area dark-meat pieces that become irresistibly crispy in the air fryer without deep frying. The single most effective technique for extra-crispy skin is tossing wings with a small amount of baking powder before cooking — it raises the skin's pH, causing it to blister and brown faster. Patting wings dry is equally critical.\n\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry",
+  "ground": "*Placeholder — cut profile research not yet completed.*",
+  "ground_chicken": "Ground chicken braised in liquid is a moist-heat method that keeps the lean meat from drying out and develops a flavourful sauce simultaneously. Because ground poultry is mixed throughout with bacteria (unlike whole muscle), every part of the meat must reach safe temperature. Braising is forgiving — the surrounding liquid prevents the meat from going above 212 °F (100 °C), but interior temp still easily exceeds 165 °F (74 °C) with adequate cooking time.\n\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry; visual: no pink inside",
+  "leg": "*Placeholder — cut profile research not yet completed.*",
+  "thigh": "*Placeholder — cut profile research not yet completed.*",
+  "whole_chicken": "A whole roasted chicken presents a fundamental challenge: the breast and thigh finish at different temperatures, so technique matters. Starting breast-side down lets the thigh meat begin rendering while protecting the breast. High initial heat (475 °F / 246 °C) produces crackling golden skin. The breast should reach 160–165 °F (71–74 °C) while the thigh reaches 165–170 °F (74–77 °C); a well-rested bird allows both to equalise. Average 3–4 lb bird takes 55–70 minutes total.\n\n\nTarget internal temperatures: **Breast 160–165 °F (71–74 °C)** · **Thigh 165–170 °F (74–77 °C)**",
+  "wing": "*Placeholder — cut profile research not yet completed.*",
+  "asparagus": "Asparagus (*Asparagus officinalis*) sautéed in a hot pan is the fastest preparation: 4–6 minutes over medium-high to high heat, producing tender-crisp spears with a lightly browned stem and vivid green colour. The pan must be large enough to hold all spears in a single layer, and the oil or butter must be hot before the asparagus goes in — otherwise the spears will steam rather than sauté. Pull temperature: 78–83 °C (172–181 °F) for tender-crisp asparagus, still with some bite. MEATER probe inserted along the long axis of the thickest spear.",
+  "broccoli": "Broccoli (*Brassica oleracea* var. *italica*) sautéed in a hot pan — or stir-fried in a wok — produces golden-blistered florets with a caramelised stem and bright-green colour. The pan must be very hot; broccoli must be completely dry; it should not be crowded. Cooking time: 6–8 minutes. Pull temperature: 78–83 °C (172–181 °F) for tender-crisp, golden broccoli. MEATER probe through the stem of the largest floret.",
+  "brussels_sprouts": "Brussels sprouts (*Brassica oleracea* var. *gemmifera*) pan-fried (halved, cut-face-down in a hot pan) is the fastest technique for intensely caramelised results: 8–12 minutes in a cast-iron or heavy pan achieves charred cut faces and a tender interior. Unlike sautéing (which involves frequent tossing), pan-frying holds the cut face in contact with the hot surface for an extended sear. Pull temperature: 82–88 °C (180–190 °F). MEATER probe through outer leaves of the largest sprout into the core.",
+  "green_beans": "Green beans (*Phaseolus vulgaris* and *Vigna unguiculata* — runner beans, French haricots verts, yard-long beans) boiled is the classic preparation in French haute cuisine, American home cooking, and the base technique in almost every global kitchen that uses fresh green beans. The target for boiled green beans is bright-green and tender-crisp: 78–82 °C (172–180 °F) inside the bean. Overcooked beans turn army-green, drab and mushy at 88+ °C. The classic French technique is to boil rapidly in a large quantity of salted water (blanching) for 3–5 minutes, then shock in ice water (*refresh*) to stop cooking and fix the bright green. MEATER probe: insert horizontally through the side of the longest/thickest bean at the mid-point; the probe must be in the water and not reading ambient air.",
+  "spinach": "Spinach (*Spinacia oleracea*) sautéed wilts dramatically in 1–3 minutes in a hot pan with a small amount of oil or butter — fresh spinach loses approximately 90 % of its volume on cooking as moisture is expelled. The target: bright-green, just-wilted leaves with no excess water pooled in the pan. If a pool of water accumulates, the spinach is steaming not sautéing. Internal temperature at just-wilted doneness: 68–75 °C (154–167 °F) — above 75 °C the chlorophyll degrades and the colour turns army-drab. MEATER probe placed horizontally into the densest centre of the spinach pile in the pan.",
+  "roasted_tomatoes": "Tomatoes (*Solanum lycopersicum*) in the air fryer roast in 8–15 minutes depending on size and target: cherry tomatoes burst and caramelise in 8–10 minutes at 200 °C; halved plum tomatoes take 12–15 minutes to collapse and blister. The circulating air dehydrates the surface faster than a conventional oven, producing crisper, slightly wrinkled edges with concentrated sweetness. Air-fried tomatoes are particularly useful as fast toppings for pasta, pizza, bruschetta, or eggs. Pull temperature for burst cherry tomatoes (serving as-is) is 82–88 °C (180–190 °F); for halved plum tomatoes intended as a sauce base, 88–95 °C (190–203 °F). A MEATER probe is most practical in a larger tomato; for cherry tomatoes, rely on appearance (bursting, blistered) and time, or insert in the largest specimen. Carryover is negligible.",
+  "cabbage": "Cabbage (*Brassica oleracea* var. *capitata*) braised is one of the most globally distributed vegetable preparations: German Rotkohl, French *chou braisé*, Polish *kapusta duszona*, Indian dum-cooked cabbage, and Chinese red-braised cabbage all transform the pungent, crunchy raw leaves through long, moist cooking into a tender, sweet, and deeply flavourful result. The technique involves long gentle simmering in a small amount of liquid (wine, vinegar, stock, or a combination) with a lid on, allowing the cabbage to stew in its own juices. Pull temperature for a fully braised cabbage wedge or shred: 88–95 °C (190–203 °F) — at this point the cell walls have fully collapsed, the harsh glucosinolates have converted to gentler compounds, and the texture is yielding and silky. A MEATER probe is inserted through the outer layers of a wedge into the thickest part of the core, or into the densest part of the shred pile.",
+  "cauliflower": "Cauliflower (*Brassica oleracea* var. *botrytis*) is a tightly clustered head of immature flower buds (curd) attached to a thick fibrous stem. The curd is roughly 92 % water, with delicate cell walls and a very small amount of free sugar — when sautéed in a hot, fat-coated pan, the surface dehydrates quickly and the residual sugars caramelise into a brown, nutty crust while the interior softens but retains some structural integrity. Sauteing differs from roasting in that contact-area browning is concentrated on whichever face touches the pan: success depends on cutting florets with a flat side and not crowding the pan. Carryover is small but real because the dense curd traps heat in its centre after removal — pulling 1–2 °C below the target preserves a touch of bite.",
+  "button_mushrooms": "Button mushrooms (*Agaricus bisporus*, immature white form) are roughly 92 % water held in a sponge-like network of chitin-rich fungal cell walls. On a hot grill the surface water flashes off in seconds, the cap caramelises and the mushroom collapses to perhaps two-thirds its raw volume. The grill imparts charred Maillard browning concentrated where the gills or cap touch the bars. Threading mushrooms onto skewers (or using a grill basket) is the only way to keep them from rolling and falling through. Carryover is small but real — about 2–3 °C — because the dehydrated cap insulates the moist interior. Brushing with oil before grilling is essential; mushrooms will stick badly to bare grates.",
+  "portobello_mushrooms": "Portobello mushrooms (*Agaricus bisporus* — the same species as button mushrooms, grown to maturity) in the air fryer cook in 12–16 minutes at 190–200 °C. Their large caps (8–15 cm diameter) and dense flesh benefit from the air fryer's rapid convection, which dehydrates the exposed surfaces and concentrates flavour faster than an oven. Portobello caps are typically cooked gill-side-up (to retain their juices) or gill-side-down (to achieve a drier, crisper result). A MEATER probe is inserted through the cap skin (the convex top side) into the thickest central point of the flesh, with the tip just above the gills. Pull temperature: 82–88 °C (180–190 °F) for a juicy, fully cooked result.",
+  "eggplant": "Eggplant (*Solanum melongena*; UK aubergine) achieves its most dramatic transformation on a live flame or a very hot grill. The outer skin chars to a brittle black shell, the interior softens and collapses, and the flesh takes on a deep, irreplaceable smokiness from the volatiles released as the skin carbonises. Whole-grilled eggplant is the foundational technique for baba ganoush, baingan bharta, and countless other mashed or puréed dips across South Asian, Middle Eastern, East Asian, and Mediterranean traditions. Halved and grilled (dengaku-style), the cut face browns via Maillard reactions while the flesh steams from the inside. A MEATER probe inserted through the side into the thickest part of the flesh monitors the transition from dense and opaque (~60 °C) to fully collapsed and silky (~90–95 °C for whole; 82–88 °C for halved). Carryover is minimal once the flesh is at this level of softness.",
+  "bell_peppers": "Bell peppers (*Capsicum annuum*) sautéed in strips or rings are one of the most globally versatile vegetable preparations, appearing in Chinese stir-fries, Indian sabzis, Spanish pisto, French ratatouille, Korean bokkeum, and beyond. The sweet, watery flesh softens quickly in a hot, oiled pan; at 180–200 °C contact temperature, the cut surfaces caramelise while the interior remains tender-crisp to soft depending on cooking time. The target internal temperature for a tender-but-intact sauté is 80–88 °C (176–190 °F): at 80–82 °C the strips are tender-crisp (still with a slight bite); at 85–88 °C they are fully softened but hold their shape. A MEATER probe inserted horizontally into the thickest part of a strip (or the wall of a halved pepper) reads representative flesh temperature; carryover is negligible due to the high water content.",
+  "corn_on_cob": "Corn on the cob (*Zea mays*) boiled is the simplest and most globally common cooking method, used in North America, Mexico, Peru, Japan, India, China, and Africa. Boiling achieves even cooking from all sides simultaneously, and the hot water transfers heat efficiently into the dense cob structure. The debate between \"boil to order\" (3–5 minutes for very fresh corn) vs. \"bring to a boil then leave\" (5–10 minutes for slightly older corn) hinges on the age of the corn — as the sugars in the kernels convert to starch over time. Internal kernel temperature (at the cob interface) of fully boiled corn: 88–95 °C (190–203 °F). A MEATER probe inserted through the kernels into the cob core monitors this; since the water temperature is ≈ 100 °C, the probe prevents overcooking by showing exactly when the kernel temperature has risen high enough.",
+  "acorn_squash": "Acorn squash (*Cucurbita pepo* var. *turbinata*) oven-baked whole or halved at 180–200 °C is a classic American autumn preparation. Halved and seed-scooped, then baked cut-face-down (30–40 min) or cut-face-up with a filling (35–50 min). Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe inserted through the skin into the thickest part of the flesh wall.",
+  "butternut_squash": "Butternut squash (*Cucurbita moschata*) in a pressure cooker cooks in 8–12 minutes at high pressure (cubed), producing very soft, fully cooked flesh suitable for soups and purées. Pull temperature (measured via MEATER before sealing, or in the depressurised pot): 95–98 °C (203–208 °F). MEATER probe into the thickest cube before closing the lid.",
+  "spaghetti_squash": "Spaghetti squash (*Cucurbita pepo*) is baked whole or halved at 180–200 °C until the flesh separates into noodle-like strands when scraped with a fork. Halved baked cut-face-down (35–45 min); whole baked (50–65 min with fork pricks). Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe inserted through the skin into the flesh for whole baking, or through the skin of a half. The defining visual cue — flesh pulling into strands — coincides with 90–95 °C.",
+  "zucchini": "Zucchini (*Cucurbita pepo* var. *cylindrica*) cut into 1–2 cm rounds, half-moons or spears air-fried at 190–200 °C for 8–12 minutes produces golden, slightly crisp exteriors with tender centres. Because zucchini is mostly water, the air fryer's forced hot air quickly drives off surface moisture to give browning that is difficult to achieve in an oven. Pull temperature: 82–85 °C (180–185 °F) at the thickest piece — at this temperature the flesh is fully tender while still holding its shape. MEATER probe inserted lengthwise into the thickest spear or along the flat face of the largest round.",
+  "caramelized_onions": "Caramelised onions via pan-frying refers to the style in which sliced or halved onions are cooked in generous hot fat over medium-to-high heat, with deliberate browning as the primary goal, contrasted with the slow-sauté method. At 170–190 °C pan temperature, the natural sugars (roughly 5 % of the onion's weight) undergo both caramelisation and Maillard reactions with the amino acids, producing deeply browned, almost crispy-edged onions with intense sweetness and bitterness in balance. This technique appears in South Asian birista (fried garnish), Alsatian Zwiebelkuchen bases, French *soubise* shortcuts, and Japanese-style glazed onion sides. A MEATER probe inserted horizontally into a thick half-onion near the centre reads the internal transition from crisp-dense (~60 °C) to fully soft (85–92 °C). Carryover is small but the browned rings crisp up further as they cool on a wire rack.",
+  "leeks": "Leeks (*Allium ampeloprasum* var. *porrum*) braised are one of the most refined of all vegetable preparations. The long white shafts soften over 20–40 minutes of gentle simmering in stock, wine, or butter-enriched liquid, their sharp raw flavour mellowing to a delicate sweetness. The technique — covering with a cartouche (buttered paper) or lid and cooking barely at simmer — is classical French *étuvée*, used also in British and Flemish cuisines. Leeks are cut in half lengthwise, or left whole and halved after cooking. The internal temperature of a fully braised leek is 82–88 °C (180–190 °F), where the cell walls have fully softened and the shaft is yielding to a paring knife but not collapsed. A MEATER probe is inserted along the axis of the leek into the thickest part of the white base, as far from the cut ends as possible to get a representative reading.",
+  "roasted_garlic": "Whole garlic heads (*Allium sativum*) oven-roasted are entirely transformed: the sharp, pungent raw allicin flavour mellows over 35–50 minutes at 180–200 °C into a sweet, nutty, spreadable paste. The papery outer skin chars slightly; the cloves themselves absorb their own concentrated sugars and caramelise within their individual sheaths. The classic preparation exposes the cloves by slicing the top off a whole head, drizzling with olive oil, and wrapping in foil or placing cut-side-up in a small dish. Internal clove temperature at full softness is 90–96 °C (194–205 °F). A MEATER probe is inserted from the top of the head, between two central cloves, to the geometric centre of the head.",
+  "roasted_onion": "Onions (*Allium cepa*) sautéed as a roasted-style preparation — thick wedges, large rounds, or quartered halves sautéed at medium-high heat in a pan — occupy the territory between caramelised onion (slow-cooked strips) and grilled whole onion. The goal is pieces that brown deeply and develop a caramelised crust while the interior softens and sweetens. This preparation is distinct from the slow caramelised-onion technique (which uses thin slices and low heat) and from grilling (which uses live fire). Internal temperature for fully sautéed onion wedges or rounds with a good crust: 86–92 °C (187–198 °F). MEATER probe inserted horizontally into the thickest wedge near the centre of the pan.",
+  "baked_potato": "Whole baked potato (*Solanum tuberosum*) in the conventional oven is the archetype of long, slow dry-heat cooking: 60–80 minutes at 200–220 °C, producing a deeply crispy, salt-encrusted skin and a fluffy, steamy interior. The internal temperature at complete doneness is 96–98 °C (205–208 °F) — below this, the centre remains dense and waxy; above it, the texture is optimal and floury. Russet (Idaho) and baking potatoes (high-starch varieties) achieve the best results; waxy varieties produce a gluey, dense result. A MEATER probe is inserted along the long axis into the geometric centre of the potato before it goes in the oven.",
+  "roasted_beets": "Whole beetroot (*Beta vulgaris*) oven-roasted, still in the skin, at 190–200 °C is the most flavour-preserving technique for beets: the skin protects the flesh from direct heat, preventing the water-soluble betalain pigments (which give beets their vibrant red-purple colour) from leaching out, as they would during boiling. Small-to-medium beets (7–10 cm diameter) take 50–70 minutes; large beets (>10 cm) take 70–90 minutes. Individual foil-wrapped beets cook slightly faster. Pull temperature: 92–96 °C (198–205 °F) at the thickest centre — at this point a skewer inserts with no resistance. MEATER probe inserted through the root end into the geometric centre.",
+  "roasted_carrots": "Carrots (*Daucus carota*) sautéed in a hot pan — whether as Chinese stir-fried matchsticks, Japanese *kimpira gobo*-style glazed rounds, Indian tempering with spices, or French *carottes glacées* — develop a sweet, lightly caramelised character while retaining their structural texture. Carrots should be cut thinly (coins, matchsticks, julienne) for sautéing — 3–5 mm thick — so the centre cooks through before the surface over-colours. Pull temperature: 82–88 °C (180–190 °F) for tender-crisp glazed carrots. MEATER probe inserted along the long axis of the thickest piece (or into the densest pile).",
+  "roasted_parsnips": "Parsnips (*Pastinaca sativa*) in the air fryer become golden, caramelised and crispy at the tips in 16–20 minutes at 190–200 °C — faster than oven roasting (25–30 minutes). Parsnips have a high natural sugar content (≈ 12 g/100 g — significantly higher than carrots) and caramelise readily. They should be cut into batons or long wedges, oil-coated and placed in a single layer. Pull temperature: 86–90 °C (187–194 °F) for caramelised, fluffy-interior parsnips. MEATER probe inserted along the long axis of the thickest baton.",
+  "roasted_potatoes": "Roasting potatoes (*Solanum tuberosum*) converts the raw starch to a crisp, caramelised exterior and fluffy interior. High-starch varieties (Maris Piper, Russet, King Edward) are preferred because their floury texture creates better fluffiness inside and absorbs fat more effectively for crispness. Waxy varieties (Charlotte, Jersey Royal) hold their shape but produce less crisp results. Fat coating (duck fat, goose fat, olive oil, lard) is essential — it conducts heat, enables Maillard browning, and adds flavour. Pre-boiling until edges are rough (chuffed) dramatically increases crispness by maximising surface area.\n\n\nTarget internal temperature is 95–100°C for full starch gelatinisation and a fluffy interior.",
+  "roasted_sweet_potato": "Whole baked sweet potato (*Ipomoea batatas*) in the conventional oven at 190–200 °C achieves a deeply caramelised, slightly wrinkled skin and a soft, jammy interior in 50–70 minutes depending on size. The low-and-slow heat allows the amylase enzymes in the sweet potato to convert starches to sugars, producing an intensely sweet result (particularly with Japanese *satsuma-imo* varieties). Pull temperature: 96–98 °C (205–208 °F) at the thickest centre. MEATER probe along long axis into the geometric centre.",
+  "tuna_steak": "Tuna steak — most commonly bluefin (*hon maguro*), yellowfin (*ahi*), or bigeye (*mebachi*) — is cut transversely from the loin muscles of a large pelagic fish. Tuna flesh is deep crimson (from high myoglobin content), very lean, and densely muscled compared to most fish; it has almost no connective tissue between muscle segments, which means it behaves more like a red meat steak than a typical white-flake fish. Pan searing suits tuna precisely because the high heat drives rapid Maillard browning on the lean surface, while the brief cook time leaves the interior at the desired rare state. Overcooking is the defining risk: above 60 °C the proteins tighten dramatically, and the lean flesh becomes dry and crumbly. The conventional sushi-bar preference for *tataki* (briefly seared, cold-raw centre) means the entire temperature spectrum from raw to fully cooked is culinarily acknowledged. Carryover in a seared tuna steak is 2–3 °C and dissipates quickly.",
+  "salmon_fillet": "Salmon fillet comes from the side of the fish, running the full length of the body from behind the head to the tail, with the pin bones removed. The flesh is divided into distinct fat-layered muscle segments (myotomes) separated by connective tissue (myocommata); that connective tissue softens and gives the characteristic flaking texture when the protein reaches its set point. Atlantic and Pacific salmon differ in fat distribution — farmed Atlantic salmon is uniformly rich, while wild sockeye and king salmon have denser, more mineral flesh. Pan searing suits salmon because the high conductive heat of a stainless or cast-iron pan rapidly crisps the skin (if skin-on) and caramelises the exposed flesh, producing textural contrast between crust and interior. Carryover in a seared salmon fillet is modest — 2–3 °C — because the thin geometry dissipates heat quickly, so accurate pull timing is essential to avoid overcooking.",
+  "salmon_steak": "*Placeholder — cut profile research not yet completed.*",
+  "lobster_tail": "Lobster tail is the large tail segment of a lobster (*Homarus americanus*, the American/Maine lobster, or *Homarus gammarus*, the European/Breton lobster) separated from the body and claws; frozen and fresh spiny lobster tails (*Panulirus argus*) from the Caribbean and Pacific are also widely used. The edible flesh is the tail muscle — firm, white-to-pale-pink, sweet and rich in natural glutamates. Grilling is one of the most popular preparations for lobster tail because the direct radiant heat produces char and caramelisation on the cut flesh surface while the shell acts as a natural heat shield and flavour-retaining vessel. Butterflying the tail (cutting through the shell dorsally and splaying the flesh upward) is the dominant grill preparation because it exposes more flesh surface to direct heat and allows basting to penetrate the meat. Overcooking tightens the fibres sharply; the pull window is 58–62 °C before the meat becomes dry and rubbery. Carryover is 3–4 °C.",
+  "scallops": "Sea scallops (*Pecten maximus* in Europe; *Placopecten magellanicus*, the Atlantic sea scallop, in North America) are the large adductor muscle that opens and closes the bivalve shell. The flesh is cream-white, sweet, and extremely tender with almost no connective tissue; it is composed mainly of striated muscle fibres held in a dense but delicate matrix. Pan searing is the defining method for large sea scallops because extreme heat produces rapid caramelisation of the natural sugars on the flat cut surfaces — the golden-brown crust contrasts dramatically with the cool, almost raw centre that is the mark of a well-executed scallop. Overcooking tightens the fibres sharply and produces a rubbery, squeaky texture. The critical requirements are: completely dry exterior, a blazing pan, and a very short cook time. Carryover is significant relative to the small mass — 3–5 °C — so pull early.",
+  "shrimp": "Shrimp (called prawns in British, Australian, and much of Asian-English usage) are the most widely consumed shellfish globally; the species most commonly used for pan frying include tiger prawns (*Penaeus monodon*), white leg shrimp (*Litopenaeus vannamei*), spot prawns (*Pandalus platyceros*), and Gulf shrimp (*Farfantepenaeus aztecus*). The edible flesh is the tail muscle, which contracts rapidly under heat and curls the tail from the characteristic C-shape of a live shrimp to a tighter O-shape when overcooked. Pan frying over high heat produces a caramelised exterior on the natural sugars in the shell or flesh, and in shell-on preparations the shell acts as a protective layer. The protein in shrimp begins to denature around 50 °C and is fully set at 60 °C; the culinary window for moist, tender shrimp is extremely narrow, typically 3–4 minutes total cook time for medium prawns in a very hot pan. Carryover is 2–3 °C.",
+  "cod_fillet": "Atlantic cod (*Gadus morhua*) fillet is cut from the sides of the fish; the flesh is firm, bright white when raw and milky white when cooked, with large moist flakes separated by thin layers of connective tissue. Cod is lean (less than 1% fat), which means it has no internal fat to provide self-basting protection during high-heat cooking; the natural moisture and gelatin in the connective tissue are the primary sources of perceived juiciness. Pan frying is a very common preparation — the high heat of the pan produces a golden-brown crust on the thin, flour- or breadcrumb-coated exterior while the interior cooks gently. Battered cod (fish and chips) uses the batter as insulation; simple pan-fried cod relies on a light coating of seasoned flour or the naked flesh. Carryover is minimal (2–3 °C) given the lean composition; the flesh transitions from moist-and-flaky to dry-and-crumbly rapidly above 65 °C.",
+  "haddock": "Haddock (*Melanogrammus aeglefinus*, Norwegian: hyse/kolje, German: Schellfisch, Swedish:\nkolja) is a lean white-fleshed cold-water fish closely related to cod. It has a mild,\nslightly sweet flavour and firm but fine-grained flesh that flakes beautifully when cooked.\nHaddock is central to British cuisine (fish & chips), Norwegian everyday cooking, and the\nGerman North Sea fishing tradition. The fillets are typically 1–2 cm thick, making them\nfast-cooking pan fish: 2–4 minutes per side at medium to medium-high heat in butter or\noil is sufficient for a fillet of normal thickness. The internal flesh reaches safe serving\ntemperature (63 °C / 145 °F USDA minimum for finfish) quickly; overcooking past 65 °C\nproduces dry, rubbery fish. The MEATER probe must be inserted laterally (from the thick\nedge) in thin fillets. Flouring the fillets before frying (as in the German and British\ntraditions) creates a protective crust that helps moisture retention and even browning.",
+  "hake": "Hake (*Merluccius merluccius*, European hake; *Merluccius capensis/paradoxus*, Cape hake; *Merluccius productus*, Pacific hake) is a lean white fish with firm, dense, large-flaked flesh and a mild, slightly sweet flavour. It occupies a central position in Iberian and Basque cuisine — in Spain (*merluza*) and Portugal (*pescada*) it is arguably the most important food fish — and is also important in Moroccan and West African seafood traditions. The flesh is slightly softer than cod when raw but firms up well under heat to produce the characteristic large, clean flakes. Pan frying is one of the dominant preparations: simply floured and pan-fried in olive oil (*merluza a la plancha*) is a Spanish staple; batter-fried (*pescada frita*) is a Portuguese and Moroccan tradition. Carryover is minimal (2–3 °C); pull at 60–63 °C for moist flakes.",
+  "halibut_fillet": "Pacific halibut (*Hippoglossus stenolepis*) and Atlantic halibut (*Hippoglossus hippoglossus*) are the largest flatfish; the fillet — cut from the meaty upper or lower side of the fish — is thick, firm, brilliant white, and lean with large, tight muscle flakes. The flesh has little connective tissue relative to its density, which gives a satisfying firm bite when properly cooked but transitions quickly to a dry, chalky texture above 60 °C. Pan searing is one of the most technically demanding preparations for halibut because the thick, lean flesh must be cooked through to approximately 58–62 °C without surface scorching; a common technique is to sear in a screaming-hot pan to set the crust, then finish in a moderate oven or with basting, treating it more like a thick beef steak than most fish. Carryover is significant — 4–5 °C for a thick fillet — so pulling early is essential.",
+  "mahi_mahi": "Mahi-mahi (*Coryphaena hippurus*), also called dolphinfish or dorado, is a large tropical and subtropical pelagic fish; the fillet is firm, moist, and moderately lean with a sweet, mild flavour and a distinctive large-flake texture. The skin is tough and not typically eaten — most preparations use skinless fillets. Mahi-mahi is popular across the Caribbean, Hawaiian, and American Gulf Coast cuisines, and is widely available as a sustainable fish choice. Pan searing produces a beautifully golden crust on the firm flesh; the natural moisture and slight fat content prevent drying out at moderate pull temperatures. The flesh transitions from moist-and-flaky to dry and stringy above 65 °C, so pulling at 60–62 °C is the target. Carryover is 3–4 °C.",
+  "sea_bass": "European sea bass (*Dicentrarchus labrax*, Italian: branzino/spigola, Turkish: levrek,\nSwedish: havsabborre) is a prized lean white fish with moderately firm, flaky white flesh\nand a thin but distinctly flavoured skin that renders beautifully crisp in a hot pan.\nPan searing is its most iconic preparation, particularly in Mediterranean cuisine.\nBecause the flesh is lean (< 3 % fat), it cooks extremely quickly and dries out if\novercooked. The standard technique is skin-side down first, pressing gently to prevent\ncurling, cooking 80–90 % through on the skin side, then flipping for a brief 30–60-second\nfinish. Internal temperature is the most reliable doneness indicator: the flesh transitions\nfrom translucent to opaque at approximately 55–58 °C and is fully cooked at 60–63 °C\n(USDA minimum for finfish: 63 °C / 145 °F). Many professional cooks pull at 58–60 °C.\nA MEATER probe in thin fillets must be inserted from the edge (laterally) rather than\nfrom above; in thicker whole or butterflied fish it is inserted into the thickest shoulder.",
+  "swordfish": "Swordfish (*Xiphias gladius*, Italian: pesce spada, Turkish: kılıçbalığı, Swedish: svärdfisk,\nSpanish: pez espada) is a large, meaty, open-ocean fish with compact, dense, steak-like flesh\nand a mild, slightly sweet flavour. Unlike most white fish, swordfish has very firm, non-flaky\nflesh similar in texture to tuna or veal — it can be cooked like a beefsteak. This makes it\nparticularly well suited to pan-searing, griddling and grilling at high heat.\n\nSwordfish steaks are typically 2–3 cm thick and contain a moderate amount of fat distributed\nthroughout the flesh, making them more forgiving than leaner white fish. They sear in a very\nhot pan for 1–3 minutes per side — overcooking is the primary risk, as the flesh dries and\nbecomes chalky above 65 °C. The BBC Good Food tradition specifically warns against cooking\nfor more than 1 minute per side on a very hot griddle, watching for the flesh to transition\nfrom translucent to pale cream (*cuisson*). Italian and Mediterranean cooks favour a\nslightly more moderate approach: 3–4 minutes per side over medium-high heat with olive oil.\n\nThe MEATER probe should be inserted from the side of the steak into the centre of the flesh.\nInternal temperature targets: pull at 52–57 °C (125–135 °F) for medium-rare (still slightly\ntranslucent at the very centre, preferred by Italian and Mediterranean cooks); 57–60 °C\n(135–140 °F) for medium (just opaque throughout). USDA minimum for finfish is 63 °C (145 °F).\n\n\nbecomes chalky above 65 °C. The BBC Good Food tradition specifically warns against cooking\nInternal temperature targets: pull at 52–57 °C (125–135 °F) for medium-rare (still slightly\ntranslucent at the very centre, preferred by Italian and Mediterranean cooks); 57–60 °C\n(135–140 °F) for medium (just opaque throughout). USDA minimum for finfish is 63 °C (145 °F).",
+  "trout": "Rainbow trout (*Oncorhynchus mykiss*) and brown trout (*Salmo trutta*, Swedish: forell,\nNorwegian: ørret, German: Forelle, Italian: trota) are among the most widely cooked fresh-\nwater fish in Northern Europe and North America. The flesh is delicate, flaky, and mildly\nflavoured with a slightly nutty quality; colour ranges from white to orange-pink depending\non diet. Trout fillets are typically thin (1–2 cm), which means they cook very quickly in a\npan — 3–5 minutes per side at medium-high heat. The skin crisps beautifully in butter or\nolive oil. The key risk is overcooking: lean, thin trout flesh dries out rapidly past 65 °C.\nInternal doneness is the same as for other finfish: 60–63 °C (140–145 °F, USDA minimum)\nfor fully cooked flesh that is just opaque. The MEATER probe must be inserted from the\nthickest edge (lateral insertion) in thin fillets, or through the shoulder of a whole fish.",
+  "ground_lamb": "Ground (minced) lamb is used in countless traditions — from Middle Eastern kibbeh and North African merguez to Greek moussaka, Indian keema, and Turkish Akçaabat köfte. Pan-frying ground lamb requires thorough cooking (ground meat has higher bacterial contamination risk than whole cuts). The aromatics sautéed with the mince are as important as the meat itself.\n\n\nTarget internal temperature: **74 °C (165 °F)** for food-safe ground lamb.",
+  "lamb_burger": "Lamb burgers are popular throughout the UK, Australia, New Zealand, the Middle East, and South Asia. Ground lamb's higher fat content means the patties are juicy but can flare on a grill — medium-high indirect heat is recommended. Common additions: garlic, cumin, harissa, feta (stuffed or mixed in), fresh herbs.\n\n\nTarget internal temperature: **74 °C (165 °F)** for safe ground meat.",
+  "lamb_crown_roast": "*Placeholder — cut profile research not yet completed.*",
+  "lamb_kofta": "Lamb kofta (köfte, kefta, kafta, kufta — many spelling variations) is one of the most widespread grilled preparations in the world, found from Morocco to Turkey, Iran, Pakistan, Afghanistan, India, and across the Levant. The ground lamb is mixed with onion, spices, and fresh herbs, shaped onto flat metal skewers, and grilled over high heat. It cooks very quickly (3–4 minutes per side) and must be cooked through. Inserting a MEATER probe into the thickest kofta is the recommended technique.\n\n\nTarget internal temperature: **74 °C (165 °F)** for food-safe ground meat.",
+  "lamb_rib_rack": "*Placeholder — cut profile research not yet completed.*",
+  "lamb_brisket": "*Placeholder — cut profile research not yet completed.*",
+  "lamb_loin_roast": "*Placeholder — cut profile research not yet completed.*",
+  "lamb_neck": "Lamb neck (Lammhals / collo di agnello / kuzu gerdan / lammehals) is one of the most underappreciated braising cuts. It is richly marbled, heavily worked, and packed with connective tissue and deep flavour. Cut into cross-sections or braised as a whole neck, it softens magnificently over 1.5–2.5 hours of moist heat, yielding deeply tender, self-basting meat in a rich, unctuous braising liquid. The neck is used in braises throughout Turkish, Italian, German, Greek, and Scandinavian traditions. A MEATER probe is inserted into the thickest cross-section of neck meat, away from the vertebrae, to track internal temperature.\n\n\nTarget internal temperature: **85–90 °C (185–194 °F)** for full braised tenderness.",
+  "lamb_rib": "*Placeholder — cut profile research not yet completed.*",
+  "lamb_rump": "*Placeholder — cut profile research not yet completed.*",
+  "lamb_shank": "Lamb shank (the lower leg, hind or fore) is one of the most prized braising cuts in the world. The dense connective tissue, bone marrow, and rich muscle fibres transform through 2–3 hours of moist heat into fall-off-the-bone, gelatinous, deeply flavoured meat. It is the flagship dish of Mediterranean cooking (Italy, Greece, Turkey, France), the Middle East (Persian mahiche), and Australia. The target is **pull-apart tender** at 82–88 °C internal — not medium-pink as with steaks. A MEATER probe is inserted into the thickest part of the shank meat (above the bone) to verify doneness.\n\n\nTarget internal temperature: **82–88 °C (180–190 °F)** for fall-off-the-bone tender. USDA minimum for lamb is 63 °C, but for braised shanks this is far too early — braising is not complete until collagen has dissolved.",
+  "lamb_shoulder": "Lamb shoulder is fattier and more flavourful than leg, with more connective tissue that melts into gelatin during long, slow roasting. It is the cut for slow-roasted lamb dishes — 4–6 hours at 150–160 °C (or 7–8 hours at 130 °C). The result is pull-apart meat that falls off the bone with a fork. The MEATER probe target is **85–90 °C (185–194 °F)** for pull-apart.",
+  "leg_of_lamb": "Leg of lamb is the quintessential festive roast throughout the Mediterranean, Middle East, British Isles, Australia, and New Zealand. A bone-in leg typically weighs 2–3 kg and is roasted at 160–175 °C with a garlic-herb rub, either to medium-pink (internal 54–60 °C) or slow-roasted to fall-apart (80–90 °C). The choice between these two approaches is the fundamental split in leg of lamb cooking.\n\n**Temperature guide** (from The Mediterranean Dish, fetched 2026-04-24):\n- Rare: 52 °C (125 °F) — 15 min/lb\n- Medium-rare: 54–57 °C (130–135 °F) — 20 min/lb\n- Medium: 57–63 °C (135–145 °F) — 25 min/lb\n- Well-done: 68–74 °C (155–165 °F) — 30 min/lb\n- Falling apart: 80 °C (175 °F) — 40 min/lb (slow 6 hours+)\n\n\nLeg of lamb is the quintessential festive roast throughout the Mediterranean, Middle East, British Isles, Australia, and New Zealand. A bone-in leg typically weighs 2–3 kg and is roasted at 160–175 °C with a garlic-herb rub, either to medium-pink (internal 54–60 °C) or slow-roasted to fall-apart (80–90 °C). The choice between these two approaches is the fundamental split in leg of lamb cooking.\n- Rare: 52 °C (125 °F) — 15 min/lb\n- Medium-rare: 54–57 °C (130–135 °F) — 20 min/lb\n- Medium: 57–63 °C (135–145 °F) — 25 min/lb\n- Well-done: 68–74 °C (155–165 °F) — 30 min/lb\n- Falling apart: 80 °C (175 °F) — 40 min/lb (slow 6 hours+)",
+  "rack_of_lamb": "Rack of lamb (the rib section with 7–8 French-trimmed rib bones) is one of the most prestigious and visually dramatic roasting cuts in European and North American cooking. A Frenched rack of lamb, coated in a herb crust (persillade or Dijon-breadcrumb), seared in a pan, then roasted in a hot oven 20–25 minutes, is a classic dinner-party centrepiece.\n\nBecause the meat is from the loin and has very little connective tissue, rack of lamb must be treated like a premium steak and never overcooked.\n\n\nTarget internal temperature: **52–57 °C (126–135 °F)** for medium-rare (the universal preference). Pull at 50–52 °C.",
+  "lamb_chops": "Lamb rib chops and loin chops are the classic cuts for grilling, popular worldwide from Australia and New Zealand (the world's largest lamb exporters) to the UK, Mediterranean, Middle East, and West Africa. Rib chops are smaller, leaner, and more delicate; loin chops are larger and fattier. Both benefit from high direct heat on a barbecue or grill pan. The rib or 'rack' end is typically served slightly pink (medium-rare to medium).\n\n\nTarget internal temperatures (from Africanbites.com):\n- Rib chops: **55 °C (131 °F)** for medium-rare\n- Loin chops: **57–60 °C (135–140 °F)** for medium",
+  "lamb_cutlet": "Lamb cutlets (thin, Frenched rib chops) are the most refined lamb cut — a single rib bone with the meat formed into a small medallion. They are a bistro classic in France and the UK, a restaurant staple in Australia and New Zealand, and are popular as party food throughout the Middle East and South Asia. Cooking time is very brief — 2–3 minutes per side — making them ideal for a pan with butter basting.\n\nTarget: **52–57 °C (126–135 °F)** for medium-rare. They overcook rapidly given their thin cross-section.",
+  "lamb_loin_chops": "Lamb loin chops are the T-bone of lamb — cut from the saddle, containing both the loin and the small section of tenderloin. They are larger and meatier than rib chops, with a characteristic T-shaped bone. In the UK they are sold as \"lamb chump chops\" (slightly different cut, from the rump). They are pan-seared 4–5 minutes per side to medium.\n\nTarget: **57–62 °C (135–144 °F)** for medium (slightly pink). Africanbites.com: 135–140°F (57–60°C).",
+  "lamb_neck_filet": "*Placeholder — cut profile research not yet completed.*",
+  "baby_back_ribs": "Baby back ribs (also called loin ribs or kamben in Danish; Rippchen in German) are the upper ribs from the pork loin area — leaner, more curved, and smaller than spare ribs. In an air fryer the high-velocity hot air circulates around each section, cooking them much faster than a conventional oven (60–90 min vs. 2.5–3 hrs) while still achieving tender, fall-off-the-bone results. Most air-fryer methods either pre-boil the ribs (to accelerate internal tenderness) or rely on a long low-temperature cook phase followed by a short high-temperature crisping phase. The silver skin on the bone side must always be removed. Target internal: 88–95 °C for tender, collagen-rendered ribs; at 63 °C they are technically safe but not yet fall-off-bone.\n\n\nTarget internal temperatures (air fryer):\n- Fall-off-bone tender: **88–95 °C (190–203 °F)**\n- ⚠️ Below 80 °C ribs are food-safe but still tough",
+  "spare_ribs": "Spare ribs (revelsben/kamben in Danish; Spareribs in German/Austrian) are the lower belly ribs, larger and flatter than baby back ribs with more fat and connective tissue. They benefit particularly from low-and-slow oven cooking: either pre-boiled then finished high, or foil-wrapped at low heat then glazed. The higher fat content makes them more forgiving than baby backs. Target internal: 88–95 °C, the same range as baby back ribs — collagen renders at these temperatures giving the characteristic tender, pull-off-bone texture and glossy glaze.\n\n\nTarget internal temperatures (oven roast):\n- Fall-off-bone tender: **88–95 °C (190–203 °F)**\n- ⚠️ Below 80 °C spare ribs are food-safe but still tough",
+  "st_louis_ribs": "*Placeholder — cut profile research not yet completed.*",
+  "ground_pork": "Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend of primal trimmings. Standard ground pork is typically 70–80% lean with 20–30% fat; the higher fat content gives it a juicy, cohesive texture when cooked and makes it more forgiving than ground beef or turkey. Ground pork is the basis of countless preparations worldwide — from Italian ragù and Swedish köttbullar to Chinese dumplings and Mexican chorizo. Because grinding distributes any surface bacteria throughout the mass, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is negligible.",
+  "pork_sausage": "Pork sausage is a processed meat product made from finely minced or coarsely ground pork, seasoned with salt, pepper, herbs and spices, and encased in natural pig intestine or synthetic collagen casing. Fat content is typically 20–30%, essential for juiciness and flavour development. Fresh sausages require cooking to a minimum internal temperature of 71°C (160°F); pre-cooked or smoked sausages require only reheating to serving temperature (60–65°C). The casing is the critical monitoring challenge: if it ruptures early, moisture and fat escape and the sausage dries out. Probing from one end into the centre avoids puncturing the casing mid-body. Carryover is 2–3°C.\n\n\nTarget internal temperatures (grill):\n- Fully cooked/safe: **71–75 °C (160–167 °F)**\n- ⚠️ Do not pull before 71 °C — pork sausage must be fully cooked",
+  "fresh_ham": "A fresh (uncured, unsmoked) ham is the entire hind leg of a pig — bone-in, skin-on, with the femur and aitchbone running through the centre and a thick layer of subcutaneous fat under the rind. Anatomically distinct from cured (julskinka) or smoked ham preparations: the muscle has its full natural moisture, the rind is supple rather than salted-firm, and the fat has not been altered by brine. Roasting requires a long, moderate-temperature cook (140–160 °C) that drives the centre to safe temperature without overcooking the surface meat under the fat. Carryover is significant — 4–6 °C in a 4–6 kg leg — because the bone, fat and dense muscle store heat well. Rest 30–45 minutes loosely tented before carving.",
+  "cheek": "*Placeholder — cut profile research not yet completed.*",
+  "jowl": "*Placeholder — cut profile research not yet completed.*",
+  "liver_pork": "*Placeholder — cut profile research not yet completed.*",
+  "pork_cheek": "Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the small dense muscle of the jaw — roughly 80–120 g per cheek, marbled with thin sheets of intramuscular fat and rich in collagen from the constant chewing motion the muscle performs in life. For pan frying (rather than the more common braise), the cheeks are typically butterflied to expose the interior, dusted lightly, and seared at high heat — the goal is to crust the surface while keeping the centre at a tender medium-rare. This works because the cheek's collagen network, while extensive, is fine-grained enough that a brief flash sear (rather than a long braise) leaves the muscle bouncy rather than rubbery. The carryover is small (2–3 °C) given the thin butterflied cuts.",
+  "pork_jowl": "*Placeholder — cut profile research not yet completed.*",
+  "pork_liver": "Pork liver is milder, slightly sweeter and more delicate in texture than beef liver — a paler chestnut-brown rather than the deep mahogany of beef, with a finer-grained hepatocyte structure and a thinner capsule. The same mineral-iron flavour profile is present but at lower intensity. The standard preparation across European traditions is identical to the beef-liver pan-fry: brief soak in milk to mellow the iron, dust in flour, sear hard in fat, and pull while the centre is still faintly pink. The narrower flavour also means pork liver tolerates assertive aromatics — onions, sage, juniper, allspice, capers — better than the more bold-tasting calf's or beef liver. Carryover is small (1–2 °C); slices continue cooking on the plate, so serve immediately.",
+  "pork_tongue": "Pork tongue is the smaller, more delicate sibling of beef tongue — typically 250–400 g per tongue versus 1.5–2 kg for beef. The structure is identical: a single dense lingual muscle wrapped in a thick, papillae-covered skin that must be peeled after cooking. The smaller mass means a shorter braise (60–90 minutes rather than 3–4 hours) and a milder, sweeter flavour. Pork tongue is fundamental to many traditions — Mexican *lengua de cerdo*, Chinese cha-shu pig tongue, French *langue de porc sauce ravigote*, Polish *ozór wieprzowy*. The peel-while-warm rule still applies, and the tongue is best sliced thin and either dressed with a sharp vinaigrette or warmed in a piquant sauce. Carryover is essentially zero (the surrounding liquid buffers temperature).",
+  "baby_back_ribs_alt": "*Placeholder — cut profile research not yet completed.*",
+  "belly": "*Placeholder — cut profile research not yet completed.*",
+  "cured_ham": "Cured ham (skinke in Danish; Schinken in German/Austrian) for the oven roast method encompasses both pre-boiled glazed ham and straight-to-oven versions. The classic approach is to boil a mild-cured or smoked ham first (removing excess salt and pre-cooking the meat), then score the rind and glaze it in a hot oven until caramelised. Low-and-slow oven variants skip the boiling and use very low temperatures (80°C oven) to achieve even, juicy results.\n\n\nTarget internal temperature for safe, juicy cured ham: **70–75 °C** — the curing keeps the meat safe at slightly lower temps than fresh pork, but 75 °C is the standard target for glazed results.\n\nTarget internal temperatures (oven roast):\n- Juicy, glazed: **70–75 °C (158–167 °F)**\n- Very low-and-slow: **75 °C** (when oven is held at 80 °C)",
+  "ham": "*Placeholder — cut profile research not yet completed.*",
+  "pork_belly": "Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.",
+  "pork_leg": "Pork leg and hock (Schweinshaxe / stinco di maiale / kuzu incik) is a collagen-rich cut with thick connective tissue, bone marrow, and heavily worked muscle. Braising unlocks the cut's full potential: 2–3 hours of moist heat at low temperature converts collagen to gelatin, creating sticky, unctuous, fall-off-the-bone meat surrounded by a richly reduced sauce. Popular braised in beer across Bavaria, Central Europe, and the British Isles; in soy and spices across East Asia; and in wine with herbs across Mediterranean Europe. The MEATER probe is placed deep into the thickest muscle mass of the leg or hock, away from the bone, to track internal temperature accurately.\n\n\nTarget internal temperature: **75–80 °C (167–176 °F)** for sliceable, tender; **85–90 °C (185–194 °F)** for pull-apart.",
+  "pork_loin_roast": "Pork loin roast (svinekam in Danish; Schweinerücken / Kotelettstrang in German/Austrian) with rind (svær / Schwarte) is the quintessential Scandinavian and German Sunday dinner. The loin is leaner than the belly so it needs more careful temperature management — pull too early and it's under-safe; pull too late and it dries out. The Danish approach targets **65°C** for a juicy, slightly rosy result; German recipes often go to 72–75°C for a firmer texture. For a MEATER probe, 65°C is an excellent target with a high-heat crackling finish.\n\n\nTarget internal temperatures (oven roast):\n- Juicy, slightly rosy (Danish-style): **60–65 °C (140–149 °F)**\n- Traditional firm, fully white (German-style): **70–75 °C (158–167 °F)**",
+  "pork_shoulder": "Pork shoulder / neck (nakkefilet / nakkekam / svinekølle in Danish; Schweinenacken / Schweineschulter in German/Austrian) is one of the most forgiving cuts for the oven — its fat marbling prevents drying out and it develops deep flavour at virtually any oven temperature. The Danish approach covers with foil at 200°C for 105 minutes (firm but juicy); the Norwegian approach targets 75°C core at 175°C oven; the German approach uses the Krustenbraten method at 180°C × 2 hrs. Unlike the leaner loin, shoulder can be taken higher without losing juiciness.\n\n\nTarget internal temperatures (oven roast):\n- Juicy, sliceable: **72–75 °C (162–167 °F)**\n- Very tender (approaching pulled): **80–85 °C (176–185 °F)**",
+  "spare_ribs_alt": "*Placeholder — cut profile research not yet completed.*",
+  "st_louis_ribs_alt": "*Placeholder — cut profile research not yet completed.*",
+  "virginia_ham": "*Placeholder — cut profile research not yet completed.*",
+  "pork_chop": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\n\nTarget internal temperatures (air fryer):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
+  "pork_loin_steak": "Pork loin steak (koteletsteg, Lendensteak vom Schwein) is a boneless steak cut from the loin (between chop and tenderloin area). It is lean and uniform in thickness, making it ideal for pan frying with the same technique as pork chop: hot pan, butter baste, 3–4 min per side. It is slightly more forgiving than tenderloin but dries out faster than a shoulder steak. Target core: 63–65 °C.\n\n\nTarget internal temperatures (pan fry):\n- Juicy/pink: **63–65 °C (145–149 °F)**",
+  "pork_shoulder_steak": "Pork shoulder steak (nakkesteak, Schweinenackensteak / Schopfsteak) is from the neck/collar area — more marbled than loin steak, more forgiving, and ideal for pan frying. The fat renders during cooking, basting the meat from the inside. 3–4 minutes per side on medium-high heat is the standard, and it can withstand a slightly higher final temperature (68–70 °C) without drying out. The Austrian Schopfsteak is an iconic example of this cut.\n\n\nTarget internal temperatures (pan fry):\n- Juicy: **65–68 °C (149–154 °F)**\n- Well done: **70–72 °C (158–162 °F)**",
+  "pork_tenderloin": "Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo) is the leanest cut of pork and the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.\n\n\nTarget internal temperatures (grill):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
+  "secreto": "The secreto (Spanish: \"secret\") is a hidden fat-marbled cut from the shoulder/neck area of the Iberian pig (or any pork). It is thin, uneven, and highly marbled, making it one of the most flavourful pork cuts for the griddle or grill. Because it is thin and irregular, it is cut into 3–4 uniform pieces before cooking. Key rules: de-chill 2 hours; dry sear without oil; no salt before; one flip only; rest 1–2 min then season. Target: 65–70 °C (pink to fully done) — internal temperature rises fast due to the thin cross-section.\n\n\nTarget internal temperatures (pan sear):\n- Pink inside: **63–65 °C (145–149 °F)**\n- Well done (recommended for high-fat secreto): **68–72 °C (154–162 °F)**"
+};
+
+// Classic cut × method profile texts
+const CLASSIC_CUT_METHOD_PROFILES = {
+  "ostrich_steak": {
+    "grill": "Ostrich (*Struthio camelus*) steak is produced primarily in South Africa, Namibia, and increasingly in France, Belgium, and Germany. Despite being a bird, ostrich meat is red, very low in fat, and treated culinarily exactly like beef or venison. Fan fillet (outerfilé) and top loin are the main steak cuts. The meat is extremely lean and must not be overcooked: medium-rare (54–57 °C) is the South African standard. Above 70 °C the meat becomes tough and liver-like.\n\nTarget internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pull at 52 °C and rest.",
+    "pan_sear": "Ostrich (*Struthio camelus*) steak is produced primarily in South Africa, Namibia, and increasingly in France, Belgium, and Germany. Despite being a bird, ostrich meat is red, very low in fat, and treated culinarily exactly like beef or venison. Fan fillet (outerfilé) and top loin are the main steak cuts. The meat is extremely lean and must not be overcooked: medium-rare (54–57 °C) is the South African standard. Above 70 °C the meat becomes tough and liver-like.\n\nTarget internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pull at 52 °C."
+  },
+  "venison_loin": {
+    "pan_sear": "Venison loin (also: backstrap, saddle, or haunch steak — depending on country) from roe deer (*Capreolus capreolus*) or red deer (*Cervus elaphus*) is the premium pan-searing cut. The meat is very lean, deep red-brown, and has a rich, gamey flavour prized throughout European cooking. Pan-searing 2–3 minutes per side over high heat is the standard technique; the meat is universally pulled at medium-rare to medium to avoid dryness.\n\nKöket.se temperature guide (Sweden):\n- Rådjur/hjort ytterfilé & filé: rare 52 °C, medium 57 °C, well done 65 °C\n- Stekdetaljer: 55/62/68 °C"
+  },
+  "venison_roast": {
+    "oven_roast": "Venison haunch or saddle roast is a classic British, German, French, and Scandinavian festive dish. The typical method: dry-age if possible, then sear all over in a hot pan and finish in the oven (180–200 °C for medium/well, or low 120–140 °C for precision doneness with a probe). The saddle in particular is a show-piece roast in Michelin-star British cooking.\n\nTarget internal temperature: **55–60 °C (131–140 °F)** for a pink, moist result. Some German recipes use the \"Niedergarmethode\" (low-temperature method) at 80–90 °C to hit exactly 58 °C core."
+  },
+  "venison_steak": {
+    "grill": "Venison backstrap, loin or haunch steaks are excellent on the grill. The lean, dense muscle benefits from high-heat direct grilling — it sears quickly, developing a smoky, caramelised crust while the centre stays pink and juicy. Because there is little intramuscular fat, venison goes from perfect to overcooked in moments; the grill lid should remain open to avoid trapped steam speeding up cooking.\n\nThe backstrap (outer loin) is the preferred cut for grilling: it is uniform in thickness, tender, and holds together on the grate. Haunch steaks (from the hindleg) benefit from a simple marinade to tenderise muscle fibres. Medallions cut from the loin are harder to grill successfully as they curl; a whole piece grills better and is then sliced.\n\nTemperature precision is essential. Pull at **54–57°C (130–135°F)** for medium-rare; carry-over will bring it to 57–60°C after a 5-minute rest. Never take venison above 65°C (149°F) — it rapidly becomes grey, dry and livery. A MEATER probe inserted into the thickest part before grilling allows wireless monitoring without opening the grill.",
+    "pan_sear": "Venison steak most commonly refers to cuts from the haunch (hindleg), loin, or backstrap of deer — typically roe deer (*Capreolus capreolus*), red deer (*Cervus elaphus*), or fallow deer (*Dama dama*). The backstrap and loin medallions are prized for pan searing: they are fine-grained, lean, and quick-cooking. The meat is deep-red and intensely flavoured, with very little intramuscular fat.\n\nBecause venison is so lean, it must be cooked hot and fast to prevent drying. Pan searing in butter or oil over high heat for 2–5 minutes per side achieves a caramelised crust while keeping the centre rare to medium-rare. Resting is critical — at least 5 minutes — to allow juice redistribution.\n\nThe European tradition across the UK, Germany, Scandinavia and Italy pairs venison with acidic or fruity sauces (blackberry, lingonberry, cloudberry, redcurrant, balsamic) that cut the richness of the meat. Nordic cooks often finish fillets in the oven at low heat (125°C) after searing, using a thermometer to hit exactly 60°C. UK and North American cooks tend to pan-fry direct.\n\nTarget internal temperature: pull at **54–57°C (130–135°F)** for medium-rare. Venison dries out rapidly above 65°C and should never be cooked to well-done."
+  },
+  "rabbit_legs": {
+    "braise": "Rabbit (*Oryctolagus cuniculus*) legs (front and hind) are the most commonly braised cut. The hind legs carry more meat and are the prime braising cut; the front legs are often included for flavour. Rabbit is lean, low in fat, and prone to drying if overcooked — braising in wine, stock, or cream keeps the meat moist while allowing the connective tissue to break down.\n\nThe French tradition (lapin aux pruneaux, lapin à la moutarde) is the most internationally recognised; German, Italian, and British traditions also have strong recipes. Braising time: 45–75 minutes. The meat should be fork-tender and pulling away from the bone.\n\nTarget internal temperature: **74–77 °C (165–175 °F)** — rabbit, like chicken, should be cooked through. Fork-tender braised rabbit reads 74–80 °C.",
+    "oven_roast": "Rabbit (*Oryctolagus cuniculus*) legs (front and hind) are the most commonly braised cut. The hind legs carry more meat and are the prime braising cut; the front legs are often included for flavour. Rabbit is lean, low in fat, and prone to drying if overcooked — braising in wine, stock, or cream keeps the meat moist while allowing the connective tissue to break down.\n\nTarget internal temperature: **74–77 °C (165–175 °F)** — cooked through, juicy, not dry."
+  },
+  "rabbit_saddle": {
+    "oven_roast": "The rabbit saddle is the backbone section of the rabbit bearing two boneless loins\nand, when left bone-in, thin belly flaps that protect the loins during roasting.\nOven roasting suits the saddle particularly when it is stuffed, tied, or cooked\nbone-in as a whole piece: the oven's dry, even heat browns the exterior more gently\nand uniformly than a stovetop pan, and the belly flaps — which would burn in a pan\n— insulate the loins and add a thin layer of fat that bastes the meat from the\ninside. The saddle is lean enough that it needs a hot oven (190–200°C) to brown\nbefore the interior overcooks; conversely, finishing times are short (10–15 minutes)\nand carryover is 2–3°C, so the cut demands close monitoring. Stuffed or rolled\nsaddle (farce or ballotine style) can tolerate a slightly lower oven and longer\ntime because the stuffing moderates heat transfer into the loin.",
+    "pan_sear": "The rabbit saddle is the loin section running along the spine from the base of the\nribcage to the hind legs, consisting of two long, boneless loins attached to the\nbackbone; it is the most tender, leanest part of the rabbit, with almost no\nconnective tissue. Because the muscle does so little work, the saddle cooks in\nminutes over high heat — any slower method dries it catastrophically. Pan searing\nsuits it perfectly: a screaming-hot pan develops a golden crust in 2–3 minutes per\nside while leaving a just-cooked, juicy interior. Carryover is minimal (2°C) owing\nto the cut's small mass and rapid cooking, so pull temperature is close to serving\ntemperature; nevertheless, a 3–5 minute rest redistributes juices before slicing."
+  },
+  "wild_boar_chop": {
+    "grill": "Wild boar (*Sus scrofa*) loin chops (Wildschwein-Koteletts / côtelettes de sanglier) are taken from the back of the animal and include a rib bone, similar to pork chops but with darker, denser meat and a pronounced game aroma. Fat content varies by season — boars shot in autumn carry more fat than those taken in spring. The meat benefits from brief marinades in oil, herbs, and acidic components to tenderise.\n\nTarget internal temperature: **70–72 °C (158–162 °F)** for safe consumption of wild-caught pork. Some grillmasters pull at 65 °C for a pink interior.",
+    "pan_sear": "Wild boar (*Sus scrofa*) loin chops (Wildschwein-Koteletts / côtelettes de sanglier) are taken from the back of the animal and include a rib bone, similar to pork chops but with darker, denser meat and a pronounced game aroma. Fat content varies by season — boars shot in autumn carry more fat than those taken in spring. The meat benefits from brief marinades in oil, herbs, and acidic components to tenderise.\n\nPan-searing wild boar chops over medium-high heat for 6–10 minutes per side is the traditional European approach; the meat should be cooked through to at least 70 °C (160 °F) in line with wild game food-safety guidance from most European health authorities, though some chefs pull at 65–68 °C for a slightly pink centre.\n\nTarget internal temperature: **70–72 °C (158–162 °F)** (safe). Some chefs cook to 65 °C (149 °F) for a pale-pink interior."
+  },
+  "wild_boar_shoulder": {
+    "oven_roast": "Wild boar shoulder is a large, heavily worked muscle containing significant connective tissue. It benefits from long, slow roasting (3–4 hours) at moderate temperature (160–200 °C) in a braising liquid to achieve pull-apart tenderness. The German tradition uses wine, game stock, juniper, and root vegetables; the Italian and French traditions add tomato and herbs.\n\nTarget internal temperature: **80–90 °C (176–194 °F)** for fall-apart texture. Food-safety minimum is 70 °C (158 °F) for safe serving, but the collagen conversion to gelatin that makes the shoulder delicious requires 80+ °C."
+  },
+  "mutton_chop": {
+    "grill": "Mutton refers to the meat of a sheep older than one year (typically 2–4 years), with a stronger, more pronounced flavour than lamb. Mutton chops (loin or shoulder chops) are popular in Germany, the UK, the Middle East, and South Asia. The stronger flavour benefits from aromatic seasoning (garlic, onion, thyme, cumin) and the meat is typically cooked through — medium to well-done — rather than pink.\n\nTarget internal temperature: **70–74 °C (158–165 °F)**.",
+    "pan_sear": "Mutton refers to the meat of a sheep older than one year (typically 2–4 years), with a stronger, more pronounced flavour than lamb. Mutton chops (loin or shoulder chops) are popular in Germany, the UK, the Middle East, and South Asia. The stronger flavour benefits from aromatic seasoning (garlic, onion, thyme, cumin) and the meat is typically cooked through — medium to well-done — rather than pink.\n\nTarget internal temperature: **70–75 °C (158–167 °F)** — cooked through with some pink. Fully cooked traditional: 75–80 °C."
+  },
+  "mutton_leg": {
+    "oven_roast": "A whole mutton leg (bone-in, 2–3 kg) is a festive cut in the Middle East, Pakistan, Afghanistan, UK, and parts of Europe. Its strong, mature flavour benefits from marinating and long, slow oven roasting. Most traditions roast at 160–180 °C for 2.5–4 hours, covered for the majority of the time to prevent drying.\n\nTarget internal temperature: **75–80 °C (167–176 °F)** for fully cooked, still juicy. Some Pakistani and Indian recipes cook to 85 °C for fall-apart texture."
+  },
+  "mutton_shoulder": {
+    "braise": "Mutton shoulder is a heavily worked, intensely flavoured cut from an older animal (12 months or more). The extra age means deeper flavour but also denser connective tissue, requiring longer braising times than lamb — typically 2.5–3.5 hours on the stovetop or 3–4 hours in the oven. When braised low and slow, the shoulder yields incredibly rich, yielding meat that is the centrepiece of Indian korma, Turkish tandır, and Italian stuffed shoulder (spalla) traditions. Mutton benefits from full-bodied braising liquids — wine, yoghurt, spiced stocks — that can stand up to its assertive flavour. The MEATER probe is inserted through the thickest muscle of the shoulder, well away from the shoulder blade bone.\n\nTarget internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bone; mutton shoulder may need 90–95 °C due to the older animal's denser tissue.",
+    "oven_roast": "Mutton shoulder is a fatty, well-worked cut with pronounced flavour and good collagen content. It benefits from long, slow roasting (4–5 hours at 150–160 °C) to break down connective tissue and achieve pull-apart texture. It is the cut used for slow-roasted Sunday lunch mutton in the UK, and for the Turkish/Middle Eastern *kelle-paça* and *tandır* traditions.\n\nTarget internal temperature: **82–90 °C (180–194 °F)** for pull-apart. Minimum food-safe for fully cooked: 70 °C.",
+    "slow_cooker": "Mutton shoulder from an older animal (12 months or more) is one of the best possible cuts for the slow cooker. The denser connective tissue and stronger flavour that make mutton challenging by quick methods become assets in the slow cooker: over 7–9 hours on LOW, the collagen fully dissolves, the fat renders into a rich braising liquid, and the shoulder yields an extraordinarily deep, concentrated flavour that younger lamb cannot match. Indian, Turkish, and Greek traditions all have centuries-old equivalents of the slow-cooked mutton shoulder dish; the slow cooker is simply the modern implementation. The MEATER probe is inserted into the thickest muscle of the shoulder, away from the shoulder blade.\n\nTarget internal temperature: **88–95 °C (190–203 °F)** — mutton requires higher temperatures than lamb due to denser, older muscle fibres."
+  },
+  "kangaroo_steak": {
+    "grill": "Kangaroo rump steak and loin fillet are the preferred cuts for grilling. The extreme leanness (under 2% fat) means the grill must be preheated to very high temperature and cooking time must be short — typically 2–3 minutes per side over direct high heat. Any longer and the meat dries and hardens. Marinating in oil before grilling is widely recommended to prevent sticking and to add a surface barrier against moisture loss.\n\nTarget internal temperature: **52–55 °C (126–131 °F)** for medium-rare. Pull at 50 °C to account for carry-over on the grill.",
+    "pan_sear": "Kangaroo (*Macropus* spp.) steak, most commonly from the hindquarter/rump or loin fillet, is one of the leanest red meats available — typically less than 2% fat. The meat is deep crimson, with a slightly gamy, iron-rich flavour. Because of its extreme leanness, kangaroo must be cooked hot and fast to prevent drying: pan-searing for 2–3 minutes per side over high heat achieves a seared crust while keeping the interior rare to medium-rare. Cooking beyond medium results in a dry, liver-textured product.\n\nTarget internal temperature: **54–57 °C (130–135 °F)** for medium-rare. Many Australian cooks pull at 50–52 °C for a warm-red centre. Well-done is strongly discouraged."
+  },
+  "reindeer_roast": {
+    "oven_roast": "Reindeer roast (renstek) is a traditional Sami and Scandinavian festive dish. The round/topside (innanlår) or saddle is the most common cut. The Scandinavian method: sear in a hot pan, then finish in a very low oven (100–125 °C) with the probe inserted to achieve precise doneness without risk of overcooking the lean meat. The traditional accompaniment is cream sauce with lingonberries.\n\nTarget internal temperature: **57–62 °C (135–144 °F)** for medium. Pull at 55 °C and rest."
+  },
+  "reindeer_steak": {
+    "grill": "Reindeer (*Rangifer tarandus*) is the traditional game meat of Sápmi (Lapland), northern Finland, Norway, and Sweden. The fillet (renfilé) and backstrap (sadel) are the premium cuts for pan searing. Reindeer meat is very lean, deep red, and has a delicate sweet-earthy flavour milder than moose. Because of its leanness it must be treated like venison: high heat, short cooking time, pulled well below well-done. Medium-rare (57 °C) is the Nordic standard.\n\nTarget internal temperature: **55–57 °C (131–135 °F)** for medium (Nordic preference). Pull at 52 °C.",
+    "pan_sear": "Reindeer (*Rangifer tarandus*) is the traditional game meat of Sápmi (Lapland), northern Finland, Norway, and Sweden. The fillet (renfilé) and backstrap (sadel) are the premium cuts for pan searing. Reindeer meat is very lean, deep red, and has a delicate sweet-earthy flavour milder than moose. Because of its leanness it must be treated like venison: high heat, short cooking time, pulled well below well-done. Medium-rare (57 °C) is the Nordic standard.\n\nSwedish temperature guide (köket.se):\n- Renfilé: rare 52 °C, medium 57 °C, well done 65 °C\n- Ren stekdetaljer: 55–62–68 °C"
+  },
+  "goat_chop": {
+    "grill": "Goat loin or rib chops are popular throughout West Africa, the Caribbean, South Asia, the Middle East, and the Mediterranean. The meat is leaner than lamb with a slightly stronger, more aromatic flavour. Pan searing is typically done at high heat with marinades containing aromatic spices (cumin, coriander, ginger, garlic). Like lamb, goat chops are served medium to well-done.\n\nTarget internal temperature: **70–74 °C (158–165 °F)**.",
+    "pan_sear": "Goat loin or rib chops are popular throughout West Africa, the Caribbean, South Asia, the Middle East, and the Mediterranean. The meat is leaner than lamb with a slightly stronger, more aromatic flavour. Pan searing is typically done at high heat with marinades containing aromatic spices (cumin, coriander, ginger, garlic). Like lamb, goat chops are served medium to well-done.\n\nTarget internal temperature: **70–74 °C (158–165 °F)**."
+  },
+  "goat_leg": {
+    "oven_roast": "Whole roasted goat leg is a festive preparation in Germany (Ziegenkeule), Greece (katsiki sto fourno), the Caribbean, South and West Africa, and across the Middle East. The meat has moderate fat and benefits from marinating (especially in buttermilk, yoghurt, or wine) to reduce gaminess. Slow oven roasting at 160–200 °C for 2–3 hours gives the best result.\n\nTarget internal temperature: **75–82 °C (167–180 °F)** for fully cooked, moist goat."
+  },
+  "goat_shank": {
+    "braise": "A goat shank (Swedish *getlägg*) is the lower portion of the animal's leg — heavily worked, dense with collagen, intramuscular fat (limited; goat is leaner than lamb) and bone marrow. Like the lamb shank, it is a quintessentially braising cut: tough beyond chewing if cooked to medium-rare, but transformed by long, slow cooking in liquid into fork-tender, gelatin-rich meat that falls off the bone. Internal temperature is the wrong metric: the cut needs time at 88–93 °C internal (the collagen-melting band) for 1.5–2 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, parallel to the bone (avoid touching bone).",
+    "oven_roast": "A goat shank (Swedish *getlägg*) is the lower portion of the animal's leg — heavily worked, dense with collagen, intramuscular fat (limited; goat is leaner than lamb) and bone marrow. Like the lamb shank, it is a quintessentially braising cut: tough beyond chewing if cooked to medium-rare, but transformed by long, slow cooking in liquid into fork-tender, gelatin-rich meat that falls off the bone. Internal temperature is the wrong metric: the cut needs time at 88–93 °C internal (the collagen-melting band) for 1.5–2 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, parallel to the bone (avoid touching bone)."
+  },
+  "goat_shoulder": {
+    "braise": "Goat shoulder (Swedish *getskuldra* / *getbog*) is the upper foreleg — heavily worked, dense with collagen and intramuscular fat. Like the lamb shoulder, it is a quintessentially low-and-slow cut: tough beyond chewing if cooked to medium-rare, but transformed by long, wet cooking into fork-tender, gelatin-rich meat that pulls in long strands. Internal temperature is necessary but insufficient: the cut needs time at 88–93 °C internal for 2–3 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, away from bone or large connective sheets.",
+    "oven_roast": "Goat shoulder contains more connective tissue than the leg and rewards longer, slower cooking. It is the traditional cut for Jamaican curry goat, Indian roganjosh-style preparations, Caribbean slow-roasts, and Moroccan mechoui. The shoulder is cooked until pull-apart tender at 85–90 °C internal, or to a still-sliceable 75–78 °C.\n\nTarget internal temperature: **82–88 °C (180–190 °F)** for pull-apart.",
+    "slow_cooker": "Slow-cooker goat shoulder (Swedish *getskuldra* / *getbog*) takes the same braising principles but uses a 6–8 hour low-temperature cycle in a sealed countertop crock-pot at ~88–93 °C. The lower-and-slower environment is gentler than oven-braising and tolerates inattention, but the lid traps all the steam, so the surface never browns; chefs always sear the shoulder first in a separate pan. Internal target is the same collagen-melt band: 88–93 °C, sustained for 4–5 hours. Probe horizontally through the thickest part of the muscle, away from bone."
+  },
+  "moose_roast": {
+    "oven_roast": "Moose (*Alces alces*) — called älg in Swedish, elg in Norwegian, and Elch in German — is the largest deer species in the Northern Hemisphere. The hindquarter roast (haunch/shoulder) has deep, dark red meat with minimal fat and a distinctive game flavour. Moose roast is best cooked slowly: high initial heat to develop a crust, then low, slow oven roasting (125–160 °C) with basting, aiming for a core temperature that gives a pink but safe result. The Swedish tradition uses cream and lingonberry as accompaniments.\n\nTarget internal temperature: **60–65 °C (140–149 °F)** for medium (pink centre); **70 °C (158 °F)** for fully cooked. The Swedish national tradition prefers 60–65 °C."
+  },
+  "moose_steak": {
+    "grill": "Moose steak (Elchsteak / älgbiff) is cut from the loin or haunch. It is very lean with a rich, earthy flavour. Grilling over high heat for a short time is the traditional Nordic approach; the meat should be seared quickly and pulled at medium-rare to prevent dryness. Marinating in oil and acidic components (wine, vinegar, lemon) before grilling is standard practice.\n\nTarget internal temperature: **57–62 °C (135–144 °F)** for medium-rare to medium.",
+    "pan_sear": "Pan-searing moose steak (loin, backstrap, or haunch slice) is the standard indoor cooking method across Scandinavia, Finland, and northern Canada. The lean meat is seared hot and fast in butter or clarified butter — 3–5 minutes per side — then pulled well before well-done. Some Scandinavian recipes finish in a 125–140 °C oven after searing for more controlled doneness.\n\nTarget internal temperature: **58–63 °C (136–145 °F)** for medium-rare to medium. Do not exceed 68 °C."
+  },
+  "buffalo_burger": {
+    "grill": "Buffalo/bison burger (ground buffalo patty, grilled) is one of the most popular preparations in North America and increasingly in Europe. The lean ground meat makes for a firm, flavourful patty — it dries out quickly so most American recipes cook to medium (63 °C) rather than well-done. Adding a small amount of fat (bacon fat, olive oil) to the mix prevents dryness.\n\nTarget internal temperature: **70–74 °C (158–165 °F)** (ground meat food safety standard in the US and EU); some chefs serve at 63 °C (medium) as a restaurant preference.",
+    "pan_fry": "Buffalo/bison burger patties are made from ground buffalo or bison meat, typically sourced from the chuck, round, or a blend of trimmings. Ground buffalo/bison is leaner than standard beef (typically 90/10 to 93/7 lean/fat), which means it cooks faster and can dry out more easily than an 80/20 beef patty. A typical patty is 150–180 g. Because grinding distributes surface bacteria throughout, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is minimal (1–2°C).\n\nTarget internal temperature: **70–74 °C (158–165 °F)** for food-safe ground meat."
+  },
+  "buffalo_steak": {
+    "grill": "**Context note**: In this project, *buffalo* refers to **water buffalo** (*Bubalus bubalis* — carabao in the Philippines, bhaisa in India) rather than American bison (which is in the `bison/` category). Water buffalo is the most widely eaten large ruminant in Asia, with large production in India, China, Pakistan, and Southeast Asia. The lean, slightly sweeter, darker-red meat is typically treated like beef in most culinary traditions.\n\nGrilling water buffalo steak (carabeef) is common in India, Vietnam, and the Philippines. The meat is slightly tougher than beef and benefits from marinating.\n\nTarget internal temperature: **57–63 °C (135–145 °F)** for medium-rare to medium. The meat is leaner than beef and becomes tough above 70 °C.",
+    "pan_sear": "**Context note**: In this project, *buffalo* refers to **water buffalo** (*Bubalus bubalis* — carabao in the Philippines, bhaisa in India) rather than American bison (which is in the `bison/` category). Water buffalo is the most widely eaten large ruminant in Asia, with large production in India, China, Pakistan, and Southeast Asia. The lean, slightly sweeter, darker-red meat is typically treated like beef in most culinary traditions.\n\nTarget internal temperature: **60–65 °C (140–149 °F)** for medium."
+  },
+  "bison_burger": {
+    "grill": "Bison burger patties are made from ground bison meat, typically sourced from the shoulder, chuck, or round — the same primal cuts used for beef hamburgers. Bison is notably leaner than beef, often containing only 2–7% fat depending on the grind, compared to 15–20% in a typical beef burger blend. This leanness is both the appeal and the challenge: bison has a clean, slightly sweet, mineral-forward flavour but is prone to drying out if overcooked or if insufficient fat is present.\n\nBecause ground bison is so lean, fat management is critical. Many cooks either blend pure ground bison with a fattier cut (e.g., bison back fat or beef suet) to reach roughly 10–15% total fat, or they compensate with binding ingredients such as egg, mustard, and ketchup that add moisture and help hold the patty together. Cooking over high direct heat — whether on charcoal, a gas grill, or a cast-iron pan — is the preferred method, as it quickly builds a crust that seals in juices before the lean meat has time to dry out.\n\nFood safety regulations in most countries classify ground meat as a high-risk product requiring thorough cooking: the USDA standard for ground meat is 71 °C / 160 °F internal temperature. BBC Good Food echoes this at 70 °C. However, gourmet and restaurant preparations for trusted-source ground bison sometimes target 63–65 °C for a medium result with a pink centre. The appropriate pull temperature depends on the intended doneness, the diners' preferences, and local food safety guidelines.\n\nA MEATER probe inserted sideways into a patty gives reliable internal readings even for thin cuts, provided it is placed horizontally through the thickest part of the patty, keeping the tip and ambient sensor both clear of the grill grates.",
+    "pan_fry": "A pan-fried bison burger is a 150–180 g shaped patty made from coarsely-ground bison — typically a blend of chuck and shoulder with about 10–14 % fat, considerably leaner than ground beef (15–25 %). The lower fat content means bison overcooks more readily than beef and benefits from a slightly cooler pan temperature and shorter cook. Bison is fully safe at 71 °C / 160 °F (USDA threshold for ground game meat), but most chefs target medium (62–65 °C) for best texture, accepting that the patty has been seared to a sufficient surface temperature/time combination to achieve safety through Maillard reaction kinetics — when in doubt, USDA standard. The cooking goal: deep Maillard crust without overshooting the centre."
+  },
+  "bison_roast": {
+    "oven_roast": "Bison roast cuts are drawn from the same primals as beef roasting joints — most commonly the\nshoulder (chuck/Schulter), topside (Oberschale), silverside (Unterschale), or loin (Rücken).\nThe fillet roast (whole tenderloin) is also used in high-end German preparations. Like bison\nsteak, bison roast is substantially leaner than equivalent beef cuts: the marbling is sparse\nand the outer fat layer thin, which has two important consequences. First, a bison roast dries\nout faster in a hot oven than a comparably sized beef joint, making temperature monitoring with\na probe essential. Second, without intramuscular fat to buffer heat and provide moisture, the\noff-flavour threshold at which overcooked meat tastes \"liver-like\" is reached earlier — roughly\n65–68 °C for a roast compared to around 63 °C for a steak.\n\nThe two dominant German cooking traditions for bison roast diverge sharply in oven temperature\nbut agree on a pull temperature of approximately 60–63 °C (medium). The high-heat tradition\n(200 °C, 45–60 minutes for a 1 kg joint) produces a crisper exterior but requires careful\nattention because the meat approaches the pull temperature quickly. The low-heat tradition\n(80–90 °C, 90–120 minutes) relies on the oven temperature being close to the desired internal\ntemperature, preventing overshoot and producing an evenly pink interior across the full\ncross-section. Both traditions use an initial sharp sear to develop a Maillard crust before\nthe oven phase, since at low oven temperatures browning will not occur.\n\nUnlike bison steak, a large roast does carry some collagen from the connective tissue that\nsurrounds muscle groups — particularly in shoulder or topside cuts. However, bison roast is\nnot a braise candidate: the collagen content is insufficient to benefit from the 85–95 °C\nsustained-hold window required for full collagen conversion, and the lean muscle would be\nruined at those temperatures. The correct window is medium (60–65 °C), where the muscle is\nstill moist and pink throughout. Resting is critical for roasts: a minimum of 10 minutes\nallows the thermal gradient within the joint to equalise and the muscle fibres to reabsorb\njuices. A mozzarella-mustard herb crust, applied before the oven phase, is a distinctive\nGerman preparation that acts as an insulating layer and baste, partially compensating for\nthe low fat content."
+  },
+  "bison_steak": {
+    "grill": "Bison (American buffalo, *Bison bison*) is a large North American bovine raised primarily on\nopen pasture. Its steaks — most commonly cut from the loin (fillet/tenderloin), rib (entrecôte/\nribeye), or striploin (sirloin) — are structurally similar to beef cuts from the same primal\npositions but differ decisively in fat content and flavour chemistry. Bison carries significantly\nless intramuscular fat than commercial beef: its marbling score is typically very low, and the\nexternal fat cap is thin. This leanness means there is very little insulating fat to slow heat\npenetration, so bison steaks cook faster than their beef equivalents and have a narrower\nwindow between perfectly cooked and overdone.\n\nThe critical temperature rule for bison steak is the most frequently repeated piece of culinary\nconsensus in all traditions: bison must always be served rare to medium-rare and must never be\ntaken past medium. The lean muscle fibres of bison, deprived of intramuscular fat that would\nlubricate the texture, become dry, chalky, and develop a distinctly unpleasant liver-like\noff-flavour when cooked beyond 65 °C. This off-note — noted explicitly in German, American,\nand French bison cooking literature — is caused by the oxidation of the comparatively high\niron content in the lean, myoglobin-rich muscle at elevated temperatures. The pull temperature\nfor a grilled bison steak is therefore 57–60 °C (medium-rare), and never above 63 °C.\n\nOn the grill, bison steak performs best over direct, high heat — charcoal (Holzkohlegrill) is\nfrequently recommended in German and North American traditions because the intense radiant\nheat of charcoal sears the exterior rapidly, creating Maillard crust without the interior\novercooking. Gas grill or cast-iron griddle are also acceptable. Because of the leanness,\nmarinating overnight is common in German tradition: the marinade provides moisture and\nflavour compounds that compensate for the lack of intramuscular fat. Resting is universally\nrecommended (5 minutes minimum) to allow the muscle fibres to relax and reabsorb juices.\nSlow low-temperature cooking (Niedrigtemperatur) is explicitly warned against for bison steak\nby German sources — while it works for collagen-rich beef cuts, for lean bison steak it\nconcentrates the liver-like off-note and dries the meat. The pan-sear + brief oven finish\nat 80 °C (as described in two German sources below) is the one acceptable exception, because\nthe sear provides Maillard flavour and the short oven time (25 min at 80 °C) simply holds\nthe meat at medium without further cooking.",
+    "pan_sear": "Bison (*Bison bison*) steak — most commonly cut from the ribeye, loin, or top sirloin — is leaner than beef but similarly structured, with a deep ruby colour and a slightly sweet, earthy flavour. Because bison has very little intramuscular fat it overcooks rapidly; pan-searing over high heat to medium-rare and resting is the standard approach.\n\nTarget internal temperature: **54–57 °C (130–135 °F)** for medium-rare. Pull at 52 °C (126 °F) to account for carry-over. Well-done is strongly discouraged: above 70 °C the meat becomes dry and tough.\n\nThe European tradition — particularly German and Swiss cooks who receive bison via specialist game suppliers — finishes pan-seared bison at 80 °C oven temperature after an initial sear (the \"low-and-slow after sear\" method). North American tradition is typically direct high-heat pan only."
+  },
+  "beef_burger": {
+    "air_fryer": "The beef burger patty cooked in an air fryer is a relatively recent home-kitchen variant of the same fundamental cut — coarsely ground beef of around 80/20 fat/lean ratio, formed into a patty 1.5–2.5 cm thick. The air fryer is essentially a small high-velocity convection oven; it concentrates radiant heat from a top element while a fan circulates 175–205 °C air across the patty surface. That circulation produces evenly browned faces without flipping in some models, although a single mid-cook flip improves uniformity. The trade-off versus pan-frying is no rendered-fat puddle to baste in, and versus grilling no smoke — but the convection allows surface browning at lower equipment temperatures than direct radiant heat would require. Carryover is small (2–3 °C) because the patty is thin and the cook short.",
+    "grill": "Ground beef burgers are formed patties of minced beef, most commonly from a blend of chuck (for flavour) and sirloin or brisket (for binding), with fat content typically 15–25 % by weight. Unlike whole-muscle cuts, a burger patty has no internal connective tissue structure — the grind has already disrupted muscle fibres — so the cooking challenge is heat penetration through the patty's cross-section rather than collagen conversion. The direct-heat grill creates a fierce Maillard crust on both flat faces, which is the primary flavour mechanism; the fat content keeps the interior moist even at higher internal temperatures. Carryover in a burger patty is minimal — the thin geometry dissipates heat quickly once removed from the grill — but genuine carryover occurs in thicker restaurant-style patties, making the pull-from-grill moment slightly earlier than the final target.",
+    "pan_fry": "Ground beef burger patties pan-fried in a skillet are the indoor standard for domestic cooking, relying on the same fat-in-meat mechanics as grilled burgers but with a different heat-transfer medium: a heavy iron or steel pan rather than open grill grates. Chuck-based blends (80/20) are standard; the high fat content is essential because pan frying occurs in a shallow pool of rendered fat that accumulates during the cook. The enclosed pan environment retains moisture more than an open grill, and the solid flat surface creates full contact Maillard browning across the entire patty face — broader coverage but less char-and-smoke complexity than a grill. Carryover in pan-fried burgers is minimal to negligible given the thin geometry, though cast-iron skillets retain heat and can continue cooking the bottom face even after removal."
+  },
+  "ground_beef": {
+    "braise": "Ground beef (minced beef) is made by grinding beef, most commonly from the chuck primal or a blend of trimmings. The fat-to-lean ratio is the primary quality variable: 80/20 is standard for most preparations; 85/15 is leaner; 70/30 is richer and juicier. Because grinding ruptures muscle cells and distributes surface bacteria throughout the mass, the USDA and equivalent international food-safety authorities require a minimum internal temperature of 71°C (160°F) — there is no medium-rare option for ground beef the way there is for whole steaks. Carryover is minimal (1–2°C) given the fine grind and rapid heat transfer.",
+    "pan_fry": "Ground beef (minced beef) is made by grinding beef, most commonly from the chuck primal or a blend of trimmings. The fat-to-lean ratio is the primary quality variable: 80/20 is standard for most preparations; 85/15 is leaner; 70/30 is richer and juicier. Because grinding ruptures muscle cells and distributes surface bacteria throughout the mass, the USDA and equivalent international food-safety authorities require a minimum internal temperature of 71°C (160°F) — there is no medium-rare option for ground beef the way there is for whole steaks. Carryover is minimal (1–2°C) given the fine grind and rapid heat transfer."
+  },
+  "meatloaf": {
+    "oven_roast": "Meatloaf is a free-formed loaf of seasoned, bound ground meat (typically beef alone or a beef-pork-veal blend) baked in a moderate oven until cooked through. Structurally it is a colloid of ground muscle held by a panade (bread or breadcrumbs soaked in milk or stock) and bound with egg; the panade is critical because it absorbs and re-releases moisture during the bake, preventing the dry, dense loaf that pure meat-plus-egg produces. Oven temperatures of 175–190 °C give enough time for the centre to reach safe temperature without over-rendering the surface. Carryover is significant — 5–8 °C in a typical 1 kg loaf — because the loaf shape stores heat well; a 5–10 minute rest is mandatory both for carryover and for the proteins to re-absorb expressed liquid."
+  },
+  "filet_mignon": {
+    "air_fryer": "Filet mignon is cut from the narrow end (small end) of the beef tenderloin — the psoas major muscle, which runs alongside the spine and does virtually no work during the animal's life. It is the most tender cut in the carcass, with almost no intramuscular fat (marbling) or connective tissue, making it both delicate and vulnerable to drying out. The air fryer circulates very hot air around the steak at high velocity, creating convection browning on the exterior while cooking the interior — the result is a decent Maillard crust without the smoke of a grill or the fat-pooling effect of a skillet. Because filet mignon is exceptionally lean, the air fryer's hot-air convection is forgiving compared to direct-contact methods. Carryover is minimal but present — the small, round geometry of a filet mignon dissipates heat quickly after removal from the enclosed air fryer basket.",
+    "charcoal_grill": "Filet mignon is cut from the narrow end of the beef tenderloin (psoas major), the least-used muscle in the animal, resulting in the most tender yet leanest steak in any carcass. Its near-total absence of intramuscular fat and connective tissue creates a delicate, buttery texture but also a vulnerability to drying out — the lean muscle fibres expel moisture rapidly above medium doneness. Charcoal grilling adds an irreplaceable dimension to filet mignon that no other cooking method provides: direct infrared radiation from glowing embers creates a Maillard crust at the surface level while the hardwood charcoal smoke deposits volatile aromatic compounds that complement the cut's mild flavour. Carryover is minimal for a small, round filet mignon — the geometry favours heat dissipation — but the intense radiant heat of charcoal means the final minutes of cooking are especially rapid.",
+    "grill": "Filet mignon (from the narrow end of the psoas major) is the most tender, least-exercised muscle in the beef carcass, with virtually no connective tissue or intramuscular fat. Its mild, delicate flavour benefits from the grilled char and smokiness that a gas or charcoal grill provides — without it, the cut's flavour can seem bland. A gas grill produces consistent, controllable heat with minimal smoke, making it more precise than charcoal but less aromatic. The lean fibres dry out rapidly above medium, so precise temperature management is critical. Carryover is minimal given the small, uniform geometry of a filet mignon, but the brief intense heat of a grill can produce rapid late-stage temperature rises.",
+    "oven_roast": "Filet mignon is the small, round, lean medallion cut from the narrow end of the psoas major (beef tenderloin). It has no marbling to speak of and no connective tissue, making it extraordinarily tender but simultaneously susceptible to drying at temperatures above medium. Oven roasting a filet mignon is typically a two-stage process: a stovetop sear creates the Maillard crust the lean exterior cannot achieve in the oven alone, followed by a transfer to the oven to gently bring the interior to the target temperature without burning the crust. The reverse-sear variant (low oven first, high-heat sear last) achieves the flattest possible temperature gradient through the small, round cross-section. Carryover is meaningful — a 4–5 cm filet mignon will rise after leaving the oven, and the pull temperature must account for this.",
+    "pan_fry": "Filet mignon (psoas major, narrow end) is the most tender, leanest steak in any carcass — virtually free of connective tissue and intramuscular fat. Pan frying in a small amount of oil or fat over high heat is a classic French bistro method for fillet steak, producing a full-contact Maillard crust on both faces while the lean interior heats gently from conductive transfer through the crust. Because filet mignon has no fat to render and self-baste, pan frying must rely on added fats (butter, oil, or bone marrow) to replicate the basting function. Carryover is minimal for a small, dense medallion on a pan-fry, where removing the steak from the hot metal surface stops the conductive heat transfer almost immediately.",
+    "pan_sear": "Filet mignon (psoas major, small end of the tenderloin) is the leanest and most tender steak cut — the muscle does almost no physical work during the animal's life, producing a fine-grained, almost fat-free texture. Pan searing differs from pan frying in that it uses very high heat and minimal fat, relying on the Maillard reaction at the immediate contact surface rather than on fat submersion. For filet mignon, pan searing creates the same surface crust as pan frying but with a drier, more intense browning character and without the pooled-fat basting effect — finishing with a compound butter or glaze compensates. Carryover in a pan-seared filet mignon is minimal because the hot metal contact ceases immediately on removal; the probe reading at removal is very close to the final serving temperature.",
+    "sous_vide": "Filet mignon (psoas major, small end) is the most tender, leanest, and most delicately flavoured steak in the carcass. Sous vide is arguably the ideal method for this cut: the water bath maintains a precise target temperature throughout the full cooking period, eliminating any possibility of overcooking, and the sealed-bag environment retains all juices that would otherwise be lost to a pan or grill. Because filet mignon has no connective tissue or collagen to break down, sous vide cooking time is purely about temperature equilibration — a 4 cm filet mignon typically equilibrates within 45–60 minutes. The finishing sear (always required after sous vide) provides the Maillard crust the lean exterior cannot develop in the sealed bag. Carryover after sous vide is essentially zero for the water bath stage; the finishing sear adds a negligible rise in the outermost layer only."
+  },
+  "flank_steak": {
+    "charcoal_grill": "Flank steak is a flat, thin muscle cut from the abdominal wall of the animal (the flank primal), with long, coarse muscle fibres running visibly along its length. The cut is lean, relatively tough, and has minimal intramuscular fat — it lacks the marbling of a ribeye but compensates with bold, beefy flavour. Charcoal grilling is the quintessential method for flank steak: the high, direct radiant heat from glowing embers creates a rapid, intense Maillard crust across the wide flat surface before the interior has time to overcook. Flank steak must be cooked quickly over very high heat and sliced thinly across the grain for tenderness — cooking it slowly defeats the purpose. Carryover is minimal in a thin flank steak, but because it is typically cooked over extremely high heat, the brief internal temperature rise after removal from the grill can bring the steak from medium-rare to medium if not watched carefully.",
+    "grill": "Flank steak is a flat, boneless cut from the abdominal wall, with prominent, long muscle fibres running along its length and minimal intramuscular fat. Gas grilling provides controllable, consistent heat for this thin, wide cut — the two-zone setup (direct high heat for searing, indirect zone for temperature equilibration) is essential because the thin cross-section can overshoot medium-rare very quickly under direct gas flames. Marinating is standard across most culinary traditions because the coarse muscle fibres benefit from acidic tenderisation and the mild flavour welcomes added aromatics. Carryover in a thin flank steak on a gas grill is minimal but present — the steak should be pulled slightly before the target to allow the brief rest to complete the temperature.",
+    "oven_roast": "Flank steak, from the abdominal wall, is a wide, flat, and relatively thin cut with long, visible muscle fibres. Oven roasting is an unconventional but well-documented method — traditionally known as \"London Broil\" in the American tradition, where the steak is marinated and then finished under an oven broiler or in a very hot oven. The oven environment eliminates the smoke and flame variable of outdoor grilling while still achieving a reasonably browned exterior through convection and radiant heat from the oven walls. Because the oven's convective heat attacks from all sides, a flank steak in the oven cooks more evenly across its wide face than under a single-direction grill flame. Carryover in an oven-roasted flank steak is modest — the oven heat is less intense than a grill, so the steak does not carry much residual heat after removal.",
+    "pan_fry": "Flank steak is a wide, flat cut from the abdominal muscles with visible long fibres running along its length, minimal fat, and bold beefy flavour. Pan frying in a hot skillet with a small amount of oil or fat is an excellent domestic method: the full-contact Maillard browning across the steak's wide flat surface creates a flavourful crust without requiring an outdoor grill. Because the cut is thin and wide, a flank steak can be difficult to manage in a skillet — many recipes cut it into portions for easier handling. The lean, fibrous structure makes pan-frying timing critical: above medium, the fibres contract and expel moisture rapidly, making the steak tough. Carryover after pan frying is minimal, as removing from the hot pan surface immediately stops the primary conductive heat transfer.",
+    "pan_sear": "Flank steak (bavette d'aloyau in French bistro tradition, matambre in South America) is cut from the abdominal wall muscles — lean, intensely beefy, with long parallel muscle fibres that run the full length of the cut. Unlike marbled steaks, flank has almost no intramuscular fat, so high heat from a very hot pan creates crust through the Maillard reaction alone rather than through fat rendering. Pan searing suits flank well because the flat, wide cut covers a large contact surface at once, producing a fast, even sear on both faces. The cut's leanness means temperature discipline is critical: above 60 °C the long fibres tighten and the steak becomes dry and stringy regardless of resting. Carryover is minimal — 2–3 °C at most — because the thin cross-section loses heat quickly after leaving the pan.",
+    "sous_vide": "Flank steak is a lean, flat, long-fibred abdominal muscle with almost no intramuscular fat. Sous vide is particularly well-suited to flank because the extended time in the water bath at a precise temperature gently relaxes the coarse, parallel muscle fibres without the risk of surface overcooking that plagues this cut on a grill or in a pan. Unlike well-marbled cuts where sous vide's benefit is primarily edge-to-edge doneness control, for flank the main value is time-enabled fibre relaxation — holding at the target temperature for one to three hours produces a noticeably more tender result than a quick sear method. Because the bag is sealed, there is no moisture loss during the bath. The post-bath sear is brief and serves only to develop crust; the core temperature at this point is already at target, so carryover is negligible."
+  },
+  "flat_iron": {
+    "air_fryer": "The flat iron steak is taken from the infraspinatus muscle of the beef shoulder blade, separated from the central band of tough gristle that runs through the full top blade. Because the infraspinatus performs relatively little work, it retains outstanding intramuscular fat for a non-loin cut, producing deeply beefy, slightly buttery flavour comparable to ribeye at a fraction of the cost. Individual steaks are typically 200–350 g and 2–3 cm thick — a dimension that fits the air fryer's compact hot-air cabinet well. The air fryer's high-velocity convection at 200–205 °C dries the surface rapidly and drives the Maillard reaction without a dedicated grill or stovetop. Carryover is moderate, typically 2–3 °C after leaving the basket, so pulling 3 °C below the intended serving temperature is standard practice.",
+    "charcoal_grill": "The flat iron steak, cut from the infraspinatus of the shoulder blade, is one of the most marbled non-loin cuts on the carcass, making it exceptionally well-suited to the aggressive dry heat of charcoal. Charcoal produces radiant heat in the 230–300 °C range alongside aromatic smoke from combusting wood volatiles and rendered fat dripping onto the embers, layering a mineral, smoky character onto the cut's natural beefiness. Individual flat iron steaks at 2–3 cm thickness are ideal for direct charcoal: thick enough to develop a deeply charred exterior while the centre remains rosy, yet thin enough to cook through in 8–12 minutes without a two-zone setup. Carryover over live coals is more pronounced than in an oven — expect a 3–5 °C rise — because dense radiant heat continues driving surface energy inward during the first minute of rest; pulling 4–5 °C below target is advisable.",
+    "grill": "The flat iron steak originates from the infraspinatus muscle of the shoulder blade, a position that requires little locomotive effort, allowing significant intramuscular fat to develop for a forequarter cut. Gas and electric grills provide consistent, controllable radiant and conductive heat in the 200–260 °C range, making them ideal for the flat iron's 2–3 cm thickness: high enough to produce a meaningful Maillard crust, controllable enough to avoid torching the exterior before the interior is cooked. Unlike charcoal, gas grills allow precise two-zone setups for thicker pieces or quick adjustments mid-cook. Carryover is moderate at 2–4 °C — less than over live charcoal because the radiant energy cuts off the moment the steak leaves the grate; pulling at 54 °C (130 °F) reliably delivers a 57 °C (135 °F) final serving temperature.",
+    "oven_roast": "The flat iron steak is cut from the infraspinatus muscle of the shoulder blade, a section that develops pronounced intramuscular fat despite its forequarter origin. Oven roasting applied to individual flat iron steaks (200–350 g) typically takes one of two forms: a reverse-sear approach (gentle low oven to bring the interior to temperature, followed by a fierce stovetop or broiler sear) or a high-heat direct roast (220–230 °C oven, which simultaneously browns the exterior and cooks the interior). The reverse-sear method is particularly well-suited to the flat iron because it achieves edge-to-edge even doneness across the whole steak, minimising the grey band that a conventional high-heat approach produces. Carryover after oven cooking is mild (1–2 °C) compared to searing, but after a finishing sear it rises to 2–4 °C; the recommended pull temperature is therefore 3–4 °C below the intended serving temperature.",
+    "pan_fry": "The flat iron steak, taken from the infraspinatus of the shoulder blade, brings a rich buttery fat content that rewards pan frying: the marbling bastes the meat internally as it cooks while the fat in contact with a hot pan adds to the flavour-laden fond that forms the basis of classic sauces. Pan frying, in European culinary tradition, typically involves a moderately hot pan — lighter than a full sear — allowing the cook to baste repeatedly in butter, aromatics and wine as the interior approaches its target temperature. Individual flat iron steaks at 2–3 cm thickness cook through in 8–12 minutes in a pan, making them well-suited to à la minute bistro service. Carryover cooking after removing from the pan is moderate at 2–4 °C, calling for a pull temperature of 53–54 °C (127–130 °F) to land at medium-rare.",
+    "pan_sear": "The flat iron, cut from the infraspinatus of the shoulder blade, is an excellent candidate for high-heat pan searing: its strong intramuscular fat resists drying at searing temperatures, its 2–3 cm thickness produces a favourable surface-to-volume ratio for crust formation, and its flat, even profile makes full-face contact with a hot pan straightforward. Pan searing at the highest achievable stovetop temperature (240–280 °C in a carbon steel or cast-iron pan) drives the Maillard reaction almost instantaneously, producing the characteristic dark, crackling crust that is the hallmark of restaurant steak cookery. Because of the extremely high surface temperature, carryover is among the most pronounced of any method — typically 4–5 °C — and pulling at 52–53 °C (126–127 °F) is required to land at a medium-rare serving temperature.",
+    "sous_vide": "The flat iron steak, from the infraspinatus of the shoulder blade, is exceptionally well-matched to sous vide: its strong marbling prevents the cut from drying during extended low-temperature baths, and its thin, even profile (2–3 cm) means it reaches thermal equilibrium with the circulator water quickly. Sous vide produces edge-to-edge even doneness that no other method can match — there is no grey band, no overcooking at the edges — and the moist, sealed environment retains every gram of juices that other methods lose to evaporation. **Important sous vide note:** the probe cannot be inserted into the steak during the sealed-bag cooking stage; the circulator temperature itself is the target temperature. A probe can be used post-bath to verify internal temperature after removing the steak from the bag, and is useful for confirming temperature hold before the finishing sear. Typical cook times for a 2–3 cm flat iron are 1–4 hours at 55–57 °C (131–135 °F); beyond 4 hours the texture can begin to degrade as enzymes continue to work. Carryover during the finishing sear adds 2–4 °C, so when searing post-bath, the bath temperature should be set 2–3 °C below the intended final serving temperature, or the sear should be brief and aggressive."
+  },
+  "hanger_steak": {
+    "charcoal_grill": "Hanger steak over live charcoal adds an important dimension to this already intensely flavoured cut. The fat-and-flavour drippings from the hanging muscle hit the hot coals and combust into brief flare-ups, depositing charred aromatic compounds onto the steak surface. This combination of deep beef flavour + charcoal smoke + char edge makes the hanger steak over charcoal one of the most intensely flavoured steak preparations achievable. The sinew-containing version (some butchers leave the central connective tissue) is convenient to cook whole and split post-resting; the sinew-removed version cooks as two thin separate muscles. Carryover from a very hot charcoal fire is 5–7 °C.",
+    "grill": "Hanger steak (*onglet* in French, *bavette de flanchet* regionally, *butcher's secret* in American tradition — so named because it \"hangs\" from the diaphragm between the loin and the rib) is a single coarsely-grained, deeply beefy muscle cut from the plate section. There is only one per animal. Its intense beefy, slightly offal-like flavour is beloved in French bistro cooking (*onglet à l'échalote*) and in American steakhouse menus. Hanger steak is highly suited to direct-heat grilling: its loose, open grain browns quickly and the flavourful drippings cause brief flare-ups that add charred notes. It must be served no hotter than medium (57 °C); beyond that the loose grain becomes unpleasantly dry. A central sinew that runs along the steak must be removed before serving — it separates the two muscles. Carryover is 4–5 °C.",
+    "pan_fry": "The hanger steak (onglet in French, lombatello in Italian, nierenzapfen in German) hangs from the diaphragm of the animal between the last rib and the loin, connected to the spine by a single thick central sinew that runs the length of the muscle and is typically removed by the butcher before sale. Because there is only one hanger per animal and the muscle performs continuous respiratory work, the fibres are coarse and loosely aligned, producing an open, yielding texture that carries seasoning exceptionally well and releases abundant juices when cut. The flavour is the most mineral and intensely beefy of all common quick-cook cuts. Pan searing is ideally suited to the hanger because the direct conductive heat of a cast-iron or carbon-steel pan drives the Maillard reaction the cut needs before its lean interior overcooks; the loose grain structure expels moisture rapidly above 60 °C, making temperature precision more important here than with a more forgiving ribeye. Carryover is moderate — typically 3–5 °C — and because the steak is often thinner and less regular than a ribeye, probe placement in the thickest section of lean muscle is critical.",
+    "pan_sear": "The hanger steak (onglet in French, lombatello in Italian, nierenzapfen in German) hangs from the diaphragm of the animal between the last rib and the loin, connected to the spine by a single thick central sinew that runs the length of the muscle and is typically removed by the butcher before sale. Because there is only one hanger per animal and the muscle performs continuous respiratory work, the fibres are coarse and loosely aligned, producing an open, yielding texture that carries seasoning exceptionally well and releases abundant juices when cut. The flavour is the most mineral and intensely beefy of all common quick-cook cuts. Pan searing is ideally suited to the hanger because the direct conductive heat of a cast-iron or carbon-steel pan drives the Maillard reaction the cut needs before its lean interior overcooks; the loose grain structure expels moisture rapidly above 60 °C, making temperature precision more important here than with a more forgiving ribeye. Carryover is moderate — typically 3–5 °C — and because the steak is often thinner and less regular than a ribeye, probe placement in the thickest section of lean muscle is critical."
+  },
+  "ny_strip": {
+    "air_fryer": "New York strip steak cooked in an air fryer is exposed to intense circulated hot air in a compact basket — the result approximates oven roasting but faster, with the hot air producing a slightly crisped exterior. For a steak, the air fryer is not a substitute for a screaming-hot cast-iron sear; it produces a dryer crust than a pan sear but is convenient for a one-appliance preparation. The strip's firm, moderate-marbling muscle responds well to air fryer temperatures — typically 200–220 °C for 8–12 minutes. Many recipes recommend a brief stovetop or broiler finish after the air fryer step to develop a true Maillard crust. Carryover from the air fryer basket is 3–5 °C. The technique is most common in home-cooking publications from the 2020s.",
+    "charcoal_grill": "The New York strip over live hardwood charcoal benefits from the distinctive smoke compounds — guaiacol, syringol, and related phenolics — that gas grilling cannot replicate. The intense radiant heat from a well-managed charcoal fire sears the strip's firm muscle rapidly, rendering the fat cap and producing a deeply flavoured crust. The charcoal method also permits the cook to modulate the fire by adjusting air vents and coal arrangement; a two-zone fire (direct coals on one side, indirect on the other) allows initial searing then gentle finishing by indirect heat for thick-cut strips. Carryover from a very hot charcoal fire is 5–6 °C for a thick steak; this must be factored into the pull temperature.",
+    "grill": "The New York strip on the grill benefits from the direct radiant and convective heat of a gas or charcoal grill to produce pronounced grill marks and a lightly smoky exterior while the moderate marbling keeps the interior moist. The strip's firm, single-muscle composition makes it more forgiving of higher direct heat than the ribeye — it can be cooked over screaming-hot coals without the fat flare-ups that a ribeye's heavier marbling creates. The fat cap, rendered against the grates, crisps and delivers flavour to the exterior. Indirect-heat finishing after initial direct searing allows thick strip steaks to reach medium-rare temperature evenly. Carryover from a very hot charcoal grill is 4–6 °C; from a gas grill somewhat less.",
+    "oven_roast": "The New York strip steak (also called strip loin, sirloin strip, Kansas City strip, or *contre-filet* in French) is cut from the short loin of the beef carcass — the longissimus dorsi muscle on the posterior side of the backbone, behind the ribeye primal and ahead of the sirloin. It is a single-muscle steak with moderate marbling, firmer texture than a ribeye (the muscle does slightly more work), and a pronounced beefy flavour. The fat cap along one edge is a defining characteristic and flavour source. Pan searing is a primary preparation — the strip's firm, uniform cross-section sears evenly, and the fat cap can be rendered against the pan edge by standing the steak on its side. Carryover is 3–5 °C for a thick strip steak; the lean-to-moderate marbling means less self-basting than a ribeye.",
+    "pan_fry": "The New York strip steak (also called strip loin, sirloin strip, Kansas City strip, or *contre-filet* in French) is cut from the short loin of the beef carcass — the longissimus dorsi muscle on the posterior side of the backbone, behind the ribeye primal and ahead of the sirloin. It is a single-muscle steak with moderate marbling, firmer texture than a ribeye (the muscle does slightly more work), and a pronounced beefy flavour. The fat cap along one edge is a defining characteristic and flavour source. Pan searing is a primary preparation — the strip's firm, uniform cross-section sears evenly, and the fat cap can be rendered against the pan edge by standing the steak on its side. Carryover is 3–5 °C for a thick strip steak; the lean-to-moderate marbling means less self-basting than a ribeye.",
+    "pan_sear": "The New York strip steak (also called strip loin, sirloin strip, Kansas City strip, or *contre-filet* in French) is cut from the short loin of the beef carcass — the longissimus dorsi muscle on the posterior side of the backbone, behind the ribeye primal and ahead of the sirloin. It is a single-muscle steak with moderate marbling, firmer texture than a ribeye (the muscle does slightly more work), and a pronounced beefy flavour. The fat cap along one edge is a defining characteristic and flavour source. Pan searing is a primary preparation — the strip's firm, uniform cross-section sears evenly, and the fat cap can be rendered against the pan edge by standing the steak on its side. Carryover is 3–5 °C for a thick strip steak; the lean-to-moderate marbling means less self-basting than a ribeye.",
+    "sous_vide": "New York strip cooked sous vide is precision-cooked in a sealed bag at the target temperature, then given a rapid high-heat sear for crust development. The strip's firm, moderately marbled muscle is an excellent candidate for sous vide because the long, even cook time (1–4 hours) fully relaxes the muscle fibres, producing a more tender result than pan searing alone, while the precise temperature control eliminates the wide temperature gradient (from surface to core) that occurs with conventional searing. Post-bath searing is brief — 60–90 seconds per side maximum — as the steak is already at the target internal temperature. Carryover from the post-bath sear adds 2–3 °C to the surface but the core stays at the bath temperature. The bath temperature is the target internal temperature."
+  },
+  "picanha": {
+    "charcoal_grill": "Picanha over live charcoal is the definitive Brazilian *churrasco* preparation — in Brazil, the whole *rump cap* is threaded onto long metal skewers in a horseshoe shape (fat cap outside) and rotated continuously above the charcoal fire of the *churrascaria*, the fat dripping and basting the meat as it cooks. At home on a kettle or kamado grill, the rotisserie method can be replicated or a simplified two-zone direct-then-indirect approach is used. The charcoal smoke compounds penetrate the fat cap and impart a distinctive aroma that is a signature of Brazilian *churrasco*. Carryover from a hot charcoal fire is 5–7 °C.",
+    "grill": "Picanha (*alcatra de capa* in Portuguese; *coulotte* in French; sirloin cap or rump cap in English) is cut from the top of the rump, comprising the *biceps femoris* muscle capped by a thick layer of subcutaneous fat. It is the most prized cut in Brazilian *churrasco* culture. The fat cap is extremely important — it renders during cooking and bastes the meat from above. Picanha has medium-to-high marbling for a rump-region cut and a bold, beefy flavour. Pan searing is less traditional than grilling for picanha, but produces excellent results: the fat cap renders in a hot pan to baste the lean meat below, the muscle crust Maillard-browns well, and the thin cut cooks quickly. Carryover is 4–5 °C.",
+    "oven_roast": "Picanha (*alcatra de capa* in Portuguese; *coulotte* in French; sirloin cap or rump cap in English) is cut from the top of the rump, comprising the *biceps femoris* muscle capped by a thick layer of subcutaneous fat. It is the most prized cut in Brazilian *churrasco* culture. The fat cap is extremely important — it renders during cooking and bastes the meat from above. Picanha has medium-to-high marbling for a rump-region cut and a bold, beefy flavour. Pan searing is less traditional than grilling for picanha, but produces excellent results: the fat cap renders in a hot pan to baste the lean meat below, the muscle crust Maillard-browns well, and the thin cut cooks quickly. Carryover is 4–5 °C.",
+    "pan_sear": "Picanha (*alcatra de capa* in Portuguese; *coulotte* in French; sirloin cap or rump cap in English) is cut from the top of the rump, comprising the *biceps femoris* muscle capped by a thick layer of subcutaneous fat. It is the most prized cut in Brazilian *churrasco* culture. The fat cap is extremely important — it renders during cooking and bastes the meat from above. Picanha has medium-to-high marbling for a rump-region cut and a bold, beefy flavour. Pan searing is less traditional than grilling for picanha, but produces excellent results: the fat cap renders in a hot pan to baste the lean meat below, the muscle crust Maillard-browns well, and the thin cut cooks quickly. Carryover is 4–5 °C."
+  },
+  "ribeye_steak": {
+    "air_fryer": "The air fryer cooks a ribeye using rapid hot-air circulation — effectively a compact convection oven running 20–30 °C hotter than a standard oven. For a ribeye steak (2 cm thick), 190–200 °C × 10 minutes produces a result between medium-rare and medium, with a modest exterior crust. For steak-quality crust, some cooks sear on a very hot pan for 1 minute before or after the air fryer. The method is convenient and produces consistent results without the smoke of a pan sear.\n\nTarget internal temperatures (air fryer ribeye):\n- Medium-rare: **54–57 °C (129–135 °F)** — pull around 8–9 min at 200 °C\n- Medium: **60–63 °C (140–145 °F)** — pull at 10–12 min",
+    "charcoal_grill": "The ribeye over charcoal is the premium grilling experience — charcoal provides both radiant heat and wood smoke flavour that gas grills cannot match. In Italy, the thick-cut Bistecca alla Fiorentina (typically a T-bone or Chianina ribeye) is the definitive charcoal-grilled beef: exterior well-coloured, interior al sangue (rare). The Maillard reaction across the fat cap creates a crust unlike any other cooking method. The steak must be at least 3 fingers thick (6–8 cm for Fiorentina) and allowed to reach room temperature before grilling.\n\nTarget internal temperatures (charcoal grill):\n- Rare: **50–52 °C (122–126 °F)**\n- Medium-rare: **54–57 °C (129–135 °F)** — international norm\n- Medium: **60–63 °C (140–145 °F)**",
+    "grill": "The ribeye is ideally suited to the grill — the marbling renders and self-bastes the meat while the grill provides direct radiant heat for exterior caramelisation. On a gas grill (gasgrill), high direct heat is used throughout, turning the steak frequently (every 30 seconds) for the most even crust. The ribeye should be at least 200–250 g per steak to cook successfully; lighter cuts become dry before a proper crust can form. Wagyu or premium grass-fed beef (Greater Omaha) are particularly popular for grilling due to their fat content.\n\nTarget internal temperatures (grill, pull temps):\n- Medium-rare: **pull at 52–54 °C (126–129 °F)**, resting to **57 °C (135 °F)**\n- Medium: **pull at 57–59 °C (135–138 °F)**, resting to **62 °C (144 °F)**",
+    "oven_roast": "The ribeye steak is cut from the longissimus dorsi muscle of the rib primal (ribs 6–12), a muscle that does minimal work and therefore develops exceptional intramuscular fat (marbling) throughout its grain. That marbling is the defining feature: the fat pockets liquefy under heat and baste the muscle from within, producing a richness and self-basting character that no other common steak cut matches. Pan searing is a natural partner for the ribeye because the very high conductive heat of a cast-iron or carbon-steel pan drives rapid Maillard browning of the fat-rich exterior, producing a deeply caramelised crust while the marbling keeps the interior moist even if the cook overshoots slightly. The bone-in version (côte de bœuf / cowboy ribeye) retains more flavour through the cook but requires more precise probe placement to read the eye of the steak rather than the area near the bone. Carryover in a pan-seared ribeye is moderate — typically 3–5 °C — because the metal pan delivers intense surface heat that dissipates once the steak is removed, but the fat content slows core temperature equalisation.\n\nTarget internal temperatures (oven roast ribeye):\n- Medium-rare: **pull from oven at 52–54 °C (126–129 °F)**, rest to **57 °C (135 °F)**\n- Medium: **pull at 57–59 °C (135–138 °F)**",
+    "pan_fry": "The ribeye (also known as entrecôte, Scotch fillet, antrikot, costata, chuletón, Rib-Eye, or μπριζόλα rib eye) is cut from the rib section of the beef, ribs 7–12. It is richly marbled with intramuscular fat, making it one of the most flavourful and forgiving cuts for pan frying — the fat bastes the meat from within as it renders. Thickness of 2–3 cm is ideal for pan frying; thicker cuts should be finished in the oven.\n\nTarget internal temperatures (pan fry, resting temp):\n- Rare: **50 °C (122 °F)**\n- Medium-rare: **54–57 °C (129–135 °F)** ← most common for ribeye\n- Medium: **60–63 °C (140–145 °F)**\n- Well done: **70+ °C (158+ °F)**",
+    "pan_sear": "The ribeye steak is cut from the longissimus dorsi muscle of the rib primal (ribs 6–12), a muscle that does minimal work and therefore develops exceptional intramuscular fat (marbling) throughout its grain. That marbling is the defining feature: the fat pockets liquefy under heat and baste the muscle from within, producing a richness and self-basting character that no other common steak cut matches. Pan searing is a natural partner for the ribeye because the very high conductive heat of a cast-iron or carbon-steel pan drives rapid Maillard browning of the fat-rich exterior, producing a deeply caramelised crust while the marbling keeps the interior moist even if the cook overshoots slightly. The bone-in version (côte de bœuf / cowboy ribeye) retains more flavour through the cook but requires more precise probe placement to read the eye of the steak rather than the area near the bone. Carryover in a pan-seared ribeye is moderate — typically 3–5 °C — because the metal pan delivers intense surface heat that dissipates once the steak is removed, but the fat content slows core temperature equalisation.",
+    "sous_vide": "The ribeye steak is cut from the longissimus dorsi muscle of the rib primal (ribs 6–12), a muscle that does minimal work and therefore develops exceptional intramuscular fat (marbling) throughout its grain. That marbling is the defining feature: the fat pockets liquefy under heat and baste the muscle from within, producing a richness and self-basting character that no other common steak cut matches. Pan searing is a natural partner for the ribeye because the very high conductive heat of a cast-iron or carbon-steel pan drives rapid Maillard browning of the fat-rich exterior, producing a deeply caramelised crust while the marbling keeps the interior moist even if the cook overshoots slightly. The bone-in version (côte de bœuf / cowboy ribeye) retains more flavour through the cook but requires more precise probe placement to read the eye of the steak rather than the area near the bone. Carryover in a pan-seared ribeye is moderate — typically 3–5 °C — because the metal pan delivers intense surface heat that dissipates once the steak is removed, but the fat content slows core temperature equalisation.\n\nTarget sous vide bath temperatures (ribeye):\n- Rare: **50 °C (122 °F)** × 1.5–2 hr\n- Medium-rare: **54–57 °C (129–135 °F)** × 1.5–2 hr ← recommended for ribeye\n- Medium: **60–62 °C (140–144 °F)** × 1.5–2 hr\n- Well done: **65 °C (149 °F)** × 1.5–2 hr"
+  },
+  "sirloin_steak": {
+    "air_fryer": "The sirloin steak is cut from the sirloin primal, which sits between the short loin (where the NY strip originates) and the round. Top sirloin is the most common steak cut from this primal — it is a firm, relatively lean steak with a bold beefy flavour from the greater muscle activity of this region of the carcass. Compared to the NY strip, top sirloin has less marbling and a slightly coarser grain, making it less forgiving of overcooking; compared to the round, it is noticeably more tender. Pan searing suits sirloin well because the high heat compensates for the reduced marbling by creating a flavourful crust — the Maillard reaction is the primary flavour contribution to a seared top sirloin. The cap muscle (*picanha* region of the sirloin cap) is sometimes separated and considered a distinct cut; this leaf concerns the main top sirloin steak. Carryover is 4–5 °C.",
+    "charcoal_grill": "Sirloin steak over live charcoal acquires the distinctive smokiness and char flavour that only real charcoal combustion products can provide. The lean top sirloin muscle — firmer and less marbled than the ribeye or NY strip — forms a particularly satisfying crust over very hot coals because the dry surface chars rapidly. Korean BBQ traditions feature thinly sliced sirloin grilled directly over charcoal (*charcoal-grilled bulgogi*); South American asado traditions use thick bone-in sirloin; American competition BBQ uses direct high heat. Carryover from very hot charcoal fire is 5–7 °C, making early pulling essential.",
+    "grill": "Top sirloin on the grill is a very widely prepared cut across American BBQ, South American asado, and Korean bulgogi traditions. The lean, firm muscle structure sears well over direct high heat, producing charred grill marks on the surface while the moderate fat content prevents the excessive flare-ups associated with ribeye. For steaks under 3 cm thick, direct-heat-only grilling is standard; for thicker cuts, a two-zone approach (sear then indirect finish) produces better results. Sirloin's lean composition means it must not be cooked past medium without significant quality loss. Carryover from a hot grill is 4–6 °C.",
+    "oven_roast": "The sirloin steak is cut from the sirloin primal, which sits between the short loin (where the NY strip originates) and the round. Top sirloin is the most common steak cut from this primal — it is a firm, relatively lean steak with a bold beefy flavour from the greater muscle activity of this region of the carcass. Compared to the NY strip, top sirloin has less marbling and a slightly coarser grain, making it less forgiving of overcooking; compared to the round, it is noticeably more tender. Pan searing suits sirloin well because the high heat compensates for the reduced marbling by creating a flavourful crust — the Maillard reaction is the primary flavour contribution to a seared top sirloin. The cap muscle (*picanha* region of the sirloin cap) is sometimes separated and considered a distinct cut; this leaf concerns the main top sirloin steak. Carryover is 4–5 °C.",
+    "pan_fry": "The sirloin steak is cut from the sirloin primal, which sits between the short loin (where the NY strip originates) and the round. Top sirloin is the most common steak cut from this primal — it is a firm, relatively lean steak with a bold beefy flavour from the greater muscle activity of this region of the carcass. Compared to the NY strip, top sirloin has less marbling and a slightly coarser grain, making it less forgiving of overcooking; compared to the round, it is noticeably more tender. Pan searing suits sirloin well because the high heat compensates for the reduced marbling by creating a flavourful crust — the Maillard reaction is the primary flavour contribution to a seared top sirloin. The cap muscle (*picanha* region of the sirloin cap) is sometimes separated and considered a distinct cut; this leaf concerns the main top sirloin steak. Carryover is 4–5 °C.",
+    "pan_sear": "The sirloin steak is cut from the sirloin primal, which sits between the short loin (where the NY strip originates) and the round. Top sirloin is the most common steak cut from this primal — it is a firm, relatively lean steak with a bold beefy flavour from the greater muscle activity of this region of the carcass. Compared to the NY strip, top sirloin has less marbling and a slightly coarser grain, making it less forgiving of overcooking; compared to the round, it is noticeably more tender. Pan searing suits sirloin well because the high heat compensates for the reduced marbling by creating a flavourful crust — the Maillard reaction is the primary flavour contribution to a seared top sirloin. The cap muscle (*picanha* region of the sirloin cap) is sometimes separated and considered a distinct cut; this leaf concerns the main top sirloin steak. Carryover is 4–5 °C.",
+    "sous_vide": "Top sirloin cooked sous vide benefits especially from the method because its lean, firmer muscle responds dramatically to prolonged low-temperature cooking: the collagen in the slightly tougher sirloin muscle has time to soften without exceeding the target temperature, producing a more tender result than a quick pan sear at the same final temperature. At 54–57 °C for 2–4 hours, top sirloin achieves the tenderness of a much more expensive cut. The bath temperature is the target internal temperature; carryover from the post-bath sear is 2–3 °C at the surface only."
+  },
+  "skirt_steak": {
+    "charcoal_grill": "Skirt steak over live charcoal is arguably its highest form — in taquero tradition, *arrachera asada* (literally \"grilled skirt steak\") means skirt steak cooked over mesquite or hardwood charcoal, where the fat drippings ignite the coals into brief, flavour-depositing flare-ups. The smoky charcoal notes complement the intense beefy flavour of the diaphragm muscle. Mexican *taquero* tradition uses very hot mesquite charcoal; Argentine *parrilla* tradition uses quebracho wood embers. The probe challenge is the same as on a gas grill: thin steak, end insertion required. Carryover from very hot charcoal is 5–7 °C.",
+    "grill": "Skirt steak is cut from the plate section (the diaphragm muscles) of the beef — there are two muscles: the outside skirt (*diaphragm proper*, thicker, more uniform, more flavourful) and the inside skirt (thinner, more variable in thickness). Both are intensely flavoured and very coarsely grained, making them ideal for marinades and quick, very high-heat cooking. Skirt steak is central to Mexican *fajitas*, Brazilian *fraldinha*, and American steakhouse menus. Pan searing skirt steak requires the very highest heat possible: the steak is thin (1–1.5 cm) and must develop a deep brown crust in the 2–3 minutes before the interior exceeds 57 °C. The MEATER probe is challenging in a thin cut — insert from the end, angling towards the thickest part, or monitor the time-based cues in the recipe. Carryover from a screaming-hot cast-iron pan is 3–5 °C.",
+    "pan_fry": "Skirt steak is cut from the plate section (the diaphragm muscles) of the beef — there are two muscles: the outside skirt (*diaphragm proper*, thicker, more uniform, more flavourful) and the inside skirt (thinner, more variable in thickness). Both are intensely flavoured and very coarsely grained, making them ideal for marinades and quick, very high-heat cooking. Skirt steak is central to Mexican *fajitas*, Brazilian *fraldinha*, and American steakhouse menus. Pan searing skirt steak requires the very highest heat possible: the steak is thin (1–1.5 cm) and must develop a deep brown crust in the 2–3 minutes before the interior exceeds 57 °C. The MEATER probe is challenging in a thin cut — insert from the end, angling towards the thickest part, or monitor the time-based cues in the recipe. Carryover from a screaming-hot cast-iron pan is 3–5 °C.",
+    "pan_sear": "Skirt steak is cut from the plate section (the diaphragm muscles) of the beef — there are two muscles: the outside skirt (*diaphragm proper*, thicker, more uniform, more flavourful) and the inside skirt (thinner, more variable in thickness). Both are intensely flavoured and very coarsely grained, making them ideal for marinades and quick, very high-heat cooking. Skirt steak is central to Mexican *fajitas*, Brazilian *fraldinha*, and American steakhouse menus. Pan searing skirt steak requires the very highest heat possible: the steak is thin (1–1.5 cm) and must develop a deep brown crust in the 2–3 minutes before the interior exceeds 57 °C. The MEATER probe is challenging in a thin cut — insert from the end, angling towards the thickest part, or monitor the time-based cues in the recipe. Carryover from a screaming-hot cast-iron pan is 3–5 °C."
+  },
+  "t_bone": {
+    "air_fryer": "Air-frying a T-bone steak is practical for steaks up to 3 cm thick and 700 g — the bone makes the T-bone bulkier than simple steak cuts, so it must fit in the air fryer basket. Air fryers circulate extremely hot air at 200–220 °C and produce a crisped surface resembling oven-roasted rather than pan-seared beef, without the mess of oil splatter. The two-muscle T-bone geometry (striploin + fillet) requires monitoring the striploin temperature — the MEATER probe goes in the striploin side, away from the bone. The result is less dramatic in crust quality than a cast-iron sear, but significantly more convenient for weeknight cooking. Carryover from the air fryer basket is 3–5 °C.",
+    "charcoal_grill": "A T-bone steak over live charcoal is one of the iconic preparations of American BBQ and Argentine *parrilla* tradition. The charcoal heat is less precisely controllable than gas, which means the two-muscle geometry of the T-bone (the faster-cooking tenderloin fillet and the slower-cooking striploin) requires active management: sear both sides over the hottest coals, then move to the cooler side of the grill with the bone facing the heat. Argentine *parrilleros* (grill masters) rotate the steak on its bone edge for a period, allowing the bone to conduct heat into the meat and providing an even cook without additional flare-ups. The bone-edge sear also produces crackling rendered fat deposits that are some of the most prized bites on the steak. Carryover from very hot charcoal is 5–7 °C.",
+    "grill": "The T-bone steak is defined by the T-shaped vertebral bone that separates two distinct muscles: the larger striploin (*longissimus dorsi*) on the long side of the bone, and the smaller tenderloin (*psoas major*) fillet on the shorter side. This presents a unique cooking challenge: the two muscles have different ideal internal temperatures (the tenderloin cooks faster and is best at 52–54 °C, the strip benefits from 55–57 °C), and the bone itself acts as an insulator — the meat nearest the bone always lags behind by 3–5 °C. Pan searing a T-bone requires a pan large enough to accommodate the steak flat, very high heat, and careful probe placement. The MEATER probe should be placed in the striploin side (the larger portion), away from the bone, for the most representative reading. Carryover is 4–5 °C.",
+    "oven_roast": "The T-bone steak is defined by the T-shaped vertebral bone that separates two distinct muscles: the larger striploin (*longissimus dorsi*) on the long side of the bone, and the smaller tenderloin (*psoas major*) fillet on the shorter side. This presents a unique cooking challenge: the two muscles have different ideal internal temperatures (the tenderloin cooks faster and is best at 52–54 °C, the strip benefits from 55–57 °C), and the bone itself acts as an insulator — the meat nearest the bone always lags behind by 3–5 °C. Pan searing a T-bone requires a pan large enough to accommodate the steak flat, very high heat, and careful probe placement. The MEATER probe should be placed in the striploin side (the larger portion), away from the bone, for the most representative reading. Carryover is 4–5 °C.",
+    "pan_sear": "The T-bone steak is defined by the T-shaped vertebral bone that separates two distinct muscles: the larger striploin (*longissimus dorsi*) on the long side of the bone, and the smaller tenderloin (*psoas major*) fillet on the shorter side. This presents a unique cooking challenge: the two muscles have different ideal internal temperatures (the tenderloin cooks faster and is best at 52–54 °C, the strip benefits from 55–57 °C), and the bone itself acts as an insulator — the meat nearest the bone always lags behind by 3–5 °C. Pan searing a T-bone requires a pan large enough to accommodate the steak flat, very high heat, and careful probe placement. The MEATER probe should be placed in the striploin side (the larger portion), away from the bone, for the most representative reading. Carryover is 4–5 °C."
+  },
+  "tomahawk": {
+    "charcoal_grill": "The tomahawk over charcoal is the premier outdoor cooking experience — the enormous bone handle allows it to stand upright beside the coals for resting. Charcoal-grilled tomahawk requires the same reverse-sear principle as gas grill: indirect heat to bring the core up safely, then direct high heat for the crust. The Maillard reaction on the fat-cap over charcoal produces flavour compounds unavailable from gas. Use hardwood charcoal (oak, holm oak, beech) for best flavour.\n\nTarget internal temperatures (charcoal grill):\n- Medium-rare: **core 55–57 °C (131–135 °F)** · pull at **52–54 °C (126–129 °F)**\n- Medium: **core 60–63 °C (140–145 °F)**",
+    "grill": "The tomahawk steak is a thick-cut ribeye (typically 5–8 cm thick, 1.2–1.8 kg) with the full rib bone still attached, giving it its distinctive axe-like appearance. Because of its enormous thickness, it cannot be cooked on the grill alone without risking a thick band of grey overcooked meat around a raw centre. The best method is reverse sear: low oven or indirect heat first, then high direct grill heat for the crust. The bone contributes to flavour during the slow cook phase.\n\nTarget internal temperatures:\n- Medium-rare: **pull from oven at 50 °C (122 °F)**, rest 10 min, then grill to **55–57 °C (131–135 °F)**\n- Core temperature at table: **57–60 °C (135–140 °F)**",
+    "oven_roast": "The tomahawk oven roast uses the reverse-sear method: slow oven first at low temperature to cook the interior evenly, then a hot sear (on the stove or under the grill) for the crust. Because of the 5–8 cm thickness, cooking it entirely on the stove is impossible — the exterior would be cremated before the centre is safe. At 90 °C in the oven, the steak takes 90 minutes for medium; at 140 °C (fan) it takes 40–45 minutes. Both yield excellent, evenly-cooked results with minimal grey-band.\n\nTarget internal temperatures (oven pull temps before sear):\n- For medium-rare: **pull from oven at 50 °C (122 °F)**, sear to 55 °C, rest to **57 °C (135 °F)**",
+    "pan_sear": "The tomahawk is too large to fit in a standard frying pan, so \"pan sear\" for a tomahawk refers to an edge-sear + large skillet or cast-iron flat-griddle technique, typically combined with an oven finish. The bone (30–40 cm) must be positioned outside the pan. A large cast-iron pan (30+ cm) or a paella pan is ideal. The sear creates the Maillard crust; the oven brings the thick interior to temperature safely without overcooking the exterior. The technique is essentially reverse-sear reversed: sear first, oven second.\n\nTarget internal temperatures:\n- Medium-rare: **pull from oven at 55 °C (131 °F)**, rest to **57–58 °C (135–136 °F)**",
+    "sous_vide": "The tomahawk is a bone-in ribeye cut from the rib primal (ribs 6–12) with the entire rib bone left intact — typically 30–45 cm long. The long bone is for visual presentation; the meat and flavour characteristics are identical to a standard bone-in ribeye. A typical tomahawk weighs 900 g–1.5 kg with the bone, or 500–800 g of actual beef. The thick profile (5–8 cm) means that high-heat-only methods produce uneven results; the reverse-sear or sous vide approach is strongly preferred for even interior cooking. Carryover is 3–5°C for a thick tomahawk.\n\nTarget sous vide bath temperatures (tomahawk):\n- Medium-rare: **54–57 °C (129–135 °F)** × 3–4 hr\n- Medium: **60–62 °C (140–144 °F)** × 3–4 hr"
+  },
+  "tri_tip": {
+    "charcoal_grill": "Tri-tip on charcoal benefits from the classic Santa Maria barbecue tradition — the original Californian preparation. The key is a 2-zone charcoal setup: sear directly over the coals first for a crust, then finish on the indirect side to bring the interior to temperature safely. The tapered shape means the thin end will always be more done; probe the thickest section. Red oak is the traditional Santa Maria wood; hickory and mesquite are alternatives.\n\nTarget internal temperatures (charcoal grill):\n- Medium-rare: **pull at 54–57 °C (129–135 °F)**",
+    "grill": "The tri-tip on the grill benefits from a two-zone setup (direct for crust, indirect for interior). Because it is an irregularly shaped triangular cut (thicker in the centre, tapered at the ends), the thin end will overcook before the thick part reaches temperature if cooked entirely over direct heat. A low indirect zone (175 °C) for 20–30 minutes followed by a quick crust sear gives the best result. The same marinade used for oven roasting works excellently on the grill — the charred edges add another flavour dimension.\n\nTarget internal temperatures (grill):\n- Medium-rare: **pull at 54–57 °C (129–135 °F)**, rest 10–15 min to **57–60 °C (135–140 °F)**",
+    "oven_roast": "The tri-tip (also known as triangle steak, Santa Maria steak, bottom sirloin, and in German-speaking countries as Bürgermeisterstück or ball tip) is a triangular cut from the bottom sirloin. It is lean with moderate marbling, making it ideal for oven roasting with a marinade to add juiciness. Typical weight: 700 g–1.5 kg. It must be sliced against the grain (the grain changes direction in the centre) for tenderness. Temperature target: 54–57 °C (129–135 °F) for medium-rare.\n\nTarget internal temperatures (oven roast):\n- Medium-rare: **pull at 44–50 °C (111–122 °F)**, rest 20–30 min to reach **52–57 °C (125–135 °F)**\n- Medium: **pull at 55–57 °C (131–135 °F)**, rest to **63 °C (145 °F)**",
+    "pan_sear": "Pan-searing a tri-tip requires choosing between two approaches: (1) sear the whole roast and finish in the oven — best for a whole tri-tip 700 g+; (2) slice into 2 cm steaks and pan-sear each one — fastest method. For whole sear, the constant-turning method (chefkoch.de) produces a better crust than leaving it static. The lean sections of tri-tip will overcook faster than the marbled centre, so the MEATER probe is essential for accurate pull temperature. Slice against the grain — the grain changes direction at the centre seam.\n\nTarget internal temperatures (pan sear):\n- Medium-rare: **pull at 54–57 °C (129–135 °F)**",
+    "smoker": "Smoking tri-tip low-and-slow at 107–120 °C (225–250 °F) produces exceptional results: the lean meat absorbs wood smoke flavour deeply, and the low temperature prevents the lean sections from drying out. Hickory is the traditional wood for beef; mesquite works but is more aggressive. Pellet smokers are ideal (consistent temperature, no babysitting); charcoal grill-smokers give more authentic flavour. Pull temperature: 57–60 °C (135–140 °F) for medium, then sear briefly for the crust.\n\nTarget internal temperatures (smoker):\n- Medium-rare: **pull at 54–57 °C (129–135 °F)** — 57–63 °C (135–145 °F) at table\n- Medium: **pull at 57–60 °C (135–140 °F)**\n- Times: approx. 30 min/lb (65 min/kg) at 225 °F / 107 °C",
+    "sous_vide": "Tri-tip (also known as triangle steak, Santa Maria steak, or *culotte de bœuf* in French) is a triangular muscle taken from the bottom sirloin primal — specifically the tensor fasciae latae. It weighs 400–900 g and the grain runs in two directions, which is critical for correct slicing. Tri-tip is lean, with a beefier flavour than tenderloin but less richness than ribeye. It is the centrepiece of California's Santa Maria-style barbecue. Carryover is 3–5°C.\n\nTarget sous vide bath temperatures (tri-tip):\n- Medium-rare: **56–57 °C (133–135 °F)** × 1.5–3 hr\n- Medium: **60–62 °C (140–144 °F)** × 1.5–3 hr"
+  },
+  "beef_liver": {
+    "pan_fry": "Beef liver is one of the densest, most nutrient-rich offal cuts in the carcass — a chocolate-coloured, finely-textured mass of hepatocyte tissue with very little connective tissue and a thin filmy capsule. Its iron-and-mineral profile gives a pronounced metallic flavour that mellows dramatically with brief soaking in milk before cooking — a step common to most European traditions. Pan frying is the classic method: 6–8 mm slices flashed in hot fat, browned hard on both sides, and pulled before the centre passes about 65 °C. Above that temperature the proteins seize and the slice turns chalky and grey-brown; the visual cue for correctly-pulled liver is a faint pink line through the centre. Carryover is short and small (1–2 °C) given the thin slices, but the slices continue cooking on the plate — serving immediately is essential.",
+    "pan_sear": "Beef liver is one of the densest, most nutrient-rich offal cuts in the carcass — a chocolate-coloured, finely-textured mass of hepatocyte tissue with very little connective tissue and a thin filmy capsule. Its iron-and-mineral profile gives a pronounced metallic flavour that mellows dramatically with brief soaking in milk before cooking — a step common to most European traditions. Pan frying is the classic method: 6–8 mm slices flashed in hot fat, browned hard on both sides, and pulled before the centre passes about 65 °C. Above that temperature the proteins seize and the slice turns chalky and grey-brown; the visual cue for correctly-pulled liver is a faint pink line through the centre. Carryover is short and small (1–2 °C) given the thin slices, but the slices continue cooking on the plate — serving immediately is essential."
+  },
+  "beef_tongue": {
+    "braise": "Beef tongue (*Bos taurus* lingual muscle) is a single dense cylindrical muscle wrapped in a thick, papillae-covered skin. The muscle itself is rich in collagen and intramuscular fat; the skin is inedible and must be peeled after cooking — the standard method is to braise the whole tongue at 85–95 °C until the collagen converts to gelatin, then peel the skin while the tongue is still warm. Cooking times of 3–4 hours for a 1.5–2 kg tongue are standard. Carryover is essentially zero (the surrounding liquid buffers the temperature) but the tongue retains heat well after removal — the skin must be peeled within 5 minutes of lifting from the braise or it cools and tightens. Pull is timed by the texture of the muscle: a paring knife should slide in with no resistance.",
+    "slow_cooker": "Beef tongue cooked in an electric slow cooker is the same long-collagen-conversion process as a stove-top or oven braise, but executed in a sealed environment that holds the cooking liquid at a steady 85–95 °C (low setting) or 95–100 °C (high setting) without monitoring. The slow cooker is well suited to this cut because the unattended 6–10 hour cook completely converts the tongue's collagen to gelatin, the steam-tight environment keeps the muscle fully submerged in its liquid, and there is no risk of accidental boil-over (which would toughen the muscle). The peel-while-warm rule still applies — the skin must come off within 5–10 minutes of lifting from the cooker. Carryover is zero; the tongue stays at cooker temperature until removed."
+  },
+  "beef_shank": {
+    "braise": "Beef shank is the lower portion of the front (foreshank) or hind (hindshank) leg, structurally one of the most aggressively-worked muscles in the carcass: the constant motion of walking and standing builds dense bundles of muscle fibre wrapped in thick sheets of connective tissue, with a substantial central marrow bone running through cross-cut steaks (the *osso buco* preparation). Raw shank is among the toughest cuts in the animal; braised slowly for 3–4 hours at 85–95 °C, the connective tissue dissolves into rich gelatin, the marrow renders into the sauce, and the muscle becomes pull-apart tender. The bone-in cross-cut section holds shape because the connective-tissue ring around the muscle keeps it bound during the cook. Carryover is negligible — the surrounding liquid buffers temperature swings.",
+    "slow_cooker": "Beef shank cooked in an electric slow cooker is the same long-collagen-conversion preparation as a Dutch-oven braise, executed in a sealed environment that holds the cooking liquid at a steady 85–95 °C (low setting) without any monitoring. The cut's combination of dense connective tissue and a central marrow bone makes it an ideal slow-cooker subject — the long unattended cook fully converts collagen to gelatin, the marrow renders into the sauce, and the steam-tight environment keeps the muscle submerged in its own enriched liquid throughout. Searing the steaks before adding to the cooker is essential for deep flavour; the slow cooker itself contributes none of the Maillard browning that a stove-top sear or oven roast adds. Carryover is zero."
+  },
+  "brisket": {
+    "oven_roast": "Beef brisket is taken from the breast and lower chest of the animal, comprising two muscles — the flat (*pectoralis profundus*) and the point (*pectoralis superficialis*) — that support much of the animal's weight. The cut is dense with collagen-rich connective tissue and interspersed fat, making it exceptionally tough when cooked quickly but extraordinarily silky and tender once held at the collagen-conversion threshold long enough for connective tissue to dissolve into gelatin. Oven roasting at low temperature replicates the gentle, prolonged dry heat that the cut demands — the enclosed oven environment retains moisture driven off from the meat, preventing the surface from desiccating during the long cook. Carryover is negligible for brisket because the high moisture content and dense mass absorb and retain heat slowly; the internal temperature barely moves after the brisket is removed from the oven."
+  },
+  "chuck_roast": {
+    "braise": "Chuck roast is cut from the shoulder region of the animal (the chuck primal, roughly ribs 1–5 and the neck), and is one of the most collagen-dense roasting cuts in the carcass. The shoulder muscles endure constant movement throughout the animal's life, producing densely bundled muscle fibres interlaced with thick seams of connective tissue and fat — a structure that is aggressively tough at low internal temperatures but transforms into richly flavoured, pull-apart tenderness when braised gently over several hours. Braising is particularly suited to chuck because the submerging or partial immersion in liquid accelerates the hydrolysis of collagen into gelatin, producing a self-thickening braising sauce and a meltingly tender interior simultaneously. Carryover is negligible for chuck in a braise because the surrounding liquid buffers against temperature swings; the meat stays at cooking temperature until removed."
+  },
+  "beef_tenderloin_roast": {
+    "oven_roast": "The beef tenderloin (psoas major) runs along the interior of the spine and does almost no work during the animal's life, making it the most tender, least collagen-dense muscle in the carcass. A whole tenderloin roast (the \"châteaubriand\" section or full fillet) weighs approximately 1–2 kg and tapers from the thick butt end to a thin tail. It is exceptionally lean, with minimal intramuscular fat, making it vulnerable to drying out if overcooked — the window between perfectly rosy and dry, grey meat is narrow. Oven roasting suits the tenderloin because gentle, even heat preserves the moisture in the lean fibres; high-heat searing before or after the oven creates the Maillard crust that the lean exterior cannot produce on its own. Carryover is significant in a whole tenderloin — the concentrated lean mass retains heat for several minutes after leaving the oven, enough to raise the internal temperature noticeably — making the pull temperature meaningfully lower than the target serving temperature."
+  },
+  "prime_rib": {
+    "oven_roast": "Prime rib (also called standing rib roast) is cut from the rib primal (ribs 6–12), comprising the longissimus dorsi and surrounding muscles, with a generous fat cap and the rib bones attached. It is one of the most marbled subprimal sections of the animal — the rib muscles do relatively little work, and the high intramuscular fat content self-bastes during roasting, keeping the interior moist across a wide temperature range. Oven roasting is the canonical method for prime rib because the sustained, even heat of an enclosed oven allows the large mass (typically 2.5–5 kg) to heat evenly from edge to centre while the exterior fat cap renders and browns. Carryover is substantial for a prime rib — the large, dense mass retains heat efficiently, and internal temperature continues to rise for 15–30 minutes after removal; this must be accounted for in the pull temperature."
+  },
+  "goose_breast": {
+    "oven_roast": "Goose breast is a rich, deeply flavoured dark meat with a substantial fat layer, similar in character to duck breast but larger and more assertively flavoured. Like duck breast, it is often served medium-rare to medium (145–155 °F / 63–68 °C) by many European chefs, though USDA guidelines require 165 °F (74 °C). The oven-roast method for goose breast mirrors duck breast technique: stovetop fat rendering followed by oven finishing. Goose breast dries out at high oven temperatures, so a moderate 350–375 °F oven with careful temperature monitoring is essential.\n\nTarget internal temperature: **145–155 °F (63–68 °C)** — medium; pull at 140 °F and rest. USDA safe minimum: 165 °F (74 °C) — pull at 160 °F and rest.",
+    "pan_sear": "Goose breast shares the same cold-pan fat-rendering technique as duck breast. The skin-side goes into a cold dry skillet and the thick fat cap is rendered slowly over medium-low heat before the breast is flipped and finished. Goose breasts are larger than duck (often 10–14 oz each), so rendering time is slightly longer. The result — thin, crackling skin over juicy, pink meat — is the hallmark of properly executed goose breast pan sear. Medium to medium-rare (145–155 °F) is the standard in European cuisine; USDA requires 165 °F.\n\nTarget internal temperature: **145–155 °F (63–68 °C)** — medium; pull at 138–140 °F and rest. USDA well-done: 165 °F (74 °C)."
+  },
+  "goose_leg": {
+    "braise": "Goose legs are large, tough, highly flavoured cuts rich in connective tissue and intramuscular fat. Braising — browning the legs in fat, then cooking them submerged or partially submerged in aromatic liquid at low heat for 2–3 hours — is the optimal method for transforming this tough cut into fork-tender, fall-off-the-bone meat. The collagen-rich connective tissue converts to gelatin above 160 °F, but the most tender, succulent results come at 175–185 °F (79–85 °C) after extended braising. USDA minimum for poultry is 165 °F. Unlike duck confit, braising adds moisture; the braising liquid becomes a rich, gelatin-laden sauce.\n\nTarget internal temperature: **175–185 °F (79–85 °C)** — well above USDA minimum; extended time at this temperature melts collagen and produces best texture. Minimum safe: 165 °F (74 °C).",
+    "oven_roast": "Goose legs are large, collagen-rich cuts that benefit from moderate-to-low oven temperatures and extended roasting times. Unlike the breast, goose legs will not dry out from heat — they need heat sustained long enough to break down connective tissue. A 325–375 °F (163–190 °C) oven for 2–2.5 hours produces legs that are deeply coloured and tender, with well-rendered fat and crispy skin. The USDA minimum of 165 °F (74 °C) is the legal safe minimum, but most culinary sources recommend cooking goose legs to 175–185 °F for optimal texture and collagen breakdown.\n\nTarget internal temperature: **175–185 °F (79–85 °C)** — best texture; USDA minimum is 165 °F (74 °C)."
+  },
+  "goose_thigh": {
+    "braise": "Goose thigh is perhaps the most flavourful part of the goose — richer than the leg and with a higher ratio of intramuscular fat and connective tissue. Braising is ideal: the moist-heat environment keeps the thigh succulent while sustained heat above 160 °F converts collagen to gelatin. Target 175–185 °F (79–85 °C) for the most tender, silky texture. The braising liquid, enriched by rendered goose fat and gelatin, reduces to an intensely flavourful sauce. Goose thighs are widely used in European traditional cooking, similar to duck confit but with a braise instead of a fat immersion.\n\nTarget internal temperature: **175–185 °F (79–85 °C)** — optimal for collagen breakdown; USDA minimum: 165 °F (74 °C).",
+    "oven_roast": "Goose thigh is perhaps the most flavourful part of the goose — richer than the leg and with a higher ratio of intramuscular fat and connective tissue. Braising is ideal: the moist-heat environment keeps the thigh succulent while sustained heat above 160 °F converts collagen to gelatin. Target 175–185 °F (79–85 °C) for the most tender, silky texture. The braising liquid, enriched by rendered goose fat and gelatin, reduces to an intensely flavourful sauce. Goose thighs are widely used in European traditional cooking, similar to duck confit but with a braise instead of a fat immersion."
+  },
+  "whole_goose": {
+    "oven_roast": "A whole goose (typically 4–6 kg / 9–13 lb) is by far the fattiest of the common roasting birds — a significant proportion of its body weight is subcutaneous fat that must be rendered away during cooking. This sets it apart from chicken and turkey: the cook's main task is not to avoid dryness but to efficiently remove vast quantities of fat while keeping the dark, richly flavoured meat from toughening. Goose legs and thighs need 165–175 °F (74–79 °C) to become tender; the breast is best at a lower temperature but in whole-bird cookery inevitably finishes higher. The USDA minimum for whole goose (like all whole poultry) is **165 °F (74 °C)** measured deep in the thigh without touching bone. Many European recipes roast to 175–185 °F (80–85 °C) in the thigh to ensure the dark meat is fully tender and the fat rendered. Carryover adds 3–5 °C after resting.\n\nA medium goose (4.5 kg / 10 lb) typically takes 2.5–3 hours at 190 °C (375 °F) when started breast-side-up. Fat must be drained from the roasting tin every 30–45 minutes or it will smoke aggressively."
+  },
+  "duck_breast": {
+    "oven_roast": "Duck breast is a dark, rich cut with a thick layer of subcutaneous fat beneath a scored skin. Unlike chicken breast, duck breast is best cooked to medium-rare (135–145 °F / 57–63 °C), where the meat remains pink, juicy, and tender. The oven-roast method typically follows a stovetop fat-rendering sear: the breast starts skin-side down in a cold or lightly warmed oven-safe pan to slowly render the fat cap, then transfers to a moderate oven to finish gently and evenly without overshooting the internal temperature.\n\nTarget internal temperature: **135–145 °F (57–63 °C)** — medium-rare, pull at 130 °F and rest; carryover brings it to target. For well-done (USDA), pull at 160 °F for a final resting temp of 165 °F.",
+    "pan_sear": "Duck breast is a rich, dark-meat cut distinguished by its thick subcutaneous fat cap. Unlike any other common poultry breast, it is routinely served medium-rare (135–145 °F / 57–63 °C) — a practice endorsed by top culinary authorities and practiced universally in professional kitchens. Pan-searing is the definitive cooking method for duck breast: the skin goes into a cold, dry skillet and the fat is slowly rendered over 12–15 minutes before the breast is flipped. This unique cold-pan start is essential to producing the hallmark thin, crackling, golden skin without burning it before the underlying fat has melted away.\n\nTarget internal temperature: **135–145 °F (57–63 °C)** — medium-rare; pull at 130 °F and rest 5 min. For USDA well-done, target 165 °F (74 °C)."
+  },
+  "whole_duck": {
+    "oven_roast": "A whole duck presents a significant cooking challenge: the breast meat is best at medium-rare (135–145 °F) while the legs and thighs need higher temperatures (165–175 °F) to break down their tougher connective tissue. This conflict is resolved either by accepting slightly overcooked breast in exchange for properly done legs, or by using a low-and-slow approach that slowly renders the abundant subcutaneous fat while keeping the breast moist. The USDA minimum for whole poultry is 165 °F measured in the thigh. Whole ducks weigh 4–6 lb (1.8–2.7 kg) on average and carry far more fat than chicken — that fat must be rendered out to achieve crackling skin.\n\nTarget internal temperature: **165 °F (74 °C) in the thigh** — USDA minimum for whole poultry. Breast will be well-done at this point; accept this or use the low-and-slow method which keeps breast juicier."
+  },
+  "ground_turkey": {
+    "braise": "Ground turkey (minced turkey) is made by grinding dark meat (thigh and leg), white meat (breast), or a blend. A dark-meat-inclusive blend (typically 93/7 lean/fat) has noticeably better flavour and moisture retention than pure breast-meat grinds. Because turkey is poultry, the USDA minimum safe internal temperature is 74°C (165°F) with no reduction for resting. Ground turkey cooks faster than beef or pork at the same mass due to its lower fat content and should be monitored closely to avoid dryness. Carryover is 1–2°C.",
+    "grill": "Ground turkey (hindi kıyması / Putenhackfleisch / tacchino macinato) is a lean alternative to beef in grilled patties and köfte. Turkey mince dries out more easily than beef or even chicken, so moisture-binding additions — grated onion, soaked bread, applesauce, or egg — are essential. Turkey's mild, slightly sweet flavour takes well to bold spice blends: Mediterranean (paprika, cumin, garlic), Turkish (thyme, cumin, kırmızı biber), and German (salt, pepper, Röstzwiebeln). Ground turkey must reach a safe internal temperature throughout without becoming dry. The MEATER probe is inserted horizontally into the thickest patty or köfte from the side, positioned centrally.\n\nTarget internal temperature: **74 °C (165 °F)** — the USDA minimum for all ground poultry; explicitly confirmed by multiple sources.",
+    "pan_fry": "Ground turkey (minced turkey) is made by grinding dark meat (thigh and leg), white meat (breast), or a blend. A dark-meat-inclusive blend (typically 93/7 lean/fat) has noticeably better flavour and moisture retention than pure breast-meat grinds. Because turkey is poultry, the USDA minimum safe internal temperature is 74°C (165°F) with no reduction for resting. Ground turkey cooks faster than beef or pork at the same mass due to its lower fat content and should be monitored closely to avoid dryness. Carryover is 1–2°C."
+  },
+  "turkey_breast": {
+    "oven_roast": "Turkey breast can be purchased bone-in (half breast on the rib rack, 1.5–2.5 kg / 3–5.5 lb) or boneless (rolled and tied, 1–2 kg / 2–4.5 lb). Both have dramatically less fat than dark turkey meat and will dry out rapidly if taken past 165 °F (74 °C); the sweet spot for juicy, food-safe turkey breast is **160–165 °F (71–74 °C)** at the thickest point (the USDA minimum is 165 °F; pulling at 160 °F and resting 10–15 minutes under foil achieves safe temperatures via carryover). Bone-in breasts conduct heat more slowly near the bone and need accurate probe placement to the geometric centre of the thickest part. Boneless rolled breasts cook more evenly. At 190–200 °C oven temperature, a 1.5 kg bone-in breast takes approximately 60–75 minutes."
+  },
+  "turkey_burger": {
+    "air_fryer": "An air-fried turkey burger is the same 150–180 g ground-thigh patty as the grill or pan-sear preparation, cooked in the convection-fan environment of an air fryer at 190–200 °C. The high air velocity produces an even Maillard crust on both faces simultaneously, and the cook is faster than a conventional oven (8–10 minutes vs 14–18). The patty must be at least 150 g and 2 cm thick to avoid drying out at the edges before the centre reaches 74 °C. Probe the geometric centre of the largest patty; carryover is small (1–2 °C).",
+    "grill": "A grilled turkey burger is a 150–180 g shaped patty made from coarsely-ground turkey thigh — the standard for moisture and flavour because turkey breast (1–4 % fat) dries out on the high heat of a grill before reaching the food-safety threshold for ground poultry. Ground thigh carries 8–14 % fat plus the gelatinous connective tissue that holds patties together without binders. The cooking goal: drive the centre past 74 °C (165 °F) — the FDA/USDA threshold for ground poultry — while developing crisp, lacquered grill marks. Turkey patties tolerate slightly more aggressive aromatics than chicken because the meat is somewhat blander; sage, rosemary, mustard, paprika and lemon all carry well. Probe the geometric centre of the largest patty horizontally; carryover is small (1–2 °C).",
+    "pan_fry": "A pan-fried turkey burger is the same 150–180 g shaped patty as the grilled version, cooked in a heavy pan over medium-high heat with a film of oil and butter. The all-over surface contact with the pan gives a more even crust than the linear marks of a grate but does not benefit from the smoke flavour of fire. Ground thigh (8–14 % fat) is the standard. The cooking goal is identical: drive the centre past 74 °C while developing a deep, even Maillard surface. Probe the geometric centre of the largest patty horizontally; carryover is small (1–2 °C)."
+  },
+  "whole_turkey": {
+    "oven_roast": "A whole turkey presents the same fundamental challenge as a whole chicken but at larger scale and with more extreme differences between breast and leg/thigh: the breast meat is lean and prone to drying above 160–165 °F (71–74 °C), while the legs and thighs are dark, collagen-rich and benefit from 165–175 °F (74–79 °C) to become properly tender. A 4.5 kg / 10 lb turkey feeds 6–8 people; a 7 kg / 15 lb turkey feeds 10–12. The USDA minimum for whole turkey is **165 °F (74 °C)** measured in the thigh at its thickest point, well away from bone. Probe placement in the thigh (not the breast) is the authoritative food-safety measurement. Modern approaches — brining, spatchcocking, basting — all aim to let the thigh reach 165 °F without pushing the breast past 165 °F.\n\nTypical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) unstuffed. A 4.5 kg (10 lb) bird takes approximately 2.5–3 hours; a 7 kg (15 lb) bird takes approximately 3.5–4 hours."
+  },
+  "chicken_breast": {
+    "air_fryer": "Chicken breast is a lean, boneless cut that dries out quickly when overcooked. Pounding to even thickness and brining are the two most effective techniques for retaining moisture. Because there is minimal fat to buffer heat, precise temperature monitoring is critical.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry",
+    "grill": "Boneless skinless chicken breast is one of the most popular grilling cuts. Because it is very lean, it benefits enormously from a marinade that adds moisture and flavour before the high, dry heat of the grill. Slicing into thin cutlets dramatically reduces cook time and edge-to-edge doneness problems.\n\nGrilled chicken breast spans every grilling culture on earth. In Thailand, **Gai Yang** marinates bone-in breast halves in lemongrass, coriander seed, garlic, fish sauce, and black soy sauce before grilling low-and-slow for characteristic smoky char and juicy flesh. In India, **Chicken Tikka** uses spiced yogurt-marinated boneless breast cubes on skewers, cooked over charcoal or a gas grill. In the Levant, boneless breast strips are marinated in spices and lemon (shish tawook) and grilled on skewers. Across West Africa and the Caribbean, spiced, marinated breast halves are grilled over charcoal or wood fire as part of festive meals.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry",
+    "oven_bake": "Boneless, skinless chicken breast is an extremely lean cut that cooks quickly and can dry out easily. The key techniques are: pound to even thickness so the whole piece cooks at the same rate; use a hot oven (400–425 °F / 200–218 °C); pull at exactly 165 °F (74 °C) internal; and rest 5–10 minutes. Some recipes brine first (30 min to 2 h in salted water) for extra moisture insurance.\n\nOven-baked chicken breast reaches nearly every culture's kitchen. In India, the classical approach is **Tandoori Chicken** — yogurt-spiced, charred in a clay tandoor or replicated in a very hot conventional oven (240 °C / 460 °F) on a rack. In the Levant, chicken breast is oven-baked as **Shawarma** on a skewer rack with cumin, turmeric, and cinnamon. In North Africa, harissa paste is rubbed on breast before oven-baking. In China, chicken breast is glazed with hoisin and char siu sauce and oven-roasted at high heat. The principle — hot oven, spiced coating or marinade, rest — is universal; only the spice palettes differ.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry, fully safe; higher leads to dryness.",
+    "pan_sear": "Boneless, skinless chicken breast is the pectoralis major muscle — the largest muscle of the bird. Because domesticated chickens rarely flap vigorously, this muscle has almost no connective tissue or intramuscular fat, making it the leanest cut of the bird. The lack of fat means it dries out quickly above 74°C (165°F). Typical weight is 170–280 g uncooked; thicker single-piece breasts benefit from butterflying or pounding to even thickness. USDA minimum safe temperature is 74°C (165°F); modern sous vide guidance allows 63°C (145°F) with adequate pasteurisation hold time. Carryover is 2–4°C.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry"
+  },
+  "chicken_burger": {
+    "air_fryer": "Ground chicken burgers are formed patties made from minced chicken, typically 85–93% lean. Because ground poultry must be cooked to a higher internal temperature than whole muscle, and because the meat is lean and prone to drying out, adding binders (egg, breadcrumbs, or cooked rice) helps retain moisture. The air fryer circulates hot air to brown the exterior without deep frying.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry",
+    "grill": "A chicken burger patty is made from ground chicken — typically a blend of dark meat (thigh and leg) for flavour and fat content, or white meat (breast) for a leaner product. Ground chicken is leaner than beef and more prone to drying out. Commercial chicken patties are typically 100–150 g; homemade patties often include a binder (egg, breadcrumbs) because the lower fat content makes the patty fragile. As a poultry product, the USDA minimum safe internal temperature is 74°C (165°F). Carryover is 2–3°C.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry",
+    "pan_fry": "Ground chicken pan-fried burgers cook on the stovetop in a skillet. Ground chicken is leaner and stickier than beef, so binders like egg and panko breadcrumbs (panade method) are essential to hold the patty together and retain moisture during cooking. Chilling formed patties for 30 minutes before cooking prevents them from falling apart in the pan.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry"
+  },
+  "chicken_leg": {
+    "oven_roast": "Chicken drumsticks (the lower portion of the leg) are dark-meat cuts with more fat and connective tissue than breast, making them forgiving and flavourful. High-heat oven roasting renders the fat, crisps the skin, and breaks down collagen for juicy, tender meat. USDA minimum is 165 °F (74 °C), but dark meat is best at 170–175 °F (77–79 °C) where collagen converts to gelatin.\n\nTarget internal temperature: **170–175 °F (77–79 °C)** — recommended for dark meat drumsticks"
+  },
+  "chicken_thigh": {
+    "air_fryer": "Chicken thighs are a forgiving, flavourful dark-meat cut. Their higher fat content makes them well-suited to the air fryer's rapid circulating heat, which renders the fat and crisps the skin beautifully without drying the meat out. Bone-in skin-on thighs take longer than boneless but deliver the crispiest skin. Dark meat benefits from cooking above the USDA minimum to 175 °F (79 °C), where collagen fully converts to gelatin.\n\nTarget internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat",
+    "grill": "Chicken thighs are the ideal grilling cut: their higher fat content means they stay moist even over high, direct heat and they are far more forgiving than breast if slightly overcooked. Bone-in skin-on thighs take 25–30 minutes; boneless thighs are quicker at 10–15 minutes. A good marinade and BBQ baste add deep flavour and help char the exterior while keeping the interior juicy.\n\nGrilled chicken thighs appear in culinary traditions across the globe. In Thailand, **Gai Yang** (ไก่ย่าง) — marinated in lemongrass, coriander seed, garlic, and fish sauce — is the definitive street-food grill, sold from roadside stalls to temple fairs across the country. In India, **Tandoori Chicken** (thighs and legs on the bone) is marinated in spiced yogurt and cooked in a tandoor or grill. In West Africa, chicken grilled over charcoal with aromatic spice rubs is central to festive cooking. In the Levant and Persia, chicken thighs on skewers (joojeh kabab, shish tawook) are a cornerstone of summer grilling.\n\nTarget internal temperature: **165 °F (74 °C)** minimum — **170 °F (77 °C)** preferred for dark meat",
+    "oven_roast": "Chicken thigh (the biceps femoris and related muscles of the upper leg) is a dark-meat cut with significantly higher fat and connective tissue than the breast. Higher fat (6–10% vs 1–2% for breast) means thighs stay moist across a much wider temperature range and resist drying even when overcooked. Connective tissue collagen converts to gelatin above 70°C, improving mouthfeel. Bone-in thighs are more flavourful and forgiving; boneless thighs cook faster and more evenly. USDA minimum safe temperature is 74°C (165°F); experienced cooks often cook to 80–85°C for better texture once collagen has fully converted. Carryover is 3–5°C.\n\nOven-roasted chicken thighs are a centrepiece dish across global cuisines. In Egypt and the broader Levant, thighs are rubbed with cumin, paprika, lemon, and tomato paste and roasted over a bed of onions. In India, **Tandoori Murgh** marinates thighs (and drumsticks) overnight in spiced yogurt before roasting at high heat in a tandoor or conventional oven to achieve charred edges and a juicy interior. In Greece, yogurt and breadcrumb coatings create crispy oven-baked thighs. In West Africa, thighs roasted with dried thyme, garlic powder, and cayenne are a festive staple. The oven roast method — high dry heat, basting or spiced crust, rest and serve — is universal.\n\nTarget internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat"
+  },
+  "chicken_wing": {
+    "air_fryer": "Chicken wings (wingettes and drumettes) are small, high-surface-area dark-meat pieces that become irresistibly crispy in the air fryer without deep frying. The single most effective technique for extra-crispy skin is tossing wings with a small amount of baking powder before cooking — it raises the skin's pH, causing it to blister and brown faster. Patting wings dry is equally critical.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry"
+  },
+  "ground_chicken": {
+    "braise": "Ground chicken braised in liquid is a moist-heat method that keeps the lean meat from drying out and develops a flavourful sauce simultaneously. Because ground poultry is mixed throughout with bacteria (unlike whole muscle), every part of the meat must reach safe temperature. Braising is forgiving — the surrounding liquid prevents the meat from going above 212 °F (100 °C), but interior temp still easily exceeds 165 °F (74 °C) with adequate cooking time.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry; visual: no pink inside",
+    "grill": "Ground chicken (tavuk kıyması / poulet haché / Hühnerhackfleisch) is a lean, versatile protein that is grilled as köfte (elongated meatballs), patties, or flat burgers. Because ground chicken is lighter and drier than beef or lamb, it benefits from added moisture — egg, milk, yoghurt, or applesauce — and binding agents such as breadcrumbs, flour, or soaked bread. Flavour-boosters such as grated onion, garlic, and spice blends are essential. Ground chicken must be cooked to a safe internal temperature throughout; unlike whole muscle cuts, no pink is acceptable. The MEATER probe is inserted horizontally into the thickest part of the patty or köfte from the side, positioned centrally, away from the grill surface.\n\nTarget internal temperature: **74 °C (165 °F)** — the USDA minimum for all ground poultry; confirmed by multiple sources.",
+    "pan_fry": "Ground chicken cooked by pan-frying covers two related applications: formed patties (burgers, meatballs) browned in a skillet, and crumbled ground chicken cooked loose. Ground chicken is very lean and prone to drying out; binders such as egg and breadcrumbs or cooked rice help retain moisture in formed shapes. Crumbled ground chicken browns and cooks fast — typically under 10 minutes over medium-high heat.\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry; visual: no pink, juices clear"
+  },
+  "whole_chicken": {
+    "oven_roast": "A whole roasted chicken presents a fundamental challenge: the breast and thigh finish at different temperatures, so technique matters. Starting breast-side down lets the thigh meat begin rendering while protecting the breast. High initial heat (475 °F / 246 °C) produces crackling golden skin. The breast should reach 160–165 °F (71–74 °C) while the thigh reaches 165–170 °F (74–77 °C); a well-rested bird allows both to equalise. Average 3–4 lb bird takes 55–70 minutes total.\n\nTarget internal temperatures: **Breast 160–165 °F (71–74 °C)** · **Thigh 165–170 °F (74–77 °C)**"
+  },
+  "asparagus": {
+    "grill": "Asparagus (*Asparagus officinalis*) on the grill develops an ideal contrast between the charred, slightly bitter tips and the tender, sweet stems. The spears should be thick enough (≥ 1 cm at the base) to survive direct grill heat without falling through the grates; if thinner, use a grill basket or skewer the spears in bundles. Grill time: 6–10 minutes, depending on thickness, at medium-high to high heat, turning once or twice. Pull temperature: 82–88 °C (180–190 °F) at the thickest part of the stem for tender-crisp asparagus with char-marked tips. A MEATER probe is inserted along the long axis of the largest, thickest spear from the cut base end, with the tip at the mid-point of the spear.",
+    "oven_roast": "Asparagus (*Asparagus officinalis*) oven-roasted at 200–220 °C achieves golden-crisp tips and tender stems in 12–18 minutes. The dry oven heat concentrates flavour and caramelises the cut tips and natural sugars. Thin spears (≤ 6 mm) need 10–12 minutes; medium (8–12 mm) need 14–16 minutes; thick (≥ 15 mm) need 16–20 minutes. Pull temperature: 82–86 °C (180–187 °F) for crispy-tipped, tender-stemmed asparagus. MEATER probe inserted along the long axis of the thickest spear from the cut base end.",
+    "saute": "Asparagus (*Asparagus officinalis*) sautéed in a hot pan is the fastest preparation: 4–6 minutes over medium-high to high heat, producing tender-crisp spears with a lightly browned stem and vivid green colour. The pan must be large enough to hold all spears in a single layer, and the oil or butter must be hot before the asparagus goes in — otherwise the spears will steam rather than sauté. Pull temperature: 78–83 °C (172–181 °F) for tender-crisp asparagus, still with some bite. MEATER probe inserted along the long axis of the thickest spear.",
+    "steam": "Asparagus (*Asparagus officinalis*) steamed is the most flavour-preserving method: spears rest in a steamer basket above boiling water for 4–8 minutes (depending on thickness), emerging bright green, tender-crisp, and with their delicate grassy-sweet flavour intact. Unlike boiling, the water-soluble sugars and vitamins are not lost. The steamed asparagus is then dressed with various sauces from butter and lemon (French) to sesame and soy (Chinese/Japanese) to hollandaise (classic European). Pull temperature: 78–82 °C (172–180 °F) for tender-crisp; 82–85 °C (180–185 °F) for fully tender. MEATER probe inserted along the long axis of the thickest spear from the cut end, tip at mid-point."
+  },
+  "broccoli": {
+    "air_fryer": "Broccoli (*Brassica oleracea* var. *italica*) in the air fryer becomes golden-crisp at the floret tips and tender at the stems in 10–14 minutes at 190–200 °C — faster and crispier than a conventional oven. The air fryer's rapid convection dehydrates the floret surface quickly, enabling Maillard browning before the interior overcooks. Florets should be 3–5 cm, similar in size for even cooking, and patted completely dry. Pull temperature: 80–85 °C (176–185 °F) for crispy-golden, tender-stemmed florets. MEATER probe inserted through the stem of the largest floret.",
+    "oven_roast": "Broccoli (*Brassica oleracea* var. *italica*) oven-roasted at 200–220 °C develops golden, caramelised floret tips and tender stems in 18–22 minutes. The key is maximum heat, generous spacing, and a completely dry surface. Broccoli contains enough natural sugars that Maillard browning begins quickly at 200+ °C, producing the \"roasted broccoli\" flavour that converted many vegetable-averse diners to its cause. Pull temperature: 80–85 °C (176–185 °F) for golden-crisp at the tips, tender at the stem.",
+    "saute": "Broccoli (*Brassica oleracea* var. *italica*) sautéed in a hot pan — or stir-fried in a wok — produces golden-blistered florets with a caramelised stem and bright-green colour. The pan must be very hot; broccoli must be completely dry; it should not be crowded. Cooking time: 6–8 minutes. Pull temperature: 78–83 °C (172–181 °F) for tender-crisp, golden broccoli. MEATER probe through the stem of the largest floret.",
+    "steam": "Broccoli (*Brassica oleracea* var. *italica*) steamed retains its vivid green colour and the glucosinolate compounds better than boiling. Steam for 6–8 minutes (florets); 8–10 minutes (large crowns). Pull temperature: 78–82 °C (172–180 °F) for tender-crisp; 82–85 °C (180–185 °F) for fully tender. The classic finishing step — butter and lemon (French), sesame dressing (Japanese), tadka (Indian), or olive oil and Parmesan (Italian) — converts the plainly steamed vegetable to a finished dish."
+  },
+  "brussels_sprouts": {
+    "air_fryer": "Brussels sprouts (*Brassica oleracea* var. *gemmifera*) in the air fryer become intensely caramelised and golden-charred on the cut faces in 12–16 minutes at 190–200 °C — faster than a conventional oven, with crispier outer leaves. They should be halved through the core (the flat face caramelises maximally), very dry, and generously oiled. Pull temperature: 82–88 °C (180–190 °F) for charred-golden outer leaves with a tender, sweet interior. MEATER probe inserted through the outer leaves of the largest sprout into its core.",
+    "oven_roast": "Brussels sprouts (*Brassica oleracea* var. *gemmifera*) oven-roasted at 200–220 °C become charred, golden, and sweet in 22–28 minutes. Halved cut-face-down on a sheet pan maximises the Maillard browning surface. The key: very hot oven, dry sprouts, single layer with space between them. Pull temperature: 84–88 °C (183–190 °F) for charred outer leaves with a sweet, fully tender interior.",
+    "pan_fry": "Brussels sprouts (*Brassica oleracea* var. *gemmifera*) pan-fried (halved, cut-face-down in a hot pan) is the fastest technique for intensely caramelised results: 8–12 minutes in a cast-iron or heavy pan achieves charred cut faces and a tender interior. Unlike sautéing (which involves frequent tossing), pan-frying holds the cut face in contact with the hot surface for an extended sear. Pull temperature: 82–88 °C (180–190 °F). MEATER probe through outer leaves of the largest sprout into the core.",
+    "saute": "Brussels sprouts (*Brassica oleracea* var. *gemmifera*) sautéed — frequently tossed in a hot pan — differ from pan-frying (held still for a sear). Sautéed sprouts are typically shredded or quartered for faster, more even cooking; whole halved sprouts that are continuously tossed achieve golden browning on multiple surfaces. Pull temperature: 82–88 °C (180–190 °F). MEATER probe into the core of the largest sprout."
+  },
+  "green_beans": {
+    "boil": "Green beans (*Phaseolus vulgaris* and *Vigna unguiculata* — runner beans, French haricots verts, yard-long beans) boiled is the classic preparation in French haute cuisine, American home cooking, and the base technique in almost every global kitchen that uses fresh green beans. The target for boiled green beans is bright-green and tender-crisp: 78–82 °C (172–180 °F) inside the bean. Overcooked beans turn army-green, drab and mushy at 88+ °C. The classic French technique is to boil rapidly in a large quantity of salted water (blanching) for 3–5 minutes, then shock in ice water (*refresh*) to stop cooking and fix the bright green. MEATER probe: insert horizontally through the side of the longest/thickest bean at the mid-point; the probe must be in the water and not reading ambient air.",
+    "oven_roast": "Green beans (*Phaseolus vulgaris*) oven-roasted at 200–220 °C caramelise and blister in 18–22 minutes, producing a concentrated, slightly charred flavour completely different from boiled or steamed beans. The dry oven heat drives off surface moisture quickly, allowing Maillard browning to develop on the bean skins. The beans should be spread in a single layer with space between them — crowding causes steaming, not roasting. Pull temperature: 82–86 °C (180–187 °F) for tender-crisp roasted beans with blistered skin. MEATER probe inserted horizontally through the thickest bean at the mid-point.",
+    "saute": "Green beans (*Phaseolus vulgaris*) sautéed in a hot pan — Chinese *gan bian* dry-frying, Thai stir-fry, Indian tadka-tossed, or French *haricots verts sautés* — produce blistered, slightly charred beans with a concentrated sweet-green flavour. The technique requires very high heat and very dry beans (surface moisture prevents browning). Pull temperature: 78–82 °C (172–180 °F) for tender-crisp with blistered skin. MEATER probe inserted horizontally through the thickest bean mid-point.",
+    "steam": "Green beans (*Phaseolus vulgaris*) steamed retain their bright-green colour, water-soluble vitamins, and clean sweet-grassy flavour better than boiling. Steam-cooking at 100 °C for 5–8 minutes (depending on thickness) produces vivid, tender-crisp beans. The classic follow-up step — a quick toss in butter and seasoning (French), a dressing of sesame and soy (Japanese), a tempering of mustard and curry leaves (Indian), or a drizzle of extra-virgin olive oil (Italian/Mediterranean) — transforms the simply steamed bean into a finished dish. Pull temperature: 78–82 °C (172–180 °F). MEATER probe inserted through the side of the thickest bean at the mid-point."
+  },
+  "spinach": {
+    "saute": "Spinach (*Spinacia oleracea*) sautéed wilts dramatically in 1–3 minutes in a hot pan with a small amount of oil or butter — fresh spinach loses approximately 90 % of its volume on cooking as moisture is expelled. The target: bright-green, just-wilted leaves with no excess water pooled in the pan. If a pool of water accumulates, the spinach is steaming not sautéing. Internal temperature at just-wilted doneness: 68–75 °C (154–167 °F) — above 75 °C the chlorophyll degrades and the colour turns army-drab. MEATER probe placed horizontally into the densest centre of the spinach pile in the pan.",
+    "steam": "Spinach (*Spinacia oleracea*) steamed — held over boiling water in a steamer basket or colander with a lid — wilts in 2–4 minutes, retaining its colour and nutrients better than boiling (which leaches iron and vitamins into the water). Pull temperature: 68–74 °C (154–165 °F). A MEATER probe placed horizontally into the densest pile of leaves in the steamer measures when the spinach has reached wilting temperature. Like sautéed spinach, steamed spinach is then dressed with various seasonings: butter (French), sesame (Japanese), coconut and mustard seeds (South Indian), or lemon and olive oil (Mediterranean)."
+  },
+  "roasted_tomatoes": {
+    "air_fryer": "Tomatoes (*Solanum lycopersicum*) in the air fryer roast in 8–15 minutes depending on size and target: cherry tomatoes burst and caramelise in 8–10 minutes at 200 °C; halved plum tomatoes take 12–15 minutes to collapse and blister. The circulating air dehydrates the surface faster than a conventional oven, producing crisper, slightly wrinkled edges with concentrated sweetness. Air-fried tomatoes are particularly useful as fast toppings for pasta, pizza, bruschetta, or eggs. Pull temperature for burst cherry tomatoes (serving as-is) is 82–88 °C (180–190 °F); for halved plum tomatoes intended as a sauce base, 88–95 °C (190–203 °F). A MEATER probe is most practical in a larger tomato; for cherry tomatoes, rely on appearance (bursting, blistered) and time, or insert in the largest specimen. Carryover is negligible.",
+    "oven_roast": "Tomatoes (*Solanum lycopersicum*) oven-roasted undergo a profound transformation: the high water content (≈ 94 %) evaporates in the oven heat, concentrating the glutamate-rich flesh into an intensely sweet, umami-packed result. Low-and-slow roasting (120–150 °C for 1–3 hours) produces almost-dried, jammy results with deep flavour concentration; high-heat roasting (200–230 °C for 20–35 min) achieves blistered, caramelised edges while the interior stays juicy. Cherry tomatoes, plum tomatoes cut lengthwise, and whole large tomatoes all lend themselves to oven roasting. A MEATER probe inserted through the wall of a plum tomato or a larger cherry tomato monitors the internal temperature: at 82–88 °C (180–190 °F) the skin is blistered and the interior is collapsing but still holds shape; at 88–95 °C the tomato has fully collapsed and is releasing concentrated juices. Carryover is negligible — the high water content prevents heat accumulation."
+  },
+  "cabbage": {
+    "braise": "Cabbage (*Brassica oleracea* var. *capitata*) braised is one of the most globally distributed vegetable preparations: German Rotkohl, French *chou braisé*, Polish *kapusta duszona*, Indian dum-cooked cabbage, and Chinese red-braised cabbage all transform the pungent, crunchy raw leaves through long, moist cooking into a tender, sweet, and deeply flavourful result. The technique involves long gentle simmering in a small amount of liquid (wine, vinegar, stock, or a combination) with a lid on, allowing the cabbage to stew in its own juices. Pull temperature for a fully braised cabbage wedge or shred: 88–95 °C (190–203 °F) — at this point the cell walls have fully collapsed, the harsh glucosinolates have converted to gentler compounds, and the texture is yielding and silky. A MEATER probe is inserted through the outer layers of a wedge into the thickest part of the core, or into the densest part of the shred pile.",
+    "grill": "Cabbage (*Brassica oleracea* var. *capitata*) on the grill is most dramatic as thick wedges or halves placed directly on high-heat grates, developing charred outer leaves and a creamy-tender core. The outer leaves act as insulation and protectors: they carbonise at the surface while the inner leaves steam. The technique is particularly popular in Korean BBQ (ssam-style grilled cabbage leaves), Indian street-food style (whole cabbage on coal), Japanese *yakiniku* preparations, and in the new American vegetable-forward grilling style. Pull temperature: 85–90 °C (185–194 °F) at the core of a grilled wedge — the outermost leaves will be charred, the inner ones silky-tender. MEATER probe is inserted through the outer leaves into the thickest part of the core.",
+    "oven_roast": "Cabbage (*Brassica oleracea* var. *capitata*) is a dense, layered head of overlapping leaves built around a thick stem. Sliced into wedges with the stem intact, the leaves stay attached and the wedge holds together through the cook; sliced into \"steaks\" across the stem axis, the inner ribs caramelise into deeply sweet, almost meat-like slabs. Oven roasting at 200–220 °C drives off surface water rapidly so that the outer leaves blister and brown via Maillard reactions while the dense interior softens through gentle steam from the leaves' own moisture. Carryover is moderate (3–5 °C) because the layered structure traps heat in the centre. Pulling slightly under target keeps the inner leaves silken rather than collapsed.",
+    "saute": "Cabbage (*Brassica oleracea* var. *capitata*) sautéed is one of the fastest and most flavourful preparations: shredded or thinly sliced cabbage in a hot, oiled pan wilts and sweetens within 5–8 minutes, going from raw-crunchy to tender-crisp. The technique spans Chinese stir-fries (高麗菜炒蛋 or cumin spiced), Thai pad cabbage (pad kalam plee), Indian bandh gobhi ki sabzi, German Schmorkohl, and East European *kapusta smażona*. Internal temperature at tender-crisp (ideal for most stir-fries): 78–82 °C (172–180 °F); at fully soft: 84–88 °C (183–190 °F). The MEATER probe is inserted into the densest pile of shredded cabbage in the pan."
+  },
+  "cauliflower": {
+    "air_fryer": "Cauliflower (*Brassica oleracea* var. *botrytis*) in the air fryer achieves crispy, golden-brown florets in 12–16 minutes — faster than a conventional oven and with less oil required. The rapid convection is particularly effective at evaporating the cauliflower's surface moisture (florets are ≈ 92 % water) before Maillard browning begins. Air-fried cauliflower is a globally popular preparation: from Indian gobi tikka (marinated in spiced yoghurt) to Korean spicy *gobi*, Israeli za'atar cauliflower, and plain roasted Western versions. Pull temperature: 80–86 °C (176–187 °F) for golden, fully tender florets. A MEATER probe is inserted through the stem of the largest floret into its centre before the cook begins.",
+    "oven_roast": "Cauliflower (*Brassica oleracea* var. *botrytis*) oven-roasted in florets at 200–230 °C develops golden, caramelised surfaces and a tender, nutty interior in 20–30 minutes. This is one of the most globally versatile roasted vegetable preparations: with Moroccan spicing (chermoula), Indian masala, Israeli za'atar, Italian *aglio e olio*, or simple olive oil and salt. The outer floret surface undergoes Maillard browning while the interior steams in the oven heat. Pull temperature for golden, fully tender florets: 82–88 °C (180–190 °F). MEATER probe inserted through the stem of the largest floret into its geometric centre.",
+    "saute": "Cauliflower (*Brassica oleracea* var. *botrytis*) is a tightly clustered head of immature flower buds (curd) attached to a thick fibrous stem. The curd is roughly 92 % water, with delicate cell walls and a very small amount of free sugar — when sautéed in a hot, fat-coated pan, the surface dehydrates quickly and the residual sugars caramelise into a brown, nutty crust while the interior softens but retains some structural integrity. Sauteing differs from roasting in that contact-area browning is concentrated on whichever face touches the pan: success depends on cutting florets with a flat side and not crowding the pan. Carryover is small but real because the dense curd traps heat in its centre after removal — pulling 1–2 °C below the target preserves a touch of bite.",
+    "steam": "Cauliflower (*Brassica oleracea* var. *botrytis*) steamed preserves more of the glucosinolate compounds (which have health benefits) and the delicate flavour compared to boiling, which leaches these compounds into the water. Florets steamed over boiling water reach their target temperature of 80–85 °C (176–185 °F) in 7–10 minutes depending on size, at which point they are fork-tender with no raw starch taste. The classic test: a floret should yield easily to a paring knife inserted into the stem, but not crumble. A MEATER probe is inserted through the stem of the largest floret into its geometric centre; the probe should be set before the steam begins.",
+    "whole_roast": "Whole-roasted cauliflower (*Brassica oleracea* var. *botrytis*) has become one of the signature vegetable showpieces of contemporary international cooking, popularised especially by Yotam Ottolenghi and the broader Middle Eastern–influenced restaurant world. The whole head is pre-boiled or pre-steamed briefly to begin cooking, then roasted at 190–220 °C for 30–45 minutes, producing a deeply golden, caramelised exterior that contrasts with the creamy interior. Alternatively, it is placed raw in a salt dough or foil enclosure and cooked at lower temperatures for longer. The core-to-outer temperature gradient is significant: the outermost florets reach 90+ °C while the stem/core may still be at 75–80 °C. The MEATER probe must be inserted into the thickest part of the stem/core from the base — this is the temperature that matters, as it is the last to reach doneness. Pull at 85–90 °C (185–194 °F) at the core; the outer florets will then be caramelised and some will be charred."
+  },
+  "button_mushrooms": {
+    "air_fryer": "Button mushrooms (*Agaricus bisporus*) in the air fryer roast in 8–12 minutes at 200 °C — significantly faster than an oven — with the circulating hot air dehydrating the surface moisture that would otherwise cause steaming and prevent browning. The main enemy of mushroom browning is moisture: the caps contain ≈ 92 % water, and this must be driven off before Maillard browning can occur. The air fryer's rapid convection achieves this faster than any conventional oven method. Internal pull temperature for fully roasted button mushrooms in the air fryer: 80–86 °C (176–187 °F) — at this point the exterior is golden-brown and the interior is silky, juicy and fully cooked. A MEATER probe is inserted through the side of the largest cap into its geometric centre before the cook begins.",
+    "grill": "Button mushrooms (*Agaricus bisporus*, immature white form) are roughly 92 % water held in a sponge-like network of chitin-rich fungal cell walls. On a hot grill the surface water flashes off in seconds, the cap caramelises and the mushroom collapses to perhaps two-thirds its raw volume. The grill imparts charred Maillard browning concentrated where the gills or cap touch the bars. Threading mushrooms onto skewers (or using a grill basket) is the only way to keep them from rolling and falling through. Carryover is small but real — about 2–3 °C — because the dehydrated cap insulates the moist interior. Brushing with oil before grilling is essential; mushrooms will stick badly to bare grates.",
+    "oven_roast": "Button mushrooms (*Agaricus bisporus*) oven-roasted at 200–220 °C concentrate their flavour dramatically as moisture evaporates, converting from plump white spheres to golden-brown, intensely flavoured morsels. The key is a hot, preheated oven and a dry sheet pan with generous space between caps — this maximises surface contact and airflow so mushrooms roast rather than steam. Roasting time is 20–25 minutes. Whole caps (8–30 g each) need 20–25 minutes; halved or sliced, 15–18 minutes. Pull temperature: 80–86 °C (176–187 °F) for slices/halves; 82–88 °C (180–190 °F) for whole caps. A MEATER probe is inserted through the top of the largest whole cap into its geometric centre.",
+    "saute": "Button mushrooms (*Agaricus bisporus*) sautéed in a very hot pan are the classic restaurant technique for achieving maximum flavour concentration in minimum time. The key principle, articulated by Sanjay Aggarwal and confirmed by numerous food scientists: the pan must be scorching hot and uncrowded, so mushrooms brown rapidly before their expelled moisture creates steam. Crowded, slow-cooked mushrooms stew rather than sauté, and their flavour is diluted and flat. The target for sautéed button mushrooms is 78–85 °C (172–185 °F) internal temperature: golden-brown exterior, silky-juicy interior, and the characteristic umami-concentrated flavour of properly sautéed funghi. Carryover is negligible."
+  },
+  "portobello_mushrooms": {
+    "air_fryer": "Portobello mushrooms (*Agaricus bisporus* — the same species as button mushrooms, grown to maturity) in the air fryer cook in 12–16 minutes at 190–200 °C. Their large caps (8–15 cm diameter) and dense flesh benefit from the air fryer's rapid convection, which dehydrates the exposed surfaces and concentrates flavour faster than an oven. Portobello caps are typically cooked gill-side-up (to retain their juices) or gill-side-down (to achieve a drier, crisper result). A MEATER probe is inserted through the cap skin (the convex top side) into the thickest central point of the flesh, with the tip just above the gills. Pull temperature: 82–88 °C (180–190 °F) for a juicy, fully cooked result.",
+    "grill": "Portobello mushrooms (*Agaricus bisporus* mature) on the grill develop a spectacular smoky char on the cap skin while the gills trap and concentrate the juices that the heat drives from the flesh. The convex cap skin is placed down first on the hot grates, giving time for the dense flesh to heat through; then the cap is flipped gill-side-down briefly (or gill-side-up for a moister, juicier result). Pull temperature: 84–90 °C (183–194 °F), where the flesh is tender, juicy and fully cooked but the cap holds its shape. A MEATER probe is inserted through the cap skin on the convex top into the thickest central part of the flesh. Grilled portobello is used as a meat substitute, a burger base, and as a vehicle for stuffings across many cuisines.",
+    "oven_roast": "Portobello mushrooms (*Agaricus bisporus* mature) oven-roasted at 200–220 °C concentrate flavour dramatically as the high moisture content (≈ 90 %) evaporates. Placed gill-side-up on a sheet pan or in a dish, the caps act as natural cups that retain the concentrated cooking juices; gill-side-down produces a drier, more caramelised result. Whole caps take 20–25 minutes. The internal temperature at full doneness is 84–90 °C (183–194 °F). A MEATER probe is inserted through the convex cap skin into the thickest centre of the flesh, with the tip just above the gills; this avoids the hollow gill cavity which would read ambient air temperature.",
+    "saute": "Portobello mushrooms (*Agaricus bisporus* mature) sautéed whole or in thick slices develop a deep umami-richness in a hot pan — the dense flesh concentrates as moisture evaporates, producing an almost meaty character at the target internal temperature of 80–88 °C (176–190 °F). A portobello cap is typically sliced into 1.5–2 cm slabs for sautéing (so the MEATER probe sits in the thickest slab) or sautéed whole if the pan is large enough. The pan must be very hot before adding the mushrooms, and they must not be crowded, or they will steam. Unlike button mushrooms, portobello caps tend to release more liquid, making deglazing an important part of most sauté recipes."
+  },
+  "eggplant": {
+    "air_fryer": "Eggplant (*Solanum melongena*) in the air fryer follows the same principle as oven roasting but in a smaller, faster environment: the convective heat at 200–210 °C dehydrates the surface rapidly, browning it in 15–20 minutes rather than 25–30. The air fryer is particularly effective for slices, cubes, and halves because the circulating air reaches all surfaces simultaneously, reducing the need to flip. Crowding is the main enemy — pieces must have air space between them or they steam rather than roast. The internal target is 82–88 °C (180–190 °F) for cubes and slices (creamy-tender, slightly collapsed at edges), and 88–92 °C (190–198 °F) for halves intended for mashing. Carryover in the air fryer is small (1–2 °C) but the pieces dry out if left in the basket after the cook. MEATER Plus is compatible with most air fryer baskets; insert the probe before the cook begins.",
+    "grill": "Eggplant (*Solanum melongena*; UK aubergine) achieves its most dramatic transformation on a live flame or a very hot grill. The outer skin chars to a brittle black shell, the interior softens and collapses, and the flesh takes on a deep, irreplaceable smokiness from the volatiles released as the skin carbonises. Whole-grilled eggplant is the foundational technique for baba ganoush, baingan bharta, and countless other mashed or puréed dips across South Asian, Middle Eastern, East Asian, and Mediterranean traditions. Halved and grilled (dengaku-style), the cut face browns via Maillard reactions while the flesh steams from the inside. A MEATER probe inserted through the side into the thickest part of the flesh monitors the transition from dense and opaque (~60 °C) to fully collapsed and silky (~90–95 °C for whole; 82–88 °C for halved). Carryover is minimal once the flesh is at this level of softness.",
+    "oven_roast": "Eggplant (*Solanum melongena*) oven-roasted develops rich, caramelised surfaces across the cut faces of slices, halves, or cubes, while the interior transitions from dense and spongy to silky and almost melting. Unlike pan-frying, the dry oven heat draws moisture outward without submersion in oil, producing a less greasy result; the sacrifice is a slower and less intense browning than stovetop contact. The technique suits whole eggplants destined for mashing (baked at 200–220 °C until skin chars and flesh collapses), thick slices or halves (roasted at 200–220 °C cut-face-down on an oiled sheet pan), and cubes or batons (tossed in oil and roasted at 220 °C until deeply golden). A MEATER probe inserted into the thickest part of the flesh monitors the interior: the target for slices or cubes is 85–90 °C (185–194 °F); for a whole eggplant intended for mashing, 90–95 °C is the pull point. Carryover is minimal for vegetables at this degree of doneness.",
+    "pan_fry": "Eggplant (*Solanum melongena*; UK aubergine) is a sponge-textured fruit of the nightshade family, structurally a cluster of air-filled cells around a seed-bearing core. Raw, those cells absorb fat aggressively; cooked, the cell walls collapse and the texture turns silky and almost custard-like. Pan-frying in slices or batons concentrates the cooking on the cut surfaces — at 180–200 °C in 5–8 mm of oil, those surfaces caramelise to deep mahogany while the centre transitions from chalky to tender. The classic salt-and-press preparation draws out enough water (and, in older heritage varieties, bitterness) so that the slices brown rather than steam. Carryover is small (1–2 °C) but the slices continue to drink up surface oil after removal — a wire rack drain is standard.",
+    "saute": "Eggplant (*Solanum melongena*) sautéed in a hot, well-oiled pan produces intensely browned, deeply flavourful pieces in a fraction of the time needed for oven roasting. The dense sponge of the raw flesh first soaks up fat before the surface temperature rises high enough to begin Maillard browning — the secret to even browning without greasiness is a fiercely hot pan and enough oil, so the surface seals before absorption becomes saturating. Slices, cubes, or batons of 1–1.5 cm thickness are ideal; thicker pieces risk underdone centres by the time the crust is dark enough. The internal temperature for fully sautéed eggplant is 78–85 °C (172–185 °F) — at this point the interior is creamy-silky yet the piece holds its shape. Carryover is small (1–2 °C) and the pieces continue to drink residual oil off the heat, making a wire rack the best draining surface."
+  },
+  "bell_peppers": {
+    "air_fryer": "Bell peppers (*Capsicum annuum*) in the air fryer roast beautifully in 12–18 minutes without the need for high-heat oven preheating. The circulating air blisters the skin and caramelises the sugars of sliced strips faster than a conventional oven. Whole peppers can be air-fried for peel-and-serve preparations (same result as oven or grill, just faster). Halves or strips aimed for eating without peeling are done at 200 °C (390 °F) in 12–15 minutes, reaching an internal temperature of 82–90 °C (180–194 °F) where the flesh is tender and juicy with slightly blistered skin. A MEATER probe is inserted through the side wall of a whole pepper or horizontally into a thick strip before starting the cook. The air fryer is particularly popular for Asian-spiced pepper dishes since the intense dry heat replicates the wok-scorched texture without a wok.",
+    "grill": "Bell peppers (*Capsicum annuum*) on the grill transform dramatically: the skin blisters and chars, the interior softens from crisp to silky, and the natural sugars concentrate into a deep sweetness. The technique is two-phase — direct high heat to blister and char the exterior, then steam-peeling to remove the skin and reveal the smoky, tender flesh beneath. Grilled peppers are a foundational ingredient in Spanish (pimientos asados), Turkish (közlenmiş biber), Moroccan (chermoula-dressed peppers), and Italian (peperoni arrostiti) cuisines. Whole peppers can also be grilled and stuffed without peeling. A MEATER probe inserted through the shoulder of the pepper into the thickest part of the wall detects when the flesh reaches 88–95 °C (190–203 °F) — the point at which it is fully soft and the skin separates easily. Carryover is negligible; the peel-and-rest period is for practical skin removal, not for carryover cooking.",
+    "oven_roast": "Bell peppers (*Capsicum annuum*) oven-roasted at 220–230 °C follow the same skin-blistering trajectory as grilled peppers but with slower, more even heat penetration, and the option to roast slices or strips at lower temperatures for a tender-but-intact result. Whole peppers roasted at high heat until blackened are the classic preparation for peeling (identical to grilled, just slower); sliced peppers at 200–220 °C caramelise across their cut surfaces as their natural sugars concentrate. The internal temperature of a whole pepper when it is fully soft and the skin releases is 88–95 °C (190–203 °F); sliced peppers for eating as a dish (not for peeling) are done at 82–90 °C (180–194 °F). A MEATER probe is inserted through the shoulder of a whole pepper or into the thickest part of a slice.",
+    "saute": "Bell peppers (*Capsicum annuum*) sautéed in strips or rings are one of the most globally versatile vegetable preparations, appearing in Chinese stir-fries, Indian sabzis, Spanish pisto, French ratatouille, Korean bokkeum, and beyond. The sweet, watery flesh softens quickly in a hot, oiled pan; at 180–200 °C contact temperature, the cut surfaces caramelise while the interior remains tender-crisp to soft depending on cooking time. The target internal temperature for a tender-but-intact sauté is 80–88 °C (176–190 °F): at 80–82 °C the strips are tender-crisp (still with a slight bite); at 85–88 °C they are fully softened but hold their shape. A MEATER probe inserted horizontally into the thickest part of a strip (or the wall of a halved pepper) reads representative flesh temperature; carryover is negligible due to the high water content."
+  },
+  "corn_on_cob": {
+    "air_fryer": "Corn on the cob (*Zea mays*) in the air fryer achieves results similar to oven-roasting but in 12–16 minutes rather than 25–30, with the circulating hot air crisping the outer kernel rows quickly while the inner cob heats through. The corn must fit in the air fryer basket — a standard cob is too long and should be cut in half. The air fryer is particularly effective at caramelising the outer kernel rows to give a satisfying char without live fire. Pull temperature: 86–92 °C (187–198 °F). A MEATER probe is inserted through the kernel rows into the cob core at the mid-point of the half-ear. Husked halved corn ears are the standard preparation.",
+    "boil": "Corn on the cob (*Zea mays*) boiled is the simplest and most globally common cooking method, used in North America, Mexico, Peru, Japan, India, China, and Africa. Boiling achieves even cooking from all sides simultaneously, and the hot water transfers heat efficiently into the dense cob structure. The debate between \"boil to order\" (3–5 minutes for very fresh corn) vs. \"bring to a boil then leave\" (5–10 minutes for slightly older corn) hinges on the age of the corn — as the sugars in the kernels convert to starch over time. Internal kernel temperature (at the cob interface) of fully boiled corn: 88–95 °C (190–203 °F). A MEATER probe inserted through the kernels into the cob core monitors this; since the water temperature is ≈ 100 °C, the probe prevents overcooking by showing exactly when the kernel temperature has risen high enough.",
+    "grill": "Corn on the cob (*Zea mays*) grilled develops a deeply caramelised, smoky exterior when the husks are removed and the bare cob contacts the grill grates. The natural sugars in the kernels (sucrose, which converts to fructose and glucose over time after harvest) caramelise and char where they contact the hot grates, producing the blistered, char-marked kernels characteristic of Mexican elote, Japanese yakimorokoshi, and Indian bhutta. The cob can be grilled in its husk (which steams the kernels) or stripped for direct contact charring. Internal kernel temperature at the ideal doneness — fully cooked, tender and slightly caramelised — is 82–90 °C (180–194 °F). A MEATER probe is inserted through the rows of kernels into the dense cob at the mid-point of the ear, with the tip in the centre of the cob. This monitors the temperature at the kernel-cob interface.",
+    "oven_roast": "Corn on the cob (*Zea mays*) oven-roasted in its husk, or stripped and oven-roasted at high heat, produces a gentler result than live-fire grilling but still concentrates the natural sugars as moisture evaporates. At 200–220 °C, husked corn ears roast on a sheet pan in 25–30 minutes, the exposed kernels caramelising and taking on colour on the outer rows. Corn roasted in its husk achieves a steam-cooking effect — the kernels stay moist and cook evenly to 90–96 °C (194–205 °F) in 30–35 minutes. Pull temperatures: 88–92 °C (190–198 °F) for husked oven-roasted; 90–95 °C (194–203 °F) for in-husk. A MEATER probe is inserted through the kernel rows into the cob core at the mid-point, in any orientation.",
+    "steam": "Sweet corn on the cob (*Zea mays saccharata*, husked or husk-on) is a dense rack of starch-rich kernels each enclosed in a delicate pericarp. The kernels are 70–75 % water and contain heat-labile sugars that begin converting to starch the moment the cob is harvested. Steaming preserves more of those sugars than boiling because the kernels are not leached; it is also the gentlest method, holding the cob at 100 °C (vapour temperature) without any agitation. The kernel pericarp turns from cloudy-white to translucent-glossy when fully heated through; this visual cue corresponds to an internal kernel temperature of roughly 82–90 °C. Carryover is essentially zero — the cobs are removed straight onto the plate and served immediately."
+  },
+  "acorn_squash": {
+    "oven_bake": "Acorn squash (*Cucurbita pepo* var. *turbinata*) oven-baked whole or halved at 180–200 °C is a classic American autumn preparation. Halved and seed-scooped, then baked cut-face-down (30–40 min) or cut-face-up with a filling (35–50 min). Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe inserted through the skin into the thickest part of the flesh wall.",
+    "oven_roast": "Acorn squash (*Cucurbita pepo*) oven-roasted in wedges or half-shells at 200–220 °C develops caramelised, golden cut faces in 30–40 minutes. Wedges (the squash cut into 6–8 wedges) give maximum surface browning; half-shells give a more dramatic presentation. Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe through the skin into the thickest flesh part."
+  },
+  "butternut_squash": {
+    "oven_roast": "Butternut squash (*Cucurbita moschata*) oven-roasted in halves or chunks at 190–220 °C is one of the most widely used autumn/winter vegetable preparations globally. Halves roasted cut-face-down for 40–50 min; chunks in 25–35 min. Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe through the skin into the thickest flesh.",
+    "pressure_cooker": "Butternut squash (*Cucurbita moschata*) in a pressure cooker cooks in 8–12 minutes at high pressure (cubed), producing very soft, fully cooked flesh suitable for soups and purées. Pull temperature (measured via MEATER before sealing, or in the depressurised pot): 95–98 °C (203–208 °F). MEATER probe into the thickest cube before closing the lid.",
+    "steam": "Butternut squash (*Cucurbita moschata*) cut into 3–4 cm cubes and steamed over boiling water produces silky, sweet flesh ideal as a side dish or for mashing and pureeing. Steaming time 12–18 minutes depending on cube size. Pull temperature: 90–95 °C (194–203 °F) at the centre of the largest cube. MEATER probe inserted into the largest cube, tip centred. Because the steaming environment is 100 °C, pull promptly once target temp is reached to avoid over-cooking."
+  },
+  "spaghetti_squash": {
+    "oven_bake": "Spaghetti squash (*Cucurbita pepo*) is baked whole or halved at 180–200 °C until the flesh separates into noodle-like strands when scraped with a fork. Halved baked cut-face-down (35–45 min); whole baked (50–65 min with fork pricks). Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe inserted through the skin into the flesh for whole baking, or through the skin of a half. The defining visual cue — flesh pulling into strands — coincides with 90–95 °C.",
+    "oven_roast": "Spaghetti squash (*Cucurbita pepo*) oven-roasted at higher heat (200–220 °C) compared to baking, with the cut face oiled and placed cut-face-down to caramelise the edges before flipping. The higher temperature yields golden, slightly caramelised strands rather than steamed ones. Halves take 35–45 min at 210 °C. Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe through the skin into the flesh."
+  },
+  "zucchini": {
+    "air_fryer": "Zucchini (*Cucurbita pepo* var. *cylindrica*) cut into 1–2 cm rounds, half-moons or spears air-fried at 190–200 °C for 8–12 minutes produces golden, slightly crisp exteriors with tender centres. Because zucchini is mostly water, the air fryer's forced hot air quickly drives off surface moisture to give browning that is difficult to achieve in an oven. Pull temperature: 82–85 °C (180–185 °F) at the thickest piece — at this temperature the flesh is fully tender while still holding its shape. MEATER probe inserted lengthwise into the thickest spear or along the flat face of the largest round.",
+    "grill": "Zucchini (*Cucurbita pepo*) cut lengthways into 1–1.5 cm planks or thick rounds is one of the defining summer grill vegetables worldwide. The high dry heat of the grill evaporates surface moisture rapidly, creating golden char marks and a tender interior. Grill time: 4–6 minutes per side over medium-high heat. Pull temperature: 82–85 °C (180–185 °F) at the thickest part — at this internal temp the flesh is fully tender with charred exterior while still holding structure. MEATER probe inserted along the long axis of the thickest plank with the tip at the centre.",
+    "oven_roast": "Zucchini (*Cucurbita pepo*) halved lengthways or cut into thick rounds/spears oven-roasted at 200–220 °C develops caramelised, golden cut faces while the interior stays tender and moist. At high oven heat surface moisture evaporates before the outside can steam, allowing real browning. Roasting time: 20–30 minutes for halves; 15–20 minutes for spears at 210 °C. Pull temperature: 82–85 °C (180–185 °F) at the thickest piece. MEATER probe inserted along the long axis of the thickest half or spear.",
+    "saute": "Zucchini (*Cucurbita pepo*) sliced into 1 cm rounds, half-moons or batons is one of the fastest and most universal vegetable sautés. The goal is dry-heat browning on the cut faces before the interior becomes mushy; this requires a hot pan, minimal stirring and working in batches if necessary. Sauté time: 6–10 minutes total in a single layer. Pull temperature: 82–85 °C (180–185 °F) — at this internal temperature the flesh is completely tender while the cut faces show golden colour. MEATER probe inserted horizontally through the thickest round from the cut face."
+  },
+  "caramelized_onions": {
+    "pan_fry": "Caramelised onions via pan-frying refers to the style in which sliced or halved onions are cooked in generous hot fat over medium-to-high heat, with deliberate browning as the primary goal, contrasted with the slow-sauté method. At 170–190 °C pan temperature, the natural sugars (roughly 5 % of the onion's weight) undergo both caramelisation and Maillard reactions with the amino acids, producing deeply browned, almost crispy-edged onions with intense sweetness and bitterness in balance. This technique appears in South Asian birista (fried garnish), Alsatian Zwiebelkuchen bases, French *soubise* shortcuts, and Japanese-style glazed onion sides. A MEATER probe inserted horizontally into a thick half-onion near the centre reads the internal transition from crisp-dense (~60 °C) to fully soft (85–92 °C). Carryover is small but the browned rings crisp up further as they cool on a wire rack.",
+    "saute": "Slow-caramelised onions via sauté are one of the most fundamental flavour-building techniques in global cooking. Sliced onions sautéed over medium-low heat lose 60–70 % of their water content over 30–60 minutes, concentrating their sugars (fructose and glucose) until Maillard and caramelisation reactions produce a deep amber-brown, jammy condiment with complex sweet, savoury, and slightly bitter flavours. The process requires patience — onions that are cooked fast at high heat brown through rapid Maillard rather than true caramelisation, producing a different result. The target internal temperature of 90–96 °C (194–205 °F) corresponds to the point where nearly all free water has evaporated from the residual pan-mass and the sugars have concentrated and transformed. Carryover after removal is irrelevant — the slow cook is self-regulating."
+  },
+  "leeks": {
+    "braise": "Leeks (*Allium ampeloprasum* var. *porrum*) braised are one of the most refined of all vegetable preparations. The long white shafts soften over 20–40 minutes of gentle simmering in stock, wine, or butter-enriched liquid, their sharp raw flavour mellowing to a delicate sweetness. The technique — covering with a cartouche (buttered paper) or lid and cooking barely at simmer — is classical French *étuvée*, used also in British and Flemish cuisines. Leeks are cut in half lengthwise, or left whole and halved after cooking. The internal temperature of a fully braised leek is 82–88 °C (180–190 °F), where the cell walls have fully softened and the shaft is yielding to a paring knife but not collapsed. A MEATER probe is inserted along the axis of the leek into the thickest part of the white base, as far from the cut ends as possible to get a representative reading.",
+    "oven_roast": "Leeks (*Allium ampeloprasum* var. *porrum*) oven-roasted achieve a caramelised sweetness and charred outer layer that the braised version lacks. At 200–220 °C, the outer layers shrivel and blister while the inner white shaft steams in its own moisture, yielding a dual texture: slightly charred and papery outside, silky and jammy within. Leeks are typically halved lengthwise and roasted cut-side-down (or cut-side-up for more moisture retention) for 25–35 minutes. The internal temperature of a fully roasted leek is 86–92 °C (187–198 °F), where the inner layers are completely soft and sweet. A MEATER probe inserted along the axis into the thickest white base gives the most reliable reading; insert before the oven so the probe is set from the start.",
+    "saute": "Leeks (*Allium ampeloprasum* var. *porrum*) sautéed in a pan deliver the most versatile everyday leek preparation: sliced into rounds or batons, they are cooked in butter or oil over medium heat until their harsh rawness transforms into a sweet, mildly pungent softness. Unlike the long braise, the sauté takes 8–15 minutes and aims for a tender-but-intact result with some residual structure. Internal temperature at the ideal sauté doneness — tender, translucent, slightly caramelised at the edges — is 80–86 °C (176–187 °F). A MEATER probe is inserted horizontally into the thickest round or baton near the centre of the pan."
+  },
+  "roasted_garlic": {
+    "oven_roast": "Whole garlic heads (*Allium sativum*) oven-roasted are entirely transformed: the sharp, pungent raw allicin flavour mellows over 35–50 minutes at 180–200 °C into a sweet, nutty, spreadable paste. The papery outer skin chars slightly; the cloves themselves absorb their own concentrated sugars and caramelise within their individual sheaths. The classic preparation exposes the cloves by slicing the top off a whole head, drizzling with olive oil, and wrapping in foil or placing cut-side-up in a small dish. Internal clove temperature at full softness is 90–96 °C (194–205 °F). A MEATER probe is inserted from the top of the head, between two central cloves, to the geometric centre of the head."
+  },
+  "roasted_onion": {
+    "grill": "Whole onions (*Allium cepa*) on the grill are a traditional technique in cultures as distant as Argentina (Mallmann's *cebollas enteras a las brasas*), Mexico (grilled cambray onions for *salsa tatemada*), India (whole onion over tandoor coals), and Turkey (*közlenmiş soğan*). The outer layers char and blacken; the inner layers steam in their own moisture and transform to a silky, jam-sweet texture. Grilled whole onions — especially with their skins left on as insulation — require 30–50 minutes of moderate grill heat. Halved onions, placed cut-side-down on the grill grates, develop a deeply caramelised cut face in 15–20 minutes. Pull temperature for a whole grilled onion (fully soft throughout): 88–95 °C (190–203 °F). A MEATER probe is inserted through the side, between outer layers, into the centre of the onion.",
+    "oven_roast": "Whole or halved onions (*Allium cepa*) oven-roasted concentrate the natural sugars, soften the fibrous layers, and caramelise the cut surfaces without the live-flame char of the grill. At 190–220 °C, the outer skin acts as insulation: the interior reaches 90–95 °C (194–203 °F) by the time the skin is papery-dry and the interior is fully collapsed and jam-like. Halved onions placed cut-side-down on an oiled pan caramelise intensely on the cut face while the outer layers steam from the inside. A MEATER probe is inserted through the side between skin layers into the centre of the onion half or whole.",
+    "saute": "Onions (*Allium cepa*) sautéed as a roasted-style preparation — thick wedges, large rounds, or quartered halves sautéed at medium-high heat in a pan — occupy the territory between caramelised onion (slow-cooked strips) and grilled whole onion. The goal is pieces that brown deeply and develop a caramelised crust while the interior softens and sweetens. This preparation is distinct from the slow caramelised-onion technique (which uses thin slices and low heat) and from grilling (which uses live fire). Internal temperature for fully sautéed onion wedges or rounds with a good crust: 86–92 °C (187–198 °F). MEATER probe inserted horizontally into the thickest wedge near the centre of the pan."
+  },
+  "baked_potato": {
+    "air_fryer": "Whole baked potato (*Solanum tuberosum*) in the air fryer achieves a crispy, salty skin and fluffy interior in 35–45 minutes at 200 °C — significantly faster than the conventional oven (60–90 minutes) and with superior skin crispness due to the circulating hot air. A medium-to-large potato (200–250 g) takes 35–40 minutes; a very large potato (350+ g) takes 45–50 minutes. Pull temperature: 96–98 °C (205–208 °F) at the thickest centre. A MEATER probe is inserted along the long axis into the thickest central point of the potato before air frying begins. At 96–98 °C the starch granules are fully gelatinised and the interior is completely fluffy.",
+    "oven_bake": "Whole baked potato (*Solanum tuberosum*) in the conventional oven is the archetype of long, slow dry-heat cooking: 60–80 minutes at 200–220 °C, producing a deeply crispy, salt-encrusted skin and a fluffy, steamy interior. The internal temperature at complete doneness is 96–98 °C (205–208 °F) — below this, the centre remains dense and waxy; above it, the texture is optimal and floury. Russet (Idaho) and baking potatoes (high-starch varieties) achieve the best results; waxy varieties produce a gluey, dense result. A MEATER probe is inserted along the long axis into the geometric centre of the potato before it goes in the oven."
+  },
+  "roasted_beets": {
+    "oven_roast": "Whole beetroot (*Beta vulgaris*) oven-roasted, still in the skin, at 190–200 °C is the most flavour-preserving technique for beets: the skin protects the flesh from direct heat, preventing the water-soluble betalain pigments (which give beets their vibrant red-purple colour) from leaching out, as they would during boiling. Small-to-medium beets (7–10 cm diameter) take 50–70 minutes; large beets (>10 cm) take 70–90 minutes. Individual foil-wrapped beets cook slightly faster. Pull temperature: 92–96 °C (198–205 °F) at the thickest centre — at this point a skewer inserts with no resistance. MEATER probe inserted through the root end into the geometric centre."
+  },
+  "roasted_carrots": {
+    "air_fryer": "Carrots (*Daucus carota*) in the air fryer become caramelised, golden, and sweet in 15–20 minutes at 190–200 °C — faster than oven-roasting. Cut into coins, batons or long halves, they concentrate their natural sugars through evaporation and develop Maillard browning on the flat cut faces. Pull temperature: 86–92 °C (187–198 °F) for tender, caramelised carrots. MEATER probe inserted along the long axis of the thickest batons.",
+    "oven_roast": "Carrots (*Daucus carota*) oven-roasted at 200–220 °C develop intensely caramelised, golden surfaces in 25–35 minutes. The natural sugars (6–8 g/100 g — higher than most vegetables) caramelise readily at these temperatures, producing a characteristic sweetness and amber colour. Carrots can be roasted whole (small/medium), halved lengthwise, cut into batons or large coins. Pull temperature: 88–92 °C (190–198 °F) for caramelised, fully tender carrots. MEATER probe inserted along the long axis of the thickest piece.",
+    "saute": "Carrots (*Daucus carota*) sautéed in a hot pan — whether as Chinese stir-fried matchsticks, Japanese *kimpira gobo*-style glazed rounds, Indian tempering with spices, or French *carottes glacées* — develop a sweet, lightly caramelised character while retaining their structural texture. Carrots should be cut thinly (coins, matchsticks, julienne) for sautéing — 3–5 mm thick — so the centre cooks through before the surface over-colours. Pull temperature: 82–88 °C (180–190 °F) for tender-crisp glazed carrots. MEATER probe inserted along the long axis of the thickest piece (or into the densest pile)."
+  },
+  "roasted_parsnips": {
+    "air_fryer": "Parsnips (*Pastinaca sativa*) in the air fryer become golden, caramelised and crispy at the tips in 16–20 minutes at 190–200 °C — faster than oven roasting (25–30 minutes). Parsnips have a high natural sugar content (≈ 12 g/100 g — significantly higher than carrots) and caramelise readily. They should be cut into batons or long wedges, oil-coated and placed in a single layer. Pull temperature: 86–90 °C (187–194 °F) for caramelised, fluffy-interior parsnips. MEATER probe inserted along the long axis of the thickest baton.",
+    "oven_roast": "Parsnips (*Pastinaca sativa*) oven-roasted at 190–210 °C become deeply caramelised, golden at the tips and fluffy inside in 25–35 minutes. High-starch, high-sugar content (12 g/100 g natural sugars) makes parsnips excellent roasters — their surface browns readily and their interior fluffs. Parsnips are classically roasted alongside a joint in the UK, but also served solo with honey, miso, or spiced glazes in the contemporary global kitchen. Pull temperature: 88–92 °C (190–198 °F). MEATER probe along the long axis of the thickest piece."
+  },
+  "roasted_potatoes": {
+    "air_fryer": "Roasting potatoes (*Solanum tuberosum*) converts the raw starch to a crisp, caramelised exterior and fluffy interior. High-starch varieties (Maris Piper, Russet, King Edward) are preferred because their floury texture creates better fluffiness inside and absorbs fat more effectively for crispness. Waxy varieties (Charlotte, Jersey Royal) hold their shape but produce less crisp results. Fat coating (duck fat, goose fat, olive oil, lard) is essential — it conducts heat, enables Maillard browning, and adds flavour. Pre-boiling until edges are rough (chuffed) dramatically increases crispness by maximising surface area. Target internal temperature is 95–100°C for full starch gelatinisation and a fluffy interior.",
+    "oven_roast": "Roasting potatoes (*Solanum tuberosum*) converts the raw starch to a crisp, caramelised exterior and fluffy interior. High-starch varieties (Maris Piper, Russet, King Edward) are preferred because their floury texture creates better fluffiness inside and absorbs fat more effectively for crispness. Waxy varieties (Charlotte, Jersey Royal) hold their shape but produce less crisp results. Fat coating (duck fat, goose fat, olive oil, lard) is essential — it conducts heat, enables Maillard browning, and adds flavour. Pre-boiling until edges are rough (chuffed) dramatically increases crispness by maximising surface area. Target internal temperature is 95–100°C for full starch gelatinisation and a fluffy interior."
+  },
+  "roasted_sweet_potato": {
+    "air_fryer": "Sweet potato (*Ipomoea batatas*) in the air fryer achieves crispy, caramelised skin and a soft, sweet interior in 35–45 minutes (whole) or 20–25 minutes (halved or cubed). Sweet potato contains much higher natural sugars (6–8 g/100 g cooked) than white potato, which means it caramelises more readily. In Japan, *yakiimo* (焼き芋 — stone-roasted sweet potato) is a beloved street food. In Korea, *goguma* (고구마) is roasted and enjoyed as a snack. Pull temperature: 96–98 °C (205–208 °F) at the thickest centre for whole sweet potato. MEATER probe along the long axis into the geometric centre.",
+    "oven_bake": "Whole baked sweet potato (*Ipomoea batatas*) in the conventional oven at 190–200 °C achieves a deeply caramelised, slightly wrinkled skin and a soft, jammy interior in 50–70 minutes depending on size. The low-and-slow heat allows the amylase enzymes in the sweet potato to convert starches to sugars, producing an intensely sweet result (particularly with Japanese *satsuma-imo* varieties). Pull temperature: 96–98 °C (205–208 °F) at the thickest centre. MEATER probe along long axis into the geometric centre.",
+    "oven_roast": "Sweet potato (*Ipomoea batatas*) cut into chunks or wedges and oven-roasted at 200–220 °C caramelises in 25–35 minutes, producing crispy, golden-edged pieces with a soft, sweet interior. Unlike whole baked sweet potato, chunk-roasting maximises cut-face surface area for Maillard browning. Pull temperature: 90–95 °C (194–203 °F) at the thickest chunk. MEATER probe inserted into the thickest chunk."
+  },
+  "tuna_steak": {
+    "grill": "Tuna steak — most commonly bluefin (*hon maguro*), yellowfin (*ahi*), or bigeye (*mebachi*) — is cut transversely from the loin muscles of a large pelagic fish. Tuna flesh is deep crimson (from high myoglobin content), very lean, and densely muscled compared to most fish; it has almost no connective tissue between muscle segments, which means it behaves more like a red meat steak than a typical white-flake fish. Pan searing suits tuna precisely because the high heat drives rapid Maillard browning on the lean surface, while the brief cook time leaves the interior at the desired rare state. Overcooking is the defining risk: above 60 °C the proteins tighten dramatically, and the lean flesh becomes dry and crumbly. The conventional sushi-bar preference for *tataki* (briefly seared, cold-raw centre) means the entire temperature spectrum from raw to fully cooked is culinarily acknowledged. Carryover in a seared tuna steak is 2–3 °C and dissipates quickly.",
+    "pan_sear": "Tuna steak — most commonly bluefin (*hon maguro*), yellowfin (*ahi*), or bigeye (*mebachi*) — is cut transversely from the loin muscles of a large pelagic fish. Tuna flesh is deep crimson (from high myoglobin content), very lean, and densely muscled compared to most fish; it has almost no connective tissue between muscle segments, which means it behaves more like a red meat steak than a typical white-flake fish. Pan searing suits tuna precisely because the high heat drives rapid Maillard browning on the lean surface, while the brief cook time leaves the interior at the desired rare state. Overcooking is the defining risk: above 60 °C the proteins tighten dramatically, and the lean flesh becomes dry and crumbly. The conventional sushi-bar preference for *tataki* (briefly seared, cold-raw centre) means the entire temperature spectrum from raw to fully cooked is culinarily acknowledged. Carryover in a seared tuna steak is 2–3 °C and dissipates quickly."
+  },
+  "salmon_fillet": {
+    "air_fryer": "Salmon fillet in the air fryer is cooked by rapid convective circulation of superheated air around the fish in a compact enclosed basket; this simulates roasting at intensified speed, producing a surface that browns faster than a conventional oven bake while the interior remains moist. The skin crisps well if the surface is dried thoroughly before cooking. The compact geometry of most air fryer baskets means portions must be sized to fit without overlapping; single fillets of 150–200 g are ideal. Carryover from an air fryer is 3–5 °C, similar to a hot convection oven, and residual heat from the basket continues to cook the fish briefly after extraction. The rapid cook time — typically 8–12 minutes — means that soy, honey or sugar-based glazes caramelise well without burning if applied mid-cook or just before the final 2 minutes.",
+    "grill": "Salmon fillet on the grill is exposed to intense radiant and convective heat from below; if skin-on, the skin acts as a protective buffer between the direct flame and the delicate flesh. The fat content — particularly high in farmed Atlantic salmon — causes flare-ups when it renders and drips onto hot coals or burner elements, so heat management is critical. Wild salmon (sockeye, chinook) is leaner and more forgiving of moderate heat but more sensitive to overcooking. The key structural challenge of grilling salmon is the transition from firm, raw myotomes to the characteristic flake: this happens rapidly above 60 °C, so the cook window between underdone and overdone is narrow. Carryover is 2–3 °C from a screaming-hot grill surface; skin-side-down cooking provides a buffer and allows the cook to monitor visual cues (the translucency line moving up the fillet from below) without flipping.",
+    "oven_bake": "Salmon fillet baked in the oven is cooked primarily by convective heat circulating around the fish, with radiant heat from the oven walls contributing secondary surface browning. Unlike pan searing, oven baking does not create a crust on the skin without an initial high-heat blast; the gentler environment means the flesh sets gradually from the outside inward, producing a more uniformly cooked texture. Baking is particularly well-suited to whole-side fillets and thicker portions where even heat penetration matters; it also permits wet preparations (baking in parchment or foil en papillote, or in a liquid bath) that are impractical on a pan. The carryover in an oven-baked salmon fillet at conventional oven temperatures (180–220 °C) is 3–5 °C, meaning pull timing is critical; at low-and-slow temperatures (100–120 °C) carryover is minimal.",
+    "pan_sear": "Salmon fillet comes from the side of the fish, running the full length of the body from behind the head to the tail, with the pin bones removed. The flesh is divided into distinct fat-layered muscle segments (myotomes) separated by connective tissue (myocommata); that connective tissue softens and gives the characteristic flaking texture when the protein reaches its set point. Atlantic and Pacific salmon differ in fat distribution — farmed Atlantic salmon is uniformly rich, while wild sockeye and king salmon have denser, more mineral flesh. Pan searing suits salmon because the high conductive heat of a stainless or cast-iron pan rapidly crisps the skin (if skin-on) and caramelises the exposed flesh, producing textural contrast between crust and interior. Carryover in a seared salmon fillet is modest — 2–3 °C — because the thin geometry dissipates heat quickly, so accurate pull timing is essential to avoid overcooking.",
+    "sous_vide": "Salmon fillet cooked sous vide is sealed in a vacuum bag and submerged in a precision-temperature water bath for an extended period; the bath temperature is the cook temperature, and the fish will equilibrate to that temperature throughout its thickness over sufficient time. This method produces radically different textures compared to pan searing or roasting — at bath temperatures below 50 °C, the connective tissue between muscle segments (myocommata) softens but the proteins in the myotomes remain in a semi-liquid, custard-like state; at 52–54 °C the salmon fully sets to a firm but moist texture. The major structural advantage of sous vide is elimination of the hard-to-control temperature gradient from surface to core: the entire fillet is held at one temperature. Carryover is essentially zero — the fish exits the bath at the precise target temperature and the bag insulates it — but a quick sear or glaze step post-bath will add 2–3 °C at the surface."
+  },
+  "lobster_tail": {
+    "grill": "Lobster tail is the large tail segment of a lobster (*Homarus americanus*, the American/Maine lobster, or *Homarus gammarus*, the European/Breton lobster) separated from the body and claws; frozen and fresh spiny lobster tails (*Panulirus argus*) from the Caribbean and Pacific are also widely used. The edible flesh is the tail muscle — firm, white-to-pale-pink, sweet and rich in natural glutamates. Grilling is one of the most popular preparations for lobster tail because the direct radiant heat produces char and caramelisation on the cut flesh surface while the shell acts as a natural heat shield and flavour-retaining vessel. Butterflying the tail (cutting through the shell dorsally and splaying the flesh upward) is the dominant grill preparation because it exposes more flesh surface to direct heat and allows basting to penetrate the meat. Overcooking tightens the fibres sharply; the pull window is 58–62 °C before the meat becomes dry and rubbery. Carryover is 3–4 °C.",
+    "oven_roast": "Lobster tail is the large tail segment of a lobster (*Homarus americanus*, the American/Maine lobster, or *Homarus gammarus*, the European/Breton lobster) separated from the body and claws; frozen and fresh spiny lobster tails (*Panulirus argus*) from the Caribbean and Pacific are also widely used. The edible flesh is the tail muscle — firm, white-to-pale-pink, sweet and rich in natural glutamates. Grilling is one of the most popular preparations for lobster tail because the direct radiant heat produces char and caramelisation on the cut flesh surface while the shell acts as a natural heat shield and flavour-retaining vessel. Butterflying the tail (cutting through the shell dorsally and splaying the flesh upward) is the dominant grill preparation because it exposes more flesh surface to direct heat and allows basting to penetrate the meat. Overcooking tightens the fibres sharply; the pull window is 58–62 °C before the meat becomes dry and rubbery. Carryover is 3–4 °C."
+  },
+  "scallops": {
+    "pan_sear": "Sea scallops (*Pecten maximus* in Europe; *Placopecten magellanicus*, the Atlantic sea scallop, in North America) are the large adductor muscle that opens and closes the bivalve shell. The flesh is cream-white, sweet, and extremely tender with almost no connective tissue; it is composed mainly of striated muscle fibres held in a dense but delicate matrix. Pan searing is the defining method for large sea scallops because extreme heat produces rapid caramelisation of the natural sugars on the flat cut surfaces — the golden-brown crust contrasts dramatically with the cool, almost raw centre that is the mark of a well-executed scallop. Overcooking tightens the fibres sharply and produces a rubbery, squeaky texture. The critical requirements are: completely dry exterior, a blazing pan, and a very short cook time. Carryover is significant relative to the small mass — 3–5 °C — so pull early."
+  },
+  "shrimp": {
+    "pan_fry": "Shrimp (called prawns in British, Australian, and much of Asian-English usage) are the most widely consumed shellfish globally; the species most commonly used for pan frying include tiger prawns (*Penaeus monodon*), white leg shrimp (*Litopenaeus vannamei*), spot prawns (*Pandalus platyceros*), and Gulf shrimp (*Farfantepenaeus aztecus*). The edible flesh is the tail muscle, which contracts rapidly under heat and curls the tail from the characteristic C-shape of a live shrimp to a tighter O-shape when overcooked. Pan frying over high heat produces a caramelised exterior on the natural sugars in the shell or flesh, and in shell-on preparations the shell acts as a protective layer. The protein in shrimp begins to denature around 50 °C and is fully set at 60 °C; the culinary window for moist, tender shrimp is extremely narrow, typically 3–4 minutes total cook time for medium prawns in a very hot pan. Carryover is 2–3 °C."
+  },
+  "cod_fillet": {
+    "air_fryer": "Atlantic cod (*Gadus morhua*) fillet is cut from the sides of the fish; the flesh is firm, bright white when raw and milky white when cooked, with large moist flakes separated by thin layers of connective tissue. Cod is lean (less than 1% fat), which means it has no internal fat to provide self-basting protection during high-heat cooking; the natural moisture and gelatin in the connective tissue are the primary sources of perceived juiciness. Pan frying is a very common preparation — the high heat of the pan produces a golden-brown crust on the thin, flour- or breadcrumb-coated exterior while the interior cooks gently. Battered cod (fish and chips) uses the batter as insulation; simple pan-fried cod relies on a light coating of seasoned flour or the naked flesh. Carryover is minimal (2–3 °C) given the lean composition; the flesh transitions from moist-and-flaky to dry-and-crumbly rapidly above 65 °C.",
+    "oven_bake": "Atlantic cod (*Gadus morhua*) fillet is cut from the sides of the fish; the flesh is firm, bright white when raw and milky white when cooked, with large moist flakes separated by thin layers of connective tissue. Cod is lean (less than 1% fat), which means it has no internal fat to provide self-basting protection during high-heat cooking; the natural moisture and gelatin in the connective tissue are the primary sources of perceived juiciness. Pan frying is a very common preparation — the high heat of the pan produces a golden-brown crust on the thin, flour- or breadcrumb-coated exterior while the interior cooks gently. Battered cod (fish and chips) uses the batter as insulation; simple pan-fried cod relies on a light coating of seasoned flour or the naked flesh. Carryover is minimal (2–3 °C) given the lean composition; the flesh transitions from moist-and-flaky to dry-and-crumbly rapidly above 65 °C.",
+    "pan_fry": "Atlantic cod (*Gadus morhua*) fillet is cut from the sides of the fish; the flesh is firm, bright white when raw and milky white when cooked, with large moist flakes separated by thin layers of connective tissue. Cod is lean (less than 1% fat), which means it has no internal fat to provide self-basting protection during high-heat cooking; the natural moisture and gelatin in the connective tissue are the primary sources of perceived juiciness. Pan frying is a very common preparation — the high heat of the pan produces a golden-brown crust on the thin, flour- or breadcrumb-coated exterior while the interior cooks gently. Battered cod (fish and chips) uses the batter as insulation; simple pan-fried cod relies on a light coating of seasoned flour or the naked flesh. Carryover is minimal (2–3 °C) given the lean composition; the flesh transitions from moist-and-flaky to dry-and-crumbly rapidly above 65 °C."
+  },
+  "haddock": {
+    "pan_fry": "Haddock (*Melanogrammus aeglefinus*, Norwegian: hyse/kolje, German: Schellfisch, Swedish:\nkolja) is a lean white-fleshed cold-water fish closely related to cod. It has a mild,\nslightly sweet flavour and firm but fine-grained flesh that flakes beautifully when cooked.\nHaddock is central to British cuisine (fish & chips), Norwegian everyday cooking, and the\nGerman North Sea fishing tradition. The fillets are typically 1–2 cm thick, making them\nfast-cooking pan fish: 2–4 minutes per side at medium to medium-high heat in butter or\noil is sufficient for a fillet of normal thickness. The internal flesh reaches safe serving\ntemperature (63 °C / 145 °F USDA minimum for finfish) quickly; overcooking past 65 °C\nproduces dry, rubbery fish. The MEATER probe must be inserted laterally (from the thick\nedge) in thin fillets. Flouring the fillets before frying (as in the German and British\ntraditions) creates a protective crust that helps moisture retention and even browning."
+  },
+  "hake": {
+    "pan_fry": "Hake (*Merluccius merluccius*, European hake; *Merluccius capensis/paradoxus*, Cape hake; *Merluccius productus*, Pacific hake) is a lean white fish with firm, dense, large-flaked flesh and a mild, slightly sweet flavour. It occupies a central position in Iberian and Basque cuisine — in Spain (*merluza*) and Portugal (*pescada*) it is arguably the most important food fish — and is also important in Moroccan and West African seafood traditions. The flesh is slightly softer than cod when raw but firms up well under heat to produce the characteristic large, clean flakes. Pan frying is one of the dominant preparations: simply floured and pan-fried in olive oil (*merluza a la plancha*) is a Spanish staple; batter-fried (*pescada frita*) is a Portuguese and Moroccan tradition. Carryover is minimal (2–3 °C); pull at 60–63 °C for moist flakes."
+  },
+  "halibut_fillet": {
+    "pan_sear": "Pacific halibut (*Hippoglossus stenolepis*) and Atlantic halibut (*Hippoglossus hippoglossus*) are the largest flatfish; the fillet — cut from the meaty upper or lower side of the fish — is thick, firm, brilliant white, and lean with large, tight muscle flakes. The flesh has little connective tissue relative to its density, which gives a satisfying firm bite when properly cooked but transitions quickly to a dry, chalky texture above 60 °C. Pan searing is one of the most technically demanding preparations for halibut because the thick, lean flesh must be cooked through to approximately 58–62 °C without surface scorching; a common technique is to sear in a screaming-hot pan to set the crust, then finish in a moderate oven or with basting, treating it more like a thick beef steak than most fish. Carryover is significant — 4–5 °C for a thick fillet — so pulling early is essential."
+  },
+  "mahi_mahi": {
+    "pan_sear": "Mahi-mahi (*Coryphaena hippurus*), also called dolphinfish or dorado, is a large tropical and subtropical pelagic fish; the fillet is firm, moist, and moderately lean with a sweet, mild flavour and a distinctive large-flake texture. The skin is tough and not typically eaten — most preparations use skinless fillets. Mahi-mahi is popular across the Caribbean, Hawaiian, and American Gulf Coast cuisines, and is widely available as a sustainable fish choice. Pan searing produces a beautifully golden crust on the firm flesh; the natural moisture and slight fat content prevent drying out at moderate pull temperatures. The flesh transitions from moist-and-flaky to dry and stringy above 65 °C, so pulling at 60–62 °C is the target. Carryover is 3–4 °C."
+  },
+  "sea_bass": {
+    "pan_sear": "European sea bass (*Dicentrarchus labrax*, Italian: branzino/spigola, Turkish: levrek,\nSwedish: havsabborre) is a prized lean white fish with moderately firm, flaky white flesh\nand a thin but distinctly flavoured skin that renders beautifully crisp in a hot pan.\nPan searing is its most iconic preparation, particularly in Mediterranean cuisine.\nBecause the flesh is lean (< 3 % fat), it cooks extremely quickly and dries out if\novercooked. The standard technique is skin-side down first, pressing gently to prevent\ncurling, cooking 80–90 % through on the skin side, then flipping for a brief 30–60-second\nfinish. Internal temperature is the most reliable doneness indicator: the flesh transitions\nfrom translucent to opaque at approximately 55–58 °C and is fully cooked at 60–63 °C\n(USDA minimum for finfish: 63 °C / 145 °F). Many professional cooks pull at 58–60 °C.\nA MEATER probe in thin fillets must be inserted from the edge (laterally) rather than\nfrom above; in thicker whole or butterflied fish it is inserted into the thickest shoulder."
+  },
+  "swordfish": {
+    "pan_sear": "Swordfish (*Xiphias gladius*, Italian: pesce spada, Turkish: kılıçbalığı, Swedish: svärdfisk,\nSpanish: pez espada) is a large, meaty, open-ocean fish with compact, dense, steak-like flesh\nand a mild, slightly sweet flavour. Unlike most white fish, swordfish has very firm, non-flaky\nflesh similar in texture to tuna or veal — it can be cooked like a beefsteak. This makes it\nparticularly well suited to pan-searing, griddling and grilling at high heat.\n\nSwordfish steaks are typically 2–3 cm thick and contain a moderate amount of fat distributed\nthroughout the flesh, making them more forgiving than leaner white fish. They sear in a very\nhot pan for 1–3 minutes per side — overcooking is the primary risk, as the flesh dries and\nbecomes chalky above 65 °C. The BBC Good Food tradition specifically warns against cooking\nfor more than 1 minute per side on a very hot griddle, watching for the flesh to transition\nfrom translucent to pale cream (*cuisson*). Italian and Mediterranean cooks favour a\nslightly more moderate approach: 3–4 minutes per side over medium-high heat with olive oil.\n\nThe MEATER probe should be inserted from the side of the steak into the centre of the flesh.\nInternal temperature targets: pull at 52–57 °C (125–135 °F) for medium-rare (still slightly\ntranslucent at the very centre, preferred by Italian and Mediterranean cooks); 57–60 °C\n(135–140 °F) for medium (just opaque throughout). USDA minimum for finfish is 63 °C (145 °F)."
+  },
+  "trout": {
+    "pan_sear": "Rainbow trout (*Oncorhynchus mykiss*) and brown trout (*Salmo trutta*, Swedish: forell,\nNorwegian: ørret, German: Forelle, Italian: trota) are among the most widely cooked fresh-\nwater fish in Northern Europe and North America. The flesh is delicate, flaky, and mildly\nflavoured with a slightly nutty quality; colour ranges from white to orange-pink depending\non diet. Trout fillets are typically thin (1–2 cm), which means they cook very quickly in a\npan — 3–5 minutes per side at medium-high heat. The skin crisps beautifully in butter or\nolive oil. The key risk is overcooking: lean, thin trout flesh dries out rapidly past 65 °C.\nInternal doneness is the same as for other finfish: 60–63 °C (140–145 °F, USDA minimum)\nfor fully cooked flesh that is just opaque. The MEATER probe must be inserted from the\nthickest edge (lateral insertion) in thin fillets, or through the shoulder of a whole fish."
+  },
+  "ground_lamb": {
+    "pan_fry": "Ground (minced) lamb is used in countless traditions — from Middle Eastern kibbeh and North African merguez to Greek moussaka, Indian keema, and Turkish Akçaabat köfte. Pan-frying ground lamb requires thorough cooking (ground meat has higher bacterial contamination risk than whole cuts). The aromatics sautéed with the mince are as important as the meat itself.\n\nTarget internal temperature: **74 °C (165 °F)** for food-safe ground lamb."
+  },
+  "lamb_burger": {
+    "grill": "Lamb burgers are popular throughout the UK, Australia, New Zealand, the Middle East, and South Asia. Ground lamb's higher fat content means the patties are juicy but can flare on a grill — medium-high indirect heat is recommended. Common additions: garlic, cumin, harissa, feta (stuffed or mixed in), fresh herbs.\n\nTarget internal temperature: **74 °C (165 °F)** for safe ground meat."
+  },
+  "lamb_kofta": {
+    "grill": "Lamb kofta (köfte, kefta, kafta, kufta — many spelling variations) is one of the most widespread grilled preparations in the world, found from Morocco to Turkey, Iran, Pakistan, Afghanistan, India, and across the Levant. The ground lamb is mixed with onion, spices, and fresh herbs, shaped onto flat metal skewers, and grilled over high heat. It cooks very quickly (3–4 minutes per side) and must be cooked through. Inserting a MEATER probe into the thickest kofta is the recommended technique.\n\nTarget internal temperature: **74 °C (165 °F)** for food-safe ground meat."
+  },
+  "lamb_neck": {
+    "braise": "Lamb neck (Lammhals / collo di agnello / kuzu gerdan / lammehals) is one of the most underappreciated braising cuts. It is richly marbled, heavily worked, and packed with connective tissue and deep flavour. Cut into cross-sections or braised as a whole neck, it softens magnificently over 1.5–2.5 hours of moist heat, yielding deeply tender, self-basting meat in a rich, unctuous braising liquid. The neck is used in braises throughout Turkish, Italian, German, Greek, and Scandinavian traditions. A MEATER probe is inserted into the thickest cross-section of neck meat, away from the vertebrae, to track internal temperature.\n\nTarget internal temperature: **85–90 °C (185–194 °F)** for full braised tenderness.",
+    "oven_roast": "Lamb neck (Lammhals / collo di agnello / kuzu gerdan / lammehals) is one of the most underappreciated braising cuts. It is richly marbled, heavily worked, and packed with connective tissue and deep flavour. Cut into cross-sections or braised as a whole neck, it softens magnificently over 1.5–2.5 hours of moist heat, yielding deeply tender, self-basting meat in a rich, unctuous braising liquid. The neck is used in braises throughout Turkish, Italian, German, Greek, and Scandinavian traditions. A MEATER probe is inserted into the thickest cross-section of neck meat, away from the vertebrae, to track internal temperature.\n\nTarget internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bone oven tenderness.",
+    "slow_cooker": "Lamb neck is an excellent slow cooker cut. Its dense marbling, connective tissue, and vertebral bone all benefit from 7–8 hours of LOW moist heat — the neck becomes gelatinous and richly flavoured, surrendering all toughness by the time the long cook ends. Traditional clay-pot and covered-pot braises from Turkey, Italy, and Greece are natural slow-cooker analogues, requiring little adaptation beyond time conversion. The meat comes off the bone in large, tender flakes. The MEATER probe is inserted through the slow cooker lid seal or placed before the lid goes on, deep into the thickest neck piece, away from the vertebrae.\n\nTarget internal temperature: **85–90 °C (185–194 °F)** for full fall-off-the-bone tenderness."
+  },
+  "lamb_shank": {
+    "braise": "Lamb shank (the lower leg, hind or fore) is one of the most prized braising cuts in the world. The dense connective tissue, bone marrow, and rich muscle fibres transform through 2–3 hours of moist heat into fall-off-the-bone, gelatinous, deeply flavoured meat. It is the flagship dish of Mediterranean cooking (Italy, Greece, Turkey, France), the Middle East (Persian mahiche), and Australia. The target is **pull-apart tender** at 82–88 °C internal — not medium-pink as with steaks. A MEATER probe is inserted into the thickest part of the shank meat (above the bone) to verify doneness.\n\nTarget internal temperature: **82–88 °C (180–190 °F)** for fall-off-the-bone tender. USDA minimum for lamb is 63 °C, but for braised shanks this is far too early — braising is not complete until collagen has dissolved.",
+    "oven_roast": "Lamb shank (the lower leg, hind or fore) is one of the most prized braising cuts in the world. The dense connective tissue, bone marrow, and rich muscle fibres transform through 2–3 hours of moist heat into fall-off-the-bone, gelatinous, deeply flavoured meat. It is the flagship dish of Mediterranean cooking (Italy, Greece, Turkey, France), the Middle East (Persian mahiche), and Australia. The target is **pull-apart tender** at 82–88 °C internal — not medium-pink as with steaks. A MEATER probe is inserted into the thickest part of the shank meat (above the bone) to verify doneness.\n\nTarget internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bone tenderness across all traditions.",
+    "slow_cooker": "Lamb shank is one of the most naturally suited cuts for the slow cooker. The dense, collagen-rich lower leg requires 6–8 hours on LOW to fully dissolve connective tissue into rich gelatin. The long, moist environment of a slow cooker replicates the effect of a traditional braising pot or clay oven — the method used in Turkish, Greek, Italian, and North African cooking for centuries. The shank is often browned first for depth of flavour, then placed in the slow cooker with wine, stock, and aromatics. The MEATER probe is inserted into the thickest muscle of the shank, above the knuckle end and away from the bone.\n\nTarget internal temperature: **85–90 °C (185–194 °F)** for full fall-off-the-bone tenderness."
+  },
+  "lamb_shoulder": {
+    "oven_roast": "Lamb shoulder is fattier and more flavourful than leg, with more connective tissue that melts into gelatin during long, slow roasting. It is the cut for slow-roasted lamb dishes — 4–6 hours at 150–160 °C (or 7–8 hours at 130 °C). The result is pull-apart meat that falls off the bone with a fork. The MEATER probe target is **85–90 °C (185–194 °F)** for pull-apart."
+  },
+  "leg_of_lamb": {
+    "grill": "Leg of lamb on the grill is typically prepared as a butterflied leg — bone removed, flattened, and grilled over high heat. This is the approach in Australia, South Africa, Greece, and across the Middle East. Whole legs are also spit-roasted (rotisserie) over charcoal, as in the Greek Easter tradition (spit: 4–6 hours to pull-apart). Butterflied leg: 25–35 min total, target 57–60 °C for medium-pink.",
+    "oven_roast": "Leg of lamb is the quintessential festive roast throughout the Mediterranean, Middle East, British Isles, Australia, and New Zealand. A bone-in leg typically weighs 2–3 kg and is roasted at 160–175 °C with a garlic-herb rub, either to medium-pink (internal 54–60 °C) or slow-roasted to fall-apart (80–90 °C). The choice between these two approaches is the fundamental split in leg of lamb cooking.\n\n**Temperature guide** (from The Mediterranean Dish, fetched 2026-04-24):\n- Rare: 52 °C (125 °F) — 15 min/lb\n- Medium-rare: 54–57 °C (130–135 °F) — 20 min/lb\n- Medium: 57–63 °C (135–145 °F) — 25 min/lb\n- Well-done: 68–74 °C (155–165 °F) — 30 min/lb\n- Falling apart: 80 °C (175 °F) — 40 min/lb (slow 6 hours+)"
+  },
+  "rack_of_lamb": {
+    "oven_roast": "Rack of lamb (the rib section with 7–8 French-trimmed rib bones) is one of the most prestigious and visually dramatic roasting cuts in European and North American cooking. A Frenched rack of lamb, coated in a herb crust (persillade or Dijon-breadcrumb), seared in a pan, then roasted in a hot oven 20–25 minutes, is a classic dinner-party centrepiece.\n\nBecause the meat is from the loin and has very little connective tissue, rack of lamb must be treated like a premium steak and never overcooked.\n\nTarget internal temperature: **52–57 °C (126–135 °F)** for medium-rare (the universal preference). Pull at 50–52 °C."
+  },
+  "lamb_chops": {
+    "grill": "Lamb rib chops and loin chops are the classic cuts for grilling, popular worldwide from Australia and New Zealand (the world's largest lamb exporters) to the UK, Mediterranean, Middle East, and West Africa. Rib chops are smaller, leaner, and more delicate; loin chops are larger and fattier. Both benefit from high direct heat on a barbecue or grill pan. The rib or 'rack' end is typically served slightly pink (medium-rare to medium).\n\nTarget internal temperatures (from Africanbites.com):\n- Rib chops: **55 °C (131 °F)** for medium-rare\n- Loin chops: **57–60 °C (135–140 °F)** for medium",
+    "pan_sear": "Pan-searing lamb chops is the everyday indoor method used throughout the UK, Europe, South Asia, and the Middle East. A very hot cast-iron or heavy stainless pan, 3–4 minutes per side, then resting — the fat rendering into the pan creates a natural sauce base. Rosemary-garlic butter basting is the French/British standard; spice rubs and yoghurt marinades are the Indian/Middle Eastern approach.\n\nTarget: rib chops **55 °C (131 °F)** medium-rare; loin chops **57–60 °C (135–140 °F)** medium."
+  },
+  "lamb_cutlet": {
+    "pan_fry": "Lamb cutlets (thin, Frenched rib chops) are the most refined lamb cut — a single rib bone with the meat formed into a small medallion. They are a bistro classic in France and the UK, a restaurant staple in Australia and New Zealand, and are popular as party food throughout the Middle East and South Asia. Cooking time is very brief — 2–3 minutes per side — making them ideal for a pan with butter basting.\n\nTarget: **52–57 °C (126–135 °F)** for medium-rare. They overcook rapidly given their thin cross-section."
+  },
+  "lamb_loin_chops": {
+    "pan_sear": "Lamb loin chops are the T-bone of lamb — cut from the saddle, containing both the loin and the small section of tenderloin. They are larger and meatier than rib chops, with a characteristic T-shaped bone. In the UK they are sold as \"lamb chump chops\" (slightly different cut, from the rump). They are pan-seared 4–5 minutes per side to medium.\n\nTarget: **57–62 °C (135–144 °F)** for medium (slightly pink). Africanbites.com: 135–140°F (57–60°C)."
+  },
+  "baby_back_ribs": {
+    "air_fryer": "Baby back ribs (also called loin ribs or kamben in Danish; Rippchen in German) are the upper ribs from the pork loin area — leaner, more curved, and smaller than spare ribs. In an air fryer the high-velocity hot air circulates around each section, cooking them much faster than a conventional oven (60–90 min vs. 2.5–3 hrs) while still achieving tender, fall-off-the-bone results. Most air-fryer methods either pre-boil the ribs (to accelerate internal tenderness) or rely on a long low-temperature cook phase followed by a short high-temperature crisping phase. The silver skin on the bone side must always be removed. Target internal: 88–95 °C for tender, collagen-rendered ribs; at 63 °C they are technically safe but not yet fall-off-bone.\n\nTarget internal temperatures (air fryer):\n- Fall-off-bone tender: **88–95 °C (190–203 °F)**\n- ⚠️ Below 80 °C ribs are food-safe but still tough",
+    "grill": "Baby back ribs on the grill: the most popular method is indirect heat at ~150 °C for 1 hour wrapped in foil (no pre-boiling), then unwrap and finish 5–7 min per side with BBQ sauce. Alternatively: pre-boil 40–50 min then 20–25 min at 220 °C indirect. Both methods produce fall-off-the-bone ribs. The membrane on the back must be removed for any method. Target internal: 85–95 °C (ribs don't have a strict \"safe\" temperature beyond 63 °C for safety, but they need to be at 85–95 °C to become tender as the collagen renders).\n\nTarget internal temperatures (grill):\n- Tender/fall-off-bone: **85–95 °C (185–203 °F)**\n- ⚠️ Below 80 °C ribs are technically safe but not yet tender",
+    "oven_roast": "Baby back ribs oven-roasted are typically cooked low-and-slow wrapped in foil at 150 °C for 1–2 hours (depending on whether they were pre-boiled), then unwrapped and finished at higher heat with BBQ sauce for a glazed, caramelised crust. The foil phase traps steam and renders the collagen; the open phase drives Maillard browning. Pre-boiling (40–50 min) reduces the oven time but can wash out flavour; the no-boil foil method retains more flavour. Target internal: 88–95 °C for collagen-rendered, fork-tender ribs.\n\nTarget internal temperatures (oven roast):\n- Tender, glazed: **88–95 °C (190–203 °F)**\n- ⚠️ Below 80 °C ribs are food-safe but still chewy and tough",
+    "smoker": "Baby back ribs from the smoker are the gold standard of low-and-slow barbecue. The ribs (Schälrippchen / Rippchen vom Loin) are cooked bone-side down in a chamber at 110–120 °C with hardwood smoke (apple, cherry, hickory, beech) for 3–4 hours, optionally wrapped in foil with juice for a steam phase, then unwrapped and glazed. The 3-2-1 method (3 hr smoke → 2 hr steam → 1 hr glaze) and the 2-2-1 method (same but compressed) produce reliably tender, fall-off-bone results. The prolonged low heat renders collagen into gelatin and the smoke provides the characteristic bark. Silver skin removal is mandatory — it prevents smoke penetration and turns rubbery. Target internal: 88–95 °C; at 95 °C the membrane probe easily slides between the bones.\n\nTarget internal temperatures (smoker):\n- Fall-off-bone tender: **88–95 °C (190–203 °F)**\n- ⚠️ Below 80 °C ribs are food-safe but collagen is incompletely rendered"
+  },
+  "spare_ribs": {
+    "oven_roast": "Spare ribs (revelsben/kamben in Danish; Spareribs in German/Austrian) are the lower belly ribs, larger and flatter than baby back ribs with more fat and connective tissue. They benefit particularly from low-and-slow oven cooking: either pre-boiled then finished high, or foil-wrapped at low heat then glazed. The higher fat content makes them more forgiving than baby backs. Target internal: 88–95 °C, the same range as baby back ribs — collagen renders at these temperatures giving the characteristic tender, pull-off-bone texture and glossy glaze.\n\nTarget internal temperatures (oven roast):\n- Fall-off-bone tender: **88–95 °C (190–203 °F)**\n- ⚠️ Below 80 °C spare ribs are food-safe but still tough"
+  },
+  "ground_pork": {
+    "braise": "Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend of primal trimmings. Standard ground pork is typically 70–80% lean with 20–30% fat; the higher fat content gives it a juicy, cohesive texture when cooked and makes it more forgiving than ground beef or turkey. Ground pork is the basis of countless preparations worldwide — from Italian ragù and Swedish köttbullar to Chinese dumplings and Mexican chorizo. Because grinding distributes any surface bacteria throughout the mass, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is negligible.",
+    "pan_fry": "Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend of primal trimmings. Standard ground pork is typically 70–80% lean with 20–30% fat; the higher fat content gives it a juicy, cohesive texture when cooked and makes it more forgiving than ground beef or turkey. Ground pork is the basis of countless preparations worldwide — from Italian ragù and Swedish köttbullar to Chinese dumplings and Mexican chorizo. Because grinding distributes any surface bacteria throughout the mass, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is negligible.\n\nTarget internal temperatures (pan fry):\n- Safe/cooked through: **71–75 °C (160–167 °F)**\n- ⚠️ Ground pork MUST reach 71 °C — no pink allowed"
+  },
+  "pork_sausage": {
+    "grill": "Pork sausage is a processed meat product made from finely minced or coarsely ground pork, seasoned with salt, pepper, herbs and spices, and encased in natural pig intestine or synthetic collagen casing. Fat content is typically 20–30%, essential for juiciness and flavour development. Fresh sausages require cooking to a minimum internal temperature of 71°C (160°F); pre-cooked or smoked sausages require only reheating to serving temperature (60–65°C). The casing is the critical monitoring challenge: if it ruptures early, moisture and fat escape and the sausage dries out. Probing from one end into the centre avoids puncturing the casing mid-body. Carryover is 2–3°C.\n\nTarget internal temperatures (grill):\n- Fully cooked/safe: **71–75 °C (160–167 °F)**\n- ⚠️ Do not pull before 71 °C — pork sausage must be fully cooked",
+    "pan_fry": "Pork sausage is a processed meat product made from finely minced or coarsely ground pork, seasoned with salt, pepper, herbs and spices, and encased in natural pig intestine or synthetic collagen casing. Fat content is typically 20–30%, essential for juiciness and flavour development. Fresh sausages require cooking to a minimum internal temperature of 71°C (160°F); pre-cooked or smoked sausages require only reheating to serving temperature (60–65°C). The casing is the critical monitoring challenge: if it ruptures early, moisture and fat escape and the sausage dries out. Probing from one end into the centre avoids puncturing the casing mid-body. Carryover is 2–3°C.\n\nTarget internal temperatures (pan fry):\n- Fully cooked/safe: **71–75 °C (160–167 °F)**\n- ⚠️ Pork sausage must reach 71 °C minimum"
+  },
+  "fresh_ham": {
+    "oven_roast": "A fresh (uncured, unsmoked) ham is the entire hind leg of a pig — bone-in, skin-on, with the femur and aitchbone running through the centre and a thick layer of subcutaneous fat under the rind. Anatomically distinct from cured (julskinka) or smoked ham preparations: the muscle has its full natural moisture, the rind is supple rather than salted-firm, and the fat has not been altered by brine. Roasting requires a long, moderate-temperature cook (140–160 °C) that drives the centre to safe temperature without overcooking the surface meat under the fat. Carryover is significant — 4–6 °C in a 4–6 kg leg — because the bone, fat and dense muscle store heat well. Rest 30–45 minutes loosely tented before carving."
+  },
+  "pork_cheek": {
+    "braise": "Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the small dense muscle of the jaw — roughly 80–120 g per cheek, marbled with thin sheets of intramuscular fat and rich in collagen from the constant chewing motion the muscle performs in life. For pan frying (rather than the more common braise), the cheeks are typically butterflied to expose the interior, dusted lightly, and seared at high heat — the goal is to crust the surface while keeping the centre at a tender medium-rare. This works because the cheek's collagen network, while extensive, is fine-grained enough that a brief flash sear (rather than a long braise) leaves the muscle bouncy rather than rubbery. The carryover is small (2–3 °C) given the thin butterflied cuts.",
+    "oven_roast": "Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the small dense muscle of the jaw — roughly 80–120 g per cheek, marbled with thin sheets of intramuscular fat and rich in collagen from the constant chewing motion the muscle performs in life. For pan frying (rather than the more common braise), the cheeks are typically butterflied to expose the interior, dusted lightly, and seared at high heat — the goal is to crust the surface while keeping the centre at a tender medium-rare. This works because the cheek's collagen network, while extensive, is fine-grained enough that a brief flash sear (rather than a long braise) leaves the muscle bouncy rather than rubbery. The carryover is small (2–3 °C) given the thin butterflied cuts.",
+    "pan_fry": "Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the small dense muscle of the jaw — roughly 80–120 g per cheek, marbled with thin sheets of intramuscular fat and rich in collagen from the constant chewing motion the muscle performs in life. For pan frying (rather than the more common braise), the cheeks are typically butterflied to expose the interior, dusted lightly, and seared at high heat — the goal is to crust the surface while keeping the centre at a tender medium-rare. This works because the cheek's collagen network, while extensive, is fine-grained enough that a brief flash sear (rather than a long braise) leaves the muscle bouncy rather than rubbery. The carryover is small (2–3 °C) given the thin butterflied cuts."
+  },
+  "pork_liver": {
+    "pan_fry": "Pork liver is milder, slightly sweeter and more delicate in texture than beef liver — a paler chestnut-brown rather than the deep mahogany of beef, with a finer-grained hepatocyte structure and a thinner capsule. The same mineral-iron flavour profile is present but at lower intensity. The standard preparation across European traditions is identical to the beef-liver pan-fry: brief soak in milk to mellow the iron, dust in flour, sear hard in fat, and pull while the centre is still faintly pink. The narrower flavour also means pork liver tolerates assertive aromatics — onions, sage, juniper, allspice, capers — better than the more bold-tasting calf's or beef liver. Carryover is small (1–2 °C); slices continue cooking on the plate, so serve immediately.",
+    "pan_sear": "Pork liver is milder, slightly sweeter and more delicate in texture than beef liver — a paler chestnut-brown rather than the deep mahogany of beef, with a finer-grained hepatocyte structure and a thinner capsule. The same mineral-iron flavour profile is present but at lower intensity. The standard preparation across European traditions is identical to the beef-liver pan-fry: brief soak in milk to mellow the iron, dust in flour, sear hard in fat, and pull while the centre is still faintly pink. The narrower flavour also means pork liver tolerates assertive aromatics — onions, sage, juniper, allspice, capers — better than the more bold-tasting calf's or beef liver. Carryover is small (1–2 °C); slices continue cooking on the plate, so serve immediately."
+  },
+  "pork_tongue": {
+    "braise": "Pork tongue is the smaller, more delicate sibling of beef tongue — typically 250–400 g per tongue versus 1.5–2 kg for beef. The structure is identical: a single dense lingual muscle wrapped in a thick, papillae-covered skin that must be peeled after cooking. The smaller mass means a shorter braise (60–90 minutes rather than 3–4 hours) and a milder, sweeter flavour. Pork tongue is fundamental to many traditions — Mexican *lengua de cerdo*, Chinese cha-shu pig tongue, French *langue de porc sauce ravigote*, Polish *ozór wieprzowy*. The peel-while-warm rule still applies, and the tongue is best sliced thin and either dressed with a sharp vinaigrette or warmed in a piquant sauce. Carryover is essentially zero (the surrounding liquid buffers temperature).",
+    "slow_cooker": "Pork tongue cooked in an electric slow cooker is the same long-braise preparation as the stove-top method, executed in a sealed environment that holds the cooking liquid steady at 85–95 °C without monitoring. Because the tongue is small (250–400 g per tongue), the cook time is shorter than for beef tongue — 5–6 hours on Low or 3 hours on High is standard for a batch of 6 tongues. The peel-while-warm rule still applies; the skin must come off within 5–10 minutes of lifting from the cooker. Carryover is zero — the tongue stays at cooker temperature until removed. Sear the tongue base briefly in a hot skillet first if you want a deeper-flavoured stock, but it is optional."
+  },
+  "cured_ham": {
+    "oven_roast": "Cured ham (skinke in Danish; Schinken in German/Austrian) for the oven roast method encompasses both pre-boiled glazed ham and straight-to-oven versions. The classic approach is to boil a mild-cured or smoked ham first (removing excess salt and pre-cooking the meat), then score the rind and glaze it in a hot oven until caramelised. Low-and-slow oven variants skip the boiling and use very low temperatures (80°C oven) to achieve even, juicy results. Target internal temperature for safe, juicy cured ham: **70–75 °C** — the curing keeps the meat safe at slightly lower temps than fresh pork, but 75 °C is the standard target for glazed results.\n\nTarget internal temperatures (oven roast):\n- Juicy, glazed: **70–75 °C (158–167 °F)**\n- Very low-and-slow: **75 °C** (when oven is held at 80 °C)"
+  },
+  "pork_belly": {
+    "air_fryer": "Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.",
+    "braise": "Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.\n\nTarget internal temperatures (braise):\n- Tender, sliceable: **75–80 °C (167–176 °F)**\n- Very tender, fall-apart: **85–90 °C (185–194 °F)**",
+    "grill": "Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.",
+    "oven_roast": "Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.\n\nTarget internal temperatures (oven roast):\n- Danish flæskesteg: **65 °C (149 °F)** — juicy, just-cooked through\n- German Krustenbraten: **72–75 °C (162–167 °F)** — firmer but crackling-focused\n- Boil + glaze methods: **already cooked; glaze at high temp**",
+    "pan_fry": "Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.\n\nTarget internal temperatures (pan fry):\n- Cooked through, still juicy: **72–75 °C (162–167 °F)**\n- Traditional stegt flæsk (crispy and well-rendered): **80°C+ / 176°F+** (visual indicator: deeply golden and crispy)",
+    "slow_cooker": "Pork belly (svinekam / Schweinebauch / pancetta fresca) is one of the richest cuts for low-and-slow cooking. The thick fat cap renders over long cooking times, making the meat exceptionally moist and tender. \"Slow cook\" here means any low-and-slow method: a crockpot/slow cooker appliance, a Dutch oven in a low oven (160–180 °C), or an overnight oven braise. All three achieve the same result — collagen melts, fat renders, the meat becomes spoonable-tender.\n\nTarget internal temperatures (slow cook method):\n- **Safe minimum**: **65 °C (149 °F)** — pasteurised, still quite firm\n- **Tender slicing**: **75–80 °C (167–176 °F)** — preferred for serving in slices or wedges\n- **Pull-tender**: **85–90 °C (185–194 °F)** — for shredding/pulled styles\n- Most recipes target 75–80 °C when slicing; crockpot recipes rarely probe but 4 h HIGH or 6–8 h LOW reliably reaches 80+ °C",
+    "smoker": "Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.\n\nTarget internal temperatures (smoker method):\n- **Safe minimum**: **65 °C (149 °F)** — USDA safe but fat is still firm\n- **Phase 1 pull for wrap**: **74–79 °C (165–175 °F)** — bark set, good color; wrap in foil here\n- **Sliceable finish**: **93 °C (200 °F)** — fat fully rendered, meat tender, slices cleanly\n- **Pull-apart / burnt-ends finish**: **93–97 °C (200–207 °F)** — falling-apart texture",
+    "sous_vide": "Pork belly is especially well-suited to sous vide. The abundant intramuscular fat and connective tissue render and convert to gelatin at low temperatures (60–75 °C), producing a silky, butter-soft texture that is impossible to achieve by any faster method. Cooking times range from 12 to 72 hours depending on desired texture; 24 h at 70–75 °C is a widely cited sweet-spot. After the bath the belly is usually seared or crisped (skin-side up under a broiler, or in a very hot pan) to create crackling or a mahogany crust.\n\nTarget internal temperatures (sous vide):\n- **INKBIRD app default**: **68 °C / 154 °F × 24 h** — moist, silky, slight chew\n- **Author's preference**: **75 °C / 167 °F × 24 h** — slightly firmer, fat fully rendered, easier to crisp afterwards"
+  },
+  "pork_leg": {
+    "braise": "Pork leg and hock (Schweinshaxe / stinco di maiale / kuzu incik) is a collagen-rich cut with thick connective tissue, bone marrow, and heavily worked muscle. Braising unlocks the cut's full potential: 2–3 hours of moist heat at low temperature converts collagen to gelatin, creating sticky, unctuous, fall-off-the-bone meat surrounded by a richly reduced sauce. Popular braised in beer across Bavaria, Central Europe, and the British Isles; in soy and spices across East Asia; and in wine with herbs across Mediterranean Europe. The MEATER probe is placed deep into the thickest muscle mass of the leg or hock, away from the bone, to track internal temperature accurately.\n\nTarget internal temperature: **75–80 °C (167–176 °F)** for sliceable, tender; **85–90 °C (185–194 °F)** for pull-apart.",
+    "oven_roast": "Pork leg and hock (Schweinshaxe / stinco di maiale / kuzu incik) is a collagen-rich cut with thick connective tissue, bone marrow, and heavily worked muscle. Braising unlocks the cut's full potential: 2–3 hours of moist heat at low temperature converts collagen to gelatin, creating sticky, unctuous, fall-off-the-bone meat surrounded by a richly reduced sauce. Popular braised in beer across Bavaria, Central Europe, and the British Isles; in soy and spices across East Asia; and in wine with herbs across Mediterranean Europe. The MEATER probe is placed deep into the thickest muscle mass of the leg or hock, away from the bone, to track internal temperature accurately.\n\nTarget internal temperature: **75–85 °C (167–185 °F)** as explicitly stated by Giallo Zafferano. Pull-apart fall-off-the-bone is achieved closer to 88–90 °C.",
+    "slow_cooker": "Pork leg and hock (Schweinshaxe / Stelze) is an ideal slow-cooker cut. The dense connective tissue and bone marrow require long, low moist heat — exactly what a slow cooker delivers. The hock goes into the pot with aromatics, liquid, and seasoning, and over 6–8 hours on LOW the meat slowly detaches from the bone, the skin softens, and the braising liquid concentrates. A brief blast of oven heat at the end restores the traditional crisp skin if desired. The MEATER probe is placed in the thickest meat mass, away from the bone, throughout the long cook.\n\nTarget internal temperature: **85–90 °C (185–194 °F)** pull-apart. The slow cooker environment will hold the meat at this range safely for extended periods."
+  },
+  "pork_loin_roast": {
+    "oven_roast": "Pork loin roast (svinekam in Danish; Schweinerücken / Kotelettstrang in German/Austrian) with rind (svær / Schwarte) is the quintessential Scandinavian and German Sunday dinner. The loin is leaner than the belly so it needs more careful temperature management — pull too early and it's under-safe; pull too late and it dries out. The Danish approach targets **65°C** for a juicy, slightly rosy result; German recipes often go to 72–75°C for a firmer texture. For a MEATER probe, 65°C is an excellent target with a high-heat crackling finish.\n\nTarget internal temperatures (oven roast):\n- Juicy, slightly rosy (Danish-style): **60–65 °C (140–149 °F)**\n- Traditional firm, fully white (German-style): **70–75 °C (158–167 °F)**"
+  },
+  "pork_shoulder": {
+    "oven_roast": "Pork shoulder / neck (nakkefilet / nakkekam / svinekølle in Danish; Schweinenacken / Schweineschulter in German/Austrian) is one of the most forgiving cuts for the oven — its fat marbling prevents drying out and it develops deep flavour at virtually any oven temperature. The Danish approach covers with foil at 200°C for 105 minutes (firm but juicy); the Norwegian approach targets 75°C core at 175°C oven; the German approach uses the Krustenbraten method at 180°C × 2 hrs. Unlike the leaner loin, shoulder can be taken higher without losing juiciness.\n\nTarget internal temperatures (oven roast):\n- Juicy, sliceable: **72–75 °C (162–167 °F)**\n- Very tender (approaching pulled): **80–85 °C (176–185 °F)**",
+    "slow_cooker": "Pork shoulder (Schweinenacken / Schweineschulter in German; nakkefilet / svinenakke in Danish/Norwegian) slow-cooked at very low temperatures produces the ultimate pulled pork — melt-in-the-mouth meat with rich, concentrated juices. The Danish \"pulled pork in oven\" approach uses 100°C × 9 hours; the Norwegian TINE method uses 125°C × 3–4 hours; a slow cooker (actual crockpot) typically runs 90–100°C. All converge on the same pull target: **90–95°C** for pull-apart texture where collagen is fully converted to gelatin.\n\nTarget internal temperatures (slow cooker / very-low oven):\n- Tender but sliceable: **85–88 °C (185–190 °F)**\n- Pulled pork (fall-apart): **90–95 °C (194–203 °F)**",
+    "smoker": "Pork shoulder / neck (Schweinenacken / Schweineschulter in German/Austrian; nakkefilet / svinekam in Danish/Norwegian) is the most popular cut for smoked pulled pork. Its high fat content and generous marbling makes it extremely forgiving over the 10–18 hours of low-and-slow smoking required to convert collagen to gelatin. The plateau phase (Stall) at 65–82°C is normal and does not mean something is wrong. The smoke ring (Rauchring) develops in the first 2–3 hours. Target internal: **90–95 °C** for pull-apart texture. Boston Butt (bone-in shoulder) = more flavour and longer cook; Schweinenacken (boneless neck) = faster and more even.\n\nTarget internal temperatures (smoker):\n- Sliceable (not pulled): **82–88 °C (180–190 °F)**\n- Classic pulled pork: **90–95 °C (194–203 °F)**"
+  },
+  "pork_chop": {
+    "air_fryer": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\nAir-frying is one of the fastest and most consistent methods for pork chops — hot dry air circulates at 375–400 °F (190–205 °C), producing a crispy exterior while the interior stays juicy at 145 °F (63 °C). Seasoning styles vary widely by tradition: in West African and Caribbean Creole cooking, chops are rubbed with Creole spice blend (paprika, cayenne, thyme, garlic, onion) and a touch of brown sugar; in Italy, olive oil, garlic, and dried oregano; in Denmark, simple salt, pepper, and thyme. The common thread is the method — high convection heat, flip once, short cook time.\n\nTarget internal temperatures (air fryer):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
+    "grill": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\nGrilled pork chops are central to culinary traditions far beyond Europe. In Vietnam, **Sườn Nướng** (lemongrass–fish-sauce marinated grilled chops) is an everyday rice-plate dish sold at roadside stalls across the country. In Thailand, thin marinated pork slices grilled on skewers (Moo Ping) are quintessential street food. In Korea, pork is the dominant grilling meat. In West Africa and the Caribbean, bone-in pork chops are marinated in aromatic spice blends and charred over open flame. The core technique — direct high heat, char on the exterior, juicy interior — is universal.\n\nTarget internal temperatures (grill):\n- Juicy/pink: **62–65 °C (144–149 °F)**",
+    "oven_roast": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\nOven-roasting pork chops is practised across every continent where pork features in the cuisine. In West Africa and the Caribbean, bone-in chops are rubbed with Creole spice blends, brown sugar, and garlic, then roasted at high heat to achieve a caramelised exterior. In China, char siu (叉燒) roasts pork in a honey-soy-five-spice glaze. In India (Goa and Malabar), pork is marinated in vinegar and spices before oven-roasting. In the Philippines, pork is central to lechon (whole roast) and sinigang traditions. The oven method — high heat bake with a resting period — is universal.\n\nTarget internal temperatures (oven roast):\n- Juicy/pink: **63–65 °C (145–149 °F)**\n- Well done: **70–72 °C (158–162 °F)**",
+    "pan_fry": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\nPan-frying pork is a cornerstone technique across Asia. In Thailand, **Moo Tod Gratiem Prik Thai** (หมูทอดกระเทียมพริกไทย — garlic-pepper pork) is one of the most ordered street-food dishes: thin chops or pork slices marinated in garlic, cilantro root, and white pepper, then shallow-fried in a wok until golden and crispy. In China, 锅贴排骨 (pan-fried pork ribs) uses soy-based marinades and shallow-frying. In Vietnam, Sườn Chiên pan-fried chops are a popular home-cooking dish. In Japan, tonkatsu uses a breaded shallow-fry on pork cutlets. The thin-cut, high-heat, oil-fry approach yields caramelised exteriors impossible to achieve in a dry pan.\n\nTarget internal temperatures (pan fry):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)** (safe and recommended)\n- Well done: **70–72 °C (158–162 °F)**",
+    "pan_sear": "Pan-searing a pork chop emphasises the crust rather than the flip. A screaming hot dry pan (or minimal oil), long uninterrupted contact on one side to build a Maillard crust before turning — then finish the second side. The same three traditions apply as for pan_fry but the emphasis differs: this file captures the high-heat sear + finish approach, including the constant-turning crust technique and the oven-finish option for thick chops.\n\nTarget internal temperatures:\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**"
+  },
+  "pork_loin_steak": {
+    "pan_fry": "Pork loin steak (koteletsteg, Lendensteak vom Schwein) is a boneless steak cut from the loin (between chop and tenderloin area). It is lean and uniform in thickness, making it ideal for pan frying with the same technique as pork chop: hot pan, butter baste, 3–4 min per side. It is slightly more forgiving than tenderloin but dries out faster than a shoulder steak. Target core: 63–65 °C.\n\nTarget internal temperatures (pan fry):\n- Juicy/pink: **63–65 °C (145–149 °F)**"
+  },
+  "pork_shoulder_steak": {
+    "pan_fry": "Pork shoulder steak (nakkesteak, Schweinenackensteak / Schopfsteak) is from the neck/collar area — more marbled than loin steak, more forgiving, and ideal for pan frying. The fat renders during cooking, basting the meat from the inside. 3–4 minutes per side on medium-high heat is the standard, and it can withstand a slightly higher final temperature (68–70 °C) without drying out. The Austrian Schopfsteak is an iconic example of this cut.\n\nTarget internal temperatures (pan fry):\n- Juicy: **65–68 °C (149–154 °F)**\n- Well done: **70–72 °C (158–162 °F)**"
+  },
+  "pork_tenderloin": {
+    "air_fryer": "Pork tenderloin in the air fryer is fast (20 minutes total) and delivers juicy results because the circulating hot air seals the outside quickly. The Spanish method (directoalpaladar.com) uses a bacon wrap which adds flavour and fat to the lean meat. A whole tenderloin (300–400 g) is cut in half to fit the basket. 200 °C × 10 min per side + 5 min rest. Core target: 63–65 °C.\n\nTarget internal temperatures (air fryer):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
+    "grill": "Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo) is the leanest cut of pork and the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.\n\nTarget internal temperatures (grill):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
+    "oven_roast": "Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo / 猪里脊) is the leanest cut of pork — a long, narrow muscle that runs along the lumbar spine, removed from the loin. It is found inside the loin section, between the rib cage and the hip. Because it does so little work, it is the most tender muscle on the pig. It is also the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.\n\nOven-roasted whole pork tenderloin is a technique used across global cuisines. In West African and Caribbean-influenced Creole cooking, the tenderloin is rubbed with paprika, thyme, garlic, and cayenne, seared in cast iron, then roasted on a rack. In Denmark, a pan-seared whole tenderloin finished in the oven is a classic everyday dish. In Spain, the solomillo is oven-roasted with olive oil and herbs. In China, the 里脊 (lǐ jǐ / tenderloin) is marinated in soy-ginger and roasted as a loose cousin of Char Siu. The high heat oven roast is the most universal cooking method for this cut.\n\nTarget internal temperatures (oven roast):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
+    "pan_sear": "Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo) is the leanest cut of pork and the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.\n\nTarget internal temperatures (pan sear):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
+    "sous_vide": "Pork tenderloin is an ideal candidate for sous vide: lean meat has no fat buffer so even slight overcooking in a conventional pan is noticeable, whereas a 58 °C bath delivers uniform, perfectly pink results wall-to-wall. Bath time for a whole tenderloin (300–400 g): 1–1.5 hours. After the bath, dry completely and sear 1–2 minutes total for a crust. The Danish method uses BBQ sauce as a finish layer during searing.\n\nTarget sous vide bath temperatures (pork tenderloin):\n- Pink/juicy: **58–60 °C (136–140 °F)** × 1–1.5 hr\n- More done: **63–65 °C (145–149 °F)** × 1–1.5 hr"
+  },
+  "secreto": {
+    "pan_sear": "The secreto (Spanish: \"secret\") is a hidden fat-marbled cut from the shoulder/neck area of the Iberian pig (or any pork). It is thin, uneven, and highly marbled, making it one of the most flavourful pork cuts for the griddle or grill. Because it is thin and irregular, it is cut into 3–4 uniform pieces before cooking. Key rules: de-chill 2 hours; dry sear without oil; no salt before; one flip only; rest 1–2 min then season. Target: 65–70 °C (pink to fully done) — internal temperature rises fast due to the thin cross-section.\n\nTarget internal temperatures (pan sear):\n- Pink inside: **63–65 °C (145–149 °F)**\n- Well done (recommended for high-fat secreto): **68–72 °C (154–162 °F)**"
+  }
+};
+
+// Classic recipe titles per cut × method
+const CLASSIC_RECIPE_TITLES_INDEX = {
+  "ostrich_steak": {
+    "grill": [
+      "South African Braai tradition — Classic braaied ostrich steak",
+      "Namibian Ostrich Festival tradition — Grilled ostrich with African chilli butter",
+      "Chefkoch.de — Straußensteak auf dem Grill (German tradition)"
+    ],
+    "pan_sear": [
+      "Chefkoch.de — Straußensteaks aus dem Ofen (German tradition)",
+      "EatOut.co.za — Ostrich steak South African style (South African tradition)",
+      "Food24.com — Pan-seared ostrich with mushroom sauce (South African/Continental tradition)"
+    ]
+  },
+  "venison_loin": {
+    "pan_sear": [
+      "BBC Good Food — Pan-Fried Venison with Blackberry Sauce (British tradition)",
+      "BBC Good Food — Venison Steak with Port Sauce (British tradition)",
+      "Great British Chefs — Pan-Roasted Loin of Venison with Redcurrant Sauce (British tradition)",
+      "Chefkoch.de — Reh- oder Hirschsteaks mit verschiedenen Marinaden (German tradition)"
+    ]
+  },
+  "venison_roast": {
+    "oven_roast": [
+      "BBC Good Food — Stuffed Saddle of Venison with Prunes and Brioche (British tradition)",
+      "Chefkoch.de — Rehsteak rosa gebraten (German tradition — pink venison)",
+      "Tasteline.com — Rådjursstek i ugn (Swedish roe deer roast)"
+    ]
+  },
+  "venison_steak": {
+    "grill": [
+      "BBC Good Food — Venison Steak with Port Sauce (UK tradition)",
+      "Honest Food (Hank Shaw) — Grilled Venison Backstrap (North American tradition)",
+      "Chefkoch — Reh- oder Hirschsteaks mit verschiedenen Marinaden (German tradition)",
+      "Bara en kaka till — Hjortfilé med grönpepparsås (Swedish tradition)",
+      "Matprat — Plankebiff av elg eller hjort (Norwegian tradition)"
+    ],
+    "pan_sear": [
+      "BBC Good Food — Pan-Fried Venison with Blackberry Sauce (UK tradition)",
+      "Matprat — Hjortefilet med snittebønnestuing (Norwegian tradition)",
+      "Tasteline — Hjortstek (Swedish tradition)",
+      "Chefkoch — Hirschmedaillons in Preiselbeer-Rahmsauce (German tradition)",
+      "GialloZafferano — Arrosto di Cervo (Italian tradition)",
+      "The Rustic Elk — Marinated Venison Steak (North American tradition)"
+    ]
+  },
+  "rabbit_legs": {
+    "braise": [
+      "Chefkoch.de — Geschmorte Kaninchenkeulen (German tradition)",
+      "BBC Good Food — Rabbit au Vin (British/French tradition)",
+      "Giallozafferano.it — Coniglio alla cacciatora (Italian hunter-style braised rabbit)"
+    ],
+    "oven_roast": [
+      "BBC Good Food — Roast Rabbit with Thyme (British tradition)",
+      "Chefkoch.de — Kaninchenkeulen aus dem Ofen mit Kräuterkruste (German tradition)",
+      "Madensverden.dk — Ovnstegt kanin (Danish oven-roasted rabbit)"
+    ]
+  },
+  "rabbit_saddle": {
+    "oven_roast": [
+      "Emeril Lagasse — Roasted Saddle of Rabbit",
+      "Pardon Your French (Audrey Le Goff) — Stuffed Rabbit Saddle with Chestnuts and Mushrooms",
+      "Dairy Farmers of Canada — Saddle of Rabbit with Celery Sauce and Ricotta",
+      "Good Food Middle East (BBC Good Food) — Roast Rabbit with Thyme"
+    ],
+    "pan_sear": [
+      "Hank Shaw — Pan-Seared Rabbit Loin with Herb Butter",
+      "Fergus Henderson — Saddle of Rabbit, Pan-Fried",
+      "The French Cooking Academy (Stéphane Nguyen) — Lapin Rôti à la Poêle",
+      "Lidia Bastianich — Coniglio in Padella (Rabbit Loin in the Pan)"
+    ]
+  },
+  "wild_boar_chop": {
+    "grill": [
+      "BBC Good Food — Grilled Wild Boar Chops (UK tradition)",
+      "Chefkoch.de — Wildschwein vom Grill (German tradition)",
+      "La Cucina Italiana — Costolette di cinghiale alla griglia (Italian tradition)"
+    ],
+    "pan_sear": [
+      "Chefkoch.de — Wildschweinkoteletts mit Wacholdercreme (German tradition)",
+      "Chefkoch.de — Wildschweinkoteletts auf sardische Art (Sardinian tradition, German recipe)",
+      "Giallozafferano.it — Costolette di cinghiale alla cacciatora (Italian hunting tradition)"
+    ]
+  },
+  "wild_boar_shoulder": {
+    "oven_roast": [
+      "Chefkoch.de — Wildschweinschulter ganz einfach (German tradition)",
+      "Giallozafferano.it — Cinghiale in umido (Italian slow-roast tradition)",
+      "Madensverden.dk — Langtidsstegt vildsvinsskulder (Danish tradition)"
+    ]
+  },
+  "mutton_chop": {
+    "grill": [
+      "Pakistani tradition — Mutton Chops Seekh (grilled marinated)",
+      "Madensverden.dk — Grillede lammekotelet (adapted for mutton — Danish tradition)",
+      "African Bites — West African Grilled Mutton Chops (Nigerian tradition)"
+    ],
+    "pan_sear": [
+      "Chefkoch.de — Hammelkoteletts (German tradition)",
+      "BBC Good Food — Mutton Chops with Spiced Onions (British/Indian tradition)",
+      "IndianHealthyRecipes.com — Mutton Chops Masala (Indian tradition)"
+    ]
+  },
+  "mutton_leg": {
+    "oven_roast": [
+      "Chefkoch.de — Hammel aus dem Ofen (German tradition)",
+      "IndianHealthyRecipes.com — Raan Musallam (Whole Roasted Mutton Leg, Mughlai/Indian tradition)",
+      "Madensverden.dk — Lammelår i ovnen (adapted for mutton — Danish tradition)"
+    ]
+  },
+  "mutton_shoulder": {
+    "braise": [
+      "Indian Healthy Recipes — Mutton Korma / Gosht Korma (Indian / Mughlai tradition)",
+      "Nefis Yemek Tarifleri — Fırında Kuzu Kol Tandır (Turkish tradition)",
+      "Giallo Zafferano — Spalla d'agnello farcita alla toscana (Italian tradition)",
+      "Chefkoch.de — Geschmorter Lammhals (shoulder adaptation) (German tradition)"
+    ],
+    "oven_roast": [
+      "BBC Good Food — Slow-roasted Mutton Shoulder (British tradition)",
+      "Nefisyemektarifleri.com — Fırında Kuzu Kol (Turkish oven-roasted lamb/mutton shoulder)",
+      "Povarenok.ru — Шашлык из баранины (Russian / Central Asian slow-roasted mutton)"
+    ],
+    "slow_cooker": [
+      "Indian Healthy Recipes — Mutton Korma (slow cooker adaptation) (Indian / Mughlai tradition)",
+      "Nefis Yemek Tarifleri — Kuzu Kol Tandır (slow cooker adaptation) (Turkish tradition)",
+      "Chefkoch.de — Lammhaxen aus dem Slowcooker (shoulder adaptation) (German tradition)",
+      "Argiro.gr — Αρνάκι στο ταψί (slow cooker adaptation) (Greek tradition)"
+    ]
+  },
+  "kangaroo_steak": {
+    "grill": [
+      "Chefkoch.de — Gegrilltes Kängurusteak auf australische Art (German/Australian tradition)",
+      "Australian Kangaroo Industry Association — Grilled kangaroo rump",
+      "The Essential Ingredient (Sydney) — Kangaroo with bush spices on the BBQ"
+    ],
+    "pan_sear": [
+      "Chefkoch.de — Kängurusteak in Pfeffermarinade und Pfeffersahnesauce (German tradition)",
+      "Game Meat Australia / national tradition — Simple pan-seared kangaroo fillet",
+      "Meatsmith (Melbourne) — Kangaroo fillet with native pepper berry"
+    ]
+  },
+  "reindeer_roast": {
+    "oven_roast": [
+      "Köket.se — Reninnanlår à la Norrland (Swedish tradition, oven method)",
+      "Tasteline.com — Renstek (Swedish reindeer roast)",
+      "Matprat.no — Renstek i ovnen (Norwegian oven roast)"
+    ]
+  },
+  "reindeer_steak": {
+    "grill": [
+      "Köket.se temperature guide — Grillad renfilé (Swedish grilling tradition)",
+      "Madensverden.dk — Grillet rensdyr (Danish/Nordic grilling)",
+      "Kotikokki.net — Poropihvi grillissä (Finnish grilled reindeer steak)"
+    ],
+    "pan_sear": [
+      "Köket.se / TV4 Halv åtta hos mig — Renfilé med smörig blåbärssås (Swedish tradition)",
+      "Köket.se / TV4 — Reninnanlår à la Norrland (Swedish tradition)",
+      "Kotikokki.net — Paistettua poronlihaa (Finnish pan-fried reindeer, Finnish tradition)"
+    ]
+  },
+  "goat_chop": {
+    "grill": [
+      "BBC Good Food — Pulled Goat Kebabs with Coriander Dressing (British/Middle Eastern tradition)",
+      "Caribbean Pot — Jamaican Jerk Goat Chops (Caribbean tradition)",
+      "African Bites — Grilled Goat (West African tradition, adapted from lamb chops recipe)"
+    ],
+    "pan_sear": [
+      "African Bites — Asun (Nigerian spicy roast goat — pan method)",
+      "Indianhealthyrecipes.com — Goat Chops Masala (Indian tradition)",
+      "Laylita.com — Seco de Chivo (Ecuadorian goat stew — pan method)"
+    ]
+  },
+  "goat_leg": {
+    "oven_roast": [
+      "Chefkoch.de — Ziegenkeule im Römertopf (German tradition)",
+      "African Bites — Asun Goat (Nigerian roasted leg tradition)",
+      "Laylita.com — Seco de Chivo (Ecuadorian goat leg braised whole)"
+    ]
+  },
+  "goat_shank": {
+    "braise": [
+      "Yotam Ottolenghi & Sami Tamimi — Slow-Braised Goat Shanks with Pomegranate & Cumin (Levantine tradition)",
+      "Tina Nordström — Långbräserade Getlägg med Rödvin & Rotfrukter (Swedish/Nordic tradition)",
+      "Diana Henry — Slow-Braised Goat Shanks with Red Wine & Rosemary (British/Mediterranean tradition)",
+      "Maricel Presilla — Cabrito Estofado / Slow-Braised Goat Shanks (Latin American tradition)"
+    ],
+    "oven_roast": [
+      "Yotam Ottolenghi & Sami Tamimi — Oven-Roasted Goat Shanks with Pomegranate (Levantine tradition)",
+      "Tina Nordström — Ugnsbakade Getlägg med Rödvin (Swedish/Nordic tradition)",
+      "Diana Henry — Slow-Roasted Goat Shanks with Anchovy & Rosemary (British/Mediterranean tradition)",
+      "Hugh Fearnley-Whittingstall — Slow-Roast Goat Shanks (British River Cottage tradition)"
+    ]
+  },
+  "goat_shoulder": {
+    "braise": [
+      "Yotam Ottolenghi & Sami Tamimi — Slow-Braised Goat Shoulder with Pomegranate, Cumin & Walnuts (Levantine tradition)",
+      "Tina Nordström — Långbräserad Getskuldra med Rödvin (Swedish/Nordic tradition)",
+      "Hugh Fearnley-Whittingstall — Slow-Braised Goat Shoulder with Cider (British River Cottage tradition)",
+      "Maricel Presilla — Cabrito en Salsa Verde / Slow-Braised Goat Shoulder (Latin American tradition)"
+    ],
+    "oven_roast": [
+      "African Bites — Jamaican Curry Goat (Caribbean tradition)",
+      "IndianHealthyRecipes.com — Rogan Josh (Kashmir/Indian goat shoulder)",
+      "Nefisyemektarifleri.com — Fırında Kuzu Omuz (Turkish goat/lamb shoulder)"
+    ],
+    "slow_cooker": [
+      "Yotam Ottolenghi & Sami Tamimi — Slow-Cooker Goat Shoulder with Pomegranate (Levantine tradition)",
+      "Tina Nordström — Långkokt Getskuldra i Crock-Pot (Swedish/Nordic tradition)",
+      "Hugh Fearnley-Whittingstall — Slow-Cooker Goat Shoulder with Cider (British River Cottage tradition)",
+      "Maricel Presilla — Slow-Cooker Cabrito en Salsa Verde (Latin American tradition)"
+    ]
+  },
+  "moose_roast": {
+    "oven_roast": [
+      "Chefkoch.de — Elchbraten (Älg i grytan) — Swedish oven-braise (German recipe citing Swedish tradition)",
+      "Tasteline.com — Älgstek i ugn (Swedish oven roast)",
+      "Matprat.no — Elgstek i ovnen (Norwegian oven roast)"
+    ]
+  },
+  "moose_steak": {
+    "grill": [
+      "Tasteline.com — Grillad älgbiff (Swedish grilled moose steak)",
+      "Chefkoch.de — Elchsteak vom Grill (German tradition)",
+      "Matprat.no — Grillet elgbiff (Norwegian BBQ tradition)"
+    ],
+    "pan_sear": [
+      "Chefkoch.de — Elchsteaks (Canadian recipe, German source)",
+      "Chefkoch.de — Reh oder Hirschsteaks (adapted for moose — German venison/deer steak with marinades)",
+      "Tasteline.com — Älgbiff i smör (Swedish butter-seared moose steak)"
+    ]
+  },
+  "buffalo_burger": {
+    "grill": [
+      "Food Network — Bison Burger with Garlic Mayo and Caramelized Onions (American tradition)",
+      "Chefkoch.de — Der Bisonburger (German tradition)",
+      "BBC Good Food — Barbecued Beef Burger (technique applicable to buffalo patties)"
+    ],
+    "pan_fry": [
+      "Chefkoch.de — Der Bisonburger (German tradition, pan-fry adaptation)",
+      "Madensverden.dk — Bøffer (Danish burger patties — buffalo/bison adaptation)",
+      "RecipeTinEats.com — Hamburger Recipe (technique applicable to buffalo)"
+    ]
+  },
+  "buffalo_steak": {
+    "grill": [
+      "Yummy.ph — Filipino Bistek Tagalog Carabeef, grilled version (Filipino tradition)",
+      "Daskochrezept.de — Gegrilltes Bison-Filet-Steak mit süß-scharfer Bier-Chili-Marinade (German tradition)",
+      "IndianHealthyRecipes.com — Indian spiced water buffalo steak (Indian tradition)"
+    ],
+    "pan_sear": [
+      "Panlasang Pinoy — Bistek Tagalog (Filipino beef/carabeef steak)",
+      "Chefkoch.de — Bisonbraten (German oven-pot tradition — also applies to buffalo)",
+      "IndianHealthyRecipes.com — Pepper Beef/Buffalo Fry (Kali Mirch) — Indian tradition"
+    ]
+  },
+  "bison_burger": {
+    "grill": [
+      "BBC Good Food — Barbecue Beef Burger (British tradition)",
+      "Madensverden.dk — Saftige Burgerbøffer (Danish tradition)",
+      "Chefkoch.de — Der Bisonburger (German tradition)",
+      "RecipeTin Eats — Hamburger Recipe (Australian tradition)"
+    ],
+    "pan_fry": [
+      "Hank Shaw — Pan-Seared Bison Burgers with Caramelised Onions (American hunter tradition)",
+      "Tina Nordström — Pannstekt Bisonburgare med Lingon-Aioli (Swedish tradition)",
+      "America's Test Kitchen — Pan-Seared Bison Burgers (American test-kitchen tradition)",
+      "Magnus Nilsson — Pannstekt Bisonburgare med Enbärsmajonnäs (Nordic tradition)"
+    ]
+  },
+  "bison_roast": {
+    "oven_roast": [
+      "Chefkoch.de — Bisonbraten (German tradition, high-heat oven)",
+      "Chefkoch.de — Bisonbraten mit Mozzarella-Senfkruste (German tradition, low-heat oven with herb crust)"
+    ]
+  },
+  "bison_steak": {
+    "grill": [
+      "Daskochrezept.de — Gegrilltes Bison-Filet-Steak in süß-scharfer Bier-Chili-Marinade (German tradition)",
+      "BBC Good Food — Steak with Chimichurri Sauce (British / Argentine tradition)",
+      "Chefkoch.de — Bisonsteak auf Paprika (German tradition, pan sear + 80 °C oven)",
+      "Chefkoch.de — Bisonsteak in Rosmarin (German tradition, pan sear + 80 °C oven)"
+    ],
+    "pan_sear": [
+      "Chefkoch.de — Bisonsteak mit Büffelmozzarella auf Wildpilzgemüse (German tradition)",
+      "Chefkoch.de — Bisonsteak in Rosmarin (German tradition)",
+      "Chefkoch.de — Bisonsteak auf Paprika (German tradition)",
+      "Daskochrezept.de — Gegrilltes Bison Filet Steak mit süß-scharfer Bier-Chili-Marinade (German/Austrian tradition)"
+    ]
+  },
+  "beef_burger": {
+    "air_fryer": [
+      "America's Test Kitchen — Air-Fryer Diner-Style Burgers (American tradition)",
+      "Hugh Fearnley-Whittingstall — River Cottage Burger in the Air Fryer (British tradition)",
+      "Adam Liaw — Air Fryer \"Smash\" Burger (Australian / Asian-fusion tradition)",
+      "Joshua Weissman — Air Fryer Diner Cheeseburger (American food-media tradition)"
+    ],
+    "grill": [
+      "J. Kenji López-Alt — Smash Burger / Classic Grilled Burger",
+      "Fergus Henderson — Classic Grilled Beef Patty (British tradition)",
+      "Jan Braai (Jan Scannell) — Braai Burger (*hamburguer*) (South African tradition)",
+      "Nobu Matsuhisa — Wagyu Burger on Charcoal (Japanese-Californian tradition)",
+      "Francis Mallmann — Gaucho-Style Grilled Burger (*hambúrguer gaucho*)"
+    ],
+    "pan_fry": [
+      "J. Kenji López-Alt — Pan-Fried Smash Burger",
+      "Nigel Slater — Beef Burger in Cast Iron (British tradition)",
+      "Fergus Henderson — Short Rib Burger in Pan (Nose-to-Tail tradition)",
+      "Momofuku / David Chang — Korean-Influenced Crispy Skillet Burger",
+      "Diana Yen / The Jewels of New York — Taiwanese Beef Burger in Wok/Pan"
+    ]
+  },
+  "ground_beef": {
+    "braise": [
+      "Marcella Hazan — Ragù alla Bolognese (Italian tradition)",
+      "Tina Nordström — Köttfärsgryta med rotsaker (Swedish tradition)",
+      "Madhur Jaffrey — Aloo Keema (Pakistani / North Indian tradition)",
+      "Diana Henry — Picadillo (Cuban-Mexican tradition)"
+    ],
+    "pan_fry": [
+      "J. Kenji López-Alt — Pan-Fried Browned Ground Beef (American food-science tradition)",
+      "Marcella Hazan — Soffritto-Browned Beef for Ragù alla Bolognese (Italian tradition)",
+      "Madhur Jaffrey — Kheema (Indian-style minced beef)",
+      "Tina Nordström — Köttfärs på Stekpannan (Swedish home tradition)"
+    ]
+  },
+  "meatloaf": {
+    "oven_roast": [
+      "America's Test Kitchen — Classic Meatloaf with Bacon Topping (American tradition)",
+      "Tina Nordström — Köttfärslimpa (Swedish home tradition)",
+      "Nigella Lawson — Italian-Inspired Meatloaf with Fennel & Sun-Dried Tomato (British / Anglo-Italian tradition)",
+      "Ina Garten — Roasted Vegetable Meatloaf (American food-media tradition)"
+    ]
+  },
+  "filet_mignon": {
+    "air_fryer": [
+      "Natasha's Kitchen — Air Fryer Filet Mignon (American home tradition)",
+      "Serious Eats / Kenji — Air-Fryer Steak Technique Applied to Filet Mignon",
+      "BBC Good Food — Air Fryer Fillet Steak (British tradition)",
+      "Nagi Maehashi (RecipeTin Eats) — Air Fryer Steak Applied to Filet Mignon (Australian tradition)",
+      "Maangchi — Korean-Inspired Air Fryer Beef Fillet (*Sogogi gui*)"
+    ],
+    "charcoal_grill": [
+      "Aaron Franklin — Charcoal-Grilled Filet (Texas tradition)",
+      "Adam Perry Lang — Two-Stage Charcoal Filet",
+      "Francis Mallmann — Filet on Charcoal Embers (*gaucho* tradition, Argentine)",
+      "Nobu Matsuhisa — Charcoal-Grilled Beef Fillet with Soy (Japanese tradition)",
+      "Yotam Ottolenghi — Middle Eastern Charcoal-Grilled Fillet"
+    ],
+    "grill": [
+      "Weber Grills / America's Test Kitchen — Classic Grilled Filet Mignon",
+      "Ina Garten — Grilled Filet Mignon with Herb Butter (American home tradition)",
+      "Nigel Slater — Grilled Beef Fillet (British tradition)",
+      "Ferran Adrià — Grilled Beef Fillet with Romesco (Catalan tradition)",
+      "Maangchi — Korean Grilled Beef Fillet (*Gui*)"
+    ],
+    "oven_roast": [
+      "Ina Garten — Pan-Seared Oven-Finished Filet Mignon",
+      "Gordon Ramsay — Filet Mignon with Roasted Garlic Butter (British tradition)",
+      "Jacques Pépin — Filet Mignon au Four (French tradition)",
+      "Heston Blumenthal — Reverse-Sear Filet Mignon",
+      "Tetsuya Wakuda — Oven-Roasted Wagyu Fillet (Japanese-Australian tradition)"
+    ],
+    "pan_fry": [
+      "Julia Child — Pan-Fried Filet de Bœuf (French bistro tradition)",
+      "J. Kenji López-Alt — Pan-Fried Filet Mignon with Butter Baste",
+      "Marco Pierre White — Fillet Steak in the Pan (British tradition)",
+      "Masaharu Morimoto — Iron Chef–Style Pan-Fried Beef Fillet (Japanese-American tradition)",
+      "Nagi Maehashi (RecipeTin Eats) — Pan-Fried Eye Fillet Steak (Australian tradition)"
+    ],
+    "pan_sear": [
+      "J. Kenji López-Alt — Rapid-Flip Pan Sear (Serious Eats method)",
+      "Thomas Keller — Pan-Seared Filet with Brown Butter (French American tradition)",
+      "Fergus Henderson — Seared Fillet Steak (British tradition)",
+      "Nobu Matsuhisa — Pan-Seared Wagyu Fillet with Ponzu (Japanese tradition)",
+      "Adam Liaw — Pan-Seared Beef Fillet with Shiitake Sauce (Japanese-Australian tradition)"
+    ],
+    "sous_vide": [
+      "J. Kenji López-Alt — Sous Vide Filet Mignon",
+      "Thomas Keller — Sous Vide Beef Tenderloin Medallion (*Ad Hoc* tradition)",
+      "Heston Blumenthal — Sous Vide Beef Fillet (British modern tradition)",
+      "Maangchi — Korean-Style Sous Vide Beef Fillet (*Ansim*)",
+      "Tetsuya Wakuda — Sous Vide Wagyu Fillet (Japanese-Australian tradition)"
+    ]
+  },
+  "flank_steak": {
+    "charcoal_grill": [
+      "Francis Mallmann — Argentine Flank on Charcoal (*Vacio a la parrilla*)",
+      "Aaron Franklin — Charcoal-Grilled Flank Steak (Texas tradition)",
+      "Ottolenghi — Middle Eastern Marinated Flank Steak on Charcoal",
+      "Nobu Matsuhisa — Charcoal-Grilled Flank with Soy Citrus Glaze (Japanese-Californian tradition)",
+      "Diana Barrios Treviño — Tex-Mex Carne Asada Flank Steak"
+    ],
+    "grill": [
+      "America's Test Kitchen — Gas-Grilled Flank Steak",
+      "Bobby Flay — Marinated Grilled Flank Steak (American SW tradition)",
+      "Rick Bayless — Mexican Carne Asada (Mexican tradition)",
+      "Heston Blumenthal — Reverse-Sear Grilled Flank Steak (British modern)",
+      "Maangchi — Korean Galbi-Style Flank (*Bulgogi* Variation)"
+    ],
+    "oven_roast": [
+      "America's Test Kitchen — London Broil (Oven-Roasted Flank Steak)",
+      "Alton Brown — London Broil Method",
+      "Yotam Ottolenghi — Slow-Roasted Middle Eastern Flank Steak",
+      "Julia Child — Bœuf au Four / Flank Oven Method (French tradition)",
+      "Maangchi — Korean Oven-Roasted Marinated Flank (*Sogogi Bokkeum* Variation)"
+    ],
+    "pan_fry": [
+      "J. Kenji López-Alt — Pan-Fried Flank Steak (Serious Eats)",
+      "Nigel Slater — Pan-Fried Bavette (British tradition)",
+      "Jacques Pépin — Bavette de Bœuf à la Lyonnaise (French tradition)",
+      "Nobu Matsuhisa — Pan-Fried Beef Flank with Miso Glaze (Japanese-American tradition)",
+      "Adam Perry Lang — Pan-Fried Flank with Herb Baste (American BBQ tradition applied to pan)"
+    ],
+    "pan_sear": [
+      "J. Kenji López-Alt — Pan-Seared Flank Steak (Serious Eats)",
+      "Stéphane Reynaud — Bavette à l'échalote (French bistro tradition)",
+      "Francis Mallmann — Plancha-Seared Matambre (Argentine tradition)",
+      "Fergus Henderson — Pan-Fried Bavette with Anchovy Butter (British nose-to-tail tradition)",
+      "Maangchi — Pan-Seared Bulgogi-Style Flank (Korean tradition)"
+    ],
+    "sous_vide": [
+      "J. Kenji López-Alt — Sous Vide Flank Steak (Serious Eats / ChefSteps)",
+      "Thomas Keller — Sous Vide Flank Steak (French Laundry / Bouchon tradition)",
+      "Heston Blumenthal — Precision-Temperature Flank (British modernist tradition)",
+      "David Chang — Sous Vide Flank for Korean BBQ (Korean-American tradition)",
+      "Enrique Olvera — Matambre Sous Vide (Mexican tradition)"
+    ]
+  },
+  "flat_iron": {
+    "air_fryer": [
+      "J. Kenji López-Alt / Serious Eats — Air-Fryer Flat Iron with Herb Butter",
+      "Nigella Lawson — Smoked-Paprika Air-Fryer Flat Iron (British home-cook tradition)",
+      "Donna Hay — Sesame-Ginger Air-Fryer Flat Iron (Australian modern)",
+      "Maangchi — Korean Yangnyeom-Marinated Air-Fryer Flat Iron (Korean tradition)",
+      "Rick Bayless — Achiote-Citrus Air-Fryer Flat Iron (Mexican tradition)"
+    ],
+    "charcoal_grill": [
+      "Francis Mallmann — Asado de Campo Flat Iron (Argentine tradition)",
+      "Jan Braai (Jan Scannell) — South African Braai Flat Iron with Monkey Gland Sauce",
+      "Aaron Franklin — Direct-Coal Flat Iron (American BBQ/steakhouse tradition)",
+      "Maangchi — Korean Charcoal-Grilled Bulgogi Flat Iron (Korean tradition)",
+      "Guga Foods — Brazilian Churrasco Flat Iron on Skewer (Brazilian tradition)"
+    ],
+    "grill": [
+      "Bobby Flay — Grilled Flat Iron with Blue Cheese Butter (American tradition)",
+      "Jamie Oliver — Flat Iron Steak with Salsa Verde (British/Italian tradition)",
+      "Claudia Roden — Chermoula-Grilled Flat Iron (North African/Moroccan tradition)",
+      "José Pizarro — Spanish Plancha-Style Flat Iron with Romesco (Spanish tradition)",
+      "Yotam Ottolenghi — Za'atar and Lemon Grilled Flat Iron (Israeli/Levantine tradition)"
+    ],
+    "oven_roast": [
+      "America's Test Kitchen — Reverse-Sear Flat Iron (American tradition)",
+      "Heston Blumenthal — Low-and-Slow Oven Flat Iron (British modernist tradition)",
+      "Julia Child — Bifteck Rôti au Four (French tradition)",
+      "Marcella Hazan — Bistecca al Forno con Erbe (Italian tradition)",
+      "Nigel Slater — Flat Iron with Anchovy and Mustard Crust, Roasted (British tradition)"
+    ],
+    "pan_fry": [
+      "Jacques Pépin — Steak à la Poêle, Sauce au Poivre (French bistro tradition)",
+      "Rowley Leigh — Flat Iron Steak with Watercress and Anchovy Dressing (British tradition)",
+      "Giorgio Locatelli — Tagliata di Ferro con Rucola e Parmigiano (Italian tradition)",
+      "Kurt Gutenbrunner — Wiener Steak aus der Pfanne (Austrian tradition)",
+      "Stephanie Alexander — Pan-Fried Flat Iron with Herb and Caper Butter (Australian tradition)"
+    ],
+    "pan_sear": [
+      "J. Kenji López-Alt — Dry-Brined Pan-Seared Flat Iron with Butter Basting (American tradition)",
+      "Gordon Ramsay — Restaurant-Style Butter-Basted Flat Iron (British/French restaurant tradition)",
+      "Nobu Matsuhisa — Wafu Flat Iron with Ponzu and Daikon (Japanese tradition)",
+      "José Andrés — Flat Iron a la Plancha with Piquillo Peppers (Spanish tradition)",
+      "René Redzepi — Nordic Seared Flat Iron with Smoked Butter (Nordic tradition)"
+    ],
+    "sous_vide": [
+      "J. Kenji López-Alt / Serious Eats — Sous Vide Flat Iron at 55 °C (American modernist tradition)",
+      "Thomas Keller — Sous Vide Flat Iron (French-American modernist tradition)",
+      "Heston Blumenthal — Precise Sous Vide Flat Iron (British modernist tradition)",
+      "ChefSteps — Joule Sous Vide Flat Iron (American modernist/tech tradition)",
+      "Nathan Myhrvold et al. — Modernist Approach to Sous Vide Flat Iron (Modernist tradition)"
+    ]
+  },
+  "hanger_steak": {
+    "charcoal_grill": [
+      "Francis Mallmann — Onglet over Charcoal Embers (Argentine tradition)",
+      "Steven Raichlen — Charcoal-Grilled Hanger Steak (American tradition)",
+      "Lennox Hastie — Hanger Steak over Australian Ironbark (Australian live-fire tradition)",
+      "David Tanis — Onglet over Charcoal (French bistro tradition)",
+      "Bobby Flay — Charcoal Hanger Steak with Horseradish Compound Butter (American tradition)"
+    ],
+    "grill": [
+      "J. Kenji López-Alt — Grilled Hanger Steak (American bistro tradition)",
+      "David Tanis — Grilled Onglet à l'Échalote (French bistro tradition)",
+      "Yotam Ottolenghi — Grilled Hanger Steak with Spiced Yoghurt (Middle Eastern tradition)",
+      "April Bloomfield — Grilled Hanger Steak, Balsamic-Onion (American-British tradition)",
+      "Neil Perry — Grilled Hanger Steak with Gremolata (Australian tradition)"
+    ],
+    "pan_fry": [
+      "Julia Child — Onglet à l'Échalote (French bistro tradition)",
+      "Fergus Henderson — Pan-Fried Onglet, Chips (British nose-to-tail tradition)",
+      "J. Kenji López-Alt — Pan-Fried Hanger Steak (American tradition)",
+      "David Tanis — Onglet with Anchovy Butter (French bistro tradition)",
+      "April Bloomfield — Pan-Fried Hanger Steak, Red-Wine Sauce (American-British tradition)"
+    ],
+    "pan_sear": [
+      "J. Kenji López-Alt — Butter-Basted Pan-Seared Hanger Steak (American tradition)",
+      "Stéphane Reynaud — Onglet à l'Échalote (French bistrot tradition)",
+      "Hugh Fearnley-Whittingstall — Bavette / Onglet Seared in Dripping (British tradition)",
+      "Deuki Hong and Matt Rodbard — 안창살구이 Anchang-Sal Pan-Sear (Korean tradition)"
+    ]
+  },
+  "ny_strip": {
+    "air_fryer": [
+      "America's Test Kitchen — Air Fryer Strip Steak (American tradition)",
+      "Jamie Oliver — Air Fryer Steak with Herb Butter (British tradition)",
+      "Donna Hay — Air Fryer Strip Steak with Chimichurri (Australian tradition)",
+      "Nigella Lawson — Air Fryer Steak with Mustard Sauce (British home-cooking tradition)",
+      "Neil Perry — Air Fryer Steak with Herb Salsa (Australian tradition)"
+    ],
+    "charcoal_grill": [
+      "Francis Mallmann — Charcoal-Grilled Strip Steak (Argentine asado tradition)",
+      "Steven Raichlen — Strip Steak with Charcoal and Wood Smoke (American BBQ tradition)",
+      "Adam Perry Lang — Competition-Style Strip Steak over Charcoal (American competition BBQ tradition)",
+      "Lennox Hastie — Strip Steak over Live Fire (Australian wood-fire tradition)",
+      "Yotam Ottolenghi — Charcoal-Grilled Strip with Spiced Butter (Middle Eastern tradition)"
+    ],
+    "grill": [
+      "Steven Raichlen — Grilled Strip Steaks with Cowboy Butter (American tradition)",
+      "Bobby Flay — Grilled NY Strip with Red Chimichurri (Argentine-American fusion tradition)",
+      "Francis Mallmann — Strip Steak on the Grill (Argentine / South American tradition)",
+      "Yotam Ottolenghi — Grilled Strip Steak with Herb Salsa (Israeli / Middle Eastern tradition)",
+      "Neil Perry — Grilled Strip Steak with Anchovy Butter (Australian tradition)"
+    ],
+    "oven_roast": [
+      "J. Kenji López-Alt — Reverse-Sear New York Strip (American tradition)",
+      "America's Test Kitchen — Oven-Seared Strip Steak (American tradition)",
+      "Gordon Ramsay — Oven-Finished Strip Steak (British restaurant tradition)",
+      "Heston Blumenthal — Triple-Cooked Steak (British Modernist tradition)",
+      "Fergus Henderson — Roasted Strip Steak (British nose-to-tail tradition)"
+    ],
+    "pan_fry": [
+      "Nigella Lawson — Pan-Fried Steak with Garlic Butter (British home-cooking tradition)",
+      "Delia Smith — Pan-Fried Steak with Mushrooms (British traditional home cooking)",
+      "Julia Child — Steak Sauté with Red Wine Sauce (French classical tradition)",
+      "Nigel Slater — Pan-Fried Strip Steak with Herb Sauce (British contemporary tradition)",
+      "Stephanie Alexander — Pan-Fried Sirloin (Australian tradition)"
+    ],
+    "pan_sear": [
+      "J. Kenji López-Alt — Pan-Seared New York Strip (American tradition)",
+      "Gordon Ramsay — Pan-Seared Strip Steak with Red Wine Jus (British restaurant tradition)",
+      "Jacques Pépin — Contre-Filet Sauté au Beurre (French classical tradition)",
+      "Heston Blumenthal — Perfect Steak (Strip Steak Method) (British Modernist tradition)",
+      "Neil Perry — Pan-Seared Strip Steak with Bone Marrow Butter (Australian tradition)"
+    ],
+    "sous_vide": [
+      "J. Kenji López-Alt — Sous Vide New York Strip (American tradition)",
+      "Thomas Keller — Sous Vide Strip Steak (French haute cuisine tradition)",
+      "Heston Blumenthal — Sous Vide Perfect Steak (British Modernist tradition)",
+      "Grant Achatz — Sous Vide Strip Steak with Aromatics (American Modernist tradition)",
+      "Neil Perry — Sous Vide Strip Steak, Australian Style (Australian tradition)"
+    ]
+  },
+  "picanha": {
+    "charcoal_grill": [
+      "Francis Mallmann — Churrasco Picanha over Charcoal (Brazilian / Argentine tradition)",
+      "Steven Raichlen — Picanha over Live Charcoal (American adaptation of Brazilian tradition)",
+      "Lennox Hastie — Rump Cap over Australian Charcoal (Australian wood-fire tradition)",
+      "Bobby Flay — Charcoal-Grilled Picanha with Chimichurri (American Southwest tradition)",
+      "Nobu Matsuhisa — Charcoal-Grilled Picanha with Ponzu (Japanese-Brazilian tradition)"
+    ],
+    "grill": [
+      "Francis Mallmann — Grilled Picanha on the Parilla (Argentine/Brazilian tradition)",
+      "Steven Raichlen — Coulotte Steak on the Grill (American tradition)",
+      "Jock Zonfrillo — Grilled Rump Cap with Native Spice Rub (Australian tradition)",
+      "Bobby Flay — Grilled Picanha with Spiced Butter (American tradition)",
+      "Neil Perry — Grilled Rump Cap with Salsa Verde (Australian tradition)"
+    ],
+    "oven_roast": [
+      "America's Test Kitchen — Oven-Roasted Picanha (American tradition)",
+      "Gordon Ramsay — Roast Rump Cap (British restaurant tradition)",
+      "Heston Blumenthal — Reverse-Sear Picanha (British Modernist tradition)",
+      "Neil Perry — Roast Rump Cap with Herb Crust (Australian tradition)",
+      "Donna Hay — Roasted Picanha with Chimichurri (Australian tradition)"
+    ],
+    "pan_sear": [
+      "Francis Mallmann — Picanha in a Cast-Iron Pan (Argentine/Brazilian tradition)",
+      "J. Kenji López-Alt — Pan-Seared Coulotte (Sirloin Cap) (American tradition)",
+      "Gordon Ramsay — Pan-Seared Rump Cap (British restaurant tradition)",
+      "Nobu Matsuhisa — Pan-Seared Picanha with Yuzu Kosho (Japanese-Brazilian fusion)",
+      "Donna Hay — Pan-Seared Rump Cap with Herb Dressing (Australian tradition)"
+    ]
+  },
+  "ribeye_steak": {
+    "air_fryer": [
+      "ichkoche.at — Schopfsteak aus dem Airfryer (Austrian tradition)",
+      "BBC Good Food — Air fryer steak (British tradition)",
+      "GialloZafferano — Roast beef in friggitrice ad aria (Italian tradition)"
+    ],
+    "charcoal_grill": [
+      "GialloZafferano — Bistecca alla fiorentina (Italian tradition)",
+      "Madens Verden — Ribeye på gasgrill: Sådan griller du bøffen perfekt (Danish tradition)",
+      "Directo al Paladar — Chuletón a la brasa (Spanish tradition)"
+    ],
+    "grill": [
+      "Madens Verden — Ribeye på gasgrill (Danish tradition)",
+      "Directo al Paladar — Chuletón con salsa de vino y fresas (Spanish tradition)",
+      "The Woks of Life — Grilled Ribeye with Soy Butter Glaze (Chinese-American tradition)",
+      "GialloZafferano — Bistecca alla fiorentina (Italian tradition)"
+    ],
+    "oven_roast": [
+      "ichkoche.at — Rib-eye-Steak mit Rosmarinpommes (Austrian tradition)",
+      "BBC Good Food — Rib-eye steak with basil hollandaise (British tradition)",
+      "Chefkoch.de — Rindersteaks sanft garen mit Niedrigtemperatur (German tradition)"
+    ],
+    "pan_fry": [
+      "ichkoche.at — Rib-eye-Steak mit Rosmarinpommes (Austrian tradition)",
+      "Argiro.gr — Rib Eye στο τηγάνι με σάλτσα βουτύρου (Greek tradition)",
+      "BBC Good Food — Pan-fried rib-eye steak (British tradition)"
+    ],
+    "pan_sear": [
+      "J. Kenji López-Alt — Butter-Basted Pan-Seared Thick-Cut Ribeye (American tradition)",
+      "Gordon Ramsay — Restaurant-Style Pan-Seared Ribeye (British/French restaurant tradition)",
+      "Jacques Pépin — Entrecôte Sautée au Beurre (French classical tradition)",
+      "Nobu Matsuhisa — Pan-Seared A5 Wagyu Ribeye with Ponzu (Japanese tradition)",
+      "Stephanie Alexander — Pan-Fried Scotch Fillet (Australian tradition)"
+    ],
+    "sous_vide": [
+      "Madens Verden — Ribeye sous vide (Danish tradition)",
+      "GialloZafferano Blog — La Bistecca Perfetta Sousvide (Italian tradition)",
+      "ichkoche.at — Hochrückensteak mit Sous Vide (Austrian tradition)"
+    ]
+  },
+  "sirloin_steak": {
+    "air_fryer": [
+      "America's Test Kitchen — Air Fryer Sirloin Steak (American tradition)",
+      "Jamie Oliver — Air Fryer Sirloin with Herb Butter (British tradition)",
+      "Donna Hay — Air Fryer Sirloin with Chimichurri (Australian tradition)",
+      "Nigella Lawson — Air Fryer Sirloin with Mustard Cream (British home-cooking tradition)",
+      "Marcus Samuelsson — Air Fryer Berbere Sirloin (Ethiopian-American tradition)"
+    ],
+    "charcoal_grill": [
+      "Francis Mallmann — Sirloin over Charcoal Embers (Argentine asado tradition)",
+      "Steven Raichlen — Sirloin over Direct Charcoal (American tradition)",
+      "Maangchi — Charcoal-Grilled Galbi / Sirloin (Korean tradition)",
+      "Lennox Hastie — Sirloin over Australian Ironbark Coals (Australian wood-fire tradition)",
+      "Bobby Flay — Sirloin with Chipotle Butter over Charcoal (American Southwest tradition)"
+    ],
+    "grill": [
+      "Steven Raichlen — Grilled Top Sirloin (American BBQ tradition)",
+      "Francis Mallmann — Sirloin Asado (Argentine tradition)",
+      "Yotam Ottolenghi — Spiced Sirloin on the Grill (Middle Eastern tradition)",
+      "Bobby Flay — Grilled Sirloin with Red Chimichurri (American-Argentine tradition)",
+      "Neil Perry — Grilled Sirloin with Herb Salad (Australian tradition)"
+    ],
+    "oven_roast": [
+      "America's Test Kitchen — Reverse-Sear Top Sirloin (American tradition)",
+      "Heston Blumenthal — Ultra-Low Oven Sirloin (British Modernist tradition)",
+      "Gordon Ramsay — Sear-and-Oven Sirloin (British restaurant tradition)",
+      "Alice Waters — Oven-Roasted Sirloin (American / California tradition)",
+      "Fergus Henderson — Roasted Sirloin (British nose-to-tail tradition)"
+    ],
+    "pan_fry": [
+      "Delia Smith — Pan-Fried Sirloin with Blue Cheese Sauce (British tradition)",
+      "Julia Child — Steak Sauté Bercy (French classical tradition)",
+      "Nigella Lawson — Pan-Fried Sirloin with Rocket Salad (British contemporary tradition)",
+      "Nobu Matsuhisa — Pan-Fried Sirloin with Wasabi Salsa (Japanese tradition)",
+      "Neil Perry — Pan-Fried Sirloin with Bone Marrow (Australian tradition)"
+    ],
+    "pan_sear": [
+      "J. Kenji López-Alt — Pan-Seared Top Sirloin (American tradition)",
+      "Gordon Ramsay — Pan-Seared Sirloin with Pepper Sauce (British restaurant tradition)",
+      "Nobu Matsuhisa — Pan-Seared Sirloin with Teriyaki Glaze (Japanese tradition)",
+      "Francis Mallmann — Pan-Seared Sirloin in Cast Iron (Argentine tradition)",
+      "Stephanie Alexander — Pan-Fried Sirloin (Australian tradition)"
+    ],
+    "sous_vide": [
+      "J. Kenji López-Alt — Sous Vide Top Sirloin (American tradition)",
+      "Thomas Keller — Sous Vide Sirloin (French haute cuisine tradition)",
+      "Heston Blumenthal — Sous Vide Sirloin (British Modernist tradition)",
+      "Grant Achatz — Sous Vide Sirloin with Aromatic Bag (American Modernist tradition)",
+      "Neil Perry — Sous Vide Sirloin, Australian Style (Australian tradition)"
+    ]
+  },
+  "skirt_steak": {
+    "charcoal_grill": [
+      "Diana Kennedy — *Arrachera Asada* over Mesquite (Mexican tradition)",
+      "Francis Mallmann — Skirt over Charcoal Embers (Argentine tradition)",
+      "Steven Raichlen — Charcoal-Grilled Skirt Steak (American BBQ tradition)",
+      "Bobby Flay — Charcoal-Grilled Skirt Steak with Chipotle (American Southwest tradition)",
+      "Lennox Hastie — Outside Skirt over Australian Live Coals (Australian live-fire tradition)"
+    ],
+    "grill": [
+      "Bobby Flay — Grilled Skirt Steak Fajitas (Tex-Mex tradition)",
+      "Diana Kennedy — Grilled *Arrachera* with Salsa de Tomatillo (Mexican tradition)",
+      "Francis Mallmann — Grilled *Fraldinha* (Brazilian / Argentine tradition)",
+      "Steven Raichlen — Grilled Skirt Steak (American BBQ tradition)",
+      "Yotam Ottolenghi — Grilled Skirt Steak with Sumac and Pomegranate (Middle Eastern tradition)"
+    ],
+    "pan_fry": [
+      "Diana Kennedy — Comal-Fried *Arrachera* (Mexican home cooking tradition)",
+      "Barbara Tropp — Wok-Fried Flank/Skirt Steak with Ginger (Chinese-American tradition)",
+      "Nigella Lawson — Pan-Fried Skirt Steak with Salsa Verde (British contemporary tradition)",
+      "Nobu Matsuhisa — Pan-Fried Skirt Steak with Black Bean Sauce (Japanese-Chinese tradition)",
+      "Yotam Ottolenghi — Pan-Fried Skirt Steak with Chermoula (North African tradition)"
+    ],
+    "pan_sear": [
+      "Diana Kennedy — Pan-Seared Skirt Steak Tacos (*Tacos de Arrachera*) (Mexican tradition)",
+      "J. Kenji López-Alt — Pan-Seared Skirt Steak Fajitas (American-Mexican tradition)",
+      "Nobu Matsuhisa — Pan-Seared Skirt Steak with Spicy Ponzu (Japanese tradition)",
+      "Fergus Henderson — Pan-Seared Skirt Steak, Anchovy and Capers (British tradition)",
+      "Marcus Samuelsson — Pan-Seared Skirt Steak with Berbere (Ethiopian-American tradition)"
+    ]
+  },
+  "t_bone": {
+    "air_fryer": [
+      "America's Test Kitchen — Air Fryer T-Bone Steak (American tradition)",
+      "Jamie Oliver — Air Fryer T-Bone with Garlic Butter (British tradition)",
+      "Gordon Ramsay — Air Fryer T-Bone, Peppercorn Sauce (British restaurant tradition)",
+      "Donna Hay — Air Fryer T-Bone with Béarnaise (Australian tradition)",
+      "Nigella Lawson — Air Fryer T-Bone with Tarragon Butter (British contemporary tradition)"
+    ],
+    "charcoal_grill": [
+      "Francis Mallmann — T-Bone over Charcoal Embers (Argentine *parrilla* tradition)",
+      "Steven Raichlen — T-Bone over Live Charcoal (American BBQ tradition)",
+      "Lennox Hastie — T-Bone over Australian Hardwood (Australian live-fire tradition)",
+      "Bobby Flay — Charcoal T-Bone with Garlic Herb Crust (American Southwest tradition)",
+      "Neil Perry — Charcoal T-Bone, Café de Paris Butter (Australian tradition)"
+    ],
+    "grill": [
+      "Steven Raichlen — Grilled T-Bone (American BBQ tradition)",
+      "Bobby Flay — Grilled T-Bone with Blue Cheese Sauce (American tradition)",
+      "Yotam Ottolenghi — Grilled T-Bone with Herb Oil (Mediterranean tradition)",
+      "Neil Perry — Grilled T-Bone, Australian Steakhouse Style (Australian tradition)",
+      "Francis Mallmann — T-Bone on the Parilla (Argentine tradition)"
+    ],
+    "oven_roast": [
+      "America's Test Kitchen — Reverse-Sear T-Bone (American tradition)",
+      "Gordon Ramsay — Oven-Finished T-Bone (British restaurant tradition)",
+      "Heston Blumenthal — Ultra-Low Oven T-Bone (British Modernist tradition)",
+      "Alice Waters — Roasted T-Bone with Herb Butter (California tradition)",
+      "Fergus Henderson — Roasted T-Bone (British tradition)"
+    ],
+    "pan_sear": [
+      "J. Kenji López-Alt — Pan-Seared T-Bone (American steakhouse tradition)",
+      "Gordon Ramsay — Pan-Seared T-Bone with Brown Butter (British restaurant tradition)",
+      "Julia Child — *Côte de Bœuf* au Beurre (French bistro tradition)",
+      "Fergus Henderson — Pan-Seared T-Bone with Watercress (British tradition)",
+      "Neil Perry — Pan-Seared T-Bone (Australian steakhouse tradition)"
+    ]
+  },
+  "tomahawk": {
+    "charcoal_grill": [
+      "GialloZafferano — Tomahawk alla griglia (Italian tradition)",
+      "Chefkoch.de — Tomahawk Steak Dry Aged vom Grill (German tradition)",
+      "Madens Verden — Ribeye på gasgrill (adapted for tomahawk on charcoal) (Danish tradition)"
+    ],
+    "grill": [
+      "GialloZafferano — Tomahawk alla griglia (Italian tradition)",
+      "Chefkoch.de — Tomahawk Steak Dry Aged vom Grill (German tradition)",
+      "RecipeTin Eats — Tomahawk Steak: reverse sear (oven then BBQ) (Australian tradition)"
+    ],
+    "oven_roast": [
+      "Chefkoch.de — Tomahawk-Steak im Backofen, rückwärts gegart (German tradition)",
+      "RecipeTin Eats — Tomahawk Steak (oven phase of reverse sear) (Australian tradition)",
+      "GialloZafferano — Tomahawk alla griglia (Italian oven-finish variant)"
+    ],
+    "pan_sear": [
+      "ichkoche.at — Tomahawk Steak (Austrian tradition)",
+      "Chefkoch.de — Tomahawk-Steak im Backofen, rückwärts gegart (German tradition)",
+      "RecipeTin Eats — Tomahawk Steak (finishing method without BBQ) (Australian tradition)"
+    ],
+    "sous_vide": [
+      "Madens Verden — Ribeye sous vide (adapted for tomahawk) (Danish tradition)",
+      "GialloZafferano Blog — La Bistecca Perfetta Sousvide (Italian tradition, adapted for tomahawk)",
+      "ichkoche.at — Hochrückensteak sous vide (Austrian tradition, adapted for tomahawk)"
+    ]
+  },
+  "tri_tip": {
+    "charcoal_grill": [
+      "Madens Verden — Ball tip i grill (charcoal adaptation) (Danish tradition)",
+      "Immaculate Bites (africanbites.com) — charcoal grill adaptation (Californian / West African tradition)",
+      "Chefkoch.de — Das perfekte Steak mit Steakkruste (adapted for charcoal grill) (German tradition)"
+    ],
+    "grill": [
+      "Madens Verden — Ball tip i grill (Danish tradition)",
+      "Immaculate Bites (africanbites.com) — Oven Tri Tip Roast (marinade for grill) (Californian / West African tradition)",
+      "Chefkoch.de — Das perfekte Steak mit Steakkruste (German tradition — constant-turning method)"
+    ],
+    "oven_roast": [
+      "Immaculate Bites (africanbites.com) — Oven Tri Tip Roast (Californian / West African tradition)",
+      "Madens Verden — Ball tip oksesteg (Danish tradition)",
+      "RecipeTin Eats — Marinated Roast Beef (Australian tradition, adapted for tri-tip)"
+    ],
+    "pan_sear": [
+      "Chefkoch.de — Das perfekte Steak mit Steakkruste (German tradition)",
+      "Madens Verden — Ball tip bøffer (Danish pan steak method) (Danish tradition)",
+      "Immaculate Bites (africanbites.com) — stovetop sear (tri-tip oven roast pan-sear method) (Californian / West African tradition)"
+    ],
+    "smoker": [
+      "Immaculate Bites (africanbites.com) — Smoked Tri Tip (Californian / West African tradition)",
+      "Madens Verden — Langtidsstegt ball tip (Danish slow-roast, analogous to smoking) (Danish tradition)",
+      "BBC Good Food — Slow-cooked beef technique for smoking (British reference for wood-smoke temperatures)"
+    ],
+    "sous_vide": [
+      "Madens Verden — Ball tip sous vide (Danish tradition)",
+      "ichkoche.at — Hochrückensteak mit Sous Vide (adapted for tri-tip) (Austrian tradition)",
+      "GialloZafferano Blog — La Bistecca Perfetta Sousvide (Italian reference, adapted for tri-tip) (Italian tradition)"
+    ]
+  },
+  "beef_liver": {
+    "pan_fry": [
+      "Marcella Hazan — Fegato di Manzo alla Veneziana (Venetian Italian tradition)",
+      "Diana Henry — Devilled Calf's Liver (modern British tradition)",
+      "Madhur Jaffrey — Kaleji Masala (North Indian tradition)",
+      "Tina Nordström — Stekt Lever med Lök (Swedish tradition)"
+    ],
+    "pan_sear": [
+      "Fergus Henderson — Calf's Liver, Bacon and Onions (British nose-to-tail tradition)",
+      "Anthony Bourdain — Calf's Liver Persillade (French bistro tradition)",
+      "José Pizarro — Hígado de Ternera con Cebolla y Pimentón (Spanish tradition)",
+      "Magnus Nilsson — Seared Calf's Liver with Browned Butter & Lingonberries (Nordic tradition)"
+    ]
+  },
+  "beef_tongue": {
+    "braise": [
+      "Fergus Henderson — Salt Ox Tongue with Green Sauce (British nose-to-tail tradition)",
+      "Anthony Bourdain — Langue de Bœuf Sauce Piquante (French bistro tradition)",
+      "Diana Kennedy — Lengua en Salsa Verde (Mexican tradition)",
+      "Yotam Ottolenghi & Sami Tamimi — Slow-Cooked Beef Tongue with Tehina (Israeli/Levantine tradition)"
+    ],
+    "slow_cooker": [
+      "Hugh Acheson — Slow-Cooker Pot-au-Feu Tongue (American Southern tradition)",
+      "Diana Kennedy — Lengua de Res al Crock-Pot, estilo casero (Mexican home tradition adaptation)",
+      "Andrea Nguyen — Lưỡi Bò Hầm in the Slow Cooker (Vietnamese tradition)",
+      "Magnus Nilsson — Pickled-Beef-Tongue Method, Slow-Cooker Adaptation (Nordic tradition)"
+    ]
+  },
+  "beef_shank": {
+    "braise": [
+      "Marcella Hazan — Osso Buco alla Milanese (Italian / Lombard tradition)",
+      "Tina Nordström — Långkokt Oxlägg (Swedish home tradition)",
+      "Yotam Ottolenghi & Sami Tamimi — Beef Shank Tagine with Saffron and Almonds (Levantine / North-African tradition)",
+      "Andrea Nguyen — Bò Kho with Beef Shank (Vietnamese tradition)"
+    ],
+    "slow_cooker": [
+      "Hugh Acheson — Slow-Cooker Osso Buco (American Southern adaptation of Italian classic)",
+      "Tina Nordström — Oxlägg i Slow Cooker (Swedish home tradition)",
+      "Mark Bittman — Slow-Cooker Beef Shank with North-African Spices (American tradition)",
+      "Andrea Nguyen — Slow-Cooker Bò Kho (Vietnamese tradition)"
+    ]
+  },
+  "brisket": {
+    "oven_roast": [
+      "J. Kenji López-Alt — Oven-Braised Brisket",
+      "Joan Nathan — Ashkenazi Passover Brisket",
+      "Felicity Cloake — Slow-Roast Brisket (British tradition)",
+      "Maangchi — *Kkori-gomtang* Inspired Oven-Braised Brisket (Korean tradition)",
+      "Yotam Ottolenghi — Middle Eastern Oven-Braised Brisket"
+    ]
+  },
+  "chuck_roast": {
+    "braise": [
+      "J. Kenji López-Alt — Braised Chuck Roast (Pot Roast)",
+      "Julia Child — Bœuf Bourguignon (French tradition)",
+      "Nigella Lawson — Italian-Style Pot Roast (*Stracotto di manzo*)",
+      "Maangchi — Korean Braised Beef (*Jangjorim*)",
+      "Judith Jones / Craig Claiborne — Daube de Bœuf Provençale (Provençal tradition)"
+    ]
+  },
+  "beef_tenderloin_roast": {
+    "oven_roast": [
+      "Ina Garten — Beef Tenderloin Roast with Mustard Crust",
+      "Jacques Pépin — Filet de Bœuf Rôti (French tradition)",
+      "Heston Blumenthal — Reverse-Sear Beef Tenderloin",
+      "Yotam Ottolenghi — Spice-Crusted Beef Fillet (Middle Eastern/Israeli tradition)",
+      "Tetsuya Wakuda — Japanese-Influenced Beef Fillet with Warishita Glaze (Japanese-Australian tradition)"
+    ]
+  },
+  "prime_rib": {
+    "oven_roast": [
+      "J. Kenji López-Alt — Reverse-Sear Prime Rib",
+      "Alton Brown — Traditional High-Heat Prime Rib",
+      "Gordon Ramsay — Standing Rib Roast (British tradition)",
+      "Michel Roux — Côte de Bœuf Rôtie (French tradition)",
+      "Aaron Franklin — Texas Prime Rib in the Oven (Pit-to-Oven adaptation)"
+    ]
+  },
+  "goose_breast": {
+    "oven_roast": [
+      "BBC Good Food — Slow-Roast Duck (fat-rendering principles adapted for goose breast)",
+      "Classic Culinary Technique — Goose Breast Oven Roast",
+      "Xiachufang (下厨房) — 烤鹅 Roast Goose (Chinese whole-bird roast technique)"
+    ],
+    "pan_sear": [
+      "BBC Good Food — Slow-Roast Duck (fat-rendering technique adapted for goose breast pan sear)",
+      "Classic Culinary Technique — Professional Pan-Seared Goose Breast",
+      "Vasilevg — Грудка гуся на гриле (Russian Pan-Grilled Goose Breast)"
+    ]
+  },
+  "goose_leg": {
+    "braise": [
+      "BBC Good Food — Slow-Roast Duck (low-and-slow fat-rendering principle adapted for goose leg braise)",
+      "Classic Culinary Technique — Braised Goose Legs with Root Vegetables",
+      "EdimDoma.ru — Тушёные утиные ножки (Russian Braised Waterfowl Legs — technique directly applicable to goose)"
+    ],
+    "oven_roast": [
+      "BBC Good Food — Slow-Roast Duck (low-and-slow fat rendering adapted for goose leg roast)",
+      "Classic Culinary Technique — Oven-Roasted Goose Legs",
+      "阿笑 (Axiao) — 烤鹅腿 (Chinese Crispy-Skin Roasted Goose Leg)"
+    ]
+  },
+  "goose_thigh": {
+    "braise": [
+      "BBC Good Food — Slow-Roast Duck (low-and-slow principle adapted for goose thigh braise)",
+      "Classic Culinary Technique — Braised Goose Thighs with Wine and Aromatics",
+      "Vorobyshek — Тушёнка из гуся в мультиварке (Russian Slow-Braised Goose in a Multicooker)"
+    ],
+    "oven_roast": [
+      "Hugh Fearnley-Whittingstall — Slow-Roast Goose Thighs with Garlic & Thyme (British River Cottage tradition)",
+      "Magnus Nilsson — Långstekta Gåslår (Swedish/Nordic tradition)",
+      "Diana Henry — Slow-Roast Goose Thighs with Honey, Lemon & Sumac (Persian-inspired British tradition)",
+      "Yotam Ottolenghi — Roast Goose Thighs with Pomegranate Molasses & Walnut Crust (Levantine fusion tradition)"
+    ]
+  },
+  "whole_goose": {
+    "oven_roast": [
+      "Heston Blumenthal — Classic Roast Goose (British tradition)",
+      "Nigel Slater — Slow-Roast Goose with Lemon and Garlic (British tradition)",
+      "Signe Johansen — Norwegian Julegraut Goose (Nordic Christmas tradition)"
+    ]
+  },
+  "duck_breast": {
+    "oven_roast": [
+      "BBC Good Food — Slow-Roast Duck (adapted for breast)",
+      "Classic Culinary Technique — Cold-Pan Duck Breast (standard restaurant method)",
+      "Xiachufang (下厨房) — 低温慢烤法式鸭胸肉 (Chinese Low-Temperature Slow-Roasted French Duck Breast)"
+    ],
+    "pan_sear": [
+      "BBC Good Food — Slow-Roast Duck (fat-rendering philosophy adapted for pan sear)",
+      "Classic Culinary Technique — Professional Kitchen Duck Breast Pan Sear",
+      "BBC Good Food — One-Pan Duck with Savoy Cabbage"
+    ]
+  },
+  "whole_duck": {
+    "oven_roast": [
+      "BBC Good Food — Slow-Roast Duck (Czech-style, from Apetit Online)",
+      "Classic High-Heat Whole Roast Duck (standard Western method)",
+      "BBC Good Food — Crispy Roast Duck"
+    ]
+  },
+  "ground_turkey": {
+    "braise": [
+      "Marcella Hazan — Ragù di Tacchino (Italian tradition)",
+      "Hugh Acheson — Slow-Cooker Turkey Mince Bolognese (American Southern tradition)",
+      "Yotam Ottolenghi — Spiced Turkey Mince with Tomato & Yoghurt (Levantine tradition)",
+      "Tina Nordström — Kalkonfärssås (Swedish ragù tradition)"
+    ],
+    "grill": [
+      "Nefis Yemek Tarifleri — Hindi Köftesi (Turkish tradition)",
+      "Tori Avey — Mediterranean Grilled Turkey Burgers (Israeli / Levantine tradition)",
+      "Chefkoch.de — Puten-Hamburger mit Röstzwiebeln (German tradition)",
+      "TASTE — Chicken Patties adapted for Turkey (South African tradition)"
+    ],
+    "pan_fry": [
+      "Diana Henry — Pan-Fried Turkey Mince with Sage, Apple & Cider (British modern tradition)",
+      "Hugh Acheson — Pan-Fried Turkey Mince with Sweet-Onion Gravy (American Southern tradition)",
+      "Andrea Nguyen — Larb Gai Tay with Ground Turkey (Lao / Northern Thai tradition adaptation)",
+      "Tina Nordström — Stekt Kalkonfärs på Lök (Swedish home tradition)"
+    ]
+  },
+  "turkey_breast": {
+    "oven_roast": [
+      "Kenji López-Alt — Spatchcocked Turkey Breast (American tradition)",
+      "Ina Garten — Herb-Roasted Turkey Breast (American home-cooking tradition)",
+      "Diana Henry — Slow-Roasted Turkey Breast with Preserved Lemon and Olives (British/Moroccan fusion)"
+    ]
+  },
+  "turkey_burger": {
+    "air_fryer": [
+      "America's Test Kitchen — Air-Fryer Turkey Burgers (American tradition)",
+      "Hugh Acheson — Air-Fryer Turkey Burgers with Sage & Lemon (American Southern tradition)",
+      "Tina Nordström — Kalkonburgare i Airfryer (Swedish tradition)",
+      "Diana Henry — Air-Fryer Turkey Burgers with Tarragon & Lemon (British modern tradition)"
+    ],
+    "grill": [
+      "America's Test Kitchen — Grilled Turkey Burgers (American tradition)",
+      "Tina Nordström — Grillad Kalkonburgare (Swedish tradition)",
+      "Yotam Ottolenghi — Spiced Turkey Burgers with Tahini & Pomegranate (Levantine tradition)",
+      "Diana Henry — Grilled Turkey Burgers with Sage & Cranberry (British modern Thanksgiving tradition)"
+    ],
+    "pan_fry": [
+      "America's Test Kitchen — Pan-Seared Turkey Burgers (American tradition)",
+      "Hugh Acheson — Pan-Fried Turkey Burgers with Sage & Lemon (American Southern tradition)",
+      "Tina Nordström — Pannstekt Kalkonburgare (Swedish tradition)",
+      "Yotam Ottolenghi — Spiced Turkey Burgers in the Pan with Tahini (Levantine tradition)"
+    ]
+  },
+  "whole_turkey": {
+    "oven_roast": [
+      "J. Kenji López-Alt — The Best Roast Turkey (American tradition, dry-brined and spatchcocked)",
+      "Ina Garten — Herb-Roasted Traditional Turkey (American home tradition)",
+      "Diana Henry — Classic Slow-Roast Turkey with Apple and Calvados Butter (British tradition)"
+    ]
+  },
+  "chicken_breast": {
+    "air_fryer": [
+      "Skinnytaste — Air Fryer Chicken Breast",
+      "Natasha's Kitchen — Air Fryer Chicken Thighs (temperature reference for dark-meat context)",
+      "BBC Good Food — Air Fryer Chicken Breasts",
+      "Swasthi Shreekanth — Chicken Tikka in Air Fryer (Indian tradition)",
+      "Brining guidance",
+      "Air fryer model differences",
+      "Carry-over cooking",
+      "Scaling",
+      "Seasoning variations",
+      "Storage and reheating",
+      "MEATER probe placement"
+    ],
+    "grill": [
+      "Skinnytaste — Grilled Chicken Breast",
+      "Natasha's Kitchen — Juicy Grilled BBQ Chicken Breast",
+      "BBC Good Food — Cajun Chicken",
+      "Pailin Chongchitnant — Gai Yang ไก่ย่าง — Thai BBQ Chicken Breast (Thai tradition)",
+      "Preventing drying on the grill",
+      "Grill temperature management",
+      "Grill marks",
+      "Safe handling",
+      "Seasoning variations for grilled breast",
+      "Storage",
+      "MEATER on the grill",
+      "Scaling and batch cooking"
+    ],
+    "oven_bake": [
+      "Skinnytaste / Gina Homolka — Baked Chicken Breast (mayo + panko crust)",
+      "Natasha's Kitchen / Natasha Kravchuk — Baked Chicken Breast",
+      "Jessica Gavin — Baked Chicken Breast (high-heat method)",
+      "Swasthi Shreekanth — Tandoori Chicken (Indian tradition)"
+    ],
+    "pan_sear": [
+      "Jessica Gavin — How to Cook Chicken on the Stove",
+      "Skinnytaste — Pan-Seared Chicken Breast (adapted from grilled cutlets method)",
+      "Sevcan Kayabaş — Tavuk Göğüs Sote (Turkish Pan-Sautéed Chicken Breast with Vegetables)",
+      "Huy Vu — Gà Xào Sả Ớt (Vietnamese Spicy Lemongrass Chicken Sauté) (Vietnamese tradition)",
+      "Pan selection matters",
+      "Avoiding the rubbery breast problem",
+      "Butter basting",
+      "Deglazing for a pan sauce",
+      "Finishing options",
+      "Storage",
+      "MEATER probe placement"
+    ]
+  },
+  "chicken_burger": {
+    "air_fryer": [
+      "Skinnytaste — Juicy Lucy Style Turkey / Chicken Burger",
+      "Natasha's Kitchen — Chicken Meatballs (ground chicken method reference)",
+      "Immaculate Bites — Jamaican Chicken Patties (Caribbean Spiced Ground Chicken Patties)",
+      "Keeping ground chicken burgers intact in the air fryer",
+      "Moisture management",
+      "Internal temperature in air-fried burgers",
+      "Flavour variations",
+      "Seasoning and topping ideas",
+      "Storage",
+      "MEATER note",
+      "MEATER probe guidance for burgers",
+      "Serving temperature and food safety"
+    ],
+    "grill": [
+      "Skinnytaste — Grilled Turkey / Chicken Cheeseburger (Juicy Lucy)",
+      "Natasha's Kitchen — BBQ Chicken Thighs Technique (adapted for burgers)",
+      "BBC Good Food — Cajun Chicken Burgers",
+      "Preventing ground chicken from sticking to grill grates",
+      "Chilling patties before grilling",
+      "Handling delicate ground chicken patties on the grill",
+      "Safe internal temperature for grilled ground poultry",
+      "Common mix-in flavour profiles",
+      "Storage and reheating",
+      "MEATER note",
+      "MEATER probe guidance for burgers",
+      "Scaling and batch grilling"
+    ],
+    "pan_fry": [
+      "Jessica Gavin — Turkey Burgers (adapted for ground chicken pan-fry)",
+      "Natasha's Kitchen — Chicken Meatballs (ground chicken pan technique reference)",
+      "BBC Good Food — Fully Loaded Cajun Chicken Burgers",
+      "Covered-flip technique",
+      "Managing ground chicken stickiness",
+      "Flavour additions for ground chicken patties",
+      "Health notes",
+      "Serving and topping ideas",
+      "Storage",
+      "MEATER probe guidance for burgers",
+      "Scaling and batch pan-frying"
+    ]
+  },
+  "chicken_leg": {
+    "oven_roast": [
+      "Jessica Gavin — Baked Chicken Legs",
+      "Natasha's Kitchen — Baked Chicken Drumsticks",
+      "BBC Good Food — Sticky Chicken Drumsticks",
+      "Swasthi Shreekanth — Tandoori Chicken Legs (Indian tradition)",
+      "High heat vs. lower-and-slower",
+      "Crispy skin guidelines",
+      "Temperature probe placement for drumsticks",
+      "Make-ahead and storage",
+      "Seasoning variations for drumsticks",
+      "MEATER probe guidance for drumsticks",
+      "Scaling"
+    ]
+  },
+  "chicken_thigh": {
+    "air_fryer": [
+      "Natasha's Kitchen — Air Fryer Chicken Thighs",
+      "Skinnytaste — Air Fryer Chicken Thighs",
+      "BBC Good Food — Air Fryer Chicken Thighs",
+      "Imma Adamu — Air Fryer Chicken (West African / Caribbean tradition)",
+      "Bone-in vs. boneless in the air fryer",
+      "The 175 °F sweet spot for dark meat",
+      "Air fryer basket management",
+      "Sauce applications",
+      "Seasoning variations",
+      "Storage and reheating air-fried thighs"
+    ],
+    "grill": [
+      "Jessica Gavin — Grilled Chicken Thighs",
+      "Natasha's Kitchen — Juicy BBQ Chicken Thighs",
+      "Immaculate Bites — Hawaiian Grilled Chicken Thighs",
+      "Pailin Chongchitnant — Gai Yang ไก่ย่าง (Ultimate Thai BBQ Chicken) (Thai tradition)",
+      "Bone-in vs. boneless on the grill",
+      "Two-zone grilling for bone-in thighs",
+      "BBQ sauce timing",
+      "Marinade safety",
+      "Seasoning and glaze ideas",
+      "Storage"
+    ],
+    "oven_roast": [
+      "Natasha's Kitchen — BBQ Oven-Baked Chicken Thighs",
+      "Skinnytaste — Baked Chicken Thighs with Vegetables",
+      "Argiro Barbarigou — Μπουτάκια Κοτόπουλο στο Φούρνο (Greek Yogurt-Crusted Oven Chicken Thighs)",
+      "Suzy Karadsheh — Baked Chicken Thighs with Mediterranean Spiced Tomato Rub (Egyptian / Middle Eastern tradition)",
+      "Skin crispiness in the oven",
+      "Bone-in vs. boneless in the oven",
+      "Temperature probe placement (oven roast)",
+      "Pan drippings",
+      "Seasoning variations for oven-roasted thighs",
+      "MEATER probe guidance for thighs",
+      "Storage and leftovers"
+    ]
+  },
+  "chicken_wing": {
+    "air_fryer": [
+      "Natasha's Kitchen — Air Fryer Chicken Wings",
+      "Skinnytaste — Air Fryer Chicken Wings",
+      "Immaculate Bites — Crispy Grilled Chicken Wings",
+      "Pailin Chongchitnant — Crispy Thai Fish Sauce Wings (Thai tradition)",
+      "The baking powder secret",
+      "Drying wings before cooking",
+      "Sauce application for air fryer wings",
+      "Serving",
+      "Sauce variations for air fryer wings",
+      "MEATER and wings",
+      "Storage"
+    ]
+  },
+  "ground_chicken": {
+    "braise": [
+      "Natasha's Kitchen — Chicken Meatballs in Cream Sauce (Tefteli)",
+      "Skinnytaste — Ground Poultry Braised Skillet (adapted)",
+      "Swasthi Shreekanth — Chicken Keema (Indian Spiced Ground Chicken Curry)",
+      "Why braise for ground chicken?",
+      "Temperature safety for ground poultry",
+      "Liquid ratios",
+      "Make-ahead potential",
+      "Variations on braised ground chicken"
+    ],
+    "grill": [
+      "Nefis Yemek Tarifleri — Izgara Tavuk Köftesi (Turkish tradition)",
+      "Tori Avey — Mediterranean Grilled Chicken Burgers (Israeli / Levantine tradition)",
+      "African Bites — Jamaican Chicken Patties (Jamaican / West African tradition)",
+      "TASTE — Chicken Patties with Preserved Lemon (South African tradition)"
+    ],
+    "pan_fry": [
+      "Jessica Gavin — Turkey Burgers (ground poultry patty technique adapted for chicken)",
+      "Natasha's Kitchen — Chicken Meatballs (ground chicken pan-fry reference)",
+      "Swasthi Shreekanth — Chicken Tikki (Indian Pan-Fried Ground Chicken Patties)",
+      "Ground chicken vs. ground turkey vs. ground beef",
+      "The covered-flip technique for meatballs",
+      "Crumbled ground chicken (for tacos, pasta, bowls)",
+      "Freezing formed patties",
+      "Applications for pan-fried ground chicken",
+      "MEATER applicability"
+    ]
+  },
+  "whole_chicken": {
+    "oven_roast": [
+      "Jessica Gavin — Whole Roasted Chicken",
+      "Natasha's Kitchen — Juicy Whole Roast Chicken (adapted from roast turkey method)",
+      "BBC Good Food — Simple Roast Chicken",
+      "Suzy Karadsheh — Easy Oven Roasted Chicken (Egyptian / Mediterranean tradition)",
+      "Breast-down vs. breast-up starting position",
+      "Resting is non-negotiable",
+      "Trussing benefits",
+      "Using a probe thermometer for whole chicken"
+    ]
+  },
+  "asparagus": {
+    "grill": [
+      "Harumi Kurihara — Asparagus Yakimono (Japanese grilled asparagus)",
+      "José Andrés — Espárragos a la Parrilla con Romesco (Spanish tradition)",
+      "Yotam Ottolenghi — Grilled Asparagus with Poached Egg and Truffle Oil (Middle Eastern / Israeli tradition)",
+      "Deborah Madison — Grilled Asparagus with Meyer Lemon Gremolata (American vegetarian tradition)"
+    ],
+    "oven_roast": [
+      "Marcella Hazan — Asparagi al Forno (Italian tradition)",
+      "Madhur Jaffrey — Oven-Roasted Asparagus with Cumin (Indian tradition)",
+      "Yotam Ottolenghi — Roasted Asparagus with Tahini and Lemon (Middle Eastern / Israeli tradition)",
+      "José Andrés — Espárragos Blancos al Horno (Spanish tradition)"
+    ],
+    "saute": [
+      "Fuchsia Dunlop — Qīng Chǎo Lǜ Sǔn (清炒芦笋 — Chinese Stir-Fried Asparagus)",
+      "Julia Child — Asperges Sautées au Beurre (French tradition)",
+      "Madhur Jaffrey — Sabzi Til Asparagus (Indian tradition)",
+      "Harumi Kurihara — Asupara Bataa Itame (Japanese Butter-Sautéed Asparagus)"
+    ],
+    "steam": [
+      "Julia Child — Asperges à la Vapeur, Sauce Hollandaise (French tradition)",
+      "Fuchsia Dunlop — Steamed Asparagus with Sichuan Spicy Sesame Dressing (Chinese tradition)",
+      "Shizuo Tsuji — Steamered Asparagus with Wafu Dressing (Japanese tradition)",
+      "Marcella Hazan — Asparagi Conditi con Parmigiano (Italian tradition)"
+    ]
+  },
+  "broccoli": {
+    "air_fryer": [
+      "Madhur Jaffrey — Broccoli Tikka in the Air Fryer (Indian tradition)",
+      "Fuchsia Dunlop — Air-Fried Broccoli with Oyster Sauce (Chinese tradition)",
+      "Maangchi — Korean Spicy Air-Fried Broccoli (Korean tradition)",
+      "Yotam Ottolenghi — Air-Fried Broccoli with Za'atar and Yoghurt (Middle Eastern / Israeli tradition)"
+    ],
+    "oven_roast": [
+      "Marcella Hazan — Broccoli al Forno con Aglio (Italian tradition)",
+      "Yotam Ottolenghi — Roasted Broccoli with Almonds and Honey (Middle Eastern / Israeli tradition)",
+      "Fuchsia Dunlop — Roasted Broccoli with Doubanjiang Sauce (Chinese tradition)",
+      "Claudia Roden — Roasted Broccoli with Chermoula (Moroccan / North African tradition)"
+    ],
+    "saute": [
+      "Fuchsia Dunlop — Qīng Chǎo Xīlánhuā (清炒西兰花 — Chinese Stir-Fried Broccoli)",
+      "Pailin Chongchitnant — Pad Broccoli with Oyster Sauce (Thai tradition)",
+      "Madhur Jaffrey — Broccoli Masala Sauté (Indian tradition)",
+      "Marcella Hazan — Broccoli Saltato con Burro e Limone (Italian tradition)"
+    ],
+    "steam": [
+      "Harumi Kurihara — Steamed Broccoli with Goma-ae Dressing (Japanese tradition)",
+      "Fuchsia Dunlop — Steamed Broccoli with Spicy Sesame Sauce (Chinese tradition)",
+      "Julia Child — Brocoli Vapeur au Beurre (French tradition)",
+      "Madhur Jaffrey — Steamed Broccoli with Tadka (Indian tradition)"
+    ]
+  },
+  "brussels_sprouts": {
+    "air_fryer": [
+      "Maangchi — Korean Air-Fried Brussels Sprouts (Korean tradition)",
+      "Madhur Jaffrey — Air-Fried Masala Brussels Sprouts (Indian tradition)",
+      "Yotam Ottolenghi — Air-Fried Brussels Sprouts with Za'atar (Middle Eastern / Israeli tradition)",
+      "Deborah Madison — Air-Fried Brussels Sprouts with Balsamic (American vegetarian tradition)"
+    ],
+    "oven_roast": [
+      "Najmieh Batmanglij — Persian-Style Roasted Brussels Sprouts with Saffron and Dried Barberries",
+      "Magnus Nilsson — Ugnsrostad Brysselkål (Nordic / Swedish tradition)",
+      "Madhur Jaffrey — Roasted Masala Brussels Sprouts (Indian tradition)",
+      "José Andrés — Coles de Bruselas al Horno con Romesco (Spanish tradition)"
+    ],
+    "pan_fry": [
+      "Marcella Hazan — Cavolini di Bruxelles in Padella (Italian tradition)",
+      "Fuchsia Dunlop — Pan-Fried Brussels Sprouts with Doubanjiang (Chinese tradition)",
+      "Maangchi — Korean Pan-Fried Brussels Sprouts (Korean tradition)",
+      "Deborah Madison — Pan-Fried Brussels Sprouts with Butter and Sage (American vegetarian tradition)"
+    ],
+    "saute": [
+      "Pailin Chongchitnant — Thai-Style Sautéed Brussels Sprouts with Fish Sauce (Thai tradition)",
+      "Harumi Kurihara — Sautéed Shredded Brussels Sprouts with Ponzu (Japanese tradition)",
+      "Madhur Jaffrey — Sautéed Brussels Sprouts with Cumin and Mustard Seeds (Indian tradition)",
+      "Yotam Ottolenghi — Sautéed Brussels Sprouts with Tahini and Pomegranate (Israeli / Middle Eastern tradition)"
+    ]
+  },
+  "green_beans": {
+    "boil": [
+      "Julia Child — Haricots Verts Blanchis et Étuvés (French tradition)",
+      "Fuchsia Dunlop — Blanched Yard-Long Beans with Chilli Oil (Chinese tradition)",
+      "Claudia Roden — Green Beans Boiled with Tomato (Moroccan / North African tradition)",
+      "Madhur Jaffrey — Masala Boiled Beans (Indian tradition)"
+    ],
+    "oven_roast": [
+      "Yotam Ottolenghi — Roasted Green Beans with Crispy Capers (Middle Eastern / Israeli tradition)",
+      "Madhur Jaffrey — Roasted Masala Green Beans (Indian tradition)",
+      "Marcella Hazan — Fagiolini al Forno con Aglio (Italian tradition)",
+      "Deborah Madison — Roasted Green Beans with Almond Gremolata (American vegetarian tradition)"
+    ],
+    "saute": [
+      "Fuchsia Dunlop — Gān Biān Sìjìdòu (干煸四季豆 — Chinese Dry-Fried Green Beans)",
+      "Pailin Chongchitnant — Pad Tua Fak Yao (Thai Stir-Fried Yard-Long Beans)",
+      "Madhur Jaffrey — Sabzi Tamater Beans (Indian tradition)",
+      "Julia Child — Haricots Verts Sautés au Beurre (French tradition)"
+    ],
+    "steam": [
+      "Harumi Kurihara — Steamed Beans with Sesame Dressing (Japanese tradition)",
+      "Madhur Jaffrey — Steamed Beans with Mustard Seed Tadka (Indian tradition)",
+      "Fuchsia Dunlop — Steamed Long Beans with Garlic and Soy (Chinese tradition)",
+      "Julia Child — Haricots Verts à la Vapeur au Beurre Fondu (French tradition)"
+    ]
+  },
+  "spinach": {
+    "saute": [
+      "Fuchsia Dunlop — Qīng Chǎo Bōcài (清炒菠菜 — Chinese Stir-Fried Spinach with Garlic)",
+      "Madhur Jaffrey — Palak Saag (Indian Sautéed Spinach with Spices)",
+      "Marcella Hazan — Spinaci Saltati con Aglio e Olio (Italian tradition)",
+      "Julia Child — Épinards Sautés au Beurre (French tradition)"
+    ],
+    "steam": [
+      "Harumi Kurihara — Steamed Spinach Ohitashi (Japanese tradition)",
+      "Madhur Jaffrey — Steamed Palak with Coconut Tadka (Indian tradition)",
+      "Fuchsia Dunlop — Steamed Spinach with Sesame Oil and Soy (Chinese tradition)",
+      "Marcella Hazan — Steamed Spinach with Olive Oil and Lemon (Italian tradition)"
+    ]
+  },
+  "roasted_tomatoes": {
+    "air_fryer": [
+      "Pailin Chongchitnant — Air-Fried Roasted Cherry Tomatoes for Nam Prik (Thai tradition)",
+      "Swasthi Shreekanth — Air-Fried Tomatoes for Chutney (Indian tradition)",
+      "Nefis Yemek Tarifleri — Fırın / Hava Fritözü Közlenmiş Domates (Turkish tradition)",
+      "Ina Garten — Roasted Cherry Tomatoes in the Air Fryer (American tradition)"
+    ],
+    "oven_roast": [
+      "Diana Kennedy — Jitomates Asados (Mexican tradition)",
+      "Marcella Hazan — Pomodori al Forno (Italian tradition)",
+      "Claudia Roden — Tomates Confits (Moroccan / North African tradition)",
+      "Yotam Ottolenghi — Burst Cherry Tomatoes with Za'atar (Middle Eastern / Israeli tradition)"
+    ]
+  },
+  "cabbage": {
+    "braise": [
+      "Nigel Slater — German-Style Red Cabbage with Apple and Cloves (German tradition)",
+      "Julia Child — Chou Braisé (French tradition)",
+      "Madhur Jaffrey — Bandh Gobhi Dum (Indian Slow-Braised Cabbage)",
+      "Fuchsia Dunlop — Hóng Shāo Bǎitài (红烧白菜 — Chinese Red-Braised Cabbage)"
+    ],
+    "grill": [
+      "Maangchi — Yangbaechu Gui (Korean Grilled Cabbage — BBQ style)",
+      "Francis Mallmann — Repollo a las Brasas (Argentine tradition)",
+      "Madhur Jaffrey — Grilled Cabbage with Indian Spices (Indian tradition)",
+      "Deborah Madison — Grilled Cabbage Wedges with Blue Cheese Dressing (American vegetarian tradition)"
+    ],
+    "oven_roast": [
+      "J. Kenji López-Alt — Roasted Cabbage Wedges (American tradition)",
+      "Magnus Nilsson — Pressed Roast Cabbage (Nordic tradition)",
+      "Yotam Ottolenghi — Whole Roasted Cabbage with Brown Butter & Caraway (Middle Eastern–European fusion)",
+      "Hugh Fearnley-Whittingstall — Wedge of Cabbage with Anchovy Butter (British / River Cottage tradition)"
+    ],
+    "saute": [
+      "Pailin Chongchitnant — Pad Kalam Plee (Thai Stir-Fried Cabbage)",
+      "Fuchsia Dunlop — Gān Biān Bǎitái (干煸白菜 — Chinese Dry-Fried Cabbage with Chilli)",
+      "Madhur Jaffrey — Bandh Gobhi aur Zeera (Indian Cumin-Spiced Cabbage)",
+      "Nigel Slater — Schmorkohl / Sautéed Sweetheart Cabbage with Caraway and Cream (German / British tradition)"
+    ]
+  },
+  "cauliflower": {
+    "air_fryer": [
+      "Madhur Jaffrey — Gobi Tikka (Air Fryer — Indian tradition)",
+      "Maangchi — Korean Spicy Air-Fried Gobi (Korean tradition)",
+      "Yotam Ottolenghi — Air-Fried Cauliflower with Za'atar and Yoghurt (Middle Eastern / Israeli tradition)",
+      "Harumi Kurihara — Air-Fried Cauliflower Karaage (Japanese tradition)"
+    ],
+    "oven_roast": [
+      "Claudia Roden — Chou-fleur Rôti à la Chermoula (Moroccan / North African tradition)",
+      "Madhur Jaffrey — Gobi Roast with Turmeric and Coriander (Indian tradition)",
+      "Yotam Ottolenghi — Roasted Cauliflower with Capers and Raisins (Middle Eastern / Israeli tradition)",
+      "Marcella Hazan — Cavolfiore al Forno (Italian tradition)"
+    ],
+    "saute": [
+      "Yotam Ottolenghi — Sautéed Cauliflower with Tahini (Middle Eastern / Israeli tradition)",
+      "Marcella Hazan — Cavolfiore Saltato all'Aglio (Italian tradition)",
+      "Madhur Jaffrey — Phulgobi ki Bhaji (North Indian sautéed cauliflower)",
+      "Julia Child — Chou-Fleur Étuvé au Beurre (French tradition)"
+    ],
+    "steam": [
+      "Fuchsia Dunlop — Zhēng Huā Cài (蒸花椰菜 — Chinese Steamed Cauliflower with Sesame Sauce)",
+      "Madhur Jaffrey — Masala Steamed Gobi (Indian tradition)",
+      "Julia Child — Chou-fleur Vapeur au Beurre Noisette (French tradition)",
+      "Claudia Roden — Steamed Cauliflower with Smen and Preserved Lemon (Moroccan / North African tradition)"
+    ],
+    "whole_roast": [
+      "Yotam Ottolenghi — Whole Roasted Cauliflower with Harissa Butter (Middle Eastern / Israeli tradition)",
+      "Najmieh Batmanglij — Whole Roasted Kalam Polo (Persian tradition)",
+      "Madhur Jaffrey — Whole Dum Gobi (Indian Spiced Whole Cauliflower)",
+      "Magnus Nilsson — Ugnsrostad Hel Blomkål (Nordic / Swedish tradition)"
+    ]
+  },
+  "button_mushrooms": {
+    "air_fryer": [
+      "Fuchsia Dunlop — Air-Fried Shuāng Gū (双菇 — Chinese double-mushroom stir-fry, air fryer adaptation)",
+      "Madhur Jaffrey — Air-Fried Mushroom Tikka (Indian tradition)",
+      "Harumi Kurihara — Air-Fried Kinoko no Shio-Yaki (Japanese salted mushrooms)",
+      "Yotam Ottolenghi — Air-Fried Mushrooms with Herb Oil (Middle Eastern / Israeli tradition)"
+    ],
+    "grill": [
+      "Mark Bittman — Grilled Button Mushrooms with Garlic & Lemon (American tradition)",
+      "Adam Liaw — Yakitori-style Mushroom Skewers (Japanese tradition)",
+      "Francis Mallmann — Champiñones a la Parrilla (Argentine/Patagonian tradition)",
+      "Anna Jones — Grilled Marinated Mushrooms (British vegetarian tradition)"
+    ],
+    "oven_roast": [
+      "Harumi Kurihara — Kinoko no Oven Yaki (Japanese oven-roasted mushrooms)",
+      "Madhur Jaffrey — Dhingri Masala (Mushroom Masala, oven adaptation — Indian tradition)",
+      "Claudia Roden — Champignons Rôtis à la Marocaine (Moroccan / North African tradition)",
+      "Marcella Hazan — Funghi Trifolati al Forno (Italian tradition)"
+    ],
+    "saute": [
+      "Fuchsia Dunlop — Sù Chǎo Shuāng Gū (素炒双菇 — Chinese Stir-Fried Button Mushrooms)",
+      "Julia Child — Champignons Sautés (French tradition)",
+      "Madhur Jaffrey — Dhingri aur Hari Mirch (Indian mushrooms with green chilli)",
+      "Yotam Ottolenghi — Sautéed Mushrooms with Labneh (Middle Eastern / Israeli tradition)"
+    ]
+  },
+  "portobello_mushrooms": {
+    "air_fryer": [
+      "Maangchi — Air-Fried Portobello Gui (Korean tradition)",
+      "Harumi Kurihara — Air-Fried Portobello with Ponzu (Japanese tradition)",
+      "Madhur Jaffrey — Air-Fried Portobello Tikka (Indian tradition)",
+      "Yotam Ottolenghi — Air-Fried Portobello with Herbed Ricotta (Middle Eastern / Israeli tradition)"
+    ],
+    "grill": [
+      "Maangchi — Portobello Gui (Korean tradition)",
+      "Shizuo Tsuji — Portobello Dengaku Yaki (Japanese tradition)",
+      "Yotam Ottolenghi — Grilled Portobello with Lemon Herb Dressing (Middle Eastern / Israeli tradition)",
+      "Deborah Madison — Grilled Portobello Burgers (American vegetarian tradition)"
+    ],
+    "oven_roast": [
+      "Fuchsia Dunlop — Hóng Shāo Dà Mó Gū (烤大蘑菇 — Chinese Roasted Portobello with Doubanjiang)",
+      "Madhur Jaffrey — Oven-Roasted Portobello with Masala (Indian tradition)",
+      "Marcella Hazan — Grandi Funghi al Forno con Aglio e Prezzemolo (Italian tradition)",
+      "Deborah Madison — Oven-Roasted Portobello with Goat Cheese and Tapenade (American vegetarian tradition)"
+    ],
+    "saute": [
+      "Fuchsia Dunlop — Sautéed Portobello with Black Bean Sauce (Chinese tradition)",
+      "Madhur Jaffrey — Portobello Masala Sauté (Indian tradition)",
+      "Julia Child — Sautéed Portobello with Herbs (French tradition)",
+      "Deborah Madison — Sautéed Portobello with Balsamic and Spinach (American vegetarian tradition)"
+    ]
+  },
+  "eggplant": {
+    "air_fryer": [
+      "Swasthi Shreekanth — Air Fryer Baingan Bharta (Indian / Punjabi tradition)",
+      "Harumi Kurihara — Nasu no Dengaku — Air Fryer Adaptation (Japanese tradition)",
+      "Maangchi — Gaji Bokkeum — Air Fryer Adaptation (Korean tradition)",
+      "Yotam Ottolenghi — Air Fryer Aubergine Steak with Yoghurt (Middle Eastern / Israeli tradition)"
+    ],
+    "grill": [
+      "Swasthi Shreekanth — Baingan Bharta (Indian / Punjabi tradition)",
+      "Yotam Ottolenghi — Whole Chargrilled Aubergine (Middle Eastern / Israeli tradition)",
+      "Harumi Kurihara — Nasu no Dengaku (Japanese tradition)",
+      "Francis Mallmann — Berenjena a las Brasas (Argentine / Patagonian tradition)"
+    ],
+    "oven_roast": [
+      "小麦芽15 — 好吃到连皮都不剩的烤茄子 (Chinese Oven Roasted Eggplant with Garlic-Cumin Sauce)",
+      "Swasthi Shreekanth — Baingan Bharta — Oven Method (Indian / Punjabi tradition)",
+      "Claudia Roden — Patlıcan Kizartması (Turkish / Middle Eastern tradition)",
+      "Marcella Hazan — Melanzane al Forno con Aglio e Prezzemolo (Italian tradition)"
+    ],
+    "pan_fry": [
+      "Marcella Hazan — Melanzane Saltate (Italian tradition)",
+      "Yotam Ottolenghi — Pan-Fried Aubergine with Buttermilk (Middle Eastern tradition)",
+      "Madhur Jaffrey — Begun Bhaja (Bengali tradition)",
+      "Diana Henry — Pan-Fried Aubergine with Honey & Sesame (Andalusian tradition)"
+    ],
+    "saute": [
+      "Fuchsia Dunlop — Yú Xiāng Qiézi (魚香茄子 — Chinese Fish-Fragrant Eggplant)",
+      "Madhur Jaffrey — Masaledar Baingan (Indian / North Indian tradition)",
+      "Diana Henry — Berenjenas con Miel (Spanish / Andalusian tradition)",
+      "Yotam Ottolenghi — Aubergine with Buttermilk Sauce (Middle Eastern / Israeli tradition)"
+    ]
+  },
+  "bell_peppers": {
+    "air_fryer": [
+      "Maangchi — Gochu Jeon (Air-Fried Stuffed Peppers — Korean tradition)",
+      "Harumi Kurihara — Piiman no Kinpira (Air-Fried Pepper Kinpira — Japanese tradition)",
+      "Madhur Jaffrey — Air-Fried Stuffed Capsicum (Indian tradition)",
+      "Yotam Ottolenghi — Air-Fried Peppers with Tahini (Middle Eastern / Israeli tradition)"
+    ],
+    "grill": [
+      "Claudia Roden — Biber Közleme (Moroccan / Turkish tradition)",
+      "Francis Mallmann — Pimientos a la Parrilla (Argentine / South American tradition)",
+      "Yotam Ottolenghi — Charred Peppers with Walnut Sauce (Middle Eastern / Israeli tradition)",
+      "Marcella Hazan — Peperoni Arrostiti all'Aglio (Italian tradition)"
+    ],
+    "oven_roast": [
+      "José Andrés — Pimientos Asados (Spanish / Catalan tradition)",
+      "Yotam Ottolenghi — Roasted Peppers with Feta & Capers (Middle Eastern / Israeli tradition)",
+      "Madhur Jaffrey — Shimla Mirch Masala (Indian / North Indian tradition)",
+      "Diana Kennedy — Chiles / Pimientos Asados (Mexican tradition)"
+    ],
+    "saute": [
+      "Fuchsia Dunlop — Qīngjiāo Chǎo Ròusī (青椒炒肉丝 — Green Pepper and Pork Stir-Fry, vegetable adaptation)",
+      "Madhur Jaffrey — Shimla Mirch aur Aloo (Indian / North Indian sauté)",
+      "José Andrés — Pisto Manchego (Spanish tradition)",
+      "Julia Child — Ratatouille (French / Provençal tradition)"
+    ]
+  },
+  "corn_on_cob": {
+    "air_fryer": [
+      "Maangchi — Korean Air-Fried Corn (구운 옥수수 에어프라이어)",
+      "Harumi Kurihara — Air-Fried Yakimorokoshi (Japanese Soy-Glazed Corn)",
+      "Madhur Jaffrey — Air-Fried Bhutta with Masala (Indian tradition)",
+      "José Andrés — Air-Fried Corn with Compound Butter (Spanish / American tradition)"
+    ],
+    "boil": [
+      "Diana Kennedy — Elotes de Mazorca (Mexican tradition)",
+      "Harumi Kurihara — Yudetomorokoshi (茹でとうもろこし — Japanese Boiled Corn with Salt Butter)",
+      "Pailin Chongchitnant — Khao Phot Tom (Thai boiled corn — street food)",
+      "Madhur Jaffrey — Simla Makkai (Indian Boiled Corn with Masala)"
+    ],
+    "grill": [
+      "Diana Kennedy — Elote Asado con Chile y Crema (Mexican tradition)",
+      "Harumi Kurihara — Yakimorokoshi (焼きとうもろこし — Japanese Soy-Glazed Corn)",
+      "Madhur Jaffrey — Bhutta (Indian Spiced Grilled Corn)",
+      "Maangchi — Guun Oksusu (구운 옥수수 — Korean Grilled Corn)"
+    ],
+    "oven_roast": [
+      "Diana Kennedy — Elotes Asados al Horno (Mexican tradition)",
+      "José Andrés — Maíz Asado con Mantequilla Compuesta (Spanish / American tradition)",
+      "Madhur Jaffrey — Tandoori Style Bhutta al Oven (Indian tradition)",
+      "Magnus Nilsson — Ugnsstekt Majs (Nordic / Swedish tradition)"
+    ],
+    "steam": [
+      "Deborah Madison — Steamed Sweet Corn (American vegetarian tradition)",
+      "Diana Kennedy — Elotes al Vapor (Mexican tradition)",
+      "Sarit Packer & Itamar Srulovich — Steamed Corn with Za'atar Butter (Israeli/Levantine tradition)",
+      "Tetsuya Wakuda — Steamed Corn with Yuzu Butter (Japanese-Australian tradition)"
+    ]
+  },
+  "acorn_squash": {
+    "oven_bake": [
+      "Deborah Madison — Baked Acorn Squash with Brown Sugar and Butter (American vegetarian tradition)",
+      "Diana Kennedy — Calabaza Asada con Piloncillo (Mexican tradition)",
+      "Najmieh Batmanglij — Kadu Pokhté (Persian Baked Squash with Walnuts)",
+      "Claudia Roden — Baked Squash with Harissa (North African tradition)"
+    ],
+    "oven_roast": [
+      "Yotam Ottolenghi — Roasted Acorn Squash with Za'atar and Pomegranate (Israeli / Middle Eastern tradition)",
+      "Magnus Nilsson — Roasted Squash with Rapeseed Oil (Nordic tradition)",
+      "Madhur Jaffrey — Masala Roasted Squash Wedges (Indian tradition)",
+      "Deborah Madison — Roasted Squash with Walnut-Herb Pesto (American vegetarian tradition)"
+    ]
+  },
+  "butternut_squash": {
+    "oven_roast": [
+      "Yotam Ottolenghi — Roasted Butternut with Tahini and Sage (Israeli / Middle Eastern tradition)",
+      "Claudia Roden — Roasted Butternut with Chermoula (Moroccan / North African tradition)",
+      "Madhur Jaffrey — Kaddu ki Sabzi Roast (Indian tradition)",
+      "Marcella Hazan — Zucca al Forno con Salvia (Italian tradition)"
+    ],
+    "pressure_cooker": [
+      "Madhur Jaffrey — Pressure-Cooked Kaddu for Dal (Indian tradition)",
+      "Fuchsia Dunlop — Pressure-Cooked Squash Congee (Chinese tradition)",
+      "Claudia Roden — Pressure-Cooked Squash with Ras el Hanout (Moroccan / North African tradition)",
+      "Deborah Madison — Pressure-Cooked Squash Soup Base (American vegetarian tradition)"
+    ],
+    "steam": [
+      "Madhur Jaffrey — Steamed Butternut with Ginger and Cumin (Indian tradition)",
+      "Fuchsia Dunlop — Steamed Nangua with Doubanjiang Dressing (Chinese Sichuan tradition)",
+      "Harumi Kurihara — Kabocha no Nimono-style Steamed Squash (Japanese tradition)",
+      "Julia Child — Courge à la Vapeur (French tradition)"
+    ]
+  },
+  "spaghetti_squash": {
+    "oven_bake": [
+      "Deborah Madison — Baked Spaghetti Squash with Brown Butter and Parmesan (American vegetarian tradition)",
+      "Marcella Hazan — Zucca Spaghetti al Forno (Italian tradition)",
+      "Diana Kennedy — Calabaza Espagueti Horneada (Mexican tradition)",
+      "Yotam Ottolenghi — Baked Spaghetti Squash with Tahini and Chilli (Israeli / Middle Eastern tradition)"
+    ],
+    "oven_roast": [
+      "José Andrés — Espagueti Vegetal Asado (Spanish / American tradition)",
+      "Marcella Hazan — Zucca Spaghetti Arrostita (Italian tradition)",
+      "Yotam Ottolenghi — Roasted Spaghetti Squash with Za'atar Dressing (Israeli tradition)",
+      "Deborah Madison — Roasted Spaghetti Squash with Walnut Sauce (American vegetarian tradition)"
+    ]
+  },
+  "zucchini": {
+    "air_fryer": [
+      "Maangchi (Emily Kim) — Air-Fried Hobak Jeon Style Zucchini (Korean tradition)",
+      "Harumi Kurihara — Zucchini Karaage (Japanese tradition)",
+      "Madhur Jaffrey — Spiced Air-Fried Zucchini Rounds (Indian tradition)",
+      "Yotam Ottolenghi — Air-Fried Zucchini with Lemon Yoghurt (Israeli / Middle Eastern tradition)"
+    ],
+    "grill": [
+      "Marcella Hazan — Zucchine alla Griglia con Aglio e Prezzemolo (Italian tradition)",
+      "Yotam Ottolenghi — Grilled Zucchini with Herb Yoghurt and Chilli (Israeli / Middle Eastern tradition)",
+      "Madhur Jaffrey — Masala Grilled Courgettes (Indian tradition)",
+      "José Andrés — Calabacín a la Parrilla con Romesco (Spanish tradition)"
+    ],
+    "oven_roast": [
+      "Marcella Hazan — Zucchine al Forno (Italian tradition)",
+      "Yotam Ottolenghi — Roasted Zucchini with Feta and Mint (Israeli / Middle Eastern tradition)",
+      "Julia Child — Courgettes au Four (French tradition)",
+      "Madhur Jaffrey — Roasted Courgettes with Cumin and Coriander (Indian tradition)"
+    ],
+    "saute": [
+      "Fuchsia Dunlop — Stir-Fried Courgette with Black Bean Sauce (Chinese Sichuan tradition)",
+      "Julia Child — Courgettes Sautées au Beurre (French tradition)",
+      "Marcella Hazan — Zucchine Trifolate (Italian tradition)",
+      "Madhur Jaffrey — Turai ki Sabzi (Indian tradition)"
+    ]
+  },
+  "caramelized_onions": {
+    "pan_fry": [
+      "Madhur Jaffrey — Birista / Fried Onions (Indian / South Asian tradition)",
+      "Shizuo Tsuji — Negi no Itame-yaki (Japanese pan-fried spring onions with soy and mirin)",
+      "Francis Mallmann — Cebollas a la Plancha (Argentine / South American tradition)",
+      "Marcella Hazan — Cipolle all'Aceto (Italian pan-fried onions with vinegar)"
+    ],
+    "saute": [
+      "Julia Child — Oignons Glacés à Brun (French braised-caramelised onions)",
+      "Madhur Jaffrey — Kachumber Pyaz (North Indian slow-cooked onions for gravy base)",
+      "Yotam Ottolenghi — Slow-Cooked Onions with Thyme and Cream (Middle Eastern / Israeli tradition)",
+      "Najmieh Batmanglij — Piyaz Davag (Persian slow-caramelised onions for garnish)"
+    ]
+  },
+  "leeks": {
+    "braise": [
+      "Julia Child — Poireaux Braisés au Beurre (French tradition)",
+      "Claudia Roden — Braised Leeks with Tomato and Coriander (Moroccan / North African tradition)",
+      "Deborah Madison — Braised Leeks with Mustard and Cream (American vegetarian tradition)",
+      "Yotam Ottolenghi — Braised Leeks with Saffron and Preserved Lemon (Middle Eastern / Israeli tradition)"
+    ],
+    "oven_roast": [
+      "Yotam Ottolenghi — Charred Leeks with Salsa Verde (Middle Eastern / Israeli tradition)",
+      "Magnus Nilsson — Bakad Purjolök (Nordic / Swedish tradition)",
+      "Diana Kennedy — Poro al Horno (Mexican tradition)",
+      "Deborah Madison — Roasted Leeks with Breadcrumbs and Lemon (American vegetarian tradition)"
+    ],
+    "saute": [
+      "Harumi Kurihara — Negi no Itame (Japanese leek sauté)",
+      "Marcella Hazan — Porri Saltati al Burro (Italian sautéed leeks)",
+      "Madhur Jaffrey — Sautéed Leeks with Cumin and Mustard Seeds (Indian tradition)",
+      "Julia Child — Poireaux à la Crème (French leeks with cream)"
+    ]
+  },
+  "roasted_garlic": {
+    "oven_roast": [
+      "José Andrés — Ajo Asado (Spanish tradition)",
+      "Najmieh Batmanglij — Sir-e Biriyan (Persian oven-roasted garlic)",
+      "Deborah Madison — Roasted Garlic Heads with Herbs (American vegetarian tradition)",
+      "Harumi Kurihara — Ninniku no Roast (Japanese tradition)"
+    ]
+  },
+  "roasted_onion": {
+    "grill": [
+      "Francis Mallmann — Cebollas Enteras a las Brasas (Argentine / South American tradition)",
+      "Diana Kennedy — Cebollas Cambray Asadas (Mexican tradition)",
+      "Yotam Ottolenghi — Charred Onions with Tahini (Middle Eastern / Israeli tradition)",
+      "Deborah Madison — Grilled Whole Onions with Herb Butter (American vegetarian tradition)"
+    ],
+    "oven_roast": [
+      "Najmieh Batmanglij — Piyaz Kebab (Persian oven-roasted onion)",
+      "José Andrés — Cebollas Enteras al Horno (Spanish tradition)",
+      "Diana Kennedy — Cebollas al Horno (Mexican tradition)",
+      "Hugh Fearnley-Whittingstall — Whole Roasted Onions with Blue Cheese and Walnuts (British tradition)"
+    ],
+    "saute": [
+      "Fuchsia Dunlop — Cōng Bào Ròu (葱爆肉 — Chinese sautéed scallion/onion, veg adaptation)",
+      "Madhur Jaffrey — Tarkari Pyaz (Indian sautéed whole small onions)",
+      "Francis Mallmann — Cebollas Soasadas a la Plancha (Argentine tradition)",
+      "Yotam Ottolenghi — Sautéed Onion Halves with Za'atar (Middle Eastern / Israeli tradition)"
+    ]
+  },
+  "baked_potato": {
+    "air_fryer": [
+      "Madhur Jaffrey — Masala Air-Fried Baked Potato (Indian tradition)",
+      "Harumi Kurihara — Japanese Air-Fried Potato with Soy Butter (Japanese tradition)",
+      "Deborah Madison — Classic Air-Fried Baked Potato with Soured Cream (American vegetarian tradition)",
+      "Yotam Ottolenghi — Air-Fried Potato with Za'atar Labneh (Middle Eastern / Israeli tradition)"
+    ],
+    "oven_bake": [
+      "Julia Child — Pommes de Terre Rôties au Four (French tradition)",
+      "Madhur Jaffrey — Masala Baked Potato (Indian tradition)",
+      "Nigel Slater — Perfect Baked Potato (British tradition)",
+      "Deborah Madison — Herb-Stuffed Baked Potato (American vegetarian tradition)"
+    ]
+  },
+  "roasted_beets": {
+    "oven_roast": [
+      "Najmieh Batmanglij — Labu Pokhté (Persian Oven-Roasted Beets with Orange and Walnuts)",
+      "Yotam Ottolenghi — Roasted Beets with Yoghurt and Walnut Dukka (Middle Eastern / Israeli tradition)",
+      "Magnus Nilsson — Ugnsrostade Rödbetor (Nordic / Swedish tradition)",
+      "Deborah Madison — Roasted Beets with Balsamic and Goat Cheese (American vegetarian tradition)"
+    ]
+  },
+  "roasted_carrots": {
+    "air_fryer": [
+      "Madhur Jaffrey — Air-Fried Masala Carrots (Indian tradition)",
+      "Claudia Roden — Air-Fried Moroccan Carrots with Chermoula (Moroccan / North African tradition)",
+      "Yotam Ottolenghi — Air-Fried Carrots with Coriander Yoghurt (Israeli / Middle Eastern tradition)",
+      "Harumi Kurihara — Air-Fried Carrots with Sesame Glaze (Japanese tradition)"
+    ],
+    "oven_roast": [
+      "Claudia Roden — Carottes Rôties à la Marocaine (Moroccan tradition)",
+      "Madhur Jaffrey — Gajar Roast (Indian tradition)",
+      "Yotam Ottolenghi — Roasted Carrots with Harissa and Yoghurt (Israeli / Middle Eastern tradition)",
+      "Marcella Hazan — Carote Arrosto con Erbe e Aglio (Italian tradition)"
+    ],
+    "saute": [
+      "Harumi Kurihara — Kimpira Ninjin (きんぴらにんじん — Japanese Glazed Carrot Matchsticks)",
+      "Fuchsia Dunlop — Chǎo Húluóbo Sī (炒胡萝卜丝 — Chinese Stir-Fried Carrot Shreds)",
+      "Madhur Jaffrey — Gajar ki Sabzi (Indian Sautéed Carrots with Mustard Seeds)",
+      "Julia Child — Carottes Glacées (French tradition)"
+    ]
+  },
+  "roasted_parsnips": {
+    "air_fryer": [
+      "Nigel Slater — Air-Fried Honey-Glazed Parsnips (British tradition)",
+      "Magnus Nilsson — Air-Fried Parsnips with Brown Butter (Nordic / Swedish tradition)",
+      "Madhur Jaffrey — Air-Fried Spiced Parsnips (Indian tradition)",
+      "Yotam Ottolenghi — Air-Fried Parsnips with Za'atar and Labneh (Israeli / Middle Eastern tradition)"
+    ],
+    "oven_roast": [
+      "Nigel Slater — Honey-Roasted Parsnips with Mustard (British tradition)",
+      "Magnus Nilsson — Ugnsrostade Palsternackor (Nordic / Swedish tradition)",
+      "Madhur Jaffrey — Masala Roasted Parsnips (Indian tradition)",
+      "Yotam Ottolenghi — Roasted Parsnips with Miso and Sesame (Israeli / East Asian fusion tradition)"
+    ]
+  },
+  "roasted_potatoes": {
+    "air_fryer": [
+      "Madhur Jaffrey — Air-Fried Aloo Masala (Indian tradition)",
+      "José Andrés — Air-Fried Patatas Bravas (Spanish tradition)",
+      "Fuchsia Dunlop — Air-Fried Szechuan Spiced Potatoes (Chinese tradition)",
+      "Deborah Madison — Air-Fried Herb Potatoes (American vegetarian tradition)"
+    ],
+    "oven_roast": [
+      "Nigel Slater — Perfect Roast Potatoes (British tradition)",
+      "José Andrés — Patatas Asadas con Romero y Ajo (Spanish tradition)",
+      "Madhur Jaffrey — Batata Masala Roast (Indian tradition)",
+      "Fuchsia Dunlop — Dry-Fried Roast Potatoes with Cumin (Chinese tradition)"
+    ]
+  },
+  "roasted_sweet_potato": {
+    "air_fryer": [
+      "Harumi Kurihara — Yakiimo (焼き芋 — Japanese Air-Fried Sweet Potato)",
+      "Maangchi — Goguma (고구마 — Korean Air-Fried Sweet Potato)",
+      "Madhur Jaffrey — Air-Fried Masala Sweet Potato (Indian tradition)",
+      "Yotam Ottolenghi — Air-Fried Sweet Potato with Tahini (Israeli / Middle Eastern tradition)"
+    ],
+    "oven_bake": [
+      "Harumi Kurihara — Whole Baked Yakiimo (Japanese tradition)",
+      "Maangchi — Korean Oven Baked Goguma (Korean tradition)",
+      "Diana Kennedy — Camotes al Horno (Mexican tradition)",
+      "Claudia Roden — Batata Mchiya (Moroccan / North African tradition)"
+    ],
+    "oven_roast": [
+      "Yotam Ottolenghi — Roasted Sweet Potato with Tahini and Za'atar (Israeli / Middle Eastern tradition)",
+      "Claudia Roden — Roasted Sweet Potato with Chermoula (Moroccan / North African tradition)",
+      "Madhur Jaffrey — Shakarkandi ki Sabzi (Indian tradition)",
+      "Magnus Nilsson — Roasted Sweet Potato with Rapeseed Oil and Dill (Nordic tradition)"
+    ]
+  },
+  "tuna_steak": {
+    "grill": [
+      "Steven Raichlen — Grilled Yellowfin Tuna Steaks (American tradition)",
+      "Yotam Ottolenghi — Grilled Tuna with Avocado and Wasabi (Israeli-British tradition)",
+      "Marcella Hazan — Tonno alla Griglia (Italian tradition)",
+      "Paula Wolfert — Thon Grillé à la Tunisienne (Tunisian / North African tradition)",
+      "Rick Stein — Swordfish or Tuna Steaks with Gremolata (British Mediterranean tradition)"
+    ],
+    "pan_sear": [
+      "Nobu Matsuhisa — Tuna Tataki with Ponzu (Japanese tradition)",
+      "J. Kenji López-Alt — Pan-Seared Ahi Tuna Steaks (American tradition)",
+      "Rick Stein — Charred Tuna with Salsa Rossa (Mediterranean / Italian tradition)",
+      "Paula Wolfert — Thon à la Chermoula (Moroccan tradition)",
+      "Gordon Ramsay — Seared Sesame Tuna with Ginger Dressing (British restaurant tradition)"
+    ]
+  },
+  "salmon_fillet": {
+    "air_fryer": [
+      "America's Test Kitchen — Air-Fryer Salmon (American tradition)",
+      "Hetty McKinnon — Air-Fryer Teriyaki Salmon (Japanese-Australian tradition)",
+      "Jamie Oliver — Air-Fryer Salmon with Spice Crust (British tradition)",
+      "Nigella Lawson — Sweet Miso-Glazed Air-Fryer Salmon (fusion, British-Japanese tradition)",
+      "Donna Hay — Lemon-Herb Air-Fryer Salmon (Australian tradition)"
+    ],
+    "grill": [
+      "Steven Raichlen — Plank-Grilled Salmon (American tradition)",
+      "Yotam Ottolenghi — Chargrilled Salmon with Chermoula (North African / Middle Eastern tradition)",
+      "René Redzepi — Grilled Wild Salmon with Burned Leek Ash (Scandinavian / New Nordic tradition)",
+      "Tetsuya Wakuda — Grilled Ocean Trout with Konbu (Japanese-Australian fusion tradition)",
+      "Rick Stein — Grilled Salmon with Salsa Verde (British / Mediterranean tradition)"
+    ],
+    "oven_bake": [
+      "America's Test Kitchen — Slow-Roasted Salmon (American tradition)",
+      "Julia Child — Saumon au Four en Papillote (French classical tradition)",
+      "Ottolenghi — Baked Salmon with Preserved Lemon and Za'atar (Middle Eastern tradition)",
+      "Gordon Ramsay — Baked Salmon with Mustard Herb Crust (British restaurant tradition)",
+      "Paula Wolfert — Baked Salmon with Charmoula en Cocotte (Moroccan tradition)"
+    ],
+    "pan_sear": [
+      "J. Kenji López-Alt — Crispy-Skin Pan-Seared Salmon (American tradition)",
+      "Michel Roux Jr. — Saumon Poêlé au Beurre Blanc (French classical tradition)",
+      "Nobu Matsuhisa — Pan-Seared Salmon with Miso Marinade (Japanese tradition)",
+      "Heston Blumenthal — Seared Salmon with Rendered Skin (Modernist British tradition)",
+      "Neil Perry — Pan-Fried Salmon with Herbs (Australian tradition)"
+    ],
+    "sous_vide": [
+      "J. Kenji López-Alt — Sous Vide Salmon (American tradition)",
+      "Thomas Keller — Sous Vide Wild King Salmon with Beurre Rouge (French haute cuisine tradition)",
+      "Heston Blumenthal — Low-Temperature Salmon (British Modernist tradition)",
+      "Joël Robuchon — Saumon mi-cuit sous vide (French gastronomic tradition)",
+      "Donna Hay — Sous Vide Salmon with Lemon and Capers (Australian tradition)"
+    ]
+  },
+  "lobster_tail": {
+    "grill": [
+      "Steven Raichlen — Grilled Butterflied Lobster Tail with Herb Butter (American tradition)",
+      "Gordon Ramsay — Grilled Lobster Tail with Garlic Butter (British restaurant tradition)",
+      "Joël Robuchon — Homard Grillé au Beurre Blanc (French haute cuisine tradition)",
+      "Nobu Matsuhisa — Grilled Spiny Lobster Tail with Yuzu Miso (Japanese tradition)",
+      "Jock Zonfrillo — Grilled Rock Lobster with Warrigal Greens Butter (Australian tradition)"
+    ],
+    "oven_roast": [
+      "Thomas Keller — Oven-Roasted Lobster Tails with Beurre Monté (American haute cuisine)",
+      "Tina Nordström — Ugnsbakade Hummerstjärtar med Dillsmör (Swedish/Nordic tradition)",
+      "Rick Stein — Oven-Roasted Lobster Tails with Garlic & Parsley (British seafood tradition)",
+      "Eric Ripert — Roasted Lobster Tails with Vanilla Beurre Blanc (French haute cuisine)"
+    ]
+  },
+  "scallops": {
+    "pan_sear": [
+      "J. Kenji López-Alt — Pan-Seared Scallops with Brown Butter (American tradition)",
+      "Thomas Keller — Seared Diver Scallops with Cauliflower Purée (French haute cuisine tradition)",
+      "Heston Blumenthal — Seared Scallops with Caramelised Cauliflower (British Modernist tradition)",
+      "Nobu Matsuhisa — Seared Scallops with Wasabi Salsa (Japanese tradition)",
+      "Rick Stein — Hand-Dived Scallops with Bacon and Black Pudding (British seafood tradition)"
+    ]
+  },
+  "shrimp": {
+    "pan_fry": [
+      "Julia Child — Sautéed Shrimp in Garlic Butter (French classical tradition)",
+      "Nobu Matsuhisa — Spicy Garlic Sautéed Shrimp (Japanese tradition)",
+      "Yotam Ottolenghi — Prawns with Harissa and Preserved Lemon (Middle Eastern / North African tradition)",
+      "Rick Stein — Pan-Fried King Prawns with Ginger and Spring Onion (Cantonese / Chinese tradition)",
+      "Donna Hay — Chilli and Lime Sautéed Prawns (Australian tradition)"
+    ]
+  },
+  "cod_fillet": {
+    "air_fryer": [
+      "America's Test Kitchen — Air-Fryer Cod (American tradition)",
+      "Jamie Oliver — Air-Fryer Fish Fingers (British tradition)",
+      "Donna Hay — Lemon-Herb Air-Fryer Cod (Australian tradition)",
+      "Ottolenghi — Spiced Air-Fryer Cod with Tahini (Middle Eastern tradition)",
+      "Marcus Samuelsson — Air-Fryer Berbere-Spiced Cod (Ethiopian-American tradition)"
+    ],
+    "oven_bake": [
+      "America's Test Kitchen — Baked Cod with Crispy Panko Crust (American tradition)",
+      "Rick Stein — Bacalhau à Gomes de Sá (Portuguese tradition)",
+      "Yotam Ottolenghi — Baked Cod with Tahini and Sumac (Middle Eastern tradition)",
+      "Marcella Hazan — Merluzzo al Forno con Pomodoro (Italian tradition)",
+      "Donna Hay — Lemon-Herb Baked Cod (Australian tradition)"
+    ],
+    "pan_fry": [
+      "Heston Blumenthal — Fish and Chips at Home (British tradition)",
+      "Julia Child — Filets de Poisson Sautés au Beurre (French classical tradition)",
+      "Rick Stein — Pan-Fried Cod with Lemon and Capers (British seafood tradition)",
+      "Tetsuya Wakuda — Pan-Fried Blue Cod with Yuzu Butter (Japanese-Australian tradition)",
+      "Jacques Pépin — Sole Meunière (French classical tradition, applied to cod)"
+    ]
+  },
+  "haddock": {
+    "pan_fry": [
+      "BBC Good Food — Zesty Haddock with Crushed Potatoes & Peas (British tradition)",
+      "Matprat.no — Hyse med Byggrisotto / Haddock with Barley Risotto (Norwegian tradition)",
+      "Chefkoch.de / Pelikan — Schellfisch in Senfsauce / Haddock in Mustard Sauce (German tradition)",
+      "Suzy Karadsheh (The Mediterranean Dish) — Mediterranean Lemon-Garlic Haddock with Artichoke Hearts (Egyptian-American / Mediterranean tradition)"
+    ]
+  },
+  "hake": {
+    "pan_fry": [
+      "José Andrés — Merluza a la Plancha (Spanish / Basque tradition)",
+      "Rick Stein — Pan-Fried Hake with Salsa Verde (British / Spanish tradition)",
+      "Paula Wolfert — Pescada Frita (Portuguese tradition)",
+      "Marcella Hazan — Merluzzo Fritto (Italian tradition)",
+      "Donna Hay — Pan-Fried Hake with Salsa Verde (Australian / European tradition)"
+    ]
+  },
+  "halibut_fillet": {
+    "pan_sear": [
+      "Thomas Keller — Pan-Roasted Halibut with Chanterelles (American / French haute cuisine tradition)",
+      "Gordon Ramsay — Pan-Seared Halibut with Sauce Vierge (British-French restaurant tradition)",
+      "Nobu Matsuhisa — Pan-Seared Halibut with Pepper Sauce (Japanese-Peruvian fusion tradition)",
+      "Rick Stein — Pan-Fried Halibut with Brown Butter (Scandinavian / British tradition)",
+      "Feran Adrià — Pan-Seared Halibut with Olive Oil and Sea Salt (Spanish / Catalan tradition)"
+    ]
+  },
+  "mahi_mahi": {
+    "pan_sear": [
+      "Emeril Lagasse — Blackened Mahi-Mahi (American / Louisiana Creole tradition)",
+      "Rick Stein — Pan-Fried Mahi-Mahi with Mango Salsa (Caribbean tradition)",
+      "Nobu Matsuhisa — Pan-Seared Mahi-Mahi with Dried Miso (Japanese-Hawaiian tradition)",
+      "Yotam Ottolenghi — Pan-Fried Mahi-Mahi with Preserved Lemon (Middle Eastern tradition)",
+      "Donna Hay — Seared Mahi-Mahi with Lime Butter (Australian tradition)"
+    ]
+  },
+  "sea_bass": {
+    "pan_sear": [
+      "BBC Good Food — Pan-Fried Sea Bass with Ratatouille & Basil (French / British tradition)",
+      "BBC Good Food — Sea Bass with Sizzled Ginger, Chilli & Spring Onions (Chinese tradition)",
+      "BBC Good Food — Pan-Fried Sea Bass with Citrus-Dressed Broccoli (Mediterranean tradition)",
+      "Giallozafferano — Branzino in Padella con Zucchine al Salto e Salmoriglio (Italian tradition)",
+      "Nefis Yemek Tarifleri — Tavada Fileto Levrek / Pan-Fried Sea Bass Fillet (Turkish tradition)",
+      "Nagi Maehashi (RecipeTin Eats) — Crispy Pan-Fried Fish (Australian tradition)"
+    ]
+  },
+  "swordfish": {
+    "pan_sear": [
+      "BBC Good Food — Griddled Swordfish with Pineapple & Chilli Salsa (British/Tropical fusion tradition)",
+      "BBC Good Food — Seared Swordfish with Mango Salsa (British/Caribbean tradition)",
+      "Giallozafferano — Pesce Spada in Padella con Capperi e Olive / Pan-Seared Swordfish with Capers and Olives (Italian/Sicilian tradition)"
+    ]
+  },
+  "trout": {
+    "pan_sear": [
+      "BBC Good Food — Pan-Fried Trout with Bacon, Almonds & Beetroot (British tradition)",
+      "Matprat.no — Pannestekt ørret med dillpoteter og squash / Pan-Fried Trout with Dill Potatoes (Norwegian tradition)",
+      "Chefkoch.de / acigrand — Forelle gebraten / Fried Whole Trout (German tradition)",
+      "Giallozafferano — Trota Salmonata in Padella con Pomodorini e Olive (Italian tradition)",
+      "Suzy Karadsheh (The Mediterranean Dish) — Mediterranean Pan-Seared Trout with Tzatziki (Mediterranean / Egyptian-American tradition)"
+    ]
+  },
+  "ground_lamb": {
+    "pan_fry": [
+      "Nefisyemektarifleri.com — Kıymalı Patates (Turkish lamb mince with potato)",
+      "IndianHealthyRecipes.com — Keema (Indian spiced minced lamb)",
+      "BBC Good Food — Lamb Mince Moussaka (Greek/British tradition, ground lamb pan-fry phase)"
+    ]
+  },
+  "lamb_burger": {
+    "grill": [
+      "BBC Good Food — Lamb Burgers with Harissa (British/North African tradition)",
+      "Africanbites.com — North African Lamb Burger (Moroccan tradition)",
+      "RecipeTinEats.com — Greek Lamb Burgers (Australian/Greek tradition)"
+    ]
+  },
+  "lamb_kofta": {
+    "grill": [
+      "TurkishFoodTravel.com — Authentic Turkish Köfte (Turkish tradition)",
+      "Nefisyemektarifleri.com — Adana Kebabı (Turkish kofta on skewer)",
+      "IndianHealthyRecipes.com — Seekh Kebab (Indian spiced lamb skewer, barbecue tradition)"
+    ]
+  },
+  "lamb_neck": {
+    "braise": [
+      "Nefis Yemek Tarifleri — Fırında Kuzu Gerdan (Turkish tradition)",
+      "Blog GialloZafferano — Collo di agnello stufato nel coccio (Italian tradition)",
+      "Chefkoch.de — Geschmorter Lammhals (German tradition)",
+      "Madensverden.dk — Lammeskank i rødvin (neck adaptation) (Danish tradition)"
+    ],
+    "oven_roast": [
+      "Nefis Yemek Tarifleri — Fırında Kuzu Gerdan (Turkish tradition)",
+      "Argiro.gr — Αρνάκι στο ταψί με λαχανικά και βότανα (Greek tradition)",
+      "Blog GialloZafferano — Collo di agnello stufato nel coccio (Italian tradition)",
+      "Chefkoch.de — Geschmorter Lammhals (German tradition)"
+    ],
+    "slow_cooker": [
+      "Nefis Yemek Tarifleri — Fırında Kuzu Gerdan (slow cooker adaptation) (Turkish tradition)",
+      "Chefkoch.de — Lammhaxen aus dem Slowcooker (neck adaptation) (German tradition)",
+      "Blog GialloZafferano — Collo di agnello stufato nel coccio (slow cooker adaptation) (Italian tradition)",
+      "Argiro.gr — Αρνάκι στο ταψί (slow cooker adaptation) (Greek tradition)"
+    ]
+  },
+  "lamb_shank": {
+    "braise": [
+      "The Mediterranean Dish — Red Wine Braised Lamb Shanks (Mediterranean tradition)",
+      "BBC Good Food — Braised Lamb Shanks (British tradition)",
+      "Madensverden.dk — Lammeskank i rødvin, langtidsstegt (Danish tradition)",
+      "The Mediterranean Dish — Persian Braised Lamb Shanks (Mahiche) (Iranian tradition)"
+    ],
+    "oven_roast": [
+      "Nefis Yemek Tarifleri — Fırında Kuzu İncik (Turkish tradition)",
+      "Argiro.gr — Αρνίσιο Κότσι στη Γάστρα (Greek tradition)",
+      "Giallo Zafferano — Agnello al forno con patate (Italian tradition)",
+      "Madensverden.dk — Lammeskank i rødvin (oven version) (Danish tradition)"
+    ],
+    "slow_cooker": [
+      "Nefis Yemek Tarifleri — Düdüklü Tencerede Kuzu İncik (Turkish tradition)",
+      "Chefkoch.de — Lammhaxen aus dem Slowcooker (German tradition)",
+      "Argiro.gr — Αρνάκι στο ταψί με λαχανικά και βότανα (slow cooker adaptation) (Greek tradition)",
+      "Giallo Zafferano — Agnello al forno con patate (slow cooker adaptation) (Italian tradition)",
+      "Madensverden.dk — Lammeskank i rødvin, langtidsstegt (slow cooker adaptation) (Danish tradition)"
+    ]
+  },
+  "lamb_shoulder": {
+    "oven_roast": [
+      "BBC Good Food — Slow-Roasted Shoulder of Lamb (British tradition)",
+      "RecipeTinEats.com — Slow Roasted Lamb Shoulder (Australian tradition)",
+      "Nefisyemektarifleri.com — Fırında Kuzu Kol (Turkish slow-roasted lamb shoulder)"
+    ]
+  },
+  "leg_of_lamb": {
+    "grill": [
+      "RecipeTinEats.com — Butterflied Leg of Lamb on the BBQ (Australian tradition)",
+      "Africanbites.com — African-spiced Butterflied Leg of Lamb, Grilled (South African/West African tradition)",
+      "Nefisyemektarifleri.com — Fırında Kuzu But (Turkish grilled/oven leg of lamb)"
+    ],
+    "oven_roast": [
+      "The Mediterranean Dish — Mediterranean Leg of Lamb with Potatoes (Mediterranean/American tradition)",
+      "Madensverden.dk — Lammekølle i ovnen (Danish oven-roasted leg of lamb)",
+      "Matprat.no — Lammestek i ovn (Norwegian Easter leg of lamb)",
+      "The Mediterranean Dish — Perfect Roasted Leg of Lamb with Potatoes (Mediterranean / Egyptian tradition)"
+    ]
+  },
+  "rack_of_lamb": {
+    "oven_roast": [
+      "BBC Good Food — Herb-Crusted Rack of Lamb (British/French tradition)",
+      "Great British Chefs — Classic Rack of Lamb with Red Wine Sauce (British/French tradition)",
+      "RecipeTinEats.com — Rack of Lamb with Herb Crust (Australian/international tradition)",
+      "The Mediterranean Dish — Mediterranean Garlic and Herb Rack of Lamb (Mediterranean / Egyptian tradition)"
+    ]
+  },
+  "lamb_chops": {
+    "grill": [
+      "African Bites — Grilled Lamb Chops with Peppercorn Sauce (West African/International tradition)",
+      "Madensverden.dk — Grillede lammekoteletter med rosmarin og hvidløg (Danish tradition)",
+      "Nefisyemektarifleri.com — Izgara Kuzu Pirzola (Turkish grilled lamb chops)"
+    ],
+    "pan_sear": [
+      "Vahrehvah.com — Spicy Lamb Chops (Indian/South Asian tradition)",
+      "BBC Good Food — Pan-fried Lamb Chops with Rosemary and Garlic (British/French tradition)",
+      "Africanbites.com — Pan-Grilled Lamb Chops (West African tradition)"
+    ]
+  },
+  "lamb_cutlet": {
+    "pan_fry": [
+      "Madensverden.dk — Lammekotelet (Danish pan-fried lamb cutlets)",
+      "BBC Good Food — Lamb Cutlets with Herbed Breadcrumbs (British tradition)",
+      "Giallozafferano.it — Costolette di agnello impanate (Italian breaded lamb cutlets)"
+    ]
+  },
+  "lamb_loin_chops": {
+    "pan_sear": [
+      "Africanbites.com — Grilled Lamb Loin Chops (West African/international tradition)",
+      "Madensverden.dk — Lammekoteletter med rosmarin (Danish pan-seared loin chops)",
+      "RecipeTinEats.com — Pan Seared Lamb Chops (Australian tradition)"
+    ]
+  },
+  "baby_back_ribs": {
+    "air_fryer": [
+      "Madens Verden — Ribben i airfryer (Danish tradition)",
+      "Matprat — Ribbe i airfryer (Norwegian tradition)",
+      "ichkoche.at — Spareribs aus der Heißluftfritteuse – Saftig und Knusprig (Austrian tradition)",
+      "Cucino per Passione (blog.giallozafferano.it) — Costine in friggitrice ad aria (Italian tradition)",
+      "Directo al Paladar — Costillas de cerdo en freidora de aire (Spanish tradition)"
+    ],
+    "grill": [
+      "Madens Verden — Verdens bedste spareribs (Danish tradition)",
+      "Madens Verden — Spareribs i grill (pre-boil method) (Danish tradition)",
+      "ichkoche.at — Spare Ribs (adapted for grill) (Austrian tradition)"
+    ],
+    "oven_roast": [
+      "Madens Verden — Verdens bedste spareribs i ovn (Danish tradition)",
+      "Madens Verden — Spareribs i grill eller ovn med hjemmelavet marinade (Danish tradition)",
+      "ichkoche.at — Spare Ribs (Austrian tradition)",
+      "Chefkoch — Spareribs zum Grillen oder für den Backofen (German tradition)"
+    ],
+    "smoker": [
+      "Chefkoch — Baby Back Ribs (German tradition)",
+      "Chefkoch — Spareribs 3-2-1 vom Grill oder aus dem Backofen (German tradition)",
+      "ichkoche.at — Perfekte Spareribs (Austrian tradition)"
+    ]
+  },
+  "spare_ribs": {
+    "oven_roast": [
+      "Madens Verden — Spareribs i grill eller ovn (Danish tradition)",
+      "Madens Verden — Verdens bedste spareribs (no-boil foil method, Danish tradition)",
+      "ichkoche.at — Spare Ribs (Austrian tradition)",
+      "Chefkoch — Spareribs zum Grillen oder für den Backofen (German tradition)"
+    ]
+  },
+  "ground_pork": {
+    "braise": [
+      "Marcella Hazan — Ragù Bianco di Maiale (Italian tradition)",
+      "Andrea Nguyen — Thịt Băm Kho (Vietnamese caramelised braised pork)",
+      "Yotam Ottolenghi — Spiced Pork Mince with Yoghurt (Levantine tradition)",
+      "Tina Nordström — Köttfärssås på Fläsk (Swedish ragù tradition)"
+    ],
+    "pan_fry": [
+      "Madens Verden — Hakkebøffer (Danish tradition)",
+      "ichkoche.at — Faschiertes (Austrian style ground pork patty)",
+      "Directo al Paladar — Mici rumanos / albóndigas de cerdo a la plancha (Spanish tradition)"
+    ]
+  },
+  "pork_sausage": {
+    "grill": [
+      "Madens Verden — Grillpølse — sådan griller du pølser (Danish tradition)",
+      "ichkoche.at — Spare Ribs adapted to sausage — Bratwurst vom Grill (Austrian tradition)",
+      "Chefkoch.de — Bratwurst vom Grill Grundrezept (German tradition)"
+    ],
+    "pan_fry": [
+      "Madens Verden — Sprøde pølser på pande (Danish tradition)",
+      "ichkoche.at — Bratwurst in der Pfanne (Austrian tradition, adapted from pork pan methods)",
+      "Chefkoch.de — Bratwurst in der Pfanne (German tradition)"
+    ]
+  },
+  "fresh_ham": {
+    "oven_roast": [
+      "America's Test Kitchen — Slow-Roasted Fresh Ham with Cider Glaze (American tradition)",
+      "Yotam Ottolenghi — Slow-Roasted Fresh Ham with Pomegranate & Walnuts (Levantine fusion tradition)",
+      "Tina Nordström — Helstekt Färsk Skinka (Swedish home tradition)",
+      "Hugh Fearnley-Whittingstall — Slow-Roast Fresh Ham with Cider, Honey & Bay (British River Cottage tradition)"
+    ]
+  },
+  "pork_cheek": {
+    "braise": [
+      "José Pizarro — Carrillera de Cerdo al Vino Tinto (Spanish tradition)",
+      "Marcella Hazan — Guancia di Maiale Brasata al Marsala (Italian tradition)",
+      "Diana Henry — Pork Cheeks Braised in Cider with Apples (British tradition)",
+      "Magnus Nilsson — Långbräserade Griskindar i Mörkt Öl (Nordic tradition)"
+    ],
+    "oven_roast": [
+      "José Pizarro — Carrillera al Horno con Pimentón (Spanish tradition)",
+      "Marcella Hazan — Guancia di Maiale Arrosto (Italian tradition)",
+      "Diana Henry — Roast Pork Cheeks with Apples & Sage (British tradition)",
+      "Magnus Nilsson — Ugnsbakade Griskindar med Senap (Nordic tradition)"
+    ],
+    "pan_fry": [
+      "José Pizarro — Carrillera Salteada (Spanish pintxo tradition)",
+      "Marcella Hazan — Guancia di Maiale Saltata in Padella (Italian tradition)",
+      "Diana Henry — Pan-Fried Pork Cheek with Apple & Cider (British tradition)",
+      "Magnus Nilsson — Pan-Seared Griskind with Brown Butter & Capers (Nordic tradition)"
+    ]
+  },
+  "pork_liver": {
+    "pan_fry": [
+      "Marcella Hazan — Fegato di Maiale alla Salvia (Italian tradition)",
+      "Anthony Bourdain — Foie de Porc à la Lyonnaise (French bistro tradition)",
+      "Madhur Jaffrey — Suar ka Kaleji (North Indian / Goan tradition)",
+      "Tina Nordström — Stekt Fläsklever med Lingon (Swedish tradition)"
+    ],
+    "pan_sear": [
+      "Fergus Henderson — Pig's Liver, Bacon and Onions (British nose-to-tail tradition)",
+      "José Pizarro — Hígado de Cerdo a la Plancha (Spanish tradition)",
+      "Magnus Nilsson — Seared Fläsklever with Brown Butter & Capers (Nordic tradition)",
+      "Diana Henry — Pan-Seared Pork Liver with Mustard & Apples (British modern tradition)"
+    ]
+  },
+  "pork_tongue": {
+    "braise": [
+      "Fergus Henderson — Pig's Tongue Salad with Mustard & Capers (British nose-to-tail tradition)",
+      "Diana Kennedy — Lengua de Cerdo en Salsa de Chile Pasilla (Mexican tradition)",
+      "Anthony Bourdain — Langue de Porc Sauce Ravigote (French bistro tradition)",
+      "Magnus Nilsson — Inkokt Grisetunga med Pepparrotssås (Swedish/Nordic tradition)"
+    ],
+    "slow_cooker": [
+      "Hugh Acheson — Slow-Cooker Pork Tongue Confit (American Southern tradition)",
+      "Diana Kennedy — Lengua de Cerdo en el Crock-Pot (Mexican tradition adaptation)",
+      "Andrea Nguyen — Lưỡi Heo Hầm in the Slow Cooker (Vietnamese tradition)",
+      "Magnus Nilsson — Slow-Cooker Saltkokt Grisetunga (Nordic tradition)"
+    ]
+  },
+  "cured_ham": {
+    "oven_roast": [
+      "Madens Verden — Glaseret Skinke (Danish glazed ham)",
+      "Chefkoch — Schinken aus dem Ofen mit Honig-Senf-Kruste (German tradition)",
+      "Chefkoch — Schinkenkrustenbraten bei Niedrigtemperatur (German low-and-slow tradition)"
+    ]
+  },
+  "pork_belly": {
+    "air_fryer": [
+      "J. Kenji López-Alt / Serious Eats — Air Fryer Crispy Pork Belly",
+      "Nigella Lawson — Chinese-Spiced Air Fryer Crispy Pork Belly",
+      "Marion Grasby — Asian Salt-Crusted Air Fryer Crispy Pork Belly",
+      "ICA/Coop Sweden — Sidfläsk i luftfritösen (Air Fryer Pork Belly)",
+      "The Woks of Life (Leung family) — Air Fryer Cantonese Crispy Pork Belly (脆皮燒肉)"
+    ],
+    "braise": [
+      "Chefkoch — Chashu (Japanese-style braised pork belly)",
+      "ichkoche.at — Gjuwetsch — Geschmorter Schweinebauch (Austrian tradition)",
+      "BBC Good Food — Slow-roast Five-spice Pork Belly & Gravy (British/Chinese fusion)"
+    ],
+    "grill": [
+      "Korean BBQ tradition — 삼겹살 구이 (Samgyeopsal Gui, Grilled Pork Belly)",
+      "Australian BBQ tradition — Grilled Pork Belly Slices",
+      "Filipino tradition — Inihaw na Liempo (Grilled Pork Belly)",
+      "Steven Raichlen — Grilled Pork Belly Slices (*Planet Barbecue*)",
+      "Vietnamese street-food tradition — Thịt Ba Chỉ Nướng (Grilled Pork Belly)"
+    ],
+    "oven_roast": [
+      "Madens Verden — Perfekt Flæskesteg i Ovn (Danish tradition)",
+      "Chefkoch — Krustenbraten (German tradition)",
+      "Chefkoch — Schweinebauch aus dem Ofen, knusprig (German tradition, beer glaze)",
+      "Chefkoch — Schweinebauch mit Brezel-Brätfüllung (German stuffed belly)"
+    ],
+    "pan_fry": [
+      "Madens Verden — Stegt Flæsk med Persillesovs (Danish national dish)",
+      "ichkoche.at — Gebratene Bauchfleischstreifen (Austrian tradition — pan-fried strips)",
+      "ichkoche.at — Gebratenes Bauchfleisch (Austrian tradition — oven-to-pan)",
+      "The Woks of Life — Korean Crispy Pork Belly Kimchi Bowls (Korean tradition)"
+    ],
+    "slow_cooker": [
+      "BBC Good Food — Slow Cooker Pork Belly (UK, crockpot method)",
+      "Chefkoch.de — Bayerischer Krauttopf mit Wammerl (German/Bavarian CrockPot)",
+      "Jamie Oliver — Slow-Cooked Pork Belly (UK, low-oven method)"
+    ],
+    "smoker": [
+      "Smoking-Meat.com — Smoked Pork Belly (whole slab)",
+      "Smoking-Meat.com — Smoked Pork Belly Burnt Ends",
+      "Smart Fritid / Agneta — Varmrökt sidfläsk (Hot-smoked pork belly, Swedish style)",
+      "Karlstein.nu / Thomas Karlstein — Burnt Ends av fläsksida (Swedish pork belly burnt ends)"
+    ],
+    "sous_vide": [
+      "INKBIRD Blog / tastybits.de — Asian-style Pork Belly Sous Vide (75 °C × 24 h)"
+    ]
+  },
+  "pork_leg": {
+    "braise": [
+      "Chefkoch.de — Geschmorte Schweinshaxenscheiben (German tradition)",
+      "The Woks of Life — Chinese Red Braised Pork Hock / Ti Pang (Chinese tradition)",
+      "Giallo Zafferano — Stinco di maiale al forno con patate (Italian tradition)",
+      "Valdemarsro.dk — Braiseret nakkefilet (Danish tradition)"
+    ],
+    "oven_roast": [
+      "Chefkoch.de — Knusprige Schweinshaxe aus dem Ofen (German tradition)",
+      "Giallo Zafferano — Stinco di maiale al forno con patate (Italian tradition)",
+      "Ichkoche.at — Knusprig gebratene Schweinsstelze (Austrian tradition)",
+      "Madensverden.dk — Ovnbagt svineskank med rodfrugter (Danish tradition)"
+    ],
+    "slow_cooker": [
+      "Chefkoch.de — Zwiebelschweinshaxen im Crockpot (German tradition)",
+      "The Woks of Life — Chinese Red Braised Ti Pang (slow cooker adaptation) (Chinese tradition)",
+      "Madensverden.dk — Ovnbagt svineskank med rodfrugter (slow cooker adaptation) (Danish tradition)",
+      "Giallo Zafferano — Stinco di maiale al forno (slow cooker adaptation) (Italian tradition)"
+    ]
+  },
+  "pork_loin_roast": {
+    "oven_roast": [
+      "Valdemarsro — Flæskesteg med sprød svær (Danish tradition)",
+      "Madens Verden — Perfekt Flæskesteg i Ovn (Danish tradition)",
+      "Chefkoch — Schweinerücken im Bratschlauch (German tradition)"
+    ]
+  },
+  "pork_shoulder": {
+    "oven_roast": [
+      "Madens Verden — Nakkekam i Ovn, Langtidsstegt i Bradepande (Danish tradition)",
+      "Madens Verden — Nakkesteg i Ovn med Hvidløg og Kartofler i Fad (Danish tradition)",
+      "Chefkoch — Krustenbraten (German tradition — shoulder variant)",
+      "African Bites / Immaculate Bites — Pernil (Puerto Rican Roast Pork Shoulder) (Caribbean tradition)"
+    ],
+    "slow_cooker": [
+      "Madens Verden — Pulled Pork (Danish tradition)",
+      "TINE — Pulled Pork (Norwegian tradition)",
+      "Chefkoch — Pulled Pork aus dem Ofen (German tradition)"
+    ],
+    "smoker": [
+      "Chefkoch — Pulled Pork aus dem Smoker (German BBQ tradition)",
+      "Chefkoch — Pulled Pork aus dem Smoker (Chefkoch Video recipe, 8 kg)",
+      "Madens Verden — Pulled Pork i Smoker (Danish tradition)"
+    ]
+  },
+  "pork_chop": {
+    "air_fryer": [
+      "Madens Verden — Herregårdskotelet i airfryer (Danish tradition)",
+      "ichkoche.at — Schopfsteak aus dem Airfryer (adapted for pork chop) (Austrian tradition)",
+      "GialloZafferano — Braciole di maiale in friggitrice ad aria (Italian tradition)",
+      "Imma Adamu — Air-Fryer Pork Chops with Creole Seasoning (West African / Caribbean tradition)"
+    ],
+    "grill": [
+      "Madens Verden — Svinekoteletter på grill (Danish tradition)",
+      "ichkoche.at — Grillkotelett (Austrian tradition)",
+      "Directo al Paladar — Chuleta de cerdo a la plancha (adapted for grill) (Spanish tradition)",
+      "Huy Vu — Sườn Nướng (Vietnamese Grilled Pork Chops) (Vietnamese tradition)"
+    ],
+    "oven_roast": [
+      "ichkoche.at — Schweinskotelett mit Apfelgemüse vom Blech (Austrian tradition)",
+      "Madens Verden — Svinekotelet med skaft i ovn (adapted) (Danish tradition)",
+      "Directo al Paladar — Solomillo de cerdo al horno (adapted for chops) (Spanish tradition)",
+      "Imma Adamu — Oven Baked Pork Chops (West African / Caribbean tradition)"
+    ],
+    "pan_fry": [
+      "Madens Verden — Pandestegning af koteletter (Danish tradition)",
+      "ichkoche.at — Schweinskotelett (Austrian tradition)",
+      "Directo al Paladar — Chuleta de cerdo a la plancha (Spanish tradition)",
+      "Pailin Chongchitnant — Moo Tod Gratiem Prik Thai หมูทอดกระเทียมพริกไทย (Thai tradition)"
+    ],
+    "pan_sear": [
+      "Directo al Paladar — Chuleta de cerdo a la plancha (Spanish tradition)",
+      "ichkoche.at — Schweinskotelett Grundrezept (Austrian tradition)",
+      "Madens Verden — Pandestegning af koteletter (Danish tradition)",
+      "African Bites / Immaculate Bites — Smothered Pork Chops (Southern US / Creole tradition)"
+    ]
+  },
+  "pork_loin_steak": {
+    "pan_fry": [
+      "Madens Verden — Pandestegning af koteletter (adapted for loin steak) (Danish tradition)",
+      "ichkoche.at — Schweinskotelett Grundrezept (adapted for boneless loin steak) (Austrian tradition)",
+      "Directo al Paladar — Chuleta de cerdo a la plancha (Spanish tradition, adapted for boneless loin steak)"
+    ]
+  },
+  "pork_shoulder_steak": {
+    "pan_fry": [
+      "Madens Verden — Langtidsstegt nakkesteg som bøffer (adapted for pan-fried shoulder steak) (Danish tradition)",
+      "ichkoche.at — Schopfsteak (Austrian tradition)",
+      "Chefkoch.de — Nackensteak Schwein Pfanne (German tradition)"
+    ]
+  },
+  "pork_tenderloin": {
+    "air_fryer": [
+      "Directo al Paladar — Solomillo de cerdo en airfryer (Spanish tradition)",
+      "ichkoche.at — Schopfsteak aus dem Airfryer (adapted for tenderloin) (Austrian tradition)",
+      "Madens Verden — Herregårdskotelet i airfryer method (adapted for tenderloin) (Danish tradition)",
+      "African Bites / Immaculate Bites — Creole Air Fryer Pork Tenderloin (Southern US / West African Creole tradition)"
+    ],
+    "grill": [
+      "Madens Verden — Svinemørbrad på grill (Danish tradition)",
+      "Chefkoch.de — Mariniertes ganzes Schweinefilet vom Grill (German tradition)",
+      "Directo al Paladar — Solomillo de cerdo a la plancha (adapted for grill) (Spanish tradition)",
+      "Hot Thai Kitchen — Moo Ping หมูปิ้ง (Thai street food tradition)",
+      "The Woks of Life — BBQ Char Siu Grilled Pork (Chinese tradition)"
+    ],
+    "oven_roast": [
+      "Directo al Paladar — Solomillo de cerdo al horno con patatas (Spanish tradition)",
+      "ichkoche.at — Schweinefilet im Speckmantel (Austrian tradition)",
+      "Madens Verden — Helstegt svinemørbrad i ovn (Danish tradition)",
+      "Imma Adamu — Creole-Spiced Pork Tenderloin Roast (West African / Caribbean tradition)"
+    ],
+    "pan_sear": [
+      "Directo al Paladar — Solomillo de cerdo a la plancha (Spanish tradition)",
+      "ichkoche.at — Schweinefilet im Speckmantel (Austrian tradition)",
+      "Madens Verden — Svinemørbrad i ovn / pande finish (Danish tradition)",
+      "The Woks of Life — 辣椒小炒肉 Pork and Pepper Stir-fry (Chinese tradition)"
+    ],
+    "sous_vide": [
+      "Madens Verden — Svinemørbrad sous vide (Danish tradition)",
+      "ichkoche.at — Schweinefilet sous vide (Austrian tradition, adapted)",
+      "GialloZafferano blog — Filetto di maiale sous vide (Italian tradition)"
+    ]
+  },
+  "secreto": {
+    "pan_sear": [
+      "Directo al Paladar — Secreto de cerdo a la plancha (Spanish tradition)",
+      "Chefkoch.de — Secreto vom Ibericoschwein (German tradition)",
+      "Madensverden.dk — Pandestegning reference (adapted from svinekotelet technique) (Danish tradition)"
+    ]
+  }
+};
+
 // Experimental MEATER tree — built from KCE:CUT tagged cut files
 const EXP_TREE = {
   "game": {
@@ -25345,6 +29367,36 @@ class KitchenCookingPanel extends LitElement {
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
   }
 
+  // ---------------------------------------------------------------------------
+  // Recipe library helpers
+  //
+  // The experimental MEATER path reads the actively developed recipe library
+  // (RECIPE_INDEX / CUT_PROFILES / CUT_METHOD_PROFILES / RECIPE_TITLES_INDEX).
+  // Every other path (classic MEATER) reads the frozen snapshot
+  // (CLASSIC_RECIPE_INDEX / CLASSIC_CUT_PROFILES / …).
+  //
+  // Cutover instructions (when experimental is declared stable):
+  //   1. Remove the CLASSIC_* branches below so all paths return the live set.
+  //   2. Remove CLASSIC_* constant declarations from generate_frontend_data.py.
+  //   3. Delete docs/recipe_research_classic/ and www/recipes_classic/.
+  // ---------------------------------------------------------------------------
+
+  _getRecipeIndex() {
+    return this._currentPath === 'meater_experimental' ? RECIPE_INDEX : CLASSIC_RECIPE_INDEX;
+  }
+
+  _getCutProfiles() {
+    return this._currentPath === 'meater_experimental' ? CUT_PROFILES : CLASSIC_CUT_PROFILES;
+  }
+
+  _getCutMethodProfiles() {
+    return this._currentPath === 'meater_experimental' ? CUT_METHOD_PROFILES : CLASSIC_CUT_METHOD_PROFILES;
+  }
+
+  _getRecipeTitles() {
+    return this._currentPath === 'meater_experimental' ? RECIPE_TITLES_INDEX : CLASSIC_RECIPE_TITLES_INDEX;
+  }
+
   _findCookingEntities() {
     if (!this.hass) return [];
     
@@ -29076,9 +33128,9 @@ class KitchenCookingPanel extends LitElement {
               const cutData = this._getSelectedCutData();
               const slug = cutData && (cutData.recipe_slug || cutData.slug);
               if (!slug) return '';
-              const desc   = CUT_METHOD_PROFILES[slug] && CUT_METHOD_PROFILES[slug][this._selectedMethod];
-              const titles = RECIPE_TITLES_INDEX[slug] && RECIPE_TITLES_INDEX[slug][this._selectedMethod];
-              const url    = RECIPE_INDEX[slug] && RECIPE_INDEX[slug][this._selectedMethod];
+              const desc   = this._getCutMethodProfiles()[slug] && this._getCutMethodProfiles()[slug][this._selectedMethod];
+              const titles = this._getRecipeTitles()[slug] && this._getRecipeTitles()[slug][this._selectedMethod];
+              const url    = this._getRecipeIndex()[slug] && this._getRecipeIndex()[slug][this._selectedMethod];
               if (!desc && (!titles || titles.length === 0)) return '';
               const isOpen = url && this._recipeFileUrl === url;
               const closeBtnStyle  = 'font-size:0.78em;padding:3px 10px;background:transparent;border:1px solid var(--divider-color);border-radius:10px;cursor:pointer;color:var(--secondary-text-color);';
@@ -29140,8 +33192,8 @@ class KitchenCookingPanel extends LitElement {
     const slug = cut.recipe_slug || cut.slug;
     if (!slug) return html``;
 
-    const profile = CUT_PROFILES[slug];
-    const recipes = RECIPE_INDEX[slug];
+    const profile = this._getCutProfiles()[slug];
+    const recipes = this._getRecipeIndex()[slug];
     if (!profile && !recipes) return html``;
 
     const METHOD_LABELS = {
@@ -29165,8 +33217,8 @@ class KitchenCookingPanel extends LitElement {
     const recipeBtnStyle = 'text-align:left;width:100%;cursor:pointer;border:1px solid var(--divider-color);border-radius:8px;padding:8px 12px;background:var(--secondary-background-color);font-size:0.87em;color:var(--primary-text-color);';
 
     const sel = this._selectedResearchMethod;
-    const selDesc = sel && CUT_METHOD_PROFILES[slug] && CUT_METHOD_PROFILES[slug][sel];
-    const selTitles = sel && RECIPE_TITLES_INDEX[slug] && RECIPE_TITLES_INDEX[slug][sel];
+    const selDesc = sel && this._getCutMethodProfiles()[slug] && this._getCutMethodProfiles()[slug][sel];
+    const selTitles = sel && this._getRecipeTitles()[slug] && this._getRecipeTitles()[slug][sel];
     const selUrl = sel && recipes && recipes[sel];
 
     const closeResearch = () => {
@@ -35450,7 +39502,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "308";
+const PANEL_VERSION = "310";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
