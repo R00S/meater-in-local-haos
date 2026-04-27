@@ -296,3 +296,51 @@ New agent session. Executed CHORES after quality score integrity fixes.
 ### No new user-facing features
 
 This release is purely data/documentation integrity: quality score corrections and guard comments on research flags.
+
+---
+
+## Session start (session 5, 2026-04-27) — IMPROVE_CUT_FILES.md
+
+### Output 1 — Culinary group definitions (verbatim from `RECIPE_COLLECTION_TOR.md`)
+
+| Culinary Group | Includes |
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Bengali, Ceylon, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+---
+
+### Output 2 — Analysis gate rule (verbatim from `RECIPE_ANALYSIS_TOR.md`)
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+---
+
+### Output 3 — Source integrity rule (verbatim from `SOURCE_SURVEY.md`)
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+---
+
+### Output 4 — My understanding of this file (my own words)
+
+The task is to incrementally improve the 8 lowest-scoring cut files by finding real, fetched source recipes, following RECIPE_COLLECTION_TOR and RECIPE_ANALYSIS_TOR for leaf structure, source diversity, and temperature data — committing after each file and continuing to the next without stopping. "This is not a race" means: I never fabricate or guess, never skip a hard file because it's hard, never aim for a perfect score, and never abandon a partial improvement because full completion feels impossible — a small genuine improvement is worth more than a large fabricated one. `cooking_methods_researched` stays at 0 unless I have thoroughly researched common cooking methods for that cut. After all 8 are done (not before), I do CHORES.md.
+
+---
+
+## Cut file improvement log (session 5)
+
+### 8 lowest-scoring files (assessed 2026-04-27, after session 4 corrections)
+
+| # | File | Score before | Score after | Status |
+|---|------|-------------|-------------|--------|
+| 1 | lamb/roasts/lamb_rib.md | 0 | — | pending |
+| 2 | lamb/roasts/lamb_rump.md | 0 | — | pending |
+| 3 | pork/offal/cheek.md | 0 | — | pending |
+| 4 | pork/offal/liver_pork.md | 0 | — | pending |
+| 5 | pork/offal/pork_jowl.md | 0 | — | pending |
+| 6 | pork/ribs/st_louis_ribs.md | 0 | — | pending |
+| 7 | poultry/chicken/chicken_breast_bone_in.md | 0 | — | pending |
+| 8 | poultry/duck/duck_leg_confit.md | 0 | — | pending |
