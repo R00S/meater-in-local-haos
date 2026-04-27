@@ -114,7 +114,7 @@ Score 7 (first 17 alphabetically):
 | 4 | game/mutton/mutton_shoulder_alt.md | 0 | 14 | done — identified as system-duplicate of mutton_shoulder, cut profile cross-references primary, methods inherited |
 | 5 | game/ostrich/ostrich_fillet.md | 0 | 8 | done — cut profile added, braise method added (chefkoch.de confirmed recipe), pan_sear+grill stubs |
 | 6 | game/reindeer/reindeer_loin.md | 0 | 10 | done — cut profile, pan_sear+oven_roast stubs cross-referencing existing reindeer_steak leaves |
-| 7 | game/venison/venison_leg.md | 0 | — | pending |
+| 7 | game/venison/venison_leg.md | 0 | 9 | done — cut profile, braise leaf (chefkoch.de 4.9★), oven_roast stub |
 | 8 | game/venison/venison_shoulder.md | 0 | — | pending |
 | 9 | lamb/chops/lamb_neck_filet.md | 0 | — | pending |
 | 10 | lamb/ground/lamb_crown_roast.md | 0 | — | pending |

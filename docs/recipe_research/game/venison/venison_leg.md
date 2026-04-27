@@ -37,44 +37,39 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
-quality_score: 0
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
+quality_score: 9
+cooking_methods_researched: 1
+quality_assessed: 2026-04-27
 -->
 # Leg — Cut Overview
 
 ## Cut profile
 
-*Placeholder — cut profile research not yet completed.*
+The venison leg (also called haunch, *Keule* in German, *cuisse* in French) is the entire hindquarter of the deer — a large primal that includes the rump, topside, silverside, and leg bone. It is the largest single cut from a deer carcass, typically weighing 2–4 kg for roe deer (*Capreolus capreolus*) or 4–8 kg for red deer (*Cervus elaphus*). Like all venison cuts, the leg is very lean (2–4% fat) and deeply flavoured, with a mildly gamey taste that varies by species, age of animal, and season. The leg has significant connective tissue between muscle groups, especially around the femur and in the seam between the topside and silverside — this makes it suitable for both oven roasting (where the connective tissue is kept tight, producing a firm, sliceable roast) and braising (where the collagen converts to gelatin, producing a richer, more tender result). Whole-leg oven roasting is a British, French, and Central European festive tradition. Braising (covered pot, oven, 160–180°C) is common in Germany (*Rehkeule geschmort*) and France (*cuisse braisée*). For oven roasting without braising liquid, the leg should be barded (wrapped in bacon) to compensate for the lack of fat. Target internal temperature for medium-rare: **54–57°C / 130–135°F** for oven-roasted leg; well-done braised leg reaches 80–90°C / 176–194°F.
 
 ## Research files by cooking method
 
-*No research files yet.*
+- [Braise](./venison_leg-braise.md) — 1 source collected (Group D German; Groups A, B, C needed)
+- [Oven Roast](./venison_leg-oven_roast.md) — cross-references venison_roast-oven_roast.md; 1–2 Group B sources known, more needed
+
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-26
+**Score: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |
 | Missing Culinary Group B tradition | −1 |
 | Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Cut profile is a placeholder | −1 |
-| No method leaf files | −3 |
-| No temperature research (safe temps) | −3 |
-| No temperature research (culinary preferred) | −4 |
-| No per-method temp research | −2 |
+| Braise leaf incomplete (1 of 4–6 sources) | −2 |
+| Oven roast leaf not yet a full dedicated file | −3 |
+| No per-method temperature consensus (analysis gate not met) | −3 |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−4** · Missing all four traditions tradition(s) — add all four traditions source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−4** · No temperature research (culinary preferred) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-4. **−3** · No method leaf files — create `venison_leg-{method}.md` leaf files for each supported cooking method, each with 4–6 diverse source recipes
-5. **−3** · No temperature research (safe temps) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-6. **−2** · No per-method temp research — ensure each method leaf file includes explicit pull temperatures from source recipes
-7. **−1** · Cut profile is a placeholder — replace the placeholder with a full cut profile — anatomy, structure, connective tissue, and cooking behaviour
+1. **−3** · Oven roast leaf not a dedicated file — create venison_leg-oven_roast.md with 4–6 sources specifically for venison leg oven roasting
+2. **−3** · No temperature consensus — add more sources; once 4+ sources per method, write analysis sections
+3. **−2** · Braise leaf incomplete — add 3–5 more sources from diverse traditions
+4. **−1 each** · Missing Groups A, B, C — find recipes from diverse culinary traditions
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
