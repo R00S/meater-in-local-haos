@@ -349,6 +349,31 @@ child cut-method files for those cuts if needed)."
 
 ---
 
+## Session start — 2026-04-27
+
+### Output 1 — Direction definitions (verbatim from RECIPE_COLLECTION_TOR.md)
+
+| Direction | Includes |
+|-----------|---------|
+| Eastern  | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
+| Western  | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| Southern | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| Northern | Scandinavian, Baltic, Slavic, Caucasus region, the Stans, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+### Output 2 — Analysis gate rule (verbatim from RECIPE_ANALYSIS_TOR.md)
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+### Output 3 — Source integrity rule (verbatim from SOURCE_SURVEY.md)
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+### Output 4 — My understanding of this task
+
+The primary task is to incrementally improve the 50 lowest-scoring cut index files by writing real cut profiles and creating child cut-method leaf files with 4–6 genuinely sourced, web-fetched recipes from the confirmed-working sites in SOURCE_SURVEY.md. "This is not a race" means I must resist the urge to produce plausible-looking content quickly — every recipe cited must have been actually fetched and verified; a file that moves from score 0 to score 4 with real data is better than one that looks like score 12 with fabricated sources. After all 50 cuts are done (or maximally improved given reachable sources), I do CHORES.md — not before.
+
+---
+
 ## v0.6.2.09 — Improve 50 lowest-scoring cut files
 
 ### Task
