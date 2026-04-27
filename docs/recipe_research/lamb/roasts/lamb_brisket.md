@@ -20,8 +20,8 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 13
-cooking_methods_researched: 1
+quality_score: 11
+cooking_methods_researched: 0
 quality_assessed: 2026-04-27
 -->
 # Lamb Brisket — Cut Overview
@@ -36,11 +36,11 @@ Lamb brisket (UK: lamb breast) comes from the belly of the lamb — anatomically
 
 ## Quality score
 
-**Score: 13 / 20** — assessed 2026-04-27
+**Score: 11 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
-| Cooking methods researched | ✓ |
+| Cooking methods researched (full survey) | − **NOT DONE** — only braise was researched; methods list inherited from placeholder, not verified |
 | Culinary Group A tradition covered | ✓ (Woks of Life — Cantonese) |
 | Culinary Group B tradition covered | ✓ (Forager Chef — American/French) |
 | Culinary Group C tradition covered | ✓ (Selin Kiazim — Turkish-Cypriot) |
@@ -54,6 +54,7 @@ Lamb brisket (UK: lamb breast) comes from the belly of the lamb — anatomically
 
 ### Improvement priorities
 
-1. **slow_cooker** leaf not yet researched — create `lamb_brisket-slow_cooker.md` with 4–6 real source recipes across culinary traditions
+1. **Methods survey** — Do a proper survey of all cooking methods used for lamb brisket across culinary traditions (is oven_roast/smoked/grill applicable?). Update `methods:` list and set `cooking_methods_researched: 1` only after that survey is done.
+2. **slow_cooker** leaf not yet researched — create `lamb_brisket-slow_cooker.md` with 4+ real source recipes across culinary traditions
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

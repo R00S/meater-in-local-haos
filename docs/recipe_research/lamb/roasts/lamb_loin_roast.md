@@ -45,7 +45,7 @@ doneness:
   max_f: 155
   usda_safe: true
 quality_score: 9
-cooking_methods_researched: 1
+cooking_methods_researched: 0
 quality_assessed: 2026-04-27
 -->
 # Lamb Loin Roast — Cut Overview
