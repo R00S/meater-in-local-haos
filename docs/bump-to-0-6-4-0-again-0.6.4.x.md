@@ -109,7 +109,7 @@ Score 7 (first 17 alphabetically):
 | # | File | Score before | Score after | Status |
 |---|------|-------------|-------------|--------|
 | 1 | beef/roasts/sirloin_tip_roast.md | 0 | 10 | done — cut profile added, oven_roast leaf started (2 Group B sources: RecipeTin Eats + africanbites.com), cooking_methods_researched: 1 set |
-| 2 | game/buffalo/buffalo_roast.md | 0 | — | pending |
+| 2 | game/buffalo/buffalo_roast.md | 0 | 8 | done — cut profile added, braise method added+leaf (Sean Sherman recipe), oven_roast leaf stub started, cooking_methods_researched: 1 |
 | 3 | game/kangaroo/kangaroo_fillet.md | 0 | — | pending |
 | 4 | game/mutton/mutton_shoulder_alt.md | 0 | — | pending |
 | 5 | game/ostrich/ostrich_fillet.md | 0 | — | pending |
