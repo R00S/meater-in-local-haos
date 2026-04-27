@@ -94,3 +94,74 @@ Target internal temperatures (grill):
 5. Insert MEATER probe. **Core: 63–65 °C (145–149 °F)**.
 6. Serve with grilled vegetables.
 *Final temperature: 63–65 °C (145–149 °F).*
+
+---
+
+### 4. Hot Thai Kitchen — Moo Ping หมูปิ้ง (Thai street food tradition)
+**Source**: Pailin Chongchitnant, Hot Thai Kitchen; https://hot-thai-kitchen.com/bbq-pork-skewers/ (fetched 2026-04-26). *Moo Ping are the ultimate Thai street-food grilled pork skewers — found at every market and mall food stall, served with sticky rice. Pork is marinated in a sweet-savoury mix of oyster sauce, soy, palm sugar, and coconut milk; skewered thinly; grilled over medium heat with constant turning. The technique produces tender, caramelised pork.*
+**Serves**: About 24 skewers · **Prep**: Overnight marinate · **Cook**: 3–4 min (1.5–2 min per side)
+
+*Context: "Moo" means pork, "ping" means to grill. Traditionally a fatty pork collar is used; the recipe notes that pork tenderloin is a leaner option that still works with this marinade.*
+
+**Temperature guidance (from recipe)**: Grill over medium to medium-high heat, 1.5–2 minutes per side. Pork is done when caramelised and cooked through. Insert MEATER probe into the thickest skewer piece or grill the full tenderloin: **pull at 63–65 °C (145–149 °F)**.
+
+**Ingredients**
+- 1½ lb (680 g) pork collar butt or pork tenderloin
+- 5 cloves garlic
+- 3 cilantro roots (or 2 tbsp chopped cilantro stems)
+- ¼ tsp white peppercorns
+- ¼ tsp black peppercorns
+- 2 tbsp oyster sauce
+- 2 tbsp soy sauce
+- 2 tbsp black soy sauce
+- 3 tbsp (35 g) palm sugar (or light brown sugar)
+- 1 tbsp neutral oil
+- ¼ cup (60 ml) coconut milk
+- 3 tbsp water
+- 3 tbsp cornstarch (added after marinating)
+- About 24 bamboo skewers (soaked ≥1 hour)
+- Sticky rice for serving
+
+**Method**
+1. **Make marinade**: Pound garlic, cilantro roots, and peppercorns in a mortar until fine. Add palm sugar and pound until dissolved. Add all remaining marinade ingredients (except cornstarch). Stir well.
+2. Slice pork very thinly against the grain, about 5 mm thick. Remove any silver skin.
+3. Pour marinade over pork; mix well. Marinate overnight (minimum 3 hours).
+4. After marinating, sprinkle cornstarch over pork; mix well. This helps texture and adhesion.
+5. Thread pork onto soaked bamboo skewers (4–5 pieces per skewer), laying pieces flat and shingled. Let skewers rest in fridge 1 hour to set shape if time allows.
+6. Place a folded strip of foil on the grill under the exposed skewer ends to prevent burning.
+7. Grill over **medium to medium-high heat**, 1.5–2 minutes per side. For a whole tenderloin: insert MEATER probe and **pull at 63–65 °C (145–149 °F)**.
+8. Serve hot with sticky rice.
+*Final temperature: 63–65 °C (145–149 °F).*
+
+---
+
+### 5. The Woks of Life — BBQ Char Siu Grilled Pork (Chinese tradition)
+**Source**: Bill Leung, The Woks of Life; https://thewoksoflife.com/bbq-char-siu-grill/ (fetched 2026-04-26). *Char siu (叉燒) is Cantonese red-glazed BBQ pork, traditionally roasted or grilled over charcoal. This recipe adapts the classic five-spice hoisin marinade for the gas grill, with constant turning and basting to build the characteristic caramelised, slightly charred glaze. The recipe recommends pork shoulder for fat marbling; pork tenderloin works with shorter cooking times.*
+**Serves**: 4–6 · **Prep**: Overnight marinate · **Cook**: 20–30 min
+
+*Context: Char siu is one of the most iconic preparations in Cantonese cooking — the glazed pork hanging in Chinatown windows is char siu. "The most important part of this recipe is selecting the right cut; pork shoulder is ideal, but pork tenderloin can be used for a leaner result — just don't walk away from the grill."*
+
+**Temperature guidance (from recipe)**: Grill over high heat, initial sear 3 minutes per side, then reduce and continue turning + basting every 2–3 minutes for 20–30 min total. Pork is done at **63 °C (145 °F)**; pull from grill and rest 5 minutes before slicing.
+
+**Ingredients** (marinade)
+- 1–1.5 lb (450–680 g) pork tenderloin (or shoulder, cut into 1.5–2 inch thick strips)
+- 1 tbsp sugar
+- 1 tsp salt
+- ½ tsp five spice powder
+- ¼ tsp white pepper
+- 1 tbsp Shaoxing wine
+- 1 tsp sesame oil
+- 2 tbsp hoisin sauce
+- 1 tbsp molasses
+- 2 cloves garlic, minced
+- 1–2 drops red food colouring (optional, gives the classic Chinatown colour)
+
+**Method**
+1. Cut tenderloin into manageable pieces. Butterfly any sections thicker than 3 cm for even cooking. Mix all marinade ingredients in a bowl. Place pork and marinade in a zip-top bag; work marinade into all surfaces. Refrigerate overnight.
+2. Next day: shake off excess marinade and place pork on a plate. Pour remaining marinade into a basting bowl and add 1 tbsp honey for glazing.
+3. Preheat gas or charcoal grill to very hot. Get a nice sear on each piece — **3 minutes per side** to seal in juices before turning.
+4. After both sides are seared, reduce heat slightly. Turn every 2–3 minutes, brushing with glaze after each turn. Keep a close eye — the marinade burns quickly.
+5. Continue for 20–30 minutes total (15–20 min for tenderloin — leaner, cooks faster). Stop basting a few minutes before pulling.
+6. Insert MEATER probe into the thickest piece. **Pull at 63 °C (145 °F)**.
+7. Rest 5 minutes. Slice thinly. Serve with steamed rice or inside baozi buns.
+*Final temperature: 63–65 °C (145–149 °F).*

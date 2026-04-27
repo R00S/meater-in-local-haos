@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.6.1.14 · Home Assistant 2024.1.0+
+> **Version:** 0.6.2.10 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -115,8 +115,15 @@ generation, which uses whichever conversation agent you have configured in Home 
 After restarting, go to **Settings → Devices & Services → Add Integration** and search for
 **Kitchen Cooking Engine**. Add at least one appliance (see [Section 3](#3-adding-appliances-first-time-setup)).
 
-The panel is automatically registered at `/kitchen-cooking-engine`. Add a **Panel** or
-**Webpage** card pointing to that URL to embed it in a dashboard view.
+The panel is automatically registered in the HA sidebar as **Kitchen Cooking Engine**.
+The JS resource is also auto-registered as a Lovelace module, so you can embed the panel
+in any dashboard view with a single card:
+
+```yaml
+type: custom:kitchen-cooking-card
+```
+
+No manual resource configuration is required.
 
 ---
 
@@ -393,7 +400,20 @@ The cook flow is identical to the standard MEATER path (§ 5.1 – 5.4):
 | 🟠 Orange (caution) | Below the official minimum but widely practised for this cut with proper sourcing |
 | 🔴 Red (unsafe) | Not recommended; displayed for informational purposes only |
 
-5. **Fine-tune temperature** (optional) — same slider as the standard path
+A legend line — **🟢 safe · 🟠 caution (widely practised) · 🔴 below guidelines** — is shown
+directly below the Doneness Level heading so you can read it without hovering over any dot.
+
+5. **Fine-tune temperature** (optional) — same slider as the standard path. When your selected
+doneness temperature is below the USDA safe minimum for that cut, a highlighted note appears
+automatically:
+
+> ⚠️ **Culinary preferred:** 54°C (130°F)  
+> 🛡️ **USDA safe minimum for this cut:** 63°C (145°F)  
+> Consuming undercooked meat carries food safety risk.
+
+This note only appears when there is a genuine discrepancy between the culinary pull temp and
+the cut's official safe minimum — it is absent for vegetables and for any doneness that already
+meets the safe minimum.
 6. **Choose cooking method** — only the methods supported by the selected cut are shown (derived from the cut's recipe file). On the standard MEATER path all methods are listed; here only the relevant subset appears.
 7. **Start** — same `start_cook` service call
 
@@ -410,6 +430,8 @@ standard MEATER path (§ 5.4).
 | Cook flow | Category → meat → cut → doneness | Identical |
 | Doneness options | Full list for the cut | Full list for the cut |
 | Safety indicators | Not shown | **Shown per doneness option** (🟢 / 🟠 / 🔴) |
+| Safety legend | Not shown | **Shown below Doneness Level header** |
+| USDA minimum note | Not shown | **Shown in Target Temperature card when below safe temp** |
 | Cut profile text | Not shown | **Shown after cut selection** |
 | Recipe research links | Not shown | **Shown after cut selection** |
 | Temperature data source | International or Swedish | **International (USDA) only** |
@@ -442,7 +464,10 @@ associated research file. Tapping a method pill opens that file the same way: de
 paragraph first, then individual recipe title buttons, then a single-recipe view on tap.
 
 The research files contain 4–6 source recipes drawn from globally diverse published
-cookbooks and food websites, with non-Western sources prioritised. Each file lists:
+cookbooks and food websites, with non-Western sources actively prioritised. Traditions
+represented include Thai, Vietnamese, Indian, West African, Nigerian/Caribbean, Egyptian,
+Turkish, Greek, Japanese, Chinese, Persian, Middle Eastern, Korean, and Australian
+alongside European traditions. Each file lists:
 - The cut-method description (from `## Cut profile`)
 - Ingredients with quantities
 - Step-by-step method
@@ -467,15 +492,25 @@ returns to the recipe list; ✕ Close dismisses the viewer entirely.
 
 #### How the cut tree and recipe links are built
 
-The experimental MEATER path is driven entirely by the recipe `.md` files under
-`docs/recipe_research/`. Each file carries a `<!-- KCE:CUT … -->` or
-`<!-- KCE:CUT_METHOD … -->` tag that describes its position in the meat hierarchy,
-cooking temperatures, and supported methods.
+The recipe library is split into two forks:
+
+| Fork | Directory | Used by |
+|------|-----------|---------|
+| **Classic** (frozen) | `docs/recipe_research_classic/` | Standard MEATER path |
+| **Experimental** (active) | `docs/recipe_research/` | MEATER+ (experimental) path |
+
+The classic fork is a one-time snapshot that never changes. The experimental fork is where
+all new cut files, method research, and stub upgrades happen. When the experimental path is
+declared stable the classic fork is deleted and experimental becomes the default.
+
+Each file carries a `<!-- KCE:CUT … -->` or `<!-- KCE:CUT_METHOD … -->` tag that describes
+its position in the meat hierarchy, cooking temperatures, and supported methods.
 
 At release time the **create-test-release** GitHub Actions workflow automatically runs
-`generate_frontend_data.py`, which scans those files and bakes `EXP_TREE`, `RECIPE_INDEX`,
-and `CUT_PROFILES` into `kitchen-cooking-panel.js`. This happens on the CI runner —
-the developer does not need to run the generator locally before creating a release.
+`generate_frontend_data.py`, which scans both forks and bakes `RECIPE_INDEX` /
+`CLASSIC_RECIPE_INDEX`, `EXP_TREE`, and `CUT_PROFILES` / `CLASSIC_CUT_PROFILES` into
+`kitchen-cooking-panel.js`. This happens on the CI runner — the developer does not need
+to run the generator locally before creating a release.
 
 To add a new cut to the experimental path:
 
@@ -489,6 +524,9 @@ known to the system):
 1. Add the method slug to the cut's `<!-- KCE:CUT … -->` `methods:` list.
 2. Optionally create `{slug}-{method}.md` research file for that method.
 3. No changes to `cooking_data.py` or any other file are required.
+
+> **Note:** Only edit files under `docs/recipe_research/` (the experimental fork).
+> Never edit `docs/recipe_research_classic/` — it is a frozen snapshot.
 
 ---
 

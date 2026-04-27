@@ -32,6 +32,9 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 8
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Pork Tenderloin — Cut Overview
 
@@ -51,3 +54,24 @@ Target internal temperatures (grill):
 - [Oven Roast](./pork_tenderloin-oven_roast.md)
 - [Pan Sear](./pork_tenderloin-pan_sear.md)
 - [Sous Vide](./pork_tenderloin-sous_vide.md)
+## Quality score
+
+**Score: 8 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | −8 |
+| Cut profile lacks anatomy | −1 |
+| Method file `pork_tenderloin-grill.md` copies parent cut profile | −1 |
+| Method file `pork_tenderloin-pan_sear.md` copies parent cut profile | −1 |
+| Method file `pork_tenderloin-grill.md` copies `pork_tenderloin-pan_sear.md` | −1 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+3. **−1** · Method file `pork_tenderloin-grill.md` copies `pork_tenderloin-pan_sear.md` — rewrite `pork_tenderloin-grill.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
+4. **−1** · Method file `pork_tenderloin-grill.md` copies parent cut profile — rewrite `pork_tenderloin-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+5. **−1** · Method file `pork_tenderloin-pan_sear.md` copies parent cut profile — rewrite `pork_tenderloin-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

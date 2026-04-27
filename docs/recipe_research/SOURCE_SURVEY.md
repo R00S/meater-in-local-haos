@@ -5,7 +5,7 @@ recipe websites from the Copilot cloud agent sandbox. Each site was probed direc
 a relevant recipe URL to determine whether real recipe content (ingredients + method steps)
 is accessible. This prevents agents wasting time on blocked or misdirecting sites.
 
-**Last updated:** 2026-04-24 (+ global diversity survey — 60+ new sites probed)
+**Last updated:** 2026-04-27 (+ 12 new confirmed working sources — coverage for French, Korean, Finnish, Czech, Polish, Lithuanian, Georgian, Moroccan, Levantine, Mexican, Indonesian)
 **Agent session:** v0.6.1.x — continue-061-x-experimental-recipes
 
 ---
@@ -70,6 +70,19 @@ then verify with web_fetch before citing.
 | **sbs.com.au** | English | AU | ⚠️ Homepage accessible; individual recipe slugs often 404. Search before using. |
 | **tasteline.com** | Swedish | SE | ⚠️ **NOW UNRELIABLE** — was working in v0.6.1.x but most recipe URLs now return 404. Search before every use; fallback to chefkoch.de + madensverden.dk for Scandinavian recipes. |
 | **matprat.no** | Norwegian | NO | ⚠️ **NOW UNRELIABLE** — was working in earlier sessions but most URLs now return 404. Search `site:matprat.no {oppskrift}` to find any currently valid slugs. |
+| **koket.se** | Swedish | SE | ✅ Full recipe content. Use short slug format directly under the root: `https://www.koket.se/{slug}` — e.g. `/shortribs-erik-videgards-recept`, `/shortribs-braserade-i-applemust`. Use `web_search site:koket.se {recipe}` first — guessed slugs almost always 404. Previously incorrectly listed as blocked (the URL format was wrong, not the network). |
+| **chefsimon.com** | French | FR | ✅ Full recipe content in French. Chef-attributed recipes (Chef Simon and community members). URL format: `/gourmets/{username}/recettes/{slug}`. e.g. `/gourmets/chef-simon/recettes/poulet-roti-la-bonne-cuisson`. Use `web_search site:chefsimon.com {recette}` to find slugs. Confirmed 2026-04-27. **Fills French gap.** |
+| **koreanbapsang.com** | English | US (Korean tradition) | ✅ Full recipe content in English covering authentic Korean cuisine. Braised chicken (jjimdak), BBQ, soups, stews. URL format: `/{slug}/` e.g. `/jjimdakdakjjim-korean-style-braised/`, `/slow-cooker-dakjjim-korean-braised/`. Use `web_search site:koreanbapsang.com {dish}` for slugs. Confirmed 2026-04-27. **Fills Korean gap.** |
+| **beyondkimchee.com** | English | US (Korean tradition) | ✅ Full recipe content in English. Korean celebration dishes — Galbi Jjim (braised short ribs), fermented foods, Korean-style grills. URL format: `/{slug}/` e.g. `/korean-braised-beef-short-ribs-galbi-jjim/`. Use `web_search site:beyondkimchee.com {dish}` for slugs. Confirmed 2026-04-27. Complements koreanbapsang.com. |
+| **soppa365.fi** | Finnish | FI | ✅ Full recipe content in Finnish with ingredient list and numbered steps. URL format: `/reseptit/{category}/{slug}` e.g. `/reseptit/kana-arjen-nopeat/paistettu-broileri-ja-chimichurri`. Always `web_search site:soppa365.fi {resepti}` first — category prefix in URL is required. Confirmed 2026-04-27. **Fills Finnish gap.** |
+| **apetitonline.cz** | Czech | CZ | ✅ Full recipe content in Czech with ingredient quantities and numbered steps. Published by Apetit magazine. URL format: `/recept/{slug}` e.g. `/recept/kure-na-paprice`. Use `web_search site:apetitonline.cz {recept}` for slugs. Confirmed 2026-04-27. **Fills Czech gap.** |
+| **cookinpolish.com** | English | PL (Polish tradition) | ✅ Full recipe content in English covering traditional Polish cuisine. Pierogi, schabowy (breaded cutlets), bigos, beet salad. URL format: `/{slug}/` e.g. `/breaded-chicken-breast-cutlets/`. Use `web_search site:cookinpolish.com {dish}` for slugs. Confirmed 2026-04-27. **Fills Polish gap.** |
+| **receptai.lt** | Lithuanian | LT | ✅ Full recipe content in Lithuanian with ingredient list and method steps. URL format: `/receptas/{slug}-{ID}` e.g. `/receptas/kepta-vistiena-6738`. Use `web_search site:receptai.lt {patiekalas}` to find IDs. Confirmed 2026-04-27. **Fills Baltic (Lithuanian) gap.** |
+| **georgianrecipes.net** | English | GE (Georgian tradition) | ✅ Full recipe content in English — traditional Georgian (Caucasus) cuisine. Chikhirtma (Georgian chicken broth), Chicken Tabaka, Satsivi, Abkhazian sauces. URL format: `/{year}/{month}/{day}/{slug}/` e.g. `/2015/07/18/chikhirtma/`, `/2014/04/04/chicken-tabaka/`. Use `web_search site:georgianrecipes.net {dish}` for correct date-slug paths. Confirmed 2026-04-27. **Fills Caucasus (Group D) gap.** |
+| **marocmama.com** | English | US (Moroccan tradition) | ✅ Full recipe content in English. Moroccan, North African cuisine — Chicken Tagine, Chermoula, Harissa chicken. URL format: `/{slug}/` e.g. `/moroccan-grilled-chicken-with-chermoula/`, `/chicken-and-olive-tajine/`. Use `web_search site:marocmama.com {dish}` for slugs. Confirmed 2026-04-27. **Fills Moroccan/North African (Group C) gap.** |
+| **cheftariq.com** | English | GB (Levantine / Syrian tradition) | ✅ Full recipe content in English. Syrian, Levantine, Middle Eastern cuisine — Shish Tawook, Maqluba, Sumac chicken. URL format: `/recipe/{slug}/` e.g. `/recipe/shish-tawook/`, `/recipe/maqluba/`, `/recipe/rice-stuffed-chicken/`. Use `web_search site:cheftariq.com {dish}` for slugs. Confirmed 2026-04-27. Complements toriavey.com. **Adds Arabic/Levantine coverage.** |
+| **pinaenlacocina.com** | English / Spanish | US (Mexican tradition) | ✅ Full recipe content. Traditional Mexican home cooking — Carnitas, enchiladas, tamales. Recipes in English with Spanish dish names. URL format: `/{slug}/` e.g. `/pork-carnitas/`, `/sheet-pan-pork-carnitas/`. Use `web_search site:pinaenlacocina.com {dish}` for slugs. Confirmed 2026-04-27. **Fills Mexican gap.** |
+| **cookpad.com/id** | Indonesian | ID | ✅ Full recipe content in Indonesian. ⚠️ URL format is **`/id/resep/{numeric-id}`** — NOT `/id/recipes/{id}` (that returns 404). e.g. `/id/resep/25683421` (Ayam Bakar Solo). Search `site:cookpad.com/id {resep nama}` to find IDs. Note: ingredient list may require fetching full page; method steps appear prominently. Confirmed 2026-04-27. Replaces incorrect `/id/recipes/` format note in matrix. |
 
 ---
 
@@ -95,6 +108,9 @@ Sites that connect but return homepage, profile, GDPR gate, or a different recip
 | **kiwilimon.com** | ⚠️ EMPTY CONTENT | Returns only "También te puede interesar" (recommendation links). No recipe text. |
 | **rasa.my** | ⚠️ WRONG CONTENT | Returns restaurant reviews, not step-by-step recipes. |
 | **krua.co** | ⚠️ BLOCKED | HTTP 403. Thai language site, not accessible. |
+| **streetkitchen.hu** | ⚠️ JS-RENDERED | Hungarian site (Next.js). Site is 200 but ingredient list is JavaScript-rendered and not accessible via web_fetch. Only blog text returned. Do not use. |
+| **nami-nami.ee** | ⚠️ HTML ONLY | Estonian recipe site (server-rendered PHP). Site is 200 but web_fetch markdown conversion fails — raw HTML only returned. Recipe content is in the HTML but impractical to parse. Use receptai.lt (Lithuanian) or book citations instead. |
+| **tudogostoso.com.br** | ⚠️ WRONG CONTENT | Brazilian recipe site. Accessible (200) but URL slug text does not reliably match recipe ID content (e.g. ID 12840 with frango-assado slug returned a coxinha recipe). Same wrong-content trap as lecker.de. Do not use without verifying returned content matches expected recipe. |
 
 ---
 
@@ -114,7 +130,6 @@ Sites that connect but return homepage, profile, GDPR gate, or a different recip
 | food24.com | ❌ BLOCKED | HTTP 403 (South African) |
 | taste.com.au | ❌ BLOCKED | HTTP 403 |
 | 196flavors.com | ❌ BLOCKED | HTTP 522 (connection timeout) |
-| koket.se | ❌ NOT FOUND | HTTP 404 (Swedish TV kitchen) |
 | coop.se | ❌ NOT FOUND | HTTP 404 |
 | arla.se | ❌ NOT FOUND | HTTP 404 |
 | icakuriren.se | ❌ NOT FOUND | HTTP 404 |
@@ -216,35 +231,39 @@ Use this matrix to select culturally diverse sources for each leaf file.
 | Portuguese | teleculinaria.pt |
 | Spanish | directoalpaladar.com |
 | Italian | ricette.giallozafferano.it |
-| French | marmiton.org ⚠️ (GDPR gate — no usable content) — no confirmed French source yet |
+| French | **chefsimon.com** ✅ (confirmed 2026-04-27) — marmiton.org ⚠️ (GDPR gate — no usable content) |
 | German | chefkoch.de |
 | Austrian | ichkoche.at |
 | Danish | madensverden.dk (direct, no www), valdemarsro.dk (via IA) |
 | Norwegian | matprat.no ⚠️ (unreliable) — fallback: madensverden.dk |
-| Swedish | tasteline.com ⚠️ (unreliable) — no confirmed Swedish source yet |
+| Swedish | koket.se ✅ (confirmed), tasteline.com ⚠️ (unreliable) |
 | Croatian / Balkan | coolinarika.com |
 | Romanian | gustos.ro |
 | Greek | argiro.gr |
 | Turkish | nefisyemektarifleri.com, yemek.com |
 | Russian | edimdoma.ru, povarenok.ru |
-| Israeli / Levantine / Middle Eastern | toriavey.com |
+| Israeli / Levantine / Middle Eastern | toriavey.com, **cheftariq.com** ✅ (Syrian/Levantine, confirmed 2026-04-27) |
+| Moroccan / North African | **marocmama.com** ✅ (confirmed 2026-04-27) |
 | Vietnamese | hungryhuy.com |
 | Thai | hot-thai-kitchen.com (search for exact slug first) |
 | Chinese | xiachufang.com, thewoksoflife.com |
 | Japanese | cookpad.com/jp |
-| Indonesian | cookpad.com/id |
+| Indonesian | **cookpad.com/id** — use `/id/resep/{ID}` format (NOT `/id/recipes/`) |
 | Indian / South Asian | indianhealthyrecipes.com, vahrehvah.com |
 | West African / Nigerian | africanbites.com (search for exact slug first) |
 | Caribbean | africanbites.com (Jamaican recipes) |
 | South African | taste.co.za |
 | Global / Multi-country | 196flavors.com (recipes from 196 countries) |
-| Korean | maangchi.com ❌ (blocked); 10000recipe.com ❌ (JS error); no confirmed Korean source |
-| Brazilian / Portuguese-BR | cybercook.com.br ❌ (dead); tudo-gostoso.com.br ❌ (timeout); no confirmed BR source |
-| Mexican / Latin American | mexicoenmicocina.com ❌ (403); directoalpaladar.com (ES) as closest fallback |
-| Polish | kwestiasmaku.com ⚠️ (empty page); gotujmy.pl ❌ (404); no confirmed Polish source |
-| Finnish | kotikokki.net ⚠️ (login wall); no confirmed Finnish source |
-| Czech | vareni.cz ❌ (500); recepty.cz ❌ (404); no confirmed Czech source |
-| Hungarian | nosalty.hu ❌ (404); receptek.hu ❌ (domain sold); no confirmed Hungarian source |
+| Korean | **koreanbapsang.com** ✅, **beyondkimchee.com** ✅ (both confirmed 2026-04-27) — maangchi.com ❌ (blocked) |
+| Brazilian / Portuguese-BR | cybercook.com.br ❌ (dead); tudogostoso.com.br ⚠️ (wrong-content ID mismatch); no fully reliable BR source confirmed |
+| Mexican / Latin American | **pinaenlacocina.com** ✅ (confirmed 2026-04-27); mexicoenmicocina.com ❌ (403) |
+| Polish | **cookinpolish.com** ✅ (English-language Polish cuisine, confirmed 2026-04-27) — kwestiasmaku.com ⚠️ (empty page) |
+| Finnish | **soppa365.fi** ✅ (Finnish, confirmed 2026-04-27) — kotikokki.net ⚠️ (login wall) |
+| Czech | **apetitonline.cz** ✅ (Czech, confirmed 2026-04-27) — vareni.cz ❌ (500); recepty.cz ❌ (404) |
+| Hungarian | streetkitchen.hu ⚠️ (JS-rendered, ingredients inaccessible); nosalty.hu ❌ (404); no confirmed Hungarian source |
+| Lithuanian (Baltic) | **receptai.lt** ✅ (Lithuanian, confirmed 2026-04-27) |
+| Latvian / Estonian (Baltic) | nami-nami.ee ⚠️ (HTML only, markdown fails); no confirmed Latvian source |
+| Georgian (Caucasus) | **georgianrecipes.net** ✅ (English, confirmed 2026-04-27) |
 
 ---
 
@@ -300,12 +319,70 @@ https://www.argiro.gr/recipe/{slug}/
 e.g. https://www.argiro.gr/recipe/arni-kotsi-me-polychroma-karota/
 ```
 
+### ChefSimon.com URL format (French)
+```
+https://chefsimon.com/gourmets/{username}/recettes/{slug}
+e.g. https://chefsimon.com/gourmets/chef-simon/recettes/poulet-roti-la-bonne-cuisson
+Search: web_search site:chefsimon.com {recette} to find username + slug pairs
+```
+
+### Koreanbapsang.com URL format
+```
+https://www.koreanbapsang.com/{slug}/
+e.g. https://www.koreanbapsang.com/jjimdakdakjjim-korean-style-braised/
+Search: web_search site:koreanbapsang.com {Korean dish}
+```
+
+### Soppa365.fi URL format (Finnish)
+```
+https://www.soppa365.fi/reseptit/{category}/{slug}
+e.g. https://www.soppa365.fi/reseptit/kana-arjen-nopeat/paistettu-broileri-ja-chimichurri
+⚠️ Category prefix is required — guessed slugs under /reseptit/ without category return 404
+Search: web_search site:soppa365.fi {reseptinimi} to find category + slug
+```
+
+### Apetitonline.cz URL format (Czech)
+```
+https://www.apetitonline.cz/recept/{slug}
+e.g. https://www.apetitonline.cz/recept/kure-na-paprice
+Search: web_search site:apetitonline.cz {název receptu}
+```
+
+### Receptai.lt URL format (Lithuanian)
+```
+https://www.receptai.lt/receptas/{slug}-{numeric-id}
+e.g. https://www.receptai.lt/receptas/kepta-vistiena-6738
+⚠️ ID is required at end of slug — slug alone returns 404
+Search: web_search site:receptai.lt {patiekalas}
+```
+
+### Georgianrecipes.net URL format (Georgian / Caucasus)
+```
+https://georgianrecipes.net/{year}/{month}/{day}/{slug}/
+e.g. https://georgianrecipes.net/2015/07/18/chikhirtma/
+     https://georgianrecipes.net/2014/04/04/chicken-tabaka/
+⚠️ Date path is required — no shorthand slug format available
+Search: web_search site:georgianrecipes.net {Georgian dish}
+```
+
+### Cookpad Indonesia URL format
+```
+https://cookpad.com/id/resep/{numeric-id}
+e.g. https://cookpad.com/id/resep/25683421
+⚠️ IMPORTANT: Indonesian cookpad uses /id/resep/ — NOT /id/recipes/ (that returns 404!)
+Contrast with Japanese: /jp/recipes/{id} (uses English "recipes")
+Search: web_search site:cookpad.com/id {nama resep}
+```
+
 ---
 
 ## Notes for future agents
 
-1. **The sandbox network is NOT the same as a public browser.** Many sites that
-   appear accessible from a normal browser are blocked in this environment.
+1. **Outbound network access IS available in this sandbox (confirmed 2026-04-26).**
+   web_fetch and curl both work. en.wikipedia.org, koket.se, themediterraneandish.com,
+   recipetineats.com, and many others return real content. What blocks fetching is
+   site-level decisions (paywall: 402, bot-block: 403, wrong slug: 404) — not the
+   sandbox network itself. Always probe a URL before concluding it is inaccessible.
 
 2. **web_search returns AI-synthesized text.** The text from web_search is NOT
    the same as fetched recipe content and CANNOT be used as a recipe source.
@@ -368,7 +445,7 @@ fetches after it was discovered that `web.archive.org` is reachable from this sa
 | **food24.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
 | **taste.com.au** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
 | **196flavors.com** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
-| **koket.se** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
+| **koket.se** | N/A | — | **✅ DIRECT ACCESS WORKS** — no archive needed; use web_search for slugs then web_fetch directly |
 | **coop.se** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
 | **arla.se** | ✅ 2001 only | — | **❌ NOT USEFUL** (too old) |
 | **icakuriren.se** | ❌ no CDX results | — | **❌ NO USABLE ARCHIVE** |
@@ -413,6 +490,7 @@ supplementary source only.
 
 | Date | Agent session | Changes |
 |------|--------------|---------|
+| 2026-04-26 | v0.6.2.x | Network retest: confirmed outbound DNS and web_fetch work. koket.se moved to confirmed-working. Note 1 rewritten. RECIPE_COLLECTION_TOR.md method-status table updated. |
 | 2026-04-24 | v0.6.1.x | Initial survey — 50+ sites probed, 17 confirmed working |
 | 2026-04-24 | v0.6.1.x | Internet Archive re-test of all 46 ⚠️/❌ sites; geniuskitchen.com confirmed usable via IA; all others remain blocked or have no usable archive |
 | 2026-04-24 | v0.6.1.x (continue-061-x) | Global diversity survey — 60+ additional sites probed across Portuguese, South African, Croatian, Romanian, Vietnamese, Israeli, Hungarian, Czech, Polish, Norwegian, Swedish, Danish, Filipino, Malaysian, Korean, Brazilian, Argentine, Mexican, French, Russian, Arabic, Thai, Indonesian traditions. 8 new confirmed working sites added. 50+ new blocked/dead sites documented. Recommended source matrix expanded. valdemarsro.dk confirmed via IA. |

@@ -328,56 +328,43 @@ This section documents what internet-access methods work in the coding-agent
 environment, based on verified testing. **Update this section if you discover a
 new working or broken method.**
 
-### Method status (verified 2026-03-05)
+### Method status (verified 2026-04-26 — supersedes 2026-03-05 entry)
 
 | Method | Result | Notes |
 |--------|--------|-------|
-| `web_fetch` tool | ❌ FAILS for all URLs | DNS resolution is unavailable in the sandbox. Returns `TypeError: fetch failed` for every domain tested: seriouseats.com, americastestkitchen.com, bonappetit.com, allrecipes.com, epicurious.com, bbcgoodfood.com, foodnetwork.com, gordonramsay.com, thermoworks.com, splendidtable.org, food52.com, archive.org, en.wikipedia.org, books.google.com, reddit.com, gutenberg.org, example.com |
-| `curl` / `wget` (bash) | ❌ FAILS | `socket.gaierror: No address associated with hostname` — no DNS at OS level |
-| `urllib` (Python) | ❌ FAILS | Same DNS failure at socket level |
-| `web_search` tool | ✅ WORKS (for source discovery only) | Returns Bing AI-generated summaries. Useful for finding author names, cookbook titles, and URLs to record as citations. **Do not use `web_search` output as recipe text** — it synthesises multiple sources and is AI-generated, which violates the source requirements of this ToR. |
+| `web_fetch` tool | ✅ WORKS for many sites | DNS and outbound HTTP are available. Confirmed working: en.wikipedia.org, koket.se, themediterraneandish.com, nigella.com, recipetineats.com, thewoksoflife.com, giallozafferano.it, argiro.gr, and many others. See `SOURCE_SURVEY.md` for the full tested list. Not all sites are accessible — some return 402 (paywall), 403 (geo/bot block), 404 (wrong URL slug), or GDPR gate. **Always test with a real URL before building a leaf around a source.** |
+| `curl` / `wget` (bash) | ✅ WORKS | DNS resolution is available at OS level. Use to probe HTTP status codes quickly. |
+| `web_search` tool | ✅ WORKS (for source discovery only) | Returns Bing AI-generated summaries. Useful for finding correct URL slugs and author names. **Do not use `web_search` output as recipe text** — it synthesises multiple sources and is AI-generated, which violates the source requirements of this ToR. Always follow up with `web_fetch` on the real URL. |
 
-### The working method: training-data knowledge of real published recipes
+> ⚠️ **Note:** Before 2026-04-26 the sandbox had no outbound network access. Leaves written
+> before that date using "training-data knowledge" (see old method below) are still valid
+> if the source is cited to a real, verifiable URL or published book — but new leaves must
+> use `web_fetch` to retrieve actual content.
 
-**This is how the conforming leaves in this repo were actually written.** Direct
-page fetching does not work in the agent sandbox. The agent's training data
-includes the content of published cookbooks and food-media articles; drawing on
-that knowledge to accurately reproduce a real recipe is the accepted approach.
+### Preferred method: web_fetch on confirmed working sites
 
-This is AI-assisted reproduction of real human-created recipes that exist in
-verifiable published sources — distinct from pure AI-generation because every
-detail must trace back to a named, checkable source. The inherent risk is
-inaccuracy: the agent may mis-recall a quantity or step. That risk is managed by
-the rules below, and by the verification requirement: a reader who owns the cited
-book or opens the cited URL should be able to confirm every ingredient and step.
+**This is now the primary method.** For every new source recipe:
 
-#### Rules for using training-data knowledge
+1. Use `web_search` to find a valid URL slug for the recipe on a confirmed-working site.
+2. Use `web_fetch` on the exact URL to retrieve the actual recipe text.
+3. Verify the returned content contains ingredients + numbered method steps before citing.
+4. Cite the real URL in the `**Source**:` line.
 
-1. **Only reproduce recipes you are genuinely confident are accurate** to the
-   named source. Do not invent quantities, steps, or temperatures.
-2. **Choose sources where your knowledge is specific.** If you are uncertain about
-   the exact details of a recipe in a particular book, choose a different source
-   for which you are confident.
-3. **Cite specifically.** Provide author, title, publisher, year, and page range
-   where known. For food-media articles, provide the real URL even if you cannot
-   fetch it — the citation must be verifiable by a reader who can open a browser.
-4. **This is not a licence to fabricate.** Every ingredient quantity, method step,
-   and pull temperature must reflect what is actually in the named source.
+See `SOURCE_SURVEY.md` for the list of confirmed-working recipe sites and their URL formats.
 
-#### If web_fetch is ever available
+### Fallback method: book citations
 
-If a future session gains actual URL-fetching capability, use it. Example
-well-known URLs that contain full recipe text:
-- Serious Eats: `https://www.seriouseats.com/{recipe-slug}`
-- America's Test Kitchen: `https://www.americastestkitchen.com/recipes/{id}-{slug}`
-- ThermoWorks Blog: `https://blog.thermoworks.com/{article-slug}/`
-- Bon Appétit: `https://www.bonappetit.com/recipe/{slug}`
-- Epicurious: `https://www.epicurious.com/recipes/food/views/{slug}`
-- Food Network: `https://www.foodnetwork.com/recipes/{author}/{slug}`
-- BBC Good Food: `https://www.bbcgoodfood.com/recipes/{slug}`
+Cookbooks do not require web_fetch. Cite author, title, publisher, year, and page where
+known. The reader must be able to verify the citation in a physical copy of the book.
+Every ingredient quantity, method step, and pull temperature must accurately reflect what
+is in the named source — do not reconstruct from memory if you are uncertain.
 
-When fetching succeeds, prefer the fetched text over training-data recall for the
-same source — the fetched version is primary.
+### Obsolete method (pre-2026-04-26): training-data knowledge
+
+Before outbound network access became available, agents reproduced published recipes from
+training-data memory. These leaves are still valid if the source is cited to a real URL or
+book. **New leaves must not use this method** — use `web_fetch` instead. Training-data
+recall of "what a recipe roughly contains" is not an acceptable source for new work.
 
 ---
 
@@ -491,3 +478,179 @@ standard each leaf must meet when it is written.
 
 When a new leaf is added to `cooking_data.py` on main, a corresponding leaf
 file becomes required here.
+
+---
+
+## Cut file quality scoring
+
+Every **cut file** (the `{cut_name}.md` without a method suffix) carries a
+`quality_score` field in its `<!-- KCE:CUT` front-matter block and a
+`## Quality score` section at the end of the document.
+
+### Purpose — flaw detection, not achievement
+
+> **The score is a diagnostic tool, not a target.**
+
+The purpose of this scoring system is to **identify flaws** so that the worst
+files can be found and improved first.  A low score is the point — it means the
+scoring is working correctly.
+
+**What this means in practice:**
+
+- Do **not** soften or remove a criterion because files score lower as a result.
+  Accurate detection of a real gap is more valuable than a higher number.
+- Do **not** add credit for data that has not been genuinely researched.
+  Frontmatter values auto-populated from `cooking_data.py` are not research.
+- Do **not** treat 20/20 as the goal.  Reaching 20/20 on every file is neither
+  required nor expected.  Many cuts may never reach it.
+- **Do** use the `### Improvement priorities` list in each file to find the
+  highest-value action for that specific cut.
+- **Do** focus improvement work on the lowest-scoring files first — the floor
+  matters more than the ceiling.
+
+Future agents: if you find yourself adjusting criteria to make scores look
+better, you are working against the purpose of this system.  Harsh, accurate
+scoring is correct behaviour.
+
+### Scale
+
+**Base: 20 points.** Deductions are subtracted from 20.  A stub file with no
+research content will score around 3/20.  That is not a bug — it is an accurate
+reflection of the file's state.
+
+### Culinary group coverage (assessed across *all* method leaf files for the cut)
+
+Recipes must represent all four culinary groups.  Definitions:
+
+| Culinary Group | Includes |
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+**Deduction: −1 per missing culinary group** (maximum −4).
+
+### Cut profile quality
+
+- **−3** if `## Cut profile` section is missing entirely (no heading at all).
+- **−1** if `## Cut profile` section exists but is a placeholder (content is a
+  stub note such as "Placeholder — research not yet completed" with no real
+  text). Placeholders are a special case: the gap is acknowledged, so the
+  deduction is lighter than for a completely absent section.
+- **−1** if `## Cut profile` exists with real content but lacks anatomical
+  placement — where on the animal the cut comes from, what muscle or structure
+  it is, what defines it (marbling, connective tissue, leanness, typical use).
+  Anatomy is always applicable; this deduction applies universally to profiles
+  with real content.
+
+### Appropriate cooking method research
+
+- **−8** if `cooking_methods_researched: 0` in the cut frontmatter.
+
+This field tracks whether someone has deliberately researched what cooking methods are
+appropriate for this cut across culinary traditions — not just accepted whatever list was
+auto-populated from `cooking_data.py`.  Research means: checking multiple culinary sources
+to confirm which methods suit the cut's connective-tissue content, fat distribution, and
+thickness, and verifying that the `methods:` list reflects that investigation.
+
+Set `cooking_methods_researched: 1` once that research is complete and the `methods:` list
+has been reviewed and corrected.
+
+### Method sub-files
+
+- **−3** if no `{cut_name}-{method}.md` leaf files exist at all for the cut.
+
+### Temperature data
+
+Temperature criteria require **research evidence** — the presence of values in
+the `<!-- KCE:CUT` frontmatter block alone does **not** satisfy these criteria.
+Those values are auto-populated from `cooking_data.py` and may be present even
+in a file with zero research content.  Research evidence means: at least one
+method leaf file that contains source recipes with explicit pull temperatures
+(the "Pull at X°C" step in the recipe format), OR the cut profile body
+explicitly discusses specific pull or safe temperatures (not just a passing °C
+mention).
+
+- **−3** if USDA safe internal temperature is not supported by research evidence
+  as defined above.
+- **−4** if culinary preferred temperatures (doneness targets) are not supported
+  by research evidence as defined above.
+- **−2** if culinary preferred temperatures are not researched per method
+  independently (i.e. the cut file body states a single global target with no
+  per-method nuance, and the method leaf files also lack per-method temperature
+  ranges). No deduction if either the cut file or the method leaf files already
+  carry per-method data.
+
+### Description uniqueness
+
+Two separate deductions apply:
+
+- **−1** per method leaf file whose `## Cut profile` or opening description is
+  a copy-paste or near-identical reuse of **another method leaf file** for the
+  same cut (maximum −2 across this sub-criterion). Each method must explain what
+  that *specific method* does to this *specific cut*.
+
+- **−1** per method leaf file whose `## Cut profile` text is a copy-paste or
+  near-identical reuse of the **parent cut file's** `## Cut profile` text (no
+  upper limit). Using the generic cut overview as a method description is worse
+  than copying a sibling method file — it means the method file contains no
+  method-specific analysis at all.
+
+### Scoring summary table
+
+| Criterion | Possible deduction |
+|-----------|--------------------|
+| Cooking methods not researched (`cooking_methods_researched: 0`) | −8 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group B tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
+| No `## Cut profile` section | −3 |
+| Cut profile is a placeholder | −1 |
+| Cut profile lacks anatomy | −1 |
+| No method leaf files exist | −3 |
+| No safe temperature data | −3 |
+| No culinary preferred temps | −4 |
+| Per-method temp data missing (cut + method files both) | −2 |
+| Method file copies sibling method description (per file, max 2) | −1 each |
+| Method file copies parent cut profile (per file, no limit) | −1 each |
+| **Maximum total deduction** | **−27 + number of method files** |
+| **Minimum score** | **varies** |
+
+### How the score is written into the cut file
+
+Add to the `<!-- KCE:CUT` block:
+```yaml
+quality_score: 17
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
+```
+
+And append this section at the end of the cut file:
+
+```markdown
+## Quality score
+
+**Score: 17 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|-----------|
+| Missing Culinary Group D tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+| Per-method temp data missing | −1 |
+
+*Score is recalculated each time a new method leaf is added or the cut
+profile is updated.*
+```
+
+### Recurring task
+
+Grading cut files is a **recurring improvement task**. Whenever a new method
+leaf is added or an existing leaf's tradition coverage is improved, the cut
+file score must be recalculated and updated.
+
+**Use low scores as a work queue.** Sort all cut files by `quality_score`
+ascending — the files at the bottom of the list are the ones that need
+attention.  Improve the lowest-scoring files first.  Do not adjust criteria
+or add leniency exceptions to raise scores artificially.

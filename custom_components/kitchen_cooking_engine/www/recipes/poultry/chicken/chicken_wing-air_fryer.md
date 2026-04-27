@@ -132,6 +132,32 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 
 ---
 
+### 4. Pailin Chongchitnant — Crispy Thai Fish Sauce Wings (Thai tradition)
+**Source**: Pailin Chongchitnant, Hot Thai Kitchen; https://hot-thai-kitchen.com/fish-sauce-wings/ (fetched 2026-04-25). *Classic Thai street-food chicken wings: marinated in fish sauce and ground white pepper, dusted with rice flour for a shatteringly crispy skin, then air fried at 400 °F (200 °C). Fish sauce (น้ำปลา) and rice flour give Thai-fried chicken its distinctive flavour and ultra-crispy texture. Serve with sweet chili dipping sauce. Air fryer instructions are explicitly included in the recipe.*
+**Serves**: 2 · **Prep**: 30 min marinade · **Cook**: 12–15 min air fryer
+
+**Temperature guidance (from recipe)**: Air fry at **400 °F (200 °C)** for **12–15 minutes** until cooked through. No flipping needed — keep the thicker skin side up to maximise crispness on that surface. Wings are done when golden and cooked through.
+
+**Ingredients**
+- 450 g (1 lb) chicken wing flats (wingettes / mid sections)
+- 1½ Tbsp fish sauce
+- ½ tsp ground white or black pepper (optional)
+- ¼–⅓ cup (30–40 g) regular rice flour
+- Sweet chili sauce, for dipping (optional, store-bought or homemade)
+- Cooking spray or neutral oil (for brushing)
+
+**Method**
+1. In a dish just large enough to hold the wings in one layer (or in a zip-top bag), toss wings with fish sauce until evenly coated. Marinate **20–30 minutes**, turning/stirring halfway through.
+2. Remove wings from the marinade; pat thoroughly dry with paper towel.
+3. If using, sprinkle ground pepper over the wings and press onto the skin.
+4. Lay the wings in a single layer on a plate; sift rice flour evenly over them, flip, sift the other side. Transfer to a sieve and shake off excess flour — you want a thin, even coating only.
+5. Spray or brush wings lightly with oil.
+6. Place wings in the air fryer basket **thicker skin-side up**. Insert MEATER probe into the thickest wingette if using.
+7. Air fry at **400 °F (200 °C)** for **12–15 minutes** until golden and cooked through. No need to flip — maximise crispness on the top side.
+8. Serve immediately while hot. Accompany with sweet chili sauce if desired.
+*Note: Wing flats (wingettes) cook faster than whole wings or drumettes; adjust time by 2–3 minutes for larger pieces.*
+*Final internal temperature: ≥165 °F (74 °C).*
+
 ---
 
 ## Temperature summary
@@ -141,6 +167,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 | Natasha's Kitchen | USA | 400 °F (204 °C) | ~2 lbs wing pieces | 16 min | 165 °F (74 °C) |
 | Skinnytaste | USA | 400 °F (204 °C) | ~2 lbs wing pieces | 16–22 min | 165 °F (74 °C) |
 | Immaculate Bites | Cameroon/USA | 450 °F (230 °C) grill / 400 °F AF | ~2 lbs wings | 30 min grill / 20–25 min AF | 165 °F (75 °C) |
+| Pailin Chongchitnant | Thailand/Canada | 400 °F (200 °C) | Wing flats only | 12–15 min | ≥165 °F (74 °C) |
 
 **Recommended MEATER settings**:
 - Set alert at **160 °F (71 °C)** → pull and rest (or simply check visually for golden crispiness + 165 °F reading)

@@ -30,6 +30,9 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
+quality_score: 7
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Mahi-Mahi — Cut Overview
 
@@ -41,3 +44,24 @@ Mahi-mahi (*Coryphaena hippurus*), also called dolphinfish or dorado, is a large
 ## Research files by cooking method
 
 - [Pan Sear](./mahi_mahi-pan_sear.md)
+## Quality score
+
+**Score: 7 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | −8 |
+| Missing method leaf files (2 of 3 declared) | −2 |
+| Missing Culinary Group D tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+| Method file `mahi_mahi-pan_sear.md` copies parent cut profile | −1 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `mahi_mahi-air_fryer.md`, `mahi_mahi-grill.md`
+3. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+4. **−1** · Method file `mahi_mahi-pan_sear.md` copies parent cut profile — rewrite `mahi_mahi-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+5. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -308,11 +308,15 @@ def _extract_recipe_titles(content):
     return titles
 
 
-def build_recipe_index(base_dir):
+def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
     """Scan recipe files and build index, cut profiles, method profiles and recipe titles.
 
-    Looks first in docs/recipe_research/ (developer environment), then falls
-    back to www/recipes/ (pre-populated in HACS releases on real HA installs).
+    When ``recipe_dir`` is None the function uses the standard resolution order:
+    docs/recipe_research/ first (developer environment), then www/recipes/
+    (pre-populated in HACS releases on real HA installs).
+
+    Pass an explicit ``recipe_dir`` path and a matching ``url_prefix`` to build
+    an index for a different tree (e.g. the frozen classic fork).
 
     File types are identified via KCE tags:
       <!-- KCE:CUT ...        -->  cut overview files ({slug}.md)
@@ -324,16 +328,19 @@ def build_recipe_index(base_dir):
         cut_method_profiles: {cut_slug: {method_slug: "profile text"}}
         recipe_titles:       {cut_slug: {method_slug: ["title", ...]}}
     """
-    repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
-    docs_recipe_dir = os.path.join(repo_root, "docs", "recipe_research")
-    www_recipe_dir = os.path.join(base_dir, "www", "recipes")
+    if recipe_dir is None:
+        repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
+        docs_recipe_dir = os.path.join(repo_root, "docs", "recipe_research")
+        www_recipe_dir = os.path.join(base_dir, "www", "recipes")
 
-    if os.path.isdir(docs_recipe_dir):
-        recipe_dir = docs_recipe_dir
-    elif os.path.isdir(www_recipe_dir):
-        recipe_dir = www_recipe_dir
-        print("  (using www/recipes/ as recipe source — docs/recipe_research/ not found)")
-    else:
+        if os.path.isdir(docs_recipe_dir):
+            recipe_dir = docs_recipe_dir
+        elif os.path.isdir(www_recipe_dir):
+            recipe_dir = www_recipe_dir
+            print("  (using www/recipes/ as recipe source — docs/recipe_research/ not found)")
+        else:
+            return {}, {}, {}, {}
+    elif not os.path.isdir(recipe_dir):
         return {}, {}, {}, {}
 
     _excluded = {
@@ -355,7 +362,7 @@ def build_recipe_index(base_dir):
 
             path = os.path.join(root, filename)
             rel = os.path.relpath(path, recipe_dir).replace(os.sep, "/")
-            url_path = f"/kitchen_cooking_engine_panel/recipes/{rel}"
+            url_path = f"/kitchen_cooking_engine_panel/{url_prefix}/{rel}"
 
             try:
                 content = open(path, encoding="utf-8").read()
@@ -512,6 +519,8 @@ def build_experimental_tree(base_dir):
             rec_doneness = data.get("recommended_doneness")
             methods = data.get("methods") or []
             doneness_list = data.get("doneness") or []
+            usda_safe_c = data.get("usda_safe_c")
+            usda_safe_f = data.get("usda_safe_f")
 
             if not (category and meat and cut_type_name):
                 continue
@@ -526,14 +535,23 @@ def build_experimental_tree(base_dir):
                     continue
                 doneness_keys.append(d_name)
                 if d_name not in exp_doneness:
+                    target_c = d.get("target_c")
+                    if d.get("usda_safe"):
+                        safety_level = "safe"
+                    elif target_c is not None and target_c < 52:
+                        safety_level = "unsafe"
+                    elif not d.get("usda_safe") and target_c is not None:
+                        safety_level = "caution"
+                    else:
+                        safety_level = None
                     exp_doneness[d_name] = {
                         "value": d_name,
                         "name": d_name.replace("_", " ").title(),
                         "icon": _DONENESS_ICONS.get(d_name, "🔥"),
                         "description": None,
-                        "temp_c": d.get("target_c"),
+                        "temp_c": target_c,
                         "temp_f": d.get("target_f"),
-                        "safety_level": "safe" if d.get("usda_safe") else None,
+                        "safety_level": safety_level,
                     }
 
             # Build hierarchy
@@ -575,6 +593,10 @@ def build_experimental_tree(base_dir):
                 cut_obj["recommended_doneness"] = rec_doneness
             if methods:
                 cut_obj["supported_methods"] = methods
+            if usda_safe_c is not None:
+                cut_obj["usda_safe_c"] = usda_safe_c
+            if usda_safe_f is not None:
+                cut_obj["usda_safe_f"] = usda_safe_f
 
             meat_obj["_cut_types"][ct_id]["cuts"].append(cut_obj)
 
@@ -604,45 +626,61 @@ def build_experimental_tree(base_dir):
 
 
 def copy_recipe_files_to_www(base_dir):
-    """Copy recipe markdown files from docs/recipe_research/ to www/recipes/.
+    """Copy recipe markdown files from docs/ to www/ for serving by HA.
+
+    Copies two trees:
+      docs/recipe_research/        → www/recipes/          (experimental / active)
+      docs/recipe_research_classic/ → www/recipes_classic/  (frozen classic fork)
 
     Only runs in the developer environment (when docs/recipe_research/ exists).
-    On real HA installs, www/recipes/ is pre-populated by the HACS package and
-    must NOT be wiped — so this function is a no-op when the source is absent.
+    On real HA installs, www/recipes/ and www/recipes_classic/ are pre-populated
+    by the HACS package and must NOT be wiped — so this function is a no-op
+    when the source is absent.
     """
     repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
-    recipe_dir = os.path.join(repo_root, "docs", "recipe_research")
-    www_recipes_dir = os.path.join(base_dir, "www", "recipes")
 
-    if not os.path.isdir(recipe_dir):
-        # On HA installs www/recipes/ is already in place from the HACS package.
-        # Do NOT delete it; just leave it as-is.
-        return
+    _trees = [
+        (
+            os.path.join(repo_root, "docs", "recipe_research"),
+            os.path.join(base_dir, "www", "recipes"),
+        ),
+        (
+            os.path.join(repo_root, "docs", "recipe_research_classic"),
+            os.path.join(base_dir, "www", "recipes_classic"),
+        ),
+    ]
 
     _excluded = {
         "README.md", "RECIPE_COLLECTION_TOR.md",
         "RECIPE_ANALYSIS_TOR.md", "SOURCE_SURVEY.md",
     }
 
-    # Remove and recreate target directory for a clean copy
-    if os.path.exists(www_recipes_dir):
-        shutil.rmtree(www_recipes_dir)
+    for recipe_dir, www_recipes_dir in _trees:
+        if not os.path.isdir(recipe_dir):
+            # On HA installs the www/ directory is already in place from the
+            # HACS package.  Do NOT delete it; just leave it as-is.
+            continue
 
-    for root, _dirs, files in os.walk(recipe_dir):
-        for filename in files:
-            if not filename.endswith(".md") or filename in _excluded:
-                continue
-            src = os.path.join(root, filename)
-            rel = os.path.relpath(src, recipe_dir)
-            dst = os.path.join(www_recipes_dir, rel)
-            os.makedirs(os.path.dirname(dst), exist_ok=True)
-            shutil.copy2(src, dst)
+        # Remove and recreate target directory for a clean copy
+        if os.path.exists(www_recipes_dir):
+            shutil.rmtree(www_recipes_dir)
 
-    count = sum(
-        len([f for f in files if f.endswith(".md")])
-        for _, _, files in os.walk(www_recipes_dir)
-    )
-    print(f"  Copied {count} recipe files → www/recipes/")
+        for root, _dirs, files in os.walk(recipe_dir):
+            for filename in files:
+                if not filename.endswith(".md") or filename in _excluded:
+                    continue
+                src = os.path.join(root, filename)
+                rel = os.path.relpath(src, recipe_dir)
+                dst = os.path.join(www_recipes_dir, rel)
+                os.makedirs(os.path.dirname(dst), exist_ok=True)
+                shutil.copy2(src, dst)
+
+        count = sum(
+            len([f for f in files if f.endswith(".md")])
+            for _, _, files in os.walk(www_recipes_dir)
+        )
+        label = os.path.basename(www_recipes_dir)
+        print(f"  Copied {count} recipe files → www/{label}/")
 
 
 def generate_js_data():
@@ -748,9 +786,25 @@ def generate_js_data():
                 except Exception as e:
                     print(f"Warning: Could not load translation {filename}: {e}")
 
-    # Build recipe index from docs/recipe_research/
+    # Build recipe index from docs/recipe_research/ (experimental / active fork)
     recipe_index, cut_profiles, cut_method_profiles, recipe_titles = build_recipe_index(base_dir)
-    print(f"  Recipe index: {sum(len(v) for v in recipe_index.values())} files across {len(recipe_index)} cuts")
+    print(f"  Recipe index (experimental): {sum(len(v) for v in recipe_index.values())} files across {len(recipe_index)} cuts")
+
+    # Build recipe index from docs/recipe_research_classic/ (frozen classic fork)
+    repo_root = os.path.abspath(os.path.join(base_dir, "..", ".."))
+    classic_dir = os.path.join(repo_root, "docs", "recipe_research_classic")
+    classic_www_dir = os.path.join(base_dir, "www", "recipes_classic")
+    classic_recipe_dir = classic_dir if os.path.isdir(classic_dir) else (classic_www_dir if os.path.isdir(classic_www_dir) else None)
+    if classic_recipe_dir:
+        classic_recipe_index, classic_cut_profiles, classic_cut_method_profiles, classic_recipe_titles = build_recipe_index(
+            base_dir,
+            recipe_dir=classic_recipe_dir,
+            url_prefix="recipes_classic",
+        )
+        print(f"  Recipe index (classic):      {sum(len(v) for v in classic_recipe_index.values())} files across {len(classic_recipe_index)} cuts")
+    else:
+        classic_recipe_index, classic_cut_profiles, classic_cut_method_profiles, classic_recipe_titles = {}, {}, {}, {}
+        print("  Recipe index (classic):      0 files (docs/recipe_research_classic/ not found)")
 
     # Report international cut → recipe coverage. The experimental MEATER path
     # is locked to international data (see panel-class-template.js
@@ -854,6 +908,18 @@ def generate_js_data():
     lines.append("")
     lines.append("// Recipe titles per cut × method: {cut_slug: {method_slug: [title, ...]}}")
     lines.append(f"const RECIPE_TITLES_INDEX = {json.dumps(recipe_titles, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// Classic (frozen) recipe index — snapshot of docs/recipe_research_classic/")
+    lines.append(f"const CLASSIC_RECIPE_INDEX = {json.dumps(classic_recipe_index, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// Classic cut profile texts")
+    lines.append(f"const CLASSIC_CUT_PROFILES = {json.dumps(classic_cut_profiles, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// Classic cut × method profile texts")
+    lines.append(f"const CLASSIC_CUT_METHOD_PROFILES = {json.dumps(classic_cut_method_profiles, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// Classic recipe titles per cut × method")
+    lines.append(f"const CLASSIC_RECIPE_TITLES_INDEX = {json.dumps(classic_recipe_titles, indent=2, ensure_ascii=False)};")
     lines.append("")
     lines.append("// Experimental MEATER tree — built from KCE:CUT tagged cut files")
     lines.append(f"const EXP_TREE = {json.dumps(exp_tree, indent=2, ensure_ascii=False)};")

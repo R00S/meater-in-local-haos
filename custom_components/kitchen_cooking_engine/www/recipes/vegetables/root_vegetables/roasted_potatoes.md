@@ -17,6 +17,9 @@ doneness:
   max_c: 175
   max_f: 350
   usda_safe: true
+quality_score: 6
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Roasted Potatoes — Cut Overview
 
@@ -32,3 +35,27 @@ Target internal temperature is 95–100°C for full starch gelatinisation and a 
 
 - [Air Fryer](./roasted_potatoes-air_fryer.md)
 - [Oven Roast](./roasted_potatoes-oven_roast.md)
+## Quality score
+
+**Score: 6 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | −8 |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
+| Cut profile lacks anatomy | −1 |
+| Method file `roasted_potatoes-air_fryer.md` copies parent cut profile | −1 |
+| Method file `roasted_potatoes-oven_roast.md` copies parent cut profile | −1 |
+| Method file `roasted_potatoes-air_fryer.md` copies `roasted_potatoes-oven_roast.md` | −1 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−2** · Missing Culinary Group C and Culinary Group D tradition(s) — add Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
+4. **−1** · Method file `roasted_potatoes-air_fryer.md` copies `roasted_potatoes-oven_roast.md` — rewrite `roasted_potatoes-air_fryer.md`'s cut profile — it must describe what the oven roast method does to this cut, not repeat another method's prose
+5. **−1** · Method file `roasted_potatoes-air_fryer.md` copies parent cut profile — rewrite `roasted_potatoes-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+6. **−1** · Method file `roasted_potatoes-oven_roast.md` copies parent cut profile — rewrite `roasted_potatoes-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

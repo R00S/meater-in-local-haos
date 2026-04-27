@@ -46,13 +46,47 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 7
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Top Round Roast — Cut Overview
 
 ## Cut profile
 
-*Placeholder — cut profile research not yet completed.*
+The top round roast is the single large inner-thigh muscle of the round primal — the
+hindquarter hip area. In British butchery the anatomical equivalent is **topside**. It is
+the leanest of the round sub-primals (top round, bottom round, eye of round), with a flat,
+uniform grain and minimal intramuscular fat. This lean profile means it does not tolerate
+high temperatures well: above ~68 °C the muscle fibres tighten and the roast becomes dry.
+The cut benefits from oven roasting at moderate temperatures (120–190 °C) to 54–65 °C
+internal.
+
+**Slicing**: Always slice against the grain — the tight, flat grain of top round makes
+slicing direction the primary determinant of tenderness in the finished roast.
 
 ## Research files by cooking method
 
-*No research files yet.*
+| Method | Leaf file | Status |
+|--------|-----------|--------|
+| oven_roast | top_round_roast-oven_roast.md | ✅ 4 sources (Groups B×2, C, D) |
+| braise | *not yet created* | ⬜ |
+| slow_cooker | *not yet created* | ⬜ |
+
+## Quality score
+
+**Score: 7 / 20** — assessed 2026-04-27
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | −8 |
+| Missing Culinary Group A tradition | −1 |
+| Groups B, C, D covered in oven_roast leaf | −0 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research remaining methods; set `cooking_methods_researched: 1`
+2. **−1** · Group A gap — add a Group A source to oven_roast leaf
+3. Create `top_round_roast-braise.md` and `top_round_roast-slow_cooker.md` leaves
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

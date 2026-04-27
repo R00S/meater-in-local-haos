@@ -36,6 +36,9 @@ doneness:
   max_c: 63
   max_f: 145
   usda_safe: false
+quality_score: 9
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Bison Roast — Cut Overview
 
@@ -84,3 +87,20 @@ ruined at those temperatures. The correct window is medium (60–65 °C), where 
 ## Research files by cooking method
 
 - [Oven Roast](./bison_roast-oven_roast.md)
+## Quality score
+
+**Score: 9 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | −8 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−3** · Missing Culinary Group A, Culinary Group C and Culinary Group D tradition(s) — add Culinary Group A, Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

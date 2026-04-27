@@ -345,7 +345,8 @@
     "restart_cook": "🔄 Starta om tillagning",
     "edit_notes": "✏️ Redigera anteckningar",
     "delete_btn": "🗑️ Ta bort",
-    "update_notes_prompt": "Uppdatera anteckningar:"
+    "update_notes_prompt": "Uppdatera anteckningar:",
+    "serving_size_label": "Portioner"
   },
   "measurements": {
     "ml": "ml",

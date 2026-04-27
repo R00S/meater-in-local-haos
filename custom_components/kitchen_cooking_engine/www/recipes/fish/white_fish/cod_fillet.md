@@ -31,6 +31,9 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
+quality_score: 5
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Cod Fillet — Cut Overview
 
@@ -44,3 +47,30 @@ Atlantic cod (*Gadus morhua*) fillet is cut from the sides of the fish; the fles
 - [Air Fryer](./cod_fillet-air_fryer.md)
 - [Oven Bake](./cod_fillet-oven_bake.md)
 - [Pan Fry](./cod_fillet-pan_fry.md)
+## Quality score
+
+**Score: 5 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | −8 |
+| Missing method leaf file `cod_fillet-oven_roast.md` | −1 |
+| Missing Culinary Group D tradition | −1 |
+| Method file `cod_fillet-air_fryer.md` copies parent cut profile | −1 |
+| Method file `cod_fillet-oven_bake.md` copies parent cut profile | −1 |
+| Method file `cod_fillet-pan_fry.md` copies parent cut profile | −1 |
+| Method file `cod_fillet-air_fryer.md` copies `cod_fillet-oven_bake.md` | −1 |
+| Method file `cod_fillet-air_fryer.md` copies `cod_fillet-pan_fry.md` | −1 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−1** · Missing method leaf file — create `cod_fillet-oven_roast.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
+3. **−1** · Method file `cod_fillet-air_fryer.md` copies `cod_fillet-oven_bake.md` — rewrite `cod_fillet-air_fryer.md`'s cut profile — it must describe what the oven bake method does to this cut, not repeat another method's prose
+4. **−1** · Method file `cod_fillet-air_fryer.md` copies `cod_fillet-pan_fry.md` — rewrite `cod_fillet-air_fryer.md`'s cut profile — it must describe what the pan fry method does to this cut, not repeat another method's prose
+5. **−1** · Method file `cod_fillet-air_fryer.md` copies parent cut profile — rewrite `cod_fillet-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+6. **−1** · Method file `cod_fillet-oven_bake.md` copies parent cut profile — rewrite `cod_fillet-oven_bake.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+7. **−1** · Method file `cod_fillet-pan_fry.md` copies parent cut profile — rewrite `cod_fillet-pan_fry.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+8. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

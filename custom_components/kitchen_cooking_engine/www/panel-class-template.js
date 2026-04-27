@@ -972,6 +972,36 @@ class KitchenCookingPanel extends LitElement {
     return this._dataSource === DATA_SOURCE_SWEDISH ? SWEDISH_DONENESS_OPTIONS : DONENESS_OPTIONS;
   }
 
+  // ---------------------------------------------------------------------------
+  // Recipe library helpers
+  //
+  // The experimental MEATER path reads the actively developed recipe library
+  // (RECIPE_INDEX / CUT_PROFILES / CUT_METHOD_PROFILES / RECIPE_TITLES_INDEX).
+  // Every other path (classic MEATER) reads the frozen snapshot
+  // (CLASSIC_RECIPE_INDEX / CLASSIC_CUT_PROFILES / …).
+  //
+  // Cutover instructions (when experimental is declared stable):
+  //   1. Remove the CLASSIC_* branches below so all paths return the live set.
+  //   2. Remove CLASSIC_* constant declarations from generate_frontend_data.py.
+  //   3. Delete docs/recipe_research_classic/ and www/recipes_classic/.
+  // ---------------------------------------------------------------------------
+
+  _getRecipeIndex() {
+    return this._currentPath === 'meater_experimental' ? RECIPE_INDEX : CLASSIC_RECIPE_INDEX;
+  }
+
+  _getCutProfiles() {
+    return this._currentPath === 'meater_experimental' ? CUT_PROFILES : CLASSIC_CUT_PROFILES;
+  }
+
+  _getCutMethodProfiles() {
+    return this._currentPath === 'meater_experimental' ? CUT_METHOD_PROFILES : CLASSIC_CUT_METHOD_PROFILES;
+  }
+
+  _getRecipeTitles() {
+    return this._currentPath === 'meater_experimental' ? RECIPE_TITLES_INDEX : CLASSIC_RECIPE_TITLES_INDEX;
+  }
+
   _findCookingEntities() {
     if (!this.hass) return [];
     
@@ -1418,6 +1448,15 @@ class KitchenCookingPanel extends LitElement {
   // ============================================================================
   // PHASE 1: GUI REDESIGN - NAVIGATION METHODS
   // ============================================================================
+
+  /**
+   * Open the User Guide at the specified anchor section.
+   * @param {string} anchor - GitHub markdown anchor, e.g. '#41-welcome-screen'
+   */
+  _openHelp(anchor = '') {
+    const base = 'https://github.com/R00S/meater-in-local-haos/blob/main/docs/USER_GUIDE.md';
+    window.open(anchor ? `${base}${anchor}` : base, '_blank', 'noopener,noreferrer');
+  }
 
   /**
    * Navigate to welcome screen (appliance selector)
@@ -3817,6 +3856,7 @@ class KitchenCookingPanel extends LitElement {
       <div class="welcome-header">
         <h1>${this._t('welcome.title')}</h1>
         <p class="welcome-subtitle">${this._t('welcome.select_appliance')}</p>
+        <button class="help-btn" @click=${() => this._openHelp('#41-welcome-screen')} title="Open User Guide">?</button>
       </div>
 
       ${hasOngoingCooks ? html`
@@ -4063,6 +4103,7 @@ class KitchenCookingPanel extends LitElement {
           ${this._t('shelf.back')}
         </button>
         <h2>${this._t('shelf.title')}</h2>
+        <button class="help-btn" @click=${() => this._openHelp('#9-shelf-management')} title="Open User Guide">?</button>
       </div>
 
       <ha-card>
@@ -4152,6 +4193,7 @@ class KitchenCookingPanel extends LitElement {
           ${this._t('shopping_list.back')}
         </button>
         <h2>${this._t('shopping_list.title')}</h2>
+        <button class="help-btn" @click=${() => this._openHelp('#10-shopping-list')} title="Open User Guide">?</button>
       </div>
 
       <ha-card>
@@ -4314,6 +4356,7 @@ class KitchenCookingPanel extends LitElement {
             ← Back to MEATER Path
           </button>
           <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
+          <button class="help-btn" @click=${() => this._openHelp('#51-starting-a-cook')} title="Open User Guide">?</button>
         </div>
         
         ${this._renderExpSetupForm(entities)}
@@ -4327,6 +4370,7 @@ class KitchenCookingPanel extends LitElement {
           ← Back to Appliances
         </button>
         <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
+        <button class="help-btn" @click=${() => this._openHelp('#59-meater-experimental--cut-profile--recipe-links')} title="Open User Guide">?</button>
       </div>
 
       <div class="path-buttons">
@@ -4364,6 +4408,11 @@ class KitchenCookingPanel extends LitElement {
     const donenessTemps = this._selectedDoneness ? this._getTargetTempForDoneness(this._selectedDoneness) : null;
     const displayTemp = this._customTargetTempC || (donenessTemps ? donenessTemps.c : null);
     const displayTempF = this._customTargetTempC ? Math.round(this._customTargetTempC * 9 / 5 + 32) : (donenessTemps ? donenessTemps.f : null);
+    const cutData = this._getSelectedCutData();
+    const cutUsdaSafeC = cutData && cutData.usda_safe_c ? cutData.usda_safe_c : null;
+    const cutUsdaSafeF = cutData && cutData.usda_safe_f ? cutData.usda_safe_f : null;
+    // True when the culinary target temp is below the USDA safe minimum for this cut
+    const showSafetyWarning = cutUsdaSafeC !== null && displayTemp !== null && displayTemp < cutUsdaSafeC;
     
     // v0.5.0.57: Check if selected entity is specifically a MEATER entity
     // Diagnostic data revealed: entities.includes() returns TRUE for non-MEATER entities
@@ -4561,6 +4610,9 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <h3>🌡️ Doneness Level ${recommendedDoneness ? html`<span class="recommended-hint">(⭐ = recommended)</span>` : ''}</h3>
+            <p style="font-size:0.8em;margin:0 0 10px;color:var(--secondary-text-color);">
+              🟢 safe &nbsp;·&nbsp; 🟠 caution (widely practised) &nbsp;·&nbsp; 🔴 below guidelines
+            </p>
             <div class="doneness-grid">
               ${this._getAvailableDoneness().map(opt => html`
                 <button 
@@ -4592,6 +4644,14 @@ class KitchenCookingPanel extends LitElement {
                   <span class="custom-indicator">Custom</span>
                 ` : ''}
               </div>
+              
+              ${showSafetyWarning ? html`
+                <div style="margin:10px 0;padding:10px 12px;background:rgba(244,67,54,0.08);border-left:3px solid #f44336;border-radius:4px;font-size:0.84em;line-height:1.5;">
+                  <div>⚠️ <strong>Culinary preferred:</strong> ${displayTemp}°C (${displayTempF}°F)</div>
+                  <div>🛡️ <strong>USDA safe minimum for this cut:</strong> ${cutUsdaSafeC}°C (${cutUsdaSafeF}°F)</div>
+                  <div style="color:var(--secondary-text-color);margin-top:4px;">Consuming undercooked meat carries food safety risk.</div>
+                </div>
+              ` : ''}
               
               <button 
                 class="adjust-btn ${this._showTempAdjust ? 'active' : ''}"
@@ -4673,9 +4733,9 @@ class KitchenCookingPanel extends LitElement {
               const cutData = this._getSelectedCutData();
               const slug = cutData && (cutData.recipe_slug || cutData.slug);
               if (!slug) return '';
-              const desc   = CUT_METHOD_PROFILES[slug] && CUT_METHOD_PROFILES[slug][this._selectedMethod];
-              const titles = RECIPE_TITLES_INDEX[slug] && RECIPE_TITLES_INDEX[slug][this._selectedMethod];
-              const url    = RECIPE_INDEX[slug] && RECIPE_INDEX[slug][this._selectedMethod];
+              const desc   = this._getCutMethodProfiles()[slug] && this._getCutMethodProfiles()[slug][this._selectedMethod];
+              const titles = this._getRecipeTitles()[slug] && this._getRecipeTitles()[slug][this._selectedMethod];
+              const url    = this._getRecipeIndex()[slug] && this._getRecipeIndex()[slug][this._selectedMethod];
               if (!desc && (!titles || titles.length === 0)) return '';
               const isOpen = url && this._recipeFileUrl === url;
               const closeBtnStyle  = 'font-size:0.78em;padding:3px 10px;background:transparent;border:1px solid var(--divider-color);border-radius:10px;cursor:pointer;color:var(--secondary-text-color);';
@@ -4737,8 +4797,8 @@ class KitchenCookingPanel extends LitElement {
     const slug = cut.recipe_slug || cut.slug;
     if (!slug) return html``;
 
-    const profile = CUT_PROFILES[slug];
-    const recipes = RECIPE_INDEX[slug];
+    const profile = this._getCutProfiles()[slug];
+    const recipes = this._getRecipeIndex()[slug];
     if (!profile && !recipes) return html``;
 
     const METHOD_LABELS = {
@@ -4762,8 +4822,8 @@ class KitchenCookingPanel extends LitElement {
     const recipeBtnStyle = 'text-align:left;width:100%;cursor:pointer;border:1px solid var(--divider-color);border-radius:8px;padding:8px 12px;background:var(--secondary-background-color);font-size:0.87em;color:var(--primary-text-color);';
 
     const sel = this._selectedResearchMethod;
-    const selDesc = sel && CUT_METHOD_PROFILES[slug] && CUT_METHOD_PROFILES[slug][sel];
-    const selTitles = sel && RECIPE_TITLES_INDEX[slug] && RECIPE_TITLES_INDEX[slug][sel];
+    const selDesc = sel && this._getCutMethodProfiles()[slug] && this._getCutMethodProfiles()[slug][sel];
+    const selTitles = sel && this._getRecipeTitles()[slug] && this._getRecipeTitles()[slug][sel];
     const selUrl = sel && recipes && recipes[sel];
 
     const closeResearch = () => {
@@ -5031,6 +5091,7 @@ class KitchenCookingPanel extends LitElement {
             ${this._t('nav.back_to_meater_path')}
           </button>
           <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
+          <button class="help-btn" @click=${() => this._openHelp('#51-starting-a-cook')} title="Open User Guide">?</button>
         </div>
         
         ${this._renderSetupForm(entities)}
@@ -5044,6 +5105,7 @@ class KitchenCookingPanel extends LitElement {
           ${this._t('nav.back_to_appliances')}
         </button>
         <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
+        <button class="help-btn" @click=${() => this._openHelp('#5-meater-probe-cooking')} title="Open User Guide">?</button>
       </div>
 
       <div class="path-buttons">
@@ -5097,6 +5159,7 @@ class KitchenCookingPanel extends LitElement {
           ${this._t('nav.back_to_meater_path')}
         </button>
         <h2>📋 ${this._t('meater.recent_meater_cooks')}</h2>
+        <button class="help-btn" @click=${() => this._openHelp('#57-recent-meater-cooks')} title="Open User Guide">?</button>
       </div>
 
       ${meaterCooks.length === 0 ? html`
@@ -5164,10 +5227,8 @@ class KitchenCookingPanel extends LitElement {
           ${this._t('nav.back_to_appliances')}
         </button>
         <h2>🥘 ${this._selectedAppliance?.name || 'Ninja Combi Cooking'}</h2>
+        <button class="help-btn" @click=${() => this._openHelp('#6-ninja-combi-cooking')} title="Open User Guide">?</button>
       </div>
-
-      <div class="path-buttons">
-        <ha-card class="path-card clickable" @click=${() => this._startNinjaRecipeBuilder()}>
           <div class="card-content path-card-content">
             <div class="path-icon">🎨</div>
             <h3>${this._t('ninja.recipe_builder')}</h3>
@@ -5223,6 +5284,7 @@ class KitchenCookingPanel extends LitElement {
         <div class="path-header-title-row">
           <h2>🤖 AI Recipe Builder</h2>
         </div>
+        <button class="help-btn" @click=${() => this._openHelp('#7-ai-recipe-builder')} title="Open User Guide">?</button>
       </div>
 
       <ha-card>
@@ -5645,9 +5707,8 @@ class KitchenCookingPanel extends LitElement {
           ${this._t('nav.back_to_ninja_combi')}
         </button>
         <h2>${this._t('ninja.built_in_heading')}</h2>
+        <button class="help-btn" @click=${() => this._openHelp('#61-built-in-recipes')} title="Open User Guide">?</button>
       </div>
-
-      ${this._ninjaBuiltInRecipes.length === 0 ? html`
         <ha-card>
           <div class="card-content">
             <p>${this._t('ninja.no_built_in')}</p>
@@ -5695,6 +5756,7 @@ class KitchenCookingPanel extends LitElement {
           ${this._t('nav.back_to_ninja_combi')}
         </button>
         <h2>${this._t('ninja.recent_ninja_heading')}</h2>
+        <button class="help-btn" @click=${() => this._openHelp('#64-recent-ninja-cooks')} title="Open User Guide">?</button>
       </div>
 
       ${ninjaCooks.length === 0 ? html`
@@ -5863,11 +5925,8 @@ class KitchenCookingPanel extends LitElement {
           ${this._t('nav.back')}
         </button>
         <h2>${this._t('ai_recipe.select_ingredients_title')}</h2>
+        <button class="help-btn" @click=${() => this._openHelp('#72-selecting-ingredients')} title="Open User Guide">?</button>
       </div>
-
-      <ha-card>
-        <div class="card-content">
-          <h3>${this._t('ai_recipe.cuisine_region_label')}</h3>
           <p class="info-text" style="margin-bottom: 12px;">${this._t('ai_recipe.cuisine_region_hint')}</p>
           ${(this._aiSelectedCuisines || []).length > 0 ? html`
             <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px;">
@@ -5966,7 +6025,7 @@ class KitchenCookingPanel extends LitElement {
                   style="cursor:pointer;"
                 >
                   ${ing.compulsory ? html`<span class="compulsory-star">⭐</span>` : ''}
-                  ${ing.name}
+                  ${this._lookupIngDisplayName(ing.name)}
                   <button
                     class="ingredient-remove-btn"
                     @click=${(e) => { e.stopPropagation(); this._removeIngredient(ing.name); }}
@@ -6108,6 +6167,22 @@ class KitchenCookingPanel extends LitElement {
     return ingredient.name || '';
   }
 
+  /**
+   * Return the translated display name for a chip ingredient stored by English name.
+   * Searches all categories in _aiIngredients for the matching object, then calls
+   * _ingDisplayName.  Falls back to the raw name for custom (non-predefined) ingredients.
+   */
+  _lookupIngDisplayName(name) {
+    if (!name) return '';
+    const ingredients = this._aiIngredients || (typeof AI_INGREDIENTS !== 'undefined' ? AI_INGREDIENTS : {});
+    for (const category of Object.values(ingredients)) {
+      if (!Array.isArray(category)) continue;
+      const found = category.find(i => i && i.name && i.name.toLowerCase() === name.toLowerCase());
+      if (found) return this._ingDisplayName(found);
+    }
+    return name;
+  }
+
   _renderIngredientCheckbox(ingredient) {
     const displayName = this._ingDisplayName(ingredient);
     const valueName = (typeof ingredient === 'string') ? ingredient : (ingredient.name || ingredient);
@@ -6158,11 +6233,8 @@ class KitchenCookingPanel extends LitElement {
           ← ${this._t('nav.back_to_ingredients')}
         </button>
         <h2>${this._t('ai_recipe.choose_style_title')}</h2>
+        <button class="help-btn" @click=${() => this._openHelp('#73-choosing-a-cooking-style')} title="Open User Guide">?</button>
       </div>
-
-      <ha-card>
-        <div class="card-content">
-          <p class="info-text">${this._t('ai_recipe.select_style_hint')}</p>
           
           <div class="style-grid">
             ${(this._cookingStyles || []).map(style => html`
@@ -6331,7 +6403,7 @@ class KitchenCookingPanel extends LitElement {
                       type="number"
                       min="1"
                       max="12"
-                      .value=${recipe._adjustedServings || recipe.servings || 4}
+                      .value=${recipe._adjustedServings || recipe.servings || this._aiPortions || 4}
                       @input=${(e) => this._updateRecipeServings(recipe, parseInt(e.target.value))}
                       style="width:50px;padding:4px;border:1px solid var(--divider-color);border-radius:4px;background:var(--primary-background-color);color:var(--primary-text-color);">
                   </div>
@@ -6408,6 +6480,43 @@ class KitchenCookingPanel extends LitElement {
   }
 
   /**
+   * Render a single cook history card for recipe cooks (used in ninja and appliance history lists).
+   * Clicking the card opens the detail view; a Restart button re-launches the cook.
+   */
+  _renderHistoryCard(cook) {
+    const displayName = cook.recipe_name || cook.cut_display || cook.cut || this._t('history.cook_details_title');
+    return html`
+      <ha-card class="history-card clickable" @click=${() => {
+        this._selectedCookForDetail = cook;
+        this.requestUpdate();
+      }}>
+        <div class="card-content">
+          <div class="history-header">
+            <h3>${displayName}</h3>
+            <span class="history-date">${this._formatDateTime(cook.completed_at)}</span>
+          </div>
+          <div class="history-details">
+            ${cook.appliance_name ? html`<span class="history-detail">🍳 ${cook.appliance_name}</span>` : ''}
+            ${cook.serving_size ? html`<span class="history-detail">🍽️ ${cook.serving_size} ${this._t('history.serving_size_label')}</span>` : ''}
+            ${cook.duration_seconds ? html`<span class="history-detail">⏱️ ${this._formatDuration(cook.duration_seconds)}</span>` : ''}
+            ${cook.ease_rating ? html`<span class="history-detail">👨‍🍳 ${'⭐'.repeat(cook.ease_rating)}</span>` : ''}
+          </div>
+          ${cook.notes ? html`
+            <div class="history-notes">
+              <strong>📝</strong> ${cook.notes}
+            </div>
+          ` : ''}
+          <div class="history-actions" @click=${(e) => e.stopPropagation()}>
+            <button class="small-btn" @click=${() => this._restartCook(cook)}>
+              ${this._t('history.restart_cook')}
+            </button>
+          </div>
+        </div>
+      </ha-card>
+    `;
+  }
+
+  /**
    * Render Previous Cooks path (uses existing _renderHistory)
    */
   _renderPreviousCooksPath() {
@@ -6422,8 +6531,8 @@ class KitchenCookingPanel extends LitElement {
           ${this._t('nav.back_to_appliances')}
         </button>
         <h2>${this._t('history.previous_cooks_title')}</h2>
+        <button class="help-btn" @click=${() => this._openHelp('#11-cook-history')} title="Open User Guide">?</button>
       </div>
-      ${this._renderHistory()}
     `;
   }
 
@@ -6462,6 +6571,12 @@ class KitchenCookingPanel extends LitElement {
             <div class="detail-section">
               <strong>${this._t('history.protein_label')}</strong> ${cook.protein}
               ${cook.doneness ? html` • <strong>${this._t('history.doneness_colon')}</strong> ${(cook.doneness || '').replace('_', ' ')}` : ''}
+            </div>
+          ` : ''}
+
+          ${cook.serving_size ? html`
+            <div class="detail-section">
+              <strong>${this._t('history.serving_size_label')}</strong> ${cook.serving_size}
             </div>
           ` : ''}
 
@@ -7355,6 +7470,7 @@ class KitchenCookingPanel extends LitElement {
             </p>
           </div>
         </div>
+        <button class="help-btn recipe-cook-help-btn" @click=${() => this._openHelp('#8-recipe-cook-flow')} title="Open User Guide">?</button>
       </div>
 
       <ha-card>
@@ -8303,6 +8419,21 @@ class KitchenCookingPanel extends LitElement {
     this._meaterCookRatingState = null;
     this.requestUpdate();
   }
+
+  // ── Lovelace card interface ─────────────────────────────────────────────────
+  // These two methods make KitchenCookingPanel a valid Lovelace custom card
+  // so it can be used as:  type: custom:kitchen-cooking-card
+
+  setConfig(config) {
+    // No configuration keys required; accept anything.
+    this._config = config || {};
+  }
+
+  getCardSize() {
+    // Height hint for the Lovelace layout engine (1 unit ≈ 50 px).
+    return 10;
+  }
+  // ────────────────────────────────────────────────────────────────────────────
 
   static get styles() {
     return css`
@@ -10035,6 +10166,7 @@ class KitchenCookingPanel extends LitElement {
       .welcome-header {
         text-align: center;
         margin-bottom: 32px;
+        position: relative;
       }
 
       .welcome-header h1 {
@@ -10165,6 +10297,7 @@ class KitchenCookingPanel extends LitElement {
       /* Path Header */
       .path-header {
         margin-bottom: 24px;
+        position: relative;
       }
 
       .path-header-title-row {
@@ -10194,6 +10327,33 @@ class KitchenCookingPanel extends LitElement {
 
       .back-btn:hover {
         opacity: 0.8;
+      }
+
+      .help-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: none;
+        border: 1px solid var(--divider-color, #ddd);
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: var(--secondary-text-color);
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1;
+        transition: background 0.15s, color 0.15s, border-color 0.15s;
+        flex-shrink: 0;
+      }
+
+      .help-btn:hover {
+        background: var(--primary-color);
+        color: white;
+        border-color: var(--primary-color);
       }
 
       /* Path Buttons */
@@ -10295,6 +10455,18 @@ class KitchenCookingPanel extends LitElement {
         padding: 20px;
         border-radius: 8px;
         margin-bottom: 16px;
+        position: relative;
+      }
+
+      .recipe-cook-help-btn {
+        border-color: rgba(255,255,255,0.5);
+        color: rgba(255,255,255,0.85);
+      }
+
+      .recipe-cook-help-btn:hover {
+        background: rgba(255,255,255,0.25);
+        color: white;
+        border-color: white;
       }
 
       .recipe-cook-header h2 {
@@ -10941,4 +11113,11 @@ const PANEL_VERSION = "117";
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
 if (!customElements.get(VERSIONED_NAME)) {
   customElements.define(VERSIONED_NAME, KitchenCookingPanel);
+}
+
+// Also register as a stable (non-versioned) Lovelace card element.
+// This allows users to embed the panel in any dashboard view with:
+//   type: custom:kitchen-cooking-card
+if (!customElements.get('kitchen-cooking-card')) {
+  customElements.define('kitchen-cooking-card', KitchenCookingPanel);
 }

@@ -13,6 +13,8 @@ cut_type: Chops & Tenderloin
 
 A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.
 
+Air-frying is one of the fastest and most consistent methods for pork chops — hot dry air circulates at 375–400 °F (190–205 °C), producing a crispy exterior while the interior stays juicy at 145 °F (63 °C). Seasoning styles vary widely by tradition: in West African and Caribbean Creole cooking, chops are rubbed with Creole spice blend (paprika, cayenne, thyme, garlic, onion) and a touch of brown sugar; in Italy, olive oil, garlic, and dried oregano; in Denmark, simple salt, pepper, and thyme. The common thread is the method — high convection heat, flip once, short cook time.
+
 Target internal temperatures (air fryer):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)**
 
@@ -86,3 +88,46 @@ Target internal temperatures (air fryer):
 4. Insert MEATER probe. **Pull at 63 °C (145 °F)** for juicy; **70 °C (158 °F)** for Italian safety standard.
 5. Rest 2–3 minutes. Serve with insalata mista or grilled vegetables.
 *Final temperature: 65–70 °C (149–158 °F).*
+
+---
+
+### 4. Imma Adamu — Air-Fryer Pork Chops with Creole Seasoning (West African / Caribbean tradition)
+**Source**: Imma Adamu (Cameroon-born food writer, USA), Immaculate Bites; https://www.africanbites.com/air-fryer-pork-chops/ (fetched 2026-04-25). *West African–Caribbean Creole spiced bone-in pork chops: rubbed with Creole seasoning, thyme, minced garlic, Dijon mustard, and brown sugar; air fried at 375 °F (190 °C) for 7–9 minutes total, flipped halfway. Pull at 145 °F (63 °C); rest 10 minutes. The Creole spice blend — paprika, cayenne, thyme, garlic, onion — reflects the West African diaspora fusion of Louisiana Creole and Caribbean cooking traditions.*
+**Serves**: 4 · **Prep**: 5 min · **Cook**: 10 min
+
+**Temperature guidance (from recipe)**: Preheat air fryer to **375 °F (190 °C)**. Air fry for **7–9 minutes** flipping halfway through. **Pull at 145 °F (63 °C)**. Rest **10 minutes** before serving.
+
+**Ingredients**
+- 4 bone-in pork chops (½–¾ inch thick)
+- Salt and pepper, to taste
+- 1 Tbsp Creole seasoning
+- 2 tsp fresh thyme, minced (or 1 tsp dried)
+- 1 Tbsp garlic, minced
+- ½ Tbsp Dijon mustard
+- 1–2 Tbsp brown sugar
+- 2 Tbsp canola oil (or other neutral oil)
+- 2 Tbsp fresh parsley, chopped (to garnish)
+
+**Method**
+1. Preheat air fryer to **375 °F (190 °C)**.
+2. Thoroughly pat pork chops dry; season with salt and pepper.
+3. In a small bowl, combine Creole seasoning, thyme, garlic, Dijon mustard, sugar, and oil to form a marinade paste.
+4. Rub marinade paste over both sides of each pork chop; set aside briefly.
+5. Place pork chops in a single layer in the air fryer basket. Insert MEATER probe into the thickest part of the thickest chop, avoiding the bone.
+6. Cook, flipping halfway through, for **7–9 minutes total** (time depends on chop thickness and air fryer model), until probe reads **145 °F (63 °C)**.
+7. Remove from air fryer; rest **10 minutes** before serving. Garnish with chopped parsley.
+8. Serve with roasted potatoes and asparagus.
+*Final resting temperature: 150–155 °F (65–68 °C).*
+
+---
+
+## Temperature summary
+
+| Source | Country | Method temp | Thickness | Time | Target internal |
+|--------|---------|-------------|-----------|------|-----------------|
+| Madens Verden | Denmark | 190 °C (374 °F) | 2 cm (~¾ inch) | 8 + 5 min | 63 °C (145 °F) |
+| ichkoche.at | Austria | 200 °C (392 °F) | ~200 g chop | 10–12 min total | 63–65 °C (145–149 °F) |
+| GialloZafferano | Italy | 200 °C (392 °F) | ~200 g each | 8–10 min per side | 63–70 °C (145–158 °F) |
+| Imma Adamu | Cameroon/USA | 375 °F (190 °C) | ½–¾ inch bone-in | 7–9 min total | **145 °F (63 °C)** |
+
+**Recommended MEATER settings**: Set alert at **140 °F (60 °C)** → pull and rest 10 min; carryover and rest bring to 145 °F (63 °C).

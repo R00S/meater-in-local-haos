@@ -46,13 +46,56 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
+quality_score: 7
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Rump Roast — Cut Overview
 
 ## Cut profile
 
-*Placeholder — cut profile research not yet completed.*
+The rump roast is cut from the primal **round** — the hindquarter hip area. In North American
+butchery this encompasses the top round, bottom round, eye of round, and rump roast proper.
+In British butchery the same anatomical region produces **topside** (inner thigh, the leanest)
+and **top rump** / thick flank (slightly higher and more marbled). In Finnish cooking this cut
+is called **paahtopaisti** and is the classic joint for Sunday oven roast beef.
+
+**Anatomy**: Rump and round cuts are large, well-exercised muscles with relatively low
+intramuscular fat but tight, even grain. Connective tissue content is modest compared to chuck
+or brisket. This means rump roast does not require braising temperatures for collagen-dissolution
+— it responds well to moderate dry heat up to 60–65 °C.
+
+**Best uses**: Oven roasting (dry heat, 120–220 °C), braising (covered with liquid,
+low-and-slow), and slow cooker. For oven roasting, two approaches are documented: (1) high
+start (220–240 °C) then reduce to 160–190 °C; (2) low-and-slow throughout (120–130 °C). For
+braising, covered cooking with wine/stock transforms the cut into pull-apart tender pot roast.
+
+**Slicing**: Always slice against the grain for the most tender result. The tight grain of
+round/rump cuts makes slicing direction critical.
 
 ## Research files by cooking method
 
-*No research files yet.*
+| Method | Leaf file | Status |
+|--------|-----------|--------|
+| oven_roast | rump_roast-oven_roast.md | ✅ 4 sources (Groups B×2, C, D) |
+| braise | *not yet created* | ⬜ |
+| slow_cooker | *not yet created* | ⬜ |
+
+## Quality score
+
+**Score: 7 / 20** — assessed 2026-04-27
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | −8 |
+| Missing Culinary Group A tradition | −1 |
+| Groups B, C, D covered in oven_roast leaf | −0 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research remaining methods (braise, slow_cooker); set `cooking_methods_researched: 1`
+2. **−1** · Group A gap — add a Group A source to oven_roast leaf or a new method leaf
+3. Create `rump_roast-braise.md` leaf (pot-roast style, BBC / Moroccan / Polish / Chinese)
+4. Create `rump_roast-slow_cooker.md` leaf
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*

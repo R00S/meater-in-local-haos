@@ -13,6 +13,8 @@ cut_type: Chops & Tenderloin
 
 A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.
 
+Pan-frying pork is a cornerstone technique across Asia. In Thailand, **Moo Tod Gratiem Prik Thai** (หมูทอดกระเทียมพริกไทย — garlic-pepper pork) is one of the most ordered street-food dishes: thin chops or pork slices marinated in garlic, cilantro root, and white pepper, then shallow-fried in a wok until golden and crispy. In China, 锅贴排骨 (pan-fried pork ribs) uses soy-based marinades and shallow-frying. In Vietnam, Sườn Chiên pan-fried chops are a popular home-cooking dish. In Japan, tonkatsu uses a breaded shallow-fry on pork cutlets. The thin-cut, high-heat, oil-fry approach yields caramelised exteriors impossible to achieve in a dry pan.
+
 Target internal temperatures (pan fry):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)** (safe and recommended)
 - Well done: **70–72 °C (158–162 °F)**
@@ -100,3 +102,38 @@ Target internal temperatures (pan fry):
 7. Insert MEATER probe. **Core should read 63–65 °C (145–149 °F)**.
 8. Serve with potato fries, salad, or sauerkraut.
 *Final temperature: 63–65 °C (145–149 °F).*
+
+---
+
+### 4. Pailin Chongchitnant — Moo Tod Gratiem Prik Thai หมูทอดกระเทียมพริกไทย (Thai tradition)
+**Source**: Pailin Chongchitnant, Hot Thai Kitchen; https://hot-thai-kitchen.com/garlic-pepper-pork/ (fetched 2026-04-25). *Quintessential Thai street-food pan-fry: thin pork slices or butterfly-cut chops marinated in garlic-cilantro-peppercorn paste, oyster sauce, soy sauce and fish sauce, dusted in cornstarch, then shallow-fried in a wok at 190 °C until golden and crispy. Topped with fried garlic. A staple of Thai restaurants and home cooking.*
+**Serves**: 2 · **Prep**: 20 min marinade · **Cook**: 10 min
+
+**Temperature guidance (from recipe)**: Fry in oil at **375 °F (190 °C)** for approximately **45 seconds to 1 minute** per batch (pork is cut thin, ~5 mm). Internal temperature should reach at least **63 °C (145 °F)** at the thickest part. For standard bone-in chops, butterfly or pound thin before applying the method.
+
+**Ingredients**
+- 250 g pork chops, thinly sliced or butterflied to ~5 mm thickness (pork butt or loin both work)
+- 2 tsp oyster sauce
+- 2 tsp soy sauce
+- 1 tsp fish sauce
+- 1½ tsp sugar
+- 1 head garlic, divided
+- ½ tsp white peppercorns
+- 8 cilantro stems, finely chopped (leaves reserved for garnish)
+- 2 Tbsp cornstarch
+- Neutral oil, for frying (1.5–3 cm depth in wok or heavy pan)
+- Jasmine rice, to serve
+
+**Method**
+1. Pound white peppercorns to a fine powder in a mortar. Add one-third of the garlic and the chopped cilantro stems; pound to a fine paste.
+2. Combine paste with oyster sauce, soy sauce, fish sauce, and sugar. Add to pork; mix well (hands work fastest). Marinate **20 minutes minimum**, up to overnight.
+3. Chop remaining garlic as finely and evenly as possible.
+4. In a small pot or wok, heat ~1 cm of oil over high heat. Immediately add the chopped garlic. As soon as it starts to bubble, reduce to low heat. Fry, stirring frequently, until **light golden** — do not let it brown. Remove all garlic with a fine skimmer and set aside. Return oil to pot.
+5. Add cornstarch to marinated pork; mix until it looks wet and pasty.
+6. Add more oil to reach **1.5 cm depth**; heat to **375 °F (190 °C)** over medium-high heat.
+7. Insert MEATER probe into the thickest piece if pieces are thick enough. For thin slices, rely on colour and time.
+8. Fry pork in batches — do not crowd. As pieces hit the oil, immediately pull them apart so they don't stick together. Fry each batch **45 seconds to 1 minute** until exterior turns golden-brown.
+9. Remove with a slotted skimmer; drain on paper towel. Repeat with remaining pork.
+10. **Pull at 63 °C (145 °F)** for each piece. For thin slices, golden colour and 1-minute fry time is the indicator.
+11. Plate the pork; sprinkle fried garlic over the top. Garnish with cilantro leaves. Serve with jasmine or sticky rice.
+*Final serving temperature: 65–70 °C (149–158 °F).*

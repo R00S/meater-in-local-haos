@@ -93,3 +93,40 @@ Target internal temperatures (pan sear):
 6. Insert MEATER probe. **Pull at 63–65 °C (145–149 °F)**.
 7. Rest 5–10 minutes uncovered. Slice on the diagonal; serve with grilled potatoes and coleslaw.
 *Final resting temperature: 65–68 °C (149–154 °F).*
+
+---
+
+### 4. The Woks of Life — 辣椒小炒肉 Pork and Pepper Stir-fry (Chinese tradition)
+**Source**: Bill, Judy, Sarah, and Kaitlin Leung, The Woks of Life; https://thewoksoflife.com/pork-pepper-stir-fry/ (fetched 2026-04-26). *Làjiāo xiǎochǎo ròu — a fast, classic Chinese stir-fry using thin-sliced pork tenderloin or loin, marinated briefly, then seared in a smoking-hot wok. The pork is cooked in a single layer first so it sears (not steams), removed, then returned to the wok with peppers and a two-soy-sauce finish. Total cook time under 5 minutes.*
+**Serves**: 2–3 · **Prep**: 15 min · **Cook**: 5 min
+
+*Context: This dish is a weeknight staple in Hunan and Sichuan provinces. The Woks of Life note: "This pork and pepper stir-fry shows up on our table often — just thin strips of pork loin or tenderloin (or even an odd pork chop!), long hot green peppers, and a quick sauce."*
+
+**Temperature guidance (from recipe)**: Stir-fry in a smoking-hot wok, 2–3 minutes until lightly browned. Because slices are thin (5 mm), internal temperature reaches safe 63 °C rapidly. Insert MEATER probe into the thickest unsliced section or verify with instant-read: **core 63–65 °C (145–149 °F)**.
+
+**Ingredients**
+- 225 g (8 oz) pork tenderloin or loin, sliced into thin strips (5 mm)
+- 1 tbsp water
+- 2 tsp cornstarch
+- 1 tsp neutral oil (for marinade)
+- 1 tsp Shaoxing wine
+- 2 tsp oyster sauce
+- 1 tsp light soy sauce
+- 2–3 long hot green peppers (or anaheim / cubanelle), de-seeded and thinly sliced on diagonal
+- 2 tbsp neutral oil (for wok)
+- 1 tbsp ginger, minced
+- 3 cloves garlic, minced
+- 1 tbsp Shaoxing wine (to deglaze)
+- 1 tsp sugar
+- 1 tsp dark soy sauce
+
+**Method**
+1. Combine pork strips with water, cornstarch, 1 tsp oil, Shaoxing wine, oyster sauce, and light soy sauce in a bowl. Mix well; set aside while you prep the peppers, ginger, and garlic.
+2. Heat wok over high heat until smoking. Add 1 tbsp oil, then add the marinated pork.
+3. Spread pork in a **single layer** and stir-fry 2–3 minutes, until lightly browned around the edges. Remove pork from the wok and set aside.
+4. Add another 1 tbsp oil to the wok. Over medium-high heat, add ginger, garlic, and peppers. Fry 30 seconds to 1 minute until peppers begin to blister.
+5. Add Shaoxing wine to deglaze — stir 10 seconds.
+6. Return pork to wok. Add sugar and dark soy sauce. Stir-fry a few seconds over high heat to combine and glaze.
+7. Insert MEATER probe (if cooking a whole tenderloin section): **pull at 63–65 °C (145–149 °F)**. For thin strips, serve immediately once browned.
+8. Serve over plain steamed rice or noodle soup.
+*Final temperature: 63–65 °C (145–149 °F).*

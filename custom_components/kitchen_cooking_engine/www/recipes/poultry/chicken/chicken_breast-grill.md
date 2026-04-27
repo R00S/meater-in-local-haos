@@ -24,6 +24,8 @@ cut_type: Breast
 
 Boneless skinless chicken breast is one of the most popular grilling cuts. Because it is very lean, it benefits enormously from a marinade that adds moisture and flavour before the high, dry heat of the grill. Slicing into thin cutlets dramatically reduces cook time and edge-to-edge doneness problems.
 
+Grilled chicken breast spans every grilling culture on earth. In Thailand, **Gai Yang** marinates bone-in breast halves in lemongrass, coriander seed, garlic, fish sauce, and black soy sauce before grilling low-and-slow for characteristic smoky char and juicy flesh. In India, **Chicken Tikka** uses spiced yogurt-marinated boneless breast cubes on skewers, cooked over charcoal or a gas grill. In the Levant, boneless breast strips are marinated in spices and lemon (shish tawook) and grilled on skewers. Across West Africa and the Caribbean, spiced, marinated breast halves are grilled over charcoal or wood fire as part of festive meals.
+
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 
 ## Source recipes
@@ -117,6 +119,48 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 
 ---
 
+### 4. Pailin Chongchitnant — Gai Yang ไก่ย่าง — Thai BBQ Chicken Breast (Thai tradition)
+**Source**: Pailin Chongchitnant, Hot Thai Kitchen; https://hot-thai-kitchen.com/ultimate-bbq-chicken/ (fetched 2026-04-25). *Authentic Thai street-food gai yang applied to the bone-in breast: pounded lemongrass, garlic, coriander seed and white pepper marinade with soy sauce, fish sauce, and black soy sauce; marinated overnight; grilled over medium-low heat with lid closed, flipping every 5 minutes. Served with Jaew tamarind dipping sauce and sticky rice.*
+**Serves**: 4 · **Prep**: 2 hr 20 min (includes 2 hr minimum marinate) · **Cook**: 18–25 min grill
+
+**Temperature guidance (from recipe)**: Grill at **medium-low (275–300 °F / 135–150 °C)** with lid closed; flip every 5 minutes. **Bone-in chicken breast: pull at 160 °F (72 °C)**. Large bone-in breast pieces may take 20–25 min; smaller boneless breasts 12–15 min.
+
+**Ingredients — Marinade**
+- 1½ tsp white peppercorns
+- 2 tsp toasted coriander seeds
+- 1 stalk lemongrass (bottom half only, thinly sliced)
+- 5 cloves garlic
+- 3 Tbsp soy sauce
+- 3 Tbsp fish sauce
+- 1 Tbsp black soy sauce (or other dark soy sauce)
+- 1 Tbsp sugar
+- ½ cup (120 ml) water
+- 2 Tbsp neutral oil
+
+**Chicken**
+- 1 whole bone-in, skin-on chicken breast (both sides on the rib cage), halved into 2 split breasts
+
+**Jaew Dipping Sauce**
+- 2 Tbsp Thai tamarind paste
+- 1 Tbsp palm sugar (or light brown sugar)
+- 1 Tbsp fish sauce · 1 Tbsp lime juice
+- Chili flakes, shallots, green onion, cilantro, toasted rice powder (to taste and finish)
+
+**Method**
+1. Grind peppercorns and coriander seeds to a powder. Add lemongrass and garlic; pound to a fine paste.
+2. Mix paste with remaining marinade ingredients; stir to dissolve sugar.
+3. Split the whole breast in half through the rib cage (see video technique). Place in a zip-top bag; pour marinade over and coat well. Refrigerate at least **2 hours**, ideally overnight.
+4. Prepare Jaew sauce: stir together tamarind, palm sugar, fish sauce, lime juice, and chili flakes. Just before serving, stir in shallots, green onion, cilantro, and toasted rice powder.
+5. Pull chicken from fridge **45 minutes** before cooking.
+6. Insert MEATER probe into the thickest part of the breast, from the side parallel to the rib cage.
+7. Preheat grill to medium. Place breast pieces **skin-side up**.
+8. Reduce to **medium-low (275–300 °F / 135–150 °C)**; cook with lid closed, flipping every **5 minutes**.
+9. **Pull at 160 °F (72 °C)** — approximately 18–25 minutes depending on size.
+10. Rest **5 minutes**. Serve with sticky rice and Jaew dipping sauce.
+*Final resting temperature: 162–165 °F (72–74 °C).*
+
+---
+
 ## Temperature summary
 
 | Source | Country | Method temp | Thickness/Weight | Time | Target internal |
@@ -125,6 +169,7 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 | Skinnytaste | USA | Medium-high | Whole thick breast | 10–14 min total | 165 °F (74 °C) |
 | Natasha's Kitchen | USA | 400 °F preheat → med-low | Large whole breast | ~20 min total | 165 °F (74 °C) |
 | BBC Good Food | UK | Barbecue/griddle/grill | Standard breast | 10–12 min total | 165 °F (74 °C) |
+| Pailin Chongchitnant | Thailand/Canada | Med-low 275–300 °F (135–150 °C) | Bone-in split breast | 18–25 min | **160 °F (72 °C)** |
 
 **Recommended MEATER settings**:
 - Set alert at **160 °F (71 °C)** → pull and rest

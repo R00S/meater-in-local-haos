@@ -22,6 +22,9 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
+quality_score: 9
+cooking_methods_researched: 0
+quality_assessed: 2026-04-26
 -->
 # Ground Chicken — Cut Overview
 
@@ -38,3 +41,21 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 - [Braise](./ground_chicken-braise.md)
 - [Grill](./ground_chicken-grill.md)
 - [Pan Fry](./ground_chicken-pan_fry.md)
+## Quality score
+
+**Score: 9 / 20** — assessed 2026-04-26
+
+| Criterion | Deduction |
+|-----------|----------|
+| Cooking methods not researched | −8 |
+| Missing Culinary Group B tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
+| Method file `ground_chicken-braise.md` copies parent cut profile | −1 |
+
+### Improvement priorities
+
+1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
+2. **−2** · Missing Culinary Group B and Culinary Group D tradition(s) — add Culinary Group B and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. **−1** · Method file `ground_chicken-braise.md` copies parent cut profile — rewrite `ground_chicken-braise.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+
+*Score is recalculated each time a new method leaf is added or the cut profile is updated.*
