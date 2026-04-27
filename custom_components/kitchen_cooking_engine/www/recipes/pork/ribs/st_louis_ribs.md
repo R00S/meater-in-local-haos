@@ -29,14 +29,49 @@ quality_assessed: 2026-04-26
 
 ## Cut profile
 
-*Placeholder — cut profile research not yet completed.*
+St. Louis-style ribs are the rectangular, trimmed version of full pork spare ribs. They
+come from the lower portion of the rib cage — below the baby back ribs where the loin has
+been removed, running from approximately rib 3 through rib 12. The defining characteristic
+of St. Louis style is the trim: the breastbone (sternum), cartilage, and the sternum flap
+(skirt) are removed, leaving a uniform rectangular rack with flat, straight bones and a
+consistent thickness across the whole rack. This trim is a butchery standard (IMPS/NAMP 416A
+or similar) not a breed or cut-point — untrimmed spare ribs from the same animal are wider
+and less uniform.
+
+**Anatomy and structure**: the ribs are the curved rib bones with intercostal meat (the lean
+muscle between the ribs), a thin layer of meat and fat on the bone side, and a membrane
+(periosteum) on the underside that should be removed before cooking. The fat cap on the
+meaty side provides basting during cooking. High collagen content in the intercostal connective
+tissue means St. Louis ribs require long cooking at temperatures above 74 °C / 165 °F to convert
+collagen to gelatin — the collagen-dissolution range is 88–96 °C / 190–205 °F sustained over
+1–4 hours. USDA minimum of 63 °C / 145 °F is safe but does not produce tender ribs.
+
+**Temperature targets** (per method):
+- **Oven roast / Smoker**: pull at **88–96 °C / 190–205 °F** internal — this is the culinary
+  preferred range for tender, pull-back ribs. Most recipes use the bend test (rack bends into
+  a "U" at the centre, surface crust cracks) which corresponds to this range. The `pulled`
+  doneness target of 93 °C / 200 °F in the system is accurate.
+- **Grill** (indirect heat, low-and-slow): same 88–96 °C target, achieved over 3–4 hours.
+  Direct high heat grilling (e.g., Chinese char siu style) aims for caramelised exterior with
+  63 °C+ safe interior — a different textural goal.
+- **USDA safe minimum**: 63 °C / 145 °F applies to all pork. For ribs, this means the bones
+  and surrounding meat are safe at 63 °C, but the ribs will still be tough at this temperature.
+
+**Probe placement**: insert the probe lengthwise along the widest bone (centre of the rack),
+keeping the tip in the thickest continuous lean intercostal section, clear of bone surface. Run
+parallel to the bone. The centre third of the rack gives the most representative reading.
 
 ## Research files by cooking method
 
-*No research files yet.*
+| Method | Leaf file | Status |
+|--------|-----------|--------|
+| oven_roast | *not yet created* | ⬜ |
+| grill | *not yet created* | ⬜ |
+| smoker | *not yet created* | ⬜ |
+
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-26
+**Score: 0 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -53,12 +88,10 @@ quality_assessed: 2026-04-26
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−4** · Missing all four traditions tradition(s) — add all four traditions source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−4** · No temperature research (culinary preferred) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-4. **−3** · No method leaf files — create `st_louis_ribs-{method}.md` leaf files for each supported cooking method, each with 4–6 diverse source recipes
-5. **−3** · No temperature research (safe temps) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-6. **−2** · No per-method temp research — ensure each method leaf file includes explicit pull temperatures from source recipes
-7. **−1** · Cut profile is a placeholder — replace the placeholder with a full cut profile — anatomy, structure, connective tissue, and cooking behaviour
+1. **−8** · Cooking methods not researched
+2. **−4** · No temperature research (culinary preferred)
+3. **−3** · No method leaf files
+4. **−3** · No temperature research (safe temps)
+5. **−4** · Missing all four traditions
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

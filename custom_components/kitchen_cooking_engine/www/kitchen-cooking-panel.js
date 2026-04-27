@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 27 Apr 2026, 07:37 CET
+ * AUTO-GENERATED: 27 Apr 2026, 13:55 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 27 Apr 2026, 07:37 CET
+// Last generated: 27 Apr 2026, 13:55 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -16844,24 +16844,30 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/prime_rib.md"
   },
   "roasting_joint": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/beef/roasts/roasting_joint-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/roasting_joint.md"
   },
   "round_roast": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/beef/roasts/round_roast-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/round_roast.md"
   },
   "rump": {
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes/beef/roasts/rump-pan_sear.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/rump.md"
   },
   "rump_roast": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/beef/roasts/rump_roast-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/rump_roast.md"
   },
   "sirloin_roast": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/beef/roasts/sirloin_roast-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/sirloin_roast.md"
   },
   "sirloin_tip_roast": {
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/sirloin_tip_roast.md"
   },
   "top_round_roast": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/beef/roasts/top_round_roast-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/top_round_roast.md"
   },
   "goose_breast": {
@@ -16915,6 +16921,8 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/turkey/turkey_ground.md"
   },
   "turkey_leg": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/poultry/turkey/turkey_leg-oven_roast.md",
+    "smoker": "/kitchen_cooking_engine_panel/recipes/poultry/turkey/turkey_leg-smoker.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/turkey/turkey_leg.md"
   },
   "turkey_thigh": {
@@ -17143,6 +17151,8 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/salmon/salmon_fillet.md"
   },
   "salmon_steak": {
+    "oven_bake": "/kitchen_cooking_engine_panel/recipes/fish/salmon/salmon_steak-oven_bake.md",
+    "pan_sear": "/kitchen_cooking_engine_panel/recipes/fish/salmon/salmon_steak-pan_sear.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/fish/salmon/salmon_steak.md"
   },
   "lobster_tail": {
@@ -17321,6 +17331,7 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/cured_ham.md"
   },
   "ham": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/pork/roasts/ham-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/ham.md"
   },
   "pork_belly": {
@@ -17437,13 +17448,13 @@ const CUT_PROFILES = {
   "short_ribs": "Short ribs are cut from the lower portion of the beef rib cage — either the chuck short ribs (ribs 1–5, with thicker meat and more marbling) or the plate short ribs (ribs 6–10, the longer, meatier \"dino rib\" cut favoured in American barbecue). The meat consists of the intercostal muscles and the serratus ventralis, muscles that are among the most heavily worked in the animal: constant movement builds dense, collagen-rich fibre bundles that would be inedibly tough cooked quickly. That same density of connective tissue is the source of their culinary value — after sustained low-and-slow cooking the collagen dissolves into gelatin, the intramuscular fat renders, and the result is a self-basting, pull-apart texture with extraordinary depth of flavour.\n\nThe bone runs along the underside of each rib section; in the English cut (bone-in cross-cut pieces), the bone and surrounding marrow are visible in cross-section. English-cut short ribs are the standard braising and slow-cooker format. Flanken-cut short ribs slice across multiple bones into thin strips — the Korean galbi format — and are suited to quick grilling rather than long braising. Boneless short ribs are sometimes sold as \"beef spare ribs\"; they cook similarly to bone-in but finish slightly faster because the bone acts as a heat buffer.\n\nKorean short rib preparations (galbi-jjim for braising, galbi for grilling) treat the cut as a secondary category in `cooking_data.py` under the name `short_ribs` with method `grill`. The temperatures and methods differ substantially from the Western braising tradition: bone-in short ribs for galbi are sliced thinly across the ribs and marinated overnight in a soy-pear-sesame brine before grilling to medium-rare, which corresponds to a different doneness target than the braised pulled preparation.",
   "beef_tenderloin_roast": "The beef tenderloin (psoas major) runs along the interior of the spine and does almost no work during the animal's life, making it the most tender, least collagen-dense muscle in the carcass. A whole tenderloin roast (the \"châteaubriand\" section or full fillet) weighs approximately 1–2 kg and tapers from the thick butt end to a thin tail. It is exceptionally lean, with minimal intramuscular fat, making it vulnerable to drying out if overcooked — the window between perfectly rosy and dry, grey meat is narrow. Oven roasting suits the tenderloin because gentle, even heat preserves the moisture in the lean fibres; high-heat searing before or after the oven creates the Maillard crust that the lean exterior cannot produce on its own. Carryover is significant in a whole tenderloin — the concentrated lean mass retains heat for several minutes after leaving the oven, enough to raise the internal temperature noticeably — making the pull temperature meaningfully lower than the target serving temperature.",
   "prime_rib": "Prime rib (also called standing rib roast) is cut from the rib primal (ribs 6–12), comprising the longissimus dorsi and surrounding muscles, with a generous fat cap and the rib bones attached. It is one of the most marbled subprimal sections of the animal — the rib muscles do relatively little work, and the high intramuscular fat content self-bastes during roasting, keeping the interior moist across a wide temperature range. Oven roasting is the canonical method for prime rib because the sustained, even heat of an enclosed oven allows the large mass (typically 2.5–5 kg) to heat evenly from edge to centre while the exterior fat cap renders and browns. Carryover is substantial for a prime rib — the large, dense mass retains heat efficiently, and internal temperature continues to rise for 15–30 minutes after removal; this must be accounted for in the pull temperature.",
-  "roasting_joint": "*Placeholder — cut profile research not yet completed.*",
-  "round_roast": "*Placeholder — cut profile research not yet completed.*",
-  "rump": "*Placeholder — cut profile research not yet completed.*",
-  "rump_roast": "*Placeholder — cut profile research not yet completed.*",
-  "sirloin_roast": "*Placeholder — cut profile research not yet completed.*",
+  "roasting_joint": "\"Roasting joint\" is a British and Australian umbrella term covering any large beef joint suitable for oven roasting as a Sunday centrepiece. It encompasses multiple distinct anatomical cuts — most commonly topside (Top Round), silverside (Bottom Round), bolar blade, rib of beef (standing rib), or sirloin of beef — unified by size (typically 1–3 kg) and their suitability for dry oven roasting without braising liquid.\n\n**Anatomy summary**: All roasting joint cuts come from the hindquarter or loin region. They share relatively low collagen content compared to braising cuts (brisket, chuck, shank), meaning they do not require high-temperature collagen dissolution. The defining cooking challenge across all roasting joint types is moisture retention: lean cuts (topside, silverside) dry out quickly above 60 °C, while fattier cuts (rib) are more forgiving.\n\n**Key cooking distinction**: Unlike stewing/braising cuts, roasting joints should not be cooked in liquid — the whole point is dry heat producing a Maillard-browned exterior with a juicy, pink interior. Braising changes the character of the cut entirely, softening it to a \"pull apart\" texture that is neither desired nor appropriate for a Sunday roast.\n\n**Temperature targets**: Consistently confirmed across culinary traditions — pull at 44–57 °C, serve at 50–63 °C. Lean joints (topside, silverside) should not exceed 57 °C final temperature; rib joints are more forgiving to 60 °C.\n\n**Probe placement**: Enter from the end of the joint to the geometric centre of the lean section. Stay 2 cm clear of any bones (bone-in rib roast).",
+  "round_roast": "\"Round roast\" is a generic term for any oven roast cut from the round primal — the large\nhindquarter hip/thigh muscle group. The round primal encompasses several sub-primals: top\nround (inner thigh, leanest), bottom round (outer thigh, slightly tougher), and eye of round\n(central cylindrical muscle, very lean and uniform). A recipe labelled simply \"round roast\"\nmay use any of these, making this the most interchangeable of the round-family slugs.\n\nRound muscles are heavily exercised, producing lean, tight-grained meat with low intramuscular\nfat. Connective tissue is modest — enough to benefit from slow heat, not enough to require\nbraising temperatures. At 54–65 °C the muscle fibres remain moist and the round becomes\nsliceable; above ~68 °C the roast turns dry. Africanbites.com explicitly lists eye of round,\ntop round, bottom round, and top sirloin roast as interchangeable in a round-roast recipe,\nconfirming that the same method and temperature targets apply across these sub-cuts.\n\n**Best uses**: Oven roasting (high-start or low-and-slow), braising (for pull-apart pot roast),\nslow cooker.\n\n**Slicing**: Always slice against the grain — essential for all round cuts.",
+  "rump": "The beef rump is cut from the rump primal — the top of the hindquarter, at the junction between\nthe sirloin and the round. In British and Australian butchery, **rump steak** is a popular\nbudget-premium steak; more flavourful than topside due to intramuscular fat and the mix of\nmuscles, but less tender than sirloin or ribeye. In Swedish butchery it is called **rumpstek**.\n\n**Anatomy**: Rump comprises several overlapping muscles (mainly the biceps femoris, tensor\nfasciae latae, and gluteus medius). Because the rump is from a moderately exercised area, it\nhas both more fat and more connective tissue than the round, contributing to fuller flavour.\nThe composite nature of the cut means it benefits from slicing against the grain.\n\n**Steak vs roast**: At steak thickness (2–3 cm), rump is best served medium-rare at 54–60 °C\nvia pan-sear or grill. As a whole joint, it can be oven-roasted.\n\n**Best uses**: Pan sear (most common), grill (charcoal or grill pan), oven roast (less common).\nNot typically braised in Western traditions.",
+  "rump_roast": "The rump roast is cut from the primal **round** — the hindquarter hip area. In North American\nbutchery this encompasses the top round, bottom round, eye of round, and rump roast proper.\nIn British butchery the same anatomical region produces **topside** (inner thigh, the leanest)\nand **top rump** / thick flank (slightly higher and more marbled). In Finnish cooking this cut\nis called **paahtopaisti** and is the classic joint for Sunday oven roast beef.\n\n**Anatomy**: Rump and round cuts are large, well-exercised muscles with relatively low\nintramuscular fat but tight, even grain. Connective tissue content is modest compared to chuck\nor brisket. This means rump roast does not require braising temperatures for collagen-dissolution\n— it responds well to moderate dry heat up to 60–65 °C.\n\n**Best uses**: Oven roasting (dry heat, 120–220 °C), braising (covered with liquid,\nlow-and-slow), and slow cooker. For oven roasting, two approaches are documented: (1) high\nstart (220–240 °C) then reduce to 160–190 °C; (2) low-and-slow throughout (120–130 °C). For\nbraising, covered cooking with wine/stock transforms the cut into pull-apart tender pot roast.\n\n**Slicing**: Always slice against the grain for the most tender result. The tight grain of\nround/rump cuts makes slicing direction critical.",
+  "sirloin_roast": "The sirloin roast (top sirloin roast in North American butchery) is a boneless or bone-in joint from the short loin or top sirloin — the posterior section of the loin, behind the rib and forward of the round. Weight range: typically 1–2.5 kg for a whole joint; larger restaurant-quantity cuts extend to 4–5 kg.\n\n**Anatomy**: The joint consists primarily of the top sirloin cap muscle (gluteus medius) with the fat cap on the dorsal face. It is significantly leaner than rib roast: intramuscular fat is moderate rather than heavy, and connective tissue content is modest. This is not a collagen-rich cut — braising to collagen-dissolving temperatures (88+ °C) would overcook and dry out the lean fibres. The dominant culinary method worldwide is oven roasting to medium-rare (50–57 °C).\n\n**Cooking behaviour**: The lean muscle fibres tighten quickly above 60 °C; the fat cap renders and bastes the exterior during roasting when the joint is positioned fat-side up. Carryover is 4–8 °C on the standard high-low method (initial sear + moderate oven), and near zero on ultra-low temperature methods (70–80 °C oven for several hours). See `sirloin_roast-oven_roast.md` for the full temperature consensus table.\n\n**Probe placement**: Insert from the end of the joint into the geometric centre of the lean muscle, avoiding the fat cap (fat is a poor thermal conductor and gives falsely low readings) and keeping at least 1.5 cm from any bone if present.\n\n**Methods researched**: Oven roasting is the primary confirmed culinary method. No Group A oven-roast source was found on the verified site list. The madensverden.dk *langtidsstegt oksefilet* recipe cannot be confirmed as sirloin roast — \"oksefilet\" cut identity unconfirmed from the fetched content.",
   "sirloin_tip_roast": "*Placeholder — cut profile research not yet completed.*",
-  "top_round_roast": "*Placeholder — cut profile research not yet completed.*",
+  "top_round_roast": "The top round roast is the single large inner-thigh muscle of the round primal — the\nhindquarter hip area. In British butchery the anatomical equivalent is **topside**. It is\nthe leanest of the round sub-primals (top round, bottom round, eye of round), with a flat,\nuniform grain and minimal intramuscular fat. This lean profile means it does not tolerate\nhigh temperatures well: above ~68 °C the muscle fibres tighten and the roast becomes dry.\nThe cut benefits from oven roasting at moderate temperatures (120–190 °C) to 54–65 °C\ninternal.\n\n**Slicing**: Always slice against the grain — the tight, flat grain of top round makes\nslicing direction the primary determinant of tenderness in the finished roast.",
   "goose_breast": "Goose breast is a rich, deeply flavoured dark meat with a substantial fat layer, similar in character to duck breast but larger and more assertively flavoured. Like duck breast, it is often served medium-rare to medium (145–155 °F / 63–68 °C) by many European chefs, though USDA guidelines require 165 °F (74 °C). The oven-roast method for goose breast mirrors duck breast technique: stovetop fat rendering followed by oven finishing. Goose breast dries out at high oven temperatures, so a moderate 350–375 °F oven with careful temperature monitoring is essential.\n\n\nTarget internal temperature: **145–155 °F (63–68 °C)** — medium; pull at 140 °F and rest. USDA safe minimum: 165 °F (74 °C) — pull at 160 °F and rest.",
   "goose_leg": "Goose legs are large, tough, highly flavoured cuts rich in connective tissue and intramuscular fat. Braising — browning the legs in fat, then cooking them submerged or partially submerged in aromatic liquid at low heat for 2–3 hours — is the optimal method for transforming this tough cut into fork-tender, fall-off-the-bone meat. The collagen-rich connective tissue converts to gelatin above 160 °F, but the most tender, succulent results come at 175–185 °F (79–85 °C) after extended braising. USDA minimum for poultry is 165 °F. Unlike duck confit, braising adds moisture; the braising liquid becomes a rich, gelatin-laden sauce.\n\n\nTarget internal temperature: **175–185 °F (79–85 °C)** — well above USDA minimum; extended time at this temperature melts collagen and produces best texture. Minimum safe: 165 °F (74 °C).",
   "goose_thigh": "Goose thigh is perhaps the most flavourful part of the goose — richer than the leg and with a higher ratio of intramuscular fat and connective tissue. Braising is ideal: the moist-heat environment keeps the thigh succulent while sustained heat above 160 °F converts collagen to gelatin. Target 175–185 °F (79–85 °C) for the most tender, silky texture. The braising liquid, enriched by rendered goose fat and gelatin, reduces to an intensely flavourful sauce. Goose thighs are widely used in European traditional cooking, similar to duck confit but with a braise instead of a fat immersion.\n\n\nTarget internal temperature: **175–185 °F (79–85 °C)** — optimal for collagen breakdown; USDA minimum: 165 °F (74 °C).",
@@ -17455,7 +17466,7 @@ const CUT_PROFILES = {
   "turkey_breast": "Turkey breast can be purchased bone-in (half breast on the rib rack, 1.5–2.5 kg / 3–5.5 lb) or boneless (rolled and tied, 1–2 kg / 2–4.5 lb). Both have dramatically less fat than dark turkey meat and will dry out rapidly if taken past 165 °F (74 °C); the sweet spot for juicy, food-safe turkey breast is **160–165 °F (71–74 °C)** at the thickest point (the USDA minimum is 165 °F; pulling at 160 °F and resting 10–15 minutes under foil achieves safe temperatures via carryover). Bone-in breasts conduct heat more slowly near the bone and need accurate probe placement to the geometric centre of the thickest part. Boneless rolled breasts cook more evenly. At 190–200 °C oven temperature, a 1.5 kg bone-in breast takes approximately 60–75 minutes.",
   "turkey_burger": "A grilled turkey burger is a 150–180 g shaped patty made from coarsely-ground turkey thigh — the standard for moisture and flavour because turkey breast (1–4 % fat) dries out on the high heat of a grill before reaching the food-safety threshold for ground poultry. Ground thigh carries 8–14 % fat plus the gelatinous connective tissue that holds patties together without binders. The cooking goal: drive the centre past 74 °C (165 °F) — the FDA/USDA threshold for ground poultry — while developing crisp, lacquered grill marks. Turkey patties tolerate slightly more aggressive aromatics than chicken because the meat is somewhat blander; sage, rosemary, mustard, paprika and lemon all carry well. Probe the geometric centre of the largest patty horizontally; carryover is small (1–2 °C).",
   "turkey_ground": "*Placeholder — cut profile research not yet completed.*",
-  "turkey_leg": "*Placeholder — cut profile research not yet completed.*",
+  "turkey_leg": "The turkey leg (drumstick) is the lower segment of the bird's hind limb — the tibia and\nfibula with surrounding dark-meat muscles from the knee joint to the ankle. It is the most\nexercise-intensive portion of the turkey, resulting in dense, red, high-myoglobin meat with\nsignificant connective tissue. The single central bone runs the full length; the surrounding\nmuscle is thick (450–900 g / 1–2 lbs per leg).\n\n**Temperature**: All culinary traditions worldwide agree on the same doneness target:\n- **USDA safe minimum**: 74 °C / 165 °F — also the culinary preferred target for turkey leg\n- **Dark meat optimal**: 77–82 °C / 170–180 °F — slightly more tender\n- Unlike steak or salmon, there is no \"medium-rare\" target for turkey; it is universally cooked to USDA minimum.\n\n**Probe placement**: Insert from the side of the drum (not the end), angling toward the\ngeometric centre of the thickest muscle mass. Keep the tip at least 1 cm from the central\ntibia bone, which conducts heat faster than the surrounding meat and gives falsely high readings.",
   "turkey_thigh": "*Placeholder — cut profile research not yet completed.*",
   "whole_turkey": "A whole turkey presents the same fundamental challenge as a whole chicken but at larger scale and with more extreme differences between breast and leg/thigh: the breast meat is lean and prone to drying above 160–165 °F (71–74 °C), while the legs and thighs are dark, collagen-rich and benefit from 165–175 °F (74–79 °C) to become properly tender. A 4.5 kg / 10 lb turkey feeds 6–8 people; a 7 kg / 15 lb turkey feeds 10–12. The USDA minimum for whole turkey is **165 °F (74 °C)** measured in the thigh at its thickest point, well away from bone. Probe placement in the thigh (not the breast) is the authoritative food-safety measurement. Modern approaches — brining, spatchcocking, basting — all aim to let the thigh reach 165 °F without pushing the breast past 165 °F.\n\nTypical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) unstuffed. A 4.5 kg (10 lb) bird takes approximately 2.5–3 hours; a 7 kg (15 lb) bird takes approximately 3.5–4 hours.\n\n\nA whole turkey presents the same fundamental challenge as a whole chicken but at larger scale and with more extreme differences between breast and leg/thigh: the breast meat is lean and prone to drying above 160–165 °F (71–74 °C), while the legs and thighs are dark, collagen-rich and benefit from 165–175 °F (74–79 °C) to become properly tender. A 4.5 kg / 10 lb turkey feeds 6–8 people; a 7 kg / 15 lb turkey feeds 10–12. The USDA minimum for whole turkey is **165 °F (74 °C)** measured in the thigh at its thickest point, well away from bone. Probe placement in the thigh (not the breast) is the authoritative food-safety measurement. Modern approaches — brining, spatchcocking, basting — all aim to let the thigh reach 165 °F without pushing the breast past 165 °F.\nTypical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) unstuffed. A 4.5 kg (10 lb) bird takes approximately 2.5–3 hours; a 7 kg (15 lb) bird takes approximately 3.5–4 hours.",
   "chicken_breast": "Chicken breast is a lean, boneless cut that dries out quickly when overcooked. Pounding to even thickness and brining are the two most effective techniques for retaining moisture. Because there is minimal fat to buffer heat, precise temperature monitoring is critical.\n\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry",
@@ -17495,7 +17506,7 @@ const CUT_PROFILES = {
   "roasted_sweet_potato": "Whole baked sweet potato (*Ipomoea batatas*) in the conventional oven at 190–200 °C achieves a deeply caramelised, slightly wrinkled skin and a soft, jammy interior in 50–70 minutes depending on size. The low-and-slow heat allows the amylase enzymes in the sweet potato to convert starches to sugars, producing an intensely sweet result (particularly with Japanese *satsuma-imo* varieties). Pull temperature: 96–98 °C (205–208 °F) at the thickest centre. MEATER probe along long axis into the geometric centre.",
   "tuna_steak": "Tuna steak — most commonly bluefin (*hon maguro*), yellowfin (*ahi*), or bigeye (*mebachi*) — is cut transversely from the loin muscles of a large pelagic fish. Tuna flesh is deep crimson (from high myoglobin content), very lean, and densely muscled compared to most fish; it has almost no connective tissue between muscle segments, which means it behaves more like a red meat steak than a typical white-flake fish. Pan searing suits tuna precisely because the high heat drives rapid Maillard browning on the lean surface, while the brief cook time leaves the interior at the desired rare state. Overcooking is the defining risk: above 60 °C the proteins tighten dramatically, and the lean flesh becomes dry and crumbly. The conventional sushi-bar preference for *tataki* (briefly seared, cold-raw centre) means the entire temperature spectrum from raw to fully cooked is culinarily acknowledged. Carryover in a seared tuna steak is 2–3 °C and dissipates quickly.",
   "salmon_fillet": "Salmon fillet comes from the side of the fish, running the full length of the body from behind the head to the tail, with the pin bones removed. The flesh is divided into distinct fat-layered muscle segments (myotomes) separated by connective tissue (myocommata); that connective tissue softens and gives the characteristic flaking texture when the protein reaches its set point. Atlantic and Pacific salmon differ in fat distribution — farmed Atlantic salmon is uniformly rich, while wild sockeye and king salmon have denser, more mineral flesh. Pan searing suits salmon because the high conductive heat of a stainless or cast-iron pan rapidly crisps the skin (if skin-on) and caramelises the exposed flesh, producing textural contrast between crust and interior. Carryover in a seared salmon fillet is modest — 2–3 °C — because the thin geometry dissipates heat quickly, so accurate pull timing is essential to avoid overcooking.",
-  "salmon_steak": "*Placeholder — cut profile research not yet completed.*",
+  "salmon_steak": "A salmon steak is a cross-cut through the whole fish, perpendicular to the spine. The\nresulting shape is a roughly horseshoe cross-section: the thickest back-flesh section sits\nabove and around the central backbone, while two belly-flap lobes curve inward below. Skin\nis present on all outer edges. Unlike a fillet (side-cut), a salmon steak retains the\ncentral spine bone plus the curved rib bones, which conduct heat toward the interior —\nslightly accelerating cooking around the bone compared to the true centre.\n\nThe back-flesh section contains the same layered myotome (muscle segment) and myocommata\n(connective tissue) structure as a fillet; the cooking temperature targets are identical.\nThe belly flaps are substantially thinner and will overcook relative to the back section if\nthe steak is laid flat; experienced cooks either fold and secure the flaps inward or accept\nthat the flaps will cook to well-done while the back-flesh reaches culinary preferred temperature.\n\n**Temperature targets**:\n- **USDA safe minimum**: 63 °C / 145 °F (fully opaque, flaky)\n- **Medium** (culinary preferred, recommended): **54 °C / 130 °F** — warm, just-opaque, moist centre\n- **Medium-rare**: 49 °C / 120 °F — slightly translucent, jewel-red centre (not USDA safe)\n\n**Probe placement**: Insert from the outer edge of the back-flesh (the thickest section), aiming\ntoward the geometric centre of the cross-section. Keep the tip at least 1 cm from the central\nspine bone, which conducts heat and will give a lagging reading. Never insert from the belly-flap\nside — too thin.",
   "lobster_tail": "Lobster tail is the large tail segment of a lobster (*Homarus americanus*, the American/Maine lobster, or *Homarus gammarus*, the European/Breton lobster) separated from the body and claws; frozen and fresh spiny lobster tails (*Panulirus argus*) from the Caribbean and Pacific are also widely used. The edible flesh is the tail muscle — firm, white-to-pale-pink, sweet and rich in natural glutamates. Grilling is one of the most popular preparations for lobster tail because the direct radiant heat produces char and caramelisation on the cut flesh surface while the shell acts as a natural heat shield and flavour-retaining vessel. Butterflying the tail (cutting through the shell dorsally and splaying the flesh upward) is the dominant grill preparation because it exposes more flesh surface to direct heat and allows basting to penetrate the meat. Overcooking tightens the fibres sharply; the pull window is 58–62 °C before the meat becomes dry and rubbery. Carryover is 3–4 °C.",
   "scallops": "Sea scallops (*Pecten maximus* in Europe; *Placopecten magellanicus*, the Atlantic sea scallop, in North America) are the large adductor muscle that opens and closes the bivalve shell. The flesh is cream-white, sweet, and extremely tender with almost no connective tissue; it is composed mainly of striated muscle fibres held in a dense but delicate matrix. Pan searing is the defining method for large sea scallops because extreme heat produces rapid caramelisation of the natural sugars on the flat cut surfaces — the golden-brown crust contrasts dramatically with the cool, almost raw centre that is the mark of a well-executed scallop. Overcooking tightens the fibres sharply and produces a rubbery, squeaky texture. The critical requirements are: completely dry exterior, a blazing pan, and a very short cook time. Carryover is significant relative to the small mass — 3–5 °C — so pull early.",
   "shrimp": "Shrimp (called prawns in British, Australian, and much of Asian-English usage) are the most widely consumed shellfish globally; the species most commonly used for pan frying include tiger prawns (*Penaeus monodon*), white leg shrimp (*Litopenaeus vannamei*), spot prawns (*Pandalus platyceros*), and Gulf shrimp (*Farfantepenaeus aztecus*). The edible flesh is the tail muscle, which contracts rapidly under heat and curls the tail from the characteristic C-shape of a live shrimp to a tighter O-shape when overcooked. Pan frying over high heat produces a caramelised exterior on the natural sugars in the shell or flesh, and in shell-on preparations the shell acts as a protective layer. The protein in shrimp begins to denature around 50 °C and is fully set at 60 °C; the culinary window for moist, tender shrimp is extremely narrow, typically 3–4 minutes total cook time for medium prawns in a very hot pan. Carryover is 2–3 °C.",
@@ -17527,7 +17538,7 @@ const CUT_PROFILES = {
   "lamb_neck_filet": "*Placeholder — cut profile research not yet completed.*",
   "baby_back_ribs": "Baby back ribs (also called loin ribs or kamben in Danish; Rippchen in German) are the upper ribs from the pork loin area — leaner, more curved, and smaller than spare ribs. In an air fryer the high-velocity hot air circulates around each section, cooking them much faster than a conventional oven (60–90 min vs. 2.5–3 hrs) while still achieving tender, fall-off-the-bone results. Most air-fryer methods either pre-boil the ribs (to accelerate internal tenderness) or rely on a long low-temperature cook phase followed by a short high-temperature crisping phase. The silver skin on the bone side must always be removed. Target internal: 88–95 °C for tender, collagen-rendered ribs; at 63 °C they are technically safe but not yet fall-off-bone.\n\n\nTarget internal temperatures (air fryer):\n- Fall-off-bone tender: **88–95 °C (190–203 °F)**\n- ⚠️ Below 80 °C ribs are food-safe but still tough",
   "spare_ribs": "Spare ribs (revelsben/kamben in Danish; Spareribs in German/Austrian) are the lower belly ribs, larger and flatter than baby back ribs with more fat and connective tissue. They benefit particularly from low-and-slow oven cooking: either pre-boiled then finished high, or foil-wrapped at low heat then glazed. The higher fat content makes them more forgiving than baby backs. Target internal: 88–95 °C, the same range as baby back ribs — collagen renders at these temperatures giving the characteristic tender, pull-off-bone texture and glossy glaze.\n\n\nTarget internal temperatures (oven roast):\n- Fall-off-bone tender: **88–95 °C (190–203 °F)**\n- ⚠️ Below 80 °C spare ribs are food-safe but still tough",
-  "st_louis_ribs": "*Placeholder — cut profile research not yet completed.*",
+  "st_louis_ribs": "St. Louis-style ribs are the rectangular, trimmed version of full pork spare ribs. They\ncome from the lower portion of the rib cage — below the baby back ribs where the loin has\nbeen removed, running from approximately rib 3 through rib 12. The defining characteristic\nof St. Louis style is the trim: the breastbone (sternum), cartilage, and the sternum flap\n(skirt) are removed, leaving a uniform rectangular rack with flat, straight bones and a\nconsistent thickness across the whole rack. This trim is a butchery standard (IMPS/NAMP 416A\nor similar) not a breed or cut-point — untrimmed spare ribs from the same animal are wider\nand less uniform.\n\n**Anatomy and structure**: the ribs are the curved rib bones with intercostal meat (the lean\nmuscle between the ribs), a thin layer of meat and fat on the bone side, and a membrane\n(periosteum) on the underside that should be removed before cooking. The fat cap on the\nmeaty side provides basting during cooking. High collagen content in the intercostal connective\ntissue means St. Louis ribs require long cooking at temperatures above 74 °C / 165 °F to convert\ncollagen to gelatin — the collagen-dissolution range is 88–96 °C / 190–205 °F sustained over\n1–4 hours. USDA minimum of 63 °C / 145 °F is safe but does not produce tender ribs.\n\n**Temperature targets** (per method):\n- **Oven roast / Smoker**: pull at **88–96 °C / 190–205 °F** internal — this is the culinary\n  preferred range for tender, pull-back ribs. Most recipes use the bend test (rack bends into\n  a \"U\" at the centre, surface crust cracks) which corresponds to this range. The `pulled`\n  doneness target of 93 °C / 200 °F in the system is accurate.\n- **Grill** (indirect heat, low-and-slow): same 88–96 °C target, achieved over 3–4 hours.\n  Direct high heat grilling (e.g., Chinese char siu style) aims for caramelised exterior with\n  63 °C+ safe interior — a different textural goal.\n- **USDA safe minimum**: 63 °C / 145 °F applies to all pork. For ribs, this means the bones\n  and surrounding meat are safe at 63 °C, but the ribs will still be tough at this temperature.\n\n**Probe placement**: insert the probe lengthwise along the widest bone (centre of the rack),\nkeeping the tip in the thickest continuous lean intercostal section, clear of bone surface. Run\nparallel to the bone. The centre third of the rack gives the most representative reading.",
   "ground_pork": "Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend of primal trimmings. Standard ground pork is typically 70–80% lean with 20–30% fat; the higher fat content gives it a juicy, cohesive texture when cooked and makes it more forgiving than ground beef or turkey. Ground pork is the basis of countless preparations worldwide — from Italian ragù and Swedish köttbullar to Chinese dumplings and Mexican chorizo. Because grinding distributes any surface bacteria throughout the mass, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is negligible.",
   "pork_sausage": "Pork sausage is a processed meat product made from finely minced or coarsely ground pork, seasoned with salt, pepper, herbs and spices, and encased in natural pig intestine or synthetic collagen casing. Fat content is typically 20–30%, essential for juiciness and flavour development. Fresh sausages require cooking to a minimum internal temperature of 71°C (160°F); pre-cooked or smoked sausages require only reheating to serving temperature (60–65°C). The casing is the critical monitoring challenge: if it ruptures early, moisture and fat escape and the sausage dries out. Probing from one end into the centre avoids puncturing the casing mid-body. Carryover is 2–3°C.\n\n\nTarget internal temperatures (grill):\n- Fully cooked/safe: **71–75 °C (160–167 °F)**\n- ⚠️ Do not pull before 71 °C — pork sausage must be fully cooked",
   "fresh_ham": "A fresh (uncured, unsmoked) ham is the entire hind leg of a pig — bone-in, skin-on, with the femur and aitchbone running through the centre and a thick layer of subcutaneous fat under the rind. Anatomically distinct from cured (julskinka) or smoked ham preparations: the muscle has its full natural moisture, the rind is supple rather than salted-firm, and the fat has not been altered by brine. Roasting requires a long, moderate-temperature cook (140–160 °C) that drives the centre to safe temperature without overcooking the surface meat under the fat. Carryover is significant — 4–6 °C in a 4–6 kg leg — because the bone, fat and dense muscle store heat well. Rest 30–45 minutes loosely tented before carving.",
@@ -17538,7 +17549,7 @@ const CUT_PROFILES = {
   "pork_liver": "Pork liver is milder, slightly sweeter and more delicate in texture than beef liver — a paler chestnut-brown rather than the deep mahogany of beef, with a finer-grained hepatocyte structure and a thinner capsule. The same mineral-iron flavour profile is present but at lower intensity. The standard preparation across European traditions is identical to the beef-liver pan-fry: brief soak in milk to mellow the iron, dust in flour, sear hard in fat, and pull while the centre is still faintly pink. The narrower flavour also means pork liver tolerates assertive aromatics — onions, sage, juniper, allspice, capers — better than the more bold-tasting calf's or beef liver. Carryover is small (1–2 °C); slices continue cooking on the plate, so serve immediately.",
   "pork_tongue": "Pork tongue is the smaller, more delicate sibling of beef tongue — typically 250–400 g per tongue versus 1.5–2 kg for beef. The structure is identical: a single dense lingual muscle wrapped in a thick, papillae-covered skin that must be peeled after cooking. The smaller mass means a shorter braise (60–90 minutes rather than 3–4 hours) and a milder, sweeter flavour. Pork tongue is fundamental to many traditions — Mexican *lengua de cerdo*, Chinese cha-shu pig tongue, French *langue de porc sauce ravigote*, Polish *ozór wieprzowy*. The peel-while-warm rule still applies, and the tongue is best sliced thin and either dressed with a sharp vinaigrette or warmed in a piquant sauce. Carryover is essentially zero (the surrounding liquid buffers temperature).",
   "cured_ham": "Cured ham (skinke in Danish; Schinken in German/Austrian) for the oven roast method encompasses both pre-boiled glazed ham and straight-to-oven versions. The classic approach is to boil a mild-cured or smoked ham first (removing excess salt and pre-cooking the meat), then score the rind and glaze it in a hot oven until caramelised. Low-and-slow oven variants skip the boiling and use very low temperatures (80°C oven) to achieve even, juicy results.\n\n\nTarget internal temperature for safe, juicy cured ham: **70–75 °C** — the curing keeps the meat safe at slightly lower temps than fresh pork, but 75 °C is the standard target for glazed results.\n\nTarget internal temperatures (oven roast):\n- Juicy, glazed: **70–75 °C (158–167 °F)**\n- Very low-and-slow: **75 °C** (when oven is held at 80 °C)",
-  "ham": "*Placeholder — cut profile research not yet completed.*",
+  "ham": "Ham is the hind leg of the pig — the biceps femoris and surrounding muscles of the upper\nrear limb — cured with salt, smoke, or both before being sold. Unlike any other pork cut,\nham does not arrive raw: curing transforms it into a shelf-stable product with a firm,\ndense texture, a pronounced savoury-sweet flavour, and a characteristic mahogany rind\nonce cooked. The cut runs from the aitch bone (hip socket) down to and including the shank.\n\nTwo primary forms are sold for oven roasting:\n- **Fully cooked (ready-to-serve) ham** — already pasteurised during commercial smoking/curing.\n  The oven is used solely to heat it through (55–63 °C / 130–145 °F) and caramelise a glaze.\n- **Raw/uncooked ham (UK gammon, Nordic julskinka, Filipino fresh ham)** — must reach USDA\n  minimum 63 °C / 145 °F; Swedish practice specifies 72 °C / 162 °F for safety.\n\nThe bone runs along the centre of the shank end. Probe placement: insert from the thick cut\nend (butt end), angle to the geometric centre of the largest lean muscle section, clear of the\ncentral bone. Multiple muscle groups are separated by fat seams — avoid resting the tip in a\nfat seam.\n\nGlazing is universal across all traditions: sweet (maple syrup, brown sugar, honey, pineapple\njuice, fruit jam) balanced with a tangy counterpoint (mustard, citrus) and warm spice (cloves,\nallspice, cinnamon). The glaze is applied in the final 15–45 minutes at elevated heat (200–225 °C)\nand basted repeatedly to build a lacquered crust over the scored fat.",
   "pork_belly": "Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.",
   "pork_leg": "Pork leg and hock (Schweinshaxe / stinco di maiale / kuzu incik) is a collagen-rich cut with thick connective tissue, bone marrow, and heavily worked muscle. Braising unlocks the cut's full potential: 2–3 hours of moist heat at low temperature converts collagen to gelatin, creating sticky, unctuous, fall-off-the-bone meat surrounded by a richly reduced sauce. Popular braised in beer across Bavaria, Central Europe, and the British Isles; in soy and spices across East Asia; and in wine with herbs across Mediterranean Europe. The MEATER probe is placed deep into the thickest muscle mass of the leg or hock, away from the bone, to track internal temperature accurately.\n\n\nTarget internal temperature: **75–80 °C (167–176 °F)** for sliceable, tender; **85–90 °C (185–194 °F)** for pull-apart.",
   "pork_loin_roast": "Pork loin roast (svinekam in Danish; Schweinerücken / Kotelettstrang in German/Austrian) with rind (svær / Schwarte) is the quintessential Scandinavian and German Sunday dinner. The loin is leaner than the belly so it needs more careful temperature management — pull too early and it's under-safe; pull too late and it dries out. The Danish approach targets **65°C** for a juicy, slightly rosy result; German recipes often go to 72–75°C for a firmer texture. For a MEATER probe, 65°C is an excellent target with a high-heat crackling finish.\n\n\nTarget internal temperatures (oven roast):\n- Juicy, slightly rosy (Danish-style): **60–65 °C (140–149 °F)**\n- Traditional firm, fully white (German-style): **70–75 °C (158–167 °F)**",
@@ -17778,6 +17789,24 @@ const CUT_METHOD_PROFILES = {
   "prime_rib": {
     "oven_roast": "Prime rib (also called standing rib roast) is cut from the rib primal (ribs 6–12), comprising the longissimus dorsi and surrounding muscles, with a generous fat cap and the rib bones attached. It is one of the most marbled subprimal sections of the animal — the rib muscles do relatively little work, and the high intramuscular fat content self-bastes during roasting, keeping the interior moist across a wide temperature range. Oven roasting is the canonical method for prime rib because the sustained, even heat of an enclosed oven allows the large mass (typically 2.5–5 kg) to heat evenly from edge to centre while the exterior fat cap renders and browns. Carryover is substantial for a prime rib — the large, dense mass retains heat efficiently, and internal temperature continues to rise for 15–30 minutes after removal; this must be accounted for in the pull temperature."
   },
+  "roasting_joint": {
+    "oven_roast": "\"Roasting joint\" is a British and Australian umbrella term covering a range of large beef joints suitable for oven roasting as a Sunday roast or centrepiece. The term does not refer to a single anatomical cut; depending on the butcher and the budget, a roasting joint may be any of:\n\n- **Topside** (UK/Aus) / Top Round (US) — very lean, tight grain, economical; requires careful temperature control to avoid drying out\n- **Silverside** (UK/Aus) / Bottom Round (US) — lean, slightly tougher than topside, traditionally associated with slow roasting or boiling (corned beef)\n- **Bolar Blade** (Aus/NZ) — shoulder cut, relatively tender with decent flavour\n- **Rib of Beef** (UK) / Standing Rib Roast (US) — premium, bone-in or boneless, heavily marbled; the prestige Sunday roast option\n- **Sirloin of Beef** (UK) — boneless loin, moderate fat cap; covered in its own cut file (`sirloin_roast`)\n\nThe defining characteristic shared by all roasting joint cuts is their size (typically 1–3 kg) and their suitability for dry roasting in an oven without added liquid, producing a browned exterior and a pink, rested interior. All are beef primal cuts with relatively low collagen content compared to braising cuts (brisket, chuck, shank).\n\n**Temperature behaviour across the joint type spectrum**: Lean cuts (topside, silverside) are the most temperature-sensitive — even a few degrees of overshoot at the core dries them unacceptably. Fatty cuts (rib) are more forgiving because fat masks moisture loss. All sources below recommend pulling well before the target temperature and allowing carryover to finish the work, with resting periods of 15–30 minutes as non-negotiable.\n\n**Carryover**: 4–8 °C on the standard two-phase method (high initial temperature + moderate finishing temperature). Negligible on ultra-low methods (70–80 °C oven).\n\n**Probe placement**: For any boneless roasting joint, enter the probe from the end into the geometric centre of the thickest lean muscle section. For bone-in rib, keep the tip at least 2 cm from any rib bone — bone conducts heat differently from muscle and will produce misleading readings."
+  },
+  "round_roast": {
+    "oven_roast": "\"Round roast\" is a generic term for any oven roast cut from the round primal — the large\nhindquarter hip/thigh muscle group. The round primal encompasses several sub-primals: top\nround (inner thigh, leanest), bottom round (outer thigh, slightly tougher), and eye of round\n(central cylindrical muscle, very lean and uniform). A recipe labelled \"round roast\" may use\nany of these, making this the most interchangeable of the round-family slugs.\n\n**Anatomy**: Round muscles are large and heavily exercised, producing lean, tight-grained\nmeat with low intramuscular fat. Connective tissue is modest — enough to benefit from slow\nheat, not enough to require braising temperatures. At 54–65 °C the muscle fibres remain moist\nand the round becomes sliceable; above ~68 °C the roast turns dry.\n\n**Interchangeability**: Africanbites.com explicitly lists eye of round, **top round**, bottom\nround, and top sirloin roast as interchangeable in a round-roast recipe — confirming that the\nsame method and temperature targets apply across these sub-cuts.\n\n**Culinary Group A gap**: Dry oven roasting a whole round joint is not documented in\nconfirmed-reachable South Asian, East Asian, or South-East Asian recipe sources."
+  },
+  "rump": {
+    "pan_sear": "The beef rump, in steak form, is cut from the rump primal — the area at the junction of the\nsirloin and the round. In British and Australian butchery, **rump steak** is a well-regarded\nbudget-premium steak: more flavourful than topside (due to intramuscular fat and connective\ntissue in some sub-muscles) but less tender than sirloin or ribeye. In Swedish butchery the\nsame cut is called **rumpstek**. The rump can include several muscles (biceps femoris, tensor\nfasciae latae, and gluteus medius), which is why rump steaks benefit from tenderising\nby marination or cutting against the grain after cooking.\n\n**Best pan_sear results**: Because rump has moderate fat and some connective tissue, it is best\nserved at medium-rare to medium (54–60 °C). Going beyond 65 °C results in a noticeably tougher\nchew. The classic approach is a very high-heat pan, 2–3 minutes per side, with optional butter-\nbasting. Rump releases significant fat during cooking which helps baste the exterior.\n\n**Probe placement**: For a 2–3 cm thick steak, insert from the narrow end (side) into the\ngeometric centre, avoiding the fat seam where present. Because rump is a composite of 2–3\nmuscles, insert the probe so it reads the interior of the thickest muscle mass.\n\n**Culinary Group A gap**: Pan-searing a thick whole rump steak (Western style) is not a\ndocumented primary tradition in confirmed-reachable South Asian, East Asian, or SE Asian\nrecipe sources. Filipino bistek tagalog uses thin-sliced round cuts, not thick rump steaks —\nit would belong to a separate \"braise\" or \"stir_fry\" method leaf.\n\n**Culinary Group C gap**: No confirmed rump steak pan-sear recipe was found on cheftariq.com,\nmarocmama.com, or africanbites.com after URL probing."
+  },
+  "rump_roast": {
+    "oven_roast": "The rump roast (North American term) is cut from the primal round — the hip area of the\nhindquarter. In British butchery the closest equivalents are **topside** (inner thigh, very\nlean) and **top rump** / **thick flank** (slightly higher up, a little more marbled). In\nFinnish butchery this area is called **paahtopaisti** and is the standard cut for oven\nroast beef. These cuts share the anatomical characteristics important for oven roasting:\nlow connective tissue relative to chuck or short ribs, moderate intramuscular fat, and\nlean, tight-grained muscle that responds well to dry heat.\n\n**What oven roasting does to rump**: Because the rump is lean and lacks the collagen load\nof braising cuts, it does not benefit from the collagen-dissolution range (above 74 °C).\nThe goal is to reach 55–65 °C at the centre while maintaining moisture. Most recipes use\none of two strategies:\n\n1. **High-start / low-finish**: Blast at 200–240 °C for 15–20 minutes to crust the\n   exterior via Maillard browning, then reduce to 160–190 °C for the remainder. This\n   balances surface colour with gentle interior heating.\n2. **Low and slow throughout**: Roast at 120–130 °C for 1–2 hours. The surface browns\n   less intensely but moisture retention is better, especially for the leaner eye-of-round\n   sub-cut.\n\n**Carryover**: A whole rump joint (1–2 kg) in a moderate oven will carry over 4–7 °C\nduring resting. Recipes that give only a time guide (BBC Good Food below) rely on the\ncook resting the joint for 20–30 minutes before carving, so the final serving temperature\nis several degrees above the pull temperature.\n\n**Probe placement**: Insert from the end of the joint toward the geometric centre of the\nlean muscle mass. For topside (a single flat-grained muscle), the probe should avoid any\nfat seam or tendon running through the centre. Pull the probe back slightly if it feels\ngristle under the tip.\n\n**Culinary Group A gap**: Dry oven roasting of a whole beef rump or round joint is not a\ndocumented tradition in confirmed-reachable South Asian, East Asian, or South-East Asian\nrecipe sources. The gap is noted and will remain open until a verified source is found."
+  },
+  "sirloin_roast": {
+    "oven_roast": "The sirloin roast (top sirloin roast in North American butchery) is a boneless or bone-in joint cut from the short loin or top sirloin — the posterior section of the loin, behind the rib and forward of the round. It is significantly leaner than rib roast and prime rib, with moderate intramuscular fat and a fat cap on one face. Connective tissue content is modest: unlike chuck or round, it does not require collagen-dissolving temperatures. This makes oven roasting at moderate temperatures (rather than braising) the dominant culinary method worldwide.\n\n**What oven roasting does to sirloin**: The oven delivers ambient dry heat that dehydrates the surface (encouraging Maillard browning if the initial temperature is high) while the interior heats slowly toward the target. Most contemporary recipes use a two-phase approach — high heat (200–220 °C) or a searing pan to colour the exterior, then moderate heat (160–180 °C) to bring the core to the desired doneness. Alternatively, the reverse-sear (low oven first, high-heat finish) and the ultra-low sustained method (70–80 °C for several hours) are both well-documented for this cut.\n\n**Carryover**: A whole sirloin joint (1–2 kg) carries over 4–8 °C depending on oven temperature and resting conditions. The French and Australian sources below both note that pulling at 44–47 °C and resting for 20–30 minutes is necessary to reach a final medium-rare target of 50–55 °C. The Danish low-temperature method (target 57 °C in a 80 °C oven) produces almost zero carryover because there is essentially no temperature gradient in the meat.\n\n**Probe placement**: Enter the probe from the end of the joint, angling toward the geometric centre of the lean muscle mass. Avoid the fat cap (outer surface fat gives falsely low readings because fat is a poor heat conductor). On a bone-in sirloin, keep the tip at least 1.5 cm from the bone surface.\n\n**Group A gap**: Oven-roasting a whole sirloin joint is not a documented culinary tradition in the cooking cultures of South Asia, East Asia, or South-East Asia as accessed through verified sources in this project. The closest approximation — Chinese *red-braised* beef or Kerala stovetop beef roast — uses braising liquids and stovetop heat, not a dry oven. No Group A recipe is cited in this leaf; the gap is noted and will remain open until a verified source is found."
+  },
+  "top_round_roast": {
+    "oven_roast": "The top round roast comes from the inner thigh of the hindquarter — the uppermost muscle of the\nround primal. In American butchery, \"top round\" is a distinct sub-primal from the round; in\nBritish butchery the near-equivalent is **topside** (the same inner-thigh muscle, similarly\nlean). In Finnish butchery the hindquarter roast cut is called **paahtopaisti**, which can\nencompass top round.\n\n**Anatomy and cooking behaviour**: Top round is a single flat-grained, very lean muscle.\nIt has less intramuscular fat than ribeye or sirloin, and lower connective tissue than chuck.\nThis makes it well-suited to dry oven heat: it does not need collagen-dissolving temperatures,\nonly gentle heat to 54–65 °C to become tender. Overcooked top round (above ~70 °C) turns dry\nand chalky. Unlike bottom round, top round has an even enough shape that it roasts evenly from\na single probe insertion.\n\n**Temperature approaches**: The two main strategies are (1) high-start / low-finish (200–240 °C\ncrust, then 160–190 °C until done) and (2) low-and-slow throughout (120–130 °C for 1–2 hours).\nThe Maillard crust from searing or high-start improves flavour significantly for this lean cut.\n\n**Probe placement**: Insert lengthwise from the end into the geometric centre. The flat grain\nof top round means there is no fat seam to avoid, but avoid the slight fat cap on the exterior\nsurface.\n\n**Culinary Group A gap**: Dry oven roasting a whole top round joint is not documented in\nconfirmed-reachable South Asian, East Asian, or South-East Asian recipe sources. The gap is\nnoted."
+  },
   "goose_breast": {
     "oven_roast": "Goose breast is a rich, deeply flavoured dark meat with a substantial fat layer, similar in character to duck breast but larger and more assertively flavoured. Like duck breast, it is often served medium-rare to medium (145–155 °F / 63–68 °C) by many European chefs, though USDA guidelines require 165 °F (74 °C). The oven-roast method for goose breast mirrors duck breast technique: stovetop fat rendering followed by oven finishing. Goose breast dries out at high oven temperatures, so a moderate 350–375 °F oven with careful temperature monitoring is essential.\n\nTarget internal temperature: **145–155 °F (63–68 °C)** — medium; pull at 140 °F and rest. USDA safe minimum: 165 °F (74 °C) — pull at 160 °F and rest.",
     "pan_sear": "Goose breast shares the same cold-pan fat-rendering technique as duck breast. The skin-side goes into a cold dry skillet and the thick fat cap is rendered slowly over medium-low heat before the breast is flipped and finished. Goose breasts are larger than duck (often 10–14 oz each), so rendering time is slightly longer. The result — thin, crackling skin over juicy, pink meat — is the hallmark of properly executed goose breast pan sear. Medium to medium-rare (145–155 °F) is the standard in European cuisine; USDA requires 165 °F.\n\nTarget internal temperature: **145–155 °F (63–68 °C)** — medium; pull at 138–140 °F and rest. USDA well-done: 165 °F (74 °C)."
@@ -17812,6 +17841,9 @@ const CUT_METHOD_PROFILES = {
     "air_fryer": "An air-fried turkey burger is the same 150–180 g ground-thigh patty as the grill or pan-sear preparation, cooked in the convection-fan environment of an air fryer at 190–200 °C. The high air velocity produces an even Maillard crust on both faces simultaneously, and the cook is faster than a conventional oven (8–10 minutes vs 14–18). The patty must be at least 150 g and 2 cm thick to avoid drying out at the edges before the centre reaches 74 °C. Probe the geometric centre of the largest patty; carryover is small (1–2 °C).",
     "grill": "A grilled turkey burger is a 150–180 g shaped patty made from coarsely-ground turkey thigh — the standard for moisture and flavour because turkey breast (1–4 % fat) dries out on the high heat of a grill before reaching the food-safety threshold for ground poultry. Ground thigh carries 8–14 % fat plus the gelatinous connective tissue that holds patties together without binders. The cooking goal: drive the centre past 74 °C (165 °F) — the FDA/USDA threshold for ground poultry — while developing crisp, lacquered grill marks. Turkey patties tolerate slightly more aggressive aromatics than chicken because the meat is somewhat blander; sage, rosemary, mustard, paprika and lemon all carry well. Probe the geometric centre of the largest patty horizontally; carryover is small (1–2 °C).",
     "pan_fry": "A pan-fried turkey burger is the same 150–180 g shaped patty as the grilled version, cooked in a heavy pan over medium-high heat with a film of oil and butter. The all-over surface contact with the pan gives a more even crust than the linear marks of a grate but does not benefit from the smoke flavour of fire. Ground thigh (8–14 % fat) is the standard. The cooking goal is identical: drive the centre past 74 °C while developing a deep, even Maillard surface. Probe the geometric centre of the largest patty horizontally; carryover is small (1–2 °C)."
+  },
+  "turkey_leg": {
+    "oven_roast": "The turkey leg includes the drumstick (lower leg, below the knee joint) and sometimes the thigh\n(attached above the knee). When sold as a \"turkey leg\" it is almost always the drumstick only.\nTurkey leg is dark meat — significantly higher in fat and myoglobin than the breast, making it\nfar more forgiving in the oven. The leg can be safely roasted to 74–80 °C without drying out,\nwhereas the breast dries above ~71 °C.\n\n**USDA/EU safe minimum**: 74 °C / 165 °F. Unlike pork and beef, there is no recognised \"medium-\nrare\" for turkey — all turkey must reach at least 74 °C for food safety, and the system correctly\nhas only a `safe` doneness tier at 74 °C / 165 °F.\n\n**Practical target for turkey leg**: Most sources and chefs prefer 75–82 °C for turkey legs and\nthighs because the higher fat content keeps the meat juicy at these temperatures. There is no\nquality downside to targeting 79–82 °C for turkey dark meat specifically.\n\n**Culinary Group A gap**: Turkey is not a native bird in South/East/SE Asia. While there are\nFilipino, Thai, and Indonesian turkey recipes, none were found on confirmed-reachable Group A\nsources. This gap is legitimate."
   },
   "whole_turkey": {
     "oven_roast": "A whole turkey presents the same fundamental challenge as a whole chicken but at larger scale and with more extreme differences between breast and leg/thigh: the breast meat is lean and prone to drying above 160–165 °F (71–74 °C), while the legs and thighs are dark, collagen-rich and benefit from 165–175 °F (74–79 °C) to become properly tender. A 4.5 kg / 10 lb turkey feeds 6–8 people; a 7 kg / 15 lb turkey feeds 10–12. The USDA minimum for whole turkey is **165 °F (74 °C)** measured in the thigh at its thickest point, well away from bone. Probe placement in the thigh (not the breast) is the authoritative food-safety measurement. Modern approaches — brining, spatchcocking, basting — all aim to let the thigh reach 165 °F without pushing the breast past 165 °F.\n\nTypical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) unstuffed. A 4.5 kg (10 lb) bird takes approximately 2.5–3 hours; a 7 kg (15 lb) bird takes approximately 3.5–4 hours."
@@ -17995,6 +18027,10 @@ const CUT_METHOD_PROFILES = {
     "pan_sear": "Salmon fillet comes from the side of the fish, running the full length of the body from behind the head to the tail, with the pin bones removed. The flesh is divided into distinct fat-layered muscle segments (myotomes) separated by connective tissue (myocommata); that connective tissue softens and gives the characteristic flaking texture when the protein reaches its set point. Atlantic and Pacific salmon differ in fat distribution — farmed Atlantic salmon is uniformly rich, while wild sockeye and king salmon have denser, more mineral flesh. Pan searing suits salmon because the high conductive heat of a stainless or cast-iron pan rapidly crisps the skin (if skin-on) and caramelises the exposed flesh, producing textural contrast between crust and interior. Carryover in a seared salmon fillet is modest — 2–3 °C — because the thin geometry dissipates heat quickly, so accurate pull timing is essential to avoid overcooking.",
     "sous_vide": "Salmon fillet cooked sous vide is sealed in a vacuum bag and submerged in a precision-temperature water bath for an extended period; the bath temperature is the cook temperature, and the fish will equilibrate to that temperature throughout its thickness over sufficient time. This method produces radically different textures compared to pan searing or roasting — at bath temperatures below 50 °C, the connective tissue between muscle segments (myocommata) softens but the proteins in the myotomes remain in a semi-liquid, custard-like state; at 52–54 °C the salmon fully sets to a firm but moist texture. The major structural advantage of sous vide is elimination of the hard-to-control temperature gradient from surface to core: the entire fillet is held at one temperature. Carryover is essentially zero — the fish exits the bath at the precise target temperature and the bag insulates it — but a quick sear or glaze step post-bath will add 2–3 °C at the surface."
   },
+  "salmon_steak": {
+    "oven_bake": "A salmon steak is a cross-cut through the whole fish, perpendicular to the spine,\nretaining the central spine bone, the curved rib bones, and skin all the way around\nthe outer edge. Oven baking suits this cut because the all-around radiant heat works\non every surface at once — the cross-section is a roughly horseshoe shape with no flat\nbottom face, so a pan-bottom is wasted on it, but a baking dish or foil parcel\nsurrounds the steak with hot air and steam. The central bones gently conduct heat\ntoward the geometric centre, slightly accelerating cooking compared to a same-thickness\nfillet baked the same way. Carryover at oven-bake temperatures is modest (1–2 °C)\nbecause the cut is small and is removed at low internal temperatures.\n\nThe thin belly flaps will overcook relative to the back-flesh if the steak is laid\nflat in a baking dish. Folding and securing the flaps inward, or wrapping the entire\nsteak in a foil/parchment papillote with juice, is the common solution — the en-papillote\npreparation steams the flaps gently while the back-flesh continues to roast.\n\nProbe placement: insert from the outer edge of the back-flesh (the thickest section),\nhorizontally, aiming at the geometric centre. Keep the tip at least 1 cm clear of the\ncentral spine bone, which conducts heat and gives a lagging reading. For a foil/parchment\npapillote, route the probe lead so the parcel can still be sealed.",
+    "pan_sear": "A salmon steak is a cross-cut through the whole fish, perpendicular to the spine, so it\nretains the central spine bone, the curved rib bones, and skin around the entire outer\nedge. Pan-searing this cut suits home kitchens because the dense, flat back-flesh sits\nsquarely on the pan and renders the surrounding fat ribbon under the skin into a\ncaramelised crust, while the bones in the centre conduct heat slightly faster than the\nflesh — pulling the geometric centre to temperature a little ahead of an equivalent-thickness\nfillet. The thin belly flaps will overcook unless folded inward and secured with kitchen\ntwine or a cocktail stick before the steak hits the pan; cooks who do not fold the flaps\naccept that those thin sections will reach well-done while the back-flesh remains at the\ntarget.\n\nProbe placement: insert from the outer edge of the back-flesh (the thickest section),\naiming horizontally toward the geometric centre of the cross-section. Keep the tip at\nleast 1 cm clear of the central spine bone, which conducts heat and gives a lagging\nreading. Never insert from the belly-flap side — too thin to give a representative\ntemperature for the back-flesh."
+  },
   "lobster_tail": {
     "grill": "Lobster tail is the large tail segment of a lobster (*Homarus americanus*, the American/Maine lobster, or *Homarus gammarus*, the European/Breton lobster) separated from the body and claws; frozen and fresh spiny lobster tails (*Panulirus argus*) from the Caribbean and Pacific are also widely used. The edible flesh is the tail muscle — firm, white-to-pale-pink, sweet and rich in natural glutamates. Grilling is one of the most popular preparations for lobster tail because the direct radiant heat produces char and caramelisation on the cut flesh surface while the shell acts as a natural heat shield and flavour-retaining vessel. Butterflying the tail (cutting through the shell dorsally and splaying the flesh upward) is the dominant grill preparation because it exposes more flesh surface to direct heat and allows basting to penetrate the meat. Overcooking tightens the fibres sharply; the pull window is 58–62 °C before the meat becomes dry and rubbery. Carryover is 3–4 °C.",
     "oven_roast": "Lobster tail is the large tail segment of a lobster (*Homarus americanus*, the American/Maine lobster, or *Homarus gammarus*, the European/Breton lobster) separated from the body and claws; frozen and fresh spiny lobster tails (*Panulirus argus*) from the Caribbean and Pacific are also widely used. The edible flesh is the tail muscle — firm, white-to-pale-pink, sweet and rich in natural glutamates. Grilling is one of the most popular preparations for lobster tail because the direct radiant heat produces char and caramelisation on the cut flesh surface while the shell acts as a natural heat shield and flavour-retaining vessel. Butterflying the tail (cutting through the shell dorsally and splaying the flesh upward) is the dominant grill preparation because it exposes more flesh surface to direct heat and allows basting to penetrate the meat. Overcooking tightens the fibres sharply; the pull window is 58–62 °C before the meat becomes dry and rubbery. Carryover is 3–4 °C."
@@ -18105,6 +18141,9 @@ const CUT_METHOD_PROFILES = {
   },
   "cured_ham": {
     "oven_roast": "Cured ham (skinke in Danish; Schinken in German/Austrian) for the oven roast method encompasses both pre-boiled glazed ham and straight-to-oven versions. The classic approach is to boil a mild-cured or smoked ham first (removing excess salt and pre-cooking the meat), then score the rind and glaze it in a hot oven until caramelised. Low-and-slow oven variants skip the boiling and use very low temperatures (80°C oven) to achieve even, juicy results. Target internal temperature for safe, juicy cured ham: **70–75 °C** — the curing keeps the meat safe at slightly lower temps than fresh pork, but 75 °C is the standard target for glazed results.\n\nTarget internal temperatures (oven roast):\n- Juicy, glazed: **70–75 °C (158–167 °F)**\n- Very low-and-slow: **75 °C** (when oven is held at 80 °C)"
+  },
+  "ham": {
+    "oven_roast": "Ham is the hind leg of the pig, cured with salt, smoke, or both before being sold. Unlike\nany other pork cut it arrives at the oven already transformed: curing has tightened the\nproteins, expelled moisture, and built a dense, savoury structure that raw pork leg does\nnot have. Oven roasting suits this cut because the enclosed radiant heat caramelises the\nscored fat surface and sets the glazed, lacquered crust that defines baked ham; the low,\nsteady oven temperature then heats the large dense mass to serving temperature without\ndrying out the firm interior. Carryover is modest — typically 2–4 °C — because the dense\nmass equalises heat slowly.\n\nProbe placement: insert from the thick cut end (butt end), angling the tip to the geometric\ncentre of the largest lean muscle section, at least 1 cm clear of the central bone. Ham has\nmultiple muscle groups separated by fat seams — the probe tip must not rest in a fat seam,\nwhich gives a lagging reading."
   },
   "pork_belly": {
     "air_fryer": "Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.",
@@ -18982,7 +19021,7 @@ const RECIPE_TITLES_INDEX = {
       "Yotam Ottolenghi & Sami Tamimi — Slow-Cooked Beef Tongue with Tehina (Israeli/Levantine tradition)"
     ],
     "slow_cooker": [
-      "Hugh Acheson — Slow-Cooker Pot-au-Feu Tongue (American Southern tradition)",
+      "Hugh Acheson — Slow-Cooker Pot-au-Feu Tongue (American Culinary Group C tradition)",
       "Diana Kennedy — Lengua de Res al Crock-Pot, estilo casero (Mexican home tradition adaptation)",
       "Andrea Nguyen — Lưỡi Bò Hầm in the Slow Cooker (Vietnamese tradition)",
       "Magnus Nilsson — Pickled-Beef-Tongue Method, Slow-Cooker Adaptation (Nordic tradition)"
@@ -19045,6 +19084,53 @@ const RECIPE_TITLES_INDEX = {
       "Gordon Ramsay — Standing Rib Roast (British tradition)",
       "Michel Roux — Côte de Bœuf Rôtie (French tradition)",
       "Aaron Franklin — Texas Prime Rib in the Oven (Pit-to-Oven adaptation)"
+    ]
+  },
+  "roasting_joint": {
+    "oven_roast": [
+      "Nagi Maehashi — Marinated Roast Beef (Australian tradition, designed for economical roasting joints)",
+      "Chef Simon — Rôti de Boeuf (French classical tradition)",
+      "Immaculate Bites — Creole-Spiced Oven Roast Beef (West African / Southern American Creole tradition)",
+      "Holger Rørby Madsen — Langtidsstegt Oksefilet (Danish tradition — the ultra-low method)"
+    ]
+  },
+  "round_roast": {
+    "oven_roast": [
+      "Good Food — Easy Roast Beef (British tradition)",
+      "Good Food — Roast Beef with Red Wine & Banana Shallots (British tradition)",
+      "Immaculate Bites — Creole-Spiced Roast Beef (West African / Southern American Creole tradition)",
+      "Katja Nordlund — Paahtopaisti (Finnish tradition)"
+    ]
+  },
+  "rump": {
+    "pan_sear": [
+      "Good Food — Rump Steak (British tradition)",
+      "Köket.se — Rumpstek à la Bercy (Swedish tradition)",
+      "Good Food — Thai Beef with Coconut Dressing (Thai-inspired, Group B source)",
+      "Good Food — Mexican Steak with Beans (Mexican-inspired, Group B source)"
+    ]
+  },
+  "rump_roast": {
+    "oven_roast": [
+      "Good Food — Easy Roast Beef (British tradition)",
+      "Good Food — Roast Beef with Red Wine & Banana Shallots (British tradition)",
+      "Immaculate Bites — Creole-Spiced Roast Beef (West African / Southern American Creole tradition)",
+      "Katja Nordlund — Paahtopaisti (Finnish tradition)"
+    ]
+  },
+  "sirloin_roast": {
+    "oven_roast": [
+      "Chef Simon — Rôti de Boeuf (French classical tradition)",
+      "Nagi Maehashi — Marinated Roast Beef (Australian tradition)",
+      "Immaculate Bites — Creole-Spiced Roast Beef (West African / Southern American Creole tradition)"
+    ]
+  },
+  "top_round_roast": {
+    "oven_roast": [
+      "Good Food — Easy Roast Beef (British tradition)",
+      "Good Food — Roast Beef with Red Wine & Banana Shallots (British tradition)",
+      "Immaculate Bites — Creole-Spiced Roast Beef (West African / Southern American Creole tradition)",
+      "Katja Nordlund — Paahtopaisti (Finnish tradition)"
     ]
   },
   "goose_breast": {
@@ -19113,7 +19199,7 @@ const RECIPE_TITLES_INDEX = {
   "ground_turkey": {
     "braise": [
       "Marcella Hazan — Ragù di Tacchino (Italian tradition)",
-      "Hugh Acheson — Slow-Cooker Turkey Mince Bolognese (American Southern tradition)",
+      "Hugh Acheson — Slow-Cooker Turkey Mince Bolognese (American Culinary Group C tradition)",
       "Yotam Ottolenghi — Spiced Turkey Mince with Tomato & Yoghurt (Levantine tradition)",
       "Tina Nordström — Kalkonfärssås (Swedish ragù tradition)"
     ],
@@ -19125,7 +19211,7 @@ const RECIPE_TITLES_INDEX = {
     ],
     "pan_fry": [
       "Diana Henry — Pan-Fried Turkey Mince with Sage, Apple & Cider (British modern tradition)",
-      "Hugh Acheson — Pan-Fried Turkey Mince with Sweet-Onion Gravy (American Southern tradition)",
+      "Hugh Acheson — Pan-Fried Turkey Mince with Sweet-Onion Gravy (American Culinary Group C tradition)",
       "Andrea Nguyen — Larb Gai Tay with Ground Turkey (Lao / Northern Thai tradition adaptation)",
       "Tina Nordström — Stekt Kalkonfärs på Lök (Swedish home tradition)"
     ]
@@ -19140,7 +19226,7 @@ const RECIPE_TITLES_INDEX = {
   "turkey_burger": {
     "air_fryer": [
       "America's Test Kitchen — Air-Fryer Turkey Burgers (American tradition)",
-      "Hugh Acheson — Air-Fryer Turkey Burgers with Sage & Lemon (American Southern tradition)",
+      "Hugh Acheson — Air-Fryer Turkey Burgers with Sage & Lemon (American Culinary Group C tradition)",
       "Tina Nordström — Kalkonburgare i Airfryer (Swedish tradition)",
       "Diana Henry — Air-Fryer Turkey Burgers with Tarragon & Lemon (British modern tradition)"
     ],
@@ -19152,9 +19238,20 @@ const RECIPE_TITLES_INDEX = {
     ],
     "pan_fry": [
       "America's Test Kitchen — Pan-Seared Turkey Burgers (American tradition)",
-      "Hugh Acheson — Pan-Fried Turkey Burgers with Sage & Lemon (American Southern tradition)",
+      "Hugh Acheson — Pan-Fried Turkey Burgers with Sage & Lemon (American Culinary Group C tradition)",
       "Tina Nordström — Pannstekt Kalkonburgare (Swedish tradition)",
       "Yotam Ottolenghi — Spiced Turkey Burgers in the Pan with Tahini (Levantine tradition)"
+    ]
+  },
+  "turkey_leg": {
+    "oven_roast": [
+      "Good Food (provided by Apetit Online) — Roast Turkey Leg with Garlic & Rosemary (Czech tradition)",
+      "Good Food magazine — Classic Roast Turkey — thigh doneness test (British tradition)",
+      "Köket.se — Kalkon – Så Blir Den Saftig och God (Swedish tradition)",
+      "Immaculate Bites — Roasted Turkey Thighs (West African / Southern Creole tradition)"
+    ],
+    "smoker": [
+      "Immaculate Bites — Smoked Turkey Legs (West African / Southern US Creole tradition)"
     ]
   },
   "whole_turkey": {
@@ -19976,6 +20073,20 @@ const RECIPE_TITLES_INDEX = {
       "Donna Hay — Sous Vide Salmon with Lemon and Capers (Australian tradition)"
     ]
   },
+  "salmon_steak": {
+    "oven_bake": [
+      "CuisineAZ — Darne de saumon en papillote facile (French / Culinary Group B tradition)",
+      "CuisineAZ — Darne de saumon citronnée au four de grand-mère (French / Culinary Group B tradition)",
+      "Tasteline — Laxkotletter med grönsaker (Swedish / Culinary Group D tradition)",
+      "Matklubben — Ugnsbakad laxkotlett med gorgonzola (Swedish / Culinary Group D tradition)"
+    ],
+    "pan_sear": [
+      "ICA Provkök — Laxkotlett med dill- och kaprissås (Swedish / Culinary Group D tradition)",
+      "ICA Provkök — Laxkotlett med limesmör (Swedish / Culinary Group D tradition)",
+      "750g — Darne de saumon grillée (French / Culinary Group B tradition)",
+      "Jamie Oliver — Crispy Fried Salmon with Spring Vegetable Broth (British / Culinary Group B tradition)"
+    ]
+  },
   "lobster_tail": {
     "grill": [
       "Steven Raichlen — Grilled Butterflied Lobster Tail with Herb Butter (American tradition)",
@@ -20317,7 +20428,7 @@ const RECIPE_TITLES_INDEX = {
       "Magnus Nilsson — Inkokt Grisetunga med Pepparrotssås (Swedish/Nordic tradition)"
     ],
     "slow_cooker": [
-      "Hugh Acheson — Slow-Cooker Pork Tongue Confit (American Southern tradition)",
+      "Hugh Acheson — Slow-Cooker Pork Tongue Confit (American Culinary Group C tradition)",
       "Diana Kennedy — Lengua de Cerdo en el Crock-Pot (Mexican tradition adaptation)",
       "Andrea Nguyen — Lưỡi Heo Hầm in the Slow Cooker (Vietnamese tradition)",
       "Magnus Nilsson — Slow-Cooker Saltkokt Grisetunga (Nordic tradition)"
@@ -20328,6 +20439,14 @@ const RECIPE_TITLES_INDEX = {
       "Madens Verden — Glaseret Skinke (Danish glazed ham)",
       "Chefkoch — Schinken aus dem Ofen mit Honig-Senf-Kruste (German tradition)",
       "Chefkoch — Schinkenkrustenbraten bei Niedrigtemperatur (German low-and-slow tradition)"
+    ]
+  },
+  "ham": {
+    "oven_roast": [
+      "Anna och Fanny Bergenström — Ugnsbakad Julskinka med Senapsgriljering (Swedish / Culinary Group D tradition)",
+      "Angela Lawrence — Jamaican Glazed Baked Ham (Jamaican / Culinary Group C tradition)",
+      "John Torode — Baked Glazed Ham (British / Culinary Group B tradition)",
+      "Nagi Maehashi — Maple Glazed Ham (Australian / Culinary Group B tradition)"
     ]
   },
   "pork_belly": {
@@ -23013,7 +23132,7 @@ const CLASSIC_RECIPE_TITLES_INDEX = {
       "Yotam Ottolenghi & Sami Tamimi — Slow-Cooked Beef Tongue with Tehina (Israeli/Levantine tradition)"
     ],
     "slow_cooker": [
-      "Hugh Acheson — Slow-Cooker Pot-au-Feu Tongue (American Southern tradition)",
+      "Hugh Acheson — Slow-Cooker Pot-au-Feu Tongue (American Culinary Group C tradition)",
       "Diana Kennedy — Lengua de Res al Crock-Pot, estilo casero (Mexican home tradition adaptation)",
       "Andrea Nguyen — Lưỡi Bò Hầm in the Slow Cooker (Vietnamese tradition)",
       "Magnus Nilsson — Pickled-Beef-Tongue Method, Slow-Cooker Adaptation (Nordic tradition)"
@@ -23135,7 +23254,7 @@ const CLASSIC_RECIPE_TITLES_INDEX = {
   "ground_turkey": {
     "braise": [
       "Marcella Hazan — Ragù di Tacchino (Italian tradition)",
-      "Hugh Acheson — Slow-Cooker Turkey Mince Bolognese (American Southern tradition)",
+      "Hugh Acheson — Slow-Cooker Turkey Mince Bolognese (American Culinary Group C tradition)",
       "Yotam Ottolenghi — Spiced Turkey Mince with Tomato & Yoghurt (Levantine tradition)",
       "Tina Nordström — Kalkonfärssås (Swedish ragù tradition)"
     ],
@@ -23147,7 +23266,7 @@ const CLASSIC_RECIPE_TITLES_INDEX = {
     ],
     "pan_fry": [
       "Diana Henry — Pan-Fried Turkey Mince with Sage, Apple & Cider (British modern tradition)",
-      "Hugh Acheson — Pan-Fried Turkey Mince with Sweet-Onion Gravy (American Southern tradition)",
+      "Hugh Acheson — Pan-Fried Turkey Mince with Sweet-Onion Gravy (American Culinary Group C tradition)",
       "Andrea Nguyen — Larb Gai Tay with Ground Turkey (Lao / Northern Thai tradition adaptation)",
       "Tina Nordström — Stekt Kalkonfärs på Lök (Swedish home tradition)"
     ]
@@ -23162,7 +23281,7 @@ const CLASSIC_RECIPE_TITLES_INDEX = {
   "turkey_burger": {
     "air_fryer": [
       "America's Test Kitchen — Air-Fryer Turkey Burgers (American tradition)",
-      "Hugh Acheson — Air-Fryer Turkey Burgers with Sage & Lemon (American Southern tradition)",
+      "Hugh Acheson — Air-Fryer Turkey Burgers with Sage & Lemon (American Culinary Group C tradition)",
       "Tina Nordström — Kalkonburgare i Airfryer (Swedish tradition)",
       "Diana Henry — Air-Fryer Turkey Burgers with Tarragon & Lemon (British modern tradition)"
     ],
@@ -23174,7 +23293,7 @@ const CLASSIC_RECIPE_TITLES_INDEX = {
     ],
     "pan_fry": [
       "America's Test Kitchen — Pan-Seared Turkey Burgers (American tradition)",
-      "Hugh Acheson — Pan-Fried Turkey Burgers with Sage & Lemon (American Southern tradition)",
+      "Hugh Acheson — Pan-Fried Turkey Burgers with Sage & Lemon (American Culinary Group C tradition)",
       "Tina Nordström — Pannstekt Kalkonburgare (Swedish tradition)",
       "Yotam Ottolenghi — Spiced Turkey Burgers in the Pan with Tahini (Levantine tradition)"
     ]
@@ -24339,7 +24458,7 @@ const CLASSIC_RECIPE_TITLES_INDEX = {
       "Magnus Nilsson — Inkokt Grisetunga med Pepparrotssås (Swedish/Nordic tradition)"
     ],
     "slow_cooker": [
-      "Hugh Acheson — Slow-Cooker Pork Tongue Confit (American Southern tradition)",
+      "Hugh Acheson — Slow-Cooker Pork Tongue Confit (American Culinary Group C tradition)",
       "Diana Kennedy — Lengua de Cerdo en el Crock-Pot (Mexican tradition adaptation)",
       "Andrea Nguyen — Lưỡi Heo Hầm in the Slow Cooker (Vietnamese tradition)",
       "Magnus Nilsson — Slow-Cooker Saltkokt Grisetunga (Nordic tradition)"
@@ -26847,7 +26966,7 @@ const EXP_TREE = {
                 "recommended_doneness": "medium",
                 "supported_methods": [
                   "grill",
-                  "oven_roast",
+                  "oven_bake",
                   "pan_sear"
                 ],
                 "usda_safe_c": 63,
@@ -39141,7 +39260,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "315";
+const PANEL_VERSION = "316";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

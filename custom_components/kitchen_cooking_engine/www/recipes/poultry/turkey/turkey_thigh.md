@@ -41,10 +41,13 @@ quality_assessed: 2026-04-26
 
 ## Research files by cooking method
 
-*No research files yet.*
+| Method | Leaf file | Status |
+|--------|-----------|--------|
+| oven_roast | *not yet created* | ⬜ |
+
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-26
+**Score: 0 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
@@ -61,12 +64,10 @@ quality_assessed: 2026-04-26
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−4** · Missing all four traditions tradition(s) — add all four traditions source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−4** · No temperature research (culinary preferred) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-4. **−3** · No method leaf files — create `turkey_thigh-{method}.md` leaf files for each supported cooking method, each with 4–6 diverse source recipes
-5. **−3** · No temperature research (safe temps) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-6. **−2** · No per-method temp research — ensure each method leaf file includes explicit pull temperatures from source recipes
-7. **−1** · Cut profile is a placeholder — replace the placeholder with a full cut profile — anatomy, structure, connective tissue, and cooking behaviour
+1. **−8** · Cooking methods not researched
+2. **−4** · No temperature research (culinary preferred)
+3. **−3** · No method leaf files
+4. **−3** · No temperature research (safe temps)
+5. **−4** · Missing all four traditions
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

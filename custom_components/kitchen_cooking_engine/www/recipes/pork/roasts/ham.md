@@ -28,7 +28,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 0
+quality_score: 8
 cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
@@ -36,36 +36,50 @@ quality_assessed: 2026-04-26
 
 ## Cut profile
 
-*Placeholder — cut profile research not yet completed.*
+Ham is the hind leg of the pig — the biceps femoris and surrounding muscles of the upper
+rear limb — cured with salt, smoke, or both before being sold. Unlike any other pork cut,
+ham does not arrive raw: curing transforms it into a shelf-stable product with a firm,
+dense texture, a pronounced savoury-sweet flavour, and a characteristic mahogany rind
+once cooked. The cut runs from the aitch bone (hip socket) down to and including the shank.
+
+Two primary forms are sold for oven roasting:
+- **Fully cooked (ready-to-serve) ham** — already pasteurised during commercial smoking/curing.
+  The oven is used solely to heat it through (55–63 °C / 130–145 °F) and caramelise a glaze.
+- **Raw/uncooked ham (UK gammon, Nordic julskinka, Filipino fresh ham)** — must reach USDA
+  minimum 63 °C / 145 °F; Swedish practice specifies 72 °C / 162 °F for safety.
+
+The bone runs along the centre of the shank end. Probe placement: insert from the thick cut
+end (butt end), angle to the geometric centre of the largest lean muscle section, clear of the
+central bone. Multiple muscle groups are separated by fat seams — avoid resting the tip in a
+fat seam.
+
+Glazing is universal across all traditions: sweet (maple syrup, brown sugar, honey, pineapple
+juice, fruit jam) balanced with a tangy counterpoint (mustard, citrus) and warm spice (cloves,
+allspice, cinnamon). The glaze is applied in the final 15–45 minutes at elevated heat (200–225 °C)
+and basted repeatedly to build a lacquered crust over the scored fat.
 
 ## Research files by cooking method
 
-*No research files yet.*
+| Method | Leaf file | Status |
+|--------|-----------|--------|
+| oven_roast | [ham-oven_roast.md](ham-oven_roast.md) | ✅ 4 recipes — SE/JM/UK/AU; 2 explicit pull temps |
+
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-26
+**Score: 8 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Cut profile is a placeholder | −1 |
-| No method leaf files | −3 |
-| No temperature research (safe temps) | −3 |
-| No temperature research (culinary preferred) | −4 |
-| No per-method temp research | −2 |
+| No temperature research (culinary preferred) | −2 |
+| No per-method temp research | −1 |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−4** · Missing all four traditions tradition(s) — add all four traditions source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−4** · No temperature research (culinary preferred) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-4. **−3** · No method leaf files — create `ham-{method}.md` leaf files for each supported cooking method, each with 4–6 diverse source recipes
-5. **−3** · No temperature research (safe temps) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-6. **−2** · No per-method temp research — ensure each method leaf file includes explicit pull temperatures from source recipes
-7. **−1** · Cut profile is a placeholder — replace the placeholder with a full cut profile — anatomy, structure, connective tissue, and cooking behaviour
+1. **−8** · Cooking methods not researched — set `cooking_methods_researched: 1` after confirming no additional methods (slow_cooker, braise) need leaves
+2. **−2** · No culinary preferred temp research — two sources gave no explicit pull temp; find a US/Filipino source with explicit temp
+3. **−1** · Missing Culinary Group A tradition — add an Culinary Group A tradition source (e.g. Filipino, Vietnamese, Chinese glazed ham)
+4. **−1** · Per-method temp research — once all 4 traditions have explicit temps, this resolves
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

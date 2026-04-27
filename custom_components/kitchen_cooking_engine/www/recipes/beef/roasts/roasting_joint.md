@@ -52,44 +52,42 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 0
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
+quality_score: 9
+cooking_methods_researched: 1
+quality_assessed: 2026-04-27
 -->
 # Roasting Joint — Cut Overview
 
 ## Cut profile
 
-*Placeholder — cut profile research not yet completed.*
+"Roasting joint" is a British and Australian umbrella term covering any large beef joint suitable for oven roasting as a Sunday centrepiece. It encompasses multiple distinct anatomical cuts — most commonly topside (Top Round), silverside (Bottom Round), bolar blade, rib of beef (standing rib), or sirloin of beef — unified by size (typically 1–3 kg) and their suitability for dry oven roasting without braising liquid.
+
+**Anatomy summary**: All roasting joint cuts come from the hindquarter or loin region. They share relatively low collagen content compared to braising cuts (brisket, chuck, shank), meaning they do not require high-temperature collagen dissolution. The defining cooking challenge across all roasting joint types is moisture retention: lean cuts (topside, silverside) dry out quickly above 60 °C, while fattier cuts (rib) are more forgiving.
+
+**Key cooking distinction**: Unlike stewing/braising cuts, roasting joints should not be cooked in liquid — the whole point is dry heat producing a Maillard-browned exterior with a juicy, pink interior. Braising changes the character of the cut entirely, softening it to a "pull apart" texture that is neither desired nor appropriate for a Sunday roast.
+
+**Temperature targets**: Consistently confirmed across culinary traditions — pull at 44–57 °C, serve at 50–63 °C. Lean joints (topside, silverside) should not exceed 57 °C final temperature; rib joints are more forgiving to 60 °C.
+
+**Probe placement**: Enter from the end of the joint to the geometric centre of the lean section. Stay 2 cm clear of any bones (bone-in rib roast).
 
 ## Research files by cooking method
 
-*No research files yet.*
+| Method | Leaf file | Status |
+|--------|-----------|--------|
+| oven_roast | [roasting_joint-oven_roast.md](roasting_joint-oven_roast.md) | ✅ 4 recipes — Groups B, C, D; Group A gap noted |
+
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-26
+**Score: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Cut profile is a placeholder | −1 |
-| No method leaf files | −3 |
-| No temperature research (safe temps) | −3 |
-| No temperature research (culinary preferred) | −4 |
-| No per-method temp research | −2 |
 
-### Improvement priorities
+### Notes
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−4** · Missing all four traditions tradition(s) — add all four traditions source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−4** · No temperature research (culinary preferred) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-4. **−3** · No method leaf files — create `roasting_joint-{method}.md` leaf files for each supported cooking method, each with 4–6 diverse source recipes
-5. **−3** · No temperature research (safe temps) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-6. **−2** · No per-method temp research — ensure each method leaf file includes explicit pull temperatures from source recipes
-7. **−1** · Cut profile is a placeholder — replace the placeholder with a full cut profile — anatomy, structure, connective tissue, and cooking behaviour
+- `cooking_methods_researched: 1` — oven_roast confirmed as the correct method; braising is not appropriate for roasting joints (no collagen to dissolve)
+- 4 source recipes with explicit pull temperatures across Groups B, C, D
+- Group A gap: oven-roasting whole beef joints is not a documented tradition in confirmed reachable South/East/SE Asian recipe sources
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -391,6 +391,49 @@ Commits between cut files as required.
 
 ---
 
+## v0.6.2.09 — Cut file improvements progress
+
+### Completed cut files
+
+**beef/rump** (`docs/recipe_research/beef/rump/rump.md`)
+- Cut profile written: anatomy (gluteus medius, biceps femoris), structure (lean + fat cap), British terminology note (not "sirloin"), why pan-sear suits it, probe placement.
+- Leaf created: `rump-pan_sear.md` — 4 verified sources:
+  - BBC Good Food (Group B, British): classic pan-seared rump steak with resting
+  - BBC Good Food (Group B, British): rump steak technique + tips
+  - BBC Good Food (Group B, British): garlic butter pan-seared rump
+  - Koket.se (Group D, Swedish): Rumstek — classic Swedish home preparation
+- quality_score updated: 0 → 8; cooking_methods_researched: 0 → 1
+
+> **Note:** "sirloin" is most commonly translated as "ryggbiff" in Swedish, but this can be confusing — in American butchering sirloin refers to the area above the hip, while in British butchering "sirloin" is a different cut (higher on the back, closer to the loin). The Swedish cut "rump" matches the British/Continental rump, not the American sirloin/striploin. Recipe files and cut profiles should not use "sirloin" interchangeably with "rump" in a Swedish context.
+
+**poultry/turkey_leg** (`docs/recipe_research/poultry/turkey/turkey_leg.md`)
+- Cut profile updated: anatomy (drumstick, thigh, tibia/fibula), collagen content, why low-and-slow methods suit it, probe placement, common doneness confusion (USDA 74 °C vs competitive BBQ 85–90 °C).
+- Leaf created: `turkey_leg-oven_roast.md` — 4 verified sources:
+  - Nagi Maehashi / RecipeTin Eats (Group B, Australian): oven-roasted turkey leg
+  - themediterraneandish.com (Group C, Mediterranean/Egyptian): spiced roasted turkey leg
+  - koket.se (Group D, Swedish): kalkonfiol med äppelglaze
+  - koket.se (Group D, Swedish): ugnsstekt kalkonlår
+- Partial leaf created: `turkey_leg-smoker.md` — 1 verified source (BBQ/smoked turkey leg); noted as partial pending additional sources.
+- quality_score updated: 0 → 7 (oven_roast leaf done; smoker partial; other methods pending)
+
+---
+
+## v0.6.2.10 — CHORES
+
+### Changes
+- Version bumped: 0.6.2.09 → 0.6.2.10 in all 4 locations
+- `generate_frontend_data.py` run: PANEL_VERSION 315 → 316
+- USER_GUIDE.md version header updated to 0.6.2.10
+- Branch timeline updated with rump + turkey_leg work
+
+### Status
+- [x] Version bumped to 0.6.2.10 in manifest.json, __init__.py (×2), const.py
+- [x] PANEL_VERSION auto-incremented to 316
+- [x] USER_GUIDE.md version header updated to 0.6.2.10
+- [x] Branch timeline updated with completed cut file work
+
+---
+
 ## Session start — 2026-04-27 (agent 2, IMPROVE_CUT_FILES.md execution)
 
 ### Output 1 — Culinary group definitions (verbatim from `RECIPE_COLLECTION_TOR.md`)

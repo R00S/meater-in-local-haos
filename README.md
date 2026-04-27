@@ -26,9 +26,18 @@ Full installation, configuration, and feature documentation:
 
 ## 📊 Current Status
 
-**v0.6.1.23** — Development release (April 2026)
+**v0.6.2.10** — Development release (April 2026)
 
-GUI Redesign Phases 1–8 complete. Experimental MEATER path now file-driven (EXP_TREE built from recipe `.md` files). Release workflow auto-runs generator. See [STATUS.md](STATUS.md) for full progress tracking.
+GUI Redesign Phases 1–8 complete. Experimental MEATER path now file-driven (EXP_TREE built from recipe `.md` files). Lovelace custom card support added. Release workflow auto-runs generator. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.6.2.x Features — Bug fixes, Lovelace card, help buttons, recipe research (April 2026)
+- ✅ **Lovelace custom card** — Drop `type: custom:kitchen-cooking-card` into any dashboard view; auto-registered as a Lovelace resource on startup — no manual resource configuration needed
+- ✅ **Contextual help buttons** — Every navigable screen now has a `?` button that opens the relevant section of the User Guide in a new tab
+- ✅ **Fix: Portions not propagating** (#83) — AI recipe portions set on screen 1 now carry through to the suggestions screen correctly
+- ✅ **Fix: Ingredient chips not translated** (#84) — Selected ingredient chips now show the correct language name regardless of active language
+- ✅ **Fix: Blank screen on tab return** (#85) — `_renderHistoryCard` was undefined, causing a TypeError and blank-screen flash; method added
+- ✅ **USDA safety legend restored** — Doneness card shows 🟢 safe · 🟠 caution · 🔴 below guidelines with USDA minimum warning
+- ✅ **189 international cuts, 198 Swedish cuts** — ongoing recipe research expansion; `cooking_methods_researched` quality field added across all cut index files
 
 ### v0.6.1.x Features — Experimental MEATER path & CI (April 2026)
 - ✅ **File-driven experimental cut tree** — `EXP_TREE` is built from `<!-- KCE:CUT … -->` tags in recipe `.md` files; no `cooking_data.py` edit needed to add a cut to the experimental MEATER path
@@ -96,8 +105,8 @@ GUI Redesign Phases 1–8 complete. Experimental MEATER path now file-driven (EX
 
 ### Core Features (all versions)
 - ✅ **MEATER+ BLE integration** — Real-time temperature monitoring via ESPHome
-- ✅ **185+ international cuts** (USDA) + **89 Swedish cuts** (Livsmedelsverket)
-- ✅ **17 built-in Ninja Combi recipes** with 12 cooking modes
+- ✅ **189+ international cuts** (USDA) + **198+ Swedish cuts** (Livsmedelsverket)
+- ✅ **31 built-in Ninja Combi recipes** with 12 cooking modes
 - ✅ **Multi-appliance support** — Ninja Combi, MultiFry, Standard Oven, Stovetop, Microwave, Custom appliances
 - ✅ **Dynamic ETA** — Time-to-target based on temperature rise rate
 - ✅ **Notifications** — Mobile push, TTS voice, persistent, indicator light (blue→red→white)
