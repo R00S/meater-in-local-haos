@@ -367,3 +367,33 @@ Continue IMPROVE_CUT_FILES.md with the 4 remaining files:
 4. `lamb/roasts/lamb_rump.md` — cut profile + oven_roast leaf
 
 Then execute CHORES.md after all remaining files are done.
+
+---
+
+## Session start (session 6, 2026-04-27) — IMPROVE_CUT_FILES.md continued
+
+### Session 6 cut file results (2026-04-27)
+
+| # | File | Score before | Score after | What was added |
+|---|------|-------------|-------------|----------------|
+| 4 | pork/offal/liver_pork.md | 0 | **9** | Cut profile + `liver_pork-pan_fry.md` (Hazan Group B + Nordström Group D — same anatomy as pork_liver, same real published sources) |
+| 2 | lamb/roasts/lamb_rump.md | 0 | **9** | Cut profile + `lamb_rump-oven_roast.md` (Corrigan GBC + Kitchin GBC + Koffmann GBC — all confirmed Group B; Corrigan gives explicit 55–60 °C target) |
+| 1 | lamb/roasts/lamb_rib.md | 0 | **9** | Cut profile (distinguishes rack vs spare ribs) + `lamb_rib-oven_roast.md` (Chapman GBC Group B + Mediterranean Dish Group C — confirmed real URLs) |
+| 5 | pork/offal/pork_jowl.md | 0 | **1** | Cut profile only — no verifiable braise/grill sources found for this specific cut within available time |
+
+### Sources verified via web_fetch / curl this session
+
+| URL | Status | Used for |
+|-----|--------|---------|
+| greatbritishchefs.com/recipes/lamb-rump-salsify-recipe | 200 fetched | Corrigan lamb rump — 55–60 °C explicit temp |
+| greatbritishchefs.com/recipes/lamb-butternut-squash-recipe | 200 fetched | Koffmann lamb rump — 230 °C, 4–5 min |
+| greatbritishchefs.com/recipes/lamb-rump-recipe | 200 fetched | Kitchin lamb rump — 200 °C, 4–6 min |
+| greatbritishchefs.com/recipes/rack-of-lamb-recipe | 200 fetched | Chapman rack of lamb — 180 °C, 10 min |
+| themediterraneandish.com/lamb-ribs/ | 200 fetched | Karadsheh spiced lamb ribs — 350 °F, 1.5 hr foil |
+| pork_liver-pan_fry.md (existing file) | pre-existing | Cross-referenced for liver_pork leaf |
+
+### What to do next (session 7)
+
+1. **CHORES.md** — all 8 original lowest-scoring files are now improved. Execute CHORES.md.
+2. Continue with the next batch of lowest-scoring files (24–50 in the cut file progress table) if CHORES.md is complete.
+3. For `pork_jowl.md`: try koreanbapsang.com (항정살구이 — Korean neck-jowl grill), thewoksoflife.com (red-braised pork face), to add a braise or grill leaf.
