@@ -52,44 +52,43 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 0
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
+quality_score: 9
+cooking_methods_researched: 1
+quality_assessed: 2026-04-27
 -->
 # Sirloin Roast — Cut Overview
 
 ## Cut profile
 
-*Placeholder — cut profile research not yet completed.*
+The sirloin roast (top sirloin roast in North American butchery, *contrefilet rôti* in French, *rôti de boeuf* from the sirloin section) is a boneless or bone-in joint from the short loin or top sirloin — the posterior section of the loin, behind the rib and forward of the round. Weight range: typically 1–2.5 kg for a whole joint; larger restaurant-quantity cuts extend to 4–5 kg.
+
+**Anatomy**: The joint consists primarily of the top sirloin cap muscle (gluteus medius) with the fat cap on the dorsal face. It is significantly leaner than rib roast: intramuscular fat is moderate rather than heavy, and connective tissue content is modest. This is not a collagen-rich cut — braising to collagen-dissolving temperatures (88+ °C) would overcook and dry out the lean fibres. The dominant culinary method worldwide is oven roasting to medium-rare (50–57 °C).
+
+**Cooking behaviour**: The lean muscle fibres tighten quickly above 60 °C; the fat cap renders and bastes the exterior during roasting when the joint is positioned fat-side up. Carryover is 4–8 °C on the standard high-low method (initial sear + moderate oven), and near zero on ultra-low temperature methods (70–80 °C oven for several hours). See `sirloin_roast-oven_roast.md` for the full temperature consensus table.
+
+**Probe placement**: Insert from the end of the joint into the geometric centre of the lean muscle, avoiding the fat cap (fat is a poor thermal conductor and gives falsely low readings) and keeping at least 1.5 cm from any bone if present.
+
+**Methods researched**: Oven roasting is the primary confirmed culinary method across European, North American, and Scandinavian traditions. No whole-joint braise tradition specific to the sirloin cut was found (the Woks of Life *Asian Pot Roast* uses chuck roast, a different cut). No Group A oven-roast source was found on the verified site list.
 
 ## Research files by cooking method
 
-*No research files yet.*
+| Method | Leaf file | Status |
+|--------|-----------|--------|
+| oven_roast | [sirloin_roast-oven_roast.md](sirloin_roast-oven_roast.md) | ✅ 4 recipes — Groups B, C, D; Group A gap noted |
+
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-26
+**Score: 9 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Cut profile is a placeholder | −1 |
-| No method leaf files | −3 |
-| No temperature research (safe temps) | −3 |
-| No temperature research (culinary preferred) | −4 |
-| No per-method temp research | −2 |
+| Missing Culinary Group A (oven_roast leaf) | (covered by above) |
 
-### Improvement priorities
+### Notes
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−4** · Missing all four traditions tradition(s) — add all four traditions source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−4** · No temperature research (culinary preferred) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-4. **−3** · No method leaf files — create `sirloin_roast-{method}.md` leaf files for each supported cooking method, each with 4–6 diverse source recipes
-5. **−3** · No temperature research (safe temps) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-6. **−2** · No per-method temp research — ensure each method leaf file includes explicit pull temperatures from source recipes
-7. **−1** · Cut profile is a placeholder — replace the placeholder with a full cut profile — anatomy, structure, connective tissue, and cooking behaviour
+- `cooking_methods_researched: 1` — oven_roast confirmed as the primary method; no verified whole-joint braise or other method for this specific cut found
+- 4 source recipes with explicit pull temperatures across Groups B, C, D
+- Group A gap: oven-roasting a whole sirloin joint is not a documented tradition in confirmed reachable South/East/SE Asian sources; gap noted in leaf file
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
