@@ -314,3 +314,35 @@ All 5 source recipes were fetched via `web_fetch` from live URLs before being wr
 - [x] Version bumped to 0.6.2.07 in all 4 locations
 - [x] PANEL_VERSION auto-incremented to 313
 - [x] USER_GUIDE.md version header updated to 0.6.2.07
+
+---
+
+## 2026-04-27 — Create IMPROVE_CUT_FILES.md work queue (v0.6.2.08)
+
+**Task:** "Create a file called IMPROVE_CUT_FILES.md in the experimental recipe directory
+with the 50 lowest-scoring cut files and instructions for improving them (also create/improve
+child cut-method files for those cuts if needed)."
+
+### Work done
+
+- Scanned all 166 cut index files in `docs/recipe_research/` — extracted `quality_score`,
+  `methods:`, `cooking_methods_researched:`, and existing leaf file inventory for every cut.
+- Sorted by score ascending, took the 50 lowest (scores 0–7).
+- Created `docs/recipe_research/IMPROVE_CUT_FILES.md`:
+  - 32 score-0 cuts (no research at all)
+  - 1 score-4 cut (one leaf missing)
+  - 4 score-5 cuts (partial research)
+  - 6 score-6 cuts (most leaves done, cut profile needs improvement)
+  - 7 score-7 cuts (some leaves missing)
+  - Per-cut table with: slug, file path, existing leaves, missing leaves
+  - Priority order (single-method cuts first)
+  - How-to-improve guide referencing TOR and SOURCE_SURVEY rules
+- Version bumped to 0.6.2.08 in all 4 locations.
+- `generate_frontend_data.py` run — PANEL_VERSION 313 → 314.
+- USER_GUIDE.md version header updated to 0.6.2.08.
+
+### Status
+- [x] `docs/recipe_research/IMPROVE_CUT_FILES.md` created — 50 lowest-scoring cuts, prioritised
+- [x] Version bumped to 0.6.2.08 in all 4 locations
+- [x] PANEL_VERSION auto-incremented to 314
+- [x] USER_GUIDE.md version header updated to 0.6.2.08
