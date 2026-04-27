@@ -11,7 +11,7 @@ cut_type: White Fish
 
 ## Cut profile
 
-Atlantic cod (*Gadus morhua*) fillet is cut from the sides of the fish; the flesh is firm, bright white when raw and milky white when cooked, with large moist flakes separated by thin layers of connective tissue. Cod is lean (less than 1% fat), which means it has no internal fat to provide self-basting protection during high-heat cooking; the natural moisture and gelatin in the connective tissue are the primary sources of perceived juiciness. Pan frying is a very common preparation — the high heat of the pan produces a golden-brown crust on the thin, flour- or breadcrumb-coated exterior while the interior cooks gently. Battered cod (fish and chips) uses the batter as insulation; simple pan-fried cod relies on a light coating of seasoned flour or the naked flesh. Carryover is minimal (2–3 °C) given the lean composition; the flesh transitions from moist-and-flaky to dry-and-crumbly rapidly above 65 °C.
+Pan frying cod uses hot fat (butter, olive oil, or a combination) in a skillet to cook the fillet quickly over moderate-high heat. The high direct-contact heat produces the characteristic golden-brown Maillard crust on the presentation side (skin-side or flesh-side first) while the interior cooks by conduction. A light dusting of seasoned flour or the bare flesh both work — flour increases crust crunchiness and prevents sticking. Because cod is lean (< 1% fat), the fat in the pan is the only basting agent; adequate fat quantity prevents the flesh from drying. Cooking time is typically 3–4 minutes per side for a 2.5 cm fillet. Pull at 60–63 °C; carryover is 2–3 °C.
 
 ## Source recipes
 

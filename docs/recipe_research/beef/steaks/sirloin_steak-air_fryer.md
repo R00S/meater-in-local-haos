@@ -10,13 +10,11 @@ cut_type: Steaks
 # Sirloin Steak × Air Fryer — Recipe Temperature Research
 
 ## Cut profile
-
-The sirloin steak is cut from the sirloin primal, which sits between the short loin (where the NY strip originates) and the round. Top sirloin is the most common steak cut from this primal — it is a firm, relatively lean steak with a bold beefy flavour from the greater muscle activity of this region of the carcass. Compared to the NY strip, top sirloin has less marbling and a slightly coarser grain, making it less forgiving of overcooking; compared to the round, it is noticeably more tender. Pan searing suits sirloin well because the high heat compensates for the reduced marbling by creating a flavourful crust — the Maillard reaction is the primary flavour contribution to a seared top sirloin. The cap muscle (*picanha* region of the sirloin cap) is sometimes separated and considered a distinct cut; this leaf concerns the main top sirloin steak. Carryover is 4–5 °C.
+Air frying a sirloin steak circulates intense hot air at high speed around the meat, producing surface drying and Maillard browning without direct conduction heat. The result is a firmer, lighter crust than a cast-iron sear — less contact-browning but more even all-round colour. Because the sirloin is lean, air frying is best suited to steaks of 2–3 cm thickness; thinner cuts dry out before the interior reaches target temperature. Carryover is 4–5 °C. Target temperature settings mirror pan-fry (rare 49 °C → medium-rare 54 °C), with the air fryer typically running at 200–220 °C for 8–12 minutes depending on thickness.
 
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air Fryer Sirloin Steak (American tradition)
-**Source**: America's Test Kitchen, *Air Fryer Perfection* (America's Test Kitchen, 2019)  
 **Serves**: 2 · **Prep**: 5 min (+1 h dry brine) · **Cook**: 10–12 min · **Rest**: 5 min
 
 **Ingredients**

@@ -562,3 +562,32 @@ Note: No Group A recipes found for ground turkey (maangchi: 403, justonecookbook
 
 **Files updated**: `turkey_ground.md` (score 0 → **6**), created `turkey_ground-grill.md` (2 sources, in-progress), created `turkey_ground-pan_fry.md` (3 sources, in-progress)
 
+
+#### Session 10 work (2026-04-27) — profile copy fixes
+
+Continued from session 9. Focused on fixing method leaf files where the cut profile was a verbatim copy of another leaf or the parent. This is a structural fix (removes multiple −1 deductions) that does not require web access.
+
+**pork_cheek.md** — score 4 → **7**
+- Fixed `pork_cheek-braise.md` cut profile (was copy of pan_fry/parent) → now describes braising method
+- Fixed `pork_cheek-oven_roast.md` cut profile (was copy of pan_fry/parent) → now describes oven roast method
+- Fixed `pork_cheek-pan_fry.md` cut profile (was copy of parent) → now describes pan_fry method
+- Updated parent `pork_cheek.md` cut profile to be anatomy-based (not pan_fry specific)
+- Remaining −8 (methods not researched), −1 (no slow_cooker leaf), −1 (no Group A), −1 (no Group C)
+
+**sirloin_steak.md** — score 5 → **11**
+- Fixed `sirloin_steak-air_fryer.md` cut profile → now describes air fryer method
+- Fixed `sirloin_steak-oven_roast.md` cut profile → now describes reverse-sear oven method
+- Fixed `sirloin_steak-pan_fry.md` cut profile → now describes pan fry method
+- Fixed `sirloin_steak-pan_sear.md` cut profile → now describes pan sear method
+- Remaining −8 (methods not researched), −1 (no Group D recipe)
+
+**cod_fillet.md** — score 5 → **10**
+- Fixed `cod_fillet-air_fryer.md` cut profile → now describes air fryer method
+- Fixed `cod_fillet-oven_bake.md` cut profile → now describes oven bake method
+- Fixed `cod_fillet-pan_fry.md` cut profile → now describes pan fry method
+- Remaining −8 (methods not researched), −1 (no oven_roast leaf), −1 (no Group D recipe)
+
+**hake.md** — score 5 → **6**
+- Fixed `hake-pan_fry.md` cut profile → now describes pan fry method
+- Expanded parent cut profile with anatomy detail (myotome/myosepta structure)
+- Remaining −8 (methods not researched), −2 (2 missing method leaves), −3 (Group A/C/D missing)
