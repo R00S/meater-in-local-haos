@@ -1181,6 +1181,25 @@ Start a cook session that spans multiple appliance entities simultaneously.
 
 ## 14. Troubleshooting
 
+### Panel is blank or shows a white screen after navigating to `/kitchen-cooking`
+
+This means the JS module failed to load or a JavaScript error crashed the LitElement render.
+Steps to fix:
+
+1. **Hard-reload** — Ctrl+Shift+R (Windows/Linux) or Cmd+Shift+R (Mac) to clear the browser cache.
+2. **Restart Home Assistant** — a HACS update may not have applied fully.
+3. **Check browser console** (F12 → Console) for error messages and report them as a GitHub issue.
+4. **Clear site data** — DevTools → Application → Storage → Clear site data (clears `sessionStorage`).
+
+### `type: custom:kitchen-cooking-card` shows "Custom element doesn't exist"
+
+This card is registered automatically when the integration loads — no manual Lovelace resource
+configuration is needed. If the error appears:
+
+1. **Restart Home Assistant** — the JS module must be loaded at least once after installation.
+2. **Hard-reload the browser** — the old (unregistered) element name may be cached.
+3. Confirm the integration is installed and appears in **Settings → Devices & Services**.
+
 ### Panel shows "Reloading Kitchen Cooking Engine…" in a loop
 
 This usually means a JavaScript error crashed the LitElement render. Check the browser
