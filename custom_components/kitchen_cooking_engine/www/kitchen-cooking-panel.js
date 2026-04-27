@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 27 Apr 2026, 15:12 CET
+ * AUTO-GENERATED: 27 Apr 2026, 15:32 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 27 Apr 2026, 15:12 CET
+// Last generated: 27 Apr 2026, 15:32 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -39258,20 +39258,13 @@ class KitchenCookingPanel extends LitElement {
   }
 }
 
-// Force re-registration by using a versioned element name
-// This bypasses browser's cached customElements registry
-// MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "322";
+// Register under a single stable name.
+// Cache-busting is handled by the ?v=PANEL_VERSION query string on the URL,
+// not by a versioned element name.  Registering the same class under two
+// different names triggers "this constructor has already been used with this
+// registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
+const PANEL_VERSION = "323";
 
-// Register with versioned name (what HA frontend will look for)
-const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
-if (!customElements.get(VERSIONED_NAME)) {
-  customElements.define(VERSIONED_NAME, KitchenCookingPanel);
-}
-
-// Also register as a stable (non-versioned) Lovelace card element.
-// This allows users to embed the panel in any dashboard view with:
-//   type: custom:kitchen-cooking-card
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
 }

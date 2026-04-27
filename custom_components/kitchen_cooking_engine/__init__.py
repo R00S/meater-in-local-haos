@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 27 Apr 2026, 14:25 UTC
-Last Change: v0.6.3.4 - Use add_extra_js_url() for kitchen-cooking-card (replaces flaky Lovelace resource API)
+Last Change: v0.6.3.5 - Fix double customElements.define crash (use single stable name kitchen-cooking-card)
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -72,7 +72,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.6.3.4"
+__version__ = "0.6.3.5"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -267,10 +267,10 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
             _LOGGER.warning("Kitchen Cooking Engine: Could not register static path: %s", e)
             return
         
-        # Register the custom panel in the sidebar
-        # Use panel_version in both URL and element name to bust ALL caches
-        # The element name must match what's in kitchen-cooking-panel.js
-        panel_element_name = f"kitchen-cooking-panel-v{panel_version}"
+        # Register the custom panel in the sidebar.
+        # Cache-busting is done via ?v=panel_version on the URL.
+        # The element name is a fixed stable value that matches the single
+        # customElements.define() call in kitchen-cooking-panel.js.
         _LOGGER.info("Kitchen Cooking Engine: Registering panel with version %s", panel_version)
         async_register_built_in_panel(
             hass,
@@ -280,7 +280,7 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
             frontend_url_path="kitchen-cooking",
             config={
                 "_panel_custom": {
-                    "name": panel_element_name,
+                    "name": "kitchen-cooking-card",
                     "embed_iframe": False,
                     "trust_external": False,
                     "module_url": f"/kitchen_cooking_engine_panel/kitchen-cooking-panel.js?v={panel_version}",
