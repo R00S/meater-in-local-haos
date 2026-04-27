@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 27 Apr 2026, 13:48 UTC
-Last Change: v0.6.3.2 - Revert LitElement import to unpkg CDN (bare 'lit' not in HA importmap)
+Last Updated: 27 Apr 2026, 14:10 UTC
+Last Change: v0.6.3.3 - Defer Lovelace resource registration to EVENT_HOMEASSISTANT_STARTED (fixes kitchen-cooking-card)
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -33,8 +33,8 @@ import voluptuous as vol
 from homeassistant.components.frontend import async_register_built_in_panel
 from homeassistant.components.http import StaticPathConfig
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import ATTR_ENTITY_ID, Platform
-from homeassistant.core import HomeAssistant, ServiceCall
+from homeassistant.const import ATTR_ENTITY_ID, EVENT_HOMEASSISTANT_STARTED, Platform
+from homeassistant.core import HomeAssistant, ServiceCall, callback
 from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers import entity_registry as er
 
@@ -72,7 +72,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.6.3.2"
+__version__ = "0.6.3.3"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
@@ -244,6 +244,8 @@ async def _async_register_lovelace_resource(hass: HomeAssistant, resource_url: s
             return
 
         resources = getattr(lovelace_data, "resources", None)
+        if resources is None and isinstance(lovelace_data, dict):
+            resources = lovelace_data.get("resources")
         if resources is None:
             _LOGGER.warning(
                 "Kitchen Cooking Engine: Lovelace resource collection not available "
@@ -348,11 +350,31 @@ async def _async_register_panel(hass: HomeAssistant) -> None:
         
         _LOGGER.info("Kitchen Cooking Engine: Sidebar panel registered (version %s)", panel_version)
 
-        # Also register the JS as a Lovelace module resource so that
+        # Register the JS as a Lovelace module resource so that
         # `type: custom:kitchen-cooking-card` works in dashboards without
         # the user having to add the resource manually.
+        #
+        # Lovelace's resource collection is not reliably available during
+        # async_setup_entry (HA may not have finished starting yet). Defer
+        # until EVENT_HOMEASSISTANT_STARTED so the resources storage is
+        # fully loaded before we try to write to it.
         resource_url = f"/kitchen_cooking_engine_panel/kitchen-cooking-panel.js?v={panel_version}"
-        await _async_register_lovelace_resource(hass, resource_url)
+
+        @callback
+        def _schedule_lovelace_registration(event=None) -> None:
+            hass.async_create_task(
+                _async_register_lovelace_resource(hass, resource_url),
+                "kitchen_cooking_engine_lovelace_resource",
+            )
+
+        if hass.is_running:
+            # Integration reloaded while HA already running — register immediately.
+            _schedule_lovelace_registration()
+        else:
+            hass.bus.async_listen_once(
+                EVENT_HOMEASSISTANT_STARTED,
+                _schedule_lovelace_registration,
+            )
     except Exception as e:
         _LOGGER.error("Kitchen Cooking Engine: Failed to register panel: %s", e, exc_info=True)
         # Clear flag on failure so it can be retried

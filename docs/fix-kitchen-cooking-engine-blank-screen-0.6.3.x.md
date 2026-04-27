@@ -65,7 +65,25 @@ before the "no recipes" ha-card block in `panel-class-template.js`.
 - [x] Regenerated `kitchen-cooking-panel.js` (PANEL_VERSION 318→319)
 - [x] Bumped version 0.6.3.0 → 0.6.3.1
 
-### Session 3 — 2026-04-27
+### Session 4 — 2026-04-27
+
+**Discoveries:**
+- Sidebar panel fixed (v0.6.3.2), but `kitchen-cooking-card` still shows "Custom element doesn't exist"
+- User's Lovelace config: `type: custom:kitchen-cooking-card` in a `sections` view
+- Root cause: `_async_register_lovelace_resource` was called during `async_setup_entry`,
+  BEFORE `EVENT_HOMEASSISTANT_STARTED` fires — at that point Lovelace's resource collection
+  is not yet loaded from storage, so `hass.data["lovelace"]` may be None or its `resources`
+  attribute not yet populated → function silently returns → resource never registered
+- Secondary: `getattr(lovelace_data, "resources", None)` didn't handle dict-style lovelace data
+
+**Actions taken:**
+- [x] Imported `EVENT_HOMEASSISTANT_STARTED` and `callback` in `__init__.py`
+- [x] Replaced direct `await _async_register_lovelace_resource(...)` with deferred call:
+      - If `hass.is_running` (reload): register immediately
+      - Else: listen for `EVENT_HOMEASSISTANT_STARTED`, then create task
+- [x] Added dict fallback: if `getattr` returns None, try `lovelace_data.get("resources")`
+- [x] Regenerated JS (PANEL_VERSION 320→321) — syntax verified clean
+- [x] Bumped version 0.6.3.2 → 0.6.3.3
 
 **Discoveries:**
 - User confirmed v0.6.1.30-beta.main (commit b72dc36, using unpkg) WORKS
