@@ -451,3 +451,98 @@ Continue IMPROVE_CUT_FILES.md with the next batch of low-scoring cut files (scor
 1. `pork/offal/pork_jowl.md` — grill leaf (Korean hangjeongsal): try omnivorescookbook, chinasichuanfood with different URL patterns, or use the GBC site search
 2. `pork/offal/cheek.md` — add Groups A, C, D to braise leaf
 3. Any remaining score-0 files from the original 50
+
+---
+
+## Session start (session 8, 2026-04-27) — IMPROVE_CUT_FILES.md
+
+### Output 1 — Culinary group definitions (verbatim from `RECIPE_COLLECTION_TOR.md`)
+
+| Culinary Group | Includes |
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Bengali, Ceylon, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+---
+
+### Output 2 — Analysis gate rule (verbatim from `RECIPE_ANALYSIS_TOR.md`)
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+---
+
+### Output 3 — Source integrity rule (verbatim from `SOURCE_SURVEY.md`)
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+---
+
+### Output 4 — My understanding of this file (my own words)
+
+The primary task is to incrementally improve the 8 lowest-scoring cut files by finding real, fetched source recipes — following RECIPE_COLLECTION_TOR and RECIPE_ANALYSIS_TOR for leaf structure, source diversity, and temperature data — committing after each file and continuing to the next without stopping. "This is not a race" means: I never fabricate or guess, I never skip a hard file because it is hard, I never aim for a perfect score, a small genuine improvement is worth more than a large fabricated one, and I do not set `cooking_methods_researched: 1` unless thorough method research was actually done. After all 8 are done (not before), I execute CHORES.md.
+
+---
+
+### 8 lowest-scoring files (assessed 2026-04-27, after session 7)
+
+| # | File | Score | Status |
+|---|------|-------|--------|
+| 1 | poultry/turkey/turkey_ground.md | 0 | pending |
+| 2 | poultry/turkey/turkey_thigh.md | 0 | pending |
+| 3 | lamb/roasts/lamb_loin_roast.md | 1 | pending |
+| 4 | pork/offal/pork_cheek.md | 4 | pending |
+| 5 | beef/steaks/sirloin_steak.md | 5 | pending |
+| 6 | fish/white_fish/cod_fillet.md | 5 | pending |
+| 7 | fish/white_fish/hake.md | 5 | pending |
+| 8 | lamb/roasts/lamb_brisket.md | 5 | pending |
+
+---
+
+## Session start (session 9, 2026-04-27) — IMPROVE_CUT_FILES.md continued
+
+### Output 1 — Culinary group definitions (verbatim from `RECIPE_COLLECTION_TOR.md`)
+
+| Culinary Group | Includes |
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Bengali, Ceylon, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+---
+
+### Output 2 — Analysis gate rule (verbatim from `RECIPE_ANALYSIS_TOR.md`)
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+---
+
+### Output 3 — Source integrity rule (verbatim from `SOURCE_SURVEY.md`)
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+---
+
+### Output 4 — My understanding of this file (my own words)
+
+The primary task is to incrementally improve the 8 lowest-scoring cut files by finding real, fetched source recipes — following RECIPE_COLLECTION_TOR and RECIPE_ANALYSIS_TOR for leaf structure, source diversity, and temperature data — committing after each file and continuing to the next without stopping. "This is not a race" means: I never fabricate or guess, I never skip a hard file because it is hard, I never aim for a perfect score, a small genuine improvement is worth more than a large fabricated one, and I do not set `cooking_methods_researched: 1` unless thorough method research was actually done. After all 8 are done (not before), I execute CHORES.md.
+
+---
+
+### Session 9 work plan
+
+Continuing from session 8 target list. Starting with `turkey_thigh.md` and `turkey_ground.md`.
+
+#### turkey_thigh.md — research findings
+
+Extensive URL probing (50+ sites). Turkey thigh is a niche cut in global cuisine, rarely featured as a standalone recipe outside North America. Accessible recipe sources found:
+
+| Source | URL | Status | Group | Pull temp |
+|--------|-----|--------|-------|-----------|
+| Taste of Home — Braised Turkey Thighs | tasteofhome.com/recipes/braised-turkey-thighs/ | 200 ✅ | B (American) | 170–175 °F / 77–79 °C |
+| Natasha's Kitchen — Juicy Roast Turkey | natashaskitchen.com/juicy-roast-turkey-recipe/ | 200 ✅ | D (Ukrainian-American) | thigh: 170–180 °F / 77–82 °C |
+
+Note: The Natasha's Kitchen recipe is a whole-bird recipe; temperature guidance for the thigh is explicitly cited in the text ("turkey thigh should register 170–180˚F"). Groups A and C have no accessible recipe sites with turkey thigh recipes after extensive searching.
+
