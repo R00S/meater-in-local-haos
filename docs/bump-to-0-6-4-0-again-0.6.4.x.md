@@ -535,14 +535,30 @@ The primary task is to incrementally improve the 8 lowest-scoring cut files by f
 
 Continuing from session 8 target list. Starting with `turkey_thigh.md` and `turkey_ground.md`.
 
-#### turkey_thigh.md — research findings
+#### turkey_thigh.md — research findings (completed 2026-04-27)
 
-Extensive URL probing (50+ sites). Turkey thigh is a niche cut in global cuisine, rarely featured as a standalone recipe outside North America. Accessible recipe sources found:
+Extensive URL probing (50+ sites). Turkey thigh is a niche cut in global cuisine, rarely featured as a standalone recipe outside North America.
 
 | Source | URL | Status | Group | Pull temp |
 |--------|-----|--------|-------|-----------|
 | Taste of Home — Braised Turkey Thighs | tasteofhome.com/recipes/braised-turkey-thighs/ | 200 ✅ | B (American) | 170–175 °F / 77–79 °C |
-| Natasha's Kitchen — Juicy Roast Turkey | natashaskitchen.com/juicy-roast-turkey-recipe/ | 200 ✅ | D (Ukrainian-American) | thigh: 170–180 °F / 77–82 °C |
+| Natasha's Kitchen — Juicy Roast Turkey | natashaskitchen.com/juicy-roast-turkey-recipe/ | 200 ✅ | D (Ukrainian-American) | thigh: 170–180 °F / 77–82 °C (whole-bird recipe) |
 
-Note: The Natasha's Kitchen recipe is a whole-bird recipe; temperature guidance for the thigh is explicitly cited in the text ("turkey thigh should register 170–180˚F"). Groups A and C have no accessible recipe sites with turkey thigh recipes after extensive searching.
+Note: Only 1 recipe specifically about turkey thigh pieces found (Taste of Home). Natasha's Kitchen and African Bites (africanbites.com/cajun-roast-turkey/) are whole-bird recipes that mention thigh temperature. Per TOR criterion 5, whole-bird recipes cannot be used as sources for a turkey_thigh leaf. Collection remains in-progress.
+
+**Files updated**: `turkey_thigh.md` (score 0 → **5**), created `turkey_thigh-oven_roast.md` (in-progress, 1 source)
+
+#### turkey_ground.md — research findings (completed 2026-04-27)
+
+| Source | URL | Status | Group | Method | Pull temp |
+|--------|-----|--------|-------|--------|-----------|
+| Taste of Home — Turkey Burgers | tasteofhome.com/recipes/grilled-ground-turkey-burgers/ | 200 ✅ | B (American) | Grill | **165 °F explicit** |
+| GialloZafferano — Hamburger di tacchino | ricette.giallozafferano.it/Hamburger-di-tacchino.html | 200 ✅ | B (Italian) | Grill | "cooked through" (~74°C implied) |
+| Natasha's Kitchen — Turkey Kotlety | natashaskitchen.com/lean-turkey-kotlety-with-mushroom-filling/ | 200 ✅ | D (Ukrainian-American) | Pan fry | "cooked through" (~74°C implied) |
+| Suzy Karadsheh — Ground Turkey Skillet | themediterraneandish.com/healthy-ground-turkey-skillet-dinner-recipe/ | 200 ✅ | C (Egyptian-American) | Pan fry | "cooked through" (~74°C implied) |
+| Gina Homolka — Turkey Burgers w/ Zucchini | skinnytaste.com/turkey-burgers-with-zucchini/ | 200 ✅ | B (American) | Pan fry + grill | "no longer pink" (~74°C implied) |
+
+Note: No Group A recipes found for ground turkey (maangchi: 403, justonecookbook: 403, koreanbapsang: 403). Both grill sources are Group B.
+
+**Files updated**: `turkey_ground.md` (score 0 → **6**), created `turkey_ground-grill.md` (2 sources, in-progress), created `turkey_ground-pan_fry.md` (3 sources, in-progress)
 
