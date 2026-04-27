@@ -158,3 +158,36 @@ Score 7 (first 17 alphabetically):
 | 48 | game/ostrich/ostrich_steak.md | 7 | — | pending |
 | 49 | game/reindeer/reindeer_steak.md | 7 | — | pending |
 | 50 | game/venison/venison_loin.md | 7 | — | pending |
+
+---
+
+## CHORES session — 2026-04-27
+
+### Agent
+
+New agent session (session 2 on this branch). CHORES executed as instructed.
+
+### Version bump
+
+0.6.4.0 → **0.6.4.1**
+
+| File | Updated |
+|------|---------|
+| `manifest.json` | `"version": "0.6.4.1"` |
+| `__init__.py` | `__version__ = "0.6.4.1"` · Last Change updated |
+| `const.py` | Last Change updated |
+| `www/kitchen-cooking-panel.js` | `PANEL_VERSION` auto-incremented 324 → 325 by `generate_frontend_data.py` |
+
+### User guide
+
+- Updated version header: `0.6.2.10` → `0.6.4.1`
+- All `_openHelp` anchors in `panel-class-template.js` verified against USER_GUIDE.md headings — all 15 anchors resolve correctly, no changes required.
+
+### No new user-facing features in this branch
+
+The branch consists of:
+1. Version bump from 0.6.3.5 → 0.6.4.0 (previous session)
+2. Recipe research data improvements: 9 of 50 lowest-scoring cut files improved (backend docs only; no UI changes)
+3. This CHORES release bump to 0.6.4.1
+
+Cuts 10–50 remain pending for a follow-up agent session.
