@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 27 Apr 2026, 14:25 UTC
-Last Change: v0.6.4.1 - CHORES: version bump, user guide version update
+Last Change: v0.6.4.2 - CHORES: fix quality scores (lamb_brisket 11→5, lamb_loin_roast 9→1); add cooking_methods_researched guard comment to 151 cut files
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "327"
+PANEL_VERSION = "328"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

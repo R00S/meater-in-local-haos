@@ -253,3 +253,46 @@ The branch consists of:
 3. This CHORES release bump to 0.6.4.1
 
 Cuts 10–50 remain pending for a follow-up agent session.
+
+---
+
+## CHORES session — 2026-04-27 (second CHORES run)
+
+### Agent
+
+New agent session. Executed CHORES after quality score integrity fixes.
+
+### What was done before this CHORES run
+
+**Problem: quality scores were inflated because the −8 deduction for `cooking_methods_researched: 0` was not applied when the flag was reverted from `1` back to `0`.**
+
+- `lamb/roasts/lamb_brisket.md`: `quality_score` corrected 11 → 5 (−8 applied). Quality table heading corrected.
+- `lamb/roasts/lamb_loin_roast.md`: `quality_score` corrected 9 → 1 (−8 applied). Quality table row corrected: `✓` → `− NOT DONE`.
+
+**Problem: the `cooking_methods_researched` flag was being set arbitrarily to `1` without actual research.**
+
+- All 151 cut files with `cooking_methods_researched: 0` had the following inline YAML comment added to the flag line:
+  ```
+  # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
+  ```
+- Zero bare `cooking_methods_researched: 0` lines remain in any cut file.
+
+### Version bump
+
+0.6.4.1 → **0.6.4.2**
+
+| File | Updated |
+|------|---------|
+| `manifest.json` | `"version": "0.6.4.2"` |
+| `__init__.py` | `__version__ = "0.6.4.2"` · Last Change updated |
+| `const.py` | Last Change updated |
+| `www/kitchen-cooking-panel.js` | `PANEL_VERSION` auto-incremented 327 → 328 by `generate_frontend_data.py` |
+
+### User guide
+
+- Updated version header: `0.6.4.1` → `0.6.4.2`
+- All 15 `_openHelp` anchors in `panel-class-template.js` verified against USER_GUIDE.md headings — all resolve correctly, no changes required.
+
+### No new user-facing features
+
+This release is purely data/documentation integrity: quality score corrections and guard comments on research flags.

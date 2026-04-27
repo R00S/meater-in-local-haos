@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 27 Apr 2026, 19:14 CET
+ * AUTO-GENERATED: 27 Apr 2026, 19:47 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 27 Apr 2026, 19:14 CET
+// Last generated: 27 Apr 2026, 19:47 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -17159,9 +17159,11 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/lamb/ground/lamb_kofta.md"
   },
   "lamb_brisket": {
+    "braise": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/lamb_brisket-braise.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/lamb_brisket.md"
   },
   "lamb_loin_roast": {
+    "oven_roast": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/lamb_loin_roast-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/lamb_loin_roast.md"
   },
   "lamb_neck": {
@@ -17462,8 +17464,8 @@ const CUT_PROFILES = {
   "ground_lamb": "Ground (minced) lamb is used in countless traditions — from Middle Eastern kibbeh and North African merguez to Greek moussaka, Indian keema, and Turkish Akçaabat köfte. Pan-frying ground lamb requires thorough cooking (ground meat has higher bacterial contamination risk than whole cuts). The aromatics sautéed with the mince are as important as the meat itself.\n\n\nTarget internal temperature: **74 °C (165 °F)** for food-safe ground lamb.",
   "lamb_burger": "Lamb burgers are popular throughout the UK, Australia, New Zealand, the Middle East, and South Asia. Ground lamb's higher fat content means the patties are juicy but can flare on a grill — medium-high indirect heat is recommended. Common additions: garlic, cumin, harissa, feta (stuffed or mixed in), fresh herbs.\n\n\nTarget internal temperature: **74 °C (165 °F)** for safe ground meat.",
   "lamb_kofta": "Lamb kofta (köfte, kefta, kafta, kufta — many spelling variations) is one of the most widespread grilled preparations in the world, found from Morocco to Turkey, Iran, Pakistan, Afghanistan, India, and across the Levant. The ground lamb is mixed with onion, spices, and fresh herbs, shaped onto flat metal skewers, and grilled over high heat. It cooks very quickly (3–4 minutes per side) and must be cooked through. Inserting a MEATER probe into the thickest kofta is the recommended technique.\n\n\nTarget internal temperature: **74 °C (165 °F)** for food-safe ground meat.",
-  "lamb_brisket": "*Placeholder — cut profile research not yet completed.*",
-  "lamb_loin_roast": "*Placeholder — cut profile research not yet completed.*",
+  "lamb_brisket": "Lamb brisket (UK: lamb breast) comes from the belly of the lamb — anatomically equivalent to pork belly. It is composed of layered intercostal muscles, rib bones, and substantial intramuscular and surface fat held together by dense connective tissue. Because the breast muscles work constantly in breathing, they develop significant collagen and toughness. This collagen converts to gelatin during prolonged low-and-slow moist cooking (braising or slow cooking), rendering the cut fork-tender or pull-apart. The high fat content means carryover cooking is significant — expect 4–6°C rise after pulling. Sold boneless/rolled or on the bone; the rolled form is traditional in British and Scandinavian cooking, the bone-in form is common in Middle Eastern (stuffed, *dullah*) and Cantonese (casserole) preparations.",
+  "lamb_loin_roast": "Lamb loin roast is the boneless, cylindrical muscle removed from the saddle — the section between the last rib and the hip. It is among the most tender cuts on the animal, equivalent to the tenderloin in beef: lean, fine-grained, low in connective tissue, and quick-cooking. Because it lacks fat deposits and collagen, it cannot be slow-cooked or braised without becoming dry. It must be roasted quickly at moderate to high heat (often with a prior pan sear) to medium-rare or medium, then rested before slicing. Carryover cooking is modest (3–5°C) due to low fat content. Sold boneless and usually rolled and tied; sometimes available bone-in as part of the saddle.\n\n**Note on culinary traditions**: The whole boneless lamb loin roast is primarily a British, French, and Australasian preparation. It is not a standard whole-cut oven preparation in South/East/SE Asian or African/Middle Eastern/Levantine culinary traditions, where the loin area is typically cut into individual chops, used in curries and stews, or prepared as part of a whole saddle. Groups A and C coverage gaps are structural — not a research failure.",
   "lamb_neck": "Lamb neck (Lammhals / collo di agnello / kuzu gerdan / lammehals) is one of the most underappreciated braising cuts. It is richly marbled, heavily worked, and packed with connective tissue and deep flavour. Cut into cross-sections or braised as a whole neck, it softens magnificently over 1.5–2.5 hours of moist heat, yielding deeply tender, self-basting meat in a rich, unctuous braising liquid. The neck is used in braises throughout Turkish, Italian, German, Greek, and Scandinavian traditions. A MEATER probe is inserted into the thickest cross-section of neck meat, away from the vertebrae, to track internal temperature.\n\n\nTarget internal temperature: **85–90 °C (185–194 °F)** for full braised tenderness.",
   "lamb_rib": "*Placeholder — cut profile research not yet completed.*",
   "lamb_rump": "*Placeholder — cut profile research not yet completed.*",
@@ -18043,6 +18045,12 @@ const CUT_METHOD_PROFILES = {
   },
   "lamb_kofta": {
     "grill": "Lamb kofta (köfte, kefta, kafta, kufta — many spelling variations) is one of the most widespread grilled preparations in the world, found from Morocco to Turkey, Iran, Pakistan, Afghanistan, India, and across the Levant. The ground lamb is mixed with onion, spices, and fresh herbs, shaped onto flat metal skewers, and grilled over high heat. It cooks very quickly (3–4 minutes per side) and must be cooked through. Inserting a MEATER probe into the thickest kofta is the recommended technique.\n\nTarget internal temperature: **74 °C (165 °F)** for food-safe ground meat."
+  },
+  "lamb_brisket": {
+    "braise": "Lamb brisket (also called lamb breast, especially in UK/European usage) comes from the belly of the lamb — the same anatomical position as pork belly. It consists of layered intercostal muscles, rib bones, and significant deposits of intramuscular fat held together by dense connective tissue. Because the breast muscles are used constantly for breathing, they are tough, chewy, and collagen-rich — the exact qualities that reward low-and-slow moist cooking. At 85–93°C the collagen converts to gelatin, the fat renders, and the meat becomes fork-tender or pull-apart. Carryover cooking is significant (4–6°C) owing to the high fat content, so the meat will continue to rise after being pulled from heat. Sold boneless/rolled or bone-in; both forms braise equally well."
+  },
+  "lamb_loin_roast": {
+    "oven_roast": "Lamb loin roast is the boneless, cylindrical muscle removed from the saddle (the section between the last rib and the hip). It is the lamb equivalent of a beef tenderloin in terms of tenderness — lean, fine-grained, low in connective tissue, and quick-cooking. Because it lacks the fat deposits and collagen of tougher cuts, it cannot be slow-cooked or braised without becoming dry. It must be roasted quickly at high heat (or moderate heat with a prior sear) to medium-rare or medium, then rested before slicing. Carryover cooking is modest (3–5°C) due to the low fat content. Sold boneless and often rolled and tied; sometimes sold bone-in as part of a saddle.\n\n**Research note:** The whole boneless lamb loin roast is primarily a British, French, and Australasian preparation. It is not a standard whole-cut preparation in South/East/SE Asian or African/Middle Eastern culinary traditions — those traditions typically cut the loin into chops, use it in curries/stews, or prepare the whole saddle differently. Genuine recipe sources for Group A and Group C could not be found for this cut and method after targeted searches across South Asian, East Asian, SE Asian, Moroccan, Lebanese, and Turkish recipe sites.\n\n---"
   },
   "lamb_neck": {
     "braise": "Lamb neck (Lammhals / collo di agnello / kuzu gerdan / lammehals) is one of the most underappreciated braising cuts. It is richly marbled, heavily worked, and packed with connective tissue and deep flavour. Cut into cross-sections or braised as a whole neck, it softens magnificently over 1.5–2.5 hours of moist heat, yielding deeply tender, self-basting meat in a rich, unctuous braising liquid. The neck is used in braises throughout Turkish, Italian, German, Greek, and Scandinavian traditions. A MEATER probe is inserted into the thickest cross-section of neck meat, away from the vertebrae, to track internal temperature.\n\nTarget internal temperature: **85–90 °C (185–194 °F)** for full braised tenderness.",
@@ -20229,6 +20237,21 @@ const RECIPE_TITLES_INDEX = {
       "TurkishFoodTravel.com — Authentic Turkish Köfte (Turkish tradition)",
       "Nefisyemektarifleri.com — Adana Kebabı (Turkish kofta on skewer)",
       "IndianHealthyRecipes.com — Seekh Kebab (Indian spiced lamb skewer, barbecue tradition)"
+    ]
+  },
+  "lamb_brisket": {
+    "braise": [
+      "The Woks of Life / Cantonese — Zhi Zhu Yangrou Bao (枝竹羊肉煲) — Chinese Braised Lamb Casserole Hong Kong Style",
+      "Alan Bergo / Forager Chef — Braised Goat or Lamb Breast (French-style press method)",
+      "Selin Kiazim / Great British Chefs — Crispy Pomegranate-Glazed Lamb Breast",
+      "ICA — Bräserad lammbringa med vitlök, rosmarin och citron (Swedish Braised Lamb Breast with Garlic, Rosemary and Lemon)"
+    ]
+  },
+  "lamb_loin_roast": {
+    "oven_roast": [
+      "Paul Heathcote / Great British Chefs — Best-end of Lamb 'Provençale herbs'",
+      "Gourmet Traveller (Emma Knowles & Vanessa Austin) — Roast Rolled Lamb Loin with Anchovies and Rosemary",
+      "ICA — Lammstek med rosmarin (Rosemary Lamb Roast)"
     ]
   },
   "lamb_neck": {
@@ -39241,7 +39264,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "327";
+const PANEL_VERSION = "328";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
