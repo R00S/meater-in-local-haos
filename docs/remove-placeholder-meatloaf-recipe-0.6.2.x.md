@@ -388,3 +388,46 @@ Commits between cut files as required.
 - [x] PANEL_VERSION auto-incremented to 315
 - [x] USER_GUIDE.md version header updated to 0.6.2.09
 - [ ] Cut file improvements in progress (see individual commits)
+
+---
+
+## SOURCE_SURVEY.md update — 2026-04-27 (agent session)
+
+### Task
+Find more working sources for SOURCE_SURVEY.md to get better coverage for culinary groups A–D.
+
+### Approach
+Systematic curl probing of candidate sites for each tradition gap, followed by web_search to find correct URL slugs, followed by web_fetch verification of actual recipe content (ingredient quantities + method steps).
+
+### Confirmed new working sites (12 added)
+
+| Site | Tradition | Group | URL Format |
+|------|-----------|-------|------------|
+| chefsimon.com | French | B | `/gourmets/{user}/recettes/{slug}` |
+| koreanbapsang.com | Korean (English) | A | `/{slug}/` |
+| beyondkimchee.com | Korean (English) | A | `/{slug}/` |
+| soppa365.fi | Finnish | D | `/reseptit/{category}/{slug}` |
+| apetitonline.cz | Czech | B/D | `/recept/{slug}` |
+| cookinpolish.com | Polish (English) | D | `/{slug}/` |
+| receptai.lt | Lithuanian | D | `/receptas/{slug}-{ID}` |
+| georgianrecipes.net | Georgian/Caucasus (English) | D | `/{year}/{month}/{day}/{slug}/` |
+| marocmama.com | Moroccan/N.African (English) | C | `/{slug}/` |
+| cheftariq.com | Syrian/Levantine (English) | C | `/recipe/{slug}/` |
+| pinaenlacocina.com | Mexican (English/Spanish) | C/B | `/{slug}/` |
+| cookpad.com/id | Indonesian | A | `/id/resep/{ID}` ⚠️ NOT `/id/recipes/` |
+
+### Confirmed problematic sites (4 added)
+
+| Site | Problem |
+|------|---------|
+| streetkitchen.hu | Next.js JS-rendered — ingredient list inaccessible |
+| nami-nami.ee | Server-rendered PHP — markdown conversion fails, HTML only |
+| tudogostoso.com.br | Wrong-content ID mismatch (like lecker.de) |
+| toidutegu.ee | NOT a recipe site (food awards organisation) |
+
+### Status
+- [x] SOURCE_SURVEY.md updated: 12 confirmed sites added to working table
+- [x] SOURCE_SURVEY.md: partial/wrong-content table updated with 4 new entries
+- [x] SOURCE_SURVEY.md: recommended source matrix updated — French, Korean, Finnish, Czech, Polish, Lithuanian, Georgian, Moroccan, Levantine, Mexican, Indonesian all now have confirmed sources
+- [x] SOURCE_SURVEY.md: URL protocol notes added for all 12 new sites
+- [x] Timeline updated
