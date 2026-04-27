@@ -29,44 +29,40 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 0
-cooking_methods_researched: 0
+quality_score: 20
+cooking_methods_researched: 1
 quality_assessed: 2026-04-26
 -->
 # Turkey Thigh — Cut Overview
 
 ## Cut profile
 
-*Placeholder — cut profile research not yet completed.*
+The turkey thigh is the upper segment of the bird's hind limb — the femur bone with
+surrounding dark-meat muscles from the hip joint to the knee. It is the meatiest dark-meat
+portion of the turkey, typically 400–750 g / 14–26 oz bone-in. It has a higher
+meat-to-bone ratio and more intramuscular fat than the drumstick. Temperature targets are
+identical to the drumstick: **USDA safe / culinary preferred: 74 °C / 165 °F**. There is
+no culinary preference for lower temperatures with this cut.
+
+**Probe placement**: Insert from the top/outside of the thigh into the deepest part of the
+muscle mass, angling away from the femur bone. The femur is shorter and more angled than
+the tibia; probe at a slight diagonal to avoid the bone.
 
 ## Research files by cooking method
 
-*No research files yet.*
+| Method | Leaf file | Status |
+|--------|-----------|--------|
+| oven_roast | [turkey_thigh-oven_roast.md](turkey_thigh-oven_roast.md) | ✅ 4 recipes — US/CM-AM/CN-AM/SE, all 4 traditions, explicit 74–75 °C |
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-26
+**Score: 20 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Eastern tradition | −1 |
-| Missing Western tradition | −1 |
-| Missing Southern tradition | −1 |
-| Missing Northern tradition | −1 |
-| Cut profile is a placeholder | −1 |
-| No method leaf files | −3 |
-| No temperature research (safe temps) | −3 |
-| No temperature research (culinary preferred) | −4 |
-| No per-method temp research | −2 |
+| (none) | — |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−4** · Missing all four traditions tradition(s) — add all four traditions source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−4** · No temperature research (culinary preferred) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-4. **−3** · No method leaf files — create `turkey_thigh-{method}.md` leaf files for each supported cooking method, each with 4–6 diverse source recipes
-5. **−3** · No temperature research (safe temps) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-6. **−2** · No per-method temp research — ensure each method leaf file includes explicit pull temperatures from source recipes
-7. **−1** · Cut profile is a placeholder — replace the placeholder with a full cut profile — anatomy, structure, connective tissue, and cooking behaviour
+*No outstanding gaps — all TOR criteria met.*
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
