@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 26 Apr 2026, 10:43 CET
+ * AUTO-GENERATED: 27 Apr 2026, 06:53 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 26 Apr 2026, 10:43 CET
+// Last generated: 27 Apr 2026, 06:53 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -16638,9 +16638,6 @@ const RECIPE_INDEX = {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_leg-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_leg.md"
   },
-  "goat_leg_roast": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_leg_roast.md"
-  },
   "goat_shank": {
     "braise": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_shank-braise.md",
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/game/goat/goat_shank-oven_roast.md",
@@ -16694,23 +16691,14 @@ const RECIPE_INDEX = {
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/beef/ground/beef_burger-pan_fry.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/ground/beef_burger.md"
   },
-  "burger": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/burger.md"
-  },
   "ground_beef": {
     "braise": "/kitchen_cooking_engine_panel/recipes/beef/ground/ground_beef-braise.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/beef/ground/ground_beef-pan_fry.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/ground/ground_beef.md"
   },
-  "liver": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/beef/ground/liver.md"
-  },
   "meatloaf": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/beef/ground/meatloaf-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/ground/meatloaf.md"
-  },
-  "tongue": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/beef/ground/tongue.md"
   },
   "filet_mignon": {
     "air_fryer": "/kitchen_cooking_engine_panel/recipes/beef/steaks/filet_mignon-air_fryer.md",
@@ -16822,12 +16810,6 @@ const RECIPE_INDEX = {
     "pan_sear": "/kitchen_cooking_engine_panel/recipes/beef/offal/beef_liver-pan_sear.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/offal/beef_liver.md"
   },
-  "beef_rib": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/beef/offal/beef_rib.md"
-  },
-  "beef_shin": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/beef/offal/beef_shin.md"
-  },
   "beef_tongue": {
     "braise": "/kitchen_cooking_engine_panel/recipes/beef/offal/beef_tongue-braise.md",
     "slow_cooker": "/kitchen_cooking_engine_panel/recipes/beef/offal/beef_tongue-slow_cooker.md",
@@ -16852,9 +16834,6 @@ const RECIPE_INDEX = {
   "beef_tenderloin_roast": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/beef/roasts/beef_tenderloin_roast-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/beef_tenderloin_roast.md"
-  },
-  "chuck": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/beef/roasts/chuck.md"
   },
   "prime_rib": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/beef/roasts/prime_rib-oven_roast.md",
@@ -16941,9 +16920,6 @@ const RECIPE_INDEX = {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/poultry/turkey/whole_turkey-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/turkey/whole_turkey.md"
   },
-  "breast": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/breast.md"
-  },
   "chicken_breast": {
     "air_fryer": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_breast-air_fryer.md",
     "grill": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_breast-grill.md",
@@ -16974,27 +16950,15 @@ const RECIPE_INDEX = {
     "air_fryer": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_wing-air_fryer.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/chicken_wing.md"
   },
-  "ground": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/ground.md"
-  },
   "ground_chicken": {
     "braise": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/ground_chicken-braise.md",
     "grill": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/ground_chicken-grill.md",
     "pan_fry": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/ground_chicken-pan_fry.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/ground_chicken.md"
   },
-  "leg": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/leg.md"
-  },
-  "thigh": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/thigh.md"
-  },
   "whole_chicken": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/whole_chicken-oven_roast.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/whole_chicken.md"
-  },
-  "wing": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/poultry/chicken/wing.md"
   },
   "asparagus": {
     "grill": "/kitchen_cooking_engine_panel/recipes/vegetables/green_vegetables/asparagus-grill.md",
@@ -17326,9 +17290,6 @@ const RECIPE_INDEX = {
   "cheek": {
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/offal/cheek.md"
   },
-  "jowl": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/pork/offal/jowl.md"
-  },
   "liver_pork": {
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/offal/liver_pork.md"
   },
@@ -17350,12 +17311,6 @@ const RECIPE_INDEX = {
     "braise": "/kitchen_cooking_engine_panel/recipes/pork/offal/pork_tongue-braise.md",
     "slow_cooker": "/kitchen_cooking_engine_panel/recipes/pork/offal/pork_tongue-slow_cooker.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/offal/pork_tongue.md"
-  },
-  "baby_back_ribs_alt": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/baby_back_ribs_alt.md"
-  },
-  "belly": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/belly.md"
   },
   "cured_ham": {
     "oven_roast": "/kitchen_cooking_engine_panel/recipes/pork/roasts/cured_ham-oven_roast.md",
@@ -17390,15 +17345,6 @@ const RECIPE_INDEX = {
     "slow_cooker": "/kitchen_cooking_engine_panel/recipes/pork/roasts/pork_shoulder-slow_cooker.md",
     "smoker": "/kitchen_cooking_engine_panel/recipes/pork/roasts/pork_shoulder-smoker.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/pork_shoulder.md"
-  },
-  "spare_ribs_alt": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/spare_ribs_alt.md"
-  },
-  "st_louis_ribs_alt": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/st_louis_ribs_alt.md"
-  },
-  "virginia_ham": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/pork/roasts/virginia_ham.md"
   },
   "pork_chop": {
     "air_fryer": "/kitchen_cooking_engine_panel/recipes/pork/chops/pork_chop-air_fryer.md",
@@ -17454,7 +17400,6 @@ const CUT_PROFILES = {
   "reindeer_steak": "Reindeer (*Rangifer tarandus*) is the traditional game meat of Sápmi (Lapland), northern Finland, Norway, and Sweden. The fillet (renfilé) and backstrap (sadel) are the premium cuts for pan searing. Reindeer meat is very lean, deep red, and has a delicate sweet-earthy flavour milder than moose. Because of its leanness it must be treated like venison: high heat, short cooking time, pulled well below well-done. Medium-rare (57 °C) is the Nordic standard.\n\n\nTarget internal temperature: **55–57 °C (131–135 °F)** for medium (Nordic preference). Pull at 52 °C.",
   "goat_chop": "Goat loin or rib chops are popular throughout West Africa, the Caribbean, South Asia, the Middle East, and the Mediterranean. The meat is leaner than lamb with a slightly stronger, more aromatic flavour. Pan searing is typically done at high heat with marinades containing aromatic spices (cumin, coriander, ginger, garlic). Like lamb, goat chops are served medium to well-done.\n\n\nTarget internal temperature: **70–74 °C (158–165 °F)**.",
   "goat_leg": "Whole roasted goat leg is a festive preparation in Germany (Ziegenkeule), Greece (katsiki sto fourno), the Caribbean, South and West Africa, and across the Middle East. The meat has moderate fat and benefits from marinating (especially in buttermilk, yoghurt, or wine) to reduce gaminess. Slow oven roasting at 160–200 °C for 2–3 hours gives the best result.\n\n\nTarget internal temperature: **75–82 °C (167–180 °F)** for fully cooked, moist goat.",
-  "goat_leg_roast": "*Placeholder — cut profile research not yet completed.*",
   "goat_shank": "A goat shank (Swedish *getlägg*) is the lower portion of the animal's leg — heavily worked, dense with collagen, intramuscular fat (limited; goat is leaner than lamb) and bone marrow. Like the lamb shank, it is a quintessentially braising cut: tough beyond chewing if cooked to medium-rare, but transformed by long, slow cooking in liquid into fork-tender, gelatin-rich meat that falls off the bone. Internal temperature is the wrong metric: the cut needs time at 88–93 °C internal (the collagen-melting band) for 1.5–2 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, parallel to the bone (avoid touching bone).",
   "goat_shoulder": "Goat shoulder (Swedish *getskuldra* / *getbog*) is the upper foreleg — heavily worked, dense with collagen and intramuscular fat. Like the lamb shoulder, it is a quintessentially low-and-slow cut: tough beyond chewing if cooked to medium-rare, but transformed by long, wet cooking into fork-tender, gelatin-rich meat that pulls in long strands. Internal temperature is necessary but insufficient: the cut needs time at 88–93 °C internal for 2–3 hours after reaching that temperature. Probe horizontally through the thickest part of the muscle, away from bone or large connective sheets.",
   "moose_roast": "Moose (*Alces alces*) — called älg in Swedish, elg in Norwegian, and Elch in German — is the largest deer species in the Northern Hemisphere. The hindquarter roast (haunch/shoulder) has deep, dark red meat with minimal fat and a distinctive game flavour. Moose roast is best cooked slowly: high initial heat to develop a crust, then low, slow oven roasting (125–160 °C) with basting, aiming for a core temperature that gives a pink but safe result. The Swedish tradition uses cream and lingonberry as accompaniments.\n\n\nTarget internal temperature: **60–65 °C (140–149 °F)** for medium (pink centre); **70 °C (158 °F)** for fully cooked. The Swedish national tradition prefers 60–65 °C.",
@@ -17466,11 +17411,8 @@ const CUT_PROFILES = {
   "bison_roast": "Bison roast cuts are drawn from the same primals as beef roasting joints — most commonly the\nshoulder (chuck/Schulter), topside (Oberschale), silverside (Unterschale), or loin (Rücken).\nThe fillet roast (whole tenderloin) is also used in high-end German preparations. Like bison\nsteak, bison roast is substantially leaner than equivalent beef cuts: the marbling is sparse\nand the outer fat layer thin, which has two important consequences. First, a bison roast dries\nout faster in a hot oven than a comparably sized beef joint, making temperature monitoring with\na probe essential. Second, without intramuscular fat to buffer heat and provide moisture, the\noff-flavour threshold at which overcooked meat tastes \"liver-like\" is reached earlier — roughly\n65–68 °C for a roast compared to around 63 °C for a steak.\n\nThe two dominant German cooking traditions for bison roast diverge sharply in oven temperature\nbut agree on a pull temperature of approximately 60–63 °C (medium). The high-heat tradition\n(200 °C, 45–60 minutes for a 1 kg joint) produces a crisper exterior but requires careful\nattention because the meat approaches the pull temperature quickly. The low-heat tradition\n(80–90 °C, 90–120 minutes) relies on the oven temperature being close to the desired internal\ntemperature, preventing overshoot and producing an evenly pink interior across the full\ncross-section. Both traditions use an initial sharp sear to develop a Maillard crust before\nthe oven phase, since at low oven temperatures browning will not occur.\n\nUnlike bison steak, a large roast does carry some collagen from the connective tissue that\nsurrounds muscle groups — particularly in shoulder or topside cuts. However, bison roast is\nnot a braise candidate: the collagen content is insufficient to benefit from the 85–95 °C\nsustained-hold window required for full collagen conversion, and the lean muscle would be\nruined at those temperatures. The correct window is medium (60–65 °C), where the muscle is\nstill moist and pink throughout. Resting is critical for roasts: a minimum of 10 minutes\nallows the thermal gradient within the joint to equalise and the muscle fibres to reabsorb\njuices. A mozzarella-mustard herb crust, applied before the oven phase, is a distinctive\nGerman preparation that acts as an insulating layer and baste, partially compensating for\nthe low fat content.\n\n\n65–68 °C for a roast compared to around 63 °C for a steak.\nbut agree on a pull temperature of approximately 60–63 °C (medium). The high-heat tradition\n(200 °C, 45–60 minutes for a 1 kg joint) produces a crisper exterior but requires careful\nattention because the meat approaches the pull temperature quickly. The low-heat tradition\n(80–90 °C, 90–120 minutes) relies on the oven temperature being close to the desired internal\nnot a braise candidate: the collagen content is insufficient to benefit from the 85–95 °C\nruined at those temperatures. The correct window is medium (60–65 °C), where the muscle is",
   "bison_steak": "Bison (American buffalo, *Bison bison*) is a large North American bovine raised primarily on\nopen pasture. Its steaks — most commonly cut from the loin (fillet/tenderloin), rib (entrecôte/\nribeye), or striploin (sirloin) — are structurally similar to beef cuts from the same primal\npositions but differ decisively in fat content and flavour chemistry. Bison carries significantly\nless intramuscular fat than commercial beef: its marbling score is typically very low, and the\nexternal fat cap is thin. This leanness means there is very little insulating fat to slow heat\npenetration, so bison steaks cook faster than their beef equivalents and have a narrower\nwindow between perfectly cooked and overdone.\n\nThe critical temperature rule for bison steak is the most frequently repeated piece of culinary\nconsensus in all traditions: bison must always be served rare to medium-rare and must never be\ntaken past medium. The lean muscle fibres of bison, deprived of intramuscular fat that would\nlubricate the texture, become dry, chalky, and develop a distinctly unpleasant liver-like\noff-flavour when cooked beyond 65 °C. This off-note — noted explicitly in German, American,\nand French bison cooking literature — is caused by the oxidation of the comparatively high\niron content in the lean, myoglobin-rich muscle at elevated temperatures. The pull temperature\nfor a grilled bison steak is therefore 57–60 °C (medium-rare), and never above 63 °C.\n\nOn the grill, bison steak performs best over direct, high heat — charcoal (Holzkohlegrill) is\nfrequently recommended in German and North American traditions because the intense radiant\nheat of charcoal sears the exterior rapidly, creating Maillard crust without the interior\novercooking. Gas grill or cast-iron griddle are also acceptable. Because of the leanness,\nmarinating overnight is common in German tradition: the marinade provides moisture and\nflavour compounds that compensate for the lack of intramuscular fat. Resting is universally\nrecommended (5 minutes minimum) to allow the muscle fibres to relax and reabsorb juices.\nSlow low-temperature cooking (Niedrigtemperatur) is explicitly warned against for bison steak\nby German sources — while it works for collagen-rich beef cuts, for lean bison steak it\nconcentrates the liver-like off-note and dries the meat. The pan-sear + brief oven finish\nat 80 °C (as described in two German sources below) is the one acceptable exception, because\nthe sear provides Maillard flavour and the short oven time (25 min at 80 °C) simply holds\nthe meat at medium without further cooking.\n\n\noff-flavour when cooked beyond 65 °C. This off-note — noted explicitly in German, American,\niron content in the lean, myoglobin-rich muscle at elevated temperatures. The pull temperature\nfor a grilled bison steak is therefore 57–60 °C (medium-rare), and never above 63 °C.\nat 80 °C (as described in two German sources below) is the one acceptable exception, because\nthe sear provides Maillard flavour and the short oven time (25 min at 80 °C) simply holds",
   "beef_burger": "Ground beef burgers are formed patties of minced beef, most commonly from a blend of chuck (for flavour) and sirloin or brisket (for binding), with fat content typically 15–25 % by weight. Unlike whole-muscle cuts, a burger patty has no internal connective tissue structure — the grind has already disrupted muscle fibres — so the cooking challenge is heat penetration through the patty's cross-section rather than collagen conversion. The direct-heat grill creates a fierce Maillard crust on both flat faces, which is the primary flavour mechanism; the fat content keeps the interior moist even at higher internal temperatures. Carryover in a burger patty is minimal — the thin geometry dissipates heat quickly once removed from the grill — but genuine carryover occurs in thicker restaurant-style patties, making the pull-from-grill moment slightly earlier than the final target.",
-  "burger": "*Placeholder — cut profile research not yet completed.*",
   "ground_beef": "Ground beef (minced beef) is made by grinding beef, most commonly from the chuck primal or a blend of trimmings. The fat-to-lean ratio is the primary quality variable: 80/20 is standard for most preparations; 85/15 is leaner; 70/30 is richer and juicier. Because grinding ruptures muscle cells and distributes surface bacteria throughout the mass, the USDA and equivalent international food-safety authorities require a minimum internal temperature of 71°C (160°F) — there is no medium-rare option for ground beef the way there is for whole steaks. Carryover is minimal (1–2°C) given the fine grind and rapid heat transfer.",
-  "liver": "*Placeholder — cut profile research not yet completed.*",
   "meatloaf": "Meatloaf is a free-formed loaf of seasoned, bound ground meat (typically beef alone or a beef-pork-veal blend) baked in a moderate oven until cooked through. Structurally it is a colloid of ground muscle held by a panade (bread or breadcrumbs soaked in milk or stock) and bound with egg; the panade is critical because it absorbs and re-releases moisture during the bake, preventing the dry, dense loaf that pure meat-plus-egg produces. Oven temperatures of 175–190 °C give enough time for the centre to reach safe temperature without over-rendering the surface. Carryover is significant — 5–8 °C in a typical 1 kg loaf — because the loaf shape stores heat well; a 5–10 minute rest is mandatory both for carryover and for the proteins to re-absorb expressed liquid.",
-  "tongue": "*Placeholder — cut profile research not yet completed.*",
   "filet_mignon": "Filet mignon is cut from the narrow end (small end) of the beef tenderloin — the psoas major muscle, which runs alongside the spine and does virtually no work during the animal's life. It is the most tender cut in the carcass, with almost no intramuscular fat (marbling) or connective tissue, making it both delicate and vulnerable to drying out. The air fryer circulates very hot air around the steak at high velocity, creating convection browning on the exterior while cooking the interior — the result is a decent Maillard crust without the smoke of a grill or the fat-pooling effect of a skillet. Because filet mignon is exceptionally lean, the air fryer's hot-air convection is forgiving compared to direct-contact methods. Carryover is minimal but present — the small, round geometry of a filet mignon dissipates heat quickly after removal from the enclosed air fryer basket.",
   "flank_steak": "Flank steak is a flat, thin muscle cut from the abdominal wall of the animal (the flank primal), with long, coarse muscle fibres running visibly along its length. The cut is lean, relatively tough, and has minimal intramuscular fat — it lacks the marbling of a ribeye but compensates with bold, beefy flavour. Charcoal grilling is the quintessential method for flank steak: the high, direct radiant heat from glowing embers creates a rapid, intense Maillard crust across the wide flat surface before the interior has time to overcook. Flank steak must be cooked quickly over very high heat and sliced thinly across the grain for tenderness — cooking it slowly defeats the purpose. Carryover is minimal in a thin flank steak, but because it is typically cooked over extremely high heat, the brief internal temperature rise after removal from the grill can bring the steak from medium-rare to medium if not watched carefully.",
   "flat_iron": "The flat iron steak is taken from the infraspinatus muscle of the beef shoulder blade, separated from the central band of tough gristle that runs through the full top blade. Because the infraspinatus performs relatively little work, it retains outstanding intramuscular fat for a non-loin cut, producing deeply beefy, slightly buttery flavour comparable to ribeye at a fraction of the cost. Individual steaks are typically 200–350 g and 2–3 cm thick — a dimension that fits the air fryer's compact hot-air cabinet well. The air fryer's high-velocity convection at 200–205 °C dries the surface rapidly and drives the Maillard reaction without a dedicated grill or stovetop. Carryover is moderate, typically 2–3 °C after leaving the basket, so pulling 3 °C below the intended serving temperature is standard practice.",
@@ -17484,15 +17426,12 @@ const CUT_PROFILES = {
   "tomahawk": "The tomahawk over charcoal is the premier outdoor cooking experience — the enormous bone handle allows it to stand upright beside the coals for resting. Charcoal-grilled tomahawk requires the same reverse-sear principle as gas grill: indirect heat to bring the core up safely, then direct high heat for the crust. The Maillard reaction on the fat-cap over charcoal produces flavour compounds unavailable from gas. Use hardwood charcoal (oak, holm oak, beech) for best flavour.\n\n\nTarget internal temperatures (charcoal grill):\n- Medium-rare: **core 55–57 °C (131–135 °F)** · pull at **52–54 °C (126–129 °F)**\n- Medium: **core 60–63 °C (140–145 °F)**",
   "tri_tip": "Tri-tip on charcoal benefits from the classic Santa Maria barbecue tradition — the original Californian preparation. The key is a 2-zone charcoal setup: sear directly over the coals first for a crust, then finish on the indirect side to bring the interior to temperature safely. The tapered shape means the thin end will always be more done; probe the thickest section. Red oak is the traditional Santa Maria wood; hickory and mesquite are alternatives.\n\n\nTarget internal temperatures (charcoal grill):\n- Medium-rare: **pull at 54–57 °C (129–135 °F)**",
   "beef_liver": "Beef liver is one of the densest, most nutrient-rich offal cuts in the carcass — a chocolate-coloured, finely-textured mass of hepatocyte tissue with very little connective tissue and a thin filmy capsule. Its iron-and-mineral profile gives a pronounced metallic flavour that mellows dramatically with brief soaking in milk before cooking — a step common to most European traditions. Pan frying is the classic method: 6–8 mm slices flashed in hot fat, browned hard on both sides, and pulled before the centre passes about 65 °C. Above that temperature the proteins seize and the slice turns chalky and grey-brown; the visual cue for correctly-pulled liver is a faint pink line through the centre. Carryover is short and small (1–2 °C) given the thin slices, but the slices continue cooking on the plate — serving immediately is essential.",
-  "beef_rib": "*Placeholder — cut profile research not yet completed.*",
-  "beef_shin": "*Placeholder — cut profile research not yet completed.*",
   "beef_tongue": "Beef tongue (*Bos taurus* lingual muscle) is a single dense cylindrical muscle wrapped in a thick, papillae-covered skin. The muscle itself is rich in collagen and intramuscular fat; the skin is inedible and must be peeled after cooking — the standard method is to braise the whole tongue at 85–95 °C until the collagen converts to gelatin, then peel the skin while the tongue is still warm. Cooking times of 3–4 hours for a 1.5–2 kg tongue are standard. Carryover is essentially zero (the surrounding liquid buffers the temperature) but the tongue retains heat well after removal — the skin must be peeled within 5 minutes of lifting from the braise or it cools and tightens. Pull is timed by the texture of the muscle: a paring knife should slide in with no resistance.",
   "beef_shank": "Beef shank is the lower portion of the front (foreshank) or hind (hindshank) leg, structurally one of the most aggressively-worked muscles in the carcass: the constant motion of walking and standing builds dense bundles of muscle fibre wrapped in thick sheets of connective tissue, with a substantial central marrow bone running through cross-cut steaks (the *osso buco* preparation). Raw shank is among the toughest cuts in the animal; braised slowly for 3–4 hours at 85–95 °C, the connective tissue dissolves into rich gelatin, the marrow renders into the sauce, and the muscle becomes pull-apart tender. The bone-in cross-cut section holds shape because the connective-tissue ring around the muscle keeps it bound during the cook. Carryover is negligible — the surrounding liquid buffers temperature swings.",
   "brisket": "Beef brisket is taken from the breast and lower chest of the animal, comprising two muscles — the flat (*pectoralis profundus*) and the point (*pectoralis superficialis*) — that support much of the animal's weight. The cut is dense with collagen-rich connective tissue and interspersed fat, making it exceptionally tough when cooked quickly but extraordinarily silky and tender once held at the collagen-conversion threshold long enough for connective tissue to dissolve into gelatin. Oven roasting at low temperature replicates the gentle, prolonged dry heat that the cut demands — the enclosed oven environment retains moisture driven off from the meat, preventing the surface from desiccating during the long cook. Carryover is negligible for brisket because the high moisture content and dense mass absorb and retain heat slowly; the internal temperature barely moves after the brisket is removed from the oven.",
   "chuck_roast": "Chuck roast is cut from the shoulder region of the animal (the chuck primal, roughly ribs 1–5 and the neck), and is one of the most collagen-dense roasting cuts in the carcass. The shoulder muscles endure constant movement throughout the animal's life, producing densely bundled muscle fibres interlaced with thick seams of connective tissue and fat — a structure that is aggressively tough at low internal temperatures but transforms into richly flavoured, pull-apart tenderness when braised gently over several hours. Braising is particularly suited to chuck because the submerging or partial immersion in liquid accelerates the hydrolysis of collagen into gelatin, producing a self-thickening braising sauce and a meltingly tender interior simultaneously. Carryover is negligible for chuck in a braise because the surrounding liquid buffers against temperature swings; the meat stays at cooking temperature until removed.",
   "short_ribs": "*Placeholder — cut profile research not yet completed.*",
   "beef_tenderloin_roast": "The beef tenderloin (psoas major) runs along the interior of the spine and does almost no work during the animal's life, making it the most tender, least collagen-dense muscle in the carcass. A whole tenderloin roast (the \"châteaubriand\" section or full fillet) weighs approximately 1–2 kg and tapers from the thick butt end to a thin tail. It is exceptionally lean, with minimal intramuscular fat, making it vulnerable to drying out if overcooked — the window between perfectly rosy and dry, grey meat is narrow. Oven roasting suits the tenderloin because gentle, even heat preserves the moisture in the lean fibres; high-heat searing before or after the oven creates the Maillard crust that the lean exterior cannot produce on its own. Carryover is significant in a whole tenderloin — the concentrated lean mass retains heat for several minutes after leaving the oven, enough to raise the internal temperature noticeably — making the pull temperature meaningfully lower than the target serving temperature.",
-  "chuck": "*Placeholder — cut profile research not yet completed.*",
   "prime_rib": "Prime rib (also called standing rib roast) is cut from the rib primal (ribs 6–12), comprising the longissimus dorsi and surrounding muscles, with a generous fat cap and the rib bones attached. It is one of the most marbled subprimal sections of the animal — the rib muscles do relatively little work, and the high intramuscular fat content self-bastes during roasting, keeping the interior moist across a wide temperature range. Oven roasting is the canonical method for prime rib because the sustained, even heat of an enclosed oven allows the large mass (typically 2.5–5 kg) to heat evenly from edge to centre while the exterior fat cap renders and browns. Carryover is substantial for a prime rib — the large, dense mass retains heat efficiently, and internal temperature continues to rise for 15–30 minutes after removal; this must be accounted for in the pull temperature.",
   "roasting_joint": "*Placeholder — cut profile research not yet completed.*",
   "round_roast": "*Placeholder — cut profile research not yet completed.*",
@@ -17515,19 +17454,14 @@ const CUT_PROFILES = {
   "turkey_leg": "*Placeholder — cut profile research not yet completed.*",
   "turkey_thigh": "*Placeholder — cut profile research not yet completed.*",
   "whole_turkey": "A whole turkey presents the same fundamental challenge as a whole chicken but at larger scale and with more extreme differences between breast and leg/thigh: the breast meat is lean and prone to drying above 160–165 °F (71–74 °C), while the legs and thighs are dark, collagen-rich and benefit from 165–175 °F (74–79 °C) to become properly tender. A 4.5 kg / 10 lb turkey feeds 6–8 people; a 7 kg / 15 lb turkey feeds 10–12. The USDA minimum for whole turkey is **165 °F (74 °C)** measured in the thigh at its thickest point, well away from bone. Probe placement in the thigh (not the breast) is the authoritative food-safety measurement. Modern approaches — brining, spatchcocking, basting — all aim to let the thigh reach 165 °F without pushing the breast past 165 °F.\n\nTypical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) unstuffed. A 4.5 kg (10 lb) bird takes approximately 2.5–3 hours; a 7 kg (15 lb) bird takes approximately 3.5–4 hours.\n\n\nA whole turkey presents the same fundamental challenge as a whole chicken but at larger scale and with more extreme differences between breast and leg/thigh: the breast meat is lean and prone to drying above 160–165 °F (71–74 °C), while the legs and thighs are dark, collagen-rich and benefit from 165–175 °F (74–79 °C) to become properly tender. A 4.5 kg / 10 lb turkey feeds 6–8 people; a 7 kg / 15 lb turkey feeds 10–12. The USDA minimum for whole turkey is **165 °F (74 °C)** measured in the thigh at its thickest point, well away from bone. Probe placement in the thigh (not the breast) is the authoritative food-safety measurement. Modern approaches — brining, spatchcocking, basting — all aim to let the thigh reach 165 °F without pushing the breast past 165 °F.\nTypical roasting time at 190 °C (375 °F): ~13–15 minutes per 450 g (1 lb) unstuffed. A 4.5 kg (10 lb) bird takes approximately 2.5–3 hours; a 7 kg (15 lb) bird takes approximately 3.5–4 hours.",
-  "breast": "*Placeholder — cut profile research not yet completed.*",
   "chicken_breast": "Chicken breast is a lean, boneless cut that dries out quickly when overcooked. Pounding to even thickness and brining are the two most effective techniques for retaining moisture. Because there is minimal fat to buffer heat, precise temperature monitoring is critical.\n\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry",
   "chicken_breast_bone_in": "*Placeholder — cut profile research not yet completed.*",
   "chicken_burger": "Ground chicken burgers are formed patties made from minced chicken, typically 85–93% lean. Because ground poultry must be cooked to a higher internal temperature than whole muscle, and because the meat is lean and prone to drying out, adding binders (egg, breadcrumbs, or cooked rice) helps retain moisture. The air fryer circulates hot air to brown the exterior without deep frying.\n\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry",
   "chicken_leg": "Chicken drumsticks (the lower portion of the leg) are dark-meat cuts with more fat and connective tissue than breast, making them forgiving and flavourful. High-heat oven roasting renders the fat, crisps the skin, and breaks down collagen for juicy, tender meat. USDA minimum is 165 °F (74 °C), but dark meat is best at 170–175 °F (77–79 °C) where collagen converts to gelatin.\n\n\nTarget internal temperature: **170–175 °F (77–79 °C)** — recommended for dark meat drumsticks",
   "chicken_thigh": "Chicken thighs are a forgiving, flavourful dark-meat cut. Their higher fat content makes them well-suited to the air fryer's rapid circulating heat, which renders the fat and crisps the skin beautifully without drying the meat out. Bone-in skin-on thighs take longer than boneless but deliver the crispiest skin. Dark meat benefits from cooking above the USDA minimum to 175 °F (79 °C), where collagen fully converts to gelatin.\n\n\nTarget internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat",
   "chicken_wing": "Chicken wings (wingettes and drumettes) are small, high-surface-area dark-meat pieces that become irresistibly crispy in the air fryer without deep frying. The single most effective technique for extra-crispy skin is tossing wings with a small amount of baking powder before cooking — it raises the skin's pH, causing it to blister and brown faster. Patting wings dry is equally critical.\n\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for poultry",
-  "ground": "*Placeholder — cut profile research not yet completed.*",
   "ground_chicken": "Ground chicken braised in liquid is a moist-heat method that keeps the lean meat from drying out and develops a flavourful sauce simultaneously. Because ground poultry is mixed throughout with bacteria (unlike whole muscle), every part of the meat must reach safe temperature. Braising is forgiving — the surrounding liquid prevents the meat from going above 212 °F (100 °C), but interior temp still easily exceeds 165 °F (74 °C) with adequate cooking time.\n\n\nTarget internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry; visual: no pink inside",
-  "leg": "*Placeholder — cut profile research not yet completed.*",
-  "thigh": "*Placeholder — cut profile research not yet completed.*",
   "whole_chicken": "A whole roasted chicken presents a fundamental challenge: the breast and thigh finish at different temperatures, so technique matters. Starting breast-side down lets the thigh meat begin rendering while protecting the breast. High initial heat (475 °F / 246 °C) produces crackling golden skin. The breast should reach 160–165 °F (71–74 °C) while the thigh reaches 165–170 °F (74–77 °C); a well-rested bird allows both to equalise. Average 3–4 lb bird takes 55–70 minutes total.\n\n\nTarget internal temperatures: **Breast 160–165 °F (71–74 °C)** · **Thigh 165–170 °F (74–77 °C)**",
-  "wing": "*Placeholder — cut profile research not yet completed.*",
   "asparagus": "Asparagus (*Asparagus officinalis*) sautéed in a hot pan is the fastest preparation: 4–6 minutes over medium-high to high heat, producing tender-crisp spears with a lightly browned stem and vivid green colour. The pan must be large enough to hold all spears in a single layer, and the oil or butter must be hot before the asparagus goes in — otherwise the spears will steam rather than sauté. Pull temperature: 78–83 °C (172–181 °F) for tender-crisp asparagus, still with some bite. MEATER probe inserted along the long axis of the thickest spear.",
   "broccoli": "Broccoli (*Brassica oleracea* var. *italica*) sautéed in a hot pan — or stir-fried in a wok — produces golden-blistered florets with a caramelised stem and bright-green colour. The pan must be very hot; broccoli must be completely dry; it should not be crowded. Cooking time: 6–8 minutes. Pull temperature: 78–83 °C (172–181 °F) for tender-crisp, golden broccoli. MEATER probe through the stem of the largest floret.",
   "brussels_sprouts": "Brussels sprouts (*Brassica oleracea* var. *gemmifera*) pan-fried (halved, cut-face-down in a hot pan) is the fastest technique for intensely caramelised results: 8–12 minutes in a cast-iron or heavy pan achieves charred cut faces and a tender interior. Unlike sautéing (which involves frequent tossing), pan-frying holds the cut face in contact with the hot surface for an extended sear. Pull temperature: 82–88 °C (180–190 °F). MEATER probe through outer leaves of the largest sprout into the core.",
@@ -17594,23 +17528,17 @@ const CUT_PROFILES = {
   "pork_sausage": "Pork sausage is a processed meat product made from finely minced or coarsely ground pork, seasoned with salt, pepper, herbs and spices, and encased in natural pig intestine or synthetic collagen casing. Fat content is typically 20–30%, essential for juiciness and flavour development. Fresh sausages require cooking to a minimum internal temperature of 71°C (160°F); pre-cooked or smoked sausages require only reheating to serving temperature (60–65°C). The casing is the critical monitoring challenge: if it ruptures early, moisture and fat escape and the sausage dries out. Probing from one end into the centre avoids puncturing the casing mid-body. Carryover is 2–3°C.\n\n\nTarget internal temperatures (grill):\n- Fully cooked/safe: **71–75 °C (160–167 °F)**\n- ⚠️ Do not pull before 71 °C — pork sausage must be fully cooked",
   "fresh_ham": "A fresh (uncured, unsmoked) ham is the entire hind leg of a pig — bone-in, skin-on, with the femur and aitchbone running through the centre and a thick layer of subcutaneous fat under the rind. Anatomically distinct from cured (julskinka) or smoked ham preparations: the muscle has its full natural moisture, the rind is supple rather than salted-firm, and the fat has not been altered by brine. Roasting requires a long, moderate-temperature cook (140–160 °C) that drives the centre to safe temperature without overcooking the surface meat under the fat. Carryover is significant — 4–6 °C in a 4–6 kg leg — because the bone, fat and dense muscle store heat well. Rest 30–45 minutes loosely tented before carving.",
   "cheek": "*Placeholder — cut profile research not yet completed.*",
-  "jowl": "*Placeholder — cut profile research not yet completed.*",
   "liver_pork": "*Placeholder — cut profile research not yet completed.*",
   "pork_cheek": "Pork cheek (*carrillera de cerdo*, *guanciale di maiale*, *griskind*) is the small dense muscle of the jaw — roughly 80–120 g per cheek, marbled with thin sheets of intramuscular fat and rich in collagen from the constant chewing motion the muscle performs in life. For pan frying (rather than the more common braise), the cheeks are typically butterflied to expose the interior, dusted lightly, and seared at high heat — the goal is to crust the surface while keeping the centre at a tender medium-rare. This works because the cheek's collagen network, while extensive, is fine-grained enough that a brief flash sear (rather than a long braise) leaves the muscle bouncy rather than rubbery. The carryover is small (2–3 °C) given the thin butterflied cuts.",
   "pork_jowl": "*Placeholder — cut profile research not yet completed.*",
   "pork_liver": "Pork liver is milder, slightly sweeter and more delicate in texture than beef liver — a paler chestnut-brown rather than the deep mahogany of beef, with a finer-grained hepatocyte structure and a thinner capsule. The same mineral-iron flavour profile is present but at lower intensity. The standard preparation across European traditions is identical to the beef-liver pan-fry: brief soak in milk to mellow the iron, dust in flour, sear hard in fat, and pull while the centre is still faintly pink. The narrower flavour also means pork liver tolerates assertive aromatics — onions, sage, juniper, allspice, capers — better than the more bold-tasting calf's or beef liver. Carryover is small (1–2 °C); slices continue cooking on the plate, so serve immediately.",
   "pork_tongue": "Pork tongue is the smaller, more delicate sibling of beef tongue — typically 250–400 g per tongue versus 1.5–2 kg for beef. The structure is identical: a single dense lingual muscle wrapped in a thick, papillae-covered skin that must be peeled after cooking. The smaller mass means a shorter braise (60–90 minutes rather than 3–4 hours) and a milder, sweeter flavour. Pork tongue is fundamental to many traditions — Mexican *lengua de cerdo*, Chinese cha-shu pig tongue, French *langue de porc sauce ravigote*, Polish *ozór wieprzowy*. The peel-while-warm rule still applies, and the tongue is best sliced thin and either dressed with a sharp vinaigrette or warmed in a piquant sauce. Carryover is essentially zero (the surrounding liquid buffers temperature).",
-  "baby_back_ribs_alt": "*Placeholder — cut profile research not yet completed.*",
-  "belly": "*Placeholder — cut profile research not yet completed.*",
   "cured_ham": "Cured ham (skinke in Danish; Schinken in German/Austrian) for the oven roast method encompasses both pre-boiled glazed ham and straight-to-oven versions. The classic approach is to boil a mild-cured or smoked ham first (removing excess salt and pre-cooking the meat), then score the rind and glaze it in a hot oven until caramelised. Low-and-slow oven variants skip the boiling and use very low temperatures (80°C oven) to achieve even, juicy results.\n\n\nTarget internal temperature for safe, juicy cured ham: **70–75 °C** — the curing keeps the meat safe at slightly lower temps than fresh pork, but 75 °C is the standard target for glazed results.\n\nTarget internal temperatures (oven roast):\n- Juicy, glazed: **70–75 °C (158–167 °F)**\n- Very low-and-slow: **75 °C** (when oven is held at 80 °C)",
   "ham": "*Placeholder — cut profile research not yet completed.*",
   "pork_belly": "Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is the quintessential Nordic and German Sunday roast. Key to success is the crackling (svær / Kruste): the rind must be deeply scored, generously salted, and positioned flat in the oven. Danish flæskesteg is cooked at high temperature (225°C) the whole way; German Krustenbraten often starts with browning, then medium oven; a simpler approach boils the belly first then glazes in a very hot oven. Target internal for pork belly: **65–75 °C** — unlike the leaner loin, belly has so much fat that it stays juicy and safe at 65 °C.",
   "pork_leg": "Pork leg and hock (Schweinshaxe / stinco di maiale / kuzu incik) is a collagen-rich cut with thick connective tissue, bone marrow, and heavily worked muscle. Braising unlocks the cut's full potential: 2–3 hours of moist heat at low temperature converts collagen to gelatin, creating sticky, unctuous, fall-off-the-bone meat surrounded by a richly reduced sauce. Popular braised in beer across Bavaria, Central Europe, and the British Isles; in soy and spices across East Asia; and in wine with herbs across Mediterranean Europe. The MEATER probe is placed deep into the thickest muscle mass of the leg or hock, away from the bone, to track internal temperature accurately.\n\n\nTarget internal temperature: **75–80 °C (167–176 °F)** for sliceable, tender; **85–90 °C (185–194 °F)** for pull-apart.",
   "pork_loin_roast": "Pork loin roast (svinekam in Danish; Schweinerücken / Kotelettstrang in German/Austrian) with rind (svær / Schwarte) is the quintessential Scandinavian and German Sunday dinner. The loin is leaner than the belly so it needs more careful temperature management — pull too early and it's under-safe; pull too late and it dries out. The Danish approach targets **65°C** for a juicy, slightly rosy result; German recipes often go to 72–75°C for a firmer texture. For a MEATER probe, 65°C is an excellent target with a high-heat crackling finish.\n\n\nTarget internal temperatures (oven roast):\n- Juicy, slightly rosy (Danish-style): **60–65 °C (140–149 °F)**\n- Traditional firm, fully white (German-style): **70–75 °C (158–167 °F)**",
   "pork_shoulder": "Pork shoulder / neck (nakkefilet / nakkekam / svinekølle in Danish; Schweinenacken / Schweineschulter in German/Austrian) is one of the most forgiving cuts for the oven — its fat marbling prevents drying out and it develops deep flavour at virtually any oven temperature. The Danish approach covers with foil at 200°C for 105 minutes (firm but juicy); the Norwegian approach targets 75°C core at 175°C oven; the German approach uses the Krustenbraten method at 180°C × 2 hrs. Unlike the leaner loin, shoulder can be taken higher without losing juiciness.\n\n\nTarget internal temperatures (oven roast):\n- Juicy, sliceable: **72–75 °C (162–167 °F)**\n- Very tender (approaching pulled): **80–85 °C (176–185 °F)**",
-  "spare_ribs_alt": "*Placeholder — cut profile research not yet completed.*",
-  "st_louis_ribs_alt": "*Placeholder — cut profile research not yet completed.*",
-  "virginia_ham": "*Placeholder — cut profile research not yet completed.*",
   "pork_chop": "A pork chop is a cross-sectional cut of the pork loin taken from the back of the pig between the shoulder and the leg. Depending on position along the loin, it may be a rib chop (one rib bone, mostly loin muscle), loin chop (between two vertebrae, sometimes with tenderloin attached), or sirloin chop (hip end, irregular shape). Bone-in chops have more flavour and better moisture retention. The lean loin muscle dries rapidly above 68°C; modern food-safety guidelines (USDA 2011, Livsmedelsverket) allow a pull temperature of 63°C (145°F) with a 3-minute rest. Carryover is 3–5°C.\n\n\nTarget internal temperatures (air fryer):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
   "pork_loin_steak": "Pork loin steak (koteletsteg, Lendensteak vom Schwein) is a boneless steak cut from the loin (between chop and tenderloin area). It is lean and uniform in thickness, making it ideal for pan frying with the same technique as pork chop: hot pan, butter baste, 3–4 min per side. It is slightly more forgiving than tenderloin but dries out faster than a shoulder steak. Target core: 63–65 °C.\n\n\nTarget internal temperatures (pan fry):\n- Juicy/pink: **63–65 °C (145–149 °F)**",
   "pork_shoulder_steak": "Pork shoulder steak (nakkesteak, Schweinenackensteak / Schopfsteak) is from the neck/collar area — more marbled than loin steak, more forgiving, and ideal for pan frying. The fat renders during cooking, basting the meat from the inside. 3–4 minutes per side on medium-high heat is the standard, and it can withstand a slightly higher final temperature (68–70 °C) without drying out. The Austrian Schopfsteak is an iconic example of this cut.\n\n\nTarget internal temperatures (pan fry):\n- Juicy: **65–68 °C (149–154 °F)**\n- Well done: **70–72 °C (158–162 °F)**",
@@ -17779,7 +17707,7 @@ const CUT_METHOD_PROFILES = {
     "grill": "The ribeye is ideally suited to the grill — the marbling renders and self-bastes the meat while the grill provides direct radiant heat for exterior caramelisation. On a gas grill (gasgrill), high direct heat is used throughout, turning the steak frequently (every 30 seconds) for the most even crust. The ribeye should be at least 200–250 g per steak to cook successfully; lighter cuts become dry before a proper crust can form. Wagyu or premium grass-fed beef (Greater Omaha) are particularly popular for grilling due to their fat content.\n\nTarget internal temperatures (grill, pull temps):\n- Medium-rare: **pull at 52–54 °C (126–129 °F)**, resting to **57 °C (135 °F)**\n- Medium: **pull at 57–59 °C (135–138 °F)**, resting to **62 °C (144 °F)**",
     "oven_roast": "The ribeye steak is cut from the longissimus dorsi muscle of the rib primal (ribs 6–12), a muscle that does minimal work and therefore develops exceptional intramuscular fat (marbling) throughout its grain. That marbling is the defining feature: the fat pockets liquefy under heat and baste the muscle from within, producing a richness and self-basting character that no other common steak cut matches. Pan searing is a natural partner for the ribeye because the very high conductive heat of a cast-iron or carbon-steel pan drives rapid Maillard browning of the fat-rich exterior, producing a deeply caramelised crust while the marbling keeps the interior moist even if the cook overshoots slightly. The bone-in version (côte de bœuf / cowboy ribeye) retains more flavour through the cook but requires more precise probe placement to read the eye of the steak rather than the area near the bone. Carryover in a pan-seared ribeye is moderate — typically 3–5 °C — because the metal pan delivers intense surface heat that dissipates once the steak is removed, but the fat content slows core temperature equalisation.\n\nTarget internal temperatures (oven roast ribeye):\n- Medium-rare: **pull from oven at 52–54 °C (126–129 °F)**, rest to **57 °C (135 °F)**\n- Medium: **pull at 57–59 °C (135–138 °F)**",
     "pan_fry": "The ribeye (also known as entrecôte, Scotch fillet, antrikot, costata, chuletón, Rib-Eye, or μπριζόλα rib eye) is cut from the rib section of the beef, ribs 7–12. It is richly marbled with intramuscular fat, making it one of the most flavourful and forgiving cuts for pan frying — the fat bastes the meat from within as it renders. Thickness of 2–3 cm is ideal for pan frying; thicker cuts should be finished in the oven.\n\nTarget internal temperatures (pan fry, resting temp):\n- Rare: **50 °C (122 °F)**\n- Medium-rare: **54–57 °C (129–135 °F)** ← most common for ribeye\n- Medium: **60–63 °C (140–145 °F)**\n- Well done: **70+ °C (158+ °F)**",
-    "pan_sear": "The ribeye steak is cut from the longissimus dorsi muscle of the rib primal (ribs 6–12), a muscle that does minimal work and therefore develops exceptional intramuscular fat (marbling) throughout its grain. That marbling is the defining feature: the fat pockets liquefy under heat and baste the muscle from within, producing a richness and self-basting character that no other common steak cut matches. Pan searing is a natural partner for the ribeye because the very high conductive heat of a cast-iron or carbon-steel pan drives rapid Maillard browning of the fat-rich exterior, producing a deeply caramelised crust while the marbling keeps the interior moist even if the cook overshoots slightly. The bone-in version (côte de bœuf / cowboy ribeye) retains more flavour through the cook but requires more precise probe placement to read the eye of the steak rather than the area near the bone. Carryover in a pan-seared ribeye is moderate — typically 3–5 °C — because the metal pan delivers intense surface heat that dissipates once the steak is removed, but the fat content slows core temperature equalisation.",
+    "pan_sear": "Pan searing and the ribeye are an exceptional match precisely because of the cut's defining feature: its heavy intramuscular fat. When the face of a ribeye contacts a smoking-hot cast-iron or carbon-steel surface, two simultaneous reactions drive the result — the lean muscle proteins in the exterior undergo Maillard browning, and the adjacent fat pockets begin rendering, producing their own cooking medium as the sear progresses. This rendered fat bastes the crust from inside the meat rather than pooling in the pan, creating a self-enriching sear that leaner cuts like filet mignon cannot replicate. The practical outcome is that pan-seared ribeye is more forgiving than most steaks: because the marbling keeps the interior moist, a cook who overshoots medium-rare by a few degrees will still produce a very good result — the fat disguises the error.\n\nCarryover in a pan-seared ribeye is moderate, typically 3–5 °C for a standard boneless cut at 2.5–3 cm thickness. The metal pan delivers intense conductive surface heat; once the steak is off the pan, that heat source is removed immediately, limiting carryover compared to an oven roast where residual ambient heat continues. The high fat content also slows internal temperature equalisation — fat is a poorer conductor of heat than lean muscle — which means the core of a ribeye equalises slightly more slowly than a lean steak of equivalent thickness. Resting on a wire rack (not a plate) prevents the bottom face from steaming in its own liquid and maintains crust texture.\n\nProbe placement requires care because of the ribeye's internal fat structure. For a boneless cut the probe should enter from the side of the steak, aimed at the geometric centre of the eye muscle — the densest lean section. It must avoid the internal fat seam that often runs between the eye and the spinalis (cap muscle): inserting into fat gives a false-low reading. On bone-in versions (côte de bœuf, cowboy ribeye), the probe must enter from the meaty side and travel to the centre of the eye, never near the bone — bone conducts heat differently from muscle and will produce a misleading reading in either direction depending on pan orientation.",
     "sous_vide": "The ribeye steak is cut from the longissimus dorsi muscle of the rib primal (ribs 6–12), a muscle that does minimal work and therefore develops exceptional intramuscular fat (marbling) throughout its grain. That marbling is the defining feature: the fat pockets liquefy under heat and baste the muscle from within, producing a richness and self-basting character that no other common steak cut matches. Pan searing is a natural partner for the ribeye because the very high conductive heat of a cast-iron or carbon-steel pan drives rapid Maillard browning of the fat-rich exterior, producing a deeply caramelised crust while the marbling keeps the interior moist even if the cook overshoots slightly. The bone-in version (côte de bœuf / cowboy ribeye) retains more flavour through the cook but requires more precise probe placement to read the eye of the steak rather than the area near the bone. Carryover in a pan-seared ribeye is moderate — typically 3–5 °C — because the metal pan delivers intense surface heat that dissipates once the steak is removed, but the fat content slows core temperature equalisation.\n\nTarget sous vide bath temperatures (ribeye):\n- Rare: **50 °C (122 °F)** × 1.5–2 hr\n- Medium-rare: **54–57 °C (129–135 °F)** × 1.5–2 hr ← recommended for ribeye\n- Medium: **60–62 °C (140–144 °F)** × 1.5–2 hr\n- Well done: **65 °C (149 °F)** × 1.5–2 hr"
   },
   "sirloin_steak": {
@@ -25063,22 +24991,6 @@ const EXP_TREE = {
                 "usda_safe_f": 145
               },
               {
-                "id": "goat_leg_roast",
-                "name": "Leg Roast",
-                "slug": "goat_leg_roast",
-                "doneness": [
-                  "well_done"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "braise",
-                  "oven_roast",
-                  "slow_cooker"
-                ],
-                "usda_safe_c": 71,
-                "usda_safe_f": 160
-              },
-              {
                 "id": "goat_shank",
                 "name": "Goat Shank",
                 "slug": "goat_shank",
@@ -25318,22 +25230,6 @@ const EXP_TREE = {
                 "usda_safe_f": 160
               },
               {
-                "id": "burger",
-                "name": "Burger",
-                "slug": "burger",
-                "doneness": [
-                  "well_done"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "air_fryer",
-                  "grill",
-                  "pan_fry"
-                ],
-                "usda_safe_c": 71,
-                "usda_safe_f": 160
-              },
-              {
                 "id": "ground_beef",
                 "name": "Ground Beef",
                 "slug": "ground_beef",
@@ -25349,22 +25245,6 @@ const EXP_TREE = {
                 "usda_safe_f": 160
               },
               {
-                "id": "liver",
-                "name": "Liver",
-                "slug": "liver",
-                "doneness": [
-                  "medium",
-                  "well_done"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "pan_fry",
-                  "pan_sear"
-                ],
-                "usda_safe_c": 71,
-                "usda_safe_f": 160
-              },
-              {
                 "id": "meatloaf",
                 "name": "Meatloaf",
                 "slug": "meatloaf",
@@ -25374,21 +25254,6 @@ const EXP_TREE = {
                 "recommended_doneness": "well_done",
                 "supported_methods": [
                   "oven_roast"
-                ],
-                "usda_safe_c": 71,
-                "usda_safe_f": 160
-              },
-              {
-                "id": "tongue",
-                "name": "Tongue",
-                "slug": "tongue",
-                "doneness": [
-                  "pulled"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "braise",
-                  "slow_cooker"
                 ],
                 "usda_safe_c": 71,
                 "usda_safe_f": 160
@@ -25690,37 +25555,6 @@ const EXP_TREE = {
                 "usda_safe_f": 160
               },
               {
-                "id": "beef_rib",
-                "name": "Beef Rib",
-                "slug": "beef_rib",
-                "doneness": [
-                  "pulled"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "braise",
-                  "oven_roast",
-                  "smoker"
-                ],
-                "usda_safe_c": 63,
-                "usda_safe_f": 145
-              },
-              {
-                "id": "beef_shin",
-                "name": "Beef Shin",
-                "slug": "beef_shin",
-                "doneness": [
-                  "pulled"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "braise",
-                  "slow_cooker"
-                ],
-                "usda_safe_c": 63,
-                "usda_safe_f": 145
-              },
-              {
                 "id": "beef_tongue",
                 "name": "Beef Tongue",
                 "slug": "beef_tongue",
@@ -25825,22 +25659,6 @@ const EXP_TREE = {
                 "recommended_doneness": "medium_rare",
                 "supported_methods": [
                   "oven_roast"
-                ],
-                "usda_safe_c": 63,
-                "usda_safe_f": 145
-              },
-              {
-                "id": "chuck",
-                "name": "Chuck",
-                "slug": "chuck",
-                "doneness": [
-                  "pulled"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "braise",
-                  "oven_roast",
-                  "slow_cooker"
                 ],
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
@@ -26310,129 +26128,6 @@ const EXP_TREE = {
         "name": "Chicken",
         "cutTypes": [
           {
-            "id": "whole",
-            "name": "Whole",
-            "cuts": [
-              {
-                "id": "breast",
-                "name": "Breast",
-                "slug": "breast",
-                "doneness": [
-                  "safe"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "air_fryer",
-                  "grill",
-                  "oven_roast",
-                  "pan_sear"
-                ],
-                "usda_safe_c": 74,
-                "usda_safe_f": 165
-              },
-              {
-                "id": "burger",
-                "name": "Burger",
-                "slug": "burger",
-                "doneness": [
-                  "safe"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "air_fryer",
-                  "grill",
-                  "pan_fry"
-                ],
-                "usda_safe_c": 74,
-                "usda_safe_f": 165
-              },
-              {
-                "id": "ground",
-                "name": "Ground",
-                "slug": "ground",
-                "doneness": [
-                  "safe"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "grill",
-                  "pan_fry"
-                ],
-                "usda_safe_c": 74,
-                "usda_safe_f": 165
-              },
-              {
-                "id": "leg",
-                "name": "Leg",
-                "slug": "leg",
-                "doneness": [
-                  "safe",
-                  "dark_meat_optimal"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "air_fryer",
-                  "grill",
-                  "oven_roast"
-                ],
-                "usda_safe_c": 74,
-                "usda_safe_f": 165
-              },
-              {
-                "id": "thigh",
-                "name": "Thigh",
-                "slug": "thigh",
-                "doneness": [
-                  "safe",
-                  "dark_meat_optimal"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "air_fryer",
-                  "grill",
-                  "oven_roast",
-                  "pan_fry"
-                ],
-                "usda_safe_c": 74,
-                "usda_safe_f": 165
-              },
-              {
-                "id": "whole_chicken",
-                "name": "Whole Chicken",
-                "slug": "whole_chicken",
-                "doneness": [
-                  "safe",
-                  "thigh_optimal"
-                ],
-                "recommended_doneness": "thigh_optimal",
-                "supported_methods": [
-                  "air_fryer",
-                  "grill",
-                  "oven_roast"
-                ],
-                "usda_safe_c": 74,
-                "usda_safe_f": 165
-              },
-              {
-                "id": "wing",
-                "name": "Wing",
-                "slug": "wing",
-                "doneness": [
-                  "safe",
-                  "dark_meat_optimal"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "air_fryer",
-                  "grill",
-                  "oven_roast"
-                ],
-                "usda_safe_c": 74,
-                "usda_safe_f": 165
-              }
-            ]
-          },
-          {
             "id": "breast",
             "name": "Breast",
             "cuts": [
@@ -26522,6 +26217,29 @@ const EXP_TREE = {
                   "dark_meat_optimal"
                 ],
                 "recommended_doneness": "well_done",
+                "supported_methods": [
+                  "air_fryer",
+                  "grill",
+                  "oven_roast"
+                ],
+                "usda_safe_c": 74,
+                "usda_safe_f": 165
+              }
+            ]
+          },
+          {
+            "id": "whole",
+            "name": "Whole",
+            "cuts": [
+              {
+                "id": "whole_chicken",
+                "name": "Whole Chicken",
+                "slug": "whole_chicken",
+                "doneness": [
+                  "safe",
+                  "thigh_optimal"
+                ],
+                "recommended_doneness": "thigh_optimal",
                 "supported_methods": [
                   "air_fryer",
                   "grill",
@@ -27828,22 +27546,6 @@ const EXP_TREE = {
                 "usda_safe_f": 160
               },
               {
-                "id": "jowl",
-                "name": "Jowl",
-                "slug": "jowl",
-                "doneness": [
-                  "pulled"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "braise",
-                  "oven_roast",
-                  "pan_fry"
-                ],
-                "usda_safe_c": 71,
-                "usda_safe_f": 160
-              },
-              {
                 "id": "liver_pork",
                 "name": "Liver",
                 "slug": "liver_pork",
@@ -27927,39 +27629,6 @@ const EXP_TREE = {
             "id": "roasts",
             "name": "Roasts",
             "cuts": [
-              {
-                "id": "baby_back_ribs_alt",
-                "name": "Baby Back Ribs",
-                "slug": "baby_back_ribs_alt",
-                "doneness": [
-                  "pulled"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "grill",
-                  "oven_roast",
-                  "smoker"
-                ],
-                "usda_safe_c": 71,
-                "usda_safe_f": 160
-              },
-              {
-                "id": "belly",
-                "name": "Belly",
-                "slug": "belly",
-                "doneness": [
-                  "well_done",
-                  "well_done"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "air_fryer",
-                  "braise",
-                  "oven_roast"
-                ],
-                "usda_safe_c": 71,
-                "usda_safe_f": 160
-              },
               {
                 "id": "ham",
                 "name": "Ham",
@@ -28045,52 +27714,6 @@ const EXP_TREE = {
                 ],
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
-              },
-              {
-                "id": "spare_ribs_alt",
-                "name": "Spare Ribs",
-                "slug": "spare_ribs_alt",
-                "doneness": [
-                  "pulled"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "grill",
-                  "oven_roast",
-                  "smoker"
-                ],
-                "usda_safe_c": 71,
-                "usda_safe_f": 160
-              },
-              {
-                "id": "st_louis_ribs_alt",
-                "name": "St. Louis Style Ribs",
-                "slug": "st_louis_ribs_alt",
-                "doneness": [
-                  "pulled"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "grill",
-                  "oven_roast",
-                  "smoker"
-                ],
-                "usda_safe_c": 71,
-                "usda_safe_f": 160
-              },
-              {
-                "id": "virginia_ham",
-                "name": "Virginia Ham",
-                "slug": "virginia_ham",
-                "doneness": [
-                  "heated_through"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "oven_roast"
-                ],
-                "usda_safe_c": 60,
-                "usda_safe_f": 140
               }
             ]
           },
@@ -39502,7 +39125,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "310";
+const PANEL_VERSION = "311";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;

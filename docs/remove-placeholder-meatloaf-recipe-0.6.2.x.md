@@ -232,3 +232,45 @@ update the GUI help link anchors when user guide section headings change.
 - [x] Version bumped to 0.6.2.05 in all 4 locations
 - [x] USER_GUIDE.md version header updated to 0.6.2.05
 - [x] CHORES.md expanded with help-link update requirement
+
+---
+
+## v0.6.2.06 — Fix model leaf ribeye_steak-pan_sear.md; verify sample leaf quality
+
+### Context
+
+The previous session's new-requirement work found that `ribeye_steak-pan_sear.md` —
+the leaf cited as the reference standard in `RECIPE_COLLECTION_TOR.md` — was itself
+non-conformant. The `ribeye_steak.md` cut index also flagged it with a `−1` deduction:
+*"Method file ribeye_steak-pan_sear.md copies parent cut profile."*
+
+The file had five complete source recipes but was missing all four mandatory TOR analysis
+sections and carried a cut profile copied verbatim from the parent cut index.
+
+### Changes
+
+**`docs/recipe_research/beef/steaks/ribeye_steak-pan_sear.md`**
+- Rewrote `## Cut profile` to be method-specific: fat rendering dynamics in a hot pan,
+  carryover mechanics and why they differ from oven roast, probe placement considerations
+  for boneless vs bone-in cuts and the fat-seam pitfall.
+- Added `## Temperature consensus` — table of all five traditions + range analysis
+  (44–54 °C pull; Wagyu outlier vs 49–54 °C mainstream medium-rare consensus).
+- Added `## What makes this method special` — pan sear physics on fat-rich ribeye:
+  conductive heat, Maillard on a fat-enriched exterior, rapid-flip vs single-flip
+  technique comparison.
+- Added `## Data applied to cooking_data.py` — actionable coding decisions.
+- Added `## Summary` — ≤4 sentences.
+- Added `> ✅ CONFORMS TO TOR` marker.
+
+### CHORES
+- Version bumped 0.6.1.32 → 0.6.2.06 in manifest.json, __init__.py (×2), const.py.
+- `generate_frontend_data.py` run — PANEL_VERSION 310 → 311.
+- USER_GUIDE.md version header updated to 0.6.2.06.
+
+### Status
+- [x] `ribeye_steak-pan_sear.md` cut profile rewritten (method-specific)
+- [x] All four TOR analysis sections added
+- [x] CONFORMS TO TOR marker added
+- [x] Version bumped to 0.6.2.06 in all 4 locations
+- [x] PANEL_VERSION auto-incremented to 311
+- [x] USER_GUIDE.md version header updated to 0.6.2.06
