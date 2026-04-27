@@ -274,3 +274,43 @@ sections and carried a cut profile copied verbatim from the parent cut index.
 - [x] Version bumped to 0.6.2.06 in all 4 locations
 - [x] PANEL_VERSION auto-incremented to 311
 - [x] USER_GUIDE.md version header updated to 0.6.2.06
+
+---
+
+## v0.6.2.07 — short_ribs-braise.md leaf + short_ribs.md cut profile
+
+### Context
+
+`short_ribs.md` was one of many quality_score: 0 cut index files (placeholder cut profile,
+no leaf files). Task: create the braise leaf with real verified sources, write the cut
+profile, update the cut index.
+
+### Sources verified
+
+All 5 source recipes were fetched via `web_fetch` from live URLs before being written:
+
+| # | Chef / Author | Tradition | URL verified |
+|---|---------------|-----------|-------------|
+| 1 | Nagi Maehashi | Australian modern | recipetineats.com/braised-beef-short-ribs-in-red-wine-sauce/ |
+| 2 | Suzy Karadsheh | Mediterranean/American | themediterraneandish.com/braised-beef-short-ribs-and-potatoes/ |
+| 3 | Judy & Kaitlin Leung | Chinese-American fusion | thewoksoflife.com/asian-braised-short-ribs-with-chili-lime-potatoes/ |
+| 4 | Kicki Malmö (TV amateur) | Swedish home | koket.se/shortribs-braserade-i-applemust |
+| 5 | Erik Videgård (pro chef) | Swedish × Japanese | koket.se/shortribs-erik-videgards-recept |
+
+### Changes
+
+- Created `docs/recipe_research/beef/braising/short_ribs-braise.md` — 5 verified source
+  recipes, all TOR analysis sections, CONFORMS TO TOR marker.
+- Updated `docs/recipe_research/beef/braising/short_ribs.md` — replaced placeholder cut
+  profile with full anatomy + method discussion; updated quality_score 0 → 8;
+  `cooking_methods_researched`: 0 → 1; added method research status table.
+- Version bumped to 0.6.2.07 in all 4 locations.
+- `generate_frontend_data.py` run — PANEL_VERSION 312 → 313.
+- USER_GUIDE.md version header updated to 0.6.2.07.
+
+### Status
+- [x] `short_ribs-braise.md` created — 5 verified sources, full TOR analysis
+- [x] `short_ribs.md` cut profile written; quality_score updated 0 → 8
+- [x] Version bumped to 0.6.2.07 in all 4 locations
+- [x] PANEL_VERSION auto-incremented to 313
+- [x] USER_GUIDE.md version header updated to 0.6.2.07

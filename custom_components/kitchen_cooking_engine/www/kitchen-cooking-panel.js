@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 27 Apr 2026, 06:53 CET
+ * AUTO-GENERATED: 27 Apr 2026, 07:02 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 27 Apr 2026, 06:53 CET
+// Last generated: 27 Apr 2026, 07:02 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -16829,6 +16829,7 @@ const RECIPE_INDEX = {
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/braising/chuck_roast.md"
   },
   "short_ribs": {
+    "braise": "/kitchen_cooking_engine_panel/recipes/beef/braising/short_ribs-braise.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/beef/braising/short_ribs.md"
   },
   "beef_tenderloin_roast": {
@@ -17430,7 +17431,7 @@ const CUT_PROFILES = {
   "beef_shank": "Beef shank is the lower portion of the front (foreshank) or hind (hindshank) leg, structurally one of the most aggressively-worked muscles in the carcass: the constant motion of walking and standing builds dense bundles of muscle fibre wrapped in thick sheets of connective tissue, with a substantial central marrow bone running through cross-cut steaks (the *osso buco* preparation). Raw shank is among the toughest cuts in the animal; braised slowly for 3–4 hours at 85–95 °C, the connective tissue dissolves into rich gelatin, the marrow renders into the sauce, and the muscle becomes pull-apart tender. The bone-in cross-cut section holds shape because the connective-tissue ring around the muscle keeps it bound during the cook. Carryover is negligible — the surrounding liquid buffers temperature swings.",
   "brisket": "Beef brisket is taken from the breast and lower chest of the animal, comprising two muscles — the flat (*pectoralis profundus*) and the point (*pectoralis superficialis*) — that support much of the animal's weight. The cut is dense with collagen-rich connective tissue and interspersed fat, making it exceptionally tough when cooked quickly but extraordinarily silky and tender once held at the collagen-conversion threshold long enough for connective tissue to dissolve into gelatin. Oven roasting at low temperature replicates the gentle, prolonged dry heat that the cut demands — the enclosed oven environment retains moisture driven off from the meat, preventing the surface from desiccating during the long cook. Carryover is negligible for brisket because the high moisture content and dense mass absorb and retain heat slowly; the internal temperature barely moves after the brisket is removed from the oven.",
   "chuck_roast": "Chuck roast is cut from the shoulder region of the animal (the chuck primal, roughly ribs 1–5 and the neck), and is one of the most collagen-dense roasting cuts in the carcass. The shoulder muscles endure constant movement throughout the animal's life, producing densely bundled muscle fibres interlaced with thick seams of connective tissue and fat — a structure that is aggressively tough at low internal temperatures but transforms into richly flavoured, pull-apart tenderness when braised gently over several hours. Braising is particularly suited to chuck because the submerging or partial immersion in liquid accelerates the hydrolysis of collagen into gelatin, producing a self-thickening braising sauce and a meltingly tender interior simultaneously. Carryover is negligible for chuck in a braise because the surrounding liquid buffers against temperature swings; the meat stays at cooking temperature until removed.",
-  "short_ribs": "*Placeholder — cut profile research not yet completed.*",
+  "short_ribs": "Short ribs are cut from the lower portion of the beef rib cage — either the chuck short ribs (ribs 1–5, with thicker meat and more marbling) or the plate short ribs (ribs 6–10, the longer, meatier \"dino rib\" cut favoured in American barbecue). The meat consists of the intercostal muscles and the serratus ventralis, muscles that are among the most heavily worked in the animal: constant movement builds dense, collagen-rich fibre bundles that would be inedibly tough cooked quickly. That same density of connective tissue is the source of their culinary value — after sustained low-and-slow cooking the collagen dissolves into gelatin, the intramuscular fat renders, and the result is a self-basting, pull-apart texture with extraordinary depth of flavour.\n\nThe bone runs along the underside of each rib section; in the English cut (bone-in cross-cut pieces), the bone and surrounding marrow are visible in cross-section. English-cut short ribs are the standard braising and slow-cooker format. Flanken-cut short ribs slice across multiple bones into thin strips — the Korean galbi format — and are suited to quick grilling rather than long braising. Boneless short ribs are sometimes sold as \"beef spare ribs\"; they cook similarly to bone-in but finish slightly faster because the bone acts as a heat buffer.\n\nKorean short rib preparations (galbi-jjim for braising, galbi for grilling) treat the cut as a secondary category in `cooking_data.py` under the name `short_ribs` with method `grill`. The temperatures and methods differ substantially from the Western braising tradition: bone-in short ribs for galbi are sliced thinly across the ribs and marinated overnight in a soy-pear-sesame brine before grilling to medium-rare, which corresponds to a different doneness target than the braised pulled preparation.",
   "beef_tenderloin_roast": "The beef tenderloin (psoas major) runs along the interior of the spine and does almost no work during the animal's life, making it the most tender, least collagen-dense muscle in the carcass. A whole tenderloin roast (the \"châteaubriand\" section or full fillet) weighs approximately 1–2 kg and tapers from the thick butt end to a thin tail. It is exceptionally lean, with minimal intramuscular fat, making it vulnerable to drying out if overcooked — the window between perfectly rosy and dry, grey meat is narrow. Oven roasting suits the tenderloin because gentle, even heat preserves the moisture in the lean fibres; high-heat searing before or after the oven creates the Maillard crust that the lean exterior cannot produce on its own. Carryover is significant in a whole tenderloin — the concentrated lean mass retains heat for several minutes after leaving the oven, enough to raise the internal temperature noticeably — making the pull temperature meaningfully lower than the target serving temperature.",
   "prime_rib": "Prime rib (also called standing rib roast) is cut from the rib primal (ribs 6–12), comprising the longissimus dorsi and surrounding muscles, with a generous fat cap and the rib bones attached. It is one of the most marbled subprimal sections of the animal — the rib muscles do relatively little work, and the high intramuscular fat content self-bastes during roasting, keeping the interior moist across a wide temperature range. Oven roasting is the canonical method for prime rib because the sustained, even heat of an enclosed oven allows the large mass (typically 2.5–5 kg) to heat evenly from edge to centre while the exterior fat cap renders and browns. Carryover is substantial for a prime rib — the large, dense mass retains heat efficiently, and internal temperature continues to rise for 15–30 minutes after removal; this must be accounted for in the pull temperature.",
   "roasting_joint": "*Placeholder — cut profile research not yet completed.*",
@@ -17764,6 +17765,9 @@ const CUT_METHOD_PROFILES = {
   },
   "chuck_roast": {
     "braise": "Chuck roast is cut from the shoulder region of the animal (the chuck primal, roughly ribs 1–5 and the neck), and is one of the most collagen-dense roasting cuts in the carcass. The shoulder muscles endure constant movement throughout the animal's life, producing densely bundled muscle fibres interlaced with thick seams of connective tissue and fat — a structure that is aggressively tough at low internal temperatures but transforms into richly flavoured, pull-apart tenderness when braised gently over several hours. Braising is particularly suited to chuck because the submerging or partial immersion in liquid accelerates the hydrolysis of collagen into gelatin, producing a self-thickening braising sauce and a meltingly tender interior simultaneously. Carryover is negligible for chuck in a braise because the surrounding liquid buffers against temperature swings; the meat stays at cooking temperature until removed."
+  },
+  "short_ribs": {
+    "braise": "Braising is not one of several options for short ribs — it is the method for which short ribs exist as a culinary cut. The English short rib (bone-in, chuck end, ribs 1–5 or the shorter plate end, ribs 6–10) is composed of heavily worked intercostal and serratus ventralis muscle fibres bound together by dense sheets of collagen: raw, this structure is rubbery and resistant; after three or more hours of moist heat at 88–96 °C (190–205 °F), the collagen hydrolyses into gelatin, the fat renders into the braising liquid, and the fibres that would be inedibly tough at medium-rare temperature become pull-apart tender with a silky, self-enriching mouth texture.\n\nThe method works because the braising liquid maintains the meat at or near 100 °C from the outside while the centre equilibrates — very slowly, because collagen and fat conduct heat poorly — to 88–96 °C. This is 30–40 °C above the temperature at which standard steak is served, and it is only reachable without drying out because the surrounding liquid replenishes the surface moisture that evaporative cooking would otherwise remove. The three or more hours of sustained heat at this range complete collagen-to-gelatin conversion throughout the entire cross-section of the rib.\n\nProbe placement for braised short ribs is straightforward but requires inserting the probe before the meat goes into the braising liquid: place the probe from the flat cut end of the rib (the surface furthest from the bone), aiming towards the geometric centre of the largest muscle section. The probe tip must be surrounded by lean muscle, not resting against the bone or in a large pocket of intramuscular fat — both give false-low readings because they are slower to equalise than the surrounding lean fibres."
   },
   "beef_tenderloin_roast": {
     "oven_roast": "The beef tenderloin (psoas major) runs along the interior of the spine and does almost no work during the animal's life, making it the most tender, least collagen-dense muscle in the carcass. A whole tenderloin roast (the \"châteaubriand\" section or full fillet) weighs approximately 1–2 kg and tapers from the thick butt end to a thin tail. It is exceptionally lean, with minimal intramuscular fat, making it vulnerable to drying out if overcooked — the window between perfectly rosy and dry, grey meat is narrow. Oven roasting suits the tenderloin because gentle, even heat preserves the moisture in the lean fibres; high-heat searing before or after the oven creates the Maillard crust that the lean exterior cannot produce on its own. Carryover is significant in a whole tenderloin — the concentrated lean mass retains heat for several minutes after leaving the oven, enough to raise the internal temperature noticeably — making the pull temperature meaningfully lower than the target serving temperature."
@@ -19011,6 +19015,15 @@ const RECIPE_TITLES_INDEX = {
       "Nigella Lawson — Italian-Style Pot Roast (*Stracotto di manzo*)",
       "Maangchi — Korean Braised Beef (*Jangjorim*)",
       "Judith Jones / Craig Claiborne — Daube de Bœuf Provençale (Provençal tradition)"
+    ]
+  },
+  "short_ribs": {
+    "braise": [
+      "Nagi Maehashi — Braised Beef Short Ribs in Red Wine Sauce (Australian modern tradition)",
+      "Suzy Karadsheh — Sage-Wine Braised Beef Short Ribs and Potatoes (Mediterranean / American tradition)",
+      "Judy and Kaitlin Leung — Asian Braised Short Ribs with Chili Lime Potatoes (Chinese-American tradition)",
+      "TV amateur cook \"Kicki Malmö\" — Short Ribs Bräserade i Äppelmust (Swedish home tradition)",
+      "Erik Videgård — Shortribs i japansk lag (Swedish professional × Japanese tradition)"
     ]
   },
   "beef_tenderloin_roast": {
@@ -39125,7 +39138,7 @@ class KitchenCookingPanel extends LitElement {
 // Force re-registration by using a versioned element name
 // This bypasses browser's cached customElements registry
 // MUST match the "name" in __init__.py panel config
-const PANEL_VERSION = "311";
+const PANEL_VERSION = "313";
 
 // Register with versioned name (what HA frontend will look for)
 const VERSIONED_NAME = `kitchen-cooking-panel-v${PANEL_VERSION}`;
