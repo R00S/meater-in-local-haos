@@ -108,7 +108,7 @@ Score 7 (first 17 alphabetically):
 
 | # | File | Score before | Score after | Status |
 |---|------|-------------|-------------|--------|
-| 1 | beef/roasts/sirloin_tip_roast.md | 0 | — | pending |
+| 1 | beef/roasts/sirloin_tip_roast.md | 0 | 10 | done — cut profile added, oven_roast leaf started (2 Group B sources: RecipeTin Eats + africanbites.com), cooking_methods_researched: 1 set |
 | 2 | game/buffalo/buffalo_roast.md | 0 | — | pending |
 | 3 | game/kangaroo/kangaroo_fillet.md | 0 | — | pending |
 | 4 | game/mutton/mutton_shoulder_alt.md | 0 | — | pending |
