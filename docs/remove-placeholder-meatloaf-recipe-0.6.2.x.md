@@ -391,6 +391,31 @@ Commits between cut files as required.
 
 ---
 
+## Session start — 2026-04-27 (agent 2, IMPROVE_CUT_FILES.md execution)
+
+### Output 1 — Culinary group definitions (verbatim from `RECIPE_COLLECTION_TOR.md`)
+
+| Culinary Group | Includes |
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Caucasus region, the Stans, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+### Output 2 — Analysis gate rule (verbatim from `RECIPE_ANALYSIS_TOR.md`)
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+### Output 3 — Source integrity rule (verbatim from `SOURCE_SURVEY.md`)
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+### Output 4 — My understanding of this task (own words)
+
+The primary task is to incrementally improve the 50 lowest-scoring cut index files in `docs/recipe_research/` — creating real cut profiles and child cut-method leaf files with 4–6 genuinely sourced, web-fetched recipes from sites confirmed working in SOURCE_SURVEY.md. "This is not a race" means every recipe cited must have been actually fetched and verified before writing; moving a file from score 0 to score 4 with honest data is better than a file that looks like score 12 with fabricated sources. I commit between each cut file and continue without stopping. After all 50 cuts are done (or maximally improved given reachable sources), I do CHORES.md — not before.
+
+---
+
 ## SOURCE_SURVEY.md update — 2026-04-27 (agent session)
 
 ### Task
