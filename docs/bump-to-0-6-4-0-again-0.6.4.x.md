@@ -397,3 +397,57 @@ Then execute CHORES.md after all remaining files are done.
 1. **CHORES.md** — all 8 original lowest-scoring files are now improved. Execute CHORES.md.
 2. Continue with the next batch of lowest-scoring files (24–50 in the cut file progress table) if CHORES.md is complete.
 3. For `pork_jowl.md`: try koreanbapsang.com (항정살구이 — Korean neck-jowl grill), thewoksoflife.com (red-braised pork face), to add a braise or grill leaf.
+
+---
+
+## Session start (session 7, 2026-04-27) — pork_jowl research + CHORES
+
+### pork_jowl braise research
+
+The pork_jowl cut file (score 0 → 1 in session 6, cut profile only) was improved to **score 9** by adding a verified braise leaf.
+
+**Leaf file created**: `docs/recipe_research/pork/offal/pork_jowl-braise.md`
+
+| Source | URL | Status | Group | Method | Pull temp |
+|--------|-----|--------|-------|--------|-----------|
+| Geoffrey Smeddle (GBC) | greatbritishchefs.com/recipes/pork-cheek-recipe | 200 fetched | B | Stovetop simmer | 88–93 °C |
+| Martin Wishart (GBC) | greatbritishchefs.com/recipes/braised-pork-cheek-recipe | 200 fetched | B | Pressure cooker 45 min | 88–93 °C |
+| Graham Campbell (GBC) | greatbritishchefs.com/recipes/braised-pork-cheeks-recipe | 200 fetched | B | Sous vide 80 °C × 6 h | 80 °C sustained |
+
+**Anatomy note**: All three sources are for *pork cheeks* (buccinator muscle = the same anatomical cut as pork jowl's meat component). This is correctly documented in the leaf file.
+
+**Korean hangjeongsal grill** (항정살구이) — searched extensively. All dedicated Korean BBQ sites either blocked (403) or had no specific hangjeongsal recipe page: koreanbapsang.com, kimchimari.com, beyondkimchee.com, aeriskitchen.com, maangchi.com, seonkyounglongest.com, mykoreankitchen.com. No grill leaf created — documented in improvement priorities of the cut file for a future session.
+
+**Braise temperature consensus (Group B, provisional)**: pull at **88–93 °C / 190–199 °F**. Confirms the existing `pulled` doneness entry in the cut file is correct.
+
+### CHORES session (session 7, 2026-04-27)
+
+#### Version bump
+
+0.6.4.2 → **0.6.4.3**
+
+| File | Updated |
+|------|---------|
+| `manifest.json` | `"version": "0.6.4.3"` |
+| `__init__.py` | `__version__ = "0.6.4.3"` · Last Change updated |
+| `const.py` | Last Change updated |
+| `www/kitchen-cooking-panel.js` | `PANEL_VERSION` auto-incremented 328 → 329 by `generate_frontend_data.py` |
+
+#### User guide
+
+- Updated version header: `0.6.4.2` → `0.6.4.3`
+- All 15 `_openHelp` anchors in `panel-class-template.js` verified against USER_GUIDE.md headings — all resolve correctly, no changes required.
+
+#### Summary of this release (0.6.4.3)
+
+This release completes the recipe research improvements started in session 5:
+- `pork/offal/pork_jowl.md`: score 1 → **9** (braise leaf with 3 Group B sources)
+
+All 8 original lowest-scoring cut files from the session 5 target list are now improved.
+
+### What to do next (future session)
+
+Continue IMPROVE_CUT_FILES.md with the next batch of low-scoring cut files (scores 0–1 in the broader list). Priority candidates:
+1. `pork/offal/pork_jowl.md` — grill leaf (Korean hangjeongsal): try omnivorescookbook, chinasichuanfood with different URL patterns, or use the GBC site search
+2. `pork/offal/cheek.md` — add Groups A, C, D to braise leaf
+3. Any remaining score-0 files from the original 50

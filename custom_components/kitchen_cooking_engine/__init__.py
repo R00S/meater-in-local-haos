@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
-Last Updated: 27 Apr 2026, 14:25 UTC
-Last Change: v0.6.4.2 - CHORES: fix quality scores (lamb_brisket 11→5, lamb_loin_roast 9→1); add cooking_methods_researched guard comment to 151 cut files
+Last Updated: 27 Apr 2026, 21:55 UTC
+Last Change: v0.6.4.3 - CHORES: pork_jowl braise research (score 1→9); 3 GBC Group B sources (Smeddle, Wishart, Campbell)
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -72,7 +72,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.6.4.2"
+__version__ = "0.6.4.3"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
