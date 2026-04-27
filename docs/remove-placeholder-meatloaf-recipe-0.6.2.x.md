@@ -346,3 +346,20 @@ child cut-method files for those cuts if needed)."
 - [x] Version bumped to 0.6.2.08 in all 4 locations
 - [x] PANEL_VERSION auto-incremented to 314
 - [x] USER_GUIDE.md version header updated to 0.6.2.08
+
+---
+
+## v0.6.2.09 — Improve 50 lowest-scoring cut files
+
+### Task
+Execute `IMPROVE_CUT_FILES.md`: improve the 50 lowest-scoring cut index files in
+`docs/recipe_research/`, creating cut profiles and child cut-method leaf files with
+verified real source recipes fetched from confirmed-working sites (SOURCE_SURVEY.md).
+
+Commits between cut files as required.
+
+### Status
+- [x] Version bumped to 0.6.2.09 in all 4 locations
+- [x] PANEL_VERSION auto-incremented to 315
+- [x] USER_GUIDE.md version header updated to 0.6.2.09
+- [ ] Cut file improvements in progress (see individual commits)

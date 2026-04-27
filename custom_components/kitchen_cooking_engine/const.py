@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 25 Apr 2026, 22:34 UTC
-Last Change: v0.6.2.08 - Create IMPROVE_CUT_FILES.md work queue (50 lowest-scoring cuts)
+Last Change: v0.6.2.09 - Improve 50 lowest-scoring cut index files in docs/recipe_research
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "314"
+PANEL_VERSION = "315"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
