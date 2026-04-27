@@ -5709,6 +5709,7 @@ class KitchenCookingPanel extends LitElement {
         <h2>${this._t('ninja.built_in_heading')}</h2>
         <button class="help-btn" @click=${() => this._openHelp('#61-built-in-recipes')} title="Open User Guide">?</button>
       </div>
+      ${this._ninjaBuiltInRecipes.length === 0 ? html`
         <ha-card>
           <div class="card-content">
             <p>${this._t('ninja.no_built_in')}</p>

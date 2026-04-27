@@ -50,3 +50,16 @@ works in HA 2024.1+ without any internet access and without CSP issues.
 - [x] Regenerated `kitchen-cooking-panel.js` (PANEL_VERSION 317→318)
 - [x] Bumped version 0.6.2.10 → 0.6.3.0 in manifest.json, __init__.py, const.py
 - [x] Created branch timeline file at 0.6.3.x
+
+### Session 2 — 2026-04-27
+
+**Discoveries:**
+- Fix from session 1 did not resolve the blank screen / card error
+- `node --input-type=module < kitchen-cooking-panel.js` revealed a JS `SyntaxError: Unexpected token ':'` at line 33866
+- Root cause: `_renderNinjaBuiltInRecipesView()` in `panel-class-template.js` was missing `${this._ninjaBuiltInRecipes.length === 0 ? html\`` before the "no recipes" `<ha-card>` block — the ternary had `: html\`` and `\`}` but no opening condition expression
+- The entire ~39 000-line ES module failed to parse, so no custom elements were ever registered, producing both symptoms
+
+**Actions taken:**
+- [x] Added missing `${this._ninjaBuiltInRecipes.length === 0 ? html\`` in `panel-class-template.js`
+- [x] Regenerated `kitchen-cooking-panel.js` (PANEL_VERSION 318→319) — syntax check passed
+- [x] Bumped version 0.6.3.0 → 0.6.3.1 in manifest.json, __init__.py, const.py
