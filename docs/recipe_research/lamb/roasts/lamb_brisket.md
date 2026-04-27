@@ -20,8 +20,8 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 11
-cooking_methods_researched: 0
+quality_score: 5
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 -->
 # Lamb Brisket — Cut Overview
@@ -36,7 +36,7 @@ Lamb brisket (UK: lamb breast) comes from the belly of the lamb — anatomically
 
 ## Quality score
 
-**Score: 11 / 20** — assessed 2026-04-27
+**Score: 5 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|

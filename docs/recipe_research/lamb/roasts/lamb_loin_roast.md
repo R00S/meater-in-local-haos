@@ -44,8 +44,8 @@ doneness:
   max_c: 68
   max_f: 155
   usda_safe: true
-quality_score: 9
-cooking_methods_researched: 0
+quality_score: 1
+cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
 quality_assessed: 2026-04-27
 -->
 # Lamb Loin Roast — Cut Overview
@@ -62,11 +62,11 @@ Lamb loin roast is the boneless, cylindrical muscle removed from the saddle — 
 
 ## Quality score
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Score: 1 / 20** — assessed 2026-04-27
 
 | Criterion | Status |
 |-----------|--------|
-| Cooking methods researched | ✓ |
+| Cooking methods researched | − **NOT DONE** — methods list inherited from placeholder, not surveyed |
 | Culinary Group A tradition covered | − not applicable for this cut (whole loin roast not a traditional Group A preparation) |
 | Culinary Group B tradition covered | ✓ (GBC/Heathcote + Gourmet Traveller) |
 | Culinary Group C tradition covered | − not applicable for this cut (whole loin roast not a traditional Group C preparation) |
