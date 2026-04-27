@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 27 Apr 2026, 13:06 UTC
-Last Change: v0.6.2.11 - Fix blank panel/missing card: replace unpkg.com LitElement import with HA-bundled lit
+Last Updated: 27 Apr 2026, 13:26 UTC
+Last Change: v0.6.3.0 - Fix blank panel/missing card: replace unpkg.com LitElement import with HA-bundled lit
 """
 
 DOMAIN = "kitchen_cooking_engine"
