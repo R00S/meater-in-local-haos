@@ -30,7 +30,7 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 0
+quality_score: 10
 cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
@@ -57,32 +57,24 @@ tibia bone, which conducts heat faster than the surrounding meat and gives false
 
 | Method | Leaf file | Status |
 |--------|-----------|--------|
-| oven_roast | *not yet created* | ⬜ |
-| smoker | *not yet created* | ⬜ |
+| oven_roast | turkey_leg-oven_roast.md | ✅ 4 sources (Groups B, C, D×2; Group A gap noted) |
+| smoker | *not yet created* | ⬜ africanbites.com/smoked-turkey-legs/ is a ready source (Group C) |
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-27
+**Score: 10 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Cut profile is a placeholder | −1 |
-| No method leaf files | −3 |
-| No temperature research (safe temps) | −3 |
-| No temperature research (culinary preferred) | −4 |
-| No per-method temp research | −2 |
+| Criterion | Status |
+|-----------|--------|
+| oven_roast leaf: 4 sources, Groups B, C, D | ✅ done |
+| Group A gap (turkey not primary in Asian traditions) | honest gap |
+| smoker leaf: not yet created | ⬜ pending |
+| Cut profile complete | ✅ done |
+| Cooking methods not fully researched | ⬜ pending (smoker) |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−4** · No temperature research (culinary preferred)
-3. **−3** · No method leaf files
-4. **−3** · No temperature research (safe temps)
-5. **−4** · Missing all four traditions
+1. Create `turkey_leg-smoker.md` — africanbites.com/smoked-turkey-legs/ is a ready Group C source; need 3 more sources
+2. Find Group A source — Filipino/Thai/Indonesian turkey recipe for oven_roast leaf
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
