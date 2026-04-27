@@ -26,9 +26,14 @@ Full installation, configuration, and feature documentation:
 
 ## 📊 Current Status
 
-**v0.6.2.10** — Development release (April 2026)
+**v0.6.3.5** — Development release (April 2026)
 
-GUI Redesign Phases 1–8 complete. Experimental MEATER path now file-driven (EXP_TREE built from recipe `.md` files). Lovelace custom card support added. Release workflow auto-runs generator. See [STATUS.md](STATUS.md) for full progress tracking.
+Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.6.3.x Fixes — Blank screen & custom card registration (April 2026)
+- ✅ **Fix: Sidebar panel blank screen** — Reverted bare `"lit"` import to the working unpkg CDN URL; fixed broken ternary syntax error in `_renderNinjaBuiltInRecipesView`
+- ✅ **Fix: `custom:kitchen-cooking-card` "doesn't exist"** — Replaced flaky Lovelace resource API with `add_extra_js_url()` (HA first-party API); element is now reliably available in all dashboard views
+- ✅ **Fix: Double `customElements.define` crash** — Removed versioned element name; single stable `kitchen-cooking-card` registration prevents the `@webcomponents/scoped-custom-element-registry` polyfill from throwing
 
 ### v0.6.2.x Features — Bug fixes, Lovelace card, help buttons, recipe research (April 2026)
 - ✅ **Lovelace custom card** — Drop `type: custom:kitchen-cooking-card` into any dashboard view; auto-registered as a Lovelace resource on startup — no manual resource configuration needed
