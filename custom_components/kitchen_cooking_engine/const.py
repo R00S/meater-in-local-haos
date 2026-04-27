@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
-Last Updated: 27 Apr 2026, 14:10 UTC
-Last Change: v0.6.3.3 - Defer Lovelace resource registration to EVENT_HOMEASSISTANT_STARTED (fixes kitchen-cooking-card)
+Last Updated: 27 Apr 2026, 14:25 UTC
+Last Change: v0.6.3.4 - Use add_extra_js_url() for kitchen-cooking-card (replaces flaky Lovelace resource API)
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "321"
+PANEL_VERSION = "322"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"
