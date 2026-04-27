@@ -111,7 +111,7 @@ Score 7 (first 17 alphabetically):
 | 1 | beef/roasts/sirloin_tip_roast.md | 0 | 10 | done — cut profile added, oven_roast leaf started (2 Group B sources: RecipeTin Eats + africanbites.com), cooking_methods_researched: 1 set |
 | 2 | game/buffalo/buffalo_roast.md | 0 | 8 | done — cut profile added, braise method added+leaf (Sean Sherman recipe), oven_roast leaf stub started, cooking_methods_researched: 1 |
 | 3 | game/kangaroo/kangaroo_fillet.md | 0 | 10 | done — cut profile added, pan_sear leaf (2 sources: chefkoch.de + kangaroowings.au), grill stub, cooking_methods_researched: 1 |
-| 4 | game/mutton/mutton_shoulder_alt.md | 0 | — | pending |
+| 4 | game/mutton/mutton_shoulder_alt.md | 0 | 14 | done — identified as system-duplicate of mutton_shoulder, cut profile cross-references primary, methods inherited |
 | 5 | game/ostrich/ostrich_fillet.md | 0 | — | pending |
 | 6 | game/reindeer/reindeer_loin.md | 0 | — | pending |
 | 7 | game/venison/venison_leg.md | 0 | — | pending |
