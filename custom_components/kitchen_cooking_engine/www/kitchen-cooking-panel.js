@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 27 Apr 2026, 19:11 CET
+ * AUTO-GENERATED: 27 Apr 2026, 19:14 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 27 Apr 2026, 19:11 CET
+// Last generated: 27 Apr 2026, 19:14 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -2493,62 +2493,6 @@ const MEAT_CATEGORIES = {
                 "supported_methods": [
                   "grill",
                   "pan_fry"
-                ]
-              },
-              {
-                "id": 514,
-                "name": "Shank",
-                "slug": "lamb_shank",
-                "doneness": [
-                  "pulled"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "braise",
-                  "slow_cooker"
-                ]
-              },
-              {
-                "id": 515,
-                "name": "Rib Rack",
-                "slug": "lamb_rib_rack",
-                "doneness": [
-                  "rare",
-                  "medium_rare",
-                  "medium",
-                  "medium_well"
-                ],
-                "recommended_doneness": "medium_rare",
-                "supported_methods": [
-                  "oven_roast",
-                  "grill"
-                ]
-              },
-              {
-                "id": 516,
-                "name": "Shoulder",
-                "slug": "lamb_shoulder",
-                "doneness": [
-                  "pulled"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "oven_roast",
-                  "braise",
-                  "slow_cooker"
-                ]
-              },
-              {
-                "id": 523,
-                "name": "Kofta / Kebab",
-                "slug": "lamb_kofta",
-                "doneness": [
-                  "well_done"
-                ],
-                "recommended_doneness": "well_done",
-                "supported_methods": [
-                  "grill",
-                  "oven_roast"
                 ]
               }
             ]
@@ -17214,9 +17158,6 @@ const RECIPE_INDEX = {
     "grill": "/kitchen_cooking_engine_panel/recipes/lamb/ground/lamb_kofta-grill.md",
     "overview": "/kitchen_cooking_engine_panel/recipes/lamb/ground/lamb_kofta.md"
   },
-  "lamb_rib_rack": {
-    "overview": "/kitchen_cooking_engine_panel/recipes/lamb/ground/lamb_rib_rack.md"
-  },
   "lamb_brisket": {
     "overview": "/kitchen_cooking_engine_panel/recipes/lamb/roasts/lamb_brisket.md"
   },
@@ -17521,7 +17462,6 @@ const CUT_PROFILES = {
   "ground_lamb": "Ground (minced) lamb is used in countless traditions — from Middle Eastern kibbeh and North African merguez to Greek moussaka, Indian keema, and Turkish Akçaabat köfte. Pan-frying ground lamb requires thorough cooking (ground meat has higher bacterial contamination risk than whole cuts). The aromatics sautéed with the mince are as important as the meat itself.\n\n\nTarget internal temperature: **74 °C (165 °F)** for food-safe ground lamb.",
   "lamb_burger": "Lamb burgers are popular throughout the UK, Australia, New Zealand, the Middle East, and South Asia. Ground lamb's higher fat content means the patties are juicy but can flare on a grill — medium-high indirect heat is recommended. Common additions: garlic, cumin, harissa, feta (stuffed or mixed in), fresh herbs.\n\n\nTarget internal temperature: **74 °C (165 °F)** for safe ground meat.",
   "lamb_kofta": "Lamb kofta (köfte, kefta, kafta, kufta — many spelling variations) is one of the most widespread grilled preparations in the world, found from Morocco to Turkey, Iran, Pakistan, Afghanistan, India, and across the Levant. The ground lamb is mixed with onion, spices, and fresh herbs, shaped onto flat metal skewers, and grilled over high heat. It cooks very quickly (3–4 minutes per side) and must be cooked through. Inserting a MEATER probe into the thickest kofta is the recommended technique.\n\n\nTarget internal temperature: **74 °C (165 °F)** for food-safe ground meat.",
-  "lamb_rib_rack": "*Placeholder — cut profile research not yet completed.*",
   "lamb_brisket": "*Placeholder — cut profile research not yet completed.*",
   "lamb_loin_roast": "*Placeholder — cut profile research not yet completed.*",
   "lamb_neck": "Lamb neck (Lammhals / collo di agnello / kuzu gerdan / lammehals) is one of the most underappreciated braising cuts. It is richly marbled, heavily worked, and packed with connective tissue and deep flavour. Cut into cross-sections or braised as a whole neck, it softens magnificently over 1.5–2.5 hours of moist heat, yielding deeply tender, self-basting meat in a rich, unctuous braising liquid. The neck is used in braises throughout Turkish, Italian, German, Greek, and Scandinavian traditions. A MEATER probe is inserted into the thickest cross-section of neck meat, away from the vertebrae, to track internal temperature.\n\n\nTarget internal temperature: **85–90 °C (185–194 °F)** for full braised tenderness.",
@@ -27319,24 +27259,6 @@ const EXP_TREE = {
                 ],
                 "usda_safe_c": 71,
                 "usda_safe_f": 160
-              },
-              {
-                "id": "lamb_rib_rack",
-                "name": "Rib Rack",
-                "slug": "lamb_rib_rack",
-                "doneness": [
-                  "rare",
-                  "medium_rare",
-                  "medium",
-                  "medium_well"
-                ],
-                "recommended_doneness": "medium_rare",
-                "supported_methods": [
-                  "grill",
-                  "oven_roast"
-                ],
-                "usda_safe_c": 63,
-                "usda_safe_f": 145
               },
               {
                 "id": "lamb_shank",
@@ -39319,7 +39241,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "326";
+const PANEL_VERSION = "327";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
