@@ -1,6 +1,6 @@
 # Branch Timeline: bump-to-0-6-4-0-again — v0.6.4.x
 
-## Session start
+## Session start (sessions 1+2, 2026-04-27)
 
 ### Output 1 — Culinary group definitions (verbatim from `RECIPE_COLLECTION_TOR.md`)
 
@@ -28,6 +28,37 @@
 ### Output 4 — My understanding of this file (my own words)
 
 The primary task is to incrementally improve the 50 lowest-scoring cut files in `docs/recipe_research/` by adding real, sourced recipes found via `web_fetch`/`web_search` and following the RECIPE_COLLECTION_TOR and RECIPE_ANALYSIS_TOR. "This is not a race" means I must never fabricate recipe content, never map cuts to wrong species, never add unverified data to look like progress — a small genuine improvement is worth more than a large fabricated one. I commit after each cut file and continue to the next without stopping. After all 50 are done, I execute CHORES.md.
+
+---
+
+## Session start (session 3, 2026-04-27)
+
+### Output 1 — Culinary group definitions (verbatim from `RECIPE_COLLECTION_TOR.md`)
+
+| Culinary Group | Includes |
+|-----------|---------|
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Estern europe, Russia, Ukraine, Caucasus region, Kazakstan, Siberia, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+
+---
+
+### Output 2 — Analysis gate rule (verbatim from `RECIPE_ANALYSIS_TOR.md`)
+
+> Analysis begins only after the collection phase (4–6 fully saved source recipes per leaf) is complete. Drawing conclusions from a leaf with incomplete source recipes produces invalid data.
+
+---
+
+### Output 3 — Source integrity rule (verbatim from `SOURCE_SURVEY.md`)
+
+> The rule in this project is: **do not write content you cannot cite to a real URL or a real published book**. Training-data recall of "what a recipe roughly contains" is not an acceptable source. Use web_fetch to verify you can actually read the content.
+
+---
+
+### Output 4 — My understanding of this file (my own words)
+
+The primary task is to incrementally improve the 50 lowest-scoring cut files by finding and citing **real, fetched source recipes** — following RECIPE_COLLECTION_TOR and RECIPE_ANALYSIS_TOR for leaf structure, source diversity, and temperature data. "This is not a race" means: a small genuine improvement is worth more than a large fabricated one; I never abandon a hard file just because it is hard; full score is not the goal; and I commit after each cut file and continue to the next without stopping. After all 50 are done, I execute CHORES.md.
 
 ---
 
