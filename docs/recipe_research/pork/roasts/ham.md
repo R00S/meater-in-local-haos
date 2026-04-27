@@ -28,7 +28,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 0
+quality_score: 8
 cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
@@ -62,31 +62,24 @@ and basted repeatedly to build a lacquered crust over the scored fat.
 
 | Method | Leaf file | Status |
 |--------|-----------|--------|
-| oven_roast | *not yet created* | ⬜ |
+| oven_roast | [ham-oven_roast.md](ham-oven_roast.md) | ✅ 4 recipes — SE/JM/UK/AU; 2 explicit pull temps |
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-27
+**Score: 8 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Eastern tradition | −1 |
-| Missing Western tradition | −1 |
-| Missing Southern tradition | −1 |
-| Missing Northern tradition | −1 |
-| Cut profile is a placeholder | −1 |
-| No method leaf files | −3 |
-| No temperature research (safe temps) | −3 |
-| No temperature research (culinary preferred) | −4 |
-| No per-method temp research | −2 |
+| No temperature research (culinary preferred) | −2 |
+| No per-method temp research | −1 |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−4** · No temperature research (culinary preferred)
-3. **−3** · No method leaf files
-4. **−3** · No temperature research (safe temps)
-5. **−4** · Missing all four traditions
+1. **−8** · Cooking methods not researched — set `cooking_methods_researched: 1` after confirming no additional methods (slow_cooker, braise) need leaves
+2. **−2** · No culinary preferred temp research — two sources gave no explicit pull temp; find a US/Filipino source with explicit temp
+3. **−1** · Missing Eastern tradition — add an Eastern tradition source (e.g. Filipino, Vietnamese, Chinese glazed ham)
+4. **−1** · Per-method temp research — once all 4 traditions have explicit temps, this resolves
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
