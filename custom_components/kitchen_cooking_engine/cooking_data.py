@@ -4099,28 +4099,6 @@ LAMB_GROUND = [
         recommended_doneness="well_done",
     ),
     MeatCut(
-        id=517,
-        name="lamb_crown_roast",
-        name_long="Crown Roast",
-        cut_order=7,
-        estimated_thickness_mm=50,
-        usda_safe_c=63,
-        usda_safe_f=145,
-        rest_time_min=10,
-        rest_time_max=20,
-        carryover_temp_c=4,
-        temperature_ranges=[
-            DONENESS_RARE,
-            DONENESS_MEDIUM_RARE,
-            DONENESS_MEDIUM,
-            DONENESS_MEDIUM_WELL,
-        ],
-        supported_methods=[
-            CookingMethod.OVEN_ROAST,
-        ],
-        recommended_doneness="medium_rare",
-    ),
-    MeatCut(
         id=523,
         name="lamb_kofta",
         name_long="Kofta / Kebab",
