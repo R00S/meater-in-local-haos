@@ -21,8 +21,8 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 16
-cooking_methods_researched: 1
+quality_score: 0
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # St. Louis Style Ribs — Cut Overview
@@ -65,33 +65,33 @@ parallel to the bone. The centre third of the rack gives the most representative
 
 | Method | Leaf file | Status |
 |--------|-----------|--------|
-| oven_roast | [st_louis_ribs-oven_roast.md](st_louis_ribs-oven_roast.md) | ✅ 5 recipes — US/AU/CN/DK/Caribbean |
+| oven_roast | *not yet created* | ⬜ |
 | grill | *not yet created* | ⬜ |
 | smoker | *not yet created* | ⬜ |
+
 ## Quality score
 
-**Score: 16 / 20** — assessed 2026-04-27
+**Score: 0 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
-| Missing grill leaf file (no per-method temp research for grill) | — |
-| Missing smoker leaf file | — |
-| Grill and smoker methods not yet covered by leaf files | −3 (adjusted: only oven_roast done so far; base −3 removed since ≥1 leaf exists) |
-| No temperature research evidence in oven_roast source recipes (bend test only, no explicit pull temps in recipes) | −3 (safe temp) |
-| No explicit culinary preferred pull temp in oven_roast source recipes | (resolved: cut profile explicitly discusses 88–96 °C range) |
-| Per-method temp: oven_roast covered in cut profile | (no deduction) |
-
-*Correction: after review, deductions are:*
-*−3 safe temp (no explicit recipe pull temps; recipes use bend test), −1 missing anatomy (anatomy present).*
-
-| Criterion | Deduction |
-|-----------|----------|
-| Temperature safe — no explicit pull temp in source recipes (bend test used) | −3 |
-| Missing grill and smoker leaf files | (not deducted separately once ≥1 leaf file exists) |
+| Cooking methods not researched | −8 |
+| Missing Eastern tradition | −1 |
+| Missing Western tradition | −1 |
+| Missing Southern tradition | −1 |
+| Missing Northern tradition | −1 |
+| Cut profile is a placeholder | −1 |
+| No method leaf files | −3 |
+| No temperature research (safe temps) | −3 |
+| No temperature research (culinary preferred) | −4 |
+| No per-method temp research | −2 |
 
 ### Improvement priorities
 
-1. **−3** · Create `st_louis_ribs-smoker.md` leaf file — smoking is the primary tradition for St. Louis ribs; a smoker recipe will include explicit thermometer pull temps at 88–96 °C
-2. **−1** · Create `st_louis_ribs-grill.md` leaf file — indirect heat grilling is the second most common method; adds grill-specific temperature data
+1. **−8** · Cooking methods not researched
+2. **−4** · No temperature research (culinary preferred)
+3. **−3** · No method leaf files
+4. **−3** · No temperature research (safe temps)
+5. **−4** · Missing all four traditions
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

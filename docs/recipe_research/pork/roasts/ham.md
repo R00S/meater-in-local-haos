@@ -28,8 +28,8 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 20
-cooking_methods_researched: 1
+quality_score: 0
+cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
 # Ham — Cut Overview
@@ -62,17 +62,31 @@ and basted repeatedly to build a lacquered crust over the scored fat.
 
 | Method | Leaf file | Status |
 |--------|-----------|--------|
-| oven_roast | [ham-oven_roast.md](ham-oven_roast.md) | ✅ 5 recipes — AU/UK/SE/JM/PH |
+| oven_roast | *not yet created* | ⬜ |
+
 ## Quality score
 
-**Score: 20 / 20** — assessed 2026-04-27
+**Score: 0 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
-| (none) | — |
+| Cooking methods not researched | −8 |
+| Missing Eastern tradition | −1 |
+| Missing Western tradition | −1 |
+| Missing Southern tradition | −1 |
+| Missing Northern tradition | −1 |
+| Cut profile is a placeholder | −1 |
+| No method leaf files | −3 |
+| No temperature research (safe temps) | −3 |
+| No temperature research (culinary preferred) | −4 |
+| No per-method temp research | −2 |
 
 ### Improvement priorities
 
-*No outstanding gaps — all TOR criteria met.*
+1. **−8** · Cooking methods not researched
+2. **−4** · No temperature research (culinary preferred)
+3. **−3** · No method leaf files
+4. **−3** · No temperature research (safe temps)
+5. **−4** · Missing all four traditions
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
