@@ -60,7 +60,7 @@ quality_assessed: 2026-04-27
 
 ## Cut profile
 
-The sirloin roast (top sirloin roast in North American butchery, *contrefilet rôti* in French, *rôti de boeuf* from the sirloin section) is a boneless or bone-in joint from the short loin or top sirloin — the posterior section of the loin, behind the rib and forward of the round. Weight range: typically 1–2.5 kg for a whole joint; larger restaurant-quantity cuts extend to 4–5 kg.
+The sirloin roast (top sirloin roast in North American butchery) is a boneless or bone-in joint from the short loin or top sirloin — the posterior section of the loin, behind the rib and forward of the round. Weight range: typically 1–2.5 kg for a whole joint; larger restaurant-quantity cuts extend to 4–5 kg.
 
 **Anatomy**: The joint consists primarily of the top sirloin cap muscle (gluteus medius) with the fat cap on the dorsal face. It is significantly leaner than rib roast: intramuscular fat is moderate rather than heavy, and connective tissue content is modest. This is not a collagen-rich cut — braising to collagen-dissolving temperatures (88+ °C) would overcook and dry out the lean fibres. The dominant culinary method worldwide is oven roasting to medium-rare (50–57 °C).
 
@@ -68,27 +68,28 @@ The sirloin roast (top sirloin roast in North American butchery, *contrefilet r�
 
 **Probe placement**: Insert from the end of the joint into the geometric centre of the lean muscle, avoiding the fat cap (fat is a poor thermal conductor and gives falsely low readings) and keeping at least 1.5 cm from any bone if present.
 
-**Methods researched**: Oven roasting is the primary confirmed culinary method across European, North American, and Scandinavian traditions. No whole-joint braise tradition specific to the sirloin cut was found (the Woks of Life *Asian Pot Roast* uses chuck roast, a different cut). No Group A oven-roast source was found on the verified site list.
+**Methods researched**: Oven roasting is the primary confirmed culinary method. No Group A oven-roast source was found on the verified site list. The madensverden.dk *langtidsstegt oksefilet* recipe cannot be confirmed as sirloin roast — "oksefilet" cut identity unconfirmed from the fetched content.
 
 ## Research files by cooking method
 
 | Method | Leaf file | Status |
 |--------|-----------|--------|
-| oven_roast | [sirloin_roast-oven_roast.md](sirloin_roast-oven_roast.md) | ✅ 4 recipes — Groups B, C, D; Group A gap noted |
+| oven_roast | [sirloin_roast-oven_roast.md](sirloin_roast-oven_roast.md) | ✅ 3 recipes — Groups B, C; Groups A and D gaps noted |
 
 ## Quality score
 
-**Score: 9 / 20** — assessed 2026-04-27
+**Score: 8 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
 | Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group A (oven_roast leaf) | (covered by above) |
+| Missing Culinary Group D tradition | −1 |
 
 ### Notes
 
-- `cooking_methods_researched: 1` — oven_roast confirmed as the primary method; no verified whole-joint braise or other method for this specific cut found
-- 4 source recipes with explicit pull temperatures across Groups B, C, D
-- Group A gap: oven-roasting a whole sirloin joint is not a documented tradition in confirmed reachable South/East/SE Asian sources; gap noted in leaf file
+- `cooking_methods_researched: 1` — oven_roast confirmed as the primary method
+- 3 source recipes with explicit pull temperatures across Groups B (French, Australian) and C (Creole/West African)
+- Group A gap: oven-roasting a whole sirloin joint is not a documented tradition in confirmed reachable South/East/SE Asian recipe sources
+- Group D gap: madensverden.dk *langtidsstegt oksefilet* cut identity unconfirmed; not assigned here
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
