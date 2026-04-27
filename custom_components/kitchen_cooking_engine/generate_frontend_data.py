@@ -991,7 +991,11 @@ def regenerate_panel():
  * Temperature values are suggestions based on cooking style, not just safety.
  */
 
-import {{ LitElement, html, css }} from "lit";
+import {{
+  LitElement,
+  html,
+  css,
+}} from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
 
 
 """

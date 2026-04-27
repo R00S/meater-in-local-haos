@@ -8,58 +8,74 @@ the User Guide says it is supported.
 
 Both symptoms point to the JS module (`kitchen-cooking-panel.js`) failing to load.
 
-## Root Cause — Discovered 2026-04-27
+## Root Cause — Confirmed 2026-04-27 (Session 3)
 
-**External CDN import blocked by HA's Content Security Policy (CSP)**
+Two independent bugs were introduced between v0.6.1.30 (working) and v0.6.3.x (broken):
 
-The generated panel JS began with:
+### Bug 1 — Wrong LitElement import (introduced by Session 1)
+
+Session 1 theorised that HA's CSP was blocking the unpkg.com CDN import and changed:
 ```javascript
+// Working (v0.6.1.30):
 import { LitElement, html, css }
   from "https://unpkg.com/lit-element@2.4.0/lit-element.js?module";
+
+// Broken (introduced in v0.6.3.0):
+import { LitElement, html, css } from "lit";
 ```
 
-HA 2024.x enforces `script-src 'self'` in its CSP, which blocks static `import`
-statements from external domains (unpkg.com is not whitelisted). When the top-level
-import fails, the entire ES module fails to evaluate — no custom elements are
-registered — so:
-- The sidebar panel (`kitchen-cooking-panel-v{VERSION}`) is never defined → blank screen
-- The Lovelace card (`kitchen-cooking-card`) is never defined → "card does not exist"
+This theory was **incorrect**. User confirmed v0.6.1.30 (using unpkg) works in their
+HA environment. HA does NOT expose `"lit"` via importmaps for custom panel modules —
+it bundles lit internally. The bare `"lit"` specifier causes a module load failure,
+preventing ALL `customElements.define()` calls from executing.
 
-The issue #80 fix (v0.6.2.01) added `type: custom:kitchen-cooking-card` to the User
-Guide, which prompted users to try it and discover the underlying blank-screen bug.
+**Fix (Session 3):** Revert import back to the working unpkg CDN URL.
 
-**Fix**: Replace the unpkg.com import with HA's own bundled Lit library.
+### Bug 2 — JS syntax error in `_renderNinjaBuiltInRecipesView`
 
-Since HA 2023.9, HA ships an import map that maps the bare specifier `"lit"` to its
-own bundled Lit version. Using `import { LitElement, html, css } from "lit"` therefore
-works in HA 2024.1+ without any internet access and without CSP issues.
+The method had a broken ternary template literal — `: html\`` and closing `\`}` were
+present but the opening `${condition ? html\`` was missing. This caused a
+`SyntaxError: Unexpected token ':'` that also aborted module evaluation.
+
+**Fix (Session 2):** Added the missing `${this._ninjaBuiltInRecipes.length === 0 ? html\``
+before the "no recipes" ha-card block in `panel-class-template.js`.
 
 ## Session Log
 
 ### Session 1 — 2026-04-27
 
-**Discoveries:**
-- Both symptoms (blank screen + card missing) indicate JS module fails entirely
-- JS imports from `https://unpkg.com/lit-element@2.4.0/lit-element.js?module`
-- HA 2024.x CSP blocks external script imports → module evaluation fails
-- Issue #80 fix (v0.6.2.01) exposed the bug by documenting the card feature
-- Fix: change import in `generate_frontend_data.py` header to use `"lit"` bare specifier
+**Discoveries (later found incorrect):**
+- Theorised HA CSP blocks unpkg.com → changed to `"lit"` bare specifier
+- This theory was WRONG — the change introduced a NEW import failure
 
 **Actions taken:**
-- [x] Changed import in `generate_frontend_data.py` header from `https://unpkg.com/lit-element@2.4.0/...` to bare `"lit"` specifier
+- [x] Changed import from unpkg CDN to bare `"lit"` specifier (❌ wrong — reverted in Session 3)
 - [x] Regenerated `kitchen-cooking-panel.js` (PANEL_VERSION 317→318)
-- [x] Bumped version 0.6.2.10 → 0.6.3.0 in manifest.json, __init__.py, const.py
-- [x] Created branch timeline file at 0.6.3.x
+- [x] Bumped version 0.6.2.10 → 0.6.3.0
+- [x] Created branch timeline file
 
 ### Session 2 — 2026-04-27
 
 **Discoveries:**
-- Fix from session 1 did not resolve the blank screen / card error
-- `node --input-type=module < kitchen-cooking-panel.js` revealed a JS `SyntaxError: Unexpected token ':'` at line 33866
-- Root cause: `_renderNinjaBuiltInRecipesView()` in `panel-class-template.js` was missing `${this._ninjaBuiltInRecipes.length === 0 ? html\`` before the "no recipes" `<ha-card>` block — the ternary had `: html\`` and `\`}` but no opening condition expression
-- The entire ~39 000-line ES module failed to parse, so no custom elements were ever registered, producing both symptoms
+- `node --check` revealed `SyntaxError: Unexpected token ':'` in generated JS
+- `_renderNinjaBuiltInRecipesView()` was missing `${this._ninjaBuiltInRecipes.length === 0 ? html\`` before the "no recipes" ha-card block
 
 **Actions taken:**
-- [x] Added missing `${this._ninjaBuiltInRecipes.length === 0 ? html\`` in `panel-class-template.js`
-- [x] Regenerated `kitchen-cooking-panel.js` (PANEL_VERSION 318→319) — syntax check passed
-- [x] Bumped version 0.6.3.0 → 0.6.3.1 in manifest.json, __init__.py, const.py
+- [x] Fixed broken ternary in `panel-class-template.js`
+- [x] Regenerated `kitchen-cooking-panel.js` (PANEL_VERSION 318→319)
+- [x] Bumped version 0.6.3.0 → 0.6.3.1
+
+### Session 3 — 2026-04-27
+
+**Discoveries:**
+- User confirmed v0.6.1.30-beta.main (commit b72dc36, using unpkg) WORKS
+- After Session 2 fix (`"lit"` + syntax fixed) still broken → `"lit"` import is the remaining cause
+- Session 1's CSP theory was wrong; unpkg CDN works in user's HA environment
+- HA does not expose `"lit"` via importmaps for custom panel modules
+
+**Actions taken:**
+- [x] Reverted LitElement import in `generate_frontend_data.py` to unpkg CDN URL
+- [x] Regenerated `kitchen-cooking-panel.js` (PANEL_VERSION 319→320)
+- [x] Bumped version 0.6.3.1 → 0.6.3.2
+- [x] Corrected timeline root cause analysis
+
