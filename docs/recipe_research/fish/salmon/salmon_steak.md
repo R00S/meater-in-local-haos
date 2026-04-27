@@ -10,7 +10,7 @@ usda_safe_f: 145
 recommended_doneness: medium
 methods:
 - grill
-- oven_roast
+- oven_bake
 - pan_sear
 doneness:
 - name: medium_rare
@@ -38,9 +38,9 @@ doneness:
   max_c: 66
   max_f: 150
   usda_safe: true
-quality_score: 0
-cooking_methods_researched: 0
-quality_assessed: 2026-04-26
+quality_score: 11
+cooking_methods_researched: 2
+quality_assessed: 2026-04-27
 -->
 # Salmon Steak — Cut Overview
 
@@ -73,33 +73,27 @@ side — too thin.
 
 | Method | Leaf file | Status |
 |--------|-----------|--------|
-| pan_sear | *not yet created* | ⬜ |
+| pan_sear | [salmon_steak-pan_sear.md](salmon_steak-pan_sear.md) | ✅ 4 sources (2 Northern + 2 Western); 0 explicit pull temps |
+| oven_bake | [salmon_steak-oven_bake.md](salmon_steak-oven_bake.md) | ✅ 4 sources (2 Northern + 2 Western); 1 explicit pull temp (≈ 60 °C) |
 | grill | *not yet created* | ⬜ |
-| oven_roast | *not yet created* | ⬜ |
 
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-27
+**Score: 11 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | −8 |
+| Cooking methods not fully researched (2 of 3) | −3 |
 | Missing Eastern tradition | −1 |
-| Missing Western tradition | −1 |
 | Missing Southern tradition | −1 |
-| Missing Northern tradition | −1 |
-| Cut profile is a placeholder | −1 |
-| No method leaf files | −3 |
-| No temperature research (safe temps) | −3 |
-| No temperature research (culinary preferred) | −4 |
-| No per-method temp research | −2 |
+| Missing method leaf file (grill) | −1 |
+| Source recipes mostly silent on internal temperature (1 of 8 explicit) | −2 |
+| Per-method temp research thin (1 of 2 leaves has explicit pull temp) | −1 |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched
-2. **−4** · No temperature research (culinary preferred)
-3. **−3** · No method leaf files
-4. **−3** · No temperature research (safe temps)
-5. **−4** · Missing all four traditions
+1. **−3** · Add the third method leaf file (grill) — Northern (Swedish gravad/grillad lax) and Western (BBQ) sources should be findable
+2. **−2** · Find sources that give explicit thermometer targets — recipe collections that target instrumented home cooks (e.g. ChefSteps, Serious Eats) are more likely to publish them
+3. **−2** · Add Eastern (e.g. Japanese teriyaki of a *salmon steak* specifically, not a fillet) and Southern (Mediterranean / Middle Eastern) sources — note that searches show fillet has displaced steak in these traditions, so this gap may be a legitimate "no data" finding rather than a fixable deduction
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
