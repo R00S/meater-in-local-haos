@@ -344,3 +344,26 @@ The task is to incrementally improve the 8 lowest-scoring cut files by finding r
 | 6 | pork/ribs/st_louis_ribs.md | 0 | — | pending |
 | 7 | poultry/chicken/chicken_breast_bone_in.md | 0 | — | pending |
 | 8 | poultry/duck/duck_leg_confit.md | 0 | — | pending |
+
+### Session 5 cut file results (2026-04-27)
+
+| # | File | Score before | Score after | What was added |
+|---|------|-------------|-------------|----------------|
+| 8 | poultry/duck/duck_leg_confit.md | 0 | **9** | Cut profile + `duck_leg_confit-oven_roast.md` (RecipeTin Eats + Bon Appétit, both Group B) |
+| 7 | poultry/chicken/chicken_breast_bone_in.md | 0 | **9** | Cut profile + `chicken_breast_bone_in-oven_roast.md` (The Mediterranean Dish Group B + Africanbites Group C) |
+| 6 | pork/ribs/st_louis_ribs.md | 0 | **9** | Score correction (profile existed) + `st_louis_ribs-oven_roast.md` (WoL char siu Group A + BBC Good Food Group B) |
+| 3 | pork/offal/cheek.md | 0 | **9** | Cut profile + `cheek-braise.md` (Geoffrey Smeddle GBC Group B) |
+| 4 | pork/offal/liver_pork.md | 0 | 0 | **Stopped** — could not find verifiable pan_fry pork liver recipe with explicit temperature in available sources within remaining time |
+| 5 | pork/offal/pork_jowl.md | 0 | 0 | Not reached — time limit |
+| 1 | lamb/roasts/lamb_rib.md | 0 | 0 | Not reached — time limit |
+| 2 | lamb/roasts/lamb_rump.md | 0 | 0 | Not reached — time limit |
+
+### What to do next (session 6)
+
+Continue IMPROVE_CUT_FILES.md with the 4 remaining files:
+1. `pork/offal/liver_pork.md` — pan_fry leaf needed; sources tried: thewoksoflife (no pork liver), bbcgoodfood (lamb liver only, no explicit temperature), beyondkimchee (404). Try: 196flavors, simplyrecipes, nytimes cooking, africanbites, koket.se
+2. `pork/offal/pork_jowl.md` — cut profile + braise or slow_cooker leaf
+3. `lamb/roasts/lamb_rib.md` — cut profile + oven_roast or braise leaf
+4. `lamb/roasts/lamb_rump.md` — cut profile + oven_roast leaf
+
+Then execute CHORES.md after all remaining files are done.
