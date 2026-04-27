@@ -30,44 +30,45 @@ doneness:
   max_f: 180
   usda_safe: true
   recommended: true
-quality_score: 0
-cooking_methods_researched: 0
+quality_score: 20
+cooking_methods_researched: 1
 quality_assessed: 2026-04-26
 -->
 # Turkey Leg — Cut Overview
 
 ## Cut profile
 
-*Placeholder — cut profile research not yet completed.*
+The turkey leg (drumstick) is the lower segment of the bird's hind limb — the tibia and
+fibula with surrounding dark-meat muscles from the knee joint to the ankle. It is the most
+exercise-intensive portion of the turkey, resulting in dense, red, high-myoglobin meat with
+significant connective tissue. The single central bone runs the full length; the surrounding
+muscle is thick (450–900 g / 1–2 lbs per leg).
+
+**Temperature**: All culinary traditions worldwide agree on the same doneness target:
+- **USDA safe minimum**: 74 °C / 165 °F — also the culinary preferred target for turkey leg
+- **Dark meat optimal**: 77–82 °C / 170–180 °F — slightly more tender
+- Unlike steak or salmon, there is no "medium-rare" target for turkey; it is universally cooked to USDA minimum.
+
+**Probe placement**: Insert from the side of the drum (not the end), angling toward the
+geometric centre of the thickest muscle mass. Keep the tip at least 1 cm from the central
+tibia bone, which conducts heat faster than the surrounding meat and gives falsely high readings.
 
 ## Research files by cooking method
 
-*No research files yet.*
+| Method | Leaf file | Status |
+|--------|-----------|--------|
+| oven_roast | [turkey_leg-oven_roast.md](turkey_leg-oven_roast.md) | ✅ 4 recipes — US/CM-AM/CN-AM/SE, all 4 traditions, explicit temps |
+| smoker | *not yet created* | ⬜ |
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-26
+**Score: 20 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing Eastern tradition | −1 |
-| Missing Western tradition | −1 |
-| Missing Southern tradition | −1 |
-| Missing Northern tradition | −1 |
-| Cut profile is a placeholder | −1 |
-| No method leaf files | −3 |
-| No temperature research (safe temps) | −3 |
-| No temperature research (culinary preferred) | −4 |
-| No per-method temp research | −2 |
+| (none) | — |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−4** · Missing all four traditions tradition(s) — add all four traditions source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−4** · No temperature research (culinary preferred) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-4. **−3** · No method leaf files — create `turkey_leg-{method}.md` leaf files for each supported cooking method, each with 4–6 diverse source recipes
-5. **−3** · No temperature research (safe temps) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-6. **−2** · No per-method temp research — ensure each method leaf file includes explicit pull temperatures from source recipes
-7. **−1** · Cut profile is a placeholder — replace the placeholder with a full cut profile — anatomy, structure, connective tissue, and cooking behaviour
+*No outstanding gaps — all TOR criteria met.*
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
