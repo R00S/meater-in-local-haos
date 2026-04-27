@@ -46,7 +46,7 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 0
+quality_score: 7
 cooking_methods_researched: 0
 quality_assessed: 2026-04-26
 -->
@@ -54,36 +54,48 @@ quality_assessed: 2026-04-26
 
 ## Cut profile
 
-*Placeholder — cut profile research not yet completed.*
+The rump roast is cut from the primal **round** — the hindquarter hip area. In North American
+butchery this encompasses the top round, bottom round, eye of round, and rump roast proper.
+In British butchery the same anatomical region produces **topside** (inner thigh, the leanest)
+and **top rump** / thick flank (slightly higher and more marbled). In Finnish cooking this cut
+is called **paahtopaisti** and is the classic joint for Sunday oven roast beef.
+
+**Anatomy**: Rump and round cuts are large, well-exercised muscles with relatively low
+intramuscular fat but tight, even grain. Connective tissue content is modest compared to chuck
+or brisket. This means rump roast does not require braising temperatures for collagen-dissolution
+— it responds well to moderate dry heat up to 60–65 °C.
+
+**Best uses**: Oven roasting (dry heat, 120–220 °C), braising (covered with liquid,
+low-and-slow), and slow cooker. For oven roasting, two approaches are documented: (1) high
+start (220–240 °C) then reduce to 160–190 °C; (2) low-and-slow throughout (120–130 °C). For
+braising, covered cooking with wine/stock transforms the cut into pull-apart tender pot roast.
+
+**Slicing**: Always slice against the grain for the most tender result. The tight grain of
+round/rump cuts makes slicing direction critical.
 
 ## Research files by cooking method
 
-*No research files yet.*
+| Method | Leaf file | Status |
+|--------|-----------|--------|
+| oven_roast | rump_roast-oven_roast.md | ✅ 4 sources (Groups B×2, C, D) |
+| braise | *not yet created* | ⬜ |
+| slow_cooker | *not yet created* | ⬜ |
+
 ## Quality score
 
-**Score: 0 / 20** — assessed 2026-04-26
+**Score: 7 / 20** — assessed 2026-04-27
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group B tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Cut profile is a placeholder | −1 |
-| No method leaf files | −3 |
-| No temperature research (safe temps) | −3 |
-| No temperature research (culinary preferred) | −4 |
-| No per-method temp research | −2 |
+| Groups B, C, D covered in oven_roast leaf | −0 |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−4** · Missing all four traditions tradition(s) — add all four traditions source recipes to method leaf files — each tradition needs at least one recipe across the method files
-3. **−4** · No temperature research (culinary preferred) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-4. **−3** · No method leaf files — create `rump_roast-{method}.md` leaf files for each supported cooking method, each with 4–6 diverse source recipes
-5. **−3** · No temperature research (safe temps) — add method leaf files whose source recipes include explicit pull temperatures — frontmatter values alone are not enough
-6. **−2** · No per-method temp research — ensure each method leaf file includes explicit pull temperatures from source recipes
-7. **−1** · Cut profile is a placeholder — replace the placeholder with a full cut profile — anatomy, structure, connective tissue, and cooking behaviour
+1. **−8** · Cooking methods not researched — research remaining methods (braise, slow_cooker); set `cooking_methods_researched: 1`
+2. **−1** · Group A gap — add a Group A source to oven_roast leaf or a new method leaf
+3. Create `rump_roast-braise.md` leaf (pot-roast style, BBC / Moroccan / Polish / Chinese)
+4. Create `rump_roast-slow_cooker.md` leaf
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
