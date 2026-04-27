@@ -70,14 +70,14 @@ Target internal temperature: **57–62 °C (135–144 °F)** for medium-rare to 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
-| Missing Eastern tradition | −1 |
-| Missing Southern tradition | −1 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
 | Method file `moose_steak-grill.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
 
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing Eastern and Southern tradition(s) — add Eastern and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−2** · Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
 3. **−1** · Method file `moose_steak-grill.md` copies parent cut profile — rewrite `moose_steak-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

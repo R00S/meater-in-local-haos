@@ -33,7 +33,7 @@ papillote, route the probe lead so the parcel can still be sealed.
 
 ## Source recipes
 
-### 1. CuisineAZ — Darne de saumon en papillote facile (French / Western tradition)
+### 1. CuisineAZ — Darne de saumon en papillote facile (French / Culinary Group B tradition)
 **Source**: CuisineAZ, cuisineaz.com/recettes/darne-de-saumon-en-papillote-facile-120710.aspx  
 **Serves**: 4 · **Prep**: 5 min · **Cook**: 25–30 min · **Total**: 35 min
 
@@ -56,7 +56,7 @@ papillote, route the probe lead so the parcel can still be sealed.
 
 ---
 
-### 2. CuisineAZ — Darne de saumon citronnée au four de grand-mère (French / Western tradition)
+### 2. CuisineAZ — Darne de saumon citronnée au four de grand-mère (French / Culinary Group B tradition)
 **Source**: CuisineAZ, cuisineaz.com/recettes/darne-de-saumon-citronee-au-four-de-grand-mere-76799.aspx  
 **Serves**: 2 · **Prep**: 10 min · **Cook**: 20 min
 
@@ -82,7 +82,7 @@ papillote, route the probe lead so the parcel can still be sealed.
 
 ---
 
-### 3. Tasteline — Laxkotletter med grönsaker (Swedish / Northern tradition)
+### 3. Tasteline — Laxkotletter med grönsaker (Swedish / Culinary Group D tradition)
 **Source**: Tasteline, tasteline.com/recept/laxkotletter-med-gronsaker/  
 **Serves**: 4 · **Cook**: 10–15 min in foil
 
@@ -106,7 +106,7 @@ papillote, route the probe lead so the parcel can still be sealed.
 
 ---
 
-### 4. Matklubben — Ugnsbakad laxkotlett med gorgonzola (Swedish / Northern tradition)
+### 4. Matklubben — Ugnsbakad laxkotlett med gorgonzola (Swedish / Culinary Group D tradition)
 **Source**: Matklubben, matklubben.se/recept/ugnsbakad-laxkotlett-med-gorgonzola/  
 **Serves**: 4 · **Cook**: 20 min
 
@@ -204,7 +204,7 @@ through". Northern (Swedish) sources emphasise the bake-with-vegetables traditio
 (carrots, leek, sun-dried tomato, gorgonzola) where the salmon shares its cooking
 liquor with its accompaniments; Western (French) sources lean on the papillote
 (parchment parcel) and on grand-mère style aromatic baths of garlic, herbs, lemon,
-and onion. Eastern and Southern traditions for this specific cut are underrepresented
+and onion. Eastern and Culinary Group C traditions for this specific cut are underrepresented
 in modern recipe collections, where the fillet form has largely displaced the steak.
 The MEATER probe is most valuable for the open-dish preparations, where the absence of
 steam protection makes the back-flesh easier to tip into well-done in the final

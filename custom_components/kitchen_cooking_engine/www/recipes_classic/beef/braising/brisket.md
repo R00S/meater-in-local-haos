@@ -44,7 +44,7 @@ Beef brisket is taken from the breast and lower chest of the animal, comprising 
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing method leaf files (3 of 4 declared) | −3 |
-| Missing Northern tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
 | Method file `brisket-oven_roast.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
@@ -52,6 +52,6 @@ Beef brisket is taken from the breast and lower chest of the animal, comprising 
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 2. **−3** · Missing method leaf files — create the following 3 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `brisket-braise.md`, `brisket-slow_cooker.md`, `brisket-smoker.md`
 3. **−1** · Method file `brisket-oven_roast.md` copies parent cut profile — rewrite `brisket-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+4. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

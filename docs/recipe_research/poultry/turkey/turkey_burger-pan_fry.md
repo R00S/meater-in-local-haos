@@ -40,7 +40,7 @@ A pan-fried turkey burger is the same 150–180 g shaped patty as the grilled ve
 
 ---
 
-### 2. Hugh Acheson — Pan-Fried Turkey Burgers with Sage & Lemon (American Southern tradition)
+### 2. Hugh Acheson — Pan-Fried Turkey Burgers with Sage & Lemon (American Culinary Group C tradition)
 **Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011) — turkey-burger variant; hughacheson.com  
 **Serves**: 4 · **Prep**: 15 min · **Cook**: 9 min · **Rest**: 3 min
 

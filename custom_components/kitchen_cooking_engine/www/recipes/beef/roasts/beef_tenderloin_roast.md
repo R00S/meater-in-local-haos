@@ -65,13 +65,13 @@ The beef tenderloin (psoas major) runs along the interior of the spine and does 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
-| Missing Northern tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
 | Method file `beef_tenderloin_roast-oven_roast.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
 
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 2. **−1** · Method file `beef_tenderloin_roast-oven_roast.md` copies parent cut profile — rewrite `beef_tenderloin_roast-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-3. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

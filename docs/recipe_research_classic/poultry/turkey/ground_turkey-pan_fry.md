@@ -41,7 +41,7 @@ Ground turkey (minced turkey) is made by grinding dark meat (thigh and leg), whi
 
 ---
 
-### 2. Hugh Acheson — Pan-Fried Turkey Mince with Sweet-Onion Gravy (American Southern tradition)
+### 2. Hugh Acheson — Pan-Fried Turkey Mince with Sweet-Onion Gravy (American Culinary Group C tradition)
 **Source**: Hugh Acheson, *A New Turn in the South* (Clarkson Potter, 2011) — turkey variant of his chicken-mince technique; hughacheson.com  
 **Serves**: 4 · **Prep**: 10 min · **Cook**: 9 min · **Rest**: 2 min
 

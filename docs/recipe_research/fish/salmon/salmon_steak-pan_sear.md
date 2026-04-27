@@ -30,7 +30,7 @@ temperature for the back-flesh.
 
 ## Source recipes
 
-### 1. ICA Provkök — Laxkotlett med dill- och kaprissås (Swedish / Northern tradition)
+### 1. ICA Provkök — Laxkotlett med dill- och kaprissås (Swedish / Culinary Group D tradition)
 **Source**: ICA Provkök, ica.se/recept/laxkotlett-med-dill-och-kaprissas-5305/  
 **Serves**: 4 · **Cook**: 6–8 min total
 
@@ -58,7 +58,7 @@ temperature for the back-flesh.
 
 ---
 
-### 2. ICA Provkök — Laxkotlett med limesmör (Swedish / Northern tradition)
+### 2. ICA Provkök — Laxkotlett med limesmör (Swedish / Culinary Group D tradition)
 **Source**: ICA Provkök, ica.se/recept/laxkotlett-med-limesmor-330/  
 **Serves**: 4 · **Cook**: 6–8 min total + chilled compound butter ahead
 
@@ -84,7 +84,7 @@ temperature for the back-flesh.
 
 ---
 
-### 3. 750g — Darne de saumon grillée (French / Western tradition)
+### 3. 750g — Darne de saumon grillée (French / Culinary Group B tradition)
 **Source**: Ibrahim (Délices de tous les jours) for 750g.com, 750g.com/darne-de-saumon-grillee-r68700.htm  
 **Serves**: 2 · **Prep**: 10 min (+ 1 hr marinade) · **Cook**: 10 min
 
@@ -106,7 +106,7 @@ temperature for the back-flesh.
 
 ---
 
-### 4. Jamie Oliver — Crispy Fried Salmon with Spring Vegetable Broth (British / Western tradition)
+### 4. Jamie Oliver — Crispy Fried Salmon with Spring Vegetable Broth (British / Culinary Group B tradition)
 **Source**: Jamie Oliver, jamieoliver.com/recipes/fish/crispy-fried-salmon-with-spring-vegetable-broth/  
 **Recipe from**: *Jamie's Kitchen*  
 **Serves**: 4 · **Cook**: ~8 min for the salmon (broth cooked in parallel)
@@ -203,7 +203,7 @@ preparation: 3–4 minutes per side at medium-high to high heat for a 1.5–2 cm
 no explicit thermometer target in any recipe. Northern (Swedish) sources lean on a plain
 butter / oil sear with a sauce served alongside (dill-caper, lime butter); Western
 (French / British) sources add a marinade or aromatic score and place a heavier
-emphasis on crisp skin. Eastern and Southern traditions for this specific cut are
+emphasis on crisp skin. Eastern and Culinary Group C traditions for this specific cut are
 underrepresented in modern recipe collections — both regions overwhelmingly use the
 fillet form. The MEATER probe's value here is to catch the centre temperature reliably
 in the back-flesh, since the central spine bone conducts heat faster than an equivalent
@@ -212,6 +212,6 @@ recommended), not on the source recipes, which are silent on internal temperatur
 
 > ⚠️ PARTIAL TOR CONFORMANCE — 4 sources fetched and verified; **0** with explicit pull
 > temperatures (a real and noted finding); probe insert step present in all 4 methods;
-> 2 of 4 traditions covered (Northern + Western). Eastern and Southern tradition gaps
+> 2 of 4 traditions covered (Northern + Western). Eastern and Culinary Group C tradition gaps
 > are documented above and reflect the real distribution of this cut in modern recipe
 > collections.

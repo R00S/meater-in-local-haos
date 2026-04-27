@@ -81,9 +81,9 @@ Air-frying a T-bone steak is practical for steaks up to 3 cm thick and 700 g —
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
-| Missing Eastern tradition | −1 |
-| Missing Southern tradition | −1 |
-| Missing Northern tradition | −1 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
 | Method file `t_bone-air_fryer.md` copies parent cut profile | −1 |
 | Method file `t_bone-grill.md` copies `t_bone-oven_roast.md` | −1 |
 | Method file `t_bone-grill.md` copies `t_bone-pan_sear.md` | −1 |
@@ -91,7 +91,7 @@ Air-frying a T-bone steak is practical for steaks up to 3 cm thick and 700 g —
 ### Improvement priorities
 
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−3** · Missing Eastern, Southern and Northern tradition(s) — add Eastern, Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−3** · Missing Culinary Group A, Culinary Group C and Culinary Group D tradition(s) — add Culinary Group A, Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 3. **−1** · Method file `t_bone-air_fryer.md` copies parent cut profile — rewrite `t_bone-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 4. **−1** · Method file `t_bone-grill.md` copies `t_bone-oven_roast.md` — rewrite `t_bone-grill.md`'s cut profile — it must describe what the oven roast method does to this cut, not repeat another method's prose
 5. **−1** · Method file `t_bone-grill.md` copies `t_bone-pan_sear.md` — rewrite `t_bone-grill.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose

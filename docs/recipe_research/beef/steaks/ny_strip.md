@@ -85,8 +85,8 @@ The New York strip over live hardwood charcoal benefits from the distinctive smo
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
-| Missing Eastern tradition | −1 |
-| Missing Northern tradition | −1 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
 | Method file `ny_strip-charcoal_grill.md` copies parent cut profile | −1 |
 | Method file `ny_strip-oven_roast.md` copies `ny_strip-pan_fry.md` | −1 |
 | Method file `ny_strip-oven_roast.md` copies `ny_strip-pan_sear.md` | −1 |
@@ -94,7 +94,7 @@ The New York strip over live hardwood charcoal benefits from the distinctive smo
 ### Improvement priorities
 
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing Eastern and Northern tradition(s) — add Eastern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−2** · Missing Culinary Group A and Culinary Group D tradition(s) — add Culinary Group A and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 3. **−1** · Method file `ny_strip-charcoal_grill.md` copies parent cut profile — rewrite `ny_strip-charcoal_grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 4. **−1** · Method file `ny_strip-oven_roast.md` copies `ny_strip-pan_fry.md` — rewrite `ny_strip-oven_roast.md`'s cut profile — it must describe what the pan fry method does to this cut, not repeat another method's prose
 5. **−1** · Method file `ny_strip-oven_roast.md` copies `ny_strip-pan_sear.md` — rewrite `ny_strip-oven_roast.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose

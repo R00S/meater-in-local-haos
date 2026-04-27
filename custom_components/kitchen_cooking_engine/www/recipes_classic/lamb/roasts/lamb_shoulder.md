@@ -43,15 +43,15 @@ Lamb shoulder is fattier and more flavourful than leg, with more connective tiss
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing method leaf files (2 of 3 declared) | −2 |
-| Missing Eastern tradition | −1 |
-| Missing Northern tradition | −1 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
 | Method file `lamb_shoulder-oven_roast.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
 
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `lamb_shoulder-braise.md`, `lamb_shoulder-slow_cooker.md`
-3. **−2** · Missing Eastern and Northern tradition(s) — add Eastern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. **−2** · Missing Culinary Group A and Culinary Group D tradition(s) — add Culinary Group A and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 4. **−1** · Method file `lamb_shoulder-oven_roast.md` copies parent cut profile — rewrite `lamb_shoulder-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

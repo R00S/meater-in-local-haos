@@ -53,15 +53,15 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing method leaf files (2 of 6 declared) | −2 |
-| Missing Western tradition | −1 |
-| Missing Northern tradition | −1 |
+| Missing Culinary Group B tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
 | Method file `chicken_breast-air_fryer.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
 
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `chicken_breast-oven_roast.md`, `chicken_breast-sous_vide.md`
-3. **−2** · Missing Western and Northern tradition(s) — add Western and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. **−2** · Missing Culinary Group B and Culinary Group D tradition(s) — add Culinary Group B and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 4. **−1** · Method file `chicken_breast-air_fryer.md` copies parent cut profile — rewrite `chicken_breast-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

@@ -47,8 +47,8 @@ Target internal temperatures (grill):
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
-| Missing Eastern tradition | −1 |
-| Missing Southern tradition | −1 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
 | Method file `pork_sausage-grill.md` copies parent cut profile | −1 |
 | Method file `pork_sausage-pan_fry.md` copies parent cut profile | −1 |
 | Method file `pork_sausage-grill.md` copies `pork_sausage-pan_fry.md` | −1 |
@@ -56,7 +56,7 @@ Target internal temperatures (grill):
 ### Improvement priorities
 
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing Eastern and Southern tradition(s) — add Eastern and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−2** · Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
 3. **−1** · Method file `pork_sausage-grill.md` copies `pork_sausage-pan_fry.md` — rewrite `pork_sausage-grill.md`'s cut profile — it must describe what the pan fry method does to this cut, not repeat another method's prose
 4. **−1** · Method file `pork_sausage-grill.md` copies parent cut profile — rewrite `pork_sausage-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 5. **−1** · Method file `pork_sausage-pan_fry.md` copies parent cut profile — rewrite `pork_sausage-pan_fry.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it

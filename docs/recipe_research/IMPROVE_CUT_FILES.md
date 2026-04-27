@@ -7,15 +7,15 @@ Open your branch timeline file (`docs/<branch-name-without-prefix>-<A.B.C.x>.md`
 
 ---
 
-### Output 1 — Direction definitions (verbatim from `RECIPE_COLLECTION_TOR.md`)
+### Output 1 — Culinary group definitions (verbatim from `RECIPE_COLLECTION_TOR.md`)
 
-Open `docs/recipe_research/RECIPE_COLLECTION_TOR.md` and find the "Directional tradition coverage" table under section `### Directional tradition coverage`. Copy all four rows word-for-word into your timeline file. The correct rows are:
+Open `docs/recipe_research/RECIPE_COLLECTION_TOR.md` and find the "Culinary group coverage" table under section `### Culinary group coverage`. Copy all four rows word-for-word into your timeline file. The correct rows are:
 
 ```
-| Eastern  | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
-| Western  | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
-| Southern | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
-| Northern | Scandinavian, Baltic, Slavic, Caucasus region, the Stans, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+| Culinary Group A | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
+| Culinary Group B | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| Culinary Group C | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| Culinary Group D | Scandinavian, Baltic, Slavic, Caucasus region, the Stans, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
 ```
 
 Any paraphrase or wrong country detail is instant evidence the file was not read. The timeline entry must be verbatim.
@@ -55,7 +55,7 @@ This is the comprehension check. An answer like "improve cut files quickly and t
 
 ---
 
-1. improve the 50 lowest scoring cut files in docs/recipe_research (also create/improve child cut-method to those cut files if needed). Be very careful with the data integrity, no shortcuts, read the SURVEY and ToR files in the recipe dir and follow them, batching jobs and assuming or guessing may hurt the data quality we are trying to improve. Commit between cut files and then continue with the next one without stopping. IMPORTANT: This is not a race to get high scores, just impoving them a bit but not reaching 20 is fine. Not being maticulate in the research corrupts the data and as well as the scoring system itself, in practice destroying our system instead of improving it. It is an incremental task that will be applied to each cut file many times. Seing full score as doneness is wrong, this will just lead to us having to update the scoring system. Do not abandon started attempt because they are hard, time is not a factor here and the hard files are the most important to improve, small improvements are also improvements. Also adhere to the definition of the directions, dont quess. Dont be conserned if the task does seam to or in fact grows, it will. For example, if you find a new cooking method for the cut or even for the whole system, add it. Another example, finding only recipes from 2-3 directions is not a reasen to abandon it, its still an incremental improvement that enhances the quality of our data.
+1. improve the 50 lowest scoring cut files in docs/recipe_research (also create/improve child cut-method to those cut files if needed). Be very careful with the data integrity, no shortcuts, read the SURVEY and ToR files in the recipe dir and follow them, batching jobs and assuming or guessing may hurt the data quality we are trying to improve. Commit between cut files and then continue with the next one without stopping. IMPORTANT: This is not a race to get high scores, just impoving them a bit but not reaching 20 is fine. Not being maticulate in the research corrupts the data and as well as the scoring system itself, in practice destroying our system instead of improving it. It is an incremental task that will be applied to each cut file many times. Seing full score as doneness is wrong, this will just lead to us having to update the scoring system. Do not abandon started attempt because they are hard, time is not a factor here and the hard files are the most important to improve, small improvements are also improvements. Also adhere to the definition of the culinary groups, dont quess. Dont be conserned if the task does seam to or in fact grows, it will. For example, if you find a new cooking method for the cut or even for the whole system, add it. Another example, finding only recipes from 2-3 culinary groups is not a reasen to abandon it, its still an incremental improvement that enhances the quality of our data.
 
 Going back to this document for quidelines several times during the process is good practice, agents are prone to talk them out of keeping quality at a higher priority than efficiency.
 

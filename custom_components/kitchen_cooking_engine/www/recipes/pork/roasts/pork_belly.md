@@ -62,7 +62,7 @@ Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
-| Missing Southern tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
 | Method file `pork_belly-air_fryer.md` copies parent cut profile | −1 |
 | Method file `pork_belly-grill.md` copies parent cut profile | −1 |
 | Method file `pork_belly-air_fryer.md` copies `pork_belly-grill.md` | −1 |
@@ -73,6 +73,6 @@ Pork belly (svinekam/flæskesteg in Danish; Schweinebauch in German/Austrian) is
 2. **−1** · Method file `pork_belly-air_fryer.md` copies `pork_belly-grill.md` — rewrite `pork_belly-air_fryer.md`'s cut profile — it must describe what the grill method does to this cut, not repeat another method's prose
 3. **−1** · Method file `pork_belly-air_fryer.md` copies parent cut profile — rewrite `pork_belly-air_fryer.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 4. **−1** · Method file `pork_belly-grill.md` copies parent cut profile — rewrite `pork_belly-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-5. **−1** · Missing Southern tradition(s) — add Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+5. **−1** · Missing Culinary Group C tradition(s) — add Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

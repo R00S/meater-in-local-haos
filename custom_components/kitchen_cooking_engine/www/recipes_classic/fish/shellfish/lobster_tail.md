@@ -51,7 +51,7 @@ Lobster tail is the large tail segment of a lobster (*Homarus americanus*, the A
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
-| Missing Southern tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
 | Method file `lobster_tail-grill.md` copies parent cut profile | −1 |
 | Method file `lobster_tail-oven_roast.md` copies parent cut profile | −1 |
 | Method file `lobster_tail-grill.md` copies `lobster_tail-oven_roast.md` | −1 |
@@ -62,6 +62,6 @@ Lobster tail is the large tail segment of a lobster (*Homarus americanus*, the A
 2. **−1** · Method file `lobster_tail-grill.md` copies `lobster_tail-oven_roast.md` — rewrite `lobster_tail-grill.md`'s cut profile — it must describe what the oven roast method does to this cut, not repeat another method's prose
 3. **−1** · Method file `lobster_tail-grill.md` copies parent cut profile — rewrite `lobster_tail-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 4. **−1** · Method file `lobster_tail-oven_roast.md` copies parent cut profile — rewrite `lobster_tail-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-5. **−1** · Missing Southern tradition(s) — add Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+5. **−1** · Missing Culinary Group C tradition(s) — add Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

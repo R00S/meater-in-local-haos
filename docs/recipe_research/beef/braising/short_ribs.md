@@ -54,7 +54,7 @@ Korean short rib preparations (galbi-jjim for braising, galbi for grilling) trea
 | Braise method researched (1 of 4 methods) | +2 | ✅ Done |
 | Braise leaf has 5 diverse source recipes | +3 | ✅ Done |
 | Cut profile written (not a placeholder) | +1 | ✅ Done |
-| Western tradition covered (braise leaf) | +1 | ✅ Done |
+| Culinary Group B tradition covered (braise leaf) | +1 | ✅ Done |
 | Asian tradition covered (braise leaf) | +1 | ✅ Done |
 | Oven roast not yet researched | −0 | pending |
 | Slow cooker not yet researched | −0 | pending |

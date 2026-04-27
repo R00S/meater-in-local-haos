@@ -45,7 +45,7 @@ Ground turkey (minced turkey) is made by grinding dark meat (thigh and leg), whi
 
 ---
 
-### 2. Hugh Acheson — Slow-Cooker Turkey Mince Bolognese (American Southern tradition)
+### 2. Hugh Acheson — Slow-Cooker Turkey Mince Bolognese (American Culinary Group C tradition)
 **Source**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017); hughacheson.com  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 75 min · **Rest**: 10 min
 

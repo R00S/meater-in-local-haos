@@ -14,7 +14,7 @@ Pork tongue cooked in an electric slow cooker is the same long-braise preparatio
 
 ## Source recipes
 
-### 1. Hugh Acheson — Slow-Cooker Pork Tongue Confit (American Southern tradition)
+### 1. Hugh Acheson — Slow-Cooker Pork Tongue Confit (American Culinary Group C tradition)
 **Source**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017); hughacheson.com  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 6 hr (low) · **Rest**: 15 min
 

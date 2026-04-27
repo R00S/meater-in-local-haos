@@ -106,16 +106,16 @@ the sear provides Maillard flavour and the short oven time (25 min at 80 °C) si
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing method leaf file `bison_steak-charcoal_grill.md` | −1 |
-| Missing Eastern tradition | −1 |
-| Missing Southern tradition | −1 |
-| Missing Northern tradition | −1 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
 | Method file `bison_steak-grill.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
 
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 2. **−1** · Missing method leaf file — create `bison_steak-charcoal_grill.md` with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources
-3. **−3** · Missing Eastern, Southern and Northern tradition(s) — add Eastern, Southern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. **−3** · Missing Culinary Group A, Culinary Group C and Culinary Group D tradition(s) — add Culinary Group A, Culinary Group C and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 4. **−1** · Method file `bison_steak-grill.md` copies parent cut profile — rewrite `bison_steak-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

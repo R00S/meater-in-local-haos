@@ -62,8 +62,8 @@ Target internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pu
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
-| Missing Eastern tradition | −1 |
-| Missing Northern tradition | −1 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
 | Method file `ostrich_steak-grill.md` copies parent cut profile | −1 |
 | Method file `ostrich_steak-pan_sear.md` copies parent cut profile | −1 |
 | Method file `ostrich_steak-grill.md` copies `ostrich_steak-pan_sear.md` | −1 |
@@ -71,7 +71,7 @@ Target internal temperature: **54–57 °C (129–135 °F)** for medium-rare. Pu
 ### Improvement priorities
 
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing Eastern and Northern tradition(s) — add Eastern and Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+2. **−2** · Missing Culinary Group A and Culinary Group D tradition(s) — add Culinary Group A and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 3. **−1** · Method file `ostrich_steak-grill.md` copies `ostrich_steak-pan_sear.md` — rewrite `ostrich_steak-grill.md`'s cut profile — it must describe what the pan sear method does to this cut, not repeat another method's prose
 4. **−1** · Method file `ostrich_steak-grill.md` copies parent cut profile — rewrite `ostrich_steak-grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 5. **−1** · Method file `ostrich_steak-pan_sear.md` copies parent cut profile — rewrite `ostrich_steak-pan_sear.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it

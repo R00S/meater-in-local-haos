@@ -46,15 +46,15 @@ Target internal temperature: **80–90 °C (176–194 °F)** for fall-apart text
 |-----------|----------|
 | Cooking methods not researched | −8 |
 | Missing method leaf files (2 of 3 declared) | −2 |
-| Missing Eastern tradition | −1 |
-| Missing Southern tradition | −1 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
 | Method file `wild_boar_shoulder-oven_roast.md` copies parent cut profile | −1 |
 
 ### Improvement priorities
 
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `wild_boar_shoulder-braise.md`, `wild_boar_shoulder-slow_cooker.md`
-3. **−2** · Missing Eastern and Southern tradition(s) — add Eastern and Southern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+3. **−2** · Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
 4. **−1** · Method file `wild_boar_shoulder-oven_roast.md` copies parent cut profile — rewrite `wild_boar_shoulder-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

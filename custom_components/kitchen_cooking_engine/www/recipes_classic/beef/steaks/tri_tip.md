@@ -87,7 +87,7 @@ Target internal temperatures (charcoal grill):
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
-| Missing Eastern tradition | −1 |
+| Missing Culinary Group A tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | Method file `tri_tip-charcoal_grill.md` copies parent cut profile | −1 |
 
@@ -96,6 +96,6 @@ Target internal temperatures (charcoal grill):
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
 3. **−1** · Method file `tri_tip-charcoal_grill.md` copies parent cut profile — rewrite `tri_tip-charcoal_grill.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Missing Eastern tradition(s) — add Eastern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+4. **−1** · Missing Culinary Group A tradition(s) — add Culinary Group A source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

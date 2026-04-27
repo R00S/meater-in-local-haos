@@ -71,7 +71,7 @@ and basted repeatedly to build a lacquered crust over the scored fat.
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
-| Missing Eastern tradition | −1 |
+| Missing Culinary Group A tradition | −1 |
 | No temperature research (culinary preferred) | −2 |
 | No per-method temp research | −1 |
 
@@ -79,7 +79,7 @@ and basted repeatedly to build a lacquered crust over the scored fat.
 
 1. **−8** · Cooking methods not researched — set `cooking_methods_researched: 1` after confirming no additional methods (slow_cooker, braise) need leaves
 2. **−2** · No culinary preferred temp research — two sources gave no explicit pull temp; find a US/Filipino source with explicit temp
-3. **−1** · Missing Eastern tradition — add an Eastern tradition source (e.g. Filipino, Vietnamese, Chinese glazed ham)
+3. **−1** · Missing Culinary Group A tradition — add an Culinary Group A tradition source (e.g. Filipino, Vietnamese, Chinese glazed ham)
 4. **−1** · Per-method temp research — once all 4 traditions have explicit temps, this resolves
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

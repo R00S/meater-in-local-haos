@@ -27,7 +27,7 @@ which gives a lagging reading.
 
 ## Source recipes
 
-### 1. Anna och Fanny Bergenström — Ugnsbakad Julskinka med Senapsgriljering (Swedish / Northern tradition)
+### 1. Anna och Fanny Bergenström — Ugnsbakad Julskinka med Senapsgriljering (Swedish / Culinary Group D tradition)
 **Source**: Anna och Fanny Bergenström, koket.se/anna-och-fanny-bergenstrom/varmratter/korv-chark/ugnsbakad-julskinka-med-senapsgriljering  
 **Serves**: 8–10 · **Prep**: 10 min + 2–4 hr soaking · **Cook**: 60–70 min/kg + 15 min · **Rest**: 15 min
 
@@ -50,7 +50,7 @@ which gives a lagging reading.
 
 ---
 
-### 2. Angela Lawrence — Jamaican Glazed Baked Ham (Jamaican / Southern tradition)
+### 2. Angela Lawrence — Jamaican Glazed Baked Ham (Jamaican / Culinary Group C tradition)
 **Source**: Angela Lawrence (Cook Like a Jamaican), 196flavors.com/jamaica-glazed-baked-ham/  
 **Serves**: 12 · **Prep**: 5 min · **Cook**: 2 hr
 
@@ -77,7 +77,7 @@ which gives a lagging reading.
 
 ---
 
-### 3. John Torode — Baked Glazed Ham (British / Western tradition)
+### 3. John Torode — Baked Glazed Ham (British / Culinary Group B tradition)
 **Source**: John Torode, bbcgoodfood.com/recipes/baked-glazed-ham  
 **Published**: *Good Food* magazine, November 2016  
 **Serves**: 8 generously · **Prep**: 30 min · **Cook**: 5 hr 45 min
@@ -103,7 +103,7 @@ which gives a lagging reading.
 
 ---
 
-### 4. Nagi Maehashi — Maple Glazed Ham (Australian / Western tradition)
+### 4. Nagi Maehashi — Maple Glazed Ham (Australian / Culinary Group B tradition)
 **Source**: Nagi Maehashi, recipetineats.com/easy-maple-sticky-glazed-ham/  
 **Serves**: 30–40 as part of a spread · **Prep**: 15 min · **Cook**: 1.5–2 hr · **Rest**: 20 min+
 
@@ -143,7 +143,7 @@ which gives a lagging reading.
 | British (Western) | Raw smoked gammon | Not given (visual doneness) | 160–200 °C / 320–392 °F |
 | Australian (Western) | Fully cooked, smoked | Not given (visual doneness) | 160 °C / 320 °F |
 
-Two of four sources give explicit pull temperatures. The split is entirely by ham type, not by tradition: fully cooked ham is heated to 55–60 °C (serving temperature only); raw/cured ham that must be fully cooked to a safe temperature targets 72–75 °C. The two Western sources (British and Australian) do not give explicit thermometer targets — both assess doneness visually by glaze colour and set.
+Two of four sources give explicit pull temperatures. The split is entirely by ham type, not by tradition: fully cooked ham is heated to 55–60 °C (serving temperature only); raw/cured ham that must be fully cooked to a safe temperature targets 72–75 °C. The two Culinary Group B sources (British and Australian) do not give explicit thermometer targets — both assess doneness visually by glaze colour and set.
 
 ## What makes this method special
 

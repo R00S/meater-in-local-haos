@@ -41,10 +41,10 @@ quality_assessed: 2026-04-26
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
-| Missing Eastern tradition | −1 |
-| Missing Western tradition | −1 |
-| Missing Southern tradition | −1 |
-| Missing Northern tradition | −1 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group B tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
 | Cut profile is a placeholder | −1 |
 | No method leaf files | −3 |
 | No temperature research (safe temps) | −3 |

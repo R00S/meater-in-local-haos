@@ -50,7 +50,7 @@ Butternut squash (*Cucurbita moschata*) in a pressure cooker cooks in 8–12 min
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
-| Missing Northern tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | Method file `butternut_squash-pressure_cooker.md` copies parent cut profile | −1 |
 
@@ -59,6 +59,6 @@ Butternut squash (*Cucurbita moschata*) in a pressure cooker cooks in 8–12 min
 1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
 2. **−1** · Cut profile lacks anatomy — expand the cut profile with anatomical details: where on the animal, which muscle/structure, why it matters for cooking
 3. **−1** · Method file `butternut_squash-pressure_cooker.md` copies parent cut profile — rewrite `butternut_squash-pressure_cooker.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
-4. **−1** · Missing Northern tradition(s) — add Northern source recipes to method leaf files — each tradition needs at least one recipe across the method files
+4. **−1** · Missing Culinary Group D tradition(s) — add Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

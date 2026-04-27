@@ -14,7 +14,7 @@ Beef tongue cooked in an electric slow cooker is the same long-collagen-conversi
 
 ## Source recipes
 
-### 1. Hugh Acheson — Slow-Cooker Pot-au-Feu Tongue (American Southern tradition)
+### 1. Hugh Acheson — Slow-Cooker Pot-au-Feu Tongue (American Culinary Group C tradition)
 **Source**: Hugh Acheson, *The Chef and the Slow Cooker* (Clarkson Potter, 2017); hughacheson.com  
 **Serves**: 6 · **Prep**: 20 min · **Cook**: 8 hr (low) · **Rest**: 15 min
 

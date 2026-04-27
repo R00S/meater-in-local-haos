@@ -518,18 +518,18 @@ scoring is correct behaviour.
 research content will score around 3/20.  That is not a bug — it is an accurate
 reflection of the file's state.
 
-### Directional tradition coverage (assessed across *all* method leaf files for the cut)
+### Culinary group coverage (assessed across *all* method leaf files for the cut)
 
-Recipes must represent all four directional traditions.  Definitions:
+Recipes must represent all four culinary groups.  Definitions:
 
-| Direction | Includes |
+| Culinary Group | Includes |
 |-----------|---------|
-| **Eastern** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
-| **Western** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
-| **Southern** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
-| **Northern** | Scandinavian, Baltic, Slavic, Caucasus region, the Stans, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
+| **Culinary Group A** | South Asian, Southeast Asian, East Asian, Mongolian (e.g. Japanese, Chinese, Korean, Thai, Vietnamese, Indian, Indonesian, Filipino) |
+| **Culinary Group B** | North American, Western/Southern/Central European, Australasian (e.g. American, British, French, German, Italian, Spanish, Australian, Greek) |
+| **Culinary Group C** | African, Caribbean (with African diaspora influence), Arabic, Levant, Persian/Iranian, non-western Pacific Islands (e.g. Nigerian, Ethiopian, Moroccan, Egyptian, Lebanese, Caribbean, Creole, Turkish) |
+| **Culinary Group D** | Scandinavian, Baltic, Slavic, Caucasus region, the Stans, Sami, Inuit (e.g. Swedish, Norwegian, Danish, Finnish, Icelandic, Russian, Polish, Georgian, Latvian, Lithuanian, Estonian, Sami, Inuit) |
 
-**Deduction: −1 per missing direction** (maximum −4).
+**Deduction: −1 per missing culinary group** (maximum −4).
 
 ### Cut profile quality
 
@@ -602,10 +602,10 @@ Two separate deductions apply:
 | Criterion | Possible deduction |
 |-----------|--------------------|
 | Cooking methods not researched (`cooking_methods_researched: 0`) | −8 |
-| Missing Eastern tradition | −1 |
-| Missing Western tradition | −1 |
-| Missing Southern tradition | −1 |
-| Missing Northern tradition | −1 |
+| Missing Culinary Group A tradition | −1 |
+| Missing Culinary Group B tradition | −1 |
+| Missing Culinary Group C tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
 | No `## Cut profile` section | −3 |
 | Cut profile is a placeholder | −1 |
 | Cut profile lacks anatomy | −1 |
@@ -636,7 +636,7 @@ And append this section at the end of the cut file:
 
 | Criterion | Deduction |
 |-----------|-----------|
-| Missing Northern tradition | −1 |
+| Missing Culinary Group D tradition | −1 |
 | Cut profile lacks anatomy | −1 |
 | Per-method temp data missing | −1 |
 
