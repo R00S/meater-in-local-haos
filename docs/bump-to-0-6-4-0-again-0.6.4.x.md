@@ -116,7 +116,7 @@ Score 7 (first 17 alphabetically):
 | 6 | game/reindeer/reindeer_loin.md | 0 | 10 | done — cut profile, pan_sear+oven_roast stubs cross-referencing existing reindeer_steak leaves |
 | 7 | game/venison/venison_leg.md | 0 | 9 | done — cut profile, braise leaf (chefkoch.de 4.9★), oven_roast stub |
 | 8 | game/venison/venison_shoulder.md | 0 | 10 | done — cut profile, braise leaf (BBC Good Food + chefkoch.de), oven_roast+slow_cooker stubs |
-| 9 | lamb/chops/lamb_neck_filet.md | 0 | — | pending |
+| 9 | lamb/chops/lamb_neck_filet.md | 0 | 9 | done — cut profile, braise leaf (simply-delicious-food.com confirmed), pan_sear+slow_cooker stubs |
 | 10 | lamb/ground/lamb_crown_roast.md | 0 | — | pending |
 | 11 | lamb/ground/lamb_rib_rack.md | 0 | — | pending |
 | 12 | lamb/roasts/lamb_brisket.md | 0 | — | pending |
