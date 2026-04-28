@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 28 Apr 2026, 08:51 CET
+ * AUTO-GENERATED: 28 Apr 2026, 08:55 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 28 Apr 2026, 08:51 CET
+// Last generated: 28 Apr 2026, 08:55 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -24855,11 +24855,10 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ],
-            "name_sv": "Strutsfilé"
+            ]
           }
         ],
-        "name_sv": "Strutsfilé"
+        "name_sv": "Struts"
       },
       {
         "id": "venison",
@@ -24961,11 +24960,10 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ],
-            "name_sv": "Hjortlår"
+            ]
           }
         ],
-        "name_sv": "Hjortlår"
+        "name_sv": "Hjort"
       },
       {
         "id": "rabbit",
@@ -25010,11 +25008,10 @@ const EXP_TREE = {
                 "usda_safe_c": 71,
                 "usda_safe_f": 160
               }
-            ],
-            "name_sv": "Kaninlår"
+            ]
           }
         ],
-        "name_sv": "Kaninlår"
+        "name_sv": "Kanin"
       },
       {
         "id": "wild_boar",
@@ -25057,11 +25054,10 @@ const EXP_TREE = {
                 "usda_safe_c": 71,
                 "usda_safe_f": 160
               }
-            ],
-            "name_sv": "Vildsvinskotlett"
+            ]
           }
         ],
-        "name_sv": "Vildsvinskotlett"
+        "name_sv": "Vildsvin"
       },
       {
         "id": "mutton",
@@ -25143,11 +25139,10 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ],
-            "name_sv": "Fårkotlett"
+            ]
           }
         ],
-        "name_sv": "Fårkotlett"
+        "name_sv": "Får"
       },
       {
         "id": "kangaroo",
@@ -25193,11 +25188,10 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ],
-            "name_sv": "Kängurufilé"
+            ]
           }
         ],
-        "name_sv": "Kängurufilé"
+        "name_sv": "Känguru"
       },
       {
         "id": "reindeer",
@@ -25261,11 +25255,10 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ],
-            "name_sv": "Renfilé"
+            ]
           }
         ],
-        "name_sv": "Renfilé"
+        "name_sv": "Ren"
       },
       {
         "id": "goat",
@@ -25347,11 +25340,10 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ],
-            "name_sv": "Getkotlett"
+            ]
           }
         ],
-        "name_sv": "Getkotlett"
+        "name_sv": "Get"
       },
       {
         "id": "moose",
@@ -25398,11 +25390,10 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ],
-            "name_sv": "Älgstek"
+            ]
           }
         ],
-        "name_sv": "Älgstek"
+        "name_sv": "Älg"
       },
       {
         "id": "buffalo",
@@ -25466,11 +25457,10 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ],
-            "name_sv": "Bufflaburgare"
+            ]
           }
         ],
-        "name_sv": "Bufflaburgare"
+        "name_sv": "Buffel"
       },
       {
         "id": "bison",
@@ -25533,11 +25523,10 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ],
-            "name_sv": "Bisonburgare"
+            ]
           }
         ],
-        "name_sv": "Bisonburgare"
+        "name_sv": "Bison"
       }
     ],
     "name_sv": "Vilt"
@@ -25606,7 +25595,7 @@ const EXP_TREE = {
                 "usda_safe_f": 160
               }
             ],
-            "name_sv": "Nötburgare"
+            "name_sv": "Färs"
           },
           {
             "id": "steaks",
@@ -25893,7 +25882,7 @@ const EXP_TREE = {
                 "usda_safe_f": 145
               }
             ],
-            "name_sv": "Oxfilé"
+            "name_sv": "Biffar"
           },
           {
             "id": "other_offal",
@@ -25933,7 +25922,7 @@ const EXP_TREE = {
                 "usda_safe_f": 160
               }
             ],
-            "name_sv": "Nötlever"
+            "name_sv": "Övrigt / Innanmäte"
           },
           {
             "id": "braising_cuts",
@@ -26009,7 +25998,7 @@ const EXP_TREE = {
                 "usda_safe_f": 145
               }
             ],
-            "name_sv": "Oxlägg"
+            "name_sv": "Grytbitar"
           },
           {
             "id": "roasts",
@@ -26190,10 +26179,10 @@ const EXP_TREE = {
                 "usda_safe_f": 145
               }
             ],
-            "name_sv": "Oxfiléstek"
+            "name_sv": "Stekar"
           }
         ],
-        "name_sv": "Nötburgare"
+        "name_sv": "Nöt"
       }
     ],
     "name_sv": "Nötkött"
@@ -26280,11 +26269,10 @@ const EXP_TREE = {
                 "usda_safe_c": 74,
                 "usda_safe_f": 165
               }
-            ],
-            "name_sv": "Gåsbröst"
+            ]
           }
         ],
-        "name_sv": "Gåsbröst"
+        "name_sv": "Gås"
       },
       {
         "id": "duck",
@@ -26344,11 +26332,10 @@ const EXP_TREE = {
                 "usda_safe_c": 74,
                 "usda_safe_f": 165
               }
-            ],
-            "name_sv": "Andbröst"
+            ]
           }
         ],
-        "name_sv": "Andbröst"
+        "name_sv": "And"
       },
       {
         "id": "ground_poultry",
@@ -26427,10 +26414,9 @@ const EXP_TREE = {
                 "usda_safe_f": 165
               }
             ],
-            "name_sv": "Kalkonfärs"
+            "name_sv": "Färs"
           }
-        ],
-        "name_sv": "Kalkonfärs"
+        ]
       },
       {
         "id": "turkey",
@@ -26506,11 +26492,10 @@ const EXP_TREE = {
                 "usda_safe_c": 74,
                 "usda_safe_f": 165
               }
-            ],
-            "name_sv": "Kalkonfilé"
+            ]
           }
         ],
-        "name_sv": "Kalkonfilé"
+        "name_sv": "Kalkon"
       },
       {
         "id": "chicken",
@@ -26558,7 +26543,7 @@ const EXP_TREE = {
                 "usda_safe_f": 165
               }
             ],
-            "name_sv": "Kycklingfilé"
+            "name_sv": "Bröst"
           },
           {
             "id": "dark_meat",
@@ -26621,7 +26606,7 @@ const EXP_TREE = {
                 "usda_safe_f": 165
               }
             ],
-            "name_sv": "Kycklingklubba"
+            "name_sv": "Mörkt kött"
           },
           {
             "id": "whole",
@@ -26646,10 +26631,10 @@ const EXP_TREE = {
                 "usda_safe_f": 165
               }
             ],
-            "name_sv": "Hel kyckling"
+            "name_sv": "Hel"
           }
         ],
-        "name_sv": "Kycklingfilé"
+        "name_sv": "Kyckling"
       }
     ],
     "name_sv": "Fågel"
@@ -26745,11 +26730,10 @@ const EXP_TREE = {
                   "steam"
                 ]
               }
-            ],
-            "name_sv": "Sparris"
+            ]
           }
         ],
-        "name_sv": "Sparris"
+        "name_sv": "Gröna grönsaker"
       },
       {
         "id": "tomatoes",
@@ -26774,11 +26758,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ]
               }
-            ],
-            "name_sv": "Rostade tomater"
+            ]
           }
         ],
-        "name_sv": "Rostade tomater"
+        "name_sv": "Tomater"
       },
       {
         "id": "cruciferous",
@@ -26821,11 +26804,10 @@ const EXP_TREE = {
                   "whole_roast"
                 ]
               }
-            ],
-            "name_sv": "Kål"
+            ]
           }
         ],
-        "name_sv": "Kål"
+        "name_sv": "Kålväxter"
       },
       {
         "id": "mushrooms",
@@ -26866,11 +26848,10 @@ const EXP_TREE = {
                   "saute"
                 ]
               }
-            ],
-            "name_sv": "Champinjoner"
+            ]
           }
         ],
-        "name_sv": "Champinjoner"
+        "name_sv": "Svamp"
       },
       {
         "id": "eggplant",
@@ -26897,8 +26878,7 @@ const EXP_TREE = {
                   "saute"
                 ]
               }
-            ],
-            "name_sv": "Aubergine"
+            ]
           }
         ],
         "name_sv": "Aubergine"
@@ -26927,8 +26907,7 @@ const EXP_TREE = {
                   "saute"
                 ]
               }
-            ],
-            "name_sv": "Paprika"
+            ]
           }
         ],
         "name_sv": "Paprika"
@@ -26958,11 +26937,10 @@ const EXP_TREE = {
                   "steam"
                 ]
               }
-            ],
-            "name_sv": "Majskolv"
+            ]
           }
         ],
-        "name_sv": "Majskolv"
+        "name_sv": "Majs"
       },
       {
         "id": "squash",
@@ -27029,11 +27007,10 @@ const EXP_TREE = {
                   "saute"
                 ]
               }
-            ],
-            "name_sv": "Ekolonpumpa"
+            ]
           }
         ],
-        "name_sv": "Ekolonpumpa"
+        "name_sv": "Squash"
       },
       {
         "id": "alliums",
@@ -27099,11 +27076,10 @@ const EXP_TREE = {
                   "saute"
                 ]
               }
-            ],
-            "name_sv": "Karamelliserade lökar"
+            ]
           }
         ],
-        "name_sv": "Karamelliserade lökar"
+        "name_sv": "Lökväxter"
       },
       {
         "id": "root_vegetables",
@@ -27195,11 +27171,10 @@ const EXP_TREE = {
                   "oven_roast"
                 ]
               }
-            ],
-            "name_sv": "Bakad potatis"
+            ]
           }
         ],
-        "name_sv": "Bakad potatis"
+        "name_sv": "Rotfrukter"
       }
     ],
     "name_sv": "Grönsaker"
@@ -27236,11 +27211,10 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ],
-            "name_sv": "Tonfiskbiff"
+            ]
           }
         ],
-        "name_sv": "Tonfiskbiff"
+        "name_sv": "Tonfisk"
       },
       {
         "id": "salmon",
@@ -27290,11 +27264,10 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ],
-            "name_sv": "Laxfilé"
+            ]
           }
         ],
-        "name_sv": "Laxfilé"
+        "name_sv": "Lax"
       },
       {
         "id": "shellfish",
@@ -27353,11 +27326,10 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ],
-            "name_sv": "Hummersvans"
+            ]
           }
         ],
-        "name_sv": "Hummersvans"
+        "name_sv": "Skaldjur"
       },
       {
         "id": "white_fish",
@@ -27515,11 +27487,10 @@ const EXP_TREE = {
                 "usda_safe_c": 63,
                 "usda_safe_f": 145
               }
-            ],
-            "name_sv": "Torskfilé"
+            ]
           }
         ],
-        "name_sv": "Torskfilé"
+        "name_sv": "Vit fisk"
       }
     ],
     "name_sv": "Fisk"
@@ -27621,7 +27592,7 @@ const EXP_TREE = {
                 "usda_safe_f": 145
               }
             ],
-            "name_sv": "Lammfärs"
+            "name_sv": "Färs"
           },
           {
             "id": "roasts",
@@ -27758,7 +27729,7 @@ const EXP_TREE = {
                 "usda_safe_f": 145
               }
             ],
-            "name_sv": "Lammbringa"
+            "name_sv": "Stekar"
           },
           {
             "id": "chops",
@@ -27843,10 +27814,10 @@ const EXP_TREE = {
                 "usda_safe_f": 145
               }
             ],
-            "name_sv": "Lammkotlett"
+            "name_sv": "Kotletter"
           }
         ],
-        "name_sv": "Lammfärs"
+        "name_sv": "Lamm"
       }
     ],
     "name_sv": "Lamm"
@@ -27918,7 +27889,7 @@ const EXP_TREE = {
                 "usda_safe_f": 145
               }
             ],
-            "name_sv": "Revbensspjäll"
+            "name_sv": "Revben"
           },
           {
             "id": "ground",
@@ -27957,7 +27928,7 @@ const EXP_TREE = {
                 "usda_safe_f": 160
               }
             ],
-            "name_sv": "Fläskfärs"
+            "name_sv": "Färs"
           },
           {
             "id": "ham",
@@ -27995,7 +27966,7 @@ const EXP_TREE = {
                 "usda_safe_f": 140
               }
             ],
-            "name_sv": "Färsk skinka"
+            "name_sv": "Skinka"
           },
           {
             "id": "other_offal",
@@ -28101,7 +28072,7 @@ const EXP_TREE = {
                 "usda_safe_f": 160
               }
             ],
-            "name_sv": "Kindkött"
+            "name_sv": "Övrigt / Innanmäte"
           },
           {
             "id": "roasts",
@@ -28199,7 +28170,7 @@ const EXP_TREE = {
                 "usda_safe_f": 145
               }
             ],
-            "name_sv": "Skinka"
+            "name_sv": "Stekar"
           },
           {
             "id": "chops_tenderloin",
@@ -28300,10 +28271,10 @@ const EXP_TREE = {
                 "usda_safe_f": 145
               }
             ],
-            "name_sv": "Fläskkotlett"
+            "name_sv": "Kotletter & Filé"
           }
         ],
-        "name_sv": "Revbensspjäll"
+        "name_sv": "Gris"
       }
     ],
     "name_sv": "Fläskkött"
@@ -31855,7 +31826,7 @@ class KitchenCookingPanel extends LitElement {
                 <button
                   class="category-btn ${this._selectedCut === cut.id ? 'selected' : ''}"
                   @click=${() => this._selectCut(cut.id)}>
-                  ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
+                  ${(this._language === 'sv' && cut.name_sv) ? cut.name_sv : (cut.name_long || cut.name)}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
                 </button>
               `)}
             </div>
@@ -39605,7 +39576,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "335";
+const PANEL_VERSION = "336";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

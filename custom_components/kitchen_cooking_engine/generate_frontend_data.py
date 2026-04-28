@@ -440,6 +440,60 @@ _CATEGORY_META = {
     "vegetables": {"icon": "🥬", "color": "#228B22", "name_sv": "Grönsaker"},
 }
 
+# Swedish names for meat-level groupings (meat id → Swedish name)
+_MEAT_NAME_SV = {
+    "cow":            "Nöt",
+    "pig":            "Gris",
+    "chicken":        "Kyckling",
+    "turkey":         "Kalkon",
+    "duck":           "And",
+    "goose":          "Gås",
+    "lamb":           "Lamm",
+    "salmon":         "Lax",
+    "white_fish":     "Vit fisk",
+    "tuna":           "Tonfisk",
+    "shellfish":      "Skaldjur",
+    "venison":        "Hjort",
+    "reindeer":       "Ren",
+    "moose":          "Älg",
+    "wild_boar":      "Vildsvin",
+    "rabbit":         "Kanin",
+    "ostrich":        "Struts",
+    "kangaroo":       "Känguru",
+    "bison":          "Bison",
+    "buffalo":        "Buffel",
+    "mutton":         "Får",
+    "goat":           "Get",
+    "root_vegetables":"Rotfrukter",
+    "green_vegetables":"Gröna grönsaker",
+    "alliums":        "Lökväxter",
+    "mushrooms":      "Svamp",
+    "squash":         "Squash",
+    "peppers":        "Paprika",
+    "eggplant":       "Aubergine",
+    "cruciferous":    "Kålväxter",
+    "tomatoes":       "Tomater",
+    "corn":           "Majs",
+}
+
+# Swedish names for cut_type-level groupings (cut_type display name → Swedish name)
+_CUT_TYPE_NAME_SV = {
+    "Steaks":           "Biffar",
+    "Roasts":           "Stekar",
+    "Braising Cuts":    "Grytbitar",
+    "Ground":           "Färs",
+    "Offal":            "Innanmäte",
+    "Other / Offal":    "Övrigt / Innanmäte",
+    "Chops":            "Kotletter",
+    "Chops & Tenderloin":"Kotletter & Filé",
+    "Ribs":             "Revben",
+    "Ham":              "Skinka",
+    "Dark Meat":        "Mörkt kött",
+    "Whole":            "Hel",
+    "Breast":           "Bröst",
+    "Legs":             "Ben",
+}
+
 _DONENESS_ICONS = {
     "rare": "🔴", "blodig": "🔴",
     "medium_rare": "🟠",
@@ -578,28 +632,30 @@ def build_experimental_tree(base_dir):
 
             cat = cats[category]
             if meat not in cat["_meats"]:
-                cat["_meats"][meat] = {
+                meat_entry = {
                     "id": meat,
                     "name": meat.replace("_", " ").title(),
                     "_cut_types": {},
                 }
+                meat_sv = _MEAT_NAME_SV.get(meat)
+                if meat_sv:
+                    meat_entry["name_sv"] = meat_sv
+                cat["_meats"][meat] = meat_entry
 
             meat_obj = cat["_meats"][meat]
-            # First cut seen for this meat provides the Swedish name, if any
-            if name_sv and not meat_obj.get("name_sv"):
-                meat_obj["name_sv"] = name_sv
 
             # Normalise cut_type to a safe id: lowercase, spaces/slashes → underscore
             ct_id = re.sub(r"[^a-z0-9]+", "_", cut_type_name.lower()).strip("_")
             if ct_id not in meat_obj["_cut_types"]:
-                meat_obj["_cut_types"][ct_id] = {
+                ct_entry = {
                     "id": ct_id,
                     "name": cut_type_name,
                     "cuts": [],
                 }
-            # First cut seen for this cut_type provides the Swedish name, if any
-            if name_sv and not meat_obj["_cut_types"][ct_id].get("name_sv"):
-                meat_obj["_cut_types"][ct_id]["name_sv"] = name_sv
+                ct_sv = _CUT_TYPE_NAME_SV.get(cut_type_name)
+                if ct_sv:
+                    ct_entry["name_sv"] = ct_sv
+                meat_obj["_cut_types"][ct_id] = ct_entry
 
             cut_obj = {
                 "id": slug,

@@ -3345,7 +3345,7 @@ class KitchenCookingPanel extends LitElement {
                 <button
                   class="category-btn ${this._selectedCut === cut.id ? 'selected' : ''}"
                   @click=${() => this._selectCut(cut.id)}>
-                  ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
+                  ${(this._language === 'sv' && cut.name_sv) ? cut.name_sv : (cut.name_long || cut.name)}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
                 </button>
               `)}
             </div>
