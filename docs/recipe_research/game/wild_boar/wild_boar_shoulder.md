@@ -21,18 +21,17 @@ doneness:
   max_c: 96
   max_f: 205
   usda_safe: true
-quality_score: 7
+quality_score: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_assessed: 2026-04-27
 -->
 # Wild Boar Shoulder — Cut Overview
 
 ## Cut profile
 
-Wild boar shoulder is a large, heavily worked muscle containing significant connective tissue. It benefits from long, slow roasting (3–4 hours) at moderate temperature (160–200 °C) in a braising liquid to achieve pull-apart tenderness. The German tradition uses wine, game stock, juniper, and root vegetables; the Italian and French traditions add tomato and herbs.
+Wild boar shoulder (*Sus scrofa*) is the anterior limb and associated muscles, primarily the *triceps brachii*, *deltoid*, and *infraspinatus*, surrounded by dense connective tissue layers. Wild boar develops significantly more connective tissue than farmed pig due to its active, ranging lifestyle; the shoulder in particular is built for constant movement and contains large quantities of collagen that must be converted to gelatin during cooking.
 
-
-Target internal temperature: **80–90 °C (176–194 °F)** for fall-apart texture. Food-safety minimum is 70 °C (158 °F) for safe serving, but the collagen conversion to gelatin that makes the shoulder delicious requires 80+ °C.
+The flavour of wild boar shoulder is more intense and gamey than farmed pork, with notes of forest herbs and earthiness from the animal's varied diet. The high collagen content makes it unsuitable for quick, high-heat methods — it is exclusively a slow-roast or braise cut. Minimum collagen conversion temperature: 80+ °C; optimal pull for fall-apart texture: 85–92 °C.
 
 
 ## Research files by cooking method
@@ -40,21 +39,24 @@ Target internal temperature: **80–90 °C (176–194 °F)** for fall-apart text
 - [Oven Roast](./wild_boar_shoulder-oven_roast.md)
 ## Quality score
 
-**Score: 7 / 20** — assessed 2026-04-26
+**Score: 8 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing method leaf files (2 of 3 declared) | −2 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group C tradition | −1 |
-| Method file `wild_boar_shoulder-oven_roast.md` copies parent cut profile | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods not researched | − **NOT DONE** (−8) |
+| Oven roast cut profile method-specific | ✓ (fixed 2026-04-27) |
+| Braise leaf missing | − missing (−1) |
+| Slow cooker leaf missing | − missing (−1) |
+| Culinary Group A covered | − missing (−1) |
+| Culinary Group C covered | − missing (−1) |
+| Culinary Groups B, D | ✓ |
+
+**Deductions**: −8 methods · −1 missing braise · −1 missing slow_cooker · −1 Group A · −1 Group C = −12 → 20−12 = **8**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `wild_boar_shoulder-braise.md`, `wild_boar_shoulder-slow_cooker.md`
-3. **−2** · Missing Culinary Group A and Culinary Group C tradition(s) — add Culinary Group A and Culinary Group C source recipes to method leaf files — each tradition needs at least one recipe across the method files
-4. **−1** · Method file `wild_boar_shoulder-oven_roast.md` copies parent cut profile — rewrite `wild_boar_shoulder-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−8** · Cooking methods not researched
+2. **−1 each** · Missing `wild_boar_shoulder-braise.md`, `wild_boar_shoulder-slow_cooker.md`
+3. **−1 each** · Groups A, C missing
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

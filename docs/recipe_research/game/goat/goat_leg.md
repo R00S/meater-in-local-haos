@@ -46,18 +46,17 @@ doneness:
   max_c: 77
   max_f: 170
   usda_safe: true
-quality_score: 7
+quality_score: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-26
+quality_assessed: 2026-04-27
 -->
 # Goat Leg Roast — Cut Overview
 
 ## Cut profile
 
-Whole roasted goat leg is a festive preparation in Germany (Ziegenkeule), Greece (katsiki sto fourno), the Caribbean, South and West Africa, and across the Middle East. The meat has moderate fat and benefits from marinating (especially in buttermilk, yoghurt, or wine) to reduce gaminess. Slow oven roasting at 160–200 °C for 2–3 hours gives the best result.
+Whole goat leg (*Capra hircus*) is the hind limb, comprising the femur and the major muscles: *biceps femoris*, *semimembranosus*, *semitendinosus*, and *quadriceps femoris*. Unlike lamb leg — which can be served pink at 60–65 °C — goat leg has more connective tissue and a more assertive, gamey fat profile; most culinary traditions prefer it cooked to 75–82 °C where the connective tissue has softened and the stronger flavour compounds have mellowed. Marinating in acid (yoghurt, wine, buttermilk, citrus) before cooking is strongly recommended to reduce gaminess and tenderise the outer muscle layers.
 
-
-Target internal temperature: **75–82 °C (167–180 °F)** for fully cooked, moist goat.
+Goat leg is a defining ingredient in Caribbean (curried goat), West African (pepper soup, oven-roasted), Greek (katsiki sto fourno), and Middle Eastern (whole roast with spices) festive cooking.
 
 
 ## Research files by cooking method
@@ -65,21 +64,24 @@ Target internal temperature: **75–82 °C (167–180 °F)** for fully cooked, m
 - [Oven Roast](./goat_leg-oven_roast.md)
 ## Quality score
 
-**Score: 7 / 20** — assessed 2026-04-26
+**Score: 8 / 20** — assessed 2026-04-27
 
-| Criterion | Deduction |
-|-----------|----------|
-| Cooking methods not researched | −8 |
-| Missing method leaf files (2 of 3 declared) | −2 |
-| Missing Culinary Group A tradition | −1 |
-| Missing Culinary Group D tradition | −1 |
-| Method file `goat_leg-oven_roast.md` copies parent cut profile | −1 |
+| Criterion | Status |
+|-----------|--------|
+| Cooking methods not researched | − **NOT DONE** (−8) |
+| Oven roast cut profile method-specific | ✓ (fixed 2026-04-27) |
+| Braise leaf missing | − missing (−1) |
+| Slow cooker leaf missing | − missing (−1) |
+| Culinary Group A covered | − missing (−1) |
+| Culinary Group D covered | − missing (−1) |
+| Culinary Groups B, C | ✓ |
+
+**Deductions**: −8 methods · −1 missing braise · −1 missing slow_cooker · −1 Group A · −1 Group D = −12 → 20−12 = **8**
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — research what cooking methods are appropriate for this cut across culinary traditions; update the `methods:` list in the frontmatter and set `cooking_methods_researched: 1`
-2. **−2** · Missing method leaf files — create the following 2 missing files, each with 4–6 diverse source recipes, a method-specific cut profile, and pull temperatures from sources: `goat_leg-braise.md`, `goat_leg-slow_cooker.md`
-3. **−2** · Missing Culinary Group A and Culinary Group D tradition(s) — add Culinary Group A and Culinary Group D source recipes to method leaf files — each tradition needs at least one recipe across the method files
-4. **−1** · Method file `goat_leg-oven_roast.md` copies parent cut profile — rewrite `goat_leg-oven_roast.md`'s cut profile section with method-specific analysis — what this method does to this cut, carryover behaviour, why it suits it
+1. **−8** · Cooking methods not researched
+2. **−1 each** · Missing `goat_leg-braise.md`, `goat_leg-slow_cooker.md`
+3. **−1 each** · Groups A, D missing
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*
