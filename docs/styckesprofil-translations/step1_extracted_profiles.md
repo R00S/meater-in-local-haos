@@ -3774,7 +3774,7 @@ and carryover is 2–3°C, so the cut demands close monitoring. Stuffed or rolle
 
 **SV:**
 
-*(to translate)*
+Kaninsadeln är den ryggradssektion av kaninen som bär två benfria ländar och, om den lämnas med ben, tunna magliskor som skyddar längderna under stekning. Ugnsstekning passar sadeln särskilt. Innertemperatur: 65–68 °C (medium, lätt rosa). Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3791,7 +3791,7 @@ See also: [`reindeer_roast-oven_roast.md`](./reindeer_roast-oven_roast.md) for t
 
 **SV:**
 
-*(to translate)*
+Renfilé kan ugnsrostas hel (typiskt 300–700 g per stycke) med den skandinaviska lågtemperatursmetoden: sear i het panna för att utveckla färg, avsluta sedan i ugn vid 100–125 °C tills innertemperaturen nås. Innertemperatur: 54–58 °C (medium-rare till medium). Eftertillagning: 3–5 °C. Vila generöst för bästa saftsättning.
 
 ---
 
@@ -3808,7 +3808,7 @@ The reindeer loin requires the same pan sear approach: sear in butter or neutral
 
 **SV:**
 
-*(to translate)*
+Se det primära pannsearing-dokumentet för renfilé (*renfilé*) i [`docs/recipe_research/game/reindeer/reindeer_steak-pan_sear.md`]. Källorna dokumenterade där — inklusive Köket.se-receptet och Sami matlagningstraditionen — täcker renfilé oavsett om den steks i panna eller ugnsrostas. Innertemperatur: 54–60 °C. Eftertillagning: 2–4 °C.
 
 ---
 
@@ -3823,7 +3823,7 @@ The reindeer loin (Swedish: *renfilé*; Finnish: *poron filee/sisäfilé*; Norwe
 
 **SV:**
 
-*(to translate)*
+Renfilé (svenska: *renfilé*; finska: *poron filee/sisäfilé*; norska: *reinsdyrsindrefilet*) är *longissimus dorsi* — den möraste, magra muskeln längs var sida av renens ryggrad. Det är det mest uppskattade snittet från ren: konsekvent det möraste, magraste och subtilast smakande. Innertemperatur: 54–58 °C (medium-rare). Eftertillagning: 2–4 °C.
 
 ---
 
@@ -3840,7 +3840,7 @@ Target internal temperature: **57–62 °C (135–144 °F)** for medium. Pull at
 
 **SV:**
 
-*(to translate)*
+Renstek är en traditionell samisk och skandinavisk festrätt. Innanlåret eller sadelstycket är det vanligaste snittet. Den skandinaviska metoden: sear i het panna, avsluta sedan i en mycket låg ugn (100–125 °C) tills innertemperaturen nås. Innertemperatur: 54–60 °C (medium-rare till medium). Eftertillagning: 4–6 °C för en hel stek. Vila alltid under folie.
 
 ---
 
@@ -3858,7 +3858,7 @@ Target internal temperature: **57–62 °C (135–144 °F)** for medium. Pull at
 
 **SV:**
 
-*(to translate)*
+Renstek är en traditionell samisk och skandinavisk festrätt. Innertemperatur: 54–60 °C (medium-rare till medium). Eftertillagning: 4–6 °C. Tillagas traditionellt med lågtemperatursmetod för att bevara den magra renköttstens saftighet och mörhet.
 
 ---
 
@@ -3875,7 +3875,7 @@ Oil the grill grate and brush the steak surface with oil or butter to prevent st
 
 **SV:**
 
-*(to translate)*
+Grillning av renbiff — i samisk och nordisk tradition, över björkved eller hardwood träkol — kräver samma omsorg som grillning av struts eller magert hjortkött: den totala avsaknaden av isolerande intramuskulärt fett innebär att renbiff kan gå från rare till överkokad på 1–2 minuter. Innertemperatur: 54–58 °C medium-rare. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -3894,7 +3894,7 @@ Swedish temperature guide (köket.se):
 
 **SV:**
 
-*(to translate)*
+Ren (*Rangifer tarandus*) är det traditionella viltdjuret från Sápmi (Lappland), norra Finland, Norge och Sverige. Filén (renfilé) och baksadeln är de bästa snitten för pannsearing. Renkött är mycket magert med uttalad, mild viltsmak. Pannsearing i smör: het panna, 2–3 minuter per sida. Innertemperatur: 54–58 °C medium-rare. Eftertillagning: 2–4 °C.
 
 ---
 
@@ -3909,7 +3909,7 @@ Reindeer (*Rangifer tarandus*) is the traditional game meat of Sápmi (Lapland),
 
 **SV:**
 
-*(to translate)*
+Ren (*Rangifer tarandus*) är det traditionella viltdjuret från Sápmi och norra Skandinavien. Filén och baksadeln är de bästa biffskivorna — strukturellt likvärdiga med nötfilé och entrecôte. Renköttet är mycket magert, djupt mörkrött med ren, mild viltsmak. Innertemperatur: 54–58 °C medium-rare. Eftertillagning: 2–4 °C.
 
 ---
 
@@ -3924,7 +3924,7 @@ Braising the venison leg (haunch) results in a deeply flavoured, fall-apart tend
 
 **SV:**
 
-*(to translate)*
+Brässering av hjortlår (bakkvarter) ger ett djupt smakrikt, isärfallande mört resultat — det europeiska ekvivalentet av en pot roast. Till skillnad från ugnsstekning använder brässering en betydande mängd vätska (vin, fond, aromater). Innertemperatur: 88–95 °C pull-apart. Tillagnings tid: 2,5–4 timmar vid 85–90 °C.
 
 ---
 
@@ -3944,7 +3944,7 @@ For the venison leg specifically:
 
 **SV:**
 
-*(to translate)*
+Se även: [`venison_roast-oven_roast.md`] för ugnsstekning av hjortstekar (sadel, bakkvartsdel). Det dokumentet täcker den brittiska fyllda sadelmetoden och skandinaviska lågtemperatursmetoden. Innertemperatur: 54–62 °C (medium-rare till medium). Eftertillagning: 4–6 °C.
 
 ---
 
@@ -3959,7 +3959,7 @@ The venison leg (also called haunch, *Keule* in German, *cuisse* in French) is t
 
 **SV:**
 
-*(to translate)*
+Hjortlår (även kallat bakkvarter, *Keule* på tyska, *cuisse* på franska) är hela bakkvarteret av hjorten — en stor primerzon som inkluderar rumpa, innanlår, yttersida och benet. Det är det största enskilda snittet från hjort. Innertemperatur: 54–62 °C (rare–medium). Eftertillagning: 4–6 °C för hela låret.
 
 ---
 
@@ -3980,7 +3980,7 @@ Target internal temperature: **52–54 °C** for rare · **54–57 °C** for med
 
 **SV:**
 
-*(to translate)*
+Hjortrygg-ugnsstekning (även kallad sear-and-roast) är tekniken för hela ländar eller större sadelstycken. Standardtekniken: sear i het panna, avsluta i ugn (180–200 °C för medium) eller lågtemperatur (120–140 °C) för mer precis kontroll. Innertemperatur: 54–60 °C medium-rare. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -3999,7 +3999,7 @@ Köket.se temperature guide (Sweden):
 
 **SV:**
 
-*(to translate)*
+Hjortrygg (även: backstrap, sadel eller bakkvartsbiff — beroende på land) från rådjur (*Capreolus capreolus*) eller kronhjort (*Cervus elaphus*) är det primära snittet för pannsearing. Köttet är mycket magert, djupt rödbrunt och mört. Pannsearing i smör: het panna, 2–3 minuter per sida. Innertemperatur: 54–60 °C medium-rare. Eftertillagning: 2–4 °C.
 
 ---
 
@@ -4020,7 +4020,7 @@ Temperature guide (from Köket.se, Sweden — accessed 2026-04-27):
 
 **SV:**
 
-*(to translate)*
+Hjortrygg (även: backstrap, sadel) från rådjur eller kronhjort är det primära magra snittet från ryggens muskel längs ryggraden. Det är strukturellt likvärdigt med nötfilé: extremt mört, magert och med subtil, ren viltsmak. Innertemperatur: 54–60 °C medium-rare. Eftertillagning: 2–4 °C.
 
 ---
 
@@ -4037,7 +4037,7 @@ Target internal temperature: **55–60 °C (131–140 °F)** for a pink, moist r
 
 **SV:**
 
-*(to translate)*
+Hjortbakkvart eller sadelstekt är en klassisk brittisk, tysk, fransk och skandinavisk festrätt. Typisk metod: torrluta om möjligt, sear runt om i het panna och avsluta i ugn (180–200 °C för medium/well). Innertemperatur: 54–62 °C. Eftertillagning: 4–6 °C för hela steken.
 
 ---
 
@@ -4054,7 +4054,7 @@ The muscles are very lean — even less marbled than beef from the same primal p
 
 **SV:**
 
-*(to translate)*
+Hjortstek avser primärt bakkvarter (bakben, *femur* och omgivande muskler) och sadeln (*longissimus dorsi* och *psoas*-muskler, benfri). Innertemperatur: 54–62 °C (rare–medium). Eftertillagning: 4–6 °C för hela steken.
 
 ---
 
@@ -4069,7 +4069,7 @@ Venison shoulder braised low and slow becomes fall-apart tender as the substanti
 
 **SV:**
 
-*(to translate)*
+Hjortskuldra bräseras lågt och långsamt och blir isärfallande mört när det rikliga kollageninnehållet (högre än i lår eller rygg) omvandlas till gelatin under 1,5–3 timmar av varsam fuktig värme. Typisk europeisk metod: sear runt om, brässera i vin och fond. Innertemperatur: 88–95 °C pull-apart. Eftertillagning: försumbar.
 
 ---
 
@@ -4084,7 +4084,7 @@ Venison shoulder can be oven-roasted whole (bone-in or bone-out, tied), though i
 
 **SV:**
 
-*(to translate)*
+Hjortskuldra kan ugnsrostas hel (med eller utan ben, bunden), men det är mindre vanligt än brässering för detta snitt på grund av dess höga bindvävsinnehåll. Utan bräseringsvätska bör skuldern basteras regelbundet. Innertemperatur: 70–75 °C (medium-well till genomstekt för skuldra utan brässering). Eftertillagning: 4–6 °C.
 
 ---
 
@@ -4099,7 +4099,7 @@ The venison shoulder is well-suited to slow cooker (crockpot) cooking: its colla
 
 **SV:**
 
-*(to translate)*
+Hjortskuldra lämpar sig utmärkt för slow cooker: dess kollagenrika muskelstruktur bryts ner vackert under 6–10 timmar vid låg värme (≈85–95 °C), vilket ger gaffelömjukt, isärfallande resultat utan konstant tillsyn. Innertemperatur: 88–95 °C pull-apart. Eftertillagning: noll.
 
 ---
 
@@ -4114,7 +4114,7 @@ The venison shoulder (forequarter; *Rehschulter* in German, *épaule de chevreui
 
 **SV:**
 
-*(to translate)*
+Hjortskuldra (framkvarter; *Rehschulter* på tyska, *épaule de chevreuil* på franska) är frambenet från skulderbladet till knäleden. Det är ett hårt arbetat, muskulöst snitt från hjortens framkvarter — dubbelt mer kollagenrikt än bakkvarteret. Innertemperatur: 88–95 °C pull-apart (brässering) eller 70–75 °C (direktugn). Eftertillagning: 3–5 °C.
 
 ---
 
@@ -4133,7 +4133,7 @@ Temperature precision is essential. Pull at **54–57°C (130–135°F)** for me
 
 **SV:**
 
-*(to translate)*
+Hjortbackstrap, rygg eller bakkvartsbiffar är utmärkta på grillen. Den magra, täta muskeln gynnas av direktvärme vid hög temperatur — den sears snabbt och utvecklar en rökig, karameliserad yta medan mitten förblir rosa. Innertemperatur: 54–60 °C medium-rare. Eftertillagning: 2–3 °C. Överkoka inte.
 
 ---
 
@@ -4154,7 +4154,7 @@ Target internal temperature: pull at **54–57°C (130–135°F)** for medium-ra
 
 **SV:**
 
-*(to translate)*
+Hjortbiff avser vanligast snitt från bakkvarter, rygg eller backstrap av rådjur (*Capreolus capreolus*), kronhjort (*Cervus elaphus*) eller dovhjort (*Dama dama*). Backstrap och rygg är de möraste, magraste snitten — strukturellt identiska med nötfilé. Pannsearing: het panna, smör, 2–3 minuter per sida. Innertemperatur: 54–60 °C medium-rare. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -4176,7 +4176,7 @@ Target internal temperature: pull at **54–57°C (130–135°F)** for medium-ra
 
 **SV:**
 
-*(to translate)*
+Hjortbiff avser vanligast snitt från bakkvarter, rygg eller backstrap. De möraste snitten — backstrap och rygg — är strukturellt identiska med nötfilé. Köttet är mycket magert, djupt mörkrött med ren, subtil viltsmak. Innertemperatur: 54–60 °C medium-rare. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -4193,7 +4193,7 @@ Target internal temperature: **70–72 °C (158–162 °F)** for safe consumptio
 
 **SV:**
 
-*(to translate)*
+Vildsvinskotletter (*Sus scrofa*) (Wildschwein-Koteletts / côtelettes de sanglier) tas från ryggen och inkluderar ett revben, liknande fläskkotletter men med mörkare, tätare kött och uttalad viltsmak. Grillning: direkt hög värme, 4–5 minuter per sida. Innertemperatur: 70–74 °C (genomstekt — vildsvinsdjur tillagas alltid väl genomstekta av livsmedelssäkerhetsskäl). Eftertillagning: 2–3 °C.
 
 ---
 
@@ -4212,7 +4212,7 @@ Target internal temperature: **70–72 °C (158–162 °F)** (safe). Some chefs 
 
 **SV:**
 
-*(to translate)*
+Vildsvinskotletter (*Sus scrofa*) tas från ryggen. Pannsearing: het panna, 4–5 minuter per sida. Innertemperatur: 70–74 °C (genomstekt). Eftertillagning: 2–3 °C. Vildsvinet tillagas alltid väl genomstekt av livsmedelssäkerhetsskäl (trikinos).
 
 ---
 
@@ -4230,7 +4230,7 @@ Target internal temperature: **70–72 °C (158–162 °F)** for safe consumptio
 
 **SV:**
 
-*(to translate)*
+Vildsvinskotletter (*Sus scrofa*) (Wildschwein-Koteletts / côtelettes de sanglier) tas från ryggen med ett revben, liknande fläskkotletter men mörkare och viltsmakande. Innertemperatur: 70–74 °C (genomstekt). Eftertillagning: 2–3 °C. Tillagas alltid väl genomstekt.
 
 ---
 
@@ -4247,7 +4247,7 @@ Target internal temperature: **80–90 °C (176–194 °F)** for fall-apart text
 
 **SV:**
 
-*(to translate)*
+Vildsvinskuldra är en stor, hårt arbetat muskel med signifikant bindvävsinnehåll. Den gynnas av lång, långsam stekning (3–4 timmar) vid måttlig temperatur (160–200 °C) i bräseringsvätska för att nå pull-apart mörhet. Innertemperatur: 88–95 °C pull-apart. Eftertillagning: försumbar.
 
 ---
 
@@ -4264,7 +4264,7 @@ The flavour of wild boar shoulder is more intense and gamey than farmed pork, wi
 
 **SV:**
 
-*(to translate)*
+Vildsvinskuldra (*Sus scrofa*) är det främre extremiteten och tillhörande muskler, primärt *triceps brachii*, *deltoid* och *infraspinatus*, omgiven av täta bindvävslager. Vildsvinet utvecklar signifikant mer bindväv än tamfläsk på grund av fysisk aktivitet. Innertemperatur: 88–95 °C pull-apart (brässering) eller 70–74 °C (direktugnsstekning). Eftertillagning: 4–6 °C.
 
 ---
 
@@ -4283,7 +4283,7 @@ Target internal temperatures (from Africanbites.com):
 
 **SV:**
 
-*(to translate)*
+Lammribskotletter och lammrygglårkotletter är de klassiska snitten för grillning, populära världen över från Australien och Nya Zeeland (världens största lammexportörer) till Storbritannien, Medelhavsländerna, Mellanöstern och Väst-Afrika. Ribskotletter är tunnare och tillagas snabbare. Innertemperatur: 60–63 °C (medium-rare till medium) för rosa lamm. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -4300,7 +4300,7 @@ Target: rib chops **55 °C (131 °F)** medium-rare; loin chops **57–60 °C (13
 
 **SV:**
 
-*(to translate)*
+Pannsearing av lammkotletter är den vardagliga inomhusmetoden i hela Storbritannien, Europa, Sydasien och Mellanöstern. En riktigt het gjutjärns- eller tung rostfrihetspanna, 3–4 minuter per sida, sedan vila — det utsmälta fettet och Maillard-brynningen på sidorna ger en koncentrerad lammfond. Innertemperatur: 60–63 °C (medium-rare). Eftertillagning: 2–3 °C.
 
 ---
 
@@ -4320,7 +4320,7 @@ Target internal temperatures (from Africanbites.com):
 
 **SV:**
 
-*(to translate)*
+Lammribskotletter och lammrygglårkotletter är de klassiska grillsnitten, populära globalt. Innertemperatur: 60–63 °C (medium-rare till medium). Eftertillagning: 2–3 °C. Grillas vid direkt hög värme i 3–4 minuter per sida.
 
 ---
 
@@ -4338,7 +4338,7 @@ Target: **52–57 °C (126–135 °F)** for medium-rare. They overcook rapidly g
 
 **SV:**
 
-*(to translate)*
+Lammfilé (tunna, Frenchade ribskotletter) är det mest raffinerade lammsnittet — ett enda revben med köttet format till en liten medalljon. Det är en bistroklassiker i Frankrike och Storbritannien, en restaurangstandard i Australien och en bröllopsrätt i Mellanöstern. Pannstekning: het panna, 2–3 minuter per sida. Innertemperatur: 60–63 °C medium-rare. Eftertillagning: 1–2 °C.
 
 ---
 
@@ -4356,7 +4356,7 @@ Target: **57–62 °C (135–144 °F)** for medium (slightly pink). Africanbites
 
 **SV:**
 
-*(to translate)*
+Lammrygglårskotlett är T-bonen av lamm — skärd från sadeln och innehåller både ryggköttet och en liten bit filé. De är större och köttrikare än ribskotletter, med karakteristiskt T-format ben. I Storbritannien kallas de ibland "barnsley chops". Pannsearing: het panna, 3–4 minuter per sida. Innertemperatur: 60–63 °C medium-rare. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -4371,7 +4371,7 @@ Lamb neck fillet braised in aromatic liquid becomes remarkably tender. The neck 
 
 **SV:**
 
-*(to translate)*
+Lammhalsfilé bräserad i aromatisk vätska blir anmärkningsvärt mör. Halsmusklerna, tätt packade med bindväv och ständigt i rörelse under livet, kräver 2–3 timmar av varsam fuktig värmetillagning för att omvandla kollagenet till gelatin. Innertemperatur: 88–95 °C pull-apart. Eftertillagning: försumbar.
 
 ---
 
@@ -4386,7 +4386,7 @@ Pan-searing lamb neck fillet is a quick cooking method when the fillet is sliced
 
 **SV:**
 
-*(to translate)*
+Pannsearing av lammhalsfilé är en snabb tillagningsmetod när filén är tunn skivad (ca 1–2 cm) och marinerad i förväg för att möra de täta muskelfibrerna. Halsen är inte lika naturligt mör som rygg eller filé. Innertemperatur: 63–68 °C (medium till medium-well för tunn-skivad hals). Eftertillagning: 1–2 °C.
 
 ---
 
@@ -4401,7 +4401,7 @@ The lamb neck fillet is ideally suited to the slow cooker. The constant low heat
 
 **SV:**
 
-*(to translate)*
+Lammhalsfilé lämpar sig idealiskt för slow cooker. Den konstanta låga värmen (80–95 °C) under 6–8 timmar gör att de kollagenrika halsmusklerna fullständigt bryts ner, vilket ger silkeslena, isärfallande resultat utan konstant tillsyn. Innertemperatur: 88–95 °C pull-apart. Eftertillagning: noll.
 
 ---
 
@@ -4416,7 +4416,7 @@ Lamb neck fillet (*lammhalsfilé* in Swedish, *Lammhalsfilet* in German) is the 
 
 **SV:**
 
-*(to translate)*
+Lammhalsfilé (*lammhalsfilé* på svenska, *Lammhalsfilet* på tyska) är den urbened, rensad filén från lammets hals. Till skillnad från benfri hals — som skärs i tjocka rundlar — är filén en lång, tunn, jämn muskelbit. Innertemperatur: 63–68 °C för tunn-skivad pannsearing, eller 88–95 °C pull-apart för brässering.
 
 ---
 
@@ -4433,7 +4433,7 @@ Target internal temperature: **74 °C (165 °F)** for food-safe ground lamb.
 
 **SV:**
 
-*(to translate)*
+Malet (malt) lamm används i otaliga traditioner — från mellanösternsk kibbeh och nordafrikansk merguez till grekisk moussaka, indisk keema och turkisk Akçaabat köfte. Pannstekning av malt lamm kräver genomstekt tillagning (genomstekt) av livsmedelssäkerhetsskäl. Innertemperatur: 74 °C. Lamm har naturligt högt fettinnehåll — 20–25 % — som ger intensiv smak.
 
 ---
 
@@ -4451,7 +4451,7 @@ Target internal temperature: **74 °C (165 °F)** for food-safe ground lamb.
 
 **SV:**
 
-*(to translate)*
+Malet (malt) lamm används i otaliga traditioner. Pannstekning kräver genomstekt tillagning. Innertemperatur: 74 °C. Lamm har naturligt högt fettinnehåll som ger intensiv smak.
 
 ---
 
@@ -4468,7 +4468,7 @@ Cook 4–5 minutes per side at medium-high heat (about 200 °C at grate), flippi
 
 **SV:**
 
-*(to translate)*
+Grillning av lammburger kräver hantering av det höga fettinnehållet: lammfett droppar på grillen och orsakar uppflammor som kan förkolna utsidan innan insidan är genomkokt. Använd tvåzons-grill eller måttlig direktvärme. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -4483,7 +4483,7 @@ Lamb burger is a patty made from ground (minced) lamb — primarily shoulder and
 
 **SV:**
 
-*(to translate)*
+Lammburger är en biff av malt lamm — primärt skulder och halstrimmingar — med typiskt 15–25 % fettinnehåll, märkbart högre än nötkött. Det höga fettinnehållet ger en mycket saftig biff med intensiv smak. Innertemperatur: 74 °C (genomstekt). Eftertillagning: 2–3 °C.
 
 ---
 
@@ -4500,7 +4500,7 @@ The skewer placement means the MEATER probe must be inserted lengthwise through 
 
 **SV:**
 
-*(to translate)*
+Grillning är den enda traditionella metoden för kofta — det är en strikt eldbaserad beredning i alla traditioner som skapade den. Hög, direkt värme (träkol föredraget; gas acceptabelt) förkolnar utsidan på 3–4 minuter. Innertemperatur: 74 °C (genomstekt). Kofta faller isär om underkokt — tillaga alltid genomstekt.
 
 ---
 
@@ -4517,7 +4517,7 @@ Kofta is widespread across Turkish, Iranian, Levantine, North African, Pakistani
 
 **SV:**
 
-*(to translate)*
+Lammkofta (även stavat köfte, kefta, kafta, kufta) är en beredning av malt lamm blandat med finhackad lök, färska örter (persilja, mynta, koriander) och varma kryddor (spiskummin, koriander, kanel, kryddpeppar, svartpeppar). Innertemperatur: 74 °C (genomstekt). Kofta grillas traditionellt på spett eller formas direkt på platten.
 
 ---
 
@@ -4532,7 +4532,7 @@ Lamb brisket (also called lamb breast, especially in UK/European usage) comes fr
 
 **SV:**
 
-*(to translate)*
+Lammbringa (även kallad lammbringa, speciellt i brittisk/europeisk användning) kommer från lammets mage — samma anatomiska position som fläskbuk. Den består av laminerade mellangärdes-muskler, revben och signifikant intramuskulärt och yttre fett. Brässering är den naturliga metoden. Innertemperatur: 88–95 °C pull-apart. Eftertillagning: försumbar.
 
 ---
 
@@ -4547,7 +4547,7 @@ Lamb brisket (UK: lamb breast) comes from the belly of the lamb — anatomically
 
 **SV:**
 
-*(to translate)*
+Lammbringa (brittisk: lammbringa) kommer från lammets mage — anatomiskt likvärdigt med fläskbuk. Den består av laminerade mellangärdes-muskler, revben och kraftigt intramuskulärt och yttre fett. Innertemperatur: 88–95 °C pull-apart. Eftertillagning: försumbar.
 
 ---
 
@@ -4566,7 +4566,7 @@ Lamb loin roast is the boneless, cylindrical muscle removed from the saddle (the
 
 **SV:**
 
-*(to translate)*
+Lammryggstek är den benfria, cylindriska muskeln borttagen från sadeln (avsnittet mellan sista revbenet och höften). Det är lammets ekvivalent av en nötfilé vad gäller mörhet — mager, finkornig, låg i kollagen. Ugnsstekning ger bäst resultat. Innertemperatur: 57–60 °C (medium-rare). Eftertillagning: 3–4 °C.
 
 ---
 
@@ -4583,7 +4583,7 @@ Lamb loin roast is the boneless, cylindrical muscle removed from the saddle — 
 
 **SV:**
 
-*(to translate)*
+Lammryggstek är den benfria, cylindriska muskeln från sadeln — bland de möraste snitten på djuret. Mager, finkornig med subtil lammsmak. Innertemperatur: 57–60 °C medium-rare. Eftertillagning: 3–4 °C.
 
 ---
 
@@ -4600,7 +4600,7 @@ Target internal temperature: **85–90 °C (185–194 °F)** for full braised te
 
 **SV:**
 
-*(to translate)*
+Lammhals (Lammhals / collo di agnello / kuzu gerdan / lammehals) är ett av de mest underskattade bräseringssnitten. Det är rikligt marmorerat, hårt arbetat och packat med bindväv och djup smak. Skärs i tvärsnitt och bräseras i 1,5–2 timmar vid 85–90 °C. Innertemperatur: 88–95 °C pull-apart. Eftertillagning: försumbar.
 
 ---
 
@@ -4617,7 +4617,7 @@ Target internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bo
 
 **SV:**
 
-*(to translate)*
+Lammhals kan ugnsrostas (torrt eller semi-torrt) i stället för bräseras, men det är mindre vanligt. Ugnsstekning av lammhals kräver regelbunden bastning. Innertemperatur: 70–75 °C (genomstekt för torr ugnsstekning). Eftertillagning: 3–5 °C.
 
 ---
 
