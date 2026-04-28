@@ -12,6 +12,9 @@ cut_type: Steaks
 ## Cut profile
 Flank steak is a flat, thin muscle cut from the abdominal wall of the animal (the flank primal), with long, coarse muscle fibres running visibly along its length. The cut is lean, relatively tough, and has minimal intramuscular fat — it lacks the marbling of a ribeye but compensates with bold, beefy flavour. Charcoal grilling is the quintessential method for flank steak: the high, direct radiant heat from glowing embers creates a rapid, intense Maillard crust across the wide flat surface before the interior has time to overcook. Flank steak must be cooked quickly over very high heat and sliced thinly across the grain for tenderness — cooking it slowly defeats the purpose. Carryover is minimal in a thin flank steak, but because it is typically cooked over extremely high heat, the brief internal temperature rise after removal from the grill can bring the steak from medium-rare to medium if not watched carefully.
 
+## Styckesprofil
+
+Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med långa, grova fibrer som löper synligt längs hela längden. Snittet är magert, relativt tufft och har lite intramuskulårt fett – det saknar ribeyens marmorering men kompenserar med kraftig, nötig smak. Kolgrillning är den klassiska metoden för flank steak: den höga, direkta strålningsvärmen från glödande kol ger en snabb, intensiv Maillard-skorpa över den breda ytan innan insidan hinner överkokas. Flank steak måste tillagas snabbt över mycket hög värme och skivas tunt mot ådringen för att bli mör – långsam tillagning motverkar syftet. Eftervärmen är minimal i en tunn flank steak, men eftersom den oftast tillagas över extrem värme kan den korta temperaturökningen efter uttag föra biffen från medium-rare till medium om man inte är uppmärksam.
 ## Source recipes
 
 ### 1. Francis Mallmann — Argentine Flank on Charcoal (*Vacio a la parrilla*)

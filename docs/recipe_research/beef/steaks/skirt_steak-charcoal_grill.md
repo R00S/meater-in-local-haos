@@ -13,6 +13,10 @@ cut_type: Steaks
 
 Skirt steak over live charcoal is arguably its highest form — in taquero tradition, *arrachera asada* (literally "grilled skirt steak") means skirt steak cooked over mesquite or hardwood charcoal, where the fat drippings ignite the coals into brief, flavour-depositing flare-ups. The smoky charcoal notes complement the intense beefy flavour of the diaphragm muscle. Mexican *taquero* tradition uses very hot mesquite charcoal; Argentine *parrilla* tradition uses quebracho wood embers. The probe challenge is the same as on a gas grill: thin steak, end insertion required. Carryover from very hot charcoal is 5–7 °C.
 
+## Styckesprofil
+
+Skirt steak över levande träkol är snittet i sin högsta form — i taquero-tradition betyder *arrachera asada* (bokstavligen "grillad skirt steak") skirt steak tillagad över mesquite eller hardwood träkol, där fettdropparna antänder kolarna till korta smakdepositione uppflammor. Rökig träkolsnot, direkt glödstrålning och den taqueria-karaktär som bara mesquite kan ge gör träkol till den absolut bästa grillmetoden för detta snitt. Innertemperatur: 52–57 °C. Skär alltid tvärs mot fibern. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. Diana Kennedy — *Arrachera Asada* over Mesquite (Mexican tradition)

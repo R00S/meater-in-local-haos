@@ -26,6 +26,12 @@ Grilling is the only traditional method for kofta — it is a strictly fire-base
 
 The skewer placement means the MEATER probe must be inserted lengthwise through one end of the kofta, through the skewer channel, into the centre. Alternatively, probe the thickest kofta without the skewer in place before serving. Target: 71 °C (160 °F). Carryover: 3–4 °C. Pull at 66–67 °C to rest to 71 °C.
 
+## Styckesprofil
+
+Grillning är den enda traditionella metoden för köfte — det är en strikt eldsbaserad beredning i alla traditioner som skapade den. Hög direkt värme (kol föredraget) förkolnar utsidan på 3–4 minuter per sida, smälter ned fettet och skapar den karakteristiska rökhaltiga kolskorpan.
+
+Det enda säkra sättet att verifiera genomkokning är med sond. Innertemperatur: **72–75 °C (162–167 °F)** för malet lamm. Eftertillagning: 2–3 °C. Sond insatt längsvis från änden in till mitten av köfte-spettet. Vila 3–5 minuter täckt.
+
 ## Source recipes
 
 ### 1. TurkishFoodTravel.com — Authentic Turkish Köfte (Turkish tradition)

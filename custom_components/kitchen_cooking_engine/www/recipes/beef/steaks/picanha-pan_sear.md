@@ -13,6 +13,10 @@ cut_type: Steaks
 
 Picanha (*alcatra de capa* in Portuguese; *coulotte* in French; sirloin cap or rump cap in English) is cut from the top of the rump, comprising the *biceps femoris* muscle capped by a thick layer of subcutaneous fat. It is the most prized cut in Brazilian *churrasco* culture. The fat cap is extremely important — it renders during cooking and bastes the meat from above. Picanha has medium-to-high marbling for a rump-region cut and a bold, beefy flavour. Pan searing is less traditional than grilling for picanha, but produces excellent results: the fat cap renders in a hot pan to baste the lean meat below, the muscle crust Maillard-browns well, and the thin cut cooks quickly. Carryover is 4–5 °C.
 
+## Styckesprofil
+
+Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; sirloin cap eller rump cap på engelska) skärs från toppen av rumpprimalen och består av *biceps femoris*-muskeln täckt av ett tjockt subcutant fettlager. Det är det mest uppskattade snittet i brasiliansk *churrasco*-kultur. Fettlisten är extremt viktig: den hålls intakt (aldrig bortskuren) och smälter under tillagningen för att basta köttet. Pannsearing ger utmärkt karamelisering av fettlisten. Innertemperatur: 52–57 °C medium-rare. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. Francis Mallmann — Picanha in a Cast-Iron Pan (Argentine/Brazilian tradition)

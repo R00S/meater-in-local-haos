@@ -28,6 +28,10 @@ Two common approaches: (1) high heat throughout (220–230 °C) — produces ver
 
 The MEATER probe is placed in the thigh, from the cavity side, directed towards the thigh bone without touching it. The thigh temperature is the limiting factor — the breast will be safe when the thigh reaches 165 °F. Carryover in the thigh is 3–5 °C; in the breast, 4–7 °C. Rest the bird uncovered on a rack for 10–15 minutes before carving.
 
+## Styckesprofil
+
+Ugnsstekning är den vanligaste metoden för hel kyckling världen över och bäst lämpad för att producera det gyllenbruna, knapriga skinnet som de flesta recept siktar på. Ugnen omger fågeln med cirkulerande varm luft. Innertemperatur: 74 °C (bröst), 80 °C (lår). Eftertillagning: 4–6 °C för hel fågel. Tillagnings tid: 1–1,5 timmar vid 190–210 °C.
+
 ## Source recipes
 
 ### 1. Jessica Gavin — Whole Roasted Chicken

@@ -17,6 +17,12 @@ Target internal temperatures (braise):
 - Tender, sliceable: **75–80 °C (167–176 °F)**
 - Very tender, fall-apart: **85–90 °C (185–194 °F)**
 
+## Styckesprofil
+
+Fläskbuk (*svinekam*/*flæskesteg* danska; *Schweinebauch* tyska) är den klassiska nordiska och tyska festrostningen. Svålen (*svær* / *Kruste*) är nyckeln: ritsas djupt med en vass kniv, saltas, och placeras plant i ugnen för jämn värmepenetration.
+
+Ugnsrostning med svål: 180–200 °C, 1,5–2 timmar, avsluta under grillelementet för knäppande-kris svål. Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig. Eftertillagning: 3–4 °C. Sond in i tjockaste köttmassan utan svål, borta från revbenslben.
+
 ## Source recipes
 
 ### 1. Chefkoch — Chashu (Japanese-style braised pork belly)

@@ -2,6 +2,7 @@
 type: cut
 slug: duck_leg_confit
 name: Duck Leg Confit
+name_sv: Andlår confit
 category: poultry
 meat: duck
 cut_type: Duck
@@ -37,6 +38,10 @@ Duck leg confit (_confit de canard_) refers specifically to the bone-in, skin-on
 **Skin crisping step**: confit requires a two-phase oven process. Phase 1 (the confit) runs at 85–100 °C / 185–210 °F for 3–8 hours submerged in fat; the duck emerges pale and flabby-skinned but fully cooked and ultra-tender. Phase 2 runs at 220–240 °C / 430–465 °F for 15–40 minutes with the duck on a rack; this desiccates the subcutaneous fat and crisps the skin to a golden crackle.
 
 **Probe placement**: insert the probe from the thick cut end of the thigh, pushing the tip toward the geometric centre of the thigh muscle. The tip must be in the lean muscle, not resting against the femur or in a fat pocket. Do not probe the drumstick — it is thinner and will equilibrate faster, giving a false-high reading for the thigh. Insert the probe before the duck goes into the fat bath.
+
+## Styckesprofil
+
+Anklägg confit (*confit de canard*) avser specifikt anklägg med ben och skinn (lår + trumpinne, känd som *maryland*-snittet i Australien) tillagad med den traditionella franska confit-metoden. Innertemperatur: 82–85 °C. Confit-beredda anklägg är sedan krispiga i het panna eller ugn vid 220 °C i 15 minuter för knaprig skinnyta.
 
 ## Research files by cooking method
 

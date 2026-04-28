@@ -12,6 +12,10 @@ cut_type: Cruciferous
 ## Cut profile
 Cauliflower (*Brassica oleracea* var. *botrytis*) steamed preserves more of the glucosinolate compounds (which have health benefits) and the delicate flavour compared to boiling, which leaches these compounds into the water. Florets steamed over boiling water reach their target temperature of 80–85 °C (176–185 °F) in 7–10 minutes depending on size, at which point they are fork-tender with no raw starch taste. The classic test: a floret should yield easily to a paring knife inserted into the stem, but not crumble. A MEATER probe is inserted through the stem of the largest floret into its geometric centre; the probe should be set before the steam begins.
 
+## Styckesprofil
+
+Blomkål (*Brassica oleracea* var. *botrytis*) ångad bevarar fler av glukosinolat-föreningarna (som har hälsofördelar) och den delikata smaken jämfört med kokning. Ånga i 10–15 minuter (buketter) ovanför kokande vatten. Klar när genomstekt och mjuk men inte mosig.
+
 ## Source recipes
 
 ### 1. Fuchsia Dunlop — Zhēng Huā Cài (蒸花椰菜 — Chinese Steamed Cauliflower with Sesame Sauce)

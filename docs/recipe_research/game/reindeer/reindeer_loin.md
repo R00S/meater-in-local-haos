@@ -2,6 +2,7 @@
 type: cut
 slug: reindeer_loin
 name: Loin
+name_sv: Renfilé
 category: game
 meat: reindeer
 cut_type: Reindeer
@@ -46,6 +47,12 @@ quality_assessed: 2026-04-27
 ## Cut profile
 
 The reindeer loin (Swedish: *renfilé*; Finnish: *poron filee/sisäfilé*; Norwegian: *reinsdyrsindrefilet*) is the longissimus dorsi — the tender, lean muscle running along each side of the reindeer's spine. It is the most prized reindeer cut: consistently tender regardless of the animal's age due to minimal load-bearing activity, and finer-grained than the round or shoulder. Reindeer (*Rangifer tarandus*) is the iconic game meat of Sápmi and circumpolar Scandinavia — it is also the culinary touchstone of Sami cuisine, northern Finnish tradition, and Norwegian festive cooking. The loin is extraordinarily lean (1–3% fat), deep crimson from high myoglobin content, and carries the characteristic sweet-earthy, slightly gamey flavour that distinguishes reindeer from beef or lamb. It must be treated with the same care as a beef tenderloin: high initial heat to form a crust, then low-heat finishing to target temperature. Above 65°C / 149°F, the fibres seize irreversibly. The Nordic culinary standard for renfilé is rare (52°C) to medium (57°C); well-done is strongly discouraged. Carryover in a rested loin is typically 3–5°C / 5–9°F.
+
+## Styckesprofil
+
+Renfilén (*renfilé*; finska *poron filee/sisäfilé*; norska *reinsdyrsindrefilet*) är *longissimus dorsi* — den möra, magra muskeln längs var sida av renens ryggrad. Det är det mest uppskattade rensnittet: konsekvent mört oavsett djurets ålder, finkornigt och med djup sötjordaktigt smak mildare än älg.
+
+Renkött är mycket magert (typiskt under 2 % intramuskulärt fett) och djupt rött från hög myoglobin- och järnhalt. Tillagas exakt som en mager nöt- eller hjortsteak: hett och snabbt, draget vid medium-rare. Innertemperatur: **52–56 °C (126–133 °F)** för medium-rare. Eftertillagning: 3–4 °C. Överskrid inte 63 °C.
 
 ## Research files by cooking method
 

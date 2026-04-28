@@ -2,6 +2,7 @@
 type: cut
 slug: tuna_steak
 name: Tuna Steak
+name_sv: Tonfiskbiff
 category: fish
 meat: tuna
 cut_type: Tuna
@@ -48,6 +49,10 @@ quality_assessed: 2026-04-26
 
 Tuna steak — most commonly bluefin (*Thunnus thynnus*, Japanese *hon maguro*), yellowfin (*Thunnus albacares*, Hawaiian *ahi*), or bigeye (*Thunnus obesus*, *mebachi*) — is cut transversely from the cylindrical loin muscles of a large, pelagic, highly migratory fish. The flesh is deep crimson from high myoglobin content (endothermic muscle requiring sustained oxygen delivery). It is very lean and densely packed with fast-twitch white and red muscle fibres with almost no connective tissue between segments — this gives tuna its steak-like behaviour under direct heat rather than the flaking characteristic of most fish. Average steak dimensions: 2–4 cm thick, 10–15 cm diameter loin cross-section. Safe temperatures: USDA minimum for finfish is 63 °C (145 °F), but sushi-grade tuna is conventionally consumed raw; most chefs pull at 38–45 °C for rare (cold-raw centre) to 54–57 °C for medium-rare (lightly warmed centre).
 
+
+## Styckesprofil
+
+Tonfiskbiff — vanligast blåfenad (*Thunnus thynnus*, japansk *hon maguro*), gulfenig (*Thunnus albacares*, hawaiiansk *ahi*) eller storöjad (*Thunnus obesus*, *mebachi*) — skärs tvärs igenom de cylindriska lårmusklerna hos en stor, pelagisk, högt aktiv fisk. Tonfiskkött är mörkrött, tätt och nästan helt benfritt — mer likt en biff i konsistens än flinkat vitt fisk. Det är mycket magert med lite intramuskulärt fett. Innertemperatur: 43–49 °C (rare) för sushikvalitet.
 
 ## Research files by cooking method
 

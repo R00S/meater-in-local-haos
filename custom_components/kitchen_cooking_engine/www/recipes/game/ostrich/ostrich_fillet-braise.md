@@ -4,6 +4,12 @@
 
 Ostrich fillet (loin fillet / fan fillet) braises well when cut into cubes or thick strips. Despite the loin origin, cubed ostrich can be braised briefly in liquid (20–40 minutes at a gentle simmer, not the multi-hour braise needed for beef chuck) because the muscle fibres are fine-grained and the cut has negligible connective tissue to dissolve. Braising in red wine or spiced stock adds complexity and moisture compensation for the lean, fat-free meat. Over-braising will yield dry, stringy cubes — the braising time for ostrich is much shorter than beef or lamb. No probe temperature target applies to braised ostrich cubes; instead, fork-tenderness at around 70–75°C / 158–167°F is the target — above beef medium rare but not the fall-off-bone temperatures required for collagen-rich cuts.
 
+## Styckesprofil
+
+Strutsfett (*Struthio camelus*, loin-filé/fan-filé) bräseras väl när det skärs i kuber eller tjocka remsor. Trots att det kommer från loin kan kubad struts bräseras kortfattat i vätska (20–40 minuter vid en mild simmer) eftersom muskelfibrerna är finkorniga och snittet har försumbar bindväv att lösa upp.
+
+Bräsering ger ett fuktigt, välkryddat resultat och passar väl för servering med couscous, bulgur eller grönsaker. Innertemperatur: **68–72 °C (154–162 °F)** för fullt genomstekt med saftighet kvar. Eftertillagning: 2–3 °C. Sond insatt i den tjockaste kubbitens mitt.
+
 ## Source recipes
 
 ### 1. Chefkoch.de (user Kantinejenta) — Straußenfilet mit Koriander und Rotwein

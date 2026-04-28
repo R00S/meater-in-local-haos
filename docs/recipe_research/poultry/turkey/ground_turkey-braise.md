@@ -12,6 +12,10 @@ cut_type: Ground
 ## Cut profile
 Ground turkey (minced turkey) is made by grinding dark meat (thigh and leg), white meat (breast), or a blend. A dark-meat-inclusive blend (typically 93/7 lean/fat) has noticeably better flavour and moisture retention than pure breast-meat grinds. Because turkey is poultry, the USDA minimum safe internal temperature is 74°C (165°F) with no reduction for resting. Ground turkey cooks faster than beef or pork at the same mass due to its lower fat content and should be monitored closely to avoid dryness. Carryover is 1–2°C.
 
+## Styckesprofil
+
+Malt kalkon (malt kykling) tillverkas av malning av mörkt kött (lår och ben), vitt kött (bröst) eller en blandning. En blandning med mörkt kött (typiskt 93/7 mager/fett) har märkbart bättre smak och fuktighet. Brässering håller det magra köttet saftigt. Innertemperatur: 74 °C. Eftertillagning: minimal.
+
 ## Source recipes
 
 ### 1. Marcella Hazan — Ragù di Tacchino (Italian tradition)

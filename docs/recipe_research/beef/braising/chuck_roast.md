@@ -2,6 +2,7 @@
 type: cut
 slug: chuck_roast
 name: Chuck Roast / Pot Roast
+name_sv: Grytbiff
 category: beef
 meat: cow
 cut_type: Braising Cuts
@@ -32,6 +33,13 @@ quality_assessed: 2026-04-28
 Chuck roast is cut from the shoulder region of the animal (the chuck primal, roughly ribs 1–5 and the neck). The shoulder muscles endure constant movement throughout the animal's life, producing densely bundled muscle fibres interlaced with thick seams of connective tissue (*collagen*) and intermuscular fat — a structure that is aggressively tough at low internal temperatures but transforms into richly flavoured, pull-apart tenderness after prolonged cooking. The chuck encompasses multiple muscles: *triceps brachii*, *supraspinatus*, *infraspinatus*, and the *longissimus costarum*. Most are heavily worked, heavily collagen-rich, and unsuitable for quick cooking methods.
 
 
+## Styckesprofil
+
+Chuck roast kommer från axelpartiet på djuret (revben 1–5 och nacken). Musklerna i detta område är ständigt i rörelse under djurets liv, vilket ger täta muskelfibrer som är inlindade i kraftiga bindvävslager och rikligt med intermuskulärt fett. Det är just därför snittet blir så tufft vid snabb tillagning, men samtidigt så fantastiskt mört och smakrikt efter långsam tillagning.
+
+Chuck roast innehåller flera olika muskler (främst triceps brachii, supraspinatus och infraspinatus), de flesta av dem är kraftigt arbetade och därför olämpliga för snabb tillagning som pan-searing eller grillning. Den klassiska metoden är bräsering eller långkok i ugn eller slow cooker vid låg temperatur (85–95 °C) i 3–4 timmar. Då löses bindväven upp till gelatin, fettet renderas ut och köttet blir mört och faller isär med djup smak.
+
+Eftervärmen är försumbar tack vare den omgivande vätskan som buffrar temperaturen. Sonden ska sättas in i den tjockaste delen av muskeln, undvikande stora fettvalk och ben.
 ## Research files by cooking method
 
 - [Braise](./chuck_roast-braise.md)

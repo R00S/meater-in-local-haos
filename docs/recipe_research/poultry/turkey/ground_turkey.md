@@ -2,6 +2,7 @@
 type: cut
 slug: ground_turkey
 name: Ground Turkey
+name_sv: Kalkonfärs
 category: poultry
 meat: ground_poultry
 cut_type: Ground
@@ -34,6 +35,10 @@ Ground turkey (minced turkey) is made by grinding dark meat (thigh and leg), whi
 
 Ground turkey is primarily used in North American cooking as a leaner substitute for ground beef in burgers, meatballs, patties, and mince-based sauces. It appears in Eastern European cuisine as kotlety (pan-fried patties, often mixed with pork or veal). Turkish and Middle Eastern cuisines use it in köfte/kofta, though lamb and beef are more traditional. Italian cuisine uses tacchino macinato for hamburger e polpette.
 
+
+## Styckesprofil
+
+Malt kalkon tillverkas av malning av mörkt kött, vitt kött eller en blandning. Innertemperatur: 74 °C. Eftertillagning: minimal. Välj blandning med mörkt kött för bäst smak och saftighet.
 
 ## Research files by cooking method
 

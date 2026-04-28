@@ -12,6 +12,10 @@ cut_type: Peppers
 ## Cut profile
 Bell peppers (*Capsicum annuum*) on the grill transform dramatically: the skin blisters and chars, the interior softens from crisp to silky, and the natural sugars concentrate into a deep sweetness. The technique is two-phase — direct high heat to blister and char the exterior, then steam-peeling to remove the skin and reveal the smoky, tender flesh beneath. Grilled peppers are a foundational ingredient in Spanish (pimientos asados), Turkish (közlenmiş biber), Moroccan (chermoula-dressed peppers), and Italian (peperoni arrostiti) cuisines. Whole peppers can also be grilled and stuffed without peeling. A MEATER probe inserted through the shoulder of the pepper into the thickest part of the wall detects when the flesh reaches 88–95 °C (190–203 °F) — the point at which it is fully soft and the skin separates easily. Carryover is negligible; the peel-and-rest period is for practical skin removal, not for carryover cooking.
 
+## Styckesprofil
+
+Paprika (*Capsicum annuum*) på grillen transformeras dramatiskt: skinnet blåser och förkolnas, insidan mjuknar från krispig till silkeslen, och de naturliga sockerarterna koncentreras. Grilla hel direkt på flamman i 20–30 minuter tills helt förkolnad. Klar när fullständigt mjuk och skinnet lätt avlägsnas efter ångning i påse.
+
 ## Source recipes
 
 ### 1. Claudia Roden — Biber Közleme (Moroccan / Turkish tradition)

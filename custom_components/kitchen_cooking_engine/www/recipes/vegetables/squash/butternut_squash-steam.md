@@ -12,6 +12,10 @@ cut_type: Squash
 ## Cut profile
 Butternut squash (*Cucurbita moschata*) cut into 3–4 cm cubes and steamed over boiling water produces silky, sweet flesh ideal as a side dish or for mashing and pureeing. Steaming time 12–18 minutes depending on cube size. Pull temperature: 90–95 °C (194–203 °F) at the centre of the largest cube. MEATER probe inserted into the largest cube, tip centred. Because the steaming environment is 100 °C, pull promptly once target temp is reached to avoid over-cooking.
 
+## Styckesprofil
+
+Butternut-squash (*Cucurbita moschata*) skuren i 3–4 cm tärningar och ångad ovanför kokande vatten ger silkeslent, sött kött idealiskt som tillbehör eller för mosning och purering. Ånga i 15–20 minuter. Klar när fullständigt genomstekt och lätt att genomborra med gaffel.
+
 ## Source recipes
 
 ### 1. Madhur Jaffrey — Steamed Butternut with Ginger and Cumin (Indian tradition)

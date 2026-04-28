@@ -16,6 +16,10 @@ Tri-tip on charcoal benefits from the classic Santa Maria barbecue tradition —
 Target internal temperatures (charcoal grill):
 - Medium-rare: **pull at 54–57 °C (129–135 °F)**
 
+## Styckesprofil
+
+Tri-tip på träkol drar nytta av den klassiska Santa Maria-grilltraditionen — den ursprungliga kaliforniska beredningen. Nyckeln är en tvåzons träkolsuppställning: sear direkt över kolorna först för en krusta, avsluta sedan på den indirekta sidan för att föra insidan till rätt temperatur. Det oregelbundna triangulära snittet kräver uppmärksamhet: den tunna spetsen kokar fortare. Innertemperatur: 54–60 °C. Eftertillagning: 3–5 °C. Skär alltid tvärs mot fibern.
+
 ## Source recipes
 
 ### 1. Madens Verden — Ball tip i grill (charcoal adaptation) (Danish tradition)

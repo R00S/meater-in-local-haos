@@ -2,6 +2,7 @@
 type: cut
 slug: round_roast
 name: Round Roast
+name_sv: Rundstek
 category: beef
 meat: cow
 cut_type: Roasts
@@ -71,6 +72,10 @@ confirming that the same method and temperature targets apply across these sub-c
 slow cooker.
 
 **Slicing**: Always slice against the grain — essential for all round cuts.
+
+## Styckesprofil
+
+"Rundbitsstek" är ett generiskt begrepp för ugnstek skärd från rundbotten — nötdjurets bakkvartersprimerområde. Det är en mager, tät muskelgrupp med lite intramuskulärt fett; hårt arbete under djurets hela liv ger tät fiberstruktur. Överkokad rundbitsteks torkar ut snabbt. Tillagning till rare eller medium-rare (54–60 °C) med omvänd searing (låg ugn, hög avslutningsvärme) ger bäst resultat. Eftertillagning är 3–5 °C beroende på stekets storlek.
 
 ## Research files by cooking method
 

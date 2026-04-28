@@ -2,6 +2,7 @@
 type: cut
 slug: brussels_sprouts
 name: Brussels Sprouts
+name_sv: Brysselkål
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
@@ -38,6 +39,10 @@ quality_assessed: 2026-04-26
 
 Brussels sprouts (*Brassica oleracea* var. *gemmifera*) pan-fried (halved, cut-face-down in a hot pan) is the fastest technique for intensely caramelised results: 8–12 minutes in a cast-iron or heavy pan achieves charred cut faces and a tender interior. Unlike sautéing (which involves frequent tossing), pan-frying holds the cut face in contact with the hot surface for an extended sear. Pull temperature: 82–88 °C (180–190 °F). MEATER probe through outer leaves of the largest sprout into the core.
 
+
+## Styckesprofil
+
+Brysselkål (*Brassica oleracea* var. *gemmifera*) pannstekta (halverade, snittytan ned i het panna) är den snabbaste tekniken för intensivt karameliserade resultat: 8–12 minuter i het olja. Klar när snittytan är djupt gyllenbrun och kärnan genomstekt.
 
 ## Research files by cooking method
 

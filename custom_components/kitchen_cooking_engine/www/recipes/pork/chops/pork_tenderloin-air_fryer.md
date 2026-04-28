@@ -16,6 +16,12 @@ Pork tenderloin in the air fryer is fast (20 minutes total) and delivers juicy r
 Target internal temperatures (air fryer):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)**
 
+## Styckesprofil
+
+Fläskfilé i air fryer är snabbt (20 minuter totalt) och ger saftiga resultat eftersom den cirkulerande varma luften tätar utsidan snabbt. Den spanska metoden (directoalpaladar.com) använder baconlindning som tillsätter smak och fett till det magra köttet.
+
+Air fryer-metod: 180–200 °C, 20–22 minuter med vändning halvvägs. Innertemperatur: **63 °C (145 °F)** USDA (med 3 minuters vila) till **68 °C** för lite rosa kvar. Eftertillagning: 2–3 °C. Sond insatt längsvis in till mitten av filén. Vila 5 minuter täckt.
+
 ## Source recipes
 
 ### 1. Directo al Paladar — Solomillo de cerdo en airfryer (Spanish tradition)

@@ -41,6 +41,10 @@ Internal temperature targets: pull at 52–57 °C (125–135 °F) for medium-rar
 translucent at the very centre, preferred by Italian and Mediterranean cooks); 57–60 °C
 (135–140 °F) for medium (just opaque throughout). USDA minimum for finfish is 63 °C (145 °F).
 
+## Styckesprofil
+
+Svärdfisk (*Xiphias gladius*, italiensk: pesce spada, turkisk: kılıçbalığı, svenska: svärdfisk, spansk: pez espada) är en stor, köttrik havsfisk med kompakt, tät, biff-liknande kött och mild, lätt söt smak. Till skillnad från de flesta vitfiskar flinkar inte svärdisk — det är ett tätt, fast kött som skärs i skivor och tillagas som en biff. Pannsearing ger bäst resultat: het panna, 3–4 minuter per sida. Innertemperatur: 57–63 °C.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Griddled Swordfish with Pineapple & Chilli Salsa (British/Tropical fusion tradition)

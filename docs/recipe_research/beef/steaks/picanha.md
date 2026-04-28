@@ -2,6 +2,7 @@
 type: cut
 slug: picanha
 name: Picanha
+name_sv: Picanha
 category: beef
 meat: cow
 cut_type: Steaks
@@ -71,6 +72,10 @@ Picanha is the most prized cut in Brazilian *churrasco* culture, where it is oft
 - [Grill](./picanha-grill.md)
 - [Oven Roast](./picanha-oven_roast.md)
 - [Pan Sear](./picanha-pan_sear.md)
+## Styckesprofil
+
+Picanha (*alcatra de capa* på portugisiska; *coulotte* på franska; *sirloin cap* eller *rump cap* på engelska) skärs från toppen av rumpprimalen, mellan höftbenet och kotlettens start. Anatomiskt består den av *biceps femoris*-muskeln täckt av ett tjockt subcutant fettlager — fettlisten är styckdelens definierande drag och hålls alltid intakt. Det är det mest firade snittet i brasiliansk *churrasco*-kultur. Innertemperatur: 52–57 °C medium-rare. Eftertillagning: 2–4 °C.
+
 ## Quality score
 
 **Score: 10 / 20** — assessed 2026-04-27

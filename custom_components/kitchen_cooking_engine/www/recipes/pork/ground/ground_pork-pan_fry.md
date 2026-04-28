@@ -17,6 +17,12 @@ Target internal temperatures (pan fry):
 - Safe/cooked through: **71–75 °C (160–167 °F)**
 - ⚠️ Ground pork MUST reach 71 °C — no pink allowed
 
+## Styckesprofil
+
+Malet fläsk (malet fläskkött) görs av fläskaxel, mage eller blandade primär-trimmings med 20–30 % fett. Det höga fettinnehållet ger saftig konsistens och gör malet fläsk tolerant mot lätt överkokning.
+
+USDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertemperatur: **72–75 °C (162–167 °F)** för USDA-säkert malet fläsk. Eftertillagning: 2–3 °C. Sond in i tjockaste delen av biff, köttbullar eller köttfärskula. Pannstekning: 4–5 minuter per sida vid medel-hög värme tills genomstekt.
+
 ## Source recipes
 
 ### 1. Madens Verden — Hakkebøffer (Danish tradition)

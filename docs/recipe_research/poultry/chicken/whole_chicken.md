@@ -2,6 +2,7 @@
 type: cut
 slug: whole_chicken
 name: Whole Chicken
+name_sv: Hel kyckling
 category: poultry
 meat: chicken
 cut_type: Whole
@@ -43,6 +44,10 @@ A whole chicken is a complete bird — comprising breast meat (white, lean *pect
 
 Techniques to manage this differential include: starting the bird breast-side down, trussing to compact the bird and slow the breast, using a high-temperature start to colour the skin before reducing heat, and inserting the probe into the thigh (the slowest-cooking part) rather than the breast. Carryover for a whole 1.5–2 kg bird is 4–7 °C in the breast and 3–5 °C in the thigh.
 
+
+## Styckesprofil
+
+En hel kyckling är en komplett fågel — bestående av bröstködet (vitt, magert *pectoralis major*), låren (*biceps femoris* och omgivande mörkt kött), trumpinnarna, vingarna och ryggraden, alla förbundna av skinn. Innertemperatur: 74 °C (bröst), 80 °C (lår). Eftertillagning: 4–6 °C.
 
 ## Research files by cooking method
 

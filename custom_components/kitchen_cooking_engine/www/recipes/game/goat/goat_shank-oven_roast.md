@@ -15,6 +15,12 @@ Oven roasting a goat shank (dry or semi-dry, uncovered or lightly tented) is use
 
 Oven at 180 °C (350 °F); initial uncovered roast 20–30 min for browning; add liquid, cover tightly or tent, continue 1.5–2 hours until the meat reaches 88–93 °C and sustains that for 45 min. MEATER probe horizontally into the thickest muscle, parallel to the bone.
 
+## Styckesprofil
+
+Ugnsstekning av getlägg (utan täckning eller lätt övertäckt) används primärt i mellanösternska, medelhavska och sydasiatiska traditioner. Det är en hybridmetod: skaftet börjar vanligtvis utan täckning för att bryna, sedan tillsätts vätska och det fortsätter täckt — vilket i praktiken övergår till bräsering mot slutet.
+
+Sond i den tjockaste köttmassan borta från benet. Innertemperatur: **82–88 °C (180–190 °F)** för möra skaft med lite struktur kvar. Eftertillagning: försumbar. Glöm inte att spetsa skinnet med vitlöksklyftor för smakpenetrering — standard i turkisk och nordafrikansk tradition.
+
 ## Source recipes
 
 ### 1. Yotam Ottolenghi & Sami Tamimi — Oven-Roasted Goat Shanks with Pomegranate (Levantine tradition)

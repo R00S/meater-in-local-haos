@@ -12,6 +12,10 @@ cut_type: Ground
 ## Cut profile
 An air-fried turkey burger is the same 150–180 g ground-thigh patty as the grill or pan-sear preparation, cooked in the convection-fan environment of an air fryer at 190–200 °C. The high air velocity produces an even Maillard crust on both faces simultaneously, and the cook is faster than a conventional oven (8–10 minutes vs 14–18). The patty must be at least 150 g and 2 cm thick to avoid drying out at the edges before the centre reaches 74 °C. Probe the geometric centre of the largest patty; carryover is small (1–2 °C).
 
+## Styckesprofil
+
+En airfryer-tillagad kalkonburger är samma 150–180 g malt-lårbiff som grill- eller pannsearing-beredningen, tillagad i konvektionsfläkt-miljön av en airfryer vid 190–200 °C. Den höga lufthastigheten ger en jämt krispig yta utan olja. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C. Tillagnings tid: 12–15 minuter.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air-Fryer Turkey Burgers (American tradition)

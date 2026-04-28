@@ -2,6 +2,7 @@
 type: cut
 slug: ribeye_steak
 name: Ribeye Steak
+name_sv: Entrecôte
 category: beef
 meat: cow
 cut_type: Steaks
@@ -71,6 +72,11 @@ The ribeye steak is cut from the *longissimus dorsi* muscle of the rib primal (r
 The ribeye is composed of the eye muscle (*longissimus*), the rib cap (*spinalis dorsi*, the richest and most prized portion), and the rib intercostal (finger meat). The rib cap, separated by an internal fat seam, cooks slightly faster than the eye. The MEATER probe should enter from the side and travel to the centre of the eye muscle, avoiding the internal fat seam and any bone.
 
 
+## Styckesprofil
+
+Ribeye-biffen skärs från longissimus dorsi i revbensprimalen (revben 6–12), en muskel som arbetar lite och därför utvecklar exceptionellt intramuskulärt fett (marmorering) genom hela ådringen. Marmoreringen är det som definierar ribeye – fettfickorna flyter under värme och basar muskeln inifrån, vilket ger en rikedom och självbasande karaktär som inget annat vanligt biffsnitt kan matcha. Den ben-in-versionen (côte de bœuf / cowboy ribeye) behåller mer smak under tillagningen och kräver mer exakt sondplacering för att läsa ögat snarare än området nära benet.
+
+Ribeye består av ögat (longissimus), rib cap (spinalis dorsi, den rikaste och mest eftertraktade delen) och rib intercostal (fingerkött). Rib cap, separerad av ett internt fettvalk, tillagas något snabbare än ögat. Sonden bör gå in från sidan och nå ögats centrum, undvikande det interna fettvalket och eventuellt ben.
 ## Research files by cooking method
 
 - [Air Fryer](./ribeye_steak-air_fryer.md)

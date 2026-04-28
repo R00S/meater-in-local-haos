@@ -15,6 +15,10 @@ Grilling lobster tail is the most dramatic preparation — the shell chars and s
 
 Grate at 200–230 °C, flesh-side down first for 5–6 min to develop grill marks and initial caramelisation; flip to shell-side for 3–4 min to finish. MEATER probe inserted from the side of the tail into the thickest part of the flesh. Pull at 56–58 °C; carryover 3–4 °C brings it to 59–62 °C (moist, opaque, fully cooked). Above 63 °C the flesh tightens and becomes rubbery.
 
+## Styckesprofil
+
+Grillning av hummersvans är den mest dramatiska beredningen — skalet förkolnas och röker, köttet karameliseras i hettan, och smörbastas som appliceras upprepade gånger skapar ett lackerat, guldbrunt yttre. Nyckelteknik är fjärilsskärning (*butterflying*): skär igenom toppskalet längs mittlinjen och öppna ut köttet. Innertemperatur: 60–63 °C. Grilla köttssidan ned vid direkt hög värme i 4–5 minuter, vänd och basta i 2–3 minuter.
+
 ## Source recipes
 
 ### 1. Steven Raichlen — Grilled Butterflied Lobster Tail with Herb Butter (American tradition)

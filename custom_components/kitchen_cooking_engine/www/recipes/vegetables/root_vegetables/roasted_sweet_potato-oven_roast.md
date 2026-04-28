@@ -12,6 +12,10 @@ cut_type: Root Vegetables
 ## Cut profile
 Sweet potato (*Ipomoea batatas*) cut into chunks or wedges and oven-roasted at 200–220 °C caramelises in 25–35 minutes, producing crispy, golden-edged pieces with a soft, sweet interior. Unlike whole baked sweet potato, chunk-roasting maximises cut-face surface area for Maillard browning. Pull temperature: 90–95 °C (194–203 °F) at the thickest chunk. MEATER probe inserted into the thickest chunk.
 
+## Styckesprofil
+
+Sötpotatis (*Ipomoea batatas*) skuren i bitar eller klyftor och ugnsrostad vid 200–220 °C karameliseras på 25–35 minuter, vilket ger knapriga, gyllenbruna kanter och mjuk, söt insida. Klar när gyllenbrun och genomstekt.
+
 ## Source recipes
 
 ### 1. Yotam Ottolenghi — Roasted Sweet Potato with Tahini and Za'atar (Israeli / Middle Eastern tradition)

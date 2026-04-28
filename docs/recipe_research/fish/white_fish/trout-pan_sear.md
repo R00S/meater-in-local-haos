@@ -33,6 +33,10 @@ Internal doneness is the same as for other finfish: 60–63 °C (140–145 °F, 
 for fully cooked flesh that is just opaque. The MEATER probe must be inserted from the
 thickest edge (lateral insertion) in thin fillets, or through the shoulder of a whole fish.
 
+## Styckesprofil
+
+Regnbågsforell (*Oncorhynchus mykiss*) och brun öring (*Salmo trutta*, svenska: forell, norska: ørret, tyska: Forelle, italienska: trota) är bland de mest kokta sötvattensfiskarna i norra Europa och Nordamerika. Köttet är delikat, med ett milt sötvattensmak och en rosa till vit kötttjäll. Pannsearing av forell — hela fisken eller filé med skinn — ger knaprig yta och saftig insida. Skinnsidan ned i het smörpanna i 3–4 minuter; vänd för 2 minuter. Innertemperatur: 58–62 °C.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Pan-Fried Trout with Bacon, Almonds & Beetroot (British tradition)

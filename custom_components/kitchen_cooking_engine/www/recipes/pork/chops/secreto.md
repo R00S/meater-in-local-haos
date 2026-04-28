@@ -2,6 +2,7 @@
 type: cut
 slug: secreto
 name: Secreto (Ibérico Pork)
+name_sv: Secreto
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin
@@ -40,6 +41,12 @@ quality_assessed: 2026-04-27
 
 The *secreto* (Spanish: "secret") is cut from the junction between the shoulder blade and the belly of the Iberian pig — the *serratus ventralis* and *subscapularis* muscles in the deepest layer of the shoulder, running diagonally. It is called "secret" because it is hidden beneath the outer shoulder and was historically an undiscovered, unadvertised cut consumed by the butcher. Standard dimensions: roughly 30–40 cm long × 5–8 cm wide × 1–2 cm thick; irregular in shape, covered with coarse intramuscular fat seams. In Iberian-breed pigs specifically, the fat carries acorn-derived oleic acids and the characteristic *bellota* aroma. Non-Iberian secreto has similar structure but milder flavour.
 
+
+## Styckesprofil
+
+*Secreto* (spanska: "hemlighet") skärs från korsningen mellan skulderblad och magen på det iberiska grisen — *serratus ventralis*- och *subscapularis*-musklerna i det djupaste lagret av skuldern. Det kallas "hemligt" snitt eftersom det traditionellt förbehölls slaktaren.
+
+Köttet är extremt marmorerat med distinkt intramuskulärt fett och en unik fjärillad form. Det är en delikatess i den iberiska *bellota*-traditionen och tillagas i traditionell *plancha*-teknik. Innertemperatur: **60–65 °C (140–149 °F)** för medium. Eftertillagning: 2–3 °C. Sond insatt längsvis in till mitten av det tunnaste snittet.
 
 ## Research files by cooking method
 

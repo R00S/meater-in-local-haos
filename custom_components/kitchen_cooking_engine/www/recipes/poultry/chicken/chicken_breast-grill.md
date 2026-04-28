@@ -28,6 +28,12 @@ Grilled chicken breast spans every grilling culture on earth. In Thailand, **Gai
 
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 
+## Styckesprofil
+
+Benfritt kycklingbröst utan skinn är ett av de mest populära grillningssnitten. Eftersom det är mycket magert gynnas det enormt av marinering som tillsätter fukt och smak före den höga, torra grillvärmen.
+
+Skivning eller kilning av brösten till jämn tjocklek säkerställer jämn tillagning. Grilla vid direkt medel-hög värme, 5–7 minuter per sida. Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond längsmed bröstets tjockaste del. Vila 5 minuter täckt.
+
 ## Source recipes
 
 ### 1. Skinnytaste — Grilled Chicken Breast

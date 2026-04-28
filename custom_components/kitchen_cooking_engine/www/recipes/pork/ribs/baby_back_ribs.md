@@ -2,6 +2,7 @@
 type: cut
 slug: baby_back_ribs
 name: Baby Back Ribs
+name_sv: Revbensspjäll
 category: pork
 meat: pig
 cut_type: Ribs
@@ -37,6 +38,12 @@ Target internal temperatures (air fryer):
 - Fall-off-bone tender: **88–95 °C (190–203 °F)**
 - ⚠️ Below 80 °C ribs are food-safe but still tough
 
+
+## Styckesprofil
+
+Baby back ribs (*loin ribs* / *kamben*) är de övre revbenen från fläskloin-området. De är magrare och mer delikatta än spareribs. Air fryer-metod ger lätt rökigt resultat i 30–40 min vid 180–200 °C med vändning halvvägs.
+
+Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertillagning: försumbar (fuktig miljö). Sond insatt längs benets längsriktning in till tjockaste köttmassan, borta från benet. Applicera BBQ-sås under de sista 10 minuterna för glasering.
 
 ## Research files by cooking method
 

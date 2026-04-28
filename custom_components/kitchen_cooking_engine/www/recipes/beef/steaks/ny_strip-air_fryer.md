@@ -13,6 +13,10 @@ cut_type: Steaks
 
 New York strip steak cooked in an air fryer is exposed to intense circulated hot air in a compact basket — the result approximates oven roasting but faster, with the hot air producing a slightly crisped exterior. For a steak, the air fryer is not a substitute for a screaming-hot cast-iron sear; it produces a dryer crust than a pan sear but is convenient for a one-appliance preparation. The strip's firm, moderate-marbling muscle responds well to air fryer temperatures — typically 200–220 °C for 8–12 minutes. Many recipes recommend a brief stovetop or broiler finish after the air fryer step to develop a true Maillard crust. Carryover from the air fryer basket is 3–5 °C. The technique is most common in home-cooking publications from the 2020s.
 
+## Styckesprofil
+
+New York strip tillagad i airfryer exponeras för intensivt cirkulerat het luft i en kompakt korg — resultatet liknar ugnsstekning men snabbare, med het luft som ger en lätt knaprig yta. För en biff ger airfryern inte ett substitut för en skrikande het gjutjärn; den producerar en jämnare, rundare värme snarare än en stark konduktionskontaktsear. Airfryer-tillagad strip är ett praktiskt kompromissresultat. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air Fryer Strip Steak (American tradition)

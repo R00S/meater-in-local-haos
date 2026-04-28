@@ -2,6 +2,7 @@
 type: cut
 slug: cauliflower
 name: Cauliflower
+name_sv: Blomkål
 category: vegetables
 meat: cruciferous
 cut_type: Cruciferous
@@ -39,6 +40,10 @@ quality_assessed: 2026-04-26
 
 Cauliflower (*Brassica oleracea* var. *botrytis*) is a tightly clustered head of immature flower buds (curd) attached to a thick fibrous stem. The curd is roughly 92 % water, with delicate cell walls and a very small amount of free sugar — when sautéed in a hot, fat-coated pan, the surface dehydrates quickly and the residual sugars caramelise into a brown, nutty crust while the interior softens but retains some structural integrity. Sauteing differs from roasting in that contact-area browning is concentrated on whichever face touches the pan: success depends on cutting florets with a flat side and not crowding the pan. Carryover is small but real because the dense curd traps heat in its centre after removal — pulling 1–2 °C below the target preserves a touch of bite.
 
+
+## Styckesprofil
+
+Blomkål (*Brassica oleracea* var. *botrytis*) är ett tätt klustring av omogna blomknoppar fästa på en tjock fibrös stam. Sauteras i het olja-smord panna i 8–12 minuter. Klar när gyllenbrun och genomstekt.
 
 ## Research files by cooking method
 

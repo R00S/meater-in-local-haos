@@ -28,6 +28,12 @@ Direct medium-high heat: 3–4 minutes per side for 2.5 cm chops. MEATER probe i
 
 Target internal temperature: **70–74 °C (158–165 °F)**.
 
+## Styckesprofil
+
+Grillning av getkotletter över direkt värme är den traditionella beredningen i Västafrika, Karibien och Mellanöstern. Det magra köttet och blygsamt fettinnehåll innebär att tillagningstiden måste kontrolleras noggrant — getkotletter torkar ut snabbare än lammkotletter vid samma temperatur.
+
+Marinering (24 timmar i citrus, vitlök och kryddor) mörnar den magra muskeln och tillför fuktighetsbevaring. Direkt medel-hög värme, 4–5 minuter per sida. Get tolererar och gynnas av något högre sluttemperaturer (68–74 °C) jämfört med lamm — vid dessa temperaturer har den smala bindväven mjuknat. Innertemperatur: **68–74 °C** (155–165 °F). Eftertillagning: 3–4 °C.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Pulled Goat Kebabs with Coriander Dressing (British/Middle Eastern tradition)

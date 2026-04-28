@@ -13,6 +13,9 @@ cut_type: Steaks
 
 The flat iron steak originates from the infraspinatus muscle of the shoulder blade, a position that requires little locomotive effort, allowing significant intramuscular fat to develop for a forequarter cut. Gas and electric grills provide consistent, controllable radiant and conductive heat in the 200–260 °C range, making them ideal for the flat iron's 2–3 cm thickness: high enough to produce a meaningful Maillard crust, controllable enough to avoid torching the exterior before the interior is cooked. Unlike charcoal, gas grills allow precise two-zone setups for thicker pieces or quick adjustments mid-cook. Carryover is moderate at 2–4 °C — less than over live charcoal because the radiant energy cuts off the moment the steak leaves the grate; pulling at 54 °C (130 °F) reliably delivers a 57 °C (135 °F) final serving temperature.
 
+## Styckesprofil
+
+Flat iron steak kommer från infraspinatus i skulderbladet, en position som kräver lite rörelse, vilket låter betydande intramuskulärt fett utvecklas trots att det är ett framkroppssnitt. Gas- och elektriska grillar ger jämn, kontrollerbar strålnings- och ledande värme i 200–260 °C, vilket passar flat iron's 2–3 cm tjocklek perfekt: tillräckligt hög för en bra Maillard-skorpa, tillräckligt kontrollerbar för att inte bränna ytan innan insidan är klar. Till skillnad från kol tillåter gasgrillar exakta tvåzonssetups för tjockare bitar eller snabba justeringar. Eftervärmen är måttlig vid 2–4 °C – mindre än över levande kol eftersom strålningsenergin stängs av direkt när biffen lämnar gallret; dra vid 54 °C ger pålitligt 57 °C slutlig serveringstemperatur.
 ## Source recipes
 
 ### 1. Bobby Flay — Grilled Flat Iron with Blue Cheese Butter (American tradition)

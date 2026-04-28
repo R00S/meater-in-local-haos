@@ -2,6 +2,7 @@
 type: cut
 slug: buffalo_roast
 name: Buffalo Roast
+name_sv: Buffelstek
 category: game
 meat: buffalo
 cut_type: Buffalo
@@ -46,6 +47,12 @@ quality_assessed: 2026-04-27
 ## Cut profile
 
 American bison (Bison bison) roasts share the same primal cut nomenclature as beef but differ fundamentally in fat distribution. Bison are free-range animals whose musculature is dense, deeply red (high in myoglobin and iron), and extraordinarily lean — roughly 2.4 g of fat per 100 g compared to 10+ g for comparable beef cuts. This leanness is both the defining culinary characteristic and its greatest challenge: the same marbling that bastes beef from within during roasting is absent, leaving bison roasts vulnerable to rapid drying at high temperatures. Two methods suit bison roasts: slow oven roasting at low temperatures (275°F / 135°C) with a moisture source (broth, water) in a covered pan to trap steam, and braising in liquid. Both methods use gentle heat; both reward careful probe thermometry to avoid the single-step overcooked failure of an expensive and ecologically significant meat. The National Bison Association recommends pulling at 145°F (63°C) for "medium rare" — notably higher than beef medium-rare conventions; industry experts and Indigenous culinary traditions tend to recommend lower temperatures (130–135°F / 54–57°C). Carryover in a bison roast is 5–10°C / 9–18°F due to the low fat content slowing heat dissipation from the lean interior.
+
+## Styckesprofil
+
+Amerikansk bison (*Bison bison*) ugnsstekar delar samma primal-snittnomenklatur som nötkött men skiljer sig fundamentalt i fettdistribution. Bison är frilandsdjur vars muskulatur är tät, djupt röd (hög myoglobin- och järnhalt) och extraordinärt mager — ca 2,4 g fett per 100 g.
+
+Denna magerhet innebär att utan självbastande fett överstiger bisonstek lätt måltemperaturen. Sonden är oumbärlig — inte ett alternativ utan en nödvändighet. Behandla som ett ultra-magert nötkött, tillaga till max medium (63 °C). Innertemperatur: **54–60 °C** (medium-rare till medium). Eftertillagning: 4–5 °C. Sond i tjockaste muskeldelen.
 
 ## Research files by cooking method
 

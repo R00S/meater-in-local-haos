@@ -2,6 +2,7 @@
 type: cut
 slug: ny_strip
 name: New York Strip
+name_sv: New York Strip
 category: beef
 meat: cow
 cut_type: Steaks
@@ -70,6 +71,12 @@ The New York strip steak (also called strip loin, sirloin strip, Kansas City str
 
 The strip is leaner than the ribeye but more forgiving than the tenderloin; its moderate marbling provides enough self-basting to prevent drying in most cooking methods. Carryover is 3–5 °C for a thick-cut strip steak.
 
+
+## Styckesprofil
+
+New York strip-biffen (även kallad strip loin, sirloin strip, Kansas City strip, eller *contre-filet* på franska) skärs från den korta länden på nötkroppens — *longissimus dorsi*-muskeln på ryggradens bakre sida, bakom entrecôteprimalen och framför entrecôten. Det är en enmuskel-biff med måttlig marmorering, fastare konsistens än entrecôte (muskeln arbetar något mer), och uttalad nötssmak.
+
+Fettlisten längs ena kanten är ett definierande drag och smakkälla — den smälter under höghets-tillagning och ska inte trimmas före tillagning. Stripen är magrare än entrecôte men mer förlåtande än filén; dess måttliga marmorering ger tillräcklig självbastning för att förhindra uttorkning i de flesta tillagningsmetoder. Eftertillagning är 3–5 °C för en tjock-skivad strip steak. Innertemperatur: 54–57 °C medium-rare.
 
 ## Research files by cooking method
 

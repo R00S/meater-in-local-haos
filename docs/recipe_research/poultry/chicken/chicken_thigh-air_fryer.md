@@ -26,6 +26,12 @@ Chicken thighs are a forgiving, flavourful dark-meat cut. Their higher fat conte
 
 Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat
 
+## Styckesprofil
+
+Kycklinglår är ett förlåtande, smakramt mörkt köttsnitt. Deras högre fettinnehåll (6–10 % vs 1–2 % för bröst) gör dem lämpliga för air fryerns snabba cirkulerande värme, som smälter ned fettet och krispar skinnet. Benbibehållna skinnklädda lår ger bäst resultat — skinnet hindrar uttorkning under tillagning.
+
+Air fryer: 180–200 °C, 22–28 minuter med vändning halvvägs. Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond längsmed lårets tjockaste del, borta från femurbenet. Vila 5 minuter täckt.
+
 ## Source recipes
 
 ### 1. Natasha's Kitchen — Air Fryer Chicken Thighs

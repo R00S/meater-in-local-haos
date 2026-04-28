@@ -2,6 +2,7 @@
 type: cut
 slug: bison_roast
 name: Bison Roast
+name_sv: Bisonstek
 category: game
 meat: bison
 cut_type: Bison
@@ -83,6 +84,12 @@ attention because the meat approaches the pull temperature quickly. The low-heat
 not a braise candidate: the collagen content is insufficient to benefit from the 85–95 °C
 ruined at those temperatures. The correct window is medium (60–65 °C), where the muscle is
 
+
+## Styckesprofil
+
+Bison-ugnsstekar kräver extra omsorg på grund av bisonens extrema magerhet (< 3 % intramuskulärt fett jämfört med 10 %+ för nötkött). Utan fett som självbastar torkar bison-ugnsstekar ut snabbt ovanför 65 °C.
+
+Nyckeln: låg ugnstemperatur (max 135 °C), fuktskyddande marinad eller pensling, och omvänd searing. De flesta kockar rekommenderar att dra bison vid 54–57 °C (medium-rare) och aldrig ovanför 63 °C. Behandla det som ett ultra-magert nötköttsnitt. Innertemperatur: **54–57 °C (130–135 °F)**. Eftertillagning: 4–5 °C. Sond i den tjockaste muskeldelen.
 
 ## Research files by cooking method
 

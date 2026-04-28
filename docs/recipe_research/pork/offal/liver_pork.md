@@ -2,6 +2,7 @@
 type: cut
 slug: liver_pork
 name: Liver
+name_sv: Fläsklever
 category: pork
 meat: pig
 cut_type: Other / Offal
@@ -37,6 +38,12 @@ Pork liver is a large, smooth, mahogany-brown organ weighing 1–1.5 kg as a who
 **Probe placement**: insert horizontally into the centre of the thickest slice in the pan, tip at the geometric centre of the slice. There are no bones to avoid. Avoid placing the probe in a very thin or edge slice — it will overcook before the thick centre reaches target temperature.
 
 **Relationship to `pork_liver` entry**: both this slug (`liver_pork`) and the `pork_liver` slug represent the same anatomical cut. The `pork_liver` slug has additional method leaf files (`pork_liver-pan_fry.md`, `pork_liver-pan_sear.md`) with further source recipes.
+
+## Styckesprofil
+
+Fläsklever är ett mjukt, mahognyfärgat organ, vanligen sålt i 6–12 mm tjocka skivor. Det är mildare och finare i smak och textur än nötlever. Pannstekning är standardmetoden: het smör, hög värme, 2–3 minuter per sida, servera omedelbart.
+
+Klassiska beredningar: brittisk *liver and onions*, tysk *Leberwurst*-teknik, nordisk *lever med lök och bacon*, polsk *wątróbka z cebulą*. Innertemperatur: **70–75 °C (158–167 °F)** för genomstekt. Eftertillagning: 2–3 °C. Sond insatt horisontellt in till mitten av skivan. Undvik överkokad (> 75 °C) — lever hårdnar snabbt ovanför denna punkt.
 
 ## Research files by cooking method
 

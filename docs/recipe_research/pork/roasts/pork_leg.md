@@ -2,6 +2,7 @@
 type: cut
 slug: pork_leg
 name: Pork Leg Roast
+name_sv: Fläsklägg
 category: pork
 meat: pig
 cut_type: Roasts
@@ -43,6 +44,12 @@ Pork leg (*Schweinshaxe*, German/Austrian — actually this is hock/shank; *stin
 
 Target internal temperature: **75–80 °C (167–176 °F)** for sliceable, tender; **85–90 °C (185–194 °F)** for pull-apart.
 
+
+## Styckesprofil
+
+Fläsklåg (*Schweinshaxe* tyska/österrikiska; *stinco di maiale* italienska; *pernil* karibisk/filippinsksvenska; *jamón fresco* spanska) avser två distinkta detaljhandelsnitt i olika marknader: (1) den **bakre läggsteken** (tjockare, mer köttig; 800–1200 g); (2) det **främre knogstycket** (*Eisbein*, tunnare hud, kortare).
+
+Bräsering eller ugnsrostning till **85–90 °C** är standardmålet för pull-apart. Eftertillagning: 3–4 °C (ugnsrostning); försumbar (bräsering). Sond in i tjockaste köttmassan, borta från benet.
 
 ## Research files by cooking method
 

@@ -16,6 +16,13 @@ The tomahawk is too large to fit in a standard frying pan, so "pan sear" for a t
 Target internal temperatures:
 - Medium-rare: **pull from oven at 55 °C (131 °F)**, rest to **57–58 °C (135–136 °F)**
 
+## Styckesprofil
+
+Tomahawk (även kallad cowboy ribeye eller bone-in ribeye) är en ribeye med det fulla revbenet intakt, vilket ger den dess signatur "yxa"-utseende. Den är typiskt 5–8 cm tjock och väger 1,2–1,8 kg — för stor för de flesta hemgrillar utan en dedicated rotisserie eller tvåzonssetup. Den bästa hemmametoden är reverse sear i ugn: låg temperatur (120–135 °C) för att föra kärnan till strax under target, sedan en skrikande het gjutjärnspanna eller broiler för skorpan. Benet fungerar som en värmesänka under den långsamma fasen och en naturlig basningspinne under vila.
+
+Målinterna temperaturer:
+- Medium-rare: **dra från ugn vid 50 °C (122 °F)**, vila 10–15 min, sedan bryna till **55–57 °C (131–135 °F)**
+- Medium: **dra från ugn vid 55–57 °C (131–135 °F)**, vila till **62–63 °C (144–145 °F)**
 ## Source recipes
 
 ### 1. ichkoche.at — Tomahawk Steak (Austrian tradition)

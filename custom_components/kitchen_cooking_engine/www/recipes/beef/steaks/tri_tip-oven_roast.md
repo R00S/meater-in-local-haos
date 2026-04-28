@@ -17,6 +17,12 @@ Target internal temperatures (oven roast):
 - Medium-rare: **pull at 44–50 °C (111–122 °F)**, rest 20–30 min to reach **52–57 °C (125–135 °F)**
 - Medium: **pull at 55–57 °C (131–135 °F)**, rest to **63 °C (145 °F)**
 
+## Styckesprofil
+
+Tri-tip (även känd som triangelbiff, Santa Maria-biff, bottom sirloin, och på tyska Bürgermeisterstück eller ball tip) är ett triangelformat snitt från den nedre entrecôten. Det är magert med måttlig marmorering, vilket gör det idealiskt för ugnsstekning med marinad för att tillföra saftighet. Typisk vikt: 700 g–1,5 kg. Det måste skäras tvärs mot fibern (fibern byter riktning i mitten) för mörhet.
+
+Tri-tip är ett centralt snitt i den californiska Santa Maria BBQ-traditionen och har spridits till restauranger i hela Nordamerika och Europa. Ugnsstekning antingen med omvänd searing (låg ugn sedan het pannsearing för skorpa) eller direkt hög ugnstemperatur fungerar båda. Sonden placeras i den tjockaste delen. Innertemperatur: 54–57 °C (medium-rare). Eftertillagning (ugn, låg metod): dra vid 44–50 °C och vila 20–30 minuter.
+
 ## Source recipes
 
 ### 1. Immaculate Bites (africanbites.com) — Oven Tri Tip Roast (Californian / West African tradition)

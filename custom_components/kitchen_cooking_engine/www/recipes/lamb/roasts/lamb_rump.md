@@ -2,6 +2,7 @@
 type: cut
 slug: lamb_rump
 name: Lamb Rump
+name_sv: Lammrumstek
 category: lamb
 meat: lamb
 cut_type: Roasts
@@ -69,6 +70,12 @@ Lamb rump is the triangular rear-end muscle mass — primarily the biceps femori
 **Temperature target**: medium-rare at 52–57 °C / 125–135 °F (target 54 °C / 130 °F) is the culinary standard, confirmed explicitly by Richard Corrigan (GBC): "55–60 °C when tested with a meat thermometer." USDA minimum is 63 °C / 145 °F for whole cuts; most culinary preparations finish below this. Resting is essential — 6–10 minutes for a 180–250 g portion.
 
 **Probe placement**: insert from the tapered end of the rump portion, pushing the tip to the geometric centre of the thickest part. Run the probe parallel to the muscle grain, not into the fat cap. If multiple rumps are in the pan, probe the largest.
+
+## Styckesprofil
+
+Lamprumpa är den triangulära bakre muskelmassan ovanför bakbenet med ett generöst fettlock på ena sidan. Det är ett måttligt arbetat snitt: mörare än axeln men med mer smak och fett än loinen.
+
+Standardmetod: sear fettlocket nedåt i het torr panna tills renderat, sedan sear alla sidor, avsluta i 190–200 °C ugn. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Eftertillagning: 3–4 °C. Sond insatt horisontellt in till mitten av rumpsektionen. Vila täckt 5–8 minuter.
 
 ## Research files by cooking method
 

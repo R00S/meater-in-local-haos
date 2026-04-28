@@ -12,6 +12,10 @@ cut_type: Green Vegetables
 ## Cut profile
 Broccoli (*Brassica oleracea* var. *italica*) steamed retains its vivid green colour and the glucosinolate compounds better than boiling. Steam for 6–8 minutes (florets); 8–10 minutes (large crowns). Pull temperature: 78–82 °C (172–180 °F) for tender-crisp; 82–85 °C (180–185 °F) for fully tender. The classic finishing step — butter and lemon (French), sesame dressing (Japanese), tadka (Indian), or olive oil and Parmesan (Italian) — converts the plainly steamed vegetable to a finished dish.
 
+## Styckesprofil
+
+Broccoli (*Brassica oleracea* var. *italica*) ångad bevarar sin livliga gröna färg och glukosinolat-föreningarna bättre än kokning. Ånga i 6–8 minuter (buketter). Klar när genomstekt men fortfarande krispig och klargrön.
+
 ## Source recipes
 
 ### 1. Harumi Kurihara — Steamed Broccoli with Goma-ae Dressing (Japanese tradition)

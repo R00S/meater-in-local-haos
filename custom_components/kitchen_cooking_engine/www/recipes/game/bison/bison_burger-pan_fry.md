@@ -12,6 +12,12 @@ cut_type: Bison
 ## Cut profile
 A pan-fried bison burger is a 150–180 g shaped patty made from coarsely-ground bison — typically a blend of chuck and shoulder with about 10–14 % fat, considerably leaner than ground beef (15–25 %). The lower fat content means bison overcooks more readily than beef and benefits from a slightly cooler pan temperature and shorter cook. Bison is fully safe at 71 °C / 160 °F (USDA threshold for ground game meat), but most chefs target medium (62–65 °C) for best texture, accepting that the patty has been seared to a sufficient surface temperature/time combination to achieve safety through Maillard reaction kinetics — when in doubt, USDA standard. The cooking goal: deep Maillard crust without overshooting the centre.
 
+## Styckesprofil
+
+En pannstekt bisonburgare är en 150–180 g formad biff av grovmalt bison — typiskt en blandning av bog och axel med ungefär 10–14 % fett, avsevärt magrare än malet nötkött (15–25 %). Det lägre fettinnehållet innebär att bison överkokkas lättare än nötkött och gynnas av en något svalare panntemperatur och kortare tillagning.
+
+Bison är fullt säkert vid 71 °C / 160 °F (USDA-tröskel för malet viltkött). Innertemperatur: **71 °C (160 °F)**. Eftertillagning: 2–3 °C. Tillagningstid: 3–4 minuter per sida vid medel-hög värme. Använd sond för att verifiera att hela biffens inre når måltemperaturen.
+
 ## Source recipes
 
 ### 1. Hank Shaw — Pan-Seared Bison Burgers with Caramelised Onions (American hunter tradition)

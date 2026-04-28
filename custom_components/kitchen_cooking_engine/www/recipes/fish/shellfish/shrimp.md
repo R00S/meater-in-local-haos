@@ -2,6 +2,7 @@
 type: cut
 slug: shrimp
 name: Shrimp
+name_sv: Räkor
 category: fish
 meat: shellfish
 cut_type: Shellfish
@@ -38,6 +39,12 @@ quality_assessed: 2026-04-26
 
 Shrimp (called prawns in British, Australian, and much of Asian-English usage) are the most widely consumed shellfish globally; the species most commonly used for pan frying include tiger prawns (*Penaeus monodon*), white leg shrimp (*Litopenaeus vannamei*), spot prawns (*Pandalus platyceros*), and Gulf shrimp (*Farfantepenaeus aztecus*). The edible flesh is the tail muscle, which contracts rapidly under heat and curls the tail from the characteristic C-shape of a live shrimp to a tighter O-shape when overcooked. Pan frying over high heat produces a caramelised exterior on the natural sugars in the shell or flesh, and in shell-on preparations the shell acts as a protective layer. The protein in shrimp begins to denature around 50 °C and is fully set at 60 °C; the culinary window for moist, tender shrimp is extremely narrow, typically 3–4 minutes total cook time for medium prawns in a very hot pan. Carryover is 2–3 °C.
 
+
+## Styckesprofil
+
+Räkor (kallade *prawns* i brittisk, australiensisk och stor del av asiatisk-engelsk användning) är de mest konsumerade skaldjuren globalt; de arter som vanligast används för pannstekning inkluderar tigergarnaler (*Penaeus monodon*), vitbensräkor (*Litopenaeus vannamei*), prickräkor (*Pandalus platyceros*) och gulfräkor (*Farfantepenaeus aztecus*).
+
+Det ätliga köttet är svansmuskeln, som drar ihop sig snabbt under värme och curlar svansen från den karakteristiska C-formen hos en levande räka till en tightare O-form när de är genomkokta. Pannstekning över hög värme producerar en karameliserad yta på de naturliga sockerarterna i skalet eller köttet, och i skal-på-beredningar fungerar skalet som ett skyddslager. Proteinet i räkor börjar denaturera runt 50 °C och är fullständigt satt vid 60 °C; det kulinariska fönstret för fuktiga, möra räkor är extremt smalt — typiskt 3–4 minuter total tillagningstid för medelstora räkor i en mycket het panna. Eftertillagning: 2–3 °C. Innertemperatur: 60 °C (USDA 63 °C).
 
 ## Research files by cooking method
 

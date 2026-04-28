@@ -10,6 +10,14 @@ Bison's leanness (approx. 2.4 g fat per 100 g cooked weight, compared to 10+ g f
 
 The National Bison Association notes: "Roasts should be cooked to an internal temperature of 145°F (medium rare)" — note their labelling differs from beef convention (145°F is beef medium), reflecting bison's faster cooking and perceived doneness at higher heat due to the lean structure.
 
+## Styckesprofil
+
+Bisonens magerhet (ca 2,4 g fett per 100 g kokt vikt, jämfört med 10+ g för nötkött) gör ugnsstekning mer tekniskt krävande. Fettlocket och intramuskulär marmorering som självbastar en nötstekstek saknas hos bison, varför bison-ugnsstekar förlitar sig på:
+- **Mycket låg ugnstemperatur** (max 135 °C) för att minska fuktavdunstning
+- **En fuktskälla** — marinad, pensling med smör/olja, eller täckt form under delar av tillagningen
+
+Omvänd searing (lång lågtemperaturfas sedan snabb searing) ger bäst resultat. Innertemperatur: **54–60 °C** för medium-rare till medium. Dra vid 50–55 °C. Eftertillagning: 4–6 °C.
+
 ## Source recipes
 
 > ⚠️ **COLLECTION NOT YET STARTED** — No complete source recipes with ingredient quantities have been verified for the oven roast method.  

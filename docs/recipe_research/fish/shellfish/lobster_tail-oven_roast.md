@@ -15,6 +15,12 @@ Oven roasting lobster tail uses indirect heat and is more gentle than grilling �
 
 MEATER probe inserted from the tail end horizontally into the thickest cross-section of flesh. Pull at 56–58 °C; carryover 2–3 °C in the oven roast environment (less aggressive carryover than grill). Above 63 °C: rubbery and dry.
 
+## Styckesprofil
+
+Ugnsstekning av hummersvans använder indirekt värme och är varsam jämfört med grillning — ingen risk för att fastna i gallret, bättre kontroll och lättare för hemmakockar. Svansen fjärillskärs (eller skärs på hälften på längden) och placeras köttssidan uppåt i en ugnsform. Ugn vid 200–220 °C; total tillagningstid 12–15 minuter för en standard 170–200 g svans.
+
+Pensling med smör, vitlök och örter är avgörande — köttet har inget eget fett och torkar ut snabbt utan konstant pensling. MEATER-sonden stickas in från svansspetsens ände horisontellt in i den tjockaste tvärsnittsprofilen av köttet. Dra vid 56–58 °C; eftertillagning 2–3 °C i ugnsstekningsmiljön (mindre aggressiv eftertillagning än grill). Ovanför 63 °C: gummigt och torrt. Innertemperatur: 58–62 °C.
+
 ## Source recipes
 
 ### 1. Thomas Keller — Oven-Roasted Lobster Tails with Beurre Monté (American haute cuisine)

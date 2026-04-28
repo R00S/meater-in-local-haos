@@ -2,6 +2,7 @@
 type: cut
 slug: lamb_brisket
 name: Lamb Brisket
+name_sv: Lammbringa
 category: lamb
 meat: lamb
 cut_type: Roasts
@@ -29,6 +30,12 @@ quality_assessed: 2026-04-28
 ## Cut profile
 
 Lamb brisket (UK: lamb breast) comes from the belly of the lamb — anatomically equivalent to pork belly. It is composed of layered intercostal muscles, rib bones, and substantial intramuscular and surface fat held together by dense connective tissue. Because the breast muscles work constantly in breathing, they develop significant collagen and toughness. This collagen converts to gelatin during prolonged low-and-slow moist cooking (braising or slow cooking), rendering the cut fork-tender or pull-apart. The high fat content means carryover cooking is significant — expect 4–6°C rise after pulling. Sold boneless/rolled or on the bone; the rolled form is traditional in British and Scandinavian cooking, the bone-in form is common in Middle Eastern (stuffed, *dullah*) and Cantonese (casserole) preparations.
+
+## Styckesprofil
+
+Lammbrisket (UK: *lamb breast*) är från lammets mage — anatomiskt ekvivalent med fläskbuk, sammansatt av skiktade interkostalsmuskler, revbensben och substansiella intramuskulära och yttre fettdepåer bundna av tät bindväv.
+
+Låg-och-långsam tillagning transformerar snittet: 3–4 timmar i ugn vid 150 °C, eller 7–8 timmar i slow cooker. Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet-möra resultat. Eftertillagning: försumbar. Sond in i tjockaste köttmassan, borta från revbenslben. Alternativt: rulla med fyllning och stek i ugn för ett mer presentabelt festsnitt.
 
 ## Research files by cooking method
 

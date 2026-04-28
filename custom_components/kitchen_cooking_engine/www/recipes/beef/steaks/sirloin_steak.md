@@ -2,6 +2,7 @@
 type: cut
 slug: sirloin_steak
 name: Sirloin Steak
+name_sv: Ryggbiff
 category: beef
 meat: cow
 cut_type: Steaks
@@ -69,6 +70,9 @@ quality_assessed: 2026-04-26
 The sirloin steak is cut from the sirloin primal, which sits between the short loin (where the NY strip originates) and the round. Top sirloin is the most common steak cut from this primal — it is a firm, relatively lean steak with a bold beefy flavour from the greater muscle activity of this region of the carcass. Compared to the NY strip, top sirloin has less marbling and a slightly coarser grain, making it less forgiving of overcooking; compared to the round, it is noticeably more tender. Pan searing suits sirloin well because the high heat compensates for the reduced marbling by creating a flavourful crust — the Maillard reaction is the primary flavour contribution to a seared top sirloin. The cap muscle (*picanha* region of the sirloin cap) is sometimes separated and considered a distinct cut; this leaf concerns the main top sirloin steak. Carryover is 4–5 °C.
 
 
+## Styckesprofil
+
+Sirloin-biffen skärs från sirloin-primalen, som ligger mellan short loin (där NY strip kommer ifrån) och round. Top sirloin är det vanligaste biffsnittet från detta primal – en fast, relativt mager biff med kraftig nötig smak från den högre muskelaktiviteten i denna del av slaktkroppen. Jämfört med NY strip har top sirloin mindre marmorering och grövre ådring, vilket gör den mindre förlåtande för överkokning; jämfört med round är den tydligt mörare. Pan-searing passar sirloin väl eftersom den höga värmen kompenserar för den lägre marmoreringen genom att ge en smakrik skorpa – Maillard-reaktionen är det huvudsakliga smakbidraget till en searad top sirloin. Cap-muskeln (picanha-regionen av sirloin cap) separeras ibland och ses som ett eget snitt; detta blad avser den huvudsakliga top sirloin-biffen. Eftervärmen är 4–5 °C.
 ## Research files by cooking method
 
 - [Air Fryer](./sirloin_steak-air_fryer.md)

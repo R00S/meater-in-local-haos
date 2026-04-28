@@ -2,6 +2,7 @@
 type: cut
 slug: wild_boar_chop
 name: Wild Boar Chop
+name_sv: Vildsvinskotlett
 category: game
 meat: wild_boar
 cut_type: Wild Boar
@@ -33,6 +34,12 @@ Wild boar (*Sus scrofa*) loin chops (Wildschwein-Koteletts / côtelettes de sang
 
 Target internal temperature: **70–72 °C (158–162 °F)** for safe consumption of wild-caught pork. Some grillmasters pull at 65 °C for a pink interior.
 
+
+## Styckesprofil
+
+Vildsvinskotletter (*Sus scrofa*) tas från ryggens bakre del med revbenslben kvar. Köttet är mörkare, tätare och mer viltartat än tamsvins fläsk. Tillagningstid: 4–5 minuter per sida vid medel-hög värme (panna) eller 20–25 minuter i ugn vid 180 °C.
+
+USDA rekommenderar vildfångad vildsvin till 70 °C (160 °F) internt på grund av risk för trikinella. Marinering 24 timmar i rödvin och kryddor mjukar upp den täta muskeln och minskar viltsmaken. Innertemperatur: **70 °C (160 °F)** USDA-minimum. Eftertillagning: 3–4 °C. Sond i tjockaste muskeldelen borta från benet.
 
 ## Research files by cooking method
 

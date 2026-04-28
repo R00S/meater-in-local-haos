@@ -26,6 +26,12 @@ Pan-searing moose steak (loin, backstrap, or haunch slice) is the standard indoo
 
 Target internal temperature: **58–63 °C (136–145 °F)** for medium-rare to medium. Do not exceed 68 °C.
 
+## Styckesprofil
+
+Pannstekning av älgstek (rygg, ryggsträng eller haunch-skiva) är standardmetoden för inomhustillagning i hela Skandinavien, Finland och norra Kanada. Det magra köttet sears hett och snabbt i smör eller klarat smör — 3–5 minuter per sida — dras sedan väl före välgenomstekt.
+
+Vissa skandinaviska recept avslutar i en 125–140 °C ugn efter searing för mer kontrollerad genomkokning. Innertemperatur: **58–63 °C (136–145 °F)** för medium-rare till medium. Överskrid inte 68 °C — köttet torkar snabbt ovanför denna punkt. Eftertillagning: 3–4 °C. Sond insatt parallellt med skivans yta in till mitten.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Elchsteaks (Canadian recipe, German source)

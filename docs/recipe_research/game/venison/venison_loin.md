@@ -2,6 +2,7 @@
 type: cut
 slug: venison_loin
 name: Venison Loin
+name_sv: Hjortfilé
 category: game
 meat: venison
 cut_type: Venison
@@ -54,6 +55,12 @@ Temperature guide (from Köket.se, Sweden — accessed 2026-04-27):
 - Rådjur/hjort ytterfilé & filé: rare 52 °C, medium 57 °C, well done 65 °C
 - Stekdetaljer: 55/62/68 °C
 
+
+## Styckesprofil
+
+Viltrygghbiff (ryggsträng, sadel eller haunche-stek) från rådjur eller kronhjort är det magra snittet från ryggsmuskulaturen längs ryggraden. Köttet är mycket magert, djupt rödbrunt och har en rik viltartig smak uppskattad i hela europeisk matlagning.
+
+Pannstekning vid hög värme är den viktigaste metoden: 3–4 minuter per sida ger en karameliserad yta med ett rosa inre. Sond insatt från sidan in till mitten. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Välgenomstekt avråds starkt. Eftertillagning: 3–4 °C.
 
 ## Research files by cooking method
 

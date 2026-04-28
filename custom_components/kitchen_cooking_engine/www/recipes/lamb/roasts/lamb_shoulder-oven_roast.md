@@ -26,6 +26,12 @@ Oven roasting is the classic method for lamb shoulder worldwide. Low-and-slow ro
 
 The bone-in shoulder is particularly suited to oven roasting because the bone conducts heat from the inside and adds gelatinous flavour compounds to the cooking juices. MEATER probe into the thickest muscle mass, away from the bone. Pull temperature: **85–90 °C (185–194 °F)** for pull-apart texture. Carryover is negligible — the dense mass and surrounding fat insulate against rapid temperature change.
 
+## Styckesprofil
+
+Ugnsrostning är den klassiska metoden för lammaxel globalt. Låg-och-långsam rostning vid 130–160 °C i 4–8 timmar omvandlar axelns täta kollagen till gelatin, vilket ger fall-apart-mört kött med en djupt karameliserad yta.
+
+Täckt i ugn (med vin, fond eller vatten) under 3–4 timmar, sedan avtäckt för karamelisering. Vila 15–20 minuter täckt. Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagning: försumbar. Sond in i tjockaste muskeldelen, borta från skulderbladsben.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Slow-Roasted Shoulder of Lamb (British tradition)

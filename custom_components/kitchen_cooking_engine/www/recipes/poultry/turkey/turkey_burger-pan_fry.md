@@ -12,6 +12,10 @@ cut_type: Ground
 ## Cut profile
 A pan-fried turkey burger is the same 150–180 g shaped patty as the grilled version, cooked in a heavy pan over medium-high heat with a film of oil and butter. The all-over surface contact with the pan gives a more even crust than the linear marks of a grate but does not benefit from the smoke flavour of fire. Ground thigh (8–14 % fat) is the standard. The cooking goal is identical: drive the centre past 74 °C while developing a deep, even Maillard surface. Probe the geometric centre of the largest patty horizontally; carryover is small (1–2 °C).
 
+## Styckesprofil
+
+En pannstekt kalkonburger är samma 150–180 g formade biff som den grillvarianten, tillagad i en tung panna vid medel-hög värme med en film av olja och smör. Innertemperatur: 74 °C. Eftertillagning: 2–3 °C. Tillagnings tid: 5–6 minuter per sida.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Pan-Seared Turkey Burgers (American tradition)

@@ -12,6 +12,10 @@ cut_type: Squash
 ## Cut profile
 Zucchini (*Cucurbita pepo*) cut lengthways into 1–1.5 cm planks or thick rounds is one of the defining summer grill vegetables worldwide. The high dry heat of the grill evaporates surface moisture rapidly, creating golden char marks and a tender interior. Grill time: 4–6 minutes per side over medium-high heat. Pull temperature: 82–85 °C (180–185 °F) at the thickest part — at this internal temp the flesh is fully tender with charred exterior while still holding structure. MEATER probe inserted along the long axis of the thickest plank with the tip at the centre.
 
+## Styckesprofil
+
+Zucchini (*Cucurbita pepo*) skuren längsmed i 1–1,5 cm plankor eller tjocka rundlar är en av de definierande sommargrillgrönsakerna världen över. Grilla oljad zucchini direkt på gallret vid hög värme i 3–4 minuter per sida. Klar när synliga grillränder och genomstekt.
+
 ## Source recipes
 
 ### 1. Marcella Hazan — Zucchine alla Griglia con Aglio e Prezzemolo (Italian tradition)

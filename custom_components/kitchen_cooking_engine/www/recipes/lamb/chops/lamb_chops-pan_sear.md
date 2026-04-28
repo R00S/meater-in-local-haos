@@ -26,6 +26,12 @@ Pan-searing lamb chops is the everyday indoor method used throughout the UK, Eur
 
 Target: rib chops **55 °C (131 °F)** medium-rare; loin chops **57–60 °C (135–140 °F)** medium.
 
+## Styckesprofil
+
+Pannstekning av lammkotletter är den vanliga inomhusmetoden i UK, Europa, Sydasien och Mellanöstern. En mycket het gjutjärns- eller tung rostfri panna, 3–4 minuter per sida, sedan vilning — fettet som smälter ned i pannan skapar en naturlig sausbas.
+
+Rosmarin-vitlökssmör-basting är den franska och brittiska standardmetoden. Sond in i den tjockaste muskeldelen borta från benet. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Eftertillagning: 3–4 °C. Vila täckt 5 minuter.
+
 ## Source recipes
 
 ### 1. Vahrehvah.com — Spicy Lamb Chops (Indian/South Asian tradition)

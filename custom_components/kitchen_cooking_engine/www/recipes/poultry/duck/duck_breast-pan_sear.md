@@ -26,6 +26,10 @@ Duck breast is a rich, dark-meat cut distinguished by its thick subcutaneous fat
 
 Target internal temperature: **135–145 °F (57–63 °C)** — medium-rare; pull at 130 °F and rest 5 min. For USDA well-done, target 165 °F (74 °C).
 
+## Styckesprofil
+
+Ankbröst är ett rikt, mörkt-kötts snitt kännetecknat av dess tjocka subcutana fettkappa. Till skillnad från alla andra vanliga fjäderfäbröst serveras det rutinmässigt medium-rare (57–63 °C). Pannsearing: kallt panna start (skinnsidan ned, ingen förvärmt panna), låt fettet smälta långsamt i 6–8 minuter, vänd och avsluta 2–3 minuter. Innertemperatur: 57–60 °C. Eftertillagning: 3–4 °C.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Slow-Roast Duck (fat-rendering philosophy adapted for pan sear)

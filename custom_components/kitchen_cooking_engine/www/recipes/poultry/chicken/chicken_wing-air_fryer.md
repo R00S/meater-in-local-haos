@@ -28,6 +28,12 @@ The single most effective technique for extra-crispy air-fried skin is tossing w
 
 Carryover is minimal for wings (1–2 °C) because the thin bones and high surface-to-mass ratio allow heat to escape quickly after removal from the fryer. Target internal temperature: **165 °F (74 °C)** minimum; most cooks prefer **170–175 °F (77–79 °C)** for optimal texture at dark-meat temperatures.
 
+## Styckesprofil
+
+Air fryern fungerar genom att cirkulera mycket varm, torr luft med hög hastighet runt maten i ett kompakt kammare. För kycklingvingar skapar detta förhållanden liknande en konvektionsugn men mer intensiva.
+
+Air fryer: 190–200 °C, 20–25 minuter med vändning halvvägs, ger krispiga vingar utan djupfritt. Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond insatt längsmed trommelstockens tjockaste del, borta från benet.
+
 ## Source recipes
 
 ### 1. Natasha's Kitchen — Air Fryer Chicken Wings

@@ -13,6 +13,12 @@ cut_type: White Fish
 
 Oven baking cod involves placing the fillet (skin-on or skinless) in a baking dish or on a sheet pan in a moderate oven (180–200 °C). The indirect, ambient oven heat cooks the flesh gently from all sides, retaining more moisture than pan frying but producing less surface browning. Adding a panko or breadcrumb topping, a lemon-butter drizzle, or a tomato salsa bakes into the surface and compensates for the absent Maillard crust. Cod's lean flesh (< 1% fat) dries quickly above 65 °C, so pulling at 60–63 °C and resting 3 minutes is essential. Carryover is minimal (2–3 °C).
 
+## Styckesprofil
+
+Ugnsbakning av torsk innebär att lägga filén (med eller utan skinn) i en ugnsform eller på en ugnsplåt i en måttlig ugn (180–200 °C). Den indirekta, omgivande ugnsvärmen tillagar köttet varsamt från alla sidor, behåller mer fuktighet än pannstekning men ger mindre ytbrynning.
+
+Att tillsätta en panko- eller ströbrödstopping, ett citronsmörsdrix, eller en tomattsalsa som bakar in i ytan kompenserar för den frånvarande Maillard-skorpan. Torskens magra kött (< 1% fett) torkar ut snabbt ovanför 65 °C, varför dragning vid 60–63 °C och 3 minuters vilning är avgörande. Eftertillagning är minimal (2–3 °C). Innertemperatur: 60–63 °C.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Baked Cod with Crispy Panko Crust (American tradition)

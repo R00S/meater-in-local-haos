@@ -21,6 +21,10 @@ Target internal temperatures:
 - Medium-rare: pull at 52–54 °C (126–129 °F), rest to 57 °C (135 °F)
 - Medium: pull at 57–59 °C (135–138 °F)
 
+## Styckesprofil
+
+Ugnsstekning passar entrecôten utmärkt eftersom den kraftiga marmoreringen fungerar som värmebuffert — även i en het ugn (220–230 °C) bromsar det likviderande fettet den hastighet med vilken insidan värms, vilket ger kocken ett bredare fönster innan överkokad. Omvänd searing-metoden (låg ugn vid 120–135 °C till 5–8 °C under slutmålet, sedan snabb avslutningssearing) ger bäst resultat. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 3–5 °C.
+
 ## Source recipes
 
 ### 1. ichkoche.at — Rib-eye-Steak mit Rosmarinpommes (Austrian tradition)

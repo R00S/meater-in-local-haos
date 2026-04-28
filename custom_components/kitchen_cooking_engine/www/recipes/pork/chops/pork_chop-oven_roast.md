@@ -19,6 +19,12 @@ Target internal temperatures (oven roast):
 - Juicy/pink: **63–65 °C (145–149 °F)**
 - Well done: **70–72 °C (158–162 °F)**
 
+## Styckesprofil
+
+En fläskkotlett är ett tvärsnitt av fläskloinen från grisens rygg. Ugnsrostning fungerar bäst för tjockare kotletter (3+ cm): sear i het panna, avsluta i 180–200 °C ugn tills sonden visar måltemperatur.
+
+Innertemperatur: **63–65 °C (145–149 °F)** USDA-minimum (med 3 minuters vila); **70 °C** för genomstekt utan rosa. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till mitten, borta från benet. Vila täckt 5 minuter. Omvänd searing (låg ugn sedan snabb searing) ger utmärkta resultat för tjocka kotletter.
+
 ## Source recipes
 
 ### 1. ichkoche.at — Schweinskotelett mit Apfelgemüse vom Blech (Austrian tradition)

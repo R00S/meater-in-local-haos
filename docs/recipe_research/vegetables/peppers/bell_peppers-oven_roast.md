@@ -12,6 +12,10 @@ cut_type: Peppers
 ## Cut profile
 Bell peppers (*Capsicum annuum*) oven-roasted at 220–230 °C follow the same skin-blistering trajectory as grilled peppers but with slower, more even heat penetration, and the option to roast slices or strips at lower temperatures for a tender-but-intact result. Whole peppers roasted at high heat until blackened are the classic preparation for peeling (identical to grilled, just slower); sliced peppers at 200–220 °C caramelise across their cut surfaces as their natural sugars concentrate. The internal temperature of a whole pepper when it is fully soft and the skin releases is 88–95 °C (190–203 °F); sliced peppers for eating as a dish (not for peeling) are done at 82–90 °C (180–194 °F). A MEATER probe is inserted through the shoulder of a whole pepper or into the thickest part of a slice.
 
+## Styckesprofil
+
+Paprika (*Capsicum annuum*) ugnsrostad vid 220–230 °C följer samma skin-blåsningsförlopp som grillad paprika men med långsammare, jämnare värmedistribution. 30–40 minuter hel. Klar när skinnet blåst och paprikapjäserna genommjuka. Skinn avlägsnas lätt efter ångning i förseglad påse.
+
 ## Source recipes
 
 ### 1. José Andrés — Pimientos Asados (Spanish / Catalan tradition)

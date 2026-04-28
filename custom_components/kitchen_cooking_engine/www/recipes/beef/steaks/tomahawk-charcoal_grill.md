@@ -17,6 +17,10 @@ Target internal temperatures (charcoal grill):
 - Medium-rare: **core 55–57 °C (131–135 °F)** · pull at **52–54 °C (126–129 °F)**
 - Medium: **core 60–63 °C (140–145 °F)**
 
+## Styckesprofil
+
+Tomahawk-biffen på träkol är den ultimata utomhustillagningsupplevelsen — det enorma benhantaget gör det möjligt att ställa den upprätt bredvid kolorna för vila. Träkol-grillad tomahawk kräver samma omvänd searing-princip som gassgrill: indirekt värme för att föra kärnan upp säkert, sedan direkt hög värme för karamelisering. Träkolsröken sätter sig i det tjockskurna ribeyets djupa fettmarmorering. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 4–6 °C för ett 1,5–2 kg exemplar.
+
 ## Source recipes
 
 ### 1. GialloZafferano — Tomahawk alla griglia (Italian tradition)

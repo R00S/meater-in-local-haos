@@ -28,6 +28,12 @@ Medium heat (approximately 350 °F / 175 °C at grate level) with a covered gril
 
 Wings are dark meat and can tolerate slight overcooking; pulling them at 165–175 °F (74–79 °C) internal produces fully safe, juicy meat. Carryover is 1–2 °C only, due to the high surface-to-mass ratio of wings.
 
+## Styckesprofil
+
+Grillning av kycklingvingar över direkt värme skapar en kombination av strålnings- och konvektionsvärme som ingen annan metod replicerar. Skinnet smälter ned mer gradvis på grillen jämfört med air fryern, men den direkta kontakten med het järngaller ger den karakteristiska karameliserade grillytan.
+
+Grilla vid medel-direkt värme, 20–25 minuter med regelbunden vändning var 5:e minut. Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond insatt i trommelstockens tjockaste del, borta från humerusbenet.
+
 ## Source recipes
 
 ### 1. Taste of Home — Grilled Chicken Wings with Buffalo Sauce

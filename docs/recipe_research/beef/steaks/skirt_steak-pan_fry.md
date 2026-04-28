@@ -13,6 +13,12 @@ cut_type: Steaks
 
 Skirt steak is cut from the plate section (the diaphragm muscles) of the beef — there are two muscles: the outside skirt (*diaphragm proper*, thicker, more uniform, more flavourful) and the inside skirt (thinner, more variable in thickness). Both are intensely flavoured and very coarsely grained, making them ideal for marinades and quick, very high-heat cooking. Skirt steak is central to Mexican *fajitas*, Brazilian *fraldinha*, and American steakhouse menus. Pan searing skirt steak requires the very highest heat possible: the steak is thin (1–1.5 cm) and must develop a deep brown crust in the 2–3 minutes before the interior exceeds 57 °C. The MEATER probe is challenging in a thin cut — insert from the end, angling towards the thickest part, or monitor the time-based cues in the recipe. Carryover from a screaming-hot cast-iron pan is 3–5 °C.
 
+## Styckesprofil
+
+Skirt steak skärs från tallrikspartiet (mellangärdmusklerna) hos nötdjuret — det finns två muskler: den yttre skirten (*diaphragm proper*, tjockare, mer enhetlig, mer smakrik) och den inre skirten (tunnare, mer variabel i tjocklek). Båda är intensivt smakrika och mycket grovfibriga, vilket gör dem idealiska för marinader och snabb, mycket hög värmestillagning.
+
+Skirt steak är central i mexikanska *fajitas*, brasilianska *fraldinha* och amerikanska steakhouse-menyer. Pannsekning av skirt steak kräver den allra högsta möjliga värmen: biffen är tunn (1–1,5 cm) och måste utveckla en djupt brun skorpa på 2–3 minuter innan insidan överstiger 57 °C. MEATER-sonden är utmanande i ett tunt snitt — stick in från änden och vinkla mot den tjockaste delen. Eftertillagning från en glödhet gjutjärnspanna är 3–5 °C. Skär alltid tvärs mot fibern. Innertemperatur: 52–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. Diana Kennedy — Comal-Fried *Arrachera* (Mexican home cooking tradition)

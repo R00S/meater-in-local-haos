@@ -16,6 +16,12 @@ Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo) is the lean
 Target internal temperatures (pan sear):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)**
 
+## Styckesprofil
+
+Fläskfilé (*svinemørbrad* / *Schweinefilet* / *solomillo de cerdo*) grillas idealiskt hel vid hög direkt värme (230–250 °C), 2–3 minuter per sida för en karameliserad yta och sedan indirekt avslutning.
+
+Pensla med olja och marinad innan grillning. Tillagningstid: 12–15 minuter totalt. Innertemperatur: **63 °C (145 °F)** USDA (med 3 min vila); **68 °C** för lite rosa mitt. Eftertillagning: 2–3 °C. Sond insatt längsvis in till mitten av filén. Vila 5 minuter täckt.
+
 ## Source recipes
 
 ### 1. Directo al Paladar — Solomillo de cerdo a la plancha (Spanish tradition)

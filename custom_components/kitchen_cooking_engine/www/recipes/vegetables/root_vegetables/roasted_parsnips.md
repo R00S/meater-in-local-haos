@@ -2,6 +2,7 @@
 type: cut
 slug: roasted_parsnips
 name: Roasted Parsnips
+name_sv: Rostade palsternackor
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables
@@ -36,6 +37,10 @@ quality_assessed: 2026-04-26
 
 Parsnips (*Pastinaca sativa*) in the air fryer become golden, caramelised and crispy at the tips in 16–20 minutes at 190–200 °C — faster than oven roasting (25–30 minutes). Parsnips have a high natural sugar content (≈ 12 g/100 g — significantly higher than carrots) and caramelise readily. They should be cut into batons or long wedges, oil-coated and placed in a single layer. Pull temperature: 86–90 °C (187–194 °F) for caramelised, fluffy-interior parsnips. MEATER probe inserted along the long axis of the thickest baton.
 
+
+## Styckesprofil
+
+Palsternacka (*Pastinaca sativa*) i airfryern blir gyllenbrun, karameliserad och krispig vid topparna på 16–20 minuter vid 190–200 °C — snabbare än ugnsstekning. Skär i klyftor, olja. Klar när gyllenbrun och genomstekt med karameliserade kanter.
 
 ## Research files by cooking method
 

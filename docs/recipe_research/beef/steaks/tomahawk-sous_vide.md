@@ -17,6 +17,10 @@ Target sous vide bath temperatures (tomahawk):
 - Medium-rare: **54–57 °C (129–135 °F)** × 3–4 hr
 - Medium: **60–62 °C (140–144 °F)** × 3–4 hr
 
+## Styckesprofil
+
+Tomahawken är en benfri entrecôte skärd från ribprimalen (revben 6–12) med hela revbenet kvar och intakt — typiskt 30–45 cm långt. Det långa benet är för visuell presentation; köttets och smakens egenskaper är identiska med en standardbenfri ribeye. På grund av tjockleken (5–8 cm) kräver sous vide-tillagning omtanke: cirkulera vid måltemperaturen (54 °C för medium-rare) i 2–4 timmar, ta sedan ur påsen och sear kraftigt i het gjutjärnspanna eller med gasbrännare. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: minimal efter sous vide — searing ger 1–2 °C extra.
+
 ## Source recipes
 
 ### 1. Madens Verden — Ribeye sous vide (adapted for tomahawk) (Danish tradition)

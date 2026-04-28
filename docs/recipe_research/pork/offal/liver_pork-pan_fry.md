@@ -21,6 +21,12 @@ Pork liver is a large, smooth, mahogany-brown organ weighing 1–1.5 kg in a who
 
 **Probe placement**: insert horizontally into the centre of the thickest slice in the pan, with the tip at the geometric centre of the slice. There are no bones or thick fat pockets to avoid. Avoid placing the probe in a very thin or edge slice as it will overcook before the thick centre reaches target temperature.
 
+## Styckesprofil
+
+Fläsklever är ett stort, blankt, mahognyfärgat organ som väger 1–1,5 kg hel, vanligtvis sålt förskuren i 6–12 mm tjocka portioner. Det är mildare och mindre intensivt mineralt än nötlever, med en finare textur och tunnare kapsel.
+
+Pannsteka i smör vid hög värme, 2–3 minuter per sida; lever är fardig vid 70–75 °C. Innertemperatur: **70–75 °C (158–167 °F)** för genomstekt (standard); **65 °C** för lite rosa mitt (EFSA-godkänd om frisk källa). Eftertillagning: 2–3 °C. Sond insatt horisontellt in till mitten av skivan. Servera omedelbart — liver överkokkas snabbt och förlorar sin mjuka konsistens.
+
 ## Source recipes
 
 ### 1. Marcella Hazan — Fegato di Maiale alla Salvia (Italian tradition, Culinary Group B)

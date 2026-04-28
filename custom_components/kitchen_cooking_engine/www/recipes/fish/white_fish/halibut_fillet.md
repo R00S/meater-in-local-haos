@@ -2,6 +2,7 @@
 type: cut
 slug: halibut_fillet
 name: Halibut Fillet
+name_sv: Hälleflundrafilé
 category: fish
 meat: white_fish
 cut_type: White Fish
@@ -48,6 +49,10 @@ quality_assessed: 2026-04-26
 
 Pacific halibut (*Hippoglossus stenolepis*) and Atlantic halibut (*Hippoglossus hippoglossus*) are the largest flatfish; the fillet — cut from the meaty upper or lower side of the fish — is thick, firm, brilliant white, and lean with large, tight muscle flakes. The flesh has little connective tissue relative to its density, which gives a satisfying firm bite when properly cooked but transitions quickly to a dry, chalky texture above 60 °C. Pan searing is one of the most technically demanding preparations for halibut because the thick, lean flesh must be cooked through to approximately 58–62 °C without surface scorching; a common technique is to sear in a screaming-hot pan to set the crust, then finish in a moderate oven or with basting, treating it more like a thick beef steak than most fish. Carryover is significant — 4–5 °C for a thick fillet — so pulling early is essential.
 
+
+## Styckesprofil
+
+Hellefisk (*Hippoglossus stenolepis*, Stillahavshellefisk; *Hippoglossus hippoglossus*, Atlantisk hellefisk) är de största flatfiskarna; fileten — skärd från de köttstarka övre eller undre sidorna av fisken — är tjock, fast, klart vit och mager med stora, täta muskelknippen. Det är ett av de absolut renaste, mest delikata vitköttade fiskarterna. Pannsearing ger bäst resultat: het panna, smör, 3–4 minuter per sida. Innertemperatur: 58–60 °C.
 
 ## Research files by cooking method
 

@@ -45,6 +45,10 @@ gristle under the tip.
 documented tradition in confirmed-reachable South Asian, East Asian, or South-East Asian
 recipe sources. The gap is noted and will remain open until a verified source is found.
 
+## Styckesprofil
+
+Rumpbiffstek (nordamerikanskt begrepp) skärs från rundbotten-primalen — höftpartiet. I Nordamerika betecknar "rump roast" ofta ett snitt från det övre bakkvarteret med måttlig mörhet; i brittisk och australiensisk nomenklatur kan "rump" referera till ett mörnare, mer värdefullt snitt. Nordamerikansk rumpbiffstek är måttligt mager med viss intramuskulär fettinlagring. Lång ugnsstekning vid låg temperatur (120–150 °C) till 60–65 °C innerltemperatur för medium ger bäst resultat; tillagning till pull-apart (88–95 °C) fungerar också om steken bräseras. Eftertillagning: 3–5 °C.
+
 ## Source recipes
 
 ### 1. Good Food — Easy Roast Beef (British tradition)

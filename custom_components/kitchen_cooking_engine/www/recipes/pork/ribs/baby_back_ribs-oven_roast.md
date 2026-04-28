@@ -17,6 +17,12 @@ Target internal temperatures (oven roast):
 - Tender, glazed: **88–95 °C (190–203 °F)**
 - ⚠️ Below 80 °C ribs are food-safe but still chewy and tough
 
+## Styckesprofil
+
+Baby back ribs ugnsrostade tillagas typiskt lågt och långsamt inlindade i folie vid 150 °C i 1–2 timmar (beroende på om de förkokt), sedan öppnade och avslutade vid högre värme med BBQ-sås för en glaserad, karameliserad yta.
+
+Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertillagning: försumbar. Sond längs revbenets riktning in till tjockaste köttmassan borta från benet. Foliepackning: sluten i 1,5 timmar, sedan öppen i 20–30 min vid 220 °C med BBQ-glasering.
+
 ## Source recipes
 
 ### 1. Madens Verden — Verdens bedste spareribs i ovn (Danish tradition)

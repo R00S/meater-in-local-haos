@@ -2,6 +2,7 @@
 type: cut
 slug: lamb_chops
 name: Lamb Chops
+name_sv: Lammkotlett
 category: lamb
 meat: lamb
 cut_type: Chops
@@ -68,6 +69,12 @@ Target internal temperatures (from Africanbites.com):
 - Rib chops: **55 °C (131 °F)** for medium-rare
 - Loin chops: **57–60 °C (135–140 °F)** for medium
 
+
+## Styckesprofil
+
+Lammkotletter (rygg- och lumbarkotletter) är de klassiska grillningssnitten. Ryggkotletter är mindre och magrare; lumbarkotletter är större och fetare. Grilla vid direkt medel-hög värme, 4–5 minuter per sida.
+
+Fettet behöver tid att smälta ned — att placera kotletterna på sidan för att renda fettlisten är ett professionellt trick som förhindrar flammor. Sond in i den tjockaste muskeldelen borta från benet. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Eftertillagning: 3–4 °C.
 
 ## Research files by cooking method
 

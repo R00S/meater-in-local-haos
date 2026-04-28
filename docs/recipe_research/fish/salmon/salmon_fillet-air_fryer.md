@@ -13,6 +13,12 @@ cut_type: Salmon
 
 Salmon fillet in the air fryer is cooked by rapid convective circulation of superheated air around the fish in a compact enclosed basket; this simulates roasting at intensified speed, producing a surface that browns faster than a conventional oven bake while the interior remains moist. The skin crisps well if the surface is dried thoroughly before cooking. The compact geometry of most air fryer baskets means portions must be sized to fit without overlapping; single fillets of 150–200 g are ideal. Carryover from an air fryer is 3–5 °C, similar to a hot convection oven, and residual heat from the basket continues to cook the fish briefly after extraction. The rapid cook time — typically 8–12 minutes — means that soy, honey or sugar-based glazes caramelise well without burning if applied mid-cook or just before the final 2 minutes.
 
+## Styckesprofil
+
+Laxfilé i airfryern tillagas av snabb konvektionscirkulation av superupphettat luft runt fisken i en kompakt sluten korg, vilket simulerar ugnsstekning i förhöjd hastighet och producerar en yta som bryns snabbare än en konventionell ugnsbakning medan insidan förblir fuktig. Skinnet krispar bra om ytan torkas ordentligt innan tillagning.
+
+Den kompakta geometrin hos de flesta airfryer-korgar innebär att portioner måste dimensioneras för att passa utan överlappning; enskilda filéer på 150–200 g är ideala. Eftertillagning från en airfryer är 3–5 °C — resthärmen från korgen fortsätter att tillaga fisken kort efter uttag. Den snabba tillagningstiden — typiskt 8–12 minuter — innebär att soja-, honung- eller sockerbaserade glasyr karameliseras bra utan att brännas om de appliceras mitt i tillagningen eller precis innan de sista 2 minuterna. Innertemperatur: 60–63 °C.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air-Fryer Salmon (American tradition)

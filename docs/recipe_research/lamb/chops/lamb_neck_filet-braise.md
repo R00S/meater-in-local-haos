@@ -4,6 +4,12 @@
 
 Lamb neck fillet braised in aromatic liquid becomes remarkably tender. The neck muscles, densely packed with connective tissue and worked continuously in life, require 2–3 hours of gentle moist-heat cooking to convert the collagen to gelatin and render the fibres soft. The resulting braise is intensely flavoured — the gelatin from the collagen enriches the braising liquid into a glossy, body-coating sauce. The fillet takes flavouring particularly well: wine, herbs, aromatics, and stock all penetrate the cylindrical muscle during the long braise. In South African and British traditions, the neck is braised in red wine with carrots, celery, and tomato paste. In Turkish and Middle Eastern traditions, the neck is braised with spices (cinnamon, allspice, cumin) and fresh tomatoes, often over couscous.
 
+## Styckesprofil
+
+Lammhalsfilé bräserad i aromatisk vätska blir anmärkningsvärt mör. Halsmusklerna, tätt packade med bindväv, kräver 2–3 timmars skonsam fuktig tillagning för att omvandla kollagen till gelatin.
+
+Den resulterande bräseringen är intensivt välsmakande och perfekt för tagines, grytor och nordiska vardagsrätter. Innertemperatur: **85–90 °C (185–194 °F)** för pull-apart. Eftertillagning: försumbar (braiseringsvätska). Sond in i den tjockaste delen av halsmuskeln. Täckt i ugn vid 160–170 °C, 2–3 timmar.
+
 ## Source recipes
 
 ### 1. Simply Delicious (Alida Ryder, Cape Town, South Africa) — Slow Braised Lamb Neck

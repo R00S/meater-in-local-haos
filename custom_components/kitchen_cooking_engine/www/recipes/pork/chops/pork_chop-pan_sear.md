@@ -16,6 +16,12 @@ Pan-searing a pork chop emphasises the crust rather than the flip. A screaming h
 Target internal temperatures:
 - Juicy/slightly pink: **63–65 °C (145–149 °F)**
 
+## Styckesprofil
+
+Pannstekning av fläskkotlett betonar skorpan snarare än vändningen. En skrikhet torr panna (eller minimal olja), lång oavbruten kontakt på en sida för att bygga en Maillard-skorpa innan vändning.
+
+Metoden: het torr panna (180–200 °C); lägger kotletten med lite smör; 4–5 minuter per sida oavbrutet; basta med smör och vitlök i sista minuten. Innertemperatur: **63–65 °C (145–149 °F)** USDA (med 3 minuters vila). Eftertillagning: 3–4 °C. Sond horisontellt in till mitten borta från benet. Vila 5 minuter.
+
 ## Source recipes
 
 ### 1. Directo al Paladar — Chuleta de cerdo a la plancha (Spanish tradition)

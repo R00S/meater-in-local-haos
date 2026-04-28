@@ -2,6 +2,7 @@
 type: cut
 slug: salmon_fillet
 name: Salmon Fillet
+name_sv: Laxfilé
 category: fish
 meat: salmon
 cut_type: Salmon
@@ -50,6 +51,12 @@ quality_assessed: 2026-04-26
 
 Salmon fillet comes from the side of the fish, running the full length of the body from behind the head to the tail, with the pin bones removed. The flesh is divided into distinct fat-layered muscle segments (myotomes) separated by connective tissue (myocommata); that connective tissue softens and gives the characteristic flaking texture when the protein reaches its set point. Atlantic and Pacific salmon differ in fat distribution — farmed Atlantic salmon is uniformly rich, while wild sockeye and king salmon have denser, more mineral flesh. Pan searing suits salmon because the high conductive heat of a stainless or cast-iron pan rapidly crisps the skin (if skin-on) and caramelises the exposed flesh, producing textural contrast between crust and interior. Carryover in a seared salmon fillet is modest — 2–3 °C — because the thin geometry dissipates heat quickly, so accurate pull timing is essential to avoid overcooking.
 
+
+## Styckesprofil
+
+Laxfilé kommer från sidan av fisken, längs hela kroppens längd från bakom huvudet till stjärten, med pinnbenen borttagna. Köttet är indelat i distinkta fettskiktade muskelsegment (myotomer) separerade av bindväv (myokommat); den bindväven mjuknar och ger den karakteristiska fjälliga texturen när proteinet når sin sättningspunkt.
+
+Atlantisk och stillahavslax skiljer sig åt i fettfördelning — odlad atlantlax är jämnt rik, medan vild sockeye och kung-lax har tätare, mer mineraliskt kött. Pannstekning passar lax eftersom den höga ledningsvärmen i en rostfri eller gjutjärnspanna snabbt krispar skinnet (om skinnet är på) och karameliserar det exponerade köttet, vilket skapar texturkontrast mellan skorpa och insida. Eftertillagning är blygsam — 2–3 °C — eftersom den tunna geometrin sprider värme snabbt, varför exakt dragtidpunkt är avgörande för att undvika överkokning. Innertemperatur: 52–60 °C.
 
 ## Research files by cooking method
 

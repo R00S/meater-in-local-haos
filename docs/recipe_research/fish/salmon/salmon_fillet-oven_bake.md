@@ -13,6 +13,12 @@ cut_type: Salmon
 
 Salmon fillet baked in the oven is cooked primarily by convective heat circulating around the fish, with radiant heat from the oven walls contributing secondary surface browning. Unlike pan searing, oven baking does not create a crust on the skin without an initial high-heat blast; the gentler environment means the flesh sets gradually from the outside inward, producing a more uniformly cooked texture. Baking is particularly well-suited to whole-side fillets and thicker portions where even heat penetration matters; it also permits wet preparations (baking in parchment or foil en papillote, or in a liquid bath) that are impractical on a pan. The carryover in an oven-baked salmon fillet at conventional oven temperatures (180–220 °C) is 3–5 °C, meaning pull timing is critical; at low-and-slow temperatures (100–120 °C) carryover is minimal.
 
+## Styckesprofil
+
+Laxfilé bakas i ugnen primärt av konvektionsvärme som cirkulerar runt fisken, med strålningsvärme från ugnsväggarna som bidrar med sekundär ytbrynning. Till skillnad från pannstekning skapar ugnsbakning ingen skorpa på skinnet utan ett initialt höghets-bloss; den varsamma miljön innebär att köttet sätter sig gradvis utifrån och inåt, vilket ger en mer jämnt tillagad textur.
+
+Ugnsbakning är särskilt väl lämpad för hela sidan filéer och tjockare portioner där jämn värmepenetration spelar roll; det tillåter även våta beredningar (*en papillote* i bakplåtspapper eller folie, eller i ett vätskebad) som är opraktiska i en panna. Eftertillagning i en ugnsrostad laxfilé vid konventionella ugnstemperaturer (180–220 °C) är 3–5 °C — tidpunkten för dragning är kritisk; vid låg-och-långsam temperatur (100–120 °C) är eftertillagning minimal. Innertemperatur: 52–60 °C.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Slow-Roasted Salmon (American tradition)

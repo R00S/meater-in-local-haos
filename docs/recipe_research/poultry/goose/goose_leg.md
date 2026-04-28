@@ -2,6 +2,7 @@
 type: cut
 slug: goose_leg
 name: Goose Leg
+name_sv: Gåslår
 category: poultry
 meat: goose
 cut_type: Goose
@@ -43,6 +44,10 @@ Goose legs are large, tough, highly flavoured cuts rich in connective tissue and
 
 Target internal temperature: **175–185 °F (79–85 °C)** — well above USDA minimum; extended time at this temperature melts collagen and produces best texture. Minimum safe: 165 °F (74 °C).
 
+
+## Styckesprofil
+
+Gåsben är stora, sega, intensivt smakrika snitt rika på bindväv. Innertemperatur: 80–85 °C (mört, faller lätt från benet). Eftertillagning: försumbar. Bräsering eller confit är de klassiska metoderna.
 
 ## Research files by cooking method
 

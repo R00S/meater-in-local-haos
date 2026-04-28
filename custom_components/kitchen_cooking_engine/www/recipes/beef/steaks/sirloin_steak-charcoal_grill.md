@@ -13,6 +13,12 @@ cut_type: Steaks
 
 Sirloin steak over live charcoal acquires the distinctive smokiness and char flavour that only real charcoal combustion products can provide. The lean top sirloin muscle — firmer and less marbled than the ribeye or NY strip — forms a particularly satisfying crust over very hot coals because the dry surface chars rapidly. Korean BBQ traditions feature thinly sliced sirloin grilled directly over charcoal (*charcoal-grilled bulgogi*); South American asado traditions use thick bone-in sirloin; American competition BBQ uses direct high heat. Carryover from very hot charcoal fire is 5–7 °C, making early pulling essential.
 
+## Styckesprofil
+
+Entrecôtebiff över levande träkol får den karakteristiska rökigheten och bryningssmaken som bara träkolsförbränningsprodukter kan ge. Den magra, fasta entrecôtemuskeln — fastare och mindre marmorerad än entrecôte eller NY strip — bildar en särskilt tillfredsställande skorpa över riktigt heta kolar eftersom den torra ytan knappt fastnar i glöden.
+
+Koreanska BBQ-traditioner innehåller tunt skivad entrecôte grillad direkt över träkol (*charcoal-grillad bulgogi*); sydamerikanska asado-traditioner använder tjock, benfri entrecôte; amerikanskt tävlings-BBQ använder direkt hög värme. Eftertillagning från en mycket het träkolseld är 5–7 °C, vilket gör tidig dragning avgörande. Innertemperatur: 54–57 °C medium-rare. Dra vid 48–52 °C beroende på grillhetta.
+
 ## Source recipes
 
 ### 1. Francis Mallmann — Sirloin over Charcoal Embers (Argentine asado tradition)

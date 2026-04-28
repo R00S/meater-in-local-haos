@@ -2,6 +2,7 @@
 type: cut
 slug: pork_sausage
 name: Pork Sausage
+name_sv: Fläskkorv
 category: pork
 meat: pig
 cut_type: Ground
@@ -35,6 +36,12 @@ Target internal temperatures (grill):
 - Fully cooked/safe: **71–75 °C (160–167 °F)**
 - ⚠️ Do not pull before 71 °C — pork sausage must be fully cooked
 
+
+## Styckesprofil
+
+Fläskkorv är en förädlad köttprodukt gjord av finhackat eller grovmalet fläsk, kryddat med salt, peppar, örter och kryddor, och inneslutet i naturliga svinintestiner eller syntetiska kollagenhöljen. Fettinnehållet är typiskt 20–30 %, nödvändigt för saftighet.
+
+Grillning, pannstekning och ugnsrostning är de vanligaste metoderna. Alla kräver att korven når minst 72 °C (160 °F) internt. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond insatt längsvis från änden in till mitten. Vila 3–5 minuter täckt.
 
 ## Research files by cooking method
 

@@ -2,6 +2,7 @@
 type: cut
 slug: prime_rib
 name: Prime Rib / Standing Rib Roast
+name_sv: Entrecôtestek
 category: beef
 meat: cow
 cut_type: Roasts
@@ -62,6 +63,10 @@ quality_assessed: 2026-04-28
 
 Prime rib (also called standing rib roast) is cut from the rib primal (ribs 6–12), comprising the longissimus dorsi and surrounding muscles, with a generous fat cap and the rib bones attached. It is one of the most marbled subprimal sections of the animal — the rib muscles do relatively little work, and the high intramuscular fat content self-bastes during roasting, keeping the interior moist across a wide temperature range. Oven roasting is the canonical method for prime rib because the sustained, even heat of an enclosed oven allows the large mass (typically 2.5–5 kg) to heat evenly from edge to centre while the exterior fat cap renders and browns. Carryover is substantial for a prime rib — the large, dense mass retains heat efficiently, and internal temperature continues to rise for 15–30 minutes after removal; this must be accounted for in the pull temperature.
 
+
+## Styckesprofil
+
+Prime rib (även kallat stående revbenstek) skärs från ribprimalen (revben 6–12), den mest marmorerade delen av nötdjuret. Den "primala" beteckningen syftar på den anatomiska klassificeringen av ribprimalen — inte på USDA:s betygssystem (Prime-köttet är ett separat begrepp). Prime rib säljs med benen fästade (stående revbenstek) eller urbenad (ribbyfé); benfasta stekar är mer smakrika eftersom benet leder värme och skyddar angränsande kött. Det primära muskelet — *longissimus dorsi* — är en stor, relativt lite belastad muskel med regelbunden marmorering och en skyddande fettlins. *Spinalis dorsi* (den "Scotch cap" som löper längs krönet) är ännu mer marmorerad och är den mest eftertraktade biten.
 
 ## Research files by cooking method
 

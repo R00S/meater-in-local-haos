@@ -13,6 +13,12 @@ cut_type: Steaks
 
 Top sirloin cooked sous vide benefits especially from the method because its lean, firmer muscle responds dramatically to prolonged low-temperature cooking: the collagen in the slightly tougher sirloin muscle has time to soften without exceeding the target temperature, producing a more tender result than a quick pan sear at the same final temperature. At 54–57 °C for 2–4 hours, top sirloin achieves the tenderness of a much more expensive cut. The bath temperature is the target internal temperature; carryover from the post-bath sear is 2–3 °C at the surface only.
 
+## Styckesprofil
+
+Entrecôte tillagad sous vide drar nytta av metoden framför allt eftersom dess magra, fastare muskel svarar dramatiskt på förlängd lågtemperaturtillagning: kollagenet i den något segare entrecôtemuskeln har tid att mjukna utan att överskrida måltemperaturen och ger ett mörare resultat än en snabb pannstekssearing vid samma sluttemperatur. Vid 54–57 °C i 2–4 timmar uppnår entrecôte mörheten hos ett mycket dyrare snitt.
+
+Badtemperaturen är måltemperaturen — sonden kan inte användas under det förseglade badsteget; den är istället tillämpbar efter badet för att bekräfta temperatur. Eftertillagning från den efterföljande searing vid ytan är 2–3 °C, men kärntemperaturen förblir på badtemperaturen fram till searing börjar. Innertemperatur: 54–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Sous Vide Top Sirloin (American tradition)

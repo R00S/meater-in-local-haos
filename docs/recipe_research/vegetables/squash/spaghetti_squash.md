@@ -2,6 +2,7 @@
 type: cut
 slug: spaghetti_squash
 name: Spaghetti Squash
+name_sv: Spagettipumpa
 category: vegetables
 meat: squash
 cut_type: Squash
@@ -28,6 +29,10 @@ quality_assessed: 2026-04-26
 
 Spaghetti squash (*Cucurbita pepo*) is baked whole or halved at 180–200 °C until the flesh separates into noodle-like strands when scraped with a fork. Halved baked cut-face-down (35–45 min); whole baked (50–65 min with fork pricks). Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe inserted through the skin into the flesh for whole baking, or through the skin of a half. The defining visual cue — flesh pulling into strands — coincides with 90–95 °C.
 
+
+## Styckesprofil
+
+Spagetti-squash (*Cucurbita pepo*) bakas hel eller halverad vid 180–200 °C tills köttet separeras i nudellika strängar när man skrapar med gaffel. Halverad bakas med snittytan ned i 40–50 minuter. Klar när strängarna separerar lätt.
 
 ## Research files by cooking method
 

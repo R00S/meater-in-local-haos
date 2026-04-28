@@ -12,6 +12,12 @@ cut_type: Other / Offal
 ## Cut profile
 Pan frying pork cheeks requires butterflying each cheek to ~1 cm thickness to expose the interior muscle fibre. The goal is rapid surface crust formation while keeping the centre below full collagen conversion temperature — the resulting texture is bouncy, pink-centred, and spring rather than gelatinous. Because the butterflied geometry is thin, cooking is fast (3–4 minutes total) and carryover is small (2–3 °C). Pull temperature is 65–67 °C (149–153 °F) — above USDA safe for ground meat but below the conversion temperature where the cheek collagen would tighten and toughen the fibre. High heat and dry-pan technique are essential; any liquid or steam shifts the result toward braised texture.
 
+## Styckesprofil
+
+Pannstekning av fläskkind kräver fjärilning av varje kind till ca 1 cm tjocklek för att exponera det inre muskelfibern. Målet är snabb ytkorpsbildning med ett centrum under full kollagenomvandlingstemperatur — den resulterande texturen är firmare men mörar än råkind.
+
+Het gjutjärnspanna, olja och smör, 3–4 minuter per sida. Innertemperatur: **68–72 °C (154–162 °F)** för genomstekt, snabbpannstekt stil. Eftertillagning: 2–3 °C. Sond insatt horisontellt in till mitten av den fjärilade kinden. Servera omedelbart.
+
 ## Source recipes
 
 ### 1. José Pizarro — Carrillera Salteada (Spanish pintxo tradition)

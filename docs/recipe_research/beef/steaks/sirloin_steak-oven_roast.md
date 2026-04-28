@@ -13,6 +13,12 @@ cut_type: Steaks
 
 Oven roasting a sirloin steak typically uses the reverse-sear method: the steak goes into a low oven (95–120 °C) first, slowly bringing the interior to just below target temperature, then is seared briefly in a scorching pan for crust. This approach exploits the lean sirloin's tendency to overcook — the slow oven phase gives precise control and leaves a smaller grey band, while the fast sear provides the Maillard crust that is the cut's primary flavour source. Carryover after the low-oven phase is reduced to 2–3 °C (vs 4–5 °C for hot methods) because the probe is closer to final temperature before the sear.
 
+## Styckesprofil
+
+Ugnsstekning av entrecôtebiff använder vanligtvis omvänd searing-metoden: biffen läggs i en låg ugn (95–120 °C) först och för varsamt insidan till strax under måltemperaturen, sedan searas kort i en glödhet panna för skorpa. Detta tillvägagångssätt utnyttjar den magra entrecôtens tendens att överkoka — den långsamma ugns-fasen ger precis kontroll och lämnar ett mindre grått band, medan den snabba searing ger Maillard-skorpan som är snittets primära smakkälla.
+
+Eftertillagning efter den låg-ugns-fasen är reducerad till 2–3 °C (jämfört med 4–5 °C för heta metoder) eftersom sonden är nära sluttemperaturen före searing. Totalt eftertillagning efter den avslutande searing är 3–4 °C. Innertemperatur: 54–57 °C medium-rare. Dra vid 51–53 °C beroende på searing-intensitet.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Reverse-Sear Top Sirloin (American tradition)

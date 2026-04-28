@@ -2,6 +2,7 @@
 type: cut
 slug: roasted_onion
 name: Roasted Onion
+name_sv: Rostad lök
 category: vegetables
 meat: alliums
 cut_type: Alliums
@@ -37,6 +38,10 @@ quality_assessed: 2026-04-26
 
 Onions (*Allium cepa*) sautéed as a roasted-style preparation — thick wedges, large rounds, or quartered halves sautéed at medium-high heat in a pan — occupy the territory between caramelised onion (slow-cooked strips) and grilled whole onion. The goal is pieces that brown deeply and develop a caramelised crust while the interior softens and sweetens. This preparation is distinct from the slow caramelised-onion technique (which uses thin slices and low heat) and from grilling (which uses live fire). Internal temperature for fully sautéed onion wedges or rounds with a good crust: 86–92 °C (187–198 °F). MEATER probe inserted horizontally into the thickest wedge near the centre of the pan.
 
+
+## Styckesprofil
+
+Lökar (*Allium cepa*) sauterade som en ugnsrostningsstil — tjocka klyftor, stora rundlar eller kvartsade halvor sauterade vid medel-hög värme — befinner sig i territoriet mellan karameliserad lök och ugnsrostad lök. 10–15 minuter vid hög värme ger gyllenbrun yta och halvmjuk insida.
 
 ## Research files by cooking method
 

@@ -12,6 +12,10 @@ cut_type: Corn
 ## Cut profile
 Corn on the cob (*Zea mays*) in the air fryer achieves results similar to oven-roasting but in 12–16 minutes rather than 25–30, with the circulating hot air crisping the outer kernel rows quickly while the inner cob heats through. The corn must fit in the air fryer basket — a standard cob is too long and should be cut in half. The air fryer is particularly effective at caramelising the outer kernel rows to give a satisfying char without live fire. Pull temperature: 86–92 °C (187–198 °F). A MEATER probe is inserted through the kernel rows into the cob core at the mid-point of the half-ear. Husked halved corn ears are the standard preparation.
 
+## Styckesprofil
+
+Majs på kolven (*Zea mays*) i airfryern uppnår resultat liknande ugnsstekning men på 12–16 minuter snarare än 25–30, med den cirkulerande heta luften som krisprnar de yttre kärnorna. Pensla med smör och salt. Klar när kärnorna är lätt gyllenbruna och köttiga.
+
 ## Source recipes
 
 ### 1. Maangchi — Korean Air-Fried Corn (구운 옥수수 에어프라이어)

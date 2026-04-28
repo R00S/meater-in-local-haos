@@ -12,6 +12,10 @@ cut_type: Mushrooms
 ## Cut profile
 Portobello mushrooms (*Agaricus bisporus* mature) oven-roasted at 200–220 °C concentrate flavour dramatically as the high moisture content (≈ 90 %) evaporates. Placed gill-side-up on a sheet pan or in a dish, the caps act as natural cups that retain the concentrated cooking juices; gill-side-down produces a drier, more caramelised result. Whole caps take 20–25 minutes. The internal temperature at full doneness is 84–90 °C (183–194 °F). A MEATER probe is inserted through the convex cap skin into the thickest centre of the flesh, with the tip just above the gills; this avoids the hollow gill cavity which would read ambient air temperature.
 
+## Styckesprofil
+
+Portabello-svampar (*Agaricus bisporus* mogna) ugnsrostade vid 200–220 °C koncentrerar smaken dramatiskt. Placeras med gällsidan upp, olja, krydda. 20–25 minuter i ugn. Klar när djupt gyllenbrun och skrumpna med koncentrerad saft i gälarna.
+
 ## Source recipes
 
 ### 1. Fuchsia Dunlop — Hóng Shāo Dà Mó Gū (烤大蘑菇 — Chinese Roasted Portobello with Doubanjiang)

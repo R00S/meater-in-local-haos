@@ -2,6 +2,7 @@
 type: cut
 slug: venison_leg
 name: Leg
+name_sv: Hjortlår
 category: game
 meat: venison
 cut_type: Venison
@@ -46,6 +47,12 @@ quality_assessed: 2026-04-27
 ## Cut profile
 
 The venison leg (also called haunch, *Keule* in German, *cuisse* in French) is the entire hindquarter of the deer — a large primal that includes the rump, topside, silverside, and leg bone. It is the largest single cut from a deer carcass, typically weighing 2–4 kg for roe deer (*Capreolus capreolus*) or 4–8 kg for red deer (*Cervus elaphus*). Like all venison cuts, the leg is very lean (2–4% fat) and deeply flavoured, with a mildly gamey taste that varies by species, age of animal, and season. The leg has significant connective tissue between muscle groups, especially around the femur and in the seam between the topside and silverside — this makes it suitable for both oven roasting (where the connective tissue is kept tight, producing a firm, sliceable roast) and braising (where the collagen converts to gelatin, producing a richer, more tender result). Whole-leg oven roasting is a British, French, and Central European festive tradition. Braising (covered pot, oven, 160–180°C) is common in Germany (*Rehkeule geschmort*) and France (*cuisse braisée*). For oven roasting without braising liquid, the leg should be barded (wrapped in bacon) to compensate for the lack of fat. Target internal temperature for medium-rare: **54–57°C / 130–135°F** for oven-roasted leg; well-done braised leg reaches 80–90°C / 176–194°F.
+
+## Styckesprofil
+
+Viltbenet (haunche) är hela bakkvartetet av hjorten — ett stort primärsnitt inkluderande rumpen, innanlåret, utvändiga låret och lårbenad. Det är det största enskilda snittet från ett hjortkroppp, typiskt 2–4 kg för rådjur (*Capreolus capreolus*) och upp till 8 kg för kronhjort (*Cervus elaphus*).
+
+Möra muskler (innanlår) lämpar sig för ugnsrostning och mer öm tillagning; hårt arbetade muskler (bog, skank) gynnas av bräsering. Innertemperatur: **60–65 °C** för medium (rosa); **70–75 °C** för genomstekt utan bräsering; **88–95 °C** vid bräsering för fall-från-benet. Eftertillagning: 4–6 °C (ugnsrostning).
 
 ## Research files by cooking method
 

@@ -15,6 +15,12 @@ Braising is the definitive method for chuck roast because liquid-medium cooking 
 
 Pull temperature for fall-apart texture: **90–96 °C (194–205 °F)**. At these temperatures the connective tissue has fully converted and the muscle fibres shred with the grain. Carryover is negligible because the surrounding braising liquid buffers against temperature swings.
 
+## Styckesprofil
+
+Brässering är den självklara metoden för fransyska eftersom vätskebaserad tillagning vid 150–165 °C direkt påskyndar hydrolys av kollagen till gelatin: kollagen börjar mjukna vid ungefär 70 °C men omvandlas fullständigt på 1,5–4 timmar beroende på ugnstemperatur och bitens storlek. Den omgivande bräseringsvätskan (vin, fond, aromater) absorberar det utsmälta fettet och det lösta gelatinet och bildar en självtjocknande sås. Fransyskan bryns vanligtvis ordentligt först — för att utveckla en maillardbrunt yta — och läggs sedan i en täckt gjutjärnsgryta eller bräseringskärl, delvis eller helt nedsänkt.
+
+Dragtemperatur för konsistens som faller isär: **90–96 °C (194–205 °F)**. Vid dessa temperaturer har bindväven omvandlats fullständigt och muskelfibrerna delas längs fiberns riktning. Eftertillagning är försumbar eftersom den omgivande bräseringsvätskan motverkar temperatursvängningar.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Braised Chuck Roast (Pot Roast)

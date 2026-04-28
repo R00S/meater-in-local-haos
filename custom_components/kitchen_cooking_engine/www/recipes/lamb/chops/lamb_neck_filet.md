@@ -2,6 +2,7 @@
 type: cut
 slug: lamb_neck_filet
 name: Lamb Neck Filet
+name_sv: Lammhalsfilé
 category: lamb
 meat: lamb
 cut_type: Chops
@@ -55,6 +56,12 @@ quality_assessed: 2026-04-27
 ## Cut profile
 
 Lamb neck fillet (*lammhalsfilé* in Swedish, *Lammhalsfilet* in German) is the deboned, cleaned fillet from the neck of a lamb. Unlike the bone-in neck, which is cut into thick rounds (neck slices), the fillet is a long, cylindrical muscle strip removed from the cervical vertebrae. The neck muscles are constantly working, making the meat deeply flavourful but denser and tougher than loin cuts — consequently it is best suited to low-and-slow moist-heat cooking methods (braise, slow cooker) to reach fork-tender doneness. In Scandinavian butchery the neck fillet is a distinct product sold separately, popular in Swedish home cooking for braises and pan-fried "biffs" (small steaks). When pan-seared as a quick steak, it requires tenderising (marinating) and benefits from being served at medium rather than rare; unlike tenderloin or rack, it does not reward undercooking. Braised or slow-cooked to 85–95°C / 185–203°F, it becomes silky and falls apart.
+
+## Styckesprofil
+
+Lammhalsfilé (*lammhalsfilé*, svenska; *Lammhalsfilet*, tyska) är den urbenade, rensade filén från lammets hals. Till skillnad från benhalssnitt — som skärs i tjocka rundlar — är filén en lång, cylindrisk muskelstrimla löst från halsryggraden. Halshuskelerna är de mest hårt arbetade i slaktkroppen med tätast kollagen och djupast smak av alla lammsnitt.
+
+Kokar långsamt till mörhet (85–90 °C) via bräsering eller slow cooker; pannsteks snabbt till medium (65–70 °C) om skuren tunn. Innertemperatur: **65–70 °C** (pannstekning); **85–90 °C** (bräsering/slow cooker). Eftertillagning: 2–3 °C (pannstekning). Sond in längsvis in till mitten av filén.
 
 ## Research files by cooking method
 

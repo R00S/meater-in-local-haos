@@ -2,6 +2,7 @@
 type: cut
 slug: turkey_thigh
 name: Turkey Thigh
+name_sv: Kalkonlår
 category: poultry
 meat: turkey
 cut_type: Turkey
@@ -46,6 +47,10 @@ USDA minimum safe temperature is **74 °C (165 °F)** for all poultry. Most culi
 Turkey thigh is primarily cooked by oven roasting in Western culinary traditions, especially around Thanksgiving and Christmas. It appears as a holiday substitute for whole turkey in smaller households. Culinary research found almost no dedicated turkey thigh recipes outside North America — the cut is typically cooked as part of a whole bird rather than as a standalone product in most global traditions.
 
 Target internal temperature: **165 °F (74 °C)** minimum — **170–175 °F (77–79 °C)** preferred for dark meat
+
+## Styckesprofil
+
+Kalkontlår är den övre benets mörka köttssektion av kalkon, från höften till knäleden. Det säljs benfritt med skinn på eller benfritt skinnat. Innertemperatur: 80 °C. Eftertillagning: 4–5 °C. Mer saftigt och förlåtande än kalkonbröst.
 
 ## Research files by cooking method
 

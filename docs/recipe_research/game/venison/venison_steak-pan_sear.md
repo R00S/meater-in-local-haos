@@ -30,6 +30,12 @@ The European tradition across the UK, Germany, Scandinavia and Italy pairs venis
 
 Target internal temperature: pull at **54–57°C (130–135°F)** for medium-rare. Venison dries out rapidly above 65°C and should never be cooked to well-done.
 
+## Styckesprofil
+
+Viltstek avser vanligen snittet från haunchen (bakbenet), loin eller ryggsträng av hjort — typiskt rådjur (*Capreolus capreolus*), kronhjort (*Cervus elaphus*) eller dovhjort (*Dama dama*). Ryggsträngen och loin-medaljonger föredras för pannstekning: de är finkorniga, magra och snabbkokade.
+
+Pannsteksningstiden: 3–4 minuter per sida i smör vid hög värme. Sond insatt från sidan in till mitten. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Välgenomstekt avråds starkt. Eftertillagning: 3–4 °C.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Pan-Fried Venison with Blackberry Sauce (UK tradition)

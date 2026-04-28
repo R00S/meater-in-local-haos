@@ -4,6 +4,12 @@
 
 Lamb brisket (also called lamb breast, especially in UK/European usage) comes from the belly of the lamb — the same anatomical position as pork belly. It consists of layered intercostal muscles, rib bones, and significant deposits of intramuscular fat held together by dense connective tissue. Because the breast muscles are used constantly for breathing, they are tough, chewy, and collagen-rich — the exact qualities that reward low-and-slow moist cooking. At 85–93°C the collagen converts to gelatin, the fat renders, and the meat becomes fork-tender or pull-apart. Carryover cooking is significant (4–6°C) owing to the high fat content, so the meat will continue to rise after being pulled from heat. Sold boneless/rolled or bone-in; both forms braise equally well.
 
+## Styckesprofil
+
+Lammbrisket (UK: *lamb breast*) är lammets mage — anatomiskt ekvivalent med fläskbuk. Det består av skiktade interkostalsmuskler, revbensben och substansiella intramuskulära och yttre fettdepåer bundna av tät bindväv. Magemusklerna arbetar konstant vid andning.
+
+För att nå ätbar konsistens kräver lammbrisket låg-och-långsam tillagning: bräsering (160–170 °C, 2–3 timmar täckt), ugnsrostning (150 °C, 3–4 timmar). Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet-möra resultat. Eftertillagning: försumbar (braiseringsvätska). Sond in i tjockaste köttmassan, borta från revbenslben.
+
 ## Source recipes
 
 ### 1. The Woks of Life / Cantonese — Zhi Zhu Yangrou Bao (枝竹羊肉煲) — Chinese Braised Lamb Casserole Hong Kong Style

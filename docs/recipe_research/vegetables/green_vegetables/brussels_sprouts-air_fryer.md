@@ -12,6 +12,10 @@ cut_type: Green Vegetables
 ## Cut profile
 Brussels sprouts (*Brassica oleracea* var. *gemmifera*) in the air fryer become intensely caramelised and golden-charred on the cut faces in 12–16 minutes at 190–200 °C — faster than a conventional oven, with crispier outer leaves. They should be halved through the core (the flat face caramelises maximally), very dry, and generously oiled. Pull temperature: 82–88 °C (180–190 °F) for charred-golden outer leaves with a tender, sweet interior. MEATER probe inserted through the outer leaves of the largest sprout into its core.
 
+## Styckesprofil
+
+Brysselkål (*Brassica oleracea* var. *gemmifera*) i airfryern blir intensivt karameliserad och gyllenbrun på snittytan på 12–16 minuter vid 190–200 °C. Halvera, olja, krydda. Klar när snittytan är djupt karameliserad och ytterbladen är knapriga.
+
 ## Source recipes
 
 ### 1. Maangchi — Korean Air-Fried Brussels Sprouts (Korean tradition)

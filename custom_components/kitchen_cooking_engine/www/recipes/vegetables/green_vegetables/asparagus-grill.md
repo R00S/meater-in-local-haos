@@ -12,6 +12,10 @@ cut_type: Green Vegetables
 ## Cut profile
 Asparagus (*Asparagus officinalis*) on the grill develops an ideal contrast between the charred, slightly bitter tips and the tender, sweet stems. The spears should be thick enough (≥ 1 cm at the base) to survive direct grill heat without falling through the grates; if thinner, use a grill basket or skewer the spears in bundles. Grill time: 6–10 minutes, depending on thickness, at medium-high to high heat, turning once or twice. Pull temperature: 82–88 °C (180–190 °F) at the thickest part of the stem for tender-crisp asparagus with char-marked tips. A MEATER probe is inserted along the long axis of the largest, thickest spear from the cut base end, with the tip at the mid-point of the spear.
 
+## Styckesprofil
+
+Sparris (*Asparagus officinalis*) på grillen utvecklar en idealisk kontrast mellan de förkolnade, lätt bittra topparna och de möra, söta stjälkarna. Grilla oljad sparris direkt på gallret vid hög värme i 4–6 minuter med vändning. Klar när lätt förkolnad med synliga grillränder.
+
 ## Source recipes
 
 ### 1. Harumi Kurihara — Asparagus Yakimono (Japanese grilled asparagus)

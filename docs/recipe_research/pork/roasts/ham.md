@@ -2,6 +2,7 @@
 type: cut
 slug: ham
 name: Ham
+name_sv: Skinka
 category: pork
 meat: pig
 cut_type: Roasts
@@ -57,6 +58,12 @@ Glazing is universal across all traditions: sweet (maple syrup, brown sugar, hon
 juice, fruit jam) balanced with a tangy counterpoint (mustard, citrus) and warm spice (cloves,
 allspice, cinnamon). The glaze is applied in the final 15–45 minutes at elevated heat (200–225 °C)
 and basted repeatedly to build a lacquered crust over the scored fat.
+
+## Styckesprofil
+
+Skinka är grisens bakben — *biceps femoris* och omgivande muskler i det övre bakbenet — härdad med salt, rökning eller båda. Till skillnad från alla andra fläsksnitt anländer härdad skinka inte rå: härdning omvandlar den till en hållbar produkt med karakteristisk salt-söt smakprofil.
+
+Tillagningstemperaturer: **68–72 °C** för genomvarm, saftig; **60–65 °C** för varm men fortfarande djupt rosa (tunnare skärning). Eftertillagning: 3–4 °C. Sond in i tjockaste köttmassan, borta från lårbenets kärna. Vila 15 minuter täckt.
 
 ## Research files by cooking method
 

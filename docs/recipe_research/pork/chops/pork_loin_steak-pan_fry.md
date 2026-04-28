@@ -14,6 +14,12 @@ cut_type: Chops & Tenderloin
 Pan frying is the primary method for pork loin steak: hot pan, butter baste, same technique as a pork chop. The lean, uniform cross-section sears evenly without hotspots. Begin with a dry, hot pan (180–200 °C) and a small amount of oil to prevent sticking; once the first face is seared (1.5–2 min), flip, add butter and garlic, and baste continuously for 1.5–2 minutes. The butter baste compensates for the low intramuscular fat and adds richness.
 
 Because the cut is lean, pull early: 61–63 °C for a very slightly pink, moist interior; carryover will bring it to 63–65 °C. At 70 °C the loin steak becomes noticeably dry. MEATER probe from the side of the steak, aimed at the geometric centre. Carryover: 2–4 °C.
+## Styckesprofil
+
+Pannstekning av fläskloin-stek: het panna, smörbastning, samma teknik som fläskkotlett. Det magra, enhetliga tvärsnittet sears jämnt utan varma punkter.
+
+Börja med torr, het panna (180–200 °C) och lite olja för att förhindra fastsnande. 3–4 minuter per sida, sista minuten bastning med smör och vitlök. Innertemperatur: **63–65 °C (145–149 °F)** USDA; **70 °C** genomstekt. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till mitten av steaken. Vila 5 minuter.
+
 ## Source recipes
 
 ### 1. Madens Verden — Pandestegning af koteletter (adapted for loin steak) (Danish tradition)

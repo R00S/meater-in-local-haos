@@ -18,6 +18,12 @@ Target internal temperatures (smoker):
 - Medium: **pull at 57–60 °C (135–140 °F)**
 - Times: approx. 30 min/lb (65 min/kg) at 225 °F / 107 °C
 
+## Styckesprofil
+
+Rökning av tri-tip lågt och långsamt vid 107–120 °C (225–250 °F) ger exceptionella resultat: det magra köttet absorberar trädröksmak djupt, och den låga temperaturen förhindrar de magra delarna från att torka ut. Hickory är det traditionella trädet för nötkött; mesquite fungerar men är mer aggressivt. Pelletrökar är idealiska (konsekvent temperatur, ingen övervakning); kolgrill-rökar ger mer autentisk smak.
+
+Dragtemperaturen är 57–60 °C (135–140 °F) för medium, sedan en kort searing för skorpan. Tri-tipens triangelform innebär att den tunna änden alltid blir mer genomstekt — sonden ska placeras i den tjockaste sektionen. Tillagningstid: ungefär 30 minuter per pund (65 min/kg) vid 107 °C. Innertemperatur: 57–63 °C (medium). Skär alltid tvärs mot fibern — fibern byter riktning i mitten av snittet.
+
 ## Source recipes
 
 ### 1. Immaculate Bites (africanbites.com) — Smoked Tri Tip (Californian / West African tradition)

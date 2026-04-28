@@ -2,6 +2,7 @@
 type: cut
 slug: baked_potato
 name: Baked Potato
+name_sv: Bakad potatis
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables
@@ -28,6 +29,10 @@ quality_assessed: 2026-04-26
 
 Whole baked potato (*Solanum tuberosum*) in the conventional oven is the archetype of long, slow dry-heat cooking: 60–80 minutes at 200–220 °C, producing a deeply crispy, salt-encrusted skin and a fluffy, steamy interior. The internal temperature at complete doneness is 96–98 °C (205–208 °F) — below this, the centre remains dense and waxy; above it, the texture is optimal and floury. Russet (Idaho) and baking potatoes (high-starch varieties) achieve the best results; waxy varieties produce a gluey, dense result. A MEATER probe is inserted along the long axis into the geometric centre of the potato before it goes in the oven.
 
+
+## Styckesprofil
+
+Hel bakad potatis (*Solanum tuberosum*) i konventionell ugn är arketypen av lång, långsam torrvärme-tillagning: 60–80 minuter vid 200–220 °C, vilket ger ett djupt knaprig, saltinkrustat skinn och en helt fluffig, ångande insida. Klar när insidan är 98–100 °C.
 
 ## Research files by cooking method
 

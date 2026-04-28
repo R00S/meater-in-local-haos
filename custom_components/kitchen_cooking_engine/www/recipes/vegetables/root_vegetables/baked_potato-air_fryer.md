@@ -12,6 +12,10 @@ cut_type: Root Vegetables
 ## Cut profile
 Whole baked potato (*Solanum tuberosum*) in the air fryer achieves a crispy, salty skin and fluffy interior in 35–45 minutes at 200 °C — significantly faster than the conventional oven (60–90 minutes) and with superior skin crispness due to the circulating hot air. A medium-to-large potato (200–250 g) takes 35–40 minutes; a very large potato (350+ g) takes 45–50 minutes. Pull temperature: 96–98 °C (205–208 °F) at the thickest centre. A MEATER probe is inserted along the long axis into the thickest central point of the potato before air frying begins. At 96–98 °C the starch granules are fully gelatinised and the interior is completely fluffy.
 
+## Styckesprofil
+
+Hel bakad potatis (*Solanum tuberosum*) i airfryern uppnår knaprig, salt yta och fluffig insida på 35–45 minuter vid 200 °C — väsentligt snabbare än konventionell ugn. Stick hål, olja, salt. Klar när skinnet är knaprig och insidan 98–100 °C.
+
 ## Source recipes
 
 ### 1. Madhur Jaffrey — Masala Air-Fried Baked Potato (Indian tradition)

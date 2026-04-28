@@ -12,6 +12,10 @@ cut_type: Ground
 ## Cut profile
 Ground beef (minced beef) is made by grinding beef, most commonly from the chuck primal or a blend of trimmings. The fat-to-lean ratio is the primary quality variable: 80/20 is standard for most preparations; 85/15 is leaner; 70/30 is richer and juicier. Because grinding ruptures muscle cells and distributes surface bacteria throughout the mass, the USDA and equivalent international food-safety authorities require a minimum internal temperature of 71°C (160°F) — there is no medium-rare option for ground beef the way there is for whole steaks. Carryover is minimal (1–2°C) given the fine grind and rapid heat transfer.
 
+## Styckesprofil
+
+Malet nötkött (köttfärs) framställs av nötmalning, vanligast från fransyska, bringa eller blandningar av dessa, och innehåller 15–30 % fett. Till skillnad från hela muskelstycken saknar köttfärs inre bindvävsstruktur — malningen har redan söndrat muskelfibrerna — så "brässering" av malet nötkött innebär att man kokar det i vätska för att mjuka smöret, absorbera smaker och eventuellt tjockna en sås snarare än att omvandla kollagen. Fuktigt tillagad köttfärs producerar ett mjukt, grynigt resultat; den interna temperaturen bör nå 74 °C av livsmedelssäkerhetsskäl (inte av texturskäl som för hela muskler).
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Pan-Fried Browned Ground Beef (American food-science tradition)

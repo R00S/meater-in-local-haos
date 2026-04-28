@@ -17,6 +17,12 @@ Target internal temperatures (oven roast):
 - Juicy, sliceable: **72–75 °C (162–167 °F)**
 - Very tender (approaching pulled): **80–85 °C (176–185 °F)**
 
+## Styckesprofil
+
+Fläskaxel / nacke (*nakkefilet* / *nakkekam* / *svinekølle* danska; *Schweinenacken* / *Schweineschulter* tyska) är ett av de mest förlåtande snitten för ugnen — fettmarmorering förhindrar uttorkning och det utvecklar komplex smak vid höga temperaturer.
+
+Ugnsrostning: 160–200 °C i 2–4 timmar. Innertemperatur: **75–80 °C (167–176 °F)** för genomstekt, saftig axel; **88–95 °C** för pull-apart pulled pork. Eftertillagning: 3–5 °C. Sond in i tjockaste köttmassan, borta från skulderbladsben. Vila täckt 15–20 minuter.
+
 ## Source recipes
 
 ### 1. Madens Verden — Nakkekam i Ovn, Langtidsstegt i Bradepande (Danish tradition)

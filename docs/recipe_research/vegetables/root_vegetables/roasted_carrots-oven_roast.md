@@ -12,6 +12,10 @@ cut_type: Root Vegetables
 ## Cut profile
 Carrots (*Daucus carota*) oven-roasted at 200–220 °C develop intensely caramelised, golden surfaces in 25–35 minutes. The natural sugars (6–8 g/100 g — higher than most vegetables) caramelise readily at these temperatures, producing a characteristic sweetness and amber colour. Carrots can be roasted whole (small/medium), halved lengthwise, cut into batons or large coins. Pull temperature: 88–92 °C (190–198 °F) for caramelised, fully tender carrots. MEATER probe inserted along the long axis of the thickest piece.
 
+## Styckesprofil
+
+Morötter (*Daucus carota*) ugnsrostade vid 200–220 °C utvecklar intensivt karameliserade, gyllenbruna ytor på 25–35 minuter. De naturliga sockerarterna (6–8 g/100 g — högre än de flesta grönsaker) reagerar kraftigt med Maillard-reaktion. Klar när gyllenbrun och genomstekt.
+
 ## Source recipes
 
 ### 1. Claudia Roden — Carottes Rôties à la Marocaine (Moroccan tradition)

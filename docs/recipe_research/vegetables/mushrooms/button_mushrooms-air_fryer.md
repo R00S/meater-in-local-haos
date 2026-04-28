@@ -12,6 +12,10 @@ cut_type: Mushrooms
 ## Cut profile
 Button mushrooms (*Agaricus bisporus*) in the air fryer roast in 8–12 minutes at 200 °C — significantly faster than an oven — with the circulating hot air dehydrating the surface moisture that would otherwise cause steaming and prevent browning. The main enemy of mushroom browning is moisture: the caps contain ≈ 92 % water, and this must be driven off before Maillard browning can occur. The air fryer's rapid convection achieves this faster than any conventional oven method. Internal pull temperature for fully roasted button mushrooms in the air fryer: 80–86 °C (176–187 °F) — at this point the exterior is golden-brown and the interior is silky, juicy and fully cooked. A MEATER probe is inserted through the side of the largest cap into its geometric centre before the cook begins.
 
+## Styckesprofil
+
+Champinjoner (*Agaricus bisporus*) i airfryern rostas på 8–12 minuter vid 200 °C — väsentligt snabbare än ugn — med den cirkulerande heta luften som dehydrerar ytan. Hela eller halverade, lite olja, krydda. Klar när gyllenbrun och skrumpna.
+
 ## Source recipes
 
 ### 1. Fuchsia Dunlop — Air-Fried Shuāng Gū (双菇 — Chinese double-mushroom stir-fry, air fryer adaptation)

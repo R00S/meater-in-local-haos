@@ -21,6 +21,15 @@ The sirloin roast (top sirloin roast in North American butchery) is a boneless o
 
 **Group A gap**: Oven-roasting a whole sirloin joint is not a documented culinary tradition in the cooking cultures of South Asia, East Asia, or South-East Asia as accessed through verified sources in this project. The closest approximation — Chinese *red-braised* beef or Kerala stovetop beef roast — uses braising liquids and stovetop heat, not a dry oven. No Group A recipe is cited in this leaf; the gap is noted and will remain open until a verified source is found.
 
+## Styckesprofil
+
+Sirloinrosten (top sirloin roast i nordamerikansk styckning) är en benfri eller ben-in joint från short loin eller top sirloin – den bakre delen av länden, bakom revbenet och framför round. Den är betydligt magrare än rib roast och prime rib, med måttligt intramuskulårt fett och en fettkappa på en sida. Bindvävsinnehållet är modest: till skillnad från chuck eller round behöver den inte kollagenupplösande temperaturer. Det gör ugnsrostning vid måttliga temperaturer (inte bräsering) till den dominerande metoden världen över.
+
+Vad ugnsrostning gör med sirloin: ugnen ger omgivande torr värme som dehydrerar ytan (uppmuntrar Maillard-bryning vid hög start) medan insidan värms långsamt mot målet. De flesta moderna recept använder två faser – hög värme (200–220 °C) eller brynpanna för ytfärg, sedan måttlig värme (160–180 °C) för kärnan. Alternativt är reverse-sear (låg ugn först, högvärmeavslut) och ultra-låg metod (70–80 °C i flera timmar) båda väldokumenterade.
+
+Eftervärme: en hel sirloin-joint (1–2 kg) får 4–8 °C eftervärme beroende på ugnstemperatur och viloförhållanden. Både franska och australiska källor noterar att dra vid 44–47 °C och vila 20–30 minuter är nödvändigt för att nå 50–55 °C medium-rare. Den danska lågtemperaturmetoden (57 °C i 80 °C ugn) ger nästan noll eftervärme eftersom det knappt finns någon temperaturgradient i köttet.
+
+Sondplacering: från änden, vinklad mot det geometriska centrumet av den magra muskeln. Undvik fettkappan (ger falskt låga värden eftersom fett leder värme dåligt). På ben-in sirloin håll spetsen minst 1,5 cm från benytan.
 ## Source recipes
 
 ### 1. Chef Simon — Rôti de Boeuf (French classical tradition)

@@ -2,6 +2,7 @@
 type: cut
 slug: rack_of_lamb
 name: Rack of Lamb
+name_sv: Lammracks
 category: lamb
 meat: lamb
 cut_type: Roasts
@@ -60,6 +61,12 @@ Because the meat is from the loin and has very little connective tissue, rack of
 
 Target internal temperature: **52–57 °C (126–135 °F)** for medium-rare (the universal preference). Pull at 50–52 °C.
 
+
+## Styckesprofil
+
+Rack of lamb (rev-sektionen med 7–8 frenserade revbensben) är ett av de mest prestigefyllda rostningsstycken. En Frenchad rack, belagd med örtkorpa, är ett imponerande festmåltidsstycke. Ugnsrostning ger mest kontrollerade resultat.
+
+Sear all om i het panna (1–2 minuter per sida), belägg med senap och örtkorpa (*persillade*), rosta i ugn vid 200–220 °C tills sonden visar måltemperaturen. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare. Eftertillagning: 4–5 °C. Sond in i *longissimus dorsi*-muskeln borta från benet. Vila 5–8 minuter täckt.
 
 ## Research files by cooking method
 

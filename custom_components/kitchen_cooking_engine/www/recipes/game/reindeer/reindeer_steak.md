@@ -2,6 +2,7 @@
 type: cut
 slug: reindeer_steak
 name: Reindeer Steak
+name_sv: Renfilé
 category: game
 meat: reindeer
 cut_type: Reindeer
@@ -55,6 +56,12 @@ quality_assessed: 2026-04-27
 
 Reindeer (*Rangifer tarandus*) is the traditional game meat of Sápmi (Lapland), northern Finland, Norway, and Sweden. The fillet (renfilé) and backstrap (sadel) are the premium steak cuts — structurally equivalent to the beef tenderloin and striploin respectively, cut from the *psoas major* and *longissimus dorsi*. Reindeer meat is very lean, deep red, and has a delicate sweet-earthy flavour milder than moose or red deer. Because of its leanness it cooks faster than beef of equivalent thickness and has a narrow safe window: medium-rare (55–57 °C / 131–135 °F) is the Nordic standard. Above 65 °C the meat becomes dry and tough.
 
+
+## Styckesprofil
+
+Ren (*Rangifer tarandus*) är det traditionella viltköttet i Sápmi (Lappland), norra Finland, Norge och Sverige. Filén (renfilé) och sadelryggen är de bästa steaksnitten — strukturellt ekvivalenta med nötbiff respektive striploin, skurna från *psoas major* och *longissimus*.
+
+Pannstekning är den vanligaste metoden i det skandinaviska hemmaköket: smör, hög värme, 3–4 minuter per sida, kort vila. Sonden är avgörande — renkött är extremt magert och kan inte bedömas visuellt (det är alltid djupt rött). Innertemperatur: **52–57 °C (126–135 °F)** för medium-rare. Eftertillagning: 3–4 °C. Välgenomstekt avråds starkt.
 
 ## Research files by cooking method
 

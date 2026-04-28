@@ -17,6 +17,13 @@ Carryover in a pan-seared ribeye is moderate, typically 3–5 °C for a standard
 
 Probe placement requires care because of the ribeye's internal fat structure. For a boneless cut the probe should enter from the side of the steak, aimed at the geometric centre of the eye muscle — the densest lean section. It must avoid the internal fat seam that often runs between the eye and the spinalis (cap muscle): inserting into fat gives a false-low reading. On bone-in versions (côte de bœuf, cowboy ribeye), the probe must enter from the meaty side and travel to the centre of the eye, never near the bone — bone conducts heat differently from muscle and will produce a misleading reading in either direction depending on pan orientation.
 
+## Styckesprofil
+
+Pan-searing och ribeye är en exceptionell kombination just på grund av snittets signum: det tunga intramuskulära fettet. När ytan på en ribeye möter en rykande het gjutjärns- eller kolstålyta sker två saker samtidigt – de magra muskelproteinerna i ytan genomgår Maillard-bryning, och fettfickorna intill börjar rendera och skapar sitt eget tillagningsmedium under bryningen. Det renderade fettet basar skorpan inifrån köttet istället för att samlas i pannan, vilket ger en självberikande bryning som magrare snitt som filet mignon inte kan åstadkomma. Resultatet blir att pan-searad ribeye är mer förlåtande än de flesta biffar: tack vare marmoreringen som håller insidan saftig kan en kock som överskjuter medium-rare med några grader ändå få ett mycket bra resultat – fettet döljer misstaget.
+
+Eftervärmen i en pan-searad ribeye är måttlig, vanligtvis 3–5 °C för ett normalt benfritt snitt på 2,5–3 cm tjocklek. Den heta metallpannan ger intensiv ytvär me som försvinner när biffen tas upp, men fettinnehållet saktar ner den interna temperaturequilibreringen – fett leder värme sämre än mager muskel – så kärnan i en ribeye blir jämn något långsammare än i en mager biff av samma tjocklek. Vila på ett galler (inte tallrik) hindrar att bottenytan ångar i sin egen vätska och bevarar skorpt exturen.
+
+Sondplacering kräver omsorg på grund av ribeyens interna fettstruktur. För ett benfritt snitt bör sonden gå in från sidan, riktad mot det geometriska centrumet av ögat – den tätaste magra delen. Den måste undvika det interna fettvalket som ofta löper mellan ögat och spinalis (rib cap); att sätta sonden i fett ger falskt låga värden. På ben-in-versioner (côte de bœuf, cowboy ribeye) måste sonden gå in från den köttiga sidan och nå ögats centrum, aldrig nära benet – ben leder värme annorlunda än muskel och kan ge vilseledande avläsningar beroende på pannans orientering.
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Butter-Basted Pan-Seared Thick-Cut Ribeye (American tradition)

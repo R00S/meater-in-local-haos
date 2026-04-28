@@ -2,6 +2,7 @@
 type: cut
 slug: sea_bass
 name: Sea Bass
+name_sv: Havsabborre
 category: fish
 meat: white_fish
 cut_type: White Fish
@@ -59,6 +60,10 @@ from translucent to opaque at approximately 55–58 °C and is fully cooked at 6
 A MEATER probe in thin fillets must be inserted from the edge (laterally) rather than
 from above; in thicker whole or butterflied fish it is inserted into the thickest shoulder.
 
+
+## Styckesprofil
+
+Europeisk havsabborre (*Dicentrarchus labrax*, italiensk: branzino/spigola, turkisk: levrek, svenska: havsabborre) är en uppskattad mager vitfisk med måttligt fast, flakigt vitt kött och ett tunt men distinkt smakande skinn som blir utmärkt knaprig vid pannsearing. Stek skinnsidan ned i het smörpanna under press (för att förhindra att köttet böjer sig) i 3–4 minuter; vänd för 1–2 minuter. Innertemperatur: 58–62 °C. Skinnet ger det bästa smakdraget på denna fisk.
 
 ## Research files by cooking method
 

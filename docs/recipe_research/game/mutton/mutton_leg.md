@@ -2,6 +2,7 @@
 type: cut
 slug: mutton_leg
 name: Mutton Leg Roast
+name_sv: Fårlår
 category: game
 meat: mutton
 cut_type: Mutton
@@ -57,6 +58,12 @@ A whole mutton leg (bone-in, 2–3 kg) is a festive cut in the Middle East, Paki
 
 Target internal temperature: **75–80 °C (167–176 °F)** for fully cooked, still juicy. Some Pakistani and Indian recipes cook to 85 °C for fall-apart texture.
 
+
+## Styckesprofil
+
+Ett helt fårben (med ben, 2–3 kg) är ett festsnitt i Mellanöstern, Pakistan, Afghanistan, Storbritannien och delar av Europa. Den starka, mogna smaken gynnas av marinering och lång, långsam ugnsstekning vid 160–180 °C i 2,5–4 timmar, täckt för majoriteten av tiden.
+
+Fårbenets starka smak kräver kraftfull kryddning — spiskummin, kardemumma, ingefära, vitlök och yoghurt är gemensamma marinadelement. Vila 15–20 minuter täckt före skärning. Innertemperatur: **75–80 °C (167–176 °F)** för fullt genomstekt, fortfarande saftigt. 85 °C för fall-apart. Eftertillagning: 3–5 °C. Sond i tjockaste köttdelen borta från lårbenet.
 
 ## Research files by cooking method
 

@@ -12,6 +12,10 @@ cut_type: Corn
 ## Cut profile
 Corn on the cob (*Zea mays*) oven-roasted in its husk, or stripped and oven-roasted at high heat, produces a gentler result than live-fire grilling but still concentrates the natural sugars as moisture evaporates. At 200–220 °C, husked corn ears roast on a sheet pan in 25–30 minutes, the exposed kernels caramelising and taking on colour on the outer rows. Corn roasted in its husk achieves a steam-cooking effect — the kernels stay moist and cook evenly to 90–96 °C (194–205 °F) in 30–35 minutes. Pull temperatures: 88–92 °C (190–198 °F) for husked oven-roasted; 90–95 °C (194–203 °F) for in-husk. A MEATER probe is inserted through the kernel rows into the cob core at the mid-point, in any orientation.
 
+## Styckesprofil
+
+Majs på kolven (*Zea mays*) ugnsrostad i sina skal, eller skalad och ugnsrostad vid hög värme, ger ett varsamt resultat än grillning men koncentrerar fortfarande de naturliga sockerarterna. Ugn vid 200–220 °C i 20–25 minuter. Klar när kärnorna är lätt gyllenbruna.
+
 ## Source recipes
 
 ### 1. Diana Kennedy — Elotes Asados al Horno (Mexican tradition)

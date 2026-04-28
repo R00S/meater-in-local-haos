@@ -36,6 +36,10 @@ it would belong to a separate "braise" or "stir_fry" method leaf.
 **Culinary Group C gap**: No confirmed rump steak pan-sear recipe was found on cheftariq.com,
 marocmama.com, or africanbites.com after URL probing.
 
+## Styckesprofil
+
+Nötrumpa i biffform skärs från rumpprimalen — det område vid korsningen av bakkvarteret och ryggen, bakåt om entrecôten. Rumpsbiffen är mager med minimal marmorering men en tydlig, intensiv nötköttssmak från det lite hårt arbetade köttet. Den karakteristiska yttre fettlisten, om den lämnas kvar, smälter och bidrar med smak under tillagning vid hög värme. Pansearing ger bästa resultat för rumpsbiffen: en het panna skapar en maillardyta och sätter smaken snabbt. Innertemperatur: 54–57 °C för medium-rare, max 60 °C för medium — vid 63 °C och över torkar det magra köttet snabbt. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. Good Food — Rump Steak (British tradition)

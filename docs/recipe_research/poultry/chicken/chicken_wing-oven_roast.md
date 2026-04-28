@@ -28,6 +28,12 @@ Unlike the air fryer, a conventional oven has a larger chamber and slower air ci
 
 Wings come out with golden-brown, crispy skin and fully cooked dark meat. The thin wing bones and high skin-to-meat ratio mean the interior reaches 165 °F (74 °C) well before the skin has had time to over-brown at 220 °C, making oven wings exceptionally forgiving. Carryover is 1–2 °C.
 
+## Styckesprofil
+
+Ugnsrostning av kycklingvingar vid hög värme (200–230 °C / 390–445 °F) är den mest tillgängliga hemmetoden för krispiga resultat utan specialutrustning. Ugnen omger vingarna med konvektionsvärme som smälter ned subcutant fett och brynnar skinnet.
+
+Tillagningstid: 40–45 minuter vid 200–220 °C med vändning halvvägs. Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond in i trommelstockens tjockaste del, borta från benet.
+
 ## Source recipes
 
 ### 1. Taste of Home — Baked Chicken Wings

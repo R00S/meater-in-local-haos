@@ -13,6 +13,12 @@ cut_type: Steaks
 
 The New York strip on the grill benefits from the direct radiant and convective heat of a gas or charcoal grill to produce pronounced grill marks and a lightly smoky exterior while the moderate marbling keeps the interior moist. The strip's firm, single-muscle composition makes it more forgiving of higher direct heat than the ribeye — it can be cooked over screaming-hot coals without the fat flare-ups that a ribeye's heavier marbling creates. The fat cap, rendered against the grates, crisps and delivers flavour to the exterior. Indirect-heat finishing after initial direct searing allows thick strip steaks to reach medium-rare temperature evenly. Carryover from a very hot charcoal grill is 4–6 °C; from a gas grill somewhat less.
 
+## Styckesprofil
+
+New York strip på grillen drar nytta av direkt strålnings- och konvektionsvärme från gas- eller träkolsgrill för att producera uttalade grillränder och en lätt rökig yta medan den måttliga marmoreringen håller insidan saftig. Stripens fasta, enmuskel-sammansättning gör den mer förlåtande mot högre direkt värme än entrecôte — den kan tillagas över glödande kolar utan de fettuppflammor som entrecôtens kraftigare marmorering skapar.
+
+Fettlisten, smält mot grillgallret, krispar och tillager smak på utsidan. Indirekt värme-avslutning efter initial direktsearing gör det möjligt för tjockt skivade strip steaks att nå medium-rare temperatur jämnt. Eftertillagning från en mycket het träkolsgrill är 4–6 °C; från en gassgrill något mindre. Innertemperatur: 54–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. Steven Raichlen — Grilled Strip Steaks with Cowboy Butter (American tradition)

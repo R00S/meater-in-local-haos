@@ -12,6 +12,10 @@ cut_type: Alliums
 ## Cut profile
 Slow-caramelised onions via sauté are one of the most fundamental flavour-building techniques in global cooking. Sliced onions sautéed over medium-low heat lose 60–70 % of their water content over 30–60 minutes, concentrating their sugars (fructose and glucose) until Maillard and caramelisation reactions produce a deep amber-brown, jammy condiment with complex sweet, savoury, and slightly bitter flavours. The process requires patience — onions that are cooked fast at high heat brown through rapid Maillard rather than true caramelisation, producing a different result. The target internal temperature of 90–96 °C (194–205 °F) corresponds to the point where nearly all free water has evaporated from the residual pan-mass and the sugars have concentrated and transformed. Carryover after removal is irrelevant — the slow cook is self-regulating.
 
+## Styckesprofil
+
+Långsamt karameliserade lökar via sauté är en av de mest grundläggande smaksättningstekniker i global matlagning. Skivad lök sauterad vid medel-låg värme förlorar 60–70 % av sin vattenhalt under 30–45 minuter och omvandlas till en söt, djupbrun massa. Nyckeln är tid och tålamod — inte hög värme. Innertemperatur: inte relevant — lök är klara när de är djupt gyllenbruna och silkeslena.
+
 ## Source recipes
 
 ### 1. Julia Child — Oignons Glacés à Brun (French braised-caramelised onions)

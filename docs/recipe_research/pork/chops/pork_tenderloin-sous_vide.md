@@ -17,6 +17,12 @@ Target sous vide bath temperatures (pork tenderloin):
 - Pink/juicy: **58–60 °C (136–140 °F)** × 1–1.5 hr
 - More done: **63–65 °C (145–149 °F)** × 1–1.5 hr
 
+## Styckesprofil
+
+Fläskfilé är en idealisk kandidat för sous vide: det magra köttet har ingen fettbuffert, varför även lätt överkokning i en konventionell panna märks, medan ett 58 °C bad ger jämna, perfekt rosa resultat från kant till kant.
+
+Sous vide-parametrar: **58–60 °C** i 1–2 timmar (hel filé); sear sedan snabbt i skrikhet panna 1 minut per sida för yta. Innertemperatur: **58–60 °C** med pasteurisering via tid och temperatur. USDA-standard: **63 °C**, 3 minuters vila. Eftertillagning: försumbar (sous vide). Sond insatt längsvis.
+
 ## Source recipes
 
 ### 1. Madens Verden — Svinemørbrad sous vide (Danish tradition)

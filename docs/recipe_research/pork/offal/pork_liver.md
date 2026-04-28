@@ -2,6 +2,7 @@
 type: cut
 slug: pork_liver
 name: Pork Liver
+name_sv: Fläsklever
 category: pork
 meat: pig
 cut_type: Other / Offal
@@ -30,6 +31,12 @@ quality_assessed: 2026-04-27
 
 Pork liver is a large, bilobed organ weighing 1–1.5 kg whole (commonly pre-sliced into 6–12 mm portions in retail). It is milder, slightly sweeter, and more delicate in texture than beef liver — a paler chestnut-brown rather than deep mahogany, with finer-grained hepatocyte structure and a thinner outer capsule. The lower mineral-iron intensity means pork liver tolerates assertive aromatics (onions, sage, juniper, allspice, capers) exceptionally well. Because it contains virtually no connective tissue or intramuscular fat, it cooks entirely by direct heat applied to its surfaces: the goal is a hard, rapid sear to develop a caramelised exterior while leaving the centre pink and just safe. Overcooking above 75 °C produces a dry, grainy, aggressively mineral-tasting result. The traditional European preparation — brief milk soak to mellow the iron, dust in flour, sear in fat — applies across French, Italian, British, and Scandinavian traditions alike.
 
+
+## Styckesprofil
+
+Fläsklever är ett stort, tvålobs organ som väger 1–1,5 kg hel (vanligtvis förskuret i 6–12 mm portioner). Det är mildare, lite sötare och mer delikat i textur än nötlever — en ljusare kastanjebrun snarare än djup mahogny, med en tunnare kapsel.
+
+Pannstekning i smör vid hög värme är standardmetoden. Innertemperatur: **70–75 °C (158–167 °F)** för genomstekt. Eftertillagning: 2–3 °C. Sond insatt horisontellt in till mitten av skivan. Servera omedelbart. Klassiska beredningar: brittisk *liver and onions*, tysk *Leber Berliner Art*, nordisk *leverpannkaka*.
 
 ## Research files by cooking method
 

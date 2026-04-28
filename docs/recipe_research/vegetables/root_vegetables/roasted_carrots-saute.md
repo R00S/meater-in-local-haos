@@ -12,6 +12,10 @@ cut_type: Root Vegetables
 ## Cut profile
 Carrots (*Daucus carota*) sautéed in a hot pan — whether as Chinese stir-fried matchsticks, Japanese *kimpira gobo*-style glazed rounds, Indian tempering with spices, or French *carottes glacées* — develop a sweet, lightly caramelised character while retaining their structural texture. Carrots should be cut thinly (coins, matchsticks, julienne) for sautéing — 3–5 mm thick — so the centre cooks through before the surface over-colours. Pull temperature: 82–88 °C (180–190 °F) for tender-crisp glazed carrots. MEATER probe inserted along the long axis of the thickest piece (or into the densest pile).
 
+## Styckesprofil
+
+Morötter (*Daucus carota*) sauterade i het panna — kinesiska wokade matchsticks, japanska *kimpira gobo*-glassade rundlar, indisk tempering eller franska *carottes glacées* — ger karameliserade, söta morötter. Sautera i 6–10 minuter. Klar när gyllenbrun och genomstekt.
+
 ## Source recipes
 
 ### 1. Harumi Kurihara — Kimpira Ninjin (きんぴらにんじん — Japanese Glazed Carrot Matchsticks)

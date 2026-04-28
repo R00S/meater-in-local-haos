@@ -26,6 +26,12 @@ Mutton shoulder is a heavily worked, intensely flavoured cut from an older anima
 
 Target internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bone; mutton shoulder may need 90–95 °C due to the older animal's denser tissue.
 
+## Styckesprofil
+
+Fåraxel är ett hårt arbetat, intensivt smakfull snitt från ett äldre djur (12+ månader). Den extra åldern innebär djupare smak men också tätare bindväv, vilket kräver längre braiseringstider än lamm — typiskt 2,5–3,5 timmar på spisen eller 3–4 timmar i ugnen.
+
+Bräserat lågt och långsamt ger axeln otroligt rikt kött centralt i indisk korma, turkisk *tandır* och italiensk *spalla*. Fårkött gynnas av kraftfulla braiseringsvätskor — vin, yoghurt, kryddade fonder. MEATER-sonden stickas in genom den tjockaste muskeln i axeln, väl borta från skulderbladsben. Innertemperatur: **85–90 °C (185–194 °F)**. Kan behöva 90–95 °C för äldre djur.
+
 ## Source recipes
 
 ### 1. Indian Healthy Recipes — Mutton Korma / Gosht Korma (Indian / Mughlai tradition)

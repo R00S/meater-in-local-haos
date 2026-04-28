@@ -2,6 +2,7 @@
 type: cut
 slug: mutton_shoulder
 name: Mutton Shoulder
+name_sv: Fårskuldra
 category: game
 meat: mutton
 cut_type: Mutton
@@ -34,6 +35,12 @@ Mutton shoulder is a heavily worked, intensely flavoured cut from an older anima
 
 Target internal temperature: **85–90 °C (185–194 °F)** for fall-off-the-bone; mutton shoulder may need 90–95 °C due to the older animal's denser tissue.
 
+
+## Styckesprofil
+
+Fåraxel är ett hårt arbetat, intensivt smakfull snitt från ett äldre djur (12+ månader). Den extra åldern innebär djupare smak men också tätare bindväv, vilket kräver längre braiseringstider än lamm. Bräsering lågt och långsamt ger axeln otroligt rikt, givande kött centralt i indisk korma, turkisk *tandır* och italiensk *spalla*.
+
+Fårkött gynnas av kraftfulla braiseringsvätskor som vin, yoghurt och kryddade fonder. MEATER-sonden stickas in genom den tjockaste muskeln i axeln, väl borta från skulderbladsben. Innertemperatur: **85–90 °C (185–194 °F)** för fall-från-benet; kan behöva 90–95 °C för äldre djur.
 
 ## Research files by cooking method
 

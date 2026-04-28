@@ -2,6 +2,7 @@
 type: cut
 slug: bison_burger
 name: Bison Burger
+name_sv: Bisonburgare
 category: game
 meat: bison
 cut_type: Bison
@@ -36,6 +37,10 @@ Food safety regulations in most countries classify ground meat as a high-risk pr
 
 A MEATER probe inserted sideways into a patty gives reliable internal readings even for thin cuts, provided it is placed horizontally through the thickest part of the patty, keeping the tip and ambient sensor both clear of the grill grates.
 
+
+## Styckesprofil
+
+Bisonburgerbiffar är gjorda av malet bisonkött, vanligtvis från skulder, fransyska eller bakkvarter — samma primärsnitt som används för nöthamburgare. Bison är märkbart magrare än nötkött, ofta med bara 2–7 % fett beroende på malning, jämfört med 15–25 % för standard hamburgerfärs. Den lägre fetthalten innebär att bisonburgare kokar fortare och torkar ut vid lägre temperatur. Innertemperatur: 71 °C (för säkerhet). Tillagnings tid: kortare än nötkött.
 
 ## Research files by cooking method
 

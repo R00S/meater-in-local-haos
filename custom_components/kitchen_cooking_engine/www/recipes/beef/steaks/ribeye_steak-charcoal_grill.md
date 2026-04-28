@@ -18,6 +18,10 @@ Target internal temperatures (charcoal grill):
 - Medium-rare: **54–57 °C (129–135 °F)** — international norm
 - Medium: **60–63 °C (140–145 °F)**
 
+## Styckesprofil
+
+Entrecôte på träkol är den ultimata grillupplevelsen — träkol ger både strålningsvärme och träkolsröksmak som gassgrillar inte kan matcha. I Italien är den tjockt skurna *Bistecca alla Fiorentina* (typiskt en T-bone eller Chianina entrecôte) den definitiva träkolsgrillade nötbiff: yttre välbryntat, insida rare. Träkolsrök sätter sig i den intensivt marmorerade ribeyeytan och förstärker den redan komplexa smaken. Innertemperatur: 52–55 °C rare, 55–57 °C medium-rare. Eftertillagning: 3–5 °C.
+
 ## Source recipes
 
 ### 1. GialloZafferano — Bistecca alla fiorentina (Italian tradition)

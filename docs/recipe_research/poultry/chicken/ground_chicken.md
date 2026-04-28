@@ -2,6 +2,7 @@
 type: cut
 slug: ground_chicken
 name: Ground Chicken
+name_sv: Kycklingfärs
 category: poultry
 meat: ground_poultry
 cut_type: Ground
@@ -35,6 +36,12 @@ Ground chicken braised in liquid is a moist-heat method that keeps the lean meat
 
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry; visual: no pink inside
 
+
+## Styckesprofil
+
+Malet kyckling bräserat i vätska (fond, kokosmjölk, tomat, vin) är en fuktig-värme-metod som håller det magra köttet från att torka ut. Eftersom malt fjäderfä blandas genomgående med bakterier kräver det fullständig genomkokning till 74 °C.
+
+Tillaga vid spissimmer eller ugn 160–170 °C, rör om regelbundet. Innertemperatur: **74 °C (165 °F)** USDA. Eftertillagning: 2–3 °C. Sond in i tjockaste delen av köttfärsen. Används i keema matar, picadillo, mapo-stil asiatiska rätter.
 
 ## Research files by cooking method
 

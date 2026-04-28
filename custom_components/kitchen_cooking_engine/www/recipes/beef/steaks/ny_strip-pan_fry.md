@@ -13,6 +13,10 @@ cut_type: Steaks
 
 The New York strip steak (also called strip loin, sirloin strip, Kansas City strip, or *contre-filet* in French) is cut from the short loin of the beef carcass — the longissimus dorsi muscle on the posterior side of the backbone, behind the ribeye primal and ahead of the sirloin. It is a single-muscle steak with moderate marbling, firmer texture than a ribeye (the muscle does slightly more work), and a pronounced beefy flavour. The fat cap along one edge is a defining characteristic and flavour source. Pan searing is a primary preparation — the strip's firm, uniform cross-section sears evenly, and the fat cap can be rendered against the pan edge by standing the steak on its side. Carryover is 3–5 °C for a thick strip steak; the lean-to-moderate marbling means less self-basting than a ribeye.
 
+## Styckesprofil
+
+New York strip (även kallad strip loin, sirloin strip, Kansas City strip eller *contre-filet* på franska) skärs från nötdjurets shortkotlett-primerzon — *longissimus dorsi*-muskeln på ryggradens bakre sida, bakom ribprimalen och framför entrecôteprimalen. Det är en enmuskel-biff med fast konsistens, måttlig marmorering och en tydlig fettlist längs ena kanten. Pannstek ger utmärkt maillardyta; den fasta strukturen tål hög direkt värme utan att deformeras. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. Nigella Lawson — Pan-Fried Steak with Garlic Butter (British home-cooking tradition)

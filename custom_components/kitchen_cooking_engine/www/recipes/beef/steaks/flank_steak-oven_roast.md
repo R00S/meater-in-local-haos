@@ -12,6 +12,12 @@ cut_type: Steaks
 ## Cut profile
 Flank steak, from the abdominal wall, is a wide, flat, and relatively thin cut with long, visible muscle fibres. Oven roasting is an unconventional but well-documented method — traditionally known as "London Broil" in the American tradition, where the steak is marinated and then finished under an oven broiler or in a very hot oven. The oven environment eliminates the smoke and flame variable of outdoor grilling while still achieving a reasonably browned exterior through convection and radiant heat from the oven walls. Because the oven's convective heat attacks from all sides, a flank steak in the oven cooks more evenly across its wide face than under a single-direction grill flame. Carryover in an oven-roasted flank steak is modest — the oven heat is less intense than a grill, so the steak does not carry much residual heat after removal.
 
+## Styckesprofil
+
+Flank steak, från bukväggen, är ett brett, platt och relativt tunt snitt med långa, synliga muskelfibrer. Ugnsstekning är en okonventionell men väl dokumenterad metod — traditionellt känd som "London Broil" i den amerikanska traditionen, där biffen marineras och sedan tillagas under en ugnsbroiler eller i en mycket het ugn. Ugnsomgivningen eliminerar rök- och flamvariabeln från utomhusgrillning medan ändå uppnår en rimligt brynnad yta genom konvektion och strålningsvärme från ugnsväggarna.
+
+Eftersom ugnens konvektionsvärme angriper från alla sidor kokar en flank steak i ugnen jämnare över sin breda yta än under en ensriktad grillflamma. Eftertillagning i en ugnsrostad flank steak är blygsam — ugnsvärmen är mindre intensiv än en grill, så biffen bär inte mycket resthärme efter att den tagits ut. Skär alltid tvärs mot fibern för maximal mörhet. Innertemperatur: 52–57 °C medium-rare. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — London Broil (Oven-Roasted Flank Steak)

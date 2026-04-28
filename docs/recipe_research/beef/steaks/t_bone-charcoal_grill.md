@@ -13,6 +13,11 @@ cut_type: Steaks
 
 A T-bone steak over live charcoal is one of the iconic preparations of American BBQ and Argentine *parrilla* tradition. The charcoal heat is less precisely controllable than gas, which means the two-muscle geometry of the T-bone (the faster-cooking tenderloin fillet and the slower-cooking striploin) requires active management: sear both sides over the hottest coals, then move to the cooler side of the grill with the bone facing the heat. Argentine *parrilleros* (grill masters) rotate the steak on its bone edge for a period, allowing the bone to conduct heat into the meat and providing an even cook without additional flare-ups. The bone-edge sear also produces crackling rendered fat deposits that are some of the most prized bites on the steak. Carryover from very hot charcoal is 5–7 °C.
 
+## Styckesprofil
+
+T-bone-biffen definieras av det T-formade ländkotbenet som separerar två anatomiskt distinkta muskler: den större striploin (longissimus dorsi) på den långa sidan av benet, och den mindre filén (psoas major) på den korta sidan. Detta är T-bones definierande strukturella egenskap – den ger två olika ätupplevelser i en biff, men skapar en tillagningsutmaning: filén tillagas snabbare och torkar ut över 60 °C, medan stripen kan tolerera något högre temperaturer. Benet fungerar som termisk isolator, så kött närmast benet ligger alltid 3–5 °C efter den öppna muskeln.
+
+T-bone skärs från short loin, framför sirloin. Tjocklek är vanligtvis 2,5–4 cm; en porterhouse är tjockare och med större filéportion från samma region. Sonden placeras alltid i striploin-delen, bort från benet, för den mest pålitliga avläsningen.
 ## Source recipes
 
 ### 1. Francis Mallmann — T-Bone over Charcoal Embers (Argentine *parrilla* tradition)

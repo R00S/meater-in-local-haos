@@ -2,6 +2,7 @@
 type: cut
 slug: roasted_beets
 name: Roasted Beets
+name_sv: Rostade rödbetor
 category: vegetables
 meat: root_vegetables
 cut_type: Root Vegetables
@@ -27,6 +28,10 @@ quality_assessed: 2026-04-26
 
 Whole beetroot (*Beta vulgaris*) oven-roasted, still in the skin, at 190–200 °C is the most flavour-preserving technique for beets: the skin protects the flesh from direct heat, preventing the water-soluble betalain pigments (which give beets their vibrant red-purple colour) from leaching out, as they would during boiling. Small-to-medium beets (7–10 cm diameter) take 50–70 minutes; large beets (>10 cm) take 70–90 minutes. Individual foil-wrapped beets cook slightly faster. Pull temperature: 92–96 °C (198–205 °F) at the thickest centre — at this point a skewer inserts with no resistance. MEATER probe inserted through the root end into the geometric centre.
 
+
+## Styckesprofil
+
+Hel rödbeta (*Beta vulgaris*) ugnsrostad fortfarande i skalet vid 190–200 °C är den mest smakbevarande tekniken: skalet skyddar köttet från direkt värme, förhindrar fuktförlust och koncentrerar den naturliga sötan. 50–70 minuter beroende på storlek. Klar när genomstekt och lätt skrumpna; skalet avlägsnas enkelt efter tillagning.
 
 ## Research files by cooking method
 

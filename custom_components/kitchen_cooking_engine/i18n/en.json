@@ -144,7 +144,22 @@
     "target_label": "target",
     "peak_label": "peak",
     "final_label": "final",
-    "after_rest_label": "after rest"
+    "after_rest_label": "after rest",
+    "safety_dot_safe": "✅ Meets food safety guidelines",
+    "safety_dot_caution": "⚠️ Below safety guidelines – widely practiced",
+    "safety_dot_unsafe": "⛔ Well below safety guidelines",
+    "safety_legend": "🟢 safe · 🟠 caution (widely practised) · 🔴 below guidelines",
+    "culinary_preferred": "Culinary preferred:",
+    "usda_safe_minimum": "USDA safe minimum for this cut:",
+    "undercooked_risk": "Consuming undercooked meat carries food safety risk.",
+    "cut_profile": "📖 Cut Profile",
+    "method_research": "📚 Method Research:",
+    "back_to_recipes": "← Back to recipes",
+    "close_research": "✕ Close",
+    "research_label": "Research",
+    "fine_tune_temp": "⚙️ Fine-tune Temperature",
+    "reset_to": "Reset to",
+    "select_type": "Select Type"
   },
   "ninja": {
     "title": "🥷 Ninja Combi",

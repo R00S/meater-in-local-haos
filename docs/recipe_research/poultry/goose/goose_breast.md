@@ -2,6 +2,7 @@
 type: cut
 slug: goose_breast
 name: Goose Breast
+name_sv: Gåsbröst
 category: poultry
 meat: goose
 cut_type: Goose
@@ -51,6 +52,10 @@ Goose breast is a rich, deeply flavoured dark meat with a substantial fat layer,
 
 Target internal temperature: **145–155 °F (63–68 °C)** — medium; pull at 140 °F and rest. USDA safe minimum: 165 °F (74 °C) — pull at 160 °F and rest.
 
+
+## Styckesprofil
+
+Gåsbröst är ett rikt, djupt smakrikt mörkt kött med ett kraftigt fettlager. Innertemperatur: 57–63 °C. Eftertillagning: 3–5 °C. Serveras medium-rare för bäst konsistens och smak.
 
 ## Research files by cooking method
 

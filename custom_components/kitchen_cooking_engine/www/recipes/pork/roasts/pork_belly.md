@@ -2,6 +2,7 @@
 type: cut
 slug: pork_belly
 name: Pork Belly
+name_sv: Sidfläsk
 category: pork
 meat: pig
 cut_type: Roasts
@@ -44,6 +45,12 @@ quality_assessed: 2026-04-26
 
 Pork belly (*svinekam* / *flæskesteg*, Danish; *Schweinebauch*, German; *pancetta tesa*, Italian; *lardo*, cured Italian; *bak kwa*, Chinese) is the ventral thoracic wall — the layered structure of skin, subcutaneous fat, *serratus ventralis* muscle, more fat, intercostal fat, and the *transversus abdominis* muscle layers. This layered structure is the defining anatomical feature: alternating lean muscle and fat sheets running in a horizontal laminar pattern across the cross-section. Skin-on pork belly has a thick dermis (*svær* / *Schwarte*) that — when properly scored and salted — blisters and crackles into one of the most texturally complex foods in all of cooking. Belly fat content is high (20–35%), making it one of the most forgiving pork cuts — it retains moisture at wide temperature ranges (65–80 °C).
 
+
+## Styckesprofil
+
+Fläskbuk (*svinekam* / *flæskesteg* danska; *Schweinebauch* tyska; *pancetta tesa* italienska) är den ventrala bröstkorgsväggen — den skiktade strukturen av hud, subcutant fett, interkostalsmuskler och intramuskulärt fett. Det är det fetaste snittet av grisen.
+
+Denna fettrikedom gör det idealisk för långsam tillagning (sous vide, bräsering, rök) som smälter ned fettet och bindväven till silkig textur, men också för hög-temperatur-rosting där svålen karameliserar till kris. Innertemperatur: **80–88 °C** för genomstekt (ugn/grill); **72–78 °C** för sous vide.
 
 ## Research files by cooking method
 

@@ -24,6 +24,12 @@ cut_type: Roasts
 
 Leg of lamb on the grill is typically prepared as a butterflied leg — bone removed, flattened, and grilled over high heat. This is the approach in Australia, South Africa, Greece, and across the Middle East. Whole legs are also spit-roasted (rotisserie) over charcoal, as in the Greek Easter tradition (spit: 4–6 hours to pull-apart). Butterflied leg: 25–35 min total, target 57–60 °C for medium-pink.
 
+## Styckesprofil
+
+Lammbenstek på grillen tillagas typiskt som ett fjärilat ben — benet borttaget, utslaget och grillat över hög värme. Det är tillvägagångssättet i Australien, Sydafrika, Grekland och i Mellanöstern. Hela ben kan också spetstegas (rotisserie).
+
+Grilla det fjärilade benet vid medel-hög direkt värme, 6–8 minuter per sida, sedan indirekt till färdig temperatur. Innertemperatur: **57–65 °C (135–149 °F)** för medium-rare till medium (rosa mitt); **70–74 °C** för genomstekt. Eftertillagning: 4–6 °C. Sond in i tjockaste köttmassan, borta från lårbenet.
+
 ## Source recipes
 
 ### 1. RecipeTinEats.com — Butterflied Leg of Lamb on the BBQ (Australian tradition)

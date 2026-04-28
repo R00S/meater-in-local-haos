@@ -2,6 +2,7 @@
 type: cut
 slug: sirloin_tip_roast
 name: Sirloin Tip Roast
+name_sv: Spetsrumstek
 category: beef
 meat: cow
 cut_type: Roasts
@@ -55,6 +56,9 @@ quality_assessed: 2026-04-27
 
 The sirloin tip roast (known as the "knuckle" in UK/Australian butchery, "pointe de culotte" in French, "Rinderknolle" in German, and "Patinho" in Brazilian Portuguese) is cut from the quadriceps femoris muscle group at the front of the hindquarter, immediately below the sirloin and above the shank. It is a boneless, lean roast with tight, dense muscle fibres and minimal intramuscular fat. The low fat content means it relies entirely on technique — slow oven roasting at low temperatures or braising in liquid — to remain tender and juicy. Sliced thinly against the grain it produces clean, pronounced beef flavour; sliced thick or overcooked it becomes tough and dry. The cut sits between the premium loin cuts and the cheaper round cuts in price and tenderness, making it a popular choice for economical Sunday roasts and deli-style sliced beef. Carryover after oven roasting is 3–8°C / 5–14°F depending on the oven temperature used (higher carryover at lower roasting temperatures).
 
+## Styckesprofil
+
+Sirloin tip roast (känd som "knuckle" i UK/australisk styckning, "pointe de culotte" på franska, "Rinderknolle" på tyska och "Patinho" på brasiliansk portugisiska) skärs från quadriceps femoris på framsidan av bakfjärdedelen, omedelbart under sirloin och ovanför bog. Det är en benfri, mager rost med tighta, täta fibrer och minimalt intramuskulårt fett. Det låga fettet gör att den helt är beroende av teknik – långsam ugnsrostning vid låg temperatur eller bräsering i vätska – för att bli mör och saftig. Skivad tunt mot ådringen ger ren, uttalad nötig smak; skivad tjockt eller överkokt blir den seg och torr. Snittet ligger mellan premium-ländsnitten och billigare round-snitt i pris och mörhet, vilket gör det populärt för ekonomiska söndagsrostar och delistil-skivad biff. Eftervärme efter ugnsrostning är 3–8 °C beroende på ugnstemperatur (högre eftervärme vid lägre rosttemperatur).
 ## Research files by cooking method
 
 - [Oven Roast](./sirloin_tip_roast-oven_roast.md) — 2 sources collected (Groups B only; Groups A, C, D still needed)

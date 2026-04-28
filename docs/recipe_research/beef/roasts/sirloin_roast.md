@@ -2,6 +2,7 @@
 type: cut
 slug: sirloin_roast
 name: Sirloin Roast
+name_sv: Ryggbiffsstek
 category: beef
 meat: cow
 cut_type: Roasts
@@ -69,6 +70,16 @@ The sirloin roast (top sirloin roast in North American butchery) is a boneless o
 **Probe placement**: Insert from the end of the joint into the geometric centre of the lean muscle, avoiding the fat cap (fat is a poor thermal conductor and gives falsely low readings) and keeping at least 1.5 cm from any bone if present.
 
 **Methods researched**: Oven roasting is the primary confirmed culinary method. No Group A oven-roast source was found on the verified site list. The madensverden.dk *langtidsstegt oksefilet* recipe cannot be confirmed as sirloin roast — "oksefilet" cut identity unconfirmed from the fetched content.
+
+## Styckesprofil
+
+Entrecôtestek (övre entrecôtestek i nordamerikansk styckningsnomenklatur) är ett benfritt eller benfritt stycke från den korta länden eller övre entrecôten — den bakre delen av ryggen, bakom revbensprimalen och framför bakkvarteret. Viktsintervall: typiskt 1–2,5 kg för ett helt stycke; större restaurangsnitts kan nå 4–5 kg.
+
+**Anatomi**: Stycket består primärt av den övre entrecôtekapsmuskeln (*gluteus medius*) med fettlocket på den dorsala sidan. Det är avsevärt magrare än revbenstek: intramuskulärt fett är måttligt snarare än kraftigt, och bindvävsinnehållet är blygsamt. Det är inte ett kollagenrikt snitt — bräsering till kollagenosande temperaturer (88+ °C) skulle överkoka och torka ut de magra fibrerna. Den dominerande kulinariska metoden världen över är ugnsstekning till medium-rare (50–57 °C).
+
+**Tillagningsbeteende**: De magra muskelfibrerna drar ihop sig snabbt ovanför 60 °C; fettlocket smälter och bastar utsidan under stekning när stycket är placerat med fettlocket uppåt. Eftertillagning är 4–8 °C med standardmetoden (initial searing + måttlig ugn), och nära noll med ultra-lågtemperaturmetoder (70–80 °C ugn i flera timmar).
+
+**Sondplacering**: Stick in från styckets ände till den geometriska mitten av den magra muskeln, undvik fettlocket (fett är en dålig värmledare och ger falskt låga avläsningar) och håll minst 1,5 cm från eventuellt ben.
 
 ## Research files by cooking method
 

@@ -2,6 +2,7 @@
 type: cut
 slug: filet_mignon
 name: Filet Mignon / Tenderloin Steak
+name_sv: Oxfilé
 category: beef
 meat: cow
 cut_type: Steaks
@@ -68,6 +69,10 @@ quality_assessed: 2026-04-26
 
 Filet mignon is cut from the narrow end (small end) of the beef tenderloin — the psoas major muscle, which runs alongside the spine and does virtually no work during the animal's life. It is the most tender cut in the carcass, with almost no intramuscular fat (marbling) or connective tissue, making it both delicate and vulnerable to drying out. The air fryer circulates very hot air around the steak at high velocity, creating convection browning on the exterior while cooking the interior — the result is a decent Maillard crust without the smoke of a grill or the fat-pooling effect of a skillet. Because filet mignon is exceptionally lean, the air fryer's hot-air convection is forgiving compared to direct-contact methods. Carryover is minimal but present — the small, round geometry of a filet mignon dissipates heat quickly after removal from the enclosed air fryer basket.
 
+
+## Styckesprofil
+
+Filet mignon skärs från den smala änden (lilla änden) av nötfilén — den minst belastade muskeln i djurkroppen och den absolut möraste biten av nötkött. Luftfryer-tillagning av filet mignon utsätter den för intensivt cirkulerad het luft — praktiskt taget en kompakt konvektionsugn. Filetens extrema mörhet och låga fettinnehåll gör den känslig för överkokad: eftertillagning (2–4 °C) måste beaktas, och sonden bör tas ut vid 3–4 °C under slutmålet. Maillardytan från airfryern är sämre än från pansearing; ett snabbt avslutande i smörpanna efter airfryer-tillagning förbättrar resultatet väsentligt.
 
 ## Research files by cooking method
 

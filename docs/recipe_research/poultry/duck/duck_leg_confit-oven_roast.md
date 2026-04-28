@@ -15,6 +15,10 @@ cut_type: Duck
 
 Duck leg confit cooked in the oven is the definitive application of the confit method: bone-in, skin-on duck legs are first dry-cured in salt, herbs, and spices for 12–24 hours to season the meat deeply, then fully submerged in rendered duck fat in a close-fitting roasting pan and slow-cooked at a low oven temperature (85–100 °C / 185–210 °F) for 3–8 hours. The long low-temperature fat bath converts collagen to gelatin, renders intramuscular fat, and produces meltingly tender meat without drying — the fat acts as both moisture barrier and flavour carrier. After the confit phase the duck is removed from the fat and returned to a very hot oven (220–240 °C / 430–465 °F) on a rack to crisp the skin. The MEATER probe must be inserted before the fat bath phase begins, from the thigh end into the centre of the thigh muscle.
 
+## Styckesprofil
+
+Anklägg confit tillagad i ugnen är den definitiva tillämpningen av confit-metoden: anklägg med ben och skinn torrmarineras först i salt, örter och kryddor i 12–24 timmar för att krydda köttet djupt, sedan tillagas det nedsänkt i ankfett (eller olivolja) vid 100–140 °C i 2–4 timmar. Innertemperatur: 82–85 °C (mjukt, genomstekt, faller lätt från benet).
+
 ## Source recipes
 
 ### 1. Nagi Maehashi (RecipeTin Eats) — Duck Confit / Confit de Canard (French bistro tradition, Australian adaptation, Culinary Group B)

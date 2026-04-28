@@ -17,6 +17,14 @@ The method works because the braising liquid maintains the meat at or near 100 �
 
 Probe placement for braised short ribs is straightforward but requires inserting the probe before the meat goes into the braising liquid: place the probe from the flat cut end of the rib (the surface furthest from the bone), aiming towards the geometric centre of the largest muscle section. The probe tip must be surrounded by lean muscle, not resting against the bone or in a large pocket of intramuscular fat — both give false-low readings because they are slower to equalise than the surrounding lean fibres.
 
+## Styckesprofil
+
+Brässering är inte ett av flera alternativ för revbensspjäll — det är metoden som revbensspjäll som kulinarisk styckdel är gjord för. Det engelska revbensspjället (med ben, chuckände, revben 1–5 eller det kortare tallriksänden, revben 6–10) består av hårt arbetade mellangärdes- och serratus-ventralis-muskelfibrer bundna av täta kollagenlagerskivor: rå är strukturen gummiaktig och motständig; efter tre eller fler timmar av fuktig värme vid 88–96 °C (190–205 °F) hydrolyseras kollagenet till gelatin, fettet smälter ner i bräseringsvätskan och fibrerna som hade varit oätliga vid medium-rare-temperatur blir mjuka som smör med en silkeslen munbild.
+
+Metoden fungerar eftersom bräseringsvätskan håller köttet nära 100 °C utifrån medan mitten långsamt equilibreras — mycket långsamt, eftersom kollagen och fett leder värme dåligt — till 88–96 °C. Det är 30–40 °C över den temperatur som en normal biff serveras vid, och det är bara möjligt utan uttorkning eftersom den omgivande vätskan ersätter den ytfukt som avdunstning annars skulle ta bort. De tre eller fler timmarna av ihållande värme vid detta intervall fulländar kollagen-till-gelatin-omvandlingen i hela snittets tvärsnitt.
+
+Sondens placering för bräserade revbensspjäll är enkel men kräver att sonden sätts in innan köttet läggs i bräseringsvätskan: sätt in sonden från det skurna ändets sida (ytan längst från benet) och sikta mot det geometriska centret i den största muskelns tvärsnitt. Sondens spets måste omges av magert muskelkött, inte vila mot benet eller i en stor ficka av intramuskulärt fett — båda ger för låga avläsningar eftersom de equiliseras långsammare än de omgivande magra fibrerna.
+
 ## Source recipes
 
 ### 1. Nagi Maehashi — Braised Beef Short Ribs in Red Wine Sauce (Australian modern tradition)

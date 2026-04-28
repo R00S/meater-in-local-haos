@@ -17,6 +17,12 @@ Both methods target **88–95 °C (190–203 °F)** internal — the temperature
 - Fall-off-bone tender: **88–95 °C (190–203 °F)**
 - ⚠️ Below 80 °C spare ribs are food-safe but still tough
 
+## Styckesprofil
+
+Ugnsrostning är den vanligaste hemmetoden för spareribs med två distinkta tillvägagångssätt: (1) **låg-och-långsam folinrad** (120–140 °C i 3–4 timmar, folien förseglad för att fånga fukt, sedan öppnad och glaserad vid 220 °C i 15–20 min); (2) **direkt högrösteri** (220–230 °C i 45–60 min, ständigt pensling).
+
+Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertillagning: försumbar. Sond längs benets riktning in till köttmassan. Vila 5–10 minuter täckt.
+
 ## Source recipes
 
 ### 1. Madens Verden — Spareribs i grill eller ovn (Danish tradition)

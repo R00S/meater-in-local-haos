@@ -12,6 +12,10 @@ cut_type: Green Vegetables
 ## Cut profile
 Brussels sprouts (*Brassica oleracea* var. *gemmifera*) oven-roasted at 200–220 °C become charred, golden, and sweet in 22–28 minutes. Halved cut-face-down on a sheet pan maximises the Maillard browning surface. The key: very hot oven, dry sprouts, single layer with space between them. Pull temperature: 84–88 °C (183–190 °F) for charred outer leaves with a sweet, fully tender interior.
 
+## Styckesprofil
+
+Brysselkål (*Brassica oleracea* var. *gemmifera*) ugnsrostad vid 200–220 °C blir bränd, gyllenbrun och söt på 22–28 minuter. Halverad snittytan ned på ugnsplåt maximerar karameliseringen. Klar när snittytan är djupt gyllenbrun och ytterbladen knapriga.
+
 ## Source recipes
 
 ### 1. Najmieh Batmanglij — Persian-Style Roasted Brussels Sprouts with Saffron and Dried Barberries

@@ -17,6 +17,12 @@ Target internal temperatures (smoker):
 - Sliceable (not pulled): **82–88 °C (180–190 °F)**
 - Classic pulled pork: **90–95 °C (194–203 °F)**
 
+## Styckesprofil
+
+Fläskaxel / nacke (*Schweinenacken* / *Schweineschulter* tyska; *nakkefilet* / *svinekam* danska/norska) är det populäraste snittet för rökt pulled pork. Högt fettinnehåll och generös marmorering gör det utmärkt för 10–14 timmars rök vid 110–120 °C.
+
+Innertemperatur: **88–95 °C (190–203 °F)** för pull-apart. Eftertillagning: försumbar (lång fuktig rök). Sond in i tjockaste köttmassan, borta från skulderbladsben. Slå in i folie vid 74 °C (Texas Crutch) för att passera "stall" och minska total tillagningstid.
+
 ## Source recipes
 
 ### 1. Chefkoch — Pulled Pork aus dem Smoker (German BBQ tradition)

@@ -12,6 +12,10 @@ cut_type: Root Vegetables
 ## Cut profile
 Carrots (*Daucus carota*) in the air fryer become caramelised, golden, and sweet in 15–20 minutes at 190–200 °C — faster than oven-roasting. Cut into coins, batons or long halves, they concentrate their natural sugars through evaporation and develop Maillard browning on the flat cut faces. Pull temperature: 86–92 °C (187–198 °F) for tender, caramelised carrots. MEATER probe inserted along the long axis of the thickest batons.
 
+## Styckesprofil
+
+Morötter (*Daucus carota*) i airfryern blir karameliserade, gyllenbrun och söta på 15–20 minuter vid 190–200 °C — snabbare än ugnsstekning. Skiv i bitar, olja, krydda. Klar när gyllenbrun med karameliserade kanter och genomstekt.
+
 ## Source recipes
 
 ### 1. Madhur Jaffrey — Air-Fried Masala Carrots (Indian tradition)

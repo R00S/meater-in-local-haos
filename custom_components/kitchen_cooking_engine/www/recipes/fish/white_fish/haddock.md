@@ -2,6 +2,7 @@
 type: cut
 slug: haddock
 name: Haddock Fillet
+name_sv: Kolja
 category: fish
 meat: white_fish
 cut_type: White Fish
@@ -43,6 +44,12 @@ produces dry, rubbery fish. The MEATER probe must be inserted laterally (from th
 edge) in thin fillets. Flouring the fillets before frying (as in the German and British
 traditions) creates a protective crust that helps moisture retention and even browning.
 
+
+## Styckesprofil
+
+Kolja (*Melanogrammus aeglefinus*, norska: hyse/kolje, tyska: Schellfisch, svenska: kolja) är en mager vitfärgad kallvattens gadid-fisk nära besläktad med torsk. Den har en mild, lätt söt smak och fast men finskiktad kött med en ren fjällig struktur när kokt. Filéerna är typiskt 1–2 cm tjocka med en karakteristisk laterallinje och fina pinnben som vanligtvis tas bort i detaljhandelsfiléer.
+
+Köttet är mycket magert (under 1% fett), vitt genomgående, och mer delikat än torsk — det faller sönder i mindre, finare fjäll. Den tunna filékroppssektionen innebär att den tillagas mycket snabbt och måste dras innan mitten blir ogenomskinligt vit genomgående annars torkar det ut. USDA säkert minimumt: 63 °C (145 °F) för finfisk. MEATER-sonden måste stickas in lateralt (från den tjocka kanten) i tunna filéer. Att mjöla filéerna innan fritering (som i den tyska och brittiska traditionen) skapar ett skyddande ytskikt som hjälper fuktighetsbevaring och jämn brynning. Innertemperatur: 60–63 °C.
 
 ## Research files by cooking method
 

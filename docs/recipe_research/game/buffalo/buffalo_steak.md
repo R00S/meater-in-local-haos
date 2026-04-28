@@ -2,6 +2,7 @@
 type: cut
 slug: buffalo_steak
 name: Buffalo Steak
+name_sv: Buffelbiff
 category: game
 meat: buffalo
 cut_type: Buffalo
@@ -58,6 +59,12 @@ quality_assessed: 2026-04-27
 
 Water buffalo steak is cut from the same primal positions as beef (loin, rib, rump) — the *longissimus dorsi*, *biceps femoris*, and *psoas major* are the main steak muscles. The meat is similar in structure to lean beef: deep red, slightly sweeter than standard bovine beef, with lower intramuscular fat. Because it is leaner than grain-fed beef, it cooks faster and becomes tough above 70 °C. Medium-rare to medium (57–63 °C) is the recommended range across all culinary traditions using this cut.
 
+
+## Styckesprofil
+
+> **Kontextanmärkning**: I detta projekt avser *buffalo* **vattenbuffel** (*Bubalus bubalis* — carabao på Filippinerna, bhaisa i Indien) snarare än amerikansk bison. Vattenbuffel är det mest ätna stora idisslaren i Asien med mycket stor produktion i Indien, Kina, Pakistan, Filippinerna och Vietnam.
+
+Köttet (*carabeef*) är magert, mörkrött och fast, med en smak liknande magert nötkött men något sötare och med lägre fettinnehåll. Det används i alla kulinariska tillämpningar som nötkött — bräsering, ugnsstekning, grillning, pannstekning — men kräver kortare tillagningstider på grund av magreten. Innertemperatur: **60–65 °C** (medium till genomstekt). Eftertillagning: 3–4 °C.
 
 ## Research files by cooking method
 

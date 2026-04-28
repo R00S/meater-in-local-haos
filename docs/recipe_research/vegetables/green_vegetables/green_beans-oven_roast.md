@@ -12,6 +12,10 @@ cut_type: Green Vegetables
 ## Cut profile
 Green beans (*Phaseolus vulgaris*) oven-roasted at 200–220 °C caramelise and blister in 18–22 minutes, producing a concentrated, slightly charred flavour completely different from boiled or steamed beans. The dry oven heat drives off surface moisture quickly, allowing Maillard browning to develop on the bean skins. The beans should be spread in a single layer with space between them — crowding causes steaming, not roasting. Pull temperature: 82–86 °C (180–187 °F) for tender-crisp roasted beans with blistered skin. MEATER probe inserted horizontally through the thickest bean at the mid-point.
 
+## Styckesprofil
+
+Gröna bönor (*Phaseolus vulgaris*) ugnsrostade vid 200–220 °C karameliseras och blåsar på 18–22 minuter, och ger en koncentrerad, lätt bränd smak helt annorlunda från kokning. Olja generöst, ett lager. Klar när mörkgyllenbrun med brynnade fläckar.
+
 ## Source recipes
 
 ### 1. Yotam Ottolenghi — Roasted Green Beans with Crispy Capers (Middle Eastern / Israeli tradition)

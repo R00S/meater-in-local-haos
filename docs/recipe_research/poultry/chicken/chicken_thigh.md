@@ -2,6 +2,7 @@
 type: cut
 slug: chicken_thigh
 name: Chicken Thigh
+name_sv: Kycklinglår
 category: poultry
 meat: chicken
 cut_type: Dark Meat
@@ -46,6 +47,12 @@ Chicken thighs are a forgiving, flavourful dark-meat cut. Their higher fat conte
 
 Target internal temperature: **165 °F (74 °C)** minimum — **175 °F (79 °C)** preferred for dark meat
 
+
+## Styckesprofil
+
+Kycklinglår är ett förlåtande, smakramt mörkt köttsnitt. Air fryer: 180–200 °C, 22–28 minuter med vändning halvvägs, ger krisp skinn och saftig insida.
+
+Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond längsmed lårets tjockaste del, borta från femurbenet. Vila 5 minuter täckt. Lår tolererar överkokning bättre än bröst — vid 82–85 °C är de fortfarande saftiga, till skillnad från bröst som torkar snabbt ovanför 74 °C.
 
 ## Research files by cooking method
 

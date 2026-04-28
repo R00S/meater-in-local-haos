@@ -2,6 +2,7 @@
 type: cut
 slug: venison_roast
 name: Venison Roast
+name_sv: Hjortstek
 category: game
 meat: venison
 cut_type: Venison
@@ -49,6 +50,12 @@ Venison roast refers primarily to the haunch (hind leg, *femur* and surrounding 
 
 The muscles are very lean — even less marbled than beef from the same primal positions — with a deep red colour (high myoglobin), and a characteristic earthy, slightly sweet game flavour. The lack of intramuscular fat means venison dries out more readily than beef at equivalent temperatures; the optimal internal temperature range (55–60 °C for a pink result) is lower than most other roasts.
 
+
+## Styckesprofil
+
+Viltstek avser primärt haunchen (bakbenet, *femur* och omgivande muskler: *biceps femoris*, *semimembranosus*, *semitendinosus* och *quadriceps*) och sadeln (*longissimus dorsi* och *psoas*-musklerna, med ben). Båda är de bästa ugnsrostningsstyckena från rå- och kronhjort.
+
+Innertemperatur: **60–65 °C** (140–149 °F) för medium (rosa mitt) — skandinavisk preferens; **70–75 °C** för genomstekt (brittisk/tysk preferens). Eftertillagning: 4–6 °C. Sond i tjockaste köttmassan, borta från ben. Vila täckt 15–20 minuter. Traditionella tillbehör: rönnbärsgele, knödel, rödkål.
 
 ## Research files by cooking method
 

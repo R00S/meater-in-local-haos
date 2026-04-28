@@ -19,6 +19,12 @@ Target internal temperatures (smoker method):
 - **Sliceable finish**: **93 °C (200 °F)** — fat fully rendered, meat tender, slices cleanly
 - **Pull-apart / burnt-ends finish**: **93–97 °C (200–207 °F)** — falling-apart texture
 
+## Styckesprofil
+
+Fläskbuk med svål är den quintessentiella nordiska och tyska söndagssteken. BBQ-grill-versionen: grilla buken indirekt vid 150–160 °C i 2–3 timmar med svålen uppåt, sedan avsluta direkt hög värme för att blästra svålen till kris. Tänds alltid upp grillens direkt-zon med ett stekkap av järn för optimalt resultat.
+
+Innertemperatur: **80–88 °C (176–190 °F)** för genomstekt, saftig fläskbuk. Eftertillagning: 3–4 °C. Sond insatt in i tjockaste köttmassan, borta från revbensben och svål. Vila täckt 10–15 minuter.
+
 ## Source recipes
 
 ### 1. Smoking-Meat.com — Smoked Pork Belly (whole slab)

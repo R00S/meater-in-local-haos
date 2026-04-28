@@ -19,6 +19,9 @@ Target sous vide bath temperatures (ribeye):
 - Medium: **60–62 °C (140–144 °F)** × 1.5–2 hr
 - Well done: **65 °C (149 °F)** × 1.5–2 hr
 
+## Styckesprofil
+
+Ribeye-biffen skärs från longissimus dorsi i revbensprimalen (revben 6–12), en muskel som arbetar lite och därför utvecklar exceptionellt intramuskulärt fett (marmorering) genom hela ådringen. Marmoreringen är det som definierar ribeye: fettfickorna flyter under värme och basar muskeln inifrån, vilket ger en rikedom och självbasande karaktär som inget annat vanligt biffsnitt kan matcha. Pan-searing är en naturlig partner för ribeye eftersom den höga ledande värmen från gjutjärns- eller kolstålspanna driver snabb Maillard-bryning av den fettrika ytan, ger en djupt karamelliserad skorpa och håller insidan saftig även om kocken överskjuter något. Den ben-in-versionen (côte de bœuf / cowboy ribeye) behåller mer smak under tillagningen men kräver mer exakt sondplacering för att läsa ögat snarare än området nära benet. Eftervärmen i en pan-searad ribeye är måttlig – vanligtvis 3–5 °C – eftersom den heta metallpannan ger intensiv ytvär me som försvinner när biffen tas upp, men fettinnehållet saktar ner kärntemperaturequilibreringen.
 ## Source recipes
 
 ### 1. Madens Verden — Ribeye sous vide (Danish tradition)

@@ -12,6 +12,10 @@ cut_type: Alliums
 ## Cut profile
 Whole or halved onions (*Allium cepa*) oven-roasted concentrate the natural sugars, soften the fibrous layers, and caramelise the cut surfaces without the live-flame char of the grill. At 190–220 °C, the outer skin acts as insulation: the interior reaches 90–95 °C (194–203 °F) by the time the skin is papery-dry and the interior is fully collapsed and jam-like. Halved onions placed cut-side-down on an oiled pan caramelise intensely on the cut face while the outer layers steam from the inside. A MEATER probe is inserted through the side between skin layers into the centre of the onion half or whole.
 
+## Styckesprofil
+
+Hela eller halverade lökar (*Allium cepa*) ugnsrostade koncentrerar de naturliga sockerarterna, mjukar de fibrosa lagren och karameliserar snittytan. Vid 180–200 °C i 40–60 minuter halverade, eller 60–80 minuter hela. Klar när genomgående mjuk och djupt gyllenbrun.
+
 ## Source recipes
 
 ### 1. Najmieh Batmanglij — Piyaz Kebab (Persian oven-roasted onion)

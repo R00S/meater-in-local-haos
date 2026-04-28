@@ -4,6 +4,12 @@
 
 Braising the venison leg (haunch) results in a deeply flavoured, fall-apart tender dish — the European equivalent of a pot roast or Sunday joint. Unlike oven roasting, braising uses a significant volume of liquid (wine, stock, or a combination) in a covered pot, which creates a steam environment that prevents the lean venison from drying out and converts the connective tissue (sinews, silver skin) between muscle groups into gelatin. This technique is central to German *Wildschmorbraten* cooking, French *civet de chevreuil*, and British game cookery for older stags or strong-flavoured venison. Braising liquid is strained and reduced after cooking to produce the sauce. The whole leg is typically browned in hot fat first to develop Maillard flavour, then braised at 150–180°C / 300–355°F for 1.5–3 hours (depending on size and animal age) until the meat is falling off the bone. No probe temperature target applies to fully braised venison — tenderness is the indicator; internal temperature is well above 85°C / 185°F throughout.
 
+## Styckesprofil
+
+Bräsering av viltstekslägg (haunche) resulterar i ett djupt smakratt, fall-från-benet-mört kött — det europeiska ekvivalenten till en köttgryta. Till skillnad från ugnsstekning använder bräsering en avsevärd mängd vätska (vin, fond eller en kombination) i ett täckt kärl, vilket skapar en ångmiljö.
+
+Innertemperaturen är nödvändig men inte tillräcklig: lagg behöver hålla vid 88–95 °C i 2–3 timmar för fall-från-benet-resultat. Eftertillagning: försumbar (omgivande vätska). Sond i tjockaste köttmassan, borta från ben. Klassiska beredningar: *Wildschäufer*, fransk *daube de chevreuil*, brittisk *braised venison haunch*.
+
 ## Source recipes
 
 ### 1. Chefkoch.de (user Annelore) — Rehkeule geschmort (Braised Venison Leg)

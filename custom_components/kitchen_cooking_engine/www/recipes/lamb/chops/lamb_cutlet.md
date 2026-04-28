@@ -2,6 +2,7 @@
 type: cut
 slug: lamb_cutlet
 name: Lamb Cutlet
+name_sv: Lammkotlett
 category: lamb
 meat: lamb
 cut_type: Chops
@@ -57,6 +58,12 @@ Lamb cutlets (thin, Frenched rib chops) are the most refined lamb cut — a sing
 
 Target: **52–57 °C (126–135 °F)** for medium-rare. They overcook rapidly given their thin cross-section.
 
+
+## Styckesprofil
+
+Lammfilékotletter (tunna, Frenchade ryggkotletter) är det mest förfinade lammskivesnittet — ett enskilt revbenslben med köttet format till en liten medaljon. De är ett bistroklassiker i Frankrike och UK, ett restaurangmärke i Australien och Nya Zeeland, och populärt festmat i Mellanöstern och Sydasien.
+
+Sear vid hög värme, 2–3 minuter per sida. Sond in i den tjockaste muskeldelen borta från benet. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Eftertillagning: 2–3 °C. Vila täckt 3–5 minuter. Tunnare snitt (< 2 cm) kokar mer sällan än tjockare snitt.
 
 ## Research files by cooking method
 

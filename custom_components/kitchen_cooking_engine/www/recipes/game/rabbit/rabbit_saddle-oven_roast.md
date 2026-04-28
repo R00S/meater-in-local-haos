@@ -25,6 +25,12 @@ and carryover is 2–3°C, so the cut demands close monitoring. Stuffed or rolle
 saddle (farce or ballotine style) can tolerate a slightly lower oven and longer
 time because the stuffing moderates heat transfer into the loin.
 
+## Styckesprofil
+
+Kaninryggen är ryggradens sektion med två benfria ländryggar och, om den lämnas med ben, tunna bukflikar som skyddar lårryggarna under rostning. Ugnsrostning passar ryggen särskilt bra när den är fylld, knuten eller tillagad hel med ben.
+
+Ryggen är ett delikat, magert snitt som tillagas snabbt — för- och ugnsstekning: 5–7 minuter per sida, sedan 15–20 minuter vid 160–180 °C. Innertemperatur: **65–72 °C (149–162 °F)** för fullt genomstekt, saftig. Undvik överkokad (75+ °C) — den magra muskeln torkar snabbt. Eftertillagning: 2–3 °C. Sond i den tjockaste ländryggsmassan.
+
 ## Source recipes
 
 ### 1. Emeril Lagasse — Roasted Saddle of Rabbit

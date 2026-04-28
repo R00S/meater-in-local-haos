@@ -28,6 +28,12 @@ Grilled chicken thighs appear in culinary traditions across the globe. In Thaila
 
 Target internal temperature: **165 °F (74 °C)** minimum — **170 °F (77 °C)** preferred for dark meat
 
+## Styckesprofil
+
+Kycklinglår är det ideala grillningssnittet: deras högre fettinnehåll innebär att de förblir fuktiga även över hög, direkt värme och är avsevärt mer förlåtande än bröst vid lätt överkokning.
+
+Grilla benbibehållna skinnklädda lår vid medel-hög värme, 6–8 minuter per sida. Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond längsmed lårets tjockaste del, borta från femurbenet. Vila 5 minuter täckt.
+
 ## Source recipes
 
 ### 1. Jessica Gavin — Grilled Chicken Thighs

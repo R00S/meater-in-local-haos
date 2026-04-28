@@ -2,6 +2,7 @@
 type: cut
 slug: corn_on_cob
 name: Corn on the Cob
+name_sv: Majskolv
 category: vegetables
 meat: corn
 cut_type: Corn
@@ -39,6 +40,10 @@ quality_assessed: 2026-04-26
 
 Corn on the cob (*Zea mays*) boiled is the simplest and most globally common cooking method, used in North America, Mexico, Peru, Japan, India, China, and Africa. Boiling achieves even cooking from all sides simultaneously, and the hot water transfers heat efficiently into the dense cob structure. The debate between "boil to order" (3–5 minutes for very fresh corn) vs. "bring to a boil then leave" (5–10 minutes for slightly older corn) hinges on the age of the corn — as the sugars in the kernels convert to starch over time. Internal kernel temperature (at the cob interface) of fully boiled corn: 88–95 °C (190–203 °F). A MEATER probe inserted through the kernels into the cob core monitors this; since the water temperature is ≈ 100 °C, the probe prevents overcooking by showing exactly when the kernel temperature has risen high enough.
 
+
+## Styckesprofil
+
+Majs på kolven (*Zea mays*) kokt är den enklaste och mest globalt vanliga tillagningsmetoden. Kokning uppnår jämn värmedistribution som mjukar alla kärnor på en gång. Koka i osaltat vatten 5–8 minuter. Klar när kärnorna är mjuka och söta.
 
 ## Research files by cooking method
 

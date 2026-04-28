@@ -2,6 +2,7 @@
 type: cut
 slug: goose_thigh
 name: Goose Thigh
+name_sv: Gåslår
 category: poultry
 meat: goose
 cut_type: Goose
@@ -43,6 +44,10 @@ Goose thigh (*gåslår*, Swedish; *Gänseschenkel*, German; *cuisse d'oie*, Fren
 
 Target internal temperature: **175–185 °F (79–85 °C)** — optimal for collagen breakdown; USDA minimum: 165 °F (74 °C).
 
+
+## Styckesprofil
+
+Gåslår (*gåslår*, svenska; *Gänseschenkel*, tyska; *cuisse d'oie*, franska) är den övre delen av benet — *biceps femoris*, *semitendinosus*, *semimembranosus* och *gracilis*-musklerna omgivna av eget fett. Innertemperatur: 80–85 °C. Eftertillagning: 3–5 °C.
 
 ## Research files by cooking method
 

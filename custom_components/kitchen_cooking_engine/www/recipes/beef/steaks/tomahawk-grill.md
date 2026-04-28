@@ -17,6 +17,13 @@ Target internal temperatures:
 - Medium-rare: **pull from oven at 50 °C (122 °F)**, rest 10 min, then grill to **55–57 °C (131–135 °F)**
 - Core temperature at table: **57–60 °C (135–140 °F)**
 
+## Styckesprofil
+
+Tomahawk-biffen är en tjock-cut ribeye (typiskt 5–8 cm tjock, 1,2–1,8 kg) med det fulla revbenet fortfarande fäst, vilket ger den dess distinkta yx-liknande utseende. På grund av dess enorma tjocklek kan den inte tillagas på grillen ensam utan risk för ett tjockt band av grått överkokt kött runt ett rått centrum. Den bästa metoden är reverse sear: låg ugn eller indirekt värme först, sedan hög direkt grillvärme för skorpan. Benet bidrar till smak under den långsamma tillagningsfasen.
+
+Målinterna temperaturer:
+- Medium-rare: **dra från ugn vid 50 °C (122 °F)**, vila 10 min, sedan grilla till **55–57 °C (131–135 °F)**
+- Kärntemperatur vid bord: **57–60 °C (135–140 °F)**
 ## Source recipes
 
 ### 1. GialloZafferano — Tomahawk alla griglia (Italian tradition)

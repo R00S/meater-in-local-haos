@@ -28,6 +28,12 @@ Köket.se temperature guide (Sweden):
 - Rådjur/hjort ytterfilé & filé: rare 52 °C, medium 57 °C, well done 65 °C
 - Stekdetaljer: 55/62/68 °C
 
+## Styckesprofil
+
+Viltrygghbiff (ryggsträng, sadel eller haunche-stek) från rådjur (*Capreolus capreolus*) eller kronhjort (*Cervus elaphus*) är det bästa pannstekssnittet. Köttet är mycket magert, djupt rödbrunt med en rik, viltartig smak upphöjd i hela europeisk matlagning.
+
+Pannstekning i 2–3 cm tjocklek: 3–4 minuter per sida i smör eller klarat smör vid hög värme. Sond insatt från sidan in till mitten. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Välgenomstekt avråds starkt. Eftertillagning: 3–4 °C. Viltköttets magerhet kräver att man drar 3–4 °C under mål.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Pan-Fried Venison with Blackberry Sauce (British tradition)

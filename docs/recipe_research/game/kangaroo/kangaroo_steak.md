@@ -2,6 +2,7 @@
 type: cut
 slug: kangaroo_steak
 name: Kangaroo Steak
+name_sv: Kängurufilé
 category: game
 meat: kangaroo
 cut_type: Kangaroo
@@ -50,6 +51,12 @@ Kangaroo (*Macropus* spp.) steak, most commonly from the hindquarter/rump or loi
 
 Target internal temperature: **54–57 °C (130–135 °F)** for medium-rare. Many Australian cooks pull at 50–52 °C for a warm-red centre. Well-done is strongly discouraged.
 
+
+## Styckesprofil
+
+Känguru (*Macropus* spp.) stek — vanligast från rumpen eller loin-filén — är ett av världens magraste röda kött (typiskt under 2 % fett), djupt karmosinrött med lätt viltaktig, järnrik smak. Den extrema magreten kräver hett och snabbt tillagning — pannstekning i 2–3 minuter per sida vid hög värme ger searad skorpa med rare till medium-rare inre.
+
+Alla tillagningsmetoder (grill, panna, ugn) kräver kortare tider och lägre sluttemperaturer jämfört med nötkött. Innertemperatur: **54–57 °C (130–135 °F)** för medium-rare. Välgenomstekt avråds starkt — kött som överstiger 63 °C torkar ut och förlorar sin karakteristiska konsistens.
 
 ## Research files by cooking method
 

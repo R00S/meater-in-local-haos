@@ -2,6 +2,7 @@
 type: cut
 slug: chicken_breast_bone_in
 name: Chicken Breast (Bone-in)
+name_sv: Kycklingfilé med ben
 category: poultry
 meat: chicken
 cut_type: Breast
@@ -39,6 +40,12 @@ Bone-in, skin-on chicken breast is the largest section of the bird — the split
 **Probe placement**: insert the probe horizontally from the thickest end of the breast (the larger end), keeping the tip in the geometric centre of the thickest part of the muscle, parallel to the bone and at least 1 cm away from it. Do not probe through the skin. The probe tip must not rest against the breast bone (sternum), keel, or a rib — bone heats slower and reads false-low. The centre of the thick end of the pectoralis major gives the representative read.
 
 **Comparison with boneless breast**: boneless, skinless breast cooks faster (typically 15–20 min at 220 °C / 425 °F vs. 30–40 min at 190–220 °C for bone-in) but has the same 165 °F internal temperature target. Cook time differences are solely from the thermal insulation of the bone; the pull temperature and doneness criteria are identical.
+
+## Styckesprofil
+
+Benbibehållet, skinnklätt kycklingbröst (*split* eller halverat bröst) är bröstets storsta sektionen av fågeln — med bröstben, revben och ibland önskekilsbenet kvar, täckt av skinnet. Det är distinkt från benfritt skinnfritt bröst: fetare, saftigare och mer smakrikt.
+
+Ugnsrostning: 200–220 °C, 35–45 minuter. Innertemperatur: **74 °C (165 °F)** USDA. Eftertillagning: 2–3 °C. Sond längsmed bröstets tjockaste del, borta från benet. Vila 5–10 minuter täckt.
 
 ## Research files by cooking method
 

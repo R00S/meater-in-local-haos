@@ -12,6 +12,10 @@ cut_type: Cruciferous
 ## Cut profile
 Whole-roasted cauliflower (*Brassica oleracea* var. *botrytis*) has become one of the signature vegetable showpieces of contemporary international cooking, popularised especially by Yotam Ottolenghi and the broader Middle Eastern–influenced restaurant world. The whole head is pre-boiled or pre-steamed briefly to begin cooking, then roasted at 190–220 °C for 30–45 minutes, producing a deeply golden, caramelised exterior that contrasts with the creamy interior. Alternatively, it is placed raw in a salt dough or foil enclosure and cooked at lower temperatures for longer. The core-to-outer temperature gradient is significant: the outermost florets reach 90+ °C while the stem/core may still be at 75–80 °C. The MEATER probe must be inserted into the thickest part of the stem/core from the base — this is the temperature that matters, as it is the last to reach doneness. Pull at 85–90 °C (185–194 °F) at the core; the outer florets will then be caramelised and some will be charred.
 
+## Styckesprofil
+
+Helrostad blomkål (*Brassica oleracea* var. *botrytis*) har blivit ett av de moderna internationella matlagningens signatur-vegetabiliska showpieces. Koka först i saltat vatten 10 min, pensla med kryddsmör, rosta vid 200–220 °C i 40–50 minuter. Klar när djupt gyllenbrun på alla sidor.
+
 ## Source recipes
 
 ### 1. Yotam Ottolenghi — Whole Roasted Cauliflower with Harissa Butter (Middle Eastern / Israeli tradition)

@@ -21,6 +21,12 @@ Lamb rib covers two distinct but related cuts: (1) **rack of lamb** — the Fren
 
 **Probe placement**: for a whole rack, insert the probe from one end, running the tip through the centre of the eye-of-rib, parallel to the rib bones. For individual chops, insert from the side of the chop, tip at the centre of the eye, keeping the probe clear of the bone. Do not insert through the fat cap as the fat layer will give a misleadingly low reading.
 
+## Styckesprofil
+
+Lammrev täcker två distinkta men relaterade snitt: (1) **rack of lamb** — den frenserade rev-sektionen (ben 6–13), såld som ett komplett rack på 6–8 ben eller som individuella revkotletter (lollipops); och (2) **lammspjäll / bröstrev** — den nedre, fetare rev-sektionen. Dessa snitt har dramatiskt olika tillagningstider.
+
+Rack: 200–220 °C, 15–25 minuter, innertemperatur **57–63 °C** för medium-rare. Bröstrev: 150 °C, 2–3 timmar, innertemperatur **88–95 °C**. Sond i tjockaste loin-muskeln borta från benet (rack); eller i tjockaste köttmassan borta från revbenslben (bröstrev).
+
 ## Source recipes
 
 ### 1. Dominic Chapman — Roast Rack of Lamb with Anchovy Butter (British tradition, Culinary Group B)

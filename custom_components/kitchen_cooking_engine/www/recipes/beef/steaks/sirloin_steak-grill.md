@@ -13,6 +13,12 @@ cut_type: Steaks
 
 Top sirloin on the grill is a very widely prepared cut across American BBQ, South American asado, and Korean bulgogi traditions. The lean, firm muscle structure sears well over direct high heat, producing charred grill marks on the surface while the moderate fat content prevents the excessive flare-ups associated with ribeye. For steaks under 3 cm thick, direct-heat-only grilling is standard; for thicker cuts, a two-zone approach (sear then indirect finish) produces better results. Sirloin's lean composition means it must not be cooked past medium without significant quality loss. Carryover from a hot grill is 4–6 °C.
 
+## Styckesprofil
+
+Entrecôte på grillen är ett mycket vanligt tillagat snitt i amerikanskt BBQ, sydamerikansk asado och koreansk bulgogi-tradition. Den magra, fasta muskelstrukturen sears bra över direkt hög värme och producerar förkolnade grillränder på ytan, medan det måttliga fettinnehållet förhindrar de överdrivna uppflammor som är förknippade med entrecôte.
+
+För biffar under 3 cm tjocklek är direktvärme-enbart grillning standard; för tjockare snitt ger ett tvåzons-tillvägagångssätt (sear sedan indirekt avslutning) bättre resultat. Entrecôtens magra sammansättning innebär att den inte bör tillagas bortom medium utan avsevärd kvalitetsförlust. Eftertillagning från en het grill är 4–6 °C. Innertemperatur: 54–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. Steven Raichlen — Grilled Top Sirloin (American BBQ tradition)

@@ -2,6 +2,7 @@
 type: cut
 slug: pork_shoulder_steak
 name: Pork Shoulder Steak
+name_sv: Bogkotlett
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin
@@ -40,6 +41,12 @@ quality_assessed: 2026-04-27
 
 Pork shoulder steak (*nakkesteak* in Danish, *Schweinenackensteak* / *Schopfsteak* in German/Austrian) is cut from the collar/neck section of the pork shoulder (*longissimus colli* and associated neck muscles), between the head and the loin chop. This section is more heavily marbled than loin cuts because the neck muscles work more than the back. The fat runs in well-distributed seams throughout the steak, making it the most forgiving pork steak to cook.
 
+
+## Styckesprofil
+
+Fläskaxel-stek (*nakkesteak* danska, *Schweinenackensteak* / *Schopfsteak* tyska/österrikiska) är skuren från halssektionen av fläskaxeln. Denna muskel är tätare marmorerad än loin-snitten — typiskt 8–15 % intramuskulärt fett — vilket gör axel-stek saftigare och mer förlåtande vid hög värme.
+
+Pannstekning: medel-hög värme, 3–4 minuter per sida. Innertemperatur: **70–74 °C (158–165 °F)** för genomstekt med saftighet kvar; **63 °C** USDA-minimum. Eftertillagning: 3–4 °C. Sond insatt horisontellt från sidan in till mitten av steaken. Inte lika känslig för överkokning som magra snitten.
 
 ## Research files by cooking method
 

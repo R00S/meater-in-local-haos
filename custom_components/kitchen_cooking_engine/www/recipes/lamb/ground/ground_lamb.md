@@ -2,6 +2,7 @@
 type: cut
 slug: ground_lamb
 name: Ground Lamb
+name_sv: Lammfärs
 category: lamb
 meat: lamb
 cut_type: Ground
@@ -33,6 +34,12 @@ Ground (minced) lamb is used in countless traditions — from Middle Eastern kib
 
 Target internal temperature: **74 °C (165 °F)** for food-safe ground lamb.
 
+
+## Styckesprofil
+
+Malet lamm används i otaliga traditioner — kibbeh, merguez, moussaka, keema, köfte. Pannstekning kräver fullständig genomkokning. Det höga fettinnehållet i malet lamm (15–25 %) gör beredningen mer smakrik och fuktig men ökar stänk i pannan.
+
+Tillagning tills köttet är helt genomstekt och lätt brynnat, 72–75 °C internt. Innertemperatur: **72–75 °C (162–167 °F)** för USDA-säkert malet lamm. Eftertillagning: 2–3 °C. Sond in i tjockaste delen av biff eller köttfärsklump. Gäller för alla former av kokt malet lamm (löst, biffar, köfte).
 
 ## Research files by cooking method
 

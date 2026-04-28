@@ -2,6 +2,7 @@
 type: cut
 slug: spinach
 name: Spinach
+name_sv: Spenat
 category: vegetables
 meat: green_vegetables
 cut_type: Green Vegetables
@@ -28,6 +29,10 @@ quality_assessed: 2026-04-26
 
 Spinach (*Spinacia oleracea*) sautéed wilts dramatically in 1–3 minutes in a hot pan with a small amount of oil or butter — fresh spinach loses approximately 90 % of its volume on cooking as moisture is expelled. The target: bright-green, just-wilted leaves with no excess water pooled in the pan. If a pool of water accumulates, the spinach is steaming not sautéing. Internal temperature at just-wilted doneness: 68–75 °C (154–167 °F) — above 75 °C the chlorophyll degrades and the colour turns army-drab. MEATER probe placed horizontally into the densest centre of the spinach pile in the pan.
 
+
+## Styckesprofil
+
+Spenat (*Spinacia oleracea*) sauterad vissnar dramatiskt på 1–3 minuter i het panna med lite olja eller smör — färsk spenat förlorar ungefär 90 % av volymen vid tillagning. Klar när fullständigt vissnad och ljusgrön. Salta efter vissning för att undvika för mycket vätska.
 
 ## Research files by cooking method
 

@@ -12,6 +12,10 @@ cut_type: Green Vegetables
 ## Cut profile
 Brussels sprouts (*Brassica oleracea* var. *gemmifera*) sautéed — frequently tossed in a hot pan — differ from pan-frying (held still for a sear). Sautéed sprouts are typically shredded or quartered for faster, more even cooking; whole halved sprouts that are continuously tossed achieve golden browning on multiple surfaces. Pull temperature: 82–88 °C (180–190 °F). MEATER probe into the core of the largest sprout.
 
+## Styckesprofil
+
+Brysselkål (*Brassica oleracea* var. *gemmifera*) sauterade — frekvent vänds i het panna — skiljer sig från pannstekning (hålls stilla för searing). Sauterade kål är typiskt trimmade men hela och kastas i het olja i 8–12 minuter. Klar när gyllenbrun och genomstekta.
+
 ## Source recipes
 
 ### 1. Pailin Chongchitnant — Thai-Style Sautéed Brussels Sprouts with Fish Sauce (Thai tradition)

@@ -26,6 +26,12 @@ Boneless, skinless chicken breast is the pectoralis major muscle — the largest
 
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry
 
+## Styckesprofil
+
+Benfritt kycklingbröst är *pectoralis major*-muskeln — den största muskeln hos fågeln. Eftersom domesticerade kycklingar sällan flaxa kraftigt, har denna muskel nästan ingen bindväv eller intramuskulärt fett, vilket gör den extremt mager (< 2 % fett), mör och snabbkokad.
+
+Eftersom köttet är magert torkar det ut lätt vid överkokning. Sond är avgörande. Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond insatt längsmed bröstets tjockaste del för noggrannaste mätning.
+
 ## Source recipes
 
 ### 1. Jessica Gavin — How to Cook Chicken on the Stove

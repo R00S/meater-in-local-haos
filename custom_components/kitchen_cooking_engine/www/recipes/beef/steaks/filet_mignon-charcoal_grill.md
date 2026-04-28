@@ -12,6 +12,10 @@ cut_type: Steaks
 ## Cut profile
 Filet mignon is cut from the narrow end of the beef tenderloin (psoas major), the least-used muscle in the animal, resulting in the most tender yet leanest steak in any carcass. Its near-total absence of intramuscular fat and connective tissue creates a delicate, buttery texture but also a vulnerability to drying out — the lean muscle fibres expel moisture rapidly above medium doneness. Charcoal grilling adds an irreplaceable dimension to filet mignon that no other cooking method provides: direct infrared radiation from glowing embers creates a Maillard crust at the surface level while the hardwood charcoal smoke deposits volatile aromatic compounds that complement the cut's mild flavour. Carryover is minimal for a small, round filet mignon — the geometry favours heat dissipation — but the intense radiant heat of charcoal means the final minutes of cooking are especially rapid.
 
+## Styckesprofil
+
+Filet mignon skärs från den smala änden av nötfilén (*psoas major*), den mest delikata och kostavlöna muskeln i djurkroppen — dess exceptionella mörhet är en direkt följd av att den gör minimalt arbete. Träkol ger filet mignon tillgång till ett smakdjup som gasgrillning inte kan matcha: träkolsröken och det irregulära värmemönstret sätter sig på det magra köttet och tillsätter en subtil rökighet till den annars milda filéten. Innertemperatur: 52–55 °C rare, 55–58 °C medium-rare. Eftertillagning: 3–5 °C — ta av från grillen tidigt.
+
 ## Source recipes
 
 ### 1. Aaron Franklin — Charcoal-Grilled Filet (Texas tradition)

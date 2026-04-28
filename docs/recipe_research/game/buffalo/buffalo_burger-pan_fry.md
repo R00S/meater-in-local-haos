@@ -26,6 +26,12 @@ Buffalo/bison burger patties are made from ground buffalo or bison meat, typical
 
 Target internal temperature: **70–74 °C (158–165 °F)** for food-safe ground meat.
 
+## Styckesprofil
+
+Buffalo/bisonburgerbiffar är gjorda av malet buffeln- eller bisonkött, typiskt från skulder, rund eller blandade trimmings. Malt buffel/bison är magrare än standard nötkött (typiskt 90/10 till 93/7 magert/fett) och tillagas snabbare och kan torka ut lättare än en 80/20 nötkötsbiff.
+
+En typisk biff är 150–180 g. Eftersom malning distribuerar ytbakterier genomgående kräver USDA att malet buffel/bison tillagas till 71 °C (160 °F) internt utan undantag. Innertemperatur: **71 °C (160 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond insatt horisontellt från sidan in mot biffens mitt.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Der Bisonburger (German tradition, pan-fry adaptation)

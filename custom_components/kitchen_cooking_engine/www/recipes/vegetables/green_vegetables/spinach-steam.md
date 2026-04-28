@@ -12,6 +12,10 @@ cut_type: Green Vegetables
 ## Cut profile
 Spinach (*Spinacia oleracea*) steamed — held over boiling water in a steamer basket or colander with a lid — wilts in 2–4 minutes, retaining its colour and nutrients better than boiling (which leaches iron and vitamins into the water). Pull temperature: 68–74 °C (154–165 °F). A MEATER probe placed horizontally into the densest pile of leaves in the steamer measures when the spinach has reached wilting temperature. Like sautéed spinach, steamed spinach is then dressed with various seasonings: butter (French), sesame (Japanese), coconut and mustard seeds (South Indian), or lemon and olive oil (Mediterranean).
 
+## Styckesprofil
+
+Spenat (*Spinacia oleracea*) ångad — hålls ovanför kokande vatten i en ångkorg eller durkslag med lock — vissnar på 2–4 minuter och bevarar sin färg och näring bättre än kokning. Klar när fullständigt vissnad och ljusgrön.
+
 ## Source recipes
 
 ### 1. Harumi Kurihara — Steamed Spinach Ohitashi (Japanese tradition)

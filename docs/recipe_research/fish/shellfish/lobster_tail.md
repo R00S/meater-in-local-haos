@@ -2,6 +2,7 @@
 type: cut
 slug: lobster_tail
 name: Lobster Tail
+name_sv: Hummersvans
 category: fish
 meat: shellfish
 cut_type: Shellfish
@@ -39,6 +40,12 @@ quality_assessed: 2026-04-26
 
 Lobster tail is the tail segment of a lobster (*Homarus americanus* — American/Maine lobster; *Homarus gammarus* — European/Breton lobster; or *Panulirus argus* — Caribbean spiny lobster) separated from the body and claws. The edible flesh is the large tail muscle (*pleopod* and *telson* musculature), which is firm, white-to-pale-pink, sweet, and rich in natural glutamates. The segmented exoskeleton (shell) is a built-in heat shield that protects the flesh from overcooking and acts as a flavour-retaining vessel. Standard tail dimensions for cooking: 170–280 g (6–10 oz) spiny lobster tails, 3–5 cm thick at the broadest cross-section. Overcooking is the primary risk — muscle proteins tighten sharply above 62 °C; the pull window for moist, sweet meat is 58–62 °C. USDA minimum for lobster is 63 °C (145 °F).
 
+
+## Styckesprofil
+
+Hummersvans är svanssegmentet av en hummer (*Homarus americanus* — amerikansk/Maine-hummer; *Homarus gammarus* — europeisk/bretonsk hummer; eller *Panulirus argus* — karibisk spinhummer) separerat från kroppen och klorna. Det ätliga köttet är den stora svansmuskeln (*pleopod*- och *telson*-muskulatur), som är fast, vit till blekrosa, söt och rik på naturliga glutamater.
+
+Det segmenterade ytterskalet (skalet) är ett inbyggt värmeskydd som skyddar köttet från överkokning och fungerar som en smakförstärkande behållare. Standardmåtten för tillagning: 170–280 g (6–10 oz) spinhummersvansen, 3–5 cm tjockt vid den bredaste tvärsnittsprofilen. Överkokning är den primära risken — muskelproteinerna stramar kraftigt ovanför 62 °C; dragfönstret för fuktigt, sött kött är 58–62 °C. USDA-minimum för hummer är 63 °C (145 °F). Innertemperatur: 58–62 °C.
 
 ## Research files by cooking method
 

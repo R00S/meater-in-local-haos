@@ -31,6 +31,12 @@ Leg of lamb is the quintessential festive roast throughout the Mediterranean, Mi
 - Well-done: 68–74 °C (155–165 °F) — 30 min/lb
 - Falling apart: 80 °C (175 °F) — 40 min/lb (slow 6 hours+)
 
+## Styckesprofil
+
+Lammben är den quintessentiella festrostningen i Medelhavsregionen, Mellanöstern, Brittiska öarna, Australien och Nya Zeeland. Ett lammbenstek med ben väger typiskt 2–3 kg och rostas vid 160–175 °C med en vitlöks-örtmarinad, antingen till medium-rosa (brittisk/australisk) eller genomstekt (mellanösternsk/sydasiatisk preferens).
+
+Innertemperatur: **57–65 °C (135–149 °F)** för medium-rare till medium; **70–74 °C** för genomstekt. Eftertillagning: 4–6 °C. Sond in i tjockaste köttmassan (lårens kärna), borta från lårbenet. Vila täckt 15–20 minuter.
+
 ## Source recipes
 
 ### 1. The Mediterranean Dish — Mediterranean Leg of Lamb with Potatoes (Mediterranean/American tradition)

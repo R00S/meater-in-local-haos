@@ -28,6 +28,12 @@ Oven-baked chicken breast reaches nearly every culture's kitchen. In India, the 
 
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for poultry, fully safe; higher leads to dryness.
 
+## Styckesprofil
+
+Benfritt, skinnfritt kycklingbröst är ett extremt magert snitt som kokar snabbt och kan torka ut lätt. Nyckeltekniker: banka till jämn tjocklek; använd het ugn (200–220 °C); marinera eller brina för fuktighet; sond.
+
+Tillagningstid: 18–22 min vid 200–220 °C. Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond längsmed bröstets tjockaste del. Vila täckt 5 minuter. Överkokning är det vanligaste problemet — sonden löser det definitivt.
+
 ## Source recipes
 
 ### 1. Skinnytaste / Gina Homolka — Baked Chicken Breast (mayo + panko crust)

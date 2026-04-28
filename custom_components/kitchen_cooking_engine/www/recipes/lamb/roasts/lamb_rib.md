@@ -2,6 +2,7 @@
 type: cut
 slug: lamb_rib
 name: Lamb Rib
+name_sv: Lammrev
 category: lamb
 meat: lamb
 cut_type: Roasts
@@ -64,6 +65,12 @@ Lamb rib covers two related but culinarily distinct cuts: (1) **rack of lamb** �
 **Temperature target (spare ribs)**: fall-off-bone tender at 77–82 °C / 170–180 °F. The Mediterranean Dish: "quite tender" at 175 °C sealed in foil for 1.5 hours.
 
 **Probe placement (rack)**: insert from one end of the rack into the eye-of-rib, parallel to the rib bones, tip at the geometric centre of the eye. Do not insert into the fat cap or through a bone — both give misleading readings. For individual chops, insert from the side of the chop.
+
+## Styckesprofil
+
+Lammrev täcker två relaterade men kulinariskt distinkt snitt: (1) **rack of lamb** — frenserade rev-sektionen (revben 6–13, ögon av revben = *longissimus dorsi*), såld hel (6–8 ben, 750–900 g) eller som individuella kotletter (80–120 g vardera); och (2) **lammspjäll / bröst** — den nedre, fetare rev-sektionen med mer bindväv.
+
+Rack: **57–63 °C** för medium-rare; bröst: **88–95 °C** för fall-från-benet. Sond i loin-muskeln borta från benet. Eftertillagning: 3–4 °C (rack); försumbar (bröst). Vila rack täckt 5–8 minuter före skärning.
 
 ## Research files by cooking method
 

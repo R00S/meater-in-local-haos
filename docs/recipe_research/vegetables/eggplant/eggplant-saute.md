@@ -12,6 +12,10 @@ cut_type: Eggplant
 ## Cut profile
 Eggplant (*Solanum melongena*) sautéed in a hot, well-oiled pan produces intensely browned, deeply flavourful pieces in a fraction of the time needed for oven roasting. The dense sponge of the raw flesh first soaks up fat before the surface temperature rises high enough to begin Maillard browning — the secret to even browning without greasiness is a fiercely hot pan and enough oil, so the surface seals before absorption becomes saturating. Slices, cubes, or batons of 1–1.5 cm thickness are ideal; thicker pieces risk underdone centres by the time the crust is dark enough. The internal temperature for fully sautéed eggplant is 78–85 °C (172–185 °F) — at this point the interior is creamy-silky yet the piece holds its shape. Carryover is small (1–2 °C) and the pieces continue to drink residual oil off the heat, making a wire rack the best draining surface.
 
+## Styckesprofil
+
+Aubergine (*Solanum melongena*) sauterad i en het, väl-oljad panna ger intensivt brynnade, djupt smakrika bitar på bråkdelen av den tid som krävs för ugnsstekning. Sautera i 8–10 minuter vid hög värme. Klar när djupt gyllenbrun och mjuk.
+
 ## Source recipes
 
 ### 1. Fuchsia Dunlop — Yú Xiāng Qiézi (魚香茄子 — Chinese Fish-Fragrant Eggplant)

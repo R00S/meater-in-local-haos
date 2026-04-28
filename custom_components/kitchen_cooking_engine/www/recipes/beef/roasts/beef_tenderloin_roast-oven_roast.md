@@ -12,6 +12,10 @@ cut_type: Roasts
 ## Cut profile
 The beef tenderloin (psoas major) runs along the interior of the spine and does almost no work during the animal's life, making it the most tender, least collagen-dense muscle in the carcass. A whole tenderloin roast (the "châteaubriand" section or full fillet) weighs approximately 1–2 kg and tapers from the thick butt end to a thin tail. It is exceptionally lean, with minimal intramuscular fat, making it vulnerable to drying out if overcooked — the window between perfectly rosy and dry, grey meat is narrow. Oven roasting suits the tenderloin because gentle, even heat preserves the moisture in the lean fibres; high-heat searing before or after the oven creates the Maillard crust that the lean exterior cannot produce on its own. Carryover is significant in a whole tenderloin — the concentrated lean mass retains heat for several minutes after leaving the oven, enough to raise the internal temperature noticeably — making the pull temperature meaningfully lower than the target serving temperature.
 
+## Styckesprofil
+
+Nötfilé (*psoas major*) löper längs ryggradens insida och utför minimalt arbete under djurets liv — det är den muskel som minst belastas i hela kroppen, vilket är anledningen till dess exceptionella mörhet. Hel nötfilé är en avlång, konisk muskel som väger 2–3 kg; den delas vanligtvis i tre delar: huvud (tjock ände), mittbiten och svansen (smalaste delen). Filén saknar i stort sett kollagen men har lite intramuskulärt fett — precis tillräckligt för att hålla den mör under en snabb ugnsstekning. Drar man den till för hög temperatur uttorkar den snabbt. Laga den till 52–55 °C (rare) eller 55–58 °C (medium-rare) för bästa resultat. Eftertillagning är märkbar (3–5 °C) och måste beaktas.
+
 ## Source recipes
 
 ### 1. Ina Garten — Beef Tenderloin Roast with Mustard Crust

@@ -12,6 +12,12 @@ cut_type: Steaks
 ## Cut profile
 Flank steak is a wide, flat cut from the abdominal muscles with visible long fibres running along its length, minimal fat, and bold beefy flavour. Pan frying in a hot skillet with a small amount of oil or fat is an excellent domestic method: the full-contact Maillard browning across the steak's wide flat surface creates a flavourful crust without requiring an outdoor grill. Because the cut is thin and wide, a flank steak can be difficult to manage in a skillet — many recipes cut it into portions for easier handling. The lean, fibrous structure makes pan-frying timing critical: above medium, the fibres contract and expel moisture rapidly, making the steak tough. Carryover after pan frying is minimal, as removing from the hot pan surface immediately stops the primary conductive heat transfer.
 
+## Styckesprofil
+
+Flank steak är ett brett, platt snitt från bukmusklerna med synliga långa fibrer längs dess längd, minimalt fett och kraftig nötssmak. Pannstekning i en het stekpanna med en liten mängd olja eller fett är en utmärkt hushållsmetod: den fullkontakts-Maillard-brynning över biffens breda platta yta skapar en smakrik skorpa utan att kräva en utomhusgrill.
+
+Eftersom snittet är tunt och brett kan en flank steak vara svår att hantera i en stekpanna — många recept skär den i portioner för enklare hantering. Den magra, fibrosa strukturen gör timingen kritisk vid pannstekning: ovanför medium drar fibrerna ihop sig och pressar ut fuktighet snabbt, vilket gör biffen seg. Eftertillagning efter pannstekning är minimal — att ta bort från den varma pannkontakten omedelbart stoppar den primära ledningsvärmeöverföringen. Skär alltid tvärs mot fibern. Innertemperatur: 52–57 °C medium-rare. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Pan-Fried Flank Steak (Serious Eats)

@@ -13,6 +13,12 @@ cut_type: Salmon
 
 Salmon fillet cooked sous vide is sealed in a vacuum bag and submerged in a precision-temperature water bath for an extended period; the bath temperature is the cook temperature, and the fish will equilibrate to that temperature throughout its thickness over sufficient time. This method produces radically different textures compared to pan searing or roasting — at bath temperatures below 50 °C, the connective tissue between muscle segments (myocommata) softens but the proteins in the myotomes remain in a semi-liquid, custard-like state; at 52–54 °C the salmon fully sets to a firm but moist texture. The major structural advantage of sous vide is elimination of the hard-to-control temperature gradient from surface to core: the entire fillet is held at one temperature. Carryover is essentially zero — the fish exits the bath at the precise target temperature and the bag insulates it — but a quick sear or glaze step post-bath will add 2–3 °C at the surface.
 
+## Styckesprofil
+
+Laxfilé tillagad sous vide förseglas i vacuumpåse och sänks ned i ett precisionsvattenbad under lång tid; badtemperaturen är tillagningstemperaturen och fisken jämnar ut sig till den temperaturen genomgående med tillräcklig tid. Denna metod ger radikalt annorlunda texturer jämfört med pannstekning eller ugnsstekning — vid badtemperaturer under 50 °C förblir bindväven mellan muskelsegmenten (myokommat) mjuk men proteinerna i myotomerna i ett halvflytande, puddingliknande tillstånd; vid 52–54 °C sätter sig laxen helt till en fast men fuktig textur.
+
+Den stora strukturella fördelen med sous vide är elimineringen av det svårkontrollerade temperaturgradienten från yta till kärna: hela filén hålls vid en temperatur. Eftertillagning är i princip noll — fisken lämnar badet vid exakt måltemperatur och påsen isolerar den — men ett snabbt searing- eller glasyr-steg efter badet tillför 2–3 °C vid ytan. Innertemperatur: 52–60 °C beroende på preferens.
+
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Sous Vide Salmon (American tradition)

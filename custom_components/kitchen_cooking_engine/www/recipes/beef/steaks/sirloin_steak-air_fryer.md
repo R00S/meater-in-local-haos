@@ -12,6 +12,12 @@ cut_type: Steaks
 ## Cut profile
 Air frying a sirloin steak circulates intense hot air at high speed around the meat, producing surface drying and Maillard browning without direct conduction heat. The result is a firmer, lighter crust than a cast-iron sear — less contact-browning but more even all-round colour. Because the sirloin is lean, air frying is best suited to steaks of 2–3 cm thickness; thinner cuts dry out before the interior reaches target temperature. Carryover is 4–5 °C. Target temperature settings mirror pan-fry (rare 49 °C → medium-rare 54 °C), with the air fryer typically running at 200–220 °C for 8–12 minutes depending on thickness.
 
+## Styckesprofil
+
+Airfryer-tillagning av entrecôtebiff cirkulerar intensiv het luft vid hög hastighet runt köttet och ger ytan torkad och Maillard-brynning utan direkt ledningsvärme. Resultatet är en fastare, lättare skorpa än en gjutjärnsearing — mindre kontaktbrynning men jämnare rundad färg.
+
+Eftersom entrecôten är mager lämpar sig airfryer bäst för biffar med 2–3 cm tjocklek; tunnare snitt torkar ut innan insidan når måltemperaturen. Eftertillagning är 4–5 °C. Måltemperaturinställningar speglar pannstekning (rare 49 °C → medium-rare 54 °C), med airfryer typiskt körs vid 200–220 °C i 8–12 minuter beroende på tjocklek. Sonden placeras i den geometriska mitten av biffen, längs den långa axeln. Innertemperatur: 54–57 °C medium-rare.
+
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air Fryer Sirloin Steak (American tradition)

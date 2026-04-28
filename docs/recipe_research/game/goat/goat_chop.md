@@ -2,6 +2,7 @@
 type: cut
 slug: goat_chop
 name: Goat Chop
+name_sv: Getkotlett
 category: game
 meat: goat
 cut_type: Goat
@@ -58,6 +59,12 @@ Goat loin chops (*côtelettes de chèvre*; Indian *bakri ki champ*; Arabic *karr
 
 Target internal temperature: **70–74 °C (158–165 °F)**.
 
+
+## Styckesprofil
+
+Getryggkotletter (*côtelettes de chèvre*; indiska *bakri ki champ*; arabiska *karrī lahm al-maāz*) är T-bensformade (med ben) eller benfria, 2–3 cm tjocka, med *longissimus dorsi*-muskeln på ena sidan. Getkött är magrare än lamm vid jämförbar ålder — intramuskulärt fettinnehåll är vanligtvis 2–4 % jämfört med 6–10 % för lamm.
+
+Den magra profilen innebär att get gynnas av kortare tillagningstider, men kulturell preferens i Mellanöstern, Sydostasien och Afrika föredrar vanligtvis genomstekt (68–74 °C). Innertemperatur: **68–74 °C** (155–165 °F). Eftertillagning: 3–4 °C. Sond i den tjockaste muskeldelen, borta från benet.
 
 ## Research files by cooking method
 

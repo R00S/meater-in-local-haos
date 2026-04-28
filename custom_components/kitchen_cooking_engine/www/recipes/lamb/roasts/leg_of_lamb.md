@@ -2,6 +2,7 @@
 type: cut
 slug: leg_of_lamb
 name: Leg of Lamb
+name_sv: Lammlår
 category: lamb
 meat: lamb
 cut_type: Roasts
@@ -78,6 +79,12 @@ Leg of lamb is the quintessential festive roast throughout the Mediterranean, Mi
 - Well-done: 68–74 °C (155–165 °F) — 30 min/lb
 - Falling apart: 80 °C (175 °F) — 40 min/lb (slow 6 hours+)
 
+
+## Styckesprofil
+
+Lammben är den quintessentiella festrostningen globalt. Ugnsrostning vid 160–175 °C med vitlöks-örtmarinad, antingen till medium-rosa eller genomstekt beroende på kulinarisk tradition. Spetsa köttet med vitlöksklyftor och ingnid ytan med rosmarin-olja-salt är standardteknik.
+
+Innertemperatur: **57–65 °C (135–149 °F)** för medium-rare till medium; **70–74 °C** för genomstekt (mellanösternsk). Eftertillagning: 4–6 °C. Sond in i tjockaste köttmassan, borta från lårbenet. Vila täckt 15–20 minuter. Tillagningstid: 20–25 minuter per 500 g + 20 minuter extra.
 
 ## Research files by cooking method
 

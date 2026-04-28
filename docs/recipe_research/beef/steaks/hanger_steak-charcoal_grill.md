@@ -13,6 +13,10 @@ cut_type: Steaks
 
 Hanger steak over live charcoal adds an important dimension to this already intensely flavoured cut. The fat-and-flavour drippings from the hanging muscle hit the hot coals and combust into brief flare-ups, depositing charred aromatic compounds onto the steak surface. This combination of deep beef flavour + charcoal smoke + char edge makes the hanger steak over charcoal one of the most intensely flavoured steak preparations achievable. The sinew-containing version (some butchers leave the central connective tissue) is convenient to cook whole and split post-resting; the sinew-removed version cooks as two thin separate muscles. Carryover from a very hot charcoal fire is 5–7 °C.
 
+## Styckesprofil
+
+Hängarbiff över levande träkol tillsätter en viktig dimension till detta redan intensivt smakrika snitt. Fettet och smakdroppar från den hängande muskeln träffar de heta kolarna och antänds till korta uppflammor som deponerar förkolnade aromatiska föreningar på biffytan. Denna kombination av djup nötsmak och rökig träkolskaraktär är skälet till att onglet är så firat i franska bistro-köket. Det är kritiskt att skära tvärs mot fibern — snittet har en grov, oregelbunden fiberstruktur som kräver rätt skärning för att bli mört i munnen. Innertemperatur: 52–57 °C. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. Francis Mallmann — Onglet over Charcoal Embers (Argentine tradition)

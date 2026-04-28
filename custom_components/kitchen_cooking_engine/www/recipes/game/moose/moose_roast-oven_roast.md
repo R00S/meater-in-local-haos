@@ -26,6 +26,12 @@ Moose (*Alces alces*) — called älg in Swedish, elg in Norwegian, and Elch in 
 
 Target internal temperature: **60–65 °C (140–149 °F)** for medium (pink centre); **70 °C (158 °F)** for fully cooked. The Swedish national tradition prefers 60–65 °C.
 
+## Styckesprofil
+
+Älg (*Alces alces*) — kallad älg på svenska, elg på norska och *Elch* på tyska — är den största hjortarten på norra halvklotet. Bakkvartets stek (haunch/bog) har djupt, mörkrött kött med minimalt fett och en karakteristisk viltsmak. Älgstek tillagas bäst långsamt: hög inledande värme för att utveckla en skorpa, sedan låg, långsam ugnsstekning (125–160 °C) med pensling.
+
+Den svenska traditionen serverar älgstek rosa med grädde och lingon. Innertemperatur: **60–65 °C (140–149 °F)** för medium (rosa mitt); **70 °C** för genomstekt. Den svenska nationella traditionen föredrar 60–65 °C. Eftertillagning: 4–6 °C. Sond i tjockaste köttmassan, borta från ben.
+
 ## Source recipes
 
 ### 1. Chefkoch.de — Elchbraten (Älg i grytan) — Swedish oven-braise (German recipe citing Swedish tradition)

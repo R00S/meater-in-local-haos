@@ -15,6 +15,12 @@ Pan frying pork sausages on the stove provides a more controlled environment tha
 
 An alternative: start over medium-low heat in a thin film of oil, turning every 2–3 minutes for 15–20 minutes total. The low heat lets the fat render gradually through the intact casing, producing a deeply browned exterior. Probe from one end only, into the centre, avoiding the casing mid-body. Target: 71–75 °C (160–167 °F). Carryover: 2–3 °C.
 
+## Styckesprofil
+
+Pannstekning av fläskkorv ger en mer kontrollerad miljö än grillning: ett täckt lock fångar ånga under den inledande tillagningsfasen och hjälper insidan nå säker temperatur utan att bränna höljets utsida.
+
+Standardteknik: lägg korvar i kall panna med lite vatten (3–4 msk), täck och koka 8–10 minuter tills vätskan avdunstar; ta bort locket och brun vid medel värme ytterligare 5–8 minuter. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond längsvis in till mitten.
+
 ## Source recipes
 
 ### 1. Madens Verden — Sprøde pølser på pande (Danish tradition)

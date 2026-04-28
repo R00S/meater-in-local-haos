@@ -12,6 +12,10 @@ cut_type: Corn
 ## Cut profile
 Sweet corn on the cob (*Zea mays saccharata*, husked or husk-on) is a dense rack of starch-rich kernels each enclosed in a delicate pericarp. The kernels are 70–75 % water and contain heat-labile sugars that begin converting to starch the moment the cob is harvested. Steaming preserves more of those sugars than boiling because the kernels are not leached; it is also the gentlest method, holding the cob at 100 °C (vapour temperature) without any agitation. The kernel pericarp turns from cloudy-white to translucent-glossy when fully heated through; this visual cue corresponds to an internal kernel temperature of roughly 82–90 °C. Carryover is essentially zero — the cobs are removed straight onto the plate and served immediately.
 
+## Styckesprofil
+
+Söt majs på kolven (*Zea mays saccharata*, skalad eller med skal) ångkokas i 8–12 minuter ovanför kokande vatten. Ångkokning bevarar fler vattenlösliga vitaminer och den naturliga sötan jämfört med kokning. Klar när kärnorna är möra och söta.
+
 ## Source recipes
 
 ### 1. Deborah Madison — Steamed Sweet Corn (American vegetarian tradition)

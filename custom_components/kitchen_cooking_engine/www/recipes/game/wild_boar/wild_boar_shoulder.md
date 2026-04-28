@@ -2,6 +2,7 @@
 type: cut
 slug: wild_boar_shoulder
 name: Wild Boar Shoulder
+name_sv: Vildsvinsskuldra
 category: game
 meat: wild_boar
 cut_type: Wild Boar
@@ -33,6 +34,12 @@ Wild boar shoulder (*Sus scrofa*) is the anterior limb and associated muscles, p
 
 The flavour of wild boar shoulder is more intense and gamey than farmed pork, with notes of forest herbs and earthiness from the animal's varied diet. The high collagen content makes it unsuitable for quick, high-heat methods — it is exclusively a slow-roast or braise cut. Minimum collagen conversion temperature: 80+ °C; optimal pull for fall-apart texture: 85–92 °C.
 
+
+## Styckesprofil
+
+Vildsvinsbog (*Sus scrofa*) är frambenet och associerade muskler med täta bindvävsskikt och intramuskulärt fett. Vildsvin utvecklar avsevärt mer bindväv än tamgris på grund av aktivt liv i det vilda; detta kräver längre braiseringstider.
+
+Bräsera med rödvin, vildfond, enbär, rosmarin, lök och morötter i täckt ugnsform vid 160–175 °C i 3–4 timmar. Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertillagning: försumbar. Sond i tjockaste muskeldelen, borta från skulderbladsben.
 
 ## Research files by cooking method
 

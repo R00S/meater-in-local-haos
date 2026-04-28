@@ -28,6 +28,12 @@ The backstrap (outer loin) is the preferred cut for grilling: it is uniform in t
 
 Temperature precision is essential. Pull at **54–57°C (130–135°F)** for medium-rare; carry-over will bring it to 57–60°C after a 5-minute rest. Never take venison above 65°C (149°F) — it rapidly becomes grey, dry and livery. A MEATER probe inserted into the thickest part before grilling allows wireless monitoring without opening the grill.
 
+## Styckesprofil
+
+Viltbiff, loin eller haunche-steak är utmärkt på grillen. Den magra, täta muskeln gynnas av direkt hög värmegrillning — den searas snabbt och utvecklar en rökig, karameliserad yta medan mitten förblir rosa och saftig.
+
+Grillen måste förvärmas till max (230–260 °C). Köttet bör oljeborsttas och gärna marineras 1–2 timmar i rödvin, olja och vitlök. Tillagningstid: 3–4 minuter per sida. Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Välgenomstekt avråds starkt. Eftertillagning: 3–4 °C. Dra vid 53–58 °C.
+
 ## Source recipes
 
 ### 1. BBC Good Food — Venison Steak with Port Sauce (UK tradition)

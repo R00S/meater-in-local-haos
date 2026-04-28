@@ -17,6 +17,10 @@ Target internal temperatures (air fryer ribeye):
 - Medium-rare: **54–57 °C (129–135 °F)** — pull around 8–9 min at 200 °C
 - Medium: **60–63 °C (140–145 °F)** — pull at 10–12 min
 
+## Styckesprofil
+
+Airfryern tillagar en entrecôte med snabb varmluftscirkulation — effektivt en kompakt konvektionsugn som körs 20–30 °C varmare än en standardugn. För en entrecôte (2 cm tjock) ger 190–200 °C × 10 minuter ett resultat mellan medium-rare och medium, med en måttlig ytterkrusta. För biffkvalitet är en riktig het gjutjärnssearing överlägsen airfryern; airfryern passar bäst som snabb nödfallmetod eller för tunnare bitar. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C.
+
 ## Source recipes
 
 ### 1. ichkoche.at — Schopfsteak aus dem Airfryer (Austrian tradition)

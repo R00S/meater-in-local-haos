@@ -324,8 +324,9 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
 
     Returns:
         recipe_index:        {cut_slug: {method_slug: url_path}}
-        cut_profiles:        {cut_slug: "profile text"}
-        cut_method_profiles: {cut_slug: {method_slug: "profile text"}}
+        cut_profiles:        {cut_slug: "profile text (en)"}
+        cut_profiles_sv:     {cut_slug: "profile text (sv)"} — from ## Styckesprofil section
+        cut_method_profiles: {cut_slug: {method_slug: "en text", method_slug+"_sv": "sv text"}}
         recipe_titles:       {cut_slug: {method_slug: ["title", ...]}}
     """
     if recipe_dir is None:
@@ -350,10 +351,12 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
 
     recipe_index = {}
     cut_profiles = {}
+    cut_profiles_sv = {}
     cut_method_profiles = {}
     recipe_titles = {}
 
-    _profile_re = re.compile(r"## Cut profile\n+(.*?)(?=\n\n##|\Z)", re.DOTALL)
+    _profile_re    = re.compile(r"## Cut profile\n+(.*?)(?=\n\n##|\Z)", re.DOTALL)
+    _profile_sv_re = re.compile(r"## Styckesprofil\n+(.*?)(?=\n\n##|\Z)", re.DOTALL)
 
     for root, _dirs, files in os.walk(recipe_dir):
         for filename in sorted(files):
@@ -380,6 +383,10 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
                 m = _profile_re.search(content)
                 if m:
                     cut_profiles[cut_slug] = m.group(1).strip()
+
+                m_sv = _profile_sv_re.search(content)
+                if m_sv:
+                    cut_profiles_sv[cut_slug] = m_sv.group(1).strip()
                 continue
 
             # --- Cut-method file ---
@@ -396,6 +403,19 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
                     # Fallback: populate cut overview description if no dedicated overview file
                     if cut_slug not in cut_profiles:
                         cut_profiles[cut_slug] = desc
+
+                # Swedish method description — prefer ## Styckesprofil body over
+                # the single-line description_sv: YAML field (body is multi-paragraph)
+                m_sv = _profile_sv_re.search(content)
+                if m_sv:
+                    cut_method_profiles.setdefault(cut_slug, {})[method_slug + "_sv"] = m_sv.group(1).strip()
+                    if cut_slug not in cut_profiles_sv:
+                        cut_profiles_sv[cut_slug] = m_sv.group(1).strip()
+                else:
+                    # Fall back to single-line YAML field for backwards compatibility
+                    desc_sv = data.get("description_sv")
+                    if desc_sv:
+                        cut_method_profiles.setdefault(cut_slug, {})[method_slug + "_sv"] = desc_sv
 
                 titles = _extract_recipe_titles(content)
                 if titles:
@@ -421,18 +441,72 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
                 if titles:
                     recipe_titles.setdefault(cut_slug, {})[method_slug] = titles
 
-    return recipe_index, cut_profiles, cut_method_profiles, recipe_titles
+    return recipe_index, cut_profiles, cut_profiles_sv, cut_method_profiles, recipe_titles
 
 
 # Category display data (mirrors cooking_data.py MeatCategory definitions)
 _CATEGORY_META = {
-    "beef":       {"icon": "🥩", "color": "#8B0000"},
-    "pork":       {"icon": "🐷", "color": "#FFB6C1"},
-    "poultry":    {"icon": "🍗", "color": "#FFD700"},
-    "fish":       {"icon": "🐟", "color": "#4682B4"},
-    "lamb":       {"icon": "🐑", "color": "#800020"},
-    "game":       {"icon": "🦌", "color": "#2F4F4F"},
-    "vegetables": {"icon": "🥬", "color": "#228B22"},
+    "beef":       {"icon": "🥩", "color": "#8B0000", "name_sv": "Nötkött"},
+    "pork":       {"icon": "🐷", "color": "#FFB6C1", "name_sv": "Fläskkött"},
+    "poultry":    {"icon": "🍗", "color": "#FFD700", "name_sv": "Fågel"},
+    "fish":       {"icon": "🐟", "color": "#4682B4", "name_sv": "Fisk"},
+    "lamb":       {"icon": "🐑", "color": "#800020", "name_sv": "Lamm"},
+    "game":       {"icon": "🦌", "color": "#2F4F4F", "name_sv": "Vilt"},
+    "vegetables": {"icon": "🥬", "color": "#228B22", "name_sv": "Grönsaker"},
+}
+
+# Swedish names for meat-level groupings (meat id → Swedish name)
+_MEAT_NAME_SV = {
+    "cow":            "Nöt",
+    "pig":            "Gris",
+    "chicken":        "Kyckling",
+    "turkey":         "Kalkon",
+    "duck":           "And",
+    "goose":          "Gås",
+    "lamb":           "Lamm",
+    "salmon":         "Lax",
+    "white_fish":     "Vit fisk",
+    "tuna":           "Tonfisk",
+    "shellfish":      "Skaldjur",
+    "venison":        "Hjort",
+    "reindeer":       "Ren",
+    "moose":          "Älg",
+    "wild_boar":      "Vildsvin",
+    "rabbit":         "Kanin",
+    "ostrich":        "Struts",
+    "kangaroo":       "Känguru",
+    "bison":          "Bison",
+    "buffalo":        "Buffel",
+    "mutton":         "Får",
+    "goat":           "Get",
+    "root_vegetables":"Rotfrukter",
+    "green_vegetables":"Gröna grönsaker",
+    "alliums":        "Lökväxter",
+    "mushrooms":      "Svamp",
+    "squash":         "Squash",
+    "peppers":        "Paprika",
+    "eggplant":       "Aubergine",
+    "cruciferous":    "Kålväxter",
+    "tomatoes":       "Tomater",
+    "corn":           "Majs",
+}
+
+# Swedish names for cut_type-level groupings (cut_type display name → Swedish name)
+_CUT_TYPE_NAME_SV = {
+    "Steaks":           "Biffar",
+    "Roasts":           "Stekar",
+    "Braising Cuts":    "Grytbitar",
+    "Ground":           "Färs",
+    "Offal":            "Innanmäte",
+    "Other / Offal":    "Övrigt / Innanmäte",
+    "Chops":            "Kotletter",
+    "Chops & Tenderloin":"Kotletter & Filé",
+    "Ribs":             "Revben",
+    "Ham":              "Skinka",
+    "Dark Meat":        "Mörkt kött",
+    "Whole":            "Hel",
+    "Breast":           "Bröst",
+    "Legs":             "Ben",
 }
 
 _DONENESS_ICONS = {
@@ -516,6 +590,8 @@ def build_experimental_tree(base_dir):
             cut_type_name = data.get("cut_type")
             slug = data.get("slug") or stem
             name = data.get("name") or slug.replace("_", " ").title()
+            name_sv = data.get("name_sv")
+            description_sv = data.get("description_sv")
             rec_doneness = data.get("recommended_doneness")
             methods = data.get("methods") or []
             doneness_list = data.get("doneness") or []
@@ -544,7 +620,7 @@ def build_experimental_tree(base_dir):
                         safety_level = "caution"
                     else:
                         safety_level = None
-                    exp_doneness[d_name] = {
+                    entry = {
                         "value": d_name,
                         "name": d_name.replace("_", " ").title(),
                         "icon": _DONENESS_ICONS.get(d_name, "🔥"),
@@ -553,6 +629,9 @@ def build_experimental_tree(base_dir):
                         "temp_f": d.get("target_f"),
                         "safety_level": safety_level,
                     }
+                    if d.get("name_sv"):
+                        entry["name_sv"] = d["name_sv"]
+                    exp_doneness[d_name] = entry
 
             # Build hierarchy
             if category not in cats:
@@ -560,6 +639,7 @@ def build_experimental_tree(base_dir):
                 cats[category] = {
                     "id": category,
                     "name": category.title(),
+                    "name_sv": meta.get("name_sv"),
                     "icon": meta["icon"],
                     "color": meta["color"],
                     "_meats": {},
@@ -567,21 +647,30 @@ def build_experimental_tree(base_dir):
 
             cat = cats[category]
             if meat not in cat["_meats"]:
-                cat["_meats"][meat] = {
+                meat_entry = {
                     "id": meat,
                     "name": meat.replace("_", " ").title(),
                     "_cut_types": {},
                 }
+                meat_sv = _MEAT_NAME_SV.get(meat)
+                if meat_sv:
+                    meat_entry["name_sv"] = meat_sv
+                cat["_meats"][meat] = meat_entry
 
             meat_obj = cat["_meats"][meat]
+
             # Normalise cut_type to a safe id: lowercase, spaces/slashes → underscore
             ct_id = re.sub(r"[^a-z0-9]+", "_", cut_type_name.lower()).strip("_")
             if ct_id not in meat_obj["_cut_types"]:
-                meat_obj["_cut_types"][ct_id] = {
+                ct_entry = {
                     "id": ct_id,
                     "name": cut_type_name,
                     "cuts": [],
                 }
+                ct_sv = _CUT_TYPE_NAME_SV.get(cut_type_name)
+                if ct_sv:
+                    ct_entry["name_sv"] = ct_sv
+                meat_obj["_cut_types"][ct_id] = ct_entry
 
             cut_obj = {
                 "id": slug,
@@ -589,6 +678,10 @@ def build_experimental_tree(base_dir):
                 "slug": slug,
                 "doneness": doneness_keys,
             }
+            if name_sv:
+                cut_obj["name_sv"] = name_sv
+            if description_sv:
+                cut_obj["description_sv"] = description_sv
             if rec_doneness:
                 cut_obj["recommended_doneness"] = rec_doneness
             if methods:
@@ -609,18 +702,24 @@ def build_experimental_tree(base_dir):
             # Remove the private key
             for ct in cut_types_list:
                 ct.pop("_cut_types", None)
-            meats_list.append({
+            meat_entry = {
                 "id": meat_obj["id"],
                 "name": meat_obj["name"],
                 "cutTypes": cut_types_list,
-            })
-        exp_tree[cat_key] = {
+            }
+            if meat_obj.get("name_sv"):
+                meat_entry["name_sv"] = meat_obj["name_sv"]
+            meats_list.append(meat_entry)
+        cat_entry = {
             "id": cat["id"],
             "name": cat["name"],
             "icon": cat["icon"],
             "color": cat["color"],
             "meats": meats_list,
         }
+        if cat.get("name_sv"):
+            cat_entry["name_sv"] = cat["name_sv"]
+        exp_tree[cat_key] = cat_entry
 
     return exp_tree, exp_doneness
 
@@ -787,7 +886,7 @@ def generate_js_data():
                     print(f"Warning: Could not load translation {filename}: {e}")
 
     # Build recipe index from docs/recipe_research/ (experimental / active fork)
-    recipe_index, cut_profiles, cut_method_profiles, recipe_titles = build_recipe_index(base_dir)
+    recipe_index, cut_profiles, cut_profiles_sv, cut_method_profiles, recipe_titles = build_recipe_index(base_dir)
     print(f"  Recipe index (experimental): {sum(len(v) for v in recipe_index.values())} files across {len(recipe_index)} cuts")
 
     # Build recipe index from docs/recipe_research_classic/ (frozen classic fork)
@@ -796,14 +895,14 @@ def generate_js_data():
     classic_www_dir = os.path.join(base_dir, "www", "recipes_classic")
     classic_recipe_dir = classic_dir if os.path.isdir(classic_dir) else (classic_www_dir if os.path.isdir(classic_www_dir) else None)
     if classic_recipe_dir:
-        classic_recipe_index, classic_cut_profiles, classic_cut_method_profiles, classic_recipe_titles = build_recipe_index(
+        classic_recipe_index, classic_cut_profiles, classic_cut_profiles_sv, classic_cut_method_profiles, classic_recipe_titles = build_recipe_index(
             base_dir,
             recipe_dir=classic_recipe_dir,
             url_prefix="recipes_classic",
         )
         print(f"  Recipe index (classic):      {sum(len(v) for v in classic_recipe_index.values())} files across {len(classic_recipe_index)} cuts")
     else:
-        classic_recipe_index, classic_cut_profiles, classic_cut_method_profiles, classic_recipe_titles = {}, {}, {}, {}
+        classic_recipe_index, classic_cut_profiles, classic_cut_profiles_sv, classic_cut_method_profiles, classic_recipe_titles = {}, {}, {}, {}, {}
         print("  Recipe index (classic):      0 files (docs/recipe_research_classic/ not found)")
 
     # Report international cut → recipe coverage. The experimental MEATER path
@@ -903,6 +1002,9 @@ def generate_js_data():
     lines.append("// Cut profile texts extracted from recipe research files")
     lines.append(f"const CUT_PROFILES = {json.dumps(cut_profiles, indent=2, ensure_ascii=False)};")
     lines.append("")
+    lines.append("// Swedish cut profile texts — from ## Styckesprofil sections in research files")
+    lines.append(f"const CUT_PROFILES_SV = {json.dumps(cut_profiles_sv, indent=2, ensure_ascii=False)};")
+    lines.append("")
     lines.append("// Cut × method profile texts: {cut_slug: {method_slug: description}}")
     lines.append(f"const CUT_METHOD_PROFILES = {json.dumps(cut_method_profiles, indent=2, ensure_ascii=False)};")
     lines.append("")
@@ -914,6 +1016,9 @@ def generate_js_data():
     lines.append("")
     lines.append("// Classic cut profile texts")
     lines.append(f"const CLASSIC_CUT_PROFILES = {json.dumps(classic_cut_profiles, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// Classic Swedish cut profile texts")
+    lines.append(f"const CLASSIC_CUT_PROFILES_SV = {json.dumps(classic_cut_profiles_sv, indent=2, ensure_ascii=False)};")
     lines.append("")
     lines.append("// Classic cut × method profile texts")
     lines.append(f"const CLASSIC_CUT_METHOD_PROFILES = {json.dumps(classic_cut_method_profiles, indent=2, ensure_ascii=False)};")

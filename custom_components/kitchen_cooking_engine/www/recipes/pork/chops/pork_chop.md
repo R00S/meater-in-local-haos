@@ -2,6 +2,7 @@
 type: cut
 slug: pork_chop
 name: Pork Chop
+name_sv: Fläskkotlett
 category: pork
 meat: pig
 cut_type: Chops & Tenderloin
@@ -46,6 +47,12 @@ A pork chop is a cross-sectional cut of the pork loin taken from the back of the
 Target internal temperatures (air fryer):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)**
 
+
+## Styckesprofil
+
+En fläskkotlett är ett tvärsnitt av fläskloinen. Sous vide-metod för fläskkotlett: 58–60 °C i 1–4 timmar (beroende på tjocklek), sedan snabb searing i het panna för yta. Ger perfekt jämnt rosa resultat från kant till kant.
+
+Innertemperatur: **58–63 °C (136–145 °F)** för sous vide. Med pasteurisering vid 58 °C hållen i 65 minuter är fläskkotletten helt säker med lätt rosa mitt. USDA-standard: 63 °C, 3 minuters vila. Eftertillagning: försumbar (sous vide). Sond insatt horisontellt in till mitten.
 
 ## Research files by cooking method
 

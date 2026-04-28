@@ -12,6 +12,10 @@ cut_type: Alliums
 ## Cut profile
 Whole onions (*Allium cepa*) on the grill are a traditional technique in cultures as distant as Argentina (Mallmann's *cebollas enteras a las brasas*), Mexico (grilled cambray onions for *salsa tatemada*), India (whole onion over tandoor coals), and Turkey (*közlenmiş soğan*). The outer layers char and blacken; the inner layers steam in their own moisture and transform to a silky, jam-sweet texture. Grilled whole onions — especially with their skins left on as insulation — require 30–50 minutes of moderate grill heat. Halved onions, placed cut-side-down on the grill grates, develop a deeply caramelised cut face in 15–20 minutes. Pull temperature for a whole grilled onion (fully soft throughout): 88–95 °C (190–203 °F). A MEATER probe is inserted through the side, between outer layers, into the centre of the onion.
 
+## Styckesprofil
+
+Hela lökar (*Allium cepa*) på grillen är en traditionell teknik i kulturer så skilda som Argentina (Mallmanns *cebollas enteras a las brasas*), Mexiko och Japan. Löken placeras direkt på glöden i 30–40 minuter, ytterskinnet förkolnas men insidan mjuknar till en söt, silkeslen massa. Serveras direkt från skalet.
+
 ## Source recipes
 
 ### 1. Francis Mallmann — Cebollas Enteras a las Brasas (Argentine / South American tradition)

@@ -2,6 +2,7 @@
 type: cut
 slug: spare_ribs
 name: Spare Ribs
+name_sv: Spareribs
 category: pork
 meat: pig
 cut_type: Ribs
@@ -31,6 +32,12 @@ quality_assessed: 2026-04-27
 
 Spare ribs (*revelsben*/*kamben* in Danish; *Spareribs* in German/Austrian; *costillas* in Spanish) are the lower belly ribs (sternum-adjacent), larger and flatter than baby back ribs, with considerably more intermuscular fat and connective tissue between and around the rib bones. The primary muscles are the *serratus ventralis* and intercostal layers; unlike baby backs (which are *longissimus dorsi* muscle adjacent), spare ribs derive their eating quality from fat and collagen conversion rather than lean muscle. The higher fat content makes them more forgiving than baby backs: they resist drying out even at the higher temperatures needed for collagen conversion.
 
+
+## Styckesprofil
+
+Spareribs (*revelsben*/*kamben* danska; *Spareribs* tyska/österrikiska; *costillas* spanska) är de nedre magerevbenen (sternum-angränsande), större och plattare än baby back ribs, med avsevärt mer intramuskulärt fett och bindväv.
+
+De kräver längre tillagningstid än baby back ribs (3–5 timmar låg-och-långsamt). Innertemperatur: **88–95 °C (190–203 °F)** för fall-från-benet. Eftertillagning: försumbar. Sond längs benets riktning in till köttmassan, borta från benet. BBQ-glasering appliceras de sista 15–20 minuterna.
 
 ## Research files by cooking method
 

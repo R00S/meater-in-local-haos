@@ -2,6 +2,7 @@
 type: cut
 slug: chicken_breast
 name: Chicken Breast
+name_sv: Kycklingfilé
 category: poultry
 meat: chicken
 cut_type: Breast
@@ -35,6 +36,12 @@ quality_assessed: 2026-04-27
 
 Chicken breast is the *pectoralis major* muscle — the largest muscle of the bird, positioned on the sternum. Because domesticated chickens rarely fly or flap vigorously, this muscle has almost no connective tissue or intramuscular fat. It is white meat: lower myoglobin content, lighter colour, leaner composition, and a more delicate flavour than dark meat. Typical uncooked weight: 170–280 g per single breast (boneless, skinless). Thicker breasts often have an uneven cross-section that creates doneness gradients — the thick end overcooks before the thin end is safe. The USDA minimum safe temperature is 74 °C (165 °F); at this temperature white meat is cooked through but not dry if pulled immediately.
 
+
+## Styckesprofil
+
+Kycklingbröst är *pectoralis major*-muskeln — den största muskeln hos fågeln, positionerad på bröstet. Extremt magert (< 2 % fett), mört och snabbkokat, men benäget att torka ut om överkokat.
+
+Pannstekning: het panna, 5–7 minuter per sida; ugnsrostning: 200–220 °C, 18–22 minuter. Innertemperatur: **74 °C (165 °F)** USDA-minimum. Eftertillagning: 2–3 °C. Sond längsmed bröstets tjockaste del. Vila 5 minuter täckt. Torra kycklingsbröstet är alltid följden av överkokad temperatur.
 
 ## Research files by cooking method
 

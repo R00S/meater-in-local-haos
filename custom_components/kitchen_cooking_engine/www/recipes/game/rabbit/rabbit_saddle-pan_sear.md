@@ -23,6 +23,12 @@ side while leaving a just-cooked, juicy interior. Carryover is minimal (2°C) ow
 to the cut's small mass and rapid cooking, so pull temperature is close to serving
 temperature; nevertheless, a 3–5 minute rest redistributes juices before slicing.
 
+## Styckesprofil
+
+Kaninryggen (*sadelstycket*) är den magraste, mest möra delen av kaninen — det är den flikiga loinsektionen längs ryggraden och tillagas snabbast av alla snitt. Ryggen saknar praktiskt taget bindväv och kokar på minuter vid hög värme.
+
+Sear i smör 2–3 minuter per sida i en het panna, sedan vila 5 minuter. Innertemperatur: **65–70 °C (149–158 °F)** för saftig genomstekthet. Aldrig bortom 72 °C — snittet torkar omedelbart. Eftertillagning: 2–3 °C. Sond insatt längsvis i den tjockaste delen av ländryggen, parallellt med ryggraden.
+
 ## Source recipes
 
 ### 1. Hank Shaw — Pan-Seared Rabbit Loin with Herb Butter

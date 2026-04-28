@@ -12,6 +12,10 @@ cut_type: Cruciferous
 ## Cut profile
 Cabbage (*Brassica oleracea* var. *capitata*) sautéed is one of the fastest and most flavourful preparations: shredded or thinly sliced cabbage in a hot, oiled pan wilts and sweetens within 5–8 minutes, going from raw-crunchy to tender-crisp. The technique spans Chinese stir-fries (高麗菜炒蛋 or cumin spiced), Thai pad cabbage (pad kalam plee), Indian bandh gobhi ki sabzi, German Schmorkohl, and East European *kapusta smażona*. Internal temperature at tender-crisp (ideal for most stir-fries): 78–82 °C (172–180 °F); at fully soft: 84–88 °C (183–190 °F). The MEATER probe is inserted into the densest pile of shredded cabbage in the pan.
 
+## Styckesprofil
+
+Kål (*Brassica oleracea* var. *capitata*) sauterad är en av de snabbaste och mest smakrika beredningarna: strimlad eller tunt skivad kål i en het, olja-smord panna vissnar och sötar sig under 8–12 minuter. Klar när mjuk och lätt gyllenbrun.
+
 ## Source recipes
 
 ### 1. Pailin Chongchitnant — Pad Kalam Plee (Thai Stir-Fried Cabbage)

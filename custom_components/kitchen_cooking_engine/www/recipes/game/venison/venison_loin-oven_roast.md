@@ -30,6 +30,12 @@ Target internal temperature: **52–54 °C** for rare · **54–57 °C** for med
 
 > **⚠ Collection in progress** — This leaf currently has 2 of the required 4–6 source recipes. Analysis of temperature consensus has **not** begun. Additional sources from Groups C and D are needed. Searching conducted 2026-04-28.
 
+## Styckesprofil
+
+Ugnsrostning av viltrygghbiff (loin-filé, sadel eller större loin-sektioner) kräver sear-och-rosta-tekniken. Standardteknik: krydda → sear alla sidor i en het ugnsfast panna tills gyllenbrun → överför till en 180–200 °C ugn tills sonden når målet.
+
+Innertemperatur: **57–63 °C (135–145 °F)** för medium-rare till medium. Eftertillagning: 4–6 °C. Dra vid 52–57 °C. Sond insatt längsvis i den tjockaste muskeldelen. Vila täckt 10–15 minuter. Välgenomstekt avråds starkt — viltrygghbiff torkar snabbt ovanför 65 °C.
+
 ## Source recipes
 
 ### 1. Adam Gray, Great British Chefs — Roast Loin of Venison, Wild Mushroom Pie and Parsnip Purée

@@ -16,6 +16,12 @@ Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo) is the lean
 Target internal temperatures (grill):
 - Juicy/slightly pink: **63–65 °C (145–149 °F)**
 
+## Styckesprofil
+
+Fläskfilé (*svinemørbrad* / *Schweinefilet* / *solomillo de cerdo*) är det magraste snittet av fläsk och det mest förlåtande för pannstekning — den kokar snabbt (hel filé: 12–15 min totalt; medaljonger: 2 min per sida) och serveras bäst lätt rosa till genomstekt.
+
+Pannstekning: sear hel filé i smör vid hög värme 2–3 minuter per sida för att brynna; avsluta eventuellt i 160–180 °C ugn. Innertemperatur: **63 °C (145 °F)** USDA (med 3 min vila); **68 °C** för lätt rosa mitt. Eftertillagning: 2–3 °C. Sond insatt längsvis in till mitten av filén.
+
 ## Source recipes
 
 ### 1. Madens Verden — Svinemørbrad på grill (Danish tradition)

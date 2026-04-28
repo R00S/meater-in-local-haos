@@ -26,6 +26,12 @@ Goat shoulder contains more connective tissue than the leg and rewards longer, s
 
 Target internal temperature: **82–88 °C (180–190 °F)** for pull-apart.
 
+## Styckesprofil
+
+Getaxel innehåller mer bindväv än benet och belönar längre, långsammare tillagning. Det är det traditionella snittet för jamaicansk *curry goat*, indiska *roganjosh*-beredningar, karibiska slow-roasts och marockansk *mechoui*. Axeln tillagas tills den är gaffelömt vid 85–90 °C internt.
+
+Innertemperatur: **82–88 °C (180–190 °F)** för pull-apart. Eftertillagning: försumbar. Sond i den tjockaste muskelmassadelen, borta från skulderbladsben. Marinering 24 timmar i kryddad yoghurt eller citrusbaserad lag mörnar köttet och tillsätter fuktighetsbevaring under lång tillagning.
+
 ## Source recipes
 
 ### 1. African Bites — Jamaican Curry Goat (Caribbean tradition)

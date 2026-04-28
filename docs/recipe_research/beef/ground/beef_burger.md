@@ -2,6 +2,7 @@
 type: cut
 slug: beef_burger
 name: Beef Burger / Ground Beef Patty
+name_sv: Nötburgare
 category: beef
 meat: cow
 cut_type: Ground
@@ -33,6 +34,10 @@ quality_assessed: 2026-04-26
 
 Ground beef burgers are formed patties of minced beef, most commonly from a blend of chuck (for flavour) and sirloin or brisket (for binding), with fat content typically 15–25 % by weight. Unlike whole-muscle cuts, a burger patty has no internal connective tissue structure — the grind has already disrupted muscle fibres — so the cooking challenge is heat penetration through the patty's cross-section rather than collagen conversion. The direct-heat grill creates a fierce Maillard crust on both flat faces, which is the primary flavour mechanism; the fat content keeps the interior moist even at higher internal temperatures. Carryover in a burger patty is minimal — the thin geometry dissipates heat quickly once removed from the grill — but genuine carryover occurs in thicker restaurant-style patties, making the pull-from-grill moment slightly earlier than the final target.
 
+
+## Styckesprofil
+
+Köttburgare är formade biffar av malet nötkött, vanligast från en blandning av fransyska (för smak) och innanlår eller bringa (för bindning), med ett fettinnehåll på typiskt 15–25 % av vikten. Till skillnad från hela muskelstycken har en burgarbiff ingen inre bindvävsstruktur — malningen har redan brutit upp muskelfibrerna — så utmaningen vid tillagningen är värmepenetration genom biffens tvärsnitt snarare än kollagenomvandling. Direkt värme på grillen skapar en kraftig maillardyta på båda platta sidorna, vilket är den primära smakmekanismen; fettinnehållet håller insidan saftig även vid högre innertemperaturer. Eftertillagning i en burgarbiff är minimal — den tunna geometrin avger värme snabbt när den tas från grillen — men genuint carryover sker i tjockare restaurangformats-biffar, vilket gör det lämpligt att ta av från grillen något innan slutmålet.
 
 ## Research files by cooking method
 

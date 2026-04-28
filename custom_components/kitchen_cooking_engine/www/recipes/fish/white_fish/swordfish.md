@@ -2,6 +2,7 @@
 type: cut
 slug: swordfish
 name: Swordfish Steak
+name_sv: Svärdfisk
 category: fish
 meat: white_fish
 cut_type: White Fish
@@ -42,6 +43,12 @@ Swordfish (*Xiphias gladius*, Italian: pesce spada, Turkish: kılıçbalığı, 
 
 Retail swordfish comes as cross-cut steaks (2–3 cm thick) containing the characteristic central grey-brown blood line, which is edible but stronger in flavour; it can be cut away if preferred. Internal temperature targets: pull at 52–57 °C for medium-rare (slightly translucent centre, preferred by Italian/Mediterranean cooks); 57–60 °C for medium. USDA minimum: 63 °C (145 °F).
 
+
+## Styckesprofil
+
+Svärdsfisk (*Xiphias gladius*, italienska: *pesce spada*, turkiska: *kılıçbalığı*, svenska: svärdfisk, spanska: *pez espada*) är en stor topprovdjur-havsfisk från tropiska och tempererade hav. Köttet är unikt tätt, kompakt och icke-flaggande — organiserat i grova köttiga segment liknande tonfisk eller kalvkött, vilket gör det till ett av de få fisksnitt som verkligen kan behandlas som en köttstek.
+
+Svärdsfisk tolererar direkt hög grillvärme utan att falla isär och har en hög temperaturtolerans jämfört med vanlig vitfisk. Skär alltid tvärs mot fibern. Innertemperatur: **57–63 °C (135–145 °F)**. Eftertillagning: 2–3 °C. Dra vid 54–60 °C. Sondplacering: stick in horisontellt i den tjockaste sektionen.
 
 ## Research files by cooking method
 

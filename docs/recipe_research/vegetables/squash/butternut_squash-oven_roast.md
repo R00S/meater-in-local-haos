@@ -12,6 +12,10 @@ cut_type: Squash
 ## Cut profile
 Butternut squash (*Cucurbita moschata*) oven-roasted in halves or chunks at 190–220 °C is one of the most widely used autumn/winter vegetable preparations globally. Halves roasted cut-face-down for 40–50 min; chunks in 25–35 min. Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe through the skin into the thickest flesh.
 
+## Styckesprofil
+
+Butternut-squash (*Cucurbita moschata*) ugnsrostad i halvor eller bitar vid 190–220 °C är en av de mest använda höst/vinter-grönsaksberedningarna globalt. Halvor rostade snittytan ned i 40–50 minuter ger djup karamelisering. Klar när köttet är genomstekt och gyllenbrun.
+
 ## Source recipes
 
 ### 1. Yotam Ottolenghi — Roasted Butternut with Tahini and Sage (Israeli / Middle Eastern tradition)

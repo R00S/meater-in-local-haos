@@ -12,6 +12,10 @@ cut_type: Squash
 ## Cut profile
 Acorn squash (*Cucurbita pepo* var. *turbinata*) oven-baked whole or halved at 180–200 °C is a classic American autumn preparation. Halved and seed-scooped, then baked cut-face-down (30–40 min) or cut-face-up with a filling (35–50 min). Pull temperature: 90–95 °C (194–203 °F) at the thickest flesh wall. MEATER probe inserted through the skin into the thickest part of the flesh wall.
 
+## Styckesprofil
+
+Ekollon-squash (*Cucurbita pepo* var. *turbinata*) ugnsbakas hel eller halverad vid 180–200 °C. Halverad och urholkad, sedan bakad med snittytan ned. 40–50 minuter. Klar när köttet är genomstekt och lätt brynt vid kanterna.
+
 ## Source recipes
 
 ### 1. Deborah Madison — Baked Acorn Squash with Brown Sugar and Butter (American vegetarian tradition)

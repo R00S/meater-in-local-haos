@@ -12,6 +12,10 @@ cut_type: Tomatoes
 ## Cut profile
 Tomatoes (*Solanum lycopersicum*) in the air fryer roast in 8–15 minutes depending on size and target: cherry tomatoes burst and caramelise in 8–10 minutes at 200 °C; halved plum tomatoes take 12–15 minutes to collapse and blister. The circulating air dehydrates the surface faster than a conventional oven, producing crisper, slightly wrinkled edges with concentrated sweetness. Air-fried tomatoes are particularly useful as fast toppings for pasta, pizza, bruschetta, or eggs. Pull temperature for burst cherry tomatoes (serving as-is) is 82–88 °C (180–190 °F); for halved plum tomatoes intended as a sauce base, 88–95 °C (190–203 °F). A MEATER probe is most practical in a larger tomato; for cherry tomatoes, rely on appearance (bursting, blistered) and time, or insert in the largest specimen. Carryover is negligible.
 
+## Styckesprofil
+
+Tomater (*Solanum lycopersicum*) i airfryern rostas på 8–15 minuter beroende på storlek och mål: körsbärstomater brister och karameliseras på 8–10 minuter vid 200 °C; halverade plomtomater i 12–15 minuter. Klar när karameliserade och mjuka med koncentrerad smak.
+
 ## Source recipes
 
 ### 1. Pailin Chongchitnant — Air-Fried Roasted Cherry Tomatoes for Nam Prik (Thai tradition)

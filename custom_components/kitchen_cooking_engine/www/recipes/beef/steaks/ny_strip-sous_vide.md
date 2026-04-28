@@ -13,6 +13,9 @@ cut_type: Steaks
 
 New York strip cooked sous vide is precision-cooked in a sealed bag at the target temperature, then given a rapid high-heat sear for crust development. The strip's firm, moderately marbled muscle is an excellent candidate for sous vide because the long, even cook time (1–4 hours) fully relaxes the muscle fibres, producing a more tender result than pan searing alone, while the precise temperature control eliminates the wide temperature gradient (from surface to core) that occurs with conventional searing. Post-bath searing is brief — 60–90 seconds per side maximum — as the steak is already at the target internal temperature. Carryover from the post-bath sear adds 2–3 °C to the surface but the core stays at the bath temperature. The bath temperature is the target internal temperature.
 
+## Styckesprofil
+
+New York strip sous vide är precisionstillagad i förseglad påse vid måltemperatur, sedan given en snabb högvärmebryning för skorpa. Stripens fasta, måttligt marmorerade muskel är en utmärkt kandidat för sous vide eftersom den långa, jämna tiden (1–4 timmar) fullt ut slappnar av fibrerna och ger ett mörare resultat än pan-searing ensam, medan den exakta temperaturkontrollen eliminerar den breda gradienten från yta till kärna som uppstår vid vanlig bryning. Post-bad-bryningen är kort – max 60–90 sekunder per sida – eftersom biffen redan är vid intern måltemperatur. Eftervärmen från post-bad-bryningen ger 2–3 °C på ytan men kärnan stannar på badtemperaturen. Badtemperaturen är den interna måltemperaturen.
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Sous Vide New York Strip (American tradition)

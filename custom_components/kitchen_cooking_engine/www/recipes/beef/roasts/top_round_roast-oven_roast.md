@@ -36,6 +36,16 @@ surface.
 confirmed-reachable South Asian, East Asian, or South-East Asian recipe sources. The gap is
 noted.
 
+## Styckesprofil
+
+Övre innanlårsstek kommer från lårrets insida — det översta lagret av rundbottenprimalen. I amerikansk styckningsnomenklatur är "top round" ett distinkt delprimal från bakkvarteret; i brittisk styckningsnomenklatur är den närmaste motsvarigheten **topside** (samma inre lårmuskeln, lika mager). I finsk styckningsnomenklatur kallas bakkvartets stek **paahtopaisti**, vilket kan inkludera övre innanlår.
+
+**Anatomi och tillagningsbeteende**: Övre innanlår är en enda plattfibrig, mycket mager muskel. Den har mindre intramuskulärt fett än entrecôte eller ryggbiff, och lägre bindvävsinnehåll än bogpartiet. Det gör den väl lämpad för torr ugnsvärme: den behöver inte kollagenosande temperaturer, bara varsam värme till 54–65 °C för att bli mör. Överkokad övre innanlår (ovanför ~70 °C) blir torr och kritaktig.
+
+**Temperaturstrategier**: De två huvudstrategierna är (1) hög start/lågt avslut (200–240 °C för skorpa, sedan 160–190 °C tills klar) och (2) lågt och långsamt genomgående (120–130 °C i 1–2 timmar). Maillardkorpsen från searing eller hög-start förbättrar smaken avsevärt för detta magra snitt.
+
+**Sondplacering**: Stick in längs styckets ände till den geometriska mitten. Skär alltid tvärs mot fibern — det är avgörande för mörhet i det färdiga steket. Innertemperatur: 54–60 °C. Eftertillagning: 3–5 °C.
+
 ## Source recipes
 
 ### 1. Good Food — Easy Roast Beef (British tradition)

@@ -26,6 +26,10 @@ A whole goose (typically 4–6 kg / 9–13 lb) is by far the fattiest of the com
 
 A medium goose (4.5 kg / 10 lb) typically takes 2.5–3 hours at 190 °C (375 °F) when started breast-side-up. Fat must be drained from the roasting tin every 30–45 minutes or it will smoke aggressively.
 
+## Styckesprofil
+
+En hel gås (typiskt 4–6 kg) är den fetaste av de vanliga stekfåglarna — en signifikant del av kroppsvikten är subcutant fett som måste smältas bort under tillagningen. Ugnsstekning: börja vid 180 °C med bröstsidan ned i 1 timme, vänd och fortsätt i 1–1,5 timmar. Innertemperatur: 80 °C (lår). Eftertillagning: 5–8 °C. Avfetta regelbundet under tillagningen.
+
 ## Source recipes
 
 ### 1. Heston Blumenthal — Classic Roast Goose (British tradition)

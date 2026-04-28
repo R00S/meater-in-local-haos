@@ -26,6 +26,12 @@ Ground (minced) lamb is used in countless traditions — from Middle Eastern kib
 
 Target internal temperature: **74 °C (165 °F)** for food-safe ground lamb.
 
+## Styckesprofil
+
+Malet lamm används i otaliga traditioner — från mellanösternsk kibbeh och nordafrikansk merguez till grekisk moussaka, indisk keema och turkisk köfte. Pannstekning av malet lamm kräver fullständig genomkokning (malet kött har högre kontaminationsrisk än hela snitt).
+
+Aromaterna — lök, vitlök, spiskummin, koriander, kanel och mynta — är lika viktiga som tekniken. Tillagning tills köttet är helt genomstekt och lätt brynnat, ≈ 75 °C internt. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond i tjockaste delen av köttblandningen eller biff.
+
 ## Source recipes
 
 ### 1. Nefisyemektarifleri.com — Kıymalı Patates (Turkish lamb mince with potato)

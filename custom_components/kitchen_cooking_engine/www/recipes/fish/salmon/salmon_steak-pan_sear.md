@@ -28,6 +28,12 @@ least 1 cm clear of the central spine bone, which conducts heat and gives a lagg
 reading. Never insert from the belly-flap side — too thin to give a representative
 temperature for the back-flesh.
 
+## Styckesprofil
+
+En laxbiff är ett tvärssnitt genom hela fisken, vinkelrätt mot ryggraden, och behåller det centrala ryggradsbendet, de böjda revbenen och skinnet runt hela yttre kanten. Pannstekning passar hemmakök eftersom det täta, platta ryggköttet sitter stabilt på pannan och smälter det omgivande fettbandet under skinnet till en karameliserad skorpa, medan benen i mitten leder värme något snabbare än köttet — för den geometriska mitten till temperatur lite före motsvarande filéer av samma tjocklek.
+
+De tunna magliskorna överkokkar om de inte viks inåt och säkras med kökssnöre eller tandpetare innan biffen läggs i pannan; kockar som inte viker liskorna accepterar att dessa tunna delar når välgenomstekt medan ryggköttet är vid måltemperaturen. Sondplacering: stick in från yttre kanten av ryggköttet horisontellt mot tvärsnittets geometriska mitt — håll spetsen minst 1 cm från ryggradsbendet. Stick aldrig in från magliskesidan. Innertemperatur: 52–60 °C.
+
 ## Source recipes
 
 ### 1. ICA Provkök — Laxkotlett med dill- och kaprissås (Swedish / Culinary Group D tradition)
