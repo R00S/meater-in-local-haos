@@ -587,7 +587,7 @@ The file must start with a `<!-- KCE:CUT … -->` YAML block. Example for a new 
 type: cut
 slug: my_cut_slug
 name: My Cut Name
-name_sv: Mitt styckningsdetalj
+name_sv: Min styckningsdetalj
 category: beef
 meat: beef
 cut_type: Steaks

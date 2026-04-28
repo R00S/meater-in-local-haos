@@ -2,7 +2,7 @@
 type: cut
 slug: buffalo_burger
 name: Burger
-name_sv: Bufflaburgare
+name_sv: Buffelburgare
 category: game
 meat: buffalo
 cut_type: Buffalo

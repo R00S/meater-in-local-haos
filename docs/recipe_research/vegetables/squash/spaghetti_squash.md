@@ -2,7 +2,7 @@
 type: cut
 slug: spaghetti_squash
 name: Spaghetti Squash
-name_sv: Spagettikürbis
+name_sv: Spagettipumpa
 category: vegetables
 meat: squash
 cut_type: Squash

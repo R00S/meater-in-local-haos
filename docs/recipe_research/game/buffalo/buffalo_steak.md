@@ -2,7 +2,7 @@
 type: cut
 slug: buffalo_steak
 name: Buffalo Steak
-name_sv: Bufflabiff
+name_sv: Buffelbiff
 category: game
 meat: buffalo
 cut_type: Buffalo
