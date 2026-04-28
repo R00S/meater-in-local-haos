@@ -250,7 +250,7 @@ There is also **🎯 Custom Temperature Cook** (see [Section 5.4](#54-custom-tem
 
 **2️⃣ Select Cut Type** — broad category, e.g. "Steaks" or "Roasts".
 
-**3️⃣ Select Cut** — specific cut, e.g. "Ribeye". Target temperature ranges are pre-filled
+**3️⃣ Select Cut** — specific cut, e.g. "Ribeye" (shown as buttons; ⭐ marks the recommended cut for this cut type). Target temperature ranges are pre-filled
 from USDA or Livsmedelsverket data depending on your data source setting.
 
 **4️⃣ Select Doneness**

@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 28 Apr 2026, 07:08 CET
+ * AUTO-GENERATED: 28 Apr 2026, 08:05 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 28 Apr 2026, 07:08 CET
+// Last generated: 28 Apr 2026, 08:06 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -31571,14 +31571,15 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} ${this._t('meater.select_cut')}</h3>
-            <select @change=${(e) => { const v = e.target.value; this._selectCut(v === '' ? null : (isNaN(v) ? v : parseInt(v))); }}>
-              <option value="">${this._t('meater.choose_cut')}</option>
+            <div class="button-group">
               ${cuts.map(cut => html`
-                <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
+                <button
+                  class="category-btn ${this._selectedCut === cut.id ? 'selected' : ''}"
+                  @click=${() => this._selectCut(cut.id)}>
                   ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
-                </option>
+                </button>
               `)}
-            </select>
+            </div>
           </div>
         </ha-card>
       ` : ''}
@@ -32821,14 +32822,15 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} Select Cut</h3>
-            <select @change=${(e) => { const v = e.target.value; this._selectCut(v === '' ? null : (isNaN(v) ? v : parseInt(v))); }}>
-              <option value="">Choose a cut...</option>
+            <div class="button-group">
               ${cuts.map(cut => html`
-                <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
+                <button
+                  class="category-btn ${this._selectedCut === cut.id ? 'selected' : ''}"
+                  @click=${() => this._selectCut(cut.id)}>
                   ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
-                </option>
+                </button>
               `)}
-            </select>
+            </div>
           </div>
         </ha-card>
       ` : ''}
@@ -39341,7 +39343,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "331";
+const PANEL_VERSION = "332";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);

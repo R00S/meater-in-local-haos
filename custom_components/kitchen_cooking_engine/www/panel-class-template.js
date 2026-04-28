@@ -3340,14 +3340,15 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} ${this._t('meater.select_cut')}</h3>
-            <select @change=${(e) => { const v = e.target.value; this._selectCut(v === '' ? null : (isNaN(v) ? v : parseInt(v))); }}>
-              <option value="">${this._t('meater.choose_cut')}</option>
+            <div class="button-group">
               ${cuts.map(cut => html`
-                <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
+                <button
+                  class="category-btn ${this._selectedCut === cut.id ? 'selected' : ''}"
+                  @click=${() => this._selectCut(cut.id)}>
                   ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
-                </option>
+                </button>
               `)}
-            </select>
+            </div>
           </div>
         </ha-card>
       ` : ''}
@@ -4590,14 +4591,15 @@ class KitchenCookingPanel extends LitElement {
         <ha-card>
           <div class="card-content">
             <h3>${showMeatSelector ? '4️⃣' : '3️⃣'} Select Cut</h3>
-            <select @change=${(e) => { const v = e.target.value; this._selectCut(v === '' ? null : (isNaN(v) ? v : parseInt(v))); }}>
-              <option value="">Choose a cut...</option>
+            <div class="button-group">
               ${cuts.map(cut => html`
-                <option value="${cut.id}" ?selected=${this._selectedCut === cut.id}>
+                <button
+                  class="category-btn ${this._selectedCut === cut.id ? 'selected' : ''}"
+                  @click=${() => this._selectCut(cut.id)}>
                   ${cut.name_long || cut.name}${(cut.recommended_doneness || cut.recommendedDoneness) ? ' ⭐' : ''}
-                </option>
+                </button>
               `)}
-            </select>
+            </div>
           </div>
         </ha-card>
       ` : ''}
