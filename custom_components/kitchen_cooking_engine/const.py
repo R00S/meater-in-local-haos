@@ -1,7 +1,7 @@
 """Constants for the Kitchen Cooking Engine integration.
 
 Last Updated: 28 Apr 2026, 07:03 UTC
-Last Change: v0.6.4.6 - Replace Select Cut dropdown with buttons to match cut-type and doneness selectors
+Last Change: v0.6.4.7 - Fix experimental path: back btn→Appliances, title, remove data-source card with buttons to match cut-type and doneness selectors
 """
 
 DOMAIN = "kitchen_cooking_engine"
@@ -14,7 +14,7 @@ DOMAIN = "kitchen_cooking_engine"
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION below is auto-incremented — do NOT edit manually.
-PANEL_VERSION = "332"
+PANEL_VERSION = "333"
 
 # Configuration keys
 CONF_TEMPERATURE_SENSOR = "temperature_sensor"

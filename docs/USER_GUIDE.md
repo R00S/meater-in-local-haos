@@ -434,7 +434,7 @@ standard MEATER path (§ 5.4).
 | USDA minimum note | Not shown | **Shown in Target Temperature card when below safe temp** |
 | Cut profile text | Not shown | **Shown after cut selection** |
 | Recipe research links | Not shown | **Shown after cut selection** |
-| Temperature data source | International or Swedish | **International (USDA) only** |
+| Temperature data source | International or Swedish | **International (USDA) only** (no data source selector shown) |
 | Temperature fine-tuning | Available | Available |
 | Cooking method selector | All methods shown | **Only methods declared in the cut file** |
 | Custom temperature | Available | Available |

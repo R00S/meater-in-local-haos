@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 28 Apr 2026, 08:05 CET
+ * AUTO-GENERATED: 28 Apr 2026, 08:17 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 28 Apr 2026, 08:06 CET
+// Last generated: 28 Apr 2026, 08:17 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -32581,13 +32581,10 @@ class KitchenCookingPanel extends LitElement {
       
       return html`
         <div class="path-header">
-          <button class="back-btn" @click=${() => { 
-            this._showMeaterCooking = false;
-            this.requestUpdate();
-          }}>
-            ← Back to MEATER Path
+          <button class="back-btn" @click=${() => this._navigateToWelcome()}>
+            ${this._t('nav.back_to_appliances')}
           </button>
-          <h2>🌡️ ${this._selectedAppliance?.name || 'MEATER Probe Cooking'}</h2>
+          <h2>🧪🌡️ MEATER+ <span style="font-size:0.75em;color:var(--secondary-text-color);">(experimental)</span></h2>
           <button class="help-btn" @click=${() => this._openHelp('#51-starting-a-cook')} title="Open User Guide">?</button>
         </div>
         
@@ -32683,23 +32680,6 @@ class KitchenCookingPanel extends LitElement {
           </div>
         </ha-card>
       ` : ''}
-      
-      <!-- Data Source Selector (Swedish hidden in experimental path — no verified slug mapping) -->
-      <ha-card>
-        <div class="card-content">
-          <h3>🌍 Temperature Data Source</h3>
-          <div class="button-group">
-            <button 
-              class="category-btn selected" 
-              disabled>
-              🇺🇸 International (USDA)
-            </button>
-          </div>
-          <p class="source-description">
-            Using international temperature guidelines from USDA, FDA and professional culinary sources.
-          </p>
-        </div>
-      </ha-card>
       
       <!-- Step 1: Select Category -->
       <ha-card>
@@ -39343,7 +39323,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "332";
+const PANEL_VERSION = "333";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
