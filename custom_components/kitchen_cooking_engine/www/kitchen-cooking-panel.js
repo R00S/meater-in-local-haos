@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 28 Apr 2026, 20:42 CET
+ * AUTO-GENERATED: 28 Apr 2026, 20:44 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 28 Apr 2026, 20:42 CET
+// Last generated: 28 Apr 2026, 20:44 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -18623,7 +18623,7 @@ const CUT_METHOD_PROFILES = {
     "braise": "Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend of primal trimmings. Standard ground pork is typically 70–80% lean with 20–30% fat; the higher fat content gives it a juicy, cohesive texture when cooked and makes it more forgiving than ground beef or turkey. Ground pork is the basis of countless preparations worldwide — from Italian ragù and Swedish köttbullar to Chinese dumplings and Mexican chorizo. Because grinding distributes any surface bacteria throughout the mass, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is negligible.",
     "braise_sv": "Malet fläsk (malet fläskkött) är gjort av malt bogfläsk, mage eller blandade primär-trimmings. Standard malet fläsk är typiskt 70–80 % magert med 20–30 % fett. Det höga fettinnehållet ger en saftig, sammanhängande textur vid tillagning och gör det mer tolerant mot lätt överkokning.\n\nUSDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertemperatur: **72–75 °C (162–167 °F)**. Eftertillagning: 2–3 °C. Sond in i tjockaste delen av biff eller köttfärskula. Används i diverse köttbullar, sausageblandningar, köfte och löst kokat i saucer.",
     "pan_fry": "Ground pork (minced pork) is made by grinding pork shoulder, belly, or a blend of primal trimmings. Standard ground pork is typically 70–80% lean with 20–30% fat; the higher fat content gives it a juicy, cohesive texture when cooked and makes it more forgiving than ground beef or turkey. Ground pork is the basis of countless preparations worldwide — from Italian ragù and Swedish köttbullar to Chinese dumplings and Mexican chorizo. Because grinding distributes any surface bacteria throughout the mass, the USDA minimum safe internal temperature is 71°C (160°F). Carryover is negligible.\n\nTarget internal temperatures (pan fry):\n- Safe/cooked through: **71–75 °C (160–167 °F)**\n- ⚠️ Ground pork MUST reach 71 °C — no pink allowed",
-    "pan_fry_sv": "Malet fläsk (malet fläskkött) görs av bog av fläsk, mage eller blandade primär-trimmings med 20–30 % fett. Det höga fettinnehållet ger saftig konsistens och gör malet fläsk tolerant mot lätt överkokning.\n\nUSDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertemperatur: **72–75 °C (162–167 °F)** för USDA-säkert malet fläsk. Eftertillagning: 2–3 °C. Sond in i tjockaste delen av biff, köttbullar eller köttfärskula. Pannstekning: 4–5 minuter per sida vid medel-hög värme tills genomstekt."
+    "pan_fry_sv": "Malet fläsk (malet fläskkött) görs av fläskbog, mage eller blandade primär-trimmings med 20–30 % fett. Det höga fettinnehållet ger saftig konsistens och gör malet fläsk tolerant mot lätt överkokning.\n\nUSDA kräver att malet fläsk tillagas till 72 °C (160 °F) internt. Innertemperatur: **72–75 °C (162–167 °F)** för USDA-säkert malet fläsk. Eftertillagning: 2–3 °C. Sond in i tjockaste delen av biff, köttbullar eller köttfärskula. Pannstekning: 4–5 minuter per sida vid medel-hög värme tills genomstekt."
   },
   "pork_sausage": {
     "grill": "Grilling pork sausages over direct heat is the classic preparation for summer cookouts, *braai*, and street food worldwide. The key challenge is preventing the casing from rupturing before the interior reaches a safe temperature: a flare-up or too-high heat causes the fat inside to expand faster than the casing can accommodate, splitting it and losing both the steam that keeps the interior moist and the fat that contributes to flavour. Medium direct heat (175–200 °C at grate) with the lid open allows steady rendering. Turning every 3–5 minutes ensures even browning on all sides without sustained high heat on one face.\n\nFor fresh sausages over 3 cm diameter, use a two-zone grill: start indirect heat (covered, ~150 °C) for 10 minutes to bring the interior to near-safe temperature, then finish over direct heat for 5 minutes to brown and char the casing. This eliminates the flare-up risk. Probe enters from one end only, into the centre, to avoid puncturing the casing mid-body. Target: 71–75 °C (160–167 °F). Carryover: 2–3 °C.",
@@ -35660,7 +35660,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "352";
+const PANEL_VERSION = "353";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
