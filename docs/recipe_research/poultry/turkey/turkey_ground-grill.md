@@ -28,7 +28,7 @@ Ground turkey must reach 74°C (165°F) throughout per USDA requirements. Unlike
 
 Target internal temperature: **165 °F (74 °C)** — pull immediately at this temperature to preserve moisture. There is no "optimal above safe" preference for ground turkey — higher temperatures dry the patty.
 
-> **⚠ Collection in progress** — This leaf has 2 of the required 4–6 source recipes. Both sources are Culinary Group B (American and Italian). Groups A, C, and D are missing. Searching conducted 2026-04-27: no accessible Group A or D turkey burger grill recipes found; Group C (Turkish, Moroccan, Arabic) turkey köfte grill recipes were not accessible (nefisyemektarifleri.com: 403; marocmama.com redirects to homepage).
+> **⚠ Collection in progress** — This leaf has 3 of the required 4–6 source recipes. Culinary Group A (Thai tradition) added; Groups C and D still missing. Group C (Turkish köfte, Moroccan turkey) not accessible from this agent. Group D (Polish, Scandinavian turkey burger) sources not found. A 4th source from Group C or D would close the remaining gap.
 
 ## Source recipes
 
@@ -99,19 +99,47 @@ Target internal temperature: **165 °F (74 °C)** — pull immediately at this t
 
 ---
 
+### 3. BBC Good Food Editorial Team — Thai Turkey Burgers
+**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/thai-turkey-burgers (fetched 2026-04-28). *Recipe from Good Food magazine, June 2006.*
+**Serves**: 4 · **Time**: 30 min (including 20 min chilling)
+**Culinary tradition**: Thai-inspired (Group A)
+**Technique note**: Ground turkey patties seasoned with red Thai curry paste, grilled under a grill or on a barbecue. Thai curry paste provides characteristic Southeast Asian flavour. No probe temperature stated — visual/tactile doneness ("firm, golden and cooked through").
+
+**Ingredients**
+- 500 g turkey mince
+- 85 g fresh breadcrumbs
+- 3 tbsp red Thai curry paste (2 tbsp if using an authentic hot Thai brand)
+- ½ bunch spring onions, finely chopped
+- 1 egg, beaten
+- 1 tbsp sunflower oil
+- Mango pickle mayo and spicy mango salsa to serve
+- 4 ciabatta rolls, baby gem lettuce, cucumber, tomatoes
+
+**Method**
+1. Place mince, breadcrumbs, curry paste, spring onions, and egg in a large bowl. Season lightly.
+2. Mix well with hands to combine. Divide into 4 and shape into burgers.
+3. Chill for 20 minutes.
+4. Brush the burgers with oil.
+5. **Grill for 7 minutes each side**, or until firm, golden and cooked through. Alternatively, cook on the barbecue.
+6. **Pull when cooked through** — Thai-style turkey patties; "firm, golden and cooked through" corresponds to USDA **165 °F / 74 °C** for ground poultry.
+7. Toast the rolls cut-side up under the grill. Serve with lettuce, cucumber, tomato, and mango mayo or salsa.
+
+---
+
 ## Collection gap — attempted sources
 
 | Group | Sites / approaches attempted | Result |
 |-------|------------------------------|--------|
-| A | justonecookbook.com: 403; koreanbapsang.com: 403; maangchi.com: 403 | No accessible Group A source |
-| C | nefisyemektarifleri.com (Turkish turkey köfte): 403; cheftariq.com: no turkey recipe; marocmama.com: redirects to homepage | No accessible Group C source |
-| D | cookinpolish.com: empty response; natashaskitchen.com/turkey-chebureki (pan-fry, not grill) | No Group D grill source |
+| A | justonecookbook.com: 403; koreanbapsang.com: 403; maangchi.com: 403 | No further accessible Group A source (Thai Turkey Burgers from GBF added as Source 3) |
+| C | nefisyemektarifleri.com (Turkish turkey köfte): 403; cheftariq.com: no turkey recipe; marocmama.com: redirects to homepage; daringgourmet.com/moroccan-turkey-burgers: 404 | No accessible Group C source |
+| D | cookinpolish.com: empty response; natashaskitchen.com/turkey-chebureki (pan-fry, not grill) | No Group D grill source found |
 
 ## Temperature data table
 
-> ⚠ Provisional — collection incomplete. Do not derive consensus from this table.
+> ⚠ Provisional — collection in progress (3 sources). Do not derive consensus from this table yet.
 
 | Source | Country | Grill temp | Patty thickness | Time | Pull temp |
 |--------|---------|------------|----------------|------|-----------|
 | Taste of Home | American | Medium heat | ≈ 1.3 cm | 10–12 min | **165 °F / 74 °C explicit** |
 | GialloZafferano | Italian | Hot grill | ≈ 1 cm | 8 min | "cooked through" (≈ 74 °C implied) |
+| BBC Good Food | Thai-inspired (Group A) | Grill/barbecue | Standard burger | 7 min per side | "firm, golden, cooked through" (74 °C implied) |

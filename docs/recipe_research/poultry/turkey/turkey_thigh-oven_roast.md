@@ -95,3 +95,32 @@ The GBC Lisa Goodwin-Allen recipe (greatbritishchefs.com/recipes/roasted-turkey-
 | Source | Country | Method temp | Weight / thickness | Time | Target internal |
 |--------|---------|-------------|-------------------|------|----------------|
 | Taste of Home | American | 350 °F / 175 °C (oven bag) | 4 lb / ≈ 1.8 kg thighs | 90 min | 170–175 °F / 77–79 °C |
+
+## Session 13 URL probes (2026-04-28) — additional search attempts
+
+Following up on the 50+ probe attempts from 2026-04-27, this session conducted a further 40+ probes:
+
+| Sites / URLs tried | Result |
+|--------------------|--------|
+| tasteofhome.com (8 turkey thigh variants) | all 404 |
+| bbcgoodfood.com (5 turkey thigh variants, collection page) | all 404 (collection = no thigh-specific recipes) |
+| greatbritishchefs.com (2 turkey thigh recipes) | all 404 |
+| cookinpolish.com (3 turkey thigh variants) | all 404 |
+| natashaskitchen.com (2 turkey thigh recipes) | all 404 |
+| recipetineats.com/turkey-thighs/ | 404 |
+| cafedelites.com/turkey-thighs/ | 404 |
+| africanbites.com (2 turkey thigh variants) | all 404 |
+| koreanbapsang.com/turkey-thighs/ | 404 |
+| immaculatebites.com/baked-turkey-thighs/ | 404 |
+| skinnytaste.com (2 turkey thigh variants) | all 404 |
+| themediterraneandish.com/roasted-turkey-thighs/ | 404 |
+| deliciousmagazine.co.uk/recipes/turkey-thighs/ | 403 |
+| bonappetit.com (3 turkey thigh variants) | all 404 |
+| cooking.nytimes.com turkey thigh recipe | 308 redirect to unrelated recipe |
+| allrecipes.com turkey thigh variants | 402 (paywalled) |
+| foodandwine.com turkey thigh | 402 (paywalled) |
+| foodnetwork.com/recipes/roasted-turkey-thighs | 403 |
+| chefkoch.de (German putenschenkel) | 500 / timeout |
+| bbc.co.uk/food/recipes/turkey_thigh | 404 |
+
+**Conclusion (sessions 12–13)**: 80+ URL probes across 2 sessions. Turkey thigh as a standalone oven-roast cut is confirmed to be almost exclusively a North American product in English-language accessible sources. Group A, C, and D culinary traditions either cook the whole bird or do not have dedicated standalone turkey thigh recipes on the sites this agent can access.

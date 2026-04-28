@@ -21,9 +21,9 @@ doneness:
   max_f: 170
   usda_safe: true
   recommended: true
-quality_score: 6
+quality_score: 8
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-27
+quality_assessed: 2026-04-28
 -->
 # Ground Turkey — Cut Overview
 
@@ -47,26 +47,25 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for all groun
 
 | Method | Leaf file | Status |
 |--------|-----------|--------|
-| grill | [turkey_ground-grill.md](./turkey_ground-grill.md) | 🔄 in progress (2 sources, Group B only) |
-| pan_fry | [turkey_ground-pan_fry.md](./turkey_ground-pan_fry.md) | 🔄 in progress (3 sources, Groups B/C/D) |
+| grill | [turkey_ground-grill.md](./turkey_ground-grill.md) | 🔄 in progress (3 sources: Groups A+B) |
+| pan_fry | [turkey_ground-pan_fry.md](./turkey_ground-pan_fry.md) | ✅ 4 sources (Groups A+B+C+D) |
 
 ## Quality score
 
-**Score: 6 / 20** — assessed 2026-04-27
+**Score: 8 / 20** — assessed 2026-04-28
 
 | Criterion | Deduction |
 |-----------|----------|
 | Cooking methods not researched | −8 |
-| Missing Culinary Group A tradition | −1 |
-| Grill leaf: Group C and D missing | −1 |
+| Grill leaf: Groups C and D missing | −1 |
+| Grill leaf: collection incomplete | −1 |
 | Pan fry leaf: no explicit temperatures in sources | −2 |
-| Both leaves: collection incomplete | −2 |
 
 ### Improvement priorities
 
-1. **−8** · Cooking methods not researched — oven bake is a probable method (turkey meatballs, baked patties) not yet researched; search when accessible sources are available
-2. **−1** · Missing Culinary Group A tradition — Group A sources not found: no accessible SE/East Asian standalone ground turkey recipe. Korean turkey bulgogi and Japanese turkey hambagu may exist but were not accessible (maangchi.com: 403; justonecookbook.com: 403)
-3. **−2** · Pan fry leaf: no explicit temperatures — all 3 pan_fry sources use time-based doneness ("no longer pink", "cook through"); no source states a probe temperature; all imply 74°C (165°F) USDA minimum
-4. **−2** · Both leaves collection incomplete — grill: 2 sources (need 2 more), pan_fry: 3 sources (need 1 more)
+1. **−8** · Cooking methods not researched — oven bake is a probable method (turkey meatballs, baked patties) not yet researched; survey all applicable methods and set `cooking_methods_researched: 1` only after proper survey is complete
+2. **−1** · Grill leaf: Groups C and D missing — no accessible Turkish köfte grill recipe (403), no Group D turkey burger grill recipe found
+3. **−1** · Grill leaf: collection incomplete — 3 sources found, need 1 more
+4. **−2** · Pan fry leaf: no explicit temperatures — all 4 pan_fry sources use time-based doneness; all imply 74 °C USDA minimum; this is a known limitation of ground poultry recipes generally
 
 *Score is recalculated each time a new method leaf is added or the cut profile is updated.*

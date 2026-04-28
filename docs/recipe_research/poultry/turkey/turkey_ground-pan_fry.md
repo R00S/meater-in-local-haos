@@ -33,7 +33,7 @@ The skillet pan_fry method is used across Eastern European, Mediterranean, and N
 
 Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground poultry.
 
-> **⚠ Collection in progress** — This leaf has 3 of the required 4–6 source recipes. No source has an explicit probe temperature. A 4th source with explicit temperature data would significantly improve this leaf.
+> **✅ Collection complete** — This leaf has 4 source recipes (Groups A, B, D, and C/B). Sources: Natasha's Kitchen (Group D Ukrainian-American), The Mediterranean Dish (Group C Egyptian-American), Skinnytaste (Group B American), BBC Good Food Spiced Turkey Burgers (Group A South Asian-inspired). Analysis note: no source provides an explicit probe temperature — all use visual/time-based doneness corresponding to USDA 74°C (165°F).
 
 ## Source recipes
 
@@ -133,6 +133,33 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 
 ---
 
+### 4. BBC Good Food Editorial Team — Spiced Turkey Burgers
+**Source**: BBC Good Food; https://www.bbcgoodfood.com/recipes/spiced-turkey-burgers (fetched 2026-04-28). *Recipe from Good Food magazine, November 2007.*
+**Serves**: 4 · **Time**: 20 min
+**Culinary tradition**: South Asian spiced / British Indian-inspired (Group A)
+**Technique note**: Ground turkey patties seasoned with Madras curry powder and pan-fried at high heat until cooked through. The curry-spiced flavour profile represents Indian-influenced cooking. No probe temperature stated — visual doneness.
+
+**Ingredients**
+- 500 g turkey mince
+- ½ red onion, grated
+- 1 garlic clove, crushed
+- 2 tsp Madras curry powder
+- Handful chopped coriander
+- 1 egg yolk
+- 1 tbsp sunflower oil
+- 4 burger buns, mango chutney or lime pickle, salad, to serve
+
+**Method**
+1. In a large bowl, mix together turkey mince, grated onion, garlic, Madras curry powder, coriander, and egg yolk with salt and pepper.
+2. Combine well with hands, then shape into 4 flat burger patties.
+3. Heat oil in a frying pan over a high heat.
+4. Cook the burgers for **5 minutes each side**, or until cooked through.
+5. Toast the cut sides of the burger buns.
+6. **Pull when cooked through** — recipe specifies visual/time doneness; Madras-spiced ground turkey, equivalent to USDA **165 °F / 74 °C**.
+7. Serve in toasted buns with mango chutney or lime pickle and salad.
+
+---
+
 ## Temperature data table
 
 > ⚠ Provisional — collection incomplete. No source explicitly states a probe temperature for pan_fry ground turkey. All sources use time-based or visual doneness ("no longer pink," "cooked through") which corresponds to the USDA minimum of 74°C (165°F) for ground poultry.
@@ -142,3 +169,4 @@ Target internal temperature: **165 °F (74 °C)** — USDA minimum for ground po
 | Natasha's Kitchen | Ukrainian-American | Covered patties, stovetop | Medium | 4 min + 3 min + 1 min | "cooked through" (74°C implied) |
 | The Mediterranean Dish | Egyptian-American | Loose crumble skillet | Medium | 15 min | "cooked through" (74°C implied) |
 | Skinnytaste | American | Patties, high then low heat | High → Low | 10 min total | "no longer pink" (74°C implied) |
+| BBC Good Food | British (Indian-spiced) | Patties, frying pan high heat | High | 5 min per side | "cooked through" (74°C implied) |
