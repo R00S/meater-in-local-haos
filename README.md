@@ -26,9 +26,13 @@ Full installation, configuration, and feature documentation:
 
 ## 📊 Current Status
 
-**v0.7.0.11** — Development release (April 2026)
+**v0.7.0.13** — Development release (April 2026)
 
 Both the sidebar panel and the `type: custom:kitchen-cooking-card` Lovelace card are now fully functional. See [STATUS.md](STATUS.md) for full progress tracking.
+
+### v0.7.0.12–0.7.0.13 Changes — integer cut_id removed; slug is the only path (April 2026)
+- ✅ **`start_cook` accepts only EXP_TREE slugs** — Legacy integer `cut_id` support removed. `cut_id` is now strictly a string slug (e.g. `"ribeye_steak"`). The system has exactly one path: give it a slug, it reads the cut file, that's it
+- ✅ **Simplified `start_cook` handler** — Integer branch, `_get_protein_name_for_cut` helpers, and all remaining imports from `cooking_data.py` / `swedish_cooking_data.py` removed from `__init__.py`
 
 ### v0.7.0.9–0.7.0.11 Changes — start_cook service & bug fixes (April 2026)
 - ✅ **`start_cook` accepts EXP_TREE slugs** — `cut_id` is a string slug (e.g. `"ribeye_steak"`); the service looks up temperatures and rest times from the recipe markdown files

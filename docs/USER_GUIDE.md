@@ -1,6 +1,6 @@
 # Kitchen Cooking Engine — User Guide
 
-> **Version:** 0.7.0.11 · Home Assistant 2024.1.0+
+> **Version:** 0.7.0.13 · Home Assistant 2024.1.0+
 >
 > This guide covers every feature of the Kitchen Cooking Engine from first installation
 > through advanced use. Use the table of contents to jump to the section you need.
@@ -1214,7 +1214,7 @@ Start a cook session that spans multiple appliance entities simultaneously.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `entity_id` | list | ✅ | List of entity IDs |
-| `cut_id` | integer | ✅ | Cut ID |
+| `recipe_id` | string or integer | ✅ | Recipe ID |
 | `doneness` | string | ✅ | Doneness level |
 | `cooking_method` | string | ✅ | Cooking method |
 

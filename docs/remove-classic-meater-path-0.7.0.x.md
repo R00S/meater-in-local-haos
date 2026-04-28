@@ -125,3 +125,22 @@ Remove the classic MEATER path (`_currentPath = 'meater'`) and make the experime
   - Added `v0.7.0.9–0.7.0.11 Changes` changelog section
   - `start_cook` example updated to show slug usage (legacy int shown as secondary example)
 - Generator: PANEL_VERSION 359→360
+
+### 2026-04-28 (Session 10 — integer cut_id removed v0.7.0.12)
+- Removed legacy integer `cut_id` path from `start_cook` service handler
+- `cut_id` validator changed from `vol.Any(int, str)` → `str` only
+- Removed `_get_protein_name_for_cut` and `_get_protein_name_for_cut_with_categories` helper functions (were only used on the classic path)
+- Removed remaining imports from `cooking_data.py` and `swedish_cooking_data.py` that were no longer referenced
+- Removed `isinstance(cut_id, str)` branch guard — the handler now processes every call directly as a slug
+- Bumped version to `0.7.0.12`
+- Generator: PANEL_VERSION 360→361
+
+### 2026-04-28 (Session 11 — CHORES v0.7.0.13)
+- Bumped version to `0.7.0.13`
+- Updated `docs/USER_GUIDE.md`:
+  - Version line `0.7.0.11` → `0.7.0.13`
+  - Fixed `start_multi_appliance_cook` table: field was incorrectly documented as `cut_id (integer)` — actual parameter is `recipe_id (string or integer)`
+- Updated `README.md`:
+  - Version `v0.7.0.11` → `v0.7.0.13`
+  - Added `v0.7.0.12–0.7.0.13 Changes` changelog section
+- Generator: PANEL_VERSION 361→362
