@@ -42,6 +42,9 @@ doneness:
 quality_score: 11
 cooking_methods_researched: 2
 quality_assessed: 2026-04-27
+rest_time_min: 0
+rest_time_max: 2
+carryover_temp_c: 3
 -->
 # Salmon Steak — Cut Overview
 
