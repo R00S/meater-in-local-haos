@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 28 Apr 2026, 19:00 UTC
-Last Change: v0.7.0.1 - CHORES: update user guide, remove dead _renderSetupForm
+Last Change: v0.7.0.2 - fix pork shoulder Swedish name (Fläskstek → Fläskaxel)
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -72,7 +72,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.7.0.1"
+__version__ = "0.7.0.2"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"
