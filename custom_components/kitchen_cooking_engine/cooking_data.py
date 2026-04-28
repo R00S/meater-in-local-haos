@@ -2601,24 +2601,6 @@ TURKEY = [
     ),
     # Additional turkey cuts from frontend merge
     MeatCut(
-        id=334,
-        name="turkey_ground",
-        name_long="Ground",
-        cut_order=5,
-        estimated_thickness_mm=15,
-        usda_safe_c=74,
-        usda_safe_f=165,
-        rest_time_min=2,
-        rest_time_max=5,
-        carryover_temp_c=2,
-        temperature_ranges=[POULTRY_SAFE],
-        supported_methods=[
-            CookingMethod.PAN_FRY,
-            CookingMethod.GRILL,
-        ],
-        recommended_doneness="well_done",
-    ),
-    MeatCut(
         id=335,
         name="turkey_burger",
         name_long="Burger",

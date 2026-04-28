@@ -794,3 +794,27 @@ The primary task is to incrementally improve the 8 lowest-scoring cut files by f
 | 7 | beef/offal/beef_liver.md | 8 | methods not researched |
 | 8 | beef/roasts/prime_rib.md | 8 | methods not researched |
 
+
+---
+
+## Session 14 (2026-04-28) — Duplicate fix + CHORES
+
+### Actions taken
+
+- **v0.6.4.5** — Fixed duplicate: `turkey_ground` (id=334, TURKEY list) and `ground_turkey` (id=351, GROUND_POULTRY list) were the same cut in two files.
+  - Decision: keep `ground_turkey` in the GROUND_POULTRY category (canonical slug, matches `ground_chicken` pattern, higher score 9 vs 8).
+  - Removed `turkey_ground` MeatCut entry from `cooking_data.py` TURKEY list.
+  - Deleted all `turkey_ground*` files: 3 from `docs/recipe_research/`, 1 from `docs/recipe_research_classic/`, 3 from `www/recipes/`, 1 from `www/recipes_classic/`.
+  - Cleaned up `ground_turkey.md` cut profile (removed duplicate note, expanded cut profile text).
+  - Generator re-run: 539 recipe files → www/recipes/, PANEL_VERSION 330→331.
+
+### State after session 14
+
+| Metric | Value |
+|--------|-------|
+| Version | 0.6.4.5 |
+| PANEL_VERSION | 331 |
+| Experimental recipe files | 539 |
+| Classic recipe files | 515 |
+| Ground Turkey canonical slug | `ground_turkey` (GROUND_POULTRY, id=351) |
+| `turkey_ground` slug | Removed |

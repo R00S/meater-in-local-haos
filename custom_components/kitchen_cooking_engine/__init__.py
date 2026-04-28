@@ -1,7 +1,7 @@
 """Kitchen Cooking Engine - Home Assistant Integration.
 
 Last Updated: 28 Apr 2026, 00:42 UTC
-Last Change: v0.6.4.4 - CHORES: recipe research quality pass — 50+ cut files improved, anatomy-based cut profiles, new method leaves
+Last Change: v0.6.4.5 - Fix duplicate turkey ground cut: remove turkey_ground, keep ground_turkey in GROUND_POULTRY
 
 A HACS-compatible integration that provides guided cooking functionality
 for Home Assistant, working with any temperature sensor.
@@ -72,7 +72,7 @@ PLATFORMS = [Platform.SENSOR]
 #   3. __init__.py line 4    → Last Change: v...
 #   4. const.py line 4       → Last Change: v...
 #   PANEL_VERSION in const.py is auto-incremented by generate_frontend_data.py.
-__version__ = "0.6.4.4"
+__version__ = "0.6.4.5"
 
 # Data source options
 DATA_SOURCE_INTERNATIONAL = "international"

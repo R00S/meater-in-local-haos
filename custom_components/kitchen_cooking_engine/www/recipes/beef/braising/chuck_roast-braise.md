@@ -203,3 +203,46 @@ Braising submerges or partially immerses the chuck in liquid throughout the cook
 Chuck roast is the quintessential braising cut — its extraordinary collagen content, which makes it unchewably tough when roasted quickly, becomes its greatest asset when submerged in liquid and held at high internal temperature for hours. Every major culinary tradition that uses chuck arrives at the same 88–96 °C destination, varying only in whether the final texture should be spoonable, strand-pullable, or fully shredded. Braising is uniquely suited to this cut because the liquid environment solves the dry-heat problem of achieving uniform heat penetration through a dense, fat-seamed muscle.
 
 > ✅ **CONFORMS TO TOR** — Verified 2026-03-04T21:06:31Z. All mandatory sections present in correct order. Five source recipes from distinct culinary traditions (USA, French Burgundy, British/Italian, Korean, French Provençal). Each recipe has full ingredients with quantities, numbered method steps, explicit probe insert instruction, bolded pull temperature in °C, and bolded final serving temperature. Cut profile contains no temperatures. Temperature consensus table covers all sources. What makes this method special addresses physics and chemistry. Data applied bullet list is actionable. Summary ≤4 sentences explains cut-method fit.
+
+### 6. Köket.se — Kalops (Swedish tradition)
+**Source**: Köket.se editorial kitchen; https://www.koket.se/kalops (fetched 2026-04-28). Köket.se is the website of Sveriges Television (Swedish public broadcaster) culinary team.
+**Serves**: 4 · **Prep**: 15 min · **Cook**: ~1 hr stovetop braising · **Rest**: 5 min
+**Culinary tradition**: Swedish / Scandinavian (Group D)
+**Technique note**: Classic Swedish stovetop braised chuck roast stew. The name "kalops" derives from the English "collop" (a small piece of meat). Swedish *kalops* is made by browning diced chuck roast (högrev) in butter, then braising in beef stock with allspice and bay leaf until tender — the characteristic Swedish allspice (kryddpeppar) profile distinguishes this from French or German braises. Served with boiled potatoes. No probe temperature stated; doneness is "tills köttet är mört" (until the meat is tender), equivalent to ~90–93°C for full collagen conversion in cubed chuck.
+
+**Ingredients**
+- 1.5 kg högrev (chuck roast), cut into 2 cm cubes (or märgpipa / round, diced)
+- 3 gula lökar (yellow onions), peeled and diced
+- 2 morötter (carrots), peeled and diced
+- 8 kryddpepparkorn (whole allspice berries)
+- 1 lagerblad (bay leaf)
+- 1 l köttbuljong (beef stock)
+- 2 msk vetemjöl (plain flour)
+- Smör (butter) for browning
+- Salt and white pepper (*vitpeppar*)
+
+**Method**
+1. Peel and dice the onions and carrots. Cut the chuck roast into 2 cm cubes.
+2. Season the meat with salt and white pepper. Brown the meat in batches in butter in a skillet over high heat; transfer to a heavy pot.
+3. Brown the onions and carrots in the same skillet; add to the pot.
+4. Dust with flour; stir to coat the meat and vegetables.
+5. Pour over the beef stock; add the allspice berries and bay leaf.
+6. Insert the MEATER probe into the largest central piece of meat, pushing the tip to its geometric centre.
+7. Bring to a boil, then reduce heat. Simmer slowly for approximately 1 hour, or until the meat is tender.
+8. **Pull when probe reads approximately 90–93 °C** — the Swedish "mört" (tender) standard, equivalent to full collagen conversion. Köket.se states "ca 1 timme eller tills köttet är mört" (about 1 hour or until the meat is tender).
+9. Remove bay leaf and allspice berries. Adjust seasoning. Serve with boiled potatoes. Final serving temperature: **90–93 °C / 194–200 °F** (tender, yield-to-pressure cubes with natural pan gravy).
+
+---
+
+## Temperature consensus (updated)
+
+| Tradition | Preferred doneness name | Final serving temp |
+|-----------|------------------------|--------------------|
+| USA / Serious Eats (Kenji) | Fork-tender / pot-roast | 93–96 °C (200–205 °F) |
+| France — Burgundy (Julia Child) | Tender cohesive | 88–93 °C (190–200 °F) |
+| British / Italian (Nigella) | Shred-tender (*stracotto*) | 91–95 °C (196–203 °F) |
+| Korean (Maangchi) | Strand-pullable (*jangjorim*) | 88–92 °C (190–198 °F) |
+| France — Provençal (Claiborne) | Spoon-tender (*daube*) | 90–93 °C (194–200 °F) |
+| Swedish (Köket.se *kalops*) | *Mört* — tender | 90–93 °C (194–200 °F) |
+
+The observed range across all six traditions is **88–96 °C (190–205 °F)** — the addition of the Swedish *kalops* does not change the consensus; Scandinavian tradition falls squarely in the middle of the existing range. Group D is now covered.

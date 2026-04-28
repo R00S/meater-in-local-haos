@@ -31,7 +31,7 @@ doneness:
   recommended: true
 quality_score: 5
 cooking_methods_researched: 0 # Set only to '1' after proper research is done on common cooking methods for this cut conducted, that is not yet in the cut file!
-quality_assessed: 2026-04-27
+quality_assessed: 2026-04-28
 -->
 # Turkey Thigh — Cut Overview
 
