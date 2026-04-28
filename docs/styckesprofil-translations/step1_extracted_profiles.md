@@ -1846,7 +1846,7 @@ Target sous vide bath temperatures (tomahawk):
 
 **SV:**
 
-*(to translate)*
+Tomahawken är en benfri entrecôte skärd från ribprimalen (revben 6–12) med hela revbenet kvar och intakt — typiskt 30–45 cm långt. Det långa benet är för visuell presentation; köttets och smakens egenskaper är identiska med en standardbenfri ribeye. På grund av tjockleken (5–8 cm) kräver sous vide-tillagning omtanke: cirkulera vid måltemperaturen (54 °C för medium-rare) i 2–4 timmar, ta sedan ur påsen och sear kraftigt i het gjutjärnspanna eller med gasbrännare. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: minimal efter sous vide — searing ger 1–2 °C extra.
 
 ---
 
@@ -1866,7 +1866,7 @@ Target internal temperatures (charcoal grill):
 
 **SV:**
 
-*(to translate)*
+Tomahawk-biffen på träkol är den ultimata utomhustillagningsupplevelsen — det enorma benhantaget gör det möjligt att ställa den upprätt bredvid kolorna för vila. Träkol-grillad tomahawk kräver samma omvänd searing-princip som gassgrill: indirekt värme för att föra kärnan upp säkert, sedan direkt hög värme för karamelisering. Träkolsröken sätter sig i det tjockskurna ribeyets djupa fettmarmorering. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 4–6 °C för ett 1,5–2 kg exemplar.
 
 ---
 
@@ -1884,7 +1884,7 @@ Target internal temperatures (charcoal grill):
 
 **SV:**
 
-*(to translate)*
+Tri-tip på träkol drar nytta av den klassiska Santa Maria-grilltraditionen — den ursprungliga kaliforniska beredningen. Nyckeln är en tvåzons träkolsuppställning: sear direkt över kolorna först för en krusta, avsluta sedan på den indirekta sidan för att föra insidan till rätt temperatur. Det oregelbundna triangulära snittet kräver uppmärksamhet: den tunna spetsen kokar fortare. Innertemperatur: 54–60 °C. Eftertillagning: 3–5 °C. Skär alltid tvärs mot fibern.
 
 ---
 
@@ -1902,7 +1902,7 @@ Target internal temperatures (grill):
 
 **SV:**
 
-*(to translate)*
+Tri-tip på grillen drar nytta av tvåzonsuppställning (direkt för krusta, indirekt för insida). Eftersom det är ett oregelbundet triangelformat snitt (tjockare i mitten, avsmalnande i ändarna) kokar den tunna änden fortare. Hantera formen genom att lägga den tunna spetsen mot den svalare kanten av indirekt zon. Innertemperatur: 54–60 °C. Eftertillagning: 3–5 °C. Skär alltid tvärs mot fibern för möra skivor.
 
 ---
 
@@ -1921,7 +1921,7 @@ Target internal temperatures (oven roast):
 
 **SV:**
 
-*(to translate)*
+Tri-tip (även känd som triangelbiff, Santa Maria-biff, bottom sirloin och på tyska Bürgermeisterstück eller ball tip) är ett triangelformat snitt från nedre entrecôteprimalen. Det är magert med måttlig marmorering, vilket gör det idealiskt för ugnsstekning med omvänd searing. Låg ugn (120–135 °C) till 5–8 °C under slutmålet, sedan snabb searing i het panna. Innertemperatur: 54–60 °C. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -1939,7 +1939,7 @@ Target internal temperatures (pan sear):
 
 **SV:**
 
-*(to translate)*
+Pannsearing av tri-tip kräver val av en av två tillvägagångssätt: (1) sear hela steken och avsluta i ugn — bäst för hel tri-tip 700 g+; (2) skär i 2 cm biffar och pannsear var och en — snabbaste metoden. För helsteken ger konstant vändningsteknik (var 60:e sekund) en jämnare krusta. Innertemperatur: 54–60 °C. Eftertillagning: 3–5 °C. Skär alltid tvärs mot fibern.
 
 ---
 
@@ -1959,7 +1959,7 @@ Target internal temperatures (smoker):
 
 **SV:**
 
-*(to translate)*
+Rökning av tri-tip lågt och långsamt vid 107–120 °C (225–250 °F) ger exceptionella resultat: det magra köttet absorberar trärökssmaken djupt, och den låga temperaturen hindrar de magra partierna från att torka ut. Hickory är det traditionella träslaget för nötkött; mesquite, ek eller körsbär fungerar också bra. Innertemperatur: 54–60 °C för medium-rare. Eftertillagning: 3–5 °C. Skär alltid tvärs mot fibern.
 
 ---
 
@@ -1978,7 +1978,7 @@ Target sous vide bath temperatures (tri-tip):
 
 **SV:**
 
-*(to translate)*
+Tri-tip (även känd som triangelbiff, Santa Maria-biff eller *culotte de bœuf* på franska) är en triangelformad muskel tagen från nedre entrecôteprimalen — specifikt *tensor fasciae latae*. Den väger 400–900 g och fibern löper i två riktningar, vilket gör skärningsdirektionen kritisk. Sous vide är idealisk för tri-tip: lång koktid vid exakt temperatur ger jämn mörhet och mjukar upp det lätt sega snittet. Avsluta med searing. Innertemperatur: 54–57 °C medium-rare.
 
 ---
 
@@ -1997,7 +1997,7 @@ Target internal temperatures (charcoal grill):
 
 **SV:**
 
-*(to translate)*
+Tri-tip på träkol drar nytta av den klassiska Santa Maria-grilltraditionen — den ursprungliga kaliforniska beredningen. Nyckeln är en tvåzons träkolsuppställning: sear direkt över kolarna för krusta, avsluta sedan på den indirekta sidan. Det oregelbundet triangulära snittet kräver uppmärksamhet. Innertemperatur: 54–60 °C. Eftertillagning: 3–5 °C. Skär alltid tvärs mot fibern.
 
 ---
 
@@ -2012,7 +2012,7 @@ Salmon fillet in the air fryer is cooked by rapid convective circulation of supe
 
 **SV:**
 
-*(to translate)*
+Laxfilé i airfryern tillagas av snabb konvektionscirkulation av superupphettat luft runt fisken i en kompakt sluten korg; detta simulerar rostning med förhöjd hastighet och ger en yta som bryns snabbare än i en konventionell ugn. Laxens fettinnehåll gör den tolerant mot airfryerns intensiva värme. Innertemperatur: 52–55 °C (saftig, genomstekt). Tillagnings tid: 8–12 minuter vid 180–200 °C beroende på filetstjocklek.
 
 ---
 
@@ -2027,7 +2027,7 @@ Salmon fillet on the grill is exposed to intense radiant and convective heat fro
 
 **SV:**
 
-*(to translate)*
+Laxfilé på grillen exponeras för intensiv strålnings- och konvektionsvärme underifrån; om skinnet är på fungerar det som skyddsbuffert mellan den direkta lågan och det delikata köttet. Det höga fettinnehållet — särskilt högt i odlad atlantlax — försvinner delvis men håller fileten saftig. Grilla skinnsidan ned på het, olja-smord rist. Innertemperatur: 52–55 °C. Tillagnings tid: 4–6 minuter per sida.
 
 ---
 
@@ -2042,7 +2042,7 @@ Salmon fillet baked in the oven is cooked primarily by convective heat circulati
 
 **SV:**
 
-*(to translate)*
+Laxfilé bakas i ugnen primärt av konvektionsvärme som cirkulerar runt fisken, med strålningsvärme från ugnsväggarna som bidrar med sekundär ytbrynning. Till skillnad från pannsearing skapar ugnsbakning inte en krusta på skinnet utan ger en jämnt och mjukt tillagad filé. Innertemperatur: 52–55 °C. Ugnstemperatur: 180–200 °C. Tillagnings tid: 12–18 minuter beroende på filetstjocklek.
 
 ---
 
@@ -2058,7 +2058,7 @@ Salmon fillet comes from the side of the fish, running the full length of the bo
 
 **SV:**
 
-*(to translate)*
+Laxfilé kommer från sidan av fisken, längs hela kroppens längd från bakom huvudet till stjärten, med benköttstift borttagna. Köttet är indelat i distinkta fettlager-muskelsegment (*myotomer*) separerade av bindväv. Pannsearing ger den knaprigaste skinnytan och den bästa maillardkaraktären. Skinnsidan ned i het panna i 3–4 minuter, vänd sedan en gång. Innertemperatur: 52–55 °C.
 
 ---
 
@@ -2073,7 +2073,7 @@ Salmon fillet cooked sous vide is sealed in a vacuum bag and submerged in a prec
 
 **SV:**
 
-*(to translate)*
+Laxfilé tillagad sous vide förseglas i vacuumpåse och sänks ned i ett precisionsvattenbad under lång tid; badtemperaturen är tillagningstemperaturen och fisken equilibreras till denna temperatur hela vägen igenom. Sous vide är idealisk för lax: det ger jämn mörhet och saftig konsistens som är svår att uppnå annars. Innertemperatur: 50–52 °C (medium, saftig och silkeslen). Tillagnings tid: 30–45 minuter.
 
 ---
 
@@ -2106,7 +2106,7 @@ papillote, route the probe lead so the parcel can still be sealed.
 
 **SV:**
 
-*(to translate)*
+En laxbiff är ett tvärssnitt igenom hela fisken, vinkelrätt mot ryggraden, och behåller det centrala ryggradsbenet, de böjda revbenen och skinnet hela vägen runt ytterkanten. Ugnsbakning passar detta snitt eftersom allsidig strålningsvärme fungerar väl mot den runda tvärsnittsformen. Innertemperatur: 52–55 °C. Ugnstemperatur: 180–200 °C i 20–25 minuter.
 
 ---
 
@@ -2136,7 +2136,7 @@ temperature for the back-flesh.
 
 **SV:**
 
-*(to translate)*
+En laxbiff är ett tvärssnitt genom hela fisken, vinkelrätt mot ryggraden, som behåller det centrala ryggradsbenet, de böjda revbenen och skinnet runt hela ytterkanten. Pannsearing passar hemkök eftersom det täta, platta ryggköttet ger bra kontaktstekningsyta. Skinnsidan ned i het panna i 3–4 minuter, vänd för 2–3 minuter. Innertemperatur: 52–55 °C.
 
 ---
 
@@ -2172,7 +2172,7 @@ side — too thin.
 
 **SV:**
 
-*(to translate)*
+En laxbiff är ett tvärssnitt genom hela fisken, vinkelrätt mot ryggraden. Den resulterande formen är ett ungefärligt hästskonformat tvärsnitt: det tjockaste ryggköttet sitter ovanpå och runt det centrala ryggradsbenet, medan två magköttslobar böjer sig nedåt och inåt. Innertemperatur: 52–55 °C. Eftertillagning: 1–2 °C.
 
 ---
 
@@ -2189,7 +2189,7 @@ Grate at 200–230 °C, flesh-side down first for 5–6 min to develop grill mar
 
 **SV:**
 
-*(to translate)*
+Grillning av hummersvans är den mest dramatiska beredningen — skalet förkolnas och röker, köttet karameliseras i hettan, och smörbastas som appliceras upprepade gånger skapar ett lackerat, guldbrunt yttre. Nyckelteknik är fjärilsskärning (*butterflying*): skär igenom toppskalet längs mittlinjen och öppna ut köttet. Innertemperatur: 60–63 °C. Grilla köttssidan ned vid direkt hög värme i 4–5 minuter, vänd och basta i 2–3 minuter.
 
 ---
 
@@ -2206,7 +2206,7 @@ MEATER probe inserted from the tail end horizontally into the thickest cross-sec
 
 **SV:**
 
-*(to translate)*
+Ugnsrostning av hummersvans använder indirekt värme och är varsam jämfört med grillning — ingen risk för fastklibbing, bättre kontroll och lättare för hemmakockar. Stjärten fjärilsskärs (eller halveras på längden) och placeras köttssidan upp i en ugnsform. Ugn vid 200 °C i 12–15 minuter. Innertemperatur: 60–63 °C. Smörbastas generöst under tillagningen.
 
 ---
 
@@ -2221,7 +2221,7 @@ Lobster tail is the tail segment of a lobster (*Homarus americanus* — American
 
 **SV:**
 
-*(to translate)*
+Hummersvans är svanssegmentet av en hummer (*Homarus americanus* — amerikansk/Maine-hummer; *Homarus gammarus* — europeisk/breton-hummer; eller *Panulirus argus* — karibisk piggstjärt-hummer) separerat från kropp och klor. Det ätliga köttet är den stora bakre abdominalmuskulaturen, täckt av ett skyddande skal. Köttet är fast, vitt och smakrikt; det är det renaste, enklaste sättet att njuta av hummer. Innertemperatur: 60–63 °C.
 
 ---
 
@@ -2237,7 +2237,7 @@ Sea scallops (*Pecten maximus* in Europe; *Placopecten magellanicus*, the Atlant
 
 **SV:**
 
-*(to translate)*
+Kammusslor (*Pecten maximus* i Europa; *Placopecten magellanicus*, Atlantisk kamussla, i Nordamerika) är den stora adduktormuskeln som öppnar och stänger den tvåklaffiga skalen. Köttet är krämvitt, sött och extremt mört med nästan obefintlig bindväv. Pannsearing är den enda rätta metoden: extremt het torr gjutjärnspanna, liten mängd smör + neutralt fett, 90 sekunder per sida utan rörelse. Innertemperatur: 54–57 °C. Eftertillagning: 1–2 °C. Torka av och salta precis innan searingen — fukt dödar krustabilningen.
 
 ---
 
@@ -2253,7 +2253,7 @@ Shrimp (called prawns in British, Australian, and much of Asian-English usage) a
 
 **SV:**
 
-*(to translate)*
+Räkor (kallade *prawns* i brittisk, australiensisk och stor del av asiatisk-engelsk användning) är de mest konsumerade skaldjuren globalt; de vanligaste arterna för pannstekning inkluderar tigerräkor (*Penaeus monodon*), whitelegräkor (*Litopenaeus vannamei*) och nordhavsräkor (*Pandalus borealis*). Pannstekning ger snabb Maillard-brynning av räkornas naturliga sockerarter och proteiner. Innertemperatur: 63 °C (rosa, ogenomskinlig). Tillagnings tid: 1–3 minuter per sida beroende på storlek.
 
 ---
 
@@ -2270,7 +2270,7 @@ Typical approach: grate at 250–270 °C, 1–2 minutes per side for rare (38–
 
 **SV:**
 
-*(to translate)*
+Grillning av tonfiskbiff över gas- eller träkolsgrill ger ett något annorlunda resultat än pannsearing: det öppna gallret tillåter droppsteksrök att bidra med smak, och den torra strålningsvärmen skapar brynningsmärken på ytan. Innertemperatur: 43–49 °C (rare till medium-rare) för tonfisk av sushikvalitet. Tillagnings tid: 2–3 minuter per sida på het grill.
 
 ---
 
@@ -2287,7 +2287,7 @@ Key technique: tuna must be at room temperature before searing; a cold steak wil
 
 **SV:**
 
-*(to translate)*
+Pannsearing är den definitiva restaurangmetoden för tonfiskbiff — en skrikande het torr gjutjärnspanna, ingen olja behövs initialt (den magra ytan sears torrt), 60–90 sekunder per sida för rare. Den heta pannan driver en intensiv Maillard-krusta tvärs ytan. Innertemperatur: 43–49 °C (rare till medium-rare). Serveras traditionellt med en tunn skorpa av brynt yta och en varm, djuprosa till rå kärna.
 
 ---
 
@@ -2302,7 +2302,7 @@ Tuna steak — most commonly bluefin (*Thunnus thynnus*, Japanese *hon maguro*),
 
 **SV:**
 
-*(to translate)*
+Tonfiskbiff — vanligast blåfenad (*Thunnus thynnus*, japansk *hon maguro*), gulfenig (*Thunnus albacares*, hawaiiansk *ahi*) eller storöjad (*Thunnus obesus*, *mebachi*) — skärs tvärs igenom de cylindriska lårmusklerna hos en stor, pelagisk, högt aktiv fisk. Tonfiskkött är mörkrött, tätt och nästan helt benfritt — mer likt en biff i konsistens än flinkat vitt fisk. Det är mycket magert med lite intramuskulärt fett. Innertemperatur: 43–49 °C (rare) för sushikvalitet.
 
 ---
 
@@ -2317,7 +2317,7 @@ Air frying cod creates a hot-air convection environment that efficiently dries a
 
 **SV:**
 
-*(to translate)*
+Airfryer-tillagning av torskfilé skapar en hetluftskonvektionsmiljö som effektivt torkar och bryner ytbeläggningen (ströbröd, panko eller kryddat mjöl) utan att sänka fileten i fett. Resultatet är en krusta med lägre fetthalt än fritering men jämförbar krispighet. Innertemperatur: 63–65 °C. Tillagnings tid: 10–14 minuter vid 190–200 °C.
 
 ---
 
@@ -2332,7 +2332,7 @@ Oven baking cod involves placing the fillet (skin-on or skinless) in a baking di
 
 **SV:**
 
-*(to translate)*
+Ugnsbakning av torsk innebär att lägga fileten (med eller utan skinn) i en ugnsform eller på en ugnsplåt i en måttlig ugn (180–200 °C). Den indirekta, omgivande ugns-värmen tillagar köttet varsamt från alla sidor, bevarar mer fuktighet än pannstekning. Innertemperatur: 63–65 °C. Tillagnings tid: 15–20 minuter beroende på filetstjocklek.
 
 ---
 
@@ -2347,7 +2347,7 @@ Pan frying cod uses hot fat (butter, olive oil, or a combination) in a skillet t
 
 **SV:**
 
-*(to translate)*
+Pannstekning av torsk använder het fett (smör, olivolja eller kombination) i en stekpanna för att snabbt tillaga fileten vid måttlig-hög värme. Den höga direktkontaktvärmen ger den karakteristiska guldbruna Maillard-krustna på presentationssidan. Innertemperatur: 63–65 °C. Tillagnings tid: 3–4 minuter skinnsidan ned, vänd för 2 minuter.
 
 ---
 
@@ -2362,7 +2362,7 @@ Atlantic cod (*Gadus morhua*) fillet is cut from the sides of the fish; the fles
 
 **SV:**
 
-*(to translate)*
+Atlantisk torsk (*Gadus morhua*) är skärd från fisksidorna; köttet är fast, klart vitt rått och mjölkvitt kokt, med stora fuktiga flingor separerade av tunna bindvävslager. Torsk är mager (under 1 % fett), vilket gör den känslig för överkokad — de tunna bindvävslagren kollapsar snabbt vid höga temperaturer och köttet torkar. Innertemperatur: 63–65 °C. Eftertillagning: 1–2 °C.
 
 ---
 
@@ -2384,7 +2384,7 @@ traditions) creates a protective crust that helps moisture retention and even br
 
 **SV:**
 
-*(to translate)*
+Pannstekning är den definitiva vardagsmetoden för kolja. De två dominerande tillvägagångssätten är: (1) **lätt mjölad** — pudra fileten i kryddat mjöl, stek skinnsidan ned i smör eller olja vid måttlig-hög värme i 2–3 minuter, vänd och stek 1–2 minuter; (2) **fiskaroma** — stek i smör med lök, vitlök och örter. Innertemperatur: 63–65 °C. Kolja flinkar upp och torkar ut snabbt om överkokad.
 
 ---
 
@@ -2402,7 +2402,7 @@ traditions) creates a protective crust that helps moisture retention and even br
 
 **SV:**
 
-*(to translate)*
+Kolja (*Melanogrammus aeglefinus*, norska: hyse/kolje, tyska: Schellfisch, svenska: kolja) är en mager vitköttad kallvattensgatoidfisk nära besläktad med torsk. Den har mild, lätt söt smak och fast men fintexturerat kött med en ren skaldjurssmak. Populär i brittisk fish and chips-tradition samt rökbearbetning (*Arbroath smokies*, *Finnan haddie*). Innertemperatur: 63–65 °C. Eftertillagning: 1–2 °C.
 
 ---
 
@@ -2417,7 +2417,7 @@ Pan frying hake is the dominant cooking method in Iberian, North African, and Br
 
 **SV:**
 
-*(to translate)*
+Pannstekning av hake är den dominerande tillagningsmetoden i iberiska, nordafrikanska och brittiska traditioner. Fileten puddas vanligtvis i kryddat mjöl (*merluza a la plancha*) eller doppas i en lätt smet (*pescada frita*, fish and chips) innan den steks. Innertemperatur: 63–65 °C. Hake är lättare mer delikat än torsk och koljar — det flinkar finare och kräver kortare tillagning.
 
 ---
 
@@ -2432,7 +2432,7 @@ Hake (*Merluccius merluccius*, European hake; *Merluccius capensis/paradoxus*, C
 
 **SV:**
 
-*(to translate)*
+Hake (*Merluccius merluccius*, europeisk hake; *Merluccius capensis/paradoxus*, kapsk hake; *Merluccius productus*, Stillahavet hake) är en slank, avlång fisk av familjen Merlucciidae. Fileten skärs från sidorna, från bakom bröstfenan till stjärten. Köttet är vitt, fint, fuktigt och mört med lite intramuskulärt fett — mer delikat och finare flinkat än torsk. Innertemperatur: 63–65 °C.
 
 ---
 
@@ -2448,7 +2448,7 @@ Pacific halibut (*Hippoglossus stenolepis*) and Atlantic halibut (*Hippoglossus 
 
 **SV:**
 
-*(to translate)*
+Hellefisk (*Hippoglossus stenolepis*, Stillahavshellefisk; *Hippoglossus hippoglossus*, Atlantisk hellefisk) är de största flatfiskarna; fileten — skärd från de köttstarka övre eller undre sidorna av fisken — är tjock, fast, klart vit och mager med stora, täta muskelknippen. Det är ett av de absolut renaste, mest delikata vitköttade fiskarterna. Pannsearing ger bäst resultat: het panna, smör, 3–4 minuter per sida. Innertemperatur: 58–60 °C.
 
 ---
 
@@ -2465,7 +2465,7 @@ MEATER probe inserted from the thin end of the fillet, parallel to the flesh, in
 
 **SV:**
 
-*(to translate)*
+Pannsearing av mahi-mahi ger en vackert guldbryn, Maillard-brynnad krusta på det fasta köttet. En het gjutjärns- eller rostfrihetspanna med en liten mängd olja (200–210 °C yttemperatur) sears den plana sidan av en 2–3 cm filé på 3–4 minuter; vänd för 2–3 minuter. Innertemperatur: 60–63 °C. Mahi-mahi är känslig för överkokad — det torra vita köttet torkar snabbt över 65 °C.
 
 ---
 
@@ -2480,7 +2480,7 @@ Mahi-mahi (*Coryphaena hippurus*), also called dolphinfish or dorado, is a large
 
 **SV:**
 
-*(to translate)*
+Mahi-mahi (*Coryphaena hippurus*), även kallad dolfinfisk eller dorado, är en stor tropisk och subtropisk pelagisk fisk funnen i öppna varma vatten globalt. Fileterna är fasta, fuktiga och måttligt magra med utmärkt storflakig konsistens och en mild men distinkt marin smak. Det laminerade vita köttet bryns och sears utmärkt i panna. Innertemperatur: 60–63 °C. Eftertillagning: 1–2 °C.
 
 ---
 
@@ -2507,7 +2507,7 @@ from above; in thicker whole or butterflied fish it is inserted into the thickes
 
 **SV:**
 
-*(to translate)*
+Europeisk havsabborre (*Dicentrarchus labrax*, italiensk: branzino/spigola, turkisk: levrek, svenska: havsabborre) är en uppskattad mager vitfisk med måttligt fast, flakigt vitt kött och ett tunt men distinkt smakande skinn som blir utmärkt knaprig vid pannsearing. Stek skinnsidan ned i het smörpanna under press (för att förhindra att köttet böjer sig) i 3–4 minuter; vänd för 1–2 minuter. Innertemperatur: 58–62 °C. Skinnet ger det bästa smakdraget på denna fisk.
 
 ---
 
@@ -2539,7 +2539,7 @@ translucent at the very centre, preferred by Italian and Mediterranean cooks); 5
 
 **SV:**
 
-*(to translate)*
+Svärdfisk (*Xiphias gladius*, italiensk: pesce spada, turkisk: kılıçbalığı, svenska: svärdfisk, spansk: pez espada) är en stor, köttrik havsfisk med kompakt, tät, biff-liknande kött och mild, lätt söt smak. Till skillnad från de flesta vitfiskar flinkar inte svärdisk — det är ett tätt, fast kött som skärs i skivor och tillagas som en biff. Pannsearing ger bäst resultat: het panna, 3–4 minuter per sida. Innertemperatur: 57–63 °C.
 
 ---
 
@@ -2556,7 +2556,7 @@ Retail swordfish comes as cross-cut steaks (2–3 cm thick) containing the chara
 
 **SV:**
 
-*(to translate)*
+Svärdfisk (*Xiphias gladius*, italiensk: pesce spada, turkisk: kılıçbalığı, svenska: svärdfisk, spansk: pez espada) är en stor, topprovare i öppna hav funnen i tropiska och tempererade hav. Köttet är unikt tätt, kompakt och icke-flakigt — mer likt nötkött i konsistens än vit fisk. Det är måttligt fett med lågt intramuskulärt fett. Innertemperatur: 57–63 °C. Eftertillagning: 1–2 °C.
 
 ---
 
@@ -2581,7 +2581,7 @@ thickest edge (lateral insertion) in thin fillets, or through the shoulder of a 
 
 **SV:**
 
-*(to translate)*
+Regnbågsforell (*Oncorhynchus mykiss*) och brun öring (*Salmo trutta*, svenska: forell, norska: ørret, tyska: Forelle, italienska: trota) är bland de mest kokta sötvattensfiskarna i norra Europa och Nordamerika. Köttet är delikat, med ett milt sötvattensmak och en rosa till vit kötttjäll. Pannsearing av forell — hela fisken eller filé med skinn — ger knaprig yta och saftig insida. Skinnsidan ned i het smörpanna i 3–4 minuter; vänd för 2 minuter. Innertemperatur: 58–62 °C.
 
 ---
 
@@ -2603,7 +2603,7 @@ A MEATER probe inserted sideways into a patty gives reliable internal readings e
 
 **SV:**
 
-*(to translate)*
+Bisonburgerbiffar är gjorda av malet bisonkött, vanligtvis från skulder, fransyska eller bakkvarter — samma primärsnitt som används för nöthamburgare. Bison är märkbart magrare än nötkött, ofta med bara 2–7 % fett beroende på malning, jämfört med 15–25 % för standard hamburgerfärs. Den lägre fetthalten innebär att bisonburgare kokar fortare och torkar ut vid lägre temperatur. Innertemperatur: 71 °C (för säkerhet). Tillagnings tid: kortare än nötkött.
 
 ---
 
@@ -2618,7 +2618,7 @@ A pan-fried bison burger is a 150–180 g shaped patty made from coarsely-ground
 
 **SV:**
 
-*(to translate)*
+En pannstekt bisonburger är en 150–180 g formad biff av grovmalen bison — vanligtvis en blandning av fransyska och skulder med ca 10–14 % fett, betydligt magrare än nötköttsfärs (15–25 %). Det lägre fettinnehållet innebär att bison kokar fortare och överkokat mer lättare. Innertemperatur: 71 °C. Pannstekta bisonburgare kräver kortare tillagning och lägre värme än nötkött.
 
 ---
 
@@ -2661,7 +2661,7 @@ the low fat content.
 
 **SV:**
 
-*(to translate)*
+Bison-stekstek skärs från samma primärsnitt som nötstekgrytor — vanligast skulder (fransyska), innanlår, yttersida eller rygg. Filétsten (hel filé) används också i exklusiva tyska beredningar. Bison är magrare än nötkött och kräver lägre innertemperatur och kortare tillagning. Innertemperatur: 54–60 °C medium-rare. Eftertillagning: 3–5 °C.
 
 ---
 
@@ -2713,7 +2713,7 @@ ruined at those temperatures. The correct window is medium (60–65 °C), where 
 
 **SV:**
 
-*(to translate)*
+Bison-stekstek skärs från samma primärsnitt som nötstekgrytor — vanligast skulder, innanlår, yttersida eller rygg. Bison är magrare än nötkött och kräver omsorg vid tillagning. Innertemperatur: 54–60 °C medium-rare. Eftertillagning: 3–5 °C. Rekommenderas lägre tillagningstemperatur och kortare tid jämfört med nötköttekvivalenter.
 
 ---
 
@@ -2753,7 +2753,7 @@ the meat at medium without further cooking.
 
 **SV:**
 
-*(to translate)*
+Grillning av bisonbiff är den kvintessentiella nordamerikanska beredningen och en av de få metoderna där bisonets magra profil är en fördel: det minimala yttre fettlocket innebär inga stora uppflammor från droppande fett. Direkt hög värme (230–260 °C), 3–4 minuter per sida för medium-rare. Innertemperatur: 54–57 °C. Eftertillagning: 2–3 °C. Överkoka inte — magert bison torkar snabbt.
 
 ---
 
@@ -2772,7 +2772,7 @@ The European tradition — particularly German and Swiss cooks who receive bison
 
 **SV:**
 
-*(to translate)*
+Bisonbiff (*Bison bison*) — vanligast skärd från entrecôte, rygg eller övre entrecôte — är magrare än nötkött men liknande strukturerat, med djup rubinfärg och lätt söt, jordnära smak. Eftersom bison har mycket lite intramuskulärt fett överkokat det fortare. Pannsearing ger bäst kontroll: het panna, snabb searing, ta av tidigt. Innertemperatur: 52–55 °C rare, 54–57 °C medium-rare. Eftertillagning: 2–3 °C.
 
 ---
 
@@ -2824,7 +2824,7 @@ the sear provides Maillard flavour and the short oven time (25 min at 80 °C) si
 
 **SV:**
 
-*(to translate)*
+Bison (American buffalo, *Bison bison*) är ett stort nordamerikanskt boskapsdjur uppfött primärt på öppen betesmark. Dess biffar — vanligast skurna från rygg (filé/ytterfilé), rib (entrecôte) eller striploin (entrecôte) — är strukturellt liknande nötkött men märkbart magrare. Djupt rubinfärgat kött, mild, lätt söt smak. Innertemperatur: 52–57 °C medium-rare. Eftertillagning: 2–3 °C. Överkoka inte.
 
 ---
 
@@ -2841,7 +2841,7 @@ Target internal temperature: **70–74 °C (158–165 °F)** (ground meat food s
 
 **SV:**
 
-*(to translate)*
+Buffalo/bisonburger (malen bisonbiff, grillad) är en av de mest populära beredningarna i Nordamerika och alltmer i Europa. Det magra malade köttet ger en fast, smakrik biff — det torkar snabbt, och de flesta amerikanska recept kokar till 71 °C (genomstekt) som säkerhetsstandard. Tillagnings tid på grillen: kortare än nötköttsekvivalenten. Innertemperatur: 71 °C.
 
 ---
 
@@ -2858,7 +2858,7 @@ Target internal temperature: **70–74 °C (158–165 °F)** for food-safe groun
 
 **SV:**
 
-*(to translate)*
+Buffalo/bisonburgerbiffar är gjorda av malet bison, vanligtvis från fransyska, bakkvarter eller en blandning av trimmar. Malen bison är magrare än standard nötkött (typiskt 90/10 till 93/7 mager/fett), vilket innebär att det kokar snabbt och torkar lätt. Pannstekning: måttlig-hög värme, 3–4 minuter per sida. Innertemperatur: 71 °C. Undvik överkokad.
 
 ---
 
@@ -2876,7 +2876,7 @@ Target internal temperature: **70–74 °C (158–165 °F)** (ground meat food s
 
 **SV:**
 
-*(to translate)*
+Buffalo/bisonburger (malen bisonbiff, grillad) är en av de mest populära beredningarna i Nordamerika och alltmer i Europa. Det magra malade köttet ger en fast, smakrik biff — det torkar snabbt, och de flesta recept kokar till 71 °C som säkerhetsstandard. Innertemperatur: 71 °C. Tillagnings tid: kortare än nötköttsekvivalenten.
 
 ---
 
