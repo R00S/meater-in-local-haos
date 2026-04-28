@@ -63,8 +63,7 @@ Flank steak is a flat, thin muscle cut from the abdominal wall of the animal (th
 
 ## Styckesprofil
 
-Flank steak är en platt, tunn muskel skärd från bukväggen på djuret (*rectus abdominis* + *obliques*) — ett av de hårt arbetade, kraftigt fibermarkerade och smakrika snitten som kräver rätt hantering för att ge bästa resultat. Träkol tillsätter karaktäristisk rökighet till det redan intensiva flank-köttet; höga temperaturer och snabb tillagning är avgörande. Innertemperatur: 52–57 °C medium-rare. Det är kritiskt att skära tvärs mot fibern efter tillagning — längs med fibern gör steken tuggig och svårätlig. Eftertillagning: 2–3 °C.
-
+Flank steak är en flat, tunn muskel från bukväggen (flank-primalen), med långa, grova fibrer som löper synligt längs hela längden. Snittet är magert, relativt tufft och har lite intramuskulårt fett – det saknar ribeyens marmorering men kompenserar med kraftig, nötig smak. Kolgrillning är den klassiska metoden för flank steak: den höga, direkta strålningsvärmen från glödande kol ger en snabb, intensiv Maillard-skorpa över den breda ytan innan insidan hinner överkokas. Flank steak måste tillagas snabbt över mycket hög värme och skivas tunt mot ådringen för att bli mör – långsam tillagning motverkar syftet. Eftervärmen är minimal i en tunn flank steak, men eftersom den oftast tillagas över extrem värme kan den korta temperaturökningen efter uttag föra biffen från medium-rare till medium om man inte är uppmärksam.
 ## Research files by cooking method
 
 - [Charcoal Grill](./flank_steak-charcoal_grill.md)

@@ -29,8 +29,15 @@ The defining characteristic shared by all roasting joint cuts is their size (typ
 
 ## Styckesprofil
 
-"Stekbit" är en brittisk och australiensisk samlingsterm för ett urval av stora, benfria nötstycken lämpade för ugnsstekning: övre innanlår (*topside*), innanlår (*silverside*), yttersida av innanlår (*outside round*), fransyska (*chuck*), entrecôte (*sirloin*) och revbensspjäll. Termen indikerar tillagningsmetod — ugnsstekning — snarare än ett specifikt anatomiskt snitt. Kvaliteten och lämplig innertemperatur varierar kraftigt beroende på vilket snitt som avses: magra, hårt arbetade muskler (innanlår, yttersida) kräver lägre temperaturer (54–60 °C) för att inte torka ut; mer marmorerade snitt (entrecôte, revben) tål ett bredare temperaturspann.
+"Roasting joint" är ett brittiskt och australiskt samlingsbegrepp för stora nötköttsstycken som passar för ugnsrostning som söndagsrost eller festens mittpunkt. Begreppet syftar inte på ett enda anatomiskt snitt; beroende på slaktare och budget kan det vara:
 
+- **Topside** (UK/Aus) / Top Round (US) – mycket magert, tight ådring, prisvärt; kräver noggrann temperaturkontroll för att inte torka ut
+- **Silverside** (UK/Aus) / Bottom Round (US) – magert, lite tuffare än topside, traditionellt för långsam rostning eller kokning (corned beef)
+- **Bolar Blade** (Aus/NZ) – axelstycke, relativt mört med bra smak
+- **Rib of Beef** (UK) / Standing Rib Roast (US) – premium, ben-in eller benfritt, kraftigt marmorerat; det finaste söndagsrost-alternativet
+- **Sirloin of Beef** (UK) – benfri länd med måttlig fettkappa; har egen snittfil (sirloin_roast)
+
+Gemensamt för alla roasting joints är storleken (1–3 kg) och att de är gjorda för torr ugnsrostning utan vätska – en brynt yta och en rosa, vilad insida. Alla kommer från primal med relativt lågt kollageninnehåll jämfört med bräseringssnitt (brisket, chuck, bog).
 ## Source recipes
 
 ### 1. Nagi Maehashi — Marinated Roast Beef (Australian tradition, designed for economical roasting joints)

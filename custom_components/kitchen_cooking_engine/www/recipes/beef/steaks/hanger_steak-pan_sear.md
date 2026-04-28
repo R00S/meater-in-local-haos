@@ -15,8 +15,7 @@ The hanger steak (onglet in French, lombatello in Italian, nierenzapfen in Germa
 
 ## Styckesprofil
 
-Hångarbiff (*onglet* på franska, *lombatello* på italienska, *nierenzapfen* på tyska) hänger från mellangärdet mellan sista revbenet och kotletten, fäst vid ryggraden av en enda tjock central sena som löper längs muskeln och vanligtvis avlägsnas av slaktaren innan försäljning. Pannstekning är den klassiska beredningen för onglet i Frankrike: hög direkt värme, smör + neutralt fett, snabb searing, kortare tillagning. Alltid skära tvärs mot fibern. Innertemperatur: 52–57 °C. Eftertillagning: 2–3 °C.
-
+Hanger steak (onglet på franska, lombatello på italienska, nierenzapfen på tyska) hänger från djurets diafragma mellan det sista revbenet och länden, fäst vid ryggraden med en enda tjock central sena som löper längs hela muskeln och brukar tas bort av slaktaren före försäljning. Eftersom det bara finns en hanger per djur och muskeln utför kontinuerligt andningsarbete är fibrerna grova och löst alignade, vilket ger en öppen, eftergivande textur som tar upp kryddning exceptionellt väl och frigör rikliga juicer vid skärning. Smaken är den mest mineraliska och intensivt nötiga av alla vanliga snabba tillagningssnitt. Pan-searing är idealiskt för hanger eftersom den direkta ledande värmen från gjutjärns- eller kolstålspanna driver den Maillard-reaktion som snittet behöver innan den magra insidan överkokas; den lösa ådringsstrukturen driver ut fukt snabbt över 60 °C, vilket gör temperaturprecision viktigare här än med en mer förlåtande ribeye. Eftervärmen är måttlig – vanligtvis 3–5 °C – och eftersom biffen ofta är tunnare och mindre regelbunden än ribeye är sondplacering i den tjockaste magra delen kritisk.
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Butter-Basted Pan-Seared Hanger Steak (American tradition)

@@ -19,8 +19,11 @@ MEATER probe enters from the thin end of the strip, aimed at the geometric centr
 
 ## Styckesprofil
 
-Ugnsstekning av New York strip fungerar bäst som omvänd searing för tjockt skurna biffar (3 cm+): lägg den kryddade stripen på ett galler över en ugnsplåt i en 120–135 °C ugn tills innertemperaturen är 45–47 °C (ca 20–30 min), överför sedan omedelbart till en rykande het gjutjärnspanna och sear i 60–90 sekunder per sida. Denna metod ger jämn mörhet från kant till kant utan grå överstekta ytterlager. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C.
+Ugnsrostning av New York strip fungerar bäst som reverse sear för tjock-cut biffar (3 cm+): lägg den kryddade stripen på ett galler över en plåt i 120–135 °C ugn tills innertemperaturen är 45–47 °C (20–30 min), överför sedan direkt till en rykande het gjutjärnspanna och bryna 60–90 sekunder per sida plus fettkappkanten. Det ger en biff med noll grått band, kant-till-kant tillagning och djup Maillard-skorpa.
 
+För tunnare strips fungerar en vanlig ugnsrost vid 220–230 °C efter kort spisbryning bra. NY stripens måttliga marmorering ger mindre självbasning än ribeye i ugnen – en skvätt smör eller talg i slutet kompenserar.
+
+Sonden går in från den tunna änden, riktad mot det geometriska centrumet, bort från fettkappkanten. Eftervärme från 120 °C ugn: 4–6 °C; från 220 °C ugn: 5–7 °C.
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Reverse-Sear New York Strip (American tradition)

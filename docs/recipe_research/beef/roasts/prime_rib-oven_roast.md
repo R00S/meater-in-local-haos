@@ -19,8 +19,11 @@ Carryover is the dominant concern for the home cook: a 3–5 kg prime rib loses 
 
 ## Styckesprofil
 
-Ugnsstekning framhäver prime ribs exceptionella marmorering på ett sätt som ingen annan metod kan matcha. Det höga fettinnehållet gör att ribbet självbastars under tillagningen; det utsmälta fettet cirkulerar runt köttet, håller ytan fuktig och ger löpande smak åt ytan. Tillagningsprincipen — lång, låg värme för optimal möring — kombinerar maillardbrunt yta (från inledande eller avslutande hög värme) med jämn pastörisering av det inre. Målet är att hålla den centrala temperaturen precis i det smakoptimala fönstret (54–60 °C för medium-rare) utan att överkoka ytlagren.
+Ugnsrostning framhäver prime rib's enastående marmorering på ett sätt ingen annan metod kan: den långsamma strålningsvärmen från en sluten ugn renderar försiktigt det intramuskulära fettet genom hela ögat (longissimus dorsi) utan att torka ut ytan. Vid 90–150 °C smälter fettkappan över 2–5 timmar, självbaserar det magra ögat kontinuerligt, medan kollagenet i kappan och interkostalmusklerna omvandlas till gelatin och berikar ytsmaken. Resultatet är en mörk gyllenbrun skorpa, ett lackerat och krispigt fettlager, och en jämn ring av rosig medium-rare rosa från kant till centrum (vid 54 °C).
 
+Två temperaturfilosofier finns: reverse sear (90–110 °C ugn först, sedan 260 °C blast för skorpan) ger den jämnaste tillagningen över den stora massan; den traditionella högvärmemetoden (220 °C i 15–20 min, sedan 160 °C) bygger skorpan först och förlitar sig på eftervärme för att avsluta insidan. Båda landar på samma interna mål.
+
+Eftervärmen är den stora utmaningen för hemmakocken: en 3–5 kg prime rib tappar 2–8 °C efter uttag beroende på storlek, ugnstyp och rumstemperatur – dra 3–6 °C före målet. Sonden placeras i ögats geometriska centrum, från den stora snittytan parallellt med revbenen, undvikande ben och fettvalk.
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Reverse-Sear Prime Rib

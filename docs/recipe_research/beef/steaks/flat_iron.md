@@ -72,8 +72,7 @@ The flat iron steak is taken from the infraspinatus muscle of the beef shoulder 
 
 ## Styckesprofil
 
-Flat iron-biffen tas från *infraspinatus*-muskeln i nötdjurets skulderparti — specifikt det övre bladbenet. Det är det näst möraste snittet av hela djuret efter filén, med utmärkt marmorering och intensiv smak. Airfryer-tillagning ger intensiv cirkulerad luft runt biffen; effekten är jämförbar med snabb konvektionsugn. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C. Avsluta gärna med ett kort searing i het panna för optimal yta.
-
+Flat iron steak tas från infraspinatus i skulderbladet, separerad från det centrala gristle-bandet som löper genom top blade. Eftersom infraspinatus arbetar lite behåller den enastående intramuskulärt fett för ett icke-ländsnitt, vilket ger djup nötig, något smörig smak jämförbar med ribeye till en bråkdel av priset. Individuella biffar är typiskt 200–350 g och 2–3 cm tjocka – en storlek som passar air fryerns kompakta varmluftsskåp väl. Air fryerns hög-hastighetskonvektion vid 200–205 °C torkar ytan snabbt och driver Maillard-reaktionen utan dedikerad grill eller spis. Eftervärmen är måttlig, vanligtvis 2–3 °C efter uttag från korgen, så att dra 3 °C under avsedd serveringstemperatur är standard.
 ## Research files by cooking method
 
 - [Air Fryer](./flat_iron-air_fryer.md)

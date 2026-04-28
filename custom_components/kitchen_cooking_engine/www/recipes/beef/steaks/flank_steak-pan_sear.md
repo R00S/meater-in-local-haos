@@ -14,8 +14,7 @@ Flank steak (bavette d'aloyau in French bistro tradition, matambre in South Amer
 
 ## Styckesprofil
 
-Flank steak (*bavette d'aloyau* i fransk bistrotradition, *matambre* i Sydamerika) är ett brett, platt bukväggsmuskel med uttalade långa fibrer och intensiv nötssmak. Pannsearing ger utmärkt maillardyta snabbt; det tunna snittet kräver hög värme och kortare tillagningstid. Det är kritiskt att skära tvärs mot fibern efter vila — längs med fibern gör biffen seg oavsett tillagningsnivå. Innertemperatur: 52–57 °C. Eftertillagning: 2–3 °C.
-
+Flank steak (bavette d'aloyau i fransk bistrotradition, matambre i Sydamerika) skärs från bukväggsmusklerna – magert, intensivt nötigt, med långa parallella fibrer längs hela längden. Till skillnad från marmorerade biffar har flank nästan inget intramuskulärt fett, så hög värme från en mycket het panna skapar skorpa genom Maillard-reaktionen enbart istället för fett-renderande. Pan-searing passar flank väl eftersom den flata, breda skivan täcker en stor kontaktyta på en gång och ger snabb, jämn bryning på båda ytorna. Den magra strukturen gör temperaturdisciplin avgörande: över 60 °C stramar de långa fibrerna ihop och biffen blir torr och strängig oavsett vila. Eftervärmen är minimal – högst 2–3 °C – eftersom det tunna tvärsnittet förlorar värme snabbt efter att ha lämnat pannan.
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Pan-Seared Flank Steak (Serious Eats)

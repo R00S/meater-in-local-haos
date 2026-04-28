@@ -15,8 +15,9 @@ Air-frying a T-bone steak is practical for steaks up to 3 cm thick and 700 g —
 
 ## Styckesprofil
 
-Airfryer-tillagning av T-bone är praktisk för biffar upp till 3 cm tjocka och 700 g — benet gör T-bonen mer skrymmande än enkla biffskivor, så den måste få plats i korgen. Airfryern cirkulerar extremt het luft vid 200–220 °C och ger en knaprig yta som liknar ugnsrostning snarare än pannstekt. Utmaningen med T-bonens tvåmuskelgeometri kvarstår: filéns tunnare del kokas snabbare. Innertemperatur: 54–57 °C (mäts i striploin-delen). Eftertillagning: 2–3 °C.
+T-bone-biffen definieras av det T-formade kotbenet som separerar två anatomiskt distinkta muskler: den större striploin (longissimus dorsi) på den långa sidan av benet, och den mindre filén (psoas major) på den korta sidan. Detta är T-bones definierande strukturella egenskap – den ger två olika ätupplevelser i en biff, men skapar en tillagningsutmaning: filén tillagas snabbare och torkar ut över 60 °C, medan stripen kan tolerera något högre temperaturer. Benet fungerar som termisk isolator, så kött närmast benet ligger alltid 3–5 °C efter den öppna muskeln.
 
+T-bone skärs från short loin, framför sirloin. Tjocklek är vanligtvis 2,5–4 cm; en porterhouse är tjockare och med större filéportion från samma region. Sonden placeras alltid i striploin-delen, bort från benet, för den mest pålitliga avläsningen.
 ## Source recipes
 
 ### 1. America's Test Kitchen — Air Fryer T-Bone Steak (American tradition)

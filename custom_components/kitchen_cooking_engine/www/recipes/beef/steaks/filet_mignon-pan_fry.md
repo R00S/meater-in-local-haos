@@ -14,8 +14,7 @@ Filet mignon (psoas major, narrow end) is the most tender, leanest steak in any 
 
 ## Styckesprofil
 
-Filet mignon (*psoas major*, smal ände) är den möraste, magraste biffen av alla snitt. Pannstekt filet mignon kräver en het panna — gjutjärn eller rostfritt stål — smör + matolja, hög direkt värme och kortare exponering än tjockare biffar. Utan det intramuskulära fettet som skyddar ribeye och entrecôte måste panntemperatur och tid kontrolleras noggrant. Innertemperatur: 52–55 °C rare, 55–58 °C medium-rare. Eftertillagning: 3–5 °C.
-
+Filet mignon (psoas major, smal ände) är det magraste och mjukaste biffsnittet i slaktkroppen – muskeln utför nästan inget arbete under djurets liv, vilket ger en finådrad, nästan fettfri textur. Pan-frying i lite olja eller fett över hög värme är en klassisk fransk bistro-metod för filébiff: den ger fullkontakt Maillard-skorpa på båda ytorna medan den magra insidan värms försiktigt genom ledning genom skorpan. Eftersom filet mignon inte har fett att rendera och basa själv måste man använda tillsatt fett (smör, olja eller benmärg) för att efterlikna basningsfunktionen. Eftervärmen är minimal för en liten, tät medaljong i panna – när biffen tas från den heta metallytan stoppas den ledande värmeöverföringen nästan omedelbart.
 ## Source recipes
 
 ### 1. Julia Child — Pan-Fried Filet de Bœuf (French bistro tradition)

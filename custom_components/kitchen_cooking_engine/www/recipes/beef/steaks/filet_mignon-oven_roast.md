@@ -14,8 +14,7 @@ Filet mignon is the small, round, lean medallion cut from the narrow end of the 
 
 ## Styckesprofil
 
-Filet mignon är den lilla, runda, magra medaljongen skärd från den smala änden av nötfilén. Ugnsstekning av filet mignon — vanligtvis som omvänd searing — innebär en låg ugnstemperatur (120–135 °C) till 5–7 °C under slutmålet, sedan hög avslutningsvärme (panna eller ugnsöverhet) för maillardyta. Filétens låga fettinnehåll gör den känslig för värme; precision är avgörande. Innertemperatur: 52–55 °C rare, 55–58 °C medium-rare. Eftertillagning: 3–5 °C.
-
+Filet mignon är det lilla, runda, magra medaljongsnittet från den smala änden av psoas major (nötköttsfilén). Den har ingen marmorering att tala om och ingen bindväv, vilket gör den extraordinärt mör men samtidigt lätt att torka ut över medium. Ugnsrostning av filet mignon är oftast en tvåstegsprocess: en spisbryning ger den Maillard-skorpa som den magra ytan inte kan skapa i ugnen ensam, följt av överföring till ugnen för att försiktigt föra insidan till måltemperatur utan att bränna skorpan. Reverse-sear-varianten (låg ugn först, högvärmebryning sist) ger den jämnaste temperaturgradienten genom det lilla, runda tvärsnittet. Eftervärmen är tydlig – en 4–5 cm filet mignon stiger efter uttag, så pull-temperaturen måste ligga tydligt under serveringstemperaturen.
 ## Source recipes
 
 ### 1. Ina Garten — Pan-Seared Oven-Finished Filet Mignon

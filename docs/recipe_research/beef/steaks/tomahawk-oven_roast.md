@@ -18,8 +18,11 @@ Target internal temperatures (oven pull temps before sear):
 
 ## Styckesprofil
 
-Tomahawk ugnsstekning använder omvänd searing-metoden: lång ugn vid låg temperatur för att tillaga insidan jämnt, sedan het searing (på spisen eller under grill) för krusta. På grund av tjockleken 5–8 cm är enbart spistillagning omöjlig — utsidan skulle vara förkolnad innan kärnan är rätt tillagad. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 4–6 °C. Placera MEATER-sonden horisontellt genom tjockaste punkten, undvika benet.
+Tomahawk ugnsrost använder reverse-sear-metoden: långsam ugn först vid låg temperatur för att tillaga insidan jämnt, sedan en het bryning (på spisen eller under grillen) för skorpan. På grund av 5–8 cm tjockleken är det omöjligt att tillaga den helt på spisen — ytan skulle kremeras innan centrumet når temperatur. Ugnen ger den nödvändiga milda, jämna värmen för kärnan medan den avslutande bryningen ger den karamelliserade skorpan. Benet fungerar som en naturlig basningspinne under vila.
 
+Målinterna temperaturer:
+- Medium-rare: **dra från ugn vid 48–50 °C (118–122 °F)**, vila 15 min, sedan bryna till **55–57 °C (131–135 °F)**
+- Medium: **dra från ugn vid 55–57 °C (131–135 °F)**, vila till **62–63 °C (144–145 °F)**
 ## Source recipes
 
 ### 1. Chefkoch.de — Tomahawk-Steak im Backofen, rückwärts gegart (German tradition)

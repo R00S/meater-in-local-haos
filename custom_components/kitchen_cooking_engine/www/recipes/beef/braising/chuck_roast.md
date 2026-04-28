@@ -35,8 +35,11 @@ Chuck roast is cut from the shoulder region of the animal (the chuck primal, rou
 
 ## Styckesprofil
 
-Fransyska skärs från djurets skulderparti (chuckprimalen, ungefär revben 1–5 och halsen). Skuldermusklerna arbetar ständigt under djurets hela liv, vilket producerar tätt sammanpackade muskelfibrerknippen genomvävda med tjocka lager bindväv (*kollagen*) och intermuskulärt fett — en struktur som är extremt seg vid låga innertemperaturer men förvandlas till rik, mörnande smak efter lång tillagning. Fransyskan omfattar flera muskler: *triceps brachii*, *supraspinatus*, *infraspinatus* och *longissimus costarum*. De flesta är hårt arbetade, kollagenrika och olämpliga för snabba tillagningsmetoder.
+Chuck roast kommer från axelpartiet på djuret (revben 1–5 och nacken). Musklerna i detta område är ständigt i rörelse under djurets liv, vilket ger täta muskelfibrer som är inlindade i kraftiga bindvävslager och rikligt med intermuskulärt fett. Det är just därför snittet blir så tufft vid snabb tillagning, men samtidigt så fantastiskt mört och smakrikt efter långsam tillagning.
 
+Chuck roast innehåller flera olika muskler (främst triceps brachii, supraspinatus och infraspinatus), de flesta av dem är kraftigt arbetade och därför olämpliga för snabb tillagning som pan-searing eller grillning. Den klassiska metoden är bräsering eller långkok i ugn eller slow cooker vid låg temperatur (85–95 °C) i 3–4 timmar. Då löses bindväven upp till gelatin, fettet renderas ut och köttet blir mört och faller isär med djup smak.
+
+Eftervärmen är försumbar tack vare den omgivande vätskan som buffrar temperaturen. Sonden ska sättas in i den tjockaste delen av muskeln, undvikande stora fettvalk och ben.
 ## Research files by cooking method
 
 - [Braise](./chuck_roast-braise.md)

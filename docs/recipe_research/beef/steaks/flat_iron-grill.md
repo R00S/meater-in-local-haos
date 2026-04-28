@@ -15,8 +15,7 @@ The flat iron steak originates from the infraspinatus muscle of the shoulder bla
 
 ## Styckesprofil
 
-Flat iron-biffen härstammar från *infraspinatus*-muskeln i skulderbladspartiet — ett läge som kräver liten rörelseansträngning och gör det möjligt för kraftig intramuskulär fett att utvecklas trots att det är ett framkvartesnitt. Gas- och elgrillar ger konsekvent, kontrollerbar strålnings- och ledningsvärme; flat ironets jämna, platta profil och starka marmorering gör det till ett pålitligt grillsnitt. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C. Skär tvärs mot fibern.
-
+Flat iron steak kommer från infraspinatus i skulderbladet, en position som kräver lite rörelse, vilket låter betydande intramuskulärt fett utvecklas trots att det är ett framkroppssnitt. Gas- och elektriska grillar ger jämn, kontrollerbar strålnings- och ledande värme i 200–260 °C, vilket passar flat iron's 2–3 cm tjocklek perfekt: tillräckligt hög för en bra Maillard-skorpa, tillräckligt kontrollerbar för att inte bränna ytan innan insidan är klar. Till skillnad från kol tillåter gasgrillar exakta tvåzonssetups för tjockare bitar eller snabba justeringar. Eftervärmen är måttlig vid 2–4 °C – mindre än över levande kol eftersom strålningsenergin stängs av direkt när biffen lämnar gallret; dra vid 54 °C ger pålitligt 57 °C slutlig serveringstemperatur.
 ## Source recipes
 
 ### 1. Bobby Flay — Grilled Flat Iron with Blue Cheese Butter (American tradition)

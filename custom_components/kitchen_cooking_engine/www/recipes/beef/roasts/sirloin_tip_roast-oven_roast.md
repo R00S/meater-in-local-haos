@@ -6,8 +6,7 @@ The sirloin tip roast (also called "knuckle" in UK/Australian butchery, "pointe 
 
 ## Styckesprofil
 
-Sirloin tip-stek (kallad "knuckle" i brittisk/australiensisk styckningsnomenklatur, "pointe de surlonge" på franska, "Nuss" på tyska, "marushine" på japanska) är en köttig, triangulär muskelgrupp från utsidan av lårets bakre del. Det är ett relativt magert snitt med liten marmorering, men fint grovt för en bakkvartesmuskel och utmärkt om tillagat rätt. Lämpar sig för omvänd ugnsstekning vid låg temperatur till medium-rare (54–57 °C). Eftertillagning: 4–6 °C.
-
+Sirloin tip roast (kallas "knuckle" i UK/australisk styckning, "pointe de culotte" på franska och "Rinderknolle" på tyska) är en mager, benfri rost från quadriceps femoris på framsidan av round, strax under sirloin. Eftersom quadriceps är kraftigt arbetade muskler har köttet låg marmorering och täta, tighta fibrer – den strukturella motsatsen till den marmorerade ribeye. Magert är både utmaning och fördel: tillagad rätt till medium-rare och skivad tunt mot ådringen ger den ren, nötig smak med lite spill; överkokt ens lite blir den torr och seg. Ugnsrostning passar sirloin tip på två sätt: mild låg-temperatursrostning (93–120 °C) låter enzymatisk mörning arbeta på de täta fibrerna utan att de drar ihop sig, medan en högvärme blast eller reverse-sear ger den Maillard-skorpa som en mager yta behöver. Eftervärmen är modest – cirka 3–5 °C i en standard ugnsrost – eftersom den magra massan saknar fettlager som behåller värme; eftervärmen är större (upp till 8 °C) efter en långsam låg-temp-rost där ugnen svalnar ytan långsamt.
 ## Source recipes
 
 ### 1. Nagi (RecipeTin Eats) — Marinated Roast Beef

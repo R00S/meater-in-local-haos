@@ -74,8 +74,9 @@ The ribeye is composed of the eye muscle (*longissimus*), the rib cap (*spinalis
 
 ## Styckesprofil
 
-Entrecôte skärs från *longissimus dorsi*-muskeln i ribprimalen (revben 6–12), en muskel som utför minimalt arbete och därför utvecklar exceptionellt intramuskulärt fett (marmorering) i hela fibern. Marmoreringen är entrecôtens definierande drag — fettfickorna likvideras under värme och bastar muskelfibrerna inifrån, håller snittet saftigt vid ett bredare temperaturspann och bidrar med smak som magra snitt inte kan ge. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 3–5 °C.
+Ribeye-biffen skärs från longissimus dorsi i revbensprimalen (revben 6–12), en muskel som arbetar lite och därför utvecklar exceptionellt intramuskulärt fett (marmorering) genom hela ådringen. Marmoreringen är det som definierar ribeye – fettfickorna flyter under värme och basar muskeln inifrån, vilket ger en rikedom och självbasande karaktär som inget annat vanligt biffsnitt kan matcha. Den ben-in-versionen (côte de bœuf / cowboy ribeye) behåller mer smak under tillagningen och kräver mer exakt sondplacering för att läsa ögat snarare än området nära benet.
 
+Ribeye består av ögat (longissimus), rib cap (spinalis dorsi, den rikaste och mest eftertraktade delen) och rib intercostal (fingerkött). Rib cap, separerad av ett internt fettvalk, tillagas något snabbare än ögat. Sonden bör gå in från sidan och nå ögats centrum, undvikande det interna fettvalket och eventuellt ben.
 ## Research files by cooking method
 
 - [Air Fryer](./ribeye_steak-air_fryer.md)

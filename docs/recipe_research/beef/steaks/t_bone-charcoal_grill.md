@@ -15,8 +15,9 @@ A T-bone steak over live charcoal is one of the iconic preparations of American 
 
 ## Styckesprofil
 
-En T-bone-biff över levande träkol är en av de ikoniska beredningarna i amerikanst BBQ och argentinsk *parrilla*-tradition. Träkolsvärmen är mindre precist kontrollerbar än gas, vilket innebär att T-bonens tvåmuskelgeometri (den snabbare filéfilén och den långsammare striplouinen) kräver extra uppmärksamhet. En T-bone-biff över träkol ger rökig djup och karameliserad köttig yta; den fristående benstruktur gör den imponerande att presentera. Innertemperatur: 54–57 °C (mäts i striploin-sidan). Eftertillagning: 3–5 °C.
+T-bone-biffen definieras av det T-formade ländkotbenet som separerar två anatomiskt distinkta muskler: den större striploin (longissimus dorsi) på den långa sidan av benet, och den mindre filén (psoas major) på den korta sidan. Detta är T-bones definierande strukturella egenskap – den ger två olika ätupplevelser i en biff, men skapar en tillagningsutmaning: filén tillagas snabbare och torkar ut över 60 °C, medan stripen kan tolerera något högre temperaturer. Benet fungerar som termisk isolator, så kött närmast benet ligger alltid 3–5 °C efter den öppna muskeln.
 
+T-bone skärs från short loin, framför sirloin. Tjocklek är vanligtvis 2,5–4 cm; en porterhouse är tjockare och med större filéportion från samma region. Sonden placeras alltid i striploin-delen, bort från benet, för den mest pålitliga avläsningen.
 ## Source recipes
 
 ### 1. Francis Mallmann — T-Bone over Charcoal Embers (Argentine *parrilla* tradition)

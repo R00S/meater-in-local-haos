@@ -15,8 +15,7 @@ New York strip cooked sous vide is precision-cooked in a sealed bag at the targe
 
 ## Styckesprofil
 
-New York strip tillagad sous vide precision-kokas i förseglad påse vid måltemperaturen, sedan ges en snabb hög-värme searing för skorpbildning. Stripens fasta, måttligt marmorerade muskel är ett utmärkt kandidat för sous vide eftersom den långa, jämna koktiden (1–4 timmar) fullständigt relaxar muskelfibrerna och ger en mer mör biff än snabb pansearing ensam. Innertemperatur: 54–57 °C medium-rare. Avsluta alltid med searing.
-
+New York strip sous vide är precisionstillagad i förseglad påse vid måltemperatur, sedan given en snabb högvärmebryning för skorpa. Stripens fasta, måttligt marmorerade muskel är en utmärkt kandidat för sous vide eftersom den långa, jämna tiden (1–4 timmar) fullt ut slappnar av fibrerna och ger ett mörare resultat än pan-searing ensam, medan den exakta temperaturkontrollen eliminerar den breda gradienten från yta till kärna som uppstår vid vanlig bryning. Post-bad-bryningen är kort – max 60–90 sekunder per sida – eftersom biffen redan är vid intern måltemperatur. Eftervärmen från post-bad-bryningen ger 2–3 °C på ytan men kärnan stannar på badtemperaturen. Badtemperaturen är den interna måltemperaturen.
 ## Source recipes
 
 ### 1. J. Kenji López-Alt — Sous Vide New York Strip (American tradition)

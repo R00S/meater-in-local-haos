@@ -19,8 +19,11 @@ Score the fat cap in a crosshatch pattern (cuts through fat, not into muscle) be
 
 ## Styckesprofil
 
-Ugnsstekning av picanha passar utmärkt för hela muskeln och är särskilt effektiv med omvänd searing: börja vid låg temperatur (120–140 °C) för att föra hela stycket till inom 10 °C av måltemperaturen, searas sedan i en riktigt het stekpanna eller under övervärme i 90 sekunder per sida för att bilda skorpan. Innertemperatur: 52–57 °C medium-rare. Eftertillagning: 3–5 °C för hela muskeln.
+Ugnsrostning av picanha är väl lämpad för hela muskeln och särskilt effektiv med en reverse-sear-metod: börja vid låg temperatur (120–140 °C) för att föra hela stycket till inom 10 °C av måltemperaturen, bryna sedan i en mycket het stekpanna eller under broiler i 90 sekunder per sida för att utveckla skorpan. Fettkappan renderar långsamt i den låga ugnen och basar kontinuerligt det magra köttet uppifrån, vilket håller det fuktigt utan någon manuell basning.
 
+För hel picanha utan skärning rostar ugnsrostning vid 180–200 °C hela stycket på 25–45 min beroende på storlek, men producerar en större gradient mellan den yttre kanten (mer tillagad) och centrumet. Reverse sear eliminerar denna gradient.
+
+Skåra fettkappan i ett rutmönster (snitt genom fett, inte in i muskel) före rostning för att hjälpa den att rendera jämnare och förhindra att den krullar sig. MEATER-sond går längs i den tjockaste delen av muskeln, undvikande fettkappan. Eftervärme från en 120–140 °C ugn är 4–6 °C; från en 200 °C ugn, 5–7 °C.
 ## Source recipes
 
 ### 1. America's Test Kitchen — Oven-Roasted Picanha (American tradition)

@@ -163,3 +163,40 @@ The JSON file is a dev artefact only — no markdown or code was modified by thi
 - `const.py` — Last Change
 - `www/kitchen-cooking-panel.js` — auto-generated (PANEL_VERSION 343 → 344)
 - `docs/update-select-cut-menu-0.6.5.x.md` — this entry
+
+---
+
+## v0.6.5.4 — Grok translation merge (2026-04-28)
+
+### Task
+
+Merge Grok's Swedish `## Styckesprofil` translations into the repo where they
+improve quality over existing Copilot translations.
+
+### Process
+
+1. Loaded `step1_extracted_profiles_swedish.json` (480 entries: 213 Swedish, 267 English).
+2. Filtered out:
+   - 267 English-language entries (unusable as Swedish translations).
+   - Entries with obvious content mismatches (T-bone text in vegetable/turkey/goose files;
+     beef burger text in fish files; filet mignon text in halibut/mahi-mahi files, etc.) —
+     Grok's JSON had systematic file-to-profile misassignments in ~100+ entries.
+   - Entries using "bog" incorrectly for rump/hindquarter cuts (rump.md, rump_roast.md,
+     rump-pan_sear.md, picanha.md). "Bog" in Swedish means shoulder, not rump.
+   - Entries where current (Copilot) translation was equal or longer.
+3. 30 valid replacements identified — all beef cuts (steaks and roasts), where Grok's
+   Swedish profile was at least 50% longer and correctly described the right cut.
+
+### Corrections applied
+
+- `beef/steaks/sirloin_steak.md`: replaced incorrect "Entrecôtebiff" with Grok's
+  correct "Sirloin-biffen" (entrecôte = ribeye in Swedish; sirloin ≠ entrecôte).
+
+### Files changed
+
+- `manifest.json` — version 0.6.5.3 → 0.6.5.4
+- `__init__.py` — version bump + Last Change
+- `const.py` — Last Change
+- `www/kitchen-cooking-panel.js` — auto-generated (PANEL_VERSION 344 → 345)
+- 30 markdown files in `docs/recipe_research/beef/` — `## Styckesprofil` sections updated
+- `docs/update-select-cut-menu-0.6.5.x.md` — this entry

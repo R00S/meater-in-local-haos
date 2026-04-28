@@ -19,8 +19,11 @@ Target internal temperatures:
 
 ## Styckesprofil
 
-Tomahawk-biff är en tjockt skärd entrecôte (typiskt 5–8 cm tjock, 1,2–1,8 kg) med det fulla revbenet fortfarande fäst och ger den dess karakteristiska yxa-liknande utseende. På grund av den enorma tjockleken kan den inte tillagas på grillen ensam utan risk för ett tjockt band av grå, överkokad kött runt en underkokt kärna — omvänd searing är nödvändig. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 4–6 °C.
+Tomahawk-biffen är en tjock-cut ribeye (typiskt 5–8 cm tjock, 1,2–1,8 kg) med det fulla revbenet fortfarande fäst, vilket ger den dess distinkta yx-liknande utseende. På grund av dess enorma tjocklek kan den inte tillagas på grillen ensam utan risk för ett tjockt band av grått överkokt kött runt ett rått centrum. Den bästa metoden är reverse sear: låg ugn eller indirekt värme först, sedan hög direkt grillvärme för skorpan. Benet bidrar till smak under den långsamma tillagningsfasen.
 
+Målinterna temperaturer:
+- Medium-rare: **dra från ugn vid 50 °C (122 °F)**, vila 10 min, sedan grilla till **55–57 °C (131–135 °F)**
+- Kärntemperatur vid bord: **57–60 °C (135–140 °F)**
 ## Source recipes
 
 ### 1. GialloZafferano — Tomahawk alla griglia (Italian tradition)

@@ -72,8 +72,7 @@ The sirloin steak is cut from the sirloin primal, which sits between the short l
 
 ## Styckesprofil
 
-Entrecôtebiff skärs från entrecôteprimalen som sitter mellan shortkotletten (där NY stripen härstammar) och bakkvarteret. Övre entrecôte är det vanligaste biffssnittet från denna primerzon — det är en fast, relativt mager biff med kraftig, nötig smak från den större muskelaktiviteten i denna region. Fettlisten är inte lika tjock som på NY strip; den karameliseras snabbt vid hög värme. Innertemperatur: 54–57 °C medium-rare. Eftertillagning: 2–3 °C.
-
+Sirloin-biffen skärs från sirloin-primalen, som ligger mellan short loin (där NY strip kommer ifrån) och round. Top sirloin är det vanligaste biffsnittet från detta primal – en fast, relativt mager biff med kraftig nötig smak från den högre muskelaktiviteten i denna del av slaktkroppen. Jämfört med NY strip har top sirloin mindre marmorering och grövre ådring, vilket gör den mindre förlåtande för överkokning; jämfört med round är den tydligt mörare. Pan-searing passar sirloin väl eftersom den höga värmen kompenserar för den lägre marmoreringen genom att ge en smakrik skorpa – Maillard-reaktionen är det huvudsakliga smakbidraget till en searad top sirloin. Cap-muskeln (picanha-regionen av sirloin cap) separeras ibland och ses som ett eget snitt; detta blad avser den huvudsakliga top sirloin-biffen. Eftervärmen är 4–5 °C.
 ## Research files by cooking method
 
 - [Air Fryer](./sirloin_steak-air_fryer.md)

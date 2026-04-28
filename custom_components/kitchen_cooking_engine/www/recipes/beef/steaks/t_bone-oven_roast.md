@@ -17,8 +17,9 @@ The two-muscle geometry (striploin + tenderloin) is actually *helped* by the rev
 
 ## Styckesprofil
 
-Ugnsstekning av T-bone är mest effektiv som omvänd searing: börja vid 120–135 °C för att föra hela biffen till inom 10 °C av måltemperaturen utan gradient, searas sedan i gjutjärnspanna eller under övervärme vid maxvärme i 60–90 sekunder per sida. Denna metod eliminerar tvåmuskelproblemen: den jämna ugnsförvärmningen ger båda musklerna lika starttillstånd. Innertemperatur: 54–57 °C (mäts i striploin-sidan). Eftertillagning: 3–5 °C.
+Ugnsrostning av en T-bone är mest effektiv som en reverse-sear: börja vid 120–135 °C för att föra hela biffen till inom 10 °C av måltemperaturen med noll gradient, bryna sedan i en gjutjärnspanna eller under broiler vid maximal värme i 60–90 sekunder per sida för att forma skorpan. Detta eliminerar det överkokta grå ring som konventionella högvärme-bryn-sedan-ugn-metoder lämnar.
 
+Den tvåmuskelgeometrin (striploin + filé) *hjälps* faktiskt av reverse sear: den långsamma låga ugnen equilibrerar temperaturen över båda musklerna, vilket minimerar differentialen. Det isolerande benet orsakar fortfarande att köttet närmast benet ligger 3–5 °C efter — detta är önskvärt för alla som föredrar filén något rareare än stripen. MEATER-sond i striploin-sidan, bort från benet. Eftervärme efter ugnsfasen är 4–6 °C; efter den slutliga högvärmebryningen, 2–3 °C.
 ## Source recipes
 
 ### 1. America's Test Kitchen — Reverse-Sear T-Bone (American tradition)
