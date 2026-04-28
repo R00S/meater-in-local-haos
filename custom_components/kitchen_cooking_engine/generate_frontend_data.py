@@ -324,8 +324,9 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
 
     Returns:
         recipe_index:        {cut_slug: {method_slug: url_path}}
-        cut_profiles:        {cut_slug: "profile text"}
-        cut_method_profiles: {cut_slug: {method_slug: "profile text"}}
+        cut_profiles:        {cut_slug: "profile text (en)"}
+        cut_profiles_sv:     {cut_slug: "profile text (sv)"} — from ## Styckesprofil section
+        cut_method_profiles: {cut_slug: {method_slug: "en text", method_slug+"_sv": "sv text"}}
         recipe_titles:       {cut_slug: {method_slug: ["title", ...]}}
     """
     if recipe_dir is None:
@@ -350,10 +351,12 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
 
     recipe_index = {}
     cut_profiles = {}
+    cut_profiles_sv = {}
     cut_method_profiles = {}
     recipe_titles = {}
 
-    _profile_re = re.compile(r"## Cut profile\n+(.*?)(?=\n\n##|\Z)", re.DOTALL)
+    _profile_re    = re.compile(r"## Cut profile\n+(.*?)(?=\n\n##|\Z)", re.DOTALL)
+    _profile_sv_re = re.compile(r"## Styckesprofil\n+(.*?)(?=\n\n##|\Z)", re.DOTALL)
 
     for root, _dirs, files in os.walk(recipe_dir):
         for filename in sorted(files):
@@ -380,6 +383,10 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
                 m = _profile_re.search(content)
                 if m:
                     cut_profiles[cut_slug] = m.group(1).strip()
+
+                m_sv = _profile_sv_re.search(content)
+                if m_sv:
+                    cut_profiles_sv[cut_slug] = m_sv.group(1).strip()
                 continue
 
             # --- Cut-method file ---
@@ -397,10 +404,18 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
                     if cut_slug not in cut_profiles:
                         cut_profiles[cut_slug] = desc
 
-                # Swedish description (optional field in KCE:CUT_METHOD tag)
-                desc_sv = data.get("description_sv")
-                if desc_sv:
-                    cut_method_profiles.setdefault(cut_slug, {})[method_slug + "_sv"] = desc_sv
+                # Swedish method description — prefer ## Styckesprofil body over
+                # the single-line description_sv: YAML field (body is multi-paragraph)
+                m_sv = _profile_sv_re.search(content)
+                if m_sv:
+                    cut_method_profiles.setdefault(cut_slug, {})[method_slug + "_sv"] = m_sv.group(1).strip()
+                    if cut_slug not in cut_profiles_sv:
+                        cut_profiles_sv[cut_slug] = m_sv.group(1).strip()
+                else:
+                    # Fall back to single-line YAML field for backwards compatibility
+                    desc_sv = data.get("description_sv")
+                    if desc_sv:
+                        cut_method_profiles.setdefault(cut_slug, {})[method_slug + "_sv"] = desc_sv
 
                 titles = _extract_recipe_titles(content)
                 if titles:
@@ -426,7 +441,7 @@ def build_recipe_index(base_dir, *, recipe_dir=None, url_prefix="recipes"):
                 if titles:
                     recipe_titles.setdefault(cut_slug, {})[method_slug] = titles
 
-    return recipe_index, cut_profiles, cut_method_profiles, recipe_titles
+    return recipe_index, cut_profiles, cut_profiles_sv, cut_method_profiles, recipe_titles
 
 
 # Category display data (mirrors cooking_data.py MeatCategory definitions)
@@ -871,7 +886,7 @@ def generate_js_data():
                     print(f"Warning: Could not load translation {filename}: {e}")
 
     # Build recipe index from docs/recipe_research/ (experimental / active fork)
-    recipe_index, cut_profiles, cut_method_profiles, recipe_titles = build_recipe_index(base_dir)
+    recipe_index, cut_profiles, cut_profiles_sv, cut_method_profiles, recipe_titles = build_recipe_index(base_dir)
     print(f"  Recipe index (experimental): {sum(len(v) for v in recipe_index.values())} files across {len(recipe_index)} cuts")
 
     # Build recipe index from docs/recipe_research_classic/ (frozen classic fork)
@@ -880,14 +895,14 @@ def generate_js_data():
     classic_www_dir = os.path.join(base_dir, "www", "recipes_classic")
     classic_recipe_dir = classic_dir if os.path.isdir(classic_dir) else (classic_www_dir if os.path.isdir(classic_www_dir) else None)
     if classic_recipe_dir:
-        classic_recipe_index, classic_cut_profiles, classic_cut_method_profiles, classic_recipe_titles = build_recipe_index(
+        classic_recipe_index, classic_cut_profiles, classic_cut_profiles_sv, classic_cut_method_profiles, classic_recipe_titles = build_recipe_index(
             base_dir,
             recipe_dir=classic_recipe_dir,
             url_prefix="recipes_classic",
         )
         print(f"  Recipe index (classic):      {sum(len(v) for v in classic_recipe_index.values())} files across {len(classic_recipe_index)} cuts")
     else:
-        classic_recipe_index, classic_cut_profiles, classic_cut_method_profiles, classic_recipe_titles = {}, {}, {}, {}
+        classic_recipe_index, classic_cut_profiles, classic_cut_profiles_sv, classic_cut_method_profiles, classic_recipe_titles = {}, {}, {}, {}, {}
         print("  Recipe index (classic):      0 files (docs/recipe_research_classic/ not found)")
 
     # Report international cut → recipe coverage. The experimental MEATER path
@@ -987,6 +1002,9 @@ def generate_js_data():
     lines.append("// Cut profile texts extracted from recipe research files")
     lines.append(f"const CUT_PROFILES = {json.dumps(cut_profiles, indent=2, ensure_ascii=False)};")
     lines.append("")
+    lines.append("// Swedish cut profile texts — from ## Styckesprofil sections in research files")
+    lines.append(f"const CUT_PROFILES_SV = {json.dumps(cut_profiles_sv, indent=2, ensure_ascii=False)};")
+    lines.append("")
     lines.append("// Cut × method profile texts: {cut_slug: {method_slug: description}}")
     lines.append(f"const CUT_METHOD_PROFILES = {json.dumps(cut_method_profiles, indent=2, ensure_ascii=False)};")
     lines.append("")
@@ -998,6 +1016,9 @@ def generate_js_data():
     lines.append("")
     lines.append("// Classic cut profile texts")
     lines.append(f"const CLASSIC_CUT_PROFILES = {json.dumps(classic_cut_profiles, indent=2, ensure_ascii=False)};")
+    lines.append("")
+    lines.append("// Classic Swedish cut profile texts")
+    lines.append(f"const CLASSIC_CUT_PROFILES_SV = {json.dumps(classic_cut_profiles_sv, indent=2, ensure_ascii=False)};")
     lines.append("")
     lines.append("// Classic cut × method profile texts")
     lines.append(f"const CLASSIC_CUT_METHOD_PROFILES = {json.dumps(classic_cut_method_profiles, indent=2, ensure_ascii=False)};")

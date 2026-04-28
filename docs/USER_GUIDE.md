@@ -622,15 +622,23 @@ doneness:
 
 ## Cut profile
 
-A short paragraph describing the cut: where on the animal it comes from, fat and
+A short paragraph describing the cut in English: where on the animal it comes from, fat and
 connective-tissue content, flavour characteristics, and the ideal internal temperature
 range. Mention the pull temperature and expected rise after resting.
+
+## Styckesprofil
+
+En kort beskrivning av styckningsdetaljen på svenska: varifrån på djuret den kommer,
+bindväv- och fettinnehåll, smakkaraktär samt lämplig innertemperatur. Nämn pull-temperaturen
+och förväntad stegring efter vila.
 
 ## Research files by cooking method
 
 - [Pan Sear](./my_cut_slug-pan_sear.md)
 - [Grill](./my_cut_slug-grill.md)
 ```
+
+The `## Styckesprofil` section is optional but strongly recommended — without it, English text is shown to Swedish users.
 
 **Required `KCE:CUT` fields**
 
@@ -680,15 +688,18 @@ name: My Cut Name × Pan Sear
 category: beef
 meat: beef
 cut_type: Steaks
-description: A brief English description of this method for this cut, shown in the method selector.
-description_sv: En kort svensk beskrivning av denna metod, visas i metodväljaren.
 -->
 # My Cut Name × Pan Sear — Recipe Temperature Research
 
 ## Cut profile
 
-Repeat or adapt the cut description from the overview file. Include the recommended
+Repeat or adapt the cut description from the overview file in English. Include the recommended
 pull temperature and expected rise after resting.
+
+## Styckesprofil
+
+Upprepa eller anpassa styckningsbeskrivningen från översiktsfilen på svenska. Inkludera
+rekommenderad pull-temperatur och förväntad temperaturstegring efter vila.
 
 ## Source recipes
 

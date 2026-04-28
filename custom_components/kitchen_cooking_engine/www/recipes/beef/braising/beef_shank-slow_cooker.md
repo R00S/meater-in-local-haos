@@ -12,6 +12,10 @@ cut_type: Braising Cuts
 ## Cut profile
 Beef shank cooked in an electric slow cooker is the same long-collagen-conversion preparation as a Dutch-oven braise, executed in a sealed environment that holds the cooking liquid at a steady 85–95 °C (low setting) without any monitoring. The cut's combination of dense connective tissue and a central marrow bone makes it an ideal slow-cooker subject — the long unattended cook fully converts collagen to gelatin, the marrow renders into the sauce, and the steam-tight environment keeps the muscle submerged in its own enriched liquid throughout. Searing the steaks before adding to the cooker is essential for deep flavour; the slow cooker itself contributes none of the Maillard browning that a stove-top sear or oven roast adds. Carryover is zero.
 
+## Styckesprofil
+
+Oxlägg tillagat i en elektrisk slowcooker är samma långsamma kollagenomvandling som en brässering i gjutjärnsgryta, men utförd i en försluten miljö som håller tillagningsvätskan på jämn 85–95 °C (låg inställning) utan bevakning. Styckningsdetaljens kombination av tät bindväv och centralt märgben gör den idealisk för slowcooker — den långa, obevakade tillagningen omvandlar kollagenet fullständigt till gelatin, märgen smälter ner i såsen och den ångförseglande miljön håller köttet nedsänkt i sin berikade vätska under hela tillagningen. Att bryna köttet i stekpanna innan det läggs i slowcookern är avgörande för djup smak; slowcookern i sig bidrar ingen av den Maillard-bryning som en stekpanna eller ugnsrostning ger. Temperaturstegringen efter tillagning är obefintlig.
+
 ## Source recipes
 
 ### 1. Hugh Acheson — Slow-Cooker Osso Buco (American Southern adaptation of Italian classic)

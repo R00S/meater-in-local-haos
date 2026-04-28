@@ -18,19 +18,51 @@ Doneness Level). The fix makes the UI consistent throughout.
   - §5.9: Added "Measurement system in recipes" callout box; added "Language support"
     subsection with table showing how Swedish names are provided per element (category,
     meat, cut_type, cut, doneness, UI labels, method descriptions).
-  - §5.10 KCE:CUT example: added `name_sv:` at cut level and `name_sv:` per doneness entry.
+  - §5.10 KCE:CUT example: added `name_sv:` at cut level and `name_sv:` per doneness entry;
+    added `## Styckesprofil` as second body section for Swedish cut description.
   - §5.10 KCE:CUT fields table: documented `name_sv` as optional field.
-  - §5.10 doneness entry docs: noted `name_sv:` option.
-  - §5.10 KCE:CUT_METHOD example: added `description:` and `description_sv:` fields.
+  - §5.10 doneness entry docs: noted `name_sv:` option with reference table.
+  - §5.10 KCE:CUT_METHOD example: replaced `description_sv:` YAML field with
+    `## Styckesprofil` body section (multi-paragraph Swedish description).
   - §12 Measurement settings: expanded paragraph to mention experimental path conversion.
 - No help-button anchor changes needed (all existing anchors match current heading text).
 
+### Bug fix: Styckesprofil and Tillagningsmetod descriptions not translated
+
+**Problem**: After v0.6.4.8, the body text in the "Styckesprofil" card and the method
+description in "Tillagningsmetod" were always shown in English regardless of UI language.
+Two root causes:
+1. `CUT_PROFILES` had no Swedish equivalent — only `## Cut profile` was extracted.
+2. The `description_sv:` YAML field (a single line) was structurally wrong for the
+   multi-paragraph description body shown in "Tillagningsmetod".
+
+**Fix**:
+- Added `## Styckesprofil` as the Swedish counterpart to `## Cut profile` in markdown files.
+- Generator now extracts `## Styckesprofil` sections and produces two new JS constants:
+  `CUT_PROFILES_SV` and `CLASSIC_CUT_PROFILES_SV`.
+- For method files, `## Styckesprofil` populates `CUT_METHOD_PROFILES[slug][method + '_sv']`
+  (preferred over the old single-line `description_sv:` YAML field, which is kept as fallback).
+- Added `_getCutProfilesSv()` getter in JS.
+- In `_renderCutProfileCard()`: `profileEn` / `profileSv` split; Swedish shown when language
+  is `sv` and a Swedish section exists, falls back to English otherwise.
+- Added `## Styckesprofil` sections to `beef_shank.md`, `beef_shank-braise.md`, and
+  `beef_shank-slow_cooker.md` as the first three fully-translated cut files.
+
+**Contributor workflow**: Add `## Styckesprofil` to any cut overview or method file to
+provide Swedish description text. Files without this section fall back to English gracefully.
+
 ### Files changed
+- `generate_frontend_data.py` — `_profile_sv_re`, `cut_profiles_sv`, new return value, `CUT_PROFILES_SV`/`CLASSIC_CUT_PROFILES_SV` output
+- `www/panel-class-template.js` — `_getCutProfilesSv()`, `profileEn`/`profileSv` in `_renderCutProfileCard()`
+- `www/kitchen-cooking-panel.js` — auto-generated (PANEL_VERSION 339 → 340)
+- `docs/recipe_research/beef/braising/beef_shank.md` — `## Styckesprofil` added
+- `docs/recipe_research/beef/braising/beef_shank-braise.md` — `## Styckesprofil` added
+- `docs/recipe_research/beef/braising/beef_shank-slow_cooker.md` — `## Styckesprofil` added
 - `manifest.json` — version 0.6.4.9 → 0.6.5.0
 - `__init__.py` — version bump + Last Change
-- `const.py` — Last Change
-- `docs/USER_GUIDE.md` — sections 5.8, 5.9, 5.10, 12 updated
-- `docs/update-select-cut-menu-0.6.4.x.md` — this file updated
+- `const.py` — Last Change (PANEL_VERSION auto-updated by generator)
+- `docs/USER_GUIDE.md` — §5.8, §5.9, §5.10, §12 updated
+- `docs/update-select-cut-menu-0.6.4.x.md` — this file
 
 ## v0.6.4.9 — 2026-04-28
 

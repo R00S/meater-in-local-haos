@@ -994,6 +994,10 @@ class KitchenCookingPanel extends LitElement {
     return this._currentPath === 'meater_experimental' ? CUT_PROFILES : CLASSIC_CUT_PROFILES;
   }
 
+  _getCutProfilesSv() {
+    return this._currentPath === 'meater_experimental' ? CUT_PROFILES_SV : CLASSIC_CUT_PROFILES_SV;
+  }
+
   _getCutMethodProfiles() {
     return this._currentPath === 'meater_experimental' ? CUT_METHOD_PROFILES : CLASSIC_CUT_METHOD_PROFILES;
   }
@@ -4783,7 +4787,9 @@ class KitchenCookingPanel extends LitElement {
     const slug = cut.recipe_slug || cut.slug;
     if (!slug) return html``;
 
-    const profile = this._getCutProfiles()[slug];
+    const profileEn = this._getCutProfiles()[slug];
+    const profileSv = this._getCutProfilesSv()[slug];
+    const profile   = (this._language === 'sv' && profileSv) ? profileSv : profileEn;
     const recipes = this._getRecipeIndex()[slug];
     if (!profile && !recipes) return html``;
 

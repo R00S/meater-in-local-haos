@@ -20,7 +20,7 @@
  * ║                                                                              ║
  * ╚══════════════════════════════════════════════════════════════════════════════╝
  * 
- * AUTO-GENERATED: 28 Apr 2026, 09:21 CET
+ * AUTO-GENERATED: 28 Apr 2026, 09:48 CET
  * Data generated from cooking_data.py, swedish_cooking_data.py, and ninja_combi_data.py
  * UI class from panel-class-template.js
  * 
@@ -42,7 +42,7 @@ const DATA_SOURCE_SWEDISH = "swedish";
 // AUTO-GENERATED DATA - DO NOT EDIT
 // Generated from cooking_data.py, swedish_cooking_data.py, ninja_combi_data.py,
 // measurements.py, and i18n/*.json
-// Last generated: 28 Apr 2026, 09:21 CET
+// Last generated: 28 Apr 2026, 09:48 CET
 
 // Doneness option definitions (International/USDA)
 const DONENESS_OPTIONS = {
@@ -17527,6 +17527,11 @@ const CUT_PROFILES = {
   "secreto": "The *secreto* (Spanish: \"secret\") is cut from the junction between the shoulder blade and the belly of the Iberian pig — the *serratus ventralis* and *subscapularis* muscles in the deepest layer of the shoulder, running diagonally. It is called \"secret\" because it is hidden beneath the outer shoulder and was historically an undiscovered, unadvertised cut consumed by the butcher. Standard dimensions: roughly 30–40 cm long × 5–8 cm wide × 1–2 cm thick; irregular in shape, covered with coarse intramuscular fat seams. In Iberian-breed pigs specifically, the fat carries acorn-derived oleic acids and the characteristic *bellota* aroma. Non-Iberian secreto has similar structure but milder flavour."
 };
 
+// Swedish cut profile texts — from ## Styckesprofil sections in research files
+const CUT_PROFILES_SV = {
+  "beef_shank": "Oxlägg är den nedre delen av framlägget (foreshank) eller baklägget (hindshank), en av slaktkroppens mest bearbetade muskler: det ständiga rörelsearbetet vid gång och stående bygger täta muskelfiberbuntar inbäddade i tjocka lager bindväv, med ett markant märgben centralt i tvärsnittsbiffen (*osso buco*-snittet). Rått oxlägg är en av djurets segaste styckningsdetaljer; brässeras det långsamt i 3–4 timmar vid 85–95 °C löser sig bindväven till rik gelatin, märgen smälter ner i såsen och muskelköttet blir mjukt och trådigt. Den benskivade formen håller ihop under tillagningen tack vare bindvävsringen kring muskelköttet. Temperaturstegringen efter tillagning är försumbar — den omgivande vätskan buffrar temperatursvängningar."
+};
+
 // Cut × method profile texts: {cut_slug: {method_slug: description}}
 const CUT_METHOD_PROFILES = {
   "ostrich_fillet": {
@@ -17765,7 +17770,9 @@ const CUT_METHOD_PROFILES = {
   },
   "beef_shank": {
     "braise": "Beef shank is the lower portion of the front (foreshank) or hind (hindshank) leg, structurally one of the most aggressively-worked muscles in the carcass: the constant motion of walking and standing builds dense bundles of muscle fibre wrapped in thick sheets of connective tissue, with a substantial central marrow bone running through cross-cut steaks (the *osso buco* preparation). Raw shank is among the toughest cuts in the animal; braised slowly for 3–4 hours at 85–95 °C, the connective tissue dissolves into rich gelatin, the marrow renders into the sauce, and the muscle becomes pull-apart tender. The bone-in cross-cut section holds shape because the connective-tissue ring around the muscle keeps it bound during the cook. Carryover is negligible — the surrounding liquid buffers temperature swings.",
-    "slow_cooker": "Beef shank cooked in an electric slow cooker is the same long-collagen-conversion preparation as a Dutch-oven braise, executed in a sealed environment that holds the cooking liquid at a steady 85–95 °C (low setting) without any monitoring. The cut's combination of dense connective tissue and a central marrow bone makes it an ideal slow-cooker subject — the long unattended cook fully converts collagen to gelatin, the marrow renders into the sauce, and the steam-tight environment keeps the muscle submerged in its own enriched liquid throughout. Searing the steaks before adding to the cooker is essential for deep flavour; the slow cooker itself contributes none of the Maillard browning that a stove-top sear or oven roast adds. Carryover is zero."
+    "braise_sv": "Oxlägg är den nedre delen av framlägget (foreshank) eller baklägget (hindshank), en av slaktkroppens mest bearbetade muskler: det ständiga rörelsearbetet vid gång och stående bygger täta muskelfiberbuntar inbäddade i tjocka lager bindväv, med ett markant märgben centralt i tvärsnittsbiffen (*osso buco*-snittet). Rått oxlägg är en av djurets segaste styckningsdetaljer; brässeras det långsamt i 3–4 timmar vid 85–95 °C löser sig bindväven till rik gelatin, märgen smälter ner i såsen och muskelköttet blir mjukt och trådigt. Den benskivade formen håller ihop under tillagningen tack vare bindvävsringen kring muskelköttet. Temperaturstegringen efter tillagning är försumbar — den omgivande vätskan buffrar temperatursvängningar.",
+    "slow_cooker": "Beef shank cooked in an electric slow cooker is the same long-collagen-conversion preparation as a Dutch-oven braise, executed in a sealed environment that holds the cooking liquid at a steady 85–95 °C (low setting) without any monitoring. The cut's combination of dense connective tissue and a central marrow bone makes it an ideal slow-cooker subject — the long unattended cook fully converts collagen to gelatin, the marrow renders into the sauce, and the steam-tight environment keeps the muscle submerged in its own enriched liquid throughout. Searing the steaks before adding to the cooker is essential for deep flavour; the slow cooker itself contributes none of the Maillard browning that a stove-top sear or oven roast adds. Carryover is zero.",
+    "slow_cooker_sv": "Oxlägg tillagat i en elektrisk slowcooker är samma långsamma kollagenomvandling som en brässering i gjutjärnsgryta, men utförd i en försluten miljö som håller tillagningsvätskan på jämn 85–95 °C (låg inställning) utan bevakning. Styckningsdetaljens kombination av tät bindväv och centralt märgben gör den idealisk för slowcooker — den långa, obevakade tillagningen omvandlar kollagenet fullständigt till gelatin, märgen smälter ner i såsen och den ångförseglande miljön håller köttet nedsänkt i sin berikade vätska under hela tillagningen. Att bryna köttet i stekpanna innan det läggs i slowcookern är avgörande för djup smak; slowcookern i sig bidrar ingen av den Maillard-bryning som en stekpanna eller ugnsrostning ger. Temperaturstegringen efter tillagning är obefintlig."
   },
   "brisket": {
     "oven_roast": "Oven roasting brisket is the most accessible slow-cook method, and can take two forms: (1) a sealed Dutch oven with liquid (red wine, stock, onions, tomatoes — effectively a braise in the oven) held at 150–160 °C for 3–5 hours; or (2) a true dry oven roast (Jewish-style, wrapped tightly in foil or a covered roasting pan) where the brisket steams in its own released moisture. Both approaches work because the enclosed oven environment retains the moisture driven off from the meat, preventing the surface from desiccating during the long cook.\n\nAt 150–160 °C, brisket reaches the target internal temperature (90–96 °C for pull-apart) in 4–6 hours depending on size and whether sealed. The MEATER probe should be placed in the flat, at the thickest point, avoiding the internal fat seam. Carryover is negligible — the high moisture content and dense mass absorb and release heat slowly; the internal temperature barely moves after the brisket is removed."
@@ -21854,6 +21861,9 @@ const CLASSIC_CUT_PROFILES = {
   "pork_tenderloin": "Pork tenderloin (svinemørbrad / Schweinefilet / solomillo de cerdo) is the leanest cut of pork and the most forgiving for pan searing — it cooks quickly (whole tenderloin: 12–15 min total; medallions: 2 min per side) and is best served slightly pink at 63–65 °C. Remove silverskin before cooking. Two main approaches: (1) slice into medallions and sear each side 2 minutes — fastest; (2) sear the whole tenderloin on all sides then finish in the oven at 200 °C × 15 min.\n\n\nTarget internal temperatures (grill):\n- Juicy/slightly pink: **63–65 °C (145–149 °F)**",
   "secreto": "The secreto (Spanish: \"secret\") is a hidden fat-marbled cut from the shoulder/neck area of the Iberian pig (or any pork). It is thin, uneven, and highly marbled, making it one of the most flavourful pork cuts for the griddle or grill. Because it is thin and irregular, it is cut into 3–4 uniform pieces before cooking. Key rules: de-chill 2 hours; dry sear without oil; no salt before; one flip only; rest 1–2 min then season. Target: 65–70 °C (pink to fully done) — internal temperature rises fast due to the thin cross-section.\n\n\nTarget internal temperatures (pan sear):\n- Pink inside: **63–65 °C (145–149 °F)**\n- Well done (recommended for high-fat secreto): **68–72 °C (154–162 °F)**"
 };
+
+// Classic Swedish cut profile texts
+const CLASSIC_CUT_PROFILES_SV = {};
 
 // Classic cut × method profile texts
 const CLASSIC_CUT_METHOD_PROFILES = {
@@ -29475,6 +29485,10 @@ class KitchenCookingPanel extends LitElement {
     return this._currentPath === 'meater_experimental' ? CUT_PROFILES : CLASSIC_CUT_PROFILES;
   }
 
+  _getCutProfilesSv() {
+    return this._currentPath === 'meater_experimental' ? CUT_PROFILES_SV : CLASSIC_CUT_PROFILES_SV;
+  }
+
   _getCutMethodProfiles() {
     return this._currentPath === 'meater_experimental' ? CUT_METHOD_PROFILES : CLASSIC_CUT_METHOD_PROFILES;
   }
@@ -33264,7 +33278,9 @@ class KitchenCookingPanel extends LitElement {
     const slug = cut.recipe_slug || cut.slug;
     if (!slug) return html``;
 
-    const profile = this._getCutProfiles()[slug];
+    const profileEn = this._getCutProfiles()[slug];
+    const profileSv = this._getCutProfilesSv()[slug];
+    const profile   = (this._language === 'sv' && profileSv) ? profileSv : profileEn;
     const recipes = this._getRecipeIndex()[slug];
     if (!profile && !recipes) return html``;
 
@@ -39576,7 +39592,7 @@ class KitchenCookingPanel extends LitElement {
 // not by a versioned element name.  Registering the same class under two
 // different names triggers "this constructor has already been used with this
 // registry" in HA's @webcomponents/scoped-custom-element-registry polyfill.
-const PANEL_VERSION = "339";
+const PANEL_VERSION = "340";
 
 if (!customElements.get('kitchen-cooking-card')) {
   customElements.define('kitchen-cooking-card', KitchenCookingPanel);
